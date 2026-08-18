@@ -1,12 +1,19 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import "./news.css";
 
 type Category = "Gramática" | "Conversación";
 type Lesson = { id:number; level:string; category:Category; title:string; subtitle:string; duration:string; tag:string; goals:string[]; warmup:string; explanation:string; practice:string[]; speaking:string[]; homework:string; special?:boolean };
 
 const levels = ["Todos", "A0", "A1", "A2", "B1", "B2", "C1", "C2"];
 const levelNames:Record<string,string> = { A0:"Primeros pasos", A1:"Inicial", A2:"Básico", B1:"Intermedio", B2:"Intermedio alto", C1:"Avanzado", C2:"Dominio" };
+
+const latestNews = [
+  {lessonId:13,kicker:"ESTRENO · B1+",route:"CONVERSACIÓN",title:"Choose Your Conversation",copy:"15 mundos. El alumno elige 1 tema, solo 3 preguntas y empieza a hablar de verdad.",symbol:"💬",words:["elegir","conectar","hablar"]},
+  {lessonId:3,kicker:"NUEVA RUTA · A1",route:"GRAMÁTICA + HABLA",title:"Presente con vos",copy:"Hablás, comés, vivís. Un patrón visual y sonoro para activar el español argentino.",symbol:"VOS",words:["mirá","detectá","usalo"]},
+  {lessonId:9,kicker:"NUEVA CLASE · B2",route:"GRAMÁTICA HUMANA",title:"Subjuntivo humano",copy:"Deseos, emociones y opiniones conectados con situaciones que sí dan ganas de contar.",symbol:"QUE",words:["sentir","matizar","expresar"]}
+];
 
 const lessons:Lesson[] = [
   {id:13,level:"B1",category:"Conversación",title:"Choose Your Conversation",subtitle:"Elegí 1 tema, seleccioná solo 3 preguntas y hablá libremente",duration:"60 min",tag:"15 mundos",special:true,goals:["Elegir un tema que genere curiosidad","Sostener una conversación libre","Compartir historias y opiniones"],warmup:"Choose a topic. Pick 3 questions. Just talk.",explanation:"No perfect answers. No pressure.",practice:[],speaking:[],homework:""},
@@ -29,8 +36,12 @@ export default function Home() {
   const [category,setCategory]=useState<"Todas"|Category>("Todas");
   const [query,setQuery]=useState("");
   const [activeLesson,setActiveLesson]=useState<Lesson|null>(null);
+  const [newsIndex,setNewsIndex]=useState(0);
+  const [newsPaused,setNewsPaused]=useState(false);
   const openLesson=(lesson:Lesson)=>{if(lesson.special){window.location.href="/choose-conversation"}else{setActiveLesson(lesson)}};
   const filtered=useMemo(()=>lessons.filter(l=>(level==="Todos"||l.level===level)&&(category==="Todas"||l.category===category)&&`${l.title} ${l.subtitle} ${l.tag}`.toLowerCase().includes(query.toLowerCase())),[level,category,query]);
+  const news=latestNews[newsIndex];
+  useEffect(()=>{if(newsPaused)return;const timer=window.setInterval(()=>setNewsIndex(index=>(index+1)%latestNews.length),5200);return()=>window.clearInterval(timer)},[newsPaused]);
   return <div className="app-shell">
     <aside className="sidebar">
       <div className="brand"><span className="brand-avatar" aria-hidden="true"><img src="/chespanish-guide-avatar.png" alt="" /></span><div><b>CHE</b>SPANISH<small>TEACHER STUDIO</small></div></div>
@@ -41,6 +52,15 @@ export default function Home() {
     </aside>
     <main className="main-content">
       <header className="topbar"><div className="search"><span>⌕</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Buscar tema, objetivo o palabra clave…"/><kbd>⌘ K</kbd></div><button className="icon-button">♢<i/></button><button className="new-button" onClick={()=>openLesson(lessons[0])}><span>＋</span> Abrir nueva</button></header>
+      <section className={`news-carousel news-theme-${newsIndex}`} aria-label="Novedades y nuevas clases" onMouseEnter={()=>setNewsPaused(true)} onMouseLeave={()=>setNewsPaused(false)} onFocus={()=>setNewsPaused(true)} onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget as Node))setNewsPaused(false)}}>
+        <div className="news-head"><span><i/> NOVEDADES</span><b>{String(newsIndex+1).padStart(2,"0")} / {String(latestNews.length).padStart(2,"0")}</b></div>
+        <div className="news-slide" key={news.title}>
+          <div className="news-copy"><div className="news-labels"><span>{news.kicker}</span><em>{news.route}</em></div><h2>{news.title}</h2><p>{news.copy}</p><button onClick={()=>openLesson(lessons.find(lesson=>lesson.id===news.lessonId)!)}>Abrir esta clase <span>→</span></button></div>
+          <div className="news-brain" aria-hidden="true"><span className="news-word word-one">{news.words[0]}</span><span className="news-word word-two">{news.words[1]}</span><span className="news-word word-three">{news.words[2]}</span><div className="news-core">{news.symbol}</div><img src="/chespanish-guide-avatar.png" alt="" /></div>
+        </div>
+        <div className="news-controls"><button aria-label="Novedad anterior" onClick={()=>setNewsIndex(index=>(index-1+latestNews.length)%latestNews.length)}>←</button><div>{latestNews.map((item,index)=><button key={item.title} className={index===newsIndex?"active":""} aria-label={`Ver ${item.title}`} aria-pressed={index===newsIndex} onClick={()=>setNewsIndex(index)}/>)}</div><button aria-label="Novedad siguiente" onClick={()=>setNewsIndex(index=>(index+1)%latestNews.length)}>→</button></div>
+        <div className="news-progress" key={`progress-${newsIndex}`}><i/></div>
+      </section>
       <section className="welcome"><div><p className="eyebrow">TU ESPACIO DE CLASES</p><h1>¿Qué vamos a enseñar hoy?</h1><p>Todo tu español real, organizado y listo para abrir frente al alumno.</p></div><div className="quick-stats"><div><b>{lessons.length}</b><span>clases listas</span></div><div><b>7</b><span>niveles</span></div><div><b>2</b><span>rutas</span></div></div></section>
       <section className="spotlight choose-spotlight" onClick={()=>openLesson(lessons[0])}><div className="spotlight-copy"><span className="featured-pill">★ TU CLASE NUEVA</span><h2>Choose Your Conversation</h2><p>El alumno elige un mundo, selecciona solamente 3 preguntas y deja que la conversación vaya a donde quiera.</p><div className="meta"><span>B1+</span><span>◷ 60 min</span><span>◉ 100% conversación</span></div><button>Abrir clase interactiva <span>→</span></button></div><div className="guide-art" aria-hidden="true"><span className="guide-glow"></span><img src="/chespanish-guide-truck.png" alt="" /></div></section>
       <section className="library-heading"><div><p className="eyebrow">BIBLIOTECA</p><h2>{level==="Todos"?"Todas las clases":`${level} · ${levelNames[level]}`}</h2></div><div className="category-tabs">{(["Todas","Gramática","Conversación"] as const).map(x=><button key={x} onClick={()=>setCategory(x)} className={category===x?"active":""}>{x==="Gramática"?"✎ ":x==="Conversación"?"◌ ":""}{x}</button>)}</div></section>
