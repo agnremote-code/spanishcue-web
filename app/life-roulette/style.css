@@ -6,3 +6,8 @@
 @media(max-width:390px){.roulette-copy h1{font-size:41px}.wheel-zone{min-height:335px}.life-wheel>button:not(.wheel-hub){font-size:22px;transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-128px) rotate(calc(-1 * var(--angle))) rotate(var(--counter))}.wheel-hub{width:94px;height:94px}.topic-banner>strong{display:none}.roulette-modal>section>div{grid-template-columns:1fr}}
 .roulette-copy h1{line-height:1.12}
 .slang-grid p small{display:block;color:#728694;font-size:9px;margin-top:2px}
+.roulette-pair b,.roulette-pair span{display:grid;grid-template-columns:25px 1fr;align-items:start;gap:7px}
+.roulette-pair em,.slang-grid h3 em,.slang-grid>button>b em{display:inline-grid;place-items:center;min-width:23px;height:18px;padding:0 4px;border-radius:5px;background:#07152f;color:#fff;font:900 7px/1 "DM Sans",sans-serif;letter-spacing:.5px;font-style:normal}
+.roulette-pair span{opacity:1!important;color:#496575;font-weight:700}
+.pink .roulette-pair span{color:#fff}.pink .roulette-pair em{background:#fff;color:#a00f58}
+.slang-grid h3,.slang-grid>button>b{display:flex;align-items:center;gap:7px}.slang-grid h3 em{background:#ff2b85}.slang-grid>button>b em{background:#dceaf2;color:#334e60}
