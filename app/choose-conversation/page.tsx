@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./style.css";
+import "./fixes.css";
 
 type Topic={emoji:string;title:string;line:string;color:string;questions:string[]};
 const topics:Topic[]=[

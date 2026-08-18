@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+
+.talk-app,
+.talk-app button,
+.talk-app a {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+.talk-intro h1,
+.topic-hero h1,
+.ready-talk h2 {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 900;
+}
+
+.topic-worlds button {
+  min-height: 215px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  isolation: isolate;
+}
+
+.topic-worlds button > span {
+  flex: 0 0 auto;
+  margin-bottom: 13px;
+  position: relative;
+  z-index: 1;
+}
+
+.topic-worlds button b {
+  max-width: 100%;
+  font-size: 17px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  position: relative;
+  z-index: 1;
+}
+
+.topic-worlds button small {
+  display: block;
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  position: relative;
+  z-index: 1;
+}
+
+.topic-worlds button i {
+  position: relative;
+  inset: auto;
+  display: block;
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 9px;
+  line-height: 1.2;
+  white-space: normal;
+  z-index: 1;
+}
+
+.topic-hero h1 {
+  line-height: 1.02;
+  overflow-wrap: anywhere;
+}
+
+.question-list button {
+  min-height: 92px;
+  height: auto;
+  padding: 15px;
+  grid-template-columns: 30px minmax(0, 1fr) 27px;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.question-list button span {
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.42;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.question-layout aside > div {
+  height: auto;
+  min-height: 72px;
+  overflow-wrap: anywhere;
+}
+
+.ready-talk h2 {
+  line-height: 1.08;
+}
+
+@media (max-width: 1180px) {
+  .topic-worlds { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .topic-worlds { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 650px) {
+  .topic-worlds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topic-worlds button { min-height: 205px; padding: 17px; }
+  .topic-worlds button b { font-size: 15px; }
+  .topic-worlds button small { font-size: 10px; }
+  .question-list button { min-height: 86px; }
+}
+
+@media (max-width: 410px) {
+  .topic-worlds { grid-template-columns: 1fr; }
+  .topic-worlds button { min-height: 185px; }
+}
