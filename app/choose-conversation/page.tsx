@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./style.css";
 import "./fixes.css";
+import { a1Questions } from "./a1-data";
 
 type Topic={emoji:string;title:string;line:string;color:string;questions:string[]};
 const topics:Topic[]=[
@@ -36,14 +37,18 @@ const basicTopics:Topic[]=topics.map((topic,index)=>({
   ]:topic.questions
 }));
 
-export default function ChooseConversation({variant="standard"}:{variant?:"standard"|"basic"}={}){
- const activeTopics=variant==="basic"?basicTopics:topics;
+const starterTopics:Topic[]=basicTopics.map((topic,index)=>({...topic,questions:a1Questions[index]}));
+
+export default function ChooseConversation({variant="standard"}:{variant?:"standard"|"basic"|"starter"}={}){
+ const activeTopics=variant==="starter"?starterTopics:variant==="basic"?basicTopics:topics;
  const isBasic=variant==="basic";
+ const isStarter=variant==="starter";
  const [topic,setTopic]=useState<Topic|null>(null);const [selected,setSelected]=useState<number[]>([]);const [ready,setReady]=useState(false);
  const open=(t:Topic)=>{setTopic(t);setSelected([]);setReady(false);window.scrollTo({top:0,behavior:"smooth"})};
  const toggle=(i:number)=>setSelected(s=>s.includes(i)?s.filter(x=>x!==i):s.length<3?[...s,i]:s);
- return <main className={`talk-app ${isBasic?"basic-mode":""}`}><header className="talk-header"><a href="/" className="talk-logo"><span><img src="/chespanish-guide-avatar.png" alt="" /></span><b>CHESPANISH · LET&apos;S TALK{isBasic?" · A2":""}</b></a><span className="game-chip"><i/> {isBasic?"A2 · basic conversation":"Spanish conversation"}</span></header>
- {!topic?<section className="talk-home"><div className="talk-intro"><p className="mode-chip">CONVERSATION MODE: ON {isBasic?"· A2":""}</p><h1>LET&apos;S TALK{isBasic?" · A2":""}</h1><p>Choose a topic. Pick 3 questions. Just talk.</p><div className="talk-steps"><b>CHOOSE A TOPIC</b><span>→</span><b>PICK 3</b><span>→</span><b>TALK</b></div></div><div className="world-heading"><h2>{isBasic?"Elegí tu mundo de conversación":"Pick your conversation world"}</h2><span>15 conversation worlds</span></div><div className="topic-worlds">{activeTopics.map(t=><button key={t.title} style={{background:t.color}} onClick={()=>open(t)}><span>{t.emoji}</span><b>{t.title}</b><small>{t.line}</small><i>ENTER TOPIC →</i></button>)}</div></section>:
+ const level=isStarter?"A1":isBasic?"A2":null;
+ return <main className={`talk-app ${level?"basic-mode":""}`}><header className="talk-header"><a href="/" className="talk-logo"><span><img src="/chespanish-guide-avatar.png" alt="" /></span><b>CHESPANISH · LET&apos;S TALK{level?` · ${level}`:""}</b></a><span className="game-chip"><i/> {level?`${level} · conversación`:"Spanish conversation"}</span></header>
+ {!topic?<section className="talk-home"><div className="talk-intro"><p className="mode-chip">CONVERSATION MODE: ON {level?`· ${level}`:""}</p><h1>LET&apos;S TALK{level?` · ${level}`:""}</h1><p>Choose a topic. Pick 3 questions. Just talk.</p><div className="talk-steps"><b>CHOOSE A TOPIC</b><span>→</span><b>PICK 3</b><span>→</span><b>TALK</b></div></div><div className="world-heading"><h2>{level?"Elegí tu mundo de conversación":"Pick your conversation world"}</h2><span>15 conversation worlds</span></div><div className="topic-worlds">{activeTopics.map(t=><button key={t.title} style={{background:t.color}} onClick={()=>open(t)}><span>{t.emoji}</span><b>{t.title}</b><small>{t.line}</small><i>ENTER TOPIC →</i></button>)}</div></section>:
  <section className="topic-screen"><button className="all-topics" onClick={()=>setTopic(null)}>← All topics</button><div className="topic-hero" style={{background:topic.color}}><span>{topic.emoji}</span><div><small>PICK 3 — THAT&apos;S IT</small><h1>{topic.title}</h1><p>{topic.line}</p></div><b>{selected.length} / 3 selected</b></div><div className="question-layout"><section><h2>Choose ONLY 3 questions</h2><div className="question-list">{topic.questions.map((q,i)=>{const is=selected.includes(i),locked=selected.length===3&&!is;return <button key={q} disabled={locked} className={is?"selected":""} onClick={()=>toggle(i)}><b>{i+1}</b><span>{q}</span><i>{is?"✓":"+"}</i></button>})}</div></section><aside><small>YOUR CONVERSATION</small><h2>Your 3 questions</h2>{[0,1,2].map((_,i)=><div className={selected[i]!==undefined?"filled":""} key={i}><b>{selected[i]!==undefined?"✓":i+1}</b><span>{selected[i]!==undefined?topic.questions[selected[i]]:"Choose a question..."}</span></div>)}<button disabled={selected.length!==3} onClick={()=>setReady(true)}>START TALKING →</button><p>You only need three. Choose what genuinely makes you want to talk.</p></aside></div>{ready&&<section className="ready-talk"><small>READY TO TALK</small><h2>Your conversation starts here.</h2><p>No perfect answers. No pressure. Pick one question, tell a story, share an opinion and let the conversation go wherever it wants.</p><div>{selected.map((x,i)=><article key={x}><b>{i+1}</b>{topic.questions[x]}</article>)}</div><button onClick={()=>setTopic(null)}>▦ Explore another topic</button></section>}</section>}
  </main>
 }
