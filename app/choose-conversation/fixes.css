@@ -93,6 +93,22 @@
   line-height: 1.08;
 }
 
+.talk-logo span {
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #eef9ff;
+  box-shadow: 0 8px 22px #0005;
+}
+
+.talk-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 @media (max-width: 1180px) {
   .topic-worlds { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
