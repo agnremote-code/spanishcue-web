@@ -13,6 +13,13 @@
   font-weight: 900;
 }
 
+.basic-mode .talk-intro h1 {
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: .96;
+  letter-spacing: -4px;
+  overflow-wrap: anywhere;
+}
+
 .topic-worlds button {
   min-height: 215px;
   height: auto;
@@ -123,6 +130,7 @@
   .topic-worlds button b { font-size: 15px; }
   .topic-worlds button small { font-size: 10px; }
   .question-list button { min-height: 86px; }
+  .basic-mode .talk-intro h1 { font-size: 44px; line-height: 1; letter-spacing: -2px; }
 }
 
 @media (max-width: 410px) {
