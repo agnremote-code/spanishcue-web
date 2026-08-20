@@ -1,0 +1,8 @@
+.arp-hero-art img.arp-hero-truck {
+  width: min(500px, 110%);
+  max-width: none;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 25px 28px #0008);
+}
