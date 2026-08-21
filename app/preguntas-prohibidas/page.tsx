@@ -5,6 +5,7 @@ import {feedbackLabels,forbiddenBlocks,powerUps,supportPhrases,topics} from "./d
 import "./style.css";
 import "./bilingual-fix.css";
 import "./kingdom-game.css";
+import "./kingdom-premium.css";
 
 type Screen="cover"|"rules"|"map"|"topic"|"block"|"powerups"|"boss"|"feedback";
 
@@ -45,9 +46,20 @@ export default function PreguntasProhibidas(){
 
     {screen==="map"&&<section className="pr-page pr-map">
       <header className="pr-page-head"><span>MAPA DEL REINO · KINGDOM MAP</span><h1>Elegí una puerta del castillo.</h1><p>Cada puerta es un mundo. Abrila y descubrí qué pregunta está esperando adentro.</p></header>
-      <div className="pr-game-sky" aria-hidden="true"><span className="cloud-one">☁</span><span className="coin-one">●</span><span className="block-one">?</span><span className="cloud-two">☁</span><span className="coin-two">●</span></div>
-      <div className="pr-map-title"><div><span>01</span><h2>Puertas del reino</h2></div><b>{topics.length} PUERTAS · 4 PREGUNTAS CADA UNA</b></div>
-      <div className="pr-topic-grid">{topics.map((item,index)=><button className="pr-kingdom-gate" aria-label={`Abrir ${item.name}`} key={item.name} onClick={()=>openTopic(index)} style={{"--topic":item.color} as CSSProperties}><div className="pr-castle-card" aria-hidden="true"><span className="pr-castle-merlons"><i/><i/><i/><i/><i/></span><div className="pr-gate-arch"><span className="pr-gate-glow"/><i className="pr-gate-character">{item.emoji}</i><span className="pr-gate-door"><b>{String(index+1).padStart(2,"0")}</b><i/></span></div></div><div className="pr-door-copy"><h3>{item.name}</h3><Pair value={item.desc}/><div className="pr-door-meta"><span>4 preguntas</span><b>ABRIR PUERTA →</b></div></div></button>)}</div>
+      <section className="pr-world-stage">
+        <div className="pr-world-ribbon"><span>✦</span><div><small>REGIÓN 01 · REGION 01</small><b>LOS CATORCE REINOS</b></div><span>✦</span></div>
+        <div className="pr-game-sky" aria-hidden="true"><span className="cloud-one">☁</span><span className="coin-one">●</span><span className="block-one">?</span><span className="cloud-two">☁</span><span className="coin-two">●</span></div>
+        <div className="pr-map-title"><div><span>01</span><h2>Puertas del reino</h2></div><b>{topics.length} PUERTAS · 4 PREGUNTAS CADA UNA</b></div>
+        <div className="pr-topic-grid">{topics.map((item,index)=><button className="pr-kingdom-gate" aria-label={`Abrir ${item.name}`} key={item.name} onClick={()=>openTopic(index)} style={{"--topic":item.color,"--gate-index":index} as CSSProperties}>
+          <div className="pr-castle-card" aria-hidden="true">
+            <span className="pr-level-flag">MUNDO {String(index+1).padStart(2,"0")}</span>
+            <img className="pr-castle-illustration" src="/castle-gateway.png" alt=""/>
+            <div className="pr-gate-arch"><span className="pr-gate-glow"/><i className="pr-gate-character">{item.emoji}</i><span className="pr-gate-door"><b>{String(index+1).padStart(2,"0")}</b><i/></span></div>
+            <span className="pr-castle-sparkle sparkle-a">✦</span><span className="pr-castle-sparkle sparkle-b">✦</span>
+          </div>
+          <div className="pr-door-copy"><h3>{item.name}</h3><Pair value={item.desc}/><div className="pr-door-meta"><span>4 preguntas</span><b>ABRIR PUERTA →</b></div></div>
+        </button>)}</div>
+      </section>
       <div className="pr-map-title blocks"><div><span>02</span><h2>Torres prohibidas</h2></div><b>{forbiddenBlocks.length} RETOS · SIN RESPUESTAS CÓMODAS</b></div>
       <div className="pr-block-grid">{forbiddenBlocks.map((item,index)=><button key={item.name} onClick={()=>openBlock(index)} style={{"--block":item.color} as CSSProperties}><i>?</i><span>BLOQUE {String(index+1).padStart(2,"0")}</span><h3>{item.name}</h3><b>ABRIR BLOQUE →</b></button>)}</div>
       <div className="pr-map-actions"><button onClick={()=>show("powerups")}><span>⭐</span><div><b>POWER-UPS</b><small>Frases para sobrevivir</small></div></button><button onClick={()=>show("boss")}><span>🏰</span><div><b>JEFE FINAL</b><small>La pregunta sin salida</small></div></button><button onClick={()=>show("feedback")}><span>📊</span><div><b>FEEDBACK</b><small>Registrá el resultado</small></div></button></div>
