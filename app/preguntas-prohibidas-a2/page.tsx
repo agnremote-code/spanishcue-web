@@ -69,6 +69,16 @@ export default function PreguntasProhibidasA2(){
     {screen==="topic"&&<section className="pr-page pr-topic-page" style={{"--topic":topic.color} as CSSProperties}>
       <header className="pr-inside-head"><button onClick={()=>show("map")}>← VOLVER AL MAPA</button><span>MUNDO {String(topicIndex+1).padStart(2,"0")} / {topics.length}</span></header>
       <section className="pr-topic-hero"><i>{topic.emoji}</i><div><small>MUNDO A2 · A2 WORLD</small><h1>{topic.name}</h1><span className="pr-topic-hero-en">{topic.englishName}</span><Pair value={topic.desc}/></div><b>4 PREGUNTAS</b></section>
+      <section className="pr-royal-parade">
+        <header><small>PERSONAJES DEL REINO · KINGDOM CHARACTERS</small><b>La corte real te acompaña.</b><span>The royal court is with you.</span></header>
+        <div className="pr-royal-stage" aria-hidden="true">
+          <span className="pr-royal-spark star-a">✦</span><span className="pr-royal-spark star-b">✦</span><span className="pr-royal-spark star-c">✦</span>
+          <img className="pr-royal-couple" src="/royal-couple.png" alt=""/>
+          <img className="pr-friendly-king" src="/friendly-king.png" alt=""/>
+          <img className="pr-royal-frog" src="/royal-frog.png" alt=""/>
+          <span className="pr-frog-shadow"/>
+        </div>
+      </section>
       <div className="pr-question-list">{topic.questions.map((question,index)=><article key={question}><span>{String(index+1).padStart(2,"0")}</span><div><small>PREGUNTA · QUESTION</small><h2>{question}</h2></div></article>)}</div>
       <section className="pr-speaking-kit"><header><span>🧰</span><div><small>APOYO A2 · A2 SPEAKING SUPPORT</small><h2>Armá una respuesta simple.</h2><p>Elegí una o dos frases y agregá tu idea.</p></div></header><div>{supportPhrases.map(pair=><Pair value={pair} key={pair[0]}/>)}</div></section>
       <footer className="pr-bottom-nav"><button onClick={()=>openTopic((topicIndex-1+topics.length)%topics.length)}>← MUNDO ANTERIOR</button><button className="random" onClick={randomTopic}>🎲 OTRO MUNDO</button><button onClick={()=>openTopic((topicIndex+1)%topics.length)}>MUNDO SIGUIENTE →</button></footer>

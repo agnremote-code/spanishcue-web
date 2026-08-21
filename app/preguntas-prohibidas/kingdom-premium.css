@@ -50,7 +50,7 @@
   z-index: 3;
   width: min(460px, 90%);
   min-height: 66px;
-  margin: -62px auto 16px;
+  margin: 0 auto 18px;
   padding: 12px 22px;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@
 
 @media (max-width: 700px) {
   .pr-world-stage { margin: 4px 0 42px; padding: 26px 12px 46px; border-radius: 26px; }
-  .pr-world-ribbon { margin-top: -52px; padding-inline: 12px; }
+  .pr-world-ribbon { margin-top: 0; padding-inline: 12px; }
   .pr-world-stage .pr-game-sky { height: 78px; }
   .pr-world-stage .pr-map-title { align-items: flex-start; padding: 14px; }
   .pr-world-stage .pr-topic-grid { grid-template-columns: 1fr; gap: 30px; }
