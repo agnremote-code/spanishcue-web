@@ -103,14 +103,21 @@
   transform: translateX(-50%);
 }
 
-.pr-question-character img {
-  width: 100%;
-  max-height: 185px;
-  object-fit: contain;
-  object-position: center bottom;
+.pr-question-character > span {
+  width: 158px;
+  height: 158px;
+  margin-bottom: 3px;
+  background-image: var(--character-sheet);
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
   filter: drop-shadow(0 10px 8px #29203e40);
   transform-origin: 50% 100%;
 }
+
+.pr-question-character.sprite-1 > span { background-position: 0 0; }
+.pr-question-character.sprite-2 > span { background-position: 100% 0; }
+.pr-question-character.sprite-3 > span { background-position: 0 100%; }
+.pr-question-character.sprite-4 > span { background-position: 100% 100%; }
 
 .pr-question-character > i {
   position: absolute;
@@ -124,10 +131,10 @@
   animation: prQuestionSpark 2.1s ease-in-out infinite;
 }
 
-.pr-question-character.motion-kiss img { animation: prRoyalKiss 4.1s ease-in-out infinite; }
-.pr-question-character.motion-fairy img { animation: prFairyFlight 3.2s ease-in-out infinite; }
-.pr-question-character.motion-queen img { animation: prQueenWave 3.8s ease-in-out infinite; }
-.pr-question-character.motion-prince img { animation: prStoryPrince 3.5s ease-in-out infinite; }
+.pr-question-character.sprite-1 > span { animation: prRoyalKiss 4.1s ease-in-out infinite; }
+.pr-question-character.sprite-2 > span { animation: prFairyFlight 3.2s ease-in-out infinite; }
+.pr-question-character.sprite-3 > span { animation: prQueenWave 3.8s ease-in-out infinite; }
+.pr-question-character.sprite-4 > span { animation: prStoryPrince 3.5s ease-in-out infinite; }
 
 @keyframes prRoyalKiss {
   0%,100% { transform: translateY(0) rotate(-.5deg); }
@@ -292,7 +299,7 @@
   .pr-royal-frog { width: 75px; right: -2%; }
   .pr-question-list article { min-height: 220px; padding-right: 116px; }
   .pr-question-character { right: 4px; width: 108px; height: 150px; }
-  .pr-question-character img { max-height: 145px; }
+  .pr-question-character > span { width: 108px; height: 108px; }
   .pr-question-character::before { width: 96px; height: 96px; }
 }
 
@@ -300,6 +307,6 @@
   .pr-royal-stage img,
   .pr-frog-shadow,
   .pr-royal-spark,
-  .pr-question-character img,
+  .pr-question-character > span,
   .pr-question-character > i { animation: none; }
 }
