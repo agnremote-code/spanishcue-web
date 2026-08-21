@@ -64,6 +64,97 @@
   overflow: hidden;
 }
 
+.pr-question-list article {
+  position: relative;
+  min-height: 238px;
+  padding-right: 176px;
+  overflow: hidden;
+}
+
+.pr-question-copy {
+  position: relative;
+  z-index: 3;
+  min-width: 0;
+}
+
+.pr-question-character {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 0;
+  width: 158px;
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pr-question-character::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: 10px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--topic) 28%, #fff), transparent 68%);
+  transform: translateX(-50%);
+}
+
+.pr-question-character img {
+  width: 100%;
+  max-height: 185px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 10px 8px #29203e40);
+  transform-origin: 50% 100%;
+}
+
+.pr-question-character > i {
+  position: absolute;
+  z-index: 4;
+  top: 25px;
+  right: 8px;
+  color: #f2bf32;
+  font-style: normal;
+  font-size: 17px;
+  text-shadow: 0 0 12px #ffdc58;
+  animation: prQuestionSpark 2.1s ease-in-out infinite;
+}
+
+.pr-question-character.motion-kiss img { animation: prRoyalKiss 4.1s ease-in-out infinite; }
+.pr-question-character.motion-fairy img { animation: prFairyFlight 3.2s ease-in-out infinite; }
+.pr-question-character.motion-queen img { animation: prQueenWave 3.8s ease-in-out infinite; }
+.pr-question-character.motion-prince img { animation: prStoryPrince 3.5s ease-in-out infinite; }
+
+@keyframes prRoyalKiss {
+  0%,100% { transform: translateY(0) rotate(-.5deg); }
+  50% { transform: translateY(-4px) rotate(.7deg); }
+}
+
+@keyframes prFairyFlight {
+  0%,100% { transform: translate(-2px,2px) rotate(-2deg); }
+  50% { transform: translate(4px,-10px) rotate(2deg); }
+}
+
+@keyframes prQueenWave {
+  0%,100% { transform: translateY(0) rotate(0); }
+  45% { transform: translateY(-3px) rotate(-1deg); }
+  55% { transform: translateY(-3px) rotate(1deg); }
+}
+
+@keyframes prStoryPrince {
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.02); }
+}
+
+@keyframes prQuestionSpark {
+  0%,100% { opacity: .25; transform: scale(.65) rotate(0); }
+  50% { opacity: 1; transform: scale(1.15) rotate(90deg); }
+}
+
 .pr-royal-parade::after {
   content: "";
   position: absolute;
@@ -199,10 +290,16 @@
   .pr-royal-couple { width: 190px; left: -5%; }
   .pr-friendly-king { width: 115px; left: 52%; }
   .pr-royal-frog { width: 75px; right: -2%; }
+  .pr-question-list article { min-height: 220px; padding-right: 116px; }
+  .pr-question-character { right: 4px; width: 108px; height: 150px; }
+  .pr-question-character img { max-height: 145px; }
+  .pr-question-character::before { width: 96px; height: 96px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .pr-royal-stage img,
   .pr-frog-shadow,
-  .pr-royal-spark { animation: none; }
+  .pr-royal-spark,
+  .pr-question-character img,
+  .pr-question-character > i { animation: none; }
 }

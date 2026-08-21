@@ -12,6 +12,13 @@ type Screen="cover"|"rules"|"map"|"topic"|"block"|"powerups"|"boss"|"feedback";
 
 const Pair=({value}:{value:[string,string]})=><div className="pr-pair"><b>{value[0]}</b><span>{value[1]}</span></div>;
 
+const questionCharacters=[
+  {src:"/question-royal-kiss.png",motion:"kiss"},
+  {src:"/question-fairy.png",motion:"fairy"},
+  {src:"/question-queen.png",motion:"queen"},
+  {src:"/question-story-prince.png",motion:"prince"}
+] as const;
+
 export default function PreguntasProhibidasA2(){
   const [screen,setScreen]=useState<Screen>("cover");
   const [topicIndex,setTopicIndex]=useState(0);
@@ -79,7 +86,7 @@ export default function PreguntasProhibidasA2(){
           <span className="pr-frog-shadow"/>
         </div>
       </section>
-      <div className="pr-question-list">{topic.questions.map((question,index)=><article key={question}><span>{String(index+1).padStart(2,"0")}</span><div><small>PREGUNTA · QUESTION</small><h2>{question}</h2></div></article>)}</div>
+      <div className="pr-question-list">{topic.questions.map((question,index)=>{const character=questionCharacters[(topicIndex+index)%questionCharacters.length];return <article key={question}><span>{String(index+1).padStart(2,"0")}</span><div className="pr-question-copy"><small>PREGUNTA · QUESTION</small><h2>{question}</h2></div><div className={`pr-question-character motion-${character.motion}`} aria-hidden="true"><i>✦</i><img src={character.src} alt=""/></div></article>})}</div>
       <section className="pr-speaking-kit"><header><span>🧰</span><div><small>APOYO A2 · A2 SPEAKING SUPPORT</small><h2>Armá una respuesta simple.</h2><p>Elegí una o dos frases y agregá tu idea.</p></div></header><div>{supportPhrases.map(pair=><Pair value={pair} key={pair[0]}/>)}</div></section>
       <footer className="pr-bottom-nav"><button onClick={()=>openTopic((topicIndex-1+topics.length)%topics.length)}>← MUNDO ANTERIOR</button><button className="random" onClick={randomTopic}>🎲 OTRO MUNDO</button><button onClick={()=>openTopic((topicIndex+1)%topics.length)}>MUNDO SIGUIENTE →</button></footer>
     </section>}
