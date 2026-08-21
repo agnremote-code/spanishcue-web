@@ -4,6 +4,7 @@ import {useState,type CSSProperties} from "react";
 import {feedbackLabels,forbiddenBlocks,powerUps,supportPhrases,topics} from "./data";
 import "./style.css";
 import "./bilingual-fix.css";
+import "./kingdom-game.css";
 
 type Screen="cover"|"rules"|"map"|"topic"|"block"|"powerups"|"boss"|"feedback";
 
@@ -23,10 +24,10 @@ export default function PreguntasProhibidas(){
   const randomBlock=()=>{const pool=forbiddenBlocks.map((_,index)=>index).filter(index=>index!==blockIndex);openBlock(pool[Math.floor(Math.random()*pool.length)]??0)};
 
   return <main className="pr-shell">
-    <nav className="pr-nav"><a href="/" className="pr-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>B1 · CONVERSACIÓN</small></span></a><div><span>15 MUNDOS</span><span>60 PREGUNTAS</span><span>7 BLOQUES</span></div><a href="/">← BIBLIOTECA</a></nav>
+    <nav className="pr-nav"><a href="/" className="pr-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>B1 · CONVERSACIÓN</small></span></a><div><span>{topics.length} MUNDOS</span><span>{topics.length*4} PREGUNTAS</span><span>{forbiddenBlocks.length} BLOQUES</span></div><a href="/">← BIBLIOTECA</a></nav>
 
     {screen==="cover"&&<section className="pr-cover">
-      <div className="pr-cover-copy"><span className="pr-level">B1 · OPINIÓN + MATICES</span><p className="pr-overline">UNA AVENTURA PARA HABLAR SIN RESPUESTAS FÁCILES</p><h1>EL REINO DE LAS<br/><em>PREGUNTAS PROHIBIDAS</em></h1><p className="pr-lead">Saltá por los mundos, abrí bloques prohibidos y defendé opiniones que nadie dice en voz alta.</p><p className="pr-lead-en">Move through the worlds, open forbidden blocks and defend opinions people rarely say out loud.</p><div className="pr-cover-actions"><button onClick={()=>show("rules")}>ENTRAR AL REINO <span>→</span></button><button onClick={()=>show("map")}>IR DIRECTO AL MAPA</button></div><div className="pr-cover-stats"><article><b>15</b><span>temas profundos</span></article><article><b>60</b><span>preguntas reales</span></article><article><b>8</b><span>power-ups bilingües</span></article></div></div>
+      <div className="pr-cover-copy"><span className="pr-level">B1 · OPINIÓN + MATICES</span><p className="pr-overline">UNA AVENTURA PARA HABLAR SIN RESPUESTAS FÁCILES</p><h1>EL REINO DE LAS<br/><em>PREGUNTAS PROHIBIDAS</em></h1><p className="pr-lead">Saltá por los mundos, abrí bloques prohibidos y defendé opiniones que nadie dice en voz alta.</p><p className="pr-lead-en">Move through the worlds, open forbidden blocks and defend opinions people rarely say out loud.</p><div className="pr-cover-actions"><button onClick={()=>show("rules")}>ENTRAR AL REINO <span>→</span></button><button onClick={()=>show("map")}>IR DIRECTO AL MAPA</button></div><div className="pr-cover-stats"><article><b>{topics.length}</b><span>temas profundos</span></article><article><b>{topics.length*4}</b><span>preguntas reales</span></article><article><b>8</b><span>power-ups bilingües</span></article></div></div>
       <div className="pr-cover-art" aria-hidden="true"><span className="pr-moon"/><div className="pr-castle">🏰</div><div className="pr-question-cube">?</div><img src="/chespanish-guide-truck.png" alt=""/><i className="pr-star one">✦</i><i className="pr-star two">✦</i><i className="pr-star three">✦</i></div>
     </section>}
 
@@ -43,10 +44,11 @@ export default function PreguntasProhibidas(){
     </section>}
 
     {screen==="map"&&<section className="pr-page pr-map">
-      <header className="pr-page-head"><span>MAPA DEL REINO · KINGDOM MAP</span><h1>Elegí qué querés enfrentar.</h1><p>Entrá a un mundo o abrí uno de los siete bloques prohibidos.</p></header>
-      <div className="pr-map-title"><div><span>01</span><h2>Mundos prohibidos</h2></div><b>15 TEMAS · 4 PREGUNTAS CADA UNO</b></div>
-      <div className="pr-topic-grid">{topics.map((item,index)=><button key={item.name} onClick={()=>openTopic(index)} style={{"--topic":item.color} as CSSProperties}><span className="pr-topic-number">{String(index+1).padStart(2,"0")}</span><i>{item.emoji}</i><h3>{item.name}</h3><Pair value={item.desc}/><footer><span>4 preguntas</span><b>ENTRAR →</b></footer></button>)}</div>
-      <div className="pr-map-title blocks"><div><span>02</span><h2>Bloques prohibidos</h2></div><b>7 RETOS · SIN RESPUESTAS CÓMODAS</b></div>
+      <header className="pr-page-head"><span>MAPA DEL REINO · KINGDOM MAP</span><h1>Elegí una puerta del castillo.</h1><p>Cada puerta es un mundo. Abrila y descubrí qué pregunta está esperando adentro.</p></header>
+      <div className="pr-game-sky" aria-hidden="true"><span className="cloud-one">☁</span><span className="coin-one">●</span><span className="block-one">?</span><span className="cloud-two">☁</span><span className="coin-two">●</span></div>
+      <div className="pr-map-title"><div><span>01</span><h2>Puertas del reino</h2></div><b>{topics.length} PUERTAS · 4 PREGUNTAS CADA UNA</b></div>
+      <div className="pr-topic-grid">{topics.map((item,index)=><button className="pr-kingdom-gate" aria-label={`Abrir ${item.name}`} key={item.name} onClick={()=>openTopic(index)} style={{"--topic":item.color} as CSSProperties}><div className="pr-castle-card" aria-hidden="true"><span className="pr-castle-merlons"><i/><i/><i/><i/><i/></span><div className="pr-gate-arch"><span className="pr-gate-glow"/><i className="pr-gate-character">{item.emoji}</i><span className="pr-gate-door"><b>{String(index+1).padStart(2,"0")}</b><i/></span></div></div><div className="pr-door-copy"><h3>{item.name}</h3><Pair value={item.desc}/><div className="pr-door-meta"><span>4 preguntas</span><b>ABRIR PUERTA →</b></div></div></button>)}</div>
+      <div className="pr-map-title blocks"><div><span>02</span><h2>Torres prohibidas</h2></div><b>{forbiddenBlocks.length} RETOS · SIN RESPUESTAS CÓMODAS</b></div>
       <div className="pr-block-grid">{forbiddenBlocks.map((item,index)=><button key={item.name} onClick={()=>openBlock(index)} style={{"--block":item.color} as CSSProperties}><i>?</i><span>BLOQUE {String(index+1).padStart(2,"0")}</span><h3>{item.name}</h3><b>ABRIR BLOQUE →</b></button>)}</div>
       <div className="pr-map-actions"><button onClick={()=>show("powerups")}><span>⭐</span><div><b>POWER-UPS</b><small>Frases para sobrevivir</small></div></button><button onClick={()=>show("boss")}><span>🏰</span><div><b>JEFE FINAL</b><small>La pregunta sin salida</small></div></button><button onClick={()=>show("feedback")}><span>📊</span><div><b>FEEDBACK</b><small>Registrá el resultado</small></div></button></div>
     </section>}
