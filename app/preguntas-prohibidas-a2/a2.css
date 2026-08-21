@@ -1,0 +1,50 @@
+.pr-topic-english-name,
+.pr-topic-hero-en,
+.pr-block-english-name,
+.pr-block-page-en {
+  display: block;
+  color: #c9c3dc;
+  font-weight: 750;
+  letter-spacing: .02em;
+}
+
+.pr-topic-english-name {
+  min-height: 18px;
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.pr-topic-hero-en {
+  margin: -2px 0 10px;
+  color: #ffffffc9;
+  font-size: 13px;
+}
+
+.pr-map-title h2 small {
+  color: #c9c3dc;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pr-block-english-name {
+  margin-top: -13px;
+  color: #c9c3dc;
+  font-size: 10px;
+}
+
+.pr-block-page-en {
+  display: block;
+  margin: -15px 0 19px;
+  color: #ffffffc9;
+  font-size: 13px;
+}
+
+.pr-world-stage .pr-topic-grid .pr-door-copy .pr-pair {
+  min-height: 62px;
+  margin-top: 7px;
+}
+
+@media (max-width: 700px) {
+  .pr-topic-english-name { min-height: 0; }
+}
