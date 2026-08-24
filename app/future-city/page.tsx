@@ -6,6 +6,54 @@ import { districts, speakingTools, type District } from "./data";
 
 type Screen = "cover" | "map" | "district";
 
+const cityScenes: Record<string, [string, string, string, string]> = {
+  tiempo: ["🕰️", "🌙", "🚲", "☕"],
+  mercado: ["♻️", "🛠️", "🧥", "🪴"],
+  decisiones: ["🗳️", "🏛️", "📣", "🤝"],
+  salud: ["🩺", "🌿", "🚑", "❤️"],
+  escuela: ["📚", "🎓", "✏️", "💡"],
+  migraciones: ["🚆", "🧳", "🗺️", "🏠"],
+  noche: ["🌙", "✨", "🚲", "🎷"],
+  vinculos: ["💬", "🫂", "🍽️", "🪴"],
+  memoria: ["📷", "🕰️", "🎞️", "🏛️"],
+  comida: ["🍲", "🌱", "🥖", "🍅"],
+  justicia: ["⚖️", "📜", "🕊️", "🏙️"],
+  tech: ["🤖", "🛸", "💡", "📡"],
+};
+
+function CityAtmosphere({ compact = false }: { compact?: boolean }) {
+  return (
+    <div className={`fc-city-atmosphere ${compact ? "compact" : ""}`} aria-hidden="true">
+      <span className="fc-vapor vapor-a" /><span className="fc-vapor vapor-b" /><span className="fc-vapor vapor-c" />
+      <span className="fc-air-lane lane-a"><i /></span><span className="fc-air-lane lane-b"><i /></span>
+      <span className="fc-neon-pulse pulse-a" /><span className="fc-neon-pulse pulse-b" />
+    </div>
+  );
+}
+
+function LivingBalconies({ district, question }: { district: District; question: number }) {
+  const icons = cityScenes[district.id] || cityScenes.tech;
+  const people = ["🧑🏽", "👩🏻", "👨🏾"];
+  return (
+    <div className={`fc-living-scene scene-${question + 1}`} aria-hidden="true">
+      <div className="fc-scene-orbit"><span>{icons[question]}</span><i /></div>
+      <div className="fc-balcony-tower">
+        {people.map((person, index) => (
+          <div className="fc-balcony" key={person} style={{ "--resident-delay": `${index * .18}s` } as CSSProperties}>
+            <span className="fc-balcony-glow" />
+            <span className="fc-resident">{person}<b>👋</b></span>
+            <i />
+          </div>
+        ))}
+      </div>
+      <div className="fc-topic-stream">
+        {icons.map((icon, index) => <span key={`${icon}-${index}`} style={{ "--icon-delay": `${index * .55}s` } as CSSProperties}>{icon}</span>)}
+      </div>
+      <span className="fc-stage-vapor stage-vapor-a" /><span className="fc-stage-vapor stage-vapor-b" />
+    </div>
+  );
+}
+
 export default function FutureCity() {
   const [screen, setScreen] = useState<Screen>("cover");
   const [active, setActive] = useState<District | null>(null);
@@ -66,6 +114,7 @@ export default function FutureCity() {
           />
           <div className="fc-cover-shade" />
           <div className="fc-scanline" aria-hidden="true" />
+          <CityAtmosphere />
           <div className="fc-cover-copy">
             <div className="fc-kicker"><span>B1</span> CONVERSACIÓN · URBAN LAB</div>
             <p className="fc-year">AÑO 2076 · LA CIUDAD TE ESTÁ ESPERANDO</p>
@@ -105,6 +154,11 @@ export default function FutureCity() {
 
           <div className="fc-route-line" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
 
+          <div className="fc-city-feed" aria-hidden="true">
+            <span>CIUDAD EN MOVIMIENTO</span>
+            <div><i>TRANSPORTE 24H</i><b>•</b><i>78% ENERGÍA LIMPIA</i><b>•</b><i>12 DISTRITOS CONECTADOS</i><b>•</b><i>HABITANTES EN LÍNEA</i></div>
+          </div>
+
           <div className="fc-building-grid">
             {districts.map((district) => (
               <button
@@ -117,6 +171,7 @@ export default function FutureCity() {
                 <span className="fc-building-shade" />
                 <span className="fc-building-number">{district.number}</span>
                 <span className="fc-building-status">{visited.has(district.id) ? "VISITADO ✓" : "ABIERTO"}</span>
+                <span className="fc-building-life" aria-hidden="true"><b>🧑</b><i>👋</i><em /></span>
                 <span className="fc-building-copy">
                   <small>{district.category}</small>
                   <b>{district.name}</b>
@@ -139,6 +194,7 @@ export default function FutureCity() {
           <header className="fc-district-hero">
             <img src={active.image} alt={active.imageAlt} />
             <span className="fc-district-shade" />
+            <CityAtmosphere compact />
             <div className="fc-district-topline">
               <button onClick={() => show("map")}>← MAPA DE LA CIUDAD</button>
               <span>EDIFICIO {active.number} / {districts.length}</span>
@@ -170,13 +226,16 @@ export default function FutureCity() {
             </section>
 
             <section className="fc-question-stage" key={`${active.id}-${question}`}>
-              <div className="fc-stage-label"><span>PREGUNTA {question + 1}</span><b>B1 · 3–5 MIN</b></div>
-              <h2>{active.questions[question].es}</h2>
-              <p>{active.questions[question].en}</p>
-              <aside>
-                <span>GIRO WOW</span>
-                <b>{active.questions[question].challenge}</b>
-              </aside>
+              <LivingBalconies district={active} question={question} />
+              <div className="fc-stage-content">
+                <div className="fc-stage-label"><span>PREGUNTA {question + 1}</span><b>B1 · 3–5 MIN</b></div>
+                <h2>{active.questions[question].es}</h2>
+                <p>{active.questions[question].en}</p>
+                <aside>
+                  <span>GIRO WOW</span>
+                  <b>{active.questions[question].challenge}</b>
+                </aside>
+              </div>
             </section>
 
             <section className="fc-language-lab">
