@@ -36,6 +36,7 @@ function LivingBalconies({ district, question }: { district: District; question:
   const people = ["🧑🏽", "👩🏻", "👨🏾"];
   return (
     <div className={`fc-living-scene scene-${question + 1}`} aria-hidden="true">
+      <div className="fc-live-signal"><i /> EN VIVO · DISTRITO {district.number}</div>
       <div className="fc-scene-orbit"><span>{icons[question]}</span><i /></div>
       <div className="fc-balcony-tower">
         {people.map((person, index) => (
@@ -49,6 +50,7 @@ function LivingBalconies({ district, question }: { district: District; question:
       <div className="fc-topic-stream">
         {icons.map((icon, index) => <span key={`${icon}-${index}`} style={{ "--icon-delay": `${index * .55}s` } as CSSProperties}>{icon}</span>)}
       </div>
+      <div className="fc-ground-transit"><i /><span>{icons[(question + 2) % icons.length]}</span><b /></div>
       <span className="fc-stage-vapor stage-vapor-a" /><span className="fc-stage-vapor stage-vapor-b" />
     </div>
   );
@@ -135,6 +137,7 @@ export default function FutureCity() {
           </div>
           <div className="fc-floating-label label-one" aria-hidden="true"><b>HUMANIDAD</b><span>antes que tecnología</span></div>
           <div className="fc-floating-label label-two" aria-hidden="true"><b>2076</b><span>¿qué conservarías?</span></div>
+          <div className="fc-future-sign" aria-hidden="true"><i /> METRO AÉREO <b>03 MIN</b><span>→</span></div>
           <button className="fc-scroll-cue" onClick={() => show("map")} aria-label="Entrar a la ciudad"><span>↓</span> EXPLORAR</button>
         </section>
       )}
