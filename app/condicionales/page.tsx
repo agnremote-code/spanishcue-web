@@ -1,0 +1,218 @@
+"use client";
+
+import { useMemo, useState, type CSSProperties } from "react";
+import "./style.css";
+import {
+  advancedConnectors,
+  chapters,
+  finalMission,
+  irregularParticiples,
+  irregularStems,
+  tenseTables,
+  type ConditionalChapter,
+} from "./data";
+
+type Screen = "cover" | "map" | "chapter" | "atlas";
+
+const tableMap: Record<string, string[]> = {
+  realidad: ["presente"],
+  posible: ["presente", "futuro"],
+  hipotetico: ["imperfecto-subjuntivo", "condicional-simple"],
+  pasado: ["pluscuamperfecto-subjuntivo", "condicional-compuesto"],
+  mixtos: ["imperfecto-subjuntivo", "condicional-simple", "pluscuamperfecto-subjuntivo", "condicional-compuesto"],
+};
+
+function PairText({ es, en }: { es: string; en: string }) {
+  return <><b>{es}</b><span>{en}</span></>;
+}
+
+function ConjugationTable({ id }: { id: string }) {
+  const table = tenseTables.find((item) => item.id === id);
+  if (!table) return null;
+  return (
+    <article className="co-tense-card">
+      <header><small>{table.cue}</small><h3>{table.title}</h3><p>{table.english}</p></header>
+      <div className="co-tense-head"><span>PERSONA</span><b>HABLAR</b><b>COMER</b><b>VIVIR</b></div>
+      {table.rows.map(([person, ar, er, ir]) => (
+        <div className="co-tense-row" key={person}><span>{person}</span><b>{ar}</b><b>{er}</b><b>{ir}</b></div>
+      ))}
+    </article>
+  );
+}
+
+function PortalParticles({ color }: { color: string }) {
+  return (
+    <div className="co-particles" style={{ "--portal": color } as CSSProperties} aria-hidden="true">
+      {Array.from({ length: 12 }, (_, index) => <i key={index} style={{ "--particle": index } as CSSProperties} />)}
+    </div>
+  );
+}
+
+export default function CondicionalesPage() {
+  const [screen, setScreen] = useState<Screen>("cover");
+  const [active, setActive] = useState<ConditionalChapter>(chapters[0]);
+  const [visited, setVisited] = useState<Set<string>>(new Set());
+  const [revealed, setRevealed] = useState<Set<string>>(new Set());
+  const progress = Math.round((visited.size / chapters.length) * 100);
+  const currentIndex = chapters.findIndex((chapter) => chapter.id === active.id);
+  const relevantTables = useMemo(() => tableMap[active.id] || [], [active.id]);
+
+  const show = (next: Screen) => {
+    setScreen(next);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const enter = (chapter: ConditionalChapter) => {
+    setActive(chapter);
+    setVisited((current) => new Set([...current, chapter.id]));
+    show("chapter");
+  };
+
+  const move = (step: number) => enter(chapters[(currentIndex + step + chapters.length) % chapters.length]);
+
+  const reveal = (key: string) => setRevealed((current) => {
+    const next = new Set(current);
+    if (next.has(key)) next.delete(key); else next.add(key);
+    return next;
+  });
+
+  return (
+    <main className="co-app">
+      <nav className="co-nav">
+        <a href="/" className="co-brand"><span><img src="/chespanish-guide-avatar.png" alt="" /></span><div><b>CHESPANISH</b><small>GRAMMAR ADVENTURES</small></div></a>
+        <div className="co-progress"><span>PORTALES DOMINADOS</span><i><b style={{ width: `${progress}%` }} /></i><strong>{visited.size}/{chapters.length}</strong></div>
+        <div className="co-nav-actions">
+          <button onClick={() => show("atlas")}>ATLAS</button>
+          <button onClick={() => show(screen === "cover" ? "map" : "cover")}>{screen === "cover" ? "RUTA" : "INICIO"}</button>
+        </div>
+      </nav>
+
+      {screen === "cover" && (
+        <section className="co-cover">
+          <PortalParticles color="#9d7cff" />
+          <div className="co-cover-rings" aria-hidden="true"><i /><i /><i /></div>
+          <div className="co-cover-copy">
+            <div className="co-kicker"><span>A1 → C1</span> CLASE MAESTRA · 100% BILINGÜE</div>
+            <p className="co-overline">LABORATORIO DE MUNDOS POSIBLES</p>
+            <h1>EL MULTIVERSO<br /><em>DEL “SI”</em></h1>
+            <p className="co-lead">Una expedición por <b>todos los condicionales del español</b>: desde “Si llueve, me quedo” hasta “De haberlo sabido, habría actuado distinto”. Cada portal suma exactamente una nueva pieza.</p>
+            <div className="co-cover-actions"><button onClick={() => show("map")}>ABRIR EL PRIMER PORTAL <span>→</span></button><button className="ghost" onClick={() => show("atlas")}>VER CONJUGACIONES</button></div>
+            <div className="co-cover-stats"><article><b>5</b><span>mundos progresivos</span></article><article><b>6</b><span>tablas completas</span></article><article><b>30+</b><span>ejemplos bilingües</span></article></div>
+          </div>
+          <div className="co-heroes" aria-hidden="true">
+            <span className="co-hero-halo" />
+            <img src="/conditional-characters.png" alt="" />
+            <i className="co-character-tag tag-real">REALIDAD</i><i className="co-character-tag tag-future">FUTURO</i><i className="co-character-tag tag-whatif">¿Y SI…?</i><i className="co-character-tag tag-past">PASADO</i>
+          </div>
+          <button className="co-scroll" onClick={() => show("map")}><span>↓</span> EMPEZAR DE A POCO</button>
+        </section>
+      )}
+
+      {screen === "map" && (
+        <section className="co-map">
+          <header className="co-map-head">
+            <div><span>RUTA PROGRESIVA · A1 → C1</span><h1>Cada portal cambia<br />una sola regla.</h1></div>
+            <div><p>No hace falta explicar todo en una clase. Empezá en el nivel real del alumno y avanzá cuando la lógica anterior esté firme.</p><button onClick={() => enter(chapters.find((chapter) => !visited.has(chapter.id)) || chapters[0])}>CONTINUAR RUTA →</button></div>
+          </header>
+
+          <div className="co-route-line" aria-hidden="true">{chapters.map((chapter) => <i key={chapter.id} className={visited.has(chapter.id) ? "done" : ""} />)}</div>
+
+          <div className="co-portal-grid">
+            {chapters.map((chapter, index) => (
+              <button className={`co-portal-card ${visited.has(chapter.id) ? "visited" : ""}`} style={{ "--portal": chapter.color, "--delay": `${index * .12}s` } as CSSProperties} onClick={() => enter(chapter)} key={chapter.id}>
+                <span className="co-portal-number">PORTAL {chapter.number}</span><span className="co-portal-level">{chapter.level}</span>
+                <span className="co-portal-icon">{chapter.icon}<i /></span>
+                <span className="co-portal-copy"><small>{chapter.english}</small><b>{chapter.title}</b><em>{chapter.tagline.es}</em></span>
+                <span className="co-portal-enter">ENTRAR <b>→</b></span>
+              </button>
+            ))}
+          </div>
+
+          <section className="co-golden-rule"><span>⚠️ LA REGLA QUE SALVA TODA LA CLASE</span><div><b>Después de SI no usamos futuro ni condicional.</b><p>Si vendrá / si tendría ❌ · Si viene / si tuviera ✅</p></div></section>
+
+          <section className="co-teacher-route">
+            <header><span>GUÍA PARA ALEJANDRO</span><h2>¿Hasta dónde avanzar?</h2></header>
+            <div>{chapters.map((chapter) => <article key={chapter.id} style={{ "--portal": chapter.color } as CSSProperties}><b>{chapter.level}</b><span>{chapter.title}</span><p>{chapter.id === "realidad" ? "Base, hábitos y reglas" : chapter.id === "posible" ? "Planes y consecuencias reales" : chapter.id === "hipotetico" ? "Imaginación y consejos" : chapter.id === "pasado" ? "Arrepentimientos y pasado alternativo" : "Cruces temporales y conectores"}</p></article>)}</div>
+          </section>
+
+          <button className="co-atlas-call" onClick={() => show("atlas")}><span>ATLAS DE CONJUGACIONES</span><b>Los seis tiempos, irregulares y conectores avanzados</b><i>ABRIR →</i></button>
+        </section>
+      )}
+
+      {screen === "chapter" && (
+        <section className="co-chapter" style={{ "--portal": active.color } as CSSProperties}>
+          <header className="co-chapter-hero">
+            <PortalParticles color={active.color} />
+            <div className="co-chapter-top"><button onClick={() => show("map")}>← MAPA DEL MULTIVERSO</button><span>PORTAL {active.number} · {active.level}</span></div>
+            <div className="co-chapter-icon">{active.icon}<i /></div>
+            <div className="co-chapter-title"><small>{active.english}</small><h1>{active.title}</h1><PairText {...active.tagline} /></div>
+            <div className="co-formula-beam"><span>LA FÓRMULA</span><b>{active.formula}</b><i>{active.formulaEn}</i></div>
+          </header>
+
+          <div className="co-chapter-body">
+            <section className="co-concept">
+              <div className="co-section-number">01</div><article><span>ENTENDER ANTES DE CONJUGAR</span><h2>¿Qué significa este mundo?</h2><PairText {...active.meaning} /></article>
+            </section>
+
+            <section className="co-logic-strip">
+              <div><small>CONDICIÓN</small><b>Si + …</b><span>abre una posibilidad</span></div><i>→</i><div><small>CONSECUENCIA</small><b>entonces…</b><span>muestra el resultado</span></div><i>↔</i><div><small>ORDEN FLEXIBLE</small><b>B si A</b><span>la lógica no cambia</span></div>
+            </section>
+
+            <section className="co-uses">
+              <header><span>02 · CUÁNDO LO USAMOS</span><h2>La intención manda.</h2></header>
+              <div>{active.uses.map((use, index) => <article key={use.es}><span>{String(index + 1).padStart(2, "0")}</span><PairText {...use} /></article>)}</div>
+            </section>
+
+            <section className="co-examples">
+              <header><span>03 · VER LA LÓGICA</span><h2>Tres ejemplos, tres ventanas.</h2></header>
+              <div>{active.examples.map((example, index) => <article key={example.es}><div className="co-window"><i /><i /><i /></div><small>{example.note}</small><b>{example.es}</b><span>{example.en}</span><em>{index === 0 ? "CONDICIÓN → RESULTADO" : index === 1 ? "ORDEN FLEXIBLE" : "USO NATURAL"}</em></article>)}</div>
+            </section>
+
+            <section className="co-conjugations">
+              <header><span>04 · CONJUGACIONES COMPLETAS</span><h2>Las piezas de este portal.</h2><p>No memorices la frase entera: reconocé qué tiempo construye la condición y cuál construye el resultado.</p></header>
+              <div className="co-tense-grid">{relevantTables.map((id) => <ConjugationTable id={id} key={id} />)}</div>
+              {(active.id === "hipotetico" || active.id === "pasado" || active.id === "mixtos") && <button className="co-more-tables" onClick={() => show("atlas")}>VER TODOS LOS IRREGULARES Y LAS SEIS TABLAS →</button>}
+            </section>
+
+            <section className="co-traps">
+              <div className="co-trap-character" aria-hidden="true">🧑‍🚀<span>¡OJO!</span></div>
+              <article><span>05 · ERRORES QUE HAY QUE BLOQUEAR</span><h2>La alarma temporal</h2>{active.traps.map((trap) => <div key={trap.es}><PairText {...trap} /></div>)}</article>
+            </section>
+
+            <section className="co-practice">
+              <header><span>06 · LABORATORIO</span><h2>Probalo antes de hablar.</h2><p>Tocá cada tarjeta para comprobar la respuesta y entender el porqué.</p></header>
+              <div>{active.exercises.map((exercise, index) => {
+                const key = `${active.id}-${index}`;
+                const isOpen = revealed.has(key);
+                return <button className={isOpen ? "open" : ""} onClick={() => reveal(key)} key={exercise.prompt}><span>{String(index + 1).padStart(2, "0")}</span><b>{exercise.prompt}</b><i>{isOpen ? "OCULTAR" : "VER RESPUESTA"}</i>{isOpen && <em><strong>{exercise.answer}</strong>{exercise.why}</em>}</button>;
+              })}</div>
+            </section>
+
+            <section className="co-speaking">
+              <div className="co-speaking-orbit" aria-hidden="true"><i /><span>{active.icon}</span></div>
+              <header><span>07 · ACTIVACIÓN ORAL</span><h2>Ahora el alumno crea el universo.</h2><p>Responder → preguntar “¿por qué?” → cambiar una condición → comparar el nuevo resultado.</p></header>
+              <div>{active.speaking.map((prompt, index) => <article key={prompt.es}><span>{index + 1}</span><PairText {...prompt} /></article>)}</div>
+            </section>
+
+            <footer className="co-chapter-nav"><button onClick={() => move(-1)}>← PORTAL ANTERIOR</button><button onClick={() => show("map")}>VER MAPA</button><button onClick={() => move(1)}>SIGUIENTE PORTAL →</button></footer>
+          </div>
+        </section>
+      )}
+
+      {screen === "atlas" && (
+        <section className="co-atlas">
+          <header className="co-atlas-hero"><button onClick={() => show("map")}>← VOLVER A LA RUTA</button><span>REFERENCIA COMPLETA · A1 → C1</span><h1>El Atlas de<br /><em>las conjugaciones</em></h1><p>Todo lo que necesitás para construir cualquier condicional sin mezclar tiempos.</p></header>
+          <div className="co-atlas-body">
+            <section className="co-atlas-rule"><b>SI + FUTURO / CONDICIONAL = ⚠️</b><span>En la condición usamos presente o subjuntivo. El futuro y el condicional aparecen normalmente en el resultado.</span></section>
+            <section><header className="co-atlas-section-head"><span>01 · LOS SEIS TIEMPOS</span><h2>Conjugación completa</h2></header><div className="co-tense-grid atlas-grid">{tenseTables.map((table) => <ConjugationTable id={table.id} key={table.id} />)}</div></section>
+            <section className="co-irregulars"><header className="co-atlas-section-head"><span>02 · FUTURO Y CONDICIONAL</span><h2>Las doce raíces irregulares</h2><p>La raíz cambia, pero las terminaciones son exactamente las mismas.</p></header><div>{irregularStems.map(([verb, stem, forms]) => <article key={verb}><b>{verb}</b><span>{stem}</span><em>{forms}</em></article>)}</div></section>
+            <section className="co-participles"><header className="co-atlas-section-head"><span>03 · TIEMPOS COMPUESTOS</span><h2>Participios irregulares</h2></header><div>{irregularParticiples.map(([verb, participle]) => <article key={verb}><span>{verb}</span><b>{participle}</b></article>)}</div></section>
+            <section className="co-connectors"><header className="co-atlas-section-head"><span>04 · MÁS ALLÁ DE “SI”</span><h2>Conectores avanzados</h2><p>Estos conectores convierten una condición en requisito, excepción, advertencia o registro formal.</p></header><div>{advancedConnectors.map(([connector, english, example]) => <article key={connector}><b>{connector}</b><span>{english}</span><p>{example}</p></article>)}</div></section>
+            <section className="co-master-compare"><header className="co-atlas-section-head"><span>05 · LA FOTO COMPLETA</span><h2>Un verbo, cinco universos</h2></header><div><article><small>REAL</small><b>Si tengo tiempo, voy.</b><span>If I have time, I go.</span></article><article><small>POSIBLE</small><b>Si tengo tiempo, iré.</b><span>If I have time, I’ll go.</span></article><article><small>HIPOTÉTICO</small><b>Si tuviera tiempo, iría.</b><span>If I had time, I would go.</span></article><article><small>IMPOSIBLE</small><b>Si hubiera tenido tiempo, habría ido.</b><span>If I had had time, I would have gone.</span></article><article><small>MIXTO</small><b>Si hubiera tenido tiempo, ahora estaría allí.</b><span>If I had had time, I would be there now.</span></article></div></section>
+            <section className="co-final-mission"><header><span>MISIÓN FINAL</span><h2>Cinco frases. Cinco universos. Una historia.</h2><p>El alumno responde en orden y después conecta las cinco ideas como si fueran versiones alternativas de su vida.</p></header><div>{finalMission.map((mission, index) => <article key={mission.situation}><span>{index + 1}</span><b>{mission.situation}</b><i>{mission.target}</i></article>)}</div></section>
+          </div>
+        </section>
+      )}
+    </main>
+  );
+}
