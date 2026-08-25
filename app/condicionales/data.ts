@@ -13,9 +13,9 @@ export type ConditionalChapter = {
   formula: string;
   formulaEn: string;
   uses: Pair[];
-  examples: { es: string; en: string; note: string }[];
+  examples: { es: string; en: string; note: string; noteEn?: string }[];
   traps: Pair[];
-  exercises: { prompt: string; answer: string; why: string }[];
+  exercises: { prompt: string; promptEn?: string; answer: string; why: string; whyEn?: string }[];
   speaking: Pair[];
 };
 
@@ -38,18 +38,18 @@ export const chapters: ConditionalChapter[] = [
       { es: "Instrucciones: Si no entendés, preguntá.", en: "Instructions: If you don’t understand, ask." }
     ],
     examples: [
-      { es: "Si tomo café de noche, no duermo.", en: "If I drink coffee at night, I don’t sleep.", note: "resultado habitual" },
-      { es: "Si llueve, usamos el subte.", en: "If it rains, we take the subway.", note: "decisión habitual" },
-      { es: "Si necesitás ayuda, llamame.", en: "If you need help, call me.", note: "presente + imperativo" }
+      { es: "Si tomo café de noche, no duermo.", en: "If I drink coffee at night, I don’t sleep.", note: "resultado habitual", noteEn: "habitual result" },
+      { es: "Si llueve, usamos el subte.", en: "If it rains, we take the subway.", note: "decisión habitual", noteEn: "habitual decision" },
+      { es: "Si necesitás ayuda, llamame.", en: "If you need help, call me.", note: "presente + imperativo", noteEn: "present + command" }
     ],
     traps: [
       { es: "No significa que esté pasando ahora: puede ser una regla general.", en: "It does not mean it is happening now: it may be a general rule." },
       { es: "La cláusula con si puede ir primero o después; solo cambia la coma.", en: "The if-clause can come first or second; only the comma changes." }
     ],
     exercises: [
-      { prompt: "Si no ___ (comer) bien, me siento cansado.", answer: "como", why: "Es un resultado habitual: presente + presente." },
-      { prompt: "Si vos ___ (tener) dudas, preguntame.", answer: "tenés", why: "Con vos: tenés. El resultado es una instrucción." },
-      { prompt: "Las plantas mueren si no ___ (recibir) agua.", answer: "reciben", why: "La cláusula con si puede aparecer al final." }
+      { prompt: "Si no ___ (comer) bien, me siento cansado.", promptEn: "If I don’t eat well, I feel tired.", answer: "como", why: "Es un resultado habitual: presente + presente.", whyEn: "It is a habitual result: present + present." },
+      { prompt: "Si vos ___ (tener) dudas, preguntame.", promptEn: "If you have questions, ask me.", answer: "tenés", why: "Con vos: tenés. El resultado es una instrucción.", whyEn: "With vos: tenés. The result is an instruction." },
+      { prompt: "Las plantas mueren si no ___ (recibir) agua.", promptEn: "Plants die if they do not receive water.", answer: "reciben", why: "La cláusula con si puede aparecer al final.", whyEn: "The si clause can appear at the end." }
     ],
     speaking: [
       { es: "¿Qué pasa si dormís menos de seis horas?", en: "What happens if you sleep less than six hours?" },
@@ -75,18 +75,18 @@ export const chapters: ConditionalChapter[] = [
       { es: "Orden: Si llegás primero, esperame afuera.", en: "Command: If you arrive first, wait for me outside." }
     ],
     examples: [
-      { es: "Si mañana hace sol, iremos al parque.", en: "If it is sunny tomorrow, we’ll go to the park.", note: "posibilidad + predicción" },
-      { es: "Te aviso si termino temprano.", en: "I’ll let you know if I finish early.", note: "orden invertido" },
-      { es: "Si encontrás mi celular, no mires las fotos.", en: "If you find my phone, don’t look at the photos.", note: "posibilidad + imperativo" }
+      { es: "Si mañana hace sol, iremos al parque.", en: "If it is sunny tomorrow, we’ll go to the park.", note: "posibilidad + predicción", noteEn: "possibility + prediction" },
+      { es: "Te aviso si termino temprano.", en: "I’ll let you know if I finish early.", note: "orden invertido", noteEn: "reversed order" },
+      { es: "Si encontrás mi celular, no mires las fotos.", en: "If you find my phone, don’t look at the photos.", note: "posibilidad + imperativo", noteEn: "possibility + command" }
     ],
     traps: [
       { es: "Después de si NO usamos futuro: Si vendrás ❌ → Si venís ✅.", en: "After si we do NOT use the future: Si vendrás ❌ → Si venís ✅." },
       { es: "El presente puede expresar futuro cuando aparece la condición.", en: "The present can express future time inside the condition." }
     ],
     exercises: [
-      { prompt: "Si mañana ___ (llover), cancelaremos el picnic.", answer: "llueve", why: "Después de si usamos presente, aunque hablamos del futuro." },
-      { prompt: "Te ___ (llamar) si tengo novedades.", answer: "llamaré / llamo", why: "El resultado admite futuro o presente con sentido futuro." },
-      { prompt: "Si ves a Ana, ___ (decirle) que llego tarde.", answer: "decile / dile", why: "La consecuencia es una orden: imperativo." }
+      { prompt: "Si mañana ___ (llover), cancelaremos el picnic.", promptEn: "If it rains tomorrow, we will cancel the picnic.", answer: "llueve", why: "Después de si usamos presente, aunque hablamos del futuro.", whyEn: "After si we use the present, even when we are talking about the future." },
+      { prompt: "Te ___ (llamar) si tengo novedades.", promptEn: "I will call you if I have news.", answer: "llamaré / llamo", why: "El resultado admite futuro o presente con sentido futuro.", whyEn: "The result can use the future or the present with a future meaning." },
+      { prompt: "Si ves a Ana, ___ (decirle) que llego tarde.", promptEn: "If you see Ana, tell her I am running late.", answer: "decile / dile", why: "La consecuencia es una orden: imperativo.", whyEn: "The result is a command, so we use the imperative." }
     ],
     speaking: [
       { es: "Si tenés un día libre mañana, ¿qué vas a hacer?", en: "If you have a free day tomorrow, what will you do?" },
@@ -212,6 +212,7 @@ export type TenseTable = {
   title: string;
   english: string;
   cue: string;
+  cueEn?: string;
   rows: [string, string, string, string][];
 };
 
@@ -221,6 +222,7 @@ export const tenseTables: TenseTable[] = [
     title: "Presente de indicativo",
     english: "Present indicative",
     cue: "Portal 01–02 · después de SI para condiciones reales",
+    cueEn: "Portal 01–02 · after SI for real conditions",
     rows: [
       ["yo", "hablo", "como", "vivo"], ["vos", "hablás", "comés", "vivís"], ["tú", "hablas", "comes", "vives"],
       ["él / ella / usted", "habla", "come", "vive"], ["nosotros/as", "hablamos", "comemos", "vivimos"],
@@ -232,6 +234,7 @@ export const tenseTables: TenseTable[] = [
     title: "Futuro simple",
     english: "Simple future",
     cue: "Portal 02 · consecuencia probable",
+    cueEn: "Portal 02 · probable result",
     rows: [
       ["yo", "hablaré", "comeré", "viviré"], ["vos / tú", "hablarás", "comerás", "vivirás"],
       ["él / ella / usted", "hablará", "comerá", "vivirá"], ["nosotros/as", "hablaremos", "comeremos", "viviremos"],
@@ -243,6 +246,7 @@ export const tenseTables: TenseTable[] = [
     title: "Imperativo afirmativo / negativo",
     english: "Affirmative / negative commands",
     cue: "Portal 01–02 · instrucciones y consecuencias",
+    cueEn: "Portal 01–02 · instructions and results",
     rows: [
       ["vos", "hablá / no hables", "comé / no comas", "viví / no vivas"],
       ["tú", "habla / no hables", "come / no comas", "vive / no vivas"],
