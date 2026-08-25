@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "El Mundo Fantástico A0 | CHESPANISH",
+  description: "Una aventura de conversación A0 por 6 continentes, 40 destinos, 400 preguntas bilingües y un wordbank completo.",
+  alternates: { canonical: "/mundo-fantastico" },
+  openGraph: {
+    title: "El Mundo Fantástico · Español A0",
+    description: "6 continentes, 40 mundos, 400 preguntas y un wordbank bilingüe completo para hablar desde cero.",
+    images: [{ url: "/og.png", width: 1731, height: 909, alt: "El Mundo Fantástico · CHESPANISH Español A0" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "El Mundo Fantástico · Español A0",
+    description: "6 continentes, 40 mundos y vocabulario bilingüe completo para hablar desde cero.",
+    images: ["/og.png"],
+  },
+};
+
+export default function MundoFantasticoLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return children;
+}
