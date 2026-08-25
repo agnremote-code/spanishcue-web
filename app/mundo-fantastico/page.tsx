@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import "./style.css";
 import {
   answerTools,
@@ -18,9 +18,12 @@ import {
 type Screen = "cover" | "atlas" | "destination";
 type Question = { prompt: Pair; starter: Pair; choices: Pair[]; follow: Pair };
 type GlyphName = "map" | "shuffle" | "sound" | "clear" | "home" | "plus" | "compass" | "words";
+type VisualResult = { src: string; source: string; artist: string; license: string };
 
 const continents: Array<"Todos" | Continent> = ["Todos", "América", "Europa", "África", "Asia", "Oceanía", "Antártida"];
 const yesNo = [{ es: "Sí", en: "Yes" }, { es: "No", en: "No" }, { es: "Tal vez", en: "Maybe" }];
+const imageCache = new Map<string, VisualResult>();
+const continentSlug: Record<Continent,string> = {América:"america",Europa:"europa",África:"africa",Asia:"asia",Oceanía:"oceania",Antártida:"antartida"};
 
 function questionsFor(place: Destination): Question[] {
   return [
@@ -59,6 +62,64 @@ function Crest({ place, small = false }: { place: Destination; small?: boolean }
   return <div className={`wf-crest ${small ? "small" : ""}`} style={{"--place":place.color} as CSSProperties} aria-hidden="true"><i/><span>{place.number}</span><small>{continentCodes[place.continent]}</small></div>;
 }
 
+function cleanCredit(value: string | undefined) {
+  if (!value) return "Wikimedia Commons";
+  const node = document.createElement("div");
+  node.innerHTML = value;
+  return (node.textContent || "Wikimedia Commons").replace(/\s+/g," ").trim().slice(0,72);
+}
+
+function WikiVisual({query,alt,label,subLabel,className=""}:{query:string;alt:string;label:string;subLabel:string;className?:string}) {
+  const [visual,setVisual] = useState<VisualResult | null>(()=>imageCache.get(query)||null);
+  const [failed,setFailed] = useState(false);
+
+  useEffect(()=>{
+    const cached=imageCache.get(query);
+    if(cached){setVisual(cached);setFailed(false);return;}
+    const controller=new AbortController();
+    setVisual(null);setFailed(false);
+    const params=new URLSearchParams({action:"query",generator:"search",gsrsearch:query,gsrnamespace:"6",gsrlimit:"1",prop:"imageinfo",iiprop:"url|extmetadata",iiurlwidth:"1000",format:"json",origin:"*"});
+    fetch(`https://commons.wikimedia.org/w/api.php?${params}`,{signal:controller.signal})
+      .then(response=>response.ok?response.json():Promise.reject(new Error("visual")))
+      .then(payload=>{
+        const pages=Object.values(payload?.query?.pages||{}) as Array<{imageinfo?:Array<{thumburl?:string;descriptionurl?:string;extmetadata?:Record<string,{value?:string}>}>}>;
+        const info=pages[0]?.imageinfo?.[0];
+        if(!info?.thumburl)throw new Error("visual");
+        const result={src:info.thumburl,source:info.descriptionurl||"https://commons.wikimedia.org",artist:cleanCredit(info.extmetadata?.Artist?.value),license:cleanCredit(info.extmetadata?.LicenseShortName?.value)};
+        imageCache.set(query,result);setVisual(result);
+      })
+      .catch(error=>{if(error?.name!=="AbortError")setFailed(true)});
+    return()=>controller.abort();
+  },[query]);
+
+  return <article className={`wf-wiki-visual ${className} ${visual?"loaded":""} ${failed?"failed":""}`}>
+    {visual?<img src={visual.src} alt={alt}/>:<div className="wf-visual-loading"><i/><i/><i/></div>}
+    <div className="wf-visual-shade"/>
+    <div className="wf-visual-label"><span>{label}</span><b>{subLabel}</b></div>
+    {visual&&<a href={visual.source} target="_blank" rel="noreferrer" title={`${visual.artist} · ${visual.license}`}>WIKIMEDIA · {visual.license}</a>}
+    {failed&&<small className="wf-visual-fallback">IMAGEN NO DISPONIBLE · IMAGE UNAVAILABLE</small>}
+  </article>;
+}
+
+function TypicalGallery({place}:{place:Destination}) {
+  return <div className="wf-typical-gallery">
+    <WikiVisual className="wf-visual-landmark" query={`${place.landmark.en} ${place.countryEn}`} alt={`${place.landmark.es}, ${place.country}`} label="LUGAR · PLACE" subLabel={place.landmark.es}/>
+    <WikiVisual className="wf-visual-food" query={`${place.food.en} ${place.countryEn} food`} alt={`${place.food.es}, ${place.country}`} label="COMIDA · FOOD" subLabel={place.food.es}/>
+    <WikiVisual className="wf-visual-nature" query={`${place.nature.en} ${place.countryEn} landscape`} alt={`${place.nature.es}, ${place.country}`} label="NATURALEZA · NATURE" subLabel={place.nature.es}/>
+    <div className="wf-gallery-crest"><Crest place={place} small/></div>
+  </div>;
+}
+
+function questionVisual(place:Destination,index:number){
+  if(index===1)return{query:`${place.food.en} ${place.countryEn} food`,label:"COMIDA · FOOD",title:place.food.es};
+  if(index===2)return{query:`${place.nature.en} ${place.countryEn} landscape`,label:"NATURALEZA · NATURE",title:place.nature.es};
+  if(index===3)return{query:`${place.animal.en} ${place.countryEn}`,label:"ANIMAL · ANIMAL",title:place.animal.es};
+  if(index===4)return{query:`${place.transport.en} ${place.countryEn} transport`,label:"VIAJE · TRAVEL",title:place.transport.es};
+  if(index===5)return{query:`${place.countryEn} landscape weather`,label:"CLIMA · WEATHER",title:place.climate.es};
+  if(index===8)return{query:`${place.culture.en} ${place.countryEn}`,label:"CULTURA · CULTURE",title:place.culture.es};
+  return{query:`${place.landmark.en} ${place.countryEn}`,label:"LUGAR · PLACE",title:place.landmark.es};
+}
+
 export default function MundoFantastico() {
   const [screen, setScreen] = useState<Screen>("cover");
   const [active, setActive] = useState<Destination>(destinations[9]);
@@ -69,7 +130,9 @@ export default function MundoFantastico() {
   const [visited, setVisited] = useState<Set<string>>(new Set());
   const [answerParts, setAnswerParts] = useState<Pair[]>([]);
   const [englishVisible, setEnglishVisible] = useState(true);
-  const [openBank, setOpenBank] = useState("verbos");
+  const [bankOpen, setBankOpen] = useState(false);
+  const [bankTab, setBankTab] = useState("country");
+  const [bankQuery, setBankQuery] = useState("");
 
   const visibleDestinations = useMemo(() => destinations.filter(place =>
     (continent === "Todos" || place.continent === continent) &&
@@ -92,9 +155,29 @@ export default function MundoFantastico() {
     {...active.transport,code:"TR",label:{es:"TRANSPORTE",en:"TRANSPORT"}},
     {...active.climate,code:"CL",label:{es:"CLIMA",en:"WEATHER"}},
   ];
+  const bankCatalog = [
+    {id:"country",code:"PA",label:{es:active.country,en:active.countryEn},words:destinationWords},
+    {id:"phrases",code:"A0",label:{es:"Frases rápidas",en:"Quick phrases"},words:answerTools},
+    ...megaWordbank,
+  ];
+  const normalizedBankQuery=bankQuery.trim().toLowerCase();
+  const visibleBankGroups=bankCatalog
+    .filter(group=>!normalizedBankQuery||group.words.some(word=>`${word.es} ${word.en}`.toLowerCase().includes(normalizedBankQuery)))
+    .filter(group=>normalizedBankQuery||group.id===bankTab)
+    .map(group=>({...group,words:normalizedBankQuery?group.words.filter(word=>`${word.es} ${word.en}`.toLowerCase().includes(normalizedBankQuery)):group.words}));
+  const currentVisual=questionVisual(active,question);
+
+  useEffect(()=>{
+    if(!bankOpen)return;
+    const previous=document.body.style.overflow;
+    document.body.style.overflow="hidden";
+    const close=(event:KeyboardEvent)=>{if(event.key==="Escape")setBankOpen(false)};
+    window.addEventListener("keydown",close);
+    return()=>{document.body.style.overflow=previous;window.removeEventListener("keydown",close)};
+  },[bankOpen]);
 
   const show = (next: Screen) => { setScreen(next); window.scrollTo({top:0,behavior:"smooth"}); };
-  const enter = (place: Destination, start = 0) => { setActive(place); setAtlasPick(place); setQuestion(start); setAnswerParts([]); setVisited(previous => new Set([...previous, place.id])); show("destination"); };
+  const enter = (place: Destination, start = 0) => { setActive(place); setAtlasPick(place); setQuestion(start); setAnswerParts([]); setBankTab("country"); setBankQuery(""); setBankOpen(false); setVisited(previous => new Set([...previous, place.id])); show("destination"); };
   const surprise = () => { const pool = destinations.filter(place => place.id !== active.id); const place = pool[Math.floor(Math.random() * pool.length)] || destinations[0]; enter(place, Math.floor(Math.random() * 10)); };
   const addPart = (part: Pair) => setAnswerParts(parts => [...parts, part]);
   const changeQuestion = (next: number) => { setQuestion(Math.max(0, Math.min(9, next))); setAnswerParts([]); document.querySelector(".wf-question-stage")?.scrollIntoView({behavior:"smooth",block:"center"}); };
@@ -161,12 +244,13 @@ export default function MundoFantastico() {
       {!visibleDestinations.length && <div className="wf-empty"><b>No encontramos ese lugar.</b><span>Probá otro país o una capital. · Try another country or capital.</span></div>}
     </section>}
 
-    {screen === "destination" && <section className="wf-world" style={{"--place":active.color,"--continent":continentColors[active.continent]} as CSSProperties}>
+    {screen === "destination" && <section className={`wf-world wf-continent-${continentSlug[active.continent]} wf-country-${active.id}`} style={{"--place":active.color,"--continent":continentColors[active.continent]} as CSSProperties}>
       <header className="wf-world-hero">
         <Sky/>
         <div className="wf-world-top"><button onClick={() => show("atlas")}>← MAPA · MAP</button><span>MUNDO {active.number} · {active.continent}</span><div><button className={englishVisible ? "active" : ""} onClick={() => setEnglishVisible(value => !value)}>EN {englishVisible ? "ON" : "OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO PAÍS</button></div></div>
-        <div className="wf-world-copy"><small>{active.continent} · {continentEnglish[active.continent]}</small><h1>{active.country}</h1><h2>{active.countryEn}</h2><p><b>{active.title.es}</b><span className="wf-en">{active.title.en}</span></p><div className="wf-world-facts"><span><small>CAPITAL</small>{active.capital.es}</span><span><small>HOLA</small>{active.greeting.es}</span><span><small>CLIMA</small>{active.climate.es}</span></div></div>
-        <div className="wf-world-map" aria-hidden="true"><img src="/world-map.svg" alt=""/><Crest place={active}/><i/><i/></div>
+        <div className="wf-world-copy"><small>{active.continent} · {continentEnglish[active.continent]}</small><h1>{active.country}</h1><h2>{active.countryEn}</h2><p><b>{active.title.es}</b><span className="wf-en">{active.title.en}</span></p><div className="wf-world-facts"><span><small>CAPITAL</small>{active.capital.es}</span><span><small>HOLA</small>{active.greeting.es}</span><span><small>CLIMA</small>{active.climate.es}</span></div><div className="wf-typical-chips"><b>{active.landmark.es}</b><b>{active.food.es}</b><b>{active.animal.es}</b><b>{active.culture.es}</b></div></div>
+        <TypicalGallery place={active}/>
+        <div className="wf-country-atmosphere" aria-hidden="true"><i/><i/><i/><i/><i/><i/></div>
       </header>
 
       <div className="wf-classroom">
@@ -174,8 +258,8 @@ export default function MundoFantastico() {
 
         <section className="wf-question-stage">
           <div className="wf-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question + 1).padStart(2,"0")} <i>/ 10</i></b></div>
-          <div className="wf-question-copy"><small>{active.country} · {active.countryEn}</small><h2>{current.prompt.es}</h2><p className="wf-en">{current.prompt.en}</p><button onClick={() => speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR LENTO · LISTEN SLOWLY</button></div>
-          <div className="wf-question-crest"><Crest place={active}/><i/><i/></div>
+          <div className="wf-question-copy"><small>{active.country} · {active.countryEn}</small><h2>{current.prompt.es}</h2><p className="wf-en">{current.prompt.en}</p><div className="wf-question-actions"><button onClick={() => speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR LENTO</button><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> WORDBANK</button></div></div>
+          <div className="wf-question-picture"><WikiVisual key={`${active.id}-${question}`} query={currentVisual.query} alt={`${currentVisual.title}, ${active.country}`} label={currentVisual.label} subLabel={currentVisual.title}/></div>
         </section>
 
         <section className="wf-support">
@@ -184,20 +268,25 @@ export default function MundoFantastico() {
           <article className="wf-follow"><span>3 · UNA MÁS · ONE MORE</span><b>{current.follow.es}</b><em className="wf-en">{current.follow.en}</em></article>
         </section>
 
+        <section className="wf-quick-bank"><header><div><span>WORDBANK INMEDIATO · QUICK WORDBANK</span><b>Sin bajar: tocá una palabra o abrí todo.</b></div><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> VER 120+ PALABRAS</button></header><div>{destinationWords.slice(0,8).map((word,index)=><button key={`${word.es}-${index}`} onClick={()=>addPart(word)}><small>{word.code}</small><b>{word.es}</b><span className="wf-en">{word.en}</span><i>+</i></button>)}</div></section>
+
         <section className="wf-builder" aria-live="polite">
           <header><div><span>CONSTRUCTOR DE FRASES · SENTENCE BUILDER</span><h2>Tocá palabras. Armá tu respuesta.</h2><p className="wf-en">Tap words. Build your answer.</p></div><div><button disabled={!answerParts.length} onClick={() => speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={() => setAnswerParts([])}><Glyph name="clear"/> BORRAR</button></div></header>
           <div className={`wf-answer ${answerParts.length ? "ready" : ""}`}>{answerParts.length ? answerParts.map((part, index) => <button key={`${part.es}-${index}`} onClick={() => setAnswerParts(parts => parts.filter((_, itemIndex) => index !== itemIndex))}><b>{part.es.replace(/[.…]+/g, "")}</b><small className="wf-en">{part.en.replace(/[.…]+/g, "")}</small></button>) : <p><b>Tu respuesta aparece acá…</b><span className="wf-en">Your answer appears here…</span></p>}</div>
           {answerParts.length > 0 && <div className="wf-readout"><b>{answerEs}</b><span className="wf-en">{answerEn}</span></div>}
         </section>
 
-        <section className="wf-local-bank"><header><span>WORDBANK DEL PAÍS · COUNTRY WORDBANK</span><h2>Las 10 palabras de este mundo.</h2><p className="wf-en">The 10 key words for this world. Tap to use them.</p></header><div>{destinationWords.map((word, index) => <button key={`${word.es}-${index}`} onClick={() => addPart(word)}><span>{word.code}</span><small>{word.label.es}<i className="wf-en"> · {word.label.en}</i></small><b>{word.es}</b><em className="wf-en">{word.en}</em><i>+</i></button>)}</div></section>
-
-        <section className="wf-toolkit"><header><span>BOTIQUÍN A0 · A0 TOOLKIT</span><h2>Frases pequeñas que sirven en todo el mundo.</h2><p className="wf-en">Tiny phrases that work everywhere.</p></header><div>{answerTools.map((tool, index) => <button key={`${tool.es}-${index}`} onClick={() => addPart(tool)}><b>{tool.es}</b><span className="wf-en">{tool.en}</span><i>+</i></button>)}</div></section>
-
-        <section className="wf-mega-bank"><header><div><span>WORDBANK COMPLETO A0 · COMPLETE A0 WORDBANK</span><h2>Todo el vocabulario esencial, por categorías.</h2><p className="wf-en">All essential vocabulary, organised by category.</p></div><b>120+ PALABRAS</b></header><div className="wf-bank-groups">{megaWordbank.map(group => <article key={group.id} className={openBank === group.id ? "open" : ""}><button className="wf-bank-title" onClick={() => setOpenBank(openBank === group.id ? "" : group.id)}><span>{group.code}</span><b>{group.label.es}<small className="wf-en">{group.label.en}</small></b><i>{group.words.length} {openBank === group.id ? "−" : "+"}</i></button>{openBank === group.id && <div>{group.words.map((word, index) => <button key={`${word.es}-${index}`} onClick={() => addPart(word)}><b>{word.es}</b><small className="wf-en">{word.en}</small><i>+</i></button>)}</div>}</article>)}</div></section>
-
         <nav className="wf-question-nav"><button disabled={question === 0} onClick={() => changeQuestion(question - 1)}>← ANTERIOR · PREVIOUS</button><div>{questions.map((_, index) => <button key={index} className={question === index ? "active" : ""} onClick={() => changeQuestion(index)} aria-label={`Pregunta ${index + 1}`}>{index + 1}</button>)}</div><button onClick={() => question === 9 ? surprise() : changeQuestion(question + 1)}>{question === 9 ? "NUEVO PAÍS · NEW COUNTRY →" : "SIGUIENTE · NEXT →"}</button></nav>
       </div>
+
+      <button className="wf-bank-fab" onClick={()=>setBankOpen(true)} aria-expanded={bankOpen}><Glyph name="words"/><span><b>WORDBANK</b><small>ABRIR SIN BAJAR · OPEN NOW</small></span><i>120+</i></button>
+      {bankOpen&&<div className="wf-bank-overlay" onMouseDown={()=>setBankOpen(false)}><aside className="wf-bank-drawer" role="dialog" aria-modal="true" aria-label="Wordbank bilingüe" onMouseDown={event=>event.stopPropagation()}>
+        <header><div><span>WORDBANK SIEMPRE A MANO · ALWAYS READY</span><h2>{active.country}: hablá sin buscar.</h2><p className="wf-en">Tap any word. It goes directly to your answer.</p></div><button onClick={()=>setBankOpen(false)} aria-label="Cerrar wordbank">×</button></header>
+        <label className="wf-bank-search"><span>⌕</span><input autoFocus value={bankQuery} onChange={event=>setBankQuery(event.target.value)} placeholder="Buscar español o inglés · Search Spanish or English"/><button disabled={!bankQuery} onClick={()=>setBankQuery("")}>BORRAR</button></label>
+        <nav className="wf-drawer-tabs">{bankCatalog.map(group=><button key={group.id} className={bankTab===group.id&&!normalizedBankQuery?"active":""} onClick={()=>{setBankTab(group.id);setBankQuery("")}}><span>{group.code}</span><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></button>)}</nav>
+        <div className="wf-drawer-results">{visibleBankGroups.length?visibleBankGroups.map(group=><section key={group.id}><header><span>{group.code}</span><div><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></div><i>{group.words.length}</i></header><div>{group.words.map((word,index)=><button key={`${group.id}-${word.es}-${index}`} onClick={()=>addPart(word)}><b>{word.es}</b><small className="wf-en">{word.en}</small><i>+</i></button>)}</div></section>):<div className="wf-bank-empty"><b>No aparece esa palabra.</b><span>Probá otra búsqueda. · Try another search.</span></div>}</div>
+        <footer><div><span>RESPUESTA ACTUAL · CURRENT ANSWER</span><b>{answerEs||"Todavía vacía…"}</b><small className="wf-en">{answerEn||"Still empty…"}</small></div><div><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button><button onClick={()=>setBankOpen(false)}>LISTO · DONE →</button></div></footer>
+      </aside></div>}
     </section>}
   </main>;
 }
