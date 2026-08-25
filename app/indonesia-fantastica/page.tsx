@@ -3,7 +3,8 @@
 import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import "./style.css";
-import { answerTools, provinces, regions, type Pair, type Province } from "./data";
+import { answerTools, provinces as provinceSeed, regions, type Pair, type Province } from "./data";
+import { authenticProvinces } from "./authentic-data";
 
 type Screen = "cover" | "map" | "province";
 type Question = { es: string; en: string; starter: Pair; choices: Pair[]; spark: Pair };
@@ -35,6 +36,11 @@ const regionCopy: Record<string,{es:string;en:string;code:string}> = {
   Papua:{es:"Montañas y colores salvajes",en:"Mountains & wild colours",code:"PAP"},
 };
 
+const provinces: Province[] = provinceSeed.map(province=>({
+  ...province,
+  ...authenticProvinces[province.id],
+}));
+
 const atlasCoordinates: Record<string,Array<[number,number]>> = {
   Sumatra:[[7,34],[10,29],[11,38],[14,34],[17,39],[14,47],[17,52],[20,57],[13,56],[23,63]],
   Java:[[27,69],[31,70],[35,70],[39,71],[44,70],[49,70]],
@@ -54,16 +60,16 @@ const provincePositions = Object.fromEntries(
 
 function questionsFor(p: Province): Question[] {
   return [
-    {es:`¿Te gusta ${p.place.es}?`,en:`Do you like ${p.place.en}?`,starter:{es:"Sí, me gusta… / No, no me gusta…",en:"Yes, I like… / No, I don’t like…"},choices:smallChoices.yesNo,spark:{es:"¿Por qué?",en:"Why?"}},
-    {es:`¿Querés ${p.action.es}?`,en:`Do you want to ${p.action.en}?`,starter:{es:"Sí, quiero… / No, no quiero…",en:"Yes, I want to… / No, I don’t want to…"},choices:smallChoices.yesNo,spark:{es:"¿Con quién?",en:"With whom?"}},
+    {es:`Si viajás a ${p.name}, ¿querés conocer ${p.place.es}?`,en:`If you travel to ${p.name}, do you want to visit ${p.place.en}?`,starter:{es:"Sí, quiero conocer… / No, prefiero…",en:"Yes, I want to visit… / No, I prefer…"},choices:smallChoices.yesNo,spark:{es:"¿Con quién vas?",en:"Who do you go with?"}},
+    {es:`¿Te gustaría ${p.action.es}?`,en:`Would you like to ${p.action.en}?`,starter:{es:"Sí, me gustaría… / No, no me gustaría…",en:"Yes, I would like to… / No, I wouldn’t like to…"},choices:smallChoices.yesNo,spark:{es:"¿De día o de noche?",en:"During the day or at night?"}},
     {es:`¿Preferís ${p.choiceA.es} o ${p.choiceB.es}?`,en:`Do you prefer ${p.choiceA.en} or ${p.choiceB.en}?`,starter:{es:`Prefiero ${p.choiceA.es} / ${p.choiceB.es}.`,en:`I prefer ${p.choiceA.en} / ${p.choiceB.en}.`},choices:[p.choiceA,p.choiceB],spark:{es:"¿Por qué?",en:"Why?"}},
-    {es:`¿De qué color es ${p.thing.es}?`,en:`What colour is ${p.thing.en}?`,starter:{es:"Es…",en:"It is…"},choices:[{es:"Rojo/a",en:"Red"},{es:"Azul",en:"Blue"},{es:"Verde",en:"Green"},{es:"Dorado/a",en:"Golden"}],spark:{es:"¿Te gusta ese color?",en:"Do you like that colour?"}},
-    {es:`¿${p.animal.es} es grande, pequeño/a, amable o peligroso/a?`,en:`Is ${p.animal.en} big, small, friendly or dangerous?`,starter:{es:"Es…",en:"It is…"},choices:[...smallChoices.size,{es:"Amable",en:"Friendly"},{es:"Peligroso/a",en:"Dangerous"}],spark:{es:"¿Tenés miedo?",en:"Are you afraid?"}},
-    {es:`¿Qué tiempo hace en ${p.name}: calor, frío, lluvia o sol?`,en:`What is the weather like in ${p.name}: hot, cold, rainy or sunny?`,starter:{es:"Hace… / Hay…",en:"It is… / There is…"},choices:smallChoices.weather,spark:{es:"¿Qué ropa usás?",en:"What clothes do you wear?"}},
-    {es:`¿Querés probar ${p.food.es}?`,en:`Do you want to try ${p.food.en}?`,starter:{es:"Sí, quiero probar… / No, gracias.",en:"Yes, I want to try… / No, thank you."},choices:[{es:"Sí, por favor",en:"Yes, please"},{es:"No, gracias",en:"No, thank you"},{es:"Tal vez",en:"Maybe"}],spark:{es:"¿Es dulce o salado?",en:"Is it sweet or salty?"}},
-    {es:`¿Cómo te sentís en ${p.place.es}?`,en:`How do you feel in ${p.place.en}?`,starter:{es:"Me siento…",en:"I feel…"},choices:smallChoices.feeling,spark:{es:"¿Por qué?",en:"Why?"}},
-    {es:"¿Viajás solo/a, con amigos, con tu familia o con una persona especial?",en:"Do you travel alone, with friends, with your family or with someone special?",starter:{es:"Viajo…",en:"I travel…"},choices:[{es:"Solo/a",en:"Alone"},{es:"Con amigos",en:"With friends"},{es:"Con mi familia",en:"With my family"},{es:"Con alguien especial",en:"With someone special"}],spark:{es:"¿Quién?",en:"Who?"}},
-    {es:`Inventá un nombre para ${p.thing.es}. ¿Cómo se llama?`,en:`Invent a name for ${p.thing.en}. What is it called?`,starter:{es:"Se llama…",en:"It is called…"},choices:[{es:"Un nombre divertido",en:"A funny name"},{es:"Un nombre mágico",en:"A magic name"},{es:"Un nombre misterioso",en:"A mysterious name"}],spark:{es:"¿Qué poder tiene?",en:"What power does it have?"}},
+    {es:`¿Qué te parece ${p.thing.es}?`,en:`What do you think about ${p.thing.en}?`,starter:{es:"Me parece…",en:"I think it is…"},choices:[{es:"Interesante",en:"Interesting"},{es:"Hermoso/a",en:"Beautiful"},{es:"Extraño/a",en:"Unusual"},{es:"Importante",en:"Important"}],spark:{es:"¿Querés sacar una foto?",en:"Do you want to take a photo?"}},
+    {es:`¿Te gustaría ver ${p.animal.es} durante el viaje?`,en:`Would you like to see ${p.animal.en} during the trip?`,starter:{es:"Sí, me gustaría verlo/a…",en:"Yes, I would like to see it…"},choices:[{es:"Sí, mucho",en:"Yes, very much"},{es:"Tal vez",en:"Maybe"},{es:"No es mi prioridad",en:"It is not my priority"}],spark:{es:"¿Querés observarlo o sacarle una foto?",en:"Do you want to observe it or take a photo?"}},
+    {es:`¿Qué llevás en la mochila para visitar ${p.place.es}?`,en:`What do you pack to visit ${p.place.en}?`,starter:{es:"Llevo…",en:"I pack…"},choices:[{es:"Agua",en:"Water"},{es:"Protector solar",en:"Sunscreen"},{es:"Una cámara",en:"A camera"},{es:"Ropa cómoda",en:"Comfortable clothes"}],spark:{es:"¿Qué más necesitás?",en:"What else do you need?"}},
+    {es:`¿Querés probar ${p.food.es}?`,en:`Do you want to try ${p.food.en}?`,starter:{es:"Sí, quiero probar… / No, gracias.",en:"Yes, I want to try… / No, thank you."},choices:[{es:"Sí, por favor",en:"Yes, please"},{es:"No, gracias",en:"No, thank you"},{es:"Tal vez",en:"Maybe"}],spark:{es:"¿Te gusta probar comida nueva?",en:"Do you like trying new food?"}},
+    {es:`¿Cuántos días querés pasar en ${p.name}?`,en:`How many days do you want to spend in ${p.name}?`,starter:{es:"Quiero pasar…",en:"I want to spend…"},choices:[{es:"Dos días",en:"Two days"},{es:"Cuatro días",en:"Four days"},{es:"Una semana",en:"One week"}],spark:{es:"¿Es suficiente?",en:"Is that enough?"}},
+    {es:`Después de visitar ${p.place.es}, ¿cómo te sentís?`,en:`After visiting ${p.place.en}, how do you feel?`,starter:{es:"Me siento…",en:"I feel…"},choices:smallChoices.feeling,spark:{es:"¿Qué fue lo mejor?",en:"What was the best part?"}},
+    {es:`Armá tu día en ${p.name}: ¿qué hacés por la mañana, por la tarde y por la noche?`,en:`Plan your day in ${p.name}: what do you do in the morning, afternoon and evening?`,starter:{es:"Por la mañana… Después… Por la noche…",en:"In the morning… Then… In the evening…"},choices:[p.action,{es:`probar ${p.food.es}`,en:`try ${p.food.en}`},{es:"caminar y sacar fotos",en:"walk and take photos"}],spark:{es:"¿Con quién compartís ese día?",en:"Who do you share that day with?"}},
   ];
 }
 
@@ -107,7 +113,7 @@ export default function IndonesiaFantastica() {
   const answerEn = answerParts.map(part=>part.en.replace(/[.…]+/g,"").replace(/\s*\/.*$/,"")).join(" ");
   const wordbank: Array<Pair & {label:string;code:string}> = [
     {...active.place,label:"LUGAR · PLACE",code:"LU"},{...active.thing,label:"OBJETO · OBJECT",code:"OB"},{...active.action,label:"ACCIÓN · ACTION",code:"AC"},{...active.food,label:"COMIDA · FOOD",code:"CO"},
-    {...active.animal,label:"ANIMAL · ANIMAL",code:"AN"},{...active.choiceA,label:"OPCIÓN A · OPTION A",code:"A"},{...active.choiceB,label:"OPCIÓN B · OPTION B",code:"B"},{es:"mágico/a",en:"magical",label:"IMAGINACIÓN · IMAGINATION",code:"IM"},
+    {...active.animal,label:"ANIMAL · ANIMAL",code:"AN"},{...active.choiceA,label:"OPCIÓN A · OPTION A",code:"A"},{...active.choiceB,label:"OPCIÓN B · OPTION B",code:"B"},{es:"tradición local",en:"local tradition",label:"CULTURA · CULTURE",code:"CU"},
   ];
 
   const show = (next:Screen) => { setScreen(next); window.scrollTo({top:0,behavior:"smooth"}); };
@@ -129,7 +135,7 @@ export default function IndonesiaFantastica() {
       <Atmosphere/>
       <div className="id-cover-copy">
         <div className="id-kicker"><span>A0</span> 1000% CONVERSACIÓN · 1000% CONVERSATION</div>
-        <p className="id-overline">UNA AVENTURA POR LAS 38 PROVINCIAS · AN ADVENTURE THROUGH 38 PROVINCES</p>
+        <p className="id-overline">38 PROVINCIAS REALES · CULTURA REAL · 38 REAL PROVINCES</p>
         <h1>INDONESIA<br/><em>FANTÁSTICA</em></h1>
         <p className="id-lead">Entrá en un archipiélago vivo y empezá a hablar desde la primera pregunta.<b> Sin gramática. Sin respuestas perfectas. Todo bilingüe.</b><span className="id-en">Enter a living archipelago and start speaking from the first question. No grammar. No perfect answers. Everything is bilingual.</span></p>
         <div className="id-cover-actions"><button onClick={()=>show("map")}>EXPLORAR EL MAPA <span>→</span><small className="id-en">EXPLORE THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> DESTINO SORPRESA<small className="id-en">SURPRISE DESTINATION</small></button></div>
@@ -140,7 +146,7 @@ export default function IndonesiaFantastica() {
     </section>}
 
     {screen==="map"&&<section className="id-map">
-      <header className="id-map-head"><div><span>EL ATLAS VIVO · THE LIVING ATLAS</span><h1>No elijas una tarjeta.<br/><em>Abrí un portal.</em></h1></div><div><p>Los puntos luminosos son provincias reales. Tocá uno para descubrir el mundo fantástico que esconde.</p><span className="id-en">The glowing points are real provinces. Tap one to discover the fantasy world hidden inside.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA · LET THE MAP CHOOSE</button></div></header>
+      <header className="id-map-head"><div><span>EL ATLAS VIVO · THE LIVING ATLAS</span><h1>No elijas una tarjeta.<br/><em>Abrí un destino real.</em></h1></div><div><p>Los puntos luminosos son provincias reales. Tocá uno para descubrir sus lugares, comidas, culturas y animales.</p><span className="id-en">The glowing points are real provinces. Tap one to discover its places, food, culture and wildlife.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA · LET THE MAP CHOOSE</button></div></header>
 
       <div className="id-atlas-toolbar">
         <div className="id-regions">{regions.map(r=><button className={region===r?"active":""} onClick={()=>chooseRegion(r)} key={r}>{r}</button>)}</div>
@@ -177,7 +183,7 @@ export default function IndonesiaFantastica() {
       <header className="id-world-hero">
         <Atmosphere/>
         <div className="id-world-top"><button onClick={()=>show("map")}>← MAPA · MAP</button><span>DESTINO {active.number} · {localNames[active.id]}</span><div><button className={englishVisible?"active":""} onClick={()=>setEnglishVisible(v=>!v)}>EN {englishVisible?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO MUNDO</button></div></div>
-        <div className="id-world-copy"><small>{active.region} · {localNames[active.id]}</small><h1>{active.title.es}</h1><h2 className="id-en">{active.title.en}</h2><p><b>{active.scene.es}</b><span className="id-en">{active.scene.en}</span></p><div className="id-world-tags"><span>10 preguntas</span><span>Audio</span><span>Respuesta interactiva</span></div></div>
+        <div className="id-world-copy"><small>{active.region} · {localNames[active.id]}</small><h1>{active.title.es}</h1><h2 className="id-en">{active.title.en}</h2><p><b>{active.scene.es}</b><span className="id-en">{active.scene.en}</span></p><div className="id-world-tags"><span>Contenido real</span><span>10 preguntas</span><span>Audio</span><span>Respuesta interactiva</span></div></div>
         <div className="id-world-image" aria-hidden="true"><img src="/indonesia-fantasy-hero.png" alt=""/><WorldMark province={active}/></div>
       </header>
 
