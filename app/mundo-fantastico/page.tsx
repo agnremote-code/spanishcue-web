@@ -16,27 +16,28 @@ import {
 } from "./data";
 
 type Screen = "cover" | "atlas" | "destination";
-type Question = { prompt: Pair; starter: Pair; choices: Pair[]; follow: Pair };
+type FollowUp = { prompt: Pair; choices: Pair[] };
+type Question = { prompt: Pair; starter: Pair; choices: Pair[]; follow: FollowUp };
 type GlyphName = "map" | "shuffle" | "sound" | "clear" | "home" | "plus" | "compass" | "words";
 type VisualResult = { src: string; source: string; artist: string; license: string };
 
 const continents: Array<"Todos" | Continent> = ["Todos", "América", "Europa", "África", "Asia", "Oceanía", "Antártida"];
-const yesNo = [{ es: "Sí", en: "Yes" }, { es: "No", en: "No" }, { es: "Tal vez", en: "Maybe" }];
 const imageCache = new Map<string, VisualResult>();
+const usedImageSources = new Map<string, Set<string>>();
 const continentSlug: Record<Continent,string> = {América:"america",Europa:"europa",África:"africa",Asia:"asia",Oceanía:"oceania",Antártida:"antartida"};
 
 function questionsFor(place: Destination): Question[] {
   return [
-    {prompt:{es:`¿Querés visitar ${place.landmark.es}?`,en:`Do you want to visit ${place.landmark.en}?`},starter:{es:"Sí, quiero visitar…",en:"Yes, I want to visit…"},choices:yesNo,follow:{es:"¿Con quién?",en:"With whom?"}},
-    {prompt:{es:`¿Querés probar ${place.food.es}?`,en:`Do you want to try ${place.food.en}?`},starter:{es:"Quiero probar…",en:"I want to try…"},choices:[{es:"Sí, por favor",en:"Yes, please"},{es:"No, gracias",en:"No, thank you"},{es:"Un poco",en:"A little"}],follow:{es:"¿Dulce o salado?",en:"Sweet or salty?"}},
-    {prompt:{es:`¿Preferís ${place.nature.es} o ${place.culture.es}?`,en:`Do you prefer ${place.nature.en} or ${place.culture.en}?`},starter:{es:"Prefiero…",en:"I prefer…"},choices:[place.nature,place.culture],follow:{es:"¿Por qué?",en:"Why?"}},
-    {prompt:{es:`¿Querés ver ${place.animal.es}?`,en:`Do you want to see ${place.animal.en}?`},starter:{es:"Sí, quiero ver…",en:"Yes, I want to see…"},choices:yesNo,follow:{es:"¿Una foto: sí o no?",en:"A photo: yes or no?"}},
-    {prompt:{es:`¿Viajás ${place.transport.es} o en avión?`,en:`Do you travel ${place.transport.en} or by plane?`},starter:{es:"Viajo…",en:"I travel…"},choices:[place.transport,{es:"en avión",en:"by plane"},{es:"a pie",en:"on foot"}],follow:{es:"¿Rápido o lento?",en:"Fast or slow?"}},
-    {prompt:{es:`En ${place.country}, ${place.climate.es}. ¿Te gusta?`,en:`In ${place.countryEn}, ${place.climate.en}. Do you like it?`},starter:{es:"Sí, me gusta…",en:"Yes, I like…"},choices:[{es:"Me gusta",en:"I like it"},{es:"No me gusta",en:"I do not like it"},{es:"Está bien",en:"It is OK"}],follow:{es:"¿Calor o frío?",en:"Hot or cold?"}},
-    {prompt:{es:`¿Con quién viajás a ${place.country}?`,en:`Who do you travel to ${place.countryEn} with?`},starter:{es:"Viajo con…",en:"I travel with…"},choices:[{es:"un amigo / una amiga",en:"a friend"},{es:"mi familia",en:"my family"},{es:"mi pareja",en:"my partner"},{es:"solo / sola",en:"alone"}],follow:{es:"¿Una persona o muchas?",en:"One person or many?"}},
-    {prompt:{es:`¿Cuántos días querés estar en ${place.country}?`,en:`How many days do you want to be in ${place.countryEn}?`},starter:{es:"Quiero estar…",en:"I want to be there…"},choices:[{es:"dos días",en:"two days"},{es:"cuatro días",en:"four days"},{es:"una semana",en:"one week"}],follow:{es:"¿Es suficiente?",en:"Is it enough?"}},
-    {prompt:{es:`En ${place.country} dicen “${place.greeting.es}”. ¿Podés decirlo?`,en:`In ${place.countryEn} they say “${place.greeting.en}”. Can you say it?`},starter:{es:`Hola: ${place.greeting.es}.`,en:`Hello: ${place.greeting.en}.`},choices:[{es:"Sí, puedo",en:"Yes, I can"},{es:"Otra vez, por favor",en:"Again, please"},{es:"Más despacio",en:"More slowly"}],follow:{es:"¿Cómo saludás en tu idioma?",en:"How do you say hello in your language?"}},
-    {prompt:{es:`Llegás a ${place.country}. ¿Qué hacés primero?`,en:`You arrive in ${place.countryEn}. What do you do first?`},starter:{es:"Primero…",en:"First…"},choices:[{es:`visito ${place.landmark.es}`,en:`I visit ${place.landmark.en}`},{es:`pruebo ${place.food.es}`,en:`I try ${place.food.en}`},{es:`veo ${place.animal.es}`,en:`I see ${place.animal.en}`}],follow:{es:"¿Y después?",en:"And then?"}},
+    {prompt:{es:`¿Querés visitar ${place.landmark.es}?`,en:`Do you want to visit ${place.landmark.en}?`},starter:{es:"Quiero…",en:"I want…"},choices:[{es:`visitar ${place.landmark.es}`,en:`to visit ${place.landmark.en}`},{es:`conocer ${place.capital.es}`,en:`to discover ${place.capital.en}`},{es:"ver todo el país",en:"to see the whole country"}],follow:{prompt:{es:"¿Con quién?",en:"With whom?"},choices:[{es:"con mi familia",en:"with my family"},{es:"con una amiga / un amigo",en:"with a friend"},{es:"solo / sola",en:"alone"}]}},
+    {prompt:{es:`¿Querés probar ${place.food.es}?`,en:`Do you want to try ${place.food.en}?`},starter:{es:"Quiero probar…",en:"I want to try…"},choices:[place.food,{es:"algo dulce",en:"something sweet"},{es:"algo salado",en:"something salty"}],follow:{prompt:{es:"¿Dulce o salado?",en:"Sweet or salty?"},choices:[{es:"Es dulce",en:"It is sweet"},{es:"Es salado / salada",en:"It is salty"},{es:"No sé",en:"I do not know"}]}},
+    {prompt:{es:`¿Preferís ${place.nature.es} o ${place.culture.es}?`,en:`Do you prefer ${place.nature.en} or ${place.culture.en}?`},starter:{es:"Prefiero…",en:"I prefer…"},choices:[place.nature,place.culture,{es:"las dos cosas",en:"both things"}],follow:{prompt:{es:"¿Por qué?",en:"Why?"},choices:[{es:"porque es lindo / linda",en:"because it is beautiful"},{es:"porque es interesante",en:"because it is interesting"},{es:"porque me gusta",en:"because I like it"}]}},
+    {prompt:{es:`¿Querés ver ${place.animal.es}?`,en:`Do you want to see ${place.animal.en}?`},starter:{es:"Quiero ver…",en:"I want to see…"},choices:[place.animal,{es:"una foto",en:"a photo"},{es:"muchos animales",en:"many animals"}],follow:{prompt:{es:"¿Sacás una foto?",en:"Do you take a photo?"},choices:[{es:"Sí, saco una foto",en:"Yes, I take a photo"},{es:"No saco fotos",en:"I do not take photos"},{es:"Tal vez después",en:"Maybe later"}]}},
+    {prompt:{es:`¿Viajás ${place.transport.es} o en avión?`,en:`Do you travel ${place.transport.en} or by plane?`},starter:{es:"Viajo…",en:"I travel…"},choices:[place.transport,{es:"en avión",en:"by plane"},{es:"a pie",en:"on foot"}],follow:{prompt:{es:"¿Es rápido o lento?",en:"Is it fast or slow?"},choices:[{es:"Es rápido",en:"It is fast"},{es:"Es lento",en:"It is slow"},{es:"Es tranquilo",en:"It is calm"}]}},
+    {prompt:{es:`En ${place.country}, ${place.climate.es}. ¿Te gusta?`,en:`In ${place.countryEn}, ${place.climate.en}. Do you like it?`},starter:{es:"Prefiero…",en:"I prefer…"},choices:[{es:`el clima de ${place.country}`,en:`the weather in ${place.countryEn}`},{es:"el calor",en:"hot weather"},{es:"el frío",en:"cold weather"}],follow:{prompt:{es:"¿Te gusta mucho?",en:"Do you like it a lot?"},choices:[{es:"Me encanta",en:"I love it"},{es:"Está bien",en:"It is OK"},{es:"No me gusta",en:"I do not like it"}]}},
+    {prompt:{es:`¿Con quién viajás a ${place.country}?`,en:`Who do you travel to ${place.countryEn} with?`},starter:{es:"Viajo con…",en:"I travel with…"},choices:[{es:"mi familia",en:"my family"},{es:"una amiga / un amigo",en:"a friend"},{es:"mi pareja",en:"my partner"},{es:"nadie: viajo solo / sola",en:"nobody: I travel alone"}],follow:{prompt:{es:"¿Una persona o muchas?",en:"One person or many?"},choices:[{es:"una persona",en:"one person"},{es:"dos personas",en:"two people"},{es:"muchas personas",en:"many people"}]}},
+    {prompt:{es:`¿Cuántos días querés estar en ${place.country}?`,en:`How many days do you want to be in ${place.countryEn}?`},starter:{es:"Quiero estar…",en:"I want to stay…"},choices:[{es:"un día",en:"one day"},{es:"tres días",en:"three days"},{es:"una semana",en:"one week"},{es:"un mes",en:"one month"}],follow:{prompt:{es:"¿Es suficiente?",en:"Is it enough?"},choices:[{es:"Sí, es suficiente",en:"Yes, it is enough"},{es:"No, quiero más días",en:"No, I want more days"},{es:"Es perfecto",en:"It is perfect"}]}},
+    {prompt:{es:`En ${place.country} dicen “${place.greeting.es}”. ¿Podés decirlo?`,en:`In ${place.countryEn} they say “${place.greeting.en}”. Can you say it?`},starter:{es:"Puedo decir…",en:"I can say…"},choices:[place.greeting,{es:"el saludo",en:"the greeting"},{es:"hola",en:"hello"}],follow:{prompt:{es:"¿Cómo saludás en tu idioma?",en:"How do you say hello in your language?"},choices:[{es:"En mi idioma digo…",en:"In my language I say…"},{es:"Es parecido",en:"It is similar"},{es:"Es diferente",en:"It is different"}]}},
+    {prompt:{es:`Llegás a ${place.country}. ¿Qué hacés primero?`,en:`You arrive in ${place.countryEn}. What do you do first?`},starter:{es:"Primero…",en:"First…"},choices:[{es:`visito ${place.landmark.es}`,en:`I visit ${place.landmark.en}`},{es:`pruebo ${place.food.es}`,en:`I try ${place.food.en}`},{es:`veo ${place.animal.es}`,en:`I see ${place.animal.en}`},{es:"voy al hotel",en:"I go to the hotel"}],follow:{prompt:{es:"¿Y después?",en:"And then?"},choices:[{es:"Después como algo",en:"Then I eat something"},{es:"Después descanso",en:"Then I rest"},{es:"Después camino por la ciudad",en:"Then I walk around the city"}]}},
   ];
 }
 
@@ -69,28 +70,32 @@ function cleanCredit(value: string | undefined) {
   return (node.textContent || "Wikimedia Commons").replace(/\s+/g," ").trim().slice(0,72);
 }
 
-function WikiVisual({query,alt,label,subLabel,className=""}:{query:string;alt:string;label:string;subLabel:string;className?:string}) {
-  const [visual,setVisual] = useState<VisualResult | null>(()=>imageCache.get(query)||null);
+function WikiVisual({query,alt,label,subLabel,className="",seed=0,group="global"}:{query:string;alt:string;label:string;subLabel:string;className?:string;seed?:number;group?:string}) {
+  const cacheKey=`${query}::${seed}`;
+  const [visual,setVisual] = useState<VisualResult | null>(()=>imageCache.get(cacheKey)||null);
   const [failed,setFailed] = useState(false);
 
   useEffect(()=>{
-    const cached=imageCache.get(query);
-    if(cached){setVisual(cached);setFailed(false);return;}
+    const cached=imageCache.get(cacheKey);
+    if(cached){setVisual(cached);setFailed(false);const used=usedImageSources.get(group)||new Set<string>();used.add(cached.src);usedImageSources.set(group,used);return;}
     const controller=new AbortController();
     setVisual(null);setFailed(false);
-    const params=new URLSearchParams({action:"query",generator:"search",gsrsearch:query,gsrnamespace:"6",gsrlimit:"1",prop:"imageinfo",iiprop:"url|extmetadata",iiurlwidth:"1000",format:"json",origin:"*"});
+    const params=new URLSearchParams({action:"query",generator:"search",gsrsearch:query,gsrnamespace:"6",gsrlimit:"12",prop:"imageinfo",iiprop:"url|extmetadata",iiurlwidth:"1000",format:"json",origin:"*"});
     fetch(`https://commons.wikimedia.org/w/api.php?${params}`,{signal:controller.signal})
       .then(response=>response.ok?response.json():Promise.reject(new Error("visual")))
       .then(payload=>{
-        const pages=Object.values(payload?.query?.pages||{}) as Array<{imageinfo?:Array<{thumburl?:string;descriptionurl?:string;extmetadata?:Record<string,{value?:string}>}>}>;
-        const info=pages[0]?.imageinfo?.[0];
+        const pages=(Object.values(payload?.query?.pages||{}) as Array<{index?:number;imageinfo?:Array<{thumburl?:string;descriptionurl?:string;extmetadata?:Record<string,{value?:string}>}>}>).sort((a,b)=>(a.index||0)-(b.index||0));
+        const candidates=pages.map(page=>page.imageinfo?.[0]).filter((info):info is NonNullable<typeof info>=>Boolean(info?.thumburl));
+        const used=usedImageSources.get(group)||new Set<string>();
+        const ordered=[...candidates.slice(seed%candidates.length),...candidates.slice(0,seed%candidates.length)];
+        const info=ordered.find(candidate=>candidate.thumburl&&!used.has(candidate.thumburl))||ordered[0];
         if(!info?.thumburl)throw new Error("visual");
         const result={src:info.thumburl,source:info.descriptionurl||"https://commons.wikimedia.org",artist:cleanCredit(info.extmetadata?.Artist?.value),license:cleanCredit(info.extmetadata?.LicenseShortName?.value)};
-        imageCache.set(query,result);setVisual(result);
+        used.add(result.src);usedImageSources.set(group,used);imageCache.set(cacheKey,result);setVisual(result);
       })
       .catch(error=>{if(error?.name!=="AbortError")setFailed(true)});
     return()=>controller.abort();
-  },[query]);
+  },[cacheKey,group,query,seed]);
 
   return <article className={`wf-wiki-visual ${className} ${visual?"loaded":""} ${failed?"failed":""}`}>
     {visual?<img src={visual.src} alt={alt}/>:<div className="wf-visual-loading"><i/><i/><i/></div>}
@@ -103,21 +108,27 @@ function WikiVisual({query,alt,label,subLabel,className=""}:{query:string;alt:st
 
 function TypicalGallery({place}:{place:Destination}) {
   return <div className="wf-typical-gallery">
-    <WikiVisual className="wf-visual-landmark" query={`${place.landmark.en} ${place.countryEn}`} alt={`${place.landmark.es}, ${place.country}`} label="LUGAR · PLACE" subLabel={place.landmark.es}/>
-    <WikiVisual className="wf-visual-food" query={`${place.food.en} ${place.countryEn} food`} alt={`${place.food.es}, ${place.country}`} label="COMIDA · FOOD" subLabel={place.food.es}/>
-    <WikiVisual className="wf-visual-nature" query={`${place.nature.en} ${place.countryEn} landscape`} alt={`${place.nature.es}, ${place.country}`} label="NATURALEZA · NATURE" subLabel={place.nature.es}/>
+    <WikiVisual className="wf-visual-landmark" query={`${place.landmark.en} ${place.countryEn} landmark wide view`} alt={`${place.landmark.es}, ${place.country}`} label="LUGAR · PLACE" subLabel={place.landmark.es} seed={20} group={place.id}/>
+    <WikiVisual className="wf-visual-food" query={`${place.food.en} ${place.countryEn} traditional food close up`} alt={`${place.food.es}, ${place.country}`} label="COMIDA · FOOD" subLabel={place.food.es} seed={21} group={place.id}/>
+    <WikiVisual className="wf-visual-nature" query={`${place.nature.en} ${place.countryEn} landscape panorama`} alt={`${place.nature.es}, ${place.country}`} label="NATURALEZA · NATURE" subLabel={place.nature.es} seed={22} group={place.id}/>
     <div className="wf-gallery-crest"><Crest place={place} small/></div>
   </div>;
 }
 
 function questionVisual(place:Destination,index:number){
-  if(index===1)return{query:`${place.food.en} ${place.countryEn} food`,label:"COMIDA · FOOD",title:place.food.es};
-  if(index===2)return{query:`${place.nature.en} ${place.countryEn} landscape`,label:"NATURALEZA · NATURE",title:place.nature.es};
-  if(index===3)return{query:`${place.animal.en} ${place.countryEn}`,label:"ANIMAL · ANIMAL",title:place.animal.es};
-  if(index===4)return{query:`${place.transport.en} ${place.countryEn} transport`,label:"VIAJE · TRAVEL",title:place.transport.es};
-  if(index===5)return{query:`${place.countryEn} landscape weather`,label:"CLIMA · WEATHER",title:place.climate.es};
-  if(index===8)return{query:`${place.culture.en} ${place.countryEn}`,label:"CULTURA · CULTURE",title:place.culture.es};
-  return{query:`${place.landmark.en} ${place.countryEn}`,label:"LUGAR · PLACE",title:place.landmark.es};
+  const scenes=[
+    {query:`${place.landmark.en} ${place.countryEn} landmark exterior`,label:"LUGAR · PLACE",title:place.landmark.es},
+    {query:`${place.food.en} ${place.countryEn} traditional food close up`,label:"COMIDA · FOOD",title:place.food.es},
+    {query:`${place.nature.en} ${place.countryEn} landscape panorama`,label:"NATURALEZA · NATURE",title:place.nature.es},
+    {query:`${place.animal.en} ${place.countryEn} wildlife`,label:"ANIMAL · ANIMAL",title:place.animal.es},
+    {query:`${place.transport.en} ${place.countryEn} street transport`,label:"VIAJE · TRAVEL",title:place.transport.es},
+    {query:`${place.countryEn} ${place.climate.en} weather landscape`,label:"CLIMA · WEATHER",title:place.climate.es},
+    {query:`${place.countryEn} family travel people street`,label:"PERSONAS · PEOPLE",title:"compañía de viaje"},
+    {query:`${place.countryEn} hotel city night travel`,label:"TIEMPO · TIME",title:"días de viaje"},
+    {query:`${place.culture.en} ${place.countryEn} festival people`,label:"CULTURA · CULTURE",title:place.culture.es},
+    {query:`${place.capital.en} ${place.countryEn} city street aerial`,label:"LLEGADA · ARRIVAL",title:place.capital.es},
+  ];
+  return scenes[index]||scenes[0];
 }
 
 export default function MundoFantastico() {
@@ -259,13 +270,13 @@ export default function MundoFantastico() {
         <section className="wf-question-stage">
           <div className="wf-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question + 1).padStart(2,"0")} <i>/ 10</i></b></div>
           <div className="wf-question-copy"><small>{active.country} · {active.countryEn}</small><h2>{current.prompt.es}</h2><p className="wf-en">{current.prompt.en}</p><div className="wf-question-actions"><button onClick={() => speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR LENTO</button><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> WORDBANK</button></div></div>
-          <div className="wf-question-picture"><WikiVisual key={`${active.id}-${question}`} query={currentVisual.query} alt={`${currentVisual.title}, ${active.country}`} label={currentVisual.label} subLabel={currentVisual.title}/></div>
+          <div className="wf-question-picture"><WikiVisual key={`${active.id}-${question}`} query={currentVisual.query} alt={`${currentVisual.title}, ${active.country}`} label={currentVisual.label} subLabel={currentVisual.title} seed={question} group={active.id}/></div>
         </section>
 
         <section className="wf-support">
           <button className="wf-starter" onClick={() => addPart(current.starter)}><span>1 · EMPEZÁ ASÍ · START</span><b>{current.starter.es}</b><em className="wf-en">{current.starter.en}</em><i><Glyph name="plus"/> AGREGAR</i></button>
           <article className="wf-choices"><span>2 · ELEGÍ · CHOOSE</span><div>{current.choices.map((choice, index) => <button key={`${choice.es}-${index}`} onClick={() => addPart(choice)}><b>{choice.es}</b><small className="wf-en">{choice.en}</small><i>+</i></button>)}</div></article>
-          <article className="wf-follow"><span>3 · UNA MÁS · ONE MORE</span><b>{current.follow.es}</b><em className="wf-en">{current.follow.en}</em></article>
+          <article className="wf-follow"><span>3 · UNA MÁS · ONE MORE</span><b>{current.follow.prompt.es}</b><em className="wf-en">{current.follow.prompt.en}</em><small>TOCÁ UNA RESPUESTA · TAP AN ANSWER</small><div>{current.follow.choices.map((choice,index)=><button key={`${choice.es}-${index}`} onClick={()=>addPart(choice)}><b>{choice.es}</b><small className="wf-en">{choice.en}</small><i>+</i></button>)}</div></article>
         </section>
 
         <section className="wf-quick-bank"><header><div><span>WORDBANK INMEDIATO · QUICK WORDBANK</span><b>Sin bajar: tocá una palabra o abrí todo.</b></div><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> VER 120+ PALABRAS</button></header><div>{destinationWords.slice(0,8).map((word,index)=><button key={`${word.es}-${index}`} onClick={()=>addPart(word)}><small>{word.code}</small><b>{word.es}</b><span className="wf-en">{word.en}</span><i>+</i></button>)}</div></section>
