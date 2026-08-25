@@ -17,7 +17,7 @@ import {
 
 type Screen = "cover" | "atlas" | "destination";
 type FollowUp = { prompt: Pair; choices: Pair[] };
-type Question = { prompt: Pair; starter: Pair; choices: Pair[]; follow: FollowUp };
+type Question = { prompt: Pair; starter: Pair; choices: Pair[]; follow: FollowUp; visual: number };
 type GlyphName = "map" | "shuffle" | "sound" | "clear" | "home" | "plus" | "compass" | "words";
 type VisualResult = { src: string; source: string; artist: string; license: string };
 
@@ -26,19 +26,284 @@ const imageCache = new Map<string, VisualResult>();
 const usedImageSources = new Map<string, Set<string>>();
 const continentSlug: Record<Continent,string> = {América:"america",Europa:"europa",África:"africa",Asia:"asia",Oceanía:"oceania",Antártida:"antartida"};
 
+function pick<T>(items:T[],variant:number):T{return items[variant%items.length]}
+
 function questionsFor(place: Destination): Question[] {
-  return [
-    {prompt:{es:`¿Querés visitar ${place.landmark.es}?`,en:`Do you want to visit ${place.landmark.en}?`},starter:{es:"Quiero…",en:"I want…"},choices:[{es:`visitar ${place.landmark.es}`,en:`to visit ${place.landmark.en}`},{es:`conocer ${place.capital.es}`,en:`to discover ${place.capital.en}`},{es:"ver todo el país",en:"to see the whole country"}],follow:{prompt:{es:"¿Con quién?",en:"With whom?"},choices:[{es:"con mi familia",en:"with my family"},{es:"con una amiga / un amigo",en:"with a friend"},{es:"solo / sola",en:"alone"}]}},
-    {prompt:{es:`¿Querés probar ${place.food.es}?`,en:`Do you want to try ${place.food.en}?`},starter:{es:"Quiero probar…",en:"I want to try…"},choices:[place.food,{es:"algo dulce",en:"something sweet"},{es:"algo salado",en:"something salty"}],follow:{prompt:{es:"¿Dulce o salado?",en:"Sweet or salty?"},choices:[{es:"Es dulce",en:"It is sweet"},{es:"Es salado / salada",en:"It is salty"},{es:"No sé",en:"I do not know"}]}},
-    {prompt:{es:`¿Preferís ${place.nature.es} o ${place.culture.es}?`,en:`Do you prefer ${place.nature.en} or ${place.culture.en}?`},starter:{es:"Prefiero…",en:"I prefer…"},choices:[place.nature,place.culture,{es:"las dos cosas",en:"both things"}],follow:{prompt:{es:"¿Por qué?",en:"Why?"},choices:[{es:"porque es lindo / linda",en:"because it is beautiful"},{es:"porque es interesante",en:"because it is interesting"},{es:"porque me gusta",en:"because I like it"}]}},
-    {prompt:{es:`¿Querés ver ${place.animal.es}?`,en:`Do you want to see ${place.animal.en}?`},starter:{es:"Quiero ver…",en:"I want to see…"},choices:[place.animal,{es:"una foto",en:"a photo"},{es:"muchos animales",en:"many animals"}],follow:{prompt:{es:"¿Sacás una foto?",en:"Do you take a photo?"},choices:[{es:"Sí, saco una foto",en:"Yes, I take a photo"},{es:"No saco fotos",en:"I do not take photos"},{es:"Tal vez después",en:"Maybe later"}]}},
-    {prompt:{es:`¿Viajás ${place.transport.es} o en avión?`,en:`Do you travel ${place.transport.en} or by plane?`},starter:{es:"Viajo…",en:"I travel…"},choices:[place.transport,{es:"en avión",en:"by plane"},{es:"a pie",en:"on foot"}],follow:{prompt:{es:"¿Es rápido o lento?",en:"Is it fast or slow?"},choices:[{es:"Es rápido",en:"It is fast"},{es:"Es lento",en:"It is slow"},{es:"Es tranquilo",en:"It is calm"}]}},
-    {prompt:{es:`En ${place.country}, ${place.climate.es}. ¿Te gusta?`,en:`In ${place.countryEn}, ${place.climate.en}. Do you like it?`},starter:{es:"Prefiero…",en:"I prefer…"},choices:[{es:`el clima de ${place.country}`,en:`the weather in ${place.countryEn}`},{es:"el calor",en:"hot weather"},{es:"el frío",en:"cold weather"}],follow:{prompt:{es:"¿Te gusta mucho?",en:"Do you like it a lot?"},choices:[{es:"Me encanta",en:"I love it"},{es:"Está bien",en:"It is OK"},{es:"No me gusta",en:"I do not like it"}]}},
-    {prompt:{es:`¿Con quién viajás a ${place.country}?`,en:`Who do you travel to ${place.countryEn} with?`},starter:{es:"Viajo con…",en:"I travel with…"},choices:[{es:"mi familia",en:"my family"},{es:"una amiga / un amigo",en:"a friend"},{es:"mi pareja",en:"my partner"},{es:"nadie: viajo solo / sola",en:"nobody: I travel alone"}],follow:{prompt:{es:"¿Una persona o muchas?",en:"One person or many?"},choices:[{es:"una persona",en:"one person"},{es:"dos personas",en:"two people"},{es:"muchas personas",en:"many people"}]}},
-    {prompt:{es:`¿Cuántos días querés estar en ${place.country}?`,en:`How many days do you want to be in ${place.countryEn}?`},starter:{es:"Quiero estar…",en:"I want to stay…"},choices:[{es:"un día",en:"one day"},{es:"tres días",en:"three days"},{es:"una semana",en:"one week"},{es:"un mes",en:"one month"}],follow:{prompt:{es:"¿Es suficiente?",en:"Is it enough?"},choices:[{es:"Sí, es suficiente",en:"Yes, it is enough"},{es:"No, quiero más días",en:"No, I want more days"},{es:"Es perfecto",en:"It is perfect"}]}},
-    {prompt:{es:`En ${place.country} dicen “${place.greeting.es}”. ¿Podés decirlo?`,en:`In ${place.countryEn} they say “${place.greeting.en}”. Can you say it?`},starter:{es:"Puedo decir…",en:"I can say…"},choices:[place.greeting,{es:"el saludo",en:"the greeting"},{es:"hola",en:"hello"}],follow:{prompt:{es:"¿Cómo saludás en tu idioma?",en:"How do you say hello in your language?"},choices:[{es:"En mi idioma digo…",en:"In my language I say…"},{es:"Es parecido",en:"It is similar"},{es:"Es diferente",en:"It is different"}]}},
-    {prompt:{es:`Llegás a ${place.country}. ¿Qué hacés primero?`,en:`You arrive in ${place.countryEn}. What do you do first?`},starter:{es:"Primero…",en:"First…"},choices:[{es:`visito ${place.landmark.es}`,en:`I visit ${place.landmark.en}`},{es:`pruebo ${place.food.es}`,en:`I try ${place.food.en}`},{es:`veo ${place.animal.es}`,en:`I see ${place.animal.en}`},{es:"voy al hotel",en:"I go to the hotel"}],follow:{prompt:{es:"¿Y después?",en:"And then?"},choices:[{es:"Después como algo",en:"Then I eat something"},{es:"Después descanso",en:"Then I rest"},{es:"Después camino por la ciudad",en:"Then I walk around the city"}]}},
+  const countryIndex=Math.max(0,Number(place.number)-1);
+  const variant=countryIndex%4;
+  const q=(visual:number,prompts:Pair[],starters:Pair[],choiceSets:Pair[][],followPrompts:Pair[],followChoices:Pair[][]):Question=>({
+    visual,
+    prompt:pick(prompts,variant),
+    starter:pick(starters,variant),
+    choices:pick(choiceSets,variant),
+    follow:{prompt:pick(followPrompts,variant),choices:pick(followChoices,variant)},
+  });
+
+  const worlds:Question[]=[
+    q(0,
+      [
+        {es:`En ${place.country}, ¿querés entrar a ${place.landmark.es}?`,en:`In ${place.countryEn}, do you want to enter ${place.landmark.en}?`},
+        {es:`Imaginá que estás en ${place.landmark.es}. ¿Te gusta el lugar?`,en:`Imagine you are at ${place.landmark.en}. Do you like the place?`},
+        {es:`¿${place.landmark.es} es tu primera parada en ${place.country}?`,en:`Is ${place.landmark.en} your first stop in ${place.countryEn}?`},
+        {es:`En ${place.country}, ¿visitás ${place.landmark.es} de día o de noche?`,en:`In ${place.countryEn}, do you visit ${place.landmark.en} by day or at night?`},
+      ],
+      [{es:"Quiero…",en:"I want…"},{es:"Me gusta…",en:"I like…"},{es:"Primero…",en:"First…"},{es:"Prefiero…",en:"I prefer…"}],
+      [
+        [{es:`entrar a ${place.landmark.es}`,en:`to enter ${place.landmark.en}`},{es:`sacar una foto en ${place.landmark.es}`,en:`to take a photo at ${place.landmark.en}`},{es:`caminar por ${place.landmark.es}`,en:`to walk around ${place.landmark.en}`}],
+        [{es:`${place.landmark.es}`,en:place.landmark.en},{es:"porque es famoso / famosa",en:"because it is famous"},{es:"porque parece especial",en:"because it looks special"}],
+        [{es:`visito ${place.landmark.es}`,en:`I visit ${place.landmark.en}`},{es:`voy a ${place.capital.es}`,en:`I go to ${place.capital.en}`},{es:"voy al hotel",en:"I go to the hotel"}],
+        [{es:`ver ${place.landmark.es} de día`,en:`to see ${place.landmark.en} by day`},{es:`ver ${place.landmark.es} de noche`,en:`to see ${place.landmark.en} at night`},{es:"ver el atardecer",en:"to see the sunset"}],
+      ],
+      [
+        {es:`Después de ${place.landmark.es}, ¿vas a ${place.capital.es}?`,en:`After ${place.landmark.en}, do you go to ${place.capital.en}?`},
+        {es:`¿Qué parte de ${place.landmark.es} fotografiás?`,en:`What part of ${place.landmark.en} do you photograph?`},
+        {es:`¿Cuánto tiempo pasás en ${place.landmark.es}?`,en:`How much time do you spend at ${place.landmark.en}?`},
+        {es:`¿Con quién compartís ${place.landmark.es}?`,en:`Who do you share ${place.landmark.en} with?`},
+      ],
+      [
+        [{es:`Sí, después voy a ${place.capital.es}`,en:`Yes, then I go to ${place.capital.en}`},{es:"No, después descanso",en:"No, then I rest"},{es:"Tal vez después",en:"Maybe later"}],
+        [{es:"la entrada",en:"the entrance"},{es:"el centro",en:"the centre"},{es:"todo el paisaje",en:"the whole landscape"}],
+        [{es:"una hora",en:"one hour"},{es:"tres horas",en:"three hours"},{es:"todo el día",en:"all day"}],
+        [{es:"con mi familia",en:"with my family"},{es:"con una amiga / un amigo",en:"with a friend"},{es:"solo / sola",en:"alone"}],
+      ]),
+    q(1,
+      [
+        {es:`En ${place.country}, ¿probás ${place.food.es} por primera vez?`,en:`In ${place.countryEn}, do you try ${place.food.en} for the first time?`},
+        {es:`¿Compartís ${place.food.es} en ${place.country} o comés solo / sola?`,en:`Do you share ${place.food.en} in ${place.countryEn} or eat alone?`},
+        {es:`En ${place.country}, ¿${place.food.es} parece dulce o salado?`,en:`In ${place.countryEn}, does ${place.food.en} look sweet or salty?`},
+        {es:`¿Pedís ${place.food.es} en un mercado de ${place.country}?`,en:`Do you order ${place.food.en} at a market in ${place.countryEn}?`},
+      ],
+      [{es:"Quiero probar…",en:"I want to try…"},{es:"Quiero compartir…",en:"I want to share…"},{es:"Parece…",en:"It looks…"},{es:"En el mercado pido…",en:"At the market I order…"}],
+      [
+        [place.food,{es:"una porción pequeña",en:"a small portion"},{es:"algo nuevo",en:"something new"}],
+        [place.food,{es:"la comida con mi familia",en:"the food with my family"},{es:"la comida con una amiga / un amigo",en:"the food with a friend"}],
+        [{es:"dulce",en:"sweet"},{es:"salado / salada",en:"salty"},{es:"muy rico / rica",en:"very tasty"}],
+        [place.food,{es:"agua",en:"water"},{es:"un postre",en:"a dessert"}],
+      ],
+      [
+        {es:`¿Comés ${place.food.es} para el almuerzo en ${place.country}?`,en:`Do you eat ${place.food.en} for lunch in ${place.countryEn}?`},
+        {es:`¿Quién prueba primero ${place.food.es}?`,en:`Who tries ${place.food.en} first?`},
+        {es:`¿Qué bebida tomás con ${place.food.es}?`,en:`What drink do you have with ${place.food.en}?`},
+        {es:`¿Pedís otra porción de ${place.food.es}?`,en:`Do you order another portion of ${place.food.en}?`},
+      ],
+      [
+        [{es:"Sí, para el almuerzo",en:"Yes, for lunch"},{es:"No, para la cena",en:"No, for dinner"},{es:"Para el desayuno",en:"For breakfast"}],
+        [{es:"Yo primero",en:"Me first"},{es:"Mi compañero / compañera",en:"My companion"},{es:"Probamos juntos",en:"We try it together"}],
+        [{es:"Tomo agua",en:"I drink water"},{es:"Tomo café",en:"I drink coffee"},{es:"Tomo té",en:"I drink tea"}],
+        [{es:"Sí, otra porción",en:"Yes, another portion"},{es:"No, estoy bien",en:"No, I am fine"},{es:"Solo un poco más",en:"Just a little more"}],
+      ]),
+    q(2,
+      [
+        {es:`En ${place.country}, ¿explorás ${place.nature.es} o preferís ${place.culture.es}?`,en:`In ${place.countryEn}, do you explore ${place.nature.en} or prefer ${place.culture.en}?`},
+        {es:`¿Qué color imaginás cuando pensás en ${place.nature.es}, ${place.country}?`,en:`What colour do you imagine when you think of ${place.nature.en}, ${place.countryEn}?`},
+        {es:`¿Pasás un día completo en ${place.nature.es}, en ${place.country}?`,en:`Do you spend a full day in ${place.nature.en}, in ${place.countryEn}?`},
+        {es:`En ${place.country}, ¿${place.culture.es} te interesa más que ${place.landmark.es}?`,en:`In ${place.countryEn}, does ${place.culture.en} interest you more than ${place.landmark.en}?`},
+      ],
+      [{es:"Prefiero…",en:"I prefer…"},{es:"Imagino…",en:"I imagine…"},{es:"Quiero pasar…",en:"I want to spend…"},{es:"Me interesa…",en:"I am interested in…"}],
+      [
+        [place.nature,place.culture,{es:"las dos cosas",en:"both things"}],
+        [{es:"mucho verde",en:"a lot of green"},{es:"mucho azul",en:"a lot of blue"},{es:"muchos colores",en:"many colours"}],
+        [{es:`un día en ${place.nature.es}`,en:`one day in ${place.nature.en}`},{es:"solo una mañana",en:"only one morning"},{es:"toda una semana",en:"a whole week"}],
+        [place.culture,place.landmark,{es:"las dos cosas",en:"both things"}],
+      ],
+      [
+        {es:`¿Qué hacés primero en ${place.nature.es}?`,en:`What do you do first in ${place.nature.en}?`},
+        {es:`¿Sacás fotos de ${place.nature.es}?`,en:`Do you take photos of ${place.nature.en}?`},
+        {es:`¿Dormís cerca de ${place.nature.es}?`,en:`Do you sleep near ${place.nature.en}?`},
+        {es:`¿Con quién disfrutás ${place.culture.es}?`,en:`Who do you enjoy ${place.culture.en} with?`},
+      ],
+      [
+        [{es:"Primero camino",en:"First I walk"},{es:"Primero miro el paisaje",en:"First I look at the landscape"},{es:"Primero descanso",en:"First I rest"}],
+        [{es:"Sí, muchas fotos",en:"Yes, many photos"},{es:"Solo una foto",en:"Only one photo"},{es:"No saco fotos",en:"I do not take photos"}],
+        [{es:"Sí, en un hotel",en:"Yes, in a hotel"},{es:"No, vuelvo a la ciudad",en:"No, I return to the city"},{es:"Tal vez",en:"Maybe"}],
+        [{es:"con mi familia",en:"with my family"},{es:"con gente local",en:"with local people"},{es:"solo / sola",en:"alone"}],
+      ]),
+    q(3,
+      [
+        {es:`En ${place.country}, ¿buscás ${place.animal.es} en la naturaleza?`,en:`In ${place.countryEn}, do you look for ${place.animal.en} in nature?`},
+        {es:`¿${place.animal.es} de ${place.country} te parece simpático o peligroso?`,en:`Does ${place.animal.en} from ${place.countryEn} look friendly or dangerous?`},
+        {es:`En ${place.country}, ¿preferís ver ${place.animal.es} en libertad o en una foto?`,en:`In ${place.countryEn}, do you prefer to see ${place.animal.en} free or in a photo?`},
+        {es:`Si ${place.animal.es} tiene un nombre en ${place.country}, ¿cómo se llama?`,en:`If ${place.animal.en} has a name in ${place.countryEn}, what is it called?`},
+      ],
+      [{es:"Quiero encontrar…",en:"I want to find…"},{es:"Me parece…",en:"It looks…"},{es:"Prefiero…",en:"I prefer…"},{es:"Se llama…",en:"It is called…"}],
+      [
+        [place.animal,{es:"una huella",en:"a footprint"},{es:"una foto del animal",en:"a photo of the animal"}],
+        [{es:"simpático / simpática",en:"friendly"},{es:"peligroso / peligrosa",en:"dangerous"},{es:"muy interesante",en:"very interesting"}],
+        [{es:`ver ${place.animal.es} en libertad`,en:`to see ${place.animal.en} free`},{es:"ver una foto",en:"to see a photo"},{es:"ver un video",en:"to see a video"}],
+        [{es:"Luna",en:"Luna"},{es:"Sol",en:"Sol"},{es:`${place.country}`,en:place.countryEn}],
+      ],
+      [
+        {es:`¿Esperás mucho para ver ${place.animal.es}?`,en:`Do you wait a long time to see ${place.animal.en}?`},
+        {es:`¿Te acercás a ${place.animal.es}?`,en:`Do you go near ${place.animal.en}?`},
+        {es:`¿Mostrás la foto de ${place.animal.es} a tu familia?`,en:`Do you show the photo of ${place.animal.en} to your family?`},
+        {es:`¿Qué come ${place.animal.es}?`,en:`What does ${place.animal.en} eat?`},
+      ],
+      [
+        [{es:"Sí, espero",en:"Yes, I wait"},{es:"No espero mucho",en:"I do not wait long"},{es:"Solo diez minutos",en:"Only ten minutes"}],
+        [{es:"Sí, un poco",en:"Yes, a little"},{es:"No, miro de lejos",en:"No, I look from far away"},{es:"Saco una foto",en:"I take a photo"}],
+        [{es:"Sí, la muestro",en:"Yes, I show it"},{es:"No, es privada",en:"No, it is private"},{es:"La comparto después",en:"I share it later"}],
+        [{es:"come plantas",en:"it eats plants"},{es:"come pescado",en:"it eats fish"},{es:"No sé",en:"I do not know"}],
+      ]),
+    q(4,
+      [
+        {es:`¿Usás ${place.transport.es} para llegar a ${place.capital.es}?`,en:`Do you use ${place.transport.en} to get to ${place.capital.en}?`},
+        {es:`En ${place.country}, ¿${place.transport.es} te parece rápido?`,en:`In ${place.countryEn}, does ${place.transport.en} seem fast?`},
+        {es:`¿Viajás ${place.transport.es} con gente local en ${place.country}?`,en:`Do you travel ${place.transport.en} with local people in ${place.countryEn}?`},
+        {es:`¿Mirás ${place.nature.es} mientras viajás ${place.transport.es}?`,en:`Do you look at ${place.nature.en} while travelling ${place.transport.en}?`},
+      ],
+      [{es:"Para llegar, voy…",en:"To arrive, I go…"},{es:"Me parece…",en:"It seems…"},{es:"Viajo…",en:"I travel…"},{es:"Durante el viaje…",en:"During the trip…"}],
+      [
+        [place.transport,{es:"en avión",en:"by plane"},{es:"en taxi",en:"by taxi"}],
+        [{es:"muy rápido",en:"very fast"},{es:"un poco lento",en:"a little slow"},{es:"cómodo",en:"comfortable"}],
+        [place.transport,{es:"con gente local",en:"with local people"},{es:"con turistas",en:"with tourists"}],
+        [{es:`miro ${place.nature.es}`,en:`I look at ${place.nature.en}`},{es:"saco fotos",en:"I take photos"},{es:"duermo",en:"I sleep"}],
+      ],
+      [
+        {es:`¿Comprás el boleto para ${place.transport.es} en ${place.capital.es}?`,en:`Do you buy the ticket for ${place.transport.en} in ${place.capital.en}?`},
+        {es:`¿${place.transport.es} es caro o barato en ${place.country}?`,en:`Is ${place.transport.en} expensive or cheap in ${place.countryEn}?`},
+        {es:`¿Hablás con alguien durante el viaje por ${place.country}?`,en:`Do you speak with someone during the trip in ${place.countryEn}?`},
+        {es:`Después de ${place.transport.es}, ¿caminás?`,en:`After ${place.transport.en}, do you walk?`},
+      ],
+      [
+        [{es:"Sí, compro un boleto",en:"Yes, I buy a ticket"},{es:"Uso una tarjeta",en:"I use a card"},{es:"Pago en el transporte",en:"I pay on the transport"}],
+        [{es:"Es barato",en:"It is cheap"},{es:"Es caro",en:"It is expensive"},{es:"Está bien",en:"It is OK"}],
+        [{es:"Sí, hablo un poco",en:"Yes, I speak a little"},{es:"Solo digo hola",en:"I only say hello"},{es:"No, estoy tranquilo / tranquila",en:"No, I am quiet"}],
+        [{es:"Sí, camino mucho",en:"Yes, I walk a lot"},{es:"Camino poco",en:"I walk a little"},{es:"Voy al hotel",en:"I go to the hotel"}],
+      ]),
+    q(5,
+      [
+        {es:`Cuando ${place.climate.es} en ${place.country}, ¿qué llevás?`,en:`When ${place.climate.en} in ${place.countryEn}, what do you take?`},
+        {es:`En ${place.country}, ¿${place.climate.es} es perfecto para caminar?`,en:`In ${place.countryEn}, is it perfect for walking when ${place.climate.en}?`},
+        {es:`¿Preferís el clima de ${place.country} o el clima de tu ciudad?`,en:`Do you prefer the weather in ${place.countryEn} or the weather in your city?`},
+        {es:`Cuando ${place.climate.es} en ${place.country}, ¿te quedás afuera?`,en:`When ${place.climate.en} in ${place.countryEn}, do you stay outside?`},
+      ],
+      [{es:"Llevo…",en:"I take…"},{es:"Para caminar…",en:"To walk…"},{es:"Prefiero…",en:"I prefer…"},{es:"Me quedo…",en:"I stay…"}],
+      [
+        [{es:"una campera",en:"a jacket"},{es:"un paraguas",en:"an umbrella"},{es:"agua",en:"water"}],
+        [{es:"una hora",en:"one hour"},{es:"solo un poco",en:"only a little"},{es:"todo el día",en:"all day"}],
+        [{es:`el clima de ${place.country}`,en:`the weather in ${place.countryEn}`},{es:"el clima de mi ciudad",en:"the weather in my city"},{es:"los dos",en:"both"}],
+        [{es:"afuera",en:"outside"},{es:"en el hotel",en:"in the hotel"},{es:"en un café",en:"in a café"}],
+      ],
+      [
+        {es:`¿Visitás ${place.landmark.es} con ese clima?`,en:`Do you visit ${place.landmark.en} in that weather?`},
+        {es:`¿Tomás algo caliente en ${place.country}?`,en:`Do you drink something hot in ${place.countryEn}?`},
+        {es:`¿El clima cambia tu plan en ${place.country}?`,en:`Does the weather change your plan in ${place.countryEn}?`},
+        {es:`¿Sacás fotos del clima de ${place.country}?`,en:`Do you take photos of the weather in ${place.countryEn}?`},
+      ],
+      [
+        [{es:"Sí, voy igual",en:"Yes, I go anyway"},{es:"No, voy otro día",en:"No, I go another day"},{es:"Tal vez",en:"Maybe"}],
+        [{es:"Tomo café",en:"I drink coffee"},{es:"Tomo té",en:"I drink tea"},{es:"Tomo agua",en:"I drink water"}],
+        [{es:"Sí, cambio el plan",en:"Yes, I change the plan"},{es:"No, sigo igual",en:"No, I continue"},{es:"Solo un poco",en:"Only a little"}],
+        [{es:"Sí, muchas fotos",en:"Yes, many photos"},{es:"Solo una foto",en:"Only one photo"},{es:"No saco fotos",en:"I do not take photos"}],
+      ]),
+    q(6,
+      [
+        {es:`¿Quién quiere descubrir ${place.capital.es} con vos?`,en:`Who wants to discover ${place.capital.en} with you?`},
+        {es:`¿Con quién compartís ${place.food.es} en ${place.country}?`,en:`Who do you share ${place.food.en} with in ${place.countryEn}?`},
+        {es:`¿Viajás solo / sola a ${place.capital.es} o con alguien?`,en:`Do you travel alone to ${place.capital.en} or with someone?`},
+        {es:`¿Tu familia quiere ver ${place.landmark.es}, en ${place.country}?`,en:`Does your family want to see ${place.landmark.en}, in ${place.countryEn}?`},
+      ],
+      [{es:"Viajo con…",en:"I travel with…"},{es:"Comparto con…",en:"I share with…"},{es:"Voy…",en:"I go…"},{es:"Mi familia…",en:"My family…"}],
+      [
+        [{es:"mi familia",en:"my family"},{es:"una amiga / un amigo",en:"a friend"},{es:"mi pareja",en:"my partner"}],
+        [{es:"mi familia",en:"my family"},{es:"gente local",en:"local people"},{es:"otra persona",en:"another person"}],
+        [{es:"solo / sola",en:"alone"},{es:"con una persona",en:"with one person"},{es:"con un grupo",en:"with a group"}],
+        [{es:`quiere ver ${place.landmark.es}`,en:`wants to see ${place.landmark.en}`},{es:`prefiere ${place.nature.es}`,en:`prefers ${place.nature.en}`},{es:"quiere hacer todo",en:"wants to do everything"}],
+      ],
+      [
+        {es:`¿Quién elige el primer lugar en ${place.capital.es}?`,en:`Who chooses the first place in ${place.capital.en}?`},
+        {es:`¿Quién pide primero ${place.food.es}?`,en:`Who orders ${place.food.en} first?`},
+        {es:`¿Conocés gente nueva en ${place.country}?`,en:`Do you meet new people in ${place.countryEn}?`},
+        {es:`¿Tu familia saca una foto en ${place.landmark.es}?`,en:`Does your family take a photo at ${place.landmark.en}?`},
+      ],
+      [
+        [{es:"Yo elijo",en:"I choose"},{es:"Mi compañero / compañera elige",en:"My companion chooses"},{es:"Elegimos juntos",en:"We choose together"}],
+        [{es:"Yo primero",en:"Me first"},{es:"Otra persona primero",en:"Another person first"},{es:"Pedimos juntos",en:"We order together"}],
+        [{es:"Sí, conozco gente",en:"Yes, I meet people"},{es:"Solo una persona",en:"Only one person"},{es:"No, prefiero estar solo / sola",en:"No, I prefer to be alone"}],
+        [{es:"Sí, una foto familiar",en:"Yes, a family photo"},{es:"Solo yo",en:"Only me"},{es:"No sacamos fotos",en:"We do not take photos"}],
+      ]),
+    q(7,
+      [
+        {es:`¿Cuántos días necesitás para conocer ${place.country}?`,en:`How many days do you need to discover ${place.countryEn}?`},
+        {es:`¿Un fin de semana alcanza para visitar ${place.capital.es}?`,en:`Is one weekend enough to visit ${place.capital.en}?`},
+        {es:`En ${place.country}, ¿dormís en ${place.capital.es} o cerca de ${place.nature.es}?`,en:`In ${place.countryEn}, do you sleep in ${place.capital.en} or near ${place.nature.en}?`},
+        {es:`¿Qué hacés el primer día en ${place.country}?`,en:`What do you do on the first day in ${place.countryEn}?`},
+      ],
+      [{es:"Necesito…",en:"I need…"},{es:"Para visitar…",en:"To visit…"},{es:"Duermo…",en:"I sleep…"},{es:"El primer día…",en:"On the first day…"}],
+      [
+        [{es:"tres días",en:"three days"},{es:"una semana",en:"one week"},{es:"un mes",en:"one month"}],
+        [{es:"un fin de semana",en:"one weekend"},{es:"tres días",en:"three days"},{es:"una semana",en:"one week"}],
+        [{es:`en ${place.capital.es}`,en:`in ${place.capital.en}`},{es:`cerca de ${place.nature.es}`,en:`near ${place.nature.en}`},{es:"en dos lugares",en:"in two places"}],
+        [{es:`visito ${place.landmark.es}`,en:`I visit ${place.landmark.en}`},{es:`pruebo ${place.food.es}`,en:`I try ${place.food.en}`},{es:"descanso",en:"I rest"}],
+      ],
+      [
+        {es:`¿Guardás un día para ${place.nature.es}?`,en:`Do you save one day for ${place.nature.en}?`},
+        {es:`¿Qué hacés el domingo en ${place.capital.es}?`,en:`What do you do on Sunday in ${place.capital.en}?`},
+        {es:`¿Cambias de hotel en ${place.country}?`,en:`Do you change hotels in ${place.countryEn}?`},
+        {es:`¿Qué hacés la última noche en ${place.country}?`,en:`What do you do on the last night in ${place.countryEn}?`},
+      ],
+      [
+        [{es:"Sí, un día completo",en:"Yes, one full day"},{es:"Solo una mañana",en:"Only one morning"},{es:"No tengo tiempo",en:"I do not have time"}],
+        [{es:"camino por la ciudad",en:"I walk around the city"},{es:"voy a un café",en:"I go to a café"},{es:"descanso",en:"I rest"}],
+        [{es:"Sí, cambio de hotel",en:"Yes, I change hotels"},{es:"No, uso un hotel",en:"No, I use one hotel"},{es:"No necesito hotel",en:"I do not need a hotel"}],
+        [{es:"ceno algo rico",en:"I eat a tasty dinner"},{es:"camino de noche",en:"I walk at night"},{es:"preparo la valija",en:"I prepare my suitcase"}],
+      ]),
+    q(8,
+      [
+        {es:`En ${place.country}, ¿decís “${place.greeting.es}” cuando entrás a un mercado?`,en:`In ${place.countryEn}, do you say “${place.greeting.en}” when you enter a market?`},
+        {es:`¿Podés pronunciar “${place.greeting.es}” antes de visitar ${place.landmark.es}?`,en:`Can you pronounce “${place.greeting.en}” before visiting ${place.landmark.en}?`},
+        {es:`¿Usás “${place.greeting.es}” para conocer a una persona en ${place.capital.es}?`,en:`Do you use “${place.greeting.en}” to meet a person in ${place.capital.en}?`},
+        {es:`¿Qué es más fácil: decir “${place.greeting.es}” o decir “${place.country}”?`,en:`What is easier: saying “${place.greeting.en}” or saying “${place.countryEn}”?`},
+      ],
+      [{es:"Cuando entro, digo…",en:"When I enter, I say…"},{es:"Puedo decir…",en:"I can say…"},{es:"Para saludar, digo…",en:"To greet, I say…"},{es:"Es más fácil decir…",en:"It is easier to say…"}],
+      [
+        [place.greeting,{es:"hola",en:"hello"},{es:"buen día",en:"good morning"}],
+        [place.greeting,{es:"el nombre del lugar",en:"the name of the place"},{es:"las dos cosas",en:"both things"}],
+        [place.greeting,{es:"mi nombre",en:"my name"},{es:"mucho gusto",en:"nice to meet you"}],
+        [place.greeting,{es:place.country,en:place.countryEn},{es:"las dos palabras",en:"both words"}],
+      ],
+      [
+        {es:`¿Después de “${place.greeting.es}” pedís ${place.food.es}?`,en:`After “${place.greeting.en}”, do you order ${place.food.en}?`},
+        {es:`¿Repetís “${place.greeting.es}” tres veces?`,en:`Do you repeat “${place.greeting.en}” three times?`},
+        {es:`¿La persona de ${place.capital.es} responde el saludo?`,en:`Does the person from ${place.capital.en} answer the greeting?`},
+        {es:`¿Enseñás tu saludo a una persona de ${place.country}?`,en:`Do you teach your greeting to a person from ${place.countryEn}?`},
+      ],
+      [
+        [{es:`Sí, después pido ${place.food.es}`,en:`Yes, then I order ${place.food.en}`},{es:"No, primero tomo agua",en:"No, first I drink water"},{es:"Primero miro el menú",en:"First I look at the menu"}],
+        [{es:"Sí, tres veces",en:"Yes, three times"},{es:"Solo una vez",en:"Only once"},{es:"Más despacio",en:"More slowly"}],
+        [{es:"Sí, responde",en:"Yes, the person answers"},{es:"Responde con una sonrisa",en:"The person answers with a smile"},{es:"No entiendo",en:"I do not understand"}],
+        [{es:"Sí, enseño mi saludo",en:"Yes, I teach my greeting"},{es:"Solo digo hola",en:"I only say hello"},{es:"Comparamos los saludos",en:"We compare the greetings"}],
+      ]),
+    q(9,
+      [
+        {es:`Llegás a ${place.capital.es}. ¿Qué elegís primero en ${place.country}?`,en:`You arrive in ${place.capital.en}. What do you choose first in ${place.countryEn}?`},
+        {es:`Tenés una mañana en ${place.country}: ¿${place.landmark.es} o ${place.food.es}?`,en:`You have one morning in ${place.countryEn}: ${place.landmark.en} or ${place.food.en}?`},
+        {es:`En ${place.country}, ¿qué elegís: ${place.landmark.es}, ${place.food.es} o ${place.animal.es}?`,en:`In ${place.countryEn}, what do you choose: ${place.landmark.en}, ${place.food.en} or ${place.animal.en}?`},
+        {es:`Antes de volver de ${place.country}, ¿qué recuerdo elegís?`,en:`Before returning from ${place.countryEn}, what souvenir do you choose?`},
+      ],
+      [{es:"Primero elijo…",en:"First I choose…"},{es:"En la mañana…",en:"In the morning…"},{es:"Elijo…",en:"I choose…"},{es:"Como recuerdo elijo…",en:"As a souvenir I choose…"}],
+      [
+        [{es:`visitar ${place.landmark.es}`,en:`to visit ${place.landmark.en}`},{es:`probar ${place.food.es}`,en:`to try ${place.food.en}`},{es:`ver ${place.animal.es}`,en:`to see ${place.animal.en}`}],
+        [{es:`visito ${place.landmark.es}`,en:`I visit ${place.landmark.en}`},{es:`pruebo ${place.food.es}`,en:`I try ${place.food.en}`},{es:"hago las dos cosas",en:"I do both things"}],
+        [place.landmark,place.food,place.animal],
+        [{es:`algo de ${place.culture.es}`,en:`something from ${place.culture.en}`},{es:"una foto",en:"a photo"},{es:"comida",en:"food"}],
+      ],
+      [
+        {es:`Después, ¿vas a ${place.nature.es}?`,en:`Then, do you go to ${place.nature.en}?`},
+        {es:`Después de la mañana, ¿descansás en ${place.capital.es}?`,en:`After the morning, do you rest in ${place.capital.en}?`},
+        {es:`¿Compartís tu elección con alguien de ${place.country}?`,en:`Do you share your choice with someone from ${place.countryEn}?`},
+        {es:`¿Dónde guardás el recuerdo de ${place.country}?`,en:`Where do you keep the souvenir from ${place.countryEn}?`},
+      ],
+      [
+        [{es:`Sí, después voy a ${place.nature.es}`,en:`Yes, then I go to ${place.nature.en}`},{es:"No, vuelvo al hotel",en:"No, I return to the hotel"},{es:"Tal vez mañana",en:"Maybe tomorrow"}],
+        [{es:"Sí, descanso",en:"Yes, I rest"},{es:"No, sigo caminando",en:"No, I keep walking"},{es:"Voy a un café",en:"I go to a café"}],
+        [{es:"Sí, con una persona local",en:"Yes, with a local person"},{es:"Con mi familia",en:"With my family"},{es:"No, es personal",en:"No, it is personal"}],
+        [{es:"en mi valija",en:"in my suitcase"},{es:"en mi casa",en:"in my house"},{es:"en mi teléfono",en:"on my phone"}],
+      ]),
   ];
+
+  const rotation=(countryIndex*3)%worlds.length;
+  return [...worlds.slice(rotation),...worlds.slice(0,rotation)];
 }
 
 function Glyph({ name }: { name: GlyphName }) {
@@ -176,7 +441,7 @@ export default function MundoFantastico() {
     .filter(group=>!normalizedBankQuery||group.words.some(word=>`${word.es} ${word.en}`.toLowerCase().includes(normalizedBankQuery)))
     .filter(group=>normalizedBankQuery||group.id===bankTab)
     .map(group=>({...group,words:normalizedBankQuery?group.words.filter(word=>`${word.es} ${word.en}`.toLowerCase().includes(normalizedBankQuery)):group.words}));
-  const currentVisual=questionVisual(active,question);
+  const currentVisual=questionVisual(active,current.visual);
 
   useEffect(()=>{
     if(!bankOpen)return;
@@ -270,7 +535,7 @@ export default function MundoFantastico() {
         <section className="wf-question-stage">
           <div className="wf-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question + 1).padStart(2,"0")} <i>/ 10</i></b></div>
           <div className="wf-question-copy"><small>{active.country} · {active.countryEn}</small><h2>{current.prompt.es}</h2><p className="wf-en">{current.prompt.en}</p><div className="wf-question-actions"><button onClick={() => speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR LENTO</button><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> WORDBANK</button></div></div>
-          <div className="wf-question-picture"><WikiVisual key={`${active.id}-${question}`} query={currentVisual.query} alt={`${currentVisual.title}, ${active.country}`} label={currentVisual.label} subLabel={currentVisual.title} seed={question} group={active.id}/></div>
+          <div className="wf-question-picture"><WikiVisual key={`${active.id}-${question}`} query={currentVisual.query} alt={`${currentVisual.title}, ${active.country}`} label={currentVisual.label} subLabel={currentVisual.title} seed={current.visual} group={active.id}/></div>
         </section>
 
         <section className="wf-support">
