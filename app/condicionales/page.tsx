@@ -23,6 +23,14 @@ const tableMap: Record<string, string[]> = {
   mixtos: ["presente-subjuntivo", "imperfecto-subjuntivo", "condicional-simple", "pluscuamperfecto-subjuntivo", "condicional-compuesto"],
 };
 
+const grammarBlueprints: Record<string, { condition: string; conditionWhy: string; result: string; resultWhy: string; memory: string }> = {
+  realidad: { condition: "PRESENTE DE INDICATIVO", conditionWhy: "La condición se presenta como real, normal o comprobable.", result: "PRESENTE O IMPERATIVO", resultWhy: "La consecuencia es habitual, segura o funciona como instrucción.", memory: "REAL + REAL: no imaginamos otro mundo." },
+  posible: { condition: "PRESENTE DE INDICATIVO", conditionWhy: "Aunque hablamos del futuro, después de si usamos presente.", result: "FUTURO, PRESENTE O IMPERATIVO", resultWhy: "Elegimos según queramos predecir, prometer, decidir u ordenar.", memory: "POSIBLE AHORA → RESULTADO FUTURO." },
+  hipotetico: { condition: "IMPERFECTO DE SUBJUNTIVO", conditionWhy: "El subjuntivo aleja la condición de la realidad actual.", result: "CONDICIONAL SIMPLE", resultWhy: "Expresa lo que ocurriría solamente dentro de esa situación imaginada.", memory: "-RA/-SE EN LA CONDICIÓN → -RÍA EN EL RESULTADO." },
+  pasado: { condition: "HUBIERA + PARTICIPIO", conditionWhy: "Reescribe una causa terminada que en realidad no ocurrió así.", result: "HABRÍA + PARTICIPIO", resultWhy: "Imagina una consecuencia pasada que tampoco ocurrió.", memory: "DOS PASADOS ALTERNATIVOS: HUBIERA → HABRÍA." },
+  mixtos: { condition: "EL TIEMPO DE LA CAUSA", conditionWhy: "Primero ubicamos cuándo nace la condición: pasado o presente.", result: "EL TIEMPO DE LA CONSECUENCIA", resultWhy: "Después ubicamos cuándo se siente el resultado: pasado o presente.", memory: "NO COPIES TIEMPOS: SEGUÍ LA LÍNEA TEMPORAL." },
+};
+
 function PairText({ es, en }: { es: string; en: string }) {
   return <><b>{es}</b><span>{en}</span></>;
 }
@@ -57,6 +65,7 @@ export default function CondicionalesPage() {
   const progress = Math.round((visited.size / chapters.length) * 100);
   const currentIndex = chapters.findIndex((chapter) => chapter.id === active.id);
   const relevantTables = useMemo(() => tableMap[active.id] || [], [active.id]);
+  const blueprint = grammarBlueprints[active.id];
 
   const show = (next: Screen) => {
     setScreen(next);
@@ -184,6 +193,16 @@ export default function CondicionalesPage() {
               <span>LA PREGUNTA CLAVE</span>
               <h2>{active.id === "realidad" ? "¿Esto ocurre siempre o normalmente?" : active.id === "posible" ? "¿Todavía puede ocurrir de verdad?" : active.id === "hipotetico" ? "¿Lo imagino como lejano o contrario a mi realidad?" : active.id === "pasado" ? "¿Ya es imposible cambiar esta condición?" : "¿La causa y el resultado pertenecen a tiempos distintos?"}</h2>
               <p>Si la respuesta coincide, elegiste el portal correcto. Recién ahora miramos los tiempos verbales.</p>
+            </section>
+
+            <section className="co-grammar-breakdown">
+              <header><span>LA GRAMÁTICA EN TRES PASOS</span><h2>Armá la oración sin adivinar.</h2></header>
+              <div>
+                <article><small>PASO A · DESPUÉS DE “SI”</small><b>{blueprint.condition}</b><p>{blueprint.conditionWhy}</p></article>
+                <i>→</i>
+                <article><small>PASO B · EN EL RESULTADO</small><b>{blueprint.result}</b><p>{blueprint.resultWhy}</p></article>
+              </div>
+              <aside><span>PARA RECORDAR</span><b>{blueprint.memory}</b></aside>
             </section>
 
             <section className="co-conjugations">
