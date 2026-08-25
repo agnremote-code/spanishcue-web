@@ -128,7 +128,7 @@ export const chapters: ConditionalChapter[] = [
     speaking: [
       { es: "Si fueras alcalde por un día, ¿qué cambiarías primero?", en: "If you were mayor for a day, what would you change first?" },
       { es: "¿Qué harías si no necesitaras trabajar?", en: "What would you do if you did not need to work?" },
-      { es: "Dale un consejo real a tu profesor usando Si yo fuera vos…", en: "Give your teacher real advice using Si yo fuera vos…" }
+      { es: "Dale un consejo real a otra persona usando Si yo fuera vos…", en: "Give someone real advice using Si yo fuera vos…" }
     ]
   },
   {
@@ -155,7 +155,7 @@ export const chapters: ConditionalChapter[] = [
     ],
     traps: [
       { es: "Hubiera + participio construye la condición; habría + participio es la consecuencia estándar.", en: "Hubiera + participle builds the condition; habría + participle is the standard result." },
-      { es: "En el español real también se oye hubiera en el resultado: Si sabía, hubiera ido. Para una clase formal, preferí habría ido.", en: "Real Spanish also uses hubiera in the result. For a formal neutral model, prefer habría ido." }
+      { es: "En el español real también se oye hubiera en el resultado: Si sabía, hubiera ido. En un registro formal y neutro, usá habría ido.", en: "Real Spanish also uses hubiera in the result. In a formal, neutral register, use habría ido." }
     ],
     exercises: [
       { prompt: "Si me lo ___ (decir), te habría ayudado.", answer: "hubieras dicho", why: "Condición pasada imposible: hubiera + participio irregular dicho." },

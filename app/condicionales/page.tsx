@@ -122,7 +122,7 @@ export default function CondicionalesPage() {
         <section className="co-map">
           <header className="co-map-head">
             <div><span>RUTA PROGRESIVA · A1 → C1</span><h1>Cada portal cambia<br />una sola regla.</h1></div>
-            <div><p>No hace falta explicar todo en una clase. Empezá en el nivel real del alumno y avanzá cuando la lógica anterior esté firme.</p><button onClick={() => enter(chapters.find((chapter) => !visited.has(chapter.id)) || chapters[0])}>CONTINUAR RUTA →</button></div>
+            <div><p>Empezá por el primer portal y avanzá de a poco. Cada nueva estructura se apoya en la lógica que ya aprendiste.</p><button onClick={() => enter(chapters.find((chapter) => !visited.has(chapter.id)) || chapters[0])}>CONTINUAR RUTA →</button></div>
           </header>
 
           <section className="co-course-intro">
@@ -135,7 +135,7 @@ export default function CondicionalesPage() {
           </section>
 
           <section className="co-master-ladder">
-            <header><span>EL MAPA GRAMATICAL COMPLETO</span><h2>Primero elegí la realidad. Después, el tiempo.</h2><p>Esta escalera es el corazón de toda la clase. Si el alumno recuerda estas cinco líneas, puede reconstruir el sistema entero.</p></header>
+            <header><span>EL MAPA GRAMATICAL COMPLETO</span><h2>Primero elegí la realidad. Después, el tiempo.</h2><p>Recordá estas cinco fórmulas: con ellas vas a poder reconstruir todo el sistema de los condicionales.</p></header>
             <div>
               {chapters.map((chapter) => <article key={chapter.id} style={{ "--portal": chapter.color } as CSSProperties}><span>{chapter.number}</span><div><small>{chapter.level} · {chapter.title}</small><b>{chapter.formula}</b><p>{chapter.tagline.es}</p></div></article>)}
             </div>
@@ -155,11 +155,6 @@ export default function CondicionalesPage() {
           </div>
 
           <section className="co-golden-rule"><span>⚠️ LA REGLA QUE SALVA TODA LA CLASE</span><div><b>Después de SI no usamos futuro ni condicional.</b><p>Si vendrá / si tendría ❌ · Si viene / si tuviera ✅</p></div></section>
-
-          <section className="co-teacher-route">
-            <header><span>GUÍA PARA ALEJANDRO</span><h2>¿Hasta dónde avanzar?</h2></header>
-            <div>{chapters.map((chapter) => <article key={chapter.id} style={{ "--portal": chapter.color } as CSSProperties}><b>{chapter.level}</b><span>{chapter.title}</span><p>{chapter.id === "realidad" ? "Base, hábitos y reglas" : chapter.id === "posible" ? "Planes y consecuencias reales" : chapter.id === "hipotetico" ? "Imaginación y consejos" : chapter.id === "pasado" ? "Arrepentimientos y pasado alternativo" : "Cruces temporales y conectores"}</p></article>)}</div>
-          </section>
 
           <button className="co-atlas-call" onClick={() => show("atlas")}><span>ATLAS DE CONJUGACIONES</span><b>Los ocho tiempos, irregulares y conectores avanzados</b><i>ABRIR →</i></button>
         </section>
@@ -262,7 +257,7 @@ export default function CondicionalesPage() {
             <section className="co-participles"><header className="co-atlas-section-head"><span>03 · TIEMPOS COMPUESTOS</span><h2>Participios irregulares</h2></header><div>{irregularParticiples.map(([verb, participle]) => <article key={verb}><span>{verb}</span><b>{participle}</b></article>)}</div></section>
             <section className="co-connectors"><header className="co-atlas-section-head"><span>04 · MÁS ALLÁ DE “SI”</span><h2>Conectores avanzados</h2><p>Estos conectores convierten una condición en requisito, excepción, advertencia o registro formal.</p></header><div>{advancedConnectors.map(([connector, english, example]) => <article key={connector}><b>{connector}</b><span>{english}</span><p>{example}</p></article>)}</div></section>
             <section className="co-master-compare"><header className="co-atlas-section-head"><span>05 · LA FOTO COMPLETA</span><h2>Un verbo, cinco universos</h2></header><div><article><small>REAL</small><b>Si tengo tiempo, voy.</b><span>If I have time, I go.</span></article><article><small>POSIBLE</small><b>Si tengo tiempo, iré.</b><span>If I have time, I’ll go.</span></article><article><small>HIPOTÉTICO</small><b>Si tuviera tiempo, iría.</b><span>If I had time, I would go.</span></article><article><small>IMPOSIBLE</small><b>Si hubiera tenido tiempo, habría ido.</b><span>If I had had time, I would have gone.</span></article><article><small>MIXTO</small><b>Si hubiera tenido tiempo, ahora estaría allí.</b><span>If I had had time, I would be there now.</span></article></div></section>
-            <section className="co-final-mission"><header><span>MISIÓN FINAL</span><h2>Cinco frases. Cinco universos. Una historia.</h2><p>El alumno responde en orden y después conecta las cinco ideas como si fueran versiones alternativas de su vida.</p></header><div>{finalMission.map((mission, index) => <article key={mission.situation}><span>{index + 1}</span><b>{mission.situation}</b><i>{mission.target}</i></article>)}</div></section>
+            <section className="co-final-mission"><header><span>MISIÓN FINAL</span><h2>Cinco frases. Cinco universos. Una historia.</h2><p>Respondé en orden y después conectá las cinco ideas como si fueran versiones alternativas de tu vida.</p></header><div>{finalMission.map((mission, index) => <article key={mission.situation}><span>{index + 1}</span><b>{mission.situation}</b><i>{mission.target}</i></article>)}</div></section>
           </div>
         </section>
       )}
