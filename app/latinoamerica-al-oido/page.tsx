@@ -1,24 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { countries, type Country } from "./data";
 import LatamGlobe from "./LatamGlobe";
 import "./style.css";
 
 type Stage = "map" | "listen" | "quiz" | "open" | "result" | "reading";
-const premiumWords = ["natural", "premium", "enhanced", "neural", "google", "microsoft", "apple"];
-
-function voiceScore(voice: SpeechSynthesisVoice, country: Country) {
-  const name = `${voice.name} ${voice.lang}`.toLowerCase();
-  const locale = country.locale.toLowerCase();
-  let score = 0;
-  if (voice.lang.toLowerCase() === locale) score += 120;
-  if (voice.lang.toLowerCase().startsWith("es")) score += 25;
-  if (country.voiceHints.some(hint => name.includes(hint))) score += 55;
-  if (premiumWords.some(word => name.includes(word))) score += 35;
-  if (voice.localService) score += 5;
-  return score;
-}
 
 function formatTime(seconds: number) {
   const safe = Math.max(0, Math.round(seconds));
@@ -51,13 +38,12 @@ function TranscriptCard({ active, final = false }: { active: Country; final?: bo
 export default function LatinoamericaAlOido() {
   const [stage, setStage] = useState<Stage>("map");
   const [active, setActive] = useState<Country>(countries[0]);
-  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoice, setSelectedVoice] = useState("");
-  const [voiceOpen, setVoiceOpen] = useState(false);
   const [listens, setListens] = useState(0);
   const [speaking, setSpeaking] = useState(false);
   const [paused, setPaused] = useState(false);
   const [elapsed, setElapsed] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [audioError, setAudioError] = useState(false);
   const [transcript, setTranscript] = useState(false);
   const [question, setQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
@@ -65,43 +51,31 @@ export default function LatinoamericaAlOido() {
   const [openDrafts, setOpenDrafts] = useState<string[]>(["", "", "", ""]);
   const [openRevealed, setOpenRevealed] = useState<number[]>([]);
   const [readingSteps, setReadingSteps] = useState<number[]>([]);
-  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
-  const playId = useRef(0);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  const spanishVoices = useMemo(() => voices.filter(voice => voice.lang.toLowerCase().startsWith("es")), [voices]);
-  const rankedVoices = useMemo(() => [...spanishVoices].sort((a, b) => voiceScore(b, active) - voiceScore(a, active)), [spanishVoices, active]);
-  const voice = useMemo(() => rankedVoices.find(item => item.voiceURI === selectedVoice) || rankedVoices[0], [rankedVoices, selectedVoice]);
-  const exactVoice = Boolean(voice && voice.lang.toLowerCase() === active.locale.toLowerCase());
-  const duration = useMemo(() => Math.max(40, Math.ceil(active.script.split(/\s+/).length / (2.15 * active.speed))), [active]);
   const multipleQuestions = active.questions.slice(0, 6);
   const openQuestions = active.questions.slice(6, 10);
   const current = multipleQuestions[question];
   const score = answers.reduce((total, answer, index) => total + (answer === multipleQuestions[index]?.answer ? 1 : 0), 0);
-  const progress = Math.min(100, (elapsed / duration) * 100);
+  const progress = duration > 0 ? Math.min(100, (elapsed / duration) * 100) : 0;
 
   useEffect(() => {
-    const load = () => setVoices(window.speechSynthesis?.getVoices?.() || []);
-    load();
-    window.speechSynthesis?.addEventListener?.("voiceschanged", load);
-    return () => window.speechSynthesis?.removeEventListener?.("voiceschanged", load);
-  }, []);
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.load();
+    setDuration(0);
+    setElapsed(0);
+    setSpeaking(false);
+    setPaused(false);
+    setAudioError(false);
+  }, [active.id]);
 
-  useEffect(() => setSelectedVoice(""), [active.id]);
-  useEffect(() => () => {
-    playId.current += 1;
-    window.speechSynthesis?.cancel();
-    if (timer.current) clearInterval(timer.current);
-  }, []);
-
-  const clearTimer = () => {
-    if (timer.current) clearInterval(timer.current);
-    timer.current = null;
-  };
+  useEffect(() => () => audioRef.current?.pause(), []);
 
   const stopAudio = (reset = false) => {
-    playId.current += 1;
-    window.speechSynthesis?.cancel();
-    clearTimer();
+    const audio = audioRef.current;
+    audio?.pause();
+    if (reset && audio) audio.currentTime = 0;
     setSpeaking(false);
     setPaused(false);
     if (reset) setElapsed(0);
@@ -121,73 +95,32 @@ export default function LatinoamericaAlOido() {
     setReadingSteps([]);
   };
 
-  const textFromSecond = (second: number) => {
-    const words = active.script.split(/\s+/);
-    const wordIndex = Math.min(words.length - 1, Math.floor((second / duration) * words.length));
-    return words.slice(Math.max(0, wordIndex)).join(" ");
-  };
-
-  const startTicker = (from: number) => {
-    clearTimer();
-    const started = Date.now() - from * 1000;
-    timer.current = setInterval(() => setElapsed(Math.min(duration, (Date.now() - started) / 1000)), 200);
-  };
-
   const playFrom = (from = elapsed >= duration - .5 ? 0 : elapsed) => {
-    if (!window.speechSynthesis) return;
-    const safeFrom = Math.max(0, Math.min(duration - .5, from));
-    playId.current += 1;
-    const id = playId.current;
-    window.speechSynthesis.cancel();
-    clearTimer();
+    const audio = audioRef.current;
+    if (!audio) return;
+    const total = Number.isFinite(audio.duration) ? audio.duration : duration;
+    const safeFrom = Math.max(0, Math.min(Math.max(0, total - .1), from));
+    audio.currentTime = safeFrom;
     setElapsed(safeFrom);
-    const utterance = new SpeechSynthesisUtterance(textFromSecond(safeFrom));
-    utterance.lang = active.locale;
-    utterance.rate = active.speed;
-    utterance.pitch = active.pitch;
-    if (voice) utterance.voice = voice;
-    utterance.onstart = () => {
-      if (id !== playId.current) return;
-      setSpeaking(true);
-      setPaused(false);
-      startTicker(safeFrom);
-    };
-    utterance.onend = () => {
-      if (id !== playId.current) return;
-      clearTimer();
+    void audio.play().catch(() => {
       setSpeaking(false);
       setPaused(false);
-      setElapsed(duration);
-      setListens(value => Math.min(2, value + 1));
-    };
-    utterance.onerror = () => {
-      if (id !== playId.current) return;
-      clearTimer();
-      setSpeaking(false);
-      setPaused(false);
-    };
-    window.speechSynthesis.speak(utterance);
+    });
   };
 
   const pauseResume = () => {
-    if (!speaking) return;
-    if (paused) {
-      window.speechSynthesis.resume();
-      setPaused(false);
-      startTicker(elapsed);
-    } else {
-      window.speechSynthesis.pause();
-      clearTimer();
-      setPaused(true);
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) void audio.play();
+    else audio.pause();
   };
 
   const seekTo = (seconds: number) => {
-    const target = Math.max(0, Math.min(duration - .5, seconds));
-    const continuePlaying = speaking;
-    stopAudio(false);
+    const audio = audioRef.current;
+    if (!audio) return;
+    const target = Math.max(0, Math.min(duration, seconds));
+    audio.currentTime = target;
     setElapsed(target);
-    if (continuePlaying) playFrom(target);
   };
 
   const selectAnswer = (index: number) => {
@@ -207,6 +140,18 @@ export default function LatinoamericaAlOido() {
   return <main className="la-shell" style={{ "--country": active.color } as CSSProperties}>
     <SignalBackground/>
     <header className="la-topbar"><button onClick={() => { stopAudio(); window.location.href = "/"; }}>← BIBLIOTECA</button><a className="la-brand" href="/">CHESPANISH <b>RADIO</b></a><div className="la-level"><span>A2</span> COMPRENSIÓN AUDITIVA</div></header>
+    <audio
+      ref={audioRef}
+      className="la-real-audio"
+      src={`/audio/latam/${active.id}.mp3`}
+      preload="auto"
+      onLoadedMetadata={event => { setDuration(event.currentTarget.duration); setAudioError(false); }}
+      onTimeUpdate={event => setElapsed(event.currentTarget.currentTime)}
+      onPlay={() => { setSpeaking(true); setPaused(false); }}
+      onPause={event => { setSpeaking(false); setPaused(event.currentTarget.currentTime > 0 && event.currentTarget.currentTime < event.currentTarget.duration); }}
+      onEnded={event => { setSpeaking(false); setPaused(false); setElapsed(event.currentTarget.duration); setListens(value => Math.min(2, value + 1)); }}
+      onError={() => { setAudioError(true); setSpeaking(false); setPaused(false); }}
+    />
 
     {stage === "map" && <section className="la-map-screen">
       <div className="la-intro"><span className="la-kicker">FRECUENCIA 10.10 · LATINOAMÉRICA</span><h1>Latinoamérica<br/><em>al oído.</em></h1><p>Elegí un país, escuchá una historia natural y entrená tu oído antes de leer.</p><StudentGuide>Choose a country. Listen twice. Complete both exercises. Read the transcript aloud only at the end.</StudentGuide><div className="la-method"><span><b>1</b> ESCUCHÁ</span><i>→</i><span><b>2</b> ELEGÍ</span><i>→</i><span><b>3</b> RESPONDÉ</span><i>→</i><span><b>4</b> LEÉ</span></div><div className="la-audio-promise"><strong>CONTROL TOTAL</strong><p>Pausa, continuá, retrocedé, avanzá o movete por la línea de tiempo. La transcripción se puede desbloquear cuando vos decidas.</p></div></div>
@@ -217,11 +162,11 @@ export default function LatinoamericaAlOido() {
     {stage === "listen" && <section className="la-studio">
       <aside className="la-country-console"><button className="la-back" onClick={() => { stopAudio(); setStage("map"); }}>← CAMBIAR PAÍS</button><div className={`la-flag-orbit ${speaking && !paused ? "broadcasting" : ""}`}><span>{active.flag}</span><i/><i/><b/><b/><b/></div><span className="la-city">{active.city}</span><h1>{active.name}</h1><p>{active.topic}</p><div className="la-console-dial"><i/><span>SEÑAL<br/><b>100%</b></span></div></aside>
       <div className="la-player-panel"><div className="la-broadcast-head"><div><span>HISTORIA · {String(countries.indexOf(active) + 1).padStart(2, "0")}</span><h2>{active.title}</h2><p>{active.speaker}</p></div><b>EN VIVO</b></div><StudentGuide>Listen without reading first. You can pause, go back 10 seconds, move forward, or drag the timeline. Complete two full listens if possible.</StudentGuide><Waveform active={speaking} paused={paused}/>
-        <div className="la-timeline"><span>{formatTime(elapsed)}</span><input aria-label="Posición del audio" type="range" min="0" max={duration} step="1" value={Math.min(elapsed, duration)} onChange={event => setElapsed(Number(event.target.value))} onPointerUp={event => seekTo(Number((event.currentTarget as HTMLInputElement).value))}/><span>{formatTime(duration)}</span></div>
-        <div className="la-progress"><i style={{ width: `${progress}%` }}/><span>{speaking ? paused ? "PAUSA · PODÉS CONTINUAR CUANDO QUIERAS" : "REPRODUCIENDO" : elapsed >= duration ? "AUDIO COMPLETO" : "LISTO PARA ESCUCHAR"}</span></div>
-        <div className="la-transport-controls"><button onClick={() => seekTo(elapsed - 10)}>↶<b>-10</b><small>segundos</small></button><button className="la-main-play" onClick={() => speaking ? pauseResume() : playFrom()}>{speaking ? paused ? "▶" : "Ⅱ" : "▶"}<span>{speaking ? paused ? "CONTINUAR" : "PAUSAR" : elapsed > 0 && elapsed < duration ? "CONTINUAR" : "ESCUCHAR"}</span></button><button onClick={() => seekTo(elapsed + 10)}>↷<b>+10</b><small>segundos</small></button><button onClick={() => stopAudio(true)}>↺<small>reiniciar</small></button></div>
+        <div className="la-timeline"><span>{formatTime(elapsed)}</span><input aria-label="Posición del audio" type="range" min="0" max={duration || 1} step="0.1" value={Math.min(elapsed, duration || 1)} onChange={event => seekTo(Number(event.target.value))}/><span>{duration ? formatTime(duration) : "–:––"}</span></div>
+        <div className="la-progress"><i style={{ width: `${progress}%` }}/><span>{audioError ? "ERROR AL CARGAR · RECARGÁ LA PÁGINA" : !duration ? "CARGANDO AUDIO MULTIMEDIA…" : speaking ? "REPRODUCIENDO · AUDIO COMPARTIBLE" : paused ? "PAUSA · PODÉS CONTINUAR CUANDO QUIERAS" : elapsed >= duration - .1 ? "AUDIO COMPLETO" : "LISTO PARA ESCUCHAR"}</span></div>
+        <div className="la-transport-controls"><button disabled={!duration} onClick={() => seekTo(elapsed - 10)}>↶<b>-10</b><small>segundos</small></button><button disabled={!duration || audioError} className="la-main-play" onClick={() => speaking ? pauseResume() : playFrom()}>{speaking ? "Ⅱ" : "▶"}<span>{speaking ? "PAUSAR" : paused || elapsed > 0 && elapsed < duration ? "CONTINUAR" : "ESCUCHAR"}</span></button><button disabled={!duration} onClick={() => seekTo(elapsed + 10)}>↷<b>+10</b><small>segundos</small></button><button disabled={!duration} onClick={() => stopAudio(true)}>↺<small>reiniciar</small></button></div>
         <div className="la-listen-track">{[0, 1].map(index => <div className={listens > index ? "done" : listens === index ? "current" : ""} key={index}><span>{listens > index ? "✓" : index + 1}</span><p><b>ESCUCHA {index + 1}</b><small>{index === 0 ? "Idea general" : "Detalles importantes"}</small></p></div>)}</div>
-        <div className={`la-voice-box ${exactVoice ? "exact" : "fallback"}`}><div><span>{voice ? "◇ VOZ INSTALADA EN ESTE DISPOSITIVO" : "◇ SIN VOZ INSTALADA DETECTADA"}</span><p>{voice ? `${voice.name} · código ${voice.lang}` : "El navegador intentará reproducir el texto con una voz en español disponible."}</p><small>El país identifica la historia; no garantiza el origen ni el acento de la voz sintética.</small></div><button onClick={() => setVoiceOpen(value => !value)}>VER VOCES REALES</button>{voiceOpen && <label>Voces disponibles en este navegador<select value={voice?.voiceURI || ""} onChange={event => setSelectedVoice(event.target.value)}>{rankedVoices.map(item => <option key={item.voiceURI} value={item.voiceURI}>{item.name} · {item.lang}</option>)}</select></label>}</div>
+        <div className={`la-voice-box la-media-audio ${audioError ? "fallback" : "exact"}`}><div><span>◉ AUDIO MULTIMEDIA INTEGRADO</span><p>Archivo MP3 reproducido directamente por la página.</p><small>Compatible con el audio compartido de Preply, igual que un video o una actividad de listening.</small></div><b>{audioError ? "RECARGAR" : "LISTO PARA COMPARTIR"}</b></div>
         <button className={`la-unlock ${listens >= 2 ? "ready" : ""}`} onClick={() => { setStageSafely("quiz"); setQuestion(0); setChosen(null); }}>{listens >= 2 ? "EJERCICIO 1 · MULTIPLE CHOICE →" : `ABRIR EJERCICIO AHORA · ${listens}/2 ESCUCHAS`}</button>
         <button className="la-transcript-toggle teacher-flex" onClick={() => setTranscript(value => !value)}>{transcript ? "OCULTAR TRANSCRIPCIÓN" : "▣ DESBLOQUEAR TEXTO CUANDO QUIERAS"}<small>Teacher control · Unlock at any time</small></button>{transcript && <TranscriptCard active={active}/>}
       </div>
