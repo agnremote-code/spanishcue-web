@@ -116,6 +116,22 @@ export default function CondicionalesPage() {
             <div><p>No hace falta explicar todo en una clase. Empezá en el nivel real del alumno y avanzá cuando la lógica anterior esté firme.</p><button onClick={() => enter(chapters.find((chapter) => !visited.has(chapter.id)) || chapters[0])}>CONTINUAR RUTA →</button></div>
           </header>
 
+          <section className="co-course-intro">
+            <header><span>INTRODUCCIÓN · ANTES DE LOS TIPOS</span><h2>¿Qué es una oración condicional?</h2><p>Es una oración con <b>dos bloques</b>. Uno presenta una condición y el otro explica qué pasa, pasará, pasaría o habría pasado como consecuencia.</p></header>
+            <div>
+              <article><span>1</span><div><small>CONDICIÓN</small><b>Si tengo tiempo…</b><p>La situación que abre una posibilidad.</p></div></article>
+              <article><span>2</span><div><small>CONSECUENCIA</small><b>…voy con vos.</b><p>El resultado de esa condición.</p></div></article>
+              <article><span>★</span><div><small>MÉTODO PARA NO OLVIDARSE</small><b>REALIDAD + TIEMPO</b><p>Primero preguntá: ¿es real o imaginario? Después: ¿hablo del presente, futuro o pasado?</p></div></article>
+            </div>
+          </section>
+
+          <section className="co-master-ladder">
+            <header><span>EL MAPA GRAMATICAL COMPLETO</span><h2>Primero elegí la realidad. Después, el tiempo.</h2><p>Esta escalera es el corazón de toda la clase. Si el alumno recuerda estas cinco líneas, puede reconstruir el sistema entero.</p></header>
+            <div>
+              {chapters.map((chapter) => <article key={chapter.id} style={{ "--portal": chapter.color } as CSSProperties}><span>{chapter.number}</span><div><small>{chapter.level} · {chapter.title}</small><b>{chapter.formula}</b><p>{chapter.tagline.es}</p></div></article>)}
+            </div>
+          </section>
+
           <div className="co-route-line" aria-hidden="true">{chapters.map((chapter) => <i key={chapter.id} className={visited.has(chapter.id) ? "done" : ""} />)}</div>
 
           <div className="co-portal-grid">
@@ -151,37 +167,48 @@ export default function CondicionalesPage() {
           </header>
 
           <div className="co-chapter-body">
+            <section className="co-learning-order">
+              <span>ORDEN DE APRENDIZAJE</span>
+              <div><b>1 · ENTENDER</b><i>→</i><b>2 · ELEGIR LOS TIEMPOS</b><i>→</i><b>3 · CONJUGAR</b><i>→</i><b>4 · PRACTICAR</b><i>→</i><b>5 · HABLAR</b></div>
+            </section>
+
             <section className="co-concept">
-              <div className="co-section-number">01</div><article><span>ENTENDER ANTES DE CONJUGAR</span><h2>¿Qué significa este mundo?</h2><PairText {...active.meaning} /></article>
+              <div className="co-section-number">01</div><article><span>INTRODUCCIÓN GRAMATICAL</span><h2>Primero entendé la idea.</h2><PairText {...active.meaning} /></article>
             </section>
 
             <section className="co-logic-strip">
               <div><small>CONDICIÓN</small><b>Si + …</b><span>abre una posibilidad</span></div><i>→</i><div><small>CONSECUENCIA</small><b>entonces…</b><span>muestra el resultado</span></div><i>↔</i><div><small>ORDEN FLEXIBLE</small><b>B si A</b><span>la lógica no cambia</span></div>
             </section>
 
-            <section className="co-uses">
-              <header><span>02 · CUÁNDO LO USAMOS</span><h2>La intención manda.</h2></header>
-              <div>{active.uses.map((use, index) => <article key={use.es}><span>{String(index + 1).padStart(2, "0")}</span><PairText {...use} /></article>)}</div>
-            </section>
-
-            <section className="co-examples">
-              <header><span>03 · VER LA LÓGICA</span><h2>Tres ejemplos, tres ventanas.</h2></header>
-              <div>{active.examples.map((example, index) => <article key={example.es}><div className="co-window"><i /><i /><i /></div><small>{example.note}</small><b>{example.es}</b><span>{example.en}</span><em>{index === 0 ? "CONDICIÓN → RESULTADO" : index === 1 ? "ORDEN FLEXIBLE" : "USO NATURAL"}</em></article>)}</div>
+            <section className="co-memory-rule">
+              <span>LA PREGUNTA CLAVE</span>
+              <h2>{active.id === "realidad" ? "¿Esto ocurre siempre o normalmente?" : active.id === "posible" ? "¿Todavía puede ocurrir de verdad?" : active.id === "hipotetico" ? "¿Lo imagino como lejano o contrario a mi realidad?" : active.id === "pasado" ? "¿Ya es imposible cambiar esta condición?" : "¿La causa y el resultado pertenecen a tiempos distintos?"}</h2>
+              <p>Si la respuesta coincide, elegiste el portal correcto. Recién ahora miramos los tiempos verbales.</p>
             </section>
 
             <section className="co-conjugations">
-              <header><span>04 · CONJUGACIONES COMPLETAS</span><h2>Las piezas de este portal.</h2><p>No memorices la frase entera: reconocé qué tiempo construye la condición y cuál construye el resultado.</p></header>
+              <header><span>02 · CONJUGACIONES NECESARIAS</span><h2>Ahora sí: construí cada bloque.</h2><p>Leé primero la columna de personas y después compará HABLAR, COMER y VIVIR. No memorices una oración completa: aprendé el patrón de cada tiempo.</p></header>
               <div className="co-tense-grid">{relevantTables.map((id) => <ConjugationTable id={id} key={id} />)}</div>
-              {(active.id === "hipotetico" || active.id === "pasado" || active.id === "mixtos") && <button className="co-more-tables" onClick={() => show("atlas")}>VER TODOS LOS IRREGULARES Y LAS SEIS TABLAS →</button>}
+              {(active.id === "hipotetico" || active.id === "pasado" || active.id === "mixtos") && <button className="co-more-tables" onClick={() => show("atlas")}>VER TODOS LOS IRREGULARES Y LAS OCHO TABLAS →</button>}
+            </section>
+
+            <section className="co-uses">
+              <header><span>03 · CUÁNDO LO USAMOS</span><h2>Después de la forma, la intención.</h2><p>Cada uso mantiene la misma lógica gramatical. Lo que cambia es el mensaje que queremos comunicar.</p></header>
+              <div>{active.uses.map((use, index) => <article key={use.es}><span>{String(index + 1).padStart(2, "0")}</span><div><PairText {...use} /></div></article>)}</div>
+            </section>
+
+            <section className="co-examples">
+              <header><span>04 · EJEMPLOS ANALIZADOS</span><h2>La regla funcionando.</h2></header>
+              <div>{active.examples.map((example, index) => <article key={example.es}><div className="co-window"><i /><i /><i /></div><small>{example.note}</small><b>{example.es}</b><span>{example.en}</span><em>{index === 0 ? "CONDICIÓN → RESULTADO" : index === 1 ? "ORDEN FLEXIBLE" : "USO NATURAL"}</em></article>)}</div>
             </section>
 
             <section className="co-traps">
               <div className="co-trap-character" aria-hidden="true">🧑‍🚀<span>¡OJO!</span></div>
-              <article><span>05 · ERRORES QUE HAY QUE BLOQUEAR</span><h2>La alarma temporal</h2>{active.traps.map((trap) => <div key={trap.es}><PairText {...trap} /></div>)}</article>
+              <article><span>05 · ERRORES QUE HAY QUE BLOQUEAR</span><h2>Antes de practicar, revisá esto.</h2>{active.traps.map((trap) => <div key={trap.es}><PairText {...trap} /></div>)}</article>
             </section>
 
             <section className="co-practice">
-              <header><span>06 · LABORATORIO</span><h2>Probalo antes de hablar.</h2><p>Tocá cada tarjeta para comprobar la respuesta y entender el porqué.</p></header>
+              <header><span>06 · PRÁCTICA GRAMATICAL</span><h2>Comprobá que entendiste.</h2><p>Completá primero sin mirar. Después tocá la tarjeta para ver la respuesta y, más importante, la explicación.</p></header>
               <div>{active.exercises.map((exercise, index) => {
                 const key = `${active.id}-${index}`;
                 const isOpen = revealed.has(key);
@@ -191,7 +218,7 @@ export default function CondicionalesPage() {
 
             <section className="co-speaking">
               <div className="co-speaking-orbit" aria-hidden="true"><i /><span>{active.icon}</span></div>
-              <header><span>07 · ACTIVACIÓN ORAL</span><h2>Ahora el alumno crea el universo.</h2><p>Responder → preguntar “¿por qué?” → cambiar una condición → comparar el nuevo resultado.</p></header>
+              <header><span>07 · PREGUNTAS AL FINAL</span><h2>Ahora sí: usalo para hablar.</h2><p>Primero responder. Después preguntar “¿por qué?”. Finalmente cambiar una condición y comparar el nuevo resultado.</p></header>
               <div>{active.speaking.map((prompt, index) => <article key={prompt.es}><span>{index + 1}</span><PairText {...prompt} /></article>)}</div>
             </section>
 
