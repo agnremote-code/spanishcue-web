@@ -8,6 +8,7 @@ import {
   finalMission,
   irregularParticiples,
   irregularStems,
+  presentSubjIrregulars,
   tenseTables,
   type ConditionalChapter,
 } from "./data";
@@ -15,11 +16,11 @@ import {
 type Screen = "cover" | "map" | "chapter" | "atlas";
 
 const tableMap: Record<string, string[]> = {
-  realidad: ["presente"],
-  posible: ["presente", "futuro"],
+  realidad: ["presente", "imperativo"],
+  posible: ["presente", "futuro", "imperativo"],
   hipotetico: ["imperfecto-subjuntivo", "condicional-simple"],
   pasado: ["pluscuamperfecto-subjuntivo", "condicional-compuesto"],
-  mixtos: ["imperfecto-subjuntivo", "condicional-simple", "pluscuamperfecto-subjuntivo", "condicional-compuesto"],
+  mixtos: ["presente-subjuntivo", "imperfecto-subjuntivo", "condicional-simple", "pluscuamperfecto-subjuntivo", "condicional-compuesto"],
 };
 
 function PairText({ es, en }: { es: string; en: string }) {
@@ -97,7 +98,7 @@ export default function CondicionalesPage() {
             <h1>EL MULTIVERSO<br /><em>DEL “SI”</em></h1>
             <p className="co-lead">Una expedición por <b>todos los condicionales del español</b>: desde “Si llueve, me quedo” hasta “De haberlo sabido, habría actuado distinto”. Cada portal suma exactamente una nueva pieza.</p>
             <div className="co-cover-actions"><button onClick={() => show("map")}>ABRIR EL PRIMER PORTAL <span>→</span></button><button className="ghost" onClick={() => show("atlas")}>VER CONJUGACIONES</button></div>
-            <div className="co-cover-stats"><article><b>5</b><span>mundos progresivos</span></article><article><b>6</b><span>tablas completas</span></article><article><b>30+</b><span>ejemplos bilingües</span></article></div>
+            <div className="co-cover-stats"><article><b>5</b><span>mundos progresivos</span></article><article><b>8</b><span>tablas completas</span></article><article><b>30+</b><span>ejemplos bilingües</span></article></div>
           </div>
           <div className="co-heroes" aria-hidden="true">
             <span className="co-hero-halo" />
@@ -135,7 +136,7 @@ export default function CondicionalesPage() {
             <div>{chapters.map((chapter) => <article key={chapter.id} style={{ "--portal": chapter.color } as CSSProperties}><b>{chapter.level}</b><span>{chapter.title}</span><p>{chapter.id === "realidad" ? "Base, hábitos y reglas" : chapter.id === "posible" ? "Planes y consecuencias reales" : chapter.id === "hipotetico" ? "Imaginación y consejos" : chapter.id === "pasado" ? "Arrepentimientos y pasado alternativo" : "Cruces temporales y conectores"}</p></article>)}</div>
           </section>
 
-          <button className="co-atlas-call" onClick={() => show("atlas")}><span>ATLAS DE CONJUGACIONES</span><b>Los seis tiempos, irregulares y conectores avanzados</b><i>ABRIR →</i></button>
+          <button className="co-atlas-call" onClick={() => show("atlas")}><span>ATLAS DE CONJUGACIONES</span><b>Los ocho tiempos, irregulares y conectores avanzados</b><i>ABRIR →</i></button>
         </section>
       )}
 
@@ -204,8 +205,14 @@ export default function CondicionalesPage() {
           <header className="co-atlas-hero"><button onClick={() => show("map")}>← VOLVER A LA RUTA</button><span>REFERENCIA COMPLETA · A1 → C1</span><h1>El Atlas de<br /><em>las conjugaciones</em></h1><p>Todo lo que necesitás para construir cualquier condicional sin mezclar tiempos.</p></header>
           <div className="co-atlas-body">
             <section className="co-atlas-rule"><b>SI + FUTURO / CONDICIONAL = ⚠️</b><span>En la condición usamos presente o subjuntivo. El futuro y el condicional aparecen normalmente en el resultado.</span></section>
-            <section><header className="co-atlas-section-head"><span>01 · LOS SEIS TIEMPOS</span><h2>Conjugación completa</h2></header><div className="co-tense-grid atlas-grid">{tenseTables.map((table) => <ConjugationTable id={table.id} key={table.id} />)}</div></section>
+            <section className="co-micro-rules">
+              <article><span>SI</span><div><b>si = if</b><p>Sin tilde: Si venís, cocino.</p></div></article>
+              <article><span>SÍ</span><div><b>sí = yes / oneself</b><p>Con tilde: Sí, voy. · Lo hizo por sí mismo.</p></div></article>
+              <article><span>,</span><div><b>La coma depende del orden</b><p>Si A, B. · B si A.</p></div></article>
+            </section>
+            <section><header className="co-atlas-section-head"><span>01 · LOS OCHO TIEMPOS</span><h2>Conjugación completa</h2></header><div className="co-tense-grid atlas-grid">{tenseTables.map((table) => <ConjugationTable id={table.id} key={table.id} />)}</div></section>
             <section className="co-irregulars"><header className="co-atlas-section-head"><span>02 · FUTURO Y CONDICIONAL</span><h2>Las doce raíces irregulares</h2><p>La raíz cambia, pero las terminaciones son exactamente las mismas.</p></header><div>{irregularStems.map(([verb, stem, forms]) => <article key={verb}><b>{verb}</b><span>{stem}</span><em>{forms}</em></article>)}</div></section>
+            <section className="co-subjunctive-lab"><header className="co-atlas-section-head"><span>02B · SUBJUNTIVO</span><h2>Dos detalles avanzados</h2></header><div><article><small>FORMA -SE · EQUIVALENTE</small><b>hablase · hablases · hablase · hablásemos · hablasen</b><p>Podés reemplazar -ra por -se sin cambiar el significado: si tuviera = si tuviese. La forma -ra es mucho más frecuente en la conversación.</p></article><article><small>PRESENTE · SEIS IRREGULARES CLAVE</small><div>{presentSubjIrregulars.map(([verb, forms]) => <p key={verb}><b>{verb}</b><span>{forms}</span></p>)}</div></article></div></section>
             <section className="co-participles"><header className="co-atlas-section-head"><span>03 · TIEMPOS COMPUESTOS</span><h2>Participios irregulares</h2></header><div>{irregularParticiples.map(([verb, participle]) => <article key={verb}><span>{verb}</span><b>{participle}</b></article>)}</div></section>
             <section className="co-connectors"><header className="co-atlas-section-head"><span>04 · MÁS ALLÁ DE “SI”</span><h2>Conectores avanzados</h2><p>Estos conectores convierten una condición en requisito, excepción, advertencia o registro formal.</p></header><div>{advancedConnectors.map(([connector, english, example]) => <article key={connector}><b>{connector}</b><span>{english}</span><p>{example}</p></article>)}</div></section>
             <section className="co-master-compare"><header className="co-atlas-section-head"><span>05 · LA FOTO COMPLETA</span><h2>Un verbo, cinco universos</h2></header><div><article><small>REAL</small><b>Si tengo tiempo, voy.</b><span>If I have time, I go.</span></article><article><small>POSIBLE</small><b>Si tengo tiempo, iré.</b><span>If I have time, I’ll go.</span></article><article><small>HIPOTÉTICO</small><b>Si tuviera tiempo, iría.</b><span>If I had time, I would go.</span></article><article><small>IMPOSIBLE</small><b>Si hubiera tenido tiempo, habría ido.</b><span>If I had had time, I would have gone.</span></article><article><small>MIXTO</small><b>Si hubiera tenido tiempo, ahora estaría allí.</b><span>If I had had time, I would be there now.</span></article></div></section>

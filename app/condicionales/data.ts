@@ -239,6 +239,30 @@ export const tenseTables: TenseTable[] = [
     ]
   },
   {
+    id: "imperativo",
+    title: "Imperativo afirmativo / negativo",
+    english: "Affirmative / negative commands",
+    cue: "Portal 01–02 · instrucciones y consecuencias",
+    rows: [
+      ["vos", "hablá / no hables", "comé / no comas", "viví / no vivas"],
+      ["tú", "habla / no hables", "come / no comas", "vive / no vivas"],
+      ["usted", "hable / no hable", "coma / no coma", "viva / no viva"],
+      ["nosotros/as", "hablemos / no hablemos", "comamos / no comamos", "vivamos / no vivamos"],
+      ["ustedes", "hablen / no hablen", "coman / no coman", "vivan / no vivan"]
+    ]
+  },
+  {
+    id: "presente-subjuntivo",
+    title: "Presente de subjuntivo",
+    english: "Present subjunctive",
+    cue: "Portal 05 · requisitos, excepciones y advertencias",
+    rows: [
+      ["yo", "hable", "coma", "viva"], ["vos / tú", "hables", "comas", "vivas"],
+      ["él / ella / usted", "hable", "coma", "viva"], ["nosotros/as", "hablemos", "comamos", "vivamos"],
+      ["ustedes / ellos/as", "hablen", "coman", "vivan"]
+    ]
+  },
+  {
     id: "imperfecto-subjuntivo",
     title: "Imperfecto de subjuntivo",
     english: "Past subjunctive · -RA form",
@@ -294,6 +318,12 @@ export const irregularStems = [
 export const irregularParticiples = [
   ["abrir", "abierto"], ["decir", "dicho"], ["escribir", "escrito"], ["hacer", "hecho"], ["morir", "muerto"],
   ["poner", "puesto"], ["resolver", "resuelto"], ["romper", "roto"], ["ver", "visto"], ["volver", "vuelto"]
+];
+
+export const presentSubjIrregulars = [
+  ["dar", "dé, des, dé, demos, den"], ["estar", "esté, estés, esté, estemos, estén"],
+  ["haber", "haya, hayas, haya, hayamos, hayan"], ["ir", "vaya, vayas, vaya, vayamos, vayan"],
+  ["saber", "sepa, sepas, sepa, sepamos, sepan"], ["ser", "sea, seas, sea, seamos, sean"]
 ];
 
 export const advancedConnectors: [string, string, string][] = [
