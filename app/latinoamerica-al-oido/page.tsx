@@ -131,11 +131,24 @@ export default function LatinoamericaAlOido() {
 
   const nextQuestion = () => {
     if (question === multipleQuestions.length - 1) setStage("open");
-    else { setQuestion(value => value + 1); setChosen(null); }
+    else {
+      const nextIndex = question + 1;
+      setQuestion(nextIndex);
+      setChosen(answers[nextIndex] ?? null);
+    }
   };
 
   const revealOpen = (index: number) => setOpenRevealed(previous => previous.includes(index) ? previous : [...previous, index]);
   const setStageSafely = (next: Stage) => { stopAudio(false); setStage(next); };
+  const previousQuestion = () => {
+    if (question === 0) {
+      setStageSafely("listen");
+      return;
+    }
+    const previousIndex = question - 1;
+    setQuestion(previousIndex);
+    setChosen(answers[previousIndex] ?? null);
+  };
 
   return <main className="la-shell" style={{ "--country": active.color } as CSSProperties}>
     <SignalBackground/>
@@ -174,7 +187,7 @@ export default function LatinoamericaAlOido() {
 
     {stage === "quiz" && <section className="la-quiz-screen">
       <aside className="la-quiz-side"><button onClick={() => setStageSafely("listen")}>← VOLVER AL AUDIO</button><span>{active.flag}</span><small>EJERCICIO 1 · {active.name}</small><h2>Elegí la respuesta correcta.</h2><div className="la-mini-wave"><i/><i/><i/><i/><i/></div><StudentGuide>Choose one answer. Try not to open the transcript yet, but your teacher can unlock it at any time.</StudentGuide><button className="la-side-transcript" onClick={() => setTranscript(value => !value)}>▣ {transcript ? "OCULTAR TEXTO" : "UNLOCK TEXT"}</button></aside>
-      <div className="la-question-card"><header><span>EJERCICIO 1 · MULTIPLE CHOICE</span><b>{question + 1} / 6</b></header><div className="la-question-meter"><i style={{ width: `${((question + 1) / 6) * 100}%` }}/></div>{transcript && <TranscriptCard active={active}/>}<h1>{current.prompt}</h1><div className="la-options">{current.options.map((option, index) => <button key={option} onClick={() => selectAnswer(index)} className={chosen === null ? "" : index === current.answer ? "correct" : chosen === index ? "wrong" : "muted"}><span>{String.fromCharCode(65 + index)}</span>{option}<i>{chosen !== null && index === current.answer ? "✓" : chosen === index ? "×" : ""}</i></button>)}</div>{chosen !== null && <div className={`la-feedback ${chosen === current.answer ? "good" : "again"}`}><b>{chosen === current.answer ? "¡Exacto!" : "Casi."}</b><p>{current.feedback}</p></div>}<button className="la-next" disabled={chosen === null} onClick={nextQuestion}>{question === 5 ? "EJERCICIO 2 · RESPONDER →" : "SIGUIENTE PREGUNTA →"}</button></div>
+      <div className="la-question-card"><header><span>EJERCICIO 1 · MULTIPLE CHOICE</span><b>{question + 1} / 6</b></header><div className="la-question-meter"><i style={{ width: `${((question + 1) / 6) * 100}%` }}/></div>{transcript && <TranscriptCard active={active}/>}<h1>{current.prompt}</h1><div className="la-options">{current.options.map((option, index) => <button key={option} onClick={() => selectAnswer(index)} className={chosen === null ? "" : index === current.answer ? "correct" : chosen === index ? "wrong" : "muted"}><span>{String.fromCharCode(65 + index)}</span>{option}<i>{chosen !== null && index === current.answer ? "✓" : chosen === index ? "×" : ""}</i></button>)}</div>{chosen !== null && <div className={`la-feedback ${chosen === current.answer ? "good" : "again"}`}><b>{chosen === current.answer ? "¡Exacto!" : "Casi."}</b><p>{current.feedback}</p></div>}<div className="la-question-nav"><button className="la-previous" onClick={previousQuestion}>{question === 0 ? "← VOLVER AL AUDIO" : "← PREGUNTA ANTERIOR"}</button><button className="la-next" disabled={chosen === null} onClick={nextQuestion}>{question === 5 ? "EJERCICIO 2 · RESPONDER →" : "SIGUIENTE PREGUNTA →"}</button></div></div>
     </section>}
 
     {stage === "open" && <section className="la-open-screen">
