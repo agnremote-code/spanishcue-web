@@ -5,6 +5,7 @@ import {useMemo,useState,type CSSProperties,type KeyboardEvent} from "react";
 import "./style.css";
 import {cantons,connectors,depthMoves,regionNames,starters,type Pair,type SwissCanton} from "./data";
 import {cantonShapes} from "./map-data";
+import {placesByCode} from "./places";
 
 type Screen="cover"|"map"|"canton";
 type Region="todo"|SwissCanton["region"];
@@ -61,17 +62,20 @@ export default function SuizaEnRelieve(){
   const [englishVisible,setEnglishVisible]=useState(true);
   const [stance,setStance]=useState<Stance>(null);
   const [answerParts,setAnswerParts]=useState<Pair[]>([]);
+  const [placeFocus,setPlaceFocus]=useState(0);
 
-  const visible=useMemo(()=>cantons.filter(canton=>(region==="todo"||canton.region===region)&&`${canton.name} ${canton.localName} ${canton.capital} ${canton.languages} ${canton.hook.es}`.toLowerCase().includes(query.toLowerCase())),[region,query]);
+  const visible=useMemo(()=>cantons.filter(canton=>(region==="todo"||canton.region===region)&&`${canton.name} ${canton.localName} ${canton.capital} ${canton.languages} ${canton.hook.es} ${placesByCode[canton.code].map(place=>place.name).join(" ")}`.toLowerCase().includes(query.toLowerCase())),[region,query]);
   const visibleCodes=useMemo(()=>new Set(visible.map(canton=>canton.code)),[visible]);
   const current=active.questions[question];
+  const activePlaces=placesByCode[active.code];
+  const focusedPlace=activePlaces[placeFocus];
   const progress=Math.round(visited.size/cantons.length*100);
   const answerPairs=[...(stance?[stancePairs[stance]]:[]),...answerParts];
   const answerEs=answerPairs.map(part=>part.es.replace(/[…]+/g,"")).join(" ");
   const answerEn=answerPairs.map(part=>part.en.replace(/[…]+/g,"")).join(" ");
 
   const show=(next:Screen)=>{setScreen(next);window.scrollTo({top:0,behavior:"smooth"})};
-  const enter=(canton:SwissCanton,start=0)=>{setActive(canton);setMapPick(canton);setQuestion(start);setStance(null);setAnswerParts([]);setVisited(old=>new Set([...old,canton.code]));show("canton")};
+  const enter=(canton:SwissCanton,start=0)=>{setActive(canton);setMapPick(canton);setQuestion(start);setPlaceFocus(0);setStance(null);setAnswerParts([]);setVisited(old=>new Set([...old,canton.code]));show("canton")};
   const surprise=()=>{const pool=cantons.filter(canton=>canton.code!==active.code);const next=pool[Math.floor(Math.random()*pool.length)]||cantons[0];enter(next,Math.floor(Math.random()*6))};
   const changeQuestion=(next:number)=>{setQuestion(Math.max(0,Math.min(5,next)));setStance(null);setAnswerParts([]);document.querySelector(".ch-question-card")?.scrollIntoView({behavior:"smooth",block:"center"})};
   const addPart=(part:Pair)=>setAnswerParts(parts=>[...parts,part]);
@@ -90,11 +94,11 @@ export default function SuizaEnRelieve(){
       <div className="ch-cover-shade"/>
       <div className="ch-cover-copy">
         <div className="ch-level"><span>B1</span> 100% CONVERSACIÓN · 100% CONVERSATION</div>
-        <p className="ch-eyebrow">26 CANTONES REALES · 156 PREGUNTAS · UN PAÍS EN RELIEVE</p>
+        <p className="ch-eyebrow">26 CANTONES · 104 LUGARES REALES · 260 DETONADORES PARA HABLAR</p>
         <h1>SUIZA<br/><em>EN RELIEVE</em></h1>
         <p className="ch-cover-lead">No venimos a repetir “chocolate, relojes y montañas”. <b>Vamos a entrar en decisiones reales:</b> idiomas, vivienda, energía, turismo, trabajo, clima y formas de vivir juntos.<span className="ch-en">We are not here to repeat “chocolate, watches and mountains”. We will explore real decisions about language, housing, energy, tourism, work, climate and living together.</span></p>
         <div className="ch-cover-actions"><button onClick={()=>show("map")}>ABRIR EL MAPA 3D <span>→</span><small className="ch-en">OPEN THE 3D MAP</small></button><button className="ghost" onClick={surprise}>✦ SORPRENDEME<small className="ch-en">SURPRISE ME</small></button></div>
-        <div className="ch-cover-stats"><article><b>26</b><span>cantones reales<small className="ch-en">real cantons</small></span></article><article><b>156</b><span>preguntas B1<small className="ch-en">B1 questions</small></span></article><article><b>6</b><span>movimientos por lugar<small className="ch-en">moves per place</small></span></article></div>
+        <div className="ch-cover-stats"><article><b>26</b><span>cantones reales<small className="ch-en">real cantons</small></span></article><article><b>104</b><span>lugares concretos<small className="ch-en">specific places</small></span></article><article><b>260</b><span>detonadores B1<small className="ch-en">B1 speaking prompts</small></span></article></div>
       </div>
       <div className="ch-hero-map"><div className="ch-map-tag"><span>MAPA REAL</span><b>26 CANTONES</b></div><SwissMap selected={mapPick} onSelect={setMapPick} visibleCodes={new Set(cantons.map(canton=>canton.code))} compact/><div className="ch-floating-card"><small>{mapPick.code} · {mapPick.languages.toUpperCase()}</small><b>{mapPick.name}</b><span>{mapPick.hook.es}</span></div></div>
       <div className="ch-train-line" aria-hidden="true"><i/><b>◆</b></div>
@@ -102,7 +106,7 @@ export default function SuizaEnRelieve(){
 
     {screen==="map"&&<section className="ch-map-page">
       <Atmosphere/>
-      <header className="ch-map-head"><div><span>ATLAS DE CONVERSACIÓN · CONVERSATION ATLAS</span><h1>Elegí un cantón.<br/><em>Descubrí una pregunta.</em></h1></div><div><p>El mapa usa las fronteras reales de los 26 cantones. Cada territorio abre seis preguntas B1 creadas a partir de algo propio de ese lugar.</p><p className="ch-en">The map uses the real boundaries of all 26 cantons. Each territory opens six B1 questions inspired by something specific to that place.</p><button onClick={surprise}>✦ QUE EL MAPA DECIDA</button></div></header>
+      <header className="ch-map-head"><div><span>ATLAS DE CONVERSACIÓN · CONVERSATION ATLAS</span><h1>Elegí un cantón.<br/><em>Entrá en sus lugares.</em></h1></div><div><p>El mapa usa las fronteras reales de los 26 cantones. Dentro de cada uno aparecen cuatro lugares concretos, su relación con el cantón y preguntas B1 nacidas de esa realidad local.</p><p className="ch-en">The map uses the real boundaries of all 26 cantons. Each one contains four specific places, their connection to the canton and B1 questions built from that local reality.</p><button onClick={surprise}>✦ QUE EL MAPA DECIDA</button></div></header>
 
       <div className="ch-map-tools"><div><button className={region==="todo"?"active":""} onClick={()=>chooseRegion("todo")}>TODO · ALL</button>{(["norte","centro","oeste","sur","este"] as const).map(key=><button key={key} className={region===key?"active":""} onClick={()=>chooseRegion(key)}>{regionNames[key].es}</button>)}</div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar cantón, idioma o capital…"/></label></div>
 
@@ -110,23 +114,29 @@ export default function SuizaEnRelieve(){
         <div className="ch-map-panel"><header><span>ARRASTRÁ LA MIRADA · ELEGÍ EL TERRITORIO</span><b>RELIEVE INTERACTIVO</b></header><SwissMap selected={mapPick} onSelect={setMapPick} visibleCodes={visibleCodes}/><footer><span><i/> SELECCIONADO</span><span><i/> VISITADO</span><a href="https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d" target="_blank" rel="noreferrer">Límites: swisstopo ↗</a></footer></div>
         <aside className="ch-preview" style={{"--canton":mapPick.color} as CSSProperties}>
           <div className="ch-preview-top"><span>{mapPick.number}</span><SwissCross/><small>{mapPick.code}</small></div>
-          <p>{regionNames[mapPick.region].es} · {mapPick.languages}</p><h2>{mapPick.name}</h2><em>{mapPick.localName}</em><h3>{mapPick.hook.es}</h3><p className="ch-en">{mapPick.hook.en}</p><div className="ch-fact"><span>ALGO REAL · A REAL DETAIL</span><b>{mapPick.fact.es}</b><small className="ch-en">{mapPick.fact.en}</small></div><div className="ch-preview-chips"><span>Capital: {mapPick.capital}</span><span>6 preguntas</span><span>Wordbank</span></div><button onClick={()=>enter(mapPick)}>ENTRAR EN {mapPick.name.toUpperCase()} <span>→</span><small className="ch-en">OPEN THIS CANTON</small></button>
+          <p>{regionNames[mapPick.region].es} · {mapPick.languages}</p><h2>{mapPick.name}</h2><em>{mapPick.localName}</em><h3>{mapPick.hook.es}</h3><p className="ch-en">{mapPick.hook.en}</p><div className="ch-fact"><span>ALGO REAL · A REAL DETAIL</span><b>{mapPick.fact.es}</b><small className="ch-en">{mapPick.fact.en}</small></div><div className="ch-preview-places"><span>ADENTRO DEL CANTÓN</span>{placesByCode[mapPick.code].map(place=><b key={place.name}>{place.name}</b>)}</div><div className="ch-preview-chips"><span>Capital: {mapPick.capital}</span><span>4 lugares</span><span>10 preguntas</span></div><button onClick={()=>enter(mapPick)}>ENTRAR EN {mapPick.name.toUpperCase()} <span>→</span><small className="ch-en">OPEN THIS CANTON</small></button>
         </aside>
       </section>
 
-      <section className="ch-canton-index"><header><div><span>LOS 26 CANTONES · ALL 26 CANTONS</span><h2>Cada lugar cambia la conversación.</h2></div><p>{visible.length} visibles · {visited.size} explorados</p></header><div>{visible.map(canton=><button key={canton.code} onClick={()=>setMapPick(canton)} className={`${mapPick.code===canton.code?"active":""} ${visited.has(canton.code)?"visited":""}`} style={{"--canton":canton.color} as CSSProperties}><span>{canton.number}</span><i>{canton.code}</i><b>{canton.name}</b><small>{canton.hook.es}</small><em>VER · VIEW →</em></button>)}</div></section>
+      <section className="ch-canton-index"><header><div><span>LOS 26 CANTONES · ALL 26 CANTONS</span><h2>Cada cantón abre cuatro lugares propios.</h2></div><p>{visible.length} visibles · {visited.size} explorados</p></header><div>{visible.map(canton=><button key={canton.code} onClick={()=>setMapPick(canton)} className={`${mapPick.code===canton.code?"active":""} ${visited.has(canton.code)?"visited":""}`} style={{"--canton":canton.color} as CSSProperties}><span>{canton.number}</span><i>{canton.code}</i><b>{canton.name}</b><small>{placesByCode[canton.code].map(place=>place.name).join(" · ")}</small><em>VER · VIEW →</em></button>)}</div></section>
     </section>}
 
     {screen==="canton"&&<section className="ch-canton-page" style={{"--canton":active.color} as CSSProperties}>
       <header className="ch-canton-hero">
         <Atmosphere/>
         <div className="ch-canton-topbar"><button onClick={()=>show("map")}>← MAPA · MAP</button><span>CANTÓN {active.number} · {regionNames[active.region].es}</span><button onClick={surprise}>✦ OTRO CANTÓN</button></div>
-        <div className="ch-canton-title"><small>{active.code} · {active.localName} · {active.languages}</small><h1>{active.name}</h1><h2>{active.hook.es}</h2><p className="ch-en">{active.hook.en}</p><div><span>6 preguntas B1</span><span>Contenido real</span><span>Recursos bilingües</span></div></div>
+        <div className="ch-canton-title"><small>{active.code} · {active.localName} · {active.languages}</small><h1>{active.name}</h1><h2>{active.hook.es}</h2><p className="ch-en">{active.hook.en}</p><div><span>4 lugares reales</span><span>10 preguntas B1</span><span>Recursos bilingües</span></div></div>
         <div className="ch-canton-map"><SwissMap selected={active} onSelect={canton=>enter(canton)} visibleCodes={new Set(cantons.map(canton=>canton.code))} compact/><b>{active.code}</b></div>
       </header>
 
       <div className="ch-classroom">
         <section className="ch-canton-fact"><span>ANTES DE HABLAR · BEFORE YOU SPEAK</span><div><b>{active.fact.es}</b><small className="ch-en">{active.fact.en}</small></div><strong>{active.mission.es}<small className="ch-en">{active.mission.en}</small></strong></section>
+
+        <section className="ch-place-deck">
+          <header><div><span>DENTRO DE {active.name.toUpperCase()} · INSIDE THE CANTON</span><h2>Cuatro lugares que explican este territorio.</h2><p className="ch-en">Four places that explain this canton.</p></div><p>No son nombres decorativos: tocá cada parada, entendé por qué pertenece a este cantón y usá la pregunta para hablar.<small className="ch-en">These are not decorative names: open each stop, understand why it belongs to this canton and use its question to speak.</small></p></header>
+          <div className="ch-place-tabs">{activePlaces.map((place,index)=><button key={place.name} className={placeFocus===index?"active":""} onClick={()=>setPlaceFocus(index)}><span>{String(index+1).padStart(2,"0")}</span><b>{place.name}</b><i>→</i></button>)}</div>
+          <article className="ch-place-focus" key={`${active.code}-${placeFocus}`}><div><span>PARADA {String(placeFocus+1).padStart(2,"0")} · {active.name.toUpperCase()}</span><h3>{focusedPlace.name}</h3><p>{focusedPlace.context.es}</p><small className="ch-en">{focusedPlace.context.en}</small></div><div><span>PREGUNTA DEL LUGAR · PLACE PROMPT</span><b>{focusedPlace.prompt.es}</b><small className="ch-en">{focusedPlace.prompt.en}</small><button onClick={()=>addPart(starters[placeFocus])}>+ USAR UN COMIENZO · ADD A STARTER</button></div></article>
+        </section>
 
         <section className="ch-question-card">
           <div className="ch-question-number"><span>PREGUNTA · QUESTION</span><b>{String(question+1).padStart(2,"0")} <i>/ 06</i></b></div>
