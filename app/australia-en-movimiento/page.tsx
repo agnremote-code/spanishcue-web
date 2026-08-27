@@ -102,11 +102,11 @@ export default function AustraliaEnMovimiento(){
 
         <aside className="au-region-preview" style={{"--region":active.color} as CSSProperties}>
           <div className="au-preview-top"><span>{active.number}</span><b>{active.code}</b><Character region={active}/></div>
-          <small>{active.capital} · A1→A2</small><h2>{active.name}</h2><h3>{active.topic.es}</h3><p>{active.fact.es}</p><p className="au-en">{active.fact.en}</p><div className="au-preview-tags"><span>6 PREGUNTAS</span><span>WORDBANK</span><span>AUDIO</span></div><button onClick={()=>enter(active)}>ABRIR TERRITORIO <b>→</b><small className="au-en">OPEN TERRITORY</small></button>
+          <small>{active.capital} · A1→A2</small><h2>{active.name}</h2><h3>{active.topic.es}</h3><p>{active.fact.es}</p><p className="au-en">{active.fact.en}</p><div className="au-preview-places"><b>LUGARES DE ESTA RUTA</b><span>{active.places.map(place=><i key={place.es}>{place.es}</i>)}</span></div><div className="au-preview-tags"><span>6 PREGUNTAS</span><span>WORDBANK</span><span>AUDIO</span></div><button onClick={()=>enter(active)}>ABRIR TERRITORIO <b>→</b><small className="au-en">OPEN TERRITORY</small></button>
         </aside>
       </div>
 
-      <section className="au-route-grid"><header><span>TODA LA RUTA · THE FULL ROUTE</span><h2>No se repite ningún tema.</h2><p>Cada tarjeta cambia la pregunta central, la energía visual y el tipo de conversación.</p></header><div>{regions.map(region=><button key={region.id} className={`${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)}><span>{region.number}</span><Character region={region}/><small>{region.code} · {region.capital}</small><b>{region.topic.es}</b><em className="au-en">{region.topic.en}</em><i>EXPLORAR →</i></button>)}</div></section>
+      <section className="au-route-grid"><header><span>TODA LA RUTA · THE FULL ROUTE</span><h2>No se repite ningún tema.</h2><p>Cada tarjeta cambia la pregunta central, la energía visual y el tipo de conversación.</p></header><div>{regions.map(region=><button key={region.id} className={`${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)}><span>{region.number}</span><Character region={region}/><small>{region.code} · {region.capital}</small><b>{region.topic.es}</b><em className="au-en">{region.topic.en}</em><p>{region.places.slice(0,3).map(place=>place.es).join(" · ")}</p><i>EXPLORAR →</i></button>)}</div></section>
     </section>}
 
     {screen==="lesson"&&<section className="au-lesson" style={{"--region":active.color} as CSSProperties}>
@@ -118,6 +118,8 @@ export default function AustraliaEnMovimiento(){
 
       <div className="au-classroom">
         <section className="au-mission"><span>TU MISIÓN · YOUR MISSION</span><div><b>{active.mission.es}</b><em className="au-en">{active.mission.en}</em></div><strong>{active.id==="sydney"?"REAL + REAL":"UNA IDEA + UNA RAZÓN"}<small className="au-en">{active.id==="sydney"?"REAL + REAL":"ONE IDEA + ONE REASON"}</small></strong></section>
+
+        <section className="au-place-route"><header><span>RUTA REAL · REAL ROUTE</span><h2>Estos lugares aparecen en las preguntas.</h2><p className="au-en">These places appear in the questions.</p></header><div>{active.places.map((place,index)=><article key={place.es}><span>{String(index+1).padStart(2,"0")}</span><b>{place.es}</b><small className="au-en">{place.en}</small></article>)}</div></section>
 
         {active.id==="sydney"&&<SydneyGrammar showEnglish={showEnglish} revealed={revealed} setRevealed={setRevealed}/>} 
 
