@@ -1,7 +1,6 @@
 "use client";
 
 import {CSSProperties,MouseEvent,useMemo,useRef,useState} from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {slangCards,topics,Topic} from "./data";
 import "./style.css";
@@ -91,7 +90,7 @@ export default function LifeRoulette(){
 
   if(active)return <main className="roulette-shell topic-mode" style={{"--topic":active.color} as RouletteStyle}>
     <div className="roulette-atmosphere" aria-hidden="true"><i/><i/><i/></div>
-    <nav className="roulette-nav"><Link href="/" className="roulette-brand"><Image src="/chespanish-guide-avatar.png" alt="" width={56} height={56}/><span><b>CHESPANISH</b><small>A1–A2 · CONVERSACIÓN</small></span></Link><button onClick={back}>← VOLVER A LA RULETA</button></nav>
+    <nav className="roulette-nav"><Link href="/" className="roulette-brand"><span className="roulette-brand-mark" aria-hidden="true"><img src="/mascots/conversation.png" alt="" /></span><span><b>CHESPANISH</b><small>A1–A2 · CONVERSACIÓN</small></span></Link><button onClick={back}>← VOLVER A LA RULETA</button></nav>
     <section className="topic-page">
       <header className="topic-banner">
         <div className="topic-banner-copy"><span>TEMA {String(topics.findIndex(item=>item.id===active.id)+1).padStart(2,"0")} · {active.en}</span><h1>{active.es}</h1><p>{active.id==="argento"?"Activá el español argentino: simple, natural y copado.":"Tres preguntas. Una conversación real. Cero presión."}</p><small>{active.id==="argento"?"Switch on Argentine Spanish: simple, natural and cool.":"Three questions. One real conversation. Zero pressure."}</small></div>
@@ -114,7 +113,7 @@ export default function LifeRoulette(){
 
   return <main className="roulette-shell">
     <div className="roulette-atmosphere" aria-hidden="true"><i/><i/><i/></div>
-    <nav className="roulette-nav"><Link href="/" className="roulette-brand"><Image src="/chespanish-guide-avatar.png" alt="" width={56} height={56}/><span><b>CHESPANISH</b><small>A1–A2 · CONVERSACIÓN</small></span></Link><div className="roulette-nav-actions"><button className={sound?"sound-on":""} onClick={()=>setSound(value=>!value)} aria-pressed={sound}>{sound?"◉ SONIDO ON":"○ SONIDO OFF"}</button><Link href="/">← BIBLIOTECA</Link></div></nav>
+    <nav className="roulette-nav"><Link href="/" className="roulette-brand"><span className="roulette-brand-mark" aria-hidden="true"><img src="/mascots/conversation.png" alt="" /></span><span><b>CHESPANISH</b><small>A1–A2 · CONVERSACIÓN</small></span></Link><div className="roulette-nav-actions"><button className={sound?"sound-on":""} onClick={()=>setSound(value=>!value)} aria-pressed={sound}>{sound?"◉ SONIDO ON":"○ SONIDO OFF"}</button><Link href="/">← BIBLIOTECA</Link></div></nav>
     <section className="roulette-home">
       <header className="roulette-copy"><span className="roulette-kicker">🇦🇷 CONVERSACIÓN A1–A2 · ARGENTINA</span><h1>LA RULETA<br/><em>DE TU VIDA</em></h1><b>HABLÁ · GIRÁ · CONECTÁ</b><p>18 temas. Solo 3 preguntas.<br/>Una charla que nunca se repite.<small>18 topics. Only 3 questions. A conversation that never repeats.</small></p><div className="roulette-steps"><span><i>1</i>GIRÁ</span><b>→</b><span><i>2</i>DESCUBRÍ</span><b>→</b><span><i>3</i>HABLÁ</span></div><div className="roulette-actions"><button className="spin-main" onClick={random} disabled={spinning||!available.length}>{spinning?<><i className="button-spinner"/> GIRANDO…</>:<>🎡 GIRAR · SPIN</>}</button><button onClick={random} disabled={spinning||!available.length}>✦ SORPRENDEME</button><button onClick={()=>setLegend(true)}>18 TEMAS ↗</button></div></header>
       <section className="wheel-zone" aria-label="Ruleta 3D interactiva de 18 temas">
