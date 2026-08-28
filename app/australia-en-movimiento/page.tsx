@@ -3,7 +3,7 @@
 import {useMemo,useState,type CSSProperties,type ReactNode} from "react";
 import Link from "next/link";
 import "./style.css";
-import {conditionalPractice,connectors,regions,speakingMoves,type AustraliaRegion,type Pair} from "./data";
+import {connectors,regions,speakingMoves,type AustraliaRegion,type Pair} from "./data";
 
 type Screen="cover"|"atlas"|"lesson";
 type GlyphName="map"|"shuffle"|"sound"|"trash"|"plus"|"home"|"wave"|"compass";
@@ -33,9 +33,9 @@ function Glyph({name}:{name:GlyphName}){
   return <svg className="au-glyph" viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>;
 }
 
-function Character({region,large=false}:{region:AustraliaRegion;large?:boolean}){
+function Character({region,large=false,motion}:{region:AustraliaRegion;large?:boolean;motion?:string}){
   const positions=["0% 0%","33.333% 0%","66.666% 0%","100% 0%","0% 100%","33.333% 100%","66.666% 100%","100% 100%"];
-  return <div className={`au-character char-${region.character} ${large?"large":""}`} style={{"--char-pos":positions[region.character],"--delay":`${region.character*-.37}s`} as CSSProperties} role="img" aria-label={`Personaje 3D de ${region.name}`}/>;
+  return <div className={`au-character char-${region.character} ${large?"large":""} ${motion?`motion-${motion}`:""}`} style={{"--char-pos":positions[region.character],"--delay":`${region.character*-.37}s`} as CSSProperties} role="img" aria-label={`Personaje 3D de ${region.name}`}/>;
 }
 
 export default function AustraliaEnMovimiento(){
@@ -45,7 +45,6 @@ export default function AustraliaEnMovimiento(){
   const [visited,setVisited]=useState<Set<string>>(new Set());
   const [showEnglish,setShowEnglish]=useState(true);
   const [answerParts,setAnswerParts]=useState<Pair[]>([]);
-  const [revealed,setRevealed]=useState<Set<number>>(new Set());
   const current=active.questions[question];
   const answerEs=answerParts.map(part=>part.es.replace(/[.…]+$/g,"")).join(" ");
   const answerEn=answerParts.map(part=>part.en.replace(/[.…]+$/g,"")).join(" ");
@@ -71,38 +70,41 @@ export default function AustraliaEnMovimiento(){
     {screen==="cover"&&<section className="au-cover">
       <div className="au-sun sun-one"/><div className="au-sun sun-two"/>
       <div className="au-cover-copy">
-        <div className="au-eyebrow"><span>A1→A2</span><i/>8 TERRITORIOS · 1 AVENTURA</div>
-        <p className="au-kicker">MAR · CIUDADES · ANIMALES · GENTE · IDEAS</p>
+        <div className="au-eyebrow"><span>A2→B1</span><i/>8 TERRITORIOS · 48 PREGUNTAS NUEVAS</div>
+        <p className="au-kicker">LUGARES REALES · DECISIONES · CULTURA · NATURALEZA</p>
         <h1>AUSTRALIA<br/><em>EN MOVIMIENTO</em></h1>
-        <p className="au-lead">Una clase para empezar a hablar y no quedarse en respuestas obvias. <b>Sídney enseña el condicional cero.</b> El resto del país abre siete temas completamente diferentes.<span className="au-en">A class designed to start speaking and move beyond obvious answers. Sydney teaches the zero conditional. The rest of the country opens seven completely different topics.</span></p>
+        <p className="au-lead">Una expedición conversacional investigada con fuentes australianas. <b>Cada pregunta nace de un lugar concreto</b> y avanza de A2 a un B1 simple, sin saltos imposibles.<span className="au-en">A speaking expedition researched with Australian sources. Every question grows from a specific place and moves from A2 to accessible B1.</span></p>
         <div className="au-cover-actions"><button onClick={()=>show("atlas")}>ENTRAR AL MAPA <Glyph name="map"/><small className="au-en">ENTER THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> ELEGÍ POR MÍ<small className="au-en">PICK FOR ME</small></button></div>
-        <div className="au-stats"><article><b>08</b><span>estados y territorios<small>states & territories</small></span></article><article><b>48</b><span>preguntas para hablar<small>speaking questions</small></span></article><article><b>01</b><span>laboratorio gramatical<small>grammar lab</small></span></article></div>
+        <div className="au-stats"><article><b>08</b><span>estados y territorios<small>states & territories</small></span></article><article><b>48</b><span>preguntas inéditas<small>brand-new prompts</small></span></article><article><b>48</b><span>movimientos únicos<small>unique motions</small></span></article></div>
       </div>
-      <div className="au-cover-art"><img src="/australia-3d-hero.png" alt="Mapa 3D de Australia con mar, ciudades, desierto y animales"/><div className="au-orbit orbit-one"><span>SYDNEY</span><b>ZERO</b></div><div className="au-orbit orbit-two"><span>REEF</span><b>03</b></div><div className="au-orbit orbit-three"><span>TASMANIA</span><b>07</b></div></div>
+      <div className="au-cover-art"><img src="/australia-3d-hero.png" alt="Mapa 3D de Australia con mar, ciudades, desierto y animales"/><div className="au-orbit orbit-one"><span>A2 + B1</span><b>48</b></div><div className="au-orbit orbit-two"><span>REEF</span><b>QLD</b></div><div className="au-orbit orbit-three"><span>TASMANIA</span><b>TAS</b></div></div>
       <div className="au-wave-edge" aria-hidden="true"/>
     </section>}
 
     {screen==="atlas"&&<section className="au-atlas">
-      <header className="au-atlas-head"><div><span>EL MAPA REAL · THE REAL MAP</span><h1>Ocho territorios.<br/><em>Ocho conversaciones distintas.</em></h1></div><div><p>Elegí directamente en el mapa. Cada territorio tiene su propio personaje 3D, tema, vocabulario y seis preguntas A1/A2.</p><span className="au-en">Choose directly on the map. Every territory has its own 3D character, topic, vocabulary and six A1/A2 questions.</span><button onClick={surprise}><Glyph name="shuffle"/> SORPRENDEME · SURPRISE ME</button></div></header>
+      <header className="au-atlas-head"><div><span>ATLAS 3D · 3D SPEAKING ATLAS</span><h1>Australia sale del plano.<br/><em>Vos entrás en el territorio.</em></h1></div><div><p>Elegí directamente sobre el relieve. Cada territorio tiene una ruta real, seis preguntas A2/B1 y una identidad visual propia.</p><span className="au-en">Choose directly on the relief map. Every territory has a real route, six A2/B1 prompts and its own visual identity.</span><button onClick={surprise}><Glyph name="shuffle"/> SORPRENDEME · SURPRISE ME</button></div></header>
       <div className="au-map-layout">
         <section className="au-map-card">
           <header><span><Glyph name="compass"/> AUSTRALIA · {atlasFact}</span><b>ÍNDICO ↔ PACÍFICO</b></header>
           <div className="au-map-stage">
             <div className="au-ocean-label indian">OCÉANO ÍNDICO</div><div className="au-ocean-label pacific">OCÉANO PACÍFICO</div>
-            <svg viewBox="55 25 625 535" role="img" aria-labelledby="map-title map-description">
+            <div className="au-map-shadow"/>
+            <svg className="au-relief-map" viewBox="55 25 625 535" role="img" aria-labelledby="map-title map-description">
               <title id="map-title">Mapa interactivo de los estados y territorios de Australia</title><desc id="map-description">Seleccioná Nueva Gales del Sur, Victoria, Queensland, Territorio del Norte, Australia Meridional, Australia Occidental, Tasmania o el Territorio de la Capital Australiana.</desc>
-              <defs><filter id="land-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="10" floodColor="#063452" floodOpacity=".35"/></filter></defs>
-              <g className="au-map-depth" transform="translate(0 11)">{regions.filter(region=>region.id!=="canberra").map(region=><path key={region.id} d={mapShapes[region.id]} fill="#0a4e64"/>)}</g>
-              <g filter="url(#land-shadow)">{regions.map(region=><path key={region.id} d={mapShapes[region.id]} className={`au-state ${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)} tabIndex={0} role="button" aria-label={`${region.name}. ${region.topic.es}`} onKeyDown={event=>{if(event.key==="Enter"||event.key===" ")setActive(region)}}/>)}</g>
+              <defs><filter id="au-land-glow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+              <g>{regions.map(region=><g key={region.id} className={`au-state-group ${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)} tabIndex={0} role="button" aria-label={`${region.name}. ${region.topic.es}`} onKeyDown={event=>{if(event.key==="Enter"||event.key===" ")setActive(region)}}>
+                {[18,14,10,6].map(offset=><path key={offset} d={mapShapes[region.id]} transform={`translate(0 ${offset})`} className="au-state-side"/>)}
+                <path d={mapShapes[region.id]} className="au-state"/>
+              </g>)}</g>
               {regions.map(region=>{const labels:Record<string,[number,number]>={western:[220,250],northern:[385,170],queensland:[535,225],south:[385,345],sydney:[565,360],melbourne:[510,428],canberra:[559,363],tasmania:[540,512]};const [x,y]=labels[region.id];return <g key={region.id} className={`au-map-label label-${region.id}`} transform={`translate(${x} ${y})`} onClick={()=>setActive(region)}><circle r={region.id==="canberra"?16:22}/><text textAnchor="middle" dominantBaseline="central">{region.code}</text></g>})}
-            </svg>
+            </svg><span className="au-map-axis axis-a"/><span className="au-map-axis axis-b"/><span className="au-map-axis axis-c"/>
             <div className="au-map-tip"><b>1 CLIC</b> para mirar · <b>2 CLICS</b> para entrar<span className="au-en">1 click to preview · 2 clicks to enter</span></div>
           </div>
         </section>
 
         <aside className="au-region-preview" style={{"--region":active.color} as CSSProperties}>
           <div className="au-preview-top"><span>{active.number}</span><b>{active.code}</b><Character region={active}/></div>
-          <small>{active.capital} · A1→A2</small><h2>{active.name}</h2><h3>{active.topic.es}</h3><p>{active.fact.es}</p><p className="au-en">{active.fact.en}</p><div className="au-preview-places"><b>LUGARES DE ESTA RUTA</b><span>{active.places.map(place=><i key={place.es}>{place.es}</i>)}</span></div><div className="au-preview-tags"><span>6 PREGUNTAS</span><span>WORDBANK</span><span>AUDIO</span></div><button onClick={()=>enter(active)}>ABRIR TERRITORIO <b>→</b><small className="au-en">OPEN TERRITORY</small></button>
+          <small>{active.capital} · A2→B1</small><h2>{active.name}</h2><h3>{active.topic.es}</h3><p>{active.fact.es}</p><p className="au-en">{active.fact.en}</p><div className="au-preview-places"><b>LUGARES DE ESTA RUTA</b><span>{active.places.map(place=><i key={place.es}>{place.es}</i>)}</span></div><div className="au-preview-tags"><span>4 A2 + 2 B1</span><span>WORDBANK</span><span>AUDIO</span></div><button onClick={()=>enter(active)}>ABRIR TERRITORIO <b>→</b><small className="au-en">OPEN TERRITORY</small></button>
         </aside>
       </div>
 
@@ -112,21 +114,19 @@ export default function AustraliaEnMovimiento(){
     {screen==="lesson"&&<section className="au-lesson" style={{"--region":active.color} as CSSProperties}>
       <header className="au-lesson-hero">
         <div className="au-lesson-top"><button onClick={()=>show("atlas")}>← MAPA · MAP</button><span>TERRITORIO {active.number} · {active.code}</span><div><button className={showEnglish?"active":""} onClick={()=>setShowEnglish(value=>!value)}>EN {showEnglish?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA</button></div></div>
-        <div className="au-lesson-copy"><small>{active.topic.es}</small><h1>{active.name}</h1><h2 className="au-en">{active.nameEn} · {active.topic.en}</h2><p><b>{active.hook.es}</b><span className="au-en">{active.hook.en}</span></p><div><span>A1→A2</span><span>6 preguntas</span><span>{active.id==="sydney"?"Condicional cero":"Conversación"}</span></div></div>
-        <div className="au-lesson-art">{active.id==="sydney"?<img src="/australia-sydney-lab.png" alt="Escena 3D de Sídney con sol, lluvia, ferry y hábitos cotidianos"/>:<Character region={active} large/>}<i/><i/></div>
+        <div className="au-lesson-copy"><small>{active.topic.es}</small><h1>{active.name}</h1><h2 className="au-en">{active.nameEn} · {active.topic.en}</h2><p><b>{active.hook.es}</b><span className="au-en">{active.hook.en}</span></p><div><span>A2→B1</span><span>6 preguntas</span><span>Conversación real</span></div></div>
+        <div className="au-lesson-art"><div className="au-motion-label"><span>{current.level}</span><b>{current.place}</b><small>MOVIMIENTO {String(question+1).padStart(2,"0")}</small></div><Character region={active} large motion={current.motion}/><i/><i/></div>
       </header>
 
       <div className="au-classroom">
-        <section className="au-mission"><span>TU MISIÓN · YOUR MISSION</span><div><b>{active.mission.es}</b><em className="au-en">{active.mission.en}</em></div><strong>{active.id==="sydney"?"REAL + REAL":"UNA IDEA + UNA RAZÓN"}<small className="au-en">{active.id==="sydney"?"REAL + REAL":"ONE IDEA + ONE REASON"}</small></strong></section>
+        <section className="au-mission"><span>TU MISIÓN · YOUR MISSION</span><div><b>{active.mission.es}</b><em className="au-en">{active.mission.en}</em></div><strong>IDEA + RAZÓN + DETALLE<small className="au-en">IDEA + REASON + DETAIL</small></strong></section>
 
-        <section className="au-place-route"><header><span>RUTA REAL · REAL ROUTE</span><h2>Estos lugares aparecen en las preguntas.</h2><p className="au-en">These places appear in the questions.</p></header><div>{active.places.map((place,index)=><article key={place.es}><span>{String(index+1).padStart(2,"0")}</span><b>{place.es}</b><small className="au-en">{place.en}</small></article>)}</div></section>
-
-        {active.id==="sydney"&&<SydneyGrammar showEnglish={showEnglish} revealed={revealed} setRevealed={setRevealed}/>} 
+        <section className="au-place-route"><header><span>RUTA REAL · REAL ROUTE</span><h2>Seis lugares. Seis conversaciones propias.</h2><p className="au-en">Six places. Six original conversations.</p><a href={active.source.url} target="_blank" rel="noreferrer">{active.source.label} ↗</a></header><div>{active.places.map((place,index)=><article key={place.es} className={question===index?"active":""} onClick={()=>moveQuestion(index)}><span>{String(index+1).padStart(2,"0")}</span><b>{place.es}</b><small className="au-en">{place.en}</small></article>)}</div></section>
 
         <section className="au-question-card">
-          <div className="au-question-number"><span>PREGUNTA</span><b>{String(question+1).padStart(2,"0")}</b><i>/ 06</i></div>
-          <div className="au-question-copy"><small>{active.topic.es}</small><h2>{current.prompt.es}</h2><p className="au-en">{current.prompt.en}</p><button onClick={()=>speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR · LISTEN</button></div>
-          <Character region={active}/>
+          <div className="au-question-number"><span>{current.level} · {current.place}</span><b>{String(question+1).padStart(2,"0")}</b><i>/ {String(active.questions.length).padStart(2,"0")}</i></div>
+          <div className="au-question-copy"><small>{active.topic.es} · {current.level}</small><h2>{current.prompt.es}</h2><p className="au-en">{current.prompt.en}</p><button onClick={()=>speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR · LISTEN</button></div>
+          <Character region={active} motion={current.motion}/>
         </section>
 
         <section className="au-quick"><header><span>1 · ELEGÍ UN COMIENZO · PICK A START</span><p>Tocá una opción. Después agregá palabras.</p></header><div>{current.quick.map(part=><button key={part.es} onClick={()=>add(part)}><b>{part.es}</b><small className="au-en">{part.en}</small><i>+</i></button>)}</div></section>
@@ -140,20 +140,8 @@ export default function AustraliaEnMovimiento(){
 
         <section className="au-speaking-moves"><header><span>UNA MÁS · ONE MORE</span><h2>Hacé crecer la conversación.</h2></header><div>{speakingMoves.map((move,index)=><button key={move.es}><span>0{index+1}</span><b>{move.es}</b><small className="au-en">{move.en}</small></button>)}</div></section>
 
-        <nav className="au-question-nav"><button disabled={question===0} onClick={()=>moveQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{active.questions.map((_,index)=><button key={index} className={question===index?"active":""} onClick={()=>moveQuestion(index)} aria-label={`Pregunta ${index+1}`}>{index+1}</button>)}</div><button onClick={()=>question===5?enter(nextRegion):moveQuestion(question+1)}>{question===5?`SIGUIENTE TERRITORIO · ${nextRegion.code} →`:"SIGUIENTE · NEXT →"}</button></nav>
+        <nav className="au-question-nav"><button disabled={question===0} onClick={()=>moveQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{active.questions.map((item,index)=><button key={index} className={`${question===index?"active":""} level-${item.level.toLowerCase()}`} onClick={()=>moveQuestion(index)} aria-label={`Pregunta ${index+1}, nivel ${item.level}`}>{index+1}</button>)}</div><button onClick={()=>question===active.questions.length-1?enter(nextRegion):moveQuestion(question+1)}>{question===active.questions.length-1?`SIGUIENTE TERRITORIO · ${nextRegion.code} →`:"SIGUIENTE · NEXT →"}</button></nav>
       </div>
     </section>}
   </main>;
-}
-
-function SydneyGrammar({showEnglish,revealed,setRevealed}:{showEnglish:boolean;revealed:Set<number>;setRevealed:(value:Set<number>)=>void}){
-  const toggle=(index:number)=>{const next=new Set(revealed);next.has(index)?next.delete(index):next.add(index);setRevealed(next)};
-  return <section className={`au-grammar-lab ${showEnglish?"":"compact"}`}>
-    <header><div><span>LABORATORIO DE SÍDNEY · SYDNEY LAB</span><h2>Un solo condicional. Cinco pasos.</h2><p className="au-en">One conditional. Five steps.</p></div><b>SI + PRESENTE → PRESENTE / IMPERATIVO</b></header>
-    <div className="au-learning-path"><article><span>01</span><b>ENTENDER</b><small className="au-en">UNDERSTAND</small><p>¿Esto pasa siempre o normalmente?</p><em className="au-en">Does this always or normally happen?</em></article><i>→</i><article><span>02</span><b>ELEGIR</b><small className="au-en">CHOOSE</small><p>Condición real + resultado real.</p><em className="au-en">Real condition + real result.</em></article><i>→</i><article><span>03</span><b>CONJUGAR</b><small className="au-en">CONJUGATE</small><p>Presente después de “si”.</p><em className="au-en">Present after “si”.</em></article><i>→</i><article><span>04</span><b>PRACTICAR</b><small className="au-en">PRACTISE</small><p>Comprobá el patrón.</p><em className="au-en">Check the pattern.</em></article><i>→</i><article><span>05</span><b>HABLAR</b><small className="au-en">SPEAK</small><p>Usalo en el puerto y la playa.</p><em className="au-en">Use it at the harbour and beach.</em></article></div>
-    <div className="au-grammar-core"><article><span>CONDICIÓN · CONDITION</span><h3>Si + presente</h3><p>Una situación real, habitual o comprobable.</p><em className="au-en">A real, habitual or verifiable situation.</em></article><i>→</i><article><span>RESULTADO · RESULT</span><h3>presente o imperativo</h3><p>Un resultado normal o una instrucción.</p><em className="au-en">A normal result or an instruction.</em></article></div>
-    <aside><b>REAL + REAL</b><p>No imaginamos otro mundo. Hablamos de lo que pasa normalmente.</p><span className="au-en">We are not imagining another world. We are talking about what normally happens.</span></aside>
-    <section className="au-conjugation"><header><span>03 · CONJUGACIÓN ÚTIL</span><h3>Cuatro verbos para sobrevivir Sídney.</h3></header><div className="au-table"><div><b>PERSONA</b><b>HACER</b><b>TENER</b><b>IR</b><b>ESTAR</b></div><div><span>yo</span><b>hago</b><b>tengo</b><b>voy</b><b>estoy</b></div><div><span>vos</span><b>hacés</b><b>tenés</b><b>vas</b><b>estás</b></div><div><span>él / ella</span><b>hace</b><b>tiene</b><b>va</b><b>está</b></div><div><span>nosotros/as</span><b>hacemos</b><b>tenemos</b><b>vamos</b><b>estamos</b></div><div><span>ellos/as</span><b>hacen</b><b>tienen</b><b>van</b><b>están</b></div></div></section>
-    <section className="au-practice"><header><span>04 · PRÁCTICA · PRACTICE</span><h3>Tocá para ver la respuesta y el porqué.</h3></header><div>{conditionalPractice.map((item,index)=><button key={item.sentence} className={revealed.has(index)?"revealed":""} onClick={()=>toggle(index)}><span>0{index+1}</span><b>{item.sentence}</b>{revealed.has(index)?<><strong>{item.answer}</strong><p>{item.why.es}</p><em className="au-en">{item.why.en}</em></>:<small>VER RESPUESTA · SHOW ANSWER</small>}</button>)}</div></section>
-  </section>;
 }
