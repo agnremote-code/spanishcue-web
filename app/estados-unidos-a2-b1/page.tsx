@@ -3,6 +3,7 @@
 import {useMemo,useState,type CSSProperties,type ReactNode} from "react";
 import Link from "next/link";
 import "../estados-unidos-basico/style.css";
+import "./relief.css";
 import {connectors,speakingMoves,starters,stops,type Pair,type UsaStop} from "./data";
 
 type Screen="cover"|"atlas"|"stop";
@@ -24,6 +25,64 @@ function Glyph({name}:{name:GlyphName}){
 
 function Seal({stop,small=false}:{stop:UsaStop;small?:boolean}){
   return <div className={`us-seal ${small?"small":""}`} style={{"--stop":stop.color} as CSSProperties} aria-hidden="true"><span>CHESPANISH</span><b>{stop.number}</b><i>{stop.kind==="lugar"?"STOP":"LENS"}</i></div>;
+}
+
+type ReliefShape={code:string;id:string;d:string;cx:number;cy:number};
+
+const reliefShapes:ReliefShape[]=[
+  {code:"NE",id:"nueva-york",d:"M795 112L850 80L914 101L900 143L879 160L891 190L850 206L835 255L795 230L810 176Z",cx:856,cy:151},
+  {code:"MA",id:"washington-dc",d:"M675 225L735 260L795 230L835 255L821 315L770 365L700 335Z",cx:760,cy:292},
+  {code:"GL",id:"chicago",d:"M520 105L650 100L700 145L675 225L620 245L540 260Z",cx:616,cy:170},
+  {code:"AP",id:"nashville",d:"M620 245L675 225L735 260L700 335L640 355L620 300Z",cx:670,cy:289},
+  {code:"DS",id:"nueva-orleans",d:"M620 300L640 355L700 335L770 365L765 430L680 430L620 415Z",cx:695,cy:384},
+  {code:"FL",id:"miami-everglades",d:"M770 365L820 360L850 400L830 450L850 520L820 555L790 475L765 430Z",cx:812,cy:421},
+  {code:"TX",id:"texas",d:"M430 345L540 260L640 300L620 415L680 430L620 500L555 475L505 430L455 470L365 420Z",cx:524,cy:395},
+  {code:"PL",id:"yellowstone",d:"M365 95L520 105L540 260L430 345L380 250Z",cx:449,cy:193},
+  {code:"SW",id:"gran-canon",d:"M180 240L300 280L380 250L430 345L365 420L250 390L142 330Z",cx:290,cy:330},
+  {code:"MW",id:"rocosas",d:"M205 85L365 95L380 250L300 280L180 240L180 150L225 140Z",cx:281,cy:178},
+  {code:"CA",id:"california",d:"M90 170L145 120L180 150L180 240L142 330L115 395L90 350L78 260Z",cx:126,cy:250},
+  {code:"PN",id:"seattle",d:"M90 80L205 85L225 140L180 150L145 120L90 150Z",cx:148,cy:108},
+  {code:"AK",id:"alaska",d:"M42 455L120 442L170 470L150 520L92 540L45 510Z",cx:96,cy:486},
+  {code:"HI",id:"hawaii",d:"M240 520L268 510L286 520L306 514L327 526L347 520L365 534L345 545L320 539L300 550L280 540L258 546Z",cx:300,cy:530},
+];
+
+function USReliefMap({selected,onSelect,enabledIds,visited}:{selected:UsaStop;onSelect:(stop:UsaStop)=>void;enabledIds:Set<string>;visited:Set<string>}){
+  const stopById=new Map(stops.map(stop=>[stop.id,stop]));
+  return <div className="us-map-stage us-relief-stage">
+    <span className="us-relief-ocean pacific">OCÉANO PACÍFICO</span>
+    <span className="us-relief-ocean atlantic">OCÉANO ATLÁNTICO</span>
+    <div className="us-relief-orbit">
+      <div className="us-relief-shadow" aria-hidden="true"/>
+      <svg className="us-relief-map" viewBox="0 0 960 590" role="img" aria-label="Mapa tridimensional interactivo de Estados Unidos dividido en catorce regiones">
+        <defs>
+          <linearGradient id="us-relief-side" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#17384a"/><stop offset="1" stopColor="#061722"/>
+          </linearGradient>
+          <linearGradient id="us-relief-shine" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#fff" stopOpacity=".36"/><stop offset=".55" stopColor="#fff" stopOpacity="0"/><stop offset="1" stopColor="#081b28" stopOpacity=".18"/>
+          </linearGradient>
+          <filter id="us-relief-glow" x="-35%" y="-35%" width="170%" height="190%">
+            <feDropShadow dx="0" dy="13" stdDeviation="8" floodColor="#001723" floodOpacity=".55"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#fff5c5" floodOpacity=".7"/>
+          </filter>
+        </defs>
+        {reliefShapes.map(shape=>{
+          const stop=stopById.get(shape.id)!;
+          const enabled=enabledIds.has(stop.id);
+          const isSelected=selected.id===stop.id;
+          return <g key={shape.code} className={`us-relief-region ${isSelected?"selected":""} ${visited.has(stop.id)?"visited":""} ${enabled?"":"filtered"}`} style={{"--region":stop.color} as CSSProperties} role="button" tabIndex={enabled?0:-1} aria-label={`${stop.name}, parada ${stop.number}`} aria-pressed={isSelected} onClick={()=>enabled&&onSelect(stop)} onKeyDown={event=>{if(enabled&&(event.key==="Enter"||event.key===" ")){event.preventDefault();onSelect(stop)}}}>
+            {[18,14,10,6].map(offset=><path key={offset} className="us-relief-side" d={shape.d} transform={`translate(0 ${offset})`}/>) }
+            <path className="us-relief-top" d={shape.d}/>
+            <path className="us-relief-shine" d={shape.d}/>
+            <circle className="us-relief-number-disc" cx={shape.cx} cy={shape.cy} r="20"/>
+            <text className="us-relief-number" x={shape.cx} y={shape.cy+1}>{stop.number}</text>
+            <text className="us-relief-code" x={shape.cx} y={shape.cy+34}>{shape.code}</text>
+          </g>;
+        })}
+      </svg>
+    </div>
+    <div className="us-relief-legend"><b>MAPA 3D · RELIEVE INTERACTIVO</b><span>14 territorios elevados: tocá una región para explorarla.</span><small className="us-en">14 raised territories: select a region to explore it.</small></div>
+  </div>;
 }
 
 export default function EstadosUnidosA2B1(){
@@ -79,13 +138,7 @@ export default function EstadosUnidosA2B1(){
       <section className="us-explorer">
         <div className="us-map-card">
           <header><span><Glyph name="compass"/> ATLAS DE CONVERSACIÓN</span><b>EAST ↔ WEST</b></header>
-          <div className="us-map-stage">
-            <div className="us-ocean pacific">PACÍFICO</div><div className="us-ocean atlantic">ATLÁNTICO</div>
-            <div className="us-contiguous" aria-hidden="true"><i/><i/><i/><i/><span>WEST</span><span>MIDWEST</span><span>SOUTH</span><span>EAST</span></div>
-            <svg className="us-route-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13 45 C22 51 24 39 35 42 S49 62 58 57 S66 34 76 40 S82 31 88 28"/></svg>
-            {stops.filter(stop=>stop.kind==="lugar").map(stop=>{const enabled=visible.some(item=>item.id===stop.id);return <button key={stop.id} disabled={!enabled} className={`us-map-node ${pick.id===stop.id?"selected":""} ${visited.has(stop.id)?"visited":""} ${enabled?"":"dim"} node-${stop.id}`} style={{left:`${stop.x}%`,top:`${stop.y}%`,"--stop":stop.color} as CSSProperties} onClick={()=>setPick(stop)}><b>{stop.number}</b><span><strong>{stop.name}</strong><small>{stop.state}</small></span></button>})}
-            <div className="us-map-note"><b>MAPA ESQUEMÁTICO</b><span>Las posiciones son aproximadas y sirven para la actividad.</span><small className="us-en">Positions are approximate and designed for the activity.</small></div>
-          </div>
+          <USReliefMap selected={pick} onSelect={setPick} enabledIds={new Set(visible.filter(stop=>stop.kind==="lugar").map(stop=>stop.id))} visited={visited}/>
         </div>
 
         <aside className="us-preview" style={{"--stop":pick.color} as CSSProperties}>
