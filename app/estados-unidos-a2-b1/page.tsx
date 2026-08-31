@@ -1,192 +1,59 @@
 "use client";
-
-import {useMemo,useState,type CSSProperties,type ReactNode} from "react";
 import Link from "next/link";
-import "../estados-unidos-basico/style.css";
-import "./relief.css";
-import {connectors,speakingMoves,starters,stops,type Pair,type UsaStop} from "./data";
+import {useMemo,useState,type CSSProperties,type KeyboardEvent} from "react";
+import "../suiza-en-relieve/style.css";
+import "./style.css";
+import {connectors,depthMoves,regionNames,starters,states,type Pair,type StateRegion,type USState} from "./state-data";
+import {stateShapes} from "./map-data";
+import {placesByCode} from "./places";
 
-type Screen="cover"|"atlas"|"stop";
-type Filter="todo"|"lugar"|"tema";
-type GlyphName="map"|"shuffle"|"sound"|"trash"|"plus"|"home"|"route"|"compass";
+type Screen="cover"|"map"|"state";
+type Region="todo"|StateRegion;
+type Stance="elegiria"|"depende"|"otra"|null;
+const stancePairs:Record<Exclude<Stance,null>,Pair>={elegiria:{es:"Yo elegiría…",en:"I would choose…"},depende:{es:"Para mí, depende de…",en:"For me, it depends on…"},otra:{es:"Veo otra posibilidad…",en:"I see another possibility…"}};
+const stateByAtlasName=new Map(states.map(state=>[state.atlasName,state]));
+const allCodes=new Set(states.map(state=>state.code));
 
-function Glyph({name}:{name:GlyphName}){
-  const paths:Record<GlyphName,ReactNode>={
-    map:<><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3Z"/><path d="M9 3v15M15 6v15"/></>,
-    shuffle:<><path d="M4 6h3c5 0 5 12 10 12h3"/><path d="m17 15 3 3-3 3M4 18h3c2 0 3.2-1.8 4.2-4M13 9c1-2 2.2-3 4-3h3M17 3l3 3-3 3"/></>,
-    sound:<><path d="M5 10v4h4l5 4V6l-5 4Z"/><path d="M17 9c1.5 1.5 1.5 4.5 0 6M19.5 6.5c4 4 4 7 0 11"/></>,
-    trash:<><path d="M5 7h14M9 7V4h6v3M8 10v9M12 10v9M16 10v9M7 7l1 14h8l1-14"/></>,
-    plus:<><path d="M12 5v14M5 12h14"/></>,home:<><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4Z"/></>,
-    route:<><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M7.5 16.5C9 15 8 12 11 12s2-3 5.5-4.5"/></>,
-    compass:<><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></>,
-  };
-  return <svg className="us-glyph" viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>;
-}
+function USMark(){return <span className="us50-mark" aria-hidden="true"><i>★</i><b>USA</b></span>}
+function Atmosphere(){return <div className="ch-atmosphere us50-atmosphere" aria-hidden="true"><i/><i/><i/><span/><span/><span/><b/><b/></div>}
+function StateScene({state,compact=false}:{state:USState;compact?:boolean}){return <div className={"us50-scene"+(compact?" compact":"")} aria-label={"Escena animada típica de "+state.name}><span className="us50-scene-label">{state.code} · LOCAL SIGNALS</span><div>{state.sceneItems.map((item,index)=><i key={item+"-"+index} className={"scene-"+index}>{item}</i>)}</div><b>{state.hook.es}</b></div>}
 
-function Seal({stop,small=false}:{stop:UsaStop;small?:boolean}){
-  return <div className={`us-seal ${small?"small":""}`} style={{"--stop":stop.color} as CSSProperties} aria-hidden="true"><span>CHESPANISH</span><b>{stop.number}</b><i>{stop.kind==="lugar"?"STOP":"LENS"}</i></div>;
-}
-
-type ReliefShape={code:string;id:string;d:string;cx:number;cy:number};
-
-const reliefShapes:ReliefShape[]=[
-  {code:"NE",id:"nueva-york",d:"M795 112L850 80L914 101L900 143L879 160L891 190L850 206L835 255L795 230L810 176Z",cx:856,cy:151},
-  {code:"MA",id:"washington-dc",d:"M675 225L735 260L795 230L835 255L821 315L770 365L700 335Z",cx:760,cy:292},
-  {code:"GL",id:"chicago",d:"M520 105L650 100L700 145L675 225L620 245L540 260Z",cx:616,cy:170},
-  {code:"AP",id:"nashville",d:"M620 245L675 225L735 260L700 335L640 355L620 300Z",cx:670,cy:289},
-  {code:"DS",id:"nueva-orleans",d:"M620 300L640 355L700 335L770 365L765 430L680 430L620 415Z",cx:695,cy:384},
-  {code:"FL",id:"miami-everglades",d:"M770 365L820 360L850 400L830 450L850 520L820 555L790 475L765 430Z",cx:812,cy:421},
-  {code:"TX",id:"texas",d:"M430 345L540 260L640 300L620 415L680 430L620 500L555 475L505 430L455 470L365 420Z",cx:524,cy:395},
-  {code:"PL",id:"yellowstone",d:"M365 95L520 105L540 260L430 345L380 250Z",cx:449,cy:193},
-  {code:"SW",id:"gran-canon",d:"M180 240L300 280L380 250L430 345L365 420L250 390L142 330Z",cx:290,cy:330},
-  {code:"MW",id:"rocosas",d:"M205 85L365 95L380 250L300 280L180 240L180 150L225 140Z",cx:281,cy:178},
-  {code:"CA",id:"california",d:"M90 170L145 120L180 150L180 240L142 330L115 395L90 350L78 260Z",cx:126,cy:250},
-  {code:"PN",id:"seattle",d:"M90 80L205 85L225 140L180 150L145 120L90 150Z",cx:148,cy:108},
-  {code:"AK",id:"alaska",d:"M42 455L120 442L170 470L150 520L92 540L45 510Z",cx:96,cy:486},
-  {code:"HI",id:"hawaii",d:"M240 520L268 510L286 520L306 514L327 526L347 520L365 534L345 545L320 539L300 550L280 540L258 546Z",cx:300,cy:530},
-];
-
-function USReliefMap({selected,onSelect,enabledIds,visited}:{selected:UsaStop;onSelect:(stop:UsaStop)=>void;enabledIds:Set<string>;visited:Set<string>}){
-  const stopById=new Map(stops.map(stop=>[stop.id,stop]));
-  return <div className="us-map-stage us-relief-stage">
-    <span className="us-relief-ocean pacific">OCÉANO PACÍFICO</span>
-    <span className="us-relief-ocean atlantic">OCÉANO ATLÁNTICO</span>
-    <div className="us-relief-orbit">
-      <div className="us-relief-shadow" aria-hidden="true"/>
-      <svg className="us-relief-map" viewBox="0 0 960 590" role="img" aria-label="Mapa tridimensional interactivo de Estados Unidos dividido en catorce regiones">
-        <defs>
-          <linearGradient id="us-relief-side" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#17384a"/><stop offset="1" stopColor="#061722"/>
-          </linearGradient>
-          <linearGradient id="us-relief-shine" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#fff" stopOpacity=".36"/><stop offset=".55" stopColor="#fff" stopOpacity="0"/><stop offset="1" stopColor="#081b28" stopOpacity=".18"/>
-          </linearGradient>
-          <filter id="us-relief-glow" x="-35%" y="-35%" width="170%" height="190%">
-            <feDropShadow dx="0" dy="13" stdDeviation="8" floodColor="#001723" floodOpacity=".55"/>
-            <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#fff5c5" floodOpacity=".7"/>
-          </filter>
-        </defs>
-        {reliefShapes.map(shape=>{
-          const stop=stopById.get(shape.id)!;
-          const enabled=enabledIds.has(stop.id);
-          const isSelected=selected.id===stop.id;
-          return <g key={shape.code} className={`us-relief-region ${isSelected?"selected":""} ${visited.has(stop.id)?"visited":""} ${enabled?"":"filtered"}`} style={{"--region":stop.color} as CSSProperties} role="button" tabIndex={enabled?0:-1} aria-label={`${stop.name}, parada ${stop.number}`} aria-pressed={isSelected} onClick={()=>enabled&&onSelect(stop)} onKeyDown={event=>{if(enabled&&(event.key==="Enter"||event.key===" ")){event.preventDefault();onSelect(stop)}}}>
-            {[18,14,10,6].map(offset=><path key={offset} className="us-relief-side" d={shape.d} transform={`translate(0 ${offset})`}/>) }
-            <path className="us-relief-top" d={shape.d}/>
-            <path className="us-relief-shine" d={shape.d}/>
-            <circle className="us-relief-number-disc" cx={shape.cx} cy={shape.cy} r="20"/>
-            <text className="us-relief-number" x={shape.cx} y={shape.cy+1}>{stop.number}</text>
-            <text className="us-relief-code" x={shape.cx} y={shape.cy+34}>{shape.code}</text>
-          </g>;
-        })}
-      </svg>
-    </div>
-    <div className="us-relief-legend"><b>MAPA 3D · RELIEVE INTERACTIVO</b><span>14 territorios elevados: tocá una región para explorarla.</span><small className="us-en">14 raised territories: select a region to explore it.</small></div>
-  </div>;
+function USMap({selected,onSelect,visibleCodes,visited,compact=false}:{selected:USState;onSelect:(state:USState)=>void;visibleCodes:Set<string>;visited:Set<string>;compact?:boolean}){
+  const choose=(atlasName:string)=>{const state=stateByAtlasName.get(atlasName);if(state&&visibleCodes.has(state.code))onSelect(state)};
+  const keys=(event:KeyboardEvent<SVGGElement>,atlasName:string)=>{if(event.key==="Enter"||event.key===" "){event.preventDefault();choose(atlasName)}};
+  const selectedShape=stateShapes.find(shape=>shape.name===selected.atlasName);
+  const suffix=compact?"mini":"main";
+  return <div className={"ch-map-orbit us50-map-orbit"+(compact?" compact":"")}><div className="ch-map-shadow"/>
+    <svg className="ch-swiss-map us50-map" viewBox="-70 0 1050 630" role="img" aria-label="Mapa real tridimensional interactivo de los 50 estados de Estados Unidos">
+      <defs><filter id={"us50-glow-"+suffix} x="-35%" y="-35%" width="170%" height="180%"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id={"us50-side-"+suffix} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#153a57"/><stop offset="1" stopColor="#020c16"/></linearGradient></defs>
+      <text x="8" y="345" className="us50-water-label">PACIFIC</text><text x="941" y="365" className="us50-water-label">ATLANTIC</text>
+      {stateShapes.map(shape=>{const state=stateByAtlasName.get(shape.name)!;const selectedState=selected.code===state.code;const visible=visibleCodes.has(state.code);const classes=["ch-canton","us50-state",selectedState?"selected":"",visited.has(state.code)?"visited":"",visible?"":"filtered"].filter(Boolean).join(" ");return <g key={state.code} className={classes} role="button" tabIndex={visible?0:-1} aria-label={state.name+", estado "+state.number} onClick={()=>choose(shape.name)} onKeyDown={event=>keys(event,shape.name)} style={{"--canton":state.color} as CSSProperties}>{[14,10,6].map(offset=><path key={offset} d={shape.d} transform={"translate(0 "+offset+")"} className="ch-canton-side" fill={"url(#us50-side-"+suffix+")"} fillRule="evenodd"/>)}<path d={shape.d} className="ch-canton-top" fillRule="evenodd"/>{!compact&&<text x={shape.cx} y={shape.cy} className="ch-canton-code us50-state-code">{state.code}</text>}</g>})}
+      {selectedShape&&<g className="ch-selected-label us50-selected-label" transform={"translate("+selectedShape.cx+" "+(selectedShape.cy-24)+")"}><circle r="18"/><text y="5">{selected.code}</text></g>}
+    </svg><span className="ch-map-axis axis-one"/><span className="ch-map-axis axis-two"/><span className="ch-map-axis axis-three"/></div>;
 }
 
 export default function EstadosUnidosA2B1(){
-  const [screen,setScreen]=useState<Screen>("cover");
-  const [active,setActive]=useState<UsaStop>(stops[0]);
-  const [pick,setPick]=useState<UsaStop>(stops[0]);
-  const [question,setQuestion]=useState(0);
-  const [filter,setFilter]=useState<Filter>("todo");
-  const [query,setQuery]=useState("");
-  const [visited,setVisited]=useState<Set<string>>(new Set());
-  const [showEnglish,setShowEnglish]=useState(true);
-  const [answerParts,setAnswerParts]=useState<Pair[]>([]);
+  const [screen,setScreen]=useState<Screen>("cover"),[active,setActive]=useState<USState>(states[42]),[mapPick,setMapPick]=useState<USState>(states[42]),[question,setQuestion]=useState(0),[region,setRegion]=useState<Region>("todo"),[query,setQuery]=useState(""),[visited,setVisited]=useState<Set<string>>(new Set()),[englishVisible,setEnglishVisible]=useState(true),[stance,setStance]=useState<Stance>(null),[answerParts,setAnswerParts]=useState<Pair[]>([]),[placeFocus,setPlaceFocus]=useState(0);
+  const visible=useMemo(()=>states.filter(state=>(region==="todo"||state.region===region)&&[state.name,state.nameEn,state.capital,state.hook.es,placesByCode[state.code].map(place=>place.name).join(" ")].join(" ").toLowerCase().includes(query.toLowerCase())),[region,query]);
+  const visibleCodes=useMemo(()=>new Set(visible.map(state=>state.code)),[visible]),current=active.questions[question],activePlaces=placesByCode[active.code],focusedPlace=activePlaces[placeFocus],progress=Math.round(visited.size/states.length*100),answerPairs=[...(stance?[stancePairs[stance]]:[]),...answerParts],answerEs=answerPairs.map(part=>part.es.replace(/[…]+/g,"")).join(" "),answerEn=answerPairs.map(part=>part.en.replace(/[…]+/g,"")).filter(Boolean).join(" ");
+  const show=(next:Screen)=>{setScreen(next);window.scrollTo({top:0,behavior:"smooth"})},enter=(state:USState,start=0)=>{setActive(state);setMapPick(state);setQuestion(start);setPlaceFocus(0);setStance(null);setAnswerParts([]);setVisited(old=>new Set([...old,state.code]));show("state")},surprise=()=>{const pool=states.filter(state=>state.code!==active.code);const next=pool[Math.floor(Math.random()*pool.length)]||states[0];enter(next,Math.floor(Math.random()*6))},changeQuestion=(next:number)=>{setQuestion(Math.max(0,Math.min(5,next)));setStance(null);setAnswerParts([]);document.querySelector(".ch-question-card")?.scrollIntoView({behavior:"smooth",block:"center"})},addPart=(part:Pair)=>setAnswerParts(parts=>[...parts,part]),chooseRegion=(next:Region)=>{setRegion(next);const first=states.find(state=>next==="todo"||state.region===next);if(first)setMapPick(first)};
+  return <main className={"ch-app us50-app "+(englishVisible?"":"ch-spanish-only")}>
+    <nav className="ch-nav us50-nav"><Link href="/" className="ch-brand"><USMark/><span><b>CHESPANISH</b><small>AMERICAN FIELD GUIDE</small></span></Link><div className="ch-progress"><span>ESTADOS EXPLORADOS · STATES</span><i><b style={{width:progress+"%"}}/></i><strong>{visited.size}/50</strong></div><div className="ch-nav-actions"><button onClick={()=>setEnglishVisible(value=>!value)}>EN <b>{englishVisible?"ON":"OFF"}</b></button><button onClick={surprise}>★ SORPRESA</button><button onClick={()=>show(screen==="cover"?"map":"cover")}>{screen==="cover"?"MAPA":"INICIO"}</button></div></nav>
 
-  const visible=useMemo(()=>stops.filter(stop=>(filter==="todo"||stop.kind===filter)&&`${stop.name} ${stop.nameEn} ${stop.state} ${stop.region}`.toLowerCase().includes(query.toLowerCase())),[filter,query]);
-  const current=active.questions[question];
-  const answerEs=answerParts.map(part=>part.es.replace(/[.…]+/g,"")).join(" ");
-  const answerEn=answerParts.map(part=>part.en.replace(/[.…]+/g,"")).join(" ");
-  const progress=Math.round(visited.size/stops.length*100);
+    {screen==="cover"&&<section className="ch-cover us50-cover"><Atmosphere/><div className="us50-cover-grid" aria-hidden="true"/><div className="ch-cover-copy us50-cover-copy"><div className="ch-level"><span>A2–B1</span> 100% CONVERSACIÓN · 100% CONVERSATION</div><p className="ch-eyebrow">50 ESTADOS · 200 PARADAS REALES · 300 PREGUNTAS PARA HABLAR</p><h1>UNITED<br/><em>STATES</em></h1><p className="us50-subtitle">IN DEPTH · EN RELIEVE</p><p className="ch-cover-lead">No es una “Ruta 40” ni un mapa con pines. <b>Cada estado es un territorio 3D real</b> y abre cuatro paradas propias para hablar de ciudades, naturaleza, música, historia, comida y vida cotidiana.<span className="ch-en">Every state is a real 3D territory and opens four local stops.</span></p><div className="ch-cover-actions"><button onClick={()=>show("map")}>OPEN THE 3D MAP <span>→</span><small>ABRIR LOS 50 ESTADOS</small></button><button className="ghost" onClick={surprise}>★ RANDOM STATE<small>ESTADO SORPRESA</small></button></div><div className="ch-cover-stats"><article><b>50</b><span>estados reales<small>real states</small></span></article><article><b>200</b><span>paradas propias<small>local stops</small></span></article><article><b>300</b><span>preguntas A2/B1<small>A2/B1 prompts</small></span></article></div></div><div className="ch-hero-map us50-hero-map"><div className="ch-map-tag"><span>REAL BORDERS</span><b>50 STATES</b></div><USMap selected={mapPick} onSelect={setMapPick} visibleCodes={allCodes} visited={visited} compact/><StateScene state={mapPick} compact/></div></section>}
 
-  const show=(next:Screen)=>{setScreen(next);window.scrollTo({top:0,behavior:"smooth"})};
-  const enter=(stop:UsaStop,start=0)=>{setActive(stop);setPick(stop);setQuestion(start);setAnswerParts([]);setVisited(old=>new Set([...old,stop.id]));show("stop")};
-  const surprise=()=>{const pool=stops.filter(stop=>stop.id!==active.id);const next=pool[Math.floor(Math.random()*pool.length)]||stops[0];enter(next,Math.floor(Math.random()*6))};
-  const changeQuestion=(next:number)=>{setQuestion(Math.max(0,Math.min(5,next)));setAnswerParts([]);document.querySelector(".us-question")?.scrollIntoView({behavior:"smooth",block:"center"})};
-  const add=(pair:Pair)=>setAnswerParts(parts=>[...parts,pair]);
-  const speak=(text:string)=>{if(typeof window==="undefined"||!("speechSynthesis" in window))return;window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="es-AR";utterance.rate=.8;window.speechSynthesis.speak(utterance)};
-  const setNextFilter=(next:Filter)=>{setFilter(next);const first=stops.find(stop=>next==="todo"||stop.kind===next);if(first)setPick(first)};
+    {screen==="map"&&<section className="ch-map-page us50-map-page"><Atmosphere/><header className="ch-map-head"><div><span>THE 50-STATE CONVERSATION ATLAS</span><h1>Elegí un estado.<br/><em>Entrá en sus cuatro paradas.</em></h1></div><div><p>El mapa usa las fronteras reales de los 50 estados, incluyendo Alaska y Hawái. Cada pieza tiene volumen propio y abre cuatro lugares concretos con preguntas A2/B1.</p><p className="ch-en">The map uses the real boundaries of all 50 states. Every raised piece opens four specific places.</p><button onClick={surprise}>★ LET THE MAP DECIDE</button></div></header>
+      <div className="ch-map-tools"><div><button className={region==="todo"?"active":""} onClick={()=>chooseRegion("todo")}>ALL 50</button>{(["noreste","sur","medio-oeste","montañas","pacifico"] as const).map(key=><button key={key} className={region===key?"active":""} onClick={()=>chooseRegion(key)}>{regionNames[key].es}</button>)}</div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar estado, capital o parada…"/></label></div>
+      <section className="ch-map-explorer"><div className="ch-map-panel us50-map-panel"><header><span>SELECT A STATE · ELEGÍ EL TERRITORIO</span><b>TRUE 3D RELIEF</b></header><USMap selected={mapPick} onSelect={setMapPick} visibleCodes={visibleCodes} visited={visited}/><footer><span><i/> SELECTED</span><span><i/> VISITED</span><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html" target="_blank" rel="noreferrer">U.S. Census boundaries ↗</a></footer></div><aside className="ch-preview us50-preview" style={{"--canton":mapPick.color} as CSSProperties}><div className="ch-preview-top"><span>{mapPick.number}</span><USMark/><small>{mapPick.code}</small></div><p>{regionNames[mapPick.region].es} · CAPITAL {mapPick.capital}</p><h2>{mapPick.name}</h2><h3>{mapPick.hook.es}</h3><StateScene state={mapPick}/><div className="ch-fact"><span>FOUR LOCAL STOPS</span><b>{mapPick.fact.es}</b><small className="ch-en">{mapPick.fact.en}</small></div><div className="ch-preview-places"><span>DENTRO DEL ESTADO</span>{placesByCode[mapPick.code].map(place=><b key={place.name}>{place.name}</b>)}</div><div className="ch-preview-chips"><span>Capital: {mapPick.capital}</span><span>4 paradas</span><span>6 preguntas</span></div><button onClick={()=>enter(mapPick)}>ENTER {mapPick.code} <span>→</span><small>ENTRAR EN {mapPick.name.toUpperCase()}</small></button></aside></section>
+      <section className="ch-canton-index us50-index"><header><div><span>ALL 50 STATES · LOS 50 ESTADOS</span><h2>Cada estado abre cuatro paradas propias.</h2></div><p>{visible.length} visibles · {visited.size} explorados</p></header><div>{visible.map(state=><button key={state.code} onClick={()=>setMapPick(state)} className={(mapPick.code===state.code?"active ":"")+(visited.has(state.code)?"visited":"")} style={{"--canton":state.color} as CSSProperties}><span>{state.number}</span><i>{state.code}</i><b>{state.name}</b><small>{placesByCode[state.code].map(place=>place.name).join(" · ")}</small><em>VIEW →</em></button>)}</div></section></section>}
 
-  return <main className={`us-app ${showEnglish?"":"us-no-english"}`}>
-    <nav className="us-nav">
-      <Link href="/" className="us-brand"><span><img src="/chespanish-guide-avatar.png" alt=""/></span><div><b>CHESPANISH</b><small>CONVERSATION ROAD TRIPS</small></div></Link>
-      <div className="us-mileage"><span>MILLAS HABLADAS · SPOKEN MILES</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}<small>/20</small></strong></div>
-      <div className="us-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={()=>show(screen==="cover"?"atlas":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA":" INICIO"}</button></div>
-    </nav>
-
-    {screen==="cover"&&<section className="us-cover">
-      <div className="us-cover-copy">
-        <div className="us-level"><span>A2–B1</span><i/>100% CONVERSACIÓN · NUEVA EDICIÓN</div>
-        <p className="us-kicker">20 PARADAS · 120 PREGUNTAS NUEVAS · TODO BILINGÜE</p>
-        <h1>ESTADOS<br/><em>UNIDOS</em></h1>
-        <div className="us-coastline"><span>COAST</span><i/><b>TO</b><i/><span>COAST</span></div>
-        <p className="us-lead">El mismo gran viaje, ahora para sostener conversaciones más ricas sobre ciudades, naturaleza, comida, música y vida cotidiana.<b> Elegí, compará, explicá una razón y conectá cada lugar con tu experiencia.</b><span className="us-en">The same great journey, now designed for richer conversations about cities, nature, food, music and everyday life. Choose, compare, explain a reason and connect each place with your experience.</span></p>
-        <div className="us-cover-actions"><button onClick={()=>show("atlas")}>ABRIR EL ATLAS <Glyph name="route"/><small className="us-en">OPEN THE ATLAS</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> PARADA SORPRESA<small className="us-en">RANDOM STOP</small></button></div>
-        <div className="us-cover-stats"><article><b>20</b><span>paradas y lentes<small>stops & lenses</small></span></article><article><b>120</b><span>preguntas A2/B1<small>A2/B1 questions</small></span></article><article><b>8</b><span>palabras por parada<small>words per stop</small></span></article></div>
-      </div>
-      <div className="us-cover-art" aria-hidden="true"><img src="/usa-basic-hero.png" alt=""/><div className="us-route-badge"><span>ROUTE</span><b>20</b><small>SPEAKING STOPS</small></div><div className="us-cover-pin pin-east"><b>NEW YORK</b><small>EAST</small></div><div className="us-cover-pin pin-center"><b>THE ROCKIES</b><small>WEST</small></div><div className="us-cover-pin pin-pacific"><b>CALIFORNIA</b><small>PACIFIC</small></div></div>
-      <div className="us-paper-edge" aria-hidden="true"/>
-    </section>}
-
-    {screen==="atlas"&&<section className="us-atlas">
-      <header className="us-atlas-head"><div><span>EL GRAN VIAJE · THE BIG TRIP</span><h1>Elegí una parada.<br/><em>Entrá en la conversación.</em></h1></div><div><p>Catorce lugares reales y seis lentes culturales. Cada parada abre seis preguntas A2/B1, audio, entradas para tomar postura y vocabulario bilingüe.</p><span className="us-en">Fourteen real places and six cultural lenses. Every stop opens six A2/B1 questions, audio, opinion starters and bilingual vocabulary.</span><button onClick={surprise}><Glyph name="shuffle"/> ELEGIR POR MÍ · PICK FOR ME</button></div></header>
-      <div className="us-tools"><div><button className={filter==="todo"?"active":""} onClick={()=>setNextFilter("todo")}>TODO · ALL</button><button className={filter==="lugar"?"active":""} onClick={()=>setNextFilter("lugar")}>MAPA · PLACES</button><button className={filter==="tema"?"active":""} onClick={()=>setNextFilter("tema")}>TEMAS · TOPICS</button></div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar lugar o tema · Search"/></label></div>
-
-      <section className="us-explorer">
-        <div className="us-map-card">
-          <header><span><Glyph name="compass"/> ATLAS DE CONVERSACIÓN</span><b>EAST ↔ WEST</b></header>
-          <USReliefMap selected={pick} onSelect={setPick} enabledIds={new Set(visible.filter(stop=>stop.kind==="lugar").map(stop=>stop.id))} visited={visited}/>
-        </div>
-
-        <aside className="us-preview" style={{"--stop":pick.color} as CSSProperties}>
-          <div className="us-preview-art"><img src="/usa-basic-hero.png" alt="Ilustración artística de un viaje por Estados Unidos"/><Seal stop={pick} small/></div>
-          <div className="us-preview-copy"><span>{pick.kind==="lugar"?"PARADA · STOP":"TEMA · TOPIC"} {pick.number}</span><small>{pick.state} · {pick.region}</small><h2>{pick.name}</h2><h3>{pick.kicker.es}</h3><p>{pick.fact.es}</p><p className="us-en">{pick.fact.en}</p><div><b>A2–B1</b><b>6 preguntas nuevas</b><b>Audio</b><b>Wordbank</b></div><button onClick={()=>enter(pick)}>ABRIR ESTA PARADA <span>→</span><small className="us-en">OPEN THIS STOP</small></button></div>
-        </aside>
-      </section>
-
-      <section className="us-topics"><header><div><span>MÁS ALLÁ DEL MAPA · BEYOND THE MAP</span><h2>Seis temas para hablar de la vida real.</h2></div><p>Viajar no es solamente mirar lugares. También es comer, escuchar, moverse, jugar, aprender idiomas y elegir cómo vivir.</p></header><div>{stops.filter(stop=>stop.kind==="tema"&&visible.some(item=>item.id===stop.id)).map(stop=><button key={stop.id} onClick={()=>setPick(stop)} className={`${pick.id===stop.id?"active":""} ${visited.has(stop.id)?"visited":""}`} style={{"--stop":stop.color} as CSSProperties}><span>{stop.number}</span><small>{stop.state}</small><b>{stop.name}</b><em>{stop.kicker.es}</em><i>EXPLORAR · EXPLORE →</i></button>)}</div></section>
-
-      <section className="us-ticket-strip"><header><span>LAS 20 PARADAS · ALL 20 STOPS</span><b>{visited.size} visitadas · visited</b></header><div>{visible.map(stop=><button key={stop.id} onClick={()=>setPick(stop)} className={`${pick.id===stop.id?"active":""} ${visited.has(stop.id)?"visited":""}`} style={{"--stop":stop.color} as CSSProperties}><span>{stop.number}</span><b>{stop.name}</b><small>{stop.kind==="lugar"?"STOP":"TOPIC"}</small></button>)}</div></section>
-    </section>}
-
-    {screen==="stop"&&<section className="us-world" style={{"--stop":active.color} as CSSProperties}>
-      <header className="us-world-hero">
-        <div className="us-world-top"><button onClick={()=>show("atlas")}>← MAPA · MAP</button><span>PARADA {active.number} · {active.state}</span><div><button className={showEnglish?"active":""} onClick={()=>setShowEnglish(value=>!value)}>EN {showEnglish?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA</button></div></div>
-        <div className="us-world-copy"><small>{active.kind==="lugar"?"DESTINO REAL · REAL DESTINATION":"TEMA COTIDIANO · EVERYDAY TOPIC"}</small><h1>{active.name}</h1><h2 className="us-en">{active.nameEn} · {active.kicker.en}</h2><p><b>{active.fact.es}</b><span className="us-en">{active.fact.en}</span></p><div><span>A2–B1</span><span>6 preguntas nuevas</span><span>Apoyo bilingüe</span></div></div>
-        <div className="us-world-art" aria-hidden="true"><img src="/usa-basic-hero.png" alt=""/><Seal stop={active}/></div>
-      </header>
-
-      <div className="us-classroom">
-        <section className="us-mission"><span>TU MISIÓN · YOUR MISSION</span><div><b>{active.mission.es}</b><em className="us-en">{active.mission.en}</em></div><strong>Postura → razón → ejemplo o contraste<small className="us-en">Position → reason → example or contrast</small></strong></section>
-
-        <section className="us-question">
-          <div className="us-question-count"><span>PREGUNTA</span><b>{String(question+1).padStart(2,"0")}</b><i>/ 06</i></div>
-          <div className="us-question-copy"><small>{active.state} · {active.kicker.es}</small><h2>{current.es}</h2><p className="us-en">{current.en}</p><button onClick={()=>speak(current.es)}><Glyph name="sound"/> ESCUCHAR · LISTEN</button></div>
-          <div className="us-question-seal" aria-hidden="true"><Seal stop={active}/></div>
-        </section>
-
-        <section className="us-fast-answer"><header><span>1 · ELEGÍ UNA ENTRADA · CHOOSE AN ENTRY</span><p>Tocá una postura para empezar y completala con tu idea.</p></header><div>{active.quick.map(pair=><button key={pair.es} onClick={()=>add(pair)}><b>{pair.es}</b><small className="us-en">{pair.en}</small><i>+</i></button>)}</div></section>
-
-        <section className="us-builder-tools">
-          <button className="us-starter" onClick={()=>add(starters[question])}><span>2 · COMIENZO · STARTER</span><b>{starters[question].es}</b><small className="us-en">{starters[question].en}</small><i><Glyph name="plus"/> AGREGAR · ADD</i></button>
-          <article className="us-connectors"><span>3 · CONECTORES · CONNECTORS</span><div>{connectors.map(pair=><button key={pair.es} onClick={()=>add(pair)}><b>{pair.es}</b><small className="us-en">{pair.en}</small><i>+</i></button>)}</div></article>
-        </section>
-
-        <section className="us-answer-lab" aria-live="polite">
-          <header><div><span>TU RESPUESTA A2/B1 · YOUR A2/B1 ANSWER</span><h2>Construí la idea y después desarrollala con tus palabras.</h2><p className="us-en">Build the idea and then develop it in your own words.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="trash"/> BORRAR</button></div></header>
-          <div className={`us-answer-canvas ${answerParts.length?"has-answer":""}`}>{answerParts.length?answerParts.map((pair,index)=><button key={`${pair.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{pair.es}</b><small className="us-en">{pair.en}</small></button>):<p><b>Tocá una respuesta rápida, un comienzo o una palabra.</b><span className="us-en">Tap a quick answer, starter or word.</span></p>}</div>
-          {answerParts.length>0&&<div className="us-readout"><b>{answerEs}</b><span className="us-en">{answerEn}</span></div>}
-        </section>
-
-        <section className="us-wordbank"><header><span>WORDBANK DE LA PARADA</span><h2>Ocho palabras para seguir hablando.</h2><p className="us-en">Eight words to keep talking.</p></header><div>{active.words.map((pair,index)=><button key={pair.es} onClick={()=>add(pair)}><span>{String(index+1).padStart(2,"0")}</span><b>{pair.es}</b><small className="us-en">{pair.en}</small><i>+</i></button>)}</div></section>
-
-        <section className="us-speaking-moves"><header><span>OTRA VUELTA · ONE MORE ROUND</span><h2>Elegí un desafío para hablar más.</h2></header><div>{speakingMoves.map((move,index)=><button key={move.es}><span>{index+1}</span><b>{move.es}</b><small className="us-en">{move.en}</small></button>)}</div></section>
-
-        <nav className="us-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{active.questions.map((_,index)=><button key={index} className={question===index?"active":""} onClick={()=>changeQuestion(index)} aria-label={`Pregunta ${index+1}`}>{index+1}</button>)}</div><button onClick={()=>question===5?surprise():changeQuestion(question+1)}>{question===5?"OTRA PARADA · NEXT STOP →":"SIGUIENTE · NEXT →"}</button></nav>
-      </div>
-    </section>}
+    {screen==="state"&&<section className="ch-canton-page us50-state-page" style={{"--canton":active.color} as CSSProperties}><header className="ch-canton-hero us50-state-hero"><Atmosphere/><div className="ch-canton-topbar"><button onClick={()=>show("map")}>← 50-STATE MAP</button><span>STATE {active.number} · {regionNames[active.region].en.toUpperCase()}</span><button onClick={surprise}>★ ANOTHER STATE</button></div><div className="ch-canton-title"><small>{active.code} · CAPITAL {active.capital}</small><h1>{active.name}</h1><h2>{active.hook.es}</h2><p className="ch-en">Explore four local signals before choosing your position.</p><div><span>4 local stops</span><span>6 A2/B1 questions</span><span>bilingual support</span></div><StateScene state={active}/></div><div className="ch-canton-map"><USMap selected={active} onSelect={state=>enter(state)} visibleCodes={allCodes} visited={visited} compact/><b>{active.code}</b></div></header>
+      <div className="ch-classroom"><section className="ch-canton-fact"><span>BEFORE YOU SPEAK</span><div><b>{active.fact.es}</b><small className="ch-en">{active.fact.en}</small></div><strong>{active.mission.es}<small className="ch-en">{active.mission.en}</small></strong></section>
+        <section className="ch-place-deck"><header><div><span>INSIDE {active.name.toUpperCase()}</span><h2>Cuatro paradas que explican el estado.</h2><p className="ch-en">Four stops that explain this state.</p></div><p>No son nombres decorativos: tocá cada parada, leé su contexto y usá la pregunta para sostener una conversación real.</p></header><div className="ch-place-tabs">{activePlaces.map((place,index)=><button key={place.name} className={placeFocus===index?"active":""} onClick={()=>setPlaceFocus(index)}><span>{String(index+1).padStart(2,"0")}</span><b>{place.name}</b><i>→</i></button>)}</div><article className="ch-place-focus" key={active.code+"-"+placeFocus}><div><span>STOP {String(placeFocus+1).padStart(2,"0")} · {focusedPlace.type.toUpperCase()}</span><h3>{focusedPlace.name}</h3><p>{focusedPlace.context.es}</p></div><div><span>PLACE PROMPT · PREGUNTA</span><b>{focusedPlace.prompt.es}</b><small className="ch-en">{focusedPlace.prompt.en}</small><button onClick={()=>addPart(starters[placeFocus])}>+ ADD A STARTER</button></div></article></section>
+        <section className="ch-question-card"><div className="ch-question-number"><span>QUESTION · PREGUNTA</span><b>{String(question+1).padStart(2,"0")} <i>/ 06</i></b></div><div className="ch-question-copy"><small>{active.code} · {active.name}</small><h2>{current.es}</h2><p className="ch-en">{current.en}</p><div><span>ELEGÍ</span><i>→</i><span>DA UNA RAZÓN</span><i>→</i><span>AGREGÁ UN EJEMPLO</span></div></div><USMark/></section>
+        <section className="ch-response-grid"><article className="ch-stance"><span>1 · CHOOSE A POSITION</span><div>{(["elegiria","depende","otra"] as const).map(value=><button key={value} className={stance===value?"active":""} onClick={()=>setStance(value)}><b>{stancePairs[value].es}</b><small className="ch-en">{stancePairs[value].en}</small></button>)}</div></article><article className="ch-starters"><span>2 · START THE IDEA</span><div>{starters.slice(0,3).map(item=><button key={item.es} onClick={()=>addPart(item)}><b>{item.es}</b><small className="ch-en">{item.en}</small><i>+</i></button>)}</div></article><article className="ch-connectors"><span>3 · CONNECT</span><div>{connectors.map(item=><button key={item.es} onClick={()=>addPart(item)}><b>{item.es}</b><small className="ch-en">{item.en}</small><i>+</i></button>)}</div></article></section>
+        <section className="ch-answer-lab" aria-live="polite"><header><div><span>YOUR A2/B1 DRAFT</span><h2>Construí una respuesta y después decila con tus palabras.</h2></div><button disabled={!answerPairs.length} onClick={()=>{setStance(null);setAnswerParts([])}}>CLEAR · BORRAR</button></header><div className={"ch-answer-canvas "+(answerPairs.length?"has-answer":"")}>{answerPairs.length?answerPairs.map((part,index)=><button key={part.es+"-"+index} onClick={()=>{if(stance&&index===0)setStance(null);else{const partIndex=index-(stance?1:0);setAnswerParts(parts=>parts.filter((_,i)=>i!==partIndex))}}}><b>{part.es}</b><small className="ch-en">{part.en}</small></button>):<p><b>Tocá una posición, un comienzo y uno o dos conectores.</b><span className="ch-en">Tap a position, a starter and one or two connectors.</span></p>}</div>{answerPairs.length>0&&<div className="ch-answer-readout"><b>{answerEs}</b>{answerEn&&<span className="ch-en">{answerEn}</span>}</div>}</section>
+        <section className="ch-wordbank"><header><div><span>{active.code} WORDBANK</span><h2>Palabras para seguir hablando.</h2></div><p>Tocalas para agregarlas al borrador.</p></header><div>{active.words.map((word,index)=><button key={word.es} onClick={()=>addPart(word)}><span>{String(index+1).padStart(2,"0")}</span><b>{word.es}</b><small className="ch-en">{word.en}</small><i>+</i></button>)}</div></section><section className="ch-depth"><header><span>ONE MORE ROUND</span><h2>Elegí una misión extra.</h2></header><div>{depthMoves.map((move,index)=><button key={move.es}><span>{index+1}</span><b>{move.es}</b><small className="ch-en">{move.en}</small></button>)}</div></section><nav className="ch-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← PREVIOUS</button><div>{active.questions.map((_,index)=><button key={index} className={question===index?"active":""} onClick={()=>changeQuestion(index)}>{index+1}</button>)}</div><button onClick={()=>question===5?surprise():changeQuestion(question+1)}>{question===5?"NEXT STATE →":"NEXT →"}</button></nav>
+      </div></section>}
   </main>;
 }
