@@ -335,7 +335,7 @@ export default function MonasterioDeLasIdeas() {
             <h1>El Monasterio<br/><em>de las Ideas</em></h1>
           </div>
           <p>Doce mundos interiores. Entrá en cada espacio, explorá sus objetos vivos y enfrentá tres preguntas C2 antes de volver a la maqueta.</p>
-          <div className="intro-stats"><span><b>12</b> mundos 3D</span><span><b>{totalQuestions}</b> preguntas C2</span><span><b>36</b> objetos vivos</span></div>
+          <div className="intro-stats"><span><b>12</b> mundos 3D</span><span><b>{totalQuestions}</b> preguntas C2</span><span><b>12</b> escenas vivas</span></div>
         </section>
 
         <section className="monastery-workspace">
@@ -370,10 +370,10 @@ export default function MonasterioDeLasIdeas() {
             <div className="door-symbol" aria-hidden="true"><i/><span>Φ</span></div>
             <span className="panel-kicker">PUERTA DE ENTRADA</span>
             <h2>Acá no se elige una tarjeta. Se entra.</h2>
-            <p>Cada punto abre un interior distinto con personajes, objetos animados y tres preguntas extremadamente avanzadas.</p>
+            <p>Cada punto abre un interior distinto. La imagen cobra vida con movimientos propios de ese lugar y después aparecen tres preguntas extremadamente avanzadas.</p>
             <blockquote>¿Qué idea defendés correctamente en público, pero todavía discutís en privado?</blockquote>
             <button className="bell-button" onClick={ringForRoom}><span>♟</span><b>Hacer sonar la campana</b><small>El monasterio abre una puerta al azar</small></button>
-            <div className="class-rules"><span>REGLAS</span><p>Explorá los tres objetos antes de cerrar una posición.</p><p>Sin “depende” sin explicar de qué.</p><p>Sin citar para evitar responder.</p></div>
+            <div className="class-rules"><span>REGLAS</span><p>Observá qué está pasando en la escena antes de responder.</p><p>Sin “depende” sin explicar de qué.</p><p>Sin citar para evitar responder.</p></div>
           </aside>
         </section>
 
@@ -401,6 +401,20 @@ export default function MonasterioDeLasIdeas() {
           onPointerLeave={() => setWorldTilt({x:0,y:0})}
         >
           <img className="room-scene-image" src={active.scene} alt={"Interior 3D de " + active.name + ". " + active.cast}/>
+          <div className={"scene-effects scene-effects-" + active.id} aria-hidden="true">
+            {active.artifacts.map((artifact,index) => <img
+              key={artifact.name}
+              className={"scene-effect effect-" + artifact.motion}
+              src={active.scene}
+              alt=""
+              style={{
+                "--fx": artifact.x + "%",
+                "--fy": artifact.y + "%",
+                "--effect-delay": index * -1.15 + "s"
+              } as CSSProperties}
+            />)}
+            <div className="natural-atmosphere"><i/><i/><i/></div>
+          </div>
           <div className="room-scene-vignette" aria-hidden="true"/>
           <div className="scene-dust" aria-hidden="true"><i/><i/><i/><i/><i/><i/></div>
 
@@ -412,23 +426,8 @@ export default function MonasterioDeLasIdeas() {
 
           <button className="leave-world" onClick={returnToMap}>← Volver a la maqueta</button>
 
-          {active.artifacts.map((artifact,index) => <button
-            key={artifact.name}
-            className={"world-object motion-" + artifact.motion + (selectedArtifact === index ? " selected" : "")}
-            style={{left:artifact.x + "%",top:artifact.y + "%"}}
-            onClick={() => setSelectedArtifact(selectedArtifact === index ? null : index)}
-            aria-label={"Explorar " + artifact.name}
-          ><i>{artifact.icon}</i><span>{artifact.name}</span></button>)}
-
-          {selectedArtifact !== null && <aside className="artifact-note">
-            <small>OBJETO VIVO {selectedArtifact + 1} / 3</small>
-            <h2>{active.artifacts[selectedArtifact].name}</h2>
-            <p>{active.artifacts[selectedArtifact].detail}</p>
-            <button onClick={() => setSelectedArtifact(null)}>Cerrar</button>
-          </aside>}
-
           <div className="scene-cast"><span>EN ESCENA</span><p>{active.cast}</p></div>
-          <div className="scene-instruction">Mové el cursor · tocá los tres objetos iluminados</div>
+          <div className="scene-instruction">Mové el cursor · la escena se anima sola</div>
         </div>
 
         <aside className="world-question-panel">
@@ -437,6 +436,17 @@ export default function MonasterioDeLasIdeas() {
             <div><small>3 PREGUNTAS · C2 EXTREMO</small><h2>{active.name}</h2><p>{active.subtitle}</p></div>
           </div>
           <p className="room-thesis">{active.thesis}</p>
+          <section className="scene-detail-list">
+            <div className="scene-detail-heading"><small>MOVIMIENTO REAL DE LA ESCENA</small><span>Sin íconos flotantes</span></div>
+            <div className="scene-detail-buttons">
+              {active.artifacts.map((artifact,index) => <button
+                key={artifact.name}
+                className={selectedArtifact === index ? "active" : ""}
+                onClick={() => setSelectedArtifact(selectedArtifact === index ? null : index)}
+              ><small>0{index + 1}</small><span>{artifact.name}</span><b>{selectedArtifact === index ? "—" : "+"}</b></button>)}
+            </div>
+            {selectedArtifact !== null && <div className="scene-detail-copy"><strong>{active.artifacts[selectedArtifact].name}</strong><p>{active.artifacts[selectedArtifact].detail}</p></div>}
+          </section>
           <div className="question-tabs" role="tablist" aria-label="Preguntas de este espacio">
             {active.questions.map((_,index) => <button
               key={index}
