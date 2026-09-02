@@ -12,7 +12,7 @@ type Screen="cover"|"rules"|"map"|"topic"|"block"|"powerups"|"boss"|"feedback";
 
 const Pair=({value}:{value:[string,string]})=><div className="pr-pair"><b>{value[0]}</b><span>{value[1]}</span></div>;
 
-const questionCharacterSheets=Array.from({length:14},(_,index)=>`/question-world-${String(index+1).padStart(2,"0")}.png`);
+const questionCharacterSheets=Array.from({length:14},(_,index)=>`/question-world-${String(index+1).padStart(2,"0")}.webp`);
 
 export default function PreguntasProhibidasA2(){
   const [screen,setScreen]=useState<Screen>("cover");
@@ -32,7 +32,7 @@ export default function PreguntasProhibidasA2(){
 
     {screen==="cover"&&<section className="pr-cover">
       <div className="pr-cover-copy"><span className="pr-level">A2 · OPINIONES CLARAS</span><p className="pr-overline">UNA AVENTURA PARA HABLAR CON FRASES SIMPLES</p><h1>EL REINO DE LAS<br/><em>PREGUNTAS PROHIBIDAS</em></h1><p className="pr-lead">Recorré los mundos, elegí una pregunta y respondé con una idea, una razón y un ejemplo.</p><p className="pr-lead-en">Explore the worlds, choose a question and answer with one idea, one reason and one example.</p><div className="pr-cover-actions"><button onClick={()=>show("rules")}>ENTRAR AL REINO <span>→</span></button><button onClick={()=>show("map")}>IR DIRECTO AL MAPA</button></div><div className="pr-cover-stats"><article><b>{topics.length}</b><span>temas cotidianos</span></article><article><b>{topics.length*4}</b><span>preguntas A2</span></article><article><b>8</b><span>apoyos bilingües</span></article></div></div>
-      <div className="pr-cover-art" aria-hidden="true"><span className="pr-moon"/><div className="pr-castle">🏰</div><div className="pr-question-cube">?</div><img src="/chespanish-guide-truck.png" alt=""/><i className="pr-star one">✦</i><i className="pr-star two">✦</i><i className="pr-star three">✦</i></div>
+      <div className="pr-cover-art" aria-hidden="true"><span className="pr-moon"/><div className="pr-castle">🏰</div><div className="pr-question-cube">?</div><img src="/chespanish-guide-truck.webp" alt=""/><i className="pr-star one">✦</i><i className="pr-star two">✦</i><i className="pr-star three">✦</i></div>
     </section>}
 
     {screen==="rules"&&<section className="pr-page pr-rules">
@@ -56,7 +56,7 @@ export default function PreguntasProhibidasA2(){
         <div className="pr-topic-grid">{topics.map((item,index)=><button className="pr-kingdom-gate" aria-label={`Abrir ${item.name}`} key={item.name} onClick={()=>openTopic(index)} style={{"--topic":item.color,"--gate-index":index} as CSSProperties}>
           <div className="pr-castle-card" aria-hidden="true">
             <span className="pr-level-flag">MUNDO {String(index+1).padStart(2,"0")}</span>
-            <img className="pr-castle-illustration" src="/castle-gateway.png" alt=""/>
+            <img className="pr-castle-illustration" src="/castle-gateway.webp" alt=""/>
             <div className="pr-gate-arch"><span className="pr-gate-glow"/><i className="pr-gate-character">{item.emoji}</i><span className="pr-gate-door"><b>{String(index+1).padStart(2,"0")}</b><i/></span></div>
             <span className="pr-castle-sparkle sparkle-a">✦</span><span className="pr-castle-sparkle sparkle-b">✦</span>
           </div>
@@ -75,9 +75,9 @@ export default function PreguntasProhibidasA2(){
         <header><small>PERSONAJES DEL REINO · KINGDOM CHARACTERS</small><b>La corte real te acompaña.</b><span>The royal court is with you.</span></header>
         <div className="pr-royal-stage" aria-hidden="true">
           <span className="pr-royal-spark star-a">✦</span><span className="pr-royal-spark star-b">✦</span><span className="pr-royal-spark star-c">✦</span>
-          <img className="pr-royal-couple" src="/royal-couple.png" alt=""/>
-          <img className="pr-friendly-king" src="/friendly-king.png" alt=""/>
-          <img className="pr-royal-frog" src="/royal-frog.png" alt=""/>
+          <img className="pr-royal-couple" src="/royal-couple.webp" alt=""/>
+          <img className="pr-friendly-king" src="/friendly-king.webp" alt=""/>
+          <img className="pr-royal-frog" src="/royal-frog.webp" alt=""/>
           <span className="pr-frog-shadow"/>
         </div>
       </section>

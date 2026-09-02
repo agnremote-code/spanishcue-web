@@ -141,7 +141,7 @@ export default function IndonesiaFantastica() {
         <div className="id-cover-actions"><button onClick={()=>show("map")}>EXPLORAR EL MAPA <span>→</span><small className="id-en">EXPLORE THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> DESTINO SORPRESA<small className="id-en">SURPRISE DESTINATION</small></button></div>
         <div className="id-stats"><article><b>38</b><span>provincias<br/><small>provinces</small></span></article><article><b>380</b><span>preguntas<br/><small>questions</small></span></article><article><b>∞</b><span>respuestas posibles<br/><small>possible answers</small></span></article></div>
       </div>
-      <div className="id-hero-art" aria-hidden="true"><img src="/indonesia-fantasy-hero.png" alt=""/><span className="id-floating-tag tag-bali">BALI · PORTAL 17</span><span className="id-floating-tag tag-java">JAVA · 6 WORLDS</span><span className="id-floating-tag tag-papua">PAPUA · 6 WORLDS</span></div>
+      <div className="id-hero-art" aria-hidden="true"><img src="/indonesia-fantasy-hero.webp" alt=""/><span className="id-floating-tag tag-bali">BALI · PORTAL 17</span><span className="id-floating-tag tag-java">JAVA · 6 WORLDS</span><span className="id-floating-tag tag-papua">PAPUA · 6 WORLDS</span></div>
       <div className="id-waves" aria-hidden="true"><i/><i/><i/></div>
     </section>}
 
@@ -170,7 +170,7 @@ export default function IndonesiaFantastica() {
         </div>
 
         <aside className="id-portal-card" style={{"--province":atlasPick.color} as CSSProperties}>
-          <div className="id-portal-image"><img src="/indonesia-fantasy-hero.png" alt="Paisaje fantástico inspirado en Indonesia"/><WorldMark province={atlasPick} compact/></div>
+          <div className="id-portal-image"><img src="/indonesia-fantasy-hero.webp" alt="Paisaje fantástico inspirado en Indonesia"/><WorldMark province={atlasPick} compact/></div>
           <div className="id-portal-copy"><span>PORTAL {atlasPick.number} · {atlasPick.region}</span><small>{localNames[atlasPick.id]}</small><h2>{atlasPick.title.es}</h2><h3 className="id-en">{atlasPick.title.en}</h3><p>{atlasPick.scene.es}</p><p className="id-en">{atlasPick.scene.en}</p><div><b>10 preguntas</b><b>Wordbank bilingüe</b><b>Audio en español</b></div><button onClick={()=>enter(atlasPick)}>ABRIR ESTE MUNDO <span>→</span><small className="id-en">OPEN THIS WORLD</small></button></div>
         </aside>
       </section>
@@ -184,7 +184,7 @@ export default function IndonesiaFantastica() {
         <Atmosphere/>
         <div className="id-world-top"><button onClick={()=>show("map")}>← MAPA · MAP</button><span>DESTINO {active.number} · {localNames[active.id]}</span><div><button className={englishVisible?"active":""} onClick={()=>setEnglishVisible(v=>!v)}>EN {englishVisible?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO MUNDO</button></div></div>
         <div className="id-world-copy"><small>{active.region} · {localNames[active.id]}</small><h1>{active.title.es}</h1><h2 className="id-en">{active.title.en}</h2><p><b>{active.scene.es}</b><span className="id-en">{active.scene.en}</span></p><div className="id-world-tags"><span>Contenido real</span><span>10 preguntas</span><span>Audio</span><span>Respuesta interactiva</span></div></div>
-        <div className="id-world-image" aria-hidden="true"><img src="/indonesia-fantasy-hero.png" alt=""/><WorldMark province={active}/></div>
+        <div className="id-world-image" aria-hidden="true"><img src="/indonesia-fantasy-hero.webp" alt=""/><WorldMark province={active}/></div>
       </header>
 
       <div className="id-classroom">

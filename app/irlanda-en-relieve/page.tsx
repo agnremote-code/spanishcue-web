@@ -101,7 +101,7 @@ export default function IrlandaEnRelieve(){
         <div className="ch-cover-stats"><article><b>26</b><span>condados reales<small className="ch-en">real counties</small></span></article><article><b>104</b><span>lugares concretos<small className="ch-en">specific places</small></span></article><article><b>260</b><span>detonadores B1<small className="ch-en">B1 speaking prompts</small></span></article></div>
       </div>
       <div className="ch-hero-map ie-hero-map"><div className="ch-map-tag"><span>MAPA REAL</span><b>26 CONDADOS</b></div><IrelandMap selected={mapPick} onSelect={setMapPick} visibleCodes={allCodes} compact/><div className="ch-floating-card"><small>{provinceNames[mapPick.province].es.toUpperCase()}</small><b>{mapPick.name}</b><span>{mapPick.hook.es}</span></div></div>
-      <div className="ie-guide" aria-hidden="true"><span>SLÁINTE · SEGUIMOS</span><img src="/chespanish-guide-truck.png" alt=""/></div>
+      <div className="ie-guide" aria-hidden="true"><span>SLÁINTE · SEGUIMOS</span><img src="/chespanish-guide-truck.webp" alt=""/></div>
       <div className="ch-train-line ie-road-line" aria-hidden="true"><i/><b>◆</b></div>
     </section>}
 

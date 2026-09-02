@@ -84,7 +84,7 @@ export default function CondicionalesB1Page() {
           </div>
           <div className="co-heroes" aria-hidden="true">
             <span className="co-hero-halo" />
-            <img src="/conditional-characters.png" alt="" />
+            <img src="/conditional-characters.webp" alt="" />
             <i className="co-character-tag tag-real">REAL</i><i className="co-character-tag tag-future">POSIBLE</i><i className="co-character-tag tag-whatif">HIPOTÉTICO</i><i className="co-character-tag tag-past">PASADO</i>
           </div>
           <button className="co-scroll" onClick={() => mostrar("mapa")}><span>↓</span> ABRIR LA RUTA GRAMATICAL</button>

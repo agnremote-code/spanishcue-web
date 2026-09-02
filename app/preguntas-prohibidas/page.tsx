@@ -29,7 +29,7 @@ export default function PreguntasProhibidas(){
 
     {screen==="cover"&&<section className="pr-cover">
       <div className="pr-cover-copy"><span className="pr-level">B1 · OPINIÓN + MATICES</span><p className="pr-overline">UNA AVENTURA PARA HABLAR SIN RESPUESTAS FÁCILES</p><h1>EL REINO DE LAS<br/><em>PREGUNTAS PROHIBIDAS</em></h1><p className="pr-lead">Saltá por los mundos, abrí bloques prohibidos y defendé opiniones que nadie dice en voz alta.</p><p className="pr-lead-en">Move through the worlds, open forbidden blocks and defend opinions people rarely say out loud.</p><div className="pr-cover-actions"><button onClick={()=>show("rules")}>ENTRAR AL REINO <span>→</span></button><button onClick={()=>show("map")}>IR DIRECTO AL MAPA</button></div><div className="pr-cover-stats"><article><b>{topics.length}</b><span>temas profundos</span></article><article><b>{topics.length*4}</b><span>preguntas reales</span></article><article><b>8</b><span>power-ups bilingües</span></article></div></div>
-      <div className="pr-cover-art" aria-hidden="true"><span className="pr-moon"/><div className="pr-castle">🏰</div><div className="pr-question-cube">?</div><img src="/chespanish-guide-truck.png" alt=""/><i className="pr-star one">✦</i><i className="pr-star two">✦</i><i className="pr-star three">✦</i></div>
+      <div className="pr-cover-art" aria-hidden="true"><span className="pr-moon"/><div className="pr-castle">🏰</div><div className="pr-question-cube">?</div><img src="/chespanish-guide-truck.webp" alt=""/><i className="pr-star one">✦</i><i className="pr-star two">✦</i><i className="pr-star three">✦</i></div>
     </section>}
 
     {screen==="rules"&&<section className="pr-page pr-rules">
@@ -53,7 +53,7 @@ export default function PreguntasProhibidas(){
         <div className="pr-topic-grid">{topics.map((item,index)=><button className="pr-kingdom-gate" aria-label={`Abrir ${item.name}`} key={item.name} onClick={()=>openTopic(index)} style={{"--topic":item.color,"--gate-index":index} as CSSProperties}>
           <div className="pr-castle-card" aria-hidden="true">
             <span className="pr-level-flag">MUNDO {String(index+1).padStart(2,"0")}</span>
-            <img className="pr-castle-illustration" src="/castle-gateway.png" alt=""/>
+            <img className="pr-castle-illustration" src="/castle-gateway.webp" alt=""/>
             <div className="pr-gate-arch"><span className="pr-gate-glow"/><i className="pr-gate-character">{item.emoji}</i><span className="pr-gate-door"><b>{String(index+1).padStart(2,"0")}</b><i/></span></div>
             <span className="pr-castle-sparkle sparkle-a">✦</span><span className="pr-castle-sparkle sparkle-b">✦</span>
           </div>

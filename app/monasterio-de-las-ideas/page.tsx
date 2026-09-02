@@ -33,7 +33,7 @@ const rooms: Room[] = [
   {
     id: "claustro", number: "01", name: "El claustro", subtitle: "El silencio que organiza",
     thesis: "No todo silencio es ausencia: algunos protegen, otros disciplinan y otros obligan a una comunidad a completar lo que nadie se atreve a decir.",
-    scene: "/monastery-worlds/01-claustro.png", cast: "Una monja camina bajo las arcadas mientras un sacerdote cruza el patio y las palomas levantan vuelo.",
+    scene: "/monastery-worlds/01-claustro.webp", cast: "Una monja camina bajo las arcadas mientras un sacerdote cruza el patio y las palomas levantan vuelo.",
     questions: [
       "¿Qué clase de silencio protege la intimidad del otro y cuál lo abandona a la obligación de adivinar?",
       "¿En qué momento la coherencia deja de ser una virtud y se convierte en una forma sofisticada de vanidad moral?",
@@ -50,7 +50,7 @@ const rooms: Room[] = [
   {
     id: "scriptorium", number: "02", name: "El scriptorium", subtitle: "Quién posee una interpretación",
     thesis: "Copiar, traducir y comentar nunca son actos neutrales: cada versión decide qué sobrevive y qué queda convertido en nota al pie.",
-    scene: "/monastery-worlds/02-scriptorium.png", cast: "Un sacerdote copia un manuscrito; la llama vacila, la tinta respira y un gato vigila el borde de la mesa.",
+    scene: "/monastery-worlds/02-scriptorium.webp", cast: "Un sacerdote copia un manuscrito; la llama vacila, la tinta respira y un gato vigila el borde de la mesa.",
     questions: [
       "Si una traducción vuelve más sólido un argumento defectuoso, ¿ha sido fiel al autor o lo ha traicionado con demasiada generosidad?",
       "¿En qué punto el contexto histórico deja de explicar una idea y comienza a funcionar como una coartada para no juzgarla?",
@@ -67,7 +67,7 @@ const rooms: Room[] = [
   {
     id: "biblioteca", number: "03", name: "La biblioteca", subtitle: "Ideas que sobreviven por accidente",
     thesis: "El canon no conserva necesariamente lo mejor; conserva aquello que alguien tuvo recursos, autoridad o suerte suficiente para proteger.",
-    scene: "/monastery-worlds/03-biblioteca.png", cast: "Una monja asciende por la escalera, un sacerdote lee junto al globo y una lechuza observa desde las vigas.",
+    scene: "/monastery-worlds/03-biblioteca.webp", cast: "Una monja asciende por la escalera, un sacerdote lee junto al globo y una lechuza observa desde las vigas.",
     questions: [
       "¿Cuántas ideas llamamos universales solamente porque se perdieron las voces capaces de contradecirlas?",
       "¿Cómo distinguís la complejidad que nace del rigor de la complejidad utilizada para impedir que una posición sea refutada?",
@@ -84,7 +84,7 @@ const rooms: Room[] = [
   {
     id: "sacristia", number: "04", name: "La sacristía", subtitle: "El yo vestido por la función",
     thesis: "Antes de entrar al espacio público, una persona se reviste de expectativas. La función protege, pero también puede terminar hablando en su nombre.",
-    scene: "/monastery-worlds/04-sacristia.png", cast: "Un sacerdote prepara las vestiduras entre madera tallada, latón pulido y velas que proyectan dobles sombras.",
+    scene: "/monastery-worlds/04-sacristia.webp", cast: "Un sacerdote prepara las vestiduras entre madera tallada, latón pulido y velas que proyectan dobles sombras.",
     questions: [
       "¿Qué parte de la identidad de un sacerdote pertenece legítimamente a su comunidad y cuál debería permanecer inaccesible incluso para ella?",
       "Cuando una institución presta autoridad a una persona, ¿cómo distinguimos la autoridad del cargo del magnetismo de quien lo ocupa?",
@@ -101,7 +101,7 @@ const rooms: Room[] = [
   {
     id: "refectorio", number: "05", name: "El refectorio", subtitle: "La moral sentada a la mesa",
     thesis: "Compartir alimentos parece igualarnos, pero cada mesa también revela quién sirve, quién decide, quién puede rechazar y quién debe agradecer.",
-    scene: "/monastery-worlds/05-refectorio.png", cast: "Una monja trae pan caliente; un sacerdote espera en la mesa larga mientras el vapor asciende de los cuencos.",
+    scene: "/monastery-worlds/05-refectorio.webp", cast: "Una monja trae pan caliente; un sacerdote espera en la mesa larga mientras el vapor asciende de los cuencos.",
     questions: [
       "¿Puede existir hospitalidad sin una asimetría entre quien ofrece y quien depende de lo ofrecido?",
       "¿Hasta qué punto el consumo ético es una responsabilidad real y hasta qué punto es un lujo moral reservado a quienes pueden pagarlo?",
@@ -118,7 +118,7 @@ const rooms: Room[] = [
   {
     id: "campanario", number: "06", name: "El campanario", subtitle: "El derecho a interrumpir",
     thesis: "Una campana convierte una voz en tiempo colectivo. Hoy ese poder lo comparten instituciones, medios, plataformas y cada dispositivo que reclama atención.",
-    scene: "/monastery-worlds/06-campanario.png", cast: "Una campana enorme oscila sobre el sacerdote que tira de la cuerda; la lechuza permanece inmóvil frente a la noche.",
+    scene: "/monastery-worlds/06-campanario.webp", cast: "Una campana enorme oscila sobre el sacerdote que tira de la cuerda; la lechuza permanece inmóvil frente a la noche.",
     questions: [
       "¿Quién debería tener derecho a interrumpir la atención colectiva y con qué criterio podría justificarse ese privilegio?",
       "¿Puede una institución hablar más fuerte para evitar volverse irrelevante sin deformar aquello que pretende comunicar?",
@@ -135,7 +135,7 @@ const rooms: Room[] = [
   {
     id: "hospederia", number: "07", name: "La hospedería", subtitle: "Recibir sin apropiarse",
     thesis: "Acoger a alguien implica abrir una frontera, pero también decidir cuánto puede alterar la casa antes de dejar de ser considerado huésped.",
-    scene: "/monastery-worlds/07-hospederia.png", cast: "Una monja recibe al viajero frente al hogar encendido; el equipaje espera junto a una taza humeante.",
+    scene: "/monastery-worlds/07-hospederia.webp", cast: "Una monja recibe al viajero frente al hogar encendido; el equipaje espera junto a una taza humeante.",
     questions: [
       "¿Es conceptualmente posible una hospitalidad incondicional o toda acogida necesita límites para no destruir el lugar que recibe?",
       "¿Cómo se acompaña a alguien sin convertir su vida en un proyecto que confirma la bondad de quien ayuda?",
@@ -152,7 +152,7 @@ const rooms: Room[] = [
   {
     id: "jardin", number: "08", name: "El jardín medicinal", subtitle: "Cuidar lo que todavía no responde",
     thesis: "El jardín obliga a trabajar con ritmos que no obedecen a la urgencia humana. Allí, mantener puede ser tan decisivo como crear.",
-    scene: "/monastery-worlds/08-jardin.png", cast: "Una monja recoge hierbas, un sacerdote riega los bancales y mariposas y un gato atraviesan el jardín.",
+    scene: "/monastery-worlds/08-jardin.webp", cast: "Una monja recoge hierbas, un sacerdote riega los bancales y mariposas y un gato atraviesan el jardín.",
     questions: [
       "¿Existe una diferencia moral importante entre destruir algo y simplemente dejar de mantenerlo hasta que desaparezca?",
       "¿Toda belleza cultivada depende de alguna forma de exclusión, poda o violencia selectiva?",
@@ -169,7 +169,7 @@ const rooms: Room[] = [
   {
     id: "prior", number: "09", name: "El despacho del prior", subtitle: "Administrar sin profanar",
     thesis: "Incluso una vocación necesita presupuestos, reglamentos y decisiones impopulares. La burocracia puede traicionar una misión o impedir que dependa del capricho.",
-    scene: "/monastery-worlds/09-prior.png", cast: "El prior trabaja entre libros contables, llaves, cartas selladas y un reloj de arena que no se detiene.",
+    scene: "/monastery-worlds/09-prior.webp", cast: "El prior trabaja entre libros contables, llaves, cartas selladas y un reloj de arena que no se detiene.",
     questions: [
       "¿Qué se pierde cuando una institución espiritual o educativa solo puede demostrar su valor mediante métricas?",
       "¿Puede aceptarse dinero de un origen moralmente cuestionable para financiar un bien indiscutible sin convertir ese bien en legitimación del donante?",
@@ -186,7 +186,7 @@ const rooms: Room[] = [
   {
     id: "enfermeria", number: "10", name: "La enfermería", subtitle: "La dignidad de necesitar",
     thesis: "Cuidar revela una dependencia que la cultura de la autonomía preferiría ocultar. También muestra el costo humano de exigir esperanza sin descanso.",
-    scene: "/monastery-worlds/10-enfermeria.png", cast: "Una monja cuida al paciente; un sacerdote consulta un herbario mientras el vapor del hervidor suaviza la luz.",
+    scene: "/monastery-worlds/10-enfermeria.webp", cast: "Una monja cuida al paciente; un sacerdote consulta un herbario mientras el vapor del hervidor suaviza la luz.",
     questions: [
       "¿Cuándo llamar resiliente a una persona reconoce su fuerza y cuándo desplaza sobre ella la obligación de soportar lo intolerable?",
       "¿Puede la esperanza transformarse en una exigencia institucional que impide expresar miedo, cansancio o deseo de renunciar?",
@@ -203,7 +203,7 @@ const rooms: Room[] = [
   {
     id: "taller", number: "11", name: "El taller de restauración", subtitle: "Reparar sin falsificar",
     thesis: "Restaurar exige elegir entre ocultar la herida, conservarla como prueba o aceptar que la reparación producirá un objeto diferente.",
-    scene: "/monastery-worlds/11-taller.png", cast: "Un sacerdote repara una pintura, una monja ordena pigmentos y el polvo se vuelve visible dentro de los rayos de sol.",
+    scene: "/monastery-worlds/11-taller.webp", cast: "Un sacerdote repara una pintura, una monja ordena pigmentos y el polvo se vuelve visible dentro de los rayos de sol.",
     questions: [
       "¿En qué punto una restauración deja de conservar una obra y comienza a fabricar una versión contemporánea del pasado?",
       "¿Por qué algunas relaciones consideran la desaparición de toda cicatriz como prueba de reparación, mientras otras necesitan que la marca permanezca visible?",
@@ -220,7 +220,7 @@ const rooms: Room[] = [
   {
     id: "cripta", number: "12", name: "La cripta", subtitle: "Quién administra la memoria",
     thesis: "Los muertos ya no pueden corregir su relato, pero siguen ocupando espacio político, afectivo y simbólico entre quienes los recuerdan.",
-    scene: "/monastery-worlds/12-cripta.png", cast: "Un sacerdote y una monja avanzan con velas entre tumbas de piedra; una silueta de lechuza custodia la salida.",
+    scene: "/monastery-worlds/12-cripta.webp", cast: "Un sacerdote y una monja avanzan con velas entre tumbas de piedra; una silueta de lechuza custodia la salida.",
     questions: [
       "¿Debería existir un derecho a ser olvidado después de la muerte o la memoria colectiva tiene obligaciones que superan la voluntad individual?",
       "¿Puede haber perdón auténtico si una comunidad conserva activamente la memoria del daño para evitar que se repita?",
@@ -349,7 +349,7 @@ export default function MonasterioDeLasIdeas() {
               onPointerLeave={() => setTilt({x:0,y:0})}
             >
               <div className="monastery-stage" style={stageStyle}>
-                <img src="/monastery-ideas-3d.png" alt="Maqueta tridimensional del monasterio con doce espacios explorables"/>
+                <img src="/monastery-ideas-3d.webp" alt="Maqueta tridimensional del monasterio con doce espacios explorables"/>
                 <div className="map-shade" aria-hidden="true"/>
                 {rooms.map(room => <button
                   key={room.id}

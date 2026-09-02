@@ -68,7 +68,7 @@ export default function EstadosUnidosBasico(){
         <div className="us-cover-actions"><button onClick={()=>show("atlas")}>ABRIR EL ATLAS <Glyph name="route"/><small className="us-en">OPEN THE ATLAS</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> PARADA SORPRESA<small className="us-en">RANDOM STOP</small></button></div>
         <div className="us-cover-stats"><article><b>20</b><span>paradas y lentes<small>stops & lenses</small></span></article><article><b>120</b><span>preguntas básicas<small>basic questions</small></span></article><article><b>8</b><span>palabras por parada<small>words per stop</small></span></article></div>
       </div>
-      <div className="us-cover-art" aria-hidden="true"><img src="/usa-basic-hero.png" alt=""/><div className="us-route-badge"><span>ROUTE</span><b>20</b><small>SPEAKING STOPS</small></div><div className="us-cover-pin pin-east"><b>NEW YORK</b><small>EAST</small></div><div className="us-cover-pin pin-center"><b>THE ROCKIES</b><small>WEST</small></div><div className="us-cover-pin pin-pacific"><b>CALIFORNIA</b><small>PACIFIC</small></div></div>
+      <div className="us-cover-art" aria-hidden="true"><img src="/usa-basic-hero.webp" alt=""/><div className="us-route-badge"><span>ROUTE</span><b>20</b><small>SPEAKING STOPS</small></div><div className="us-cover-pin pin-east"><b>NEW YORK</b><small>EAST</small></div><div className="us-cover-pin pin-center"><b>THE ROCKIES</b><small>WEST</small></div><div className="us-cover-pin pin-pacific"><b>CALIFORNIA</b><small>PACIFIC</small></div></div>
       <div className="us-paper-edge" aria-hidden="true"/>
     </section>}
 
@@ -89,7 +89,7 @@ export default function EstadosUnidosBasico(){
         </div>
 
         <aside className="us-preview" style={{"--stop":pick.color} as CSSProperties}>
-          <div className="us-preview-art"><img src="/usa-basic-hero.png" alt="Ilustración artística de un viaje por Estados Unidos"/><Seal stop={pick} small/></div>
+          <div className="us-preview-art"><img src="/usa-basic-hero.webp" alt="Ilustración artística de un viaje por Estados Unidos"/><Seal stop={pick} small/></div>
           <div className="us-preview-copy"><span>{pick.kind==="lugar"?"PARADA · STOP":"TEMA · TOPIC"} {pick.number}</span><small>{pick.state} · {pick.region}</small><h2>{pick.name}</h2><h3>{pick.kicker.es}</h3><p>{pick.fact.es}</p><p className="us-en">{pick.fact.en}</p><div><b>A0–A1</b><b>6 preguntas</b><b>Audio</b><b>Wordbank</b></div><button onClick={()=>enter(pick)}>ABRIR ESTA PARADA <span>→</span><small className="us-en">OPEN THIS STOP</small></button></div>
         </aside>
       </section>
@@ -103,7 +103,7 @@ export default function EstadosUnidosBasico(){
       <header className="us-world-hero">
         <div className="us-world-top"><button onClick={()=>show("atlas")}>← MAPA · MAP</button><span>PARADA {active.number} · {active.state}</span><div><button className={showEnglish?"active":""} onClick={()=>setShowEnglish(value=>!value)}>EN {showEnglish?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA</button></div></div>
         <div className="us-world-copy"><small>{active.kind==="lugar"?"DESTINO REAL · REAL DESTINATION":"TEMA COTIDIANO · EVERYDAY TOPIC"}</small><h1>{active.name}</h1><h2 className="us-en">{active.nameEn} · {active.kicker.en}</h2><p><b>{active.fact.es}</b><span className="us-en">{active.fact.en}</span></p><div><span>A0–A1</span><span>6 preguntas</span><span>Apoyo bilingüe</span></div></div>
-        <div className="us-world-art" aria-hidden="true"><img src="/usa-basic-hero.png" alt=""/><Seal stop={active}/></div>
+        <div className="us-world-art" aria-hidden="true"><img src="/usa-basic-hero.webp" alt=""/><Seal stop={active}/></div>
       </header>
 
       <div className="us-classroom">

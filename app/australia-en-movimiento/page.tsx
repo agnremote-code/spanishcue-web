@@ -77,7 +77,7 @@ export default function AustraliaEnMovimiento(){
         <div className="au-cover-actions"><button onClick={()=>show("atlas")}>ENTRAR AL MAPA <Glyph name="map"/><small className="au-en">ENTER THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> ELEGÍ POR MÍ<small className="au-en">PICK FOR ME</small></button></div>
         <div className="au-stats"><article><b>08</b><span>estados y territorios<small>states & territories</small></span></article><article><b>48</b><span>preguntas inéditas<small>brand-new prompts</small></span></article><article><b>48</b><span>movimientos únicos<small>unique motions</small></span></article></div>
       </div>
-      <div className="au-cover-art"><img src="/australia-3d-hero.png" alt="Mapa 3D de Australia con mar, ciudades, desierto y animales"/><div className="au-orbit orbit-one"><span>A2 + B1</span><b>48</b></div><div className="au-orbit orbit-two"><span>REEF</span><b>QLD</b></div><div className="au-orbit orbit-three"><span>TASMANIA</span><b>TAS</b></div></div>
+      <div className="au-cover-art"><img src="/australia-3d-hero.webp" alt="Mapa 3D de Australia con mar, ciudades, desierto y animales"/><div className="au-orbit orbit-one"><span>A2 + B1</span><b>48</b></div><div className="au-orbit orbit-two"><span>REEF</span><b>QLD</b></div><div className="au-orbit orbit-three"><span>TASMANIA</span><b>TAS</b></div></div>
       <div className="au-wave-edge" aria-hidden="true"/>
     </section>}
 

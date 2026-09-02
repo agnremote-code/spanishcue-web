@@ -80,7 +80,7 @@ export default function IsraelEnCapas(){
         <div className="il-cover-actions"><button onClick={()=>show("map")}>ABRIR EL MAPA <span>→</span><small className="il-en">OPEN THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> EMPEZAR AL AZAR<small className="il-en">START AT RANDOM</small></button></div>
         <div className="il-stats"><article><b>14</b><span>capas temáticas<br/><small>thematic layers</small></span></article><article><b>98</b><span>preguntas B1<br/><small>B1 questions</small></span></article><article><b>7</b><span>movimientos por tema<br/><small>moves per topic</small></span></article></div>
       </div>
-      <div className="il-cover-image" aria-hidden="true"><img src="/israel-b1-hero.png" alt=""/><div className="il-glass-pin pin-north"><b>HAIFA</b><span>NORTE</span></div><div className="il-glass-pin pin-centre"><b>JERUSALÉN</b><span>CENTRO</span></div><div className="il-glass-pin pin-south"><b>NÉGUEV</b><span>SUR</span></div></div>
+      <div className="il-cover-image" aria-hidden="true"><img src="/israel-b1-hero.webp" alt=""/><div className="il-glass-pin pin-north"><b>HAIFA</b><span>NORTE</span></div><div className="il-glass-pin pin-centre"><b>JERUSALÉN</b><span>CENTRO</span></div><div className="il-glass-pin pin-south"><b>NÉGUEV</b><span>SUR</span></div></div>
       <div className="il-cover-line" aria-hidden="true"><i/><i/><i/></div>
     </section>}
 
@@ -105,7 +105,7 @@ export default function IsraelEnCapas(){
         </div>
 
         <aside className="il-topic-preview" style={{"--topic":mapPick.color} as CSSProperties}>
-          <div className="il-preview-image"><img src="/israel-b1-hero.png" alt="Paisaje ilustrado inspirado en Israel"/><Stamp topic={mapPick} small/></div>
+          <div className="il-preview-image"><img src="/israel-b1-hero.webp" alt="Paisaje ilustrado inspirado en Israel"/><Stamp topic={mapPick} small/></div>
           <div className="il-preview-copy"><span>{mapPick.kind==="lugar"?"DESTINO · DESTINATION":"LENTE · LENS"} {mapPick.number}</span><small>{mapPick.hebrew} · {mapPick.region}</small><h2>{mapPick.name}</h2><h3>{mapPick.kicker.es}</h3><p>{mapPick.fact.es}</p><p className="il-en">{mapPick.fact.en}</p><div><b>7 preguntas B1</b><b>Audio</b><b>WORDBANK</b></div><button onClick={()=>enter(mapPick)}>ABRIR ESTA CAPA <span>→</span><small className="il-en">OPEN THIS LAYER</small></button></div>
         </aside>
       </section>
@@ -120,7 +120,7 @@ export default function IsraelEnCapas(){
         <Dust/>
         <div className="il-world-top"><button onClick={()=>show("map")}>← MAPA · MAP</button><span>CAPA {active.number} · {active.region}</span><div><button className={englishVisible?"active":""} onClick={()=>setEnglishVisible(value=>!value)}>EN {englishVisible?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA CAPA</button></div></div>
         <div className="il-world-copy"><small>{active.kind==="lugar"?"DESTINO REAL · REAL DESTINATION":"LENTE CULTURAL · CULTURAL LENS"} · {active.hebrew}</small><h1>{active.name}</h1><h2 className="il-en">{active.kicker.en}</h2><p><b>{active.fact.es}</b><span className="il-en">{active.fact.en}</span></p><div><span>7 preguntas B1</span><span>Contenido real</span><span>Respuesta interactiva</span></div></div>
-        <div className="il-world-art" aria-hidden="true"><img src="/israel-b1-hero.png" alt=""/><Stamp topic={active}/></div>
+        <div className="il-world-art" aria-hidden="true"><img src="/israel-b1-hero.webp" alt=""/><Stamp topic={active}/></div>
       </header>
 
       <div className="il-classroom">

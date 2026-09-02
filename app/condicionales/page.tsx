@@ -120,7 +120,7 @@ export default function CondicionalesPage() {
           </div>
           <div className="co-heroes" aria-hidden="true">
             <span className="co-hero-halo" />
-            <img src="/conditional-characters.png" alt="" />
+            <img src="/conditional-characters.webp" alt="" />
             <i className="co-character-tag tag-real">REALIDAD</i><i className="co-character-tag tag-future">FUTURO</i><i className="co-character-tag tag-whatif">¿Y SI…?</i><i className="co-character-tag tag-past">PASADO</i>
           </div>
           <button className="co-scroll" onClick={() => show("map")}><span>↓</span> EMPEZAR DE A POCO · START STEP BY STEP</button>

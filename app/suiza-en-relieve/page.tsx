@@ -90,7 +90,7 @@ export default function SuizaEnRelieve(){
 
     {screen==="cover"&&<section className="ch-cover">
       <Atmosphere/>
-      <img className="ch-cover-photo" src="/suiza-en-relieve-hero.png" alt="Paisaje alpino ilustrado con lago, pueblo, viñedos y un tren rojo"/>
+      <img className="ch-cover-photo" src="/suiza-en-relieve-hero.webp" alt="Paisaje alpino ilustrado con lago, pueblo, viñedos y un tren rojo"/>
       <div className="ch-cover-shade"/>
       <div className="ch-cover-copy">
         <div className="ch-level"><span>B1</span> 100% CONVERSACIÓN · 100% CONVERSATION</div>
