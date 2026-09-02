@@ -105,7 +105,7 @@ export default function SubjuntivoWonderland() {
         </div>
         <div className="sj-cover-stats"><span><b>08</b> mundos</span><span><b>07</b> tiempos</span><span><b>32</b> desafíos</span></div>
       </div>
-      <div className="sj-cover-art"><Scene src="/subjuntivo/alicia-hero.png" alt="Una joven aventurera cae por una biblioteca imposible llena de puertas, relojes y naipes" /></div>
+      <div className="sj-cover-art"><Scene src="/subjuntivo/alicia-hero.webp" alt="Una joven aventurera cae por una biblioteca imposible llena de puertas, relojes y naipes" /></div>
       <div className="sj-falling-word word-a">QUIERO QUE</div><div className="sj-falling-word word-b">OJALÁ</div><div className="sj-falling-word word-c">AUNQUE</div>
     </main>
   );
@@ -129,7 +129,7 @@ function MapScreen({ openUnit, visited, setScreen }: { openUnit: (i: number) => 
           <h1>Un modo no dice <em>cuándo</em>.<br />Dice <em>cómo lo presentás</em>.</h1>
           <p>El tiempo ubica una acción. El modo revela la posición del hablante frente a ella. Por eso una situación real también puede aparecer en subjuntivo: <strong>Me alegra que estés aquí.</strong></p>
         </div>
-        <Scene src="/subjuntivo/wonderland-ensemble.png" alt="Personajes y objetos fantásticos de un mundo de gramática" mode="ensemble" />
+        <Scene src="/subjuntivo/alicia-hero.webp" alt="Personajes y objetos fantásticos de un mundo de gramática" mode="ensemble" />
       </header>
 
       <section className="sj-three-moods">
@@ -190,7 +190,7 @@ function Chapter({ unit, index, tableMap, revealed, reveal, openUnit, setScreen 
 
         <section className="sj-contrast"><header><span>EL ESPEJO DEL SIGNIFICADO</span><h2>Indicativo y subjuntivo no dicen lo mismo</h2></header><div>{unit.contrasts.map((pair, i) => <article key={pair.left}><div><small>LADO A</small><b>{pair.left}</b></div><i>{i + 1}</i><div><small>LADO B</small><b>{pair.right}</b></div><p>{pair.why}</p></article>)}</div></section>
 
-        <section className="sj-errors"><div className="sj-error-art"><Scene src="/subjuntivo/wonderland-ensemble.png" alt="Figuras fantásticas observan errores de gramática" mode="ensemble" /></div><article><span>TRAMPAS DE LA REINA</span><h2>Errores que cambian el sentido</h2>{unit.errors.map((error) => <div key={error.wrong}><p><small>NO</small><del>{error.wrong}</del></p><p><small>SÍ</small><b>{error.right}</b></p><span>{error.why}</span></div>)}</article></section>
+        <section className="sj-errors"><div className="sj-error-art"><Scene src="/subjuntivo/alicia-hero.webp" alt="Figuras fantásticas observan errores de gramática" mode="ensemble" /></div><article><span>TRAMPAS DE LA REINA</span><h2>Errores que cambian el sentido</h2>{unit.errors.map((error) => <div key={error.wrong}><p><small>NO</small><del>{error.wrong}</del></p><p><small>SÍ</small><b>{error.right}</b></p><span>{error.why}</span></div>)}</article></section>
 
         <section className="sj-practice"><header><span>LABORATORIO INTERACTIVO</span><h2>Abrí cada naipe y comprobá tu decisión</h2><p>Respondé en voz alta antes de revelar la solución.</p></header><div>{unit.exercises.map((exercise, i) => { const key = unit.id + i; const open = revealed.has(key); return <button key={key} className={open ? "open" : ""} onClick={() => reveal(key)}><span>{String(i + 1).padStart(2, "0")}</span><b>{exercise.prompt}</b><i>{open ? "OCULTAR RESPUESTA" : "REVELAR RESPUESTA"}</i>{open && <em><strong>{exercise.answer}</strong>{exercise.why}</em>}</button>; })}</div></section>
 
@@ -205,7 +205,7 @@ function Chapter({ unit, index, tableMap, revealed, reveal, openUnit, setScreen 
 function Atlas({ setScreen, openUnit }: { setScreen: (s: Screen) => void; openUnit: (i: number) => void }) {
   return (
     <div className="sj-atlas-wrap">
-      <header className="sj-atlas-hero"><Dust /><div className="sj-atlas-copy"><span>ATLAS MAESTRO · A2–C1</span><h1>Todo el sistema<br />en una sola mirada</h1><p>Formas, usos, concordancia, irregulares y una brújula para decidir.</p><button onClick={() => setScreen("map")}>← VOLVER AL MAPA</button></div><Scene src="/subjuntivo/wonderland-garden.png" alt="Jardín nocturno con castillo, puertas y caminos de ajedrez" /></header>
+      <header className="sj-atlas-hero"><Dust /><div className="sj-atlas-copy"><span>ATLAS MAESTRO · A2–C1</span><h1>Todo el sistema<br />en una sola mirada</h1><p>Formas, usos, concordancia, irregulares y una brújula para decidir.</p><button onClick={() => setScreen("map")}>← VOLVER AL MAPA</button></div><Scene src="/subjuntivo/wonderland-garden.webp" alt="Jardín nocturno con castillo, puertas y caminos de ajedrez" /></header>
       <div className="sj-atlas-body">
         <section className="sj-atlas-intro"><span>EL SISTEMA MODERNO</span><h2>Cuatro tiempos productivos + dos formas históricas</h2><p>En la conversación actual vas a producir sobre todo presente, perfecto, imperfecto y pluscuamperfecto. El futuro y el futuro perfecto se reconocen en registros especiales.</p></section>
         <section className="sj-all-tables">{tables.map((table) => <Table key={table.id} table={table} />)}</section>
