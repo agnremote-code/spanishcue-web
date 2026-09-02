@@ -5,7 +5,7 @@ export type StateRegion="noreste"|"sur"|"medio-oeste"|"montañas"|"pacifico";
 export type USState={
   code:string;number:string;atlasName:string;name:string;nameEn:string;capital:string;
   region:StateRegion;color:string;sceneItems:string[];hook:Pair;fact:Pair;mission:Pair;
-  words:Pair[];questions:Pair[];
+  words:Pair[];questions:Pair[];questionFallbacks:Pair[];
 };
 
 const p=(es:string,en:string=""):Pair=>({es,en});
@@ -81,8 +81,13 @@ export const states:USState[]=raw.trim().split("\n").map((line,index)=>{
     words:[p("la capital","state capital"),p("el paisaje","landscape"),p("la comunidad","community"),p("la tradición local","local tradition"),p("el viaje por carretera","road trip"),p("comparar","to compare")],
     questions:[
       ...places.map(place=>place.prompt),
-      p(`¿Cuál de las cuatro paradas de ${name} visitarías primero y por qué?`,`Which of the four ${atlasName} stops would you visit first, and why?`),
-      p(`¿Qué idea típica sobre ${name} cambia después de conocer estas cuatro paradas?`,`Which common idea about ${atlasName} changes after discovering these four stops?`),
+      p(`En ${name}, las cuatro paradas muestran ${hook.toLowerCase()}. ¿Cuál representa mejor al estado y cuál te sorprende más?`,`In ${atlasName}, the four stops reveal ${hook.toLowerCase()}. Which one best represents the state, and which surprises you most?`),
+      p(`Si tuvieras que explicar ${name} usando solo dos lugares —${placeNames}—, ¿cuáles elegirías y qué historia contarías?`,`If you had to explain ${atlasName} using only two of these places, which would you choose and what story would you tell?`),
+    ],
+    questionFallbacks:[
+      ...places.map(place=>place.fallback),
+      p("Si no conocés este estado: ¿qué te ayuda más a entender un lugar nuevo: su naturaleza, sus ciudades, su historia o su comida?","If you do not know this state: what helps you understand a new place most—nature, cities, history or food?"),
+      p("Si no conocés este estado: ¿preferís viajar para confirmar una idea que ya tenías o para cambiarla por completo?","If you do not know this state: do you prefer travelling to confirm an idea you already had or to change it completely?"),
     ],
   };
 });

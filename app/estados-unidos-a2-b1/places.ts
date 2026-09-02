@@ -1,21 +1,97 @@
 import type {Pair} from "./state-data";
 
-export type StatePlace={name:string;type:string;context:Pair;prompt:Pair};
-type PromptMaker=(name:string)=>Pair;
+export type StatePlace={name:string;type:string;context:Pair;prompt:Pair;fallback:Pair;imageSearch:string};
 
 const p=(es:string,en:string=""):Pair=>({es,en});
-const prompts:Record<string,PromptMaker>={
-  ciudad:name=>p(`¿Vivirías en ${name}? Mencioná una ventaja y un problema.`,`Would you live in ${name}? Mention one advantage and one problem.`),
-  naturaleza:name=>p(`¿Qué actividad harías en ${name} y qué regla seguirías para cuidarlo?`,`What activity would you do in ${name}, and what rule would you follow to protect it?`),
-  historia:name=>p(`¿Qué parte de la historia de ${name} debería conocer todo visitante?`,`Which part of ${name}'s history should every visitor learn about?`),
-  cultura:name=>p(`¿Qué muestra ${name} sobre la identidad local?`,`What does ${name} show about local identity?`),
-  comida:name=>p(`¿Qué probarías en ${name} y con qué comida de tu país lo compararías?`,`What would you try in ${name}, and what food from your country would you compare it with?`),
-  musica:name=>p(`¿Qué te gustaría escuchar en ${name} y en qué tipo de lugar?`,`What would you like to hear in ${name}, and in what kind of place?`),
-  costa:name=>p(`¿Qué plan harías en ${name}: descansar, navegar o explorar?`,`What would you do in ${name}: relax, sail or explore?`),
-  deporte:name=>p(`¿Irías a vivir la experiencia de ${name} aunque no fueras fan? ¿Por qué?`,`Would you go for the ${name} experience even if you were not a fan? Why?`),
-  ciencia:name=>p(`¿Qué te gustaría entender o descubrir en ${name}?`,`What would you like to understand or discover in ${name}?`),
-  ruta:name=>p(`¿Harías la ruta de ${name}? ¿Con quién y en qué estación?`,`Would you take the ${name} route? With whom and in which season?`),
-  evento:name=>p(`¿Te gustaría participar en ${name}? ¿Qué te atrae o te preocupa?`,`Would you like to take part in ${name}? What attracts or worries you?`),
+const stateNames:Record<string,string>={
+  AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",FL:"Florida",GA:"Georgia",
+  HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",
+  MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",
+  NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",
+  SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming",
+};
+
+const followUps:Pair[]=[
+  p("¿Qué parte de esta realidad te parece más interesante y por qué?","Which part of this reality seems most interesting to you, and why?"),
+  p("¿Qué ventaja y qué dificultad imaginás en un lugar así?","What advantage and what difficulty do you imagine in a place like this?"),
+  p("¿Cómo pensás que esta característica influye en la identidad local?","How do you think this feature shapes local identity?"),
+  p("¿Qué pregunta le harías a una persona que vive o trabaja allí?","What would you ask someone who lives or works there?"),
+  p("¿Te gustaría vivir esta experiencia o solamente visitarla? Explicá.","Would you like to live this experience or only visit it? Explain."),
+  p("¿Qué detalle cambia más la idea que tenías de este estado?","Which detail changes your idea of this state the most?"),
+  p("¿Cómo compararías esta realidad con un lugar que conocés?","How would you compare this reality with a place you know?"),
+  p("¿Qué debería comprender un visitante antes de llegar?","What should a visitor understand before arriving?"),
+  p("¿Qué parte conservarías y qué parte cambiarías para el futuro?","Which part would you preserve and which part would you change for the future?"),
+  p("¿Qué tipo de persona disfrutaría más este lugar?","What kind of person would enjoy this place the most?"),
+  p("¿Esta característica mejora la vida local o también crea problemas?","Does this feature improve local life, or does it also create problems?"),
+  p("¿Qué historia breve usarías para presentar este lugar a otra persona?","What short story would you use to introduce this place to someone else?"),
+];
+
+const fallbackQuestions:Record<string,Pair[]>={
+  ciudad:[
+    p("¿Qué hace que una ciudad sea inolvidable para vos: la gente, la arquitectura, la comida o su ritmo?","What makes a city unforgettable for you: its people, architecture, food or pace?"),
+    p("¿Preferís una ciudad fácil y cómoda o una ciudad caótica pero llena de personalidad?","Do you prefer an easy, comfortable city or a chaotic city full of personality?"),
+    p("Si pudieras mejorar una sola cosa de tu ciudad, ¿qué cambiarías primero?","If you could improve one thing in your city, what would you change first?"),
+  ],
+  naturaleza:[
+    p("¿Preferís paisajes que te hacen sentir pequeño o lugares donde sentís que tenés el control?","Do you prefer landscapes that make you feel small or places where you feel in control?"),
+    p("¿Qué regla debería respetar toda persona cuando visita un espacio natural?","Which rule should everyone respect when visiting a natural place?"),
+    p("¿Qué te conecta más con la naturaleza: caminar, observar animales, acampar o estar en silencio?","What connects you most with nature: hiking, watching animals, camping or silence?"),
+  ],
+  historia:[
+    p("Cuando viajás, ¿te interesa más un lugar hermoso o un lugar con una historia complicada?","When you travel, are you more interested in a beautiful place or a place with a complicated history?"),
+    p("¿Cómo debería una ciudad recordar una parte dolorosa de su pasado?","How should a city remember a painful part of its past?"),
+    p("¿Un museo puede cambiar de verdad nuestra opinión sobre un país?","Can a museum truly change our opinion about a country?"),
+  ],
+  cultura:[
+    p("¿Qué tradición de tu región sorprendería más a una persona extranjera?","Which tradition from your region would surprise a foreign visitor most?"),
+    p("¿Qué protege mejor una cultura local: la familia, la escuela, las fiestas o el idioma?","What protects local culture best: family, school, festivals or language?"),
+    p("¿Cuándo una tradición sigue viva y cuándo se convierte en un espectáculo para turistas?","When is a tradition still alive, and when does it become a show for tourists?"),
+  ],
+  comida:[
+    p("¿Puede un solo plato representar una región entera o es una simplificación?","Can one dish represent an entire region, or is that an oversimplification?"),
+    p("¿Qué comida de tu infancia usarías para explicar de dónde venís?","Which childhood food would you use to explain where you come from?"),
+    p("¿Conocés mejor un lugar cuando probás su comida local? ¿Por qué?","Do you understand a place better when you try its local food? Why?"),
+  ],
+  musica:[
+    p("¿Qué canción o estilo musical te hace pensar inmediatamente en un lugar?","Which song or musical style immediately makes you think of a place?"),
+    p("¿Preferís escuchar música en la calle, en un bar pequeño o en un estadio?","Would you rather hear music in the street, a small bar or a stadium?"),
+    p("¿La música cuenta la historia de una comunidad mejor que un libro?","Can music tell a community's story better than a book?"),
+  ],
+  costa:[
+    p("¿Elegirías una costa tranquila o una con viento fuerte y paisajes dramáticos?","Would you choose a calm coast or one with strong winds and dramatic scenery?"),
+    p("¿Qué actividad te hace disfrutar más del mar sin necesidad de entrar al agua?","Which activity helps you enjoy the sea without having to enter the water?"),
+    p("¿Vivir junto al mar compensa el turismo, las tormentas y los precios altos?","Does living by the sea compensate for tourism, storms and high prices?"),
+  ],
+  deporte:[
+    p("¿Se puede disfrutar el ambiente de un evento deportivo sin entender el deporte?","Can you enjoy the atmosphere of a sports event without understanding the sport?"),
+    p("¿Qué une más a una comunidad: un equipo deportivo, una fiesta o una causa común?","What unites a community more: a sports team, a festival or a shared cause?"),
+    p("¿Preferís practicar un deporte o mirar una competencia importante?","Would you rather play a sport or watch an important competition?"),
+  ],
+  ciencia:[
+    p("¿Qué te despierta más curiosidad: un laboratorio, un museo o un experimento real?","What makes you more curious: a laboratory, a museum or a real experiment?"),
+    p("¿Qué descubrimiento científico te gustaría ver con tus propios ojos?","Which scientific discovery would you like to see with your own eyes?"),
+    p("¿La ciencia se entiende mejor leyendo, mirando o haciendo algo práctico?","Is science best understood by reading, observing or doing something practical?"),
+  ],
+  ruta:[
+    p("En un viaje por carretera, ¿es más importante el destino o el camino?","On a road trip, is the destination or the journey more important?"),
+    p("¿Preferís planificar cada parada o decidir durante el viaje?","Would you rather plan every stop or decide during the journey?"),
+    p("¿Con quién harías un viaje largo y qué regla sería indispensable?","Who would you take on a long trip, and which rule would be essential?"),
+  ],
+  evento:[
+    p("¿Preferís un festival enorme y famoso o una celebración local pequeña?","Do you prefer a huge famous festival or a small local celebration?"),
+    p("¿Qué necesita un evento para que quieras volver el año siguiente?","What does an event need to make you want to return the following year?"),
+    p("¿Una multitud mejora la energía de una experiencia o la arruina?","Does a crowd improve an experience's energy or ruin it?"),
+  ],
+};
+
+const seedFor=(code:string,index:number)=>code.charCodeAt(0)+code.charCodeAt(1)+index*7;
+const buildPrompt=(name:string,detail:string,code:string,index:number):Pair=>{
+  const follow=followUps[seedFor(code,index)%followUps.length];
+  return p(`En ${name}, ${detail.charAt(0).toLowerCase()+detail.slice(1)} ${follow.es}`,`${name} is one of this state's distinctive stops. ${follow.en}`);
+};
+const buildFallback=(type:string,code:string,index:number):Pair=>{
+  const bank=fallbackQuestions[type]??fallbackQuestions.cultura;
+  return bank[seedFor(code,index)%bank.length];
 };
 
 const raw=`
@@ -71,14 +147,19 @@ WI|Milwaukee~cultura~Cervecerías, lago, música y barrios inmigrantes explican 
 WY|Yellowstone~naturaleza~Géiseres, bisontes y carreteras comparten el primer parque nacional del país.;Grand Teton~naturaleza~Montañas abruptas y lagos forman uno de los paisajes más reconocibles del oeste.;Cheyenne Frontier Days~evento~Rodeo, caballos y espectáculos convierten la capital en centro cowboy.;Devils Tower~cultura~Una formación rocosa sagrada para pueblos indígenas también atrae escaladores.
 `;
 
-const parsePlace=(entry:string):StatePlace=>{
+const parsePlace=(entry:string,code:string,index:number):StatePlace=>{
   const [name,type,detail]=entry.split("~");
-  return {name,type,context:p(detail),prompt:(prompts[type]??prompts.cultura)(name)};
+  return {
+    name,type,context:p(detail),
+    prompt:buildPrompt(name,detail,code,index),
+    fallback:buildFallback(type,code,index),
+    imageSearch:`${name} ${stateNames[code]??code} United States`,
+  };
 };
 
 export const placesByCode:Record<string,StatePlace[]>=Object.fromEntries(
   raw.trim().split("\n").map(line=>{
     const [code,...entries]=line.split("|");
-    return [code,entries.join("|").split(";").map(parsePlace)];
+    return [code,entries.join("|").split(";").map((entry,index)=>parsePlace(entry,code,index))];
   })
 );
