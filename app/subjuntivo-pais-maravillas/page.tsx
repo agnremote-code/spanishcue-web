@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { finalDiagnostic, irregularGroups, tables, units, type GrammarTable, type Unit } from "./data";
 import "./style.css";
@@ -30,7 +29,9 @@ function Scene({ src, alt, mode = "landscape" }: { src: string; alt: string; mod
   return (
     <div className={`sj-scene ${mode}`}>
       <div className="sj-scene-depth sj-depth-one" />
-      <Image src={src} alt={alt} fill sizes="(max-width: 760px) 100vw, 60vw" />
+      {/* The Site serves these local 3D scenes directly; routing them through the image optimizer breaks the Worker preview. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} />
       <div className="sj-scene-depth sj-depth-two" />
       <div className="sj-scene-glow" />
     </div>
@@ -204,7 +205,7 @@ function Chapter({ unit, index, tableMap, revealed, reveal, openUnit, setScreen 
 function Atlas({ setScreen, openUnit }: { setScreen: (s: Screen) => void; openUnit: (i: number) => void }) {
   return (
     <div className="sj-atlas-wrap">
-      <header className="sj-atlas-hero"><Dust /><div><span>ATLAS MAESTRO · A2–C1</span><h1>Todo el sistema<br />en una sola mirada</h1><p>Formas, usos, concordancia, irregulares y una brújula para decidir.</p><button onClick={() => setScreen("map")}>← VOLVER AL MAPA</button></div><Scene src="/subjuntivo/wonderland-garden.png" alt="Jardín nocturno con castillo, puertas y caminos de ajedrez" /></header>
+      <header className="sj-atlas-hero"><Dust /><div className="sj-atlas-copy"><span>ATLAS MAESTRO · A2–C1</span><h1>Todo el sistema<br />en una sola mirada</h1><p>Formas, usos, concordancia, irregulares y una brújula para decidir.</p><button onClick={() => setScreen("map")}>← VOLVER AL MAPA</button></div><Scene src="/subjuntivo/wonderland-garden.png" alt="Jardín nocturno con castillo, puertas y caminos de ajedrez" /></header>
       <div className="sj-atlas-body">
         <section className="sj-atlas-intro"><span>EL SISTEMA MODERNO</span><h2>Cuatro tiempos productivos + dos formas históricas</h2><p>En la conversación actual vas a producir sobre todo presente, perfecto, imperfecto y pluscuamperfecto. El futuro y el futuro perfecto se reconocen en registros especiales.</p></section>
         <section className="sj-all-tables">{tables.map((table) => <Table key={table.id} table={table} />)}</section>
