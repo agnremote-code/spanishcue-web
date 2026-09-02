@@ -156,3 +156,120 @@ export const stops: CityStop[] = [
 ];
 
 export const calmPlan = ["Elegí solo 4 lugares.", "Usá las traducciones sin culpa.", "Respondé con una frase corta.", "Repetí la frase que más te sirva para el viaje."];
+
+export type OpenPrompt = { intro: string; introEn: string; question: string; questionEn: string; starter: string };
+
+export const openPrompts: Record<string, OpenPrompt> = {
+  aeropuerto: {
+    intro: "Ezeiza está lejos del centro y la llegada puede sentirse intensa: equipaje, cambio de moneda, internet y transporte aparecen todos juntos.",
+    introEn: "Ezeiza is far from the city centre and arrival can feel intense: luggage, money, internet and transport all appear at once.",
+    question: "¿Qué debería hacer una ciudad para que la llegada de un extranjero sea más fácil y menos estresante?",
+    questionEn: "What should a city do to make a foreign visitor's arrival easier and less stressful?",
+    starter: "Para mí, una ciudad debería…"
+  },
+  hotel: {
+    intro: "En Buenos Aires podés elegir entre un hotel tradicional, un hostel social o un departamento dentro de un barrio residencial.",
+    introEn: "In Buenos Aires you can choose a traditional hotel, a social hostel or a flat in a residential neighbourhood.",
+    question: "Cuando viajás, ¿es más importante la comodidad, la ubicación o sentir la vida real del barrio?",
+    questionEn: "When you travel, what matters more: comfort, location or experiencing real neighbourhood life?",
+    starter: "Para mí, lo más importante es… porque…"
+  },
+  kiosco: {
+    intro: "El kiosco porteño es una pequeña institución de barrio: suele abrir muchas horas y vende desde golosinas hasta productos para resolver el día.",
+    introEn: "The porteño kiosk is a small neighbourhood institution: it is often open long hours and sells everything from sweets to everyday essentials.",
+    question: "¿Estos comercios pequeños hacen que una ciudad sea más humana, o preferís la comodidad de las grandes cadenas?",
+    questionEn: "Do these small shops make a city feel more human, or do you prefer the convenience of large chains?",
+    starter: "Creo que los comercios pequeños…"
+  },
+  subte: {
+    intro: "El subte conecta zonas centrales muy rápido, pero en hora pico puede estar lleno, caluroso y ser bastante ruidoso.",
+    introEn: "The underground connects central areas quickly, but at rush hour it can be crowded, hot and quite noisy.",
+    question: "¿Preferís un transporte rápido e incómodo o uno más lento pero agradable? ¿Dónde está tu límite?",
+    questionEn: "Do you prefer fast, uncomfortable transport or slower, more pleasant transport? Where is your limit?",
+    starter: "Prefiero… siempre que…"
+  },
+  bondi: {
+    intro: "Desde un colectivo ves la ciudad a nivel de la calle; en un taxi, además, muchas veces aparece una conversación espontánea con el conductor.",
+    introEn: "From a city bus you see the city at street level; in a taxi, a spontaneous conversation with the driver often happens too.",
+    question: "¿El transporte también puede ser parte de la experiencia turística o es solamente una forma de llegar?",
+    questionEn: "Can transport be part of the tourist experience or is it only a way to get somewhere?",
+    starter: "Pienso que el transporte…"
+  },
+  cafe: {
+    intro: "En muchos cafés porteños la gente no entra solamente para tomar algo: se queda conversando, leyendo o mirando la ciudad durante bastante tiempo.",
+    introEn: "In many porteño cafés, people do not go only for a drink: they stay talking, reading or watching the city for quite a while.",
+    question: "¿Qué pierde una ciudad cuando sus cafés rápidos reemplazan a los lugares donde la gente puede quedarse sin apuro?",
+    questionEn: "What does a city lose when fast cafés replace places where people can stay without rushing?",
+    starter: "Una ciudad pierde… / No pierde…"
+  },
+  panaderia: {
+    intro: "Las facturas argentinas tienen muchos nombres y estilos; la medialuna suele ser más pequeña, dulce y brillante que un croissant británico o francés.",
+    introEn: "Argentine facturas have many names and styles; a medialuna is usually smaller, sweeter and shinier than a British or French croissant.",
+    question: "¿El desayuno dice algo sobre la cultura de un país? Compará un desayuno argentino con uno de tu país.",
+    questionEn: "Does breakfast say something about a country's culture? Compare an Argentine breakfast with one from your country.",
+    starter: "El desayuno argentino es…, mientras que…"
+  },
+  verduleria: {
+    intro: "En una verdulería de barrio elegís productos de estación, hablás con una persona y muchas veces comprás la cantidad exacta que necesitás.",
+    introEn: "At a neighbourhood greengrocer you choose seasonal produce, speak to a person and often buy exactly the amount you need.",
+    question: "¿Comprar comida en negocios especializados cambia nuestra relación con lo que comemos?",
+    questionEn: "Does buying food from specialist shops change our relationship with what we eat?",
+    starter: "Sí, porque… / No mucho, porque…"
+  },
+  carniceria: {
+    intro: "La cultura argentina de la carne incluye muchos cortes y formas de cocción, pero también existen cada vez más opciones vegetarianas.",
+    introEn: "Argentina's meat culture includes many cuts and cooking styles, but there are also more and more vegetarian options.",
+    question: "¿Una tradición gastronómica debe cambiar cuando cambian la salud, el ambiente y los hábitos de la sociedad?",
+    questionEn: "Should a food tradition change when society's health, environmental concerns and habits change?",
+    starter: "Una tradición puede cambiar si…"
+  },
+  parrilla: {
+    intro: "La parrilla porteña no es solamente carne: también es tiempo compartido, conversación larga y una comida que normalmente no tiene apuro.",
+    introEn: "A porteño parrilla is not only about meat: it is also shared time, long conversation and a meal that is normally unhurried.",
+    question: "¿Qué hace memorable una comida: la calidad del plato, la compañía, el lugar o la historia que queda después?",
+    questionEn: "What makes a meal memorable: the food, the company, the place or the story that remains afterwards?",
+    starter: "Para mí, una comida es memorable cuando…"
+  },
+  pizzeria: {
+    intro: "La pizza porteña suele tener una masa más alta y muchísimo queso. La fainá puede comerse arriba de la porción, una combinación muy local.",
+    introEn: "Porteño pizza usually has a thicker base and a great deal of cheese. Fainá can be eaten on top of the slice, a very local combination.",
+    question: "¿Qué pensás de este estilo de pizza? ¿La tradición local debe respetarse o una pizza puede cambiar completamente en cada país?",
+    questionEn: "What do you think of this pizza style? Should local tradition be respected, or can pizza change completely in every country?",
+    starter: "Me parece que la pizza porteña…"
+  },
+  farmacia: {
+    intro: "Cuando estamos lejos de casa, explicar un problema pequeño puede ser difícil aunque conozcamos las palabras básicas.",
+    introEn: "When we are far from home, explaining a small problem can be difficult even when we know the basic words.",
+    question: "¿Qué debería hacer un profesional para que una persona extranjera se sienta comprendida y segura?",
+    questionEn: "What should a professional do to make a foreign visitor feel understood and safe?",
+    starter: "Debería hablar…, preguntar… y…"
+  },
+  hospital: {
+    intro: "En una urgencia, la comunicación clara importa más que la gramática perfecta: síntomas, tiempo, alergias y seguro son los datos esenciales.",
+    introEn: "In an emergency, clear communication matters more than perfect grammar: symptoms, timing, allergies and insurance are the essential facts.",
+    question: "¿Los servicios públicos de una ciudad deberían estar preparados para atender en varios idiomas? ¿Hasta qué punto?",
+    questionEn: "Should a city's public services be prepared to help in several languages? To what extent?",
+    starter: "Sí, especialmente cuando… / No siempre, pero…"
+  },
+  feria: {
+    intro: "Una feria mezcla compras, artesanía, música y conversación. Muchas personas la visitan para observar el barrio, aunque no compren nada.",
+    introEn: "A street market mixes shopping, crafts, music and conversation. Many people visit to experience the neighbourhood even if they buy nothing.",
+    question: "¿Una feria muestra mejor la identidad de una ciudad que un museo o una atracción famosa?",
+    questionEn: "Does a street market show a city's identity better than a museum or famous attraction?",
+    starter: "Una feria muestra… porque…"
+  },
+  bar: {
+    intro: "Los bares pueden funcionar como espacios sociales: el ambiente, la música y la gente cambian completamente una conversación.",
+    introEn: "Bars can work as social spaces: the atmosphere, music and people can completely change a conversation.",
+    question: "¿Por qué a veces es más fácil hablar con desconocidos durante un viaje que en nuestra propia ciudad?",
+    questionEn: "Why is it sometimes easier to talk to strangers while travelling than in our own city?",
+    starter: "Durante un viaje es más fácil porque…"
+  },
+  boliche: {
+    intro: "En Buenos Aires la noche suele empezar y terminar más tarde que en muchas ciudades británicas; para algunos es emocionante y para otros, agotador.",
+    introEn: "In Buenos Aires, nights out often start and end later than in many British cities; for some people this is exciting and for others exhausting.",
+    question: "¿Los horarios nocturnos reflejan una forma diferente de disfrutar la vida, o simplemente complican el día siguiente?",
+    questionEn: "Do late-night hours reflect a different way of enjoying life, or do they simply make the next day harder?",
+    starter: "Creo que salir tan tarde…"
+  }
+};
