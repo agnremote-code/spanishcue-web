@@ -32,7 +32,8 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
     setVisited(items => (items.includes(index) ? items : [...items, index]));
   };
 
-  const begin = () => document.getElementById("gw-map")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const begin = () => document.getElementById(data.world ? "gw-world" : "gw-map")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const enterStation = () => document.getElementById("gw-map")?.scrollIntoView({ behavior: "smooth", block: "start" });
   const practiceComplete = Object.keys(answers).length === data.practice.length;
 
   return (
@@ -62,11 +63,31 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
         <div className="gw-scroll">DESLIZÁ PARA ENTRAR <span /></div>
       </section>
 
+      {data.world && <section className="gw-world" id="gw-world">
+        <header><span>{data.world.eyebrow}</span><h2>{data.world.title}</h2><p>{data.world.instruction}</p></header>
+        <div className="gw-world-frame">
+          <div className="gw-world-scene" aria-hidden="true"><img src={data.hero} alt="" /><i /><b /></div>
+          <div className="gw-world-status"><span>ESTACIÓN ACTIVA</span><strong>{station.number} · {station.title}</strong><small>{visited.length} de {data.stations.length} exploradas</small></div>
+        </div>
+        <div className="gw-world-console" aria-label="Mapa de estaciones">
+          {data.stations.map((item, index) => <button key={item.id} className={index === activeStation ? "active" : ""} onClick={() => openStation(index)} aria-pressed={index === activeStation}>
+            <span>{item.number}</span><div><small>{item.kicker}</small><b>{item.title}</b></div><i>{visited.includes(index) ? "LISTA" : "ABRIR"}</i>
+          </button>)}
+        </div>
+        <button className="gw-world-enter" onClick={enterStation}>{data.world.enterLabel}<span>→</span></button>
+      </section>}
+
       <section className="gw-foundation">
         <div className="gw-section-label"><span>00</span><small>{data.bigIdea.eyebrow}</small></div>
         <div className="gw-foundation-copy"><h2>{data.bigIdea.title}</h2><p>{data.bigIdea.body}</p></div>
         <div className="gw-contrast-grid">{data.bigIdea.contrast.map((item, index) => <article key={item.value}><span>{String(index + 1).padStart(2, "0")}</span><small>{item.label}</small><b>{item.value}</b><em>{item.detail}</em></article>)}</div>
       </section>
+
+      {data.curriculum && <section className="gw-curriculum">
+        <div><span>COBERTURA CURRICULAR</span><h2>{data.officialTopic}</h2><p>El título creativo presenta el mundo; este es el contenido gramatical exacto que se trabaja.</p></div>
+        <article><small>NÚCLEO A1</small>{data.curriculum.a1.map(item => <p key={item}><i />{item}</p>)}</article>
+        <article><small>PUENTE A2</small>{data.curriculum.a2.map(item => <p key={item}><i />{item}</p>)}</article>
+      </section>}
 
       <section className="gw-map" id="gw-map">
         <header><span>RECORRIDO INTERACTIVO</span><h2>Una idea por estación.<br />Todo conectado.</h2><p>Elegí una estación. Visitá las cinco para completar el módulo; usá las flechas del teclado si preferís avanzar sin tocar la pantalla.</p></header>

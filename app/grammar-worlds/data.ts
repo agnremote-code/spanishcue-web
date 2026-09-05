@@ -36,6 +36,16 @@ export type GrammarWorldData = {
   accent2: string;
   motif: "factory" | "atelier" | "gallery" | "observatory" | "house" | "market";
   duration: string;
+  world?: {
+    eyebrow: string;
+    title: string;
+    instruction: string;
+    enterLabel: string;
+  };
+  curriculum?: {
+    a1: string[];
+    a2: string[];
+  };
   nextPath?: string;
   nextTitle?: string;
   overview: { label: string; value: string }[];
@@ -330,6 +340,16 @@ export const demonstrativeObservatory: GrammarWorldData = {
   accent2: "#55d4d0",
   motif: "observatory",
   duration: "65–80 min",
+  world: {
+    eyebrow: "MAPA 3D DEL OBSERVATORIO",
+    title: "Calibrá la distancia antes de elegir.",
+    instruction: "Cada consola abre una lente distinta. Elegí una, observá la escena y entrá en su explicación completa.",
+    enterLabel: "ENTRAR EN LA LENTE",
+  },
+  curriculum: {
+    a1: ["Paradigmas este, ese y aquel", "Formas neutras esto, eso y aquello", "Deixis espacial: aquí, ahí, allí", "Posición delante del sustantivo"],
+    a2: ["Deixis temporal", "Uso pronominal y anafórico"],
+  },
   nextPath: "/la-casa-de-las-pertenencias",
   nextTitle: "La Casa de las Pertenencias",
   overview: [
@@ -393,6 +413,16 @@ export const possessionHouse: GrammarWorldData = {
   accent2: "#63c49c",
   motif: "house",
   duration: "65–80 min",
+  world: {
+    eyebrow: "PLANO 3D DE LA CASA",
+    title: "Encontrá al dueño de cada historia.",
+    instruction: "Cada llave abre una habitación con una relación distinta entre propietario y pertenencia.",
+    enterLabel: "ABRIR LA HABITACIÓN",
+  },
+  curriculum: {
+    a1: ["Formas átonas mi, tu, su", "Nuestro y la concordancia", "Posición prenominal", "Incompatibilidad con el artículo"],
+    a2: ["Formas tónicas mío, tuyo, suyo", "Ambigüedad y estructuras con de"],
+  },
   nextPath: "/el-mercado-de-las-cantidades",
   nextTitle: "El Mercado de las Cantidades",
   overview: [
@@ -456,6 +486,16 @@ export const quantityMarket: GrammarWorldData = {
   accent2: "#49c1b4",
   motif: "market",
   duration: "70–85 min",
+  world: {
+    eyebrow: "RECORRIDO 3D DEL MERCADO",
+    title: "Medí antes de llenar la canasta.",
+    instruction: "Cada puesto cambia la escala: número exacto, cantidad aproximada, totalidad, ausencia y comparación.",
+    enterLabel: "ENTRAR EN EL PUESTO",
+  },
+  curriculum: {
+    a1: ["Numerales cardinales", "Ordinales básicos", "Poco, mucho y bastante", "Concordancia de cantidad"],
+    a2: ["Todo, otro, demasiado, nada y nadie", "Más, menos, tan, tanto, también y tampoco"],
+  },
   overview: [
     { label: "RECORRIDO", value: "5 puestos" },
     { label: "PRÁCTICA", value: "8 compras" },
