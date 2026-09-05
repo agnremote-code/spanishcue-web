@@ -52,6 +52,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
         <div className="gw-hero-shade" />
         <div className="gw-hero-copy">
           <span className="gw-module">{data.module}</span>
+          <span className="gw-official-topic"><small>NOMBRE EXACTO DEL TEMA · PCIC</small><b>{data.officialTopic}</b></span>
           <h1>{data.displayTitle.split("\n").map((line, index) => <span key={line} className={index ? "gw-title-accent" : ""}>{line}</span>)}</h1>
           <p className="gw-subtitle">{data.subtitle}</p>
           <p className="gw-intro">{data.intro}</p>
@@ -106,7 +107,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
       </section>
 
       <section className="gw-mission">
-        <div><span>MISIÓN FINAL</span><h2>Una producción completa</h2><p>{data.mission}</p></div><aside><small>MÓDULO</small><b>{data.level} · {data.title}</b><i>{progress}% explorado</i></aside>
+        <div><span>MISIÓN FINAL</span><h2>Una producción completa</h2><p>{data.mission}</p></div><aside><small>TEMA OFICIAL DEL PCIC</small><b>{data.officialTopic}</b><i>{data.level} · {progress}% explorado</i></aside>
       </section>
 
       <footer className="gw-footer"><a href="/">← VOLVER A LA BIBLIOTECA</a><div><b>CHESPANISH</b><span>Gramática visual para hablar mejor.</span></div>{data.nextPath ? <a href={data.nextPath}>SIGUIENTE: {data.nextTitle} →</a> : <a href="/">VER TODAS LAS CLASES →</a>}</footer>

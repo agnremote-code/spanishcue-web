@@ -26,6 +26,7 @@ export type GrammarWorldData = {
   slug: string;
   level: string;
   module: string;
+  officialTopic: string;
   title: string;
   displayTitle: string;
   subtitle: string;
@@ -33,7 +34,7 @@ export type GrammarWorldData = {
   hero: string;
   accent: string;
   accent2: string;
-  motif: "factory" | "atelier" | "gallery";
+  motif: "factory" | "atelier" | "gallery" | "observatory" | "house" | "market";
   duration: string;
   nextPath?: string;
   nextTitle?: string;
@@ -55,6 +56,7 @@ export const nounFactory: GrammarWorldData = {
   slug: "la-fabrica-de-los-nombres",
   level: "A1",
   module: "MÓDULO 01 · INVENTARIO CERVANTES",
+  officialTopic: "1. El sustantivo",
   title: "La Fábrica de los Nombres",
   displayTitle: "La Fábrica\nde los Nombres",
   subtitle: "Sustantivos, género y número desde cero",
@@ -192,6 +194,7 @@ export const agreementAtelier: GrammarWorldData = {
   slug: "el-atelier-de-la-concordancia",
   level: "A1",
   module: "MÓDULO 02 · INVENTARIO CERVANTES",
+  officialTopic: "2. El adjetivo",
   title: "El Atelier de la Concordancia",
   displayTitle: "El Atelier de\nla Concordancia",
   subtitle: "Adjetivos que combinan con precisión",
@@ -254,6 +257,7 @@ export const articleGallery: GrammarWorldData = {
   slug: "la-galeria-de-los-articulos",
   level: "A1",
   module: "MÓDULO 03 · INVENTARIO CERVANTES",
+  officialTopic: "3. El artículo",
   title: "La Galería de los Artículos",
   displayTitle: "La Galería de\nlos Artículos",
   subtitle: "El, la, un, una y la lógica de elegir",
@@ -263,6 +267,8 @@ export const articleGallery: GrammarWorldData = {
   accent2: "#7d8cff",
   motif: "gallery",
   duration: "65–80 min",
+  nextPath: "/el-observatorio-de-las-distancias",
+  nextTitle: "El Observatorio de las Distancias",
   overview: [
     { label: "RECORRIDO", value: "5 galerías" },
     { label: "PRÁCTICA", value: "8 decisiones" },
@@ -308,4 +314,191 @@ export const articleGallery: GrammarWorldData = {
     { title: "Quién soy", prompt: "Decí profesión, nacionalidad, ciudad y una descripción personal.", support: "Soy diseñador. Soy argentino. Vivo en… Soy una persona…" },
   ],
   mission: "Imaginá que curás una exposición con seis objetos. Presentá cada objeto con un / una; después recorré la muestra otra vez usando el / la y explicando por qué cada pieza importa.",
+};
+
+export const demonstrativeObservatory: GrammarWorldData = {
+  slug: "el-observatorio-de-las-distancias",
+  level: "A1",
+  module: "MÓDULO 04 · INVENTARIO CERVANTES",
+  officialTopic: "4. Los demostrativos",
+  title: "El Observatorio de las Distancias",
+  displayTitle: "El Observatorio\nde las Distancias",
+  subtitle: "Este, ese, aquel y la perspectiva de quien habla",
+  intro: "Una misma cosa cambia de posición según desde dónde la miramos. Ajustá las lentes del observatorio y aprendé a señalar objetos, personas, lugares e ideas con precisión.",
+  hero: "/grammar-worlds/demonstrative-observatory.webp",
+  accent: "#e4b858",
+  accent2: "#55d4d0",
+  motif: "observatory",
+  duration: "65–80 min",
+  nextPath: "/la-casa-de-las-pertenencias",
+  nextTitle: "La Casa de las Pertenencias",
+  overview: [
+    { label: "RECORRIDO", value: "5 lentes" },
+    { label: "PRÁCTICA", value: "8 coordenadas" },
+    { label: "PRODUCCIÓN", value: "3 observaciones" },
+  ],
+  bigIdea: {
+    eyebrow: "ANTES DE MIRAR POR EL TELESCOPIO",
+    title: "Los demostrativos sitúan algo respecto de quien habla.",
+    body: "Este señala lo cercano; ese, una distancia media o algo próximo a la otra persona; aquel, lo lejano. Además, cada forma concuerda con el género y el número del sustantivo. Esto, eso y aquello son neutros: señalan algo sin nombrarlo.",
+    contrast: [
+      { label: "CERCA", value: "este libro", detail: "aquí / acá" },
+      { label: "MEDIA", value: "esa silla", detail: "ahí" },
+      { label: "LEJOS", value: "aquellas casas", detail: "allí / allá" },
+      { label: "SIN NOMBRE", value: "¿Qué es eso?", detail: "neutro" },
+    ],
+  },
+  stations: [
+    { id: "paradigm", number: "01", kicker: "LENTE DE CONCORDANCIA", title: "Doce formas que encajan", summary: "Distancia, género y número trabajan juntos.", rule: "Este grupo tiene cuatro formas por distancia. Elegimos masculino o femenino, singular o plural, según el sustantivo.", formulas: ["ESTE · ESTA · ESTOS · ESTAS", "ESE · ESA · ESOS · ESAS", "AQUEL · AQUELLA · AQUELLOS · AQUELLAS"], examples: [{es:"este teléfono",en:"this phone"},{es:"estas llaves",en:"these keys"},{es:"ese café",en:"that café"},{es:"aquellas montañas",en:"those mountains over there"}], note: "La distancia es relativa a la conversación: dos personas pueden organizar el espacio de manera diferente." },
+    { id: "distance", number: "02", kicker: "ANILLOS DE DISTANCIA", title: "Cerca, media y lejos", summary: "Tres zonas para orientar la conversación.", rule: "Usamos este para lo cercano, ese para una zona media o próxima al interlocutor y aquel para lo claramente lejano.", formulas: ["ESTE ↔ AQUÍ / ACÁ", "ESE ↔ AHÍ", "AQUEL ↔ ALLÍ / ALLÁ"], examples: [{es:"Esta taza de acá.",en:"this cup here"},{es:"Ese bolso de ahí.",en:"that bag there"},{es:"Aquel edificio de allá.",en:"that building over there"},{es:"¿Preferís esta mesa o esa?",en:"this table or that one?"}], note: "En la lengua real, este y ese cubren muchas situaciones. Aquel añade una distancia marcada o una perspectiva narrativa." },
+    { id: "neuter", number: "03", kicker: "CÁMARA DE LO DESCONOCIDO", title: "Esto, eso y aquello", summary: "Señalamos sin conocer el nombre.", rule: "Las formas neutras no acompañan un sustantivo. Sirven para preguntar por un objeto desconocido, resumir una situación o señalar una idea completa.", formulas: ["¿QUÉ ES ESTO?", "ESO ES IMPORTANTE", "AQUELLO FUE DIFÍCIL"], examples: [{es:"¿Qué es esto?",en:"What is this?"},{es:"Eso es un regalo.",en:"That is a gift."},{es:"No entiendo aquello.",en:"I don't understand that over there."},{es:"Esto es interesante.",en:"This is interesting."}], note: "Nunca decimos esto libro ni estos como plural de esto. Con sustantivo, elegimos este libro." },
+    { id: "position", number: "04", kicker: "ÓRBITA DEL SUSTANTIVO", title: "Antes del nombre", summary: "El demostrativo ocupa el lugar del artículo.", rule: "En el uso básico, colocamos el demostrativo delante del sustantivo. No lo combinamos con el, la, los o las.", formulas: ["DEMOSTRATIVO + SUSTANTIVO", "ESTA casa", "no: LA ESTA casa"], examples: [{es:"este barrio",en:"this neighborhood"},{es:"esa película",en:"that film"},{es:"aquellos días",en:"those days"},{es:"estas personas",en:"these people"}], note: "El demostrativo ya identifica el sustantivo; por eso no necesita artículo delante." },
+    { id: "extension", number: "05", kicker: "TIEMPO Y SUSTITUCIÓN", title: "Más allá del espacio", summary: "También señalamos momentos y evitamos repeticiones.", rule: "En una expansión A2, los demostrativos pueden ubicar momentos —esta tarde, aquel año— y pueden reemplazar un sustantivo ya mencionado.", formulas: ["ESTA TARDE", "AQUEL AÑO", "PREFIERO ESA"], examples: [{es:"Esta semana trabajo mucho.",en:"this week"},{es:"Aquel verano fue especial.",en:"that summer long ago"},{es:"¿Qué camisa querés? Esa.",en:"Which shirt? That one."},{es:"Estos son mis amigos.",en:"These are my friends."}], note: "La tilde en éste, ésa o aquéllos ya no es necesaria según la norma actual." },
+  ],
+  traps: [
+    { wrong: "el este libro", right: "este libro", explanation: "El demostrativo ocupa el lugar del artículo." },
+    { wrong: "esto libro", right: "este libro", explanation: "Esto es neutro y nunca acompaña un sustantivo." },
+    { wrong: "esta zapatos", right: "estos zapatos", explanation: "Zapatos es masculino plural." },
+    { wrong: "aquello casa", right: "aquella casa", explanation: "Casa exige la forma femenina singular." },
+  ],
+  practice: [
+    { prompt: "___ móvil que tengo en la mano", options: ["Este", "Ese", "Aquello"], answer: 0, why: "Está junto a quien habla y móvil es masculino singular." },
+    { prompt: "___ montañas de allá", options: ["Estas", "Esos", "Aquellas"], answer: 2, why: "Son lejanas y montañas es femenino plural." },
+    { prompt: "¿Qué es ___? No conozco ese objeto.", options: ["esto", "este", "esta"], answer: 0, why: "No sabemos qué sustantivo es; usamos el neutro." },
+    { prompt: "___ mochila de ahí es tuya.", options: ["Ese", "Esa", "Esos"], answer: 1, why: "Mochila es femenina singular y está a distancia media." },
+    { prompt: "Elegí la combinación correcta", options: ["la esa calle", "esa calle", "eso calle"], answer: 1, why: "El demostrativo va delante del nombre sin artículo." },
+    { prompt: "___ chicos de acá son mis amigos.", options: ["Estos", "Estas", "Aquellos"], answer: 0, why: "Chicos es masculino plural y está cerca." },
+    { prompt: "Para hablar de un verano lejano", options: ["este verano", "aquel verano", "esto verano"], answer: 1, why: "Aquel puede marcar distancia temporal." },
+    { prompt: "¿Qué falda preferís? ___ de ahí.", options: ["Esa", "Eso", "Ese"], answer: 0, why: "Esa reemplaza a falda y conserva el femenino singular." },
+  ],
+  speaking: [
+    { title: "Mesa en tres distancias", prompt: "Elegí objetos cercanos, medios y lejanos. Señalalos con un demostrativo y su nombre.", support: "Este cuaderno, esa ventana, aquellos edificios…" },
+    { title: "Sala de elecciones", prompt: "Compará dos objetos y decidí cuál preferís y por qué.", support: "Prefiero esta lámpara porque es más moderna que esa." },
+    { title: "Álbum del tiempo", prompt: "Señalá un momento actual, uno reciente y uno lejano de tu vida.", support: "Esta semana…, ese mes…, aquel año…" },
+  ],
+  mission: "Construí una escena con nueve elementos: tres cerca, tres a media distancia y tres lejos. Presentalos con demostrativos, después elegí tres sin repetir el sustantivo.",
+};
+
+export const possessionHouse: GrammarWorldData = {
+  slug: "la-casa-de-las-pertenencias",
+  level: "A1",
+  module: "MÓDULO 05 · INVENTARIO CERVANTES",
+  officialTopic: "5. Los posesivos",
+  title: "La Casa de las Pertenencias",
+  displayTitle: "La Casa de\nlas Pertenencias",
+  subtitle: "Mi, tu, su, nuestro y la lógica de pertenecer",
+  intro: "Cada habitación guarda objetos, historias y propietarios. Abrí los baúles de la casa para descubrir quién tiene qué y cómo cambia el posesivo según la cosa poseída.",
+  hero: "/grammar-worlds/possession-house.webp",
+  accent: "#d7ad64",
+  accent2: "#63c49c",
+  motif: "house",
+  duration: "65–80 min",
+  nextPath: "/el-mercado-de-las-cantidades",
+  nextTitle: "El Mercado de las Cantidades",
+  overview: [
+    { label: "RECORRIDO", value: "5 habitaciones" },
+    { label: "PRÁCTICA", value: "8 llaves" },
+    { label: "PRODUCCIÓN", value: "3 inventarios" },
+  ],
+  bigIdea: {
+    eyebrow: "ANTES DE ABRIR LA CASA",
+    title: "El posesivo conecta una pertenencia con una persona.",
+    body: "Mi, tu y su indican quién se relaciona con algo. La forma no describe al propietario: concuerda con la cosa poseída. Por eso una mujer puede decir mi hermano y un hombre puede decir mi hermana.",
+    contrast: [
+      { label: "YO", value: "mi llave / mis llaves", detail: "my" },
+      { label: "VOS / TÚ", value: "tu cuarto / tus cuartos", detail: "your" },
+      { label: "ÉL / ELLA / USTED", value: "su casa / sus casas", detail: "his / her / your" },
+      { label: "NOSOTROS", value: "nuestro hogar", detail: "our" },
+    ],
+  },
+  stations: [
+    { id: "short", number: "01", kicker: "HALL DE LOS DUEÑOS", title: "Mi, tu y su", summary: "Una forma singular y otra plural.", rule: "Mi, tu y su van antes del sustantivo. Solo cambian por número: mi/mis, tu/tus, su/sus.", formulas: ["MI / MIS", "TU / TUS", "SU / SUS"], examples: [{es:"mi pasaporte",en:"my passport"},{es:"mis documentos",en:"my documents"},{es:"tu habitación",en:"your room"},{es:"sus maletas",en:"his / her / your / their bags"}], note: "El plural habla de varias cosas poseídas, no de varias personas propietarias: su casa / sus casas." },
+    { id: "our", number: "02", kicker: "SALÓN DE LA FAMILIA", title: "Nuestro tiene cuatro formas", summary: "Género y número pertenecen al objeto.", rule: "Nuestro concuerda con el sustantivo: nuestro, nuestra, nuestros, nuestras. En variedades con vosotros también existe vuestro, vuestra, vuestros, vuestras.", formulas: ["NUESTRO libro", "NUESTRA casa", "NUESTROS amigos", "NUESTRAS llaves"], examples: [{es:"nuestro barrio",en:"our neighborhood"},{es:"nuestra familia",en:"our family"},{es:"nuestros planes",en:"our plans"},{es:"nuestras fotos",en:"our photos"}], note: "En gran parte de América se usa su para ustedes: su mesa, sus entradas." },
+    { id: "ambiguity", number: "03", kicker: "CUARTO DE LOS SECRETOS", title: "Su puede tener muchos dueños", summary: "El contexto aclara la relación.", rule: "Su puede significar de él, de ella, de usted, de ellos, de ellas o de ustedes. Si hay ambigüedad, usamos de + persona.", formulas: ["SU = DE ÉL / DE ELLA", "SU = DE USTED", "SU = DE ELLOS / USTEDES"], examples: [{es:"Es su libro.",en:"context decides the owner"},{es:"Es el libro de Ana.",en:"Ana's book"},{es:"Es la casa de ellos.",en:"their house"},{es:"¿Es su turno, señora?",en:"Is it your turn, ma'am?"}], note: "Repetir de + nombre no es un error: muchas veces es la forma más clara." },
+    { id: "position", number: "04", kicker: "ARMARIO DE POSICIONES", title: "Antes del sustantivo y sin artículo", summary: "El posesivo ya identifica la pertenencia.", rule: "Los posesivos átonos van delante del sustantivo y no se combinan con artículo. Tampoco aparecen solos.", formulas: ["POSESIVO + SUSTANTIVO", "MI casa", "no: LA MI casa"], examples: [{es:"tu teléfono",en:"your phone"},{es:"nuestra profesora",en:"our teacher"},{es:"sus amigos",en:"their friends"},{es:"mi trabajo",en:"my job"}], note: "No decimos hay mi mochila. Para localizar algo concreto, decimos mi mochila está aquí." },
+    { id: "tonic", number: "05", kicker: "SUITE A2", title: "Mío, tuyo y suyo", summary: "Una expansión para contrastar o reemplazar.", rule: "Las formas tónicas concuerdan con lo poseído y pueden aparecer después del sustantivo o reemplazarlo: mío, mía, míos, mías; tuyo; suyo; nuestro.", formulas: ["ES MÍO / MÍA", "UN AMIGO MÍO", "EL TUYO / LA TUYA"], examples: [{es:"Este libro es mío.",en:"This book is mine."},{es:"Es una amiga mía.",en:"She is a friend of mine."},{es:"Mi casa es grande; la tuya es pequeña.",en:"mine vs yours"},{es:"Ese asiento es suyo.",en:"That seat is yours/his/hers/theirs."}], note: "Con partes del cuerpo usamos normalmente artículo: Me duele la cabeza, no mi cabeza." },
+  ],
+  traps: [
+    { wrong: "mi casas", right: "mis casas", explanation: "El posesivo concuerda con el número de casas." },
+    { wrong: "nuestra amigos", right: "nuestros amigos", explanation: "Amigos es masculino plural." },
+    { wrong: "la mi mochila", right: "mi mochila", explanation: "El posesivo prenominal no se combina con artículo." },
+    { wrong: "Me duele mi cabeza.", right: "Me duele la cabeza.", explanation: "Con partes del cuerpo suele usarse el artículo definido." },
+  ],
+  practice: [
+    { prompt: "Yo tengo un pasaporte. Es ___ pasaporte.", options: ["mi", "mis", "su"], answer: 0, why: "El dueño es yo y el objeto es singular." },
+    { prompt: "Vos tenés dos entradas. Son ___ entradas.", options: ["tu", "tus", "sus"], answer: 1, why: "Entradas es plural: tus." },
+    { prompt: "Nosotros vivimos acá. Es ___ casa.", options: ["nuestro", "nuestra", "nuestras"], answer: 1, why: "Casa es femenina singular." },
+    { prompt: "Ana tiene un perro. Es ___ perro.", options: ["mi", "su", "sus"], answer: 1, why: "Su conecta a Ana con un objeto singular." },
+    { prompt: "Elegí la forma correcta", options: ["los mis libros", "mis libros", "mi libros"], answer: 1, why: "Mis concuerda con el plural y no lleva artículo." },
+    { prompt: "Nosotros tenemos planes. Son ___ planes.", options: ["nuestra", "nuestros", "nuestro"], answer: 1, why: "Planes es masculino plural." },
+    { prompt: "Este abrigo pertenece a mí. Es ___.", options: ["mío", "mía", "mi"], answer: 0, why: "Abrigo es masculino singular; usamos la forma tónica mío." },
+    { prompt: "Para eliminar una ambigüedad", options: ["su mochila", "la mochila de Leo", "sus mochila"], answer: 1, why: "De Leo identifica al propietario con precisión." },
+  ],
+  speaking: [
+    { title: "Baúl de viaje", prompt: "Elegí seis objetos de una valija y explicá a quién pertenece cada uno.", support: "Este es mi pasaporte; esas son sus gafas…" },
+    { title: "Retrato de una casa", prompt: "Describí una casa compartida usando mi, tu, su y nuestro.", support: "Esta es nuestra cocina. Mi taza está junto a tu taza." },
+    { title: "Objetos perdidos", prompt: "Compará objetos parecidos y devolvelos a la persona correcta.", support: "Este paraguas no es mío; creo que es suyo." },
+  ],
+  mission: "Organizá doce objetos de una casa entre cuatro personas. Presentá cada pertenencia, aclará dos casos ambiguos con de + nombre y contrastá tres objetos con mío, tuyo o suyo.",
+};
+
+export const quantityMarket: GrammarWorldData = {
+  slug: "el-mercado-de-las-cantidades",
+  level: "A1",
+  module: "MÓDULO 06 · INVENTARIO CERVANTES",
+  officialTopic: "6. Los cuantificadores",
+  title: "El Mercado de las Cantidades",
+  displayTitle: "El Mercado de\nlas Cantidades",
+  subtitle: "Números, cantidades y comparaciones para comprar mejor",
+  intro: "En este mercado, cada decisión depende de cuánto hay, cuánto falta y cuánto necesitás. Recorré los puestos y convertí números y cantidades en español útil.",
+  hero: "/grammar-worlds/quantity-market.webp",
+  accent: "#e6a64f",
+  accent2: "#49c1b4",
+  motif: "market",
+  duration: "70–85 min",
+  overview: [
+    { label: "RECORRIDO", value: "5 puestos" },
+    { label: "PRÁCTICA", value: "8 compras" },
+    { label: "PRODUCCIÓN", value: "3 pedidos" },
+  ],
+  bigIdea: {
+    eyebrow: "ANTES DE ABRIR EL MERCADO",
+    title: "Los cuantificadores expresan número, cantidad o grado.",
+    body: "Podemos contar con números —dos manzanas—, indicar una cantidad aproximada —poco arroz, muchas frutas— o comparar —más café, menos azúcar—. Algunas formas cambian para concordar y otras permanecen iguales.",
+    contrast: [
+      { label: "NÚMERO", value: "tres naranjas", detail: "exacto" },
+      { label: "POCO", value: "poca leche", detail: "cantidad baja" },
+      { label: "MUCHO", value: "muchos tomates", detail: "cantidad alta" },
+      { label: "SUFICIENTE", value: "bastante pan", detail: "cantidad adecuada" },
+    ],
+  },
+  stations: [
+    { id: "numbers", number: "01", kicker: "PUESTO DE LOS NÚMEROS", title: "Contar y ordenar", summary: "Los cardinales cuentan; los ordinales ordenan.", rule: "Los cardinales expresan cantidad exacta. Uno cambia a un/una delante del sustantivo. Los ordinales básicos concuerdan con género y número.", formulas: ["UN kilo / UNA botella", "DOS · TRES · CUATRO…", "PRIMERO / PRIMERA"], examples: [{es:"un kilo de papas",en:"one kilo of potatoes"},{es:"veintiuna botellas",en:"twenty-one bottles"},{es:"dos cafés",en:"two coffees"},{es:"la primera tienda",en:"the first shop"}], note: "Primero y tercero pierden la -o delante de un sustantivo masculino singular: el primer puesto, el tercer día." },
+    { id: "basic", number: "02", kicker: "BALANZA PRINCIPAL", title: "Poco, mucho y bastante", summary: "Tres niveles de cantidad aproximada.", rule: "Poco y mucho concuerdan con el sustantivo. Bastante cambia solo por número: bastante/bastantes.", formulas: ["POCO / POCA / POCOS / POCAS", "MUCHO / MUCHA / MUCHOS / MUCHAS", "BASTANTE / BASTANTES"], examples: [{es:"poco tiempo",en:"little time"},{es:"pocas monedas",en:"few coins"},{es:"mucha fruta",en:"a lot of fruit"},{es:"bastantes opciones",en:"enough / quite a few options"}], note: "Con un verbo, mucho y poco no cambian: Trabajo mucho. Dormimos poco." },
+    { id: "all", number: "03", kicker: "PUESTO COMPLETO", title: "Todo necesita compañía", summary: "Expresa totalidad y suele incluir artículo.", rule: "Todo concuerda con género y número. Delante de un sustantivo definido usamos todo + artículo + sustantivo.", formulas: ["TODO EL día", "TODA LA semana", "TODOS LOS días", "TODAS LAS personas"], examples: [{es:"todo el pan",en:"all the bread"},{es:"toda la fruta",en:"all the fruit"},{es:"todos los mercados",en:"all the markets"},{es:"todas las mañanas",en:"every morning"}], note: "Todos días es incorrecto en español estándar: necesitamos todos los días." },
+    { id: "other", number: "04", kicker: "PUESTO DE LOS EXTREMOS", title: "Otro, demasiado, nada y nadie", summary: "Añadir, exceder o indicar cero.", rule: "Otro añade una unidad o alternativa y no lleva un/una delante. Demasiado indica exceso. Nada se refiere a cosas y nadie a personas.", formulas: ["OTRO café", "DEMASIADA sal", "NADA = cero cosas", "NADIE = cero personas"], examples: [{es:"Quiero otra empanada.",en:"I want another empanada."},{es:"Hay demasiada sal.",en:"There is too much salt."},{es:"No necesito nada.",en:"I don't need anything."},{es:"No hay nadie.",en:"There is nobody."}], note: "En frases negativas es normal la doble marca: No veo a nadie. No compro nada." },
+    { id: "compare", number: "05", kicker: "BALANZA A2", title: "Más, menos, tan y tanto", summary: "Comparamos cantidad y grado.", rule: "Más y menos comparan. Tan intensifica adjetivos o adverbios; tanto cuantifica sustantivos y concuerda cuando los acompaña.", formulas: ["MÁS / MENOS + sustantivo", "TAN + adjetivo", "TANTO / TANTA + sustantivo", "TAMBIÉN / TAMPOCO"], examples: [{es:"Quiero más agua.",en:"I want more water."},{es:"Necesito menos bolsas.",en:"I need fewer bags."},{es:"No es tan caro.",en:"It isn't so expensive."},{es:"No compro tanta comida.",en:"I don't buy that much food."}], note: "También añade una idea afirmativa; tampoco añade una negativa: Yo también. Yo tampoco." },
+  ],
+  traps: [
+    { wrong: "mucha calor", right: "mucho calor", explanation: "Calor es masculino en el uso estándar general." },
+    { wrong: "todos días", right: "todos los días", explanation: "Todo + sustantivo definido necesita artículo." },
+    { wrong: "una otra bolsa", right: "otra bolsa", explanation: "Otro no lleva un/una delante." },
+    { wrong: "muy comida", right: "mucha comida", explanation: "Muy intensifica adjetivos; mucho cuantifica sustantivos." },
+  ],
+  practice: [
+    { prompt: "Necesito ___ botella de agua.", options: ["un", "una", "uno"], answer: 1, why: "Botella es femenina singular." },
+    { prompt: "Hay ___ tomates en la caja.", options: ["muchos", "mucho", "mucha"], answer: 0, why: "Tomates es masculino plural." },
+    { prompt: "Tengo ___ tiempo hoy.", options: ["pocas", "poco", "pocos"], answer: 1, why: "Tiempo es masculino singular e incontable en este contexto." },
+    { prompt: "Trabajo ___ los días.", options: ["todos", "todos los", "todo"], answer: 1, why: "La estructura es todos los + sustantivo plural." },
+    { prompt: "Quiero ___ café, por favor.", options: ["otro", "un otro", "otra"], answer: 0, why: "Otro va sin artículo indefinido y concuerda con café." },
+    { prompt: "No hay ___ en el puesto.", options: ["nada", "nadie", "ningunos"], answer: 1, why: "Nadie se refiere a personas." },
+    { prompt: "Esta sopa tiene ___ sal.", options: ["demasiado", "demasiada", "demasiadas"], answer: 1, why: "Sal es femenina singular y demasiado concuerda." },
+    { prompt: "Este mercado no es ___ caro.", options: ["tanto", "tan", "mucho"], answer: 1, why: "Tan intensifica el adjetivo caro." },
+  ],
+  speaking: [
+    { title: "Canasta exacta", prompt: "Armá una compra de ocho productos y decidí cantidades concretas.", support: "Quiero dos kilos de papas y una botella de aceite." },
+    { title: "Puestos opuestos", prompt: "Compará dos puestos usando más, menos, mucho, poco y bastante.", support: "Este tiene más fruta, pero aquel tiene menos gente." },
+    { title: "Compra responsable", prompt: "Explicá qué comprás mucho, poco o nunca y por qué.", support: "Compro bastante verdura porque cocino en casa." },
+  ],
+  mission: "Planificá una compra para una cena de cuatro personas. Incluí diez productos, cantidades exactas, dos comparaciones y una corrección por exceso o falta.",
 };
