@@ -20,12 +20,17 @@
 .gw-observatory .gw-hero-image{animation-name:gwObservatory}
 .gw-house .gw-hero-image{animation-name:gwHouse}
 .gw-market .gw-hero-image{animation-name:gwMarket}
+.gw-central .gw-hero-image{animation-name:gwCentral}.gw-tower .gw-hero-image{animation-name:gwTower}.gw-city .gw-hero-image{animation-name:gwCity}
 .gw-observatory .gw-depth-one{border-radius:50%;animation-duration:22s}
 .gw-house .gw-depth-one{border-radius:4px;transform:rotate(5deg)}
 .gw-market .gw-depth-one{border-radius:48% 52% 42% 58%}
+.gw-central .gw-depth-one{border-radius:50%;transform:rotate(-7deg)}.gw-tower .gw-depth-one{border-radius:3px;transform:rotate(11deg)}.gw-city .gw-depth-one{border-radius:35% 65% 55% 45%}
 @keyframes gwObservatory{from{transform:scale(1.015) translate3d(0,0,0)}to{transform:scale(1.08) translate3d(-1.2%,.5%,0)}}
 @keyframes gwHouse{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.07) translate3d(-.7%,-.5%,0)}}
 @keyframes gwMarket{from{transform:scale(1.015) translate3d(0,0,0)}to{transform:scale(1.075) translate3d(-1%,.35%,0)}}
+@keyframes gwCentral{from{transform:scale(1.015) translate3d(0,0,0)}to{transform:scale(1.07) translate3d(-.9%,-.25%,0)}}
+@keyframes gwTower{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.075) translate3d(-.4%,-.8%,0)}}
+@keyframes gwCity{from{transform:scale(1.015) translate3d(0,0,0)}to{transform:scale(1.08) translate3d(-1.1%,.2%,0)}}
 @media(max-width:700px){.gw-official-topic{align-items:flex-start;flex-direction:column;gap:3px;padding:8px 10px}.gw-official-topic small{white-space:normal}.gw-official-topic b{font-size:16px}}
 
 .gw-world{padding:96px clamp(22px,6vw,96px);background:#070d18;color:#fff;scroll-margin-top:70px;overflow:hidden}
@@ -64,6 +69,7 @@
 .gw-observatory .gw-world-scene img{object-position:center 48%}
 .gw-house .gw-world-scene img{object-position:center 45%}
 .gw-market .gw-world-scene img{object-position:center 55%}
+.gw-central .gw-world-scene img{object-position:center 56%}.gw-tower .gw-world-scene img{object-position:center 48%}.gw-city .gw-world-scene img{object-position:center 52%}
 @keyframes gwWorldBreathe{from{transform:scale(1.01) translate3d(0,0,0)}to{transform:scale(1.055) translate3d(-.6%,-.3%,0)}}
 @keyframes gwBeacon{50%{opacity:.35;transform:scale(.7)}}
 @media(max-width:980px){.gw-world-console{grid-template-columns:repeat(3,1fr)}.gw-curriculum{grid-template-columns:1fr 1fr}.gw-curriculum>div{grid-column:1/-1}}

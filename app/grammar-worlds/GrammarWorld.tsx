@@ -90,7 +90,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
       </section>}
 
       <section className="gw-map" id="gw-map">
-        <header><span>RECORRIDO INTERACTIVO</span><h2>Una idea por estación.<br />Todo conectado.</h2><p>Elegí una estación. Visitá las cinco para completar el módulo; usá las flechas del teclado si preferís avanzar sin tocar la pantalla.</p></header>
+        <header><span>RECORRIDO INTERACTIVO</span><h2>Una idea por estación.<br />Todo conectado.</h2><p>Elegí una estación. Visitá las {data.stations.length} para completar el módulo; usá las flechas del teclado si preferís avanzar sin tocar la pantalla.</p></header>
         <div className="gw-map-layout">
           <nav className="gw-station-nav" aria-label="Estaciones de la clase">
             {data.stations.map((item, index) => <button key={item.id} className={index === activeStation ? "active" : ""} onClick={() => openStation(index)} aria-pressed={index === activeStation}>
@@ -114,7 +114,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
       </section>
 
       <section className="gw-practice">
-        <header><span>LABORATORIO A1</span><h2>Elegí. Comprobá. Entendé.</h2><p>Las respuestas no aparecen antes de decidir. Al final recibís una explicación para cada elección.</p></header>
+        <header><span>LABORATORIO {data.level}</span><h2>Elegí. Comprobá. Entendé.</h2><p>Las respuestas no aparecen antes de decidir. Al final recibís una explicación para cada elección.</p></header>
         <div className="gw-quiz-grid">{data.practice.map((item, index) => <article key={item.prompt} className={showResults ? (answers[index] === item.answer ? "correct" : "incorrect") : ""}>
           <span>{String(index + 1).padStart(2, "0")}</span><h3>{item.prompt}</h3><div>{item.options.map((option, optionIndex) => <button key={option} className={answers[index] === optionIndex ? "selected" : ""} onClick={() => { setAnswers(current => ({ ...current, [index]: optionIndex })); setShowResults(false); }}>{option}</button>)}</div>
           {showResults && <p><b>{answers[index] === item.answer ? "CORRECTO" : `RESPUESTA: ${item.options[item.answer]}`}</b>{item.why}</p>}

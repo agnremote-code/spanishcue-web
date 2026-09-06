@@ -34,7 +34,7 @@ export type GrammarWorldData = {
   hero: string;
   accent: string;
   accent2: string;
-  motif: "factory" | "atelier" | "gallery" | "observatory" | "house" | "market";
+  motif: "factory" | "atelier" | "gallery" | "observatory" | "house" | "market" | "central" | "tower" | "city";
   duration: string;
   world?: {
     eyebrow: string;
@@ -486,6 +486,8 @@ export const quantityMarket: GrammarWorldData = {
   accent2: "#49c1b4",
   motif: "market",
   duration: "70–85 min",
+  nextPath: "/la-central-de-las-identidades",
+  nextTitle: "La Central de las Identidades",
   world: {
     eyebrow: "RECORRIDO 3D DEL MERCADO",
     title: "Medí antes de llenar la canasta.",
