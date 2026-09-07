@@ -1,10 +1,10 @@
 export type Elimination = {
   id: string; title: string; group: string; intro: string;
-  question: string; consequence: string; words: string[]; starter: string;
+  question: string; consequence: string; questionEn?: string; words: string[]; starter: string;
 };
 export type AbsurdRule = {
   id: string; title: string; group: string; law: string; scene: string;
-  questions: [string, string, string]; words: string[]; starter: string;
+  questions: [string, string, string]; questionsEn?: [string,string,string]; lawEn?: string; words: string[]; starter: string;
 };
 
 // All consequences are fictional scenario constraints, not factual predictions.

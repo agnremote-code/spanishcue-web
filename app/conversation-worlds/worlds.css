@@ -14,3 +14,5 @@
 .cw-world[data-motion=false] *{animation-play-state:paused!important;transition:none!important}.cw-world[data-motion=false] .cw-panorama{transform:none}.cw-world[data-motion=false] .cw-round-tile,.cw-world[data-motion=false] .cw-rule-card,.cw-world[data-motion=false] .cw-rule-question,.cw-world[data-motion=false] .cw-consequence{animation:none;opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.cw-world *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.cw-panorama{transform:none!important}}
 @media print{.cw-world{background:white;color:black}.cw-topbar,.cw-scene-column,.cw-rounds,.cw-footer{display:none}.cw-activity,.cw-intro{display:block}.cw-card{background:white;color:black;box-shadow:none}.cw-flip-inner,.cw-back-face{transform:none!important}.cw-front[aria-hidden=true],.cw-back-face[aria-hidden=true]{display:none}.cw-question,.cw-context,.cw-law{color:black}.cw-consequence>p{color:black!important}}
+
+.cw-top-actions{flex-wrap:wrap}.cw-translation{font-size:15px;line-height:1.65;color:#bfcde0;border-left:2px solid var(--cw-accent,#7dd3fc);padding-left:14px;margin:14px 0 22px}
