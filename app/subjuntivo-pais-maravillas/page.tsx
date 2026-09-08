@@ -5,7 +5,7 @@ import Link from "next/link";
 import { finalDiagnostic, irregularGroups, tables, units, type GrammarTable, type Unit } from "./data";
 import "./style.css";
 
-type Screen = "cover" | "map" | "chapter" | "atlas";
+type Screen = "intro" | "cover" | "map" | "chapter" | "atlas";
 
 const sequence = [
   ["AHORA / DESPUÉS", "Quiero que vengas", "Presente"],
@@ -68,7 +68,7 @@ function Nav({ screen, setScreen, progress }: { screen: Screen; setScreen: (s: S
 }
 
 export default function SubjuntivoWonderland() {
-  const [screen, setScreen] = useState<Screen>("cover");
+  const [screen, setScreen] = useState<Screen>("intro");
   const [unitIndex, setUnitIndex] = useState(0);
   const [visited, setVisited] = useState<Set<string>>(new Set());
   const [revealed, setRevealed] = useState<Set<string>>(new Set());
@@ -90,6 +90,8 @@ export default function SubjuntivoWonderland() {
     return next;
   });
 
+  if (screen === "intro") return <GrammarIntro onContinue={() => { setScreen("cover"); window.scrollTo({ top: 0 }); }} />;
+
   if (screen === "cover") return (
     <main className="sj-app sj-cover">
       <Dust />
@@ -103,7 +105,8 @@ export default function SubjuntivoWonderland() {
           <button onClick={() => setScreen("map")}>CAER POR LA MADRIGUERA <span>→</span></button>
           <button onClick={() => setScreen("atlas")}>ABRIR EL ATLAS</button>
         </div>
-        <div className="sj-cover-stats"><span><b>08</b> mundos</span><span><b>07</b> tiempos</span><span><b>32</b> desafíos</span></div>
+        <div className="sj-cover-stats"><span><b>08</b> mundos</span><span><b>06</b> tiempos</span><span><b>32</b> desafíos</span></div>
+        <button className="sj-intro-back" onClick={() => { setScreen("intro"); window.scrollTo({ top: 0 }); }}>Repasar modo, tiempo y condicional</button>
       </div>
       <div className="sj-cover-art"><Scene src="/subjuntivo/alicia-hero.webp" alt="Una joven aventurera cae por una biblioteca imposible llena de puertas, relojes y naipes" /></div>
       <div className="sj-falling-word word-a">QUIERO QUE</div><div className="sj-falling-word word-b">OJALÁ</div><div className="sj-falling-word word-c">AUNQUE</div>
@@ -116,6 +119,60 @@ export default function SubjuntivoWonderland() {
       {screen === "map" && <MapScreen openUnit={openUnit} visited={visited} setScreen={setScreen} />}
       {screen === "chapter" && <Chapter unit={active} index={unitIndex} tableMap={tableMap} revealed={revealed} reveal={reveal} openUnit={openUnit} setScreen={setScreen} />}
       {screen === "atlas" && <Atlas setScreen={setScreen} openUnit={openUnit} />}
+    </main>
+  );
+}
+
+function GrammarIntro({ onContinue }: { onContinue: () => void }) {
+  return (
+    <main className="sj-app sj-intro">
+      <div className="sj-intro-wrap">
+        <Link href="/" className="sj-eyebrow">CHESPANISH · GRAMÁTICA</Link>
+        <header className="sj-intro-heading">
+          <span>ANTES DE LA AVENTURA</span>
+          <h1>Modo, tiempo<br />y <em>condicional</em></h1>
+          <p>Antes de seguir a Alicia, ubicá cada pieza: una cosa es el modo, otra el tiempo y otra una oración con una condición.</p>
+        </header>
+
+        <section className="sj-intro-pair" aria-label="Modo versus tiempo">
+          <article><span>01 · MODO</span><h2>¿Cómo lo presentás?</h2><p>Expresa cómo el hablante plantea una situación: como una afirmación, un deseo, una duda o una instrucción.</p><p><strong>Indicativo:</strong> Alicia tiene la llave.<br /><strong>Subjuntivo:</strong> Ojalá Alicia tenga la llave.<br /><strong>Imperativo:</strong> Alicia, buscá la llave.</p></article>
+          <article><span>02 · TIEMPO</span><h2>¿Cuándo lo situás?</h2><p>Ubica una situación respecto del presente o de otro momento. Dentro de un mismo modo hay distintos tiempos.</p><p><strong>Presente:</strong> Alicia abre la puerta.<br /><strong>Pretérito:</strong> Alicia abrió la puerta.<br /><strong>Futuro:</strong> Alicia abrirá la puerta.</p><p>Los tres ejemplos están en indicativo.</p></article>
+        </section>
+
+        <section className="sj-intro-count">
+          <span>EL MAPA DEL ESPAÑOL</span><h2>3 modos · 16 tiempos</h2>
+          <p>En el cuadro académico: <strong>10 tiempos de indicativo + 6 de subjuntivo</strong>. El imperativo es el tercer modo, pero no tiene una serie de tiempos como los otros dos.</p>
+          <p><strong>Simple:</strong> abriría. <strong>Compuesto:</strong> habría abierto, con haber + participio.</p>
+          <details><summary>Ver los 16 tiempos con ejemplos</summary>
+            <div className="sj-intro-pair">
+              <div><h3>Indicativo · 10</h3><ul>
+                <li>Presente: abro</li><li>Pretérito imperfecto: abría</li><li>Pretérito perfecto simple: abrí</li><li>Futuro simple: abriré</li><li><strong>Condicional simple: abriría</strong></li>
+                <li>Pretérito perfecto compuesto: he abierto</li><li>Pretérito pluscuamperfecto: había abierto</li><li>Pretérito anterior: hube abierto</li><li>Futuro compuesto: habré abierto</li><li><strong>Condicional compuesto: habría abierto</strong></li>
+              </ul></div>
+              <div><h3>Subjuntivo · 6</h3><ul>
+                <li>Presente: abra</li><li>Pretérito imperfecto: abriera / abriese</li><li>Pretérito perfecto compuesto: haya abierto</li><li>Pretérito pluscuamperfecto: hubiera / hubiese abierto</li><li>Futuro simple: abriere</li><li>Futuro compuesto: hubiere abierto</li>
+              </ul><p>El pretérito anterior y los dos futuros del subjuntivo tienen hoy un uso muy limitado.</p></div>
+            </div>
+          </details>
+          <p>Si encontrás un total de 18, revisá qué cuenta esa lista: <strong>abriera y abriese son variantes del mismo tiempo</strong>; también lo son hubiera abierto y hubiese abierto. No suman tiempos nuevos.</p>
+          <a href="https://www.rae.es/gramática-básica/el-verbo/tiempos-verbales-del-español/definición" target="_blank" rel="noreferrer">Consultar el cuadro de tiempos de la RAE y la ASALE ↗</a>
+        </section>
+
+        <section className="sj-intro-conditional">
+          <span>¿DÓNDE ENCAJA EL CONDICIONAL?</span><h2>Un tiempo del indicativo</h2>
+          <p>El <strong>condicional simple</strong> (abriría) y el <strong>compuesto</strong> (habría abierto) pertenecen al indicativo en la clasificación académica. Aunque puedan expresar situaciones imaginadas, no pasan por eso al subjuntivo.</p>
+          <blockquote>Si Alicia <strong>tuviera</strong> la llave, <strong>abriría</strong> la puerta.</blockquote>
+          <div className="sj-intro-pair">
+            <article><span>LA CONDICIÓN</span><h3>Si Alicia tuviera la llave</h3><p><strong>Modo:</strong> subjuntivo.<br /><strong>Tiempo:</strong> pretérito imperfecto.</p><p>Imaginamos que tiene una llave que ahora no tiene, o cuya posesión planteamos como hipotética.</p></article>
+            <article><span>EL RESULTADO</span><h3>Abriría la puerta</h3><p><strong>Modo:</strong> indicativo.<br /><strong>Tiempo:</strong> condicional simple.</p><p>Expresamos lo que ocurriría si se cumpliera esa condición.</p></article>
+          </div>
+          <p>Para imaginar otro pasado: <strong>Si Alicia hubiera tenido la llave, habría abierto la puerta.</strong> Combinamos pluscuamperfecto de subjuntivo y condicional compuesto.</p>
+          <p>Una <strong>oración condicional</strong> no siempre lleva un verbo en condicional: «Si Alicia encuentra la llave, abrirá la puerta» combina presente y futuro de indicativo.</p>
+          <p>Y el nombre de un tiempo no lo explica todo: «tuviera» se llama pretérito imperfecto, pero en nuestro ejemplo plantea una hipótesis sobre el presente.</p>
+        </section>
+
+        <footer className="sj-intro-footer"><p>Ya ubicás las piezas. Ahora entrá al País del Subjuntivo y descubrí cómo se combinan.</p><button onClick={onContinue}>CONTINUAR A LA INTRODUCCIÓN →</button></footer>
+      </div>
     </main>
   );
 }
