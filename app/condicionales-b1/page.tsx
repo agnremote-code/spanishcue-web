@@ -3,6 +3,7 @@
 import { useState, type CSSProperties } from "react";
 import "../condicionales/style.css";
 import "./style.css";
+import ModoTiempoIntro from "./ModoTiempoIntro";
 import { comparacionFinal, diagnostico, unidades, type Tabla, type Unidad } from "./data";
 
 type Pantalla = "portada" | "mapa" | "unidad" | "resumen";
@@ -65,6 +66,7 @@ export default function CondicionalesB1Page() {
         <a href="/" className="co-brand"><span><img src="/chespanish-guide-avatar.png" alt="" /></span><div><b>CHESPANISH</b><small>AVENTURAS GRAMATICALES</small></div></a>
         <div className="co-progress"><span>PROGRESO</span><i><b style={{ width: `${progreso}%` }} /></i><strong>{visitadas.size}/{unidades.length}</strong></div>
         <div className="co-nav-actions">
+          <button onClick={() => mostrar("mapa")}>INTRODUCCIÓN</button>
           <button onClick={() => mostrar("resumen")}>RESUMEN</button>
           <button onClick={() => mostrar(pantalla === "portada" ? "mapa" : "portada")}>{pantalla === "portada" ? "RUTA" : "INICIO"}</button>
         </div>
@@ -78,8 +80,8 @@ export default function CondicionalesB1Page() {
             <div className="co-kicker"><span>B1 PROGRESIVO</span> CLASE COMPLETA · 100% EN ESPAÑOL</div>
             <p className="co-overline">GRAMÁTICA PURA · UNA REGLA POR VEZ</p>
             <h1>CONDICIONALES<br /><em>PASO A PASO</em></h1>
-            <p className="co-lead">Un recorrido ordenado por <b>todo el sistema condicional</b>. Primero entendemos la lógica general. Después estudiamos el cero, el primero, el segundo, el tercero y los mixtos, sin adelantar estructuras ni mezclar tiempos.</p>
-            <div className="co-cover-actions"><button onClick={() => mostrar("mapa")}>EMPEZAR POR LA INTRODUCCIÓN <span>→</span></button><button className="ghost" onClick={() => mostrar("resumen")}>VER EL CUADRO FINAL</button></div>
+            <p className="co-lead">Un recorrido ordenado por <b>todo el sistema condicional</b>. Primero distinguimos modo y tiempo verbal: tres modos, el inventario de tiempos y el lugar del condicional. Después entendemos la lógica general. Después estudiamos el cero, el primero, el segundo, el tercero y los mixtos, sin adelantar estructuras ni mezclar tiempos.</p>
+            <div className="co-cover-actions"><button onClick={() => mostrar("mapa")}>EMPEZAR · MODO Y TIEMPO <span>→</span></button><button className="ghost" onClick={() => mostrar("resumen")}>VER EL CUADRO FINAL</button></div>
             <div className="co-cover-stats"><article><b>5</b><span>bloques separados</span></article><article><b>10</b><span>tablas gramaticales</span></article><article><b>20</b><span>prácticas explicadas</span></article></div>
           </div>
           <div className="co-heroes" aria-hidden="true">
@@ -93,7 +95,8 @@ export default function CondicionalesB1Page() {
 
       {pantalla === "mapa" && (
         <section className="co-map">
-          <header className="co-map-head">
+          <ModoTiempoIntro />
+          <header className="co-map-head" id="introduccion-condicionales">
             <div><span>INTRODUCCIÓN GENERAL · ANTES DE CONJUGAR</span><h1>Primero entendé<br />cómo funciona el sistema.</h1></div>
             <div><p>Una oración condicional relaciona <b>una condición</b> con <b>una consecuencia</b>. La forma verbal cambia según dos decisiones: qué relación tiene la condición con la realidad y en qué momento ocurre cada parte.</p><button onClick={() => entrar(unidades.find((unidad) => !visitadas.has(unidad.id)) || unidades[0])}>CONTINUAR POR ORDEN →</button></div>
           </header>

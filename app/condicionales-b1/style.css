@@ -111,3 +111,36 @@
   .cb-diagnostico article p{font-size:15px}
   .co-b1 .co-final-mission>div{grid-template-columns:1fr}
 }
+
+/* Preliminary grammar map: separate readable surfaces, matching the course palette. */
+.co-b1 .cb-modo-intro{max-width:1440px;margin:0 auto 80px;color:#19243a;scroll-margin-top:110px}
+.cb-modo-heading{background:linear-gradient(135deg,#111b32,#282046);color:#fff;padding:clamp(24px,4vw,56px);border-top:6px solid #a28aff;box-shadow:0 18px 40px #21172f20}
+.cb-modo-heading>span{font-size:14px;letter-spacing:.08em;font-weight:800;color:#c5b6ff}
+.cb-modo-heading h1{font:700 clamp(30px,4vw,54px)/1.15 "Fraunces",serif;margin:18px 0;letter-spacing:-.02em}
+.cb-modo-intro p{font-size:17px;line-height:1.75;max-width:1050px;margin:14px 0;color:inherit}
+.cb-modo-heading p{color:#e0e5f1}
+.cb-modo-step{margin-top:36px;padding:clamp(20px,3vw,34px);background:#fff;box-shadow:0 10px 28px #21172f0d;border:1px solid #e3ddea}
+.cb-modo-step h2{font:700 clamp(25px,3vw,35px)/1.25 "Fraunces",serif;margin:0 0 20px}
+.cb-modo-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}
+.cb-modo-cards article{min-width:0;background:#f5f3fb;border-top:4px solid #8466c9;padding:23px}
+.cb-modo-cards article:nth-child(2){border-color:#25847b}.cb-modo-cards article:nth-child(3){border-color:#b88725}
+.cb-modo-cards small{font-size:14px;font-weight:800;line-height:1.5;color:#53477a;display:block}
+.cb-modo-cards h3{font-size:23px;line-height:1.4;margin:14px 0;overflow-wrap:anywhere}
+.cb-modo-cards p{font-size:16px;line-height:1.7}
+.cb-modo-cards em{display:block;font-size:20px;line-height:1.5;font-style:normal;font-weight:750;color:#48327c}
+.cb-modo-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cb-modo-intro .cb-modo-note{padding:20px 24px;background:#eef3fa;border-left:4px solid #5683b6;max-width:none}
+.cb-modo-counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:24px 0}
+.cb-modo-counts article{padding:22px;background:#19243a;color:#fff;display:flex;flex-direction:column;gap:8px;min-width:0}
+.cb-modo-counts b{font:700 38px/1.2 "Fraunces",serif}.cb-modo-counts span{font-size:16px;line-height:1.5;color:#e0e5f1}
+.cb-modo-intro summary{padding:18px 0;font-size:17px;font-weight:750;cursor:pointer;color:#48327c}
+.cb-modo-inventory{margin:20px 0;border-block:1px solid #ded6ec}.cb-modo-inventory h3{font-size:20px;line-height:1.5}
+.cb-modo-table-scroll{overflow-x:auto}.cb-modo-intro table{border-collapse:collapse;width:100%;min-width:640px;font-size:16px;text-align:left}
+.cb-modo-intro th{background:#19243a;color:#fff}.cb-modo-intro td,.cb-modo-intro th{padding:14px;line-height:1.5;border:1px solid #ded6ec}.cb-modo-intro tr:nth-child(even){background:#f5f3fb}
+.cb-modo-conditional{border-top:5px solid #8466c9}.cb-modo-intro .cb-modo-example{font:700 clamp(24px,3vw,36px)/1.4 "Fraunces",serif;color:#48327c}
+.cb-modo-sources{margin-top:24px}.cb-modo-sources a{color:#48327c;text-decoration:underline}
+.cb-modo-continue{display:inline-block;background:#48327c;color:#fff;padding:18px 24px;text-decoration:none;font-weight:750;font-size:16px;line-height:1.5;margin-top:20px}
+.cb-modo-intro :is(a,summary):focus-visible{outline:3px solid #25847b;outline-offset:5px}
+.co-b1 #introduccion-condicionales{scroll-margin-top:110px}.co-b1 .co-nav-actions{flex-wrap:wrap}
+@media(max-width:850px){.cb-modo-cards{grid-template-columns:1fr}.cb-modo-counts{grid-template-columns:1fr}.cb-modo-counts article{flex-direction:row;align-items:center;gap:20px}.cb-modo-counts b{min-width:100px}}
+@media(max-width:620px){.co-b1 .co-nav-actions button{font-size:12px;padding:9px}.cb-modo-heading h1{font-size:30px}.cb-modo-cards article{padding:18px}}
