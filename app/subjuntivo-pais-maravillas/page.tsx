@@ -1,4 +1,6 @@
 "use client";
+import VerbalPosition from "../verbal-system/VerbalPosition";
+import {subjunctivePosition} from "../verbal-system/positions";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -46,6 +48,7 @@ function Table({ table }: { table: GrammarTable }) {
         <h3>{table.title}</h3>
         <p>{table.formula}</p>
       </header>
+      <VerbalPosition items={[subjunctivePosition[table.id]]} compact />
       <div className="sj-table-scroll">
         <div className="sj-table-head"><b>PERSONA</b><b>HABLAR</b><b>COMER</b><b>VIVIR</b><b>SER</b></div>
         {table.rows.map((row) => <div className="sj-table-row" key={row[0]}>{row.map((cell, i) => i === 0 ? <span key={cell}>{cell}</span> : <b key={cell}>{cell}</b>)}</div>)}
@@ -230,6 +233,7 @@ function Chapter({ unit, index, tableMap, revealed, reveal, openUnit, setScreen 
       </header>
 
       <div className="sj-chapter-body">
+        <VerbalPosition items={unit.tables.map(id=>subjunctivePosition[id])} context="El subjuntivo es un modo. Cada tiempo que aparece abajo ocupa un lugar dentro de ese modo; los disparadores, las relativas y la concordancia temporal son construcciones o relaciones, no tiempos nuevos." />
         <section className="sj-learning-order"><span>RUTA DE APRENDIZAJE</span><div>{["ENTENDER", "FORMAR", "CONTRASTAR", "PRACTICAR", "HABLAR"].map((label, i) => <span key={label}><b>{i + 1}</b>{label}</span>)}</div></section>
 
         <section className="sj-concept">

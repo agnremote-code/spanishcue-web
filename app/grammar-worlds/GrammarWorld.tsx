@@ -3,6 +3,8 @@
 import { CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 import type { GrammarWorldData } from "./data";
 import "./style.css";
+import VerbalPosition from "../verbal-system/VerbalPosition";
+import {verbStationPosition} from "../verbal-system/positions";
 
 export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
   const [activeStation, setActiveStation] = useState(0);
@@ -99,6 +101,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
           </nav>
           <article className="gw-station-card" key={station.id}>
             <div className="gw-station-head"><span>{station.number}</span><div><small>{station.kicker}</small><h3>{station.title}</h3><p>{station.summary}</p></div></div>
+            {data.slug === "la-ciudad-de-los-motores" && <VerbalPosition items={verbStationPosition[station.id]} context={station.id === "choice" ? "Ser, estar y haber son verbos. Aquí los comparamos conjugados en presente de indicativo: es, está y hay." : station.id === "future" ? "Hablamos del futuro con una perífrasis. El significado futuro no convierte a «voy» en futuro simple." : "Ubicá la forma antes de aprender sus terminaciones. El verbo es la palabra; el modo y el tiempo son características de su conjugación."} />}
             <div className="gw-rule"><small>REGLA CENTRAL</small><p>{station.rule}</p></div>
             <div className="gw-formulas">{station.formulas.map(formula => <b key={formula}>{formula}</b>)}</div>
             <div className="gw-examples">{station.examples.map((example, index) => <div key={example.es}><span>{String(index + 1).padStart(2, "0")}</span><b>{example.es}</b><small>{example.en}</small></div>)}</div>

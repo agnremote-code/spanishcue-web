@@ -4,6 +4,8 @@ import { useState, type CSSProperties } from "react";
 import "../condicionales/style.css";
 import "./style.css";
 import ModoTiempoIntro from "./ModoTiempoIntro";
+import VerbalPosition from "../verbal-system/VerbalPosition";
+import {conditionalPosition,b1TablePosition} from "../verbal-system/positions";
 import { comparacionFinal, diagnostico, unidades, type Tabla, type Unidad } from "./data";
 
 type Pantalla = "portada" | "mapa" | "unidad" | "resumen";
@@ -20,6 +22,7 @@ function TablaGramatical({ tabla }: { tabla: Tabla }) {
   return (
     <article className="co-tense-card cb-tabla">
       <header><small>CONJUGACIÓN Y FORMACIÓN</small><h3>{tabla.titulo}</h3><p>{tabla.nota}</p></header>
+      <VerbalPosition items={b1TablePosition[tabla.titulo]} compact />
       <div className="cb-tabla-cuerpo" style={{ "--columnas": tabla.columnas.length } as CSSProperties}>
         <div className="cb-tabla-fila cb-tabla-cabecera">{tabla.columnas.map((columna) => <b key={columna}>{columna}</b>)}</div>
         {tabla.filas.map((fila, indice) => <div className="cb-tabla-fila" key={`${fila[0]}-${indice}`}>{fila.map((celda, celdaIndice) => celdaIndice === 0 ? <span key={celdaIndice}>{celda}</span> : <b key={celdaIndice}>{celda}</b>)}</div>)}
@@ -155,6 +158,7 @@ export default function CondicionalesB1Page() {
           </header>
 
           <div className="co-chapter-body">
+            <VerbalPosition items={conditionalPosition[activa.id]} context="El nombre de este bloque identifica un tipo de oración condicional, no un nuevo tiempo. Ubicá por separado las formas de la condición y de la consecuencia." />
             <section className="co-learning-order"><span>ORDEN DE APRENDIZAJE</span><div><b>1 · ENTENDER</b><i>→</i><b>2 · UBICAR EN EL TIEMPO</b><i>→</i><b>3 · ELEGIR LOS TIEMPOS</b><i>→</i><b>4 · CONJUGAR</b><i>→</i><b>5 · PRACTICAR</b><i>→</i><b>6 · HABLAR</b></div></section>
 
             <section className="co-concept"><div className="co-section-number">01</div><article><span>INTRODUCCIÓN GRAMATICAL</span><h2>Primero entendé la relación con la realidad.</h2><b>{activa.idea}</b><span>{activa.tiempo}</span></article></section>

@@ -2,6 +2,8 @@
 
 import { useMemo, useState, type CSSProperties } from "react";
 import "./style.css";
+import VerbalPosition from "../verbal-system/VerbalPosition";
+import {conditionalPosition} from "../verbal-system/positions";
 import {
   advancedConnectors,
   chapters,
@@ -49,6 +51,7 @@ function ConjugationTable({ id }: { id: string }) {
   return (
     <article className="co-tense-card">
       <header><small>{table.cue}{table.cueEn && <span className="co-en">{table.cueEn}</span>}</small><h3>{table.title}</h3><p>{table.english}</p></header>
+      <VerbalPosition items={[id]} compact />
       <div className="co-tense-head"><span>PERSONA · PERSON</span><b>HABLAR · TO SPEAK</b><b>COMER · TO EAT</b><b>VIVIR · TO LIVE</b></div>
       {table.rows.map(([person, ar, er, ir]) => (
         <div className="co-tense-row" key={person}><span>{person}</span><b>{ar}</b><b>{er}</b><b>{ir}</b></div>
@@ -165,7 +168,7 @@ export default function CondicionalesPage() {
 
           <section className="co-golden-rule"><span>⚠️ REGLA CLAVE · KEY RULE</span><div><b>Después de SI no usamos futuro ni condicional.<span className="co-en">After SI, we do not use the future or conditional.</span></b><p>Si vendrá / si tendría ❌ · Si viene / si tuviera ✅</p></div></section>
 
-          <button className="co-atlas-call" onClick={() => show("atlas")}><span>ATLAS · CONJUGATION ATLAS</span><b>Los ocho tiempos, irregulares y conectores avanzados<span className="co-en">Eight tenses, irregular forms and advanced connectors</span></b><i>ABRIR · OPEN →</i></button>
+          <button className="co-atlas-call" onClick={() => show("atlas")}><span>ATLAS · CONJUGATION ATLAS</span><b>Siete tiempos y el imperativo, irregulares y conectores<span className="co-en">Seven tenses and the imperative, irregular forms and connectors</span></b><i>ABRIR · OPEN →</i></button>
         </section>
       )}
 
@@ -180,6 +183,7 @@ export default function CondicionalesPage() {
           </header>
 
           <div className="co-chapter-body">
+            <VerbalPosition items={conditionalPosition[active.id]} context="Este mundo enseña una construcción condicional. No es un tiempo ni un modo nuevo: combina las siguientes formas según la condición y la consecuencia." />
             <section className="co-learning-order">
               <span>ORDEN DE APRENDIZAJE · LEARNING ORDER</span>
               <div><b>1 · ENTENDER<span>UNDERSTAND</span></b><i>→</i><b>2 · ELEGIR LOS TIEMPOS<span>CHOOSE THE TENSES</span></b><i>→</i><b>3 · CONJUGAR<span>CONJUGATE</span></b><i>→</i><b>4 · PRACTICAR<span>PRACTISE</span></b><i>→</i><b>5 · HABLAR<span>SPEAK</span></b></div>
@@ -260,7 +264,7 @@ export default function CondicionalesPage() {
               <article><span>SÍ</span><div><b>sí = yes / oneself</b><p>Con tilde: Sí, voy. · Lo hizo por sí mismo.</p></div></article>
               <article><span>,</span><div><b>La coma depende del orden</b><p>Si A, B. · B si A.</p></div></article>
             </section>
-            <section><header className="co-atlas-section-head"><span>01 · LOS OCHO TIEMPOS</span><h2>Conjugación completa</h2></header><div className="co-tense-grid atlas-grid">{tenseTables.map((table) => <ConjugationTable id={table.id} key={table.id} />)}</div></section>
+            <section><header className="co-atlas-section-head"><span>01 · SIETE TIEMPOS Y EL IMPERATIVO</span><h2>Conjugación completa</h2></header><div className="co-tense-grid atlas-grid">{tenseTables.map((table) => <ConjugationTable id={table.id} key={table.id} />)}</div></section>
             <section className="co-irregulars"><header className="co-atlas-section-head"><span>02 · FUTURO Y CONDICIONAL</span><h2>Las doce raíces irregulares</h2><p>La raíz cambia, pero las terminaciones son exactamente las mismas.</p></header><div>{irregularStems.map(([verb, stem, forms]) => <article key={verb}><b>{verb}</b><span>{stem}</span><em>{forms}</em></article>)}</div></section>
             <section className="co-subjunctive-lab"><header className="co-atlas-section-head"><span>02B · SUBJUNTIVO</span><h2>Dos detalles avanzados</h2></header><div><article><small>FORMA -SE · EQUIVALENTE</small><b>hablase · hablases · hablase · hablásemos · hablasen</b><p>Podés reemplazar -ra por -se sin cambiar el significado: si tuviera = si tuviese. La forma -ra es mucho más frecuente en la conversación.</p></article><article><small>PRESENTE · SEIS IRREGULARES CLAVE</small><div>{presentSubjIrregulars.map(([verb, forms]) => <p key={verb}><b>{verb}</b><span>{forms}</span></p>)}</div></article></div></section>
             <section className="co-participles"><header className="co-atlas-section-head"><span>03 · TIEMPOS COMPUESTOS</span><h2>Participios irregulares</h2></header><div>{irregularParticiples.map(([verb, participle]) => <article key={verb}><span>{verb}</span><b>{participle}</b></article>)}</div></section>

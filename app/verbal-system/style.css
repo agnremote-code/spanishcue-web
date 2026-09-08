@@ -1,0 +1,10 @@
+.vp-position.vp-position{box-sizing:border-box;display:block;position:relative;max-width:100%;min-width:0;margin:24px 0;padding:22px;background:#f5f4fc;color:#1f2941;border:1px solid #d9d3e9;border-left:5px solid #7961b0;border-radius:12px;font-family:inherit;text-align:left;letter-spacing:normal;line-height:1.6}
+.vp-position .vp-label{color:#59447c;font-size:14px;letter-spacing:.06em;font-weight:850;margin-bottom:12px}
+.vp-position .vp-list{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.vp-position .vp-item{min-width:0;padding:16px;background:#fff;border:1px solid #e1ddea;border-radius:8px}
+.vp-position .vp-name{font-size:18px;font-weight:800;line-height:1.5;color:#342a4b;margin-bottom:14px;overflow-wrap:anywhere}
+.vp-position dl{display:grid;gap:10px;margin:0}.vp-position dl>div{display:block;min-width:0}.vp-position dt{font-size:13px;font-weight:800;color:#655773;letter-spacing:.03em}.vp-position dd{margin:2px 0 0;font-size:16px;font-weight:650;line-height:1.5;color:#273149;overflow-wrap:anywhere}
+.vp-position p.vp-context,.vp-position p.vp-note,.vp-position p.vp-example,.vp-position .vp-recap p{display:block;margin:12px 0 0;padding:0;color:#344059;font-size:16px;line-height:1.7;letter-spacing:normal;text-transform:none;font-style:normal;font-weight:400;max-width:none}
+.vp-position p.vp-context{margin:0 0 18px}.vp-position p.vp-example{font-weight:750;color:#59447c}.vp-position .vp-recap{margin-top:16px;border-top:1px solid #d9d3e9;padding-top:12px}.vp-position .vp-recap summary{cursor:pointer;font-size:15px;font-weight:750;color:#4d376b;line-height:1.6}.vp-position .vp-recap a{color:#503476;text-decoration:underline}.vp-position :is(a,summary):focus-visible{outline:3px solid #328179;outline-offset:4px}
+.vp-position.vp-compact{padding:16px;margin:16px}.vp-compact .vp-list{grid-template-columns:1fr}.vp-position.vp-compact .vp-item{padding:12px}.vp-position.vp-compact .vp-name{font-size:17px}
+@media(max-width:650px){.vp-position.vp-position{padding:16px}.vp-position.vp-compact{margin:12px}.vp-position .vp-list{grid-template-columns:1fr}}
