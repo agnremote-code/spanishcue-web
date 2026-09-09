@@ -35,7 +35,7 @@ function PlacePhoto({place,state}:{place:StatePlace;state:USState}){
     fetch(`https://commons.wikimedia.org/w/api.php?${params.toString()}`,{signal:controller.signal})
       .then(response=>{if(!response.ok)throw new Error("image search failed");return response.json()})
       .then(data=>{
-        const pages=(data?.query?.pages??[]) as CommonsPage[];
+        const pages=((data as {query?:{pages?:CommonsPage[]}})?.query?.pages??[]);
         const usable=pages.filter(page=>page.imageinfo?.[0]?.thumburl||page.imageinfo?.[0]?.url);
         const match=usable.find(page=>["image/jpeg","image/png","image/webp"].includes(page.imageinfo?.[0]?.mime||""))||usable[0];
         const image=match?.imageinfo?.[0];

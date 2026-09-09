@@ -4,8 +4,7 @@ import "./special.css";
 
 export const metadata: Metadata = {
   title: "CHESPANISH Teacher Studio",
-  description: "Biblioteca de clases de español argentino real.",
-  other: { "codex-preview": "development" },
+  description: "Clases listas para profesores y tutores de español. NAVEGÁ, ELEGÍ, ENSEÑÁ.",
   metadataBase: new URL("https://biblioteca-espanol.agnremote.chatgpt.site"),
   openGraph: {
     title: "CHESPANISH Teacher Studio",

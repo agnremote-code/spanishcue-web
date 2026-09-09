@@ -1,3 +1,5 @@
+import { ownerFromHeaders, isFreeLesson } from "../app/access-policy";
+import { lessons } from "../app/lesson-catalog";
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
@@ -29,6 +31,15 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    let pathname:string;try{pathname=decodeURIComponent(url.pathname).replace(/\/+$/, '')||'/'}catch{return new Response('Bad request',{status:400})}
+    const owner=ownerFromHeaders(request.headers);
+    const lesson=lessons.find(l=>(l.path||(l.special?'/choose-conversation':`/clase/${l.id}`))===pathname);
+    const administrative=pathname==='/admin'||pathname.startsWith('/api/settings');
+    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!owner)) {
+      if(pathname.startsWith('/api/')) return Response.json({error:'Acceso exclusivo del propietario.'},{status:403});
+      if(administrative&&!request.headers.get('oai-authenticated-user-id')) return Response.redirect(new URL('/signin-with-chatgpt?return_to=%2Fadmin',url),302);
+      return Response.redirect(new URL('/acceso',url),302);
+    }
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
@@ -40,7 +51,11 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response=await handler.fetch(request, env, ctx);
+    const safeResponse=new Response(response.body,response);
+    safeResponse.headers.set('Cache-Control','private, no-store');
+    safeResponse.headers.set('X-Content-Type-Options','nosniff');
+    return safeResponse;
   },
 };
 

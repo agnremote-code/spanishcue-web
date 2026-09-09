@@ -349,7 +349,7 @@ function WikiVisual({query,alt,label,subLabel,className="",seed=0,group="global"
     fetch(`https://commons.wikimedia.org/w/api.php?${params}`,{signal:controller.signal})
       .then(response=>response.ok?response.json():Promise.reject(new Error("visual")))
       .then(payload=>{
-        const pages=(Object.values(payload?.query?.pages||{}) as Array<{index?:number;imageinfo?:Array<{thumburl?:string;descriptionurl?:string;extmetadata?:Record<string,{value?:string}>}>}>).sort((a,b)=>(a.index||0)-(b.index||0));
+        const pages=(Object.values((payload as {query?:{pages?:Record<string,unknown>}})?.query?.pages||{}) as Array<{index?:number;imageinfo?:Array<{thumburl?:string;descriptionurl?:string;extmetadata?:Record<string,{value?:string}>}>}>).sort((a,b)=>(a.index||0)-(b.index||0));
         const candidates=pages.map(page=>page.imageinfo?.[0]).filter((info):info is NonNullable<typeof info>=>Boolean(info?.thumburl));
         const used=usedImageSources.get(group)||new Set<string>();
         const ordered=[...candidates.slice(seed%candidates.length),...candidates.slice(0,seed%candidates.length)];
