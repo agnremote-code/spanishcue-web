@@ -1,7 +1,72 @@
 import { headers } from 'next/headers';
-import { notFound,redirect } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { lessons } from '../../lesson-catalog';
-import { ownerFromHeaders,isFreeLesson } from '../../access-policy';
+import { isProUser, isFreeLesson } from '../../access-policy';
 import '../../teachers.css';
-export const dynamic='force-dynamic';
-export default async function LessonPage({params}:{params:Promise<{id:string}>}){const {id}=await params;const lesson=lessons.find(l=>String(l.id)===id);if(!lesson||lesson.path||lesson.special)notFound();if(!isFreeLesson(lesson.id)&&!ownerFromHeaders(await headers()))redirect('/acceso');return <div className="teacher-app"><main className="teacher-main" style={{maxWidth:960}}><a href="/">← Biblioteca</a><section className="teacher-intro" style={{margin:'30px 0'}}><p>{lesson.level} · {lesson.category} · {lesson.duration}</p><h1 style={{fontSize:'clamp(32px,5vw,52px)'}}>{lesson.title}</h1><div>{lesson.subtitle}</div></section><section className="teaching-section"><h2>Objetivos de la clase</h2><ul>{lesson.goals.map(x=><li key={x}>{x}</li>)}</ul></section><section className="teaching-section"><h2>01 · Para empezar</h2><p>{lesson.warmup}</p></section><section className="teaching-section"><h2>02 · La idea clave</h2><p>{lesson.explanation}</p></section><section className="teaching-section"><h2>03 · Práctica guiada</h2>{lesson.practice.map((x,i)=><details key={x}><summary>Actividad {i+1}</summary><p>{x}</p></details>)}</section><section className="teaching-section"><h2>04 · A conversar</h2>{lesson.speaking.map((x,i)=><details key={x}><summary>Ronda {i+1}</summary><p>{x}</p></details>)}</section><section className="teaching-section"><h2>05 · Para seguir</h2><p>{lesson.homework}</p></section></main></div>}
+
+export const dynamic = 'force-dynamic';
+
+export default async function LessonPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const lesson = lessons.find((l) => String(l.id) === id);
+  if (!lesson || lesson.path || lesson.special) notFound();
+
+  const h = await headers();
+  if (!isFreeLesson(lesson.id) && !isProUser(h)) {
+    const returnTo = encodeURIComponent(`/clase/${id}`);
+    redirect(`/acceso?return_to=${returnTo}`);
+  }
+
+  return (
+    <div className="teacher-app">
+      <main className="teacher-main" style={{ maxWidth: 960 }}>
+        <a href="/">← Biblioteca</a>
+        <section className="teacher-intro" style={{ margin: '30px 0' }}>
+          <p>
+            {lesson.level} · {lesson.category} · {lesson.duration}
+          </p>
+          <h1 style={{ fontSize: 'clamp(32px,5vw,52px)' }}>{lesson.title}</h1>
+          <div>{lesson.subtitle}</div>
+        </section>
+        <section className="teaching-section">
+          <h2>Objetivos de la clase</h2>
+          <ul>
+            {lesson.goals.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
+        </section>
+        <section className="teaching-section">
+          <h2>01 · Para empezar</h2>
+          <p>{lesson.warmup}</p>
+        </section>
+        <section className="teaching-section">
+          <h2>02 · La idea clave</h2>
+          <p>{lesson.explanation}</p>
+        </section>
+        <section className="teaching-section">
+          <h2>03 · Práctica guiada</h2>
+          {lesson.practice.map((x, i) => (
+            <details key={x}>
+              <summary>Actividad {i + 1}</summary>
+              <p>{x}</p>
+            </details>
+          ))}
+        </section>
+        <section className="teaching-section">
+          <h2>04 · A conversar</h2>
+          {lesson.speaking.map((x, i) => (
+            <details key={x}>
+              <summary>Ronda {i + 1}</summary>
+              <p>{x}</p>
+            </details>
+          ))}
+        </section>
+        <section className="teaching-section">
+          <h2>05 · Para seguir</h2>
+          <p>{lesson.homework}</p>
+        </section>
+      </main>
+    </div>
+  );
+}
