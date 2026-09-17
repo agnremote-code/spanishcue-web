@@ -13,18 +13,19 @@
 
 ### Tested
 - [x] **Local Test Suite (`npm test`)**: Verified 11/11 tests pass (sample sets, offer validation, free vs paid route access, client asset protection, offer configuration persistence).
-- [x] **Git Repository State**: Clean status on branch `antigravity/launch-audit` tracking `origin/main` at commit `08ef3a2`.
+- [x] **Artifact Validation (`npm run validate:artifact`)**: Passed.
+- [x] **Git Repository State**: Clean status on branch `antigravity/launch-audit` before push.
 
 ### Published
 - [x] **Main Branch Baseline (`origin/main`)**: Commit `08ef3a2` (`chore: add SpanishCue AI safety rules`) is published on remote repository `agnremote-code/spanishcue-web`.
-- [x] **Audit Documentation Branch (`antigravity/launch-audit`)**: Created locally, ready to push after commit.
-- [!] *Note: No source code fixes or application changes have been published yet per task instructions (AUDIT + COORDINATION ONLY).*
+- [x] **Audit Documentation Branch (`antigravity/launch-audit`)**: Pushed to GitHub and opened as PR #2.
+- [!] *Note: No application source-code fixes were included in Task 01; this task is audit + coordination only.*
 
 ### Blocked
-- [ ] **Commercial Checkout / Payment Flow**: Blocked pending implementation of Task 04 (PayPal Sandbox SDK & API handlers) and manual provision of PayPal API credentials by Alejandro.
-- [ ] **PRO Access for Regular Users**: Blocked pending implementation of Task 02 (D1 schema expansion for users/subscriptions) and Task 03 (DB-backed access policy).
-- [ ] **Student & Class Tracker ("Mis alumnos")**: Blocked pending database schema expansion in Task 02.
+- [ ] **Commercial Checkout / Payment Flow**: Blocked pending PayPal implementation and manual provision of PayPal API credentials by Alejandro.
+- [ ] **PRO Access for Regular Users**: Blocked pending DB-backed subscription entitlement and access-policy work.
+- [ ] **Student & Class Tracker ("Mis alumnos")**: Blocked pending database schema expansion and ownership checks.
 
 ### Next Action
-- [ ] **Task 02 (Database Schema Expansion)**: Design and apply Drizzle D1 migrations for `users`, `subscriptions`, `transactions`, `students`, and `taught_lessons`.
-- [ ] **Task 03 (Auth & Access Policy Engine)**: Replace hardcoded email check in `app/access-policy.ts` with DB subscription entitlement lookups.
+- [ ] **Task 02 (Login + Mi cuenta)**: Reproduce and fix session persistence, replace brittle authorization behavior, and professionalize account states without migrating auth provider.
+- [ ] **Task 03 (PayPal + PRO + measurement)**: Build and verify sandbox subscription flow, webhooks, PRO entitlement lifecycle, cancellation and conversion measurement.
