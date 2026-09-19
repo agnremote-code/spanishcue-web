@@ -41,3 +41,5 @@
 /* Flexible question navigation */
 .la-question-nav{display:grid;grid-template-columns:minmax(180px,.48fr) minmax(260px,1fr);gap:10px;margin-top:16px}.la-question-nav .la-next{margin-top:0}.la-previous{height:51px;border:1px solid color-mix(in srgb,var(--country) 55%,var(--la-line));border-radius:8px;background:rgba(255,255,255,.025);color:var(--country);font-size:9px;font-weight:900;letter-spacing:.08em;cursor:pointer;transition:.2s}.la-previous:hover{background:color-mix(in srgb,var(--country) 10%,transparent);transform:translateX(-3px)}
 @media(max-width:680px){.la-question-nav{grid-template-columns:1fr}.la-previous{order:2}.la-question-nav .la-next{order:1}}
+.la-back{color:var(--la-muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-decoration:none}
+@media(max-width:680px){.la-back{font-size:0}.la-back::after{content:"←";font-size:18px}}

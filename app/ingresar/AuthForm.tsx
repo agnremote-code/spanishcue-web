@@ -1,0 +1,197 @@
+"use client";
+
+import {
+  browserLocalPersistence,
+  createUserWithEmailAndPassword,
+  getAdditionalUserInfo,
+  GoogleAuthProvider,
+  OAuthProvider,
+  sendPasswordResetEmail,
+  setPersistence,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  type User,
+} from "firebase/auth";
+import { FormEvent, type KeyboardEvent as ReactKeyboardEvent, useRef, useState } from "react";
+import Link from "next/link";
+import { firebaseAuth } from "../firebase-client";
+import { useI18n } from "../i18n/LocaleProvider";
+import type { MessageKey } from "../i18n/messages";
+import { SpanishCueBrand } from "../SpanishCueBrand";
+import { trackMarketingEvent } from "../marketing/analytics";
+
+type Mode = "entrar" | "registro";
+
+export function authMessageKeyFor(error: unknown): MessageKey {
+  const code = typeof error === "object" && error && "code" in error
+    ? String((error as { code: unknown }).code)
+    : "";
+  if (/invalid-credential|wrong-password|user-not-found/.test(code)) return "auth.error.credentials";
+  if (code.includes("email-already-in-use")) return "auth.error.emailInUse";
+  if (code.includes("weak-password")) return "auth.error.weakPassword";
+  if (code.includes("invalid-email")) return "auth.error.invalidEmail";
+  if (code.includes("popup-closed-by-user")) return "auth.error.popupClosed";
+  if (code.includes("popup-blocked")) return "auth.error.popupBlocked";
+  if (code.includes("account-exists-with-different-credential")) return "auth.error.existingCredential";
+  if (code.includes("unauthorized-domain")) return "auth.error.unauthorizedDomain";
+  if (code.includes("operation-not-allowed")) return "auth.error.methodDisabled";
+  return "auth.error.generic";
+}
+
+export async function establishSession(user: User, returnTo?: string) {
+  const idToken = await user.getIdToken(true);
+  const response = await fetch("/api/auth/session", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ idToken }),
+    credentials: "same-origin",
+  });
+  if (!response.ok) throw new Error("session");
+  if (returnTo) window.location.assign(returnTo);
+}
+
+export default function AuthForm({
+  initialMode,
+  returnTo,
+  appleEnabled,
+}: {
+  initialMode: Mode;
+  returnTo: string;
+  appleEnabled: boolean;
+}) {
+  const { t } = useI18n();
+  const [mode, setMode] = useState<Mode>(initialMode);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
+  const loginTabRef = useRef<HTMLButtonElement>(null);
+  const registerTabRef = useRef<HTMLButtonElement>(null);
+
+  const selectMode = (nextMode: Mode) => {
+    if (nextMode === "registro" && mode !== "registro") {
+      trackMarketingEvent("signup_start", { placement: "auth_tab" });
+    }
+    setMode(nextMode);
+    setError("");
+    setNotice("");
+  };
+
+  const moveTab = (event: ReactKeyboardEvent<HTMLButtonElement>) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const modes: Mode[] = ["entrar", "registro"];
+    const currentIndex = modes.indexOf(mode);
+    const nextMode: Mode = event.key === "Home"
+      ? "entrar"
+      : event.key === "End"
+        ? "registro"
+        : modes[(currentIndex + (event.key === "ArrowLeft" ? -1 : 1) + modes.length) % modes.length];
+    selectMode(nextMode);
+    (nextMode === "entrar" ? loginTabRef : registerTabRef).current?.focus();
+  };
+
+  const complete = async (action: () => Promise<{ user: User; newAccount: boolean; method: "email" | "google" | "apple" }>) => {
+    setBusy(true);
+    setError("");
+    setNotice("");
+    try {
+      await setPersistence(firebaseAuth, browserLocalPersistence);
+      const result = await action();
+      if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
+      await establishSession(result.user, returnTo);
+    } catch (reason) {
+      setError(t(authMessageKeyFor(reason)));
+      setBusy(false);
+    }
+  };
+
+  const submit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const cleanEmail = email.trim().toLowerCase();
+    void complete(async () => {
+      const credential = mode === "registro"
+        ? await createUserWithEmailAndPassword(firebaseAuth, cleanEmail, password)
+        : await signInWithEmailAndPassword(firebaseAuth, cleanEmail, password);
+      return { user: credential.user, newAccount: mode === "registro", method: "email" };
+    });
+  };
+
+  const google = () => {
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    void complete(async () => {
+      const credential = await signInWithPopup(firebaseAuth, provider);
+      return { user: credential.user, newAccount: Boolean(getAdditionalUserInfo(credential)?.isNewUser), method: "google" };
+    });
+  };
+
+  const apple = () => {
+    const provider = new OAuthProvider("apple.com");
+    provider.addScope("email");
+    provider.addScope("name");
+    void complete(async () => {
+      const credential = await signInWithPopup(firebaseAuth, provider);
+      return { user: credential.user, newAccount: Boolean(getAdditionalUserInfo(credential)?.isNewUser), method: "apple" };
+    });
+  };
+
+  const resetPassword = async () => {
+    const cleanEmail = email.trim().toLowerCase();
+    if (!cleanEmail) {
+      setError(t("auth.error.emailFirst"));
+      return;
+    }
+    setBusy(true);
+    setError("");
+    setNotice("");
+    try {
+      await sendPasswordResetEmail(firebaseAuth, cleanEmail);
+      setNotice(t("auth.resetSent"));
+    } catch (reason) {
+      setError(t(authMessageKeyFor(reason)));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <section className="auth-card" aria-labelledby="auth-title">
+      <SpanishCueBrand variant="micro" tone="dark" className="auth-mark" />
+      <p className="auth-kicker">{t("auth.kicker")}</p>
+      <h1 id="auth-title">{mode === "entrar" ? t("auth.loginTitle") : t("auth.registerTitle")}</h1>
+      <p className="auth-copy">CHOOSE. OPEN. TEACH.</p>
+
+      <div className="auth-tabs" role="tablist" aria-label={t("auth.chooseMode")}>
+        <button ref={loginTabRef} id="auth-tab-login" type="button" role="tab" aria-controls="auth-panel" aria-selected={mode === "entrar"} tabIndex={mode === "entrar" ? 0 : -1} onKeyDown={moveTab} onClick={() => selectMode("entrar")}>{t("auth.loginTab")}</button>
+        <button ref={registerTabRef} id="auth-tab-register" type="button" role="tab" aria-controls="auth-panel" aria-selected={mode === "registro"} tabIndex={mode === "registro" ? 0 : -1} onKeyDown={moveTab} onClick={() => selectMode("registro")}>{t("auth.registerTab")}</button>
+      </div>
+
+      <div id="auth-panel" role="tabpanel" aria-labelledby={mode === "entrar" ? "auth-tab-login" : "auth-tab-register"}>
+      <div className="auth-providers">
+        <button className="google-button" type="button" onClick={google} disabled={busy}>
+          <span aria-hidden="true">G</span> {t("auth.google")}
+        </button>
+        {appleEnabled && (
+          <button className="apple-button" type="button" onClick={apple} disabled={busy}>
+            <span aria-hidden="true">●</span> {t("auth.apple")}
+          </button>
+        )}
+      </div>
+      <div className="auth-divider"><span>{t("auth.orEmail")}</span></div>
+
+      <form onSubmit={submit}>
+        <label>{t("auth.email")}<input type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="teacher@email.com" /></label>
+        <label>{t("auth.password")}<input type="password" autoComplete={mode === "registro" ? "new-password" : "current-password"} minLength={6} required value={password} onChange={(event) => setPassword(event.target.value)} placeholder={t("auth.passwordPlaceholder")} /></label>
+        {mode === "entrar" && <button className="forgot-button" type="button" onClick={resetPassword} disabled={busy}>{t("auth.forgot")}</button>}
+        {error && <p className="auth-message error" role="alert">{error}</p>}
+        {notice && <p className="auth-message success" role="status">{notice}</p>}
+        <button className="submit-button" type="submit" disabled={busy}>{busy ? t("common.loading") : mode === "entrar" ? t("auth.loginSubmit") : t("auth.registerSubmit")}</button>
+      </form>
+      {mode === "registro" && <p className="auth-legal-notice">{t("auth.createTermsStart")} <Link href="/terms">{t("auth.terms")}</Link> {t("auth.createTermsMiddle")} <Link href="/privacy">{t("auth.privacyPolicy")}</Link>.</p>}
+      <p className="auth-foot">{t("auth.freeCopy")}</p>
+      </div>
+    </section>
+  );
+}

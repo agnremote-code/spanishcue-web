@@ -8,7 +8,7 @@ import "./style.css";
 type Screen = "intro" | "map" | "place";
 
 function Brand() {
-  return <Link className="ba-brand" href="/" aria-label="Volver a CHESPANISH"><span>CH</span><b>CHESPANISH</b><small>BUENOS AIRES · A2</small></Link>;
+  return <Link className="ba-brand" href="/" aria-label="Volver a SPANISHCUE"><span>SC</span><b>SPANISHCUE</b><small>BUENOS AIRES · A2</small></Link>;
 }
 
 function Scene({ stop }: { stop: CityStop }) {
@@ -114,6 +114,6 @@ export default function BuenosAiresEnLaCalle() {
       </div>
     </section>}
 
-    <footer className="ba-footer"><span>CHESPANISH · BUENOS AIRES EN LA CALLE</span><p>Español útil, rioplatense y sin presión.</p></footer>
+    <footer className="ba-footer"><span>SPANISHCUE · BUENOS AIRES EN LA CALLE</span><p>Español útil, rioplatense y sin presión.</p></footer>
   </main>;
 }

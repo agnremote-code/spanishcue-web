@@ -1,0 +1,1 @@
+ALTER TABLE `billing_subscriptions` ADD `provider_event_time` integer;

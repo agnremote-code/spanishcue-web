@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import Link from "next/link";
 import { countries, type Country } from "./data";
 import LatamGlobe from "./LatamGlobe";
 import "./style.css";
@@ -152,7 +153,7 @@ export default function LatinoamericaAlOido() {
 
   return <main className="la-shell" style={{ "--country": active.color } as CSSProperties}>
     <SignalBackground/>
-    <header className="la-topbar"><button onClick={() => { stopAudio(); window.location.href = "/"; }}>← BIBLIOTECA</button><a className="la-brand" href="/">CHESPANISH <b>RADIO</b></a><div className="la-level"><span>A2</span> COMPRENSIÓN AUDITIVA</div></header>
+    <header className="la-topbar"><Link className="la-back" href="/" onClick={() => stopAudio()}>← BIBLIOTECA</Link><Link className="la-brand" href="/">SPANISHCUE <b>RADIO</b></Link><div className="la-level"><span>A2</span> COMPRENSIÓN AUDITIVA</div></header>
     <audio
       ref={audioRef}
       className="la-real-audio"

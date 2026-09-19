@@ -1,58 +1,52 @@
-/** Fixed editorial samples: never derive access from a visitor's filters. */
-export const samplesByLevel: Record<string, number[]> = { A0:[19,27], A1:[40,41], A2:[103,104], B1:[101,102], B2:[31,37], C1:[11,23], C2:[34,203] };
-export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41], 'Conversación':[103,104], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
-export const freeLessonIds = [...new Set([...Object.values(samplesByLevel).flat(), ...Object.values(samplesByCategory).flat()])];
+/** Two fixed samples per category; filters never change access permissions. */
+export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41], 'Conversación':[103,29], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
+export const freeLessonIds = [...new Set(Object.values(samplesByCategory).flat())];
 export const isFreeLesson = (id:number) => freeLessonIds.includes(id);
+/** Audio collections attached to the two public listening samples. */
+export const freeAudioPrefixes = new Set(['hotel','latam']);
+export type RoutableLesson = {id:number;path?:string;special?:boolean};
+export function normalizeLocalPath(pathname:string) {
+  const normalized=(pathname.startsWith('/')?pathname:`/${pathname}`).replace(/\/{2,}/g,'/').replace(/\/+$/, '');
+  return normalized||'/';
+}
+export function localLessonPath(lesson:RoutableLesson) {
+  const path=lesson.path||(lesson.special?'/choose-conversation':`/clase/${lesson.id}`);
+  return /^https?:\/\//i.test(path)?null:normalizeLocalPath(path);
+}
+export function lessonAtPath<T extends RoutableLesson>(pathname:string,lessonList:readonly T[]) {
+  const normalized=normalizeLocalPath(pathname);
+  return lessonList.find(lesson=>localLessonPath(lesson)===normalized);
+}
+// These headers are stripped and recreated by our Worker after Firebase verifies the session.
+export function ownerFromHeaders(h: Headers) { return h.get('x-chespanish-owner') === '1'; }
+export function signedInFromHeaders(h: Headers) { return Boolean(h.get('x-chespanish-user-uid')); }
+export function emailFromHeaders(h: Headers) { return h.get('x-chespanish-user-email')?.trim().toLowerCase() ?? null; }
+export function accountIdFromHeaders(h: Headers) { return h.get('x-chespanish-account-id')?.trim() || null; }
+export function roleFromHeaders(h: Headers) { return h.get('x-chespanish-role') === 'owner' ? 'owner' : 'teacher'; }
+export function fullAccessFromHeaders(h: Headers) { return ownerFromHeaders(h) || h.get('x-chespanish-access-level') === 'full'; }
 
 export type UserRole = 'visitor' | 'authenticated_free' | 'pro' | 'owner';
 
 export type UserSession = {
   userId: string | null;
+  accountId: string | null;
   email: string | null;
   displayName: string | null;
-  fullName: string | null;
   role: UserRole;
   isOwner: boolean;
   isPro: boolean;
   isAuthenticated: boolean;
 };
 
-export function isOwnerEmail(email: string | null | undefined): boolean {
-  return !!email && email.trim().toLowerCase() === 'agnremote@gmail.com';
-}
-
-/** Verified by Sites account ownership. Must remain self-contained for static serialization in client protection scripts. */
-export function ownerFromHeaders(h: Headers): boolean {
-  return !!h.get('oai-authenticated-user-id') && h.get('oai-authenticated-user-email')?.trim().toLowerCase() === 'agnremote@gmail.com';
-}
-
-/** Extensible placeholder for database subscription lookup (populated in Task 03/04). */
-export function checkSubscriptionEntitlement(): boolean {
-  return false;
-}
-
-/** Evaluates whether user has PRO entitlement (owner or active subscription). */
-export function isProUser(h: Headers): boolean {
-  const userId = h.get('oai-authenticated-user-id');
-  const email = h.get('oai-authenticated-user-email');
-  if (!userId || !email) return false;
-  if (isOwnerEmail(email)) return true;
-  return checkSubscriptionEntitlement();
-}
-
-/** Parses headers to construct a full authoritative session object. */
+/** Builds display state from identity headers that the Worker has already verified and recreated. */
 export function getUserSessionFromHeaders(h: Headers): UserSession {
-  const userId = h.get('oai-authenticated-user-id');
-  const email = h.get('oai-authenticated-user-email');
-  const encodedFullName = h.get('oai-authenticated-user-full-name');
-  const encoding = h.get('oai-authenticated-user-full-name-encoding');
-
-  if (!userId || !email) {
+  const isAuthenticated = signedInFromHeaders(h);
+  if (!isAuthenticated) {
     return {
       userId: null,
+      accountId: null,
       email: null,
       displayName: null,
-      fullName: null,
       role: 'visitor',
       isOwner: false,
       isPro: false,
@@ -60,31 +54,34 @@ export function getUserSessionFromHeaders(h: Headers): UserSession {
     };
   }
 
-  let fullName: string | null = null;
-  if (encodedFullName && encoding === 'percent-encoded-utf-8') {
-    try {
-      fullName = decodeURIComponent(encodedFullName);
-    } catch {
-      fullName = null;
-    }
-  }
-
-  const displayName = fullName || email;
-  const isOwner = isOwnerEmail(email);
-  const isPro = isOwner || checkSubscriptionEntitlement();
-
-  let role: UserRole = 'authenticated_free';
-  if (isOwner) role = 'owner';
-  else if (isPro) role = 'pro';
-
+  const email = emailFromHeaders(h);
+  const isOwner = ownerFromHeaders(h);
+  const hasFullAccess = fullAccessFromHeaders(h);
+  const role: UserRole = isOwner ? 'owner' : hasFullAccess ? 'pro' : 'authenticated_free';
   return {
-    userId,
+    userId: h.get('x-chespanish-user-uid'),
+    accountId: accountIdFromHeaders(h),
     email,
-    displayName,
-    fullName,
+    displayName: email,
     role,
     isOwner,
-    isPro,
+    isPro: hasFullAccess,
     isAuthenticated: true,
   };
+}
+
+/** Accepts only same-origin relative navigation targets. */
+export function safeRelativeReturnPath(value: string | null | undefined, fallback = '/') {
+  if (!value || !value.startsWith('/')) return fallback;
+  try {
+    const decoded = decodeURIComponent(value);
+    const slashNormalized = decoded.replace(/\\/g, '/');
+    if (slashNormalized.startsWith('//') || /[\u0000-\u001f\u007f]/.test(decoded)) return fallback;
+    const base = new URL('https://spanishcue.local');
+    const target = new URL(value, base);
+    if (target.origin !== base.origin) return fallback;
+    return `${target.pathname}${target.search}${target.hash}`;
+  } catch {
+    return fallback;
+  }
 }

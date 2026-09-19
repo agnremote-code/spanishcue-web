@@ -1,0 +1,46 @@
+{
+  "signals":[
+    {
+      "id":"salida", "title":"La salida prevista", "channel":"ALTAVOZ · TERMINAL", "variety":"España", "file":"/audio/ultima-llamada/salida.mp3",
+      "prediction":"Mirá el panel: ¿qué información esperás oír primero?", "question":"¿Cuál es la información principal?", "options":["El vuelo sale a las 18:40","El vuelo está cancelado","La puerta ya cerró"], "answer":0,
+      "talk":"¿Con cuánto tiempo llegás normalmente al aeropuerto?",
+      "segments":[{"speaker":"Anuncio","voice":"es-ES-AlvaroNeural","rate":"-8%","text":"Atención, pasajeros del vuelo seiscientos cuatro con destino a Lima. La salida se mantiene a las dieciocho cuarenta. El embarque está previsto a las dieciocho diez por la puerta B doce."}]
+    },
+    {
+      "id":"amiga", "title":"Nina todavía no llegó", "channel":"WHATSAPP · AMIGA", "variety":"Argentina", "file":"/audio/ultima-llamada/amiga.mp3",
+      "prediction":"Nina manda un audio desde un auto. ¿Llega temprano?", "question":"¿Qué pide Nina?", "options":["Que la esperes siempre","Que no la esperes si llaman para embarcar","Que cambies el vuelo"], "answer":1,
+      "talk":"¿Qué hacés si la persona que viaja con vos llega tarde?",
+      "segments":[{"speaker":"Nina","voice":"es-AR-ElenaNeural","rate":"-7%","text":"Che, sigo en camino. Hay muchísimo tránsito y calculo que llego a las seis y cinco. Tengo tu campera conmigo, pero si llaman para embarcar, no me esperes. Yo corro hasta la puerta."}]
+    },
+    {
+      "id":"cafe", "title":"El café no espera", "channel":"MENSAJE GRABADO · CAFETERÍA", "variety":"Colombia", "file":"/audio/ultima-llamada/cafe.mp3",
+      "prediction":"Tu pedido está listo. ¿Hasta qué hora lo guardan?", "question":"¿Qué pasa después de las 17:50?", "options":["Regalan el pedido","Cancelan el pedido","Cierran la terminal"], "answer":1,
+      "talk":"¿Comprás comida antes de viajar o llevás algo de casa?",
+      "segments":[{"speaker":"Cafetería","voice":"es-CO-SalomeNeural","rate":"-8%","text":"Hola. Tu pedido número cuarenta y seis ya está listo en el mostrador Punto Norte. Lo guardamos hasta las diecisiete cincuenta. Después de esa hora, el pedido se cancela."}]
+    },
+    {
+      "id":"cambio", "title":"La puerta cambió", "channel":"ANUNCIO URGENTE · AEROLÍNEA", "variety":"México", "file":"/audio/ultima-llamada/cambio.mp3",
+      "prediction":"Una fila del panel cambia de color. ¿Puerta, hora o destino?", "question":"¿Qué dos cosas cambiaron?", "options":["El destino y el avión","La hora de embarque y la puerta","El precio y el equipaje"], "answer":1,
+      "talk":"¿Te estresan los cambios de último momento? ¿Por qué?",
+      "segments":[{"speaker":"Aerolínea","voice":"es-MX-DaliaNeural","rate":"-6%","text":"Información importante para el vuelo seiscientos cuatro con destino a Lima. Por una razón operativa, el embarque comienza a las diecisiete cincuenta y cinco y cambia a la puerta C cuatro. La puerta cierra a las dieciocho quince."}]
+    },
+    {
+      "id":"camino", "title":"Siete minutos hasta C", "channel":"DIÁLOGO · PASAJEROS", "variety":"Perú + España", "file":"/audio/ultima-llamada/camino.mp3",
+      "prediction":"Dos pasajeros miran un ascensor cerrado. ¿Qué alternativa encuentran?", "question":"¿Cómo llegan a las puertas C?", "options":["Por la escalera mecánica junto a la farmacia","En un autobús","Por la salida tres"], "answer":0,
+      "talk":"¿Pedís ayuda cuando no encontrás una puerta o preferís buscar solo?",
+      "segments":[
+        {"speaker":"Pasajera","voice":"es-PE-CamilaNeural","rate":"-6%","text":"Disculpe, ¿sabe cómo se llega a las puertas C? El ascensor está cerrado.","pause":180},
+        {"speaker":"Pasajero","voice":"es-ES-AlvaroNeural","rate":"-4%","text":"Sí. Tome la escalera mecánica que está junto a la farmacia. Desde aquí son unos siete minutos."}
+      ]
+    },
+    {
+      "id":"conductor", "title":"Después del aterrizaje", "channel":"NOTA DE VOZ · CONDUCTOR", "variety":"Colombia", "file":"/audio/ultima-llamada/conductor.mp3",
+      "prediction":"El conductor ya está organizando la llegada. ¿Dónde esperará?", "question":"¿Qué debe hacer el pasajero si el vuelo se retrasa?", "options":["Llamar a la policía","Enviar un mensaje","Tomar otro vuelo"], "answer":1,
+      "talk":"¿Preferís reservar el transporte o decidir cuando llegás?",
+      "segments":[{"speaker":"Diego","voice":"es-CO-GonzaloNeural","rate":"-6%","text":"Hola, soy Diego, tu conductor en Lima. Te espero en la salida tres hasta las veintidós veinte. Si el vuelo se retrasa, mandame un mensaje y cambio la hora sin problema."}]
+    }
+  ],
+  "mission":{"time":"17:46","prompt":"Estás frente a la cafetería. Nina todavía no llegó y la puerta C4 está a siete minutos.","options":["Esperar a Nina hasta las 18:05","Recoger el café y después caminar","Ir directamente a C4 y escribirle a Nina"],"answer":2,"feedback":"El embarque empieza a las 17:55. Caminar lleva siete minutos; esperar o recoger el café deja muy poco margen."},
+  "finalQuestions":["¿Preferís organizar todo antes de viajar o improvisar?","¿Alguna vez llegaste tarde a algo importante?","¿Qué fue lo último que salió diferente de lo planeado?","¿Te estresan los aeropuertos?","¿Qué hacés si alguien llega muy tarde?","¿Preferís viajar solo o acompañado?","¿Qué viaje recordás especialmente?","¿Qué cosa nunca olvidás llevar?"],
+  "supports":["Primero voy a…","Después tengo que…","El plan cambió porque…","Si llego tarde, voy a…","Prefiero… porque…"]
+}

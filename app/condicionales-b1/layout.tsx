@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Condicionales paso a paso · B1 | CHESPANISH",
+  title: "Condicionales paso a paso · B1 | SPANISHCUE",
   description: "Clase B1 completamente en español sobre el condicional cero, primero, segundo, tercero y los condicionales mixtos.",
 };
 

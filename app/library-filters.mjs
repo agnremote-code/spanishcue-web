@@ -2,10 +2,16 @@
 export function filterLessons(lessons, { level = 'Todos', category = 'Todas', query = '' } = {}) {
   const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const search = normalize(query.trim());
-  return lessons.filter(lesson =>
+  const filtered = lessons.filter(lesson =>
     (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&
     (category === 'Todas' || lesson.category === category) &&
     normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag}`).includes(search)
+  );
+  const categoryOrder = {'Gramática':1,'Conversación':2,'Escucha':3,'Fonética':4,'Vocabulario':5};
+  return [...filtered].sort((a,b) =>
+    (categoryOrder[a.category] ?? 99) - (categoryOrder[b.category] ?? 99) ||
+    (a.routeSequence ?? a.curriculumSequence ?? Number.MAX_SAFE_INTEGER) -
+      (b.routeSequence ?? b.curriculumSequence ?? Number.MAX_SAFE_INTEGER)
   );
 }
 

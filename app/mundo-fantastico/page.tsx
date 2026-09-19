@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useAccessibleModal } from "../useAccessibleModal";
 import "./style.css";
 import {
   answerTools,
@@ -342,9 +343,13 @@ function WikiVisual({query,alt,label,subLabel,className="",seed=0,group="global"
 
   useEffect(()=>{
     const cached=imageCache.get(cacheKey);
-    if(cached){setVisual(cached);setFailed(false);const used=usedImageSources.get(group)||new Set<string>();used.add(cached.src);usedImageSources.set(group,used);return;}
+    if(cached){
+      const used=usedImageSources.get(group)||new Set<string>();used.add(cached.src);usedImageSources.set(group,used);
+      const frame=window.requestAnimationFrame(()=>{setVisual(cached);setFailed(false)});
+      return()=>window.cancelAnimationFrame(frame);
+    }
     const controller=new AbortController();
-    setVisual(null);setFailed(false);
+    const frame=window.requestAnimationFrame(()=>{setVisual(null);setFailed(false)});
     const params=new URLSearchParams({action:"query",generator:"search",gsrsearch:query,gsrnamespace:"6",gsrlimit:"12",prop:"imageinfo",iiprop:"url|extmetadata",iiurlwidth:"1000",format:"json",origin:"*"});
     fetch(`https://commons.wikimedia.org/w/api.php?${params}`,{signal:controller.signal})
       .then(response=>response.ok?response.json():Promise.reject(new Error("visual")))
@@ -359,7 +364,7 @@ function WikiVisual({query,alt,label,subLabel,className="",seed=0,group="global"
         used.add(result.src);usedImageSources.set(group,used);imageCache.set(cacheKey,result);setVisual(result);
       })
       .catch(error=>{if(error?.name!=="AbortError")setFailed(true)});
-    return()=>controller.abort();
+    return()=>{window.cancelAnimationFrame(frame);controller.abort()};
   },[cacheKey,group,query,seed]);
 
   return <article className={`wf-wiki-visual ${className} ${visual?"loaded":""} ${failed?"failed":""}`}>
@@ -407,6 +412,8 @@ export default function MundoFantastico() {
   const [answerParts, setAnswerParts] = useState<Pair[]>([]);
   const [englishVisible, setEnglishVisible] = useState(true);
   const [bankOpen, setBankOpen] = useState(false);
+  const closeBank = () => setBankOpen(false);
+  const bankDialogRef = useAccessibleModal<HTMLDivElement>(bankOpen, closeBank);
   const [bankTab, setBankTab] = useState("country");
   const [bankQuery, setBankQuery] = useState("");
 
@@ -443,15 +450,6 @@ export default function MundoFantastico() {
     .map(group=>({...group,words:normalizedBankQuery?group.words.filter(word=>`${word.es} ${word.en}`.toLowerCase().includes(normalizedBankQuery)):group.words}));
   const currentVisual=questionVisual(active,current.visual);
 
-  useEffect(()=>{
-    if(!bankOpen)return;
-    const previous=document.body.style.overflow;
-    document.body.style.overflow="hidden";
-    const close=(event:KeyboardEvent)=>{if(event.key==="Escape")setBankOpen(false)};
-    window.addEventListener("keydown",close);
-    return()=>{document.body.style.overflow=previous;window.removeEventListener("keydown",close)};
-  },[bankOpen]);
-
   const show = (next: Screen) => { setScreen(next); window.scrollTo({top:0,behavior:"smooth"}); };
   const enter = (place: Destination, start = 0) => { setActive(place); setAtlasPick(place); setQuestion(start); setAnswerParts([]); setBankTab("country"); setBankQuery(""); setBankOpen(false); setVisited(previous => new Set([...previous, place.id])); show("destination"); };
   const surprise = () => { const pool = destinations.filter(place => place.id !== active.id); const place = pool[Math.floor(Math.random() * pool.length)] || destinations[0]; enter(place, Math.floor(Math.random() * 10)); };
@@ -461,7 +459,7 @@ export default function MundoFantastico() {
 
   return <main className={`wf-app ${englishVisible ? "" : "wf-spanish-only"}`}>
     <nav className="wf-nav">
-      <Link href="/" className="wf-brand"><span><img src="/chespanish-guide-avatar.png" alt=""/></span><div><b>CHESPANISH</b><small>CONVERSATION ADVENTURES</small></div></Link>
+      <Link href="/" className="wf-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>CONVERSATION ADVENTURES</small></div></Link>
       <div className="wf-progress"><span>MUNDOS ABIERTOS · OPEN WORLDS</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}/40</strong></div>
       <div className="wf-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={() => show(screen === "cover" ? "atlas" : "cover")}><Glyph name={screen === "cover" ? "map" : "home"}/>{screen === "cover" ? " MAPA" : " INICIO"}</button></div>
     </nav>
@@ -556,12 +554,12 @@ export default function MundoFantastico() {
       </div>
 
       <button className="wf-bank-fab" onClick={()=>setBankOpen(true)} aria-expanded={bankOpen}><Glyph name="words"/><span><b>WORDBANK</b><small>ABRIR SIN BAJAR · OPEN NOW</small></span><i>120+</i></button>
-      {bankOpen&&<div className="wf-bank-overlay" onMouseDown={()=>setBankOpen(false)}><aside className="wf-bank-drawer" role="dialog" aria-modal="true" aria-label="Wordbank bilingüe" onMouseDown={event=>event.stopPropagation()}>
-        <header><div><span>WORDBANK SIEMPRE A MANO · ALWAYS READY</span><h2>{active.country}: hablá sin buscar.</h2><p className="wf-en">Tap any word. It goes directly to your answer.</p></div><button onClick={()=>setBankOpen(false)} aria-label="Cerrar wordbank">×</button></header>
+      {bankOpen&&<div ref={bankDialogRef} tabIndex={-1} className="wf-bank-overlay" role="dialog" aria-modal="true" aria-label="Wordbank bilingüe" onMouseDown={closeBank}><aside className="wf-bank-drawer" onMouseDown={event=>event.stopPropagation()}>
+        <header><div><span>WORDBANK SIEMPRE A MANO · ALWAYS READY</span><h2>{active.country}: hablá sin buscar.</h2><p className="wf-en">Tap any word. It goes directly to your answer.</p></div><button onClick={closeBank} aria-label="Cerrar wordbank">×</button></header>
         <label className="wf-bank-search"><span>⌕</span><input autoFocus value={bankQuery} onChange={event=>setBankQuery(event.target.value)} placeholder="Buscar español o inglés · Search Spanish or English"/><button disabled={!bankQuery} onClick={()=>setBankQuery("")}>BORRAR</button></label>
         <nav className="wf-drawer-tabs">{bankCatalog.map(group=><button key={group.id} className={bankTab===group.id&&!normalizedBankQuery?"active":""} onClick={()=>{setBankTab(group.id);setBankQuery("")}}><span>{group.code}</span><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></button>)}</nav>
         <div className="wf-drawer-results">{visibleBankGroups.length?visibleBankGroups.map(group=><section key={group.id}><header><span>{group.code}</span><div><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></div><i>{group.words.length}</i></header><div>{group.words.map((word,index)=><button key={`${group.id}-${word.es}-${index}`} onClick={()=>addPart(word)}><b>{word.es}</b><small className="wf-en">{word.en}</small><i>+</i></button>)}</div></section>):<div className="wf-bank-empty"><b>No aparece esa palabra.</b><span>Probá otra búsqueda. · Try another search.</span></div>}</div>
-        <footer><div><span>RESPUESTA ACTUAL · CURRENT ANSWER</span><b>{answerEs||"Todavía vacía…"}</b><small className="wf-en">{answerEn||"Still empty…"}</small></div><div><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button><button onClick={()=>setBankOpen(false)}>LISTO · DONE →</button></div></footer>
+        <footer><div><span>RESPUESTA ACTUAL · CURRENT ANSWER</span><b>{answerEs||"Todavía vacía…"}</b><small className="wf-en">{answerEn||"Still empty…"}</small></div><div><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button><button onClick={closeBank}>LISTO · DONE →</button></div></footer>
       </aside></div>}
     </section>}
   </main>;

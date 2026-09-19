@@ -1,0 +1,51 @@
+{
+  "guest":{"name":"León Varela","role":"director creativo de Umbral","profile":"Fundó un festival de diseño que creció de una ciudad a tres países y frenó su expansión antes del estreno internacional."},
+  "clips":[
+    {
+      "id":"respuesta-directa","number":"01","title":"La respuesta corta","channel":"CÁMARA A · TOMA COMPLETA","file":"/audio/entrevista-no-salio/01-respuesta-directa.mp3","editorTag":"ORIGEN DE LA DECISIÓN",
+      "hook":"Parece una respuesta directa. Escuchá dónde empieza a matizar.","question":"¿Qué presenta León como causa principal?","options":["Un conflicto personal","Crecer sin una estructura capaz de sostenerlo","La falta total de público"],"answer":1,
+      "analysis":"¿Por qué dice «la respuesta corta» antes de responder? ¿Qué complejidad deja abierta?","talk":"Resumí su posición sin convertirla en una excusa.",
+      "segments":[
+        {"speaker":"Nora","voice":"es-ES-ElviraNeural","rate":"+6%","text":"Se anunciaron ediciones de Umbral en Madrid, Lisboa y Ciudad de México. Tres semanas después, cancelaron dos. ¿Por qué?","pause":220},
+        {"speaker":"León","voice":"es-AR-TomasNeural","rate":"+7%","text":"La respuesta corta es que los números no cerraban. La menos cómoda es que pisamos el acelerador antes de tener un equipo capaz de sostener el crecimiento. Público había; lo que no había era tiempo para decidir bien. Y cuando un proyecto crece más rápido que la conversación entre quienes lo hacen, alguien termina pagando la velocidad."}
+      ]
+    },
+    {
+      "id":"respuesta-evasiva","number":"02","title":"Independencia con sugerencias","channel":"MICRÓFONO PRINCIPAL · SIN CORTE","file":"/audio/entrevista-no-salio/02-respuesta-evasiva.mp3","editorTag":"RELACIÓN CON EL PATROCINADOR",
+      "hook":"Nora pregunta por dinero. León responde hablando de definiciones.","question":"¿Qué evita afirmar de manera directa?","options":["Si el patrocinador condicionó el contenido","Si el festival vendió entradas","Si conoce personalmente a Nora"],"answer":0,
+      "analysis":"¿Qué comunica la expresión «una lista del tamaño de una guía telefónica»? ¿Es literal?","talk":"Decí qué inferís y marcá claramente que es una interpretación.",
+      "segments":[
+        {"speaker":"Nora","voice":"es-ES-ElviraNeural","rate":"+7%","text":"¿El patrocinador amenazó con retirar la financiación si no cambiaban el programa?","pause":180},
+        {"speaker":"León","voice":"es-AR-TomasNeural","rate":"+8%","text":"Amenazar es una palabra muy cinematográfica. Digamos que teníamos definiciones distintas de independencia. Ellos aseguraban que no pedían cambios editoriales; mandaban, eso sí, una lista de sugerencias del tamaño de una guía telefónica. Nosotros podíamos ignorarla, en teoría. En la práctica, hacer encaje de bolillos con el presupuesto también es una forma de presión, aunque nadie golpee la mesa."}
+      ]
+    },
+    {
+      "id":"cambio-registro","number":"03","title":"De «nos desbordó» a «reorganización»","channel":"CÁMARA B · PLANO CERRADO","file":"/audio/entrevista-no-salio/03-cambio-registro.mp3","editorTag":"EL EQUIPO",
+      "hook":"Detectá el momento exacto en que cambia de registro.","question":"¿Para qué usa un registro más corporativo?","options":["Para contar una anécdota divertida","Para suavizar el efecto de las salidas del equipo","Para criticar a la periodista"],"answer":1,
+      "analysis":"Contrastá «nos desbordó» con «reorganización estratégica». ¿Qué versión protege más su imagen?","talk":"Reformulá su respuesta en un registro directo y después en uno diplomático.",
+      "segments":[
+        {"speaker":"Nora","voice":"es-ES-ElviraNeural","rate":"+7%","text":"Durante ese proceso se fueron nueve personas. ¿Las despidieron?","pause":160},
+        {"speaker":"León","voice":"es-AR-TomasNeural","rate":"+8%","text":"Mirá, al principio nos desbordó todo: trabajábamos a los tumbos y prometíamos fechas imposibles. Después hubo una reorganización estratégica de funciones y algunas posiciones dejaron de ser sostenibles. Ya sé cómo suena. Tres contratos no se renovaron, dos personas aceptaron irse y las demás encontraron otros proyectos antes de que pudiéramos ofrecerles algo razonable. Si digo que fue una transición ordenada, te estaría vendiendo un folleto."}
+      ]
+    },
+    {
+      "id":"ironia","number":"04","title":"Un éxito rotundo","channel":"MICRÓFONO AMBIENTE · RISAS","file":"/audio/entrevista-no-salio/04-ironia.mp3","editorTag":"LA CAMPAÑA",
+      "hook":"El sentido literal y la intención no coinciden.","question":"¿Qué considera realmente un fracaso?","options":["Que se hablara del cartel y no de los artistas","Que nadie viera la campaña","Que el equipo no usara redes sociales"],"answer":0,
+      "analysis":"¿Qué señales convierten «éxito rotundo» en ironía? ¿Qué efecto produce la pausa final?","talk":"Creá otra frase irónica sobre una campaña que logra lo contrario de su objetivo.",
+      "segments":[
+        {"speaker":"Nora","voice":"es-ES-ElviraNeural","rate":"+7%","text":"La campaña tuvo millones de visualizaciones. ¿La considerás un éxito?","pause":190},
+        {"speaker":"León","voice":"es-AR-TomasNeural","rate":"+8%","text":"Claro, un éxito rotundo. Conseguimos que todo el mundo hablara del color del cartel y casi nadie de los artistas. Durante cuarenta y ocho horas fuimos tendencia; después preguntamos al público quién actuaba y no recordaban un solo nombre. Si la misión era volver inolvidable una discusión que no importaba, la clavamos. Para el festival, en cambio… bueno, digamos que aprendimos una lección carísima."}
+      ]
+    },
+    {
+      "id":"frase-cambia-todo","number":"05","title":"La firma que faltaba","channel":"AUDIO POSTERIOR · CÁMARA APAGADA","file":"/audio/entrevista-no-salio/05-frase-cambia-todo.mp3","editorTag":"RESPONSABILIDAD",
+      "hook":"Esta frase obliga a releer los cuatro fragmentos anteriores.","question":"¿Qué admite León?","options":["Que él aprobó inicialmente varias decisiones criticadas","Que nunca leyó el contrato","Que la entrevista fue inventada"],"answer":0,
+      "analysis":"¿Cómo cambia la percepción de sus críticas? ¿Gana credibilidad o intenta controlar el relato?","talk":"Explicá dos interpretaciones razonables y decí cuál te convence más.",
+      "segments":[
+        {"speaker":"León","voice":"es-AR-TomasNeural","rate":"+8%","text":"Esperá, esto sí quiero dejarlo grabado. Yo firmé la expansión, aprobé la primera lista del patrocinador y repetí que el equipo podía con todo. Después fue fácil hablar como si hubiera visto venir el choque. No lo vi, o no quise verlo. Si publican mi frase más brillante sobre la independencia y cortan esta parte, me convierten en el héroe de una historia en la que también tomé decisiones bastante torpes. No sería una edición: sería ponerle un moño a mi versión."}
+      ]
+    }
+  ],
+  "finalQuestions":["¿Hasta qué punto una entrevista publicada representa lo que dijo una persona?","¿Qué hace que alguien sea un buen entrevistador?","¿Es legítimo evitar una pregunta?","¿Qué diferencia hay entre ser diplomático y ser evasivo?","¿Por qué algunas personas hablan mejor espontáneamente?","¿Puede editarse una conversación sin cambiar su sentido?","¿Qué tipo de entrevista te interesa escuchar?","¿Qué pregunta te parece incómoda pero válida?"],
+  "supports":["No lo afirma, pero da a entender que…","La elección de esa expresión sugiere…","En sentido literal dice…, aunque la intención parece…","Una edición justa incluiría…","Mi titular sería… porque…"]
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import {useState,type CSSProperties} from "react";
+import Link from "next/link";
 import {feedbackLabels,forbiddenBlocks,powerUps,supportPhrases,topics} from "./data";
 import "../preguntas-prohibidas/style.css";
 import "../preguntas-prohibidas/bilingual-fix.css";
@@ -28,7 +29,7 @@ export default function PreguntasProhibidasA2(){
   const randomBlock=()=>{const pool=forbiddenBlocks.map((_,index)=>index).filter(index=>index!==blockIndex);openBlock(pool[Math.floor(Math.random()*pool.length)]??0)};
 
   return <main className="pr-shell">
-    <nav className="pr-nav"><a href="/" className="pr-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>A2 · CONVERSACIÓN</small></span></a><div><span>{topics.length} MUNDOS</span><span>{topics.length*4} PREGUNTAS</span><span>{forbiddenBlocks.length} BLOQUES</span></div><a href="/">← BIBLIOTECA</a></nav>
+    <nav className="pr-nav"><Link href="/" className="pr-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A2 · CONVERSACIÓN</small></span></Link><div><span>{topics.length} MUNDOS</span><span>{topics.length*4} PREGUNTAS</span><span>{forbiddenBlocks.length} BLOQUES</span></div><Link href="/">← BIBLIOTECA</Link></nav>
 
     {screen==="cover"&&<section className="pr-cover">
       <div className="pr-cover-copy"><span className="pr-level">A2 · OPINIONES CLARAS</span><p className="pr-overline">UNA AVENTURA PARA HABLAR CON FRASES SIMPLES</p><h1>EL REINO DE LAS<br/><em>PREGUNTAS PROHIBIDAS</em></h1><p className="pr-lead">Recorré los mundos, elegí una pregunta y respondé con una idea, una razón y un ejemplo.</p><p className="pr-lead-en">Explore the worlds, choose a question and answer with one idea, one reason and one example.</p><div className="pr-cover-actions"><button onClick={()=>show("rules")}>ENTRAR AL REINO <span>→</span></button><button onClick={()=>show("map")}>IR DIRECTO AL MAPA</button></div><div className="pr-cover-stats"><article><b>{topics.length}</b><span>temas cotidianos</span></article><article><b>{topics.length*4}</b><span>preguntas A2</span></article><article><b>8</b><span>apoyos bilingües</span></article></div></div>

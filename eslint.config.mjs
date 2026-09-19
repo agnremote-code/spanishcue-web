@@ -6,10 +6,10 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
-    rules: {
-      "@next/next/no-html-link-for-pages": "off",
-      "@next/next/no-img-element": "off",
-    },
+    files: ["app/**/*.{ts,tsx}"],
+    // Vinext on Sites routes local WebP assets through the Worker because the
+    // Next image optimizer is not compatible with this deployment path.
+    rules: { "@next/next/no-img-element": "off" },
   },
   globalIgnores([
     ".next/**",

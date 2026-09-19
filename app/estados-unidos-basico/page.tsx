@@ -23,7 +23,7 @@ function Glyph({name}:{name:GlyphName}){
 }
 
 function Seal({stop,small=false}:{stop:UsaStop;small?:boolean}){
-  return <div className={`us-seal ${small?"small":""}`} style={{"--stop":stop.color} as CSSProperties} aria-hidden="true"><span>CHESPANISH</span><b>{stop.number}</b><i>{stop.kind==="lugar"?"STOP":"LENS"}</i></div>;
+  return <div className={`us-seal ${small?"small":""}`} style={{"--stop":stop.color} as CSSProperties} aria-hidden="true"><span>SPANISHCUE</span><b>{stop.number}</b><i>{stop.kind==="lugar"?"STOP":"LENS"}</i></div>;
 }
 
 export default function EstadosUnidosBasico(){
@@ -53,7 +53,7 @@ export default function EstadosUnidosBasico(){
 
   return <main className={`us-app ${showEnglish?"":"us-no-english"}`}>
     <nav className="us-nav">
-      <Link href="/" className="us-brand"><span><img src="/chespanish-guide-avatar.png" alt=""/></span><div><b>CHESPANISH</b><small>CONVERSATION ROAD TRIPS</small></div></Link>
+      <Link href="/" className="us-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>CONVERSATION ROAD TRIPS</small></div></Link>
       <div className="us-mileage"><span>MILLAS HABLADAS · SPOKEN MILES</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}<small>/20</small></strong></div>
       <div className="us-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={()=>show(screen==="cover"?"atlas":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA":" INICIO"}</button></div>
     </nav>

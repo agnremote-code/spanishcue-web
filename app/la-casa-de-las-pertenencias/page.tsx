@@ -3,7 +3,7 @@ import GrammarWorld from "../grammar-worlds/GrammarWorld";
 import { possessionHouse } from "../grammar-worlds/data";
 
 export const metadata: Metadata = {
-  title: "La Casa de las Pertenencias | CHESPANISH",
+  title: "La Casa de las Pertenencias | SPANISHCUE",
   description: "Clase A1 sobre el tema 5 del PCIC: los posesivos.",
 };
 

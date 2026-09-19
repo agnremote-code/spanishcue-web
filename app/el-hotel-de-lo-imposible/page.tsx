@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { rooms, type Room } from "./data";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 import "./style.css";
 
@@ -38,7 +37,6 @@ function TranscriptCard({ active, final = false }: { active: Room; final?: boole
 }
 
 export default function HotelDeLoImposible() {
-  const router = useRouter();
   const [stage, setStage] = useState<Stage>("lobby");
   const [active, setActive] = useState<Room>(rooms[0]);
   const [listens, setListens] = useState(0);
@@ -62,20 +60,6 @@ export default function HotelDeLoImposible() {
   const score = answers.reduce((total, answer, index) => total + (answer === multipleQuestions[index]?.answer ? 1 : 0), 0);
   const progress = duration > 0 ? Math.min(100, (elapsed / duration) * 100) : 0;
 
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.load();
-    setDuration(0);
-    setElapsed(0);
-    setSpeaking(false);
-    setPaused(false);
-    setAudioError(false);
-  }, [active.id]);
-
-  useEffect(() => () => audioRef.current?.pause(), []);
-  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [stage]);
-
   const stopAudio = (reset = false) => {
     const audio = audioRef.current;
     audio?.pause();
@@ -98,6 +82,29 @@ export default function HotelDeLoImposible() {
     setOpenRevealed([]);
     setReadingSteps([]);
   };
+
+  useEffect(() => {
+    const roomId = new URLSearchParams(window.location.search).get("room");
+    const requestedRoom = rooms.find((room) => room.id === roomId);
+    const frame = requestedRoom ? window.requestAnimationFrame(() => chooseRoom(requestedRoom)) : null;
+    // The room URL is read once on page load. Lobby choices are normal links.
+    return () => { if (frame !== null) window.cancelAnimationFrame(frame); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.load();
+    setDuration(0);
+    setElapsed(0);
+    setSpeaking(false);
+    setPaused(false);
+    setAudioError(false);
+  }, [active.id]);
+
+  useEffect(() => () => audioRef.current?.pause(), []);
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [stage]);
 
   const playFrom = (from = elapsed >= duration - .5 ? 0 : elapsed) => {
     const audio = audioRef.current;
@@ -157,7 +164,7 @@ export default function HotelDeLoImposible() {
 
   return <main className="hi-shell" style={{ "--room": active.color } as CSSProperties}>
     <SignalBackground/>
-    <header className="hi-topbar"><button onClick={() => { stopAudio(); router.push("/"); }}>← BIBLIOTECA</button><Link className="hi-brand" href="/" onClick={() => stopAudio()}>CHESPANISH <b>ESCUCHA</b></Link><div className="hi-level"><span>A2</span> COMPRENSIÓN AUDITIVA</div></header>
+    <header className="hi-topbar"><Link className="hi-back" href="/" onClick={() => stopAudio()}>← BIBLIOTECA</Link><Link className="hi-brand" href="/" onClick={() => stopAudio()}>SPANISHCUE <b>ESCUCHA</b></Link><div className="hi-level"><span>A2</span> COMPRENSIÓN AUDITIVA</div></header>
     <audio
       ref={audioRef}
       className="hi-real-audio"
@@ -173,7 +180,7 @@ export default function HotelDeLoImposible() {
 
     {stage === "lobby" && <section className="hi-lobby">
       <div className="hi-welcome"><span className="hi-kicker">DIEZ HABITACIONES · DIEZ HISTORIAS</span><h1>El hotel de<br/><em>lo imposible.</em></h1><p>En este hotel, nada funciona como esperás.<br/>Elegí una habitación y escuchá qué pasó.</p><StudentGuide>Choose a room. Listen twice, answer the questions and read the transcript at the end.</StudentGuide><div className="hi-method"><span><b>1</b> ESCUCHÁ</span><span><b>2</b> ELEGÍ</span><span><b>3</b> RESPONDÉ</span><span><b>4</b> LEÉ</span></div>
-      <nav className="hi-room-menu" aria-label="Elegir una habitación">{rooms.map(room => <button key={room.id} onClick={() => chooseRoom(room)} style={{"--key-color": room.color} as CSSProperties}><span className="hi-room-number">{room.number}</span><span><b>{room.name}</b><small>{room.topic}</small></span><span aria-hidden="true">↗</span></button>)}</nav></div>
+      <nav className="hi-room-menu" aria-label="Elegir una habitación">{rooms.map(room => <a key={room.id} href={`/el-hotel-de-lo-imposible?room=${room.id}`} style={{"--key-color": room.color} as CSSProperties}><span className="hi-room-number">{room.number}</span><span><b>{room.name}</b><small>{room.topic}</small></span><span aria-hidden="true">↗</span></a>)}</nav></div>
       <figure className="hi-lobby-art"><img src="/hotel-imposible/lobby.webp" alt="Un vestíbulo de hotel fantástico, con un ascensor abierto a las estrellas y una valija flotando." width="1536" height="1024"/><figcaption><span>RECEPCIÓN · 00:00</span><b>Tu llave abre una historia.</b><small>10 audios · 100 preguntas · Nivel A2</small></figcaption></figure>
     </section>}
 

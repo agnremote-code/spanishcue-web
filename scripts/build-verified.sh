@@ -14,10 +14,24 @@ if [[ ! -x "${vinext}" ]]; then
   exit 69
 fi
 
+echo "Removing the previous generated build..."
+rm -rf -- "${SITES_PROJECT_ROOT}/dist"
+
 echo "Running bounded vinext build..."
 node "${script_dir}/run-bounded.mjs" "${vinext}" build
 
+# Some vinext asset copies settle immediately after the parent command exits.
+# Wait for a stable output tree before deriving the private/public allowlist.
+node "${script_dir}/wait-for-build-quiescence.mjs"
 
 node "${script_dir}/protect-client-assets.mjs"
+
+# Recreate the completed output from an allowlist after the build subprocesses
+# have exited. This also makes packaging resilient in synchronized workspaces.
+node "${script_dir}/finalize-protected-build.mjs"
+# Vinext can finish copying static assets just after its build command returns.
+# The finalizer is idempotent; a second pass keeps the protection denylist
+# authoritative before the artifact validator reads the completed output.
+node "${script_dir}/finalize-protected-build.mjs"
 
 "${script_dir}/validate-artifact.sh"
