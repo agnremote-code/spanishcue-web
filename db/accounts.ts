@@ -125,6 +125,7 @@ export async function syncFirebaseAccount(
   user: FirebaseUser,
   ownerIdentity?: OwnerIdentity,
 ): Promise<AccountAccess> {
+  if (!user.emailVerified) throw new Error("EMAIL_NOT_VERIFIED");
   const now = nowSeconds();
   const email = normalizedEmail(user.email);
   const owner = isOwnerUser(user, ownerIdentity);

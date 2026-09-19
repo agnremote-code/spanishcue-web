@@ -1,6 +1,6 @@
 "use client";
 
-import { onIdTokenChanged } from "firebase/auth";
+import { onIdTokenChanged, signOut } from "firebase/auth";
 import { useEffect } from "react";
 import { firebaseAuth } from "./firebase-client";
 
@@ -16,12 +16,15 @@ export default function AuthSessionSync() {
           return;
         }
         const idToken = await user.getIdToken();
-        await fetch("/api/auth/session", {
+        const response = await fetch("/api/auth/session", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ idToken }),
           credentials: "same-origin",
         });
+        if (response.status === 403) {
+          await signOut(firebaseAuth);
+        }
       } catch {
         // The next explicit sign-in can safely restore the server session.
       }

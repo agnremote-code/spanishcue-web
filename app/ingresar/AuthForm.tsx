@@ -2,14 +2,18 @@
 
 import {
   browserLocalPersistence,
+  browserSessionPersistence,
   createUserWithEmailAndPassword,
   getAdditionalUserInfo,
   GoogleAuthProvider,
   OAuthProvider,
+  inMemoryPersistence,
+  sendEmailVerification,
   sendPasswordResetEmail,
   setPersistence,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
   type User,
 } from "firebase/auth";
 import { FormEvent, type KeyboardEvent as ReactKeyboardEvent, useRef, useState } from "react";
@@ -22,6 +26,43 @@ import { trackMarketingEvent } from "../marketing/analytics";
 
 type Mode = "entrar" | "registro";
 
+type AuthResult = {
+  user: User;
+  newAccount: boolean;
+  method: "email" | "google" | "apple";
+};
+
+function authError(code: string) {
+  const error = new Error(code) as Error & { code: string };
+  error.code = code;
+  return error;
+}
+
+async function preparePersistence() {
+  for (const persistence of [
+    browserLocalPersistence,
+    browserSessionPersistence,
+    inMemoryPersistence,
+  ]) {
+    try {
+      await setPersistence(firebaseAuth, persistence);
+      return;
+    } catch {
+      // Try the next supported persistence mode. This matters in private browsing.
+    }
+  }
+  throw authError("auth/web-storage-unsupported");
+}
+
+async function sendVerificationAndSignOut(user: User) {
+  firebaseAuth.useDeviceLanguage();
+  try {
+    await sendEmailVerification(user);
+  } finally {
+    await signOut(firebaseAuth).catch(() => undefined);
+  }
+}
+
 export function authMessageKeyFor(error: unknown): MessageKey {
   const code = typeof error === "object" && error && "code" in error
     ? String((error as { code: unknown }).code)
@@ -32,6 +73,11 @@ export function authMessageKeyFor(error: unknown): MessageKey {
   if (code.includes("invalid-email")) return "auth.error.invalidEmail";
   if (code.includes("popup-closed-by-user")) return "auth.error.popupClosed";
   if (code.includes("popup-blocked")) return "auth.error.popupBlocked";
+  if (code.includes("cancelled-popup-request")) return "auth.error.popupCancelled";
+  if (code.includes("network-request-failed")) return "auth.error.network";
+  if (code.includes("too-many-requests")) return "auth.error.tooManyRequests";
+  if (code.includes("web-storage-unsupported")) return "auth.error.storage";
+  if (code.includes("email-not-verified")) return "auth.error.emailNotVerified";
   if (code.includes("account-exists-with-different-credential")) return "auth.error.existingCredential";
   if (code.includes("unauthorized-domain")) return "auth.error.unauthorizedDomain";
   if (code.includes("operation-not-allowed")) return "auth.error.methodDisabled";
@@ -39,15 +85,39 @@ export function authMessageKeyFor(error: unknown): MessageKey {
 }
 
 export async function establishSession(user: User, returnTo?: string) {
-  const idToken = await user.getIdToken(true);
-  const response = await fetch("/api/auth/session", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ idToken }),
-    credentials: "same-origin",
-  });
-  if (!response.ok) throw new Error("session");
-  if (returnTo) window.location.assign(returnTo);
+  let lastError: unknown = authError("auth/session-failed");
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      const idToken = await user.getIdToken(true);
+      const response = await fetch("/api/auth/session", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ idToken }),
+        credentials: "same-origin",
+      });
+      if (response.ok) {
+        if (returnTo) window.location.assign(returnTo);
+        return;
+      }
+      const body = await response.json().catch(() => null) as { code?: unknown } | null;
+      if (response.status === 403 && body?.code === "EMAIL_NOT_VERIFIED") {
+        throw authError("auth/email-not-verified");
+      }
+      if (response.status < 500) throw authError("auth/session-failed");
+      lastError = authError("auth/session-failed");
+    } catch (reason) {
+      if (
+        typeof reason === "object" &&
+        reason &&
+        "code" in reason &&
+        String((reason as { code: unknown }).code).includes("email-not-verified")
+      ) {
+        throw reason;
+      }
+      lastError = reason;
+    }
+  }
+  throw lastError;
 }
 
 export default function AuthForm({
@@ -66,6 +136,8 @@ export default function AuthForm({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const [verificationPending, setVerificationPending] = useState(false);
+  const authAttemptRef = useRef(false);
   const loginTabRef = useRef<HTMLButtonElement>(null);
   const registerTabRef = useRef<HTMLButtonElement>(null);
 
@@ -76,6 +148,7 @@ export default function AuthForm({
     setMode(nextMode);
     setError("");
     setNotice("");
+    setVerificationPending(false);
   };
 
   const moveTab = (event: ReactKeyboardEvent<HTMLButtonElement>) => {
@@ -92,17 +165,33 @@ export default function AuthForm({
     (nextMode === "entrar" ? loginTabRef : registerTabRef).current?.focus();
   };
 
-  const complete = async (action: () => Promise<{ user: User; newAccount: boolean; method: "email" | "google" | "apple" }>) => {
+  const complete = async (action: () => Promise<AuthResult>) => {
+    if (authAttemptRef.current) return;
+    authAttemptRef.current = true;
     setBusy(true);
     setError("");
     setNotice("");
+    setVerificationPending(false);
     try {
-      await setPersistence(firebaseAuth, browserLocalPersistence);
+      await preparePersistence();
       const result = await action();
       if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
+      if (!result.user.emailVerified) {
+        if (result.newAccount) {
+          await sendVerificationAndSignOut(result.user);
+        } else {
+          await signOut(firebaseAuth).catch(() => undefined);
+        }
+        setMode("entrar");
+        setVerificationPending(true);
+        setNotice(t(result.newAccount ? "auth.verifySent" : "auth.verifyRequired"));
+        return;
+      }
       await establishSession(result.user, returnTo);
     } catch (reason) {
       setError(t(authMessageKeyFor(reason)));
+    } finally {
+      authAttemptRef.current = false;
       setBusy(false);
     }
   };
@@ -116,6 +205,36 @@ export default function AuthForm({
         : await signInWithEmailAndPassword(firebaseAuth, cleanEmail, password);
       return { user: credential.user, newAccount: mode === "registro", method: "email" };
     });
+  };
+
+  const resendVerification = async () => {
+    const cleanEmail = email.trim().toLowerCase();
+    if (!cleanEmail) {
+      setError(t("auth.error.emailFirst"));
+      return;
+    }
+    if (!password) {
+      setError(t("auth.error.passwordFirst"));
+      return;
+    }
+    setBusy(true);
+    setError("");
+    setNotice("");
+    try {
+      await preparePersistence();
+      const credential = await signInWithEmailAndPassword(firebaseAuth, cleanEmail, password);
+      if (credential.user.emailVerified) {
+        await establishSession(credential.user, returnTo);
+        return;
+      }
+      await sendVerificationAndSignOut(credential.user);
+      setVerificationPending(true);
+      setNotice(t("auth.verifyResent"));
+    } catch (reason) {
+      setError(t(authMessageKeyFor(reason)));
+    } finally {
+      setBusy(false);
+    }
   };
 
   const google = () => {
@@ -187,6 +306,11 @@ export default function AuthForm({
         {mode === "entrar" && <button className="forgot-button" type="button" onClick={resetPassword} disabled={busy}>{t("auth.forgot")}</button>}
         {error && <p className="auth-message error" role="alert">{error}</p>}
         {notice && <p className="auth-message success" role="status">{notice}</p>}
+        {verificationPending && (
+          <button className="forgot-button" type="button" onClick={resendVerification} disabled={busy}>
+            {t("auth.resendVerification")}
+          </button>
+        )}
         <button className="submit-button" type="submit" disabled={busy}>{busy ? t("common.loading") : mode === "entrar" ? t("auth.loginSubmit") : t("auth.registerSubmit")}</button>
       </form>
       {mode === "registro" && <p className="auth-legal-notice">{t("auth.createTermsStart")} <Link href="/terms">{t("auth.terms")}</Link> {t("auth.createTermsMiddle")} <Link href="/privacy">{t("auth.privacyPolicy")}</Link>.</p>}
