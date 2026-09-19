@@ -101,14 +101,17 @@ test("Apple, Google, email and password remain present in the auth source", asyn
 });
 
 test("session creation and account provisioning reject unverified emails", async () => {
-  const [sessionRoute, accounts] = await Promise.all([
+  const [sessionRoute, accounts, sessionSync] = await Promise.all([
     readFile("app/api/auth/session/route.ts", "utf8"),
     readFile("db/accounts.ts", "utf8"),
+    readFile("app/AuthSessionSync.tsx", "utf8"),
   ]);
   assert.match(sessionRoute, /!user\.emailVerified/);
   assert.match(sessionRoute, /EMAIL_NOT_VERIFIED/);
   assert.match(accounts, /!user\.emailVerified/);
   assert.match(accounts, /EMAIL_NOT_VERIFIED/);
+  assert.match(sessionSync, /response\.status === 403/);
+  assert.match(sessionSync, /signOut\(firebaseAuth\)/);
 });
 
 test("failed or abandoned PayPal webhooks can be claimed again safely", async () => {
