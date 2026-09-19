@@ -38,7 +38,7 @@ Un estado **PASA** aquí significa que la evidencia indicada pasó; no significa
 
 | Control | Resultado |
 |---|---:|
-| `npm test` | **PASA** — tracker 17/17 + regresión Worker 82/82 |
+| `npm test` | **PASA** — tracker 17/17 + regresión Worker 83/83 |
 | `node --test tests/boards-*.test.mjs` | **PASA** — 25/25 |
 | `npm run lint` | **PASA** — 0 errores |
 | `npm run build` | **PASA** |

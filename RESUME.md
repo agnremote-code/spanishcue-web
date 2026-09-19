@@ -27,7 +27,7 @@ Fuente local recuperada e integrada: `b945cacc65990cede4b1213f8cac1f624c0389e3` 
 
 ## Evidencia
 
-- `npm test`: **PASA**, 17/17 tracker + 82/82 Worker/regresión.
+- `npm test`: **PASA**, 17/17 tracker + 83/83 Worker/regresión.
 - Tableros: **PASA**, 25/25.
 - Lint, build, artefacto y whitespace: **PASA**.
 - Protección: 54 módulos y 47 medios premium fuera del almacenamiento público.
