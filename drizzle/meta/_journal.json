@@ -8,6 +8,13 @@
       "when": 1788869929446,
       "tag": "0000_jazzy_fantastic_four",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789806403919,
+      "tag": "0001_student_tracker",
+      "breakpoints": true
     }
   ]
 }

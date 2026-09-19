@@ -3,6 +3,8 @@ import { headers } from 'next/headers';
 import { getUserSessionFromHeaders } from '../access-policy';
 import { readOffer } from '../../db/offer';
 import { usd, discountedCents } from '../offer';
+import { lessons } from '../lesson-catalog';
+import { StudentTracker } from '../student-tracker/StudentTracker';
 import '../teachers.css';
 
 export const dynamic = 'force-dynamic';
@@ -133,39 +135,12 @@ export default async function AccountPage({
 
         {/* TAB 2: MIS ALUMNOS */}
         {activeTab === 'alumnos' && (
-          <div className="account-card">
-            <h2>Mis alumnos</h2>
-            <div style={{ background: '#101e30', border: '1px solid var(--line)', padding: 24, borderRadius: 10 }}>
-              <p style={{ color: '#76c2ff', fontWeight: 'bold', margin: '0 0 8px', fontSize: 14 }}>
-                MÓDULO EN PREPARACIÓN (PRÓXIMAMENTE)
-              </p>
-              <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.6, margin: 0 }}>
-                Pronto podrás registrar a tus alumnos, crear grupos, asignarles lecciones específicas de la biblioteca
-                y dar seguimiento a su progreso de conversación y aprendizaje.
-              </p>
-            </div>
-          </div>
+          <StudentTracker draftScope={session.userId || 'unknown'} lessons={lessons.map(({ id, title }) => ({ id, title }))} />
         )}
 
         {/* TAB 3: HISTORIAL DE CLASES */}
         {activeTab === 'historial' && (
-          <div className="account-card">
-            <h2>Historial de clases</h2>
-            <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.6 }}>
-              Abrir o explorar el contenido de una lección para preparar tu clase no la registra automáticamente como
-              dictada. El seguimiento formal de clases impartidas estará integrado con la gestión de alumnos.
-            </p>
-            <div style={{ background: '#101e30', padding: 20, borderRadius: 10, marginTop: 16 }}>
-              <p style={{ color: 'var(--muted)', margin: 0, fontSize: 14 }}>
-                No tenés lecciones registradas en tu historial por el momento.
-              </p>
-            </div>
-            <div style={{ marginTop: 20 }}>
-              <a href="/" style={{ color: 'var(--blue)', fontWeight: 'bold', fontSize: 14 }}>
-                Explorar catálogo de lecciones →
-              </a>
-            </div>
-          </div>
+          <StudentTracker historyOnly draftScope={session.userId || 'unknown'} lessons={lessons.map(({ id, title }) => ({ id, title }))} />
         )}
 
         {/* TAB 4: FAVORITOS */}

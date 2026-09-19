@@ -8,7 +8,7 @@ const root=process.cwd();
 const built=await build({stdin:{contents:'export {lessons} from "./app/lesson-catalog"; export {isFreeLesson,ownerFromHeaders} from "./app/access-policy";',resolveDir:root},bundle:true,format:'esm',platform:'node',write:false});
 const policy=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
 const manifest=JSON.parse(await readFile('dist/client/.vite/manifest.json','utf8'));
-const publicRoots=new Set(['app/Library.tsx','app/grammar-worlds/GrammarWorld.tsx','app/conversation-worlds/ConversationWorld.tsx','virtual:vinext-app-browser-entry',...Object.keys(manifest).filter(k=>k.startsWith('node_modules/'))]);
+const publicRoots=new Set(['app/Library.tsx','app/student-tracker/StudentTracker.tsx','app/grammar-worlds/GrammarWorld.tsx','app/conversation-worlds/ConversationWorld.tsx','virtual:vinext-app-browser-entry',...Object.keys(manifest).filter(k=>k.startsWith('node_modules/'))]);
 for(const l of policy.lessons)if(policy.isFreeLesson(l.id)&&l.path?.startsWith('/'))publicRoots.add(`app${l.path}/page.tsx`);
 const publicFiles=new Set(),visited=new Set();
 function visit(key){if(visited.has(key))return;visited.add(key);const item=manifest[key];if(!item)return;publicFiles.add(item.file);for(const css of item.css??[])publicFiles.add(css);for(const dep of item.imports??[])visit(dep)}
