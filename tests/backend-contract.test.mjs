@@ -46,6 +46,14 @@ test("only verified server context creates full-access headers", () => {
     accessSource: "manual",
     accessExpiresAt: null,
   };
+  const unverified = access.authenticatedRequestHeaders(
+    new Headers(),
+    { ...user, emailVerified: false },
+    account,
+  );
+  assert.equal(access.signedInFromHeaders(unverified), false);
+  assert.equal(access.fullAccessFromHeaders(unverified), false);
+
   const verified = access.authenticatedRequestHeaders(new Headers(), user, account);
   assert.equal(access.signedInFromHeaders(verified), true);
   assert.equal(access.fullAccessFromHeaders(verified), true);
@@ -84,8 +92,23 @@ test("Apple, Google, email and password remain present in the auth source", asyn
   assert.match(source, /OAuthProvider\("apple\.com"\)/);
   assert.match(source, /createUserWithEmailAndPassword/);
   assert.match(source, /signInWithEmailAndPassword/);
+  assert.match(source, /sendEmailVerification/);
+  assert.match(source, /browserSessionPersistence/);
+  assert.match(source, /inMemoryPersistence/);
+  assert.match(source, /sendVerificationAndSignOut/);
   assert.match(source, /role="tabpanel"/);
   assert.match(source, /ArrowLeft/);
+});
+
+test("session creation and account provisioning reject unverified emails", async () => {
+  const [sessionRoute, accounts] = await Promise.all([
+    readFile("app/api/auth/session/route.ts", "utf8"),
+    readFile("db/accounts.ts", "utf8"),
+  ]);
+  assert.match(sessionRoute, /!user\.emailVerified/);
+  assert.match(sessionRoute, /EMAIL_NOT_VERIFIED/);
+  assert.match(accounts, /!user\.emailVerified/);
+  assert.match(accounts, /EMAIL_NOT_VERIFIED/);
 });
 
 test("failed or abandoned PayPal webhooks can be claimed again safely", async () => {
