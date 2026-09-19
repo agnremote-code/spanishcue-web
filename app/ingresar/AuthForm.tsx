@@ -54,19 +54,10 @@ async function preparePersistence() {
   throw authError("auth/web-storage-unsupported");
 }
 
-function verificationContinueUrl(returnTo: string) {
-  const url = new URL("/ingresar", window.location.origin);
-  url.searchParams.set("modo", "entrar");
-  if (returnTo && returnTo !== "/") url.searchParams.set("returnTo", returnTo);
-  return url.toString();
-}
-
-async function sendVerificationAndSignOut(user: User, returnTo: string) {
+async function sendVerificationAndSignOut(user: User) {
   firebaseAuth.useDeviceLanguage();
   try {
-    await sendEmailVerification(user, {
-      url: verificationContinueUrl(returnTo),
-    });
+    await sendEmailVerification(user);
   } finally {
     await signOut(firebaseAuth).catch(() => undefined);
   }
@@ -183,10 +174,14 @@ export default function AuthForm({
       const result = await action();
       if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
       if (!result.user.emailVerified) {
-        await sendVerificationAndSignOut(result.user, returnTo);
+        if (result.newAccount) {
+          await sendVerificationAndSignOut(result.user);
+        } else {
+          await signOut(firebaseAuth).catch(() => undefined);
+        }
         setMode("entrar");
         setVerificationPending(true);
-        setNotice(t(result.newAccount ? "auth.verifySent" : "auth.verifyResent"));
+        setNotice(t(result.newAccount ? "auth.verifySent" : "auth.verifyRequired"));
         setBusy(false);
         return;
       }
@@ -228,7 +223,7 @@ export default function AuthForm({
         await establishSession(credential.user, returnTo);
         return;
       }
-      await sendVerificationAndSignOut(credential.user, returnTo);
+      await sendVerificationAndSignOut(credential.user);
       setVerificationPending(true);
       setNotice(t("auth.verifyResent"));
     } catch (reason) {
