@@ -62,13 +62,18 @@ test('every library route has consecutive, unique display positions',()=>{
  }
 });
 
-test('owner identity requires the exact Firebase UID and email',async()=>{
- assert.equal(p.isOwnerUser({uid:p.OWNER_UID,email:p.OWNER_EMAIL,emailVerified:false,displayName:null}),true);
+test('owner identity requires a verified email plus the exact Firebase UID and email',async()=>{
+ assert.equal(p.isOwnerUser({uid:p.OWNER_UID,email:p.OWNER_EMAIL,emailVerified:false,displayName:null}),false);
  assert.equal(p.isOwnerUser({uid:'different',email:p.OWNER_EMAIL,emailVerified:true,displayName:null}),false);
  assert.equal(p.isOwnerUser({uid:p.OWNER_UID,email:'other@example.test',emailVerified:true,displayName:null}),false);
  const fetcher=async()=>new Response(JSON.stringify({users:[{localId:p.OWNER_UID,email:p.OWNER_EMAIL,emailVerified:false}]}),{status:200,headers:{'content-type':'application/json'}});
  const user=await p.verifyFirebaseIdToken('x'.repeat(60),fetcher);
- assert.equal(p.isOwnerUser(user),true);
+ assert.equal(p.isOwnerUser(user),false);
+ const unverifiedHeaders=p.authenticatedRequestHeaders(new Headers(),user,{userId:'owner-unverified',email:p.OWNER_EMAIL,displayName:null,role:'owner',status:'active',accessLevel:'full',accessSource:'owner',accessExpiresAt:null});
+ assert.equal(p.signedInFromHeaders(unverifiedHeaders),false);
+ assert.equal(p.fullAccessFromHeaders(unverifiedHeaders),false);
+ const filtered=await p.getFirebaseUserFromHeaders(new Headers({cookie:`__session=${'x'.repeat(60)}`}),fetcher);
+ assert.equal(filtered,null);
  const headers=p.authenticatedRequestHeaders(new Headers(forgedOwner),null);
  assert.equal(p.ownerFromHeaders(headers),false);
 });
