@@ -181,6 +181,7 @@ export default function AuthForm({
     try {
       await preparePersistence();
       const result = await action();
+      if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
       if (!result.user.emailVerified) {
         await sendVerificationAndSignOut(result.user, returnTo);
         setMode("entrar");
@@ -189,7 +190,6 @@ export default function AuthForm({
         setBusy(false);
         return;
       }
-      if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
       await establishSession(result.user, returnTo);
     } catch (reason) {
       setError(t(authMessageKeyFor(reason)));
