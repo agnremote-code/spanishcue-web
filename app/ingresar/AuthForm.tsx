@@ -137,6 +137,7 @@ export default function AuthForm({
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [verificationPending, setVerificationPending] = useState(false);
+  const authAttemptRef = useRef(false);
   const loginTabRef = useRef<HTMLButtonElement>(null);
   const registerTabRef = useRef<HTMLButtonElement>(null);
 
@@ -165,6 +166,8 @@ export default function AuthForm({
   };
 
   const complete = async (action: () => Promise<AuthResult>) => {
+    if (authAttemptRef.current) return;
+    authAttemptRef.current = true;
     setBusy(true);
     setError("");
     setNotice("");
@@ -182,12 +185,13 @@ export default function AuthForm({
         setMode("entrar");
         setVerificationPending(true);
         setNotice(t(result.newAccount ? "auth.verifySent" : "auth.verifyRequired"));
-        setBusy(false);
         return;
       }
       await establishSession(result.user, returnTo);
     } catch (reason) {
       setError(t(authMessageKeyFor(reason)));
+    } finally {
+      authAttemptRef.current = false;
       setBusy(false);
     }
   };
