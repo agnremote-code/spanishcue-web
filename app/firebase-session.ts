@@ -96,7 +96,9 @@ export async function getFirebaseUserFromHeaders(
   fetcher: FetchLike = fetch,
 ): Promise<FirebaseUser | null> {
   const token = firebaseTokenFromHeaders(headers);
-  return token ? verifyFirebaseIdToken(token, fetcher) : null;
+  if (!token) return null;
+  const user = await verifyFirebaseIdToken(token, fetcher);
+  return user?.emailVerified ? user : null;
 }
 
 export function isOwnerUser(
@@ -105,6 +107,7 @@ export function isOwnerUser(
 ): boolean {
   return Boolean(
     user &&
+      user.emailVerified &&
       user.uid === ownerIdentity.uid &&
       user.email === ownerIdentity.email.trim().toLowerCase(),
   );
@@ -134,7 +137,7 @@ export function authenticatedRequestHeaders(
   headers.delete(VERIFIED_ACCOUNT_ID_HEADER);
   headers.delete(VERIFIED_ROLE_HEADER);
   headers.delete(VERIFIED_ACCESS_HEADER);
-  if (user) {
+  if (user?.emailVerified) {
     headers.set(VERIFIED_UID_HEADER, user.uid);
     headers.set(VERIFIED_EMAIL_HEADER, user.email);
     if (account) {
