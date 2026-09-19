@@ -62,7 +62,7 @@ export default function AustraliaEnMovimiento(){
 
   return <main className={`au-app ${showEnglish?"":"au-hide-en"}`}>
     <nav className="au-nav">
-      <Link href="/" className="au-brand"><span><img src="/chespanish-guide-avatar.png" alt=""/></span><div><b>CHESPANISH</b><small>AUSTRALIAN SPEAKING ADVENTURE</small></div></Link>
+      <Link href="/" className="au-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>AUSTRALIAN SPEAKING ADVENTURE</small></div></Link>
       <div className="au-progress"><span>TERRITORIOS EXPLORADOS · EXPLORED</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}<small>/8</small></strong></div>
       <div className="au-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={()=>show(screen==="cover"?"atlas":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA":" INICIO"}</button></div>
     </nav>

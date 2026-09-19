@@ -20,8 +20,30 @@ test('accent-insensitive search remains combined with both facets',()=>{
 });
 test('all selection only clears its own facet',()=>{
   assert.deepEqual(filterLessons(lessons,{level:'Todos',category:'Gramática'}).map(x=>x.id),[1,2,4]);
-  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Todas'}).map(x=>x.id),[2,3,4]);
+  assert.deepEqual(filterLessons(lessons,{level:'A2',category:'Todas'}).map(x=>x.id),[2,4,3]);
   assert.equal(filterLessons(lessons).length,4);
+});
+
+test('grammar uses the central curriculum sequence after level and search filters',()=>{
+  const shuffled = [
+    {...lessons[1],curriculumSequence:16},
+    {...lessons[3],curriculumSequence:7},
+    {...lessons[0],curriculumSequence:1},
+  ];
+  assert.deepEqual(filterLessons(shuffled,{category:'Gramática'}).map(x=>x.id),[1,4,2]);
+  assert.deepEqual(filterLessons(shuffled,{category:'Gramática',level:'A2'}).map(x=>x.id),[4,2]);
+  assert.deepEqual(filterLessons(shuffled,{category:'Gramática',query:'presente'}).map(x=>x.id),[4]);
+});
+
+test('all categories use route sequence instead of creation order',()=>{
+  const shuffled = [
+    {id:5,level:'A2',category:'Conversación',routeSequence:2},
+    {id:2,level:'A1',category:'Gramática',routeSequence:2},
+    {id:4,level:'A2',category:'Conversación',routeSequence:1},
+    {id:1,level:'A1',category:'Gramática',routeSequence:1},
+  ];
+  assert.deepEqual(filterLessons(shuffled).map(x=>x.id),[1,2,4,5]);
+  assert.deepEqual(filterLessons(shuffled,{category:'Conversación'}).map(x=>x.id),[4,5]);
 });
 
 test('each category offers only its own levels, including multi-level lessons',()=>{

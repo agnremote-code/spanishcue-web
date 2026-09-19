@@ -126,7 +126,7 @@ export default function IndonesiaFantastica() {
 
   return <main className={`id-app ${englishVisible?"":"id-spanish-only"}`}>
     <nav className="id-nav">
-      <Link href="/" className="id-brand"><span><img src="/chespanish-guide-avatar.png" alt=""/></span><div><b>CHESPANISH</b><small>CONVERSATION ADVENTURES</small></div></Link>
+      <Link href="/" className="id-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>CONVERSATION ADVENTURES</small></div></Link>
       <div className="id-nav-progress"><span>EXPEDICIÓN · EXPEDITION</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}/38</strong></div>
       <div className="id-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={()=>show(screen==="cover"?"map":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA":" INICIO"}</button></div>
     </nav>

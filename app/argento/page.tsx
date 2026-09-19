@@ -1,6 +1,7 @@
 "use client";
 
-import {useRef,useState} from "react";
+import Link from "next/link";
+import {useEffect,useRef,useState} from "react";
 import "./style.css";
 import {connectors,Pair,reactions,slang,starters,surprises,worlds} from "./data";
 
@@ -15,20 +16,46 @@ export default function Argento(){
   const [surpriseIndex,setSurpriseIndex]=useState(0);
   const [progress,setProgress]=useState<number[]>([]);
   const practiceRef=useRef<HTMLElement|null>(null);
+  const modalRef=useRef<HTMLElement|null>(null);
+  const modalCloseRef=useRef<HTMLButtonElement|null>(null);
+  const modalReturnFocusRef=useRef<HTMLElement|null>(null);
   const world=worlds.find(item=>item.id===activeId)!;
+  const openModal=(kind:"help"|"surprise")=>{modalReturnFocusRef.current=document.activeElement as HTMLElement|null;setModal(kind)};
+  const closeModal=()=>{setModal(null);requestAnimationFrame(()=>modalReturnFocusRef.current?.focus())};
   const chooseWorld=(id:string)=>{setActiveId(id);setWordPage(0);setQuestionPage(0);setRoleTab("model");requestAnimationFrame(()=>practiceRef.current?.scrollIntoView({behavior:"smooth",block:"start"}))};
-  const showSurprise=()=>{setSurpriseIndex(index=>(index+1+Math.floor(Math.random()*(surprises.length-1)))%surprises.length);setModal("surprise")};
+  const showSurprise=()=>{setSurpriseIndex(index=>(index+1+Math.floor(Math.random()*(surprises.length-1)))%surprises.length);if(!modal)openModal("surprise")};
   const visibleWords=world.words.slice(wordPage*10,wordPage*10+10);
   const visibleQuestions=world.subs.slice(questionPage*3,questionPage*3+3);
   const roleLines:Pair[]=world.id==="cafe"?[["Profesor: Hola, ¿qué querés tomar?","Teacher: Hi, what would you like to drink?"],["Alumno: Para mí, un café con leche, por favor.","Student: For me, a coffee with milk, please."],["Profesor: ¿Grande o chico?","Teacher: Large or small?"],["Alumno: Chico. Y una medialuna también.","Student: Small. And a croissant too."]]:[["Profesor: Che, ¿vamos a tomar algo?","Teacher: Hey, shall we go for a drink?"],["Alumno: Dale. ¿Adónde vamos?","Student: Sure. Where are we going?"],["Profesor: Hay un bar nuevo. Está re copado.","Teacher: There is a new bar. It is really cool."],["Alumno: ¿Posta? Buenísimo.","Student: Really? Great."]];
   const progressItems=[["🎤 Hablé.","I spoke."],["💬 Agregué una idea.","I added an idea."],["🔁 Seguí hablando.","I kept talking."],["🔥 Me animé.","I took a risk."]];
-  return <main className="argento-shell">
+  useEffect(()=>{
+    if(!modal)return;
+    const dialog=modalRef.current;
+    if(!dialog)return;
+    const previousOverflow=document.body.style.overflow;
+    document.body.style.overflow="hidden";
+    modalCloseRef.current?.focus();
+    const focusable=()=>Array.from(dialog.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'));
+    const onKey=(event:KeyboardEvent)=>{
+      if(event.key==="Escape"){event.preventDefault();closeModal();return}
+      if(event.key!=="Tab")return;
+      const items=focusable();
+      if(!items.length)return;
+      const first=items[0],last=items[items.length-1];
+      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+    };
+    window.addEventListener("keydown",onKey);
+    return()=>{document.body.style.overflow=previousOverflow;window.removeEventListener("keydown",onKey)};
+  },[modal]);
+  return <main className="argento-shell" id="main-content">
+    <a className="skip-link" href="#mundos">Saltar al contenido · Skip to content</a>
     <header className="argento-hero">
-      <nav><a href="/" className="argento-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>A0–A1 · CONVERSACIÓN</small></span></a><a href="/" className="argento-library">← Biblioteca</a></nav>
+      <nav><Link href="/" className="argento-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A0–A1 · CONVERSACIÓN</small></span></Link><Link href="/" className="argento-library">← Biblioteca</Link></nav>
       <div className="argento-hero-copy"><span>🇦🇷 ESPAÑOL ARGENTINO · ARGENTINE SPANISH</span><h1>ARGENTO</h1><p>Hablá español desde el primer día.<small>Speak Spanish from Day One.</small></p><blockquote>Tu trabajo no es ser perfecto. Tu trabajo es comunicar.<small>Your job is not to be perfect. Your job is to communicate.</small></blockquote><a href="#mundos">EMPEZAR A HABLAR · START SPEAKING ↓</a></div>
     </header>
 
-    <section id="mundos" className="argento-worlds"><header><div><span>12 MUNDOS PARA HABLAR · 12 CONVERSATION WORLDS</span><h2>Elegí tu Argentina.</h2><small>Choose your Argentina.</small></div><p>Sin tests. Sin respuestas perfectas. Elegí un mundo, usá los recursos y hablá.<small>No tests. No perfect answers. Choose a world, use the resources, and speak.</small></p></header><div className="world-grid">{worlds.map(item=><button key={item.id} className={item.id===activeId?"active":""} onClick={()=>chooseWorld(item.id)} style={{backgroundImage:`linear-gradient(0deg,rgba(4,18,35,.95),rgba(4,18,35,.08)),url(${item.photo})`}}><span>{item.icon}</span><b>{item.title}</b><small>{item.kicker}</small></button>)}</div></section>
+    <section id="mundos" className="argento-worlds"><header><div><span>12 MUNDOS PARA HABLAR · 12 CONVERSATION WORLDS</span><h2>Elegí tu Argentina.</h2><small>Choose your Argentina.</small></div><p>Sin tests. Sin respuestas perfectas. Elegí un mundo, usá los recursos y hablá.<small>No tests. No perfect answers. Choose a world, use the resources, and speak.</small></p></header><div className="world-grid">{worlds.map(item=><button key={item.id} className={item.id===activeId?"active":""} aria-pressed={item.id===activeId} onClick={()=>chooseWorld(item.id)} style={{backgroundImage:`linear-gradient(0deg,rgba(4,18,35,.95),rgba(4,18,35,.08)),url(${item.photo})`}}><span>{item.icon}</span><b>{item.title}</b><small>{item.kicker}</small></button>)}</div></section>
 
     <section ref={practiceRef} className="argento-practice">
       <article className="world-dashboard" key={world.id}>
@@ -49,16 +76,16 @@ export default function Argento(){
 
           {world.id==="argento"&&<section className="slang-section"><h3>ARGENTO · JERGAS PARA HABLAR · SLANG FOR SPEAKING</h3><div>{slang.map(item=><article key={item[0]}><h4>{item[0]}</h4><b>{item[1]}</b><p><strong>Ejemplo:</strong> {item[2]}<small>{item[3]}</small></p><p><strong>Cuándo:</strong> {item[4]}<small>{item[5]}</small></p></article>)}</div></section>}
 
-          {(world.id==="cafe"||world.id==="argento")&&<section className="roleplay"><div className="role-tabs"><button className={roleTab==="model"?"active":""} onClick={()=>setRoleTab("model")}>🎬 MODEL / MODELO</button><button className={roleTab==="turn"?"active":""} onClick={()=>setRoleTab("turn")}>🎤 YOUR TURN / TU TURNO</button></div>{roleTab==="model"?<div>{roleLines.map(pair=><PairCard key={pair[0]} pair={pair}/>)}</div>:<div><PairCard pair={roleLines[0]}/><div className="pair-grid">{world.words.slice(0,6).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</div><section className="your-turn"><b>🎤 AHORA HABLÁ · NOW TALK</b><p>Elegí una tarjeta y respondé con una idea. / Choose one card and answer with one idea.</p></section></div>}</section>}
+          {(world.id==="cafe"||world.id==="argento")&&<section className="roleplay"><div className="role-tabs" role="tablist" aria-label="Práctica guiada · Guided practice"><button role="tab" aria-selected={roleTab==="model"} aria-controls="argento-role-panel" className={roleTab==="model"?"active":""} onClick={()=>setRoleTab("model")}>🎬 MODEL / MODELO</button><button role="tab" aria-selected={roleTab==="turn"} aria-controls="argento-role-panel" className={roleTab==="turn"?"active":""} onClick={()=>setRoleTab("turn")}>🎤 YOUR TURN / TU TURNO</button></div><div id="argento-role-panel" role="tabpanel">{roleTab==="model"?<>{roleLines.map(pair=><PairCard key={pair[0]} pair={pair}/>)}</>:<><PairCard pair={roleLines[0]}/><div className="pair-grid">{world.words.slice(0,6).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</div><section className="your-turn"><b>🎤 AHORA HABLÁ · NOW TALK</b><p>Elegí una tarjeta y respondé con una idea. / Choose one card and answer with one idea.</p></section></>}</div></section>}
         </div>
       </article>
 
-      <section className="speaking-progress"><h2>Comunicar es ganar.</h2><span>Communication is the win.</span><p>Marcá lo que comunicaste hoy. Celebramos valentía, ideas y conexión, no perfección gramatical.<small>Mark what you communicated today. We celebrate courage, ideas and connection — not grammar perfection.</small></p><div>{progressItems.map((item,index)=><button key={item[0]} className={progress.includes(index)?"active":""} onClick={()=>setProgress(items=>items.includes(index)?items.filter(x=>x!==index):[...items,index])}>{item[0]} <span>/ {item[1]}</span></button>)}</div></section>
+      <section className="speaking-progress"><h2>Comunicar es ganar.</h2><span>Communication is the win.</span><p>Marcá lo que comunicaste hoy. Celebramos valentía, ideas y conexión, no perfección gramatical.<small>Mark what you communicated today. We celebrate courage, ideas and connection — not grammar perfection.</small></p><div>{progressItems.map((item,index)=><button key={item[0]} className={progress.includes(index)?"active":""} aria-pressed={progress.includes(index)} onClick={()=>setProgress(items=>items.includes(index)?items.filter(x=>x!==index):[...items,index])}>{item[0]} <span>/ {item[1]}</span></button>)}</div></section>
     </section>
 
     <footer>No hace falta español perfecto. Dale, hablá.<span>No perfect Spanish required. Come on, speak. 🇦🇷</span></footer>
-    <div className="argento-floating"><button onClick={showSurprise}>🎲 SORPRENDEME</button><button onClick={()=>setModal("help")}>🛟 AYUDAME A HABLAR</button></div>
+    <div className="argento-floating"><button onClick={showSurprise}>🎲 SORPRENDEME</button><button onClick={()=>openModal("help")}>🛟 AYUDAME A HABLAR</button></div>
 
-    {modal&&<div className="argento-modal" onMouseDown={()=>setModal(null)}><section onMouseDown={event=>event.stopPropagation()}>{modal==="help"?<><button className="modal-close" onClick={()=>setModal(null)}>×</button><h2>🛟 AYUDAME A HABLAR</h2><span>HELP ME TALK</span><div className="help-grid"><article><h3>OPINIÓN · OPINION</h3>{starters.slice(0,4).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article><article><h3>PENSAR · THINKING TIME</h3>{([["A ver…","Let me see…"],["Mmm…","Hmm…"],["No sé.","I do not know."],["Creo que…","I think…"]] as Pair[]).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article><article><h3>SEGUÍ · KEEP GOING</h3>{connectors.slice(0,4).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article><article><h3>REACCIONÁ · REACT</h3>{reactions.slice(5).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article></div></>:<><button className="modal-close" onClick={()=>setModal(null)}>×</button><h2>🎲 SORPRENDEME</h2><span>SURPRISE ME</span><div className="surprise-content"><h3>{surprises[surpriseIndex].q[0]}</h3><p>{surprises[surpriseIndex].q[1]}</p><div className="pair-grid">{surprises[surpriseIndex].helps.map(pair=><PairCard key={pair[0]} pair={pair}/>)}</div><section className="your-turn"><b>🎤 AHORA HABLÁ · NOW TALK</b><p>Decí una idea y agregá una cosa más.</p></section><button className="another" onClick={showSurprise}>Otra sorpresa / Another surprise</button></div></>}</section></div>}
+    {modal&&<div className="argento-modal" onMouseDown={closeModal}><section ref={modalRef} role="dialog" aria-modal="true" aria-labelledby="argento-modal-title" onMouseDown={event=>event.stopPropagation()}>{modal==="help"?<><button ref={modalCloseRef} className="modal-close" aria-label="Cerrar · Close" onClick={closeModal}>×</button><h2 id="argento-modal-title">🛟 AYUDAME A HABLAR</h2><span>HELP ME TALK</span><div className="help-grid"><article><h3>OPINIÓN · OPINION</h3>{starters.slice(0,4).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article><article><h3>PENSAR · THINKING TIME</h3>{([["A ver…","Let me see…"],["Mmm…","Hmm…"],["No sé.","I do not know."],["Creo que…","I think…"]] as Pair[]).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article><article><h3>SEGUÍ · KEEP GOING</h3>{connectors.slice(0,4).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article><article><h3>REACCIONÁ · REACT</h3>{reactions.slice(5).map(pair=><PairCard key={pair[0]} pair={pair}/>)}</article></div></>:<><button ref={modalCloseRef} className="modal-close" aria-label="Cerrar · Close" onClick={closeModal}>×</button><h2 id="argento-modal-title">🎲 SORPRENDEME</h2><span>SURPRISE ME</span><div className="surprise-content"><h3>{surprises[surpriseIndex].q[0]}</h3><p>{surprises[surpriseIndex].q[1]}</p><div className="pair-grid">{surprises[surpriseIndex].helps.map(pair=><PairCard key={pair[0]} pair={pair}/>)}</div><section className="your-turn"><b>🎤 AHORA HABLÁ · NOW TALK</b><p>Decí una idea y agregá una cosa más.</p></section><button className="another" onClick={showSurprise}>Otra sorpresa / Another surprise</button></div></>}</section></div>}
   </main>;
 }

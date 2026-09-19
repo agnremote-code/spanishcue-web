@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import "./style.css";
 
 type Topic={emoji:string;title:string;label:string;questions:string[]};
@@ -127,7 +128,7 @@ export default function AdvancedConversation(){
   const chooseTopic=(index:number)=>{setActive(index);setSelected(null);window.scrollTo({top:0,behavior:"smooth"})};
   return <main className="advanced-shell">
     <div className="advanced-frame">
-      <header className="advanced-header"><a href="/" className="advanced-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>C1 · CONVERSACIÓN AVANZADA</small></span></a><a href="/" className="back-library">← Biblioteca</a></header>
+      <header className="advanced-header"><Link href="/" className="advanced-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN AVANZADA</small></span></Link><Link href="/" className="back-library">← Biblioteca</Link></header>
       <section className="advanced-intro"><div><i/><p>CONVERSACIÓN · NIVEL C1</p><h1>Preguntas que dan ganas de hablar.</h1></div><p>Elegí una categoría. Elegí una pregunta. Respondé con libertad. Seguí la conversación.</p></section>
       <nav className="advanced-nav" aria-label="Categorías de conversación">{topics.map((item,index)=><button key={item.title} className={index===active?"active":""} aria-pressed={index===active} onClick={()=>chooseTopic(index)}>{item.emoji} {item.title}</button>)}</nav>
       <section className="advanced-panel" aria-label={topic.label} key={topic.title}>

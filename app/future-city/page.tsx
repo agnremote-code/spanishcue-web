@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, type CSSProperties } from "react";
+import Link from "next/link";
 import "./style.css";
 import { districts, speakingTools, type District } from "./data";
 
@@ -93,10 +94,10 @@ export default function FutureCity() {
   return (
     <main className="fc-app">
       <nav className="fc-nav">
-        <a href="/" className="fc-brand" aria-label="Volver a CHESPANISH">
-          <span><img src="/chespanish-guide-avatar.png" alt="" /></span>
-          <b>CHESPANISH</b>
-        </a>
+        <Link href="/" className="fc-brand" aria-label="Volver a SPANISHCUE">
+          <span><img src="/brand/mascot/portrait.webp" alt="" /></span>
+          <b>SPANISHCUE</b>
+        </Link>
         <div className="fc-nav-center" aria-label="Progreso de la ciudad">
           <span>CIUDAD EXPLORADA</span>
           <i><b style={{ width: `${progress}%` }} /></i>

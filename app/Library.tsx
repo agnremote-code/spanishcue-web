@@ -1,336 +1,2228 @@
-'use client';
-import { useEffect, useRef, useState } from 'react';
-import { filterLessons, availableLevels, levelForCategory } from './library-filters.mjs';
-import { type Offer, discountedCents, usd } from './offer';
-import type { UserSession } from './access-policy';
-import './teachers.css';
+"use client";
+import Link from "next/link";
+import MoodTenseDisclosure from "./verbal-system/MoodTenseDisclosure";
+import VerbalPosition from "./verbal-system/VerbalPosition";
+import GrammarStep from "./grammar-steps/GrammarStep";
+import LogoutButton from "./LogoutButton";
+import LessonPreview from "./LessonPreview";
+import LanguageSwitcher from "./i18n/LanguageSwitcher";
+import { useI18n } from "./i18n/LocaleProvider";
+import type { MessageKey } from "./i18n/messages";
+import {
+  SpanishCueFooter,
+  SpanishCueHero,
+  SpanishCueBrand,
+  SpanishCueWordmark,
+  SPANISH_SPEAKING_COUNTRY_COUNT,
+} from "./SpanishCueBrand";
+import {
+  BenefitSection,
+  CTASection,
+  FAQ,
+  FounderPricePill,
+  HowItWorks,
+  LibraryConversionBanner,
+  MarketingLink,
+  Pricing,
+  ProblemSolution,
+  ProductPreview,
+  SocialProof,
+} from "./marketing/MarketingSections";
+import {
+  audienceFromAccess,
+  primaryCtaFor,
+  secondaryCtaFor,
+  subscriptionCtaFor,
+} from "./marketing/cta-state";
+import { trackMarketingEvent } from "./marketing/analytics";
 
+import { useEffect, useMemo, useRef, useState } from "react";
+import "./news.css";
+import "./library-access.css";
+import "./catalog-cards.css";
+import "./top-area.css";
+import "./library-brand.css";
+import { conversationNews } from "./conversation-worlds/catalog";
+import {
+  filterLessons,
+  availableLevels,
+  levelForCategory,
+} from "./library-filters.mjs";
+
+type Category =
+  "Gramática" | "Conversación" | "Escucha" | "Fonética" | "Vocabulario";
 export type CatalogItem = {
+  free: boolean;
+  href: string;
   id: number;
-  title: string;
-  subtitle: string;
   level: string;
   levels?: string[];
   displayLevel?: string;
-  category: string;
+  category: Category;
+  conversationMode?: "worlds" | "play" | "boards";
+  collection?: string;
+  countryCollection?: boolean;
+  verbalSystem?: boolean;
+  verbalMood?: string;
+  temporalPlane?: string;
+  productiveStatus?: string;
+  title: string;
+  subtitle: string;
   duration: string;
   tag: string;
-  image?: string;
-  path: string;
-  free: boolean;
+  goals: string[];
+  warmup: string;
+  explanation: string;
+  practice: string[];
+  speaking: string[];
+  homework: string;
+  special?: boolean;
+  path?: string;
+  image: string;
+  curriculumOrder?: number;
+  curriculumSequence?: number;
+  routeOrder: number;
+  routeSequence: number;
+  requires?: number[];
 };
 
-const categories = ['Gramática', 'Conversación', 'Escucha', 'Fonética', 'Vocabulario'];
+const levelNameKeys: Record<string, MessageKey> = {
+  A0: "level.a0",
+  A1: "level.a1",
+  A2: "level.a2",
+  B1: "level.b1",
+  B2: "level.b2",
+  C1: "level.c1",
+  C2: "level.c2",
+};
+const levelGroups = [
+  {
+    id: "basic",
+    label: "level.group.basic" as MessageKey,
+    copy: "level.group.basicCopy" as MessageKey,
+    levels: ["A1", "A2"],
+  },
+  {
+    id: "intermediate",
+    label: "level.group.intermediate" as MessageKey,
+    copy: "level.group.intermediateCopy" as MessageKey,
+    levels: ["B1", "B2"],
+  },
+  {
+    id: "advanced",
+    label: "level.group.advanced" as MessageKey,
+    copy: "level.group.advancedCopy" as MessageKey,
+    levels: ["C1", "C2"],
+  },
+];
+
+const categoryMessageKeys: Record<Category, MessageKey> = {
+  Gramática: "category.grammar",
+  Conversación: "category.conversation",
+  Escucha: "category.listening",
+  Fonética: "category.pronunciation",
+  Vocabulario: "category.vocabulary",
+};
+const libraryNews = [
+  {
+    lessonId: 119,
+    kicker: "NUEVA CLASE · GRAMÁTICA C1",
+    route: "PCIC 12 · ARQUITECTURA VERBAL",
+    title: "La Cámara de la Acción",
+    copy: "La misma acción se observa desde el inicio, el proceso, el logro, la acumulación o el resultado. Diez pasos para interpretar la perspectiva antes de elegir la estructura.",
+    symbol: "C1",
+    words: ["enfocar", "acumular", "interpretar"],
+  },
+  {
+    lessonId: 118,
+    kicker: "NUEVA CLASE · GRAMÁTICA C1",
+    route: "PCIC 10–11 · MATIZ Y AMBIGÜEDAD",
+    title: "El Archivo de las Dos Lecturas",
+    copy: "Una frase, dos hipótesis y una investigación: elipsis discursiva, dislocación, nominalizaciones, roles semánticos y reformulación deliberada.",
+    symbol: "A/B",
+    words: ["interpretar", "investigar", "reformular"],
+  },
+  {
+    lessonId: 117,
+    kicker: "NUEVA CLASE · GRAMÁTICA B2",
+    route: "PCIC 12.2.5–12.2.6 · CONEXIONES VERBALES",
+    title: "El Panel de Conexiones",
+    copy: "Depender de, contar con, insistir en y otros patrones encajan con nombres, infinitivos u oraciones; los predicativos muestran cómo llega alguien o en qué estado queda algo.",
+    symbol: "V+P",
+    words: ["conectar", "significar", "precisar"],
+  },
+  {
+    lessonId: 116,
+    kicker: "NUEVA CLASE · GRAMÁTICA B2",
+    route: "PCIC 10–11 · EDICIÓN Y AMBIGÜEDAD",
+    title: "La Mesa del Editor",
+    copy: "Titulares, anuncios y descripciones pasan por una mesa de edición para separar dos lecturas, ordenar complementos y elegir entre infinitivo y oración.",
+    symbol: "ED",
+    words: ["interpretar", "editar", "desambiguar"],
+  },
+  {
+    lessonId: 115,
+    kicker: "NUEVA CLASE · GRAMÁTICA B1",
+    route: "PCIC 12.1 · PERÍFRASIS Y CAMBIO",
+    title: "La Línea de los Cambios",
+    copy: "Hábito, comienzo, continuidad, interrupción, repetición e inminencia se vuelven puntos visibles de una historia personal de 45 minutos.",
+    symbol: "→",
+    words: ["empezar", "seguir", "cambiar"],
+  },
+  {
+    lessonId: 114,
+    kicker: "NUEVA CLASE · GRAMÁTICA B1",
+    route: "PCIC 10–11 · ELIPSIS Y MODIFICACIÓN",
+    title: "El Laboratorio de la Segunda Versión",
+    copy: "La misma información adopta una forma más natural: núcleos elípticos, aclaraciones entre comas, restricción e intensidad sin repeticiones innecesarias.",
+    symbol: "Ø",
+    words: ["quitar", "aclarar", "reformular"],
+  },
+  {
+    lessonId: 113,
+    kicker: "NUEVA CLASE · GRAMÁTICA A2",
+    route: "PCIC 12–13 · ORACIÓN FLEXIBLE",
+    title: "La Sala de las Posiciones",
+    copy: "Tiempo, lugar y modo cambian de posición sin romper la frase. Preguntas disyuntivas, clima impersonal, exclamaciones y exhortaciones en 45 minutos reales.",
+    symbol: "↔",
+    words: ["mover", "enfocar", "transformar"],
+  },
+  {
+    lessonId: 112,
+    kicker: "NUEVA CLASE · GRAMÁTICA A2",
+    route: "PCIC 10–11 · DESCRIPCIÓN PRECISA",
+    title: "El Estudio del Detalle",
+    copy: "Participios adjetivales, aposición, colectivos y comparaciones para describir, recomendar y reaccionar sin acumular palabras innecesarias.",
+    symbol: "+",
+    words: ["precisar", "comparar", "recomendar"],
+  },
+  {
+    lessonId: 111,
+    kicker: "NUEVA CLASE · GRAMÁTICA A1",
+    route: "PCIC 12–13 · ORACIÓN SIMPLE",
+    title: "La Mesa de Montaje",
+    copy: "Quién, verbo e información se convierten en piezas visibles para construir, negar, preguntar y mover una oración completa.",
+    symbol: "SVO",
+    words: ["construir", "negar", "preguntar"],
+  },
+  {
+    lessonId: 110,
+    kicker: "NUEVA CLASE · GRAMÁTICA A1",
+    route: "PCIC 10–11 · GRUPOS NOMINALES",
+    title: "El Taller de las Capas",
+    copy: "De casa a una casa grande con jardín: expansión progresiva, piezas móviles y conversación real sin volver a enseñar sustantivos, artículos o adjetivos.",
+    symbol: "+",
+    words: ["combinar", "expandir", "describir"],
+  },
+  {
+    lessonId: 109,
+    kicker: "NUEVA SIMULACIÓN · B1",
+    route: "CONVERSACIÓN + NEGOCIACIÓN + SOCIEDAD",
+    title: "La isla vota",
+    copy: "Treinta y seis personas, recursos limitados y ocho decisiones fundacionales. Liderazgo, moneda, leyes, castigos, trabajos y reparto: primero se discute, después se vota.",
+    symbol: "8",
+    words: ["negociar", "votar", "acordar"],
+  },
+  {
+    lessonId: 108,
+    kicker: "NUEVA CLASE · VOCABULARIO A2–B1",
+    route: "WORD BANK · 60 TARJETAS · 4 MODOS",
+    title: "El Banco de Palabras",
+    copy: "Seis mundos cotidianos, apoyo bilingüe opcional y cuatro recorridos para pasar de reconocer a usar: explorar, completar, emparejar y hablar.",
+    symbol: "Ab",
+    words: ["descubrir", "recuperar", "usar"],
+  },
+  {
+    lessonId: 107,
+    kicker: "NUEVA MINI CLASE · A1–C1",
+    route: "SISTEMA VERBAL · CONSULTA RÁPIDA",
+    title: "Modo vs. tiempo verbal",
+    copy: "Una base breve para distinguir cómo presenta la acción el hablante y cuándo la sitúa. La misma ayuda aparece desplegable dentro de todas las clases verbales.",
+    symbol: "M/T",
+    words: ["distinguir", "ubicar", "comprender"],
+  },
+  {
+    lessonId: 106,
+    kicker: "NUEVA AVENTURA GRAMATICAL · A1 GUIADO",
+    route: "OBJETO DIRECTO + INDIRECTO + PRONOMBRES",
+    title: "La estación de los dos destinos",
+    copy: "Una carta, un destinatario y dos funciones distintas. Ocho estaciones, cuarenta decisiones con explicación, una mesa de envíos interactiva y un atlas de consulta.",
+    symbol: "OD / OI",
+    words: ["entender", "distinguir", "hablar"],
+  },
+  {
+    lessonId: 105,
+    kicker: "NUEVA CLASE DE ESCUCHA · A2",
+    route: "COMPRENSIÓN AUDITIVA + FANTASÍA",
+    title: "El hotel de lo imposible",
+    copy: "Diez habitaciones, diez historias nuevas y cien preguntas. Audios MP3 incrustados, dos escuchas, opción múltiple, respuestas abiertas y lectura final.",
+    symbol: "♫",
+    words: ["escuchar", "descubrir", "comprender"],
+  },
+  ...conversationNews,
+  {
+    lessonId: 46,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1–A2",
+    route: "PCIC · 7. EL PRONOMBRE",
+    title: "La Central de las Identidades",
+    copy: "Una central nocturna para seguir sujetos, objetos, destinatarios y referencias sin repetir nombres. Cinco vías, práctica autocorregible y producción oral.",
+    symbol: "07",
+    words: ["referir", "conectar", "aclarar"],
+  },
+  {
+    lessonId: 47,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1–A2",
+    route: "PCIC · 8. EL ADVERBIO Y LAS LOCUCIONES ADVERBIALES",
+    title: "La Torre de las Coordenadas",
+    copy: "Una torre 3D para situar cada acción en lugar, tiempo, cantidad y modo, dominar muy/mucho y preguntar con dónde, cómo, cuándo y por qué.",
+    symbol: "08",
+    words: ["ubicar", "ordenar", "matizar"],
+  },
+  {
+    lessonId: 48,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1–A2",
+    route: "PCIC · 9. EL VERBO",
+    title: "La Ciudad de los Motores",
+    copy: "Una ciudad cinemática para construir el sistema verbal desde el presente y ser/estar/hay hasta los planes y las tres miradas básicas al pasado.",
+    symbol: "09",
+    words: ["conjugar", "situar", "narrar"],
+  },
+  {
+    lessonId: 43,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1",
+    route: "PCIC · 4. LOS DEMOSTRATIVOS",
+    title: "El Observatorio de las Distancias",
+    copy: "Un observatorio nocturno para dominar este, ese, aquel y las formas neutras. Cinco lentes progresivas, ocho coordenadas autocorregibles y producción oral.",
+    symbol: "04",
+    words: ["señalar", "ubicar", "contrastar"],
+  },
+  {
+    lessonId: 44,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1",
+    route: "PCIC · 5. LOS POSESIVOS",
+    title: "La Casa de las Pertenencias",
+    copy: "Una mansión de habitaciones y propietarios para comprender mi, tu, su, nuestro y las formas tónicas sin confundir quién posee con qué se posee.",
+    symbol: "05",
+    words: ["pertenecer", "aclarar", "comparar"],
+  },
+  {
+    lessonId: 45,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1",
+    route: "PCIC · 6. LOS CUANTIFICADORES",
+    title: "El Mercado de las Cantidades",
+    copy: "Un mercado nocturno donde números, poco, mucho, bastante, todo, otro, más y menos se convierten en decisiones reales y español útil.",
+    symbol: "06",
+    words: ["contar", "medir", "comparar"],
+  },
+  {
+    lessonId: 40,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1",
+    route: "PCIC · 1. EL SUSTANTIVO",
+    title: "La Fábrica de los Nombres",
+    copy: "El primer módulo de la nueva ruta gramatical: cinco estaciones para entender sustantivos, género y número desde cero, con teoría visual, ocho desafíos autocorregibles y producción oral.",
+    symbol: "01",
+    words: ["nombrar", "clasificar", "concordar"],
+  },
+  {
+    lessonId: 41,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1",
+    route: "GRAMÁTICA + CONCORDANCIA + 3D",
+    title: "El Atelier de la Concordancia",
+    copy: "Un atelier art déco donde sustantivos y adjetivos tienen que combinar en género y número. Cinco salas, errores frecuentes, práctica y tres encargos para hablar.",
+    symbol: "02",
+    words: ["describir", "combinar", "precisar"],
+  },
+  {
+    lessonId: 42,
+    kicker: "NUEVO MUNDO GRAMATICAL · A1",
+    route: "GRAMÁTICA + ARTÍCULOS + 3D",
+    title: "La Galería de los Artículos",
+    copy: "Una galería nocturna para descubrir por qué elegimos el, la, un, una o ningún artículo. El significado guía cada decisión y cada recorrido termina hablando.",
+    symbol: "03",
+    words: ["presentar", "señalar", "elegir"],
+  },
+  {
+    lessonId: 39,
+    kicker: "NUEVA CIUDAD 3D · A2",
+    route: "VIAJE + BUENOS AIRES + ESPAÑOL COTIDIANO",
+    title: "Buenos Aires en la Calle",
+    copy: "Una ciudad nocturna con 16 lugares vivos para practicar hotel, transporte, compras, comida, salud y salidas con vocabulario rioplatense real y un modo especial para días de poca energía.",
+    symbol: "BA",
+    words: ["entrar", "pedir", "resolver"],
+  },
+  {
+    lessonId: 38,
+    kicker: "NUEVO LABORATORIO · A0–C1",
+    route: "FONÉTICA + BOCA + PRONUNCIACIÓN",
+    title: "Spanish Mouth Lab",
+    copy: "Un laboratorio inmersivo para ver dónde va la lengua, entrenar los cinco sonidos vocálicos, corregir la R y detectar hábitos que vienen del inglés y otros seis idiomas.",
+    symbol: "ɾ",
+    words: ["mirar", "colocar", "producir"],
+  },
+  {
+    lessonId: 37,
+    kicker: "NUEVA CLASE MAESTRA · C1",
+    route: "GRAMÁTICA + PAÍS DE LAS MARAVILLAS",
+    title: "El País del Subjuntivo",
+    copy: "Siete mundos 3D para dominar los tiempos del subjuntivo, comparar significados y hablar con 28 desafíos progresivos. La base modo/tiempo queda disponible como ayuda desplegable.",
+    symbol: "QUE",
+    words: ["desear", "dudar", "decidir"],
+  },
+  {
+    lessonId: 36,
+    kicker: "NUEVO ATLAS 3D · A2–B1",
+    route: "CONVERSACIÓN + ESTADOS UNIDOS",
+    title: "United States · In Depth",
+    copy: "Los 50 estados como piezas 3D reales, cuatro paradas propias dentro de cada uno y escenas animadas para recorrer Estados Unidos con 300 preguntas conversacionales.",
+    symbol: "50",
+    words: ["explorar", "comparar", "desarrollar"],
+  },
+  {
+    lessonId: 34,
+    kicker: "NUEVA EXPERIENCIA · C2",
+    route: "CONVERSACIÓN + FILOSOFÍA + VOCACIÓN",
+    title: "El Monasterio de las Ideas",
+    copy: "Doce mundos interiores 3D con escenas que cobran vida y 36 preguntas C2 para discutir poder, lenguaje, cuidado, autoridad, memoria, placer, instituciones y reparación sin caer en los temas de siempre.",
+    symbol: "C2",
+    words: ["entrar", "observar", "reformular"],
+  },
+  {
+    lessonId: 33,
+    kicker: "NUEVA EXPEDICIÓN · B1",
+    route: "CONVERSACIÓN + IRLANDA",
+    title: "Irlanda en Relieve",
+    copy: "Los 26 condados de la República en un mapa real 3D: 104 lugares concretos y 260 detonadores nacidos de su costa, sus ciudades, sus lenguas y sus decisiones locales.",
+    symbol: "IE",
+    words: ["recorrer", "comparar", "decidir"],
+  },
+  {
+    lessonId: 32,
+    kicker: "NUEVA EXPEDICIÓN · A2–B1",
+    route: "CONVERSACIÓN + REINO UNIDO",
+    title: "Reino Unido en Relieve",
+    copy: "Las cuatro naciones y las nueve regiones inglesas en un mapa real: 48 lugares concretos y 144 detonadores que nacen de su geografía, sus ciudades y sus conexiones.",
+    symbol: "UK",
+    words: ["ubicar", "comparar", "conectar"],
+  },
+  {
+    lessonId: 31,
+    kicker: "NUEVA CLASE · B1",
+    route: "GRAMÁTICA PURA · 100% EN ESPAÑOL",
+    title: "Condicionales paso a paso",
+    copy: "Condicional cero, primero, segundo, tercero y mixtos en cinco bloques separados, con diez tablas, veinte prácticas explicadas y una síntesis final.",
+    symbol: "SI",
+    words: ["entender", "conjugar", "dominar"],
+  },
+  {
+    lessonId: 30,
+    kicker: "NUEVA AVENTURA · A2–B1",
+    route: "CONVERSACIÓN + AUSTRALIA",
+    title: "Australia en Movimiento",
+    copy: "Los 8 estados y territorios en un mapa 3D por capas, 48 preguntas completamente nuevas, 48 movimientos distintos y fuentes australianas.",
+    symbol: "AU",
+    words: ["explorar", "comparar", "hablar"],
+  },
+  {
+    lessonId: 29,
+    kicker: "NUEVA EXPEDICIÓN · B1",
+    route: "CONVERSACIÓN + SUIZA",
+    title: "Suiza en Relieve",
+    copy: "Los 26 cantones reales, 104 lugares concretos y 260 detonadores B1 en un mapa 3D interactivo que demuestra qué hace diferente a cada territorio.",
+    symbol: "26",
+    words: ["recorrer", "comparar", "proponer"],
+  },
+  {
+    lessonId: 28,
+    kicker: "NUEVA EXPERIENCIA · A2",
+    route: "COMPRENSIÓN AUDITIVA + ACENTOS",
+    title: "Latinoamérica al Oído",
+    copy: "Una radio interactiva con mapa, voces regionales, dos escuchas obligatorias, 10 preguntas por país y transcripciones ocultas.",
+    symbol: "A2",
+    words: ["escuchar", "captar", "comprobar"],
+  },
+  {
+    lessonId: 27,
+    kicker: "NUEVA AVENTURA · A0",
+    route: "1000% CONVERSACIÓN + MUNDO",
+    title: "El Mundo Fantástico",
+    copy: "Los 6 continentes —América como uno solo—, 40 mundos, 400 preguntas mínimas y más de 120 palabras esenciales para hablar desde cero.",
+    symbol: "40",
+    words: ["elegir", "tocar", "hablar"],
+  },
+  {
+    lessonId: 26,
+    kicker: "NUEVA CLASE · A0–A1",
+    route: "CONVERSACIÓN + ESTADOS UNIDOS",
+    title: "Estados Unidos · Coast to Coast",
+    copy: "Un atlas interactivo con 20 paradas, 120 preguntas básicas y recursos bilingües para hablar de ciudades, naturaleza, música, comida y vida cotidiana.",
+    symbol: "20",
+    words: ["elegir", "describir", "hablar"],
+  },
+  {
+    lessonId: 25,
+    kicker: "NUEVA CLASE · B1",
+    route: "CONVERSACIÓN + ISRAEL",
+    title: "Israel en Capas",
+    copy: "Nueve destinos, cinco lentes culturales y 98 preguntas B1 en un mapa interactivo para comparar ciudades, paisajes, idiomas, costumbres y decisiones reales.",
+    symbol: "14",
+    words: ["explorar", "comparar", "matizar"],
+  },
+  {
+    lessonId: 24,
+    kicker: "NUEVA CLASE · A0",
+    route: "1000% CONVERSACIÓN + INDONESIA",
+    title: "Indonesia Fantástica",
+    copy: "Las 38 provincias reales en un atlas interactivo: lugares, comidas, culturas y animales auténticos con 380 preguntas bilingües para hablar desde cero.",
+    symbol: "38",
+    words: ["explorar", "descubrir", "hablar"],
+  },
+  {
+    lessonId: 23,
+    kicker: "NUEVA CLASE · B2–C1",
+    route: "GRAMÁTICA + AVENTURA",
+    title: "El Multiverso del ‘Si’",
+    copy: "Todos los condicionales del español en cinco portales progresivos, con teoría bilingüe, ocho tablas completas, práctica con respuestas y una misión final.",
+    symbol: "SI",
+    words: ["realidad", "hipótesis", "consecuencia"],
+  },
+  {
+    lessonId: 22,
+    kicker: "NUEVA CLASE · B1",
+    route: "CONVERSACIÓN + CIUDAD",
+    title: "La Ciudad del Futuro",
+    copy: "12 edificios realistas, 48 preguntas bilingües y una sola zona TECH. El alumno diseña cómo queremos vivir, no solamente qué tecnología va a existir.",
+    symbol: "2076",
+    words: ["imaginar", "decidir", "construir"],
+  },
+  {
+    lessonId: 21,
+    kicker: "NUEVA CLASE · A2",
+    route: "CONVERSACIÓN + OPINIONES",
+    title: "El Reino de las Preguntas Prohibidas · A2",
+    copy: "Los mismos 14 mundos del reino, ahora con 56 preguntas realmente A2, nombres bilingües y apoyos simples para responder sin quedarse en blanco.",
+    symbol: "A2",
+    words: ["opinión", "porque", "ejemplo"],
+  },
+  {
+    lessonId: 20,
+    kicker: "NUEVA CLASE · B1",
+    route: "CONVERSACIÓN + OPINIÓN",
+    title: "El Reino de las Preguntas Prohibidas",
+    copy: "14 puertas de castillo, 56 preguntas profundas, 6 torres prohibidas y power-ups bilingües para construir opiniones con matices.",
+    symbol: "🏰",
+    words: ["postura", "matiz", "conclusión"],
+  },
+  {
+    lessonId: 19,
+    kicker: "NUEVA CLASE · A0",
+    route: "ROLEPLAYS + ESPAÑOL ARGENTINO",
+    title: "Argento Roleplays",
+    copy: "15 situaciones reales, 210 intervenciones bilingües y práctica guiada para hablar desde cero sin quedarse en blanco.",
+    symbol: "🎭",
+    words: ["mira", "reutiliza chunks", "habla"],
+  },
+  {
+    lessonId: 18,
+    kicker: "CLASE VISUAL · B1",
+    route: "GRAMÁTICA + CONVERSACIÓN",
+    title: "El Pasado",
+    copy: "Indefinido, imperfecto y perfecto compuesto explicados como tres cámaras: película, foto y conexión con ahora.",
+    symbol: "B1",
+    words: ["película", "escenario", "ahora"],
+  },
+  {
+    lessonId: 17,
+    kicker: "NUEVA EXPERIENCIA · A2",
+    route: "CONVERSACIÓN + JUEGO",
+    title: "La Ruleta de Tu Vida",
+    copy: "17 temas potentes, 51 preguntas diferentes, un desafío argentino y recursos bilingües para conversar de verdad.",
+    symbol: "🎡",
+    words: ["girar", "opinar", "conectar"],
+  },
+  {
+    lessonId: 16,
+    kicker: "NUEVA EXPERIENCIA · A0–A1",
+    route: "ESPAÑOL ARGENTINO",
+    title: "ARGENTO",
+    copy: "12 mundos argentinos con vocabulario bilingüe, preguntas, reacciones, roleplays y slang para hablar desde el primer día.",
+    symbol: "🇦🇷",
+    words: ["mate", "conectar", "hablar"],
+  },
+  {
+    lessonId: 15,
+    kicker: "NUEVA CLASE · A1",
+    route: "CONVERSACIÓN INICIAL",
+    title: "Let’s Talk · A1",
+    copy: "15 temas bilingües y 150 preguntas cortas para que el alumno empiece a hablar desde el primer minuto.",
+    symbol: "A1",
+    words: ["entender", "responder", "hablar"],
+  },
+  {
+    lessonId: 14,
+    kicker: "NUEVA CLASE · A2",
+    route: "CONVERSACIÓN BÁSICA",
+    title: "Let’s Talk · A2",
+    copy: "15 mundos bilingües y 150 preguntas accesibles. El alumno elige solo 3 y empieza a hablar.",
+    symbol: "A2",
+    words: ["elegir", "animarse", "hablar"],
+  },
+  {
+    lessonId: 13,
+    kicker: "ESTRENO · B1+",
+    route: "CONVERSACIÓN",
+    title: "Choose Your Conversation",
+    copy: "15 mundos. El alumno elige 1 tema, solo 3 preguntas y empieza a hablar de verdad.",
+    symbol: "💬",
+    words: ["elegir", "conectar", "hablar"],
+  },
+  {
+    lessonId: 3,
+    kicker: "NUEVA RUTA · A1",
+    route: "GRAMÁTICA + HABLA",
+    title: "Presente con vos",
+    copy: "Hablás, comés, vivís. Un patrón visual y sonoro para activar el español argentino.",
+    symbol: "VOS",
+    words: ["mira", "detecta", "úsalo"],
+  },
+  {
+    lessonId: 11,
+    kicker: "NUEVA CLASE · C1",
+    route: "CONVERSACIÓN AVANZADA",
+    title: "Preguntas que dan ganas de hablar",
+    copy: "16 categorías y 80 preguntas profundas para pensar, elegir y conversar con libertad.",
+    symbol: "C1",
+    words: ["pensar", "profundizar", "conectar"],
+  },
+];
+
+type Lesson = CatalogItem;
+
+function NewsCarousel({
+  lessons,
+  onOpen,
+  hrefFor,
+  onNavigate,
+}: {
+  lessons: Lesson[];
+  onOpen: (lesson: Lesson) => void;
+  hrefFor: (lesson: Lesson) => string | null;
+  onNavigate: (lesson: Lesson, placement: string) => void;
+}) {
+  const { locale, t } = useI18n();
+  const latestNews = useMemo(
+    () =>
+      libraryNews.filter((item) =>
+        lessons.some((lesson) => lesson.id === item.lessonId),
+      ),
+    [lessons],
+  );
+  const [newsIndex, setNewsIndex] = useState(0);
+  const [newsPaused, setNewsPaused] = useState(false);
+  const [newsManuallyPaused, setNewsManuallyPaused] = useState(false);
+  const isNewsPaused = newsPaused || newsManuallyPaused;
+  const news = latestNews[newsIndex % Math.max(latestNews.length, 1)];
+  const newsLesson = news
+    ? lessons.find((lesson) => lesson.id === news.lessonId) || null
+    : null;
+  const newsHref = newsLesson ? hrefFor(newsLesson) : null;
+
+  useEffect(() => {
+    if (
+      isNewsPaused ||
+      latestNews.length < 2 ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
+    const timer = window.setInterval(
+      () => setNewsIndex((index) => (index + 1) % latestNews.length),
+      5200,
+    );
+    return () => window.clearInterval(timer);
+  }, [isNewsPaused, latestNews.length]);
+
+  if (!news || !newsLesson) return null;
+  return (
+    <section
+      className={`news-carousel news-theme-${newsIndex} ${isNewsPaused ? "is-paused" : ""}`}
+      aria-label={t("library.newsAria")}
+      onMouseEnter={() => setNewsPaused(true)}
+      onMouseLeave={() => setNewsPaused(false)}
+      onFocus={() => setNewsPaused(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node))
+          setNewsPaused(false);
+      }}
+    >
+      <div className="news-head">
+        <span>
+          <i /> {t("library.news")}
+        </span>
+        <div className="news-head-actions">
+          <button
+            type="button"
+            className="news-pause"
+            aria-pressed={newsManuallyPaused}
+            onClick={() => setNewsManuallyPaused((paused) => !paused)}
+          >
+            {newsManuallyPaused
+              ? locale === "es" ? "Reanudar" : "Resume"
+              : locale === "es" ? "Pausar" : "Pause"}
+          </button>
+          <b>
+            {String(newsIndex + 1).padStart(2, "0")} /{" "}
+            {String(latestNews.length).padStart(2, "0")}
+          </b>
+        </div>
+      </div>
+      <div className="news-slide" key={news.title}>
+        <div className="news-copy">
+          <div className="news-labels">
+            <span>{news.kicker}</span>
+            <em>{news.route}</em>
+          </div>
+          <h2>{news.title}</h2>
+          <p>{news.copy}</p>
+          {newsHref ? <a href={newsHref} onClick={() => onNavigate(newsLesson, "news_carousel")}>
+            {t("library.openThisClass")} <span>→</span>
+          </a> : <button onClick={() => onOpen(newsLesson)}>
+            {t("library.openThisClass")} <span>→</span>
+          </button>}
+        </div>
+        <div className="conversation-news-art" aria-hidden="true">
+          <LessonPreview lesson={newsLesson} news />
+        </div>
+      </div>
+      <div className="news-controls">
+        <button
+          aria-label={t("library.previousNews")}
+          onClick={() =>
+            setNewsIndex(
+              (index) =>
+                (index - 1 + latestNews.length) % latestNews.length,
+            )
+          }
+        >
+          ←
+        </button>
+        <div>
+          {latestNews.map((item, index) => (
+            <button
+              key={item.title}
+              className={index === newsIndex ? "active" : ""}
+              aria-label={t("library.viewNews", { title: item.title })}
+              aria-pressed={index === newsIndex}
+              onClick={() => setNewsIndex(index)}
+            />
+          ))}
+        </div>
+        <button
+          aria-label={t("library.nextNews")}
+          onClick={() =>
+            setNewsIndex((index) => (index + 1) % latestNews.length)
+          }
+        >
+          →
+        </button>
+      </div>
+      <div className="news-progress" key={`progress-${newsIndex}`}>
+        <i />
+      </div>
+    </section>
+  );
+}
 
 export default function Library({
   lessons,
-  session,
   owner,
+  signedIn,
   fullAccess,
-  offer,
 }: {
   lessons: CatalogItem[];
-  session?: UserSession;
   owner: boolean;
+  signedIn: boolean;
   fullAccess: boolean;
-  offer: Offer;
 }) {
-  const [level, setLevel] = useState('Todos');
-  const [category, setCategory] = useState('Todas');
-  const [query, setQuery] = useState('');
-  const [onlyFree, setOnlyFree] = useState(false);
-  const [modal, setModal] = useState<'offer' | 'locked' | null>(null);
-  const dialog = useRef<HTMLDialogElement>(null);
-
-  const visible = filterLessons(lessons, { level, category, query }).filter(
-    (l: CatalogItem) => !onlyFree || l.free
-  ) as CatalogItem[];
-
-  useEffect(() => {
-    if (fullAccess) return;
-    let elapsed = 0;
-    try {
-      elapsed = Number(sessionStorage.getItem('chespanish-browse-ms') || 0);
-      if (sessionStorage.getItem('chespanish-offer-seen')) return;
-    } catch {}
-    const timer = setInterval(() => {
-      if (document.visibilityState !== 'visible' || document.querySelector('dialog[open]')) return;
-      elapsed += 1000;
-      try {
-        sessionStorage.setItem('chespanish-browse-ms', String(elapsed));
-      } catch {}
-      if (elapsed >= 60000) {
-        try {
-          sessionStorage.setItem('chespanish-offer-seen', '1');
-        } catch {}
-        setModal('offer');
-        clearInterval(timer);
-      }
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [fullAccess]);
-
-  useEffect(() => {
-    if (modal) dialog.current?.showModal();
-    else dialog.current?.close();
-  }, [modal]);
-
-  const chooseCategory = (value: string) => {
-    setCategory(value);
-    setLevel(levelForCategory(lessons, level, value));
+  const { t, locale } = useI18n();
+  const routeCount = new Set(lessons.map((lesson) => lesson.category)).size;
+  const levelScale = ["A0", "A1", "A2", "B1", "B2", "C1", "C2"];
+  const levelsPresent = levelScale.filter((item) => lessons.some((lesson) => `${lesson.level} ${lesson.displayLevel || ""}`.includes(item)));
+  const levelRange = levelsPresent.length ? `${levelsPresent[0]}–${levelsPresent[levelsPresent.length - 1]}` : "A0–C2";
+  const categoryLabel = (value: Category) => t(categoryMessageKeys[value]);
+  const levelName = (value: string) =>
+    levelNameKeys[value] ? t(levelNameKeys[value]) : value;
+  const canOpen = (lesson: Lesson) => fullAccess || lesson.free;
+  const [view, setView] = useState<"Biblioteca" | "Plan" | "Favoritas">(
+    "Biblioteca",
+  );
+  const [level, setLevel] = useState("Todos");
+  const [category, setCategory] = useState<"Todas" | Category>("Todas");
+  const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries">("all");
+  const [grammarMode, setGrammarMode] = useState<"general" | "system">("general");
+  const [query, setQuery] = useState("");
+  const [catalogSearchActive, setCatalogSearchActive] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
+  const [favoriteIds, setFavoriteIds] = useState<number[]>([]);
+  const [planIds, setPlanIds] = useState<number[]>([]);
+  const [storageReady, setStorageReady] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [headerCompact, setHeaderCompact] = useState(false);
+  const [levelMenuOpen, setLevelMenuOpen] = useState(false);
+  const [openLevelGroup, setOpenLevelGroup] = useState<string | null>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const menuTriggerRef = useRef<HTMLButtonElement>(null);
+  const sidebarRef = useRef<HTMLElement>(null);
+  const modalRef = useRef<HTMLElement>(null);
+  const modalCloseRef = useRef<HTMLButtonElement>(null);
+  const modalReturnFocusRef = useRef<HTMLElement | null>(null);
+  const lastTrackedQuery = useRef("");
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+    window.requestAnimationFrame(() => menuTriggerRef.current?.focus());
   };
-
-  const isUserLoggedIn = session ? session.isAuthenticated : owner;
-
-  return (
-    <div className="teacher-app">
-      <header className="teacher-top">
-        <a href="/" className="teacher-brand">
-          <img src="/mascots/mate.png" alt="" />
-          <span>
-            <b>CHE</b>SPANISH<small>CLASES PARA PROFESORES</small>
-          </span>
-        </a>
-        <nav aria-label="Tu cuenta">
-          {isUserLoggedIn ? (
-            <>
-              {owner && (
-                <a href={fullAccess ? '/?vista=profesor' : '/'}>
-                  {fullAccess ? 'Ver como profesor' : 'Volver a mi acceso completo'}
-                </a>
-              )}
-              {owner && (
-                <a className="account-link" href="/admin">
-                  Mi panel
-                </a>
-              )}
-              <a className="account-link" href="/cuenta">
-                {session?.displayName || 'Mi cuenta'}
-              </a>
-            </>
-          ) : (
-            <a className="account-link" href="/signin-with-chatgpt?return_to=%2Fcuenta" target="_top">
-              Ingresar con ChatGPT ↗
-            </a>
-          )}
-        </nav>
-      </header>
-
-      {owner && (
-        <div className="owner-strip">
-          {fullAccess
-            ? 'Tu acceso de propietario · Todas las clases disponibles'
-            : 'Vista de profesor · Probá las muestras y los bloqueos'}
-        </div>
-      )}
-
-      <main className="teacher-main">
-        <section className="teacher-intro">
-          <p>PARA PROFESORES Y TUTORES DE ESPAÑOL</p>
-          <h1>
-            NAVEGÁ. ELEGÍ. <span>ENSEÑÁ.</span>
-          </h1>
-          <div>Clases listas para abrir y enseñar.</div>
-        </section>
-
-        <section className="teacher-offer" aria-label="Lanzamiento">
-          <div>
-            <b>Primeros {offer.maxTeachers} profesores</b>
-            <span>
-              {offer.discountPercent}% de descuento · {usd(discountedCents(offer))}/mes durante {offer.months} meses.
+  const closeActiveLesson = () => {
+    setActiveLesson(null);
+    window.requestAnimationFrame(() => modalReturnFocusRef.current?.focus());
+  };
+  const rememberLesson = (lessonId: number) => {
+    if (!signedIn) return;
+    void fetch("/api/progress", {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ lessonId, progressPercent: 0 }),
+      credentials: "same-origin",
+      keepalive: true,
+    }).catch(() => undefined);
+  };
+  const lessonPath = (lesson: Lesson) =>
+    lesson.path ||
+    (lesson.special ? "/choose-conversation" : `/clase/${lesson.id}`);
+  const lockedPath = (lesson: Lesson) =>
+    `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson))}`;
+  const lessonHref = (lesson: Lesson) =>
+    canOpen(lesson)
+      ? lesson.path || (lesson.special ? "/choose-conversation" : null)
+      : lockedPath(lesson);
+  const prepareLessonNavigation = (lesson: Lesson, placement = "library_card") => {
+    trackMarketingEvent("lesson_preview_open", {
+      lesson_id: lesson.id,
+      lesson_title: lesson.title,
+      category: lesson.category,
+      access: canOpen(lesson) ? "open" : "locked",
+      placement,
+    });
+    if (canOpen(lesson)) rememberLesson(lesson.id);
+  };
+  const openLesson = (lesson: Lesson, shouldTrack = true) => {
+    // URL-backed lessons are rendered as anchors at every call site. This
+    // handler is reserved for the inline lesson viewer, which is an action.
+    if (lessonHref(lesson)) return;
+    if (shouldTrack) prepareLessonNavigation(lesson);
+    else rememberLesson(lesson.id);
+    modalReturnFocusRef.current = document.activeElement as HTMLElement | null;
+    setActiveLesson(lesson);
+  };
+  const a1StartLesson = lessons.find((item) => item.id === 40) || null;
+  const a1StartHref = (a1StartLesson ? lessonHref(a1StartLesson) : null) || "/la-fabrica-de-los-nombres";
+  const countryLessons = useMemo(
+    () => lessons.filter((lesson) => lesson.category === "Conversación" && lesson.countryCollection),
+    [lessons],
+  );
+  const verbalSystemLessons = useMemo(
+    () => lessons.filter((lesson) => lesson.category === "Gramática" && lesson.verbalSystem),
+    [lessons],
+  );
+  const categoryLevels = useMemo(
+    () => availableLevels(
+      conversationMode === "countries"
+        ? countryLessons
+        : category === "Gramática" && grammarMode === "system"
+          ? verbalSystemLessons
+          : lessons,
+      category,
+    ),
+    [category, conversationMode, countryLessons, grammarMode, lessons, verbalSystemLessons],
+  );
+  const levelCountSource = conversationMode === "countries"
+    ? countryLessons
+    : category === "Gramática" && grammarMode === "system"
+      ? verbalSystemLessons
+      : lessons;
+  const catalogQuery = catalogSearchActive ? query : "";
+  const searchMatches = useMemo(
+    () => filterLessons(lessons, { query }) as Lesson[],
+    [lessons, query],
+  );
+  const collectionBadgeFor = (lesson: Lesson) => {
+    if (lesson.category === "Conversación") {
+      if (lesson.countryCollection) return locale === "es" ? "PAÍSES" : "COUNTRIES";
+      if (lesson.conversationMode === "play") return locale === "es" ? "MODO PLAY" : "PLAY MODE";
+      if (lesson.conversationMode === "boards") return locale === "es" ? "TABLEROS" : "BOARDS";
+      return locale === "es" ? "UNIVERSOS" : "WORLDS";
+    }
+    if (lesson.category === "Gramática" && lesson.verbalSystem) {
+      return locale === "es" ? "SISTEMA VERBAL" : "VERB SYSTEM";
+    }
+    return categoryLabel(lesson.category).toUpperCase();
+  };
+  const filtered = useMemo(
+    () => {
+      const items=filterLessons(lessons, { level, category, query: catalogQuery }) as Lesson[];
+      if (view !== "Biblioteca") return items;
+      if (category === "Todas") return items.filter((lesson) => !lesson.countryCollection && !lesson.verbalSystem);
+      if (category === "Gramática") return items.filter((lesson) => grammarMode === "system" ? lesson.verbalSystem : !lesson.verbalSystem);
+      if (category !== "Conversación") return items;
+      if (conversationMode === "countries") return items.filter((lesson) => lesson.countryCollection);
+      const generalItems = items.filter((lesson) => !lesson.countryCollection);
+      if (conversationMode === "all") return generalItems;
+      return generalItems.filter((lesson) => {
+        if (conversationMode === "play") return lesson.conversationMode === "play";
+        if (conversationMode === "boards") return lesson.conversationMode === "boards";
+        return lesson.conversationMode !== "play" && lesson.conversationMode !== "boards";
+      });
+    },
+    [level, category, catalogQuery, conversationMode, grammarMode, lessons, view],
+  );
+  const visibleLessons =
+    view === "Favoritas"
+      ? filtered.filter((lesson) => favoriteIds.includes(lesson.id))
+      : filtered;
+  const routeCountLabel = (targetCategory: Category) => {
+    const count = filterLessons(lessons, {
+      level,
+      category: targetCategory,
+      query: catalogQuery,
+    }).length;
+    return `${count} ${count === 1 ? t("common.class") : t("common.classes")}`;
+  };
+  const plannedLessons = planIds
+    .map((id) => lessons.find((lesson) => lesson.id === id))
+    .filter((lesson): lesson is Lesson => Boolean(lesson));
+  const scrollToResults = () =>
+    window.requestAnimationFrame(() =>
+      document
+        .getElementById("library-results")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" }),
+    );
+  const chooseLevel = (nextLevel: string) => {
+    trackMarketingEvent("filter_used", { filter: "level", value: nextLevel });
+    setView("Biblioteca");
+    setCatalogSearchActive(false);
+    setLevel(nextLevel);
+    if (sidebarOpen) closeSidebar();
+    scrollToResults();
+  };
+  const chooseCategory = (nextCategory: "Todas" | Category) => {
+    trackMarketingEvent("filter_used", { filter: "category", value: nextCategory });
+    setView("Biblioteca");
+    setCatalogSearchActive(false);
+    setLevel((current) => levelForCategory(lessons, current, nextCategory));
+    setCategory(nextCategory);
+    if (nextCategory !== "Conversación") setConversationMode("all");
+    setGrammarMode(nextCategory === "Gramática" ? "system" : "general");
+    if (sidebarOpen) closeSidebar();
+    scrollToResults();
+  };
+  const openView = (nextView: "Biblioteca" | "Plan" | "Favoritas") => {
+    setView(nextView);
+    setLevel("Todos");
+    setCategory("Todas");
+    setConversationMode("all");
+    setGrammarMode("general");
+    setQuery("");
+    setCatalogSearchActive(false);
+    setSearchOpen(false);
+    if (sidebarOpen) closeSidebar();
+    scrollToResults();
+  };
+  const toggleFavorite = (id: number) =>
+    setFavoriteIds((ids) =>
+      ids.includes(id) ? ids.filter((item) => item !== id) : [...ids, id],
+    );
+  const togglePlan = (id: number) =>
+    setPlanIds((ids) =>
+      ids.includes(id) ? ids.filter((item) => item !== id) : [...ids, id],
+    );
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      try {
+        setFavoriteIds(
+          JSON.parse(
+            window.localStorage.getItem("chespanish-favorites") || "[]",
+          ),
+        );
+        setPlanIds(
+          JSON.parse(window.localStorage.getItem("chespanish-plan") || "[]"),
+        );
+      } catch {}
+      setStorageReady(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
+  useEffect(() => {
+    const cleanQuery = query.trim();
+    if (cleanQuery.length < 2 || cleanQuery === lastTrackedQuery.current) return;
+    const timer = window.setTimeout(() => {
+      lastTrackedQuery.current = cleanQuery;
+      trackMarketingEvent("search_used", { query_length: cleanQuery.length });
+    }, 650);
+    return () => window.clearTimeout(timer);
+  }, [query]);
+  useEffect(() => {
+    if (!storageReady) return;
+    window.localStorage.setItem(
+      "chespanish-favorites",
+      JSON.stringify(favoriteIds),
+    );
+    window.localStorage.setItem("chespanish-plan", JSON.stringify(planIds));
+  }, [favoriteIds, planIds, storageReady]);
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setSearchOpen(true);
+        searchInputRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+  useEffect(() => {
+    if (!sidebarOpen) return;
+    const sidebar = sidebarRef.current;
+    if (!sidebar) return;
+    const previousOverflow = document.body.style.overflow;
+    // eslint-disable-next-line react-hooks/immutability -- scroll locking is a deliberate DOM side effect
+    document.body.style.overflow = "hidden";
+    const focusable = () =>
+      Array.from(
+        sidebar.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      );
+    focusable()[0]?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeSidebar();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const items = focusable();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [sidebarOpen]);
+  useEffect(() => {
+    if (!activeLesson) return;
+    const modal = modalRef.current;
+    if (!modal) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    modalCloseRef.current?.focus();
+    const focusable = () =>
+      Array.from(
+        modal.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      );
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeActiveLesson();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const items = focusable();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [activeLesson]);
+  useEffect(() => {
+    const onScroll = () => setHeaderCompact(window.scrollY > 96);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const sampleHref =
+    lessons.find((lesson) => lesson.id === 105 && lesson.free && lesson.path)?.path ||
+    lessons.find((lesson) => lesson.free && lesson.path)?.path ||
+    "#library-results";
+  const audience = audienceFromAccess(signedIn, fullAccess);
+  const primaryCta = primaryCtaFor(audience, sampleHref);
+  const secondaryCta = secondaryCtaFor(audience, sampleHref);
+  const subscriptionCta = subscriptionCtaFor(audience);
+  const primaryCtaLabel = t(primaryCta.labelKey);
+  const secondaryCtaLabel = t(secondaryCta.labelKey);
+  const subscriptionCtaLabel = t(subscriptionCta.labelKey);
+  const openCountries = () => {
+    trackMarketingEvent("filter_used", { filter: "conversation_mode", value: "countries" });
+    setView("Biblioteca");
+    setCategory("Conversación");
+    setConversationMode("countries");
+    setLevel("Todos");
+    setQuery("");
+    setCatalogSearchActive(false);
+    setSearchOpen(false);
+    scrollToResults();
+  };
+  const openVerbalSystem = () => {
+    trackMarketingEvent("filter_used", { filter: "grammar_collection", value: "verbal_system" });
+    setView("Biblioteca");
+    setCategory("Gramática");
+    setGrammarMode("system");
+    setConversationMode("all");
+    setLevel("Todos");
+    setQuery("");
+    setCatalogSearchActive(false);
+    setSearchOpen(false);
+    scrollToResults();
+  };
+  const lessonGrid = (items: Lesson[], planned = false, includeCountryCard = false) =>
+    items.length || includeCountryCard ? (
+      <div className="lesson-grid">
+        {includeCountryCard && (
+          <button className="lesson-card countries-card accent-b1" type="button" onClick={openCountries}>
+            <LessonPreview lesson={{id:-1,title:t("library.countries"),image:"/catalog-thumbnails/countries-collection.webp"}} />
+            <span className="countries-star" aria-hidden="true">★</span>
+            <span className="card-content">
+              <span className="card-top">
+                <span className="card-badges">
+                  <span className="level-badge">A0–B1</span>
+                  <span className="countries-featured-badge">{t("library.countriesKicker")}</span>
+                </span>
+              </span>
+              <span className="card-route-line">{countryLessons.length} {t("common.classes")} · {t("category.conversation")}</span>
+              <span className="countries-card-title">{t("library.countries")}</span>
+              <span className="countries-card-copy">{t("library.countriesCopy")}</span>
+              <span className="card-bottom">
+                <span className="card-meta">A0–B1 · {countryLessons.length} {t("common.classes")}</span>
+                <span className="card-open">{t("library.countriesOpen")} →</span>
+              </span>
             </span>
-          </div>
-          <button onClick={() => setModal('offer')}>Ver lanzamiento ↗</button>
-        </section>
-
-        <section className="teacher-library" aria-label="Biblioteca de clases">
-          <div className="teacher-library-head">
-            <h2>
-              Elegí tu próxima clase<span>{lessons.length} clases</span>
-            </h2>
-            <label className="sample-toggle">
-              <input type="checkbox" checked={onlyFree} onChange={(e) => setOnlyFree(e.target.checked)} /> Solo
-              gratuitas
-            </label>
-          </div>
-
-          <div className="teacher-filters">
-            <label className="teacher-search">
-              Buscar clase
-              <input
-                type="search"
-                placeholder="Tema o palabra clave"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-            </label>
-            <label>
-              Categoría
-              <select value={category} onChange={(e) => chooseCategory(e.target.value)}>
-                <option value="Todas">Todas las categorías</option>
-                {categories.map((c) => (
-                  <option key={c}>{c}</option>
-                ))}
-              </select>
-            </label>
-            <label>
-              {category === 'Todas' ? 'Nivel' : `Nivel en ${category}`}
-              <select value={level} onChange={(e) => setLevel(e.target.value)}>
-                <option value="Todos">Todos los niveles</option>
-                {availableLevels(lessons,category).map((l: string) => (
-                  <option key={l}>{l}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-
-          <p className="sample-note">
-            2 clases de muestra por nivel + 2 por categoría. Gratis, sin tarjeta. Las selecciones pueden coincidir.
-          </p>
-
-          <div className="teacher-results" role="status">
-            {visible.length} {visible.length === 1 ? 'clase' : 'clases'}
-            {(query || level !== 'Todos' || category !== 'Todas' || onlyFree) && (
-              <button
-                onClick={() => {
-                  setQuery('');
-                  setLevel('Todos');
-                  setCategory('Todas');
-                  setOnlyFree(false);
-                }}
-              >
-                Limpiar filtros
-              </button>
+          </button>
+        )}
+        {items.map((l, i) => {
+          const href = lessonHref(l);
+          return <article
+            className={`lesson-card accent-${l.level.toLowerCase()} ${l.special ? "special-card" : ""} ${canOpen(l) ? "" : "lesson-locked"}`}
+            data-access={canOpen(l) ? "open" : "locked"}
+            data-curriculum-order={l.category === "Gramática" ? l.curriculumOrder : undefined}
+            data-route-order={l.routeOrder}
+            data-route-sequence={l.routeSequence}
+            key={l.id}
+          >
+            {href ? <a
+              className="card-hitarea"
+              href={href}
+              aria-label={canOpen(l) ? t("library.openAria", { title: l.title }) : t("library.lockedAria", { title: l.title })}
+              onClick={() => prepareLessonNavigation(l)}
+            /> : <button
+              className="card-hitarea"
+              type="button"
+              aria-label={t("library.openAria", { title: l.title })}
+              onClick={() => openLesson(l)}
+            />}
+            <LessonPreview lesson={l} />
+            {!canOpen(l) && (
+              <span className="card-lock-mark" aria-hidden="true">
+                <i />
+              </span>
             )}
-          </div>
-
-          <div className="teacher-grid">
-            {visible.map((l) => {
-              const locked = !fullAccess && !l.free;
-              return (
-                <article key={l.id} className={`teacher-card ${locked ? 'is-locked' : ''}`}>
-                  <div className="teacher-card-art">
-                    {l.image ? (
-                      <img src={l.image} alt="" loading="lazy" />
-                    ) : (
-                      <div className="teacher-card-type" aria-hidden="true">
-                        {l.category === 'Gramática'
-                          ? 'Aa'
-                          : l.category === 'Escucha'
-                          ? '♫'
-                          : l.category === 'Fonética'
-                          ? 'ɾ'
-                          : l.category === 'Vocabulario'
-                          ? 'Ab'
-                          : '¿?'}
-                      </div>
-                    )}
-                    {locked && (
-                      <span className="lock-symbol" aria-hidden="true">
-                        ▣
-                      </span>
-                    )}
-                    <span className={`access-pill ${l.free ? 'free' : ''}`}>
-                      {l.free ? 'GRATIS' : fullAccess ? 'TU ACCESO COMPLETO' : 'ACCESO COMPLETO'}
-                    </span>
-                  </div>
-                  <div className="teacher-card-body">
-                    <div className="teacher-card-meta">
-                      <b>{l.displayLevel || l.level}</b>
-                      <span>{l.category}</span>
-                    </div>
-                    <h3>{l.title}</h3>
-                    <p>{l.subtitle}</p>
-                    <div className="teacher-card-footer">
-                      <span>{l.duration}</span>
-                      {locked ? (
-                        <button aria-label={`Ver acceso para ${l.title}`} onClick={() => setModal('locked')}>
-                          Desbloquear ↗
-                        </button>
-                      ) : (
-                        <a href={l.path}>Abrir clase →</a>
-                      )}
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-
-          {!visible.length && (
-            <div className="teacher-empty">
-              <h3>No hay clases con estos filtros.</h3>
-              <p>Elegí otro nivel o categoría.</p>
+            <div className="card-content">
+            <div className="card-top">
+              <div className="card-badges">
+                <span className="level-badge">{l.displayLevel || l.level}</span>
+                <span className="collection-badge">{collectionBadgeFor(l)}</span>
+                {!fullAccess && (
+                  <span
+                    className={`library-access-badge ${l.free ? "sample" : "locked"}`}
+                  >
+                    {!l.free && <i className="access-lock-icon" aria-hidden="true" />}
+                    {l.free ? t("common.free") : t("common.locked")}
+                  </span>
+                )}
+                {planned && (
+                  <span className="plan-position">
+                    POS. {String(i + 1).padStart(2, "0")}
+                  </span>
+                )}
+              </div>
+              <div className="card-actions">
+                <button
+                  className={favoriteIds.includes(l.id) ? "saved" : ""}
+                  aria-label={
+                    favoriteIds.includes(l.id)
+                      ? t("library.removeFavorite", { title: l.title })
+                      : t("library.saveFavorite", { title: l.title })
+                  }
+                  title={t("library.favorite")}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    toggleFavorite(l.id);
+                  }}
+                >
+                  {favoriteIds.includes(l.id) ? "★" : "☆"}
+                </button>
+                <button
+                  className={planIds.includes(l.id) ? "saved" : ""}
+                  aria-label={
+                    planIds.includes(l.id)
+                      ? t("library.removePlan", { title: l.title })
+                      : t("library.addPlan", { title: l.title })
+                  }
+                  title={t("common.classPlan")}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    togglePlan(l.id);
+                  }}
+                >
+                  {planIds.includes(l.id) ? "✓" : "＋"}
+                </button>
+              </div>
             </div>
-          )}
-        </section>
-
-        <section className="teacher-world">
-          <p>UN IDIOMA. MUCHAS BANDERAS.</p>
-          <h2>Tu español tiene lugar acá.</h2>
-          <div className="brand-sheets">
-            {[1, 2, 3].map((n) => (
-              <img
-                key={n}
-                src={`/brand/chespanish-countries-0${n}.png`}
-                alt={
-                  n === 1
-                    ? 'España, Argentina, México, Colombia, Perú, Chile y Uruguay'
-                    : n === 2
-                    ? 'Bolivia, Ecuador, Paraguay, Venezuela, Costa Rica, Panamá y Nicaragua'
-                    : 'Guatemala, Honduras, El Salvador, Cuba, República Dominicana, Puerto Rico y Guinea Ecuatorial'
-                }
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </section>
-      </main>
-
-      <footer className="teacher-footer">
-        <b>CHESPANISH</b>
-        <span>NAVEGÁ, ELEGÍ, ENSEÑÁ.</span>
-      </footer>
-
-      <dialog
-        ref={dialog}
-        className="teacher-dialog"
-        onCancel={() => setModal(null)}
-        onClose={() => setModal(null)}
-        onClick={(e) => {
-          if (e.target === dialog.current) setModal(null);
-        }}
+            <div className="card-route-line">
+              {l.routeSequence && (
+                <span className="curriculum-sequence route-sequence">
+                  {t("library.classLabel", { number: String(l.routeSequence).padStart(2, "0") })}
+                </span>
+              )}
+              <i aria-hidden="true">·</i>
+              <span className="category-name">{categoryLabel(l.category)}</span>
+            </div>
+            <h3>{l.title}</h3>
+            <p>{l.subtitle}</p>
+            <div className="card-bottom">
+              <div className="card-meta">
+                <span>{l.duration}</span>
+                <i aria-hidden="true">·</i>
+                <span>{l.tag}</span>
+              </div>
+              <span className="card-open">{canOpen(l) ? t("common.open") : t("common.unlock")} →</span>
+            </div>
+            </div>
+          </article>
+        })}
+      </div>
+    ) : (
+      <div className="empty-state">
+        {view !== "Biblioteca" && (
+          <img
+            className="empty-mascot"
+            src={view === "Plan" ? "/brand/mascot/standing.webp" : "/brand/mascot/seated.webp"}
+            alt=""
+          />
+        )}
+        <span>{view === "Plan" ? "▣" : view === "Favoritas" ? "☆" : "⌕"}</span>
+        <h3>
+          {view === "Plan"
+            ? t("library.emptyPlanTitle")
+            : view === "Favoritas"
+              ? t("library.emptyFavoritesTitle")
+              : t("library.emptySearchTitle")}
+        </h3>
+        <p>
+          {view === "Plan"
+            ? t("library.emptyPlanCopy")
+            : view === "Favoritas"
+              ? t("library.emptyFavoritesCopy")
+              : t("library.emptySearchCopy")}
+        </p>
+        {view !== "Biblioteca" && (
+          <button onClick={() => openView("Biblioteca")}>
+            {t("library.goToLibrary")}
+          </button>
+        )}
+      </div>
+    );
+  return (
+    <div className="app-shell">
+      <a
+        className="skip-link"
+        href="#main-content"
+        aria-hidden={sidebarOpen || activeLesson ? true : undefined}
+        tabIndex={sidebarOpen || activeLesson ? -1 : undefined}
       >
-        <div>
-          <button className="dialog-close" aria-label="Cerrar" onClick={() => setModal(null)}>
+        {t("common.skipToContent")}
+      </a>
+      {sidebarOpen && <>
+      <button
+        className="sidebar-scrim visible"
+        aria-label={t("nav.closeMenu")}
+        onClick={closeSidebar}
+      />
+      <aside
+        ref={sidebarRef}
+        id="library-navigation"
+        className="sidebar open"
+        aria-label={t("nav.main")}
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="sidebar-head">
+          <div className="brand">
+            <SpanishCueBrand variant="full" tone="light" />
+          </div>
+          <button
+            className="sidebar-close"
+            onClick={closeSidebar}
+            aria-label={t("nav.closeMenu")}
+          >
             ×
           </button>
-          <p className="dialog-kicker">CHESPANISH · LANZAMIENTO</p>
-          <h2>
-            {modal === 'locked'
-              ? 'Esta clase forma parte del acceso completo.'
-              : `Un lugar para los primeros ${offer.maxTeachers} profes.`}
-          </h2>
-          <p>
-            {offer.discountPercent}% de descuento: {usd(discountedCents(offer))}/mes durante {offer.months} meses.
-            Después, precio estándar vigente. Hoy: {usd(offer.baseCents)}/mes.
-          </p>
-          <p>Mientras tanto, probá las clases gratuitas y usalas con tus alumnos.</p>
-          <button
-            className="dialog-primary"
-            onClick={() => {
-              setOnlyFree(true);
-              setCategory('Todas');
-              setLevel('Todos');
-              setQuery('');
-              setModal(null);
-            }}
-          >
-            Explorar clases gratuitas →
-          </button>
-          <small>Sin tarjeta. Sin cobros ni reservas de cupo.</small>
         </div>
-      </dialog>
+        <nav className="main-nav" aria-label={t("nav.main")}>
+          <button
+            className={`nav-item ${view === "Biblioteca" ? "active" : ""}`}
+            onClick={() => openView("Biblioteca")}
+            aria-current={view === "Biblioteca" ? "page" : undefined}
+          >
+            <span className="nav-glyph nav-library" /> {t("common.myLibrary")}
+          </button>
+          <button
+            className={`nav-item ${view === "Plan" ? "active" : ""}`}
+            onClick={() => openView("Plan")}
+            aria-current={view === "Plan" ? "page" : undefined}
+          >
+            <span className="nav-glyph nav-plan" /> {t("common.classPlan")}{" "}
+            <b>{planIds.length || ""}</b>
+          </button>
+          <button
+            className={`nav-item ${view === "Favoritas" ? "active" : ""}`}
+            onClick={() => openView("Favoritas")}
+            aria-current={view === "Favoritas" ? "page" : undefined}
+          >
+            <span className="nav-glyph nav-star" /> {t("common.favorites")}{" "}
+            <b>{favoriteIds.length || ""}</b>
+          </button>
+        </nav>
+        <p className="side-label">{t("common.contents")}</p>
+        <div className="level-explorer">
+          <button
+            className={`all-lessons-toggle ${levelMenuOpen ? "expanded" : ""}`}
+            onClick={() => setLevelMenuOpen((open) => !open)}
+            aria-expanded={levelMenuOpen}
+          >
+            <span className="all-grid">
+              <i />
+              <i />
+              <i />
+              <i />
+            </span>
+            <div>
+              <b>{category === "Todas" ? t("common.allClasses") : categoryLabel(category)}</b>
+              <small>
+                {category === "Todas"
+                  ? t("library.readyExperiences", { count: lessons.length })
+                  : categoryLabel(category)}
+              </small>
+            </div>
+            <i className="level-chevron">⌄</i>
+          </button>
+          {levelMenuOpen && (
+            <div className="level-groups">
+              {levelGroups
+                .filter((group) =>
+                  group.levels.some((item) => categoryLevels.includes(item)),
+                )
+                .map((group) => (
+                  <section
+                    key={group.id}
+                    className={`level-group group-${group.id}`}
+                  >
+                    <button
+                      onClick={() =>
+                        setOpenLevelGroup((current) =>
+                          current === group.id ? null : group.id,
+                        )
+                      }
+                      aria-expanded={openLevelGroup === group.id}
+                    >
+                      <span />
+                      <div>
+                        <b>{t(group.label)}</b>
+                        <small>{t(group.copy)}</small>
+                      </div>
+                      <i>{openLevelGroup === group.id ? "−" : "+"}</i>
+                    </button>
+                    {openLevelGroup === group.id && (
+                      <div className="level-subnav">
+                        {group.levels
+                          .filter((item) => categoryLevels.includes(item))
+                          .map((item) => (
+                            <button
+                              key={item}
+                              className={level === item ? "selected" : ""}
+                              onClick={() => chooseLevel(item)}
+                            >
+                              <span
+                                className={`level-dot level-${item.toLowerCase()}`}
+                              >
+                                {item}
+                              </span>
+                              <div>
+                                <b>{levelName(item)}</b>
+                                <small>{t("common.level")} {item}</small>
+                              </div>
+                              <strong>
+                                {
+                                  filterLessons(levelCountSource, {
+                                    level: item,
+                                    category,
+                                    query: catalogQuery,
+                                  }).length
+                                }
+                              </strong>
+                            </button>
+                          ))}
+                      </div>
+                    )}
+                  </section>
+                ))}
+              {categoryLevels.includes("A0") && (
+                <button
+                  className={`a0-entry ${level === "A0" ? "selected" : ""}`}
+                  onClick={() => chooseLevel("A0")}
+                >
+                  <span className="level-dot level-a0">A0</span>
+                  <div>
+                    <b>{t("level.a0")}</b>
+                    <small>{t("level.beforeA1")}</small>
+                  </div>
+                  <strong>
+                    {
+                      filterLessons(levelCountSource, { level: "A0", category, query: catalogQuery })
+                        .length
+                    }
+                  </strong>
+                </button>
+              )}
+              <button
+                className={`all-entry ${level === "Todos" ? "selected" : ""}`}
+                onClick={() => chooseLevel("Todos")}
+              >
+                <span>∞</span>
+                <b>
+                  {t("common.allLevels")}
+                  {category !== "Todas" ? ` · ${categoryLabel(category)}` : ""}
+                </b>
+              </button>
+            </div>
+          )}
+        </div>
+        <div className="mate-tip">
+          <span className="tip-orbit">
+            <i />
+            <b>SC</b>
+          </span>
+          <div>
+            <b>{t("library.growingTitle")}</b>
+            <p>{t("library.growingCopy")}</p>
+          </div>
+        </div>
+        <div className="library-access-nav">
+          {owner ? (
+            <>
+              <a href="/admin">{t("nav.myPanel")}</a>
+              <a href={fullAccess ? "/?vista=profesor" : "/"}>
+                {fullAccess
+                  ? t("nav.viewAsTeacher")
+                  : t("nav.backToFullAccess")}
+              </a>
+            </>
+          ) : signedIn ? (
+            <>
+              <a href="/cuenta">{t("nav.myTeacherAccount")}</a>
+              <LogoutButton className="library-nav-logout" />
+            </>
+          ) : (
+            <>
+              <a href="/ingresar?modo=entrar">{t("nav.logIn")}</a>
+              <a href="/ingresar?modo=registro">{t("nav.signUpTeacher")}</a>
+            </>
+          )}
+        </div>
+        <div className="profile">
+          <span>{owner ? "AN" : "SC"}</span>
+          <div>
+            <b>{owner ? "Alejandro" : signedIn ? t("library.teacher") : "SPANISHCUE"}</b>
+            <small>
+              {fullAccess ? t("library.fullAccess") : t("library.freeByCategory")}
+            </small>
+          </div>
+          <a
+            href={
+              signedIn ? "/cuenta" : "/ingresar?modo=entrar&returnTo=%2Fcuenta"
+            }
+            aria-label={t("nav.myAccount")}
+          >
+            •••
+          </a>
+        </div>
+      </aside>
+      </>}
+      <main
+        className="main-content"
+        inert={sidebarOpen || activeLesson ? true : undefined}
+        aria-hidden={sidebarOpen || activeLesson ? true : undefined}
+      >
+        <header className={`topbar ${headerCompact ? "compact" : ""}`}>
+          <div className="topbar-primary">
+            <div className="topbar-brand-block">
+              <button
+                ref={menuTriggerRef}
+                className="menu-trigger"
+                onClick={() => setSidebarOpen(true)}
+                aria-label={t("nav.openMenu")}
+                aria-expanded={sidebarOpen}
+                aria-controls="library-navigation"
+              >
+                <i />
+                <i />
+                <i />
+              </button>
+              <Link className="topbar-brand" href="/">
+                <SpanishCueWordmark compact />
+              </Link>
+              <span className="topbar-brand-promise">
+                {t("nav.readyToTeach")}
+              </span>
+            </div>
+            <nav className="topbar-navigation" aria-label={t("nav.main")}>
+              <a href="#library-results">{t("common.library")}</a>
+              <a href="#how-it-works">{t("nav.howItWorks")}</a>
+              {!fullAccess && <a href="#pricing">{t("nav.plans")}</a>}
+            </nav>
+            <div className="topbar-actions">
+              <LanguageSwitcher className="topbar-language" />
+              <a
+                className="topbar-account"
+                href={signedIn ? "/cuenta" : "/ingresar?modo=entrar"}
+              >
+                {signedIn ? t("nav.myAccount") : t("nav.logIn")}
+              </a>
+              <MarketingLink className="topbar-primary-cta" cta={primaryCta} placement="header">
+                {primaryCtaLabel}
+                <span aria-hidden="true">→</span>
+              </MarketingLink>
+            </div>
+          </div>
+          <div className="topbar-utility">
+            <div className="search-shell">
+              <label className="search" aria-label={t("common.search")}>
+                <span className="search-icon" aria-hidden="true" />
+                <span className="search-field">
+                  <small>{t("nav.findNextLesson")}</small>
+                  <input
+                    ref={searchInputRef}
+                    value={query}
+                    onFocus={() => setSearchOpen(true)}
+                    onBlur={() => window.setTimeout(() => setSearchOpen(false), 140)}
+                    onChange={(event) => {
+                      setQuery(event.target.value);
+                      setCatalogSearchActive(false);
+                      setSearchOpen(true);
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key === "Escape") {
+                        setSearchOpen(false);
+                        event.currentTarget.blur();
+                      }
+                      if (event.key === "Enter" && query.trim()) {
+                        event.preventDefault();
+                        setCatalogSearchActive(true);
+                        setSearchOpen(false);
+                        scrollToResults();
+                      }
+                    }}
+                    placeholder={t("common.searchPlaceholder")}
+                  />
+                </span>
+                <kbd>⌘ K</kbd>
+              </label>
+              {searchOpen && query.trim() && (
+                <section className="search-results-panel" aria-live="polite">
+                  {searchMatches.length ? (
+                    <>
+                      <div className="search-results-head">
+                        <span>{searchMatches.length} {searchMatches.length === 1 ? t("common.class") : t("common.classes")}</span>
+                        <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => { setCatalogSearchActive(true); setSearchOpen(false); scrollToResults(); }}>
+                          {locale === "es" ? "VER EN BIBLIOTECA" : "VIEW IN LIBRARY"}
+                        </button>
+                      </div>
+                      <div className="search-results-list">
+                        {searchMatches.slice(0, 3).map((lesson) => {
+                          const href = lessonHref(lesson);
+                          const content = <><span>{lesson.displayLevel || lesson.level} · {categoryLabel(lesson.category)}</span><b>{lesson.title}</b><i aria-hidden="true">→</i></>;
+                          const choose = () => {
+                            setSearchOpen(false);
+                            setQuery("");
+                            setCatalogSearchActive(false);
+                          };
+                          return href
+                            ? <a key={lesson.id} href={href} onClick={() => { choose(); prepareLessonNavigation(lesson, "search_suggestion"); }}>{content}</a>
+                            : <button key={lesson.id} type="button" onMouseDown={(event) => event.preventDefault()} onClick={() => { choose(); openLesson(lesson); }}>{content}</button>;
+                        })}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="search-no-result"><b>{t("library.emptySearchTitle")}</b><span>{t("library.emptySearchCopy")}</span></div>
+                  )}
+                </section>
+              )}
+            </div>
+          </div>
+        </header>
+        {owner && !fullAccess && (
+          <div className="library-preview-note">
+            {t("library.previewMode")}{" "}
+            <Link href="/">{t("nav.backToFullAccess")} →</Link>
+          </div>
+        )}
+        <SpanishCueHero />
+        <HowItWorks />
+        <section className="library-heading" id="library-results">
+          <div>
+            <p className="eyebrow">
+              {view === "Biblioteca"
+                ? t("common.library")
+                : view === "Plan"
+                  ? t("library.nextClass")
+                  : t("library.personalCollection")}
+            </p>
+            <h2>
+              {view === "Plan"
+                ? t("common.classPlan")
+                : view === "Favoritas"
+                  ? t("common.favorites")
+                  : conversationMode === "countries"
+                    ? t("library.countries")
+                    : category === "Gramática" && grammarMode === "system"
+                      ? "★ Sistema verbal"
+                    : level === "Todos"
+                      ? t("common.allClasses")
+                    : `${level} · ${levelName(level)}`}
+            </h2>
+          </div>
+          {view === "Biblioteca" && (
+            <button
+              className={`show-all ${category === "Todas" ? "active" : ""}`}
+              onClick={() => chooseCategory("Todas")}
+            >
+              {t("common.viewAllClasses")}
+            </button>
+          )}
+        </section>
+        {view === "Biblioteca" && (
+          <section
+            className="combined-filters"
+            aria-label={t("library.combinedFilters")}
+          >
+            <label>
+              {category === "Todas"
+                ? t("common.level")
+                : t("common.levelIn", { category: categoryLabel(category) })}
+              <select
+                value={level}
+                onChange={(event) => chooseLevel(event.target.value)}
+              >
+                <option value="Todos">{t("common.allLevels")}</option>
+                {categoryLevels.map((item) => (
+                  <option value={item} key={item}>
+                    {item} · {levelName(item)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              {t("common.category")}
+              <select
+                value={category}
+                onChange={(event) =>
+                  chooseCategory(event.target.value as "Todas" | Category)
+                }
+              >
+                <option value="Todas">{t("common.allCategories")}</option>
+                {(
+                  [
+                    "Gramática",
+                    "Conversación",
+                    "Escucha",
+                    "Fonética",
+                    "Vocabulario",
+                  ] as Category[]
+                ).map((item) => (
+                  <option value={item} key={item}>
+                    {categoryLabel(item)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="filter-result" role="status" aria-live="polite">
+              <strong>
+                {filtered.length}{" "}
+                {locale === "es" ? (filtered.length === 1 ? "resultado" : "resultados") : (filtered.length === 1 ? "result" : "results")}
+              </strong>
+              <small>{lessons.length} {locale === "es" ? "clases totales, incluidas las colecciones Sistema Verbal y Países" : "total lessons, including the Verbal System and Countries collections"}</small>
+            </div>
+            {(level !== "Todos" || category !== "Todas" || conversationMode !== "all" || grammarMode !== "general" || catalogSearchActive) && (
+              <button
+                onClick={() => {
+                  setLevel("Todos");
+                  setCategory("Todas");
+                  setConversationMode("all");
+                  setGrammarMode("general");
+                  setQuery("");
+                  setCatalogSearchActive(false);
+                }}
+              >
+                {t("common.clearFilters")}
+              </button>
+            )}
+          </section>
+        )}
+        {view === "Biblioteca" && category === "Conversación" && (
+          <section className="conversation-family-filter" aria-label="Tipo de clase conversacional">
+            <div>
+              <small>TIPOS DE CONVERSACIÓN</small>
+              <strong>{conversationMode === "play" ? "MODO PLAY" : conversationMode === "boards" ? "TABLEROS" : conversationMode === "worlds" ? "UNIVERSOS" : conversationMode === "countries" ? t("library.countries").toUpperCase() : "CONVERSACIÓN GENERAL"}</strong>
+            </div>
+            <nav aria-label="Tipos de clase conversacional">
+              {([
+                ["all", "GENERAL"],
+                ["worlds", "UNIVERSOS"],
+                ["play", "MODO PLAY"],
+                ["boards", "TABLEROS"],
+                ["countries", t("library.countries").toUpperCase()],
+              ] as const).map(([value,label]) => {
+                const base=filterLessons(lessons,{level,category:"Conversación",query:catalogQuery}) as Lesson[];
+                const general=base.filter(item=>!item.countryCollection);
+                const count=value==="countries"
+                  ? base.filter(item=>item.countryCollection).length
+                  : value==="all"
+                    ? general.length
+                    : general.filter(item=>value==="worlds"
+                      ? item.conversationMode!=="play"&&item.conversationMode!=="boards"
+                      : item.conversationMode===value).length;
+                return <button key={value} className={`${conversationMode===value?"active":""} ${value==="countries"?"countries-tab":""}`} aria-pressed={conversationMode===value} onClick={()=>{if(value==="countries"){openCountries();return}trackMarketingEvent("filter_used",{filter:"conversation_mode",value});setConversationMode(value);setLevel("Todos");scrollToResults()}}><span>{value==="play"?"▶":value==="boards"?"▦":value==="worlds"?"◈":value==="countries"?"★":"●"}</span><b>{label}</b><small>{count}</small></button>;
+              })}
+            </nav>
+          </section>
+        )}
+        {view === "Biblioteca" && category === "Gramática" && (
+          <section className="grammar-family-filter" aria-label="Colecciones de Gramática">
+            <div>
+              <small>COLECCIONES DE GRAMÁTICA</small>
+              <strong>{grammarMode === "system" ? "★ SISTEMA VERBAL" : "RUTA GENERAL"}</strong>
+            </div>
+            <nav aria-label="Colecciones de Gramática">
+              <button className={`verbal-tab ${grammarMode === "system" ? "active" : ""}`} aria-pressed={grammarMode === "system"} onClick={openVerbalSystem}><span>★</span><b>SISTEMA VERBAL</b><small>{verbalSystemLessons.length}</small></button>
+              <button className={grammarMode === "general" ? "active" : ""} aria-pressed={grammarMode === "general"} onClick={()=>{setGrammarMode("general");setLevel("Todos");scrollToResults()}}><span>01</span><b>GRAMÁTICA GENERAL</b><small>{lessons.filter(item=>item.category==="Gramática"&&!item.verbalSystem).length}</small></button>
+              <Link href="/sistema-verbal"><span>↗</span><b>MAPA MODO / TIEMPO</b><small>ABRIR</small></Link>
+            </nav>
+          </section>
+        )}
+        {view === "Biblioteca" && (
+          <section
+            className="route-divider"
+            aria-label={t("library.chooseRoutes")}
+          >
+            <button
+              className={`route-card grammar-route ${category === "Gramática" ? "active" : ""}`}
+              onClick={() => chooseCategory("Gramática")}
+              aria-pressed={category === "Gramática"}
+            >
+              <span className="route-mascot">
+                <img src="/brand/mascot/pointing.webp" alt="" />
+              </span>
+              <div>
+                <small>{t("common.route", { number: "01" })}</small>
+                <b>{t("category.grammar")}</b>
+                <em>{t("library.grammarCopy")}</em>
+              </div>
+              <i>{routeCountLabel("Gramática")}</i>
+            </button>
+            <button
+              className={`route-card conversation-route ${category === "Conversación" ? "active" : ""}`}
+              onClick={() => chooseCategory("Conversación")}
+              aria-pressed={category === "Conversación"}
+            >
+              <span className="route-mascot">
+                <img src="/brand/mascot/walking.webp" alt="" />
+              </span>
+              <div>
+                <small>{t("common.route", { number: "02" })}</small>
+                <b>{t("category.conversation")}</b>
+                <em>{t("library.conversationCopy")}</em>
+              </div>
+              <i>{routeCountLabel("Conversación")}</i>
+            </button>
+            <button
+              className={`route-card listening-route ${category === "Escucha" ? "active" : ""}`}
+              onClick={() => chooseCategory("Escucha")}
+              aria-pressed={category === "Escucha"}
+            >
+              <span className="route-mascot">
+                <img src="/brand/mascot/seated.webp" alt="" />
+              </span>
+              <div>
+                <small>{t("common.route", { number: "03" })}</small>
+                <b>{t("category.listening")}</b>
+                <em>{t("library.listeningCopy")}</em>
+              </div>
+              <i>{routeCountLabel("Escucha")}</i>
+            </button>
+            <button
+              className={`route-card phonetics-route ${category === "Fonética" ? "active" : ""}`}
+              onClick={() => chooseCategory("Fonética")}
+              aria-pressed={category === "Fonética"}
+            >
+              <span className="route-symbol route-mouth" aria-hidden="true">
+                <i />
+                <b />
+                <i />
+              </span>
+              <div>
+                <small>{t("common.route", { number: "04" })}</small>
+                <b>{t("category.pronunciation")}</b>
+                <em>{t("library.pronunciationCopy")}</em>
+              </div>
+              <i>{routeCountLabel("Fonética")}</i>
+            </button>
+            <button
+              className={`route-card vocabulary-route ${category === "Vocabulario" ? "active" : ""}`}
+              onClick={() => chooseCategory("Vocabulario")}
+              aria-pressed={category === "Vocabulario"}
+            >
+              <span
+                className="route-symbol route-vocabulary"
+                aria-hidden="true"
+              >
+                <i />
+                <i />
+                <i />
+              </span>
+              <div>
+                <small>{t("common.route", { number: "05" })}</small>
+                <b>{t("category.vocabulary")}</b>
+                <em>{t("library.vocabularyCopy")}</em>
+              </div>
+              <i>{routeCountLabel("Vocabulario")}</i>
+            </button>
+          </section>
+        )}
+        {view === "Biblioteca" && (
+          <section
+            className="category-levels"
+            aria-label={
+              category === "Todas"
+                ? t("common.availableLevels")
+                : t("common.levelsOf", { category: categoryLabel(category) })
+            }
+          >
+            <div>
+              <b>{category === "Todas" ? t("common.allContent") : categoryLabel(category)}</b>
+              <span>{t("common.chooseLevelInCategory")}</span>
+            </div>
+            <nav aria-label={t("common.chooseLevel")}>
+              <button
+                aria-pressed={level === "Todos"}
+                onClick={() => chooseLevel("Todos")}
+              >
+                {t("common.all")}{" "}
+                <small>
+                  {filterLessons(levelCountSource, { category, query: catalogQuery }).length}
+                </small>
+              </button>
+              {categoryLevels.map((item) => (
+                <button
+                  key={item}
+                  aria-pressed={level === item}
+                  onClick={() => chooseLevel(item)}
+                >
+                  {item}{" "}
+                  <small>
+                    {
+                      filterLessons(levelCountSource, { level: item, category, query: catalogQuery })
+                        .length
+                    }
+                  </small>
+                </button>
+              ))}
+            </nav>
+          </section>
+        )}
+        {view === "Biblioteca" &&
+          (category === "Todas" || category === "Gramática") && (
+            <section className="curriculum-strip">
+              <div>
+                <span>{t("library.curriculumKicker")}</span>
+                <h3>{t("library.curriculumTitle")}</h3>
+                <p>{t("library.curriculumCopy")}</p>
+              </div>
+              <nav aria-label={t("library.curriculumTitle")}>
+                <button onClick={() => chooseLevel("A1")}>
+                  <small>{t("level.group.basic")}</small>
+                  <b>A1 · A2</b>
+                </button>
+                <button onClick={() => chooseLevel("B1")}>
+                  <small>{t("level.group.intermediate")}</small>
+                  <b>B1 · B2</b>
+                </button>
+                <button onClick={() => chooseLevel("C1")}>
+                  <small>{t("level.group.advanced")}</small>
+                  <b>C1 · C2</b>
+                </button>
+              </nav>
+              <a
+                href={a1StartHref}
+                onClick={() => { if (a1StartLesson) prepareLessonNavigation(a1StartLesson, "curriculum_start"); }}
+              >
+                {t("library.startA1")} →
+              </a>
+            </section>
+          )}
+        {view === "Plan" && plannedLessons.length > 0 && (
+          <div className="plan-summary">
+            <img src="/brand/mascot/standing-crossed.webp" alt="" width="900" height="1350" />
+            <div>
+              <b>
+                {plannedLessons.length === 1
+                  ? t("library.planPreparedOne")
+                  : t("library.planPreparedMany", { count: plannedLessons.length })}
+              </b>
+              <p>{t("library.planCopy")}</p>
+            </div>
+            <button onClick={() => setPlanIds([])}>{t("library.emptyPlan")}</button>
+          </div>
+        )}
+        {view === "Biblioteca" && category === "Conversación" && conversationMode === "countries" && (
+          <section className="countries-collection-head" aria-labelledby="countries-collection-title">
+            <img src="/catalog-thumbnails/countries-collection.webp" alt="" width="1200" height="800" />
+            <div>
+              <span>★ {t("library.countriesKicker")}</span>
+              <h3 id="countries-collection-title">{t("library.countries")}</h3>
+              <p>{t("library.countriesCopy")}</p>
+              <strong>{filtered.length} {filtered.length === 1 ? t("common.class") : t("common.classes")}</strong>
+              <button onClick={() => {setConversationMode("all");setLevel("Todos");scrollToResults()}}>← {t("library.countriesBack")}</button>
+            </div>
+          </section>
+        )}
+        {view === "Biblioteca" && category === "Todas" && level === "Todos" && !catalogSearchActive && (
+          <ProductPreview lessons={lessons} />
+        )}
+        {lessonGrid(
+          view === "Plan" ? plannedLessons : visibleLessons,
+          view === "Plan",
+          view === "Biblioteca" && category === "Conversación" && conversationMode === "all" && level === "Todos" && !catalogSearchActive,
+        )}
+        {view === "Biblioteca" && !fullAccess && (
+          <LibraryConversionBanner
+            primary={primaryCta}
+            primaryLabel={primaryCtaLabel}
+            secondary={secondaryCta}
+            secondaryLabel={secondaryCtaLabel}
+          />
+        )}
+        {view === "Biblioteca" && (
+          <>
+            <NewsCarousel lessons={lessons} onOpen={openLesson} hrefFor={lessonHref} onNavigate={prepareLessonNavigation} />
+            <ProblemSolution primary={primaryCta} primaryLabel={primaryCtaLabel} />
+            <BenefitSection primary={primaryCta} primaryLabel={primaryCtaLabel} />
+            <SocialProof lessonCount={lessons.length} routeCount={routeCount} levelRange={levelRange} cultureCount={SPANISH_SPEAKING_COUNTRY_COUNT} />
+            <Pricing audience={audience} primary={subscriptionCta} primaryLabel={subscriptionCtaLabel} />
+            <FAQ />
+            <CTASection
+              audience={audience}
+              primary={primaryCta}
+              primaryLabel={primaryCtaLabel}
+              secondary={secondaryCta}
+              secondaryLabel={secondaryCtaLabel}
+            />
+          </>
+        )}
+        <SpanishCueFooter />
+      </main>
+      <FounderPricePill audience={audience} />
+      {activeLesson && (
+        <div
+          className="modal-backdrop"
+          onMouseDown={closeActiveLesson}
+        >
+          <section
+            ref={modalRef}
+            className="lesson-viewer"
+            onMouseDown={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lesson-viewer-title"
+          >
+            <header
+              className={`viewer-header accent-${activeLesson.level.toLowerCase()}`}
+            >
+              <button
+                ref={modalCloseRef}
+                className="close"
+                onClick={closeActiveLesson}
+                aria-label={t("common.close")}
+              >
+                ×
+              </button>
+              <div className="viewer-brand"><SpanishCueBrand variant="compact" tone="light" context={t("library.classMode")} /></div>
+              <div className="viewer-title">
+                <span>{activeLesson.level}</span>
+                <div>
+                  <p>{categoryLabel(activeLesson.category)}</p>
+                  <h2 id="lesson-viewer-title">{activeLesson.title}</h2>
+                  <small>{activeLesson.subtitle}</small>
+                </div>
+              </div>
+              <div className="viewer-meta">
+                <span>◷ {activeLesson.duration}</span>
+                <span>◎ {activeLesson.tag}</span>
+                <span>✓ {t("common.readyToTeach")}</span>
+              </div>
+            </header>
+            <div className="viewer-body">
+              {activeLesson.category === "Gramática" ? (
+                <div className="grammar-step-stack viewer-grammar-steps">
+                  <GrammarStep
+                    number="01"
+                    eyebrow="INICIO"
+                    title="Objetivos y activación"
+                    description="Abre para decidir desde dónde empezar."
+                  >
+                    <section className="objective-box">
+                      <div>01</div>
+                      <article>
+                        <span>OBJETIVOS DE HOY</span>
+                        <h3>Al final de la clase, el alumno puede…</h3>
+                        <ul>
+                          {activeLesson.goals.map((x) => (
+                            <li key={x}>✓ {x}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    </section>
+                    <section className="lesson-section">
+                      <div className="section-number">02</div>
+                      <article>
+                        <span>ACTIVACIÓN · 5 MIN</span>
+                        <h3>Empezamos hablando</h3>
+                        <p>{activeLesson.warmup}</p>
+                        <div className="teacher-note">
+                          💡 <b>Nota para ti:</b> no corrijas todavía. Escucha
+                          qué recursos ya tiene el alumno.
+                        </div>
+                      </article>
+                    </section>
+                  </GrammarStep>
+                  {activeLesson.id === 3 && <MoodTenseDisclosure />}
+                  <GrammarStep
+                    number="02"
+                    eyebrow="IDEA Y ESTRUCTURA"
+                    title="¿Qué es y cómo funciona?"
+                    description="La explicación central y su lugar en el sistema verbal."
+                  >
+                    <section className="lesson-section">
+                      <article>
+                        {activeLesson.id === 3 && (
+                          <VerbalPosition
+                            items={["presente"]}
+                            context="El voseo elige la persona «vos». No es un modo ni un tiempo aparte: «hablás», «comés» y «vivís» están en presente de indicativo."
+                          />
+                        )}
+                        <p className="big-explanation">
+                          {activeLesson.explanation}
+                        </p>
+                      </article>
+                    </section>
+                  </GrammarStep>
+                  <GrammarStep
+                    number="03"
+                    eyebrow="PRÁCTICA"
+                    title="Completa y justifica"
+                    description="Resolvé una actividad por vez."
+                  >
+                    <section className="lesson-section">
+                      <article>
+                        <div className="exercise-grid">
+                          {activeLesson.practice.map((x, i) => (
+                            <div key={x}>
+                              <b>{i + 1}</b>
+                              <p>{x}</p>
+                              <button
+                                onClick={(e) => {
+                                  e.currentTarget.textContent =
+                                    e.currentTarget.textContent === "Ver pista"
+                                      ? "Pensá en el contexto"
+                                      : "Ver pista";
+                                }}
+                              >
+                                Ver pista
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      </article>
+                    </section>
+                  </GrammarStep>
+                  <GrammarStep
+                    number="04"
+                    eyebrow="PRODUCCIÓN"
+                    title="Conversación"
+                    description="Usa la estructura para hablar."
+                  >
+                    <section className="lesson-section speaking-section">
+                      <article>
+                        <div className="prompt-list">
+                          {activeLesson.speaking.map((x, i) => (
+                            <div key={x}>
+                              <span>{["🗣️", "🎭", "⚡"][i]}</span>
+                              <p>
+                                <b>Ronda {i + 1}</b>
+                                {x}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </article>
+                    </section>
+                  </GrammarStep>
+                  <GrammarStep number="05" eyebrow="CIERRE" title="Para seguir">
+                    <section className="homework">
+                      <span>↗</span>
+                      <div>
+                        <small>PARA SEGUIR</small>
+                        <h3>Tarea breve</h3>
+                        <p>{activeLesson.homework}</p>
+                      </div>
+                    </section>
+                  </GrammarStep>
+                </div>
+              ) : (
+                <>
+                  <section className="objective-box">
+                    <div>01</div>
+                    <article>
+                      <span>OBJETIVOS DE HOY</span>
+                      <h3>Al final de la clase, el alumno puede…</h3>
+                      <ul>
+                        {activeLesson.goals.map((x) => (
+                          <li key={x}>✓ {x}</li>
+                        ))}
+                      </ul>
+                    </article>
+                  </section>
+                  <section className="lesson-section">
+                    <div className="section-number">02</div>
+                    <article>
+                      <span>ACTIVACIÓN · 5 MIN</span>
+                      <h3>Empezamos hablando</h3>
+                      <p>{activeLesson.warmup}</p>
+                      <div className="teacher-note">
+                        💡 <b>Nota para ti:</b> no corrijas todavía. Escucha
+                        qué recursos ya tiene el alumno.
+                      </div>
+                    </article>
+                  </section>
+                  <section className="lesson-section">
+                    <div className="section-number">03</div>
+                    <article>
+                      <span>CLAVE DEL TEMA</span>
+                      <h3>La idea simple</h3>
+                      <p className="big-explanation">
+                        {activeLesson.explanation}
+                      </p>
+                    </article>
+                  </section>
+                  <section className="lesson-section">
+                    <div className="section-number">04</div>
+                    <article>
+                      <span>PRÁCTICA GUIADA</span>
+                      <h3>Completa y justifica</h3>
+                      <div className="exercise-grid">
+                        {activeLesson.practice.map((x, i) => (
+                          <div key={x}>
+                            <b>{i + 1}</b>
+                            <p>{x}</p>
+                            <button
+                              onClick={(e) => {
+                                e.currentTarget.textContent =
+                                  e.currentTarget.textContent === "Ver pista"
+                                    ? "Pensá en el contexto"
+                                    : "Ver pista";
+                              }}
+                            >
+                              Ver pista
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </article>
+                  </section>
+                  <section className="lesson-section speaking-section">
+                    <div className="section-number">05</div>
+                    <article>
+                      <span>AHORA HABLAMOS</span>
+                      <h3>De práctica a conversación real</h3>
+                      <div className="prompt-list">
+                        {activeLesson.speaking.map((x, i) => (
+                          <div key={x}>
+                            <span>{["🗣️", "🎭", "⚡"][i]}</span>
+                            <p>
+                              <b>Ronda {i + 1}</b>
+                              {x}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </article>
+                  </section>
+                  <section className="homework">
+                    <span>↗</span>
+                    <div>
+                      <small>PARA SEGUIR</small>
+                      <h3>Tarea breve</h3>
+                      <p>{activeLesson.homework}</p>
+                    </div>
+                  </section>
+                </>
+              )}
+            </div>
+            <footer className="viewer-footer">
+              <SpanishCueBrand variant="compact" />
+              <button onClick={() => window.print()}>⤓ {t("common.printClass")}</button>
+            </footer>
+          </section>
+        </div>
+      )}
     </div>
   );
 }

@@ -41,3 +41,15 @@
 /* Student-facing bilingual support for the basic route */
 .co-en{display:block;margin-top:5px;color:#737d8d;font-family:"DM Sans",sans-serif;font-size:.82em;font-style:normal;font-weight:600;line-height:1.45;letter-spacing:0;text-transform:none}.co-cover .co-en,.co-chapter-hero .co-en{color:#aebbd0}.co-map-head h1>.co-en,.co-course-intro h2>.co-en,.co-master-ladder h2>.co-en,.co-concept h2>.co-en,.co-memory-rule h2>.co-en,.co-grammar-breakdown h2>.co-en,.co-conjugations h2>.co-en,.co-uses h2>.co-en,.co-examples h2>.co-en,.co-traps h2>.co-en,.co-practice h2>.co-en,.co-speaking h2>.co-en{margin-top:8px;font-size:.38em;line-height:1.3}.co-cover .co-lead>.co-en{font-size:.82em}.co-course-intro b>.co-en,.co-master-ladder b>.co-en,.co-golden-rule b>.co-en,.co-grammar-breakdown b>.co-en{font-size:.72em}.co-master-ladder p>.co-en,.co-course-intro p>.co-en{font-size:.88em}.co-learning-order b>span{display:block;margin-top:4px;color:#9eacc0;font-size:9px;font-weight:700;letter-spacing:.3px}.co-logic-strip span>.co-en{font-size:.78em}.co-tense-card header small>.co-en{font-size:1em}.co-practice button>em>.co-en{font-size:.9em}.co-portal-copy em>.co-en{font-size:.78em}.co-cover-stats span{line-height:1.35}.co-tense-head{line-height:1.35}
 .co-portal-card.visited .co-portal-number::after{content:" · LISTO · DONE ✓"}
+
+/* El contenido denso se conserva, pero queda disponible solamente al abrir cada paso. */
+.co-map-steps{max-width:1440px;margin:0 auto 52px}
+.co-map-steps .vmt-help.vmt-help{max-width:none;margin:0}
+.co-map-steps .co-course-intro,.co-map-steps .co-master-ladder{max-width:none;margin:0}
+.co-chapter-steps .vp-position{margin-top:0}
+.co-chapter-steps .co-concept,.co-chapter-steps .co-grammar-breakdown,.co-chapter-steps .co-conjugations,.co-chapter-steps .co-uses,.co-chapter-steps .co-examples,.co-chapter-steps .co-traps,.co-chapter-steps .co-practice,.co-chapter-steps .co-speaking{margin-top:0;margin-bottom:0}
+.co-chapter-steps .co-memory-rule{margin-bottom:0}
+.co-chapter-steps .co-logic-strip{margin:28px 0}
+.co-atlas-steps .co-micro-rules{margin-top:12px}
+.co-atlas-steps .co-irregulars,.co-atlas-steps .co-subjunctive-lab,.co-atlas-steps .co-participles,.co-atlas-steps .co-connectors,.co-atlas-steps .co-master-compare,.co-atlas-steps .co-final-mission{margin-top:0}
+.co-atlas-steps .co-subjunctive-lab,.co-atlas-steps .co-participles{margin-top:36px}

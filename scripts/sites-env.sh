@@ -14,6 +14,7 @@ mkdir -p \
 export SITES_ENV_READY=1
 export SITES_PROJECT_ROOT="${project_root}"
 export SITES_TOOL_HOME="${runtime_root}/home"
+export HOME="${SITES_TOOL_HOME}"
 export XDG_CONFIG_HOME="${runtime_root}/xdg-config"
 export TMPDIR="${runtime_root}/tmp"
 export WRANGLER_WRITE_LOGS=false

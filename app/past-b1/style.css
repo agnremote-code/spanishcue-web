@@ -79,3 +79,6 @@
 
 @media(max-width:1000px){.past-route.four{grid-template-columns:repeat(2,minmax(0,1fr))}.past-lenses{grid-template-columns:1fr 1fr}.past-lenses article:last-child{grid-column:1/-1}}
 @media(max-width:680px){.past-route.four,.past-lenses,.past-scene,.perfect-contrast,.perfect-person-grid{grid-template-columns:1fr}.past-lenses article:last-child{grid-column:auto}.surf-lesson{padding:8px;border-radius:20px}.surf-image{border-radius:14px}.surf-image>span{left:9px;top:9px}.surf-lesson figcaption{padding:18px 10px 10px}.concept-timeline{margin:6px 5px 10px;padding:16px 10px}.concept-timeline>i>span{font-size:7px;padding:5px}.concept-timeline>p{font-size:7px}.surf-sentence{margin:13px 5px}.perfect-formula{grid-template-columns:1fr;padding:18px}.perfect-formula>i{text-align:center}.regional-note{padding:16px}.chapter-intro.teal h2{font-size:47px}.chapter-intro.teal p{font-size:22px}}
+
+/* Shared progressive grammar disclosure layout. */
+.past-intro-steps{margin-top:20px}.past-intro-steps .section-head{margin-top:0}.past-step-stack.section-wide{padding-top:36px;padding-bottom:80px}.past-step-stack .section-wide{width:100%;margin:0;padding:0}.past-step-stack .section-head{margin-top:0}.past-step-stack .vp-position{margin-top:0}.past-step-stack .grammar-step-body>.section-wide+.section-wide{margin-top:30px}.past-step-stack .speaking-panel{margin:0}

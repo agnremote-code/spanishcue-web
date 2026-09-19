@@ -1,0 +1,153 @@
+.teacher-access-editor {
+  margin: 34px 0;
+  padding: 26px;
+  border: 1px solid #d5e2e8;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 14px 42px #102a4312;
+}
+
+.teacher-access-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.teacher-access-heading p {
+  margin: 0 0 7px;
+  color: #2d91b9;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.teacher-access-heading h2 {
+  margin: 0;
+  color: #102a43;
+}
+
+.teacher-access-heading span {
+  display: block;
+  margin-top: 6px;
+  color: #738793;
+  font-size: 13px;
+}
+
+.teacher-access-heading label {
+  display: grid;
+  gap: 6px;
+  color: #526d7d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.teacher-access-heading input {
+  min-width: 240px;
+  min-height: 43px;
+  padding: 0 13px;
+  border: 1px solid #cbdbe2;
+  border-radius: 10px;
+  color: #102a43;
+  font-size: 15px;
+}
+
+.teacher-access-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.teacher-access-list > article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid #e2eaee;
+  border-radius: 13px;
+  background: #fbfdfe;
+}
+
+.teacher-access-list > article > div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.teacher-access-list strong {
+  color: #17364c;
+  font-size: 15px;
+}
+
+.teacher-access-list span,
+.teacher-access-list small {
+  color: #71838e;
+  font-size: 12px;
+}
+
+.teacher-access-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teacher-access-status > span {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: #edf2f5;
+  color: #5e737e;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+.teacher-access-status > span[data-level="full"] {
+  background: #e7f7ed;
+  color: #26633d;
+}
+
+.teacher-access-status button,
+.password-reset-control button {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #b9d0da;
+  border-radius: 9px;
+  background: #fff;
+  color: #1d6686;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.teacher-access-status button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.teacher-access-empty {
+  margin: 22px 0 0;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f3f7f9;
+  color: #607782;
+}
+
+.teacher-access-message {
+  min-height: 20px;
+  margin: 13px 0 0;
+  color: #46616f;
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .teacher-access-heading,
+  .teacher-access-list > article,
+  .teacher-access-status {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .teacher-access-heading input {
+    width: 100%;
+    min-width: 0;
+  }
+}

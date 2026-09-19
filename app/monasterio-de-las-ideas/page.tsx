@@ -323,7 +323,7 @@ export default function MonasterioDeLasIdeas() {
     <main className={"monastery-app view-" + view}>
       <div className="ambient" aria-hidden="true"><i/><i/><i/><i/><i/></div>
       <header className="monastery-nav">
-        <button className="monastery-brand brand-button" onClick={returnToMap}><span>CHE</span>SPANISH <small>C2 · CONVERSACIÓN FILOSÓFICA</small></button>
+        <button className="monastery-brand brand-button" onClick={returnToMap}><span>SPANISH</span>CUE <small>C2 · CONVERSACIÓN FILOSÓFICA</small></button>
         <div className="monastery-progress"><span><b>{visitedRooms.length}</b> / {rooms.length} mundos</span><i><b style={{width: progress + "%"}}/></i></div>
         {view === "room" ? <button className="back-library" onClick={returnToMap}>← MAPA DEL MONASTERIO</button> : <Link href="/" className="back-library">← BIBLIOTECA</Link>}
       </header>

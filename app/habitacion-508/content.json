@@ -1,0 +1,47 @@
+{
+  "testimonies":[
+    {
+      "id":"huesped", "speaker":"Laura Vega", "role":"HUÉSPED", "variety":"España", "channel":"DECLARACIÓN", "time":"22:14", "file":"/audio/habitacion-508/huesped.mp3",
+      "focus":"Separá hechos, expectativas y valoración.", "question":"¿Qué tres problemas menciona Laura?", "talk":"¿Cuál parece más grave en este momento y por qué?",
+      "events":["20:40 · Laura acepta el cambio a la 508","21:55 · La llave de Laura deja de funcionar","05:30 · Suena una llamada automática"],
+      "segments":[{"speaker":"Laura","voice":"es-ES-ElviraNeural","rate":"+4%","text":"A ver, yo había reservado una habitación tranquila y una cena por mi aniversario. Al llegar me dijeron que la cuatrocientos dos tenía un problema de agua y acepté pasar a la quinientos ocho. Dejé en recepción una torta pequeña, refrigerada, con mi apellido. Cuando volví de cenar, cerca de las diez, la llave ya no abría. Tardaron unos veinte minutos en traer otra. Y esta mañana, a las cinco y media, recibí una llamada automática que nunca pedí. Ninguna de esas cosas, por separado, sería gravísima; juntas dan la sensación de que nadie sabía que yo estaba allí."}]
+    },
+    {
+      "id":"recepcion", "speaker":"Tomás Rincón", "role":"RECEPCIONISTA", "variety":"Colombia", "channel":"ENTREVISTA INTERNA", "time":"22:22", "file":"/audio/habitacion-508/recepcion.mp3",
+      "focus":"Escuchá la autocorrección: ¿qué hizo y qué cree haber hecho?", "question":"¿Qué paso administrativo quedó incompleto?", "talk":"¿Es un olvido comprensible o una falla profesional? Matizá.",
+      "events":["20:37 · Se detecta agua en la 402","20:40 · Tomás programa una llave para la 508","20:42 · La ficha digital sigue mostrando la 402"],
+      "segments":[{"speaker":"Tomás","voice":"es-CO-GonzaloNeural","rate":"+5%","text":"Yo hice el cambio, bueno, hice la parte urgente: le programé una llave para la quinientos ocho y avisé verbalmente. En ese momento entraron dos llamadas y pensé que también había trasladado su ficha en el sistema, pero no. Quedó en la cuatrocientos dos. Sobre la torta, vi una bolsa con la etiqueta Vega y la dejé en la cámara fría. No anoté el número porque creí que la reserva lo mostraba. Fue una mala coincidencia, aunque reconozco que el procedimiento existe precisamente para evitar coincidencias así."}]
+    },
+    {
+      "id":"housekeeping", "speaker":"Marisol Quispe", "role":"HOUSEKEEPING", "variety":"Perú", "channel":"NOTA DE SERVICIO", "time":"22:31", "file":"/audio/habitacion-508/housekeeping.mp3",
+      "focus":"Hay un detalle irrelevante y una acción importante. Distinguilos.", "question":"¿Por qué entró Marisol en la 508?", "talk":"¿Qué habría evitado la entrada innecesaria?",
+      "events":["21:05 · El sistema marca la 508 como libre","21:09 · Marisol entra para preparar la habitación","21:11 · Ve una maleta y llama a recepción"],
+      "segments":[{"speaker":"Marisol","voice":"es-PE-CamilaNeural","rate":"+5%","text":"Mi lista decía que la quinientos ocho estaba libre y que debía preparar la cama. Entré a las nueve y nueve; recuerdo la hora porque acababa de derramar café en el carro y quería terminar rápido. Había una maleta junto al armario. No toqué nada. Llamé a recepción desde el pasillo, pero la línea estaba ocupada. Entonces cerré y marqué la habitación como pendiente. Tal vez ese cambio bloqueó la llave de la huésped; yo no puedo asegurarlo, pero el sistema actualiza el acceso cuando modificamos el estado."}]
+    },
+    {
+      "id":"room-service", "speaker":"Iván Salcedo", "role":"SERVICIO DE HABITACIONES", "variety":"México", "channel":"MENSAJE DE VOZ", "time":"22:39", "file":"/audio/habitacion-508/room-service.mp3",
+      "focus":"Conectá apellido, número y suposición.", "question":"¿Cómo terminó la torta en la habitación 805?", "talk":"¿Qué dato habría sido suficiente para evitar el error?",
+      "events":["21:18 · Iván encuentra una torta con el apellido Vega","21:25 · Confirma que hay un señor Vega en la 805","21:31 · Envía la torta a la 805"],
+      "segments":[{"speaker":"Iván","voice":"es-MX-JorgeNeural","rate":"+5%","text":"En la cámara había una torta con una sola etiqueta: Vega. Busqué el apellido y me apareció un señor Luis Vega en la ochocientos cinco, donde además celebraban una cena de empresa. Me pareció lógico que fuera para él. Llamé a la habitación; alguien respondió que sí esperaban postre, aunque después supe que hablaban de otro pedido. Mandé la torta a la ochocientos cinco. No confundí quinientos ocho con ochocientos cinco, como se dijo al principio: la habitación de Laura ni siquiera figuraba bajo su nombre."}]
+    },
+    {
+      "id":"vecino", "speaker":"Julián Pardo", "role":"HUÉSPED DE LA 510", "variety":"Argentina", "channel":"LLAMADA A RECEPCIÓN", "time":"22:47", "file":"/audio/habitacion-508/vecino.mp3",
+      "focus":"No todo lo que cuenta explica el incidente.", "question":"¿Qué información sí ayuda a reconstruir la noche?", "talk":"¿Por qué los testigos suelen incluir detalles que no son relevantes?",
+      "events":["21:48 · Julián oye el carro de housekeeping","21:52 · Ve a Laura probando su llave","21:54 · Llama a recepción por un pitido del pasillo"],
+      "segments":[{"speaker":"Julián","voice":"es-AR-TomasNeural","rate":"+6%","text":"Yo estaba en la quinientos diez, viendo un partido, aunque eso no viene al caso. Cerca de las diez menos diez escuché el carro de limpieza. Unos minutos después salí por hielo y vi a una mujer intentando abrir la quinientos ocho. También sonaba un pitido en el pasillo; pensé que era su cerradura y llamé a recepción. Me dijeron que enviarían a alguien. No vi que nadie entrara en su habitación ni escuché una discusión. Lo que sí recuerdo es que ella llevaba una bolsa de restaurante, pero no una torta."}]
+    },
+    {
+      "id":"gerente", "speaker":"Ana Beltrán", "role":"GERENTE DE NOCHE", "variety":"Colombia", "channel":"INFORME ORAL", "time":"23:18", "file":"/audio/habitacion-508/gerente.mp3",
+      "focus":"Identificá qué corrige y qué deja sin revisar.", "question":"¿Por qué sonó la llamada de las 05:30?", "talk":"¿En qué momento podía haberse cortado la cadena de errores?",
+      "events":["22:16 · Ana corrige la habitación de Laura en el sistema","22:18 · Emite una llave nueva","22:20 · No revisa la alarma heredada del huésped anterior"],
+      "segments":[{"speaker":"Ana","voice":"es-CO-SalomeNeural","rate":"+6%","text":"Cuando tomé el caso, corregí la ficha: pasé a Laura de la cuatrocientos dos a la quinientos ocho y emití una llave nueva. Me concentré en que pudiera entrar cuanto antes. La quinientos ocho conservaba una llamada de despertador de las cinco y media, solicitada por el huésped anterior. Normalmente se borra al cerrar la habitación, pero como el sistema la consideraba libre y después pendiente, ese cierre no ocurrió. Yo revisé pagos, llave y nombre; no revisé servicios programados. Fue otro control parcial dentro de una noche llena de controles parciales."}]
+    }
+  ],
+  "resolution":{
+    "file":"/audio/habitacion-508/decision-real.mp3","title":"La decisión real de la gerente","channel":"RESPUESTA ENVIADA · 09:10","variety":"Colombia",
+    "segments":[{"speaker":"Ana","voice":"es-CO-SalomeNeural","rate":"+5%","text":"Laura, no hubo una sola causa ni una sola persona responsable. Fallamos al registrar el cambio de habitación, identificar la torta, actualizar la llave y revisar la llamada automática. Voy a devolver el valor de esta noche, cubrir una nueva torta y responderte yo misma por escrito. Además, desde hoy ningún cambio de habitación se cierra sin una lista de cuatro verificaciones. La disculpa no borra la noche, pero la respuesta debe ser tan completa como fue el error."}]
+  },
+  "timeline":["20:37 · Problema de agua en la 402","20:40 · Cambio verbal a la 508","20:42 · Ficha digital sin actualizar","21:09 · Entrada de housekeeping","21:31 · Torta enviada a la 805","21:52 · Llave bloqueada","22:16 · Ficha y llave corregidas","05:30 · Llamada automática"],
+  "finalQuestions":["¿Qué convierte un mal servicio en una experiencia realmente mala?","¿Cuándo vale la pena reclamar?","¿Qué debería hacer una empresa cuando comete un error?","¿Preferís una disculpa o una compensación?","¿Alguna empresa resolvió muy bien un problema que tuviste?","¿Las reseñas online son fiables?","¿Qué puede destruir la reputación de un hotel o restaurante?","¿Hasta qué punto el cliente siempre tiene razón?"],
+  "supports":["Hasta ahora, parece que…","Este testimonio modifica…","No fue culpa de una persona, sino…","La empresa debería…","Entiendo esa postura; sin embargo…"]
+}

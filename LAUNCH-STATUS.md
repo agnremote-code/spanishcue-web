@@ -1,28 +1,35 @@
-# CHESPANISH · Preparación del lanzamiento
+# SPANISHCUE · Estado de lanzamiento
 
-## Configuración
-- Base: USD 14.99 por mes.
-- Lanzamiento: 50%, redondeado hacia abajo al centavo: USD 7.49 por mes.
-- Duración: 12 meses; máximo: primeros 100 profesores.
-- Después: precio estándar vigente en ese momento.
-- Precio, porcentaje, duración y máximo editables en /admin y guardados en D1.
-- Cobros y contratación desactivados. No hay checkout, suscripciones ni asignación de cupos. Los cupos configurados son el límite de la futura promoción, no un contador de ventas reales.
+Actualizado: 16 de septiembre de 2026.
 
-## Accesos
-- Sitio privado para su propietario durante las pruebas.
-- Inicio de sesión con ChatGPT, mediante Sites.
-- Cuenta propietaria verificada por Sites: acceso total y administración.
-- /?vista=profesor muestra las tarjetas y bloqueos de un profesor; no cambia los permisos reales del propietario.
-- Muestras fijas: dos selecciones por nivel y dos por categoría. Se usa la unión: una clase puede cubrir ambos grupos y un filtro puede mostrar más de dos gratuitas.
-- Las clases, archivos de código privados y escritura de configuración se autorizan en el servidor.
-- El proceso de compilación retira del directorio público los módulos exclusivos de clases de pago y los sirve mediante la verificación de propietario. Al añadir nuevas clases o cambiar las muestras, ejecutar npm test y revisar el informe de protección.
-- Las imágenes de portada siguen siendo material promocional público; el contenido de las clases bloqueadas no se incluye en el catálogo enviado al navegador.
-- La biblioteca para profesores solo muestra clases internas. El propietario conserva el acceso a su laboratorio anterior.
+## Producto y acceso
 
-## Marca
-Tres láminas generadas con imagegen, 21 personajes con banderas: España, Argentina, México, Colombia, Perú, Chile, Uruguay, Bolivia, Ecuador, Paraguay, Venezuela, Costa Rica, Panamá, Nicaragua, Guatemala, Honduras, El Salvador, Cuba, República Dominicana, Puerto Rico y Guinea Ecuatorial. Son ilustraciones de marca; los escudos están estilizados.
+- El sitio público ofrece una biblioteca visual A0–C2 con cinco rutas de contenido.
+- Hay diez clases gratuitas fijas: dos por categoría. El resto se autoriza en el servidor para propietario o cuentas con acceso completo.
+- El registro usa email/contraseña o Google mediante Firebase. Apple permanece oculto mientras no esté configurado.
+- El build retira del almacenamiento público los módulos de clases PRO y cifra el audio premium. `npm test` valida las rutas, permisos y artefactos protegidos.
 
-## Validación
-npm test compila el producto, crea una base local aislada, aplica las migraciones y prueba las rutas gratuitas/restringidas, archivos privados, administrador, persistencia, conflicto de edición, validación de precios, filtros y contenido inicial. No modifica la base publicada.
+## Oferta y pagos
 
-Antes de abrir al público: revisión visual y uso real con profesores, prueba del inicio de sesión alojado y posterior integración de pagos en modo de prueba. La futura contratación deberá reservar cupos de forma atómica y conservar el precio, descuento y fecha de finalización de cada alta; los cambios del administrador no deben reescribir contratos existentes. La activación de cobros reales requiere una nueva instrucción del propietario.
+- FREE: US$0, diez clases completas, sin tarjeta.
+- PRO previsto: US$15 mensuales mediante PayPal, con renovación automática hasta la cancelación.
+- Founder Price: primeras 1.000 suscripciones activadas; se mantiene mientras esa misma suscripción continúe activa.
+- La integración de checkout, callback, webhook, activación y cancelación está implementada en modo sandbox.
+- El checkout público real permanece bloqueado hasta configurar PayPal Live y todos los datos legales del operador. La reserva actual no inicia una suscripción ni un cobro.
+- La disponibilidad Founder proviene de D1 y la asignación es atómica; no se simulan cupos ni ventas.
+
+## Adquisición y medición
+
+- La home, pricing, paywall y landings de búsqueda están conectados al mismo funnel de producto.
+- El consentimiento opcional empieza denegado y permite aceptar, rechazar o configurar analítica y marketing.
+- El código admite una única configuración de GTM, GA4 o Google Ads y registra eventos del funnel con atribución UTM consentida.
+- No hay identificadores de Google configurados en producción. Las conversiones externas no estarán operativas hasta que el propietario facilite los IDs y etiquetas correspondientes.
+
+## Antes de activar campañas de conversión a pago
+
+1. Completar los datos reales del operador en las variables `LEGAL_*`.
+2. Configurar PayPal Live y validar una compra autorizada de extremo a extremo.
+3. Configurar GTM, GA4 o Google Ads con las etiquetas de conversión definidas para el funnel.
+4. Publicar una nueva versión y comprobar consentimiento, compra, webhook, acceso PRO y cancelación en producción.
+
+No se deben habilitar cobros reales ni inventar información legal, ventas, testimonios o escasez para completar estas tareas.

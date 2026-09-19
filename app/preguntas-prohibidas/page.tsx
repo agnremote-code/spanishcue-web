@@ -1,6 +1,7 @@
 "use client";
 
 import {useState,type CSSProperties} from "react";
+import Link from "next/link";
 import {feedbackLabels,forbiddenBlocks,powerUps,supportPhrases,topics} from "./data";
 import "./style.css";
 import "./bilingual-fix.css";
@@ -25,7 +26,7 @@ export default function PreguntasProhibidas(){
   const randomBlock=()=>{const pool=forbiddenBlocks.map((_,index)=>index).filter(index=>index!==blockIndex);openBlock(pool[Math.floor(Math.random()*pool.length)]??0)};
 
   return <main className="pr-shell">
-    <nav className="pr-nav"><a href="/" className="pr-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>B1 · CONVERSACIÓN</small></span></a><div><span>{topics.length} MUNDOS</span><span>{topics.length*4} PREGUNTAS</span><span>{forbiddenBlocks.length} BLOQUES</span></div><a href="/">← BIBLIOTECA</a></nav>
+    <nav className="pr-nav"><Link href="/" className="pr-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>B1 · CONVERSACIÓN</small></span></Link><div><span>{topics.length} MUNDOS</span><span>{topics.length*4} PREGUNTAS</span><span>{forbiddenBlocks.length} BLOQUES</span></div><Link href="/">← BIBLIOTECA</Link></nav>
 
     {screen==="cover"&&<section className="pr-cover">
       <div className="pr-cover-copy"><span className="pr-level">B1 · OPINIÓN + MATICES</span><p className="pr-overline">UNA AVENTURA PARA HABLAR SIN RESPUESTAS FÁCILES</p><h1>EL REINO DE LAS<br/><em>PREGUNTAS PROHIBIDAS</em></h1><p className="pr-lead">Saltá por los mundos, abrí bloques prohibidos y defendé opiniones que nadie dice en voz alta.</p><p className="pr-lead-en">Move through the worlds, open forbidden blocks and defend opinions people rarely say out loud.</p><div className="pr-cover-actions"><button onClick={()=>show("rules")}>ENTRAR AL REINO <span>→</span></button><button onClick={()=>show("map")}>IR DIRECTO AL MAPA</button></div><div className="pr-cover-stats"><article><b>{topics.length}</b><span>temas profundos</span></article><article><b>{topics.length*4}</b><span>preguntas reales</span></article><article><b>8</b><span>power-ups bilingües</span></article></div></div>

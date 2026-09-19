@@ -1,0 +1,57 @@
+{
+  "neighbors": [
+    {
+      "id": "2a-elena", "door": "2A", "name": "Elena", "channel": "PORTERO ELÉCTRICO", "variety": "México", "file": "/audio/edificio-voces/2a-elena.mp3",
+      "prediction": "Mirá la luz y anticipá: ¿vive sola o con alguien?",
+      "question": "¿Cuándo está Elena normalmente en casa?", "options": ["Los lunes", "Los martes", "A las siete de la mañana"], "answer": 0,
+      "talk": "¿A qué hora salís de casa y a qué hora volvés?", "starter": "Normalmente salgo a las… y vuelvo a las…",
+      "segments": [{"speaker":"Elena","voice":"es-MX-DaliaNeural","rate":"-14%","text":"Hola, soy Elena. Vivo en el dos A. Trabajo en una clínica. Salgo de casa a las siete y vuelvo a las seis. Los lunes no trabajo y estoy en casa."}]
+    },
+    {
+      "id": "3c-mateo", "door": "3C", "name": "Mateo", "channel": "MENSAJE DE VOZ", "variety": "Colombia", "file": "/audio/edificio-voces/3c-mateo.mp3",
+      "prediction": "El mensaje llega tarde. ¿Trabaja de noche?",
+      "question": "¿Qué día descansa Mateo?", "options": ["El sábado", "El domingo", "El martes"], "answer": 1,
+      "talk": "¿Qué días trabajás vos?", "starter": "Trabajo de… a… / Descanso el…",
+      "segments": [{"speaker":"Mateo","voice":"es-CO-GonzaloNeural","rate":"-13%","text":"Hola, soy Mateo, del tres C. Soy cocinero en un restaurante. Trabajo de martes a sábado y llego tarde, casi a las once. El domingo descanso."}]
+    },
+    {
+      "id": "4b-lucia", "door": "4B", "name": "Lucía", "channel": "WHATSAPP", "variety": "Perú", "file": "/audio/edificio-voces/4b-lucia.mp3",
+      "prediction": "Hay plantas en la ventana. ¿Qué puede gustarle?",
+      "question": "¿Cuándo puede recibir un paquete?", "options": ["Por la mañana", "Después de las diez de la noche", "Solo el domingo"], "answer": 0,
+      "talk": "¿Trabajás desde casa? ¿Qué tenés cerca de tu mesa?", "starter": "Trabajo / No trabajo desde casa. Cerca tengo…",
+      "segments": [{"speaker":"Lucía","voice":"es-PE-CamilaNeural","rate":"-14%","text":"Hola. Soy Lucía y vivo en el cuatro B. Trabajo desde casa por la mañana. Me gustan mucho las plantas. Mañana espero un paquete y puedo recibirlo antes de la una."}]
+    },
+    {
+      "id": "5a-bruno", "door": "5A", "name": "Bruno", "channel": "NOTA DE VOZ", "variety": "Uruguay", "file": "/audio/edificio-voces/5a-bruno.mp3",
+      "prediction": "Se oyen dos llaves. ¿Vive con otra persona?",
+      "question": "¿Con quién vive Bruno?", "options": ["Con Paula", "Con su hermana", "Vive solo"], "answer": 0,
+      "talk": "¿Vivís solo o con alguien?", "starter": "Vivo solo / Vivo con…",
+      "segments": [{"speaker":"Bruno","voice":"es-UY-MateoNeural","rate":"-13%","text":"Buenas. Soy Bruno, del cinco A. Vivo con Paula. Los dos somos diseñadores. Los miércoles vamos al gimnasio a las siete y los viernes cenamos pizza en casa."}]
+    },
+    {
+      "id": "6d-marta", "door": "6D", "name": "Marta", "channel": "LLAMADA PERDIDA", "variety": "España", "file": "/audio/edificio-voces/6d-marta.mp3",
+      "prediction": "Se oye un perro. ¿Es grande o pequeño?",
+      "question": "¿A qué hora pasea Marta a Tango?", "options": ["A las ocho", "A las cinco", "A las once"], "answer": 0,
+      "talk": "¿Tenés mascota? ¿Qué hacés con ella?", "starter": "Tengo / No tengo mascota. Normalmente…",
+      "segments": [{"speaker":"Marta","voice":"es-ES-ElviraNeural","rate":"-15%","text":"Hola, soy Marta. Vivo en el seis D con mi perro Tango. Soy profesora y trabajo por la tarde. Cada mañana paseo a Tango a las ocho. El domingo visito a mi hermana."}]
+    },
+    {
+      "id": "1b-andres", "door": "1B", "name": "Andrés", "channel": "INTERCOMUNICADOR", "variety": "Argentina", "file": "/audio/edificio-voces/1b-andres.mp3",
+      "prediction": "Tiene una bolsa con libros. ¿Dónde trabaja?",
+      "question": "¿A qué hora abre la librería?", "options": ["A las ocho", "A las diez", "A las doce"], "answer": 1,
+      "talk": "¿A qué hora empezás a trabajar?", "starter": "Empiezo a trabajar a las…",
+      "segments": [{"speaker":"Andrés","voice":"es-AR-TomasNeural","rate":"-14%","text":"Hola, soy Andrés, del uno B. Tengo treinta y ocho años y trabajo en una librería. La tienda abre a las diez. Los martes no abre y almuerzo con mi hermana."}]
+    }
+  ],
+  "package": {
+    "id":"paquete", "door":"?", "name":"El paquete", "channel":"DIÁLOGO EN LA ENTRADA", "variety":"Argentina + México", "file":"/audio/edificio-voces/paquete.mp3",
+    "question":"¿Para quién puede ser el paquete?", "options":["Para Lucía, 4B","Para Marta, 6D","Para Mateo, 3C"], "answer":0,
+    "talk":"Explicá tu decisión con dos datos que recordás.", "starter":"Creo que es para… porque… y también…",
+    "segments":[
+      {"speaker":"Portero","voice":"es-AR-TomasNeural","rate":"-13%","text":"Buenas tardes. ¿Para quién es ese paquete?","pause":260},
+      {"speaker":"Repartidora","voice":"es-MX-DaliaNeural","rate":"-13%","text":"No veo el nombre completo. Dice cuarto piso. La persona trabaja desde casa y la caja tiene una etiqueta de plantas."}
+    ]
+  },
+  "finalQuestions":["¿Dónde vivís?","¿Cómo es tu edificio o tu casa?","¿Conocés a tus vecinos?","¿A qué hora estás normalmente en casa?","¿Trabajás desde casa?","¿Qué hacés cuando llegás?","¿Te gusta vivir donde vivís?","¿Dónde te gustaría vivir?"],
+  "supports":["Vivo en…","Mi casa tiene…","Normalmente estoy en casa a las…","Conozco / No conozco a…","Me gustaría vivir en… porque…"]
+}

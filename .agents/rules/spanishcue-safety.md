@@ -18,3 +18,4 @@
   4. commit hash
   5. whether anything was pushed
 - Preserve existing functionality unless the requested task specifically requires changing it.
+- Before Tasks 3–8, read `docs/launch/START.md` and `docs/launch/WORKING_RULES.md`; they add launch ownership, dependency, worktree, file, and port boundaries without replacing these rules.

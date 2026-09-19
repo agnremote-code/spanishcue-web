@@ -1,0 +1,10 @@
+.skip-link{position:fixed;z-index:9999;left:16px;top:12px;padding:11px 15px;border-radius:9px;background:#061b3e;color:#fff!important;font-size:14px;font-weight:850;text-decoration:none;transform:translateY(-180%);transition:transform .15s ease}.skip-link:focus{transform:translateY(0)}
+.landing-hero-preview{text-decoration:none}
+.landing-hero-caption{display:grid;grid-template-columns:1fr auto;gap:7px 12px;padding:17px 11px 8px}
+.landing-hero-caption small{grid-column:1/-1;color:#0668cb;font-size:11px;font-weight:950;letter-spacing:1.1px}
+.landing-hero-caption b{font-family:Georgia,serif;font-size:20px}
+.landing-hero-caption em{color:#0668cb;font-size:12px;font-style:normal;font-weight:900}
+.landing-lesson-grid article small,.landing-stats span{color:#4f667d;font-size:11px}
+.landing-page{--lp-blue:#0668cb}
+.landing-hero-copy>small,.landing-products>header>p,.landing-lesson-grid p,.landing-method p,.landing-plan p,.landing-price-copy p,.landing-footer nav a{color:#465f77}
+.landing-page a:focus-visible,.landing-page button:focus-visible{outline:3px solid #076fd7!important;outline-offset:4px!important}

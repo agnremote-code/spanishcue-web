@@ -85,7 +85,7 @@ export default function IrlandaEnRelieve(){
 
   return <main className={`ch-app ie-app ${englishVisible?"":"ch-spanish-only"}`}>
     <nav className="ch-nav">
-      <Link href="/" className="ch-brand"><IrelandMark/><span><b>CHESPANISH</b><small>CONVERSATION EXPEDITIONS</small></span></Link>
+      <Link href="/" className="ch-brand"><IrelandMark/><span><b>SPANISHCUE</b><small>CONVERSATION EXPEDITIONS</small></span></Link>
       <div className="ch-progress"><span>CONDADOS EXPLORADOS · COUNTIES</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}/26</strong></div>
       <div className="ch-nav-actions"><button onClick={()=>setEnglishVisible(value=>!value)}>EN <b>{englishVisible?"ON":"OFF"}</b></button><button onClick={surprise}>✦ SORPRESA</button><button onClick={()=>show(screen==="cover"?"map":"cover")}>{screen==="cover"?"MAPA":"INICIO"}</button></div>
     </nav>
@@ -107,9 +107,9 @@ export default function IrlandaEnRelieve(){
 
     {screen==="map"&&<section className="ch-map-page ie-map-page">
       <Atmosphere/>
-      <header className="ch-map-head"><div><span>ATLAS DE CONVERSACIÓN · CONVERSATION ATLAS</span><h1>Elegí un condado.<br/><em>Entrá en sus lugares.</em></h1></div><div><p>El mapa usa los 26 condados tradicionales de la República de Irlanda. Cada uno abre cuatro lugares concretos, vocabulario y diez detonadores nacidos de su realidad local.</p><p className="ch-en">The map uses the Republic of Ireland's 26 traditional counties. Each opens four specific places, vocabulary and ten prompts grounded in local reality.</p><button onClick={surprise}>✦ QUE EL MAPA DECIDA</button></div></header>
+      <header className="ch-map-head"><div><span>ATLAS DE CONVERSACIÓN · CONVERSATION ATLAS</span><h1>Elegí un condado.<br/><em>Entrá en sus lugares.</em></h1></div><div><p>El mapa usa los 26 condados tradicionales de la República de Irlanda. Cada uno abre cuatro lugares concretos, vocabulario y diez detonadores nacidos de su realidad local.</p><p className="ch-en">The map uses the Republic of Ireland&apos;s 26 traditional counties. Each opens four specific places, vocabulary and ten prompts grounded in local reality.</p><button onClick={surprise}>✦ QUE EL MAPA DECIDA</button></div></header>
 
-      <div className="ie-geography-note"><b>ISLA ≠ REPÚBLICA</b><span>La isla de Irlanda tiene 32 condados tradicionales. Esta clase recorre los 26 de la República; los otros 6 forman parte de Irlanda del Norte, dentro del Reino Unido.</span><small className="ch-en">The island of Ireland has 32 traditional counties. This lesson covers the Republic's 26; the other six are in Northern Ireland, within the United Kingdom.</small></div>
+      <div className="ie-geography-note"><b>ISLA ≠ REPÚBLICA</b><span>La isla de Irlanda tiene 32 condados tradicionales. Esta clase recorre los 26 de la República; los otros 6 forman parte de Irlanda del Norte, dentro del Reino Unido.</span><small className="ch-en">The island of Ireland has 32 traditional counties. This lesson covers the Republic&apos;s 26; the other six are in Northern Ireland, within the United Kingdom.</small></div>
 
       <div className="ch-map-tools"><div><button className={province==="todo"?"active":""} onClick={()=>chooseProvince("todo")}>TODO · ALL</button>{(["leinster","munster","connacht","ulster"] as const).map(key=><button key={key} className={province===key?"active":""} onClick={()=>chooseProvince(key)}>{provinceNames[key].es.split(" · ")[0]}</button>)}</div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar condado, ciudad, isla o costa…"/></label></div>
 

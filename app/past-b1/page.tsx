@@ -1,156 +1,1742 @@
 "use client";
 
-import {useEffect,useState} from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import "./style.css";
+import MoodTenseDisclosure from "../verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "../verbal-system/VerbalPosition";
+import GrammarStep from "../grammar-steps/GrammarStep";
 
-type Pair=[string,string];
-type Conjugation={verb:Pair;endings?:Pair;rows:Array<{subject:Pair;form:string;meaning:string}>};
-const PairText=({pair,className=""}:{pair:Pair;className?:string})=><div className={`past-pair ${className}`}><b>{pair[0]}</b><span>{pair[1]}</span></div>;
+type Pair = [string, string];
+type Conjugation = {
+  verb: Pair;
+  endings?: Pair;
+  rows: Array<{ subject: Pair; form: string; meaning: string }>;
+};
+const PairText = ({
+  pair,
+  className = "",
+}: {
+  pair: Pair;
+  className?: string;
+}) => (
+  <div className={`past-pair ${className}`}>
+    <b>{pair[0]}</b>
+    <span>{pair[1]}</span>
+  </div>
+);
 
-const persons:Pair[]=[["yo","I"],["tú / vos","you (singular)"],["él / ella / usted","he / she / you (formal)"],["nosotros/as","we"],["vosotros/as","you all (Spain)"],["ellos / ellas / ustedes","they / you all"]];
-const conjugation=(verb:Pair,forms:string[],meanings:string[],endings?:Pair):Conjugation=>({verb,endings,rows:forms.map((form,index)=>({subject:persons[index],form,meaning:meanings[index]}))});
+const persons: Pair[] = [
+  ["yo", "I"],
+  ["tú / vos", "you (singular)"],
+  ["él / ella / usted", "he / she / you (formal)"],
+  ["nosotros/as", "we"],
+  ["vosotros/as", "you all (Spain)"],
+  ["ellos / ellas / ustedes", "they / you all"],
+];
+const conjugation = (
+  verb: Pair,
+  forms: string[],
+  meanings: string[],
+  endings?: Pair,
+): Conjugation => ({
+  verb,
+  endings,
+  rows: forms.map((form, index) => ({
+    subject: persons[index],
+    form,
+    meaning: meanings[index],
+  })),
+});
 
-const indefiniteRegular:Conjugation[]=[
-  conjugation(["-AR · HABLAR","to speak"],["hablé","hablaste","habló","hablamos","hablasteis","hablaron"],["I spoke","you spoke","he / she / you spoke","we spoke","you all spoke","they / you all spoke"],["é · aste · ó · amos · asteis · aron","regular -AR endings"]),
-  conjugation(["-ER · COMER","to eat"],["comí","comiste","comió","comimos","comisteis","comieron"],["I ate","you ate","he / she / you ate","we ate","you all ate","they / you all ate"],["í · iste · ió · imos · isteis · ieron","regular -ER endings"]),
-  conjugation(["-IR · VIVIR","to live"],["viví","viviste","vivió","vivimos","vivisteis","vivieron"],["I lived","you lived","he / she / you lived","we lived","you all lived","they / you all lived"],["í · iste · ió · imos · isteis · ieron","regular -IR endings"])
+const indefiniteRegular: Conjugation[] = [
+  conjugation(
+    ["-AR · HABLAR", "to speak"],
+    ["hablé", "hablaste", "habló", "hablamos", "hablasteis", "hablaron"],
+    [
+      "I spoke",
+      "you spoke",
+      "he / she / you spoke",
+      "we spoke",
+      "you all spoke",
+      "they / you all spoke",
+    ],
+    ["é · aste · ó · amos · asteis · aron", "regular -AR endings"],
+  ),
+  conjugation(
+    ["-ER · COMER", "to eat"],
+    ["comí", "comiste", "comió", "comimos", "comisteis", "comieron"],
+    [
+      "I ate",
+      "you ate",
+      "he / she / you ate",
+      "we ate",
+      "you all ate",
+      "they / you all ate",
+    ],
+    ["í · iste · ió · imos · isteis · ieron", "regular -ER endings"],
+  ),
+  conjugation(
+    ["-IR · VIVIR", "to live"],
+    ["viví", "viviste", "vivió", "vivimos", "vivisteis", "vivieron"],
+    [
+      "I lived",
+      "you lived",
+      "he / she / you lived",
+      "we lived",
+      "you all lived",
+      "they / you all lived",
+    ],
+    ["í · iste · ió · imos · isteis · ieron", "regular -IR endings"],
+  ),
 ];
 
-const indefiniteIrregulars:Conjugation[]=[
-  conjugation(["IR / SER","to go / to be"],["fui","fuiste","fue","fuimos","fuisteis","fueron"],["I went / was","you went / were","he / she / you went or was","we went / were","you all went / were","they / you all went or were"]),
-  conjugation(["TENER","to have"],["tuve","tuviste","tuvo","tuvimos","tuvisteis","tuvieron"],["I had","you had","he / she / you had","we had","you all had","they / you all had"]),
-  conjugation(["HACER","to do / to make"],["hice","hiciste","hizo","hicimos","hicisteis","hicieron"],["I did / made","you did / made","he / she / you did or made","we did / made","you all did / made","they / you all did or made"]),
-  conjugation(["ESTAR","to be"],["estuve","estuviste","estuvo","estuvimos","estuvisteis","estuvieron"],["I was","you were","he / she / you were","we were","you all were","they / you all were"]),
-  conjugation(["PODER","can / to be able to"],["pude","pudiste","pudo","pudimos","pudisteis","pudieron"],["I managed to","you managed to","he / she / you managed to","we managed to","you all managed to","they / you all managed to"]),
-  conjugation(["QUERER","to want"],["quise","quisiste","quiso","quisimos","quisisteis","quisieron"],["I wanted / tried","you wanted / tried","he / she / you wanted or tried","we wanted / tried","you all wanted / tried","they / you all wanted or tried"])
+const indefiniteIrregulars: Conjugation[] = [
+  conjugation(
+    ["IR / SER", "to go / to be"],
+    ["fui", "fuiste", "fue", "fuimos", "fuisteis", "fueron"],
+    [
+      "I went / was",
+      "you went / were",
+      "he / she / you went or was",
+      "we went / were",
+      "you all went / were",
+      "they / you all went or were",
+    ],
+  ),
+  conjugation(
+    ["TENER", "to have"],
+    ["tuve", "tuviste", "tuvo", "tuvimos", "tuvisteis", "tuvieron"],
+    [
+      "I had",
+      "you had",
+      "he / she / you had",
+      "we had",
+      "you all had",
+      "they / you all had",
+    ],
+  ),
+  conjugation(
+    ["HACER", "to do / to make"],
+    ["hice", "hiciste", "hizo", "hicimos", "hicisteis", "hicieron"],
+    [
+      "I did / made",
+      "you did / made",
+      "he / she / you did or made",
+      "we did / made",
+      "you all did / made",
+      "they / you all did or made",
+    ],
+  ),
+  conjugation(
+    ["ESTAR", "to be"],
+    ["estuve", "estuviste", "estuvo", "estuvimos", "estuvisteis", "estuvieron"],
+    [
+      "I was",
+      "you were",
+      "he / she / you were",
+      "we were",
+      "you all were",
+      "they / you all were",
+    ],
+  ),
+  conjugation(
+    ["PODER", "can / to be able to"],
+    ["pude", "pudiste", "pudo", "pudimos", "pudisteis", "pudieron"],
+    [
+      "I managed to",
+      "you managed to",
+      "he / she / you managed to",
+      "we managed to",
+      "you all managed to",
+      "they / you all managed to",
+    ],
+  ),
+  conjugation(
+    ["QUERER", "to want"],
+    ["quise", "quisiste", "quiso", "quisimos", "quisisteis", "quisieron"],
+    [
+      "I wanted / tried",
+      "you wanted / tried",
+      "he / she / you wanted or tried",
+      "we wanted / tried",
+      "you all wanted / tried",
+      "they / you all wanted or tried",
+    ],
+  ),
 ];
 
-const imperfectRegular:Conjugation[]=[
-  conjugation(["-AR · HABLAR","to speak / used to speak"],["hablaba","hablabas","hablaba","hablábamos","hablabais","hablaban"],["I used to speak","you used to speak","he / she / you used to speak","we used to speak","you all used to speak","they / you all used to speak"],["ABA · ABAS · ABA · ÁBAMOS · ABAIS · ABAN","regular -AR endings"]),
-  conjugation(["-ER · COMER","to eat / used to eat"],["comía","comías","comía","comíamos","comíais","comían"],["I used to eat","you used to eat","he / she / you used to eat","we used to eat","you all used to eat","they / you all used to eat"],["ÍA · ÍAS · ÍA · ÍAMOS · ÍAIS · ÍAN","regular -ER endings"]),
-  conjugation(["-IR · VIVIR","to live / used to live"],["vivía","vivías","vivía","vivíamos","vivíais","vivían"],["I used to live","you used to live","he / she / you used to live","we used to live","you all used to live","they / you all used to live"],["ÍA · ÍAS · ÍA · ÍAMOS · ÍAIS · ÍAN","regular -IR endings"])
+const imperfectRegular: Conjugation[] = [
+  conjugation(
+    ["-AR · HABLAR", "to speak / used to speak"],
+    ["hablaba", "hablabas", "hablaba", "hablábamos", "hablabais", "hablaban"],
+    [
+      "I used to speak",
+      "you used to speak",
+      "he / she / you used to speak",
+      "we used to speak",
+      "you all used to speak",
+      "they / you all used to speak",
+    ],
+    ["ABA · ABAS · ABA · ÁBAMOS · ABAIS · ABAN", "regular -AR endings"],
+  ),
+  conjugation(
+    ["-ER · COMER", "to eat / used to eat"],
+    ["comía", "comías", "comía", "comíamos", "comíais", "comían"],
+    [
+      "I used to eat",
+      "you used to eat",
+      "he / she / you used to eat",
+      "we used to eat",
+      "you all used to eat",
+      "they / you all used to eat",
+    ],
+    ["ÍA · ÍAS · ÍA · ÍAMOS · ÍAIS · ÍAN", "regular -ER endings"],
+  ),
+  conjugation(
+    ["-IR · VIVIR", "to live / used to live"],
+    ["vivía", "vivías", "vivía", "vivíamos", "vivíais", "vivían"],
+    [
+      "I used to live",
+      "you used to live",
+      "he / she / you used to live",
+      "we used to live",
+      "you all used to live",
+      "they / you all used to live",
+    ],
+    ["ÍA · ÍAS · ÍA · ÍAMOS · ÍAIS · ÍAN", "regular -IR endings"],
+  ),
 ];
 
-const imperfectIrregulars:Conjugation[]=[
-  conjugation(["SER","to be"],["era","eras","era","éramos","erais","eran"],["I was / used to be","you were / used to be","he / she / you was or were","we were / used to be","you all were / used to be","they / you all were or used to be"]),
-  conjugation(["IR","to go"],["iba","ibas","iba","íbamos","ibais","iban"],["I used to go / was going","you used to go / were going","he / she / you used to go","we used to go / were going","you all used to go / were going","they / you all used to go"]),
-  conjugation(["VER","to see"],["veía","veías","veía","veíamos","veíais","veían"],["I used to see / was seeing","you used to see / were seeing","he / she / you used to see","we used to see / were seeing","you all used to see / were seeing","they / you all used to see"])
+const imperfectIrregulars: Conjugation[] = [
+  conjugation(
+    ["SER", "to be"],
+    ["era", "eras", "era", "éramos", "erais", "eran"],
+    [
+      "I was / used to be",
+      "you were / used to be",
+      "he / she / you was or were",
+      "we were / used to be",
+      "you all were / used to be",
+      "they / you all were or used to be",
+    ],
+  ),
+  conjugation(
+    ["IR", "to go"],
+    ["iba", "ibas", "iba", "íbamos", "ibais", "iban"],
+    [
+      "I used to go / was going",
+      "you used to go / were going",
+      "he / she / you used to go",
+      "we used to go / were going",
+      "you all used to go / were going",
+      "they / you all used to go",
+    ],
+  ),
+  conjugation(
+    ["VER", "to see"],
+    ["veía", "veías", "veía", "veíamos", "veíais", "veían"],
+    [
+      "I used to see / was seeing",
+      "you used to see / were seeing",
+      "he / she / you used to see",
+      "we used to see / were seeing",
+      "you all used to see / were seeing",
+      "they / you all used to see",
+    ],
+  ),
 ];
 
-const indefiniteClues:Pair[]=[["ayer","yesterday"],["anoche","last night"],["anteayer","the day before yesterday"],["la semana pasada","last week"],["el mes pasado","last month"],["el año pasado","last year"],["hace dos días","two days ago"],["en 2025","in 2025"],["una vez","once"],["tres veces","three times"]];
-const perfectForms:Pair[]=[["yo · he surfeado","I have surfed"],["tú / vos · has surfeado","you have surfed"],["él / ella · ha surfeado","he / she has surfed"],["nosotros/as · hemos surfeado","we have surfed"],["vosotros/as · habéis surfeado","you all have surfed"],["ellos/as · han surfeado","they have surfed"]];
-const choices=[
-  {q:"Cuando era chico, ______ al fútbol todos los días.",options:[["jugué · INDEFINIDO",false],["jugaba · IMPERFECTO",true]] as [string,boolean][],ok:["Correcto: es un hábito repetido en el pasado.","Correct: it is a repeated habit in the past."] as Pair},
-  {q:"Ayer ______ al fútbol con mis amigos.",options:[["jugaba · IMPERFECTO",false],["jugué · INDEFINIDO",true]] as [string,boolean][],ok:["Correcto: “ayer” presenta un evento completo.","Correct: “yesterday” presents a completed event."] as Pair},
-  {q:"Yo ______ cuando sonó el teléfono.",options:[["dormía · IMPERFECTO",true],["dormí · INDEFINIDO",false]] as [string,boolean][],ok:["Correcto: dormir era la acción en progreso; el teléfono sonó como evento nuevo.","Correct: sleeping was the ongoing action; the telephone rang as a new event."] as Pair},
-  {q:"De repente, alguien ______ la puerta.",options:[["abría · IMPERFECTO",false],["abrió · INDEFINIDO",true]] as [string,boolean][],ok:["Correcto: “de repente” introduce un acontecimiento.","Correct: “suddenly” introduces an event."] as Pair},
-  {q:"______ en México durante diez años y después me mudé a España.",options:[["Viví · INDEFINIDO",true],["Vivía · IMPERFECTO",false]] as [string,boolean][],ok:["Correcto: la etapa aparece como terminada.","Correct: the period is presented as finished."] as Pair},
-  {q:"Cuando ______ en México, comía tacos todos los días.",options:[["viví · INDEFINIDO",false],["vivía · IMPERFECTO",true]] as [string,boolean][],ok:["Correcto: “cuando vivía” crea el contexto de un hábito.","Correct: “when I lived” creates the context for a habit."] as Pair}
+const indefiniteClues: Pair[] = [
+  ["ayer", "yesterday"],
+  ["anoche", "last night"],
+  ["anteayer", "the day before yesterday"],
+  ["la semana pasada", "last week"],
+  ["el mes pasado", "last month"],
+  ["el año pasado", "last year"],
+  ["hace dos días", "two days ago"],
+  ["en 2025", "in 2025"],
+  ["una vez", "once"],
+  ["tres veces", "three times"],
+];
+const perfectForms: Pair[] = [
+  ["yo · he surfeado", "I have surfed"],
+  ["tú / vos · has surfeado", "you have surfed"],
+  ["él / ella · ha surfeado", "he / she has surfed"],
+  ["nosotros/as · hemos surfeado", "we have surfed"],
+  ["vosotros/as · habéis surfeado", "you all have surfed"],
+  ["ellos/as · han surfeado", "they have surfed"],
+];
+const choices = [
+  {
+    q: "Cuando era chico, ______ al fútbol todos los días.",
+    options: [
+      ["jugué · INDEFINIDO", false],
+      ["jugaba · IMPERFECTO", true],
+    ] as [string, boolean][],
+    ok: [
+      "Correcto: es un hábito repetido en el pasado.",
+      "Correct: it is a repeated habit in the past.",
+    ] as Pair,
+  },
+  {
+    q: "Ayer ______ al fútbol con mis amigos.",
+    options: [
+      ["jugaba · IMPERFECTO", false],
+      ["jugué · INDEFINIDO", true],
+    ] as [string, boolean][],
+    ok: [
+      "Correcto: “ayer” presenta un evento completo.",
+      "Correct: “yesterday” presents a completed event.",
+    ] as Pair,
+  },
+  {
+    q: "Yo ______ cuando sonó el teléfono.",
+    options: [
+      ["dormía · IMPERFECTO", true],
+      ["dormí · INDEFINIDO", false],
+    ] as [string, boolean][],
+    ok: [
+      "Correcto: dormir era la acción en progreso; el teléfono sonó como evento nuevo.",
+      "Correct: sleeping was the ongoing action; the telephone rang as a new event.",
+    ] as Pair,
+  },
+  {
+    q: "De repente, alguien ______ la puerta.",
+    options: [
+      ["abría · IMPERFECTO", false],
+      ["abrió · INDEFINIDO", true],
+    ] as [string, boolean][],
+    ok: [
+      "Correcto: “de repente” introduce un acontecimiento.",
+      "Correct: “suddenly” introduces an event.",
+    ] as Pair,
+  },
+  {
+    q: "______ en México durante diez años y después me mudé a España.",
+    options: [
+      ["Viví · INDEFINIDO", true],
+      ["Vivía · IMPERFECTO", false],
+    ] as [string, boolean][],
+    ok: [
+      "Correcto: la etapa aparece como terminada.",
+      "Correct: the period is presented as finished.",
+    ] as Pair,
+  },
+  {
+    q: "Cuando ______ en México, comía tacos todos los días.",
+    options: [
+      ["viví · INDEFINIDO", false],
+      ["vivía · IMPERFECTO", true],
+    ] as [string, boolean][],
+    ok: [
+      "Correcto: “cuando vivía” crea el contexto de un hábito.",
+      "Correct: “when I lived” creates the context for a habit.",
+    ] as Pair,
+  },
 ];
 
-export default function PastB1(){
-  const [revealed,setRevealed]=useState<number[]>([]);
-  const [selectedQuestions,setSelectedQuestions]=useState<string[]>([]);
-  const [answers,setAnswers]=useState<Record<number,boolean>>({});
-  const [builder,setBuilder]=useState<Record<string,string>>({});
-  const [progress,setProgress]=useState(0);
-  useEffect(()=>{const update=()=>{const total=document.documentElement.scrollHeight-window.innerHeight;setProgress(total?Math.min(100,window.scrollY/total*100):0)};window.addEventListener("scroll",update,{passive:true});update();return()=>window.removeEventListener("scroll",update)},[]);
-  const toggleQuestion=(q:string)=>setSelectedQuestions(items=>items.includes(q)?items.filter(x=>x!==q):[...items,q]);
-  const scrollTo=(id:string)=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});
-  return <main className="past-shell" id="top">
-    <nav className="past-nav"><a href="/" className="past-brand"><img src="/chespanish-guide-avatar.png" alt=""/><span><b>CHESPANISH</b><small>B1 · GRAMÁTICA + CONVERSACIÓN</small></span></a><div><button onClick={()=>scrollTo("indefinido")}>01 Indefinido</button><button onClick={()=>scrollTo("imperfecto")}>02 Imperfecto</button><button onClick={()=>scrollTo("comparacion")}>03 Comparación</button><button onClick={()=>scrollTo("perfecto")}>04 Perfecto</button></div><a href="/">← Biblioteca</a><i><span style={{width:`${progress}%`}}/></i></nav>
+export default function PastB1() {
+  const [revealed, setRevealed] = useState<number[]>([]);
+  const [selectedQuestions, setSelectedQuestions] = useState<string[]>([]);
+  const [answers, setAnswers] = useState<Record<number, boolean>>({});
+  const [builder, setBuilder] = useState<Record<string, string>>({});
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const update = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(total ? Math.min(100, (window.scrollY / total) * 100) : 0);
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+  const toggleQuestion = (q: string) =>
+    setSelectedQuestions((items) =>
+      items.includes(q) ? items.filter((x) => x !== q) : [...items, q],
+    );
+  const scrollTo = (id: string) =>
+    document
+      .getElementById(id)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  return (
+    <main className="past-shell" id="top">
+      <nav className="past-nav">
+        <Link href="/" className="past-brand">
+          <img src="/brand/mascot/portrait.webp" alt="" />
+          <span>
+            <b>SPANISHCUE</b>
+            <small>B1 · GRAMÁTICA + CONVERSACIÓN</small>
+          </span>
+        </Link>
+        <div>
+          <button onClick={() => scrollTo("indefinido")}>01 Indefinido</button>
+          <button onClick={() => scrollTo("imperfecto")}>02 Imperfecto</button>
+          <button onClick={() => scrollTo("comparacion")}>
+            03 Comparación
+          </button>
+          <button onClick={() => scrollTo("perfecto")}>04 Perfecto</button>
+        </div>
+        <Link href="/">← Biblioteca</Link>
+        <i>
+          <span style={{ width: `${progress}%` }} />
+        </i>
+      </nav>
 
-    <header className="past-hero section-wide"><span>CLASE INTERACTIVA · NIVEL B1</span><h1>EL<br/><em>PASADO</em></h1><p>No es una fecha: es una manera de mirar.<small>Indefinido · imperfecto · perfecto compuesto</small></p><div className="past-route four"><article><small>PELÍCULA CERRADA</small><b>¿QUÉ PASÓ?</b><span>Indefinido</span></article><article><small>FOTO ABIERTA</small><b>¿QUÉ PASABA?</b><span>Imperfecto</span></article><article><small>DOS CÁMARAS</small><b>¿CUÁL ELIJO?</b><span>Comparación</span></article><article><small>CONECTADO CON AHORA</small><b>¿QUÉ HA PASADO?</b><span>Perfecto compuesto</span></article></div><button className="past-main-button" onClick={()=>scrollTo("past-intro")}>ENTENDERLO DE VERDAD ↓</button></header>
+      <header className="past-hero section-wide">
+        <span>CLASE INTERACTIVA · NIVEL B1</span>
+        <h1>
+          EL
+          <br />
+          <em>PASADO</em>
+        </h1>
+        <p>
+          No es una fecha: es una manera de mirar.
+          <small>Indefinido · imperfecto · perfecto compuesto</small>
+        </p>
+        <div className="past-route four">
+          <article>
+            <small>PELÍCULA CERRADA</small>
+            <b>¿QUÉ PASÓ?</b>
+            <span>Indefinido</span>
+          </article>
+          <article>
+            <small>FOTO ABIERTA</small>
+            <b>¿QUÉ PASABA?</b>
+            <span>Imperfecto</span>
+          </article>
+          <article>
+            <small>DOS CÁMARAS</small>
+            <b>¿CUÁL ELIJO?</b>
+            <span>Comparación</span>
+          </article>
+          <article>
+            <small>CONECTADO CON AHORA</small>
+            <b>¿QUÉ HA PASADO?</b>
+            <span>Perfecto compuesto</span>
+          </article>
+        </div>
+        <button
+          className="past-main-button"
+          onClick={() => scrollTo("past-intro")}
+        >
+          ENTENDERLO DE VERDAD ↓
+        </button>
+      </header>
 
-    <section className="section-wide past-word-intro" id="past-intro"><SectionHead label="ANTES DE EMPEZAR" title="¿QUÉ SIGNIFICA «PRETÉRITO»?"/><div className="etymology-card"><span>PRETÉRITO</span><h3>significa «pasado» o «anterior».</h3><p>No es el nombre de un único tiempo verbal. Es una palabra que aparece en el nombre de varios tiempos que miran hacia atrás.</p></div><div className="past-lenses"><article><small>01 · EVENTO CERRADO</small><h3>INDEFINIDO / PRETÉRITO PERFECTO SIMPLE</h3><p>También vas a verlo como <b>pasado simple</b>. Miramos una acción completa, con sus límites.</p></article><article><small>02 · ESCENA ABIERTA</small><h3>PRETÉRITO IMPERFECTO</h3><p>Entramos dentro de una situación pasada. No enfocamos su principio ni su final.</p></article><article><small>04 · PASADO + AHORA</small><h3>PRETÉRITO PERFECTO COMPUESTO</h3><p>La acción ocurrió antes, pero la conectamos con el presente: <b>he surfeado</b>.</p></article></div><Callout pair={["En otros idiomas el pasado se organiza de otra manera. En español no elegimos solo CUÁNDO ocurrió algo: también elegimos CÓMO queremos mostrarlo.","Think of the Spanish past as a choice of camera, not only a date."]}/></section>
+      <section className="section-wide past-word-intro" id="past-intro">
+        <MoodTenseDisclosure />
+        <div className="grammar-step-stack past-intro-steps">
+          <GrammarStep
+            number="01"
+            eyebrow="PASO 1 · ¿QUÉ ES?"
+            title="¿Qué significa «pretérito»?"
+            accent="#e46445"
+          >
+            <SectionHead
+              label="ANTES DE EMPEZAR"
+              title="¿QUÉ SIGNIFICA «PRETÉRITO»?"
+            />
+            <div className="etymology-card">
+              <span>PRETÉRITO</span>
+              <h3>significa «pasado» o «anterior».</h3>
+              <p>
+                No es el nombre de un único tiempo verbal. Es una palabra que
+                aparece en el nombre de varios tiempos que miran hacia atrás.
+              </p>
+            </div>
+            <div className="past-lenses">
+              <article>
+                <small>01 · EVENTO CERRADO</small>
+                <h3>INDEFINIDO / PRETÉRITO PERFECTO SIMPLE</h3>
+                <p>
+                  También vas a verlo como <b>pasado simple</b>. Miramos una
+                  acción completa, con sus límites.
+                </p>
+              </article>
+              <article>
+                <small>02 · ESCENA ABIERTA</small>
+                <h3>PRETÉRITO IMPERFECTO</h3>
+                <p>
+                  Entramos dentro de una situación pasada. No enfocamos su
+                  principio ni su final.
+                </p>
+              </article>
+              <article>
+                <small>04 · PASADO + AHORA</small>
+                <h3>PRETÉRITO PERFECTO COMPUESTO</h3>
+                <p>
+                  La acción ocurrió antes, pero la conectamos con el presente:{" "}
+                  <b>he surfeado</b>.
+                </p>
+              </article>
+            </div>
+            <Callout
+              pair={[
+                "En otros idiomas el pasado se organiza de otra manera. En español no elegimos solo CUÁNDO ocurrió algo: también elegimos CÓMO queremos mostrarlo.",
+                "Think of the Spanish past as a choice of camera, not only a date.",
+              ]}
+            />
+          </GrammarStep>
+        </div>
+      </section>
 
-    <section className="chapter-intro coral" id="indefinido"><span>01</span><div className="section-wide"><small>PARTE 1</small><h2>INDEFINIDO /<br/>PRETÉRITO</h2><p>(PASADO SIMPLE)</p><em>Una película completa: principio + desarrollo + final</em><button onClick={()=>scrollTo("indef-idea")}>VER LA PELÍCULA ↓</button></div></section>
+      <section className="chapter-intro coral" id="indefinido">
+        <span>01</span>
+        <div className="section-wide">
+          <small>PARTE 1</small>
+          <h2>
+            INDEFINIDO /<br />
+            PRETÉRITO
+          </h2>
+          <p>(PASADO SIMPLE)</p>
+          <em>Una película completa: principio + desarrollo + final</em>
+          <button onClick={() => scrollTo("indef-idea")}>
+            VER LA PELÍCULA ↓
+          </button>
+        </div>
+      </section>
 
-    <section className="section-wide" id="indef-idea"><SectionHead number="01" title="¿QUÉ VES ACÁ?" color="coral"/><VerbalPosition items={["indefinido"]}/><SurfLesson mode="indefinite"/><PairText pair={["Usamos el indefinido para presentar una acción pasada como completa. La cámara se aleja y nos deja ver el evento entero.","The camera shows the completed event from the outside."]} className="big-theory"/><div className="example-grid">{([["Ayer entró al mar, surfeó y salió.","He entered the sea, surfed and came out yesterday."],["Anoche comí pizza.","I ate pizza last night."],["El sábado fui al cine.","I went to the cinema on Saturday."],["Viví en México cinco años.","I lived in Mexico for five years."]] as Pair[]).map(pair=><PairText key={pair[0]} pair={pair}/>)}</div><Callout pair={["No importa si duró 5 minutos o 5 años. Si lo mostramos como un bloque terminado, usamos el indefinido.","Duration does not decide the tense; the speaker's perspective does."]}/></section>
+      <div className="grammar-step-stack past-step-stack section-wide">
+        <GrammarStep
+          number="01"
+          eyebrow="PASO 1 · ¿QUÉ ES?"
+          title="¿Qué muestra el indefinido?"
+          accent="#e46445"
+        >
+          <section className="section-wide" id="indef-idea">
+            <SectionHead number="01" title="¿QUÉ VES ACÁ?" color="coral" />
+            <VerbalPosition items={["indefinido"]} />
+            <SurfLesson mode="indefinite" />
+            <PairText
+              pair={[
+                "Usamos el indefinido para presentar una acción pasada como completa. La cámara se aleja y nos deja ver el evento entero.",
+                "The camera shows the completed event from the outside.",
+              ]}
+              className="big-theory"
+            />
+            <div className="example-grid">
+              {(
+                [
+                  [
+                    "Ayer entró al mar, surfeó y salió.",
+                    "He entered the sea, surfed and came out yesterday.",
+                  ],
+                  ["Anoche comí pizza.", "I ate pizza last night."],
+                  [
+                    "El sábado fui al cine.",
+                    "I went to the cinema on Saturday.",
+                  ],
+                  [
+                    "Viví en México cinco años.",
+                    "I lived in Mexico for five years.",
+                  ],
+                ] as Pair[]
+              ).map((pair) => (
+                <PairText key={pair[0]} pair={pair} />
+              ))}
+            </div>
+            <Callout
+              pair={[
+                "No importa si duró 5 minutos o 5 años. Si lo mostramos como un bloque terminado, usamos el indefinido.",
+                "Duration does not decide the tense; the speaker's perspective does.",
+              ]}
+            />
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="USOS PRINCIPALES · MAIN USES" title="TRES MANERAS DE USARLO" color="coral"/><div className="uses-grid">{[
-      ["⚡","Un evento","An event",["Ayer compré un teléfono.","Yesterday I bought a phone."]],
-      ["→","Una secuencia","A sequence",["Me levanté → desayuné → salí.","I got up → had breakfast → left."]],
-      ["⚑","Una etapa terminada","A finished period",["Viví en Londres durante tres años.","I lived in London for three years."]]
-    ].map(item=><article key={item[1] as string}><i>{item[0] as string}</i><h3>{item[1] as string}<small>{item[2] as string}</small></h3><PairText pair={item[3] as Pair}/></article>)}</div></section>
+        <GrammarStep
+          number="02"
+          eyebrow="PASO 2 · ¿PARA QUÉ LO USAMOS?"
+          title="Usos y pistas del indefinido"
+          accent="#e46445"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="USOS PRINCIPALES · MAIN USES"
+              title="TRES MANERAS DE USARLO"
+              color="coral"
+            />
+            <div className="uses-grid">
+              {[
+                [
+                  "⚡",
+                  "Un evento",
+                  "An event",
+                  ["Ayer compré un teléfono.", "Yesterday I bought a phone."],
+                ],
+                [
+                  "→",
+                  "Una secuencia",
+                  "A sequence",
+                  [
+                    "Me levanté → desayuné → salí.",
+                    "I got up → had breakfast → left.",
+                  ],
+                ],
+                [
+                  "⚑",
+                  "Una etapa terminada",
+                  "A finished period",
+                  [
+                    "Viví en Londres durante tres años.",
+                    "I lived in London for three years.",
+                  ],
+                ],
+              ].map((item) => (
+                <article key={item[1] as string}>
+                  <i>{item[0] as string}</i>
+                  <h3>
+                    {item[1] as string}
+                    <small>{item[2] as string}</small>
+                  </h3>
+                  <PairText pair={item[3] as Pair} />
+                </article>
+              ))}
+            </div>
+          </section>
 
-    <section className="section-wide compact"><SectionHead label="PISTAS · CLUES" title="PISTAS DEL INDEFINIDO" color="coral"/><div className="clue-grid">{indefiniteClues.map(pair=><PairText key={pair[0]} pair={pair}/>)}</div><p className="past-note">Son pistas, no reglas automáticas.<small>They are clues, not automatic rules.</small></p></section>
+          <section className="section-wide compact">
+            <SectionHead
+              label="PISTAS · CLUES"
+              title="PISTAS DEL INDEFINIDO"
+              color="coral"
+            />
+            <div className="clue-grid">
+              {indefiniteClues.map((pair) => (
+                <PairText key={pair[0]} pair={pair} />
+              ))}
+            </div>
+            <p className="past-note">
+              Son pistas, no reglas automáticas.
+              <small>They are clues, not automatic rules.</small>
+            </p>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="FORMAS · FORMS" title="CONJUGACIONES COMPLETAS" color="coral"/><p className="past-note table-intro"><b>EL PATRÓN · THE PATTERN</b><br/>Cada persona aparece por separado: forma española, sujeto y significado.<small>Every person is shown separately: Spanish form, subject and meaning.</small></p><div className="full-conjugation-grid">{indefiniteRegular.map(item=><ConjugationTable key={item.verb[0]} item={item} tone="coral"/>)}</div><div className="double-callout"><Callout pair={["TÚ y VOS tienen la misma forma aquí: hablaste / comiste / viviste.","TÚ and VOS use the same form here: hablaste / comiste / viviste."]}/><Callout pair={["VOSOTROS se usa principalmente en España. En Argentina usamos USTEDES.","VOSOTROS is used mainly in Spain. In Argentina we use USTEDES."]}/></div></section>
+        <GrammarStep
+          number="03"
+          eyebrow="PASO 3 · ¿CÓMO SE FORMA?"
+          title="Conjugaciones completas"
+          accent="#e46445"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="FORMAS · FORMS"
+              title="CONJUGACIONES COMPLETAS"
+              color="coral"
+            />
+            <p className="past-note table-intro">
+              <b>EL PATRÓN · THE PATTERN</b>
+              <br />
+              Cada persona aparece por separado: forma española, sujeto y
+              significado.
+              <small>
+                Every person is shown separately: Spanish form, subject and
+                meaning.
+              </small>
+            </p>
+            <div className="full-conjugation-grid">
+              {indefiniteRegular.map((item) => (
+                <ConjugationTable key={item.verb[0]} item={item} tone="coral" />
+              ))}
+            </div>
+            <div className="double-callout">
+              <Callout
+                pair={[
+                  "TÚ y VOS tienen la misma forma aquí: hablaste / comiste / viviste.",
+                  "TÚ and VOS use the same form here: hablaste / comiste / viviste.",
+                ]}
+              />
+              <Callout
+                pair={[
+                  "VOSOTROS se usa principalmente en España. En Argentina usamos USTEDES.",
+                  "VOSOTROS is used mainly in Spain. In Argentina we use USTEDES.",
+                ]}
+              />
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><div className="dark-practice"><small>MINI DESAFÍO · MINI CHALLENGE</small><h2>PROBÁ PRIMERO.</h2><p>Try first. Then reveal the answer.</p>{[
-      ["Ayer yo ______ con mi mamá.","hablé"],["Anoche vos ______ pizza.","comiste"],["Ella ______ en España durante dos años.","vivió"],["Ayer ______ hasta tarde.","trabajé"]
-    ].map((item,index)=><article key={item[0]}><b>{item[0]}</b><button onClick={()=>setRevealed(items=>items.includes(index)?items.filter(x=>x!==index):[...items,index])}>{revealed.includes(index)?"OCULTAR · HIDE":"VER RESPUESTA · REVEAL"}</button>{revealed.includes(index)&&<span>{item[1]}</span>}</article>)}</div></section>
+        <GrammarStep
+          number="04"
+          eyebrow="PASO 4 · PRÁCTICA"
+          title="Probá primero"
+          accent="#e46445"
+        >
+          <section className="section-wide compact">
+            <div className="dark-practice">
+              <small>MINI DESAFÍO · MINI CHALLENGE</small>
+              <h2>PROBÁ PRIMERO.</h2>
+              <p>Try first. Then reveal the answer.</p>
+              {[
+                ["Ayer yo ______ con mi mamá.", "hablé"],
+                ["Anoche vos ______ pizza.", "comiste"],
+                ["Ella ______ en España durante dos años.", "vivió"],
+                ["Ayer ______ hasta tarde.", "trabajé"],
+              ].map((item, index) => (
+                <article key={item[0]}>
+                  <b>{item[0]}</b>
+                  <button
+                    onClick={() =>
+                      setRevealed((items) =>
+                        items.includes(index)
+                          ? items.filter((x) => x !== index)
+                          : [...items, index],
+                      )
+                    }
+                  >
+                    {revealed.includes(index)
+                      ? "OCULTAR · HIDE"
+                      : "VER RESPUESTA · REVEAL"}
+                  </button>
+                  {revealed.includes(index) && <span>{item[1]}</span>}
+                </article>
+              ))}
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="IRREGULARES · IRREGULARS" title="LOS REBELDES 😈" color="coral"/><div className="full-conjugation-grid irregular-full">{indefiniteIrregulars.map(item=><ConjugationTable key={item.verb[0]} item={item} tone="coral"/>)}</div><p className="past-note">No necesitás memorizar todos hoy. Empezá por reconocerlos.<small>You do not need to memorise all of them today. Start by recognising them.</small></p></section>
+        <GrammarStep
+          number="05"
+          eyebrow="PASO 5 · IRREGULARES"
+          title="Los rebeldes"
+          accent="#e46445"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="IRREGULARES · IRREGULARS"
+              title="LOS REBELDES 😈"
+              color="coral"
+            />
+            <div className="full-conjugation-grid irregular-full">
+              {indefiniteIrregulars.map((item) => (
+                <ConjugationTable key={item.verb[0]} item={item} tone="coral" />
+              ))}
+            </div>
+            <p className="past-note">
+              No necesitás memorizar todos hoy. Empezá por reconocerlos.
+              <small>
+                You do not need to memorise all of them today. Start by
+                recognising them.
+              </small>
+            </p>
+          </section>
+        </GrammarStep>
 
-    <SpeakingPanel tone="coral" title="AYER" prompt="¿QUÉ HICISTE AYER?" questions={["¿A qué hora te despertaste?","¿Qué desayunaste?","¿Trabajaste o estudiaste?","¿Saliste de casa?","¿Con quién hablaste?","¿Qué comiste?","¿Qué hiciste por la noche?"]} supports={[["me desperté","I woke up"],["desayuné","I had breakfast"],["trabajé","I worked"],["fui a…","I went to…"],["comí","I ate"],["volví","I came back"],["me dormí","I fell asleep"]]} selected={selectedQuestions} toggle={toggleQuestion}/>
+        <GrammarStep
+          number="06"
+          eyebrow="PASO 6 · CONVERSACIÓN / PRODUCCIÓN"
+          title="¿Qué hiciste ayer?"
+          accent="#e46445"
+        >
+          <SpeakingPanel
+            tone="coral"
+            title="AYER"
+            prompt="¿QUÉ HICISTE AYER?"
+            questions={[
+              "¿A qué hora te despertaste?",
+              "¿Qué desayunaste?",
+              "¿Trabajaste o estudiaste?",
+              "¿Saliste de casa?",
+              "¿Con quién hablaste?",
+              "¿Qué comiste?",
+              "¿Qué hiciste por la noche?",
+            ]}
+            supports={[
+              ["me desperté", "I woke up"],
+              ["desayuné", "I had breakfast"],
+              ["trabajé", "I worked"],
+              ["fui a…", "I went to…"],
+              ["comí", "I ate"],
+              ["volví", "I came back"],
+              ["me dormí", "I fell asleep"],
+            ]}
+            selected={selectedQuestions}
+            toggle={toggleQuestion}
+          />
+        </GrammarStep>
+      </div>
 
-    <section className="chapter-intro violet" id="imperfecto"><span>02</span><div className="section-wide"><small>PARTE 2</small><h2>PASADO<br/>IMPERFECTO</h2><p>¿CÓMO ERA? · ¿QUÉ PASABA?</p><em>Una foto dentro de la historia: sin enfocar el principio ni el final</em></div></section>
+      <section className="chapter-intro violet" id="imperfecto">
+        <span>02</span>
+        <div className="section-wide">
+          <small>PARTE 2</small>
+          <h2>
+            PASADO
+            <br />
+            IMPERFECTO
+          </h2>
+          <p>¿CÓMO ERA? · ¿QUÉ PASABA?</p>
+          <em>
+            Una foto dentro de la historia: sin enfocar el principio ni el final
+          </em>
+        </div>
+      </section>
 
-    <section className="section-wide"><SectionHead label="LA FOTO ABIERTA" title="¿QUÉ VES ACÁ?" color="violet"/><VerbalPosition items={["imperfecto"]}/><SurfLesson mode="imperfect"/><div className="past-scene">{([["Cuando era adolescente, surfeaba los lunes y viernes.","I used to surf on Mondays and Fridays when I was a teenager."],["A las cinco todavía nadaba hacia las olas.","At five he was still swimming towards the waves."],["El mar estaba tranquilo.","The sea was calm."],["Hacía calor.","It was hot."]] as Pair[]).map(pair=><PairText key={pair[0]} pair={pair}/>)}</div><Callout pair={["No vemos cuándo empezó ni cuándo terminó. Entramos en medio de la escena para describirla, mostrar un hábito o contar qué estaba pasando.","We enter inside the scene: description, habit or action in progress."]}/></section>
+      <div className="grammar-step-stack past-step-stack section-wide">
+        <GrammarStep
+          number="01"
+          eyebrow="PASO 1 · ¿QUÉ ES?"
+          title="¿Qué muestra el imperfecto?"
+          accent="#7559bd"
+        >
+          <section className="section-wide">
+            <SectionHead
+              label="LA FOTO ABIERTA"
+              title="¿QUÉ VES ACÁ?"
+              color="violet"
+            />
+            <VerbalPosition items={["imperfecto"]} />
+            <SurfLesson mode="imperfect" />
+            <div className="past-scene">
+              {(
+                [
+                  [
+                    "Cuando era adolescente, surfeaba los lunes y viernes.",
+                    "I used to surf on Mondays and Fridays when I was a teenager.",
+                  ],
+                  [
+                    "A las cinco todavía nadaba hacia las olas.",
+                    "At five he was still swimming towards the waves.",
+                  ],
+                  ["El mar estaba tranquilo.", "The sea was calm."],
+                  ["Hacía calor.", "It was hot."],
+                ] as Pair[]
+              ).map((pair) => (
+                <PairText key={pair[0]} pair={pair} />
+              ))}
+            </div>
+            <Callout
+              pair={[
+                "No vemos cuándo empezó ni cuándo terminó. Entramos en medio de la escena para describirla, mostrar un hábito o contar qué estaba pasando.",
+                "We enter inside the scene: description, habit or action in progress.",
+              ]}
+            />
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="USOS PRINCIPALES · MAIN USES" title="LOS 4 USOS PRINCIPALES" color="violet"/><div className="uses-grid four">{[
-      ["↻","Hábito","Habit",["Cuando era chico, jugaba al fútbol.","When I was a child, I used to play football."]],
-      ["◉","Descripción","Description",["Mi casa era pequeña.","My house was small."]],
-      ["☂","Contexto","Background",["Era de noche y llovía.","It was night and it was raining."]],
-      ["…","En progreso","Ongoing action",["A las ocho todavía trabajaba.","At eight I was still working."]]
-    ].map(item=><article className="violet-use" key={item[1] as string}><i>{item[0] as string}</i><h3>{item[1] as string}<small>{item[2] as string}</small></h3><PairText pair={item[3] as Pair}/></article>)}</div></section>
+        <GrammarStep
+          number="02"
+          eyebrow="PASO 2 · ¿PARA QUÉ LO USAMOS?"
+          title="Los cuatro usos principales"
+          accent="#7559bd"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="USOS PRINCIPALES · MAIN USES"
+              title="LOS 4 USOS PRINCIPALES"
+              color="violet"
+            />
+            <div className="uses-grid four">
+              {[
+                [
+                  "↻",
+                  "Hábito",
+                  "Habit",
+                  [
+                    "Cuando era chico, jugaba al fútbol.",
+                    "When I was a child, I used to play football.",
+                  ],
+                ],
+                [
+                  "◉",
+                  "Descripción",
+                  "Description",
+                  ["Mi casa era pequeña.", "My house was small."],
+                ],
+                [
+                  "☂",
+                  "Contexto",
+                  "Background",
+                  [
+                    "Era de noche y llovía.",
+                    "It was night and it was raining.",
+                  ],
+                ],
+                [
+                  "…",
+                  "En progreso",
+                  "Ongoing action",
+                  [
+                    "A las ocho todavía trabajaba.",
+                    "At eight I was still working.",
+                  ],
+                ],
+              ].map((item) => (
+                <article className="violet-use" key={item[1] as string}>
+                  <i>{item[0] as string}</i>
+                  <h3>
+                    {item[1] as string}
+                    <small>{item[2] as string}</small>
+                  </h3>
+                  <PairText pair={item[3] as Pair} />
+                </article>
+              ))}
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="FORMAS · FORMS" title="CONJUGACIONES COMPLETAS" color="violet"/><p className="past-note table-intro"><b>MUCHO MÁS FÁCIL · MUCH EASIER</b><br/>El patrón es muy regular y cada persona está escrita completa.<small>The pattern is highly regular and every person is written in full.</small></p><div className="full-conjugation-grid">{imperfectRegular.map(item=><ConjugationTable key={item.verb[0]} item={item} tone="violet"/>)}</div><div className="double-callout"><Callout pair={["-ER + -IR = MISMO PATRÓN","-ER + -IR = SAME PATTERN"]}/><Callout pair={["YO = ÉL / ELLA · yo hablaba / ella hablaba","YO = ÉL / ELLA · yo hablaba / ella hablaba"]}/></div></section>
+        <GrammarStep
+          number="03"
+          eyebrow="PASO 3 · ¿CÓMO SE FORMA?"
+          title="Conjugaciones completas"
+          accent="#7559bd"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="FORMAS · FORMS"
+              title="CONJUGACIONES COMPLETAS"
+              color="violet"
+            />
+            <p className="past-note table-intro">
+              <b>MUCHO MÁS FÁCIL · MUCH EASIER</b>
+              <br />
+              El patrón es muy regular y cada persona está escrita completa.
+              <small>
+                The pattern is highly regular and every person is written in
+                full.
+              </small>
+            </p>
+            <div className="full-conjugation-grid">
+              {imperfectRegular.map((item) => (
+                <ConjugationTable
+                  key={item.verb[0]}
+                  item={item}
+                  tone="violet"
+                />
+              ))}
+            </div>
+            <div className="double-callout">
+              <Callout
+                pair={["-ER + -IR = MISMO PATRÓN", "-ER + -IR = SAME PATTERN"]}
+              />
+              <Callout
+                pair={[
+                  "YO = ÉL / ELLA · yo hablaba / ella hablaba",
+                  "YO = ÉL / ELLA · yo hablaba / ella hablaba",
+                ]}
+              />
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="IRREGULARES · IRREGULARS" title="SOLO 3 IRREGULARES" color="violet"/><div className="full-conjugation-grid">{imperfectIrregulars.map(item=><ConjugationTable key={item.verb[0]} item={item} tone="violet"/>)}</div><Callout pair={["BUENAS NOTICIAS: SOLO 3","GOOD NEWS: ONLY THREE"]}/></section>
+        <GrammarStep
+          number="04"
+          eyebrow="PASO 4 · IRREGULARES"
+          title="Solo tres irregulares"
+          accent="#7559bd"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="IRREGULARES · IRREGULARS"
+              title="SOLO 3 IRREGULARES"
+              color="violet"
+            />
+            <div className="full-conjugation-grid">
+              {imperfectIrregulars.map((item) => (
+                <ConjugationTable
+                  key={item.verb[0]}
+                  item={item}
+                  tone="violet"
+                />
+              ))}
+            </div>
+            <Callout
+              pair={["BUENAS NOTICIAS: SOLO 3", "GOOD NEWS: ONLY THREE"]}
+            />
+          </section>
+        </GrammarStep>
 
-    <SpeakingPanel tone="violet" title="CUANDO ERAS CHICO/A…" prompt="HABLÁ DE TU INFANCIA" questions={["¿Dónde vivías?","¿Cómo era tu casa?","¿Qué hacías después de la escuela?","¿Qué programas mirabas?","¿Qué música escuchabas?","¿Tenías una comida favorita?","¿Cómo eran tus amigos?","¿Qué hacías los fines de semana?"]} supports={[["vivía","I used to live"],["jugaba","I used to play"],["miraba","I used to watch"],["iba","I used to go"],["tenía","I had"],["era","it was"]]} selected={selectedQuestions} toggle={toggleQuestion}/>
+        <GrammarStep
+          number="05"
+          eyebrow="PASO 5 · CONVERSACIÓN / PRODUCCIÓN"
+          title="Hablá de tu infancia"
+          accent="#7559bd"
+        >
+          <SpeakingPanel
+            tone="violet"
+            title="CUANDO ERAS CHICO/A…"
+            prompt="HABLÁ DE TU INFANCIA"
+            questions={[
+              "¿Dónde vivías?",
+              "¿Cómo era tu casa?",
+              "¿Qué hacías después de la escuela?",
+              "¿Qué programas mirabas?",
+              "¿Qué música escuchabas?",
+              "¿Tenías una comida favorita?",
+              "¿Cómo eran tus amigos?",
+              "¿Qué hacías los fines de semana?",
+            ]}
+            supports={[
+              ["vivía", "I used to live"],
+              ["jugaba", "I used to play"],
+              ["miraba", "I used to watch"],
+              ["iba", "I used to go"],
+              ["tenía", "I had"],
+              ["era", "it was"],
+            ]}
+            selected={selectedQuestions}
+            toggle={toggleQuestion}
+          />
+        </GrammarStep>
+      </div>
 
-    <section className="compare-intro" id="comparacion"><div><small>03 · INDEFINIDO</small><h2>¿QUÉ PASÓ?</h2><span>What happened?</span></div><div><small>03 · IMPERFECTO</small><h2>¿CÓMO ERA?<br/>¿QUÉ PASABA?</h2><span>What was it like? What was happening?</span><button onClick={()=>scrollTo("story-layers")}>COMPARAR · COMPARE ↓</button></div></section>
+      <section className="compare-intro" id="comparacion">
+        <div>
+          <small>03 · INDEFINIDO</small>
+          <h2>¿QUÉ PASÓ?</h2>
+          <span>What happened?</span>
+        </div>
+        <div>
+          <small>03 · IMPERFECTO</small>
+          <h2>
+            ¿CÓMO ERA?
+            <br />
+            ¿QUÉ PASABA?
+          </h2>
+          <span>What was it like? What was happening?</span>
+          <button onClick={() => scrollTo("story-layers")}>
+            COMPARAR · COMPARE ↓
+          </button>
+        </div>
+      </section>
 
-    <section className="section-wide" id="story-layers"><SectionHead label="COMPARACIÓN" title="UNA HISTORIA TIENE DOS CÁMARAS"/><div className="story-layers"><article><h3>IMPERFECTO · LA FOTO ABIERTA<small>¿CÓMO ERA? ¿QUÉ PASABA?</small></h3><PairText pair={["Era viernes, hacía calor y el surfista nadaba mar adentro.","It was Friday, it was hot and the surfer was paddling out."]}/></article><article><h3>INDEFINIDO · LA PELÍCULA CERRADA<small>¿QUÉ PASÓ DESPUÉS?</small></h3><PairText pair={["Llegó una ola, se puso de pie, la surfeó y salió del agua.","A wave arrived; he stood up, surfed it and came out of the water."]}/></article></div><Callout pair={["IMPERFECTO = ABRÍS LA ESCENA · INDEFINIDO = HACÉS AVANZAR LA HISTORIA","IMPERFECT = SETTING · PRETERITE = EVENTS"]}/></section>
+      <div className="grammar-step-stack past-step-stack section-wide">
+        <GrammarStep
+          number="01"
+          eyebrow="PASO 1 · CONTRASTE"
+          title="Una historia tiene dos cámaras"
+          accent="#202025"
+        >
+          <section className="section-wide" id="story-layers">
+            <SectionHead
+              label="COMPARACIÓN"
+              title="UNA HISTORIA TIENE DOS CÁMARAS"
+            />
+            <div className="story-layers">
+              <article>
+                <h3>
+                  IMPERFECTO · LA FOTO ABIERTA
+                  <small>¿CÓMO ERA? ¿QUÉ PASABA?</small>
+                </h3>
+                <PairText
+                  pair={[
+                    "Era viernes, hacía calor y el surfista nadaba mar adentro.",
+                    "It was Friday, it was hot and the surfer was paddling out.",
+                  ]}
+                />
+              </article>
+              <article>
+                <h3>
+                  INDEFINIDO · LA PELÍCULA CERRADA
+                  <small>¿QUÉ PASÓ DESPUÉS?</small>
+                </h3>
+                <PairText
+                  pair={[
+                    "Llegó una ola, se puso de pie, la surfeó y salió del agua.",
+                    "A wave arrived; he stood up, surfed it and came out of the water.",
+                  ]}
+                />
+              </article>
+            </div>
+            <Callout
+              pair={[
+                "IMPERFECTO = ABRÍS LA ESCENA · INDEFINIDO = HACÉS AVANZAR LA HISTORIA",
+                "IMPERFECT = SETTING · PRETERITE = EVENTS",
+              ]}
+            />
+          </section>
 
-    <section className="section-wide compact"><SectionHead label="INTERRUPCIÓN · INTERRUPTION" title="UNA ACCIÓN INTERRUMPE OTRA"/><div className="timeline"><div><b>Yo dormía…</b><i/></div><div><b>SONÓ el teléfono.</b><span/></div></div><div className="example-grid three-examples">{([["Mientras caminaba, vi a Ana.","While I was walking, I saw Ana."],["Trabajaba cuando recibí un mensaje.","I was working when I received a message."],["Cocinábamos cuando llegó Juan.","We were cooking when Juan arrived."]] as Pair[]).map(pair=><PairText key={pair[0]} pair={pair}/>)}</div></section>
+          <section className="section-wide compact">
+            <SectionHead
+              label="INTERRUPCIÓN · INTERRUPTION"
+              title="UNA ACCIÓN INTERRUMPE OTRA"
+            />
+            <div className="timeline">
+              <div>
+                <b>Yo dormía…</b>
+                <i />
+              </div>
+              <div>
+                <b>SONÓ el teléfono.</b>
+                <span />
+              </div>
+            </div>
+            <div className="example-grid three-examples">
+              {(
+                [
+                  [
+                    "Mientras caminaba, vi a Ana.",
+                    "While I was walking, I saw Ana.",
+                  ],
+                  [
+                    "Trabajaba cuando recibí un mensaje.",
+                    "I was working when I received a message.",
+                  ],
+                  [
+                    "Cocinábamos cuando llegó Juan.",
+                    "We were cooking when Juan arrived.",
+                  ],
+                ] as Pair[]
+              ).map((pair) => (
+                <PairText key={pair[0]} pair={pair} />
+              ))}
+            </div>
+          </section>
 
-    <section className="section-wide compact"><SectionHead label="SIMULTANEIDAD · SIMULTANEOUS ACTIONS" title="DOS COSAS AL MISMO TIEMPO"/><div className="timeline"><div><b>Yo cocinaba</b><i/></div><div><b>Ana estudiaba</b><i/></div></div><Callout pair={["DOS SITUACIONES EN PROGRESO → IMPERFECTO + IMPERFECTO","TWO ONGOING SITUATIONS → IMPERFECT + IMPERFECT"]}/></section>
+          <section className="section-wide compact">
+            <SectionHead
+              label="SIMULTANEIDAD · SIMULTANEOUS ACTIONS"
+              title="DOS COSAS AL MISMO TIEMPO"
+            />
+            <div className="timeline">
+              <div>
+                <b>Yo cocinaba</b>
+                <i />
+              </div>
+              <div>
+                <b>Ana estudiaba</b>
+                <i />
+              </div>
+            </div>
+            <Callout
+              pair={[
+                "DOS SITUACIONES EN PROGRESO → IMPERFECTO + IMPERFECTO",
+                "TWO ONGOING SITUATIONS → IMPERFECT + IMPERFECT",
+              ]}
+            />
+          </section>
 
-    <section className="section-wide compact"><SectionHead label="PERSPECTIVA · PERSPECTIVE" title="EL MISMO VERBO, OTRO SIGNIFICADO"/><div className="perspective-grid">{[
-      ["ERA / FUE",["Mi profesor era simpático.","My teacher was nice. (description)"],["La reunión fue interesante.","The meeting was interesting. (complete event)"]],
-      ["ESTABA / ESTUVO",["Estaba enfermo cuando llamaste.","I was ill when you called. (background)"],["Estuvo enfermo tres días.","He was ill for three days. (complete period)"]],
-      ["TENÍA / TUVE",["Tenía un problema.","I had a problem. (situation)"],["Tuve un problema ayer.","I had a problem yesterday. (specific event)"]],
-      ["CONOCÍA / CONOCÍ",["Conocía a Ana.","I knew Ana."],["Conocí a Ana en 2024.","I met Ana in 2024."]],
-      ["PODÍA / PUDE",["Podía nadar.","I knew how to swim."],["Finalmente pude abrir la puerta.","I finally managed to open the door."]]
-    ].map(item=><article key={item[0] as string}><h3>{item[0] as string}</h3><PairText pair={item[1] as Pair}/><PairText pair={item[2] as Pair}/></article>)}</div><Callout pair={["Cambiar el tiempo puede cambiar la perspectiva —y a veces el significado.","Changing the tense can change the perspective —and sometimes the meaning."]}/></section>
+          <section className="section-wide compact">
+            <SectionHead
+              label="PERSPECTIVA · PERSPECTIVE"
+              title="EL MISMO VERBO, OTRO SIGNIFICADO"
+            />
+            <div className="perspective-grid">
+              {[
+                [
+                  "ERA / FUE",
+                  [
+                    "Mi profesor era simpático.",
+                    "My teacher was nice. (description)",
+                  ],
+                  [
+                    "La reunión fue interesante.",
+                    "The meeting was interesting. (complete event)",
+                  ],
+                ],
+                [
+                  "ESTABA / ESTUVO",
+                  [
+                    "Estaba enfermo cuando llamaste.",
+                    "I was ill when you called. (background)",
+                  ],
+                  [
+                    "Estuvo enfermo tres días.",
+                    "He was ill for three days. (complete period)",
+                  ],
+                ],
+                [
+                  "TENÍA / TUVE",
+                  ["Tenía un problema.", "I had a problem. (situation)"],
+                  [
+                    "Tuve un problema ayer.",
+                    "I had a problem yesterday. (specific event)",
+                  ],
+                ],
+                [
+                  "CONOCÍA / CONOCÍ",
+                  ["Conocía a Ana.", "I knew Ana."],
+                  ["Conocí a Ana en 2024.", "I met Ana in 2024."],
+                ],
+                [
+                  "PODÍA / PUDE",
+                  ["Podía nadar.", "I knew how to swim."],
+                  [
+                    "Finalmente pude abrir la puerta.",
+                    "I finally managed to open the door.",
+                  ],
+                ],
+              ].map((item) => (
+                <article key={item[0] as string}>
+                  <h3>{item[0] as string}</h3>
+                  <PairText pair={item[1] as Pair} />
+                  <PairText pair={item[2] as Pair} />
+                </article>
+              ))}
+            </div>
+            <Callout
+              pair={[
+                "Cambiar el tiempo puede cambiar la perspectiva —y a veces el significado.",
+                "Changing the tense can change the perspective —and sometimes the meaning.",
+              ]}
+            />
+          </section>
 
-    <section className="section-wide compact"><div className="summary-grid"><article><h2>INDEFINIDO 🟠</h2><PairText pair={["¿QUÉ PASÓ?","WHAT HAPPENED?"]}/><ul><li>evento · event</li><li>secuencia · sequence</li><li>principio o final · beginning or end</li><li>resultado · result</li><li>número concreto · specific number of times</li><li>etapa terminada · finished period</li></ul><b>Llegué. / Comí. / Me fui.</b></article><article><h2>IMPERFECTO 🟣</h2><PairText pair={["¿CÓMO ERA? ¿QUÉ PASABA?","WHAT WAS IT LIKE? WHAT WAS HAPPENING?"]}/><ul><li>descripción · description</li><li>hábito · habit</li><li>contexto · background</li><li>acción en progreso · ongoing action</li><li>edad, hora, clima, estado · age, time, weather, state</li></ul><b>Era tarde. / Llovía. / Estaba cansado.</b></article></div></section>
+          <section className="section-wide compact">
+            <div className="summary-grid">
+              <article>
+                <h2>INDEFINIDO 🟠</h2>
+                <PairText pair={["¿QUÉ PASÓ?", "WHAT HAPPENED?"]} />
+                <ul>
+                  <li>evento · event</li>
+                  <li>secuencia · sequence</li>
+                  <li>principio o final · beginning or end</li>
+                  <li>resultado · result</li>
+                  <li>número concreto · specific number of times</li>
+                  <li>etapa terminada · finished period</li>
+                </ul>
+                <b>Llegué. / Comí. / Me fui.</b>
+              </article>
+              <article>
+                <h2>IMPERFECTO 🟣</h2>
+                <PairText
+                  pair={[
+                    "¿CÓMO ERA? ¿QUÉ PASABA?",
+                    "WHAT WAS IT LIKE? WHAT WAS HAPPENING?",
+                  ]}
+                />
+                <ul>
+                  <li>descripción · description</li>
+                  <li>hábito · habit</li>
+                  <li>contexto · background</li>
+                  <li>acción en progreso · ongoing action</li>
+                  <li>edad, hora, clima, estado · age, time, weather, state</li>
+                </ul>
+                <b>Era tarde. / Llovía. / Estaba cansado.</b>
+              </article>
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="ELEGÍ · CHOOSE" title="¿CUÁL ELEGÍS?"/><p className="past-note">Elegí un tiempo. Después comprobá por qué.<small>Choose a tense. Then check why.</small></p><div className="choice-list">{choices.map((item,index)=><article key={item.q}><h3>{index+1}. {item.q}</h3><div>{item.options.map(option=><button key={option[0]} className={answers[index]===option[1]?"selected":""} onClick={()=>setAnswers(current=>({...current,[index]:option[1]}))}>{option[0]}</button>)}</div>{index in answers&&<section className={answers[index]?"correct":"retry"}>{answers[index]?<PairText pair={item.ok}/>:<PairText pair={["Probá la otra opción. Pensá: ¿escenario, hábito o acontecimiento?","Try the other option. Think: setting, habit or completed event?"]}/>}</section>}</article>)}</div></section>
+        <GrammarStep
+          number="02"
+          eyebrow="PASO 2 · PRÁCTICA"
+          title="¿Cuál elegís?"
+          accent="#202025"
+        >
+          <section className="section-wide compact">
+            <SectionHead label="ELEGÍ · CHOOSE" title="¿CUÁL ELEGÍS?" />
+            <p className="past-note">
+              Elegí un tiempo. Después comprobá por qué.
+              <small>Choose a tense. Then check why.</small>
+            </p>
+            <div className="choice-list">
+              {choices.map((item, index) => (
+                <article key={item.q}>
+                  <h3>
+                    {index + 1}. {item.q}
+                  </h3>
+                  <div>
+                    {item.options.map((option) => (
+                      <button
+                        key={option[0]}
+                        className={
+                          answers[index] === option[1] ? "selected" : ""
+                        }
+                        onClick={() =>
+                          setAnswers((current) => ({
+                            ...current,
+                            [index]: option[1],
+                          }))
+                        }
+                      >
+                        {option[0]}
+                      </button>
+                    ))}
+                  </div>
+                  {index in answers && (
+                    <section className={answers[index] ? "correct" : "retry"}>
+                      {answers[index] ? (
+                        <PairText pair={item.ok} />
+                      ) : (
+                        <PairText
+                          pair={[
+                            "Probá la otra opción. Pensá: ¿escenario, hábito o acontecimiento?",
+                            "Try the other option. Think: setting, habit or completed event?",
+                          ]}
+                        />
+                      )}
+                    </section>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><div className="story-builder"><small>CONSTRUÍ LA HISTORIA · BUILD THE STORY</small><h2>ESCENARIO + EVENTO</h2><p>Elegí los verbos correctos para crear escenario y acontecimiento.<span>Choose the correct verbs to create the setting and event.</span></p><div><article><h3>ESCENARIO · SETTING</h3><p>Era de noche. Llovía.</p>{["Alejandro caminó.","Alejandro caminaba."].map(text=><button key={text} className={builder.setting===text?"selected":""} onClick={()=>setBuilder(current=>({...current,setting:text}))}>{text}</button>)}</article><article><h3>EVENTO · EVENT</h3><p>De repente…</p>{["sonaba el teléfono.","sonó el teléfono.","Contestó y habló con un amigo."].map(text=><button key={text} className={builder.event===text?"selected":""} onClick={()=>setBuilder(current=>({...current,event:text}))}>{text}</button>)}</article></div>{builder.setting&&builder.event&&<PairText className="built-story" pair={[`Era de noche y llovía. ${builder.setting} De repente, ${builder.event}`,"It was night and raining. You built a setting and an event."]}/>}</div></section>
+        <GrammarStep
+          number="03"
+          eyebrow="PASO 3 · PRODUCCIÓN GUIADA"
+          title="Escenario + evento"
+          accent="#e46445"
+        >
+          <section className="section-wide compact">
+            <div className="story-builder">
+              <small>CONSTRUÍ LA HISTORIA · BUILD THE STORY</small>
+              <h2>ESCENARIO + EVENTO</h2>
+              <p>
+                Elegí los verbos correctos para crear escenario y
+                acontecimiento.
+                <span>
+                  Choose the correct verbs to create the setting and event.
+                </span>
+              </p>
+              <div>
+                <article>
+                  <h3>ESCENARIO · SETTING</h3>
+                  <p>Era de noche. Llovía.</p>
+                  {["Alejandro caminó.", "Alejandro caminaba."].map((text) => (
+                    <button
+                      key={text}
+                      className={builder.setting === text ? "selected" : ""}
+                      onClick={() =>
+                        setBuilder((current) => ({ ...current, setting: text }))
+                      }
+                    >
+                      {text}
+                    </button>
+                  ))}
+                </article>
+                <article>
+                  <h3>EVENTO · EVENT</h3>
+                  <p>De repente…</p>
+                  {[
+                    "sonaba el teléfono.",
+                    "sonó el teléfono.",
+                    "Contestó y habló con un amigo.",
+                  ].map((text) => (
+                    <button
+                      key={text}
+                      className={builder.event === text ? "selected" : ""}
+                      onClick={() =>
+                        setBuilder((current) => ({ ...current, event: text }))
+                      }
+                    >
+                      {text}
+                    </button>
+                  ))}
+                </article>
+              </div>
+              {builder.setting && builder.event && (
+                <PairText
+                  className="built-story"
+                  pair={[
+                    `Era de noche y llovía. ${builder.setting} De repente, ${builder.event}`,
+                    "It was night and raining. You built a setting and an event.",
+                  ]}
+                />
+              )}
+            </div>
+          </section>
+        </GrammarStep>
 
-    <SpeakingPanel tone="coral" title="CONTAME UNA HISTORIA" prompt="DESAFÍO FINAL · FINAL CHALLENGE" instruction={["Contá algo que te pasó. Usá IMPERFECTO para construir el escenario y usá INDEFINIDO para contar qué pasó.","Tell something that happened to you. Use the IMPERFECT to build the setting and the PRETERITE to say what happened."]} questions={["¿Dónde estabas?","¿Cómo era el lugar?","¿Qué hacías?","⚡ ¿Qué pasó?","¿Qué hiciste después?"]} supports={[["era…","it was…"],["estaba…","I was…"],["hacía…","it was…"],["mientras…","while…"],["de repente…","suddenly…"],["entonces…","then…"],["después…","afterwards…"]]} selected={selectedQuestions} toggle={toggleQuestion}/>
+        <GrammarStep
+          number="04"
+          eyebrow="PASO 4 · CONVERSACIÓN"
+          title="Contame una historia"
+          accent="#e46445"
+        >
+          <SpeakingPanel
+            tone="coral"
+            title="CONTAME UNA HISTORIA"
+            prompt="DESAFÍO FINAL · FINAL CHALLENGE"
+            instruction={[
+              "Contá algo que te pasó. Usá IMPERFECTO para construir el escenario y usá INDEFINIDO para contar qué pasó.",
+              "Tell something that happened to you. Use the IMPERFECT to build the setting and the PRETERITE to say what happened.",
+            ]}
+            questions={[
+              "¿Dónde estabas?",
+              "¿Cómo era el lugar?",
+              "¿Qué hacías?",
+              "⚡ ¿Qué pasó?",
+              "¿Qué hiciste después?",
+            ]}
+            supports={[
+              ["era…", "it was…"],
+              ["estaba…", "I was…"],
+              ["hacía…", "it was…"],
+              ["mientras…", "while…"],
+              ["de repente…", "suddenly…"],
+              ["entonces…", "then…"],
+              ["después…", "afterwards…"],
+            ]}
+            selected={selectedQuestions}
+            toggle={toggleQuestion}
+          />
+        </GrammarStep>
+      </div>
 
-    <section className="chapter-intro teal" id="perfecto"><span>04</span><div className="section-wide"><small>AL FINAL: LA CONEXIÓN CON AHORA</small><h2>PRESENTE<br/>PERFECTO</h2><p>PRETÉRITO PERFECTO COMPUESTO</p><em>Algo pasó antes, pero el período o el resultado toca el presente</em><button onClick={()=>scrollTo("perfect-idea")}>CONECTAR CON AHORA ↓</button></div></section>
+      <section className="chapter-intro teal" id="perfecto">
+        <span>04</span>
+        <div className="section-wide">
+          <small>AL FINAL: LA CONEXIÓN CON AHORA</small>
+          <h2>
+            PRESENTE
+            <br />
+            PERFECTO
+          </h2>
+          <p>PRETÉRITO PERFECTO COMPUESTO</p>
+          <em>
+            Algo pasó antes, pero el período o el resultado toca el presente
+          </em>
+          <button onClick={() => scrollTo("perfect-idea")}>
+            CONECTAR CON AHORA ↓
+          </button>
+        </div>
+      </section>
 
-    <section className="section-wide" id="perfect-idea"><SectionHead label="PASADO + PRESENTE" title="¿QUÉ HA PASADO?" color="teal"/><VerbalPosition items={["perfecto"]}/><SurfLesson mode="perfect"/><PairText pair={["El surf terminó, pero sus efectos están acá: el traje sigue mojado, él está cansado y hablamos desde un período que sentimos actual.","The action is complete, but it is viewed from the present."]} className="big-theory"/><div className="perfect-contrast"><article><small>EVENTO CERRADO EN UN TIEMPO TERMINADO</small><h3>Ayer <b>surfeó</b> dos horas.</h3><p>Ayer ya terminó → indefinido.</p></article><article><small>PERÍODO ACTUAL O RESULTADO PRESENTE</small><h3>Hoy <b>ha surfeado</b> dos horas.</h3><p>Hoy todavía incluye «ahora» → perfecto compuesto.</p></article></div><Callout pair={["La fórmula es simple: HABER en presente + PARTICIPIO. El verbo principal no cambia con la persona: he surfeado, has surfeado, ha surfeado…","Present haber + past participle."]}/></section>
+      <div className="grammar-step-stack past-step-stack section-wide">
+        <GrammarStep
+          number="01"
+          eyebrow="PASO 1 · ¿QUÉ ES Y PARA QUÉ SE USA?"
+          title="¿Qué ha pasado?"
+          accent="#2a9d98"
+        >
+          <section className="section-wide" id="perfect-idea">
+            <SectionHead
+              label="PASADO + PRESENTE"
+              title="¿QUÉ HA PASADO?"
+              color="teal"
+            />
+            <VerbalPosition items={["perfecto"]} />
+            <SurfLesson mode="perfect" />
+            <PairText
+              pair={[
+                "El surf terminó, pero sus efectos están acá: el traje sigue mojado, él está cansado y hablamos desde un período que sentimos actual.",
+                "The action is complete, but it is viewed from the present.",
+              ]}
+              className="big-theory"
+            />
+            <div className="perfect-contrast">
+              <article>
+                <small>EVENTO CERRADO EN UN TIEMPO TERMINADO</small>
+                <h3>
+                  Ayer <b>surfeó</b> dos horas.
+                </h3>
+                <p>Ayer ya terminó → indefinido.</p>
+              </article>
+              <article>
+                <small>PERÍODO ACTUAL O RESULTADO PRESENTE</small>
+                <h3>
+                  Hoy <b>ha surfeado</b> dos horas.
+                </h3>
+                <p>Hoy todavía incluye «ahora» → perfecto compuesto.</p>
+              </article>
+            </div>
+            <Callout
+              pair={[
+                "La fórmula es simple: HABER en presente + PARTICIPIO. El verbo principal no cambia con la persona: he surfeado, has surfeado, ha surfeado…",
+                "Present haber + past participle.",
+              ]}
+            />
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><SectionHead label="FORMA" title="HABER + PARTICIPIO" color="teal"/><VerbalPosition items={["perfecto","participio"]} compact/><div className="perfect-formula"><div><span>1</span><b>HE / HAS / HA / HEMOS / HABÉIS / HAN</b><small>verbo auxiliar «haber»</small></div><i>+</i><div><span>2</span><b>SURFEADO · COMIDO · VIVIDO</b><small>participio: -ado / -ido</small></div></div><div className="perfect-person-grid">{perfectForms.map(pair=><PairText key={pair[0]} pair={pair}/>)}</div><div className="regional-note"><span>🌎</span><div><b>IMPORTANTE: CAMBIA SEGÚN LA REGIÓN</b><p>En España es muy común decir <strong>«Hoy he surfeado»</strong>. En gran parte de Argentina también es totalmente natural decir <strong>«Hoy surfeé»</strong>. No es un error: el uso del perfecto compuesto varía en el mundo hispano.</p></div></div></section>
+        <GrammarStep
+          number="02"
+          eyebrow="PASO 2 · FÓRMULA / ESTRUCTURA"
+          title="Haber + participio"
+          accent="#2a9d98"
+        >
+          <section className="section-wide compact">
+            <SectionHead
+              label="FORMA"
+              title="HABER + PARTICIPIO"
+              color="teal"
+            />
+            <VerbalPosition items={["perfecto", "participio"]} compact />
+            <div className="perfect-formula">
+              <div>
+                <span>1</span>
+                <b>HE / HAS / HA / HEMOS / HABÉIS / HAN</b>
+                <small>verbo auxiliar «haber»</small>
+              </div>
+              <i>+</i>
+              <div>
+                <span>2</span>
+                <b>SURFEADO · COMIDO · VIVIDO</b>
+                <small>participio: -ado / -ido</small>
+              </div>
+            </div>
+            <div className="perfect-person-grid">
+              {perfectForms.map((pair) => (
+                <PairText key={pair[0]} pair={pair} />
+              ))}
+            </div>
+            <div className="regional-note">
+              <span>🌎</span>
+              <div>
+                <b>IMPORTANTE: CAMBIA SEGÚN LA REGIÓN</b>
+                <p>
+                  En España es muy común decir{" "}
+                  <strong>«Hoy he surfeado»</strong>. En gran parte de Argentina
+                  también es totalmente natural decir{" "}
+                  <strong>«Hoy surfeé»</strong>. No es un error: el uso del
+                  perfecto compuesto varía en el mundo hispano.
+                </p>
+              </div>
+            </div>
+          </section>
+        </GrammarStep>
 
-    <section className="section-wide compact"><div className="dark-practice perfect-practice"><small>ÚLTIMO CHEQUEO</small><h2>¿PASADO CERRADO O CONECTADO?</h2><p>Primero mirá la expresión de tiempo. Después preguntate desde dónde habla la cámara.</p>{[
-      ["Ayer él ______ dos horas.","surfeó · tiempo terminado"],["Hoy él ______ dos horas y está agotado.","ha surfeado · hoy + resultado actual"],["Esta semana nosotros ______ tres veces.","hemos surfeado · la semana sigue abierta"]
-    ].map((item,index)=>{const key=index+20;return <article key={item[0]}><b>{item[0]}</b><button onClick={()=>setRevealed(items=>items.includes(key)?items.filter(x=>x!==key):[...items,key])}>{revealed.includes(key)?"OCULTAR":"VER RESPUESTA"}</button>{revealed.includes(key)&&<span>{item[1]}</span>}</article>})}</div></section>
+        <GrammarStep
+          number="03"
+          eyebrow="PASO 3 · PRÁCTICA"
+          title="¿Pasado cerrado o conectado?"
+          accent="#2a9d98"
+        >
+          <section className="section-wide compact">
+            <div className="dark-practice perfect-practice">
+              <small>ÚLTIMO CHEQUEO</small>
+              <h2>¿PASADO CERRADO O CONECTADO?</h2>
+              <p>
+                Primero mirá la expresión de tiempo. Después preguntate desde
+                dónde habla la cámara.
+              </p>
+              {[
+                ["Ayer él ______ dos horas.", "surfeó · tiempo terminado"],
+                [
+                  "Hoy él ______ dos horas y está agotado.",
+                  "ha surfeado · hoy + resultado actual",
+                ],
+                [
+                  "Esta semana nosotros ______ tres veces.",
+                  "hemos surfeado · la semana sigue abierta",
+                ],
+              ].map((item, index) => {
+                const key = index + 20;
+                return (
+                  <article key={item[0]}>
+                    <b>{item[0]}</b>
+                    <button
+                      onClick={() =>
+                        setRevealed((items) =>
+                          items.includes(key)
+                            ? items.filter((x) => x !== key)
+                            : [...items, key],
+                        )
+                      }
+                    >
+                      {revealed.includes(key) ? "OCULTAR" : "VER RESPUESTA"}
+                    </button>
+                    {revealed.includes(key) && <span>{item[1]}</span>}
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        </GrammarStep>
+      </div>
 
-    <footer className="past-final"><span>LISTO · DONE</span><h2>EL PASADO</h2><div><b>¿QUÉ PASÓ? → INDEFINIDO</b><b>¿CÓMO ERA / QUÉ PASABA? → IMPERFECTO</b><b>¿QUÉ HA PASADO Y POR QUÉ IMPORTA AHORA? → PERFECTO</b></div><p>YA NO ELEGÍS UN TIEMPO POR UNA PALABRA: ELEGÍS LA CÁMARA.<small>NOW YOU CHOOSE THE POINT OF VIEW.</small></p><button onClick={()=>scrollTo("top")}>VOLVER ARRIBA · BACK TO TOP ↑</button></footer>
-  </main>;
+      <footer className="past-final">
+        <span>LISTO · DONE</span>
+        <h2>EL PASADO</h2>
+        <div>
+          <b>¿QUÉ PASÓ? → INDEFINIDO</b>
+          <b>¿CÓMO ERA / QUÉ PASABA? → IMPERFECTO</b>
+          <b>¿QUÉ HA PASADO Y POR QUÉ IMPORTA AHORA? → PERFECTO</b>
+        </div>
+        <p>
+          YA NO ELEGÍS UN TIEMPO POR UNA PALABRA: ELEGÍS LA CÁMARA.
+          <small>NOW YOU CHOOSE THE POINT OF VIEW.</small>
+        </p>
+        <button onClick={() => scrollTo("top")}>
+          VOLVER ARRIBA · BACK TO TOP ↑
+        </button>
+      </footer>
+    </main>
+  );
 }
 
-function SectionHead({label,number,title,color="ink"}:{label?:string;number?:string;title:string;color?:string}){return <header className={`section-head ${color}`}><span>{label||`${number} · TEORÍA · THEORY`}</span><h2>{title}</h2></header>}
-function Callout({pair}:{pair:Pair}){return <PairText pair={pair} className="callout"/>}
-function SurfLesson({mode}:{mode:"indefinite"|"imperfect"|"perfect"}){
-  const content={
-    indefinite:{src:"/past-b1/surf-indefinido.webp",alt:"Tres escenas realistas del mismo surfista: entra al mar, surfea una ola y sale del agua",badge:"PELÍCULA CERRADA",question:"¿Qué hizo primero, después y al final?",sentence:"Ayer entró al mar, surfeó y salió.",timeline:"closed"},
-    imperfect:{src:"/past-b1/surf-imperfecto.webp",alt:"Un surfista rema mar adentro en una acción que continúa",badge:"FOTO ABIERTA",question:"¿Sabemos cuándo empezó o cuándo terminó?",sentence:"Cuando era adolescente, surfeaba los lunes y viernes.",timeline:"open"},
-    perfect:{src:"/past-b1/surf-perfecto.webp",alt:"Un surfista mojado acaba de salir del mar y sostiene su tabla en la playa",badge:"PASADO CONECTADO CON AHORA",question:"¿Qué señales del pasado siguen presentes?",sentence:"Hoy ha surfeado. Ahora está cansado y todavía está mojado.",timeline:"connected"}
+function SectionHead({
+  label,
+  number,
+  title,
+  color = "ink",
+}: {
+  label?: string;
+  number?: string;
+  title: string;
+  color?: string;
+}) {
+  return (
+    <header className={`section-head ${color}`}>
+      <span>{label || `${number} · TEORÍA · THEORY`}</span>
+      <h2>{title}</h2>
+    </header>
+  );
+}
+function Callout({ pair }: { pair: Pair }) {
+  return <PairText pair={pair} className="callout" />;
+}
+function SurfLesson({
+  mode,
+}: {
+  mode: "indefinite" | "imperfect" | "perfect";
+}) {
+  const content = {
+    indefinite: {
+      src: "/past-b1/surf-indefinido.webp",
+      alt: "Tres escenas realistas del mismo surfista: entra al mar, surfea una ola y sale del agua",
+      badge: "PELÍCULA CERRADA",
+      question: "¿Qué hizo primero, después y al final?",
+      sentence: "Ayer entró al mar, surfeó y salió.",
+      timeline: "closed",
+    },
+    imperfect: {
+      src: "/past-b1/surf-imperfecto.webp",
+      alt: "Un surfista rema mar adentro en una acción que continúa",
+      badge: "FOTO ABIERTA",
+      question: "¿Sabemos cuándo empezó o cuándo terminó?",
+      sentence: "Cuando era adolescente, surfeaba los lunes y viernes.",
+      timeline: "open",
+    },
+    perfect: {
+      src: "/past-b1/surf-perfecto.webp",
+      alt: "Un surfista mojado acaba de salir del mar y sostiene su tabla en la playa",
+      badge: "PASADO CONECTADO CON AHORA",
+      question: "¿Qué señales del pasado siguen presentes?",
+      sentence: "Hoy ha surfeado. Ahora está cansado y todavía está mojado.",
+      timeline: "connected",
+    },
   }[mode];
-  return <figure className={`surf-lesson ${mode}`}><div className="surf-image"><img src={content.src} alt={content.alt}/><span>{content.badge}</span></div><figcaption><small>PREGUNTA PARA ABRIR</small><h3>¿QUÉ VES ACÁ?</h3><p>{content.question}</p></figcaption>{content.timeline==="closed"&&<div className="concept-timeline closed"><div><b>PRINCIPIO</b><b>FIN</b></div><i><span>ENTRÓ</span><span>SURFEÓ</span><span>SALIÓ</span></i><p>AYER · 16:00 → 18:00</p></div>}{content.timeline==="open"&&<div className="concept-timeline open"><div><b>…</b><b>SIN LÍMITE ENFOCADO</b><b>…</b></div><i><span>LUNES</span><span>MIÉRCOLES</span><span>VIERNES</span></i><p>CUANDO ERA ADOLESCENTE · SURFEABA HABITUALMENTE</p></div>}{content.timeline==="connected"&&<div className="concept-timeline connected"><div><b>ANTES</b><b>AHORA</b></div><i><span>SURFEÓ</span><span>RESULTADO PRESENTE</span></i><p>HOY · ESTA SEMANA · YA · TODAVÍA NO</p></div>}<strong className="surf-sentence">{content.sentence}</strong></figure>
+  return (
+    <figure className={`surf-lesson ${mode}`}>
+      <div className="surf-image">
+        <img src={content.src} alt={content.alt} />
+        <span>{content.badge}</span>
+      </div>
+      <figcaption>
+        <small>PREGUNTA PARA ABRIR</small>
+        <h3>¿QUÉ VES ACÁ?</h3>
+        <p>{content.question}</p>
+      </figcaption>
+      {content.timeline === "closed" && (
+        <div className="concept-timeline closed">
+          <div>
+            <b>PRINCIPIO</b>
+            <b>FIN</b>
+          </div>
+          <i>
+            <span>ENTRÓ</span>
+            <span>SURFEÓ</span>
+            <span>SALIÓ</span>
+          </i>
+          <p>AYER · 16:00 → 18:00</p>
+        </div>
+      )}
+      {content.timeline === "open" && (
+        <div className="concept-timeline open">
+          <div>
+            <b>…</b>
+            <b>SIN LÍMITE ENFOCADO</b>
+            <b>…</b>
+          </div>
+          <i>
+            <span>LUNES</span>
+            <span>MIÉRCOLES</span>
+            <span>VIERNES</span>
+          </i>
+          <p>CUANDO ERA ADOLESCENTE · SURFEABA HABITUALMENTE</p>
+        </div>
+      )}
+      {content.timeline === "connected" && (
+        <div className="concept-timeline connected">
+          <div>
+            <b>ANTES</b>
+            <b>AHORA</b>
+          </div>
+          <i>
+            <span>SURFEÓ</span>
+            <span>RESULTADO PRESENTE</span>
+          </i>
+          <p>HOY · ESTA SEMANA · YA · TODAVÍA NO</p>
+        </div>
+      )}
+      <strong className="surf-sentence">{content.sentence}</strong>
+    </figure>
+  );
 }
-function ConjugationTable({item,tone}:{item:Conjugation;tone:"coral"|"violet"}){return <article className={`full-conjugation ${tone}`}><header><PairText pair={item.verb}/></header><VerbalPosition items={[tone==="coral"?"indefinido":"imperfecto"]} compact/><div className="conjugation-labels"><span>PERSONA · PERSON</span><span>FORMA · FORM</span></div>{item.rows.map(row=><div className="conjugation-row" key={`${item.verb[0]}-${row.subject[0]}`}><PairText pair={row.subject}/><PairText pair={[row.form,row.meaning]}/></div>)}{item.endings&&<PairText pair={item.endings} className="ending-full"/>}</article>}
-function SpeakingPanel({tone,title,prompt,instruction,questions,supports,selected,toggle}:{tone:"coral"|"violet";title:string;prompt:string;instruction?:Pair;questions:string[];supports:Pair[];selected:string[];toggle:(q:string)=>void}){return <section className="section-wide compact"><div className={`speaking-panel ${tone}`}><span>HABLÁ VOS · YOUR TURN</span><h2>{title}</h2><p>{prompt}</p>{instruction&&<PairText pair={instruction} className="speaking-instruction"/>}<div className="speaking-questions">{questions.map(q=><button key={q} className={selected.includes(q)?"active":""} onClick={()=>toggle(q)}>{q}</button>)}</div><div className="support-chips">{supports.map(pair=><PairText key={pair[0]} pair={pair}/>)}</div></div></section>}
+function ConjugationTable({
+  item,
+  tone,
+}: {
+  item: Conjugation;
+  tone: "coral" | "violet";
+}) {
+  return (
+    <article className={`full-conjugation ${tone}`}>
+      <header>
+        <PairText pair={item.verb} />
+      </header>
+      <VerbalPosition
+        items={[tone === "coral" ? "indefinido" : "imperfecto"]}
+        compact
+      />
+      <div className="conjugation-labels">
+        <span>PERSONA · PERSON</span>
+        <span>FORMA · FORM</span>
+      </div>
+      {item.rows.map((row) => (
+        <div
+          className="conjugation-row"
+          key={`${item.verb[0]}-${row.subject[0]}`}
+        >
+          <PairText pair={row.subject} />
+          <PairText pair={[row.form, row.meaning]} />
+        </div>
+      ))}
+      {item.endings && <PairText pair={item.endings} className="ending-full" />}
+    </article>
+  );
+}
+function SpeakingPanel({
+  tone,
+  title,
+  prompt,
+  instruction,
+  questions,
+  supports,
+  selected,
+  toggle,
+}: {
+  tone: "coral" | "violet";
+  title: string;
+  prompt: string;
+  instruction?: Pair;
+  questions: string[];
+  supports: Pair[];
+  selected: string[];
+  toggle: (q: string) => void;
+}) {
+  return (
+    <section className="section-wide compact">
+      <div className={`speaking-panel ${tone}`}>
+        <span>HABLÁ VOS · YOUR TURN</span>
+        <h2>{title}</h2>
+        <p>{prompt}</p>
+        {instruction && (
+          <PairText pair={instruction} className="speaking-instruction" />
+        )}
+        <div className="speaking-questions">
+          {questions.map((q) => (
+            <button
+              key={q}
+              className={selected.includes(q) ? "active" : ""}
+              onClick={() => toggle(q)}
+            >
+              {q}
+            </button>
+          ))}
+        </div>
+        <div className="support-chips">
+          {supports.map((pair) => (
+            <PairText key={pair[0]} pair={pair} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -11,9 +11,13 @@ const { d1, r2 } = hostingConfig;
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
-const localBindingConfig = {
+const localBindingConfig = (runWorkerFirst: boolean | string[]) => ({
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
+  assets: {
+    binding: "ASSETS",
+    run_worker_first: runWorkerFirst,
+  },
   d1_databases: d1
     ? [
         {
@@ -31,9 +35,9 @@ const localBindingConfig = {
         },
       ]
     : [],
-};
+});
 
-export default defineConfig(async () => {
+export default defineConfig(async ({ command }) => {
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= "false";
@@ -57,7 +61,10 @@ export default defineConfig(async () => {
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
-        config: localBindingConfig,
+        // Production must run the Worker before every asset so premium media
+        // cannot bypass authorization. During `vite serve`, the narrower rule
+        // keeps Vite's internal modules asset-first for a reliable preview.
+        config: localBindingConfig(command === "build" ? true : ["/audio/*"]),
       }),
     ],
   };

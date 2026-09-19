@@ -85,7 +85,7 @@ export default function ReinoUnidoEnRelieve(){
 
   return <main className={`ch-app uk-app ${englishVisible?"":"ch-spanish-only"}`}>
     <nav className="ch-nav">
-      <Link href="/" className="ch-brand"><UKMark/><span><b>CHESPANISH</b><small>CONVERSATION EXPEDITIONS</small></span></Link>
+      <Link href="/" className="ch-brand"><UKMark/><span><b>SPANISHCUE</b><small>CONVERSATION EXPEDITIONS</small></span></Link>
       <div className="ch-progress"><span>TERRITORIOS EXPLORADOS · AREAS</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}/12</strong></div>
       <div className="ch-nav-actions"><button onClick={()=>setEnglishVisible(value=>!value)}>EN <b>{englishVisible?"ON":"OFF"}</b></button><button onClick={surprise}>✦ SORPRESA</button><button onClick={()=>show(screen==="cover"?"map":"cover")}>{screen==="cover"?"MAPA":"INICIO"}</button></div>
     </nav>
