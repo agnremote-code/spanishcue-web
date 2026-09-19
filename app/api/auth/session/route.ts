@@ -35,6 +35,21 @@ export async function POST(request: Request) {
   if (!user) {
     return Response.json({ error: "La sesión no es válida." }, { status: 401 });
   }
+  if (!user.emailVerified) {
+    return Response.json(
+      {
+        error: "Verifica tu email antes de entrar.",
+        code: "EMAIL_NOT_VERIFIED",
+      },
+      {
+        status: 403,
+        headers: {
+          "cache-control": "private, no-store",
+          "set-cookie": `${FIREBASE_SESSION_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`,
+        },
+      },
+    );
+  }
   const runtimeEnv = env as typeof env & {
     CHESPANISH_OWNER_UID?: string;
     CHESPANISH_OWNER_EMAIL?: string;
