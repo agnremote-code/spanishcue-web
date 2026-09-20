@@ -31,9 +31,9 @@ const copy = {
     oldItems: ["Elegir un tema", "Buscar material", "Diseñar la secuencia", "Crear la práctica"],
     cueWay: "Con SPANISHCUE",
     cueItems: ["Elegir por nivel", "Abrir la clase", "Enseñar y conversar"],
-    previewKicker: "EL PRODUCTO, NO UNA PROMESA",
-    previewTitle: "Mira clases reales antes de decidir.",
-    previewCopy: "Cada recorrido combina dirección visual, claridad pedagógica y producción oral. Abre una muestra o explora la categoría que necesitas.",
+    previewKicker: "CLASES DESTACADAS",
+    previewTitle: "Probá una clase antes de elegir.",
+    previewCopy: "Cuatro ejemplos gratuitos para conocer la experiencia.",
     previewOpen: "Ver clase gratis",
     previewFree: "CLASE GRATUITA",
     previewLabels: {
@@ -48,7 +48,7 @@ const copy = {
     benefitsTitle: "Una biblioteca que trabaja antes de que llegue tu alumno.",
     benefits: [
       ["Lista para pantalla", "Comparte la clase desde el navegador sin preparar un PowerPoint paralelo."],
-      ["Progresión clara", "Niveles A0–C2, rutas pedagógicas y objetivos visibles para elegir con criterio."],
+      ["Progresión clara", "Niveles A1–C2, rutas pedagógicas y objetivos visibles para elegir con criterio."],
       ["Conversación integrada", "La explicación, la práctica y la producción viven en una misma experiencia."],
       ["Un español global", "Voces, lugares y culturas del mundo hispanohablante, no una sola variedad."],
     ],
@@ -59,7 +59,7 @@ const copy = {
     founderCopy: "Precio fundador para las primeras 1.000 suscripciones activadas. US$15 se mantiene mientras esa misma suscripción siga activa.",
     founderLaunchTitle: "PRO abre próximamente por un precio previsto de US$15 al mes.",
     founderLaunchCopy: "El checkout todavía no está activo. Puedes reservar el precio fundador sin tarjeta ni pago y recibirás aviso antes de que se habilite cualquier cobro.",
-    founderBenefits: ["Biblioteca completa", "A0–C2", "5 rutas", "Modo Play + Universos"],
+    founderBenefits: ["Biblioteca completa", "A1–C2", "5 rutas", "Modo Play + Universos"],
     remaining: "{remaining} de {limit} lugares disponibles",
     founderFallback: "Lanzamiento próximo · sin cobros todavía",
     founderFull: "La oferta fundadora ya completó sus lugares",
@@ -95,7 +95,7 @@ const copy = {
       ["¿Qué es SPANISHCUE?", "Una biblioteca visual de clases de español listas para abrir, compartir y enseñar desde el navegador."],
       ["¿Es para profesores o para estudiantes?", "Está diseñada principalmente para profesores. El alumno participa en las explicaciones, prácticas y conversaciones que guía su profesor."],
       ["¿Funciona para clases online y presenciales?", "Sí. En Zoom o Meet puedes compartir la pantalla; en una clase presencial puedes proyectarla o usarla como guía visual en tu dispositivo."],
-      ["¿Qué niveles hay?", "La biblioteca cubre la progresión A0–C2; cada tarjeta indica su nivel y objetivo."],
+      ["¿Qué niveles hay?", "La biblioteca cubre la progresión A1–C2; cada tarjeta indica su nivel y objetivo."],
       ["¿Qué tipos de clases incluye?", "Gramática, conversación, escucha, fonética y vocabulario, además de recorridos visuales y formatos interactivos."],
       ["¿Necesito descargar algo?", "No. Las clases se abren en el navegador y están diseñadas para compartir en pantalla."],
       ["¿Qué incluye la cuenta gratuita?", "Diez clases reales: dos de cada categoría. No necesitas tarjeta para crear la cuenta."],
@@ -130,9 +130,9 @@ const copy = {
     oldItems: ["Choose a topic", "Find material", "Design the sequence", "Create the practice"],
     cueWay: "With SPANISHCUE",
     cueItems: ["Choose by level", "Open the lesson", "Teach and talk"],
-    previewKicker: "THE PRODUCT, NOT A PROMISE",
-    previewTitle: "See real lessons before you decide.",
-    previewCopy: "Every path combines visual direction, pedagogical clarity and speaking practice. Open a sample or explore the category you need.",
+    previewKicker: "FEATURED LESSONS",
+    previewTitle: "Try a lesson before you choose.",
+    previewCopy: "Four free examples to explore the experience.",
     previewOpen: "View free lesson",
     previewFree: "FREE LESSON",
     previewLabels: {
@@ -147,7 +147,7 @@ const copy = {
     benefitsTitle: "A library that works before your learner arrives.",
     benefits: [
       ["Screen-share ready", "Share the lesson from your browser without building a separate slide deck."],
-      ["Clear progression", "A0–C2 levels, pedagogical paths and visible goals help you choose with confidence."],
+      ["Clear progression", "A1–C2 levels, pedagogical paths and visible goals help you choose with confidence."],
       ["Conversation built in", "Explanation, practice and production live in the same experience."],
       ["Global Spanish", "Voices, places and cultures from across the Spanish-speaking world."],
     ],
@@ -158,7 +158,7 @@ const copy = {
     founderCopy: "Founder pricing for the first 1,000 activated subscriptions. US$15 stays in place while that same subscription remains active.",
     founderLaunchTitle: "PRO is launching soon at a planned US$15 monthly price.",
     founderLaunchCopy: "Checkout is not active yet. You can reserve Founder Price with no card or payment, and you will be notified before any charge is enabled.",
-    founderBenefits: ["Full library", "A0–C2", "5 content paths", "Play Mode + Worlds"],
+    founderBenefits: ["Full library", "A1–C2", "5 content paths", "Play Mode + Worlds"],
     remaining: "{remaining} of {limit} places available",
     founderFallback: "Launching soon · no charges yet",
     founderFull: "All Founder Price places have been claimed",
@@ -194,7 +194,7 @@ const copy = {
       ["What is SPANISHCUE?", "A visual library of Spanish lessons ready to open, share and teach from your browser."],
       ["Is it for teachers or learners?", "It is designed primarily for teachers. Learners take part in the explanations, practice and conversations guided by their teacher."],
       ["Does it work for online and in-person lessons?", "Yes. In Zoom or Meet you can share your screen; in person, project it or use it as a visual guide on your device."],
-      ["Which levels are included?", "The library covers the full A0–C2 progression; every card shows its level and goal."],
+      ["Which levels are included?", "The library covers the full A1–C2 progression; every card shows its level and goal."],
       ["Which lesson types are included?", "Grammar, conversation, listening, pronunciation and vocabulary, plus visual paths and interactive formats."],
       ["Do I need to download anything?", "No. Lessons open in the browser and are designed for screen sharing."],
       ["What does the free account include?", "Ten real lessons: two from every category. No card is required to create an account."],
@@ -284,7 +284,7 @@ export function ProblemSolution({ primary, primaryLabel }: { primary: MarketingC
 
 export function ProductPreview({ lessons }: { lessons: MarketingLesson[] }) {
   const c = useCopy();
-  const previews = useMemo(() => selectFreeProductSamples(lessons), [lessons]);
+  const previews = useMemo(() => selectFreeProductSamples(lessons).slice(0, 4), [lessons]);
   return <section className="mk-section mk-product" id="free-lessons" aria-labelledby="mk-product-title">
     <div className="mk-product-head"><div><span>{c.previewKicker}</span><h2 id="mk-product-title">{c.previewTitle}</h2></div><p>{c.previewCopy}</p></div>
     <div className="mk-preview-rail">

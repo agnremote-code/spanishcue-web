@@ -121,7 +121,7 @@ export default async function MarketingLanding({ config }: { config: LandingConf
     <section className="landing-stats" aria-label={locale === "es" ? "SPANISHCUE en números" : "SPANISHCUE in numbers"}>
       <div><b>{lessons.length}</b><span>{labels.realLessons}</span></div>
       <div><b>5</b><span>{locale === "es" ? "rutas de contenido" : "content paths"}</span></div>
-      <div><b>A0–C2</b><span>{labels.levels}</span></div>
+      <div><b>A1–C2</b><span>{labels.levels}</span></div>
       <div><b>{freeLessonIds.length}</b><span>{locale === "es" ? "clases gratuitas" : "free lessons"}</span></div>
     </section>
 

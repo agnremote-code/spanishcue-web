@@ -57,6 +57,13 @@
       "when": 1789808611830,
       "tag": "0007_tan_selene",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1789905131238,
+      "tag": "0008_verification_email_delivery",
+      "breakpoints": true
     }
   ]
 }

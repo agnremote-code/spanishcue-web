@@ -1,4 +1,4 @@
-export const STUDENT_LEVELS = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Sin definir'] as const;
+export const STUDENT_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Sin definir'] as const;
 export const STUDENT_STATUSES = ['active', 'archived'] as const;
 export const CLASS_STATUSES = ['planned', 'taught'] as const;
 

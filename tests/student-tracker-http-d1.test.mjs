@@ -112,3 +112,24 @@ test('real HTTP handlers and migrated database isolate two teachers through crea
   assert.deepEqual((await (await routes.studentsGet(request('/api/students', 'teacher-a'))).json()).students, []);
   assert.deepEqual((await (await routes.recordsGet(request('/api/class-records', 'teacher-a'))).json()).records, []);
 });
+
+test('legacy persisted A0 students are exposed and editable as A1', async () => {
+  database.prepare(`INSERT INTO students (id, owner_id, alias, last_name, email, level, goal, status, created_at, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`).run(
+    'legacy-a0-student', 'teacher-legacy', 'Alex', null, null, 'A0', 'Conversar', 'active',
+    '2026-09-01T00:00:00.000Z', '2026-09-01T00:00:00.000Z',
+  );
+
+  const listed = await (await routes.studentsGet(request('/api/students', 'teacher-legacy'))).json();
+  assert.equal(listed.students[0].level, 'A1');
+  const exported = await (await routes.exportGet(request('/api/students/export', 'teacher-legacy'))).text();
+  assert.match(exported, /A1/);
+  assert.doesNotMatch(exported, /A0/);
+
+  const updated = await routes.studentPatch(
+    request('/api/students/legacy-a0-student', 'teacher-legacy', 'PATCH', { goal: 'Viajar' }),
+    { params: Promise.resolve({ id: 'legacy-a0-student' }) },
+  );
+  assert.equal(updated.status, 200);
+  assert.equal((await updated.json()).student.level, 'A1');
+});

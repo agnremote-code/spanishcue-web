@@ -221,7 +221,7 @@ export function StudentTracker({ lessons, draftScope = 'demo', demo = false, his
           <h3>{editingStudent ? 'Editar ficha' : 'Agregar alumno'}</h3>
           <label>Alias o nombre de uso<input required maxLength={80} value={studentDraft.alias} onChange={(e) => setStudentDraft({ ...studentDraft, alias: e.target.value })}/></label>
           <div className="tracker-row"><label>Apellidos (opcional)<input maxLength={120} value={studentDraft.lastName} onChange={(e) => setStudentDraft({ ...studentDraft, lastName: e.target.value })}/></label><label>Email (opcional)<input type="email" maxLength={254} value={studentDraft.email} onChange={(e) => setStudentDraft({ ...studentDraft, email: e.target.value })}/></label></div>
-          <label>Nivel<select value={studentDraft.level} onChange={(e) => setStudentDraft({ ...studentDraft, level: e.target.value as StudentLevel })}>{['A0','A1','A2','B1','B2','C1','C2','Sin definir'].map((level) => <option key={level}>{level}</option>)}</select></label>
+          <label>Nivel<select value={studentDraft.level} onChange={(e) => setStudentDraft({ ...studentDraft, level: e.target.value as StudentLevel })}>{['A1','A2','B1','B2','C1','C2','Sin definir'].map((level) => <option key={level}>{level}</option>)}</select></label>
           <label>Objetivo breve<textarea maxLength={300} value={studentDraft.goal} onChange={(e) => setStudentDraft({ ...studentDraft, goal: e.target.value })}/></label>
           <div className="tracker-actions"><button className="tracker-primary" disabled={saving}>{saving ? 'Guardando…' : 'Guardar ficha'}</button>{editingStudent && <button type="button" onClick={() => { setEditingStudent(null); setStudentDraft(emptyStudent()); }}>Cancelar edición</button>}</div>
         </form>

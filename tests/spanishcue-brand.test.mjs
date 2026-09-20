@@ -47,6 +47,25 @@ test("the official young man in black replaces legacy mascot assets on product s
   assert.doesNotMatch(`${library}\n${brand}\n${success}`, /chespanish-guide-avatar|\/mascots\//);
 });
 
+test("every main library category card uses a SPANISHCUE mascot illustration", async () => {
+  const library = await source("app/Library.tsx");
+  for (const asset of [
+    "/brand/mascot/pointing.webp",
+    "/brand/mascot/walking.webp",
+    "/brand/mascot/seated.webp",
+    "/brand/mascot/speaking.webp",
+    "/brand/mascot/studying.webp",
+  ]) {
+    assert.match(library, new RegExp(asset.replaceAll("/", "\\/")));
+  }
+  assert.doesNotMatch(library, /route-symbol route-mouth|route-symbol route-vocabulary/);
+});
+
+test("the main library flow omits the oversized grammar curriculum banner", async () => {
+  const library = await source("app/Library.tsx");
+  assert.doesNotMatch(library, /<section className="curriculum-strip">/);
+});
+
 test("the brand system has mobile and reduced-motion safeguards", async () => {
   const css = await source("app/spanishcue-brand.css");
   assert.match(css, /@media\(max-width:760px\)/);

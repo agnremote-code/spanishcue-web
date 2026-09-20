@@ -2,6 +2,9 @@ import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
+import { createRequire } from "node:module";
+
+const serverRequire = createRequire(import.meta.url);
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
@@ -48,6 +51,15 @@ export default defineConfig(async ({ command }) => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    resolve: {
+      // Firebase Admin's ESM wrappers default-import __esModule-marked CJS.
+      // Resolve its public server entrypoints through the package's own require
+      // exports so the Worker bundle uses the real named exports directly.
+      alias: {
+        "firebase-admin/app": serverRequire.resolve("firebase-admin/app"),
+        "firebase-admin/auth": serverRequire.resolve("firebase-admin/auth"),
+      },
+    },
     server: {
       host: "0.0.0.0",
       allowedHosts: ["terminal.local"],

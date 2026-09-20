@@ -3,7 +3,7 @@
 import { applyActionCode } from "firebase/auth";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { firebaseAuth } from "../../firebase-client";
 import { translate, type Locale } from "../../i18n/messages";
 
@@ -31,12 +31,17 @@ export default function VerificationAction({
     verified ? "success" : canApplyCode ? "checking" : "invalid",
   );
   const t = (key: Parameters<typeof translate>[1]) => translate(locale, key);
+  const verificationAttempt = useRef<{ code: string; promise: Promise<void> } | null>(null);
 
   useEffect(() => {
     document.documentElement.lang = locale;
     if (verified || !canApplyCode) return;
     let active = true;
-    void applyActionCode(firebaseAuth, oobCode)
+    // React can replay effects. Reuse the same application of a one-time code.
+    if (verificationAttempt.current?.code !== oobCode) {
+      verificationAttempt.current = { code: oobCode, promise: applyActionCode(firebaseAuth, oobCode) };
+    }
+    void verificationAttempt.current.promise
       .then(() => {
         if (active) setState("success");
       })

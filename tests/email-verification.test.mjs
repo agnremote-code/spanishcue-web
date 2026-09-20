@@ -3,14 +3,6 @@ import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-test("verification sends are localized and return to the branded result page", async () => {
-  const source = await readFile("app/ingresar/AuthForm.tsx", "utf8");
-  assert.match(source, /firebaseAuth\.languageCode = locale/);
-  assert.match(source, /sendEmailVerification\(user, verificationActionSettings\(locale\)\)/);
-  assert.match(source, /sendVerificationAndSignOut\(result\.user, locale\)/);
-  assert.match(source, /\/auth\/action\?lang=\$\{locale\}&status=success/);
-});
-
 test("explicit resends have an immediate double-click guard", async () => {
   const source = await readFile("app/ingresar/AuthForm.tsx", "utf8");
   const resend = source.split("const resendVerification = async () => {")[1]?.split("\n  };", 1)[0] ?? "";

@@ -134,7 +134,7 @@ export default function IndonesiaFantastica() {
     {screen==="cover"&&<section className="id-cover">
       <Atmosphere/>
       <div className="id-cover-copy">
-        <div className="id-kicker"><span>A0</span> 1000% CONVERSACIÓN · 1000% CONVERSATION</div>
+        <div className="id-kicker"><span>A1</span> 1000% CONVERSACIÓN · 1000% CONVERSATION</div>
         <p className="id-overline">38 PROVINCIAS REALES · CULTURA REAL · 38 REAL PROVINCES</p>
         <h1>INDONESIA<br/><em>FANTÁSTICA</em></h1>
         <p className="id-lead">Entrá en un archipiélago vivo y empezá a hablar desde la primera pregunta.<b> Sin gramática. Sin respuestas perfectas. Todo bilingüe.</b><span className="id-en">Enter a living archipelago and start speaking from the first question. No grammar. No perfect answers. Everything is bilingual.</span></p>

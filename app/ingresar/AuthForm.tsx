@@ -8,16 +8,14 @@ import {
   GoogleAuthProvider,
   OAuthProvider,
   inMemoryPersistence,
-  sendEmailVerification,
   sendPasswordResetEmail,
   setPersistence,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-  type ActionCodeSettings,
   type User,
 } from "firebase/auth";
-import { FormEvent, type KeyboardEvent as ReactKeyboardEvent, useRef, useState } from "react";
+import { FormEvent, type KeyboardEvent as ReactKeyboardEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { firebaseAuth } from "../firebase-client";
 import { useI18n } from "../i18n/LocaleProvider";
@@ -55,17 +53,25 @@ async function preparePersistence() {
   throw authError("auth/web-storage-unsupported");
 }
 
-function verificationActionSettings(locale: Locale): ActionCodeSettings {
-  return {
-    url: `https://spanishcue.com/auth/action?lang=${locale}&status=success`,
-    handleCodeInApp: false,
-  };
-}
-
-async function sendVerificationAndSignOut(user: User, locale: Locale) {
-  firebaseAuth.languageCode = locale;
+async function sendVerificationAndSignOut(user: User, locale: Locale, intent: "initial" | "resend") {
   try {
-    await sendEmailVerification(user, verificationActionSettings(locale));
+    const idToken = await user.getIdToken();
+    const response = await fetch("/api/auth/verification-email", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "content-type": "application/json", authorization: `Bearer ${idToken}` },
+      body: JSON.stringify({ locale, intent, requestId: crypto.randomUUID() }),
+    });
+    const result = await response.json().catch(() => null) as { status?: string; code?: string; retryAfterSeconds?: number } | null;
+    if (!response.ok) {
+      const reason = authError(response.status === 429 ? "auth/verification-cooldown" : "auth/verification-delivery-failed") as Error & { code: string; retryAfterSeconds?: number };
+      reason.retryAfterSeconds = result?.retryAfterSeconds ?? 60;
+      throw reason;
+    }
+    if (!result?.status || !["sent", "already_sent", "already_verified"].includes(result.status)) {
+      throw authError("auth/verification-delivery-failed");
+    }
+    return { status: result.status, retryAfterSeconds: result.retryAfterSeconds ?? 60 };
   } finally {
     await signOut(firebaseAuth).catch(() => undefined);
   }
@@ -84,6 +90,8 @@ export function authMessageKeyFor(error: unknown): MessageKey {
   if (code.includes("cancelled-popup-request")) return "auth.error.popupCancelled";
   if (code.includes("network-request-failed")) return "auth.error.network";
   if (code.includes("too-many-requests")) return "auth.error.tooManyRequests";
+  if (code.includes("verification-cooldown")) return "auth.error.verificationCooldown";
+  if (code.includes("verification-delivery-failed")) return "auth.error.verificationDelivery";
   if (code.includes("web-storage-unsupported")) return "auth.error.storage";
   if (code.includes("email-not-verified")) return "auth.error.emailNotVerified";
   if (code.includes("account-exists-with-different-credential")) return "auth.error.existingCredential";
@@ -147,9 +155,32 @@ export default function AuthForm({
   const [error, setError] = useState("");
   const [notice, setNotice] = useState(initialVerificationPending ? t("auth.verifyRequired") : "");
   const [verificationPending, setVerificationPending] = useState(initialVerificationPending);
+  const [cooldownUntil, setCooldownUntil] = useState(0);
+  const [cooldownSeconds, setCooldownSeconds] = useState(0);
   const authAttemptRef = useRef(false);
   const loginTabRef = useRef<HTMLButtonElement>(null);
   const registerTabRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const tick = () => setCooldownSeconds(Math.max(0, Math.ceil((cooldownUntil - Date.now()) / 1000)));
+    tick();
+    if (cooldownUntil <= Date.now()) return;
+    const timer = window.setInterval(tick, 1000);
+    return () => window.clearInterval(timer);
+  }, [cooldownUntil]);
+
+  const startVerificationCooldown = (seconds: number) => {
+    const bounded = Math.max(1, Math.min(86400, seconds));
+    setCooldownUntil(Date.now() + bounded * 1000);
+    setCooldownSeconds(bounded);
+  };
+
+  const deliveryError = (reason: unknown) => {
+    if (typeof reason === "object" && reason && "retryAfterSeconds" in reason && typeof reason.retryAfterSeconds === "number") {
+      startVerificationCooldown(reason.retryAfterSeconds);
+    }
+    setError(t(authMessageKeyFor(reason)));
+  };
 
   const selectMode = (nextMode: Mode) => {
     if (nextMode === "registro" && mode !== "registro") {
@@ -187,19 +218,25 @@ export default function AuthForm({
       const result = await action();
       if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
       if (!result.user.emailVerified) {
+        setMode("entrar");
+        setVerificationPending(true);
         if (result.newAccount) {
-          await sendVerificationAndSignOut(result.user, locale);
+          const delivery = await sendVerificationAndSignOut(result.user, locale, "initial");
+          if (delivery.status === "already_verified") {
+            setVerificationPending(false);
+            setNotice(t("auth.verifyAlready"));
+            return;
+          }
+          startVerificationCooldown(delivery.retryAfterSeconds);
         } else {
           await signOut(firebaseAuth).catch(() => undefined);
         }
-        setMode("entrar");
-        setVerificationPending(true);
         setNotice(t(result.newAccount ? "auth.verifySent" : "auth.verifyRequired"));
         return;
       }
       await establishSession(result.user, returnTo);
     } catch (reason) {
-      setError(t(authMessageKeyFor(reason)));
+      deliveryError(reason);
     } finally {
       authAttemptRef.current = false;
       setBusy(false);
@@ -219,6 +256,7 @@ export default function AuthForm({
 
   const resendVerification = async () => {
     if (authAttemptRef.current) return;
+    if (Date.now() < cooldownUntil) return;
     const cleanEmail = email.trim().toLowerCase();
     if (!cleanEmail) {
       setError(t("auth.error.emailFirst"));
@@ -239,11 +277,17 @@ export default function AuthForm({
         await establishSession(credential.user, returnTo);
         return;
       }
-      await sendVerificationAndSignOut(credential.user, locale);
+      const delivery = await sendVerificationAndSignOut(credential.user, locale, "resend");
+      if (delivery.status === "already_verified") {
+        setVerificationPending(false);
+        setNotice(t("auth.verifyAlready"));
+        return;
+      }
+      startVerificationCooldown(delivery.retryAfterSeconds);
       setVerificationPending(true);
       setNotice(t("auth.verifyResent"));
     } catch (reason) {
-      setError(t(authMessageKeyFor(reason)));
+      deliveryError(reason);
     } finally {
       authAttemptRef.current = false;
       setBusy(false);
@@ -320,8 +364,8 @@ export default function AuthForm({
         {error && <p className="auth-message error" role="alert">{error}</p>}
         {notice && <p className="auth-message success" role="status">{notice}</p>}
         {verificationPending && (
-          <button className="forgot-button" type="button" onClick={resendVerification} disabled={busy}>
-            {t("auth.resendVerification")}
+          <button className="forgot-button" type="button" onClick={resendVerification} disabled={busy || cooldownSeconds > 0}>
+            {cooldownSeconds > 0 ? `${t("auth.resendWait")} ${cooldownSeconds}s` : t("auth.resendVerification")}
           </button>
         )}
         <button className="submit-button" type="submit" disabled={busy}>{busy ? t("common.loading") : mode === "entrar" ? t("auth.loginSubmit") : t("auth.registerSubmit")}</button>

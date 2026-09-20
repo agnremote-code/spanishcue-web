@@ -42,11 +42,13 @@ import "./library-access.css";
 import "./catalog-cards.css";
 import "./top-area.css";
 import "./library-brand.css";
+import "./library-architecture.css";
 import { conversationNews } from "./conversation-worlds/catalog";
 import {
   filterLessons,
   availableLevels,
-  levelForCategory,
+  familyLessonsForCategory,
+  groupLessonsByLevel,
 } from "./library-filters.mjs";
 
 type Category =
@@ -87,7 +89,6 @@ export type CatalogItem = {
 };
 
 const levelNameKeys: Record<string, MessageKey> = {
-  A0: "level.a0",
   A1: "level.a1",
   A2: "level.a2",
   B1: "level.b1",
@@ -352,7 +353,7 @@ const libraryNews = [
   },
   {
     lessonId: 38,
-    kicker: "NUEVO LABORATORIO · A0–C1",
+    kicker: "NUEVO LABORATORIO · A1–C1",
     route: "FONÉTICA + BOCA + PRONUNCIACIÓN",
     title: "Spanish Mouth Lab",
     copy: "Un laboratorio inmersivo para ver dónde va la lengua, entrenar los cinco sonidos vocálicos, corregir la R y detectar hábitos que vienen del inglés y otros seis idiomas.",
@@ -442,7 +443,7 @@ const libraryNews = [
   },
   {
     lessonId: 27,
-    kicker: "NUEVA AVENTURA · A0",
+    kicker: "NUEVA AVENTURA · A1",
     route: "1000% CONVERSACIÓN + MUNDO",
     title: "El Mundo Fantástico",
     copy: "Los 6 continentes —América como uno solo—, 40 mundos, 400 preguntas mínimas y más de 120 palabras esenciales para hablar desde cero.",
@@ -451,7 +452,7 @@ const libraryNews = [
   },
   {
     lessonId: 26,
-    kicker: "NUEVA CLASE · A0–A1",
+    kicker: "NUEVA CLASE · A1",
     route: "CONVERSACIÓN + ESTADOS UNIDOS",
     title: "Estados Unidos · Coast to Coast",
     copy: "Un atlas interactivo con 20 paradas, 120 preguntas básicas y recursos bilingües para hablar de ciudades, naturaleza, música, comida y vida cotidiana.",
@@ -469,7 +470,7 @@ const libraryNews = [
   },
   {
     lessonId: 24,
-    kicker: "NUEVA CLASE · A0",
+    kicker: "NUEVA CLASE · A1",
     route: "1000% CONVERSACIÓN + INDONESIA",
     title: "Indonesia Fantástica",
     copy: "Las 38 provincias reales en un atlas interactivo: lugares, comidas, culturas y animales auténticos con 380 preguntas bilingües para hablar desde cero.",
@@ -514,7 +515,7 @@ const libraryNews = [
   },
   {
     lessonId: 19,
-    kicker: "NUEVA CLASE · A0",
+    kicker: "NUEVA CLASE · A1",
     route: "ROLEPLAYS + ESPAÑOL ARGENTINO",
     title: "Argento Roleplays",
     copy: "15 situaciones reales, 210 intervenciones bilingües y práctica guiada para hablar desde cero sin quedarse en blanco.",
@@ -541,7 +542,7 @@ const libraryNews = [
   },
   {
     lessonId: 16,
-    kicker: "NUEVA EXPERIENCIA · A0–A1",
+    kicker: "NUEVA EXPERIENCIA · A1",
     route: "ESPAÑOL ARGENTINO",
     title: "ARGENTO",
     copy: "12 mundos argentinos con vocabulario bilingüe, preguntas, reacciones, roleplays y slang para hablar desde el primer día.",
@@ -744,9 +745,9 @@ export default function Library({
 }) {
   const { t, locale } = useI18n();
   const routeCount = new Set(lessons.map((lesson) => lesson.category)).size;
-  const levelScale = ["A0", "A1", "A2", "B1", "B2", "C1", "C2"];
+  const levelScale = ["A1", "A2", "B1", "B2", "C1", "C2"];
   const levelsPresent = levelScale.filter((item) => lessons.some((lesson) => `${lesson.level} ${lesson.displayLevel || ""}`.includes(item)));
-  const levelRange = levelsPresent.length ? `${levelsPresent[0]}–${levelsPresent[levelsPresent.length - 1]}` : "A0–C2";
+  const levelRange = levelsPresent.length ? `${levelsPresent[0]}–${levelsPresent[levelsPresent.length - 1]}` : "A1–C2";
   const categoryLabel = (value: Category) => t(categoryMessageKeys[value]);
   const levelName = (value: string) =>
     levelNameKeys[value] ? t(levelNameKeys[value]) : value;
@@ -757,7 +758,7 @@ export default function Library({
   const [level, setLevel] = useState("Todos");
   const [category, setCategory] = useState<"Todas" | Category>("Todas");
   const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries">("all");
-  const [grammarMode, setGrammarMode] = useState<"general" | "system">("general");
+  const [grammarMode, setGrammarMode] = useState<"all" | "general" | "system">("general");
   const [query, setQuery] = useState("");
   const [catalogSearchActive, setCatalogSearchActive] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -775,7 +776,25 @@ export default function Library({
   const modalRef = useRef<HTMLElement>(null);
   const modalCloseRef = useRef<HTMLButtonElement>(null);
   const modalReturnFocusRef = useRef<HTMLElement | null>(null);
+  const levelFocusTargetRef = useRef<string | null>(null);
   const lastTrackedQuery = useRef("");
+  useEffect(() => {
+    if (levelFocusTargetRef.current !== level) return;
+    const selectedLevel = document.querySelector<HTMLElement>(
+      `.category-levels [data-level="${level}"]`,
+    );
+    levelFocusTargetRef.current = null;
+    selectedLevel?.focus();
+  }, [level]);
+  const conversationFamilyLabel = (
+    mode: "all" | "worlds" | "play" | "boards" | "countries",
+  ) => {
+    if (mode === "all") return locale === "es" ? "TODAS" : "ALL";
+    if (mode === "worlds") return locale === "es" ? "UNIVERSOS" : "WORLDS";
+    if (mode === "play") return locale === "es" ? "MODO PLAY" : "PLAY MODE";
+    if (mode === "boards") return locale === "es" ? "TABLEROS" : "BOARDS";
+    return t("library.countries").toUpperCase();
+  };
   const closeSidebar = () => {
     setSidebarOpen(false);
     window.requestAnimationFrame(() => menuTriggerRef.current?.focus());
@@ -822,32 +841,18 @@ export default function Library({
     modalReturnFocusRef.current = document.activeElement as HTMLElement | null;
     setActiveLesson(lesson);
   };
-  const a1StartLesson = lessons.find((item) => item.id === 40) || null;
-  const a1StartHref = (a1StartLesson ? lessonHref(a1StartLesson) : null) || "/la-fabrica-de-los-nombres";
   const countryLessons = useMemo(
     () => lessons.filter((lesson) => lesson.category === "Conversación" && lesson.countryCollection),
     [lessons],
   );
-  const verbalSystemLessons = useMemo(
-    () => lessons.filter((lesson) => lesson.category === "Gramática" && lesson.verbalSystem),
-    [lessons],
-  );
+  const familyLessonSource = useMemo(() => {
+    return familyLessonsForCategory(lessons, { category, conversationMode, grammarMode });
+  }, [category, conversationMode, grammarMode, lessons]);
   const categoryLevels = useMemo(
-    () => availableLevels(
-      conversationMode === "countries"
-        ? countryLessons
-        : category === "Gramática" && grammarMode === "system"
-          ? verbalSystemLessons
-          : lessons,
-      category,
-    ),
-    [category, conversationMode, countryLessons, grammarMode, lessons, verbalSystemLessons],
+    () => availableLevels(familyLessonSource, category),
+    [category, familyLessonSource],
   );
-  const levelCountSource = conversationMode === "countries"
-    ? countryLessons
-    : category === "Gramática" && grammarMode === "system"
-      ? verbalSystemLessons
-      : lessons;
+  const levelCountSource = familyLessonSource;
   const catalogQuery = catalogSearchActive ? query : "";
   const searchMatches = useMemo(
     () => filterLessons(lessons, { query }) as Lesson[],
@@ -867,31 +872,31 @@ export default function Library({
   };
   const filtered = useMemo(
     () => {
-      const items=filterLessons(lessons, { level, category, query: catalogQuery }) as Lesson[];
+      const source = view === "Biblioteca" ? familyLessonSource : lessons;
+      const items=filterLessons(source, { level, category, query: catalogQuery }) as Lesson[];
       if (view !== "Biblioteca") return items;
       if (category === "Todas") return items.filter((lesson) => !lesson.countryCollection && !lesson.verbalSystem);
-      if (category === "Gramática") return items.filter((lesson) => grammarMode === "system" ? lesson.verbalSystem : !lesson.verbalSystem);
-      if (category !== "Conversación") return items;
-      if (conversationMode === "countries") return items.filter((lesson) => lesson.countryCollection);
-      const generalItems = items.filter((lesson) => !lesson.countryCollection);
-      if (conversationMode === "all") return generalItems;
-      return generalItems.filter((lesson) => {
-        if (conversationMode === "play") return lesson.conversationMode === "play";
-        if (conversationMode === "boards") return lesson.conversationMode === "boards";
-        return lesson.conversationMode !== "play" && lesson.conversationMode !== "boards";
-      });
+      return items;
     },
-    [level, category, catalogQuery, conversationMode, grammarMode, lessons, view],
+    [level, category, catalogQuery, familyLessonSource, lessons, view],
   );
   const visibleLessons =
     view === "Favoritas"
       ? filtered.filter((lesson) => favoriteIds.includes(lesson.id))
       : filtered;
+  const groupedLessons = groupLessonsByLevel(visibleLessons, categoryLevels, 4) as Array<{
+    level: string;
+    total: number;
+    lessons: Lesson[];
+  }>;
   const routeCountLabel = (targetCategory: Category) => {
-    const count = filterLessons(lessons, {
-      level,
+    const destinationSource = familyLessonsForCategory(lessons, {
       category: targetCategory,
-      query: catalogQuery,
+      conversationMode: "all",
+      grammarMode: targetCategory === "Gramática" ? "all" : "general",
+    });
+    const count = filterLessons(destinationSource, {
+      category: targetCategory,
     }).length;
     return `${count} ${count === 1 ? t("common.class") : t("common.classes")}`;
   };
@@ -902,10 +907,16 @@ export default function Library({
     window.requestAnimationFrame(() =>
       document
         .getElementById("library-results")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" }),
+        ?.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "auto"
+            : "smooth",
+          block: "start",
+        }),
     );
-  const chooseLevel = (nextLevel: string) => {
+  const chooseLevel = (nextLevel: string, returnFocus = false) => {
     trackMarketingEvent("filter_used", { filter: "level", value: nextLevel });
+    if (returnFocus) levelFocusTargetRef.current = nextLevel;
     setView("Biblioteca");
     setCatalogSearchActive(false);
     setLevel(nextLevel);
@@ -916,10 +927,10 @@ export default function Library({
     trackMarketingEvent("filter_used", { filter: "category", value: nextCategory });
     setView("Biblioteca");
     setCatalogSearchActive(false);
-    setLevel((current) => levelForCategory(lessons, current, nextCategory));
+    setLevel("Todos");
     setCategory(nextCategory);
     if (nextCategory !== "Conversación") setConversationMode("all");
-    setGrammarMode(nextCategory === "Gramática" ? "system" : "general");
+    setGrammarMode(nextCategory === "Gramática" ? "all" : "general");
     if (sidebarOpen) closeSidebar();
     scrollToResults();
   };
@@ -1114,7 +1125,7 @@ export default function Library({
             <span className="card-content">
               <span className="card-top">
                 <span className="card-badges">
-                  <span className="level-badge">A0–B1</span>
+                  <span className="level-badge">A1–B1</span>
                   <span className="countries-featured-badge">{t("library.countriesKicker")}</span>
                 </span>
               </span>
@@ -1122,7 +1133,7 @@ export default function Library({
               <span className="countries-card-title">{t("library.countries")}</span>
               <span className="countries-card-copy">{t("library.countriesCopy")}</span>
               <span className="card-bottom">
-                <span className="card-meta">A0–B1 · {countryLessons.length} {t("common.classes")}</span>
+                <span className="card-meta">A1–B1 · {countryLessons.length} {t("common.classes")}</span>
                 <span className="card-open">{t("library.countriesOpen")} →</span>
               </span>
             </span>
@@ -1405,24 +1416,6 @@ export default function Library({
                     )}
                   </section>
                 ))}
-              {categoryLevels.includes("A0") && (
-                <button
-                  className={`a0-entry ${level === "A0" ? "selected" : ""}`}
-                  onClick={() => chooseLevel("A0")}
-                >
-                  <span className="level-dot level-a0">A0</span>
-                  <div>
-                    <b>{t("level.a0")}</b>
-                    <small>{t("level.beforeA1")}</small>
-                  </div>
-                  <strong>
-                    {
-                      filterLessons(levelCountSource, { level: "A0", category, query: catalogQuery })
-                        .length
-                    }
-                  </strong>
-                </button>
-              )}
               <button
                 className={`all-entry ${level === "Todos" ? "selected" : ""}`}
                 onClick={() => chooseLevel("Todos")}
@@ -1606,7 +1599,6 @@ export default function Library({
           </div>
         )}
         <SpanishCueHero />
-        <HowItWorks />
         <section className="library-heading" id="library-results">
           <div>
             <p className="eyebrow">
@@ -1625,9 +1617,13 @@ export default function Library({
                     ? t("library.countries")
                     : category === "Gramática" && grammarMode === "system"
                       ? "★ Sistema verbal"
+                    : category === "Conversación"
+                      ? `${categoryLabel(category)} · ${conversationFamilyLabel(conversationMode)}`
+                    : category !== "Todas"
+                      ? categoryLabel(category)
                     : level === "Todos"
-                      ? t("common.allClasses")
-                    : `${level} · ${levelName(level)}`}
+                        ? t("common.allClasses")
+                        : `${level} · ${levelName(level)}`}
             </h2>
           </div>
           {view === "Biblioteca" && (
@@ -1639,115 +1635,6 @@ export default function Library({
             </button>
           )}
         </section>
-        {view === "Biblioteca" && (
-          <section
-            className="combined-filters"
-            aria-label={t("library.combinedFilters")}
-          >
-            <label>
-              {category === "Todas"
-                ? t("common.level")
-                : t("common.levelIn", { category: categoryLabel(category) })}
-              <select
-                value={level}
-                onChange={(event) => chooseLevel(event.target.value)}
-              >
-                <option value="Todos">{t("common.allLevels")}</option>
-                {categoryLevels.map((item) => (
-                  <option value={item} key={item}>
-                    {item} · {levelName(item)}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
-              {t("common.category")}
-              <select
-                value={category}
-                onChange={(event) =>
-                  chooseCategory(event.target.value as "Todas" | Category)
-                }
-              >
-                <option value="Todas">{t("common.allCategories")}</option>
-                {(
-                  [
-                    "Gramática",
-                    "Conversación",
-                    "Escucha",
-                    "Fonética",
-                    "Vocabulario",
-                  ] as Category[]
-                ).map((item) => (
-                  <option value={item} key={item}>
-                    {categoryLabel(item)}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <div className="filter-result" role="status" aria-live="polite">
-              <strong>
-                {filtered.length}{" "}
-                {locale === "es" ? (filtered.length === 1 ? "resultado" : "resultados") : (filtered.length === 1 ? "result" : "results")}
-              </strong>
-              <small>{lessons.length} {locale === "es" ? "clases totales, incluidas las colecciones Sistema Verbal y Países" : "total lessons, including the Verbal System and Countries collections"}</small>
-            </div>
-            {(level !== "Todos" || category !== "Todas" || conversationMode !== "all" || grammarMode !== "general" || catalogSearchActive) && (
-              <button
-                onClick={() => {
-                  setLevel("Todos");
-                  setCategory("Todas");
-                  setConversationMode("all");
-                  setGrammarMode("general");
-                  setQuery("");
-                  setCatalogSearchActive(false);
-                }}
-              >
-                {t("common.clearFilters")}
-              </button>
-            )}
-          </section>
-        )}
-        {view === "Biblioteca" && category === "Conversación" && (
-          <section className="conversation-family-filter" aria-label="Tipo de clase conversacional">
-            <div>
-              <small>TIPOS DE CONVERSACIÓN</small>
-              <strong>{conversationMode === "play" ? "MODO PLAY" : conversationMode === "boards" ? "TABLEROS" : conversationMode === "worlds" ? "UNIVERSOS" : conversationMode === "countries" ? t("library.countries").toUpperCase() : "CONVERSACIÓN GENERAL"}</strong>
-            </div>
-            <nav aria-label="Tipos de clase conversacional">
-              {([
-                ["all", "GENERAL"],
-                ["worlds", "UNIVERSOS"],
-                ["play", "MODO PLAY"],
-                ["boards", "TABLEROS"],
-                ["countries", t("library.countries").toUpperCase()],
-              ] as const).map(([value,label]) => {
-                const base=filterLessons(lessons,{level,category:"Conversación",query:catalogQuery}) as Lesson[];
-                const general=base.filter(item=>!item.countryCollection);
-                const count=value==="countries"
-                  ? base.filter(item=>item.countryCollection).length
-                  : value==="all"
-                    ? general.length
-                    : general.filter(item=>value==="worlds"
-                      ? item.conversationMode!=="play"&&item.conversationMode!=="boards"
-                      : item.conversationMode===value).length;
-                return <button key={value} className={`${conversationMode===value?"active":""} ${value==="countries"?"countries-tab":""}`} aria-pressed={conversationMode===value} onClick={()=>{if(value==="countries"){openCountries();return}trackMarketingEvent("filter_used",{filter:"conversation_mode",value});setConversationMode(value);setLevel("Todos");scrollToResults()}}><span>{value==="play"?"▶":value==="boards"?"▦":value==="worlds"?"◈":value==="countries"?"★":"●"}</span><b>{label}</b><small>{count}</small></button>;
-              })}
-            </nav>
-          </section>
-        )}
-        {view === "Biblioteca" && category === "Gramática" && (
-          <section className="grammar-family-filter" aria-label="Colecciones de Gramática">
-            <div>
-              <small>COLECCIONES DE GRAMÁTICA</small>
-              <strong>{grammarMode === "system" ? "★ SISTEMA VERBAL" : "RUTA GENERAL"}</strong>
-            </div>
-            <nav aria-label="Colecciones de Gramática">
-              <button className={`verbal-tab ${grammarMode === "system" ? "active" : ""}`} aria-pressed={grammarMode === "system"} onClick={openVerbalSystem}><span>★</span><b>SISTEMA VERBAL</b><small>{verbalSystemLessons.length}</small></button>
-              <button className={grammarMode === "general" ? "active" : ""} aria-pressed={grammarMode === "general"} onClick={()=>{setGrammarMode("general");setLevel("Todos");scrollToResults()}}><span>01</span><b>GRAMÁTICA GENERAL</b><small>{lessons.filter(item=>item.category==="Gramática"&&!item.verbalSystem).length}</small></button>
-              <Link href="/sistema-verbal"><span>↗</span><b>MAPA MODO / TIEMPO</b><small>ABRIR</small></Link>
-            </nav>
-          </section>
-        )}
         {view === "Biblioteca" && (
           <section
             className="route-divider"
@@ -1803,10 +1690,8 @@ export default function Library({
               onClick={() => chooseCategory("Fonética")}
               aria-pressed={category === "Fonética"}
             >
-              <span className="route-symbol route-mouth" aria-hidden="true">
-                <i />
-                <b />
-                <i />
+              <span className="route-mascot">
+                <img src="/brand/mascot/speaking.webp" alt="" />
               </span>
               <div>
                 <small>{t("common.route", { number: "04" })}</small>
@@ -1820,13 +1705,8 @@ export default function Library({
               onClick={() => chooseCategory("Vocabulario")}
               aria-pressed={category === "Vocabulario"}
             >
-              <span
-                className="route-symbol route-vocabulary"
-                aria-hidden="true"
-              >
-                <i />
-                <i />
-                <i />
+              <span className="route-mascot">
+                <img src="/brand/mascot/studying.webp" alt="" />
               </span>
               <div>
                 <small>{t("common.route", { number: "05" })}</small>
@@ -1835,6 +1715,46 @@ export default function Library({
               </div>
               <i>{routeCountLabel("Vocabulario")}</i>
             </button>
+          </section>
+        )}
+        {view === "Biblioteca" && category === "Conversación" && (
+          <section className="conversation-family-filter" aria-label={locale === "es" ? "Familias de conversación" : "Conversation families"}>
+            <div>
+              <small>{locale === "es" ? "FAMILIAS DE CONVERSACIÓN" : "CONVERSATION FAMILIES"}</small>
+              <strong>{conversationFamilyLabel(conversationMode)}</strong>
+            </div>
+            <nav aria-label={locale === "es" ? "Familias de conversación" : "Conversation families"}>
+              {([
+                "all",
+                "worlds",
+                "play",
+                "boards",
+                "countries",
+              ] as const).map((value) => {
+                const destination = familyLessonsForCategory(lessons, {
+                  category: "Conversación",
+                  conversationMode: value,
+                });
+                const count = filterLessons(destination, {
+                  category: "Conversación",
+                }).length;
+                return <button key={value} className={`${conversationMode===value?"active":""} ${value==="countries"?"countries-tab":""}`} aria-pressed={conversationMode===value} onClick={()=>{if(value==="countries"){openCountries();return}trackMarketingEvent("filter_used",{filter:"conversation_mode",value});setConversationMode(value);setLevel("Todos");setCatalogSearchActive(false);scrollToResults()}}><span>{value==="play"?"▶":value==="boards"?"▦":value==="worlds"?"◈":value==="countries"?"★":"●"}</span><b>{conversationFamilyLabel(value)}</b><small>{count}</small></button>;
+              })}
+            </nav>
+          </section>
+        )}
+        {view === "Biblioteca" && category === "Gramática" && (
+          <section className="grammar-family-filter" aria-label="Colecciones de Gramática">
+            <div>
+              <small>COLECCIONES DE GRAMÁTICA</small>
+              <strong>{grammarMode === "system" ? "★ SISTEMA VERBAL" : grammarMode === "general" ? "RUTA GENERAL" : "TODAS"}</strong>
+            </div>
+            <nav aria-label="Colecciones de Gramática">
+              <button className={grammarMode === "all" ? "active" : ""} aria-pressed={grammarMode === "all"} onClick={()=>{setGrammarMode("all");setLevel("Todos");setCatalogSearchActive(false);scrollToResults()}}><span>●</span><b>TODAS</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:"Gramática", grammarMode:"all"}), {category:"Gramática"}).length}</small></button>
+              <button className={`verbal-tab ${grammarMode === "system" ? "active" : ""}`} aria-pressed={grammarMode === "system"} onClick={openVerbalSystem}><span>★</span><b>SISTEMA VERBAL</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:"Gramática", grammarMode:"system"}), {category:"Gramática"}).length}</small></button>
+              <button className={grammarMode === "general" ? "active" : ""} aria-pressed={grammarMode === "general"} onClick={()=>{setGrammarMode("general");setLevel("Todos");setCatalogSearchActive(false);scrollToResults()}}><span>01</span><b>GRAMÁTICA GENERAL</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:"Gramática", grammarMode:"general"}), {category:"Gramática"}).length}</small></button>
+              <Link href="/sistema-verbal"><span>↗</span><b>MAPA MODO / TIEMPO</b><small>ABRIR</small></Link>
+            </nav>
           </section>
         )}
         {view === "Biblioteca" && (
@@ -1852,6 +1772,7 @@ export default function Library({
             </div>
             <nav aria-label={t("common.chooseLevel")}>
               <button
+                data-level="Todos"
                 aria-pressed={level === "Todos"}
                 onClick={() => chooseLevel("Todos")}
               >
@@ -1863,6 +1784,7 @@ export default function Library({
               {categoryLevels.map((item) => (
                 <button
                   key={item}
+                  data-level={item}
                   aria-pressed={level === item}
                   onClick={() => chooseLevel(item)}
                 >
@@ -1878,36 +1800,19 @@ export default function Library({
             </nav>
           </section>
         )}
-        {view === "Biblioteca" &&
-          (category === "Todas" || category === "Gramática") && (
-            <section className="curriculum-strip">
-              <div>
-                <span>{t("library.curriculumKicker")}</span>
-                <h3>{t("library.curriculumTitle")}</h3>
-                <p>{t("library.curriculumCopy")}</p>
-              </div>
-              <nav aria-label={t("library.curriculumTitle")}>
-                <button onClick={() => chooseLevel("A1")}>
-                  <small>{t("level.group.basic")}</small>
-                  <b>A1 · A2</b>
-                </button>
-                <button onClick={() => chooseLevel("B1")}>
-                  <small>{t("level.group.intermediate")}</small>
-                  <b>B1 · B2</b>
-                </button>
-                <button onClick={() => chooseLevel("C1")}>
-                  <small>{t("level.group.advanced")}</small>
-                  <b>C1 · C2</b>
-                </button>
-              </nav>
-              <a
-                href={a1StartHref}
-                onClick={() => { if (a1StartLesson) prepareLessonNavigation(a1StartLesson, "curriculum_start"); }}
-              >
-                {t("library.startA1")} →
-              </a>
-            </section>
-          )}
+        {view === "Biblioteca" && (
+          <div className="catalog-status" role="status" aria-live="polite">
+            <span>
+              {filtered.length}{" "}
+              {locale === "es"
+                ? filtered.length === 1 ? "resultado" : "resultados"
+                : filtered.length === 1 ? "result" : "results"}
+            </span>
+            <small>
+              {lessons.length} {locale === "es" ? "clases totales" : "total lessons"}
+            </small>
+          </div>
+        )}
         {view === "Plan" && plannedLessons.length > 0 && (
           <div className="plan-summary">
             <img src="/brand/mascot/standing-crossed.webp" alt="" width="900" height="1350" />
@@ -1934,13 +1839,32 @@ export default function Library({
             </div>
           </section>
         )}
-        {view === "Biblioteca" && category === "Todas" && level === "Todos" && !catalogSearchActive && (
-          <ProductPreview lessons={lessons} />
-        )}
-        {lessonGrid(
+        {view === "Biblioteca" && level === "Todos" && !catalogSearchActive ? (
+          <section className="level-catalog-sections" aria-label={locale === "es" ? "Clases por nivel" : "Lessons by level"}>
+            {groupedLessons.map((group) => (
+              <section className="level-catalog-section" key={group.level} aria-labelledby={`level-${group.level}-title`}>
+                <header>
+                  <div>
+                    <span>{locale === "es" ? "NIVEL" : "LEVEL"}</span>
+                    <h3 id={`level-${group.level}-title`}>{group.level} · {levelName(group.level)}</h3>
+                  </div>
+                  <small>{group.total} {group.total === 1 ? t("common.class") : t("common.classes")}</small>
+                </header>
+                {lessonGrid(group.lessons)}
+                {group.total > group.lessons.length && (
+                  <button className="view-level-lessons" type="button" onClick={() => chooseLevel(group.level, true)}>
+                    {locale === "es" ? `Ver todas las clases ${group.level}` : `View all ${group.level} lessons`} <span aria-hidden="true">→</span>
+                  </button>
+                )}
+              </section>
+            ))}
+          </section>
+        ) : lessonGrid(
           view === "Plan" ? plannedLessons : visibleLessons,
           view === "Plan",
-          view === "Biblioteca" && category === "Conversación" && conversationMode === "all" && level === "Todos" && !catalogSearchActive,
+        )}
+        {view === "Biblioteca" && category === "Todas" && level === "Todos" && !catalogSearchActive && (
+          <ProductPreview lessons={lessons} />
         )}
         {view === "Biblioteca" && !fullAccess && (
           <LibraryConversionBanner
@@ -1952,6 +1876,7 @@ export default function Library({
         )}
         {view === "Biblioteca" && (
           <>
+            <HowItWorks />
             <NewsCarousel lessons={lessons} onOpen={openLesson} hrefFor={lessonHref} onNavigate={prepareLessonNavigation} />
             <ProblemSolution primary={primaryCta} primaryLabel={primaryCtaLabel} />
             <BenefitSection primary={primaryCta} primaryLabel={primaryCtaLabel} />

@@ -68,7 +68,7 @@ export default async function PricingPage() {
       <span>{es ? "PRECIOS SIMPLES" : "SIMPLE PRICING"}</span>
       <h1 id="pricing-title">{checkoutLive ? (es ? "Empieza gratis. Desbloquea todo cuando lo necesites." : "Start free. Unlock everything when you need it.") : (es ? "Empieza gratis. PRO abre próximamente." : "Start free. PRO is launching soon.")}</h1>
       <p>{checkoutLive ? (es ? "Prueba clases completas sin tarjeta. PRO abre la biblioteca entera sin límites de acceso." : "Try complete lessons with no card. PRO opens the entire library with unlimited access.") : (es ? "Prueba diez clases completas sin tarjeta. Puedes reservar el precio previsto de PRO, pero hoy no se realizan cobros." : "Try ten complete lessons with no card. You can reserve the planned PRO price, but no charges are taken today.")}</p>
-      <div><b>{lessons.length}</b> {es ? "clases reales" : "real lessons"}<i /> <b>A0–C2</b><i /> <b>5</b> {es ? "rutas" : "paths"}</div>
+      <div><b>{lessons.length}</b> {es ? "clases reales" : "real lessons"}<i /> <b>A1–C2</b><i /> <b>5</b> {es ? "rutas" : "paths"}</div>
     </section>
 
     <section className="pricing-grid" aria-label={es ? "Comparación de planes" : "Plan comparison"}>

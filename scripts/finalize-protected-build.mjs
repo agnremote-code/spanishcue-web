@@ -21,14 +21,23 @@ const blockedBuildPaths = new Set([
   "client/.vite/manifest.json",
 ]);
 
-await rm(safeDistRoot, { recursive: true, force: true });
-await cp(distRoot, safeDistRoot, {
-  recursive: true,
-  filter: (source) => {
-    const pathWithinDist = relative(distRoot, source).split("\\").join("/");
-    return !blockedBuildPaths.has(pathWithinDist);
-  },
-});
+for (let attempt = 0; ; attempt++) {
+  await rm(safeDistRoot, { recursive: true, force: true });
+  try {
+    await cp(distRoot, safeDistRoot, {
+      recursive: true,
+      filter: (source) => {
+        const pathWithinDist = relative(distRoot, source).split("\\").join("/");
+        return !blockedBuildPaths.has(pathWithinDist) && !/(^|\/)\.[^/]+\.[A-Za-z0-9]{6}$/.test(pathWithinDist);
+      },
+    });
+    break;
+  } catch (error) {
+    // Workspace synchronization can atomically rename a temporary copy between
+    // readdir and lstat. Retry only that race, never a missing build asset.
+    if (attempt >= 3 || error?.code !== "ENOENT" || !/\/\.[^/]+\.[A-Za-z0-9]{6}$/.test(error?.path ?? "")) throw error;
+  }
+}
 
 // Node's recursive copy can retain descendants of an allowed directory even
 // when an individual descendant is blocked. Remove the exact denylisted files

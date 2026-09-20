@@ -60,7 +60,7 @@ export default function EstadosUnidosBasico(){
 
     {screen==="cover"&&<section className="us-cover">
       <div className="us-cover-copy">
-        <div className="us-level"><span>A0–A1</span><i/>100% CONVERSACIÓN BÁSICA</div>
+        <div className="us-level"><span>A1</span><i/>100% CONVERSACIÓN BÁSICA</div>
         <p className="us-kicker">20 PARADAS · 120 PREGUNTAS · TODO BILINGÜE</p>
         <h1>ESTADOS<br/><em>UNIDOS</em></h1>
         <div className="us-coastline"><span>COAST</span><i/><b>TO</b><i/><span>COAST</span></div>
@@ -73,7 +73,7 @@ export default function EstadosUnidosBasico(){
     </section>}
 
     {screen==="atlas"&&<section className="us-atlas">
-      <header className="us-atlas-head"><div><span>EL GRAN VIAJE · THE BIG TRIP</span><h1>Elegí una parada.<br/><em>Empezá a hablar.</em></h1></div><div><p>Catorce lugares reales y seis temas cotidianos. Cada parada abre seis preguntas A0–A1, audio, respuestas rápidas y vocabulario bilingüe.</p><span className="us-en">Fourteen real places and six everyday themes. Every stop opens six A0–A1 questions, audio, quick answers and bilingual vocabulary.</span><button onClick={surprise}><Glyph name="shuffle"/> ELEGIR POR MÍ · PICK FOR ME</button></div></header>
+      <header className="us-atlas-head"><div><span>EL GRAN VIAJE · THE BIG TRIP</span><h1>Elegí una parada.<br/><em>Empezá a hablar.</em></h1></div><div><p>Catorce lugares reales y seis temas cotidianos. Cada parada abre seis preguntas A1, audio, respuestas rápidas y vocabulario bilingüe.</p><span className="us-en">Fourteen real places and six everyday themes. Every stop opens six A1 questions, audio, quick answers and bilingual vocabulary.</span><button onClick={surprise}><Glyph name="shuffle"/> ELEGIR POR MÍ · PICK FOR ME</button></div></header>
       <div className="us-tools"><div><button className={filter==="todo"?"active":""} onClick={()=>setNextFilter("todo")}>TODO · ALL</button><button className={filter==="lugar"?"active":""} onClick={()=>setNextFilter("lugar")}>MAPA · PLACES</button><button className={filter==="tema"?"active":""} onClick={()=>setNextFilter("tema")}>TEMAS · TOPICS</button></div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar lugar o tema · Search"/></label></div>
 
       <section className="us-explorer">
@@ -90,7 +90,7 @@ export default function EstadosUnidosBasico(){
 
         <aside className="us-preview" style={{"--stop":pick.color} as CSSProperties}>
           <div className="us-preview-art"><img src="/usa-basic-hero.webp" alt="Ilustración artística de un viaje por Estados Unidos"/><Seal stop={pick} small/></div>
-          <div className="us-preview-copy"><span>{pick.kind==="lugar"?"PARADA · STOP":"TEMA · TOPIC"} {pick.number}</span><small>{pick.state} · {pick.region}</small><h2>{pick.name}</h2><h3>{pick.kicker.es}</h3><p>{pick.fact.es}</p><p className="us-en">{pick.fact.en}</p><div><b>A0–A1</b><b>6 preguntas</b><b>Audio</b><b>Wordbank</b></div><button onClick={()=>enter(pick)}>ABRIR ESTA PARADA <span>→</span><small className="us-en">OPEN THIS STOP</small></button></div>
+          <div className="us-preview-copy"><span>{pick.kind==="lugar"?"PARADA · STOP":"TEMA · TOPIC"} {pick.number}</span><small>{pick.state} · {pick.region}</small><h2>{pick.name}</h2><h3>{pick.kicker.es}</h3><p>{pick.fact.es}</p><p className="us-en">{pick.fact.en}</p><div><b>A1</b><b>6 preguntas</b><b>Audio</b><b>Wordbank</b></div><button onClick={()=>enter(pick)}>ABRIR ESTA PARADA <span>→</span><small className="us-en">OPEN THIS STOP</small></button></div>
         </aside>
       </section>
 
@@ -102,7 +102,7 @@ export default function EstadosUnidosBasico(){
     {screen==="stop"&&<section className="us-world" style={{"--stop":active.color} as CSSProperties}>
       <header className="us-world-hero">
         <div className="us-world-top"><button onClick={()=>show("atlas")}>← MAPA · MAP</button><span>PARADA {active.number} · {active.state}</span><div><button className={showEnglish?"active":""} onClick={()=>setShowEnglish(value=>!value)}>EN {showEnglish?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA</button></div></div>
-        <div className="us-world-copy"><small>{active.kind==="lugar"?"DESTINO REAL · REAL DESTINATION":"TEMA COTIDIANO · EVERYDAY TOPIC"}</small><h1>{active.name}</h1><h2 className="us-en">{active.nameEn} · {active.kicker.en}</h2><p><b>{active.fact.es}</b><span className="us-en">{active.fact.en}</span></p><div><span>A0–A1</span><span>6 preguntas</span><span>Apoyo bilingüe</span></div></div>
+        <div className="us-world-copy"><small>{active.kind==="lugar"?"DESTINO REAL · REAL DESTINATION":"TEMA COTIDIANO · EVERYDAY TOPIC"}</small><h1>{active.name}</h1><h2 className="us-en">{active.nameEn} · {active.kicker.en}</h2><p><b>{active.fact.es}</b><span className="us-en">{active.fact.en}</span></p><div><span>A1</span><span>6 preguntas</span><span>Apoyo bilingüe</span></div></div>
         <div className="us-world-art" aria-hidden="true"><img src="/usa-basic-hero.webp" alt=""/><Seal stop={active}/></div>
       </header>
 
