@@ -1,58 +1,75 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "busy",
+  "status": "idle",
   "healthy": {
-    "sha": "c49bd604aef109324f0bb7181182603322598e11",
-    "canonicalSha": "8dab48bf84c86b9924c4408c181731898743f6f3",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
-    "versionNumber": 161,
-    "deploymentId": "appgdep_6aafcfd6a1648191aa7ce0aa8309af4e",
-    "sourceBackupRef": "refs/tags/production-v161-preserved",
-    "envSetRevision": 14
+    "sha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
+    "versionNumber": 162,
+    "deploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
+    "envSetRevision": 14,
+    "smoke": {
+      "passed": true,
+      "checks": 10,
+      "completedAt": "2026-09-20T13:23:41.289Z"
+    }
   },
-  "history": [],
+  "history": [
+    {
+      "owner": "bootstrap-57fa953-1789909982597",
+      "startedAt": "2026-09-20T13:13:02.948Z",
+      "finishedAt": "2026-09-20T13:23:41.457Z",
+      "previous": {
+        "sha": "c49bd604aef109324f0bb7181182603322598e11",
+        "canonicalSha": "8dab48bf84c86b9924c4408c181731898743f6f3",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
+        "versionNumber": 161,
+        "deploymentId": "appgdep_6aafcfd6a1648191aa7ce0aa8309af4e",
+        "sourceBackupRef": "refs/tags/production-v161-preserved",
+        "envSetRevision": 14
+      },
+      "healthy": {
+        "sha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
+        "versionNumber": 162,
+        "deploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
+        "envSetRevision": 14,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-20T13:23:41.289Z"
+        }
+      }
+    }
+  ],
   "bootstrap": {
     "alignedSha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
     "previousSourceSha": "c49bd604aef109324f0bb7181182603322598e11",
     "backupRef": "refs/tags/production-v161-preserved",
     "method": "one authorized force-with-lease",
-    "completedAt": "2026-09-20T13:11:25.520Z"
-  },
-  "owner": "bootstrap-57fa953-1789909982597",
-  "candidateSha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
-  "previous": {
-    "sha": "c49bd604aef109324f0bb7181182603322598e11",
-    "canonicalSha": "8dab48bf84c86b9924c4408c181731898743f6f3",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
-    "versionNumber": 161,
-    "deploymentId": "appgdep_6aafcfd6a1648191aa7ce0aa8309af4e",
-    "sourceBackupRef": "refs/tags/production-v161-preserved",
-    "envSetRevision": 14
-  },
-  "startedAt": "2026-09-20T13:13:02.948Z",
-  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
-  "candidateVersionNumber": 162,
-  "phase": "checking-final-v162",
-  "candidateDeploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
-  "firstSmoke": {
-    "passed": true,
-    "checks": 10,
-    "completedAt": "2026-09-20T13:18:26.386Z"
-  },
-  "rollbackVerification": {
-    "type": "controlled non-destructive restore",
-    "startedAt": "2026-09-20T13:18:26.386Z",
-    "fromVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
-    "toVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
-    "migrationSensitiveDiff": [],
-    "envSetRevision": 14,
-    "restoredDeploymentId": "appgdep_6aafdd28dad08191a474ca8c06861ba0",
-    "rollbackSmoke": {
-      "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-20T13:20:43.020Z"
+    "completedAt": "2026-09-20T13:11:25.520Z",
+    "rollbackVerification": {
+      "type": "controlled non-destructive restore",
+      "startedAt": "2026-09-20T13:18:26.386Z",
+      "fromVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
+      "toVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
+      "migrationSensitiveDiff": [],
+      "envSetRevision": 14,
+      "restoredDeploymentId": "appgdep_6aafdd28dad08191a474ca8c06861ba0",
+      "rollbackSmoke": {
+        "passed": true,
+        "checks": 10,
+        "completedAt": "2026-09-20T13:20:43.020Z"
+      },
+      "finalDeploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
+      "finalSmoke": {
+        "passed": true,
+        "checks": 10,
+        "completedAt": "2026-09-20T13:23:41.289Z"
+      },
+      "completedAt": "2026-09-20T13:23:41.289Z"
     },
-    "finalDeploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad"
-  }
+    "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
+  },
+  "failedShas": []
 }
