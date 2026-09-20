@@ -33,7 +33,7 @@
   "startedAt": "2026-09-20T13:13:02.948Z",
   "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
   "candidateVersionNumber": 162,
-  "phase": "controlled-rollback-test",
+  "phase": "checking-restored-v161",
   "candidateDeploymentId": "appgdep_6aafdca330448191b838e9ddfab75d86",
   "firstSmoke": {
     "passed": true,
@@ -46,6 +46,7 @@
     "fromVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
     "toVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
     "migrationSensitiveDiff": [],
-    "envSetRevision": 14
+    "envSetRevision": 14,
+    "restoredDeploymentId": "appgdep_6aafdd28dad08191a474ca8c06861ba0"
   }
 }
