@@ -23,14 +23,14 @@ jobs:
 
     steps:
       - name: Check out PR merge candidate
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Use Node 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: "22.13.0"
+          node-version: "22.19.0"
           cache: npm
 
       - name: Install locked dependencies
