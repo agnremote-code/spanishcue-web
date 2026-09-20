@@ -1,15 +1,22 @@
 {
   "schemaVersion": 1,
-  "enabled": false,
+  "enabled": true,
   "status": "idle",
-  "blockedReason": "Sites source main rejects canonical GitHub main as non-fast-forward; source-history bootstrap required. No force-push authorized by repository safety rules.",
   "healthy": {
     "sha": "c49bd604aef109324f0bb7181182603322598e11",
     "canonicalSha": "8dab48bf84c86b9924c4408c181731898743f6f3",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
     "versionNumber": 161,
     "deploymentId": "appgdep_6aafcfd6a1648191aa7ce0aa8309af4e",
-    "sourceBackupRef": "refs/tags/production-v161-preserved"
+    "sourceBackupRef": "refs/tags/production-v161-preserved",
+    "envSetRevision": 14
   },
-  "history": []
+  "history": [],
+  "bootstrap": {
+    "alignedSha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
+    "previousSourceSha": "c49bd604aef109324f0bb7181182603322598e11",
+    "backupRef": "refs/tags/production-v161-preserved",
+    "method": "one authorized force-with-lease",
+    "completedAt": "2026-09-20T13:11:25.520Z"
+  }
 }
