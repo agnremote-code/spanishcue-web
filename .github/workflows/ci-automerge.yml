@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Check out PR merge candidate
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Use Node 22
         uses: actions/setup-node@v4
