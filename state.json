@@ -30,5 +30,8 @@
     "sourceBackupRef": "refs/tags/production-v161-preserved",
     "envSetRevision": 14
   },
-  "startedAt": "2026-09-20T13:13:02.948Z"
+  "startedAt": "2026-09-20T13:13:02.948Z",
+  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
+  "candidateVersionNumber": 162,
+  "phase": "ready-to-deploy"
 }
