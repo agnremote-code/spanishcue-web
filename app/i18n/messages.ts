@@ -61,7 +61,6 @@ const es = {
   "category.pronunciation": "Fonética",
   "category.vocabulary": "Vocabulario",
 
-  "level.a0": "Primeros pasos",
   "level.a1": "Inicial",
   "level.a2": "Básico",
   "level.b1": "Intermedio",
@@ -74,7 +73,6 @@ const es = {
   "level.group.intermediateCopy": "Conectar y desarrollar",
   "level.group.advanced": "Avanzado",
   "level.group.advancedCopy": "Matizar y dominar",
-  "level.beforeA1": "Antes del recorrido A1",
 
   "nav.openMenu": "Abrir menú",
   "nav.closeMenu": "Cerrar menú",
@@ -252,6 +250,10 @@ const es = {
   "auth.verifyRequired": "Tu email todavía no está verificado. Revisa tu correo o reenvía la verificación.",
   "auth.verifyResent": "Te enviamos un nuevo email de verificación. Usá siempre el mensaje más reciente.",
   "auth.resendVerification": "Reenviar email de verificación",
+  "auth.resendWait": "Puedes reenviar en",
+  "auth.verifyAlready": "Tu email ya está verificado. Puedes entrar a tu cuenta.",
+  "auth.error.verificationCooldown": "Espera antes de pedir otro email. Usa siempre el mensaje más reciente.",
+  "auth.error.verificationDelivery": "Tu cuenta está creada, pero no pudimos confirmar el envío. Revisa tu correo; si no llega, usa Reenviar email de verificación.",
   "auth.resetSent": "Te enviamos un enlace para cambiar la contraseña.",
 
   "verification.eyebrow": "SPANISHCUE · CHOOSE. OPEN. TEACH.",
@@ -421,7 +423,6 @@ const en: Record<MessageKey, string> = {
   "category.pronunciation": "Pronunciation",
   "category.vocabulary": "Vocabulary",
 
-  "level.a0": "First steps",
   "level.a1": "Beginner",
   "level.a2": "Elementary",
   "level.b1": "Intermediate",
@@ -434,7 +435,6 @@ const en: Record<MessageKey, string> = {
   "level.group.intermediateCopy": "Connect and develop",
   "level.group.advanced": "Advanced",
   "level.group.advancedCopy": "Refine and master",
-  "level.beforeA1": "Before the A1 path",
 
   "nav.openMenu": "Open menu",
   "nav.closeMenu": "Close menu",
@@ -612,6 +612,10 @@ const en: Record<MessageKey, string> = {
   "auth.verifyRequired": "Your email is not verified yet. Check your inbox or resend the verification email.",
   "auth.verifyResent": "We sent you a new verification email. Always use the most recent message.",
   "auth.resendVerification": "Resend verification email",
+  "auth.resendWait": "You can resend in",
+  "auth.verifyAlready": "Your email is already verified. You can log in to your account.",
+  "auth.error.verificationCooldown": "Wait before requesting another email. Always use the most recent message.",
+  "auth.error.verificationDelivery": "Your account is created, but we could not confirm delivery. Check your inbox; if nothing arrives, use Resend verification email.",
   "auth.resetSent": "We sent you a link to change your password.",
 
   "verification.eyebrow": "SPANISHCUE · CHOOSE. OPEN. TEACH.",

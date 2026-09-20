@@ -5,7 +5,7 @@ import { lessons } from '../app/lesson-catalog';
 
 type StudentRow = {
   id: string; owner_id: string; alias: string; last_name: string | null; email: string | null;
-  level: Student['level']; goal: string; status: Student['status']; created_at: string; updated_at: string;
+  level: Student['level'] | 'A0'; goal: string; status: Student['status']; created_at: string; updated_at: string;
   last_class_at?: string | null;
 };
 type ClassRow = {
@@ -16,7 +16,8 @@ type ClassRow = {
 
 const studentFromRow = (row: StudentRow): Student => ({
   id: row.id, ownerId: row.owner_id, alias: row.alias, lastName: row.last_name, email: row.email,
-  level: row.level, goal: row.goal, status: row.status, createdAt: row.created_at, updatedAt: row.updated_at,
+  level: row.level === 'A0' ? 'A1' : row.level,
+  goal: row.goal, status: row.status, createdAt: row.created_at, updatedAt: row.updated_at,
   lastClassAt: row.last_class_at ?? null,
 });
 const classFromRow = (row: ClassRow): ClassRecord => ({

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ARGENTO · Vocabulario argentino A0–A1 | SPANISHCUE",
+  title: "ARGENTO · Vocabulario argentino A1 | SPANISHCUE",
   description: "Doce mundos argentinos con apoyos visuales y bilingües para hablar desde el primer día.",
   alternates: {
     canonical: "https://spanishcue.com/argento",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "ARGENTO · Vocabulario argentino A0–A1",
+    title: "ARGENTO · Vocabulario argentino A1",
     description: "Doce mundos argentinos con apoyos visuales y bilingües para hablar desde el primer día.",
     url: "https://spanishcue.com/argento",
     images: ["/chespanish-guide-van.webp"],

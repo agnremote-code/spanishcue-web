@@ -361,3 +361,23 @@ export const classRecords = sqliteTable(
     index("class_records_owner_date_idx").on(table.ownerId, table.startsAt),
   ],
 );
+
+/** Delivery reservations only; Firebase remains the authority for verification.
+ * Never store ID tokens, action codes, email links, or service credentials here. */
+export const verificationEmailDeliveries = sqliteTable(
+  "verification_email_deliveries",
+  {
+    id: text("id").primaryKey(),
+    identity: text("identity").notNull(),
+    recipient: text("recipient").notNull(),
+    requestKey: text("request_key").notNull(),
+    kind: text("kind").notNull(),
+    status: text("status").notNull().default("sending"),
+    requestedAt: integer("requested_at").notNull(),
+    providerId: text("provider_id"),
+  },
+  (table) => [
+    uniqueIndex("verification_email_request_unique").on(table.identity, table.requestKey),
+    index("verification_email_recipient_time").on(table.recipient, table.requestedAt),
+  ],
+);

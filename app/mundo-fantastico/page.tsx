@@ -440,7 +440,7 @@ export default function MundoFantastico() {
   ];
   const bankCatalog = [
     {id:"country",code:"PA",label:{es:active.country,en:active.countryEn},words:destinationWords},
-    {id:"phrases",code:"A0",label:{es:"Frases rápidas",en:"Quick phrases"},words:answerTools},
+    {id:"phrases",code:"A1",label:{es:"Frases rápidas",en:"Quick phrases"},words:answerTools},
     ...megaWordbank,
   ];
   const normalizedBankQuery=bankQuery.trim().toLowerCase();
@@ -467,23 +467,23 @@ export default function MundoFantastico() {
     {screen === "cover" && <section className="wf-cover">
       <Sky dense/>
       <div className="wf-cover-copy">
-        <div className="wf-kicker"><span>A0</span> PARA EMPEZAR DE CERO · START FROM ZERO</div>
+        <div className="wf-kicker"><span>A1</span> PARA EMPEZAR DE CERO · START FROM ZERO</div>
         <p className="wf-overline">6 CONTINENTES · AMÉRICA = 1 CONTINENTE · 40 MUNDOS</p>
         <h1>EL MUNDO<br/><em>FANTÁSTICO</em></h1>
         <p className="wf-lead">Viajá por el planeta y hablá español desde la primera palabra.<b> Preguntas mínimas. Respuestas tocables. Wordbank completo.</b><span className="wf-en">Travel around the planet and speak Spanish from the very first word. Tiny questions, tappable answers and a complete word bank.</span></p>
         <div className="wf-cover-actions"><button onClick={() => show("atlas")}>ABRIR EL MAPA <span>→</span><small className="wf-en">OPEN THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> PAÍS SORPRESA<small className="wf-en">SURPRISE COUNTRY</small></button></div>
-        <div className="wf-stats"><article><b>6</b><span>continentes<small>continents</small></span></article><article><b>40</b><span>mundos<small>worlds</small></span></article><article><b>400</b><span>preguntas A0<small>A0 questions</small></span></article><article><b>120+</b><span>palabras<small>words</small></span></article></div>
+        <div className="wf-stats"><article><b>6</b><span>continentes<small>continents</small></span></article><article><b>40</b><span>mundos<small>worlds</small></span></article><article><b>400</b><span>preguntas A1<small>A1 questions</small></span></article><article><b>120+</b><span>palabras<small>words</small></span></article></div>
       </div>
       <div className="wf-hero-map" aria-hidden="true">
         <div className="wf-globe"><img src="/world-map.svg" alt=""/><i/><i/><i/></div>
-        <span className="wf-orbit-label one">AMÉRICA · ONE CONTINENT</span><span className="wf-orbit-label two">A0 · ONE WORD COUNTS</span><span className="wf-orbit-label three">6 CONTINENTES</span>
+        <span className="wf-orbit-label one">AMÉRICA · ONE CONTINENT</span><span className="wf-orbit-label two">A1 · ONE WORD COUNTS</span><span className="wf-orbit-label three">6 CONTINENTES</span>
         <div className="wf-hero-pin p1"/><div className="wf-hero-pin p2"/><div className="wf-hero-pin p3"/><div className="wf-hero-pin p4"/>
       </div>
       <div className="wf-horizon" aria-hidden="true"><i/><i/><i/></div>
     </section>}
 
     {screen === "atlas" && <section className="wf-atlas-screen">
-      <header className="wf-atlas-head"><div><span>ATLAS MUNDIAL · WORLD ATLAS</span><h1>Elegí un continente.<br/><em>Abrí un país. Hablá.</em></h1></div><div><p>Los 40 puntos son mundos de conversación A0. América aparece como un solo continente.</p><span className="wf-en">The 40 points are A0 conversation worlds. America appears as one continent.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MUNDO DECIDA</button></div></header>
+      <header className="wf-atlas-head"><div><span>ATLAS MUNDIAL · WORLD ATLAS</span><h1>Elegí un continente.<br/><em>Abrí un país. Hablá.</em></h1></div><div><p>Los 40 puntos son mundos de conversación A1. América aparece como un solo continente.</p><span className="wf-en">The 40 points are A1 conversation worlds. America appears as one continent.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MUNDO DECIDA</button></div></header>
 
       <div className="wf-toolbar">
         <div className="wf-continent-tabs">{continents.map(item => <button key={item} className={continent === item ? "active" : ""} style={{"--tab":item === "Todos" ? "#ffffff" : continentColors[item]} as CSSProperties} onClick={() => setContinent(item)}>{item}<small>{item === "Todos" ? "All" : continentEnglish[item]}</small></button>)}</div>
@@ -528,7 +528,7 @@ export default function MundoFantastico() {
       </header>
 
       <div className="wf-classroom">
-        <section className="wf-rule"><span>A0 REAL · REAL A0</span><b>Una palabra es una respuesta. Una mini frase es una victoria.</b><em className="wf-en">One word is an answer. One tiny sentence is a victory.</em></section>
+        <section className="wf-rule"><span>A1 REAL · REAL A1</span><b>Una palabra es una respuesta. Una mini frase es una victoria.</b><em className="wf-en">One word is an answer. One tiny sentence is a victory.</em></section>
 
         <section className="wf-question-stage">
           <div className="wf-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question + 1).padStart(2,"0")} <i>/ 10</i></b></div>

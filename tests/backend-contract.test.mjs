@@ -92,7 +92,6 @@ test("Apple, Google, email and password remain present in the auth source", asyn
   assert.match(source, /OAuthProvider\("apple\.com"\)/);
   assert.match(source, /createUserWithEmailAndPassword/);
   assert.match(source, /signInWithEmailAndPassword/);
-  assert.match(source, /sendEmailVerification/);
   assert.match(source, /browserSessionPersistence/);
   assert.match(source, /inMemoryPersistence/);
   assert.match(source, /sendVerificationAndSignOut/);

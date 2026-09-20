@@ -85,7 +85,7 @@ export default async function Access({
           <div className="premium-proof" aria-label={t("paywall.benefitsAria")}>
             <span><b>{checkoutLive ? "∞" : "PRO"}</b> {checkoutLive ? t("paywall.unlimited") : locale === "es" ? "lanzamiento próximo" : "launching soon"}</span>
             <span><b>5</b> {t("paywall.contentRoutes")}</span>
-            <span><b>A0–C2</b> {t("hero.levels")}</span>
+            <span><b>A1–C2</b> {t("hero.levels")}</span>
           </div>
 
           <div className="premium-scene" aria-hidden="true">

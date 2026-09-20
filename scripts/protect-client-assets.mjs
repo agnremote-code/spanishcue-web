@@ -262,6 +262,9 @@ await rename("dist/server/index.js", "dist/server/app-worker.js");
 await writeFile(
   "dist/server/index.js",
   `import app from './app-worker.js';
+// Bundled dynamic chunks may import shared helpers from the original entrypoint.
+// Preserve those named exports while wrapping its default fetch handler.
+export * from './app-worker.js';
 import privateAssets from './private-client-assets.js';
 import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';

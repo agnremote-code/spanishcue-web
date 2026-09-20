@@ -51,7 +51,7 @@ export default function Argento(){
   return <main className="argento-shell" id="main-content">
     <a className="skip-link" href="#mundos">Saltar al contenido · Skip to content</a>
     <header className="argento-hero">
-      <nav><Link href="/" className="argento-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A0–A1 · CONVERSACIÓN</small></span></Link><Link href="/" className="argento-library">← Biblioteca</Link></nav>
+      <nav><Link href="/" className="argento-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>A1 · CONVERSACIÓN</small></span></Link><Link href="/" className="argento-library">← Biblioteca</Link></nav>
       <div className="argento-hero-copy"><span>🇦🇷 ESPAÑOL ARGENTINO · ARGENTINE SPANISH</span><h1>ARGENTO</h1><p>Hablá español desde el primer día.<small>Speak Spanish from Day One.</small></p><blockquote>Tu trabajo no es ser perfecto. Tu trabajo es comunicar.<small>Your job is not to be perfect. Your job is to communicate.</small></blockquote><a href="#mundos">EMPEZAR A HABLAR · START SPEAKING ↓</a></div>
     </header>
 
