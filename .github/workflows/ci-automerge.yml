@@ -12,6 +12,7 @@ concurrency:
 permissions:
   actions: read
   contents: write
+  issues: write
   pull-requests: write
 
 jobs:
@@ -63,6 +64,7 @@ jobs:
       EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       HEAD_REF: ${{ github.event.pull_request.head.ref }}
       LOCK_REF: automation/merge-lock
+      INCIDENT_TITLE: Production smoke failing
 
     steps:
       - name: Check out exact PR head
@@ -207,6 +209,47 @@ jobs:
           PY
           )"
           gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${ENCODED_ROLLBACK_REF}" || true
+
+      - name: Observe production after a healthy source merge
+        id: production_smoke
+        if: steps.postmerge.outcome == 'success'
+        continue-on-error: true
+        run: node scripts/production-smoke.mjs
+
+      - name: Open or update production incident
+        if: steps.postmerge.outcome == 'success' && steps.production_smoke.outcome == 'failure'
+        continue-on-error: true
+        run: |
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          ISSUE_NUMBER="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100" \
+            --jq '.[] | select(.pull_request == null and .title == "Production smoke failing") | .number' \
+            | head -n 1)"
+
+          BODY="SPANISHCUE production smoke failed after source merge ${MERGE_SHA}.
+
+          CI run: ${RUN_URL}
+          Production origin: https://spanishcue.com
+
+          Source validation passed. This is a production-observability incident only; it does not trigger a source rollback, deployment, D1 migration, or billing change."
+
+          if [ -n "$ISSUE_NUMBER" ]; then
+            gh issue comment "$ISSUE_NUMBER" --body "$BODY"
+          else
+            gh issue create --title "$INCIDENT_TITLE" --body "$BODY"
+          fi
+
+      - name: Close recovered production incident
+        if: steps.postmerge.outcome == 'success' && steps.production_smoke.outcome == 'success'
+        continue-on-error: true
+        run: |
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          ISSUE_NUMBERS="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100" \
+            --jq '.[] | select(.pull_request == null and .title == "Production smoke failing") | .number')"
+
+          for ISSUE_NUMBER in $ISSUE_NUMBERS; do
+            gh issue comment "$ISSUE_NUMBER" --body "Production smoke recovered successfully after source merge ${MERGE_SHA}. Run: ${RUN_URL}"
+            gh issue close "$ISSUE_NUMBER" --reason completed
+          done
 
       - name: Delete merged feature branch
         if: steps.postmerge.outcome == 'success'
