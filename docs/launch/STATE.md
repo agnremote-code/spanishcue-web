@@ -1,82 +1,71 @@
-# SpanishCue · Audit State & Launch Baseline
+# SPANISHCUE · Current Repository State
 
-## Reference Information
-- **Reference Commit**: `08ef3a2` (`chore: add SpanishCue AI safety rules`)
-- **Git Branch**: `antigravity/launch-audit`
-- **Environment & Hosting**: Cloudflare Workers via OpenAI Sites (`.openai/hosting.json`, project ID `appgprj_6a83ba10b0c481919060fc089d581233`, D1 binding `DB`).
-- **Detected Stack**:
-  - **Framework**: `vinext` v0.0.50 (Next.js 16 App Router on Cloudflare Workers / Vite backend)
-  - **Database / ORM**: Cloudflare D1 with Drizzle ORM v0.45.2 (`db/schema.ts`, `drizzle/0000_jazzy_fantastic_four.sql`)
-  - **Frontend / Styling**: React v19.2.6, Tailwind CSS v4.2.1, custom CSS (`teachers.css`, `special.css`)
-  - **Authentication**: ChatGPT Sign-In / Sites Auth (`app/chatgpt-auth.ts`, reading `oai-authenticated-user-*` headers)
-  - **Testing & Build**: Node test runner + esbuild (`tests/teacher-access.test.mjs`, `npm test`)
+_Last updated: 2026-09-20. This document describes the current GitHub repository state, not the original launch-audit baseline._
 
----
+## Source of truth
 
-## Technical Audit Findings & Priority Classification
+- Canonical repository: `agnremote-code/spanishcue-web`.
+- Canonical integration branch: `main`.
+- Product/domain identity in current code: **SPANISHCUE** / `https://spanishcue.com`.
+- Hosting target remains the existing OpenAI Sites / Cloudflare Workers project.
+- Historical task documents under `docs/launch/` are evidence of earlier work. They are not authoritative when they conflict with current `main`.
 
-### P0 (Critical Launch & Funnel Blockers)
-1. **No Payment System (PayPal / Subscription Checkout)**:
-   - *Finding*: 0% implemented. No PayPal client SDK, no payment API endpoints, no webhook processing, no transaction logs in D1.
-   - *Impact*: Visitors cannot purchase access or unlock PRO features.
-2. **Hardcoded Owner Authorization**:
-   - *Finding*: `app/access-policy.ts` hardcodes `ownerFromHeaders` to `agnremote@gmail.com`.
-   - *Impact*: Registered teachers/students who log in are treated as free users and redirected to `/acceso` when attempting to access PRO content.
-3. **Missing Database Tables for Users, Subscriptions & Sessions**:
-   - *Finding*: Cloudflare D1 schema (`db/schema.ts`) contains only `offer_settings`. No tables exist for `users`, `subscriptions`, `transactions`, `students`, or `lessons_taught`.
-   - *Impact*: No user session state or subscription entitlements can be persisted across refreshes or sessions.
-4. **CTA & Funnel Dead End**:
-   - *Finding*: "Desbloquear" and "Ver lanzamiento" buttons open a modal without a checkout link, directing users back to free samples.
-   - *Impact*: Funnel converts 0% of interested users.
-5. **Missing Mandatory Legal & Compliance Pages**:
-   - *Finding*: No Terms of Service, Privacy Policy, or Refund Policy pages exist.
-   - *Impact*: Required for payment gateway compliance and commercial operation.
+## Implemented in current main
 
-### P1 (Core Features, SEO & Usability)
-1. **Static / Empty Account & Student Dashboard (`/cuenta`)**:
-   - *Finding*: `/cuenta` renders static text ("No tenés cobros ni suscripciones activas."). Missing student roster ("Mis alumnos") and taught lesson tracker.
-2. **Missing Analytics & Event Tracking**:
-   - *Finding*: No analytics tools (Google Analytics, Plausible, PostHog, or Meta Pixel) exist to track conversions or funnel drop-offs.
-3. **Technical SEO Baseline**:
-   - *Finding*: Basic Next.js metadata exists in `app/layout.tsx`, but missing `sitemap.xml`, `robots.txt`, canonical URLs, and structured data (JSON-LD).
-4. **Branding & Navigation Polish**:
-   - *Finding*: Branding uses mixed terms ("CHESPANISH Teacher Studio" vs "SpanishCue"). Mobile navigation and return paths from 3D lessons require polish.
+### Authentication and access
+- Firebase-backed authentication and server-side session verification.
+- Email verification is required before server session provisioning.
+- Google sign-in and email/password flows are hardened against stale or rejected client sessions.
+- Access is backed by D1 account/identity/access-grant data rather than a browser-only flag.
 
-### P2 (Content & Visual Polish)
-1. **Additional Lessons & Interactive Boards ("Tableros")**:
-   - *Finding*: Extra lesson content, audio assets, and board tools to be expanded after P0/P1 stability.
-2. **Decorative Styling & Animations**:
-   - *Finding*: Minor mascot transitions and theme accents.
+### Database and account data
+- D1 schema includes users, auth identities, access grants, billing/subscription records, founder-offer state, student data, and class-history data.
+- Migration history has been reconciled through the integrated release line.
+- `/cuenta` includes account status, **Mis alumnos**, class history, subscription management, favorites, and settings.
 
----
+### Billing
+- PayPal subscription/server integration exists.
+- Sandbox and Live environments are separated in code.
+- PayPal plan, webhook, subscription, and payment validation exist.
+- Live checkout must remain disabled unless the external Live configuration and release gate are explicitly verified.
 
-## Upcoming Task Dependencies
+### Public/commercial readiness
+- Legal/privacy/refund surfaces exist in the application.
+- Canonical URLs, `robots.txt`, `sitemap.xml`, localized SEO routes, and public marketing routes exist.
+- GA4 support exists and is consent-gated.
+- Ads activation is not implied by the presence of marketing/measurement code.
 
-```
-[TASK-01: Audit & State Baseline] (Current)
-       │
-       ▼
-[TASK-02: Database Schema Expansion] (D1 tables: users, subscriptions, students, taught_lessons)
-       │
-       ▼
-[TASK-03: Auth Engine & PRO Access Logic] (Replace hardcoded email with DB-backed entitlement)
-       │
-       ▼
-[TASK-04: PayPal Integration & Checkout Funnel] (PayPal Sandbox, checkout APIs, webhook)
-       │
-       ▼
-[TASK-05: Account & Student Management ("Mi cuenta / Mis alumnos")] (Dashboard, roster, lesson log)
-       │
-       ▼
-[TASK-06: Legal, SEO, Analytics & Public Launch Readiness] (Terms, Privacy, Sitemap, Analytics)
-```
+### Repository automation
+- Same-repository, non-draft PRs to `main` run regression tests, lint, artifact validation, and whitespace checks.
+- The merge path revalidates the PR against the latest `main` before merge.
+- Multi-agent merges use an explicit repository merge lock so concurrent PRs are serialized without silently dropping older pending work.
+- Merged commits receive a post-merge health check.
+- A failed post-merge health check attempts a validated rollback while guarding against stale-main races.
+- Direct/manual `main` pushes are covered by a separate health/rollback workflow.
+- `npm run smoke:production` exists for public production smoke checks.
 
----
+## External state GitHub cannot prove
 
-## Safe Ownership Boundaries for Agents
-- **Shared Repository**: `agnremote-code/spanishcue-web`
-- **Branch Rule**: Work ONLY on assigned feature branches (e.g. `antigravity/launch-audit`). Never commit or push directly to `main`.
-- **File Safety**:
-  - Do not edit source code during audit tasks (`app/*`, `db/*`).
-  - Modify only files assigned to your current active task.
-  - Never alter secrets, environment variables, or remote deployment configurations.
+Do **not** infer any of the following only from repository code:
+
+- which commit is currently deployed to the OpenAI Sites production project;
+- whether every D1 migration has already been applied to production;
+- which hosting secrets are currently bound;
+- the current PayPal dashboard resources/credentials and whether Live is authorized;
+- Firebase sender-domain/DNS/email-deliverability settings;
+- current GA4 / Google Ads account configuration;
+- DNS state outside the repository.
+
+These must be verified through their owning service or deployment path before claiming production readiness.
+
+## Current operating priority
+
+1. Keep independent agent work isolated by branch and PR.
+2. Let repository automation verify and merge ordinary code/content changes.
+3. Never reuse a branch after its PR is merged or closed.
+4. Keep production D1 migrations, payment-provider Live changes, DNS changes, and hosting release actions behind explicit release gates.
+5. Treat production smoke and deployed-version verification as separate from GitHub merge success.
+
+## Superseded baseline
+
+The original audit correctly described the project at the time it was written, but statements such as “no payment system,” “no user/subscription tables,” “static account dashboard,” and “missing SEO/legal/analytics” are historical and must not be used as current blockers.
