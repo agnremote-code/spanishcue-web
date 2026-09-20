@@ -81,12 +81,26 @@ jobs:
 
       - name: Acquire repository merge lock
         run: |
+          release_idle() {
+            gh api "repos/${GITHUB_REPOSITORY}/contents/state.json?ref=automation/sites-release-state" --jq '.content' |
+              base64 --decode | jq -e '.status == "idle"' >/dev/null
+          }
           for attempt in $(seq 1 60); do
+            if ! release_idle; then
+              echo "Sites release is active or its state is unavailable; waiting."
+              sleep 10
+              continue
+            fi
             if gh api \
               --method POST \
               "repos/${GITHUB_REPOSITORY}/git/refs" \
               -f ref="refs/heads/${LOCK_REF}" \
               -f sha="$EXPECTED_HEAD_SHA" >/tmp/merge-lock.json 2>/tmp/merge-lock.err; then
+              if ! release_idle; then
+                gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${LOCK_REF}"
+                sleep 10
+                continue
+              fi
               echo "Acquired merge lock for PR #${PR_NUMBER}."
               exit 0
             fi
