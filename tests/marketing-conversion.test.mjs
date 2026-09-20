@@ -1,3 +1,4 @@
+import "./landing-offer.test.mjs";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
@@ -126,7 +127,7 @@ test("search landings, including a dedicated free demo, and crawl controls are i
     assert.match(sitemap, new RegExp(routeName));
   }
   assert.match(landing, /freeLessonIds\.length/);
-  assert.match(landing, /landing-hero-caption/);
+  assert.match(landing, /landing-product-float/);
   assert.match(pricing, /FOUNDING TEACHERS/);
   assert.match(pricing, /CheckoutButton/);
   assert.match(pricing, /href="\/demo\/mis-alumnos"/);
@@ -139,6 +140,7 @@ test("public conversion routes keep every required client entry public", async (
   const protection = await source("scripts/protect-client-assets.mjs");
   for (const entry of [
     "app/marketing/MarketingAttribution.tsx",
+    "app/marketing-landing/LandingConversion.tsx",
     "app/marketing/FreeLessonRegistrationGate.tsx",
     "app/acceso/CheckoutButton.tsx",
     "app/acceso/FounderAccessForm.tsx",
