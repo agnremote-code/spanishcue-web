@@ -1,5 +1,5 @@
 /** Two fixed samples per category; filters never change access permissions. */
-export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41], 'Conversación':[103,29], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
+export const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41], 'Conversación':[210,36], 'Escucha':[105,28], 'Fonética':[201,202], 'Vocabulario':[16,204] };
 export const freeLessonIds = [...new Set(Object.values(samplesByCategory).flat())];
 export const isFreeLesson = (id:number) => freeLessonIds.includes(id);
 /** Audio collections attached to the two public listening samples. */

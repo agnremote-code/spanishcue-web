@@ -22,7 +22,7 @@ export type LandingConfig = {
 export const landingConfigs = {
   "free-spanish-lesson": {
     slug: "free-spanish-lesson",
-    lessonIds: [40, 103, 105, 201, 16, 29],
+    lessonIds: [210, 36, 40, 105, 201, 16],
     copy: {
       en: {
         kicker: "FREE INTERACTIVE SPANISH LESSON",
@@ -90,7 +90,7 @@ export const landingConfigs = {
   },
   "spanish-conversation-activities": {
     slug: "spanish-conversation-activities",
-    lessonIds: [103, 104, 120, 123, 109, 125],
+    lessonIds: [210, 36, 103, 120, 109, 125],
     copy: {
       en: {
         kicker: "SPANISH CONVERSATION ACTIVITIES",
@@ -158,7 +158,7 @@ export const landingConfigs = {
   },
   "ele-recursos-profesores": {
     slug: "ele-recursos-profesores",
-    lessonIds: [40, 103, 105, 201, 204, 108],
+    lessonIds: [210, 36, 40, 105, 201, 204],
     copy: {
       en: {
         kicker: "INTERACTIVE ELE RESOURCES",
@@ -192,7 +192,7 @@ export const landingConfigs = {
   },
   "online-spanish-teaching-resources": {
     slug: "online-spanish-teaching-resources",
-    lessonIds: [105, 103, 40, 108, 201, 123],
+    lessonIds: [36, 210, 105, 40, 201, 108],
     copy: {
       en: {
         kicker: "ONLINE SPANISH TEACHING RESOURCES",

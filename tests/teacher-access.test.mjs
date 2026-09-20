@@ -32,13 +32,15 @@ test('home product samples are unique, routable and free by central access metad
  }
  assert.deepEqual(samples.map(({lesson})=>lesson.title),[
   'La Fábrica de los Nombres',
-  'La máquina que elimina cosas del mundo · A2',
+  'MÉXICO',
   'El hotel de lo imposible',
   'ARGENTO',
   'Cinco vocales, cinco sonidos',
-  'Suiza en Relieve',
+  'ESTADOS UNIDOS',
  ]);
- assert.equal(p.isFreeLesson(29),true);
+ assert.equal(p.isFreeLesson(29),false);
+ assert.equal(p.isFreeLesson(36),true);
+ assert.equal(p.isFreeLesson(210),true);
  assert.equal(p.isFreeLesson(104),false);
  for(const premiumId of [119,136,135,108,139]){
   assert.equal(samples.some(({lesson})=>lesson.id===premiumId),false);

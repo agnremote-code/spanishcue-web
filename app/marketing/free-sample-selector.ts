@@ -4,7 +4,7 @@ export type ProductSampleKey =
   | "listening"
   | "vocabulary"
   | "pronunciation"
-  | "switzerland";
+  | "countryAtlas";
 
 export type FreeSampleLesson = {
   id: number;
@@ -32,8 +32,8 @@ export function selectFreeProductSamples<T extends FreeSampleLesson>(lessons: re
     { key: "vocabulary", matches: (lesson) => lesson.category === "Vocabulario" },
     { key: "pronunciation", matches: (lesson) => lesson.category === "Fonética" },
     {
-      key: "switzerland",
-      matches: (lesson) => lesson.id === 29,
+      key: "countryAtlas",
+      matches: (lesson) => lesson.id === 36,
     },
   ];
   const usedLessonIds = new Set<number>();

@@ -5,7 +5,7 @@ export function filterLessons(lessons, { level = 'Todos', category = 'Todas', qu
   const filtered = lessons.filter(lesson =>
     (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&
     (category === 'Todas' || lesson.category === category) &&
-    normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag}`).includes(search)
+    normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag} ${(lesson.searchAliases || []).join(' ')}`).includes(search)
   );
   const categoryOrder = {'Gramática':1,'Conversación':2,'Escucha':3,'Fonética':4,'Vocabulario':5};
   return [...filtered].sort((a,b) =>
@@ -43,7 +43,8 @@ export function familyLessonsForCategory(
     return lessons.filter(lesson => lesson.category === 'Conversación');
   }
   if (conversationMode === 'countries') {
-    return lessons.filter(lesson => lesson.category === 'Conversación' && lesson.countryCollection);
+    return lessons.filter(lesson => lesson.category === 'Conversación' && lesson.countryCollection)
+      .sort((a,b) => (a.countrySequence ?? Number.MAX_SAFE_INTEGER) - (b.countrySequence ?? Number.MAX_SAFE_INTEGER));
   }
   const conversationLessons = lessons.filter(
     lesson => lesson.category === 'Conversación' && !lesson.countryCollection
