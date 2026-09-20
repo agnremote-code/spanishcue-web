@@ -1,8 +1,0 @@
-.wb-brand > .sc-brand-system { font-size: 14px; letter-spacing: 0; }
-.wb-brand .sc-brand-name small { color: #718091; }
-.wb-brand .sc-brand-system b { width: auto; height: auto; display: inline; background: transparent; color: inherit; letter-spacing: inherit; }
-.wb-brand .sc-monogram { width: 34px; height: 34px; }
-@media (max-width: 560px) {
-  .wb-brand .sc-brand-name { display: block; }
-  .wb-brand .sc-brand-name small { display: none; }
-}

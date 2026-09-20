@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "status": "idle",
+  "blockedReason": "Sites source main rejects canonical GitHub main as non-fast-forward; source-history bootstrap required. No force-push authorized by repository safety rules.",
+  "healthy": {
+    "sha": "c49bd604aef109324f0bb7181182603322598e11",
+    "canonicalSha": "8dab48bf84c86b9924c4408c181731898743f6f3",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_352bdaa65914819183acb184e0efb9f8",
+    "versionNumber": 161,
+    "deploymentId": "appgdep_6aafcfd6a1648191aa7ce0aa8309af4e"
+  },
+  "history": []
+}
