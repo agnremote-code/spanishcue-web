@@ -38,7 +38,7 @@ jobs:
         if: failure()
         run: |
           RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-          ISSUE_NUMBER="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100"             --jq '.[] | select(.pull_request == null and .title == env.INCIDENT_TITLE) | .number'             | head -n 1)"
+          ISSUE_NUMBER="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100"             --jq '.[] | select(.pull_request == null and .title == "Production smoke failing") | .number'             | head -n 1)"
 
           BODY="Automated SPANISHCUE production smoke failed.
 
@@ -58,7 +58,7 @@ jobs:
         if: success()
         run: |
           RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-          ISSUE_NUMBERS="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100"             --jq '.[] | select(.pull_request == null and .title == env.INCIDENT_TITLE) | .number')"
+          ISSUE_NUMBERS="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100"             --jq '.[] | select(.pull_request == null and .title == "Production smoke failing") | .number')"
 
           for ISSUE_NUMBER in $ISSUE_NUMBERS; do
             gh issue comment "$ISSUE_NUMBER" --body "Production smoke recovered successfully. Run: ${RUN_URL}"
