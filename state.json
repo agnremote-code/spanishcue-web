@@ -33,8 +33,8 @@
   "startedAt": "2026-09-20T13:13:02.948Z",
   "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
   "candidateVersionNumber": 162,
-  "phase": "restoring-newest-healthy",
-  "candidateDeploymentId": "appgdep_6aafdca330448191b838e9ddfab75d86",
+  "phase": "checking-final-v162",
+  "candidateDeploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
   "firstSmoke": {
     "passed": true,
     "checks": 10,
@@ -52,6 +52,7 @@
       "passed": true,
       "checks": 10,
       "completedAt": "2026-09-20T13:20:43.020Z"
-    }
+    },
+    "finalDeploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad"
   }
 }
