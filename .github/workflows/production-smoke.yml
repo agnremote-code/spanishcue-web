@@ -1,0 +1,71 @@
+name: Production Smoke Monitor
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/production-smoke.yml"
+      - "scripts/production-smoke.mjs"
+  schedule:
+    - cron: "17 */6 * * *"
+
+concurrency:
+  group: production-smoke
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ github.token }}
+      INCIDENT_TITLE: Production smoke failing
+
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@v5
+
+      - name: Use Node 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22.19.0"
+
+      - name: Run production smoke
+        id: smoke
+        run: node scripts/production-smoke.mjs
+
+      - name: Open or update production incident
+        if: failure()
+        run: |
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          ISSUE_NUMBER="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100"             --jq '.[] | select(.pull_request == null and .title == "Production smoke failing") | .number'             | head -n 1)"
+
+          BODY="Automated SPANISHCUE production smoke failed.
+
+          Run: ${RUN_URL}
+          Repository SHA tested by this monitor: ${GITHUB_SHA}
+          Production origin: https://spanishcue.com
+
+          The monitor checks the public homepage plus signed-out access boundaries for login, account, PRO lesson and student API routes. This incident does not trigger a deployment, migration, payment change, or rollback."
+
+          if [ -n "$ISSUE_NUMBER" ]; then
+            gh issue comment "$ISSUE_NUMBER" --body "$BODY"
+          else
+            gh issue create --title "$INCIDENT_TITLE" --body "$BODY"
+          fi
+
+      - name: Close recovered production incident
+        if: success()
+        run: |
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          ISSUE_NUMBERS="$(gh api "repos/${GITHUB_REPOSITORY}/issues?state=open&per_page=100"             --jq '.[] | select(.pull_request == null and .title == "Production smoke failing") | .number')"
+
+          for ISSUE_NUMBER in $ISSUE_NUMBERS; do
+            gh issue comment "$ISSUE_NUMBER" --body "Production smoke recovered successfully. Run: ${RUN_URL}"
+            gh issue close "$ISSUE_NUMBER" --reason completed
+          done
