@@ -88,5 +88,8 @@
   },
   "startedAt": "2026-09-20T16:25:30.663Z",
   "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_73bd619d81308191bb9a402d0ba2d621",
-  "candidateVersionNumber": 163
+  "candidateVersionNumber": 163,
+  "candidateDeploymentId": "appgdep_6ab00a3ff73c819193a00d57bffe6339",
+  "candidateEnvSetRevision": 18,
+  "deploymentStarted": true
 }
