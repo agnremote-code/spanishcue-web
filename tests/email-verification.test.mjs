@@ -30,3 +30,8 @@ test("the app owns a branded verification result route", async () => {
   assert.equal(existsSync("app/auth/action/VerificationAction.tsx"), true);
   assert.equal(existsSync("app/auth/action/style.css"), true);
 });
+
+test("the public verification page keeps its client bundle publicly loadable", async () => {
+  const protection = await readFile("scripts/protect-client-assets.mjs", "utf8");
+  assert.match(protection, /app\/auth\/action\/VerificationAction\.tsx/);
+});
