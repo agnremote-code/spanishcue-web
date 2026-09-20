@@ -10,6 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
+  actions: read
   contents: write
   pull-requests: write
 
@@ -56,14 +57,12 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    concurrency:
-      group: main-automerge
-      cancel-in-progress: false
     env:
       GH_TOKEN: ${{ github.token }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
       EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
       HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      LOCK_REF: automation/merge-lock
 
     steps:
       - name: Check out exact PR head
@@ -77,6 +76,37 @@ jobs:
         with:
           node-version: "22.19.0"
           cache: npm
+
+      - name: Acquire repository merge lock
+        run: |
+          for attempt in $(seq 1 60); do
+            if gh api \
+              --method POST \
+              "repos/${GITHUB_REPOSITORY}/git/refs" \
+              -f ref="refs/heads/${LOCK_REF}" \
+              -f sha="$EXPECTED_HEAD_SHA" >/tmp/merge-lock.json 2>/tmp/merge-lock.err; then
+              echo "Acquired merge lock for PR #${PR_NUMBER}."
+              exit 0
+            fi
+
+            LOCK_SHA="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/${LOCK_REF}" --jq '.object.sha' 2>/dev/null || true)"
+            if [ -n "$LOCK_SHA" ]; then
+              ACTIVE_RUNS="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${LOCK_SHA}&per_page=100" \
+                --jq '[.workflow_runs[] | select(.name == "CI + Auto Merge" and (.status == "in_progress" or .status == "queued"))] | length' \
+                2>/dev/null || echo 1)"
+              if [ "$ACTIVE_RUNS" = "0" ]; then
+                echo "Removing stale merge lock at ${LOCK_SHA}."
+                gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${LOCK_REF}" || true
+                continue
+              fi
+            fi
+
+            echo "Merge lock busy; retry ${attempt}/60."
+            sleep 10
+          done
+
+          echo "Could not acquire merge lock."
+          exit 1
 
       - name: Build fresh merge candidate against current main
         run: |
@@ -188,3 +218,12 @@ jobs:
           PY
           )"
           gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${ENCODED_REF}"
+
+      - name: Release repository merge lock
+        if: always()
+        continue-on-error: true
+        run: |
+          LOCK_SHA="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/${LOCK_REF}" --jq '.object.sha' 2>/dev/null || true)"
+          if [ "$LOCK_SHA" = "$EXPECTED_HEAD_SHA" ]; then
+            gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${LOCK_REF}"
+          fi
