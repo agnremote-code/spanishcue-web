@@ -1,0 +1,27 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "created": "2026-09-20",
+  "use": "Decorative fictional campaign models; not actual user testimonials.",
+  "assets": [
+    {
+      "name": "ele",
+      "prompt": "Use case: photorealistic-natural. Asset type: SPANISHCUE Spanish education campaign website hero photograph. Premium editorial campaign photography, candid expressive adults with realistic skin texture, natural gestures and warm confidence, deep blue and cyan wardrobe accents, neutral bright white workspace. Landscape 1536x1024 composition, waist-up framing with a little breathing room. Daylight, sophisticated photographic composition, plausible anatomy and hands. No text, no logos, no watermarks, no artificial SaaS art, no illustrations, no fake UI; laptop screens must be oblique or unseen with no readable content. These are decorative fictional campaign models. Primary request: Adult Latina Spanish teacher at laptop in a clean bright studio workspace, lively natural pointing gesture toward laptop while engaged in teaching. Blue shirt, charming confident friendly expression, laptop partly visible in foreground. The view sees the outer back of the laptop and no screen.",
+      "webp": "ele.webp"
+    },
+    {
+      "name": "conversation",
+      "prompt": "Use case: photorealistic-natural. Asset type: SPANISHCUE Spanish education campaign website hero photograph. Premium editorial campaign photography, candid expressive adults with realistic skin texture, natural gestures and warm confidence, deep blue and cyan wardrobe accents, neutral bright white workspace. Landscape 1536x1024 composition, waist-up framing with a little breathing room. Daylight, sophisticated photographic composition, plausible anatomy and hands. No text, no logos, no watermarks, no artificial SaaS art, no illustrations, no fake UI; laptop screens must be oblique or unseen with no readable content. These are decorative fictional campaign models. Primary request: Adult male Spanish teacher and adult female learner reacting and laughing in a discussion. Both seated at table, engaging eye contact between them, a laptop partly visible in the scene. Lively candid moment, informal contemporary workspace, non-corporate wardrobe in blue and cream. Screen oblique or unseen.",
+      "webp": "conversation.webp"
+    },
+    {
+      "name": "online",
+      "prompt": "Use case: photorealistic-natural. Asset type: SPANISHCUE Spanish education campaign website hero photograph. Premium editorial campaign photography, candid expressive adults with realistic skin texture, natural gestures and warm confidence, deep blue and cyan wardrobe accents, neutral bright white workspace. Landscape 1536x1024 composition, waist-up framing with a little breathing room. Daylight, sophisticated photographic composition, plausible anatomy and hands. No text, no logos, no watermarks, no artificial SaaS art, no illustrations, no fake UI; laptop screens must be oblique or unseen with no readable content. These are decorative fictional campaign models. Primary request: Adult Black woman professional remote Spanish tutor at laptop, wearing tasteful over-ear headphones, natural expressive hand gesture as she explains a concept, warm engaged smile. Contemporary daylight workspace, clean white desk, navy blouse with small cyan accent. View sees the back of laptop, not its screen.",
+      "webp": "online.webp"
+    },
+    {
+      "name": "free-lesson",
+      "prompt": "Use case: photorealistic-natural. Asset type: SPANISHCUE Spanish education campaign website hero photograph. Premium editorial campaign photography, candid expressive adults with realistic skin texture, natural gestures and warm confidence, deep blue and cyan wardrobe accents, neutral bright white workspace. Landscape 1536x1024 composition, waist-up framing with a little breathing room. Daylight, sophisticated photographic composition, plausible anatomy and hands. No text, no logos, no watermarks, no artificial SaaS art, no illustrations, no fake UI; laptop screens must be oblique or unseen with no readable content. These are decorative fictional campaign models. Primary request: Adult male Spanish teacher choosing or opening a lesson on his laptop, delighted engaged look directed toward laptop, one hand resting naturally near trackpad. Premium candid teaching campaign photograph, casual deep blue overshirt over white t-shirt, bright modern white workspace. Generous clean desk product space at front foreground. Laptop screen unseen or oblique with no invented interface.",
+      "webp": "free-lesson.webp"
+    }
+  ]
+}

@@ -3,6 +3,11 @@ import { consentFor } from "../privacy/consent";
 export const marketingEvents = [
   "landing_view",
   "cta_click",
+  "primary_cta_click",
+  "founder_offer_view",
+  "founder_modal_view",
+  "founder_modal_click",
+  "subscription_complete",
   "lesson_preview_open",
   "free_lesson_start",
   "signup_start",
@@ -126,7 +131,16 @@ export function trackMarketingEvent(
   properties: Record<string, string | number | boolean | null | undefined> = {},
 ) {
   if (typeof window === "undefined") return;
+  // Functional session suppression must survive navigation and analytics opt-out.
+  if (event === "signup_complete" || event === "subscription_first_paid" || event === "subscription_complete") {
+    try { window.sessionStorage.setItem("spanishcue.founder-modal.converted", "1"); } catch {}
+  }
   if (!consentFor("analytics")) return;
+  // Keep the existing confirmed, server-deduplicated payment event as the authority.
+  // The requested reporting alias is emitted only with that same transaction.
+  if (event === "subscription_first_paid" && properties.transaction_id) {
+    trackMarketingEvent("subscription_complete", properties);
+  }
   const attribution = captureMarketingAttribution();
   const payload: Record<string, unknown> = {
     event,
