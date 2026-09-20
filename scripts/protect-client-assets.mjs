@@ -59,6 +59,7 @@ const publicRoots = new Set([
   "app/PasswordResetButton.tsx",
   "app/acceso/CheckoutButton.tsx",
   "app/acceso/FounderAccessForm.tsx",
+  "app/auth/action/VerificationAction.tsx",
   "app/error.tsx",
   "app/ingresar/AuthForm.tsx",
   "app/marketing/FreeLessonRegistrationGate.tsx",
