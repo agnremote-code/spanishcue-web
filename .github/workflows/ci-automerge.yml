@@ -1,0 +1,83 @@
+name: CI + Auto Merge
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  verify:
+    if: >
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out PR merge candidate
+        uses: actions/checkout@v4
+
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.13.0"
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Run full regression suite
+        run: npm test
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Revalidate deployable artifact
+        run: npm run validate:artifact
+
+      - name: Reject whitespace errors
+        run: git diff --check origin/main...HEAD
+
+  merge:
+    needs: verify
+    if: >
+      needs.verify.result == 'success' &&
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+      EXPECTED_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      HEAD_REF: ${{ github.event.pull_request.head.ref }}
+
+    steps:
+      - name: Confirm PR head did not move
+        run: |
+          CURRENT_HEAD="$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --jq '.head.sha')"
+          test "$CURRENT_HEAD" = "$EXPECTED_HEAD_SHA"
+
+      - name: Merge verified PR
+        run: |
+          RESULT="$(gh api             --method PUT             "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}/merge"             -f sha="$EXPECTED_HEAD_SHA"             -f merge_method="merge")"
+          echo "$RESULT"
+          test "$(echo "$RESULT" | jq -r '.merged')" = "true"
+
+      - name: Delete merged branch
+        continue-on-error: true
+        run: |
+          ENCODED_REF="$(python - <<'PY'
+          import os, urllib.parse
+          print(urllib.parse.quote(os.environ["HEAD_REF"], safe=""))
+          PY
+          )"
+          gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${ENCODED_REF}"
