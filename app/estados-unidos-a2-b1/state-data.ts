@@ -5,7 +5,7 @@ export type StateRegion="noreste"|"sur"|"medio-oeste"|"montañas"|"pacifico";
 export type USState={
   code:string;number:string;atlasName:string;name:string;nameEn:string;capital:string;
   region:StateRegion;color:string;sceneItems:string[];hook:Pair;fact:Pair;mission:Pair;
-  words:Pair[];questions:Pair[];questionFallbacks:Pair[];
+  words:Pair[];a2Questions:Pair[];b1Extension:Pair;questions:Pair[];questionFallbacks:Pair[];
 };
 
 const p=(es:string,en:string=""):Pair=>({es,en});
@@ -73,17 +73,21 @@ export const states:USState[]=raw.trim().split("\n").map((line,index)=>{
   const [code,atlasName,name,capital,region,items,hook]=line.split("|") as [string,string,string,string,StateRegion,string,string];
   const places=placesByCode[code];
   const placeNames=places.map(place=>place.name).join(", ");
+  const a2Questions=[
+    p(`Mirá las cuatro paradas de ${name}. ¿Cuál querés visitar primero y por qué?`,`Look at the four ${atlasName} stops. Which one do you want to visit first, and why?`),
+    p(`Imaginá un fin de semana en ${name}. ¿Preferís ciudad, naturaleza, comida o música?`,`Imagine a weekend in ${atlasName}. Do you prefer a city, nature, food or music?`),
+    p(`¿Te gustaría vivir un mes en ${name}? Contá cómo sería un día normal.`,`Would you like to live in ${atlasName} for one month? Describe a normal day.`),
+    p(`En tu región, ¿hay un paisaje o una actividad parecida a ${hook.toLowerCase()}?`,`In your region, is there a landscape or activity similar to ${hook.toLowerCase()}?`),
+    p(`¿Qué persona disfrutaría más de ${name}: alguien activo, tranquilo, urbano o aventurero?`,`Who would enjoy ${atlasName} most: an active, calm, urban or adventurous person?`),
+  ];
+  const b1Extension=p(`En ${name}, ¿qué tensión podría existir entre recibir visitantes y proteger la vida local? Proponé un equilibrio.`,`In ${atlasName}, what tension could exist between welcoming visitors and protecting local life? Propose a balance.`);
   return {
     code,atlasName,name,nameEn:atlasName,capital,region,number:String(index+1).padStart(2,"0"),
     color:palette[index%palette.length],sceneItems:items.split(","),hook:p(hook),
     fact:p(`Este recorrido conecta ${placeNames}: cuatro formas distintas de entender ${name}.`,`This route connects ${placeNames}: four different ways to understand ${atlasName}.`),
     mission:p(`Elegí una parada de ${name}, explicá por qué y comparala con un lugar que conocés.`,`Choose one ${atlasName} stop, explain why and compare it with a place you know.`),
     words:[p("la capital","state capital"),p("el paisaje","landscape"),p("la comunidad","community"),p("la tradición local","local tradition"),p("el viaje por carretera","road trip"),p("comparar","to compare")],
-    questions:[
-      ...places.map(place=>place.prompt),
-      p(`En ${name}, las cuatro paradas muestran ${hook.toLowerCase()}. ¿Cuál representa mejor al estado y cuál te sorprende más?`,`In ${atlasName}, the four stops reveal ${hook.toLowerCase()}. Which one best represents the state, and which surprises you most?`),
-      p(`Si tuvieras que explicar ${name} usando solo dos lugares —${placeNames}—, ¿cuáles elegirías y qué historia contarías?`,`If you had to explain ${atlasName} using only two of these places, which would you choose and what story would you tell?`),
-    ],
+    a2Questions,b1Extension,questions:[...a2Questions,b1Extension],
     questionFallbacks:[
       ...places.map(place=>place.fallback),
       p("Si no conocés este estado: ¿qué te ayuda más a entender un lugar nuevo: su naturaleza, sus ciudades, su historia o su comida?","If you do not know this state: what helps you understand a new place most—nature, cities, history or food?"),
@@ -91,6 +95,18 @@ export const states:USState[]=raw.trim().split("\n").map((line,index)=>{
     ],
   };
 });
+
+export const dcBonus={
+  code:"DC",name:"Washington, D.C.",label:p("Distrito federal · bonus","Federal district · bonus"),
+  hook:p("No cuenta entre los 50 estados: suma una conversación sobre capitales, símbolos y vida cívica.","It is not one of the 50 states: it adds a conversation about capitals, symbols and civic life."),
+  questions:[
+    p("¿Te gustaría vivir en la capital de tu país? ¿Por qué?","Would you like to live in your country's capital? Why?"),
+    p("¿Qué lugar público representa mejor a tu ciudad?","Which public place best represents your city?"),
+    p("¿Una capital debe ser también la ciudad más importante del país?","Should a capital also be the country's most important city?"),
+  ],
+};
+
+export const usaModes=["EXPLORE","RANDOM","THIS OR THAT","WHERE WOULD YOU LIVE?","YOUR COUNTRY VS USA","MY UNITED STATES"] as const;
 
 export const starters=[p("Yo empezaría por… porque…","I would start with… because…"),p("Para mí, la mejor opción es…","For me, the best option is…"),p("Comparado con mi ciudad…","Compared with my city…"),p("Lo más interesante sería…","The most interesting thing would be…")];
 export const connectors=[p("porque","because"),p("además","in addition"),p("sin embargo","however"),p("por ejemplo","for example"),p("en cambio","whereas"),p("por eso","that is why")];

@@ -52,7 +52,7 @@ test("final protected build absorbs a late static asset copy", async () => {
     let stderr = "";
     child.stderr.setEncoding("utf8");
     child.stderr.on("data", (chunk) => (stderr += chunk));
-    setTimeout(() => clearInterval(writer), 250);
+    setTimeout(() => clearInterval(writer), 2_250);
     const exitCode = await new Promise((resolve, reject) => {
       child.once("error", reject);
       child.once("exit", resolve);

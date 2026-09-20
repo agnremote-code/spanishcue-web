@@ -55,7 +55,7 @@ await rm(displacedRoot, { recursive: true, force: true });
 
 const pause = (milliseconds) =>
   new Promise((resolvePause) => setTimeout(resolvePause, milliseconds));
-const deadline = Date.now() + 2_000;
+const deadline = Date.now() + 10_000;
 let stableChecks = 0;
 let recreatedPaths = [];
 while (Date.now() < deadline) {
@@ -73,9 +73,9 @@ while (Date.now() < deadline) {
     }
   }
   stableChecks = recreatedPaths.length === 0 ? stableChecks + 1 : 0;
-  if (stableChecks >= 4) break;
+  if (stableChecks >= 12) break;
 }
-if (stableChecks < 4) {
+if (stableChecks < 12) {
   throw new Error(
     `Protected assets kept reappearing in final build: ${recreatedPaths.join(", ")}`,
   );
