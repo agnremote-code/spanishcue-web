@@ -18,7 +18,7 @@ function safeReturnTo(value: string | undefined): string {
 export default async function SignInPage({
   searchParams,
 }: {
-  searchParams: Promise<{ modo?: string; returnTo?: string }>;
+  searchParams: Promise<{ modo?: string; returnTo?: string; verification?: string }>;
 }) {
   const params = await searchParams;
   const returnTo = safeReturnTo(params.returnTo);
@@ -36,6 +36,7 @@ export default async function SignInPage({
         initialMode={params.modo === "registro" ? "registro" : "entrar"}
         returnTo={returnTo}
         appleEnabled={runtimeEnv.CHESPANISH_APPLE_AUTH_ENABLED === "true"}
+        initialVerificationPending={params.verification === "resend"}
       />
     </main>
   );

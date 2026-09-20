@@ -14,13 +14,14 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  type ActionCodeSettings,
   type User,
 } from "firebase/auth";
 import { FormEvent, type KeyboardEvent as ReactKeyboardEvent, useRef, useState } from "react";
 import Link from "next/link";
 import { firebaseAuth } from "../firebase-client";
 import { useI18n } from "../i18n/LocaleProvider";
-import type { MessageKey } from "../i18n/messages";
+import type { Locale, MessageKey } from "../i18n/messages";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import { trackMarketingEvent } from "../marketing/analytics";
 
@@ -54,10 +55,17 @@ async function preparePersistence() {
   throw authError("auth/web-storage-unsupported");
 }
 
-async function sendVerificationAndSignOut(user: User) {
-  firebaseAuth.useDeviceLanguage();
+function verificationActionSettings(locale: Locale): ActionCodeSettings {
+  return {
+    url: `https://spanishcue.com/auth/action?lang=${locale}&status=success`,
+    handleCodeInApp: false,
+  };
+}
+
+async function sendVerificationAndSignOut(user: User, locale: Locale) {
+  firebaseAuth.languageCode = locale;
   try {
-    await sendEmailVerification(user);
+    await sendEmailVerification(user, verificationActionSettings(locale));
   } finally {
     await signOut(firebaseAuth).catch(() => undefined);
   }
@@ -124,19 +132,21 @@ export default function AuthForm({
   initialMode,
   returnTo,
   appleEnabled,
+  initialVerificationPending = false,
 }: {
   initialMode: Mode;
   returnTo: string;
   appleEnabled: boolean;
+  initialVerificationPending?: boolean;
 }) {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [notice, setNotice] = useState("");
-  const [verificationPending, setVerificationPending] = useState(false);
+  const [notice, setNotice] = useState(initialVerificationPending ? t("auth.verifyRequired") : "");
+  const [verificationPending, setVerificationPending] = useState(initialVerificationPending);
   const authAttemptRef = useRef(false);
   const loginTabRef = useRef<HTMLButtonElement>(null);
   const registerTabRef = useRef<HTMLButtonElement>(null);
@@ -178,7 +188,7 @@ export default function AuthForm({
       if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
       if (!result.user.emailVerified) {
         if (result.newAccount) {
-          await sendVerificationAndSignOut(result.user);
+          await sendVerificationAndSignOut(result.user, locale);
         } else {
           await signOut(firebaseAuth).catch(() => undefined);
         }
@@ -208,6 +218,7 @@ export default function AuthForm({
   };
 
   const resendVerification = async () => {
+    if (authAttemptRef.current) return;
     const cleanEmail = email.trim().toLowerCase();
     if (!cleanEmail) {
       setError(t("auth.error.emailFirst"));
@@ -217,6 +228,7 @@ export default function AuthForm({
       setError(t("auth.error.passwordFirst"));
       return;
     }
+    authAttemptRef.current = true;
     setBusy(true);
     setError("");
     setNotice("");
@@ -227,12 +239,13 @@ export default function AuthForm({
         await establishSession(credential.user, returnTo);
         return;
       }
-      await sendVerificationAndSignOut(credential.user);
+      await sendVerificationAndSignOut(credential.user, locale);
       setVerificationPending(true);
       setNotice(t("auth.verifyResent"));
     } catch (reason) {
       setError(t(authMessageKeyFor(reason)));
     } finally {
+      authAttemptRef.current = false;
       setBusy(false);
     }
   };
