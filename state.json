@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "busy",
+  "status": "idle",
   "healthy": {
-    "sha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
-    "versionNumber": 162,
-    "deploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
-    "envSetRevision": 14,
+    "sha": "b615d3e78e3e49b2c4f1d56c42ac7c7d9099b19b",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_73bd619d81308191bb9a402d0ba2d621",
+    "versionNumber": 163,
+    "deploymentId": "appgdep_6ab00a3ff73c819193a00d57bffe6339",
+    "envSetRevision": 18,
     "smoke": {
       "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-20T13:23:41.289Z"
+      "checks": 14,
+      "completedAt": "2026-09-20T16:33:49.900Z"
     }
   },
   "history": [
@@ -38,6 +38,35 @@
           "passed": true,
           "checks": 10,
           "completedAt": "2026-09-20T13:23:41.289Z"
+        }
+      }
+    },
+    {
+      "owner": "inline-b615-1789921529796",
+      "startedAt": "2026-09-20T16:25:30.663Z",
+      "finishedAt": "2026-09-20T16:33:49.900Z",
+      "previous": {
+        "sha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
+        "versionNumber": 162,
+        "deploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
+        "envSetRevision": 14,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-20T13:23:41.289Z"
+        }
+      },
+      "healthy": {
+        "sha": "b615d3e78e3e49b2c4f1d56c42ac7c7d9099b19b",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_73bd619d81308191bb9a402d0ba2d621",
+        "versionNumber": 163,
+        "deploymentId": "appgdep_6ab00a3ff73c819193a00d57bffe6339",
+        "envSetRevision": 18,
+        "smoke": {
+          "passed": true,
+          "checks": 14,
+          "completedAt": "2026-09-20T16:33:49.900Z"
         }
       }
     }
@@ -71,25 +100,5 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": [],
-  "owner": "inline-b615-1789921529796",
-  "candidateSha": "b615d3e78e3e49b2c4f1d56c42ac7c7d9099b19b",
-  "previous": {
-    "sha": "57fa95307f7696072aa9bab9867f159f5ce4a821",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_d167ca0d529c8191b9400acd60959222",
-    "versionNumber": 162,
-    "deploymentId": "appgdep_6aafddb178ac819180e1c44195e7adad",
-    "envSetRevision": 14,
-    "smoke": {
-      "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-20T13:23:41.289Z"
-    }
-  },
-  "startedAt": "2026-09-20T16:25:30.663Z",
-  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_73bd619d81308191bb9a402d0ba2d621",
-  "candidateVersionNumber": 163,
-  "candidateDeploymentId": "appgdep_6ab00a3ff73c819193a00d57bffe6339",
-  "candidateEnvSetRevision": 18,
-  "deploymentStarted": true
+  "failedShas": []
 }
