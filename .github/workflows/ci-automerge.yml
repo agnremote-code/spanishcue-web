@@ -171,14 +171,12 @@ jobs:
           echo "$RESULT"
           test "$(echo "$RESULT" | jq -r '.merged')" = "true"
 
-          ENCODED_ROLLBACK_REF="$(python - <<'PY'
-          import os, urllib.parse
-          print(urllib.parse.quote(os.environ["ROLLBACK_BRANCH"], safe=""))
+          ENCODED_ROLLBACK_REF="$(python - "$ROLLBACK_BRANCH" <<'PY'
+          import sys, urllib.parse
+          print(urllib.parse.quote(sys.argv[1], safe=""))
           PY
           )"
           gh api --method DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${ENCODED_ROLLBACK_REF}" || true
-        env:
-          ROLLBACK_BRANCH: ""
 
       - name: Delete merged feature branch
         if: steps.postmerge.outcome == 'success'
