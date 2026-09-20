@@ -1,45 +1,72 @@
-# SpanishCue · Required Owner Actions (Alejandro)
+# SPANISHCUE · Owner / External-Service Actions
 
-The following actions genuinely require manual intervention by the project owner (Alejandro). All technical agent tasks remain blocked on these external dependencies where specified.
+This file lists only actions that cannot be proven or safely completed from repository source alone.
 
----
+## 1. Production release state
 
-## 1. Payment Provider Setup (PayPal Sandbox & Production)
+GitHub can verify source and merge safety, but it cannot currently prove which commit OpenAI Sites is serving.
 
-### Action 1.1: Create PayPal Developer Application & Obtain Credentials
-- **Where to do it**: PayPal Developer Dashboard ([developer.paypal.com](https://developer.paypal.com)) -> Apps & Credentials.
-- **Why it is needed**: To allow the application to process payments, initiate subscriptions, and render the PayPal SDK checkout buttons.
-- **Credential Variable Names Needed**:
-  - `NEXT_PUBLIC_PAYPAL_CLIENT_ID` (Sandbox & Live)
-  - `PAYPAL_CLIENT_SECRET` (Sandbox & Live)
+Before calling a release complete, verify through the existing Sites deployment path:
 
-### Action 1.2: Configure Webhook URL in PayPal Dashboard
-- **Where to do it**: PayPal Developer Dashboard -> My Apps & Credentials -> App Details -> Webhooks.
-- **Why it is needed**: To notify SpanishCue when a subscription payment succeeds, recurs, or fails, so user PRO entitlements stay synced in real time.
-- **Credential Variable Name Needed**:
-  - `PAYPAL_WEBHOOK_ID`
+- exact production deployment/version;
+- exact deployed Git commit;
+- production smoke result after publication;
+- rollback target/version.
 
----
+Do not redeploy a commit merely because its GitHub PR merged.
 
-## 2. Environment Variables & Cloudflare Secrets Configuration
+## 2. Production D1 state
 
-### Action 2.1: Bind PayPal Credentials to Sites / Cloudflare Worker Environment
-- **Where to do it**: OpenAI Sites / Cloudflare Environment Settings dashboard or CLI secret binding commands.
-- **Why it is needed**: To allow server-side payment and webhook handlers to securely authenticate with PayPal APIs without committing credentials to source control.
-- **Variables to Bind**:
-  - `PAYPAL_ENV` (`sandbox` or `live`)
-  - `NEXT_PUBLIC_PAYPAL_CLIENT_ID`
-  - `PAYPAL_CLIENT_SECRET`
-  - `PAYPAL_WEBHOOK_ID`
+The repository contains the schema and migrations, but source control does not prove production migration state.
 
----
+Before applying any production migration:
 
-## 3. Product & Commercial Policy Decisions
+- take/confirm the required production backup;
+- inspect which migrations are already applied;
+- apply only missing ordered migrations;
+- verify application health after the migration.
 
-### Action 3.1: Confirm Brand & Domain Strategy
-- **Where to do it**: Decision in project configuration / metadata.
-- **Why it is needed**: Codebase currently references `CHESPANISH Teacher Studio` (`biblioteca-espanol.agnremote.chatgpt.site`), whereas the launch target is `SpanishCue`. Clear alignment is needed before final payment webhooks, transactional communications, and legal terms.
+Never replay migrations blindly.
 
-### Action 3.2: Review & Approve Terms of Service and Privacy Policy
-- **Where to do it**: Legal documentation review.
-- **Why it is needed**: Required before accepting live commercial transactions.
+## 3. PayPal external configuration
+
+The PayPal integration already exists in code. **Do not create duplicate PayPal products, plans, apps, or webhooks merely because an old audit says they are missing.**
+
+External verification is still required for whichever environment is being released:
+
+- client ID / secret binding;
+- configured product and plan IDs;
+- webhook ID and callback URL;
+- required webhook event subscriptions;
+- Sandbox vs Live environment;
+- explicit approval before enabling Live checkout.
+
+Live charging is not authorized by a GitHub merge.
+
+## 4. Firebase verification-email deliverability
+
+Application-side verification and branded verification flows exist, but sender reputation, custom sender/domain configuration, DNS authentication, and mailbox placement are external to GitHub.
+
+If deliverability work is still incomplete, verify the Firebase/custom-email configuration and required DNS records in the owning dashboards. Do not weaken email verification to work around deliverability.
+
+## 5. Analytics and Ads
+
+GA4 integration exists and requires consent. External configuration still determines whether measurement is actually active.
+
+- Verify the intended GA4 measurement ID in the production environment.
+- Keep Google Ads inactive until campaign/landing configuration is intentionally approved.
+- Do not infer Ads activation from analytics code or landing-page assets.
+
+## 6. Legal/commercial approval
+
+Legal/privacy/refund pages exist in code. Final commercial/legal approval remains a human decision, especially before Live payments are enabled.
+
+## No longer pending owner decisions
+
+The following old audit items are no longer valid owner blockers:
+
+- choosing between CHESPANISH and SPANISHCUE as the product/domain identity;
+- creating the core D1 account/subscription/student schema;
+- building the account/student dashboard;
+- implementing the PayPal application integration;
+- adding baseline legal, SEO, sitemap/robots, and consent-gated analytics code.
