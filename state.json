@@ -6,12 +6,12 @@
     "sha": "6dca22b04579066845356c777cef96626f2b14f5",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
     "versionNumber": 164,
-    "deploymentId": "appgdep_6ab0cc5d3ca88191a1ed7762e7dec5cc",
-    "envSetRevision": 18,
+    "deploymentId": "appgdep_6ab0d17becd88191b2609d03a0f771b5",
+    "envSetRevision": 19,
     "smoke": {
       "passed": true,
-      "checks": 16,
-      "completedAt": "2026-09-21T06:26:25.539Z"
+      "checks": 10,
+      "completedAt": "2026-09-21T06:43:37.454Z"
     }
   },
   "history": [
@@ -98,6 +98,36 @@
           "completedAt": "2026-09-21T06:26:25.539Z"
         }
       }
+    },
+    {
+      "owner": "env-paypal-gate-1789973017454",
+      "startedAt": "2026-09-21T06:43:37.454Z",
+      "finishedAt": "2026-09-21T06:43:37.454Z",
+      "previous": {
+        "sha": "6dca22b04579066845356c777cef96626f2b14f5",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
+        "versionNumber": 164,
+        "deploymentId": "appgdep_6ab0cc5d3ca88191a1ed7762e7dec5cc",
+        "envSetRevision": 18,
+        "smoke": {
+          "passed": true,
+          "checks": 16,
+          "completedAt": "2026-09-21T06:26:25.539Z"
+        }
+      },
+      "healthy": {
+        "sha": "6dca22b04579066845356c777cef96626f2b14f5",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
+        "versionNumber": 164,
+        "deploymentId": "appgdep_6ab0d17becd88191b2609d03a0f771b5",
+        "envSetRevision": 19,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-21T06:43:37.454Z"
+        }
+      },
+      "reason": "paypal-live-preparation-public-checkout-disabled"
     }
   ],
   "bootstrap": {
