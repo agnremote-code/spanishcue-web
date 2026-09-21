@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "idle",
+  "status": "busy",
   "healthy": {
     "sha": "b615d3e78e3e49b2c4f1d56c42ac7c7d9099b19b",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_73bd619d81308191bb9a402d0ba2d621",
@@ -100,5 +100,20 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": []
+  "failedShas": [],
+  "owner": "inline-6dca-1789971094926",
+  "candidateSha": "6dca22b04579066845356c777cef96626f2b14f5",
+  "previous": {
+    "sha": "b615d3e78e3e49b2c4f1d56c42ac7c7d9099b19b",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_73bd619d81308191bb9a402d0ba2d621",
+    "versionNumber": 163,
+    "deploymentId": "appgdep_6ab00a3ff73c819193a00d57bffe6339",
+    "envSetRevision": 18,
+    "smoke": {
+      "passed": true,
+      "checks": 14,
+      "completedAt": "2026-09-20T16:33:49.900Z"
+    }
+  },
+  "startedAt": "2026-09-21T06:11:41.399Z"
 }
