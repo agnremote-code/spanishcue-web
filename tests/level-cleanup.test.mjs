@@ -16,7 +16,7 @@ const lessons = JSON.parse(execFileSync(process.execPath, [
 ], { cwd: root, encoding: 'utf8' }));
 
 test('all former A0 lessons are A1 without A0 metadata', () => {
-  assert.equal(lessons.length, 103);
+  assert.equal(lessons.length, 105);
   for (const id of movedLessonIds) {
     const lesson = lessons.find((candidate) => candidate.id === id);
     assert.ok(lesson, `missing lesson ${id}`);
@@ -37,7 +37,7 @@ test('public level navigation and shelves begin at A1', () => {
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 28);
+  assert.equal(a1Lessons.length, 30);
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);
   assert.deepEqual(idsFor('Conversación').slice(0, 4), [27, 24, 26, 19]);
