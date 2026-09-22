@@ -21,6 +21,15 @@ test('each category has exactly two fixed, matching free lessons',()=>{
  assert.equal(new Set(p.lessons.map(l=>l.id)).size,p.lessons.length);
 });
 
+test('the adult body exploration belongs to B1 conversation and keeps full-library access',()=>{
+ const lesson=p.lessonAtPath('/la-vida-despues-de-los-30',p.lessons);
+ assert.ok(lesson,'missing adult body exploration route');
+ assert.equal(lesson.level,'B1');
+ assert.equal(lesson.category,'Conversación');
+ assert.equal(p.isFreeLesson(lesson.id),false);
+ assert.equal(p.lessonAtPath('/la-vida-despues-de-los-30/',p.lessons)?.id,lesson.id);
+});
+
 test('home product samples are unique, routable and free by central access metadata',()=>{
  const catalog=p.lessons.map(lesson=>({...lesson,free:p.isFreeLesson(lesson.id),href:p.localLessonPath(lesson)||''}));
  const samples=p.selectFreeProductSamples(catalog);
