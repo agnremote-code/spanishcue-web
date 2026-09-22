@@ -1,4 +1,4 @@
-export type SyntaxMode = "connector" | "clause";
+export type SyntaxMode = "connector" | "clause" | "timeline" | "decision";
 
 export type SyntaxPattern = {
   key: string;
@@ -30,7 +30,7 @@ export type SyntaxRepair = {
 
 export type SyntaxLabData = {
   slug: string;
-  level: "A1";
+  level: "A1" | "A2";
   category: "Gramática";
   mode: SyntaxMode;
   module: string;
@@ -605,4 +605,175 @@ export const ideasDentroDeIdeas: SyntaxLabData = {
     { question: "¿Qué creés que hace buena una clase?", starter: "Creo que una buena clase…", followUp: "¿Por qué esa característica es importante?" },
   ],
   finalTask: "Mi mapa A1: conversá durante 3–5 minutos sobre algo que te gusta hacer, algo que querés hacer, una opinión, una persona o cosa con que, una razón con porque y un objetivo con para + infinitivo.",
+};
+
+export const antesDespuesCuando: SyntaxLabData = {
+  slug: "antes-despues-cuando",
+  level: "A2",
+  category: "Gramática",
+  mode: "timeline",
+  module: "MÓDULO 15.3.1 · A2",
+  pcic: "PCIC 15.3.1 · temporales A2",
+  title: "Antes, después, cuando",
+  displayTitle: "Antes, después,\ncuando",
+  subtitle: "Organizá rutinas y procesos como una secuencia clara, no como frases sueltas",
+  goal: "Narrar secuencias habituales o factuales con antes de, después de y cuando, y explicarlas con naturalidad.",
+  accent: "#55d6be",
+  accent2: "#ffd166",
+  productiveTargets: ["antes de + infinitivo", "después de + infinitivo", "cuando + presente de indicativo"],
+  boundaries: "Trabajamos acciones del mismo sujeto y hechos habituales en presente. La referencia temporal futura y otras combinaciones quedan fuera de esta clase A2.",
+  timeline: [
+    { label: "Activación", minutes: 5 },
+    { label: "Descubrimiento", minutes: 7 },
+    { label: "Línea guiada", minutes: 8 },
+    { label: "Contraste", minutes: 7 },
+    { label: "Recuperación", minutes: 6 },
+    { label: "Repetición", minutes: 5 },
+    { label: "Conversación", minutes: 7 },
+  ],
+  activation: {
+    instruction: "Ordená las acciones primero. Después explicá qué ocurre antes, qué ocurre después y qué pasa habitualmente en ese momento.",
+    cards: [
+      { first: "suena la alarma", second: "me levanto", intention: "ORDENAR" },
+      { first: "desayuno", second: "salgo de casa", intention: "RUTINA" },
+      { first: "llego al trabajo", second: "reviso los mensajes", intention: "MOMENTO" },
+      { first: "compro el billete", second: "subo al tren", intention: "VIAJE" },
+      { first: "termino de cocinar", second: "pongo la mesa", intention: "PROCESO" },
+    ],
+  },
+  patterns: [
+    { key: "antes-de", label: "ANTES DE", intention: "ACCIÓN PREVIA", formula: "ANTES DE + INFINITIVO", example: "Antes de salir, desayuno.", preview: { left: "desayuno", connector: "antes de", right: "salir" }, explanation: "Después de antes de, la acción aparece en infinitivo y se presenta como anterior a la acción principal." },
+    { key: "despues-de", label: "DESPUÉS DE", intention: "ACCIÓN POSTERIOR", formula: "DESPUÉS DE + INFINITIVO", example: "Después de comer, camino un poco.", preview: { left: "como", connector: "después de", right: "caminar" }, explanation: "Después de sitúa una acción terminada como punto anterior; la acción que sigue a de va en infinitivo." },
+    { key: "cuando-presente", label: "CUANDO", intention: "HÁBITO O HECHO", formula: "CUANDO + PRESENTE, PRESENTE", example: "Cuando llego, reviso el correo.", preview: { left: "llego", connector: "cuando", right: "reviso el correo" }, explanation: "Cuando conecta dos hechos habituales o factuales; en esta clase ambos se expresan en presente de indicativo." },
+  ],
+  decisions: [
+    { intention: "ACCIÓN PREVIA", prompt: "Primero te duchás y luego te vestís.", left: "Me ducho", right: "vestirme.", options: ["antes de", "cuando", "después de"], correct: 0, feedback: "La ducha ocurre primero; antes de marca esa relación y vestirme conserva la forma de infinitivo." },
+    { intention: "ACCIÓN POSTERIOR", prompt: "Primero cenás y luego lavás los platos.", left: "Lavo los platos", right: "cenar.", options: ["cuando", "antes de", "después de"], correct: 2, feedback: "Lavar ocurre tras la cena; después de expresa esa cronología y exige el infinitivo cenar." },
+    { intention: "HÁBITO", prompt: "Las dos acciones forman parte de tu rutina al llegar.", left: "Llego a casa", right: "me saco los zapatos.", options: ["después de", "cuando", "antes de"], correct: 1, feedback: "Cuando presenta el momento habitual; llego y me saco aparecen conjugados en presente." },
+    { intention: "PREPARACIÓN", prompt: "Preparás la mochila y luego salís.", left: "Preparo la mochila", right: "salir.", options: ["antes de", "después de", "cuando"], correct: 0, feedback: "Preparar la mochila es la acción previa; salir queda en infinitivo después de la preposición de." },
+    { intention: "VIAJE", prompt: "Bajás del tren y enseguida buscás la salida.", left: "Busco la salida", right: "bajar del tren.", options: ["antes de", "cuando", "después de"], correct: 2, feedback: "Buscar la salida sucede más tarde; después de bajar organiza las dos acciones sin conjugación adicional." },
+    { intention: "HECHO REPETIDO", prompt: "Siempre hacés esto al empezar una reunión.", left: "Empieza la reunión", right: "apago el teléfono.", options: ["cuando", "antes de", "después de"], correct: 0, feedback: "Cuando une dos hechos que se repiten; ambos verbos aparecen en presente de indicativo." },
+    { intention: "COCINA", prompt: "Primero cortás las verduras y luego las cocinás.", left: "Corto las verduras", right: "cocinarlas.", options: ["después de", "antes de", "cuando"], correct: 1, feedback: "Cortar ocurre antes; el pronombre se une correctamente al infinitivo cocinarlas tras antes de." },
+    { intention: "FIN DE JORNADA", prompt: "Terminás de trabajar y luego llamás a una amiga.", left: "Llamo a una amiga", right: "terminar de trabajar.", options: ["después de", "cuando", "antes de"], correct: 0, feedback: "La llamada es posterior; después de terminar expresa el orden y mantiene terminar en infinitivo." },
+    { intention: "RUTINA", prompt: "Esto sucede cada vez que viajás en autobús.", left: "Viajo en autobús", right: "escucho música.", options: ["antes de", "después de", "cuando"], correct: 2, feedback: "Cuando introduce una situación habitual y permite conjugar las dos acciones en presente." },
+    { intention: "ORGANIZACIÓN", prompt: "Revisás la dirección y después pedís el taxi.", left: "Reviso la dirección", right: "pedir el taxi.", options: ["antes de", "cuando", "después de"], correct: 0, feedback: "La revisión precede al pedido; antes de pedir mantiene clara la secuencia y usa infinitivo." },
+  ],
+  questionAnswerCycle: [],
+  repairs: [
+    { prompt: "Después de antes de necesitamos infinitivo.", original: "Antes de salgo, preparo la mochila.", options: ["Antes de salir, preparo la mochila.", "Cuando salir, preparo la mochila.", "Después de salgo, preparo la mochila."], correct: 0, feedback: "Salir va en infinitivo porque aparece inmediatamente después de antes de." },
+    { prompt: "Después de después de también necesitamos infinitivo.", original: "Después de termino, llamo a Ana.", options: ["Después de terminar, llamo a Ana.", "Después de termino, llamo a Ana.", "Antes de terminar, llamo a Ana."], correct: 0, feedback: "Terminar conserva el infinitivo; conjugarlo aquí rompe la estructura seleccionada." },
+    { prompt: "Cuando habitual necesita un verbo conjugado.", original: "Cuando llegar a casa, preparo la cena.", options: ["Cuando llego a casa, preparo la cena.", "Antes de llego a casa, preparo la cena.", "Después de llegar a casa, preparo la cena."], correct: 0, feedback: "Con cuando habitual usamos llego en presente; la opción elegida conserva el significado original." },
+    { prompt: "La cronología debe coincidir con la situación.", original: "Antes de desayunar, me despierto.", options: ["Después de despertarme, desayuno.", "Antes de despertarme, desayuno.", "Cuando desayunar, me despierto."], correct: 0, feedback: "Primero ocurre despertarse y después desayunar; la forma reparada expresa ese orden real." },
+  ],
+  retrieval: [
+    { intention: "MAÑANA", prompt: "Sin conectores visibles: enlazá levantarte, ducharte, desayunar y salir.", challenge: "Usá las tres estructuras y repetí la secuencia sin mirar." },
+    { intention: "TRABAJO", prompt: "Explicá tres acciones habituales desde que llegás al trabajo.", challenge: "Incluí cuando + presente y una estructura con infinitivo." },
+    { intention: "VIAJE", prompt: "Reconstruí un viaje con comprar, esperar, subir y llegar.", challenge: "Cambiá el orden de una frase sin cambiar la cronología." },
+    { intention: "COCINA", prompt: "Describí un proceso sencillo con cuatro acciones.", challenge: "Comprobá que tras de no aparece un verbo conjugado." },
+    { intention: "FIN DE SEMANA", prompt: "Contá una rutina real sin banco de respuestas.", challenge: "Repetila con menos pausas y al menos tres enlaces temporales." },
+  ],
+  production: [
+    { title: "Un día laboral", prompt: "Narrá desde que te levantás hasta que empezás a trabajar.", checklist: ["6 acciones", "las tres estructuras", "orden cronológico claro"] },
+    { title: "Un proceso útil", prompt: "Enseñale al profesor cómo preparás algo o cómo llegás a un lugar.", checklist: ["instrucciones personales", "una reparación si cambia el orden", "sin leer"] },
+    { title: "Cambio de contexto", prompt: "Repetí la secuencia para un día de viaje o un fin de semana.", checklist: ["menos apoyo", "conectores variados", "una repregunta natural"] },
+  ],
+  conversationMinutes: 7,
+  conversation: [
+    { question: "¿Qué hacés antes de salir de casa?", starter: "Antes de salir…", followUp: "¿Qué cambia cuando tenés prisa?" },
+    { question: "¿Qué hacés después de terminar de trabajar o estudiar?", starter: "Después de terminar…", followUp: "¿Lo hacés todos los días?" },
+    { question: "¿Qué pasa cuando llegás tarde a un lugar?", starter: "Cuando llego tarde…", followUp: "¿Qué hacés primero en esa situación?" },
+    { question: "¿Cómo preparás una comida sencilla?", starter: "Antes de cocinar…", followUp: "¿Qué hacés después de preparar los ingredientes?" },
+    { question: "¿Cómo es tu rutina antes de dormir?", starter: "Antes de dormir…", followUp: "¿Qué parte te gustaría cambiar?" },
+    { question: "¿Qué hacés cuando viajás en transporte público?", starter: "Cuando viajo…", followUp: "¿Qué hacés antes de subir?" },
+    { question: "¿Cómo cambia tu mañana durante el fin de semana?", starter: "Cuando es fin de semana…", followUp: "¿Qué hacés después de levantarte?" },
+  ],
+  finalTask: "Mi secuencia real de 6 acciones: explicá una rutina o proceso con antes de, después de y cuando; el profesor cambia un detalle y repregunta para sostener la conversación.",
+};
+
+export const siPasaEsto: SyntaxLabData = {
+  slug: "si-pasa-esto",
+  level: "A2",
+  category: "Gramática",
+  mode: "decision",
+  module: "MÓDULO 15.3.6 · A2",
+  pcic: "PCIC 15.3.6 · condicionales A2",
+  title: "Si pasa esto…",
+  displayTitle: "Si pasa\nesto…",
+  subtitle: "Tomá decisiones reales, anticipá consecuencias y negociá un plan que pueda cambiar",
+  goal: "Expresar condiciones reales o posibles y consecuencias prácticas en decisiones cotidianas.",
+  accent: "#ff8f70",
+  accent2: "#7bdff2",
+  productiveTargets: ["si + presente de indicativo", "consecuencia práctica en presente", "si / sí"],
+  boundaries: "La clase se limita a condiciones reales o posibles en presente y consecuencias prácticas. Las hipótesis irreales y combinaciones avanzadas pertenecen a niveles posteriores.",
+  timeline: [
+    { label: "Decisiones rápidas", minutes: 5 },
+    { label: "Descubrimiento", minutes: 7 },
+    { label: "Si / sí", minutes: 6 },
+    { label: "Cadena guiada", minutes: 8 },
+    { label: "Problemas", minutes: 7 },
+    { label: "Recuperación", minutes: 5 },
+    { label: "Negociación", minutes: 7 },
+  ],
+  activation: {
+    instruction: "Elegí una opción y explicá qué consecuencia práctica aparece. La decisión viene primero; la fórmula se descubre después.",
+    cards: [
+      { first: "llueve", second: "llevamos paraguas", intention: "TIEMPO" },
+      { first: "el tren llega tarde", second: "avisamos", intention: "TRANSPORTE" },
+      { first: "no hay entradas", second: "cambiamos el plan", intention: "OCIO" },
+      { first: "tenemos tiempo", second: "caminamos", intention: "HORARIO" },
+      { first: "el precio es alto", second: "comparamos", intention: "DINERO" },
+    ],
+  },
+  patterns: [
+    { key: "condicion-primero", label: "SI PRIMERO", intention: "CONDICIÓN → RESULTADO", formula: "SI + PRESENTE, PRESENTE", example: "Si llueve, llevamos paraguas.", preview: { left: "si llueve", connector: "→", right: "llevamos paraguas" }, explanation: "Si abre una condición real o posible; la consecuencia presenta una acción práctica en presente." },
+    { key: "resultado-primero", label: "RESULTADO PRIMERO", intention: "RESULTADO ← CONDICIÓN", formula: "PRESENTE + SI + PRESENTE", example: "Llevamos paraguas si llueve.", preview: { left: "llevamos paraguas", connector: "si", right: "llueve" }, explanation: "El orden puede cambiar sin alterar la relación: la condición sigue usando presente de indicativo." },
+    { key: "si-si", label: "SI / SÍ", intention: "CONDICIÓN O AFIRMACIÓN", formula: "SI = CONDICIÓN · SÍ = RESPUESTA", example: "Sí, voy si tengo tiempo.", preview: { left: "sí, voy", connector: "si", right: "tengo tiempo" }, explanation: "Si, sin tilde, introduce la condición. Sí, con tilde, confirma o responde afirmativamente." },
+  ],
+  decisions: [
+    { intention: "TIEMPO", prompt: "Puede llover durante el paseo.", left: "Si llueve", right: "llevamos paraguas.", options: ["→", "porque", "aunque"], correct: 0, feedback: "La lluvia funciona como condición posible y llevar paraguas es una consecuencia práctica." },
+    { intention: "TRANSPORTE", prompt: "El tren puede retrasarse.", left: "Si el tren llega tarde", right: "avisamos por mensaje.", options: ["→", "antes de", "para"], correct: 0, feedback: "La llegada tardía activa una decisión concreta; ambos verbos se mantienen en presente." },
+    { intention: "HORARIO", prompt: "El tiempo disponible decide el transporte.", left: "Caminamos", right: "tenemos cuarenta minutos.", options: ["sí", "si", "porque sí"], correct: 1, feedback: "Si sin tilde introduce la condición; el resultado puede aparecer antes sin cambiar la relación." },
+    { intention: "AFIRMACIÓN", prompt: "Confirmás el plan y añadís una condición.", left: "Sí, vamos al parque", right: "hace buen tiempo.", options: ["si", "sí", "cuando de"], correct: 0, feedback: "El primer sí confirma; el segundo si, sin tilde, abre la condición hace buen tiempo." },
+    { intention: "DINERO", prompt: "El precio determina la decisión.", left: "Si cuesta menos de veinte euros", right: "lo compramos.", options: ["→", "antes", "por qué"], correct: 0, feedback: "El precio posible funciona como condición y comprar es la consecuencia práctica acordada." },
+    { intention: "RESERVA", prompt: "La disponibilidad cambia el restaurante.", left: "Buscamos otro lugar", right: "no hay mesa.", options: ["sí", "si", "para"], correct: 1, feedback: "Si conecta la falta de mesa con la decisión de buscar otra opción; no expresa afirmación." },
+    { intention: "SALUD", prompt: "Una sensación real cambia el plan.", left: "Si estás cansado", right: "descansamos un rato.", options: ["→", "después de", "porque"], correct: 0, feedback: "Estar cansado se presenta como condición posible y descansar como respuesta inmediata." },
+    { intention: "PLAN SOCIAL", prompt: "La disponibilidad de Ana define el horario.", left: "Cenamos a las nueve", right: "Ana termina tarde.", options: ["sí", "si", "antes de"], correct: 1, feedback: "Si sin tilde introduce la condición que determina el horario acordado para la cena." },
+    { intention: "TECNOLOGÍA", prompt: "La batería puede terminarse.", left: "Si no hay batería", right: "usamos el mapa de papel.", options: ["→", "cuando de", "para que"], correct: 0, feedback: "La falta de batería es una posibilidad real y usar el mapa es la solución práctica." },
+    { intention: "ELECCIÓN", prompt: "Confirmás una opción bajo una condición.", left: "Sí, pedimos pizza", right: "todos quieren.", options: ["si", "sí", "por qué"], correct: 0, feedback: "Sí confirma la elección; si introduce la condición real todos quieren sin llevar tilde." },
+  ],
+  questionAnswerCycle: [
+    { question: "¿Vamos al parque?", answer: "Sí, si no llueve.", cue: "confirmar / tiempo" },
+    { question: "¿Tomamos el tren?", answer: "Sí, si llega a tiempo.", cue: "confirmar / transporte" },
+    { question: "¿Compramos las entradas?", answer: "Sí, si quedan asientos.", cue: "confirmar / disponibilidad" },
+    { question: "¿Cenamos afuera?", answer: "Sí, si encontramos una mesa.", cue: "confirmar / reserva" },
+  ],
+  repairs: [
+    { prompt: "Distinguí si / sí por su función.", original: "Si, vamos sí hay tiempo.", options: ["Sí, vamos si hay tiempo.", "Si, vamos sí hay tiempo.", "Sí, vamos sí hay tiempo."], correct: 0, feedback: "Sí confirma la respuesta; si sin tilde introduce la condición que debe cumplirse." },
+    { prompt: "La condición A2 usa presente de indicativo.", original: "Si tengo tiempo, llamo después.", options: ["Si tengo tiempo, llamo después.", "Si tiempo, llamo después.", "Sí tengo tiempo si llamo después."], correct: 0, feedback: "Tengo expresa una condición real en presente y llamo presenta su consecuencia práctica." },
+    { prompt: "La consecuencia debe responder al problema.", original: "Si el autobús no llega, esperamos el autobús para siempre.", options: ["Si el autobús no llega, tomamos el metro.", "Sí el autobús no llega, tomamos el metro.", "Tomamos el metro sí el autobús."], correct: 0, feedback: "Tomar el metro resuelve el problema y si, sin tilde, conserva la relación condicional." },
+    { prompt: "El orden puede variar, pero ambas ideas necesitan verbo.", original: "Nos quedamos en casa si lluvia.", options: ["Nos quedamos en casa si llueve.", "Si lluvia, nos quedamos.", "Sí llueve, nos quedamos en casa."], correct: 0, feedback: "Llueve completa la condición en presente; la posición final de la cláusula es perfectamente posible." },
+  ],
+  retrieval: [
+    { intention: "TIEMPO", prompt: "Sin banco de respuestas: proponé dos planes según el tiempo.", challenge: "Variá el orden de una condición sin cambiar su sentido." },
+    { intention: "TRANSPORTE", prompt: "Resolvé un retraso y una cancelación con dos condiciones reales.", challenge: "Usá dos consecuencias prácticas diferentes." },
+    { intention: "DINERO", prompt: "Decidí qué hacés si un precio es alto o bajo.", challenge: "Incluí una confirmación con sí y una condición con si." },
+    { intention: "PLAN SOCIAL", prompt: "Negociá hora, lugar y comida usando palabras clave solamente.", challenge: "Respondé a un cambio sin leer ninguna fórmula." },
+    { intention: "DISPONIBILIDAD", prompt: "Creá una cadena de tres decisiones conectadas.", challenge: "Repetí la cadena con menos pausas y otro orden." },
+  ],
+  production: [
+    { title: "Plan A / Plan B", prompt: "Prepará un plan y dos alternativas para una salida.", checklist: ["3 condiciones reales", "consecuencias útiles", "si / sí correctos"] },
+    { title: "Resolver juntos", prompt: "Respondé a problemas de tiempo, transporte y dinero.", checklist: ["decidir antes de explicar", "variar el orden", "pedir acuerdo"] },
+    { title: "Cadena viva", prompt: "Cada respuesta cambia el escenario siguiente.", checklist: ["sin frases preparadas", "6 condiciones en total", "negociación real"] },
+  ],
+  conversationMinutes: 7,
+  conversation: [
+    { question: "¿Qué hacemos si llueve durante el paseo?", starter: "Si llueve…", followUp: "¿Y si deja de llover temprano?" },
+    { question: "¿Qué hacemos si el tren llega tarde?", starter: "Si llega tarde…", followUp: "¿Aceptás ese plan o proponés otro?" },
+    { question: "¿Compramos las entradas si son caras?", starter: "Sí/No, si…", followUp: "¿Cuál es el precio máximo?" },
+    { question: "¿Qué hacemos si no hay mesa en el restaurante?", starter: "Si no hay mesa…", followUp: "¿Qué opción preferís y por qué?" },
+    { question: "¿Cambiamos la hora si alguien termina tarde?", starter: "Sí, cambiamos… si…", followUp: "¿Qué hora funciona para todos?" },
+    { question: "¿Qué hacemos si el teléfono no tiene batería?", starter: "Si no tiene batería…", followUp: "¿Qué necesitamos preparar antes?" },
+    { question: "¿Cómo organizamos el fin de semana si cada persona quiere algo distinto?", starter: "Si una persona quiere…", followUp: "¿Qué condición te parece más importante?" },
+  ],
+  finalTask: "Una negociación con 6 condiciones: acordá con el profesor un plan real que cambia según el tiempo, transporte, presupuesto y disponibilidad; reaccioná espontáneamente a cada cambio.",
 };

@@ -5,13 +5,22 @@ import Link from "next/link";
 import GrammarStep from "../grammar-steps/GrammarStep";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import type { SyntaxDecision, SyntaxLabData, SyntaxRepair } from "./data";
-import { ClauseBuilder, SentenceConnector } from "./SyntaxVisuals";
+import { ClauseBuilder, DecisionChain, SentenceConnector, TimelineBuilder } from "./SyntaxVisuals";
 import "./style.css";
 
 function SyntaxPreview({ data, left, connector, right }: { data: SyntaxLabData; left: string; connector: string; right: string }) {
-  return data.mode === "connector"
-    ? <SentenceConnector left={left} connector={connector} right={right} />
-    : <ClauseBuilder left={left} connector={connector} right={right} />;
+  if (data.mode === "connector") return <SentenceConnector left={left} connector={connector} right={right} />;
+  if (data.mode === "timeline") return <TimelineBuilder left={left} connector={connector} right={right} />;
+  if (data.mode === "decision") return <DecisionChain left={left} connector={connector} right={right} />;
+  return <ClauseBuilder left={left} connector={connector} right={right} />;
+}
+
+function PatternPreview({ data, pattern }: { data: SyntaxLabData; pattern: SyntaxLabData["patterns"][number] }) {
+  const props = { left: pattern.preview.left, connector: pattern.preview.connector, right: pattern.preview.right, label: pattern.formula };
+  if (data.mode === "connector") return <SentenceConnector {...props} />;
+  if (data.mode === "timeline") return <TimelineBuilder {...props} />;
+  if (data.mode === "decision") return <DecisionChain {...props} />;
+  return <ClauseBuilder {...props} />;
 }
 
 function DecisionCard({ data, item, index }: { data: SyntaxLabData; item: SyntaxDecision; index: number }) {
@@ -91,7 +100,7 @@ export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
         {data.timeline.map((item) => <div key={item.label}><b>{item.minutes} min</b><span>{item.label}</span></div>)}
       </section>
 
-      <section className="sx-boundary"><b>LÍMITE A1</b><p>{data.boundaries}</p></section>
+      <section className="sx-boundary"><b>LÍMITE {data.level}</b><p>{data.boundaries}</p></section>
 
       <section className="grammar-step-stack sx-steps" id="recorrido">
         <GrammarStep number="01" eyebrow={`ACTIVACIÓN · ${data.timeline[0].minutes} MIN`} title="¿Qué relación escuchás?" description="Primero interpretar; después elegir una forma." accent={data.accent}>
@@ -109,9 +118,7 @@ export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
             <article>
               <small>{pattern.intention}</small>
               <h2>{pattern.formula}</h2>
-              {data.mode === "connector"
-                ? <SentenceConnector left={pattern.preview.left} connector={pattern.preview.connector} right={pattern.preview.right} label={pattern.formula} />
-                : <ClauseBuilder left={pattern.preview.left} connector={pattern.preview.connector} right={pattern.preview.right} label={pattern.formula} />}
+              <PatternPreview data={data} pattern={pattern} />
               <p>{pattern.explanation}</p>
             </article>
           </div>
