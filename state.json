@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "busy",
+  "status": "idle",
   "healthy": {
-    "sha": "6dca22b04579066845356c777cef96626f2b14f5",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
-    "versionNumber": 164,
-    "deploymentId": "appgdep_6ab0d17becd88191b2609d03a0f771b5",
-    "envSetRevision": 19,
+    "sha": "72c7a9b9f9129d1368ea097da29a4275c1f8761d",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f290a11fb7ac819189f0bf0626fc2363",
+    "versionNumber": 165,
+    "deploymentId": "appgdep_6ab21fe2df848191bca85fe84bfbb1fa",
+    "envSetRevision": 27,
     "smoke": {
       "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-21T06:43:37.454Z"
-    }
+      "checks": 19,
+      "completedAt": "2026-09-22T06:30:29.015Z"
+    },
+    "runtimeErrors": 0
   },
   "history": [
     {
@@ -128,6 +129,36 @@
         }
       },
       "reason": "paypal-live-preparation-public-checkout-disabled"
+    },
+    {
+      "owner": "inline-vida30-1790058212812",
+      "startedAt": "2026-09-22T06:23:34.555Z",
+      "finishedAt": "2026-09-22T06:31:17.916Z",
+      "previous": {
+        "sha": "6dca22b04579066845356c777cef96626f2b14f5",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
+        "versionNumber": 164,
+        "deploymentId": "appgdep_6ab0d17becd88191b2609d03a0f771b5",
+        "envSetRevision": 19,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-21T06:43:37.454Z"
+        }
+      },
+      "healthy": {
+        "sha": "72c7a9b9f9129d1368ea097da29a4275c1f8761d",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f290a11fb7ac819189f0bf0626fc2363",
+        "versionNumber": 165,
+        "deploymentId": "appgdep_6ab21fe2df848191bca85fe84bfbb1fa",
+        "envSetRevision": 27,
+        "smoke": {
+          "passed": true,
+          "checks": 19,
+          "completedAt": "2026-09-22T06:30:29.015Z"
+        },
+        "runtimeErrors": 0
+      }
     }
   ],
   "bootstrap": {
@@ -159,23 +190,5 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": [],
-  "owner": "inline-vida30-1790058212812",
-  "candidateSha": "72c7a9b9f9129d1368ea097da29a4275c1f8761d",
-  "previous": {
-    "sha": "6dca22b04579066845356c777cef96626f2b14f5",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
-    "versionNumber": 164,
-    "deploymentId": "appgdep_6ab0d17becd88191b2609d03a0f771b5",
-    "envSetRevision": 19,
-    "smoke": {
-      "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-21T06:43:37.454Z"
-    }
-  },
-  "startedAt": "2026-09-22T06:23:34.555Z",
-  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f290a11fb7ac819189f0bf0626fc2363",
-  "candidateVersionNumber": 165,
-  "candidateDeploymentId": "appgdep_6ab21fe2df848191bca85fe84bfbb1fa"
+  "failedShas": []
 }
