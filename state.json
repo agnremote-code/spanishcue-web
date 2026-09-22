@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "idle",
+  "status": "busy",
   "healthy": {
     "sha": "6dca22b04579066845356c777cef96626f2b14f5",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
@@ -159,5 +159,20 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": []
+  "failedShas": [],
+  "owner": "inline-vida30-1790058212812",
+  "candidateSha": "72c7a9b9f9129d1368ea097da29a4275c1f8761d",
+  "previous": {
+    "sha": "6dca22b04579066845356c777cef96626f2b14f5",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_94fe538fb5a08191bead27def1d6ece1",
+    "versionNumber": 164,
+    "deploymentId": "appgdep_6ab0d17becd88191b2609d03a0f771b5",
+    "envSetRevision": 19,
+    "smoke": {
+      "passed": true,
+      "checks": 10,
+      "completedAt": "2026-09-21T06:43:37.454Z"
+    }
+  },
+  "startedAt": "2026-09-22T06:23:34.555Z"
 }
