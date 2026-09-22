@@ -174,5 +174,7 @@
       "completedAt": "2026-09-21T06:43:37.454Z"
     }
   },
-  "startedAt": "2026-09-22T06:23:34.555Z"
+  "startedAt": "2026-09-22T06:23:34.555Z",
+  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f290a11fb7ac819189f0bf0626fc2363",
+  "candidateVersionNumber": 165
 }
