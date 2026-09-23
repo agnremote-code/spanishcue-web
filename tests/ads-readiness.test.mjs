@@ -82,6 +82,25 @@ test("legal pages stay unpublished until real operator and refund data exist", a
     "LEGAL_WITHDRAWAL_POLICY_ES", "LEGAL_WITHDRAWAL_POLICY_EN",
   ].map((key) => [key, `real-${key}`]));
   assert.ok(legal.legalOperator(complete));
+  const compact = {
+    legalName: "Real Name",
+    entityType: "Individual",
+    address: "Real address",
+    country: "Argentina",
+    taxId: "Real tax id",
+    registration: "Not applicable",
+    supportEmail: "support@example.test",
+    privacyEmail: "privacy@example.test",
+    governingLaw: "Argentina",
+    courts: "Buenos Aires",
+    effectiveDate: "2026-09-23",
+    refundPolicyEs: "Política real",
+    refundPolicyEn: "Real policy",
+    withdrawalPolicyEs: "Desistimiento real",
+    withdrawalPolicyEn: "Real withdrawal",
+  };
+  assert.deepEqual(legal.legalOperator({ LEGAL_OPERATOR_JSON: JSON.stringify(compact) }), compact);
+  assert.equal(legal.legalOperator({ LEGAL_OPERATOR_JSON: "{bad-json" }), null);
   const document = await source("app/legal/LegalDocument.tsx");
   assert.doesNotMatch(document, /\[YOUR|YOUR COMPANY|PLACEHOLDER/i);
   assert.match(document, /Nothing limits mandatory consumer rights/);
