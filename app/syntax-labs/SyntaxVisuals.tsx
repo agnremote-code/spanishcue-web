@@ -44,3 +44,23 @@ export function DecisionChain({ left, connector, right, label = "Condición y co
     </div>
   );
 }
+
+export function ContrastMixer({ left, connector, right, label = "Mezclador de contraste" }: ConnectorProps) {
+  return (
+    <div className="sx-contrast-mixer" aria-label={label}>
+      <span className="sx-claim"><small>POSICIÓN</small>{left}</span>
+      <span className="sx-contrast-control"><small>CONTRAPESO</small>{connector}</span>
+      <span className="sx-counterweight"><small>MATIZ</small>{right}</span>
+    </div>
+  );
+}
+
+export function ReferentFinder({ left, connector, right, label = "Buscador de referente" }: ConnectorProps) {
+  return (
+    <div className="sx-referent-finder" aria-label={label}>
+      <span className="sx-antecedent"><small>ANTECEDENTE</small>{left}</span>
+      <span className="sx-relative-link"><small>FILTRO</small>{connector}</span>
+      <span className="sx-identifying-clause"><small>INFORMACIÓN QUE IDENTIFICA</small>{right}</span>
+    </div>
+  );
+}

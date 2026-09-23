@@ -1,4 +1,4 @@
-export type SyntaxMode = "connector" | "clause" | "timeline" | "decision";
+export type SyntaxMode = "connector" | "clause" | "timeline" | "decision" | "contrast" | "referent";
 
 export type SyntaxPattern = {
   key: string;
@@ -30,7 +30,7 @@ export type SyntaxRepair = {
 
 export type SyntaxLabData = {
   slug: string;
-  level: "A1" | "A2";
+  level: "A1" | "A2" | "B1";
   category: "Gramática";
   mode: SyntaxMode;
   module: string;
@@ -776,4 +776,198 @@ export const siPasaEsto: SyntaxLabData = {
     { question: "¿Cómo organizamos el fin de semana si cada persona quiere algo distinto?", starter: "Si una persona quiere…", followUp: "¿Qué condición te parece más importante?" },
   ],
   finalTask: "Una negociación con 6 condiciones: acordá con el profesor un plan real que cambia según el tiempo, transporte, presupuesto y disponibilidad; reaccioná espontáneamente a cada cambio.",
+};
+
+export const peroHayUnMatiz: SyntaxLabData = {
+  slug: "pero-hay-un-matiz",
+  level: "B1",
+  category: "Gramática",
+  mode: "contrast",
+  module: "MÓDULO 14.1 / 14.3 · B1",
+  pcic: "PCIC 14.1 y 14.3 · coordinación B1",
+  title: "Pero hay un matiz",
+  displayTitle: "Pero hay\nun matiz",
+  subtitle: "Pasá del contraste básico al contrapunto natural y defendé una opinión sin encadenar siempre pero",
+  goal: "Organizar posiciones, objeciones y alternativas negativas con ni… ni, sin embargo y aunque adversativo.",
+  accent: "#ff8066",
+  accent2: "#ffd166",
+  productiveTargets: ["ni… ni", "sin embargo", "aunque adversativo"],
+  boundaries: "Partimos de pero, ya conocido, para organizar el discurso B1. Aunque se trabaja como contrapunto equivalente a pero; el sistema completo de subordinación concesiva queda para otra ruta.",
+  timeline: [
+    { label: "Activación", minutes: 5 },
+    { label: "Subir el nivel", minutes: 6 },
+    { label: "Mezclador guiado", minutes: 8 },
+    { label: "Forma y posición", minutes: 6 },
+    { label: "Trampa de sentido", minutes: 6 },
+    { label: "Reformulación", minutes: 6 },
+    { label: "Panel de opinión", minutes: 8 },
+  ],
+  activation: {
+    instruction: "Escuchá cada par y decidí si suma información, niega las dos opciones o introduce un contrapunto. Todavía no elijas el conector.",
+    cards: [
+      { first: "El sueldo es bueno", second: "el horario es difícil", intention: "CONTRAPESO" },
+      { first: "No quiero conducir", second: "quiero volar", intention: "DOBLE NEGACIÓN" },
+      { first: "La idea parece simple", second: "exige mucha coordinación", intention: "OBJECIÓN" },
+      { first: "La ciudad es intensa", second: "ofrece muchas oportunidades", intention: "MATIZ" },
+      { first: "No llamó Ana", second: "llamó Marcos", intention: "DOS ALTERNATIVAS NEGADAS" },
+    ],
+  },
+  patterns: [
+    {
+      key: "ni-ni", label: "NI… NI", intention: "NEGAR DOS ALTERNATIVAS", formula: "NI + OPCIÓN A + NI + OPCIÓN B",
+      example: "Ni el precio ni la distancia son el problema.",
+      preview: { left: "el precio", connector: "ni… ni", right: "la distancia son el problema" },
+      explanation: "Ni… ni coloca dos elementos bajo la misma negación. La estructura evita repetir no y presenta las alternativas con el mismo peso.",
+    },
+    {
+      key: "sin-embargo", label: "SIN EMBARGO", intention: "CONTRAPESO EXPLÍCITO", formula: "IDEA. SIN EMBARGO, CONTRAPESO",
+      example: "El plan es caro. Sin embargo, ahorra mucho tiempo.",
+      preview: { left: "El plan es caro.", connector: "Sin embargo,", right: "ahorra mucho tiempo." },
+      explanation: "Sin embargo separa y organiza dos afirmaciones completas. El punto o punto y coma y la coma posterior hacen visible el cambio de dirección.",
+    },
+    {
+      key: "aunque-adversativo", label: "AUNQUE", intention: "MATIZ BREVE", formula: "IDEA, AUNQUE + MATIZ",
+      example: "La propuesta es útil, aunque cara.",
+      preview: { left: "La propuesta es útil", connector: "aunque", right: "cara." },
+      explanation: "En este uso adversativo, aunque introduce un matiz breve equivalente a pero. No abre aquí una condición que deba superarse.",
+    },
+  ],
+  decisions: [
+    { intention: "DOBLE NEGACIÓN", prompt: "Descartás por igual dos explicaciones.", left: "El problema es", right: "el tiempo.", options: ["sin embargo", "ni el dinero ni", "aunque"], correct: 1, feedback: "Ni… ni coloca dinero y tiempo dentro de la misma negación y evita presentar una de las causas como principal." },
+    { intention: "CONTRAPESO FORMAL", prompt: "La segunda afirmación corrige una impresión demasiado negativa.", left: "El curso exige mucho trabajo.", right: "los resultados llegan pronto.", options: ["Ni", "Sin embargo,", "Y"], correct: 1, feedback: "Sin embargo organiza dos afirmaciones completas y anuncia que la segunda limita la valoración inicial." },
+    { intention: "MATIZ BREVE", prompt: "La cualidad final limita la valoración sin abrir otro argumento.", left: "Es una solución eficaz", right: "provisional.", options: ["aunque", "ni", "sin embargo"], correct: 0, feedback: "Aunque adversativo introduce un matiz breve, cercano a pero, dentro de la misma unidad informativa." },
+    { intention: "DOBLE NEGACIÓN", prompt: "La persona rechaza las dos opciones de transporte.", left: "Quiere viajar", right: "en avión.", options: ["aunque", "ni en tren ni", "sin embargo"], correct: 1, feedback: "Ni en tren ni en avión presenta dos alternativas igualmente negadas y conserva una estructura paralela." },
+    { intention: "OBJECIÓN", prompt: "El segundo dato obliga a revisar la primera conclusión.", left: "La zona queda lejos.", right: "está muy bien conectada.", options: ["Sin embargo,", "Ni", "Porque"], correct: 0, feedback: "Sin embargo convierte la buena conexión en un contrapeso explícito frente a la distancia inicial." },
+    { intention: "REGISTRO", prompt: "Buscás una versión editorial más organizada que una cadena con pero.", left: "La medida es popular.", right: "no resuelve el problema central.", options: ["O", "Sin embargo,", "Ni"], correct: 1, feedback: "Sin embargo permite ordenar el contraargumento y resulta más adecuado para un comentario editorial B1." },
+    { intention: "MATIZ", prompt: "Añadís una reserva corta sobre una experiencia positiva.", left: "La reunión fue productiva", right: "demasiado larga.", options: ["aunque", "ni", "por eso"], correct: 0, feedback: "Aunque adversativo añade una reserva breve sin convertirla en una explicación ni en una consecuencia." },
+    { intention: "CONTRASTE DE OPINIÓN", prompt: "Respondés a alguien con un beneficio que cambia el balance.", left: "Trabajar desde casa puede aislar.", right: "ofrece más autonomía.", options: ["Sin embargo,", "Ni… ni", "También"], correct: 0, feedback: "Sin embargo introduce el beneficio como contrapeso y ayuda a responder directamente a la objeción anterior." },
+    { intention: "TRAMPA DE SENTIDO", prompt: "Elegí el uso adversativo, no una lectura concesiva con situación futura.", left: "La película es interesante", right: "un poco lenta.", options: ["aunque", "aunque mañana llueva", "ni"], correct: 0, feedback: "Interesante, aunque lenta contiene un matiz adversativo; la opción con lluvia abre una relación concesiva diferente." },
+    { intention: "NEGACIÓN PARALELA", prompt: "Negás que dos personas sean responsables.", left: "Fue", right: "Lucía.", options: ["sin embargo", "ni Pablo ni", "aunque"], correct: 1, feedback: "Ni Pablo ni Lucía presenta dos posibles responsables bajo una sola negación y mantiene el paralelismo." },
+  ],
+  questionAnswerCycle: [],
+  repairs: [
+    { prompt: "Repará la posición y la puntuación del conector.", original: "El proyecto es útil sin embargo necesita cambios.", options: ["El proyecto es útil. Sin embargo, necesita cambios.", "El proyecto es útil, sin embargo necesita cambios.", "Sin embargo el proyecto es útil necesita cambios."], correct: 0, feedback: "Dos afirmaciones completas se separan y sin embargo lleva coma posterior para marcar el giro discursivo." },
+    { prompt: "Construí una doble negación paralela.", original: "No me convence el precio y tampoco la duración.", options: ["No me convencen ni el precio ni la duración.", "Ni me convence el precio sin embargo la duración.", "Aunque el precio ni la duración me convencen."], correct: 0, feedback: "Ni… ni coordina los dos elementos negados con la misma función y evita una segunda negación añadida." },
+    { prompt: "Conservá un matiz adversativo breve.", original: "La habitación es cómoda, aunque no reserve si mañana hay ruido.", options: ["La habitación es cómoda, aunque pequeña.", "Aunque mañana haya ruido, la habitación es cómoda.", "La habitación ni es cómoda ni pequeña."], correct: 0, feedback: "Cómoda, aunque pequeña contrapone dos rasgos; la alternativa temporal pertenece a otra relación de significado." },
+    { prompt: "Evitá tratar todos los conectores como intercambiables.", original: "Ni el barrio es caro ni tiene buen transporte.", options: ["El barrio es caro. Sin embargo, tiene buen transporte.", "El barrio es caro ni tiene buen transporte.", "Aunque el barrio ni es caro, tiene transporte."], correct: 0, feedback: "La intención es contraponer una desventaja y una ventaja, no negar las dos; sin embargo expresa ese balance." },
+  ],
+  retrieval: [
+    { intention: "REFORMULAR", prompt: "Sin etiquetas: convertí tres cadenas con pero usando dos alternativas distintas.", challenge: "Explicá qué cambia en la organización y no solo reemplaces palabras." },
+    { intention: "DOBLE NEGACIÓN", prompt: "Negá dos causas, dos opciones y dos responsables sin banco de conectores.", challenge: "Mantené la estructura paralela y una entonación natural." },
+    { intention: "CONTRAPESO", prompt: "Recibís una opinión tajante: respondé con un dato que cambie el balance.", challenge: "Usá sin embargo y después reformulá con pero para comparar." },
+    { intention: "MATIZ", prompt: "Describí tres cosas positivas con una reserva breve.", challenge: "Usá aunque adversativo sin abrir una situación hipotética." },
+    { intention: "TERCER DATO", prompt: "Sumá una tercera información que obligue a rehacer tu frase inicial.", challenge: "Elegí de nuevo la relación, la posición y la puntuación." },
+  ],
+  production: [
+    { title: "Trabajo y vida", prompt: "Defendé una forma de trabajo y respondé a dos objeciones.", checklist: ["dos contrapesos", "una doble negación", "respuesta al profesor"] },
+    { title: "Ciudad ideal", prompt: "Evaluá vivir en una ciudad grande o pequeña sin dar una respuesta absoluta.", checklist: ["ventaja y límite", "sin embargo", "aunque adversativo"] },
+    { title: "Tecnología cotidiana", prompt: "Tomá postura sobre una herramienta y reformulala cuando aparece un tercer dato.", checklist: ["postura clara", "reformulación", "conectores no intercambiables"] },
+  ],
+  conversationMinutes: 8,
+  conversation: [
+    { question: "¿Trabajar desde casa mejora realmente la vida?", starter: "Mejora algunas cosas. Sin embargo…", followUp: "¿Qué objeción cambiaría tu postura?" },
+    { question: "¿Una ciudad cara puede seguir siendo una buena elección?", starter: "Es cara, aunque…", followUp: "¿Qué dos problemas no aceptarías nunca?" },
+    { question: "¿Las redes sociales conectan o aíslan?", starter: "Conectan a mucha gente. Sin embargo…", followUp: "¿Podés responder a la opinión contraria?" },
+    { question: "¿Preferís estabilidad o libertad profesional?", starter: "Valoro la estabilidad, aunque…", followUp: "¿Qué no querés perder en ninguna opción?" },
+    { question: "¿La educación online puede reemplazar la presencial?", starter: "Tiene ventajas. Sin embargo…", followUp: "¿Qué matiz añadirías después de escucharme?" },
+    { question: "¿Qué plan popular no te convence completamente?", starter: "Es popular, aunque…", followUp: "¿Qué dos argumentos no te parecen suficientes?" },
+  ],
+  finalTask: "Panel de opinión B1: defendé una postura sobre tres temas familiares, respondé a objeciones con dos contrapesos y usá una construcción ni… ni de forma natural.",
+};
+
+export const laPersonaQueTengoEnMente: SyntaxLabData = {
+  slug: "la-persona-que-tengo-en-mente",
+  level: "B1",
+  category: "Gramática",
+  mode: "referent",
+  module: "MÓDULO 15.2 · B1",
+  pcic: "PCIC 15.2 · relativas B1",
+  title: "La persona que tengo en mente",
+  displayTitle: "La persona que\ntengo en mente",
+  subtitle: "Identificá personas, lugares y cosas con precisión, repará ambigüedades y conectá la información",
+  goal: "Usar un antecedente expreso y una cláusula relativa para identificar un único referente y aclararlo cuando haya confusión.",
+  accent: "#62d0c2",
+  accent2: "#ffd166",
+  productiveTargets: ["antecedente expreso + que", "persona + quien", "indicativo conocido"],
+  boundaries: "El núcleo productivo es antecedente expreso + que con tiempos de indicativo ya conocidos. Quien aparece solo en contextos claros de persona; quedan fuera los relativos libres y las combinaciones preposicionales complejas.",
+  timeline: [
+    { label: "Calentamiento", minutes: 5 },
+    { label: "Descubrimiento", minutes: 7 },
+    { label: "Buscador guiado", minutes: 8 },
+    { label: "Reparar ambigüedad", minutes: 7 },
+    { label: "Reciclar tiempos", minutes: 6 },
+    { label: "Información parcial", minutes: 5 },
+    { label: "Búsqueda real", minutes: 7 },
+  ],
+  activation: {
+    instruction: "Dos tarjetas comparten rasgos. Añadí un dato que permita identificar solo una sin repetir oraciones separadas.",
+    cards: [
+      { first: "una compañera trabaja conmigo", second: "vive cerca del centro", intention: "PERSONA" },
+      { first: "un café está junto al río", second: "abre hasta tarde", intention: "LUGAR" },
+      { first: "una mochila es azul", second: "compré la mochila en Lima", intention: "COSA" },
+      { first: "un profesor me ayudó", second: "el profesor hablaba despacio", intention: "PASADO" },
+      { first: "una amiga viajará conmigo", second: "conozco a la amiga desde 2020", intention: "FUTURO" },
+    ],
+  },
+  patterns: [
+    {
+      key: "que-persona", label: "PERSONA + QUE", intention: "IDENTIFICAR PERSONA", formula: "PERSONA + QUE + INFORMACIÓN",
+      example: "Busco a la compañera que vive cerca del centro.",
+      preview: { left: "la compañera", connector: "que", right: "vive cerca del centro" },
+      explanation: "Que conecta el antecedente persona con el dato que permite distinguirlo de otras personas posibles.",
+    },
+    {
+      key: "que-cosa-lugar", label: "COSA / LUGAR + QUE", intention: "IDENTIFICAR REFERENTE", formula: "ANTECEDENTE + QUE + INFORMACIÓN",
+      example: "Elegí el café que abre hasta tarde.",
+      preview: { left: "el café", connector: "que", right: "abre hasta tarde" },
+      explanation: "Que también identifica cosas y lugares. El antecedente debe aparecer para que el oyente sepa qué se está filtrando.",
+    },
+    {
+      key: "quien-persona", label: "QUIEN · PERSONA", intention: "RETOMAR UNA PERSONA", formula: "PERSONA IDENTIFICADA, QUIEN + DATO",
+      example: "Hablé con Lucía, quien coordinó el proyecto.",
+      preview: { left: "Lucía", connector: "quien", right: "coordinó el proyecto" },
+      explanation: "Quien solo puede retomar personas. En esta clase se usa cuando la persona ya está identificada y se añade un dato claro sobre ella.",
+    },
+  ],
+  decisions: [
+    { intention: "PERSONA", prompt: "Hay dos compañeras; solo una vive cerca del centro.", left: "Busco a la compañera", right: "vive cerca del centro.", options: ["que", "quien", "donde"], correct: 0, feedback: "Que introduce el dato restrictivo que selecciona una compañera concreta entre varias candidatas." },
+    { intention: "LUGAR", prompt: "Elegís entre varios cafés según su horario.", left: "Prefiero el café", right: "abre hasta medianoche.", options: ["quien", "que", "cuando"], correct: 1, feedback: "El antecedente es un lugar y que conecta el horario que permite identificar exactamente ese café." },
+    { intention: "COSA", prompt: "Hay varias mochilas y solo una fue comprada en Lima.", left: "La mochila", right: "compré en Lima es azul.", options: ["que", "quien", "porque"], correct: 0, feedback: "Que enlaza mochila con una acción pasada ya conocida y distingue esa mochila de las demás." },
+    { intention: "PERSONA YA IDENTIFICADA", prompt: "Lucía ya está identificada y añadís qué función cumplió.", left: "Hablé con Lucía", right: "coordinó el proyecto.", options: ["que", "quien", "donde"], correct: 1, feedback: "Quien retoma a una persona ya identificada y añade un dato sobre ella sin crear un nuevo candidato." },
+    { intention: "ANTECEDENTE", prompt: "La información debe quedar unida al nombre correcto.", left: "Necesito el documento", right: "enviaste ayer.", options: ["quien", "que", "aunque"], correct: 1, feedback: "Documento es el antecedente expreso y que introduce la acción pasada que permite reconocerlo." },
+    { intention: "TIEMPO RECICLADO", prompt: "Identificás a alguien mediante un hábito anterior.", left: "Es el vecino", right: "siempre saludaba desde el balcón.", options: ["que", "quien", "si"], correct: 0, feedback: "Que mantiene el foco en la arquitectura relativa; saludaba recicla un tiempo pasado ya conocido." },
+    { intention: "FUTURO CONOCIDO", prompt: "Entre varias personas, una acompañará al grupo.", left: "La guía", right: "viajará con nosotros habla portugués.", options: ["quien", "que", "sin embargo"], correct: 1, feedback: "Que selecciona a la guía mediante una acción futura conocida sin convertir la actividad en una clase de conjugación." },
+    { intention: "REFERENTE ÚNICO", prompt: "Solo una película recibió esa recomendación.", left: "Vi la película", right: "me recomendaste.", options: ["que", "quien", "donde"], correct: 0, feedback: "Que relaciona película con la recomendación y permite al interlocutor recuperar un único referente." },
+    { intention: "QUIEN", prompt: "Añadís información sobre Mario, no lo distinguís de otros Marios.", left: "Mario", right: "dirigió el taller, llegará mañana.", options: ["que", "quien", "cuando"], correct: 1, feedback: "Quien es posible porque Mario ya identifica a la persona; el dato intermedio aporta información adicional." },
+    { intention: "TRAMPA DE AMBIGÜEDAD", prompt: "¿Qué enlace conserva un antecedente expreso y claro?", left: "Quiero visitar el pueblo", right: "aparece en la foto.", options: ["quien", "que", "lo que"], correct: 1, feedback: "Que conecta pueblo con el dato identificador; el antecedente expreso evita una referencia libre o imprecisa." },
+  ],
+  questionAnswerCycle: [],
+  repairs: [
+    { prompt: "Repará la ambigüedad: dos personas podrían vivir en Valencia.", original: "Busco a la amiga de Marta que vive en Valencia.", options: ["Busco a la amiga de Marta; la amiga vive en Valencia.", "Marta vive en Valencia; busco a su amiga.", "Busco a la que vive en Valencia."], correct: 1, feedback: "Nombrar primero a Marta y luego retomar a su amiga deja claro quién vive en Valencia y evita dos lecturas." },
+    { prompt: "Añadí el antecedente que falta.", original: "Que está junto a la estación abre temprano.", options: ["El café que está junto a la estación abre temprano.", "Quien está junto a la estación abre temprano.", "El café donde que está junto a la estación abre temprano."], correct: 0, feedback: "El café funciona como antecedente expreso y permite interpretar qué elemento identifica la cláusula relativa." },
+    { prompt: "Elegí un dato que identifique solo una candidata.", original: "Busco a la persona que trabaja.", options: ["Busco a la persona que trabaja en recepción por la noche.", "Busco a la persona que es una persona.", "Busco a quien trabaja."], correct: 0, feedback: "El lugar y el horario vuelven específica la descripción; decir solo trabaja deja demasiadas candidatas." },
+    { prompt: "Quien necesita un referente humano ya claro en este uso.", original: "El teléfono, quien compré ayer, no funciona.", options: ["El teléfono que compré ayer no funciona.", "El teléfono, quien compré ayer, no funciona.", "Quien teléfono compré ayer no funciona."], correct: 0, feedback: "Teléfono no es una persona; que enlaza correctamente la cosa con la acción que permite identificarla." },
+  ],
+  retrieval: [
+    { intention: "PERSONAS", prompt: "Sin marco: distinguí a una persona entre tres candidatos parecidos.", challenge: "Usá dos datos y comprobá que solo queda una opción posible." },
+    { intention: "LUGARES", prompt: "Describí un lugar real sin decir su nombre.", challenge: "El profesor propone un candidato incorrecto y vos aclarás la referencia." },
+    { intention: "COSAS", prompt: "Con información incompleta, identificá tres objetos de tu entorno.", challenge: "Cambiá un dato si la descripción selecciona más de un objeto." },
+    { intention: "TIEMPOS", prompt: "Recuperá una persona que conociste y un lugar que visitarás.", challenge: "Usá tiempos conocidos sin explicar cómo se conjugan." },
+    { intention: "QUIEN", prompt: "Sin apoyo: nombrá a una persona concreta y añadí un dato sobre ella.", challenge: "Después reformulá con que y explicá qué información identifica." },
+  ],
+  production: [
+    { title: "Directorio humano", prompt: "Presentá tres personas de tu vida sin usar oraciones desconectadas.", checklist: ["antecedentes claros", "datos identificadores", "una aclaración"] },
+    { title: "Filtro de viaje", prompt: "Describí dos lugares y dos cosas necesarias para un viaje.", checklist: ["que productivo", "presente y pasado", "referente único"] },
+    { title: "Candidato equivocado", prompt: "El profesor adivina mal y vos reparás cada descripción.", checklist: ["más precisión", "sin marco escrito", "preguntas de seguimiento"] },
+  ],
+  conversationMinutes: 7,
+  conversation: [
+    { question: "¿Quién es una persona que influyó en tu forma de trabajar o estudiar?", starter: "Es una persona que…", followUp: "¿Qué dato permite distinguirla de otras personas?" },
+    { question: "¿Cuál es el lugar que más recordás de un viaje?", starter: "Es un lugar que…", followUp: "Creo que hablás de otro lugar: ¿podés aclararlo?" },
+    { question: "¿Qué objeto que usás todos los días te resulta indispensable?", starter: "El objeto que…", followUp: "¿Qué lo diferencia de otros objetos parecidos?" },
+    { question: "¿Quién es alguien que conociste recientemente?", starter: "Conocí a una persona que…", followUp: "¿Qué estaba haciendo cuando se conocieron?" },
+    { question: "¿Qué lugar que todavía no visitaste te interesa?", starter: "Me interesa un lugar que…", followUp: "¿Qué harás allí si finalmente viajás?" },
+    { question: "¿Qué profesional que admirás recomendarías?", starter: "Recomendaría a… quien…", followUp: "No estoy seguro de quién hablás: añadí otro dato." },
+  ],
+  finalTask: "Encontrá a la persona, el lugar y la cosa: describí seis referentes reales o plausibles; el profesor ofrece candidatos equivocados y vos tenés que aclarar cada uno.",
 };
