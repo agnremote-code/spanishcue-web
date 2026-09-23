@@ -82,26 +82,24 @@ test("legal pages stay unpublished until real operator and refund data exist", a
     "LEGAL_WITHDRAWAL_POLICY_ES", "LEGAL_WITHDRAWAL_POLICY_EN",
   ].map((key) => [key, `real-${key}`]));
   assert.ok(legal.legalOperator(complete));
-  const compact = {
-    legalName: "Real Name",
-    entityType: "Particular",
-    address: "Real address",
-    country: "Argentina",
-    taxId: "",
-    registration: "",
-    supportEmail: "support@example.test",
-    privacyEmail: "privacy@example.test",
-    governingLaw: "Argentina",
-    courts: "Buenos Aires",
-    effectiveDate: "2026-09-23",
-    refundPolicyEs: "Política real",
-    refundPolicyEn: "Real policy",
-    withdrawalPolicyEs: "Desistimiento real",
-    withdrawalPolicyEn: "Real withdrawal",
-  };
-  assert.deepEqual(legal.legalOperator({ LEGAL_OPERATOR_JSON: JSON.stringify(compact) }), compact);
+  const compact = legal.legalOperator({
+    CHESPANISH_OWNER_EMAIL: "owner@example.test",
+    LEGAL_OPERATOR_JSON: JSON.stringify({ legalName: "Real Name", address: "Real address" }),
+  });
+  assert.equal(compact?.legalName, "Real Name");
+  assert.equal(compact?.address, "Real address");
+  assert.equal(compact?.entityType, "Particular");
+  assert.equal(compact?.country, "Argentina");
+  assert.equal(compact?.supportEmail, "owner@example.test");
+  assert.equal(compact?.privacyEmail, "owner@example.test");
+  assert.equal(compact?.taxId, "");
+  assert.equal(compact?.registration, "");
+  assert.match(compact?.refundPolicyEs || "", /cancelar/i);
   assert.equal(legal.legalOperator({ LEGAL_OPERATOR_JSON: "{bad-json" }), null);
-  assert.equal(legal.legalOperator({ LEGAL_OPERATOR_JSON: JSON.stringify({ ...compact, entityType: "Corporation" }) }), null);
+  assert.equal(legal.legalOperator({
+    CHESPANISH_OWNER_EMAIL: "owner@example.test",
+    LEGAL_OPERATOR_JSON: JSON.stringify({ legalName: "Real Name", address: "Real address", entityType: "Corporation" }),
+  }), null);
   const document = await source("app/legal/LegalDocument.tsx");
   assert.doesNotMatch(document, /\[YOUR|YOUR COMPANY|PLACEHOLDER/i);
   assert.match(document, /Nothing limits mandatory consumer rights/);
