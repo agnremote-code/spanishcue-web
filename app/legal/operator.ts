@@ -55,6 +55,20 @@ const OPERATOR_KEYS = [
   "withdrawalPolicyEn",
 ] as const;
 
+const COMPACT_DEFAULTS = {
+  entityType: "Particular",
+  country: "Argentina",
+  taxId: "",
+  registration: "",
+  governingLaw: "República Argentina",
+  courts: "Ciudad Autónoma de Buenos Aires, Argentina",
+  effectiveDate: "2026-09-23",
+  refundPolicyEs: "Podés cancelar en cualquier momento. Los cargos ya realizados no se reembolsan automáticamente, salvo cuando lo exijan la ley aplicable o PayPal, o ante cargos duplicados, no autorizados o falta sustancial de prestación.",
+  refundPolicyEn: "You may cancel at any time. Completed charges are not automatically refundable, except where required by applicable law or PayPal, or for duplicate or unauthorized charges or material failure to provide the service.",
+  withdrawalPolicyEs: "Se respetan los derechos de desistimiento o revocación que sean obligatorios según la ley aplicable. El acceso al servicio no implica por sí solo una renuncia a esos derechos.",
+  withdrawalPolicyEn: "Any mandatory withdrawal or cancellation rights under applicable law are respected. Accessing the service does not by itself constitute a waiver of those rights.",
+} as const;
+
 function value(env: LegalEnv, key: keyof LegalEnv) {
   return env[key]?.trim() || "";
 }
@@ -77,7 +91,18 @@ function operatorFromJson(env: LegalEnv): LegalOperator | null {
   const raw = value(env, "LEGAL_OPERATOR_JSON");
   if (!raw) return null;
   try {
-    return normalizeOperator(JSON.parse(raw));
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
+    const ownerEmail = value(env, "CHESPANISH_OWNER_EMAIL");
+    const candidate = {
+      ...COMPACT_DEFAULTS,
+      supportEmail: ownerEmail,
+      privacyEmail: ownerEmail,
+      ...(parsed as Record<string, unknown>),
+    };
+    if (!candidate.supportEmail) candidate.supportEmail = ownerEmail;
+    if (!candidate.privacyEmail) candidate.privacyEmail = candidate.supportEmail || ownerEmail;
+    return normalizeOperator(candidate);
   } catch {
     return null;
   }
