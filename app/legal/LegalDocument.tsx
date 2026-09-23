@@ -27,10 +27,14 @@ export default async function LegalDocument({ kind }: { kind: LegalDocumentKind 
   const operator = legalOperator(env);
   if (!operator) return <PrelaunchLegalDocument kind={kind} locale={locale} title={title} contactEmail={publicContactEmail(env)} googleTrackingConfigured={googleTrackingConfigured} />;
 
+  const fiscalEs = operator.taxId ? ` Identificación fiscal: ${operator.taxId}.` : "";
+  const fiscalEn = operator.taxId ? ` Tax identification: ${operator.taxId}.` : "";
+  const registrationEs = operator.registration ? ` Registro: ${operator.registration}.` : "";
+  const registrationEn = operator.registration ? ` Registration: ${operator.registration}.` : "";
   const common = <>
     <section><h2>{es ? "Titular del servicio" : "Service provider"}</h2><p>{es
-      ? `${operator.legalName} (${operator.entityType}), con domicilio en ${operator.address}, ${operator.country}. Identificación fiscal: ${operator.taxId}. Registro: ${operator.registration}. SPANISHCUE es el nombre comercial del servicio.`
-      : `${operator.legalName} (${operator.entityType}), registered address: ${operator.address}, ${operator.country}. Tax identification: ${operator.taxId}. Registration: ${operator.registration}. SPANISHCUE is the service trading name.`}</p></section>
+      ? `${operator.legalName} (${operator.entityType}), con domicilio en ${operator.address}, ${operator.country}.${fiscalEs}${registrationEs} SPANISHCUE es el nombre comercial del servicio.`
+      : `${operator.legalName} (${operator.entityType}), registered address: ${operator.address}, ${operator.country}.${fiscalEn}${registrationEn} SPANISHCUE is the service trading name.`}</p></section>
     <section><h2>{es ? "Contacto" : "Contact"}</h2><p>{es ? "Soporte y facturación" : "Support and billing"}: <a href={`mailto:${operator.supportEmail}`}>{operator.supportEmail}</a>. {es ? "Privacidad" : "Privacy"}: <a href={`mailto:${operator.privacyEmail}`}>{operator.privacyEmail}</a>.</p></section>
   </>;
 
