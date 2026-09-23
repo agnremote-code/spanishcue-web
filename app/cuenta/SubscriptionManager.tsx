@@ -19,7 +19,7 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
   const es = locale === "es";
   const [subscription, setSubscription] = useState<Subscription | null | undefined>(undefined);
   const [confirming, setConfirming] = useState(false);
-  const [busy, setBusy] = useState(false);
+  const [busyAction, setBusyAction] = useState<"pause" | "resume" | "cancel" | null>(null);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -44,28 +44,49 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
   const active = subscription.status === "ACTIVE";
   const paid = subscription.accessConfirmed;
   const cancelled = subscription.status === "CANCELLED";
+  const paused = subscription.status === "SUSPENDED";
 
-  async function cancel() {
-    setBusy(true); setMessage("");
+  async function manage(action: "pause" | "resume" | "cancel") {
+    setBusyAction(action); setMessage("");
     try {
-      const response = await fetch("/api/billing/subscription", { method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: "{}" });
+      const response = await fetch("/api/billing/subscription", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ action }),
+      });
       const body = await response.json() as { subscription?: Subscription; error?: string };
-      if (!response.ok || !body.subscription) throw new Error(body.error || "cancel_failed");
+      if (!response.ok || !body.subscription) throw new Error(body.error || `${action}_failed`);
       setSubscription(body.subscription);
       setConfirming(false);
-      const reference = body.subscription.cancellationReference ? ` · ${body.subscription.cancellationReference}` : "";
-      setMessage(es ? `Cancelación confirmada${reference}${date ? `. Tu acceso continúa hasta el ${date}` : ""}. No habrá nuevas renovaciones.` : `Cancellation confirmed${reference}${date ? `. Your access continues until ${date}` : ""}. There will be no further renewals.`);
+      if (action === "pause") {
+        setMessage(es ? `Suscripción pausada. No habrá renovaciones mientras esté pausada${date ? `; tu período pagado continúa hasta el ${date}` : ""}.` : `Subscription paused. There will be no renewals while it is paused${date ? `; your paid period continues until ${date}` : ""}.`);
+      } else if (action === "resume") {
+        setMessage(es ? "Suscripción reanudada." : "Subscription resumed.");
+      } else {
+        const reference = body.subscription.cancellationReference ? ` · ${body.subscription.cancellationReference}` : "";
+        setMessage(es ? `Cancelación confirmada${reference}${date ? `. Tu acceso continúa hasta el ${date}` : ""}. No habrá nuevas renovaciones.` : `Cancellation confirmed${reference}${date ? `. Your access continues until ${date}` : ""}. There will be no further renewals.`);
+      }
     } catch (error) {
-      setMessage(error instanceof Error && error.message !== "cancel_failed" ? error.message : es ? "No pudimos cancelar ahora. Intenta nuevamente." : "We could not cancel it now. Please try again.");
-    } finally { setBusy(false); }
+      const fallback = action === "pause"
+        ? (es ? "No pudimos pausar ahora. Intenta nuevamente." : "We could not pause it now. Please try again.")
+        : action === "resume"
+          ? (es ? "No pudimos reanudar ahora. Intenta nuevamente." : "We could not resume it now. Please try again.")
+          : (es ? "No pudimos cancelar ahora. Intenta nuevamente." : "We could not cancel it now. Please try again.");
+      setMessage(error instanceof Error && !error.message.endsWith("_failed") ? error.message : fallback);
+    } finally { setBusyAction(null); }
   }
 
   return <section className="subscription-manager" aria-labelledby="subscription-title">
     <span>{es ? "SUSCRIPCIÓN" : "SUBSCRIPTION"}</span>
     <h2 id="subscription-title">SPANISHCUE PRO</h2>
-    <dl><div><dt>{es ? "Estado" : "Status"}</dt><dd>{paid && active ? (es ? "Pagada y activa" : "Paid and active") : active ? (es ? "Verificando primer pago" : "Verifying first payment") : cancelled ? (es ? "Cancelada" : "Cancelled") : subscription.status}</dd></div><div><dt>{paid ? (es ? "Acceso hasta" : "Access until") : (es ? "Próximo cobro informado" : "Reported next charge")}</dt><dd>{date || (es ? "No disponible" : "Unavailable")}</dd></div><div><dt>{es ? "Importe" : "Amount"}</dt><dd>{subscription.founder ? "US$15 / month" : (es ? "Según plan" : "Per plan")}</dd></div><div><dt>{es ? "Pago" : "Payment"}</dt><dd>PayPal</dd></div></dl>
-    {active && !confirming && <button type="button" className="subscription-cancel" onClick={() => setConfirming(true)}>{es ? "Cancelar suscripción" : "Cancel subscription"}</button>}
-    {active && confirming && <div className="subscription-confirm" role="group" aria-label={es ? "Confirmar cancelación" : "Confirm cancellation"}><p>{es ? `Se detendrán los cobros futuros${date ? ` y conservarás el acceso hasta el ${date}` : ""}. El precio fundador deja de estar garantizado si vuelves.` : `Future charges will stop${date ? ` and access continues until ${date}` : ""}. Founder Price is no longer guaranteed if you return.`}</p><button type="button" disabled={busy} onClick={cancel}>{busy ? (es ? "Cancelando…" : "Cancelling…") : (es ? "Sí, cancelar" : "Yes, cancel")}</button><button type="button" disabled={busy} onClick={() => setConfirming(false)}>{es ? "Mantener suscripción" : "Keep subscription"}</button></div>}
+    <dl><div><dt>{es ? "Estado" : "Status"}</dt><dd>{paid && active ? (es ? "Pagada y activa" : "Paid and active") : paused ? (es ? "Pausada" : "Paused") : active ? (es ? "Verificando primer pago" : "Verifying first payment") : cancelled ? (es ? "Cancelada" : "Cancelled") : subscription.status}</dd></div><div><dt>{paid ? (es ? "Acceso hasta" : "Access until") : (es ? "Próximo cobro informado" : "Reported next charge")}</dt><dd>{date || (es ? "No disponible" : "Unavailable")}</dd></div><div><dt>{es ? "Importe" : "Amount"}</dt><dd>{subscription.founder ? "US$15 / month" : (es ? "Según plan" : "Per plan")}</dd></div><div><dt>{es ? "Pago" : "Payment"}</dt><dd>PayPal</dd></div></dl>
+    {active && !confirming && <div className="subscription-confirm" role="group" aria-label={es ? "Gestionar suscripción" : "Manage subscription"}>
+      <button type="button" disabled={busyAction !== null} onClick={() => void manage("pause")}>{busyAction === "pause" ? (es ? "Pausando…" : "Pausing…") : (es ? "Pausar suscripción" : "Pause subscription")}</button>
+      <button type="button" className="subscription-cancel" disabled={busyAction !== null} onClick={() => setConfirming(true)}>{es ? "Cancelar suscripción" : "Cancel subscription"}</button>
+    </div>}
+    {paused && <button type="button" className="subscription-cancel" disabled={busyAction !== null} onClick={() => void manage("resume")}>{busyAction === "resume" ? (es ? "Reanudando…" : "Resuming…") : (es ? "Reanudar suscripción" : "Resume subscription")}</button>}
+    {active && confirming && <div className="subscription-confirm" role="group" aria-label={es ? "Confirmar cancelación" : "Confirm cancellation"}><p>{es ? `Se detendrán los cobros futuros${date ? ` y conservarás el acceso hasta el ${date}` : ""}. El precio fundador deja de estar garantizado si vuelves.` : `Future charges will stop${date ? ` and access continues until ${date}` : ""}. Founder Price is no longer guaranteed if you return.`}</p><button type="button" disabled={busyAction !== null} onClick={() => void manage("cancel")}>{busyAction === "cancel" ? (es ? "Cancelando…" : "Cancelling…") : (es ? "Sí, cancelar" : "Yes, cancel")}</button><button type="button" disabled={busyAction !== null} onClick={() => setConfirming(false)}>{es ? "Mantener suscripción" : "Keep subscription"}</button></div>}
     {message && <p className="subscription-message" aria-live="polite">{message}</p>}
   </section>;
 }
