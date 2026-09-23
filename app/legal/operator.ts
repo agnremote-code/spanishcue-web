@@ -65,7 +65,12 @@ function normalizeOperator(candidate: unknown): LegalOperator | null {
   const operator = Object.fromEntries(
     OPERATOR_KEYS.map((key) => [key, typeof raw[key] === "string" ? raw[key].trim() : ""]),
   ) as unknown as LegalOperator;
-  return Object.values(operator).every(Boolean) ? operator : null;
+  const required = OPERATOR_KEYS.filter((key) => key !== "taxId" && key !== "registration");
+  if (required.some((key) => !operator[key])) return null;
+  const individual = ["particular", "individual", "persona física", "persona fisica", "sole proprietor"]
+    .includes(operator.entityType.toLowerCase());
+  if (!individual && (!operator.taxId || !operator.registration)) return null;
+  return operator;
 }
 
 function operatorFromJson(env: LegalEnv): LegalOperator | null {

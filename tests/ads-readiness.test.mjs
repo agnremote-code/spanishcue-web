@@ -84,11 +84,11 @@ test("legal pages stay unpublished until real operator and refund data exist", a
   assert.ok(legal.legalOperator(complete));
   const compact = {
     legalName: "Real Name",
-    entityType: "Individual",
+    entityType: "Particular",
     address: "Real address",
     country: "Argentina",
-    taxId: "Real tax id",
-    registration: "Not applicable",
+    taxId: "",
+    registration: "",
     supportEmail: "support@example.test",
     privacyEmail: "privacy@example.test",
     governingLaw: "Argentina",
@@ -101,6 +101,7 @@ test("legal pages stay unpublished until real operator and refund data exist", a
   };
   assert.deepEqual(legal.legalOperator({ LEGAL_OPERATOR_JSON: JSON.stringify(compact) }), compact);
   assert.equal(legal.legalOperator({ LEGAL_OPERATOR_JSON: "{bad-json" }), null);
+  assert.equal(legal.legalOperator({ LEGAL_OPERATOR_JSON: JSON.stringify({ ...compact, entityType: "Corporation" }) }), null);
   const document = await source("app/legal/LegalDocument.tsx");
   assert.doesNotMatch(document, /\[YOUR|YOUR COMPANY|PLACEHOLDER/i);
   assert.match(document, /Nothing limits mandatory consumer rights/);
