@@ -180,6 +180,22 @@ export async function getPaypalSubscriptionTransactions(config: BillingRuntimeCo
   return Array.isArray(body.transactions) ? body.transactions as PaypalTransaction[] : [];
 }
 
+export async function suspendPaypalSubscription(config: BillingRuntimeConfig, subscriptionId: string) {
+  const response = await paypalRequest(config, `/v1/billing/subscriptions/${encodeURIComponent(subscriptionId)}/suspend`, {
+    method: "POST",
+    body: JSON.stringify({ reason: "Paused online by the subscriber from SPANISHCUE account settings." }),
+  });
+  if (!response.ok && response.status !== 204) throw new Error("paypal_subscription_suspend_failed");
+}
+
+export async function activatePaypalSubscription(config: BillingRuntimeConfig, subscriptionId: string) {
+  const response = await paypalRequest(config, `/v1/billing/subscriptions/${encodeURIComponent(subscriptionId)}/activate`, {
+    method: "POST",
+    body: JSON.stringify({ reason: "Resumed online by the subscriber from SPANISHCUE account settings." }),
+  });
+  if (!response.ok && response.status !== 204) throw new Error("paypal_subscription_activate_failed");
+}
+
 export async function cancelPaypalSubscription(config: BillingRuntimeConfig, subscriptionId: string) {
   const response = await paypalRequest(config, `/v1/billing/subscriptions/${encodeURIComponent(subscriptionId)}/cancel`, {
     method: "POST",

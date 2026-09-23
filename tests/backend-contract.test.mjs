@@ -100,10 +100,12 @@ test("Apple, Google, email and password remain present in the auth source", asyn
 });
 
 test("session creation and account provisioning reject unverified emails", async () => {
-  const [sessionRoute, accounts, sessionSync] = await Promise.all([
+  const [sessionRoute, accounts, sessionSync, layout, authForm] = await Promise.all([
     readFile("app/api/auth/session/route.ts", "utf8"),
     readFile("db/accounts.ts", "utf8"),
     readFile("app/AuthSessionSync.tsx", "utf8"),
+    readFile("app/layout.tsx", "utf8"),
+    readFile("app/ingresar/AuthForm.tsx", "utf8"),
   ]);
   assert.match(sessionRoute, /!user\.emailVerified/);
   assert.match(sessionRoute, /EMAIL_NOT_VERIFIED/);
@@ -111,6 +113,11 @@ test("session creation and account provisioning reject unverified emails", async
   assert.match(accounts, /EMAIL_NOT_VERIFIED/);
   assert.match(sessionSync, /response\.status === 403/);
   assert.match(sessionSync, /signOut\(firebaseAuth\)/);
+  assert.match(authForm, /browserLocalPersistence/);
+  assert.match(sessionSync, /!serverSignedIn/);
+  assert.match(sessionSync, /window\.location\.reload\(\)/);
+  assert.match(sessionSync, /window\.location\.pathname !== "\/ingresar"/);
+  assert.match(layout, /<AuthSessionSync serverSignedIn=\{signedIn\}/);
 });
 
 test("failed or abandoned PayPal webhooks can be claimed again safely", async () => {

@@ -105,16 +105,39 @@ test("legal pages stay unpublished until real operator and refund data exist", a
   assert.match(document, /Nothing limits mandatory consumer rights/);
 });
 
-test("online cancellation calls PayPal and keeps paid-through access", async () => {
-  const [route, billing, account] = await Promise.all([
+test("subscription management supports pause, resume and cancellation while preserving paid-through access", async () => {
+  const [route, billing, account, paypal] = await Promise.all([
     source("app/api/billing/subscription/route.ts"),
     source("db/billing.ts"),
     source("app/cuenta/SubscriptionManager.tsx"),
+    source("app/paypal-server.ts"),
   ]);
+  assert.match(route, /suspendPaypalSubscription/);
+  assert.match(route, /activatePaypalSubscription/);
   assert.match(route, /cancelPaypalSubscription/);
+  assert.match(route, /action === "pause"/);
+  assert.match(route, /action === "resume"/);
   assert.match(route, /cancellationReference/);
+  assert.match(paypal, /\/suspend/);
+  assert.match(paypal, /\/activate/);
   assert.match(billing, /paidThrough && paidThrough > stamp/);
   assert.match(billing, /expires_at = \?/);
+  assert.match(account, /Pausar suscripción|Pause subscription/);
+  assert.match(account, /Reanudar suscripción|Resume subscription/);
   assert.match(account, /Sí, cancelar|Yes, cancel/);
   assert.match(account, /No habrá nuevas renovaciones|There will be no further renewals/);
+});
+
+test("paywall puts the purchase action directly below the price", async () => {
+  const [page, button] = await Promise.all([
+    source("app/acceso/page.tsx"),
+    source("app/acceso/CheckoutButton.tsx"),
+  ]);
+  const price = page.indexOf('className="founder-price-copy"');
+  const checkout = page.indexOf("<CheckoutButton", price);
+  const facts = page.indexOf('className="paywall-billing-facts"', price);
+  assert.ok(price >= 0 && checkout > price && facts > checkout);
+  assert.match(button, /Activar PRO · US\$15\/mes/);
+  assert.match(button, /Crear cuenta y activar PRO · US\$15\/mes/);
+  assert.match(button, /acceso inmediato|instant access/i);
 });

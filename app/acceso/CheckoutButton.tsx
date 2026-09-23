@@ -63,9 +63,15 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
         : locale === "es" ? "Oferta fundadora completa" : "Founder offer fully claimed"}
     </strong>}
     <button type="button" onClick={checkout} disabled={status === "loading" || !founder.available}>
-      {status === "loading" ? t("checkout.openingPayPal") : !founder.available ? locale === "es" ? "Oferta completa" : "Offer full" : signedIn ? t("checkout.subscribe") : t("checkout.createAndSubscribe")}
+      {status === "loading"
+        ? t("checkout.openingPayPal")
+        : !founder.available
+          ? locale === "es" ? "Oferta completa" : "Offer full"
+          : signedIn
+            ? (locale === "es" ? "Activar PRO · US$15/mes" : "Activate PRO · US$15/month")
+            : (locale === "es" ? "Crear cuenta y activar PRO · US$15/mes" : "Create account and activate PRO · US$15/month")}
     </button>
-    <p>{t("checkout.cancelAnytime")}</p>
+    <p>{locale === "es" ? "Pago seguro · acceso inmediato · pausá o cancelá cuando quieras." : "Secure payment · instant access · pause or cancel anytime."}</p>
     {status === "error" && <small role="alert">{message}</small>}
   </div>;
 }

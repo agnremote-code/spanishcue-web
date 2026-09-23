@@ -115,7 +115,16 @@ export default async function Access({
             <strong>{priceLabel}</strong>
             <span>{t("paywall.perMonth")}</span>
           </div>
-          <p className="founder-price-copy">{checkoutLive ? t("paywall.priceCopy") : locale === "es" ? `Precio fundador previsto: ${priceLabel}/mes. El checkout público aún no está activo.` : `Planned Founder Price: ${priceLabel}/month. Public checkout is not active yet.`}</p>
+          <p className="founder-price-copy">{checkoutLive
+            ? (locale === "es"
+              ? "Acceso PRO inmediato a toda la biblioteca. Sin permanencia: pausá o cancelá desde Mi cuenta."
+              : "Instant PRO access to the full library. No lock-in: pause or cancel from My account.")
+            : locale === "es"
+              ? `Precio fundador previsto: ${priceLabel}/mes. El checkout público aún no está activo.`
+              : `Planned Founder Price: ${priceLabel}/month. Public checkout is not active yet.`}</p>
+
+          {checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo={returnTo} /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${locale === "es" ? "mes" : "month"}`} returnTo={returnTo} />}
+
           <dl className="paywall-billing-facts">
             {checkoutLive ? <>
               <div><dt>{locale === "es" ? "Facturación" : "Billing"}</dt><dd>{locale === "es" ? `${priceLabel} cada mes` : `${priceLabel} every month`}</dd></div>
@@ -145,7 +154,6 @@ export default async function Access({
             <li><span>✓</span><div><b>{t("paywall.noLimits")}</b><small>{t("paywall.noLimitsCopy")}</small></div></li>
           </ul>
 
-          {checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo={returnTo} /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${locale === "es" ? "mes" : "month"}`} returnTo={returnTo} />}
           <nav className="checkout-legal-links" aria-label={locale === "es" ? "Información legal y de privacidad" : "Legal and privacy information"}><Link href="/terms">{locale === "es" ? "Términos" : "Terms"}</Link><Link href="/privacy">{locale === "es" ? "Privacidad" : "Privacy"}</Link><Link href="/contact">{locale === "es" ? "Contacto" : "Contact"}</Link><Link href="/subscription-terms">{locale === "es" ? "Estado de suscripción" : "Subscription status"}</Link></nav>
           <MarketingLink
             cta={{ href: "/el-hotel-de-lo-imposible", labelKey: "nav.viewLesson", event: "cta_click", intent: "view_lesson" }}
