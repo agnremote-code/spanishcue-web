@@ -4,7 +4,7 @@ import { onIdTokenChanged, signOut } from "firebase/auth";
 import { useEffect } from "react";
 import { firebaseAuth } from "./firebase-client";
 
-export default function AuthSessionSync() {
+export default function AuthSessionSync({ serverSignedIn }: { serverSignedIn: boolean }) {
   useEffect(() => {
     return onIdTokenChanged(firebaseAuth, async (user) => {
       try {
@@ -24,11 +24,15 @@ export default function AuthSessionSync() {
         });
         if (response.status === 403) {
           await signOut(firebaseAuth);
+          return;
+        }
+        if (response.ok && !serverSignedIn && window.location.pathname !== "/ingresar") {
+          window.location.reload();
         }
       } catch {
         // The next explicit sign-in can safely restore the server session.
       }
     });
-  }, []);
+  }, [serverSignedIn]);
   return null;
 }
