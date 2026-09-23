@@ -98,7 +98,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <LocaleProvider initialLocale={locale}>
-          <AuthSessionSync />
+          <AuthSessionSync serverSignedIn={signedIn} />
           <GoogleAnalytics />
           <MarketingAttribution
             pathname={pathname}
