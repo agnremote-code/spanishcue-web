@@ -5,13 +5,15 @@ import Link from "next/link";
 import GrammarStep from "../grammar-steps/GrammarStep";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import type { SyntaxDecision, SyntaxLabData, SyntaxRepair } from "./data";
-import { ClauseBuilder, DecisionChain, SentenceConnector, TimelineBuilder } from "./SyntaxVisuals";
+import { ClauseBuilder, ContrastMixer, DecisionChain, ReferentFinder, SentenceConnector, TimelineBuilder } from "./SyntaxVisuals";
 import "./style.css";
 
 function SyntaxPreview({ data, left, connector, right }: { data: SyntaxLabData; left: string; connector: string; right: string }) {
   if (data.mode === "connector") return <SentenceConnector left={left} connector={connector} right={right} />;
   if (data.mode === "timeline") return <TimelineBuilder left={left} connector={connector} right={right} />;
   if (data.mode === "decision") return <DecisionChain left={left} connector={connector} right={right} />;
+  if (data.mode === "contrast") return <ContrastMixer left={left} connector={connector} right={right} />;
+  if (data.mode === "referent") return <ReferentFinder left={left} connector={connector} right={right} />;
   return <ClauseBuilder left={left} connector={connector} right={right} />;
 }
 
@@ -20,6 +22,8 @@ function PatternPreview({ data, pattern }: { data: SyntaxLabData; pattern: Synta
   if (data.mode === "connector") return <SentenceConnector {...props} />;
   if (data.mode === "timeline") return <TimelineBuilder {...props} />;
   if (data.mode === "decision") return <DecisionChain {...props} />;
+  if (data.mode === "contrast") return <ContrastMixer {...props} />;
+  if (data.mode === "referent") return <ReferentFinder {...props} />;
   return <ClauseBuilder {...props} />;
 }
 
