@@ -349,5 +349,40 @@
   },
   "candidateDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
   "deploymentStarted": true,
-  "phase": "production-verification"
+  "phase": "blocked-checkout-verification",
+  "migrationResult": {
+    "status": "applied",
+    "file": "drizzle/0009_glossy_mariko_yashida.sql",
+    "table": "billing_purchase_claims",
+    "columnCount": 25,
+    "priorProtectedRecordsUnchanged": true
+  },
+  "verification": {
+    "baseSmokePassed": true,
+    "baseSmokeChecks": 10,
+    "founderStatusRequiredFieldsPassed": true,
+    "paywallRequiredButtonsPassed": true,
+    "registrationButtonsBeforePaymentAbsent": true,
+    "anonymousProDenied": true,
+    "paypalAnonymousCheckout": "opened-paypal-provider-checkout-without-spanishcue-login",
+    "paddleAnonymousCheckout": "failed-http-502-reproduced",
+    "realChargesPerformed": false,
+    "environmentRevision": 47,
+    "allAcceptanceChecksPassed": false,
+    "failures": [
+      {
+        "path": "/api/billing/paddle/checkout",
+        "status": 502,
+        "timestamp": 1790234880742,
+        "requestId": "bc5a1f37438467d49c430abfefd868f1"
+      },
+      {
+        "path": "/api/billing/paddle/checkout",
+        "status": 502,
+        "timestamp": 1790234738901,
+        "requestId": "8bbaf7d2905a54cc9f760824703dd50f"
+      }
+    ]
+  },
+  "blocker": "Anonymous Paddle checkout returns HTTP 502. Exact user-requested SHA remains deployed; no code or environment changes are authorized by this release. Retain release lock for recovery; do not mark healthy."
 }
