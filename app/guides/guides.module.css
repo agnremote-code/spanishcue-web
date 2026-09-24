@@ -301,3 +301,78 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.pillar {
+  margin: 72px 0 88px;
+}
+
+.pillarHeader {
+  max-width: 820px;
+  margin-bottom: 42px;
+}
+
+.pillarHeader h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.pillarHeader p:last-child {
+  margin: 0;
+  max-width: 720px;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.cluster {
+  margin: 0 0 52px;
+}
+
+.clusterHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9d5cc;
+}
+
+.clusterHeader h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+  letter-spacing: -0.03em;
+}
+
+.clusterHeader span {
+  color: #666;
+  font-size: 0.82rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.cluster .grid {
+  margin: 18px 0 0;
+}
+
+@media (max-width: 760px) {
+  .pillar {
+    margin: 54px 0 68px;
+  }
+
+  .pillarHeader {
+    margin-bottom: 30px;
+  }
+
+  .cluster {
+    margin-bottom: 40px;
+  }
+
+  .clusterHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

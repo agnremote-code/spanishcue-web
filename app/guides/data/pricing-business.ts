@@ -430,6 +430,7 @@ export const pricingBusinessGuides: TeachingGuide[] = [
       "spanish-tutor-niche-ideas",
       "retain-online-spanish-students",
       "availability-online-spanish-tutor",
+      "independent-spanish-tutor-referrals",
     ],
     sections: [
       {

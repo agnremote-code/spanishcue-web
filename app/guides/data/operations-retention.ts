@@ -288,6 +288,7 @@ export const operationsRetentionGuides: TeachingGuide[] = [
       "first-online-spanish-lesson",
       "spanish-student-learning-plan",
       "teach-beginner-spanish-online",
+      "dele-preparation-private-tutor",
     ],
     sections: [
       {
@@ -418,6 +419,7 @@ export const operationsRetentionGuides: TeachingGuide[] = [
       "spanish-student-learning-plan",
       "lesson-prep-system-spanish-tutors",
       "first-online-spanish-lesson",
+      "conversation-only-spanish-lesson",
     ],
     sections: [
       {
