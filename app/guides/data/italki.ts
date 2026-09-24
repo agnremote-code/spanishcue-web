@@ -23,7 +23,7 @@ export const italkiGuides: TeachingGuide[] = [
     relatedHref: "/resources",
     relatedLabel: "Browse ready-to-teach Spanish resources",
     relatedLessonIds: [15, 14, 18, 108],
-    relatedGuideSlugs: ["italki-spanish-teacher-profile", "italki-trial-lesson-spanish", "teach-spanish-on-preply"],
+    relatedGuideSlugs: ["italki-spanish-teacher-profile", "italki-trial-lesson-spanish", "teach-spanish-on-preply", "teach-spanish-on-amazingtalker"],
     sections: [
       {
         heading: "Build a teaching offer before optimizing a marketplace profile",
