@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "busy",
+  "status": "idle",
   "healthy": {
     "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
     "versionNumber": 171,
-    "deploymentId": "appgdep_6ab4ad9131f88191955c2a43531da183",
+    "deploymentId": "appgdep_6ab4d17e0b50819193aee27fc6f2bfa2",
     "envSetRevision": 47,
     "smoke": {
       "passed": true,
       "checks": 10,
-      "completedAt": "2026-09-24T05:00:30.499Z"
+      "completedAt": "2026-09-24T07:33:28.948Z"
     },
     "runtimeErrors": 0
   },
@@ -284,6 +284,80 @@
         },
         "runtimeErrors": 0
       }
+    },
+    {
+      "owner": "migration-0009-4cac707-20260924-1790234096720",
+      "startedAt": "2026-09-24T07:14:56.720Z",
+      "finishedAt": "2026-09-24T07:33:28.948Z",
+      "previous": {
+        "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
+        "versionNumber": 171,
+        "deploymentId": "appgdep_6ab4ad9131f88191955c2a43531da183",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-24T05:00:30.499Z"
+        },
+        "runtimeErrors": 0
+      },
+      "healthy": {
+        "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
+        "versionNumber": 171,
+        "deploymentId": "appgdep_6ab4d17e0b50819193aee27fc6f2bfa2",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-24T07:33:28.948Z"
+        },
+        "runtimeErrors": 0
+      },
+      "failedSha": "4cac707939bf53c5aed1daf26b460c42febec855",
+      "failedVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_6ef26dbae0ac8191be76b97f5dfeff8f",
+      "failedVersionNumber": 172,
+      "failedDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
+      "reason": "Required checkout verification failed: anonymous Paddle checkout HTTP 502 (twice), anonymous post-payment ClaimClient asset HTTP 403. Restored previous compatible Worker without database or environment rollback.",
+      "verification": {
+        "baseSmokePassed": true,
+        "baseSmokeChecks": 10,
+        "founderStatusRequiredFieldsPassed": true,
+        "paywallRequiredButtonsPassed": true,
+        "registrationButtonsBeforePaymentAbsent": true,
+        "anonymousProDenied": true,
+        "paypalAnonymousCheckout": "opened-paypal-provider-checkout-without-spanishcue-login",
+        "paddleAnonymousCheckout": "failed-http-502-reproduced",
+        "realChargesPerformed": false,
+        "environmentRevision": 47,
+        "allAcceptanceChecksPassed": false,
+        "failures": [
+          {
+            "path": "/api/billing/paddle/checkout",
+            "status": 502,
+            "timestamp": 1790234880742,
+            "requestId": "bc5a1f37438467d49c430abfefd868f1"
+          },
+          {
+            "path": "/api/billing/paddle/checkout",
+            "status": 502,
+            "timestamp": 1790234738901,
+            "requestId": "8bbaf7d2905a54cc9f760824703dd50f"
+          }
+        ],
+        "postPaymentClaimAsset": {
+          "path": "/assets/ClaimClient-D9kec1H9.js",
+          "status": 403
+        }
+      },
+      "migrationResult": {
+        "status": "applied",
+        "file": "drizzle/0009_glossy_mariko_yashida.sql",
+        "table": "billing_purchase_claims",
+        "columnCount": 25,
+        "priorProtectedRecordsUnchanged": true
+      }
     }
   ],
   "bootstrap": {
@@ -315,74 +389,17 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": [],
-  "owner": "migration-0009-4cac707-20260924-1790234096720",
-  "candidateSha": "4cac707939bf53c5aed1daf26b460c42febec855",
-  "previous": {
-    "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
-    "versionNumber": 171,
-    "deploymentId": "appgdep_6ab4ad9131f88191955c2a43531da183",
-    "envSetRevision": 47,
-    "smoke": {
-      "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-24T05:00:30.499Z"
-    },
-    "runtimeErrors": 0
-  },
-  "startedAt": "2026-09-24T07:14:56.720Z",
-  "releaseKind": "authorized-additive-migration",
-  "authorizedMigration": "drizzle/0009_glossy_mariko_yashida.sql",
-  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_6ef26dbae0ac8191be76b97f5dfeff8f",
-  "candidateVersionNumber": 172,
-  "backupValidation": {
-    "tables": 16,
-    "rows": 96,
-    "foreignKeysValid": true,
-    "migrationPreservesExistingRows": true
-  },
-  "migrationPolicy": {
+  "failedShas": [
+    "4cac707939bf53c5aed1daf26b460c42febec855"
+  ],
+  "lastMigration": {
     "file": "drizzle/0009_glossy_mariko_yashida.sql",
-    "previousSqlUnchanged": true,
-    "nativeMigrationBeforeWorkerUpload": true
-  },
-  "candidateDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
-  "deploymentStarted": true,
-  "phase": "blocked-checkout-verification",
-  "migrationResult": {
     "status": "applied",
-    "file": "drizzle/0009_glossy_mariko_yashida.sql",
+    "binding": "DB",
     "table": "billing_purchase_claims",
+    "retainedAfterWorkerRollback": true,
     "columnCount": 25,
-    "priorProtectedRecordsUnchanged": true
-  },
-  "verification": {
-    "baseSmokePassed": true,
-    "baseSmokeChecks": 10,
-    "founderStatusRequiredFieldsPassed": true,
-    "paywallRequiredButtonsPassed": true,
-    "registrationButtonsBeforePaymentAbsent": true,
-    "anonymousProDenied": true,
-    "paypalAnonymousCheckout": "opened-paypal-provider-checkout-without-spanishcue-login",
-    "paddleAnonymousCheckout": "failed-http-502-reproduced",
-    "realChargesPerformed": false,
-    "environmentRevision": 47,
-    "allAcceptanceChecksPassed": false,
-    "failures": [
-      {
-        "path": "/api/billing/paddle/checkout",
-        "status": 502,
-        "timestamp": 1790234880742,
-        "requestId": "bc5a1f37438467d49c430abfefd868f1"
-      },
-      {
-        "path": "/api/billing/paddle/checkout",
-        "status": 502,
-        "timestamp": 1790234738901,
-        "requestId": "8bbaf7d2905a54cc9f760824703dd50f"
-      }
-    ]
-  },
-  "blocker": "Anonymous Paddle checkout returns HTTP 502. Exact user-requested SHA remains deployed; no code or environment changes are authorized by this release. Retain release lock for recovery; do not mark healthy."
+    "appliedWithDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
+    "verifiedAt": "2026-09-24T07:33:28.948Z"
+  }
 }
