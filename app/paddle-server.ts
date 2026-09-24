@@ -5,6 +5,7 @@ type PaddleTransaction = {
   status?: unknown;
   subscription_id?: unknown;
   customer_id?: unknown;
+  customer?: { id?: unknown; email?: unknown } | null;
   custom_data?: unknown;
   currency_code?: unknown;
   billing_period?: { ends_at?: unknown } | null;
@@ -60,7 +61,7 @@ async function paddleJson<T>(config: PaddleRuntimeConfig, path: string, init: Re
 
 export async function createPaddleCheckoutTransaction(
   config: PaddleRuntimeConfig,
-  input: { userId: string; offerCode: string },
+  input: { userId: string; claimId?: never; offerCode: string } | { claimId: string; userId?: never; offerCode: string },
 ) {
   const data = await paddleJson<PaddleTransaction>(config, "/transactions", {
     method: "POST",
@@ -68,7 +69,7 @@ export async function createPaddleCheckoutTransaction(
       items: [{ price_id: config.priceId, quantity: 1 }],
       collection_mode: "automatic",
       custom_data: {
-        spanishcue_user_id: input.userId,
+        ...(input.claimId ? { spanishcue_claim_id: input.claimId } : { spanishcue_user_id: input.userId }),
         spanishcue_offer_code: input.offerCode,
       },
     }),
@@ -78,19 +79,39 @@ export async function createPaddleCheckoutTransaction(
 }
 
 export async function getPaddleTransaction(config: PaddleRuntimeConfig, transactionId: string) {
-  return paddleJson<PaddleTransaction>(config, `/transactions/${encodeURIComponent(transactionId)}`);
+  return paddleJson<PaddleTransaction>(config, `/transactions/${encodeURIComponent(transactionId)}?include=customer`);
 }
 
 export async function getPaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {
   return paddleJson<PaddleSubscription>(config, `/subscriptions/${encodeURIComponent(subscriptionId)}`);
 }
 
-export function validatePaddleSubscription(subscription: PaddleSubscription, config: PaddleRuntimeConfig, userId: string) {
+function claimFromCustomData(value: unknown, offerCode: string) {
+  if (!value || typeof value !== "object") return "";
+  const custom = value as Record<string, unknown>;
+  return custom.spanishcue_offer_code === offerCode && typeof custom.spanishcue_claim_id === "string"
+    ? custom.spanishcue_claim_id : "";
+}
+
+export function validatePaddleClaimSubscription(subscription: PaddleSubscription, config: PaddleRuntimeConfig, claimId: string, offerCode: string) {
+  return claimFromCustomData(subscription.custom_data, offerCode) === claimId
+    && validatePaddleSubscription(subscription, config, claimId, "spanishcue_claim_id");
+}
+
+export function validatePaddleClaimTransaction(transaction: PaddleTransaction, config: PaddleRuntimeConfig, claimId: string, offerCode: string) {
+  return claimFromCustomData(transaction.custom_data, offerCode) === claimId
+    && validatePaddleTransaction(transaction, config, claimId, "spanishcue_claim_id")
+    && transaction.status === "completed"
+    && Number(transaction.details?.totals?.total) === 1500
+    && transaction.currency_code === "USD";
+}
+
+export function validatePaddleSubscription(subscription: PaddleSubscription, config: PaddleRuntimeConfig, userId: string, customKey: "spanishcue_user_id" | "spanishcue_claim_id" = "spanishcue_user_id") {
   if (typeof subscription.id !== "string" || !subscription.id.startsWith("sub_")) return false;
   const custom = subscription.custom_data && typeof subscription.custom_data === "object"
     ? subscription.custom_data as Record<string, unknown>
     : {};
-  if (custom.spanishcue_user_id !== userId) return false;
+  if (custom[customKey] !== userId) return false;
   const item = Array.isArray(subscription.items) && subscription.items.length === 1 ? subscription.items[0] : null;
   if (!item || item.quantity !== 1 || item.price?.id !== config.priceId) return false;
   return item.price?.unit_price?.amount === "1500"
@@ -100,11 +121,11 @@ export function validatePaddleSubscription(subscription: PaddleSubscription, con
     && item.price?.trial_period == null;
 }
 
-export function validatePaddleTransaction(transaction: PaddleTransaction, config: PaddleRuntimeConfig, userId: string) {
+export function validatePaddleTransaction(transaction: PaddleTransaction, config: PaddleRuntimeConfig, userId: string, customKey: "spanishcue_user_id" | "spanishcue_claim_id" = "spanishcue_user_id") {
   const custom = transaction.custom_data && typeof transaction.custom_data === "object"
     ? transaction.custom_data as Record<string, unknown>
     : {};
-  if (custom.spanishcue_user_id !== userId) return false;
+  if (custom[customKey] !== userId) return false;
   const item = Array.isArray(transaction.items) && transaction.items.length === 1 ? transaction.items[0] : null;
   return Boolean(
     item

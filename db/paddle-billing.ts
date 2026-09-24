@@ -198,13 +198,15 @@ export async function recordPaddleCompletedPayment(
   if (!subscription || subscription.userId !== input.userId) throw new Error("paddle_subscription_unknown");
 
   const existing = await db.prepare(
-    `SELECT id FROM billing_payments
+    `SELECT id, user_id AS userId, subscription_id AS subscriptionId, status FROM billing_payments
      WHERE provider = 'paddle' AND environment = ? AND provider_payment_id = ? LIMIT 1`,
-  ).bind(ENVIRONMENT, input.transactionId).first<{ id: number }>();
-  if (existing) return { kind: "duplicate" as const, paymentId: existing.id };
+  ).bind(ENVIRONMENT, input.transactionId).first<{ id: number; userId: string; subscriptionId: number; status: string }>();
+  if (existing && (existing.userId !== input.userId || existing.subscriptionId !== subscription.id || existing.status !== "COMPLETED")) {
+    throw new Error("paddle_payment_owner_mismatch");
+  }
 
   const stamp = now();
-  await db.prepare(
+  if (!existing) await db.prepare(
     `INSERT INTO billing_payments (
       user_id, subscription_id, provider, environment, provider_payment_id, provider_event_id,
       amount_cents, currency, status, occurred_at, paid_through, created_at, updated_at
@@ -229,11 +231,14 @@ export async function recordPaddleCompletedPayment(
   ).bind(ENVIRONMENT, input.transactionId).first<{ id: number }>();
   if (!payment) throw new Error("paddle_payment_not_persisted");
 
-  const isFirst = !subscription.firstPaymentAt;
+  const earliest = await db.prepare(
+    `SELECT id FROM billing_payments WHERE subscription_id = ? ORDER BY occurred_at, id LIMIT 1`,
+  ).bind(subscription.id).first<{ id: number }>();
+  const isFirst = earliest?.id === payment.id;
   const paidThrough = Math.max(subscription.paidThrough ?? 0, input.paidThrough);
   await db.prepare(
     `UPDATE billing_subscriptions SET
-      status = 'ACTIVE',
+      status = CASE WHEN status IN ('CANCELLED', 'SUSPENDED', 'EXPIRED') THEN status ELSE 'ACTIVE' END,
       first_payment_at = COALESCE(first_payment_at, ?),
       last_payment_at = ?,
       paid_through = ?,
@@ -285,7 +290,7 @@ export async function recordPaddleCompletedPayment(
     stamp,
   ).run();
 
-  return { kind: isFirst ? "first" as const : "renewal" as const, paymentId: payment.id };
+  return { kind: existing ? "duplicate" as const : isFirst ? "first" as const : "renewal" as const, paymentId: payment.id };
 }
 
 export async function markPaddleWebhookReceived(

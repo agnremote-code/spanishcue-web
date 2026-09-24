@@ -9,6 +9,8 @@ import {
   validatePaddleTransaction,
 } from "../../../../paddle-server";
 import { recordPaddleCompletedPayment, upsertPaddleSubscription } from "../../../../../db/paddle-billing";
+import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
+import { verifyGuestPaddlePayment } from "../../../../guest-purchase-verification";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +25,6 @@ export async function POST(request: Request) {
     return Response.json({ error: "Origen no válido." }, { status: 403 });
   }
   const userId = accountIdFromHeaders(request.headers);
-  if (!userId) return Response.json({ error: "Iniciá sesión para continuar." }, { status: 401 });
 
   const raw = await request.text();
   let transactionId = "";
@@ -43,6 +44,19 @@ export async function POST(request: Request) {
     return Response.json({ error: "Paddle no está disponible." }, { status: 503 });
   }
 
+  if (!userId) {
+    const claim = await authorizePurchaseClaim(env.DB, request.headers.get("cookie"), "paddle");
+    if (!claim || claim.provider !== "paddle" || claim.providerPaymentId !== transactionId ||
+        claim.offerCode !== billing.founderOffer.code) {
+      return Response.json({ error: "No encontramos este pago en el navegador." }, { status: 404 });
+    }
+    try {
+      const paid = await verifyGuestPaddlePayment(env.DB, paddle, claim, transactionId);
+      if (paid) return Response.json({ pending: false, paymentConfirmed: true }, { headers: { "cache-control": "private, no-store" } });
+    } catch { /* Provider verification can finish on a later retry or signed webhook. */ }
+    return Response.json({ pending: true, paymentConfirmed: false }, { status: 202 });
+  }
+
   try {
     const transaction = await getPaddleTransaction(paddle, transactionId);
     if (transaction.status !== "completed" || !validatePaddleTransaction(transaction, paddle, userId)) {
@@ -60,7 +74,7 @@ export async function POST(request: Request) {
     const occurredAt = Math.floor(Date.now() / 1000);
     const amountCents = Number(transaction.details?.totals?.total);
     const currency = typeof transaction.currency_code === "string" ? transaction.currency_code : "";
-    if (!paidThrough || !Number.isInteger(amountCents) || amountCents <= 0 || !currency) {
+    if (!paidThrough || amountCents !== 1500 || currency !== "USD") {
       return Response.json({ pending: true, accessConfirmed: false }, { status: 202 });
     }
 

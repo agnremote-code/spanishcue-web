@@ -4,7 +4,7 @@
 
 - Product: `spanishcue-pro`.
 - Offer: USD 15.00 every month, automatic renewal, no trial and no setup fee.
-- Founder allocation: at most 1,000 per PayPal environment, assigned only after the first valid USD 15.00 payment is persisted.
+- Founder allocation: at most 1,000 per environment, shared across PayPal and Paddle, assigned only after the first valid USD 15.00 payment is persisted and the verified buyer binds it to an account.
 - PayPal subscription approval or `ACTIVE` status never grants PRO by itself.
 - Historical provider transactions keep their original facts. This implementation does not rewrite legitimate old agreements.
 
@@ -64,6 +64,13 @@ Home and landing files are not changed by this task. Their CTA may link to:
 | `occurred_at` | Provider event/transaction time |
 
 No browser callback, `localStorage`, `sessionStorage`, client analytics event or PayPal `ACTIVE` status represents a purchase.
+
+## Checkout before account creation
+
+- Anonymous checkout creates a provider-neutral `billing_purchase_claims` record. Only a SHA-256 verifier is stored in D1; its random secret stays in a Secure, HttpOnly, SameSite=Lax `__Host-spanishcue-claim-*` cookie. Providers receive only the public claim ID.
+- Paddle's completed transaction and customer email are fetched via the server API. PayPal's completed sale and subscriber email come from signed webhooks or server-side subscription reconciliation. Exact Founder terms remain mandatory.
+- No pending claim creates a `billing_subscriptions`, `billing_payments` or `access_grants` row. A verified Firebase account with the same normalized email binds the paid claim to the existing billing machinery. The binding is retryable and the first-paid event remains payment-derived and unique.
+- A cookie alone, an approval callback, or a provider email supplied by JavaScript never grants access. Older account-bound subscriptions keep their existing verification and management paths.
 
 ## Provider references
 
