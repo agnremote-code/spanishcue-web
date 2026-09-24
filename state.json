@@ -333,5 +333,18 @@
   },
   "startedAt": "2026-09-24T07:14:56.720Z",
   "releaseKind": "authorized-additive-migration",
-  "authorizedMigration": "drizzle/0009_glossy_mariko_yashida.sql"
+  "authorizedMigration": "drizzle/0009_glossy_mariko_yashida.sql",
+  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_6ef26dbae0ac8191be76b97f5dfeff8f",
+  "candidateVersionNumber": 172,
+  "backupValidation": {
+    "tables": 16,
+    "rows": 96,
+    "foreignKeysValid": true,
+    "migrationPreservesExistingRows": true
+  },
+  "migrationPolicy": {
+    "file": "drizzle/0009_glossy_mariko_yashida.sql",
+    "previousSqlUnchanged": true,
+    "nativeMigrationBeforeWorkerUpload": true
+  }
 }
