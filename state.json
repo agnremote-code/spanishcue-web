@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "idle",
+  "status": "busy",
   "healthy": {
     "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
@@ -315,5 +315,23 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": []
+  "failedShas": [],
+  "owner": "migration-0009-4cac707-20260924-1790234096720",
+  "candidateSha": "4cac707939bf53c5aed1daf26b460c42febec855",
+  "previous": {
+    "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
+    "versionNumber": 171,
+    "deploymentId": "appgdep_6ab4ad9131f88191955c2a43531da183",
+    "envSetRevision": 47,
+    "smoke": {
+      "passed": true,
+      "checks": 10,
+      "completedAt": "2026-09-24T05:00:30.499Z"
+    },
+    "runtimeErrors": 0
+  },
+  "startedAt": "2026-09-24T07:14:56.720Z",
+  "releaseKind": "authorized-additive-migration",
+  "authorizedMigration": "drizzle/0009_glossy_mariko_yashida.sql"
 }
