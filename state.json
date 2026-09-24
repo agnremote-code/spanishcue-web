@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "idle",
+  "status": "busy",
   "healthy": {
     "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
@@ -401,5 +401,21 @@
     "columnCount": 25,
     "appliedWithDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
     "verifiedAt": "2026-09-24T07:33:28.948Z"
-  }
+  },
+  "owner": "reconcile-v173-20260924T134633Z",
+  "candidateSha": "9ce020e36ced068f29f7a6a79637b4f05675e09c",
+  "previous": {
+    "sha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f84f74de8fbc8191a04e56de35d516e1",
+    "versionNumber": 171,
+    "deploymentId": "appgdep_6ab4d17e0b50819193aee27fc6f2bfa2",
+    "envSetRevision": 47,
+    "smoke": {
+      "passed": true,
+      "checks": 10,
+      "completedAt": "2026-09-24T07:33:28.948Z"
+    },
+    "runtimeErrors": 0
+  },
+  "startedAt": "2026-09-24T13:46:46.117Z"
 }
