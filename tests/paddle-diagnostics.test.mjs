@@ -66,3 +66,24 @@ test('Paddle failure with an empty JSON body still records the HTTP status', asy
     console.error = originalError;
   }
 });
+
+test('Paddle diagnostic replaces dynamic transaction IDs with a route template', async () => {
+  const result = await build({
+    entryPoints: ['app/paddle-server.ts'], bundle: true, write: false, format: 'esm', platform: 'node',
+  });
+  const { getPaddleTransaction } = await import(`data:text/javascript;base64,${Buffer.from(result.outputFiles[0].text).toString('base64')}`);
+  const originalFetch = globalThis.fetch;
+  const originalError = console.error;
+  const logs = [];
+  globalThis.fetch = async () => Response.json({ error: { type: 'request_error', code: 'not_found', detail: 'Transaction not found.' } }, { status: 404 });
+  console.error = (...args) => logs.push(args);
+  try {
+    await assert.rejects(getPaddleTransaction({ apiKey: 'private-key' }, 'buyer@example.test'), /paddle_api_404/);
+    const output = JSON.stringify(logs);
+    assert.match(output, /"path":"\/transactions\/:id"/);
+    assert.doesNotMatch(output, /buyer|example|%40/);
+  } finally {
+    globalThis.fetch = originalFetch;
+    console.error = originalError;
+  }
+});
