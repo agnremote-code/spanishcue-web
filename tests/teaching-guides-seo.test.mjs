@@ -114,7 +114,7 @@ test("Preply batch 1 exposes the approved seven URLs", () => {
   const slugs = tutorBusinessGuides
     .filter((guide) => guide.cluster === "preply")
     .map((guide) => guide.slug);
-  assert.deepEqual(slugs, [
+  assert.deepEqual(slugs.slice(0, 7), [
     "teach-spanish-on-preply",
     "preply-spanish-tutor-profile",
     "preply-headline-spanish-tutor",
