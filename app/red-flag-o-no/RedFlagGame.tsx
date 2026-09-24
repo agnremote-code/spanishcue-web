@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import {
@@ -23,6 +24,10 @@ const rounds = {
 } as const;
 
 export default function RedFlagGame({ level }: { level: Level }) {
+  return <ConversationFamily id="red-flag-o-no" title="Red Flag o No" levels={["A2", "B1", "B2"]} defaultLevel={level}>{selected => <RedFlagActivity key={selected} level={selected as Level} />}</ConversationFamily>;
+}
+
+function RedFlagActivity({ level }: { level: Level }) {
   const config = useMemo(() => getLevelConfig(level), [level]);
   const [view, setView] = useState<View>("warmup");
   const [index, setIndex] = useState(0);

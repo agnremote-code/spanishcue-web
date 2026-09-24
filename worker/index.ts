@@ -190,7 +190,7 @@ const worker = {
       }
       if(administrative&&!verifiedUser) return noStoreRedirect(new URL('/ingresar?modo=entrar&returnTo=%2Fadmin',url),verifiedLocale);
       if(administrative) return noStoreRedirect(new URL('/cuenta',url),verifiedLocale);
-      return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(url.pathname)}`,url),verifiedLocale);
+      return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(url.pathname+url.search)}`,url),verifiedLocale);
     }
     const accountId=accountIdFromHeaders(verifiedHeaders);
     if (accountId&&lesson&&request.method==='GET') {

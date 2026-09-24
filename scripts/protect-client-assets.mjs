@@ -56,6 +56,7 @@ const manifest = JSON.parse(
 const publicRoots = new Set([
   "app/AuthSessionSync.tsx",
   "app/Library.tsx",
+  "app/resources/ResourceCatalog.tsx",
   "app/PasswordResetButton.tsx",
   "app/acceso/CheckoutButton.tsx",
   "app/acceso/FounderAccessForm.tsx",

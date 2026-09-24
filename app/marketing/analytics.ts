@@ -49,6 +49,8 @@ declare global {
 }
 
 const allowedPropertyKeys = new Set([
+  "family",
+  "level",
   "access", "category", "cta_type", "filter", "landing", "lesson_id",
   "method", "placement", "plan", "query_length", "signed_in", "value",
   "transaction_id",

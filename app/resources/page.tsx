@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ResourceCatalog from "./ResourceCatalog";
+import { isFreeLesson } from "../access-policy";
 import styles from "./resources.module.css";
 import {
   resourceLessons,
   resourcePathForLesson,
   resourceTypePluralLabel,
-  resourceLevelLabel,
 } from "../resource-seo";
 
 export const metadata: Metadata = {
@@ -16,7 +17,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const categoryOrder = ["Gramática", "Conversación", "Escucha", "Fonética", "Vocabulario"] as const;
 
 export default function ResourcesPage() {
   return (
@@ -41,26 +41,13 @@ export default function ResourcesPage() {
           </p>
         </header>
 
-        {categoryOrder.map((category) => {
-          const categoryLessons = resourceLessons.filter((lesson) => lesson.category === category);
-          if (!categoryLessons.length) return null;
-          return (
-            <section className={styles.group} key={category}>
-              <h2>{resourceTypePluralLabel(categoryLessons[0])}</h2>
-              <div className={styles.catalogGrid}>
-                {categoryLessons.map((lesson) => (
-                  <Link className={styles.resourceCard} href={resourcePathForLesson(lesson)} key={lesson.id}>
-                    <p className={styles.cardMeta}>
-                      {resourceLevelLabel(lesson)} · {lesson.duration}
-                    </p>
-                    <h3 className={styles.cardTitle}>{lesson.title}</h3>
-                    <p className={styles.cardCopy}>{lesson.subtitle}</p>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          );
-        })}
+        <ResourceCatalog items={resourceLessons.map(lesson => ({
+          id:lesson.id,title:lesson.title,subtitle:lesson.subtitle,category:lesson.category,
+          categoryLabel:resourceTypePluralLabel(lesson),level:lesson.level,levels:lesson.levels,
+          displayLevel:lesson.displayLevel,duration:lesson.duration,path:resourcePathForLesson(lesson),
+          image:lesson.image,free:isFreeLesson(lesson.id),familyId:lesson.familyId,previewByLevel:lesson.previewByLevel,
+        }))}/>
+
       </div>
     </main>
   );

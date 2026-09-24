@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
-import { eliminations, absurdRules } from './data';
-import { eliminationsA2, absurdRulesA2 } from './data-a2';
+import type { eliminations, absurdRules } from './data';
+import { ConversationClosing } from '../conversation-families/ConversationFamily';
 import './worlds.css';
 import { SpanishCueBrand } from '../SpanishCueBrand';
 
@@ -16,11 +16,9 @@ function TalkHelp({words,starter}:{words:string[];starter:string}) {
   return <details className="cw-help"><summary>Una mano para hablar <span aria-hidden="true">+</span></summary><div><p className="cw-starter">«{starter}»</p><div className="cw-words">{words.map(word=><span key={word}>{word}</span>)}</div><p>Puedes dar un ejemplo de tu vida, comparar o explicar por qué. Tómate tu tiempo.</p></div></details>;
 }
 
-export default function ConversationWorld({mode,level='B1'}:{mode:'machine'|'rules';level?:'A2'|'B1'}) {
+export default function ConversationWorld({mode,level,machineRounds,ruleRounds,closing}:{mode:'machine'|'rules';level:'A2'|'B1';machineRounds:typeof eliminations;ruleRounds:typeof absurdRules;closing:string[]}) {
   const machine = mode==='machine';
   const a2 = level==='A2';
-  const machineRounds = a2 ? eliminationsA2 : eliminations;
-  const ruleRounds = a2 ? absurdRulesA2 : absurdRules;
   const entries = machine ? machineRounds : ruleRounds;
   const [showEnglish,setShowEnglish] = useState(false);
   const [saved,setSaved] = useState<Saved>(empty);
@@ -136,6 +134,7 @@ export default function ConversationWorld({mode,level='B1'}:{mode:'machine'|'rul
         <div className="cw-round-grid">{entries.map((e,n)=>{if(group!=='Todas'&&group!==e.group)return null;const done=machine?Boolean(saved.decisions[e.id]?.final):saved.opened[e.id]===3;return <button key={e.id} className={`cw-round-tile ${n===index?'cw-current':''} ${done?'cw-done':''}`} onClick={()=>go(n)} aria-current={n===index?'step':undefined} style={{'--tile-delay':`${n%10*35}ms`} as CSSProperties}><span className="cw-tile-meta">{String(n+1).padStart(2,'0')}<i>{done?'Conversada':n===index?'En curso':''}</i></span><strong>{e.title}</strong><span className="cw-tile-bottom">{machine?'Decidir':'Explorar regla'} <b aria-hidden="true">↗</b></span></button>;})}</div>
       </section>
 
+      <ConversationClosing questions={closing} />
       <footer className="cw-footer"><p>Conversación libre · Español rioplatense · Nivel {level}</p><div><button onClick={()=>{setSaved(empty());setNotice('Nueva conversación. Empezamos de cero.');setGroup('Todas');}}>Nueva conversación</button><a href={(machine?'/tu-vida-con-una-regla-absurda':'/la-maquina-que-elimina-cosas')+(a2?'-a2':'')}>{machine?'Ir a Tu vida con una regla absurda':'Ir a La máquina que elimina cosas'} →</a></div></footer>
     </div>
   </main>;

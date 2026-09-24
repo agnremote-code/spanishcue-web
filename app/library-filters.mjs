@@ -65,8 +65,10 @@ export function familyLessonsForCategory(
 
 /** Build short level shelves for the "Todos" view without changing catalog data. */
 export function groupLessonsByLevel(lessons, levels = ['A1','A2','B1','B2','C1','C2'], limit = 4) {
+  const displayedFamilies = new Set();
   return levels.flatMap(level => {
-    const matching = filterLessons(lessons, { level });
+    const allMatching = filterLessons(lessons, { level });
+    const matching = allMatching.filter(lesson => !lesson.familyId || !displayedFamilies.has(lesson.familyId));
     const selected = [];
     for (const category of ['Gramática','Conversación','Escucha','Fonética','Vocabulario']) {
       const categoryLessons = matching.filter(lesson => lesson.category === category);
@@ -78,8 +80,9 @@ export function groupLessonsByLevel(lessons, levels = ['A1','A2','B1','B2','C1',
       if (selected.length === limit) break;
       if (!selected.includes(lesson)) selected.push(lesson);
     }
-    return matching.length
-      ? [{ level, total: matching.length, lessons: selected }]
+    for (const lesson of selected) if (lesson.familyId) displayedFamilies.add(lesson.familyId);
+    return allMatching.length
+      ? [{ level, total: allMatching.length, lessons: selected }]
       : [];
   });
 }

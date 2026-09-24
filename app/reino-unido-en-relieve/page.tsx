@@ -1,5 +1,7 @@
 "use client";
+import { ConversationFamily, ConversationClosing } from "../conversation-families/ConversationFamily";
 
+import { questionsForUKArea } from "./variants";
 import Link from "next/link";
 import {useMemo,useState,type CSSProperties,type KeyboardEvent} from "react";
 import "../suiza-en-relieve/style.css";
@@ -54,6 +56,9 @@ function UKMap({selected,onSelect,visibleCodes,compact=false}:{selected:UKArea;o
 }
 
 export default function ReinoUnidoEnRelieve(){
+  return <ConversationFamily id="reino-unido-en-relieve" title="Reino Unido en Relieve" levels={["A2","B1"]} defaultLevel="A2">{level=><CountryExperience key={level} level={level as "A2"|"B1"}/>}</ConversationFamily>;
+}
+function CountryExperience({level}:{level:"A2"|"B1"}){
   const [screen,setScreen]=useState<Screen>("cover");
   const [active,setActive]=useState<UKArea>(areas[0]);
   const [mapPick,setMapPick]=useState<UKArea>(areas[0]);
@@ -61,14 +66,15 @@ export default function ReinoUnidoEnRelieve(){
   const [nation,setNation]=useState<Nation>("todo");
   const [query,setQuery]=useState("");
   const [visited,setVisited]=useState<Set<string>>(new Set());
-  const [englishVisible,setEnglishVisible]=useState(true);
+  const [englishVisible,setEnglishVisible]=useState(false);
   const [stance,setStance]=useState<Stance>(null);
   const [answerParts,setAnswerParts]=useState<Pair[]>([]);
   const [placeFocus,setPlaceFocus]=useState(0);
 
   const visible=useMemo(()=>areas.filter(area=>(nation==="todo"||area.nation===nation)&&`${area.name} ${area.localName} ${area.hub} ${area.languages} ${area.hook.es} ${placesByCode[area.code].map(place=>place.name).join(" ")}`.toLowerCase().includes(query.toLowerCase())),[nation,query]);
   const visibleCodes=useMemo(()=>new Set(visible.map(area=>area.code)),[visible]);
-  const current=active.questions[question];
+  const activeQuestions=questionsForUKArea(active,level);
+  const current=activeQuestions[Math.min(question,activeQuestions.length-1)];
   const activePlaces=placesByCode[active.code];
   const focusedPlace=activePlaces[placeFocus];
   const progress=Math.round(visited.size/areas.length*100);
@@ -77,9 +83,9 @@ export default function ReinoUnidoEnRelieve(){
   const answerEn=answerPairs.map(part=>part.en.replace(/[…]+/g,"")).join(" ");
 
   const show=(next:Screen)=>{setScreen(next);window.scrollTo({top:0,behavior:"smooth"})};
-  const enter=(area:UKArea,start=0)=>{setActive(area);setMapPick(area);setQuestion(start);setPlaceFocus(0);setStance(null);setAnswerParts([]);setVisited(old=>new Set([...old,area.code]));show("area")};
-  const surprise=()=>{const pool=areas.filter(area=>area.code!==active.code);const next=pool[Math.floor(Math.random()*pool.length)]||areas[0];enter(next,Math.floor(Math.random()*8))};
-  const changeQuestion=(next:number)=>{setQuestion(Math.max(0,Math.min(7,next)));setStance(null);setAnswerParts([]);document.querySelector(".ch-question-card")?.scrollIntoView({behavior:"smooth",block:"center"})};
+  const enter=(area:UKArea,start=0)=>{setActive(area);setMapPick(area);setQuestion(Math.min(start,questionsForUKArea(area,level).length-1));setPlaceFocus(0);setStance(null);setAnswerParts([]);setVisited(old=>new Set([...old,area.code]));show("area")};
+  const surprise=()=>{const pool=areas.filter(area=>area.code!==active.code);const next=pool[Math.floor(Math.random()*pool.length)]||areas[0];enter(next,Math.floor(Math.random()*questionsForUKArea(next,level).length))};
+  const changeQuestion=(next:number)=>{setQuestion(Math.max(0,Math.min(activeQuestions.length-1,next)));setStance(null);setAnswerParts([]);document.querySelector(".ch-question-card")?.scrollIntoView({behavior:"smooth",block:"center"})};
   const addPart=(part:Pair)=>setAnswerParts(parts=>[...parts,part]);
   const chooseNation=(next:Nation)=>{setNation(next);const first=areas.find(area=>next==="todo"||area.nation===next);if(first)setMapPick(first)};
 
@@ -143,7 +149,7 @@ export default function ReinoUnidoEnRelieve(){
         </section>
 
         <section className="ch-question-card">
-          <div className="ch-question-number"><span>PREGUNTA · QUESTION</span><b>{String(question+1).padStart(2,"0")} <i>/ 08</i></b></div>
+          <div className="ch-question-number"><span>PREGUNTA · QUESTION</span><b>{String(question+1).padStart(2,"0")} <i>/ {activeQuestions.length}</i></b></div>
           <div className="ch-question-copy"><small>{active.name} · {active.hook.es}</small><h2>{current.es}</h2><p className="ch-en">{current.en}</p><div><span>RESPONDÉ</span><i>→</i><span>DA UNA RAZÓN</span><i>→</i><span>AGREGÁ UN EJEMPLO</span></div></div>
           <UKMark/>
         </section>
@@ -160,8 +166,8 @@ export default function ReinoUnidoEnRelieve(){
 
         <section className="ch-depth"><header><span>UNA RESPUESTA MÁS LARGA · A LONGER ANSWER</span><h2>Elegí una misión extra.</h2></header><div>{depthMoves.map((move,index)=><button key={move.es}><span>{index+1}</span><b>{move.es}</b><small className="ch-en">{move.en}</small></button>)}</div></section>
 
-        <nav className="ch-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{active.questions.map((_,index)=><button key={index} className={question===index?"active":""} onClick={()=>changeQuestion(index)}>{index+1}</button>)}</div><button onClick={()=>question===7?surprise():changeQuestion(question+1)}>{question===7?"OTRO TERRITORIO · NEXT AREA →":"SIGUIENTE · NEXT →"}</button></nav>
+        <nav className="ch-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{activeQuestions.map((_,index)=><button key={index} className={question===index?"active":""} onClick={()=>changeQuestion(index)}>{index+1}</button>)}</div><button onClick={()=>question===activeQuestions.length-1?surprise():changeQuestion(question+1)}>{question===activeQuestions.length-1?"OTRO TERRITORIO · NEXT AREA →":"SIGUIENTE · NEXT →"}</button></nav>
       </div>
     </section>}
-  </main>;
+  <ConversationClosing questions={level==="A2"?["¿Qué ciudad quieres visitar y por qué?", "Preparen un fin de semana: transporte, alojamiento y dos actividades."]:["¿Qué tensión entre visitantes y residentes te recordó a tu país?", "Recomienda una ruta que respete las prioridades de dos viajeros diferentes."]} note="Elijan entre tres y cinco territorios para una clase de unos 45 minutos."/></main>;
 }

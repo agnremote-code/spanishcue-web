@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { localLessonPath } from "../../access-policy";
+import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
+import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
 import {
   lessonForResourceSlug,
   relatedResourceLessons,
@@ -18,6 +20,7 @@ import styles from "../resources.module.css";
 
 type ResourcePageProps = {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{level?:string}>;
 };
 
 export function generateStaticParams() {
@@ -54,14 +57,17 @@ export async function generateMetadata({ params }: ResourcePageProps): Promise<M
   };
 }
 
-export default async function ResourcePage({ params }: ResourcePageProps) {
+export default async function ResourcePage({ params, searchParams }: ResourcePageProps) {
   const { slug } = await params;
   const lesson = lessonForResourceSlug(slug);
   if (!lesson) notFound();
 
-  const lessonPath = localLessonPath(lesson) || "/";
+  const family = conversationFamilyByLessonId.get(lesson.id);
+  const selectedLevel = family ? resolveConversationLevel({...family,defaultLevel:lesson.level}, (await searchParams).level) : lesson.level;
+  const selectedPreview = family?.previewByLevel[selectedLevel as keyof typeof family.previewByLevel];
+  const lessonPath = family ? conversationLessonHref({...lesson,familyId:family.id},selectedLevel)! : localLessonPath(lesson) || "/";
   const related = relatedResourceLessons(lesson);
-  const level = resourceLevelLabel(lesson);
+  const level = family ? selectedLevel : resourceLevelLabel(lesson);
   const typeLabel = resourceTypeLabel(lesson);
   const description = resourceDescription(lesson);
   const canonical = `https://spanishcue.com${resourcePathForLesson(lesson)}`;
@@ -103,7 +109,8 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
           <div>
             <p className={styles.eyebrow}>{typeLabel} · {level}</p>
             <h1 className={styles.title}>{lesson.title}</h1>
-            <p className={styles.subtitle}>{lesson.subtitle}</p>
+            <p className={styles.subtitle}>{selectedPreview?.hook || lesson.subtitle}</p>
+            {family && family.availableLevels.length > 1 && <nav className={styles.levelLinks} aria-label="Preview level">{family.availableLevels.map(item=><Link href={`${resourcePathForLesson(lesson)}?level=${item}`} key={item} aria-current={item===selectedLevel?"page":undefined}>{item}</Link>)}</nav>}
             <div className={styles.meta} aria-label="Lesson details">
               <span className={styles.pill}>{level}</span>
               <span className={styles.pill}>{lesson.category}</span>
@@ -120,7 +127,7 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
           <div className={styles.previewFrame}>
             <Image
               className={styles.previewImage}
-              src={lesson.image}
+              src={selectedPreview?.image || lesson.image}
               alt={`${lesson.title} interactive Spanish lesson preview`}
               width={960}
               height={720}
@@ -145,7 +152,7 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
             <section className={styles.section}>
               <h2>What students will practise</h2>
               <ul>
-                {lesson.goals.map((goal) => <li key={goal}>{goal}</li>)}
+                {(family?.variants[selectedLevel as keyof typeof family.variants]?.communicativeObjectives || lesson.goals).map((goal) => <li key={goal}>{goal}</li>)}
               </ul>
             </section>
 
