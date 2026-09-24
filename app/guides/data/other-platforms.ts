@@ -37,6 +37,7 @@ export const otherPlatformGuides: TeachingGuide[] = [
       "verbling-application-video-spanish-teacher",
       "teach-spanish-on-preply",
       "teach-spanish-on-italki",
+      "teach-spanish-on-superprof",
     ],
     sections: [
       {
