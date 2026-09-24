@@ -124,3 +124,8 @@ test("Preply batch 1 exposes the approved seven URLs", () => {
     "preply-25-vs-50-minute-trial",
   ]);
 });
+
+test("batch 2 contains 14 Preply guides and 7 italki guides", () => {
+  assert.equal(tutorBusinessGuides.filter((g) => g.cluster === "preply").length, 14);
+  assert.equal(tutorBusinessGuides.filter((g) => g.cluster === "italki").length, 7);
+});
