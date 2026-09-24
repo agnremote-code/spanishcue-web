@@ -69,6 +69,7 @@ const publicRoots = new Set([
   "app/marketing-landing/LandingConversion.tsx",
   "app/privacy/GoogleConsentMode.tsx",
   "app/not-found.tsx",
+  "app/pro/claim/ClaimClient.tsx",
   "app/pro/success/SuccessClient.tsx",
   "app/student-tracker/StudentTracker.tsx",
   "app/sistema-verbal/page.tsx",
