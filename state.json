@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "idle",
+  "status": "busy",
   "healthy": {
     "sha": "9ce020e36ced068f29f7a6a79637b4f05675e09c",
     "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_a9e582c7c9188191b756b2ab87dd98eb",
@@ -444,5 +444,27 @@
     "columnCount": 25,
     "appliedWithDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
     "verifiedAt": "2026-09-24T07:33:28.948Z"
-  }
+  },
+  "owner": "paddle-diagnostic-c18c90d-20260924-1357",
+  "candidateSha": "c18c90d0a7119b66fbce195adfc04f55cc527e00",
+  "previous": {
+    "sha": "9ce020e36ced068f29f7a6a79637b4f05675e09c",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_a9e582c7c9188191b756b2ab87dd98eb",
+    "versionNumber": 173,
+    "deploymentId": "appgdep_6ab4dcc18b548191adb0943d808b87e3",
+    "envSetRevision": 47,
+    "smoke": {
+      "passed": true,
+      "checks": 10,
+      "completedAt": "2026-09-24T13:48:02.936Z"
+    },
+    "runtimeErrors": 0,
+    "reconciliation": {
+      "adoptedExistingDeployment": true,
+      "sourcePR": 53,
+      "knownPaddleCheckout": "Anonymous card checkout returns HTTP 502; root cause unobserved until PR #54 diagnostic is released.",
+      "migration0009": "applied before v173; billing_purchase_claims table confirmed present"
+    }
+  },
+  "startedAt": "2026-09-24T14:41:37.558Z"
 }
