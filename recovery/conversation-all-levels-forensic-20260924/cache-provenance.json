@@ -1,0 +1,398 @@
+[
+  {
+    "source": "/tmp/tsx-0/17902-01807244da0b55b16789e6dc4d64cc77aed3ca06",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-01807244da0b55b16789e6dc4d64cc77aed3ca06",
+    "source_mtime_ns": 1790256324007852657,
+    "bytes": 77928,
+    "sha256": "05c0cff57a31e74c974adf996f3a520b9529f021807c6184ed934d0e74159592",
+    "git_blob": "74e1a56ae61295934b59c79ecaef14c023204a6b",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/conversation-families/expanded-public.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-0ff17e09dee0ba6094b46f269f26ec3f6e0a892d",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-0ff17e09dee0ba6094b46f269f26ec3f6e0a892d",
+    "source_mtime_ns": 1790255968075361757,
+    "bytes": 31091,
+    "sha256": "3472115afa70af2e87187c6fa2f96d52cc99c47f23a95e47b59188c3f1487acb",
+    "git_blob": "e7d7c62af22e1c6f4fd92250d179379c57ca9060",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/data.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/data.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-0ff17e09dee0ba6094b46f269f26ec3f6e0a892d/app/la-agencia-de-vidas-paralelas/data.ts",
+        "bytes": 13780,
+        "git_blob": "bdeb4b00f4f6ed5382ba1d3e2e7ab1bc068aa552",
+        "sha256": "60d8dd3da93c8cf4e34213f95a2321cb0a6c9593d617aa2554132c439f235581"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-1207a8423e4b46efdb576aef38a66c28ae151430",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-1207a8423e4b46efdb576aef38a66c28ae151430",
+    "source_mtime_ns": 1790256025576089276,
+    "bytes": 31093,
+    "sha256": "9ec61550997739629aa29163a0ead58d2338a97e2633476b33fde483f1d83777",
+    "git_blob": "ddf7abe89ef5667bce249ccbf182fc199f55504e",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/data.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/data.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-1207a8423e4b46efdb576aef38a66c28ae151430/app/la-agencia-de-vidas-paralelas/data.ts",
+        "bytes": 13781,
+        "git_blob": "e997c5e766aea8f9779b92190f652ec3f88582e3",
+        "sha256": "33a3b82285d52c4515b8062608c016e68b8078e5d6d810a19f6e125f07a1b91c"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-3027a8fa61efafb9de10ee19704cc3dadd5c4b49",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-3027a8fa61efafb9de10ee19704cc3dadd5c4b49",
+    "source_mtime_ns": 1790255757232692069,
+    "bytes": 16855,
+    "sha256": "3790ff58329efe937fb7bce02cd407152bba0a85c7a37e6304dc3c4a25032774",
+    "git_blob": "7b2bcfd2c50ce5473ca6e998e12435eccd2db321",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/data.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-40eaf5cc2f4add52b666df400ce8d2478f882526",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-40eaf5cc2f4add52b666df400ce8d2478f882526",
+    "source_mtime_ns": 1790254366574936326,
+    "bytes": 5204,
+    "sha256": "bfa80fffb95e9e81b3a7f4ed76a261d4cdc0e82d6745d5ded40e0810432d373c",
+    "git_blob": "d626751e0659cce84e8377d83ac5756cb3124e35",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variant-document.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-464450da21b5e1b56498124e79e73ffc26803c14",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-464450da21b5e1b56498124e79e73ffc26803c14",
+    "source_mtime_ns": 1790252151398564414,
+    "bytes": 111403,
+    "sha256": "b4ad86b0b6ff0ecafa0869163fdc2e4c89373fc920379e52025fb1b7f6a8dba9",
+    "git_blob": "a1d8010df262279a149e5347f3e9ce3a442aa3ee",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/lesson-catalog.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-68584471b9dbe78bf4528390a5b7b01850bcad4b",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-68584471b9dbe78bf4528390a5b7b01850bcad4b",
+    "source_mtime_ns": 1790256324007852657,
+    "bytes": 3556,
+    "sha256": "4b0ec7424a48e1512ea4440635982bf7263c0d8c441faacc8a5f4cf9de5bc910",
+    "git_blob": "127a82cd68c00ced1f4b91c8ad5f4fd39e4ac0a9",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/conversation-families/navigation.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-6e59e46cbd9ec2ee3375eb6b18346093c5cd1005",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-6e59e46cbd9ec2ee3375eb6b18346093c5cd1005",
+    "source_mtime_ns": 1790254366574936326,
+    "bytes": 39228,
+    "sha256": "f10eedb4b01bdf23229c48fcd499b6c40dc77b5c6dd0ac0a6f6b2f2672f80557",
+    "git_blob": "a628a0d98be373c4cc5dc0c478369be879b18467",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variants.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-7a155a80be910c9646c46a1a5b84e02c6cb6411c",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-7a155a80be910c9646c46a1a5b84e02c6cb6411c",
+    "source_mtime_ns": 1790254709127316885,
+    "bytes": 9223,
+    "sha256": "b8960b0da0f86ebfd1f74edeea1d816fbdf42c18ac26da0dc54f0e3b6946d536",
+    "git_blob": "d71a49e6a7cab813317906052c6041c25b1a66f6",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variant-document.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variant-document.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-7a155a80be910c9646c46a1a5b84e02c6cb6411c/app/la-vida-despues-de-los-30/variant-document.ts",
+        "bytes": 3887,
+        "git_blob": "2168de9cac04a6574d23bca636f63d86783a0751",
+        "sha256": "58f2e8fe8b51b2a8307c6609165521dc05ef14eaf3348d39c73f5bfc8d0536ef"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-7a181e76a144f7f3f1071d1f342e2c4ee3f46692",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-7a181e76a144f7f3f1071d1f342e2c4ee3f46692",
+    "source_mtime_ns": 1790254709127316885,
+    "bytes": 91449,
+    "sha256": "011cab126c6352909ea143c1771d9fccffa92aa8df84354989f10b5238309dbd",
+    "git_blob": "5980999d887e2143f1635681cec125b6b0e25f01",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/activity-document.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/activity-document.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-7a181e76a144f7f3f1071d1f342e2c4ee3f46692/app/la-vida-despues-de-los-30/activity-document.ts",
+        "bytes": 44359,
+        "git_blob": "03fdac2be4b1452748bdd95716e9487215deb080",
+        "sha256": "5a23f51218294591a2976cae856d7fb6d7f27de2f20186d991a42c0cad43ccce"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-7a297ebdaec18873c9670e51d23f0b859520229b",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-7a297ebdaec18873c9670e51d23f0b859520229b",
+    "source_mtime_ns": 1790256003967816028,
+    "bytes": 73025,
+    "sha256": "494b246c081c3c4c0af8040394cefc5b788e115ec164e48122b3069993d925e6",
+    "git_blob": "08fc3d6585f54894a5f9fce8f4e9fe095d212fc4",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/variants.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-8176adfed87f0958703c01bdc494ade2eabf5595",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-8176adfed87f0958703c01bdc494ade2eabf5595",
+    "source_mtime_ns": 1790256050668407017,
+    "bytes": 93118,
+    "sha256": "42b4bd17d0ba0ecbc42c81390c3d52826f3234af40eed9f0285cef10a017e233",
+    "git_blob": "bbe20378867d8e2a69485a802114b86e4e6cb319",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/argento-roleplays/data.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/argento-roleplays/data.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-8176adfed87f0958703c01bdc494ade2eabf5595/app/argento-roleplays/data.ts",
+        "bytes": 34192,
+        "git_blob": "f2823fc37427838d076a1789fc9bc32bcd181963",
+        "sha256": "f88351e8b9128360c3d18492548000016e778acf082401e9944bc8e7751bbd53"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-89a934d3836246c924f684eb19ea9bec496392e9",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-89a934d3836246c924f684eb19ea9bec496392e9",
+    "source_mtime_ns": 1790254083963296181,
+    "bytes": 46083,
+    "sha256": "4211485c6481dd6ffd725b7fbe6f94b60367f25cde2b6c76da226ab4c3ef1a3e",
+    "git_blob": "206bfb334534105e7280d21212ce718a465af5d3",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/activity-document.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-949942b4021ecb67993cac7539346bbed1145e85",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-949942b4021ecb67993cac7539346bbed1145e85",
+    "source_mtime_ns": 1790252151402564464,
+    "bytes": 119936,
+    "sha256": "1b520eb6cf85b5120e6fae7ecf10ecf088588c9f5262a26d5774734ffbf54a54",
+    "git_blob": "fe068ae20aac6c919ce3488f57adc0f3bc1325b3",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/verbal-system/lesson-data.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-96c37bfde044d0749d61804f215c2f46e3253b3e",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-96c37bfde044d0749d61804f215c2f46e3253b3e",
+    "source_mtime_ns": 1790252150038547169,
+    "bytes": 10212,
+    "sha256": "210b9d300a3598e1edb6d11b48fe608761fde02d256cdff090a044941332ac8e",
+    "git_blob": "1d6faa75296d7da2983f7bae7c262ce9784e6f37",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/additional-samples.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-a5849fa335b1089848231c28a59d73af1830cd5c",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-a5849fa335b1089848231c28a59d73af1830cd5c",
+    "source_mtime_ns": 1790252150038547169,
+    "bytes": 12371,
+    "sha256": "402f1da2d8d12c6a2962f8a23836d2b5a44d3412d7221b25faf9f103d1710c37",
+    "git_blob": "b1a19d4eba53fdad28b14cd6313b496136f6dcb4",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/conversation-worlds/catalog.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-a61b94c73fe0531eb992992d01eab3a44c08c44d",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-a61b94c73fe0531eb992992d01eab3a44c08c44d",
+    "source_mtime_ns": 1790256050668407017,
+    "bytes": 66691,
+    "sha256": "1841d4971c589dce0064f451ef761d9bdac1625d9e7e56c71241c9bee42dbf63",
+    "git_blob": "ea89a5ac4686f12ab9825d663a777c135ac8f801",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/argento-roleplays/variants.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/argento-roleplays/variants.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-a61b94c73fe0531eb992992d01eab3a44c08c44d/app/argento-roleplays/variants.ts",
+        "bytes": 29194,
+        "git_blob": "24686b07563a1e88e90d35de9ed5747afc22bd4f",
+        "sha256": "4cc5b1e3abf3ad080e24d3adb357c50b3f37390183559c69d808a5081a57d49c"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-b1fa82bdd5987fb3991268da9d83c82a09ad0c4e",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-b1fa82bdd5987fb3991268da9d83c82a09ad0c4e",
+    "source_mtime_ns": 1790252150038547169,
+    "bytes": 2779,
+    "sha256": "aa48a492a7ddbbcaa6105c85831ee827f71da9aa33765c4b446c4619736550ec",
+    "git_blob": "8d555946d8a7e8fd0af05e77830d0e6ba773487d",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/boards/catalog-adapter.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-b6d9850134374b00d44884e56af35eced65f5a08",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-b6d9850134374b00d44884e56af35eced65f5a08",
+    "source_mtime_ns": 1790255757232692069,
+    "bytes": 71704,
+    "sha256": "a483ed2ecdc8b1473e2b4e4745840f7eb8e0c8bf6825589d52cc9a706a677316",
+    "git_blob": "b2e53d112ba4e46e3f75701900d9e1150e8798b2",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/variants.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-b983ec280f93790c9dd244435aa85d6d02203493",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-b983ec280f93790c9dd244435aa85d6d02203493",
+    "source_mtime_ns": 1790254778760202930,
+    "bytes": 39323,
+    "sha256": "9f1cecc608beb8f7288ce54f71a2aade4994dac74054b288bfd24f7ad6df17ba",
+    "git_blob": "a1cc5aedbddffa7b39bb5f7551c3cb4c523fe21e",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variants.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-ba4ed7af07d9420533e5f30cfd9bb9ff28c3d93c",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-ba4ed7af07d9420533e5f30cfd9bb9ff28c3d93c",
+    "source_mtime_ns": 1790252151402564464,
+    "bytes": 5695,
+    "sha256": "e0224f09e51c0b22b787da54fe1532953ea93cafb0030a89c1c52a7b801492ad",
+    "git_blob": "4fc955bcfffc0816e226e0d582f7bed232d06b65",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/access-policy.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-cb862408fb89fc3a1af800c90df9a98dfa96992d",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-cb862408fb89fc3a1af800c90df9a98dfa96992d",
+    "source_mtime_ns": 1790254709127316885,
+    "bytes": 72646,
+    "sha256": "736d60f18dab882b2bcc49982707255504a7cea04969fa3bbc83459182d6c7a0",
+    "git_blob": "9f727a01557d946d4e6e9ce4b43db6080ed35d93",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variants.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variants.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-cb862408fb89fc3a1af800c90df9a98dfa96992d/app/la-vida-despues-de-los-30/variants.ts",
+        "bytes": 32362,
+        "git_blob": "0af87a817425aeffa4d8f44454f6ff3a9926bfc2",
+        "sha256": "d6f584287bfdca193e6fbab0659968019895e32f9a46a263c1ff8c903197ecea"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-dcbb4a0cafc352642156bd99c45f1b08c22a5cb6",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-dcbb4a0cafc352642156bd99c45f1b08c22a5cb6",
+    "source_mtime_ns": 1790255968075361757,
+    "bytes": 132302,
+    "sha256": "5dbdb745a462bd054ea23e85b0b038ef4045d8fdda940cc76dd735fcc1028441",
+    "git_blob": "df6c360a3552a00dc88c24a0a0996c1f936c0962",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/variants.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/variants.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-dcbb4a0cafc352642156bd99c45f1b08c22a5cb6/app/la-agencia-de-vidas-paralelas/variants.ts",
+        "bytes": 57095,
+        "git_blob": "45cade997bf94608078c274ebc2c1d3a70bd1b91",
+        "sha256": "a3aefefb180671ecd54eef83286d5f0042dba9c9f31a1ad537a93b75a978df64"
+      }
+    ]
+  },
+  {
+    "source": "/tmp/tsx-0/17902-dd04de1d91ee2d9d7fb61077e1cb5b241bd9c53b",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-dd04de1d91ee2d9d7fb61077e1cb5b241bd9c53b",
+    "source_mtime_ns": 1790256003967816028,
+    "bytes": 16855,
+    "sha256": "3790ff58329efe937fb7bce02cd407152bba0a85c7a37e6304dc3c4a25032774",
+    "git_blob": "7b2bcfd2c50ce5473ca6e998e12435eccd2db321",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-agencia-de-vidas-paralelas/data.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-dd2334f87228a04627bda5c444fff209b94b5e5b",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-dd2334f87228a04627bda5c444fff209b94b5e5b",
+    "source_mtime_ns": 1790256324007852657,
+    "bytes": 8892,
+    "sha256": "409185cb679036860e3693e27a8f69ccbf072700961f3f401463f760a04102f5",
+    "git_blob": "e74cdcc0eb2430874be32107339c2dedd9e4f781",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/conversation-families/catalog.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-e5d705ba8b76e8ac7005d32296e97c029050d5d0",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-e5d705ba8b76e8ac7005d32296e97c029050d5d0",
+    "source_mtime_ns": 1790256324007852657,
+    "bytes": 339,
+    "sha256": "38967004df8b10e4996fed4e875209976e3a12e0bfa249f331d2bfd320d273fa",
+    "git_blob": "e1d8d3c15cc4106def1c0d0b347c3ebcfd8fd9cb",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/conversation-families/types.ts"
+    ],
+    "extractions": []
+  },
+  {
+    "source": "/tmp/tsx-0/17902-eea9005248aac721992c2af259c6d5fdaa9c52ae",
+    "recovered_path": "recovery/conversation-all-levels-forensic-20260924/raw-tsx-cache/17902-eea9005248aac721992c2af259c6d5fdaa9c52ae",
+    "source_mtime_ns": 1790254755071901712,
+    "bytes": 72824,
+    "sha256": "02bcb9922eaa7562967ba8aa6eeb7f84e6df7831a87b9d4a5358f23c195f77fe",
+    "git_blob": "e947c118cfe9bc007432ea0e33d87b2d07cb5635",
+    "source_map_sources": [
+      "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variants.ts"
+    ],
+    "extractions": [
+      {
+        "original_path": "/workspace/scratch/8fa7e1318252/spanishcue-web/app/la-vida-despues-de-los-30/variants.ts",
+        "recovered_path": "recovery/conversation-all-levels-forensic-20260924/exact-source-snapshots/17902-eea9005248aac721992c2af259c6d5fdaa9c52ae/app/la-vida-despues-de-los-30/variants.ts",
+        "bytes": 32445,
+        "git_blob": "d777566163c221e75d3ad906c98f75ae6d1933bc",
+        "sha256": "7502752d7c08423eed3a2a468929ff31076fd14e5ec1d6cf3d8d49f0b36f7954"
+      }
+    ]
+  }
+]
