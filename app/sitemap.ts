@@ -3,6 +3,7 @@ import { isFreeLesson, localLessonPath } from "./access-policy";
 import { lessons } from "./lesson-catalog";
 import { resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { localizedUrl } from "./seo";
+import { teachingGuides } from "./teaching-guides";
 
 const marketingRoutes = [
   "",
@@ -49,5 +50,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "/resources" ? 0.8 : 0.7,
   }));
 
-  return [...localizedEntries, ...resourceEntries];
+  const guideRoutes = [
+    "/guides",
+    ...teachingGuides.map((guide) => `/guides/${guide.slug}`),
+  ];
+
+  const guideEntries = guideRoutes.map((path) => ({
+    url: `https://spanishcue.com${path}`,
+    changeFrequency: "monthly" as const,
+    priority: path === "/guides" ? 0.8 : 0.7,
+  }));
+
+  return [...localizedEntries, ...resourceEntries, ...guideEntries];
 }
