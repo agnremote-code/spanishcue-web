@@ -38,7 +38,30 @@ Secure runtime names (values never belong in Git):
 - `PAYPAL_PUBLIC_CHECKOUT_ENABLED`
 - `PAYPAL_LIVE_SUPERVISED_USER_ID`
 
+- `PADDLE_API_KEY` (server-only secret)
+- `PADDLE_CLIENT_TOKEN` (safe for Paddle.js, still kept out of Git)
+- `PADDLE_PRICE_ID`
+- `PADDLE_WEBHOOK_SECRET` (server-only secret)
+- `FOUNDER_OFFER_ENABLED`, `FOUNDER_OFFER_CODE`, `FOUNDER_LIMIT`, `FOUNDER_PRICE_USD` (display/runtime offer configuration read by `app/billing-config.ts`; the limit is clamped to 1–1,000 and D1 founder state remains authoritative)
+- `ANALYTICS_CONVERSIONS_ENABLED` (server-only gate for first-paid conversion reporting; only honoured when `PAYPAL_ENV=live`)
+
+The source of truth for these names is the code (`app/billing-config.ts`, `app/paddle-config.ts`, `app/paypal-server.ts`) and `.env.example`. Values are held in the hosting runtime, never in Git.
+
 Live public checkout defaults to disabled. A supervised Live purchase can be prepared for exactly one internal user through `PAYPAL_LIVE_SUPERVISED_USER_ID` without exposing checkout publicly. Do not set `PAYPAL_PUBLIC_CHECKOUT_ENABLED=true` as part of preparation.
+
+## Paddle contract
+
+Paddle was added after the PayPal state machine above. Current source (`app/paddle-server.ts`, `app/api/billing/paddle/*`, `db/paddle-billing.ts`) behaves as follows:
+
+- Paddle is Live-only. The API base is hard-coded to `https://api.paddle.com`, and Paddle billing rows use environment `live`. There is no Paddle Sandbox configuration; Paddle and PayPal Live share the 1,000 Live founder allocation.
+- Checkout readiness requires all four `PADDLE_*` values. The server creates the checkout transaction with exactly one item of `PADDLE_PRICE_ID` and `custom_data` containing either `spanishcue_user_id` or, for checkout before account creation, `spanishcue_claim_id`, plus the offer code.
+- A payment counts only after the server fetches the transaction/subscription from the Paddle API and validates the configured price ID, quantity 1, amount `1500` USD, monthly interval with frequency 1, no trial, matching `custom_data`, and (for claims) transaction status `completed`.
+- Webhooks are verified by HMAC-SHA256 over `ts:rawBody` from the `paddle-signature` header, with a 300-second timestamp tolerance and constant-time comparison, then de-duplicated by event ID in `payment_webhook_events`.
+- Handled webhook events: `transaction.completed`, `subscription.created`, `subscription.updated`, `subscription.canceled`, `transaction.payment_failed`.
+- `/api/billing/paddle/confirm` accepts a `txn_…` ID from a same-origin browser return but re-fetches and validates the transaction server-side. The browser value is a lookup key, not proof of payment.
+- Account subscription management can cancel, pause and resume Paddle subscriptions through the server API.
+- Known gap: current source has no handler for Paddle refunds, chargebacks or adjustments. The PayPal refund/reversal rule (step 7 above) has no Paddle equivalent yet.
+- Diagnostics: Paddle API failures are logged with dynamic path segments, bearer tokens and claim cookies redacted (PR #54).
 
 Configured plan validation requires one and only one regular cycle: `MONTH × 1`, unlimited cycles, USD 15.00, no trial and USD 0 setup fee. The owner validation endpoint reads the configured plan/webhook and rejects mismatches; it never creates duplicate PayPal resources.
 
