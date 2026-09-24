@@ -150,3 +150,22 @@ test("calculation-heavy business guides label assumptions or scenarios", () => {
     assert.match(body, /assum|example|scenario/, slug);
   }
 });
+
+
+test("batch 4 contains nine operations-retention guides", () => {
+  assert.equal(
+    tutorBusinessGuides.filter((guide) => guide.cluster === "operations-retention").length,
+    9,
+  );
+});
+
+test("policy guides frame their templates as operational guidance, not legal advice", () => {
+  for (const slug of [
+    "cancellation-policy-spanish-tutor",
+    "rescheduling-policy-online-spanish-tutor",
+  ]) {
+    const guide = tutorBusinessGuides.find((item) => item.slug === slug);
+    assert.ok(guide, slug);
+    assert.match(JSON.stringify(guide), /not legal advice|operational guidance/i, slug);
+  }
+});
