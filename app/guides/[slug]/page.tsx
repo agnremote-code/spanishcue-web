@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { teachingGuideBySlug, teachingGuides } from "../../teaching-guides";
+import { lessons, type Lesson } from "../../lesson-catalog";
+import { resourceLevelLabel, resourcePathForLesson } from "../../resource-seo";
 import styles from "../guides.module.css";
 
 type GuidePageProps = {
@@ -44,6 +46,10 @@ export default async function GuidePage({ params }: GuidePageProps) {
   if (!guide) notFound();
 
   const canonical = "https://spanishcue.com/guides/" + guide.slug;
+  const relatedLessons = (guide.relatedLessonIds ?? [])
+    .map((id) => lessons.find((lesson) => lesson.id === id))
+    .filter((lesson): lesson is Lesson => Boolean(lesson));
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -117,6 +123,16 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <aside className={styles.articleCta}>
             <p className={styles.eyebrow}>USE IT IN CLASS</p>
             <h2>Move from teaching principle to ready-to-teach material.</h2>
+            {relatedLessons.length ? (
+              <div className={styles.lessonLinks}>
+                {relatedLessons.map((lesson) => (
+                  <Link className={styles.lessonLink} href={resourcePathForLesson(lesson)} key={lesson.id}>
+                    <span>{resourceLevelLabel(lesson)} · {lesson.category}</span>
+                    <strong>{lesson.title}</strong>
+                  </Link>
+                ))}
+              </div>
+            ) : null}
             <Link className={styles.button} href={guide.relatedHref}>{guide.relatedLabel}</Link>
           </aside>
         </article>
