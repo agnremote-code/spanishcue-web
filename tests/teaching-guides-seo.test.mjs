@@ -169,3 +169,75 @@ test("policy guides frame their templates as operational guidance, not legal adv
     assert.match(JSON.stringify(guide), /not legal advice|operational guidance/i, slug);
   }
 });
+
+
+test("the tutor-business expansion contains exactly 50 approved guides", () => {
+  assert.equal(tutorBusinessGuides.length, 50);
+});
+
+test("the final six niche slugs are present", () => {
+  const slugs = tutorBusinessGuides
+    .filter((guide) => guide.cluster === "tutor-niches")
+    .map((guide) => guide.slug);
+  assert.deepEqual(slugs, [
+    "teach-beginner-spanish-online",
+    "teach-spanish-for-travel-online",
+    "business-spanish-tutoring",
+    "dele-preparation-private-tutor",
+    "spanish-pronunciation-tutoring-online",
+    "rioplatense-spanish-tutoring-niche",
+  ]);
+});
+
+test("every tutor-business guide participates in a valid internal graph", () => {
+  const bySlug = new Map(teachingGuides.map((guide) => [guide.slug, guide]));
+  const inbound = new Map(tutorBusinessGuides.map((guide) => [guide.slug, 0]));
+
+  for (const guide of tutorBusinessGuides) {
+    assert.ok((guide.relatedGuideSlugs ?? []).length >= 2, guide.slug);
+    assert.ok((guide.relatedGuideSlugs ?? []).length <= 4, guide.slug);
+
+    for (const slug of guide.relatedGuideSlugs ?? []) {
+      assert.notEqual(slug, guide.slug, guide.slug);
+      assert.ok(bySlug.has(slug), `${guide.slug}: missing related guide ${slug}`);
+      if (inbound.has(slug)) inbound.set(slug, inbound.get(slug) + 1);
+    }
+  }
+
+  for (const [slug, count] of inbound) {
+    assert.ok(count >= 1, `${slug}: no inbound tutor-business link`);
+  }
+});
+
+test("current branch guide count matches the expansions actually present", () => {
+  const expectedTotal = teachingGuides.some((guide) =>
+    guide.slug === "spanish-present-tense-activities"
+  ) ? 113 : 63;
+
+  assert.equal(teachingGuides.length, expectedTotal);
+});
+
+test("business and teaching guides keep distinct intents", () => {
+  const overlapPairs = [
+    ["teach-spanish-on-preply", "how-to-teach-spanish-online"],
+    ["first-online-spanish-lesson", "spanish-lesson-planning-45-minutes"],
+    ["conversation-only-spanish-lesson", "spanish-conversation-activities-by-level"],
+  ];
+
+  for (const [businessSlug, teachingSlug] of overlapPairs) {
+    const business = teachingGuides.find((guide) => guide.slug === businessSlug);
+    const teaching = teachingGuides.find((guide) => guide.slug === teachingSlug);
+    assert.ok(business && teaching);
+    assert.notEqual(business.title, teaching.title);
+    assert.notEqual(business.description, teaching.description);
+  }
+});
+
+test("guides hub separates teaching and tutor-business pillars", async () => {
+  const hub = await readFile("app/guides/page.tsx", "utf8");
+  assert.match(hub, /TEACH SPANISH/);
+  assert.match(hub, /GROW AS A SPANISH TUTOR/);
+  assert.match(hub, /pricing-business/);
+  assert.match(hub, /operations-retention/);
+  assert.match(hub, /tutor-niches/);
+});
