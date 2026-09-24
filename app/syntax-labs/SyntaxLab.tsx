@@ -5,7 +5,7 @@ import Link from "next/link";
 import GrammarStep from "../grammar-steps/GrammarStep";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import type { SyntaxDecision, SyntaxLabData, SyntaxRepair } from "./data";
-import { ClauseBuilder, ContrastMixer, DecisionChain, ReferentFinder, SentenceConnector, TimelineBuilder } from "./SyntaxVisuals";
+import { ClauseBuilder, ContrastMixer, DecisionChain, EvidenceSwitch, HypothesisSwitch, ReferentFinder, SentenceConnector, TimelineBuilder } from "./SyntaxVisuals";
 import "./style.css";
 
 function SyntaxPreview({ data, left, connector, right }: { data: SyntaxLabData; left: string; connector: string; right: string }) {
@@ -14,6 +14,8 @@ function SyntaxPreview({ data, left, connector, right }: { data: SyntaxLabData; 
   if (data.mode === "decision") return <DecisionChain left={left} connector={connector} right={right} />;
   if (data.mode === "contrast") return <ContrastMixer left={left} connector={connector} right={right} />;
   if (data.mode === "referent") return <ReferentFinder left={left} connector={connector} right={right} />;
+  if (data.mode === "hypothesis") return <HypothesisSwitch left={left} connector={connector} right={right} />;
+  if (data.mode === "evidence") return <EvidenceSwitch left={left} connector={connector} right={right} />;
   return <ClauseBuilder left={left} connector={connector} right={right} />;
 }
 
@@ -24,6 +26,8 @@ function PatternPreview({ data, pattern }: { data: SyntaxLabData; pattern: Synta
   if (data.mode === "decision") return <DecisionChain {...props} />;
   if (data.mode === "contrast") return <ContrastMixer {...props} />;
   if (data.mode === "referent") return <ReferentFinder {...props} />;
+  if (data.mode === "hypothesis") return <HypothesisSwitch {...props} />;
+  if (data.mode === "evidence") return <EvidenceSwitch {...props} />;
   return <ClauseBuilder {...props} />;
 }
 
