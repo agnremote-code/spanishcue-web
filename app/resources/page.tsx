@@ -34,6 +34,11 @@ export default function ResourcesPage() {
             Browse interactive lesson resources for A1–C2. Each page shows the level,
             teaching goal, lesson format and a direct path to the SpanishCue lesson.
           </p>
+          <p>
+            <Link className={styles.backLink} href="/guides">
+              Read practical teaching guides →
+            </Link>
+          </p>
         </header>
 
         {categoryOrder.map((category) => {
