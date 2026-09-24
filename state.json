@@ -346,5 +346,8 @@
     "file": "drizzle/0009_glossy_mariko_yashida.sql",
     "previousSqlUnchanged": true,
     "nativeMigrationBeforeWorkerUpload": true
-  }
+  },
+  "candidateDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
+  "deploymentStarted": true,
+  "phase": "production-verification"
 }
