@@ -114,7 +114,7 @@ test("Preply batch 1 exposes the approved seven URLs", () => {
   const slugs = tutorBusinessGuides
     .filter((guide) => guide.cluster === "preply")
     .map((guide) => guide.slug);
-  assert.deepEqual(slugs, [
+  assert.deepEqual(slugs.slice(0, 7), [
     "teach-spanish-on-preply",
     "preply-spanish-tutor-profile",
     "preply-headline-spanish-tutor",
@@ -123,4 +123,30 @@ test("Preply batch 1 exposes the approved seven URLs", () => {
     "preply-trial-lesson-spanish",
     "preply-25-vs-50-minute-trial",
   ]);
+});
+
+test("batch 2 contains 14 Preply guides and 7 italki guides", () => {
+  assert.equal(tutorBusinessGuides.filter((g) => g.cluster === "preply").length, 14);
+  assert.equal(tutorBusinessGuides.filter((g) => g.cluster === "italki").length, 7);
+});
+
+
+test("batch 3 contains four other-platform and ten pricing-business guides", () => {
+  assert.equal(tutorBusinessGuides.filter((g) => g.cluster === "other-platforms").length, 4);
+  assert.equal(tutorBusinessGuides.filter((g) => g.cluster === "pricing-business").length, 10);
+});
+
+test("calculation-heavy business guides label assumptions or scenarios", () => {
+  for (const slug of [
+    "online-spanish-tutor-rates",
+    "real-hourly-rate-online-spanish-tutor",
+    "spanish-tutor-income-calculator",
+    "how-many-students-full-time-spanish-tutor",
+    "monthly-income-plan-spanish-tutor",
+  ]) {
+    const guide = tutorBusinessGuides.find((item) => item.slug === slug);
+    assert.ok(guide, slug);
+    const body = JSON.stringify(guide).toLowerCase();
+    assert.match(body, /assum|example|scenario/, slug);
+  }
 });
