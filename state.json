@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "idle",
+  "status": "busy",
   "healthy": {
-    "sha": "826a2a9446493fb57c4826967b44cf2039f2cb25",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_509481426a9c8191a919265ebfb4252c",
-    "versionNumber": 167,
-    "deploymentId": "appgdep_6ab3aceac0dc81919ebbf71cdad5bc6c",
-    "envSetRevision": 31,
+    "sha": "744be6426387bcd6d96e64502774377334938afb",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f0c4cd3c32708191900b34a6fa44fe0a",
+    "versionNumber": 170,
+    "deploymentId": "appgdep_6ab4aae8a24081918c1f99729a40c4e2",
+    "envSetRevision": 47,
     "smoke": {
       "passed": true,
       "checks": 10,
-      "completedAt": "2026-09-23T10:44:14.405Z"
+      "completedAt": "2026-09-24T04:53:09.966Z"
     },
     "runtimeErrors": 0
   },
@@ -221,6 +221,38 @@
         },
         "runtimeErrors": 0
       }
+    },
+    {
+      "owner": "recovery-v170-20260924",
+      "startedAt": "2026-09-24T04:53:09.966Z",
+      "finishedAt": "2026-09-24T04:53:09.966Z",
+      "previous": {
+        "sha": "826a2a9446493fb57c4826967b44cf2039f2cb25",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_509481426a9c8191a919265ebfb4252c",
+        "versionNumber": 167,
+        "deploymentId": "appgdep_6ab3aceac0dc81919ebbf71cdad5bc6c",
+        "envSetRevision": 31,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-23T10:44:14.405Z"
+        },
+        "runtimeErrors": 0
+      },
+      "healthy": {
+        "sha": "744be6426387bcd6d96e64502774377334938afb",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f0c4cd3c32708191900b34a6fa44fe0a",
+        "versionNumber": 170,
+        "deploymentId": "appgdep_6ab4aae8a24081918c1f99729a40c4e2",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-24T04:53:09.966Z"
+        },
+        "runtimeErrors": 0
+      },
+      "recovery": "Adopt live v170 after succeeded deployment, ten production smoke checks and zero unexpected Worker errors"
     }
   ],
   "bootstrap": {
@@ -252,5 +284,21 @@
     },
     "initialExecution": "Documented release controller executed inline; webhook tasks do not support Run now."
   },
-  "failedShas": []
+  "failedShas": [],
+  "owner": "reconcile-510f7663-20260924",
+  "candidateSha": "510f7663ba226303d048b38ef2306b2bcb2946b2",
+  "previous": {
+    "sha": "744be6426387bcd6d96e64502774377334938afb",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_f0c4cd3c32708191900b34a6fa44fe0a",
+    "versionNumber": 170,
+    "deploymentId": "appgdep_6ab4aae8a24081918c1f99729a40c4e2",
+    "envSetRevision": 47,
+    "smoke": {
+      "passed": true,
+      "checks": 10,
+      "completedAt": "2026-09-24T04:53:09.966Z"
+    },
+    "runtimeErrors": 0
+  },
+  "startedAt": "2026-09-24T04:53:09.970Z"
 }
