@@ -185,6 +185,34 @@
   flex-direction: column;
 }
 
+.lessonLinks {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+}
+
+.lessonLink {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.lessonLink span {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  opacity: 0.72;
+}
+
+.lessonLink strong {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
 @media (max-width: 760px) {
   .shell,
   .articleShell {

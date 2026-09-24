@@ -14,6 +14,7 @@ export type TeachingGuide = {
   sections: GuideSection[];
   relatedHref: string;
   relatedLabel: string;
+  relatedLessonIds?: number[];
 };
 
 export const teachingGuides: TeachingGuide[] = [
@@ -290,6 +291,406 @@ export const teachingGuides: TeachingGuide[] = [
       },
     ],
   },
+  {
+    slug: "how-to-teach-ser-vs-estar",
+    title: "How to Teach Ser vs. Estar Without Turning It Into a Memorization List",
+    description:
+      "A practical ser vs. estar lesson framework for Spanish teachers: teach the contrast through meaning, context, adjective changes and communicative choices.",
+    eyebrow: "GRAMMAR · A1–A2",
+    readingTime: "7 min",
+    keywords: [
+      "how to teach ser vs estar",
+      "ser vs estar lesson plan",
+      "ser vs estar activities",
+      "Spanish ser estar teacher resources",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse Spanish grammar lessons",
+    relatedLessonIds: [48],
+    sections: [
+      {
+        heading: "Teach a decision, not two columns of rules",
+        paragraphs: [
+          "Students often receive ser and estar as two long lists: permanent versus temporary, identity versus condition, origin versus location, and several exceptions. The problem is not that the rules are useless. The problem is that a learner in conversation does not have time to scan two lists before choosing a verb.",
+          "Build the lesson around the decision the speaker is making. Ser classifies or identifies; estar locates or presents a state in a particular situation. That contrast is not perfect in every sentence, but it gives students a usable starting point that can later be refined.",
+        ],
+      },
+      {
+        heading: "Start with pairs where the choice clearly changes the message",
+        bullets: [
+          "Es aburrido / Está aburrido: characteristic versus current state.",
+          "Es listo / Está listo: clever versus ready.",
+          "Es rico / Está rico: wealthy versus tasting good.",
+          "Es seguro / Está seguro: safe or reliable versus certain.",
+        ],
+        paragraphs: [
+          "Pairs force the student to interpret meaning before conjugating. Ask which sentence fits a person, a place, a meal or a situation. Then ask the learner to invent a context where the other option would be correct.",
+        ],
+      },
+      {
+        heading: "Move from visible support to a real speaking choice",
+        paragraphs: [
+          "Begin with images or short descriptions where students choose ser or estar and explain why. Next, remove the labels and give them a situation: describe a new coworker, explain how a neighborhood usually is versus how it is tonight, or compare a restaurant's identity with today's experience.",
+          "The final task should require both verbs naturally. A useful prompt is to describe a place twice: first as a general recommendation and then as a live report from today. The language target becomes necessary because the communicative perspective changes.",
+        ],
+      },
+      {
+        heading: "Correct the contrast before correcting every conjugation",
+        paragraphs: [
+          "If the lesson objective is ser versus estar, prioritize whether the learner selected the verb that matches the intended meaning. A missed adjective ending can be noted, but it should not bury the main distinction.",
+          "Close by recycling two or three sentences the student produced. Change the context and ask whether the verb should stay the same. That turns correction into another meaning decision instead of a final list of errors.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "preterite-vs-imperfect-activities",
+    title: "Preterite vs. Imperfect Activities That Make Students Choose a Perspective",
+    description:
+      "Teach Spanish preterite vs. imperfect through event boundaries, background, habits and narrative perspective, with activities that move from contrast to storytelling.",
+    eyebrow: "GRAMMAR · A2–B1",
+    readingTime: "8 min",
+    keywords: [
+      "preterite vs imperfect activities",
+      "how to teach preterite vs imperfect",
+      "preterite imperfect lesson plan",
+      "Spanish past tense activities",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse Spanish past-tense lessons",
+    relatedLessonIds: [142, 143],
+    sections: [
+      {
+        heading: "Do not teach the contrast as a keyword detector",
+        paragraphs: [
+          "Signal words can help beginners notice patterns, but they become a trap when students believe ayer automatically means preterite or siempre automatically means imperfect. The more useful question is how the speaker presents the past event.",
+          "The preterite presents an event or sequence with a boundary. The imperfect opens the scene from inside: description, background, habit or an action in progress. Students need to see that both forms can appear in the same story because they do different jobs.",
+        ],
+      },
+      {
+        heading: "Activity 1: background or event?",
+        paragraphs: [
+          "Show a simple scene with five facts. Some describe the situation and others move the story forward. Ask students to sort them into background and event before they conjugate anything.",
+          "Then turn the same scene into a two-column timeline. Students narrate the background with the imperfect and add completed events with the preterite. Because the conceptual choice comes first, the conjugation has a reason.",
+        ],
+      },
+      {
+        heading: "Activity 2: freeze the story and change the camera",
+        paragraphs: [
+          "Give a sentence such as Cuando llegué, Ana hablaba con el gerente. Ask what the camera is doing with each verb. Then change one form and discuss how the scene changes.",
+          "This works especially well with short image sequences. One student describes what was happening; the other introduces the event that interrupted or advanced the story. Swap roles so both students must use both perspectives.",
+        ],
+      },
+      {
+        heading: "Activity 3: build a story with two layers",
+        bullets: [
+          "Layer one: weather, location, age, mood, habits and ongoing actions.",
+          "Layer two: arrivals, discoveries, decisions, interruptions and completed actions.",
+          "Final round: the student retells the story without seeing the tense labels.",
+        ],
+        paragraphs: [
+          "The last retelling is the useful test. If students can narrate while choosing a perspective, they are doing more than completing a worksheet. Use their own story for correction, then ask them to retell one section after you change a detail.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spanish-subjunctive-lesson-plan",
+    title: "A Spanish Subjunctive Lesson Plan That Starts With Meaning",
+    description:
+      "A practical present-subjunctive lesson plan for Spanish teachers: establish the indicative/subjunctive contrast, introduce triggers in context and finish with real choices.",
+    eyebrow: "GRAMMAR · B1",
+    readingTime: "8 min",
+    keywords: [
+      "Spanish subjunctive lesson plan",
+      "how to teach Spanish subjunctive",
+      "subjunctive activities Spanish",
+      "present subjunctive lesson",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse Spanish subjunctive resources",
+    relatedLessonIds: [148, 149, 150],
+    sections: [
+      {
+        heading: "Begin with the speaker's stance before the trigger list",
+        paragraphs: [
+          "A trigger list can be useful for review, but it is a poor first mental model. Students need to understand why Spanish sometimes presents information as asserted and sometimes places it inside desire, evaluation, doubt, purpose or another non-assertive frame.",
+          "Start with paired meanings rather than acronyms. Compare Creo que viene with No creo que venga, or Sé que está aquí with Es posible que esté aquí. Ask what the speaker commits to in each sentence.",
+        ],
+      },
+      {
+        heading: "Make the clause relationship visible",
+        paragraphs: [
+          "Write the main clause and subordinate clause separately. The first clause creates the stance; que opens the second proposition; the verb form marks how that proposition is being presented.",
+          "This visual separation prevents students from treating the subjunctive as a random ending that appears after certain words. They can see which part of the sentence licenses the choice and which verb actually changes.",
+        ],
+      },
+      {
+        heading: "Use four communicative zones before expanding",
+        bullets: [
+          "Wants and influence: quiero que, necesito que, recomiendo que.",
+          "Evaluation and reaction: me alegra que, es importante que.",
+          "Doubt and possibility: dudo que, es posible que.",
+          "Purpose and future reference in dependent clauses: para que, cuando + future event.",
+        ],
+        paragraphs: [
+          "Keep the first lesson narrow. Students do not need every trigger on day one. Give each zone a short situation and make the learner choose what they genuinely want, doubt, recommend or evaluate.",
+        ],
+      },
+      {
+        heading: "Finish with a task where indicative and subjunctive compete",
+        paragraphs: [
+          "A strong final task should not allow the learner to use the subjunctive mechanically in every sentence. Use a planning problem, advice scenario or set of uncertain claims where some information is asserted and some is desired, doubted or evaluated.",
+          "During feedback, ask first whether the stance and mood match. Then repair the form. That ordering protects the meaning distinction instead of reducing the lesson to conjugation accuracy.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spanish-imperative-activities",
+    title: "Spanish Imperative Activities for Commands, Advice and Instructions",
+    description:
+      "Teach affirmative and negative Spanish commands through instructions, coaching, warnings and real-time tasks instead of isolated conjugation drills.",
+    eyebrow: "GRAMMAR + SPEAKING · A2",
+    readingTime: "7 min",
+    keywords: [
+      "Spanish imperative activities",
+      "Spanish commands lesson plan",
+      "imperative Spanish activities",
+      "affirmative negative commands Spanish",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse imperative and speaking lessons",
+    relatedLessonIds: [145, 216],
+    sections: [
+      {
+        heading: "Give the imperative a job immediately",
+        paragraphs: [
+          "Commands make sense when another person can actually follow them. Instead of beginning with a conjugation chart, begin with a task: guide someone through a drawing, direct a workout, explain a recipe, troubleshoot a device or give classroom instructions.",
+          "The learner hears and produces forms in a context where precision matters. Abrí la puerta and no abras la puerta create different outcomes, so affirmative and negative forms stop feeling like two disconnected tables.",
+        ],
+      },
+      {
+        heading: "Separate the systems before mixing them",
+        paragraphs: [
+          "Spanish commands vary by person and variety, and negative commands rely on the present subjunctive. Teach one audience at a time. If your students need tú first, keep the first practice there; if they use vos, make that variety explicit rather than treating it as an exception.",
+          "Once one system is stable, compare it with usted, ustedes or another relevant form. The goal is not to display every possibility at once but to help students direct a real listener accurately.",
+        ],
+      },
+      {
+        heading: "Use information gaps that punish vague instructions",
+        bullets: [
+          "One student sees a route; the other must reach the destination.",
+          "One student sees an image; the other must recreate it.",
+          "One student is the trainer; the other follows the routine.",
+          "One student knows the safety rules; the other keeps making mistakes.",
+        ],
+        paragraphs: [
+          "These tasks naturally create repetition without requiring identical sentences. They also reveal whether the student can retrieve commands quickly enough to use them in interaction.",
+        ],
+      },
+      {
+        heading: "Add pronouns only after the action is clear",
+        paragraphs: [
+          "Attached and detached pronouns increase the processing load: decime, dámelo, no me digas, no se lo des. Build the command first, then add the object. Students can physically point to what each pronoun replaces before producing the complete form.",
+          "End with a rapid coaching round where the student must alternate affirmative and negative instructions. Correct only the command system during the round; debrief other errors afterward.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spanish-direct-indirect-object-pronouns",
+    title: "How to Teach Spanish Direct and Indirect Object Pronouns Visually",
+    description:
+      "A visual, communicative way to teach Spanish direct and indirect object pronouns: track who acts, what is affected and who receives the result.",
+    eyebrow: "GRAMMAR · A1–A2",
+    readingTime: "8 min",
+    keywords: [
+      "how to teach Spanish object pronouns",
+      "direct indirect object pronouns Spanish lesson",
+      "Spanish object pronoun activities",
+      "OD OI Spanish teaching",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse Spanish pronoun lessons",
+    relatedLessonIds: [46, 106],
+    sections: [
+      {
+        heading: "Teach the relationship before the pronoun",
+        paragraphs: [
+          "Students struggle when pronouns are introduced as a replacement chart before they know what is being replaced. Start with a small scene: Ana sends the photo to Luis. Identify the actor, the thing affected and the recipient.",
+          "Only then replace the noun phrases: Ana la envía a Luis; Ana le envía la foto; Ana se la envía. Each pronoun should solve a visible repetition problem, not appear as an abstract grammar code.",
+        ],
+      },
+      {
+        heading: "Use three fixed questions",
+        bullets: [
+          "Who performs the action?",
+          "What or whom does the action directly affect?",
+          "To whom or for whom is the result directed?",
+        ],
+        paragraphs: [
+          "The wording can be adapted to the learner, but the roles should stay stable. Color, position or icons can help at first, especially when the same person could be either a direct or indirect object depending on the verb.",
+        ],
+      },
+      {
+        heading: "Delay double pronouns until single pronouns are automatic enough",
+        paragraphs: [
+          "Students need separate practice with lo/la/los/las and le/les before combining them. Move from full nouns to one replacement at a time, then ask whether the sentence still contains another repeated element.",
+          "When se replaces le or les before a direct-object pronoun, teach it as a form change inside the combination rather than as a new mysterious meaning. Keep the original noun visible during the first few examples.",
+        ],
+      },
+      {
+        heading: "Finish with transfer, not substitution",
+        paragraphs: [
+          "A substitution worksheet checks whether students can transform a sentence they already understand. A speaking task checks whether they can decide what can be omitted in real time.",
+          "Use a delivery desk, gift exchange, restaurant order or message relay. Give each participant objects and recipients, then remove the nouns gradually. The pronouns become useful because repetition becomes inconvenient.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spanish-possessive-adjectives-lesson",
+    title: "Spanish Possessive Adjectives: A Lesson Built Around Who Owns What",
+    description:
+      "Teach mi, tu, su and nuestro by separating the owner from the thing owned, then move into ambiguity, agreement and communicative practice.",
+    eyebrow: "GRAMMAR · A1",
+    readingTime: "6 min",
+    keywords: [
+      "Spanish possessive adjectives lesson",
+      "possessive adjectives Spanish activities",
+      "how to teach mi tu su nuestro",
+      "Spanish possessives lesson plan",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse beginner Spanish grammar lessons",
+    relatedLessonIds: [44],
+    sections: [
+      {
+        heading: "Separate the owner from the possessed item",
+        paragraphs: [
+          "English-speaking learners often try to make the possessive agree with the owner. Spanish short possessives agree with the thing possessed: nuestro coche, nuestra casa, nuestros coches, nuestras casas.",
+          "Put the owner on one side of the screen and the object on the other. Ask two questions every time: who owns it, and what is the thing? The first question selects the possessive family; the second controls number and, with nuestro/vuestro, gender.",
+        ],
+      },
+      {
+        heading: "Teach su as an ambiguity problem",
+        paragraphs: [
+          "Su can refer to several possible owners. That is not a mistake in the language; it is a communication problem speakers solve with context or clarification.",
+          "Give students deliberately ambiguous examples and ask them to repair them with de + person when needed: su coche can become el coche de Ana. This turns ambiguity into a useful speaking decision.",
+        ],
+      },
+      {
+        heading: "Use objects that actually belong to someone",
+        paragraphs: [
+          "Photos of a room, suitcase, desk or shared apartment work well because ownership can change. Assign objects to several people and ask students to describe them. Then move one object to a new owner and require an immediate reformulation.",
+          "For online lessons, a simple drag-and-drop or pointing task can create enough variation to repeat the same forms without turning the activity into a list of disconnected sentences.",
+        ],
+      },
+      {
+        heading: "Finish by removing the visual labels",
+        paragraphs: [
+          "The final task should make students retrieve the possessive without a color key or table. Ask them to describe a shared house, plan what each traveler brings, or solve a lost-and-found problem.",
+          "If a learner says su and the owner is unclear, do not immediately correct the grammar. Ask ¿de quién? and make the student repair the message. That is exactly the communicative problem the form can create.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spanish-demonstratives-lesson",
+    title: "Spanish Demonstratives: How to Teach Este, Ese and Aquel Through Distance",
+    description:
+      "A visual lesson framework for Spanish demonstratives, including este, ese, aquel, agreement and the neutral forms esto, eso and aquello.",
+    eyebrow: "GRAMMAR · A1",
+    readingTime: "6 min",
+    keywords: [
+      "Spanish demonstratives lesson",
+      "este ese aquel activities",
+      "Spanish demonstrative adjectives",
+      "how to teach Spanish demonstratives",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse beginner Spanish grammar lessons",
+    relatedLessonIds: [43],
+    sections: [
+      {
+        heading: "Make distance visible before explaining the paradigm",
+        paragraphs: [
+          "Demonstratives are deictic: their meaning depends on the speaker's point of reference. That makes them ideal for a visual lesson. Put objects in three zones and let students point before they see a complete chart.",
+          "Use este for the near zone, ese for an intermediate or addressee-oriented zone, and aquel for a clearly distant zone. Once the spatial contrast is understood, add gender and number.",
+        ],
+      },
+      {
+        heading: "Change only one variable at a time",
+        paragraphs: [
+          "Start with masculine singular objects so distance is the only decision. Then keep distance fixed and change gender. Finally change number. This prevents students from solving three new problems at once.",
+          "After the forms are stable, mix everything and make the student explain the choice. A correct answer with a reason is more diagnostic than a fast guess.",
+        ],
+      },
+      {
+        heading: "Introduce esto, eso and aquello as noun-free forms",
+        paragraphs: [
+          "Neutral demonstratives are especially useful when the speaker points to an idea, situation or unidentified thing rather than a named noun. Contrast este problema with esto to show that the neutral form does not accompany a noun.",
+          "Use screenshots, strange objects or short scenarios and ask ¿Qué es esto? or ¿Qué pensás de eso? The learner can use the forms before needing a precise noun.",
+        ],
+      },
+      {
+        heading: "Move from physical distance to discourse distance",
+        paragraphs: [
+          "Once students control spatial reference, extend the idea to time and discourse: esta semana, ese día, aquella época, eso que dijiste. The system becomes broader without requiring a new memorized table.",
+          "A strong final task is a virtual gallery. The student guides another person through near, medium and distant items, then refers back to comments made earlier in the conversation.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spanish-articles-el-la-un-una",
+    title: "How to Teach Spanish Articles: El, La, Un, Una and When to Use No Article",
+    description:
+      "Teach Spanish definite and indefinite articles through reference, introduction, known information and zero-article contexts instead of isolated gender drills.",
+    eyebrow: "GRAMMAR · A1",
+    readingTime: "7 min",
+    keywords: [
+      "Spanish articles lesson plan",
+      "how to teach el la un una",
+      "Spanish definite indefinite articles activities",
+      "Spanish articles for beginners",
+    ],
+    relatedHref: "/spanish-grammar-lessons",
+    relatedLabel: "Browse beginner Spanish grammar lessons",
+    relatedLessonIds: [42, 40, 41],
+    sections: [
+      {
+        heading: "Teach reference and gender together, but not as the same problem",
+        paragraphs: [
+          "Students need to make two decisions: which noun class the word belongs to, and whether the speaker is presenting a specific or identifiable referent. If both decisions are introduced as one giant table, article choice becomes a guessing exercise.",
+          "Use a small noun set first. Establish el/la and un/una with nouns the learner already knows, then ask what changes in meaning when a new object becomes a known one.",
+        ],
+      },
+      {
+        heading: "Use the new-to-known sequence",
+        paragraphs: [
+          "Mini-stories make article choice visible: Hay un perro en la calle. El perro tiene una mochila. La mochila está abierta. Each first mention introduces something; the following reference treats it as identifiable.",
+          "Students can build their own three-sentence chains from pictures. This gives articles a discourse function instead of reducing them to vocabulary decoration.",
+        ],
+      },
+      {
+        heading: "Teach absence of article as a real option",
+        paragraphs: [
+          "Beginner materials sometimes imply that every noun must carry an article. Introduce frequent zero-article patterns only when students have a stable core: professions after ser in basic classification, some fixed expressions and plural or mass nouns used generically in certain structures.",
+          "Do not flood the first lesson with exceptions. The goal is for students to notice that article choice carries meaning and that no article can also be a grammatical choice.",
+        ],
+      },
+      {
+        heading: "Connect articles to adjective agreement",
+        paragraphs: [
+          "Articles are an early anchor for noun-phrase agreement. Once the noun and article are stable, add a simple adjective and make the learner track the whole phrase: una casa blanca, las casas blancas.",
+          "Finish with a visual description task where students introduce objects, refer back to them and add one adjective. That single activity recycles articles, gender, number and agreement in a coherent context.",
+        ],
+      },
+    ],
+  },
+
 ];
 
 export const teachingGuideBySlug = new Map(teachingGuides.map((guide) => [guide.slug, guide]));
