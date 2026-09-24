@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { isFreeLesson, localLessonPath } from "./access-policy";
 import { lessons } from "./lesson-catalog";
+import { resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { localizedUrl } from "./seo";
 
 const marketingRoutes = [
@@ -24,9 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((lesson) => isFreeLesson(lesson.id))
     .map(localLessonPath)
     .filter((path): path is string => Boolean(path));
-  return [...new Set([...marketingRoutes, ...freeRoutes])].map((path) => ({
+
+  const localizedEntries = [...new Set([...marketingRoutes, ...freeRoutes])].map((path) => ({
     url: localizedUrl(path, "es"),
-    changeFrequency: path === "" ? "weekly" : "monthly",
+    changeFrequency: (path === "" ? "weekly" : "monthly") as MetadataRoute.Sitemap[number]["changeFrequency"],
     priority: path === "" ? 1 : path === "/pricing" ? 0.8 : 0.7,
     alternates: {
       languages: {
@@ -35,4 +37,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
   }));
+
+  const resourceRoutes = [
+    "/resources",
+    ...resourceLessons.map(resourcePathForLesson),
+  ];
+
+  const resourceEntries = resourceRoutes.map((path) => ({
+    url: `https://spanishcue.com${path}`,
+    changeFrequency: "monthly" as const,
+    priority: path === "/resources" ? 0.8 : 0.7,
+  }));
+
+  return [...localizedEntries, ...resourceEntries];
 }

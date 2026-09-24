@@ -750,13 +750,17 @@ export function localeFromHeaders(headers: Headers): Locale {
   const saved = normalizeLocale(match?.[1]);
   if (saved) return saved;
   const pathname = headers.get("x-spanishcue-pathname")?.replace(/\/+$/, "") || "/";
-  if ([
-    "/spanish-teacher-resources",
-    "/spanish-conversation-activities",
-    "/spanish-grammar-lessons",
-    "/online-spanish-teaching-resources",
-    "/free-spanish-lesson",
-  ].includes(pathname)) return "en";
+  if (
+    pathname === "/resources" ||
+    pathname.startsWith("/resources/") ||
+    [
+      "/spanish-teacher-resources",
+      "/spanish-conversation-activities",
+      "/spanish-grammar-lessons",
+      "/online-spanish-teaching-resources",
+      "/free-spanish-lesson",
+    ].includes(pathname)
+  ) return "en";
   return DEFAULT_LOCALE;
 }
 
