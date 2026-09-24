@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { teachingGuideBySlug, teachingGuides } from "../../teaching-guides";
 import { lessons, type Lesson } from "../../lesson-catalog";
 import { resourceLevelLabel, resourcePathForLesson } from "../../resource-seo";
+import { formatReviewedDate, guideModifiedDate } from "../guide-format";
 import styles from "../guides.module.css";
 
 type GuidePageProps = {
@@ -46,6 +47,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
   if (!guide) notFound();
 
   const canonical = "https://spanishcue.com/guides/" + guide.slug;
+  const relatedGuides = (guide.relatedGuideSlugs ?? [])
+    .map((relatedSlug) => teachingGuideBySlug.get(relatedSlug))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item));
   const relatedLessons = (guide.relatedLessonIds ?? [])
     .map((id) => lessons.find((lesson) => lesson.id === id))
     .filter((lesson): lesson is Lesson => Boolean(lesson));
@@ -57,8 +61,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
     description: guide.description,
     url: canonical,
     mainEntityOfPage: canonical,
-    datePublished: "2026-09-24",
-    dateModified: "2026-09-24",
+    datePublished: guide.publishedAt,
+    dateModified: guideModifiedDate(guide),
     author: {
       "@type": "Organization",
       name: "SPANISHCUE",
@@ -106,6 +110,15 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <p className={styles.lead}>{guide.description}</p>
           </header>
 
+          {guide.platform ? (
+            <aside className={styles.platformNote}>
+              <strong>Platform information reviewed: {formatReviewedDate(guide.lastReviewed!)}</strong>
+              <p>
+                SpanishCue is an independent teaching-resource platform and is not affiliated with {guide.platform}.
+              </p>
+            </aside>
+          ) : null}
+
           <div className={styles.articleBody}>
             {guide.sections.map((section) => (
               <section key={section.heading}>
@@ -119,6 +132,30 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </section>
             ))}
           </div>
+
+          {relatedGuides.length ? (
+            <section className={styles.relatedGuides}>
+              <h2>Related teaching guides</h2>
+              <div className={styles.relatedGuideGrid}>
+                {relatedGuides.map((item) => (
+                  <Link href={`/guides/${item.slug}`} key={item.slug}>{item.title}</Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {guide.officialSources?.length ? (
+            <section className={styles.platformSources}>
+              <h2>Platform sources</h2>
+              <ul>
+                {guide.officialSources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} rel="noreferrer">{source.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
 
           <aside className={styles.articleCta}>
             <p className={styles.eyebrow}>USE IT IN CLASS</p>
