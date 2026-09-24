@@ -233,3 +233,71 @@
     flex-direction: column;
   }
 }
+
+.platformNote {
+  margin: -12px 0 44px;
+  padding: 18px 20px;
+  border: 1px solid #d9d5cc;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.platformNote strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.platformNote p {
+  margin: 0;
+  color: #555;
+  line-height: 1.55;
+}
+
+.relatedGuides,
+.platformSources {
+  margin: 52px 0;
+}
+
+.relatedGuides h2,
+.platformSources h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.relatedGuideGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.relatedGuideGrid a {
+  padding: 16px 18px;
+  border: 1px solid #d9d5cc;
+  border-radius: 14px;
+  background: #fff;
+  color: inherit;
+  font-weight: 750;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.platformSources ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.platformSources li {
+  margin: 0 0 9px;
+}
+
+.platformSources a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .relatedGuideGrid {
+    grid-template-columns: 1fr;
+  }
+}
