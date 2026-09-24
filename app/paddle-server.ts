@@ -135,7 +135,7 @@ export async function resumePaddleSubscription(config: PaddleRuntimeConfig, subs
 export async function cancelPaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {
   return paddleJson<PaddleSubscription>(config, `/subscriptions/${encodeURIComponent(subscriptionId)}/cancel`, {
     method: "POST",
-    body: JSON.stringify({ effective_from: "next_billing_period" }),
+    body: JSON.stringify({ effective_from: "immediately" }),
   });
 }
 
