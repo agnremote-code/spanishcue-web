@@ -1,14 +1,24 @@
-# CHESPANISH backend migration runbook
+# SPANISHCUE backend migration runbook
 
-This document is the stable contract for moving CHESPANISH from Sites to an
-independent production domain without rebuilding teacher accounts or access
-rules.
+The product was originally built as CHESPANISH and renamed SPANISHCUE. Some
+runtime identifiers intentionally keep the old prefix and must not be renamed
+casually, because they are live configuration names or security headers:
+`CHESPANISH_OWNER_UID`, `CHESPANISH_OWNER_EMAIL`,
+`CHESPANISH_APPLE_AUTH_ENABLED` and the server-created `x-chespanish-*`
+identity headers.
+
+This document is the stable contract for moving SPANISHCUE off OpenAI Sites
+hosting to independently operated infrastructure without rebuilding teacher
+accounts or access rules. The production domain `https://spanishcue.com` is
+already live on Sites; a hosting move keeps that domain. See
+`docs/CLAUDE_RELEASE_TRANSITION.md` for the release/hosting transition analysis.
 
 ## Current request flow
 
-1. Firebase authenticates Google, Apple, or email/password in the browser.
+1. Firebase authenticates Google or email/password in the browser. Apple is
+   implemented but only shown when `CHESPANISH_APPLE_AUTH_ENABLED=true`.
 2. The session endpoint verifies the Firebase ID token server-side.
-3. The verified identity is linked to an internal CHESPANISH user.
+3. The verified identity is linked to an internal SPANISHCUE user.
 4. The Worker resolves that user's role and library entitlement from D1.
 5. Only server-created identity headers can unlock protected routes and assets.
 
@@ -17,6 +27,8 @@ portable key is users.id.
 
 ## Portable data contract
 
+Identity and access core:
+
 | Table | Owns | Migration rule |
 | --- | --- | --- |
 | users | Canonical teacher profile, role, status, timestamps | Preserve every id exactly |
@@ -24,6 +36,23 @@ portable key is users.id.
 | access_grants | Free/full product entitlement and its source | Preserve active, revoked, and expiring grants |
 | lesson_progress | Per-user lesson state and timestamps | Import by canonical user id and lesson id |
 | offer_settings | Launch price and promotion settings | Import the row with id 1 |
+
+Since this runbook was first written, `db/schema.ts` has grown to 17 tables.
+A hosting move must also carry, with ids and timestamps unchanged:
+
+- billing: `billing_subscriptions`, `billing_payments`,
+  `payment_webhook_events`, `billing_checkout_locks`, `billing_outbox_events`,
+  `billing_purchase_claims`;
+- founder offer: `founder_offer_state`, `founder_assignments` (its
+  `founder_assignments_increment_claimed` trigger must exist on the target
+  before import), `founder_leads`;
+- product features: `students`, `class_records`,
+  `verification_email_deliveries`.
+
+Billing rows carry provider identities (PayPal/Paddle subscription and payment
+IDs, webhook event IDs) with uniqueness constraints that make webhook
+processing idempotent. Losing them would allow duplicate processing or founder
+reallocation, so they are part of the portable contract, not a cache.
 
 All application authorization must resolve through users and access_grants. UI
 state, Firebase claims, email text, and browser storage are not authoritative
@@ -48,15 +77,32 @@ email/password to Google or Apple.
 
 ## Billing-provider integration
 
-A future billing webhook grants access by upserting an access_grants row:
+Billing is implemented (PayPal and Paddle; see `docs/billing-contract.md`).
+On a validated settled payment, `db/billing.ts` (PayPal) and
+`db/paddle-billing.ts` (Paddle) upsert an access_grants row:
 
-- product_code: teacher_library
+- product_code: `spanishcue-pro` (`PRO_PRODUCT_CODE` in `app/billing-config.ts`)
 - access_level: full
 - source: billing
-- source_reference: the external subscription id
-- plan_code: the stable CHESPANISH plan code
-- status: active, revoked, or expired
-- starts_at and expires_at: Unix timestamps in seconds
+- source_reference: the provider subscription id
+- plan_code: the founder offer code (default `founder-1000-usd15-monthly`)
+- status: active while paid; deactivated on refund/reversal/expiry
+- starts_at and expires_at: Unix timestamps in seconds; expires_at is the
+  persisted paid-through time
+
+Owner and manual grants use product_code `teacher_library`
+(`TEACHER_LIBRARY_PRODUCT` in `app/account-types.ts`).
+
+**Open source discrepancy (recorded 2026-09-25, not resolved by this
+document):** `readAccessBySubject` in `db/accounts.ts`, which feeds
+`resolveFirebaseAccount` and therefore the Worker's access headers and
+private-asset authorization, only counts grants with product_code
+`teacher_library`. No code path, trigger or view in `main` maps a
+`spanishcue-pro` billing grant to full access, and no test asserts that a
+billing grant resolves to `accessLevel: "full"`. Whether production paid
+accounts are affected (for example, if they also hold manual grants) needs to
+be checked against production data. Fixing it is a separate, reviewed code
+change with its own tests.
 
 Webhook handling must be authenticated, idempotent, and server-only. Payment
 screens and client callbacks never grant access directly.
@@ -65,9 +111,13 @@ screens and client callbacks never grant access directly.
 
 1. Put the target schema under migrations and apply it to an empty staging
    database.
-2. Export all five CHESPANISH tables with their canonical ids and timestamps.
-3. Import them in dependency order: users, auth_identities, access_grants,
-   lesson_progress, offer_settings.
+2. Export every table in the portable data contract above with its canonical
+   ids and timestamps, plus the production migration ledger state (inspect
+   how Sites records applied migrations; do not assume Wrangler's default
+   `d1_migrations` table).
+3. Import them in dependency order, starting with users, auth_identities,
+   access_grants, lesson_progress and offer_settings, then the billing,
+   founder and feature tables in foreign-key order.
 4. Reconcile counts, unique emails, linked identities, active entitlements, and
    progress rows before opening staging.
 5. Deploy the same server-side auth and authorization contract on the new host.
@@ -80,13 +130,24 @@ screens and client callbacks never grant access directly.
 
 ## Required configuration
 
-Runtime owner overrides:
+Runtime owner overrides (optional; `app/firebase-session.ts` has fallbacks):
 
 - CHESPANISH_OWNER_UID
 - CHESPANISH_OWNER_EMAIL
 - CHESPANISH_APPLE_AUTH_ENABLED (set to true only after Apple credentials and return URLs are active)
 
-Firebase public build configuration:
+Server-only runtime secrets for auth/verification:
+
+- FIREBASE_ADMIN_SERVICE_ACCOUNT_B64 (Base64 service-account JSON)
+- RESEND_API_KEY (verification email delivery)
+
+Billing, founder-offer, legal and analytics runtime names are listed in
+`docs/billing-contract.md` and `.env.example`.
+
+Firebase browser configuration is currently compiled in from
+`app/firebase-config.ts`; the current build does not read environment
+variables for it. `.env.example` reserves these names for a future host that
+injects `NEXT_PUBLIC_*` values at build time:
 
 - NEXT_PUBLIC_FIREBASE_API_KEY
 - NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN

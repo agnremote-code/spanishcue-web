@@ -13,9 +13,17 @@ It is a context snapshot, not a substitute for reading current GitHub state. Alw
 
 GitHub `main` is canonical.
 
-At the time this handoff was prepared:
+Three different things must not be confused:
 
-- canonical `main`: `c18c90d0a7119b66fbce195adfc04f55cc527e00`
+- **current `main`** — whatever GitHub `main` is when you read it. Always re-read it.
+- **current production source** — the `healthy.sha` recorded in `state.json` on `automation/sites-release-state`. It lags `main` whenever merged work has not been released; a merge is not a release.
+- **historical snapshot** — the values below, recorded when this handoff was written.
+
+Reconciliation note (2026-09-25): this handoff was merged by PR #55 as `2e8f9b8b62d8952eda4e6bd85d69132fd4a3a112`, a documentation-only commit on top of `c18c90d`. At that point `main` was `2e8f9b8` while production source remained `c18c90d` (v174). No release was required for the documentation merge.
+
+Historical snapshot at the time this handoff was prepared (before PR #55 merged):
+
+- `main` at that time: `c18c90d0a7119b66fbce195adfc04f55cc527e00`
 - production Sites version: `174`
 - healthy production source SHA: `c18c90d0a7119b66fbce195adfc04f55cc527e00`
 - release state: enabled and idle
@@ -312,6 +320,15 @@ For recovery work:
 
 Recovery and regeneration are separate tasks.
 
+Read-only verification on 2026-09-25 (no refs changed):
+
+- `recovery/pre-conversation-expansion-20260924` points exactly at `c18c90d` and adds nothing.
+- `recovery/conversation-worktree-fragments-20260924` (`e2ee43f`) and `codex/recover-conversation-all-levels-20260924` (`a268edb`) each add the same three thumbnails with byte-identical blobs: `advanced-conversation-a1.webp`, `argento-roleplays-a2.webp`, `life-roulette-c2.webp`.
+- `recovery/conversation-all-levels-forensic-20260924` (`cf5345c`, parent `a268edb`) adds 27 raw tsx cache files, 9 exact-source snapshots and `cache-provenance.json`; all 36 recorded git blob hashes match the committed bytes.
+- Its README names base commit `8c86c78a7f6d2408b9d6eebf0247f34056d363ae`, which does not exist in this repository. The actual parent chain is `cf5345c` → `a268edb` → `c18c90d`.
+- Snapshots that are new relative to `main`: `la-agencia-de-vidas-paralelas/{data,variants}.ts`, `la-vida-despues-de-los-30/{variants,variant-document}.ts`, `argento-roleplays/variants.ts`. `conversation-families/expanded-public.ts` survives only as compiled cache. The recovered `argento-roleplays/data.ts` and `la-vida-despues-de-los-30/activity-document.ts` are byte-identical to `main`.
+- No integration wiring (pages, catalog/ledger entries, tests) was recovered, and evidence covers only three of the single-level families.
+
 ---
 
 ## 9. Billing product behavior
@@ -495,7 +512,7 @@ Re-read live state before relying on these values.
 
 ## 15. Current source baseline around production v174
 
-The current main SHA includes PR #54's sanitized Paddle API failure logging.
+Production source `c18c90d` includes PR #54's sanitized Paddle API failure logging. `main` has since advanced with documentation-only changes (PR #55 and later); check the release state for what is actually deployed.
 
 Before that, production/release history included:
 
@@ -752,14 +769,6 @@ Chats can help execute work, but they should not be the only durable store of pr
 
 ## 27. Immediate migration status
 
-This handoff and `CLAUDE.md` are being added on a dedicated documentation branch rather than directly to `main`.
+This handoff and `CLAUDE.md` were merged through PR #55 (merge commit `2e8f9b8`) following normal repository rules. No production deployment was performed or required for them.
 
-The migration itself must follow normal repository rules:
-
-- documentation branch;
-- commits pushed;
-- non-draft PR;
-- CI/auto-merge;
-- verify merged SHA.
-
-No production deployment is required merely to add these Claude handoff documents.
+Claude Code can own source development through the normal PR/CI flow. Production publishing still depends on the Sites-native release owner; see `docs/CLAUDE_RELEASE_TRANSITION.md` for what can and cannot be operated from Claude Code today.

@@ -1,8 +1,12 @@
 # SPANISHCUE Teacher Library
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+SPANISHCUE's teacher-facing Spanish lesson library, running on
+[vinext](https://github.com/cloudflare/vinext) as a Cloudflare Worker with D1
+and Drizzle, currently hosted and released through OpenAI Sites.
+
+Start with `AGENTS.md`, `CLAUDE.md` and `docs/SPANISHCUE_HANDOFF.md`. Release
+ownership and the hosting transition are described in
+`docs/CLAUDE_RELEASE_TRANSITION.md`.
 
 ## Prerequisites
 
@@ -29,7 +33,7 @@ Scripts that need writable project-scoped home, npm, XDG, and temporary paths us
 - `.openai/hosting.json` declares optional Sites D1 and R2 bindings
 - `vite.config.ts` simulates declared bindings for local development
 - `db/index.ts` reads the D1 binding from the Cloudflare Worker environment
-- `db/schema.ts` starts intentionally empty
+- `db/schema.ts` defines the D1 schema (accounts, access, progress, billing, founder offer, student tracker, verification email); migrations live in `drizzle/`
 - `examples/d1/` contains an optional D1 example surface
 - `drizzle.config.ts` supports local migration generation when needed
 
@@ -60,7 +64,7 @@ contract and the future-domain migration sequence.
 - `npm run dev`: start the Vite/Vinext development server
 - `npm run build`: build and validate the deployable Sites artifact
 - `npm run start`: start the built Vinext application
-- `npm test`: build, validate, and verify the rendered development-preview metadata
+- `npm test`: run the release-policy/smoke unit tests and the tracker, Red Flag and guide suites, then build, validate and run the Worker regression suite (`scripts/test-worker.mjs`)
 - `npm run validate:artifact`: recheck an existing artifact's manifest and ESM `default.fetch` export
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 

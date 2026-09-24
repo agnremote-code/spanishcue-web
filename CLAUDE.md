@@ -25,6 +25,7 @@ Core references:
 - `docs/BACKEND_MIGRATION.md`
 - `docs/conversation-family-authoring.md`
 - `docs/conversation-family-migration.md`
+- `docs/CLAUDE_RELEASE_TRANSITION.md` (what Claude Code can and cannot release today)
 
 If this file conflicts with `AGENTS.md` or a task-specific release runbook, the stricter repository rule wins.
 
@@ -62,7 +63,7 @@ For ordinary source work:
 - do not invent manual deployment shortcuts;
 - do not change environment variables, secrets, domains, Firebase, Paddle, PayPal, D1, or production data unless the task explicitly requires it and the correct runbook authorizes it.
 
-For Sites publishing, follow `docs/releases/SITES_RELEASE.md`.
+For Sites publishing, follow `docs/releases/SITES_RELEASE.md`. Its save/deploy/rollback steps require native OpenAI Sites tools that Claude Code does not have; Claude Code stops at a verified merged SHA and the owner routes the release to the Sites release owner. See `docs/CLAUDE_RELEASE_TRANSITION.md`.
 
 For any change touching migration-sensitive files, D1 schema/data, Drizzle, bindings, hosting configuration, or migration infrastructure, follow `docs/releases/MIGRATION_RELEASE.md`.
 
