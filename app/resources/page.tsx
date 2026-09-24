@@ -4,7 +4,7 @@ import styles from "./resources.module.css";
 import {
   resourceLessons,
   resourcePathForLesson,
-  resourceTypeLabel,
+  resourceTypePluralLabel,
   resourceLevelLabel,
 } from "../resource-seo";
 
@@ -41,7 +41,7 @@ export default function ResourcesPage() {
           if (!categoryLessons.length) return null;
           return (
             <section className={styles.group} key={category}>
-              <h2>{resourceTypeLabel(categoryLessons[0])}s</h2>
+              <h2>{resourceTypePluralLabel(categoryLessons[0])}</h2>
               <div className={styles.catalogGrid}>
                 {categoryLessons.map((lesson) => (
                   <Link className={styles.resourceCard} href={resourcePathForLesson(lesson)} key={lesson.id}>
