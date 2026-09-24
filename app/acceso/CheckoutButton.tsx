@@ -5,11 +5,68 @@ import Link from "next/link";
 import { useI18n } from "../i18n/LocaleProvider";
 import { trackMarketingEvent } from "../marketing/analytics";
 
-type FounderStatus = { limit: number; remaining: number; available: boolean; checkoutLive: boolean; mode: "sandbox" | "live" };
+type FounderStatus = {
+  limit: number;
+  remaining: number;
+  available: boolean;
+  checkoutLive: boolean;
+  checkoutAvailable: boolean;
+  paddleCheckoutAvailable?: boolean;
+  mode: "sandbox" | "live";
+};
+
+type PaddleEvent = {
+  name?: string;
+  data?: { transaction_id?: string };
+};
+
+type PaddleApi = {
+  Initialize: (options: { token: string; eventCallback?: (event: PaddleEvent) => void }) => void;
+  Update?: (options: { eventCallback?: (event: PaddleEvent) => void }) => void;
+  Checkout: {
+    open: (options: {
+      transactionId: string;
+      settings?: {
+        displayMode?: "overlay";
+        theme?: "light" | "dark";
+        variant?: "one-page" | "multi-page";
+        locale?: string;
+      };
+    }) => void;
+  };
+};
+
+declare global {
+  interface Window {
+    Paddle?: PaddleApi;
+    __spanishcuePaddleInitialized?: boolean;
+  }
+}
+
+const paddleScriptId = "spanishcue-paddle-js";
+
+function loadPaddle() {
+  if (window.Paddle) return Promise.resolve(window.Paddle);
+  return new Promise<PaddleApi>((resolve, reject) => {
+    const existing = document.getElementById(paddleScriptId) as HTMLScriptElement | null;
+    if (existing) {
+      existing.addEventListener("load", () => window.Paddle ? resolve(window.Paddle) : reject(new Error("paddle_missing")), { once: true });
+      existing.addEventListener("error", () => reject(new Error("paddle_load_failed")), { once: true });
+      return;
+    }
+    const script = document.createElement("script");
+    script.id = paddleScriptId;
+    script.src = "https://cdn.paddle.com/paddle/v2/paddle.js";
+    script.async = true;
+    script.onload = () => window.Paddle ? resolve(window.Paddle) : reject(new Error("paddle_missing"));
+    script.onerror = () => reject(new Error("paddle_load_failed"));
+    document.head.appendChild(script);
+  });
+}
 
 export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boolean; returnTo: string }) {
   const { locale, t } = useI18n();
-  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "paypal" | "paddle" | "confirming" | "error">("idle");
   const [message, setMessage] = useState("");
   const [founder, setFounder] = useState<FounderStatus | null | undefined>(undefined);
   const loginPath = `/ingresar?modo=registro&returnTo=${encodeURIComponent(`/acceso?returnTo=${encodeURIComponent(returnTo)}`)}`;
@@ -27,12 +84,96 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
     return () => controller.abort();
   }, []);
 
-  async function checkout() {
-    trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe", signed_in: signedIn });
+  async function emitPaidConversion(subscriptionId: string) {
+    try {
+      const response = await fetch("/api/billing/conversion", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ subscriptionId }),
+      });
+      if (!response.ok || response.status === 204) return;
+      const body = await response.json() as { transactionId?: unknown };
+      if (typeof body.transactionId === "string") {
+        trackMarketingEvent("subscription_first_paid", { transaction_id: body.transactionId });
+      }
+    } catch {}
+  }
+
+  async function confirmPaddle(transactionId: string) {
+    setStatus("confirming");
+    for (let attempt = 0; attempt < 8; attempt += 1) {
+      try {
+        const response = await fetch("/api/billing/paddle/confirm", {
+          method: "POST",
+          credentials: "same-origin",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ transactionId }),
+        });
+        const body = await response.json() as { accessConfirmed?: unknown; subscriptionId?: unknown };
+        if (response.ok && body.accessConfirmed === true && typeof body.subscriptionId === "string") {
+          await emitPaidConversion(body.subscriptionId);
+          window.location.assign(returnTo);
+          return;
+        }
+      } catch {}
+      await new Promise((resolve) => window.setTimeout(resolve, 1500));
+    }
+    window.location.assign("/cuenta?checkout=paddle");
+  }
+
+  async function checkoutPaddle() {
+    trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
+    if (!signedIn) { window.location.assign(loginPath); return; }
+    if (!founder?.available || !founder.paddleCheckoutAvailable) return;
+    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paddle" });
+    setStatus("paddle");
+    setMessage("");
+    try {
+      const response = await fetch("/api/billing/paddle/checkout", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "content-type": "application/json" },
+        body: "{}",
+      });
+      const body = await response.json() as { transactionId?: unknown; clientToken?: unknown; error?: unknown };
+      if (!response.ok || typeof body.transactionId !== "string" || typeof body.clientToken !== "string") {
+        throw new Error(typeof body.error === "string" ? body.error : "No pudimos abrir el pago con tarjeta.");
+      }
+      const paddle = await loadPaddle();
+      const callback = (event: PaddleEvent) => {
+        if (event.name !== "checkout.completed") return;
+        const transactionId = event.data?.transaction_id || body.transactionId as string;
+        void confirmPaddle(transactionId);
+      };
+      if (!window.__spanishcuePaddleInitialized) {
+        paddle.Initialize({ token: body.clientToken, eventCallback: callback });
+        window.__spanishcuePaddleInitialized = true;
+      } else {
+        paddle.Update?.({ eventCallback: callback });
+      }
+      paddle.Checkout.open({
+        transactionId: body.transactionId,
+        settings: {
+          displayMode: "overlay",
+          theme: "light",
+          variant: "one-page",
+          locale: locale === "es" ? "es" : "en",
+        },
+      });
+      setStatus("idle");
+    } catch (error) {
+      setStatus("error");
+      setMessage(error instanceof Error ? error.message : "No pudimos abrir el pago con tarjeta.");
+    }
+  }
+
+  async function checkoutPayPal() {
+    trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_paypal", signed_in: signedIn });
     if (!signedIn) { window.location.assign(loginPath); return; }
     if (!founder?.available || !founder.checkoutLive) return;
-    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD" });
-    setStatus("loading"); setMessage("");
+    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paypal" });
+    setStatus("paypal"); setMessage("");
     try {
       const response = await fetch("/api/billing/checkout", {
         method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: JSON.stringify({ returnTo }),
@@ -49,29 +190,45 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
 
   if (founder === undefined) return <div className="checkout-action" aria-live="polite"><p>{locale === "es" ? "Comprobando disponibilidad…" : "Checking availability…"}</p></div>;
 
-  if (!founder?.checkoutLive) return <div className="checkout-action">
+  if (!founder?.checkoutAvailable) return <div className="checkout-action">
     <strong className="checkout-availability closed">{locale === "es" ? "Lanzamiento próximo · sin cobros todavía" : "Launching soon · no charges yet"}</strong>
     <Link className="checkout-free-link" href="/el-hotel-de-lo-imposible">{locale === "es" ? "Abrir una clase gratis" : "Open a free lesson"} →</Link>
     <p>{locale === "es" ? "Este enlace no inicia una suscripción." : "This link does not start a subscription."}</p>
   </div>;
 
+  const busy = status === "paypal" || status === "paddle" || status === "confirming";
+
   return <div className="checkout-action">
     {founder.mode === "sandbox" && <strong className="checkout-availability closed">{locale === "es" ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
-    {founder && <strong className={`checkout-availability ${founder.available && founder.checkoutLive ? "" : "closed"}`}>
+    <strong className={`checkout-availability ${founder.available ? "" : "closed"}`}>
       {founder.available
         ? locale === "es" ? `${founder.remaining} de ${founder.limit} lugares disponibles` : `${founder.remaining} of ${founder.limit} places available`
         : locale === "es" ? "Oferta fundadora completa" : "Founder offer fully claimed"}
-    </strong>}
-    <button type="button" onClick={checkout} disabled={status === "loading" || !founder.available}>
-      {status === "loading"
-        ? t("checkout.openingPayPal")
-        : !founder.available
-          ? locale === "es" ? "Oferta completa" : "Offer full"
+    </strong>
+
+    {founder.paddleCheckoutAvailable && (
+      <button className="checkout-card-button" type="button" onClick={checkoutPaddle} disabled={busy || !founder.available}>
+        {status === "paddle" || status === "confirming"
+          ? (locale === "es" ? "Procesando pago…" : "Processing payment…")
           : signedIn
-            ? (locale === "es" ? "Activar PRO · US$15/mes" : "Activate PRO · US$15/month")
-            : (locale === "es" ? "Crear cuenta y activar PRO · US$15/mes" : "Create account and activate PRO · US$15/month")}
-    </button>
-    <p>{locale === "es" ? "Pago seguro · acceso inmediato · pausá o cancelá cuando quieras." : "Secure payment · instant access · pause or cancel anytime."}</p>
+            ? (locale === "es" ? "Pagar con tarjeta · US$15/mes" : "Pay by card · US$15/month")
+            : (locale === "es" ? "Crear cuenta y pagar con tarjeta" : "Create account and pay by card")}
+      </button>
+    )}
+
+    {founder.checkoutLive && (
+      <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>
+        {status === "paypal"
+          ? t("checkout.openingPayPal")
+          : signedIn
+            ? (locale === "es" ? "Pagar con PayPal" : "Pay with PayPal")
+            : (locale === "es" ? "Crear cuenta y pagar con PayPal" : "Create account and pay with PayPal")}
+      </button>
+    )}
+
+    <p>{locale === "es"
+      ? "Tarjeta, Apple Pay o Google Pay cuando estén disponibles · o PayPal. Acceso inmediato."
+      : "Card, Apple Pay or Google Pay when available · or PayPal. Instant access."}</p>
     {status === "error" && <small role="alert">{message}</small>}
   </div>;
 }
