@@ -618,4 +618,479 @@ export const preplyGuides: TeachingGuide[] = [
       },
     ],
   },
+  {
+    ...common,
+    slug: "preply-trial-to-subscription-spanish",
+    title: "Preply Trial-to-Subscription Conversion for Spanish Tutors",
+    description:
+      "Understand Preply trial-to-subscription conversion as a teaching funnel: diagnose the learner, demonstrate value, propose a credible plan and follow up without pressure.",
+    eyebrow: "PREPLY · CONVERSION",
+    readingTime: "12 min",
+    keywords: ["Preply trial conversion", "Preply trial to subscription", "Spanish tutor conversion Preply", "Preply trial Spanish teacher"],
+    relatedHref: "/resources",
+    relatedLabel: "Choose sample lessons that show real teaching",
+    relatedLessonIds: [15, 14, 121, 137],
+    relatedGuideSlugs: ["preply-trial-lesson-spanish", "preply-super-tutor-spanish-teachers", "preply-post-trial-message-spanish"],
+    officialSources: [PREPLY_SOURCES.trial, PREPLY_SOURCES.superTutor, PREPLY_SOURCES.superTutorMetrics],
+    sections: [
+      {
+        heading: "Treat conversion as evidence of fit, not a sales trick",
+        paragraphs: [
+          "A trial converts when the learner has enough evidence to believe that continuing with you is a sensible next step. That evidence usually comes from three places: you understood the real goal, the student experienced a useful piece of teaching, and the next few lessons feel concrete rather than vague. Pressure can sometimes create a booking, but it does not create a durable teaching relationship.",
+          "Preply currently includes trial-to-subscription conversion among the metrics used for Super Tutor assessment, with specific criteria that the platform can change over time. That makes the metric operationally relevant, but the healthiest way to improve it is still to improve the first-lesson experience and attract students who match your offer.",
+          "Think of the funnel as profile → pre-trial message → trial → learning plan → follow-up → recurring schedule. A weak link early in the chain creates work later. If your profile promises exam preparation but the trial is casual conversation, no closing script can repair the mismatch."
+        ]
+      },
+      {
+        heading: "Improve conversion before the trial begins",
+        paragraphs: [
+          "Use the pre-trial message to remove uncertainty. Ask for the learner’s main goal, approximate experience with Spanish and one situation where they most want to use the language. Do not send a questionnaire with fifteen questions. You need just enough information to select a sample task that feels relevant.",
+          "Review the learner’s stated goal before class and prepare one adaptable resource. For a beginner, choose a visual speaking task with support. For travel, choose a roleplay. For an intermediate conversation student, choose a prompt that reveals how they sustain an answer and handle follow-up. The trial feels personalized because the material serves the goal, not because you created a new deck from scratch.",
+          "If the student’s goal does not match your expertise, be clear. Converting the wrong learner can increase short-term bookings while creating cancellations, frustration and poor retention later."
+        ]
+      },
+      {
+        heading: "Make the student experience a small improvement",
+        paragraphs: [
+          "The sample teaching portion should produce a before-and-after moment. That can be as simple as a learner giving a one-sentence answer, receiving a structure such as idea + reason + example, and then producing a longer answer. Or a learner can first confuse preterite and imperfect, see the event/background contrast, then retell a short scene with better choices.",
+          "Name the improvement without exaggerating it: “Your second answer was longer because you had a structure to organize it.” This turns the lesson into evidence of method. The student is not being told that you are effective; they are seeing one concrete mechanism.",
+          "Avoid choosing material mainly because it looks impressive. The best trial activity reveals something about the learner and gives you a reason to recommend what comes next."
+        ]
+      },
+      {
+        heading: "Build the learning plan from what happened in the room",
+        paragraphs: [
+          "A generic plan such as “grammar, vocabulary, speaking and listening” does not tell the student what you noticed. Use three to five priorities tied to their goal. For example: strengthen past narration, build longer spontaneous answers, recycle high-frequency connectors, and practise listening to regional speech.",
+          "Sequence the priorities. If the learner cannot yet build basic present-tense sentences, advanced debate vocabulary is not the next step. If an advanced learner is fluent but imprecise, a beginner grammar sequence is not the right response just because it is easy to plan.",
+          "A credible plan also protects you from overpromising. You are not predicting fluency by a date; you are explaining the work that would make progress more likely."
+        ]
+      },
+      {
+        heading: "Follow up with a recap, not a generic thank-you",
+        paragraphs: [
+          "Preply’s current Super Tutor criteria include pre- and post-trial engagement metrics. Beyond the metric, timely follow-up is pedagogically useful because it preserves the connection between the trial and the next lesson. Send a short recap of the learner’s goal, one observation and the next recommended step.",
+          "Example pattern: “Thanks for today. Your comprehension is already solid at this level; the main gap is producing longer past-tense answers without stopping. Next time I’d use your travel stories to work on preterite vs. imperfect and then retell them with less support.”",
+          "Do not send a wall of text or a hard sell. The message should help the learner make a decision with clear information."
+        ]
+      },
+      {
+        heading: "Read the metric without letting it distort your teaching",
+        bullets: [
+          "Track why a trial did not continue: poor fit, schedule, price, teaching experience, technical problem or unknown.",
+          "Do not lower price reflexively after every non-conversion.",
+          "Do not change your niche every week to chase a better percentage.",
+          "Compare conversion together with retention; a trial that converts and stops after one regular lesson is not a strong long-term result.",
+          "Recheck Preply’s current metric definition before using any threshold in business decisions."
+        ],
+        paragraphs: [
+          "Conversion is useful feedback, but it is not a complete measure of teaching quality. Use it to investigate the experience you control: profile fit, preparation, clarity, sample teaching and follow-up."
+        ]
+      }
+    ]
+  },
+  {
+    ...common,
+    slug: "preply-super-tutor-spanish-teachers",
+    title: "The Preply Super Tutor System for Spanish Teachers",
+    description:
+      "A current, source-backed guide to the Preply Super Tutor system for Spanish teachers, with practical ways to manage the metrics without teaching to a badge.",
+    eyebrow: "PREPLY · SUPER TUTOR",
+    readingTime: "12 min",
+    keywords: ["Preply Super Tutor Spanish", "Super Tutor requirements Preply", "Preply Super Tutor criteria", "Spanish teacher Super Tutor"],
+    relatedHref: "/resources",
+    relatedLabel: "Build a consistent lesson system with SpanishCue",
+    relatedLessonIds: [15, 14, 137, 138],
+    relatedGuideSlugs: ["preply-trial-to-subscription-spanish", "preply-student-retention-spanish", "preply-pre-trial-message-spanish"],
+    officialSources: [PREPLY_SOURCES.superTutor, PREPLY_SOURCES.superTutorMetrics],
+    sections: [
+      {
+        heading: "Know what the badge represents before optimizing for it",
+        paragraphs: [
+          "Preply describes Super Tutor as a status for tutors who consistently meet a set of quality and reliability criteria. The criteria are evaluated over a rolling assessment period and can change. As of the September 2026 review for this guide, the official program documentation lists requirements around lessons taught, rating, attendance, trial conversion, rescheduling or cancellation behavior, messaging engagement and use of Preply Classroom for trials.",
+          "Do not memorize these numbers forever. Treat the official Help Center and your Insights dashboard as the source of truth because thresholds and definitions are platform-controlled. SpanishCue’s role here is to help you understand the operational behaviors behind the metrics.",
+          "A badge can improve visibility, but teaching only to the badge is a poor business strategy. The underlying behaviors—reliability, clear communication, good trial fit and consistent recurring lessons—matter even if the platform changes the label."
+        ]
+      },
+      {
+        heading: "Separate controllable metrics from outcomes",
+        paragraphs: [
+          "You directly control whether you attend lessons, how quickly you send a message, whether you use the required classroom workflow, and how often you cancel for reasons within your control. You influence but do not fully control trial conversion, ratings or long-term retention because student fit, budget, schedule and personal circumstances also matter.",
+          "Build systems around the controllable parts. Use calendar buffers to reduce last-minute reschedules. Keep pre- and post-trial message templates that you personalize. Enter the correct classroom rather than improvising another link. Review your schedule before travel or time-zone changes.",
+          "For influenced outcomes, investigate patterns instead of blaming individual students. If many trials fail to continue, compare profile promise with trial experience. If regular students disappear after a month, examine continuity, perceived progress and schedule consistency."
+        ]
+      },
+      {
+        heading: "Design trial engagement as useful communication",
+        paragraphs: [
+          "Current Preply criteria include messaging behavior around trials. The best way to meet that kind of requirement is not to send empty “Hi!” messages for the sake of a metric. Use the message to gather one piece of information that improves the lesson.",
+          "Before the trial: welcome the learner, confirm the goal and ask one concise question such as what they most need Spanish for. After the trial: recap the priority you observed and state the next lesson. This makes engagement useful even if the platform later changes the threshold.",
+          "Keep the process light enough to maintain at scale. A template should provide structure, not identical copy. Insert the learner’s goal and one real observation so the message still sounds like a teacher wrote it."
+        ]
+      },
+      {
+        heading: "Protect reliability with calendar design",
+        paragraphs: [
+          "Reliability problems often begin before the lesson. If your availability is broader than the life you actually live, you create future cancellations. Build a recurring schedule with enough space for breaks, administration and preparation. Add extra slots only when you know you can teach them.",
+          "If you travel frequently, update your time zone and block travel periods early. If you teach long days, avoid placing every possible hour back-to-back. A calendar that looks fully open can produce worse reliability than a smaller schedule you consistently honor.",
+          "When a student requests a change, use the platform’s correct reason and confirmation workflow. Metrics can distinguish tutor-driven changes from student-requested changes, so accurate administration matters."
+        ]
+      },
+      {
+        heading: "Use lesson consistency to support ratings and retention",
+        paragraphs: [
+          "A consistent lesson is not a repetitive lesson. Students should recognize a useful rhythm: review something that matters, learn or notice something new, use it in speech, receive focused feedback, and understand what comes next.",
+          "A resource library helps because you spend less cognitive energy building visuals and prompts and more attention on adapting them to the student. Keep a short student record with goals, recurring errors, completed resources and next targets. That makes continuity visible.",
+          "Do not ask for ratings in a way that pressures the student or suggests a required score. Focus on giving them a coherent experience and let platform review mechanisms work as designed."
+        ]
+      },
+      {
+        heading: "Run a monthly Super Tutor audit",
+        bullets: [
+          "Check the current official criteria before interpreting your dashboard.",
+          "Review attendance and tutor-driven cancellation or reschedule patterns.",
+          "Check trial engagement and whether your messages contain useful information.",
+          "Compare trial conversion with student fit and pricing, not only with your closing language.",
+          "Review regular students who have become irregular and identify whether the issue is scheduling, challenge, relevance or progress visibility.",
+          "Change one operational variable at a time so you can learn from the result."
+        ],
+        paragraphs: [
+          "The status is most useful when it reinforces a business you would want anyway: reliable scheduling, clear communication, relevant trials and recurring lessons that feel connected."
+        ]
+      }
+    ]
+  },
+  {
+    ...common,
+    slug: "preply-pre-trial-message-spanish",
+    title: "What to Message a Spanish Student Before a Preply Trial",
+    description:
+      "Send a useful Preply pre-trial message that welcomes the Spanish student, clarifies one goal and gives you enough information to prepare a relevant sample lesson.",
+    eyebrow: "PREPLY · PRE-TRIAL",
+    readingTime: "9 min",
+    keywords: ["Preply pre trial message", "message before Preply trial", "Spanish tutor Preply message", "Preply trial message template"],
+    relatedHref: "/resources",
+    relatedLabel: "Prepare a relevant sample resource",
+    relatedLessonIds: [15, 14, 130],
+    relatedGuideSlugs: ["preply-trial-lesson-spanish", "preply-post-trial-message-spanish", "preply-trial-to-subscription-spanish"],
+    officialSources: [PREPLY_SOURCES.trial, PREPLY_SOURCES.superTutorMetrics],
+    sections: [
+      {
+        heading: "Use the message to improve the lesson, not to perform friendliness",
+        paragraphs: [
+          "A pre-trial message should make the student feel welcomed and give you one or two pieces of information that change your preparation. A long questionnaire creates work for the learner before they know you. A generic “Looking forward to meeting you” is pleasant but does not help you choose a task.",
+          "Preply’s current Super Tutor documentation includes trial-engagement messaging criteria, and its trial guidance frames the first lesson around goals, level, a sample activity and a plan. A useful message supports those same functions.",
+          "Aim for a message the learner can answer in under a minute."
+        ]
+      },
+      {
+        heading: "Ask for the real communication goal",
+        paragraphs: [
+          "Instead of “What is your level?” ask “What do you most want to be able to do in Spanish?” Level can still be useful, but the real goal tells you what to sample. A person moving to Mexico needs different evidence from a person preparing for a professional presentation.",
+          "One optional second question can clarify experience: “Have you studied Spanish before, or are you starting from zero?” That is usually enough to prevent choosing an obviously inappropriate activity.",
+          "If the learner already wrote a detailed goal in their booking information, do not ask them to repeat it. Acknowledge it and ask only for the missing piece."
+        ]
+      },
+      {
+        heading: "Use short message patterns and personalize them",
+        bullets: [
+          "Beginner: “Hi, ___! Thanks for booking. Before we meet, what would you most like to be able to do in Spanish in the next few months? And are you starting from zero or have you studied before?”",
+          "Conversation: “Hi, ___! I saw that your goal is speaking confidence. What situations feel hardest right now—small talk, telling stories, work, travel or something else?”",
+          "Travel: “Hi, ___! I’d like to make the trial useful for your trip. Which situations matter most: airport, hotel, restaurants, transport, meeting people or another situation?”",
+          "Advanced: “Hi, ___! For our first lesson, what kind of Spanish do you want to make more precise—professional communication, debate, writing, regional usage or spontaneous conversation?”"
+        ],
+        paragraphs: [
+          "These are structures, not copy-paste scripts. Use the learner’s name and any goal already available. Keep punctuation and tone natural to you. The point is to collect information, not to sound like customer support."
+        ]
+      },
+      {
+        heading: "Do not overload the student with logistics",
+        paragraphs: [
+          "Avoid sending a long list of policies, homework, documents and technical instructions unless something is genuinely required before the trial. The student has not yet experienced your teaching; too much administration makes the relationship feel heavy.",
+          "If you need them to bring something, make it simple: “If you have a recent piece of Spanish writing you want feedback on, feel free to bring it.” Do not make optional preparation feel mandatory.",
+          "Keep off-platform contact details and links out of messages when platform rules require communication to remain inside the marketplace."
+        ]
+      },
+      {
+        heading: "Turn the answer into a preparation decision",
+        paragraphs: [
+          "If the learner says “I understand a lot but cannot speak,” choose a speaking task with visible scaffolding and removal of support. If they say “I need Spanish for Argentina,” prepare a small Rioplatense sample. If they say “I have an interview,” prepare one roleplay question rather than a general grammar worksheet.",
+          "This is where reusable material saves time. You can maintain a small trial kit by level and goal: A1 beginner conversation, A2 travel, B1 storytelling, pronunciation diagnostic and advanced discussion. Personalization happens through selection and follow-up, not by rebuilding the asset.",
+          "Write one private note before the lesson: “What do I want to learn about this student?” That keeps the trial diagnostic rather than performative."
+        ]
+      }
+    ]
+  },
+  {
+    ...common,
+    slug: "preply-post-trial-message-spanish",
+    title: "What to Send After a Preply Trial Lesson",
+    description:
+      "Write a useful post-trial message for Spanish students that summarizes what you observed, names the next lesson and supports a natural transition into recurring study.",
+    eyebrow: "PREPLY · POST-TRIAL",
+    readingTime: "9 min",
+    keywords: ["Preply post trial message", "message after Preply trial", "Preply follow up student", "Spanish tutor trial follow up"],
+    relatedHref: "/resources",
+    relatedLabel: "Plan the next Spanish lesson",
+    relatedLessonIds: [15, 14, 121],
+    relatedGuideSlugs: ["preply-pre-trial-message-spanish", "preply-trial-to-subscription-spanish", "preply-student-retention-spanish"],
+    officialSources: [PREPLY_SOURCES.trial, PREPLY_SOURCES.superTutorMetrics],
+    sections: [
+      {
+        heading: "The follow-up should preserve the learning thread",
+        paragraphs: [
+          "After a trial, the learner has just processed a new tutor, new material, feedback and a decision about whether to continue. A useful follow-up reduces that complexity. It reminds them what the goal was, what you observed and what you would do next.",
+          "Preply’s current Super Tutor criteria include post-trial engagement. Even without that metric, a timely message is useful teaching practice because it makes the first lesson feel connected to a sequence rather than an isolated performance.",
+          "Do not send the same sales paragraph to every learner. One real observation is enough to make the message specific."
+        ]
+      },
+      {
+        heading: "Use a three-part structure",
+        bullets: [
+          "Recap the goal in the learner’s own terms.",
+          "Name one strength and one priority you observed.",
+          "State the next lesson or short sequence you recommend."
+        ],
+        paragraphs: [
+          "Example: “Thanks for today, Maya. Your listening is already strong when the topic is familiar. The main difficulty is building longer answers in the past without switching back to English. Next lesson I’d use one of your travel stories to work on preterite vs. imperfect, then retell it with less support.”",
+          "That message communicates expertise because the recommendation comes from evidence. It also makes the next lesson easier to imagine."
+        ]
+      },
+      {
+        heading: "Keep the tone low-pressure",
+        paragraphs: [
+          "Avoid artificial scarcity, guilt or guarantees. “Book now before my slots disappear” may create urgency, but it does not help the learner evaluate fit. If availability is genuinely limited, the calendar already communicates much of that information.",
+          "A good closing can simply say: “If that plan fits what you want, I’d be happy to continue with it.” The student has enough information to decide.",
+          "If you are not the right tutor, say so when appropriate. A learner who needs intensive legal Spanish and a certification you do not have is better served by a specialist. Honest fit protects your time and reputation."
+        ]
+      },
+      {
+        heading: "Use the message as your own operational checkpoint",
+        paragraphs: [
+          "Before sending, make sure you can answer: What is this learner trying to do? What did I observe? What did I promise next? Save those three notes in your student system. They become the preparation brief for the next class.",
+          "If the learner subscribes, start the next lesson with retrieval from the trial. Ask them to repeat the improved answer, reuse the target expression or return to the same scenario with less support. This immediately demonstrates continuity.",
+          "If they do not continue, do not chase indefinitely. Record the outcome and move on. Your time is better spent improving the funnel or serving active students."
+        ]
+      },
+      {
+        heading: "Message patterns for common trial outcomes",
+        bullets: [
+          "Strong beginner fit: recap one successful supported exchange and name the next basic function.",
+          "Intermediate speaker with gaps: identify the discourse problem, such as short answers or unstable past narration.",
+          "Pronunciation student: name one sound or rhythm target and one transfer task for next lesson.",
+          "Advanced learner: name a precision, register or reformulation target rather than generic “fluency.”",
+          "Poor fit: thank the learner and state the mismatch clearly without criticizing them."
+        ],
+        paragraphs: [
+          "The follow-up is short because the real work happened in the trial. Its job is to make that work legible and point to the next step."
+        ]
+      }
+    ]
+  },
+  {
+    ...common,
+    slug: "preply-pricing-spanish-tutor",
+    title: "How to Price Spanish Lessons on Preply",
+    description:
+      "Set a Preply Spanish tutoring rate using current commission rules, profile strength, student fit, prep time and sustainable net income rather than copying competitors blindly.",
+    eyebrow: "PREPLY · PRICING",
+    readingTime: "13 min",
+    keywords: ["Preply Spanish tutor price", "Preply tutor rates Spanish", "how much charge Preply Spanish", "Preply commission tutor rate"],
+    relatedHref: "/resources",
+    relatedLabel: "Reduce unpaid prep with ready-to-teach resources",
+    relatedLessonIds: [15, 18, 108],
+    relatedGuideSlugs: ["preply-raise-hourly-rate", "teach-spanish-on-preply", "preply-student-retention-spanish"],
+    officialSources: [PREPLY_SOURCES.commission, PREPLY_SOURCES.price],
+    sections: [
+      {
+        heading: "Start with net economics, not the visible hourly rate",
+        paragraphs: [
+          "Your profile price is not the same as your take-home hourly rate. Preply’s current commission model charges 100% commission on a trial lesson with a new student and a percentage on subsequent lessons that currently ranges from 33% down to 18% depending on total completed teaching hours. Recheck the official commission page before using these numbers in a future calculation.",
+          "If your visible rate is USD 25 and your current regular-lesson commission were 18%, the simplified net before taxes and payment costs would be USD 20.50. At a 33% commission, it would be USD 16.75. Those are examples using the current published ranges, not promises about your account.",
+          "The important number is even lower once you include unpaid preparation and administration. A 50-minute lesson plus twenty minutes of prep and ten minutes of messages is not one hour of work."
+        ]
+      },
+      {
+        heading: "Calculate an effective hourly rate",
+        paragraphs: [
+          "Use an explicit assumption model: effective hourly rate = net teaching revenue ÷ total work time. Total work time includes teaching, preparation, student messages, notes and routine administration. If you teach ten paid hours but spend four additional hours preparing and managing students, divide the net revenue by fourteen, not ten.",
+          "Example scenario: assume ten regular lessons at a visible USD 25 rate and, purely for illustration, an 18% regular-lesson commission. Net teaching revenue would be USD 205 before other costs. If total work time is fourteen hours, the effective rate is about USD 14.64 per work hour. Reducing prep from four hours to two raises the effective rate without changing the student’s price.",
+          "This is where reusable lesson material has direct business value. Saving fifteen minutes of preparation across twenty weekly lessons saves five hours of unpaid time."
+        ]
+      },
+      {
+        heading: "Use your profile strength and niche as pricing context",
+        paragraphs: [
+          "Preply’s current pricing guidance tells tutors to consider experience, profile strength, student expectations, prices of similar tutors and commission. It also states that the ranking system does not simply prefer low or high prices; conversion at the chosen price matters.",
+          "Do not read that as permission to charge any number without consequence. A higher price creates a stronger expectation of fit and teaching quality. A narrow offer can make comparison easier because the student is not evaluating you only as “another Spanish tutor.”",
+          "Examples of defensible differentiation include specialist pronunciation work, professional communication, Rioplatense Spanish, structured beginner programs or exam preparation you are genuinely qualified to offer."
+        ]
+      },
+      {
+        heading: "Choose a starting rate with a floor and a review point",
+        paragraphs: [
+          "Define a financial floor: the lowest net effective rate at which the work is worth doing after fees and unpaid time. Then define a market-facing starting price that you believe can attract the learners your current profile supports. Those two numbers may not be identical.",
+          "Set a review point instead of changing the rate emotionally. Examples: after twenty regular teaching hours, after five active recurring students, after profile improvements have been live for a month, or when your preferred hours are consistently full.",
+          "Do not constantly lower price after individual failed trials. One student may leave for schedule, fit or budget. Look for patterns."
+        ]
+      },
+      {
+        heading: "Price trials in your workload model",
+        paragraphs: [
+          "Because the current published commission model assigns 100% commission to trial lessons, trial volume changes the economics of your week. A new tutor teaching many trials may have substantial teaching time that does not produce direct trial revenue.",
+          "That does not automatically make trials “bad.” Their business value depends on whether they produce regular students who fit your schedule and stay long enough for the acquisition work to make sense. Track trial hours alongside regular hours when calculating your real effective rate.",
+          "Keep trial preparation lean. Use a diagnostic framework and reusable sample materials rather than spending an unpaid hour designing each first lesson from scratch."
+        ]
+      },
+      {
+        heading: "Review price as part of a system",
+        bullets: [
+          "Current commission and net regular-lesson revenue.",
+          "Trial hours versus recurring teaching hours.",
+          "Prep and admin time per student.",
+          "How full your preferred schedule is.",
+          "Profile positioning and student fit.",
+          "Retention after the first few lessons.",
+          "Whether a rate change would solve the actual bottleneck."
+        ],
+        paragraphs: [
+          "Price is one lever. If your schedule is empty because the profile is vague, reducing prep time will not create demand. If you are fully booked but exhausted by preparation, lowering price is especially unlikely to help. Diagnose the business before changing the number."
+        ]
+      }
+    ]
+  },
+  {
+    ...common,
+    slug: "preply-raise-hourly-rate",
+    title: "How to Raise Your Preply Price as a Spanish Tutor",
+    description:
+      "Raise a Preply Spanish tutoring rate deliberately by reviewing capacity, conversion, retention and net economics instead of assuming a higher or lower price improves ranking.",
+    eyebrow: "PREPLY · RATE STRATEGY",
+    readingTime: "11 min",
+    keywords: ["raise Preply price", "increase Preply tutor rate", "Preply hourly rate Spanish tutor", "when raise Preply price"],
+    relatedHref: "/resources",
+    relatedLabel: "Improve lesson consistency before increasing workload",
+    relatedLessonIds: [15, 18, 108],
+    relatedGuideSlugs: ["preply-pricing-spanish-tutor", "preply-student-retention-spanish", "teach-spanish-on-preply"],
+    officialSources: [PREPLY_SOURCES.price, PREPLY_SOURCES.discovery],
+    sections: [
+      {
+        heading: "Raise price to solve a business problem",
+        paragraphs: [
+          "A price increase should answer a real problem: your preferred hours are full, your effective hourly rate is too low, your experience and offer have materially improved, or the current price attracts a volume you cannot serve well. “Other tutors charge more” can be useful context, but it is not enough by itself.",
+          "Preply’s current pricing guidance states that changing price does not automatically improve search ranking; the system considers how likely students are to book at the selected price. That means a higher price can work, but it can also reduce trial demand if the profile and offer do not support it.",
+          "Decide what outcome you want before changing the number. More net income with the same hours is different from reducing total students, repositioning into a niche, or testing whether new students accept a stronger offer."
+        ]
+      },
+      {
+        heading: "Check four signals before increasing",
+        bullets: [
+          "Capacity: are your preferred hours consistently occupied?",
+          "Fit: are new students booking because of a clear specialty or mainly because the price is low?",
+          "Retention: do students continue long enough to indicate the lesson experience matches the promise?",
+          "Economics: after commission, prep and admin, is the current effective rate below your target?"
+        ],
+        paragraphs: [
+          "You do not need every signal to be perfect. The checklist prevents one noisy week from driving the decision. A tutor can be busy because of a temporary surge; a tutor can also have strong retention but still need a better profile before a large increase.",
+          "Review the current platform pricing documentation before changing strategy because marketplace behavior and controls can change."
+        ]
+      },
+      {
+        heading: "Separate pricing for new demand from existing relationships",
+        paragraphs: [
+          "Existing students have already made a decision based on a particular price and relationship. New students are evaluating the current offer today. Treat those situations separately according to the tools and policies available in your account.",
+          "For any increase affecting an established student, communicate early, briefly and without inventing external justification. Explain the new rate and the date it applies. Do not send a long defense of your worth. Give the learner enough information to decide.",
+          "If a student cannot continue at the new price, that is a business consequence to plan for, not a reason to pressure them."
+        ]
+      },
+      {
+        heading: "Strengthen the offer before testing a higher rate",
+        paragraphs: [
+          "A rate is easier to evaluate when the profile communicates a clear service. Tighten the headline, description and video. Make lesson outcomes visible. Keep a coherent learning plan. Reduce preventable scheduling friction.",
+          "A stronger offer does not require luxury branding. For Spanish tutoring, specificity is often enough: adult beginners with structured progression, travel roleplays, advanced conversation with systematic feedback, professional Spanish, pronunciation or a regional variety.",
+          "Also improve your own operating cost. If the same lesson quality requires half the preparation time because you use a reusable library, your effective rate improves before the student pays anything more."
+        ]
+      },
+      {
+        heading: "Test the change over a meaningful window",
+        paragraphs: [
+          "Do not judge a rate change after one day or one trial. Track a defined period and compare profile views where available, trial bookings, trial-to-regular conversion, active students, teaching hours and effective net income. Consider seasonality and availability changes that happened at the same time.",
+          "Change one major variable at a time when possible. If you rewrite the entire profile, double your availability and raise the price on the same day, you will not know which change influenced the result.",
+          "If demand falls below what your business needs, reassess the offer and price together. The answer is not automatically to reverse the increase."
+        ]
+      }
+    ]
+  },
+  {
+    ...common,
+    slug: "preply-student-retention-spanish",
+    title: "How to Retain Spanish Students on Preply",
+    description:
+      "Improve Spanish student retention on Preply through visible progress, lesson continuity, scheduling habits, relevant challenge and a prep system that stays sustainable.",
+    eyebrow: "PREPLY · RETENTION",
+    readingTime: "12 min",
+    keywords: ["Preply student retention", "keep Preply students", "Spanish tutor retention", "Preply recurring students"],
+    relatedHref: "/resources",
+    relatedLabel: "Build recurring lesson sequences with SpanishCue",
+    relatedLessonIds: [137, 138, 208, 215],
+    relatedGuideSlugs: ["preply-trial-to-subscription-spanish", "preply-super-tutor-spanish-teachers", "preply-pricing-spanish-tutor"],
+    officialSources: [PREPLY_SOURCES.superTutorMetrics],
+    sections: [
+      {
+        heading: "Retention starts with the promise made before lesson one",
+        paragraphs: [
+          "Students stay longer when the experience continues to solve the problem they booked you to solve. If the profile promised conversation and every class becomes a grammar lecture, retention is already being damaged. If the trial promised a structured plan but later lessons feel unrelated, the student has to invent the continuity themselves.",
+          "Keep the original learner goal visible in your notes. Revisit it periodically because goals change. A learner who initially wanted travel survival may later care more about friendships or work. Retention is not about locking a student into the first syllabus; it is about keeping the work relevant.",
+          "Preply’s performance metrics include engagement and trial-related behavior, but long-term retention is broader than any one platform metric. Build the teaching relationship around progress and reliability first."
+        ]
+      },
+      {
+        heading: "Make progress visible at the end of ordinary lessons",
+        paragraphs: [
+          "Students often improve gradually and fail to notice it. Close lessons with retrieval that makes the change observable. Ask the learner to repeat an opening task, retell a story with less support, explain the rule in their own words or reuse three target expressions without looking.",
+          "Every few weeks, compare current performance with an earlier task. “A month ago you needed sentence starters for this; now you can answer with a reason and example without them.” This is more credible than saying “You are improving a lot.”",
+          "Avoid turning progress tracking into constant testing. The evidence can come from normal speaking tasks."
+        ]
+      },
+      {
+        heading: "Build continuity without making every lesson identical",
+        paragraphs: [
+          "Use recurring structures so the student knows how to participate, but rotate content and challenge. A conversation learner might repeatedly use ranking, story, roleplay and opinion tasks with increasing linguistic demands. A grammar learner can revisit the same contrast in new communicative contexts.",
+          "Recycle language intentionally. If the student learned the imperfect last week, bring it back in a two-minute warm-up this week and again in a later story task. Spaced retrieval makes the course feel connected and supports memory.",
+          "Keep a simple next-step field after each lesson. Preparation then starts from the previous class instead of from an empty page."
+        ]
+      },
+      {
+        heading: "Create a sustainable scheduling habit",
+        paragraphs: [
+          "Recurring students need predictable access to you. Encourage a regular rhythm that fits the learner’s actual life. A student who repeatedly cancels a twice-weekly plan may do better with one reliable lesson than an aspirational schedule they cannot maintain.",
+          "Protect your own consistency too. If you open every hour and later reschedule frequently, you create friction that strong teaching cannot fully compensate for. Design teaching blocks you can keep.",
+          "When a student becomes irregular, ask one practical question before assuming dissatisfaction: has their schedule changed? A simple adjustment may restore continuity."
+        ]
+      },
+      {
+        heading: "Use challenge and personalization deliberately",
+        paragraphs: [
+          "Personalization is not mentioning the student’s hobbies in every prompt. It is selecting language, contexts and feedback that match their goals and current constraints. A learner working in hospitality should practise repair, requests and service interactions; a partner-learning Spanish may need family conversation and storytelling.",
+          "Challenge should rise as support falls. If the same A2 student can complete every task easily for six weeks, the class may feel pleasant but stagnant. If every lesson is a struggle with unknown vocabulary, they may feel incapable. Adjust one variable at a time: less support, longer output, more ambiguity, faster listening or more precise language.",
+          "A broad resource library helps you change topic and task type while preserving a coherent level progression."
+        ]
+      },
+      {
+        heading: "Investigate churn without chasing every student",
+        bullets: [
+          "Did the student reach the short-term goal they originally had?",
+          "Was the schedule sustainable for both sides?",
+          "Did lesson difficulty stay appropriate?",
+          "Was progress visible?",
+          "Did the material remain relevant to their life?",
+          "Did the tutor create continuity from one lesson to the next?",
+          "Was price the likely constraint, or is that only an assumption?"
+        ],
+        paragraphs: [
+          "Some churn is normal. People travel, change jobs, lose budget or finish a specific goal. The useful question is whether multiple students leave for the same controllable reason. Improve the pattern, not the story you invent about one person."
+        ]
+      }
+    ]
+  },
+
 ];
