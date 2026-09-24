@@ -3,7 +3,7 @@ import { accountIdFromHeaders } from "../../../access-policy";
 import { billingConfig, paypalReady } from "../../../billing-config";
 import { activatePaypalSubscription, cancelPaypalSubscription, suspendPaypalSubscription } from "../../../paypal-server";
 import { paddleConfig, paddleReady } from "../../../paddle-config";
-import { activatePaddleSubscription, cancelPaddleSubscription, pausePaddleSubscription } from "../../../paddle-server";
+import { cancelPaddleSubscription, pausePaddleSubscription, resumePaddleSubscription } from "../../../paddle-server";
 import { applyPaypalSubscriptionLifecycle, currentSubscriptionForUser } from "../../../../db/billing";
 import { applyPaddleLifecycle } from "../../../../db/paddle-billing";
 
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
           nextBillingTime: remote.next_billed_at,
         });
       } else if (action === "resume") {
-        const remote = await activatePaddleSubscription(paddle, subscription.providerSubscriptionId);
+        const remote = await resumePaddleSubscription(paddle, subscription.providerSubscriptionId);
         await applyPaddleLifecycle(env.DB, subscription.providerSubscriptionId, {
           status: "ACTIVE",
           customerId: typeof remote.customer_id === "string" ? remote.customer_id : null,
