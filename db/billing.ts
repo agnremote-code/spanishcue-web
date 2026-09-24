@@ -351,7 +351,7 @@ export async function recordPaypalPayment(
 export async function claimFirstPaidConversionForUser(
   db: D1Database,
   userId: string,
-  paypalSubscriptionId: string,
+  providerSubscriptionId: string,
   environment: PaypalEnvironment,
 ) {
   const event = await db.prepare(
