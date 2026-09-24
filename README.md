@@ -68,6 +68,15 @@ Use build and validation commands for targeted diagnosis after a remote failure,
 
 The timeout defaults can be overridden for a controlled canary with `SITES_INSTALL_TIMEOUT`, `SITES_INSTALL_KILL_AFTER`, `SITES_BUILD_TIMEOUT`, and `SITES_BUILD_KILL_AFTER`. A timeout fails the command; the helpers never retry an unchanged install or build.
 
+## Social previews
+
+The default Open Graph and X card uses the 1200 × 630 promotional JPEG at
+`public/social/spanishcue-og-v2.jpg`. Its public URL is
+`https://spanishcue.com/social/spanishcue-og-v2.jpg`. When the creative changes,
+publish a new versioned filename and update `app/social-preview.ts` so social
+platforms request the new URL rather than showing a cached card. Pages with
+their own social images keep those overrides.
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
