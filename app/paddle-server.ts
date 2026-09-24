@@ -39,7 +39,26 @@ type PaddleSubscription = {
   }>;
 };
 
-type PaddleResponse<T> = { data?: T };
+type PaddleResponse<T> = {
+  data?: T;
+  error?: { type?: unknown; code?: unknown; detail?: unknown };
+  meta?: { request_id?: unknown };
+};
+
+function safePaddleDiagnostic(value: unknown, config: PaddleRuntimeConfig, maxLength: number) {
+  if (typeof value !== "string") return null;
+  let safe = value.slice(0, 1000);
+  for (const secret of [config.apiKey, config.clientToken, config.webhookSecret]) {
+    if (secret) safe = safe.replaceAll(secret, "[redacted]");
+  }
+  return safe
+    .replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, "[redacted]")
+    .replace(/(?:Bearer\s+|__Host-spanishcue-claim-[\w-]+=)[^\s;]+/gi, "[redacted]")
+    .replace(/\b[a-f0-9]{64}\b/gi, "[redacted]")
+    .replace(/\bpdl_(?:live|sdbx)_[\w-]+\b/gi, "[redacted]")
+    .replace(/\b[A-Za-z0-9_-]{40,}\b/g, "[redacted]")
+    .slice(0, maxLength);
+}
 
 function paddleHeaders(config: PaddleRuntimeConfig) {
   return {
@@ -54,8 +73,21 @@ async function paddleJson<T>(config: PaddleRuntimeConfig, path: string, init: Re
     ...init,
     headers: { ...paddleHeaders(config), ...(init.headers || {}) },
   });
-  const body = await response.json().catch(() => ({})) as PaddleResponse<T>;
-  if (!response.ok || !body.data) throw new Error(`paddle_api_${response.status}`);
+  const parsed = await response.json().catch(() => null);
+  const body = parsed && typeof parsed === "object" ? parsed as PaddleResponse<T> : {};
+  if (!response.ok) {
+    console.error("paddle_api_error", {
+      status: response.status,
+      method: init.method || "GET",
+      path: path.split("?")[0].replace(/^(\/(?:transactions|subscriptions))\/[^/]+/, "$1/:id"),
+      type: safePaddleDiagnostic(body.error?.type, config, 80),
+      code: safePaddleDiagnostic(body.error?.code, config, 80),
+      detail: safePaddleDiagnostic(body.error?.detail, config, 400),
+      requestId: safePaddleDiagnostic(body.meta?.request_id, config, 80),
+    });
+    throw new Error(`paddle_api_${response.status}`);
+  }
+  if (!body.data) throw new Error(`paddle_api_${response.status}`);
   return body.data;
 }
 
