@@ -13,6 +13,7 @@ import { env } from "cloudflare:workers";
 import { legalOperator } from "../legal/operator";
 import { billingConfig, paypalReady } from "../billing-config";
 import FounderAccessForm from "../acceso/FounderAccessForm";
+import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 
 export const dynamic = "force-dynamic";
 
@@ -38,8 +39,8 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical,
       languages: { es: url, en: `${url}?lang=en`, "x-default": url },
     },
-    openGraph: { title, description, url: canonical, images: ["/og.png"] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+    openGraph: { title, description, url: canonical, images: [socialPreviewImage] },
+    twitter: { card: "summary_large_image", title, description, images: [socialPreviewUrl] },
     robots: { index: true, follow: true },
   };
 }
