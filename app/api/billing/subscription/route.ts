@@ -2,7 +2,10 @@ import { env } from "cloudflare:workers";
 import { accountIdFromHeaders } from "../../../access-policy";
 import { billingConfig, paypalReady } from "../../../billing-config";
 import { activatePaypalSubscription, cancelPaypalSubscription, suspendPaypalSubscription } from "../../../paypal-server";
+import { paddleConfig, paddleReady } from "../../../paddle-config";
+import { cancelPaddleSubscription, pausePaddleSubscription, resumePaddleSubscription } from "../../../paddle-server";
 import { applyPaypalSubscriptionLifecycle, currentSubscriptionForUser } from "../../../../db/billing";
+import { applyPaddleLifecycle } from "../../../../db/paddle-billing";
 
 export const dynamic = "force-dynamic";
 
@@ -50,8 +53,7 @@ export async function POST(request: Request) {
 
   const config = billingConfig(env);
   const subscription = await currentSubscriptionForUser(env.DB, userId, config.paypalEnv);
-  if (!subscription || subscription.provider !== "paypal") return Response.json({ error: "No encontramos una suscripción gestionable." }, { status: 404 });
-  if (!paypalReady(config)) return Response.json({ error: "La gestión online de la suscripción no está disponible temporalmente." }, { status: 503 });
+  if (!subscription) return Response.json({ error: "No encontramos una suscripción gestionable." }, { status: 404 });
 
   if ((action === "pause" || action === "cancel") && subscription.status !== "ACTIVE") {
     return Response.json({ error: "La suscripción no está activa.", subscription: safe(subscription) }, { status: 409 });
@@ -61,29 +63,60 @@ export async function POST(request: Request) {
   }
 
   try {
-    const nextBillingTime = subscription.nextBillingTime ? new Date(subscription.nextBillingTime * 1000).toISOString() : null;
-    if (action === "pause") {
-      await suspendPaypalSubscription(config, subscription.providerSubscriptionId);
-      await applyPaypalSubscriptionLifecycle(env.DB, config.paypalEnv, subscription.providerSubscriptionId, {
-        status: "SUSPENDED",
-        nextBillingTime,
-        eventType: "ACCOUNT.SUSPENDED",
-      });
-    } else if (action === "resume") {
-      await activatePaypalSubscription(config, subscription.providerSubscriptionId);
-      await applyPaypalSubscriptionLifecycle(env.DB, config.paypalEnv, subscription.providerSubscriptionId, {
-        status: "ACTIVE",
-        nextBillingTime,
-        eventType: "ACCOUNT.ACTIVATED",
-      });
+    if (subscription.provider === "paypal") {
+      if (!paypalReady(config)) return Response.json({ error: "La gestión online de la suscripción no está disponible temporalmente." }, { status: 503 });
+      const nextBillingTime = subscription.nextBillingTime ? new Date(subscription.nextBillingTime * 1000).toISOString() : null;
+      if (action === "pause") {
+        await suspendPaypalSubscription(config, subscription.providerSubscriptionId);
+        await applyPaypalSubscriptionLifecycle(env.DB, config.paypalEnv, subscription.providerSubscriptionId, {
+          status: "SUSPENDED",
+          nextBillingTime,
+          eventType: "ACCOUNT.SUSPENDED",
+        });
+      } else if (action === "resume") {
+        await activatePaypalSubscription(config, subscription.providerSubscriptionId);
+        await applyPaypalSubscriptionLifecycle(env.DB, config.paypalEnv, subscription.providerSubscriptionId, {
+          status: "ACTIVE",
+          nextBillingTime,
+          eventType: "ACCOUNT.ACTIVATED",
+        });
+      } else {
+        await cancelPaypalSubscription(config, subscription.providerSubscriptionId);
+        await applyPaypalSubscriptionLifecycle(env.DB, config.paypalEnv, subscription.providerSubscriptionId, {
+          status: "CANCELLED",
+          nextBillingTime,
+          eventType: "ACCOUNT.CANCELLED",
+        });
+      }
+    } else if (subscription.provider === "paddle") {
+      const paddle = paddleConfig(env);
+      if (!paddleReady(paddle)) return Response.json({ error: "La gestión online de la suscripción no está disponible temporalmente." }, { status: 503 });
+      if (action === "pause") {
+        const remote = await pausePaddleSubscription(paddle, subscription.providerSubscriptionId);
+        await applyPaddleLifecycle(env.DB, subscription.providerSubscriptionId, {
+          status: "SUSPENDED",
+          customerId: typeof remote.customer_id === "string" ? remote.customer_id : null,
+          nextBillingTime: remote.next_billed_at,
+        });
+      } else if (action === "resume") {
+        const remote = await resumePaddleSubscription(paddle, subscription.providerSubscriptionId);
+        await applyPaddleLifecycle(env.DB, subscription.providerSubscriptionId, {
+          status: "ACTIVE",
+          customerId: typeof remote.customer_id === "string" ? remote.customer_id : null,
+          nextBillingTime: remote.next_billed_at,
+        });
+      } else {
+        const remote = await cancelPaddleSubscription(paddle, subscription.providerSubscriptionId);
+        await applyPaddleLifecycle(env.DB, subscription.providerSubscriptionId, {
+          status: "CANCELLED",
+          customerId: typeof remote.customer_id === "string" ? remote.customer_id : null,
+          nextBillingTime: remote.next_billed_at,
+        });
+      }
     } else {
-      await cancelPaypalSubscription(config, subscription.providerSubscriptionId);
-      await applyPaypalSubscriptionLifecycle(env.DB, config.paypalEnv, subscription.providerSubscriptionId, {
-        status: "CANCELLED",
-        nextBillingTime,
-        eventType: "ACCOUNT.CANCELLED",
-      });
+      return Response.json({ error: "Proveedor de suscripción no compatible." }, { status: 409 });
     }
+
     const updated = await currentSubscriptionForUser(env.DB, userId, config.paypalEnv);
     return Response.json({ subscription: safe(updated) }, { headers: { "cache-control": "no-store" } });
   } catch {

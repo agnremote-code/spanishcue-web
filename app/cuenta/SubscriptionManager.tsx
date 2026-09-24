@@ -35,7 +35,7 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
   }, []);
 
   if (subscription === undefined) return <section className="subscription-manager" aria-live="polite"><p>{es ? "Cargando suscripción…" : "Loading subscription…"}</p></section>;
-  if (!subscription) return fullAccess ? <section className="subscription-manager"><span>{es ? "ACCESO" : "ACCESS"}</span><h2>{es ? "Acceso administrado" : "Managed access"}</h2><p>{es ? "Esta cuenta tiene acceso completo sin una suscripción PayPal asociada." : "This account has full access without an associated PayPal subscription."}</p></section> : null;
+  if (!subscription) return fullAccess ? <section className="subscription-manager"><span>{es ? "ACCESO" : "ACCESS"}</span><h2>{es ? "Acceso administrado" : "Managed access"}</h2><p>{es ? "Esta cuenta tiene acceso completo sin una suscripción de pago asociada." : "This account has full access without an associated paid subscription."}</p></section> : null;
 
   const accessEnd = subscription.paidThrough || subscription.nextBillingTime;
   const date = accessEnd
@@ -80,7 +80,7 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
   return <section className="subscription-manager" aria-labelledby="subscription-title">
     <span>{es ? "SUSCRIPCIÓN" : "SUBSCRIPTION"}</span>
     <h2 id="subscription-title">SPANISHCUE PRO</h2>
-    <dl><div><dt>{es ? "Estado" : "Status"}</dt><dd>{paid && active ? (es ? "Pagada y activa" : "Paid and active") : paused ? (es ? "Pausada" : "Paused") : active ? (es ? "Verificando primer pago" : "Verifying first payment") : cancelled ? (es ? "Cancelada" : "Cancelled") : subscription.status}</dd></div><div><dt>{paid ? (es ? "Acceso hasta" : "Access until") : (es ? "Próximo cobro informado" : "Reported next charge")}</dt><dd>{date || (es ? "No disponible" : "Unavailable")}</dd></div><div><dt>{es ? "Importe" : "Amount"}</dt><dd>{subscription.founder ? "US$15 / month" : (es ? "Según plan" : "Per plan")}</dd></div><div><dt>{es ? "Pago" : "Payment"}</dt><dd>PayPal</dd></div></dl>
+    <dl><div><dt>{es ? "Estado" : "Status"}</dt><dd>{paid && active ? (es ? "Pagada y activa" : "Paid and active") : paused ? (es ? "Pausada" : "Paused") : active ? (es ? "Verificando primer pago" : "Verifying first payment") : cancelled ? (es ? "Cancelada" : "Cancelled") : subscription.status}</dd></div><div><dt>{paid ? (es ? "Acceso hasta" : "Access until") : (es ? "Próximo cobro informado" : "Reported next charge")}</dt><dd>{date || (es ? "No disponible" : "Unavailable")}</dd></div><div><dt>{es ? "Importe" : "Amount"}</dt><dd>{subscription.founder ? "US$15 / month" : (es ? "Según plan" : "Per plan")}</dd></div><div><dt>{es ? "Pago" : "Payment"}</dt><dd>{subscription.provider === "paddle" ? "Paddle" : "PayPal"}</dd></div></dl>
     {active && !confirming && <div className="subscription-confirm" role="group" aria-label={es ? "Gestionar suscripción" : "Manage subscription"}>
       <button type="button" disabled={busyAction !== null} onClick={() => void manage("pause")}>{busyAction === "pause" ? (es ? "Pausando…" : "Pausing…") : (es ? "Pausar suscripción" : "Pause subscription")}</button>
       <button type="button" className="subscription-cancel" disabled={busyAction !== null} onClick={() => setConfirming(true)}>{es ? "Cancelar suscripción" : "Cancel subscription"}</button>

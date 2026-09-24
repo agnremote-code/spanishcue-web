@@ -150,3 +150,23 @@ test("only a server-recorded initial completed payment can become a purchase con
   assert.match(migration,/billing_outbox_events/);
   assert.match(migration,/billing_outbox_events_key_unique/);
 });
+
+
+test("Paddle uses signed server-side provisioning and the same first-paid conversion outbox", async () => {
+  const [paddleServer, paddleWebhook, paddleConfirm, paddleDb, billing] = await Promise.all([
+    readFile("app/paddle-server.ts", "utf8"),
+    readFile("app/api/billing/paddle/webhook/route.ts", "utf8"),
+    readFile("app/api/billing/paddle/confirm/route.ts", "utf8"),
+    readFile("db/paddle-billing.ts", "utf8"),
+    readFile("db/billing.ts", "utf8"),
+  ]);
+  assert.match(paddleWebhook, /paddle-signature/i);
+  assert.match(paddleServer, /HMAC/);
+  assert.match(paddleServer, /SHA-256/);
+  assert.match(paddleWebhook, /transaction\.completed/);
+  assert.match(paddleWebhook, /validatePaddleSubscription/);
+  assert.match(paddleConfirm, /recordPaddleCompletedPayment/);
+  assert.match(paddleDb, /first_subscription_paid/);
+  assert.match(paddleDb, /provider, environment, event_key/);
+  assert.match(billing, /outbox\.provider = subscription\.provider/);
+});

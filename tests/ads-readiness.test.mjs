@@ -106,11 +106,12 @@ test("legal pages stay unpublished until real operator and refund data exist", a
 });
 
 test("subscription management supports pause, resume and cancellation while preserving paid-through access", async () => {
-  const [route, billing, account, paypal] = await Promise.all([
+  const [route, billing, account, paypal, paddle] = await Promise.all([
     source("app/api/billing/subscription/route.ts"),
     source("db/billing.ts"),
     source("app/cuenta/SubscriptionManager.tsx"),
     source("app/paypal-server.ts"),
+    source("app/paddle-server.ts"),
   ]);
   assert.match(route, /suspendPaypalSubscription/);
   assert.match(route, /activatePaypalSubscription/);
@@ -118,8 +119,14 @@ test("subscription management supports pause, resume and cancellation while pres
   assert.match(route, /action === "pause"/);
   assert.match(route, /action === "resume"/);
   assert.match(route, /cancellationReference/);
+  assert.match(route, /pausePaddleSubscription/);
+  assert.match(route, /resumePaddleSubscription/);
+  assert.match(route, /cancelPaddleSubscription/);
   assert.match(paypal, /\/suspend/);
   assert.match(paypal, /\/activate/);
+  assert.match(paddle, /\/pause/);
+  assert.match(paddle, /\/resume/);
+  assert.match(paddle, /\/cancel/);
   assert.match(billing, /paidThrough && paidThrough > stamp/);
   assert.match(billing, /expires_at = \?/);
   assert.match(account, /Pausar suscripción|Pause subscription/);
@@ -128,16 +135,28 @@ test("subscription management supports pause, resume and cancellation while pres
   assert.match(account, /No habrá nuevas renovaciones|There will be no further renewals/);
 });
 
-test("paywall puts the purchase action directly below the price", async () => {
-  const [page, button] = await Promise.all([
+test("paywall puts dual-provider purchase actions directly below the price", async () => {
+  const [page, button, founder, paddleCheckout, paddleWebhook, env] = await Promise.all([
     source("app/acceso/page.tsx"),
     source("app/acceso/CheckoutButton.tsx"),
+    source("app/api/billing/founder-status/route.ts"),
+    source("app/api/billing/paddle/checkout/route.ts"),
+    source("app/api/billing/paddle/webhook/route.ts"),
+    source(".env.example"),
   ]);
   const price = page.indexOf('className="founder-price-copy"');
   const checkout = page.indexOf("<CheckoutButton", price);
   const facts = page.indexOf('className="paywall-billing-facts"', price);
   assert.ok(price >= 0 && checkout > price && facts > checkout);
-  assert.match(button, /Activar PRO · US\$15\/mes/);
-  assert.match(button, /Crear cuenta y activar PRO · US\$15\/mes/);
-  assert.match(button, /acceso inmediato|instant access/i);
+  assert.match(button, /Pagar con tarjeta · US\$15\/mes/);
+  assert.match(button, /Pagar con PayPal/);
+  assert.match(button, /cdn\.paddle\.com\/paddle\/v2\/paddle\.js/);
+  assert.match(button, /checkout\.completed/);
+  assert.match(button, /\/api\/billing\/paddle\/confirm/);
+  assert.match(founder, /paddleCheckoutAvailable/);
+  assert.match(paddleCheckout, /createPaddleCheckoutTransaction/);
+  assert.match(paddleWebhook, /verifyPaddleWebhook/);
+  for (const key of ["PADDLE_API_KEY","PADDLE_CLIENT_TOKEN","PADDLE_PRICE_ID","PADDLE_WEBHOOK_SECRET"]) {
+    assert.match(env, new RegExp(`${key}=`));
+  }
 });

@@ -106,7 +106,7 @@ export async function failCheckoutLock(
 export async function subscriptionForUser(
   db: D1Database,
   userId: string,
-  paypalSubscriptionId: string,
+  providerSubscriptionId: string,
   environment: PaypalEnvironment = "sandbox",
 ) {
   return db.prepare(
@@ -351,7 +351,7 @@ export async function recordPaypalPayment(
 export async function claimFirstPaidConversionForUser(
   db: D1Database,
   userId: string,
-  paypalSubscriptionId: string,
+  providerSubscriptionId: string,
   environment: PaypalEnvironment,
 ) {
   const event = await db.prepare(
@@ -359,12 +359,12 @@ export async function claimFirstPaidConversionForUser(
      FROM billing_outbox_events outbox
      JOIN billing_subscriptions subscription ON subscription.id = outbox.subscription_id
      JOIN billing_payments payment ON payment.id = outbox.payment_id
-     WHERE outbox.provider = 'paypal' AND outbox.environment = ?
+     WHERE outbox.provider = subscription.provider AND outbox.environment = ?
        AND outbox.event_name = 'first_subscription_paid' AND outbox.delivered_at IS NULL
        AND subscription.user_id = ? AND subscription.provider_subscription_id = ?
        AND payment.status = 'COMPLETED'
      LIMIT 1`,
-  ).bind(environment, userId, paypalSubscriptionId).first<{ id: number; transactionId: string }>();
+  ).bind(environment, userId, providerSubscriptionId).first<{ id: number; transactionId: string }>();
   if (!event) return null;
   const claimed = await db.prepare(
     `UPDATE billing_outbox_events SET delivered_at = ? WHERE id = ? AND delivered_at IS NULL`,
