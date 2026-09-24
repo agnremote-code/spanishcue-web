@@ -160,7 +160,7 @@ test("Paddle uses signed server-side provisioning and the same first-paid conver
     readFile("db/paddle-billing.ts", "utf8"),
     readFile("db/billing.ts", "utf8"),
   ]);
-  assert.match(paddleServer, /Paddle-Signature|paddle-signature/i);
+  assert.match(paddleWebhook, /paddle-signature/i);
   assert.match(paddleServer, /HMAC/);
   assert.match(paddleServer, /SHA-256/);
   assert.match(paddleWebhook, /transaction\.completed/);
