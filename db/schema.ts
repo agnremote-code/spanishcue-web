@@ -162,6 +162,44 @@ export const billingSubscriptions = sqliteTable(
   ],
 );
 
+/** An anonymous checkout is kept separate from account billing until its
+ * verified buyer signs in. The secret verifier alone never grants access. */
+export const billingPurchaseClaims = sqliteTable(
+  "billing_purchase_claims",
+  {
+    claimId: text("claim_id").primaryKey(),
+    claimSecretHash: text("claim_secret_hash").notNull(),
+    environment: text("environment").notNull(),
+    provider: text("provider"),
+    offerCode: text("offer_code").notNull(),
+    returnTo: text("return_to").notNull(),
+    status: text("status").notNull().default("started"),
+    checkoutRequestId: text("checkout_request_id"),
+    approvalUrl: text("approval_url"),
+    buyerEmail: text("buyer_email"),
+    normalizedEmail: text("normalized_email"),
+    providerCustomerId: text("provider_customer_id"),
+    providerSubscriptionId: text("provider_subscription_id"),
+    providerPaymentId: text("provider_payment_id"),
+    providerEventId: text("provider_event_id"),
+    providerStatus: text("provider_status"),
+    amountCents: integer("amount_cents"),
+    currency: text("currency"),
+    paidThrough: integer("paid_through"),
+    paidAt: integer("paid_at"),
+    claimedUserId: text("claimed_user_id").references(() => users.id),
+    claimedAt: integer("claimed_at"),
+    expiresAt: integer("expires_at").notNull(),
+    createdAt: integer("created_at").notNull(),
+    updatedAt: integer("updated_at").notNull(),
+  },
+  table => [
+    uniqueIndex("billing_purchase_claims_subscription_unique").on(table.provider, table.environment, table.providerSubscriptionId),
+    uniqueIndex("billing_purchase_claims_payment_unique").on(table.provider, table.environment, table.providerPaymentId),
+    index("billing_purchase_claims_expiry_idx").on(table.status, table.expiresAt),
+  ],
+);
+
 /** Exactly one row per offer code. The trigger in the migration increments
  * claimed atomically when an assignment is inserted. */
 export const founderOfferState = sqliteTable(
