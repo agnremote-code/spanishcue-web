@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { localeFromHeaders } from "../i18n/messages";
 import type { LandingConfig } from "./config";
+import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 
 export async function generateLandingMetadata(config: LandingConfig): Promise<Metadata> {
   const locale = localeFromHeaders(await headers());
@@ -22,8 +23,8 @@ export async function generateLandingMetadata(config: LandingConfig): Promise<Me
         "x-default": url,
       },
     },
-    openGraph: { title, description, url: canonical, type: "website", images: [{ url: "/og.png", width: 1731, height: 909, alt: "SPANISHCUE interactive lesson library" }] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+    openGraph: { title, description, url: canonical, type: "website", images: [socialPreviewImage] },
+    twitter: { card: "summary_large_image", title, description, images: [socialPreviewUrl] },
     robots: { index: true, follow: true },
   };
 }
