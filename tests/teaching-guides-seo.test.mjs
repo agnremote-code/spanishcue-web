@@ -109,3 +109,18 @@ test("sitemap derives guide URLs from the aggregate guide catalog", async () => 
   assert.match(sitemap, /teachingGuides\.map/);
   assert.match(sitemap, /\/guides\/\$\{guide\.slug\}/);
 });
+
+test("Preply batch 1 exposes the approved seven URLs", () => {
+  const slugs = tutorBusinessGuides
+    .filter((guide) => guide.cluster === "preply")
+    .map((guide) => guide.slug);
+  assert.deepEqual(slugs, [
+    "teach-spanish-on-preply",
+    "preply-spanish-tutor-profile",
+    "preply-headline-spanish-tutor",
+    "preply-description-spanish-tutor",
+    "preply-introduction-video-spanish-tutor",
+    "preply-trial-lesson-spanish",
+    "preply-25-vs-50-minute-trial",
+  ]);
+});
