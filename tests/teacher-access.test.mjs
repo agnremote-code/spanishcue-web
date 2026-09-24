@@ -211,7 +211,7 @@ test('forged browser identity headers cannot unlock paid routes or admin',async(
 test('paid client assets are absent from static storage and denied without a valid Firebase session',async()=>{
  const report=JSON.parse(await readFile('dist/.openai/client-protection-report.json','utf8'));
  assert.ok(report.protectedFiles.length>0);
- for(const required of ['error-','not-found-','layout-segment-context-','SystemHub-']){
+ for(const required of ['error-','not-found-','layout-segment-context-','SystemHub-','ClaimClient-']){
   assert.equal(report.protectedFiles.some(file=>file.includes('/'+required)),false,`${required} must stay public`);
   assert.ok(report.publicFiles.some(file=>file.includes('/'+required)),`${required} public chunk missing`);
  }
