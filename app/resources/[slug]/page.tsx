@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { localLessonPath } from "../../access-policy";
@@ -75,7 +76,6 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
     inLanguage: "es",
     educationalLevel: level,
     learningResourceType: typeLabel,
-    timeRequired: lesson.duration,
     audience: {
       "@type": "EducationalAudience",
       educationalRole: "teacher",
@@ -118,10 +118,14 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
           </div>
 
           <div className={styles.previewFrame}>
-            <img
+            <Image
               className={styles.previewImage}
               src={lesson.image}
               alt={`${lesson.title} interactive Spanish lesson preview`}
+              width={960}
+              height={720}
+              sizes="(max-width: 900px) 100vw, 45vw"
+              priority
             />
           </div>
         </section>
