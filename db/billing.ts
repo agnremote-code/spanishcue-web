@@ -112,7 +112,7 @@ export async function subscriptionForUser(
   return db.prepare(
     `SELECT id, status FROM billing_subscriptions
      WHERE user_id = ? AND provider = 'paypal' AND environment = ? AND provider_subscription_id = ? LIMIT 1`,
-  ).bind(userId, environment, paypalSubscriptionId).first<{ id: number; status: SubscriptionStatus }>();
+  ).bind(userId, environment, providerSubscriptionId).first<{ id: number; status: SubscriptionStatus }>();
 }
 
 export async function subscriptionByPaypalId(db: D1Database, paypalSubscriptionId: string, environment: PaypalEnvironment = "sandbox") {
@@ -267,15 +267,18 @@ export async function recordPaypalPayment(
   const subscription = await subscriptionByPaypalId(db, input.paypalSubscriptionId, input.environment);
   if (!subscription) throw new Error("paypal_subscription_unknown");
   const existing = await db.prepare(
-    `SELECT id, status FROM billing_payments
+    `SELECT id, status, user_id AS userId, subscription_id AS subscriptionId FROM billing_payments
      WHERE provider = 'paypal' AND environment = ? AND provider_payment_id = ? LIMIT 1`,
-  ).bind(input.environment, input.providerPaymentId).first<{ id: number; status: PaymentStatus }>();
-  if (existing?.status === input.status) return { kind: "duplicate" as const, paymentId: existing.id };
+  ).bind(input.environment, input.providerPaymentId).first<{ id: number; status: PaymentStatus; userId: string; subscriptionId: number }>();
+  if (existing && (existing.userId !== subscription.userId || existing.subscriptionId !== subscription.id)) {
+    throw new Error("paypal_payment_owner_mismatch");
+  }
+  if (existing?.status === input.status && input.status !== "COMPLETED") return { kind: "duplicate" as const, paymentId: existing.id };
 
   const stamp = now();
   if (input.status === "COMPLETED") {
-    if (existing) throw new Error("paypal_payment_terminal");
-    await db.prepare(
+    if (existing && existing.status !== "COMPLETED") throw new Error("paypal_payment_terminal");
+    if (!existing) await db.prepare(
       `INSERT INTO billing_payments (
         user_id, subscription_id, provider, environment, provider_payment_id, provider_event_id,
         amount_cents, currency, status, occurred_at, paid_through, created_at, updated_at
@@ -286,7 +289,10 @@ export async function recordPaypalPayment(
       `SELECT id FROM billing_payments WHERE provider = 'paypal' AND environment = ? AND provider_payment_id = ?`,
     ).bind(input.environment, input.providerPaymentId).first<{ id: number }>();
     if (!payment) throw new Error("paypal_payment_not_persisted");
-    const isFirst = !subscription.firstPaymentAt;
+    const earliest = await db.prepare(
+      `SELECT id FROM billing_payments WHERE subscription_id = ? ORDER BY occurred_at, id LIMIT 1`,
+    ).bind(subscription.id).first<{ id: number }>();
+    const isFirst = earliest?.id === payment.id;
     const paidThrough = Math.max(subscription.paidThrough ?? 0, input.paidThrough ?? input.occurredAt);
     await db.prepare(
       `UPDATE billing_subscriptions SET first_payment_at = COALESCE(first_payment_at, ?),
@@ -313,7 +319,7 @@ export async function recordPaypalPayment(
        ON CONFLICT(provider, environment, event_key) DO NOTHING`,
     ).bind(input.environment, `${eventName}:${input.providerPaymentId}`, eventName, subscription.userId,
       subscription.id, payment.id, input.occurredAt, stamp).run();
-    return { kind: isFirst ? "first" as const : "renewal" as const, paymentId: payment.id };
+    return { kind: existing ? "duplicate" as const : isFirst ? "first" as const : "renewal" as const, paymentId: payment.id };
   }
 
   if (!existing) throw new Error("paypal_payment_unknown");

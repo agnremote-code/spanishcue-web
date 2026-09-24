@@ -10,6 +10,8 @@ import {
   type PaymentStatus,
   type SubscriptionStatus,
 } from "../../../../db/billing";
+import { cancelUnclaimedPurchase, getPurchaseClaim, recordVerifiedPurchase, updatePurchaseLifecycle } from "../../../../db/purchase-claims";
+import { validatePaypalOwnedSubscription } from "../../../guest-purchase-verification";
 
 export const dynamic = "force-dynamic";
 
@@ -90,11 +92,41 @@ export async function POST(request: Request) {
       return Response.json({ ok: true });
     }
     const local = await subscriptionByPaypalId(env.DB, providerSubscriptionId, config.paypalEnv);
-    if (!local) throw new Error("paypal_subscription_unknown");
     const provider = await getPaypalSubscription(config, providerSubscriptionId);
-    if (!validatePaypalSubscription(provider, {
+    if (!local) {
+      const claim = typeof provider.custom_id === "string" ? await getPurchaseClaim(env.DB, provider.custom_id) : null;
+      if (!claim || claim.provider !== "paypal" || claim.environment !== config.paypalEnv ||
+          claim.providerSubscriptionId !== providerSubscriptionId ||
+          !validatePaypalSubscription(provider, { subscriptionId: providerSubscriptionId, userId: claim.claimId, config })) {
+        throw new Error("paypal_subscription_unknown");
+      }
+      if (lifecycle) {
+        await updatePurchaseLifecycle(env.DB, claim.claimId, String(provider.status || lifecycle));
+      } else if (payment) {
+        const money = paymentMoney(event);
+        const providerPaymentId = paymentId(event);
+        if (!providerPaymentId || !validatePaypalPayment(money, config)) throw new Error("paypal_payment_mismatch");
+        if (payment === "COMPLETED") {
+          const email = provider.subscriber?.email_address;
+          const paidThrough = seconds(provider.billing_info?.next_billing_time);
+          if (typeof email !== "string" || !paidThrough) throw new Error("paypal_subscriber_unverified");
+          await recordVerifiedPurchase(env.DB, claim.claimId, "paypal", {
+            subscriptionId: providerSubscriptionId, paymentId: providerPaymentId,
+            customerId: typeof provider.subscriber?.payer_id === "string" ? provider.subscriber.payer_id : null,
+            email, amountCents: cents(money.value) || 0, currency: String(money.currency_code || ""),
+            paidAt: seconds(event.create_time) ?? Math.floor(Date.now() / 1000), paidThrough,
+            eventId, providerStatus: typeof provider.status === "string" ? provider.status : "ACTIVE",
+          });
+        } else {
+          await cancelUnclaimedPurchase(env.DB, claim.claimId, providerPaymentId);
+        }
+      }
+      await finishWebhook(env.DB, config.paypalEnv, eventId, "processed");
+      return Response.json({ ok: true });
+    }
+    if (!(await validatePaypalOwnedSubscription(env.DB, provider, {
       subscriptionId: providerSubscriptionId, userId: local.userId, config,
-    })) throw new Error("paypal_subscription_mismatch");
+    }))) throw new Error("paypal_subscription_mismatch");
 
     const eventTime = seconds(event.create_time) ?? Math.floor(Date.now() / 1000);
     if (lifecycle) {

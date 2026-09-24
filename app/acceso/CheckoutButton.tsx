@@ -69,7 +69,6 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
   const [status, setStatus] = useState<"idle" | "paypal" | "paddle" | "confirming" | "error">("idle");
   const [message, setMessage] = useState("");
   const [founder, setFounder] = useState<FounderStatus | null | undefined>(undefined);
-  const loginPath = `/ingresar?modo=registro&returnTo=${encodeURIComponent(`/acceso?returnTo=${encodeURIComponent(returnTo)}`)}`;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -110,7 +109,11 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ transactionId }),
         });
-        const body = await response.json() as { accessConfirmed?: unknown; subscriptionId?: unknown };
+        const body = await response.json() as { accessConfirmed?: unknown; paymentConfirmed?: unknown; subscriptionId?: unknown };
+        if (!signedIn && response.ok && body.paymentConfirmed === true) {
+          window.location.assign("/pro/claim?provider=paddle");
+          return;
+        }
         if (response.ok && body.accessConfirmed === true && typeof body.subscriptionId === "string") {
           await emitPaidConversion(body.subscriptionId);
           window.location.assign(returnTo);
@@ -119,12 +122,11 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       } catch {}
       await new Promise((resolve) => window.setTimeout(resolve, 1500));
     }
-    window.location.assign("/cuenta?checkout=paddle");
+    window.location.assign(signedIn ? "/cuenta?checkout=paddle" : "/pro/claim?provider=paddle");
   }
 
   async function checkoutPaddle() {
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
-    if (!signedIn) { window.location.assign(loginPath); return; }
     if (!founder?.available || !founder.paddleCheckoutAvailable) return;
     trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paddle" });
     setStatus("paddle");
@@ -134,9 +136,13 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
         method: "POST",
         credentials: "same-origin",
         headers: { "content-type": "application/json" },
-        body: "{}",
+        body: JSON.stringify({ returnTo }),
       });
-      const body = await response.json() as { transactionId?: unknown; clientToken?: unknown; error?: unknown };
+      const body = await response.json() as { transactionId?: unknown; clientToken?: unknown; claimUrl?: unknown; error?: unknown };
+      if (response.ok && body.claimUrl === "/pro/claim?provider=paddle") {
+        window.location.assign(body.claimUrl);
+        return;
+      }
       if (!response.ok || typeof body.transactionId !== "string" || typeof body.clientToken !== "string") {
         throw new Error(typeof body.error === "string" ? body.error : "No pudimos abrir el pago con tarjeta.");
       }
@@ -170,7 +176,6 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
 
   async function checkoutPayPal() {
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_paypal", signed_in: signedIn });
-    if (!signedIn) { window.location.assign(loginPath); return; }
     if (!founder?.available || !founder.checkoutLive) return;
     trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paypal" });
     setStatus("paypal"); setMessage("");
@@ -178,7 +183,11 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       const response = await fetch("/api/billing/checkout", {
         method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: JSON.stringify({ returnTo }),
       });
-      const body = await response.json() as { approvalUrl?: unknown; error?: unknown };
+      const body = await response.json() as { approvalUrl?: unknown; claimUrl?: unknown; error?: unknown };
+      if (response.ok && body.claimUrl === "/pro/claim?provider=paypal") {
+        window.location.assign(body.claimUrl);
+        return;
+      }
       if (!response.ok || typeof body.approvalUrl !== "string") {
         throw new Error(typeof body.error === "string" ? body.error : t("checkout.error"));
       }
@@ -210,9 +219,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       <button className="checkout-card-button" type="button" onClick={checkoutPaddle} disabled={busy || !founder.available}>
         {status === "paddle" || status === "confirming"
           ? (locale === "es" ? "Procesando pago…" : "Processing payment…")
-          : signedIn
-            ? (locale === "es" ? "Pagar con tarjeta · US$15/mes" : "Pay by card · US$15/month")
-            : (locale === "es" ? "Crear cuenta y pagar con tarjeta" : "Create account and pay by card")}
+          : (locale === "es" ? "Pagar con tarjeta · US$15/mes" : "Pay by card · US$15/month")}
       </button>
     )}
 
@@ -220,15 +227,13 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>
         {status === "paypal"
           ? t("checkout.openingPayPal")
-          : signedIn
-            ? (locale === "es" ? "Pagar con PayPal" : "Pay with PayPal")
-            : (locale === "es" ? "Crear cuenta y pagar con PayPal" : "Create account and pay with PayPal")}
+          : (locale === "es" ? "Pagar con PayPal" : "Pay with PayPal")}
       </button>
     )}
 
     <p>{locale === "es"
-      ? "Tarjeta, Apple Pay o Google Pay cuando estén disponibles · o PayPal. Acceso inmediato."
-      : "Card, Apple Pay or Google Pay when available · or PayPal. Instant access."}</p>
+      ? "Pagá primero. Después vinculás la compra a tu cuenta para entrar a PRO."
+      : "Pay first, then link the purchase to your account for PRO access."}</p>
     {status === "error" && <small role="alert">{message}</small>}
   </div>;
 }

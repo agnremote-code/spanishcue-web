@@ -11,7 +11,7 @@ export type PaypalSubscription = {
   plan_id?: unknown;
   custom_id?: unknown;
   status?: unknown;
-  subscriber?: { payer_id?: unknown };
+  subscriber?: { payer_id?: unknown; email_address?: unknown };
   billing_info?: { next_billing_time?: unknown; last_payment?: { amount?: PaypalMoney; time?: unknown } };
   links?: PaypalLink[];
 };
@@ -134,19 +134,20 @@ export async function setupPaypalBilling(config: BillingRuntimeConfig, origin: s
 
 export async function createPaypalSubscription(
   config: BillingRuntimeConfig,
-  input: { origin: string; returnTo: string; userId: string; requestId?: string },
+  input: { origin: string; returnTo: string; userId: string; claimId?: never; requestId?: string }
+    | { origin: string; returnTo: string; claimId: string; userId?: never; requestId?: string },
 ) {
   const response = await paypalRequest(config, "/v1/billing/subscriptions", {
     method: "POST",
     headers: { "paypal-request-id": input.requestId || crypto.randomUUID() },
     body: JSON.stringify({
       plan_id: config.founderPlanId,
-      custom_id: input.userId,
+      custom_id: input.claimId || input.userId,
       application_context: {
         brand_name: "SPANISHCUE",
         user_action: "SUBSCRIBE_NOW",
         shipping_preference: "NO_SHIPPING",
-        return_url: `${input.origin}/pro/success?returnTo=${encodeURIComponent(input.returnTo)}`,
+        return_url: input.claimId ? `${input.origin}/pro/claim?provider=paypal` : `${input.origin}/pro/success?returnTo=${encodeURIComponent(input.returnTo)}`,
         cancel_url: `${input.origin}/pro/cancel?returnTo=${encodeURIComponent(input.returnTo)}`,
       },
     }),

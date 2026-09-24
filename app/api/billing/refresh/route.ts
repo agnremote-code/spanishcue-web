@@ -5,8 +5,8 @@ import {
   getPaypalSubscription,
   getPaypalSubscriptionTransactions,
   validatePaypalPayment,
-  validatePaypalSubscription,
 } from "../../../paypal-server";
+import { validatePaypalOwnedSubscription } from "../../../guest-purchase-verification";
 import {
   applyPaypalSubscriptionLifecycle,
   currentSubscriptionForUser,
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
   if (!paypalReady(config)) return Response.json({ status: local.status, accessConfirmed: false, pending: true }, { status: 202 });
   try {
     const paypal = await getPaypalSubscription(config, subscriptionId);
-    if (!validatePaypalSubscription(paypal, { subscriptionId, userId, config })) {
+    if (!(await validatePaypalOwnedSubscription(env.DB, paypal, { subscriptionId, userId, config }))) {
       return Response.json({ error: "La suscripción no coincide con tu cuenta o plan." }, { status: 409 });
     }
     const status = paypalStatus(paypal.status);

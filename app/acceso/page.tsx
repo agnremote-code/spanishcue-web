@@ -26,6 +26,7 @@ import { env } from "cloudflare:workers";
 import { legalOperator } from "../legal/operator";
 import { billingConfig, billingReadiness, checkoutAllowed } from "../billing-config";
 import FounderAccessForm from "./FounderAccessForm";
+import { authorizePurchaseClaim } from "../purchase-claim-cookie";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -58,6 +59,18 @@ export default async function Access({
   const accountEmail = emailFromHeaders(requestHeaders) || "";
   const signInHref = `/ingresar?modo=entrar&returnTo=${encodeURIComponent(returnTo)}`;
   const requestedLesson = lessonAtPath(returnTo, lessons);
+  const claimCookies = requestHeaders.get("cookie") || "";
+  let resumableProvider: "paypal" | "paddle" | null = null;
+  for (const provider of ["paypal", "paddle"] as const) {
+    if (!claimCookies.includes(`__Host-spanishcue-claim-${provider}=`)) continue;
+    try {
+      const claim = await authorizePurchaseClaim(env.DB, claimCookies, provider);
+      if (claim && ["paid", "claiming"].includes(claim.status)) {
+        resumableProvider = provider;
+        break;
+      }
+    } catch { /* Availability of billing data must not hide the public paywall. */ }
+  }
 
   return (
     <div className="premium-gate">
@@ -124,6 +137,9 @@ export default async function Access({
               : `Planned Founder Price: ${priceLabel}/month. Public checkout is not active yet.`}</p>
 
           {checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo={returnTo} /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${locale === "es" ? "mes" : "month"}`} returnTo={returnTo} />}
+          {resumableProvider && <p className="checkout-action"><Link className="checkout-free-link" href={`/pro/claim?provider=${resumableProvider}`}>
+            {locale === "es" ? "Continuar con mi pago confirmado" : "Continue with my confirmed payment"}
+          </Link></p>}
 
           <dl className="paywall-billing-facts">
             {checkoutLive ? <>

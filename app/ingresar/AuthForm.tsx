@@ -112,7 +112,10 @@ export async function establishSession(user: User, returnTo?: string) {
         credentials: "same-origin",
       });
       if (response.ok) {
-        if (returnTo) window.location.assign(returnTo);
+        const body = await response.json().catch(() => null) as { postPaymentProvider?: unknown } | null;
+        if (typeof body?.postPaymentProvider === "string" && !returnTo?.startsWith("/pro/claim")) {
+          window.location.assign(`/pro/claim?provider=${body.postPaymentProvider === "paddle" ? "paddle" : "paypal"}`);
+        } else if (returnTo) window.location.assign(returnTo);
         return;
       }
       const body = await response.json().catch(() => null) as { code?: unknown } | null;
@@ -160,6 +163,16 @@ export default function AuthForm({
   const authAttemptRef = useRef(false);
   const loginTabRef = useRef<HTMLButtonElement>(null);
   const registerTabRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!returnTo.startsWith("/pro/claim")) return;
+    const confirmedEmail = window.sessionStorage.getItem("spanishcue.claim.confirmedEmail");
+    if (confirmedEmail) {
+      window.sessionStorage.removeItem("spanishcue.claim.confirmedEmail");
+      const timer = window.setTimeout(() => setEmail(confirmedEmail), 0);
+      return () => window.clearTimeout(timer);
+    }
+  }, [returnTo]);
 
   useEffect(() => {
     const tick = () => setCooldownSeconds(Math.max(0, Math.ceil((cooldownUntil - Date.now()) / 1000)));

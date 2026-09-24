@@ -1,5 +1,9 @@
 import { env } from "cloudflare:workers";
-import { syncFirebaseAccount } from "../../../../db/accounts";
+import { resolveFirebaseAccount, syncFirebaseAccount } from "../../../../db/accounts";
+import { bindPurchaseToUser } from "../../../../db/purchase-binding";
+import { authorizePurchaseClaim } from "../../../purchase-claim-cookie";
+import { billingConfig } from "../../../billing-config";
+import { paddleConfig } from "../../../paddle-config";
 import {
   FIREBASE_SESSION_COOKIE,
   ownerIdentityFromEnvironment,
@@ -67,12 +71,29 @@ export async function POST(request: Request) {
       { status: 503 },
     );
   }
+  // Session establishment is also the recovery path after email verification.
+  // A purchase is bound only with its HttpOnly secret, provider-confirmed email,
+  // and the Firebase-verified identity. Failed billing never blocks sign-in.
+  let postPaymentProvider: "paypal" | "paddle" | null = null;
+  for (const provider of ["paypal", "paddle"] as const) {
+    try {
+      const claim = await authorizePurchaseClaim(env.DB, request.headers.get("cookie"), provider);
+      if (!claim || !["paid", "claiming"].includes(claim.status)) continue;
+      postPaymentProvider = provider;
+      if (claim.normalizedEmail === user.email.trim().toLowerCase()) {
+        await bindPurchaseToUser(env.DB, claim.claimId, account.userId, user.email,
+          billingConfig(env), paddleConfig(env).priceId);
+        account = await resolveFirebaseAccount(env.DB, user) || account;
+      }
+    } catch { /* /pro/claim shows a retry or matching-email recovery step. */ }
+  }
   return Response.json(
     {
       email: user.email,
       owner: account.role === "owner",
       accountId: account.userId,
       accessLevel: account.accessLevel,
+      postPaymentProvider,
     },
     {
       headers: {
