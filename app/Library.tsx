@@ -5,6 +5,9 @@ import VerbalPosition from "./verbal-system/VerbalPosition";
 import GrammarStep from "./grammar-steps/GrammarStep";
 import LogoutButton from "./LogoutButton";
 import LessonPreview from "./LessonPreview";
+import { conversationLessonHref } from "./conversation-families/navigation";
+import type { CEFRLevel } from "./conversation-families/types";
+import "./conversation-families/families.css";
 import LanguageSwitcher from "./i18n/LanguageSwitcher";
 import { useI18n } from "./i18n/LocaleProvider";
 import type { MessageKey } from "./i18n/messages";
@@ -54,6 +57,11 @@ import {
 type Category =
   "Gramática" | "Conversación" | "Escucha" | "Fonética" | "Vocabulario";
 export type CatalogItem = {
+  familyId?: string;
+  legacyLessonIds?: number[];
+  searchAliases?: string[];
+  countrySequence?: number;
+  previewByLevel?: Partial<Record<CEFRLevel,{hook:string;image?:string}>>;
   free: boolean;
   href: string;
   id: number;
@@ -822,17 +830,18 @@ export default function Library({
       keepalive: true,
     }).catch(() => undefined);
   };
-  const lessonPath = (lesson: Lesson) =>
-    lesson.path ||
+  const lessonPath = (lesson: Lesson, selectedLevel = level) =>
+    conversationLessonHref(lesson, selectedLevel) ||
     (lesson.special ? "/choose-conversation" : `/clase/${lesson.id}`);
-  const lockedPath = (lesson: Lesson) =>
-    `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson))}`;
-  const lessonHref = (lesson: Lesson) =>
+  const lockedPath = (lesson: Lesson, selectedLevel = level) =>
+    `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson, selectedLevel))}`;
+  const lessonHref = (lesson: Lesson, selectedLevel = level) =>
     canOpen(lesson)
-      ? lesson.path || (lesson.special ? "/choose-conversation" : null)
-      : lockedPath(lesson);
-  const prepareLessonNavigation = (lesson: Lesson, placement = "library_card") => {
+      ? conversationLessonHref(lesson, selectedLevel) || (lesson.special ? "/choose-conversation" : null)
+      : lockedPath(lesson, selectedLevel);
+  const prepareLessonNavigation = (lesson: Lesson, placement = "library_card", selectedLevel = level) => {
     trackMarketingEvent("lesson_preview_open", {
+      ...(lesson.familyId ? {family:lesson.familyId,level:lesson.levels?.includes(selectedLevel)?selectedLevel:lesson.level} : {}),
       lesson_id: lesson.id,
       lesson_title: lesson.title,
       category: lesson.category,
@@ -966,19 +975,20 @@ export default function Library({
   useEffect(() => {
     const timer = window.setTimeout(() => {
       try {
+        const canonicalIds = (ids: number[]) => [...new Set(ids.map(id => lessons.find(item => item.id === id || item.legacyLessonIds?.includes(id))?.id || id))];
         setFavoriteIds(
-          JSON.parse(
+          canonicalIds(JSON.parse(
             window.localStorage.getItem("chespanish-favorites") || "[]",
-          ),
+          )),
         );
         setPlanIds(
-          JSON.parse(window.localStorage.getItem("chespanish-plan") || "[]"),
+          canonicalIds(JSON.parse(window.localStorage.getItem("chespanish-plan") || "[]")),
         );
       } catch {}
       setStorageReady(true);
     }, 0);
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [lessons]);
   useEffect(() => {
     const cleanQuery = query.trim();
     if (cleanQuery.length < 2 || cleanQuery === lastTrackedQuery.current) return;
@@ -1124,7 +1134,7 @@ export default function Library({
     setSearchOpen(false);
     scrollToResults();
   };
-  const lessonGrid = (items: Lesson[], planned = false, includeCountryCard = false) =>
+  const lessonGrid = (items: Lesson[], planned = false, includeCountryCard = false, selectedLevel = level) =>
     items.length || includeCountryCard ? (
       <div className="lesson-grid">
         {includeCountryCard && (
@@ -1149,7 +1159,7 @@ export default function Library({
           </button>
         )}
         {items.map((l, i) => {
-          const href = lessonHref(l);
+          const href = lessonHref(l, selectedLevel);
           return <article
             className={`lesson-card accent-${l.level.toLowerCase()} ${l.special ? "special-card" : ""} ${canOpen(l) ? "" : "lesson-locked"}`}
             data-access={canOpen(l) ? "open" : "locked"}
@@ -1162,14 +1172,14 @@ export default function Library({
               className="card-hitarea"
               href={href}
               aria-label={canOpen(l) ? t("library.openAria", { title: l.title }) : t("library.lockedAria", { title: l.title })}
-              onClick={() => prepareLessonNavigation(l)}
+              onClick={() => prepareLessonNavigation(l, "library_card", selectedLevel)}
             /> : <button
               className="card-hitarea"
               type="button"
               aria-label={t("library.openAria", { title: l.title })}
               onClick={() => openLesson(l)}
             />}
-            <LessonPreview lesson={l} />
+            <LessonPreview lesson={{...l,image:l.previewByLevel?.[selectedLevel as CEFRLevel]?.image || l.image}} />
             {!canOpen(l) && (
               <span className="card-lock-mark" aria-hidden="true">
                 <i />
@@ -1237,7 +1247,8 @@ export default function Library({
               <span className="category-name">{categoryLabel(l.category)}</span>
             </div>
             <h3>{l.title}</h3>
-            <p>{l.subtitle}</p>
+            {l.familyId && (l.levels?.length || 0)>1 && <div className="family-levels">{locale === "es" ? "Disponible en" : "Available in"} {l.levels?.join(" · ")}</div>}
+            <p>{l.previewByLevel?.[selectedLevel as CEFRLevel]?.hook || l.subtitle}</p>
             <div className="card-bottom">
               <div className="card-meta">
                 <span>{l.duration}</span>
@@ -1848,7 +1859,7 @@ export default function Library({
             </div>
           </section>
         )}
-        {view === "Biblioteca" && level === "Todos" && !catalogSearchActive ? (
+        {view === "Biblioteca" && category !== "Conversación" && level === "Todos" && !catalogSearchActive ? (
           <section className="level-catalog-sections" aria-label={locale === "es" ? "Clases por nivel" : "Lessons by level"}>
             {groupedLessons.map((group) => (
               <section className="level-catalog-section" key={group.level} aria-labelledby={`level-${group.level}-title`}>
@@ -1859,7 +1870,7 @@ export default function Library({
                   </div>
                   <small>{group.total} {group.total === 1 ? t("common.class") : t("common.classes")}</small>
                 </header>
-                {lessonGrid(group.lessons)}
+                {lessonGrid(group.lessons, false, false, group.level)}
                 {group.total > group.lessons.length && (
                   <button className="view-level-lessons" type="button" onClick={() => chooseLevel(group.level, true)}>
                     {locale === "es" ? `Ver todas las clases ${group.level}` : `View all ${group.level} lessons`} <span aria-hidden="true">→</span>

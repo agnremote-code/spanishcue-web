@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { freeLessonIds, isFreeLesson, localLessonPath, fullAccessFromHeaders, signedInFromHeaders } from '../access-policy';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
 import { localeFromHeaders, translateCategory } from '../i18n/messages';
-import { lessons } from '../lesson-catalog';
+import { catalogLessons as lessons } from '../conversation-families/catalog';
 import { SpanishCueBrand } from '../SpanishCueBrand';
 import type { LandingConfig } from './config';
 import { campaignCopy, campaignHero } from './campaign-copy';

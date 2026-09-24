@@ -1,4 +1,5 @@
 import { lessons, type Category, type Lesson } from "./lesson-catalog";
+import { catalogLessons, conversationFamilyByLessonId } from "./conversation-families/catalog";
 
 const categorySeo: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
   "Gramática": {
@@ -84,7 +85,7 @@ function truncate(value: string, maxLength = 158): string {
 }
 
 export function resourceSlugForLesson(lesson: Lesson): string {
-  return resourceSlugById.get(lesson.id)!;
+  return resourceSlugById.get(conversationFamilyByLessonId.get(lesson.id)?.canonicalLessonId ?? lesson.id)!;
 }
 
 export function resourcePathForLesson(lesson: Lesson): string {
@@ -92,7 +93,12 @@ export function resourcePathForLesson(lesson: Lesson): string {
 }
 
 export function lessonForResourceSlug(slug: string): Lesson | undefined {
-  return lessonBySlug.get(slug);
+  const original = lessonBySlug.get(slug);
+  if (!original) return undefined;
+  const family = conversationFamilyByLessonId.get(original.id);
+  if (!family) return original;
+  const card = catalogLessons.find(item => item.id === family.canonicalLessonId)!;
+  return original.id === family.canonicalLessonId ? card : {...card, level:original.level,displayLevel:original.level,subtitle:original.subtitle,image:original.image};
 }
 
 export function resourceTypeLabel(lesson: Lesson): string {
@@ -119,13 +125,13 @@ export function resourceDescription(lesson: Lesson): string {
 }
 
 export function relatedResourceLessons(lesson: Lesson, limit = 6): Lesson[] {
-  const sameLevelAndCategory = lessons.filter(
+  const sameLevelAndCategory = catalogLessons.filter(
     (candidate) =>
       candidate.id !== lesson.id &&
       candidate.category === lesson.category &&
       candidate.level === lesson.level,
   );
-  const sameCategory = lessons.filter(
+  const sameCategory = catalogLessons.filter(
     (candidate) =>
       candidate.id !== lesson.id &&
       candidate.category === lesson.category &&
@@ -134,4 +140,4 @@ export function relatedResourceLessons(lesson: Lesson, limit = 6): Lesson[] {
   return [...sameLevelAndCategory, ...sameCategory].slice(0, limit);
 }
 
-export const resourceLessons = lessons;
+export const resourceLessons = catalogLessons;
