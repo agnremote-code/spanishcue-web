@@ -15,7 +15,7 @@ test("the public brand surface uses the SPANISHCUE positioning", async () => {
   assert.match(library, /SpanishCueHero/);
   assert.match(messages, /Stop building every lesson from scratch/);
   assert.match(brand, /CHOOSE\. OPEN\. TEACH\./);
-  assert.match(brand, /spanishcue-hero-v2\.webp/);
+  assert.match(brand, /spanishcue-hero-online\.webp/);
   assert.match(brand, /spanishcue-global-stage\.webp/);
   assert.match(layout, /LocaleProvider/);
   assert.match(library, /LanguageSwitcher/);

@@ -359,7 +359,7 @@
 
 .sc-hero::before {
   background:
-    linear-gradient(90deg, #020d25 0%, rgba(3, 18, 48, .97) 36%, rgba(5, 29, 69, .72) 57%, transparent 80%),
+    linear-gradient(90deg, #020d25 0%, rgba(3, 18, 48, .98) 36%, rgba(3, 18, 48, .35) 48%, transparent 62%),
     linear-gradient(0deg, rgba(2, 13, 37, .96) 0%, transparent 38%);
 }
 
