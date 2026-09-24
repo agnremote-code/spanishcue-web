@@ -1,3 +1,5 @@
+> **Historical record (last edited 2026-09-20).** This file describes project state at that time and is kept unmodified below for traceability. It is not current status: for current source read GitHub `main`, for production read `state.json` on `automation/sites-release-state`, and for context read `docs/SPANISHCUE_HANDOFF.md`.
+
 # TASK-07 · Preparación de adquisición SPANISHCUE
 
 **Estado:** preparado para revisión; creación y publicación de campañas en pausa.

@@ -1,3 +1,5 @@
+> **Historical record (last edited 2026-09-20).** This file describes project state at that time and is kept unmodified below for traceability. It is not current status: for current source read GitHub `main`, for production read `state.json` on `automation/sites-release-state`, and for context read `docs/SPANISHCUE_HANDOFF.md`.
+
 # TASK-08 — Integración y gate de publicación
 
 Fecha de corte: 2026-09-19. Rama final: `chatgpt/final-recovery`.
