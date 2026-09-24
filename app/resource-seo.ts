@@ -1,29 +1,34 @@
 import { lessons, type Category, type Lesson } from "./lesson-catalog";
 
-const categorySeo: Record<Category, { prefix: string; label: string; shortLabel: string }> = {
+const categorySeo: Record<Category, { prefix: string; label: string; pluralLabel: string; shortLabel: string }> = {
   "Gramática": {
     prefix: "spanish-grammar-lesson",
     label: "Spanish Grammar Lesson",
+    pluralLabel: "Spanish Grammar Lessons",
     shortLabel: "grammar lesson",
   },
   "Conversación": {
     prefix: "spanish-conversation-activity",
     label: "Spanish Conversation Activity",
+    pluralLabel: "Spanish Conversation Activities",
     shortLabel: "conversation activity",
   },
   "Escucha": {
     prefix: "spanish-listening-activity",
     label: "Spanish Listening Activity",
+    pluralLabel: "Spanish Listening Activities",
     shortLabel: "listening activity",
   },
   "Fonética": {
     prefix: "spanish-pronunciation-lesson",
     label: "Spanish Pronunciation Lesson",
+    pluralLabel: "Spanish Pronunciation Lessons",
     shortLabel: "pronunciation lesson",
   },
   "Vocabulario": {
     prefix: "spanish-vocabulary-lesson",
     label: "Spanish Vocabulary Lesson",
+    pluralLabel: "Spanish Vocabulary Lessons",
     shortLabel: "vocabulary lesson",
   },
 };
@@ -92,6 +97,10 @@ export function lessonForResourceSlug(slug: string): Lesson | undefined {
 
 export function resourceTypeLabel(lesson: Lesson): string {
   return categorySeo[lesson.category].label;
+}
+
+export function resourceTypePluralLabel(lesson: Lesson): string {
+  return categorySeo[lesson.category].pluralLabel;
 }
 
 export function resourceLevelLabel(lesson: Lesson): string {
