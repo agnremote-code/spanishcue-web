@@ -1,4 +1,4 @@
-export type SyntaxMode = "connector" | "clause" | "timeline" | "decision" | "contrast" | "referent";
+export type SyntaxMode = "connector" | "clause" | "timeline" | "decision" | "contrast" | "referent" | "hypothesis" | "evidence";
 
 export type SyntaxPattern = {
   key: string;
@@ -30,7 +30,7 @@ export type SyntaxRepair = {
 
 export type SyntaxLabData = {
   slug: string;
-  level: "A1" | "A2" | "B1";
+  level: "A1" | "A2" | "B1" | "B2";
   category: "Gramática";
   mode: SyntaxMode;
   module: string;
@@ -970,4 +970,206 @@ export const laPersonaQueTengoEnMente: SyntaxLabData = {
     { question: "¿Qué profesional que admirás recomendarías?", starter: "Recomendaría a… quien…", followUp: "No estoy seguro de quién hablás: añadí otro dato." },
   ],
   finalTask: "Encontrá a la persona, el lugar y la cosa: describí seis referentes reales o plausibles; el profesor ofrece candidatos equivocados y vos tenés que aclarar cada uno.",
+};
+
+export const siFueraDistinto: SyntaxLabData = {
+  slug: "si-fuera-distinto",
+  level: "B2",
+  category: "Gramática",
+  mode: "hypothesis",
+  module: "MÓDULO 15.3.6 · B2",
+  pcic: "PCIC 15.3.6 · condicionales B2",
+  title: "Si fuera distinto…",
+  displayTitle: "Si fuera\ndistinto…",
+  subtitle: "Cambiá un dato del mundo real, imaginá su consecuencia y negociá qué harías",
+  goal: "Formular hipótesis presentes o futuras con si + imperfecto de subjuntivo y una consecuencia en condicional simple.",
+  accent: "#74d6c3",
+  accent2: "#ffd166",
+  productiveTargets: [
+    "si + presente → resultado real",
+    "si + imperfecto de subjuntivo → condicional simple",
+    "orden de cláusulas flexible",
+  ],
+  boundaries: "La clase contrasta condiciones reales con hipótesis presentes o futuras. Corrige si + condicional y si + presente de subjuntivo, pero deja las condiciones contrarias al pasado para otra ruta.",
+  timeline: [
+    { label: "Contraste real", minutes: 5 },
+    { label: "Cambio de mundo", minutes: 7 },
+    { label: "Hypothesis Switch", minutes: 8 },
+    { label: "Correlación", minutes: 6 },
+    { label: "Consecuencias", minutes: 7 },
+    { label: "Reformulación", minutes: 5 },
+    { label: "Negociación", minutes: 7 },
+  ],
+  activation: {
+    instruction: "Reaccioná primero a cada condición como una posibilidad real. Después cambiá un dato para volverla improbable y anticipá qué tendría que cambiar en la frase.",
+    cards: [
+      { first: "Si termino temprano", second: "voy al gimnasio", intention: "POSIBLE HOY" },
+      { first: "Si encuentro un vuelo barato", second: "viajo este mes", intention: "POSIBLE" },
+      { first: "Si trabajo cuatro días", second: "tengo más tiempo", intention: "REAL / HABITUAL" },
+      { first: "Si vivo cerca del mar", second: "nado cada mañana", intention: "REAL AHORA" },
+      { first: "Si ahorro suficiente", second: "cambio de ciudad", intention: "PLAN REAL" },
+    ],
+  },
+  patterns: [
+    {
+      key: "real-posible", label: "REAL / POSIBLE", intention: "CONDICIÓN ABIERTA", formula: "SI + PRESENTE → PRESENTE / FUTURO / DECISIÓN",
+      example: "Si consigo el permiso, trabajo desde otro país.",
+      preview: { left: "Si consigo el permiso", connector: "REAL", right: "trabajo desde otro país." },
+      explanation: "El presente mantiene abierta la condición: el hablante considera posible que el permiso llegue y organiza una consecuencia real.",
+    },
+    {
+      key: "hipotetico-improbable", label: "HIPOTÉTICO", intention: "MUNDO IMAGINADO", formula: "SI + IMPERFECTO DE SUBJUNTIVO → CONDICIONAL SIMPLE",
+      example: "Si consiguiera el permiso, trabajaría desde otro país.",
+      preview: { left: "Si consiguiera el permiso", connector: "HIPOTÉTICO", right: "trabajaría desde otro país." },
+      explanation: "El imperfecto de subjuntivo aleja la condición del mundo actual y el condicional simple presenta su consecuencia imaginada.",
+    },
+    {
+      key: "orden-invertido", label: "ORDEN FLEXIBLE", intention: "DESTACAR LA CONSECUENCIA", formula: "CONDICIONAL SIMPLE + SI + IMPERFECTO DE SUBJUNTIVO",
+      example: "Trabajaría desde otro país si consiguiera el permiso.",
+      preview: { left: "Trabajaría desde otro país", connector: "si", right: "consiguiera el permiso." },
+      explanation: "Invertir el orden no cambia la correlación. La consecuencia aparece primero porque es la información que el hablante quiere destacar.",
+    },
+  ],
+  decisions: [
+    { intention: "MUNDO REAL", prompt: "El vuelo todavía puede bajar de precio esta semana.", left: "Viajo el sábado", right: "el precio baja.", options: ["si + presente", "si + imperfecto de subjuntivo", "si + condicional"], correct: 0, feedback: "La bajada sigue siendo una posibilidad real; si + presente conserva abierta la condición y permite tomar una decisión práctica." },
+    { intention: "HIPÓTESIS", prompt: "Imaginás vivir en una ciudad donde hoy no residís.", left: "Si viviera allí", right: "usaría menos el coche.", options: ["presente + presente", "imperfecto de subjuntivo + condicional", "condicional + condicional"], correct: 1, feedback: "Viviera crea un escenario alejado del presente y usaría expresa la consecuencia coherente dentro de ese mundo imaginado." },
+    { intention: "CORRELACIÓN", prompt: "Completá una consecuencia hipotética, no una promesa real.", left: "Si tuviera una semana libre", right: "todo el norte.", options: ["recorrería", "recorro", "recorriera"], correct: 0, feedback: "La condición en imperfecto de subjuntivo pide aquí una consecuencia en condicional simple: recorrería presenta el resultado imaginado." },
+    { intention: "ERROR SI + CONDICIONAL", prompt: "Elegí la condición B2 bien formada.", left: "", right: "aceptaría el puesto.", options: ["Si tendría más flexibilidad", "Si tuviera más flexibilidad", "Si tenga más flexibilidad"], correct: 1, feedback: "Después de si no usamos condicional en este patrón: tuviera marca la hipótesis y aceptaría expresa su consecuencia." },
+    { intention: "ERROR DE MODO", prompt: "Evitá si + presente de subjuntivo en una hipótesis de este tipo.", left: "", right: "viviría cerca del trabajo.", options: ["Si cambie de barrio", "Si cambiara de barrio", "Si cambiaría de barrio"], correct: 1, feedback: "Cambiara es imperfecto de subjuntivo y encaja con viviría; cambie no construye esta hipótesis y cambiaría no va tras si." },
+    { intention: "CAMBIO DE MUNDO", prompt: "La misma idea deja de ser un plan probable y se vuelve una fantasía.", left: "Si gano más", right: "compro una casa.", options: ["Si ganara más, compraría una casa.", "Si ganaría más, compraría una casa.", "Si gane más, compro una casa."], correct: 0, feedback: "Ganara y compraría desplazan las dos cláusulas al mundo hipotético sin introducir una condición contraria al pasado." },
+    { intention: "ORDEN INVERTIDO", prompt: "Poné primero la consecuencia sin romper la correlación.", left: "Trabajaría menos horas", right: "más autonomía.", options: ["si tendría", "si tuviera", "si tenga"], correct: 1, feedback: "El orden cambia el foco, no la gramática: trabajaría sigue correlacionado con si tuviera dentro de la misma hipótesis." },
+    { intention: "COHERENCIA", prompt: "Elegí la consecuencia más lógica para la condición imaginada.", left: "Si el transporte público fuera gratuito", right: "", options: ["más personas lo usarían.", "más personas lo usen.", "más personas lo usaban."], correct: 0, feedback: "Usarían expresa una consecuencia plausible del escenario imaginado; las otras formas no mantienen la correlación temporal y modal." },
+    { intention: "REAL O HIPOTÉTICO", prompt: "El contrato ya permite trabajar desde casa dos días.", left: "Si trabajo desde casa", right: "tiempo de viaje.", options: ["ahorro", "ahorraría", "ahorrara"], correct: 0, feedback: "La condición describe una posibilidad disponible y real, por eso presente + presente comunica mejor el resultado actual." },
+    { intention: "REFORMULACIÓN", prompt: "Un nuevo dato vuelve improbable la condición inicial.", left: "Si puedo mudarme este año, acepto.", right: "Ahora el alquiler es inalcanzable.", options: ["Si pudiera mudarme, aceptaría.", "Si podría mudarme, aceptaría.", "Si pueda mudarme, acepto."], correct: 0, feedback: "Pudiera y aceptaría reformulan la decisión como hipótesis improbable después del cambio económico introducido." },
+  ],
+  questionAnswerCycle: [],
+  repairs: [
+    { prompt: "Repará el condicional colocado después de si.", original: "Si tendría más tiempo, aprendería otro idioma.", options: ["Si tuviera más tiempo, aprendería otro idioma.", "Si tenga más tiempo, aprendería otro idioma.", "Si tendría más tiempo, aprendiera otro idioma."], correct: 0, feedback: "Tuviera construye la condición hipotética; aprendería presenta la consecuencia sin duplicar el condicional en las dos cláusulas." },
+    { prompt: "Mantené las dos cláusulas dentro del mismo mundo.", original: "Si viviera cerca, voy caminando todos los días.", options: ["Si viviera cerca, iría caminando todos los días.", "Si vivo cerca, iría caminando todos los días.", "Si viviría cerca, iría caminando todos los días."], correct: 0, feedback: "Viviera e iría forman una pareja hipotética coherente; mezclarla con voy cambia la distancia que el hablante atribuye al escenario." },
+    { prompt: "Conservá el significado real de la condición.", original: "Si mañana fuera festivo, la oficina cierra; el calendario confirma que lo es.", options: ["Si mañana es festivo, la oficina cierra.", "Si mañana sería festivo, la oficina cerraría.", "Si mañana sea festivo, la oficina cierra."], correct: 0, feedback: "El calendario presenta el dato como real y verificable, así que si + presente evita convertirlo artificialmente en una hipótesis." },
+    { prompt: "Invertí el orden sin cambiar tiempo ni modo.", original: "Si consiguiera un mes libre, recorrería el país.", options: ["Recorrería el país si consiguiera un mes libre.", "Recorriera el país si conseguiría un mes libre.", "Recorro el país si consiguiera un mes libre."], correct: 0, feedback: "La inversión solo adelanta la consecuencia; condicional simple e imperfecto de subjuntivo mantienen la correlación original." },
+  ],
+  retrieval: [
+    { intention: "INTERRUPTOR", prompt: "Sin apoyo: convertí tres condiciones reales en hipótesis improbables.", challenge: "Cambiá las dos cláusulas y explicá qué dato aleja cada escenario de la realidad." },
+    { intention: "VUELTA A LO REAL", prompt: "Reformulá dos hipótesis como planes posibles.", challenge: "Recuperá si + presente sin repetir la explicación gramatical." },
+    { intention: "ORDEN", prompt: "Producí la misma hipótesis con la condición primero y después al final.", challenge: "Mantené la correlación y cambiá únicamente el foco informativo." },
+    { intention: "CONSECUENCIA", prompt: "Recibís una condición improbable: proponé dos consecuencias distintas.", challenge: "Elegí la más coherente y defendela frente a una objeción." },
+    { intention: "NUEVO DATO", prompt: "Un hecho cambia a mitad de tu respuesta: reformulá el plan.", challenge: "Pasá de real a hipotético o de hipotético a real sin marco escrito." },
+  ],
+  production: [
+    { title: "Otra ciudad", prompt: "Negociá cómo cambiaría tu vida si vivieras en otra ciudad.", checklist: ["3 condiciones originales", "consecuencias coherentes", "dos órdenes de cláusula"] },
+    { title: "Semana imposible", prompt: "Diseñá una semana ideal con tiempo y dinero limitados.", checklist: ["hipótesis improbables", "contraofertas", "una vuelta al mundo real"] },
+    { title: "Decisión profesional", prompt: "Compará qué harías bajo tres condiciones laborales distintas.", checklist: ["justificación", "reformulación", "sin frases preparadas"] },
+  ],
+  conversationMinutes: 7,
+  conversation: [
+    { question: "¿Qué harías si pudieras trabajar desde cualquier país durante un año?", starter: "Si pudiera…, elegiría…", followUp: "¿Y si solo tuvieras tres meses?" },
+    { question: "¿Cómo cambiaría tu rutina si trabajaras cuatro días por semana?", starter: "Si trabajara…, tendría…", followUp: "¿Qué condición real permitiría acercarte a ese plan?" },
+    { question: "¿Aceptarías un trabajo mejor pagado si exigiera mudarte?", starter: "Lo aceptaría si…", followUp: "¿Qué nuevo dato te haría cambiar de opinión?" },
+    { question: "¿Qué mejorarías de tu ciudad si fueras responsable del presupuesto?", starter: "Si fuera responsable…, invertiría…", followUp: "¿Qué proyecto abandonarías si faltara dinero?" },
+    { question: "¿Qué plan de viaje propondrías si el dinero no fuera el límite principal?", starter: "Propondría… si…", followUp: "Ahora el tiempo es el límite: reformulá el plan." },
+    { question: "¿Qué cambiaría en tus relaciones si vivieras mucho más lejos?", starter: "Si viviera…, intentaría…", followUp: "¿Qué consecuencia te resultaría más difícil negociar?" },
+  ],
+  finalTask: "El plan imposible pero negociable: acordá con el profesor un plan bajo cinco restricciones cambiantes y respondé con al menos cinco condicionales hipotéticas originales.",
+};
+
+export const aunqueCambieElDato: SyntaxLabData = {
+  slug: "aunque-cambie-el-dato",
+  level: "B2",
+  category: "Gramática",
+  mode: "evidence",
+  module: "MÓDULO 15.3.9 · B2",
+  pcic: "PCIC 15.3.9 · concesivas B2",
+  title: "Aunque cambie el dato…",
+  displayTitle: "Aunque cambie\nel dato…",
+  subtitle: "La misma objeción cambia de modo cuando cambia la postura del hablante",
+  goal: "Conceder información nueva, presupuesta o hipotética con aunque y elegir indicativo o subjuntivo por significado discursivo.",
+  accent: "#8fb3ff",
+  accent2: "#ffcf70",
+  productiveTargets: [
+    "nuevo / afirmado → indicativo",
+    "conocido / presupuesto → subjuntivo",
+    "hipotético / no factual → subjuntivo",
+  ],
+  boundaries: "La elección de modo expresa cómo presenta el hablante la información, no si el dato es objetivamente verdadero. A pesar de que aparece solo como transferencia breve; no se enseña una lista de conectores.",
+  timeline: [
+    { label: "Estatus del dato", minutes: 5 },
+    { label: "Contraste mínimo", minutes: 7 },
+    { label: "Evidence Switch", minutes: 8 },
+    { label: "Nuevo o conocido", minutes: 6 },
+    { label: "Objeciones", minutes: 7 },
+    { label: "Nueva postura", minutes: 5 },
+    { label: "Debate", minutes: 7 },
+  ],
+  activation: {
+    instruction: "Escuchá cada objeción y decidí si el hablante la afirma como noticia, la trata como información compartida o solo imagina que podría ocurrir.",
+    cards: [
+      { first: "El alquiler subió", second: "mantengo la mudanza", intention: "DATO NUEVO" },
+      { first: "Ya sabemos que es caro", second: "seguimos con el plan", intention: "DATO PRESUPUESTO" },
+      { first: "Tal vez llueva", second: "hacemos el evento", intention: "HIPÓTESIS" },
+      { first: "La distancia es grande", second: "acepto el trabajo", intention: "INFORMACIÓN AFIRMADA" },
+      { first: "Como todos saben, falta tiempo", second: "terminaremos", intention: "INFORMACIÓN CONOCIDA" },
+    ],
+  },
+  patterns: [
+    {
+      key: "nuevo-afirmado", label: "NUEVO / AFIRMADO", intention: "PRESENTAR EL DATO", formula: "AUNQUE + INDICATIVO, POSICIÓN",
+      example: "Aunque el alquiler subió, mantengo la mudanza.",
+      preview: { left: "El alquiler subió", connector: "AUNQUE + INDICATIVO", right: "mantengo la mudanza." },
+      explanation: "El indicativo presenta la subida como información que el hablante afirma e incorpora al intercambio antes de sostener su decisión.",
+    },
+    {
+      key: "conocido-presupuesto", label: "CONOCIDO / PRESUPUESTO", intention: "RETOMAR EL DATO", formula: "AUNQUE + SUBJUNTIVO, POSICIÓN",
+      example: "Aunque el alquiler haya subido, mantengo la mudanza.",
+      preview: { left: "El alquiler haya subido", connector: "AUNQUE + SUBJUNTIVO", right: "mantengo la mudanza." },
+      explanation: "El subjuntivo permite retomar una objeción ya compartida sin convertirla en la noticia central: el foco queda en la posición que sigue.",
+    },
+    {
+      key: "hipotetico-no-factual", label: "HIPOTÉTICO", intention: "CONCEDER CUALQUIER RESULTADO", formula: "AUNQUE + SUBJUNTIVO, POSICIÓN",
+      example: "Aunque el alquiler suba mañana, mantendré la mudanza.",
+      preview: { left: "El alquiler suba mañana", connector: "AUNQUE + SUBJUNTIVO", right: "mantendré la mudanza." },
+      explanation: "El subjuntivo no afirma que la subida ocurra: concede esa posibilidad y muestra que, incluso en ese caso, la decisión se mantiene.",
+    },
+  ],
+  decisions: [
+    { intention: "DATO NUEVO", prompt: "Le contás al interlocutor por primera vez que el tren está cancelado.", left: "Aunque el tren", right: "iremos en autobús.", options: ["está cancelado", "esté cancelado", "estaría cancelado"], correct: 0, feedback: "Está presenta la cancelación como información afirmada y nueva; la concesión reconoce el problema antes de ofrecer la alternativa." },
+    { intention: "DATO CONOCIDO", prompt: "Los dos ya recibieron el aviso de cancelación.", left: "Aunque el tren", right: "iremos en autobús.", options: ["está cancelado", "esté cancelado", "estuvo cancelado"], correct: 1, feedback: "Esté retoma una objeción compartida y desplaza el foco hacia la decisión de viajar; no niega que la cancelación sea real." },
+    { intention: "HIPÓTESIS", prompt: "No sabés si el precio aumentará.", left: "Aunque el precio", right: "compraré la entrada.", options: ["aumenta", "aumente", "aumentó"], correct: 1, feedback: "Aumente presenta una posibilidad todavía no confirmada y comunica que cualquier resultado dejará intacta la decisión de comprar." },
+    { intention: "INFORMACIÓN AFIRMADA", prompt: "Anunciás una dificultad que tu interlocutor desconocía.", left: "Aunque tenemos poco tiempo", right: "podemos terminar.", options: ["indicativo", "subjuntivo", "condicional"], correct: 0, feedback: "Tenemos afirma e introduce la limitación como un dato relevante; indicativo hace que esa información forme parte del mensaje principal." },
+    { intention: "INFORMACIÓN PRESUPUESTA", prompt: "La falta de tiempo ya domina toda la conversación.", left: "Aunque tengamos poco tiempo", right: "podemos terminar.", options: ["indicativo", "subjuntivo", "infinitivo"], correct: 1, feedback: "Tengamos presupone la objeción compartida y permite que el avance posible, no la falta de tiempo, sea el centro de la respuesta." },
+    { intention: "DOS INTERPRETACIONES", prompt: "Ambas formas son posibles; elegí la que presenta el cansancio como información nueva.", left: "Aunque", right: "seguiré trabajando.", options: ["estoy cansado", "esté cansado", "estuviera cansado"], correct: 0, feedback: "Estoy afirma el cansancio como parte nueva del mensaje; esté podría tratar el mismo cansancio como conocido o irrelevante para la decisión." },
+    { intention: "MISMAS PALABRAS, OTRA POSTURA", prompt: "El profesor acaba de decirte que el lugar queda lejos.", left: "Aunque el lugar", right: "quiero visitarlo.", options: ["queda lejos", "quede lejos", "quedará lejos"], correct: 1, feedback: "Quede recoge la objeción que acaba de aportar el interlocutor y sostiene la decisión sin volver a presentar la distancia como noticia." },
+    { intention: "NO FACTUAL", prompt: "Concedés incluso un resultado extremo que todavía no ocurrió.", left: "Aunque la reunión", right: "mantendré mi propuesta.", options: ["dura tres horas", "dure tres horas", "duró tres horas"], correct: 1, feedback: "Dure abre cualquier duración posible y muestra que la postura se mantiene incluso bajo esa hipótesis, sin afirmar el resultado." },
+    { intention: "CAMBIO DE FOCO", prompt: "Querés que la dificultad afirmada sea la noticia, no un dato de fondo.", left: "Aunque el proyecto", right: "vale la pena.", options: ["es complejo", "sea complejo", "fuera complejo"], correct: 0, feedback: "Es complejo afirma la dificultad y la incorpora como información destacada; sea la presentaría como conocida, presupuesta o concedida." },
+    { intention: "TRANSFERENCIA", prompt: "Transferí brevemente el mismo contraste a otro conector.", left: "A pesar de que todos", right: "continuamos el debate.", options: ["conocen el problema", "conozcan el problema", "conocer el problema"], correct: 1, feedback: "Conozcan retoma aquí un problema ya compartido; a pesar de que conserva el contraste de modo sin abrir un inventario nuevo." },
+  ],
+  questionAnswerCycle: [],
+  repairs: [
+    { prompt: "El contexto presenta el dato como una noticia afirmada.", original: "Aunque la carretera esté cerrada, iremos por otra ruta; te lo acaban de anunciar.", options: ["Aunque la carretera está cerrada, iremos por otra ruta.", "Aunque la carretera cerraría, iremos por otra ruta.", "Aunque la carretera cerrar, iremos por otra ruta."], correct: 0, feedback: "Está introduce la noticia de cierre; el indicativo hace visible que el hablante aporta y afirma esa información en este momento." },
+    { prompt: "La objeción ya fue aceptada por las dos personas.", original: "Aunque el plan es caro, seguimos; ya discutimos el precio durante una hora.", options: ["Aunque el plan sea caro, seguimos.", "Aunque el plan sería caro, seguimos.", "Aunque el plan ser caro, seguimos."], correct: 0, feedback: "Sea retoma el coste como información presupuesta y deja el foco en seguir; el subjuntivo no convierte el precio en algo falso." },
+    { prompt: "No afirmes una situación que solo estás imaginando.", original: "Aunque pierdo el vuelo mañana, llegaré a tiempo.", options: ["Aunque pierda el vuelo mañana, llegaré a tiempo.", "Aunque perdí el vuelo mañana, llegaré a tiempo.", "Aunque perdería el vuelo mañana, llegaré a tiempo."], correct: 0, feedback: "Pierda presenta una posibilidad futura no factual y concede de antemano ese obstáculo sin afirmar que realmente ocurrirá." },
+    { prompt: "Mantené las mismas palabras y cambiá solo la postura.", original: "Aunque hace frío, salimos; ambos ya hablaron del frío.", options: ["Aunque haga frío, salimos.", "Aunque haría frío, salimos.", "Aunque hizo frío, salimos."], correct: 0, feedback: "Haga trata el frío como un dato compartido; la reformulación cambia el encuadre discursivo sin cambiar la situación descrita." },
+  ],
+  retrieval: [
+    { intention: "MISMAS PALABRAS", prompt: "Usá la misma proposición primero como noticia y después como dato conocido.", challenge: "Reformulá de indicativo a subjuntivo y explicá qué cambia en el foco." },
+    { intention: "NUEVO CONTEXTO", prompt: "El profesor cambia quién conoce la objeción: elegí el modo sin tarjeta de regla.", challenge: "Justificá la postura del hablante, no la verdad objetiva del dato." },
+    { intention: "HIPÓTESIS", prompt: "Concedé tres obstáculos que todavía podrían no ocurrir.", challenge: "Mantené una decisión distinta después de cada objeción." },
+    { intention: "DOS LECTURAS", prompt: "Producí un par donde ambas formas sean posibles.", challenge: "Hacé explícita la interpretación nueva con indicativo y la presupuesta con subjuntivo." },
+    { intention: "TRANSFERENCIA", prompt: "Repetí una concesión con aunque y una vez con a pesar de que.", challenge: "Conservá el estatus discursivo y no agregues conectores a la lista." },
+  ],
+  production: [
+    { title: "Dato en titulares", prompt: "Presentá una objeción nueva y después retomala como conocida.", checklist: ["indicativo afirmado", "subjuntivo presupuesto", "posición constante"] },
+    { title: "Decisión resistente", prompt: "Defendé una decisión frente a tres resultados todavía hipotéticos.", checklist: ["subjuntivo no factual", "concesión real", "razón para continuar"] },
+    { title: "Cambiar de postura", prompt: "Mantené, suavizá y finalmente revisá una opinión ante nueva evidencia.", checklist: ["estatus del dato", "dos modos", "reformulación natural"] },
+  ],
+  conversationMinutes: 7,
+  conversation: [
+    { question: "¿Mantendrías un viaje aunque descubras ahora que será más caro?", starter: "Aunque será más caro…", followUp: "Ahora tratá el precio como una objeción que ambos ya conocen." },
+    { question: "¿Aceptarías un trabajo aunque todo el equipo te advierta del horario?", starter: "Aunque el equipo…", followUp: "¿Cómo cambia la frase si todavía nadie confirmó el problema?" },
+    { question: "¿Qué hábito defenderías aunque otras personas ya sepan que tiene un costo?", starter: "Aunque tenga un costo…", followUp: "Presentá ahora ese costo como información nueva." },
+    { question: "¿Seguirías con un proyecto aunque aparezcan dificultades inesperadas?", starter: "Aunque aparezcan…", followUp: "Nombrá una dificultad real y afirmala con indicativo." },
+    { question: "¿Comprarías algo importante aunque el precio pudiera cambiar mañana?", starter: "Aunque el precio cambie…", followUp: "El precio acaba de subir: incorporá el nuevo dato." },
+    { question: "¿Qué opinión revisarías aunque te cueste admitir el error?", starter: "Aunque me cueste…", followUp: "¿Qué evidencia nueva tendría suficiente fuerza para cambiarla?" },
+  ],
+  finalTask: "Debate con evidencia cambiante: respondé a cinco objeciones, distinguí información afirmada, presupuesta e hipotética y sostené o revisá tu posición de manera natural.",
 };

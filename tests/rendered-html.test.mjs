@@ -13,7 +13,7 @@ test('library renders SPANISHCUE and excludes paid lesson bodies from public HTM
  const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/SPANISHCUE/);assert.match(html,/Deja de crear cada clase/);assert.match(html,/>Entrar</);assert.match(html,/Probar gratis/);
  assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/"/i);
- assert.match(html,/Clase 01/);assert.match(html,/href="\/mexico"/);assert.match(html,/49 clases/);assert.match(html,/data-curriculum-order="100"/);
+ assert.match(html,/Clase 01/);assert.match(html,/href="\/mexico"/);assert.match(html,/51 clases/);assert.match(html,/data-curriculum-order="100"/);
  assert.doesNotMatch(html,/SORPRÉNDEME|Sorpréndeme/);
  assert.doesNotMatch(html,/Promoción de lanzamiento|(?:US\$|\$)\s*(?:7\.49|14\.99)|library-access-dialog/);
  assert.doesNotMatch(html,/<meta[^>]*name="codex-preview"/);
@@ -60,7 +60,7 @@ test('public images and the vinext optimizer return inline image MIME types',asy
 test('lesson cards expose real links and explain view results versus the complete catalog',async()=>{
  const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/class="card-hitarea" href="\/acceso\?returnTo=/);assert.match(html,/class="card-hitarea" href="\/el-hotel-de-lo-imposible"/);
- assert.match(html,/82(?:<!-- -->|\s)+resultados/);assert.match(html,/111(?:<!-- -->|\s)+clases totales/);
+ assert.match(html,/84(?:<!-- -->|\s)+resultados/);assert.match(html,/113(?:<!-- -->|\s)+clases totales/);
  assert.match(html,/No está afiliado ni respaldado por el Instituto Cervantes/);
 });
 

@@ -58,7 +58,7 @@ test('home product samples are unique, routable and free by central access metad
 
 test('every grammar lesson has one valid global curriculum position and earlier prerequisites',()=>{
  const grammar=p.lessons.filter(l=>l.category==='Gramática').sort((a,b)=>a.curriculumSequence-b.curriculumSequence);
- assert.equal(grammar.length,49);
+ assert.equal(grammar.length,51);
  assert.deepEqual(grammar.map(l=>l.curriculumSequence),Array.from({length:grammar.length},(_,i)=>i+1));
  assert.equal(new Set(grammar.map(l=>l.curriculumOrder)).size,grammar.length);
  const sequenceById=new Map(grammar.map(l=>[l.id,l.curriculumSequence]));

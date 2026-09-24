@@ -64,3 +64,23 @@ export function ReferentFinder({ left, connector, right, label = "Buscador de re
     </div>
   );
 }
+
+export function HypothesisSwitch({ left, connector, right, label = "Cambio entre condición real e hipotética" }: ConnectorProps) {
+  return (
+    <div className="sx-hypothesis-switch" aria-label={label}>
+      <span className="sx-scenario-state"><small>ESCENARIO</small>{left}</span>
+      <span className="sx-world-switch"><small>REAL ↔ HIPOTÉTICO</small>{connector}</span>
+      <span className="sx-imagined-result"><small>CONSECUENCIA</small>{right}</span>
+    </div>
+  );
+}
+
+export function EvidenceSwitch({ left, connector, right, label = "Cambio de estatus de la evidencia" }: ConnectorProps) {
+  return (
+    <div className="sx-evidence-switch" aria-label={label}>
+      <span className="sx-objection"><small>OBJECIÓN</small>{left}</span>
+      <span className="sx-evidence-status"><small>ESTATUS / MODO</small>{connector}</span>
+      <span className="sx-position"><small>POSICIÓN</small>{right}</span>
+    </div>
+  );
+}
