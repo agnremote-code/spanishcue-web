@@ -7,7 +7,7 @@ type Mode = (typeof usaModes)[number];
 type IdealCategory = "live" | "work" | "vacation" | "eat" | "retire";
 const idealCategories: Array<[IdealCategory, string]> = [["live", "LIVE"], ["work", "WORK"], ["vacation", "VACATION"], ["eat", "EAT"], ["retire", "RETIRE"]];
 
-export function USModeDeck({ active, onOpen, onRandom }: { active: USState; onOpen: (state: USState) => void; onRandom: () => void }) {
+export function USModeDeck({ active, onOpen, onRandom, level }: { level:"A2"|"B1"; active: USState; onOpen: (state: USState) => void; onRandom: () => void }) {
   const [mode, setMode] = useState<Mode>("EXPLORE");
   const [ideal, setIdeal] = useState<Partial<Record<IdealCategory, string>>>({});
   const options = useMemo(() => {
@@ -20,7 +20,7 @@ export function USModeDeck({ active, onOpen, onRandom }: { active: USState; onOp
   };
   return <section className="us50-mode-deck" aria-label="United States conversation modes">
     <nav>{usaModes.map((item) => <button key={item} className={mode === item ? "active" : ""} onClick={() => chooseMode(item)}>{item}</button>)}</nav>
-    {mode === "EXPLORE" && <div className="us50-mode-copy"><b>Choose any of the 50 states.</b><span>Every state opens five zero-knowledge A2 prompts and one optional B1 extension.</span></div>}
+    {mode === "EXPLORE" && <div className="us50-mode-copy"><b>Choose any of the 50 states.</b><span>{level === "A2" ? "Elige lugares, compara planes y explica qué necesitas para tu visita." : "Compara intereses de visitantes y residentes y propone un acuerdo."}</span></div>}
     {mode === "THIS OR THAT" && <div className="us50-mode-challenge"><span>THIS OR THAT</span><h3>{options[0].name} or {options[1].name}?</h3><p>Choose first. Then compare daily routine, weather, distance and free time.</p><div>{options.slice(0, 2).map((state) => <button key={state.code} onClick={() => onOpen(state)}>{state.name}<small>{state.hook.es}</small></button>)}</div></div>}
     {mode === "WHERE WOULD YOU LIVE?" && <div className="us50-mode-challenge"><span>ONE YEAR · THREE OPTIONS</span><h3>Where would you live?</h3><p>Think about work, transport, housing, climate and the kind of weekend you want.</p><div>{options.map((state) => <button key={state.code} onClick={() => onOpen(state)}>{state.name}<small>{state.hook.es}</small></button>)}</div></div>}
     {mode === "YOUR COUNTRY VS USA" && <div className="us50-mode-challenge"><span>PERSONAL COMPARISON</span><h3>{active.name} vs. your country</h3><p>Where is it easier to move around, meet people, rest and plan a weekend? Use your own life as evidence.</p><button onClick={() => onOpen(active)}>OPEN {active.name.toUpperCase()} →</button></div>}
