@@ -75,7 +75,7 @@ export function SpanishCueHero() {
     <section className="sc-hero" id="main-content" tabIndex={-1} aria-labelledby="sc-hero-title">
       <div className="sc-hero-art" aria-hidden="true">
         <img
-          src="/brand/spanishcue-hero-v2.webp"
+          src="/brand/spanishcue-hero-online.webp"
           alt=""
           width="1672"
           height="941"

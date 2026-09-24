@@ -53,8 +53,8 @@ test('the pre-launch Founder reservation works without starting checkout',async(
 });
 
 test('public images and the vinext optimizer return inline image MIME types',async()=>{
- const direct=await fetch(root+'/brand/spanishcue-hero-v2.webp');assert.equal(direct.status,200);assert.match(direct.headers.get('content-type')||'',/^image\/webp/i);assert.notEqual(direct.headers.get('content-disposition'),'attachment');
- const optimized=await fetch(root+'/_vinext/image?url=%2Fbrand%2Fspanishcue-hero-v2.webp&w=640&q=75');assert.equal(optimized.status,200);assert.match(optimized.headers.get('content-type')||'',/^image\//i);assert.notEqual(optimized.headers.get('content-disposition'),'attachment');
+ const direct=await fetch(root+'/brand/spanishcue-hero-online.webp');assert.equal(direct.status,200);assert.match(direct.headers.get('content-type')||'',/^image\/webp/i);assert.notEqual(direct.headers.get('content-disposition'),'attachment');
+ const optimized=await fetch(root+'/_vinext/image?url=%2Fbrand%2Fspanishcue-hero-online.webp&w=640&q=75');assert.equal(optimized.status,200);assert.match(optimized.headers.get('content-type')||'',/^image\//i);assert.notEqual(optimized.headers.get('content-disposition'),'attachment');
 });
 
 test('lesson cards expose real links and explain view results versus the complete catalog',async()=>{
