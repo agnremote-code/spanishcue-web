@@ -26,6 +26,7 @@ import FreeLessonRegistrationGate from "./marketing/FreeLessonRegistrationGate";
 import { audienceFromAccess, primaryCtaFor } from "./marketing/cta-state";
 import CookieConsent from "./privacy/CookieConsent";
 import { isSearchPrivatePath, localizedUrl } from "./seo";
+import { socialPreviewImage, socialPreviewUrl } from "./social-preview";
 
 function safePathname(value: string | null): string {
   if (!value || !value.startsWith("/") || value.startsWith("//")) return "/";
@@ -51,23 +52,20 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: translate(locale, "meta.title"),
-      description: translate(locale, "meta.openGraphDescription"),
+      title: "SPANISHCUE | Teach More. Prep Less.",
+      description: "Ready-to-teach Spanish lessons for tutors. Choose. Open. Teach.",
+      type: "website",
+      siteName: "SPANISHCUE",
       locale: locale === "es" ? "es_ES" : "en_US",
       alternateLocale: locale === "es" ? ["en_US"] : ["es_ES"],
       url: canonical,
-      images: [{
-        url: "/og.png",
-        width: 1731,
-        height: 909,
-        alt: translate(locale, "meta.openGraphAlt"),
-      }],
+      images: [socialPreviewImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: translate(locale, "meta.title"),
-      description: translate(locale, "meta.description"),
-      images: ["/og.png"],
+      title: "SPANISHCUE | Teach More. Prep Less.",
+      description: "Ready-to-teach Spanish lessons for tutors.",
+      images: [socialPreviewUrl],
     },
     icons: {
       icon: "/favicon.svg",
