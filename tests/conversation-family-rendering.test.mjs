@@ -19,7 +19,7 @@ test('every shared engine renders accessible level controls and complete selecte
   ['app/conversation-worlds/ConversationWorldFamily.tsx',{mode:'rules',level:'B1'},'tu-vida-con-una-regla-absurda','B1'],
   ['app/choose-conversation/page.tsx',{variant:'starter'},'lets-talk','A1'],
   ['app/preguntas-prohibidas-a2/page.tsx',{initialLevel:'B1'},'preguntas-prohibidas','B1'],
-  ['app/reino-unido-en-relieve/page.tsx',{},'reino-unido-en-relieve','A2'],
+  ['app/reino-unido-en-relieve/page.tsx',{},'reino-unido-en-relieve','B1'],
   ['app/australia-en-movimiento/page.tsx',{},'australia-en-movimiento','A2'],
   ['app/estados-unidos-a2-b1/page.tsx',{},'estados-unidos-a2-b1','A2'],
  ]){

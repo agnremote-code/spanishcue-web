@@ -18,10 +18,10 @@ if(existsSync(path)) {
   }
  });
 }
-test('country tracks select actual A2/B1 content without changing shared scenes',async()=>{
+test('country tracks select actual level content without changing shared scenes',async()=>{
  const r=await build({stdin:{contents:'export {areas} from "./app/reino-unido-en-relieve/data";export {questionsForUKArea} from "./app/reino-unido-en-relieve/variants";export {regions} from "./app/australia-en-movimiento/data";export {states} from "./app/estados-unidos-a2-b1/state-data";',resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});
  const p=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
- for(const area of p.areas){const a2=p.questionsForUKArea(area,'A2');const b1=p.questionsForUKArea(area,'B1');assert.equal(a2.length,4);assert.equal(b1.length,8);assert.equal(b1,area.questions);assert.ok(a2.every(q=>!b1.some(other=>q.es===other.es)));}
+ for(const area of p.areas){const a1=p.questionsForUKArea(area,'A1');const b1=p.questionsForUKArea(area,'B1');assert.equal(a1.length,8);assert.equal(b1.length,12);assert.ok(area.questions.every(q=>b1.some(other=>q.es===other.es)));assert.ok(a1.every(q=>!b1.some(other=>q.es===other.es)));}
  for(const region of p.regions){assert.equal(region.questions.filter(q=>q.level==='A2').length,4);assert.equal(region.questions.filter(q=>q.level==='B1').length,2);}
  for(const state of p.states){assert.equal(state.a2Questions.length,5);assert.ok(!state.a2Questions.some(q=>q.es===state.b1Extension.es));}
 });
