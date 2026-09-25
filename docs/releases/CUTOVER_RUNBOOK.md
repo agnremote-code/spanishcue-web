@@ -19,9 +19,9 @@ SHA.
 | How Sites binds the custom domain, and how to detach it | Sites release owner | Must be detachable without DNS downtime |
 | Production `compatibility_date` and bindings (`IMAGES`?) | Sites release owner | Build config says `2026-05-15`; no `IMAGES` in build output; production behavior matches no binding |
 | Production env set (revision 47) **names and non-secret values** | Sites release owner | Secret values are re-issued from provider consoles, not exported |
-| Write-freeze flag | Claude (code PR) | Mutating endpoints and webhooks return retryable 503 while on |
+| Write-freeze flag | **Done** (`worker/write-freeze.ts`, var `SPANISHCUE_WRITE_FREEZE=true`) | Non-GET `/api/*` returns 503 `WRITE_FREEZE` with `Retry-After: 300`; lesson-progress saves are skipped; pages and reads work. New sign-ins (`POST /api/auth/session`) are also paused |
 | Production API token + GitHub `production` environment with required reviewer | Owner | Workers Scripts:Edit, D1:Edit on the owner account; Workers Routes:Edit / Zone read on `spanishcue.com` only |
-| Production deploy workflow | Claude (PR) | Derived from `deploy-staging.yml`, exact SHA, `production` environment, called from the merge job only after cutover |
+| Production deploy workflow | **Done, inactive** (`.github/workflows/deploy-production.yml`) | Manual only; repo variable `OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true` + `production` environment reviewer; typed confirmation; modes `inert` / `cutover` / `release`; `release` refuses while Sites `enabled` is not `false`; smoke + auto rollback |
 
 ## 1. Rehearse (repeat until clean, no production impact)
 
@@ -62,22 +62,55 @@ data import but must not double-count imported rows (import
 ## 4. Final export and import
 
 1. Sites owner takes the final export (§A) after the freeze is confirmed, and reports per-table counts and the ledger.
-2. Create `spanishcue-production` D1 in the owner account. Apply `drizzle/0000`–`0009`. Write the ledger rows in Wrangler format (`d1_migrations`) so no migration re-runs.
+2. Use the existing empty `spanishcue-production` D1 (`343ac454-a056-4c40-a893-f8be572665a6`) in the owner account; if it is not empty, stop. Apply `drizzle/0000`–`0009`. Write the ledger rows in Wrangler format (`d1_migrations`) so no migration re-runs.
 3. Import data only, in the foreign-key order from `docs/BACKEND_MIGRATION.md`.
 4. Run §2 on the new DB; every count must match the export report. Zero mismatches or stop.
 5. Record a D1 Time Travel bookmark for the new DB.
 
 ## 5. Secrets and configuration (owner, outside chat)
 
-`wrangler secret put --name spanishcue` (or dashboard) for: `FIREBASE_ADMIN_SERVICE_ACCOUNT_B64`, `RESEND_API_KEY`, `PAYPAL_LIVE_CLIENT_SECRET`, `PAYPAL_SANDBOX_CLIENT_SECRET`, `PADDLE_API_KEY`, `PADDLE_WEBHOOK_SECRET`, `LEGAL_OPERATOR_JSON`. Plain vars copied exactly from the Sites env set: `PAYPAL_ENV`, `PAYPAL_LIVE_*` IDs, `PAYPAL_PUBLIC_CHECKOUT_ENABLED`, `PAYPAL_LIVE_SUPERVISED_USER_ID`, `PADDLE_CLIENT_TOKEN`, `PADDLE_PRICE_ID`, `FOUNDER_*`, `ANALYTICS_CONVERSIONS_ENABLED`, `CHESPANISH_*`; build-time `NEXT_PUBLIC_GA4_MEASUREMENT_ID`. Keep the freeze flag ON in the new config.
+Classification of every production setting after Sites. Values are never
+committed or pasted into chat.
+
+| Setting | Kind | Status | How it gets to the new Worker |
+|---|---|---|---|
+| `FIREBASE_ADMIN_SERVICE_ACCOUNT_B64` | secret | MUST BE RE-ISSUED | Owner creates a new key (Firebase console → Project settings → Service accounts → Generate new private key), base64-encodes it, `wrangler secret put` / dashboard |
+| Firebase authorized domains | provider config | ALREADY AVAILABLE | `spanishcue.com` already authorized; no change |
+| Firebase web config | public, in code | ALREADY AVAILABLE | `app/firebase-config.ts` |
+| `PAYPAL_ENV` | var | CAN BE MIGRATED AUTOMATICALLY | `PRODUCTION_VARS_JSON` (value from Sites env set) |
+| `PAYPAL_LIVE_CLIENT_ID`, `PAYPAL_LIVE_PRODUCT_ID`, `PAYPAL_LIVE_FOUNDER_PLAN_ID`, `PAYPAL_LIVE_WEBHOOK_ID` | vars (identifiers) | MUST BE ENTERED BY OWNER | Copy from PayPal Developer Dashboard (Live app, product, plan, webhook) into `PRODUCTION_VARS_JSON` |
+| `PAYPAL_LIVE_CLIENT_SECRET` | secret | MUST BE ENTERED BY OWNER | PayPal Developer Dashboard → Live app → secret (add a second secret if offered, so Sites keeps working) |
+| PayPal webhook destination | provider config | ALREADY AVAILABLE | `https://spanishcue.com/api/billing/webhook`, unchanged by cutover |
+| `PAYPAL_PUBLIC_CHECKOUT_ENABLED`, `PAYPAL_LIVE_SUPERVISED_USER_ID` | vars | CAN BE MIGRATED AUTOMATICALLY | Values from Sites env set |
+| `PAYPAL_SANDBOX_*` | vars + secret | NOT REQUIRED in production unless Sandbox testing on production is wanted | — |
+| `PADDLE_API_KEY`, `PADDLE_WEBHOOK_SECRET` | secrets | MUST BE RE-ISSUED | Paddle → Developer tools → Authentication (new API key); Notifications → destination secret. Create new, keep old active until step 9 |
+| `PADDLE_CLIENT_TOKEN`, `PADDLE_PRICE_ID` | vars | MUST BE ENTERED BY OWNER | Paddle dashboard → client-side token; catalog price ID |
+| Paddle webhook destination | provider config | ALREADY AVAILABLE | `https://spanishcue.com/api/billing/paddle/webhook`, unchanged |
+| `RESEND_API_KEY` | secret | MUST BE RE-ISSUED | Resend → API Keys → create a sending-only key for `spanishcue.com` |
+| Resend sender/domain | provider config | ALREADY AVAILABLE | `verify@spanishcue.com`; domain verified |
+| `NEXT_PUBLIC_GA4_MEASUREMENT_ID` | build-time + runtime var | MUST BE ENTERED BY OWNER | GA4 → Admin → Data streams → Measurement ID. Note: GA4 reported no data in 28 days; confirm whether production sets it at all |
+| `ANALYTICS_CONVERSIONS_ENABLED` | var | CAN BE MIGRATED AUTOMATICALLY | Value from Sites env set |
+| `FOUNDER_OFFER_ENABLED`, `FOUNDER_OFFER_CODE`, `FOUNDER_LIMIT`, `FOUNDER_PRICE_USD` | vars | CAN BE MIGRATED AUTOMATICALLY | Values from Sites env set (code defaults otherwise) |
+| `CHESPANISH_OWNER_UID`, `CHESPANISH_OWNER_EMAIL`, `CHESPANISH_APPLE_AUTH_ENABLED` | vars | CAN BE MIGRATED AUTOMATICALLY | Values from Sites env set |
+| `LEGAL_OPERATOR_JSON` | secret-like | MUST BE ENTERED BY OWNER | Owner's legal operator JSON; `wrangler secret put` |
+| `SPANISHCUE_WRITE_FREEZE` | var | Set `true` for the cutover window only | `PRODUCTION_VARS_JSON` |
+
+GitHub `production` environment (owner creates; required reviewer = owner):
+secret `CLOUDFLARE_API_TOKEN_PRODUCTION` (Account · Workers Scripts · Edit and
+Account · D1 · Edit on the owner account, plus Zone · Workers Routes · Edit on
+`spanishcue.com` only), variables `CLOUDFLARE_ACCOUNT_ID`, `PRODUCTION_D1_ID`,
+`PRODUCTION_VARS_JSON` (JSON object of the plain vars above),
+`PRODUCTION_COMPATIBILITY_DATE`, `PRODUCTION_WORKERS_DEV_URL`; repository
+variable `OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true` only when the cutover
+starts.
 
 Rotation order: create new keys where the provider allows two active keys, so Sites keeps working until the switch; revoke old keys only after step 9.
 
 ## 6. Deploy and switch
 
-1. Deploy the exact SHA running on Sites to Worker `spanishcue` (production workflow), **without** a route. Smoke it on its workers.dev URL.
+1. Run "Deploy Production (Cloudflare, owner-authorized)" with `mode: inert`, the exact SHA running on Sites and `confirm: deploy <sha>`. It deploys Worker `spanishcue` on workers.dev only and smokes it.
 2. Sites owner detaches the `spanishcue.com` custom domain from Sites (mechanism per §0).
-3. Attach `spanishcue.com` (and `www.spanishcue.com`, which today 308-redirects to the apex) as Worker custom domains. Preserve every DNS record listed in `CLOUDFLARE_MIGRATION_PLAN.md` (Search Console TXT, `firebase=` TXT, SPF, Firebase DKIM CNAMEs, Resend DKIM/SPF/MX, DMARC).
+3. Run the same workflow with `mode: cutover` and `confirm: CUTOVER spanishcue.com <sha>`: it attaches `spanishcue.com` and `www.spanishcue.com` (which 308-redirects to the apex) as Worker custom domains and turns workers.dev off. Preserve every DNS record listed in `CLOUDFLARE_MIGRATION_PLAN.md` (Search Console TXT, `firebase=` TXT, SPF, Firebase DKIM CNAMEs, Resend DKIM/SPF/MX, DMARC).
 4. Run `production-smoke.mjs` against `https://spanishcue.com`, and check `cf-ray`/response headers come from the new Worker.
 
 ## 7. Webhooks and providers
@@ -96,7 +129,7 @@ Before unfreezing, verify read-only: owner account resolves to `full`; the found
 Only after production is healthy on Cloudflare for an agreed period, including one successful release and one rollback drill through the new workflow:
 
 1. Sites owner sets `state.json` `enabled: false` via its normal compare-and-swap.
-2. Merge the PR that enables the production deploy job in `CI + Auto Merge` and updates `AGENTS.md`, `CLAUDE.md` and `SITES_RELEASE.md`, so there is still exactly one deployer.
+2. Merge the PR that updates `AGENTS.md`, `CLAUDE.md` and `SITES_RELEASE.md` to name `deploy-production.yml` (`mode: release`) as the only production deployer. `release` mode refuses to run until `state.json` says `enabled: false`.
 3. Keep the Sites deployment idle (not deleted) as a code-level fallback.
 
 ## 10. Rollback
@@ -106,15 +139,28 @@ Only after production is healthy on Cloudflare for an agreed period, including o
 - After 8: code rollback via `wrangler rollback` on the new Worker (same smoke). Host rollback to Sites requires replaying writes made since unfreeze; treat as incident.
 - Never run SQL rollback; use D1 Time Travel only with explicit owner authorization.
 
-## A. Request to send to the Sites release owner
+## A. Request to send to the Sites release owner (single consolidated request)
 
-> Please produce a read-only export of the SPANISHCUE production D1 (Sites project `appgprj_6a83ba10b0c481919060fc089d581233`, binding `DB`). Do not modify the database, schema, migration ledger or environment.
+> SPANISHCUE is preparing to move production from OpenAI Sites to an owner-controlled Cloudflare account. This request is **read-only**. Do not deploy, modify the database, schema, migration ledger, environment set, secrets, custom domain or `automation/sites-release-state`. Sites remains the production deployer until the owner says otherwise.
 >
-> Deliver:
-> 1. A full SQL dump (schema and data) of every table, including the table the platform uses to record applied migrations, with its exact name and rows.
-> 2. Per-table row counts taken in the same transaction/snapshot as the dump.
-> 3. The list of applied migrations and how Sites records them (expected: 0000–0009 through `0009_glossy_mariko_yashida`).
-> 4. The production Worker's `compatibility_date`, compatibility flags and bindings (confirm whether `IMAGES` is bound), and how the `spanishcue.com` custom domain is attached and can be detached.
-> 5. The **names** (not values) of every variable and secret in environment set revision 47, and the values of non-secret plain variables.
+> Sites project `appgprj_6a83ba10b0c481919060fc089d581233`, D1 binding `DB`, production v176 (source `ae4bfc50b39f95432a9c3c20477d25fbd6ca523f`) or the current healthy version.
 >
-> Deliver the files through a private channel to the owner only (not GitHub, not a public URL). This first export is a rehearsal; a final export will be requested later during a write freeze.
+> Please deliver, as files, to the owner only (private channel; not GitHub, not a public URL):
+>
+> 1. A complete SQL dump of the production D1 (schema and all data), taken from one consistent snapshot.
+> 2. The migration ledger: the exact table Sites uses to record applied migrations, its schema and all rows (expected 0000–0009, last `0009_glossy_mariko_yashida`).
+> 3. The list of all tables.
+> 4. Row counts for every table, from the same snapshot as the dump.
+> 5. All index, trigger and view definitions (`SELECT type, name, tbl_name, sql FROM sqlite_master`).
+> 6. The Worker `compatibility_date` and compatibility flags used in production.
+> 7. Every Worker binding name and type (D1, assets, Images, any other).
+> 8. Every production plain-variable **name**, with values for the non-secret ones.
+> 9. Every production secret **name** (no values; they will be re-issued in the provider consoles).
+> 10. The current custom domain / route configuration for `spanishcue.com` and `www.spanishcue.com`, and the supported way to detach it later.
+> 11. Whether an `IMAGES` (Cloudflare Images) binding is attached.
+> 12. The current production version ID and deployment ID.
+> 13. The previous healthy version ID.
+> 14. The current `automation/sites-release-state` `state.json` values relevant to releases (enabled, status, healthy, previous), and confirmation that none of this changes it.
+> 15. Any OpenAI-specific packaging or configuration that must be replaced outside Sites (for example `.openai/hosting.json`, `dist/.openai`, source-branch mechanics, the backup ref `refs/tags/production-v161-preserved` and source `c49bd60`).
+>
+> This first export is a rehearsal. A final export will be requested later during a short write freeze.

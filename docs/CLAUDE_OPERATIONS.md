@@ -156,10 +156,11 @@ traffic. IDs are identifiers, not secrets.
 | Resource | Value | State |
 |---|---|---|
 | D1 database | `spanishcue-staging`, id `23fe3c11-85f7-48e1-9dd0-d508893625c9`, region ENAM | Schema from `drizzle/0000`–`0009`; verified identical (17 tables, 31 indexes, 1 trigger) to a local build of `drizzle/`. `d1_migrations` records all 10 files in Wrangler's format, so `wrangler d1 migrations apply` will not re-run them. **No data** |
-| Staging Worker | `spanishcue-staging` on workers.dev — **ready, not deployed** | `.github/workflows/deploy-staging.yml` + `scripts/prepare-staging-worker-config.mjs`; blocked only on GitHub environment `staging` secret `CLOUDFLARE_API_TOKEN_STAGING` and variable `CLOUDFLARE_ACCOUNT_ID` (`docs/releases/STAGING.md`). Local run of the exact staging config: smoke 10/10, 204/204 route statuses identical to production v176 |
+| Staging Worker | `spanishcue-staging`, `https://spanishcue-staging.agnremote.workers.dev` — **deployed and healthy** | `deploy-staging.yml` passes end to end (deploy, in-Actions smoke, rollback drill). 207/207 route parity with production; staging-only `noindex`. See `docs/releases/STAGING.md` |
 | Routes / custom domain | none | None will be added to `spanishcue.com` |
+| Production D1 target | `spanishcue-production`, id `343ac454-a056-4c40-a893-f8be572665a6`, region ENAM | **Empty, unbound, inert.** No schema yet: schema and data are loaded only by `CUTOVER_RUNBOOK.md` §4 from the Sites export. Set as GitHub `production` environment variable `PRODUCTION_D1_ID` when that environment is created |
 
-Cutover procedure: `docs/releases/CUTOVER_RUNBOOK.md` (not executed).
+Cutover procedure: `docs/releases/CUTOVER_RUNBOOK.md` (not executed). Prepared, inactive: `.github/workflows/deploy-production.yml`, `scripts/prepare-production-worker-config.mjs`, write freeze `worker/write-freeze.ts`.
 
 Not possible from this account: zone, DNS, routes and the production Worker.
 The `spanishcue.com` zone is served by Cloudflare nameservers but is not in

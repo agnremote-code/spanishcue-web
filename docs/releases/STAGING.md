@@ -82,3 +82,16 @@ analytics, no Firebase Admin (login fails closed), no email, empty data.
 | Date | SHA | Run | Result |
 |---|---|---|---|
 | 2026-09-25 | `54403d764599ee6e1f48ea9fdc55b0fb1731058b` | Actions run 36141255109 | Script uploaded and serving (Worker id `0c097e685e27451c833d8fb43861ce94`, bindings `DB`=spanishcue-staging, `ASSETS`, staging vars). The step then failed on the workers.dev subdomain call (token scope), so the workflow's smoke and rollback steps were skipped. Manual checks against the live URL: smoke 10/10, 204/204 route statuses and 26/26 titles identical to production v176, founder-status `sandbox`/`unconfigured`/checkout unavailable, no GA tag, no Paddle.js, private audio 403, canonical links point to `https://spanishcue.com` |
+| 2026-09-25 | `645cc1377fb605c4ffc3c4dac951a7fe4685ffc8` | 36156792790 | Same token-scope failure with `wrangler deploy`; fixed by PR #64 (versions upload + deploy) |
+| 2026-09-25 | `231acb915e78747b89e4b101038dadb5a587abf0` | 36157550055 | **Pass end to end**: version `07d4289b-1ec5-4ead-9eba-f64a33a68cec`, in-Actions smoke 10/10, noindex and Sandbox assertions |
+| 2026-09-25 | rollback | 36157859377 | **Pass**: previous version restored (noindex header absent, 200) |
+| 2026-09-25 | `231acb915e78747b89e4b101038dadb5a587abf0` | 36157991155 | **Pass** (redeploy after rollback drill). Manual: 207/207 route statuses identical to production, `X-Robots-Tag: noindex` on 207/207 staging responses and absent on production, founder-status Sandbox/unconfigured, no GA tag, no Paddle.js, invalid session rejected |
+| 2026-09-25 | `248934d49d930d96f3249d82a1452ccec45f2ae3` | 36159217378 | **Pass** (includes the write-freeze code, freeze off): smoke 10/10; `POST /api/billing/claim/bind` 401 as normal |
+
+Not tested on staging (owner decisions): signed-in flows need the staging
+hostname in Firebase authorized domains (shared production Firebase project)
+and a staging `FIREBASE_ADMIN_SERVICE_ACCOUNT_B64`; PayPal Sandbox checkout
+needs `PAYPAL_SANDBOX_CLIENT_ID`, `PAYPAL_SANDBOX_CLIENT_SECRET`,
+`PAYPAL_SANDBOX_PRODUCT_ID`, `PAYPAL_SANDBOX_FOUNDER_PLAN_ID`,
+`PAYPAL_SANDBOX_WEBHOOK_ID` and `PAYPAL_PUBLIC_CHECKOUT_ENABLED=true` on
+staging only. Paddle stays off (Live-only in code). Resend stays off.

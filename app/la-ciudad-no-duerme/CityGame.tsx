@@ -131,6 +131,12 @@ function CityExperience() {
         motor.current.target = null;
         motor.current.destination = null;
         motor.current.direction = Number(held.current.has('ArrowRight')) - Number(held.current.has('ArrowLeft'));
+        // A quick tap may begin and end between two animation frames.
+        if (!event.repeat && motor.current.direction) {
+          const firstStep = stepMotion(motor.current, 1 / 60);
+          motor.current.x = firstStep.x;
+          setActor({ x: firstStep.x, moving: firstStep.moving, facing: firstStep.facing });
+        }
       } else if ((event.key === 'Enter' || event.key === ' ') && !event.repeat) {
         event.preventDefault();
         const closest = nearestStop(motor.current.x, stops, 155);
@@ -160,6 +166,9 @@ function CityExperience() {
     stage.current?.focus({ preventScroll: true });
     event.currentTarget.setPointerCapture(event.pointerId);
     motor.current.direction = direction;
+    const firstStep = stepMotion(motor.current, 1 / 60);
+    motor.current.x = firstStep.x;
+    setActor({ x: firstStep.x, moving: firstStep.moving, facing: firstStep.facing });
   };
 
   const choose = (next: Choice) => {
@@ -193,7 +202,6 @@ function CityExperience() {
     <div ref={stage} className={`city-stage city-view-${view}`} tabIndex={0} aria-label="Calle explorable. Flechas para caminar. Enter o espacio para interactuar." data-player-x={Math.round(actor.x)} data-moving={actor.moving}>
       <div className={`city-world${view === 'focus' ? ' city-world-focused' : ''}`} aria-hidden={view !== 'street'} inert={view !== 'street' || guide || map} style={{ transform: `translate(${-offset}px, ${worldTop}px) scale(${scale})`, width: WORLD.width, height: WORLD.height }}>
         {/* The authored panorama provides depth; player, lighting and road are independent planes. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="city-panorama" src={asset('district')} width={2172} height={724} alt="Un barrio al anochecer: auto rojo, bar, parada, almacén, pasaje, edificio, taxi, plaza, local cerrado y esquina." draggable={false} onError={() => setMissingArt(true)} />
         <div className="city-window-glow" aria-hidden="true" />
         {stops.map((stop, index) => <button
@@ -201,7 +209,7 @@ function CityExperience() {
           className={`city-hotspot${nearby?.id === stop.id ? ' is-near' : ''}${visited.includes(stop.id) ? ' is-visited' : ''}`}
           style={{ left: stop.x, top: stop.y, '--pin-scale': 1 / scale } as CSSProperties}
           onClick={() => travelTo(stop.id)}
-          onFocus={() => { /* Focusing keeps navigation native; activating starts the walk. */ }}
+          tabIndex={stop.x * scale - offset > 40 && stop.x * scale - offset < size.width - 40 ? 0 : -1}
           aria-label={`Ir a ${stop.name}${visited.includes(stop.id) ? ', ya conversado' : ''}`}
           title={stop.name}
         ><span className="city-hotspot-label">{stop.sign}</span><span className="city-pin">{String(index + 1).padStart(2, '0')}</span></button>)}
@@ -253,6 +261,7 @@ function CityExperience() {
 
       {view === 'ending' && <section className="city-finale" aria-labelledby="city-final-title">
         <div className="city-finale-image" style={{ backgroundImage: `url(${asset(endingPlace === 'bar' ? 'bar' : 'rooftop')})` }} />
+        {endingPlace === 'rooftop' && <div className="city-finale-actor" role="img" aria-label="La mascota de SPANISHCUE mira la ciudad desde la terraza" />}
         <button className="city-scene-back" onClick={returnToStreet}>← VOLVER A LA CIUDAD</button>
         <div className="city-finale-copy">
           <div className="city-kicker">LA ÚLTIMA PARADA</div>

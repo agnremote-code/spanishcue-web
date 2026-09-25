@@ -1,0 +1,203 @@
+name: Deploy Production (Cloudflare, owner-authorized)
+
+# Owner-controlled PRODUCTION on Cloudflare. NOT ACTIVE until the owner sets
+# the repository variable OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true AND
+# configures the GitHub environment `production` (required reviewer,
+# CLOUDFLARE_API_TOKEN_PRODUCTION, CLOUDFLARE_ACCOUNT_ID, PRODUCTION_D1_ID,
+# PRODUCTION_VARS_JSON).
+#
+# Never triggered by pushes or merges. Every run is a manual dispatch with an
+# exact SHA on main plus a typed confirmation, then a reviewer approval on the
+# `production` environment.
+#
+# Modes:
+#   inert   - deploys Worker `spanishcue` on workers.dev only. No spanishcue.com
+#             traffic. Allowed while OpenAI Sites is still the production
+#             deployer (cutover runbook step 6.1).
+#   cutover - also attaches spanishcue.com + www as custom domains. Requires the
+#             typed confirmation "CUTOVER spanishcue.com <sha>" and the Sites
+#             release state to be idle. Only CUTOVER_RUNBOOK.md step 6.3 uses it.
+#   release - normal release after cutover. Requires Sites to be disabled
+#             (state.json enabled=false), so there is exactly one deployer.
+# This workflow never applies D1 migrations.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: deploy or rollback
+        required: true
+        default: deploy
+        type: choice
+        options: [deploy, rollback]
+      mode:
+        description: inert, cutover or release
+        required: true
+        default: inert
+        type: choice
+        options: [inert, cutover, release]
+      sha:
+        description: Exact 40-character SHA already on main
+        required: false
+      confirm:
+        description: 'Type "deploy <sha>" (inert/release), "CUTOVER spanishcue.com <sha>" (cutover) or "rollback" (rollback)'
+        required: true
+      version_id:
+        description: Worker version ID to restore (rollback only; empty = previous version)
+        required: false
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  production:
+    if: vars.OWNER_CLOUDFLARE_PRODUCTION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: production
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ACTION: ${{ inputs.action }}
+      MODE: ${{ inputs.mode }}
+      SHA: ${{ inputs.sha }}
+      CONFIRM: ${{ inputs.confirm }}
+      VERSION_ID: ${{ inputs.version_id }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_PRODUCTION }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      PRODUCTION_D1_ID: ${{ vars.PRODUCTION_D1_ID }}
+      PRODUCTION_VARS_JSON: ${{ vars.PRODUCTION_VARS_JSON }}
+      PRODUCTION_COMPATIBILITY_DATE: ${{ vars.PRODUCTION_COMPATIBILITY_DATE }}
+      PRODUCTION_WORKERS_DEV_URL: ${{ vars.PRODUCTION_WORKERS_DEV_URL }}
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - name: Require production configuration
+        run: |
+          for name in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID PRODUCTION_D1_ID; do
+            if [ -z "${!name}" ]; then echo "::error::$name is not configured in the 'production' environment."; exit 1; fi
+          done
+
+      - name: Validate inputs and typed confirmation
+        run: |
+          if [ "$ACTION" = "rollback" ]; then
+            [ "$CONFIRM" = "rollback" ] || { echo "::error::Type exactly: rollback"; exit 1; }
+            exit 0
+          fi
+          [[ "$SHA" =~ ^[a-f0-9]{40}$ ]] || { echo "::error::sha must be a full 40-character SHA"; exit 1; }
+          if [ "$MODE" = "cutover" ]; then
+            [ "$CONFIRM" = "CUTOVER spanishcue.com $SHA" ] || { echo "::error::Type exactly: CUTOVER spanishcue.com <sha>"; exit 1; }
+          else
+            [ "$CONFIRM" = "deploy $SHA" ] || { echo "::error::Type exactly: deploy <sha>"; exit 1; }
+          fi
+
+      - name: Enforce a single production deployer
+        run: |
+          STATE="$(gh api "repos/${GITHUB_REPOSITORY}/contents/state.json?ref=automation/sites-release-state" --jq '.content' | base64 --decode)"
+          ENABLED="$(echo "$STATE" | jq -r '.enabled')"
+          STATUS="$(echo "$STATE" | jq -r '.status')"
+          echo "Sites release controller: enabled=$ENABLED status=$STATUS"
+          if [ "$STATUS" != "idle" ]; then echo "::error::A Sites release is in progress; never deploy over it."; exit 1; fi
+          if [ "$MODE" = "release" ] && [ "$ENABLED" != "false" ]; then
+            echo "::error::Sites is still the production deployer. 'release' mode requires state.json enabled=false (CUTOVER_RUNBOOK.md step 9)."
+            exit 1
+          fi
+          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/automation/merge-lock" >/dev/null 2>&1; then
+            echo "::error::A merge is in progress (automation/merge-lock). Retry after it finishes."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.action == 'deploy' && inputs.sha || 'main' }}
+          fetch-depth: 0
+
+      - name: Require SHA to be on main and CI-verified
+        if: inputs.action == 'deploy'
+        run: |
+          git fetch origin main
+          git merge-base --is-ancestor "$SHA" origin/main
+          FAILED="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${SHA}/check-runs" --jq '[.check_runs[] | select(.conclusion == "failure" or .conclusion == "cancelled")] | length')"
+          [ "$FAILED" = "0" ] || { echo "::error::SHA has failed or cancelled checks."; exit 1; }
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22.19.0"
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build and validate exact SHA
+        if: inputs.action == 'deploy'
+        run: |
+          npm run build
+          npm run validate:artifact
+
+      - name: Rewrite build config for production
+        if: inputs.action == 'deploy'
+        env:
+          ATTACH_CUSTOM_DOMAIN: ${{ inputs.mode != 'inert' && 'true' || 'false' }}
+        run: node scripts/prepare-production-worker-config.mjs dist/server/wrangler.json
+
+      - name: Record current production version
+        if: inputs.action == 'deploy'
+        id: previous
+        run: |
+          if npx wrangler deployments list --name spanishcue --json > previous.json 2>/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy production Worker
+        if: inputs.action == 'deploy'
+        id: deploy
+        run: |
+          if [ "$MODE" = "inert" ]; then
+            npx wrangler versions upload --config dist/server/wrangler.json --tag "${SHA:0:12}" --message "production ${SHA}" | tee upload.log
+            VERSION="$(grep -oiE 'Worker Version ID: [0-9a-f-]{36}' upload.log | head -n 1 | awk '{print $4}')"
+            test -n "$VERSION"
+            npx wrangler versions deploy "${VERSION}@100%" --name spanishcue --message "production ${SHA}" --yes
+            ORIGIN="$PRODUCTION_WORKERS_DEV_URL"
+          else
+            # Custom domains are managed by `wrangler deploy` (needs Workers
+            # Routes / zone permission on spanishcue.com only).
+            npx wrangler deploy --config dist/server/wrangler.json --message "production ${SHA}"
+            ORIGIN="https://spanishcue.com"
+          fi
+          test -n "$ORIGIN"
+          echo "origin=$ORIGIN" >> "$GITHUB_OUTPUT"
+          { echo "Mode: $MODE"; echo "Deployed SHA: $SHA"; echo "Origin: $ORIGIN"; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Wait for the new version
+        if: inputs.action == 'deploy'
+        run: sleep 20
+
+      - name: Production smoke
+        if: inputs.action == 'deploy'
+        id: smoke
+        continue-on-error: true
+        env:
+          SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.origin }}
+        run: |
+          node scripts/production-smoke.mjs
+          if curl -sI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'; then
+            echo "::error::Production must not carry the staging noindex header."; exit 1
+          fi
+
+      - name: Roll back after failed smoke
+        if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
+        run: |
+          npx wrangler rollback --name spanishcue --message "auto rollback after failed smoke for ${SHA}" --yes
+          exit 1
+
+      - name: Fail on smoke failure
+        if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure'
+        run: exit 1
+
+      - name: Manual production rollback
+        if: inputs.action == 'rollback'
+        run: npx wrangler rollback ${VERSION_ID:+"$VERSION_ID"} --name spanishcue --message "manual production rollback" --yes
