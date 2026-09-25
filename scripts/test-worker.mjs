@@ -10,6 +10,7 @@ const workerEnv={...process.env,NODE_OPTIONS:[process.env.NODE_OPTIONS,shim].fil
 let server;
 const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});
 try{
+ await run(['--test','tests/urban-city.test.mjs']);
  await run(['--test','tests/firebase-admin-worker.test.mjs']);
  for(const migration of (await readdir('drizzle')).filter(f=>f.endsWith('.sql')).sort())await run([cli,'d1','execute','site-creator-d1','--local','--config',config,'--persist-to',state,'--file',`drizzle/${migration}`]);
  server=spawn(process.execPath,[cli,'dev','--config',config,'--port','0','--ip','127.0.0.1','--local','--persist-to',state],{env:workerEnv,stdio:['ignore','pipe','pipe']});
