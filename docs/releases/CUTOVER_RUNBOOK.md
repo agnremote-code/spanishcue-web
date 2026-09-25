@@ -62,7 +62,7 @@ data import but must not double-count imported rows (import
 ## 4. Final export and import
 
 1. Sites owner takes the final export (§A) after the freeze is confirmed, and reports per-table counts and the ledger.
-2. Create `spanishcue-production` D1 in the owner account. Apply `drizzle/0000`–`0009`. Write the ledger rows in Wrangler format (`d1_migrations`) so no migration re-runs.
+2. Use the existing empty `spanishcue-production` D1 (`343ac454-a056-4c40-a893-f8be572665a6`) in the owner account; if it is not empty, stop. Apply `drizzle/0000`–`0009`. Write the ledger rows in Wrangler format (`d1_migrations`) so no migration re-runs.
 3. Import data only, in the foreign-key order from `docs/BACKEND_MIGRATION.md`.
 4. Run §2 on the new DB; every count must match the export report. Zero mismatches or stop.
 5. Record a D1 Time Travel bookmark for the new DB.
