@@ -20,7 +20,7 @@
     {
       "binding": "DB",
       "database_name": "spanishcue-staging",
-      "database_id": "<staging D1 id>",
+      "database_id": "23fe3c11-85f7-48e1-9dd0-d508893625c9",
       "migrations_dir": "drizzle"
     }
   ],
