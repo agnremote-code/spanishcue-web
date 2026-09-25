@@ -8,6 +8,9 @@ Prepared 2026-09-25 from `main` at `2e8f9b8` and release state at
 `automation/sites-release-state` `aeee684` (production v174, source
 `c18c90d`). Re-read both before acting on anything below.
 
+The Option C inventory and phased plan are in
+`docs/releases/CLOUDFLARE_MIGRATION_PLAN.md` (prepared, not executed).
+
 Evidence levels used below:
 
 - **Repo**: verified from files in this repository.
