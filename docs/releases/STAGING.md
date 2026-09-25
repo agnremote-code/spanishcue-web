@@ -6,7 +6,7 @@ migrations automatically.
 
 | Item | Value |
 |---|---|
-| Worker | `spanishcue-staging` (workers.dev only, no routes, no custom domain) |
+| Worker | `spanishcue-staging` (workers.dev only, no routes, no custom domain), live at `https://spanishcue-staging.agnremote.workers.dev` |
 | D1 | `spanishcue-staging`, id `23fe3c11-85f7-48e1-9dd0-d508893625c9`; migrations `0000`–`0009` applied, ledger in `d1_migrations`, **no data** |
 | Config | Build output `dist/server/wrangler.json`, rewritten by `scripts/prepare-staging-worker-config.mjs`. No source config changes, so the Sites build and `release-policy.mjs classify` are unaffected |
 | Deploy | `.github/workflows/deploy-staging.yml` (manual `workflow_dispatch`, exact SHA on `main`, GitHub environment `staging`) |
@@ -20,6 +20,7 @@ migrations automatically.
    - Permissions: **Account · Workers Scripts · Edit** and **Account · D1 · Edit**.
    - Account Resources: **Include · <that account only>**.
    - Zone Resources: none. The token must not be able to touch `spanishcue.com`.
+   - The Workers permission must be **account-wide**, not "Specified Workers": `wrangler deploy` reads the account-level `/accounts/<id>/workers/subdomain` endpoint to manage the workers.dev route. A per-Worker token uploads the script and then fails with `Authentication error [code: 10000]` (first run, 2026-09-25).
 3. GitHub → `agnremote-code/spanishcue-web` → Settings → Environments → **New environment** `staging`:
    - Environment secrets → Add secret `CLOUDFLARE_API_TOKEN_STAGING` = the token.
    - Environment variables → Add variable `CLOUDFLARE_ACCOUNT_ID` = the account ID (an identifier, not a secret).
@@ -74,3 +75,13 @@ URL after the first deploy.
 
 Expected, intentional differences: billing mode and availability, no
 analytics, no Firebase Admin (login fails closed), no email, empty data.
+
+## Deploy log
+
+| Date | SHA | Run | Result |
+|---|---|---|---|
+| 2026-09-25 | `54403d764599ee6e1f48ea9fdc55b0fb1731058b` | Actions run 36141255109 | Script uploaded and serving (Worker id `0c097e685e27451c833d8fb43861ce94`, bindings `DB`=spanishcue-staging, `ASSETS`, staging vars). The step then failed on the workers.dev subdomain call (token scope), so the workflow's smoke and rollback steps were skipped. Manual checks against the live URL: smoke 10/10, 204/204 route statuses and 26/26 titles identical to production v176, founder-status `sandbox`/`unconfigured`/checkout unavailable, no GA tag, no Paddle.js, private audio 403, canonical links point to `https://spanishcue.com` |
+
+Follow-up: staging serves `robots.txt` identical to production. Canonical
+links point to production, but a `X-Robots-Tag: noindex` for non-production
+hosts would keep workers.dev out of search indexes (code change, separate PR).
