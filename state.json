@@ -493,5 +493,6 @@
   },
   "startedAt": "2026-09-25T06:16:44.974Z",
   "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_aa23f92e805081918832380e27fcbb1a",
-  "candidateVersionNumber": 175
+  "candidateVersionNumber": 175,
+  "candidateDeploymentId": "appgdep_6ab6130fa908819195c4517584363f41"
 }
