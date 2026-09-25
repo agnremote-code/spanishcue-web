@@ -31,6 +31,7 @@ Neither Claude Code nor Codex is a production publisher today. See
 
 ## Multi-agent branch and PR rules
 
+0. **Start from fresh truth.** `origin/main` is the source of truth. Run `git fetch origin` before starting, branch from `origin/main`, and record the base SHA in your first commit message or PR body. Never edit `main` directly, not even for docs.
 1. **Branch names.** Normal work uses `claude/<topic>` or `codex/<topic>`, created from current `origin/main`. One task, one branch, one PR. Add a date suffix (`-YYYYMMDD`) when a topic may recur.
 2. **Reserved prefixes.** `automation/*` belongs to CI and the release controller. `recovery/*` holds forensic preservation refs. Agents never create, push to, rebase, or delete branches under those prefixes in ordinary work.
 3. **Own your prefix.** An agent pushes only to branches under its own prefix. It never pushes to, rebases, or force-updates the other agent's branches, even to fix them. To build on another agent's open work, wait for it to merge, or branch from it under your own prefix and say so in the PR body.
@@ -41,6 +42,23 @@ Neither Claude Code nor Codex is a production publisher today. See
 8. **Merging.** Only `CI + Auto Merge` merges. Agents never click merge, never call the merge API, and never take `automation/merge-lock`.
 9. **After merge.** Verify the merged SHA on `main` before reporting completion. CI deletes the merged branch; do not recreate it.
 10. **Stale branches.** Do not delete branches you did not create. Report stale ones to the owner.
+11. **Stay current before merge.** If `main` moves under an open PR and the PR conflicts, merge `origin/main` into your branch (or rebase your own unshared branch), rerun the relevant checks, and push. The `merge` job re-tests against the newest `main` anyway; a fresh-base failure is yours to fix on the same PR.
+12. **Run the checks.** Run what the change needs locally (`npm test`, `npm run lint`, `npm run validate:artifact`, `npx tsc --noEmit`, `git diff --check`), and report any that could not run (for example Linux-only tooling on macOS). CI on Linux is the canonical result.
+13. **No destructive Git.** Never run `git clean`, `git reset --hard`, `git gc`, `git prune`, `git reflog expire`, a destructive checkout, or a force-update of any shared ref, unless the owner authorizes that exact operation.
+14. **Preserve work remotely.** Agent filesystems and worktrees are ephemeral. Push every coherent checkpoint to your task branch. Never end a session with meaningful work only local.
+15. **Semantic conflicts are not yours to settle.** If your change contradicts another agent's open or recently merged work (not just a textual conflict: a different product decision, a changed contract, a removed route), stop and describe the conflict to the owner. Do not silently overwrite, revert or "reconcile" the other agent's intent.
+
+### Agent lock: evaluated, not added
+
+A repository-level agent lock (a ref or file that one agent must hold before
+working) was considered and rejected:
+
+- the existing controls already serialize what matters: `automation/merge-lock` serializes merges, `automation/sites-release-state` serializes releases, and CI re-tests every PR against the newest `main`;
+- branch prefixes plus the overlap check prevent agents from writing to the same branch;
+- a lock held by a crashed or ended agent session would block the other agent indefinitely, and a time-expiring lock would violate the "never expire a lock based only on elapsed time" rule the release controller relies on.
+
+Revisit only if two agents repeatedly produce conflicting PRs in the same area
+despite rules 5, 6 and 15.
 
 ## Production deployment
 
@@ -48,6 +66,7 @@ There is exactly one canonical deployment mechanism at any time.
 
 - **Current mechanism:** the OpenAI Sites release controller in `docs/releases/SITES_RELEASE.md`. Its save, deploy and rollback steps need native Sites tools that Claude Code and Codex do not have. Agents stop at a verified merged SHA.
 - **Prepared, not active:** a GitHub Actions + Cloudflare deployment described in `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md`. It becomes canonical only after the owner authorizes the cutover in that plan. At that moment the Sites controller is disabled in the same change; the two never run side by side against production.
+- No second, parallel deployment system may be added or enabled without explicit owner approval for that specific system.
 - Adding, enabling or running any other deployment path (a `wrangler deploy` from a laptop, a new workflow that deploys, a manual Sites deploy outside the controller) is forbidden.
 
 ## Secrets

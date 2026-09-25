@@ -1,0 +1,56 @@
+// INACTIVE DRAFT. Not read by Wrangler or Vite from this location.
+// Target: repo-root wrangler.jsonc (migration-sensitive; see MIGRATION_RELEASE.md).
+// Placeholders in <angle brackets> are filled by the owner in Phase 1-2.
+// No secrets belong here: secrets are set with `wrangler secret put` per environment.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spanishcue-staging",
+  "main": "./worker/index.ts",
+  "compatibility_date": "<match current production compatibility_date>",
+  "compatibility_flags": ["nodejs_compat"],
+  "account_id": "<owner Cloudflare account id>",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "assets": {
+    "binding": "ASSETS",
+    // Premium media must always pass Worker authorization.
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "spanishcue-staging",
+      "database_id": "<staging D1 id>",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  // Only if production uses /_vinext/image through Cloudflare Images.
+  "images": { "binding": "IMAGES" },
+  "vars": {
+    "PAYPAL_ENV": "sandbox",
+    "PAYPAL_PUBLIC_CHECKOUT_ENABLED": "false",
+    "FOUNDER_OFFER_ENABLED": "false",
+    "ANALYTICS_CONVERSIONS_ENABLED": "false"
+  },
+  "env": {
+    "production": {
+      "name": "spanishcue",
+      "workers_dev": false,
+      "routes": [
+        { "pattern": "spanishcue.com", "custom_domain": true }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "spanishcue-production",
+          "database_id": "<production D1 id>",
+          "migrations_dir": "drizzle"
+        }
+      ],
+      "images": { "binding": "IMAGES" },
+      // Production non-secret vars are copied exactly from the current Sites
+      // environment set by the owner; they are not guessed here.
+      "vars": {}
+    }
+  }
+}

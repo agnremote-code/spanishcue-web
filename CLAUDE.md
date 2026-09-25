@@ -34,6 +34,36 @@ Core references:
 
 If this file conflicts with `AGENTS.md` or a task-specific release runbook, the stricter repository rule wins.
 
+`docs/CLAUDE_OPERATIONS.md` maps every external service to how Claude can reach it, what it may write, and what still depends on OpenAI Sites. Read it before touching any external service.
+
+## 1a. System architecture in brief
+
+Summary only. The linked documents and the code are authoritative; re-read them before acting.
+
+- **Runtime.** One Cloudflare Worker (`worker/index.ts`, built by vinext/Vite with `@cloudflare/vite-plugin`) serves pages, APIs and static assets (`ASSETS`, `run_worker_first: true`), with one D1 database bound as `DB`. Hosting, D1, secrets and the custom domain are currently provided by OpenAI Sites (`.openai/hosting.json`), not by an owner Cloudflare account.
+- **Auth.** Firebase Auth (project `chespanish-32645`; email/password and Google; Apple is gated by `CHESPANISH_APPLE_AUTH_ENABLED`). The Worker verifies the Firebase token server-side, resolves the stable internal `users.id` through `auth_identities`, and replaces any browser-supplied `x-chespanish-*` headers. Firebase UID is not the account key. See `docs/BACKEND_MIGRATION.md`.
+- **FREE / PRO.** Access is `full` for the owner role or an active `access_grants` row, otherwise `free`. Pages, APIs, private JS chunks and premium media all authorize from server-created headers. Premium media is encrypted per build and served only after authorization. The route/access ledger and tests decide what is FREE; never infer it from family or visual similarity.
+- **Billing.** Product `spanishcue-pro`, USD 15.00 monthly, Founder allocation of at most 1,000 per environment shared by PayPal and Paddle (`docs/billing-contract.md`). PayPal has Sandbox and Live; Paddle is Live-only. Checkout before account creation uses `billing_purchase_claims`. Access comes only from a server-verified settled payment, never from a browser callback or provider approval.
+- **Known access defect (unfixed).** Billing writes grants with `product_code = 'spanishcue-pro'`, but `readAccessBySubject` in `db/accounts.ts` only counts `teacher_library`. Details and the reason it is not a one-line fix are in `docs/CLAUDE_OPERATIONS.md` §5.
+- **Email.** Account verification mail goes through Resend (`RESEND_API_KEY`, sender `verify@spanishcue.com`). Firebase's own mail uses a custom `spanishcue.com` sending domain.
+- **Content.** Collections GRAMÁTICA, CONVERSACIÓN, ESCUCHA and country content. Conversation families share visual engines but each CEFR level is genuinely authored (`docs/conversation-family-authoring.md`). Legacy route IDs and entitlement checks stay authoritative.
+- **Release.** Source reaches `main` only through `CI + Auto Merge`. Production is published only by the OpenAI Sites release controller (`docs/releases/SITES_RELEASE.md`), whose state is in `automation/sites-release-state`. Claude Code cannot save, deploy, roll back or read Worker logs on Sites today.
+
+### Owner-only actions
+
+Claude never does these; the owner does them or explicitly authorizes a specific instance:
+
+- production deploy, rollback, or any Sites release step;
+- entering or rotating secrets, API keys or webhook secrets;
+- DNS, domain, or registrar changes;
+- Paddle, PayPal, Firebase Auth or Resend configuration changes;
+- D1 production writes, migrations, exports or imports;
+- connecting OAuth connectors or signing in to provider accounts;
+- launching, pausing or editing ad campaigns;
+- changing GitHub rulesets, repository settings or Actions secrets.
+
+Never claim production changed unless the authorized release flow published it and its smoke checks were verified.
+
 ## 2. Git discipline — non-negotiable
 
 Never allow hours of meaningful work to exist only in an agent filesystem.
