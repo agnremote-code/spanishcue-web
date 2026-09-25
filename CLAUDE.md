@@ -2,6 +2,10 @@
 
 This file is the permanent operating contract for Claude Code on SPANISHCUE.
 
+Claude Code is the primary development agent. Codex is the secondary agent.
+`AGENTS.md` is the shared authority for both; this file adds Claude-specific
+rules and never relaxes `AGENTS.md`.
+
 ## 1. Authority and startup order
 
 GitHub repository `agnremote-code/spanishcue-web` is canonical.
@@ -26,6 +30,7 @@ Core references:
 - `docs/conversation-family-authoring.md`
 - `docs/conversation-family-migration.md`
 - `docs/CLAUDE_RELEASE_TRANSITION.md` (what Claude Code can and cannot release today)
+- `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md` (prepared, not active, GitHub Actions + Cloudflare deployment)
 
 If this file conflicts with `AGENTS.md` or a task-specific release runbook, the stricter repository rule wins.
 
@@ -35,13 +40,14 @@ Never allow hours of meaningful work to exist only in an agent filesystem.
 
 For every task:
 
-- create one fresh task branch from current canonical `main`;
+- create one fresh task branch from current canonical `main`, named `claude/<topic>` (never `codex/*`, `automation/*` or `recovery/*`);
+- follow the multi-agent branch and PR rules in `AGENTS.md` (own prefix only, overlap check, one open PR per sensitive area);
 - checkpoint coherent progress in logical commits;
 - push each meaningful checkpoint to GitHub;
 - do not leave large completed batches only uncommitted or only in a temporary worktree;
 - open a non-draft PR to `main` when implementation is ready;
 - let repository CI / auto-merge perform the authorized merge flow;
-- never push directly to `main`;
+- never push directly to `main`, and never force-push `main`;
 - never manually merge unless the repository rules are explicitly changed by the owner;
 - verify the merged SHA before reporting implementation complete.
 
@@ -63,7 +69,11 @@ For ordinary source work:
 - do not invent manual deployment shortcuts;
 - do not change environment variables, secrets, domains, Firebase, Paddle, PayPal, D1, or production data unless the task explicitly requires it and the correct runbook authorizes it.
 
+There is exactly one canonical production deployment mechanism. Today it is the Sites release controller.
+
 For Sites publishing, follow `docs/releases/SITES_RELEASE.md`. Its save/deploy/rollback steps require native OpenAI Sites tools that Claude Code does not have; Claude Code stops at a verified merged SHA and the owner routes the release to the Sites release owner. See `docs/CLAUDE_RELEASE_TRANSITION.md`.
+
+The GitHub Actions + Cloudflare path in `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md` is prepared only. Do not add an active deploy workflow, run `wrangler deploy`, create Cloudflare resources, or move DNS until the owner explicitly authorizes a specific phase of that plan.
 
 For any change touching migration-sensitive files, D1 schema/data, Drizzle, bindings, hosting configuration, or migration infrastructure, follow `docs/releases/MIGRATION_RELEASE.md`.
 

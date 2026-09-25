@@ -1,4 +1,12 @@
-# SPANISHCUE delivery rule
+# SPANISHCUE agent rules
+
+This file is the shared authority for every coding agent working on SPANISHCUE.
+Claude Code is the primary development agent. Codex is the secondary agent.
+Both follow this file. Agent-specific files (`CLAUDE.md`, and any future Codex
+file) may add stricter rules but never relax these. When two rules conflict,
+the stricter one wins.
+
+## Delivery rule
 
 GitHub `agnremote-code/spanishcue-web` main is canonical. Read current main and overlapping PRs before working. Use one fresh task branch. Preserve auth, billing, lesson content and other unrelated functionality.
 
@@ -9,3 +17,39 @@ Only the merge-triggered Sites release owner may publish, following `docs/releas
 Changes to drizzle/**, db/schema.ts, D1 bindings/configuration or migration infrastructure require `docs/releases/MIGRATION_RELEASE.md`. Automatic releases and rollbacks must not mutate D1 schema/data. Do not change working Firebase/Resend verification as part of infrastructure work.
 
 Never alter `automation/sites-release-state` or `automation/merge-lock` in ordinary feature work. Those are release coordination state, not source branches. Do not delete, expire, force-update or steal a busy release lock.
+
+## Agent roles
+
+| Agent | Role | Branch prefix |
+|---|---|---|
+| Claude Code | Primary development agent: features, fixes, content, docs, CI changes, release preparation up to a verified merged SHA | `claude/*` |
+| Codex | Secondary agent: tasks the owner assigns to it explicitly | `codex/*` |
+| OpenAI Sites release owner | The only current production publisher, via `docs/releases/SITES_RELEASE.md` | none (does not author source) |
+
+Neither Claude Code nor Codex is a production publisher today. See
+"Production deployment" below.
+
+## Multi-agent branch and PR rules
+
+1. **Branch names.** Normal work uses `claude/<topic>` or `codex/<topic>`, created from current `origin/main`. One task, one branch, one PR. Add a date suffix (`-YYYYMMDD`) when a topic may recur.
+2. **Reserved prefixes.** `automation/*` belongs to CI and the release controller. `recovery/*` holds forensic preservation refs. Agents never create, push to, rebase, or delete branches under those prefixes in ordinary work.
+3. **Own your prefix.** An agent pushes only to branches under its own prefix. It never pushes to, rebases, or force-updates the other agent's branches, even to fix them. To build on another agent's open work, wait for it to merge, or branch from it under your own prefix and say so in the PR body.
+4. **Force-push.** Never force-push `main` (the "Protect main" ruleset also blocks it). On your own unmerged task branch, prefer new commits; use `--force-with-lease` only on a branch no other agent or PR depends on.
+5. **Check for overlap first.** Before editing, list open PRs (`gh pr list --state open`) and check whether any touch the same files. If one does, do not open a competing PR: coordinate through the owner, or wait for it to merge and rebase your work on the new main.
+6. **One writer per sensitive area at a time.** Migration-sensitive files (see `scripts/release-policy.mjs` `migrationSensitivePaths`), billing (`app/paypal-server.ts`, `app/paddle-server.ts`, `app/api/billing/**`), auth (`app/firebase-session.ts`, `app/api/auth/**`, `server/**`), `.github/workflows/**`, and `AGENTS.md`/`CLAUDE.md` may have at most one open PR each across both agents.
+7. **PR body.** State which agent authored it, what changed, which checks ran, and whether anything touches production, billing, auth, secrets or D1. Always non-draft when ready; `CI + Auto Merge` ignores drafts.
+8. **Merging.** Only `CI + Auto Merge` merges. Agents never click merge, never call the merge API, and never take `automation/merge-lock`.
+9. **After merge.** Verify the merged SHA on `main` before reporting completion. CI deletes the merged branch; do not recreate it.
+10. **Stale branches.** Do not delete branches you did not create. Report stale ones to the owner.
+
+## Production deployment
+
+There is exactly one canonical deployment mechanism at any time.
+
+- **Current mechanism:** the OpenAI Sites release controller in `docs/releases/SITES_RELEASE.md`. Its save, deploy and rollback steps need native Sites tools that Claude Code and Codex do not have. Agents stop at a verified merged SHA.
+- **Prepared, not active:** a GitHub Actions + Cloudflare deployment described in `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md`. It becomes canonical only after the owner authorizes the cutover in that plan. At that moment the Sites controller is disabled in the same change; the two never run side by side against production.
+- Adding, enabling or running any other deployment path (a `wrangler deploy` from a laptop, a new workflow that deploys, a manual Sites deploy outside the controller) is forbidden.
+
+## Secrets
+
+Never commit secret values, and never ask the owner to paste them into a chat, issue, PR or file. Refer to secrets by name only. Values live in the hosting provider, GitHub encrypted secrets, or provider consoles.
