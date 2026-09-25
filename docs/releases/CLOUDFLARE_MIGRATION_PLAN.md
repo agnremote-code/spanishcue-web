@@ -24,6 +24,7 @@ No secret values appear in this file. Every item below is a **name**.
 - Firebase authorized domains already include `spanishcue.com`; staging needs its hostname added (owner action).
 - Inactive drafts of the Worker config and workflows: `docs/releases/cloudflare-drafts/`.
 - Re-audit (connectors connected): the connected Cloudflare account still has no zone access and no production resources. Staging D1 `spanishcue-staging` was created there with the `drizzle/` schema and no data (`docs/CLAUDE_OPERATIONS.md` §10). Phase 2 still needs a scoped API token for a staging Worker.
+- Staging Worker pipeline is now active code (`docs/releases/STAGING.md`); cutover steps are in `docs/releases/CUTOVER_RUNBOOK.md`.
 
 ---
 

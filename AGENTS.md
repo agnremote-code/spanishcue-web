@@ -67,6 +67,7 @@ There is exactly one canonical deployment mechanism at any time.
 - **Current mechanism:** the OpenAI Sites release controller in `docs/releases/SITES_RELEASE.md`. Its save, deploy and rollback steps need native Sites tools that Claude Code and Codex do not have. Agents stop at a verified merged SHA.
 - **Prepared, not active:** a GitHub Actions + Cloudflare deployment described in `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md`. It becomes canonical only after the owner authorizes the cutover in that plan. At that moment the Sites controller is disabled in the same change; the two never run side by side against production.
 - No second, parallel deployment system may be added or enabled without explicit owner approval for that specific system.
+- **Staging (owner-approved, 2026-09-25):** `.github/workflows/deploy-staging.yml` deploys only the `spanishcue-staging` Worker on workers.dev with the staging D1 (`docs/releases/STAGING.md`). It is manual, cannot target `spanishcue.com`, and is not a production deployer. Never widen it to production; production cutover follows `docs/releases/CUTOVER_RUNBOOK.md`.
 - Adding, enabling or running any other deployment path (a `wrangler deploy` from a laptop, a new workflow that deploys, a manual Sites deploy outside the controller) is forbidden.
 
 ## Secrets

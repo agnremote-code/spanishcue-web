@@ -12,7 +12,7 @@ Activating any of them is an owner-authorized phase of the migration plan:
 | Draft | Becomes | Phase | Gate |
 |---|---|---|---|
 | `worker-config.draft.jsonc` | `wrangler.jsonc` at repo root, wired through `@cloudflare/vite-plugin` `configPath` | 1 | `MIGRATION_RELEASE.md` (migration-sensitive path) |
-| `deploy-cloudflare.draft.yml` | `.github/workflows/deploy-cloudflare.yml` | 2 (staging only), 4 (production) | Owner authorization; production only at cutover, when Sites is disabled in the same step |
+| `deploy-cloudflare.draft.yml` | Staging part superseded by the active `.github/workflows/deploy-staging.yml`; remains the draft for the production workflow | 4 (production) | Owner authorization; production only at cutover, when Sites is disabled in the same step |
 | `rollback-cloudflare.draft.yml` | `.github/workflows/rollback-cloudflare.yml` | 2 | Owner authorization |
 | `d1-migrate.draft.yml` | `.github/workflows/d1-migrate.yml` | 2 | Owner authorization; GitHub environment with required reviewer |
 
