@@ -26,6 +26,7 @@ import {
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { withDeploymentHeaders } from "./deployment-headers";
+import { writeFreezeActive, writeFreezeResponse } from "./write-freeze";
 
 interface Env {
   ASSETS: Fetcher;
@@ -33,6 +34,7 @@ interface Env {
   CHESPANISH_OWNER_UID?: string;
   CHESPANISH_OWNER_EMAIL?: string;
   SPANISHCUE_DEPLOYMENT?: string;
+  SPANISHCUE_WRITE_FREEZE?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -195,7 +197,7 @@ const app = {
       return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(url.pathname+url.search)}`,url),verifiedLocale);
     }
     const accountId=accountIdFromHeaders(verifiedHeaders);
-    if (accountId&&lesson&&request.method==='GET') {
+    if (accountId&&lesson&&request.method==='GET'&&!writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
       ctx.waitUntil(saveLessonProgress(env.DB,accountId,lesson.id).catch(()=>undefined));
     }
     if (url.pathname === "/_vinext/image") {
@@ -245,7 +247,8 @@ const app = {
 
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    return withDeploymentHeaders(await app.fetch(request, env, ctx), env.SPANISHCUE_DEPLOYMENT);
+    const frozen = writeFreezeResponse(request, env.SPANISHCUE_WRITE_FREEZE);
+    return withDeploymentHeaders(frozen ?? await app.fetch(request, env, ctx), env.SPANISHCUE_DEPLOYMENT);
   },
 };
 
