@@ -15,6 +15,15 @@ Prepared 2026-09-25 from `main` at `572d904`. Re-read `main` before acting.
 
 No secret values appear in this file. Every item below is a **name**.
 
+**Audit update 2026-09-25** (read-only, see `docs/CLAUDE_OPERATIONS.md`):
+
+- The Cloudflare account connected to Claude holds no Workers, D1 or KV, and R2 is not enabled. Production does not live there; it could host the new staging and production resources.
+- Registrar: Spaceship (expires 2027-09-11). NS `anuj`/`meg.ns.cloudflare.com`. The owning Cloudflare account is still **Unknown**; the connector has no zone access.
+- `www.spanishcue.com` resolves (proxied A records) and 308-redirects to the apex. Carry it over.
+- DNS records to preserve include: apex TXT `google-site-verification`, `firebase=chespanish-32645`, SPF `include:_spf.firebasemail.com`; `firebase1/2._domainkey` CNAMEs; `resend._domainkey` TXT; `send` MX and SPF; `_dmarc` (`p=none`).
+- Firebase authorized domains already include `spanishcue.com`; staging needs its hostname added (owner action).
+- Inactive drafts of the Worker config and workflows: `docs/releases/cloudflare-drafts/`.
+
 ---
 
 ## 1. Principles
