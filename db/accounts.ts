@@ -1,5 +1,6 @@
 import type { AccountAccess, AccessLevel, TeacherAccount } from "../app/account-types";
 import { TEACHER_LIBRARY_PRODUCT } from "../app/account-types";
+import { PRO_PRODUCT_CODE } from "../app/billing-config";
 import {
   isOwnerUser,
   type FirebaseUser,
@@ -7,6 +8,26 @@ import {
 } from "../app/firebase-session";
 
 const FIREBASE_PROVIDER = "firebase";
+
+// A grant entitles full access when it is an owner/manual library grant, or a
+// billing grant whose backing subscription is a Live provider subscription.
+// access_grants has no environment column, so the environment comes from the
+// subscription the grant references (provider subscription ID). Sandbox
+// payments never unlock PRO.
+const ENTITLED_GRANT_SQL = `(
+  g.product_code = '${TEACHER_LIBRARY_PRODUCT}'
+  OR (
+    g.product_code = '${PRO_PRODUCT_CODE}'
+    AND g.source = 'billing'
+    AND EXISTS (
+      SELECT 1 FROM billing_subscriptions s
+      WHERE s.user_id = g.user_id
+        AND s.product_code = g.product_code
+        AND s.provider_subscription_id = g.source_reference
+        AND s.environment = 'live'
+    )
+  )
+)`;
 
 type AccountRow = {
   userId: string;
@@ -61,7 +82,7 @@ async function readAccessBySubject(
           WHEN EXISTS (
             SELECT 1 FROM access_grants g
             WHERE g.user_id = u.id
-              AND g.product_code = ?
+              AND ${ENTITLED_GRANT_SQL}
               AND g.access_level = 'full'
               AND g.status = 'active'
               AND g.starts_at <= ?
@@ -72,7 +93,7 @@ async function readAccessBySubject(
         (
           SELECT g.source FROM access_grants g
           WHERE g.user_id = u.id
-            AND g.product_code = ?
+            AND ${ENTITLED_GRANT_SQL}
             AND g.access_level = 'full'
             AND g.status = 'active'
             AND g.starts_at <= ?
@@ -83,7 +104,7 @@ async function readAccessBySubject(
         (
           SELECT g.expires_at FROM access_grants g
           WHERE g.user_id = u.id
-            AND g.product_code = ?
+            AND ${ENTITLED_GRANT_SQL}
             AND g.access_level = 'full'
             AND g.status = 'active'
             AND g.starts_at <= ?
@@ -97,13 +118,10 @@ async function readAccessBySubject(
       LIMIT 1`,
     )
     .bind(
-      TEACHER_LIBRARY_PRODUCT,
       now,
       now,
-      TEACHER_LIBRARY_PRODUCT,
       now,
       now,
-      TEACHER_LIBRARY_PRODUCT,
       now,
       now,
       provider,
@@ -258,7 +276,7 @@ export async function listTeacherAccounts(
           WHEN EXISTS (
             SELECT 1 FROM access_grants g
             WHERE g.user_id = u.id
-              AND g.product_code = ?
+              AND ${ENTITLED_GRANT_SQL}
               AND g.access_level = 'full'
               AND g.status = 'active'
               AND g.starts_at <= ?
@@ -269,7 +287,7 @@ export async function listTeacherAccounts(
         (
           SELECT g.source FROM access_grants g
           WHERE g.user_id = u.id
-            AND g.product_code = ?
+            AND ${ENTITLED_GRANT_SQL}
             AND g.access_level = 'full'
             AND g.status = 'active'
             AND g.starts_at <= ?
@@ -280,7 +298,7 @@ export async function listTeacherAccounts(
         (
           SELECT g.expires_at FROM access_grants g
           WHERE g.user_id = u.id
-            AND g.product_code = ?
+            AND ${ENTITLED_GRANT_SQL}
             AND g.access_level = 'full'
             AND g.status = 'active'
             AND g.starts_at <= ?
@@ -295,13 +313,10 @@ export async function listTeacherAccounts(
       LIMIT ?`,
     )
     .bind(
-      TEACHER_LIBRARY_PRODUCT,
       now,
       now,
-      TEACHER_LIBRARY_PRODUCT,
       now,
       now,
-      TEACHER_LIBRARY_PRODUCT,
       now,
       now,
       safeLimit,
