@@ -86,6 +86,7 @@ analytics, no Firebase Admin (login fails closed), no email, empty data.
 | 2026-09-25 | `231acb915e78747b89e4b101038dadb5a587abf0` | 36157550055 | **Pass end to end**: version `07d4289b-1ec5-4ead-9eba-f64a33a68cec`, in-Actions smoke 10/10, noindex and Sandbox assertions |
 | 2026-09-25 | rollback | 36157859377 | **Pass**: previous version restored (noindex header absent, 200) |
 | 2026-09-25 | `231acb915e78747b89e4b101038dadb5a587abf0` | 36157991155 | **Pass** (redeploy after rollback drill). Manual: 207/207 route statuses identical to production, `X-Robots-Tag: noindex` on 207/207 staging responses and absent on production, founder-status Sandbox/unconfigured, no GA tag, no Paddle.js, invalid session rejected |
+| 2026-09-25 | `248934d49d930d96f3249d82a1452ccec45f2ae3` | 36159217378 | **Pass** (includes the write-freeze code, freeze off): smoke 10/10; `POST /api/billing/claim/bind` 401 as normal |
 
 Not tested on staging (owner decisions): signed-in flows need the staging
 hostname in Firebase authorized domains (shared production Firebase project)
