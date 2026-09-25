@@ -41,6 +41,7 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_STAGING }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       WRANGLER_SEND_METRICS: "false"
+      STAGING_URL: https://spanishcue-staging.agnremote.workers.dev
     steps:
       - name: Require staging token
         run: |
@@ -101,12 +102,26 @@ jobs:
       - name: Deploy staging Worker
         if: inputs.action == 'deploy'
         id: deploy
+        # Upload a version, then deploy it at 100%. Unlike `wrangler deploy`,
+        # this does not manage triggers or the workers.dev route (enabled when
+        # the Worker was created), so the token needs no account-level
+        # subdomain access.
         run: |
-          npx wrangler deploy --config dist/server/wrangler.json --message "staging ${SHA}" | tee deploy.log
-          URL="$(grep -oE 'https://spanishcue-staging\.[a-z0-9-]+\.workers\.dev' deploy.log | head -n 1)"
-          test -n "$URL"
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-          echo "Staging URL: $URL" >> "$GITHUB_STEP_SUMMARY"
+          npx wrangler versions upload --config dist/server/wrangler.json --tag "${SHA:0:12}" --message "staging ${SHA}" | tee upload.log
+          VERSION="$(grep -oiE 'Worker Version ID: [0-9a-f-]{36}' upload.log | head -n 1 | awk '{print $4}')"
+          test -n "$VERSION"
+          npx wrangler versions deploy "${VERSION}@100%" --name spanishcue-staging --message "staging ${SHA}" --yes
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "url=$STAGING_URL" >> "$GITHUB_OUTPUT"
+          {
+            echo "Staging URL: $STAGING_URL"
+            echo "Deployed SHA: $SHA"
+            echo "Worker version: $VERSION"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Wait for staging to serve the new version
+        if: inputs.action == 'deploy'
+        run: sleep 15
 
       - name: Staging smoke
         if: inputs.action == 'deploy'
@@ -114,7 +129,10 @@ jobs:
         continue-on-error: true
         env:
           SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.url }}
-        run: node scripts/production-smoke.mjs
+        run: |
+          node scripts/production-smoke.mjs
+          curl -sfI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'
+          curl -sf "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" | grep -q '"mode":"sandbox"'
 
       - name: Roll back staging after failed smoke
         if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
