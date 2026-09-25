@@ -1,0 +1,165 @@
+{
+  "title": "La ciudad no duerme",
+  "district": "Barrio del Sur",
+  "help": ["Yo diría que…", "Me da la impresión de que…", "Por un lado…, pero por otro…", "Depende de…", "En mi ciudad, en cambio…", "No necesariamente, porque…"],
+  "stops": [
+    {
+      "id": "car", "name": "La ventanilla rota", "sign": "EL AUTO", "x": 340, "y": 800, "scene": "car", "topic": "PRIMERAS IMPRESIONES", "minutes": "3–4 min",
+      "description": "Un auto viejo tiene una ventanilla rota. El bar de al lado está lleno y la gente charla tranquila.",
+      "question": "¿Qué pensás primero?",
+      "choices": [
+        {"id":"robbery","label":"Alguien intentó robarlo.","reaction":"Te alejás un poco del auto. A tu lado, una pareja sigue cenando como si nada.","question":"¿Qué señales te hacen sentir que una calle es segura? ¿Confiás siempre en ellas?","teacher":"¿Alguna vez una primera impresión de un lugar resultó equivocada?"},
+        {"id":"accident","label":"Quizás fue un accidente.","reaction":"Desde este lado también ves un pequeño golpe en la puerta. Todavía faltan datos.","question":"¿Preferís imaginar una explicación tranquila o prepararte para lo peor? ¿Por qué?","teacher":"Contá una situación en la que pensar así te ayudó o te complicó la vida."},
+        {"id":"wait","label":"No saco conclusiones todavía.","reaction":"Seguís mirando el barrio. Una sola ventanilla no cuenta toda la historia.","question":"¿Qué necesitás conocer antes de recomendarle un barrio a un amigo?","teacher":"¿Qué valor tiene la opinión de alguien que solo pasó una noche ahí?"}
+      ],
+      "twist": {"description":"Una vecina dice: «Vivo acá hace veinte años. Nunca me pasó nada». Tu amigo dice que le da miedo.","question":"¿Qué opinión pesa más para vos?","choices":[
+        {"id":"local","label":"La de la vecina: conoce el lugar.","reaction":"Decidís seguir por la calle principal y formar tu propia opinión.","question":"¿Qué puede ver una persona de afuera que alguien del barrio ya no nota?","teacher":"Compará una costumbre de tu ciudad con la reacción de un visitante."},
+        {"id":"friend","label":"La de mi amigo: su miedo también cuenta.","reaction":"Elegís un lugar con gente para continuar la charla.","question":"¿Cómo acompañás a alguien que tiene miedo sin aumentar su preocupación?","teacher":"Dale un consejo concreto y explicá por qué puede servir.","goTo":"bar"}
+      ]}
+    },
+    {
+      "id":"bar","name":"Bar La Esquina","sign":"EL BAR","x":750,"y":585,"scene":"bar","topic":"SALIR O SEGUIR","minutes":"4–5 min",
+      "description":"Son las 23:40. Hay una mesa libre, música y una conversación que llega hasta la vereda. Tenés una hora para vos.",
+      "question":"¿Qué hacés con esa hora?",
+      "choices":[
+        {"id":"enter","label":"Entro, aunque no conozco a nadie.","reaction":"Te sentás junto a la barra. El mozo pregunta: «¿Primera vez por acá?».","question":"¿Qué hace más fácil empezar una conversación con desconocidos? Contá una experiencia.","teacher":"¿Cómo notás si la otra persona tiene ganas de hablar?","scene":"bar"},
+        {"id":"outside","label":"Me quedo mirando desde afuera.","reaction":"Ves a una persona sola leyendo y a otra que mira el teléfono sin parar.","question":"¿Estar solo en un bar significa estar aburrido? ¿En qué situaciones disfrutás estar solo?","teacher":"¿Se vive de la misma manera ir solo al cine, a cenar o de viaje?"},
+        {"id":"continue","label":"Sigo caminando: quiero conocer más.","reaction":"Dejás atrás la música. Te llama la atención el mural del pasaje.","question":"Cuando visitás una ciudad, ¿preferís conocer muchos lugares o quedarte más tiempo en uno? Explicá qué ganás y qué perdés.","teacher":"Pensá en un viaje concreto: ¿cambiarías cómo repartiste tu tiempo?","goTo":"alley"}
+      ],
+      "twist":{"description":"Una clienta te invita a su mesa. Son simpáticos, pero están hablando de un tema que no te interesa nada.","question":"¿Te quedás un rato?","choices":[
+        {"id":"stay","label":"Sí, quizás me sorprenda.","reaction":"Escuchás un poco más y encontrás algo para preguntar.","question":"¿Cuándo vale la pena salir de tus temas habituales? ¿Qué aprendiste así?","teacher":"Proponé una pregunta para participar sin fingir que sabés del tema."},
+        {"id":"leave","label":"No, me despido con buena onda.","reaction":"Agradecés la invitación y recuperás tu hora libre.","question":"¿Cómo te vas de una conversación sin hacer sentir mal a la otra persona?","teacher":"Decí la frase que usarías y comparala con una forma más directa."}
+      ]}
+    },
+    {
+      "id":"bus","name":"La última espera","sign":"LA PARADA","x":1210,"y":625,"scene":"street","topic":"TIEMPO Y PLANES","minutes":"3–4 min",
+      "description":"El próximo colectivo llega en 24 minutos. Tu destino está a media hora a pie. Empezó a lloviznar.",
+      "question":"¿Cómo seguís?",
+      "choices":[
+        {"id":"wait","label":"Espero bajo el techo.","reaction":"Te sentás. La pantalla cambia de 24 a 28 minutos.","question":"¿Cuánto tiempo estás dispuesto a esperar antes de cambiar de plan? ¿De qué depende?","teacher":"¿Cambia tu respuesta si esperás solo o con alguien?"},
+        {"id":"walk","label":"Camino y conozco otra parte.","reaction":"Te levantás y buscás una calle iluminada. La lluvia todavía es suave.","question":"¿Qué mirás antes de decidir caminar de noche por un lugar nuevo?","teacher":"Contá un paseo que no habías planeado y terminó bien.","goTo":"plaza"},
+        {"id":"taxi","label":"Pregunto cuánto sale un taxi.","reaction":"A unos metros hay un taxi libre. El chofer baja la ventanilla.","question":"¿En qué situaciones pagás más para ahorrar tiempo o estar más cómodo?","teacher":"¿Hay alguna comodidad por la que antes no pagabas y ahora sí?","goTo":"taxi"}
+      ],
+      "twist":{"description":"Una persona que espera dice: «Acá la pantalla siempre exagera». Otra asegura que el último colectivo ya pasó.","question":"¿Qué hacés con esa información?","choices":[
+        {"id":"check","label":"Busco una tercera fuente.","reaction":"Revisás el horario y preguntás por la última salida.","question":"¿En quién confiás más cuando una aplicación y una persona dicen cosas distintas? ¿Por qué?","teacher":"Buscá un ejemplo en el que la experiencia local sea más útil que una app."},
+        {"id":"change","label":"Dejo de esperar y cambio de plan.","reaction":"La duda ya te costó varios minutos. Decidís moverte.","question":"¿Te cuesta abandonar un plan después de invertir tiempo en él? Contá un caso.","teacher":"¿Cómo distinguís tener paciencia de perder el tiempo?","goTo":"taxi"}
+      ]}
+    },
+    {
+      "id":"shop","name":"El almacén de siempre","sign":"EL ALMACÉN","x":1550,"y":640,"scene":"shop","topic":"PRECIO O CERCANÍA","minutes":"4–5 min",
+      "description":"El almacén sigue abierto. La dueña conoce a casi todos. La misma compra cuesta menos en el supermercado, a seis cuadras.",
+      "question":"¿Dónde comprás esta noche?",
+      "choices":[
+        {"id":"local","label":"Acá: me gusta el trato.","reaction":"La dueña te recomienda la fruta que está mejor hoy.","question":"¿Cuánto influye el trato en el lugar donde comprás? Compará dos experiencias.","teacher":"¿Qué detalle pequeño hace que vuelvas a un negocio?","scene":"shop"},
+        {"id":"cheap","label":"Camino para gastar menos.","reaction":"Mirás la hora y calculás cuánto te ahorrás con la caminata.","question":"¿Cuándo vale la pena hacer más esfuerzo para ahorrar? ¿Dónde ponés el límite?","teacher":"¿Cambia tu decisión si se trata de algo que comprás todos los días?"},
+        {"id":"split","label":"Compro lo urgente y mañana veo.","reaction":"Te llevás algo para esta noche. La compra grande puede esperar.","question":"¿Sos de planear las compras o resolver sobre la marcha? ¿Qué problemas te trae tu estilo?","teacher":"Contá la última vez que compraste algo por impulso."}
+      ],
+      "twist":{"description":"La dueña te cuenta: «El alquiler subió otra vez. Quizás tenga que cerrar». El supermercado anuncia una gran oferta.","question":"¿Esto cambia tu decisión?","choices":[
+        {"id":"support","label":"Sí, trato de comprar más acá.","reaction":"Elegís mantener cerca un comercio que valorás.","question":"¿Qué perdería un barrio si todos los comercios fueran de las mismas cadenas?","teacher":"Nombrá un negocio de tu ciudad que te daría pena perder."},
+        {"id":"budget","label":"No siempre puedo pagar más.","reaction":"Te importa el negocio, pero también necesitás cuidar tus gastos.","question":"¿Qué otras formas hay de apoyar a un comercio cuando no podés gastar más?","teacher":"Proponé dos ideas y compará cuál sería más útil."}
+      ]}
+    },
+    {
+      "id":"alley","name":"El pasaje del mural","sign":"EL PASAJE","x":1910,"y":680,"scene":"alley","topic":"MIRAR DE NUEVO","minutes":"3–4 min",
+      "description":"Un mural ocupa toda la pared. Una moto tapa casi toda la vereda. Un cartel dice: «Estacioné solo un minutito».",
+      "question":"¿Qué te llama más la atención?",
+      "choices":[
+        {"id":"art","label":"El mural: le da vida al lugar.","reaction":"Te acercás a mirar los detalles. Una pared gastada se vuelve un punto de encuentro.","question":"¿Qué diferencia hay entre una pared descuidada y una pared con personalidad? ¿Quién lo decide?","teacher":"Describí un lugar imperfecto que te guste mucho."},
+        {"id":"bike","label":"La moto: casi no deja pasar.","reaction":"Tenés que bajar de la vereda. Detrás viene alguien con un cochecito.","question":"¿Qué molestia pequeña en la calle te parece más grave de lo que otros creen? ¿Por qué?","teacher":"¿Cómo cambia la situación para alguien que se mueve de otra manera?"},
+        {"id":"sign","label":"El cartel: ese minuto dura horas.","reaction":"Una vecina sonríe: «Lo de un minutito lo dice desde las ocho».","question":"¿Qué excusas aceptás una vez, pero no todos los días? Da un ejemplo.","teacher":"¿Cómo se lo dirías al dueño de la moto sin empezar una pelea?"}
+      ],
+      "twist":{"description":"Proponen pintar todas las paredes de blanco y sacar los bancos para que el pasaje se vea más ordenado.","question":"¿Qué cambiarías?","choices":[
+        {"id":"clean","label":"Limpieza y espacio para pasar; el mural queda.","reaction":"Imaginás un pasaje cuidado que conserva sus detalles.","question":"¿Cómo puede un lugar mejorar sin perder lo que lo hace especial?","teacher":"Elegí dos cosas que conservarías y una que sacarías."},
+        {"id":"order","label":"Prefiero un cambio completo.","reaction":"Imaginás la misma calle con menos colores, objetos y ruido.","question":"¿Una ciudad muy ordenada puede ser aburrida? Compará dos lugares que conozcas.","teacher":"¿Cuánto desorden tolerás en un lugar que te gusta?"}
+      ]}
+    },
+    {
+      "id":"building","name":"El edificio 728","sign":"EL EDIFICIO","x":2220,"y":625,"scene":"building","topic":"VIVIR CON OTROS","minutes":"4–5 min",
+      "description":"En la entrada hay bolsas de basura fuera de horario. Otro cartel avisa: «NO TOCAR EL TIMBRE. NO FUNCIONA. GRITÁ».",
+      "question":"Si vivís acá, ¿qué hacés con las bolsas?",
+      "choices":[
+        {"id":"talk","label":"Hablo con el vecino.","reaction":"Te abre alguien que acaba de mudarse y no conoce el horario.","question":"¿Cómo explicás una regla sin hacer sentir mal a una persona nueva?","teacher":"Probá decir lo mismo de manera amable y de manera muy directa."},
+        {"id":"note","label":"Dejo una nota para todos.","reaction":"En el tablero ya hay seis notas. Dos están escritas completamente en mayúsculas.","question":"¿Qué suele pasar cuando un problema entre dos personas se discute en un grupo?","teacher":"¿Qué temas conviene hablar en privado? Contá un ejemplo."},
+        {"id":"ignore","label":"Hoy lo dejo pasar.","reaction":"Subís a tu casa, pero al día siguiente las bolsas siguen ahí.","question":"¿Cómo decidís qué molestias aceptar y cuáles hablar? ¿Dónde está tu límite?","teacher":"¿Qué tolerás en la calle que no tolerarías en tu edificio?"}
+      ],
+      "twist":{"description":"Ahora proponen prohibir las visitas después de las diez porque algunos vecinos hacen ruido.","question":"¿Te parece una buena regla?","choices":[
+        {"id":"rule","label":"Sí, necesito descansar.","reaction":"Pensás en las personas que trabajan temprano.","question":"¿Qué límite pondrías para que descansar y recibir amigos sean posibles?","teacher":"Explicá una excepción que te parezca razonable."},
+        {"id":"noise","label":"Regularía el ruido, no las visitas.","reaction":"Proponés hablar del problema concreto: lo que se escucha desde otros departamentos.","question":"¿Cuándo una regla para todos termina siendo injusta? Da un ejemplo cotidiano.","teacher":"¿Qué cambiarías para que la regla sea más justa?"}
+      ]}
+    },
+    {
+      "id":"taxi","name":"La charla del taxi","sign":"EL TAXI","x":2460,"y":815,"scene":"street","topic":"DOS MANERAS DE LLEGAR","minutes":"3–4 min",
+      "description":"El chofer ofrece dos caminos: uno rápido por una avenida sin mucho que ver y otro más largo que pasa junto al río.",
+      "question":"¿Qué recorrido elegís?",
+      "choices":[
+        {"id":"fast","label":"El más rápido: ya caminé bastante.","reaction":"El chofer arranca la conversación: «A esta hora todos quieren llegar».","question":"¿Cuándo el viaje es parte del plan y cuándo solo querés llegar? Compará dos situaciones.","teacher":"¿Recordás un trayecto mejor que el destino?"},
+        {"id":"river","label":"El del río, si no cuesta mucho más.","reaction":"Antes de decidir, preguntás el tiempo y el precio aproximados.","question":"¿Qué información pedís antes de aceptar una recomendación de alguien que te vende algo?","teacher":"¿Una recomendación interesada puede ser buena? Explicá por qué."},
+        {"id":"ask","label":"Le pregunto cuál elegiría él.","reaction":"«El río es lindo, pero hoy hay mucho tránsito», te responde.","question":"¿Preferís que alguien te recomiende su opción favorita o la que mejor se adapta a vos?","teacher":"Contá una recomendación que era buena para otra persona, pero no para vos."}
+      ],
+      "twist":{"description":"El chofer habla sin parar. Te cuenta cosas interesantes, pero estás cansado y necesitás silencio.","question":"¿Cómo reaccionás?","choices":[
+        {"id":"listen","label":"Escucho un rato más.","reaction":"Descubrís una historia del barrio que no aparece en las guías.","question":"¿Qué aprendiste de una conversación que al principio no tenías ganas de tener?","teacher":"¿Qué hace que una charla inesperada valga la pena?"},
+        {"id":"quiet","label":"Le pido un poco de silencio.","reaction":"Decís que fue un día largo. El chofer baja la radio.","question":"¿Te resulta fácil pedir lo que necesitás cuando puede incomodar a otra persona?","teacher":"Decí cómo lo pedirías en esta situación y en el trabajo."}
+      ]}
+    },
+    {
+      "id":"plaza","name":"Una plaza, muchos planes","sign":"LA PLAZA","x":2910,"y":740,"scene":"street","topic":"COMPARTIR EL ESPACIO","minutes":"4–5 min",
+      "description":"Un músico toca junto al banco. Cerca, dos personas quieren charlar y un vecino intenta dormir con la ventana abierta.",
+      "question":"¿Qué uso de la plaza defenderías primero?",
+      "choices":[
+        {"id":"music","label":"La música: hace más vivo el barrio.","reaction":"Te quedás a escuchar. Otra persona se suma y deja unas monedas.","question":"¿Qué actividades le dan vida a un barrio aunque a veces molesten?","teacher":"¿Cambiaría tu opinión si vivieras justo enfrente?"},
+        {"id":"quiet","label":"La tranquilidad: también hace falta.","reaction":"Buscás un banco más lejos del parlante.","question":"¿Por qué es difícil encontrar silencio en una ciudad? ¿Dónde lo buscás vos?","teacher":"Compará el ruido que elegís con el que no podés evitar."},
+        {"id":"share","label":"Ninguno siempre: hay que compartir.","reaction":"Pensás en horarios y zonas, en vez de una única regla para todo el día.","question":"¿Cómo repartirías este espacio para que lo puedan disfrutar personas diferentes?","teacher":"Proponé un acuerdo y explicá quién tendría que ceder algo."}
+      ],
+      "twist":{"description":"Un café quiere poner mesas donde están los bancos públicos. Dice que así la plaza será más segura y estará más limpia.","question":"¿Aceptarías la propuesta?","choices":[
+        {"id":"tables","label":"Sí, pero dejaría bancos gratis.","reaction":"Dibujás mentalmente un espacio donde conviven ambos usos.","question":"¿Qué condiciones pondrías para que el cambio también beneficie a quien no compra nada?","teacher":"¿Qué pasaría con los bancos si el café necesitara más mesas después?"},
+        {"id":"benches","label":"No: la plaza no debería exigir consumir.","reaction":"Elegís conservar un lugar donde quedarse sin pagar.","question":"¿En qué lugares de tu ciudad podés pasar tiempo sin gastar? ¿Son suficientes?","teacher":"¿Quiénes necesitan más esos espacios y por qué?"}
+      ]}
+    },
+    {
+      "id":"shutter","name":"Persiana baja","sign":"EL LOCAL","x":3220,"y":650,"scene":"street","topic":"UN BARRIO QUE CAMBIA","minutes":"4–5 min",
+      "description":"Cerró una ferretería de toda la vida. Un cartel anuncia: «Próximamente: apartamentos para estadías cortas».",
+      "question":"¿Cómo recibís la noticia?",
+      "choices":[
+        {"id":"opportunity","label":"Puede traer trabajo y movimiento.","reaction":"Los comercios de al lado imaginan más clientes.","question":"¿Qué puede ganar un barrio cuando llegan más visitantes? ¿Qué conviene cuidar?","teacher":"Mencioná un beneficio concreto para alguien que ya vive ahí."},
+        {"id":"loss","label":"Me preocupa que se vaya la gente del barrio.","reaction":"Una vecina comenta que encontrar un alquiler anual es cada vez más difícil.","question":"¿Qué pasa con un barrio si se vuelve demasiado caro para sus vecinos?","teacher":"¿Conocés un lugar que haya cambiado así? Compará el antes y el después."},
+        {"id":"depends","label":"Depende de cómo se haga.","reaction":"Querés saber qué cambia para los vecinos antes de opinar.","question":"¿Qué preguntarías antes de apoyar o rechazar este proyecto? Explicá tus prioridades.","teacher":"Elegí la respuesta que más podría hacerte cambiar de opinión."}
+      ],
+      "twist":{"description":"Te ofrecen trabajar en el nuevo negocio. Necesitás el ingreso, pero algunas cosas del proyecto no te convencen.","question":"¿Qué harías?","choices":[
+        {"id":"accept","label":"Aceptaría y trataría de mejorar cosas.","reaction":"Imaginás qué podrías aportar desde adentro.","question":"¿Es posible apoyar una parte de un proyecto y criticar otra? ¿Cómo lo explicarías?","teacher":"Decí qué cambio concreto propondrías durante la entrevista."},
+        {"id":"conditions","label":"Preguntaría más antes de aceptar.","reaction":"Preparás preguntas sobre las condiciones y el efecto en el barrio.","question":"¿Qué condiciones de un trabajo son negociables para vos y cuáles no?","teacher":"¿Cambian esos límites cuando necesitás el dinero con urgencia?"}
+      ]}
+    },
+    {
+      "id":"corner","name":"La esquina de todos","sign":"LA ESQUINA","x":3630,"y":745,"scene":"street","topic":"TU FORMA DE VIVIR","minutes":"4–5 min",
+      "description":"En la esquina hay un café, bocinas y gente que se saluda. Un departamento está en alquiler: es chico, pero todo queda cerca.",
+      "question":"¿Te imaginás viviendo acá?",
+      "choices":[
+        {"id":"life","label":"Sí: prefiero un lugar lleno de vida.","reaction":"Imaginás bajar a comprar algo y encontrarte con conocidos.","question":"¿Qué molestias aceptarías para vivir en un barrio que te gusta? ¿Cuál no aceptarías?","teacher":"Compará lo que buscás ahora con lo que buscabas hace unos años."},
+        {"id":"calm","label":"Vendría de visita; viviría más lejos.","reaction":"Disfrutás la noche, pero imaginás volver a una casa tranquila.","question":"¿Cuánto tiempo de viaje aceptarías a cambio de más espacio o tranquilidad?","teacher":"¿Cómo cambiaría tu día una hora extra de transporte?"},
+        {"id":"try","label":"Probaría un mes antes de decidir.","reaction":"Te imaginás el mismo barrio un lunes a las siete de la mañana.","question":"¿Qué necesitás vivir en un lugar para saber si es para vos?","teacher":"¿Qué cosas no se descubren en una visita de fin de semana?"}
+      ],
+      "twist":{"description":"Te dejan cambiar una sola cosa del barrio. Lo demás sigue igual.","question":"¿Por dónde empezás?","choices":[
+        {"id":"practical","label":"Por algo práctico: limpieza, transporte o ruido.","reaction":"Elegís una mejora que se note en la vida diaria.","question":"¿Qué cambiarías primero y a quién le mejoraría más la vida?","teacher":"¿Qué problema podría aparecer con tu solución?"},
+        {"id":"community","label":"Por más lugares para encontrarse.","reaction":"Imaginás una plaza, un taller o un espacio que no obligue a comprar.","question":"¿Qué tipo de lugar ayudaría a que los vecinos se conozcan mejor? ¿Por qué?","teacher":"¿Cómo harías para que también participen las personas nuevas?"}
+      ]}
+    }
+  ],
+  "finale": {
+    "intro": "Después de recorrer este barrio…",
+    "questions": [
+      "¿Vivirías acá? Compará una ventaja con una dificultad.",
+      "¿Qué cambiarías primero y qué dejarías como está?",
+      "¿Qué lugar te dio más curiosidad? Explicá por qué volverías.",
+      "¿Hubo una situación que te hizo cambiar de opinión? ¿Qué cambió?",
+      "¿Qué hace que una ciudad tenga personalidad? Usá ejemplos del recorrido."
+    ]
+  },
+  "teacher": {
+    "objective": "Justificar decisiones, comparar alternativas, contar experiencias y hablar de consecuencias en situaciones urbanas familiares. No hace falta usar estructuras avanzadas para responder bien.",
+    "timing": "45 min: 4 de entrada, 30–34 para elegir 5 o 6 lugares y 7–10 de cierre. Las diez paradas y sus ramas son una reserva; no hace falta agotarlas.",
+    "progression": "Para empezar: auto, bar o parada. Para comparar experiencias: almacén, pasaje o taxi. Para ampliar opiniones: edificio, plaza, local y esquina. El alumno puede alterar este orden.",
+    "method": "Primero elegí, después explicá una razón y sumá un ejemplo. Usá «Algo cambia» si querés profundizar. Podés escuchar una segunda postura antes de volver a la ciudad.",
+    "scaffolding": "Si el alumno se bloquea, pedí dos diferencias o un ejemplo de su ciudad. Reformulá después de escuchar; las opciones no son un examen y no tienen una respuesta correcta.",
+    "closing": "Pedile que recomiende el barrio a una persona concreta en un minuto, con dos razones y una advertencia. Después cambiá la persona: ¿mantendría su recomendación?"
+  }
+}
