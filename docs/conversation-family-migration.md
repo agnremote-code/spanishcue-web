@@ -1,5 +1,9 @@
 # Conversation family migration
 
+## Reino Unido update · 2026-09-25
+
+The table below records the original migration. The Reino Unido family now offers A1 and B1. Its former A2 practical questions join the existing B1 questions without deleting either track. The A1 variant uses the same twelve-area map and 48 stops with 96 new short questions, 48 new place prompts, simpler contexts, local vocabulary and A1 speaking supports. Existing `?level=A2` links fall back to the B1 default; the selectable levels are A1 and B1. There is no database or entitlement change.
+
 Canonical base: `6807b17ddae2d29deedf5e179f03fdf50635f259`. Source-only task; no production deployment or database change.
 
 48 original conversation entries become 41 families and 51 selectable level variants. All non-conversation records retain their original values.

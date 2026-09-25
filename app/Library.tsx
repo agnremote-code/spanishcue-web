@@ -415,10 +415,10 @@ const libraryNews = [
   },
   {
     lessonId: 32,
-    kicker: "NUEVA EXPEDICIÓN · A2–B1",
+    kicker: "NUEVA EXPEDICIÓN · A1 Y B1",
     route: "CONVERSACIÓN + REINO UNIDO",
     title: "Reino Unido en Relieve",
-    copy: "Las cuatro naciones y las nueve regiones inglesas en un mapa real: 48 lugares concretos y 144 detonadores que nacen de su geografía, sus ciudades y sus conexiones.",
+    copy: "Las cuatro naciones y las nueve regiones inglesas en un mapa real: 48 lugares concretos con preguntas y apoyos diferentes para A1 y B1.",
     symbol: "UK",
     words: ["ubicar", "comparar", "conectar"],
   },

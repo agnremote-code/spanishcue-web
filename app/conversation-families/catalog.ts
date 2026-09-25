@@ -13,7 +13,7 @@ const groups = [
 ];
 const countryAims: Record<number, Partial<Record<CEFRLevel, string[]>>> = {
   36: { A2: ['Elegir lugares, describir preferencias y planear una visita con razones sencillas'], B1: ['Comparar formas de vida y explicar ventajas e inconvenientes de decisiones en distintos estados'] },
-  32: { A2: ['Elegir lugares y describir planes concretos de viaje'], B1: ['Resolver prioridades de viaje y justificar decisiones culturales y cotidianas'] },
+  32: { A1: ['Ubicar lugares, expresar gustos y elegir entre opciones sencillas'], B1: ['Resolver prioridades de viaje y justificar decisiones culturales y cotidianas'] },
   30: { A2: ['Organizar actividades y expresar necesidades en una ruta por Australia'], B1: ['Relacionar turismo y vida local, contrastar consecuencias y proponer alternativas'] },
 };
 function familyFromSeeds(seeds: Lesson[], group?: typeof groups[number]): ConversationLessonFamily {

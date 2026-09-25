@@ -71,6 +71,8 @@ const resourceSlugById = new Map(
 const lessonBySlug = new Map(
   lessons.map((lesson) => [resourceSlugById.get(lesson.id)!, lesson]),
 );
+// Keep the original UK resource URL valid after its selectable levels change.
+lessonBySlug.set("spanish-conversation-activity-a2-b1-reino-unido-en-relieve", lessons.find(lesson => lesson.id === 32)!);
 
 function cleanText(value: string): string {
   return value.replace(/\s+/g, " ").trim();
