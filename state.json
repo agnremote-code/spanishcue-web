@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "busy",
+  "status": "idle",
   "healthy": {
-    "sha": "c18c90d0a7119b66fbce195adfc04f55cc527e00",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_5c91b802c36c8191b9034e78520b4c33",
-    "versionNumber": 174,
-    "deploymentId": "appgdep_6ab539813f58819189c8274d87133ffe",
+    "sha": "572d90489a7f9aaba40dd225fd98237c44f7b15f",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_aa23f92e805081918832380e27fcbb1a",
+    "versionNumber": 175,
+    "deploymentId": "appgdep_6ab6130fa908819195c4517584363f41",
     "envSetRevision": 47,
     "smoke": {
       "passed": true,
       "checks": 10,
-      "completedAt": "2026-09-24T14:57:14.743Z"
+      "completedAt": "2026-09-25T06:25:20.864Z"
     },
     "runtimeErrors": 0
   },
@@ -432,6 +432,37 @@
         },
         "runtimeErrors": 0
       }
+    },
+    {
+      "owner": "manual-uk-relief-20260925-1315",
+      "startedAt": "2026-09-25T06:16:44.974Z",
+      "finishedAt": "2026-09-25T06:25:21.531Z",
+      "previous": {
+        "sha": "c18c90d0a7119b66fbce195adfc04f55cc527e00",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_5c91b802c36c8191b9034e78520b4c33",
+        "versionNumber": 174,
+        "deploymentId": "appgdep_6ab539813f58819189c8274d87133ffe",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-24T14:57:14.743Z"
+        },
+        "runtimeErrors": 0
+      },
+      "healthy": {
+        "sha": "572d90489a7f9aaba40dd225fd98237c44f7b15f",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_aa23f92e805081918832380e27fcbb1a",
+        "versionNumber": 175,
+        "deploymentId": "appgdep_6ab6130fa908819195c4517584363f41",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-25T06:25:20.864Z"
+        },
+        "runtimeErrors": 0
+      }
     }
   ],
   "bootstrap": {
@@ -475,24 +506,5 @@
     "columnCount": 25,
     "appliedWithDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
     "verifiedAt": "2026-09-24T07:33:28.948Z"
-  },
-  "owner": "manual-uk-relief-20260925-1315",
-  "candidateSha": "572d90489a7f9aaba40dd225fd98237c44f7b15f",
-  "previous": {
-    "sha": "c18c90d0a7119b66fbce195adfc04f55cc527e00",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_5c91b802c36c8191b9034e78520b4c33",
-    "versionNumber": 174,
-    "deploymentId": "appgdep_6ab539813f58819189c8274d87133ffe",
-    "envSetRevision": 47,
-    "smoke": {
-      "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-24T14:57:14.743Z"
-    },
-    "runtimeErrors": 0
-  },
-  "startedAt": "2026-09-25T06:16:44.974Z",
-  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_aa23f92e805081918832380e27fcbb1a",
-  "candidateVersionNumber": 175,
-  "candidateDeploymentId": "appgdep_6ab6130fa908819195c4517584363f41"
+  }
 }
