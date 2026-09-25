@@ -34,7 +34,7 @@ Rules that apply everywhere: `AGENTS.md` (shared authority), `CLAUDE.md`
 | Google Drive / Gmail / Calendar | Owner | Connected (`agnremote@gmail.com`) | Official Google connectors | Gmail: drafts only, sending needs owner confirmation each time. Drive/Calendar: read; writes on request | Low–medium (personal account) | Google account | None | Personal account; not SPANISHCUE-specific |
 | Canva | Owner | Connected | Official Canva connector | Create, edit, export designs; generate images | Low | Canva | None | No Brand Kit configured |
 | Browser / production testing | — | Connected | Built-in browser pane; `scripts/production-smoke.mjs` | Read-only page visits | Low (never click pay) | — | None | Done |
-| Image/CDN | Cloudflare `IMAGES` binding via Sites (`/_vinext/image`) | Not connected | — | None | Medium | — | Binding supplied by Sites | Unknown whether bound in production |
+| Image/CDN | `/_vinext/image` route; `IMAGES` binding not in build config | — | — | None | Low | — | None observable | Production v176 returns originals at every width, same as the no-binding fallback; staging omits `IMAGES` for parity |
 | Fonts | Google Fonts | — | — | — | Low | — | None | No change |
 
 Content images from Unsplash, Pexels and Wikimedia are referenced by URL in
@@ -156,8 +156,10 @@ traffic. IDs are identifiers, not secrets.
 | Resource | Value | State |
 |---|---|---|
 | D1 database | `spanishcue-staging`, id `23fe3c11-85f7-48e1-9dd0-d508893625c9`, region ENAM | Schema from `drizzle/0000`–`0009`; verified identical (17 tables, 31 indexes, 1 trigger) to a local build of `drizzle/`. `d1_migrations` records all 10 files in Wrangler's format, so `wrangler d1 migrations apply` will not re-run them. **No data** |
-| Staging Worker | not created | Needs a scoped Cloudflare API token (owner) and the Phase 1 config PR |
+| Staging Worker | `spanishcue-staging` on workers.dev — **ready, not deployed** | `.github/workflows/deploy-staging.yml` + `scripts/prepare-staging-worker-config.mjs`; blocked only on GitHub environment `staging` secret `CLOUDFLARE_API_TOKEN_STAGING` and variable `CLOUDFLARE_ACCOUNT_ID` (`docs/releases/STAGING.md`). Local run of the exact staging config: smoke 10/10, 204/204 route statuses identical to production v176 |
 | Routes / custom domain | none | None will be added to `spanishcue.com` |
+
+Cutover procedure: `docs/releases/CUTOVER_RUNBOOK.md` (not executed).
 
 Not possible from this account: zone, DNS, routes and the production Worker.
 The `spanishcue.com` zone is served by Cloudflare nameservers but is not in

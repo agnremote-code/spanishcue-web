@@ -1,0 +1,131 @@
+name: Deploy Staging (Cloudflare)
+
+# Owner-controlled STAGING only. This workflow cannot deploy production:
+# scripts/prepare-staging-worker-config.mjs forces the spanishcue-staging
+# Worker, the spanishcue-staging D1, workers.dev only and no routes, and
+# fails on any production name, route or the placeholder D1.
+# It never applies D1 migrations and never touches spanishcue.com.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: deploy or rollback
+        required: true
+        default: deploy
+        type: choice
+        options: [deploy, rollback]
+      sha:
+        description: Exact 40-character SHA already on main (deploy only)
+        required: false
+      version_id:
+        description: Worker version ID to restore (rollback only; empty = previous version)
+        required: false
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: staging
+    env:
+      ACTION: ${{ inputs.action }}
+      SHA: ${{ inputs.sha }}
+      VERSION_ID: ${{ inputs.version_id }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_STAGING }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - name: Require staging token
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Secret CLOUDFLARE_API_TOKEN_STAGING is not set in the 'staging' environment."
+            exit 1
+          fi
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Variable CLOUDFLARE_ACCOUNT_ID is not set in the 'staging' environment."
+            exit 1
+          fi
+
+      - name: Validate inputs
+        run: |
+          if [ "$ACTION" = "deploy" ]; then
+            [[ "$SHA" =~ ^[a-f0-9]{40}$ ]] || { echo "::error::sha must be a full 40-character SHA"; exit 1; }
+          fi
+
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.action == 'deploy' && inputs.sha || 'main' }}
+          fetch-depth: 0
+
+      - name: Require SHA to be on main
+        if: inputs.action == 'deploy'
+        run: |
+          git fetch origin main
+          git merge-base --is-ancestor "$SHA" origin/main
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22.19.0"
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build and validate exact SHA
+        if: inputs.action == 'deploy'
+        run: |
+          npm run build
+          npm run validate:artifact
+
+      - name: Rewrite build config for staging
+        if: inputs.action == 'deploy'
+        run: node scripts/prepare-staging-worker-config.mjs dist/server/wrangler.json
+
+      - name: Record current staging version
+        if: inputs.action == 'deploy'
+        id: previous
+        run: |
+          if npx wrangler deployments list --name spanishcue-staging --json > previous.json 2>/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy staging Worker
+        if: inputs.action == 'deploy'
+        id: deploy
+        run: |
+          npx wrangler deploy --config dist/server/wrangler.json --message "staging ${SHA}" | tee deploy.log
+          URL="$(grep -oE 'https://spanishcue-staging\.[a-z0-9-]+\.workers\.dev' deploy.log | head -n 1)"
+          test -n "$URL"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "Staging URL: $URL" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Staging smoke
+        if: inputs.action == 'deploy'
+        id: smoke
+        continue-on-error: true
+        env:
+          SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.url }}
+        run: node scripts/production-smoke.mjs
+
+      - name: Roll back staging after failed smoke
+        if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
+        run: |
+          npx wrangler rollback --name spanishcue-staging --message "auto rollback after failed smoke for ${SHA}" --yes
+          exit 1
+
+      - name: Fail first deploy with failed smoke
+        if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure'
+        run: exit 1
+
+      - name: Manual staging rollback
+        if: inputs.action == 'rollback'
+        run: npx wrangler rollback ${VERSION_ID:+"$VERSION_ID"} --name spanishcue-staging --message "manual staging rollback" --yes
