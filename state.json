@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "enabled": true,
-  "status": "busy",
+  "status": "idle",
   "healthy": {
-    "sha": "ae4bfc50b39f95432a9c3c20477d25fbd6ca523f",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_0e12c86a5fc08191a57b23afdec81333",
-    "versionNumber": 176,
-    "deploymentId": "appgdep_6ab64065efe88191aedceb54e6b91a83",
+    "sha": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_caa0d1a85a5c8191917ca15ee631fece",
+    "versionNumber": 177,
+    "deploymentId": "appgdep_6ab7a8522d788191bab308ca81eb9234",
     "envSetRevision": 47,
     "smoke": {
       "passed": true,
       "checks": 10,
-      "completedAt": "2026-09-25T09:38:12.556Z"
+      "completedAt": "2026-09-26T11:14:15.264Z"
     },
     "runtimeErrors": 0
   },
@@ -494,6 +494,37 @@
         },
         "runtimeErrors": 0
       }
+    },
+    {
+      "owner": "work-sites-5d6733a-1790420700524-842c6128",
+      "startedAt": "2026-09-26T11:05:01.020Z",
+      "finishedAt": "2026-09-26T11:14:15.775Z",
+      "previous": {
+        "sha": "ae4bfc50b39f95432a9c3c20477d25fbd6ca523f",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_0e12c86a5fc08191a57b23afdec81333",
+        "versionNumber": 176,
+        "deploymentId": "appgdep_6ab64065efe88191aedceb54e6b91a83",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-25T09:38:12.556Z"
+        },
+        "runtimeErrors": 0
+      },
+      "healthy": {
+        "sha": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+        "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_caa0d1a85a5c8191917ca15ee631fece",
+        "versionNumber": 177,
+        "deploymentId": "appgdep_6ab7a8522d788191bab308ca81eb9234",
+        "envSetRevision": 47,
+        "smoke": {
+          "passed": true,
+          "checks": 10,
+          "completedAt": "2026-09-26T11:14:15.264Z"
+        },
+        "runtimeErrors": 0
+      }
     }
   ],
   "bootstrap": {
@@ -537,23 +568,5 @@
     "columnCount": 25,
     "appliedWithDeploymentId": "appgdep_6ab4cff2e6748191836cc39c7aa3e6e0",
     "verifiedAt": "2026-09-24T07:33:28.948Z"
-  },
-  "owner": "work-sites-5d6733a-1790420700524-842c6128",
-  "candidateSha": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
-  "previous": {
-    "sha": "ae4bfc50b39f95432a9c3c20477d25fbd6ca523f",
-    "versionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_0e12c86a5fc08191a57b23afdec81333",
-    "versionNumber": 176,
-    "deploymentId": "appgdep_6ab64065efe88191aedceb54e6b91a83",
-    "envSetRevision": 47,
-    "smoke": {
-      "passed": true,
-      "checks": 10,
-      "completedAt": "2026-09-25T09:38:12.556Z"
-    },
-    "runtimeErrors": 0
-  },
-  "startedAt": "2026-09-26T11:05:01.020Z",
-  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_caa0d1a85a5c8191917ca15ee631fece",
-  "deploymentId": "appgdep_6ab7a8522d788191bab308ca81eb9234"
+  }
 }
