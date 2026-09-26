@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
-import type { eliminations, absurdRules } from './data';
+import type { WorldElimination, WorldRule, WorldGuide, WorldLevel } from './types';
+import { conversationWorldStorageKey } from './state';
 import { ConversationClosing } from '../conversation-families/ConversationFamily';
 import './worlds.css';
 import { SpanishCueBrand } from '../SpanishCueBrand';
@@ -16,9 +17,10 @@ function TalkHelp({words,starter}:{words:string[];starter:string}) {
   return <details className="cw-help"><summary>Una mano para hablar <span aria-hidden="true">+</span></summary><div><p className="cw-starter">«{starter}»</p><div className="cw-words">{words.map(word=><span key={word}>{word}</span>)}</div><p>Puedes dar un ejemplo de tu vida, comparar o explicar por qué. Tómate tu tiempo.</p></div></details>;
 }
 
-export default function ConversationWorld({mode,level,machineRounds,ruleRounds,closing}:{mode:'machine'|'rules';level:'A2'|'B1';machineRounds:typeof eliminations;ruleRounds:typeof absurdRules;closing:string[]}) {
+export default function ConversationWorld({mode,level,machineRounds,ruleRounds,closing,guide}:{mode:'machine'|'rules';level:WorldLevel;machineRounds:WorldElimination[];ruleRounds:WorldRule[];closing:string[];guide?:WorldGuide}) {
   const machine = mode==='machine';
   const a2 = level==='A2';
+  const b2 = level==='B2';
   const entries = machine ? machineRounds : ruleRounds;
   const [showEnglish,setShowEnglish] = useState(false);
   const [saved,setSaved] = useState<Saved>(empty);
@@ -27,7 +29,7 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
   const [group,setGroup] = useState('Todas');
   const [notice,setNotice] = useState('');
   const questionRef = useRef<HTMLHeadingElement>(null);
-  const storageKey = `chespanish-conversation-${mode}${a2?'-A2':''}-v1`;
+  const storageKey = conversationWorldStorageKey(mode,level);
   const index = Math.min(Math.max(saved.index,0),entries.length-1);
   const entry = entries[index];
   const item = machineRounds[index];
@@ -86,13 +88,18 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
     setNotice('Ronda reiniciada.');
   }
 
-  return <main className={`cw-world cw-${mode}`} data-motion={motion}>
+  return <main className={`cw-world cw-${mode}${b2?' cw-b2':''}`} data-motion={motion}>
     <div className="cw-shell">
-      <header className="cw-topbar"><Link href="/" className="cw-brand"><SpanishCueBrand variant="compact" context="CONVERSATION WORLDS" /></Link><Link href="/#library-results" className="cw-back">← Biblioteca</Link><div className="cw-top-actions"><span className="cw-level">{level} · CONVERSACIÓN</span>{a2&&<button onClick={()=>setShowEnglish(v=>!v)} aria-pressed={showEnglish}>{showEnglish?'Ocultar inglés':'Ayuda en inglés'}</button>}<button onClick={()=>setMotion(m=>!m)} aria-pressed={!motion}>{motion?'Pausar movimiento':'Activar movimiento'}</button></div></header>
+      <header className="cw-topbar"><Link href="/" className="cw-brand"><SpanishCueBrand variant="compact" context={b2?'MUNDOS DE CONVERSACIÓN':'CONVERSATION WORLDS'} /></Link><Link href="/#library-results" className="cw-back">← Biblioteca</Link><div className="cw-top-actions"><span className="cw-level">{level} · CONVERSACIÓN</span>{a2&&<button onClick={()=>setShowEnglish(v=>!v)} aria-pressed={showEnglish}>{showEnglish?'Ocultar inglés':'Ayuda en inglés'}</button>}<button onClick={()=>setMotion(m=>!m)} aria-pressed={!motion}>{motion?'Pausar movimiento':'Activar movimiento'}</button></div></header>
       <section className="cw-intro">
         <div><p className="cw-eyebrow">{machine?'EXPERIMENTO 01 · DECIDIR Y RECONSIDERAR':'EXPERIMENTO 02 · IMAGINAR OTRA VIDA'}</p><h1>{machine?<>La máquina que <em>elimina cosas</em> del mundo.</>:<>Tu vida con una <em>regla absurda.</em></>}</h1></div>
-        <div className="cw-intro-copy"><p>{a2?(machine?'Esta máquina puede borrar una cosa del mundo para siempre. Tú eliges qué se queda y qué desaparece.':'Mañana te despiertas en un mundo diferente. En cada ronda hay una regla nueva.'):machine?'Una empresa inventó una máquina capaz de eliminar para siempre una cosa del planeta. Tú decides qué desaparece.':'Mañana te despiertas y descubres que el mundo funciona distinto. Cada ronda cambia una ley del universo.'}</p><p className="cw-instruction">{machine?'Primero elige Sí o No. La tarjeta gira, aparece una pregunta y después puedes descubrir el giro.':'Lee la nueva regla, imagina la situación y abre las tres preguntas de una en una.'}</p><span className="cw-count">{machine?'30 decisiones · 30 preguntas centrales · 30 giros':'15 reglas inesperadas · 45 preguntas'}</span></div>
+        <div className="cw-intro-copy"><p>{guide ? guide.introduction : a2?(machine?'Esta máquina puede borrar una cosa del mundo para siempre. Tú eliges qué se queda y qué desaparece.':'Mañana te despiertas en un mundo diferente. En cada ronda hay una regla nueva.'):machine?'Una empresa inventó una máquina capaz de eliminar para siempre una cosa del planeta. Tú decides qué desaparece.':'Mañana te despiertas y descubres que el mundo funciona distinto. Cada ronda cambia una ley del universo.'}</p><p className="cw-instruction">{machine?'Primero elige Sí o No. La tarjeta gira, aparece una pregunta y después puedes descubrir el giro.':'Lee la nueva regla, imagina la situación y abre las tres preguntas de una en una.'}</p><span className="cw-count">{machine?'30 decisiones · 30 preguntas centrales · 30 giros':'15 reglas inesperadas · 45 preguntas'}</span></div>
       </section>
+
+      {b2&&guide&&<section className="cw-b2-preparation" aria-labelledby="cw-prepare-title">
+        <div className="cw-b2-warmup"><p className="cw-eyebrow">ANTES DEL EXPERIMENTO · 5 MIN</p><h2 id="cw-prepare-title">Preparar la conversación</h2><p>{guide.warmup}</p></div>
+        <details className="cw-b2-guide"><summary>Guía docente <span>45 minutos</span></summary><p>{guide.objective}</p><ol>{guide.stages.map(stage=><li key={stage.time}><span>{stage.time}</span><div><strong>{stage.title}</strong><p>{stage.task}</p></div></li>)}</ol><p className="cw-b2-note">{guide.teacherNote}</p></details>
+      </section>}
 
       <section id="cw-activity" className="cw-activity" aria-label={machine?'La máquina de decisiones':'La regla del universo'}>
         <div className="cw-scene-column">
@@ -111,18 +118,18 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
             <div className="cw-flip-inner">
               <article className="cw-card cw-front" aria-hidden={!!decision} inert={!!decision}>
                 <div className="cw-card-top"><span>ANTES DE APRETAR EL BOTÓN</span><span>{String(index+1).padStart(2,'0')}</span></div>
-                <h2>{item.title}</h2><p className="cw-context">{item.intro}</p><div className="cw-decision-prompt">¿Lo eliminás para siempre?</div>
+                <h2>{item.title}</h2><p className="cw-context">{item.intro}</p><div className="cw-decision-prompt">{b2?'¿Eliminarías esto del mundo?':'¿Lo eliminás para siempre?'}</div>
                 <div className="cw-choices"><button className="cw-yes" onClick={()=>choose('yes')}><b>SÍ</b><span>Eliminar</span></button><button className="cw-no" onClick={()=>choose('no')}><b>NO</b><span>Conservar</span></button></div>
                 <p className="cw-card-note">Elige primero. La pregunta está del otro lado.</p>
               </article>
               <article className="cw-card cw-back-face" aria-hidden={!decision} inert={!decision}>
-                {decision&&<><div className="cw-card-top"><span>TU PRIMERA DECISIÓN</span><span className={`cw-choice-pill cw-choice-${decision.first}`}>{decision.first==='yes'?'ELIMINAR':'CONSERVAR'}</span></div><h2 className="cw-item-heading">{item.title}</h2><p className="cw-eyebrow">AHORA, CONVERSEMOS</p><h3 className="cw-question" ref={questionRef} tabIndex={-1}>{item.question}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{item.questionEn}</p>}<TalkHelp words={item.words} starter={item.starter}/>
-                {!decision.revealed?<button className="cw-primary cw-reveal" onClick={reveal}>{a2?'¿Qué pasa después?':'Descubrir la consecuencia'} <span aria-hidden="true">↗</span></button>:<section className="cw-consequence"><p className="cw-eyebrow">GIRO · SI DESAPARECE…</p><p>{item.consequence}</p><h4>{a2?'¿Pensás lo mismo ahora?':'¿Seguís manteniendo tu decisión?'}</h4><div className="cw-final-choices"><button onClick={()=>decideFinal(false)} aria-pressed={decision.final===decision.first}>{a2?'Sí, pienso lo mismo':'Mantengo mi decisión'}</button><button onClick={()=>decideFinal(true)} aria-pressed={!!decision.final&&decision.final!==decision.first}>{a2?'No, cambio de idea':'Cambio de opinión'}</button></div>{decision.final&&<p className="cw-verdict">Decisión final: <strong>{decision.final==='yes'?'eliminar':'conservar'}</strong>. {a2?'Contá por qué.':'Contá qué pesó más para vos.'}</p>}</section>}</>}
+                {decision&&<><div className="cw-card-top"><span>TU PRIMERA DECISIÓN</span><span className={`cw-choice-pill cw-choice-${decision.first}`}>{decision.first==='yes'?'ELIMINAR':'CONSERVAR'}</span></div><h2 className="cw-item-heading">{item.title}</h2><p className="cw-eyebrow">AHORA, CONVERSEMOS</p><h3 className="cw-question" ref={questionRef} tabIndex={-1}>{item.question}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{item.questionEn}</p>}<TalkHelp words={item.words} starter={item.starter}/>{b2&&item.followUp&&<details className="cw-help cw-b2-followup"><summary>Profundizar la conversación <span aria-hidden="true">+</span></summary><div><p>{item.followUp}</p></div></details>}
+                {!decision.revealed?<button className="cw-primary cw-reveal" onClick={reveal}>{a2?'¿Qué pasa después?':'Descubrir la consecuencia'} <span aria-hidden="true">↗</span></button>:<section className="cw-consequence"><p className="cw-eyebrow">GIRO · SI DESAPARECE…</p><p>{item.consequence}</p>{b2&&<div className="cw-b2-counterpoint"><p className="cw-eyebrow">OTRA VOZ</p><p>{item.counterpoint}</p><p className="cw-b2-revision">{item.revision}</p></div>}<h4>{b2?'Después de escuchar la objeción…':a2?'¿Pensás lo mismo ahora?':'¿Seguís manteniendo tu decisión?'}</h4><div className="cw-final-choices"><button onClick={()=>decideFinal(false)} aria-pressed={decision.final===decision.first}>{a2?'Sí, pienso lo mismo':'Mantengo mi decisión'}</button><button onClick={()=>decideFinal(true)} aria-pressed={!!decision.final&&decision.final!==decision.first}>{a2?'No, cambio de idea':'Cambio de opinión'}</button></div>{decision.final&&<p className="cw-verdict">Decisión final: <strong>{decision.final==='yes'?'eliminar':'conservar'}</strong>. {b2?'Explica qué argumento aceptas, qué mantienes y bajo qué condición revisarías tu postura.':a2?'Contá por qué.':'Contá qué pesó más para vos.'}</p>}</section>}</>}
               </article>
             </div>
           </div> : <article className="cw-card cw-rule-card" key={entry.id}>
-            <div className="cw-card-top"><span>NUEVA LEY DEL UNIVERSO</span><span>REGLA {String(index+1).padStart(2,'0')}</span></div><h2>{rule.title}</h2><p className="cw-law">{rule.law}</p>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.lawEn}</p>}<div className="cw-scene-situation"><span>IMAGINÁ ESTO</span><p>{rule.scene}</p></div>
-            {questionNumber<0?<button className="cw-primary" onClick={()=>openQuestion(0)}>Abrir la primera pregunta <span aria-hidden="true">↗</span></button>:<div className="cw-rule-question" key={Math.min(questionNumber,2)}><div className="cw-question-steps" aria-label="Preguntas de esta regla">{rule.questions.map((_,n)=><button key={n} onClick={()=>openQuestion(n)} aria-current={Math.min(questionNumber,2)===n?'step':undefined}>{n+1}<span>{(a2?['Primera','Segunda','Tercera']:['Tu vida','Los demás','Un paso más'])[n]}</span></button>)}</div><h3 className="cw-question" tabIndex={-1}>{rule.questions[Math.min(questionNumber,2)]}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.questionsEn?.[Math.min(questionNumber,2)]}</p>}<TalkHelp words={rule.words} starter={rule.starter}/>{questionNumber<2?<button className="cw-primary" onClick={()=>openQuestion(questionNumber+1)}>Siguiente pregunta <span aria-hidden="true">→</span></button>:questionNumber===2?<button className="cw-primary" onClick={()=>openQuestion(3)}>Terminamos esta regla <span aria-hidden="true">✓</span></button>:<p className="cw-verdict">Regla conversada. Elige otro universo cuando quieras.</p>}</div>}
+            <div className="cw-card-top"><span>NUEVA LEY DEL UNIVERSO</span><span>REGLA {String(index+1).padStart(2,'0')}</span></div><h2>{rule.title}</h2><p className="cw-law">{rule.law}</p>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.lawEn}</p>}<div className="cw-scene-situation"><span>{b2?'IMAGINA ESTA SITUACIÓN':'IMAGINÁ ESTO'}</span><p>{rule.scene}</p></div>
+            {questionNumber<0?<button className="cw-primary" onClick={()=>openQuestion(0)}>Abrir la primera pregunta <span aria-hidden="true">↗</span></button>:<div className="cw-rule-question" key={Math.min(questionNumber,2)}><div className="cw-question-steps" aria-label="Preguntas de esta regla">{rule.questions.map((_,n)=><button key={n} onClick={()=>openQuestion(n)} aria-current={Math.min(questionNumber,2)===n?'step':undefined}>{n+1}<span>{(b2?['En la práctica','Otra perspectiva','Revisar la ley']:a2?['Primera','Segunda','Tercera']:['Tu vida','Los demás','Un paso más'])[n]}</span></button>)}</div><h3 className="cw-question" tabIndex={-1}>{rule.questions[Math.min(questionNumber,2)]}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.questionsEn?.[Math.min(questionNumber,2)]}</p>}<TalkHelp words={rule.words} starter={rule.starter}/>{b2&&questionNumber>=2&&rule.teacherFollowUp&&<details className="cw-help cw-b2-followup"><summary>Repregunta docente <span aria-hidden="true">+</span></summary><div><p>{rule.teacherFollowUp}</p></div></details>}{questionNumber<2?<button className="cw-primary" onClick={()=>openQuestion(questionNumber+1)}>Siguiente pregunta <span aria-hidden="true">→</span></button>:questionNumber===2?<button className="cw-primary" onClick={()=>openQuestion(3)}>Terminamos esta regla <span aria-hidden="true">✓</span></button>:<p className="cw-verdict">{b2?'Regla conversada. Resume la versión que defenderías y la objeción que aún queda por resolver.':'Regla conversada. Elige otro universo cuando quieras.'}</p>}</div>}
           </article>}
           <nav className="cw-next" aria-label="Cambiar de ronda"><button disabled={index===0} onClick={()=>go(index-1)}>← Anterior</button><span>{index+1} de {entries.length}</span><button disabled={index===entries.length-1} onClick={()=>go(index+1)}>{machine?'Otra decisión':'Otra regla'} →</button></nav>
           <p className="cw-status" role="status" aria-live="polite">{notice||'Puedes elegir cualquier ronda en el panel de abajo.'}</p>
@@ -134,8 +141,11 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
         <div className="cw-round-grid">{entries.map((e,n)=>{if(group!=='Todas'&&group!==e.group)return null;const done=machine?Boolean(saved.decisions[e.id]?.final):saved.opened[e.id]===3;return <button key={e.id} className={`cw-round-tile ${n===index?'cw-current':''} ${done?'cw-done':''}`} onClick={()=>go(n)} aria-current={n===index?'step':undefined} style={{'--tile-delay':`${n%10*35}ms`} as CSSProperties}><span className="cw-tile-meta">{String(n+1).padStart(2,'0')}<i>{done?'Conversada':n===index?'En curso':''}</i></span><strong>{e.title}</strong><span className="cw-tile-bottom">{machine?'Decidir':'Explorar regla'} <b aria-hidden="true">↗</b></span></button>;})}</div>
       </section>
 
-      <ConversationClosing questions={closing} />
-      <footer className="cw-footer"><p>Conversación libre · Español rioplatense · Nivel {level}</p><div><button onClick={()=>{setSaved(empty());setNotice('Nueva conversación. Empezamos de cero.');setGroup('Todas');}}>Nueva conversación</button><a href={(machine?'/tu-vida-con-una-regla-absurda':'/la-maquina-que-elimina-cosas')+(a2?'-a2':'')}>{machine?'Ir a Tu vida con una regla absurda':'Ir a La máquina que elimina cosas'} →</a></div></footer>
+      {b2&&guide ? <>
+        <section className="cw-b2-workshop" aria-label="Recursos para argumentar"><details className="cw-help"><summary>Recursos para matizar y negociar <span aria-hidden="true">+</span></summary><div><ul>{guide.moves.map(move=><li key={move}>{move}</li>)}</ul></div></details><details className="cw-help"><summary>Desafío oral · Cambiar de perspectiva <span aria-hidden="true">+</span></summary><div><p>{guide.challenge}</p></div></details></section>
+        <details className="cw-b2-closing"><summary>{guide.closingTitle}<span>10 min</span></summary><p>{guide.closingTask}</p><ol>{closing.map(question=><li key={question}>{question}</li>)}</ol></details>
+      </> : <ConversationClosing questions={closing} /> }
+      <footer className="cw-footer"><p>Conversación libre · Español rioplatense · Nivel {level}</p><div><button onClick={()=>{setSaved(empty());setNotice('Nueva conversación. Empezamos de cero.');setGroup('Todas');}}>Nueva conversación</button><a href={(machine?'/tu-vida-con-una-regla-absurda':'/la-maquina-que-elimina-cosas')+(b2?'?level=B2':a2?'-a2':'')}>{machine?'Ir a Tu vida con una regla absurda':'Ir a La máquina que elimina cosas'} →</a></div></footer>
     </div>
   </main>;
 }

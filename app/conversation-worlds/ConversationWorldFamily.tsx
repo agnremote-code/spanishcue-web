@@ -3,6 +3,8 @@ import { ConversationFamily } from '../conversation-families/ConversationFamily'
 import ConversationWorld from './ConversationWorld';
 import { eliminations, absurdRules } from './data';
 import { eliminationsA2, absurdRulesA2 } from './data-a2';
+import { eliminationsB2, absurdRulesB2, worldGuidesB2, worldClosingB2 } from './data-b2';
+import type { WorldLevel } from './types';
 
 const closing = {
   machine: {
@@ -14,6 +16,6 @@ const closing = {
     B1: ['Compara cómo afectaría una regla a dos personas con vidas diferentes.', 'Cuenta un día en el que la regla empieza bien pero termina causando un problema.', 'Negocien una excepción y expliquen por qué sería justa.'],
   },
 };
-export default function ConversationWorldFamily({mode,level='B1'}:{mode:'machine'|'rules';level?:'A2'|'B1'}) {
-  return <ConversationFamily id={mode === 'machine' ? 'la-maquina-que-elimina-cosas' : 'tu-vida-con-una-regla-absurda'} title={mode === 'machine' ? 'La máquina que elimina cosas del mundo' : 'Tu vida con una regla absurda'} levels={['A2','B1']} defaultLevel={level}>{selected => <ConversationWorld key={selected} mode={mode} level={selected as 'A2'|'B1'} machineRounds={selected === 'A2' ? eliminationsA2 : eliminations} ruleRounds={selected === 'A2' ? absurdRulesA2 : absurdRules} closing={closing[mode][selected as 'A2'|'B1']} />}</ConversationFamily>;
+export default function ConversationWorldFamily({mode,level='B1'}:{mode:'machine'|'rules';level?:WorldLevel}) {
+  return <ConversationFamily id={mode === 'machine' ? 'la-maquina-que-elimina-cosas' : 'tu-vida-con-una-regla-absurda'} title={mode === 'machine' ? 'La máquina que elimina cosas del mundo' : 'Tu vida con una regla absurda'} levels={['A2','B1','B2']} defaultLevel={level}>{selected => <ConversationWorld key={selected} mode={mode} level={selected as WorldLevel} machineRounds={selected === 'B2' ? eliminationsB2 : selected === 'A2' ? eliminationsA2 : eliminations} ruleRounds={selected === 'B2' ? absurdRulesB2 : selected === 'A2' ? absurdRulesA2 : absurdRules} closing={selected === 'B2' ? worldClosingB2[mode] : closing[mode][selected as 'A2'|'B1']} guide={selected === 'B2' ? worldGuidesB2[mode] : undefined} />}</ConversationFamily>;
 }

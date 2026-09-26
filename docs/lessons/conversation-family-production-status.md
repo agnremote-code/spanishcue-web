@@ -17,8 +17,8 @@ Public family metadata adds four query-selected variants to existing canonical l
 - [x] Fetch main, check overlapping PRs, read repository/authoring rules and audit; create and preserve a dedicated remote branch.
 - [x] Run the 32 existing conversation baseline tests.
 - [x] Capture structural hashes of all ten original banks, full route ledger and existing family variant/preview metadata directly from canonical main.
-- [ ] Author and integrate the four banks using targeted failing-then-passing tests; preserve original content.
-- [ ] Add four distinct sibling thumbnails and metadata-only public summaries; verify single-card/resource coherence.
+- [x] Author and integrate the four banks using targeted failing-then-passing tests; preserve original content.
+- [x] Add four distinct sibling thumbnails and metadata-only public summaries; verify single-card/resource coherence.
 - [ ] Verify selectors, unsupported query fallback, historical defaults, history, state reset/isolation and original URLs.
 - [ ] Inspect entry, interaction, support, closing, selectors and catalog previews on desktop and mobile.
 - [ ] Run relevant tests, lint, typecheck, protected build/artifact validation and diff checks; record limitations precisely.
@@ -33,3 +33,11 @@ Public family metadata adds four query-selected variants to existing canonical l
 5. Mobile support and closing states must remain readable after content expands.
 
 No production, D1, authentication, billing, environment/secrets, domains, release state or deployment configuration changes are authorized or included.
+
+## Implementation checkpoint
+
+All four requested variants are implemented in source and independently reviewed for Spanish quality and CEFR demand. Red Flag A1 has 18 situations; Let’s Talk B2 has 120 questions; Machine B2 has 30 dilemmas; Rules B2 has 15 rules and 45 questions. All ten original bank fingerprints and the entire route ledger match canonical main.
+
+`npm run test:conversation`: 60/60 passed, including new regression coverage now invoked by `npm test`. `npm run lint`: passed. `npm run build`: passed, including protected asset finalization and artifact validation. TypeScript retains precisely the baseline's 11 diagnostics (billing 8, marketing 2, Mexico 1); no new diagnostics.
+
+**Visual QA is blocked, not passed.** The supplied cloud browser rejected the local component preview with `net::ERR_BLOCKED_BY_CLIENT`, then explicitly rejected the shared local file protocol under its browser security policy. That policy forbids alternate surfaces/workarounds. Desktop/mobile entry, interaction, support, closing, selector and catalog inspection therefore remain unverified. The four actual saved thumbnail images were visually inspected. SSR and hook-driven interaction tests are useful evidence but are not browser/visual verification. No deployment or merge is authorized by this checkpoint.

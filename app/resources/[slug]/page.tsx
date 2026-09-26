@@ -69,7 +69,9 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
   const related = relatedResourceLessons(lesson);
   const level = family ? selectedLevel : resourceLevelLabel(lesson);
   const typeLabel = resourceTypeLabel(lesson);
-  const description = resourceDescription(lesson);
+  const description = selectedPreview?.explanation
+    ? resourceDescription({...lesson, level, displayLevel: level, subtitle: selectedPreview.hook})
+    : resourceDescription(lesson);
   const canonical = `https://spanishcue.com${resourcePathForLesson(lesson)}`;
 
   const structuredData = {
@@ -78,7 +80,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
     name: lesson.title,
     description,
     url: canonical,
-    image: `https://spanishcue.com${lesson.image}`,
+    image: `https://spanishcue.com${selectedPreview?.explanation ? selectedPreview.image || lesson.image : lesson.image}`,
     inLanguage: "es",
     educationalLevel: level,
     learningResourceType: typeLabel,
@@ -146,7 +148,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                 who want a coherent lesson they can open in the browser and teach without rebuilding
                 the material from scratch.
               </p>
-              <p>{lesson.explanation}</p>
+              <p>{selectedPreview?.explanation || lesson.explanation}</p>
             </section>
 
             <section className={styles.section}>
@@ -165,10 +167,10 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
               </p>
             </section>
 
-            {lesson.warmup ? (
+            {selectedPreview?.warmup || lesson.warmup ? (
               <section className={styles.section}>
                 <h2>Warm-up prompt</h2>
-                <p>{lesson.warmup}</p>
+                <p>{selectedPreview?.warmup || lesson.warmup}</p>
               </section>
             ) : null}
 

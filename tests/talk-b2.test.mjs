@@ -54,3 +54,51 @@ test('B2 uses the shared keyed world and preserves historical route defaults and
   assert.match(page, /b2TopicSupport/);
   assert.doesNotMatch(page, /"C1"|"C2"/);
 });
+
+test('B2 conversation board opens only with exactly three choices and refreshes its synthesis after reselection', async () => {
+  const { createRequire } = await import('node:module');
+  const { runInNewContext } = await import('node:vm');
+  const require = createRequire(import.meta.url);
+  const React = require('react');
+  const source = readFileSync('app/choose-conversation/page.tsx', 'utf8');
+  const result = await build({ stdin: { contents: source + '\nexport { TalkExperience };', resolveDir: process.cwd() + '/app/choose-conversation', loader: 'tsx' }, jsx: 'automatic', bundle: true, write: false, format: 'cjs', platform: 'node', external: ['react', 'next/*'], loader: { '.css': 'empty' } });
+  const state = [];
+  let slot = 0;
+  const hooks = { ...React, useState: initial => {
+    const index = slot++;
+    if (!(index in state)) state[index] = initial;
+    return [state[index], value => { state[index] = typeof value === 'function' ? value(state[index]) : value; }];
+  } };
+  const loadedModule = { exports: {} };
+  runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`, { console, URL, URLSearchParams, process, window: { scrollTo() {} } })(name => name === 'react' ? hooks : require(name), loadedModule, loadedModule.exports);
+  const find = (tree, predicate) => {
+    if (!tree || typeof tree !== 'object') return [];
+    if (Array.isArray(tree)) return tree.flatMap(child => find(child, predicate));
+    return [...(predicate(tree) ? [tree] : []), ...find(tree.props?.children, predicate)];
+  };
+  const render = () => { slot = 0; return loadedModule.exports.TalkExperience({ variant: 'extended' }); };
+  const byClass = (tree, value) => find(tree, node => node.props?.className === value)[0];
+  const questionButtons = tree => find(byClass(tree, 'question-list'), node => node.type === 'button');
+  const startButton = tree => find(tree, node => node.type === 'button' && node.props.children === 'A CONVERSAR →')[0];
+  find(byClass(render(), 'topic-worlds'), node => node.type === 'button')[0].props.onClick();
+  assert.equal(questionButtons(render()).length, 8);
+  assert.equal(startButton(render()).props.disabled, true);
+  for (const index of [0, 3, 7]) questionButtons(render())[index].props.onClick();
+  assert.equal(startButton(render()).props.disabled, false);
+  assert.equal(questionButtons(render())[2].props.disabled, true);
+  questionButtons(render())[2].props.onClick();
+  assert.deepEqual(Array.from(state[1]), [0, 3, 7], 'fourth selection is rejected');
+  startButton(render()).props.onClick();
+  const board = byClass(render(), 'ready-talk');
+  assert.equal(find(board, node => node.type === 'article').length, 3);
+  const closing = find(board, node => node.type?.name === 'B2ConversationClosing')[0];
+  for (const index of [0, 3, 7]) assert.ok(closing.props.questions.join(' ').includes(talkVariants.B2.activities[0].questions[index]));
+  questionButtons(render())[3].props.onClick();
+  assert.equal(byClass(render(), 'ready-talk'), undefined, 'deselecting closes stale board and synthesis');
+  assert.equal(startButton(render()).props.disabled, true);
+  questionButtons(render())[2].props.onClick();
+  startButton(render()).props.onClick();
+  const updatedClosing = find(byClass(render(), 'ready-talk'), node => node.type?.name === 'B2ConversationClosing')[0];
+  assert.ok(updatedClosing.props.questions.join(' ').includes(talkVariants.B2.activities[0].questions[2]));
+  assert.ok(!updatedClosing.props.questions.join(' ').includes(talkVariants.B2.activities[0].questions[3]));
+});
