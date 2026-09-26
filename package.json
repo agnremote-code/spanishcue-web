@@ -18,7 +18,7 @@
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate",
     "test:guides": "node --test tests/teaching-guides-seo.test.mjs",
-    "test:conversation": "node --test tests/conversation-batch1.test.mjs tests/conversation-batch1-routes.test.mjs tests/conversation-worlds-b2.test.mjs tests/conversation-families.test.mjs tests/conversation-resources.test.mjs tests/conversation-variants.test.mjs tests/conversation-family-rendering.test.mjs tests/red-flag-o-no.test.mjs tests/red-flag-a1.test.mjs tests/talk-b2.test.mjs tests/country-flagships.test.mjs tests/uk-relief-levels.test.mjs tests/library-filters.test.mjs"
+    "test:conversation": "node --test tests/conversation-batch1-run2.test.mjs tests/conversation-batch1-run2-routes.test.mjs tests/conversation-worlds-a1.test.mjs tests/red-flag-c1.test.mjs tests/talk-c1.test.mjs tests/conversation-batch1.test.mjs tests/conversation-batch1-routes.test.mjs tests/conversation-worlds-b2.test.mjs tests/conversation-families.test.mjs tests/conversation-resources.test.mjs tests/conversation-variants.test.mjs tests/conversation-family-rendering.test.mjs tests/red-flag-o-no.test.mjs tests/red-flag-a1.test.mjs tests/talk-b2.test.mjs tests/country-flagships.test.mjs tests/uk-relief-levels.test.mjs tests/library-filters.test.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

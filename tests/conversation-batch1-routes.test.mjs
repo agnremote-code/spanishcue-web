@@ -44,7 +44,8 @@ test('every historical URL renders its family new variant when selected in the q
   const html=await renderRoute(route,`?locale=es&level=${level}&utm_source=teacher`);
   assert.match(html,new RegExp(`data-level="${level}"`),route);
   assert.match(html,new RegExp(`aria-pressed="true">${level}</button>`));
-  assert.doesNotMatch(html,/>C[12]<\/button>/);
+  assert.doesNotMatch(html,/>C2<\/button>/);
+  if(route.includes('maquina')||route.includes('regla-absurda'))assert.doesNotMatch(html,/>C1<\/button>/);
   if(route.includes('red-flag'))assert.match(html,/class="rf-game rf-a1"/);
   if(route.includes('conversation'))assert.match(html,/Tres preguntas, distintas perspectivas/);
   if(route.includes('maquina'))assert.match(html,/La reproducción automática/);

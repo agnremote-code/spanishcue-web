@@ -9,8 +9,8 @@ export function C1ConversationEntry({ guide }: { guide: string }) {
 
 export function C1ConversationSupport({ topicIndex }: { topicIndex: number }) {
   return <details className="talk-c1-support">
-    <summary>Decilo con más precisión <span>Apoyo opcional</span></summary>
-    <p>Abrí estos recursos cuando te falte una manera de expresar un matiz. No hace falta usarlos todos ni llegar a un acuerdo.</p>
+    <summary>Dilo con más precisión <span>Apoyo opcional</span></summary>
+    <p>Abre estos recursos cuando te falte una manera de expresar un matiz. No hace falta usarlos todos ni llegar a un acuerdo.</p>
     <dl>{c1DiscourseMoves.map(({ move, chunk }) => <div key={move}><dt>{move}</dt><dd>{chunk}</dd></div>)}</dl>
     <h3>Si quieren abrir otra lectura</h3>
     <ul>{c1TopicSupport[topicIndex].followUps.map(question => <li key={question}>{question}</li>)}</ul>

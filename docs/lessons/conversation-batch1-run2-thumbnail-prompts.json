@@ -1,0 +1,145 @@
+[
+  {
+    "key": "machine-a1",
+    "target": "public/conversation-worlds/elimination-machine-a1.webp",
+    "refs": [
+      "public/conversation-worlds/elimination-machine.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Create a NEW sibling wide landscape 16:9 lesson thumbnail in the exact reference world. Preserve massive dark titanium curved supports, fine cyan chamber rings, amber metal details, monumental industrial cathedral arches, daylight through clouds, and the recognizable luminous Earth. Meaningfully change the focus and camera: intimate low three-quarter view into a smaller foreground circular testing chamber that is physically part of this grand machine. Inside this foreground chamber a SINGLE ordinary cream ceramic coffee mug full of coffee sits on a metal platform, very large and instantly recognizable, with a little natural steam. The glass enclosure and cyan ring frame the mug cleanly. The grand machine and floating Earth remain clearly recognizable deeper behind it, less dominant than the mug. Two simple physical unlabelled red and green buttons at the near edge suggest eliminate or keep. Everyday object confronting a grand impossible machine; friendly curiosity, not peril. Rich believable photographic materials, careful practical lighting, cinematic artisanal detail, strong readable silhouette. Match source palette, not extra neon or a new visual brand. No people needed. No lettering, numbers, labels, logos, level badges or watermarks.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 2",
+      "date": "2026-09-26",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 318104,
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-b3f9baf3-4ce7-4886-a843-a77e18b39a70.png",
+    "sha256": "6c891878eaead3c4a6dbab988d14c4907114f6e1d5b95b5ec30df744ca402408",
+    "visual_qa": "Coffee mug clearly dominant in foreground chamber; Earth and cathedral identify same family. Readable red/green controls, coherent materials, no lettering.",
+    "reference_metadata": [
+      {
+        "path": "public/conversation-worlds/elimination-machine.webp",
+        "role": "family style reference",
+        "inspected_before_generation": true,
+        "sha256": "401b83053b81888021f0b181b9002b6e4f589b05eb274608237fffcc7984a621"
+      }
+    ]
+  },
+  {
+    "key": "absurd-a1",
+    "target": "public/conversation-worlds/absurd-universe-a1.webp",
+    "refs": [
+      "public/conversation-worlds/absurd-universe.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Create a NEW sibling wide landscape 16:9 lesson thumbnail in the exact whimsical impossible-city world of the reference. Preserve upside-down ornate golden towers, peach and lavender dusk, blue mountains, moon, art-deco stone terraces, rich planters, warm glowing windows, and the iconic navy-and-brass floating old-fashioned tram. Meaningfully new focal composition: close view from the open tram doorway onto an elegant city boarding platform. A friendly golden dog sits proudly by the tram entrance wearing a tiny neat red bow tie, while two other believable small pet dogs sit calmly on the tram's upholstered passenger seats behind it. Their adult owners stand on the platform smiling with bemused acceptance, as if dogs get the best seats by city rule. Keep the scene immediately concrete and charming, dogs and doorway large in foreground, astonishing reversed towers visible across the luminous background. Natural animal anatomy, subtle human expressions, detailed real brass and fabric, polished cinematic photographic fantasy. A simple funny daily-life rule, not a futuristic law court or chaotic crowd. Strong different composition from source. No text, numerals, labels, signage, logos, badges or watermark.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 2",
+      "date": "2026-09-26",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 356198,
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-001df736-7ecf-4808-ac08-73e282cbcef8.png",
+    "sha256": "2edbf6999526cf1fc5dcf07432f96de4e938b7ddf597ffc62053d45947d5ee1f",
+    "visual_qa": "Dogs occupy tram seats while adult owners stand nearby; new close doorway composition retains upside-down golden architecture, navy tram and warm dusk. No lettering; coherent animal anatomy.",
+    "reference_metadata": [
+      {
+        "path": "public/conversation-worlds/absurd-universe.webp",
+        "role": "family style reference",
+        "inspected_before_generation": true,
+        "sha256": "4487a49e10490a319b6b84e874e0c6bea9f897f308295c5efd5f08934e4cd736"
+      }
+    ]
+  },
+  {
+    "key": "redflag-c1",
+    "target": "public/play-mode/red-flag-o-no/c1.webp",
+    "refs": [
+      "public/play-mode/red-flag-o-no/a2.webp"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create a NEW sibling landscape 3:2 thumbnail for Red Flag o No in the same clean bright editorial photographic family as the reference. Preserve the same two adult men, one dark-haired in cream knitwear and the other light-brown-haired in olive casual shirt, natural cafe window light, pale neutral walls, warm wood, believable skin texture and human warmth. New composition and nuanced action: the olive-shirt man has turned his smartphone screen toward his partner to explain an interruption; screen shows a clearly composed simple video-call portrait of an elderly family member, without text or app chrome. The cream-sweater man listens with a thoughtful gently raised eyebrow, open hand resting near the phone, an expression of reconsidering rather than anger. The phone and their attentive faces should read as context changing a first impression. On the table in lower foreground, two small elegant physical triangular tabletop flags, one muted red and one fresh green, lean in opposite directions as equal judgment choices, neither dominating. Medium close three-quarter two-shot with a little air around faces, candid editorial atmosphere, natural hands, no melodrama or therapy symbolism. Bright and approachable C1, not dark purple or neon. No written words, letters, numbers, badges, logos or watermark.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 2",
+      "date": "2026-09-26",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 159706,
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-1ea1546f-cf06-4e3c-b067-f8b657c48145.png",
+    "sha256": "07b1de6d191c52d3c1145b9f4aadd88f36f91cef9d7f9785669bb74e13b36f4d",
+    "visual_qa": "Bright cafe and same two adults preserve editorial family. Elderly relative portrait is clear on phone, red/green flags balance judgments, thoughtful interaction without melodrama. No text; plausible hands and faces.",
+    "reference_metadata": [
+      {
+        "path": "public/play-mode/red-flag-o-no/a2.webp",
+        "role": "family style reference",
+        "inspected_before_generation": true,
+        "sha256": "47a08260b8393f67b8d946833d4bbdcc27802e2a1bca4bb6c20246409521a635"
+      }
+    ]
+  },
+  {
+    "key": "talk-c1",
+    "target": "public/catalog-thumbnails/conversation-c1.webp",
+    "refs": [
+      "public/catalog-thumbnails/conversation-choice.webp",
+      "public/catalog-thumbnails/conversation-b2.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Create a NEW sibling wide landscape 16:9 conversation-lesson thumbnail. Image 1 is the exact colorful topic-world family identity; image 2 is supporting reference for tactile selected-question pieces. Preserve two adult conversational partners, a dark-haired man in navy and a brunette woman in cream, navy lounge seating, warm gold architectural lighting, lovely clear floating glass orbs containing colorful topic worlds, rich realistic materials. Meaningfully new composition: oblique side view across their table, the woman foreground left in three-quarter profile explaining a thought, the man farther right leaning forward listening with one natural open-handed response. Both faces visible, equally engaged. On the large near section of the table are EXACTLY THREE distinct ivory question tiles arranged as a loose triangular conversation path, fully visible, each engraved with a single question mark and no other text. Behind and around them, glass worlds overlap gently at different depths to suggest connected perspectives: a vibrant seaside town, shared food at a table, mountain nature, art sculpture and a bustling human city square. Keep worlds individually readable, not a cluttered collage. A warm blue-hour terrace with airy sky; nuanced conversation made inviting, personal and lively. Three selected questions connect into a layered exchange. Strong clear focus on human connection and three tiles, composition unmistakably different from centered original and frontal B2. No title, letters, numerals, badges, logos, watermark or neon interface; only the three question-mark symbols.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 2",
+      "date": "2026-09-26",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 312838,
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-6259531a-4a2e-405d-a712-d3495acd1833.png",
+    "sha256": "57e0666f9362a123423e664ef7ff1dd3626c079b52d8e1c6a4e34d01f39efcbe",
+    "visual_qa": "Oblique conversation with woman foreground left differs from original and B2; warm gold/blue topic worlds stay recognizable. Exactly three question tiles fully visible in triangle. Coherent faces/hands, inviting atmosphere, no lettering beyond question marks.",
+    "reference_metadata": [
+      {
+        "path": "public/catalog-thumbnails/conversation-choice.webp",
+        "role": "family style reference",
+        "inspected_before_generation": true,
+        "sha256": "103c0e9006e05eeacde6a6aa1e45ebf1a5f760de7db8c876aac1f78042ade21e"
+      },
+      {
+        "path": "public/catalog-thumbnails/conversation-b2.webp",
+        "role": "supporting selected-question material reference",
+        "inspected_before_generation": true,
+        "sha256": "98e4fc0862b348ff9cee141ab09e45bf835c068854d05efd96b6ab48d2e47172"
+      }
+    ]
+  }
+]

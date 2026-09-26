@@ -11,13 +11,13 @@ const publicBuild=await build({entryPoints:['app/conversation-families/catalog.t
 const publicInputs=Object.keys(publicBuild.metafile.inputs).join('\n');
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const expected=[
- ['red-flag-o-no','A1',['A1','A2','B1','B2']],
- ['lets-talk','B2',['A1','A2','B1','B2']],
- ['la-maquina-que-elimina-cosas','B2',['A2','B1','B2']],
- ['tu-vida-con-una-regla-absurda','B2',['A2','B1','B2']],
+ ['red-flag-o-no','A1',['A1','A2','B1','B2','C1']],
+ ['lets-talk','B2',['A1','A2','B1','B2','C1']],
+ ['la-maquina-que-elimina-cosas','B2',['A1','A2','B1','B2']],
+ ['tu-vida-con-una-regla-absurda','B2',['A1','A2','B1','B2']],
 ];
 
-test('exactly four new variants are discoverable, with no duplicate family cards or speculative levels',()=>{
+test('all four Run 1 variants remain discoverable, with no duplicate family cards or speculative levels',()=>{
  for(const [id,level,levels] of expected){
   const family=p.conversationFamilies.find(f=>f.id===id);
   assert.deepEqual(family.availableLevels,levels,id);
@@ -77,7 +77,7 @@ test('new level links preserve unrelated query/hash and unsupported levels keep 
  for(const [id,level] of expected){
   const family=p.conversationFamilies.find(f=>f.id===id);
   assert.equal(p.resolveConversationLevel(family,level),level);
-  for(const invalid of ['C1','C2','a1','INVALID',''])assert.equal(p.resolveConversationLevel(family,invalid),family.defaultLevel);
+  for(const invalid of ['C2','a1','INVALID','', ...(family.availableLevels.includes('C1')?[]:['C1'])])assert.equal(p.resolveConversationLevel(family,invalid),family.defaultLevel);
   assert.equal(p.conversationLevelUrl(`https://example.test${family.canonicalPath}?locale=es&utm_source=teacher#round`,family,level),`${family.canonicalPath}?locale=es&utm_source=teacher&level=${level}#round`);
   for(const seed of p.lessons.filter(l=>family.legacyLessonIds.includes(l.id))){
    assert.equal(p.resolveConversationLevel({...family,defaultLevel:seed.level},'C2'),seed.level);

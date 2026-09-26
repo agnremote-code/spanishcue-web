@@ -14,9 +14,9 @@ if (existsSync(path)) {
   assert.equal(new Set(ids).size,ids.length);
   assert.deepEqual(p.catalogLessons.filter(l=>l.category!=='Conversación'),p.lessons.filter(l=>l.category!=='Conversación'));
  });
- test('Red Flag is one card with four genuinely available levels',()=>{
+ test('Red Flag is one card with five genuinely available levels',()=>{
   const cards=p.catalogLessons.filter(l=>l.familyId==='red-flag-o-no');
-  assert.equal(cards.length,1); assert.deepEqual(cards[0].levels,['A1','A2','B1','B2']);
+  assert.equal(cards.length,1); assert.deepEqual(cards[0].levels,['A1','A2','B1','B2','C1']);
   assert.equal(cards[0].title,'Red Flag o No');
   assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'B2'}).length,1);
   assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'A1'}).length,1);

@@ -1,8 +1,8 @@
 import type { AbsurdRule, Elimination } from './data';
 
-export type WorldLevel = 'A2' | 'B1' | 'B2';
-export type WorldElimination = Elimination & { followUp?: string; counterpoint?: string; revision?: string };
-export type WorldRule = AbsurdRule & { teacherFollowUp?: string };
+export type WorldLevel = 'A1' | 'A2' | 'B1' | 'B2';
+export type WorldElimination = Elimination & { answerFrames?: string[]; followUp?: string; counterpoint?: string; revision?: string };
+export type WorldRule = AbsurdRule & { questionFrames?: [string[], string[], string[]]; teacherFollowUp?: string };
 export type EliminationB2 = Elimination & { followUp: string; counterpoint: string; revision: string };
 export type AbsurdRuleB2 = AbsurdRule & { teacherFollowUp: string };
 export type WorldGuide = {
@@ -16,3 +16,6 @@ export type WorldGuide = {
   closingTitle: string;
   closingTask: string;
 };
+
+export type EliminationA1 = WorldElimination & { answerFrames: string[] };
+export type AbsurdRuleA1 = WorldRule & { questionFrames: [string[], string[], string[]] };

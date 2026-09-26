@@ -135,3 +135,13 @@ Fresh verification before Run 2 edits: `npm run test:conversation` **60/60 passe
 The available capabilities still advertise no permitted local preview/tunnel mechanism. Run 1’s cloud-browser `net::ERR_BLOCKED_BY_CLIENT` and explicit shared-file protocol rejection remain the recorded blocker; no blocked navigation or alternate-browser workaround is being retried. Interactive desktop/mobile QA is pending. This run will continue with source/SSR/hook-driven interaction validation, responsive CSS review and inspection of all four new saved thumbnails, as instructed.
 
 Implementation and final verification are in progress. Coherent checkpoints are pushed to the Run 2 branch; this section will record the actual results before completion.
+
+### Run 2 implementation checkpoint
+
+All four authorized banks and selectors are implemented. Machine A1 has **24** decisions; Rules A1 has **15 rules / 45 prompts**; Red Flag C1 has **18 situations**, each with first-look, hidden-context, reconsideration and missing-information prompts; Let’s Talk C1 has **120 questions** in the same fifteen worlds. Independent content review read every new item. Two C1 phrases were clarified and new C1 interface instructions were aligned with the repository’s tú strategy; no original or Run 1 wording changed.
+
+The combined conversation suite now passes **87/87 tests**. It verifies fourteen existing bank fingerprints, thirty-six immutable files and Run 1 history, every historical route default, all eight Run 1/Run 2 variants through legacy adapters, resource-page rendering/JSON-LD, exact selectors, unsupported fallbacks, query/hash preservation, simulated history notifications, three-question gating, real Red Flag reveal/revision handlers, A1 world progression and independent session storage effects. Framework link/image output is stubbed in the resource SSR test; this is automated render evidence, not browser QA.
+
+All four new assets are saved and visually inspected: `public/conversation-worlds/elimination-machine-a1.webp` (1672×941), `public/conversation-worlds/absurd-universe-a1.webp` (1672×941), `public/play-mode/red-flag-o-no/c1.webp` (1536×1024), `public/catalog-thumbnails/conversation-c1.webp` (1672×941). No old thumbnail was overwritten. Exact prompts, reference hashes and provenance are in `conversation-batch1-run2-thumbnail-prompts.json`.
+
+Pushed checkpoints so far: `783a36a64cfa430bfdede97adde7c686748edf9e` (safe main integration), `dd9c87b114efe58c039c20d88bf79a0f41bfd9a9` (preservation baseline), `93110aba2989458bff109d2782db0926f2970788` (C1 engines/content). The next checkpoint preserves both A1 banks, all four thumbnails, registry and regression integration. Full lint, build, TypeScript comparison and technical review follow.

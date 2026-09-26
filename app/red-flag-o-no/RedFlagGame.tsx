@@ -158,7 +158,7 @@ function RedFlagActivity({ level }: { level: Level }) {
           </article>
 
           {c1Card && <p className="rf-c1-first-look">{c1Card.firstLook}</p>}
-          {c1 && followUps[index] && <p className="rf-c1-instruction">Con el contexto: volvé a elegir una señal o matizá tu juicio. Explicá qué dato sostiene tu decisión.</p>}
+          {c1 && followUps[index] && <p className="rf-c1-instruction">Con el contexto: vuelve a elegir una señal o matiza tu juicio. Explica qué dato sostiene tu decisión.</p>}
           <div className="rf-choices" role="group" aria-label={localized ? "¿Señal verde o señal roja?" : "¿Green flag o red flag?"}>
             <button className={visibleChoice === "green" ? "green selected" : "green"} aria-pressed={visibleChoice === "green"} onClick={() => choose("green")}>
               <span>🟢</span><b>{localized ? "SEÑAL VERDE" : "GREEN FLAG"}</b><small>tecla G</small>
@@ -193,15 +193,15 @@ function RedFlagActivity({ level }: { level: Level }) {
               {choice && <>
                 <p className="rf-c1-judgment"><strong>Primera impresión:</strong> {judgmentLabel(choice)}</p>
                 {!followUps[index] && <div className="rf-why">
-                  <div><span>ANTES DE SABER MÁS</span><h2>Defendé tu lectura. Escuchá otra.</h2></div>
+                  <div><span>ANTES DE SABER MÁS</span><h2>Defiende tu lectura. Escucha otra.</h2></div>
                   <button onClick={revealFollowUp} aria-expanded={false}>REVELAR CONTEXTO</button>
                 </div>}
                 {followUps[index] && <section className="rf-c1-context" aria-label="Contexto revelado">
                   <h2>Un dato más</h2><p>{c1Card.context}</p>
-                  <h3>Revisá tu lectura</h3><p>{c1Card.reconsider}</p>
+                  <h3>Revisa tu lectura</h3><p>{c1Card.reconsider}</p>
                   <button className="rf-c1-qualify" aria-pressed={revisions[index] === "qualified"} onClick={() => setRevisions(current => ({...current, [index]: "qualified"}))}>MATIZAR MI JUICIO</button>
                   <p className="rf-c1-judgment"><strong>Con el contexto:</strong> {judgmentLabel(revisions[index])}</p>
-                  {revisions[index] === "qualified" && <p>Precisá qué parte te parece aceptable, qué reserva mantenés y bajo qué condición cambiarías de opinión.</p>}
+                  {revisions[index] === "qualified" && <p>Precisa qué parte te parece aceptable, qué reserva mantienes y bajo qué condición cambiarías de opinión.</p>}
                   <h3>Antes de cerrar el juicio</h3><p>{c1Card.missingInfo}</p>
                 </section>}
               </>}
@@ -237,7 +237,7 @@ function RedFlagActivity({ level }: { level: Level }) {
             <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{support.finaleTeacher}</p></details>
           </aside>}
           {c1 && <section className="rf-c1-history" aria-label="Tu recorrido de juicios">
-            <h2>Volvé a tus decisiones</h2>
+            <h2>Vuelve a tus decisiones</h2>
             {Object.keys(answers).length === 0 && <p>Todavía no elegiste ninguna señal. Abrí una situación para probar tus criterios con un caso concreto.</p>}
             {Object.entries(answers).map(([answerIndex, initial]) => {
               const itemIndex = Number(answerIndex);

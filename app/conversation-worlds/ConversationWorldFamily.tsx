@@ -4,6 +4,7 @@ import ConversationWorld from './ConversationWorld';
 import { eliminations, absurdRules } from './data';
 import { eliminationsA2, absurdRulesA2 } from './data-a2';
 import { eliminationsB2, absurdRulesB2, worldGuidesB2, worldClosingB2 } from './data-b2';
+import { eliminationsA1, absurdRulesA1, worldGuidesA1, worldClosingA1 } from './data-a1';
 import type { WorldLevel } from './types';
 
 const closing = {
@@ -17,5 +18,5 @@ const closing = {
   },
 };
 export default function ConversationWorldFamily({mode,level='B1'}:{mode:'machine'|'rules';level?:WorldLevel}) {
-  return <ConversationFamily id={mode === 'machine' ? 'la-maquina-que-elimina-cosas' : 'tu-vida-con-una-regla-absurda'} title={mode === 'machine' ? 'La máquina que elimina cosas del mundo' : 'Tu vida con una regla absurda'} levels={['A2','B1','B2']} defaultLevel={level}>{selected => <ConversationWorld key={selected} mode={mode} level={selected as WorldLevel} machineRounds={selected === 'B2' ? eliminationsB2 : selected === 'A2' ? eliminationsA2 : eliminations} ruleRounds={selected === 'B2' ? absurdRulesB2 : selected === 'A2' ? absurdRulesA2 : absurdRules} closing={selected === 'B2' ? worldClosingB2[mode] : closing[mode][selected as 'A2'|'B1']} guide={selected === 'B2' ? worldGuidesB2[mode] : undefined} />}</ConversationFamily>;
+  return <ConversationFamily id={mode === 'machine' ? 'la-maquina-que-elimina-cosas' : 'tu-vida-con-una-regla-absurda'} title={mode === 'machine' ? 'La máquina que elimina cosas del mundo' : 'Tu vida con una regla absurda'} levels={['A1','A2','B1','B2']} defaultLevel={level}>{selected => <ConversationWorld key={selected} mode={mode} level={selected as WorldLevel} machineRounds={selected === 'A1' ? eliminationsA1 : selected === 'B2' ? eliminationsB2 : selected === 'A2' ? eliminationsA2 : eliminations} ruleRounds={selected === 'A1' ? absurdRulesA1 : selected === 'B2' ? absurdRulesB2 : selected === 'A2' ? absurdRulesA2 : absurdRules} closing={selected === 'A1' ? worldClosingA1[mode] : selected === 'B2' ? worldClosingB2[mode] : closing[mode][selected as 'A2'|'B1']} guide={selected === 'A1' ? worldGuidesA1[mode] : selected === 'B2' ? worldGuidesB2[mode] : undefined} />}</ConversationFamily>;
 }
