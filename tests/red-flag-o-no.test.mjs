@@ -85,5 +85,5 @@ test("small editorial accent text meets WCAG AA contrast on white", () => {
 });
 
 test("unknown levels are rejected instead of silently using the wrong lesson", () => {
-  assert.throws(() => getLevelConfig("C1"), /Nivel no disponible/);
+  assert.throws(() => getLevelConfig("C2"), /Nivel no disponible/);
 });

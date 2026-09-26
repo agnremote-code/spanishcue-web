@@ -1,4 +1,5 @@
 import { a1Config } from "./a1.mjs";
+import { c1Config } from "./c1.mjs";
 
 const sharedFinale = [
   "Top 3 red flags",
@@ -9,6 +10,7 @@ const sharedFinale = [
 
 const levels = {
   A1: a1Config,
+  C1: c1Config,
   A2: {
     level: "A2",
     accent: "#ff4d5d",
@@ -122,7 +124,7 @@ const levels = {
 export function getLevelConfig(level) {
   const config = levels[level];
   if (!config) throw new Error(`Nivel no disponible: ${level}`);
-  return { ...config, finale: level === "A1" ? a1Config.finale : sharedFinale };
+  return { ...config, finale: config.finale ?? sharedFinale };
 }
 
 export function getRoundForIndex(index) {
