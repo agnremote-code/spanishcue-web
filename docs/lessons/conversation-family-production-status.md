@@ -120,3 +120,18 @@ Final remote check: main advanced during this run to `5d6733a9b9404bbc17bf699953
 - `tests/fixtures/conversation-batch1-originals.json`
 - `tests/red-flag-a1.test.mjs`
 - `tests/talk-b2.test.mjs`
+
+
+## Batch 1 · Run 2 — 2026-09-26
+
+### Scope and preservation baseline
+
+Run 2 starts from the authoritative final Run 1 commit `f91942958645a4fc68ccc664deddeb4266c92395`, on `codex/conversation-batch1-run2-20260926`. Canonical main `5d6733a9b9404bbc17bf6999530eb48ffb574a3e` advanced with PR #69. Its seven non-overlapping export-related source files were carried unchanged into integration commit `783a36a64cfa430bfdede97adde7c686748edf9e`, whose parents preserve both histories. No export endpoint or D1 operation was run. The Run 1 history above is preserved verbatim.
+
+The authorized additions are exactly Machine A1, Absurd Rules A1, Red Flag C1 and Let’s Talk C1. No C2, no Machine/Rules C1, no other family, no merge to main and no deployment. The historical audit remains unchanged on audit commit `e6da3f0943de088a9cba837ea71b3faa77a473eb`.
+
+Fresh verification before Run 2 edits: `npm run test:conversation` **60/60 passed**; `tsc --noEmit --incremental false` reports **11 existing diagnostics** (billing 8, marketing 2, Mexico 1). Final comparison will use the captured output, not assume that number. `tests/fixtures/conversation-batch1-run1-preserved.json` captures all fourteen existing bank fingerprints, four families’ current variant/preview metadata, the full route ledger, thirty-six immutable files (including Run 1 banks and thumbnails), and the exact Run 1 status-document prefix directly from `f919429`.
+
+The available capabilities still advertise no permitted local preview/tunnel mechanism. Run 1’s cloud-browser `net::ERR_BLOCKED_BY_CLIENT` and explicit shared-file protocol rejection remain the recorded blocker; no blocked navigation or alternate-browser workaround is being retried. Interactive desktop/mobile QA is pending. This run will continue with source/SSR/hook-driven interaction validation, responsive CSS review and inspection of all four new saved thumbnails, as instructed.
+
+Implementation and final verification are in progress. Coherent checkpoints are pushed to the Run 2 branch; this section will record the actual results before completion.
