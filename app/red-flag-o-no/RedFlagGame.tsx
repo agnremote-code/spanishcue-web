@@ -11,9 +11,10 @@ import {
   pickRandomIndex,
   shouldHandleShortcut,
 } from "./engine.mjs";
+import { a1Support } from "./a1.mjs";
 import "./red-flag.css";
 
-type Level = "A2" | "B1" | "B2";
+type Level = "A1" | "A2" | "B1" | "B2";
 type View = "warmup" | "play" | "finale";
 type FlagChoice = "green" | "red";
 
@@ -24,7 +25,7 @@ const rounds = {
 } as const;
 
 export default function RedFlagGame({ level }: { level: Level }) {
-  return <ConversationFamily id="red-flag-o-no" title="Red Flag o No" levels={["A2", "B1", "B2"]} defaultLevel={level}>{selected => <RedFlagActivity key={selected} level={selected as Level} />}</ConversationFamily>;
+  return <ConversationFamily id="red-flag-o-no" title="Red Flag o No" levels={["A1", "A2", "B1", "B2"]} defaultLevel={level}>{selected => <RedFlagActivity key={selected} level={selected as Level} />}</ConversationFamily>;
 }
 
 function RedFlagActivity({ level }: { level: Level }) {
@@ -36,7 +37,9 @@ function RedFlagActivity({ level }: { level: Level }) {
   const situation = config.situations[index];
   const choice = answers[index];
   const roundKey = getRoundForIndex(index) as keyof typeof rounds;
-  const round = rounds[roundKey];
+  const support = level === "A1" ? a1Support : null;
+  const cardSupport = support?.cards[index];
+  const round = support ? support.rounds[roundKey] : rounds[roundKey];
   const followUp = config.followUps[index % config.followUps.length];
 
   const choose = useCallback((nextChoice: FlagChoice) => {
@@ -85,14 +88,14 @@ function RedFlagActivity({ level }: { level: Level }) {
   };
 
   return (
-    <main className="rf-game" style={{ "--rf-accent": config.accent, "--rf-accent-text": config.accentText } as React.CSSProperties}>
+    <main className={`rf-game${support ? " rf-a1" : ""}`} style={{ "--rf-accent": config.accent, "--rf-accent-text": config.accentText } as React.CSSProperties}>
       <header className="rf-header">
         <Link href="/" aria-label="Volver a la biblioteca">
           <SpanishCueBrand variant="compact" tone="dark" />
         </Link>
         <div className="rf-title-lockup">
-          <span>MODO PLAY</span>
-          <strong>RED FLAG O NO</strong>
+          <span>{support ? "A JUGAR" : "MODO PLAY"}</span>
+          <strong>{support ? "¿SEÑAL ROJA O VERDE?" : "RED FLAG O NO"}</strong>
         </div>
         <div className="rf-level">NIVEL {level}</div>
       </header>
@@ -102,13 +105,13 @@ function RedFlagActivity({ level }: { level: Level }) {
           <b>01</b><span>CALENTAMIENTO</span><small>4 min</small>
         </button>
         <button className={view === "play" && roundKey === "quick" ? "active" : ""} onClick={() => startAt(0)}>
-          <b>02</b><span>RÁPIDA</span><small>10 min</small>
+          <b>02</b><span>{support ? "GESTOS" : "RÁPIDA"}</span><small>10 min</small>
         </button>
         <button className={view === "play" && roundKey === "ambiguous" ? "active" : ""} onClick={() => startAt(6)}>
-          <b>03</b><span>CONTEXTO</span><small>13 min</small>
+          <b>03</b><span>{support ? "PLANES" : "CONTEXTO"}</span><small>13 min</small>
         </button>
         <button className={view === "play" && roundKey === "deep" ? "active" : ""} onClick={() => startAt(12)}>
-          <b>04</b><span>A FONDO</span><small>13 min</small>
+          <b>04</b><span>{support ? "HABLAMOS" : "A FONDO"}</span><small>13 min</small>
         </button>
         <button className={view === "finale" ? "active" : ""} onClick={() => setView("finale")}>
           <b>05</b><span>CIERRE</span><small>5 min</small>
@@ -121,11 +124,10 @@ function RedFlagActivity({ level }: { level: Level }) {
           <p>NO HAY UNA RESPUESTA CORRECTA</p>
           <h1>{config.warmup}</h1>
           <div className="rf-intro-notes">
-            <span>Elegí una señal verde.</span>
-            <span>Elegí una señal roja.</span>
-            <span>Decí una que depende del contexto.</span>
+            {(support?.intro ?? ["Elegí una señal verde.", "Elegí una señal roja.", "Decí una que depende del contexto."]).map(note => <span key={note}>{note}</span>)}
           </div>
           <button className="rf-primary" onClick={() => startAt(0)}>EMPEZAR LA RONDA →</button>
+          {support && <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{support.teacher}</p></details>}
         </section>
       )}
 
@@ -147,14 +149,24 @@ function RedFlagActivity({ level }: { level: Level }) {
             <h1>{situation}</h1>
           </article>
 
-          <div className="rf-choices" role="group" aria-label="¿Green flag o red flag?">
+          <div className="rf-choices" role="group" aria-label={support ? "¿Señal verde o señal roja?" : "¿Green flag o red flag?"}>
             <button className={choice === "green" ? "green selected" : "green"} aria-pressed={choice === "green"} onClick={() => choose("green")}>
-              <span>🟢</span><b>GREEN FLAG</b><small>tecla G</small>
+              <span>🟢</span><b>{support ? "SEÑAL VERDE" : "GREEN FLAG"}</b><small>tecla G</small>
             </button>
             <button className={choice === "red" ? "red selected" : "red"} aria-pressed={choice === "red"} onClick={() => choose("red")}>
-              <span>🔴</span><b>RED FLAG</b><small>tecla R</small>
+              <span>🔴</span><b>{support ? "SEÑAL ROJA" : "RED FLAG"}</b><small>tecla R</small>
             </button>
           </div>
+
+          {support && cardSupport && (
+            <aside className="rf-a1-support" aria-label="Ayuda para hablar">
+              <h2>Para hablar</h2>
+              <div className="rf-a1-frames">{support.frames.map(frame => <span key={frame}>{frame}</span>)}</div>
+              <p><strong>Palabras útiles:</strong> {cardSupport.chunks.join(" · ")}</p>
+              <details><summary>Un ejemplo</summary><p>{cardSupport.reason}</p></details>
+              <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{cardSupport.teacher}</p></details>
+            </aside>
+          )}
 
           {choice && (
             <div className="rf-why">
@@ -178,8 +190,8 @@ function RedFlagActivity({ level }: { level: Level }) {
       {view === "finale" && (
         <section className="rf-panel rf-finale">
           <div className="rf-eyebrow">CONVERSACIÓN FINAL · 5 MIN</div>
-          <h1>Tu mapa de señales</h1>
-          <p>No hace falta estar de acuerdo. Elegí, compará y defendé cada respuesta.</p>
+          <h1>{support?.finaleTitle ?? "Tu mapa de señales"}</h1>
+          <p>{support?.finaleCopy ?? "No hace falta estar de acuerdo. Elegí, compará y defendé cada respuesta."}</p>
           <div className="rf-finale-grid">
             {config.finale.map((prompt: string, promptIndex: number) => (
               <article key={prompt}>
@@ -188,6 +200,11 @@ function RedFlagActivity({ level }: { level: Level }) {
               </article>
             ))}
           </div>
+          {support && <aside className="rf-a1-support" aria-label="Ayuda para la conversación final">
+            <h2>Frases para la cita</h2>
+            <div className="rf-a1-frames">{support.finaleFrames.map(frame => <span key={frame}>{frame}</span>)}</div>
+            <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{support.finaleTeacher}</p></details>
+          </aside>}
           <div className="rf-final-actions">
             <button onClick={() => { setView("play"); setIndex(17); }}>← ÚLTIMA SITUACIÓN</button>
             <button className="rf-primary" onClick={() => { setAnswers({}); setFollowUps({}); setIndex(0); setView("warmup"); }}>NUEVA PARTIDA ↻</button>
