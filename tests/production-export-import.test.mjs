@@ -3,8 +3,9 @@ import { mkdtemp, rm, writeFile, readdir, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
+import { build } from "esbuild";
 import {
-  importInto, importOrder, insertStatements, loadExport, schemaDatabase, schemaModel, sqlFiles, sqlLiteral, verifyImported,
+  importInto, importOrder, insertStatements, loadExport, schemaDatabase, schemaModel, sqlFiles, sqlLiteral, unpackBundle, verifyImported,
 } from "../scripts/import-production-export.mjs";
 
 const FUTURE = Math.floor(Date.now() / 1000) + 30 * 86400;
@@ -139,4 +140,71 @@ test("SQL output escapes values and loads into a fresh schema with identical cou
     await rm(dir, { recursive: true, force: true });
     await rm(out, { recursive: true, force: true });
   }
+});
+
+// Minimal D1 surface over node:sqlite, enough for the export route.
+function fakeD1(db) {
+  const statement = (sql, values = []) => ({
+    bind: (...next) => statement(sql, next),
+    all: async () => ({ results: db.prepare(sql).all(...values).map(row => ({ ...row })) }),
+  });
+  return { prepare: sql => statement(sql) };
+}
+
+async function loadExporter() {
+  const result = await build({ entryPoints: ["app/api/admin/export/d1-export.ts"], bundle: true, write: false, format: "esm", platform: "node" });
+  return import("data:text/javascript;base64," + Buffer.from(result.outputFiles[0].text).toString("base64"));
+}
+
+test("the owner export route output unpacks into an export that rehearses cleanly", async () => {
+  const { exportDatabase } = await loadExporter();
+  const { db: source } = await schemaDatabase();
+  const model = schemaModel(source);
+  const tables = fixture();
+  importInto(source, model, new Map(Object.entries(tables)));
+  source.exec("CREATE TABLE d1_migrations (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT UNIQUE, applied_at TEXT NOT NULL)");
+  source.exec("INSERT INTO d1_migrations (name, applied_at) VALUES ('0009_glossy_mariko_yashida.sql', '2026-09-20 00:00:00')");
+
+  const bundle = await exportDatabase(fakeD1(source), { sourceSha: "test" });
+  assert.equal(bundle.format, "spanishcue-d1-export/1");
+  assert.ok(bundle.manifest.otherTables.some(entry => entry.name === "sqlite_sequence"));
+  assert.ok(bundle.manifest.metadata.schemaObjects.some(object => object.name === "founder_assignments_increment_claimed"));
+  const users = bundle.manifest.tables.find(entry => entry.name === "users");
+  assert.deepEqual(users.orderBy, ["id"]);
+  assert.equal(users.countStar, tables.users.length);
+
+  const dir = await mkdtemp(join(tmpdir(), "spanishcue-bundle-"));
+  try {
+    await writeFile(join(dir, "bundle.json"), JSON.stringify(bundle));
+    await unpackBundle(join(dir, "bundle.json"), join(dir, "out"));
+    const { db } = await schemaDatabase();
+    const loaded = await loadExport(join(dir, "out"), schemaModel(db));
+    assert.deepEqual(loaded.problems, []);
+    assert.deepEqual(loaded.ledger, ["d1_migrations"]);
+    importInto(db, model, loaded.data);
+    assert.deepEqual((await verifyImported(db, model, loaded.data)).filter(check => !check.ok), []);
+    assert.equal(db.prepare("SELECT alias FROM students").get().alias, "Ana O'Neil");
+
+    const tampered = { ...bundle, files: { ...bundle.files, "users.jsonl": "" } };
+    await writeFile(join(dir, "tampered.json"), JSON.stringify(tampered));
+    await assert.rejects(unpackBundle(join(dir, "tampered.json"), join(dir, "bad")), /users.jsonl: sha256 mismatch/);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("the export refuses to deliver a table whose count changes while it is read", async () => {
+  const { exportDatabase } = await loadExporter();
+  const { db } = await schemaDatabase();
+  const d1 = fakeD1(db);
+  let counts = 0;
+  const racing = {
+    prepare: sql => {
+      if (sql.startsWith("SELECT COUNT(*)") && sql.includes('"users"') && ++counts === 2) {
+        db.exec("INSERT INTO users (id, email, normalized_email, role, status, created_at, updated_at, last_sign_in_at) VALUES ('late', 'l@x.test', 'l@x.test', 'teacher', 'active', 1, 1, 1)");
+      }
+      return d1.prepare(sql);
+    },
+  };
+  await assert.rejects(exportDatabase(racing), /EXPORT_COUNT_MISMATCH:users/);
 });
