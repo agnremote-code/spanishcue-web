@@ -2,7 +2,7 @@
 
 Source branch: `codex/conversation-batch1-run1-20260926`.
 Canonical base: `a736cfc49ab787ec6e26b9dc27d7de3060582baf` (2026-09-26).
-The freshly fetched main matches the historical audit snapshot. No overlapping open PRs were found.
+At task start, freshly fetched main matched the historical audit snapshot. No overlapping open PRs were found.
 Planning authority: audit commit `e6da3f0943de088a9cba837ea71b3faa77a473eb` on `codex/conversation-family-audit-20260926`.
 The historical audit is unchanged. This record tracks additive implementation only.
 
@@ -80,6 +80,8 @@ Intentionally unchanged: the historical audit's Let’s Talk A1/A2 bilingual-pre
 Remote checkpoints: `0175dd8b3b81514e8aa16958e004bd6c8c56c3dd` (scope/original snapshots), `4731655f4681666f43c896d1cd4d45885ef29a0b` (Red Flag/Talk), `6be188565dc61e02696484b9f8ba48dac83ca5e3` (Worlds/registry/previews/tests). This follow-up documentation commit records the final verification state.
 
 No deployment, merge to main, D1 operation, production-data change, auth/billing change, secret/environment/domain modification, release-state change or deployment-configuration change occurred. Run 2 was not started.
+
+Final remote check: main advanced during this run to `5d6733a9b9404bbc17bf6999530eb48ffb574a3e` (PR #69, owner data export). Its seven changed files have no overlap with this batch. The task branch retains the canonical base fetched before editing; none of the newer export work was overwritten or reverted.
 
 ## Exact changed-file manifest
 
