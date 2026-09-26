@@ -9,6 +9,10 @@
 //   node scripts/import-production-export.mjs check    <exportDir>
 //   node scripts/import-production-export.mjs rehearse <exportDir>
 //   node scripts/import-production-export.mjs sql      <exportDir> <outDir>
+//   node scripts/import-production-export.mjs unpack   <bundle.json> <exportDir>
+//
+// `unpack` turns the single file downloaded from the owner-only
+// /api/admin/export route into the manifest + JSONL layout above.
 //
 // Reports contain counts and pass/fail results only, never row values.
 import assert from "node:assert/strict";
@@ -118,6 +122,24 @@ export async function loadExport(dir, model) {
   }
   const ledger = [...byName.keys()].filter(name => LEDGER_TABLES.has(name));
   return { manifest, data, report, ledger, problems };
+}
+
+export const BUNDLE_FORMAT = "spanishcue-d1-export/1";
+
+export async function unpackBundle(bundlePath, outDir) {
+  const bundle = JSON.parse(await readFile(bundlePath, "utf8"));
+  assert.equal(bundle.format, BUNDLE_FORMAT, "not a SPANISHCUE D1 export bundle");
+  assert.ok(Array.isArray(bundle.manifest?.tables) && bundle.files && typeof bundle.files === "object", "bundle needs manifest.tables and files");
+  await mkdir(outDir, { recursive: true });
+  for (const entry of bundle.manifest.tables) {
+    const text = bundle.files[entry.file];
+    assert.equal(typeof text, "string", `bundle is missing ${entry.file}`);
+    assert.ok(!/[\\/]/.test(entry.file) && !entry.file.startsWith("."), `unsafe file name ${entry.file}`);
+    if (entry.sha256) assert.equal(createHash("sha256").update(text).digest("hex"), entry.sha256, `${entry.file}: sha256 mismatch`);
+    await writeFile(join(outDir, entry.file), text);
+  }
+  await writeFile(join(outDir, "manifest.json"), JSON.stringify(bundle.manifest, null, 2) + "\n");
+  return bundle.manifest.tables.length;
 }
 
 export function sqlLiteral(value) {
@@ -246,7 +268,12 @@ export function sqlFiles(model, data) {
 }
 
 async function main(command, dir, outDir) {
-  assert.ok(["check", "rehearse", "sql"].includes(command), "usage: check|rehearse|sql <exportDir> [outDir]");
+  assert.ok(["check", "rehearse", "sql", "unpack"].includes(command), "usage: check|rehearse|sql <exportDir> [outDir] | unpack <bundle.json> <exportDir>");
+  if (command === "unpack") {
+    assert.ok(outDir, "unpack needs an output directory");
+    console.log(JSON.stringify({ command, tables: await unpackBundle(dir, outDir) }));
+    return;
+  }
   const { db, migrations } = await schemaDatabase();
   const model = schemaModel(db);
   const loaded = await loadExport(dir, model);

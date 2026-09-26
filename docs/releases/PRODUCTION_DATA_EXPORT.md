@@ -9,6 +9,27 @@ repository (`drizzle/0000`–`0009`), which is authoritative.
 This is the last extraction expected from OpenAI Sites. Everything after file
 delivery is done by Claude with `scripts/import-production-export.mjs`.
 
+## Owner export route (used because the Sites reader cannot do the above)
+
+On 2026-09-26 the Sites database reader was confirmed unable to run
+`COUNT(*)`, choose `ORDER BY`, list every table, or guarantee untruncated
+values. The export therefore runs inside the application itself:
+
+- `GET /api/admin/export` (`app/api/admin/export/`) is owner-only through the
+  verified Firebase session, read-only (SELECT and PRAGMA), `private,
+  no-store`, and not blocked by the write freeze. It reads every table in
+  `sqlite_master` except `_cf_*`/`sqlite_*`, orders by primary key (all
+  columns when there is none), pages 500 rows at a time, and refuses to
+  deliver a table whose `COUNT(*)` changes during the read.
+- The response is one JSON bundle (`spanishcue-d1-export/1`) holding the
+  manifest described below plus every `<table>.jsonl` text with its sha256.
+- It reaches production through an ordinary Sites release of `main`.
+- The owner opens the URL while signed in, keeps the downloaded file private,
+  and hands it to Claude, who runs
+  `node scripts/import-production-export.mjs unpack <bundle.json> <exportDir>`
+  and then the steps below.
+- Delete the route after the cutover.
+
 ## Tables (import order, primary key = stable export ordering)
 
 | Table | ORDER BY (primary key) | Columns | Column names |

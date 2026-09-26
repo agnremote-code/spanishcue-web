@@ -14,7 +14,7 @@ SHA.
 
 | Blocker | Owner of the answer | Notes |
 |---|---|---|
-| Production D1 export (logical, paginated JSONL + manifest) | Sites release owner | Request in `PRODUCTION_DATA_EXPORT.md`; import/verify tooling `scripts/import-production-export.mjs` is ready |
+| Production D1 export (logical, paginated JSONL + manifest) | Owner, via `/api/admin/export` once Sites releases it | The Sites reader cannot export (2026-09-26); see "Owner export route" in `PRODUCTION_DATA_EXPORT.md`. Import/verify tooling `scripts/import-production-export.mjs` (`unpack`, `check`, `rehearse`, `sql`) is ready |
 | `spanishcue.com` zone location | Owner (Cloudflare dashboard) | Zone is not in the connected account |
 | How Sites binds the custom domain, and how to detach it | Sites release owner | Must be detachable without DNS downtime |
 | Production `compatibility_date` and bindings (`IMAGES`?) | Sites release owner | Build config says `2026-05-15`; no `IMAGES` in build output; production behavior matches no binding |
@@ -50,7 +50,7 @@ Records to preserve exactly (values from public DNS; take DKIM values in full fr
 
 ## 1. Rehearse (repeat until clean, no production impact)
 
-1. Sites owner produces a rehearsal export (§A) without freezing.
+1. Owner downloads a rehearsal export from `/api/admin/export` without freezing.
 2. Create scratch D1 `spanishcue-rehearsal` in the owner account; apply `drizzle/0000`–`0009` schema; import data only.
 3. Verify (§2 queries) against the counts Sites reports for the same export.
 4. Point a rehearsal Worker at it on workers.dev; run smoke and the billing checks in §7 read-only.
@@ -88,7 +88,7 @@ Prerequisite: Sites production runs a release that contains `worker/write-freeze
 
 ## 4. Final export and import
 
-1. Sites owner repeats the **same** logical export (`PRODUCTION_DATA_EXPORT.md`) while frozen and delivers it privately.
+1. Owner downloads `/api/admin/export` again while frozen (GET is not frozen) and delivers it privately.
 2. Claude runs `import-production-export.mjs check` and `rehearse` on it; any problem stops the cutover (unfreeze Sites and reschedule).
 3. Claude uses the existing empty `spanishcue-production` D1 (`343ac454-a056-4c40-a893-f8be572665a6`); if it is not empty, stop. Apply `drizzle/0000`–`0009`, write the `d1_migrations` ledger rows in Wrangler format (production must be confirmed at `0009` from the export metadata), then load the ordered INSERT files from `import-production-export.mjs sql`.
 4. Run the §2 queries on the new D1; every count must equal the manifest. Zero mismatches or stop.
