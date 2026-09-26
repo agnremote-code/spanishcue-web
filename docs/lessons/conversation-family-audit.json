@@ -1,0 +1,2593 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditStatus": "in_progress",
+  "source": {
+    "repository": "agnremote-code/spanishcue-web",
+    "baseCommit": "a736cfc49ab787ec6e26b9dc27d7de3060582baf",
+    "branch": "codex/conversation-family-audit-20260926",
+    "auditDate": "2026-09-26"
+  },
+  "counting": {
+    "definition": "Distinct route-ledger records, distinct family-level experiences, and conceptual families are counted separately. Legacy aliases and query URLs are not extra variants."
+  },
+  "summary": {
+    "conversationLessonRecords": 49,
+    "conceptualFamilies": 42,
+    "existingVariants": 52,
+    "missingVariants": 200,
+    "levelCoverage": {
+      "A1": 8,
+      "A2": 11,
+      "B1": 22,
+      "B2": 5,
+      "C1": 2,
+      "C2": 4
+    }
+  },
+  "lessons": [
+    {
+      "id": 221,
+      "title": "La ciudad no duerme",
+      "level": "B1",
+      "levels": null,
+      "path": "/la-ciudad-no-duerme",
+      "resourceSlug": "spanish-conversation-activity-b1-la-ciudad-no-duerme",
+      "image": "/la-ciudad-no-duerme/preview.webp",
+      "category": "Conversación",
+      "collection": "Modo Play",
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 216,
+      "title": "Entrenador personal",
+      "level": "B1",
+      "levels": null,
+      "path": "/entrenador-personal",
+      "resourceSlug": "spanish-conversation-activity-b1-entrenador-personal",
+      "image": "/entrenador-personal/hero.webp",
+      "category": "Conversación",
+      "collection": "Modo Play",
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 215,
+      "title": "La vida después de los 30",
+      "level": "B1",
+      "levels": null,
+      "path": "/la-vida-despues-de-los-30",
+      "resourceSlug": "spanish-conversation-activity-b1-la-vida-despues-de-los-30",
+      "image": "/vida-despues-30/portrait.webp",
+      "category": "Conversación",
+      "collection": "Exploración visual",
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 205,
+      "title": "De eso sí hablo",
+      "level": "B1",
+      "levels": null,
+      "path": "/tablero-de-eso-si-hablo",
+      "resourceSlug": "spanish-conversation-activity-b1-de-eso-si-hablo",
+      "image": "/catalog-thumbnails/conversation-choice.webp",
+      "category": "Conversación",
+      "collection": "Tableros",
+      "conversationMode": "boards",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 206,
+      "title": "No es tan simple",
+      "level": "B2",
+      "levels": null,
+      "path": "/tablero-no-es-tan-simple",
+      "resourceSlug": "spanish-conversation-activity-b2-no-es-tan-simple",
+      "image": "/catalog-thumbnails/advanced-dialogue.webp",
+      "category": "Conversación",
+      "collection": "Tableros",
+      "conversationMode": "boards",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 207,
+      "title": "Red Flag o No · A2",
+      "level": "A2",
+      "levels": null,
+      "path": "/red-flag-o-no-a2",
+      "resourceSlug": "spanish-conversation-activity-a2-red-flag-o-no-a2",
+      "image": "/play-mode/red-flag-o-no/a2.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 208,
+      "title": "Red Flag o No · B1",
+      "level": "B1",
+      "levels": null,
+      "path": "/red-flag-o-no-b1",
+      "resourceSlug": "spanish-conversation-activity-a2-red-flag-o-no-a2",
+      "image": "/play-mode/red-flag-o-no/b1.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 209,
+      "title": "Red Flag o No · B2",
+      "level": "B2",
+      "levels": null,
+      "path": "/red-flag-o-no-b2",
+      "resourceSlug": "spanish-conversation-activity-a2-red-flag-o-no-a2",
+      "image": "/play-mode/red-flag-o-no/b2.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 139,
+      "title": "Ciudad en juego",
+      "level": "B1",
+      "levels": null,
+      "path": "/ciudad-en-juego",
+      "resourceSlug": "spanish-conversation-activity-b1-ciudad-en-juego",
+      "image": "/play-mode/ciudad-en-juego.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 138,
+      "title": "¿Y ahora qué?",
+      "level": "B1",
+      "levels": null,
+      "path": "/modo-play-y-ahora-que",
+      "resourceSlug": "spanish-conversation-activity-b1-y-ahora-que",
+      "image": "/play-mode/y-ahora-que.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 137,
+      "title": "Uno o el otro",
+      "level": "B1",
+      "levels": null,
+      "path": "/modo-play-uno-o-el-otro",
+      "resourceSlug": "spanish-conversation-activity-b1-uno-o-el-otro",
+      "image": "/play-mode/uno-o-el-otro.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": "play",
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 136,
+      "title": "La Cámara de Presión",
+      "level": "C2",
+      "levels": null,
+      "path": "/la-camara-de-presion",
+      "resourceSlug": "spanish-conversation-activity-c2-la-camara-de-presion",
+      "image": "/conversation-premium/camara-presion.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 129,
+      "title": "El Ministerio de las Versiones",
+      "level": "C2",
+      "levels": null,
+      "path": "/el-ministerio-de-las-versiones",
+      "resourceSlug": "spanish-conversation-activity-c2-el-ministerio-de-las-versiones",
+      "image": "/conversation-premium/ministerio-versiones.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 128,
+      "title": "La Agencia de Vidas Paralelas",
+      "level": "C1",
+      "levels": null,
+      "path": "/la-agencia-de-vidas-paralelas",
+      "resourceSlug": "spanish-conversation-activity-c1-la-agencia-de-vidas-paralelas",
+      "image": "/conversation-premium/agencia-vidas-paralelas.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 127,
+      "title": "El Protocolo Aurora",
+      "level": "B2",
+      "levels": null,
+      "path": "/el-protocolo-aurora",
+      "resourceSlug": "spanish-conversation-activity-b2-el-protocolo-aurora",
+      "image": "/conversation-premium/protocolo-aurora.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 126,
+      "title": "La Noche de las Siete Llamadas",
+      "level": "B1",
+      "levels": null,
+      "path": "/la-noche-de-las-siete-llamadas",
+      "resourceSlug": "spanish-conversation-activity-b1-la-noche-de-las-siete-llamadas",
+      "image": "/conversation-premium/noche-siete-llamadas.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 125,
+      "title": "La Mesa de las Tres Ofertas",
+      "level": "B2",
+      "levels": null,
+      "path": "/la-mesa-de-las-tres-ofertas",
+      "resourceSlug": "spanish-conversation-activity-b2-la-mesa-de-las-tres-ofertas",
+      "image": "/conversation-premium/mesa-tres-ofertas.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 124,
+      "title": "La Sala de los Mensajes Fuera de Contexto",
+      "level": "B2",
+      "levels": null,
+      "path": "/la-sala-de-los-mensajes-fuera-de-contexto",
+      "resourceSlug": "spanish-conversation-activity-b2-la-sala-de-los-mensajes-fuera-de-contexto",
+      "image": "/conversation-premium/mensajes-fuera-de-contexto.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 123,
+      "title": "En Vivo en Diez Minutos",
+      "level": "A2",
+      "levels": null,
+      "path": "/en-vivo-en-diez-minutos",
+      "resourceSlug": "spanish-conversation-activity-a2-en-vivo-en-diez-minutos",
+      "image": "/conversation-premium/en-vivo-diez-minutos.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 122,
+      "title": "El Teatro de las Coartadas",
+      "level": "A2",
+      "levels": null,
+      "path": "/el-teatro-de-las-coartadas",
+      "resourceSlug": "spanish-conversation-activity-a2-el-teatro-de-las-coartadas",
+      "image": "/conversation-premium/teatro-coartadas.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 121,
+      "title": "El Cine de las Tres Funciones",
+      "level": "A1",
+      "levels": null,
+      "path": "/el-cine-de-las-tres-funciones",
+      "resourceSlug": "spanish-conversation-activity-a1-el-cine-de-las-tres-funciones",
+      "image": "/conversation-premium/cine-tres-funciones.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 120,
+      "title": "La Noche de las Invitaciones Cruzadas",
+      "level": "A1",
+      "levels": null,
+      "path": "/la-noche-de-las-invitaciones-cruzadas",
+      "resourceSlug": "spanish-conversation-activity-a1-la-noche-de-las-invitaciones-cruzadas",
+      "image": "/conversation-premium/invitaciones-cruzadas.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 109,
+      "title": "La isla vota",
+      "level": "B1",
+      "levels": null,
+      "path": "/la-isla-vota",
+      "resourceSlug": "spanish-conversation-activity-b1-la-isla-vota",
+      "image": "/la-isla-vota/island-command-table-v1.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 103,
+      "title": "La máquina que elimina cosas del mundo · A2",
+      "level": "A2",
+      "levels": null,
+      "path": "/la-maquina-que-elimina-cosas-a2",
+      "resourceSlug": "spanish-conversation-activity-b1-la-maquina-que-elimina-cosas-del-mundo",
+      "image": "/conversation-worlds/elimination-machine.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 104,
+      "title": "Tu vida con una regla absurda · A2",
+      "level": "A2",
+      "levels": null,
+      "path": "/tu-vida-con-una-regla-absurda-a2",
+      "resourceSlug": "spanish-conversation-activity-b1-tu-vida-con-una-regla-absurda",
+      "image": "/conversation-worlds/absurd-universe.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 101,
+      "title": "La máquina que elimina cosas del mundo",
+      "level": "B1",
+      "levels": null,
+      "path": "/la-maquina-que-elimina-cosas",
+      "resourceSlug": "spanish-conversation-activity-b1-la-maquina-que-elimina-cosas-del-mundo",
+      "image": "/conversation-worlds/elimination-machine.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 102,
+      "title": "Tu vida con una regla absurda",
+      "level": "B1",
+      "levels": null,
+      "path": "/tu-vida-con-una-regla-absurda",
+      "resourceSlug": "spanish-conversation-activity-b1-tu-vida-con-una-regla-absurda",
+      "image": "/conversation-worlds/absurd-universe.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 39,
+      "title": "Buenos Aires en la Calle",
+      "level": "A2",
+      "levels": null,
+      "path": "/buenos-aires-en-la-calle",
+      "resourceSlug": "spanish-conversation-activity-a2-buenos-aires-en-la-calle",
+      "image": "/buenos-aires-cotidiana/city.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 210,
+      "title": "MÉXICO",
+      "level": "B1",
+      "levels": null,
+      "path": "/mexico",
+      "resourceSlug": "spanish-conversation-activity-b1-mexico",
+      "image": "/catalog-thumbnails/mexico-relief.svg",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": true
+    },
+    {
+      "id": 36,
+      "title": "ESTADOS UNIDOS",
+      "level": "A2",
+      "levels": [
+        "A2",
+        "B1"
+      ],
+      "path": "/estados-unidos-a2-b1",
+      "resourceSlug": "spanish-conversation-activity-a2-b1-estados-unidos",
+      "image": "/catalog-thumbnails/us-relief.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": true
+    },
+    {
+      "id": 34,
+      "title": "El Monasterio de las Ideas",
+      "level": "C2",
+      "levels": null,
+      "path": "/monasterio-de-las-ideas",
+      "resourceSlug": "spanish-conversation-activity-c2-el-monasterio-de-las-ideas",
+      "image": "/monastery-ideas-3d.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 33,
+      "title": "Irlanda en Relieve",
+      "level": "B1",
+      "levels": null,
+      "path": "/irlanda-en-relieve",
+      "resourceSlug": "spanish-conversation-activity-b1-irlanda-en-relieve",
+      "image": "/catalog-thumbnails/ireland-relief.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 32,
+      "title": "Reino Unido en Relieve",
+      "level": "B1",
+      "levels": [
+        "A1",
+        "B1"
+      ],
+      "path": "/reino-unido-en-relieve",
+      "resourceSlug": "spanish-conversation-activity-a1-b1-reino-unido-en-relieve",
+      "image": "/catalog-thumbnails/uk-relief.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 30,
+      "title": "Australia en Movimiento",
+      "level": "A2",
+      "levels": [
+        "A2",
+        "B1"
+      ],
+      "path": "/australia-en-movimiento",
+      "resourceSlug": "spanish-conversation-activity-a2-b1-australia-en-movimiento",
+      "image": "/australia-3d-hero.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 29,
+      "title": "Suiza en Relieve",
+      "level": "B1",
+      "levels": null,
+      "path": "/suiza-en-relieve",
+      "resourceSlug": "spanish-conversation-activity-b1-suiza-en-relieve",
+      "image": "/suiza-en-relieve-hero.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 27,
+      "title": "El Mundo Fantástico",
+      "level": "A1",
+      "levels": null,
+      "path": "/mundo-fantastico",
+      "resourceSlug": "spanish-conversation-activity-a1-el-mundo-fantastico",
+      "image": "/og.png",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 26,
+      "title": "Estados Unidos · Coast to Coast",
+      "level": "A1",
+      "levels": null,
+      "path": "/estados-unidos-basico",
+      "resourceSlug": "spanish-conversation-activity-a1-estados-unidos-coast-to-coast",
+      "image": "/usa-basic-hero.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 25,
+      "title": "Israel en Capas",
+      "level": "B1",
+      "levels": null,
+      "path": "/israel-en-capas",
+      "resourceSlug": "spanish-conversation-activity-b1-israel-en-capas",
+      "image": "/israel-b1-hero.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 24,
+      "title": "Indonesia Fantástica",
+      "level": "A1",
+      "levels": null,
+      "path": "/indonesia-fantastica",
+      "resourceSlug": "spanish-conversation-activity-a1-indonesia-fantastica",
+      "image": "/indonesia-fantasy-hero.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 22,
+      "title": "La Ciudad del Futuro",
+      "level": "B1",
+      "levels": null,
+      "path": "/future-city",
+      "resourceSlug": "spanish-conversation-activity-b1-la-ciudad-del-futuro",
+      "image": "/catalog-thumbnails/future-city.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 21,
+      "title": "El Reino de las Preguntas Prohibidas · A2",
+      "level": "A2",
+      "levels": null,
+      "path": "/preguntas-prohibidas-a2",
+      "resourceSlug": "spanish-conversation-activity-b1-el-reino-de-las-preguntas-prohibidas",
+      "image": "/kingdom-world-bg.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 20,
+      "title": "El Reino de las Preguntas Prohibidas",
+      "level": "B1",
+      "levels": null,
+      "path": "/preguntas-prohibidas",
+      "resourceSlug": "spanish-conversation-activity-b1-el-reino-de-las-preguntas-prohibidas",
+      "image": "/kingdom-world-bg.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 19,
+      "title": "Argento Roleplays",
+      "level": "A1",
+      "levels": null,
+      "path": "/argento-roleplays",
+      "resourceSlug": "spanish-conversation-activity-a1-argento-roleplays",
+      "image": "/buenos-aires-cotidiana/atlas-1.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": true,
+      "free": false
+    },
+    {
+      "id": 17,
+      "title": "La Ruleta de Tu Vida",
+      "level": "A2",
+      "levels": null,
+      "path": "/life-roulette",
+      "resourceSlug": "spanish-conversation-activity-a2-la-ruleta-de-tu-vida",
+      "image": "/catalog-thumbnails/life-wheel.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 15,
+      "title": "Let’s Talk · A1",
+      "level": "A1",
+      "levels": null,
+      "path": "/a1-conversation",
+      "resourceSlug": "spanish-conversation-activity-a1-lets-talk-a1",
+      "image": "/catalog-thumbnails/conversation-a1.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 14,
+      "title": "Let’s Talk · A2",
+      "level": "A2",
+      "levels": null,
+      "path": "/basic-conversation",
+      "resourceSlug": "spanish-conversation-activity-a1-lets-talk-a1",
+      "image": "/catalog-thumbnails/conversation-a2.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 13,
+      "title": "Choose Your Conversation",
+      "level": "B1",
+      "levels": null,
+      "path": "/choose-conversation",
+      "resourceSlug": "spanish-conversation-activity-a1-lets-talk-a1",
+      "image": "/catalog-thumbnails/conversation-choice.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 11,
+      "title": "Preguntas que dan ganas de hablar",
+      "level": "C1",
+      "levels": null,
+      "path": "/advanced-conversation",
+      "resourceSlug": "spanish-conversation-activity-c1-preguntas-que-dan-ganas-de-hablar",
+      "image": "/catalog-thumbnails/advanced-dialogue.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    },
+    {
+      "id": 203,
+      "title": "El museo de las decisiones",
+      "level": "C2",
+      "levels": null,
+      "path": "/clase/203",
+      "resourceSlug": "spanish-conversation-activity-c2-el-museo-de-las-decisiones",
+      "image": "/monastery-worlds/03-biblioteca.webp",
+      "category": "Conversación",
+      "collection": null,
+      "conversationMode": null,
+      "countryCollection": false,
+      "free": false
+    }
+  ],
+  "families": [
+    {
+      "familyId": "red-flag-o-no",
+      "familyName": "Red Flag o No",
+      "canonicalPath": "/red-flag-o-no-a2",
+      "canonicalLessonId": 207,
+      "lessonIds": [
+        207,
+        208,
+        209
+      ],
+      "collection": "Modo Play",
+      "access": "pro",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 207,
+          "title": "Red Flag o No · A2",
+          "lessonPath": "/red-flag-o-no-a2",
+          "thumbnail": "/play-mode/red-flag-o-no/a2.webp",
+          "contentRef": "/red-flag-o-no-a2#A2"
+        },
+        "B1": {
+          "lessonId": 208,
+          "title": "Red Flag o No · B1",
+          "lessonPath": "/red-flag-o-no-b1",
+          "thumbnail": "/play-mode/red-flag-o-no/b1.webp",
+          "contentRef": "/red-flag-o-no-b1#B1"
+        },
+        "B2": {
+          "lessonId": 209,
+          "title": "Red Flag o No · B2",
+          "lessonPath": "/red-flag-o-no-b2",
+          "thumbnail": "/play-mode/red-flag-o-no/b2.webp",
+          "contentRef": "/red-flag-o-no-b2#B2"
+        },
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "red-flag",
+        "sharedAssets": [
+          "/play-mode/red-flag-o-no/a2.webp",
+          "/play-mode/red-flag-o-no/b1.webp",
+          "/play-mode/red-flag-o-no/b2.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-maquina-que-elimina-cosas",
+      "familyName": "La máquina que elimina cosas del mundo",
+      "canonicalPath": "/la-maquina-que-elimina-cosas",
+      "canonicalLessonId": 101,
+      "lessonIds": [
+        101,
+        103
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 103,
+          "title": "La máquina que elimina cosas del mundo · A2",
+          "lessonPath": "/la-maquina-que-elimina-cosas-a2",
+          "thumbnail": "/conversation-worlds/elimination-machine.webp",
+          "contentRef": "/la-maquina-que-elimina-cosas-a2#A2"
+        },
+        "B1": {
+          "lessonId": 101,
+          "title": "La máquina que elimina cosas del mundo",
+          "lessonPath": "/la-maquina-que-elimina-cosas",
+          "thumbnail": "/conversation-worlds/elimination-machine.webp",
+          "contentRef": "/la-maquina-que-elimina-cosas#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "machine",
+        "sharedAssets": [
+          "/conversation-worlds/elimination-machine.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "tu-vida-con-una-regla-absurda",
+      "familyName": "Tu vida con una regla absurda",
+      "canonicalPath": "/tu-vida-con-una-regla-absurda",
+      "canonicalLessonId": 102,
+      "lessonIds": [
+        102,
+        104
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 104,
+          "title": "Tu vida con una regla absurda · A2",
+          "lessonPath": "/tu-vida-con-una-regla-absurda-a2",
+          "thumbnail": "/conversation-worlds/absurd-universe.webp",
+          "contentRef": "/tu-vida-con-una-regla-absurda-a2#A2"
+        },
+        "B1": {
+          "lessonId": 102,
+          "title": "Tu vida con una regla absurda",
+          "lessonPath": "/tu-vida-con-una-regla-absurda",
+          "thumbnail": "/conversation-worlds/absurd-universe.webp",
+          "contentRef": "/tu-vida-con-una-regla-absurda#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "rules",
+        "sharedAssets": [
+          "/conversation-worlds/absurd-universe.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "preguntas-prohibidas",
+      "familyName": "El Reino de las Preguntas Prohibidas",
+      "canonicalPath": "/preguntas-prohibidas",
+      "canonicalLessonId": 20,
+      "lessonIds": [
+        20,
+        21
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 21,
+          "title": "El Reino de las Preguntas Prohibidas · A2",
+          "lessonPath": "/preguntas-prohibidas-a2",
+          "thumbnail": "/kingdom-world-bg.webp",
+          "contentRef": "/preguntas-prohibidas-a2#A2"
+        },
+        "B1": {
+          "lessonId": 20,
+          "title": "El Reino de las Preguntas Prohibidas",
+          "lessonPath": "/preguntas-prohibidas",
+          "thumbnail": "/kingdom-world-bg.webp",
+          "contentRef": "/preguntas-prohibidas#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "kingdom",
+        "sharedAssets": [
+          "/kingdom-world-bg.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "lets-talk",
+      "familyName": "Let’s Talk",
+      "canonicalPath": "/a1-conversation",
+      "canonicalLessonId": 15,
+      "lessonIds": [
+        15,
+        14,
+        13
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 15,
+          "title": "Let’s Talk · A1",
+          "lessonPath": "/a1-conversation",
+          "thumbnail": "/catalog-thumbnails/conversation-a1.webp",
+          "contentRef": "/a1-conversation#A1"
+        },
+        "A2": {
+          "lessonId": 14,
+          "title": "Let’s Talk · A2",
+          "lessonPath": "/basic-conversation",
+          "thumbnail": "/catalog-thumbnails/conversation-a2.webp",
+          "contentRef": "/basic-conversation#A2"
+        },
+        "B1": {
+          "lessonId": 13,
+          "title": "Choose Your Conversation",
+          "lessonPath": "/choose-conversation",
+          "thumbnail": "/catalog-thumbnails/conversation-choice.webp",
+          "contentRef": "/choose-conversation#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "talk",
+        "sharedAssets": [
+          "/catalog-thumbnails/conversation-a1.webp",
+          "/catalog-thumbnails/conversation-a2.webp",
+          "/catalog-thumbnails/conversation-choice.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-ciudad-no-duerme",
+      "familyName": "La ciudad no duerme",
+      "canonicalPath": "/la-ciudad-no-duerme",
+      "canonicalLessonId": 221,
+      "lessonIds": [
+        221
+      ],
+      "collection": "Modo Play",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 221,
+          "title": "La ciudad no duerme",
+          "lessonPath": "/la-ciudad-no-duerme",
+          "thumbnail": "/la-ciudad-no-duerme/preview.webp",
+          "contentRef": "/la-ciudad-no-duerme#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-ciudad-no-duerme",
+        "sharedAssets": [
+          "/la-ciudad-no-duerme/preview.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "entrenador-personal",
+      "familyName": "Entrenador personal",
+      "canonicalPath": "/entrenador-personal",
+      "canonicalLessonId": 216,
+      "lessonIds": [
+        216
+      ],
+      "collection": "Modo Play",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 216,
+          "title": "Entrenador personal",
+          "lessonPath": "/entrenador-personal",
+          "thumbnail": "/entrenador-personal/hero.webp",
+          "contentRef": "/entrenador-personal#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/entrenador-personal",
+        "sharedAssets": [
+          "/entrenador-personal/hero.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-vida-despues-de-los-30",
+      "familyName": "La vida después de los 30",
+      "canonicalPath": "/la-vida-despues-de-los-30",
+      "canonicalLessonId": 215,
+      "lessonIds": [
+        215
+      ],
+      "collection": "Exploración visual",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 215,
+          "title": "La vida después de los 30",
+          "lessonPath": "/la-vida-despues-de-los-30",
+          "thumbnail": "/vida-despues-30/portrait.webp",
+          "contentRef": "/la-vida-despues-de-los-30#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-vida-despues-de-los-30",
+        "sharedAssets": [
+          "/vida-despues-30/portrait.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "tablero-de-eso-si-hablo",
+      "familyName": "De eso sí hablo",
+      "canonicalPath": "/tablero-de-eso-si-hablo",
+      "canonicalLessonId": 205,
+      "lessonIds": [
+        205
+      ],
+      "collection": "Tableros",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 205,
+          "title": "De eso sí hablo",
+          "lessonPath": "/tablero-de-eso-si-hablo",
+          "thumbnail": "/catalog-thumbnails/conversation-choice.webp",
+          "contentRef": "/tablero-de-eso-si-hablo#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/tablero-de-eso-si-hablo",
+        "sharedAssets": [
+          "/catalog-thumbnails/conversation-choice.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "tablero-no-es-tan-simple",
+      "familyName": "No es tan simple",
+      "canonicalPath": "/tablero-no-es-tan-simple",
+      "canonicalLessonId": 206,
+      "lessonIds": [
+        206
+      ],
+      "collection": "Tableros",
+      "access": "pro",
+      "defaultLevel": "B2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": {
+          "lessonId": 206,
+          "title": "No es tan simple",
+          "lessonPath": "/tablero-no-es-tan-simple",
+          "thumbnail": "/catalog-thumbnails/advanced-dialogue.webp",
+          "contentRef": "/tablero-no-es-tan-simple#B2"
+        },
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/tablero-no-es-tan-simple",
+        "sharedAssets": [
+          "/catalog-thumbnails/advanced-dialogue.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "ciudad-en-juego",
+      "familyName": "Ciudad en juego",
+      "canonicalPath": "/ciudad-en-juego",
+      "canonicalLessonId": 139,
+      "lessonIds": [
+        139
+      ],
+      "collection": "Modo Play",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 139,
+          "title": "Ciudad en juego",
+          "lessonPath": "/ciudad-en-juego",
+          "thumbnail": "/play-mode/ciudad-en-juego.webp",
+          "contentRef": "/ciudad-en-juego#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/ciudad-en-juego",
+        "sharedAssets": [
+          "/play-mode/ciudad-en-juego.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "modo-play-y-ahora-que",
+      "familyName": "¿Y ahora qué?",
+      "canonicalPath": "/modo-play-y-ahora-que",
+      "canonicalLessonId": 138,
+      "lessonIds": [
+        138
+      ],
+      "collection": "Modo Play",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 138,
+          "title": "¿Y ahora qué?",
+          "lessonPath": "/modo-play-y-ahora-que",
+          "thumbnail": "/play-mode/y-ahora-que.webp",
+          "contentRef": "/modo-play-y-ahora-que#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/modo-play-y-ahora-que",
+        "sharedAssets": [
+          "/play-mode/y-ahora-que.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "modo-play-uno-o-el-otro",
+      "familyName": "Uno o el otro",
+      "canonicalPath": "/modo-play-uno-o-el-otro",
+      "canonicalLessonId": 137,
+      "lessonIds": [
+        137
+      ],
+      "collection": "Modo Play",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 137,
+          "title": "Uno o el otro",
+          "lessonPath": "/modo-play-uno-o-el-otro",
+          "thumbnail": "/play-mode/uno-o-el-otro.webp",
+          "contentRef": "/modo-play-uno-o-el-otro#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/modo-play-uno-o-el-otro",
+        "sharedAssets": [
+          "/play-mode/uno-o-el-otro.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-camara-de-presion",
+      "familyName": "La Cámara de Presión",
+      "canonicalPath": "/la-camara-de-presion",
+      "canonicalLessonId": 136,
+      "lessonIds": [
+        136
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "C2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": {
+          "lessonId": 136,
+          "title": "La Cámara de Presión",
+          "lessonPath": "/la-camara-de-presion",
+          "thumbnail": "/conversation-premium/camara-presion.webp",
+          "contentRef": "/la-camara-de-presion#C2"
+        }
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-camara-de-presion",
+        "sharedAssets": [
+          "/conversation-premium/camara-presion.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "el-ministerio-de-las-versiones",
+      "familyName": "El Ministerio de las Versiones",
+      "canonicalPath": "/el-ministerio-de-las-versiones",
+      "canonicalLessonId": 129,
+      "lessonIds": [
+        129
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "C2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": {
+          "lessonId": 129,
+          "title": "El Ministerio de las Versiones",
+          "lessonPath": "/el-ministerio-de-las-versiones",
+          "thumbnail": "/conversation-premium/ministerio-versiones.webp",
+          "contentRef": "/el-ministerio-de-las-versiones#C2"
+        }
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "visualSystem": {
+        "renderer": "native:/el-ministerio-de-las-versiones",
+        "sharedAssets": [
+          "/conversation-premium/ministerio-versiones.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-agencia-de-vidas-paralelas",
+      "familyName": "La Agencia de Vidas Paralelas",
+      "canonicalPath": "/la-agencia-de-vidas-paralelas",
+      "canonicalLessonId": 128,
+      "lessonIds": [
+        128
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "C1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": {
+          "lessonId": 128,
+          "title": "La Agencia de Vidas Paralelas",
+          "lessonPath": "/la-agencia-de-vidas-paralelas",
+          "thumbnail": "/conversation-premium/agencia-vidas-paralelas.webp",
+          "contentRef": "/la-agencia-de-vidas-paralelas#C1"
+        },
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-agencia-de-vidas-paralelas",
+        "sharedAssets": [
+          "/conversation-premium/agencia-vidas-paralelas.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "el-protocolo-aurora",
+      "familyName": "El Protocolo Aurora",
+      "canonicalPath": "/el-protocolo-aurora",
+      "canonicalLessonId": 127,
+      "lessonIds": [
+        127
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": {
+          "lessonId": 127,
+          "title": "El Protocolo Aurora",
+          "lessonPath": "/el-protocolo-aurora",
+          "thumbnail": "/conversation-premium/protocolo-aurora.webp",
+          "contentRef": "/el-protocolo-aurora#B2"
+        },
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/el-protocolo-aurora",
+        "sharedAssets": [
+          "/conversation-premium/protocolo-aurora.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-noche-de-las-siete-llamadas",
+      "familyName": "La Noche de las Siete Llamadas",
+      "canonicalPath": "/la-noche-de-las-siete-llamadas",
+      "canonicalLessonId": 126,
+      "lessonIds": [
+        126
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 126,
+          "title": "La Noche de las Siete Llamadas",
+          "lessonPath": "/la-noche-de-las-siete-llamadas",
+          "thumbnail": "/conversation-premium/noche-siete-llamadas.webp",
+          "contentRef": "/la-noche-de-las-siete-llamadas#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-noche-de-las-siete-llamadas",
+        "sharedAssets": [
+          "/conversation-premium/noche-siete-llamadas.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-mesa-de-las-tres-ofertas",
+      "familyName": "La Mesa de las Tres Ofertas",
+      "canonicalPath": "/la-mesa-de-las-tres-ofertas",
+      "canonicalLessonId": 125,
+      "lessonIds": [
+        125
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": {
+          "lessonId": 125,
+          "title": "La Mesa de las Tres Ofertas",
+          "lessonPath": "/la-mesa-de-las-tres-ofertas",
+          "thumbnail": "/conversation-premium/mesa-tres-ofertas.webp",
+          "contentRef": "/la-mesa-de-las-tres-ofertas#B2"
+        },
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-mesa-de-las-tres-ofertas",
+        "sharedAssets": [
+          "/conversation-premium/mesa-tres-ofertas.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-sala-de-los-mensajes-fuera-de-contexto",
+      "familyName": "La Sala de los Mensajes Fuera de Contexto",
+      "canonicalPath": "/la-sala-de-los-mensajes-fuera-de-contexto",
+      "canonicalLessonId": 124,
+      "lessonIds": [
+        124
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": {
+          "lessonId": 124,
+          "title": "La Sala de los Mensajes Fuera de Contexto",
+          "lessonPath": "/la-sala-de-los-mensajes-fuera-de-contexto",
+          "thumbnail": "/conversation-premium/mensajes-fuera-de-contexto.webp",
+          "contentRef": "/la-sala-de-los-mensajes-fuera-de-contexto#B2"
+        },
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-sala-de-los-mensajes-fuera-de-contexto",
+        "sharedAssets": [
+          "/conversation-premium/mensajes-fuera-de-contexto.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "en-vivo-en-diez-minutos",
+      "familyName": "En Vivo en Diez Minutos",
+      "canonicalPath": "/en-vivo-en-diez-minutos",
+      "canonicalLessonId": 123,
+      "lessonIds": [
+        123
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 123,
+          "title": "En Vivo en Diez Minutos",
+          "lessonPath": "/en-vivo-en-diez-minutos",
+          "thumbnail": "/conversation-premium/en-vivo-diez-minutos.webp",
+          "contentRef": "/en-vivo-en-diez-minutos#A2"
+        },
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/en-vivo-en-diez-minutos",
+        "sharedAssets": [
+          "/conversation-premium/en-vivo-diez-minutos.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "el-teatro-de-las-coartadas",
+      "familyName": "El Teatro de las Coartadas",
+      "canonicalPath": "/el-teatro-de-las-coartadas",
+      "canonicalLessonId": 122,
+      "lessonIds": [
+        122
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 122,
+          "title": "El Teatro de las Coartadas",
+          "lessonPath": "/el-teatro-de-las-coartadas",
+          "thumbnail": "/conversation-premium/teatro-coartadas.webp",
+          "contentRef": "/el-teatro-de-las-coartadas#A2"
+        },
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/el-teatro-de-las-coartadas",
+        "sharedAssets": [
+          "/conversation-premium/teatro-coartadas.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "el-cine-de-las-tres-funciones",
+      "familyName": "El Cine de las Tres Funciones",
+      "canonicalPath": "/el-cine-de-las-tres-funciones",
+      "canonicalLessonId": 121,
+      "lessonIds": [
+        121
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 121,
+          "title": "El Cine de las Tres Funciones",
+          "lessonPath": "/el-cine-de-las-tres-funciones",
+          "thumbnail": "/conversation-premium/cine-tres-funciones.webp",
+          "contentRef": "/el-cine-de-las-tres-funciones#A1"
+        },
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/el-cine-de-las-tres-funciones",
+        "sharedAssets": [
+          "/conversation-premium/cine-tres-funciones.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-noche-de-las-invitaciones-cruzadas",
+      "familyName": "La Noche de las Invitaciones Cruzadas",
+      "canonicalPath": "/la-noche-de-las-invitaciones-cruzadas",
+      "canonicalLessonId": 120,
+      "lessonIds": [
+        120
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 120,
+          "title": "La Noche de las Invitaciones Cruzadas",
+          "lessonPath": "/la-noche-de-las-invitaciones-cruzadas",
+          "thumbnail": "/conversation-premium/invitaciones-cruzadas.webp",
+          "contentRef": "/la-noche-de-las-invitaciones-cruzadas#A1"
+        },
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-noche-de-las-invitaciones-cruzadas",
+        "sharedAssets": [
+          "/conversation-premium/invitaciones-cruzadas.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "la-isla-vota",
+      "familyName": "La isla vota",
+      "canonicalPath": "/la-isla-vota",
+      "canonicalLessonId": 109,
+      "lessonIds": [
+        109
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 109,
+          "title": "La isla vota",
+          "lessonPath": "/la-isla-vota",
+          "thumbnail": "/la-isla-vota/island-command-table-v1.webp",
+          "contentRef": "/la-isla-vota#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/la-isla-vota",
+        "sharedAssets": [
+          "/la-isla-vota/island-command-table-v1.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "buenos-aires-en-la-calle",
+      "familyName": "Buenos Aires en la Calle",
+      "canonicalPath": "/buenos-aires-en-la-calle",
+      "canonicalLessonId": 39,
+      "lessonIds": [
+        39
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 39,
+          "title": "Buenos Aires en la Calle",
+          "lessonPath": "/buenos-aires-en-la-calle",
+          "thumbnail": "/buenos-aires-cotidiana/city.webp",
+          "contentRef": "/buenos-aires-en-la-calle#A2"
+        },
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/buenos-aires-en-la-calle",
+        "sharedAssets": [
+          "/buenos-aires-cotidiana/city.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "mexico",
+      "familyName": "MÉXICO",
+      "canonicalPath": "/mexico",
+      "canonicalLessonId": 210,
+      "lessonIds": [
+        210
+      ],
+      "collection": "Países",
+      "access": "free",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 210,
+          "title": "MÉXICO",
+          "lessonPath": "/mexico",
+          "thumbnail": "/catalog-thumbnails/mexico-relief.svg",
+          "contentRef": "/mexico#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/mexico",
+        "sharedAssets": [
+          "/catalog-thumbnails/mexico-relief.svg"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "estados-unidos-a2-b1",
+      "familyName": "ESTADOS UNIDOS",
+      "canonicalPath": "/estados-unidos-a2-b1",
+      "canonicalLessonId": 36,
+      "lessonIds": [
+        36
+      ],
+      "collection": "Países",
+      "access": "free",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 36,
+          "title": "ESTADOS UNIDOS",
+          "lessonPath": "/estados-unidos-a2-b1",
+          "thumbnail": "/catalog-thumbnails/us-relief.webp",
+          "contentRef": "/estados-unidos-a2-b1#A2"
+        },
+        "B1": {
+          "lessonId": 36,
+          "title": "ESTADOS UNIDOS",
+          "lessonPath": "/estados-unidos-a2-b1",
+          "thumbnail": "/catalog-thumbnails/us-relief.webp",
+          "contentRef": "/estados-unidos-a2-b1#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/estados-unidos-a2-b1",
+        "sharedAssets": [
+          "/catalog-thumbnails/us-relief.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "monasterio-de-las-ideas",
+      "familyName": "El Monasterio de las Ideas",
+      "canonicalPath": "/monasterio-de-las-ideas",
+      "canonicalLessonId": 34,
+      "lessonIds": [
+        34
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "C2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": {
+          "lessonId": 34,
+          "title": "El Monasterio de las Ideas",
+          "lessonPath": "/monasterio-de-las-ideas",
+          "thumbnail": "/monastery-ideas-3d.webp",
+          "contentRef": "/monasterio-de-las-ideas#C2"
+        }
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "visualSystem": {
+        "renderer": "native:/monasterio-de-las-ideas",
+        "sharedAssets": [
+          "/monastery-ideas-3d.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "irlanda-en-relieve",
+      "familyName": "Irlanda en Relieve",
+      "canonicalPath": "/irlanda-en-relieve",
+      "canonicalLessonId": 33,
+      "lessonIds": [
+        33
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 33,
+          "title": "Irlanda en Relieve",
+          "lessonPath": "/irlanda-en-relieve",
+          "thumbnail": "/catalog-thumbnails/ireland-relief.webp",
+          "contentRef": "/irlanda-en-relieve#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/irlanda-en-relieve",
+        "sharedAssets": [
+          "/catalog-thumbnails/ireland-relief.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "reino-unido-en-relieve",
+      "familyName": "Reino Unido en Relieve",
+      "canonicalPath": "/reino-unido-en-relieve",
+      "canonicalLessonId": 32,
+      "lessonIds": [
+        32
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": {
+          "lessonId": 32,
+          "title": "Reino Unido en Relieve",
+          "lessonPath": "/reino-unido-en-relieve",
+          "thumbnail": "/catalog-thumbnails/uk-relief.webp",
+          "contentRef": "/reino-unido-en-relieve#A1"
+        },
+        "A2": null,
+        "B1": {
+          "lessonId": 32,
+          "title": "Reino Unido en Relieve",
+          "lessonPath": "/reino-unido-en-relieve",
+          "thumbnail": "/catalog-thumbnails/uk-relief.webp",
+          "contentRef": "/reino-unido-en-relieve#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/reino-unido-en-relieve",
+        "sharedAssets": [
+          "/catalog-thumbnails/uk-relief.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "australia-en-movimiento",
+      "familyName": "Australia en Movimiento",
+      "canonicalPath": "/australia-en-movimiento",
+      "canonicalLessonId": 30,
+      "lessonIds": [
+        30
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 30,
+          "title": "Australia en Movimiento",
+          "lessonPath": "/australia-en-movimiento",
+          "thumbnail": "/australia-3d-hero.webp",
+          "contentRef": "/australia-en-movimiento#A2"
+        },
+        "B1": {
+          "lessonId": 30,
+          "title": "Australia en Movimiento",
+          "lessonPath": "/australia-en-movimiento",
+          "thumbnail": "/australia-3d-hero.webp",
+          "contentRef": "/australia-en-movimiento#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/australia-en-movimiento",
+        "sharedAssets": [
+          "/australia-3d-hero.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "suiza-en-relieve",
+      "familyName": "Suiza en Relieve",
+      "canonicalPath": "/suiza-en-relieve",
+      "canonicalLessonId": 29,
+      "lessonIds": [
+        29
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 29,
+          "title": "Suiza en Relieve",
+          "lessonPath": "/suiza-en-relieve",
+          "thumbnail": "/suiza-en-relieve-hero.webp",
+          "contentRef": "/suiza-en-relieve#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/suiza-en-relieve",
+        "sharedAssets": [
+          "/suiza-en-relieve-hero.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "mundo-fantastico",
+      "familyName": "El Mundo Fantástico",
+      "canonicalPath": "/mundo-fantastico",
+      "canonicalLessonId": 27,
+      "lessonIds": [
+        27
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 27,
+          "title": "El Mundo Fantástico",
+          "lessonPath": "/mundo-fantastico",
+          "thumbnail": "/og.png",
+          "contentRef": "/mundo-fantastico#A1"
+        },
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/mundo-fantastico",
+        "sharedAssets": [
+          "/og.png"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "estados-unidos-basico",
+      "familyName": "Estados Unidos · Coast to Coast",
+      "canonicalPath": "/estados-unidos-basico",
+      "canonicalLessonId": 26,
+      "lessonIds": [
+        26
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 26,
+          "title": "Estados Unidos · Coast to Coast",
+          "lessonPath": "/estados-unidos-basico",
+          "thumbnail": "/usa-basic-hero.webp",
+          "contentRef": "/estados-unidos-basico#A1"
+        },
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/estados-unidos-basico",
+        "sharedAssets": [
+          "/usa-basic-hero.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "israel-en-capas",
+      "familyName": "Israel en Capas",
+      "canonicalPath": "/israel-en-capas",
+      "canonicalLessonId": 25,
+      "lessonIds": [
+        25
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 25,
+          "title": "Israel en Capas",
+          "lessonPath": "/israel-en-capas",
+          "thumbnail": "/israel-b1-hero.webp",
+          "contentRef": "/israel-en-capas#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/israel-en-capas",
+        "sharedAssets": [
+          "/israel-b1-hero.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "indonesia-fantastica",
+      "familyName": "Indonesia Fantástica",
+      "canonicalPath": "/indonesia-fantastica",
+      "canonicalLessonId": 24,
+      "lessonIds": [
+        24
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 24,
+          "title": "Indonesia Fantástica",
+          "lessonPath": "/indonesia-fantastica",
+          "thumbnail": "/indonesia-fantasy-hero.webp",
+          "contentRef": "/indonesia-fantastica#A1"
+        },
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/indonesia-fantastica",
+        "sharedAssets": [
+          "/indonesia-fantasy-hero.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "future-city",
+      "familyName": "La Ciudad del Futuro",
+      "canonicalPath": "/future-city",
+      "canonicalLessonId": 22,
+      "lessonIds": [
+        22
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "B1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": {
+          "lessonId": 22,
+          "title": "La Ciudad del Futuro",
+          "lessonPath": "/future-city",
+          "thumbnail": "/catalog-thumbnails/future-city.webp",
+          "contentRef": "/future-city#B1"
+        },
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/future-city",
+        "sharedAssets": [
+          "/catalog-thumbnails/future-city.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "argento-roleplays",
+      "familyName": "Argento Roleplays",
+      "canonicalPath": "/argento-roleplays",
+      "canonicalLessonId": 19,
+      "lessonIds": [
+        19
+      ],
+      "collection": "Países",
+      "access": "pro",
+      "defaultLevel": "A1",
+      "levels": {
+        "A1": {
+          "lessonId": 19,
+          "title": "Argento Roleplays",
+          "lessonPath": "/argento-roleplays",
+          "thumbnail": "/buenos-aires-cotidiana/atlas-1.webp",
+          "contentRef": "/argento-roleplays#A1"
+        },
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/argento-roleplays",
+        "sharedAssets": [
+          "/buenos-aires-cotidiana/atlas-1.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "life-roulette",
+      "familyName": "La Ruleta de Tu Vida",
+      "canonicalPath": "/life-roulette",
+      "canonicalLessonId": 17,
+      "lessonIds": [
+        17
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "A2",
+      "levels": {
+        "A1": null,
+        "A2": {
+          "lessonId": 17,
+          "title": "La Ruleta de Tu Vida",
+          "lessonPath": "/life-roulette",
+          "thumbnail": "/catalog-thumbnails/life-wheel.webp",
+          "contentRef": "/life-roulette#A2"
+        },
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/life-roulette",
+        "sharedAssets": [
+          "/catalog-thumbnails/life-wheel.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "advanced-conversation",
+      "familyName": "Preguntas que dan ganas de hablar",
+      "canonicalPath": "/advanced-conversation",
+      "canonicalLessonId": 11,
+      "lessonIds": [
+        11
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "C1",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": {
+          "lessonId": 11,
+          "title": "Preguntas que dan ganas de hablar",
+          "lessonPath": "/advanced-conversation",
+          "thumbnail": "/catalog-thumbnails/advanced-dialogue.webp",
+          "contentRef": "/advanced-conversation#C1"
+        },
+        "C2": null
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C2"
+      ],
+      "visualSystem": {
+        "renderer": "native:/advanced-conversation",
+        "sharedAssets": [
+          "/catalog-thumbnails/advanced-dialogue.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    },
+    {
+      "familyId": "clase-203",
+      "familyName": "El museo de las decisiones",
+      "canonicalPath": "/clase/203",
+      "canonicalLessonId": 203,
+      "lessonIds": [
+        203
+      ],
+      "collection": "Universos",
+      "access": "pro",
+      "defaultLevel": "C2",
+      "levels": {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+        "C1": null,
+        "C2": {
+          "lessonId": 203,
+          "title": "El museo de las decisiones",
+          "lessonPath": "/clase/203",
+          "thumbnail": "/monastery-worlds/03-biblioteca.webp",
+          "contentRef": "/clase/203#C2"
+        }
+      },
+      "missingLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "visualSystem": {
+        "renderer": "native:/clase/203",
+        "sharedAssets": [
+          "/monastery-worlds/03-biblioteca.webp"
+        ]
+      },
+      "interactionSystem": "Content review pending at this checkpoint.",
+      "notes": [
+        "Registry checkpoint only; detailed route/content/CEFR validation in progress."
+      ]
+    }
+  ]
+}
