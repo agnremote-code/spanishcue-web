@@ -103,7 +103,7 @@ There is exactly one canonical production deployment mechanism. Today it is the 
 
 For Sites publishing, follow `docs/releases/SITES_RELEASE.md`. Its save/deploy/rollback steps require native OpenAI Sites tools that Claude Code does not have; Claude Code stops at a verified merged SHA and the owner routes the release to the Sites release owner. See `docs/CLAUDE_RELEASE_TRANSITION.md`.
 
-The GitHub Actions + Cloudflare path in `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md` is prepared only. Do not add an active deploy workflow, run `wrangler deploy`, create Cloudflare resources, or move DNS until the owner explicitly authorizes a specific phase of that plan.
+Target architecture (owner decision, 2026-09-26): Claude Code → GitHub → GitHub Actions → owner-controlled Cloudflare Worker and D1 → `spanishcue.com`, with OpenAI Sites retired after a controlled cutover. The remaining Sites dependency is a single logical data export (`docs/releases/PRODUCTION_DATA_EXPORT.md`) and the cutover itself (`docs/releases/CUTOVER_RUNBOOK.md`). Until the cutover completes, Sites is still the only production deployer. The GitHub Actions + Cloudflare path in `docs/releases/CLOUDFLARE_MIGRATION_PLAN.md` is prepared only. Do not add an active deploy workflow, run `wrangler deploy`, create Cloudflare resources, or move DNS until the owner explicitly authorizes a specific phase of that plan.
 
 For any change touching migration-sensitive files, D1 schema/data, Drizzle, bindings, hosting configuration, or migration infrastructure, follow `docs/releases/MIGRATION_RELEASE.md`.
 
