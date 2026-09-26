@@ -203,6 +203,10 @@ test('Spanish Mouth Lab is local, complete and protected by the premium gate',as
  await response.arrayBuffer();
 });
 
+test('the D1 export is owner-only and forged owner headers get nothing',async()=>{
+ for(const headers of [{},forgedOwner]){const response=await get('/api/admin/export',headers);assert.equal(response.status,403);assert.match(response.headers.get('cache-control')||'',/private, no-store/);assert.doesNotMatch(await response.text(),/jsonl|manifest/)}
+});
+
 test('forged browser identity headers cannot unlock paid routes or admin',async()=>{
  for(const path of ['/past-b1','/admin']){const response=await get(path,forgedOwner);assert.equal(response.status,302,path);assert.match(response.headers.get('cache-control')||'',/private, no-store/,path);await response.arrayBuffer()}
  const api=await get('/api/settings',forgedOwner);assert.equal(api.status,403);assert.match(api.headers.get('cache-control')||'',/private, no-store/);await api.arrayBuffer();
