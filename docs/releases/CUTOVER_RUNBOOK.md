@@ -14,7 +14,7 @@ SHA.
 
 | Blocker | Owner of the answer | Notes |
 |---|---|---|
-| Production D1 export (schema + data + migration ledger) | Sites release owner | Request text in §A |
+| Production D1 export (logical, paginated JSONL + manifest) | Sites release owner | Request in `PRODUCTION_DATA_EXPORT.md`; import/verify tooling `scripts/import-production-export.mjs` is ready |
 | `spanishcue.com` zone location | Owner (Cloudflare dashboard) | Zone is not in the connected account |
 | How Sites binds the custom domain, and how to detach it | Sites release owner | Must be detachable without DNS downtime |
 | Production `compatibility_date` and bindings (`IMAGES`?) | Sites release owner | Build config says `2026-05-15`; no `IMAGES` in build output; production behavior matches no binding |
@@ -22,6 +22,31 @@ SHA.
 | Write-freeze flag | **Done** (`worker/write-freeze.ts`, var `SPANISHCUE_WRITE_FREEZE=true`) | Non-GET `/api/*` returns 503 `WRITE_FREEZE` with `Retry-After: 300`; lesson-progress saves are skipped; pages and reads work. New sign-ins (`POST /api/auth/session`) are also paused |
 | Production API token + GitHub `production` environment with required reviewer | Owner | Workers Scripts:Edit, D1:Edit on the owner account; Workers Routes:Edit / Zone read on `spanishcue.com` only |
 | Production deploy workflow | **Done, inactive** (`.github/workflows/deploy-production.yml`) | Manual only; repo variable `OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true` + `production` environment reviewer; typed confirmation; modes `inert` / `cutover` / `release`; `release` refuses while Sites `enabled` is not `false`; smoke + auto rollback |
+
+## 0b. Domain and DNS (resolve before the freeze)
+
+Public facts (2026-09-26): registrar **Spaceship** (`clientTransferProhibited`, expires 2027-09-11); nameservers `anuj.ns.cloudflare.com` / `meg.ns.cloudflare.com`; apex and `www` are proxied Cloudflare A/AAAA; two `_acme-challenge` TXT tokens exist (certificate validation, typical of a hostname onboarded to a hosting platform). The zone is **not** visible through the connected Cloudflare connector, which has no zone tools, so which account holds it is unconfirmed.
+
+Resolution:
+
+1. **Zone already in the owner's Cloudflare account** (dash.cloudflare.com → account `3f075f11…` → Websites lists `spanishcue.com`): nothing to move. At cutover the production workflow attaches the Worker custom domains; the proxied apex/`www` records that point at Sites are replaced by the Worker custom domain records.
+2. **Zone not in any owner account** (it lives with Sites): in the owner account choose *Add a domain* → `spanishcue.com` → Free plan. It stays **pending** and changes nothing until the nameservers change. Recreate every record below in it (Claude prepares the exact list; the owner or a zone-scoped token enters it). At cutover step 6 the owner changes the nameservers at Spaceship (Domain list → spanishcue.com → Nameservers → Custom) to the two nameservers Cloudflare assigns. Cloudflare-to-Cloudflare moves keep serving from the old zone until the change propagates, so there is no DNS outage, but the Sites custom domain must still be detached by the Sites owner.
+
+Records to preserve exactly (values from public DNS; take DKIM values in full from the provider dashboards):
+
+| Name | Type | Value | Purpose |
+|---|---|---|---|
+| `spanishcue.com` | TXT | `v=spf1 include:_spf.firebasemail.com ~all` | SPF for Firebase mail |
+| `spanishcue.com` | TXT | `firebase=chespanish-32645` | Firebase domain verification |
+| `spanishcue.com` | TXT | `google-site-verification=HWGRkszBOV2Nxfsl7dcQgjgskBJ8C7qTdTSe2nuucSY` | Search Console |
+| `firebase1._domainkey` | CNAME | `mail-spanishcue-com.dkim1._domainkey.firebasemail.com` | Firebase DKIM (DNS only) |
+| `firebase2._domainkey` | CNAME | `mail-spanishcue-com.dkim2._domainkey.firebasemail.com` | Firebase DKIM (DNS only) |
+| `resend._domainkey` | TXT | full `p=…` key from Resend → Domains → spanishcue.com | Resend DKIM |
+| `send` | CNAME | `send.forge.rmta.net` | Resend return path (DNS only) |
+| `rsend` | CNAME | `rsend.forge.rmta.net` | Resend return path (DNS only) |
+| `_dmarc` | TXT | `v=DMARC1; p=none;` | DMARC (monitor only) |
+| `spanishcue.com`, `www` | Worker custom domain | Worker `spanishcue` | Replaces the proxied A/AAAA to Sites at cutover; `www` keeps its 308 to the apex (handled in `worker/index.ts`) |
+| `_acme-challenge` | TXT | not copied | Belongs to the current host's certificates; Cloudflare issues new ones for Worker custom domains |
 
 ## 1. Rehearse (repeat until clean, no production impact)
 
@@ -55,16 +80,18 @@ data import but must not double-count imported rows (import
 
 ## 3. Freeze window (production operation)
 
+Prerequisite: Sites production runs a release that contains `worker/write-freeze.ts` (merged in `248934d`; any ordinary Sites release of `main` at or after it).
+
 1. Announce a short maintenance window.
-2. Sites owner releases the write-freeze flag ON (normal `SITES_RELEASE.md` flow). Reads and authorization keep working; sign-up sync, progress, claims, checkout, admin writes and webhooks return 503 (providers retry webhooks).
-3. Confirm with smoke plus a write probe that returns 503.
+2. Sites owner sets the plain variable `SPANISHCUE_WRITE_FREEZE=true` on Sites production (environment change only, no code release). Mutating `/api/*` requests, including both provider webhooks and new sign-in sessions, return 503 `WRITE_FREEZE`; pages, reads and existing authorization keep working; providers retry webhooks.
+3. Claude verifies: `production-smoke.mjs` passes, and `POST /api/billing/claim/bind` on `https://spanishcue.com` returns 503 with code `WRITE_FREEZE`.
 
 ## 4. Final export and import
 
-1. Sites owner takes the final export (§A) after the freeze is confirmed, and reports per-table counts and the ledger.
-2. Use the existing empty `spanishcue-production` D1 (`343ac454-a056-4c40-a893-f8be572665a6`) in the owner account; if it is not empty, stop. Apply `drizzle/0000`–`0009`. Write the ledger rows in Wrangler format (`d1_migrations`) so no migration re-runs.
-3. Import data only, in the foreign-key order from `docs/BACKEND_MIGRATION.md`.
-4. Run §2 on the new DB; every count must match the export report. Zero mismatches or stop.
+1. Sites owner repeats the **same** logical export (`PRODUCTION_DATA_EXPORT.md`) while frozen and delivers it privately.
+2. Claude runs `import-production-export.mjs check` and `rehearse` on it; any problem stops the cutover (unfreeze Sites and reschedule).
+3. Claude uses the existing empty `spanishcue-production` D1 (`343ac454-a056-4c40-a893-f8be572665a6`); if it is not empty, stop. Apply `drizzle/0000`–`0009`, write the `d1_migrations` ledger rows in Wrangler format (production must be confirmed at `0009` from the export metadata), then load the ordered INSERT files from `import-production-export.mjs sql`.
+4. Run the §2 queries on the new D1; every count must equal the manifest. Zero mismatches or stop.
 5. Record a D1 Time Travel bookmark for the new DB.
 
 ## 5. Secrets and configuration (owner, outside chat)
@@ -134,33 +161,12 @@ Only after production is healthy on Cloudflare for an agreed period, including o
 
 ## 10. Rollback
 
-- Before step 6.2: nothing to undo; production still on Sites.
-- Between 6.2 and 8 (frozen): reattach the domain to Sites; Sites still has all data because writes were frozen. No data loss.
-- After 8: code rollback via `wrangler rollback` on the new Worker (same smoke). Host rollback to Sites requires replaying writes made since unfreeze; treat as incident.
+- Before step 6.2: nothing to undo; production still on Sites. Sites owner removes `SPANISHCUE_WRITE_FREEZE` (unfreeze).
+- Between 6.2 and 8 (both hosts frozen): reattach the domain to Sites and remove `SPANISHCUE_WRITE_FREEZE` on Sites. Sites still has all data because writes were frozen. No data loss.
+- After 8: code rollback via the production workflow (`action: rollback`) on the new Worker, same smoke. Host rollback to Sites requires replaying writes made since unfreeze; treat as an incident.
+- Keep Sites production deployed, frozen and unchanged for the agreed verification window before step 9.
 - Never run SQL rollback; use D1 Time Travel only with explicit owner authorization.
 
-## A. Request to send to the Sites release owner (single consolidated request)
+## A. Request to send to the Sites release owner
 
-> SPANISHCUE is preparing to move production from OpenAI Sites to an owner-controlled Cloudflare account. This request is **read-only**. Do not deploy, modify the database, schema, migration ledger, environment set, secrets, custom domain or `automation/sites-release-state`. Sites remains the production deployer until the owner says otherwise.
->
-> Sites project `appgprj_6a83ba10b0c481919060fc089d581233`, D1 binding `DB`, production v176 (source `ae4bfc50b39f95432a9c3c20477d25fbd6ca523f`) or the current healthy version.
->
-> Please deliver, as files, to the owner only (private channel; not GitHub, not a public URL):
->
-> 1. A complete SQL dump of the production D1 (schema and all data), taken from one consistent snapshot.
-> 2. The migration ledger: the exact table Sites uses to record applied migrations, its schema and all rows (expected 0000–0009, last `0009_glossy_mariko_yashida`).
-> 3. The list of all tables.
-> 4. Row counts for every table, from the same snapshot as the dump.
-> 5. All index, trigger and view definitions (`SELECT type, name, tbl_name, sql FROM sqlite_master`).
-> 6. The Worker `compatibility_date` and compatibility flags used in production.
-> 7. Every Worker binding name and type (D1, assets, Images, any other).
-> 8. Every production plain-variable **name**, with values for the non-secret ones.
-> 9. Every production secret **name** (no values; they will be re-issued in the provider consoles).
-> 10. The current custom domain / route configuration for `spanishcue.com` and `www.spanishcue.com`, and the supported way to detach it later.
-> 11. Whether an `IMAGES` (Cloudflare Images) binding is attached.
-> 12. The current production version ID and deployment ID.
-> 13. The previous healthy version ID.
-> 14. The current `automation/sites-release-state` `state.json` values relevant to releases (enabled, status, healthy, previous), and confirmation that none of this changes it.
-> 15. Any OpenAI-specific packaging or configuration that must be replaced outside Sites (for example `.openai/hosting.json`, `dist/.openai`, source-branch mechanics, the backup ref `refs/tags/production-v161-preserved` and source `c49bd60`).
->
-> This first export is a rehearsal. A final export will be requested later during a short write freeze.
+Superseded: use the single logical-export request in `docs/releases/PRODUCTION_DATA_EXPORT.md` (the Sites reader cannot produce a native SQL dump). The same procedure, run during the write freeze, is the final export in §4.
