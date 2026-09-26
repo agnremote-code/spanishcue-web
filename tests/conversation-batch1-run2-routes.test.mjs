@@ -39,8 +39,8 @@ const variants = {
 };
 async function renderRoute(route, query) {
   const hooks = {...React, useSyncExternalStore: (_subscribe, snapshot, serverSnapshot) => query === undefined ? serverSnapshot() : snapshot()};
-  const module = load(await compile(`app/${route}/page.tsx`), hooks, {window: {location: {search: query || ''}}});
-  return renderToString(React.createElement(module.default));
+  const pageModule = load(await compile(`app/${route}/page.tsx`), hooks, {window: {location: {search: query || ''}}});
+  return renderToString(React.createElement(pageModule.default));
 }
 
 test('all eight Run 1/Run 2 variants render through every historical adapter with exact level controls', async () => {
@@ -73,7 +73,7 @@ test('Run 2 keeps all ten historical SSR defaults and rejects unavailable world 
 test('all eight variants render their own public preview, objectives, JSON-LD and lesson link without new slugs', async () => {
   // Only framework link/image rendering is stubbed; the actual async resource
   // page and metadata generation execute against the production catalog.
-  const module = load(await compile('app/resources/[slug]/page.tsx'), React, {}, {
+  const pageModule = load(await compile('app/resources/[slug]/page.tsx'), React, {}, {
     'next/link': ({children, ...props}) => React.createElement('a', props, children),
     'next/image': ({priority, ...props}) => { void priority; return React.createElement('img', props); },
     'next/navigation': {notFound: () => {throw new Error('Unexpected 404');}},
@@ -84,7 +84,7 @@ test('all eight variants render their own public preview, objectives, JSON-LD an
     const slug = seo.resourceSlugForLesson(lesson);
     for (const [level] of levels) {
       const props = {params: Promise.resolve({slug}), searchParams: Promise.resolve({level})};
-      const html = renderToString(await module.default(props));
+      const html = renderToString(await pageModule.default(props));
       const preview = family.previewByLevel[level];
       assert.ok(html.includes(preview.hook), `${id} ${level} hook`);
       assert.ok(html.includes(preview.explanation), `${id} ${level} explanation`);
@@ -96,7 +96,7 @@ test('all eight variants render their own public preview, objectives, JSON-LD an
       assert.equal(structured.educationalLevel, level);
       assert.equal(structured.image, 'https://spanishcue.com' + preview.image);
       assert.equal(structured.url, 'https://spanishcue.com' + seo.resourcePathForLesson(lesson));
-      const metadata = await module.generateMetadata(props);
+      const metadata = await pageModule.generateMetadata(props);
       assert.equal(metadata.alternates.canonical, structured.url, 'canonical metadata remains query-independent');
     }
   }

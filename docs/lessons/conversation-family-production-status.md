@@ -134,7 +134,7 @@ Fresh verification before Run 2 edits: `npm run test:conversation` **60/60 passe
 
 The available capabilities still advertise no permitted local preview/tunnel mechanism. Run 1’s cloud-browser `net::ERR_BLOCKED_BY_CLIENT` and explicit shared-file protocol rejection remain the recorded blocker; no blocked navigation or alternate-browser workaround is being retried. Interactive desktop/mobile QA is pending. This run will continue with source/SSR/hook-driven interaction validation, responsive CSS review and inspection of all four new saved thumbnails, as instructed.
 
-Implementation and final verification are in progress. Coherent checkpoints are pushed to the Run 2 branch; this section will record the actual results before completion.
+Implementation and source verification are complete; all source/assets are preserved on the Run 2 branch. Interactive desktop/mobile acceptance remains pending for the documented browser-policy reason. This is a branch-only delivery, with no merge or deployment.
 
 ### Run 2 implementation checkpoint
 
@@ -145,3 +145,86 @@ The combined conversation suite now passes **87/87 tests**. It verifies fourteen
 All four new assets are saved and visually inspected: `public/conversation-worlds/elimination-machine-a1.webp` (1672×941), `public/conversation-worlds/absurd-universe-a1.webp` (1672×941), `public/play-mode/red-flag-o-no/c1.webp` (1536×1024), `public/catalog-thumbnails/conversation-c1.webp` (1672×941). No old thumbnail was overwritten. Exact prompts, reference hashes and provenance are in `conversation-batch1-run2-thumbnail-prompts.json`.
 
 Pushed checkpoints so far: `783a36a64cfa430bfdede97adde7c686748edf9e` (safe main integration), `dd9c87b114efe58c039c20d88bf79a0f41bfd9a9` (preservation baseline), `93110aba2989458bff109d2782db0926f2970788` (C1 engines/content). The next checkpoint preserves both A1 banks, all four thumbnails, registry and regression integration. Full lint, build, TypeScript comparison and technical review follow.
+
+
+### Run 2 final results
+
+Verified implementation checkpoint: **`687084c5d41082008df290b6518c61fe6264cc4f`**. It includes the four variants, four thumbnails, public registration and regression suite. The final documentation/test-only checkpoint records the checks below and fixes the SSR test variable name required by ESLint; application source/assets are identical to the verified implementation checkpoint. Use this branch’s HEAD for the full delivered source and report.
+
+| Family | Run 2 addition | Content and oral progression | Exact selector | Canonical new link |
+|---|---|---|---|---|
+| La máquina que elimina cosas del mundo | A1 | 24 separate decisions; everyday objects, visible short-answer frames, concrete consequences, reconsideration and actual-choice closing | A1, A2, B1, B2 | `/la-maquina-que-elimina-cosas?level=A1` |
+| Tu vida con una regla absurda | A1 | 15 rules × 3 prompts = 45; reaction → routine → choice, visible stage-specific frames and supported invention finale | A1, A2, B1, B2 | `/tu-vida-con-una-regla-absurda?level=A1` |
+| Red Flag o No | C1 | 18 situations across three phases of six; initial judgment, explicit hidden-context reveal, revision/qualification and missing-information discussion; criteria/exception finale using actual judgments | A1, A2, B1, B2, C1 | `/red-flag-o-no-a2?level=C1` |
+| Let’s Talk | C1 | 15 original worlds × 8 questions = 120; 30 optional follow-ups, seven precision moves, exactly-three selection and synthesis connecting the actual selected questions | A1, A2, B1, B2, C1 | `/a1-conversation?level=C1` |
+
+All four provide selective 45-minute teaching sequences rather than requiring every item in one class. They remain PRO through canonical IDs 101, 102, 207 and 15. No new route ID, slug, resource alias or duplicate catalog card was introduced. No C2 is exposed in these four families, and Machine/Rules do not expose C1. Historical defaults, old query-free URLs, old aliases and all older preview metadata remain intact. Public summaries import no private banks.
+
+| Final check | Result |
+|---|---|
+| `npm run test:conversation` | **87 passed; 0 failed, skipped or cancelled**. Baseline was 60; 27 new tests added. The command is already included in `npm test`. |
+| `npm run lint` | **Passed**. Two new SSR-test local variables were renamed from `module` to satisfy the existing Next ESLint rule; no application change was needed. |
+| `npm run build` | **Passed**, including protection, finalization and `validate:artifact`. 59 private client modules and 47 premium media files protected; 281 private paths excluded. |
+| `tsc --noEmit --incremental false` | **11 baseline diagnostics remain; zero new diagnostics.** Baseline captured after safe main integration and final output are byte-identical. Both outputs have SHA-256 `cf6b81ec60bcdd8aa9b27fac4f178f2f4910c9fd98b12225381f49c287234859`. Existing locations: billing 8, marketing 2, Mexico 1. |
+| `git diff --check` | **Passed** on the complete Run 2 diff. |
+| Run 1 preservation | **Passed**: fourteen bank fingerprints, thirty-six exact-file hashes, old family metadata/preview values, full route/access ledger and entire Run 1 status prefix. Independent reviewer checked the hash provenance against Git objects. |
+| Thumbnails / JSON | **Passed**: all four actual saved WebPs inspected and decoded; dimensions/hashes agree with valid prompt JSON. Eight original/Run 1 style references remain unchanged. |
+| Independent content review | All 24 decisions, 15 rules/45 prompts, 18 Red Flag situations and 120 Talk prompts, supports, guides and closings read. Two new C1 phrases clarified; new C1 interface copy aligned with tú. No outstanding pedagogical defects found. |
+| Independent code review | No actionable regressions found in state, dispatch, private boundaries, aliases, resources, tests or responsive CSS. |
+| Interactive desktop/mobile QA | **Blocked, not passed.** No permitted new local-preview mechanism is advertised. Run 1’s `net::ERR_BLOCKED_BY_CLIENT` and explicit shared-file protocol rejection remain the recorded restriction; no forbidden workaround or deployment was attempted. |
+
+Static/render coverage spans **all eight Run 1 + Run 2 variants**: Red Flag A1/C1, Talk B2/C1, Machine B2/A1 and Rules B2/A1. SSR checks select them through all ten historical route adapters and render their public resource content, objectives, correct preview image, lesson link and level-specific JSON-LD. Hook-driven tests exercise Red Flag initial/revised/qualified choices, context visibility, keyboard behavior and reset; Talk exact-three gating/reselection/closing; World decision/reveal/revision, three-question progression, finale and persisted session effects. A simulated history test exercises the real selector handlers and subscriptions while preserving other parameters/hash. Real browser history, touch, overflow, focus appearance and desktop/mobile visual acceptance remain unverified.
+
+Responsive source review checked inherited and added CSS for all eight variants: existing single-column breakpoints and wrapping controls remain; new C1 optional support collapses to one column; A1 frames/recaps and C1 context/history blocks wrap long text and use flexible widths. Original B2 CSS is byte-identical. These are structural checks, not screenshots or a claim of visual acceptance.
+
+Full `npm test` and local-worker HTTP tests were deliberately **not run**, because their harness creates/migrates local D1. Only the authorized safe conversation tests, lint, compiler and protected build/artifact checks ran. No production HTTP requests or identity/payment/database operations were needed.
+
+Pedagogical review follows the repository’s communicative-demand approach, with the [PCIC A1–A2 functions](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_a1-a2.htm), [PCIC C1–C2 functions](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_c1-c2.htm) and [CEFR global scale](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale) as guidance, not formal certification.
+
+### Run 2 deferred issues and boundaries
+
+- Interactive visual QA remains pending under the browser policy. Static/SSR checks do not remove that limitation.
+- The eleven unrelated TypeScript diagnostics remain unchanged. Original/Run 1 content, bilingual-preview drift and historical mixed addressing noted above remain authoritative and were not rewritten.
+- No Run 2 implementation defects remain known after review. No C2, Machine/Rules C1, other family or Run 3 work was started.
+- No merge to main or PR that would trigger automatic merging was created. No deployment, D1 operation, production-data modification, auth/Firebase/Paddle/PayPal/billing/Resend change, secret/environment/domain change, release-controller/state change or deployment-configuration change occurred.
+- Final `main` fetch still resolves to `5d6733a9b9404bbc17bf6999530eb48ffb574a3e`, already included as a parent of integration checkpoint `783a36a`. Main and Run 1 are both ancestors of this branch. The seven upstream export-related files are unchanged from main, not Run 2-authored modifications.
+
+### Run 2 exact changed-file manifest
+
+33 task-owned files relative to integrated baseline `783a36a64cfa430bfdede97adde7c686748edf9e`:
+
+- `app/choose-conversation/C1ConversationTools.tsx`
+- `app/choose-conversation/c1-data.ts`
+- `app/choose-conversation/c1.css`
+- `app/choose-conversation/page.tsx`
+- `app/choose-conversation/variants.ts`
+- `app/conversation-families/authored-levels.ts`
+- `app/conversation-worlds/ConversationWorld.tsx`
+- `app/conversation-worlds/ConversationWorldFamily.tsx`
+- `app/conversation-worlds/data-a1.ts`
+- `app/conversation-worlds/types.ts`
+- `app/conversation-worlds/worlds.css`
+- `app/red-flag-o-no/RedFlagGame.tsx`
+- `app/red-flag-o-no/c1.mjs`
+- `app/red-flag-o-no/engine.mjs`
+- `app/red-flag-o-no/red-flag.css`
+- `docs/lessons/conversation-batch1-run2-thumbnail-prompts.json`
+- `docs/lessons/conversation-family-production-status.md`
+- `package.json`
+- `public/catalog-thumbnails/conversation-c1.webp`
+- `public/conversation-worlds/absurd-universe-a1.webp`
+- `public/conversation-worlds/elimination-machine-a1.webp`
+- `public/play-mode/red-flag-o-no/c1.webp`
+- `tests/conversation-batch1-routes.test.mjs`
+- `tests/conversation-batch1-run2-routes.test.mjs`
+- `tests/conversation-batch1-run2.test.mjs`
+- `tests/conversation-batch1.test.mjs`
+- `tests/conversation-families.test.mjs`
+- `tests/conversation-worlds-a1.test.mjs`
+- `tests/fixtures/conversation-batch1-run1-preserved.json`
+- `tests/red-flag-c1.test.mjs`
+- `tests/red-flag-o-no.test.mjs`
+- `tests/talk-b2.test.mjs`
+- `tests/talk-c1.test.mjs`
+
+Relative to Run 1 `f919429`, seven additional files come solely from the unchanged main integration: `app/api/admin/export/d1-export.ts`, `app/api/admin/export/route.ts`, `docs/releases/CUTOVER_RUNBOOK.md`, `docs/releases/PRODUCTION_DATA_EXPORT.md`, `scripts/import-production-export.mjs`, `tests/production-export-import.test.mjs`, `tests/teacher-access.test.mjs`. They were not authored in this run; no export or import endpoint/tool was invoked.
