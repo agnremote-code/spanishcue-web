@@ -142,5 +142,53 @@
         "sha256": "07b1de6d191c52d3c1145b9f4aadd88f36f91cef9d7f9785669bb74e13b36f4d"
       }
     ]
+  },
+  {
+    "key": "talk-c2",
+    "target": "public/catalog-thumbnails/conversation-c2.webp",
+    "refs": [
+      "public/catalog-thumbnails/conversation-choice.webp",
+      "public/catalog-thumbnails/conversation-b2.webp",
+      "public/catalog-thumbnails/conversation-c1.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Asset type: NEW sibling wide landscape 16:9 SPANISHCUE conversation-lesson thumbnail. Input images: image 1 establishes the colorful glass topic-world family; images 2 and 3 establish the ivory selected-question pieces and earlier compositions that MUST NOT be repeated. Preserve the same two adult conversational partners, dark-haired man in navy and brunette woman in cream, navy upholstered lounge seating, golden architectural details, warm welcoming light and richly colorful miniature topic worlds inside clear floating glass spheres. Compose a genuinely NEW scene from a HIGH ELEVATED three-quarter camera looking diagonally DOWN over a circular conversation terrace. The pair sit at opposite ends of a diagonal across a ROUND glass-and-gold table; man nearer lower left, woman farther upper right, both faces naturally visible and engaged, each making one relaxed conversational gesture. The table center is uncluttered and contains EXACTLY THREE separate ivory round question tiles arranged in a shallow arc, fully visible, each carrying ONE large engraved question mark and no other text. Surround this diagonal human exchange with glass world orbs at deliberately different depths: a large near sphere at right shows a vibrant colorful seaside town square from street level; a second overlapping but separate sphere higher back shows the same seaside town from its hillside, visibly another perspective. Smaller spheres of shared food, green mountain nature and lively city culture sit farther around the terrace. The two views of a familiar place and the conversational gestures convey layered perspectives, while the three selected questions remain immediately countable. Some large world orbs occupy foreground edges and partially frame the scene, not all arranged as a flat row above the people. Spacious luminous early-evening blue sky, golden lamps and colorful worlds; clear, cheerful, tactile, inviting. Avoid the frontal or eye-level two-shot of prior thumbnails. No academic props, no dark advanced-level redesign, no random purple neon or sci-fi interface. No letters, numbers, title, logos, level badges or watermarks; only the THREE question-mark symbols.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected original, Run 1 and Run 2 family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 3",
+      "date": "2026-09-27",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-d1fc3192-7c50-41bc-981d-0af968fba94c.png",
+    "visual_qa": "Elevated diagonal conversation with near-right oversized street-level town orb and farther hillside town orb supplies layered perspective. Colorful glass-world identity and welcoming gold/navy terrace retained. Exactly three separate fully visible question tiles, no other text. Distinct from eye-level B2/C1 compositions; natural faces and gestures.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 364280,
+    "sha256": "a0930ccf93cddd56946633788f59ba52ddb7ba4503a91bfbe62cd980b6cbfdff",
+    "reference_metadata": [
+      {
+        "path": "public/catalog-thumbnails/conversation-choice.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "103c0e9006e05eeacde6a6aa1e45ebf1a5f760de7db8c876aac1f78042ade21e"
+      },
+      {
+        "path": "public/catalog-thumbnails/conversation-b2.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "98e4fc0862b348ff9cee141ab09e45bf835c068854d05efd96b6ab48d2e47172"
+      },
+      {
+        "path": "public/catalog-thumbnails/conversation-c1.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "57e0666f9362a123423e664ef7ff1dd3626c079b52d8e1c6a4e34d01f39efcbe"
+      }
+    ]
   }
 ]

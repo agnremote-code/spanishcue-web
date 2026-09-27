@@ -1,5 +1,6 @@
 import { a1Config } from "./a1.mjs";
 import { c1Config } from "./c1.mjs";
+import { c2Config } from "./c2.mjs";
 
 const sharedFinale = [
   "Top 3 red flags",
@@ -11,6 +12,7 @@ const sharedFinale = [
 const levels = {
   A1: a1Config,
   C1: c1Config,
+  C2: c2Config,
   A2: {
     level: "A2",
     accent: "#ff4d5d",
