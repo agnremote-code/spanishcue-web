@@ -1,0 +1,98 @@
+[
+  {
+    "key": "machine-c1",
+    "target": "public/conversation-worlds/elimination-machine-c1.webp",
+    "refs": [
+      "public/conversation-worlds/elimination-machine.webp",
+      "public/conversation-worlds/elimination-machine-a1.webp",
+      "public/conversation-worlds/elimination-machine-b2.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Asset type: NEW sibling wide landscape 16:9 SPANISHCUE lesson thumbnail. Input images: image 1 is the authoritative family style reference; images 2 and 3 show existing siblings whose compositions must NOT be repeated. Preserve the recognizable elimination machine: massive dark titanium curved supports, fine cyan rings, amber metal details, floating luminous Earth and grand industrial cathedral opening onto bright clouds. Create a meaningfully new high oblique three-quarter composition across a branching consequence-testing installation: the Earth chamber sits toward the upper left, while THREE smaller glass viewing chambers spread toward the foreground and right, linked physically back to the Earth by clear branching cyan conduits. Inside these three chambers are distinct richly detailed miniature everyday worlds: a vegetable market with produce and a vendor; a delivery bicycle and parcels outside homes; a shared neighborhood dinner table with people. One golden glowing connection branches onward between the market, deliveries and dinner, showing that removing one thing changes several dependent parts of life. These are tangible miniature scenes, not screens or flat infographic icons. Give each chamber a readable separate silhouette and enough daylight to read at thumbnail scale. A paired unlabelled red and green control at the near edge suggests eliminate or keep. The visual story is hidden dependencies and multiple consequences, not a more threatening or bigger machine. Polished cinematic photographic fantasy, believable metal and glass, same cyan/amber identity, no extra neon colors. No writing, letters, numerals, badges, logos or watermarks.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected original, Run 1 and Run 2 family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 3",
+      "date": "2026-09-27",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-0067b8b0-4815-4e77-8cbc-20719f63ad75.png",
+    "visual_qa": "Distinct branching composition links floating Earth with three everyday consequence chambers: produce market, delivery bicycle and shared dinner. Cyan/amber cathedral identity and paired red/green controls retained; no lettering.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 457002,
+    "sha256": "22325001f7c2d63b7978d6865046ed88683b7592686da5768f81fb469f38a6c9",
+    "reference_metadata": [
+      {
+        "path": "public/conversation-worlds/elimination-machine.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "401b83053b81888021f0b181b9002b6e4f589b05eb274608237fffcc7984a621"
+      },
+      {
+        "path": "public/conversation-worlds/elimination-machine-a1.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "6c891878eaead3c4a6dbab988d14c4907114f6e1d5b95b5ec30df744ca402408"
+      },
+      {
+        "path": "public/conversation-worlds/elimination-machine-b2.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "a38690543d3a775072de52ab489d6aa85b4df6b25b64e154406cff1823b39df6"
+      }
+    ]
+  },
+  {
+    "key": "absurd-c1",
+    "target": "public/conversation-worlds/absurd-universe-c1.webp",
+    "refs": [
+      "public/conversation-worlds/absurd-universe.webp",
+      "public/conversation-worlds/absurd-universe-a1.webp",
+      "public/conversation-worlds/absurd-universe-b2.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Asset type: NEW sibling wide landscape 16:9 SPANISHCUE lesson thumbnail. Input images: image 1 is the authoritative impossible-city family; images 2 and 3 are earlier siblings for identity, not compositions to copy. Preserve the whimsical upside-down ornate golden towers, peach and lavender dusk, blue mountains, moon, art-deco stone terraces, planters, glowing windows and navy-and-brass floating old-fashioned tram. New focal composition: a broad elegant arched pedestrian bridge seen SIDE-ON across the foreground, high above a magical city. The ordinary top entrance of the bridge is closed by a simple red velvet rope across two brass posts, no sign and no lettering. A small group of bemused adults on the upper landing notice a clever loophole: several other cheerful adults are calmly WALKING UPSIDE DOWN on the UNDERSIDE of the same bridge, their shoes naturally attached to its lower surface by the city's impossible gravity, bypassing the blocked top route. Make the inverted pedestrians large enough to read clearly, naturally proportioned, with clear upside-down bodies and coherent footwear contact. A tiny warm-lit cafe with an inverted table and two chairs has appeared underneath as an amusing secondary consequence. The navy-and-brass tram glides through the open middle distance behind the bridge, with the iconic reversed skyline in the distance. Playful architectural fantasy, tangible cinematic materials, crisp human silhouettes, welcoming luminous color. It must read as a loophole and unexpected new use of the city, not danger or falling people. Meaningfully distinct side-on bridge composition, not the original overview or tram-door closeup. No writing, letters, numbers, labels, legal symbols, badges, logos or watermarks.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected original, Run 1 and Run 2 family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 3",
+      "date": "2026-09-27",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-d89320dd-e5bd-461c-8427-8aa33c7390db.png",
+    "visual_qa": "New side-on bridge composition clearly shows a red-rope closure above and calm inverted pedestrians bypassing it underneath; inverted cafe hints at secondary adaptation. Golden impossible city, navy tram and peach/lavender dusk retained; no lettering.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 460992,
+    "sha256": "cf6ec313e6b54efa09b8c2c3a37e665440f350abbdb21fe7f2149a096ed8a009",
+    "reference_metadata": [
+      {
+        "path": "public/conversation-worlds/absurd-universe.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "4487a49e10490a319b6b84e874e0c6bea9f897f308295c5efd5f08934e4cd736"
+      },
+      {
+        "path": "public/conversation-worlds/absurd-universe-a1.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "2edbf6999526cf1fc5dcf07432f96de4e938b7ddf597ffc62053d45947d5ee1f"
+      },
+      {
+        "path": "public/conversation-worlds/absurd-universe-b2.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "cc9f8a6df58e19c1b1c04938a5be01e746cc8ca83d23e08897d048504d18c4bd"
+      }
+    ]
+  }
+]

@@ -228,3 +228,20 @@ Pedagogical review follows the repository’s communicative-demand approach, wit
 - `tests/talk-c1.test.mjs`
 
 Relative to Run 1 `f919429`, seven additional files come solely from the unchanged main integration: `app/api/admin/export/d1-export.ts`, `app/api/admin/export/route.ts`, `docs/releases/CUTOVER_RUNBOOK.md`, `docs/releases/PRODUCTION_DATA_EXPORT.md`, `scripts/import-production-export.mjs`, `tests/production-export-import.test.mjs`, `tests/teacher-access.test.mjs`. They were not authored in this run; no export or import endpoint/tool was invoked.
+
+
+## Batch 1 · Run 3 — 2026-09-27
+
+### Scope and preservation baseline
+
+Run 3 begins at the exact Run 2 final commit `2f0194395ab088d435728a9a33c9e07895009ef4`, on `codex/conversation-batch1-run3-20260927`. Freshly fetched canonical main is still `5d6733a9b9404bbc17bf6999530eb48ffb574a3e`, already an ancestor of Run 2; there are no newer main changes to reconcile. No overlapping open PR was found. The remote Run 3 branch was created before content authoring. The previous checkout lost its Git common directory, so a fresh isolated clone was made without deleting or cleaning any old work.
+
+Exactly four additions are authorized: Machine C1, Absurd Rules C1, Red Flag C2 and Let’s Talk C2. Machine/Rules C2 remain deferred to Run 4. Existing content, defaults, routes, aliases, IDs, access, assets and Run 1/Run 2 histories remain authoritative. The historical audit remains on its original audit branch and commit; it is not rewritten here. No merge to main, auto-merging PR or deployment is authorized.
+
+Fresh baseline: `npm run test:conversation` passes **87/87**; `tsc --noEmit --incremental false` reports **11 inherited diagnostics** (billing 8, marketing 2, Mexico 1). Final comparison uses this run’s captured diagnostic output. `tests/fixtures/conversation-batch1-run2-preserved.json` captures **18 existing bank fingerprints, 47 immutable files**, all existing target-family metadata, the complete route ledger and the exact Run 1 + Run 2 status prefix directly from the Run 2 Git objects.
+
+Authoring follows the repository conversation-family guide, [CEFR global scale](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale) and [PCIC C1–C2 functions](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_c1-c2.htm): C1 qualification/reformulation and C2 pragmatic interpretation/precision are communicative demands, not vocabulary-length targets or formal certification.
+
+Interactive desktop/mobile QA remains pending: no newly permitted local preview method is exposed, and the previously recorded `ERR_BLOCKED_BY_CLIENT` mechanism is not retried. Source/SSR, hook interaction tests, responsive CSS review and saved-thumbnail inspection will provide explicitly limited evidence. No production, D1, authentication, billing, secrets, environment, domains, release state or deployment configuration is changed.
+
+This first checkpoint preserves the baseline and the first two completed thumbnail assets; authored banks and final verification follow.
