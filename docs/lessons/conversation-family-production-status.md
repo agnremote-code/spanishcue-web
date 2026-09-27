@@ -256,3 +256,105 @@ Fresh aggregate checks: **115 conversation tests passed**, lint passed, and Type
 Independent content reviewers read all new banks and the relevant complete older banks. Seven Talk prompts were revised to remove weak C2 demands or C1/B2 near-duplicates. Three Red Flag narrative issues were clarified. C1 review corrected two scenario inconsistencies, differentiated two repeated consequence patterns and varied initial question stems. All findings were rechecked and closed. The four saved WebPs were visually inspected and decoded; no older asset was overwritten. Interactive browser QA remains pending as recorded above.
 
 Remote checkpoints before complete integration: `01ad37a86a3350a8255c9e76cd5f9cc46b47b16c` (preservation baseline and first two thumbnails), `a4c6571c1d72124f11ffd37505f85fa6e7079c53` (Talk bank and Red Flag thumbnail), `d2b0ec9e8b9efb3d4daec293f837a3e8781382bb` (Red Flag bank and final thumbnail), `86f51adf962eae36a1420252c508eaa1bf23e9c9` (C2 engines/tests and both C1 banks). This checkpoint preserves full registration, Worlds integration and aggregate regressions before the build.
+
+
+### Run 3 final results
+
+Verified implementation checkpoint: **`538401b759cb77f14618f524f6cba2d26397476a`**. It contains all Run 3 application source, content, assets, registration and tests. The final documentation checkpoint adds these results only; its parent is that verified implementation. Use the Run 3 branch HEAD for the full delivered record. Fresh final main check still resolves to `5d6733a9b9404bbc17bf6999530eb48ffb574a3e`, an ancestor of this branch.
+
+| Family | Added variant and exact counts | Designed oral progression | Exact selector after Run 3 | Canonical link |
+|---|---|---|---|---|
+| La máquina que elimina cosas del mundo | **C1: 30 dilemmas**; each has a central question, depth prompt, fictional consequence, reinterpretation, three lexical supports, discourse starter and optional teacher challenge | Initial vote → overlooked dependency → revealed effect → revised/qualified proposition → choose three completed decisions and formulate a principle, exception and worse substitute to avoid | **A1, A2, B1, B2, C1** | `/la-maquina-que-elimina-cosas?level=C1` |
+| Tu vida con una regla absurda | **C1: 15 laws × 3 questions = 45**; 30 staged developments, 15 teacher follow-ups and per-rule support | Intention → adaptation/loophole → new norm → choose three completed rules to keep, reject for unintended effects and rewrite precisely | **A1, A2, B1, B2, C1** | `/tu-vida-con-una-regla-absurda?level=C1` |
+| Red Flag o No | **C2: 18 scenarios**; each has an initial prompt, context, reconsideration, independent alternative testimony, comparison, evidence question and protocol-conflict task | Initial signal → context and second judgment → alternative account and final signal/qualification/suspension → four or five personal principles tested against a completed scenario | **A1, A2, B1, B2, C1, C2 — complete** | `/red-flag-o-no-a2?level=C2` |
+| Let’s Talk | **C2: 15 worlds × 8 questions = 120**; 30 optional follow-ups, five light discourse moves and selected-question synthesis | Choose one world → exactly three questions → oral interpretation/reformulation → register shift → synthesis using the actual three selected questions | **A1, A2, B1, B2, C1, C2 — complete** | `/a1-conversation?level=C2` |
+
+Each variant has a selective 45-minute guide; the entire bank is not intended to be exhausted in one lesson. All new learner content is Spanish. Shared family names and established branding remain authoritative. Existing PRO entitlement IDs remain 101, 102, 207 and 15. No new route, lesson ID, resource alias or family card was created. Existing level metadata/previews remain unchanged. Private banks stay within authorized engine hosts; public registry modules contain summaries only.
+
+Red Flag and Talk use the existing keyed level remount. Worlds retains all eight existing storage keys and adds `chespanish-conversation-machine-C1-v1` and `chespanish-conversation-rules-C1-v1`. Saved decisions/rule completion resume independently. C1 synthesis notes/selections and Red Flag protocol notes are disposable interaction state for the current level/session view, not durable saved lesson content; resetting the activity clears them. Query/hash/history behavior remains in the unchanged shared selector/navigation modules.
+
+| New thumbnail | Composition | Dimensions |
+|---|---|---|
+| `public/conversation-worlds/elimination-machine-c1.webp` | Floating planet connected to market, delivery and shared-meal chambers, making dependencies visible | 1672 × 941 |
+| `public/conversation-worlds/absurd-universe-c1.webp` | Blocked bridge with pedestrians using its underside and an inverted café; same impossible city | 1672 × 941 |
+| `public/play-mode/red-flag-o-no/c2.webp` | Familiar editorial red/green conversation with two photographs suggesting competing contextual interpretations | 1536 × 1024 |
+| `public/catalog-thumbnails/conversation-c2.webp` | Colorful topic spheres, layered near/far city perspectives and exactly three selected question tiles | 1672 × 941 |
+
+Four separate built-in image generations used inspected prior family images. WebP conversion only; no prior thumbnail overwritten. Prompt/reference/provenance records are in `conversation-batch1-run3-thumbnail-prompts.json`. All four saved images were visually inspected and decoded; dimensions, file sizes, SHA-256 values and all twelve reference records match the files. The Red Flag photos convey contrasting contextual accounts, not a claim to be crops from the same instant.
+
+| Final check | Result |
+|---|---|
+| `npm run test:conversation` | **115 passed; 0 failed, skipped or cancelled**. Fresh inherited baseline was 87; 28 new tests added. New suites are included in the existing conversation command used by `npm test`. |
+| Preservation | **Passed:** 18 old bank fingerprints, 47 immutable-file hashes, existing family variant/preview values, full route ledger and exact Run 1 + Run 2 status prefix. Independent reviewer regenerated the fixture from exact Run 2 Git objects. |
+| Routes/catalog/resources | Exact six-/five-level selectors, all historical route defaults and aliases, all four new query variants through the ten legacy adapters, selected public previews/objectives/JSON-LD/canonical URLs and single family cards verified. |
+| State/interaction | Red Flag three-stage gates/verdicts/protocol/reset and native summary Space; Talk exact-three cap/reselection/world reset; C1 world progressive developments, actual-choice finale gates, independent storage and completed-rule revisits verified. Real selector handlers preserve other query parameters/hash and respond to simulated back/forward notifications. |
+| `npm run lint` | **Passed** on final application source. |
+| `npm run build` | **Passed**, including protected finalization and `validate:artifact`: 59 private client modules and 47 premium media files protected; 285 private paths excluded. No deployment occurred. |
+| `tsc --noEmit --incremental false` | **Fails with the same 11 inherited diagnostics; zero new diagnostics.** Baseline and post-implementation diagnostic output are byte-identical, SHA-256 `cf6b81ec60bcdd8aa9b27fac4f178f2f4910c9fd98b12225381f49c287234859`. Locations remain billing 8, marketing 2, Mexico 1. |
+| `git diff --check` | **Passed** across the complete Run 3 diff. |
+| JSON / assets | **Passed** for preservation fixture and thumbnail provenance; four actual WebPs and twelve reference records verified. |
+| Independent code review | **No open actionable findings.** The one summary-keyboard issue was reproduced with a failing regression, fixed in the shared guard and independently reverified. |
+| Browser visual QA | **Pending, not passed.** The previously documented browser-policy blocker remains; no permitted replacement preview mechanism is exposed and no blocked mechanism was retried. |
+
+Automated render evidence includes all four new variants through their legacy routes, resource pages, the Talk home and all fifteen boards, and hook-driven interaction states. Responsive CSS/source review checked wrapping controls, collapsing columns, long text, focus outlines and full-width fields; thumbnail inspection is complete. These checks do not establish actual desktop/mobile layout, touch behavior, scrolling, focus/animation or real-browser history acceptance. No deployment was used for QA.
+
+### Run 3 content-quality and duplication review
+
+Independent reviewers read all new content and the complete relevant older banks, including first/middle/final items, supports, guides and finales. C1 tasks require dependencies, assumptions, exceptions and reformulation. C2 tasks require precise distinctions, pragmatic interpretation, competing readings and register control. [PCIC C1–C2 pragmatic strategies](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/06_tacticas_pragmaticas_inventario_c1-c2.htm) supplements the references recorded in the baseline; this is an authoring judgment, not formal certification.
+
+- Seven Talk prompts were revised after human review identified C1/B2 overlap or a demand answerable fully at B2. Replacements were independently rechecked. Final questions contain 20–38 words (mean approximately 27.6), with varied stems and no accidental English or unnecessary academic terminology found.
+- Three Red Flag scenarios were clarified: screenshot recipient uncertainty, consent scope attributed to a speaker rather than an omniscient narrator, and a more credible independent account of whether another invitation settled an informal promise. No diagnostic labels or sensationalized abuse scenarios were found.
+- C1 corrections fixed the party-volume/status contradiction and clarified whether exclusive shops were breaking an access rule. Recommendation-system and library scenarios now have distinct consequences/interpretive demands. Initial Machine question stems were diversified; five of thirty start with “¿Eliminarías”, rather than twenty-eight. Minor new Spanish wording was polished.
+- Final normalization check covers **213 new primary items/prompts** (30 Machine questions, 45 Rules questions, 18 Red Flag scenarios, 120 Talk questions) against one another within each family and **1,014 historical same-family items**: **zero exact/normalized duplicates**. Token-overlap rankings were inspected as screening evidence, not treated as proof of semantic originality. Human review caught and resolved the substantive near-duplicates that lexical checks alone missed.
+- Shared everyday themes remain where their premises, mechanisms or discourse demands differ meaningfully; none of the original banks was rewritten to force separation.
+
+### Run 3 deferred items and boundaries
+
+Interactive desktop/mobile visual acceptance remains pending for the recorded browser limitation. Full `npm test` and local-worker HTTP tests were not run because that harness creates/migrates local D1; targeted conversation suites and the protected build were used instead. The 11 inherited TypeScript diagnostics and previously documented original-preview discrepancies remain unchanged.
+
+**Machine C2 and Rules C2 were not created or exposed. Run 4 was not started.** Runs 1 and 2, historical original lesson text, assets, defaults, IDs, aliases and access remain intact. The historical audit files remain unchanged on audit commit `e6da3f0943de088a9cba837ea71b3faa77a473eb`.
+
+**No main merge, auto-merging PR, deployment, production/D1 operation, authentication/Firebase change, Paddle/PayPal/billing/Resend change, secret/environment/domain change, release-controller state change or deployment-configuration change occurred.** This is a committed and pushed source-branch delivery; browser acceptance remains pending.
+
+### Run 3 exact changed-file manifest
+
+38 files relative to Run 2 final `2f0194395ab088d435728a9a33c9e07895009ef4`:
+
+- `app/choose-conversation/C2ConversationTools.tsx`
+- `app/choose-conversation/c2-data.ts`
+- `app/choose-conversation/c2.css`
+- `app/choose-conversation/page.tsx`
+- `app/choose-conversation/variants.ts`
+- `app/conversation-families/authored-levels.ts`
+- `app/conversation-worlds/ConversationWorld.tsx`
+- `app/conversation-worlds/ConversationWorldFamily.tsx`
+- `app/conversation-worlds/data-c1.ts`
+- `app/conversation-worlds/types.ts`
+- `app/conversation-worlds/worlds.css`
+- `app/red-flag-o-no/RedFlagGame.tsx`
+- `app/red-flag-o-no/c2.mjs`
+- `app/red-flag-o-no/engine.mjs`
+- `app/red-flag-o-no/red-flag.css`
+- `docs/lessons/conversation-batch1-run3-thumbnail-prompts.json`
+- `docs/lessons/conversation-family-production-status.md`
+- `package.json`
+- `public/catalog-thumbnails/conversation-c2.webp`
+- `public/conversation-worlds/absurd-universe-c1.webp`
+- `public/conversation-worlds/elimination-machine-c1.webp`
+- `public/play-mode/red-flag-o-no/c2.webp`
+- `tests/conversation-batch1-routes.test.mjs`
+- `tests/conversation-batch1-run2-routes.test.mjs`
+- `tests/conversation-batch1-run2.test.mjs`
+- `tests/conversation-batch1-run3-routes.test.mjs`
+- `tests/conversation-batch1-run3.test.mjs`
+- `tests/conversation-batch1.test.mjs`
+- `tests/conversation-families.test.mjs`
+- `tests/conversation-worlds-a1.test.mjs`
+- `tests/conversation-worlds-c1.test.mjs`
+- `tests/fixtures/conversation-batch1-run2-preserved.json`
+- `tests/red-flag-c1.test.mjs`
+- `tests/red-flag-c2.test.mjs`
+- `tests/red-flag-o-no.test.mjs`
+- `tests/talk-b2.test.mjs`
+- `tests/talk-c1.test.mjs`
+- `tests/talk-c2.test.mjs`
