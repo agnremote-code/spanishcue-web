@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "auditStatus": "complete source audit; final consistency verification pending",
+  "auditStatus": "Complete and verified source audit; documentation-only branch delivery",
   "auditDate": "2026-09-28",
   "timezone": "Asia/Saigon",
   "utcRetrievalDate": "2026-09-27",
@@ -24,7 +24,8 @@
       "commit": "e6da3f0943de088a9cba837ea71b3faa77a473eb",
       "path": "docs/lessons/CONVERSATION_FAMILY_AUDIT.md",
       "locationNote": "Preserved on separate audit branch, not silently copied/merged into current source."
-    }
+    },
+    "consolidatedAuditCheckpointSha": "64bb252165a42ba69226ea81011a0e2a372280f1"
   },
   "definitions": {
     "activeLessonRecord": "One numeric ID in evaluated lessons and catalogLessons, with rendered route/source and discoverable resource preview.",
@@ -13916,7 +13917,7 @@
     ]
   },
   "verification": {
-    "status": "pending-final-consistency-check",
+    "status": "PASS — source inventory, documentation parity and preservation",
     "required": [
       "Valid JSON; every65 active ID exactly once",
       "Source titles/categories/levels/paths/access/thumbnails/resource slugs exact",
@@ -13932,6 +13933,25 @@
       "Build/lint/TypeScript (documentation-only; no app changes)",
       "Browser/audio audition/production smoke"
     ],
-    "reason": "Task-specific docs-only validation; avoid unnecessary database-mutating or production checks."
+    "reason": "Task-specific docs-only validation; avoid unnecessary database-mutating or production checks.",
+    "results": [
+      "JSON parses; all 65 active catalog IDs appear exactly once and equal the surfaced catalog projection.",
+      "All source titles, categories, primary/advertised levels, routes, access, thumbnails, sequences, prerequisites and resource slugs match runtime-evaluated source.",
+      "188 distinct cited source/reference paths exist; all Markdown local links resolve; all 65 thumbnail references exist (43 unique assets).",
+      "Category, primary/advertised CEFR, quality, access and repair-flag counts recompute exactly.",
+      "All 67 referenced MP3s exist and ffprobe durations agree; aggregate 2,004.701 seconds. No auditory quality claim.",
+      "Direct source-bank checks confirm 17 verbal records/85 option-zero keys, 9 GrammarWorld banks, 8 SyntaxLab banks, 60 WordBank cards and 144 ARGENTO lexical occurrences.",
+      "Markdown inventory has exactly 65 matching lesson definitions; metadata and judgments match JSON. Summary matrices and the 20-task/15-batch roadmap reproduce deterministically from JSON.",
+      "All 20 priorities are unique, balanced five per category, scheduled once, and respect prerequisite order; each run has 2–3 lesson targets.",
+      "Independent Astra review of all four documents and selected high-confidence findings found no critical or important issue.",
+      "Only the four requested documentation paths differ from source 019310604045bcdccf74fe3606e685ec826797f5. Conversation Batch 1 and every application/content/asset/route file remain unchanged.",
+      "git diff --check passed; refreshed canonical main remains 5d6733a9b9404bbc17bf6999530eb48ffb574a3e, an ancestor of the preserved Batch 1 source.",
+      "Inventory, standard and consolidated-audit checkpoints are pushed. Final commit SHA and clean local/remote equality are verified after the final push and reported in the delivery response."
+    ],
+    "independentReview": {
+      "model": "Astra",
+      "result": "No critical or important findings",
+      "scope": "Four requested documents; source spot-checks of grammar validity, phonetics limitations, listening state/evidence, vocabulary behavior, engine boundaries and test invocation."
+    }
   }
 }

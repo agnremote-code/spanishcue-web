@@ -1,6 +1,6 @@
 # SPANISHCUE Non-conversation Library Audit
 
-Audit date: **2026-09-28 (Asia/Saigon)**; source/reference retrieval: 2026-09-27 UTC. Status: **complete source audit; final consistency verification pending**.
+Audit date: **2026-09-28 (Asia/Saigon)**; source/reference retrieval: 2026-09-27 UTC. Status: **Complete and verified source audit; documentation-only branch delivery**.
 
 Companions: [Quality Standard v2](SPANISHCUE_QUALITY_STANDARD_V2.md), [machine-readable audit](non-conversation-library-audit.json), [ranked production queue](NEXT_20_LESSON_PRIORITIES.md).
 
@@ -28,6 +28,7 @@ Preserve the strong postal pronoun interaction (106), useful phrase builders, re
 | Open PRs at start | 0 |
 | Pushed inventory checkpoint | `6b2c5e469b555d99d81a2f8bedb00ce8ae4b7351` |
 | Pushed quality-standard checkpoint | `ef12fd30052be6313ee938de4f7c158effeb13de` |
+| Pushed complete-audit checkpoint | `64bb252165a42ba69226ea81011a0e2a372280f1` |
 
 The four completed conversation families, their 14 additions and 708 principal authored elements remain byte-for-byte unchanged. Only the four requested documentation files belong to this audit diff. The owner explicitly requires branch-only delivery; no PR/auto-merge, merge to main, deployment or production action is authorized.
 
@@ -3345,16 +3346,20 @@ A content-count threshold detects missing structure, not good teaching. Duplicat
 
 ## 12. Verification and delivery
 
-**Verification status:** pending-final-consistency-check.
+**Verification status:** PASS — source inventory, documentation parity and preservation.
 
-- Valid JSON; every65 active ID exactly once
-- Source titles/categories/levels/paths/access/thumbnails/resource slugs exact
-- All cited existing file paths resolve
-- Category/CEFR/quality totals recompute
-- Markdown inventory/queue/batches agree with JSON
-- Only four requested docs differ from preserved source; Batch1 untouched
-- git diff --check
-- Final commit pushed and local/remote branch clean/equal
+- JSON parses; all 65 active catalog IDs appear exactly once and equal the surfaced catalog projection.
+- All source titles, categories, primary/advertised levels, routes, access, thumbnails, sequences, prerequisites and resource slugs match runtime-evaluated source.
+- 188 distinct cited source/reference paths exist; all Markdown local links resolve; all 65 thumbnail references exist (43 unique assets).
+- Category, primary/advertised CEFR, quality, access and repair-flag counts recompute exactly.
+- All 67 referenced MP3s exist and ffprobe durations agree; aggregate 2,004.701 seconds. No auditory quality claim.
+- Direct source-bank checks confirm 17 verbal records/85 option-zero keys, 9 GrammarWorld banks, 8 SyntaxLab banks, 60 WordBank cards and 144 ARGENTO lexical occurrences.
+- Markdown inventory has exactly 65 matching lesson definitions; metadata and judgments match JSON. Summary matrices and the 20-task/15-batch roadmap reproduce deterministically from JSON.
+- All 20 priorities are unique, balanced five per category, scheduled once, and respect prerequisite order; each run has 2–3 lesson targets.
+- Independent Astra review of all four documents and selected high-confidence findings found no critical or important issue.
+- Only the four requested documentation paths differ from source 019310604045bcdccf74fe3606e685ec826797f5. Conversation Batch 1 and every application/content/asset/route file remain unchanged.
+- git diff --check passed; refreshed canonical main remains 5d6733a9b9404bbc17bf6999530eb48ffb574a3e, an ancestor of the preserved Batch 1 source.
+- Inventory, standard and consolidated-audit checkpoints are pushed. Final commit SHA and clean local/remote equality are verified after the final push and reported in the delivery response.
 
 **Not run:** Full npmtest or worker/D1 harness; Build/lint/TypeScript (documentation-only; no app changes); Browser/audio audition/production smoke. Task-specific docs-only validation; avoid unnecessary database-mutating or production checks.
 
