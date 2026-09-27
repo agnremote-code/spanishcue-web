@@ -31,7 +31,7 @@ async function renderRoute(route,query){
 
 test('all ten historical URLs preserve their server/default level and safely reject unsupported queries',async()=>{
  for(const [route,historical] of routes){
-  for(const query of [undefined,'','?level=C2','?level=not-a-level']){
+  for(const query of [undefined,'','?level=C3','?level=not-a-level']){
    const html=await renderRoute(route,query);
    assert.match(html,new RegExp(`data-level="${historical}"`),`${route} ${query}`);
    assert.match(html,new RegExp(`aria-pressed="true">${historical}</button>`));
@@ -44,8 +44,7 @@ test('every historical URL renders its family new variant when selected in the q
   const html=await renderRoute(route,`?locale=es&level=${level}&utm_source=teacher`);
   assert.match(html,new RegExp(`data-level="${level}"`),route);
   assert.match(html,new RegExp(`aria-pressed="true">${level}</button>`));
-  assert.doesNotMatch(html,/>C2<\/button>/);
-  if(route.includes('maquina')||route.includes('regla-absurda'))assert.doesNotMatch(html,/>C1<\/button>/);
+  if(route.includes('maquina')||route.includes('regla-absurda'))assert.doesNotMatch(html,/>C2<\/button>/);
   if(route.includes('red-flag'))assert.match(html,/class="rf-game rf-a1"/);
   if(route.includes('conversation'))assert.match(html,/Tres preguntas, distintas perspectivas/);
   if(route.includes('maquina'))assert.match(html,/La reproducción automática/);

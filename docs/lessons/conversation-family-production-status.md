@@ -245,3 +245,14 @@ Authoring follows the repository conversation-family guide, [CEFR global scale](
 Interactive desktop/mobile QA remains pending: no newly permitted local preview method is exposed, and the previously recorded `ERR_BLOCKED_BY_CLIENT` mechanism is not retried. Source/SSR, hook interaction tests, responsive CSS review and saved-thumbnail inspection will provide explicitly limited evidence. No production, D1, authentication, billing, secrets, environment, domains, release state or deployment configuration is changed.
 
 This first checkpoint preserves the baseline and the first two completed thumbnail assets; authored banks and final verification follow.
+
+
+### Run 3 implementation checkpoint
+
+All four variants are implemented in the existing shared engines. Machine C1 has 30 new dependency/reformulation dilemmas; Rules C1 has 15 rules, 45 questions and 30 staged developments; Red Flag C2 has 18 scenarios with three gated evidence/judgment phases; Let’s Talk C2 has 120 questions in the same fifteen worlds. Public metadata adds exactly four variants to the existing PRO cards and canonical IDs, with no new routes or resource slugs. Red Flag and Let’s Talk now expose A1–C2; Machine and Rules expose A1–C1 only.
+
+Fresh aggregate checks: **115 conversation tests passed**, lint passed, and TypeScript output is byte-identical to the freshly captured 11-diagnostic baseline. The protected build is the next gate. Independent code review verified the preservation fixture against exact Run 2 Git objects and found one keyboard issue: Space on a Red Flag disclosure summary could trigger global lesson shortcuts. A failing-then-passing regression now protects native summary behavior and main-area shortcuts. No technical findings remain open.
+
+Independent content reviewers read all new banks and the relevant complete older banks. Seven Talk prompts were revised to remove weak C2 demands or C1/B2 near-duplicates. Three Red Flag narrative issues were clarified. C1 review corrected two scenario inconsistencies, differentiated two repeated consequence patterns and varied initial question stems. All findings were rechecked and closed. The four saved WebPs were visually inspected and decoded; no older asset was overwritten. Interactive browser QA remains pending as recorded above.
+
+Remote checkpoints before complete integration: `01ad37a86a3350a8255c9e76cd5f9cc46b47b16c` (preservation baseline and first two thumbnails), `a4c6571c1d72124f11ffd37505f85fa6e7079c53` (Talk bank and Red Flag thumbnail), `d2b0ec9e8b9efb3d4daec293f837a3e8781382bb` (Red Flag bank and final thumbnail), `86f51adf962eae36a1420252c508eaa1bf23e9c9` (C2 engines/tests and both C1 banks). This checkpoint preserves full registration, Worlds integration and aggregate regressions before the build.

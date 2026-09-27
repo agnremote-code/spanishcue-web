@@ -9,6 +9,16 @@ export const authoredConversationLevels: Record<string, Partial<Record<CEFRLevel
   preview: LevelPreview;
 }>>> = {
   'red-flag-o-no': {
+    C2: {
+      objectives: ['Distinguir lo expresado de lo insinuado en intercambios cotidianos', 'Sostener y contrastar dos lecturas plausibles de una misma situación', 'Formular un protocolo de juicio y poner a prueba dos principios en conflicto'],
+      functions: ['Interpretar tono, registro, ironía y omisiones', 'Precisar el grado de certeza y cuestionar presuposiciones', 'Reformular otra versión con fidelidad y pedir pruebas pertinentes'],
+      preview: {
+        image: '/play-mode/red-flag-o-no/c2.webp',
+        hook: '18 situaciones, tres capas: primeras palabras, contexto y otra versión que obliga a afinar la interpretación.',
+        explanation: 'Elige una señal ante un mensaje o un gesto. Después descubre el contexto y escucha otra versión creíble. Contrasta lo dicho con lo insinuado, conserva tus juicios anteriores y decide qué prueba distinguiría dos lecturas posibles. El cierre pone a prueba tu propio protocolo para juzgar cuando dos principios chocan.',
+        warmup: 'Di una frase que podría sonar cómplice o despectiva. ¿Qué cambia al variar el tono, la relación o quién la escucha?',
+      },
+    },
     A1: {
       objectives: ['Elegir una señal roja o verde ante acciones concretas de una persona', 'Expresar gustos y dar una razón breve con apoyo', 'Preguntar por un plan y responder en un intercambio corto'],
       functions: ['Expresar agrado o desagrado', 'Dar una razón sencilla', 'Preguntar y responder sobre acciones cotidianas'],
@@ -31,6 +41,16 @@ export const authoredConversationLevels: Record<string, Partial<Record<CEFRLevel
     },
   },
   'lets-talk': {
+    C2: {
+      objectives: ['Detectar supuestos y matices en formulaciones aparentemente sencillas', 'Reformular una idea para distintos interlocutores sin desfigurarla', 'Conectar tres preguntas mediante lecturas alternativas y distinciones precisas'],
+      functions: ['Cuestionar el encuadre de una pregunta', 'Distinguir significados próximos y ajustar el registro', 'Defender una interpretación reconociendo su límite más fuerte'],
+      preview: {
+        image: '/catalog-thumbnails/conversation-c2.webp',
+        hook: '15 mundos y 120 preguntas: elige tres, descubre lo que dan por supuesto y cambia la forma de decirlo.',
+        explanation: 'Los mismos mundos de colores abren conversaciones sobre dobles lecturas, humor, etiquetas, normas implícitas y palabras que cambian según quién las diga. Selecciona exactamente tres preguntas y conversa con apoyos ligeros de precisión. El cierre vuelve a tus tres elecciones para reformularlas y contrastar perspectivas.',
+        warmup: '¿Qué descripción de tu forma de ser cambiarías por una palabra cercana? Explica el matiz que la otra persona perdería.',
+      },
+    },
     B2: {
       objectives: ['Defender y matizar opiniones sobre situaciones cercanas', 'Contrastar perspectivas y responder a un contraargumento', 'Relacionar tres ideas elegidas en una conclusión negociada'],
       functions: ['Justificar y matizar', 'Comparar intereses y consecuencias', 'Mostrar desacuerdo y revisar una postura'],
@@ -53,6 +73,16 @@ export const authoredConversationLevels: Record<string, Partial<Record<CEFRLevel
     },
   },
   'la-maquina-que-elimina-cosas': {
+    C1: {
+      objectives: ['Examinar dependencias y efectos indirectos de una eliminación', 'Distinguir un principio de sus consecuencias prácticas y excepciones', 'Reformular una propuesta y construir un criterio general a partir de decisiones anteriores'],
+      functions: ['Precisar supuestos y corregir generalizaciones', 'Reconocer consecuencias desiguales o no previstas', 'Introducir excepciones y reformular una condición'],
+      preview: {
+        image: '/conversation-worlds/elimination-machine-c1.webp',
+        hook: '30 eliminaciones con efectos en cadena: descubre qué más desaparece y reformula tu primera decisión.',
+        explanation: 'La máquina conserva su mundo flotante y sus decisiones de eliminar o mantener. Cada propuesta revela una dependencia menos visible, una excepción o un sustituto inesperado. Reconsidera tu elección y conecta tres decisiones reales para formular un principio con límites y excepciones.',
+        warmup: 'Piensa en una costumbre molesta que también resuelve un problema. ¿Qué la sustituiría si desapareciera?',
+      },
+    },
     A1: {
       objectives: ['Elegir entre eliminar y conservar cosas de la vida diaria', 'Dar una razón breve con palabras y frases de apoyo', 'Comprender una consecuencia concreta y mantener o cambiar una decisión'],
       functions: ['Expresar gustos y necesidades', 'Dar una razón sencilla', 'Elegir y cambiar de opinión con apoyo'],
@@ -75,6 +105,16 @@ export const authoredConversationLevels: Record<string, Partial<Record<CEFRLevel
     },
   },
   'tu-vida-con-una-regla-absurda': {
+    C1: {
+      objectives: ['Explicar cómo una regla transforma hábitos e incentivos más allá de su intención', 'Contrastar adaptaciones, vacíos y efectos desiguales de una norma imaginaria', 'Defender qué reglas conservar, rechazar o modificar y precisar una nueva formulación'],
+      functions: ['Señalar contradicciones entre intención y resultado', 'Explorar excepciones y consecuencias indirectas', 'Reformular una regla sin perder su propósito'],
+      preview: {
+        image: '/conversation-worlds/absurd-universe-c1.webp',
+        hook: '15 reglas y 45 preguntas: la ciudad encuentra trucos, nuevos negocios y consecuencias que nadie esperaba.',
+        explanation: 'Una norma absurda cambia mucho más que la conducta que regula. Explora cada regla paso a paso: qué busca, cómo se adapta la gente y qué termina significando. El cierre recupera tres reglas exploradas para conservar una, rechazar otra por sus efectos y reescribir una tercera con mayor precisión.',
+        warmup: 'Inventa una regla divertida para una fiesta. ¿Cómo podría alguien cumplir sus palabras y saltarse su intención?',
+      },
+    },
     A1: {
       objectives: ['Comprender una regla sencilla de una ciudad imaginaria', 'Describir cómo cambia una actividad cotidiana con esa regla', 'Elegir una forma de vivir con la regla e inventar otra con apoyo'],
       functions: ['Expresar gustos y posibilidades', 'Hablar de rutinas y necesidades', 'Elegir entre opciones concretas'],

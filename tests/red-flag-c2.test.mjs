@@ -24,7 +24,7 @@ async function loadActivity(){
  return {
   render(){slot=0;return loaded.exports.RedFlagActivity({level:'C2'});},
   html(){return renderToString(this.render());},
-  press(key,target={tagName:'MAIN'}){this.render();listeners.get('keydown')({key,target,preventDefault(){}});},
+  press(key,target={tagName:'MAIN'}){this.render();let prevented=false;listeners.get('keydown')({key,target,preventDefault(){prevented=true;}});return prevented;},
   click(label){const button=walk(this.render(),node=>node.type==='button'&&textOf(node).includes(label));assert.ok(button,`Button ${label} exists`);assert.ok(!button.props.disabled,`${label} is enabled`);button.props.onClick();},
   change(label,value){const field=walk(this.render(),node=>node.props?.['aria-label']===label);assert.ok(field,`Field ${label} exists`);field.props.onChange({target:{value}});},
  };
@@ -91,4 +91,23 @@ test('C2 finale keeps personal principles, tests a selected real scenario and cl
  a.click('NUEVA PARTIDA');a.click('CIERRE');
  assert.doesNotMatch(a.html(),/Mi principio personal|Primera impresión:|Dos principios en conflicto/);
  assert.match(a.html(),/Todavía no has elegido/);
+});
+
+
+test('C2 summary Space retains native disclosure behavior without revealing either source',async()=>{
+ const targets=[
+  {tagName:'SUMMARY',isContentEditable:false},
+  {tagName:'SPAN',isContentEditable:false,closest:selector=>selector.split(',').includes('summary')?{tagName:'SUMMARY'}:null},
+ ];
+ for(const target of targets){
+  const a=await loadActivity();a.click('EMPEZAR');a.click('SEÑAL ROJA');
+  assert.equal(a.press(' ',target),false,'summary Space must retain its native default');
+  assert.doesNotMatch(a.html(),/Contexto revelado|Otra versión revelada/);
+  assert.equal(a.press(' '),true,'main Space still reveals context');
+  a.click('SEÑAL VERDE');
+  assert.equal(a.press(' ',target),false,'summary Space must not reveal the alternative');
+  assert.doesNotMatch(a.html(),/Otra versión revelada/);
+  assert.equal(a.press(' '),true);
+  assert.match(a.html(),/Otra versión revelada/);
+ }
 });

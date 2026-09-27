@@ -15,7 +15,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-carteles',title:'Los carteles de «se busca personal»',group:'Señales que ordenan la vida',
     intro:'Las vacantes se anuncian únicamente en una plataforma común; desaparecen los avisos en escaparates y puertas.',
-    question:'¿Borrarías esos avisos para que una oportunidad no dependa de pasar por la calle adecuada? Define qué sería tener el mismo acceso.',
+    question:'Pasar por la calle adecuada puede abrirte una oportunidad. ¿Qué ganaría la ciudad al borrar esa ventaja y qué entenderías entonces por tener el mismo acceso?',
     depthPrompt:'Distingue entre poder ver una oferta y conseguir que alguien considere tu candidatura.',
     consequence:'Todos ven más vacantes, pero cada negocio recibe cientos de solicitudes y filtra por experiencia escrita. Ya nadie puede entrar a explicar una trayectoria difícil de resumir.',
     reinterpretation:'La entrada parece más abierta y la selección se vuelve más estrecha. ¿Qué supuesto de tu decisión falla y qué acceso concreto conservarías?',
@@ -25,7 +25,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-etiquetas',title:'La etiqueta «artesanal»',group:'Señales que ordenan la vida',
     intro:'Ningún producto puede llamarse artesanal. Los fabricantes pueden describir cómo lo hacen.',
-    question:'¿Eliminarías una etiqueta tan flexible que puede significar cosas distintas? Precisa qué engaño quieres impedir.',
+    question:'Una etiqueta flexible puede orientar o engañar. ¿Qué uso concreto justifica tu decisión y qué información debería ocupar su lugar?',
     depthPrompt:'Piensa qué necesita una persona para reconocer un trabajo cuidado sin conocer ese oficio.',
     consequence:'Los talleres pequeños explican cada proceso. Las grandes marcas pagan vídeos detallados y parecen más transparentes; parte del público acaba asociando calidad con una buena presentación.',
     reinterpretation:'¿Has eliminado una promesa vacía o una señal imperfecta que ayudaba a los pequeños? Redefine qué debería poder afirmarse y con qué respaldo.',
@@ -35,7 +35,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-apellidos',title:'Los apellidos en las solicitudes',group:'Señales que ordenan la vida',
     intro:'Las primeras solicitudes de empleo, becas y alquiler se presentan sin apellidos. El nombre completo aparece al final.',
-    question:'¿Eliminarías esa información al principio para reducir prejuicios? ¿Qué tendría que ocurrir después para que la igualdad no fuera solo aparente?',
+    question:'Defiende tu primera decisión ante alguien que dice: «El prejuicio aparecerá de todos modos al final». ¿Qué tendría que cambiar para que ocultar el apellido sirviera?',
     depthPrompt:'¿Estás suponiendo que los prejuicios dependen de una palabra y no de otros datos que la sustituyen?',
     consequence:'En la simulación, quienes seleccionan empiezan a fijarse más en colegios y barrios. Las personas aprenden a ocultarlos y se premia saber presentar una biografía sin pistas.',
     reinterpretation:'¿Tu medida retrasa el prejuicio, lo desplaza o realmente lo reduce? Mantén lo defendible y formula una condición que permita distinguir esos resultados.',
@@ -45,7 +45,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-premios',title:'Las listas de los diez mejores',group:'Señales que ordenan la vida',
     intro:'Desaparecen las clasificaciones de libros, restaurantes, playas y discos. Siguen existiendo reseñas y recomendaciones sin puestos.',
-    question:'¿Borrarías esas listas para que el éxito no se concentre siempre en unos pocos? Explica de dónde vendrían las nuevas oportunidades.',
+    question:'Sin una lista de ganadores, ¿la atención se repartiría mejor o seguiría otro camino? Justifica tu voto explicando de dónde vendrían las nuevas oportunidades.',
     depthPrompt:'Una lista puede reducir la variedad de elecciones y, a la vez, reunir públicos distintos. ¿Qué función pesa en tu argumento?',
     consequence:'Cada grupo sigue sus propios canales. Se conoce más variedad dentro de cada círculo, pero casi nadie encuentra una obra que permita conversar con personas de otros círculos.',
     reinterpretation:'¿Querías más variedad individual, más diversidad en el mercado o más encuentros inesperados? Revisa la eliminación según el objetivo que realmente defiendes.',
@@ -55,7 +55,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-recibos',title:'Los recibos en papel',group:'Señales que ordenan la vida',
     intro:'Toda compra deja un recibo digital. La máquina elimina las copias impresas, incluso cuando las pide el cliente.',
-    question:'¿Eliminarías un residuo cotidiano si el comprobante sigue existiendo? Aclara qué entiendes por poder conservar una prueba.',
+    question:'El comprobante sigue existiendo, aunque no puedas llevarlo en el bolsillo. ¿Qué significa realmente conservar una prueba y cómo pesa eso en tu voto?',
     depthPrompt:'¿Es equivalente tener un documento y tener permiso para consultarlo en una cuenta?',
     consequence:'Una tienda cierra y deja de mantener su plataforma. Sus clientes necesitan demostrar compras ante otros servicios, pero ya no pueden abrir los enlaces. Algunos habían confiado en no guardar nada.',
     reinterpretation:'¿El problema era el soporte o la dependencia de quien guarda la prueba? Reformula la eliminación incluyendo una excepción y una responsabilidad concreta.',
@@ -75,7 +75,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-repeticiones',title:'Las reposiciones en televisión',group:'El tiempo de unos y otros',
     intro:'Cada programa se emite una sola vez; después puedes buscarlo en un archivo gratuito. No vuelve a aparecer en la programación.',
-    question:'¿Eliminarías las reposiciones para dar espacio a creadores nuevos? ¿Qué clase de descubrimiento supones que hará el público?',
+    question:'Dar espacio a algo nuevo parece una buena razón para quitar una repetición. ¿Cuándo la aceptarías y qué clase de descubrimiento estás dando por hecho?',
     depthPrompt:'Compara encontrar algo por casualidad con buscarlo cuando ya sabes que existe.',
     consequence:'El archivo crece, pero los programas antiguos dejan de reunir a nuevas generaciones. Las referencias que antes se compartían por azar quedan en manos de quienes saben qué buscar.',
     reinterpretation:'¿La repetición ocupaba espacio o lo mantenía abierto para nuevas personas? Introduce una excepción que no invalide todo tu argumento inicial.',
@@ -85,7 +85,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-plazos',title:'Los plazos idénticos para todos',group:'El tiempo de unos y otros',
     intro:'Para entregar trabajos o responder propuestas, cada persona negocia su fecha. Desaparecen los plazos comunes.',
-    question:'¿Eliminarías el mismo plazo para reconocer circunstancias distintas? Define cuándo negociar una excepción es una oportunidad real.',
+    question:'Dos personas tienen necesidades distintas, pero entregan el mismo trabajo. ¿Qué haría más justo tu voto: compartir una fecha o poder negociarla? Delimita el caso.',
     depthPrompt:'¿Quién sabe pedir más tiempo sin que parezca falta de compromiso y quién preferiría no explicar su vida?',
     consequence:'Las personas más seguras negocian fechas cómodas. Otras aceptan la primera fecha sugerida y hacen el trabajo urgente del que dependen todas las entregas posteriores.',
     reinterpretation:'Tu regla flexible genera una jerarquía de prisas. ¿Qué parte de la igualdad inicial recuperarías y qué excepción mantendrías?',
@@ -95,7 +95,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-cierres',title:'El cierre anual por vacaciones',group:'El tiempo de unos y otros',
     intro:'Ningún negocio puede cerrar varias semanas seguidas. El personal conserva sus vacaciones y se organiza por turnos.',
-    question:'¿Eliminarías el cierre completo para que el barrio siempre tenga servicios? Di qué continuidad esperas realmente de un pequeño negocio.',
+    question:'Un barrio quiere servicios continuos y una panadería quiere cerrar en agosto. Explica qué continuidad sería razonable exigir sin tratar toda comodidad como una necesidad.',
     depthPrompt:'Distingue el descanso individual de un momento en que nadie puede pedirte que resuelvas algo del trabajo.',
     consequence:'La panadería nunca cierra, pero la persona que conoce la receta recibe consultas durante sus vacaciones. Las reuniones familiares de varios trabajadores dejan de coincidir.',
     reinterpretation:'¿Conservar días libres conserva también la posibilidad de desconectar? Reformula el servicio que exigirías y la interrupción que aceptarías.',
@@ -115,7 +115,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-espera',title:'Las respuestas «ya te diré»',group:'El tiempo de unos y otros',
     intro:'Ante una invitación solo se puede aceptar o rechazar. Se elimina la posibilidad de dejar la respuesta pendiente.',
-    question:'¿Eliminarías la espera para que nadie bloquee los planes ajenos? Explica qué incertidumbre crees que desaparecería y cuál seguiría existiendo.',
+    question:'Quien organiza pide una respuesta clara; quien recibe la invitación todavía no sabe si puede ir. ¿Qué incertidumbre resolvería tu decisión y cuál no puede borrar?',
     depthPrompt:'No saber todavía no siempre significa querer una opción mejor. ¿Qué casos estás agrupando?',
     consequence:'La gente acepta por precaución y cancela más tarde. Quienes no controlan sus turnos de trabajo rechazan planes de los que después se enteran demasiado tarde.',
     reinterpretation:'¿Has obtenido decisiones más claras o palabras más tajantes con menos valor? Rediseña el compromiso que pedirías sin exigir certeza imposible.',
@@ -125,7 +125,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-menus',title:'Los menús del día',group:'Lo que sostiene lo cotidiano',
     intro:'Los restaurantes solo cobran cada plato por separado. Desaparece el precio cerrado que reúne varias cosas.',
-    question:'¿Eliminarías el menú para que nadie pague comida que no quiere? ¿Tu idea de elegir libremente incluye saber cuánto gastarás antes de entrar?',
+    question:'Compara poder elegir cada plato con saber cuánto gastarás antes de entrar. ¿Qué idea de libertad de elección está detrás de tu decisión?',
     depthPrompt:'Examina qué acuerdos entre cocina, proveedor y cliente se esconden dentro de un precio fijo.',
     consequence:'La cocina prepara menos cantidades de antemano y compra ingredientes más caros. Quienes comían allí a diario ya no pueden prever el gasto; aparecen menús informales reservados a clientes conocidos.',
     reinterpretation:'¿La libertad de elegir ha creado una ventaja para quienes pueden negociar? Conserva tu intención inicial y cambia el alcance de lo que eliminarías.',
@@ -135,7 +135,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-herencias',title:'La costumbre de guardar muebles familiares',group:'Lo que sostiene lo cotidiano',
     intro:'Los muebles dejan de pasar de una generación a otra. Al vaciar una casa se venden o se entregan a desconocidos.',
-    question:'¿Eliminarías esa costumbre para que nadie herede objetos por culpa? Separa la obligación sentimental de la ayuda material.',
+    question:'Imagina que rechazas un armario familiar. ¿Estás liberándote de una obligación o renunciando a una ayuda? Explica qué tendría que saberse antes de eliminar la costumbre.',
     depthPrompt:'¿Qué estás presuponiendo sobre la capacidad de empezar una casa desde cero?',
     consequence:'Se vacían trasteros, pero algunas personas jóvenes tienen que comprar lo que antes recibían. Los muebles familiares reaparecen en tiendas como piezas caras con una historia atractiva.',
     reinterpretation:'Lo que parecía una carga se convierte en lujo cuando cambia de dueño. ¿Qué relación querías eliminar: la transmisión, la presión o el derecho a decidir?',
@@ -155,7 +155,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-rebajas',title:'Las temporadas de rebajas',group:'Lo que sostiene lo cotidiano',
     intro:'Las tiendas mantienen precios estables durante el año. La máquina elimina las rebajas anunciadas para fechas concretas.',
-    question:'¿Eliminarías las rebajas para que las compras no dependan de la urgencia de una oferta? Explica qué supones sobre los precios que quedarían.',
+    question:'Defiende tu voto ante alguien que solo compra ropa en rebajas. Distingue quitar la urgencia de una oferta de quitar la posibilidad de pagar menos.',
     depthPrompt:'Para una persona esperar es una estrategia; para otra, una pérdida de tiempo. ¿Tu argumento distingue ambas situaciones?',
     consequence:'Las tiendas pequeñas acumulan productos sin vender y reducen la variedad del año siguiente. Surgen grupos privados que negocian descuentos; el ahorro depende de conocer a quien organiza.',
     reinterpretation:'¿Has reducido la presión comercial o convertido un descuento visible en un privilegio discreto? Revisa la propuesta atendiendo a ese sustituto.',
@@ -165,7 +165,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-efectivo',title:'Las cajas comunes en efectivo',group:'Lo que sostiene lo cotidiano',
     intro:'Los grupos de amigos, familias y asociaciones dejan de reunir dinero en una caja. Cada gasto se registra y reparte digitalmente entre personas concretas.',
-    question:'¿Eliminarías esas cajas para que las cuentas estén claras? ¿Qué aportación consideras justa cuando no todos pueden aportar lo mismo?',
+    question:'«Que cada uno pague lo suyo» parece claro. ¿Qué mezcla esa frase cuando un grupo reúne dinero y no todos pueden aportar lo mismo? Aplica la distinción a tu voto.',
     depthPrompt:'Distingue no saber adónde fue el dinero de no querer hacer pública la situación económica de cada persona.',
     consequence:'Las cuentas cuadran. También queda visible quién aporta menos; algunas personas abandonan actividades que antes podían compartir gracias a aportaciones anónimas.',
     reinterpretation:'¿La transparencia ha aclarado gastos o ha convertido la participación en una comparación de ingresos? Formula qué se debería conocer y qué podría seguir siendo discreto.',
@@ -175,7 +175,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-herramientas',title:'Las herramientas domésticas en propiedad',group:'Lo que sostiene lo cotidiano',
     intro:'Taladros, escaleras y otras herramientas de uso ocasional pasan a un servicio de préstamo. Nadie guarda las suyas en casa.',
-    question:'¿Eliminarías esa propiedad para usar menos recursos? Explica qué cambia cuando disponer de algo depende de pedir turno.',
+    question:'Guardar un taladro que casi nunca usas parece un derroche. ¿Qué valor tiene poder usarlo sin pedir turno y en qué caso justificaría conservarlo?',
     depthPrompt:'¿Una herramienta sin usar está necesariamente desperdiciada, o puede estar garantizando una posibilidad?',
     consequence:'Se fabrican menos herramientas. Las reservas del fin de semana se agotan y nace un servicio privado que cobra por conseguir turnos; quien trabaja a horas variables paga más.',
     reinterpretation:'La desigualdad pasa de tener objetos a tener acceso. ¿Cuándo sigue siendo defendible compartir y qué condición evitaría un sustituto peor?',
@@ -185,7 +185,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-cumplidos',title:'Los cumplidos por educación',group:'Vínculos e intenciones',
     intro:'Solo puedes elogiar algo si de verdad te entusiasma. Desaparecen los pequeños cumplidos que haces para animar o agradecer.',
-    question:'¿Eliminarías esos elogios para que las palabras recuperen valor? ¿Qué funciones estás reduciendo a decir si algo te gusta?',
+    question:'Alguien dice que sin cumplidos por educación las palabras valdrían más. ¿Qué parte de esa idea aceptas y qué función del elogio deja fuera?',
     depthPrompt:'Piensa en «qué bien te ha quedado» después de un esfuerzo: ¿qué podría reconocer además del resultado?',
     consequence:'Los elogios son más creíbles, pero quienes están aprendiendo reciben casi solo correcciones. Empiezan a interpretar la ausencia de entusiasmo como una evaluación negativa.',
     reinterpretation:'¿Eliminaste una falsedad o una forma de acompañar? Busca una formulación sincera que cumpla esa función y precisa cuándo no bastaría.',
@@ -195,9 +195,9 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-disculpas',title:'Las disculpas sin culpa',group:'Vínculos e intenciones',
     intro:'Solo puedes decir «lo siento» si eres responsable de lo ocurrido. Se elimina su uso para acompañar un mal momento ajeno.',
-    question:'¿Eliminarías ese uso para no mezclar responsabilidad y empatía? Explica qué claridad ganarías en una conversación concreta.',
+    question:'Una misma frase expresa responsabilidad o empatía. ¿En qué conversación sería útil separarlas y en cuál podría perderse algo? Usa esa diferencia para defender tu decisión.',
     depthPrompt:'¿Una expresión tiene que significar lo mismo al responder a una queja que al escuchar una mala noticia?',
-    consequence:'Alguien cuenta que ha perdido un viaje importante. Sus amigos buscan frases impecables, suenan distantes y terminan evitando el tema por miedo a decir algo inadecuado.',
+    consequence:'Alguien cuenta que no ha podido hacer un viaje importante. Sus amigos buscan frases impecables, suenan distantes y terminan evitando el tema por miedo a decir algo inadecuado.',
     reinterpretation:'¿La precisión que buscabas ayuda a entenderse o impide un gesto compartido? Define en qué contexto sí necesitarías distinguir los dos sentidos.',
     teacherChallenge:'Pide responder a la misma noticia como amigo y como responsable del servicio que falló.',
     words:['asumir responsabilidad','acompañar','según el contexto'],starter:'En ese intercambio no se entendería como…, sino como…',
@@ -205,7 +205,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-secretos',title:'Las recetas familiares secretas',group:'Vínculos e intenciones',
     intro:'Toda receta debe poder compartirse si alguien la pide. Desaparece el derecho a reservar un ingrediente o un paso.',
-    question:'¿Eliminarías el secreto para que un conocimiento no se pierda? Distingue poder reproducir una receta de sentirse parte de su historia.',
+    question:'Una familia quiere que su receta sobreviva y también que siga siendo «suya». ¿Son deseos incompatibles? Distingue reproducirla de participar en su historia antes de justificar tu voto.',
     depthPrompt:'¿Qué relación puede estar manteniendo la necesidad de volver a preguntar o cocinar juntos?',
     consequence:'Las recetas quedan bien documentadas. Algunas familias dejan de reunirse para aprenderlas y un negocio vende versiones «auténticas» sin la participación de quienes las transmitieron.',
     reinterpretation:'¿La apertura ha protegido el conocimiento, debilitado la relación o ambas cosas? Reformula qué debería compartirse, por quién y bajo qué condiciones.',
@@ -215,7 +215,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-favoritos',title:'Las mesas habituales de los cafés',group:'Vínculos e intenciones',
     intro:'Ningún cliente tiene una mesa reconocida como suya. El personal trata cada visita como la primera.',
-    question:'¿Eliminarías ese privilegio para que cualquiera se sienta bienvenido? Aclara qué distingue una preferencia injusta de sentirse reconocido.',
+    question:'Entras por primera vez y una mesa vacía «es de un cliente habitual». ¿Qué quitarías de esa costumbre y qué distinguirías de una simple muestra de reconocimiento?',
     depthPrompt:'¿La igualdad en el trato requiere olvidar relaciones anteriores? Busca el límite que estás suponiendo.',
     consequence:'Se reparten mejor las mesas, pero desaparecen pequeñas rutinas de encuentro. Una persona que venía sola deja de ir porque ahora siente que tiene que empezar de cero cada día.',
     reinterpretation:'¿Querías eliminar la reserva de espacio o el reconocimiento personal? Redefine la intervención conservando lo que no perjudica a los recién llegados.',
@@ -225,7 +225,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-cuotas',title:'Las cuotas fijas de los clubes',group:'Vínculos e intenciones',
     intro:'Los clubes de deporte y cultura cobran únicamente por cada actividad realizada. No hay una cuota para ser miembro.',
-    question:'¿Eliminarías las cuotas para que nadie pague por algo que no usa? Precisa si un club ofrece solo actividades o también una continuidad.',
+    question:'«No voy, así que no debería pagar». Responde sin dar por buena cualquier cuota: ¿qué puede ofrecer un club incluso durante los meses en que no lo visitas?',
     depthPrompt:'¿Qué gasto compartido no puede atribuirse a una visita concreta y quién se hará cargo de él?',
     consequence:'Llegan visitantes ocasionales, pero faltan ingresos para mantener el local durante meses tranquilos. El club programa solo actividades rentables y pierde sus encuentros gratuitos.',
     reinterpretation:'¿El pago por uso era más justo para cada visita y menos justo para sostener el lugar? Defiende una excepción sin dar por buena cualquier cuota.',
@@ -235,7 +235,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-reuniones',title:'Las reuniones sin decisiones',group:'Vínculos e intenciones',
     intro:'Solo se permite convocar una reunión si termina con una decisión registrada. Desaparecen las reuniones para explorar dudas sin resolverlas.',
-    question:'¿Eliminarías esas reuniones para respetar el tiempo de todos? Explica qué resultado cuenta como trabajo útil antes de decidirlo.',
+    question:'Una reunión acaba sin acuerdos y alguien afirma que fue inútil. ¿Qué necesitarías saber para apoyar esa conclusión? Aclara qué resultado cuenta como trabajo útil en tu voto.',
     depthPrompt:'¿Qué duda dejaría de plantearse si quien la formula tuviera que llegar ya con una solución?',
     consequence:'Las agendas parecen más eficaces. Las dudas se trasladan a charlas entre personas que ya se conocen y las decisiones oficiales llegan casi cerradas a quienes no participaron.',
     reinterpretation:'¿La conversación improductiva desapareció o se volvió menos visible y accesible? Reformula qué reunión eliminarías y cuál protegerías.',
@@ -245,7 +245,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-averias',title:'Los arreglos provisionales',group:'Soluciones que crean dependencias',
     intro:'No se permiten reparaciones pensadas para durar poco. Toda avería debe recibir una solución definitiva antes de volver a usar el objeto.',
-    question:'¿Eliminarías los parches para dejar de normalizar problemas? Define qué necesita una persona para poder esperar una solución completa.',
+    question:'Lo provisional a veces se queda para siempre. ¿Basta ese riesgo para justificar tu voto? Explica qué necesita una persona para esperar una solución completa.',
     depthPrompt:'¿Quién determina que un arreglo es definitivo y qué dependencia aparece cuando solo esa persona puede aprobarlo?',
     consequence:'Los aparatos se reparan a fondo, pero pasan semanas fuera de uso. Crecen los alquileres de sustitución y algunos talleres viven mejor retrasando la reparación que terminándola.',
     reinterpretation:'¿La exigencia de calidad ha creado un incentivo para prolongar el problema? Formula cuándo admitirías una solución temporal y qué impediría que se volviera permanente.',
@@ -255,7 +255,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-repuestos',title:'Los objetos de repuesto',group:'Soluciones que crean dependencias',
     intro:'Nadie guarda un segundo objeto por si el primero falla. Las tiendas venden sustitutos cuando se necesitan.',
-    question:'¿Eliminarías las reservas domésticas para reducir compras innecesarias? Separa tener de más de poder seguir funcionando ante un imprevisto.',
+    question:'Piensa en una reserva que parece innecesaria hasta que ocurre una avería. ¿Dónde pondrías el límite entre tener de más y poder seguir funcionando?',
     depthPrompt:'Tu propuesta depende de que siempre haya algo disponible fuera de casa. ¿Para quién es razonable esa suposición?',
     consequence:'Las casas se despejan. Cuando una avería afecta a todo el barrio, faltan piezas y aparecen servicios caros de entrega prioritaria; quienes no pagan esperan más.',
     reinterpretation:'¿Se ha reducido el exceso o se ha vendido por separado la tranquilidad? Ajusta tu criterio para una reserva pequeña que proteja sin acaparar.',
@@ -265,7 +265,7 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-tramites',title:'La ayuda informal con los trámites',group:'Soluciones que crean dependencias',
     intro:'Cada persona hace sus gestiones por sí misma o utiliza asistencia oficial. Desaparecen los favores de amigos y familiares para rellenar formularios.',
-    question:'¿Eliminarías esa ayuda para que el acceso no dependa de tener contactos? Explica qué debería estar garantizado antes de retirarla.',
+    question:'Que un trámite dependa de favores parece injusto. ¿Eso justifica quitar los favores ahora? Defiende tu decisión indicando qué debería estar garantizado primero.',
     depthPrompt:'¿Una práctica que compensa un fallo también puede contribuir a que ese fallo siga sin arreglarse?',
     consequence:'Se hace visible que mucha gente necesita apoyo, pero el servicio oficial tarda en ampliarse. Mientras tanto surgen intermediarios de pago y los favores continúan a escondidas.',
     reinterpretation:'¿Puedes defender el objetivo sin defender la eliminación inmediata? Formula una transición y una condición que obligue a revisar su resultado.',
@@ -285,17 +285,17 @@ export const eliminationsC1: EliminationC1[] = [
   {
     id:'c1-maquina-recomendador',title:'Las sugerencias basadas en tu historial',group:'Soluciones que crean dependencias',
     intro:'Los servicios dejan de recomendar música, lecturas o planes a partir de tus elecciones anteriores. Solo puedes explorar catálogos iguales para todos.',
-    question:'¿Eliminarías esa personalización para no quedar encerrado en tus gustos? Explica por qué un catálogo común te llevaría a salir de ellos.',
-    depthPrompt:'¿Buscar algo diferente exige ya saber que existe o conocer a alguien que lo recomiende?',
-    consequence:'Quienes tienen redes variadas descubren novedades. Otros vuelven a los mismos nombres porque el catálogo les resulta inabarcable; nacen guías de pago con recomendaciones personalizadas.',
-    reinterpretation:'¿La dependencia del historial desaparece o se convierte en una ventaja que se compra? Redefine qué personalización eliminarías y qué apertura exigirías.',
-    teacherChallenge:'Pide diseñar una sorpresa que el usuario pueda rechazar sin que deje de recibir novedades para siempre.',
-    words:['catálogo','salir de lo conocido','capacidad de elección'],starter:'No equipararía recibir sugerencias con…, salvo cuando…',
+    question:'Te ofrecen las mismas opciones que a todo el mundo. ¿Por qué eso ampliaría tus gustos, o por qué no? Explica qué idea de autonomía sostiene tu voto.',
+    depthPrompt:'El catálogo necesita un orden. ¿Qué criterio parecería neutral al principio y qué tipo de creador favorecería sin decirlo?',
+    consequence:'El catálogo común se ordena por fecha. Para reaparecer al principio, algunos creadores retiran y publican otra vez lo mismo. Quienes trabajan despacio se vuelven menos visibles aunque nadie haya elegido excluirlos.',
+    reinterpretation:'¿Desapareció la selección o quedó escondida en el orden del catálogo? Reformula qué entiendes por una recomendación abierta y qué sesgo aceptarías reconocer.',
+    teacherChallenge:'Pide comparar el orden alfabético con el orden por novedad: ¿qué problema distinto crea cada apariencia de neutralidad?',
+    words:['orden de aparición','criterio visible','neutralidad aparente'],starter:'Que todos vean lo mismo no significa que…',
   },
   {
     id:'c1-maquina-grabaciones',title:'Las grabaciones de clases y reuniones',group:'Soluciones que crean dependencias',
     intro:'Solo quedan notas acordadas entre participantes. Se elimina la posibilidad de volver a escuchar o ver lo que ocurrió.',
-    question:'¿Eliminarías las grabaciones para que la gente se atreva a pensar en voz alta? Aclara quién puede aprovechar esa libertad y quién necesita volver sobre lo dicho.',
+    question:'Pensar en voz alta es más fácil si nada queda grabado. ¿Para quién sería esa libertad y quién podría quedar fuera de la conversación? Defiende tu voto teniendo en cuenta a ambos.',
     depthPrompt:'¿Una nota conjunta recoge lo importante para todos o lo que quienes estaban presentes lograron acordar?',
     consequence:'Las intervenciones son más espontáneas. Quien faltó o necesita escuchar a otro ritmo depende del resumen; poco a poco, las dudas omitidas desaparecen de la memoria del grupo.',
     reinterpretation:'¿Proteger la conversación del registro ha dado más poder a quienes la resumen? Formula una excepción y comprueba qué principio conecta esta decisión con otras dos.',
@@ -337,7 +337,7 @@ export const absurdRulesC1: AbsurdRuleC1[] = [
     law:'Cada nueva persona invitada reduce un poco el volumen máximo de la música. Las fiestas de cien personas solo permiten susurrar.',
     scene:'Preparas una fiesta y debes elegir entre invitar a todo el edificio o poder bailar.',
     developments:['Los organizadores dividen una celebración en veinte «fiestas distintas» conectadas por puertas abiertas.','Las invitaciones pequeñas se vuelven un símbolo de exclusividad; quedar fuera empieza a parecer una evaluación de la amistad.'],
-    questions:['¿Qué valor dice proteger la regla y qué decisión social deja a quien invita? Explica una exclusión que antes no habría parecido personal.','¿Las veinte fiestas cumplen la norma o son una sola fiesta con otro nombre? Define la unidad que importa sin convertir cada puerta en un problema.','Si el silencio acaba dando prestigio a los grupos pequeños, ¿seguirías defendiendo la regla? Modifica una condición y anticipa cómo intentarían aprovecharla.'],
+    questions:['¿Qué valor dice proteger la regla y qué decisión social deja a quien invita? Explica una exclusión que antes no habría parecido personal.','¿Las veinte fiestas cumplen la norma o son una sola fiesta con otro nombre? Define la unidad que importa sin convertir cada puerta en un problema.','Si las fiestas pequeñas y con música alta acaban dando prestigio, ¿seguirías defendiendo la regla? Modifica una condición y anticipa cómo intentarían aprovecharla.'],
     teacherFollowUp:'Pide mantener el humor de la fiesta e incluir a una persona que quiere conversar, no bailar.',
     words:['exclusividad','cambiar el nombre','quedar fuera'],starter:'El truco funciona porque la regla llama… a…',
   },
@@ -372,7 +372,7 @@ export const absurdRulesC1: AbsurdRuleC1[] = [
     id:'c1-regla-mascotas',title:'Una mascota te recomienda',group:'Pequeños poderes, nuevos negocios',
     law:'Para entrar en cualquier tienda necesitas que un animal te recomiende con un gesto. Una recomendación dura una semana y sirve para todas las tiendas.',
     scene:'Un gato te mira sin moverse. El perro de tu vecina recomienda a cualquiera que lleve una pelota.',
-    developments:['Aparecen agencias que alquilan animales especialmente generosos con sus gestos.','Las tiendas de lujo aceptan solo recomendaciones de animales difíciles de impresionar. Un bostezo de un gato famoso abre todas sus puertas.'],
+    developments:['Aparecen agencias que alquilan animales especialmente generosos con sus gestos.','Las tiendas de lujo dejan entrar a todos, pero reservan salas especiales a quienes recomienda un animal difícil de impresionar. Un bostezo de un gato famoso abre esas salas.'],
     questions:['¿Qué cualidad humana creería medir la ciudad con ese gesto? Construye un caso en que alguien obtenga la recomendación sin tener esa cualidad.','¿Alquilar un animal corrige una desigualdad o convierte el acceso en una compra? Compara a quien no tiene mascota con quien no puede pagar la agencia.','Cuando cuenta más qué animal te recomienda que cómo lo tratas, ¿qué queda del propósito original? Reescribe la regla para impedir esa nueva jerarquía.'],
     teacherFollowUp:'Pide conservar una función divertida para los animales sin convertirlos en árbitros del valor de las personas.',
     words:['recomendación','barrera de entrada','prestigio prestado'],starter:'El gesto solo demostraría…, no necesariamente…',
@@ -435,8 +435,8 @@ export const absurdRulesC1: AbsurdRuleC1[] = [
     id:'c1-regla-biblioteca',title:'Los libros piden una duda',group:'Palabras que cambian las costumbres',
     law:'Para devolver un libro tienes que decir algo que te haya hecho dudar. Si no puedes, el libro se queda pegado a tu mano hasta el día siguiente.',
     scene:'Terminaste una novela ligera que te hizo reír. En el mostrador intentas inventar una duda mientras el libro no se despega.',
-    developments:['Aparecen tarjetas con dudas preparadas que sirven para cualquier libro.','Los lectores empiezan a elegir libros que les provoquen una duda fácil de explicar. Los que confirman algo importante para ellos parecen menos valiosos.'],
-    questions:['¿Qué idea de una buena lectura presupone la regla? Defiende el valor de un libro que no te haga cambiar de opinión sin despreciar la duda.','¿Una duda prestada puede acabar siendo propia? Explica cuándo la tarjeta facilita pensar y cuándo solo permite soltar el libro.','Si las lecturas se eligen para demostrar apertura, ¿qué termina quedando fuera? Reescribe la regla y prueba tu versión con la novela que solo te hizo reír.'],
+    developments:['En la cola de devoluciones, los lectores intercambian dudas. Una interpretación muy convincente empieza a repetirse, incluso entre quienes recuerdan escenas distintas.','Los lectores empiezan a elegir libros que les provoquen una duda fácil de explicar. Los que confirman algo importante para ellos parecen menos valiosos.'],
+    questions:['¿Qué idea de una buena lectura presupone la regla? Defiende el valor de un libro que no te haga cambiar de opinión sin despreciar la duda.','¿Una duda que te presta otro lector puede acabar siendo propia? Distingue comprender su lectura, repetirla para salir de la cola y descubrir algo que ninguno había visto.','Si las lecturas se eligen para demostrar apertura, ¿qué termina quedando fuera? Reescribe la regla y prueba tu versión con la novela que solo te hizo reír.'],
     teacherFollowUp:'Cierra con una objeción a la nueva versión: una regla precisa también puede medir mal aquello que pretende cuidar.',
     words:['confirmar','duda propia','valor de la experiencia'],starter:'Abrirse a algo no siempre exige…, a veces consiste en…',
   },

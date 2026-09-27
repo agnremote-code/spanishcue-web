@@ -160,6 +160,6 @@ export function keyAction(key) {
 export function shouldHandleShortcut(target) {
   if (!target || typeof target !== "object") return true;
   if (target.isContentEditable) return false;
-  if (typeof target.closest === "function" && target.closest("button,a,input,textarea,select,[contenteditable='true']")) return false;
-  return !["BUTTON", "A", "INPUT", "TEXTAREA", "SELECT"].includes(target.tagName);
+  if (typeof target.closest === "function" && target.closest("button,a,input,textarea,select,summary,[contenteditable='true']")) return false;
+  return !["BUTTON", "A", "INPUT", "TEXTAREA", "SELECT", "SUMMARY"].includes(target.tagName);
 }

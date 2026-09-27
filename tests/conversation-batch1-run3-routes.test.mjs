@@ -23,8 +23,8 @@ function load(source, react = React, globals = {}, overrides = {}) {
 const catalog = load(await compile('app/conversation-families/catalog.ts'));
 const seo = load(await compile('app/resource-seo.ts'));
 const red = load(await compile('app/red-flag-o-no/engine.mjs'));
-const a1Worlds = load(await compile('app/conversation-worlds/data-a1.ts'));
-const b2Worlds = load(await compile('app/conversation-worlds/data-b2.ts'));
+const c1Worlds = load(await compile('app/conversation-worlds/data-c1.ts'));
+const talk = load(await compile('app/choose-conversation/variants.ts'));
 const routes = [
   ['red-flag-o-no-a2', 'A2', 'red-flag-o-no'], ['red-flag-o-no-b1', 'B1', 'red-flag-o-no'], ['red-flag-o-no-b2', 'B2', 'red-flag-o-no'],
   ['a1-conversation', 'A1', 'lets-talk'], ['basic-conversation', 'A2', 'lets-talk'], ['choose-conversation', 'B1', 'lets-talk'],
@@ -32,10 +32,10 @@ const routes = [
   ['tu-vida-con-una-regla-absurda', 'B1', 'tu-vida-con-una-regla-absurda'], ['tu-vida-con-una-regla-absurda-a2', 'A2', 'tu-vida-con-una-regla-absurda'],
 ];
 const variants = {
-  'red-flag-o-no': [['A1', red.getLevelConfig('A1').warmup], ['C1', red.getLevelConfig('C1').warmup]],
-  'lets-talk': [['B2', 'Tres preguntas, distintas perspectivas.'], ['C1', 'Tres preguntas para mirar una experiencia desde más de un lugar.']],
-  'la-maquina-que-elimina-cosas': [['B2', b2Worlds.eliminationsB2[0].title], ['A1', a1Worlds.eliminationsA1[0].title]],
-  'tu-vida-con-una-regla-absurda': [['B2', b2Worlds.absurdRulesB2[0].title], ['A1', a1Worlds.absurdRulesA1[0].title]],
+  'red-flag-o-no': [['C2', red.getLevelConfig('C2').warmup]],
+  'lets-talk': [['C2', talk.talkVariants.C2.teacherNotes[0]]],
+  'la-maquina-que-elimina-cosas': [['C1', c1Worlds.eliminationsC1[0].title]],
+  'tu-vida-con-una-regla-absurda': [['C1', c1Worlds.absurdRulesC1[0].title]],
 };
 async function renderRoute(route, query) {
   const hooks = {...React, useSyncExternalStore: (_subscribe, snapshot, serverSnapshot) => query === undefined ? serverSnapshot() : snapshot()};
@@ -43,13 +43,15 @@ async function renderRoute(route, query) {
   return renderToString(React.createElement(pageModule.default));
 }
 
-test('all eight Run 1/Run 2 variants render through every historical adapter with exact level controls', async () => {
+test('all four Run 3 variants render through every historical adapter with exact level controls', async () => {
   for (const [route,,id] of routes) {
     const family = catalog.conversationFamilies.find(f => f.id === id);
     for (const [level, marker] of variants[id]) {
       const html = await renderRoute(route, `?locale=es&level=${level}&source=teacher`);
       assert.ok(html.includes(`data-level="${level}"`), `${route} ${level}`);
       assert.ok(html.includes(marker), `${route} ${level}: bank-specific content`);
+      const controls = [...html.matchAll(/aria-pressed="(?:true|false)">(A1|A2|B1|B2|C1|C2)<\/button>/g)].map(match => match[1]);
+      assert.deepEqual(controls, [...family.availableLevels], 'No speculative or missing selector level');
       for (const available of family.availableLevels) assert.ok(html.includes(`>${available}</button>`), `${id} exposes ${available}`);
       assert.ok(html.includes(`aria-pressed="true">${level}</button>`));
       if (!family.availableLevels.includes('C2')) assert.doesNotMatch(html, />C2<\/button>/);
@@ -59,7 +61,7 @@ test('all eight Run 1/Run 2 variants render through every historical adapter wit
   }
 });
 
-test('Run 2 keeps all ten historical SSR defaults and rejects unavailable world C2', async () => {
+test('Run 3 keeps all ten historical SSR defaults and rejects unavailable world C2', async () => {
   for (const [route, historical, id] of routes) {
     const unsupported = id === 'red-flag-o-no' || id === 'lets-talk' ? ['C3'] : ['C2'];
     for (const query of [undefined, '', '?level=unknown', ...unsupported.map(level => '?level=' + level)]) {
@@ -70,7 +72,7 @@ test('Run 2 keeps all ten historical SSR defaults and rejects unavailable world 
   }
 });
 
-test('all eight variants render their own public preview, objectives, JSON-LD and lesson link without new slugs', async () => {
+test('all four Run 3 variants render their own public preview, objectives, JSON-LD and lesson link without new slugs', async () => {
   // Only framework link/image rendering is stubbed; the actual async resource
   // page and metadata generation execute against the production catalog.
   const pageModule = load(await compile('app/resources/[slug]/page.tsx'), React, {}, {
@@ -102,39 +104,48 @@ test('all eight variants render their own public preview, objectives, JSON-LD an
   }
 });
 
-test('real selector handlers preserve query/hash and respond to simulated history notifications', async () => {
-  const callbacks = new Map();
-  const history = [];
-  let changes = 0;
-  let cleanup;
-  const location = {};
-  const setUrl = href => {const url = new URL(href, 'https://example.test'); Object.assign(location, {href: url.href, search: url.search});};
-  setUrl('https://example.test/red-flag-o-no-a2?locale=es&source=teacher#round');
-  const window = {
-    location,
-    history: {pushState: (_state, _title, href) => {history.push(location.href); setUrl(href);}},
-    addEventListener: (name, callback) => callbacks.set(name, callback),
-    removeEventListener: name => callbacks.delete(name),
-    dispatchEvent: event => callbacks.get(event.type)?.(),
-  };
-  const hooks = {...React, useCallback: fn => fn, useSyncExternalStore: (subscribe, snapshot) => {
-    if (!cleanup) cleanup = subscribe(() => {changes++;});
-    return snapshot();
-  }};
-  const {ConversationFamily} = load(await compile('app/conversation-families/ConversationFamily.tsx'), hooks, {window});
+test('all four selectors preserve query/hash, isolate child keys, support back/forward and clean up listeners', async () => {
   const find = (tree, predicate) => !tree || typeof tree !== 'object' ? [] : Array.isArray(tree) ? tree.flatMap(node => find(node, predicate)) : [...(predicate(tree) ? [tree] : []), ...find(tree.props?.children, predicate)];
-  const render = () => ConversationFamily({id: 'red-flag-o-no', title: 'Red Flag o No', levels: ['A1', 'A2', 'B1', 'B2', 'C1'], defaultLevel: 'A2', children: level => React.createElement('div', {key: level})});
-  const choose = level => find(render(), node => node.type === 'button' && node.props.children === level)[0].props.onClick();
-  choose('C1');
-  assert.equal(render().props['data-level'], 'C1');
-  assert.equal(location.href, 'https://example.test/red-flag-o-no-a2?locale=es&source=teacher&level=C1#round');
-  choose('A1');
-  assert.equal(render().props['data-level'], 'A1');
-  setUrl(history.pop()); window.dispatchEvent(new Event('popstate'));
-  assert.equal(render().props['data-level'], 'C1');
-  assert.equal(changes, 3);
-  setUrl('https://example.test/red-flag-o-no-a2?level=C2#round'); window.dispatchEvent(new Event('popstate'));
-  assert.equal(render().props['data-level'], 'A2');
-  cleanup();
-  assert.equal(callbacks.size, 0);
+  for (const id of Object.keys(variants)) {
+    const family = catalog.conversationFamilies.find(f => f.id === id);
+    const nextLevel = variants[id][0][0];
+    const callbacks = new Map();
+    const back = [];
+    let cleanup;
+    let notifications = 0;
+    const location = {};
+    const setUrl = href => {const url = new URL(href, 'https://example.test'); Object.assign(location, {href: url.href, search: url.search});};
+    setUrl(`https://example.test${family.canonicalPath}?locale=es&source=teacher#round`);
+    const window = {
+      location,
+      history: {pushState: (_state, _title, href) => {back.push(location.href); setUrl(href);}},
+      addEventListener: (name, callback) => callbacks.set(name, callback),
+      removeEventListener: name => callbacks.delete(name),
+      dispatchEvent: event => callbacks.get(event.type)?.(),
+    };
+    const hooks = {...React, useCallback: fn => fn, useSyncExternalStore: (subscribe, snapshot) => {
+      if (!cleanup) cleanup = subscribe(() => {notifications++;});
+      return snapshot();
+    }};
+    const {ConversationFamily} = load(await compile('app/conversation-families/ConversationFamily.tsx'), hooks, {window});
+    const render = () => ConversationFamily({id, title: family.title, levels: family.availableLevels, defaultLevel: family.defaultLevel, children: level => React.createElement('div', {'data-engine': id, key: level})});
+    const choose = level => find(render(), node => node.type === 'button' && node.props.children === level)[0].props.onClick();
+    choose(nextLevel);
+    assert.equal(render().props['data-level'], nextLevel);
+    assert.equal(find(render(), node => node.props['data-engine'] === id)[0].key, nextLevel);
+    assert.equal(location.href, `https://example.test${family.canonicalPath}?locale=es&source=teacher&level=${nextLevel}#round`);
+    choose('A1');
+    assert.equal(find(render(), node => node.props['data-engine'] === id)[0].key, 'A1');
+    const forward = location.href;
+    setUrl(back.pop()); window.dispatchEvent(new Event('popstate'));
+    assert.equal(render().props['data-level'], nextLevel);
+    setUrl(forward); window.dispatchEvent(new Event('popstate'));
+    assert.equal(render().props['data-level'], 'A1');
+    assert.equal(notifications, 4);
+    const invalid = family.availableLevels.includes('C2') ? 'C3' : 'C2';
+    setUrl(`https://example.test${family.canonicalPath}?level=${invalid}#round`); window.dispatchEvent(new Event('popstate'));
+    assert.equal(render().props['data-level'], family.defaultLevel);
+    cleanup();
+    assert.equal(callbacks.size, 0);
+  }
 });

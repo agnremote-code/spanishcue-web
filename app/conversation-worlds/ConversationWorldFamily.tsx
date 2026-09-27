@@ -5,7 +5,8 @@ import { eliminations, absurdRules } from './data';
 import { eliminationsA2, absurdRulesA2 } from './data-a2';
 import { eliminationsB2, absurdRulesB2, worldGuidesB2, worldClosingB2 } from './data-b2';
 import { eliminationsA1, absurdRulesA1, worldGuidesA1, worldClosingA1 } from './data-a1';
-import type { WorldLevel } from './types';
+import { eliminationsC1, absurdRulesC1, worldGuidesC1, worldClosingC1 } from './data-c1';
+import type { WorldLevel, WorldElimination, WorldRule, WorldGuide } from './types';
 
 const closing = {
   machine: {
@@ -17,6 +18,17 @@ const closing = {
     B1: ['Compara cómo afectaría una regla a dos personas con vidas diferentes.', 'Cuenta un día en el que la regla empieza bien pero termina causando un problema.', 'Negocien una excepción y expliquen por qué sería justa.'],
   },
 };
+type WorldVariant = { machineRounds: WorldElimination[]; ruleRounds: WorldRule[]; closing: Record<'machine'|'rules', string[]>; guide?: Record<'machine'|'rules', WorldGuide> };
+const variants: Record<WorldLevel, WorldVariant> = {
+  A1: { machineRounds: eliminationsA1, ruleRounds: absurdRulesA1, closing: worldClosingA1, guide: worldGuidesA1 },
+  A2: { machineRounds: eliminationsA2, ruleRounds: absurdRulesA2, closing: {machine: closing.machine.A2, rules: closing.rules.A2} },
+  B1: { machineRounds: eliminations, ruleRounds: absurdRules, closing: {machine: closing.machine.B1, rules: closing.rules.B1} },
+  B2: { machineRounds: eliminationsB2, ruleRounds: absurdRulesB2, closing: worldClosingB2, guide: worldGuidesB2 },
+  C1: { machineRounds: eliminationsC1, ruleRounds: absurdRulesC1, closing: worldClosingC1, guide: worldGuidesC1 },
+};
 export default function ConversationWorldFamily({mode,level='B1'}:{mode:'machine'|'rules';level?:WorldLevel}) {
-  return <ConversationFamily id={mode === 'machine' ? 'la-maquina-que-elimina-cosas' : 'tu-vida-con-una-regla-absurda'} title={mode === 'machine' ? 'La máquina que elimina cosas del mundo' : 'Tu vida con una regla absurda'} levels={['A1','A2','B1','B2']} defaultLevel={level}>{selected => <ConversationWorld key={selected} mode={mode} level={selected as WorldLevel} machineRounds={selected === 'A1' ? eliminationsA1 : selected === 'B2' ? eliminationsB2 : selected === 'A2' ? eliminationsA2 : eliminations} ruleRounds={selected === 'A1' ? absurdRulesA1 : selected === 'B2' ? absurdRulesB2 : selected === 'A2' ? absurdRulesA2 : absurdRules} closing={selected === 'A1' ? worldClosingA1[mode] : selected === 'B2' ? worldClosingB2[mode] : closing[mode][selected as 'A2'|'B1']} guide={selected === 'A1' ? worldGuidesA1[mode] : selected === 'B2' ? worldGuidesB2[mode] : undefined} />}</ConversationFamily>;
+  return <ConversationFamily id={mode === 'machine' ? 'la-maquina-que-elimina-cosas' : 'tu-vida-con-una-regla-absurda'} title={mode === 'machine' ? 'La máquina que elimina cosas del mundo' : 'Tu vida con una regla absurda'} levels={['A1','A2','B1','B2','C1']} defaultLevel={level}>{selected => {
+    const variant = variants[selected as WorldLevel];
+    return <ConversationWorld key={selected} mode={mode} level={selected as WorldLevel} machineRounds={variant.machineRounds} ruleRounds={variant.ruleRounds} closing={variant.closing[mode]} guide={variant.guide?.[mode]} />;
+  }}</ConversationFamily>;
 }

@@ -4,23 +4,23 @@ import {readFileSync, existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
-const snapshot = JSON.parse(readFileSync('tests/fixtures/conversation-batch1-run1-preserved.json', 'utf8'));
-const result = await build({stdin: {contents: `export {getLevelConfig} from './app/red-flag-o-no/engine.mjs'; export {talkVariants} from './app/choose-conversation/variants'; export * from './app/conversation-worlds/data'; export * from './app/conversation-worlds/data-a2'; export * from './app/conversation-worlds/data-b2'; export {conversationWorldStorageKey} from './app/conversation-worlds/state'; export {lessons} from './app/lesson-catalog'; export * from './app/conversation-families/catalog'; export * from './app/resource-seo'; export {conversationLevelUrl} from './app/conversation-families/navigation';`, resolveDir: process.cwd()}, bundle: true, write: false, platform: 'node', format: 'esm'});
+const snapshot = JSON.parse(readFileSync('tests/fixtures/conversation-batch1-run2-preserved.json', 'utf8'));
+const result = await build({stdin: {contents: `export {getLevelConfig} from './app/red-flag-o-no/engine.mjs'; export {talkVariants} from './app/choose-conversation/variants'; export * from './app/conversation-worlds/data'; export * from './app/conversation-worlds/data-a2'; export * from './app/conversation-worlds/data-b2'; export * from './app/conversation-worlds/data-a1'; export {conversationWorldStorageKey} from './app/conversation-worlds/state'; export {lessons} from './app/lesson-catalog'; export * from './app/conversation-families/catalog'; export * from './app/resource-seo'; export {conversationLevelUrl} from './app/conversation-families/navigation';`, resolveDir: process.cwd()}, bundle: true, write: false, platform: 'node', format: 'esm'});
 const p = await import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 const hashBytes = value => createHash('sha256').update(value).digest('hex');
 const hash = value => hashBytes(JSON.stringify(value));
 const additions = [
-  ['red-flag-o-no', 'C1', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
-  ['lets-talk', 'C1', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
-  ['la-maquina-que-elimina-cosas', 'A1', ['A1', 'A2', 'B1', 'B2', 'C1']],
-  ['tu-vida-con-una-regla-absurda', 'A1', ['A1', 'A2', 'B1', 'B2', 'C1']],
+  ['red-flag-o-no', 'C2', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
+  ['lets-talk', 'C2', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
+  ['la-maquina-que-elimina-cosas', 'C1', ['A1', 'A2', 'B1', 'B2', 'C1']],
+  ['tu-vida-con-una-regla-absurda', 'C1', ['A1', 'A2', 'B1', 'B2', 'C1']],
 ];
 
-test('all fourteen original and Run 1 banks, existing metadata and route ledger remain intact', () => {
+test('all eighteen original, Run 1 and Run 2 banks, existing metadata and route ledger remain intact', () => {
   const banks = {};
-  for (const level of ['A1', 'A2', 'B1', 'B2']) banks[`redFlag${level}`] = hash(p.getLevelConfig(level));
-  for (const level of ['A1', 'A2', 'B1', 'B2']) banks[`talk${level}`] = hash(p.talkVariants[level]);
-  for (const name of ['eliminations', 'absurdRules', 'eliminationsA2', 'absurdRulesA2', 'eliminationsB2', 'absurdRulesB2']) banks[name] = hash(p[name]);
+  for (const level of ['A1', 'A2', 'B1', 'B2', 'C1']) banks[`redFlag${level}`] = hash(p.getLevelConfig(level));
+  for (const level of ['A1', 'A2', 'B1', 'B2', 'C1']) banks[`talk${level}`] = hash(p.talkVariants[level]);
+  for (const name of ['eliminations', 'absurdRules', 'eliminationsA2', 'absurdRulesA2', 'eliminationsB2', 'absurdRulesB2', 'eliminationsA1', 'absurdRulesA1']) banks[name] = hash(p[name]);
   assert.deepEqual(banks, snapshot.banks);
   assert.equal(hash(p.lessons), snapshot.routeLedger);
   for (const original of snapshot.families) {
@@ -33,13 +33,13 @@ test('all fourteen original and Run 1 banks, existing metadata and route ledger 
   }
 });
 
-test('existing standalone banks, support modules, thumbnails, routes and Run 1 history retain exact bytes', () => {
+test('existing standalone banks, support modules, thumbnails, routes and Run 1/Run 2 history retain exact bytes', () => {
   for (const [path, expected] of Object.entries(snapshot.immutableFiles)) assert.equal(hashBytes(readFileSync(path)), expected, path);
   const status = readFileSync('docs/lessons/conversation-family-production-status.md');
-  assert.equal(hashBytes(status.subarray(0, snapshot.run1StatusPrefix.bytes)), snapshot.run1StatusPrefix.sha256);
+  assert.equal(hashBytes(status.subarray(0, snapshot.run2StatusPrefix.bytes)), snapshot.run2StatusPrefix.sha256);
 });
 
-test('all four Run 2 additions remain in the existing PRO family cards and resources', () => {
+test('exactly the four Run 3 additions appear in the existing PRO family cards and resources', () => {
   let added = 0;
   for (const [id, level, levels] of additions) {
     const family = p.conversationFamilies.find(f => f.id === id);
@@ -49,7 +49,7 @@ test('all four Run 2 additions remain in the existing PRO family cards and resou
     assert.equal(family.variants[level].lessonId, family.canonicalLessonId);
     assert.equal(family.variants[level].contentRef, `${family.canonicalPath}#${level}`);
     assert.equal(family.access, 'pro');
-    added += Number(!original.variants[level]);
+    added += levels.filter(item => !original.variants[item]).length;
     const cards = p.catalogLessons.filter(l => l.familyId === id);
     assert.equal(cards.length, 1);
     assert.deepEqual(cards[0].levels, levels);
@@ -58,7 +58,7 @@ test('all four Run 2 additions remain in the existing PRO family cards and resou
     assert.equal(resource.id, family.canonicalLessonId);
     assert.deepEqual(resource.levels, levels);
     assert.ok(family.variants[level].communicativeObjectives.length >= 3);
-    if (level === 'A1') assert.ok(!family.variants.C2);
+    if (level === 'C1') assert.ok(!family.variants.C2, 'World C2 remains unavailable');
   }
   assert.equal(added, 4);
 });
@@ -83,7 +83,7 @@ test('four new previews have distinct assets and metadata never imports private 
   }
   assert.equal(new Set(newPaths).size, 4);
   const publicBundle = await build({entryPoints: ['app/conversation-families/catalog.ts'], bundle: true, write: false, platform: 'node', format: 'esm', metafile: true});
-  assert.doesNotMatch(Object.keys(publicBundle.metafile.inputs).join('\n'), /app\/choose-conversation\/(?:a1-data|b2-data|c1-data|data|variants)|app\/conversation-worlds\/data|app\/red-flag-o-no\/(?:engine|a1|c1)/);
+  assert.doesNotMatch(Object.keys(publicBundle.metafile.inputs).join('\n'), /app\/choose-conversation\/(?:a1-data|b2-data|c1-data|c2-data|data|variants)|app\/conversation-worlds\/data|app\/red-flag-o-no\/(?:engine|a1|c1|c2)/);
 });
 
 test('all supported levels preserve query/hash; unsupported levels retain every historical route default', () => {
@@ -100,12 +100,12 @@ test('all supported levels preserve query/hash; unsupported levels retain every 
   }
 });
 
-test('world progress has eight independent family-level keys while all historical keys remain stable', () => {
+test('world progress has ten independent family-level keys while all historical keys remain stable', () => {
   const keys = [];
-  for (const mode of ['machine', 'rules']) for (const level of ['A1', 'A2', 'B1', 'B2']) {
+  for (const mode of ['machine', 'rules']) for (const level of ['A1', 'A2', 'B1', 'B2', 'C1']) {
     const key = p.conversationWorldStorageKey(mode, level);
     assert.equal(key, level === 'B1' ? `chespanish-conversation-${mode}-v1` : `chespanish-conversation-${mode}-${level}-v1`);
     keys.push(key);
   }
-  assert.equal(new Set(keys).size, 8);
+  assert.equal(new Set(keys).size, 10);
 });
