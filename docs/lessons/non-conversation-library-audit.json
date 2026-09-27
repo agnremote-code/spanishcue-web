@@ -1,0 +1,1551 @@
+{
+  "schemaVersion": 1,
+  "auditStatus": "inventory-checkpoint; pedagogical review in progress",
+  "auditDate": "2026-09-28",
+  "repository": "agnremote-code/spanishcue-web",
+  "branch": "codex/quality-v2-nonconversation-audit-20260928",
+  "canonicalMainSha": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+  "sourceSha": "019310604045bcdccf74fe3606e685ec826797f5",
+  "batch1IntegratedIntoMain": false,
+  "baseRelationship": "Canonical main is ancestor of Batch 1 final; task branches from Batch 1 final and preserves both histories.",
+  "counts": {
+    "total": 65,
+    "categories": {
+      "Gramática": 51,
+      "Fonética": 3,
+      "Escucha": 8,
+      "Vocabulario": 3
+    },
+    "primaryCefr": {
+      "A1": 23,
+      "A2": 13,
+      "B1": 11,
+      "B2": 10,
+      "C1": 6,
+      "C2": 2
+    },
+    "advertisedMemberships": {
+      "A1": 23,
+      "A2": 19,
+      "B1": 14,
+      "B2": 13,
+      "C1": 9,
+      "C2": 2
+    },
+    "access": {
+      "FREE": 8,
+      "PRO": 57
+    }
+  },
+  "lessons": [
+    {
+      "id": 220,
+      "title": "Aunque cambie el dato…",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/aunque-cambie-el-dato",
+      "routeSource": "app/aunque-cambie-el-dato/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-aunque-cambie-el-dato",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/connection-panel.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 45,
+      "curriculumSequence": 45,
+      "prerequisites": [
+        219
+      ]
+    },
+    {
+      "id": 219,
+      "title": "Si fuera distinto…",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/si-fuera-distinto",
+      "routeSource": "app/si-fuera-distinto/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-si-fuera-distinto",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/conditionals-path.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 44,
+      "curriculumSequence": 44,
+      "prerequisites": [
+        218,
+        150
+      ]
+    },
+    {
+      "id": 140,
+      "title": "Presente de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/sistema-verbal/presente-de-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-presente-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/grammar-worlds/verb-city.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 9,
+      "curriculumSequence": 9,
+      "prerequisites": [
+        48
+      ]
+    },
+    {
+      "id": 141,
+      "title": "Pretérito perfecto compuesto de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/sistema-verbal/preterito-perfecto-compuesto-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-preterito-perfecto-compuesto-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/past-b1/surf-perfecto.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 18,
+      "curriculumSequence": 18,
+      "prerequisites": [
+        140
+      ]
+    },
+    {
+      "id": 142,
+      "title": "Pretérito perfecto simple de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/sistema-verbal/preterito-perfecto-simple-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-preterito-perfecto-simple-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/past-b1/surf-indefinido.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 19,
+      "curriculumSequence": 19,
+      "prerequisites": [
+        140
+      ]
+    },
+    {
+      "id": 143,
+      "title": "Pretérito imperfecto de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/sistema-verbal/preterito-imperfecto-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-preterito-imperfecto-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/past-b1/surf-imperfecto.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 20,
+      "curriculumSequence": 20,
+      "prerequisites": [
+        142
+      ]
+    },
+    {
+      "id": 144,
+      "title": "Futuro simple de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/sistema-verbal/futuro-simple-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-futuro-simple-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/catalog-thumbnails/future-city.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 21,
+      "curriculumSequence": 21,
+      "prerequisites": [
+        140
+      ]
+    },
+    {
+      "id": 145,
+      "title": "Imperativo afirmativo y negativo",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/sistema-verbal/imperativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-imperativo-afirmativo-y-negativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/la-isla-vota/island-command-table-v1.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 22,
+      "curriculumSequence": 22,
+      "prerequisites": [
+        140
+      ]
+    },
+    {
+      "id": 146,
+      "title": "Condicional simple de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/sistema-verbal/condicional-simple-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-condicional-simple-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/catalog-thumbnails/conditionals-path.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 31,
+      "curriculumSequence": 31,
+      "prerequisites": [
+        144
+      ]
+    },
+    {
+      "id": 147,
+      "title": "Pretérito pluscuamperfecto de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/sistema-verbal/preterito-pluscuamperfecto-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-preterito-pluscuamperfecto-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/past-b1/surf-perfecto.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 32,
+      "curriculumSequence": 32,
+      "prerequisites": [
+        143
+      ]
+    },
+    {
+      "id": 148,
+      "title": "Presente de subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/sistema-verbal/presente-de-subjuntivo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-presente-de-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/subjuntivo/alicia-hero.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 35,
+      "curriculumSequence": 35,
+      "prerequisites": [
+        107,
+        140
+      ]
+    },
+    {
+      "id": 149,
+      "title": "Pretérito perfecto de subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/sistema-verbal/preterito-perfecto-subjuntivo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-preterito-perfecto-de-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/subjuntivo/alicia-hero.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 36,
+      "curriculumSequence": 36,
+      "prerequisites": [
+        148,
+        141
+      ]
+    },
+    {
+      "id": 150,
+      "title": "Pretérito imperfecto de subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/sistema-verbal/preterito-imperfecto-subjuntivo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-preterito-imperfecto-de-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/subjuntivo/wonderland-garden.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 40,
+      "curriculumSequence": 40,
+      "prerequisites": [
+        148,
+        146
+      ]
+    },
+    {
+      "id": 151,
+      "title": "Pretérito pluscuamperfecto de subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/sistema-verbal/preterito-pluscuamperfecto-subjuntivo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-preterito-pluscuamperfecto-de-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/subjuntivo/alicia-hero.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 41,
+      "curriculumSequence": 41,
+      "prerequisites": [
+        150,
+        147
+      ]
+    },
+    {
+      "id": 152,
+      "title": "Condicional compuesto de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/sistema-verbal/condicional-compuesto-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-condicional-compuesto-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/catalog-thumbnails/conditional-multiverse.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 42,
+      "curriculumSequence": 42,
+      "prerequisites": [
+        146,
+        151
+      ]
+    },
+    {
+      "id": 153,
+      "title": "Futuro compuesto de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/sistema-verbal/futuro-compuesto-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-futuro-compuesto-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/catalog-thumbnails/future-city.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 43,
+      "curriculumSequence": 43,
+      "prerequisites": [
+        144,
+        141
+      ]
+    },
+    {
+      "id": 154,
+      "title": "Pretérito anterior de indicativo",
+      "category": "Gramática",
+      "cefrLevel": "C1",
+      "advertisedLevels": [
+        "C1"
+      ],
+      "displayLevel": "C1",
+      "route": "/sistema-verbal/preterito-anterior-indicativo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-c1-preterito-anterior-de-indicativo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/past-b1/surf-indefinido.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 49,
+      "curriculumSequence": 49,
+      "prerequisites": [
+        147
+      ]
+    },
+    {
+      "id": 155,
+      "title": "Futuro simple de subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "C1",
+      "advertisedLevels": [
+        "C1"
+      ],
+      "displayLevel": "C1",
+      "route": "/sistema-verbal/futuro-simple-subjuntivo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-c1-futuro-simple-de-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/subjuntivo/wonderland-garden.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 50,
+      "curriculumSequence": 50,
+      "prerequisites": [
+        148,
+        150
+      ]
+    },
+    {
+      "id": 156,
+      "title": "Futuro perfecto de subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "C2",
+      "advertisedLevels": [
+        "C2"
+      ],
+      "displayLevel": "C2",
+      "route": "/sistema-verbal/futuro-perfecto-subjuntivo",
+      "routeSource": "app/sistema-verbal/[slug]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-c2-futuro-perfecto-de-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Sistema verbal",
+      "thumbnail": "/subjuntivo/wonderland-garden.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 51,
+      "curriculumSequence": 51,
+      "prerequisites": [
+        155,
+        149
+      ]
+    },
+    {
+      "id": 135,
+      "title": "Frecuencia Abierta",
+      "category": "Escucha",
+      "cefrLevel": "C2",
+      "advertisedLevels": [
+        "C2"
+      ],
+      "displayLevel": "C2",
+      "route": "/frecuencia-abierta",
+      "routeSource": "app/frecuencia-abierta/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-c2-frecuencia-abierta",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/listening-premium/frecuencia-abierta.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 8,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 134,
+      "title": "La Entrevista que no Salió al Aire",
+      "category": "Escucha",
+      "cefrLevel": "C1",
+      "advertisedLevels": [
+        "C1"
+      ],
+      "displayLevel": "C1",
+      "route": "/la-entrevista-que-no-salio-al-aire",
+      "routeSource": "app/la-entrevista-que-no-salio-al-aire/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-c1-la-entrevista-que-no-salio-al-aire",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/listening-premium/entrevista-no-salio.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 7,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 133,
+      "title": "Habitación 508",
+      "category": "Escucha",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/habitacion-508",
+      "routeSource": "app/habitacion-508/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-b2-habitacion-508",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/listening-premium/habitacion-508.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 6,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 132,
+      "title": "Radio Después de Medianoche",
+      "category": "Escucha",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/radio-despues-de-medianoche",
+      "routeSource": "app/radio-despues-de-medianoche/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-b1-radio-despues-de-medianoche",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/listening-premium/radio-medianoche.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 5,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 131,
+      "title": "Última Llamada",
+      "category": "Escucha",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/ultima-llamada",
+      "routeSource": "app/ultima-llamada/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-a2-ultima-llamada",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/listening-premium/ultima-llamada.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 2,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 130,
+      "title": "El Edificio de las Voces",
+      "category": "Escucha",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/el-edificio-de-las-voces",
+      "routeSource": "app/el-edificio-de-las-voces/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-a1-el-edificio-de-las-voces",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/listening-premium/edificio-voces.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 1,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 218,
+      "title": "La persona que tengo en mente",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/la-persona-que-tengo-en-mente",
+      "routeSource": "app/la-persona-que-tengo-en-mente/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-la-persona-que-tengo-en-mente",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/positions-gallery.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 28,
+      "curriculumSequence": 28,
+      "prerequisites": [
+        217
+      ]
+    },
+    {
+      "id": 217,
+      "title": "Pero hay un matiz",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/pero-hay-un-matiz",
+      "routeSource": "app/pero-hay-un-matiz/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-pero-hay-un-matiz",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/connection-panel.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 27,
+      "curriculumSequence": 27,
+      "prerequisites": [
+        214
+      ]
+    },
+    {
+      "id": 214,
+      "title": "Si pasa esto…",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/si-pasa-esto",
+      "routeSource": "app/si-pasa-esto/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-si-pasa-esto",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/conditionals-path.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 24,
+      "curriculumSequence": 24,
+      "prerequisites": [
+        213
+      ]
+    },
+    {
+      "id": 213,
+      "title": "Antes, después, cuando",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/antes-despues-cuando",
+      "routeSource": "app/antes-despues-cuando/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-antes-despues-cuando",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/adverb-tower.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 23,
+      "curriculumSequence": 23,
+      "prerequisites": [
+        212
+      ]
+    },
+    {
+      "id": 212,
+      "title": "Ideas dentro de ideas",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/ideas-dentro-de-ideas",
+      "routeSource": "app/ideas-dentro-de-ideas/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-ideas-dentro-de-ideas",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/pronoun-central.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 17,
+      "curriculumSequence": 17,
+      "prerequisites": [
+        211
+      ]
+    },
+    {
+      "id": 211,
+      "title": "Conecta la frase",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/conecta-la-frase",
+      "routeSource": "app/conecta-la-frase/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-conecta-la-frase",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/adverb-tower.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 16,
+      "curriculumSequence": 16,
+      "prerequisites": [
+        111
+      ]
+    },
+    {
+      "id": 119,
+      "title": "La Cámara de la Acción",
+      "category": "Gramática",
+      "cefrLevel": "C1",
+      "advertisedLevels": [
+        "C1"
+      ],
+      "displayLevel": "C1",
+      "route": "/la-accion-vista-desde-dentro",
+      "routeSource": "app/la-accion-vista-desde-dentro/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-c1-la-camara-de-la-accion",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/action-camera.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 47,
+      "curriculumSequence": 47,
+      "prerequisites": [
+        115,
+        117
+      ]
+    },
+    {
+      "id": 118,
+      "title": "El Archivo de las Dos Lecturas",
+      "category": "Gramática",
+      "cefrLevel": "C1",
+      "advertisedLevels": [
+        "C1"
+      ],
+      "displayLevel": "C1",
+      "route": "/cuando-una-frase-puede-significar-dos-cosas",
+      "routeSource": "app/cuando-una-frase-puede-significar-dos-cosas/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-c1-el-archivo-de-las-dos-lecturas",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/two-readings-archive.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 46,
+      "curriculumSequence": 46,
+      "prerequisites": [
+        116
+      ]
+    },
+    {
+      "id": 117,
+      "title": "El Panel de Conexiones",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/verbos-que-piden-una-estructura",
+      "routeSource": "app/verbos-que-piden-una-estructura/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-el-panel-de-conexiones",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/connection-panel.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 38,
+      "curriculumSequence": 38,
+      "prerequisites": [
+        48,
+        111
+      ]
+    },
+    {
+      "id": 116,
+      "title": "La Mesa del Editor",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2"
+      ],
+      "displayLevel": "B2",
+      "route": "/precision-grupo-nominal-adjetival",
+      "routeSource": "app/precision-grupo-nominal-adjetival/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-la-mesa-del-editor",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/editor-table.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 37,
+      "curriculumSequence": 37,
+      "prerequisites": [
+        114
+      ]
+    },
+    {
+      "id": 115,
+      "title": "La Línea de los Cambios",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/empezar-seguir-repetir-dejar-de-hacer",
+      "routeSource": "app/empezar-seguir-repetir-dejar-de-hacer/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-la-linea-de-los-cambios",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/change-line.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 33,
+      "curriculumSequence": 33,
+      "prerequisites": [
+        18
+      ]
+    },
+    {
+      "id": 114,
+      "title": "El Laboratorio de la Segunda Versión",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/decir-mas-sin-repetir",
+      "routeSource": "app/decir-mas-sin-repetir/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-el-laboratorio-de-la-segunda-version",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/second-version-lab.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 29,
+      "curriculumSequence": 29,
+      "prerequisites": [
+        112,
+        113
+      ]
+    },
+    {
+      "id": 113,
+      "title": "La Sala de las Posiciones",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/una-oracion-puede-moverse",
+      "routeSource": "app/una-oracion-puede-moverse/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-la-sala-de-las-posiciones",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/positions-gallery.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 26,
+      "curriculumSequence": 26,
+      "prerequisites": [
+        111,
+        47
+      ]
+    },
+    {
+      "id": 112,
+      "title": "El Estudio del Detalle",
+      "category": "Gramática",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/expandir-y-precisar-descripciones",
+      "routeSource": "app/expandir-y-precisar-descripciones/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a2-el-estudio-del-detalle",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/detail-studio.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 25,
+      "curriculumSequence": 25,
+      "prerequisites": [
+        110,
+        111
+      ]
+    },
+    {
+      "id": 111,
+      "title": "La Mesa de Montaje",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/de-palabras-a-oraciones-completas",
+      "routeSource": "app/de-palabras-a-oraciones-completas/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-la-mesa-de-montaje",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/sentence-assembly.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 12,
+      "curriculumSequence": 12,
+      "prerequisites": [
+        48,
+        110
+      ]
+    },
+    {
+      "id": 110,
+      "title": "El Taller de las Capas",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/grupos-de-palabras-con-sentido",
+      "routeSource": "app/grupos-de-palabras-con-sentido/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-el-taller-de-las-capas",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/layers-workshop.webp",
+      "declaredDuration": "≈ 45 min",
+      "routeSequence": 11,
+      "curriculumSequence": 11,
+      "prerequisites": [
+        40,
+        42,
+        41
+      ]
+    },
+    {
+      "id": 108,
+      "title": "El Banco de Palabras",
+      "category": "Vocabulario",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2",
+        "B1"
+      ],
+      "displayLevel": "A2–B1",
+      "route": "/banco-de-palabras",
+      "routeSource": "app/banco-de-palabras/page.tsx",
+      "resourcePath": "/resources/spanish-vocabulary-lesson-a2-b1-el-banco-de-palabras",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Vocabulario",
+      "thumbnail": "/previews/word-bank-studio-v91.webp",
+      "declaredDuration": "60–90 min · reutilizable",
+      "routeSequence": 3,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 107,
+      "title": "Modo vs. tiempo verbal",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "displayLevel": "A1–C1",
+      "route": "/modo-vs-tiempo-verbal",
+      "routeSource": "app/modo-vs-tiempo-verbal/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-c1-modo-vs-tiempo-verbal",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/verb-city.webp",
+      "declaredDuration": "20–30 min",
+      "routeSequence": 8,
+      "curriculumSequence": 8,
+      "prerequisites": [
+        48
+      ]
+    },
+    {
+      "id": 106,
+      "title": "La estación de los dos destinos",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1",
+        "A2"
+      ],
+      "displayLevel": "A1 · ampliación A2",
+      "route": "/la-estacion-de-los-dos-destinos",
+      "routeSource": "app/la-estacion-de-los-dos-destinos/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-ampliacion-a2-la-estacion-de-los-dos-destinos",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/objetos-pronombres/estacion-hero.webp",
+      "declaredDuration": "2 encuentros · a elección",
+      "routeSequence": 15,
+      "curriculumSequence": 15,
+      "prerequisites": [
+        46,
+        111
+      ]
+    },
+    {
+      "id": 105,
+      "title": "El hotel de lo imposible",
+      "category": "Escucha",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/el-hotel-de-lo-imposible",
+      "routeSource": "app/el-hotel-de-lo-imposible/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-a2-el-hotel-de-lo-imposible",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/hotel-imposible/lobby.webp",
+      "declaredDuration": "90+ min · a elección",
+      "routeSequence": 3,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 46,
+      "title": "La Central de las Identidades",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1",
+        "A2"
+      ],
+      "displayLevel": "A1–A2",
+      "route": "/la-central-de-las-identidades",
+      "routeSource": "app/la-central-de-las-identidades/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-a2-la-central-de-las-identidades",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/pronoun-central.webp",
+      "declaredDuration": "75–90 min",
+      "routeSequence": 14,
+      "curriculumSequence": 14,
+      "prerequisites": [
+        48,
+        111
+      ]
+    },
+    {
+      "id": 47,
+      "title": "La Torre de las Coordenadas",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1",
+        "A2"
+      ],
+      "displayLevel": "A1–A2",
+      "route": "/la-torre-de-las-coordenadas",
+      "routeSource": "app/la-torre-de-las-coordenadas/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-a2-la-torre-de-las-coordenadas",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/adverb-tower.webp",
+      "declaredDuration": "70–85 min",
+      "routeSequence": 13,
+      "curriculumSequence": 13,
+      "prerequisites": [
+        48,
+        111
+      ]
+    },
+    {
+      "id": 48,
+      "title": "La Ciudad de los Motores",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1",
+        "A2"
+      ],
+      "displayLevel": "A1–A2",
+      "route": "/la-ciudad-de-los-motores",
+      "routeSource": "app/la-ciudad-de-los-motores/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-a2-la-ciudad-de-los-motores",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/verb-city.webp",
+      "declaredDuration": "90–110 min",
+      "routeSequence": 7,
+      "curriculumSequence": 7,
+      "prerequisites": [
+        40,
+        42
+      ]
+    },
+    {
+      "id": 43,
+      "title": "El Observatorio de las Distancias",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/el-observatorio-de-las-distancias",
+      "routeSource": "app/el-observatorio-de-las-distancias/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-el-observatorio-de-las-distancias",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/demonstrative-observatory.webp",
+      "declaredDuration": "65–80 min",
+      "routeSequence": 4,
+      "curriculumSequence": 4,
+      "prerequisites": [
+        40,
+        42
+      ]
+    },
+    {
+      "id": 44,
+      "title": "La Casa de las Pertenencias",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/la-casa-de-las-pertenencias",
+      "routeSource": "app/la-casa-de-las-pertenencias/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-la-casa-de-las-pertenencias",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/possession-house.webp",
+      "declaredDuration": "65–80 min",
+      "routeSequence": 5,
+      "curriculumSequence": 5,
+      "prerequisites": [
+        40,
+        42
+      ]
+    },
+    {
+      "id": 45,
+      "title": "El Mercado de las Cantidades",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/el-mercado-de-las-cantidades",
+      "routeSource": "app/el-mercado-de-las-cantidades/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-el-mercado-de-las-cantidades",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/quantity-market.webp",
+      "declaredDuration": "70–85 min",
+      "routeSequence": 6,
+      "curriculumSequence": 6,
+      "prerequisites": [
+        40,
+        42
+      ]
+    },
+    {
+      "id": 40,
+      "title": "La Fábrica de los Nombres",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/la-fabrica-de-los-nombres",
+      "routeSource": "app/la-fabrica-de-los-nombres/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-la-fabrica-de-los-nombres",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/previews/noun-studio-v91.webp",
+      "declaredDuration": "65–80 min",
+      "routeSequence": 1,
+      "curriculumSequence": 1,
+      "prerequisites": []
+    },
+    {
+      "id": 41,
+      "title": "El Atelier de la Concordancia",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/el-atelier-de-la-concordancia",
+      "routeSource": "app/el-atelier-de-la-concordancia/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-el-atelier-de-la-concordancia",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/previews/agreement-studio-v91.webp",
+      "declaredDuration": "60–75 min",
+      "routeSequence": 3,
+      "curriculumSequence": 3,
+      "prerequisites": [
+        40,
+        42
+      ]
+    },
+    {
+      "id": 42,
+      "title": "La Galería de los Artículos",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/la-galeria-de-los-articulos",
+      "routeSource": "app/la-galeria-de-los-articulos/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-la-galeria-de-los-articulos",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/article-gallery.webp",
+      "declaredDuration": "65–80 min",
+      "routeSequence": 2,
+      "curriculumSequence": 2,
+      "prerequisites": [
+        40
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Spanish Mouth Lab",
+      "category": "Fonética",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "displayLevel": "A1–C1",
+      "route": "/clase/38",
+      "routeSource": "app/clase/[id]/page.tsx",
+      "resourcePath": "/resources/spanish-pronunciation-lesson-a1-c1-spanish-mouth-lab",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Fonética",
+      "thumbnail": "/catalog-thumbnails/mouth-lab.webp",
+      "declaredDuration": "60–75 min",
+      "routeSequence": 3,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 37,
+      "title": "El País del Subjuntivo",
+      "category": "Gramática",
+      "cefrLevel": "C1",
+      "advertisedLevels": [
+        "C1"
+      ],
+      "displayLevel": "C1",
+      "route": "/subjuntivo-pais-maravillas",
+      "routeSource": "app/subjuntivo-pais-maravillas/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-c1-el-pais-del-subjuntivo",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/subjuntivo/alicia-hero.webp",
+      "declaredDuration": "90+ min",
+      "routeSequence": 48,
+      "curriculumSequence": 48,
+      "prerequisites": [
+        107,
+        31,
+        23
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Condicionales paso a paso",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1",
+        "B2"
+      ],
+      "displayLevel": "B1+",
+      "route": "/condicionales-b1",
+      "routeSource": "app/condicionales-b1/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-condicionales-paso-a-paso",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/conditionals-path.webp",
+      "declaredDuration": "90+ min",
+      "routeSequence": 34,
+      "curriculumSequence": 34,
+      "prerequisites": [
+        18,
+        107
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Latinoamérica al Oído",
+      "category": "Escucha",
+      "cefrLevel": "A2",
+      "advertisedLevels": [
+        "A2"
+      ],
+      "displayLevel": "A2",
+      "route": "/latinoamerica-al-oido",
+      "routeSource": "app/latinoamerica-al-oido/page.tsx",
+      "resourcePath": "/resources/spanish-listening-activity-a2-latinoamerica-al-oido",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Escucha",
+      "thumbnail": "/brand/spanishcue-global-stage.webp",
+      "declaredDuration": "90+ min",
+      "routeSequence": 4,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 23,
+      "title": "El Multiverso del ‘Si’",
+      "category": "Gramática",
+      "cefrLevel": "B2",
+      "advertisedLevels": [
+        "B2",
+        "C1"
+      ],
+      "displayLevel": "B2–C1",
+      "route": "/condicionales",
+      "routeSource": "app/condicionales/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b2-c1-el-multiverso-del-si",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/catalog-thumbnails/conditional-multiverse.webp",
+      "declaredDuration": "90+ min",
+      "routeSequence": 39,
+      "curriculumSequence": 39,
+      "prerequisites": [
+        31
+      ]
+    },
+    {
+      "id": 18,
+      "title": "El Pasado",
+      "category": "Gramática",
+      "cefrLevel": "B1",
+      "advertisedLevels": [
+        "B1"
+      ],
+      "displayLevel": "B1",
+      "route": "/past-b1",
+      "routeSource": "app/past-b1/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-b1-el-pasado",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/past-b1/surf-indefinido.webp",
+      "declaredDuration": "90 min",
+      "routeSequence": 30,
+      "curriculumSequence": 30,
+      "prerequisites": [
+        48,
+        107
+      ]
+    },
+    {
+      "id": 16,
+      "title": "ARGENTO",
+      "category": "Vocabulario",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/argento",
+      "routeSource": "app/argento/page.tsx",
+      "resourcePath": "/resources/spanish-vocabulary-lesson-a1-argento",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Vocabulario",
+      "thumbnail": "/chespanish-guide-van.webp",
+      "declaredDuration": "70 min",
+      "routeSequence": 1,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 3,
+      "title": "Presente con vos",
+      "category": "Gramática",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/clase/3",
+      "routeSource": "app/clase/[id]/page.tsx",
+      "resourcePath": "/resources/spanish-grammar-lesson-a1-presente-con-vos",
+      "access": "PRO",
+      "collection": null,
+      "catalogueSection": "Gramática general",
+      "thumbnail": "/grammar-worlds/verb-city.webp",
+      "declaredDuration": "60 min",
+      "routeSequence": 10,
+      "curriculumSequence": 10,
+      "prerequisites": [
+        48
+      ]
+    },
+    {
+      "id": 201,
+      "title": "Cinco vocales, cinco sonidos",
+      "category": "Fonética",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/clase/201",
+      "routeSource": "app/clase/[id]/page.tsx",
+      "resourcePath": "/resources/spanish-pronunciation-lesson-a1-cinco-vocales-cinco-sonidos",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Fonética",
+      "thumbnail": "/catalog-thumbnails/vowel-resonance.webp",
+      "declaredDuration": "30–40 min",
+      "routeSequence": 1,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 202,
+      "title": "El ritmo de las palabras",
+      "category": "Fonética",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/clase/202",
+      "routeSource": "app/clase/[id]/page.tsx",
+      "resourcePath": "/resources/spanish-pronunciation-lesson-a1-el-ritmo-de-las-palabras",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Fonética",
+      "thumbnail": "/catalog-thumbnails/spanish-rhythm.webp",
+      "declaredDuration": "35–45 min",
+      "routeSequence": 2,
+      "curriculumSequence": null,
+      "prerequisites": []
+    },
+    {
+      "id": 204,
+      "title": "Palabras para resolver el día",
+      "category": "Vocabulario",
+      "cefrLevel": "A1",
+      "advertisedLevels": [
+        "A1"
+      ],
+      "displayLevel": "A1",
+      "route": "/clase/204",
+      "routeSource": "app/clase/[id]/page.tsx",
+      "resourcePath": "/resources/spanish-vocabulary-lesson-a1-palabras-para-resolver-el-dia",
+      "access": "FREE",
+      "collection": null,
+      "catalogueSection": "Vocabulario",
+      "thumbnail": "/catalog-thumbnails/everyday-words.webp",
+      "declaredDuration": "35–45 min",
+      "routeSequence": 2,
+      "curriculumSequence": null,
+      "prerequisites": []
+    }
+  ]
+}
