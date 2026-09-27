@@ -378,3 +378,131 @@ Both C2 banks are implemented and independently reviewed: Machine has 30 dilemma
 Fresh consolidated conversation tests: **137 passed, 0 failed, skipped or cancelled** (115 baseline + 22 new tests). Route tests render all 24 family-level variants through all ten adapters (60 level/adapter combinations) and all 24 canonical level-aware resource views. New tests first exposed missing C2 registration/behavior; independent review then caught a stale-note issue in new finales. Changing the selected law/proposition now clears dependent notes, with a regression proving it. Original resource previews intentionally retain their existing seed-copy and canonical JSON-LD-image fallbacks; all 14 additions use their authored level preview. No resource source was changed.
 
 The fresh TypeScript baseline and final output are byte-identical: **11 inherited diagnostics, zero new**, SHA-256 `2ce9713062b3ca39a9830abb205b00f5ae9d3d5e0368527b0bccb798281261cb` including npm's unchanged environment-config warning. All 22 earlier banks, 64 files, old metadata and Run 1–3 status prefix match their preservation snapshot. Lint passed; protected build and completion documentation follow. No unresolved blocking code-review finding remains.
+
+### BATCH 1 COMPLETE — final source closure
+
+**All four families expose exactly A1, A2, B1, B2, C1 and C2.** There are 24 implemented level slots, 14 Batch 1 additions and no missing variant within these four families. This marks source implementation and consolidated review complete. Interactive desktop/mobile acceptance remains pending; nothing is merged or deployed.
+
+Implementation is preserved at `b53c5b487ac126e93666044e1dc9075ea990ae89`. The final documentation commit adds this closure and `docs/lessons/conversation-batch1-completion.json`; it does not change the verified application source. Run 4 started from exact Run 3 final `1b342a9c6d8ecc2674f86f099c51d61d3a12574b`. Final freshly fetched main remains `5d6733a9b9404bbc17bf6999530eb48ffb574a3e`, already included in the branch. The historical audit stays on `codex/conversation-family-audit-20260926` at `e6da3f0943de088a9cba837ea71b3faa77a473eb`; it has not been rewritten.
+
+#### Complete addition inventory
+
+| Run | Family | Level | Authored primary content |
+|---|---|---|---|
+| 1 | Red Flag o No | A1 | 18 situations |
+| 1 | Let’s Talk | B2 | 15 worlds / 120 questions |
+| 1 | La máquina | B2 | 30 dilemmas |
+| 1 | Regla absurda | B2 | 15 rules / 45 questions |
+| 2 | La máquina | A1 | 24 dilemmas |
+| 2 | Regla absurda | A1 | 15 rules / 45 questions |
+| 2 | Red Flag o No | C1 | 18 situations |
+| 2 | Let’s Talk | C1 | 15 worlds / 120 questions |
+| 3 | La máquina | C1 | 30 dilemmas |
+| 3 | Regla absurda | C1 | 15 rules / 45 questions |
+| 3 | Red Flag o No | C2 | 18 situations |
+| 3 | Let’s Talk | C2 | 15 worlds / 120 questions |
+| 4 | La máquina | C2 | 30 dilemmas |
+| 4 | Regla absurda | C2 | 15 rules / 45 questions |
+
+Totals added across Batch 1: **54 Red Flag situations, 360 Talk questions, 114 Machine dilemmas, 60 rules with 180 questions**. This is **708 primary items**; rule laws, support, follow-ups, developments and finales are additional material, not double-counted as primary questions. Original plus new banks total 1,302 primary items in the 24 slots. Counts, run lineage, canonical lesson IDs/URLs, per-level thumbnails, checks and known issues are in the completion JSON.
+
+Both Run 4 guides select roughly 45 minutes of material rather than attempting the complete bank. Machine C2 requires initial vote → explanation/category boundary → consequence → competing reading → actual reformulation → final eliminate/conserve/conditional vote with an explicit condition. Its finale assigns three distinct completed choices to genuine elimination, initial elimination subsequently redefined, and misleading binary; the learner rewrites one proposition and explains the improvement. It never invents a changed vote: guidance allows returning to a case or leaving an unmatched role open.
+
+Rules C2 retains the impossible city and reveals its three questions/two developments in order. Revisiting earlier questions preserves completion. The finale selects one actually explored law and requires a wording diagnosis, revised law, two distinct edge-case applications and a remaining limitation. Notes are brief aids for speaking. Changing the selected case clears dependent notes; changing an unrelated role retains still-relevant notes. New copy is Spanish-only and uses tú.
+
+#### Six-level communicative progression
+
+All four implementations, all existing Batch 1 tests, complete banks and Run 1–3 thumbnail provenance were reviewed. The comparison uses [CEFR global-scale guidance](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale), [PCIC functions C1–C2](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_c1-c2.htm) and [PCIC pragmatic tactics C1–C2](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/06_tacticas_pragmaticas_inventario_c1-c2.htm). This is an editorial judgment of communicative demand, not formal certification.
+
+| Level | Red Flag o No | Let’s Talk | La máquina | Regla absurda |
+|---|---|---|---|---|
+| A1 | 18 concrete actions; visible chunks/reason model; short plan exchange | 150 routine/preference questions; historical abstraction/support gaps remain | 24 familiar objects; visible answer frames, concrete loss and short reason | 15 laws/45 prompts; reaction, routine, concrete choice and stage-specific frames |
+| A2 | 18 routine behavior judgments and short reasons; optional hypothetical/past follow-ups need support | 90 practical requests, small problems, comparisons and simple plans | 30 everyday uses/preferences with simple reasons and optional original English support | 15 laws/45 questions about routines and practical adaptations with original support |
+| B1 | 18 connected explanations about promises, consistency and responses | 150 experience/opinion questions; historical B1/B2 stretch pockets | 30 explanations of consequences and alternatives; historical abstract stretch | 15 laws/45 questions linking daily life with social consequences; historical fairness stretch |
+| B2 | 18 argued positions about privacy, intent, impact and conditions | 120 grounded trade-offs, objections and negotiated conclusions | 30 dilemmas with counterpoints, competing needs and revised alternatives | 15 laws/45 questions requiring negotiation, exceptions and defended revisions |
+| C1 | 18 first impressions tested by hidden context; qualified criteria and exceptions | 120 nuanced reinterpretations, assumptions and bounded generalizations | 30 hidden functions/dependencies, substitutions and qualified principles | 15 laws/45 questions testing adaptations, loopholes, incentives and new norms |
+| C2 | 18 three-stage cases: pragmatics, testimony, implied commitment and conflicting principles | 120 precise interpretations, premise challenges and register changes preserving meaning | 30 sustained category disputes and rival readings, scope/evidence conditions and superior reformulation | 15 laws/45 questions testing wording, self-reference, time-reference and contradictory enforcement against hard cases |
+
+**No new-level progression inversion or blocking pedagogical finding remains.** C1 already reformulates and interprets; C2 is distinguished by sustained precision requirements and its final output. Lower levels are not made harder merely to preserve a cosmetic ladder. Independent C2 review corrected reveal-order evidence, narrative referents, a contradictory-enforcement setup, two idioms and three addressing forms. Every C2 item, including first/middle/final items and every support/closing, was reread after correction. Existing banks were untouched.
+
+#### Duplication review
+
+All **1,302 primary items**, including **708 from the 14 new variants**, were compared for exact equality and normalized equality (lowercase; accents/punctuation removed; whitespace collapsed), including across families. **Zero exact or normalized duplicate groups involve a Batch 1 addition.** Two historical-only Talk groups remain: A1 world 9/Q2 = B1 world 9/Q6; A1 world 9/Q7 = A1 world 11/Q5.
+
+Independent whole-bank reading also reviewed meaning, stems, consequences, closures and scaffolding; lexical candidate rankings were supplementary, not proof of originality. No fake whole-bank differentiation, filler bank, accidental English in newly authored content or copied final production was found. The following are deliberately reported rather than hidden behind a “zero duplication” claim:
+
+- Talk B2 world 8/Q5 and C1 world 8/Q6 both concern credit for an idea and can elicit similar face-saving answers. C1 introduces ambiguity about shared authorship, but the differentiation is locally weaker. This is a low-severity editorial caveat in frozen Run 1/2 banks, not a bank-level inversion or C2 leakage; preserve it for a separately authorized editorial pass.
+- All 30 frozen Machine B2 questions begin “¿Eliminarías…”. Their situations, consequences and counterpoints differ. C1 starts this way 5/30 times; C2 0/30. Functional A1 frames also naturally recur.
+- Worlds new banks have no normalized duplication within these reviewed classes: 294 primary prompts, 174 consequences/developments, 174 starters, 60 laws, 375 depth/interpretation/teacher prompts and 26 finale prompts. RF has 306 distinct new card-field strings; Talk has 189 distinct new support/closing strings. Class-specific counts are supplementary, not an alternative primary-item total.
+
+#### Architecture, verification and visual limits
+
+| Check | Final result |
+|---|---|
+| Conversation suite | **137 passed; 0 failed, skipped or cancelled**. Baseline 115; 22 new tests in four files. All 14 additions and original banks covered. |
+| Route/resource SSR | All **24 levels × their ten historical adapters = 60 render combinations**, plus **24 canonical resource views**. Exact selectors, defaults, unsupported C3 fallback, level-specific content, visible previews, objectives and JSON-LD educational level checked. Historical resource fallbacks remain explicit below. |
+| Navigation/state | Actual selector handlers and subscriptions preserve other query parameters/hash, notify simulated back/forward and use level-keyed children. World progress uses 12 distinct sessionStorage keys, retaining original B1 implicit keys. Conditional notes, gates, high-water progress, round/full reset and finale invalidation tested. RF/Talk disposable state and engines are preserved. |
+| Catalog/access/aliases | Four cards, 10 authoritative old route IDs, unchanged defaults, legacy aliases and query-independent resource canonicals/sitemap behavior. All four remain PRO; query selection does not change entitlement. Public metadata/renderers import no private bank. No new route, ID or card. |
+| Preservation | **22 bank fingerprints, 64 exact files**, earlier family variant/preview metadata, route ledger and full Run 1–3 status prefix match exact Run 3 Git objects. Earlier fixtures additionally protect the original ten banks and previous runs. |
+| Lint | `npm run lint` **passed** on final application/test source. |
+| TypeScript | Fresh before/after output byte-identical: **11 inherited, zero new** (billing 8, marketing 2, Mexico 1). Final `npx tsc --noEmit --incremental false`; output SHA-256 `2ce9713062b3ca39a9830abb205b00f5ae9d3d5e0368527b0bccb798281261cb`, including unchanged npm warning. |
+| Protected build | First attempt stopped at the premium-audio public-output assertion. The unchanged full repeat exited 0. Its captured log ended during SSR, so separate fresh `npm run validate:artifact` checks confirmed the completed artifact, private media decryption/range behavior and removed public copies. The built private bundle contains C2 bank IDs; the routed-image manifest contains both new thumbnails. **59 private client modules, 47 premium media files, 180 routed WebPs; 287 excluded paths.** |
+| Build incident scope | Initial audio reappearance is consistent with the repository's documented synchronized-checkout late-copy race. No build/protection/access script was changed and no guard was bypassed. The generated staging-directory remnant was preserved outside the repository, not committed. |
+| Technical review | Independent reviewer verified baseline provenance from Git and all 22 new tests. One new stale-context issue was fixed with a failing-then-passing regression; no blocking finding remains. |
+| Responsive/a11y structure | Wrapping controls, single-column C2 fields at 600px, labels, focus targets, disabled gates and inherited reduced-motion handling inspected. Actual UI handlers exercised by hook harness; no claim of real browser rendering. |
+| JSON/diff | Completion/provenance JSON validated; source-derived counts/paths and Markdown checked against JSON; `git diff --check` passed. |
+| Full `npm test` / worker harness | **Not run** because it creates/migrates local D1. No database-mutating verification used. |
+| Interactive QA | **Pending, not passed.** One capability check found no new permitted local preview. Earlier `ERR_BLOCKED_BY_CLIENT` / file-protocol policy restrictions were not retried or bypassed. Real touch, overflow/crop, focus appearance, browser remount/hydration and history acceptance remain unverified. No deployment for QA. |
+
+#### Consolidated thumbnail review
+
+All **24 level slots / 22 distinct saved WebPs** were visually inspected. The **20 pre-existing unique images** match Run 3 bytes; 14 images were added across Batch 1, including exactly two in Run 4. No older thumbnail was regenerated or overwritten. Neither new C2 image relies on a level badge.
+
+| New asset | Dimensions | Distinct C2 story |
+|---|---|---|
+| `public/conversation-worlds/elimination-machine-c2.webp` | 1672 × 941 | One cylinder yields circular and rectangular readings through optical panels, retaining floating Earth, cyan/amber machine and paired controls. Competing definitions, not a darker machine or another C1 consequence chamber. |
+| `public/conversation-worlds/absurd-universe-c2.webp` | 1672 × 941 | One Spanish in-world instruction, “LLEVA SOMBRERO”, is worn, carried and transported; same inverted city, golden architecture and floating tram. The short signage is intentional semantic art, not a level label. |
+
+Preserved visual exceptions: Machine A2/B1 share the same original image; Rules A2/B1 do likewise. RF original B1/B2 change cast and lighting; Talk original A1/A2 use empty chairs/props/portals instead of B1+ conversation partners and glass worlds. All six slots within each family remain recognizable, but the two historical pairs prevent claiming 24 unique images. C2 small-size interpretation/crop remains subject to pending in-product QA. Prompts, reference/output hashes and format-only conversion provenance are in `docs/lessons/conversation-batch1-run4-thumbnail-prompts.json`.
+
+#### Preserved known issues and completion boundaries
+
+- Historical Talk A1 support/abstraction gap, Talk B1 mixed B1/B2 demand, Machine B1 rights/inheritance/power and Rules B1 fairness/commodification stretches remain. RF originals are broadly plausible; its A2 optional follow-ups sometimes need support.
+- Talk A1/A2 bilingual preview drift and A2 150-question claim versus actual 90 remain. Original resource variants retain canonical-seed explanation/warmup and JSON-LD-image fallbacks when their preview lacks authored fields; visible requested-level images and educationalLevel still select correctly. All 14 new previews are authored per level.
+- The two original Talk duplicate groups, localized B2/C1 idea-credit overlap, Machine B2 repeated stems and visual exceptions above are preserved. Minor frozen Run 2 `a1-maquina-aire` ambiguity remains: the fictional consequence lacks a fan as well as air conditioning, which can read as an extra scene constraint or expanded category. It does not invert progression.
+- Historical voseo/tú variation and Worlds A2 English support are preserved. New Run 4 learner copy uses Spanish/tú. The 11 unrelated TypeScript diagnostics and interactive QA limitation remain unresolved.
+
+**Runs 1–3 remain intact. Batch 2 was not started. No main merge, auto-merging PR, deployment, D1 operation, production-data modification, authentication/Firebase/Paddle/PayPal/billing/Resend change, secret/environment/domain change, release-controller state change or deployment-configuration change occurred.** This is a pushed branch-only source delivery. Stop after Batch 1 closure.
+
+Run 4 remote checkpoints: `5eabbb7cd738f73e94cf76791a76d1af3dd47e49` (Run 3 preservation), `34f90358c5a5aa5ca9c5d5b560060558f99b2774` (two thumbnails/provenance), `b53c5b487ac126e93666044e1dc9075ea990ae89` (complete implementation/tests). The final documentation commit records closure; use branch HEAD for the complete deliverable.
+
+#### Run 4 exact changed-file manifest
+
+26 files relative to Run 3 final `1b342a9c6d8ecc2674f86f099c51d61d3a12574b`:
+
+- `app/conversation-families/authored-levels.ts`
+- `app/conversation-worlds/ConversationWorld.tsx`
+- `app/conversation-worlds/ConversationWorldFamily.tsx`
+- `app/conversation-worlds/c2-presentation.tsx`
+- `app/conversation-worlds/data-c2.ts`
+- `app/conversation-worlds/types.ts`
+- `app/conversation-worlds/worlds.css`
+- `docs/lessons/conversation-batch1-completion.json`
+- `docs/lessons/conversation-batch1-run4-thumbnail-prompts.json`
+- `docs/lessons/conversation-family-production-status.md`
+- `package.json`
+- `public/conversation-worlds/absurd-universe-c2.webp`
+- `public/conversation-worlds/elimination-machine-c2.webp`
+- `tests/conversation-batch1-routes.test.mjs`
+- `tests/conversation-batch1-run2-routes.test.mjs`
+- `tests/conversation-batch1-run2.test.mjs`
+- `tests/conversation-batch1-run3-routes.test.mjs`
+- `tests/conversation-batch1-run3.test.mjs`
+- `tests/conversation-batch1-run4-routes.test.mjs`
+- `tests/conversation-batch1-run4.test.mjs`
+- `tests/conversation-batch1.test.mjs`
+- `tests/conversation-worlds-a1.test.mjs`
+- `tests/conversation-worlds-c1.test.mjs`
+- `tests/conversation-worlds-c2-content.test.mjs`
+- `tests/conversation-worlds-c2.test.mjs`
+- `tests/fixtures/conversation-batch1-run3-preserved.json`
