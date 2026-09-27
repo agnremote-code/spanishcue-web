@@ -30,13 +30,13 @@ async function loadActivity(){
  };
 }
 
-test('C1 dispatches an independent 18-situation bank and rejects C2',()=>{
+test('C1 dispatches an independent 18-situation bank and rejects an unknown level',()=>{
  const config=getLevelConfig('C1');
  assert.equal(config.situations.length,18);
  assert.equal(new Set(config.situations).size,18);
  assert.equal(config.followUps.length,18);
  for(const level of ['A1','A2','B1','B2'])for(const situation of config.situations)assert.ok(!getLevelConfig(level).situations.includes(situation));
- assert.throws(()=>getLevelConfig('C2'),/Nivel no disponible/);
+ assert.throws(()=>getLevelConfig('D1'),/Nivel no disponible/);
  assert.equal(config.finale.length,4);
 });
 

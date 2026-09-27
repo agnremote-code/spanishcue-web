@@ -8,7 +8,7 @@ const { talkVariants } = await import('data:text/javascript;base64,' + Buffer.fr
 
 test('Let’s Talk adds exactly 120 distinct C1 questions in the same fifteen worlds', () => {
   assert.ok(talkVariants.C1, 'C1 is authored and registered');
-  assert.deepEqual(Object.keys(talkVariants), ['A1', 'A2', 'B1', 'B2', 'C1']);
+  assert.deepEqual(Object.keys(talkVariants), ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
   const worlds = talkVariants.C1.activities;
   assert.equal(worlds.length, 15);
   const previous = new Set(['A1', 'A2', 'B1', 'B2'].flatMap(level => talkVariants[level].activities.flatMap(topic => topic.questions)));
@@ -52,14 +52,14 @@ test('C1 has topic-specific optional follow-ups and closing connected to selecte
 
 test('C1 uses the shared keyed world and preserves historical route defaults and three-question gate', () => {
   const page = readFileSync('app/choose-conversation/page.tsx', 'utf8');
-  assert.match(page, /levels=\{\["A1","A2","B1","B2","C1"\]\}/);
+  assert.match(page, /levels=\{\["A1","A2","B1","B2","C1","C2"\]\}/);
   assert.match(page, /TalkExperience key=\{level\}/);
   assert.match(page, /defaultLevel=\{variant==="starter"\?"A1":variant==="basic"\?"A2":"B1"\}/);
   assert.match(page, /selected\.length!==3/);
   assert.match(page, /s\.length<3/);
   assert.match(page, /c1ClosingQuestions\(selected\.map/);
   assert.match(page, /c1TopicSupport/);
-  assert.doesNotMatch(page, /"C2"/);
+  assert.match(page, /"C2"/);
 });
 
 test('C1 conversation board opens only with exactly three choices and refreshes its synthesis after reselection', async () => {
