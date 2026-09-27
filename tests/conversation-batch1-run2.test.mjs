@@ -12,8 +12,8 @@ const hash = value => hashBytes(JSON.stringify(value));
 const additions = [
   ['red-flag-o-no', 'C1', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
   ['lets-talk', 'C1', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
-  ['la-maquina-que-elimina-cosas', 'A1', ['A1', 'A2', 'B1', 'B2', 'C1']],
-  ['tu-vida-con-una-regla-absurda', 'A1', ['A1', 'A2', 'B1', 'B2', 'C1']],
+  ['la-maquina-que-elimina-cosas', 'A1', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
+  ['tu-vida-con-una-regla-absurda', 'A1', ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']],
 ];
 
 test('all fourteen original and Run 1 banks, existing metadata and route ledger remain intact', () => {
@@ -58,7 +58,6 @@ test('all four Run 2 additions remain in the existing PRO family cards and resou
     assert.equal(resource.id, family.canonicalLessonId);
     assert.deepEqual(resource.levels, levels);
     assert.ok(family.variants[level].communicativeObjectives.length >= 3);
-    if (level === 'A1') assert.ok(!family.variants.C2);
   }
   assert.equal(added, 4);
 });
@@ -93,7 +92,7 @@ test('all supported levels preserve query/hash; unsupported levels retain every 
       assert.equal(p.resolveConversationLevel(family, level), level);
       assert.equal(p.conversationLevelUrl(`https://example.test${family.canonicalPath}?locale=es&source=teacher#round`, family, level), `${family.canonicalPath}?locale=es&source=teacher&level=${level}#round`);
     }
-    const invalid = ['a1', 'INVALID', '', null, ...(id === 'red-flag-o-no' || id === 'lets-talk' ? [] : ['C2'])];
+    const invalid = ['C3', 'a1', 'INVALID', '', null];
     for (const seed of p.lessons.filter(l => family.legacyLessonIds.includes(l.id))) {
       for (const requested of invalid) assert.equal(p.resolveConversationLevel({...family, defaultLevel: seed.level}, requested), seed.level, `${seed.path}: ${requested}`);
     }

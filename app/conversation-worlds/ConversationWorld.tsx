@@ -3,13 +3,14 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import type { WorldElimination, WorldRule, WorldGuide, WorldLevel } from './types';
+import { c2MachineReframe, c2Closing, completedC2Decision, emptyC2Finale, type WorldDecision, type C2Finale } from './c2-presentation';
 import { conversationWorldStorageKey } from './state';
 import { ConversationClosing } from '../conversation-families/ConversationFamily';
 import './worlds.css';
 import { SpanishCueBrand } from '../SpanishCueBrand';
 
 type Choice = 'yes' | 'no';
-type Decision = { first: Choice; final?: Choice; revealed?: boolean };
+type Decision = WorldDecision;
 type Saved = { index: number; decisions: Record<string, Decision>; opened: Record<string, number> };
 const empty = (): Saved => ({index:0,decisions:{},opened:{}});
 type Finale = { selected: string[]; keep: string; reject: string; modify: string; principle: string; exception: string; substitute: string; effect: string; rewrite: string; open: boolean };
@@ -31,6 +32,8 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
   const a2 = level==='A2';
   const b2 = level==='B2';
   const c1 = level==='C1';
+  const c2 = level==='C2';
+  const advanced = c1||c2;
   const entries = machine ? machineRounds : ruleRounds;
   const [showEnglish,setShowEnglish] = useState(false);
   const [saved,setSaved] = useState<Saved>(empty);
@@ -39,6 +42,7 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
   const [group,setGroup] = useState('Todas');
   const [notice,setNotice] = useState('');
   const [finale,setFinale] = useState<Finale>(emptyFinale);
+  const [c2Finale,setC2Finale] = useState<C2Finale>(emptyC2Finale);
   const [ruleCursor,setRuleCursor] = useState<Record<string,number>>({});
   const questionRef = useRef<HTMLHeadingElement>(null);
   const storageKey = conversationWorldStorageKey(mode,level);
@@ -48,8 +52,8 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
   const rule = ruleRounds[index];
   const decision = saved.decisions[entry.id];
   const decisionFirst = decision?.first;
-  const questionNumber = (c1 ? ruleCursor[entry.id] : undefined) ?? saved.opened[entry.id] ?? -1;
-  const complete = entries.filter(e=>machine ? Boolean(saved.decisions[e.id]?.final) : saved.opened[e.id]===3).length;
+  const questionNumber = (advanced ? ruleCursor[entry.id] : undefined) ?? saved.opened[entry.id] ?? -1;
+  const complete = entries.filter(e=>machine ? (c2?completedC2Decision(saved.decisions[e.id]):Boolean(saved.decisions[e.id]?.final)) : saved.opened[e.id]===3).length;
   const progress = Math.round(100*complete/entries.length);
   const groups = ['Todas',...new Set(entries.map(e=>e.group))];
   const completedDecisions = machineRounds.filter(round=>saved.decisions[round.id]?.final);
@@ -79,6 +83,42 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
     return ()=>window.clearTimeout(timer);
   },[machine,entry.id,decisionFirst,motion]);
 
+  useEffect(()=>{
+    if(!c2)return;
+    const target=decision?.compared?'cw-c2-reading':!machine&&questionNumber>=0?'cw-rule-question-title':null;
+    if(!target)return;
+    const frame=window.requestAnimationFrame(()=>document.getElementById(target)?.focus({preventScroll:true}));
+    return ()=>window.cancelAnimationFrame(frame);
+  },[c2,decision?.compared,machine,questionNumber,entry.id]);
+  useEffect(()=>{
+    if(!c2||!c2Finale.open)return;
+    const frame=window.requestAnimationFrame(()=>document.getElementById('cw-c2-board-title')?.focus({preventScroll:true}));
+    return ()=>window.cancelAnimationFrame(frame);
+  },[c2,c2Finale.open]);
+
+  function updateC2Decision(field:'compared'|'reformulation'|'condition',value:string|boolean) {
+    if(!decision?.revealed)return;
+    setSaved(s=>({...s,decisions:{...s.decisions,[entry.id]:{...s.decisions[entry.id],[field]:value,final:undefined}}}));
+    setC2Finale(s=>({...s,open:false}));
+  }
+  function voteC2(final:NonNullable<Decision['final']>) {
+    if(!decision?.revealed||!decision.compared||!decision.reformulation?.trim()||(final==='conditional'&&!decision.condition?.trim()))return;
+    setSaved(s=>({...s,decisions:{...s.decisions,[entry.id]:{...s.decisions[entry.id],final}}}));
+    setC2Finale(s=>({...s,open:false}));
+    setNotice('Decisión final guardada. Explica tu nueva formulación.');
+  }
+
+  function updateC2Finale(field:Exclude<keyof C2Finale,'open'>,value:string) {
+    setC2Finale(previous=>{
+      const next={...previous,[field]:value,open:false};
+      if(previous[field]===value)return next;
+      if(field==='law')return {...next,diagnosis:'',rewrite:'',edgeOne:'',edgeTwo:'',limitation:''};
+      if(field==='proposition')return {...next,rewrite:'',improvement:''};
+      if(['eliminate','redefined','binary'].includes(field)&&![next.eliminate,next.redefined,next.binary].includes(next.proposition))return {...next,proposition:'',rewrite:'',improvement:''};
+      return next;
+    });
+  }
+
   function go(next:number) {
     setSaved(s=>({...s,index:Math.min(Math.max(next,0),entries.length-1)}));
     setNotice('');
@@ -86,11 +126,12 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
   }
   function choose(choice:Choice) {
     setSaved(s=>({...s,decisions:{...s.decisions,[entry.id]:{first:choice}}}));
+    if(c2)setC2Finale(s=>({...s,open:false}));
     setNotice('Decisión tomada. Ahora, conversemos.');
   }
   function reveal() {
     setSaved(s=>({...s,decisions:{...s.decisions,[entry.id]:{...s.decisions[entry.id],revealed:true}}}));
-    setNotice('Consecuencia revelada. Puedes mantener tu decisión o cambiarla.');
+    setNotice(c2?'Consecuencia revelada. Contrasta la otra lectura antes de reformular.':'Consecuencia revelada. Puedes mantener tu decisión o cambiarla.');
   }
   function decideFinal(change:boolean) {
     if(!decision)return;
@@ -100,13 +141,14 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
     setNotice(change?'Cambiaste de opinión. Tu decisión quedó guardada.':c1?'Mantienes tu decisión. Quedó guardada.':'Mantenés tu decisión. Quedó guardada.');
   }
   function openQuestion(n:number) {
-    if(c1)setRuleCursor(s=>({...s,[entry.id]:n}));
-    setSaved(s=>({...s,opened:{...s.opened,[entry.id]:c1?Math.max(s.opened[entry.id]??-1,n):n}}));
+    if(advanced)setRuleCursor(s=>({...s,[entry.id]:n}));
+    setSaved(s=>({...s,opened:{...s.opened,[entry.id]:advanced?Math.max(s.opened[entry.id]??-1,n):n}}));
     setNotice(n===3?'Regla conversada. Puedes elegir otra.':`Pregunta ${n+1} de 3.`);
   }
   function resetRound() {
     setSaved(s=>{const decisions={...s.decisions};const opened={...s.opened};delete decisions[entry.id];delete opened[entry.id];return {...s,decisions,opened};});
-    if(c1){setFinale(emptyFinale());setRuleCursor(s=>{const cursor={...s};delete cursor[entry.id];return cursor;});}
+    if(c2)setC2Finale(emptyC2Finale());
+    if(advanced){setFinale(emptyFinale());setRuleCursor(s=>{const cursor={...s};delete cursor[entry.id];return cursor;});}
     setNotice('Ronda reiniciada.');
   }
 
@@ -117,15 +159,15 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
     setFinale(s=>({...s,open:false,selected:s.selected.includes(id)?s.selected.filter(value=>value!==id):s.selected.length<3?[...s.selected,id]:s.selected}));
   }
 
-  return <main className={`cw-world cw-${mode}${c1?' cw-c1':b2?' cw-b2':a1?' cw-a1':''}`} data-motion={motion}>
+  return <main className={`cw-world cw-${mode}${c2?' cw-c2':c1?' cw-c1':b2?' cw-b2':a1?' cw-a1':''}`} data-motion={motion}>
     <div className="cw-shell">
-      <header className="cw-topbar"><Link href="/" className="cw-brand"><SpanishCueBrand variant="compact" context={b2||a1||c1?'MUNDOS DE CONVERSACIÓN':'CONVERSATION WORLDS'} /></Link><Link href="/#library-results" className="cw-back">← Biblioteca</Link><div className="cw-top-actions"><span className="cw-level">{level} · CONVERSACIÓN</span>{a2&&<button onClick={()=>setShowEnglish(v=>!v)} aria-pressed={showEnglish}>{showEnglish?'Ocultar inglés':'Ayuda en inglés'}</button>}<button onClick={()=>setMotion(m=>!m)} aria-pressed={!motion}>{motion?'Pausar movimiento':'Activar movimiento'}</button></div></header>
+      <header className="cw-topbar"><Link href="/" className="cw-brand"><SpanishCueBrand variant="compact" context={b2||a1||advanced?'MUNDOS DE CONVERSACIÓN':'CONVERSATION WORLDS'} /></Link><Link href="/#library-results" className="cw-back">← Biblioteca</Link><div className="cw-top-actions"><span className="cw-level">{level} · CONVERSACIÓN</span>{a2&&<button onClick={()=>setShowEnglish(v=>!v)} aria-pressed={showEnglish}>{showEnglish?'Ocultar inglés':'Ayuda en inglés'}</button>}<button onClick={()=>setMotion(m=>!m)} aria-pressed={!motion}>{motion?'Pausar movimiento':'Activar movimiento'}</button></div></header>
       <section className="cw-intro">
         <div><p className="cw-eyebrow">{machine?'EXPERIMENTO 01 · DECIDIR Y RECONSIDERAR':'EXPERIMENTO 02 · IMAGINAR OTRA VIDA'}</p><h1>{machine?<>La máquina que <em>elimina cosas</em> del mundo.</>:<>Tu vida con una <em>regla absurda.</em></>}</h1></div>
         <div className="cw-intro-copy"><p>{guide ? guide.introduction : a2?(machine?'Esta máquina puede borrar una cosa del mundo para siempre. Tú eliges qué se queda y qué desaparece.':'Mañana te despiertas en un mundo diferente. En cada ronda hay una regla nueva.'):machine?'Una empresa inventó una máquina capaz de eliminar para siempre una cosa del planeta. Tú decides qué desaparece.':'Mañana te despiertas y descubres que el mundo funciona distinto. Cada ronda cambia una ley del universo.'}</p><p className="cw-instruction">{a1?(machine?'Elige eliminar o conservar. Di una razón, mira qué pasa y elige otra vez.':'Lee la regla. Primero di si te gusta. Después cuenta tu día y elige qué hacer.'):machine?'Primero elige Sí o No. La tarjeta gira, aparece una pregunta y después puedes descubrir el giro.':'Lee la nueva regla, imagina la situación y abre las tres preguntas de una en una.'}</p><span className="cw-count">{machine?(a1?`${machineRounds.length} decisiones · una razón · una sorpresa`:'30 decisiones · 30 preguntas centrales · 30 giros'):'15 reglas inesperadas · 45 preguntas'}</span></div>
       </section>
 
-      {(b2||a1||c1)&&guide&&<section className="cw-b2-preparation" aria-labelledby="cw-prepare-title">
+      {(b2||a1||advanced)&&guide&&<section className="cw-b2-preparation" aria-labelledby="cw-prepare-title">
         <div className="cw-b2-warmup"><p className="cw-eyebrow">ANTES DEL EXPERIMENTO · 5 MIN</p><h2 id="cw-prepare-title">Preparar la conversación</h2><p>{guide.warmup}</p></div>
         <details className="cw-b2-guide"><summary>Guía docente <span>45 minutos</span></summary><p>{guide.objective}</p><ol>{guide.stages.map(stage=><li key={stage.time}><span>{stage.time}</span><div><strong>{stage.title}</strong><p>{stage.task}</p></div></li>)}</ol><p className="cw-b2-note">{guide.teacherNote}</p></details>
         {a1&&<BeginnerHelp frames={guide.moves}/>}
@@ -148,18 +190,18 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
             <div className="cw-flip-inner">
               <article className="cw-card cw-front" aria-hidden={!!decision} inert={!!decision}>
                 <div className="cw-card-top"><span>ANTES DE APRETAR EL BOTÓN</span><span>{String(index+1).padStart(2,'0')}</span></div>
-                <h2>{item.title}</h2><p className="cw-context">{item.intro}</p><div className="cw-decision-prompt">{a1?'¿Lo eliminas o no?':b2||c1?'¿Eliminarías esto del mundo?':'¿Lo eliminás para siempre?'}</div>
+                <h2>{item.title}</h2><p className="cw-context">{item.intro}</p><div className="cw-decision-prompt">{a1?'¿Lo eliminas o no?':b2||advanced?'¿Eliminarías esto del mundo?':'¿Lo eliminás para siempre?'}</div>
                 <div className="cw-choices"><button className="cw-yes" onClick={()=>choose('yes')}><b>SÍ</b><span>Eliminar</span></button><button className="cw-no" onClick={()=>choose('no')}><b>NO</b><span>Conservar</span></button></div>
                 <p className="cw-card-note">Elige primero. La pregunta está del otro lado.</p>
               </article>
               <article className="cw-card cw-back-face" aria-hidden={!decision} inert={!decision}>
-                {decision&&<><div className="cw-card-top"><span>TU PRIMERA DECISIÓN</span><span className={`cw-choice-pill cw-choice-${decision.first}`}>{decision.first==='yes'?'ELIMINAR':'CONSERVAR'}</span></div><h2 className="cw-item-heading">{item.title}</h2><p className="cw-eyebrow">AHORA, CONVERSEMOS</p><h3 className="cw-question" ref={questionRef} tabIndex={-1}>{item.question}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{item.questionEn}</p>}<>{a1?<BeginnerHelp frames={item.answerFrames??[item.starter]} words={item.words}/>:<TalkHelp words={item.words} starter={item.starter}/>}</>{c1&&item.depthPrompt&&<p className="cw-c1-depth">{item.depthPrompt}</p>}{b2&&item.followUp&&<details className="cw-help cw-b2-followup"><summary>Profundizar la conversación <span aria-hidden="true">+</span></summary><div><p>{item.followUp}</p></div></details>}
-                {!decision.revealed?<button className="cw-primary cw-reveal" onClick={reveal}>{a1||a2?'¿Qué pasa después?':'Descubrir la consecuencia'} <span aria-hidden="true">↗</span></button>:<section className="cw-consequence"><p className="cw-eyebrow">GIRO · SI DESAPARECE…</p><p>{item.consequence}</p>{b2&&<div className="cw-b2-counterpoint"><p className="cw-eyebrow">OTRA VOZ</p><p>{item.counterpoint}</p><p className="cw-b2-revision">{item.revision}</p></div>}{c1&&<div className="cw-c1-reinterpretation"><p className="cw-eyebrow">REPENSAR LA PROPUESTA</p><p>{item.reinterpretation}</p>{item.teacherChallenge&&<details className="cw-help"><summary>Desafío docente <span aria-hidden="true">+</span></summary><div><p>{item.teacherChallenge}</p></div></details>}</div>}<h4>{c1?'¿Qué parte de tu decisión mantienes?':a1?'¿Cambias de idea?':b2?'Después de escuchar la objeción…':a2?'¿Pensás lo mismo ahora?':'¿Seguís manteniendo tu decisión?'}</h4><div className="cw-final-choices"><button onClick={()=>decideFinal(false)} aria-pressed={decision.final===decision.first}>{a1?'No cambio de idea':a2?'Sí, pienso lo mismo':'Mantengo mi decisión'}</button><button onClick={()=>decideFinal(true)} aria-pressed={!!decision.final&&decision.final!==decision.first}>{a1?'Cambio de idea':a2?'No, cambio de idea':'Cambio de opinión'}</button></div>{decision.final&&<p className="cw-verdict">Decisión final: <strong>{decision.final==='yes'?'eliminar':'conservar'}</strong>. {c1?'Precisa qué eliminarías, qué función conservarías y qué excepción exige tu argumento.':a1?'Ahora elijo… porque…':b2?'Explica qué argumento aceptas, qué mantienes y bajo qué condición revisarías tu postura.':a2?'Contá por qué.':'Contá qué pesó más para vos.'}</p>}</section>}</>}
+                {decision&&<><div className="cw-card-top"><span>TU PRIMERA DECISIÓN</span><span className={`cw-choice-pill cw-choice-${decision.first}`}>{decision.first==='yes'?'ELIMINAR':'CONSERVAR'}</span></div><h2 className="cw-item-heading">{item.title}</h2><p className="cw-eyebrow">AHORA, CONVERSEMOS</p><h3 className="cw-question" ref={questionRef} tabIndex={-1}>{item.question}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{item.questionEn}</p>}<>{a1?<BeginnerHelp frames={item.answerFrames??[item.starter]} words={item.words}/>:<TalkHelp words={item.words} starter={item.starter}/>}</>{advanced&&item.depthPrompt&&<p className="cw-c1-depth">{item.depthPrompt}</p>}{b2&&item.followUp&&<details className="cw-help cw-b2-followup"><summary>Profundizar la conversación <span aria-hidden="true">+</span></summary><div><p>{item.followUp}</p></div></details>}
+                {!decision.revealed?<button className="cw-primary cw-reveal" onClick={reveal}>{a1||a2?'¿Qué pasa después?':'Descubrir la consecuencia'} <span aria-hidden="true">↗</span></button>:<section className="cw-consequence"><p className="cw-eyebrow">GIRO · SI DESAPARECE…</p><p>{item.consequence}</p>{b2&&<div className="cw-b2-counterpoint"><p className="cw-eyebrow">OTRA VOZ</p><p>{item.counterpoint}</p><p className="cw-b2-revision">{item.revision}</p></div>}{advanced&&<div className="cw-c1-reinterpretation"><p className="cw-eyebrow">REPENSAR LA PROPUESTA</p><p>{item.reinterpretation}</p>{item.teacherChallenge&&<details className="cw-help"><summary>Desafío docente <span aria-hidden="true">+</span></summary><div><p>{item.teacherChallenge}</p></div></details>}</div>}{c2?c2MachineReframe({item,decision,update:updateC2Decision,vote:voteC2}):<><h4>{c1?'¿Qué parte de tu decisión mantienes?':a1?'¿Cambias de idea?':b2?'Después de escuchar la objeción…':a2?'¿Pensás lo mismo ahora?':'¿Seguís manteniendo tu decisión?'}</h4><div className="cw-final-choices"><button onClick={()=>decideFinal(false)} aria-pressed={decision.final===decision.first}>{a1?'No cambio de idea':a2?'Sí, pienso lo mismo':'Mantengo mi decisión'}</button><button onClick={()=>decideFinal(true)} aria-pressed={!!decision.final&&decision.final!==decision.first}>{a1?'Cambio de idea':a2?'No, cambio de idea':'Cambio de opinión'}</button></div>{decision.final&&<p className="cw-verdict">Decisión final: <strong>{decision.final==='yes'?'eliminar':'conservar'}</strong>. {c1?'Precisa qué eliminarías, qué función conservarías y qué excepción exige tu argumento.':a1?'Ahora elijo… porque…':b2?'Explica qué argumento aceptas, qué mantienes y bajo qué condición revisarías tu postura.':a2?'Contá por qué.':'Contá qué pesó más para vos.'}</p>}</>}</section>}</>}
               </article>
             </div>
           </div> : <article className="cw-card cw-rule-card" key={entry.id}>
-            <div className="cw-card-top"><span>NUEVA LEY DEL UNIVERSO</span><span>REGLA {String(index+1).padStart(2,'0')}</span></div><h2>{rule.title}</h2><p className="cw-law">{rule.law}</p>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.lawEn}</p>}<div className="cw-scene-situation"><span>{b2||c1?'IMAGINA ESTA SITUACIÓN':'IMAGINÁ ESTO'}</span><p>{rule.scene}</p></div>
-            {questionNumber<0?<button className="cw-primary" onClick={()=>openQuestion(0)}>Abrir la primera pregunta <span aria-hidden="true">↗</span></button>:<div className="cw-rule-question" key={Math.min(questionNumber,2)}><div className="cw-question-steps" aria-label="Preguntas de esta regla">{rule.questions.map((_,n)=><button key={n} onClick={()=>openQuestion(n)} disabled={c1&&n>(saved.opened[entry.id]??-1)} aria-current={Math.min(questionNumber,2)===n?'step':undefined}>{n+1}<span>{(c1?['La intención','El truco','La nueva costumbre']:a1?['Mi reacción','Mi día','Mi elección']:b2?['En la práctica','Otra perspectiva','Revisar la ley']:a2?['Primera','Segunda','Tercera']:['Tu vida','Los demás','Un paso más'])[n]}</span></button>)}</div>{c1&&questionNumber>0&&<section className="cw-c1-development" aria-label="La ciudad cambia">{rule.developments?.slice(0,Math.min(questionNumber,2)).map((development,n)=><div key={development}><p className="cw-eyebrow">{n===0?'AL CABO DE UN MES':'UN AÑO DESPUÉS'}</p><p>{development}</p></div>)}</section>}<h3 className="cw-question" tabIndex={-1}>{rule.questions[Math.min(questionNumber,2)]}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.questionsEn?.[Math.min(questionNumber,2)]}</p>}<>{a1?<BeginnerHelp frames={rule.questionFrames?.[Math.min(questionNumber,2)]??[rule.starter]} words={rule.words}/>:<TalkHelp words={rule.words} starter={rule.starter}/>}</>{(b2||c1)&&questionNumber>=2&&rule.teacherFollowUp&&<details className="cw-help cw-b2-followup"><summary>Repregunta docente <span aria-hidden="true">+</span></summary><div><p>{rule.teacherFollowUp}</p></div></details>}{questionNumber<2?<button className="cw-primary" onClick={()=>openQuestion(questionNumber+1)}>Siguiente pregunta <span aria-hidden="true">→</span></button>:questionNumber===2?<button className="cw-primary" onClick={()=>openQuestion(3)}>Terminamos esta regla <span aria-hidden="true">✓</span></button>:<p className="cw-verdict">{c1?'Regla conversada. Explica qué cambió entre la intención y la costumbre; ya puedes incluirla en tu ciudad final.':b2?'Regla conversada. Resume la versión que defenderías y la objeción que aún queda por resolver.':'Regla conversada. Elige otro universo cuando quieras.'}</p>}</div>}
+            <div className="cw-card-top"><span>NUEVA LEY DEL UNIVERSO</span><span>REGLA {String(index+1).padStart(2,'0')}</span></div><h2>{rule.title}</h2><p className="cw-law">{rule.law}</p>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.lawEn}</p>}<div className="cw-scene-situation"><span>{b2||advanced?'IMAGINA ESTA SITUACIÓN':'IMAGINÁ ESTO'}</span><p>{rule.scene}</p></div>
+            {questionNumber<0?<button className="cw-primary" onClick={()=>openQuestion(0)}>Abrir la primera pregunta <span aria-hidden="true">↗</span></button>:<div className="cw-rule-question" key={Math.min(questionNumber,2)}><div className="cw-question-steps" aria-label="Preguntas de esta regla">{rule.questions.map((_,n)=><button key={n} onClick={()=>openQuestion(n)} disabled={advanced&&n>(saved.opened[entry.id]??-1)} aria-current={Math.min(questionNumber,2)===n?'step':undefined}>{n+1}<span>{(c2?['La letra','Otra lectura','Poner a prueba']:c1?['La intención','El truco','La nueva costumbre']:a1?['Mi reacción','Mi día','Mi elección']:b2?['En la práctica','Otra perspectiva','Revisar la ley']:a2?['Primera','Segunda','Tercera']:['Tu vida','Los demás','Un paso más'])[n]}</span></button>)}</div>{advanced&&questionNumber>0&&<section className="cw-c1-development" aria-label="La ciudad cambia">{rule.developments?.slice(0,Math.min(questionNumber,2)).map((development,n)=><div key={development}><p className="cw-eyebrow">{c2?(n===0?'UNA INTERPRETACIÓN EN LA CALLE':'OTRO CASO PONE A PRUEBA LA LEY'):n===0?'AL CABO DE UN MES':'UN AÑO DESPUÉS'}</p><p>{development}</p></div>)}</section>}<h3 id="cw-rule-question-title" className="cw-question" tabIndex={-1}>{rule.questions[Math.min(questionNumber,2)]}</h3>{a2&&showEnglish&&<p className="cw-translation" lang="en">{rule.questionsEn?.[Math.min(questionNumber,2)]}</p>}<>{a1?<BeginnerHelp frames={rule.questionFrames?.[Math.min(questionNumber,2)]??[rule.starter]} words={rule.words}/>:<TalkHelp words={rule.words} starter={rule.starter}/>}</>{(b2||advanced)&&questionNumber>=2&&rule.teacherFollowUp&&<details className="cw-help cw-b2-followup"><summary>Repregunta docente <span aria-hidden="true">+</span></summary><div><p>{rule.teacherFollowUp}</p></div></details>}{questionNumber<2?<button className="cw-primary" onClick={()=>openQuestion(questionNumber+1)}>Siguiente pregunta <span aria-hidden="true">→</span></button>:questionNumber===2?<button className="cw-primary" onClick={()=>openQuestion(3)}>Terminamos esta regla <span aria-hidden="true">✓</span></button>:<p className="cw-verdict">{c2?'Regla conversada. Ya puedes revisar su redacción y probar dos casos límite en el cierre.':c1?'Regla conversada. Explica qué cambió entre la intención y la costumbre; ya puedes incluirla en tu ciudad final.':b2?'Regla conversada. Resume la versión que defenderías y la objeción que aún queda por resolver.':'Regla conversada. Elige otro universo cuando quieras.'}</p>}</div>}
           </article>}
           <nav className="cw-next" aria-label="Cambiar de ronda"><button disabled={index===0} onClick={()=>go(index-1)}>← Anterior</button><span>{index+1} de {entries.length}</span><button disabled={index===entries.length-1} onClick={()=>go(index+1)}>{machine?'Otra decisión':'Otra regla'} →</button></nav>
           <p className="cw-status" role="status" aria-live="polite">{notice||'Puedes elegir cualquier ronda en el panel de abajo.'}</p>
@@ -168,10 +210,10 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
 
       <section className="cw-rounds" aria-labelledby="cw-rounds-title"><div className="cw-section-heading"><div><p className="cw-eyebrow">ELIGE POR DÓNDE SEGUIR</p><h2 id="cw-rounds-title">{machine?(a1?'Cosas de todos los días. Tú eliges.':'Treinta cosas. Ninguna decisión simple.'):'Una vida distinta en cada ronda.'}</h2></div><span>{machine?'No hace falta hacerlas todas hoy.':'Puedes abrir las reglas en cualquier orden.'}</span></div>
         <div className="cw-groups" aria-label="Filtrar rondas">{groups.map(g=><button key={g} aria-pressed={group===g} onClick={()=>setGroup(g)}>{g}</button>)}</div>
-        <div className="cw-round-grid">{entries.map((e,n)=>{if(group!=='Todas'&&group!==e.group)return null;const done=machine?Boolean(saved.decisions[e.id]?.final):saved.opened[e.id]===3;return <button key={e.id} className={`cw-round-tile ${n===index?'cw-current':''} ${done?'cw-done':''}`} onClick={()=>go(n)} aria-current={n===index?'step':undefined} style={{'--tile-delay':`${n%10*35}ms`} as CSSProperties}><span className="cw-tile-meta">{String(n+1).padStart(2,'0')}<i>{done?'Conversada':n===index?'En curso':''}</i></span><strong>{e.title}</strong><span className="cw-tile-bottom">{machine?'Decidir':'Explorar regla'} <b aria-hidden="true">↗</b></span></button>;})}</div>
+        <div className="cw-round-grid">{entries.map((e,n)=>{if(group!=='Todas'&&group!==e.group)return null;const done=machine?(c2?completedC2Decision(saved.decisions[e.id]):Boolean(saved.decisions[e.id]?.final)):saved.opened[e.id]===3;return <button key={e.id} className={`cw-round-tile ${n===index?'cw-current':''} ${done?'cw-done':''}`} onClick={()=>go(n)} aria-current={n===index?'step':undefined} style={{'--tile-delay':`${n%10*35}ms`} as CSSProperties}><span className="cw-tile-meta">{String(n+1).padStart(2,'0')}<i>{done?'Conversada':n===index?'En curso':''}</i></span><strong>{e.title}</strong><span className="cw-tile-bottom">{machine?'Decidir':'Explorar regla'} <b aria-hidden="true">↗</b></span></button>;})}</div>
       </section>
 
-      {c1&&guide ? <>
+      {c2&&guide ? c2Closing({machine,rounds:machineRounds,rules:ruleRounds,decisions:saved.decisions,opened:saved.opened,guide,closing,finale:c2Finale,update:updateC2Finale,open:value=>{setC2Finale(s=>({...s,open:value}));if(!value)document.getElementById('cw-c2-closing-title')?.focus({preventScroll:true});},go}) : c1&&guide ? <>
         <section className="cw-b2-workshop" aria-label="Recursos para precisar"><details className="cw-help"><summary>Apoyo para matizar y reformular <span aria-hidden="true">+</span></summary><div><ul>{guide.moves.map(move=><li key={move}>{move}</li>)}</ul></div></details><details className="cw-help"><summary>Una objeción que pone a prueba tu criterio <span aria-hidden="true">+</span></summary><div><p>{guide.challenge}</p></div></details></section>
         <section className="cw-c1-closing" aria-labelledby="cw-c1-closing-title">
           <p className="cw-eyebrow">PARA TERMINAR · 10 MIN</p><h2 id="cw-c1-closing-title">{guide.closingTitle}</h2><p>{guide.closingTask}</p>
@@ -199,7 +241,7 @@ export default function ConversationWorld({mode,level,machineRounds,ruleRounds,c
         <section className="cw-b2-workshop" aria-label="Recursos para argumentar"><details className="cw-help"><summary>Recursos para matizar y negociar <span aria-hidden="true">+</span></summary><div><ul>{guide.moves.map(move=><li key={move}>{move}</li>)}</ul></div></details><details className="cw-help"><summary>Desafío oral · Cambiar de perspectiva <span aria-hidden="true">+</span></summary><div><p>{guide.challenge}</p></div></details></section>
         <details className="cw-b2-closing"><summary>{guide.closingTitle}<span>10 min</span></summary><p>{guide.closingTask}</p><ol>{closing.map(question=><li key={question}>{question}</li>)}</ol></details>
       </> : <ConversationClosing questions={closing} /> }
-      <footer className="cw-footer"><p>Conversación libre · {c1?'Español':'Español rioplatense'} · Nivel {level}</p><div><button onClick={()=>{setSaved(empty());setNotice('Nueva conversación. Empezamos de cero.');setGroup('Todas');setFinale(emptyFinale());setRuleCursor({});}}>Nueva conversación</button><a href={(machine?'/tu-vida-con-una-regla-absurda':'/la-maquina-que-elimina-cosas')+(c1?'?level=C1':a1?'?level=A1':b2?'?level=B2':a2?'-a2':'')}>{machine?'Ir a Tu vida con una regla absurda':'Ir a La máquina que elimina cosas'} →</a></div></footer>
+      <footer className="cw-footer"><p>Conversación libre · {advanced?'Español':'Español rioplatense'} · Nivel {level}</p><div><button onClick={()=>{setSaved(empty());setNotice('Nueva conversación. Empezamos de cero.');setGroup('Todas');setFinale(emptyFinale());setC2Finale(emptyC2Finale());setRuleCursor({});}}>Nueva conversación</button><a href={(machine?'/tu-vida-con-una-regla-absurda':'/la-maquina-que-elimina-cosas')+(c2?'?level=C2':c1?'?level=C1':a1?'?level=A1':b2?'?level=B2':a2?'-a2':'')}>{machine?'Ir a Tu vida con una regla absurda':'Ir a La máquina que elimina cosas'} →</a></div></footer>
     </div>
   </main>;
 }

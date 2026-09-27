@@ -61,9 +61,9 @@ test('all four Run 3 variants render through every historical adapter with exact
   }
 });
 
-test('Run 3 keeps all ten historical SSR defaults and rejects unavailable world C2', async () => {
-  for (const [route, historical, id] of routes) {
-    const unsupported = id === 'red-flag-o-no' || id === 'lets-talk' ? ['C3'] : ['C2'];
+test('Run 3 keeps all ten historical SSR defaults and rejects unsupported C3', async () => {
+  for (const [route, historical] of routes) {
+    const unsupported = ['C3'];
     for (const query of [undefined, '', '?level=unknown', ...unsupported.map(level => '?level=' + level)]) {
       const html = await renderRoute(route, query);
       assert.ok(html.includes(`data-level="${historical}"`), `${route} ${query}`);

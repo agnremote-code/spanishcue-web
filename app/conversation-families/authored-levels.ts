@@ -73,6 +73,16 @@ export const authoredConversationLevels: Record<string, Partial<Record<CEFRLevel
     },
   },
   'la-maquina-que-elimina-cosas': {
+    C2: {
+      objectives: ['Delimitar qué incluye una propuesta de eliminación y quién decide su significado', 'Contrastar lecturas defendibles y detectar falsas alternativas', 'Reformular una propuesta y sostener una decisión precisa, incluida una condición explícita'],
+      functions: ['Definir términos y separar una categoría de sus usos', 'Distinguir mecanismos, resultados y supuestos implícitos', 'Revisar una afirmación y explicar por qué la nueva formulación mejora la anterior'],
+      preview: {
+        image: '/conversation-worlds/elimination-machine-c2.webp',
+        hook: '30 propuestas con más de una lectura: decide qué eliminar, revisa la definición y formula tu propia condición.',
+        explanation: 'La máquina plantea decisiones sencillas hasta que una palabra cambia lo que está en juego. Revela una consecuencia, contrasta interpretaciones y reescribe lo que realmente quieres eliminar. Puedes cerrar con una decisión condicionada. El final recupera tres elecciones reales para distinguir eliminación, redefinición y una falsa alternativa.',
+        warmup: 'Alguien propone eliminar las cosas innecesarias. ¿Qué dos personas podrían estar de acuerdo y entender cosas distintas?',
+      },
+    },
     C1: {
       objectives: ['Examinar dependencias y efectos indirectos de una eliminación', 'Distinguir un principio de sus consecuencias prácticas y excepciones', 'Reformular una propuesta y construir un criterio general a partir de decisiones anteriores'],
       functions: ['Precisar supuestos y corregir generalizaciones', 'Reconocer consecuencias desiguales o no previstas', 'Introducir excepciones y reformular una condición'],
@@ -105,6 +115,16 @@ export const authoredConversationLevels: Record<string, Partial<Record<CEFRLevel
     },
   },
   'tu-vida-con-una-regla-absurda': {
+    C2: {
+      objectives: ['Contrastar el sentido literal de una ley absurda con lo que pretende conseguir', 'Defender interpretaciones y comprobar casos límite o aplicaciones contradictorias', 'Reformular una regla explorada, probar dos casos y reconocer un límite que permanece'],
+      functions: ['Precisar categorías y resolver ambigüedades', 'Señalar contradicciones entre palabras, intención y cumplimiento', 'Reformular con precisión sin fingir que una redacción resuelve todos los casos'],
+      preview: {
+        image: '/conversation-worlds/absurd-universe-c2.webp',
+        hook: '15 leyes y 45 preguntas: la misma regla produce lecturas opuestas en una ciudad que se toma las palabras muy en serio.',
+        explanation: 'Las reglas parecen fáciles hasta que los habitantes intentan cumplirlas. Descubre nuevas interpretaciones paso a paso, prueba casos inesperados y explica cómo alguien puede obedecer las palabras y frustrar la intención. Para terminar, elige una ley conversada, reformúlala y ponla a prueba con dos casos límite y una dificultad que sigue abierta.',
+        warmup: 'En una fiesta todo el mundo debe llevar algo. ¿Cumples si llevas una pregunta? Defiende dos lecturas de esa invitación.',
+      },
+    },
     C1: {
       objectives: ['Explicar cómo una regla transforma hábitos e incentivos más allá de su intención', 'Contrastar adaptaciones, vacíos y efectos desiguales de una norma imaginaria', 'Defender qué reglas conservar, rechazar o modificar y precisar una nueva formulación'],
       functions: ['Señalar contradicciones entre intención y resultado', 'Explorar excepciones y consecuencias indirectas', 'Reformular una regla sin perder su propósito'],

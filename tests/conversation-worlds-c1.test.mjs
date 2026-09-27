@@ -26,11 +26,11 @@ async function harness(mode,storage){
  return {bank,render,click,change,html:()=>renderToString(render())};
 }
 
-test('C1 worlds dispatch complete Spanish banks while selectors stop at C1',async()=>{
+test('C1 worlds dispatch complete Spanish banks within the complete A1–C2 selectors',async()=>{
  const {default:World}=await load('app/conversation-worlds/ConversationWorldFamily.tsx');
  for(const mode of ['machine','rules']){
   const html=renderToString(React.createElement(World,{mode,level:'C1'}));
-  assert.deepEqual([...html.matchAll(/aria-pressed="(?:true|false)">(A1|A2|B1|B2|C1|C2)<\/button>/g)].map(x=>x[1]),['A1','A2','B1','B2','C1']);
+  assert.deepEqual([...html.matchAll(/aria-pressed="(?:true|false)">(A1|A2|B1|B2|C1|C2)<\/button>/g)].map(x=>x[1]),['A1','A2','B1','B2','C1','C2']);
   assert.match(html,/aria-pressed="true">C1<\/button>/);assert.match(html,/45 minutos/);assert.match(html,/cw-c1-closing/);
   assert.doesNotMatch(html,/Ayuda en inglés|CONVERSATION WORLDS|undefined|¿Lo eliminás|IMAGINÁ ESTO/);
   assert.match(html,mode==='machine'?/tu-vida-con-una-regla-absurda\?level=C1/:/la-maquina-que-elimina-cosas\?level=C1/);

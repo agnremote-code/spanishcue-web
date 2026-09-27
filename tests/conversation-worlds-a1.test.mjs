@@ -25,14 +25,14 @@ async function harness(mode){
  return {bank,render,click,html:()=>renderToString(render())};
 }
 // A wrong bank fallback or level list must not silently show B1 to a beginner.
-test('A1 worlds dispatch their own banks with exactly A1 A2 B1 B2 C1 and Spanish support',async()=>{
+test('A1 worlds dispatch their own banks with exactly A1 A2 B1 B2 C1 C2 and Spanish support',async()=>{
  const {default:World}=await load('app/conversation-worlds/ConversationWorldFamily.tsx');
  for(const mode of ['machine','rules']){
   const legacy=renderToString(React.createElement(World,{mode,level:'B1'}));
   assert.match(legacy,/>A1<\/button>/,'A1 must be selectable before it renders');
   const html=renderToString(React.createElement(World,{mode,level:'A1'}));
   assert.match(html,/aria-pressed="true">A1<\/button>/);
-  assert.deepEqual([...html.matchAll(/aria-pressed="(?:true|false)">(A1|A2|B1|B2|C1|C2)<\/button>/g)].map(x=>x[1]),['A1','A2','B1','B2','C1']);
+  assert.deepEqual([...html.matchAll(/aria-pressed="(?:true|false)">(A1|A2|B1|B2|C1|C2)<\/button>/g)].map(x=>x[1]),['A1','A2','B1','B2','C1','C2']);
   assert.match(html,/45 minutos/);assert.match(html,/cw-a1-support/);
   assert.doesNotMatch(html,/Ayuda en inglés|CONVERSATION WORLDS|Los mosquitos|Cien palabras|undefined/);
   assert.match(html,mode==='machine'?/24 decisiones/:/15 reglas inesperadas · 45 preguntas/);

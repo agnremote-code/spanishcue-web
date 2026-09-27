@@ -13,8 +13,8 @@ const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex
 const expected=[
  ['red-flag-o-no','A1',['A1','A2','B1','B2','C1','C2']],
  ['lets-talk','B2',['A1','A2','B1','B2','C1','C2']],
- ['la-maquina-que-elimina-cosas','B2',['A1','A2','B1','B2','C1']],
- ['tu-vida-con-una-regla-absurda','B2',['A1','A2','B1','B2','C1']],
+ ['la-maquina-que-elimina-cosas','B2',['A1','A2','B1','B2','C1','C2']],
+ ['tu-vida-con-una-regla-absurda','B2',['A1','A2','B1','B2','C1','C2']],
 ];
 
 test('all four Run 1 variants remain discoverable, with no duplicate family cards or speculative levels',()=>{
