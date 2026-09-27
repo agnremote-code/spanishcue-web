@@ -358,3 +358,15 @@ Interactive desktop/mobile visual acceptance remains pending for the recorded br
 - `tests/talk-b2.test.mjs`
 - `tests/talk-c1.test.mjs`
 - `tests/talk-c2.test.mjs`
+
+## Batch 1 · Run 4 — 2026-09-27
+
+### Scope and preservation checkpoint
+
+Branch: `codex/conversation-batch1-run4-20260927`, created and preserved remotely from exact Run 3 final commit `1b342a9c6d8ecc2674f86f099c51d61d3a12574b`. Freshly fetched canonical main remains `5d6733a9b9404bbc17bf6999530eb48ffb574a3e`, already an ancestor of Run 3; no newer main changes or open PRs were found. No merge is needed or authorized.
+
+This run adds only Machine C2 (30 dilemmas) and Rules C2 (15 rules / 45 questions), two new sibling thumbnails and consolidated Batch 1 verification. Their design follows the owner's Run 4 brief: category definition and reformulation with conditional final decisions for Machine; literal/intended meaning, competing interpretations and two tested edge cases for Rules. All prior banks remain authoritative. No Batch 2 work is included.
+
+`tests/fixtures/conversation-batch1-run3-preserved.json` records 22 pre-existing bank fingerprints, 64 immutable files, route ledger, four-family metadata and the complete Run 1–3 documentation prefix directly from Run 3's final Git tree. The fresh baseline passes 115 conversation tests. TypeScript currently reports 11 inherited diagnostics; the final comparison will use this captured output.
+
+One capability check found no new permitted local preview surface. The previously blocked browser route is not retried and no deployment is used for QA. Interactive desktop/mobile acceptance remains pending; source, SSR, hook interaction, responsive CSS and actual image inspection will be reported separately.
