@@ -94,5 +94,53 @@
         "sha256": "cc9f8a6df58e19c1b1c04938a5be01e746cc8ca83d23e08897d048504d18c4bd"
       }
     ]
+  },
+  {
+    "key": "redflag-c2",
+    "target": "public/play-mode/red-flag-o-no/c2.webp",
+    "refs": [
+      "public/play-mode/red-flag-o-no/a2.webp",
+      "public/play-mode/red-flag-o-no/a1.webp",
+      "public/play-mode/red-flag-o-no/c1.webp"
+    ],
+    "prompt": "Use case: photorealistic-natural. Asset type: NEW sibling landscape 3:2 Red Flag o No lesson thumbnail. Input images: image 1 establishes the clean bright editorial family and two men; image 2 and image 3 are earlier siblings whose framing and action must not be repeated. Preserve the same adult men, one dark-haired with cream knitwear and one light-brown-haired with olive casual shirt, believable skin texture, warm wood, pale cafe walls and soft natural window daylight. New composition: a slightly elevated diagonal view across a small round cafe table, the men seated OPPOSITE each other, faces in clear three-quarter profile, with space between them. The cream-sweater man has a thoughtful raised eyebrow and an open questioning palm. The olive-shirt man responds gently with a small half-smile, listening as much as explaining. In the clear center of the table are TWO large photographic prints of the SAME social moment: one tightly cropped portrait of a friend with a neutral raised eyebrow, the other a wider view revealing this friend among warmly laughing companions at a shared meal. The second image supplies context but neither person is cast as right or wrong. Let the photo prints be large, distinct, tangible and without borders containing words. A small physical red triangular tabletop flag stands near one print and an equally prominent green flag near the other, evoking two plausible interpretations. No phone video call and no elder portrait, no C1 pose. Human attentive exchange and the competing crops are the focal story; warm approachable tone and equal red/green visual balance. Editorial realism, natural hands, restrained expressions, no melodrama, no pathology, no therapy symbols. No writing, letters, numbers, app chrome, labels, badges, logos or watermark.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected original, Run 1 and Run 2 family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 3",
+      "date": "2026-09-27",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-1ce61046-db7a-4cae-aaf8-4bc83c212d54.png",
+    "visual_qa": "Bright editorial cafe retains the two adult men, with balanced red/green flags and two large photographs inviting competing interpretations. Opposed dialogue and print-focused composition differ from C1 phone reveal. Prints show differing expressions/context rather than a literal identical crop; acceptable illustrative interpretation cue. Natural faces/hands, no sensationalism or lettering.",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 182772,
+    "sha256": "940d1b9a843d29cb7732a15303b04993e8d41945b7620a1cf6771cf460985d07",
+    "reference_metadata": [
+      {
+        "path": "public/play-mode/red-flag-o-no/a2.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "47a08260b8393f67b8d946833d4bbdcc27802e2a1bca4bb6c20246409521a635"
+      },
+      {
+        "path": "public/play-mode/red-flag-o-no/a1.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "82272da5e28a5d3d42ad1502d12b767f13ea20e8bd7a222b9d0f3acf96f04e32"
+      },
+      {
+        "path": "public/play-mode/red-flag-o-no/c1.webp",
+        "role": "family style and prior-composition reference",
+        "inspected_before_generation": true,
+        "sha256": "07b1de6d191c52d3c1145b9f4aadd88f36f91cef9d7f9785669bb74e13b36f4d"
+      }
+    ]
   }
 ]
