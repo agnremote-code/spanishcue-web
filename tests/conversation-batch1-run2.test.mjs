@@ -1,3 +1,4 @@
+import {batch1PreservedBytes} from './helpers/batch1-preservation.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync, existsSync} from 'node:fs';
@@ -34,7 +35,7 @@ test('all fourteen original and Run 1 banks, existing metadata and route ledger 
 });
 
 test('existing standalone banks, support modules, thumbnails, routes and Run 1 history retain exact bytes', () => {
-  for (const [path, expected] of Object.entries(snapshot.immutableFiles)) assert.equal(hashBytes(readFileSync(path)), expected, path);
+  for (const [path, expected] of Object.entries(snapshot.immutableFiles)) assert.equal(hashBytes(batch1PreservedBytes(path)), expected, path);
   const status = readFileSync('docs/lessons/conversation-family-production-status.md');
   assert.equal(hashBytes(status.subarray(0, snapshot.run1StatusPrefix.bytes)), snapshot.run1StatusPrefix.sha256);
 });

@@ -6,6 +6,7 @@ import GrammarStep from "./grammar-steps/GrammarStep";
 import LogoutButton from "./LogoutButton";
 import LessonPreview from "./LessonPreview";
 import { conversationLessonHref } from "./conversation-families/navigation";
+import { phoneticsHref } from "./phonetics/navigation";
 import type { CEFRLevel } from "./conversation-families/types";
 import "./conversation-families/families.css";
 import LanguageSwitcher from "./i18n/LanguageSwitcher";
@@ -837,7 +838,7 @@ export default function Library({
     `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson, selectedLevel))}`;
   const lessonHref = (lesson: Lesson, selectedLevel = level) =>
     canOpen(lesson)
-      ? conversationLessonHref(lesson, selectedLevel) || (lesson.special ? "/choose-conversation" : null)
+      ? conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.special ? "/choose-conversation" : null)
       : lockedPath(lesson, selectedLevel);
   const prepareLessonNavigation = (lesson: Lesson, placement = "library_card", selectedLevel = level) => {
     trackMarketingEvent("lesson_preview_open", {

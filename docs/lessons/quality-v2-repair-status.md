@@ -1,5 +1,21 @@
 # Quality v2 repair status
 
+## Active implementation checkpoint, 2026-09-28
+
+The owner explicitly authorized implementation and Microsoft synthetic MP3 generation in chat, superseding the former audit-only restriction. Work resumed from preserved checkpoint `5d63d5f8bd61e3d22de26502a3460b42c96ad2e7` on the same branch. The earlier blocker is resolved.
+
+Implemented IDs 45/47: corrected and contextualized all 16 questions; complete 48-option validation; real bounded quantity and spatial tasks; per-item checking, hints, explicit reveal and reset; focused oral closes; preserved seven other GrammarWorld banks and legacy render output.
+
+Implemented IDs 201/202: dedicated existing-route listening experiences; progressive model/choice/reveal/production; 32 new finite Microsoft MP3s (19 references in 201, 14 in 202, shared casa); exact manifest and full decode checks. AudioDeck reuse has optional waveform/copy controls and a tested unmount-pause correction. A narrow FREE media prefix addition serves the two already-FREE IDs, with all old protections retained.
+
+Checkpoint verification: **55 tests passed, 0 failed** across repairs and selected Conversation Batch 1/Library regressions. Lint passed. Protected build, full planned regression, final TypeScript comparison and preview attempt are still pending. Actual listening QA has not been performed; no publication readiness is claimed. Catalog records, IDs, routes, all four thumbnails and historical audit documents remain unchanged. No production, D1, auth, billing, secrets or deployment changes.
+
+The historical Batch 1 fixtures remain unchanged. Three preservation tests allow only the exact additive FREE audio prefix/comment change before checking the original access-policy hash; every other byte remains protected by the original hash. New behavior tests independently verify that all pre-existing private audio prefixes remain protected.
+
+The following diagnosis was preserved before implementation; its “not implemented” and approval-blocked statements describe that historical checkpoint, not the current state. A final results section will replace this progress notice after verification.
+
+---
+
 ## Repair Wave 1: diagnostic checkpoint, 2026-09-28
 
 **Status: BLOCKED BEFORE IMPLEMENTATION. None of the four repairs is complete.**
