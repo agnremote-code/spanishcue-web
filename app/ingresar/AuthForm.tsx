@@ -2,12 +2,10 @@
 
 import {
   browserLocalPersistence,
-  browserSessionPersistence,
   createUserWithEmailAndPassword,
   getAdditionalUserInfo,
   GoogleAuthProvider,
   OAuthProvider,
-  inMemoryPersistence,
   sendPasswordResetEmail,
   setPersistence,
   signInWithEmailAndPassword,
@@ -38,19 +36,19 @@ function authError(code: string) {
 }
 
 async function preparePersistence() {
-  for (const persistence of [
-    browserLocalPersistence,
-    browserSessionPersistence,
-    inMemoryPersistence,
-  ]) {
-    try {
-      await setPersistence(firebaseAuth, persistence);
-      return;
-    } catch {
-      // Try the next supported persistence mode. This matters in private browsing.
-    }
+  try {
+    await setPersistence(firebaseAuth, browserLocalPersistence);
+  } catch {
+    throw authError("auth/web-storage-unsupported");
   }
-  throw authError("auth/web-storage-unsupported");
+}
+
+async function signOutAndClearSession() {
+  await signOut(firebaseAuth).catch(() => undefined);
+  await fetch("/api/auth/session", {
+    method: "DELETE",
+    credentials: "same-origin",
+  }).catch(() => undefined);
 }
 
 async function sendVerificationAndSignOut(user: User, locale: Locale, intent: "initial" | "resend") {
@@ -73,7 +71,7 @@ async function sendVerificationAndSignOut(user: User, locale: Locale, intent: "i
     }
     return { status: result.status, retryAfterSeconds: result.retryAfterSeconds ?? 60 };
   } finally {
-    await signOut(firebaseAuth).catch(() => undefined);
+    await signOutAndClearSession();
   }
 }
 
@@ -242,7 +240,7 @@ export default function AuthForm({
           }
           startVerificationCooldown(delivery.retryAfterSeconds);
         } else {
-          await signOut(firebaseAuth).catch(() => undefined);
+          await signOutAndClearSession();
         }
         setNotice(t(result.newAccount ? "auth.verifySent" : "auth.verifyRequired"));
         return;

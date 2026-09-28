@@ -92,18 +92,19 @@ test("Apple, Google, email and password remain present in the auth source", asyn
   assert.match(source, /OAuthProvider\("apple\.com"\)/);
   assert.match(source, /createUserWithEmailAndPassword/);
   assert.match(source, /signInWithEmailAndPassword/);
-  assert.match(source, /browserSessionPersistence/);
-  assert.match(source, /inMemoryPersistence/);
+  assert.match(source, /browserLocalPersistence/);
+  assert.doesNotMatch(source, /browserSessionPersistence|inMemoryPersistence/);
   assert.match(source, /sendVerificationAndSignOut/);
   assert.match(source, /role="tabpanel"/);
   assert.match(source, /ArrowLeft/);
 });
 
 test("session creation and account provisioning reject unverified emails", async () => {
-  const [sessionRoute, accounts, sessionSync, layout, authForm] = await Promise.all([
+  const [sessionRoute, accounts, sessionSync, sessionSyncHelper, layout, authForm] = await Promise.all([
     readFile("app/api/auth/session/route.ts", "utf8"),
     readFile("db/accounts.ts", "utf8"),
     readFile("app/AuthSessionSync.tsx", "utf8"),
+    readFile("app/auth-session-sync.ts", "utf8"),
     readFile("app/layout.tsx", "utf8"),
     readFile("app/ingresar/AuthForm.tsx", "utf8"),
   ]);
@@ -111,12 +112,13 @@ test("session creation and account provisioning reject unverified emails", async
   assert.match(sessionRoute, /EMAIL_NOT_VERIFIED/);
   assert.match(accounts, /!user\.emailVerified/);
   assert.match(accounts, /EMAIL_NOT_VERIFIED/);
-  assert.match(sessionSync, /response\.status === 403/);
+  assert.match(sessionSyncHelper, /response\.status === 403/);
   assert.match(sessionSync, /signOut\(firebaseAuth\)/);
+  assert.match(sessionSyncHelper, /if \(!user\) return/);
   assert.match(authForm, /browserLocalPersistence/);
-  assert.match(sessionSync, /!serverSignedIn/);
-  assert.match(sessionSync, /window\.location\.reload\(\)/);
-  assert.match(sessionSync, /window\.location\.pathname !== "\/ingresar"/);
+  assert.match(sessionSyncHelper, /!options\.serverSignedIn/);
+  assert.match(sessionSyncHelper, /options\.reload\(\)/);
+  assert.match(sessionSyncHelper, /options\.pathname !== "\/ingresar"/);
   assert.match(layout, /<AuthSessionSync serverSignedIn=\{signedIn\}/);
 });
 
