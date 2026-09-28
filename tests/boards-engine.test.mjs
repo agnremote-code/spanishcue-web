@@ -124,3 +124,11 @@ test("does not start a session without at least one valid category", () => {
   assert.throws(() => engine.createSession(bank, [], firstRandom), /categoría/i);
   assert.throws(() => engine.createSession(bank, ["UNKNOWN"], firstRandom), /categoría/i);
 });
+
+test("marks only categories with a visited question as taught", () => {
+  const session = engine.createSession(bank, ["A", "B"], firstRandom);
+  const partiallyUsed = { ...session, visited: ["a-1", "a-2"] };
+
+  assert.deepEqual(engine.categoriesTaughtInSession(bank, partiallyUsed), ["A"]);
+  assert.deepEqual(engine.categoriesTaughtInSession(bank, null), []);
+});

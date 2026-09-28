@@ -44,7 +44,7 @@ test("refresh, keyboard and presentation mode are implemented without click-time
 });
 
 test("invalid recovery and edited category choices cannot hide or break an active session", () => {
-  assert.match(component, /choosing:\s*restored\s*\?\s*Boolean\(savedView\.choosing\)\s*:\s*true/);
+  assert.match(component, /const choosing = restored\s*\?\s*Boolean\(savedView\.choosing\)\s*:\s*true/);
   assert.match(component, /session\?\.selectedCategories\s*\?\?\s*selected/);
 });
 
@@ -72,4 +72,19 @@ test("both routes use the shared component and publish level-specific metadata",
   assert.match(b1Layout, /De eso sí hablo/);
   assert.match(b2Layout, /B2/);
   assert.match(b2Layout, /No es tan simple/);
+});
+
+test("changing categories clears the previous selection and shows a taught marker", () => {
+  const handler = component.match(/const openCategorySelector = useCallback\(\(\) => \{([\s\S]*?)\},\s*\[[^\]]*\]\s*\);/);
+  assert.ok(handler, "category changes need a shared handler");
+  assert.match(handler[1], /categoriesTaughtInSession\(bank,\s*session\)/);
+  assert.match(handler[1], /selectedCategories:\s*\[\]/);
+  assert.match(handler[1], /taughtCategories:/);
+  assert.match(component, /selectedCategories:\s*restored\s*&&\s*!choosing\s*\?\s*restored\.selectedCategories\s*:\s*validCategories\(savedView\.selectedCategories\)/);
+  assert.match(component, /taughtCategories:\s*validCategories\(savedView\.taughtCategories\)/);
+  assert.match(component, /className=.*board-category-taught/);
+  assert.match(component, /✓ ENSEÑADA/);
+  assert.match(component, /onClick=\{openCategorySelector\}/);
+  assert.match(component, /event\.key\.toLowerCase\(\) === "c" && !view\.choosing/);
+  assert.match(css, /\.board-category-status/);
 });

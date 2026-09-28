@@ -49,6 +49,16 @@ export function createSession(
   };
 }
 
+export function categoriesTaughtInSession(bank: BoardBank, session: BoardSession | null): string[] {
+  const visitedIds = new Set(session?.visited ?? []);
+  return unique(
+    bank.questions
+      .filter((question) => visitedIds.has(question.id))
+      .map((question) => question.category)
+      .filter((category) => bank.categories.includes(category)),
+  );
+}
+
 export function advanceSession(
   session: BoardSession,
   options: { skipped?: boolean } = {},
