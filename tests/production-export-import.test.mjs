@@ -162,8 +162,9 @@ test("the owner export route output unpacks into an export that rehearses cleanl
   const model = schemaModel(source);
   const tables = fixture();
   importInto(source, model, new Map(Object.entries(tables)));
-  source.exec("CREATE TABLE d1_migrations (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT UNIQUE, applied_at TEXT NOT NULL)");
-  source.exec("INSERT INTO d1_migrations (name, applied_at) VALUES ('0009_glossy_mariko_yashida.sql', '2026-09-20 00:00:00')");
+  // Sites names its migration ledger __appgarden_migrations.
+  source.exec("CREATE TABLE __appgarden_migrations (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT UNIQUE, applied_at TEXT NOT NULL)");
+  source.exec("INSERT INTO __appgarden_migrations (name, applied_at) VALUES ('0009_glossy_mariko_yashida.sql', '2026-09-24 07:23:50')");
 
   const bundle = await exportDatabase(fakeD1(source), { sourceSha: "test" });
   assert.equal(bundle.format, "spanishcue-d1-export/1");
@@ -180,7 +181,7 @@ test("the owner export route output unpacks into an export that rehearses cleanl
     const { db } = await schemaDatabase();
     const loaded = await loadExport(join(dir, "out"), schemaModel(db));
     assert.deepEqual(loaded.problems, []);
-    assert.deepEqual(loaded.ledger, ["d1_migrations"]);
+    assert.deepEqual(loaded.ledger, ["__appgarden_migrations"]);
     importInto(db, model, loaded.data);
     assert.deepEqual((await verifyImported(db, model, loaded.data)).filter(check => !check.ok), []);
     assert.equal(db.prepare("SELECT alias FROM students").get().alias, "Ana O'Neil");

@@ -22,7 +22,8 @@ import { join } from "node:path";
 import { DatabaseSync } from "node:sqlite";
 import { pathToFileURL } from "node:url";
 
-export const LEDGER_TABLES = new Set(["d1_migrations", "__drizzle_migrations"]);
+// `__appgarden_migrations` is the ledger OpenAI Sites keeps (seen in the 2026-09-28 export).
+export const LEDGER_TABLES = new Set(["d1_migrations", "__drizzle_migrations", "__appgarden_migrations"]);
 // Platform-internal tables a table listing may show; never imported.
 const PLATFORM_TABLE = /^(_cf_|sqlite_)/;
 const MAX_SQL_FILE_BYTES = 90_000;
