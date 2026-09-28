@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type CSSProperties } from "react";
+import { useMemo, useState, type CSSProperties, type MouseEvent } from "react";
 import Link from "next/link";
 import GrammarStep from "../grammar-steps/GrammarStep";
 import { SpanishCueBrand } from "../SpanishCueBrand";
@@ -80,13 +80,17 @@ export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
   const pattern = data.patterns[patternIndex];
   const totalMinutes = useMemo(() => data.timeline.reduce((total, item) => total + item.minutes, 0), [data.timeline]);
   const theme = { "--sx-accent": data.accent, "--sx-accent-2": data.accent2 } as CSSProperties;
+  const showRecorrido = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    document.getElementById("recorrido")?.scrollIntoView({ block: "start" });
+  };
 
   return (
     <main className={`sx-app sx-${data.mode}`} style={theme}>
       <header className="sx-topbar">
         <Link href="/" aria-label="SPANISHCUE, inicio"><SpanishCueBrand variant="compact" tone="dark" /></Link>
         <div><small>{data.module}</small><b>{data.level} · {totalMinutes} MIN</b></div>
-        <a href="#recorrido">VER RECORRIDO ↓</a>
+        <a href="#recorrido" onClick={showRecorrido}>VER RECORRIDO ↓</a>
       </header>
 
       <section className="sx-hero">
@@ -95,7 +99,7 @@ export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
           <span>{data.pcic}</span>
           <h1>{data.displayTitle.split("\n").map((line) => <em key={line}>{line}</em>)}</h1>
           <p>{data.subtitle}</p>
-          <a href="#recorrido">EMPEZAR LA CLASE <b>↓</b></a>
+          <a href="#recorrido" onClick={showRecorrido}>EMPEZAR LA CLASE <b>↓</b></a>
         </div>
         <aside>
           <small>OBJETIVO COMUNICATIVO</small>
