@@ -4,6 +4,7 @@ import {readFileSync, readdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {build} from 'esbuild';
+import {wave3PreservedBytes} from './helpers/wave3-preservation.mjs';
 
 const readJson = path => JSON.parse(readFileSync(path, 'utf8'));
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -18,7 +19,7 @@ test('Wave 1 source, 32 MP3s, tests, documentation history, catalog and four thu
   assert.equal(Object.keys(baseline.records).length, 70);
   assert.equal(Object.keys(baseline.records).filter(path => path.startsWith('public/audio/phonetics/')).length, 32);
   for (const [path, expected] of Object.entries(baseline.records)) {
-    const bytes = readFileSync(path);
+    const bytes = wave3PreservedBytes(path, readFileSync(path));
     if (expected.prefixBytes) assert.ok(bytes.length >= expected.prefixBytes, path);
     assert.equal(hash(expected.prefixBytes ? bytes.subarray(0, expected.prefixBytes) : bytes), expected.sha256, path);
   }
