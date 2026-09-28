@@ -7,6 +7,8 @@ import { SpanishCueBrand } from "../SpanishCueBrand";
 import type { SyntaxDecision, SyntaxLabData, SyntaxRepair } from "./data";
 import { ClauseBuilder, ContrastMixer, DecisionChain, EvidenceSwitch, HypothesisSwitch, ReferentFinder, SentenceConnector, TimelineBuilder } from "./SyntaxVisuals";
 import "./style.css";
+import RepairSyntaxLab from "./RepairSyntaxLab";
+import { repairedSlugs } from "./repair-content";
 
 function SyntaxPreview({ data, left, connector, right }: { data: SyntaxLabData; left: string; connector: string; right: string }) {
   if (data.mode === "connector") return <SentenceConnector left={left} connector={connector} right={right} />;
@@ -75,7 +77,7 @@ function RepairCard({ item, index }: { item: SyntaxRepair; index: number }) {
   );
 }
 
-export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
+function LegacySyntaxLab({ data }: { data: SyntaxLabData }) {
   const [patternIndex, setPatternIndex] = useState(0);
   const pattern = data.patterns[patternIndex];
   const totalMinutes = useMemo(() => data.timeline.reduce((total, item) => total + item.minutes, 0), [data.timeline]);
@@ -162,4 +164,8 @@ export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
       <footer className="sx-footer"><Link href="/">← VOLVER A GRAMÁTICA</Link><div><b>SPANISHCUE</b><span>{data.pcic}</span></div><a href="#recorrido">VOLVER ARRIBA ↑</a></footer>
     </main>
   );
+}
+
+export default function SyntaxLab({ data }: { data: SyntaxLabData }) {
+  return repairedSlugs.includes(data.slug) ? <RepairSyntaxLab data={data} /> : <LegacySyntaxLab data={data} />;
 }
