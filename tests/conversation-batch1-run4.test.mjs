@@ -1,4 +1,4 @@
-import {batch1PreservedBytes} from './helpers/batch1-preservation.mjs';
+import {batch1PreservedBytes, batch1PreservedLedger} from './helpers/batch1-preservation.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync, existsSync} from 'node:fs';
@@ -21,7 +21,7 @@ test('all twenty-two original and Run 1–3 banks, existing metadata and route l
   for (const level of ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']) banks[`talk${level}`] = hash(p.talkVariants[level]);
   for (const name of ['eliminations', 'absurdRules', 'eliminationsA2', 'absurdRulesA2', 'eliminationsB2', 'absurdRulesB2', 'eliminationsA1', 'absurdRulesA1', 'eliminationsC1', 'absurdRulesC1']) banks[name] = hash(p[name]);
   assert.deepEqual(banks, snapshot.banks);
-  assert.equal(hash(p.lessons), snapshot.routeLedger);
+  assert.equal(hash(batch1PreservedLedger(p.lessons)), snapshot.routeLedger);
   for (const original of snapshot.families) {
     const family = p.conversationFamilies.find(f => f.id === original.id);
     for (const key of ['defaultLevel', 'canonicalPath', 'canonicalLessonId', 'legacyLessonIds', 'access']) assert.deepEqual(family[key], original[key], `${family.id}: ${key}`);

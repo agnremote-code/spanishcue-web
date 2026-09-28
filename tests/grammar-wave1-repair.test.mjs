@@ -18,6 +18,19 @@ async function data(path, source){
 const first=await data('app/grammar-worlds/data.ts');
 const next=await data('app/grammar-worlds/data-next.ts');
 const banks=[first.quantityMarket,next.adverbTower];
+test('only the target catalog promises describe the selected route and implemented mechanics',async()=>{
+ const bundled=await build({entryPoints:['app/lesson-catalog.ts'],bundle:true,write:false,platform:'node',format:'esm'});
+ const {lessons}=await import(`data:text/javascript;base64,${Buffer.from(bundled.outputFiles[0].text).toString('base64')}`);
+ for(const id of [45,47]){
+  const lesson=lessons.find(item=>item.id===id);
+  assert.equal(lesson.duration,'≈ 45 min + banco opcional');
+  assert.doesNotMatch(lesson.subtitle,/3D/);
+  assert.equal(lesson.level,'A1');
+  assert.equal(lesson.path,id===45?'/el-mercado-de-las-cantidades':'/la-torre-de-las-coordenadas');
+ }
+ assert.match(lessons.find(item=>item.id===45).subtitle,/compra interactiva/);
+ assert.match(lessons.find(item=>item.id===47).subtitle,/escena que podés mover/);
+});
 const expected=[
  ['Necesito una botella de agua.','Hay muchos tomates en la caja.','Tengo poco tiempo hoy.','Trabajo todos los días.','Quiero otro café, por favor.','No hay nadie en el puesto.','Esta sopa tiene demasiada sal.','Este mercado no es tan caro.'],
  ['El museo está muy cerca.','Ana estudia mucho.','¿Cuándo empieza la clase?','No voy y Leo tampoco.','Primero cocino; después como.','Habla claramente.','¿Por qué estudiás? Porque viajo.','Las llaves están encima de la mesa.'],

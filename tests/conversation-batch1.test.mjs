@@ -1,3 +1,4 @@
+import {batch1PreservedLedger} from './helpers/batch1-preservation.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync,existsSync} from 'node:fs';
@@ -40,7 +41,7 @@ test('all ten original lesson banks and the complete route/access ledger retain 
  for(const level of ['A1','A2','B1'])banks[`talk${level}`]=hash(p.talkVariants[level]);
  for(const name of ['eliminations','absurdRules','eliminationsA2','absurdRulesA2'])banks[name]=hash(p[name]);
  assert.deepEqual(banks,snapshot.banks);
- assert.equal(hash(p.lessons),snapshot.routeLedger);
+ assert.equal(hash(batch1PreservedLedger(p.lessons)),snapshot.routeLedger);
  for(const original of snapshot.families){
   const family=p.conversationFamilies.find(f=>f.id===original.id);
   for(const key of ['defaultLevel','canonicalPath','canonicalLessonId','legacyLessonIds','access'])assert.deepEqual(family[key],original[key],`${family.id}: ${key}`);

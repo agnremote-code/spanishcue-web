@@ -36,6 +36,23 @@ test('existing free class URLs render a listening experience after the unchanged
     assert.match(html, /Escuchá y distinguí/, id);
     assert.match(html, /Hablá y reutilizá/, id);
   }
+  await assert.rejects(Page({params:Promise.resolve({id:'38'})}), /redirect:\/acceso\?returnTo=%2Fclase%2F38/);
+  for (const id of ['45','47','999999']) {
+    await assert.rejects(Page({params:Promise.resolve({id})}), /not-found/, id);
+  }
+});
+
+test('the actual Library links both free phonetics lessons to their existing URLs', async () => {
+  const result = await build({stdin:{contents:`export {default as Library} from './app/Library'; export {LocaleProvider} from './app/i18n/LocaleProvider'; export {lessons} from './app/lesson-catalog'; export {isFreeLesson} from './app/access-policy';`,resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'cjs',external:['react','react-dom','next/*'],loader:{'.css':'empty'}});
+  const m={exports:{}};
+  const sandbox={console,URL,Headers,Request,Response,AbortController,process,fetch:()=>{throw Error('SSR must not make network requests');}};
+  sandbox.global=sandbox;
+  runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,sandbox)(require,m,m.exports);
+  const {Library,LocaleProvider,lessons,isFreeLesson}=m.exports;
+  const records=lessons.filter(l=>[201,202,38].includes(l.id)).map(l=>({...l,free:isFreeLesson(l.id),href:`/clase/${l.id}`}));
+  const html=renderToString(React.createElement(LocaleProvider,{initialLocale:'es'},React.createElement(Library,{lessons:records,owner:false,signedIn:false,fullAccess:false})));
+  for(const id of [201,202])assert.match(html,new RegExp(`<a[^>]+href="/clase/${id}"`));
+  assert.doesNotMatch(html,/<a[^>]+href="\/clase\/38"/,'PRO lesson must retain its locked entry');
 });
 
 // These transitions prevent answer leakage, stale feedback and false listening credit.
