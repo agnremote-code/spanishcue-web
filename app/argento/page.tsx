@@ -71,7 +71,7 @@ export default function Argento(){
       <article className="world-dashboard">
         <header className="world-hero"><div style={{backgroundImage:`url(${world.photo})`}}/><section><small>{translations?world.kicker:world.kicker.split(" · ")[0]}</small><h2>{world.icon} {world.title}</h2><p>{world.q[0]}</p>{translations&&<span>{world.q[1]}</span>}</section></header>
         <div className="world-body">
-          <ArgentoPractice worldId={world.id} mode={mode} setMode={next=>{setMode(next);setModal(null)}}/>
+          <ArgentoPractice worldId={world.id} mode={mode} setMode={next=>{setMode(next);setModal(null)}} onReset={()=>{setProgress([]);setWordPage(0);setQuestionPage(0);setRoleTab("model");setModal(null)}}/>
           {mode==="explore"&&<details key={world.id} className="argento-bank"><summary>Banco opcional · palabras, preguntas y modelos</summary>
           <div className="tools-title"><span>RECURSOS PARA HABLAR</span><b>🎤 AHORA HABLÁ</b></div>
           <div className="tools-grid">

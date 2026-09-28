@@ -75,3 +75,9 @@ test('all worlds SSR render models, context and productive close with hidden rec
  const h=await loadComponent('app/argento/ArgentoPractice.tsx');
  for(const world of data.worlds){for(const mode of ['explore','recall','close']){const html=renderToStaticMarkup(React.createElement(h.components.ArgentoPractice,{worldId:world.id,mode,setMode:()=>{}}));assert.match(html,/Práctica de vocabulario/);assert.match(html,/Reiniciar práctica/);if(mode==='explore')assert.match(html,/Comprobar contexto/);else assert.doesNotMatch(html,/data-model/);if(mode==='close')assert.match(html,/intercambio observado/);}}
 });
+test('session reset also clears the page self-report and restores model/page defaults',async()=>{
+ const h=await loadComponent('app/argento/page.tsx',true),r=()=>h.render('default',{});
+ const progress=()=>find(r(),n=>n.props?.className==='speaking-progress')[0];
+ find(progress(),n=>n.type==='button')[0].props.onClick();assert.equal(find(progress(),n=>n.props?.['aria-pressed']===true).length,1);
+ const child=find(r(),n=>n.props?.worldId&&n.props?.setMode)[0];assert.equal(typeof child.props.onReset,'function','reset must include page observations');child.props.onReset();assert.equal(find(progress(),n=>n.props?.['aria-pressed']===true).length,0);
+});

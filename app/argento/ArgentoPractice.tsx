@@ -3,8 +3,8 @@ import {useState} from 'react';
 import {practice} from './practice-data';
 import {worlds} from './data';
 export type PracticeMode='explore'|'recall'|'later'|'close';
-type Props={worldId:string;mode:PracticeMode;setMode:(mode:PracticeMode)=>void};
-export function ArgentoPractice({worldId,mode,setMode}:Props){
+type Props={worldId:string;mode:PracticeMode;setMode:(mode:PracticeMode)=>void;onReset?:()=>void};
+export function ArgentoPractice({worldId,mode,setMode,onReset}:Props){
  const [answers,setAnswers]=useState<Record<string,{option:number;checked:boolean}>>({});
  const [tasks,setTasks]=useState<string[]>([]);
  const [saved,setSaved]=useState<Record<string,number>>({});
@@ -16,7 +16,7 @@ export function ArgentoPractice({worldId,mode,setMode}:Props){
  const delayed=Object.keys(saved).filter(id=>!reviewed.includes(id)&&tasks.slice(saved[id]).some(task=>task!==id));
  const recall=mode==='later'&&laterId?practice[laterId]:active;
  const enter=(next:PracticeMode)=>{setHelp(false);setClosed(false);setMode(next)};
- const reset=()=>{setAnswers({});setTasks([]);setSaved({});setReviewed([]);setLaterId(null);setHelp(false);setClosed(false);setMode('explore')};
+ const reset=()=>{setAnswers({});setTasks([]);setSaved({});setReviewed([]);setLaterId(null);setHelp(false);setClosed(false);setMode('explore');onReset?.()};
  return <section className="argento-learning" aria-label="Práctica de vocabulario">
   <header><span>VOCABULARIO EN USO</span><h3>{mode==='explore'?'Comprendé y elegí':mode==='recall'?'Recuperá sin mirar':mode==='later'?'Volvé a usarlo en otra situación':'Cierre: resolvé un intercambio'}</h3></header>
   {mode==='explore'?<>
@@ -43,6 +43,6 @@ export function ArgentoPractice({worldId,mode,setMode}:Props){
    <button onClick={()=>enter('explore')}>Volver a los recursos</button>
   </>}
   {mode==='explore'&&<aside className="argento-return"><h4>Volver más tarde</h4>{delayed.length?delayed.map(id=><button key={id} data-action={`later-${id}`} onClick={()=>{setLaterId(id);enter('later')}}>Recordar {worlds.find(w=>w.id===id)?.title} en otra situación</button>):<p>Después de registrar un intento, resolvé una tarea de contexto de otro mundo. Cambiar de mundo sin responder no activa este retorno.</p>}{reviewed.length>0&&<p role="status">Recuperación observada: {reviewed.map(id=>worlds.find(w=>w.id===id)?.title).join(', ')}.</p>}</aside>}
-  <details className="argento-session"><summary>Sesión y reinicio</summary><p>Los intentos y observaciones duran solo mientras esta página está abierta. No son una puntuación automática de tu habla. Reiniciar borra las respuestas de contexto, los retornos pendientes y las observaciones.</p><button data-action="reset-session" onClick={reset}>Reiniciar práctica y observaciones</button></details>
+  <details className="argento-session"><summary>Sesión y reinicio</summary><p>Los intentos y observaciones duran solo mientras esta página está abierta. No son una puntuación automática de tu habla. Reiniciar borra las respuestas de contexto, los retornos pendientes, las observaciones y las marcas personales de la página.</p><button data-action="reset-session" onClick={reset}>Reiniciar práctica y observaciones</button></details>
  </section>;
 }
