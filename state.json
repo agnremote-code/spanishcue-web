@@ -615,5 +615,9 @@
     },
     "runtimeErrors": 0
   },
-  "startedAt": "2026-09-28T12:36:15.578Z"
+  "startedAt": "2026-09-28T12:36:15.578Z",
+  "candidateVersionId": "appgprj_6a83ba10b0c481919060fc089d581233~appgver_fe3a2099a2e08191b7396fbe4e6d77a6",
+  "candidateVersionNumber": 179,
+  "candidateDeploymentId": null,
+  "deploymentStarted": false
 }
