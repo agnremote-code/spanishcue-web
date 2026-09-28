@@ -494,3 +494,213 @@ All four thumbnails were visually inspected and will be preserved: the adverb to
 Primary linguistic references checked: [RAE negative concord](https://www.rae.es/espanol-al-dia/doble-negacion-no-vino-nadie-no-hice-nada-no-tengo-ninguna), [RAE quien](https://www.rae.es/dpd/quien), [RAE que](https://www.rae.es/dpd/que), [PCIC A1–A2 grammar](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_a1-a2.htm), [PCIC A1–A2 pronunciation](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/03_pronunciacion_inventario_a1-a2.htm). These guide the bounded repairs, not a claim of formal certification.
 
 **Checkpoint status:** diagnosis and design recorded before product edits; implementation and final verification pending. No publication-readiness claim.
+
+### Completed repairs and final review
+
+**Scope outcome:** all four authorized source implementations are complete. Historical audit grades (C/C/C/D) are retained as historical findings, not silently replaced by a publication grade. Current status for every lesson is **SOURCE IMPLEMENTED / MANUAL QA PENDING**. The source review found no remaining blocker after the fixes below; this is not merge, deployment or publication approval.
+
+#### 213 · Antes, después, cuando · A2 · Gramática · PRO
+
+- Corrected chronology in the antes explanation and después model. Cuando decisions now put the habitual trigger and response in the intended relationship, including distinct subjects where appropriate. The same-subject limit is explicitly confined to the selected infinitive constructions.
+- Reframed already grammatical sentences as reformulations, constrained the cuando repair to preserve its intended connector, and limited the infinitive rule to the structures actually taught. No new temporal subjunctive, mientras, hasta que, desde que, en cuanto or other target was added just to enlarge the bank.
+- Replaced the inert timeline preview with four movable events at specified times. Buttons provide keyboard access; all 24 orders are testable. Reversing the linguistic point of departure preserves breakfast before departure. Full authored models are rendered as sentences, not mislabeled fragments.
+- Core closes by explaining a six-action real/plausible routine, responding to an earlier transport departure and reformulating the same chronology. The teacher observes sequence, forms and response to the changed fact. Open speech has no exact-string scoring.
+
+#### 217 · Pero hay un matiz · B1 · Gramática · PRO
+
+- Corrected all three postverbal negative-coordination outputs with `no`; repaired the two falsely positive activation propositions. Explained preverbal versus postverbal `ni…ni` without an English-derived double-negative prohibition.
+- Rendered the complete discontinuous negative pattern. Added punctuation and explicit adversative contexts; valid original wording is labeled as valid reformulation, and positive facts are stated before asking the learner to contrast them. Full concessive clauses remain outside this selected practice.
+- The new manipulation moves the negative group before/after the verb while preserving meaning, then introduces an impossible schedule as a third fact requiring a changed message. The first retrieval task now supplies three actual input sentences with pero; the learner does not need to invent missing materials.
+- Oral closing corrects two assumptions, gives a counterweight and a brief reservation, then updates the decision after price/time changes. Natural alternative messages are teacher assessed, not string graded.
+
+#### 218 · La persona que tengo en mente · B1 · Gramática · PRO
+
+- Restored explanatory commas and accepted both `que` and `quien` in the Lucía/Mario items. Identifying clauses retain the appropriate que target. The relevant rule is qualified by explicit antecedent and absence of preposition, rather than a false universal pronoun rule.
+- Marta's city is now specified before the ambiguity repair; the identification repair supplies Ana/Eva/Luz and their jobs/shifts. The telephone repair retains explanatory commas and meaning. Retrieval and the last conversation starter correctly distinguish extra information from identification.
+- A three-person directory responds to two actual filters: either clue alone leaves two candidates, both select Ana. Once Ana is identified, the task compares the two valid explanatory forms with commas.
+- Oral closing identifies a person, place and object, lets the teacher propose a wrong candidate and requires a relevant clarifying detail. The source bank and extra conversation prompts remain available.
+
+#### Shared grammar behavior and preservation
+
+Only these three slugs opt into `RepairSyntaxLab`. The five other exported banks are deeply equal to the exact base, and their rendered HTML is byte-equal to the base renderer. `SyntaxVisuals.tsx` and the original stylesheet are untouched. New styles are scoped under `.sx-repaired`.
+
+The three repaired lessons now have deliberate check, focused hint, retry, solution and reset controls. Selecting another response invalidates old feedback. The complete bank is optional alongside a 45-minute core selection: notice → contrast/model → manipulate → choose in context → retrieve → produce/use orally. The original 45-minute timeline data and bank sizes remain intact; the UI explains the concrete core selection rather than requiring every optional item in one class.
+
+Retrieval hides the model, bank and answers with native hidden panels and a scoped hidden rule. Panels and optional-bank cards remain mounted so revisiting does not erase answers or teacher observations. A whole-lesson keyed reset deliberately clears everything. A reconciliation-oriented test host drops unmounted hook state and caught the original revisit-loss regression before the fix. Teacher observation, not a quiz result, records an oral attempt.
+
+| Bank / coverage | 213 | 217 | 218 | Total |
+| --- | ---: | ---: | ---: | ---: |
+| Activation prompts retained | 5 | 5 | 5 | 15 |
+| Complete pattern models | 3 | 3 | 3 | 9 |
+| Decisions / original option paths | 10 / 30 | 10 / 30 | 10 / 30 | 30 / 90 |
+| Repairs / original option paths | 4 / 12 | 4 / 12 | 4 / 12 | 12 / 36 |
+| Accepted complete outputs, including alternatives | 14 | 14 | 16 | 44 |
+| Retrieval prompts retained | 5 | 5 | 5 | 15 |
+| Production situations retained | 3 | 3 | 3 | 9 |
+| Final conversation prompts retained | 7 | 6 | 6 | 19 |
+
+Independent literal fixtures validate **all 126 original options**, their complete composed sentences and **44 accepted outputs**. All 42 original closed items are exercised through actual selection/check handlers. The new third-datum task adds 3 options and 1 accepted output: **129 option evaluations / 45 accepted outputs** across original and new closed banks. Additional coverage includes 24 event permutations, all four candidate-filter states, and both known-person explanatory forms. The normalized review found no duplicate decision/repair/retrieval prompts within each lesson's 19-prompt set and no duplicate accepted sentences within its 14/14/16 output set. Deliberate repeated models and vocabulary remain available for retrieval.
+
+#### 38 · Spanish Mouth Lab · A1 primary / A1–C1 single bank · Fonética · PRO
+
+The existing general-Spanish rhotic targets are retained. The A1 core supports short modeled exchanges; older learners can remove support or use the broader original bank. No five-level curriculum or automatic pronunciation evaluation is claimed. The original 60–75-minute catalog duration is unchanged; the lesson explicitly distinguishes **approximately 45 minutes of core plus optional extension**.
+
+| Core stage | Concrete action | Estimated minutes |
+| --- | --- | ---: |
+| Hear / notice | Hear two neutral-titled word models before choosing one contact versus multiple contacts | 5 |
+| Articulate / repeat | Select the contact region on a simplified mouth profile; use concise tongue/air cues and imitate five words three times | 10 |
+| Contrast | Eight listen-first trials across pero/perro and caro/carro; focused wrong-answer cues, replay and comparison | 8 |
+| Phrase | Hear and imitate three phrases, hide text, change a detail and obtain listener feedback | 7 |
+| Produce / reuse | Buy a toy within ten coins; identify it without pointing, clarify caro/carro, change roles and repeat two improved phrases | 15 |
+
+The core retains simple R in pero/caro, multiple R in perro/carro and initial R in rojo. The complete original six-station bank remains verbatim as optional reference: mirror diagnosis, vowels, two R paths, consonant map, stress/rhythm and transfer. All four original oral proposals, goals, warmup, explanation and homework are preserved. A teacher note qualifies the original broad b/d placement description because realization varies with context. The existing cover is atmospheric artwork, while the new functional diagram is clearly labeled as a simplified schematic, not an anatomical scan or animated measurement.
+
+Successful playback completion plus explicit learner/teacher confirmation unlocks the listening attempt. Text accommodation stays visibly assisted and never earns unaided perception credit; reload, retry, reveal/hide, per-item navigation and reset are covered. The application cannot determine physical device volume or truthfulness of the confirmation. It records declared practice, not proof of hearing. All five word and three phrase productions require teacher observation for a complete route record, plus the final three oral criteria. No voice is recorded or uploaded. Showing/hiding earned text now works independently of correctness and hearing state; it does not invent assistance or silently erase credit.
+
+AudioDeck is reused without edits, with decorative waveform bars disabled. There are **0 reused recordings in the new core and 8 newly generated recordings**. Existing Wave 1 vowels/stress files do not supply the required rhotic models, so none were overwritten or relabeled. The original broader stations still use teacher-provided models.
+
+All eight new files are under `public/audio/mouth-lab/`, with exact provenance in `app/mouth-lab/audio-manifest.json`:
+
+| MP3 | Exact synthesis script | Bytes | Seconds |
+| --- | --- | ---: | ---: |
+| `pero.mp3` | pero | 12,528 | 2.088 |
+| `perro.mp3` | perro | 12,528 | 2.088 |
+| `caro.mp3` | caro | 12,528 | 2.088 |
+| `carro.mp3` | carro | 12,528 | 2.088 |
+| `rojo.mp3` | rojo | 12,528 | 2.088 |
+| `phrase-perro.mp3` | Mi perro corre. | 12,528 | 2.088 |
+| `phrase-carro.mp3` | El carro es caro. | 13,248 | 2.208 |
+| `phrase-contrast.mp3` | Quiero el carro rojo, pero es caro. | 20,016 | 3.336 |
+
+Total: **108,432 bytes / 18.072 seconds**. Producer: Microsoft Edge online speech through edge-tts 7.2.8; configured voice `es-AR-TomasNeural`, rate `-10%`, MP3 at 24,000 Hz, mono. The Argentine locale is configured, not human verified, and does not convert the broader original general-Spanish station scope into a new regional curriculum. The generator and its dependencies stayed outside the repository; there is no runtime TTS dependency or package/lockfile change. The initial scratch synthesis attempt encountered a CA-bundle mismatch; using the existing system trust store retained TLS verification and completed generation without a secret or configuration change.
+
+Every file is mapped to real models/tasks. Manifest scripts, station/purpose mapping, byte counts, SHA-256, duration and codec were checked; every MP3 decoded fully through ffmpeg with no errors. **Human listening QA: PENDING.** No claim is made about audible pronunciation, accent, stress, naturalness, clipping or transcript concordance from technical decoding alone.
+
+#### Routes, catalog, access and thumbnails
+
+The catalog, lesson IDs, levels, category assignments, FREE/PRO policy and preview records are unchanged. A static server page renders the existing `/clase/38` URL using the existing verified-header access helper. Anonymous/free requests still redirect to `/acceso?returnTo=%2Fclase%2F38`; existing PRO/owner headers allow the lesson. Metadata delegates to the unchanged dynamic-page generator and is tested in Spanish and English. Grammar wrappers and metadata are unchanged. Query strings do not grant access or create a Mouth Lab level variant.
+
+The only public shared integration is **two ID38-only Library lines**: link the authorized card to its existing URL, and replace the unsupported seven-language habits claim with an accurate description of the core/optional bank. No premium lesson module is imported into Library. The old Wave 2 preservation test retains its original SHA-256 fixture; an exact, reversible helper removes only those two authorized changes before comparing historical Library bytes. The Wave 3 fixture also freezes the original Wave 2 test after undoing only that helper import/call. No historical assertion was deleted or its expected hash replaced.
+
+The four inspected thumbnails remain byte-identical: `public/grammar-worlds/adverb-tower.webp`, `public/catalog-thumbnails/connection-panel.webp`, `public/catalog-thumbnails/positions-gallery.webp`, `public/catalog-thumbnails/mouth-lab.webp`. No image generation, deletion or overwriting occurred.
+
+### Final verification evidence
+
+| Check | Result |
+| --- | --- |
+| Fresh pre-edit baseline | 238 existing tests passed; TypeScript reported 11 inherited diagnostics |
+| New Wave 3 tests | **42 passed**: grammar 23, Mouth Lab 10, routes/catalog/access 4, preservation 3, audio 2 |
+| Complete combined regression | **280 passed, 0 failed, 0 cancelled, 0 skipped**; serial TAP run after final source edits |
+| Prior regression breakdown | 137 conversation + 36 Wave 1 + 47 Wave 2 + 8 Library/verbal-help + 10 original syntax tests all passed |
+| Independent source review | Reviewed every grammar bank and first/middle/final Mouth flow; independently ran 33 grammar/Mouth tests, all passed; no remaining source blocker |
+| Lint | `npm run lint`: exit 0 after final source edits |
+| Protected build | `npm run build`: exit 0, including both finalization passes and artifact validator |
+| Protected artifact specifics | 61 private client modules, 55 premium media files, 297 excluded private paths. All 8 Mouth MP3s and both repaired lesson client chunks are protected and absent from public output; 49 public JS files checked for unique repaired-content leaks |
+| TypeScript | Fresh base `npx tsc --noEmit` versus final `npx tsc --noEmit --incremental false`: **11 → 11 identical diagnostics, 0 new, 0 resolved**. Raw compiler exit remains 2; the delta gate passes, not a clean compiler claim |
+| Diff | Full scoped source/test/audio-manifest diff inspected; `git diff --check` passed; no unrelated path modifications |
+| Historical preservation | 239 frozen records plus the complete 66,809-byte pre-Wave-3 report prefix pass; all 32 Wave 1 MP3s and all 13 Wave 2 listening MP3s/manifests are covered by unchanged prior checks |
+| Browser attempt | One isolated local client preview attempt at `http://127.0.0.1:8766/clase/38` returned `net::ERR_BLOCKED_BY_CLIENT`. No retry or deployment workaround. Interactive visual QA **PENDING** |
+| Fallback QA | Full SSR/handler checks, first/middle/final source walkthrough, responsive CSS, semantic controls/focus/reduced-motion source and all thumbnails inspected. These do not replace browser/AT testing |
+| Human listening | **PENDING** for all eight new recordings; technical validation is complete |
+
+The first combined run was 278/280: two original regression assertions required explicit concessive-scope and ambiguity terminology in feedback. Those concepts were restored truthfully in the two target banks; the historical tests stayed unchanged. The final full run is 280/280.
+
+The first build compiled but correctly stopped at its existing protection guard when the legacy `/audio/edificio-voces/1b-andres.mp3` was still present in generated public output. Its bytes matched the untouched source. The unchanged build pipeline was rerun after final source edits and completed successfully, including protection, two finalizers and artifact validation. No protection check was disabled, build script changed or failed artifact deployed. The precise transient cause was not established; successful final-artifact checks are the evidence for the reported result.
+
+Inherited TypeScript locations remain outside this wave: 8 diagnostics in `app/api/billing/subscription/route.ts`, 2 in `app/marketing/MarketingSections.tsx`, and 1 in `app/mexico/map-data.ts`. Those files were not edited. The npm wrapper emitted its pre-existing http-proxy configuration warning; no environment configuration was changed.
+
+Reproduce the selected safe regression without the D1-mutating full harness:
+
+```sh
+node --input-type=module <<'JS'
+import {readFileSync, readdirSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+const files = [
+  ...pkg.scripts['test:conversation'].split(' ').slice(2),
+  'tests/audio-deck-wave1.test.mjs', 'tests/grammar-wave1-repair.test.mjs',
+  'tests/phonetics-wave1.test.mjs', 'tests/phonetics-wave1-assets.test.mjs',
+  'tests/library-information-architecture.test.mjs', 'tests/verbal-help-contract.test.mjs',
+  'tests/a1-syntax-lessons.test.mjs', 'tests/b1-contrast-relative-lessons.test.mjs',
+  ...readdirSync('tests').filter(name => /^wave[23]-.*\.test\.mjs$/.test(name)).sort().map(name => `tests/${name}`),
+];
+const result = spawnSync(process.execPath, ['--test', '--test-concurrency=1', '--test-reporter=tap', ...files], {stdio: 'inherit'});
+process.exit(result.status ?? 1);
+JS
+npm run lint
+npm run build
+npx tsc --noEmit --incremental false
+git diff --check
+```
+
+### Quality Standard v2 gates
+
+PASS below means supported by source/test evidence for this scope. PENDING means the required manual evidence was not obtained, not that it silently passed.
+
+| Gate | 213 | 217 | 218 | 38 |
+| --- | --- | --- | --- | --- |
+| Pedagogy | PASS: real chronological manipulation to speech | PASS: denial, contrast and changed decision | PASS: identifying facts to clarification | PASS: hearing to observed oral reuse |
+| CEFR contract | PASS: bounded A2 habitual/infinitive use | PASS: bounded B1 discourse | PASS: B1 indicative reference/clarification | PASS: supported A1 core, original A1–C1 single bank retained |
+| Originality | PASS: event order and invariant meaning | PASS: negative placement and new evidence | PASS: filtering and known-person information | PASS: contact map and listener-dependent toy exchange |
+| Visual hierarchy | PENDING browser; task headings/layout source checked | PENDING same | PENDING same | PENDING browser; current sound/task prioritized in source |
+| Meaningful interaction | PASS: all24 orders and reformulation | PASS: placement switch and3 new options | PASS: all4 filters and2 valid explanations | PASS:10 judgments,5 words,3 phrases, oral reuse |
+| Mobile | PENDING browser;720/390px CSS inspected | PENDING same | PENDING same | PENDING browser;650px responsive rules inspected |
+| Accessibility | PENDING browser/AT; keyboard buttons, labels, hidden panels and focus rules checked | PENDING same | PENDING same | PENDING browser/AT; named controls, text accommodation and focus rules checked |
+| Content correctness | PASS complete original bank/context review | PASS complete original bank/context review | PASS complete bank and valid alternatives | PASS scripts/cues/source; audible realization PENDING |
+| Language/register | PASS natural Spanish/voseo, no accidental new English UI | PASS same | PASS same | PASS Spanish/voseo; existing English title retained |
+| Audio | Not required for this grammar repair | Not required | Not required | Technical PASS; human listening PENDING |
+| Routing/state | PASS preserved PRO route; revisit/reset tested | PASS same | PASS same | PASS canonical guarded route, listen/reveal/reload/reset tested |
+| Tests | PASS complete bank, mechanics, legacy preservation | PASS same | PASS same | PASS models/trials/full path/invalidation/audio/routes |
+| Thumbnail | PASS inspected and preserved; browser crop PENDING | PASS same | PASS same | PASS inspected and preserved; browser crop PENDING |
+| Teacher usability | PASS concrete core selection, hints and observation; classroom trial PENDING | PASS supplied retrieval inputs and changed facts; classroom trial PENDING | PASS candidates and clarification; classroom trial PENDING | PASS models, explicit practice evidence and original optional bank; classroom trial PENDING |
+| Duration | 45-minute planned core; observed timing PENDING | Same | Same | 45-minute planned core plus original extension; observed timing PENDING |
+| Final oral production | PASS sequence and changed departure | PASS correct assumptions and revise choice | PASS identify and repair wrong candidates | PASS request/clarify/buy/retry, teacher observed |
+| Overall | SOURCE IMPLEMENTED / MANUAL QA PENDING | SOURCE IMPLEMENTED / MANUAL QA PENDING | SOURCE IMPLEMENTED / MANUAL QA PENDING | SOURCE IMPLEMENTED / MANUAL QA PENDING |
+
+Deferred intentionally: actual desktop/mobile/zoom/keyboard/AT walkthrough, all eight human listening checks and observed classroom pacing. The inherited TypeScript issues remain untouched. No new lesson IDs, level variants, broad phonetics curriculum, runtime synthesis, automated speech grading, new cover art or cross-device progress system was added. No Priority 9 lesson or Repair Wave 4 was started.
+
+### Durable checkpoints and final scope
+
+| Checkpoint | SHA |
+| --- | --- |
+| Diagnosis and bounded plan before product edits | `7047130c7c882711b85724adb92f48c3344dd5d8` |
+| Eight finite Microsoft audio models/provenance | `1dcc87fa4bab75a76d48df3b9d47573184a3ce1a` |
+| Mouth Lab core, preserved route and Library integration | `49e45da36d60dfbf846836ec69518e321675ae7d` |
+| Three grammar banks, mechanics and complete regression fixes | `e57dd0198564e1f8b536894d997bff4a2ad31fca` |
+
+All four checkpoints were pushed to `codex/quality-v2-repair-wave3-20260928`. The final documentation commit follows these checkpoints; its SHA is reported in the task handoff. The required Wave 2 base, Wave 1 checkpoints and Conversation Batch 1 remain ancestors. No PR was opened because this task forbids merging.
+
+Exactly **30 paths** changed from the required base; the list includes the minimal shared/test adaptations explained above:
+
+- `app/Library.tsx`
+- `app/clase/38/page.tsx`
+- `app/mouth-lab/MouthLab.tsx`
+- `app/mouth-lab/audio-manifest.json`
+- `app/mouth-lab/data.ts`
+- `app/mouth-lab/mouth-lab.css`
+- `app/mouth-lab/state.ts`
+- `app/syntax-labs/RepairSyntaxLab.tsx`
+- `app/syntax-labs/SyntaxLab.tsx`
+- `app/syntax-labs/data.ts`
+- `app/syntax-labs/repair-content.ts`
+- `app/syntax-labs/repair.css`
+- `docs/lessons/quality-v2-repair-status.md`
+- `public/audio/mouth-lab/caro.mp3`
+- `public/audio/mouth-lab/carro.mp3`
+- `public/audio/mouth-lab/pero.mp3`
+- `public/audio/mouth-lab/perro.mp3`
+- `public/audio/mouth-lab/phrase-carro.mp3`
+- `public/audio/mouth-lab/phrase-contrast.mp3`
+- `public/audio/mouth-lab/phrase-perro.mp3`
+- `public/audio/mouth-lab/rojo.mp3`
+- `tests/fixtures/wave3-preserved.json`
+- `tests/helpers/wave3-preservation.mjs`
+- `tests/wave2-preservation.test.mjs`
+- `tests/wave3-audio.test.mjs`
+- `tests/wave3-grammar-content.test.mjs`
+- `tests/wave3-grammar-interaction.test.mjs`
+- `tests/wave3-mouth.test.mjs`
+- `tests/wave3-preservation.test.mjs`
+- `tests/wave3-routes.test.mjs`
+
+**Preservation and operational confirmation:** Conversation Batch 1 and Waves 1–2 retain all lesson content, behavior, assets, audio and regression coverage. Historical reports are preserved verbatim; the only prior-test edit is the explicit two-line integration exception with its original fingerprint still enforced. All unrelated lessons and the five other syntax banks remain untouched in content/rendering. Nothing was deployed, merged or published. No production, D1/data, auth/Firebase, billing/Paddle/PayPal, Resend, secrets, environment configuration, domains, release-controller or deployment-state change occurred. This run stops after IDs 213, 217, 218 and 38.
