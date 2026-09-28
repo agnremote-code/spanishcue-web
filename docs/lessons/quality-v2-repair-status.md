@@ -236,11 +236,11 @@ Before any later authorized publication: inspect entry/task/feedback/close in a 
 
 **Wave 1 implementation stops here. No Wave 2 or next-priority lesson was started.** Nothing was merged or deployed. No production systems/data, D1, authentication, Firebase, billing, Paddle, PayPal, Resend, secrets, environment variables, domains, release-controller state or deployment state were modified. All delivery is source commits on the named repair branch.
 
-## Repair Wave 2: diagnosis and implementation checkpoint, 2026-09-28
+## Repair Wave 2: implementation and verification, 2026-09-28
 
 This is a newly authorized implementation run for **131, 133, 16 and 108 only**, starting from Wave 1 final `e8f38659588526253c51f638b39e337682729363`. The entire Wave 1 report above is preserved verbatim as history. Branch: `codex/quality-v2-repair-wave2-20260928`, created on GitHub before implementation. Canonical main rechecked: `5d6733a9b9404bbc17bf6999530eb48ffb574a3e`; main versus requested base is **0 / 27**, so no newer canonical changes need integration. No open PR overlaps were returned. Lost local checkout was recovered by a new clone of the pushed branch; no work or branch was reset, cleaned or pruned.
 
-**Checkpoint status:** complete source diagnosis and bounded design recorded; implementation in progress. Fresh inherited TypeScript baseline: **11 diagnostics**, captured before product edits. This section will gain implementation/results evidence before final delivery. No publication readiness is claimed.
+**Final source status:** the four authorized repairs are implemented and pushed. **228 tests pass; lint and protected build pass; TypeScript remains at the same 11 inherited diagnostics with zero new errors.** Independent review has no outstanding findings. Browser visual/mobile/accessibility QA and human listening remain **pending**. This is source-complete, **not approved for publication**. The diagnosis and selected design below were preserved in the first checkpoint before implementation.
 
 | ID | Exact title | Category / level | Historical grade | Access / route |
 |---|---|---|---|---|
@@ -263,6 +263,194 @@ This is a newly authorized implementation run for **131, 133, 16 and 108 only**,
 - **16:** preserve all worlds and lexical occurrences; repair glosses/context, author relevant support and safe active chunks, make Spanish the default with optional translations. Context choice leads to hidden recall; later changed-context recall follows an actual task in another world. Teacher observations assess oral variants. Risky slang remains available for understanding with explicit caution and neutral production alternatives. Preserve roleplays, focus-managed modal and imagery.
 - **108:** preserve four modes and 60 lexical entries. An explicit session selection captures the filtered/saved target set for every mode. Spanish-definition matching is default. Definition-to-word recall then gap-to-inflected-model recall returns after intervening targets; tiny pools get an explicit oral interlude. Model comparison/teacher confirmation accepts valid variants without brittle free-text grading. Versioned local-only saved IDs have honest persistence/failure messaging. Finish with a short contextual exchange using a few targets.
 
-The planned audio change count is **0**: reuse 13 existing files with a technical manifest, retaining exact scripts, configured voices and bytes. Actual listening has not been performed. Existing multi-variety cast metadata is preserved; no random new voice or claim of verified accent is introduced. If a concrete audio/script defect later requires synthesis, the owner has explicitly authorized Microsoft MP3 generation for 131/133; no synthesis is presumed necessary now.
+The actual audio change count is **0**: 13 existing files are reused with technical manifests, retaining exact scripts, configured voices and bytes. Actual listening has not been performed. Existing multi-variety cast metadata is preserved; no random new voice or claim of verified accent is introduced. If a concrete audio/script defect later requires synthesis, the owner has explicitly authorized Microsoft MP3 generation for 131/133; no synthesis is presumed necessary now.
 
-Root owns cross-lesson preservation, manifests, documentation, final verification and pushes; independent Astra implementers own the two listening pages, ARGENTO and WordBank respectively. No shared Wave 1 component changes are currently required. Existing IDs/routes/catalog metadata/access, thumbnails, Conversation Batch 1 and Wave 1 code/tests/audio remain protected. No production/D1/auth/billing/environment/release work, merge or deployment. No Wave 3 or Priority 9 lesson.
+Root owns cross-lesson preservation, manifests, documentation, final verification and pushes; independent Astra implementers own the two listening pages, ARGENTO and WordBank respectively. No shared component changes were required or made. Existing IDs/routes/catalog metadata/access, thumbnails, Conversation Batch 1 and Wave 1 code/tests/audio remain protected. No production/D1/auth/billing/environment/release work, merge or deployment. No Wave 3 or Priority 9 lesson.
+
+### Recovery and source checkpoints
+
+| Checkpoint | SHA | Preserved outcome |
+|---|---|---|
+| Required Wave 1 base | `e8f38659588526253c51f638b39e337682729363` | All Wave 1 repairs, 32 phonetics MP3s, tests and report history. |
+| Wave 2 diagnosis | `c2eaee9fcfcc111dcd5f0c59f8ecbfbd5403ff6c` | Pre-edit defects, bounded design and 70-record preservation fixture, pushed early. |
+| ARGENTO / media checkpoint | `12318099eac4c555cef976828ed37fc194db12ca` | Contextual vocabulary retrieval, 13-clip manifests and executable preservation checks; 15 checkpoint tests passed. |
+| Integrated implementation | `b3c70d5ea53a890c13ef485b3871f82d151fc2e0` | Four repaired lessons, final review fixes and 47 Wave 2 tests; 228 combined tests passed. |
+
+The final documentation commit follows these checkpoints on the same branch. All commits descend from the requested Wave 1 base. No PR, main merge or release operation was performed.
+
+### Implemented repair: 131, Última Llamada
+
+**ESCUCHA · A2 · PRO · historical audit C.** Airport announcements, a friend's message, a ready-order message, directions and a driver's message remain the central scenario. The six clips total **86.424 seconds**. Speakers/configured varieties remain Anuncio (Spain), Nina (Argentina), Cafetería (Colombia), Aerolínea (Mexico), Pasajera/Pasajero (Peru/Spain) and Diego (Colombia). These are inherited voice declarations, not an ear-verified accent assessment.
+
+- Neutral signal names replace answer-bearing sidebar clues. Unsupported receipt timestamps and the promised live-changing board are removed. **17:46 is explicitly a scenario clock**, without a running countdown.
+- Each signal now has prediction, a first-pass oral gist, purposeful second listening, an editable detail answer, check, hint, retry and deliberate reveal. The complete six-question bank was reviewed against all script segments. Wrong answers no longer lock the activity or automatically reveal the full key.
+- Previous/next/sidebar/stage navigation hides the transcript. Replay remains available through the existing AudioDeck; changing the active signal/reset remounts the deck. Text accommodation is available deliberately and recorded separately from audio completion. An ended callback is labelled only as an audio finishing, never comprehension or mastery.
+- Verified or deliberately revealed facts can be stored, removed and consulted in the mission with their source and a return link. The first B12/18:10 announcement is distinguished from the updated C4/17:55 boarding and 18:15 closure. The seven-minute walk is correctly located **from the speakers' position**, matching “desde aquí.”
+- All three plans receive conditional feedback. Walking directly is a low-risk plan under the scenario assumptions, approximately 17:53. Coffee is already ready; collection time is unknown and cancellation is at 17:50, so it cannot be categorically rejected. Waiting for Nina depends on an uncertain 18:05 arrival; adding roughly seven minutes gives approximately 18:12, with little margin and her explicit request not to wait once boarding is called. These are planning estimates, not heard arrival guarantees.
+- The close requires a spoken message to Nina using the changed gate/time, a reason and a request, a partner response about coffee, and a message to Diego about a possible delay. The teacher manually observes the outcome. All eight original personal questions remain optional extensions. Reset clears attempts, notes, assistance, plan and observations; reload persistence is explicitly absent.
+
+The visual world remains the airport and signal board. CSS improves task contrast/readability, primary touch targets, narrow-screen flow and reduced motion. The shared audio component and thumbnail are unchanged. The estimated teacher route is **25 + 10 + 10 minutes**; classroom timing is unobserved.
+
+### Implemented repair: 133, Habitación 508
+
+**ESCUCHA · B2 · PRO · historical audit C.** The hotel incident remains a six-voice investigation and professional response, with **219.120 seconds** across seven clips. Laura (Spain), Tomás (Colombia), Marisol (Peru), Iván (Mexico), Julián (Argentina) and Ana (Colombia, also the response) retain their configured voices and scripts.
+
+- Reports are framed as morning-after interviews. Day 1/day 2 and the case-response time are explicitly **editorial scenario framing**, not claimed audible recording timestamps. Fabricated exact-minute event sorting and the prematurely solved global timeline are removed.
+- Global perspective precedes detailed evidence work. Each witness has three authored assertions, **18 total**, classified as declared, the speaker's hypothesis or unsupported. “Declared” is explained as a report, not independently proven fact. Each key/feedback quote is grounded in the relevant preserved script. Laura is no longer asked to account for the cake's destination before Iván supplies that information.
+- Eight events are reconstructed with arrow controls and **seven evidenced precedence constraints**, not a single prescribed sequence. All **40,320 permutations** are evaluated against an independently specified relation set in tests. Cake dispatch has no fabricated minute or fixed ordering relative to housekeeping/key failure. A housekeeping-induced block remains a hypothesis; approximate testimony is not converted into false precision.
+- Evidence relations appear only after deliberate reveal; they are not a pre-solved answer sheet. Multiple compatible orders are accepted. The learner proposes a spoken remedy before the manager comparison, with an explicit teacher-guided override.
+- The manager's existing transcript is now available as deliberate support. Three response checks verify measures actually announced, and permit correction after feedback. Final roleplay uses two voices, distinguishes a reported fact from a hypothesis, proposes a proportionate remedy and answers a partner's objection. All eight original broader discussion prompts remain optional extensions.
+- All witness/transcript/navigation/reset states are explicit and tested, including alternative valid ordering through actual arrow handlers. Speech judgments remain manual. The case-room visual identity and thumbnail stay intact; no decorative waveform is shown. Mobile flow, touch controls and reduced-motion CSS are improved structurally.
+
+Estimated teacher route: **27 minutes** for the six voices with two listening purposes, **8** for reconstruction/proposal/comparison, **10** for oral defense/revision. The teacher selects an extension rather than rushing through all questions; timing remains an estimate.
+
+### Implemented repair: 16, ARGENTO
+
+**VOCABULARIO · A1 · FREE · historical audit C.** All **12 worlds, 144 Spanish lexical occurrences / 133 unique strings, 72 original follow-up questions, 23 shared supports, 12 scene-photo references, six expanded slang entries and both four-turn dialogue models** remain available. Model spelling “re copado” becomes “recopado”; the lexical bank's Spanish strings are otherwise preserved.
+
+- The masthead now correctly says Vocabulario. Spanish is the default; English translations are optional. Seventy-two separately authored supports replace the unrelated index-based help assignment.
+- Four English glosses are corrected: `boludo` is potentially insulting/context-dependent; `ni en pedo` is vulgar; `cancha` is a playing field/pitch, not only a stadium; kiosk `papas` explicitly means packet crisps/chips in that context. The intensifier is presented as a spoken combination, with normative `rebueno`/`recopado` examples.
+- Register guidance gives a relationship/context, a neutral alternative and active/receptive scope. `boludo`, `ni en pedo` and `quilombo` are receptive-only in this A1 route and removed from suggested roleplay production. The complete reference bank remains available. Regional material is not presented as exclusive to Argentina.
+- **36 safe active chunks**, **12 contextual choice tasks with 36 explained options**, and **36 changed-context return prompts** were authored. Meaning/context recognition leads to oral recall with the full bank, page supports, dialogue models and floating help hidden. A deliberate model comparison supports retry; valid natural alternatives are teacher-assessed.
+- A registered recall attempt returns only after a **subsequent correct contextual response in another world**. Navigation alone cannot unlock it. The later situation changes while the useful expression is reused. Return, help, teacher observation and reset are implemented and tested.
+- Each world has a short oral close: at least two turns, two suitable expressions, a partner response and explicit teacher criteria. Reset also clears the page's older self-report marks. Session-only progress and reload behavior are disclosed. The existing focus-managed roleplay modal is preserved.
+
+The selected 45-minute route is **Mate → Café → Argento → delayed returns → oral close**, with 4/9/9/6/7/10-minute planning budgets. Other worlds and long comparisons remain optional; this is not a requirement to learn 144 items in one A1 class. The van thumbnail and scene imagery are unchanged.
+
+### Implemented repair: 108, El Banco de Palabras
+
+**VOCABULARIO · primary A2, display A2–B1 · PRO · historical audit B.** This remains **one reusable bank**, not two separately authored CEFR variants. All **60 cards**, six topics of ten, **20 nouns / 12 verbs / 7 adjectives / 21 chunks**, and four modes are preserved. In the original data, only ID 40's inconsistent gap marker changes from two underscores to three.
+
+- “Practicar estas tarjetas” takes an explicit snapshot of selected cards from the intersection of topic, lexical kind, search and saved-only filters. Matching, retrieval and speaking use that session. Exploration filters do not silently replace an active practice session. Applying a new selection explicitly resets rounds/observations. Search text is not repeated over hidden-answer practice, preventing answer leakage through a query.
+- Matching uses Spanish definitions by default, with English only on request. Batches contain at most five pairs and show their actual denominator. Empty, singleton and small pools work. Synchronous matching removes the stale timeout/reset race.
+- **All 60 completed sentences** have been assembled and reviewed, with 60 authored model completions, combinations and hints. Models handle articles (`una cuadra`, `tu barrio`, `el plato`, `la primera tarea`), existential `un embotellamiento`, pronouns (`quedarme`, `ponerme`, `concentrarme`), imperative `doblá` and agreement (`desordenada`, `emocionada`, `orgullosos`, `tener pendientes`). The model is one possible natural completion; no fragile exact-string answer matcher rejects valid alternatives.
+- Retrieval has two passes: Spanish definition to word/chunk, then a later gap/context requiring the correct form. Other selected targets intervene; a one-card session inserts a spoken exchange before the same target returns. Supported attempts reappear later; hiding help does not erase the record that assistance was used. Progress measures teacher-observed attempts, not automatic mastery.
+- Five selective use notes cover address/politeness/regional context, including the source's existing Argentina note for `rendir un examen`. The rest of the bank is not cluttered with unnecessary register badges.
+- Saved IDs use a validated, versioned localStorage record with corruption/availability/write-failure handling. The UI explicitly says **this browser and device, no account synchronization**. Nothing is stored in D1. Saved does not mean learned.
+- Speaking uses a scenario topic present in the selected bank, with one to three targets from that topic, avoiding unnatural mixed-topic combinations. Two suitable expressions are requested, or one for a singleton. Models are hidden until help; a changed detail prompts a response and agreement. Three teacher criteria confirm the close. Changing context resets observations/help/timer; leaving speaking pauses the optional, penalty-free timer.
+
+The teacher selects roughly **6–8 cards from one topic** for a 45-minute core (5/8/5/12/10/5 minutes), with a B1 explanation/comparison extension in the same bank. Responsive CSS raises essential text, labels search, preserves keyboard/tap controls and improves focus/contrast. The six-world object-tray thumbnail is preserved.
+
+### Exact audio inventory and validation
+
+All paths below are unchanged repository assets under `public`. **Reused: 13. Added/replaced/deleted: 0. New Microsoft MP3s generated: 0.** No synthesis service or credentials were needed.
+
+| ID | Exact path | Seconds |
+|---|---|---:|
+| 131 | `public/audio/ultima-llamada/salida.mp3` | 13.848 |
+| 131 | `public/audio/ultima-llamada/amiga.mp3` | 15.528 |
+| 131 | `public/audio/ultima-llamada/cafe.mp3` | 14.424 |
+| 131 | `public/audio/ultima-llamada/cambio.mp3` | 15.840 |
+| 131 | `public/audio/ultima-llamada/camino.mp3` | 14.616 |
+| 131 | `public/audio/ultima-llamada/conductor.mp3` | 12.168 |
+| 133 | `public/audio/habitacion-508/huesped.mp3` | 35.184 |
+| 133 | `public/audio/habitacion-508/recepcion.mp3` | 28.728 |
+| 133 | `public/audio/habitacion-508/housekeeping.mp3` | 29.016 |
+| 133 | `public/audio/habitacion-508/room-service.mp3` | 31.584 |
+| 133 | `public/audio/habitacion-508/vecino.mp3` | 28.248 |
+| 133 | `public/audio/habitacion-508/gerente.mp3` | 35.160 |
+| 133 | `public/audio/habitacion-508/decision-real.mp3` | 31.200 |
+
+New manifests: `app/ultima-llamada/audio-manifest.json` and `app/habitacion-508/audio-manifest.json`. They record the inherited source commit, exact segment text/speaker/configured voice/rate, configured variety, byte count, SHA-256, duration and format. All clips are MP3, mono, 24 kHz. Totals: **519,966 + 1,316,379 = 1,836,345 bytes**, **305.544 seconds**.
+
+**Technical audio validation: PASS for all 13.** File existence/nonzero length, unique paths and checksums, exact active content/manifest correspondence, original script preservation, `ffprobe` format/duration and complete `ffmpeg` decoding passed. Existing PRO audio prefixes remain protected. Manifests clearly mark inherited multi-variety voices as configuration, not independently verified speaker identity.
+
+**Human listening completed: NO.** Audible transcript concordance, pronunciation, accent, pacing, speaker distinction, clipping/noise and pedagogical listening quality remain pending for every clip. No audible time-span annotation or listening-quality claim is fabricated from text or decoding.
+
+### Complete-bank and duplicate review
+
+The implementation and independent Astra review covered every active item, including the first, middle and final entries, not a sample. For 131 this means all six detail keys/options, saved facts and all three conditional plans; for 133 all six source questions, 18 assertions, seven relations, eight events and three manager checks; for ARGENTO all 144 original occurrences, 72 supports and 36 new chunks; for WordBank all 60 composed models and practice supports.
+
+NFC/case/punctuation/whitespace-normalized duplicate inspection found:
+
+- ARGENTO's preserved words intentionally recur across related scenes: `caliente` three times; `dulce`, `rico`, `probar`, `carne`, `comer`, `agua`, `grande`, `barato`, `caro` twice each. The 11 repeated occurrences explain 144 versus 133. The two duplicated original follow-ups are “¿Tomás algo caliente?” and “¿Comés con amigos?”, in relevant different scenes. They are retained as legitimate recycling.
+- No duplicates among the 36 new ARGENTO chunk models, 36 changed-context cues or 12 contextual prompts.
+- No duplicate WordBank headwords, Spanish definitions or completed contextual models across all 60 cards.
+- No duplicate questions within either listening bank or assertions within the 18 hotel claims. Repeated first-listen instructions are stage guidance, not counted as new content.
+
+Curricular references: [PCIC, A1–A2 oral genres §1.2](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/07_generos_discursivos_inventario_a1-a2.htm) supports short personal/transactional exchanges and routine service/airport situations; [PCIC, B1–B2 oral genres §1.2](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/07_generos_discursivos_inventario_b1-b2.htm) informs the hotel case's explanation, qualification and professional exchange. Review judges communicative demand and scaffolding, not word rarity. ARGENTO's productive core is short supported A1 exchange; sensitive slang is receptive. WordBank has a bounded A2 core and optional B1 expansion. No level change or formal certification is claimed.
+
+Register references consulted: ASALE's [boludo](https://www.asale.org/damer/boludo), [pedo](https://www.asale.org/damer/pedo), [quilombo](https://www.asale.org/damer/quilombo), [copado](https://www.asale.org/damer/copado), [che](https://www.asale.org/damer/che), [posta](https://www.asale.org/damer/posta), and RAE's [re-](https://dle.rae.es/re-). Relationship and context determine whether a term is appropriate; regional examples do not imply national exclusivity.
+
+### Verification results and limits
+
+| Check | Result |
+|---|---|
+| Fresh preservation baseline before product edits | 181 passed, 0 failed, 0 skipped, serial TAP run. |
+| ARGENTO targeted tests | 10 passed. All context choices, hidden resources, delayed eligibility, safe roleplay prompts, real reset and 12-world SSR paths. |
+| Listening targeted tests | 15 passed. Full source maps/keys, all 40,320 chronology permutations, real navigation/retry/reveal/save/reconstruction/response/reset handlers and SSR. |
+| WordBank targeted tests | 16 passed. All 60 composed models and actual contextual handlers, pool sizes 0–60, small matching groups, filtered snapshots, delays, assistance, persistence failures, oral-topic/singleton behavior, timer cleanup and search leakage. |
+| Cross-wave preservation/media tests | 6 passed. 70 protected records, 32 Wave 1 MP3s, all four catalog records/access boundaries, 13 active script/asset maps and full media decode. |
+| Final combined regression run | **228 passed, 0 failed, 0 cancelled, 0 skipped** in 14.84 seconds. Includes all 137 conversation tests, 36 Wave 1 tests, 8 library/verbal-help tests and 47 Wave 2 tests. |
+| `npm run lint` | PASS, exit 0. No source warnings/errors. npm emits its inherited unknown `http-proxy` configuration notice. |
+| `npm run build` | PASS, exit 0. Protected 60 private client modules and 47 premium media files; excluded 288 private paths; artifact validator confirmed ESM Worker `default.fetch` and hosting manifest. No publishing command run. |
+| `npx tsc --noEmit`, fresh before/after | Both exit 2 with **the same 11 diagnostics**, exact diagnostic-line match; **0 new / 0 removed**. Eight inherited TS2367 billing diagnostics, two marketing TS2367/TS7053, one Mexico TS2352. Those unrelated files are unchanged. |
+| `git diff --check` and scope inspection | PASS. Exactly the four authorized lesson directories, their tests/fixture and this appended report change. No shared component change. |
+| Independent review | No outstanding findings. Walking-origin precision and singleton oral-completion copy were corrected and covered by regressions. |
+| Browser attempt | One permitted local isolated preview attempt, using the actual four client components without starting Worker/D1, was blocked at `http://127.0.0.1:8765/argento` with `net::ERR_BLOCKED_BY_CLIENT`. **Visual QA did not pass.** No alternate deployment or browser-policy bypass was attempted. |
+| Fallback | Actual-component SSR/handler tests, CSS breakpoint/readability/touch/reduced-motion review, source accessibility sanity checks, all four thumbnail images inspected, complete media technical validation. This does not prove rendered 320/390px, tablet/desktop, focus/zoom or screen-reader behavior. |
+
+Reproducible targeted command: `node --test --test-concurrency=1 --test-reporter=tap tests/wave2-argento.test.mjs tests/wave2-listening.test.mjs tests/wave2-preservation.test.mjs tests/wave2-wordbank.test.mjs`. The aggregate run uses the exact files in `package.json`'s `test:conversation`, plus `tests/audio-deck-wave1.test.mjs`, `tests/grammar-wave1-repair.test.mjs`, `tests/phonetics-wave1.test.mjs`, `tests/phonetics-wave1-assets.test.mjs`, `tests/library-information-architecture.test.mjs`, `tests/verbal-help-contract.test.mjs` and those four Wave 2 tests, with concurrency 1 and TAP reporting. `ffmpeg`/`ffprobe` are needed for media tests. The D1-mutating full `npm test` harness was not run.
+
+### Quality Standard v2 gate status per lesson
+
+**PASS below means the stated source/content/test review passed; it is not release certification. PENDING gates keep all four lessons from publication approval.**
+
+| v2 gate | 131 | 133 | 16 | 108 |
+|---|---|---|---|---|
+| Pedagogy | PASS: listen, integrate signals, respond | PASS: compare voices, reconstruct, defend remedy | PASS: context, hidden recall, return, exchange | PASS: meaning, matching, two retrieval passes, agreement |
+| CEFR / PCIC | PASS: supported A2 practical planning | PASS: B2 evidence, uncertainty and professional response | PASS: supported A1 active core; risky slang receptive | PASS: A2 core, optional B1 extension in one bank |
+| Originality / duplicates | PASS: original airport preserved, full bank checked | PASS: hotel dossier preserved, full bank checked | PASS: 12 worlds and original recycling preserved | PASS: 60-item six-topic bank preserved |
+| Visual design | PENDING: asset inspected, browser blocked | PENDING: asset inspected, browser blocked | PENDING: asset inspected, browser blocked | PENDING: asset inspected, browser blocked |
+| Interaction | PASS: checks/retry/source facts/conditional plan | PASS: assertions/partial order/response checks | PASS: context/recall/real delayed eligibility | PASS: selection/matching/recall/context/oral state |
+| Mobile | PENDING: responsive source checked only | PENDING: responsive source checked only | PENDING: responsive source checked only | PENDING: responsive source checked only |
+| Accessibility | PENDING: semantic/focus/reduced-motion source and accommodations checked; browser/AT walk pending | PENDING: same, with arrow alternative to drag | PENDING: preserved modal focus logic and labelled controls; browser/AT walk pending | PENDING: labelled search/selection, focus/tap source; browser/AT walk pending |
+| Content correctness | PASS for complete scripts/keys/scenario reasoning; audible concordance pending under Audio | PASS for complete scripts/claims/partial order; audible concordance pending under Audio | PASS for complete lexical/context/support bank | PASS for all 60 composed models and alternatives |
+| Language / register | PASS: inherited varieties clearly declared | PASS: uncertainty and reported-source language | PASS: active/receptive separation, contextual cautions | PASS: contextual chunks, address/region notes, valid variants |
+| Audio | PENDING human listening; 6/6 technical PASS | PENDING human listening; 7/7 technical PASS | N/A: teacher-led vocabulary; no embedded audio claimed | N/A: teacher-led vocabulary; no embedded audio claimed |
+| State / routing | PASS: navigation/reset/maps/access preserved | PASS: navigation/reset/partial-order maps preserved | PASS: delayed/reset/route/FREE preserved | PASS: session/local save/reset/route/PRO preserved |
+| Tests | PASS: 15 listening + 6 shared checks | PASS: 15 listening + 6 shared checks | PASS: 10 targeted + 6 shared checks | PASS: 16 targeted + 6 shared checks |
+| Thumbnail | PASS asset relevance/path/bytes; catalog crop browser check pending | PASS asset relevance/path/bytes; catalog crop browser check pending | PASS asset relevance/path/bytes; catalog crop browser check pending | PASS asset relevance/path/bytes; catalog crop browser check pending |
+| Teacher usability | PASS source route/help/alternatives/reset; live walkthrough pending | PASS source route/interpretation/override/close; live walkthrough pending | PASS selected route/helps/safe targets/reset; live walkthrough pending | PASS exact selected bank/observations/local-save disclosure; live walkthrough pending |
+| Duration | PASS as labelled 45-minute estimate; unobserved in class | PASS as labelled 45-minute estimate; unobserved in class | PASS selected 45-minute route; original 70-minute catalog bank preserved | PASS selected 45-minute route; original 60–90-minute reusable-bank catalog preserved |
+| Final production | PASS: Nina/Diego response uses heard data | PASS: two-source remedy, uncertainty and objection | PASS: two-turn contextual exchange with teacher observation | PASS: coherent selected-topic agreement, changed detail and recall |
+
+### Preserved assets, changed files and deferred work
+
+All four thumbnails were viewed and remain byte-identical: `public/listening-premium/ultima-llamada.webp` (airport announcements/travel decisions), `public/listening-premium/habitacion-508.webp` (guest/staff incident), `public/chespanish-guide-van.webp` (Argentine lexical world) and `public/previews/word-bank-studio-v91.webp` (six concrete everyday semantic worlds). None materially misrepresents the repair. **No images were generated or overwritten.**
+
+Exact Wave 2 changed-file inventory, relative to the required base (**25 files**):
+
+```text
+app/argento/ArgentoPractice.tsx
+app/argento/data.ts
+app/argento/page.tsx
+app/argento/practice-data.ts
+app/argento/style.css
+app/banco-de-palabras/WordBank.tsx
+app/banco-de-palabras/data.ts
+app/banco-de-palabras/practice.ts
+app/banco-de-palabras/state.ts
+app/banco-de-palabras/style.css
+app/habitacion-508/audio-manifest.json
+app/habitacion-508/content.json
+app/habitacion-508/page.tsx
+app/habitacion-508/reconstruction.ts
+app/habitacion-508/style.css
+app/ultima-llamada/audio-manifest.json
+app/ultima-llamada/content.json
+app/ultima-llamada/page.tsx
+app/ultima-llamada/style.css
+docs/lessons/quality-v2-repair-status.md
+tests/fixtures/wave2-preserved.json
+tests/wave2-argento.test.mjs
+tests/wave2-listening.test.mjs
+tests/wave2-preservation.test.mjs
+tests/wave2-wordbank.test.mjs
+```
+
+Intentionally deferred: real browser desktop/tablet/320/390px/focus/zoom/AT walkthrough, all 13 human listening checks, and observed classroom pacing. ARGENTO's original external scene-photo URLs are preserved; their actual browser loading/cropping remains unverified. Catalog metadata is preserved exactly as requested, including 131's inherited “en tiempo real” promotional phrase and the original large-bank durations/WordBank “quiz” wording. The lesson itself explicitly states a simulated clock and the new teacher-assessed retrieval task. A future authorized metadata pass may align that copy; it does not justify modifying the protected catalog or Wave 1 tests in this run. Eleven inherited TypeScript errors are documented rather than repaired outside scope. No automatic pronunciation/speech assessment or cross-device progress synchronization is claimed.
+
+**Preservation confirmed:** Wave 1's source, all 32 MP3s, tests and the first 31,767 bytes of this report remain exact; the 70-record SHA-256 fixture verifies them plus protected catalog/docs/thumbnails. Conversation Batch 1 remains intact, with all 137 conversation tests passing and no conversation source changes. All original listening files/scripts and unrelated lessons, route IDs, metadata and access architecture are preserved. No changes to dependencies or shared components.
+
+**Operational boundary:** nothing deployed, merged or published; no PR created; production, D1, authentication/Firebase, billing/Paddle/PayPal, Resend, secrets, environment configuration, domains and release-controller state untouched. Work stops after these four lessons. Repair Wave 3 and Priority 9's new lesson were not started.
