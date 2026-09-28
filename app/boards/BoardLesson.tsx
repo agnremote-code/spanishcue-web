@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   advanceSession,
+  categoriesTaughtInSession,
   createSession,
   previousSession,
   resetSession,
@@ -20,9 +21,18 @@ type SavedView = {
   choosing: boolean;
   finalOrder: string[];
   finalCursor: number;
+  selectedCategories: string[];
+  taughtCategories: string[];
 };
 
-const emptyView: SavedView = { phase: "questions", choosing: true, finalOrder: [], finalCursor: 0 };
+const emptyView: SavedView = {
+  phase: "questions",
+  choosing: true,
+  finalOrder: [],
+  finalCursor: 0,
+  selectedCategories: [],
+  taughtCategories: [],
+};
 
 function shuffledIds(ids: readonly string[]): string[] {
   const result = [...ids];
@@ -37,8 +47,8 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
   const sessionKey = `spanishcue.boards.${bank.id}.session.v1`;
   const viewKey = `spanishcue.boards.${bank.id}.view.v1`;
   const [session, setSession] = useState<BoardSession | null>(null);
-  const [selected, setSelected] = useState<string[]>([]);
   const [view, setView] = useState<SavedView>(emptyView);
+  const selected = view.selectedCategories;
   const [ready, setReady] = useState(false);
   const [presentation, setPresentation] = useState(false);
   const [notice, setNotice] = useState("Elegí una categoría o mezclá varias para empezar.");
@@ -57,22 +67,30 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
     const frame = window.requestAnimationFrame(() => {
       try {
         const restored = restoreSession(bank, sessionStorage.getItem(sessionKey));
-        if (restored) {
-          setSession(restored);
-          setSelected(restored.selectedCategories);
-        }
+        if (restored) setSession(restored);
         const savedView = JSON.parse(sessionStorage.getItem(viewKey) || "null") as Partial<SavedView> | null;
         if (savedView && ["questions", "student", "final"].includes(savedView.phase || "")) {
+          const validCategories = (value: unknown): string[] => Array.isArray(value)
+            ? [...new Set(value.filter((category: unknown): category is string =>
+              typeof category === "string" && bank.categories.includes(category)))]
+            : [];
           const validFinalIds = new Set(bank.finals.map((item) => item.id));
           const finalOrder = Array.isArray(savedView.finalOrder)
             ? [...new Set(savedView.finalOrder.filter((id): id is string => typeof id === "string" && validFinalIds.has(id)))]
             : [];
+          const choosing = restored ? Boolean(savedView.choosing) : true;
           setView({
             phase: savedView.phase as Phase,
-            choosing: restored ? Boolean(savedView.choosing) : true,
+            choosing,
             finalOrder,
             finalCursor: Math.max(0, Math.min(Number(savedView.finalCursor) || 0, Math.max(0, finalOrder.length - 1))),
+            selectedCategories: restored && !choosing
+              ? restored.selectedCategories
+              : validCategories(savedView.selectedCategories),
+            taughtCategories: validCategories(savedView.taughtCategories),
           });
+        } else if (restored) {
+          setView((currentView) => ({ ...currentView, selectedCategories: restored.selectedCategories }));
         }
       } catch {
         setNotice("No pudimos recuperar la sesión anterior. Podés empezar una nueva.");
@@ -128,6 +146,17 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
     }
   }, [presentation]);
 
+  const openCategorySelector = useCallback(() => {
+    const newlyTaught = categoriesTaughtInSession(bank, session);
+    setView((currentView) => ({
+      ...currentView,
+      phase: "questions",
+      choosing: true,
+      selectedCategories: [],
+      taughtCategories: [...new Set([...currentView.taughtCategories, ...newlyTaught])],
+    }));
+  }, [bank, session]);
+
   useEffect(() => {
     const onFullscreenChange = () => {
       if (!document.fullscreenElement) setPresentation(false);
@@ -146,17 +175,20 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
       if (event.key === "ArrowRight" && questionActive) goNext();
       if (event.key.toLowerCase() === "d" && questionActive) deepen();
       if (event.key.toLowerCase() === "p" && questionActive) goNext(true);
-      if (event.key.toLowerCase() === "c") setView((currentView) => ({ ...currentView, choosing: true, phase: "questions" }));
+      if (event.key.toLowerCase() === "c" && !view.choosing) openCategorySelector();
       if (event.key.toLowerCase() === "f") void togglePresentation();
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [current, deepen, goNext, goPrevious, session, togglePresentation, view.choosing, view.phase]);
+  }, [current, deepen, goNext, goPrevious, openCategorySelector, session, togglePresentation, view.choosing, view.phase]);
 
   function toggleCategory(category: string) {
-    setSelected((categories) => categories.includes(category)
-      ? categories.filter((item) => item !== category)
-      : [...categories, category]);
+    setView((currentView) => ({
+      ...currentView,
+      selectedCategories: currentView.selectedCategories.includes(category)
+        ? currentView.selectedCategories.filter((item) => item !== category)
+        : [...currentView.selectedCategories, category],
+    }));
   }
 
   function startSession() {
@@ -172,8 +204,12 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
   function continueSession() {
     if (!session) return;
-    setSelected(session.selectedCategories);
-    setView((currentView) => ({ ...currentView, choosing: false, phase: "questions" }));
+    setView((currentView) => ({
+      ...currentView,
+      selectedCategories: session.selectedCategories,
+      choosing: false,
+      phase: "questions",
+    }));
     setNotice("Continuamos donde quedó la sesión.");
     focusQuestion();
   }
@@ -181,9 +217,13 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
   function restart() {
     const restartCategories = session?.selectedCategories ?? selected;
     if (restartCategories.length === 0) return;
-    setSelected(restartCategories);
     setSession(resetSession(bank, restartCategories));
-    setView((currentView) => ({ ...currentView, choosing: false, phase: "questions" }));
+    setView((currentView) => ({
+      ...currentView,
+      selectedCategories: restartCategories,
+      choosing: false,
+      phase: "questions",
+    }));
     setNotice("Sorteo reiniciado. El banco completo vuelve a estar disponible.");
     focusQuestion();
   }
@@ -245,7 +285,19 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
     {view.phase === "questions" && view.choosing && <section className="board-selector" aria-labelledby="board-selector-title">
       <span>ARMÁ ESTA SESIÓN</span><h2 id="board-selector-title">Elegí una categoría o mezclá varias.</h2>
-      <div>{bank.categories.map((category) => <button type="button" key={category} aria-pressed={selected.includes(category)} onClick={() => toggleCategory(category)}>{category}</button>)}</div>
+      <div>{bank.categories.map((category) => {
+        const taught = view.taughtCategories.includes(category);
+        return <button
+          type="button"
+          key={category}
+          className={`board-category-option${taught ? " board-category-taught" : ""}`}
+          aria-pressed={selected.includes(category)}
+          onClick={() => toggleCategory(category)}
+        >
+          <span>{category}</span>
+          {taught && <span className="board-category-status">✓ ENSEÑADA</span>}
+        </button>;
+      })}</div>
       <footer>
         {session && <button type="button" className="board-secondary" onClick={continueSession}>Continuar sesión</button>}
         <button type="button" className="board-primary" onClick={startSession} disabled={selected.length === 0}>{selected.length > 1 ? "Mezclar las elegidas" : "Empezar con esta categoría"}</button>
@@ -255,7 +307,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
     {view.phase === "questions" && !view.choosing && session?.exhausted && <section className="board-empty">
       <span>BANCO RECORRIDO</span><h2>Ya aparecieron todas las preguntas de esta selección.</h2>
       <p>Podés cambiar categorías o volver a sortear las mismas. No repetimos automáticamente.</p>
-      <div><button type="button" onClick={() => setView((state) => ({ ...state, choosing: true }))}>Cambiar categoría</button><button type="button" className="board-primary" onClick={restart}>Reiniciar sorteo</button></div>
+       <div><button type="button" onClick={openCategorySelector}>Cambiar categoría</button><button type="button" className="board-primary" onClick={restart}>Reiniciar sorteo</button></div>
     </section>}
 
     {view.phase === "questions" && !view.choosing && current && session && <section className="board-stage" aria-labelledby="board-question">
@@ -271,7 +323,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
         <button type="button" onClick={goPrevious} disabled={session.cursor === 0}>← Anterior</button>
         <button type="button" onClick={deepen} aria-pressed={session.deepened}>Profundizar</button>
         <button type="button" className="board-next" onClick={() => goNext(false)}>Otra pregunta →</button>
-        <button type="button" onClick={() => setView((state) => ({ ...state, choosing: true }))}>Cambiar categoría</button>
+        <button type="button" onClick={openCategorySelector}>Cambiar categoría</button>
         <button type="button" onClick={() => goNext(true)}>Pasar</button>
       </div>
     </section>}
