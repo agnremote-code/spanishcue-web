@@ -1,0 +1,63 @@
+[
+  {
+    "key": "redflag-a1",
+    "target": "public/play-mode/red-flag-o-no/a1.webp",
+    "refs": [
+      "public/play-mode/red-flag-o-no/a2.webp"
+    ],
+    "prompt": "Use case: photorealistic-natural. Create a NEW sibling thumbnail for the A1 level of the Spanish conversational lesson Red Flag o No, using the reference as art-direction and character reference. Preserve clean cinematic editorial photography, warm neutral cafe materials, believable adult relationship scene, natural window light, cream and olive casual clothes, same two adult men as reference. Meaningfully change the camera angle and action: across a small cafe table, one man is warmly offering half a croissant on a little plate while the other makes attentive eye contact and listens, an unused phone face down beside a coffee cup. A concrete recognizable interaction about sharing food and listening, with gentle expressive faces, not exaggerated conflict. Medium close two-shot, faces and offering gesture clearly legible at thumbnail scale, natural hands and anatomy. Landscape 3:2 aspect ratio, edge-to-edge photograph. No text, no labels, no badges, no logos, no flags, no cartoon UI.",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 138666,
+    "tool": "built-in image_gen",
+    "webp_quality": 85
+  },
+  {
+    "key": "talk-b2",
+    "target": "public/catalog-thumbnails/conversation-b2.webp",
+    "refs": [
+      "public/catalog-thumbnails/conversation-choice.webp",
+      "public/catalog-thumbnails/conversation-a2.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Create a NEW sibling wide landscape 16:9 lesson thumbnail using image1 as the primary family reference and image2 as material/lighting reference. Preserve this exact sumptuous photoreal cinematic conversation-world identity: two adult conversational partners, navy upholstered lounge seats, warm gold lighting and blue dusk, colorful topic worlds inside large beautiful clear floating glass orbs. Meaningful new composition: view obliquely from just above their round conversation table, the two people listening and responding thoughtfully, with their faces visible in three-quarter view. Place EXACTLY THREE selected rounded ivory question tiles on the foreground table, each carrying only one large engraved question mark, no words or numerals. The three separate tiles must be clearly distinct and fully visible, suggesting choose three questions. Surround the conversational pair with 5 or 6 colorful topic-world orbs showing food, travel town, mountain nature, culture sculpture and urban social life; preserve warm realistic material detail and spacious architectural setting from references. A mature friendly scene about weighing perspectives, approachable rather than academic. Distinct camera and scene from source, not a badge edit. No written text except the three question mark symbols; no title, no letters, no watermark, no neon sci-fi UI.",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "bytes": 306580,
+    "tool": "built-in image_gen",
+    "webp_quality": 85
+  },
+  {
+    "key": "machine-b2",
+    "target": "public/conversation-worlds/elimination-machine-b2.webp",
+    "refs": [
+      "public/conversation-worlds/elimination-machine.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Create a NEW sibling wide landscape 16:9 thumbnail in precisely the existing reference world. Preserve the massive titanium elimination machine with curved dark metal supports and delicate cyan energy rings, luminous floating Earth inside its cylindrical chamber, monumental industrial cathedral architecture, dramatic black steel and amber accent lights, clouds through enormous arches. Change camera substantially to a closer three-quarter view from a control balcony. Floating Earth remains prominent near center-right; machine fills image with rich tangible metallic materials. In left foreground an adult operator seen from rear three-quarter profile hesitates with hand poised between two large physical controls, a small amber illuminated clockwise return-arrow control and a circular muted red control, conveying reconsideration after a consequence. Keep operator secondary and machine + Earth visually dominant. An ordinary unbranded smartphone rests on the console as the grounded object under consideration, no readable screen. Use existing subtle cyan glow only, cinematic restrained original palette, no newly flashy neon. Clear story and strong thumbnail silhouette. No written words, letters, numbers, labels, badges, logos or watermarks.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 214916,
+    "tool": "built-in image_gen",
+    "webp_quality": 85
+  },
+  {
+    "key": "absurd-b2",
+    "target": "public/conversation-worlds/absurd-universe-b2.webp",
+    "refs": [
+      "public/conversation-worlds/absurd-universe.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Create a NEW sibling wide landscape 16:9 thumbnail in exactly the whimsical impossible-city world of reference. Preserve ornate golden illuminated towers suspended upside down above the city, purple and peach dusk sky, blue distant mountains and moon, elaborate art-deco stonework, levitating old-fashioned navy and brass tram, lush planters and warm glowing windows. Meaningful scene and perspective change: camera at a tram boarding platform, looking diagonally past a LARGE airborne tram in foreground left toward the magical vertical city. The tracks curve impossibly upward like a road becoming a wall; distant citizens calmly walk up the curved walkway, visibly obeying changed gravity. Several travelers stand naturally on the foreground platform considering whether to board, no close-up faces needed. Keep tram recognizable and dominant, extraordinary reversed architecture clearly readable behind; warm welcoming playful tone and photographic cinematic richness, not a dark futuristic city. Composition strongly distinct from source while unmistakably the same world. No written words, labels, badges, numbers, logos or watermarks.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 461498,
+    "tool": "built-in image_gen",
+    "webp_quality": 85
+  }
+]

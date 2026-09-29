@@ -1,0 +1,729 @@
+{
+  "baseCommit": "2b48f28bc7b25f19c650e52cece8f59eca352936",
+  "canonicalMain": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+  "notes": [
+    "Historical report prefix is byte exact.",
+    "Only Library ID38 link/copy and the prior preservation assertion have exact reversible exceptions, enforced by the helper and targeted tests.",
+    "Five unrelated syntax banks and legacy rendering are independently frozen by grammar tests."
+  ],
+  "records": {
+    "app/Library.tsx": {
+      "sha256": "9f3c29b9c836509921c779335374170d9252281af8ecc3aad45b7d09315b05ec"
+    },
+    "app/access-policy.ts": {
+      "sha256": "a1879c2ad75366a963b3d7c832a0ef351242196b8b18469a4b99d6550f4c1737"
+    },
+    "app/additional-samples.ts": {
+      "sha256": "e8bf6fb546fc9b11f23e9cfe1873e606bbfc7951af7f14223d5ede5693ebafff"
+    },
+    "app/argento/ArgentoPractice.tsx": {
+      "sha256": "acc80925aa03c2ec1e76ef695da440263831e9e9faaf2732f447406f90ebdf3c"
+    },
+    "app/argento/data.ts": {
+      "sha256": "f6ffe9df8f1f0594a6723b9595e72c112826a05e19bf39ee8fe4c3dc5ba49a83"
+    },
+    "app/argento/page.tsx": {
+      "sha256": "723177e0e080f19d396a9eea8ab7953b0946927a1d96175df60a06bb74fcdd64"
+    },
+    "app/argento/practice-data.ts": {
+      "sha256": "e7ec3eb636cd1a79bac946be4789f4da5b5ac8b82b6db26a98d9ab1b636a0596"
+    },
+    "app/argento/style.css": {
+      "sha256": "66880826202840732009f19b88a0012fb927e02e0349e1fdd40bebd29289d22e"
+    },
+    "app/banco-de-palabras/WordBank.tsx": {
+      "sha256": "54cc4a5d33a2672983bd904ed56f2e91763b58f93d2b1231a06061e2ae233661"
+    },
+    "app/banco-de-palabras/data.ts": {
+      "sha256": "5c075919ca08438b4cbf8646dfcb568e714d0a92936c830f96091c1947640024"
+    },
+    "app/banco-de-palabras/practice.ts": {
+      "sha256": "b5a3a800d495e7003d4fcc899b804c0b82ed873e8813e748bc6d196c7e075b3b"
+    },
+    "app/banco-de-palabras/state.ts": {
+      "sha256": "5f4ecdba81ae881c36b6a79b14cdc25e3469a8fc014a64c7abab0dd10b5eef7c"
+    },
+    "app/banco-de-palabras/style.css": {
+      "sha256": "d466e8e56fb32179f3cd4016d811aaee6d66e6388927989c5c91cff8c46e8274"
+    },
+    "app/choose-conversation/B2ConversationTools.tsx": {
+      "sha256": "1423f4a9b4dec2036fffb9308cefc444eebc201a895443ac4738a964bc408c1f"
+    },
+    "app/choose-conversation/C1ConversationTools.tsx": {
+      "sha256": "cedb02a7ca6981b2b6b187a85215198295f8242596af4af00d25f4a5bca0e324"
+    },
+    "app/choose-conversation/C2ConversationTools.tsx": {
+      "sha256": "1afe66ebfa4caa5b235bc188a8ab8c6c90494042eb3f730dd3308193680e3a17"
+    },
+    "app/choose-conversation/b2-data.ts": {
+      "sha256": "aafd41ca94691785a5a77b43454e94904c5f6b0a35b939e7e572b74b3dab7206"
+    },
+    "app/choose-conversation/b2.css": {
+      "sha256": "b544abe519ecd40e18483a0055eab20e2a8c6714cd6b5776849edfcd56aef2dd"
+    },
+    "app/choose-conversation/c1-data.ts": {
+      "sha256": "8bf73ed6bb0527c925ffa9715f68c8fa2c6c7e1ed0113a25579eb153426350ef"
+    },
+    "app/choose-conversation/c1.css": {
+      "sha256": "1b38c1081f46215b84d296306f2fc4d23433612835430904a9fed62c4bcaeb38"
+    },
+    "app/choose-conversation/c2-data.ts": {
+      "sha256": "b7aca9e49abd55aed25884aae4b8f649c7ea0523cda7a5cf80d72a1277a70d35"
+    },
+    "app/choose-conversation/c2.css": {
+      "sha256": "d03b100a261fa5fb22e1820097afb125d866efac65b0a7692c94fad41427f838"
+    },
+    "app/choose-conversation/page.tsx": {
+      "sha256": "d07653cfa83f07243aa4cd8a772910c2fe1cf5b72bc703aefd69306358b02d1d"
+    },
+    "app/choose-conversation/variants.ts": {
+      "sha256": "59fc062e0ca757b9d2d749ad6e939091270ed64885c44ba8ce4c15c97619fa25"
+    },
+    "app/clase/[id]/page.tsx": {
+      "sha256": "46f17d88d3cbd9aac92bddd07c09bed64b466b83bb1469dc29d8cf7b07f0fd91"
+    },
+    "app/conversation-families/authored-levels.ts": {
+      "sha256": "ba713d2c53d78555d0185d61ff8927f7dc7401ac1d4d352f97373ba2efcf0e61"
+    },
+    "app/conversation-families/catalog.ts": {
+      "sha256": "485e1a89c8c001739c2c8cb255db10de34bd4eb3fe6befba874253728b13caa5"
+    },
+    "app/conversation-families/types.ts": {
+      "sha256": "d7c1bfb13b8ec1f85aa9400e4e158b08d7c3caa00a01fc5f007b5bc33442118d"
+    },
+    "app/conversation-worlds/ConversationWorld.tsx": {
+      "sha256": "77415f36abc886adce4f75c65a4bc376c9e53bbd19f7e169631d3254ba746d1c"
+    },
+    "app/conversation-worlds/ConversationWorldFamily.tsx": {
+      "sha256": "56fcdcf85d56fe4d0d913e24b9f30900cb0ca4a2afed2998509883ca0a1f015e"
+    },
+    "app/conversation-worlds/c2-presentation.tsx": {
+      "sha256": "9b0d61c0f08c1d8af9b7969cdb7d3972272d51b73f1226200a5e51390b44ef7b"
+    },
+    "app/conversation-worlds/data-a1.ts": {
+      "sha256": "0a63f61a1611906377f452bc70c929d7fdb1f6fc3d52d68317394de11541d116"
+    },
+    "app/conversation-worlds/data-b2.ts": {
+      "sha256": "9ccd4824f6ab555109d30b49d33c6aa3060367c1d8b22a101e0d0397849b36a4"
+    },
+    "app/conversation-worlds/data-c1.ts": {
+      "sha256": "842b3c70fa42c4ef5f1bd9768b10a0797eae49b066a12972db1500d331f37fba"
+    },
+    "app/conversation-worlds/data-c2.ts": {
+      "sha256": "8949c670f6f728948afd5f999cfaf99683d8415891224afe4f732a91e92ac628"
+    },
+    "app/conversation-worlds/state.ts": {
+      "sha256": "84d2fe707ee1d09b1b2ac359bc4821aaa4a8a713e24aacdd6d96ccb84397ffde"
+    },
+    "app/conversation-worlds/types.ts": {
+      "sha256": "ba68447bb53e92abe0f650f5475ecb6293d6b3d6c309e48d3400c850ca4e0456"
+    },
+    "app/conversation-worlds/worlds.css": {
+      "sha256": "d670305cdcc2ff9cc91ad3bac26ac40db226d801fc5ba9895d9b3af35a42cbb8"
+    },
+    "app/grammar-worlds/GrammarRepair.tsx": {
+      "sha256": "890ab3e0f7accfe66fb303de08979918020d79a5559fad1ad89000a6757c86f1"
+    },
+    "app/grammar-worlds/GrammarWorld.tsx": {
+      "sha256": "50dadcb79690f2625a5896a845382857ed667cf3070ed01e4b0136283d6e6128"
+    },
+    "app/grammar-worlds/data-next.ts": {
+      "sha256": "aee2541b23ccab6fdfe49cf9ed4cc15ca92901c57dd2ff5f91c9b2393976f0a6"
+    },
+    "app/grammar-worlds/data.ts": {
+      "sha256": "37a6b40d5db8c007f3d4737ce415a2e6084767ac4d615dbd38627187ed0cc0a2"
+    },
+    "app/grammar-worlds/repair-data.ts": {
+      "sha256": "c03d54d273839c70ccab07fe31f3dfd70306beed9677fb50eaf2107c277890f5"
+    },
+    "app/grammar-worlds/repair-state.ts": {
+      "sha256": "26ee7385308df72d2d63576f0672b99fc6c1121ee34ba99e54f2cabe3c4621dd"
+    },
+    "app/grammar-worlds/repair.css": {
+      "sha256": "5c8dbb3292fba72d31c5eaedea6c1b724492c032d0498e752d94b33b210efe40"
+    },
+    "app/habitacion-508/audio-manifest.json": {
+      "sha256": "a9f92192777fbffb9d89576ba63a36a341ae8b088abd24568b7b40f3cb452084"
+    },
+    "app/habitacion-508/content.json": {
+      "sha256": "811f96c337faa00e0854be235eab8d7464ee0a4ca0eaa7ea1863968c999f01fb"
+    },
+    "app/habitacion-508/page.tsx": {
+      "sha256": "2262b093fdb32555f73eaf74bcbb4d4c95e9177937a5f95207ab2bb94fb0ebb3"
+    },
+    "app/habitacion-508/reconstruction.ts": {
+      "sha256": "c3a35c185e78ac45bd1069dcda05c47e8925b6e8a045f672a3a91115a5949560"
+    },
+    "app/habitacion-508/style.css": {
+      "sha256": "99f27455d4bd024cde4f108a6f15ccaa33c02a5e70637ee122bf121e8e67ec5f"
+    },
+    "app/lesson-catalog.ts": {
+      "sha256": "b52d31f7cd53291d7255e9bcb10be0350ae9cc37382fe99531c3e092f77e13a1"
+    },
+    "app/listening-studio/AudioDeck.tsx": {
+      "sha256": "9fb28b44d28d5c590d40ebe8813966c0176b2a851a6bdb32e49a30db53aae99b"
+    },
+    "app/phonetics/PhoneticsLesson.tsx": {
+      "sha256": "791a89b8b7569c0bed6967cd5ec7445f32ae8987e4390367db7005d74a2587cc"
+    },
+    "app/phonetics/audio-manifest.json": {
+      "sha256": "98ee3936b84b631a5da4ddac4f820d0afd5845a1c9d32507fcc8dc54ab880694"
+    },
+    "app/phonetics/data.ts": {
+      "sha256": "6fb0676a8839c29eb64d0e49f76db1cb69bbc7a16e855230b5dcd40d48dc4c2a"
+    },
+    "app/phonetics/navigation.ts": {
+      "sha256": "801d985eef28224b8c391b01f46f033f2577f35d5056b6e504856ad7f2ba5514"
+    },
+    "app/phonetics/phonetics.css": {
+      "sha256": "27769086fb9c3521ec16d3600268488e2628fae559cc6081b28d091193608b4a"
+    },
+    "app/phonetics/state.ts": {
+      "sha256": "d65579ec209694a9af789fbe8e98c9dce6d33fea6dec020386f0c1f0739ee6ce"
+    },
+    "app/red-flag-o-no/RedFlagGame.tsx": {
+      "sha256": "910838cca81c62bdf929a4f84935c056c5c0d334337f8a4d18a992727bf8d67e"
+    },
+    "app/red-flag-o-no/a1.mjs": {
+      "sha256": "cd623d29b1f37afd5916503d2094a5d8a70e654b3c41b82724785b06ba743d5b"
+    },
+    "app/red-flag-o-no/c1.mjs": {
+      "sha256": "17c87bbf1f8425f36bb14f01f8e08514d8c1908fa61f1adca373061cbc980de4"
+    },
+    "app/red-flag-o-no/c2.mjs": {
+      "sha256": "c1340db6fd554bf926aa0d3dcc6cb41b7df723415d5266418b9edda6f9289ff8"
+    },
+    "app/red-flag-o-no/engine.mjs": {
+      "sha256": "ada0e0d1922a1c38ee0471da443d7e33a37a20df92ba2cfb2d381928652357af"
+    },
+    "app/red-flag-o-no/red-flag.css": {
+      "sha256": "f7d506af203b61ceb7d63bde75a73a1745fd7cacdde6950a53a82aeff7c51e98"
+    },
+    "app/resources/[slug]/page.tsx": {
+      "sha256": "f0dfa17231b2ddd911040fd0e5b7b54a53c5e7e0da229bfdbaa2fc7499c54c20"
+    },
+    "app/ultima-llamada/audio-manifest.json": {
+      "sha256": "4c92fd6258995390702fa5e7fa44d8b8f8fd5cf26ca503e83000c3ace157fc4f"
+    },
+    "app/ultima-llamada/content.json": {
+      "sha256": "cf7957526bfbdfdcd2e82400b72b15c92c11e30d10507d4652882d371803b861"
+    },
+    "app/ultima-llamada/page.tsx": {
+      "sha256": "da2e386e1de420cb9639b3235fd2ba3bf0c9e460b7bb8b4e19a303c91c8b0fa9"
+    },
+    "app/ultima-llamada/style.css": {
+      "sha256": "264ef8df733084a094998a8c040d75f9c1064096ef990672f6f6cfefd92b28c4"
+    },
+    "docs/lessons/NEXT_20_LESSON_PRIORITIES.md": {
+      "sha256": "44f1108e69d30948ecf1e0b3f5d13255c492e6b5b453d32c6dffe4d6434bdf19"
+    },
+    "docs/lessons/NON_CONVERSATION_LIBRARY_AUDIT.md": {
+      "sha256": "ff66f12e8a599b057256c331e92cd4058896994bb9392edcdf74223776c9b2a6"
+    },
+    "docs/lessons/SPANISHCUE_QUALITY_STANDARD_V2.md": {
+      "sha256": "290978d261f3e1dd02986d10b71e45c1203f9a57913b8ba15f2408df4c58b0cf"
+    },
+    "docs/lessons/conversation-batch1-completion.json": {
+      "sha256": "95d64d722b30c0f36749eb1284ce48123d503c0c10c98b4c085b41a2dcdf6724"
+    },
+    "docs/lessons/conversation-batch1-run2-thumbnail-prompts.json": {
+      "sha256": "13b12f25ffe390c274f934a1fa52ec467e279f5aba39ef23895896151496b5cf"
+    },
+    "docs/lessons/conversation-batch1-run3-thumbnail-prompts.json": {
+      "sha256": "53efef1d4761cb79284d9b076e60d4ff82e4eb45264ba396f77f16ac1b37787a"
+    },
+    "docs/lessons/conversation-batch1-run4-thumbnail-prompts.json": {
+      "sha256": "7d516a9322fd2770a897f8c391d20f02e3b51111b5fea23aebf4920d2ef12908"
+    },
+    "docs/lessons/conversation-batch1-thumbnail-prompts.json": {
+      "sha256": "a6371e3de9fe44e0097415cc95ce7b883256aeee9a916e233e06a2a1ea2681de"
+    },
+    "docs/lessons/conversation-family-production-status.md": {
+      "sha256": "437e9de186140fb045f33efcfbb8a5cb3b6b36b60c983fa5c149a14d1c5a6927"
+    },
+    "docs/lessons/non-conversation-library-audit.json": {
+      "sha256": "5b2276cbc52a1ac1f0aa8d221d8e80e83c04f0f36ab12080e25c52c61ecdcdbf"
+    },
+    "docs/lessons/quality-v2-repair-status.md": {
+      "sha256": "6519c4a55446893f62e7a5345a381bdbf42980b09ad611a4ab219bd5723af397",
+      "prefixBytes": 66809
+    },
+    "package-lock.json": {
+      "sha256": "1680dbf3e927a67aecc0c0118379fdec71876198a9ba9d7f74852d86c41277cd"
+    },
+    "package.json": {
+      "sha256": "5671d09c8ebe60d9d94fcce17ff0d1d25f5a1c5772406d3da2cc96361192f8fd"
+    },
+    "public/audio/phonetics/cafe.mp3": {
+      "sha256": "c8ec4a3f1534bf09f0c5e8c233db04b0c62691f34098750bbfab9a71c449f32e"
+    },
+    "public/audio/phonetics/casa.mp3": {
+      "sha256": "272a68015f4f7a9a7bfae4c5bea71071c35004c53bf4fc015b89595c549fb974"
+    },
+    "public/audio/phonetics/cosa.mp3": {
+      "sha256": "efc369c619aec1561a2682e90fac3cf363a1fe7a7b8cb902522d2dc8948eddcd"
+    },
+    "public/audio/phonetics/hablo-past.mp3": {
+      "sha256": "ea0686e8d07d85b40bd9126523dd8db0ef6ea0ed51f45fca544c3c53d1c37bda"
+    },
+    "public/audio/phonetics/hablo-present.mp3": {
+      "sha256": "27deff8e4e66ca30c0feaf7e6478f285dc0f17c477ed5a157cfb494d55bbff0a"
+    },
+    "public/audio/phonetics/luna.mp3": {
+      "sha256": "cb601c991065497b38277c56e8c7e2aa38f8115ed0e3417ad7383a0265df7a0f"
+    },
+    "public/audio/phonetics/mesa.mp3": {
+      "sha256": "0be645a7a38af143510aabfb05f1780e50ca2a7a71d4407fbad5390b1b11114a"
+    },
+    "public/audio/phonetics/misa.mp3": {
+      "sha256": "b098104d9f3309372b49f2b4e59227348496716d57c85de84c21e11b9dc4a01f"
+    },
+    "public/audio/phonetics/moto.mp3": {
+      "sha256": "f60beb336911ff5be50b54fdab5df57e7a9f6378e3b1b6a16ab8e901af2cf218"
+    },
+    "public/audio/phonetics/palo.mp3": {
+      "sha256": "7e86ddf721adebba391d195c889b29fde2a195514d70573b3c874c581bb053d5"
+    },
+    "public/audio/phonetics/papel.mp3": {
+      "sha256": "a52ae2cdb387794e31a51663f3fc13c3fc489bdb3a1829f273681e6b81c6a251"
+    },
+    "public/audio/phonetics/pelo.mp3": {
+      "sha256": "de91e97b7d0652b8361a44e1976d4c1faafee7cf2f807f9a38e67279ae150572"
+    },
+    "public/audio/phonetics/peso.mp3": {
+      "sha256": "78bf5d686af77ddce164641d88d2cd9277c62fbb429f61f99224dc07da431ae1"
+    },
+    "public/audio/phonetics/piso.mp3": {
+      "sha256": "70edf14eac3d4474fac4adf2050e29ed031c0fd788cb019df95abec551861f51"
+    },
+    "public/audio/phonetics/publico-final.mp3": {
+      "sha256": "b9928d37139c263b179a2a8a2a5f6d59adbd103783de645c21597024362eeabc"
+    },
+    "public/audio/phonetics/publico-initial.mp3": {
+      "sha256": "7acb62fd9ba95ea52b58057df85a6ad08b22eb0e5a2b6cd63ededed8a28c0741"
+    },
+    "public/audio/phonetics/publico-middle.mp3": {
+      "sha256": "f80b34779aa2e5ffdfd912ae0a0dc630d10af08b0489c167da02a7aee708fc85"
+    },
+    "public/audio/phonetics/stress-phrase-1.mp3": {
+      "sha256": "8cba371053eabf66ed6ad47a8406463b30d4ed219880f504a84ecdc7612e8e15"
+    },
+    "public/audio/phonetics/stress-phrase-2.mp3": {
+      "sha256": "5c8bdb371f1c6c9eaef75fc8b02670bd1a70f11d44ef365e2b473ff3363e5795"
+    },
+    "public/audio/phonetics/telefono.mp3": {
+      "sha256": "60bde93c5b0fb58f5caecc58dd8ae0c01b5b30bae4430126b11c4231621d2469"
+    },
+    "public/audio/phonetics/termino-final.mp3": {
+      "sha256": "3e1eb8a8462583eaf608963dc2c8fca94196c272fa351c4ffa6c3cdcbb81355d"
+    },
+    "public/audio/phonetics/termino-initial.mp3": {
+      "sha256": "1f9a8cf64898b5f3e84dafe291b1bc78f8e2a881b01d104130e6a1bec0cbe0a3"
+    },
+    "public/audio/phonetics/termino-middle.mp3": {
+      "sha256": "bd34446a0e532f408ce401b897a34913a997495c92b494119acc3d6b093f1797"
+    },
+    "public/audio/phonetics/vino.mp3": {
+      "sha256": "f940f37de595ebab92b458248162508d2e644967c69544a1493e9776521b9288"
+    },
+    "public/audio/phonetics/vowel-a.mp3": {
+      "sha256": "2eb6dc1a0068280d48e4330396b78806fffa4cca6a51ab2ff28ef5208f20d746"
+    },
+    "public/audio/phonetics/vowel-e.mp3": {
+      "sha256": "fd5c20491182df74b71718e3f553f3baab8660b7752409d4587b692bda147d95"
+    },
+    "public/audio/phonetics/vowel-i.mp3": {
+      "sha256": "e27bcae7e05278f79a0a6fa74edef132cbac91cc8fa6497eec952ba5872c72fe"
+    },
+    "public/audio/phonetics/vowel-o.mp3": {
+      "sha256": "73971c9d826a4a89e12877071721bbee8a647e3f6c1931396615ec014b1a9809"
+    },
+    "public/audio/phonetics/vowel-u.mp3": {
+      "sha256": "7adf2cd124b1671348dac6ca007f5562b84289b6a20727577dffa7e74bad2b44"
+    },
+    "public/audio/phonetics/vowels-phrase-1.mp3": {
+      "sha256": "7c06e48c1ce7bda4f80bdf7caceb40b7ad523accbaa02be7a83f061654da31f9"
+    },
+    "public/audio/phonetics/vowels-phrase-2.mp3": {
+      "sha256": "91544932a972c2fa844df69e08029563e5dee1a984a079bacc3473549945d7ee"
+    },
+    "public/audio/phonetics/vowels-phrase-3.mp3": {
+      "sha256": "47c29417936a25c829e8db0676fce81b2d2e96050f1cfda87a74e94ce5520be4"
+    },
+    "public/catalog-thumbnails/connection-panel.webp": {
+      "sha256": "6b6f6acc645939e04906f94f005993d5761f3ab774c04e2d8725b2c52c62abc6"
+    },
+    "public/catalog-thumbnails/conversation-b2.webp": {
+      "sha256": "98e4fc0862b348ff9cee141ab09e45bf835c068854d05efd96b6ab48d2e47172"
+    },
+    "public/catalog-thumbnails/conversation-c1.webp": {
+      "sha256": "57e0666f9362a123423e664ef7ff1dd3626c079b52d8e1c6a4e34d01f39efcbe"
+    },
+    "public/catalog-thumbnails/conversation-c2.webp": {
+      "sha256": "a0930ccf93cddd56946633788f59ba52ddb7ba4503a91bfbe62cd980b6cbfdff"
+    },
+    "public/catalog-thumbnails/mouth-lab.webp": {
+      "sha256": "0b20f09fb440e0b0cd2ee0433462cadfb362ef37a45d10ffde140ab29d983f7e"
+    },
+    "public/catalog-thumbnails/positions-gallery.webp": {
+      "sha256": "51fc776f6588a0036fa1dadbcf8db659d8c01aca6e76f7cbec33ffd0cb897ab3"
+    },
+    "public/conversation-worlds/absurd-universe-a1.webp": {
+      "sha256": "2edbf6999526cf1fc5dcf07432f96de4e938b7ddf597ffc62053d45947d5ee1f"
+    },
+    "public/conversation-worlds/absurd-universe-b2.webp": {
+      "sha256": "cc9f8a6df58e19c1b1c04938a5be01e746cc8ca83d23e08897d048504d18c4bd"
+    },
+    "public/conversation-worlds/absurd-universe-c1.webp": {
+      "sha256": "cf6ec313e6b54efa09b8c2c3a37e665440f350abbdb21fe7f2149a096ed8a009"
+    },
+    "public/conversation-worlds/absurd-universe-c2.webp": {
+      "sha256": "1275d981968151102707e970921d99739e6fae35ad63e2bfac4c6074e517ebfe"
+    },
+    "public/conversation-worlds/elimination-machine-a1.webp": {
+      "sha256": "6c891878eaead3c4a6dbab988d14c4907114f6e1d5b95b5ec30df744ca402408"
+    },
+    "public/conversation-worlds/elimination-machine-b2.webp": {
+      "sha256": "a38690543d3a775072de52ab489d6aa85b4df6b25b64e154406cff1823b39df6"
+    },
+    "public/conversation-worlds/elimination-machine-c1.webp": {
+      "sha256": "22325001f7c2d63b7978d6865046ed88683b7592686da5768f81fb469f38a6c9"
+    },
+    "public/conversation-worlds/elimination-machine-c2.webp": {
+      "sha256": "f690dd509af2a371745ddbc7b27c6a3a2495a55fd93c3e5f9e7cb1804cde6882"
+    },
+    "public/grammar-worlds/adverb-tower.webp": {
+      "sha256": "0b0ba88008e1782acb41ed004b1eb74c8dca4109dea3f01e6434e0411e45a4ec"
+    },
+    "public/play-mode/red-flag-o-no/a1.webp": {
+      "sha256": "82272da5e28a5d3d42ad1502d12b767f13ea20e8bd7a222b9d0f3acf96f04e32"
+    },
+    "public/play-mode/red-flag-o-no/c1.webp": {
+      "sha256": "07b1de6d191c52d3c1145b9f4aadd88f36f91cef9d7f9785669bb74e13b36f4d"
+    },
+    "public/play-mode/red-flag-o-no/c2.webp": {
+      "sha256": "940d1b9a843d29cb7732a15303b04993e8d41945b7620a1cf6771cf460985d07"
+    },
+    "scripts/build-verified.sh": {
+      "sha256": "6489060f5dac40ed6665d5daf8f512f1f35e0da293062241b9f56d236e298fd4"
+    },
+    "scripts/finalize-protected-build.mjs": {
+      "sha256": "92aa573a5ab68891f1dd7565ca09363b9066f810ca71b30fe9c48e226407ecb7"
+    },
+    "scripts/import-production-export.mjs": {
+      "sha256": "7f4570a36aa0f37fa631a9353d67cdaaa6ed5bb9c5b7791baf04267e183130d1"
+    },
+    "scripts/install-ci.sh": {
+      "sha256": "a5ffe6350fbd6954231c357c0823ed342bbbb15d9075d8d423b6bf7c50ad42ce"
+    },
+    "scripts/network-interfaces-shim.cjs": {
+      "sha256": "a2f47201499331d418215a11ca0eba4d844eeed4cbe254577f5103ab0c7d20bb"
+    },
+    "scripts/prepare-production-worker-config.mjs": {
+      "sha256": "d8b5d855ec814e26118cc955f1f77b2c0aeb7dbcdef704d02e68d1ebd59bcb14"
+    },
+    "scripts/prepare-staging-worker-config.mjs": {
+      "sha256": "403b74a932c4d3884e8c94b73aa3939d4a46e054a9d2770752ceb7356c8a15b8"
+    },
+    "scripts/production-smoke.mjs": {
+      "sha256": "7bb99ebc65a0b9d265df5b72c70a349bb7708cf5207e9fc2df834ce59615272d"
+    },
+    "scripts/protect-client-assets.mjs": {
+      "sha256": "861a7eef9fea5def71e34b606e5c664bf9f7c635668f62f7f4cc16ad49cb1af6"
+    },
+    "scripts/release-policy.mjs": {
+      "sha256": "22b21a40bd10cf9a0bb2638254a4f6df8e4bdeafb858b2e17286f81f52b46baa"
+    },
+    "scripts/run-bounded.mjs": {
+      "sha256": "9642724b3c0b9d03f0febd883091a25f873a99f838bf6f54bd790c3f3cfbb795"
+    },
+    "scripts/sites-env.sh": {
+      "sha256": "f76b4ba70969ca1d83a8c28e1835ece95b6a70f69483d21b0f93295e33762b7e"
+    },
+    "scripts/test-worker.mjs": {
+      "sha256": "b4824fc9afdfb4c953944449244dc423d8757de696662d00cf5fee89734ad55b"
+    },
+    "scripts/validate-artifact.sh": {
+      "sha256": "494db193819debc361526c8a005e2cf5e17214af1b35c8d404bff743061c5fc4"
+    },
+    "scripts/validate-boards.mjs": {
+      "sha256": "d090e5e55d5d53b65bbff316898365c3261322e87544d6030429512fe36f7842"
+    },
+    "scripts/wait-for-build-quiescence.mjs": {
+      "sha256": "35497d42f38baa72b05f824d60bbbaa3767c9b67047f064754e839c17384d6f2"
+    },
+    "scripts/worker-shape-loader.mjs": {
+      "sha256": "6e2f50bd0b88bfd8dcfb8ff490f09a2b402fb650f01f63fe47cac37fcad190b6"
+    },
+    "tests/a1-syntax-lessons.test.mjs": {
+      "sha256": "f0581a4b1c19431b73ed717cdb32bf2e30022294d4f3e3c27c94bbdb8f6f581f"
+    },
+    "tests/a2-time-condition-lessons.test.mjs": {
+      "sha256": "13345e694eb94836a42c71927632081ca828af31ea464ea515ccda9a93d61350"
+    },
+    "tests/ads-readiness.test.mjs": {
+      "sha256": "70780bac7861b1f102d42457e5faf2b18e115cad7b3e2878104446e215662db7"
+    },
+    "tests/audio-deck-wave1.test.mjs": {
+      "sha256": "18fa63c01660b880e3898c63313aa68962c1b019bb5edaa189bbc06cf85f3f88"
+    },
+    "tests/b1-contrast-relative-lessons.test.mjs": {
+      "sha256": "47c8715e71fc6b16ed0994b226d889dd4160ad277ddc790ad1a4236d1c8e98b2"
+    },
+    "tests/b2-hypothesis-concession-lessons.test.mjs": {
+      "sha256": "260ef446f44d2cde9acbac97a9fd9474de99e635bfea36e95d06e005048df2a5"
+    },
+    "tests/backend-contract.test.mjs": {
+      "sha256": "613a8e6bc7e6de5d8dbbc18b5945ad5f7ddfc6c27ad4e6341c286d47ab75417a"
+    },
+    "tests/billing-entitlement.test.mjs": {
+      "sha256": "92915570ac76b99e2e489bcad66f726d900b6652de5f7d19698052f2baa1d268"
+    },
+    "tests/billing-lifecycle.test.mjs": {
+      "sha256": "e35e33348a83317cd572eb5006d3f8c975686db2a7da30c0a9207a97e6e455d8"
+    },
+    "tests/boards-content.test.mjs": {
+      "sha256": "20d8cd619feb815208535a5bf89ca9e197abfa3a705ae06ec2035916936bd05a"
+    },
+    "tests/boards-engine.test.mjs": {
+      "sha256": "27ab7a0d21556fa996dc8fb2b84ad53de71f216e23b1b0a2f757d8db8f17fcda"
+    },
+    "tests/boards-integration-contract.test.mjs": {
+      "sha256": "90926fffd04e866643f51d0543492fd34edca0b31756eddb8f50d7915396ea12"
+    },
+    "tests/boards-ui-contract.test.mjs": {
+      "sha256": "10973054fb52b0fa6f74815954c3b6631d9504686aebf9649746cc68f8834b89"
+    },
+    "tests/build-packaging.test.mjs": {
+      "sha256": "b475ee19aaf6d0a1fd9fa90c622fffa433a7bf8eb7b2c27794ceb0de1e9e3d00"
+    },
+    "tests/conversation-batch1-routes.test.mjs": {
+      "sha256": "4863ee128f2845fdf8f1cc17dad5096e70866dabcf7067e10218226d02a853a6"
+    },
+    "tests/conversation-batch1-run2-routes.test.mjs": {
+      "sha256": "6e244fd667c6b168d735b9a6639d79e0b45f12e87a66a8b2db01a92e1ef22b8b"
+    },
+    "tests/conversation-batch1-run2.test.mjs": {
+      "sha256": "460bc569622f414c818dde481d5a85b1841b8209b1a1faeac561aea45bab9aab"
+    },
+    "tests/conversation-batch1-run3-routes.test.mjs": {
+      "sha256": "e6f2c8b3334cb124ce3ea25e44e340be25e66e4e9d31cbefb3b1ca548d06645b"
+    },
+    "tests/conversation-batch1-run3.test.mjs": {
+      "sha256": "45b5a74218be822742d0286fc18a32ef4bf44e3eef5fd6cb6cf0b943e8cabdf5"
+    },
+    "tests/conversation-batch1-run4-routes.test.mjs": {
+      "sha256": "a24c1a42d34f85ec2fb977aac6ef68974a89c19d4401b0af9f53535323e9a3ef"
+    },
+    "tests/conversation-batch1-run4.test.mjs": {
+      "sha256": "b7df448d752978a494d295d6eba27c53e8e437d9c2a7a0b476e4212f2ed13c33"
+    },
+    "tests/conversation-batch1.test.mjs": {
+      "sha256": "f029af87176a86a91220f63beb39a0973c4f720e7a316a8c69bb9d2ac6eaf804"
+    },
+    "tests/conversation-families.test.mjs": {
+      "sha256": "cc756c5c0a6968c6d8d48d26ff0f07fe41b427f4e760a857def9028ce5b6509c"
+    },
+    "tests/conversation-family-rendering.test.mjs": {
+      "sha256": "ea4390d0d3f06373546b1ff5c0978844116800a9bad81979d0b89e9ea67ae0e7"
+    },
+    "tests/conversation-family-routes.test.mjs": {
+      "sha256": "615098bdb4b6fd8098acf86014aaef19921a63c38f8bcb08ad2074937360ce33"
+    },
+    "tests/conversation-legacy-urls.json": {
+      "sha256": "74ac77e742e18fcaf9728b02c9ca2e5e0879a8174c5738ae4d533a89de5dda0b"
+    },
+    "tests/conversation-resources.test.mjs": {
+      "sha256": "2bfb5d3cb75c9a9678e74b799c2de55d089206f56f2edc2216d7dfd4930d495b"
+    },
+    "tests/conversation-variants.test.mjs": {
+      "sha256": "90d6101886a06e45bfaaac5fe7f0521ba924533ce9fe44fa02b3d5935578120d"
+    },
+    "tests/conversation-worlds-a1.test.mjs": {
+      "sha256": "6c7ca89e2f673b8be0c23a50c9113ced0bb85ce12dab0b70efba49a5e2509097"
+    },
+    "tests/conversation-worlds-b2.test.mjs": {
+      "sha256": "4e2f598bbc19dba9da75c30f7ee165f46d642183dfa9ae0de8d4ea3f4851daf1"
+    },
+    "tests/conversation-worlds-c1.test.mjs": {
+      "sha256": "73f0e608e6ae2247a527dc903cb98fcd824aaeca7c708ee698446089fa964946"
+    },
+    "tests/conversation-worlds-c2-content.test.mjs": {
+      "sha256": "df7e93ac4b06924ba10e1c11b51bf7623365aa0348c3669a92c586a589ab6f9e"
+    },
+    "tests/conversation-worlds-c2.test.mjs": {
+      "sha256": "5c79b0b215a1d0b1a307305df088cbb23c07cfd4db37291b429c6d31753bfdda"
+    },
+    "tests/country-flagships.test.mjs": {
+      "sha256": "0406367a0971854568c0ec40dbf8a5431c65a548e1864bc45df972a0d2341c83"
+    },
+    "tests/deployment-headers.test.mjs": {
+      "sha256": "88a21c288d763fb2a969b3ca505083af7d9d8e158d05fee9510d215188fed362"
+    },
+    "tests/email-verification.test.mjs": {
+      "sha256": "4a19af885a03a05d50e597dc094b5858df0da72c289e0fa6046daaaf31217141"
+    },
+    "tests/firebase-admin-worker.test.mjs": {
+      "sha256": "30c2f0d1c67efdb3def50fc3e3ea5e6f0e380522e748b4f1b1fea8e1bc94d1c1"
+    },
+    "tests/fixtures/conversation-batch1-originals.json": {
+      "sha256": "c8bc0f631f60b4e767e6832945e9c3d3f4e96db1e0686b9f40136c55b013a113"
+    },
+    "tests/fixtures/conversation-batch1-run1-preserved.json": {
+      "sha256": "54ea31f16463de17e967f1d89ed056cd1ce424fd45b9f8d09da2230af5fc9c4e"
+    },
+    "tests/fixtures/conversation-batch1-run2-preserved.json": {
+      "sha256": "f04760fa77211f0fa07f6deaef998bc4968742a118f3225d2037ed63ca16952f"
+    },
+    "tests/fixtures/conversation-batch1-run3-preserved.json": {
+      "sha256": "3e263513e827dc5c622554a33080e0bbb96800ca22298621ce1f8e40157c0cce"
+    },
+    "tests/fixtures/grammar-wave1-baseline.json": {
+      "sha256": "f7a1127e6ecf7d7889b12bf0fc53d8f104b578ead7855db54c4bf3cc0b3ab792"
+    },
+    "tests/fixtures/wave2-preserved.json": {
+      "sha256": "84814cc17090e6a42f595b7b6631b95d65ec1a9d43c224cf9169d4a1776ccbd2"
+    },
+    "tests/grammar-wave1-repair.test.mjs": {
+      "sha256": "ff9eae546530ad596acf36cb006c5a4fef604a16f398e0b97eb775d5f5f4700e"
+    },
+    "tests/helpers/batch1-preservation.mjs": {
+      "sha256": "2be91bb9edc5ed47ade0d89405444cd1183ba7a12720434630ea72fde703953a"
+    },
+    "tests/install-environment.test.mjs": {
+      "sha256": "e3ee60948914a7dabba3c42687e2c26b1626c359434f05585e601408780fc2a3"
+    },
+    "tests/landing-offer.test.mjs": {
+      "sha256": "997cd0e53d6c6aa7b1a239db0e641b2e4a32836bf9b4f686efea5ee07f58d315"
+    },
+    "tests/level-cleanup.test.mjs": {
+      "sha256": "b376b1d3dabee2f1c75893c01d95096757e8a5214db8c50817c8ba0483f9946a"
+    },
+    "tests/library-filters.test.mjs": {
+      "sha256": "ead02666c3877abf886bc9aea52ccd64c5d3ffcb2627f75eab5d17cb474a8ca8"
+    },
+    "tests/library-information-architecture.test.mjs": {
+      "sha256": "a5d0bf2fc3f0a16ea7222eaf5abc74678d1306b92f5c41f34ff3bc1eb2221caf"
+    },
+    "tests/marketing-conversion.test.mjs": {
+      "sha256": "09ef039c091ab97e444aaecaa2d8eeb266be0838de9334923193a8e8205e9e8f"
+    },
+    "tests/paddle-diagnostics.test.mjs": {
+      "sha256": "9d4fee4580a0f70dfa9d2cac040765ab43eaeb053f767729d8d599345ecdafef"
+    },
+    "tests/personal-trainer.test.mjs": {
+      "sha256": "7bb5f3d1656ff245c591142cc962286b063d84837d0c917012d2f1e953402738"
+    },
+    "tests/phonetics-wave1-assets.test.mjs": {
+      "sha256": "04ad72b9df858eea0048d4c7991ca7a7a64b7ef116151eb5f38a7ada77211798"
+    },
+    "tests/phonetics-wave1.test.mjs": {
+      "sha256": "86d8b3ecbc23c88f7d68a55235b687ab5044c60cf2fe3c2161c2637a6443c218"
+    },
+    "tests/production-export-import.test.mjs": {
+      "sha256": "0db8c9c976f75666c8847466630e945ee02b3f574047f4f80ad6344d5c2bdb75"
+    },
+    "tests/production-smoke.test.mjs": {
+      "sha256": "ad59a42bd47a6e4e413dff78d39d0d3b8af3b7a8556b5c222b9f42bb3a1cbe41"
+    },
+    "tests/production-worker-config.test.mjs": {
+      "sha256": "2083e2a70f02b51f9aa0e8f087187d9c8b111c368edd8d4fd2c80fe93c34d425"
+    },
+    "tests/purchase-claims.test.mjs": {
+      "sha256": "28d63772115a64bb5ffcdb8dbb2901a6f9e96324a6f4218cfbef8d2f71cc1348"
+    },
+    "tests/red-flag-a1.test.mjs": {
+      "sha256": "9a6354d605d1376070a62d38f7b5a0a71af082ad60533e1ac894996a3cc32673"
+    },
+    "tests/red-flag-c1.test.mjs": {
+      "sha256": "8657c4a8a97b2efe702dacac88da94f4a95d4c819748efcfa645666542e00299"
+    },
+    "tests/red-flag-c2.test.mjs": {
+      "sha256": "5037d3192a6ab9bb2e4aeef1da217e0cdaa87fe94a2281133cd78c0ff7e2904a"
+    },
+    "tests/red-flag-o-no.test.mjs": {
+      "sha256": "696271cf13ab6a6d1c254bec4f6af8d5d539f59b71ce040b247c5133b658076f"
+    },
+    "tests/release-policy.test.mjs": {
+      "sha256": "0ee7884609fc9379f4ad4ab53233e8d567cdc025c622ad7226eab2d12023e7a8"
+    },
+    "tests/rendered-html.test.mjs": {
+      "sha256": "74f5583f0d5fc4ee80383455995f0046bdbae5c9cb399b64062cf2c68383a8dc"
+    },
+    "tests/spanishcue-brand.test.mjs": {
+      "sha256": "441446d3a0fcbf6a0a2cc1ce4cb842a7ca697659a155578462712358685717e4"
+    },
+    "tests/staging-worker-config.test.mjs": {
+      "sha256": "24769b5c988455576d6f239d7503fea54d13244bbd7d09b08f44cf2ebff842d1"
+    },
+    "tests/student-tracker-http-d1.test.mjs": {
+      "sha256": "770e7b85e733b8113500610c68b130bd35fb9a7306638f101c7a11ea72de825e"
+    },
+    "tests/student-tracker-routes.test.mjs": {
+      "sha256": "428ecdb97d7b9925ba1bf41a1fdcd8e779e4163c43bcafdc1e32b3bedb6b03d5"
+    },
+    "tests/student-tracker-ui.test.mjs": {
+      "sha256": "fff09f77142a545ede346558037267352a3f864d2218878eb3c49a205c0d139f"
+    },
+    "tests/student-tracker.test.mjs": {
+      "sha256": "268f94b03a297090316f2a1e242eb5e1ade08ac538b2e7a050ad784ba93446a1"
+    },
+    "tests/talk-b2.test.mjs": {
+      "sha256": "de6e635af613a379e213339a72e4f20a84b086b3c3b3cbf74befd52ff130d77c"
+    },
+    "tests/talk-c1.test.mjs": {
+      "sha256": "8cc9aaf8b55abfba161ae9292c838267216b9617f62e13b8ec5e1c4f1e667ffd"
+    },
+    "tests/talk-c2.test.mjs": {
+      "sha256": "b54e56b15621162ee240804e5ed328a9cdc946a3bb29af62cc58a1c719efa7ad"
+    },
+    "tests/teacher-access.test.mjs": {
+      "sha256": "32870294a7b6868b8cc122f2bd424c0c945fafef47196186cce87b548faf8c30"
+    },
+    "tests/teaching-guides-seo.test.mjs": {
+      "sha256": "f581892870cee0f379477a9e717cc2286462b9fe36636cf2e69488101a33ee9f"
+    },
+    "tests/uk-relief-levels.test.mjs": {
+      "sha256": "b24d508a20ad1214a7d3a68c3a6258a52f4322e660f79e16678d8487f6c767f5"
+    },
+    "tests/urban-city.test.mjs": {
+      "sha256": "1d2e2b6bc827ed028d7af64af9dd2d529cd8c2c37e86ef64dd3b3b45c221885b"
+    },
+    "tests/verbal-help-contract.test.mjs": {
+      "sha256": "92a21e34abbdef67e95374f659c177224fb4af8023c03cea25075a7dc60f329c"
+    },
+    "tests/verbal-system-contract.test.mjs": {
+      "sha256": "5a204591ee731c41f00b1a88b2729bcd83228f91865159622cde0bbe1dd61c93"
+    },
+    "tests/verification-delivery.test.mjs": {
+      "sha256": "623b646d7a8494814c671cd108ede780426aee8aaa64d197dfdfaa18a14437c9"
+    },
+    "tests/wave2-argento.test.mjs": {
+      "sha256": "f30947c8f67472162224687e7e5c36d07e60db787b0a6d4565e1381b1d4f18b1"
+    },
+    "tests/wave2-listening.test.mjs": {
+      "sha256": "a13226b2fa0fa3126a5c8bb6ae97f5d6d3e29ab6339ca53aa5a7521b287a1751"
+    },
+    "tests/wave2-preservation.test.mjs": {
+      "sha256": "5f182abad24286c682bbbbaae11f65c6f0111e73eb73ee36a1fa957e854ba06d"
+    },
+    "tests/wave2-wordbank.test.mjs": {
+      "sha256": "747d135757ed3c856c09153fe3b0ad5357471f90ce9a71f1e3fda9f23aa41edf"
+    },
+    "tests/write-freeze.test.mjs": {
+      "sha256": "06d99a5f58f1e016a767985f07ddaa9aa0dddf0133877993f559f61b5c416c37"
+    },
+    "worker/deployment-headers.ts": {
+      "sha256": "163644e78366538b5e8cbc383e3aa3f4bde61307e44dca4441b42f3915b139f7"
+    },
+    "worker/index.ts": {
+      "sha256": "c2e7d1fcd10319d56ddb8f5d4a35ff8232c7fae6385f9e42e348708dcb90b107"
+    },
+    "worker/private-asset-auth.ts": {
+      "sha256": "9fde218add41c3d5b26c44905e8d167825e1eb36c081683bff38f7c820503e3f"
+    },
+    "worker/write-freeze.ts": {
+      "sha256": "1d9d31cf946690953d479942a5465637bf64d2be490be8ce1b6762780d09fb50"
+    }
+  }
+}

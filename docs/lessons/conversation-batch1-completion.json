@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "completionDate": "2026-09-27",
+  "status": "BATCH 1 COMPLETE",
+  "scope": "Source implementation and Batch 1 closure; interactive visual acceptance remains pending. Not merged or deployed.",
+  "repository": "agnremote-code/spanishcue-web",
+  "baseAudit": {
+    "branch": "codex/conversation-family-audit-20260926",
+    "commit": "e6da3f0943de088a9cba837ea71b3faa77a473eb",
+    "date": "2026-09-26",
+    "markdownPath": "docs/lessons/CONVERSATION_FAMILY_AUDIT.md",
+    "jsonPath": "docs/lessons/conversation-family-audit.json",
+    "preservedAsHistorical": true,
+    "note": "Audit files remain on their historical branch; this additive completion record does not rewrite that inventory."
+  },
+  "canonicalMainAtStart": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+  "canonicalMainAtFinalCheck": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+  "runs": [
+    {
+      "run": 1,
+      "branch": "codex/conversation-batch1-run1-20260926",
+      "finalCommit": "f91942958645a4fc68ccc664deddeb4266c92395",
+      "newVariants": 4
+    },
+    {
+      "run": 2,
+      "branch": "codex/conversation-batch1-run2-20260926",
+      "finalCommit": "2f0194395ab088d435728a9a33c9e07895009ef4",
+      "newVariants": 4
+    },
+    {
+      "run": 3,
+      "branch": "codex/conversation-batch1-run3-20260927",
+      "finalCommit": "1b342a9c6d8ecc2674f86f099c51d61d3a12574b",
+      "newVariants": 4
+    },
+    {
+      "run": 4,
+      "branch": "codex/conversation-batch1-run4-20260927",
+      "baseCommit": "1b342a9c6d8ecc2674f86f099c51d61d3a12574b",
+      "implementationCommit": "b53c5b487ac126e93666044e1dc9075ea990ae89",
+      "checkpointCommits": [
+        "5eabbb7cd738f73e94cf76791a76d1af3dd47e49",
+        "34f90358c5a5aa5ca9c5d5b560060558f99b2774",
+        "b53c5b487ac126e93666044e1dc9075ea990ae89"
+      ],
+      "newVariants": 2,
+      "commitNote": "Implementation commit identifies the verified source; branch HEAD additionally contains this completion record and final status documentation."
+    }
+  ],
+  "totals": {
+    "families": 4,
+    "availableLevelVariants": 24,
+    "newVariants": 14,
+    "missingVariantsInBatch1Families": 0,
+    "newRedFlagSituations": 54,
+    "newTalkQuestions": 360,
+    "newMachineDilemmas": 114,
+    "newRules": 60,
+    "newRuleQuestions": 180,
+    "newPrimaryItems": 708,
+    "allPrimaryItemsIncludingOriginals": 1302,
+    "newThumbnailsAcrossBatch1": 14,
+    "newThumbnailsRun4": 2,
+    "thumbnailSlots": 24,
+    "uniqueThumbnailAssets": 22,
+    "countingNote": "Primary items count each situation, Talk question, machine dilemma and rule question once. Rule laws, supports, follow-ups and closing prompts are additional authored material and are not double-counted."
+  },
+  "families": [
+    {
+      "familyId": "red-flag-o-no",
+      "familyName": "Red Flag o No",
+      "canonicalLessonId": 207,
+      "canonicalPath": "/red-flag-o-no-a2",
+      "legacyLessonIds": [
+        207,
+        208,
+        209
+      ],
+      "defaultLevel": "A2",
+      "access": "pro",
+      "availableLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "missingLevels": [],
+      "newVariants": [
+        {
+          "level": "A1",
+          "run": 1,
+          "authoredCounts": {
+            "situations": 18
+          },
+          "lessonId": 207,
+          "url": "/red-flag-o-no-a2?level=A1",
+          "thumbnail": "public/play-mode/red-flag-o-no/a1.webp"
+        },
+        {
+          "level": "C1",
+          "run": 2,
+          "authoredCounts": {
+            "situations": 18
+          },
+          "lessonId": 207,
+          "url": "/red-flag-o-no-a2?level=C1",
+          "thumbnail": "public/play-mode/red-flag-o-no/c1.webp"
+        },
+        {
+          "level": "C2",
+          "run": 3,
+          "authoredCounts": {
+            "situations": 18
+          },
+          "lessonId": 207,
+          "url": "/red-flag-o-no-a2?level=C2",
+          "thumbnail": "public/play-mode/red-flag-o-no/c2.webp"
+        }
+      ],
+      "thumbnailsByLevel": {
+        "A1": "public/play-mode/red-flag-o-no/a1.webp",
+        "A2": "public/play-mode/red-flag-o-no/a2.webp",
+        "B1": "public/play-mode/red-flag-o-no/b1.webp",
+        "B2": "public/play-mode/red-flag-o-no/b2.webp",
+        "C1": "public/play-mode/red-flag-o-no/c1.webp",
+        "C2": "public/play-mode/red-flag-o-no/c2.webp"
+      }
+    },
+    {
+      "familyId": "la-maquina-que-elimina-cosas",
+      "familyName": "La máquina que elimina cosas del mundo",
+      "canonicalLessonId": 101,
+      "canonicalPath": "/la-maquina-que-elimina-cosas",
+      "legacyLessonIds": [
+        101,
+        103
+      ],
+      "defaultLevel": "B1",
+      "access": "pro",
+      "availableLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "missingLevels": [],
+      "newVariants": [
+        {
+          "level": "A1",
+          "run": 2,
+          "authoredCounts": {
+            "dilemmas": 24
+          },
+          "lessonId": 101,
+          "url": "/la-maquina-que-elimina-cosas?level=A1",
+          "thumbnail": "public/conversation-worlds/elimination-machine-a1.webp"
+        },
+        {
+          "level": "B2",
+          "run": 1,
+          "authoredCounts": {
+            "dilemmas": 30
+          },
+          "lessonId": 101,
+          "url": "/la-maquina-que-elimina-cosas?level=B2",
+          "thumbnail": "public/conversation-worlds/elimination-machine-b2.webp"
+        },
+        {
+          "level": "C1",
+          "run": 3,
+          "authoredCounts": {
+            "dilemmas": 30
+          },
+          "lessonId": 101,
+          "url": "/la-maquina-que-elimina-cosas?level=C1",
+          "thumbnail": "public/conversation-worlds/elimination-machine-c1.webp"
+        },
+        {
+          "level": "C2",
+          "run": 4,
+          "authoredCounts": {
+            "dilemmas": 30
+          },
+          "lessonId": 101,
+          "url": "/la-maquina-que-elimina-cosas?level=C2",
+          "thumbnail": "public/conversation-worlds/elimination-machine-c2.webp"
+        }
+      ],
+      "thumbnailsByLevel": {
+        "A1": "public/conversation-worlds/elimination-machine-a1.webp",
+        "A2": "public/conversation-worlds/elimination-machine.webp",
+        "B1": "public/conversation-worlds/elimination-machine.webp",
+        "B2": "public/conversation-worlds/elimination-machine-b2.webp",
+        "C1": "public/conversation-worlds/elimination-machine-c1.webp",
+        "C2": "public/conversation-worlds/elimination-machine-c2.webp"
+      }
+    },
+    {
+      "familyId": "tu-vida-con-una-regla-absurda",
+      "familyName": "Tu vida con una regla absurda",
+      "canonicalLessonId": 102,
+      "canonicalPath": "/tu-vida-con-una-regla-absurda",
+      "legacyLessonIds": [
+        102,
+        104
+      ],
+      "defaultLevel": "B1",
+      "access": "pro",
+      "availableLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "missingLevels": [],
+      "newVariants": [
+        {
+          "level": "A1",
+          "run": 2,
+          "authoredCounts": {
+            "rules": 15,
+            "questions": 45
+          },
+          "lessonId": 102,
+          "url": "/tu-vida-con-una-regla-absurda?level=A1",
+          "thumbnail": "public/conversation-worlds/absurd-universe-a1.webp"
+        },
+        {
+          "level": "B2",
+          "run": 1,
+          "authoredCounts": {
+            "rules": 15,
+            "questions": 45
+          },
+          "lessonId": 102,
+          "url": "/tu-vida-con-una-regla-absurda?level=B2",
+          "thumbnail": "public/conversation-worlds/absurd-universe-b2.webp"
+        },
+        {
+          "level": "C1",
+          "run": 3,
+          "authoredCounts": {
+            "rules": 15,
+            "questions": 45
+          },
+          "lessonId": 102,
+          "url": "/tu-vida-con-una-regla-absurda?level=C1",
+          "thumbnail": "public/conversation-worlds/absurd-universe-c1.webp"
+        },
+        {
+          "level": "C2",
+          "run": 4,
+          "authoredCounts": {
+            "rules": 15,
+            "questions": 45
+          },
+          "lessonId": 102,
+          "url": "/tu-vida-con-una-regla-absurda?level=C2",
+          "thumbnail": "public/conversation-worlds/absurd-universe-c2.webp"
+        }
+      ],
+      "thumbnailsByLevel": {
+        "A1": "public/conversation-worlds/absurd-universe-a1.webp",
+        "A2": "public/conversation-worlds/absurd-universe.webp",
+        "B1": "public/conversation-worlds/absurd-universe.webp",
+        "B2": "public/conversation-worlds/absurd-universe-b2.webp",
+        "C1": "public/conversation-worlds/absurd-universe-c1.webp",
+        "C2": "public/conversation-worlds/absurd-universe-c2.webp"
+      }
+    },
+    {
+      "familyId": "lets-talk",
+      "familyName": "Let’s Talk",
+      "canonicalLessonId": 15,
+      "canonicalPath": "/a1-conversation",
+      "legacyLessonIds": [
+        15,
+        14,
+        13
+      ],
+      "defaultLevel": "A1",
+      "access": "pro",
+      "availableLevels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "missingLevels": [],
+      "newVariants": [
+        {
+          "level": "B2",
+          "run": 1,
+          "authoredCounts": {
+            "worlds": 15,
+            "questions": 120
+          },
+          "lessonId": 15,
+          "url": "/a1-conversation?level=B2",
+          "thumbnail": "public/catalog-thumbnails/conversation-b2.webp"
+        },
+        {
+          "level": "C1",
+          "run": 2,
+          "authoredCounts": {
+            "worlds": 15,
+            "questions": 120
+          },
+          "lessonId": 15,
+          "url": "/a1-conversation?level=C1",
+          "thumbnail": "public/catalog-thumbnails/conversation-c1.webp"
+        },
+        {
+          "level": "C2",
+          "run": 3,
+          "authoredCounts": {
+            "worlds": 15,
+            "questions": 120
+          },
+          "lessonId": 15,
+          "url": "/a1-conversation?level=C2",
+          "thumbnail": "public/catalog-thumbnails/conversation-c2.webp"
+        }
+      ],
+      "thumbnailsByLevel": {
+        "A1": "public/catalog-thumbnails/conversation-a1.webp",
+        "A2": "public/catalog-thumbnails/conversation-a2.webp",
+        "B1": "public/catalog-thumbnails/conversation-choice.webp",
+        "B2": "public/catalog-thumbnails/conversation-b2.webp",
+        "C1": "public/catalog-thumbnails/conversation-c1.webp",
+        "C2": "public/catalog-thumbnails/conversation-c2.webp"
+      }
+    }
+  ],
+  "verification": {
+    "targetedTests": {
+      "command": "npm run test:conversation",
+      "baseline": 115,
+      "passed": 137,
+      "failed": 0,
+      "skipped": 0,
+      "newTests": 22,
+      "adapterLevelRenders": 60,
+      "resourceLevelRenders": 24
+    },
+    "lint": {
+      "command": "npm run lint",
+      "status": "passed"
+    },
+    "protectedBuild": {
+      "command": "npm run build",
+      "status": "passed on unchanged-source repeat; independently validated artifact",
+      "privateClientModules": 59,
+      "premiumMediaFiles": 47,
+      "routedWebpFiles": 180,
+      "excludedPaths": 287,
+      "artifactCommand": "npm run validate:artifact",
+      "artifactStatus": "passed",
+      "note": "First attempt stopped at Premium media remained public: /audio/edificio-voces/1b-andres.mp3. An unchanged full repeat returned exit 0; its captured log ended during SSR, so a separate fresh artifact validation and built C2 bank/thumbnail checks confirmed the completed protected output. No build/protection/access script changed; initial behavior is consistent with the documented synchronized-checkout late-copy race."
+    },
+    "typescript": {
+      "command": "npx tsc --noEmit --incremental false",
+      "status": "inherited diagnostics only",
+      "baselineDiagnostics": 11,
+      "finalDiagnostics": 11,
+      "newDiagnostics": 0,
+      "byteIdentical": true,
+      "outputSha256": "2ce9713062b3ca39a9830abb205b00f5ae9d3d5e0368527b0bccb798281261cb",
+      "note": "Output includes npm warning; baseline was captured before edits, final typecheck disables incremental reuse."
+    },
+    "preservation": {
+      "bankFingerprints": 22,
+      "immutableFiles": 64,
+      "oldVariantMetadata": true,
+      "routeLedger": true,
+      "run1To3StatusPrefix": true,
+      "fixture": "tests/fixtures/conversation-batch1-run3-preserved.json"
+    },
+    "diffCheck": "passed",
+    "jsonValidation": "passed: JSON schema/required fields, live bank counts, metadata, all 14 Markdown inventory rows, assets/hashes, lineage and file manifest agree",
+    "fullNpmTest": "not run: local worker harness creates/migrates D1"
+  },
+  "reviews": {
+    "pedagogy": {
+      "scope": "All 24 level slots / full banks; independent RF+Talk and Worlds reviews, first/middle/final C2 items and full C2 fields. CEFR/PCIC communicative-demand guidance, not certification.",
+      "result": "No new-level inversion or blocking pedagogical finding. C2 is sustained precision, competing interpretations and required reformulation; historical stretches and localized caveats remain below.",
+      "c2Corrections": "Reveal-order evidence, narrative referents/enforcement, two idioms and three addressing forms corrected only in new C2 bank and independently rechecked."
+    },
+    "duplication": {
+      "scope": "All 1302 primary items, including the 708 in 14 additions, compared across families; whole-bank editorial review plus within-family lexical candidate screening.",
+      "normalization": "Lowercase; remove accents and punctuation; collapse whitespace.",
+      "exactDuplicateGroupsInvolvingNew": 0,
+      "normalizedDuplicateGroupsInvolvingNew": 0,
+      "historicalDuplicateGroups": 2,
+      "supportReview": "New RF 306 card fields, Talk 189 support/closing strings; Worlds 174 consequences/developments, 174 starters, 60 laws, 375 follow-up/interpretation strings and 26 finales have no normalized duplicates within their respective reviewed classes.",
+      "semanticResult": "No fake whole-bank differentiation or filler bank; one low-severity Talk B2/C1 overlap and Machine B2 repeated initial stem preserved. Lexical screening is not proof of semantic originality."
+    },
+    "technical": {
+      "result": "No unresolved blocking finding",
+      "fixed": "Changing C2 selected law/proposition previously allowed old notes to appear under a new case. Dependent notes now clear; regression verifies unrelated roles retain relevant notes.",
+      "coverage": "Dispatch, six-level lists, query/hash/history handlers, keyed resets, 12 independent Worlds session keys, progress, metadata/resources/catalog, aliases and PRO/public-import boundary."
+    },
+    "thumbnails": {
+      "status": "inspected all 24 slots / 22 actual images",
+      "previousUniqueImagesPreserved": 20,
+      "newUniqueImages": 2,
+      "result": "Both C2 assets preserve family identity with distinct semantic composition. Existing duplicate/style exceptions are recorded. No level badges. Rule C2 has intentional Spanish in-world LLEVA SOMBRERO signage.",
+      "provenance": "docs/lessons/conversation-batch1-run4-thumbnail-prompts.json"
+    },
+    "visualQa": {
+      "interactive": "pending — browser policy; one capability check, no new permitted preview",
+      "automated": "SSR, real component handlers with hook harness, private import checks, storage/reset and history notifications passed.",
+      "structural": "Responsive wrapping/single-column at 600px, labeled fields, focus targets, disabled gates, existing reduced-motion behavior inspected.",
+      "limitations": "No actual browser touch, crop/overflow, focus appearance, hydration/remount or real history acceptance claimed."
+    }
+  },
+  "knownIssues": [
+    {
+      "id": "interactive-qa",
+      "origin": "environment",
+      "detail": "Interactive desktop/mobile QA remains pending. Prior local browser and file protocol were blocked by policy (ERR_BLOCKED_BY_CLIENT); one Run 4 capability check exposed no new permitted local preview. No bypass or deployment attempted."
+    },
+    {
+      "id": "typescript-baseline",
+      "origin": "pre-existing main",
+      "detail": "11 unchanged diagnostics: billing 8, marketing 2, Mexico 1. Zero new; complete diagnostic output byte-identical."
+    },
+    {
+      "id": "historical-pedagogical-stretch",
+      "origin": "original banks",
+      "detail": "Talk A1 has some abstract prompts without learner frames; Talk B1 includes B2 stretch. Machine B1 rights/inheritance/power and Rules B1 fairness/commodification stretch remain. RF A2 optional past/hypothetical follow-ups may need support; its originals are broadly plausible."
+    },
+    {
+      "id": "historical-talk-preview",
+      "origin": "original metadata",
+      "detail": "Talk A1/A2 previews claim bilingual material; A2 preview claims 150 questions while existing bank contains 90. Preserved."
+    },
+    {
+      "id": "historical-resource-fallback",
+      "origin": "pre-existing resource renderer",
+      "detail": "Original level previews omit authored explanation/warmup; query resource views retain canonical seed copy and canonical JSON-LD image fallback. Visible image and educationalLevel select the requested level. All 14 additions use their own authored previews. No resource renderer changes."
+    },
+    {
+      "id": "historical-exact-duplicates",
+      "origin": "original Talk banks",
+      "detail": "A1 world9/Q2 equals B1 world9/Q6; A1 world9/Q7 equals A1 world11/Q5. No exact or normalized primary duplicate involves a Batch 1 addition."
+    },
+    {
+      "id": "localized-talk-overlap",
+      "origin": "Run 1 / Run 2 frozen banks",
+      "detail": "B2 world8/Q5 (party-idea credit) and C1 world8/Q6 (shared-conversation idea credit) permit similar face-saving responses despite different authorship ambiguity. Low-severity editorial caveat, not a bank-level inversion; preserved."
+    },
+    {
+      "id": "repeated-machine-b2-stem",
+      "origin": "Run 1 frozen bank",
+      "detail": "All 30 Machine B2 central questions begin ¿Eliminarías…; actual cases, consequences and counterpoints differ. C1 uses that initial stem 5/30 times, C2 0/30. Preserved."
+    },
+    {
+      "id": "machine-a1-fan",
+      "origin": "Run 2 frozen bank",
+      "detail": "a1-maquina-aire removes air conditioning but its fictional consequence also lacks a fan. This can be read as an added scenario constraint or an expanded category; minor ambiguity preserved, no progression inversion."
+    },
+    {
+      "id": "historical-visual-variation",
+      "origin": "original assets",
+      "detail": "Machine A2/B1 share one image; Rules A2/B1 share one image. RF original B1/B2 cast/lighting differs; Talk original A1/A2 use empty chairs/props/portals versus B1+ people/glass orbs. 24 slots use 22 distinct images. No older asset regenerated."
+    },
+    {
+      "id": "historical-language",
+      "origin": "original / earlier banks",
+      "detail": "Existing voseo/tú variation and original Worlds A2 English support remain authoritative. New C2 authored learner copy is Spanish-only and uses tú."
+    }
+  ],
+  "boundaries": {
+    "runs1To3Preserved": true,
+    "oldLessonTextChanged": false,
+    "oldThumbnailsChanged": false,
+    "newRoutesOrIds": false,
+    "accessRulesChanged": false,
+    "batch2Started": false,
+    "mergedToMain": false,
+    "autoMergingPrCreated": false,
+    "deployed": false,
+    "productionModified": false,
+    "d1Modified": false,
+    "authBillingFirebasePaddlePaypalResendModified": false,
+    "secretsEnvironmentDomainsReleaseOrDeployStateModified": false
+  },
+  "statusDocument": "docs/lessons/conversation-family-production-status.md",
+  "run4ChangedFiles": [
+    "app/conversation-families/authored-levels.ts",
+    "app/conversation-worlds/ConversationWorld.tsx",
+    "app/conversation-worlds/ConversationWorldFamily.tsx",
+    "app/conversation-worlds/c2-presentation.tsx",
+    "app/conversation-worlds/data-c2.ts",
+    "app/conversation-worlds/types.ts",
+    "app/conversation-worlds/worlds.css",
+    "docs/lessons/conversation-batch1-completion.json",
+    "docs/lessons/conversation-batch1-run4-thumbnail-prompts.json",
+    "docs/lessons/conversation-family-production-status.md",
+    "package.json",
+    "public/conversation-worlds/absurd-universe-c2.webp",
+    "public/conversation-worlds/elimination-machine-c2.webp",
+    "tests/conversation-batch1-routes.test.mjs",
+    "tests/conversation-batch1-run2-routes.test.mjs",
+    "tests/conversation-batch1-run2.test.mjs",
+    "tests/conversation-batch1-run3-routes.test.mjs",
+    "tests/conversation-batch1-run3.test.mjs",
+    "tests/conversation-batch1-run4-routes.test.mjs",
+    "tests/conversation-batch1-run4.test.mjs",
+    "tests/conversation-batch1.test.mjs",
+    "tests/conversation-worlds-a1.test.mjs",
+    "tests/conversation-worlds-c1.test.mjs",
+    "tests/conversation-worlds-c2-content.test.mjs",
+    "tests/conversation-worlds-c2.test.mjs",
+    "tests/fixtures/conversation-batch1-run3-preserved.json"
+  ],
+  "run4ChangedFileCount": 26
+}
