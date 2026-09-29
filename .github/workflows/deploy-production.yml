@@ -119,7 +119,9 @@ jobs:
         run: |
           git fetch origin main
           git merge-base --is-ancestor "$SHA" origin/main
-          FAILED="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${SHA}/check-runs" --jq '[.check_runs[] | select(.conclusion == "failure" or .conclusion == "cancelled")] | length')"
+          # Ignore this workflow's own earlier attempts (job "production"): a stopped
+          # deploy must not permanently block redeploying the same CI-verified SHA.
+          FAILED="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${SHA}/check-runs" --jq '[.check_runs[] | select(.name != "production") | select(.conclusion == "failure" or .conclusion == "cancelled")] | length')"
           [ "$FAILED" = "0" ] || { echo "::error::SHA has failed or cancelled checks."; exit 1; }
 
       - uses: actions/setup-node@v5
