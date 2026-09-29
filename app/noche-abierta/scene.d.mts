@@ -1,0 +1,22 @@
+export type Point = { x: number; y: number };
+export type Palette = { top: string; left: string; right: string; trim: string };
+export type Building = {
+  id: string; location?: string; x0: number; y0: number; x1: number; y1: number; h: number;
+  palette: string; windows: number; balconies?: boolean; rooftop?: boolean; storefront?: 'right' | 'left';
+  awning?: { side: 'left' | 'right'; color: string; stripe: string }; sign?: string;
+};
+export type Prop = { type: string; gx: number; gy: number; location?: string; tone?: string };
+export const TILE_W: number;
+export const TILE_H: number;
+export const ORIGIN: Point;
+export const VIEWBOX: { width: number; height: number };
+export const GRID: number;
+export function iso(gx: number, gy: number, z?: number): Point;
+export const PALETTES: Record<string, Palette>;
+export const BUILDINGS: Building[];
+export const PROPS: Prop[];
+export const PLACES: Record<string, { label: Point; spot: { gx: number; gy: number } }>;
+export const ARRIVAL_SPOT: { gx: number; gy: number };
+export function depthOf(item: Building | Prop): number;
+export function lit(seed: number, ratio: number): boolean;
+export function points(list: Point[]): string;

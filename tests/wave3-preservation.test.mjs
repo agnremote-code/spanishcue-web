@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {mouthLibraryChanges, reconciledMainBytes, reconciledMainPaths, wave3PreservedBytes} from './helpers/wave3-preservation.mjs';
+import {isApprovedAdditionPath} from './helpers/catalog-additions.mjs';
 
 const base = JSON.parse(readFileSync('tests/fixtures/wave3-preserved.json', 'utf8'));
 const mainPaths = reconciledMainPaths();
@@ -36,5 +37,5 @@ test('Library changes are confined to the ID38 link and truthful feature copy, r
 
 test('tracked changes stay within the four authorized lesson implementations and their tests/report', () => {
   const paths = execFileSync('git', ['diff', '--name-only', base.baseCommit], {encoding: 'utf8'}).trim().split('\n').filter(Boolean);
-  for (const path of paths.filter((path) => !mainPaths.has(path))) assert.match(path, /^(?:app\/(?:syntax-labs\/|mouth-lab\/|clase\/38\/)|app\/Library\.tsx$|public\/audio\/mouth-lab\/|tests\/(?:wave3-[^/]+\.mjs|wave2-preservation\.test\.mjs|helpers\/wave3-preservation\.mjs|fixtures\/wave3-[^/]+\.json)$|docs\/lessons\/quality-v2-repair-status\.md$)/, path);
+  for (const path of paths.filter((path) => !mainPaths.has(path) && !isApprovedAdditionPath(path))) assert.match(path, /^(?:app\/(?:syntax-labs\/|mouth-lab\/|clase\/38\/)|app\/Library\.tsx$|public\/audio\/mouth-lab\/|tests\/(?:wave3-[^/]+\.mjs|wave2-preservation\.test\.mjs|helpers\/wave3-preservation\.mjs|fixtures\/wave3-[^/]+\.json)$|docs\/lessons\/quality-v2-repair-status\.md$)/, path);
 });

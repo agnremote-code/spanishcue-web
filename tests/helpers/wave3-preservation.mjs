@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
+import {withoutApprovedAdditions} from './catalog-additions.mjs';
 
 // Keep the original Wave 2 SHA-256 expectations. Undo only the two explicitly
 // authorized ID38 integrations before comparing the shared Library's old bytes.
@@ -12,7 +13,23 @@ export const mouthLibraryChanges = [
 const preservationImport = "import {wave3PreservedBytes} from './helpers/wave3-preservation.mjs';\n";
 const preservationRead = ["const bytes = readFileSync(path);", "const bytes = wave3PreservedBytes(path, readFileSync(path));"];
 
-export function wave3PreservedBytes(path, bytes) {
+// The same three bounded edits that let Batch 1 checks ignore approved new lessons.
+const batch1AdditionEdits = [
+  ["import {withoutApprovedAdditions, withoutApprovedLessons} from './catalog-additions.mjs';\n", ''],
+  ['  const bytes = withoutApprovedAdditions(path, readFileSync(path));\n', '  const bytes = readFileSync(path);\n'],
+  ['  return withoutApprovedLessons(lessons).map(lesson => {', '  return lessons.map(lesson => {'],
+];
+
+export function wave3PreservedBytes(path, input) {
+  let bytes = withoutApprovedAdditions(path, input);
+  if (path === 'tests/helpers/batch1-preservation.mjs') {
+    let text = bytes.toString('utf8');
+    for (const [after, before] of batch1AdditionEdits) {
+      assert.equal(text.split(after).length - 1, 1, `one bounded addition edit: ${path}`);
+      text = text.replace(after, before);
+    }
+    bytes = Buffer.from(text);
+  }
   if (path !== 'app/Library.tsx' && path !== 'tests/wave2-preservation.test.mjs') return bytes;
   let text = bytes.toString('utf8');
   if (path === 'app/Library.tsx') {

@@ -1,3 +1,4 @@
+import {withoutApprovedAdditions, withoutApprovedLessons} from './catalog-additions.mjs';
 import {readFileSync} from 'node:fs';
 
 const repairedCopies = {
@@ -11,7 +12,7 @@ const repairedCopies = {
  * match its original hash. The new prefix and all old protections also have behavior tests.
  */
 export function batch1PreservedBytes(path) {
-  const bytes = readFileSync(path);
+  const bytes = withoutApprovedAdditions(path, readFileSync(path));
   if (path === 'app/lesson-catalog.ts') return Buffer.from(bytes.toString('utf8').split('\n').map(line => {
     for (const [id, copy] of Object.entries(repairedCopies)) {
       if (line.trimStart().startsWith(`{id:${id},`)) return line.replace(`subtitle:"${copy[0]}",duration:"≈ 45 min + banco opcional"`, `subtitle:"${copy[1]}",duration:"70–85 min"`);
@@ -29,7 +30,7 @@ export function batch1PreservedBytes(path) {
  * participate unchanged in the historical hash. Unexpected copy also fails it.
  */
 export function batch1PreservedLedger(lessons) {
-  return lessons.map(lesson => {
+  return withoutApprovedLessons(lessons).map(lesson => {
     const copy = repairedCopies[lesson.id];
     if (!copy || lesson.subtitle !== copy[0] || lesson.duration !== '≈ 45 min + banco opcional') return lesson;
     return {...lesson, subtitle:copy[1], duration:'70–85 min'};

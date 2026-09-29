@@ -6,6 +6,7 @@ import {build} from 'esbuild';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {reconciledMain,reconciledMainPaths} from './helpers/wave3-preservation.mjs';
+import {withoutApprovedAdditions} from './helpers/catalog-additions.mjs';
 const require=createRequire(import.meta.url),React=require('react'),{renderToString}=require('react-dom/server');
 async function load(path,runtime=React,source){const result=await build({...(source?{stdin:{contents:source,resolveDir:process.cwd()+'/app/syntax-labs',loader:'tsx'}}:{entryPoints:[path]}),bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/*'],loader:{'.css':'empty'}});const m={exports:{}};runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,{console,process})(n=>n==='react'?runtime:require(n),m,m.exports);return m.exports;}
 const banks=await load('app/syntax-labs/data.ts');
@@ -65,7 +66,7 @@ test('all3 exact routes render target lesson and metadata; catalog and PRO polic
   const html=renderToString(React.createElement(Page));assert.ok(html.includes(bank.title));assert.match(html,/sx-repaired/);
   const lesson=lessonAtPath('/'+bank.slug,lessons);assert.equal(lesson.id,id);assert.equal(lesson.title,bank.title);assert.equal(lesson.level,bank.level);assert.equal(isFreeLesson(id),false);
  }
- for(const path of ['app/lesson-catalog.ts','app/access-policy.ts'])assert.equal(readFileSync(path,'utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
+ for(const path of ['app/lesson-catalog.ts','app/access-policy.ts'])assert.equal(withoutApprovedAdditions(path,readFileSync(path)).toString('utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
 });
 test('all24 timeline permutations are controllable by real move handlers; only chronological order passes',async()=>{
  function permutations(xs){return xs.length?xs.flatMap((x,i)=>permutations(xs.filter((_,j)=>i!==j)).map(rest=>[x,...rest])):[[]];}
