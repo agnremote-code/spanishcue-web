@@ -3,13 +3,20 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
-import {mouthLibraryChanges, wave3PreservedBytes} from './helpers/wave3-preservation.mjs';
+import {mouthLibraryChanges, reconciledMainBytes, reconciledMainPaths, wave3PreservedBytes} from './helpers/wave3-preservation.mjs';
 
 const base = JSON.parse(readFileSync('tests/fixtures/wave3-preserved.json', 'utf8'));
+const mainPaths = reconciledMainPaths();
 test('239 original source, test, asset, release-policy and report records retain their historical bytes', () => {
   assert.equal(base.baseCommit, '2b48f28bc7b25f19c650e52cece8f59eca352936');
   assert.equal(Object.keys(base.records).length, 239);
   for (const [path, expected] of Object.entries(base.records)) {
+    if (mainPaths.has(path)) {
+      const historical = execFileSync('git', ['show', `${base.baseCommit}:${path}`]);
+      assert.equal(createHash('sha256').update(expected.prefixBytes ? historical.subarray(0, expected.prefixBytes) : historical).digest('hex'), expected.sha256, `${path} historical record`);
+      assert.ok(readFileSync(path).equals(reconciledMainBytes(path, base.baseCommit)), `${path} reconciled with main`);
+      continue;
+    }
     const bytes = wave3PreservedBytes(path, readFileSync(path));
     const body = expected.prefixBytes ? bytes.subarray(0, expected.prefixBytes) : bytes;
     assert.equal(createHash('sha256').update(body).digest('hex'), expected.sha256, path);
@@ -29,5 +36,5 @@ test('Library changes are confined to the ID38 link and truthful feature copy, r
 
 test('tracked changes stay within the four authorized lesson implementations and their tests/report', () => {
   const paths = execFileSync('git', ['diff', '--name-only', base.baseCommit], {encoding: 'utf8'}).trim().split('\n').filter(Boolean);
-  for (const path of paths) assert.match(path, /^(?:app\/(?:syntax-labs\/|mouth-lab\/|clase\/38\/)|app\/Library\.tsx$|public\/audio\/mouth-lab\/|tests\/(?:wave3-[^/]+\.mjs|wave2-preservation\.test\.mjs|helpers\/wave3-preservation\.mjs|fixtures\/wave3-[^/]+\.json)$|docs\/lessons\/quality-v2-repair-status\.md$)/, path);
+  for (const path of paths.filter((path) => !mainPaths.has(path))) assert.match(path, /^(?:app\/(?:syntax-labs\/|mouth-lab\/|clase\/38\/)|app\/Library\.tsx$|public\/audio\/mouth-lab\/|tests\/(?:wave3-[^/]+\.mjs|wave2-preservation\.test\.mjs|helpers\/wave3-preservation\.mjs|fixtures\/wave3-[^/]+\.json)$|docs\/lessons\/quality-v2-repair-status\.md$)/, path);
 });

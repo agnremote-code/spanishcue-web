@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
 
 // Keep the original Wave 2 SHA-256 expectations. Undo only the two explicitly
 // authorized ID38 integrations before comparing the shared Library's old bytes.
@@ -26,4 +27,22 @@ export function wave3PreservedBytes(path, bytes) {
     text = text.replace(preservationImport, '').replace(preservationRead[1], preservationRead[0]);
   }
   return Buffer.from(text);
+}
+
+// Legitimate main work merged after this line forked (5d6733a..49f7a27: ledger
+// fix, syntax recorrido fix, session persistence, board taught category) was
+// reconciled on 2026-09-29. Those paths must equal main's bytes; package.json is
+// the Wave bytes plus main's single auth-session-sync test entry.
+export const reconciledMain = {base: '5d6733a9b9404bbc17bf6999530eb48ffb574a3e', head: '49f7a27366178bf8bc98e603f99044e0eb98825f'};
+const packageAuthTest = [' tests/production-export-import.test.mjs && npm run test:tracker', ' tests/production-export-import.test.mjs tests/auth-session-sync.test.mjs && npm run test:tracker'];
+
+export function reconciledMainPaths() {
+  return new Set(execFileSync('git', ['diff', '--name-only', reconciledMain.base, reconciledMain.head], {encoding: 'utf8'}).trim().split('\n').filter(Boolean));
+}
+
+export function reconciledMainBytes(path, waveCommit) {
+  if (path !== 'package.json') return execFileSync('git', ['show', `${reconciledMain.head}:${path}`]);
+  const wave = execFileSync('git', ['show', `${waveCommit}:package.json`], {encoding: 'utf8'});
+  assert.equal(wave.split(packageAuthTest[0]).length - 1, 1, 'exact package.json reconciliation anchor');
+  return Buffer.from(wave.replace(packageAuthTest[0], packageAuthTest[1]));
 }
