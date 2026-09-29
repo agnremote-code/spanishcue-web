@@ -1,0 +1,216 @@
+{
+  "baseCommit": "e8f38659588526253c51f638b39e337682729363",
+  "records": {
+    "app/Library.tsx": {
+      "sha256": "9f3c29b9c836509921c779335374170d9252281af8ecc3aad45b7d09315b05ec"
+    },
+    "app/access-policy.ts": {
+      "sha256": "a1879c2ad75366a963b3d7c832a0ef351242196b8b18469a4b99d6550f4c1737"
+    },
+    "app/additional-samples.ts": {
+      "sha256": "e8bf6fb546fc9b11f23e9cfe1873e606bbfc7951af7f14223d5ede5693ebafff"
+    },
+    "app/clase/[id]/page.tsx": {
+      "sha256": "46f17d88d3cbd9aac92bddd07c09bed64b466b83bb1469dc29d8cf7b07f0fd91"
+    },
+    "app/grammar-worlds/GrammarRepair.tsx": {
+      "sha256": "890ab3e0f7accfe66fb303de08979918020d79a5559fad1ad89000a6757c86f1"
+    },
+    "app/grammar-worlds/GrammarWorld.tsx": {
+      "sha256": "50dadcb79690f2625a5896a845382857ed667cf3070ed01e4b0136283d6e6128"
+    },
+    "app/grammar-worlds/data-next.ts": {
+      "sha256": "aee2541b23ccab6fdfe49cf9ed4cc15ca92901c57dd2ff5f91c9b2393976f0a6"
+    },
+    "app/grammar-worlds/data.ts": {
+      "sha256": "37a6b40d5db8c007f3d4737ce415a2e6084767ac4d615dbd38627187ed0cc0a2"
+    },
+    "app/grammar-worlds/repair-data.ts": {
+      "sha256": "c03d54d273839c70ccab07fe31f3dfd70306beed9677fb50eaf2107c277890f5"
+    },
+    "app/grammar-worlds/repair-state.ts": {
+      "sha256": "26ee7385308df72d2d63576f0672b99fc6c1121ee34ba99e54f2cabe3c4621dd"
+    },
+    "app/grammar-worlds/repair.css": {
+      "sha256": "5c8dbb3292fba72d31c5eaedea6c1b724492c032d0498e752d94b33b210efe40"
+    },
+    "app/lesson-catalog.ts": {
+      "sha256": "b52d31f7cd53291d7255e9bcb10be0350ae9cc37382fe99531c3e092f77e13a1"
+    },
+    "app/listening-studio/AudioDeck.tsx": {
+      "sha256": "9fb28b44d28d5c590d40ebe8813966c0176b2a851a6bdb32e49a30db53aae99b"
+    },
+    "app/phonetics/PhoneticsLesson.tsx": {
+      "sha256": "791a89b8b7569c0bed6967cd5ec7445f32ae8987e4390367db7005d74a2587cc"
+    },
+    "app/phonetics/audio-manifest.json": {
+      "sha256": "98ee3936b84b631a5da4ddac4f820d0afd5845a1c9d32507fcc8dc54ab880694"
+    },
+    "app/phonetics/data.ts": {
+      "sha256": "6fb0676a8839c29eb64d0e49f76db1cb69bbc7a16e855230b5dcd40d48dc4c2a"
+    },
+    "app/phonetics/navigation.ts": {
+      "sha256": "801d985eef28224b8c391b01f46f033f2577f35d5056b6e504856ad7f2ba5514"
+    },
+    "app/phonetics/phonetics.css": {
+      "sha256": "27769086fb9c3521ec16d3600268488e2628fae559cc6081b28d091193608b4a"
+    },
+    "app/phonetics/state.ts": {
+      "sha256": "d65579ec209694a9af789fbe8e98c9dce6d33fea6dec020386f0c1f0739ee6ce"
+    },
+    "docs/lessons/NEXT_20_LESSON_PRIORITIES.md": {
+      "sha256": "44f1108e69d30948ecf1e0b3f5d13255c492e6b5b453d32c6dffe4d6434bdf19"
+    },
+    "docs/lessons/NON_CONVERSATION_LIBRARY_AUDIT.md": {
+      "sha256": "ff66f12e8a599b057256c331e92cd4058896994bb9392edcdf74223776c9b2a6"
+    },
+    "docs/lessons/SPANISHCUE_QUALITY_STANDARD_V2.md": {
+      "sha256": "290978d261f3e1dd02986d10b71e45c1203f9a57913b8ba15f2408df4c58b0cf"
+    },
+    "docs/lessons/non-conversation-library-audit.json": {
+      "sha256": "5b2276cbc52a1ac1f0aa8d221d8e80e83c04f0f36ab12080e25c52c61ecdcdbf"
+    },
+    "docs/lessons/quality-v2-repair-status.md": {
+      "sha256": "bfb8afcc9e0e21dfbecced22a42531fa07675bf8f15f7d73847801bb0bf57704",
+      "prefixBytes": 31767
+    },
+    "public/audio/phonetics/cafe.mp3": {
+      "sha256": "c8ec4a3f1534bf09f0c5e8c233db04b0c62691f34098750bbfab9a71c449f32e"
+    },
+    "public/audio/phonetics/casa.mp3": {
+      "sha256": "272a68015f4f7a9a7bfae4c5bea71071c35004c53bf4fc015b89595c549fb974"
+    },
+    "public/audio/phonetics/cosa.mp3": {
+      "sha256": "efc369c619aec1561a2682e90fac3cf363a1fe7a7b8cb902522d2dc8948eddcd"
+    },
+    "public/audio/phonetics/hablo-past.mp3": {
+      "sha256": "ea0686e8d07d85b40bd9126523dd8db0ef6ea0ed51f45fca544c3c53d1c37bda"
+    },
+    "public/audio/phonetics/hablo-present.mp3": {
+      "sha256": "27deff8e4e66ca30c0feaf7e6478f285dc0f17c477ed5a157cfb494d55bbff0a"
+    },
+    "public/audio/phonetics/luna.mp3": {
+      "sha256": "cb601c991065497b38277c56e8c7e2aa38f8115ed0e3417ad7383a0265df7a0f"
+    },
+    "public/audio/phonetics/mesa.mp3": {
+      "sha256": "0be645a7a38af143510aabfb05f1780e50ca2a7a71d4407fbad5390b1b11114a"
+    },
+    "public/audio/phonetics/misa.mp3": {
+      "sha256": "b098104d9f3309372b49f2b4e59227348496716d57c85de84c21e11b9dc4a01f"
+    },
+    "public/audio/phonetics/moto.mp3": {
+      "sha256": "f60beb336911ff5be50b54fdab5df57e7a9f6378e3b1b6a16ab8e901af2cf218"
+    },
+    "public/audio/phonetics/palo.mp3": {
+      "sha256": "7e86ddf721adebba391d195c889b29fde2a195514d70573b3c874c581bb053d5"
+    },
+    "public/audio/phonetics/papel.mp3": {
+      "sha256": "a52ae2cdb387794e31a51663f3fc13c3fc489bdb3a1829f273681e6b81c6a251"
+    },
+    "public/audio/phonetics/pelo.mp3": {
+      "sha256": "de91e97b7d0652b8361a44e1976d4c1faafee7cf2f807f9a38e67279ae150572"
+    },
+    "public/audio/phonetics/peso.mp3": {
+      "sha256": "78bf5d686af77ddce164641d88d2cd9277c62fbb429f61f99224dc07da431ae1"
+    },
+    "public/audio/phonetics/piso.mp3": {
+      "sha256": "70edf14eac3d4474fac4adf2050e29ed031c0fd788cb019df95abec551861f51"
+    },
+    "public/audio/phonetics/publico-final.mp3": {
+      "sha256": "b9928d37139c263b179a2a8a2a5f6d59adbd103783de645c21597024362eeabc"
+    },
+    "public/audio/phonetics/publico-initial.mp3": {
+      "sha256": "7acb62fd9ba95ea52b58057df85a6ad08b22eb0e5a2b6cd63ededed8a28c0741"
+    },
+    "public/audio/phonetics/publico-middle.mp3": {
+      "sha256": "f80b34779aa2e5ffdfd912ae0a0dc630d10af08b0489c167da02a7aee708fc85"
+    },
+    "public/audio/phonetics/stress-phrase-1.mp3": {
+      "sha256": "8cba371053eabf66ed6ad47a8406463b30d4ed219880f504a84ecdc7612e8e15"
+    },
+    "public/audio/phonetics/stress-phrase-2.mp3": {
+      "sha256": "5c8bdb371f1c6c9eaef75fc8b02670bd1a70f11d44ef365e2b473ff3363e5795"
+    },
+    "public/audio/phonetics/telefono.mp3": {
+      "sha256": "60bde93c5b0fb58f5caecc58dd8ae0c01b5b30bae4430126b11c4231621d2469"
+    },
+    "public/audio/phonetics/termino-final.mp3": {
+      "sha256": "3e1eb8a8462583eaf608963dc2c8fca94196c272fa351c4ffa6c3cdcbb81355d"
+    },
+    "public/audio/phonetics/termino-initial.mp3": {
+      "sha256": "1f9a8cf64898b5f3e84dafe291b1bc78f8e2a881b01d104130e6a1bec0cbe0a3"
+    },
+    "public/audio/phonetics/termino-middle.mp3": {
+      "sha256": "bd34446a0e532f408ce401b897a34913a997495c92b494119acc3d6b093f1797"
+    },
+    "public/audio/phonetics/vino.mp3": {
+      "sha256": "f940f37de595ebab92b458248162508d2e644967c69544a1493e9776521b9288"
+    },
+    "public/audio/phonetics/vowel-a.mp3": {
+      "sha256": "2eb6dc1a0068280d48e4330396b78806fffa4cca6a51ab2ff28ef5208f20d746"
+    },
+    "public/audio/phonetics/vowel-e.mp3": {
+      "sha256": "fd5c20491182df74b71718e3f553f3baab8660b7752409d4587b692bda147d95"
+    },
+    "public/audio/phonetics/vowel-i.mp3": {
+      "sha256": "e27bcae7e05278f79a0a6fa74edef132cbac91cc8fa6497eec952ba5872c72fe"
+    },
+    "public/audio/phonetics/vowel-o.mp3": {
+      "sha256": "73971c9d826a4a89e12877071721bbee8a647e3f6c1931396615ec014b1a9809"
+    },
+    "public/audio/phonetics/vowel-u.mp3": {
+      "sha256": "7adf2cd124b1671348dac6ca007f5562b84289b6a20727577dffa7e74bad2b44"
+    },
+    "public/audio/phonetics/vowels-phrase-1.mp3": {
+      "sha256": "7c06e48c1ce7bda4f80bdf7caceb40b7ad523accbaa02be7a83f061654da31f9"
+    },
+    "public/audio/phonetics/vowels-phrase-2.mp3": {
+      "sha256": "91544932a972c2fa844df69e08029563e5dee1a984a079bacc3473549945d7ee"
+    },
+    "public/audio/phonetics/vowels-phrase-3.mp3": {
+      "sha256": "47c29417936a25c829e8db0676fce81b2d2e96050f1cfda87a74e94ce5520be4"
+    },
+    "tests/audio-deck-wave1.test.mjs": {
+      "sha256": "18fa63c01660b880e3898c63313aa68962c1b019bb5edaa189bbc06cf85f3f88"
+    },
+    "tests/conversation-batch1-run2.test.mjs": {
+      "sha256": "460bc569622f414c818dde481d5a85b1841b8209b1a1faeac561aea45bab9aab"
+    },
+    "tests/conversation-batch1-run3.test.mjs": {
+      "sha256": "45b5a74218be822742d0286fc18a32ef4bf44e3eef5fd6cb6cf0b943e8cabdf5"
+    },
+    "tests/conversation-batch1-run4.test.mjs": {
+      "sha256": "b7df448d752978a494d295d6eba27c53e8e437d9c2a7a0b476e4212f2ed13c33"
+    },
+    "tests/conversation-batch1.test.mjs": {
+      "sha256": "f029af87176a86a91220f63beb39a0973c4f720e7a316a8c69bb9d2ac6eaf804"
+    },
+    "tests/fixtures/grammar-wave1-baseline.json": {
+      "sha256": "f7a1127e6ecf7d7889b12bf0fc53d8f104b578ead7855db54c4bf3cc0b3ab792"
+    },
+    "tests/grammar-wave1-repair.test.mjs": {
+      "sha256": "ff9eae546530ad596acf36cb006c5a4fef604a16f398e0b97eb775d5f5f4700e"
+    },
+    "tests/helpers/batch1-preservation.mjs": {
+      "sha256": "2be91bb9edc5ed47ade0d89405444cd1183ba7a12720434630ea72fde703953a"
+    },
+    "tests/phonetics-wave1-assets.test.mjs": {
+      "sha256": "04ad72b9df858eea0048d4c7991ca7a7a64b7ef116151eb5f38a7ada77211798"
+    },
+    "tests/phonetics-wave1.test.mjs": {
+      "sha256": "86d8b3ecbc23c88f7d68a55235b687ab5044c60cf2fe3c2161c2637a6443c218"
+    },
+    "public/listening-premium/ultima-llamada.webp": {
+      "sha256": "39cdfa37f31a3ae9d55c9ba7b31c161ed74fe4a7650798a695c87f3d67bda963"
+    },
+    "public/listening-premium/habitacion-508.webp": {
+      "sha256": "88b25e58ff2e2f6d69dd56004a6f5030f0f0812cd2a3ae3fda0ca3fd16c34329"
+    },
+    "public/chespanish-guide-van.webp": {
+      "sha256": "7a596e5a348cff8a5d81b7ae7e97d12d56a92123c6d3090e14aba88734efb4e6"
+    },
+    "public/previews/word-bank-studio-v91.webp": {
+      "sha256": "6a4c5da73703e4a4161c8b0ce8fd18a8e41731c02cfdd034b8482b9de64c4848"
+    }
+  }
+}

@@ -133,3 +133,18 @@
 .ul-final>article{padding:24px;box-shadow:8px 8px 0 #2257df35}
 .ul-help{right:12px;bottom:12px}
 }
+/* Wave 2: evidence and teacher controls retain the terminal's visual language. */
+.ul-teacher{padding:12px 4vw;border-bottom:1px solid #ffffff24;color:#d8e0e9;line-height:1.55}
+.ul-teacher summary{cursor:pointer;min-height:44px;padding:10px 0;font-weight:800}
+.ul-teacher p{max-width:85ch;margin:10px 0}
+.ul-teacher button,.ul-gist button,.ul-actions button,.ul-facts button,.ul-final>div>button{min-height:44px;border:1px solid #7891ad;background:#182b42;color:#fff;padding:10px 14px}
+.ul-progress{font-size:.88rem;line-height:1.5;padding:10px;color:#bac9db}
+.ul-gist{margin:16px 0;line-height:1.5}.ul-gist h3{font-size:1rem;color:var(--amber)}.ul-gist p{margin:8px 0}
+.ul-task>div.ul-actions{display:flex;flex-wrap:wrap;margin-top:12px}.ul-task button.selected,.ul-mission button.selected{outline:3px solid #2257df;outline-offset:-3px;background:#e1eaff}
+.ul-task [role=status]{margin-top:12px;line-height:1.5}.ul-task blockquote{margin:10px 0;font-size:1rem;line-height:1.5}
+.ul-task button:disabled{opacity:.45}.ul-facts{padding-left:22px}.ul-facts li{padding:10px 0;border-bottom:1px solid #aeb9c4;line-height:1.5}.ul-facts button{margin:8px 0}
+.ul-mission article>h2{margin-top:22px}.ul-mission article>p{line-height:1.5;margin:10px 0}.ul-final>div>p{margin-bottom:18px}
+.ul-observation{display:flex;gap:12px;line-height:1.5;margin-top:20px}.ul-observation input{width:22px;height:22px;flex-shrink:0}.ul-chosen{border-left:3px solid var(--amber);padding-left:12px}
+.ul-app button{min-height:44px}.ul-final nav button{width:44px;height:44px}.ul-stage button{color:#bdc9d9}.ul-stage small{color:#a8b8ca}.ul-board button small{font-size:.75rem}
+@media(max-width:720px){.ul-workspace{max-height:none;overflow:visible}.ul-top{height:auto;min-height:58px;flex-wrap:wrap;padding:12px;gap:12px}.ul-top>a:first-child{display:block}.ul-top>span{margin-left:0}.ul-stage{position:static;grid-template-columns:repeat(3,1fr);overflow:visible}.ul-stage button{padding:10px 6px;font-size:.68rem}.ul-stage small{margin-left:0}.ul-stage button b{display:block;margin-bottom:4px}.ul-workspace>footer,.ul-mission footer{flex-wrap:wrap}.ul-mission>article{padding:20px}.ul-help{position:static;margin:12px 4vw}.ul-support{bottom:16px;max-height:70vh;overflow:auto}.ul-terminal{padding-top:300px}}
+@media(prefers-reduced-motion:reduce){.ul-app *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

@@ -1,46 +1,219 @@
 {
-  "signals":[
+  "signals": [
     {
-      "id":"salida", "title":"La salida prevista", "channel":"ALTAVOZ · TERMINAL", "variety":"España", "file":"/audio/ultima-llamada/salida.mp3",
-      "prediction":"Mirá el panel: ¿qué información esperás oír primero?", "question":"¿Cuál es la información principal?", "options":["El vuelo sale a las 18:40","El vuelo está cancelado","La puerta ya cerró"], "answer":0,
-      "talk":"¿Con cuánto tiempo llegás normalmente al aeropuerto?",
-      "segments":[{"speaker":"Anuncio","voice":"es-ES-AlvaroNeural","rate":"-8%","text":"Atención, pasajeros del vuelo seiscientos cuatro con destino a Lima. La salida se mantiene a las dieciocho cuarenta. El embarque está previsto a las dieciocho diez por la puerta B doce."}]
+      "id": "salida",
+      "title": "Anuncio de salida",
+      "channel": "ALTAVOZ · TERMINAL",
+      "variety": "España",
+      "file": "/audio/ultima-llamada/salida.mp3",
+      "prediction": "Antes del viaje, ¿qué datos necesitás de un anuncio?",
+      "question": "¿Cuál es la información principal?",
+      "options": [
+        "El vuelo sale a las 18:40",
+        "El vuelo está cancelado",
+        "La puerta ya cerró"
+      ],
+      "answer": 0,
+      "talk": "¿Con cuánto tiempo llegás normalmente al aeropuerto?",
+      "segments": [
+        {
+          "speaker": "Anuncio",
+          "voice": "es-ES-AlvaroNeural",
+          "rate": "-8%",
+          "text": "Atención, pasajeros del vuelo seiscientos cuatro con destino a Lima. La salida se mantiene a las dieciocho cuarenta. El embarque está previsto a las dieciocho diez por la puerta B doce."
+        }
+      ],
+      "fact": "Salida: 18:40. Embarque previsto: 18:10, B12. Este embarque se modifica en la señal de la aerolínea.",
+      "evidence": "La salida se mantiene a las dieciocho cuarenta. El embarque está previsto a las dieciocho diez por la puerta B doce.",
+      "hint": "Distinguí salida y embarque.",
+      "gist": "Primera escucha: explicá quién habla y para qué. Todavía no hace falta recordar cada dato."
     },
     {
-      "id":"amiga", "title":"Nina todavía no llegó", "channel":"WHATSAPP · AMIGA", "variety":"Argentina", "file":"/audio/ultima-llamada/amiga.mp3",
-      "prediction":"Nina manda un audio desde un auto. ¿Llega temprano?", "question":"¿Qué pide Nina?", "options":["Que la esperes siempre","Que no la esperes si llaman para embarcar","Que cambies el vuelo"], "answer":1,
-      "talk":"¿Qué hacés si la persona que viaja con vos llega tarde?",
-      "segments":[{"speaker":"Nina","voice":"es-AR-ElenaNeural","rate":"-7%","text":"Che, sigo en camino. Hay muchísimo tránsito y calculo que llego a las seis y cinco. Tengo tu campera conmigo, pero si llaman para embarcar, no me esperes. Yo corro hasta la puerta."}]
+      "id": "amiga",
+      "title": "Mensaje de Nina",
+      "channel": "WHATSAPP · AMIGA",
+      "variety": "Argentina",
+      "file": "/audio/ultima-llamada/amiga.mp3",
+      "prediction": "Tu compañera manda un audio. ¿Qué necesitás saber para organizarte?",
+      "question": "¿Qué pide Nina?",
+      "options": [
+        "Que la esperes aunque empiece el embarque",
+        "Que no la esperes si llaman para embarcar",
+        "Que vayas a buscarla a la entrada"
+      ],
+      "answer": 1,
+      "talk": "¿Qué hacés si la persona que viaja con vos llega tarde?",
+      "segments": [
+        {
+          "speaker": "Nina",
+          "voice": "es-AR-ElenaNeural",
+          "rate": "-7%",
+          "text": "Che, sigo en camino. Hay muchísimo tránsito y calculo que llego a las seis y cinco. Tengo tu campera conmigo, pero si llaman para embarcar, no me esperes. Yo corro hasta la puerta."
+        }
+      ],
+      "fact": "Nina calcula llegar a las 18:05; pide que no la esperes si llaman para embarcar. Es una estimación.",
+      "evidence": "Hay muchísimo tránsito y calculo que llego a las seis y cinco.",
+      "hint": "Escuchá qué pide Nina si llaman para embarcar.",
+      "gist": "Primera escucha: explicá quién habla y para qué. Todavía no hace falta recordar cada dato."
     },
     {
-      "id":"cafe", "title":"El café no espera", "channel":"MENSAJE GRABADO · CAFETERÍA", "variety":"Colombia", "file":"/audio/ultima-llamada/cafe.mp3",
-      "prediction":"Tu pedido está listo. ¿Hasta qué hora lo guardan?", "question":"¿Qué pasa después de las 17:50?", "options":["Regalan el pedido","Cancelan el pedido","Cierran la terminal"], "answer":1,
-      "talk":"¿Comprás comida antes de viajar o llevás algo de casa?",
-      "segments":[{"speaker":"Cafetería","voice":"es-CO-SalomeNeural","rate":"-8%","text":"Hola. Tu pedido número cuarenta y seis ya está listo en el mostrador Punto Norte. Lo guardamos hasta las diecisiete cincuenta. Después de esa hora, el pedido se cancela."}]
+      "id": "cafe",
+      "title": "Mensaje de la cafetería",
+      "channel": "MENSAJE GRABADO · CAFETERÍA",
+      "variety": "Colombia",
+      "file": "/audio/ultima-llamada/cafe.mp3",
+      "prediction": "Tenés un pedido pendiente. ¿Qué podría indicar el mensaje?",
+      "question": "¿Qué pasa después de las 17:50?",
+      "options": [
+        "Regalan el pedido",
+        "Cancelan el pedido",
+        "Cierran la terminal"
+      ],
+      "answer": 1,
+      "talk": "¿Comprás comida antes de viajar o llevás algo de casa?",
+      "segments": [
+        {
+          "speaker": "Cafetería",
+          "voice": "es-CO-SalomeNeural",
+          "rate": "-8%",
+          "text": "Hola. Tu pedido número cuarenta y seis ya está listo en el mostrador Punto Norte. Lo guardamos hasta las diecisiete cincuenta. Después de esa hora, el pedido se cancela."
+        }
+      ],
+      "fact": "Pedido 46 listo en Punto Norte. Lo guardan hasta las 17:50; después se cancela. No se indica cuánto tarda retirarlo.",
+      "evidence": "Lo guardamos hasta las diecisiete cincuenta. Después de esa hora, el pedido se cancela.",
+      "hint": "Distinguí cancelar el pedido y cerrar el local.",
+      "gist": "Primera escucha: explicá quién habla y para qué. Todavía no hace falta recordar cada dato."
     },
     {
-      "id":"cambio", "title":"La puerta cambió", "channel":"ANUNCIO URGENTE · AEROLÍNEA", "variety":"México", "file":"/audio/ultima-llamada/cambio.mp3",
-      "prediction":"Una fila del panel cambia de color. ¿Puerta, hora o destino?", "question":"¿Qué dos cosas cambiaron?", "options":["El destino y el avión","La hora de embarque y la puerta","El precio y el equipaje"], "answer":1,
-      "talk":"¿Te estresan los cambios de último momento? ¿Por qué?",
-      "segments":[{"speaker":"Aerolínea","voice":"es-MX-DaliaNeural","rate":"-6%","text":"Información importante para el vuelo seiscientos cuatro con destino a Lima. Por una razón operativa, el embarque comienza a las diecisiete cincuenta y cinco y cambia a la puerta C cuatro. La puerta cierra a las dieciocho quince."}]
+      "id": "cambio",
+      "title": "Nuevo anuncio de la aerolínea",
+      "channel": "ANUNCIO URGENTE · AEROLÍNEA",
+      "variety": "México",
+      "file": "/audio/ultima-llamada/cambio.mp3",
+      "prediction": "Llega otro anuncio. ¿Qué dato compararías con el primero?",
+      "question": "¿Qué dos cosas cambiaron?",
+      "options": [
+        "La hora de salida y el destino",
+        "La hora de embarque y la puerta",
+        "La puerta y la hora de salida"
+      ],
+      "answer": 1,
+      "talk": "¿Te estresan los cambios de último momento? ¿Por qué?",
+      "segments": [
+        {
+          "speaker": "Aerolínea",
+          "voice": "es-MX-DaliaNeural",
+          "rate": "-6%",
+          "text": "Información importante para el vuelo seiscientos cuatro con destino a Lima. Por una razón operativa, el embarque comienza a las diecisiete cincuenta y cinco y cambia a la puerta C cuatro. La puerta cierra a las dieciocho quince."
+        }
+      ],
+      "fact": "Nuevo embarque: 17:55, puerta C4. Cierre: 18:15. El anuncio no cambia la hora de salida.",
+      "evidence": "el embarque comienza a las diecisiete cincuenta y cinco y cambia a la puerta C cuatro. La puerta cierra a las dieciocho quince.",
+      "hint": "Compará puerta y hora de embarque con el primer anuncio.",
+      "gist": "Primera escucha: explicá quién habla y para qué. Todavía no hace falta recordar cada dato."
     },
     {
-      "id":"camino", "title":"Siete minutos hasta C", "channel":"DIÁLOGO · PASAJEROS", "variety":"Perú + España", "file":"/audio/ultima-llamada/camino.mp3",
-      "prediction":"Dos pasajeros miran un ascensor cerrado. ¿Qué alternativa encuentran?", "question":"¿Cómo llegan a las puertas C?", "options":["Por la escalera mecánica junto a la farmacia","En un autobús","Por la salida tres"], "answer":0,
-      "talk":"¿Pedís ayuda cuando no encontrás una puerta o preferís buscar solo?",
-      "segments":[
-        {"speaker":"Pasajera","voice":"es-PE-CamilaNeural","rate":"-6%","text":"Disculpe, ¿sabe cómo se llega a las puertas C? El ascensor está cerrado.","pause":180},
-        {"speaker":"Pasajero","voice":"es-ES-AlvaroNeural","rate":"-4%","text":"Sí. Tome la escalera mecánica que está junto a la farmacia. Desde aquí son unos siete minutos."}
-      ]
+      "id": "camino",
+      "title": "Consulta entre pasajeros",
+      "channel": "DIÁLOGO · PASAJEROS",
+      "variety": "Perú + España",
+      "file": "/audio/ultima-llamada/camino.mp3",
+      "prediction": "Necesitás llegar a otro sector. ¿Qué preguntarías?",
+      "question": "¿Cómo llegan a las puertas C?",
+      "options": [
+        "Por la escalera mecánica junto a la farmacia",
+        "En un autobús",
+        "Por la salida tres"
+      ],
+      "answer": 0,
+      "talk": "¿Pedís ayuda cuando no encontrás una puerta o preferís buscar solo?",
+      "segments": [
+        {
+          "speaker": "Pasajera",
+          "voice": "es-PE-CamilaNeural",
+          "rate": "-6%",
+          "text": "Disculpe, ¿sabe cómo se llega a las puertas C? El ascensor está cerrado.",
+          "pause": 180
+        },
+        {
+          "speaker": "Pasajero",
+          "voice": "es-ES-AlvaroNeural",
+          "rate": "-4%",
+          "text": "Sí. Tome la escalera mecánica que está junto a la farmacia. Desde aquí son unos siete minutos."
+        }
+      ],
+      "fact": "Escalera mecánica junto a la farmacia. Desde donde hablan los pasajeros hasta las puertas C: unos siete minutos.",
+      "evidence": "Tome la escalera mecánica que está junto a la farmacia. Desde aquí son unos siete minutos.",
+      "hint": "Escuchá la alternativa al ascensor.",
+      "gist": "Primera escucha: explicá quién habla y para qué. Todavía no hace falta recordar cada dato."
     },
     {
-      "id":"conductor", "title":"Después del aterrizaje", "channel":"NOTA DE VOZ · CONDUCTOR", "variety":"Colombia", "file":"/audio/ultima-llamada/conductor.mp3",
-      "prediction":"El conductor ya está organizando la llegada. ¿Dónde esperará?", "question":"¿Qué debe hacer el pasajero si el vuelo se retrasa?", "options":["Llamar a la policía","Enviar un mensaje","Tomar otro vuelo"], "answer":1,
-      "talk":"¿Preferís reservar el transporte o decidir cuando llegás?",
-      "segments":[{"speaker":"Diego","voice":"es-CO-GonzaloNeural","rate":"-6%","text":"Hola, soy Diego, tu conductor en Lima. Te espero en la salida tres hasta las veintidós veinte. Si el vuelo se retrasa, mandame un mensaje y cambio la hora sin problema."}]
+      "id": "conductor",
+      "title": "Nota del conductor",
+      "channel": "NOTA DE VOZ · CONDUCTOR",
+      "variety": "Colombia",
+      "file": "/audio/ultima-llamada/conductor.mp3",
+      "prediction": "Vas a llegar a otro país. ¿Qué necesitás coordinar?",
+      "question": "¿Qué debe hacer el pasajero si el vuelo se retrasa?",
+      "options": [
+        "Esperarlo sin avisar",
+        "Enviar un mensaje",
+        "Llamarlo al salir del aeropuerto"
+      ],
+      "answer": 1,
+      "talk": "¿Preferís reservar el transporte o decidir cuando llegás?",
+      "segments": [
+        {
+          "speaker": "Diego",
+          "voice": "es-CO-GonzaloNeural",
+          "rate": "-6%",
+          "text": "Hola, soy Diego, tu conductor en Lima. Te espero en la salida tres hasta las veintidós veinte. Si el vuelo se retrasa, mandame un mensaje y cambio la hora sin problema."
+        }
+      ],
+      "fact": "Diego espera en la salida 3 hasta las 22:20. Si el vuelo se retrasa, hay que enviarle un mensaje.",
+      "evidence": "Te espero en la salida tres hasta las veintidós veinte. Si el vuelo se retrasa, mandame un mensaje",
+      "hint": "Escuchá qué hacer solamente si hay retraso.",
+      "gist": "Primera escucha: explicá quién habla y para qué. Todavía no hace falta recordar cada dato."
     }
   ],
-  "mission":{"time":"17:46","prompt":"Estás frente a la cafetería. Nina todavía no llegó y la puerta C4 está a siete minutos.","options":["Esperar a Nina hasta las 18:05","Recoger el café y después caminar","Ir directamente a C4 y escribirle a Nina"],"answer":2,"feedback":"El embarque empieza a las 17:55. Caminar lleva siete minutos; esperar o recoger el café deja muy poco margen."},
-  "finalQuestions":["¿Preferís organizar todo antes de viajar o improvisar?","¿Alguna vez llegaste tarde a algo importante?","¿Qué fue lo último que salió diferente de lo planeado?","¿Te estresan los aeropuertos?","¿Qué hacés si alguien llega muy tarde?","¿Preferís viajar solo o acompañado?","¿Qué viaje recordás especialmente?","¿Qué cosa nunca olvidás llevar?"],
-  "supports":["Primero voy a…","Después tengo que…","El plan cambió porque…","Si llego tarde, voy a…","Prefiero… porque…"]
+  "mission": {
+    "time": "17:46",
+    "prompt": "Estás frente a Punto Norte. Para esta situación, tomá unos siete minutos de caminata desde allí hasta C4. Nina todavía no llegó. Elegí un plan y explicá de qué depende.",
+    "options": [
+      {
+        "id": "esperar",
+        "text": "Esperar a Nina hasta las 18:05",
+        "feedback": "Puede funcionar si Nina llega a esa hora y salen enseguida: llegarían hacia las 18:12, antes del cierre de las 18:15. Pero su llegada es una estimación, queda poco margen y ella pidió que no la esperes si llaman para embarcar. ¿Qué harás si no llega?"
+      },
+      {
+        "id": "cafe",
+        "text": "Recoger el café y después caminar",
+        "feedback": "Puede funcionar si retirás el pedido a tiempo y no hay demora. Lo cancelan después de las 17:50; no sabemos cuánto tardás en retirarlo. Si salís a las 17:50, llegarías hacia las 17:57, después del inicio del embarque pero antes del cierre. ¿Qué dato falta confirmar?"
+      },
+      {
+        "id": "directo",
+        "text": "Ir directamente a C4 y escribirle a Nina",
+        "feedback": "Con la caminata estimada llegarías hacia las 17:53, antes del inicio del embarque. Es el plan con más margen; el tiempo de camino sigue siendo aproximado. Avisale a Nina dónde encontrarte y explicá qué pasa con el café."
+      }
+    ],
+    "oral": "Mandale un mensaje oral a Nina: decí qué cambió, adónde vas, cuándo cierra la puerta y qué tiene que hacer ella. Usá dos datos de tus señales."
+  },
+  "finalQuestions": [
+    "¿Preferís organizar todo antes de viajar o improvisar?",
+    "¿Alguna vez llegaste tarde a algo importante?",
+    "¿Qué fue lo último que salió diferente de lo planeado?",
+    "¿Te estresan los aeropuertos?",
+    "¿Qué hacés si alguien llega muy tarde?",
+    "¿Preferís viajar solo o acompañado?",
+    "¿Qué viaje recordás especialmente?",
+    "¿Qué cosa nunca olvidás llevar?"
+  ],
+  "supports": [
+    "Primero voy a…",
+    "Después tengo que…",
+    "El plan cambió porque…",
+    "Si llego tarde, voy a…",
+    "Prefiero… porque…"
+  ],
+  "teacherRoute": "Ruta estimada de 45 min: predecir y escuchar las seis señales dos veces (25); reconstruir con los datos guardados y justificar un plan (10); mensaje a Nina, respuesta a Diego y una pregunta personal (10). Las otras siete preguntas son alternativas. El profesor observa datos claros, una razón y una petición comprensible; no hay evaluación automática del habla."
 }

@@ -17,6 +17,8 @@ export type SyntaxDecision = {
   right: string;
   options: string[];
   correct: number;
+  accepted?: number[];
+  hint?: string;
   feedback: string;
 };
 
@@ -25,6 +27,8 @@ export type SyntaxRepair = {
   original: string;
   options: string[];
   correct: number;
+  accepted?: number[];
+  hint?: string;
   feedback: string;
 };
 
@@ -621,7 +625,7 @@ export const antesDespuesCuando: SyntaxLabData = {
   accent: "#55d6be",
   accent2: "#ffd166",
   productiveTargets: ["antes de + infinitivo", "después de + infinitivo", "cuando + presente de indicativo"],
-  boundaries: "Trabajamos acciones del mismo sujeto y hechos habituales en presente. La referencia temporal futura y otras combinaciones quedan fuera de esta clase A2.",
+  boundaries: "Con antes de y después de + infinitivo trabajamos acciones del mismo sujeto. Cuando enlaza hechos habituales en presente, también con sujetos distintos. La referencia temporal futura y otras combinaciones quedan fuera de esta clase A2.",
   timeline: [
     { label: "Activación", minutes: 5 },
     { label: "Descubrimiento", minutes: 7 },
@@ -642,34 +646,34 @@ export const antesDespuesCuando: SyntaxLabData = {
     ],
   },
   patterns: [
-    { key: "antes-de", label: "ANTES DE", intention: "ACCIÓN PREVIA", formula: "ANTES DE + INFINITIVO", example: "Antes de salir, desayuno.", preview: { left: "desayuno", connector: "antes de", right: "salir" }, explanation: "Después de antes de, la acción aparece en infinitivo y se presenta como anterior a la acción principal." },
-    { key: "despues-de", label: "DESPUÉS DE", intention: "ACCIÓN POSTERIOR", formula: "DESPUÉS DE + INFINITIVO", example: "Después de comer, camino un poco.", preview: { left: "como", connector: "después de", right: "caminar" }, explanation: "Después de sitúa una acción terminada como punto anterior; la acción que sigue a de va en infinitivo." },
-    { key: "cuando-presente", label: "CUANDO", intention: "HÁBITO O HECHO", formula: "CUANDO + PRESENTE, PRESENTE", example: "Cuando llego, reviso el correo.", preview: { left: "llego", connector: "cuando", right: "reviso el correo" }, explanation: "Cuando conecta dos hechos habituales o factuales; en esta clase ambos se expresan en presente de indicativo." },
+    { key: "antes-de", label: "ANTES DE", intention: "ACCIÓN PREVIA", formula: "ANTES DE + INFINITIVO", example: "Antes de salir, desayuno.", preview: { left: "Desayuno", connector: "antes de", right: "salir." }, explanation: "En este ejemplo, desayuno ocurre antes de salir: primero desayuno, luego salgo. La acción que sigue a antes de va en infinitivo." },
+    { key: "despues-de", label: "DESPUÉS DE", intention: "ACCIÓN POSTERIOR", formula: "DESPUÉS DE + INFINITIVO", example: "Después de comer, camino un poco.", preview: { left: "Camino un poco", connector: "después de", right: "comer." }, explanation: "Después de sitúa una acción terminada como punto anterior; la acción que sigue a de va en infinitivo." },
+    { key: "cuando-presente", label: "CUANDO", intention: "HÁBITO O HECHO", formula: "CUANDO + PRESENTE, PRESENTE", example: "Cuando llego, reviso el correo.", preview: { left: "Reviso el correo", connector: "cuando", right: "llego." }, explanation: "Cuando conecta dos hechos habituales o factuales; en esta clase ambos se expresan en presente de indicativo." },
   ],
   decisions: [
     { intention: "ACCIÓN PREVIA", prompt: "Primero te duchás y luego te vestís.", left: "Me ducho", right: "vestirme.", options: ["antes de", "cuando", "después de"], correct: 0, feedback: "La ducha ocurre primero; antes de marca esa relación y vestirme conserva la forma de infinitivo." },
     { intention: "ACCIÓN POSTERIOR", prompt: "Primero cenás y luego lavás los platos.", left: "Lavo los platos", right: "cenar.", options: ["cuando", "antes de", "después de"], correct: 2, feedback: "Lavar ocurre tras la cena; después de expresa esa cronología y exige el infinitivo cenar." },
-    { intention: "HÁBITO", prompt: "Las dos acciones forman parte de tu rutina al llegar.", left: "Llego a casa", right: "me saco los zapatos.", options: ["después de", "cuando", "antes de"], correct: 1, feedback: "Cuando presenta el momento habitual; llego y me saco aparecen conjugados en presente." },
+    { intention: "HÁBITO", prompt: "Cada vez que llegás a casa, te sacás los zapatos.", left: "Me saco los zapatos", right: "llego a casa.", options: ["después de", "cuando", "antes de"], correct: 1, feedback: "Cuando presenta el momento habitual; llego y me saco aparecen conjugados en presente." },
     { intention: "PREPARACIÓN", prompt: "Preparás la mochila y luego salís.", left: "Preparo la mochila", right: "salir.", options: ["antes de", "después de", "cuando"], correct: 0, feedback: "Preparar la mochila es la acción previa; salir queda en infinitivo después de la preposición de." },
     { intention: "VIAJE", prompt: "Bajás del tren y enseguida buscás la salida.", left: "Busco la salida", right: "bajar del tren.", options: ["antes de", "cuando", "después de"], correct: 2, feedback: "Buscar la salida sucede más tarde; después de bajar organiza las dos acciones sin conjugación adicional." },
-    { intention: "HECHO REPETIDO", prompt: "Siempre hacés esto al empezar una reunión.", left: "Empieza la reunión", right: "apago el teléfono.", options: ["cuando", "antes de", "después de"], correct: 0, feedback: "Cuando une dos hechos que se repiten; ambos verbos aparecen en presente de indicativo." },
+    { intention: "HECHO REPETIDO", prompt: "Siempre hacés esto al empezar una reunión.", left: "Apago el teléfono", right: "empieza la reunión.", options: ["cuando", "antes de", "después de"], correct: 0, feedback: "Cuando une dos hechos que se repiten; ambos verbos aparecen en presente de indicativo." },
     { intention: "COCINA", prompt: "Primero cortás las verduras y luego las cocinás.", left: "Corto las verduras", right: "cocinarlas.", options: ["después de", "antes de", "cuando"], correct: 1, feedback: "Cortar ocurre antes; el pronombre se une correctamente al infinitivo cocinarlas tras antes de." },
     { intention: "FIN DE JORNADA", prompt: "Terminás de trabajar y luego llamás a una amiga.", left: "Llamo a una amiga", right: "terminar de trabajar.", options: ["después de", "cuando", "antes de"], correct: 0, feedback: "La llamada es posterior; después de terminar expresa el orden y mantiene terminar en infinitivo." },
-    { intention: "RUTINA", prompt: "Esto sucede cada vez que viajás en autobús.", left: "Viajo en autobús", right: "escucho música.", options: ["antes de", "después de", "cuando"], correct: 2, feedback: "Cuando introduce una situación habitual y permite conjugar las dos acciones en presente." },
+    { intention: "RUTINA", prompt: "Esto sucede cada vez que viajás en autobús.", left: "Escucho música", right: "viajo en autobús.", options: ["antes de", "después de", "cuando"], correct: 2, feedback: "Cuando introduce una situación habitual y permite conjugar las dos acciones en presente." },
     { intention: "ORGANIZACIÓN", prompt: "Revisás la dirección y después pedís el taxi.", left: "Reviso la dirección", right: "pedir el taxi.", options: ["antes de", "cuando", "después de"], correct: 0, feedback: "La revisión precede al pedido; antes de pedir mantiene clara la secuencia y usa infinitivo." },
   ],
   questionAnswerCycle: [],
   repairs: [
     { prompt: "Después de antes de necesitamos infinitivo.", original: "Antes de salgo, preparo la mochila.", options: ["Antes de salir, preparo la mochila.", "Cuando salir, preparo la mochila.", "Después de salgo, preparo la mochila."], correct: 0, feedback: "Salir va en infinitivo porque aparece inmediatamente después de antes de." },
     { prompt: "Después de después de también necesitamos infinitivo.", original: "Después de termino, llamo a Ana.", options: ["Después de terminar, llamo a Ana.", "Después de termino, llamo a Ana.", "Antes de terminar, llamo a Ana."], correct: 0, feedback: "Terminar conserva el infinitivo; conjugarlo aquí rompe la estructura seleccionada." },
-    { prompt: "Cuando habitual necesita un verbo conjugado.", original: "Cuando llegar a casa, preparo la cena.", options: ["Cuando llego a casa, preparo la cena.", "Antes de llego a casa, preparo la cena.", "Después de llegar a casa, preparo la cena."], correct: 0, feedback: "Con cuando habitual usamos llego en presente; la opción elegida conserva el significado original." },
-    { prompt: "La cronología debe coincidir con la situación.", original: "Antes de desayunar, me despierto.", options: ["Después de despertarme, desayuno.", "Antes de despertarme, desayuno.", "Cuando desayunar, me despierto."], correct: 0, feedback: "Primero ocurre despertarse y después desayunar; la forma reparada expresa ese orden real." },
+    { prompt: "Conservá cuando para expresar cada vez que llegás a casa; corregí solo la forma verbal.", original: "Cuando llegar a casa, preparo la cena.", options: ["Cuando llego a casa, preparo la cena.", "Antes de llego a casa, preparo la cena.", "Después de llegar a casa, preparo la cena."], correct: 0, feedback: "Con cuando habitual usamos llego en presente; la opción elegida conserva el significado original." },
+    { prompt: "La frase ya es correcta. Reformulala con después de sin cambiar el orden de las acciones.", original: "Antes de desayunar, me despierto.", options: ["Después de despertarme, desayuno.", "Antes de despertarme, desayuno.", "Cuando desayunar, me despierto."], correct: 0, feedback: "Primero ocurre despertarse y después desayunar; las dos frases expresan el mismo orden. No había un error en la original." },
   ],
   retrieval: [
     { intention: "MAÑANA", prompt: "Sin conectores visibles: enlazá levantarte, ducharte, desayunar y salir.", challenge: "Usá las tres estructuras y repetí la secuencia sin mirar." },
     { intention: "TRABAJO", prompt: "Explicá tres acciones habituales desde que llegás al trabajo.", challenge: "Incluí cuando + presente y una estructura con infinitivo." },
     { intention: "VIAJE", prompt: "Reconstruí un viaje con comprar, esperar, subir y llegar.", challenge: "Cambiá el orden de una frase sin cambiar la cronología." },
-    { intention: "COCINA", prompt: "Describí un proceso sencillo con cuatro acciones.", challenge: "Comprobá que tras de no aparece un verbo conjugado." },
+    { intention: "COCINA", prompt: "Describí un proceso sencillo con cuatro acciones.", challenge: "Comprobá el infinitivo después de antes de y después de en las estructuras practicadas." },
     { intention: "FIN DE SEMANA", prompt: "Contá una rutina real sin banco de respuestas.", challenge: "Repetila con menos pausas y al menos tres enlaces temporales." },
   ],
   production: [
@@ -806,18 +810,18 @@ export const peroHayUnMatiz: SyntaxLabData = {
     instruction: "Escuchá cada par y decidí si suma información, niega las dos opciones o introduce un contrapunto. Todavía no elijas el conector.",
     cards: [
       { first: "El sueldo es bueno", second: "el horario es difícil", intention: "CONTRAPESO" },
-      { first: "No quiero conducir", second: "quiero volar", intention: "DOBLE NEGACIÓN" },
+      { first: "No quiero conducir", second: "No quiero volar", intention: "DOBLE NEGACIÓN" },
       { first: "La idea parece simple", second: "exige mucha coordinación", intention: "OBJECIÓN" },
       { first: "La ciudad es intensa", second: "ofrece muchas oportunidades", intention: "MATIZ" },
-      { first: "No llamó Ana", second: "llamó Marcos", intention: "DOS ALTERNATIVAS NEGADAS" },
+      { first: "No llamó Ana", second: "No llamó Marcos", intention: "DOS ALTERNATIVAS NEGADAS" },
     ],
   },
   patterns: [
     {
       key: "ni-ni", label: "NI… NI", intention: "NEGAR DOS ALTERNATIVAS", formula: "NI + OPCIÓN A + NI + OPCIÓN B",
       example: "Ni el precio ni la distancia son el problema.",
-      preview: { left: "el precio", connector: "ni… ni", right: "la distancia son el problema" },
-      explanation: "Ni… ni coloca dos elementos bajo la misma negación. La estructura evita repetir no y presenta las alternativas con el mismo peso.",
+      preview: { left: "Ni el precio", connector: "ni", right: "la distancia son el problema." },
+      explanation: "Ni… ni coordina dos elementos negados. Si el grupo va antes del verbo, no añadimos no: Ni Ana ni Luis vienen. Si va después del verbo, usamos no delante del verbo: No vienen ni Ana ni Luis. Las negaciones concuerdan, no se anulan.",
     },
     {
       key: "sin-embargo", label: "SIN EMBARGO", intention: "CONTRAPESO EXPLÍCITO", formula: "IDEA. SIN EMBARGO, CONTRAPESO",
@@ -828,31 +832,31 @@ export const peroHayUnMatiz: SyntaxLabData = {
     {
       key: "aunque-adversativo", label: "AUNQUE", intention: "MATIZ BREVE", formula: "IDEA, AUNQUE + MATIZ",
       example: "La propuesta es útil, aunque cara.",
-      preview: { left: "La propuesta es útil", connector: "aunque", right: "cara." },
+      preview: { left: "La propuesta es útil,", connector: "aunque", right: "cara." },
       explanation: "En este uso adversativo, aunque introduce un matiz breve equivalente a pero. No abre aquí una condición que deba superarse.",
     },
   ],
   decisions: [
-    { intention: "DOBLE NEGACIÓN", prompt: "Descartás por igual dos explicaciones.", left: "El problema es", right: "el tiempo.", options: ["sin embargo", "ni el dinero ni", "aunque"], correct: 1, feedback: "Ni… ni coloca dinero y tiempo dentro de la misma negación y evita presentar una de las causas como principal." },
+    { intention: "DOBLE NEGACIÓN", prompt: "Descartás por igual dos explicaciones.", left: "El problema no es", right: "el tiempo.", options: ["sin embargo", "ni el dinero ni", "aunque"], correct: 1, feedback: "No es concuerda con ni el dinero ni el tiempo: se descartan las dos causas, sin convertir la frase en afirmativa." },
     { intention: "CONTRAPESO FORMAL", prompt: "La segunda afirmación corrige una impresión demasiado negativa.", left: "El curso exige mucho trabajo.", right: "los resultados llegan pronto.", options: ["Ni", "Sin embargo,", "Y"], correct: 1, feedback: "Sin embargo organiza dos afirmaciones completas y anuncia que la segunda limita la valoración inicial." },
-    { intention: "MATIZ BREVE", prompt: "La cualidad final limita la valoración sin abrir otro argumento.", left: "Es una solución eficaz", right: "provisional.", options: ["aunque", "ni", "sin embargo"], correct: 0, feedback: "Aunque adversativo introduce un matiz breve, cercano a pero, dentro de la misma unidad informativa." },
-    { intention: "DOBLE NEGACIÓN", prompt: "La persona rechaza las dos opciones de transporte.", left: "Quiere viajar", right: "en avión.", options: ["aunque", "ni en tren ni", "sin embargo"], correct: 1, feedback: "Ni en tren ni en avión presenta dos alternativas igualmente negadas y conserva una estructura paralela." },
+    { intention: "MATIZ BREVE", prompt: "La cualidad final limita la valoración sin abrir otro argumento.", left: "Es una solución eficaz,", right: "provisional.", options: ["aunque", "ni", "sin embargo"], correct: 0, feedback: "Aunque adversativo introduce un matiz breve, cercano a pero, dentro de la misma unidad informativa." },
+    { intention: "DOBLE NEGACIÓN", prompt: "La persona rechaza las dos opciones de transporte.", left: "No quiere viajar", right: "en avión.", options: ["aunque", "ni en tren ni", "sin embargo"], correct: 1, feedback: "No quiere viajar niega el verbo; ni en tren ni en avión coordina dos medios igualmente descartados." },
     { intention: "OBJECIÓN", prompt: "El segundo dato obliga a revisar la primera conclusión.", left: "La zona queda lejos.", right: "está muy bien conectada.", options: ["Sin embargo,", "Ni", "Porque"], correct: 0, feedback: "Sin embargo convierte la buena conexión en un contrapeso explícito frente a la distancia inicial." },
     { intention: "REGISTRO", prompt: "Buscás una versión editorial más organizada que una cadena con pero.", left: "La medida es popular.", right: "no resuelve el problema central.", options: ["O", "Sin embargo,", "Ni"], correct: 1, feedback: "Sin embargo permite ordenar el contraargumento y resulta más adecuado para un comentario editorial B1." },
-    { intention: "MATIZ", prompt: "Añadís una reserva corta sobre una experiencia positiva.", left: "La reunión fue productiva", right: "demasiado larga.", options: ["aunque", "ni", "por eso"], correct: 0, feedback: "Aunque adversativo añade una reserva breve sin convertirla en una explicación ni en una consecuencia." },
+    { intention: "MATIZ", prompt: "Añadís una reserva corta sobre una experiencia positiva.", left: "La reunión fue productiva,", right: "demasiado larga.", options: ["aunque", "ni", "por eso"], correct: 0, feedback: "Aunque adversativo añade una reserva breve sin convertirla en una explicación ni en una consecuencia." },
     { intention: "CONTRASTE DE OPINIÓN", prompt: "Respondés a alguien con un beneficio que cambia el balance.", left: "Trabajar desde casa puede aislar.", right: "ofrece más autonomía.", options: ["Sin embargo,", "Ni… ni", "También"], correct: 0, feedback: "Sin embargo introduce el beneficio como contrapeso y ayuda a responder directamente a la objeción anterior." },
-    { intention: "TRAMPA DE SENTIDO", prompt: "Elegí el uso adversativo, no una lectura concesiva con situación futura.", left: "La película es interesante", right: "un poco lenta.", options: ["aunque", "aunque mañana llueva", "ni"], correct: 0, feedback: "Interesante, aunque lenta contiene un matiz adversativo; la opción con lluvia abre una relación concesiva diferente." },
-    { intention: "NEGACIÓN PARALELA", prompt: "Negás que dos personas sean responsables.", left: "Fue", right: "Lucía.", options: ["sin embargo", "ni Pablo ni", "aunque"], correct: 1, feedback: "Ni Pablo ni Lucía presenta dos posibles responsables bajo una sola negación y mantiene el paralelismo." },
+    { intention: "TRAMPA DE SENTIDO", prompt: "Añadí una reserva breve sobre la película; no niegues que sea interesante.", left: "La película es interesante,", right: "un poco lenta.", options: ["aunque", "por eso", "ni"], correct: 0, feedback: "Interesante, aunque lenta contiene un matiz adversativo; por eso anunciaría una consecuencia, no el matiz pedido. Las oraciones concesivas completas quedan fuera del objetivo de esta práctica." },
+    { intention: "NEGACIÓN PARALELA", prompt: "Negás que dos personas sean responsables.", left: "No fue", right: "Lucía.", options: ["sin embargo", "ni Pablo ni", "aunque"], correct: 1, feedback: "No fue ni Pablo ni Lucía descarta a ambos. También podés anteponer el grupo: Ni Pablo ni Lucía fueron responsables." },
   ],
   questionAnswerCycle: [],
   repairs: [
     { prompt: "Repará la posición y la puntuación del conector.", original: "El proyecto es útil sin embargo necesita cambios.", options: ["El proyecto es útil. Sin embargo, necesita cambios.", "El proyecto es útil, sin embargo necesita cambios.", "Sin embargo el proyecto es útil necesita cambios."], correct: 0, feedback: "Dos afirmaciones completas se separan y sin embargo lleva coma posterior para marcar el giro discursivo." },
-    { prompt: "Construí una doble negación paralela.", original: "No me convence el precio y tampoco la duración.", options: ["No me convencen ni el precio ni la duración.", "Ni me convence el precio sin embargo la duración.", "Aunque el precio ni la duración me convencen."], correct: 0, feedback: "Ni… ni coordina los dos elementos negados con la misma función y evita una segunda negación añadida." },
-    { prompt: "Conservá un matiz adversativo breve.", original: "La habitación es cómoda, aunque no reserve si mañana hay ruido.", options: ["La habitación es cómoda, aunque pequeña.", "Aunque mañana haya ruido, la habitación es cómoda.", "La habitación ni es cómoda ni pequeña."], correct: 0, feedback: "Cómoda, aunque pequeña contrapone dos rasgos; la alternativa temporal pertenece a otra relación de significado." },
-    { prompt: "Evitá tratar todos los conectores como intercambiables.", original: "Ni el barrio es caro ni tiene buen transporte.", options: ["El barrio es caro. Sin embargo, tiene buen transporte.", "El barrio es caro ni tiene buen transporte.", "Aunque el barrio ni es caro, tiene transporte."], correct: 0, feedback: "La intención es contraponer una desventaja y una ventaja, no negar las dos; sin embargo expresa ese balance." },
+    { prompt: "La frase es válida. Reformulala con ni… ni conservando las dos valoraciones negativas.", original: "No me convence el precio y tampoco la duración.", options: ["No me convencen ni el precio ni la duración.", "Ni me convence el precio sin embargo la duración.", "Aunque el precio ni la duración me convencen."], correct: 0, feedback: "Ni… ni coordina los dos elementos negados con la misma función y mantiene el no delante del verbo porque el grupo aparece después. La original con tampoco también es válida." },
+    { prompt: "La habitación es cómoda y pequeña. Uní los dos rasgos con una reserva breve.", original: "La habitación es cómoda, aunque no es cómoda.", options: ["La habitación es cómoda, aunque pequeña.", "La habitación no es cómoda, aunque es pequeña.", "La habitación ni es cómoda ni pequeña."], correct: 0, feedback: "Cómoda, aunque pequeña contrapone dos rasgos; las otras opciones niegan uno o ambos rasgos que el contexto afirma." },
+    { prompt: "El barrio sí es caro y sí tiene buen transporte. Corregí el mensaje para contrastar esos dos hechos.", original: "Ni el barrio es caro ni tiene buen transporte.", options: ["El barrio es caro. Sin embargo, tiene buen transporte.", "El barrio es caro ni tiene buen transporte.", "Aunque el barrio ni es caro, tiene transporte."], correct: 0, feedback: "La intención es contraponer una desventaja y una ventaja, no negar las dos; sin embargo expresa ese balance." },
   ],
   retrieval: [
-    { intention: "REFORMULAR", prompt: "Sin etiquetas: convertí tres cadenas con pero usando dos alternativas distintas.", challenge: "Explicá qué cambia en la organización y no solo reemplaces palabras." },
+    { intention: "REFORMULAR", prompt: "Reformulá estas tres frases usando dos alternativas distintas: «El piso es luminoso, pero pequeño»; «El curso exige trabajo, pero da resultados»; «El barrio está lejos, pero bien conectado».", challenge: "Explicá qué cambia en la organización y no solo reemplaces palabras." },
     { intention: "DOBLE NEGACIÓN", prompt: "Negá dos causas, dos opciones y dos responsables sin banco de conectores.", challenge: "Mantené la estructura paralela y una entonación natural." },
     { intention: "CONTRAPESO", prompt: "Recibís una opinión tajante: respondé con un dato que cambie el balance.", challenge: "Usá sin embargo y después reformulá con pero para comparar." },
     { intention: "MATIZ", prompt: "Describí tres cosas positivas con una reserva breve.", challenge: "Usá aunque adversativo sin abrir una situación hipotética." },
@@ -913,47 +917,47 @@ export const laPersonaQueTengoEnMente: SyntaxLabData = {
     {
       key: "que-persona", label: "PERSONA + QUE", intention: "IDENTIFICAR PERSONA", formula: "PERSONA + QUE + INFORMACIÓN",
       example: "Busco a la compañera que vive cerca del centro.",
-      preview: { left: "la compañera", connector: "que", right: "vive cerca del centro" },
+      preview: { left: "Busco a la compañera", connector: "que", right: "vive cerca del centro." },
       explanation: "Que conecta el antecedente persona con el dato que permite distinguirlo de otras personas posibles.",
     },
     {
       key: "que-cosa-lugar", label: "COSA / LUGAR + QUE", intention: "IDENTIFICAR REFERENTE", formula: "ANTECEDENTE + QUE + INFORMACIÓN",
       example: "Elegí el café que abre hasta tarde.",
-      preview: { left: "el café", connector: "que", right: "abre hasta tarde" },
+      preview: { left: "Elegí el café", connector: "que", right: "abre hasta tarde." },
       explanation: "Que también identifica cosas y lugares. El antecedente debe aparecer para que el oyente sepa qué se está filtrando.",
     },
     {
       key: "quien-persona", label: "QUIEN · PERSONA", intention: "RETOMAR UNA PERSONA", formula: "PERSONA IDENTIFICADA, QUIEN + DATO",
       example: "Hablé con Lucía, quien coordinó el proyecto.",
-      preview: { left: "Lucía", connector: "quien", right: "coordinó el proyecto" },
-      explanation: "Quien solo puede retomar personas. En esta clase se usa cuando la persona ya está identificada y se añade un dato claro sobre ella.",
+      preview: { left: "Hablé con Lucía,", connector: "quien", right: "coordinó el proyecto." },
+      explanation: "En estos ejemplos, quien retoma a una persona y añade información entre comas, sin seleccionarla entre candidatos. Que también es válido. Con antecedente expreso y sin preposición, quien no introduce la relativa que selecciona un candidato.",
     },
   ],
   decisions: [
     { intention: "PERSONA", prompt: "Hay dos compañeras; solo una vive cerca del centro.", left: "Busco a la compañera", right: "vive cerca del centro.", options: ["que", "quien", "donde"], correct: 0, feedback: "Que introduce el dato restrictivo que selecciona una compañera concreta entre varias candidatas." },
     { intention: "LUGAR", prompt: "Elegís entre varios cafés según su horario.", left: "Prefiero el café", right: "abre hasta medianoche.", options: ["quien", "que", "cuando"], correct: 1, feedback: "El antecedente es un lugar y que conecta el horario que permite identificar exactamente ese café." },
     { intention: "COSA", prompt: "Hay varias mochilas y solo una fue comprada en Lima.", left: "La mochila", right: "compré en Lima es azul.", options: ["que", "quien", "porque"], correct: 0, feedback: "Que enlaza mochila con una acción pasada ya conocida y distingue esa mochila de las demás." },
-    { intention: "PERSONA YA IDENTIFICADA", prompt: "Lucía ya está identificada y añadís qué función cumplió.", left: "Hablé con Lucía", right: "coordinó el proyecto.", options: ["que", "quien", "donde"], correct: 1, feedback: "Quien retoma a una persona ya identificada y añade un dato sobre ella sin crear un nuevo candidato." },
+    { intention: "PERSONA YA IDENTIFICADA", prompt: "Lucía ya está identificada y añadís qué función cumplió.", left: "Hablé con Lucía,", right: "coordinó el proyecto.", options: ["que", "quien", "donde"], correct: 1, accepted: [0, 1], feedback: "Que y quien son válidos: la coma abre una explicación sobre Lucía, ya identificada." },
     { intention: "ANTECEDENTE", prompt: "La información debe quedar unida al nombre correcto.", left: "Necesito el documento", right: "enviaste ayer.", options: ["quien", "que", "aunque"], correct: 1, feedback: "Documento es el antecedente expreso y que introduce la acción pasada que permite reconocerlo." },
     { intention: "TIEMPO RECICLADO", prompt: "Identificás a alguien mediante un hábito anterior.", left: "Es el vecino", right: "siempre saludaba desde el balcón.", options: ["que", "quien", "si"], correct: 0, feedback: "Que mantiene el foco en la arquitectura relativa; saludaba recicla un tiempo pasado ya conocido." },
     { intention: "FUTURO CONOCIDO", prompt: "Entre varias personas, una acompañará al grupo.", left: "La guía", right: "viajará con nosotros habla portugués.", options: ["quien", "que", "sin embargo"], correct: 1, feedback: "Que selecciona a la guía mediante una acción futura conocida sin convertir la actividad en una clase de conjugación." },
     { intention: "REFERENTE ÚNICO", prompt: "Solo una película recibió esa recomendación.", left: "Vi la película", right: "me recomendaste.", options: ["que", "quien", "donde"], correct: 0, feedback: "Que relaciona película con la recomendación y permite al interlocutor recuperar un único referente." },
-    { intention: "QUIEN", prompt: "Añadís información sobre Mario, no lo distinguís de otros Marios.", left: "Mario", right: "dirigió el taller, llegará mañana.", options: ["que", "quien", "cuando"], correct: 1, feedback: "Quien es posible porque Mario ya identifica a la persona; el dato intermedio aporta información adicional." },
+    { intention: "QUIEN", prompt: "Añadís información sobre Mario, no lo distinguís de otros Marios.", left: "Mario,", right: "dirigió el taller, llegará mañana.", options: ["que", "quien", "cuando"], correct: 1, accepted: [0, 1], feedback: "Que y quien son válidos: las dos comas encierran un dato adicional sobre Mario, ya identificado." },
     { intention: "TRAMPA DE AMBIGÜEDAD", prompt: "¿Qué enlace conserva un antecedente expreso y claro?", left: "Quiero visitar el pueblo", right: "aparece en la foto.", options: ["quien", "que", "lo que"], correct: 1, feedback: "Que conecta pueblo con el dato identificador; el antecedente expreso evita una referencia libre o imprecisa." },
   ],
   questionAnswerCycle: [],
   repairs: [
-    { prompt: "Repará la ambigüedad: dos personas podrían vivir en Valencia.", original: "Busco a la amiga de Marta que vive en Valencia.", options: ["Busco a la amiga de Marta; la amiga vive en Valencia.", "Marta vive en Valencia; busco a su amiga.", "Busco a la que vive en Valencia."], correct: 1, feedback: "Nombrar primero a Marta y luego retomar a su amiga deja claro quién vive en Valencia y evita dos lecturas." },
+    { prompt: "Marta vive en Valencia; su amiga vive en Córdoba. Aclaralo sin cambiar quién vive en cada ciudad.", original: "Busco a la amiga de Marta que vive en Valencia.", options: ["Busco a la amiga de Marta; la amiga vive en Valencia.", "Marta vive en Valencia; busco a su amiga.", "Busco a la que vive en Valencia."], correct: 1, feedback: "Nombrar primero a Marta y luego retomar a su amiga resuelve la ambigüedad: Marta es quien vive en Valencia." },
     { prompt: "Añadí el antecedente que falta.", original: "Que está junto a la estación abre temprano.", options: ["El café que está junto a la estación abre temprano.", "Quien está junto a la estación abre temprano.", "El café donde que está junto a la estación abre temprano."], correct: 0, feedback: "El café funciona como antecedente expreso y permite interpretar qué elemento identifica la cláusula relativa." },
-    { prompt: "Elegí un dato que identifique solo una candidata.", original: "Busco a la persona que trabaja.", options: ["Busco a la persona que trabaja en recepción por la noche.", "Busco a la persona que es una persona.", "Busco a quien trabaja."], correct: 0, feedback: "El lugar y el horario vuelven específica la descripción; decir solo trabaja deja demasiadas candidatas." },
-    { prompt: "Quien necesita un referente humano ya claro en este uso.", original: "El teléfono, quien compré ayer, no funciona.", options: ["El teléfono que compré ayer no funciona.", "El teléfono, quien compré ayer, no funciona.", "Quien teléfono compré ayer no funciona."], correct: 0, feedback: "Teléfono no es una persona; que enlaza correctamente la cosa con la acción que permite identificarla." },
+    { prompt: "Ana trabaja en recepción de noche, Eva en recepción de día y Luz en cocina de noche. Buscás a Ana: elegí la descripción que solo encaja con ella.", original: "Busco a la persona que trabaja.", options: ["Busco a la persona que trabaja en recepción por la noche.", "Busco a la persona que es una persona.", "Busco a quien trabaja."], correct: 0, feedback: "El lugar y el horario vuelven específica la descripción; decir solo trabaja deja demasiadas candidatas." },
+    { prompt: "Ya sabemos de qué teléfono hablamos. Corregí el relativo y conservá la información adicional entre comas.", original: "El teléfono, quien compré ayer, no funciona.", options: ["El teléfono, que compré ayer, no funciona.", "El teléfono, quien compré ayer, no funciona.", "Quien teléfono compré ayer no funciona."], correct: 0, feedback: "Teléfono es una cosa: usamos que. Las comas conservan el dato adicional sobre el teléfono ya identificado." },
   ],
   retrieval: [
     { intention: "PERSONAS", prompt: "Sin marco: distinguí a una persona entre tres candidatos parecidos.", challenge: "Usá dos datos y comprobá que solo queda una opción posible." },
     { intention: "LUGARES", prompt: "Describí un lugar real sin decir su nombre.", challenge: "El profesor propone un candidato incorrecto y vos aclarás la referencia." },
     { intention: "COSAS", prompt: "Con información incompleta, identificá tres objetos de tu entorno.", challenge: "Cambiá un dato si la descripción selecciona más de un objeto." },
     { intention: "TIEMPOS", prompt: "Recuperá una persona que conociste y un lugar que visitarás.", challenge: "Usá tiempos conocidos sin explicar cómo se conjugan." },
-    { intention: "QUIEN", prompt: "Sin apoyo: nombrá a una persona concreta y añadí un dato sobre ella.", challenge: "Después reformulá con que y explicá qué información identifica." },
+    { intention: "QUIEN", prompt: "Sin apoyo: nombrá a una persona concreta y añadí un dato sobre ella.", challenge: "Después reformulá con que y explicá por qué el dato sigue siendo adicional; conservá las pausas y las comas." },
   ],
   production: [
     { title: "Directorio humano", prompt: "Presentá tres personas de tu vida sin usar oraciones desconectadas.", checklist: ["antecedentes claros", "datos identificadores", "una aclaración"] },
@@ -967,7 +971,7 @@ export const laPersonaQueTengoEnMente: SyntaxLabData = {
     { question: "¿Qué objeto que usás todos los días te resulta indispensable?", starter: "El objeto que…", followUp: "¿Qué lo diferencia de otros objetos parecidos?" },
     { question: "¿Quién es alguien que conociste recientemente?", starter: "Conocí a una persona que…", followUp: "¿Qué estaba haciendo cuando se conocieron?" },
     { question: "¿Qué lugar que todavía no visitaste te interesa?", starter: "Me interesa un lugar que…", followUp: "¿Qué harás allí si finalmente viajás?" },
-    { question: "¿Qué profesional que admirás recomendarías?", starter: "Recomendaría a… quien…", followUp: "No estoy seguro de quién hablás: añadí otro dato." },
+    { question: "¿Qué profesional que admirás recomendarías?", starter: "Recomendaría a Ana, quien…", followUp: "¿Qué dato adicional explica tu recomendación?" },
   ],
   finalTask: "Encontrá a la persona, el lugar y la cosa: describí seis referentes reales o plausibles; el profesor ofrece candidatos equivocados y vos tenés que aclarar cada uno.",
 };

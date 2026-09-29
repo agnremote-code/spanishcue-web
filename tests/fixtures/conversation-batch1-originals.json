@@ -1,0 +1,254 @@
+{
+  "baseCommit": "a736cfc49ab787ec6e26b9dc27d7de3060582baf",
+  "banks": {
+    "redFlagA2": "d854fb4eb95713d57a3de523bc36054a905fd1993ed8c0e4bf11454b860c1f71",
+    "redFlagB1": "648ee09dfd3d5d97cccf8d96f894d9150c6a3ed0c826fc2baf8835625f2ea843",
+    "redFlagB2": "750a2916548b5a841f7c40cc356bda6522af473fe79731c8b2c871ffaee1bedc",
+    "talkA1": "0ee240f9ffc2f13adc3d1b527d57c5d2361030b24f10aa02f3a6933343f8c040",
+    "talkA2": "9367779f920e61d130c49f7622aab8e7b2b9636189fbbe67f59f44f198cb1eea",
+    "talkB1": "d0563ed319e1133c6f21224306534c099e20e9e47fa377f37bf77112af1cc64e",
+    "eliminations": "eb3cd61a89defc29a742b0b052330f4c3d0a016d4b27e1875fc293f75df99323",
+    "absurdRules": "b84099e7ea90237499c7524053161ac7cdeb50f68279a9a4215112b4ef406326",
+    "eliminationsA2": "f0aa6f12a5df2ee20f215c8cd77663cf5b302789fcdf446cf4b603688b3628f1",
+    "absurdRulesA2": "fdbb3b1dab97453a5abdf5b017d49a609b8cd63fd43653b5e29a5f83c97c8e97"
+  },
+  "routeLedger": "8aadf73d31301e524f24652812fc7cc76df84e30b98ec63fd5ed8b14ed70c9ee",
+  "families": [
+    {
+      "id": "red-flag-o-no",
+      "defaultLevel": "A2",
+      "canonicalPath": "/red-flag-o-no-a2",
+      "canonicalLessonId": 207,
+      "legacyLessonIds": [
+        207,
+        208,
+        209
+      ],
+      "access": "pro",
+      "variants": {
+        "A2": {
+          "level": "A2",
+          "lessonId": 207,
+          "communicativeObjectives": [
+            "Expresar una opinión breve y justificarla con una razón",
+            "Hablar de hábitos, límites y comportamientos cotidianos",
+            "Reaccionar a una repregunta con ejemplos personales"
+          ],
+          "expectedFunctions": [
+            "Expresar una opinión breve y justificarla con una razón",
+            "Hablar de hábitos, límites y comportamientos cotidianos",
+            "Reaccionar a una repregunta con ejemplos personales"
+          ],
+          "contentRef": "/red-flag-o-no-a2#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 208,
+          "communicativeObjectives": [
+            "Justificar una interpretación con matices y ejemplos",
+            "Evaluar cómo el contexto puede cambiar una primera reacción",
+            "Proponer conversaciones, límites y segundas oportunidades"
+          ],
+          "expectedFunctions": [
+            "Justificar una interpretación con matices y ejemplos",
+            "Evaluar cómo el contexto puede cambiar una primera reacción",
+            "Proponer conversaciones, límites y segundas oportunidades"
+          ],
+          "contentRef": "/red-flag-o-no-b1#B1"
+        },
+        "B2": {
+          "level": "B2",
+          "lessonId": 209,
+          "communicativeObjectives": [
+            "Distinguir intención, impacto, privacidad y secreto",
+            "Sostener una postura provisional ante información ambigua",
+            "Formular límites y revisar una decisión según el contexto"
+          ],
+          "expectedFunctions": [
+            "Distinguir intención, impacto, privacidad y secreto",
+            "Sostener una postura provisional ante información ambigua",
+            "Formular límites y revisar una decisión según el contexto"
+          ],
+          "contentRef": "/red-flag-o-no-b2#B2"
+        }
+      },
+      "previewByLevel": {
+        "A2": {
+          "hook": "18 situaciones de citas y relaciones para elegir una señal, explicar por qué y hablar sin respuestas correctas",
+          "image": "/play-mode/red-flag-o-no/a2.webp"
+        },
+        "B1": {
+          "hook": "18 señales discutibles para evaluar conductas, considerar el contexto y defender límites en una relación",
+          "image": "/play-mode/red-flag-o-no/b1.webp"
+        },
+        "B2": {
+          "hook": "18 tensiones ambiguas para distinguir privacidad, intención, impacto, incompatibilidad y señales de alarma",
+          "image": "/play-mode/red-flag-o-no/b2.webp"
+        }
+      }
+    },
+    {
+      "id": "la-maquina-que-elimina-cosas",
+      "defaultLevel": "B1",
+      "canonicalPath": "/la-maquina-que-elimina-cosas",
+      "canonicalLessonId": 101,
+      "legacyLessonIds": [
+        101,
+        103
+      ],
+      "access": "pro",
+      "variants": {
+        "A2": {
+          "level": "A2",
+          "lessonId": 103,
+          "communicativeObjectives": [
+            "Expresar preferencias y explicar decisiones con ejemplos cotidianos."
+          ],
+          "expectedFunctions": [
+            "Expresar preferencias y explicar decisiones con ejemplos cotidianos."
+          ],
+          "contentRef": "/la-maquina-que-elimina-cosas-a2#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 101,
+          "communicativeObjectives": [
+            "Explicar decisiones y reconsiderarlas ante una consecuencia."
+          ],
+          "expectedFunctions": [
+            "Explicar decisiones y reconsiderarlas ante una consecuencia."
+          ],
+          "contentRef": "/la-maquina-que-elimina-cosas#B1"
+        }
+      },
+      "previewByLevel": {
+        "A2": {
+          "hook": "30 decisiones sobre tu vida diaria. Elegí Sí o No, abrí la pregunta y descubrí una sorpresa.",
+          "image": "/conversation-worlds/elimination-machine.webp"
+        },
+        "B1": {
+          "hook": "30 decisiones, preguntas de opinión y consecuencias inesperadas. Primero Sí o No; después, el giro.",
+          "image": "/conversation-worlds/elimination-machine.webp"
+        }
+      }
+    },
+    {
+      "id": "tu-vida-con-una-regla-absurda",
+      "defaultLevel": "B1",
+      "canonicalPath": "/tu-vida-con-una-regla-absurda",
+      "canonicalLessonId": 102,
+      "legacyLessonIds": [
+        102,
+        104
+      ],
+      "access": "pro",
+      "variants": {
+        "A2": {
+          "level": "A2",
+          "lessonId": 104,
+          "communicativeObjectives": [
+            "Describir rutinas y planes en situaciones imaginarias con lenguaje cotidiano."
+          ],
+          "expectedFunctions": [
+            "Describir rutinas y planes en situaciones imaginarias con lenguaje cotidiano."
+          ],
+          "contentRef": "/tu-vida-con-una-regla-absurda-a2#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 102,
+          "communicativeObjectives": [
+            "Imaginar cambios cotidianos y comparar sus efectos en distintas personas."
+          ],
+          "expectedFunctions": [
+            "Imaginar cambios cotidianos y comparar sus efectos en distintas personas."
+          ],
+          "contentRef": "/tu-vida-con-una-regla-absurda#B1"
+        }
+      },
+      "previewByLevel": {
+        "A2": {
+          "hook": "15 reglas y 45 preguntas sobre compras, trabajo, amigos y planes. Una pregunta por vez, con ayuda para hablar.",
+          "image": "/conversation-worlds/absurd-universe.webp"
+        },
+        "B1": {
+          "hook": "15 leyes imposibles y 45 preguntas para imaginar otra vida: cien palabras, promesas que pesan y ciudades al revés.",
+          "image": "/conversation-worlds/absurd-universe.webp"
+        }
+      }
+    },
+    {
+      "id": "lets-talk",
+      "defaultLevel": "A1",
+      "canonicalPath": "/a1-conversation",
+      "canonicalLessonId": 15,
+      "legacyLessonIds": [
+        15,
+        14,
+        13
+      ],
+      "access": "pro",
+      "variants": {
+        "A1": {
+          "level": "A1",
+          "lessonId": 15,
+          "communicativeObjectives": [
+            "Comprender preguntas breves",
+            "Responder con vocabulario cotidiano",
+            "Sostener una charla a partir de tres preguntas"
+          ],
+          "expectedFunctions": [
+            "Comprender preguntas breves",
+            "Responder con vocabulario cotidiano",
+            "Sostener una charla a partir de tres preguntas"
+          ],
+          "contentRef": "/a1-conversation#A1"
+        },
+        "A2": {
+          "level": "A2",
+          "lessonId": 14,
+          "communicativeObjectives": [
+            "Elegir un tema cercano",
+            "Responder con frases claras",
+            "Sostener una conversación con tres preguntas"
+          ],
+          "expectedFunctions": [
+            "Elegir un tema cercano",
+            "Responder con frases claras",
+            "Sostener una conversación con tres preguntas"
+          ],
+          "contentRef": "/basic-conversation#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 13,
+          "communicativeObjectives": [
+            "Elegir un tema que genere curiosidad",
+            "Sostener una conversación libre",
+            "Compartir historias y opiniones"
+          ],
+          "expectedFunctions": [
+            "Elegir un tema que genere curiosidad",
+            "Sostener una conversación libre",
+            "Compartir historias y opiniones"
+          ],
+          "contentRef": "/choose-conversation#B1"
+        }
+      },
+      "previewByLevel": {
+        "A1": {
+          "hook": "15 mundos bilingües y 150 preguntas simples para empezar a conversar",
+          "image": "/catalog-thumbnails/conversation-a1.webp"
+        },
+        "A2": {
+          "hook": "15 mundos bilingües y 150 preguntas para empezar a hablar sin presión",
+          "image": "/catalog-thumbnails/conversation-a2.webp"
+        },
+        "B1": {
+          "hook": "Elegí 1 tema, seleccioná solo 3 preguntas y hablá libremente",
+          "image": "/catalog-thumbnails/conversation-choice.webp"
+        }
+      }
+    }
+  ]
+}

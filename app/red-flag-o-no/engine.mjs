@@ -1,3 +1,7 @@
+import { a1Config } from "./a1.mjs";
+import { c1Config } from "./c1.mjs";
+import { c2Config } from "./c2.mjs";
+
 const sharedFinale = [
   "Top 3 red flags",
   "Top 3 green flags",
@@ -6,6 +10,9 @@ const sharedFinale = [
 ];
 
 const levels = {
+  A1: a1Config,
+  C1: c1Config,
+  C2: c2Config,
   A2: {
     level: "A2",
     accent: "#ff4d5d",
@@ -119,7 +126,7 @@ const levels = {
 export function getLevelConfig(level) {
   const config = levels[level];
   if (!config) throw new Error(`Nivel no disponible: ${level}`);
-  return { ...config, finale: sharedFinale };
+  return { ...config, finale: config.finale ?? sharedFinale };
 }
 
 export function getRoundForIndex(index) {
@@ -153,6 +160,6 @@ export function keyAction(key) {
 export function shouldHandleShortcut(target) {
   if (!target || typeof target !== "object") return true;
   if (target.isContentEditable) return false;
-  if (typeof target.closest === "function" && target.closest("button,a,input,textarea,select,[contenteditable='true']")) return false;
-  return !["BUTTON", "A", "INPUT", "TEXTAREA", "SELECT"].includes(target.tagName);
+  if (typeof target.closest === "function" && target.closest("button,a,input,textarea,select,summary,[contenteditable='true']")) return false;
+  return !["BUTTON", "A", "INPUT", "TEXTAREA", "SELECT", "SUMMARY"].includes(target.tagName);
 }

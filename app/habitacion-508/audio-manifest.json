@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "lessonId": 133,
+  "sourceCommit": "e8f38659588526253c51f638b39e337682729363",
+  "sourceContent": "app/habitacion-508/content.json",
+  "provenance": "Existing repository MP3 files reused without modification. Microsoft Neural voice/rate fields are inherited source configuration, not independently verified audible identity. No new synthesis in Wave 2.",
+  "technicalValidation": {
+    "date": "2026-09-28",
+    "checks": [
+      "path and nonzero bytes",
+      "ffprobe duration/format",
+      "complete ffmpeg decode",
+      "SHA-256",
+      "exact inherited script mapping"
+    ],
+    "passed": true
+  },
+  "humanListeningCompleted": false,
+  "listeningLimitations": "No actual audition. Transcript concordance, accent, speaker distinction, pacing and sound quality remain pending; script evidence is not proof of audible correctness.",
+  "clips": [
+    {
+      "id": "huesped",
+      "src": "/audio/habitacion-508/huesped.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Laura",
+          "voice": "es-ES-ElviraNeural",
+          "rate": "+4%",
+          "text": "A ver, yo había reservado una habitación tranquila y una cena por mi aniversario. Al llegar me dijeron que la cuatrocientos dos tenía un problema de agua y acepté pasar a la quinientos ocho. Dejé en recepción una torta pequeña, refrigerada, con mi apellido. Cuando volví de cenar, cerca de las diez, la llave ya no abría. Tardaron unos veinte minutos en traer otra. Y esta mañana, a las cinco y media, recibí una llamada automática que nunca pedí. Ninguna de esas cosas, por separado, sería gravísima; juntas dan la sensación de que nadie sabía que yo estaba allí."
+        }
+      ],
+      "declaredVariety": "España",
+      "durationSeconds": 35.184,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 211341,
+      "sha256": "b897680f56238eebbf9f11bb7125de8bf1796f0585f38a4706887cfd9d23a00d"
+    },
+    {
+      "id": "recepcion",
+      "src": "/audio/habitacion-508/recepcion.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Tomás",
+          "voice": "es-CO-GonzaloNeural",
+          "rate": "+5%",
+          "text": "Yo hice el cambio, bueno, hice la parte urgente: le programé una llave para la quinientos ocho y avisé verbalmente. En ese momento entraron dos llamadas y pensé que también había trasladado su ficha en el sistema, pero no. Quedó en la cuatrocientos dos. Sobre la torta, vi una bolsa con la etiqueta Vega y la dejé en la cámara fría. No anoté el número porque creí que la reserva lo mostraba. Fue una mala coincidencia, aunque reconozco que el procedimiento existe precisamente para evitar coincidencias así."
+        }
+      ],
+      "declaredVariety": "Colombia",
+      "durationSeconds": 28.728,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 172605,
+      "sha256": "96f7ad6e1606a6243de4ae90e7becbaf38d30eccd0c439f710f9284cf1bed684"
+    },
+    {
+      "id": "housekeeping",
+      "src": "/audio/habitacion-508/housekeeping.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Marisol",
+          "voice": "es-PE-CamilaNeural",
+          "rate": "+5%",
+          "text": "Mi lista decía que la quinientos ocho estaba libre y que debía preparar la cama. Entré a las nueve y nueve; recuerdo la hora porque acababa de derramar café en el carro y quería terminar rápido. Había una maleta junto al armario. No toqué nada. Llamé a recepción desde el pasillo, pero la línea estaba ocupada. Entonces cerré y marqué la habitación como pendiente. Tal vez ese cambio bloqueó la llave de la huésped; yo no puedo asegurarlo, pero el sistema actualiza el acceso cuando modificamos el estado."
+        }
+      ],
+      "declaredVariety": "Perú",
+      "durationSeconds": 29.016,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 174333,
+      "sha256": "d21d43a3f670b5d5bcd4dc3a70607507310c4a5a90ec87d0714281936e5874b1"
+    },
+    {
+      "id": "room-service",
+      "src": "/audio/habitacion-508/room-service.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Iván",
+          "voice": "es-MX-JorgeNeural",
+          "rate": "+5%",
+          "text": "En la cámara había una torta con una sola etiqueta: Vega. Busqué el apellido y me apareció un señor Luis Vega en la ochocientos cinco, donde además celebraban una cena de empresa. Me pareció lógico que fuera para él. Llamé a la habitación; alguien respondió que sí esperaban postre, aunque después supe que hablaban de otro pedido. Mandé la torta a la ochocientos cinco. No confundí quinientos ocho con ochocientos cinco, como se dijo al principio: la habitación de Laura ni siquiera figuraba bajo su nombre."
+        }
+      ],
+      "declaredVariety": "México",
+      "durationSeconds": 31.584,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 189741,
+      "sha256": "b0f6b5f636276b13b8f51b0d0bf8362dc7558bc0abe3ba7e03149dc68a5346ff"
+    },
+    {
+      "id": "vecino",
+      "src": "/audio/habitacion-508/vecino.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Julián",
+          "voice": "es-AR-TomasNeural",
+          "rate": "+6%",
+          "text": "Yo estaba en la quinientos diez, viendo un partido, aunque eso no viene al caso. Cerca de las diez menos diez escuché el carro de limpieza. Unos minutos después salí por hielo y vi a una mujer intentando abrir la quinientos ocho. También sonaba un pitido en el pasillo; pensé que era su cerradura y llamé a recepción. Me dijeron que enviarían a alguien. No vi que nadie entrara en su habitación ni escuché una discusión. Lo que sí recuerdo es que ella llevaba una bolsa de restaurante, pero no una torta."
+        }
+      ],
+      "declaredVariety": "Argentina",
+      "durationSeconds": 28.248,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 169725,
+      "sha256": "319da05ec41b27b3ba4aabaeb3420e850a7abe141e4c5f0351cf95426543c59d"
+    },
+    {
+      "id": "gerente",
+      "src": "/audio/habitacion-508/gerente.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Ana",
+          "voice": "es-CO-SalomeNeural",
+          "rate": "+6%",
+          "text": "Cuando tomé el caso, corregí la ficha: pasé a Laura de la cuatrocientos dos a la quinientos ocho y emití una llave nueva. Me concentré en que pudiera entrar cuanto antes. La quinientos ocho conservaba una llamada de despertador de las cinco y media, solicitada por el huésped anterior. Normalmente se borra al cerrar la habitación, pero como el sistema la consideraba libre y después pendiente, ese cierre no ocurrió. Yo revisé pagos, llave y nombre; no revisé servicios programados. Fue otro control parcial dentro de una noche llena de controles parciales."
+        }
+      ],
+      "declaredVariety": "Colombia",
+      "durationSeconds": 35.16,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 211197,
+      "sha256": "06d1dd7f8d57084ea72416474d167c9ba0e56294be364b433a4d804078d7bc72"
+    },
+    {
+      "id": "resolution",
+      "src": "/audio/habitacion-508/decision-real.mp3",
+      "lessonId": 133,
+      "segments": [
+        {
+          "speaker": "Ana",
+          "voice": "es-CO-SalomeNeural",
+          "rate": "+5%",
+          "text": "Laura, no hubo una sola causa ni una sola persona responsable. Fallamos al registrar el cambio de habitación, identificar la torta, actualizar la llave y revisar la llamada automática. Voy a devolver el valor de esta noche, cubrir una nueva torta y responderte yo misma por escrito. Además, desde hoy ningún cambio de habitación se cierra sin una lista de cuatro verificaciones. La disculpa no borra la noche, pero la respuesta debe ser tan completa como fue el error."
+        }
+      ],
+      "declaredVariety": "Colombia",
+      "durationSeconds": 31.2,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 187437,
+      "sha256": "cdd95b5c4dfc067ac36d77d91e1c4eef5be3edd2c10956c5a7122d52e64b4410"
+    }
+  ]
+}

@@ -16,6 +16,10 @@ export type Station = {
 };
 
 export type Practice = {
+  id?: string;
+  context?: string;
+  hint?: string;
+  extension?: boolean;
   prompt: string;
   options: string[];
   answer: number;
@@ -23,6 +27,7 @@ export type Practice = {
 };
 
 export type GrammarWorldData = {
+  repair?: "quantity" | "coordinate";
   slug: string;
   level: string;
   module: string;
@@ -473,6 +478,7 @@ export const possessionHouse: GrammarWorldData = {
 };
 
 export const quantityMarket: GrammarWorldData = {
+  repair: "quantity",
   slug: "el-mercado-de-las-cantidades",
   level: "A1",
   module: "MÓDULO 06 · INVENTARIO CERVANTES",
@@ -485,11 +491,11 @@ export const quantityMarket: GrammarWorldData = {
   accent: "#e6a64f",
   accent2: "#49c1b4",
   motif: "market",
-  duration: "70–85 min",
+  duration: "≈ 45 min · recorrido elegido",
   nextPath: "/la-central-de-las-identidades",
   nextTitle: "La Central de las Identidades",
   world: {
-    eyebrow: "RECORRIDO 3D DEL MERCADO",
+    eyebrow: "ESCENA DEL MERCADO",
     title: "Medí antes de llenar la canasta.",
     instruction: "Cada puesto cambia la escala: número exacto, cantidad aproximada, totalidad, ausencia y comparación.",
     enterLabel: "ENTRAR EN EL PUESTO",
@@ -511,7 +517,7 @@ export const quantityMarket: GrammarWorldData = {
       { label: "NÚMERO", value: "tres naranjas", detail: "exacto" },
       { label: "POCO", value: "poca leche", detail: "cantidad baja" },
       { label: "MUCHO", value: "muchos tomates", detail: "cantidad alta" },
-      { label: "SUFICIENTE", value: "bastante pan", detail: "cantidad adecuada" },
+      { label: "BASTANTE", value: "bastante pan", detail: "suficiente o abundante, según el contexto" },
     ],
   },
   stations: [
@@ -522,20 +528,20 @@ export const quantityMarket: GrammarWorldData = {
     { id: "compare", number: "05", kicker: "BALANZA A2", title: "Más, menos, tan y tanto", summary: "Comparamos cantidad y grado.", rule: "Más y menos comparan. Tan intensifica adjetivos o adverbios; tanto cuantifica sustantivos y concuerda cuando los acompaña.", formulas: ["MÁS / MENOS + sustantivo", "TAN + adjetivo", "TANTO / TANTA + sustantivo", "TAMBIÉN / TAMPOCO"], examples: [{es:"Quiero más agua.",en:"I want more water."},{es:"Necesito menos bolsas.",en:"I need fewer bags."},{es:"No es tan caro.",en:"It isn't so expensive."},{es:"No compro tanta comida.",en:"I don't buy that much food."}], note: "También añade una idea afirmativa; tampoco añade una negativa: Yo también. Yo tampoco." },
   ],
   traps: [
-    { wrong: "mucha calor", right: "mucho calor", explanation: "Calor es masculino en el uso estándar general." },
+    { wrong: "mucho fruta", right: "mucha fruta", explanation: "Fruta es femenina singular: mucha fruta." },
     { wrong: "todos días", right: "todos los días", explanation: "Todo + sustantivo definido necesita artículo." },
     { wrong: "una otra bolsa", right: "otra bolsa", explanation: "Otro no lleva un/una delante." },
     { wrong: "muy comida", right: "mucha comida", explanation: "Muy intensifica adjetivos; mucho cuantifica sustantivos." },
   ],
   practice: [
-    { prompt: "Necesito ___ botella de agua.", options: ["un", "una", "uno"], answer: 1, why: "Botella es femenina singular." },
-    { prompt: "Hay ___ tomates en la caja.", options: ["muchos", "mucho", "mucha"], answer: 0, why: "Tomates es masculino plural." },
-    { prompt: "Tengo ___ tiempo hoy.", options: ["pocas", "poco", "pocos"], answer: 1, why: "Tiempo es masculino singular e incontable en este contexto." },
-    { prompt: "Trabajo ___ los días.", options: ["todos", "todos los", "todo"], answer: 1, why: "La estructura es todos los + sustantivo plural." },
-    { prompt: "Quiero ___ café, por favor.", options: ["otro", "un otro", "otra"], answer: 0, why: "Otro va sin artículo indefinido y concuerda con café." },
-    { prompt: "No hay ___ en el puesto.", options: ["nada", "nadie", "ningunos"], answer: 1, why: "Nadie se refiere a personas." },
-    { prompt: "Esta sopa tiene ___ sal.", options: ["demasiado", "demasiada", "demasiadas"], answer: 1, why: "Sal es femenina singular y demasiado concuerda." },
-    { prompt: "Este mercado no es ___ caro.", options: ["tanto", "tan", "mucho"], answer: 1, why: "Tan intensifica el adjetivo caro." },
+    { id: "market-bottle", context: "Pedís una sola botella de agua.", prompt: "Necesito ___ botella de agua.", options: ["un", "una", "uno"], answer: 1, hint: "Mirá el género y el número de botella.", why: "Una concuerda con botella, femenina singular: una botella." },
+    { id: "market-tomatoes", context: "La caja está llena de tomates. Elegí la forma de mucho que concuerda.", prompt: "Hay ___ tomates en la caja.", options: ["muchos", "mucho", "mucha"], answer: 0, hint: "Tomates termina en plural. Buscá también su género.", why: "Muchos concuerda con tomates: masculino plural." },
+    { id: "market-time", context: "Hoy solo tenés cinco minutos libres. Elegí la forma de poco.", prompt: "Tengo ___ tiempo hoy.", options: ["pocas", "poco", "pocos"], answer: 1, hint: "Tiempo no está en plural en esta frase.", why: "Poco concuerda con tiempo, masculino singular, aunque no contemos minutos aquí." },
+    { id: "market-days", extension: true, context: "Trabajás los siete días de la semana. No repitas las palabras que ya están escritas.", prompt: "Trabajo ___ los días.", options: ["todos", "todos los", "todo"], answer: 0, hint: "El artículo los ya está después del espacio.", why: "Todos + los + días. Insertamos solo todos: el artículo aparece una sola vez." },
+    { id: "market-coffee", context: "Ya tomaste un café y pedís uno más, de la misma clase.", prompt: "Quiero ___ café, por favor.", options: ["otro", "un otro", "otra"], answer: 0, hint: "Para pedir uno más, otro concuerda con café y va sin un.", why: "Otro café pide una unidad más. En este pedido cotidiano no añadimos un delante de otro." },
+    { id: "market-people", extension: true, context: "Hay fruta y otros productos, pero no hay personas. Hablá de la ausencia de gente.", prompt: "No hay ___ en el puesto.", options: ["nada", "nadie", "ningunos"], answer: 1, hint: "Buscamos una palabra para personas, no para productos.", why: "Nadie expresa ausencia de personas. Nada también forma una oración gramatical, pero no describe este puesto: sí hay productos." },
+    { id: "market-salt", extension: true, context: "La sopa está tan salada que no podés comerla. Expresá exceso.", prompt: "Esta sopa tiene ___ sal.", options: ["demasiado", "demasiada", "demasiadas"], answer: 1, hint: "Sal es femenina y aquí no es plural.", why: "Demasiada sal: el cuantificador concuerda y señala más sal de la deseada." },
+    { id: "market-degree", extension: true, context: "Comparás precios: este mercado cuesta menos de lo que esperabas.", prompt: "Este mercado no es ___ caro.", options: ["tanto", "tan", "mucho"], answer: 1, hint: "Caro es un adjetivo. ¿Qué forma expresa su grado?", why: "Tan modifica el adjetivo caro. Tanto cuantifica sustantivos o modifica un verbo." },
   ],
   speaking: [
     { title: "Canasta exacta", prompt: "Armá una compra de ocho productos y decidí cantidades concretas.", support: "Quiero dos kilos de papas y una botella de aceite." },
