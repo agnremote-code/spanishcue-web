@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "enabled": true,
+  "enabled": false,
   "status": "idle",
   "healthy": {
     "sha": "52e757c35a7b3b2ddc399e7540ad98b503f097f0",
