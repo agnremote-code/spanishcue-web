@@ -1,0 +1,22 @@
+/* Retain the colorful topic world. Precision tools are compact, optional layers. */
+.talk-c2-entry{max-width:850px;margin-top:24px;padding:16px 20px;border-left:3px solid var(--lime);background:#ffffff0a;border-radius:0 14px 14px 0}
+.talk-c2-entry p,.talk-c2-invitation{font-size:15px;line-height:1.6;color:#eeeaff}
+.talk-c2-entry p{margin:0 0 12px}
+.talk-c2-entry details p{margin:12px 0 0}
+.talk-c2 summary{cursor:pointer;line-height:1.5;min-height:44px;align-content:center;font-weight:800;overflow-wrap:anywhere}
+.talk-c2 summary:focus-visible,.talk-c2 button:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+.talk-c2 .question-list button span{font-size:15px;line-height:1.55}
+.talk-c2 .question-layout aside>div{font-size:13px;line-height:1.5}
+.talk-c2 .question-layout aside>div>b{flex-shrink:0}
+.talk-c2 .question-layout aside>p{font-size:12px}
+.talk-c2 .ready-talk article{font-size:15px;line-height:1.6;overflow-wrap:anywhere}
+.talk-c2-support,.talk-c2-closing{margin-top:24px;border:1px solid #ffffff35;border-radius:16px;padding:12px 20px;background:#ffffff08}
+.talk-c2-support summary span,.talk-c2-closing summary span{display:inline-block;color:var(--lime);font-size:12px;font-weight:650;margin-left:12px}
+.talk-c2-support p,.talk-c2-closing p,.talk-c2-turn{font-size:15px;line-height:1.6;color:#eeeaff}
+.talk-c2-support dl{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin:20px 0}
+.talk-c2-support dt{color:var(--lime);font-size:14px;font-weight:800;margin-bottom:5px}
+.talk-c2-support dd{margin:0;font-size:15px;line-height:1.6}
+.talk-c2-support h3{font-size:17px;margin-top:24px}
+.talk-c2-support li,.talk-c2-closing li{font-size:15px;line-height:1.7;padding-left:4px;margin:12px 0;overflow-wrap:anywhere}
+.talk-c2 .ready-talk>.talk-c2-turn{max-width:none;padding-left:16px;border-left:3px solid var(--lime);margin-top:28px}
+@media(max-width:650px){.talk-c2-support dl{grid-template-columns:1fr}.talk-c2-support,.talk-c2-closing{padding:12px 14px}.talk-c2 .ready-talk{padding:22px 16px}.talk-c2-closing ol,.talk-c2-support ul{padding-left:22px}.talk-c2 .ready-talk h2{font-size:30px}}

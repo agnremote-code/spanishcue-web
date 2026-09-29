@@ -6,6 +6,7 @@ import GrammarStep from "./grammar-steps/GrammarStep";
 import LogoutButton from "./LogoutButton";
 import LessonPreview from "./LessonPreview";
 import { conversationLessonHref } from "./conversation-families/navigation";
+import { phoneticsHref } from "./phonetics/navigation";
 import type { CEFRLevel } from "./conversation-families/types";
 import "./conversation-families/families.css";
 import LanguageSwitcher from "./i18n/LanguageSwitcher";
@@ -364,7 +365,7 @@ const libraryNews = [
     kicker: "NUEVO LABORATORIO · A1–C1",
     route: "FONÉTICA + BOCA + PRONUNCIACIÓN",
     title: "Spanish Mouth Lab",
-    copy: "Un laboratorio inmersivo para ver dónde va la lengua, entrenar los cinco sonidos vocálicos, corregir la R y detectar hábitos que vienen del inglés y otros seis idiomas.",
+    copy: "Escuchá y contrastá pero/perro y caro/carro, practicá la colocación de la lengua y usá los sonidos en un intercambio breve. Seis estaciones originales quedan como consulta opcional.",
     symbol: "ɾ",
     words: ["mirar", "colocar", "producir"],
   },
@@ -837,7 +838,7 @@ export default function Library({
     `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson, selectedLevel))}`;
   const lessonHref = (lesson: Lesson, selectedLevel = level) =>
     canOpen(lesson)
-      ? conversationLessonHref(lesson, selectedLevel) || (lesson.special ? "/choose-conversation" : null)
+      ? conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.id === 38 ? "/clase/38" : null) || (lesson.special ? "/choose-conversation" : null)
       : lockedPath(lesson, selectedLevel);
   const prepareLessonNavigation = (lesson: Lesson, placement = "library_card", selectedLevel = level) => {
     trackMarketingEvent("lesson_preview_open", {

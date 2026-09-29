@@ -1,0 +1,86 @@
+[
+  {
+    "key": "machine-c2",
+    "target": "public/conversation-worlds/elimination-machine-c2.webp",
+    "refs": [
+      "public/conversation-worlds/elimination-machine.webp",
+      "public/conversation-worlds/elimination-machine-c1.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Asset type: NEW sibling wide landscape 16:9 SPANISHCUE lesson thumbnail. Input images: image 1 is the authoritative family identity; image 2 is the C1 sibling whose multi-chamber consequence composition must NOT be repeated. Preserve massive dark titanium curved supports, fine cyan rings, amber details, luminous floating Earth, monumental industrial cathedral arches and bright clouds. New C2 visual idea: the SAME object produces TWO equally defensible readings, depending on framing. Create a close eye-level three-quarter composition of a beautiful physical optical interpretation instrument on a foreground control balcony, with the recognizable large Earth machine prominently in the upper background. A SINGLE simple short gold metal CYLINDER floats horizontally above a small round pedestal in the foreground center, entirely visible and clearly cylindrical. Two LARGE separate thin brass-framed frosted-glass viewing panels flank this one object at different angles. The left panel displays a crisp luminous round CIRCLE view of this SAME cylinder seen end-on; the right panel displays a crisp luminous long RECTANGLE view of this SAME cylinder seen side-on. Fine restrained amber optical rays visibly connect both frames to the one central cylinder. These are tangible optical panels on hinged mechanical arms, not screens, not infographic UI and not independent miniature world chambers. One adult observer at far left is gently pivoting a viewing frame, conveying reframing and reconsidering a definition; keep person secondary and hands natural. Paired unlabelled red and green controls at near edge recall eliminate/keep. Keep the one object and its two incompatible-looking yet compatible views immediately readable at thumbnail scale, equal visual prominence for both interpretations. Rich cinematic believable glass and metal, bright cool cloud light and warm amber practical light, approachable curiosity. Do not make C2 darker, more threatening, more enormous or more neon. No words, letters, numbers, labels, level badges, logos or watermarks. Do not copy C1 branching consequence chambers.",
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-d753bd99-d115-4137-8291-0e994e2d58c9.png",
+    "visual_qa": "One physical gold cylinder is connected to two distinct viewing frames showing its round end and rectangular side; adult pivots a frame. Earth chamber, cyan rings, titanium cathedral and amber controls retain family identity. Bright daylight; no threatening escalation. Strong distinction from C1 linked everyday consequence chambers. No text or badge. Abstract geometric analogy evokes competing definitions; it does not depict a particular authored dilemma.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected original and C1 family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 4",
+      "date": "2026-09-27",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 287638,
+    "sha256": "f690dd509af2a371745ddbc7b27c6a3a2495a55fd93c3e5f9e7cb1804cde6882",
+    "source_generated_png_sha256": "44ce6879aaf051b4eb4598c7454d8ab1e39d3972ee854b0d5d630cba2cf0cc9c",
+    "reference_metadata": [
+      {
+        "path": "public/conversation-worlds/elimination-machine.webp",
+        "role": "authoritative family style reference",
+        "inspected_before_generation": true,
+        "sha256": "401b83053b81888021f0b181b9002b6e4f589b05eb274608237fffcc7984a621"
+      },
+      {
+        "path": "public/conversation-worlds/elimination-machine-c1.webp",
+        "role": "C1 identity and prior composition to distinguish",
+        "inspected_before_generation": true,
+        "sha256": "22325001f7c2d63b7978d6865046ed88683b7592686da5768f81fb469f38a6c9"
+      }
+    ]
+  },
+  {
+    "key": "absurd-c2",
+    "target": "public/conversation-worlds/absurd-universe-c2.webp",
+    "refs": [
+      "public/conversation-worlds/absurd-universe.webp",
+      "public/conversation-worlds/absurd-universe-c1.webp"
+    ],
+    "prompt": "Use case: stylized-concept. Asset type: NEW sibling wide landscape 16:9 SPANISHCUE lesson thumbnail. Input images: image 1 is authoritative impossible-city identity; image 2 is C1 showing the bridge loophole composition that MUST NOT be repeated. Preserve the whimsical golden art-deco inverted skyline, peach/lavender dusk, blue mountain silhouettes, moon, lush planters, warm glowing windows, elegant stone terraces and iconic navy-and-brass floating old-fashioned tram. NEW C2 composition: eye-level view of a spacious tram plaza, with ONE large beautiful brass civic rule plaque mounted at center back, beneath a simple embossed hat pictogram. This single plaque contains exactly the Spanish words 'LLEVA SOMBRERO' in two clean highly legible lines, and no other lettering anywhere. Its linguistic ambiguity is the visual joke: llevar can mean wear or carry. THREE adult citizens in the large foreground are earnestly complying in visibly conflicting ways while looking toward the SAME instruction. On the left one adult wears a normal smart hat ON THEIR HEAD, pointing gently at it. In the middle a bareheaded adult carries a matching ordinary hat carefully IN BOTH HANDS at waist level and raises a questioning eyebrow. On the right two cheerful bareheaded adults push a small brass luggage trolley carrying ONE COMICALLY ENORMOUS HAT, taller than their waists, as if transporting a hat counts equally as complying. They all treat their interpretation as natural, playfully comparing interpretations rather than fighting. The three separate readings and the shared sign must be instantly clear at thumbnail scale. The giant hat should be clearly a real felt hat with a curved brim, not an umbrella or building. Leave enough room for silhouettes, coherent anatomy and readable gestures. The beautiful floating tram glides behind the citizens, and the familiar upside-down towers fill the upper distance. Cinematic photographic fantasy, same rich materials and luminous welcoming color, no darker advanced-level mood, no legal studies or courtroom. Avoid the C1 bridge, rope closure, upside-down pedestrians or bypass route. Apart from the one meaningful civic instruction 'LLEVA SOMBRERO', absolutely no letters, numerals, level badges, logos or watermarks. This is a new composition about competing meanings of ONE instruction, not a badge variation.",
+    "source_generated_png": "/workspace/scratch/69ba5305cbf2/generated_images/exec-7792bf7e-5996-44fd-a667-443d438299c9.png",
+    "visual_qa": "One civic instruction LLEVA SOMBRERO is correctly rendered in Spanish; wearing, hand-carrying and trolley-transporting a giant hat give competing readings of llevar. Four adults form three interpretations (the prompt initially says three citizens but explicitly requests two at the trolley). Clear hats, natural gestures and playful mood. Floating navy/brass tram, inverted golden art-deco skyline, moon and lavender/peach dusk preserve family identity. No C1 bridge or bypass composition, no level badge. In-world Spanish wording is intentional semantic art, not a level indicator.",
+    "status": "saved-and-visually-inspected",
+    "tool": "built-in image_gen",
+    "intent": "new sibling thumbnail using inspected original and C1 family references",
+    "webp_quality": 85,
+    "provenance": {
+      "run": "Batch 1 Run 4",
+      "date": "2026-09-27",
+      "previous_assets_preserved": true,
+      "postprocessing": "PNG to WebP format conversion only with Pillow, quality 85, method 6; no crop, resizing, compositing or pixel redraw."
+    },
+    "dimensions": [
+      1672,
+      941
+    ],
+    "bytes": 424844,
+    "sha256": "1275d981968151102707e970921d99739e6fae35ad63e2bfac4c6074e517ebfe",
+    "source_generated_png_sha256": "de9460598654742c2b5014a173dbe1d806b687badc809d4480bf56ba67208d46",
+    "reference_metadata": [
+      {
+        "path": "public/conversation-worlds/absurd-universe.webp",
+        "role": "authoritative family style reference",
+        "inspected_before_generation": true,
+        "sha256": "4487a49e10490a319b6b84e874e0c6bea9f897f308295c5efd5f08934e4cd736"
+      },
+      {
+        "path": "public/conversation-worlds/absurd-universe-c1.webp",
+        "role": "C1 identity and prior composition to distinguish",
+        "inspected_before_generation": true,
+        "sha256": "cf6ec313e6b54efa09b8c2c3a37e665440f350abbdb21fe7f2149a096ed8a009"
+      }
+    ]
+  }
+]

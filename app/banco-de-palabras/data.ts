@@ -65,7 +65,7 @@ export const wordBank: WordCard[] = [
   {id:37,topic:"viaje",word:"hacer escala",translation:"have a layover",kind:"chunk",icon:"⌁",definition:"Parar en un lugar intermedio antes del destino final.",example:"Tenemos que hacer escala en Lima.",gap:"El vuelo no es directo: vamos a ___."},
   {id:38,topic:"viaje",word:"sacar una foto",translation:"take a photo",kind:"chunk",icon:"◉",definition:"Usar una cámara o teléfono para crear una imagen.",example:"¿Nos podés sacar una foto?",gap:"Quiero ___ desde el mirador."},
   {id:39,topic:"viaje",word:"llegar a tiempo",translation:"arrive on time",kind:"chunk",icon:"⌚",definition:"Llegar antes o justo en el horario necesario.",example:"Salimos temprano para llegar a tiempo.",gap:"Si tomamos un taxi, vamos a ___."},
-  {id:40,topic:"viaje",word:"la puerta de embarque",translation:"boarding gate",kind:"sustantivo",icon:"↗",definition:"El punto del aeropuerto por donde accedemos al avión.",example:"Cambiaron la puerta de embarque.",gap:"El vuelo sale por __ número doce."},
+  {id:40,topic:"viaje",word:"la puerta de embarque",translation:"boarding gate",kind:"sustantivo",icon:"↗",definition:"El punto del aeropuerto por donde accedemos al avión.",example:"Cambiaron la puerta de embarque.",gap:"El vuelo sale por ___ número doce."},
 
   {id:41,topic:"emociones",word:"emocionado/a",translation:"excited",kind:"adjetivo",icon:"✦",definition:"Con mucha ilusión o entusiasmo por algo.",example:"Estoy emocionado por el viaje.",gap:"Ella está muy ___ por su nuevo trabajo."},
   {id:42,topic:"emociones",word:"preocupado/a",translation:"worried",kind:"adjetivo",icon:"~",definition:"Con inquietud por un problema posible o real.",example:"Estoy preocupado por el examen.",gap:"¿Por qué estás tan ___?"},

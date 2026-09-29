@@ -1,0 +1,40 @@
+{
+  "sourceBase": "6657400650b9bd9f52b166391fb7488456a5adb3",
+  "description": "Preservation fingerprints generated from the reviewed base. Runtime tests require no historical git objects.",
+  "banks": {
+    "agreementAtelier": {
+      "data": "d5e16ed30d95e7f9b3a55b44159f536ffbf13c498aab0deec10b9df145858aa2",
+      "render": "7dfa32278ab3994efebd45efc858a3159bbf8c9d609be3a325d384d2051407b0"
+    },
+    "articleGallery": {
+      "data": "06850ede6ad8e8f46f3afd4ef08313d2d76d7511d4d6aa815fb4a19c549f632d",
+      "render": "c197b749b6a38b2ec4a3ff2ad31a2fc91d31b64deac9796aea54a7cac96444dd"
+    },
+    "demonstrativeObservatory": {
+      "data": "0a332a185233242cb03145d9d4c2ad54d0669467a268462557013e9f73e914df",
+      "render": "7aa43621e2e507ea5cb26fee07ab472a9dec9f241fdacb5c1eec4126fc295ed4"
+    },
+    "nounFactory": {
+      "data": "4bef84bfffb4e46667411af8fdb6f647b42942832e93e5ab6e58b0674401df19",
+      "render": "c13a816474ecf06c73c993a2e9a7c2e9310625b5001e552337b7fb488c0ed4d5"
+    },
+    "possessionHouse": {
+      "data": "1b10ad02b5fac05a850e4cea28a9d72c7e621988a498054e40d17c27709cca3e",
+      "render": "3b902266f41a70beb81dc1a046622b204b4e26346751e4bc50d72b2298c07291"
+    },
+    "quantityMarket": {
+      "preservedContent": "1a0b4f13175ae1b1314aa67eaa1b3409c094f0baeba5fb904b7de2b5a8471cfb"
+    },
+    "adverbTower": {
+      "preservedContent": "3934fc526617adf548fc0f4e9a229abad161d1ebf14caf138bc90e011627734d"
+    },
+    "pronounCentral": {
+      "data": "cf2e4e37bcc21008d43320329365c3665bc203ab607d2cdbcf602c131b96f1bf",
+      "render": "17d0113c27bd2dfeb660d90f0f8cfcc9c7ed2a031941745552829f35e8b2d0b7"
+    },
+    "verbCity": {
+      "data": "f778133491e064326bcd5caf023488752da527bde1674736b2d6773a523d70f1",
+      "render": "79c14d8ab343ab6d73d1d8a9d4d6c1285a2489cb9b99f101d3e52a5080468098"
+    }
+  }
+}

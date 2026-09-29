@@ -1,0 +1,175 @@
+{
+  "lessonId": 38,
+  "sourceCommit": "2b48f28bc7b25f19c650e52cece8f59eca352936",
+  "voice": "es-AR-TomasNeural",
+  "configuredVariety": "es-AR (configured only; general Spanish tap/trill lesson targets retained)",
+  "rate": "-10%",
+  "producer": "Microsoft Edge online speech via edge-tts 7.2.8",
+  "synthetic": true,
+  "generatedAt": "2026-09-28T06:20:23.319346+00:00",
+  "humanListeningCompleted": false,
+  "listeningLimitations": "No actual audition was performed. Technical existence, hash, duration and clean decoding do not establish pronunciation, stress, accent, naturalness, clipping or transcript concordance. Human listening QA is pending.",
+  "clips": [
+    {
+      "id": "pero",
+      "text": "pero",
+      "src": "/audio/mouth-lab/pero.mp3",
+      "lessonId": 38,
+      "stations": [
+        "notice",
+        "articulate",
+        "contrast"
+      ],
+      "purpose": "Simple R model and listen-first discrimination.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 12528,
+      "durationSeconds": 2.088,
+      "sha256": "9316545961027c1f759e0b18b5eec808257fff6b89f814cdeb2b9236d78cc652"
+    },
+    {
+      "id": "perro",
+      "text": "perro",
+      "src": "/audio/mouth-lab/perro.mp3",
+      "lessonId": 38,
+      "stations": [
+        "notice",
+        "articulate",
+        "contrast"
+      ],
+      "purpose": "Multiple R model and listen-first discrimination.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 12528,
+      "durationSeconds": 2.088,
+      "sha256": "be566eacc1e710ef59c6ed283390d102858645c388846d7caf9af4b11a423891"
+    },
+    {
+      "id": "caro",
+      "text": "caro",
+      "src": "/audio/mouth-lab/caro.mp3",
+      "lessonId": 38,
+      "stations": [
+        "articulate",
+        "contrast"
+      ],
+      "purpose": "Simple R word model and second minimal contrast.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 12528,
+      "durationSeconds": 2.088,
+      "sha256": "d9f66dbf4068b16d359703cac3038026515fa78a0a20d3262648d809f0c3abe6"
+    },
+    {
+      "id": "carro",
+      "text": "carro",
+      "src": "/audio/mouth-lab/carro.mp3",
+      "lessonId": 38,
+      "stations": [
+        "articulate",
+        "contrast"
+      ],
+      "purpose": "Multiple R word model and second minimal contrast.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 12528,
+      "durationSeconds": 2.088,
+      "sha256": "7c8c9e64a88e10c3ef04086295d2d866185ada5cf8cf2fb67063d22b87518b22"
+    },
+    {
+      "id": "rojo",
+      "text": "rojo",
+      "src": "/audio/mouth-lab/rojo.mp3",
+      "lessonId": 38,
+      "stations": [
+        "articulate"
+      ],
+      "purpose": "Initial multiple R word model.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 12528,
+      "durationSeconds": 2.088,
+      "sha256": "5c18624ef080b7311d9112a489f47b4bc16b5d037759d154bdb2a47312b833a0"
+    },
+    {
+      "id": "phrase-perro",
+      "text": "Mi perro corre.",
+      "src": "/audio/mouth-lab/phrase-perro.mp3",
+      "lessonId": 38,
+      "stations": [
+        "phrases",
+        "reuse"
+      ],
+      "purpose": "Imitate multiple R in a short phrase before oral reuse.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 12528,
+      "durationSeconds": 2.088,
+      "sha256": "17b0bb975b6a8aedc0248d169199e97697db3f7d06c6bdea7bd903160710c145"
+    },
+    {
+      "id": "phrase-carro",
+      "text": "El carro es caro.",
+      "src": "/audio/mouth-lab/phrase-carro.mp3",
+      "lessonId": 38,
+      "stations": [
+        "phrases",
+        "reuse"
+      ],
+      "purpose": "Contrast multiple and simple R inside one phrase.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 13248,
+      "durationSeconds": 2.208,
+      "sha256": "6ab86acd310e0d1ee95b913f1df9f7f6b95496a64cef40609007f3dac904d5dd"
+    },
+    {
+      "id": "phrase-contrast",
+      "text": "Quiero el carro rojo, pero es caro.",
+      "src": "/audio/mouth-lab/phrase-contrast.mp3",
+      "lessonId": 38,
+      "stations": [
+        "phrases",
+        "reuse"
+      ],
+      "purpose": "Integrate practiced rhotic targets before a personal exchange.",
+      "voice": "es-AR-TomasNeural",
+      "configuredVariety": "es-AR (Microsoft configured locale; not human verified)",
+      "rate": "-10%",
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 20016,
+      "durationSeconds": 3.336,
+      "sha256": "2cfbb9c2d6d5510c1dbb20e346473fe53348f203897f88b64daaa857e0682f06"
+    }
+  ]
+}

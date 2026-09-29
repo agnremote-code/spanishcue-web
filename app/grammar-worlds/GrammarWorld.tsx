@@ -9,10 +9,15 @@ import VerbalPosition from "../verbal-system/VerbalPosition";
 import { verbStationPosition } from "../verbal-system/positions";
 import GrammarStep from "../grammar-steps/GrammarStep";
 import { SpanishCueBrand } from "../SpanishCueBrand";
+import { CoordinateTask, QuantityTask, RepairClose, RepairGuide, RepairPractice } from "./GrammarRepair";
 
 export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
+  return <GrammarWorldContent key={data.repair ? data.slug : "legacy"} data={data} />;
+}
+
+function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
   const [activeStation, setActiveStation] = useState(0);
-  const [visited, setVisited] = useState<number[]>([0]);
+  const [visited, setVisited] = useState<number[]>(data.repair ? [] : [0]);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
@@ -42,6 +47,8 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
+      // The repaired activities own their keyboard controls; navigation stays local.
+      if (data.repair && !(event.target instanceof Element && event.target.closest(".gw-station-nav"))) return;
       if (event.key === "ArrowRight")
         openStation(Math.min(activeStation + 1, data.stations.length - 1));
       if (event.key === "ArrowLeft")
@@ -49,7 +56,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [activeStation, data.stations.length, openStation]);
+  }, [activeStation, data.stations.length, data.repair, openStation]);
 
   useEffect(() => {
     const nodes = Array.from(document.querySelectorAll<HTMLElement>("[data-gw-station]"));
@@ -72,7 +79,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
 
   const begin = () =>
     document
-      .getElementById(data.world ? "gw-world" : "gw-map")
+      .getElementById(data.repair ? "gw-repair-task" : data.world ? "gw-world" : "gw-map")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   const enterStation = () =>
     document
@@ -81,7 +88,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
   const practiceComplete = Object.keys(answers).length === data.practice.length;
 
   return (
-    <main className={`gw-app gw-${data.motif}`} style={theme}>
+    <main className={`gw-app gw-${data.motif}${data.repair ? " gw-repair-enabled" : ""}`} style={theme}>
       <header className="gw-nav">
         <Link
           className="gw-back"
@@ -94,7 +101,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
           <SpanishCueBrand variant="compact" tone="light" context="GRAMMAR WORLDS" />
         </Link>
         <div className="gw-progress">
-          <span>DOMINIO DEL MÓDULO</span>
+          <span>{data.repair ? "ESTACIONES EXPLORADAS" : "DOMINIO DEL MÓDULO"}</span>
           <i>
             <b style={{ width: `${progress}%` }} />
           </i>
@@ -195,7 +202,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
                   <small>{item.kicker}</small>
                   <b>{item.title}</b>
                 </div>
-                <i>{visited.includes(index) ? "LISTA" : "ABRIR"}</i>
+                <i>{visited.includes(index) ? (data.repair ? "VISTA" : "LISTA") : "ABRIR"}</i>
               </button>
             ))}
           </div>
@@ -211,6 +218,10 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
           <MoodTenseDisclosure />
         </section>
       )}
+
+      {data.repair && <RepairGuide kind={data.repair} />}
+      {data.repair === "quantity" && <QuantityTask key={data.slug} />}
+      {data.repair === "coordinate" && <CoordinateTask key={data.slug} />}
 
       <section className="gw-foundation">
         <div className="gw-section-label">
@@ -312,6 +323,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
                     <h3>{item.title}</h3>
                   </div>
                 </div>
+                {data.repair && <p className="gw-repair-station-label">{(data.repair === "quantity" ? itemIndex > 1 : itemIndex > 2) ? "EXTENSIÓN A2 · Opcional: elegí este contenido según el grupo." : "NÚCLEO A1 · Elegí dos ejemplos y probá una frase propia."}</p>}
                 <div className="grammar-step-stack gw-station-steps">
                   <GrammarStep number="01" eyebrow="IDEA CENTRAL" title="¿Qué es?" accent={data.accent}>
                     <p className="gw-step-summary">{item.summary}</p>
@@ -383,7 +395,7 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
           title="Elegí, comprobá y entendé"
           accent={data.accent}
         >
-          <section className="gw-practice">
+          {data.repair ? <RepairPractice key={data.slug} items={data.practice} kind={data.repair} /> : <section className="gw-practice">
             <header>
               <span>LABORATORIO {data.level}</span>
               <h2>Elegí. Comprobá. Entendé.</h2>
@@ -457,12 +469,15 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
                 </strong>
               )}
             </div>
-          </section>
+          </section>}
         </GrammarStep>
+        {data.repair && <RepairClose key={data.slug} kind={data.repair} />}
         <GrammarStep
           number="07"
           eyebrow="CONVERSACIÓN"
-          title="Del sistema a tu voz"
+          title={data.repair ? "Banco oral opcional · elegí una propuesta" : "Del sistema a tu voz"}
+          defaultOpen={!data.repair}
+          kind={data.repair ? "optional" : "core"}
           accent={data.accent}
         >
           <section className="gw-speaking">
@@ -491,7 +506,9 @@ export default function GrammarWorld({ data }: { data: GrammarWorldData }) {
         <GrammarStep
           number="08"
           eyebrow="PRODUCCIÓN FINAL"
-          title="Una producción completa"
+          title={data.repair ? "Misión ampliada · opcional A2" : "Una producción completa"}
+          defaultOpen={!data.repair}
+          kind={data.repair ? "optional" : "core"}
           accent={data.accent}
         >
           <section className="gw-mission">

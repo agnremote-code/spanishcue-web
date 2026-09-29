@@ -1,0 +1,484 @@
+{
+  "baseCommit": "2f0194395ab088d435728a9a33c9e07895009ef4",
+  "integrationBase": "5d6733a9b9404bbc17bf6999530eb48ffb574a3e",
+  "banks": {
+    "redFlagA1": "c956288425b43873cb247cd4266a31b5b9c03d58e6974ec42ae36ef90d91b522",
+    "redFlagA2": "d854fb4eb95713d57a3de523bc36054a905fd1993ed8c0e4bf11454b860c1f71",
+    "redFlagB1": "648ee09dfd3d5d97cccf8d96f894d9150c6a3ed0c826fc2baf8835625f2ea843",
+    "redFlagB2": "750a2916548b5a841f7c40cc356bda6522af473fe79731c8b2c871ffaee1bedc",
+    "redFlagC1": "bb88d44c78a69eb9c1288e2fcb93381a743e85c7d0dd5b523e3e89c3c2ccee36",
+    "talkA1": "0ee240f9ffc2f13adc3d1b527d57c5d2361030b24f10aa02f3a6933343f8c040",
+    "talkA2": "9367779f920e61d130c49f7622aab8e7b2b9636189fbbe67f59f44f198cb1eea",
+    "talkB1": "d0563ed319e1133c6f21224306534c099e20e9e47fa377f37bf77112af1cc64e",
+    "talkB2": "0d585ad4afea694c6561bd2ce3c62f072b1d44cc882f52b0f23ed8f498cd7e1f",
+    "talkC1": "72812933605564788939a986a2b8063291e9c401110ec6cab707f9f00e0aabc4",
+    "eliminations": "eb3cd61a89defc29a742b0b052330f4c3d0a016d4b27e1875fc293f75df99323",
+    "absurdRules": "b84099e7ea90237499c7524053161ac7cdeb50f68279a9a4215112b4ef406326",
+    "eliminationsA2": "f0aa6f12a5df2ee20f215c8cd77663cf5b302789fcdf446cf4b603688b3628f1",
+    "absurdRulesA2": "fdbb3b1dab97453a5abdf5b017d49a609b8cd63fd43653b5e29a5f83c97c8e97",
+    "eliminationsB2": "fa0a0cd48ac97b9c6e2c1908c0165bf7440b7e5c2cab4de5494bae41b22034e7",
+    "absurdRulesB2": "994a23e3f6424a8ce4ed36f078207fe537ab8d19cb2edc78f52e4cd42e1ce188",
+    "eliminationsA1": "ab28e60666c678ed242bf0f55c7140d370447f1f755432b4906928003f839629",
+    "absurdRulesA1": "7d340900abef7baf66131bb3367bc7c714a34f2655adb20fa60874528949b941"
+  },
+  "routeLedger": "8aadf73d31301e524f24652812fc7cc76df84e30b98ec63fd5ed8b14ed70c9ee",
+  "families": [
+    {
+      "id": "red-flag-o-no",
+      "defaultLevel": "A2",
+      "canonicalPath": "/red-flag-o-no-a2",
+      "canonicalLessonId": 207,
+      "legacyLessonIds": [
+        207,
+        208,
+        209
+      ],
+      "access": "pro",
+      "variants": {
+        "A1": {
+          "level": "A1",
+          "lessonId": 207,
+          "communicativeObjectives": [
+            "Elegir una señal roja o verde ante acciones concretas de una persona",
+            "Expresar gustos y dar una razón breve con apoyo",
+            "Preguntar por un plan y responder en un intercambio corto"
+          ],
+          "expectedFunctions": [
+            "Expresar agrado o desagrado",
+            "Dar una razón sencilla",
+            "Preguntar y responder sobre acciones cotidianas"
+          ],
+          "contentRef": "/red-flag-o-no-a2#A1"
+        },
+        "A2": {
+          "level": "A2",
+          "lessonId": 207,
+          "communicativeObjectives": [
+            "Expresar una opinión breve y justificarla con una razón",
+            "Hablar de hábitos, límites y comportamientos cotidianos",
+            "Reaccionar a una repregunta con ejemplos personales"
+          ],
+          "expectedFunctions": [
+            "Expresar una opinión breve y justificarla con una razón",
+            "Hablar de hábitos, límites y comportamientos cotidianos",
+            "Reaccionar a una repregunta con ejemplos personales"
+          ],
+          "contentRef": "/red-flag-o-no-a2#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 208,
+          "communicativeObjectives": [
+            "Justificar una interpretación con matices y ejemplos",
+            "Evaluar cómo el contexto puede cambiar una primera reacción",
+            "Proponer conversaciones, límites y segundas oportunidades"
+          ],
+          "expectedFunctions": [
+            "Justificar una interpretación con matices y ejemplos",
+            "Evaluar cómo el contexto puede cambiar una primera reacción",
+            "Proponer conversaciones, límites y segundas oportunidades"
+          ],
+          "contentRef": "/red-flag-o-no-b1#B1"
+        },
+        "B2": {
+          "level": "B2",
+          "lessonId": 209,
+          "communicativeObjectives": [
+            "Distinguir intención, impacto, privacidad y secreto",
+            "Sostener una postura provisional ante información ambigua",
+            "Formular límites y revisar una decisión según el contexto"
+          ],
+          "expectedFunctions": [
+            "Distinguir intención, impacto, privacidad y secreto",
+            "Sostener una postura provisional ante información ambigua",
+            "Formular límites y revisar una decisión según el contexto"
+          ],
+          "contentRef": "/red-flag-o-no-b2#B2"
+        },
+        "C1": {
+          "level": "C1",
+          "lessonId": 207,
+          "communicativeObjectives": [
+            "Contrastar interpretaciones de una conducta a partir de información incompleta",
+            "Matizar o revisar un juicio cuando aparece un contexto nuevo",
+            "Formular criterios propios para juzgar una situación y reconocer excepciones"
+          ],
+          "expectedFunctions": [
+            "Distinguir hechos, intenciones e interpretaciones",
+            "Conceder, precisar y reformular un juicio",
+            "Explicar qué información falta antes de decidir"
+          ],
+          "contentRef": "/red-flag-o-no-a2#C1"
+        }
+      },
+      "previewByLevel": {
+        "A1": {
+          "image": "/play-mode/red-flag-o-no/a1.webp",
+          "hook": "18 situaciones cercanas: elige rojo o verde, explica con una frase y conversa con ayuda.",
+          "explanation": "Un juego de señales rojas y verdes sobre mensajes, planes y pequeños gestos. Tres rondas de seis situaciones ofrecen palabras, frases de apoyo y preguntas concretas. El cierre reúne tus elecciones en una conversación breve con otra persona.",
+          "warmup": "Una persona te escucha y te pregunta cómo estás. ¿Te gusta? ¿Qué dices?"
+        },
+        "A2": {
+          "hook": "18 situaciones de citas y relaciones para elegir una señal, explicar por qué y hablar sin respuestas correctas",
+          "image": "/play-mode/red-flag-o-no/a2.webp"
+        },
+        "B1": {
+          "hook": "18 señales discutibles para evaluar conductas, considerar el contexto y defender límites en una relación",
+          "image": "/play-mode/red-flag-o-no/b1.webp"
+        },
+        "B2": {
+          "hook": "18 tensiones ambiguas para distinguir privacidad, intención, impacto, incompatibilidad y señales de alarma",
+          "image": "/play-mode/red-flag-o-no/b2.webp"
+        },
+        "C1": {
+          "image": "/play-mode/red-flag-o-no/c1.webp",
+          "hook": "18 primeras impresiones: elige una señal, descubre el contexto y decide qué cambia en tu interpretación.",
+          "explanation": "Mensajes, compromisos y pequeños gestos admiten más de una lectura. Cada situación oculta un contexto que podrás revelar después de elegir rojo o verde. Revisa o matiza tu juicio, distingue lo que sabes de lo que supones y construye tus propios criterios con espacio para las excepciones.",
+          "warmup": "Recuerda una primera impresión que resultó incompleta. ¿Qué dato cambió tu manera de interpretar a esa persona?"
+        }
+      }
+    },
+    {
+      "id": "la-maquina-que-elimina-cosas",
+      "defaultLevel": "B1",
+      "canonicalPath": "/la-maquina-que-elimina-cosas",
+      "canonicalLessonId": 101,
+      "legacyLessonIds": [
+        101,
+        103
+      ],
+      "access": "pro",
+      "variants": {
+        "A1": {
+          "level": "A1",
+          "lessonId": 101,
+          "communicativeObjectives": [
+            "Elegir entre eliminar y conservar cosas de la vida diaria",
+            "Dar una razón breve con palabras y frases de apoyo",
+            "Comprender una consecuencia concreta y mantener o cambiar una decisión"
+          ],
+          "expectedFunctions": [
+            "Expresar gustos y necesidades",
+            "Dar una razón sencilla",
+            "Elegir y cambiar de opinión con apoyo"
+          ],
+          "contentRef": "/la-maquina-que-elimina-cosas#A1"
+        },
+        "A2": {
+          "level": "A2",
+          "lessonId": 103,
+          "communicativeObjectives": [
+            "Expresar preferencias y explicar decisiones con ejemplos cotidianos."
+          ],
+          "expectedFunctions": [
+            "Expresar preferencias y explicar decisiones con ejemplos cotidianos."
+          ],
+          "contentRef": "/la-maquina-que-elimina-cosas-a2#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 101,
+          "communicativeObjectives": [
+            "Explicar decisiones y reconsiderarlas ante una consecuencia."
+          ],
+          "expectedFunctions": [
+            "Explicar decisiones y reconsiderarlas ante una consecuencia."
+          ],
+          "contentRef": "/la-maquina-que-elimina-cosas#B1"
+        },
+        "B2": {
+          "level": "B2",
+          "lessonId": 101,
+          "communicativeObjectives": [
+            "Defender una eliminación considerando beneficios y costes",
+            "Explicar cómo una consecuencia afecta a personas diferentes",
+            "Revisar una decisión y negociar una alternativa concreta"
+          ],
+          "expectedFunctions": [
+            "Argumentar con ejemplos",
+            "Plantear un contraargumento",
+            "Matizar y reformular una decisión"
+          ],
+          "contentRef": "/la-maquina-que-elimina-cosas#B2"
+        }
+      },
+      "previewByLevel": {
+        "A1": {
+          "image": "/conversation-worlds/elimination-machine-a1.webp",
+          "hook": "24 cosas cotidianas: elige qué eliminar, da una razón y descubre qué pasa después.",
+          "explanation": "Dentro de la máquina aparecen cosas que conoces y usas. Primero elige si desaparecen o se quedan; después explica con una frase de apoyo. Una consecuencia concreta puede cambiar tu decisión. Para cerrar, compara una cosa que eliminas, otra que conservas y una elección que cambió.",
+          "warmup": "Mira las cosas que tienes cerca. ¿Cuál usas todos los días? ¿Para qué la necesitas?"
+        },
+        "A2": {
+          "hook": "30 decisiones sobre tu vida diaria. Elegí Sí o No, abrí la pregunta y descubrí una sorpresa.",
+          "image": "/conversation-worlds/elimination-machine.webp"
+        },
+        "B1": {
+          "hook": "30 decisiones, preguntas de opinión y consecuencias inesperadas. Primero Sí o No; después, el giro.",
+          "image": "/conversation-worlds/elimination-machine.webp"
+        },
+        "B2": {
+          "image": "/conversation-worlds/elimination-machine-b2.webp",
+          "hook": "30 decisiones: activa la máquina, descubre una consecuencia y defiende o revisa tu postura.",
+          "explanation": "La máquina de titanio vuelve con treinta decisiones nuevas sobre comodidad, dependencia, privacidad y vida compartida. Elige qué eliminar, explica tu razón y descubre a quién complica la vida esa decisión. Después responde a otra perspectiva y acuerda una alternativa.",
+          "warmup": "Piensa en algo cómodo que usas todos los días. ¿A quién le complicaría la vida que desapareciera?"
+        }
+      }
+    },
+    {
+      "id": "tu-vida-con-una-regla-absurda",
+      "defaultLevel": "B1",
+      "canonicalPath": "/tu-vida-con-una-regla-absurda",
+      "canonicalLessonId": 102,
+      "legacyLessonIds": [
+        102,
+        104
+      ],
+      "access": "pro",
+      "variants": {
+        "A1": {
+          "level": "A1",
+          "lessonId": 102,
+          "communicativeObjectives": [
+            "Comprender una regla sencilla de una ciudad imaginaria",
+            "Describir cómo cambia una actividad cotidiana con esa regla",
+            "Elegir una forma de vivir con la regla e inventar otra con apoyo"
+          ],
+          "expectedFunctions": [
+            "Expresar gustos y posibilidades",
+            "Hablar de rutinas y necesidades",
+            "Elegir entre opciones concretas"
+          ],
+          "contentRef": "/tu-vida-con-una-regla-absurda#A1"
+        },
+        "A2": {
+          "level": "A2",
+          "lessonId": 104,
+          "communicativeObjectives": [
+            "Describir rutinas y planes en situaciones imaginarias con lenguaje cotidiano."
+          ],
+          "expectedFunctions": [
+            "Describir rutinas y planes en situaciones imaginarias con lenguaje cotidiano."
+          ],
+          "contentRef": "/tu-vida-con-una-regla-absurda-a2#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 102,
+          "communicativeObjectives": [
+            "Imaginar cambios cotidianos y comparar sus efectos en distintas personas."
+          ],
+          "expectedFunctions": [
+            "Imaginar cambios cotidianos y comparar sus efectos en distintas personas."
+          ],
+          "contentRef": "/tu-vida-con-una-regla-absurda#B1"
+        },
+        "B2": {
+          "level": "B2",
+          "lessonId": 102,
+          "communicativeObjectives": [
+            "Explicar consecuencias prácticas de una ley imposible",
+            "Comparar cómo afecta una regla a personas con intereses distintos",
+            "Negociar excepciones y defender una versión revisada de la regla"
+          ],
+          "expectedFunctions": [
+            "Formular hipótesis concretas",
+            "Contrastar perspectivas",
+            "Proponer condiciones y alcanzar acuerdos"
+          ],
+          "contentRef": "/tu-vida-con-una-regla-absurda#B2"
+        }
+      },
+      "previewByLevel": {
+        "A1": {
+          "image": "/conversation-worlds/absurd-universe-a1.webp",
+          "hook": "15 reglas divertidas y 45 preguntas sencillas para imaginar tu día en una ciudad imposible.",
+          "explanation": "En esta ciudad las reglas cambian cosas de todos los días. Descubre una regla, di si te gusta y conversa sobre tu mañana, tu casa o tus planes. Cada regla tiene tres preguntas que aparecen paso a paso y frases visibles para responder. Al final, elige la más divertida, la más difícil e inventa una regla nueva.",
+          "warmup": "En tu casa, ¿qué puedes hacer por la mañana? ¿Y por la noche?"
+        },
+        "A2": {
+          "hook": "15 reglas y 45 preguntas sobre compras, trabajo, amigos y planes. Una pregunta por vez, con ayuda para hablar.",
+          "image": "/conversation-worlds/absurd-universe.webp"
+        },
+        "B1": {
+          "hook": "15 leyes imposibles y 45 preguntas para imaginar otra vida: cien palabras, promesas que pesan y ciudades al revés.",
+          "image": "/conversation-worlds/absurd-universe.webp"
+        },
+        "B2": {
+          "image": "/conversation-worlds/absurd-universe-b2.webp",
+          "hook": "15 leyes imposibles y 45 preguntas: descubre quién gana, quién pierde y qué excepción cambiaría todo.",
+          "explanation": "La ciudad imposible estrena quince reglas absurdas. Cada una abre tres preguntas progresivas: una consecuencia cercana, una perspectiva en conflicto y una revisión defendida. Los apoyos ayudan a negociar excepciones sin perder el humor del universo.",
+          "warmup": "Imagina que una regla divertida cambia tu mañana. ¿Para quién podría ser un problema?"
+        }
+      }
+    },
+    {
+      "id": "lets-talk",
+      "defaultLevel": "A1",
+      "canonicalPath": "/a1-conversation",
+      "canonicalLessonId": 15,
+      "legacyLessonIds": [
+        15,
+        14,
+        13
+      ],
+      "access": "pro",
+      "variants": {
+        "A1": {
+          "level": "A1",
+          "lessonId": 15,
+          "communicativeObjectives": [
+            "Comprender preguntas breves",
+            "Responder con vocabulario cotidiano",
+            "Sostener una charla a partir de tres preguntas"
+          ],
+          "expectedFunctions": [
+            "Comprender preguntas breves",
+            "Responder con vocabulario cotidiano",
+            "Sostener una charla a partir de tres preguntas"
+          ],
+          "contentRef": "/a1-conversation#A1"
+        },
+        "A2": {
+          "level": "A2",
+          "lessonId": 14,
+          "communicativeObjectives": [
+            "Elegir un tema cercano",
+            "Responder con frases claras",
+            "Sostener una conversación con tres preguntas"
+          ],
+          "expectedFunctions": [
+            "Elegir un tema cercano",
+            "Responder con frases claras",
+            "Sostener una conversación con tres preguntas"
+          ],
+          "contentRef": "/basic-conversation#A2"
+        },
+        "B1": {
+          "level": "B1",
+          "lessonId": 13,
+          "communicativeObjectives": [
+            "Elegir un tema que genere curiosidad",
+            "Sostener una conversación libre",
+            "Compartir historias y opiniones"
+          ],
+          "expectedFunctions": [
+            "Elegir un tema que genere curiosidad",
+            "Sostener una conversación libre",
+            "Compartir historias y opiniones"
+          ],
+          "contentRef": "/choose-conversation#B1"
+        },
+        "B2": {
+          "level": "B2",
+          "lessonId": 15,
+          "communicativeObjectives": [
+            "Defender y matizar opiniones sobre situaciones cercanas",
+            "Contrastar perspectivas y responder a un contraargumento",
+            "Relacionar tres ideas elegidas en una conclusión negociada"
+          ],
+          "expectedFunctions": [
+            "Justificar y matizar",
+            "Comparar intereses y consecuencias",
+            "Mostrar desacuerdo y revisar una postura"
+          ],
+          "contentRef": "/a1-conversation#B2"
+        },
+        "C1": {
+          "level": "C1",
+          "lessonId": 15,
+          "communicativeObjectives": [
+            "Reinterpretar experiencias personales y contrastar lecturas posibles",
+            "Precisar una opinión mediante matices, excepciones y ejemplos",
+            "Relacionar tres preguntas en una conversación coherente que incorpore otra perspectiva"
+          ],
+          "expectedFunctions": [
+            "Matizar generalizaciones y señalar excepciones",
+            "Reformular y comparar interpretaciones",
+            "Conectar experiencias con sus implicaciones"
+          ],
+          "contentRef": "/a1-conversation#C1"
+        }
+      },
+      "previewByLevel": {
+        "A1": {
+          "hook": "15 mundos bilingües y 150 preguntas simples para empezar a conversar",
+          "image": "/catalog-thumbnails/conversation-a1.webp"
+        },
+        "A2": {
+          "hook": "15 mundos bilingües y 150 preguntas para empezar a hablar sin presión",
+          "image": "/catalog-thumbnails/conversation-a2.webp"
+        },
+        "B1": {
+          "hook": "Elegí 1 tema, seleccioná solo 3 preguntas y hablá libremente",
+          "image": "/catalog-thumbnails/conversation-choice.webp"
+        },
+        "B2": {
+          "image": "/catalog-thumbnails/conversation-b2.webp",
+          "hook": "15 mundos, 120 preguntas y un tablero de tres ideas para contrastar opiniones y construir una conclusión.",
+          "explanation": "Elige un mundo y exactamente tres preguntas. Conversa sobre decisiones cercanas, incorpora otra perspectiva y revisa lo que piensas con apoyos para matizar y discrepar. El cierre conecta las preguntas elegidas en una postura común o un desacuerdo explicado.",
+          "warmup": "Recuerda una opinión que cambiaste al escuchar a alguien. ¿Qué detalle te hizo reconsiderarla?"
+        },
+        "C1": {
+          "image": "/catalog-thumbnails/conversation-c1.webp",
+          "hook": "15 mundos y 120 preguntas para mirar de nuevo lo cotidiano: elige tres y encuentra las conexiones.",
+          "explanation": "El tablero de siempre abre conversaciones sobre recuerdos, contradicciones, cambios de perspectiva y el significado de decisiones cercanas. Elige exactamente tres preguntas entre ocho de cada mundo. Los apoyos opcionales ayudan a precisar lo que quieres decir; el cierre conecta las tres preguntas que elegiste.",
+          "warmup": "Piensa en una experiencia que hoy entiendes de otra manera. ¿Qué ves ahora que antes no veías?"
+        }
+      }
+    }
+  ],
+  "immutableFiles": {
+    "app/red-flag-o-no/c1.mjs": "17c87bbf1f8425f36bb14f01f8e08514d8c1908fa61f1adca373061cbc980de4",
+    "app/choose-conversation/c1-data.ts": "8bf73ed6bb0527c925ffa9715f68c8fa2c6c7e1ed0113a25579eb153426350ef",
+    "app/choose-conversation/C1ConversationTools.tsx": "cedb02a7ca6981b2b6b187a85215198295f8242596af4af00d25f4a5bca0e324",
+    "app/choose-conversation/c1.css": "1b38c1081f46215b84d296306f2fc4d23433612835430904a9fed62c4bcaeb38",
+    "app/conversation-worlds/data-a1.ts": "0a63f61a1611906377f452bc70c929d7fdb1f6fc3d52d68317394de11541d116",
+    "docs/lessons/conversation-batch1-run2-thumbnail-prompts.json": "13b12f25ffe390c274f934a1fa52ec467e279f5aba39ef23895896151496b5cf",
+    "tests/fixtures/conversation-batch1-run1-preserved.json": "54ea31f16463de17e967f1d89ed056cd1ce424fd45b9f8d09da2230af5fc9c4e",
+    "app/red-flag-o-no/a1.mjs": "cd623d29b1f37afd5916503d2094a5d8a70e654b3c41b82724785b06ba743d5b",
+    "app/choose-conversation/data.ts": "2dab5a2ff46c9d395af605a2f43a50c879c4d87998e4bba737b654837bfa2659",
+    "app/choose-conversation/a1-data.ts": "c3014c29432ebada2fb181fa1a4f666832ff9fd5451d0a30ef61e22afa07ebd2",
+    "app/choose-conversation/b2-data.ts": "aafd41ca94691785a5a77b43454e94904c5f6b0a35b939e7e572b74b3dab7206",
+    "app/choose-conversation/B2ConversationTools.tsx": "1423f4a9b4dec2036fffb9308cefc444eebc201a895443ac4738a964bc408c1f",
+    "app/choose-conversation/b2.css": "b544abe519ecd40e18483a0055eab20e2a8c6714cd6b5776849edfcd56aef2dd",
+    "app/conversation-worlds/data.ts": "2a5d6b5182cc68b5a702efe486018d53a07bd564b2476e6f7e5ec40abd6a3697",
+    "app/conversation-worlds/data-a2.ts": "965cd79c402047378abe4c0a2f3d8ee9fa56e8a208e30705e248f01751f5baf2",
+    "app/conversation-worlds/data-b2.ts": "9ccd4824f6ab555109d30b49d33c6aa3060367c1d8b22a101e0d0397849b36a4",
+    "app/lesson-catalog.ts": "3d1d38cf97ac56713d08f55c2b5be604f5e745d17f9a75aa9b3445b5b38c84d3",
+    "app/access-policy.ts": "f71e07695e13cdff3d3ec411c5193f8db9ca8f958b24a89791fa934868e0d8c9",
+    "app/conversation-families/ConversationFamily.tsx": "e6a946765a6613d8974f1b96665854dde596c60bcab6cbc63cdd5d1bcd0ef7d2",
+    "app/conversation-families/navigation.ts": "09b87c257f2aa2e1ee835e519f92ce597268e5b6bb9e388c4f7ce0fa41a7cb6f",
+    "app/red-flag-o-no-a2/page.tsx": "3cb4c91b293b484613a637f7f83e5cd09afb1cd60cbe96d03d90de82b2fadd7a",
+    "app/red-flag-o-no-b1/page.tsx": "39bd04a56d63fec964e1b5857c8c23893f268c23a3bc97c85139feac81442466",
+    "app/red-flag-o-no-b2/page.tsx": "82ede8eb8eca4121147a804afb68c0da87b062ef5c52b3bf02a1b9f5b04d1052",
+    "app/a1-conversation/page.tsx": "a149f8a1ae98d9b84c292df880d448b7129d8aa31d9acd70bf15de8e55e2a19f",
+    "app/basic-conversation/page.tsx": "a8fd61baecbd4190d261c76718a6e8a959238e4d639dfbdfff84ee93245f7508",
+    "app/la-maquina-que-elimina-cosas/page.tsx": "36310989df256be491ceb883c2a00be3cc6caaa5d13d0026ded1a254d5c5e4a9",
+    "app/la-maquina-que-elimina-cosas-a2/page.tsx": "b318f0103501bac38deee32e24342354d8d7974bdbf192e817900399c004bbc9",
+    "app/tu-vida-con-una-regla-absurda/page.tsx": "db5d6727a62d70c243a15a1aa678b476f3e101c75cd293af220b26c6e1663187",
+    "app/tu-vida-con-una-regla-absurda-a2/page.tsx": "3aafa81baf562a57bec37a2bad2a81fa7cbaf036aeb506363ac933ebfb6ce13c",
+    "docs/lessons/conversation-batch1-thumbnail-prompts.json": "a6371e3de9fe44e0097415cc95ce7b883256aeee9a916e233e06a2a1ea2681de",
+    "tests/fixtures/conversation-batch1-originals.json": "c8bc0f631f60b4e767e6832945e9c3d3f4e96db1e0686b9f40136c55b013a113",
+    "public/play-mode/red-flag-o-no/a1.webp": "82272da5e28a5d3d42ad1502d12b767f13ea20e8bd7a222b9d0f3acf96f04e32",
+    "public/play-mode/red-flag-o-no/a2.webp": "47a08260b8393f67b8d946833d4bbdcc27802e2a1bca4bb6c20246409521a635",
+    "public/play-mode/red-flag-o-no/b1.webp": "ab49b723d03587601c1165c439388784ace8996553ace748b28c488ed62404b1",
+    "public/play-mode/red-flag-o-no/b2.webp": "650f89268c451ca0f90020e2d41eab74da8231784407f0c0835f83147f0aa4d9",
+    "public/play-mode/red-flag-o-no/c1.webp": "07b1de6d191c52d3c1145b9f4aadd88f36f91cef9d7f9785669bb74e13b36f4d",
+    "public/conversation-worlds/elimination-machine-a1.webp": "6c891878eaead3c4a6dbab988d14c4907114f6e1d5b95b5ec30df744ca402408",
+    "public/conversation-worlds/elimination-machine.webp": "401b83053b81888021f0b181b9002b6e4f589b05eb274608237fffcc7984a621",
+    "public/conversation-worlds/elimination-machine-b2.webp": "a38690543d3a775072de52ab489d6aa85b4df6b25b64e154406cff1823b39df6",
+    "public/conversation-worlds/absurd-universe-a1.webp": "2edbf6999526cf1fc5dcf07432f96de4e938b7ddf597ffc62053d45947d5ee1f",
+    "public/conversation-worlds/absurd-universe.webp": "4487a49e10490a319b6b84e874e0c6bea9f897f308295c5efd5f08934e4cd736",
+    "public/conversation-worlds/absurd-universe-b2.webp": "cc9f8a6df58e19c1b1c04938a5be01e746cc8ca83d23e08897d048504d18c4bd",
+    "public/catalog-thumbnails/conversation-a1.webp": "836339794a5c74da2953a696c4c3c089da8bf104393c16b9ad1c745465660f18",
+    "public/catalog-thumbnails/conversation-a2.webp": "c73837e0d8542a22537d52a63f452f69c6ee840eef1067c474994ec79d8fb1b4",
+    "public/catalog-thumbnails/conversation-choice.webp": "103c0e9006e05eeacde6a6aa1e45ebf1a5f760de7db8c876aac1f78042ade21e",
+    "public/catalog-thumbnails/conversation-b2.webp": "98e4fc0862b348ff9cee141ab09e45bf835c068854d05efd96b6ab48d2e47172",
+    "public/catalog-thumbnails/conversation-c1.webp": "57e0666f9362a123423e664ef7ff1dd3626c079b52d8e1c6a4e34d01f39efcbe"
+  },
+  "run2StatusPrefix": {
+    "bytes": 25049,
+    "sha256": "4e11688d4c927e93fd7e00f35851f4b3bbdee45a55c64a79beac988ed25d45ec"
+  }
+}

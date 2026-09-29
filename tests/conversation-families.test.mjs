@@ -14,24 +14,24 @@ if (existsSync(path)) {
   assert.equal(new Set(ids).size,ids.length);
   assert.deepEqual(p.catalogLessons.filter(l=>l.category!=='Conversación'),p.lessons.filter(l=>l.category!=='Conversación'));
  });
- test('Red Flag is one card with three genuinely available levels',()=>{
+ test('Red Flag is one card with six genuinely available levels',()=>{
   const cards=p.catalogLessons.filter(l=>l.familyId==='red-flag-o-no');
-  assert.equal(cards.length,1); assert.deepEqual(cards[0].levels,['A2','B1','B2']);
+  assert.equal(cards.length,1); assert.deepEqual(cards[0].levels,['A1','A2','B1','B2','C1','C2']);
   assert.equal(cards[0].title,'Red Flag o No');
   assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'B2'}).length,1);
-  assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'A1'}).length,0);
+  assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'A1'}).length,1);
  });
  test('invalid/default/duplicate/missing variant constraints fail clearly',()=>{
   const f=p.conversationFamilies.find(f=>f.slug==='red-flag-o-no');
-  for(const patch of [{defaultLevel:'C2'},{availableLevels:['A2','A2']},{variants:{}},{title:''}])
+  for(const patch of [{defaultLevel:'C3'},{availableLevels:['A2','A2']},{variants:{}},{title:''}])
    assert.throws(()=>p.validateConversationFamily({...f,...patch}));
   assert.equal(p.resolveConversationLevel(f,'B2'),'B2');
-  assert.equal(p.resolveConversationLevel(f,'C2'),f.defaultLevel);
+  assert.equal(p.resolveConversationLevel(f,'C3'),f.defaultLevel);
  });
  test('level links preserve filters and use safe supported fallback',()=>{
   const l=p.catalogLessons.find(l=>l.familyId==='red-flag-o-no');
   assert.equal(p.conversationLessonHref(l,'B2'),l.path+'?level=B2');
-  assert.equal(p.conversationLessonHref(l,'C2'),l.path+'?level=A2');
+  assert.equal(p.conversationLessonHref(l,'C3'),l.path+'?level=A2');
  });
  test('free atlas never absorbs paid USA A1',()=>{
   const free=p.conversationFamilies.find(f=>f.legacyLessonIds.includes(36));

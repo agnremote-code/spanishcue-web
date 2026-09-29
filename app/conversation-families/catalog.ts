@@ -2,6 +2,7 @@ import { lessons, type Lesson } from '../lesson-catalog';
 import { isFreeLesson, localLessonPath } from '../access-policy';
 import { CEFR_LEVELS, type CEFRLevel, type ConversationLessonFamily } from './types';
 import { validateConversationFamily } from './navigation';
+import { authoredConversationLevels } from './authored-levels';
 export { resolveConversationLevel, validateConversationFamily, conversationLessonHref } from './navigation';
 
 const groups = [
@@ -20,10 +21,13 @@ function familyFromSeeds(seeds: Lesson[], group?: typeof groups[number]): Conver
   const first = seeds[0];
   const path = localLessonPath(first)!;
   const id = group?.id || path.slice(1).replaceAll('/', '-');
-  const levels = CEFR_LEVELS.filter(level => seeds.some(seed => (seed.levels || [seed.level]).includes(level)));
+  const additions = authoredConversationLevels[id];
+  const levels = CEFR_LEVELS.filter(level => additions?.[level] || seeds.some(seed => (seed.levels || [seed.level]).includes(level)));
   const access = isFreeLesson(first.id) ? 'free' : 'pro';
   if (seeds.some(seed => (isFreeLesson(seed.id) ? 'free' : 'pro') !== access)) throw new Error(`${id}: mixed entitlement family`);
   const variants = Object.fromEntries(levels.map(level => {
+    const authored = additions?.[level];
+    if (authored) return [level, { level, lessonId: first.id, communicativeObjectives: authored.objectives, expectedFunctions: authored.functions, contentRef: `${path}#${level}` }];
     const seed = seeds.find(seed => (seed.levels || [seed.level]).includes(level))!;
     const objectives = countryAims[seed.id]?.[level] || seed.goals;
     return [level, { level, lessonId: seed.id, communicativeObjectives: objectives, expectedFunctions: objectives, contentRef: `${localLessonPath(seed)}#${level}` }];
@@ -35,6 +39,7 @@ function familyFromSeeds(seeds: Lesson[], group?: typeof groups[number]): Conver
     concept: first.explanation, availableLevels: levels, defaultLevel: first.level as CEFRLevel,
     preview: { image: first.image, hook: first.subtitle },
     previewByLevel: Object.fromEntries(levels.map(level => {
+      if (additions?.[level]) return [level, additions[level]!.preview];
       const seed = seeds.find(seed => (seed.levels || [seed.level]).includes(level))!;
       return [level, { hook: countryAims[seed.id]?.[level]?.[0] || seed.subtitle, image: seed.image }];
     })),

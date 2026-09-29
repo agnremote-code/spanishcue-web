@@ -1,0 +1,437 @@
+{
+  "voice": "es-AR-TomasNeural",
+  "locale": "es-AR",
+  "rate": "-10%",
+  "producer": "Microsoft Edge online speech via edge-tts 7.2.8",
+  "synthetic": true,
+  "generatedAt": "2026-09-28T03:09:15.175027+00:00",
+  "clips": [
+    {
+      "id": "vowel-a",
+      "text": "a",
+      "src": "/audio/phonetics/vowel-a.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "2eb6dc1a0068280d48e4330396b78806fffa4cca6a51ab2ff28ef5208f20d746"
+    },
+    {
+      "id": "vowel-e",
+      "text": "e",
+      "src": "/audio/phonetics/vowel-e.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "fd5c20491182df74b71718e3f553f3baab8660b7752409d4587b692bda147d95"
+    },
+    {
+      "id": "vowel-i",
+      "text": "i",
+      "src": "/audio/phonetics/vowel-i.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "e27bcae7e05278f79a0a6fa74edef132cbac91cc8fa6497eec952ba5872c72fe"
+    },
+    {
+      "id": "vowel-o",
+      "text": "o",
+      "src": "/audio/phonetics/vowel-o.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "73971c9d826a4a89e12877071721bbee8a647e3f6c1931396615ec014b1a9809"
+    },
+    {
+      "id": "vowel-u",
+      "text": "u",
+      "src": "/audio/phonetics/vowel-u.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "7adf2cd124b1671348dac6ca007f5562b84289b6a20727577dffa7e74bad2b44"
+    },
+    {
+      "id": "casa",
+      "text": "casa",
+      "src": "/audio/phonetics/casa.mp3",
+      "lessonIds": [
+        201,
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "272a68015f4f7a9a7bfae4c5bea71071c35004c53bf4fc015b89595c549fb974"
+    },
+    {
+      "id": "mesa",
+      "text": "mesa",
+      "src": "/audio/phonetics/mesa.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "0be645a7a38af143510aabfb05f1780e50ca2a7a71d4407fbad5390b1b11114a"
+    },
+    {
+      "id": "vino",
+      "text": "vino",
+      "src": "/audio/phonetics/vino.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "f940f37de595ebab92b458248162508d2e644967c69544a1493e9776521b9288"
+    },
+    {
+      "id": "moto",
+      "text": "moto",
+      "src": "/audio/phonetics/moto.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "f60beb336911ff5be50b54fdab5df57e7a9f6378e3b1b6a16ab8e901af2cf218"
+    },
+    {
+      "id": "luna",
+      "text": "luna",
+      "src": "/audio/phonetics/luna.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "cb601c991065497b38277c56e8c7e2aa38f8115ed0e3417ad7383a0265df7a0f"
+    },
+    {
+      "id": "misa",
+      "text": "misa",
+      "src": "/audio/phonetics/misa.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "b098104d9f3309372b49f2b4e59227348496716d57c85de84c21e11b9dc4a01f"
+    },
+    {
+      "id": "peso",
+      "text": "peso",
+      "src": "/audio/phonetics/peso.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "78bf5d686af77ddce164641d88d2cd9277c62fbb429f61f99224dc07da431ae1"
+    },
+    {
+      "id": "piso",
+      "text": "piso",
+      "src": "/audio/phonetics/piso.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 1.584,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "70edf14eac3d4474fac4adf2050e29ed031c0fd788cb019df95abec551861f51"
+    },
+    {
+      "id": "pelo",
+      "text": "pelo",
+      "src": "/audio/phonetics/pelo.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "de91e97b7d0652b8361a44e1976d4c1faafee7cf2f807f9a38e67279ae150572"
+    },
+    {
+      "id": "palo",
+      "text": "palo",
+      "src": "/audio/phonetics/palo.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 1.536,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "7e86ddf721adebba391d195c889b29fde2a195514d70573b3c874c581bb053d5"
+    },
+    {
+      "id": "cosa",
+      "text": "cosa",
+      "src": "/audio/phonetics/cosa.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "efc369c619aec1561a2682e90fac3cf363a1fe7a7b8cb902522d2dc8948eddcd"
+    },
+    {
+      "id": "vowels-phrase-1",
+      "text": "Miro la luna.",
+      "src": "/audio/phonetics/vowels-phrase-1.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "7c06e48c1ce7bda4f80bdf7caceb40b7ad523accbaa02be7a83f061654da31f9"
+    },
+    {
+      "id": "vowels-phrase-2",
+      "text": "Una moto roja.",
+      "src": "/audio/phonetics/vowels-phrase-2.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.112,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "91544932a972c2fa844df69e08029563e5dee1a984a079bacc3473549945d7ee"
+    },
+    {
+      "id": "vowels-phrase-3",
+      "text": "Mi casa tiene una mesa.",
+      "src": "/audio/phonetics/vowels-phrase-3.mp3",
+      "lessonIds": [
+        201
+      ],
+      "durationSeconds": 2.544,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "47c29417936a25c829e8db0676fce81b2d2e96050f1cfda87a74e94ce5520be4"
+    },
+    {
+      "id": "publico-initial",
+      "text": "público",
+      "src": "/audio/phonetics/publico-initial.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "7acb62fd9ba95ea52b58057df85a6ad08b22eb0e5a2b6cd63ededed8a28c0741"
+    },
+    {
+      "id": "publico-middle",
+      "text": "publico",
+      "src": "/audio/phonetics/publico-middle.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "f80b34779aa2e5ffdfd912ae0a0dc630d10af08b0489c167da02a7aee708fc85"
+    },
+    {
+      "id": "publico-final",
+      "text": "publicó",
+      "src": "/audio/phonetics/publico-final.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "b9928d37139c263b179a2a8a2a5f6d59adbd103783de645c21597024362eeabc"
+    },
+    {
+      "id": "termino-initial",
+      "text": "término",
+      "src": "/audio/phonetics/termino-initial.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "1f9a8cf64898b5f3e84dafe291b1bc78f8e2a881b01d104130e6a1bec0cbe0a3"
+    },
+    {
+      "id": "termino-middle",
+      "text": "termino",
+      "src": "/audio/phonetics/termino-middle.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "bd34446a0e532f408ce401b897a34913a997495c92b494119acc3d6b093f1797"
+    },
+    {
+      "id": "termino-final",
+      "text": "terminó",
+      "src": "/audio/phonetics/termino-final.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "3e1eb8a8462583eaf608963dc2c8fca94196c272fa351c4ffa6c3cdcbb81355d"
+    },
+    {
+      "id": "papel",
+      "text": "papel",
+      "src": "/audio/phonetics/papel.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "a52ae2cdb387794e31a51663f3fc13c3fc489bdb3a1829f273681e6b81c6a251"
+    },
+    {
+      "id": "telefono",
+      "text": "teléfono",
+      "src": "/audio/phonetics/telefono.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "60bde93c5b0fb58f5caecc58dd8ae0c01b5b30bae4430126b11c4231621d2469"
+    },
+    {
+      "id": "cafe",
+      "text": "café",
+      "src": "/audio/phonetics/cafe.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "c8ec4a3f1534bf09f0c5e8c233db04b0c62691f34098750bbfab9a71c449f32e"
+    },
+    {
+      "id": "hablo-present",
+      "text": "hablo",
+      "src": "/audio/phonetics/hablo-present.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "27deff8e4e66ca30c0feaf7e6478f285dc0f17c477ed5a157cfb494d55bbff0a"
+    },
+    {
+      "id": "hablo-past",
+      "text": "habló",
+      "src": "/audio/phonetics/hablo-past.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "ea0686e8d07d85b40bd9126523dd8db0ef6ea0ed51f45fca544c3c53d1c37bda"
+    },
+    {
+      "id": "stress-phrase-1",
+      "text": "¿Tomás café?",
+      "src": "/audio/phonetics/stress-phrase-1.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "8cba371053eabf66ed6ad47a8406463b30d4ed219880f504a84ecdc7612e8e15"
+    },
+    {
+      "id": "stress-phrase-2",
+      "text": "Sí, tomo café.",
+      "src": "/audio/phonetics/stress-phrase-2.mp3",
+      "lessonIds": [
+        202
+      ],
+      "durationSeconds": 2.328,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "sha256": "5c8bdb371f1c6c9eaef75fc8b02670bd1a70f11d44ef365e2b473ff3363e5795"
+    }
+  ],
+  "qa": {
+    "fileValidation": "passed: 32/32 files; positive duration; MP3, 24000 Hz, mono; full decode; distinct SHA-256; non-silent decoded signal",
+    "actualListening": "not performed",
+    "limitations": [
+      "Configured es-AR voice metadata is not an independent auditory verification of accent or naturalness.",
+      "Every clip still requires listening QA for text concordance, vowel quality and spoken stress before publication.",
+      "Isolated vowel spellings can be interpreted as letter names or conjunctions by synthesis; verify the intended five vowel sounds by ear.",
+      "Stress contrasts (público/publico/publicó, término/termino/terminó, hablo/habló) require actual audition; distinct file hashes do not prove the requested stress contrast."
+    ]
+  }
+}

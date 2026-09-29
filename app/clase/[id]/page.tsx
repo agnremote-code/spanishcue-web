@@ -8,6 +8,8 @@ import MoodTenseDisclosure from "../../verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "../../verbal-system/VerbalPosition";
 import GrammarStep from "../../grammar-steps/GrammarStep";
 import { localeFromHeaders } from "../../i18n/messages";
+import PhoneticsLesson from "../../phonetics/PhoneticsLesson";
+import { isPhoneticsLesson } from "../../phonetics/navigation";
 
 export async function generateMetadata({
   params,
@@ -49,6 +51,8 @@ export default async function LessonPage({
   if (!isFreeLesson(lesson.id) && !fullAccessFromHeaders(requestHeaders)) {
     redirect(`/acceso?returnTo=${encodeURIComponent(`/clase/${id}`)}`);
   }
+
+  if (isPhoneticsLesson(lesson.id)) return <PhoneticsLesson key={lesson.id} lessonId={lesson.id} />;
 
   return (
     <div className="teacher-app">
