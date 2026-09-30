@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from 'esbuild';
@@ -9,6 +11,7 @@ import { build } from 'esbuild';
 const require = createRequire(import.meta.url);
 const engine = await import('../app/noche-abierta/engine.mjs');
 const scene = await import('../app/noche-abierta/scene.mjs');
+const world = await import('../app/noche-abierta/world3d.mjs');
 
 async function catalog() {
   const built = await build({ stdin: { contents: "export {catalogLessons} from './app/conversation-families/catalog'; export {lessons} from './app/lesson-catalog'; export {isFreeLesson,lessonAtPath} from './app/access-policy';", resolveDir: process.cwd() }, bundle: true, format: 'esm', platform: 'node', write: false });
@@ -95,11 +98,11 @@ test('the catalog thumbnail is a real 16:9 image from the lesson folder', async 
   assert.ok(Math.abs(width / height - 16 / 9) < 0.01, `${width}x${height}`);
 });
 
-test('eight places, each a different kind of situation, with two or three valid variants', () => {
+test('nine places, each a different kind of situation, with two or three valid variants', () => {
   const { LOCATIONS } = engine;
-  assert.equal(LOCATIONS.length, 8);
-  assert.equal(new Set(LOCATIONS.map(item => item.id)).size, 8);
-  assert.equal(new Set(LOCATIONS.map(item => item.kind)).size, 8, 'every place uses its own mechanic');
+  assert.equal(LOCATIONS.length, 9);
+  assert.equal(new Set(LOCATIONS.map(item => item.id)).size, 9);
+  assert.equal(new Set(LOCATIONS.map(item => item.kind)).size, 9, 'every place uses its own mechanic');
   const variantIds = LOCATIONS.flatMap(item => item.variants.map(variant => variant.id));
   assert.equal(new Set(variantIds).size, variantIds.length, 'variant ids are unique across the city');
   assert.ok(variantIds.length >= 16);
@@ -117,7 +120,8 @@ test('eight places, each a different kind of situation, with two or three valid 
       const cue = variant.cue;
       const shape = { message: () => cue.from && cue.text, inspect: () => cue.items?.length >= 3 && cue.items.every(item => item.detail), recognize: () => cue.clues?.length >= 3,
         route: () => cue.routes?.length === 3, proposals: () => cue.people?.length >= 3, versions: () => cue.versions?.length >= 2,
-        shelf: () => cue.items?.length === 3 && cue.items.every(item => item.pro && item.con), vote: () => cue.people?.length >= 3 && cue.people.every(item => item.reason) }[location.kind];
+        shelf: () => cue.items?.length === 3 && cue.items.every(item => item.pro && item.con), vote: () => cue.people?.length >= 3 && cue.people.every(item => item.reason),
+        roadside: () => cue.speaker && cue.text && cue.clues?.length >= 3 }[location.kind];
       assert.ok(shape?.(), `${variant.id} cue matches ${location.kind}`);
     }
   }
@@ -245,16 +249,23 @@ test('state survives a reload and a reset starts the night from zero', () => {
   assert.notEqual(engine.initialState(), engine.initialState(), 'each reset gets a fresh object');
 });
 
-test('no game economy: nothing in the state or the engine counts points, lives, ranks or time left', () => {
+test('no game economy: nothing in the state or the engine counts points, lives, ranks or time left', async () => {
   const bannedWords = new Set(['score', 'scores', 'point', 'points', 'xp', 'coin', 'coins', 'star', 'stars', 'rank', 'ranking', 'respect', 'life', 'lives', 'health', 'timer', 'countdown', 'leaderboard', 'achievement', 'achievements', 'mastered', 'mastery', 'streak', 'level', 'levels']);
   const words = name => name.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const banned = { test: name => words(name).some(word => bannedWords.has(word)) };
-  const { trail } = play(['cafe', 'departamento', 'esquina', 'taxi', 'plaza', 'tienda', 'restaurante', 'terraza']);
+  const { trail } = play(['cafe', 'departamento', 'esquina', 'taxi', 'plaza', 'tienda', 'restaurante', 'terraza', 'auto']);
   const keys = new Set();
   const walk = value => { if (value && typeof value === 'object') for (const [key, inner] of Object.entries(value)) { keys.add(key); walk(inner); } };
   for (const state of trail) walk(state);
   for (const key of keys) assert.equal(banned.test(key), false, `state key ${key}`);
   for (const name of Object.keys(engine)) assert.equal(banned.test(name), false, `export ${name}`);
+  for (const name of Object.keys(world)) assert.equal(banned.test(name), false, `3D export ${name}`);
+  for (const file of ['World3D.tsx', 'build3d.ts', 'people3d.ts']) {
+    // Our own names only: comments and three.js class names are not state.
+    const source = (await readFile(`app/noche-abierta/${file}`, 'utf8')).replace(/\/\/.*$/gm, '').replace(/THREE\.\w+/g, '').replace(/\.(?:setFromPoints|getPoints)\b/g, '');
+    const identifiers = new Set(source.match(/\b[A-Za-z_]\w*\b/g));
+    for (const name of identifiers) assert.equal(banned.test(name), false, `${file}: ${name}`);
+  }
   assert.equal(banned.test('playerScore'), true, 'the check itself catches a score');
   assert.match(engine.nightClock(engine.initialState()), /^20:40$/, 'the clock only tells the time of night');
 });
@@ -269,8 +280,10 @@ test('the rendered lesson keeps one prompt at a time, help closed and teacher to
   assert.doesNotMatch(arrival, /role="button"/, 'the city waits until the learner starts');
 
   const city = render(engine.startExploring(engine.initialState()));
-  assert.equal((city.match(/role="button" tabindex="0"/g) || []).length, 8, 'eight focusable places');
-  assert.equal((city.match(/aria-label="Ir a /g) || []).length, 8);
+  assert.equal((city.match(/role="button" tabindex="0"/g) || []).length, 9, 'nine focusable places on the map');
+  assert.equal((city.match(/aria-label="Ir a /g) || []).length, 9);
+  assert.match(city, /data-view="map"/, 'the server renders the map; the 3D street loads in the browser');
+  assert.doesNotMatch(city, /<canvas/);
 
   let state = engine.openLocation(engine.startExploring(engine.initialState()), 'restaurante');
   const encounter = render(state);
@@ -297,4 +310,184 @@ test('the rendered lesson keeps one prompt at a time, help closed and teacher to
     const buttons = html.match(/<button[^>]*>/g) || [];
     assert.ok(buttons.every(tag => tag.includes('type="button"')), 'no accidental submits');
   }
+});
+
+test('every encounter reveals new information before the extra prompts, and the teacher can close it', () => {
+  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'auto');
+  const location = engine.locationById('auto');
+  assert.equal(engine.stepCount(location, 0), 3 + location.variants[0].prompts.length);
+  state = engine.chooseReaction(state, 'auto', 'ayudar');
+  state = engine.nextStep(state, 'auto');
+  assert.equal(state.encounters.auto.step, engine.TWIST_STEP);
+  assert.match(engine.TWIST_QUESTION, /¿Cambia tu respuesta\?/);
+  assert.ok(location.variants.every(variant => variant.twist.length > 20));
+  let fresh = engine.openLocation(engine.startExploring(engine.initialState()), 'plaza');
+  fresh = engine.markDone(fresh, 'plaza');
+  assert.equal(fresh.encounters.plaza.done, true);
+  assert.deepEqual(engine.completedIds(fresh), ['plaza'], 'marked done by the teacher counts as completed');
+  assert.equal(engine.markDone(fresh, 'nope'), fresh);
+  assert.ok(engine.CITY_EVENTS.find(item => item.id === 'lluvia').affects.includes('auto'));
+});
+
+test('the rendered encounter shows the new information as its own step', async () => {
+  const NocheAbierta = await component('app/noche-abierta/NocheAbierta.tsx');
+  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'auto');
+  const first = renderToString(React.createElement(NocheAbierta, { initial: state }));
+  assert.match(first, /na-roadside/);
+  assert.match(first, /Carla/);
+  state = engine.nextStep(engine.chooseReaction(state, 'auto', 'llamar'), 'auto');
+  const twist = renderToString(React.createElement(NocheAbierta, { initial: state }));
+  assert.match(twist, /Nueva información/);
+  assert.match(twist, /La grúa tarda dos horas/);
+  assert.equal((twist.match(/class="na-prompt"/g) || []).length, 1, 'still one prompt at a time');
+});
+
+// ------------------------------------------------------------ 3D street
+
+test('3D world: the learner starts on a walkable sidewalk inside the district', () => {
+  const { SPAWN, WORLD_BOUNDS, isWalkable, insideBuilding } = world;
+  assert.ok(Number.isFinite(SPAWN.x) && Number.isFinite(SPAWN.z) && Number.isFinite(SPAWN.heading));
+  assert.ok(SPAWN.x > WORLD_BOUNDS.minX && SPAWN.x < WORLD_BOUNDS.maxX && SPAWN.z > WORLD_BOUNDS.minZ && SPAWN.z < WORLD_BOUNDS.maxZ);
+  assert.equal(insideBuilding(SPAWN.x, SPAWN.z, 0.5), false);
+  assert.ok(isWalkable(SPAWN.x, SPAWN.z));
+});
+
+test('3D world: one interaction target per place, with valid coordinates, radii and keys', () => {
+  const { TARGETS, isWalkable, nearestTarget, exitSpot } = world;
+  assert.equal(new Set(TARGETS.map(item => item.id)).size, TARGETS.length, 'unique target ids');
+  const byPlace = new Map(TARGETS.map(item => [item.location, item]));
+  assert.equal(byPlace.size, TARGETS.length, 'one target per place');
+  for (const location of engine.LOCATIONS) assert.ok(byPlace.get(location.id), `${location.id} has a target`);
+  for (const target of TARGETS) {
+    assert.ok(engine.locationById(target.location), target.id);
+    assert.ok(Number.isFinite(target.x) && Number.isFinite(target.z), `${target.id} coordinates`);
+    assert.ok(target.radius >= 1.2 && target.radius <= 3, `${target.id} radius ${target.radius}`);
+    assert.ok(target.key === 'E' || target.key === 'F', target.id);
+    assert.match(target.verb, /^[A-ZÁÉÍÓÚÑ]+$/, target.id);
+    assert.ok(isWalkable(target.x, target.z), `${target.id} can be reached`);
+    assert.equal(nearestTarget({ x: target.x, z: target.z })?.id, target.id, `${target.id} is the prompt at its own spot`);
+    const out = exitSpot(target);
+    assert.ok(isWalkable(out.x, out.z), `${target.id} exit spot is walkable`);
+  }
+  assert.equal(nearestTarget({ x: 0, z: 0 }), null, 'no prompt in the middle of the crossing');
+  assert.equal(TARGETS.filter(item => item.key === 'F').map(item => item.id).join(), 'taxi', 'F is only for getting into the taxi');
+});
+
+test('3D world: interiors, rooftop, taxi and the broken car each have their own micro-world', () => {
+  const { TARGETS, STAGES, BUILDINGS, VEHICLES, NPCS, WORLD_BOUNDS } = world;
+  const interiors = Object.entries(STAGES).filter(([, stage]) => stage.size);
+  assert.ok(interiors.length >= 3, 'at least three enterable buildings');
+  for (const target of TARGETS) assert.ok(target.stage === 'calle' || target.stage === 'taxi' || STAGES[target.stage], `${target.id} stage ${target.stage}`);
+  for (const [id, stage] of interiors) {
+    assert.ok(TARGETS.some(target => target.stage === id), `${id} is entered from the street`);
+    assert.ok(stage.origin.x - stage.size.w / 2 > WORLD_BOUNDS.maxX + 50, `${id} sits away from the street`);
+    assert.ok(Math.abs(stage.spot.x - stage.origin.x) < stage.size.w / 2 && Math.abs(stage.spot.z - stage.origin.z) < stage.size.d / 2, `${id} spot inside`);
+  }
+  const origins = interiors.map(([, stage]) => stage.origin.x).sort((a, b) => a - b);
+  for (let i = 1; i < origins.length; i++) assert.ok(origins[i] - origins[i - 1] >= 20, 'interiors do not overlap');
+  for (const id of ['cafe', 'departamento', 'tienda']) assert.ok(STAGES[TARGETS.find(t => t.location === id).stage].size, `${id} is an interior`);
+  const roof = BUILDINGS.find(item => item.rooftop);
+  const terraza = STAGES[TARGETS.find(t => t.location === 'terraza').stage];
+  assert.equal(terraza.roof, roof.h, 'the rooftop is the real roof of the tall building');
+  assert.ok(terraza.spot.x > roof.x0 && terraza.spot.x < roof.x1 && terraza.spot.z > roof.z0 && terraza.spot.z < roof.z1);
+  const taxi = TARGETS.find(t => t.location === 'taxi');
+  assert.equal(taxi.stage, 'taxi');
+  assert.equal(VEHICLES.find(v => v.id === taxi.vehicle)?.kind, 'taxi');
+  const car = TARGETS.find(t => t.location === 'auto');
+  assert.equal(car.verb, 'ACERCARME');
+  const broken = VEHICLES.find(v => v.id === car.vehicle);
+  assert.equal(broken?.kind, 'broken');
+  assert.equal(broken.hoodOpen, true);
+  assert.equal(NPCS.find(n => n.id === car.npc)?.location, 'auto', 'the driver waits by the car');
+  assert.equal(new Set(NPCS.map(n => n.id)).size, NPCS.length);
+  assert.ok(NPCS.length >= 8 && NPCS.filter(n => n.location).length >= 5, 'people in the street, several you can talk to');
+  for (const target of TARGETS.filter(t => t.npc)) assert.ok(NPCS.some(n => n.id === target.npc), target.id);
+});
+
+test('3D world: walking moves, turns, runs and stops at walls', () => {
+  const { stepPlayer, colliders, WALK_SPEED, RUN_SPEED, TURN_SPEED, BUILDINGS, PLAYER_RADIUS } = world;
+  const boxes = colliders();
+  const start = { x: 5.6, z: 20, heading: Math.PI };
+  const walked = stepPlayer(start, { forward: 1 }, 0.1, boxes);
+  assert.ok(Math.abs(start.z - walked.z - WALK_SPEED * 0.1) < 1e-9, 'W walks forward (north here)');
+  assert.ok(walked.moving);
+  const ran = stepPlayer(start, { forward: 1, run: true }, 0.1, boxes);
+  assert.ok(Math.abs(start.z - ran.z - RUN_SPEED * 0.1) < 1e-9, 'Shift runs');
+  const back = stepPlayer(start, { forward: -1 }, 0.1, boxes);
+  assert.ok(back.z > start.z && back.z - start.z < WALK_SPEED * 0.1, 'S steps back, slower');
+  const left = stepPlayer(start, { turn: 1 }, 0.1, boxes);
+  assert.ok(Math.abs(left.heading - start.heading - TURN_SPEED * 0.1) < 1e-9 && !left.moving, 'A turns on the spot');
+  assert.equal(stepPlayer(start, { forward: 1 }, 5, boxes).z, stepPlayer(start, { forward: 1 }, 0.1, boxes).z, 'long frames are clamped');
+  const cafe = BUILDINGS.find(b => b.id === 'cafe');
+  let player = { x: -11.5, z: -6, heading: Math.PI };
+  for (let i = 0; i < 100; i++) player = stepPlayer(player, { forward: 1, run: true }, 0.1, boxes);
+  assert.ok(player.z >= cafe.z1 + PLAYER_RADIUS - 1e-9, `stopped at the café wall (${player.z})`);
+  player = { x: -11.5, z: -7.6, heading: Math.PI + 0.5 };
+  const slide = stepPlayer(player, { forward: 1 }, 0.1, boxes);
+  assert.ok(slide.x < player.x, 'slides along the wall instead of sticking');
+  let car = { x: -21, z: 5, heading: Math.PI };
+  for (let i = 0; i < 40; i++) car = stepPlayer(car, { forward: 1 }, 0.1, boxes);
+  assert.ok(car.z > 3.3, 'cannot walk through the broken car');
+});
+
+test('3D world: the follow camera stays out of buildings and street shots have a clear view', () => {
+  const { followCamera, CAMERA_PRESETS, insideBuilding, isWalkable, streetFraming, TARGETS, colliders } = world;
+  assert.ok(CAMERA_PRESETS.length >= 2 && CAMERA_PRESETS.length <= 3);
+  for (const preset of CAMERA_PRESETS) assert.ok(preset.distance >= 3 && preset.distance <= 9.5 && preset.height > 1.5, preset.id);
+  let checked = 0;
+  for (let x = -42; x <= 42; x += 3) for (let z = -38; z <= 36; z += 3) {
+    if (!isWalkable(x, z)) continue;
+    for (const heading of [0, Math.PI / 2, Math.PI, -Math.PI / 2]) {
+      const shot = followCamera({ x, z, heading }, CAMERA_PRESETS[1]);
+      assert.equal(insideBuilding(shot.x, shot.z), false, `camera at ${x},${z},${heading}`);
+      assert.ok(Math.hypot(shot.x - x, shot.y - 1.3, shot.z - z) >= 1.8, 'the avatar stays in view');
+      checked++;
+    }
+  }
+  assert.ok(checked > 500);
+  const solids = colliders().filter(box => !box.npc);
+  for (const target of TARGETS.filter(t => t.stage === 'calle')) {
+    const shot = streetFraming(target, { x: target.x, z: target.z, heading: 0 });
+    const blocked = solids.some(b => shot.camera.x > b.x0 && shot.camera.x < b.x1 && shot.camera.z > b.z0 && shot.camera.z < b.z1);
+    assert.equal(blocked, false, `${target.id} shot is not inside anything`);
+    assert.ok(Math.hypot(shot.camera.x - target.x, shot.camera.z - target.z) < 8, `${target.id} shot is close`);
+  }
+});
+
+test('3D world: keys map to the documented controls and never fire while typing', () => {
+  const { keyAction, inputFrom, canUseKeys } = world;
+  const expected = { KeyW: 'forward', ArrowUp: 'forward', KeyS: 'back', ArrowDown: 'back', KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right',
+    ShiftLeft: 'run', ShiftRight: 'run', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map' };
+  for (const [code, action] of Object.entries(expected)) assert.equal(keyAction(code), action, code);
+  assert.equal(keyAction('KeyQ'), null);
+  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'run'])), { forward: 1, turn: 1, run: true });
+  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { forward: 0, turn: -1, run: false });
+  assert.equal(canUseKeys({ tagName: 'INPUT' }), false);
+  assert.equal(canUseKeys({ tagName: 'TEXTAREA' }), false);
+  assert.equal(canUseKeys({ tagName: 'DIV', isContentEditable: true }), false);
+  assert.equal(canUseKeys({ tagName: 'DIV' }), true);
+  const help = readFileSync('app/noche-abierta/World3D.tsx', 'utf8');
+  for (const line of ['WASD / FLECHAS · MOVERSE', 'E · INTERACTUAR', 'F · SUBIR / BAJAR', 'SHIFT · CORRER']) assert.ok(help.includes(line), line);
+});
+
+test('3D world: original procedural assets only, and three.js stays inside this lesson', async () => {
+  const files = ['World3D.tsx', 'build3d.ts', 'people3d.ts', 'world3d.mjs'];
+  for (const file of files) {
+    const source = readFileSync(`app/noche-abierta/${file}`, 'utf8');
+    assert.doesNotMatch(source, /https?:\/\//, `${file} loads nothing from the network`);
+    assert.doesNotMatch(source, /\.(?:glb|gltf|fbx|obj|mtl|png|jpe?g|ktx2|hdr)\b['"]/i, `${file} loads no model or image files`);
+    assert.doesNotMatch(source, /\b(?:gta|grand theft|rockstar|vice city|san andreas|kenney)\b/i, `${file} has no borrowed game content`);
+  }
+  const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+  assert.equal(pkg.dependencies.three, '0.186.1', 'three is pinned');
+  const importers = execFileSync('git', ['grep', '-l', '-E', "from 'three'|from \"three\"|from 'three/", '--', 'app', 'lib', 'components'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  assert.ok(importers.length >= 1);
+  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/')), importers.join());
+  const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  assert.match(lesson, /import\('\.\/World3D'\)/, 'the 3D street is loaded on demand');
+  assert.doesNotMatch(lesson, /^import (?!type )[^\n]*from '\.\/World3D'/m, 'only its type is imported eagerly');
+  assert.match(lesson, /webglAvailable\(\)/, 'no WebGL means the map fallback');
+  const assets = readFileSync('docs/lessons/noche-abierta-3d-assets.md', 'utf8');
+  for (const file of ['people3d.ts', 'build3d.ts', 'world3d.mjs']) assert.ok(assets.includes(file), `provenance lists ${file}`);
+  assert.match(assets, /CC0|original/i);
 });

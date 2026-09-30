@@ -1,0 +1,55 @@
+export type Box = { x0: number; x1: number; z0: number; z1: number; vehicle?: string; npc?: string };
+export type Door = { side: 'north' | 'south'; at: number };
+export type Building = { id: string; x0: number; x1: number; z0: number; z1: number; h: number; style: string; location?: string; sign?: string; door?: Door; rooftop?: boolean };
+export type Vehicle = { id: string; kind: 'taxi' | 'broken' | 'sedan' | 'coupe'; x: number; z: number; heading: number; location?: string; color?: string; hoodOpen?: boolean };
+export type Look = { shirt: string; pants?: string; hair: string; skin: string; shoes?: string };
+export type Npc = {
+  id: string; x: number; z: number; facing: number; location?: string; look: Look; seated?: boolean; bike?: boolean;
+  walk?: { axis: 'x' | 'z'; from: number; to: number; speed: number };
+};
+export type Target = {
+  id: string; location: string; x: number; z: number; radius: number; key: 'E' | 'F'; verb: string; stage: string;
+  npc?: string; vehicle?: string; shot?: Shot;
+};
+export type Stage = {
+  origin: { x: number; z: number }; size?: { w: number; d: number }; roof?: number;
+  spot: { x: number; z: number; heading: number };
+  camera: { x: number; y: number; z: number }; look: { x: number; y: number; z: number };
+};
+export type Player = { x: number; z: number; heading: number };
+export type Step = Player & { speed: number; moving: boolean };
+export type Input = { forward: number; turn: number; run: boolean };
+export type Preset = { id: string; distance: number; height: number; ahead: number };
+export type Shot = { camera: { x: number; y: number; z: number }; look: { x: number; y: number; z: number } };
+
+export const WORLD_BOUNDS: { minX: number; maxX: number; minZ: number; maxZ: number };
+export const ROAD_HALF: number;
+export const SIDEWALK: number;
+export const PLAYER_RADIUS: number;
+export const WALK_SPEED: number;
+export const RUN_SPEED: number;
+export const TURN_SPEED: number;
+export const SPAWN: Player;
+export const BUILDINGS: Building[];
+export const PLAZA: { x0: number; x1: number; z0: number; z1: number; fountain: { x: number; z: number; r: number } };
+export const VEHICLES: Vehicle[];
+export const VEHICLE_SIZE: { length: number; width: number };
+export const SOLID_PROPS: (Box & { id: string })[];
+export const OVERPASS: { x0: number; x1: number; z0: number; z1: number; y: number };
+export const NPCS: Npc[];
+export const TARGETS: Target[];
+export const STAGES: Record<string, Stage>;
+export const CAMERA_PRESETS: Preset[];
+export function streetFraming(target: Target, player: Player): Shot;
+export function colliders(): Box[];
+export function insideBuilding(x: number, z: number, margin?: number): boolean;
+export function isWalkable(x: number, z: number, boxes?: Box[]): boolean;
+export function stepPlayer(player: Player, input: Partial<Input>, dt: number, boxes?: Box[]): Step;
+export function nearestTarget(player: { x: number; z: number }, targets?: Target[]): Target | null;
+export function followCamera(player: Player, preset: Preset, yawOffset?: number): { x: number; y: number; z: number; look: { x: number; y: number; z: number } };
+export function exitSpot(target: Target): Player;
+export function toMinimap(x: number, z: number): { u: number; v: number };
+export type Action = 'forward' | 'back' | 'left' | 'right' | 'run' | 'interact' | 'vehicle' | 'camera' | 'map';
+export function keyAction(code: string): Action | null;
+export function inputFrom(held: Set<string>): Input;
+export function canUseKeys(target: EventTarget | null): boolean;

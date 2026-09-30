@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {mouthLibraryChanges, reconciledMainBytes, reconciledMainPaths, wave3PreservedBytes} from './helpers/wave3-preservation.mjs';
-import {isApprovedAdditionPath} from './helpers/catalog-additions.mjs';
+import {isApprovedAdditionPath, withoutApprovedAdditions} from './helpers/catalog-additions.mjs';
 
 const base = JSON.parse(readFileSync('tests/fixtures/wave3-preserved.json', 'utf8'));
 const mainPaths = reconciledMainPaths();
@@ -15,7 +15,7 @@ test('239 original source, test, asset, release-policy and report records retain
     if (mainPaths.has(path)) {
       const historical = execFileSync('git', ['show', `${base.baseCommit}:${path}`]);
       assert.equal(createHash('sha256').update(expected.prefixBytes ? historical.subarray(0, expected.prefixBytes) : historical).digest('hex'), expected.sha256, `${path} historical record`);
-      assert.ok(readFileSync(path).equals(reconciledMainBytes(path, base.baseCommit)), `${path} reconciled with main`);
+      assert.ok(withoutApprovedAdditions(path, readFileSync(path)).equals(reconciledMainBytes(path, base.baseCommit)), `${path} reconciled with main`);
       continue;
     }
     const bytes = wave3PreservedBytes(path, readFileSync(path));
