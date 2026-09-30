@@ -190,6 +190,7 @@ export default function World3D(props: WorldProps) {
       slow: 0,
       mapAt: 0,
       offset: 0,
+      offsetY: 0,
     };
     // Start where the learner last was, or at the bus stop.
     const lastTarget = live.current.last ? TARGETS.find(t => t.location === live.current.last) : null;
@@ -235,11 +236,14 @@ export default function World3D(props: WorldProps) {
       for (const [id, interior] of interiors) interior.group.visible = id === stage;
       city.root.visible = !stage;
       const interior = stage ? interiors.get(stage) : null;
-      indoorLights.forEach((light, i) => {
-        const spot = interior?.lamp.spots[i];
-        light.intensity = spot ? 6 : 0;
-        if (spot) { light.position.copy(spot).setY(Math.min(spot.y, 2.6)); light.color.set(interior!.lamp.color); }
-      });
+      // One lamp from the room, one soft fill from the camera side so faces read.
+      const [lamp, fill] = indoorLights;
+      const spot = interior?.lamp.spots[0];
+      const view = stage ? STAGES[stage].camera : null;
+      lamp.intensity = spot ? 6 : 0;
+      fill.intensity = view ? 3.5 : 0;
+      if (spot) { lamp.position.copy(spot).setY(Math.min(spot.y, 2.3)); lamp.color.set(interior!.lamp.color); }
+      if (view) { fill.position.set(view.x, 2.3, view.z - 1); fill.color.set('#ffe8cc'); }
     };
     const npcFacing = (id: string | undefined, heading: number | null) => {
       const rig = id ? city.npcs.get(id) : null;
@@ -515,9 +519,14 @@ export default function World3D(props: WorldProps) {
       camera.lookAt(sim.camLook);
       // With the conversation panel open on a wide screen, frame the scene in
       // the space left of it.
-      const panel = sim.mode === 'scene' && !p.narrow ? (Math.min(420, host.clientWidth * 0.4) + 16) / 2 : 0;
-      sim.offset += (panel - sim.offset) * (reduced() ? 1 : Math.min(1, dt * 4));
-      if (Math.abs(sim.offset) > 0.5) camera.setViewOffset(host.clientWidth, host.clientHeight, sim.offset, 0, host.clientWidth, host.clientHeight);
+      // On a phone the panel is a bottom sheet, so the scene moves up instead.
+      const framing = sim.mode === 'scene' || sim.mode === 'final';
+      const panelX = framing && !p.narrow ? (Math.min(sim.mode === 'final' ? 580 : 420, host.clientWidth * (sim.mode === 'final' ? 0.52 : 0.4)) + 16) / 2 : 0;
+      const panelY = framing && p.narrow ? host.clientHeight * 0.3 : 0;
+      const ease = reduced() ? 1 : Math.min(1, dt * 4);
+      sim.offset += (panelX - sim.offset) * ease;
+      sim.offsetY += (panelY - sim.offsetY) * ease;
+      if (Math.abs(sim.offset) > 0.5 || Math.abs(sim.offsetY) > 0.5) camera.setViewOffset(host.clientWidth, host.clientHeight, sim.offset, sim.offsetY, host.clientWidth, host.clientHeight);
       else if (camera.view?.enabled) camera.clearViewOffset();
       dome.position.copy(camera.position);
 
@@ -569,6 +578,7 @@ export default function World3D(props: WorldProps) {
       // Rain.
       const raining = p.event === 'lluvia' && !sim.indoor;
       rainMaterial.opacity += ((raining ? 0.55 : 0) - rainMaterial.opacity) * Math.min(1, dt * 2);
+      if (sim.indoor) rainMaterial.opacity = 0;
       rain.visible = rainMaterial.opacity > 0.01;
       if (rain.visible) {
         rain.position.set(camera.position.x, 0, camera.position.z);

@@ -45,3 +45,35 @@ Not used, by design: coins, XP, stars, respect meters, health, lives, mission sc
 ## Browser QA record (2026-09-29)
 
 Chromium (Playwright) on a local fixture that renders the real lesson component, because the production route correctly requires PRO access. Desktop 1440×900: entry, city, café/departamento/esquina/taxi encounters, help drawer, automatic city event after the fourth encounter, event prompts, final recap with teacher criteria, reset. Mobile 390×844 and 320×640: entry, *Lugares* list, restaurant encounter, help, final. No page or console errors. Fixed during QA: header overflow at 320 px, overlapping place labels, camera framing for tall buildings, labels dimmed while a place is open.
+
+## 3D upgrade (2026-09-30)
+
+The isometric SVG city is now the fallback. When the browser has WebGL, the lesson opens a real 3D street built with three.js. The learner walks an adult avatar in third person and walks into the places. Content, route, ID, level, category, PRO access and the 45-minute structure are unchanged. Asset provenance is recorded in `noche-abierta-3d-assets.md`.
+
+| Area | Record |
+| --- | --- |
+| Places | Nine. The original eight plus *Auto roto* (`auto`, kind `roadside`): a car broken down on the avenue, with the hood open and hazard lights. It has 2 variants and the same contract as the other places. The rain event now also touches it. |
+| Encounter rhythm | Situation → speak → decision → new information (*¿Cambia tu respuesta?*) → react → support → leave. The twist step (`TWIST_STEP`) comes before the prompts. |
+| Interiors | The café, the apartment and the 24-hour store are real interiors, each with its own lighting, furniture and window views. The corner, restaurant, plaza, taxi, broken car and rooftop use cinematic street framing, with no separate room. |
+| Taxi | Pressing F next to the taxi gets in, and the taxi drives down the avenue while the encounter runs. *Bajar del taxi* (F or Esc) gets out at the destination. |
+| Controls | Movement: WASD or arrows, Shift to run. Actions: E or Enter to interact, F for the taxi, Esc to leave. View: V changes the camera, M toggles the minimap. Keys only work while the 3D view has focus and the learner is not typing. A contextual prompt (for example *E · ENTRAR Café Martina*) appears only within the target's radius, and nothing opens automatically. |
+| Mobile | A virtual joystick and a large action button replace the keys. Quality is lower: reduced pixel ratio, no shadows, no ambient walkers. |
+| Accessibility | A 2D/3D toggle, the *Lugares* list and the SVG map all work without WebGL. Reduced motion shortens the camera transitions. Focus returns to the 3D view after each encounter. |
+| Teacher tools | Hidden by default: *Ver el giro*, change variant, *Dar por terminado*, trigger event, support and skip. |
+| Loading | three.js and the 3D modules sit in a lazily imported, protected chunk: `World3D` is about 620 KB raw and 161 KB gzip. The lesson module itself is 37 KB. There are no binary assets. |
+
+### Browser QA record (2026-09-30)
+
+Tested in Chromium (Playwright with SwiftShader) on the same local fixture.
+
+- **Desktop, 1440×900.** Every key was exercised:
+  - movement: W, A, S, D, all four arrows, Shift+W;
+  - actions: E, Enter, F, Esc;
+  - view: V, M.
+- **Places.** All nine were visited, followed by the city event and the final rooftop scene.
+- **Collisions.** Walls, cars, the bus shelter, the restaurant table and standing people all block the avatar.
+- **Reduced motion.** The same run passed with reduced motion enabled.
+- **Mobile.** At 390×844 and 320×640, the joystick moves the avatar and the action button reads *ENTRAR*. There is no document overflow and every target is at least 44 px.
+- **No WebGL.** The map view shows nine places and the broken-car encounter opens.
+- **Errors.** No page or console errors in any run.
+- **Frame rate.** Software rendering gives 1–6 FPS, so real-GPU frame rate was not measured. Adaptive quality lowers the resolution, then turns shadows off, when a device stays under 30 FPS.

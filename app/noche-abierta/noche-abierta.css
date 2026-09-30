@@ -286,13 +286,20 @@
 
 @media (max-width: 760px) {
   .is-3d .na-stage { position: relative; height: calc(100svh - 56px); flex: none; display: block; overflow: hidden; }
-  .na-world-tools { top: 10px; right: 10px; }
-  .na-minimap { top: 64px; bottom: auto; right: 10px; width: 120px; height: 120px; }
-  .na-hint.is-world { position: absolute; left: 50%; right: auto; bottom: auto; top: 10px; transform: translateX(-50%); width: auto; max-width: calc(100% - 180px); border-radius: 12px; animation: none; padding: 8px 12px; font-size: 13px; z-index: 2; }
+  .na-world-tools { top: 10px; right: 10px; flex-direction: column; align-items: stretch; }
+  .na-minimap { top: 116px; bottom: auto; right: 10px; width: 112px; height: 112px; }
+  .na-hint.is-world { position: absolute; left: 10px; right: auto; bottom: auto; top: 10px; transform: none; width: auto; max-width: calc(100% - 118px); min-height: 0; border-radius: 12px; animation: none; padding: 8px 12px; font-size: 13px; z-index: 2; }
+  .na-panel kbd { display: none; }
   .na-hint.is-world:has(button) { top: auto; bottom: 150px; left: 16px; right: 16px; transform: none; max-width: none; }
   .na-panel.is-world, .is-3d .na-final { top: auto; left: 0; right: 0; bottom: 0; width: auto; border-radius: 20px 20px 0 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .na-hazard { animation: none; }
   .na-controls, .na-prompt3d { transition: none; }
+}
+@media (max-width: 360px) {
+  .na-top { gap: 8px; padding: 0 10px; }
+  .na-brand { font-size: 13px; }
+  .na-tools { gap: 6px; }
+  .na-tool { padding: 0 8px; font-size: 13px; }
 }

@@ -183,7 +183,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
       <Link href="/" className="na-brand" aria-label="Volver a la biblioteca de SpanishCue">SPANISH<span>CUE</span></Link>
       <p className="na-title"><span>Noche abierta</span><small>Sábado · {nightClock(state)}</small></p>
       <nav className="na-tools" aria-label="Herramientas de la clase">
-        {canUse3d && <button type="button" className="na-tool" onClick={switchView}>{view === 'map' ? 'Ver en 3D' : 'Ver mapa'}</button>}
+        {canUse3d && <button type="button" className="na-tool" onClick={switchView} aria-label={view === 'map' ? 'Ver el barrio en 3D' : 'Ver el mapa en 2D'}>{view === 'map' ? '3D' : '2D'}</button>}
         {state.phase !== 'llegada' && state.phase !== 'cierre' && <button type="button" className="na-tool" aria-expanded={placesOpen} aria-controls="na-places" onClick={() => setPlacesOpen(value => !value)}>Lugares</button>}
         <button type="button" className="na-tool" aria-pressed={teacher} onClick={() => setTeacher(value => !value)}>Profe</button>
       </nav>
