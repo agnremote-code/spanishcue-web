@@ -92,7 +92,7 @@ export const PLACES = {
   plaza: { label: iso(8.2, 10.4, 60), spot: { gx: 8.6, gy: 8.6 } },
   tienda: { label: iso(4.0, 10.2, 84), spot: { gx: 5.35, gy: 10.2 } },
   terraza: { label: iso(10.7, 2.8, 246), spot: { gx: 10.6, gy: 5.35 } },
-  auto: { label: iso(1.6, 6.9, 60), spot: { gx: 3.3, gy: 7.45 } },
+  auto: { label: iso(1.6, 6.9, 111), spot: { gx: 3.3, gy: 7.45 } },
 };
 
 export const ARRIVAL_SPOT = { gx: 6.3, gy: 10.9 };

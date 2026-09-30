@@ -74,8 +74,8 @@ export default function World3D(props: WorldProps) {
     helpShown.current = true;
     // Showing the help is a reaction to the world entering walk mode.
     setHelp(true);
-    const timer = window.setTimeout(() => setHelp(false), 7000);
-    return () => window.clearTimeout(timer);
+    const hide = window.setTimeout(() => setHelp(false), 7000);
+    return () => window.clearTimeout(hide);
   }, [mode]);
 
   useEffect(() => {
@@ -104,7 +104,7 @@ export default function World3D(props: WorldProps) {
     scene.fog = new THREE.Fog('#9a7f86', 45, 170);
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 900);
 
-    // Sky: a gradient dome with a glow where the sun went down, and stars later.
+    // Sky: a gradient dome with a glow where the sun went down, and a few stars later.
     const sky = new THREE.ShaderMaterial({
       side: THREE.BackSide, depthWrite: false,
       uniforms: { top: { value: new THREE.Color() }, horizon: { value: new THREE.Color() }, glow: { value: new THREE.Color() }, sunDir: { value: new THREE.Vector3(-1, 0.1, -0.3).normalize() } },
@@ -114,17 +114,17 @@ export default function World3D(props: WorldProps) {
     const dome = new THREE.Mesh(new THREE.SphereGeometry(500, 32, 16), sky);
     dome.renderOrder = -1;
     scene.add(dome);
-    const starPositions: number[] = [];
+    const dotPositions: number[] = [];
     for (let i = 0; i < 420; i++) {
       const a = Math.random() * Math.PI * 2, y = 0.15 + Math.random() * 0.85;
       const r = Math.sqrt(1 - y * y);
-      starPositions.push(Math.cos(a) * r * 480, y * 480, Math.sin(a) * r * 480);
+      dotPositions.push(Math.cos(a) * r * 480, y * 480, Math.sin(a) * r * 480);
     }
-    const starGeometry = new THREE.BufferGeometry();
-    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starPositions, 3));
-    const starMaterial = new THREE.PointsMaterial({ color: '#f4efe0', size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0, fog: false, depthWrite: false });
-    const stars = new THREE.Points(starGeometry, starMaterial);
-    dome.add(stars);
+    const dotGeometry = new THREE.BufferGeometry();
+    dotGeometry.setAttribute('position', new THREE.Float32BufferAttribute(dotPositions, 3));
+    const dotMaterial = new THREE.PointsMaterial({ color: '#f4efe0', size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0, fog: false, depthWrite: false });
+    const skyDots = new THREE.Points(dotGeometry, dotMaterial);
+    dome.add(skyDots);
 
     const hemi = new THREE.HemisphereLight('#b8c6e0', '#5a4636', 0.9);
     scene.add(hemi);
@@ -236,9 +236,9 @@ export default function World3D(props: WorldProps) {
       city.root.visible = !stage;
       const interior = stage ? interiors.get(stage) : null;
       indoorLights.forEach((light, i) => {
-        const point = interior?.lamp.points[i];
-        light.intensity = point ? 6 : 0;
-        if (point) { light.position.copy(point).setY(Math.min(point.y, 2.6)); light.color.set(interior!.lamp.color); }
+        const spot = interior?.lamp.spots[i];
+        light.intensity = spot ? 6 : 0;
+        if (spot) { light.position.copy(spot).setY(Math.min(spot.y, 2.6)); light.color.set(interior!.lamp.color); }
       });
     };
     const npcFacing = (id: string | undefined, heading: number | null) => {
@@ -403,7 +403,7 @@ export default function World3D(props: WorldProps) {
       if (rainy) { sky.uniforms.top.value.multiplyScalar(0.6); sky.uniforms.horizon.value.multiplyScalar(0.7); }
       (scene.fog as THREE.Fog).color.copy(lerpColor('#b58a7c', '#131a28', t));
       (scene.fog as THREE.Fog).far = rainy ? 110 : 170;
-      starMaterial.opacity = Math.max(0, t - 0.35) * (rainy ? 0 : 1.2);
+      dotMaterial.opacity = Math.max(0, t - 0.35) * (rainy ? 0 : 1.2);
       const indoor = Boolean(sim.indoor);
       hemi.intensity = indoor ? 0.9 : 0.95 - t * 0.5;
       hemi.color.copy(lerpColor('#c9d2e6', '#3a4870', t));

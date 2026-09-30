@@ -194,12 +194,14 @@ export function followCamera(player, preset, yawOffset = 0) {
   const angle = player.heading + Math.PI + yawOffset;
   const look = { x: player.x + Math.sin(player.heading) * preset.ahead, y: 1.3, z: player.z + Math.cos(player.heading) * preset.ahead };
   let distance = preset.distance;
-  for (let d = 0.8; d <= preset.distance; d += 0.2) {
+  for (let d = 0.4; d <= preset.distance; d += 0.2) {
     const px = player.x + Math.sin(angle) * d;
     const pz = player.z + Math.cos(angle) * d;
-    if (insideBuilding(px, pz, 0.3)) { distance = Math.max(1.4, d - 0.4); break; }
+    if (insideBuilding(px, pz, 0.3)) { distance = Math.max(0.2, d - 0.4); break; }
   }
-  return { x: player.x + Math.sin(angle) * distance, y: preset.height * (distance / preset.distance) + 0.6, z: player.z + Math.cos(angle) * distance, look };
+  // With a wall close behind the avatar the camera rises and looks down instead.
+  const y = preset.height * (distance / preset.distance) + 0.6 + Math.max(0, 2.6 - distance) * 1.6;
+  return { x: player.x + Math.sin(angle) * distance, y, z: player.z + Math.cos(angle) * distance, look };
 }
 
 // Where the avatar stands when an encounter ends: back in the street, just

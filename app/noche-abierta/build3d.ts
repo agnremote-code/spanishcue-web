@@ -32,7 +32,7 @@ export type City = {
   asphalt: THREE.MeshStandardMaterial;
   water: THREE.MeshStandardMaterial;
 };
-export type Interior = { group: THREE.Group; people: Person[]; lamp: { color: string; points: THREE.Vector3[] } };
+export type Interior = { group: THREE.Group; people: Person[]; lamp: { color: string; spots: THREE.Vector3[] } };
 
 // Seeded random numbers so the city looks the same on every visit.
 function random(seed: number) {
@@ -450,14 +450,14 @@ function addTree(parent: THREE.Group, x: number, z: number, seed: number) {
 }
 
 function sag(from: THREE.Vector3, to: THREE.Vector3, drop: number) {
-  const points: THREE.Vector3[] = [];
+  const path: THREE.Vector3[] = [];
   for (let i = 0; i <= 12; i++) {
     const t = i / 12;
     const p = from.clone().lerp(to, t);
     p.y -= Math.sin(t * Math.PI) * drop;
-    points.push(p);
+    path.push(p);
   }
-  return new THREE.BufferGeometry().setFromPoints(points);
+  return new THREE.BufferGeometry().setFromPoints(path);
 }
 
 const carGlass = new THREE.MeshStandardMaterial({ color: '#1a222b', roughness: 0.1, metalness: 0.6, transparent: true, opacity: 0.55 });
@@ -1055,7 +1055,7 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
     placePerson(guest, cx - 4.1, 1.4, Math.PI / 2);
     people.push(waiter, guest);
     group.add(waiter.root, guest.root);
-    return { group, people, lamp: { color: '#ffc27a', points: [new THREE.Vector3(cx, 3, 0), new THREE.Vector3(cx - 1, 2.6, -2.2)] } };
+    return { group, people, lamp: { color: '#ffc27a', spots: [new THREE.Vector3(cx, 3, 0), new THREE.Vector3(cx - 1, 2.6, -2.2)] } };
   }
 
   if (stage === 'interior-departamento') {
@@ -1110,7 +1110,7 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
     placePerson(vale, cx + 1.3, 0.9, Math.PI + 0.6);
     people.push(vale);
     group.add(vale.root);
-    return { group, people, lamp: { color: '#ffc98a', points: [new THREE.Vector3(cx, 2.7, 0), new THREE.Vector3(cx + 3.5, 2.2, -3)] } };
+    return { group, people, lamp: { color: '#ffc98a', spots: [new THREE.Vector3(cx, 2.7, 0), new THREE.Vector3(cx + 3.5, 2.2, -3)] } };
   }
 
   if (stage === 'interior-tienda') {
@@ -1147,7 +1147,7 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
     placePerson(clerk, cx + 1.4, 0.9, Math.PI * 0.85);
     people.push(clerk);
     group.add(clerk.root);
-    return { group, people, lamp: { color: '#eef4ff', points: [new THREE.Vector3(cx, 3, 0), new THREE.Vector3(cx, 3, -3.5)] } };
+    return { group, people, lamp: { color: '#eef4ff', spots: [new THREE.Vector3(cx, 3, 0), new THREE.Vector3(cx, 3, -3.5)] } };
   }
   return null;
 }
