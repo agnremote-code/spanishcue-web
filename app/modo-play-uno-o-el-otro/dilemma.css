@@ -1,0 +1,28 @@
+.dilemma{min-width:0}
+.dilemma-steps{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0;padding:0;list-style:none}
+.dilemma-steps li{flex:1 1 0;min-width:0;padding:7px 8px;border-radius:12px;background:#eef3fa;color:#8390a8;font-size:9px;font-weight:900;letter-spacing:.8px;text-align:center;overflow-wrap:anywhere}
+.dilemma-steps li.done{background:#e3f7cf;color:#3b6b00}
+.dilemma-steps li.active{background:var(--play-accent);color:#fff}
+.dilemma .choice-button{overflow-wrap:anywhere}
+.dilemma-trail{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.dilemma-trail li{flex:1 1 180px;min-width:0;padding:11px 13px;border-radius:16px;background:#f5f7fb;border:1px solid #e1e7f0}
+.dilemma-trail small,.condition-card small,.dilemma-closing small,.dilemma-conditions-head{display:block;font-size:10px;font-weight:900;letter-spacing:1.2px}
+.dilemma-trail small{color:#7a869d}
+.dilemma-trail b{display:block;margin-top:4px;font-size:15px;line-height:1.2;overflow-wrap:anywhere}
+.dilemma-trail i{display:inline-block;margin-top:6px;padding:3px 8px;border-radius:99px;background:#e6ecf5;color:#3f5176;font-size:9px;font-style:normal;font-weight:900;letter-spacing:.6px}
+.dilemma-trail li.cambiaste i,.dilemma-trail li.volviste i{background:#fff0e2;color:#9a4b00}
+.dilemma-trail li.mantuviste i{background:#e3f7cf;color:#3b6b00}
+.dilemma-conditions{display:grid;gap:12px;margin:22px 0 0;padding:16px;border-radius:24px;background:#1b2852;color:#fff;animation:pop .25s ease}
+.dilemma-conditions.count-2{grid-template-columns:1fr 1fr}
+.dilemma-conditions-head{grid-column:1/-1;margin:0;color:#c8f77c}
+.condition-card{min-width:0;padding:16px;border-radius:18px;background:#ffffff14;border:1px solid #ffffff24}
+.condition-card small{color:#ffcf55}
+.condition-card b{display:block;margin-top:6px;font-size:clamp(18px,2.3vw,24px);line-height:1.15;overflow-wrap:anywhere}
+.condition-card span{display:block;margin-top:9px;color:#b9c6e6;font-size:12px;font-weight:800;overflow-wrap:anywhere}
+.dilemma-closing{margin:18px auto 0;padding:16px 20px;border-radius:20px;background:#f6f3ff;border:2px solid #cbbcff}
+.dilemma-closing small{color:#6a52cf}
+.dilemma-closing b{display:block;margin-top:5px;font-size:clamp(16px,2vw,21px);line-height:1.25}
+.dilemma-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.dilemma-actions .reveal-button{margin:22px 0 0}
+.dilemma-restart{min-height:52px;margin-top:22px;padding:14px 18px;border:0;border-radius:18px;background:#edf2f8;color:#2b4774;font-size:12px;font-weight:900;cursor:pointer}
+@media(max-width:680px){.dilemma-conditions.count-2{grid-template-columns:1fr}.dilemma-steps li{flex-basis:calc(50% - 3px)}.dilemma-actions{flex-direction:column}.dilemma-actions button{width:100%}}

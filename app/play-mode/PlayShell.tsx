@@ -13,14 +13,14 @@ const POWER_UPS = [
   ["EJEMPLO", "¿Podés dar un ejemplo concreto de lo que decís?"],
   ["¿Y VOS?", "¿Cómo aparece esta elección en tu propia vida?"],
   ["COMPARÁ", "¿Cuál es la diferencia más importante entre las dos opciones?"],
-  ["CAMBIO", "Imaginá que tu opción cuesta el doble. ¿La mantenés?"],
+  ["CONDICIÓN EXTRA", "Imaginá que tu opción te obliga a madrugar todos los días. ¿Qué harías para que siga valiendo la pena?"],
   ["NO ESTOY DE ACUERDO", "No estoy convencido: creo que la otra opción es más práctica. Defendé la tuya."],
   ["CONTAME MÁS", "¿Qué es lo más importante para vos de esa opción?"],
   ["PASADO", "¿Alguna vez elegiste algo parecido? ¿Qué pasó?"],
   ["FUTURO", "¿Creés que elegirías lo mismo dentro de diez años?"],
   ["VENTAJA", "¿Cuál es la mayor ventaja de la opción que elegiste?"],
   ["DESVENTAJA", "¿Qué desventaja aceptarías y cuál no?"],
-  ["¿SIEMPRE?", "¿Elegirías lo mismo en cualquier situación?"],
+  ["¿SIEMPRE?", "¿En qué situación dejaría de convencerte tu opción?"],
   ["EXCEPCIÓN", "¿En qué caso elegirías exactamente lo contrario?"],
 ] as const satisfies readonly PlayPowerUp[];
 
