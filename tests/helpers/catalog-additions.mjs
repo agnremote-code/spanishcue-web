@@ -31,6 +31,27 @@ const additions = [
   },
 ];
 
+// Approved repairs of EXISTING lessons: the lesson stays in every ledger; before
+// comparing, its shared-file edits are undone and its display copy is restored.
+const OLD_137_SUBTITLE = 'Un banco reutilizable de elecciones que se convierten en razones, cambios de regla, comparaciones, rankings y una vida ideal que hay que defender';
+const NEW_137_SUBTITLE = 'Un banco reutilizable de elecciones que se convierten en razones, dilemas con dos condiciones que se suman, comparaciones, rankings y una vida ideal que hay que defender';
+const OLD_137_EXPLANATION = 'Banco de 48 elecciones filtrables, con seis rondas de dificultad creciente: decisión instantánea, justificación, doble cambio, descarte, ranking y conversación libre sobre una vida ideal.';
+const NEW_137_EXPLANATION = 'Banco de 48 elecciones filtrables, con seis rondas de dificultad creciente: decisión instantánea, justificación, dilema con dos condiciones acumuladas, descarte, ranking y conversación libre sobre una vida ideal.';
+const repairs = [
+  {
+    // 2026-09-30, PR #78: «Uno o el otro» dilemma stage rebuilt with two accumulating conditions
+    // (behaviour covered by tests/uno-o-el-otro-dilemmas.test.mjs).
+    id: 137,
+    path: '/modo-play-uno-o-el-otro',
+    files: /^(?:app\/modo-play-uno-o-el-otro\/|app\/play-mode\/(?:PlayShell\.tsx|play-mode\.css)$|tests\/uno-o-el-otro-dilemmas\.test\.mjs$)/,
+    restore: {subtitle: [NEW_137_SUBTITLE, OLD_137_SUBTITLE], explanation: [NEW_137_EXPLANATION, OLD_137_EXPLANATION]},
+    edits: {
+      'app/lesson-catalog.ts': [[`subtitle:"${NEW_137_SUBTITLE}"`, `subtitle:"${OLD_137_SUBTITLE}"`], [`explanation:"${NEW_137_EXPLANATION}"`, `explanation:"${OLD_137_EXPLANATION}"`]],
+      'package.json': [['"test:conversation": "node --test tests/uno-o-el-otro-dilemmas.test.mjs ', '"test:conversation": "node --test ']],
+    },
+  },
+];
+
 const threePackages = ['@dimforge/rapier3d-compat', '@tweenjs/tween.js', '@types/stats.js', '@types/three', '@types/three/node_modules/fflate', '@types/webxr', 'meshoptimizer', 'three'].map(name => `node_modules/${name}`);
 
 function withoutPackages(text, packages, root) {
@@ -49,14 +70,14 @@ function withoutPackages(text, packages, root) {
 }
 
 // Shared files whose only change is an approved addition (checked by the byte tests).
-const sharedFiles = new Set([...additions.flatMap(item => Object.keys(item.edits)), 'tests/helpers/catalog-additions.mjs', 'tests/helpers/batch1-preservation.mjs']);
+const sharedFiles = new Set([...[...additions, ...repairs].flatMap(item => Object.keys(item.edits)), 'tests/helpers/catalog-additions.mjs', 'tests/helpers/batch1-preservation.mjs']);
 
 export function isApprovedAdditionPath(path) {
-  return sharedFiles.has(path) || additions.some(item => item.files.test(path));
+  return sharedFiles.has(path) || [...additions, ...repairs].some(item => item.files.test(path));
 }
 
 export function withoutApprovedAdditions(path, bytes) {
-  const steps = additions.flatMap(item => item.edits[path] || []);
+  const steps = [...additions, ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
@@ -69,5 +90,14 @@ export function withoutApprovedAdditions(path, bytes) {
 }
 
 export function withoutApprovedLessons(lessons) {
-  return lessons.filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path));
+  return lessons.filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
+    const repair = repairs.find(item => item.id === lesson.id && item.path === lesson.path);
+    if (!repair) return lesson;
+    const restored = {...lesson};
+    for (const [field, [now, before]] of Object.entries(repair.restore)) {
+      assert.equal(lesson[field], now, `approved ${field} for lesson ${lesson.id}`);
+      restored[field] = before;
+    }
+    return restored;
+  });
 }
