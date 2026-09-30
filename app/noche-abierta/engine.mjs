@@ -30,8 +30,8 @@ export const ARRIVAL = {
   teacher: "Dos o tres minutos de charla libre. No corrijas todavía: anotá qué tiempos verbales usa para contar.",
 };
 
-// Each location opens a different mechanic. `anchor` and `labelAt` are scene
-// coordinates (SVG user units) used by the city renderer.
+// Each location opens a different mechanic. Where each one sits in the city is
+// described by scene.mjs (the map fallback) and world3d.mjs (the 3D street).
 export const LOCATIONS = [
   {
     id: "cafe",
@@ -539,6 +539,55 @@ export const LOCATIONS = [
       },
     ],
   },
+  {
+    id: "auto",
+    name: "El auto con el capó abierto",
+    short: "Auto roto",
+    kind: "roadside",
+    help: {
+      starters: ["¿Qué te pasó?", "Si querés, puedo…", "Lo mejor sería…", "Yo en tu lugar…"],
+      chunks: ["no arranca", "quedarse sin nafta", "llamar a una grúa", "dar una mano", "por las dudas"],
+      vocab: ["el capó", "las balizas", "la grúa", "el motor", "la estación de servicio"],
+    },
+    variants: [
+      {
+        id: "auto-no-arranca",
+        title: "El auto que no arranca",
+        situation: "En la avenida hay un auto con el capó abierto y las balizas prendidas. Al lado, una mujer mira el motor y el celular al mismo tiempo.",
+        cue: { speaker: "Carla", text: "No sé qué pasó. Venía bien y de repente empezó a salir humo. Tengo que estar en el aeropuerto en una hora.", clues: ["Sale un poco de humo del motor.", "El celular de Carla tiene poca batería.", "No pasa ningún taxi libre."] },
+        reactions: [
+          { id: "ayudar", label: "Me ofrezco a ayudar", followUp: "Preguntale qué pasó exactamente y proponé una solución concreta." },
+          { id: "llamar", label: "Llamo a alguien", followUp: "Llamá a una grúa o a un mecánico (lo hace el profe) y explicá dónde están y qué pasa." },
+          { id: "seguir", label: "Sigo mi camino", followUp: "Explicale con amabilidad por qué no podés quedarte y qué le recomendás hacer." },
+        ],
+        prompts: [
+          "¿Qué harías si el auto fuera tuyo? Explicá tus opciones.",
+          "Contá una vez que se te rompió algo en el peor momento.",
+        ],
+        twist: "La grúa tarda dos horas. Carla te pregunta si la podés llevar vos al aeropuerto.",
+        role: "Sos Carla: nerviosa y apurada; cambiás de idea rápido y hacés muchas preguntas.",
+        followUps: ["¿Ayudarías a un desconocido de noche? ¿Por qué?", "¿Qué es lo primero que hacés cuando algo se rompe?"],
+      },
+      {
+        id: "auto-sin-nafta",
+        title: "Sin nafta",
+        situation: "Un señor empuja su auto hacia la vereda. Se quedó sin nafta a dos cuadras de la estación de servicio.",
+        cue: { speaker: "Don Julio", text: "Me confié. Pensé que llegaba. ¿Me das una mano?", clues: ["La estación de servicio cierra a las once.", "El señor tiene el celular sin batería.", "Hay un bidón vacío en el baúl."] },
+        reactions: [
+          { id: "empujar", label: "Lo ayudo a empujar", followUp: "Organizá cómo lo hacen: quién empuja, quién maneja y adónde lo llevan." },
+          { id: "bidon", label: "Voy a buscar nafta", followUp: "Explicale tu plan: adónde vas, cuánto tardás y qué necesitás de él." },
+          { id: "telefono", label: "Le presto el celular", followUp: "Ayudalo a llamar a alguien: explicá la situación como si fueras él." },
+        ],
+        prompts: [
+          "¿Es un descuido normal quedarse sin nafta? ¿Te pasó algo parecido?",
+          "Contá una vez que alguien te ayudó en la calle.",
+        ],
+        twist: "Don Julio es el papá de Vale y va a la fiesta de esta noche.",
+        role: "Sos Don Julio: tranquilo y charlatán; te encanta contar anécdotas.",
+        followUps: ["¿Pedís ayuda fácilmente?", "¿Qué hacés si alguien te pide plata para nafta?"],
+      },
+    ],
+  },
 ];
 
 // One city-wide change after several encounters. `affects` names locations
@@ -548,7 +597,7 @@ export const CITY_EVENTS = [
     id: "lluvia",
     title: "Se larga a llover",
     text: "Empieza a llover fuerte. La plaza y la terraza se vacían y no pasa ningún taxi libre.",
-    affects: ["plaza", "terraza", "taxi"],
+    affects: ["plaza", "terraza", "taxi", "auto"],
     prompts: [
       "Mirá los lugares donde estuviste. ¿Cuáles siguen siendo una buena opción y cuáles no? ¿Por qué?",
       "Proponé un plan nuevo para el grupo y explicá qué cambia respecto del anterior.",
@@ -661,9 +710,12 @@ export function chooseReaction(state, id, reactionId) {
   return { ...state, encounters: { ...state.encounters, [id]: { ...encounter, reaction: reactionId, step: Math.max(encounter.step, 1) } } };
 }
 
-// Steps: 0 situation + first reaction, 1 follow-up, 2..n extra prompts.
+// Steps: 0 situation + first reaction, 1 follow-up, 2 new information (the
+// twist) and a chance to change the answer, 3..n extra prompts.
+export const TWIST_STEP = 2;
+export const TWIST_QUESTION = "¿Cambia tu respuesta? ¿Qué hacés ahora?";
 export function stepCount(location, variant) {
-  return 2 + location.variants[variant].prompts.length;
+  return 3 + location.variants[variant].prompts.length;
 }
 
 export function nextStep(state, id) {
@@ -684,6 +736,13 @@ export function leaveLocation(state, id) {
   const phase = state.event && !state.event.resolved ? "evento" : "ciudad";
   const next = { ...state, phase, encounters: { ...state.encounters, [id]: { ...encounter, done } } };
   return eventReady(next) ? triggerEvent(next, suggestedEvent(next)) : next;
+}
+
+// The teacher may close an encounter that was handled in conversation.
+export function markDone(state, id) {
+  const encounter = state.encounters[id];
+  if (!encounter) return state;
+  return { ...state, encounters: { ...state.encounters, [id]: { ...encounter, done: true } } };
 }
 
 export function completedIds(state) {

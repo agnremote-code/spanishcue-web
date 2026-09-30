@@ -1,6 +1,6 @@
 export type Reaction = { id: string; label: string; followUp: string };
 export type Cue = {
-  from?: string; time?: string; text?: string;
+  from?: string; time?: string; text?: string; speaker?: string;
   items?: { id: string; label: string; detail?: string; pro?: string; con?: string }[];
   clues?: string[];
   routes?: { id: string; label: string; time: string; note: string }[];
@@ -40,9 +40,12 @@ export function openLocation(state: NightState, id: string): NightState;
 export function setVariant(state: NightState, id: string, variant: number): NightState;
 export function inspectItem(state: NightState, id: string, itemId: string): NightState;
 export function chooseReaction(state: NightState, id: string, reactionId: string): NightState;
+export const TWIST_STEP: number;
+export const TWIST_QUESTION: string;
 export function stepCount(location: Location, variant: number): number;
 export function nextStep(state: NightState, id: string): NightState;
 export function leaveLocation(state: NightState, id: string): NightState;
+export function markDone(state: NightState, id: string): NightState;
 export function completedIds(state: NightState): string[];
 export function eventReady(state: NightState): boolean;
 export function suggestedEvent(state: NightState): string;

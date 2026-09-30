@@ -169,10 +169,12 @@ function PropShape({ p, weather, busOut }: { p: Prop; weather: Props['weather'];
       </g>;
     }
     case 'taxi':
+    case 'broken':
     case 'car': {
       const taxi = p.type === 'taxi';
+      const broken = p.type === 'broken';
       const x0 = p.gx, y0 = p.gy, x1 = p.gx + 1.1, y1 = p.gy + 0.55;
-      const body = taxi ? { top: '#b88a2c', left: '#e3ad3f', right: '#a57a26' } : { top: '#2f3a44', left: '#4a5866', right: '#34404b' };
+      const body = taxi ? { top: '#b88a2c', left: '#e3ad3f', right: '#a57a26' } : broken ? { top: '#5f7a80', left: '#8fb1b8', right: '#6b878d' } : { top: '#2f3a44', left: '#4a5866', right: '#34404b' };
       const head = iso(x1 + 0.05, y0 + 0.28, 6);
       return <g>
         {taxi && <ellipse cx={head.x + 26} cy={head.y + 14} rx="34" ry="12" className="na-headlight" />}
@@ -182,6 +184,11 @@ function PropShape({ p, weather, busOut }: { p: Prop; weather: Props['weather'];
         <polygon points={face([[x0 + 0.25, y0 + 0.06, 18], [x1 - 0.3, y0 + 0.06, 18], [x1 - 0.3, y1 - 0.06, 18], [x0 + 0.25, y1 - 0.06, 18]])} fill={body.top} />
         <polygon className="na-carglass" points={face([[x0 + 0.25, y1 - 0.06, 10], [x1 - 0.3, y1 - 0.06, 10], [x1 - 0.3, y1 - 0.06, 18], [x0 + 0.25, y1 - 0.06, 18]])} />
         {taxi && (() => { const s = iso((x0 + x1) / 2 - 0.02, (y0 + y1) / 2, 23); return <rect x={s.x - 6} y={s.y - 3} width="12" height="5" rx="1.5" className="na-taxisign" />; })()}
+        {broken && <>
+          <polygon points={face([[x1 - 0.32, y0 + 0.04, 10], [x1 - 0.32, y1 - 0.04, 10], [x1 - 0.12, y1 - 0.04, 27], [x1 - 0.12, y0 + 0.04, 27]])} fill={body.top} />
+          {[iso(x1 + 0.02, y1 - 0.06, 6), iso(x0 + 0.02, y1 - 0.02, 6)].map((h, i) => <circle key={i} cx={h.x} cy={h.y} r="2.6" className="na-hazard" />)}
+          {[0, 1, 2].map(i => { const s = iso(x1 - 0.2, (y0 + y1) / 2, 30 + i * 11); return <circle key={`s${i}`} cx={s.x + i * 3} cy={s.y} r={5 + i * 2.5} className="na-smoke" />; })}
+        </>}
       </g>;
     }
     default:

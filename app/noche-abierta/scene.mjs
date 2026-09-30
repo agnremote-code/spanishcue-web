@@ -52,7 +52,8 @@ export const BUILDINGS = [
   { id: "sur-final", x0: 3.4, y0: 11.3, x1: 4.65, y1: 11.7, h: 30, palette: "brick", windows: 0 },
 ];
 
-// Everything that is not a building: lamps, trees, the fountain, the taxi.
+// Everything that is not a building: lamps, trees, the fountain, the taxi,
+// the broken-down car.
 export const PROPS = [
   { type: "lamp", gx: 5.25, gy: 4.75 },
   { type: "lamp", gx: 7.2, gy: 4.8 },
@@ -77,7 +78,8 @@ export const PROPS = [
   { type: "person", gx: 8.9, gy: 10.4, location: "plaza", tone: "#9fb4a8" },
   { type: "shelter", gx: 7.1, gy: 10.4 },
   { type: "taxi", gx: 9.4, gy: 5.7, location: "taxi" },
-  { type: "car", gx: 2.8, gy: 6.3 },
+  { type: "broken", gx: 2.1, gy: 6.15, location: "auto" },
+  { type: "person", gx: 2.75, gy: 7.3, location: "auto", tone: "#e0b089" },
 ];
 
 // Where each place's label floats and where the learner stands in front of it.
@@ -90,6 +92,7 @@ export const PLACES = {
   plaza: { label: iso(8.2, 10.4, 60), spot: { gx: 8.6, gy: 8.6 } },
   tienda: { label: iso(4.0, 10.2, 84), spot: { gx: 5.35, gy: 10.2 } },
   terraza: { label: iso(10.7, 2.8, 246), spot: { gx: 10.6, gy: 5.35 } },
+  auto: { label: iso(1.6, 6.9, 60), spot: { gx: 3.3, gy: 7.45 } },
 };
 
 export const ARRIVAL_SPOT = { gx: 6.3, gy: 10.9 };
