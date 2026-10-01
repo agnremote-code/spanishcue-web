@@ -4,21 +4,23 @@ import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState, type ComponentType, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import CityScene from './CityScene';
 import {
-  ARRIVAL, CITY_EVENTS, FINAL, LOCATIONS, MECHANICS, ROUTE_PLAN, TEACHER_MOVES,
+  DEFAULT_LEVEL, LEVELS, LOCATIONS, MECHANICS, contentFor, isLevel, setLevel,
   advanceBeat, chooseOption, closeActivity, completedIds, currentView, finalAvailable, initialState, inspectItem, isValidState,
   leaveLocation, locationById, markDone, nightClock, nightSummary, openActivity, openFinal, openLocation, otherActivity, resolveEvent,
   restartActivity, startExploring, toggleCriterion, triggerEvent,
-  type Grammar, type Help, type Location, type NightState, type View,
+  type Grammar, type Help, type Level, type Location, type NightState, type View,
 } from './engine.mjs';
 import type { Beat, Media } from './activities.mjs';
 import { ARRIVAL_SPOT, PLACES, VIEWBOX, iso } from './scene.mjs';
 import { WALKABLE_STAGES } from './world3d.mjs';
+import { LEVEL_INFO } from './levels.mjs';
 import type { WorldProps } from './World3D';
 import './noche-abierta.css';
 
 // v3: places became small games with their own situations, so older saved nights no longer fit.
 const STORAGE_KEY = 'spanishcue:noche-abierta:v3';
 const VIEW_KEY = 'spanishcue:noche-abierta:vista';
+const LEVEL_KEY = 'spanishcue:noche-abierta:nivel';
 const places = LOCATIONS.map(({ id, name, short }) => ({ id, name, short }));
 const LETTERS = ['A', 'B', 'C', 'D'];
 type ViewMode = 'map' | 'loading' | '3d';
@@ -32,6 +34,16 @@ function webglAvailable() {
 
 function focusWorld() {
   window.setTimeout(() => (document.querySelector('.na-world') as HTMLElement | null)?.focus({ preventScroll: true }), 60);
+}
+
+// A level in the link (?level=A1, as the library sends it) wins over the saved one.
+function readLevel(): Level | null {
+  const linked = new URLSearchParams(window.location.search).get('level');
+  if (isLevel(linked)) return linked;
+  try {
+    const value = window.localStorage.getItem(LEVEL_KEY);
+    return isLevel(value) ? value : null;
+  } catch { return null; }
 }
 
 function readSaved(): NightState | null {
@@ -75,9 +87,10 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     if (restored.current) return;
     restored.current = true;
     const saved = readSaved();
-    // Restoring saved progress after hydration is an external-store sync.
+    const level = readLevel();
+    // Restoring saved progress and the chosen level after hydration is an external-store sync.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (saved) setState(saved);
+    if (saved || level) setState(current => setLevel(saved ?? current, level ?? saved?.level ?? DEFAULT_LEVEL));
   }, []);
   useEffect(() => {
     try { window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch { /* private mode: the lesson still works */ }
@@ -106,11 +119,24 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     else load3d();
   };
   const fail3d = useCallback(() => { setCanUse3d(false); setView('map'); }, []);
+  // Changing the level only swaps the texts: the world, the camera and the
+  // route stay exactly where they are.
+  const level: Level = isLevel(state.level) ? state.level : DEFAULT_LEVEL;
+  const changeLevel = useCallback((next: Level) => {
+    setState(current => setLevel(current, next));
+    try { window.localStorage.setItem(LEVEL_KEY, next); } catch { /* private mode */ }
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('level')) {
+      url.searchParams.set('level', next);
+      window.history.replaceState(window.history.state, '', url);
+    }
+  }, []);
   const in3d = view === '3d' && Boolean(World);
 
   const done = completedIds(state);
   const card = currentView(state);
-  const event = state.event ? CITY_EVENTS.find(item => item.id === state.event!.id) ?? null : null;
+  const content = contentFor(state.level);
+  const event = state.event ? content.CITY_EVENTS.find(item => item.id === state.event!.id) ?? null : null;
   const standing = state.position ? PLACES[state.position].spot : ARRIVAL_SPOT;
   const focus = state.phase === 'encuentro' ? state.position : null;
   const exploring = state.phase === 'ciudad';
@@ -196,6 +222,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     <header className="na-top">
       <Link href="/" className="na-brand" aria-label="Volver a la biblioteca de SpanishCue">SPANISH<span>CUE</span></Link>
       <p className="na-title"><span>Noche abierta</span><small>Sábado · {nightClock(state)}</small></p>
+      {state.phase !== 'llegada' && <LevelPicker level={level} onChange={changeLevel} compact={narrow} />}
       {state.phase !== 'llegada' && <p className="na-progress" aria-label={`${done.length} de ${LOCATIONS.length} lugares explorados`}>
         <span className="na-progress-dots" aria-hidden="true">{LOCATIONS.map(item => <i key={item.id} className={done.includes(item.id) ? 'is-done' : ''} />)}</span>
         <span>{done.length} / {LOCATIONS.length} lugares</span>
@@ -222,7 +249,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
       {placesOpen && state.phase !== 'cierre' && <PlacesList state={state} done={done} onOpen={in3d ? walkTo : id => open(id)} onClose={() => setPlacesOpen(false)} disabled={!exploring} walk={in3d} />}
 
-      {state.phase === 'llegada' && <Arrival teacher={teacher} onStart={() => { setState(current => startExploring(current)); if (in3d) focusWorld(); }} />}
+      {state.phase === 'llegada' && <Arrival arrival={content.ARRIVAL} level={level} onLevel={changeLevel} teacher={teacher} onStart={() => { setState(current => startExploring(current)); if (in3d) focusWorld(); }} />}
 
       {exploring && <div className={`na-hint${in3d ? ' is-world' : ''}`} role="status">
         {finalAvailable(state)
@@ -235,7 +262,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         <p>{card?.location.hubPrompt} Acercate y tocá E. Para salir, andá a la puerta o tocá Esc.</p>
       </div>}
 
-      {card && showCard && !(hubInStreet && !card.activity) && <ActivityCard key={`${card.location.id}-${card.activity?.id ?? 'hub'}`} view={card} state={state} teacher={teacher} world={in3d}
+      {card && showCard && !(hubInStreet && !card.activity) && <ActivityCard key={`${level}-${card.location.id}-${card.activity?.id ?? 'hub'}`} view={card} state={state} teacher={teacher} world={in3d}
         inside={walkingInside}
         onChoose={id => setState(current => chooseOption(current, id))}
         onInspect={id => setState(current => inspectItem(current, id))}
@@ -246,7 +273,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         onDone={() => setState(current => markDone(current))}
         onBack={back} onLeave={leave} />}
 
-      {state.phase === 'evento' && event && <EventCard state={state} eventId={event.id} teacher={teacher} onContinue={() => setState(current => resolveEvent(current))} />}
+      {state.phase === 'evento' && event && <EventCard key={level} state={state} eventId={event.id} teacher={teacher} onContinue={() => setState(current => resolveEvent(current))} />}
 
       {state.phase === 'cierre' && <FinalRecap state={state} teacher={teacher} onToggle={id => setState(current => toggleCriterion(current, id))} onReset={() => setConfirmReset(true)} />}
     </div>
@@ -266,19 +293,68 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   </main>;
 }
 
-function Arrival({ teacher, onStart }: { teacher: boolean; onStart: () => void }) {
+// The title screen: the city in the back, the mascot at the side, a compact
+// game menu. Starting the night fades the menu and the mascot out and hands
+// the camera to the walk.
+function Arrival({ arrival, level, onLevel, teacher, onStart }: {
+  arrival: ReturnType<typeof contentFor>['ARRIVAL']; level: Level; onLevel: (level: Level) => void; teacher: boolean; onStart: () => void;
+}) {
   const [question, setQuestion] = useState(0);
-  return <section className="na-arrival" aria-labelledby="na-arrival-title">
-    <p className="na-kicker">{ARRIVAL.kicker}</p>
-    <h1 id="na-arrival-title">{ARRIVAL.title}</h1>
-    <p className="na-premise">{ARRIVAL.premise}</p>
-    <div className="na-warmup">
-      <p className="na-question">{ARRIVAL.warmup[question]}</p>
-      <button type="button" className="na-link" onClick={() => setQuestion(value => (value + 1) % ARRIVAL.warmup.length)}>Otra pregunta</button>
+  const [leaving, setLeaving] = useState(false);
+  const start = () => {
+    if (leaving) return;
+    setLeaving(true);
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.setTimeout(onStart, reduced ? 0 : 420);
+  };
+  return <section className={`na-title-screen${leaving ? ' is-leaving' : ''}`} aria-labelledby="na-arrival-title">
+    <div className="na-ts-shade" aria-hidden="true" />
+    <figure className="na-ts-hero" aria-hidden="true">
+      <img src="/brand/mascot/kneeling.webp" alt="" width={900} height={1350} decoding="async" fetchPriority="high" />
+      <img className="na-ts-wink" src="/noche-abierta/mascot-wink.webp" alt="" width={900} height={1350} decoding="async" />
+    </figure>
+    <div className="na-ts-menu">
+      <p className="na-kicker">{arrival.kicker}<span>Modo Play · 3D</span></p>
+      <h1 id="na-arrival-title">{arrival.title}</h1>
+      <p className="na-ts-lede">Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.</p>
+      <ul className="na-ts-verbs"><li>Caminá.</li><li>Entrá donde quieras.</li><li>Resolvé lo que pase.</li></ul>
+      <div className="na-ts-level">
+        <LevelPicker level={level} onChange={onLevel} />
+        <p><b>{LEVEL_INFO[level].name}</b> · {LEVEL_INFO[level].demand}</p>
+      </div>
+      <button type="button" className="na-primary na-ts-start" onClick={start}>Empezar la noche</button>
+      <p className="na-ts-warmup"><span>Para romper el hielo</span>{arrival.warmup[question % arrival.warmup.length]}
+        <button type="button" className="na-link" onClick={() => setQuestion(value => value + 1)}>Otra</button></p>
+      {teacher && <p className="na-teacher-note">{arrival.teacher}</p>}
     </div>
-    {teacher && <p className="na-teacher-note">{ARRIVAL.teacher}</p>}
-    <button type="button" className="na-primary" onClick={onStart}>Empezar a caminar</button>
   </section>;
+}
+
+// Six levels in one control. Arrow keys move between them, like any radio group.
+function LevelPicker({ level, onChange, compact = false }: { level: Level; onChange: (level: Level) => void; compact?: boolean }) {
+  const [open, setOpen] = useState(false);
+  const onKey = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    const step = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
+    if (!step) return;
+    event.preventDefault();
+    const next = LEVELS[(LEVELS.indexOf(level) + step + LEVELS.length) % LEVELS.length];
+    onChange(next);
+    window.requestAnimationFrame(() => (event.currentTarget.querySelector(`[data-level="${next}"]`) as HTMLElement | null)?.focus());
+  };
+  const group = <div className="na-levels" role="radiogroup" aria-label="Nivel" onKeyDown={onKey}>
+    {LEVELS.map(item => <button key={item} type="button" role="radio" data-level={item} aria-checked={item === level} tabIndex={item === level ? 0 : -1}
+      title={LEVEL_INFO[item].name} onClick={event => {
+        onChange(item);
+        setOpen(false);
+        // After a mouse or touch pick, hand the keys back to the street.
+        if (event.detail > 0) event.currentTarget.blur();
+      }}>{item}</button>)}
+  </div>;
+  if (!compact) return group;
+  return <div className="na-levels-compact">
+    <button type="button" className="na-tool" aria-expanded={open} aria-label={`Nivel ${level}. Cambiar nivel`} onClick={() => setOpen(value => !value)}>{level}</button>
+    {open && <div className="na-levels-pop">{group}</div>}
+  </div>;
 }
 
 function PlacesList({ state, done, onOpen, onClose, disabled, walk = false }: { state: NightState; done: string[]; onOpen: (id: string) => void; onClose: () => void; disabled: boolean; walk?: boolean }) {
@@ -359,6 +435,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
   onChoose: (id: string) => void; onInspect: (id: string) => void; onNext: () => void; onOther: () => void; onPick: (id: string) => void;
   onRestart: () => void; onDone: () => void; onBack: () => void; onLeave: () => void;
 }) {
+  const { TEACHER_MOVES } = contentFor(state.level);
   const { location, mechanic } = view;
   const [help, setHelp] = useState(false);
   const focusRef = useRef<HTMLDivElement>(null);
@@ -433,6 +510,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
 }
 
 function EventCard({ state, eventId, teacher, onContinue }: { state: NightState; eventId: string; teacher: boolean; onContinue: () => void }) {
+  const { CITY_EVENTS } = contentFor(state.level);
   const event = CITY_EVENTS.find(item => item.id === eventId)!;
   const [prompt, setPrompt] = useState(0);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -456,6 +534,7 @@ function EventCard({ state, eventId, teacher, onContinue }: { state: NightState;
 }
 
 function FinalRecap({ state, teacher, onToggle, onReset }: { state: NightState; teacher: boolean; onToggle: (id: string) => void; onReset: () => void }) {
+  const { CITY_EVENTS, FINAL } = contentFor(state.level);
   const [prompt, setPrompt] = useState(0);
   const [help, setHelp] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -494,9 +573,15 @@ function FinalRecap({ state, teacher, onToggle, onReset }: { state: NightState; 
 }
 
 function TeacherDesk({ state, onTrigger, onReset }: { state: NightState; onTrigger: (id: string) => void; onReset: () => void }) {
+  const { CITY_EVENTS, ROUTE_PLAN } = contentFor(state.level);
   const canTrigger = !state.event && state.phase !== 'cierre' && state.phase !== 'llegada';
   const now = state.phase === 'encuentro' || state.phase === 'ciudad' ? 'exploracion' : state.phase;
+  const level: Level = isLevel(state.level) ? state.level : DEFAULT_LEVEL;
   return <aside className="na-desk" aria-label="Plan del profe">
+    <div className="na-desk-level">
+      <p className="na-teacher-title">Nivel activo · {level}</p>
+      <p><b>{LEVEL_INFO[level].name}.</b> {LEVEL_INFO[level].demand}</p>
+    </div>
     <div>
       <p className="na-teacher-title">Plan de la clase</p>
       <ol>{ROUTE_PLAN.map(item => <li key={item.id} className={item.id === now ? 'is-now' : ''}>

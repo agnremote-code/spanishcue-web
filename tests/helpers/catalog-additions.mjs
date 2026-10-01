@@ -9,7 +9,7 @@ const additions = [
   {
     id: 223,
     path: '/noche-abierta',
-    files: /^(?:app\/noche-abierta\/|public\/noche-abierta\/|tests\/noche-abierta\.test\.mjs$|docs\/lessons\/noche-abierta-(?:b1|3d-assets)\.md$)/,
+    files: /^(?:app\/noche-abierta\/|public\/noche-abierta\/|tests\/noche-abierta\.test\.mjs$|scripts\/check-noche-level\.mjs$|docs\/lessons\/noche-abierta-(?:b1|3d-assets)\.md$)/,
     edits: {
       'app/lesson-catalog.ts': [
         text => {
@@ -21,7 +21,8 @@ const additions = [
         },
         [',129,136,223],', ',129,136],'],
       ],
-      'tests/level-cleanup.test.mjs': [['assert.equal(lessons.length, 115);', 'assert.equal(lessons.length, 114);']],
+      // Since 2026-10-01 the lesson is listed under every level from A1 to C2.
+      'tests/level-cleanup.test.mjs': [['assert.equal(lessons.length, 115);', 'assert.equal(lessons.length, 114);'], ['assert.equal(a1Lessons.length, 32);', 'assert.equal(a1Lessons.length, 31);']],
       'tests/rendered-html.test.mjs': [['assert.match(html,/79(?:<!-- -->|\\s)+resultados/);assert.match(html,/108(?:<!-- -->|\\s)+clases totales/);', 'assert.match(html,/78(?:<!-- -->|\\s)+resultados/);assert.match(html,/107(?:<!-- -->|\\s)+clases totales/);']],
       'scripts/test-worker.mjs': [["await run(['--test','tests/urban-city.test.mjs','tests/noche-abierta.test.mjs']);", "await run(['--test','tests/urban-city.test.mjs']);"]],
       // The 3D street (2026-09-30) adds three.js: remove exactly its lockfile entries.
