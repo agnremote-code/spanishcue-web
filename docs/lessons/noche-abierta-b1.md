@@ -1,4 +1,4 @@
-# Noche abierta · B1 · Conversación · Modo Play (ID 223)
+# Noche abierta · A1–C2 · Conversación · Modo Play (ID 223)
 
 Route `/noche-abierta`, PRO. New lesson built on the reconciled Quality v2 line (Waves 1–3 merged onto main `9309626`). ID 222 (the rejected Recadero) is not reused.
 
@@ -106,3 +106,13 @@ Same lesson, same ID 223, route, level, category, Modo Play collection and PRO g
 **3D.** The avatar runs by default (6.6 m/s, Shift 9.2, Alt walks), accelerates and slows down, turns smoothly toward the input relative to the camera, and the camera drifts back behind him while he runs. The museum and the bar are rooms you walk around; each piece or person has its own prompt (*MIRAR*, *HABLAR*, *AYUDAR*, *ATENDER*…). The plaza has seven people to talk to. Cars drive along the avenue and stop for the learner.
 
 **Progress.** *x / 10 lugares* with dots in the header; done places get a lantern in 3D and a mark in the list. Exploration stays free and non-linear.
+
+## Final production pass: six levels, title screen, mascot (2026-10-01)
+
+- **One world, six levels.** The places, mechanics, ids and the 3D city are shared. B1 is the base content (`content.mjs`); A1, A2, B2, C1 and C2 are patches of the same shape in `app/noche-abierta/levels/*.mjs`, merged by `contentFor(level)` in `levels.mjs`. `LEVEL_INFO` names what each level asks for. `node scripts/check-noche-level.mjs A1` lists any B1 text a level still leaves untouched.
+- **What changes by level.** A1 asks for short present-tense phrases (ask, choose, say what there is); A2 for past events, plans and simple reasons; B1 for narrating, justifying and negotiating; B2 for pros and cons, hypotheses, politeness and disagreement; C1 for register, intentions, inference and reformulation; C2 for irony, implicature, humour and tone. The restaurant bill, for example, goes from "¿Pagamos juntos o separados?" with three plain options (A1), through negotiating Martín's equal split (B1), to Lu's ironic «Sí, sí, dividamos todo. Re justo» and "¿Qué escuchaste vos?" (C2).
+- **Switching.** The level lives in the state (`state.level`, B1 by default) and in `localStorage` (`spanishcue:noche-abierta:nivel`). `setLevel` keeps the place, the route, the finished places, the 3D world, the camera and the avatar; only an open activity restarts with the new level's text, so levels never mix.
+- **Picker.** A compact A1–C2 radio group (arrow keys, roving focus) on the title screen and in the HUD; on narrow screens it folds into one button with a pop-over. The teacher panel shows the active level and its demand.
+- **Title screen.** `/noche-abierta` only: the 3D street is the background with a slow crane shot, the official mascot (`/brand/mascot/kneeling.webp`) is the hero with a wink loop (`mascot-wink.webp`), and a compact menu holds the copy, the picker and *Empezar la noche*. Starting fades the menu and the mascot out while the camera moves to the follow shot.
+- **Library.** Still one card (ID 223) with `levels: A1–C2`, `displayLevel: "A1–C2"`, Conversación, Modo Play, PRO; the A1…C2 filters, Conversación and the search all find it. New preview image from the 3D street.
+- **Avatar.** See `noche-abierta-3d-assets.md`: identity from the official mascot art, back and profiles from the turnaround sheet, backpack with the flag, pen in the right fist.

@@ -37,7 +37,7 @@ test('public level navigation and shelves begin at A1', () => {
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 31);
+  assert.equal(a1Lessons.length, 32);
   assert.ok(a1Lessons.some(lesson => lesson.id === 32), 'Reino Unido offers an A1 route');
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);

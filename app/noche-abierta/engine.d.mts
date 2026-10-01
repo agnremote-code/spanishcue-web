@@ -25,8 +25,9 @@ export type Mechanic = { mechanic: string; more: string };
 export type CityEvent = { id: string; title: string; text: string; affects: string[]; prompts: string[]; teacher: string };
 export type Encounter = { done: boolean; acts: Record<string, Progress> };
 export type Phase = 'llegada' | 'ciudad' | 'encuentro' | 'evento' | 'cierre';
+export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 export type NightState = {
-  phase: Phase; position: string | null; activity: string | null; visitOrder: string[]; encounters: Record<string, Encounter>;
+  level?: Level; phase: Phase; position: string | null; activity: string | null; visitOrder: string[]; encounters: Record<string, Encounter>;
   event: { id: string; resolved: boolean } | null; final: { criteria: Record<string, boolean> };
 };
 export type SummaryItem = { id: string; name: string; situations: string[]; choices: string[]; done: boolean };
@@ -49,9 +50,18 @@ export const FINAL: {
   title: string; prompts: string[]; hypothetical: string; help: Help;
   criteria: { id: string; label: string; detail: string }[];
 };
-export function locationById(id: string | null): Location | null;
+export type Content = {
+  level: Level; ARRIVAL: typeof ARRIVAL; MECHANICS: typeof MECHANICS; LOCATIONS: Location[]; CITY_EVENTS: CityEvent[];
+  FINAL: typeof FINAL; TEACHER_MOVES: typeof TEACHER_MOVES; ROUTE_PLAN: typeof ROUTE_PLAN;
+};
+export const LEVELS: Level[];
+export const DEFAULT_LEVEL: Level;
+export function isLevel(value: unknown): value is Level;
+export function contentFor(level?: Level | string | null): Content;
+export function setLevel(state: NightState, level: Level): NightState;
+export function locationById(id: string | null, level?: Level | string | null): Location | null;
 export function activityById(location: Location | null, id: string | null): Activity | null;
-export function initialState(): NightState;
+export function initialState(level?: Level | string | null): NightState;
 export function startExploring(state: NightState): NightState;
 export function openLocation(state: NightState, id: string, activityId?: string | null): NightState;
 export function openActivity(state: NightState, activityId: string): NightState;

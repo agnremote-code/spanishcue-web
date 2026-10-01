@@ -349,12 +349,13 @@ test('state survives a reload and a reset starts the night from zero', () => {
   assert.equal(engine.isValidState({ ...restored, encounters: { ...restored.encounters, cafe: { done: true, acts: { inventada: {} } } } }), false);
   assert.equal(engine.isValidState(null), false);
   assert.equal(engine.isValidState({ phase: 'ciudad' }), false);
-  assert.deepEqual(engine.initialState(), { phase: 'llegada', position: null, activity: null, visitOrder: [], encounters: {}, event: null, final: { criteria: {} } });
+  assert.deepEqual(engine.initialState(), { level: 'B1', phase: 'llegada', position: null, activity: null, visitOrder: [], encounters: {}, event: null, final: { criteria: {} } });
   assert.notEqual(engine.initialState(), engine.initialState(), 'each reset gets a fresh object');
 });
 
 test('no game economy: nothing in the state or the code counts points, lives, ranks or time left', async () => {
-  const bannedWords = new Set(['score', 'scores', 'point', 'points', 'xp', 'coin', 'coins', 'star', 'stars', 'rank', 'ranking', 'respect', 'life', 'lives', 'health', 'timer', 'countdown', 'leaderboard', 'achievement', 'achievements', 'mastered', 'mastery', 'streak', 'level', 'levels']);
+  const bannedWords = new Set(['score', 'scores', 'point', 'points', 'xp', 'coin', 'coins', 'star', 'stars', 'rank', 'ranking', 'respect', 'life', 'lives', 'health', 'timer', 'countdown', 'leaderboard', 'achievement', 'achievements', 'mastered', 'mastery', 'streak']);
+  // CEFR levels (A1–C2) are a language setting, not a game level, so `level` is allowed.
   const words = name => name.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const banned = { test: name => words(name).some(word => bannedWords.has(word)) };
   const { trail } = play(engine.LOCATIONS.map(item => item.id));
@@ -401,7 +402,8 @@ test('the rendered lesson: one question at a time, compact options, help folded,
   assert.match(decision, /aria-expanded="false"[^>]*>Necesito ayuda/);
   assert.doesNotMatch(decision, /na-help-body/, 'help is folded away');
   assert.doesNotMatch(decision, /na-teacher/);
-  assert.doesNotMatch(decision, /tabindex="0"/, 'the city pauses while a place is open');
+  // The level picker keeps its own roving tab stop; nothing in the city does.
+  assert.doesNotMatch(decision.replace(/<div class="na-levels"[\s\S]*?<\/div>/, ''), /tabindex="0"/, 'the city pauses while a place is open');
   state = engine.chooseOption(state, 'cada-uno');
   const result = render(state);
   assert.match(result, /class="na-outcome"/);
@@ -629,4 +631,115 @@ test('3D world: original procedural assets only, and three.js stays inside this 
   const assets = readFileSync('docs/lessons/noche-abierta-3d-assets.md', 'utf8');
   for (const file of ['people3d.ts', 'hero3d.ts', 'build3d.ts', 'world3d.mjs']) assert.ok(assets.includes(file), `provenance lists ${file}`);
   assert.match(assets, /CC0|original/i);
+});
+
+// ------------------------------------------------------------ levels A1–C2
+
+const levels = await import('../app/noche-abierta/levels.mjs');
+const leveledActivities = bundle => bundle.LOCATIONS.flatMap(location => location.activities.map(activity => ({ location, activity })));
+const asksOf = activity => [activity.prompt, activity.ask, activity.ask2, activity.task, activity.task2, ...(activity.followUps ?? []), ...(activity.options ?? []).map(item => item.ask), ...(activity.conditions ?? []).map(item => item.ask)].filter(Boolean);
+const textsOf = bundle => {
+  const out = [];
+  const walk = value => {
+    if (typeof value === 'string') out.push(value);
+    else if (Array.isArray(value)) value.forEach(walk);
+    else if (value && typeof value === 'object') Object.values(value).forEach(walk);
+  };
+  walk([bundle.ARRIVAL, bundle.LOCATIONS, bundle.CITY_EVENTS, bundle.FINAL]);
+  return out;
+};
+
+test('one world, six levels: same places, mechanics and ids, different language work', () => {
+  assert.deepEqual(levels.LEVELS, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+  assert.equal(levels.DEFAULT_LEVEL, 'B1');
+  const base = levels.contentFor('B1');
+  assert.equal(base.LOCATIONS, engine.LOCATIONS, 'B1 is the base content');
+  const shape = bundle => bundle.LOCATIONS.map(location => [location.id, location.type, location.activities.map(activity => `${activity.id}:${activity.type ?? ''}`)]);
+  for (const level of levels.LEVELS) {
+    const bundle = levels.contentFor(level);
+    assert.equal(bundle.level, level);
+    assert.deepEqual(shape(bundle), shape(base), `${level} keeps the same world`);
+    assert.deepEqual(bundle.CITY_EVENTS.map(item => item.id), base.CITY_EVENTS.map(item => item.id), `${level} keeps the same events`);
+    assert.equal(bundle.MECHANICS, base.MECHANICS, `${level} keeps the same mechanics`);
+    assert.ok(levels.LEVEL_INFO[level].name && levels.LEVEL_INFO[level].demand, `${level} explains what it asks`);
+    if (level !== 'B1') assert.ok(levels.untouched(level).length <= 2, `${level} rewrites the night: ${levels.untouched(level).join(', ')}`);
+  }
+  assert.equal(levels.contentFor('Z9').level, 'B1', 'an unknown level falls back to B1');
+  assert.equal(levels.contentFor('A1'), levels.contentFor('A1'), 'bundles are cached');
+});
+
+test('every level asks its own questions, in voseo, without mixing levels', () => {
+  const byLevel = Object.fromEntries(levels.LEVELS.map(level => [level, leveledActivities(levels.contentFor(level)).flatMap(({ activity }) => asksOf(activity))]));
+  for (const level of levels.LEVELS) {
+    const asks = byLevel[level];
+    assert.ok(asks.length >= 30, `${level} has enough to ask`);
+    for (const other of levels.LEVELS) if (other !== level) {
+      const shared = asks.filter(ask => byLevel[other].includes(ask));
+      assert.ok(shared.length <= 2, `${level} and ${other} share questions: ${shared.join(' | ')}`);
+    }
+    for (const text of textsOf(levels.contentFor(level))) {
+      assert.doesNotMatch(text, /\b(tienes|puedes|quieres|eres|sabes|piensas|crees|prefieres|harías tú)\b/i, `${level} voseo, not tuteo: ${text}`);
+      assert.doesNotMatch(text, /\s{2,}|\s[,.;:]/, `${level} clean spacing: ${text}`);
+    }
+  }
+  // The restaurant bill, scaled: the same scene asks for more as the level goes up.
+  const restaurant = level => JSON.stringify(levels.contentFor(level).LOCATIONS.find(item => item.id === 'restaurante'));
+  const lengths = levels.LEVELS.map(level => restaurant(level).length);
+  assert.ok(lengths[0] < lengths[2] && lengths[2] < lengths[5], `the restaurant grows with the level: ${lengths}`);
+});
+
+test('switching level keeps the walk and resets only the open activity', () => {
+  let state = engine.startExploring(engine.initialState());
+  assert.equal(state.level, 'B1');
+  assert.equal(engine.initialState('C1').level, 'C1');
+  assert.equal(engine.initialState('nope').level, 'B1');
+  state = playOne(engine.openLocation(state, 'cafe'));
+  state = engine.leaveLocation(state, 'cafe');
+  state = engine.openLocation(state, 'restaurante');
+  const id = engine.currentView(state).location.activities[0].id;
+  state = engine.openActivity(state, id);
+  state = engine.advanceBeat(state);
+  const before = state;
+  const switched = engine.setLevel(state, 'C2');
+  assert.equal(switched.level, 'C2');
+  assert.equal(switched.position, before.position, 'same place');
+  assert.deepEqual(switched.visitOrder, before.visitOrder, 'same route so far');
+  assert.equal(switched.encounters.cafe.done, before.encounters.cafe.done, 'finished places stay finished');
+  const view = engine.currentView(switched);
+  assert.equal(view.location.id, 'restaurante');
+  assert.equal(view.location, levels.contentFor('C2').LOCATIONS.find(item => item.id === 'restaurante'), 'the open place now reads from C2');
+  assert.equal(engine.setLevel(switched, 'C2'), switched, 'same level is a no-op');
+  assert.equal(engine.setLevel(switched, 'Z9'), switched, 'unknown level is ignored');
+  for (const [from, to] of [['A1', 'C2'], ['C2', 'A2'], ['A2', 'B2'], ['B2', 'B1']]) {
+    const a = engine.setLevel(before, from);
+    const b = engine.setLevel(a, to);
+    assert.equal(b.level, to);
+    assert.equal(b.position, before.position, `${from}→${to} keeps the place`);
+    assert.ok(engine.isValidState(JSON.parse(JSON.stringify(b))), `${from}→${to} survives a reload`);
+  }
+  assert.equal(engine.isValidState({ ...switched, level: 'D1' }), false);
+});
+
+test('the title screen and the HUD carry the level picker; the library lists one A1–C2 card', async () => {
+  const NocheAbierta = await component('app/noche-abierta/NocheAbierta.tsx');
+  const title = renderToString(React.createElement(NocheAbierta));
+  assert.match(title, /class="na-title-screen/);
+  assert.match(title, /Empezar la noche/);
+  assert.match(title, /\/brand\/mascot\/kneeling\.webp/, 'the official mascot is the hero');
+  assert.equal((title.match(/role="radio"/g) ?? []).length, 6);
+  assert.match(title, /data-level="B1" aria-checked="true"/, 'B1 by default');
+  assert.doesNotMatch(title, /<select/, 'no plain select');
+  assert.ok(existsSync('public/noche-abierta/mascot-wink.webp'));
+  const { lessons } = await catalog();
+  const cards = lessons.filter(item => item.path === '/noche-abierta');
+  assert.equal(cards.length, 1, 'one card');
+  const [card] = cards;
+  assert.deepEqual(card.levels, levels.LEVELS);
+  assert.equal(card.displayLevel, 'A1–C2');
+  assert.equal(card.category, 'Conversación');
+  assert.equal(card.conversationMode, 'play');
+  const { filterLessons } = await import('../app/library-filters.mjs');
+  for (const level of levels.LEVELS) assert.ok(filterLessons(lessons, { level }).includes(card), `found under ${level}`);
+  assert.ok(filterLessons(lessons, { category: 'Conversación' }).includes(card));
+  assert.ok(filterLessons(lessons, { query: 'Noche abierta' }).includes(card));
 });
