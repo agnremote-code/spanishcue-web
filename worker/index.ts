@@ -9,6 +9,7 @@ import {
 } from "../app/access-policy";
 import { lessons } from "../app/lesson-catalog";
 import { isPremiumBoardPath } from "../app/boards/access";
+import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";
 import {
   authenticatedRequestHeaders,
   firebaseTokenFromHeaders,
@@ -53,7 +54,8 @@ function setSecurityHeaders(headers: Headers, url: URL, locale: string): void {
   headers.set('X-Content-Type-Options','nosniff');
   headers.set('Referrer-Policy','strict-origin-when-cross-origin');
   headers.set('X-Frame-Options','DENY');
-  headers.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');
+  // Autoestudio lets learners record themselves; the audio never leaves the browser.
+  headers.set('Permissions-Policy',isAutoestudioPath(url.pathname)?'camera=(), microphone=(self), geolocation=()':'camera=(), microphone=(), geolocation=()');
   headers.set('Content-Language',locale);
   if (url.protocol === 'https:') {
     headers.set('Strict-Transport-Security','max-age=31536000; includeSubDomains');
@@ -165,10 +167,12 @@ const app = {
     let pathname:string;try{pathname=decodeURIComponent(url.pathname).replace(/\/+$/, '')||'/'}catch{return new Response('Bad request',{status:400})}
     const lesson=lessonAtPath(pathname,lessons);
     const premiumBoard=isPremiumBoardPath(pathname);
+    const autoestudio=isAutoestudioPath(pathname);
+    const premiumAutoestudio=isPremiumAutoestudioPath(pathname);
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
     const administrative=pathname==='/admin'||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||Boolean(lesson);
+    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||Boolean(lesson);
     const verifiedUser=identityAware&&firebaseTokenFromHeaders(routedHeaders)
       ? await getFirebaseUserFromHeaders(routedHeaders)
       : null;
@@ -186,7 +190,7 @@ const app = {
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
     }
-    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess)||(premiumBoard&&!fullAccess)) {
+    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess)) {
       if(pathname.startsWith('/api/')) {
         const headers = new Headers({'content-type':'application/json','Cache-Control':'private, no-store'});
         setSecurityHeaders(headers,url,verifiedLocale);
