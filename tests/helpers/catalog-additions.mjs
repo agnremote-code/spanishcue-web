@@ -7,6 +7,27 @@ import assert from 'node:assert/strict';
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   {
+    id: 224, path: '/hablar-sin-cortar',
+    files: /^(?:app\/(?:hablar-sin-cortar|phonetics-family)\/|public\/(?:hablar-sin-cortar|audio\/hablar-sin-cortar)\/|tests\/hablar-sin-cortar[^/]*\.test\.mjs$|scripts\/generate-hablar-audio\.py$|docs\/(?:lessons\/hablar-sin-cortar[^/]*|superpowers\/plans\/2026-10-01-hablar-sin-cortar)\.md$)/,
+    edits: {
+      'app/lesson-catalog.ts': [text => {
+        const lines=text.split('\n'); const at=lines.flatMap((line,i)=>line.startsWith('  {id:224,') && line.includes('path:"/hablar-sin-cortar"')?[i]:[]);
+        assert.equal(at.length,1,'one Hablar sin cortar catalog entry'); lines.splice(at[0],1); return lines.join('\n');
+      }, ['"Fonética":[201,202,38,224],','"Fonética":[201,202,38],']],
+      'app/Library.tsx': [
+        ['import { phoneticsFamilyHref } from "./phonetics-family/navigation";\n',''],
+        ['    phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) ||','    conversationLessonHref(lesson, selectedLevel) ||'],
+        ['? phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) ||','? conversationLessonHref(lesson, selectedLevel) ||'],
+      ],
+      'tests/level-cleanup.test.mjs': [
+        ['assert.equal(lessons.length, 116);','assert.equal(lessons.length, 115);'],
+        ['assert.equal(a1Lessons.length, 33);','assert.equal(a1Lessons.length, 32);'],
+        ["idsFor('Fonética'), [201, 202, 38, 224]","idsFor('Fonética'), [201, 202, 38]"],
+      ],
+      'tests/rendered-html.test.mjs': [['assert.match(html,/80(?:<!-- -->|\\s)+resultados/);assert.match(html,/109(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/79(?:<!-- -->|\\s)+resultados/);assert.match(html,/108(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     id: 223,
     path: '/noche-abierta',
     files: /^(?:app\/noche-abierta\/|public\/noche-abierta\/|tests\/noche-abierta\.test\.mjs$|scripts\/check-noche-level\.mjs$|docs\/lessons\/noche-abierta-(?:b1|3d-assets)\.md$)/,

@@ -7,6 +7,7 @@ import LogoutButton from "./LogoutButton";
 import LessonPreview from "./LessonPreview";
 import AutoestudioLibraryEntry from "./autoestudio/LibraryEntry";
 import { conversationLessonHref } from "./conversation-families/navigation";
+import { phoneticsFamilyHref } from "./phonetics-family/navigation";
 import { phoneticsHref } from "./phonetics/navigation";
 import type { CEFRLevel } from "./conversation-families/types";
 import "./conversation-families/families.css";
@@ -833,13 +834,13 @@ export default function Library({
     }).catch(() => undefined);
   };
   const lessonPath = (lesson: Lesson, selectedLevel = level) =>
-    conversationLessonHref(lesson, selectedLevel) ||
+    phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) ||
     (lesson.special ? "/choose-conversation" : `/clase/${lesson.id}`);
   const lockedPath = (lesson: Lesson, selectedLevel = level) =>
     `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson, selectedLevel))}`;
   const lessonHref = (lesson: Lesson, selectedLevel = level) =>
     canOpen(lesson)
-      ? conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.id === 38 ? "/clase/38" : null) || (lesson.special ? "/choose-conversation" : null)
+      ? phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.id === 38 ? "/clase/38" : null) || (lesson.special ? "/choose-conversation" : null)
       : lockedPath(lesson, selectedLevel);
   const prepareLessonNavigation = (lesson: Lesson, placement = "library_card", selectedLevel = level) => {
     trackMarketingEvent("lesson_preview_open", {

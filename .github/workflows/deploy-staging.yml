@@ -1,12 +1,16 @@
 name: Deploy Staging (Cloudflare)
 
-# Owner-controlled STAGING only. This workflow cannot deploy production:
+# STAGING only. Every push to main deploys staging automatically so merged
+# work is immediately reviewable. Manual dispatch remains available for
+# deploy/rollback. This workflow cannot deploy production:
 # scripts/prepare-staging-worker-config.mjs forces the spanishcue-staging
 # Worker, the spanishcue-staging D1, workers.dev only and no routes, and
 # fails on any production name, route or the placeholder D1.
 # It never applies D1 migrations and never touches spanishcue.com.
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       action:
@@ -35,8 +39,8 @@ jobs:
     timeout-minutes: 45
     environment: staging
     env:
-      ACTION: ${{ inputs.action }}
-      SHA: ${{ inputs.sha }}
+      ACTION: ${{ github.event_name == 'push' && 'deploy' || inputs.action }}
+      SHA: ${{ github.event_name == 'push' && github.sha || inputs.sha }}
       VERSION_ID: ${{ inputs.version_id }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_STAGING }}
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
@@ -62,11 +66,11 @@ jobs:
 
       - uses: actions/checkout@v5
         with:
-          ref: ${{ inputs.action == 'deploy' && inputs.sha || 'main' }}
+          ref: ${{ github.event_name == 'push' && github.sha || (inputs.action == 'deploy' && inputs.sha || 'main') }}
           fetch-depth: 0
 
       - name: Require SHA to be on main
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         run: |
           git fetch origin main
           git merge-base --is-ancestor "$SHA" origin/main
@@ -80,17 +84,17 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Build and validate exact SHA
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         run: |
           npm run build
           npm run validate:artifact
 
       - name: Rewrite build config for staging
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         run: node scripts/prepare-staging-worker-config.mjs dist/server/wrangler.json
 
       - name: Record current staging version
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         id: previous
         run: |
           if npx wrangler deployments list --name spanishcue-staging --json > previous.json 2>/dev/null; then
@@ -100,7 +104,7 @@ jobs:
           fi
 
       - name: Deploy staging Worker
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         id: deploy
         # Upload a version, then deploy it at 100%. Unlike `wrangler deploy`,
         # this does not manage triggers or the workers.dev route (enabled when
@@ -120,11 +124,11 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Wait for staging to serve the new version
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         run: sleep 15
 
       - name: Staging smoke
-        if: inputs.action == 'deploy'
+        if: github.event_name == 'push' || inputs.action == 'deploy'
         id: smoke
         continue-on-error: true
         env:
@@ -135,15 +139,15 @@ jobs:
           curl -sf "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" | grep -q '"mode":"sandbox"'
 
       - name: Roll back staging after failed smoke
-        if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
+        if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
         run: |
           npx wrangler rollback --name spanishcue-staging --message "auto rollback after failed smoke for ${SHA}" --yes
           exit 1
 
       - name: Fail first deploy with failed smoke
-        if: inputs.action == 'deploy' && steps.smoke.outcome == 'failure'
+        if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'failure'
         run: exit 1
 
       - name: Manual staging rollback
-        if: inputs.action == 'rollback'
+        if: github.event_name == 'workflow_dispatch' && inputs.action == 'rollback'
         run: npx wrangler rollback ${VERSION_ID:+"$VERSION_ID"} --name spanishcue-staging --message "manual staging rollback" --yes
