@@ -139,13 +139,13 @@ jobs:
           curl -sf "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" | grep -q '"mode":"sandbox"'
 
       - name: Roll back staging after failed smoke
-        if: github.event_name == 'push' || inputs.action == 'deploy' && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
+        if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'failure' && steps.previous.outputs.exists == 'true'
         run: |
           npx wrangler rollback --name spanishcue-staging --message "auto rollback after failed smoke for ${SHA}" --yes
           exit 1
 
       - name: Fail first deploy with failed smoke
-        if: github.event_name == 'push' || inputs.action == 'deploy' && steps.smoke.outcome == 'failure'
+        if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'failure'
         run: exit 1
 
       - name: Manual staging rollback
