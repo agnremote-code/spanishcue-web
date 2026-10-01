@@ -1,0 +1,13 @@
+export type Attempt={heard:string[];selected:number[];checked:boolean;revealed:boolean;assisted:boolean;produced:boolean};
+export type WorldState={level:string;stage:string;item:number;optional:boolean;teacherMode:boolean;attempts:Record<string,Attempt>;observations:number[];visited:string[]};
+export type Action={type:string;level?:string;stage?:string;item?:number;index?:number;key?:string;clip?:string;selected?:number[]};
+export const LEVELS:string[];
+export const STAGES:string[];
+export function isLevel(value:unknown):boolean;
+export function resolveLevel(linked:string|null,saved:string|null):string;
+export function levelUrl(href:string,level:string):string;
+export function nextLevel(level:string,key:string):string;
+export function initialState(level?:string):WorldState;
+export function emptyAttempt():Attempt;
+export function attemptFor(state:WorldState,key:string):Attempt;
+export function reduce(state:WorldState,action:Action):WorldState;
