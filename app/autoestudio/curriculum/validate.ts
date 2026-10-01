@@ -119,53 +119,53 @@ function quizItemProblems(where: string, item: QuizItem, index: number): string[
   }
 }
 
-export function moduleExercises(module: Module): Exercise[] {
+export function moduleExercises(mod: Module): Exercise[] {
   return [
-    ...module.grammar.exercises,
-    ...module.vocabulary.exercises,
-    module.pronunciation.perceive,
-    ...module.listening.stages.map((stage) => stage.exercise),
-    ...module.reading.tasks,
-    ...module.practice.exercises,
+    ...mod.grammar.exercises,
+    ...mod.vocabulary.exercises,
+    mod.pronunciation.perceive,
+    ...mod.listening.stages.map((stage) => stage.exercise),
+    ...mod.reading.tasks,
+    ...mod.practice.exercises,
   ];
 }
 
-export function validateModule(module: Module): string[] {
+export function validateModule(mod: Module): string[] {
   const problems: string[] = [];
-  const at = module.id;
-  const expectedId = moduleIdFor(module.level, module.week);
-  if (module.id !== expectedId) problems.push(`${at}: id should be ${expectedId}`);
-  if (!module.title.trim() || !module.subtitle.trim()) problems.push(`${at}: title and subtitle are required`);
-  if (!module.stop.place || !module.stop.country) problems.push(`${at}: journey stop is required`);
-  if (module.minutes < 30 || module.minutes > 150) problems.push(`${at}: minutes should be between 30 and 150`);
+  const at = mod.id;
+  const expectedId = moduleIdFor(mod.level, mod.week);
+  if (mod.id !== expectedId) problems.push(`${at}: id should be ${expectedId}`);
+  if (!mod.title.trim() || !mod.subtitle.trim()) problems.push(`${at}: title and subtitle are required`);
+  if (!mod.stop.place || !mod.stop.country) problems.push(`${at}: journey stop is required`);
+  if (mod.minutes < 30 || mod.minutes > 150) problems.push(`${at}: minutes should be between 30 and 150`);
 
   // 01 Goal
-  if (!module.goal.canDo.trim()) problems.push(`${at}: goal.canDo missing`);
-  if (module.goal.steps.length < 3) problems.push(`${at}: goal needs at least 3 steps`);
+  if (!mod.goal.canDo.trim()) problems.push(`${at}: goal.canDo missing`);
+  if (mod.goal.steps.length < 3) problems.push(`${at}: goal needs at least 3 steps`);
   // 02 Theory: real explanation with examples.
-  if (module.theory.parts.length < 2) problems.push(`${at}: theory needs at least 2 parts`);
-  module.theory.parts.forEach((part, index) => {
+  if (mod.theory.parts.length < 2) problems.push(`${at}: theory needs at least 2 parts`);
+  mod.theory.parts.forEach((part, index) => {
     if (!part.body.length || part.body.join(" ").length < 120) problems.push(`${at}: theory part ${index} is too thin`);
     if ((part.examples?.length ?? 0) < 2 && !part.table) problems.push(`${at}: theory part ${index} needs examples or a table`);
   });
-  if (!module.theory.parts.some((part) => part.mistakes?.length)) problems.push(`${at}: theory should name at least one common mistake`);
+  if (!mod.theory.parts.some((part) => part.mistakes?.length)) problems.push(`${at}: theory should name at least one common mistake`);
   // 03 Grammar
-  if (module.grammar.exercises.length < 2) problems.push(`${at}: grammar needs at least 2 exercises`);
+  if (mod.grammar.exercises.length < 2) problems.push(`${at}: grammar needs at least 2 exercises`);
   // 04 Vocabulary: chunks, not dumps.
-  const vocabCount = module.vocabulary.groups.reduce((sum, group) => sum + group.items.length, 0);
+  const vocabCount = mod.vocabulary.groups.reduce((sum, group) => sum + group.items.length, 0);
   if (vocabCount < 8) problems.push(`${at}: vocabulary has only ${vocabCount} items`);
   if (vocabCount > 45) problems.push(`${at}: vocabulary dump (${vocabCount} items)`);
-  if (!module.vocabulary.exercises.length) problems.push(`${at}: vocabulary needs practice`);
+  if (!mod.vocabulary.exercises.length) problems.push(`${at}: vocabulary needs practice`);
   // 05 Pronunciation: perception + production, not a word list.
-  const perceive = module.pronunciation.perceive;
+  const perceive = mod.pronunciation.perceive;
   if (!["choice", "listen", "classify", "context"].includes(perceive.type)) problems.push(`${at}: pronunciation perception must be choice/listen/classify`);
   if (perceive.type === "choice" || perceive.type === "listen" || perceive.type === "context" || perceive.type === "classify") {
     if ((perceive.items as { audio?: string }[]).some((item) => !item.audio)) problems.push(`${at}: every pronunciation perception item needs audio`);
   }
-  if (module.pronunciation.produce.length < 3) problems.push(`${at}: pronunciation needs at least 3 production prompts`);
-  if (module.pronunciation.explanation.join(" ").length < 100) problems.push(`${at}: pronunciation explanation too thin`);
+  if (mod.pronunciation.produce.length < 3) problems.push(`${at}: pronunciation needs at least 3 production prompts`);
+  if (mod.pronunciation.explanation.join(" ").length < 100) problems.push(`${at}: pronunciation explanation too thin`);
   // 06 Listening: gist first, transcript hidden by the engine.
-  const listening = module.listening;
+  const listening = mod.listening;
   if (listening.script.length < 4) problems.push(`${at}: listening script too short`);
   if (listening.stages.length < 2) problems.push(`${at}: listening needs at least 2 stages`);
   if (listening.stages[0]?.stage !== "gist") problems.push(`${at}: the first listening stage must be gist`);
@@ -174,31 +174,31 @@ export function validateModule(module: Module): string[] {
     if (!speakerIds.has(line.speaker)) problems.push(`${at}: listening line ${index} has unknown speaker ${line.speaker}`);
   });
   // 07 Reading
-  if (module.reading.text.length < 2) problems.push(`${at}: reading text needs at least 2 paragraphs`);
-  if (module.reading.tasks.length < 2 || new Set(module.reading.tasks.map((task) => task.type)).size < 2) problems.push(`${at}: reading needs at least 2 comprehension tasks with different mechanics`);
-  if (module.reading.noticing.items.length < 2) problems.push(`${at}: reading needs language noticing`);
+  if (mod.reading.text.length < 2) problems.push(`${at}: reading text needs at least 2 paragraphs`);
+  if (mod.reading.tasks.length < 2 || new Set(mod.reading.tasks.map((task) => task.type)).size < 2) problems.push(`${at}: reading needs at least 2 comprehension tasks with different mechanics`);
+  if (mod.reading.noticing.items.length < 2) problems.push(`${at}: reading needs language noticing`);
   // 08 Practice: varied mechanics.
-  const practiceTypes = new Set(module.practice.exercises.map((exercise) => exercise.type));
-  if (module.practice.exercises.length < 3) problems.push(`${at}: practice needs at least 3 exercises`);
+  const practiceTypes = new Set(mod.practice.exercises.map((exercise) => exercise.type));
+  if (mod.practice.exercises.length < 3) problems.push(`${at}: practice needs at least 3 exercises`);
   if (practiceTypes.size < 3) problems.push(`${at}: practice needs at least 3 different mechanics`);
   // Writing is practised in short guided pieces too, not only in the weekly task.
-  const guided = module.practice.exercises.filter((exercise) => exercise.type === "open");
+  const guided = mod.practice.exercises.filter((exercise) => exercise.type === "open");
   if (!guided.length || guided.some((exercise) => exercise.type === "open" && (exercise.items.length < 2 || exercise.items.some((item) => !item.model || (item.checklist?.length ?? 0) < 2)))) problems.push(`${at}: practice needs a guided writing exercise (open, ≥2 items, each with model and checklist)`);
   // 09 Writing
-  const writing = module.writing;
+  const writing = mod.writing;
   if (!writing.model.length || writing.checklist.length < 3 || writing.steps.length < 2) problems.push(`${at}: writing needs steps, a model and a checklist`);
   if (!(writing.words[0] > 0 && writing.words[1] >= writing.words[0])) problems.push(`${at}: writing word range invalid`);
   // 10 Speaking: mandatory oral production.
-  if (module.speaking.tasks.length < 2) problems.push(`${at}: speaking needs at least 2 tasks`);
-  module.speaking.tasks.forEach((task, index) => {
+  if (mod.speaking.tasks.length < 2) problems.push(`${at}: speaking needs at least 2 tasks`);
+  mod.speaking.tasks.forEach((task, index) => {
     if (task.seconds < 15) problems.push(`${at}: speaking task ${index} too short`);
     if (/^\s*(discute|habla|comenta) (esto|este tema) con tu (profesor|profesora|profe)/i.test(task.prompt)) problems.push(`${at}: speaking task ${index} is a fake prompt`);
   });
   // 11 Use it in class
-  if (module.useInClass.cards.length < 3) problems.push(`${at}: use-in-class needs at least 3 cards`);
-  if (new Set(module.useInClass.cards.map((card) => normalize(card.move))).size < 3) problems.push(`${at}: use-in-class moves should vary`);
+  if (mod.useInClass.cards.length < 3) problems.push(`${at}: use-in-class needs at least 3 cards`);
+  if (new Set(mod.useInClass.cards.map((card) => normalize(card.move))).size < 3) problems.push(`${at}: use-in-class moves should vary`);
   // 12 Quiz: mixed assessment.
-  const quiz = module.quiz.items;
+  const quiz = mod.quiz.items;
   if (quiz.length < 8) problems.push(`${at}: quiz needs at least 8 items`);
   const quizTypes = new Set(quiz.map((item) => item.type));
   if (quizTypes.size < 4) problems.push(`${at}: quiz needs at least 4 item types`);
@@ -208,22 +208,22 @@ export function validateModule(module: Module): string[] {
   if (!quiz.some((item) => item.type === "gap" || item.type === "transform" || item.type === "order")) problems.push(`${at}: quiz needs controlled production`);
   quiz.forEach((item, index) => problems.push(...quizItemProblems(at, item, index)));
   // 13 Complete
-  if (module.complete.canNow.length < 3 || !module.complete.review.length) problems.push(`${at}: completion needs can-now and review lists`);
+  if (mod.complete.canNow.length < 3 || !mod.complete.review.length) problems.push(`${at}: completion needs can-now and review lists`);
 
   // Exercises
   const ids = new Set<string>();
-  for (const exercise of moduleExercises(module)) {
+  for (const exercise of moduleExercises(mod)) {
     if (ids.has(exercise.id)) problems.push(`${at}: duplicate exercise id ${exercise.id}`);
     ids.add(exercise.id);
     problems.push(...exerciseProblems(at, exercise));
   }
-  const allTypes = new Set(moduleExercises(module).map((exercise) => exercise.type));
-  if ([...allTypes].filter((type) => AUTO_TYPES.has(type)).length < 5) problems.push(`${at}: the module uses fewer than 5 exercise mechanics`);
+  const allTypes = new Set(moduleExercises(mod).map((exercise) => exercise.type));
+  if ([...allTypes].filter((type) => AUTO_TYPES.has(type)).length < 5) problems.push(`${at}: the mod uses fewer than 5 exercise mechanics`);
 
   // Language support decreases by level.
-  const json = JSON.stringify(module);
-  if ((module.level === "c1" || module.level === "c2") && /"(support|en|canDoEn)":/.test(json)) problems.push(`${at}: C1/C2 content must be in Spanish only`);
-  if (module.level === "a1" && !module.theory.parts.some((part) => part.support?.length)) problems.push(`${at}: A1 theory should offer English support`);
+  const json = JSON.stringify(mod);
+  if ((mod.level === "c1" || mod.level === "c2") && /"(support|en|canDoEn)":/.test(json)) problems.push(`${at}: C1/C2 content must be in Spanish only`);
+  if (mod.level === "a1" && !mod.theory.parts.some((part) => part.support?.length)) problems.push(`${at}: A1 theory should offer English support`);
   return problems;
 }
 
@@ -268,44 +268,44 @@ export function validateCourse({ modulesByLevel, objectives, requiredLevels = []
       continue;
     }
     if (modules.length !== weeks) problems.push(`${level}: ${modules.length} modules for ${weeks} planned weeks`);
-    modules.forEach((module, index) => {
-      if (module.level !== level) problems.push(`${module.id}: listed under ${level}`);
-      if (module.week !== index + 1) problems.push(`${module.id}: week ${module.week} out of order (position ${index + 1})`);
-      const planned = levelObjectives.filter((objective) => objective.week === module.week).map((objective) => objective.id).sort();
-      const declared = [...module.newObjectives].sort();
-      if (planned.join("|") !== declared.join("|")) problems.push(`${module.id}: newObjectives ${declared.join(", ")} differ from the map ${planned.join(", ")}`);
-      const isCheckpoint = levelObjectives.some((objective) => objective.week === module.week && objective.domain === "review");
-      if (isCheckpoint !== (module.kind === "checkpoint")) problems.push(`${module.id}: kind should be ${isCheckpoint ? "checkpoint" : "core"}`);
-      for (const id of module.reviewObjectives) {
+    modules.forEach((mod, index) => {
+      if (mod.level !== level) problems.push(`${mod.id}: listed under ${level}`);
+      if (mod.week !== index + 1) problems.push(`${mod.id}: week ${mod.week} out of order (position ${index + 1})`);
+      const planned = levelObjectives.filter((objective) => objective.week === mod.week).map((objective) => objective.id).sort();
+      const declared = [...mod.newObjectives].sort();
+      if (planned.join("|") !== declared.join("|")) problems.push(`${mod.id}: newObjectives ${declared.join(", ")} differ from the map ${planned.join(", ")}`);
+      const isCheckpoint = levelObjectives.some((objective) => objective.week === mod.week && objective.domain === "review");
+      if (isCheckpoint !== (mod.kind === "checkpoint")) problems.push(`${mod.id}: kind should be ${isCheckpoint ? "checkpoint" : "core"}`);
+      for (const id of mod.reviewObjectives) {
         const objective = objectiveMap.get(id);
-        if (!objective) problems.push(`${module.id}: unknown review objective ${id}`);
-        else if (objectiveOrder(objective) >= objectiveOrder(module)) problems.push(`${module.id}: review objective ${id} is not earlier`);
+        if (!objective) problems.push(`${mod.id}: unknown review objective ${id}`);
+        else if (objectiveOrder(objective) >= objectiveOrder(mod)) problems.push(`${mod.id}: review objective ${id} is not earlier`);
       }
-      const minimumReview = module.kind === "checkpoint" ? 8 : module.id === "a1-01" ? 0 : 2;
-      if (module.reviewObjectives.length < minimumReview) problems.push(`${module.id}: needs at least ${minimumReview} review objectives`);
-      if (module.kind === "checkpoint") {
-        const reviewedWeeks = new Set(module.reviewObjectives.map((id) => objectiveMap.get(id)).filter((objective) => objective?.level === level).map((objective) => objective!.week));
-        if (reviewedWeeks.size < 3) problems.push(`${module.id}: checkpoint must integrate at least 3 earlier weeks`);
+      const minimumReview = mod.kind === "checkpoint" ? 8 : mod.id === "a1-01" ? 0 : 2;
+      if (mod.reviewObjectives.length < minimumReview) problems.push(`${mod.id}: needs at least ${minimumReview} review objectives`);
+      if (mod.kind === "checkpoint") {
+        const reviewedWeeks = new Set(mod.reviewObjectives.map((id) => objectiveMap.get(id)).filter((objective) => objective?.level === level).map((objective) => objective!.week));
+        if (reviewedWeeks.size < 3) problems.push(`${mod.id}: checkpoint must integrate at least 3 earlier weeks`);
       }
-      for (const prerequisite of module.prerequisites) {
+      for (const prerequisite of mod.prerequisites) {
         const [prerequisiteLevel, prerequisiteWeek] = prerequisite.split("-");
         const target = modulesByLevel[prerequisiteLevel as LevelId]?.find((candidate) => candidate.id === prerequisite);
-        if (!target) problems.push(`${module.id}: unknown prerequisite module ${prerequisite}`);
-        else if (levelRank(target.level) * 100 + Number(prerequisiteWeek) >= levelRank(module.level) * 100 + module.week) problems.push(`${module.id}: prerequisite ${prerequisite} is not earlier`);
+        if (!target) problems.push(`${mod.id}: unknown prerequisite mod ${prerequisite}`);
+        else if (levelRank(target.level) * 100 + Number(prerequisiteWeek) >= levelRank(mod.level) * 100 + mod.week) problems.push(`${mod.id}: prerequisite ${prerequisite} is not earlier`);
       }
-      problems.push(...validateModule(module));
+      problems.push(...validateModule(mod));
     });
   }
 
   // Spaced repetition: taught objectives must come back later.
   const builtModules = levelIds.flatMap((level) => modulesByLevel[level] ?? []);
-  const reviewedIds = new Set(builtModules.flatMap((module) => module.reviewObjectives));
-  for (const module of builtModules) {
-    for (const id of module.newObjectives) {
+  const reviewedIds = new Set(builtModules.flatMap((mod) => mod.reviewObjectives));
+  for (const mod of builtModules) {
+    for (const id of mod.newObjectives) {
       const objective = objectiveMap.get(id);
       if (!objective || !["grammar", "vocabulary", "pronunciation", "functional", "discourse"].includes(objective.domain)) continue;
       const hasLaterModule = builtModules.some((candidate) => levelRank(candidate.level) * 100 + candidate.week > objectiveOrder(objective) + 1);
-      if (hasLaterModule && !reviewedIds.has(id)) problems.push(`${id}: introduced in ${module.id} but never reviewed later`);
+      if (hasLaterModule && !reviewedIds.has(id)) problems.push(`${id}: introduced in ${mod.id} but never reviewed later`);
     }
   }
   return problems;
@@ -320,8 +320,8 @@ export function coverageMatrix(modulesByLevel: Record<LevelId, Module[]>, object
     domain: objective.domain,
     topic: objective.topic,
     week: objective.week,
-    introducedIn: modules.filter((module) => module.newObjectives.includes(objective.id)).map((module) => module.id),
-    reviewedIn: modules.filter((module) => module.reviewObjectives.includes(objective.id)).map((module) => module.id),
+    introducedIn: modules.filter((mod) => mod.newObjectives.includes(objective.id)).map((mod) => mod.id),
+    reviewedIn: modules.filter((mod) => mod.reviewObjectives.includes(objective.id)).map((mod) => mod.id),
   }));
 }
 
@@ -333,9 +333,9 @@ export function duplicationAudit(modulesByLevel: Record<LevelId, Module[]>) {
     seen.set(key, [...(seen.get(key) ?? []), where]);
   };
   for (const level of levelIds) {
-    for (const module of modulesByLevel[level] ?? []) {
-      for (const exercise of moduleExercises(module)) {
-        const where = `${module.id}/${exercise.id}`;
+    for (const mod of modulesByLevel[level] ?? []) {
+      for (const exercise of moduleExercises(mod)) {
+        const where = `${mod.id}/${exercise.id}`;
         switch (exercise.type) {
           case "choice":
           case "context":
@@ -361,16 +361,16 @@ export function duplicationAudit(modulesByLevel: Record<LevelId, Module[]>) {
             break;
         }
       }
-      module.quiz.items.forEach((item, index) => {
-        const where = `${module.id}/quiz#${index}`;
+      mod.quiz.items.forEach((item, index) => {
+        const where = `${mod.id}/quiz#${index}`;
         if ("q" in item) add(normalize(item.q), where);
         else if ("sentence" in item) add(normalize(item.sentence), where);
         else if ("source" in item) add(normalize(item.source), where);
         else if ("words" in item) add(normalize(item.words.join(" ")), where);
         else if ("prompt" in item) add(normalize(item.prompt), where);
       });
-      add(normalize(module.listening.script.map((line) => line.text).join(" ")), `${module.id}/listening`);
-      add(normalize(module.reading.text.join(" ")), `${module.id}/reading`);
+      add(normalize(mod.listening.script.map((line) => line.text).join(" ")), `${mod.id}/listening`);
+      add(normalize(mod.reading.text.join(" ")), `${mod.id}/reading`);
     }
   }
   return [...seen.entries()].filter(([, places]) => places.length > 1).map(([text, places]) => ({ text, places }));

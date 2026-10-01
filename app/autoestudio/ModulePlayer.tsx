@@ -59,6 +59,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
     if (!ready) return;
     const fromHash = hashToSection[window.location.hash.replace("#", "")];
     const resume = fromHash ?? state.modules[module.id]?.lastSection ?? "goal";
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSection(resume);
     update((current) => startModule(current, module.id));
     // Only on first load of this module.

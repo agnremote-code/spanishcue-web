@@ -51,25 +51,25 @@ test('every published level is complete, ordered, reviewed and free of orphan ob
   assert.deepEqual(problems, []);
   for (const level of published) {
     const modules = modulesByLevel[level];
-    assert.equal(modules.length, course.plannedWeeks(level), `${level} module count`);
-    modules.forEach((module, index) => assert.equal(module.week, index + 1, `${module.id} order`));
-    const covered = new Set(modules.flatMap((module) => module.newObjectives));
+    assert.equal(modules.length, course.plannedWeeks(level), `${level} mod count`);
+    modules.forEach((mod, index) => assert.equal(mod.week, index + 1, `${mod.id} order`));
+    const covered = new Set(modules.flatMap((mod) => mod.newObjectives));
     for (const objective of course.objectivesByLevel[level]) assert.ok(covered.has(objective.id), `${objective.id} is taught`);
   }
 });
 
-test('every module passes the section, speaking, assessment and quiz rules', () => {
-  for (const module of allModules) {
-    assert.deepEqual(course.validateModule(module), [], module.id);
-    for (const key of course.SECTION_ORDER) assert.ok(module[key] || (key === 'quiz' && module.quiz), `${module.id} has ${key}`);
-    assert.ok(module.speaking.tasks.length >= 2, `${module.id} speaking`);
-    assert.ok(module.quiz.items.some((item) => item.type === 'error'), `${module.id} quiz error correction`);
+test('every mod passes the section, speaking, assessment and quiz rules', () => {
+  for (const mod of allModules) {
+    assert.deepEqual(course.validateModule(mod), [], mod.id);
+    for (const key of course.SECTION_ORDER) assert.ok(mod[key] || (key === 'quiz' && mod.quiz), `${mod.id} has ${key}`);
+    assert.ok(mod.speaking.tasks.length >= 2, `${mod.id} speaking`);
+    assert.ok(mod.quiz.items.some((item) => item.type === 'error'), `${mod.id} quiz error correction`);
   }
 });
 
 test('each level has checkpoints that review at least three earlier weeks', () => {
   for (const level of published) {
-    const checkpoints = modulesByLevel[level].filter((module) => module.kind === 'checkpoint');
+    const checkpoints = modulesByLevel[level].filter((mod) => mod.kind === 'checkpoint');
     assert.ok(checkpoints.length >= 3, `${level} checkpoints`);
     for (const checkpoint of checkpoints) {
       const weeks = new Set(checkpoint.reviewObjectives.map((id) => course.allObjectives.find((objective) => objective.id === id).week));
@@ -79,11 +79,11 @@ test('each level has checkpoints that review at least three earlier weeks', () =
 });
 
 test('previous and next links form one unbroken route across published levels', () => {
-  allModules.forEach((module, index) => {
-    const { previous, next } = course.neighbours(module);
-    assert.equal(previous?.id ?? null, allModules[index - 1]?.id ?? null, `${module.id} previous`);
-    assert.equal(next?.id ?? null, allModules[index + 1]?.id ?? null, `${module.id} next`);
-    assert.equal(course.findModule(module.level, `semana-${module.week}`)?.id, module.id);
+  allModules.forEach((mod, index) => {
+    const { previous, next } = course.neighbours(mod);
+    assert.equal(previous?.id ?? null, allModules[index - 1]?.id ?? null, `${mod.id} previous`);
+    assert.equal(next?.id ?? null, allModules[index + 1]?.id ?? null, `${mod.id} next`);
+    assert.equal(course.findModule(mod.level, `semana-${mod.week}`)?.id, mod.id);
   });
   assert.equal(course.findModule('a1', 'semana-99'), undefined);
   assert.equal(course.findModule('z9', 'semana-1'), undefined);
@@ -94,10 +94,10 @@ test('no exercise, quiz item, listening or reading is repeated across the course
 });
 
 test('English support decreases: none at all in C1 and C2', () => {
-  for (const module of allModules.filter((module) => module.level === 'c1' || module.level === 'c2')) {
-    assert.doesNotMatch(JSON.stringify(module), /"(support|en|canDoEn)":/, module.id);
+  for (const mod of allModules.filter((mod) => mod.level === 'c1' || mod.level === 'c2')) {
+    assert.doesNotMatch(JSON.stringify(mod), /"(support|en|canDoEn)":/, mod.id);
   }
-  for (const module of modulesByLevel.a1) assert.ok(module.goal.canDoEn, `${module.id} offers English`);
+  for (const mod of modulesByLevel.a1) assert.ok(mod.goal.canDoEn, `${mod.id} offers English`);
 });
 
 test('related links only point at routes that exist', () => {
@@ -105,7 +105,7 @@ test('related links only point at routes that exist', () => {
   const catalog = new Set(course.lessons.map((lesson) => lesson.path).filter(Boolean));
   const ids = new Set(course.lessons.map((lesson) => String(lesson.id)));
   const exists = (path) => catalog.has(path) || verbal.has(path) || existsSync(`app${path}/page.tsx`) || (/^\/clase\/(\d+)$/.test(path) && ids.has(path.split('/')[2]));
-  const paths = [...allModules.flatMap((module) => (module.related ?? []).map((link) => link.path)), ...course.allObjectives.flatMap((objective) => objective.related ?? [])];
+  const paths = [...allModules.flatMap((mod) => (mod.related ?? []).map((link) => link.path)), ...course.allObjectives.flatMap((objective) => objective.related ?? [])];
   for (const path of new Set(paths)) assert.ok(exists(path), path);
   assert.ok(!paths.includes('/el-recadero-de-puerto-neon'));
 });
@@ -122,10 +122,10 @@ test('landing summaries carry no lesson bodies', () => {
   const summary = course.summarize(modulesByLevel.a1[0]);
   assert.deepEqual(Object.keys(summary).sort(), ['canDo', 'free', 'id', 'kind', 'level', 'minutes', 'slug', 'stop', 'subtitle', 'title', 'week']);
   const overview = JSON.stringify(course.publishedLevels());
-  for (const module of allModules) assert.ok(!overview.includes(module.listening.script[0].text), `${module.id} listening stays out of the landing`);
+  for (const mod of allModules) assert.ok(!overview.includes(mod.listening.script[0].text), `${mod.id} listening stays out of the landing`);
 });
 
-test('access: A1 weeks 1 and 2 are free, every other module is PRO, maps are public', () => {
+test('access: A1 weeks 1 and 2 are free, every other mod is PRO, maps are public', () => {
   const { access } = course;
   assert.ok(access.isFreeAutoestudioModule('/autoestudio/a1/semana-1'));
   assert.ok(access.isFreeAutoestudioModule('/autoestudio/a1/semana-2/'));
@@ -134,10 +134,10 @@ test('access: A1 weeks 1 and 2 are free, every other module is PRO, maps are pub
   for (const path of ['/autoestudio', '/autoestudio/a1', '/autoestudio/c2', '/autoestudio.rsc', '/', '/noche-abierta']) assert.ok(!access.isPremiumAutoestudioPath(path), path);
   assert.ok(access.isAutoestudioPath('/autoestudio/a1'));
   assert.ok(!access.isAutoestudioPath('/autoestudios'));
-  for (const module of allModules) {
-    const path = access.modulePath(module.level, module.week);
-    assert.equal(course.summarize(module).free, access.isFreeAutoestudioModule(path), module.id);
-    assert.equal(access.isPremiumAutoestudioPath(path), !access.isFreeAutoestudioModule(path), module.id);
+  for (const mod of allModules) {
+    const path = access.modulePath(mod.level, mod.week);
+    assert.equal(course.summarize(mod).free, access.isFreeAutoestudioModule(path), mod.id);
+    assert.equal(access.isPremiumAutoestudioPath(path), !access.isFreeAutoestudioModule(path), mod.id);
   }
   // The query string never grants access.
   assert.ok(access.isPremiumAutoestudioPath(new URL('https://x.test/autoestudio/a1/semana-4?free=1').pathname));
@@ -211,12 +211,12 @@ test('answer checking tolerates case and punctuation and flags missing accents s
 
 test('every spoken clip has text and a known voice', () => {
   const voices = /^es-(MX|ES|AR|CO|CL|PE|CU|US|VE|UY|GQ)-(f|m)$/;
-  for (const module of allModules) {
-    const clips = course.moduleClips(module);
-    assert.ok(clips.length > 20, `${module.id} has audio to play`);
+  for (const mod of allModules) {
+    const clips = course.moduleClips(mod);
+    assert.ok(clips.length > 20, `${mod.id} has audio to play`);
     for (const clip of clips) {
-      assert.ok(clip.text.trim(), `${module.id} empty clip`);
-      if (clip.voice) assert.match(clip.voice, voices, `${module.id} voice`);
+      assert.ok(clip.text.trim(), `${mod.id} empty clip`);
+      if (clip.voice) assert.match(clip.voice, voices, `${mod.id} voice`);
     }
   }
   const manifest = JSON.parse(readFileSync('app/autoestudio/audio-manifest.json', 'utf8'));

@@ -412,6 +412,7 @@ export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writ
   const [text, setText] = useState(draft);
   const [showModel, setShowModel] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setText(draft), [draft]);
   const words = countWords(text);
   const [min, max] = writing.words;

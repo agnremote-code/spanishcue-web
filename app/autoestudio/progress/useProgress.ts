@@ -28,6 +28,8 @@ export function useProgress(adapterFactory: () => ProgressAdapter = defaultAdapt
   useEffect(() => {
     const adapter = adapterFactory();
     adapterRef.current = adapter;
+    // Stored progress is read after mount so server and first client render match.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setState(adapter.load());
     setReady(true);
     return adapter.subscribe?.((next) => setState(next));

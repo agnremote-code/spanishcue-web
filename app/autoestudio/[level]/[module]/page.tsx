@@ -13,21 +13,21 @@ import audioManifest from "../../audio-manifest.json";
 
 export async function generateMetadata({ params }: { params: Promise<{ level: string; module: string }> }): Promise<Metadata> {
   const { level, module: slug } = await params;
-  const module = findModule(level, slug);
-  if (!module) return {};
+  const mod = findModule(level, slug);
+  if (!mod) return {};
   return {
-    title: `${module.title} · ${module.level.toUpperCase()} semana ${module.week} | Autoestudio SPANISHCUE`,
-    description: module.goal.canDo,
+    title: `${mod.title} · ${mod.level.toUpperCase()} semana ${mod.week} | Autoestudio SPANISHCUE`,
+    description: mod.goal.canDo,
   };
 }
 
 export default async function Page({ params }: { params: Promise<{ level: string; module: string }> }) {
   const { level: levelId, module: slug } = await params;
-  const module = findModule(levelId, slug);
+  const mod = findModule(levelId, slug);
   const level = levelMeta(levelId);
-  if (!module || !level) notFound();
+  if (!mod || !level) notFound();
 
-  const path = modulePath(module.level, module.week);
+  const path = modulePath(mod.level, mod.week);
   const fullAccess = fullAccessFromHeaders(await headers());
   // The Worker already redirects locked requests; this keeps the page fail-closed too.
   if (!isFreeAutoestudioModule(path) && !fullAccess) {
@@ -41,18 +41,18 @@ export default async function Page({ params }: { params: Promise<{ level: string
     );
   }
 
-  const { previous, next } = neighbours(module);
+  const { previous, next } = neighbours(mod);
   const objectives = [
-    ...module.newObjectives.map((id) => ({ id, topic: objectiveById.get(id)?.topic ?? id, isNew: true })),
-    ...module.reviewObjectives.map((id) => ({ id, topic: objectiveById.get(id)?.topic ?? id, isNew: false })),
+    ...mod.newObjectives.map((id) => ({ id, topic: objectiveById.get(id)?.topic ?? id, isNew: true })),
+    ...mod.reviewObjectives.map((id) => ({ id, topic: objectiveById.get(id)?.topic ?? id, isNew: false })),
   ];
-  const related = module.related ?? [];
+  const related = mod.related ?? [];
   const recorded = (audioManifest as { clips: Record<string, string> }).clips;
-  const clips = Object.fromEntries(moduleClips(module).filter((clip) => recorded[clip.key]).map((clip) => [clip.key, recorded[clip.key]]));
+  const clips = Object.fromEntries(moduleClips(mod).filter((clip) => recorded[clip.key]).map((clip) => [clip.key, recorded[clip.key]]));
   const nextLocked = Boolean(next && !next.free && !fullAccess);
   return (
     <ModulePlayer
-      module={module}
+      module={mod}
       level={{ id: level.id, code: level.code, name: level.name, color: level.color, mascot: level.mascot, support: level.support }}
       objectives={objectives}
       previous={previous}
