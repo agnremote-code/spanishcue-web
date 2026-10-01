@@ -64,6 +64,7 @@ export default function LevelMap({ level, fullAccess, nextLevel }: { level: Land
           return (
             <li key={summary.id} className={`ae-week ${summary.kind} ${status} ${index % 2 ? "right" : "left"} ${summary.id === progress.nextModuleId ? "is-next" : ""}`}>
               <Link href={moduleHref(summary, fullAccess)} className="ae-week-card" aria-label={`${t.week} ${summary.week}: ${summary.title}${locked ? ` (${t.locked})` : ""}`}>
+                {summary.id === progress.nextModuleId && <img className="ae-week-mascot" src="/brand/mascot/walking.webp" alt="" width="600" height="900" aria-hidden="true" />}
                 <span className="ae-week-num" aria-hidden="true">
                   {status === "completed" ? "✓" : summary.kind === "checkpoint" ? "★" : summary.week}
                 </span>

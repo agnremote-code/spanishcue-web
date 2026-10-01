@@ -552,7 +552,25 @@ export const a1w11: Module = {
         items: [
           { source: "¿Tú quieres venir?", answers: ["¿Vos querés venir?", "¿Querés venir?"], why: "Con vos: **querés**, sin cambio de vocal y con tilde." },
           { source: "¿Puedes el domingo?", answers: ["¿Podés el domingo?", "¿Vos podés el domingo?"], why: "Con vos: **podés**." },
-          { source: "¿A qué hora te levantas?", answers: ["¿A qué hora te levantás?", "¿A qué hora te levantás vos?", "¿Vos a qué hora te levantás?"], why: "Reflexivo con vos: **te levantás**." },
+          { source: "¿A qué hora te acuestas los sábados?", answers: ["¿A qué hora te acostás los sábados?", "¿Vos a qué hora te acostás los sábados?", "¿A qué hora te acostás vos los sábados?"], why: "_Acostarse_ es o → ue con tú (te ac**ue**stas), pero con vos no cambia: **te acostás**." },
+        ],
+      },
+      {
+        id: "x6",
+        type: "open",
+        title: "Responde al chat",
+        prompt: "Escribe respuestas cortas (2–3 frases) a estos mensajes de tus amigos de San Salvador.",
+        items: [
+          {
+            prompt: "Karla: «¿Querés jugar al básquetbol el sábado a las diez?» Tú puedes, pero prefieres otra hora. Acepta y propone otra hora.",
+            model: "¡Sí, claro! Pero a las diez no puedo, es que los sábados me levanto tarde. ¿Por qué no jugamos a las doce?",
+            checklist: ["Aceptas la actividad (¡Sí, claro! / ¡Va, pues!).", "Explicas el problema con _es que_ + rutina.", "Propones otra hora con _¿Por qué no…?_ o _¿Puedes…?_"],
+          },
+          {
+            prompt: "Andrés: «¿Qué quieres hacer el domingo?» Responde con lo que quieres hacer, lo que no puedes hacer y dónde está el lugar.",
+            model: "Quiero visitar el museo del centro. No puedo salir por la mañana porque trabajo hasta la una. El museo está cerca de la catedral. ¿Puedes a las tres?",
+            checklist: ["Usas _quiero_ + infinitivo.", "Usas _no puedo_ + infinitivo o un motivo.", "Dices dónde está el lugar con _estar_."],
+          },
         ],
       },
     ],

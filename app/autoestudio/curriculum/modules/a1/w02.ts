@@ -596,6 +596,24 @@ export const a1w02: Module = {
           { q: "—¿Número de habitación? —La ___, por favor: uno, seis.", answers: [["dieciséis", "16"]], why: "Uno, seis = **dieciséis**, en una sola palabra y con tilde." },
         ],
       },
+      {
+        id: "x6",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases cortas con el lenguaje de la semana.",
+        items: [
+          {
+            prompt: "Lupita te escribe por WhatsApp: «¡Hola! Soy Lupita, de la escuela. ¿De dónde eres? ¿Qué idiomas hablas? ¿Cuál es tu número de celular?». Contesta en 2 o 3 frases.",
+            model: "¡Hola, Lupita! Soy de Dublín, soy irlandesa. Hablo inglés y un poco de español. Mi número es el ocho, siete, dos, cero, cinco, uno, uno, nueve, seis.",
+            checklist: ["Soy de + ciudad / país y la nacionalidad sin «de»", "Hablo… (e delante de inglés)", "El número en palabras, bien escrito"],
+          },
+          {
+            prompt: "Presenta a dos personas que conoces (reales o inventadas) de otro país. Escribe 3 frases: quiénes son, de dónde son y una frase con **no**.",
+            model: "Ellos son Kenji y Aiko. Son japoneses, de Osaka. No son de Tokio y no hablan español.",
+            checklist: ["Son + nacionalidad en plural", "Una frase con no delante del verbo", "Nacionalidades en minúscula"],
+          },
+        ],
+      },
     ],
   },
   writing: {

@@ -379,6 +379,20 @@ export const a1w01: Module = {
           { q: "¿Quién responde directamente a Kenji?", options: ["Daniela", "Camille", "Luis"], answer: 1 },
         ],
       },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "¿Qué hace cada persona en su mensaje? Clasifica las frases del chat.",
+        categories: ["Saluda", "Se presenta", "Se despide"],
+        items: [
+          { text: "¡Hola, hola!", cat: 0, why: "Daniela abre su mensaje con un saludo." },
+          { text: "Me llamo Kenji.", cat: 1, why: "_Me llamo_ + nombre: Kenji se presenta." },
+          { text: "Buenas tardes.", cat: 0, why: "Kenji saluda según la hora: son las 18:15." },
+          { text: "Yo soy Camille.", cat: 1, why: "_Soy_ + nombre: otra forma de presentarse." },
+          { text: "Mi nombre es Luis.", cat: 1, why: "La forma más formal de decir tu nombre." },
+          { text: "Hasta mañana en el café.", cat: 2, why: "_Hasta mañana_ es una despedida: se ven al día siguiente." },
+        ],
+      },
     ],
     noticing: {
       prompt: "Toca cada frase para ver qué hay detrás.",
@@ -436,6 +450,29 @@ export const a1w01: Module = {
           { source: "¿Cómo te llamas?", answers: ["¿Cómo se llama usted?", "¿Cómo se llama?", "¿Usted cómo se llama?"], why: "Te llamas → **se llama** (usted)." },
           { source: "¿Cómo estás?", answers: ["¿Cómo está usted?", "¿Cómo está?"], why: "Estás → **está** (usted)." },
           { source: "¿Tú eres Carlos?", answers: ["¿Usted es Carlos?", "¿Es usted Carlos?"], why: "Eres → **es** (usted)." },
+        ],
+      },
+      {
+        id: "x5",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases cortas con tus datos. Después compara con el modelo.",
+        items: [
+          {
+            prompt: "Un compañero nuevo te escribe: «¡Hola! Soy Pablo. ¿Cómo te llamas?». Contesta en dos frases.",
+            model: "¡Hola, Pablo! Me llamo Sam. Mucho gusto.",
+            checklist: ["Saludas a Pablo", "Dices tu nombre con _me llamo_ o _soy_", "Terminas con _mucho gusto_ o _encantado/encantada_"],
+          },
+          {
+            prompt: "Son las nueve de la mañana. Escribe a tu nueva profesora, de usted: saluda, di tu nombre y pregunta el suyo.",
+            model: "Buenos días. Soy Sam, su nuevo estudiante. ¿Cómo se llama usted?",
+            checklist: ["Usas _buenos días_", "Te presentas", "Preguntas con _¿Cómo se llama usted?_ y no con _te llamas_"],
+          },
+          {
+            prompt: "Es de noche. Despídete del grupo del intercambio y di cuándo los ves.",
+            model: "Buenas noches a todos. ¡Hasta mañana!",
+            checklist: ["Usas _buenas noches_", "Usas una despedida como _hasta mañana_ o _hasta luego_"],
+          },
         ],
       },
     ],

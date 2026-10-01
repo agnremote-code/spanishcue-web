@@ -701,7 +701,7 @@ export function QuizSection({ items, ctx, onFinish, previous }: { items: QuizIte
           {ctx.t.quizScore}: {score}/{items.length}
         </b>
         <small>
-          {answered}/{items.length}
+          {answered}/{items.length} {ctx.t.answeredLabel}
         </small>
         {answered === items.length && (
           <button

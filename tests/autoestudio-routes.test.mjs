@@ -24,7 +24,7 @@ test('A1 weeks 1 and 2 are free and render the full module', { skip: !origin }, 
     const response = await fetch(origin + path, { redirect: 'manual' });
     assert.equal(response.status, 200, path);
     const html = await response.text();
-    assert.match(html, /ae-player/, path);
+    assert.match(html, /ae-module/, path);
   }
   const week1 = await (await fetch(origin + '/autoestudio/a1/semana-1')).text();
   assert.match(week1, /Me llamo/);
@@ -44,5 +44,5 @@ test('PRO weeks redirect anonymous visitors, including forged headers and RSC re
   }
   const rsc = await fetch(origin + '/autoestudio/a1/semana-3.rsc', { redirect: 'manual', headers: { RSC: '1' } });
   assert.notEqual(rsc.status, 200);
-  assert.doesNotMatch(await rsc.text(), /ae-player|"listening"/);
+  assert.doesNotMatch(await rsc.text(), /ae-module|"listening"/);
 });

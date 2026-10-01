@@ -33,6 +33,7 @@ export default async function Page({ params }: { params: Promise<{ level: string
   if (!isFreeAutoestudioModule(path) && !fullAccess) {
     return (
       <main className="ae-locked">
+        <img src="/brand/mascot/standing-crossed.webp" alt="" width="600" height="900" style={{ display: "block", height: 220, width: "auto", margin: "0 auto 12px" }} />
         <h1>Autoestudio · {level.code}</h1>
         <p>Esta semana es parte de SpanishCue PRO.</p>
         <Link href={`/acceso?returnTo=${encodeURIComponent(path)}`}>Desbloquear con PRO</Link>

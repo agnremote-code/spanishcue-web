@@ -175,12 +175,15 @@ export function validateModule(module: Module): string[] {
   });
   // 07 Reading
   if (module.reading.text.length < 2) problems.push(`${at}: reading text needs at least 2 paragraphs`);
-  if (!module.reading.tasks.length) problems.push(`${at}: reading needs comprehension tasks`);
+  if (module.reading.tasks.length < 2 || new Set(module.reading.tasks.map((task) => task.type)).size < 2) problems.push(`${at}: reading needs at least 2 comprehension tasks with different mechanics`);
   if (module.reading.noticing.items.length < 2) problems.push(`${at}: reading needs language noticing`);
   // 08 Practice: varied mechanics.
   const practiceTypes = new Set(module.practice.exercises.map((exercise) => exercise.type));
   if (module.practice.exercises.length < 3) problems.push(`${at}: practice needs at least 3 exercises`);
   if (practiceTypes.size < 3) problems.push(`${at}: practice needs at least 3 different mechanics`);
+  // Writing is practised in short guided pieces too, not only in the weekly task.
+  const guided = module.practice.exercises.filter((exercise) => exercise.type === "open");
+  if (!guided.length || guided.some((exercise) => exercise.type === "open" && (exercise.items.length < 2 || exercise.items.some((item) => !item.model || (item.checklist?.length ?? 0) < 2)))) problems.push(`${at}: practice needs a guided writing exercise (open, ≥2 items, each with model and checklist)`);
   // 09 Writing
   const writing = module.writing;
   if (!writing.model.length || writing.checklist.length < 3 || writing.steps.length < 2) problems.push(`${at}: writing needs steps, a model and a checklist`);

@@ -590,6 +590,29 @@ export const a1w05: Module = {
           { context: "Nadia pregunta: «¿Qué hay en tu mochila?».", q: "Respondes:", options: ["Hay un cuaderno y unas llaves.", "Hay el cuaderno y las llaves.", "Es un cuaderno y unas llaves."], answer: 0, why: "Con **hay** usamos _un/una_, números o nada, nunca _el/la_." },
         ],
       },
+      {
+        id: "x6",
+        type: "open",
+        title: "Escribe en el grupo",
+        prompt: "Responde por escrito a estos mensajes del grupo de Casa Kaan. Escribe dos o tres frases en cada respuesta.",
+        items: [
+          {
+            prompt: "Rocío escribe: «¡Bienvenido/a! ¿De dónde eres y qué idiomas hablas?»",
+            model: "¡Gracias, Rocío! Soy de Toronto, soy canadiense. Hablo inglés y francés, y ahora estudio español.",
+            checklist: ["Uso _ser de_ o la nacionalidad, que concuerda conmigo.", "Digo al menos dos idiomas con _hablo_.", "Conecto con _y_ o _e_."],
+          },
+          {
+            prompt: "Pau escribe: «¿A qué te dedicas? ¿Trabajas aquí en la casa?»",
+            model: "Soy contadora, pero ahora no trabajo en una empresa: trabajo desde casa. Por la tarde estudio en Casa Kaan.",
+            checklist: ["La profesión va sin artículo.", "Uso _no_ delante del verbo.", "Uso _pero_ para un contraste."],
+          },
+          {
+            prompt: "Nadia escribe: «Necesito una mesa libre. ¿Qué hay en la sala pequeña?»",
+            model: "En la sala pequeña hay cuatro mesas y una impresora. También hay dos pizarrones, pero no hay sillas cómodas.",
+            checklist: ["Uso _hay_ con números o _un/una_, nunca con _el/la_.", "Escribo una frase con _no hay_.", "Los plurales son correctos."],
+          },
+        ],
+      },
     ],
   },
   writing: {
@@ -682,7 +705,7 @@ export const a1w05: Module = {
     items: [
       { type: "choice", q: "Rosa y Elena ___ peruanas.", options: ["son", "somos", "sois"], answer: 0, why: "Ellas → **son**." },
       { type: "choice", q: "En el aula ___ quince sillas.", options: ["hay", "son", "es"], answer: 0, why: "Existencia + número: **hay**." },
-      { type: "choice", q: "¿Cuál es correcta?", options: ["Somos camareros en un café de Mérida.", "Somos unos camareros en un café de Mérida.", "Somos camareras en uno café de Mérida."], answer: 0, why: "Profesión sin artículo después de _ser_; _uno_ se acorta a _un_ delante del sustantivo." },
+      { type: "choice", q: "¿Qué frase sobre el trabajo es correcta?", options: ["Somos camareros en un café de Mérida.", "Somos unos camareros en un café de Mérida.", "Somos camareras en uno café de Mérida."], answer: 0, why: "Profesión sin artículo después de _ser_; _uno_ se acorta a _un_ delante del sustantivo." },
       { type: "listen", q: "¿Qué número oyes?", audio: "setenta y seis", options: ["66", "76", "67"], answer: 1, why: "**Setenta** (70) + seis = 76." },
       { type: "listen", q: "¿Qué pregunta la persona?", audio: "¿De dónde son ustedes?", voice: "es-CO-f", options: ["el origen de un grupo", "la profesión de una persona", "el número de teléfono"], answer: 0, why: "_¿De dónde…?_ pregunta el origen; _ustedes_ indica un grupo." },
       { type: "listen", q: "¿Es una pregunta o una afirmación?", audio: "¿Estudias arquitectura?", voice: "es-ES-m", options: ["pregunta", "afirmación"], answer: 0, why: "La voz sube al final: pregunta de sí o no." },

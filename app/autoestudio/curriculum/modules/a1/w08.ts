@@ -545,6 +545,11 @@ export const a1w08: Module = {
             model: "En mi barrio hay un mercado y dos parques. El mercado está al lado de la estación. Los sábados compro fruta allí. Mi café favorito está enfrente del parque y casi siempre leo allí el domingo.",
             checklist: ["Uso **hay** con algo nuevo.", "Uso **está** con un lugar concreto.", "Uso al menos una preposición con **del** o **de la**.", "Incluyo un hábito con _siempre, normalmente_ o _los sábados_."],
           },
+          {
+            prompt: "Un compañero nuevo de trabajo te escribe: «¿Hay un sitio bueno para comer cerca de la oficina?». Respóndele en dos o tres frases: qué hay, dónde está y cómo llegar.",
+            model: "Sí, hay un restaurante pequeño en la esquina, al lado del banco. Desde la oficina, cruzas la calle y giras a la derecha. Yo como allí casi todos los viernes.",
+            checklist: ["Respondo con **hay** + un/una.", "Sitúo el lugar con **está** o con una preposición + **del / de la**.", "Doy al menos un paso de dirección (_cruzas, giras, caminas_)."],
+          },
         ],
       },
     ],

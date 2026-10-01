@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useState, type CSSProperties } from "r
 import { useI18n } from "../i18n/LocaleProvider";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import { SECTION_ORDER, type LevelMeta, type Module, type ModuleSummary, type SectionKey } from "./curriculum/types";
-import { copyFor, sectionHashes, sectionIcons, sectionLabels } from "./engine/copy";
+import { copyFor, sectionHashes, sectionCoach, sectionIcons, sectionLabels, sectionMascots } from "./engine/copy";
 import type { EngineContext } from "./engine/Exercises";
 import { Rich } from "./engine/Rich";
 import {
@@ -96,7 +96,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
   const levelHref = `/autoestudio/${level.id}`;
 
   return (
-    <div className="ae-shell ae-player" style={style}>
+    <div className="ae-shell ae-module" style={style}>
       <header className="ae-topbar">
         <Link href="/" className="ae-brand" aria-label="SPANISHCUE">
           <SpanishCueBrand variant="compact" context={t.product.toUpperCase()} />
@@ -174,6 +174,10 @@ export default function ModulePlayer({ module, level, objectives, previous, next
               </small>
               <h2>{labels[section]}</h2>
             </div>
+            <figure className="ae-coach" aria-hidden="true">
+              <figcaption>{sectionCoach[locale === "en" ? "en" : "es"][section]}</figcaption>
+              <img key={section} src={sectionMascots[section]} alt="" width="600" height="1350" />
+            </figure>
           </header>
 
           <div className="ae-stage-body">
