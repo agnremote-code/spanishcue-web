@@ -96,7 +96,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
   const levelHref = `/autoestudio/${level.id}`;
 
   return (
-    <div className="ae-shell" style={style}>
+    <div className="ae-shell ae-player" style={style}>
       <header className="ae-topbar">
         <Link href="/" className="ae-brand" aria-label="SPANISHCUE">
           <SpanishCueBrand variant="compact" context={t.product.toUpperCase()} />
