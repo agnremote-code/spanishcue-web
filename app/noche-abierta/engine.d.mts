@@ -1,31 +1,47 @@
-export type Reaction = { id: string; label: string; followUp: string };
-export type Cue = {
-  from?: string; time?: string; text?: string; speaker?: string;
-  items?: { id: string; label: string; detail?: string; pro?: string; con?: string }[];
-  clues?: string[];
-  routes?: { id: string; label: string; time: string; note: string }[];
-  people?: { name: string; wants: string; reason?: string }[];
-  versions?: { who: string; text: string }[];
-};
-export type Variant = {
-  id: string; title: string; situation: string; cue: Cue; reactions: Reaction[]; prompts: string[];
-  twist: string; role: string; followUps: string[];
-};
+import type { Beat, Progress } from './activities.mjs';
+
 export type Help = { starters: string[]; chunks: string[]; vocab?: string[] };
-export type Location = { id: string; name: string; short: string; kind: string; help: Help; variants: Variant[] };
+export type Grammar = { title: string; rows: { form: string; example: string }[] };
+export type Message = { from: string; time: string; text: string };
+export type Option = { id: string; label: string; result: string; ask: string; facts?: string[] };
+export type Activity = {
+  id: string; title: string; role?: string; teacher?: string[];
+  situation?: string; prompt?: string; options?: Option[]; close?: string;
+  who?: string; says?: string; ask?: string; followUps?: string[];
+  conditions?: { text: string; ask: string }[];
+  object?: string; year?: string; plaque?: string; detail?: string; ask2?: string;
+  task?: string; pushback?: string; task2?: string;
+  thread?: Message[]; next?: Message; reply?: string;
+  items?: { id: string; label: string; detail: string }[]; reveal?: string;
+  need?: string; banned?: string[]; wrong?: string;
+  people?: { name: string; wants: string; reason: string }[]; change?: string;
+};
+export type ActivityType = 'mensajes' | 'observar' | 'decisiones' | 'conversacion' | 'social' | 'condiciones' | 'museo' | 'comparar' | 'describir' | 'acuerdo';
+export type Location = {
+  id: string; name: string; short: string; type: ActivityType; focus: string; help: Help; grammar?: Grammar;
+  hub?: boolean; hubPrompt?: string; activities: Activity[];
+};
+export type Mechanic = { mechanic: string; more: string };
 export type CityEvent = { id: string; title: string; text: string; affects: string[]; prompts: string[]; teacher: string };
-export type Encounter = { variant: number; reaction: string | null; step: number; inspected: string[]; done: boolean };
+export type Encounter = { done: boolean; acts: Record<string, Progress> };
 export type Phase = 'llegada' | 'ciudad' | 'encuentro' | 'evento' | 'cierre';
 export type NightState = {
-  phase: Phase; position: string | null; visitOrder: string[]; encounters: Record<string, Encounter>;
+  phase: Phase; position: string | null; activity: string | null; visitOrder: string[]; encounters: Record<string, Encounter>;
   event: { id: string; resolved: boolean } | null; final: { criteria: Record<string, boolean> };
 };
-export type SummaryItem = { id: string; name: string; situation: string; choice: string | null; done: boolean };
+export type SummaryItem = { id: string; name: string; situations: string[]; choices: string[]; done: boolean };
+export type View = {
+  location: Location; mechanic: Mechanic; activity: null;
+} | {
+  location: Location; mechanic: Mechanic; activity: Activity; progress: Progress; beats: Beat[];
+  beat: Beat; index: number; total: number; last: boolean;
+};
 
 export const LESSON_ID: number;
 export const MIN_ENCOUNTERS_FOR_EVENT: number;
 export const ROUTE_PLAN: { id: string; title: string; minutes: number; note: string }[];
 export const ARRIVAL: { kicker: string; title: string; premise: string; warmup: string[]; teacher: string };
+export const MECHANICS: Record<ActivityType, Mechanic>;
 export const LOCATIONS: Location[];
 export const CITY_EVENTS: CityEvent[];
 export const TEACHER_MOVES: { id: string; label: string; line: string }[];
@@ -33,19 +49,21 @@ export const FINAL: {
   title: string; prompts: string[]; hypothetical: string; help: Help;
   criteria: { id: string; label: string; detail: string }[];
 };
-export function locationById(id: string): Location | null;
+export function locationById(id: string | null): Location | null;
+export function activityById(location: Location | null, id: string | null): Activity | null;
 export function initialState(): NightState;
 export function startExploring(state: NightState): NightState;
-export function openLocation(state: NightState, id: string): NightState;
-export function setVariant(state: NightState, id: string, variant: number): NightState;
-export function inspectItem(state: NightState, id: string, itemId: string): NightState;
-export function chooseReaction(state: NightState, id: string, reactionId: string): NightState;
-export const TWIST_STEP: number;
-export const TWIST_QUESTION: string;
-export function stepCount(location: Location, variant: number): number;
-export function nextStep(state: NightState, id: string): NightState;
-export function leaveLocation(state: NightState, id: string): NightState;
-export function markDone(state: NightState, id: string): NightState;
+export function openLocation(state: NightState, id: string, activityId?: string | null): NightState;
+export function openActivity(state: NightState, activityId: string): NightState;
+export function closeActivity(state: NightState): NightState;
+export function otherActivity(state: NightState): NightState;
+export function chooseOption(state: NightState, optionId: string): NightState;
+export function advanceBeat(state: NightState): NightState;
+export function inspectItem(state: NightState, itemId: string): NightState;
+export function markDone(state: NightState): NightState;
+export function restartActivity(state: NightState): NightState;
+export function currentView(state: NightState): View | null;
+export function leaveLocation(state: NightState, id?: string | null): NightState;
 export function completedIds(state: NightState): string[];
 export function eventReady(state: NightState): boolean;
 export function suggestedEvent(state: NightState): string;

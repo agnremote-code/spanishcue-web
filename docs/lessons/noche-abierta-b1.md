@@ -77,3 +77,32 @@ Tested in Chromium (Playwright with SwiftShader) on the same local fixture.
 - **No WebGL.** The map view shows nine places and the broken-car encounter opens.
 - **Errors.** No page or console errors in any run.
 - **Frame rate.** Software rendering gives 1–6 FPS, so real-GPU frame rate was not measured. Adaptive quality lowers the resolution, then turns shadows off, when a device stays under 30 FPS.
+
+## Second iteration (2026-10-01)
+
+Same lesson, same ID 223, route, level, category, Modo Play collection and PRO gate. The concept stays (a Saturday night, a city to explore, one city-wide change, an oral recap); the content, the cards, the avatar and the 3D world were rebuilt.
+
+**Story.** Tonight is Vale's 30th birthday: the previa is at her flat, the party ends on the rooftop terrace. Every place belongs to that one evening, so situations no longer contradict each other.
+
+**Places and mechanics (ten, one game each).**
+
+| Place | Mechanic | What the learner does |
+| --- | --- | --- |
+| Café Martina | Mensajes | Reads a chat thread, interprets it, a new message changes the reading, answers in role. |
+| Departamento de Vale | Observar | Looks at at least two things in the room before guessing what happened; then learns the truth. |
+| Restaurante El Toldo | Decisiones | Three situations at the table. Each option has its own consequence and its own follow-up question. |
+| Plaza de la Fuente | Charla | Seven people with their own story (Pablo, Inés, Ana y Diego, Ramiro, Marta, Kenji, Sofía); a question and two follow-ups each, no options. |
+| Bar La Persiana | Problemas sociales | Seven small conflicts: ask, convince, say no without sounding aggressive, reach an agreement. The other person pushes back once. |
+| El auto con el capó abierto | Condiciones con «si» | One situation; rain, 4 % battery, a stranger offering a ride and the workshop closing pile up one by one. Optional grammar help (si + presente → presente / futuro / imperativo). |
+| Museo del Pasado | Contar el pasado | Nine pieces; the learner narrates with imperfecto, pretérito and pluscuamperfecto, then a detail changes the story. Optional grammar help. No gap-filling. |
+| Taxi | Comparar | Two routes or options with facts; the choice has consequences. |
+| Almacén 24 horas | Describir | Explain an object without its name; the clerk brings the wrong thing; try again. |
+| La terraza de las luces | Acuerdo | Everyone wants something different; find a plan; a change forces a new one. |
+
+**Architecture.** Content is data (`content.mjs`); `activities.mjs` turns each activity type into beats (choose, result, talk, change, inspect, task) and is reusable for other worlds; `engine.mjs` keeps the lesson state (places, activities, progress per activity, the city change, the recap). `world3d.mjs` is the 3D world as data plus movement, camera, traffic and interaction logic; `hero3d.ts` is the avatar; `build3d.ts` builds the city and rooms; `World3D.tsx` renders.
+
+**Cards.** One card system for every place: small place title and mechanic, the situation, the question as the main element, compact lettered options (A/B/C or 1–3 on the keyboard), the consequence as its own highlighted block, step marks, help folded behind a small *Necesito ayuda* (or *Ayuda y gramática*), a small *Volver a la calle* with its key, an X, and Esc. Cards size to their content up to a maximum height. Steps change with a short fade and slide; nothing moves under reduced motion. On phones the card is a bottom sheet.
+
+**3D.** The avatar runs by default (6.6 m/s, Shift 9.2, Alt walks), accelerates and slows down, turns smoothly toward the input relative to the camera, and the camera drifts back behind him while he runs. The museum and the bar are rooms you walk around; each piece or person has its own prompt (*MIRAR*, *HABLAR*, *AYUDAR*, *ATENDER*…). The plaza has seven people to talk to. Cars drive along the avenue and stop for the learner.
+
+**Progress.** *x / 10 lugares* with dots in the header; done places get a lantern in 3D and a mark in the list. Exploration stays free and non-linear.

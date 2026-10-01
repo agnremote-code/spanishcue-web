@@ -13,6 +13,8 @@ export type Person = {
   };
   phase: number;
   seated: boolean;
+  // Where the head turns to, relative to the body (null: looks ahead).
+  look: number | null;
 };
 
 const materialCache = new Map<string, THREE.MeshStandardMaterial>();
@@ -123,7 +125,34 @@ export function createPerson(look: Look, shadows = true): Person {
     parts: { hips, torso, head, armL: left.arm, armR: right.arm, foreL: left.fore, foreR: right.fore, legL: legL.leg, legR: legR.leg, shinL: legL.shin, shinR: legR.shin },
     phase: Math.random() * 6,
     seated: false,
+    look: null,
   };
+}
+
+// A soft dark disc under a person: much cheaper than a real shadow and it
+// keeps people grounded when the sun's shadow is off.
+let blobTexture: THREE.CanvasTexture | null = null;
+const blobGeometry = new THREE.CircleGeometry(0.42, 20);
+export function addBlobShadow(person: { root: THREE.Object3D }, size = 1) {
+  if (!blobTexture) {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 64;
+    const ctx = canvas.getContext('2d')!;
+    const g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    g.addColorStop(0, 'rgba(0,0,0,.55)');
+    g.addColorStop(0.6, 'rgba(0,0,0,.25)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 64, 64);
+    blobTexture = new THREE.CanvasTexture(canvas);
+  }
+  const blob = new THREE.Mesh(blobGeometry, new THREE.MeshBasicMaterial({ map: blobTexture, transparent: true, depthWrite: false }));
+  blob.rotation.x = -Math.PI / 2;
+  blob.position.y = 0.025;
+  blob.scale.setScalar(size);
+  blob.renderOrder = 1;
+  person.root.add(blob);
+  return blob;
 }
 
 // speed in m/s: 0 idle, ~2.4 walk, ~5 run. `talk` adds a small gesture.
@@ -138,6 +167,7 @@ export function animatePerson(person: Person, dt: number, speed: number, talk = 
     p.armR.rotation.x = -0.6;
     p.foreL.rotation.x = p.foreR.rotation.x = -0.6;
     p.head.rotation.y = Math.sin(person.phase * 0.4) * 0.25;
+    turnHead(person, dt);
     return;
   }
   const moving = speed > 0.1;
@@ -169,5 +199,15 @@ export function animatePerson(person: Person, dt: number, speed: number, talk = 
     p.armL.rotation.z = -0.06;
     p.armR.rotation.z = 0.06;
     p.head.rotation.y = talk ? Math.sin(t * 0.9) * 0.2 : Math.sin(t * 0.3) * 0.08;
+    p.torso.rotation.z = Math.sin(t * 0.5) * 0.015;
   }
+  turnHead(person, dt);
+}
+
+// People notice the learner: the head turns smoothly toward them.
+function turnHead(person: Person, dt: number) {
+  const store = person as Person & { lookNow?: number };
+  const goal = person.look ?? 0;
+  store.lookNow = (store.lookNow ?? 0) + (goal - (store.lookNow ?? 0)) * Math.min(1, dt * 5);
+  person.parts.head.rotation.y += store.lookNow;
 }
