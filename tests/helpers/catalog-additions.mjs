@@ -51,6 +51,34 @@ const additions = [
       'package-lock.json': [text => withoutPackages(text, threePackages, { dependencies: ['three'], devDependencies: ['@types/three'] })],
     },
   },
+  {
+    // 2026-10-01: Autoestudio, the A1–C2 self-study course. It is not a catalog
+    // lesson: one Library entry point, its own routes and a Worker gate for PRO
+    // weeks (behaviour covered by tests/autoestudio-*.test.mjs).
+    id: null,
+    path: '/autoestudio',
+    files: /^(?:app\/autoestudio\/|public\/autoestudio\/|public\/audio\/autoestudio\/|tests\/autoestudio-[a-z-]+\.test\.mjs$|scripts\/autoestudio-[a-z-]+\.mjs$|docs\/autoestudio\/)/,
+    edits: {
+      'app/Library.tsx': [
+        ['import AutoestudioLibraryEntry from "./autoestudio/LibraryEntry";\n', ''],
+        ['        {view === "Biblioteca" && <AutoestudioLibraryEntry />}\n', ''],
+      ],
+      'worker/index.ts': [
+        ['import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";\n', ''],
+        ["  // Autoestudio lets learners record themselves; the audio never leaves the browser.\n  headers.set('Permissions-Policy',isAutoestudioPath(url.pathname)?'camera=(), microphone=(self), geolocation=()':'camera=(), microphone=(), geolocation=()');", "  headers.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');"],
+        ['    const autoestudio=isAutoestudioPath(pathname);\n    const premiumAutoestudio=isPremiumAutoestudioPath(pathname);\n', ''],
+        ['||premiumBoard||autoestudio||Boolean(lesson);', '||premiumBoard||Boolean(lesson);'],
+        ['||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess)) {', '||(premiumBoard&&!fullAccess)) {'],
+      ],
+      'scripts/protect-client-assets.mjs': [
+        ['  // Autoestudio engines carry no lesson bodies: module data arrives only in\n  // the authorized page render (the Worker gates PRO weeks).\n  "app/autoestudio/AutoestudioLanding.tsx",\n  "app/autoestudio/LevelMap.tsx",\n  "app/autoestudio/ModulePlayer.tsx",\n', ''],
+      ],
+      'scripts/test-worker.mjs': [
+        [" await run(['--test','tests/autoestudio-curriculum.test.mjs']);\n", ''],
+        [" await run(['--test','tests/autoestudio-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});\n", ''],
+      ],
+    },
+  },
 ];
 
 // Approved repairs of EXISTING lessons: the lesson stays in every ledger; before

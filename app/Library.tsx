@@ -5,6 +5,7 @@ import VerbalPosition from "./verbal-system/VerbalPosition";
 import GrammarStep from "./grammar-steps/GrammarStep";
 import LogoutButton from "./LogoutButton";
 import LessonPreview from "./LessonPreview";
+import AutoestudioLibraryEntry from "./autoestudio/LibraryEntry";
 import { conversationLessonHref } from "./conversation-families/navigation";
 import { phoneticsFamilyHref } from "./phonetics-family/navigation";
 import { phoneticsHref } from "./phonetics/navigation";
@@ -1739,6 +1740,7 @@ export default function Library({
             </button>
           </section>
         )}
+        {view === "Biblioteca" && <AutoestudioLibraryEntry />}
         {view === "Biblioteca" && category === "Conversación" && (
           <section className="conversation-family-filter" aria-label={locale === "es" ? "Familias de conversación" : "Conversation families"}>
             <div>

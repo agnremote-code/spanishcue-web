@@ -76,6 +76,11 @@ const publicRoots = new Set([
   "app/verbal-system/SystemHub.tsx",
   "app/grammar-worlds/GrammarWorld.tsx",
   "app/conversation-worlds/ConversationWorld.tsx",
+  // Autoestudio engines carry no lesson bodies: module data arrives only in
+  // the authorized page render (the Worker gates PRO weeks).
+  "app/autoestudio/AutoestudioLanding.tsx",
+  "app/autoestudio/LevelMap.tsx",
+  "app/autoestudio/ModulePlayer.tsx",
   "virtual:vinext-app-browser-entry",
   ...Object.keys(manifest).filter((key) => /(^|\/)node_modules\//.test(key)),
 ]);

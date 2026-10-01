@@ -1,0 +1,4 @@
+{
+  "note": "Recorded MP3s for Autoestudio, keyed by audioKey(text, voice). Empty until clips are generated; the engine falls back to the browser's Spanish voice.",
+  "clips": {}
+}
