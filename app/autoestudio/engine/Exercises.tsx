@@ -85,6 +85,12 @@ export function mechanicLabel(type: Exercise["type"]): string {
 
 export function ChoiceQuestion({ item, ctx, id, onAnswer }: { item: ChoiceItem; ctx: EngineContext; id: string; onAnswer?: (correct: boolean) => void }) {
   const [picked, setPicked] = useState<number | null>(null);
+  // Three or more options are shown in a stable shuffled order, so the right
+  // answer never sits in a predictable place. Pairs (tú/usted…) keep theirs.
+  const order = useMemo(() => {
+    const indexes = item.options.map((_, index) => index);
+    return item.options.length >= 3 ? seededShuffle(indexes, `${id}|${item.q}`) : indexes;
+  }, [id, item.options, item.q]);
   const choose = (index: number) => {
     if (picked !== null) return;
     setPicked(index);
@@ -102,11 +108,12 @@ export function ChoiceQuestion({ item, ctx, id, onAnswer }: { item: ChoiceItem; 
         <Rich text={item.q} />
       </p>
       <div className="ae-options" role="group" aria-label={item.q}>
-        {item.options.map((option, index) => {
+        {order.map((index, position) => {
+          const option = item.options[index];
           const state = picked === null ? "" : index === item.answer ? "is-correct" : index === picked ? "is-wrong" : "is-muted";
           return (
             <button key={`${id}-${index}`} type="button" className={state} onClick={() => choose(index)} aria-pressed={picked === index} disabled={picked !== null && index !== picked && index !== item.answer}>
-              <i aria-hidden="true">{String.fromCharCode(65 + index)}</i>
+              <i aria-hidden="true">{String.fromCharCode(65 + position)}</i>
               <span>
                 <Rich text={option} />
               </span>
