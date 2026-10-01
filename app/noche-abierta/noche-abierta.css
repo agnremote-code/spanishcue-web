@@ -113,12 +113,6 @@
 .na-progress-dots i.is-done { background: var(--na-amber); }
 
 /* Arrival */
-.na-arrival { position: absolute; left: 32px; bottom: 32px; width: min(440px, calc(100% - 64px)); display: grid; gap: 14px; padding: 26px 28px; background: var(--na-card); border: 1px solid var(--na-card-line); border-radius: 18px; box-shadow: 0 24px 60px #000a; backdrop-filter: blur(8px); animation: na-rise-in .5s var(--na-ease); }
-.na-arrival h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 40px; line-height: 1; letter-spacing: -1px; }
-.na-premise { font-size: 15px; line-height: 1.6; color: var(--na-text-2); }
-.na-warmup { display: grid; gap: 2px; padding: 12px 0; border-top: 1px solid #ffffff14; border-bottom: 1px solid #ffffff14; }
-.na-question { font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.4; }
-.na-arrival .na-primary { justify-self: start; }
 
 .na-hint { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; padding: 8px 8px 8px 16px; min-height: 52px; max-width: calc(100% - 32px); background: #120e0be6; border: 1px solid #ffffff14; border-radius: 14px; font-size: 14px; box-shadow: 0 12px 30px #0008; backdrop-filter: blur(6px); animation: na-fade-in .4s ease-out; }
 .na-hint p:only-child { padding-right: 8px; }
@@ -293,10 +287,8 @@
   .na-stage { height: auto; min-height: 0; flex: 1; display: flex; flex-direction: column; overflow: visible; background: #0e1620; }
   .na-scroll { position: relative; inset: auto; height: min(72svh, 600px); overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; }
   .na-camera { width: 800px; height: 100%; }
-  .na-arrival, .na-hint, .na-card, .na-event, .na-final, .na-places { position: fixed; left: 0; right: 0; bottom: 0; top: auto; width: auto; max-width: none; transform: none; border-radius: 20px 20px 0 0; border-bottom: 0; max-height: 84svh; z-index: 20; animation: na-sheet .3s var(--na-ease); }
-  .na-arrival, .na-event, .na-final, .na-places { overflow: auto; }
-  .na-arrival { padding: 20px 18px 24px; gap: 12px; }
-  .na-arrival h1 { font-size: 32px; }
+  .na-hint, .na-card, .na-event, .na-final, .na-places { position: fixed; left: 0; right: 0; bottom: 0; top: auto; width: auto; max-width: none; transform: none; border-radius: 20px 20px 0 0; border-bottom: 0; max-height: 84svh; z-index: 20; animation: na-sheet .3s var(--na-ease); }
+  .na-event, .na-final, .na-places { overflow: auto; }
   .na-hint { border-radius: 16px 16px 0 0; justify-content: space-between; padding: 10px 12px 10px 16px; }
   .na-card-body { padding: 4px 16px; }
   .na-card-head { padding: 10px 8px 0 16px; }
@@ -316,7 +308,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .na-camera, .na-walker, .na-place { transition: none; }
-  .na-card, .na-beat, .na-event, .na-final, .na-arrival, .na-hint, .na-places, .na-help-body, .na-thread li, .na-conditions li, .na-items span, .na-confirm, .na-event .na-ask, .na-final .na-ask { animation: none; }
+  .na-card, .na-beat, .na-event, .na-final, .na-ts-menu, .na-ts-hero, .na-ts-wink, .na-hint, .na-places, .na-help-body, .na-thread li, .na-conditions li, .na-items span, .na-confirm, .na-event .na-ask, .na-final .na-ask { animation: none; }
   .na-options button:hover { transform: none; }
   .na-rain line { animation: none; }
 }
@@ -363,4 +355,70 @@
   .na-brand { font-size: 13px; }
   .na-tools { gap: 6px; }
   .na-tool { padding: 0 8px; font-size: 13px; }
+}
+
+/* Title screen: the city stays the protagonist; a compact game menu on the left, the mascot on the right. */
+.na-title-screen { position: absolute; inset: 0; z-index: 7; pointer-events: none; }
+.na-ts-shade { position: absolute; inset: 0; background: radial-gradient(120% 90% at 0% 100%, #070a10e6 0%, #070a10a8 32%, #070a1000 62%), linear-gradient(to top, #070a10b3, #070a1000 34%); transition: opacity .45s var(--na-ease); }
+.na-ts-menu { position: absolute; left: clamp(20px, 4vw, 64px); bottom: clamp(20px, 5vh, 56px); width: min(400px, calc(100% - 40px)); display: grid; gap: 14px; pointer-events: auto; animation: na-ts-in .7s var(--na-ease) both; transition: opacity .35s var(--na-ease), transform .45s var(--na-ease); }
+.na-ts-menu .na-kicker { display: flex; gap: 10px; align-items: center; }
+.na-ts-menu .na-kicker span { color: var(--na-text-2); font-weight: 700; letter-spacing: 1.4px; padding-left: 10px; border-left: 1px solid #ffffff2e; }
+.na-ts-menu h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: clamp(44px, 5.4vw, 72px); line-height: .92; letter-spacing: -2px; color: #fff4e2; text-shadow: 0 6px 30px #000c, 0 0 1px #000; }
+.na-ts-lede { font-size: 16px; line-height: 1.5; color: var(--na-text); text-shadow: 0 2px 12px #000; max-width: 34ch; }
+.na-ts-verbs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase; color: var(--na-amber); text-shadow: 0 2px 10px #000; }
+.na-ts-level { display: grid; gap: 8px; padding: 12px; border: 1px solid #ffffff1a; border-radius: 14px; background: #0b0e14a8; backdrop-filter: blur(8px); }
+.na-ts-level p { font-size: 12.5px; line-height: 1.45; color: var(--na-text-2); }
+.na-ts-level b { color: var(--na-text); }
+.na-ts-start { justify-self: start; min-height: 52px; padding: 0 28px; font-size: 16px; font-weight: 850; letter-spacing: .4px; text-transform: uppercase; border-radius: 12px; box-shadow: 0 10px 30px #f0b45c40; }
+.na-ts-start:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.na-ts-warmup { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-family: Georgia, "Times New Roman", serif; font-size: 15px; line-height: 1.45; color: var(--na-text); text-shadow: 0 2px 10px #000; }
+.na-ts-warmup span { width: 100%; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--na-muted); }
+.na-ts-warmup .na-link { min-height: 28px; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 13px; }
+.na-ts-hero { position: absolute; right: clamp(0px, 3vw, 72px); bottom: 0; height: min(82%, 780px); aspect-ratio: 2 / 3; margin: 0; pointer-events: none; animation: na-ts-hero-in .9s var(--na-ease) both; transition: opacity .4s var(--na-ease), transform .45s var(--na-ease); filter: drop-shadow(0 20px 40px #000c) drop-shadow(0 0 30px #f0b45c26); }
+.na-ts-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+.na-ts-hero::after { content: ""; position: absolute; left: 10%; right: 10%; bottom: -2%; height: 8%; border-radius: 50%; background: radial-gradient(#000a, #0000 70%); z-index: -1; }
+.na-ts-wink { opacity: 0; animation: na-wink 5.5s 1.6s infinite; }
+.na-title-screen.is-leaving .na-ts-menu { opacity: 0; transform: translateX(-24px); }
+.na-title-screen.is-leaving .na-ts-hero { opacity: 0; transform: translateX(40px) scale(.98); }
+.na-title-screen.is-leaving .na-ts-shade { opacity: 0; }
+@keyframes na-ts-in { from { opacity: 0; transform: translateY(14px); } }
+@keyframes na-ts-hero-in { from { opacity: 0; transform: translateX(30px); } }
+@keyframes na-wink { 0%, 90%, 96%, 100% { opacity: 0; } 91%, 95% { opacity: 1; } }
+.is-3d .na-title-screen ~ .na-hint { display: none; }
+
+/* Level picker: one compact segmented control, in the title screen and in the HUD. */
+.na-levels { display: inline-flex; gap: 2px; padding: 3px; border-radius: 11px; background: #ffffff0f; border: 1px solid #ffffff1a; }
+.na-levels button { min-width: 40px; min-height: 34px; padding: 0 8px; border: 0; border-radius: 8px; background: transparent; color: var(--na-text-2); font-size: 13px; font-weight: 800; letter-spacing: .3px; transition: background .2s, color .2s; }
+.na-levels button:hover { color: var(--na-text); background: #ffffff12; }
+.na-levels button[aria-checked="true"] { background: var(--na-amber); color: #2a1a08; box-shadow: 0 2px 10px #f0b45c40; }
+.na-top .na-levels button { min-height: 30px; min-width: 34px; font-size: 12px; }
+.na-levels-compact { position: relative; flex: none; }
+.na-levels-pop { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); z-index: 30; padding: 6px; border-radius: 14px; background: #0b1016f2; border: 1px solid #333d48; box-shadow: 0 16px 40px #000a; }
+.na-desk-level p:not(.na-teacher-title) { font-size: 13px; line-height: 1.45; color: var(--na-text-2); }
+
+@media (max-width: 1100px) {
+  .na-ts-hero { height: min(72%, 640px); right: -2vw; }
+}
+@media (max-width: 760px) {
+  .na-ts-shade { background: linear-gradient(to top, #070a10f2 0%, #070a10c8 46%, #070a1000 78%); }
+  .na-ts-menu { left: 16px; right: 16px; bottom: 16px; width: auto; gap: 10px; }
+  .na-ts-menu h1 { font-size: 40px; letter-spacing: -1.2px; }
+  .na-ts-lede { font-size: 14px; }
+  .na-ts-level { padding: 8px; }
+  .na-ts-level .na-levels { display: flex; }
+  .na-ts-level .na-levels button { flex: 1; min-width: 0; }
+  .na-ts-start { justify-self: stretch; }
+  .na-ts-hero { right: -14vw; bottom: auto; top: 0; height: 46%; filter: drop-shadow(0 10px 30px #000c); }
+  .na-top .na-levels-compact .na-tool { min-width: 44px; padding: 0 10px; }
+  /* The level button takes the title's place once the night starts. */
+  .na-top:has(.na-levels-compact) .na-title { display: none; }
+}
+@media (max-width: 400px) {
+  .na-top { gap: 6px; padding: 0 8px; }
+  .na-brand { font-size: 12px; }
+  .na-tools { gap: 5px; }
+  .na-tool, .na-top .na-levels-compact .na-tool { min-width: 38px; padding: 0 7px; font-size: 12px; }
+}
+@media (max-height: 640px) and (min-width: 761px) {
+  .na-ts-warmup { display: none; }
 }

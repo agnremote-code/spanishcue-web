@@ -612,8 +612,9 @@ export default function World3D(props: WorldProps) {
 
       // Camera per mode.
       if (sim.mode === 'intro') {
-        const a = reduced() ? 2.4 : 2.4 + sim.clock * 0.12;
-        setShot(sim.player.x + Math.sin(a) * 5.4, 1.8, sim.player.z + Math.cos(a) * 5.4, sim.player.x, 1.35, sim.player.z);
+        // Title screen: a slow, wide crane shot up the street, the night city in front.
+        const drift = reduced() ? 0 : Math.sin(sim.clock * 0.07);
+        setShot(SPAWN.x - 5 + drift, 4.8 + drift * 0.3, SPAWN.z + 6, SPAWN.x - 9.5 + drift * 2, 3, SPAWN.z - 36);
       } else if (sim.mode === 'final') {
         const a = reduced() ? 0.7 : 0.7 + sim.clock * 0.05;
         setShot(Math.sin(a) * 40, 26, Math.cos(a) * 40, 0, 2, -2);
@@ -796,7 +797,7 @@ export default function World3D(props: WorldProps) {
     };
     setModeBoth(phaseMode(live.current.phase));
     sim.seen.phase = live.current.phase;
-    if (sim.mode === 'intro') setShot(SPAWN.x + 4, 1.9, SPAWN.z + 5, SPAWN.x, 1.5, SPAWN.z, true);
+    if (sim.mode === 'intro') setShot(SPAWN.x - 5, 4.8, SPAWN.z + 6, SPAWN.x - 9.5, 3, SPAWN.z - 36, true);
     else followShot(true);
     raf = requestAnimationFrame(frame);
     box.dataset.ready = 'true';

@@ -1,4 +1,4 @@
-// Noche Abierta · B1 · Conversación · Modo Play — the lesson state.
+// Noche Abierta · A1–C2 · Conversación · Modo Play — the lesson state.
 //
 // A Saturday night in one neighbourhood. The city is the menu: the learner
 // chooses where to go, each place is a different small game (content.mjs),
@@ -8,22 +8,39 @@
 
 import { advance, beatsOf, choose, emptyProgress, inspect, isLastBeat } from "./activities.mjs";
 import { ARRIVAL, CITY_EVENTS, FINAL, LOCATIONS, MECHANICS, ROUTE_PLAN, TEACHER_MOVES } from "./content.mjs";
+import { DEFAULT_LEVEL, LEVELS, contentFor, isLevel } from "./levels.mjs";
 
+// The B1 texts, for code that only needs ids and names (the same at every level).
 export { ARRIVAL, CITY_EVENTS, FINAL, LOCATIONS, MECHANICS, ROUTE_PLAN, TEACHER_MOVES };
+export { DEFAULT_LEVEL, LEVELS, contentFor, isLevel };
 
 export const LESSON_ID = 223;
 export const MIN_ENCOUNTERS_FOR_EVENT = 4;
 
-export function locationById(id) {
-  return LOCATIONS.find((location) => location.id === id) ?? null;
+export function locationById(id, level = DEFAULT_LEVEL) {
+  return contentFor(level).LOCATIONS.find((location) => location.id === id) ?? null;
 }
+const placeOf = (state, id = state.position) => locationById(id, state.level);
 
 export function activityById(location, id) {
   return location?.activities.find((activity) => activity.id === id) ?? null;
 }
 
-export function initialState() {
-  return { phase: "llegada", position: null, activity: null, visitOrder: [], encounters: {}, event: null, final: { criteria: {} } };
+export function initialState(level = DEFAULT_LEVEL) {
+  return { level: isLevel(level) ? level : DEFAULT_LEVEL, phase: "llegada", position: null, activity: null, visitOrder: [], encounters: {}, event: null, final: { criteria: {} } };
+}
+
+// Same night, other level: the world, the route and what was played stay; the
+// situation on screen starts again with the new level's texts so a question
+// from one level never meets a consequence from another.
+export function setLevel(state, level) {
+  if (!isLevel(level) || state.level === level) return state;
+  const next = { ...state, level };
+  const encounter = state.position ? state.encounters[state.position] : null;
+  if (!encounter || !state.activity || !encounter.acts[state.activity]) return next;
+  const before = encounter.acts[state.activity];
+  const acts = { ...encounter.acts, [state.activity]: { ...emptyProgress(), done: before.done } };
+  return { ...next, encounters: { ...state.encounters, [state.position]: { ...encounter, acts } } };
 }
 
 export function startExploring(state) {
@@ -47,7 +64,7 @@ function nextFor(location, encounter, after = null) {
 // Open a place. Places with people or objects to walk up to (`hub`) can open
 // straight onto one of them or onto their list; the others open a situation.
 export function openLocation(state, id, activityId = null) {
-  const location = locationById(id);
+  const location = placeOf(state, id);
   if (!location || state.phase === "cierre") return state;
   const encounter = state.encounters[id] ?? blankEncounter();
   const chosen = activityById(location, activityId)?.id ?? null;
@@ -63,14 +80,14 @@ export function openLocation(state, id, activityId = null) {
 }
 
 export function openActivity(state, activityId) {
-  const location = locationById(state.position);
+  const location = placeOf(state);
   if (state.phase !== "encuentro" || !activityById(location, activityId)) return state;
   return { ...state, activity: activityId };
 }
 
 // Back to the list of people or objects. Outside a hub this leaves the place.
 export function closeActivity(state) {
-  const location = locationById(state.position);
+  const location = placeOf(state);
   if (!location) return state;
   if (!location.hub) return leaveLocation(state, location.id);
   return { ...state, activity: null };
@@ -78,7 +95,7 @@ export function closeActivity(state) {
 
 // Another situation in the same place (the next one, round the list).
 export function otherActivity(state) {
-  const location = locationById(state.position);
+  const location = placeOf(state);
   if (!location) return state;
   if (location.hub) return { ...state, activity: null };
   const encounter = state.encounters[location.id];
@@ -86,7 +103,7 @@ export function otherActivity(state) {
 }
 
 function updateProgress(state, change) {
-  const location = locationById(state.position);
+  const location = placeOf(state);
   const activity = activityById(location, state.activity);
   if (!location || !activity || state.phase !== "encuentro") return state;
   const encounter = state.encounters[location.id];
@@ -124,7 +141,7 @@ export function restartActivity(state) {
 
 // What the card shows right now.
 export function currentView(state) {
-  const location = locationById(state.position);
+  const location = placeOf(state);
   if (!location || state.phase !== "encuentro") return null;
   const activity = activityById(location, state.activity);
   const mechanic = MECHANICS[location.type];
@@ -196,7 +213,7 @@ export function openFinal(state) {
 }
 
 export function toggleCriterion(state, criterionId) {
-  if (!FINAL.criteria.some((item) => item.id === criterionId)) return state;
+  if (!contentFor(state.level).FINAL.criteria.some((item) => item.id === criterionId)) return state;
   const criteria = { ...state.final.criteria, [criterionId]: !state.final.criteria[criterionId] };
   return { ...state, final: { ...state.final, criteria } };
 }
@@ -212,7 +229,7 @@ export function nightClock(state) {
 // places in order, what happened in each and the decisions taken.
 export function nightSummary(state) {
   return state.visitOrder.map((id) => {
-    const location = locationById(id);
+    const location = placeOf(state, id);
     const encounter = state.encounters[id];
     const played = location.activities.filter((activity) => encounter.acts[activity.id]?.done);
     const choices = played.flatMap((activity) => {
@@ -228,7 +245,7 @@ export function isValidState(value) {
   if (!value || typeof value !== "object") return false;
   const ok = typeof value.phase === "string" && Array.isArray(value.visitOrder) && value.encounters && typeof value.encounters === "object"
     && value.final && typeof value.final === "object" && "activity" in value;
-  if (!ok) return false;
+  if (!ok || ("level" in value && !isLevel(value.level))) return false;
   return value.visitOrder.every((id) => {
     const location = locationById(id);
     const encounter = value.encounters[id];
