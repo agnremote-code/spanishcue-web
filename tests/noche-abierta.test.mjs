@@ -31,16 +31,21 @@ async function component(path) {
 const React = require('react');
 const { renderToString } = require('react-dom/server');
 
-// Plays a whole evening through the engine, as the interface does.
+// Plays a whole evening through the engine, as the interface does: in each
+// place one activity is played past its first beat, then the learner leaves.
+function playOne(state) {
+  const view = engine.currentView(state);
+  if (!view.activity) state = engine.openActivity(state, view.location.activities[0].id);
+  const current = engine.currentView(state);
+  if (current.beat.kind === 'choose') return engine.chooseOption(state, current.beat.options[1].id);
+  if (current.beat.kind === 'inspect') for (const item of current.beat.media.items) state = engine.inspectItem(state, item.id);
+  return engine.advanceBeat(state);
+}
 function play(ids) {
   let state = engine.startExploring(engine.initialState());
   const trail = [state];
   for (const id of ids) {
-    state = engine.openLocation(state, id);
-    const encounter = state.encounters[id];
-    const variant = engine.locationById(id).variants[encounter.variant];
-    state = engine.chooseReaction(state, id, variant.reactions[1].id);
-    state = engine.nextStep(state, id);
+    state = playOne(engine.openLocation(state, id));
     state = engine.leaveLocation(state, id);
     trail.push(state);
     if (state.phase === 'evento') { state = engine.resolveEvent(state); trail.push(state); }
@@ -98,34 +103,86 @@ test('the catalog thumbnail is a real 16:9 image from the lesson folder', async 
   assert.ok(Math.abs(width / height - 16 / 9) < 0.01, `${width}x${height}`);
 });
 
-test('nine places, each a different kind of situation, with two or three valid variants', () => {
-  const { LOCATIONS } = engine;
-  assert.equal(LOCATIONS.length, 9);
-  assert.equal(new Set(LOCATIONS.map(item => item.id)).size, 9);
-  assert.equal(new Set(LOCATIONS.map(item => item.kind)).size, 9, 'every place uses its own mechanic');
-  const variantIds = LOCATIONS.flatMap(item => item.variants.map(variant => variant.id));
-  assert.equal(new Set(variantIds).size, variantIds.length, 'variant ids are unique across the city');
-  assert.ok(variantIds.length >= 16);
-  const followUps = [];
+// ------------------------------------------------------------ content
+
+const activities = await import('../app/noche-abierta/activities.mjs');
+const allActivities = () => engine.LOCATIONS.flatMap(location => location.activities.map(activity => ({ location, activity })));
+const learnerText = () => allActivities().flatMap(({ activity }) => [
+  activity.situation, activity.prompt, activity.close, activity.says, activity.ask, activity.ask2, activity.detail, activity.plaque,
+  activity.task, activity.task2, activity.pushback, activity.reveal, activity.wrong, activity.reply, activity.change,
+  ...(activity.followUps ?? []), ...(activity.options ?? []).flatMap(option => [option.label, option.result, option.ask]),
+  ...(activity.conditions ?? []).flatMap(item => [item.text, item.ask]),
+]).filter(Boolean);
+
+test('ten places, each its own game, with enough to play in every one', () => {
+  const { LOCATIONS, MECHANICS } = engine;
+  assert.equal(LOCATIONS.length, 10);
+  assert.equal(new Set(LOCATIONS.map(item => item.id)).size, 10);
+  assert.equal(new Set(LOCATIONS.map(item => item.type)).size, 10, 'every place uses its own mechanic');
   for (const location of LOCATIONS) {
-    assert.ok(location.variants.length >= 2 && location.variants.length <= 3, location.id);
-    assert.ok(location.help.starters.length >= 3 && location.help.chunks.length >= 4 && location.help.chunks.length <= 6, `${location.id} help`);
-    for (const variant of location.variants) {
-      for (const field of ['title', 'situation', 'twist', 'role']) assert.ok(variant[field]?.trim(), `${variant.id}.${field}`);
-      assert.equal(variant.reactions.length, 3, variant.id);
-      assert.equal(new Set(variant.reactions.map(item => item.id)).size, 3, `${variant.id} reaction ids`);
-      for (const reaction of variant.reactions) { assert.ok(reaction.label && reaction.followUp, `${variant.id}.${reaction.id}`); followUps.push(reaction.followUp); }
-      assert.equal(variant.prompts.length, 2, variant.id);
-      assert.equal(variant.followUps.length, 2, variant.id);
-      const cue = variant.cue;
-      const shape = { message: () => cue.from && cue.text, inspect: () => cue.items?.length >= 3 && cue.items.every(item => item.detail), recognize: () => cue.clues?.length >= 3,
-        route: () => cue.routes?.length === 3, proposals: () => cue.people?.length >= 3, versions: () => cue.versions?.length >= 2,
-        shelf: () => cue.items?.length === 3 && cue.items.every(item => item.pro && item.con), vote: () => cue.people?.length >= 3 && cue.people.every(item => item.reason),
-        roadside: () => cue.speaker && cue.text && cue.clues?.length >= 3 }[location.kind];
-      assert.ok(shape?.(), `${variant.id} cue matches ${location.kind}`);
+    assert.ok(activities.ACTIVITY_TYPES[location.type], `${location.id} has a known type`);
+    assert.ok(MECHANICS[location.type]?.mechanic && MECHANICS[location.type]?.more, `${location.id} mechanic label`);
+    assert.ok(location.name && location.short && location.focus, location.id);
+    assert.ok(location.help.starters.length >= 3 && location.help.chunks.length >= 4, `${location.id} help`);
+    assert.ok(location.activities.length >= (location.hub ? 5 : 2), `${location.id} has enough to play`);
+    assert.equal(new Set(location.activities.map(item => item.id)).size, location.activities.length, `${location.id} activity ids`);
+    if (location.hub) assert.ok(location.hubPrompt, `${location.id} hub prompt`);
+    for (const activity of location.activities) {
+      assert.ok(activity.title && activity.role, `${activity.id} title and teacher role`);
+      const beats = activities.beatsOf(location.type, activity);
+      assert.ok(beats.length >= 2, `${activity.id} has at least two beats`);
+      for (const beat of beats) {
+        if (beat.kind !== 'result') assert.ok(beat.prompt?.trim(), `${activity.id}: every beat asks something`);
+        assert.doesNotMatch(JSON.stringify(beat), /undefined/, `${activity.id} beat is complete`);
+      }
     }
   }
-  assert.equal(new Set(followUps).size, followUps.length, 'each choice opens its own follow-up');
+  assert.deepEqual(LOCATIONS.filter(item => item.hub).map(item => item.id).sort(), ['bar', 'museo', 'plaza']);
+  assert.ok(engine.locationById('auto').grammar.rows.length >= 3, 'the car has optional si-clause help');
+  assert.ok(engine.locationById('museo').grammar.rows.length >= 3, 'the museum has optional past-tense help');
+});
+
+test('decisions have real consequences: each option leads somewhere different', () => {
+  for (const id of ['restaurante', 'taxi']) {
+    for (const activity of engine.locationById(id).activities) {
+      assert.ok(activity.options.length >= 2 && activity.options.length <= 3, activity.id);
+      assert.equal(new Set(activity.options.map(item => item.result)).size, activity.options.length, `${activity.id}: different consequences`);
+      assert.equal(new Set(activity.options.map(item => item.ask)).size, activity.options.length, `${activity.id}: different follow-up`);
+      for (const option of activity.options) assert.ok(option.result.length > 40 && option.ask.endsWith('.') || option.ask.endsWith('?'), `${activity.id}.${option.id}`);
+      assert.ok(activity.close, `${activity.id} closes with a conversation`);
+    }
+  }
+  assert.equal(engine.locationById('restaurante').activities.length, 3, 'several situations at the table');
+  for (const activity of engine.locationById('taxi').activities) for (const option of activity.options) assert.ok(option.facts.length >= 2, `${activity.id}.${option.id} facts`);
+});
+
+test('open activities have no false choices and the people, objects and problems are distinct', () => {
+  for (const id of ['plaza', 'bar', 'museo', 'auto', 'tienda', 'terraza', 'cafe', 'departamento']) {
+    for (const activity of engine.locationById(id).activities) assert.equal(activity.options, undefined, `${id}/${activity.id} is open`);
+  }
+  for (const activity of engine.locationById('plaza').activities) {
+    assert.ok(activity.who && activity.says && activity.ask, activity.id);
+    assert.equal(activity.followUps.length, 2, activity.id);
+  }
+  for (const activity of engine.locationById('bar').activities) assert.ok(activity.situation && activity.task && activity.pushback && activity.task2, activity.id);
+  const museum = engine.locationById('museo').activities;
+  assert.equal(museum.length, 9);
+  for (const activity of museum) assert.ok(activity.object && activity.year && activity.plaque && activity.ask && activity.detail && activity.ask2, activity.id);
+  for (const activity of engine.locationById('auto').activities) assert.ok(activity.conditions.length >= 3, activity.id);
+  const conditions = engine.locationById('auto').activities.flatMap(item => item.conditions.map(c => c.text)).join(' ');
+  for (const pattern of [/llov/i, /4 %/, /llevar/i, /cierra/i]) assert.match(conditions, pattern);
+});
+
+test('the texts read like one evening: no repeated questions, no tuteo, no stock phrasing', () => {
+  const texts = learnerText();
+  const asks = allActivities().flatMap(({ activity }) => [activity.prompt, activity.ask, activity.ask2, activity.task, activity.task2, ...(activity.followUps ?? []), ...(activity.options ?? []).map(item => item.ask)]).filter(Boolean);
+  assert.equal(new Set(asks).size, asks.length, 'no question is asked twice');
+  assert.ok(texts.filter(text => /¿Qué harías\?/.test(text)).length <= 1, '«¿Qué harías?» is not the default question');
+  for (const text of texts) {
+    assert.doesNotMatch(text, /\b(tienes|puedes|quieres|eres|sabes|piensas|crees|prefieres|harías tú)\b/i, `voseo, not tuteo: ${text}`);
+    assert.doesNotMatch(text, /\b(?:como modelo|en conclusión|cabe destacar|sumérgete|¡Bienvenido)\b/i, text);
+    assert.doesNotMatch(text, /\s{2,}|\s[,.;:]/, `clean spacing: ${text}`);
+  }
 });
 
 test('the city drawing has a hotspot, label and standing spot for every place, inside the frame', () => {
@@ -138,6 +195,7 @@ test('the city drawing has a hotspot, label and standing spot for every place, i
     const feet = scene.iso(place.spot.gx, place.spot.gy);
     assert.ok(feet.x > 0 && feet.x < scene.VIEWBOX.width && feet.y > 0 && feet.y < scene.VIEWBOX.height, `${location.id} spot in frame`);
   }
+  assert.deepEqual(Object.keys(scene.PLACES).sort(), engine.LOCATIONS.map(item => item.id).sort(), 'no leftover places on the map');
   const labels = Object.values(scene.PLACES).map(item => item.label);
   for (let a = 0; a < labels.length; a++) for (let b = a + 1; b < labels.length; b++) {
     assert.ok(Math.abs(labels[a].x - labels[b].x) > 150 || Math.abs(labels[a].y - labels[b].y) > 40, `labels ${a} and ${b} do not overlap`);
@@ -157,44 +215,87 @@ test('the lesson plan adds up to 45 minutes in the agreed stages', () => {
   assert.ok(engine.FINAL.hypothetical.startsWith('Si la noche empezara de nuevo'));
 });
 
-test('visits are tracked once, in order, and only count after a real exchange', () => {
-  let state = engine.startExploring(engine.initialState());
-  assert.equal(state.phase, 'ciudad');
-  state = engine.openLocation(state, 'plaza');
+// ------------------------------------------------------------ engine
+
+test('a decision moves straight to its own consequence, then to the conversation', () => {
+  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'restaurante');
+  let view = engine.currentView(state);
+  assert.equal(view.activity.id, 'resto-cuenta', 'a sequential place opens on its first situation');
+  assert.equal(view.beat.kind, 'choose');
+  assert.equal(engine.advanceBeat(state), state, 'no skipping the decision');
+  assert.equal(engine.chooseOption(state, 'nope'), state);
+  state = engine.chooseOption(state, 'otra');
+  view = engine.currentView(state);
+  assert.equal(view.beat.kind, 'result');
+  assert.equal(view.beat.chosen, 'Proponés otra solución.');
+  assert.match(view.beat.context, /Lu sonríe/);
+  assert.equal(engine.chooseOption(state, 'iguales'), state, 'the choice is final once made');
+  state = engine.advanceBeat(state);
+  assert.equal(engine.currentView(state).last, true);
+  assert.equal(state.encounters.restaurante.acts['resto-cuenta'].done, true);
+  state = engine.otherActivity(state);
+  assert.equal(engine.currentView(state).activity.id, 'resto-plato', 'another situation at the same table');
+  state = engine.leaveLocation(state);
+  assert.deepEqual(engine.completedIds(state), ['restaurante']);
+  assert.deepEqual(engine.nightSummary(state)[0].choices, ['Proponés otra solución.']);
+});
+
+test('places with people or objects open on their list; closing an activity goes back to it', () => {
+  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'plaza');
+  assert.equal(engine.currentView(state).activity, null, 'the plaza opens on its people');
+  state = engine.openActivity(state, 'kenji');
+  let view = engine.currentView(state);
+  assert.equal(view.beat.media.type, 'quote');
+  assert.equal(view.total, 3, 'a question and two follow-ups');
+  state = engine.advanceBeat(engine.advanceBeat(state));
+  assert.equal(engine.currentView(state).last, true);
+  state = engine.closeActivity(state);
   assert.equal(state.phase, 'encuentro');
-  assert.equal(state.position, 'plaza');
-  assert.deepEqual(state.visitOrder, ['plaza']);
-  assert.equal(engine.nextStep(state, 'plaza'), state, 'no follow-up before a choice');
-  assert.equal(engine.chooseReaction(state, 'plaza', 'not-a-choice'), state);
-  state = engine.leaveLocation(state, 'plaza');
-  assert.equal(state.phase, 'ciudad');
-  assert.equal(state.encounters.plaza.done, false, 'leaving early keeps the visit but not the encounter');
-  assert.deepEqual(engine.completedIds(state), []);
-  state = engine.openLocation(state, 'plaza');
-  assert.deepEqual(state.visitOrder, ['plaza'], 'revisiting does not duplicate');
-  state = engine.chooseReaction(state, 'plaza', 'falta-info');
-  assert.equal(state.encounters.plaza.step, 1);
-  const last = engine.stepCount(engine.locationById('plaza'), 0) - 1;
-  for (let i = 0; i < 10; i++) state = engine.nextStep(state, 'plaza');
-  assert.equal(state.encounters.plaza.step, last, 'steps stay within the encounter');
-  state = engine.leaveLocation(state, 'plaza');
+  assert.equal(state.activity, null);
+  assert.equal(state.encounters.plaza.acts.kenji.done, true);
+  state = engine.openActivity(state, 'kenji');
+  assert.equal(engine.currentView(state).index, 2, 'reopening keeps where the talk was');
+  state = engine.restartActivity(state);
+  assert.equal(engine.currentView(state).index, 0, 'the teacher can restart it');
+  assert.equal(engine.openActivity(state, 'nadie'), state);
+  const direct = engine.openLocation(engine.startExploring(engine.initialState()), 'museo', 'televisor');
+  assert.equal(direct.activity, 'televisor', 'walking up to a piece opens it directly');
+  assert.equal(engine.currentView(direct).beat.media.year, '1969');
+  state = engine.leaveLocation(state);
   assert.deepEqual(engine.completedIds(state), ['plaza']);
-  assert.equal(engine.nightSummary(state)[0].choice, 'Me falta información');
 });
 
-test('the teacher can switch the situation and it restarts cleanly', () => {
+test('looking around comes before guessing', () => {
   let state = engine.openLocation(engine.startExploring(engine.initialState()), 'departamento');
-  state = engine.inspectItem(state, 'departamento', 'zapatos');
-  state = engine.inspectItem(state, 'departamento', 'zapatos');
-  assert.deepEqual(state.encounters.departamento.inspected, ['zapatos']);
-  state = engine.chooseReaction(state, 'departamento', 'ayudar');
-  state = engine.setVariant(state, 'departamento', 1);
-  assert.deepEqual(state.encounters.departamento, { variant: 1, reaction: null, step: 0, inspected: [], done: false });
-  state = engine.setVariant(state, 'departamento', 3);
-  assert.equal(state.encounters.departamento.variant, 0, 'variants wrap around');
+  const items = engine.currentView(state).beat.media.items;
+  assert.ok(items.length >= 3);
+  assert.equal(engine.advanceBeat(state), state, 'nothing seen yet');
+  state = engine.inspectItem(state, items[0].id);
+  state = engine.inspectItem(state, items[0].id);
+  assert.deepEqual(state.encounters.departamento.acts[state.activity].seen, [items[0].id]);
+  assert.equal(engine.advanceBeat(state), state, 'one thing is not enough');
+  state = engine.inspectItem(state, items[1].id);
+  state = engine.advanceBeat(state);
+  assert.equal(engine.currentView(state).beat.kind, 'change');
+  assert.equal(engine.inspectItem(state, 'nada'), state);
 });
 
-test('the city changes once, after the fourth encounter, and connects to where the learner went', () => {
+test('conditions pile up one by one in the broken-car game', () => {
+  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'auto');
+  const activity = engine.currentView(state).activity;
+  state = engine.advanceBeat(state);
+  for (let i = 0; i < activity.conditions.length; i++) {
+    const beat = engine.currentView(state).beat;
+    assert.equal(beat.kind, 'change');
+    assert.equal(beat.media.before.length, i, 'earlier conditions stay on screen');
+    assert.equal(beat.media.now, activity.conditions[i].text);
+    state = engine.advanceBeat(state);
+  }
+  assert.equal(engine.currentView(state).last, true);
+  assert.match(engine.currentView(state).beat.prompt, /«si»/);
+});
+
+test('the city changes once, after the fourth place, and connects to where the learner went', () => {
   const { state: afterThree } = play(['cafe', 'plaza', 'terraza']);
   assert.equal(afterThree.event, null);
   assert.equal(engine.eventReady(afterThree), false);
@@ -202,7 +303,9 @@ test('the city changes once, after the fourth encounter, and connects to where t
   assert.equal(engine.openFinal(afterThree), afterThree, 'no recap before the city changes');
 
   let state = engine.openLocation(afterThree, 'taxi');
-  state = engine.chooseReaction(state, 'taxi', 'volver');
+  state = engine.leaveLocation(state, 'taxi');
+  assert.equal(state.event, null, 'leaving without playing does not count');
+  state = playOne(engine.openLocation(state, 'taxi'));
   state = engine.leaveLocation(state, 'taxi');
   assert.equal(state.phase, 'evento');
   assert.equal(state.event.id, 'lluvia', 'rain touches the plaza, the rooftop and the taxi the learner used');
@@ -211,7 +314,7 @@ test('the city changes once, after the fourth encounter, and connects to where t
   assert.equal(state.phase, 'ciudad');
   assert.equal(engine.finalAvailable(state), true);
 
-  const quiet = play(['cafe', 'esquina', 'restaurante', 'tienda']).trail.find(item => item.event);
+  const quiet = play(['cafe', 'departamento', 'restaurante', 'tienda']).trail.find(item => item.event);
   assert.equal(quiet.event.id, 'celular', 'with no overlap the lost phone asks for the whole route');
 
   const early = engine.triggerEvent(engine.openLocation(engine.startExploring(engine.initialState()), 'cafe'), 'transporte');
@@ -224,17 +327,17 @@ test('the city changes once, after the fourth encounter, and connects to where t
 });
 
 test('the final stage recaps the actual night and the teacher notes stay qualitative', () => {
-  let { state } = play(['departamento', 'taxi', 'tienda', 'terraza', 'cafe']);
+  let { state } = play(['departamento', 'taxi', 'tienda', 'terraza', 'museo']);
   state = engine.openFinal(state);
   assert.equal(state.phase, 'cierre');
   assert.equal(engine.openLocation(state, 'plaza'), state, 'the city is closed during the recap');
   const summary = engine.nightSummary(state);
-  assert.deepEqual(summary.map(item => item.id), ['departamento', 'taxi', 'tienda', 'terraza', 'cafe']);
-  assert.ok(summary.every(item => item.done && item.choice && item.situation));
+  assert.deepEqual(summary.map(item => item.id), ['departamento', 'taxi', 'tienda', 'terraza', 'museo']);
+  assert.ok(summary.every(item => item.done && item.situations.length === 1));
+  assert.equal(summary.find(item => item.id === 'taxi').choices.length, 1, 'the taxi decision is remembered');
   state = engine.toggleCriterion(state, 'razones');
   state = engine.toggleCriterion(state, 'inventado');
   assert.deepEqual(state.final.criteria, { razones: true });
-  assert.ok(Object.values(state.final.criteria).every(value => typeof value === 'boolean'));
 });
 
 test('state survives a reload and a reset starts the night from zero', () => {
@@ -243,26 +346,27 @@ test('state survives a reload and a reset starts the night from zero', () => {
   assert.ok(engine.isValidState(restored));
   assert.deepEqual(restored, state);
   assert.equal(engine.isValidState({ ...restored, visitOrder: ['recadero'] }), false);
+  assert.equal(engine.isValidState({ ...restored, encounters: { ...restored.encounters, cafe: { done: true, acts: { inventada: {} } } } }), false);
   assert.equal(engine.isValidState(null), false);
   assert.equal(engine.isValidState({ phase: 'ciudad' }), false);
-  assert.deepEqual(engine.initialState(), { phase: 'llegada', position: null, visitOrder: [], encounters: {}, event: null, final: { criteria: {} } });
+  assert.deepEqual(engine.initialState(), { phase: 'llegada', position: null, activity: null, visitOrder: [], encounters: {}, event: null, final: { criteria: {} } });
   assert.notEqual(engine.initialState(), engine.initialState(), 'each reset gets a fresh object');
 });
 
-test('no game economy: nothing in the state or the engine counts points, lives, ranks or time left', async () => {
+test('no game economy: nothing in the state or the code counts points, lives, ranks or time left', async () => {
   const bannedWords = new Set(['score', 'scores', 'point', 'points', 'xp', 'coin', 'coins', 'star', 'stars', 'rank', 'ranking', 'respect', 'life', 'lives', 'health', 'timer', 'countdown', 'leaderboard', 'achievement', 'achievements', 'mastered', 'mastery', 'streak', 'level', 'levels']);
   const words = name => name.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const banned = { test: name => words(name).some(word => bannedWords.has(word)) };
-  const { trail } = play(['cafe', 'departamento', 'esquina', 'taxi', 'plaza', 'tienda', 'restaurante', 'terraza', 'auto']);
+  const { trail } = play(engine.LOCATIONS.map(item => item.id));
   const keys = new Set();
   const walk = value => { if (value && typeof value === 'object') for (const [key, inner] of Object.entries(value)) { keys.add(key); walk(inner); } };
   for (const state of trail) walk(state);
   for (const key of keys) assert.equal(banned.test(key), false, `state key ${key}`);
-  for (const name of Object.keys(engine)) assert.equal(banned.test(name), false, `export ${name}`);
+  for (const name of [...Object.keys(engine), ...Object.keys(activities)]) assert.equal(banned.test(name), false, `export ${name}`);
   for (const name of Object.keys(world)) assert.equal(banned.test(name), false, `3D export ${name}`);
-  for (const file of ['World3D.tsx', 'build3d.ts', 'people3d.ts']) {
+  for (const file of ['World3D.tsx', 'build3d.ts', 'people3d.ts', 'hero3d.ts', 'NocheAbierta.tsx', 'activities.mjs', 'engine.mjs']) {
     // Our own names only: comments and three.js class names are not state.
-    const source = (await readFile(`app/noche-abierta/${file}`, 'utf8')).replace(/\/\/.*$/gm, '').replace(/THREE\.\w+/g, '').replace(/\.(?:setFromPoints|getPoints)\b/g, '');
+    const source = (await readFile(`app/noche-abierta/${file}`, 'utf8')).replace(/\/\/.*$/gm, '').replace(/THREE\.\w+/g, '').replace(/\.(?:setFromPoints|getPoints)\b/g, '').replace(/'[^'\n]*'|"[^"\n]*"|`[^`\n]*`/g, '');
     const identifiers = new Set(source.match(/\b[A-Za-z_]\w*\b/g));
     for (const name of identifiers) assert.equal(banned.test(name), false, `${file}: ${name}`);
   }
@@ -270,7 +374,9 @@ test('no game economy: nothing in the state or the engine counts points, lives, 
   assert.match(engine.nightClock(engine.initialState()), /^20:40$/, 'the clock only tells the time of night');
 });
 
-test('the rendered lesson keeps one prompt at a time, help closed and teacher tools hidden', async () => {
+// ------------------------------------------------------------ rendered cards
+
+test('the rendered lesson: one question at a time, compact options, help folded, teacher tools hidden', async () => {
   const NocheAbierta = await component('app/noche-abierta/NocheAbierta.tsx');
   const render = initial => renderToString(React.createElement(NocheAbierta, initial ? { initial } : {}));
 
@@ -280,21 +386,34 @@ test('the rendered lesson keeps one prompt at a time, help closed and teacher to
   assert.doesNotMatch(arrival, /role="button"/, 'the city waits until the learner starts');
 
   const city = render(engine.startExploring(engine.initialState()));
-  assert.equal((city.match(/role="button" tabindex="0"/g) || []).length, 9, 'nine focusable places on the map');
-  assert.equal((city.match(/aria-label="Ir a /g) || []).length, 9);
+  assert.equal((city.match(/role="button" tabindex="0"/g) || []).length, 10, 'ten focusable places on the map');
+  assert.equal((city.match(/aria-label="Ir a /g) || []).length, 10);
   assert.match(city, /data-view="map"/, 'the server renders the map; the 3D street loads in the browser');
+  assert.match(city, /aria-label="0 de 10 lugares explorados"/);
   assert.doesNotMatch(city, /<canvas/);
 
   let state = engine.openLocation(engine.startExploring(engine.initialState()), 'restaurante');
-  const encounter = render(state);
-  assert.match(encounter, /aria-labelledby="na-encounter-title"/);
-  assert.equal((encounter.match(/<legend>/g) || []).length, 1);
-  assert.match(encounter, /aria-expanded="false">Necesito ayuda/);
-  assert.doesNotMatch(encounter, /Herramientas del profe/);
-  assert.doesNotMatch(encounter, /tabindex="0"/, 'the city pauses while a place is open');
-  assert.equal((encounter.match(/class="na-prompt"/g) || []).length, 0, 'the first screen is the situation and the choice');
-  state = engine.chooseReaction(state, 'restaurante', 'rapido');
-  assert.equal((render(state).match(/class="na-prompt"/g) || []).length, 1, 'then one prompt at a time');
+  const decision = render(state);
+  assert.match(decision, /class="na-card"/);
+  assert.match(decision, /aria-labelledby="na-card-title"/);
+  assert.equal((decision.match(/<kbd>[ABC]<\/kbd>/g) || []).length, 3, 'three lettered options');
+  assert.equal((decision.match(/class="na-ask"/g) || []).length, 1, 'one question');
+  assert.match(decision, /aria-expanded="false"[^>]*>Necesito ayuda/);
+  assert.doesNotMatch(decision, /na-help-body/, 'help is folded away');
+  assert.doesNotMatch(decision, /na-teacher/);
+  assert.doesNotMatch(decision, /tabindex="0"/, 'the city pauses while a place is open');
+  state = engine.chooseOption(state, 'cada-uno');
+  const result = render(state);
+  assert.match(result, /class="na-outcome"/);
+  assert.match(result, /Cada uno paga lo suyo/);
+  assert.equal((result.match(/class="na-ask"/g) || []).length, 1);
+  assert.match(result, />Seguir</);
+
+  const hub = render(engine.openLocation(engine.startExploring(engine.initialState()), 'plaza'));
+  assert.equal((hub.match(/<li><button type="button"/g) || []).length, 7, 'seven people to talk to');
+  const piece = render(engine.openLocation(engine.startExploring(engine.initialState()), 'museo', 'carta'));
+  assert.match(piece, /class="na-plaque"/);
+  assert.match(piece, /Ayuda y gramática/, 'the museum offers grammar help');
 
   const event = render(play(['cafe', 'plaza', 'taxi', 'terraza']).trail.find(item => item.phase === 'evento'));
   assert.match(event, /aria-labelledby="na-event-title"/);
@@ -303,175 +422,195 @@ test('the rendered lesson keeps one prompt at a time, help closed and teacher to
 
   const final = render(engine.openFinal(play(['cafe', 'plaza', 'taxi', 'terraza']).state));
   assert.match(final, /aria-labelledby="na-final-title"/);
-  assert.equal((final.match(/class="na-prompt"/g) || []).length, 1);
+  assert.equal((final.match(/class="na-ask"/g) || []).length, 1);
 
-  for (const html of [arrival, city, encounter, event, final]) {
-    assert.doesNotMatch(html, /undefined|NaN/);
+  for (const html of [arrival, city, decision, result, hub, piece, event, final]) {
+    assert.doesNotMatch(html, /undefined|NaN|\[object Object\]/);
     const buttons = html.match(/<button[^>]*>/g) || [];
     assert.ok(buttons.every(tag => tag.includes('type="button"')), 'no accidental submits');
   }
 });
 
-test('every encounter reveals new information before the extra prompts, and the teacher can close it', () => {
-  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'auto');
-  const location = engine.locationById('auto');
-  assert.equal(engine.stepCount(location, 0), 3 + location.variants[0].prompts.length);
-  state = engine.chooseReaction(state, 'auto', 'ayudar');
-  state = engine.nextStep(state, 'auto');
-  assert.equal(state.encounters.auto.step, engine.TWIST_STEP);
-  assert.match(engine.TWIST_QUESTION, /¿Cambia tu respuesta\?/);
-  assert.ok(location.variants.every(variant => variant.twist.length > 20));
-  let fresh = engine.openLocation(engine.startExploring(engine.initialState()), 'plaza');
-  fresh = engine.markDone(fresh, 'plaza');
-  assert.equal(fresh.encounters.plaza.done, true);
-  assert.deepEqual(engine.completedIds(fresh), ['plaza'], 'marked done by the teacher counts as completed');
-  assert.equal(engine.markDone(fresh, 'nope'), fresh);
-  assert.ok(engine.CITY_EVENTS.find(item => item.id === 'lluvia').affects.includes('auto'));
-});
-
-test('the rendered encounter shows the new information as its own step', async () => {
-  const NocheAbierta = await component('app/noche-abierta/NocheAbierta.tsx');
-  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'auto');
-  const first = renderToString(React.createElement(NocheAbierta, { initial: state }));
-  assert.match(first, /na-roadside/);
-  assert.match(first, /Carla/);
-  state = engine.nextStep(engine.chooseReaction(state, 'auto', 'llamar'), 'auto');
-  const twist = renderToString(React.createElement(NocheAbierta, { initial: state }));
-  assert.match(twist, /Nueva información/);
-  assert.match(twist, /La grúa tarda dos horas/);
-  assert.equal((twist.match(/class="na-prompt"/g) || []).length, 1, 'still one prompt at a time');
+test('every card can be closed: an X, a small way back and Esc', () => {
+  const source = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  assert.match(source, /className="na-close"/);
+  assert.match(source, /event\.key === 'Escape'/);
+  assert.match(source, /Volver a la calle/);
+  const css = readFileSync('app/noche-abierta/noche-abierta.css', 'utf8');
+  const card = css.match(/\.na-card \{[^}]*\}/)?.[0] ?? '';
+  assert.match(card, /max-height/, 'cards grow with their content up to a limit');
+  assert.doesNotMatch(card, /(?:^|[\s;{])height:/, 'no fixed height');
+  assert.match(css, /prefers-reduced-motion[\s\S]*\.na-beat/, 'transitions respect reduced motion');
 });
 
 // ------------------------------------------------------------ 3D street
 
 test('3D world: the learner starts on a walkable sidewalk inside the district', () => {
   const { SPAWN, WORLD_BOUNDS, isWalkable, insideBuilding } = world;
-  assert.ok(Number.isFinite(SPAWN.x) && Number.isFinite(SPAWN.z) && Number.isFinite(SPAWN.heading));
   assert.ok(SPAWN.x > WORLD_BOUNDS.minX && SPAWN.x < WORLD_BOUNDS.maxX && SPAWN.z > WORLD_BOUNDS.minZ && SPAWN.z < WORLD_BOUNDS.maxZ);
   assert.equal(insideBuilding(SPAWN.x, SPAWN.z, 0.5), false);
   assert.ok(isWalkable(SPAWN.x, SPAWN.z));
 });
 
-test('3D world: one interaction target per place, with valid coordinates, radii and keys', () => {
-  const { TARGETS, isWalkable, nearestTarget, exitSpot } = world;
+test('3D world: every place can be reached, and every person in the plaza has their own spot', () => {
+  const { TARGETS, isWalkable, nearestTarget, exitSpot, NPCS } = world;
   assert.equal(new Set(TARGETS.map(item => item.id)).size, TARGETS.length, 'unique target ids');
-  const byPlace = new Map(TARGETS.map(item => [item.location, item]));
-  assert.equal(byPlace.size, TARGETS.length, 'one target per place');
-  for (const location of engine.LOCATIONS) assert.ok(byPlace.get(location.id), `${location.id} has a target`);
+  for (const location of engine.LOCATIONS) assert.ok(TARGETS.some(item => item.location === location.id), `${location.id} has a target`);
   for (const target of TARGETS) {
     assert.ok(engine.locationById(target.location), target.id);
-    assert.ok(Number.isFinite(target.x) && Number.isFinite(target.z), `${target.id} coordinates`);
+    if (target.activity) assert.ok(engine.activityById(engine.locationById(target.location), target.activity), `${target.id} activity`);
     assert.ok(target.radius >= 1.2 && target.radius <= 3, `${target.id} radius ${target.radius}`);
     assert.ok(target.key === 'E' || target.key === 'F', target.id);
-    assert.match(target.verb, /^[A-ZÁÉÍÓÚÑ]+$/, target.id);
+    assert.match(target.verb, /^[A-ZÁÉÍÓÚÑ ]+$/, target.id);
     assert.ok(isWalkable(target.x, target.z), `${target.id} can be reached`);
     assert.equal(nearestTarget({ x: target.x, z: target.z })?.id, target.id, `${target.id} is the prompt at its own spot`);
     const out = exitSpot(target);
     assert.ok(isWalkable(out.x, out.z), `${target.id} exit spot is walkable`);
   }
+  const plaza = TARGETS.filter(item => item.location === 'plaza').map(item => item.activity).sort();
+  assert.deepEqual(plaza, engine.locationById('plaza').activities.map(item => item.id).sort());
+  for (const target of TARGETS.filter(t => t.npc)) assert.ok(NPCS.some(n => n.id === target.npc), target.id);
   assert.equal(nearestTarget({ x: 0, z: 0 }), null, 'no prompt in the middle of the crossing');
   assert.equal(TARGETS.filter(item => item.key === 'F').map(item => item.id).join(), 'taxi', 'F is only for getting into the taxi');
+  assert.equal(TARGETS.find(t => t.location === 'auto').verb, 'AYUDAR');
+  assert.equal(TARGETS.find(t => t.location === 'restaurante').verb, 'SENTARME');
 });
 
-test('3D world: interiors, rooftop, taxi and the broken car each have their own micro-world', () => {
-  const { TARGETS, STAGES, BUILDINGS, VEHICLES, NPCS, WORLD_BOUNDS } = world;
-  const interiors = Object.entries(STAGES).filter(([, stage]) => stage.size);
-  assert.ok(interiors.length >= 3, 'at least three enterable buildings');
-  for (const target of TARGETS) assert.ok(target.stage === 'calle' || target.stage === 'taxi' || STAGES[target.stage], `${target.id} stage ${target.stage}`);
-  for (const [id, stage] of interiors) {
-    assert.ok(TARGETS.some(target => target.stage === id), `${id} is entered from the street`);
-    assert.ok(stage.origin.x - stage.size.w / 2 > WORLD_BOUNDS.maxX + 50, `${id} sits away from the street`);
-    assert.ok(Math.abs(stage.spot.x - stage.origin.x) < stage.size.w / 2 && Math.abs(stage.spot.z - stage.origin.z) < stage.size.d / 2, `${id} spot inside`);
+test('3D world: the museum and the bar are rooms you walk around, one spot per activity', () => {
+  const { ROOMS, roomLayout, WALKABLE_STAGES, isWalkable, nearestTarget, TARGETS, STAGES, WORLD_BOUNDS } = world;
+  assert.deepEqual([...WALKABLE_STAGES].sort(), ['bar', 'museo']);
+  for (const stage of Object.keys(ROOMS)) {
+    const room = roomLayout(stage);
+    const location = engine.locationById(room.location);
+    assert.equal(TARGETS.find(t => t.location === room.location).stage, stage, `${stage} is entered from the street`);
+    assert.ok(STAGES[stage].walk);
+    assert.ok(room.bounds.minX > WORLD_BOUNDS.maxX + 50, `${stage} sits away from the street`);
+    assert.deepEqual(room.hotspots.map(item => item.activity).sort(), location.activities.map(item => item.id).sort(), `${stage}: a spot for every activity`);
+    const spots = [...room.hotspots, room.exit];
+    for (const spot of spots) {
+      assert.ok(isWalkable(spot.x, spot.z, room.solids, room.bounds), `${spot.id} can be reached`);
+      assert.equal(nearestTarget({ x: spot.x, z: spot.z }, spots)?.id, spot.id, `${spot.id} prompts at its own spot`);
+    }
+    assert.ok(isWalkable(room.spawn.x, room.spawn.z, room.solids, room.bounds));
+    assert.ok(Math.hypot(room.spawn.x - room.exit.x, room.spawn.z - room.exit.z) < 4, 'the door is just behind you');
+    assert.equal(nearestTarget(room.spawn, room.hotspots), null, 'nothing opens by itself when you walk in');
   }
-  const origins = interiors.map(([, stage]) => stage.origin.x).sort((a, b) => a - b);
-  for (let i = 1; i < origins.length; i++) assert.ok(origins[i] - origins[i - 1] >= 20, 'interiors do not overlap');
-  for (const id of ['cafe', 'departamento', 'tienda']) assert.ok(STAGES[TARGETS.find(t => t.location === id).stage].size, `${id} is an interior`);
-  const roof = BUILDINGS.find(item => item.rooftop);
-  const terraza = STAGES[TARGETS.find(t => t.location === 'terraza').stage];
-  assert.equal(terraza.roof, roof.h, 'the rooftop is the real roof of the tall building');
-  assert.ok(terraza.spot.x > roof.x0 && terraza.spot.x < roof.x1 && terraza.spot.z > roof.z0 && terraza.spot.z < roof.z1);
-  const taxi = TARGETS.find(t => t.location === 'taxi');
-  assert.equal(taxi.stage, 'taxi');
-  assert.equal(VEHICLES.find(v => v.id === taxi.vehicle)?.kind, 'taxi');
-  const car = TARGETS.find(t => t.location === 'auto');
-  assert.equal(car.verb, 'ACERCARME');
-  const broken = VEHICLES.find(v => v.id === car.vehicle);
-  assert.equal(broken?.kind, 'broken');
-  assert.equal(broken.hoodOpen, true);
-  assert.equal(NPCS.find(n => n.id === car.npc)?.location, 'auto', 'the driver waits by the car');
-  assert.equal(new Set(NPCS.map(n => n.id)).size, NPCS.length);
-  assert.ok(NPCS.length >= 8 && NPCS.filter(n => n.location).length >= 5, 'people in the street, several you can talk to');
-  for (const target of TARGETS.filter(t => t.npc)) assert.ok(NPCS.some(n => n.id === target.npc), target.id);
 });
 
-test('3D world: walking moves, turns, runs and stops at walls', () => {
-  const { stepPlayer, colliders, WALK_SPEED, RUN_SPEED, TURN_SPEED, BUILDINGS, PLAYER_RADIUS } = world;
+test('3D world: runs by default, accelerates, turns smoothly toward the input and stops at walls', () => {
+  const { stepPlayer, colliders, WALK_SPEED, RUN_SPEED, SPRINT_SPEED, BUILDINGS, PLAYER_RADIUS } = world;
+  assert.ok(RUN_SPEED >= 6 && SPRINT_SPEED > RUN_SPEED && WALK_SPEED < RUN_SPEED / 2, 'faster than the first version (5.2 m/s run)');
   const boxes = colliders();
-  const start = { x: 5.6, z: 20, heading: Math.PI };
-  const walked = stepPlayer(start, { forward: 1 }, 0.1, boxes);
-  assert.ok(Math.abs(start.z - walked.z - WALK_SPEED * 0.1) < 1e-9, 'W walks forward (north here)');
-  assert.ok(walked.moving);
-  const ran = stepPlayer(start, { forward: 1, run: true }, 0.1, boxes);
-  assert.ok(Math.abs(start.z - ran.z - RUN_SPEED * 0.1) < 1e-9, 'Shift runs');
-  const back = stepPlayer(start, { forward: -1 }, 0.1, boxes);
-  assert.ok(back.z > start.z && back.z - start.z < WALK_SPEED * 0.1, 'S steps back, slower');
-  const left = stepPlayer(start, { turn: 1 }, 0.1, boxes);
-  assert.ok(Math.abs(left.heading - start.heading - TURN_SPEED * 0.1) < 1e-9 && !left.moving, 'A turns on the spot');
-  assert.equal(stepPlayer(start, { forward: 1 }, 5, boxes).z, stepPlayer(start, { forward: 1 }, 0.1, boxes).z, 'long frames are clamped');
+  const run = (player, input, seconds) => { for (let t = 0; t < seconds; t += 1 / 60) player = stepPlayer(player, input, 1 / 60, boxes); return player; };
+  const start = { x: 5.6, z: 20, heading: Math.PI, speed: 0 };
+  const first = stepPlayer(start, { y: 1, yaw: Math.PI }, 1 / 60, boxes);
+  assert.ok(first.speed > 0 && first.speed < RUN_SPEED, 'speeds up instead of jumping to full speed');
+  const going = run(start, { y: 1, yaw: Math.PI }, 0.5);
+  assert.ok(Math.abs(going.speed - RUN_SPEED) < 1e-6, `running by default after half a second (${going.speed})`);
+  assert.ok(going.z < start.z - 2, 'W runs away from the camera (north here)');
+  assert.ok(run(start, { y: 1, yaw: Math.PI, sprint: true }, 0.6).speed > RUN_SPEED, 'Shift goes faster');
+  assert.ok(run(start, { y: 1, yaw: Math.PI, walk: true }, 0.6).speed <= WALK_SPEED + 1e-9, 'Alt walks');
+  const right = run(start, { x: 1, yaw: Math.PI }, 0.6);
+  assert.ok(right.x > start.x + 1, 'D runs to the right of the screen (east when looking north)');
+  const turning = stepPlayer(start, { x: 1, yaw: Math.PI }, 1 / 60, boxes);
+  assert.ok(turning.heading !== start.heading && Math.abs(world.angleBetween(turning.heading, Math.PI / 2)) > 0.5, 'turns smoothly, not instantly');
+  const stopped = run(going, {}, 0.5);
+  assert.equal(stopped.speed, 0, 'slows down to a stop');
+  assert.ok(Math.abs(stopped.z - going.z) < 2, 'stops quickly');
+  assert.equal(stepPlayer(start, { y: 1 }, 5, boxes).z, stepPlayer(start, { y: 1 }, 0.1, boxes).z, 'long frames are clamped');
   const cafe = BUILDINGS.find(b => b.id === 'cafe');
-  let player = { x: -11.5, z: -6, heading: Math.PI };
-  for (let i = 0; i < 100; i++) player = stepPlayer(player, { forward: 1, run: true }, 0.1, boxes);
+  let player = run({ x: -11.5, z: -6, heading: Math.PI, speed: 0 }, { y: 1, yaw: Math.PI }, 3);
   assert.ok(player.z >= cafe.z1 + PLAYER_RADIUS - 1e-9, `stopped at the café wall (${player.z})`);
-  player = { x: -11.5, z: -7.6, heading: Math.PI + 0.5 };
-  const slide = stepPlayer(player, { forward: 1 }, 0.1, boxes);
-  assert.ok(slide.x < player.x, 'slides along the wall instead of sticking');
-  let car = { x: -21, z: 5, heading: Math.PI };
-  for (let i = 0; i < 40; i++) car = stepPlayer(car, { forward: 1 }, 0.1, boxes);
-  assert.ok(car.z > 3.3, 'cannot walk through the broken car');
+  assert.ok(player.speed < 0.5, 'the legs stop too: no running in place against a wall');
+  player = run({ x: -11.5, z: -7.6, heading: Math.PI, speed: 0 }, { x: 0.7, y: 1, yaw: Math.PI }, 0.4);
+  assert.ok(player.x > -11.4, 'slides along the wall instead of sticking');
+  const car = run({ x: -21, z: 5, heading: Math.PI, speed: 0 }, { y: 1, yaw: Math.PI }, 3);
+  assert.ok(car.z > 3.8, 'cannot run through the broken car');
 });
 
-test('3D world: the follow camera stays out of buildings and street shots have a clear view', () => {
-  const { followCamera, CAMERA_PRESETS, insideBuilding, isWalkable, streetFraming, TARGETS, colliders } = world;
+test('3D world: the camera follows from behind, drifts back slowly and stays out of walls', () => {
+  const { followCamera, followYaw, CAMERA_PRESETS, ROOM_PRESET, insideBuilding, isWalkable, streetFraming, TARGETS, colliders, roomLayout, RUN_SPEED } = world;
   assert.ok(CAMERA_PRESETS.length >= 2 && CAMERA_PRESETS.length <= 3);
-  for (const preset of CAMERA_PRESETS) assert.ok(preset.distance >= 3 && preset.distance <= 9.5 && preset.height > 1.5, preset.id);
   let checked = 0;
   for (let x = -42; x <= 42; x += 3) for (let z = -38; z <= 36; z += 3) {
     if (!isWalkable(x, z)) continue;
-    for (const heading of [0, Math.PI / 2, Math.PI, -Math.PI / 2]) {
-      const shot = followCamera({ x, z, heading }, CAMERA_PRESETS[1]);
-      assert.equal(insideBuilding(shot.x, shot.z), false, `camera at ${x},${z},${heading}`);
+    for (const yaw of [0, Math.PI / 2, Math.PI, -Math.PI / 2]) {
+      const shot = followCamera({ x, z, heading: 0 }, CAMERA_PRESETS[1], yaw);
+      assert.equal(insideBuilding(shot.x, shot.z), false, `camera at ${x},${z},${yaw}`);
       assert.ok(Math.hypot(shot.x - x, shot.y - 1.3, shot.z - z) >= 1.8, 'the avatar stays in view');
       checked++;
     }
   }
   assert.ok(checked > 500);
+  const behind = followCamera({ x: 5.6, z: 20, heading: Math.PI }, CAMERA_PRESETS[1], Math.PI);
+  assert.ok(behind.z > 20, 'looking north, the camera is south of the avatar');
+  assert.equal(followYaw(0, Math.PI / 2, 0, 0.1), 0, 'standing still leaves the camera alone');
+  const drift = followYaw(0, 0.6, RUN_SPEED, 1 / 60);
+  assert.ok(drift > 0 && drift < 0.1, 'running away from the camera pulls it behind, gently');
+  assert.equal(followYaw(0, Math.PI, RUN_SPEED, 1 / 60), 0, 'running toward the camera does not spin it');
+  for (const stage of ['interior-museo', 'interior-bar']) {
+    const room = roomLayout(stage);
+    for (const spot of room.hotspots) for (const yaw of [0, Math.PI / 2, Math.PI, -Math.PI / 2]) {
+      const shot = followCamera(spot, ROOM_PRESET, yaw, room.bounds);
+      assert.ok(shot.x > room.bounds.minX && shot.x < room.bounds.maxX && shot.z > room.bounds.minZ && shot.z < room.bounds.maxZ, `${spot.id} camera inside`);
+      assert.ok(shot.y < room.height, `${spot.id} camera below the ceiling`);
+    }
+  }
   const solids = colliders().filter(box => !box.npc);
   for (const target of TARGETS.filter(t => t.stage === 'calle')) {
-    const shot = streetFraming(target, { x: target.x, z: target.z, heading: 0 });
+    const shot = streetFraming(target, { x: target.x, z: target.z });
     const blocked = solids.some(b => shot.camera.x > b.x0 && shot.camera.x < b.x1 && shot.camera.z > b.z0 && shot.camera.z < b.z1);
     assert.equal(blocked, false, `${target.id} shot is not inside anything`);
     assert.ok(Math.hypot(shot.camera.x - target.x, shot.camera.z - target.z) < 8, `${target.id} shot is close`);
   }
 });
 
+test('3D world: traffic keeps moving, stops for the learner and loops', () => {
+  const { stepTraffic, TRAFFIC, TRAFFIC_LANE, TRAFFIC_SPAN, PARK_LANE, VEHICLES } = world;
+  assert.ok(TRAFFIC.length >= 3);
+  assert.ok(VEHICLES.filter(v => Math.abs(v.z) < 4).every(v => Math.abs(Math.abs(v.z) - PARK_LANE) < 1e-9), 'parked cars stay out of the moving lanes');
+  const car = { id: 'c', lane: TRAFFIC_LANE, dir: 1, x: 0, speed: 8, cruise: 8 };
+  let cars = [car];
+  for (let i = 0; i < 60; i++) cars = stepTraffic(cars, { x: 100, z: 30 }, 1 / 60);
+  assert.ok(cars[0].x > 7, 'drives along its lane');
+  cars = [{ ...car, x: 0 }];
+  for (let i = 0; i < 240; i++) cars = stepTraffic(cars, { x: 8, z: TRAFFIC_LANE }, 1 / 60);
+  assert.equal(cars[0].speed, 0, 'stops for someone crossing');
+  assert.ok(cars[0].x < 8 - 2.15, 'without touching them');
+  cars = [{ ...car, x: TRAFFIC_SPAN - 0.01 }];
+  cars = stepTraffic(cars, { x: 100, z: 30 }, 1 / 60);
+  assert.ok(cars[0].x < 0, 'loops around');
+});
+
 test('3D world: keys map to the documented controls and never fire while typing', () => {
   const { keyAction, inputFrom, canUseKeys } = world;
   const expected = { KeyW: 'forward', ArrowUp: 'forward', KeyS: 'back', ArrowDown: 'back', KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right',
-    ShiftLeft: 'run', ShiftRight: 'run', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map' };
+    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map' };
   for (const [code, action] of Object.entries(expected)) assert.equal(keyAction(code), action, code);
   assert.equal(keyAction('KeyQ'), null);
-  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'run'])), { forward: 1, turn: 1, run: true });
-  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { forward: 0, turn: -1, run: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false });
   assert.equal(canUseKeys({ tagName: 'INPUT' }), false);
   assert.equal(canUseKeys({ tagName: 'TEXTAREA' }), false);
   assert.equal(canUseKeys({ tagName: 'DIV', isContentEditable: true }), false);
   assert.equal(canUseKeys({ tagName: 'DIV' }), true);
   const help = readFileSync('app/noche-abierta/World3D.tsx', 'utf8');
-  for (const line of ['WASD / FLECHAS · MOVERSE', 'E · INTERACTUAR', 'F · SUBIR / BAJAR', 'SHIFT · CORRER']) assert.ok(help.includes(line), line);
+  for (const line of ['WASD / FLECHAS · CORRER', 'E · INTERACTUAR', 'SHIFT · MÁS RÁPIDO', 'ESC · SALIR']) assert.ok(help.includes(line), line);
+});
+
+test('3D world: the hero is the SpanishCue mascot with his pen and a small flag', () => {
+  const hero = readFileSync('app/noche-abierta/hero3d.ts', 'utf8');
+  assert.match(hero, /fountain pen/i);
+  assert.match(hero, /#74acdf/i, 'Argentine light blue');
+  assert.match(hero, /Sun of May/);
+  assert.match(hero, /RUN_STRIDE/, 'the run cycle follows the distance covered');
+  const world3d = readFileSync('app/noche-abierta/World3D.tsx', 'utf8');
+  assert.match(world3d, /createHero\(/);
+  assert.doesNotMatch(world3d, /createPerson\(/, 'the learner is not a generic person any more');
 });
 
 test('3D world: original procedural assets only, and three.js stays inside this lesson', async () => {
-  const files = ['World3D.tsx', 'build3d.ts', 'people3d.ts', 'world3d.mjs'];
+  const files = ['World3D.tsx', 'build3d.ts', 'people3d.ts', 'hero3d.ts', 'world3d.mjs'];
   for (const file of files) {
     const source = readFileSync(`app/noche-abierta/${file}`, 'utf8');
     assert.doesNotMatch(source, /https?:\/\//, `${file} loads nothing from the network`);
@@ -488,6 +627,6 @@ test('3D world: original procedural assets only, and three.js stays inside this 
   assert.doesNotMatch(lesson, /^import (?!type )[^\n]*from '\.\/World3D'/m, 'only its type is imported eagerly');
   assert.match(lesson, /webglAvailable\(\)/, 'no WebGL means the map fallback');
   const assets = readFileSync('docs/lessons/noche-abierta-3d-assets.md', 'utf8');
-  for (const file of ['people3d.ts', 'build3d.ts', 'world3d.mjs']) assert.ok(assets.includes(file), `provenance lists ${file}`);
+  for (const file of ['people3d.ts', 'hero3d.ts', 'build3d.ts', 'world3d.mjs']) assert.ok(assets.includes(file), `provenance lists ${file}`);
   assert.match(assets, /CC0|original/i);
 });

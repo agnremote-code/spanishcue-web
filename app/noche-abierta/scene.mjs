@@ -38,14 +38,14 @@ export const BUILDINGS = [
   // North block: Vale's building behind the corner café.
   { id: "departamento", location: "departamento", x0: 0.4, y0: 0.4, x1: 2.9, y1: 3.0, h: 158, palette: "cream", windows: 0.62, balconies: true },
   { id: "norte-fondo", x0: 3.2, y0: 0.4, x1: 4.65, y1: 2.6, h: 96, palette: "slate", windows: 0.45 },
-  { id: "norte-lateral", x0: 0.4, y0: 3.3, x1: 2.9, y1: 4.65, h: 64, palette: "brick", windows: 0.5 },
+  { id: "bar", location: "bar", x0: 0.4, y0: 3.3, x1: 2.9, y1: 4.65, h: 64, palette: "brick", windows: 0.3, awning: { side: "left", color: "#5a2a22", stripe: "#d9a441" }, sign: "BAR" },
   { id: "cafe", location: "cafe", x0: 3.2, y0: 3.0, x1: 4.65, y1: 4.65, h: 50, palette: "plaster", windows: 0, awning: { side: "left", color: "#2f5d50", stripe: "#e8d9b5" }, sign: "CAFÉ" },
   // East block: the restaurant and the tall building with the rooftop.
   { id: "este-fondo", x0: 7.35, y0: 0.4, x1: 9.4, y1: 2.3, h: 112, palette: "slate", windows: 0.4 },
   { id: "restaurante", location: "restaurante", x0: 7.35, y0: 2.6, x1: 9.4, y1: 4.65, h: 54, palette: "brick", windows: 0, awning: { side: "left", color: "#a3302a", stripe: "#f0d9b0" }, sign: "EL TOLDO" },
   { id: "terraza", location: "terraza", x0: 9.8, y0: 1.0, x1: 11.6, y1: 4.65, h: 178, palette: "teal", windows: 0.5, rooftop: true },
   // South-west block: small shops, the 24-hour store facing the cross street.
-  { id: "sur-fondo", x0: 0.4, y0: 7.35, x1: 3.0, y1: 9.0, h: 92, palette: "brick", windows: 0.5 },
+  { id: "museo", location: "museo", x0: 0.4, y0: 7.35, x1: 3.0, y1: 9.0, h: 92, palette: "cream", windows: 0.2, awning: { side: "right", color: "#5a1f24", stripe: "#e9d6a8" }, sign: "MUSEO" },
   { id: "sur-bajo", x0: 0.4, y0: 9.4, x1: 3.0, y1: 11.6, h: 58, palette: "plaster", windows: 0.5 },
   { id: "sur-esquina", x0: 3.4, y0: 7.9, x1: 4.65, y1: 9.1, h: 72, palette: "cream", windows: 0.45 },
   { id: "tienda", location: "tienda", x0: 3.4, y0: 9.4, x1: 4.65, y1: 11.0, h: 42, palette: "slate", windows: 0, storefront: "right", sign: "24 H" },
@@ -62,8 +62,7 @@ export const PROPS = [
   { type: "lamp", gx: 4.8, gy: 11.3 },
   { type: "lamp", gx: 7.2, gy: 11.4 },
   { type: "lamp", gx: 11.5, gy: 7.2 },
-  { type: "farol", gx: 4.8, gy: 7.2, location: "esquina" },
-  { type: "person", gx: 5.05, gy: 7.35, location: "esquina", tone: "#e2b77f" },
+  { type: "farol", gx: 4.8, gy: 7.2 },
   { type: "tables", gx: 3.9, gy: 4.85, location: "cafe" },
   { type: "tables", gx: 8.3, gy: 4.85, location: "restaurante" },
   { type: "tree", gx: 7.8, gy: 7.8, location: "plaza" },
@@ -76,6 +75,8 @@ export const PROPS = [
   { type: "fountain", gx: 9.5, gy: 9.5, location: "plaza" },
   { type: "person", gx: 10.2, gy: 8.6, location: "plaza", tone: "#c98f6a" },
   { type: "person", gx: 8.9, gy: 10.4, location: "plaza", tone: "#9fb4a8" },
+  { type: "person", gx: 10.9, gy: 10.2, location: "plaza", tone: "#d9a441" },
+  { type: "person", gx: 8.3, gy: 8.9, location: "plaza", tone: "#3b5d8a" },
   { type: "shelter", gx: 7.1, gy: 10.4 },
   { type: "taxi", gx: 9.4, gy: 5.7, location: "taxi" },
   { type: "broken", gx: 2.1, gy: 6.15, location: "auto" },
@@ -85,14 +86,15 @@ export const PROPS = [
 // Where each place's label floats and where the learner stands in front of it.
 export const PLACES = {
   cafe: { label: iso(3.9, 3.9, 96), spot: { gx: 4.2, gy: 5.3 } },
-  departamento: { label: iso(1.65, 1.7, 210), spot: { gx: 1.9, gy: 5.3 } },
-  esquina: { label: iso(4.8, 7.2, 118), spot: { gx: 5.4, gy: 7.6 } },
+  departamento: { label: iso(1.65, 1.7, 210), spot: { gx: 2.4, gy: 5.3 } },
+  bar: { label: iso(1.2, 4.2, 112), spot: { gx: 0.9, gy: 5.3 } },
+  museo: { label: iso(1.4, 8.4, 140), spot: { gx: 3.6, gy: 7.4 } },
   taxi: { label: iso(10.3, 5.8, 58), spot: { gx: 9.2, gy: 6.9 } },
   restaurante: { label: iso(8.4, 3.6, 104), spot: { gx: 8.3, gy: 5.35 } },
   plaza: { label: iso(8.2, 10.4, 60), spot: { gx: 8.6, gy: 8.6 } },
   tienda: { label: iso(4.0, 10.2, 84), spot: { gx: 5.35, gy: 10.2 } },
   terraza: { label: iso(10.7, 2.8, 246), spot: { gx: 10.6, gy: 5.35 } },
-  auto: { label: iso(1.6, 6.9, 111), spot: { gx: 3.3, gy: 7.45 } },
+  auto: { label: iso(1.6, 6.6, 50), spot: { gx: 2.4, gy: 6.95 } },
 };
 
 export const ARRIVAL_SPOT = { gx: 6.3, gy: 10.9 };

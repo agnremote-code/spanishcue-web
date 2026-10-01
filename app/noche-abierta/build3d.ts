@@ -8,7 +8,7 @@ import {
   BUILDINGS, NPCS, OVERPASS, PLAZA, SOLID_PROPS, STAGES, TARGETS, VEHICLES,
   type Building, type Npc, type Vehicle,
 } from './world3d.mjs';
-import { createPerson, type Look, type Person } from './people3d';
+import { addBlobShadow, createPerson, type Look, type Person } from './people3d';
 
 export type Night = {
   windows: THREE.MeshStandardMaterial[];
@@ -32,7 +32,11 @@ export type City = {
   asphalt: THREE.MeshStandardMaterial;
   water: THREE.MeshStandardMaterial;
 };
-export type Interior = { group: THREE.Group; people: Person[]; lamp: { color: string; spots: THREE.Vector3[] } };
+export type Interior = {
+  group: THREE.Group; people: Person[]; lamp: { color: string; spots: THREE.Vector3[] };
+  // In rooms you walk around: who belongs to which activity (they talk when it is open).
+  roles?: Record<string, Person[]>;
+};
 
 // Seeded random numbers so the city looks the same on every visit.
 function random(seed: number) {
@@ -295,7 +299,7 @@ function addBuilding(parent: THREE.Group, b: Building, index: number, night: Nig
   const cx = (b.x0 + b.x1) / 2, cz = (b.z0 + b.z1) / 2;
   const tints: Record<string, string> = {
     cream: '#e6d5b2', slate: '#8f98a4', brick: '#b0634a', teal: '#6fa39b', plaster: '#d9b89a',
-    cafe: '#c79e76', restaurant: '#b86a50', store: '#ddd3c1',
+    cafe: '#c79e76', restaurant: '#b86a50', store: '#ddd3c1', museum: '#d6ccb8', bar: '#8a4a38',
   };
   const { map, emissive } = facadeTextures(index * 7 + 3);
   const wall = new THREE.MeshStandardMaterial({ map, emissiveMap: emissive, emissive: '#ffffff', emissiveIntensity: 0.2, color: tints[b.style] ?? '#cccccc', roughness: 0.92 });
@@ -327,12 +331,13 @@ function addBuilding(parent: THREE.Group, b: Building, index: number, night: Nig
     parent.add(box(1.4, 0.9, 1, solid('#9b9a96', 0.6), cx - w * 0.2, b.h + 0.45, cz + d * 0.2));
   }
 
-  const shop = b.style === 'cafe' || b.style === 'restaurant' || b.style === 'store';
+  if (b.style === 'museum') { addMuseumFront(parent, b, night); return; }
+  const shop = b.style === 'cafe' || b.style === 'restaurant' || b.style === 'store' || b.style === 'bar';
   const side = b.door?.side ?? 'south';
   const faceZ = side === 'south' ? b.z1 + 0.04 : b.z0 - 0.04;
   const turn = side === 'south' ? 0 : Math.PI;
   if (shop) {
-    const tone = b.style === 'store' ? 'cool' : b.style === 'restaurant' ? 'red' : 'warm';
+    const tone = b.style === 'store' ? 'cool' : b.style === 'restaurant' || b.style === 'bar' ? 'red' : 'warm';
     const doorAt = b.door ? (side === 'south' ? (b.door.at - b.x0) / w : (b.x1 - b.door.at) / w) : 0.5;
     const front = storefrontTexture(tone, doorAt);
     const glass = new THREE.MeshStandardMaterial({ map: front, emissiveMap: front, emissive: '#ffffff', emissiveIntensity: 0.5, roughness: 0.3 });
@@ -344,7 +349,8 @@ function addBuilding(parent: THREE.Group, b: Building, index: number, night: Nig
     const fascia = solid(b.style === 'store' ? '#e9e4da' : '#3a2a22');
     const band = box(w + 0.1, 0.5, 0.2, fascia, cx, 3.55, side === 'south' ? b.z1 + 0.1 : b.z0 - 0.1, false);
     parent.add(band);
-    if (b.style !== 'store') {
+    if (b.style === 'bar') addBarFront(parent, b, faceZ, night);
+    else if (b.style !== 'store') {
       const awning = new THREE.Mesh(new THREE.BoxGeometry(w - 0.6, 0.08, 1.7), new THREE.MeshStandardMaterial({ map: stripes(b.style === 'cafe' ? '#2f5d4a' : '#9c2f2a', '#efe4cc'), roughness: 0.9 }));
       (awning.material as THREE.MeshStandardMaterial).map!.repeat.set((w - 0.6) / 4, 1);
       awning.position.set(cx, 3.15, side === 'south' ? b.z1 + 0.85 : b.z0 - 0.85);
@@ -353,7 +359,7 @@ function addBuilding(parent: THREE.Group, b: Building, index: number, night: Nig
       parent.add(awning);
     }
     if (b.sign) {
-      const texture = signTexture(b.sign, b.style === 'store' ? '#f4f1ea' : '#231a14', b.style === 'store' ? '#b3261e' : '#f6d9a0');
+      const texture = signTexture(b.sign, b.style === 'store' ? '#f4f1ea' : '#231a14', b.style === 'store' ? '#b3261e' : b.style === 'bar' ? '#ffb46a' : '#f6d9a0');
       const signMat = new THREE.MeshStandardMaterial({ map: texture, emissiveMap: texture, emissive: '#ffffff', emissiveIntensity: 0.3 });
       night.signs.push(signMat);
       const sign = new THREE.Mesh(new THREE.PlaneGeometry(Math.min(6, w - 1), 1.1), signMat);
@@ -379,6 +385,109 @@ function addBuilding(parent: THREE.Group, b: Building, index: number, night: Nig
     night.lamps.push(lamp);
     parent.add(box(0.2, 0.3, 0.14, lamp, b.door.at + 1.2, 2.5, faceZ + 0.08, false));
     parent.add(box(0.6, 0.16, 0.06, solid('#d8cfbf'), b.door.at, 2.85, faceZ + 0.03, false));
+  }
+}
+
+// The museum: a stone front with columns, steps, a lit double door and
+// two banners. Its door faces the avenue.
+function addMuseumFront(parent: THREE.Group, b: Building, night: Night) {
+  const north = b.door?.side === 'north';
+  const faceZ = north ? b.z0 : b.z1;
+  const out = north ? -1 : 1;
+  const at = b.door?.at ?? (b.x0 + b.x1) / 2;
+  const stone = solid('#cfc4ae', 0.9);
+  const darkStone = solid('#a69a84', 0.9);
+  parent.add(box(9.4, 0.18, 1.6, darkStone, at, 0.09, faceZ + out * 0.8));
+  parent.add(box(8.6, 0.18, 1.1, stone, at, 0.27, faceZ + out * 0.55));
+  for (const dx of [-3.6, -1.6, 1.6, 3.6]) {
+    parent.add(cylinder(0.24, 0.28, 5.2, stone, at + dx, 2.9, faceZ + out * 0.75, 14));
+    parent.add(box(0.7, 0.2, 0.7, darkStone, at + dx, 0.38, faceZ + out * 0.75));
+    parent.add(box(0.7, 0.24, 0.7, darkStone, at + dx, 5.6, faceZ + out * 0.75));
+  }
+  parent.add(box(9, 0.7, 1.7, stone, at, 6.05, faceZ + out * 0.7));
+  const pediment = new THREE.Mesh(new THREE.CylinderGeometry(0.01, 5, 1.4, 3, 1), stone);
+  pediment.scale.z = 0.3;
+  pediment.rotation.z = Math.PI;
+  pediment.rotation.y = Math.PI / 2;
+  pediment.position.set(at, 7.05, faceZ + out * 0.6);
+  parent.add(pediment);
+  const door = canvas(256, 256, ctx => {
+    ctx.fillStyle = '#2b1d14'; ctx.fillRect(0, 0, 256, 256);
+    const glow = ctx.createLinearGradient(0, 0, 0, 256);
+    glow.addColorStop(0, '#ffe2a8'); glow.addColorStop(1, '#f0a85a');
+    ctx.fillStyle = glow;
+    ctx.fillRect(24, 20, 96, 220); ctx.fillRect(136, 20, 96, 220);
+    ctx.fillStyle = '#2b1d14';
+    for (const x of [24, 136]) for (let y = 70; y < 240; y += 56) ctx.fillRect(x, y, 96, 6);
+    ctx.fillStyle = '#c9a24a'; ctx.fillRect(110, 120, 6, 26); ctx.fillRect(140, 120, 6, 26);
+  });
+  const doorMat = new THREE.MeshStandardMaterial({ map: door, emissiveMap: door, emissive: '#ffffff', emissiveIntensity: 0.4 });
+  night.windows.push(doorMat);
+  const doorPlane = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 3.2), doorMat);
+  doorPlane.position.set(at, 1.96, faceZ + out * 0.04);
+  doorPlane.rotation.y = north ? Math.PI : 0;
+  parent.add(doorPlane);
+  const sign = signTexture(b.sign ?? 'MUSEO', '#1d1915', '#e9d6a8');
+  const signMat = new THREE.MeshStandardMaterial({ map: sign, emissiveMap: sign, emissive: '#ffffff', emissiveIntensity: 0.3 });
+  night.signs.push(signMat);
+  const plate = new THREE.Mesh(new THREE.PlaneGeometry(6, 0.62), signMat);
+  plate.position.set(at, 6.05, faceZ + out * 1.56);
+  plate.rotation.y = north ? Math.PI : 0;
+  parent.add(plate);
+  const banner = canvas(128, 384, ctx => {
+    ctx.fillStyle = '#5a1f24'; ctx.fillRect(0, 0, 128, 384);
+    ctx.strokeStyle = '#d8b35a'; ctx.lineWidth = 4; ctx.strokeRect(10, 10, 108, 364);
+    ctx.fillStyle = '#f2e6cc'; ctx.textAlign = 'center';
+    ctx.font = '700 22px Georgia, serif';
+    ['ABIERTO', 'DE', 'NOCHE'].forEach((word, i) => ctx.fillText(word, 64, 150 + i * 34));
+    ctx.font = 'italic 18px Georgia, serif';
+    ctx.fillText('hasta la 1', 64, 300);
+  });
+  const bannerMat = new THREE.MeshStandardMaterial({ map: banner, emissiveMap: banner, emissive: '#ffffff', emissiveIntensity: 0.25, side: THREE.DoubleSide });
+  night.signs.push(bannerMat);
+  for (const dx of [-4.9, 4.9]) {
+    const flagPlane = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 2.7), bannerMat);
+    flagPlane.position.set(at + dx, 3.7, faceZ + out * 0.12);
+    flagPlane.rotation.y = north ? Math.PI : 0;
+    parent.add(flagPlane);
+  }
+  const lamp = glow('#ffd08a', 0.6);
+  night.lamps.push(lamp);
+  for (const dx of [-1.6, 1.6]) parent.add(box(0.22, 0.34, 0.22, lamp, at + dx, 3.4, faceZ + out * 0.2, false));
+}
+
+// The bar: a half-raised roller shutter (the persiana of its name), warm
+// light under it, and two small tables outside.
+function addBarFront(parent: THREE.Group, b: Building, faceZ: number, night: Night) {
+  const south = (b.door?.side ?? 'south') === 'south';
+  const out = south ? 1 : -1;
+  const w = b.x1 - b.x0;
+  const cx = (b.x0 + b.x1) / 2;
+  const shutter = canvas(256, 128, ctx => {
+    ctx.fillStyle = '#7d8084'; ctx.fillRect(0, 0, 256, 128);
+    for (let y = 0; y < 128; y += 8) { ctx.fillStyle = 'rgba(0,0,0,.28)'; ctx.fillRect(0, y, 256, 2); }
+    ctx.fillStyle = 'rgba(255,255,255,.08)';
+    for (let y = 4; y < 128; y += 8) ctx.fillRect(0, y, 256, 1);
+  });
+  const shutterMat = new THREE.MeshStandardMaterial({ map: shutter, roughness: 0.5, metalness: 0.5 });
+  const roll = new THREE.Mesh(new THREE.PlaneGeometry(w - 0.6, 1.1), shutterMat);
+  roll.position.set(cx, 2.85, faceZ + out * 0.08);
+  roll.rotation.y = south ? 0 : Math.PI;
+  parent.add(roll);
+  parent.add(box(w - 0.4, 0.3, 0.32, solid('#5d6064', 0.5, 0.6), cx, 3.45, faceZ + out * 0.18, false));
+  const neon = glow('#ff7a4a', 1.4);
+  night.signs.push(neon);
+  parent.add(box(1.4, 0.08, 0.05, neon, (b.door?.at ?? cx) + 2.4, 2.1, faceZ + out * 0.1, false));
+  parent.add(box(0.08, 0.5, 0.05, neon, (b.door?.at ?? cx) + 1.74, 1.9, faceZ + out * 0.1, false));
+  const top = solid('#3a2a22', 0.6);
+  const legs = solid('#1d1d1f', 0.5, 0.5);
+  for (const x of [b.x0 + 1.6, b.x1 - 1.4]) {
+    parent.add(cylinder(0.36, 0.36, 0.04, top, x, 0.74, faceZ + out * 1.1, 14));
+    parent.add(cylinder(0.035, 0.035, 0.72, legs, x, 0.36, faceZ + out * 1.1, 6));
+    for (const dx of [-0.55, 0.55]) {
+      parent.add(box(0.36, 0.05, 0.36, legs, x + dx, 0.46, faceZ + out * 1.1, false));
+      parent.add(box(0.05, 0.42, 0.36, legs, x + dx * 1.3, 0.68, faceZ + out * 1.1, false));
+    }
   }
 }
 
@@ -600,7 +709,7 @@ function stringLights(parent: THREE.Group, from: THREE.Vector3, to: THREE.Vector
   }
 }
 
-export function placePerson(person: Person, x: number, z: number, heading: number, y = 0) {
+export function placePerson(person: { root: THREE.Object3D }, x: number, z: number, heading: number, y = 0) {
   person.root.position.set(x, y, z);
   person.root.rotation.y = heading;
 }
@@ -752,9 +861,9 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
   shelterGlass.rotation.y = -Math.PI / 2;
   root.add(shelterGlass);
   root.add(box(0.4, 0.08, 2.4, solid('#6b4a33'), 7, 0.48, 27.4, false));
-  root.add(cylinder(0.05, 0.05, 2.8, shelterFrame, 5.2, 1.4, 24.2, 6));
+  root.add(cylinder(0.05, 0.05, 2.8, shelterFrame, 5.2, 1.4, 30.4, 6));
   const busSign = glow('#2f9aa8', 0.9);
-  root.add(box(0.1, 0.6, 0.6, busSign, 5.2, 2.9, 24.2, false));
+  root.add(box(0.1, 0.6, 0.6, busSign, 5.2, 2.9, 30.4, false));
 
   // Plaza: fountain, benches, the vendor's cart, a bike.
   const stone = solid('#a59d90', 0.9);
@@ -831,7 +940,8 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
     { shirt: '#7a2e3e', hair: '#101010', skin: '#8a5a3a' }, { shirt: '#e6e0d4', pants: '#3a3a44', hair: '#c8a064', skin: '#f0cfae' },
   ];
   for (const [i, [x, z, h]] of ([[25.4, -14.4, 0.5], [27.2, -14.9, 0], [28.9, -14.2, -0.6], [30.4, -17.6, -1.2]] as const).entries()) {
-    const person = createPerson(looks[i], options.shadows);
+    const person = createPerson(looks[i], false);
+    addBlobShadow(person);
     placePerson(person, x, z, h, top);
     rooftop.push(person);
     root.add(person.root);
@@ -850,7 +960,9 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
   const npcs = new Map<string, NpcRig>();
   for (const data of NPCS) {
     if (data.walk && !options.crowd) continue;
-    const person = createPerson(data.look, options.shadows);
+    // Only the learner casts a real shadow; everyone else gets a soft disc.
+    const person = createPerson(data.look, false);
+    addBlobShadow(person, data.seated ? 1.2 : 1);
     person.seated = Boolean(data.seated);
     placePerson(person, data.x, data.z, data.facing);
     root.add(person.root);
@@ -1149,5 +1261,338 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
     group.add(clerk.root);
     return { group, people, lamp: { color: '#eef4ff', spots: [new THREE.Vector3(cx, 3, 0), new THREE.Vector3(cx, 3, -3.5)] } };
   }
+  if (stage === 'interior-museo') return museumRoom(group, cx, w, d, pendant);
+  if (stage === 'interior-bar') return barRoom(group, cx, w, d);
   return null;
+}
+
+// A room you walk around in: four walls, the street door in the south wall.
+function walkRoom(group: THREE.Group, cx: number, w: number, d: number, h: number, wallColor: string, floor: THREE.Texture, floorRepeat: number, doorX: number, ceilingColor: string) {
+  floor.repeat.set(floorRepeat, floorRepeat * (d / w));
+  const base = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshStandardMaterial({ map: floor, roughness: 0.55 }));
+  base.rotation.x = -Math.PI / 2;
+  base.position.set(cx, 0.01, 0);
+  base.receiveShadow = true;
+  group.add(base);
+  const wall = solid(wallColor, 0.95);
+  group.add(box(w, h, 0.2, wall, cx, h / 2, -d / 2, false));
+  group.add(box(0.2, h, d, wall, cx - w / 2, h / 2, 0, false));
+  group.add(box(0.2, h, d, wall, cx + w / 2, h / 2, 0, false));
+  const left = doorX - 0.9 - (cx - w / 2), right = cx + w / 2 - (doorX + 0.9);
+  group.add(box(left, h, 0.2, wall, cx - w / 2 + left / 2, h / 2, d / 2, false));
+  group.add(box(right, h, 0.2, wall, cx + w / 2 - right / 2, h / 2, d / 2, false));
+  group.add(box(1.8, h - 2.5, 0.2, wall, doorX, 2.5 + (h - 2.5) / 2, d / 2, false));
+  // The street door, glowing a little, and an exit sign above it.
+  const outside = new THREE.Mesh(new THREE.PlaneGeometry(1.8, 2.5), new THREE.MeshBasicMaterial({ color: '#1c2638' }));
+  outside.position.set(doorX, 1.25, d / 2 + 0.12);
+  outside.rotation.y = Math.PI;
+  group.add(outside);
+  const exit = glow('#59d17a', 1.2);
+  group.add(box(0.5, 0.18, 0.04, exit, doorX, 2.75, d / 2 - 0.12, false));
+  const mat = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 0.9), solid('#2a201a', 1));
+  mat.rotation.x = -Math.PI / 2;
+  mat.position.set(doorX, 0.015, d / 2 - 0.6);
+  group.add(mat);
+  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(w, d), solid(ceilingColor));
+  ceiling.rotation.x = Math.PI / 2;
+  ceiling.position.set(cx, h, 0);
+  group.add(ceiling);
+}
+
+function lightPool(group: THREE.Group, x: number, z: number, radius: number, color = '#ffdca8', opacity = 0.32) {
+  const pool = new THREE.Mesh(new THREE.CircleGeometry(radius, 24), new THREE.MeshBasicMaterial({ map: poolTexture(), color, transparent: true, opacity, blending: THREE.AdditiveBlending, depthWrite: false }));
+  pool.rotation.x = -Math.PI / 2;
+  pool.position.set(x, 0.02, z);
+  group.add(pool);
+}
+
+function framed(group: THREE.Group, texture: THREE.Texture, x: number, y: number, z: number, w: number, h: number, rotation: number, frame = '#3a2a1e') {
+  const holder = new THREE.Group();
+  holder.position.set(x, y, z);
+  holder.rotation.y = rotation;
+  holder.add(box(w + 0.12, h + 0.12, 0.05, solid(frame, 0.6), 0, 0, 0, false));
+  const picture = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: texture, roughness: 0.8, emissive: '#ffffff', emissiveMap: texture, emissiveIntensity: 0.18 }));
+  picture.position.z = 0.03;
+  holder.add(picture);
+  group.add(holder);
+}
+
+function vitrine(group: THREE.Group, x: number, z: number, content: THREE.Object3D) {
+  const wood = solid('#2a1f19', 0.6);
+  group.add(box(0.9, 1, 0.9, wood, x, 0.5, z));
+  group.add(box(0.96, 0.05, 0.96, solid('#b8a27a', 0.3, 0.6), x, 1.02, z, false));
+  content.position.set(x, 1.06, z);
+  group.add(content);
+  const glass = new THREE.Mesh(new THREE.BoxGeometry(0.86, 0.5, 0.86), new THREE.MeshStandardMaterial({ color: '#cfe4ee', transparent: true, opacity: 0.16, roughness: 0.05, metalness: 0.2, depthWrite: false }));
+  glass.position.set(x, 1.3, z);
+  group.add(glass);
+}
+
+// Museo del Pasado: a dim hall with nine pieces, each under its own light.
+function museumRoom(group: THREE.Group, cx: number, w: number, d: number, pendant: THREE.Material): Interior {
+  const ox = cx;
+  walkRoom(group, cx, w, d, 4.4, '#34474b', tiles('#4a423b', 'rgba(20,16,12,.55)', 128, 2), 6, ox, '#161b1e');
+  const trim = solid('#1a2326', 0.8);
+  group.add(box(w, 1, 0.06, trim, cx, 0.5, -d / 2 + 0.13, false));
+  group.add(box(0.06, 1, d, trim, cx - w / 2 + 0.13, 0.5, 0, false), box(0.06, 1, d, trim, cx + w / 2 - 0.13, 0.5, 0, false));
+  // Track lights along the ceiling.
+  const spot = glow('#fff0d0', 1.6);
+  for (const x of [-6, -2, 2, 6]) for (const z of [-4, 1]) group.add(box(0.18, 0.12, 0.18, spot, ox + x, 4.3, z, false));
+  const brass = solid('#c9a24a', 0.3, 0.8);
+
+  // 1 · The beach photo (west wall).
+  const photo = canvas(256, 192, ctx => {
+    const sky = ctx.createLinearGradient(0, 0, 0, 192);
+    sky.addColorStop(0, '#d9d9d6'); sky.addColorStop(0.5, '#a4a4a0'); sky.addColorStop(0.52, '#7a7a76'); sky.addColorStop(1, '#c9c6bc');
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, 256, 192);
+    ctx.fillStyle = '#2a2a28';
+    for (const [x, h] of [[70, 46], [96, 52], [122, 40], [190, 48]]) { ctx.fillRect(x, 150 - h, 12, h); ctx.beginPath(); ctx.arc(x + 6, 150 - h - 7, 7, 0, Math.PI * 2); ctx.fill(); }
+    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 10; ctx.strokeRect(0, 0, 256, 192);
+  });
+  framed(group, photo, ox - 8.86, 1.75, -3.5, 1.3, 0.95, Math.PI / 2);
+  lightPool(group, ox - 8, -3.5, 1.6);
+
+  // 2 · The public phone (west wall).
+  const phone = new THREE.Group();
+  phone.add(box(0.36, 0.6, 0.22, solid('#2f4f7a', 0.5, 0.3), 0, 0, 0));
+  phone.add(box(0.2, 0.16, 0.03, solid('#b9b4a8', 0.4, 0.5), 0, -0.06, 0.12, false));
+  const handset = new THREE.Mesh(new THREE.CapsuleGeometry(0.035, 0.2, 4, 8), solid('#141414', 0.4));
+  handset.position.set(-0.12, 0.12, 0.14);
+  phone.add(handset);
+  phone.add(box(0.5, 0.06, 0.4, solid('#2f4f7a', 0.5, 0.3), 0, 0.42, 0.06, false));
+  phone.position.set(ox - 8.75, 1.45, 2);
+  phone.rotation.y = Math.PI / 2;
+  group.add(phone);
+  lightPool(group, ox - 8, 2, 1.5);
+
+  // 3 · The 1969 television on its stand (north wall).
+  group.add(box(1, 0.6, 0.6, solid('#3a2a1e', 0.7), ox - 5, 0.3, -6.3));
+  const tv = new THREE.Group();
+  tv.add(box(0.86, 0.66, 0.56, solid('#6a4a2e', 0.5), 0, 0, 0));
+  const moon = canvas(128, 96, ctx => {
+    ctx.fillStyle = '#5c5c5c'; ctx.fillRect(0, 0, 128, 96);
+    ctx.fillStyle = '#9a9a9a'; ctx.fillRect(0, 62, 128, 34);
+    ctx.fillStyle = '#e8e8e8'; ctx.fillRect(56, 30, 12, 26); ctx.beginPath(); ctx.arc(62, 26, 8, 0, Math.PI * 2); ctx.fill();
+    for (let i = 0; i < 400; i++) { ctx.fillStyle = `rgba(255,255,255,${Math.random() * 0.25})`; ctx.fillRect(Math.random() * 128, Math.random() * 96, 2, 1); }
+  });
+  const screen = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.46), new THREE.MeshStandardMaterial({ map: moon, emissive: '#ffffff', emissiveMap: moon, emissiveIntensity: 0.9 }));
+  screen.position.set(-0.06, 0.02, 0.285);
+  tv.add(screen);
+  for (const side of [-1, 1]) {
+    const antenna = new THREE.Mesh(new THREE.CylinderGeometry(0.008, 0.008, 0.6, 4), brass);
+    antenna.position.set(side * 0.14, 0.58, 0);
+    antenna.rotation.z = side * -0.5;
+    tv.add(antenna);
+  }
+  tv.position.set(ox - 5, 0.93, -6.3);
+  group.add(tv);
+  lightPool(group, ox - 5, -5.6, 1.5, '#cfe0ff', 0.25);
+
+  // 4 · A bedroom from 1985 behind a rope (north alcove).
+  const rug = new THREE.Mesh(new THREE.PlaneGeometry(6.6, 1.9), solid('#5a3a5a', 1));
+  rug.rotation.x = -Math.PI / 2;
+  rug.position.set(ox + 3, 0.02, -6);
+  group.add(rug);
+  group.add(box(2, 0.45, 1, solid('#3d4f7a', 0.9), ox + 1, 0.23, -6.3));
+  group.add(box(0.5, 0.12, 0.8, solid('#efe6d8', 0.9), ox + 0.2, 0.5, -6.3, false));
+  group.add(box(1.4, 0.06, 0.6, solid('#7a5a3c', 0.6), ox + 4.6, 0.78, -6.5));
+  for (const x of [4, 5.2]) group.add(box(0.05, 0.76, 0.5, solid('#4a3626', 0.6), ox + x, 0.38, -6.5, false));
+  group.add(box(0.42, 0.12, 0.22, solid('#1d1d1d', 0.4, 0.4), ox + 4.3, 0.87, -6.5, false));
+  const desk = glow('#ffcf8a', 1.4);
+  group.add(cylinder(0.12, 0.08, 0.2, desk, ox + 5.1, 0.95, -6.5, 10));
+  const poster = canvas(128, 176, ctx => {
+    ctx.fillStyle = '#121a2e'; ctx.fillRect(0, 0, 128, 176);
+    ctx.fillStyle = '#e0457a'; ctx.beginPath(); ctx.moveTo(14, 150); ctx.lineTo(64, 30); ctx.lineTo(114, 150); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#39c2d7'; ctx.fillRect(14, 124, 100, 10);
+    ctx.fillStyle = '#f2e6cc'; ctx.font = '700 26px Georgia, serif'; ctx.textAlign = 'center'; ctx.fillText('1985', 64, 26);
+  });
+  framed(group, poster, ox + 2.4, 2.2, -6.86, 0.8, 1.1, 0, '#d9d2c4');
+  for (const x of [-0.4, 1.8, 4.2, 6.4]) {
+    group.add(cylinder(0.04, 0.06, 0.9, brass, ox + x, 0.45, -4.9, 8));
+  }
+  for (const [a, b] of [[-0.4, 1.8], [1.8, 4.2], [4.2, 6.4]]) group.add(new THREE.Line(sag(new THREE.Vector3(ox + a, 0.86, -4.9), new THREE.Vector3(ox + b, 0.86, -4.9), 0.15), new THREE.LineBasicMaterial({ color: '#7a2a2e' })));
+  lightPool(group, ox + 3, -5.8, 2.6, '#ffd8b0', 0.22);
+
+  // 5 · The postman's red bicycle (east wall, on a low platform).
+  group.add(box(1.4, 0.18, 2.1, solid('#2a1f19', 0.6), ox + 8.25, 0.09, -3.5));
+  const bike = new THREE.Group();
+  addBike(bike, 0, 0);
+  bike.children[bike.children.length - 1].rotation.y = Math.PI / 2;
+  bike.position.set(ox + 8.25, 0.18, -3.5);
+  group.add(bike);
+  group.add(box(0.36, 0.28, 0.14, solid('#5a3a22', 0.8), ox + 8.25, 0.85, -3.05, false));
+  lightPool(group, ox + 7.9, -3.5, 1.7);
+
+  // 6 · The leather suitcase nobody claimed (east wall).
+  group.add(box(1.4, 0.4, 1, darkPlinth(), ox + 8.2, 0.2, 2.4));
+  const suitcase = new THREE.Group();
+  suitcase.add(box(0.78, 0.5, 0.24, solid('#6a4026', 0.65), 0, 0, 0));
+  for (const x of [-0.22, 0.22]) suitcase.add(box(0.05, 0.52, 0.26, solid('#3a2416', 0.6), x, 0, 0, false));
+  suitcase.add(box(0.2, 0.05, 0.06, brass, 0, 0.28, 0, false));
+  const tag = new THREE.Mesh(new THREE.PlaneGeometry(0.09, 0.05), solid('#efe2c4', 0.9));
+  tag.position.set(0.12, 0.2, 0.125);
+  suitcase.add(tag);
+  suitcase.position.set(ox + 8.2, 0.65, 2.4);
+  suitcase.rotation.y = -Math.PI / 2 + 0.2;
+  group.add(suitcase);
+  lightPool(group, ox + 7.8, 2.4, 1.6);
+
+  // 7 · A train ticket that never got used.
+  const ticket = new THREE.Mesh(new THREE.PlaneGeometry(0.22, 0.1), new THREE.MeshStandardMaterial({ map: canvas(128, 64, ctx => {
+    ctx.fillStyle = '#e8d9a8'; ctx.fillRect(0, 0, 128, 64);
+    ctx.fillStyle = '#5a3a22'; ctx.font = '700 14px Georgia, serif'; ctx.fillText('RETIRO → ROSARIO', 8, 24);
+    ctx.font = '12px Georgia, serif'; ctx.fillText('14 · III · 1987   07:40', 8, 46);
+  }), roughness: 0.9 }));
+  ticket.rotation.x = -Math.PI / 2;
+  vitrine(group, ox - 3, -0.4, ticket);
+  lightPool(group, ox - 3, -0.4, 1.4);
+
+  // 8 · The letter found behind a wardrobe, still closed.
+  const letter = new THREE.Group();
+  const envelope = new THREE.Mesh(new THREE.PlaneGeometry(0.26, 0.17), new THREE.MeshStandardMaterial({ map: canvas(128, 84, ctx => {
+    ctx.fillStyle = '#efe4cc'; ctx.fillRect(0, 0, 128, 84);
+    ctx.strokeStyle = '#b8a27a'; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(64, 44); ctx.lineTo(128, 0); ctx.stroke();
+    ctx.fillStyle = '#8a2a2e'; ctx.beginPath(); ctx.arc(64, 44, 7, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#3a3a5a'; ctx.font = 'italic 11px Georgia, serif'; ctx.fillText('Para Elena', 70, 74);
+  }), roughness: 0.9 }));
+  envelope.rotation.x = -Math.PI / 2;
+  envelope.rotation.z = 0.2;
+  letter.add(envelope);
+  vitrine(group, ox + 0.4, -1.6, letter);
+  lightPool(group, ox + 0.4, -1.6, 1.4);
+
+  // 9 · A broken music box.
+  const music = new THREE.Group();
+  music.add(box(0.3, 0.14, 0.22, solid('#5a2a2e', 0.4, 0.2), 0, 0.07, 0, false));
+  const lid = box(0.3, 0.02, 0.22, solid('#5a2a2e', 0.4, 0.2), 0, 0.11, -0.11, false);
+  lid.geometry.translate(0, 0, 0.11);
+  lid.rotation.x = -1.2;
+  music.add(lid);
+  music.add(cylinder(0.008, 0.008, 0.08, brass, 0, 0.18, 0.02, 6));
+  const dancer = new THREE.Mesh(new THREE.ConeGeometry(0.03, 0.06, 8), solid('#f2e6dc', 0.5));
+  dancer.position.set(0, 0.24, 0.02);
+  music.add(dancer);
+  vitrine(group, ox + 3.9, 0.6, music);
+  lightPool(group, ox + 3.9, 0.6, 1.4);
+
+  // A bench in the middle, and the night guard by the door.
+  group.add(box(2.2, 0.08, 0.6, solid('#3a2a20', 0.6), ox - 4.6, 0.46, 3.6));
+  for (const x of [-5.5, -3.7]) group.add(box(0.08, 0.44, 0.5, solid('#1d1d1f', 0.5, 0.5), ox + x, 0.22, 3.6, false));
+  for (const x of [-2, 2]) {
+    group.add(cylinder(0.01, 0.01, 0.8, solid('#222222'), ox + x, 4, 4.6, 4));
+    const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.16, 12, 8), pendant);
+    bulb.position.set(ox + x, 3.5, 4.6);
+    group.add(bulb);
+  }
+  const guard = createPerson({ shirt: '#2a3140', pants: '#1f232b', hair: '#b8b0a4', skin: '#c8906a', shoes: '#141414' }, false);
+  addBlobShadow(guard);
+  placePerson(guard, ox + 7.6, 5.6, -2.4);
+  group.add(guard.root);
+  return { group, people: [guard], lamp: { color: '#ffe2b8', spots: [new THREE.Vector3(ox, 3.6, -1), new THREE.Vector3(ox, 3.6, 3)] } };
+}
+
+function darkPlinth() {
+  return solid('#2a1f19', 0.6);
+}
+
+// Bar La Persiana: a long counter, bottles glowing behind it, tables and
+// the people in each situation.
+function barRoom(group: THREE.Group, cx: number, w: number, d: number): Interior {
+  const ox = cx;
+  const floor = canvas(256, 256, ctx => {
+    for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) {
+      ctx.fillStyle = (x + y) % 2 ? '#2a2420' : '#c9bca4';
+      ctx.fillRect(x * 32, y * 32, 32, 32);
+    }
+  }, true);
+  walkRoom(group, cx, w, d, 3.6, '#6a3428', floor, 4, ox - 5, '#1c1512');
+  const wood = solid('#3a2418', 0.55);
+  const top = solid('#6a4a30', 0.35, 0.1);
+  // Counter and the shelves behind it.
+  group.add(box(9, 1.05, 0.95, wood, ox - 1.9, 0.53, -3.32));
+  group.add(box(9.2, 0.07, 1.1, top, ox - 1.9, 1.09, -3.3));
+  group.add(box(9, 0.06, 0.06, solid('#c9a24a', 0.3, 0.8), ox - 1.9, 0.18, -2.8, false));
+  for (const y of [1.5, 2.05, 2.6]) group.add(box(8, 0.05, 0.35, wood, ox - 1.9, y, -5.25, false));
+  const bottles = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.045, 0.05, 0.3, 8), new THREE.MeshStandardMaterial({ roughness: 0.15, metalness: 0.1, emissive: '#ffffff', emissiveIntensity: 0.12 }), 72);
+  const color = new THREE.Color();
+  const rand = random(71);
+  let n = 0;
+  for (const y of [1.5, 2.05, 2.6]) for (let i = 0; i < 24; i++) {
+    bottles.setMatrixAt(n, new THREE.Matrix4().setPosition(ox - 5.6 + i * 0.32 + rand() * 0.06, y + 0.18, -5.25));
+    bottles.setColorAt(n, color.set(['#2f6a3a', '#8a5a1e', '#c9d4d8', '#6a1e2a', '#d9a441'][Math.floor(rand() * 5)]));
+    n++;
+  }
+  group.add(bottles);
+  const back = glow('#ff9a5a', 0.8);
+  group.add(box(8, 0.04, 0.04, back, ox - 1.9, 1.47, -5.08, false));
+  const pendant = glow('#ffc27a', 2.2);
+  for (const x of [-5, -2.6, -0.2, 2]) {
+    group.add(cylinder(0.01, 0.01, 0.9, solid('#222222'), ox + x, 3.15, -3.2, 4));
+    const shade = new THREE.Mesh(new THREE.ConeGeometry(0.18, 0.2, 12, 1, true), solid('#1d1d1f', 0.5, 0.5));
+    shade.position.set(ox + x, 2.62, -3.2);
+    group.add(shade);
+    const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.07, 8, 6), pendant);
+    bulb.position.set(ox + x, 2.52, -3.2);
+    group.add(bulb);
+  }
+  const stool = solid('#1d1d1f', 0.5, 0.5);
+  for (const x of [-6, -3.2, -1.6, 2.2]) {
+    group.add(cylinder(0.2, 0.2, 0.06, solid('#7a2a22', 0.7), ox + x, 0.76, -2.45, 12));
+    group.add(cylinder(0.03, 0.05, 0.74, stool, ox + x, 0.37, -2.45, 6));
+  }
+  // Tables.
+  const chairs = solid('#2b211b', 0.7);
+  table(group, ox + 5.2, -3.3, top);
+  seat(group, ox + 5.2, -2.65, Math.PI, chairs);
+  group.add(box(0.12, 0.03, 0.08, solid('#3a2416', 0.6), ox + 5.35, 0.8, -3.25, false));
+  table(group, ox - 2.5, 1.6, top);
+  group.add(box(2.4, 0.06, 1.2, top, ox + 4.6, 0.76, 1.8));
+  for (const [x, z] of [[3.6, 1.3], [5.6, 1.3], [3.6, 2.3], [5.6, 2.3]]) group.add(cylinder(0.04, 0.04, 0.74, stool, ox + x, 0.37, z, 6));
+  for (const [x, c] of [[4.2, '#d9a441'], [4.9, '#6a1e2a'], [5.3, '#c9d4d8']] as const) group.add(cylinder(0.04, 0.04, 0.16, solid(c, 0.2), ox + x, 0.87, 1.8, 8));
+  // A jukebox in the quiet corner.
+  group.add(box(0.85, 1.5, 0.6, solid('#4a2a1e', 0.4, 0.2), ox + 6.5, 0.75, 4.8));
+  const juke = glow('#ffb45a', 1.6);
+  group.add(box(0.6, 0.5, 0.04, juke, ox + 6.5, 1.15, 4.48, false));
+  // Posters.
+  const posters = [['TANGO', 'LOS JUEVES'], ['NOCHE DE', 'BOLEROS'], ['PROHIBIDO', 'NO CANTAR']];
+  posters.forEach(([a, b], i) => {
+    const art = canvas(128, 176, ctx => {
+      ctx.fillStyle = ['#e8d9b8', '#1e2a3a', '#c9452c'][i]; ctx.fillRect(0, 0, 128, 176);
+      ctx.fillStyle = ['#7a2a22', '#e8c46a', '#f2e6cc'][i]; ctx.textAlign = 'center';
+      ctx.font = '700 22px Georgia, serif'; ctx.fillText(a, 64, 80);
+      ctx.font = '16px Georgia, serif'; ctx.fillText(b, 64, 108);
+    });
+    framed(group, art, ox + w / 2 - 0.13, 1.9, -1.6 + i * 1.6 - 1.4, 0.7, 0.95, -Math.PI / 2, '#1d1d1f');
+  });
+  lightPool(group, ox - 1.9, -2.4, 3.4, '#ffb070', 0.22);
+  lightPool(group, ox - 2.5, 1.6, 1.8, '#ffc890', 0.22);
+  lightPool(group, ox + 4.6, 1.8, 2, '#ffc890', 0.22);
+
+  // People.
+  const person = (look: Look, x: number, z: number, heading: number, seated = false) => {
+    const p = createPerson(look, false);
+    addBlobShadow(p, seated ? 1.2 : 1);
+    p.seated = seated;
+    placePerson(p, ox + x, z, heading);
+    group.add(p.root);
+    return p;
+  };
+  const bartender = person({ shirt: '#efe7d6', pants: '#1d1d1f', hair: '#1a120c', skin: '#b87a55' }, -2.2, -4.5, 0);
+  const loud = person({ shirt: '#8a2a22', pants: '#2a2f3a', hair: '#2a1a12', skin: '#d6a07a' }, -4.5, -2.35, Math.PI - 0.5);
+  const queueA = person({ shirt: '#2f6a8a', pants: '#26262c', hair: '#6b3a1e', skin: '#efcaa6' }, 0.6, -2.4, Math.PI);
+  const queueB = person({ shirt: '#e0c46a', pants: '#3a3440', hair: '#121212', skin: '#8a5a3a' }, 1.3, -2.3, Math.PI + 0.3);
+  const martin = person({ shirt: '#4a5d3a', pants: '#2a2e36', hair: '#3a2a1e', skin: '#e0b089' }, 5.2, -2.62, Math.PI, true);
+  const leo = person({ shirt: '#3a3a44', pants: '#1f232b', hair: '#6b4a2a', skin: '#e8c3a0' }, -1.55, 2.3, -Math.PI / 2 - 0.3);
+  const friendA = person({ shirt: '#c98a3c', hair: '#2a1a12', skin: '#c99064' }, -3.15, 1.6, Math.PI / 2, true);
+  const friendB = person({ shirt: '#5a3a6a', hair: '#0f0f0f', skin: '#7a4b30' }, -2.5, 0.95, 0, true);
+  const vale = person({ shirt: '#c05a7a', pants: '#2a2f3a', hair: '#1a120c', skin: '#d6a07a' }, 4, 0.75, 0, true);
+  const groupA = person({ shirt: '#2f4f6a', hair: '#6b4a2a', skin: '#e8c3a0' }, 5.2, 0.75, 0, true);
+  const groupB = person({ shirt: '#d9d2c4', hair: '#101010', skin: '#8a5a3a' }, 6.25, 1.8, -Math.PI / 2, true);
+  const sergio = person({ shirt: '#23293a', pants: '#23293a', hair: '#1a1410', skin: '#c99468', shoes: '#0a0a0b' }, -2.5, 4.75, Math.PI);
+  const people = [bartender, loud, queueA, queueB, martin, leo, friendA, friendB, vale, groupA, groupB, sergio];
+  return {
+    group, people,
+    lamp: { color: '#ffb878', spots: [new THREE.Vector3(ox - 1.9, 2.8, -2), new THREE.Vector3(ox + 2, 2.8, 2)] },
+    roles: { fuerte: [loud, bartender], fila: [queueA, queueB], billetera: [martin], quedarse: [leo, friendA, friendB], caro: [vale, groupA, groupB], invitacion: [sergio] },
+  };
 }
