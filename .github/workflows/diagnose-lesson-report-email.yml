@@ -16,6 +16,8 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       PRODUCTION_D1_ID: ${{ vars.PRODUCTION_D1_ID }}
       WRANGLER_SEND_METRICS: "false"
+      GITHUB_RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      GITHUB_RESEND_API_KEY_PRODUCTION: ${{ secrets.RESEND_API_KEY_PRODUCTION }}
     steps:
       - uses: actions/checkout@v5
 
@@ -34,7 +36,13 @@ jobs:
             | @tsv
           ' worker-settings.json
 
-          jq -e '.result.bindings[] | select(.name=="RESEND_API_KEY" and .type=="secret_text")' worker-settings.json >/dev/null
+          if jq -e '.result.bindings[] | select(.name=="RESEND_API_KEY" and .type=="secret_text")' worker-settings.json >/dev/null; then
+            echo "WORKER_RESEND_API_KEY_PRESENT=true"
+          else
+            echo "WORKER_RESEND_API_KEY_PRESENT=false"
+          fi
+          if [ -n "$GITHUB_RESEND_API_KEY" ]; then echo "GITHUB_RESEND_API_KEY_PRESENT=true"; else echo "GITHUB_RESEND_API_KEY_PRESENT=false"; fi
+          if [ -n "$GITHUB_RESEND_API_KEY_PRODUCTION" ]; then echo "GITHUB_RESEND_API_KEY_PRODUCTION_PRESENT=true"; else echo "GITHUB_RESEND_API_KEY_PRODUCTION_PRESENT=false"; fi
           jq -e '.result.bindings[] | select((.name=="LESSON_REPORT_NOTIFICATION_EMAIL" or .name=="CHESPANISH_OWNER_EMAIL"))' worker-settings.json >/dev/null
 
       - name: Inspect recent report persistence
