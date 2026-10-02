@@ -4,7 +4,7 @@ name: Autoestudio 0011 dedicated owner-authorized operation
 # Not triggered by main, PR merge, normal publication or rollback.
 on:
   push:
-    branches: [codex/autoestudio-d1-release-20261002]
+    branches: [codex/autoestudio-d1-resolve-20261002]
     paths: [.github/workflows/autoestudio-authorized-migration.yml]
 
 permissions:

@@ -15,7 +15,7 @@ const evidence=()=>({
 });
 const confirm='apply 0011 4a040f541101ea47766b1403ad933accd8cc1afb73b4c8dec2f04d30118ca51d';
 test('only the approved SQL can generate the exact production invocation',()=>{
- assert.deepEqual(authorizeOperation({target:'production',confirm,sql,evidence:evidence(),now}),['wrangler','d1','execute','343ac454-a056-4c40-a893-f8be572665a6','--remote','--file=drizzle/0011_autoestudio_share.sql']);
+ assert.deepEqual(authorizeOperation({target:'production',confirm,sql,evidence:evidence(),now}),['wrangler','d1','execute','spanishcue-production','--remote','--file=drizzle/0011_autoestudio_share.sql']);
  assert.throws(()=>authorizeOperation({target:'production',confirm:'',sql,evidence:evidence(),now}),/authorization/);
  assert.throws(()=>authorizeOperation({target:'production',confirm,sql:sql+'\n',evidence:evidence(),now}),/SQL hash/);
 });
@@ -35,5 +35,5 @@ test('staging cannot target production or an arbitrary database',()=>{
  assert.equal(targetFor('staging').id,'23fe3c11-85f7-48e1-9dd0-d508893625c9');
  assert.throws(()=>authorizeOperation({target:'staging',confirm,sql,evidence:evidence(),now}),/binding/);
  const e=evidence();e.binding={worker:'spanishcue-staging',name:'spanishcue-staging',id:'23fe3c11-85f7-48e1-9dd0-d508893625c9'};
- assert.equal(authorizeOperation({target:'staging',confirm,sql,evidence:e,now})[3],'23fe3c11-85f7-48e1-9dd0-d508893625c9');
+ assert.equal(authorizeOperation({target:'staging',confirm,sql,evidence:e,now})[3],'spanishcue-staging');
 });
