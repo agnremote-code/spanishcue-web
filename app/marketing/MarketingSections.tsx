@@ -42,7 +42,8 @@ const copy = {
       listening: "Escucha",
       vocabulary: "Vocabulario",
       pronunciation: "Fonética",
-      countryAtlas: "Atlas 3D",
+      switzerland: "Suiza 3D",
+      countryAtlas: "Países 3D",
     },
     benefitsKicker: "DISEÑADO PARA PROFESORES",
     benefitsTitle: "Una biblioteca que trabaja antes de que llegue tu alumno.",
@@ -141,7 +142,8 @@ const copy = {
       listening: "Listening",
       vocabulary: "Vocabulary",
       pronunciation: "Pronunciation",
-      countryAtlas: "3D atlas",
+      switzerland: "Switzerland 3D",
+      countryAtlas: "Countries 3D",
     },
     benefitsKicker: "BUILT FOR TEACHERS",
     benefitsTitle: "A library that works before your learner arrives.",
@@ -290,7 +292,7 @@ export function ProductPreview({ lessons }: { lessons: MarketingLesson[] }) {
     <div className="mk-preview-rail">
       {previews.map(({ lesson, key }) => <a key={`${key}-${lesson.id}`} href={lesson.href} data-free-sample-id={lesson.id} onClick={() => { trackMarketingEvent("lesson_preview_open", { lesson_id: lesson.id, lesson_title: lesson.title, category: key, access: "free", placement: "product_preview" }); }}>
         <img src={lesson.image} alt="" width="640" height="400" loading="lazy" />
-        {key === "countryAtlas" && lesson.href === "/suiza-en-relieve" && <div className="mk-swiss-preview" aria-hidden="true">
+        {lesson.id === 29 && <div className="mk-swiss-preview" aria-hidden="true">
           <i>MAPA 3D · 26 CANTONES</i>
           <svg viewBox="0 0 900 555">
             {cantonShapes.map((shape, index) => <g key={shape.code}>

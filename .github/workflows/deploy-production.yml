@@ -21,7 +21,8 @@ name: Deploy Production (Cloudflare, owner-authorized)
 #             release state to be idle. Only CUTOVER_RUNBOOK.md step 6.3 uses it.
 #   release - normal release after cutover. Requires Sites to be disabled
 #             (state.json enabled=false), so there is exactly one deployer.
-# This workflow never applies D1 migrations.
+# The only database preparation is the owner-authorized, additive lesson_reports table.
+# It never applies arbitrary migrations or changes existing data.
 
 on:
   workflow_dispatch:
@@ -146,6 +147,15 @@ jobs:
           ATTACH_CUSTOM_DOMAIN: ${{ inputs.mode != 'inert' && 'true' || 'false' }}
         run: node scripts/prepare-production-worker-config.mjs dist/server/wrangler.json
 
+      # Owner authorization: 2026-10-02 approved reports implementation and full release.
+      # This exact idempotent CREATE-only SQL leaves existing data/schema intact.
+      - name: Prepare authorized lesson reports table
+        if: inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0010_lesson_reports.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(lesson_reports)" --json > report-schema.json
+          node scripts/verify-lesson-reports-schema.mjs report-schema.json
+
       - name: Record current production version
         if: inputs.action == 'deploy'
         id: previous
@@ -188,6 +198,7 @@ jobs:
           SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.origin }}
         run: |
           node scripts/production-smoke.mjs
+          node scripts/lesson-reports-smoke.mjs
           if curl -sI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'; then
             echo "::error::Production must not carry the staging noindex header."; exit 1
           fi

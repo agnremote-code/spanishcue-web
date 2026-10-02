@@ -38,7 +38,7 @@ function fixture() {
     autoestudio_passes: [{id: 'pass1', owner_id: 'owner', learner_id: 'learner1', level: 'a2', revision: 2, revoked_at: null, created_at: '2026-10-02'}],
     autoestudio_progress: [{learner_id: 'learner1', module_id: 'a2-01', started_at: '2026-10-02', updated_at: '2026-10-02', sections: '{"reading":"2026-10-02"}', last_section: 'reading', completed_at: null, quiz_score: null, quiz_total: null, quiz_best: null, quiz_attempts: null, quiz_at: null}],
     autoestudio_rate_limits: [{bucket: 12, window: 1, hits: 3}],
-    lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
+    lesson_reports: [], lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
   };
 }
 
@@ -56,7 +56,7 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 21);
+  assert.equal(order.length, 22);
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_passes"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_progress"));
   assert.ok(order.indexOf("users") < order.indexOf("auth_identities"));

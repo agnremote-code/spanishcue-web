@@ -104,6 +104,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     compatibilityDate: process.env.PRODUCTION_COMPATIBILITY_DATE || undefined,
     attachDomain: process.env.ATTACH_CUSTOM_DOMAIN === "true",
   });
+  const { verifyLiveShareRelease } = await import('./autoestudio-release-gate.mjs');
+  await verifyLiveShareRelease(config);
   await writeFile(path, `${JSON.stringify(config, null, 2)}\n`);
   console.log(JSON.stringify({ worker: config.name, d1: config.d1_databases[0].database_name, workersDev: config.workers_dev, routes: (config.routes || []).map(route => route.pattern), varNames: Object.keys(config.vars).sort() }));
 }

@@ -147,11 +147,26 @@ export function withoutApprovedAdditions(path, bytes) {
     assert.equal(text.split(after).length - 1, 1, `one bounded addition edit in ${path}`);
     text = text.replace(after, before);
   }
+  if (path === 'app/lesson-catalog.ts') {
+    // Approved editorial metadata is outside the historical teaching/access contract.
+    const fields = [
+      ['news?:{addedAt:string;featured:boolean}; ', ''],
+      ['{id:221,news:{addedAt:"2026-09-29",featured:true},', '{id:221,'],
+    ];
+    for (const [after,before] of fields) {
+      assert.equal(text.split(after).length-1,1,'one exact approved news metadata edit');
+      text=text.replace(after,before);
+    }
+  }
   return Buffer.from(text);
 }
 
 export function withoutApprovedLessons(lessons) {
   return lessons.filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
+    if (lesson.id === 221) {
+      assert.deepEqual(lesson.news,{addedAt:'2026-09-29',featured:true});
+      const preserved = {...lesson}; delete preserved.news; lesson = preserved;
+    }
     const repair = repairs.find(item => item.id === lesson.id && item.path === lesson.path);
     if (!repair) return lesson;
     const restored = {...lesson};

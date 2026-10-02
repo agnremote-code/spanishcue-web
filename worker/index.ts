@@ -131,6 +131,8 @@ const app = {
       const match=/^\/s\/([^/]+)\/?$/.exec(url.pathname);
       let token=''; try { token=match?decodeURIComponent(match[1]):''; } catch { /* Invalid token uses the same clean redirect. */ }
       try {
+        const frozenShare=writeFreezeResponse(request,env.SPANISHCUE_WRITE_FREEZE);
+        if(frozenShare)return frozenShare;
         const result=await redeem(request,token,env);
         const safe=new Response(result.body,result);
         setSecurityHeaders(safe.headers,url,localeFromHeaders(request.headers));
@@ -194,8 +196,8 @@ const app = {
     const premiumAutoestudio=isPremiumAutoestudioPath(pathname);
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
-    const administrative=pathname==='/admin'||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
+    const administrative=(pathname==='/admin'||pathname.startsWith('/admin/'))||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
+    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
     const verifiedUser=identityAware&&firebaseTokenFromHeaders(routedHeaders)
       ? await getFirebaseUserFromHeaders(routedHeaders)
       : null;
