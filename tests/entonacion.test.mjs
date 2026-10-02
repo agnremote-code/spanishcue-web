@@ -28,9 +28,10 @@ test('all finite recordings exist, match scripts, decode, and have no orphan fil
  for(const l of levels)for(const a of contentFor(l).activities){const first=manifest.clips.find(c=>c.id===a.clip);assert.equal(first.text,a.text);if(a.secondClip){const second=manifest.clips.find(c=>c.id===a.secondClip);assert.equal(second.text,a.text);assert.notEqual(first.sha256,second.sha256);assert.notDeepEqual(first.pitchAnchorsHz,second.pitchAnchorsHz);}}
  assert.equal(manifest.synthetic,true);assert.equal(manifest.humanListeningQA,false);
 });
-// HablarSinCortar's visual wrapper now evolves with the shared studio UX; authored content stays protected.
-test('unrelated lesson and auth sources remain byte-identical to current task base',()=>{
- for(const file of ['app/hablar-sin-cortar/content.mjs','app/noche-abierta/page.tsx','app/autoestudio/ModulePlayer.tsx','app/access-policy.ts']){assert.deepEqual(readFileSync(file),execFileSync('git',['show',`829bfdef46e1b2fdb1fd81eb0836ab3e5155eb13:${file}`]));}
+// Homework evolves ModulePlayer and the studio UX evolves HablarSinCortar; preserve authored A1 content.
+test('unrelated lesson, A1 content and auth sources remain byte-identical to intonation baseline',()=>{
+ for(const file of ['app/hablar-sin-cortar/content.mjs','app/noche-abierta/page.tsx','app/autoestudio/curriculum/modules/a1/w01.ts','app/access-policy.ts']){assert.deepEqual(readFileSync(file),execFileSync('git',['show',`829bfdef46e1b2fdb1fd81eb0836ab3e5155eb13:${file}`]));}
+
 });
 test('in-world guide offers phase-specific hints without exposing hidden sentence text',async()=>{
  assert.ok(existsSync('app/phonetics-family/MascotGuide.tsx'),'interactive guide component exists');const {createRequire}=await import('node:module');const {runInNewContext}=await import('node:vm');const req=createRequire(import.meta.url);const React=req('react');const {renderToStaticMarkup}=req('react-dom/server');

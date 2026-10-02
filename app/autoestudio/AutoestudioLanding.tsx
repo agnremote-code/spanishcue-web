@@ -8,18 +8,19 @@ import { SECTION_ORDER } from "./curriculum/types";
 import { copyFor, sectionIcons, sectionLabels } from "./engine/copy";
 import { moduleHref, type LandingLevel } from "./engine/links";
 import { levelProgress } from "./progress/model";
-import { useProgress } from "./progress/useProgress";
-import "./autoestudio.css";
+import type { ShareSession } from "./progress/server-adapter";
+import ProgressNotice from "./progress/ProgressNotice";
+import { useStudyProgress } from "./progress/useProgress";
 
-export default function AutoestudioLanding({ levels, fullAccess }: { levels: LandingLevel[]; fullAccess: boolean }) {
+export default function AutoestudioLanding({ levels, fullAccess, session }: { session?: ShareSession | null; levels: LandingLevel[]; fullAccess: boolean }) {
   const { locale } = useI18n();
   const en = locale === "en";
   const t = copyFor(locale);
   const labels = sectionLabels[en ? "en" : "es"];
-  const { state, ready } = useProgress();
+  const { state, ready, syncStatus, retry } = useStudyProgress(session);
   const all = levels.flatMap((level) => level.modules);
   const last = ready && state.lastModule ? all.find((summary) => summary.id === state.lastModule) : undefined;
-  const first = all[0];
+  const first = all.find(summary => summary.level === session?.level) ?? all[0];
   const resume = last ?? first;
   const resumeLabel = last ? t.continue : t.start;
 
@@ -49,7 +50,7 @@ export default function AutoestudioLanding({ levels, fullAccess }: { levels: Lan
           </p>
           {resume && (
             <div className="ae-cta-row">
-              <Link className="ae-primary big" href={moduleHref(resume, fullAccess)}>
+              <Link className="ae-primary big" href={moduleHref(resume, fullAccess || session?.level === resume.level)}>
                 {resumeLabel}: {resume.level.toUpperCase()} · {t.week} {resume.week}
                 <small>{resume.title}</small>
               </Link>
@@ -58,7 +59,7 @@ export default function AutoestudioLanding({ levels, fullAccess }: { levels: Lan
               </a>
             </div>
           )}
-          {!fullAccess && <p className="ae-hint">{en ? "A1 weeks 1 and 2 are free. PRO opens the whole route." : "Las semanas 1 y 2 de A1 son gratis. PRO abre todo el recorrido."}</p>}
+          {!fullAccess && <p className="ae-hint">{en ? "Try a real sample in each level. A1 weeks 1 and 2 are free." : "Probá una semana real de cada nivel. Las semanas 1 y 2 de A1 son gratis."}</p>}
         </div>
         <div className="ae-landing-art" aria-hidden="true">
           <span className="ae-sun" />
@@ -69,10 +70,12 @@ export default function AutoestudioLanding({ levels, fullAccess }: { levels: Lan
         </div>
       </section>
 
+      <section className="ae-four-skills" aria-label="Cuatro habilidades"><b>Lectura</b><b>Escucha</b><b>Escritura</b><b>Expresión oral</b><p>Gramática y vocabulario para comunicarte. Pronunciación, ritmo y entonación integrados en la escucha y el habla.</p></section>
+
       <section className="ae-rhythm" aria-labelledby="ae-rhythm-title">
         <div>
           <h2 id="ae-rhythm-title">{en ? "Your weekly rhythm" : "Tu ritmo semanal"}</h2>
-          <p>{en ? "60–90 minutes a week, in short sessions. Short sessions beat one exhausting marathon." : "Entre 60 y 90 minutos por semana, en sesiones cortas. Mejor poco y seguido que un maratón agotador."}</p>
+          <p>{en ? "60–150 minutes a week, in short sessions. Short sessions beat one exhausting marathon." : "Entre 60 y 150 minutos por semana, en sesiones cortas. Mejor poco y seguido que un maratón agotador."}</p>
         </div>
         <ol>
           {SECTION_ORDER.map((key, index) => (
@@ -122,6 +125,8 @@ export default function AutoestudioLanding({ levels, fullAccess }: { levels: Lan
                     {en ? level.nameEn : level.name} · {en ? "Route" : "Ruta"}: {en ? level.routeEn : level.route}
                   </p>
                   <h3>{en ? level.outcomeEn : level.outcome}</h3>
+                  {session?.level === level.id && <p className="ae-pass-badge">✓ Tu nivel · Acceso de tu profe</p>}
+                  {session && session.level !== level.id && <p className="ae-hint">🔒 Vista previa disponible</p>}
                   <p className="ae-level-meta">
                     {level.modules.length} {en ? "weeks" : "semanas"} · {checkpoints} {en ? "checkpoints" : "checkpoints"}
                   </p>
@@ -139,8 +144,8 @@ export default function AutoestudioLanding({ levels, fullAccess }: { levels: Lan
                       <b>
                         {t.week} {nextSummary.week} · {nextSummary.title}
                       </b>
-                      <Link className="ae-primary" href={moduleHref(nextSummary, fullAccess)}>
-                        {!nextSummary.free && !fullAccess ? `🔒 ${t.locked}` : progress.hasStarted ? t.continue : t.start} →
+                      <Link className="ae-primary" href={moduleHref(nextSummary, fullAccess || session?.level === level.id)}>
+                        {!nextSummary.free && !fullAccess && session?.level !== level.id ? `🔒 ${t.locked}` : progress.hasStarted ? t.continue : t.start} →
                       </Link>
                     </>
                   )}
@@ -152,7 +157,7 @@ export default function AutoestudioLanding({ levels, fullAccess }: { levels: Lan
             );
           })}
         </ol>
-        <p className="ae-hint">{t.progressLocal}</p>
+        <ProgressNotice status={syncStatus} localText={t.progressLocal} onRetry={retry} />
       </section>
     </div>
   );

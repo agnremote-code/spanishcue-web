@@ -23,11 +23,13 @@ import {
 } from "./engine/Sections";
 import { stopAudio, warmVoices, type AudioMap } from "./engine/speech";
 import { completeSection, isModuleComplete, recordQuiz, saveDraft, startModule, visitSection } from "./progress/model";
-import { useProgress } from "./progress/useProgress";
-import "./autoestudio.css";
+import type { ShareSession } from "./progress/server-adapter";
+import ProgressNotice from "./progress/ProgressNotice";
+import { useStudyProgress } from "./progress/useProgress";
 
 export type ModulePlayerProps = {
   module: Module;
+  session?: ShareSession | null;
   level: Pick<LevelMeta, "id" | "code" | "name" | "color" | "mascot" | "support">;
   objectives: { id: string; topic: string; isNew: boolean }[];
   previous: ModuleSummary | null;
@@ -39,11 +41,11 @@ export type ModulePlayerProps = {
 
 const hashToSection = Object.fromEntries(Object.entries(sectionHashes).map(([key, hash]) => [hash, key as SectionKey]));
 
-export default function ModulePlayer({ module, level, objectives, previous, next, related, audio, nextLocked }: ModulePlayerProps) {
+export default function ModulePlayer({ module, level, objectives, previous, next, related, audio, nextLocked, session }: ModulePlayerProps) {
   const { locale } = useI18n();
   const t = copyFor(locale);
   const labels = sectionLabels[locale === "en" ? "en" : "es"];
-  const { state, ready, update } = useProgress();
+  const { state, ready, update, syncStatus, retry } = useStudyProgress(session);
   const [section, setSection] = useState<SectionKey>("goal");
   const hasEnglish = level.id === "a1" || level.id === "a2" || level.id === "b1";
   const [showEnglish, setShowEnglish] = useState(level.support === "strong");
@@ -163,7 +165,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
               </li>
             ))}
           </ol>
-          <small>{t.progressLocal}</small>
+          <ProgressNotice status={syncStatus} localText={t.progressLocal} onRetry={retry} />
         </nav>
 
         <main className="ae-stage" id="ae-stage" tabIndex={-1}>

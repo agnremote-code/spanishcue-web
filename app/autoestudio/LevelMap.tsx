@@ -7,14 +7,15 @@ import { SpanishCueBrand } from "../SpanishCueBrand";
 import { moduleHref, type LandingLevel } from "./engine/links";
 import { copyFor } from "./engine/copy";
 import { levelProgress, moduleStatus, sectionsDone } from "./progress/model";
-import { useProgress } from "./progress/useProgress";
-import "./autoestudio.css";
+import type { ShareSession } from "./progress/server-adapter";
+import ProgressNotice from "./progress/ProgressNotice";
+import { useStudyProgress } from "./progress/useProgress";
 
-export default function LevelMap({ level, fullAccess, nextLevel }: { level: LandingLevel; fullAccess: boolean; nextLevel: { id: string; code: string } | null }) {
+export default function LevelMap({ level, fullAccess, nextLevel, session }: { session?: ShareSession | null; level: LandingLevel; fullAccess: boolean; nextLevel: { id: string; code: string } | null }) {
   const { locale } = useI18n();
   const en = locale === "en";
   const t = copyFor(locale);
-  const { state, ready } = useProgress();
+  const { state, ready, syncStatus, retry } = useStudyProgress(session);
   const progress = levelProgress(state, level.modules.map((summary) => summary.id));
   const nextSummary = level.modules.find((summary) => summary.id === progress.nextModuleId) ?? level.modules[0];
 
@@ -41,6 +42,7 @@ export default function LevelMap({ level, fullAccess, nextLevel }: { level: Land
             {en ? level.nameEn : level.name} · {en ? "Route" : "Ruta"}: {en ? level.routeEn : level.route}
           </p>
           <h1>{en ? level.outcomeEn : level.outcome}</h1>
+          {session?.level === level.id && <p className="ae-pass-badge">✓ {session.alias} · Acceso de tu profe</p>}
           <div className="ae-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.percent} aria-label={`${progress.completed}/${progress.total}`}>
             <span style={{ width: `${progress.percent}%` }} />
           </div>
@@ -94,7 +96,7 @@ export default function LevelMap({ level, fullAccess, nextLevel }: { level: Land
           </Link>
         </p>
       )}
-      <p className="ae-hint center">{t.progressLocal}</p>
+      <ProgressNotice status={syncStatus} localText={t.progressLocal} onRetry={retry} />
     </div>
   );
 }

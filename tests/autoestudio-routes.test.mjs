@@ -19,8 +19,8 @@ test('Autoestudio landing and level maps are public and show the course', { skip
   assert.equal((await fetch(origin + '/autoestudio/z9')).status, 404);
 });
 
-test('A1 weeks 1 and 2 are free and render the full module', { skip: !origin }, async () => {
-  for (const path of ['/autoestudio/a1/semana-1', '/autoestudio/a1/semana-2']) {
+test('A1 weeks 1–2 and the first week of every level are full public samples', { skip: !origin }, async () => {
+  for (const path of ['/autoestudio/a1/semana-2', ...['a1','a2','b1','b2','c1','c2'].map(level=>`/autoestudio/${level}/semana-1`)]) {
     const response = await fetch(origin + path, { redirect: 'manual' });
     assert.equal(response.status, 200, path);
     const html = await response.text();
@@ -33,7 +33,7 @@ test('A1 weeks 1 and 2 are free and render the full module', { skip: !origin }, 
 test('PRO weeks redirect anonymous visitors, including forged headers and RSC requests', { skip: !origin }, async () => {
   const levels = readdirSync('app/autoestudio/curriculum/modules').filter((name) => /^[abc][12]$/.test(name));
   const paths = ['/autoestudio/a1/semana-3', '/autoestudio/a1/semana-20', '/autoestudio/a1/semana-3?free=1'];
-  if (levels.includes('c2')) paths.push('/autoestudio/c2/semana-1');
+  if (levels.includes('c2')) paths.push('/autoestudio/c2/semana-2');
   for (const path of paths) {
     for (const headers of [{}, forged]) {
       const response = await fetch(origin + path, { redirect: 'manual', headers });

@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { fullAccessFromHeaders } from "../../access-policy";
 import { publishedLevels } from "../curriculum/course";
+import { shareSessionFromHeaders } from "../session-display";
 import LevelMap from "../LevelMap";
 
 export function generateStaticParams() {
@@ -25,5 +26,7 @@ export default async function Page({ params }: { params: Promise<{ level: string
   const index = levels.findIndex((candidate) => candidate.id === id);
   if (index < 0) notFound();
   const next = levels[index + 1];
-  return <LevelMap level={levels[index]} fullAccess={fullAccessFromHeaders(await headers())} nextLevel={next ? { id: next.id, code: next.code } : null} />;
+  const h = await headers();
+  const session = shareSessionFromHeaders(h);
+  return <LevelMap level={levels[index]} fullAccess={fullAccessFromHeaders(h) || session?.level === id} session={session} nextLevel={next ? { id: next.id, code: next.code } : null} />;
 }

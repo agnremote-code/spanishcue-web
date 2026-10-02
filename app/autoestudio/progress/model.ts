@@ -24,10 +24,11 @@ export type ProgressState = {
 };
 
 export interface ProgressAdapter {
-  load(): ProgressState;
+  load(): ProgressState | Promise<ProgressState>;
   save(state: ProgressState): void;
   /** Called when another tab or device changes the stored state. */
   subscribe?(listener: (state: ProgressState) => void): () => void;
+  dispose?(): void;
 }
 
 export const emptyProgress = (): ProgressState => ({ version: 1, modules: {} });

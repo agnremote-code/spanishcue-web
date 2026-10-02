@@ -72,6 +72,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   // the no-binding fallback, so parity does not need Cloudflare Images.
   const images = process.env.STAGING_IMAGES_BINDING === "true";
   const config = stagingConfig(JSON.parse(await readFile(path, "utf8")), { images });
+  const { verifyLiveShareRelease } = await import('./autoestudio-release-gate.mjs');
+  await verifyLiveShareRelease(config);
   await writeFile(path, `${JSON.stringify(config, null, 2)}\n`);
   console.log(JSON.stringify({ worker: config.name, d1: config.d1_databases[0].database_name, workersDev: true, images, vars: config.vars }));
 }

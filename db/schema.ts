@@ -428,3 +428,17 @@ export const lessonReports = sqliteTable("lesson_reports", {
  status:text("status").notNull().default("new"), aiStatus:text("ai_status").notNull().default("pending"), resolution:text("resolution").notNull().default(""),
  createdAt:text("created_at").notNull(), updatedAt:text("updated_at").notNull(), resolvedAt:text("resolved_at"),
 }, table => [index("lesson_reports_user_time").on(table.userId,table.createdAt), index("lesson_reports_status_time").on(table.status,table.createdAt)]);
+
+/** Alias-only learners are separate from the teacher's named student tracker. */
+export const autoestudioLearners = sqliteTable('autoestudio_learners', {
+  id: text('id').primaryKey(), ownerId: text('owner_id').notNull(), alias: text('alias'), createdAt: text('created_at').notNull(),
+}, table => [uniqueIndex('autoestudio_learners_id_owner').on(table.id,table.ownerId),index('autoestudio_learners_owner').on(table.ownerId,table.createdAt)]);
+export const autoestudioPasses = sqliteTable('autoestudio_passes', {
+  id:text('id').primaryKey(),ownerId:text('owner_id').notNull(),learnerId:text('learner_id').notNull(),level:text('level').notNull(),revision:integer('revision').notNull().default(1),revokedAt:text('revoked_at'),createdAt:text('created_at').notNull(),
+}, table => [foreignKey({columns:[table.learnerId,table.ownerId],foreignColumns:[autoestudioLearners.id,autoestudioLearners.ownerId]}).onDelete('cascade'),index('autoestudio_passes_owner').on(table.ownerId,table.createdAt)]);
+export const autoestudioProgress = sqliteTable('autoestudio_progress', {
+  learnerId:text('learner_id').notNull().references(()=>autoestudioLearners.id,{onDelete:'cascade'}),moduleId:text('module_id').notNull(),startedAt:text('started_at').notNull(),updatedAt:text('updated_at').notNull(),sections:text('sections').notNull().default('{}'),lastSection:text('last_section'),completedAt:text('completed_at'),quizScore:integer('quiz_score'),quizTotal:integer('quiz_total'),quizBest:integer('quiz_best'),quizAttempts:integer('quiz_attempts'),quizAt:text('quiz_at'),
+},table=>[primaryKey({columns:[table.learnerId,table.moduleId]})]);
+export const autoestudioRateLimits = sqliteTable('autoestudio_rate_limits', {
+  bucket:integer('bucket').primaryKey(),window:integer('window').notNull(),hits:integer('hits').notNull(),
+});

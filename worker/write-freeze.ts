@@ -12,8 +12,11 @@ export function writeFreezeActive(value: string | undefined): boolean {
 
 export function writeFreezeResponse(request: Request, value: string | undefined): Response | null {
   if (!writeFreezeActive(value)) return null;
-  if (SAFE_METHODS.has(request.method.toUpperCase())) return null;
-  if (!new URL(request.url).pathname.startsWith("/api/")) return null;
+  const path = new URL(request.url).pathname;
+  // Bearer redemption and Share Pass reads persist distributed rate counters.
+  const counterWrite = path === "/s" || path.startsWith("/s/") || path.startsWith("/api/autoestudio/");
+  if (!counterWrite && SAFE_METHODS.has(request.method.toUpperCase())) return null;
+  if (!counterWrite && !path.startsWith("/api/")) return null;
   return new Response(
     JSON.stringify({ code: "WRITE_FREEZE", error: "SPANISHCUE está en mantenimiento breve. Intentá de nuevo en unos minutos." }),
     {
@@ -23,6 +26,8 @@ export function writeFreezeResponse(request: Request, value: string | undefined)
         "Cache-Control": "private, no-store",
         "Retry-After": "300",
         "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "no-referrer",
+        "X-Robots-Tag": "noindex, nofollow",
       },
     },
   );

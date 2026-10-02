@@ -36,7 +36,7 @@ export const a2Objectives = defineObjectives("a2", [
   [4, "gram", "imperfecto", "Pretérito imperfecto", "Puedo describir cómo era algo y qué hacía habitualmente en el pasado.", ["a2.gram.indefinido-regular"], { pcic: "Gramática 9.1", related: ["/sistema-verbal/preterito-imperfecto-indicativo"] }],
   [4, "gram", "soler", "Soler + infinitivo", "Puedo expresar hábitos con suelo, solía y antes + imperfecto.", ["a2.gram.imperfecto"], { pcic: "Gramática 9.2" }],
   [4, "voc", "infancia", "Infancia, escuela y juegos", "Puedo hablar de mi infancia, el colegio y los juegos.", []],
-  [4, "pron", "s-aspirada", "La s final aspirada", "Puedo reconocer la s aspirada o perdida del Caribe y entender ¿cómo ehtá?.", ["a1.pron.c-z-s"]],
+  [4, "pron", "s-aspirada", "La s final aspirada", "Puedo reconocer que la s final varía entre hablantes, usar el contexto para distinguir singular y plural y pedir repetición; no doy por verificada una variedad por una voz sintética.", ["a1.pron.c-z-s"]],
   [4, "fun", "comparar-antes", "Comparar antes y ahora", "Puedo comparar cómo era mi vida antes y cómo es ahora.", ["a2.gram.imperfecto"]],
   [4, "wri", "recuerdo", "Escribir un recuerdo", "Puedo describir un lugar de mi infancia en un párrafo.", []],
 
@@ -59,6 +59,8 @@ export const a2Objectives = defineObjectives("a2", [
   [7, "pron", "foco-contraste", "Acento de frase y contraste", "Puedo marcar con la voz la palabra que contrasta: Bogotá es más FRÍA, no más grande.", ["a1.pron.acento-palabra"]],
   [7, "fun", "comparar-elegir", "Comparar y elegir", "Puedo comparar dos opciones y justificar cuál prefiero.", ["a2.gram.comparativos"]],
   [7, "read", "articulo-ciudades", "Leer una comparación", "Puedo extraer ventajas e inconvenientes de un texto que compara lugares.", []],
+
+  [7, "voc", "vivienda-servicios", "Vivienda, alquiler y servicios", "Puedo comparar anuncios de vivienda por precio, gastos, espacio y transporte y pedir un dato que falta.", ["a1.read.anuncio-piso"], { pcic: "Nociones específicas 10: vivienda; 12: compras y servicios" }],
 
   // Week 8 · Pronombres
   [8, "gram", "oi-pronombres", "Objeto indirecto: le, les", "Puedo usar me, te, le, nos, os, les para la persona que recibe algo.", ["a1.gram.od-pronombres", "a1.gram.gustar"], { pcic: "Gramática 7.1", related: ["/la-estacion-de-los-dos-destinos"] }],
@@ -89,7 +91,7 @@ export const a2Objectives = defineObjectives("a2", [
   [11, "spk", "videollamada", "Describir lo que está pasando", "Puedo describir en directo lo que está pasando a mi alrededor.", []],
 
   // Week 12 · El futuro
-  [12, "gram", "futuro-simple", "Futuro simple", "Puedo hacer predicciones y promesas con el futuro simple, incluidos los irregulares.", ["a1.gram.ir-a-inf"], { pcic: "Gramática 9.1", related: ["/sistema-verbal/futuro-simple-indicativo"] }],
+  [12, "gram", "futuro-simple", "Futuro simple: ampliación guiada", "Puedo hacer predicciones y promesas con el futuro simple, incluidos los irregulares.", ["a1.gram.ir-a-inf"], { pcic: "Gramática 9.1", related: ["/sistema-verbal/futuro-simple-indicativo"] }],
   [12, "gram", "si-presente", "Si + presente, futuro", "Puedo expresar condiciones reales: si llueve, nos quedaremos en casa.", ["a2.gram.futuro-simple"], { pcic: "Gramática 15.3", related: ["/si-pasa-esto"] }],
   [12, "voc", "tecnologia-futuro", "Tecnología y futuro", "Puedo hablar de cambios tecnológicos y del trabajo del futuro.", []],
   [12, "pron", "vocales-atonas", "Vocales átonas plenas", "Puedo mantener claras las vocales átonas en palabras largas como comunicación o universidad.", ["a1.pron.cinco-vocales"]],
@@ -98,7 +100,7 @@ export const a2Objectives = defineObjectives("a2", [
 
   // Week 13 · Salud
   [13, "gram", "doler", "Doler y estar + síntomas", "Puedo explicar qué me duele y cómo me siento.", ["a1.gram.gustar", "a1.gram.estar-estados"], { pcic: "Gramática 7.1" }],
-  [13, "gram", "consejos-deberias", "Consejos con deberías y tienes que", "Puedo dar consejos con deberías, tendrías que y es mejor + infinitivo.", ["a1.gram.obligacion"], { pcic: "Gramática 9.1" }],
+  [13, "gram", "consejos-deberias", "Consejos con fórmulas frecuentes", "Puedo dar consejos con deberías, tendrías que y es mejor + infinitivo.", ["a1.gram.obligacion"], { pcic: "Gramática 9.1" }],
   [13, "voc", "cuerpo-salud", "El cuerpo y la salud", "Puedo nombrar partes del cuerpo, síntomas y remedios.", []],
   [13, "pron", "letra-x", "Los sonidos de la x", "Puedo pronunciar la x de taxi, de México y de Xochimilco.", ["a1.pron.j-g"]],
   [13, "fun", "medico", "En la consulta", "Puedo describir síntomas y entender recomendaciones básicas.", ["a2.gram.doler"]],
@@ -115,6 +117,8 @@ export const a2Objectives = defineObjectives("a2", [
   // Week 15 · Checkpoint 3
   [15, "rev", "checkpoint-3", "Checkpoint 3: viajar y resolver", "Puedo planificar un viaje, resolver un problema en un servicio y hablar de cambios y del futuro.", ["a2.gram.futuro-simple", "a2.gram.condicional-cortesia", "a2.gram.estar-gerundio"]],
   [15, "spk", "resolver-problema", "Resolver un problema por teléfono", "Puedo explicar un problema y negociar una solución por teléfono.", []],
+
+  [15, "fun", "transmitir-acuerdo", "Transmitir información práctica", "Puedo transmitir a un compañero los horarios y acuerdos de una llamada, diferenciando lo confirmado de lo pendiente.", ["a2.fun.reclamar"], { pcic: "Funciones 1: dar y pedir información; CEFR: transmitir información específica A2" }],
 
   // Week 16 · Conectar ideas
   [16, "disc", "conectores-causa-consecuencia", "Porque, como, por eso, así que", "Puedo explicar causas y consecuencias con porque, como, por eso y así que.", ["a1.gram.porque-causa"], { pcic: "Gramática 15" }],
@@ -150,4 +154,7 @@ export const a2Objectives = defineObjectives("a2", [
   // Week 20 · Checkpoint final A2
   [20, "rev", "checkpoint-final", "Checkpoint final A2", "Puedo contar, comparar, pedir, aconsejar, planificar y opinar en situaciones cotidianas.", ["a2.rev.checkpoint-3", "a2.gram.por-para", "a2.gram.relativo-que", "a2.fun.acuerdo-desacuerdo"]],
   [20, "wri", "texto-a2", "Texto final A2", "Puedo escribir 120 palabras conectadas sobre una experiencia y su consecuencia.", ["a2.wri.historia-conectada"]],
+  [2, "gram", "indefinido-ortografia", "Ortografía del indefinido", "Puedo escribir busqué, llegué y empecé conservando el sonido de la raíz.", ["a2.gram.indefinido-regular"], { pcic: "Gramática 9.1.3; Ortografía 1.3.1" }],
+  [3, "gram", "indefinido-ver-dar", "Ver y dar en indefinido", "Puedo usar vi, vio, vieron, di, dio y dieron sin tildes innecesarias.", ["a2.gram.indefinido-irregular"], { pcic: "Gramática 9.1.3" }],
+  [18, "gram", "posesivos-tonicos", "Posesivos tónicos y referencia", "Puedo identificar algo con mío, tuyo, suyo y el mío, y aclarar de quién es un objeto.", ["a1.gram.posesivos"], { pcic: "Gramática 5" }],
 ]);

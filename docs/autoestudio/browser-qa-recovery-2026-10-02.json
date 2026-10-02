@@ -1,0 +1,92 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "flows": [
+      "landing",
+      "claim-or-restore",
+      "assigned-map",
+      "paid-module",
+      "progress-identity",
+      "other-level-denied"
+    ],
+    "pageErrors": []
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "flows": [
+      "landing",
+      "claim-or-restore",
+      "assigned-map",
+      "paid-module",
+      "progress-identity",
+      "other-level-denied"
+    ],
+    "pageErrors": []
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "flows": [
+      "landing",
+      "claim-or-restore",
+      "assigned-map",
+      "paid-module",
+      "progress-identity",
+      "other-level-denied"
+    ],
+    "pageErrors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "flows": [
+      "landing",
+      "claim-or-restore",
+      "assigned-map",
+      "paid-module",
+      "progress-identity",
+      "other-level-denied"
+    ],
+    "pageErrors": []
+  },
+  {
+    "width": 320,
+    "height": 780,
+    "flows": [
+      "landing",
+      "claim-or-restore",
+      "assigned-map",
+      "paid-module",
+      "progress-identity",
+      "other-level-denied"
+    ],
+    "pageErrors": []
+  },
+  {
+    "width": 1440,
+    "flow": "teacher component create/detail/revoke",
+    "backend": "mocked; service independently tested"
+  },
+  {
+    "width": 1366,
+    "flow": "teacher component create/detail/revoke",
+    "backend": "mocked; service independently tested"
+  },
+  {
+    "width": 768,
+    "flow": "teacher component create/detail/revoke",
+    "backend": "mocked; service independently tested"
+  },
+  {
+    "width": 390,
+    "flow": "teacher component create/detail/revoke",
+    "backend": "mocked; service independently tested"
+  },
+  {
+    "width": 320,
+    "flow": "teacher component create/detail/revoke",
+    "backend": "mocked; service independently tested"
+  }
+]

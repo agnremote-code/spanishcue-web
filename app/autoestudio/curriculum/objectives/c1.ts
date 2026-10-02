@@ -1,8 +1,8 @@
 import { defineObjectives } from "../define";
 
 /**
- * C1 — the proficient user. 18 weeks: 14 core weeks and 4 checkpoints (5, 10,
- * 15, 18). Almost entirely in Spanish. Focus shifts from forms to discourse,
+ * C1 — the proficient user. 20 weeks: 16 core weeks and 4 checkpoints (5, 10,
+ * 15, 20). Spanish only. Focus shifts from forms to discourse,
  * register, implicit meaning, reformulation and lexical precision.
  */
 export const c1Objectives = defineObjectives("c1", [
@@ -117,7 +117,14 @@ export const c1Objectives = defineObjectives("c1", [
   [17, "read", "fragmento-novela", "Leer un fragmento de novela", "Puedo interpretar el punto de vista y el tono de un fragmento literario.", []],
   [17, "wri", "relato-estilo", "Relato con estilo indirecto libre", "Puedo escribir una escena con estilo indirecto libre.", ["b2.wri.microrrelato"]],
 
-  // Week 18 · Checkpoint final C1
-  [18, "rev", "checkpoint-final", "Checkpoint final C1", "Puedo comprender textos complejos, inferir lo implícito, argumentar con matices y adecuar registro y estilo.", ["c1.rev.checkpoint-3", "c1.gram.orden-palabras", "c1.gram.tiempos-literarios", "c1.disc.sintesis"]],
-  [18, "spk", "ponencia-final", "Ponencia final C1", "Puedo presentar una ponencia de cinco minutos y responder a preguntas.", ["c1.spk.debate"]],
+  // Weeks 18–19 · mediation and audience-sensitive synthesis
+  [18, "fun", "mediacion-conflicto", "Mediar en un conflicto", "Puedo reformular necesidades, comprobar su fidelidad y facilitar un acuerdo revisable sin borrar el desacuerdo.", ["c1.fun.peticiones-indirectas", "c1.disc.reformulacion"], { pcic: "Funciones; Tácticas y estrategias pragmáticas" }],
+  [18, "disc", "necesidades-condiciones", "Necesidades, condiciones y preferencias", "Puedo distinguir posiciones, intereses y condiciones mínimas e incorporar a las partes ausentes.", ["c1.disc.contraargumentacion"]],
+  [18, "pron", "confirmacion-mediadora", "Prosodia de la comprobación", "Puedo presentar una reformulación como comprobable y dejar espacio real para corregirla.", ["c1.pron.prosodia-indirecta"]],
+  [19, "wri", "doble-audiencia", "Síntesis para dos públicos", "Puedo reorganizar un dossier para destinatarios expertos y no expertos sin alterar hechos ni incertidumbres.", ["c1.wri.sintesis-fuentes", "c1.wri.revision-registro"]],
+  [19, "disc", "coherencia-editorial", "Coherencia entre versiones", "Puedo revisar que titulares, atribuciones y compromisos mantengan el mismo alcance entre versiones.", ["c1.disc.sintesis", "c1.fun.adecuar-registro"]],
+
+  // Week 20 · Checkpoint final C1
+  [20, "rev", "checkpoint-final", "Checkpoint final C1", "Puedo comprender textos complejos, inferir lo implícito, argumentar con matices y adecuar registro y estilo.", ["c1.rev.checkpoint-3", "c1.gram.orden-palabras", "c1.gram.tiempos-literarios", "c1.disc.sintesis"]],
+  [20, "spk", "ponencia-final", "Ponencia final C1", "Puedo presentar una ponencia de cinco minutos y responder a preguntas.", ["c1.spk.debate"]],
 ]);

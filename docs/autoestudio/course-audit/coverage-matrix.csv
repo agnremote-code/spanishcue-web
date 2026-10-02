@@ -1,0 +1,625 @@
+objective,level,domain,week,topic,introduced_in,reviewed_in
+a1.gram.pronombres-sujeto,a1,grammar,1,"Pronombres personales sujeto",a1-01,a1-02 a1-04 a1-05
+a1.gram.ser-singular,a1,grammar,1,"Ser en singular y llamarse",a1-01,a1-02 a1-05
+a1.voc.saludos,a1,vocabulary,1,"Saludos y despedidas",a1-01,a1-05
+a1.pron.cinco-vocales,a1,pronunciation,1,"Las cinco vocales",a1-01,a1-05
+a1.fun.presentarse,a1,functional,1,"Presentarse y tratar de tú o de usted",a1-01,a1-02 a1-05
+a1.lis.saludos-nombres,a1,listening,1,"Escuchar saludos breves",a1-01,
+a1.spk.presentacion-20s,a1,speaking,1,"Presentación de 20 segundos",a1-01,
+a1.gram.ser-plural,a1,grammar,2,"Ser: todas las personas",a1-02,a1-03 a1-05
+a1.gram.negacion-no,a1,grammar,2,"Negación con no",a1-02,a1-03 a1-05
+a1.gram.nacionalidades-genero,a1,grammar,2,"Adjetivos de nacionalidad",a1-02,a1-03 a1-05
+a1.voc.paises-idiomas,a1,vocabulary,2,"Países, nacionalidades e idiomas",a1-02,a1-05
+a1.voc.numeros-0-20,a1,vocabulary,2,"Números del 0 al 20",a1-02,a1-05
+a1.pron.silabas,a1,pronunciation,2,"La sílaba española",a1-02,a1-05
+a1.fun.origen,a1,functional,2,"Preguntar y decir el origen",a1-02,a1-05
+a1.lis.numeros-datos,a1,listening,2,"Escuchar números y datos",a1-02,
+a1.gram.genero-sustantivo,a1,grammar,3,"Género del sustantivo",a1-03,a1-04 a1-05 a1-06
+a1.gram.plural,a1,grammar,3,"El plural",a1-03,a1-04 a1-05
+a1.gram.articulos,a1,grammar,3,"Artículos definidos e indefinidos",a1-03,a1-04 a1-05
+a1.gram.hay,a1,grammar,3,"Hay para existencia",a1-03,a1-05
+a1.voc.objetos,a1,vocabulary,3,"Objetos de todos los días",a1-03,a1-05
+a1.pron.acento-palabra,a1,pronunciation,3,"El acento de palabra",a1-03,a1-05
+a1.fun.aclaracion,a1,functional,3,"Pedir aclaraciones",a1-03,a1-05
+a1.read.lista-anuncio,a1,reading,3,"Leer un anuncio corto",a1-03,
+a1.gram.presente-ar,a1,grammar,4,"Presente de los verbos en -ar",a1-04,a1-05 a1-06 a1-07 a1-08
+a1.gram.interrogativos,a1,grammar,4,"Palabras interrogativas",a1-04,a1-05 a1-06
+a1.voc.profesiones,a1,vocabulary,4,"Profesiones y lugares de trabajo",a1-04,a1-05
+a1.voc.numeros-21-100,a1,vocabulary,4,"Números del 21 al 100",a1-04,a1-05
+a1.pron.entonacion-preguntas,a1,pronunciation,4,"Entonación de las preguntas y la tilde",a1-04,a1-05
+a1.disc.y-pero-tambien,a1,discourse,4,"Conectar con y, pero, también",a1-04,a1-05
+a1.spk.entrevista-breve,a1,speaking,4,"Entrevista breve",a1-04,
+a1.rev.checkpoint-1,a1,review,5,"Checkpoint 1: identidad",a1-05,
+a1.wri.ficha-personal,a1,writing,5,"Una ficha de presentación",a1-05,
+a1.gram.tener,a1,grammar,6,"El verbo tener",a1-06,a1-07 a1-09 a1-10
+a1.gram.posesivos,a1,grammar,6,"Posesivos átonos",a1-06,a1-07 a1-10
+a1.gram.concordancia-adjetivo,a1,grammar,6,"Concordancia del adjetivo",a1-06,a1-07 a1-10
+a1.voc.familia,a1,vocabulary,6,"La familia",a1-06,a1-10
+a1.voc.descripcion-personas,a1,vocabulary,6,"Describir a una persona",a1-06,a1-10
+a1.pron.c-z-s,a1,pronunciation,6,"C, Z y S: seseo y distinción",a1-06,a1-10
+a1.fun.describir-personas,a1,functional,6,"Hablar de otras personas",a1-06,a1-10
+a1.read.post-familia,a1,reading,6,"Leer una publicación personal",a1-06,
+a1.gram.presente-er-ir,a1,grammar,7,"Presente de los verbos en -er e -ir",a1-07,a1-08 a1-10
+a1.gram.frecuencia,a1,grammar,7,"Adverbios de frecuencia",a1-07,a1-08 a1-10
+a1.voc.comidas-bebidas,a1,vocabulary,7,"Comidas y bebidas",a1-07,a1-10
+a1.pron.b-v,a1,pronunciation,7,"B y V: un solo sonido",a1-07,a1-10
+a1.fun.habitos,a1,functional,7,"Hablar de hábitos",a1-07,a1-08 a1-10
+a1.lis.entrevista-habitos,a1,listening,7,"Escuchar una encuesta de hábitos",a1-07,
+a1.gram.estar-ubicacion,a1,grammar,8,"Estar para la ubicación",a1-08,a1-09 a1-10 a1-11
+a1.gram.hay-esta,a1,grammar,8,"Hay frente a está",a1-08,a1-09 a1-10
+a1.gram.preposiciones-lugar,a1,grammar,8,"Preposiciones de lugar y al/del",a1-08,a1-09 a1-10
+a1.voc.ciudad,a1,vocabulary,8,"Lugares de la ciudad",a1-08,a1-10
+a1.pron.r-rr,a1,pronunciation,8,"La r simple y la rr",a1-08,a1-10
+a1.fun.direcciones,a1,functional,8,"Pedir y dar direcciones",a1-08,a1-10
+a1.wri.mensaje-ubicacion,a1,writing,8,"Mensaje para quedar",a1-08,
+a1.gram.reflexivos,a1,grammar,9,"Verbos reflexivos",a1-09,a1-10 a1-11 a1-12 a1-13
+a1.gram.hora,a1,grammar,9,"La hora",a1-09,a1-10 a1-11
+a1.voc.rutina-dias,a1,vocabulary,9,"Rutina y días de la semana",a1-09,a1-10
+a1.pron.j-g,a1,pronunciation,9,"J y G ante e, i",a1-09,a1-10
+a1.fun.rutina-horarios,a1,functional,9,"Hablar de horarios",a1-09,a1-10 a1-11
+a1.read.blog-rutina,a1,reading,9,"Leer un día en la vida de alguien",a1-09,
+a1.spk.mi-lunes,a1,speaking,9,"Contar un día normal",a1-09,
+a1.rev.checkpoint-2,a1,review,10,"Checkpoint 2: personas, lugares y rutinas",a1-10,
+a1.lis.mensaje-voz,a1,listening,10,"Escuchar un mensaje de voz",a1-10,
+a1.gram.diptongacion,a1,grammar,11,"Verbos con cambio vocálico",a1-11,a1-12 a1-14 a1-15
+a1.gram.querer-poder-inf,a1,grammar,11,"Querer, poder y preferir + infinitivo",a1-11,a1-12 a1-15
+a1.voc.tiempo-libre,a1,vocabulary,11,"Actividades de tiempo libre",a1-11,a1-15
+a1.pron.n-ll-y,a1,pronunciation,11,"Ñ, LL e Y",a1-11,a1-15
+a1.fun.proponer,a1,functional,11,"Proponer y aceptar planes",a1-11,a1-12 a1-15
+a1.lis.planes-amigos,a1,listening,11,"Escuchar una conversación entre amigos",a1-11,
+a1.gram.gustar,a1,grammar,12,"Gustar y verbos similares",a1-12,a1-13 a1-15 a2-01
+a1.gram.tambien-tampoco,a1,grammar,12,"También, tampoco, a mí sí, a mí no",a1-12,a1-13 a1-15
+a1.gram.muy-mucho,a1,grammar,12,"Muy y mucho",a1-12,a1-13 a1-15
+a1.voc.aficiones,a1,vocabulary,12,"Aficiones, música y series",a1-12,a1-15
+a1.pron.h-ch-qu,a1,pronunciation,12,"H muda, CH y QU/C/K",a1-12,a1-15
+a1.fun.gustos-acuerdo,a1,functional,12,"Expresar gustos y reaccionar",a1-12,a1-15
+a1.wri.perfil-gustos,a1,writing,12,"Un perfil para un intercambio",a1-12,
+a1.gram.demostrativos,a1,grammar,13,"Demostrativos",a1-13,a1-14 a1-15 a1-16
+a1.voc.numeros-100-mas,a1,vocabulary,13,"Números a partir de cien y precios",a1-13,a1-15
+a1.voc.ropa-colores,a1,vocabulary,13,"Ropa y colores",a1-13,a1-15
+a1.pron.d-suave,a1,pronunciation,13,"La d suave",a1-13,a1-15
+a1.fun.comprar,a1,functional,13,"Comprar en una tienda",a1-13,a1-14 a1-15
+a1.read.catalogo,a1,reading,13,"Leer un catálogo y comparar",a1-13,
+a1.gram.cuantificadores,a1,grammar,14,"Cuantificadores",a1-14,a1-15 a1-16 a1-17 a1-18
+a1.gram.yo-irregular,a1,grammar,14,"Verbos con primera persona irregular",a1-14,a1-15 a1-16
+a1.voc.restaurante,a1,vocabulary,14,"El restaurante y el menú",a1-14,a1-15
+a1.pron.diptongos,a1,pronunciation,14,"Diptongos e hiatos",a1-14,a1-15
+a1.fun.pedir-restaurante,a1,functional,14,"Pedir con cortesía",a1-14,a1-15 a1-16
+a1.spk.pedir-cena,a1,speaking,14,"Pedir una cena completa",a1-14,
+a1.rev.checkpoint-3,a1,review,15,"Checkpoint 3: tiempo libre y consumo",a1-15,
+a1.read.resenas,a1,reading,15,"Leer reseñas breves",a1-15,
+a1.gram.ir-a-inf,a1,grammar,16,"Ir a + infinitivo",a1-16,a1-17 a1-19 a1-20 a2-01
+a1.gram.marcadores-futuro,a1,grammar,16,"Marcadores de futuro",a1-16,a1-17 a1-20
+a1.voc.tiempo-atmosferico,a1,vocabulary,16,"El tiempo atmosférico",a1-16,a1-20
+a1.voc.transporte,a1,vocabulary,16,"Medios de transporte",a1-16,a1-20
+a1.pron.enlace,a1,pronunciation,16,"El enlace entre palabras",a1-16,a1-20
+a1.fun.planes-fin-semana,a1,functional,16,"Hablar de planes",a1-16,a1-17 a1-20
+a1.lis.pronostico,a1,listening,16,"Escuchar un pronóstico y planes",a1-16,
+a1.gram.ser-estar-hay,a1,grammar,17,"Ser, estar y hay",a1-17,a1-18 a1-20
+a1.gram.estar-estados,a1,grammar,17,"Estar + adjetivo de estado",a1-17,a1-18 a1-20
+a1.voc.casa,a1,vocabulary,17,"Partes de la casa y muebles",a1-17,a1-20
+a1.pron.sinalefa,a1,pronunciation,17,"Ritmo silábico y sinalefa",a1-17,a1-20
+a1.fun.describir-vivienda,a1,functional,17,"Describir una vivienda",a1-17,a1-18 a1-20
+a1.read.anuncio-piso,a1,reading,17,"Leer anuncios de vivienda",a1-17,
+a1.gram.od-pronombres,a1,grammar,18,"Objeto directo y lo, la, los, las",a1-18,a1-19 a1-20
+a1.gram.obligacion,a1,grammar,18,"Tener que, hay que y necesitar",a1-18,a1-19 a1-20
+a1.voc.tareas,a1,vocabulary,18,"Tareas y recados",a1-18,a1-20
+a1.pron.grupos-consonanticos,a1,pronunciation,18,"Grupos consonánticos",a1-18,a1-20
+a1.fun.organizar-tareas,a1,functional,18,"Organizar tareas",a1-18,a1-19 a1-20
+a1.wri.lista-mensaje,a1,writing,18,"Mensaje con tareas",a1-18,
+a1.gram.fechas,a1,grammar,19,"Fechas, meses y ordinales",a1-19,a1-20
+a1.gram.porque-causa,a1,grammar,19,"Porque, por qué y es que",a1-19,a1-20
+a1.voc.fiestas,a1,vocabulary,19,"Fiestas y celebraciones",a1-19,a1-20
+a1.pron.entonacion-exclamativa,a1,pronunciation,19,"Entonación exclamativa y enumeraciones",a1-19,a1-20
+a1.fun.invitar,a1,functional,19,"Invitar, aceptar y rechazar",a1-19,a1-20
+a1.spk.invitacion,a1,speaking,19,"Invitar por audio",a1-19,
+a1.rev.checkpoint-final,a1,review,20,"Checkpoint final A1",a1-20,
+a1.wri.carta-presentacion,a1,writing,20,"Carta de presentación A1",a1-20,
+a2.gram.perfecto-compuesto,a2,grammar,1,"Pretérito perfecto compuesto",a2-01,a2-02 a2-03 a2-05
+a2.gram.participios-irregulares,a2,grammar,1,"Participios irregulares",a2-01,a2-02 a2-03 a2-05
+a2.gram.ya-todavia,a2,grammar,1,"Ya, todavía no, alguna vez, nunca",a2-01,a2-02 a2-03 a2-05
+a2.voc.experiencias-viaje,a2,vocabulary,1,"Experiencias y viajes",a2-01,a2-02 a2-03 a2-05
+a2.pron.sinalefa-compuestos,a2,pronunciation,1,"Enlace en los tiempos compuestos",a2-01,a2-02 a2-03 a2-05
+a2.fun.experiencias,a2,functional,1,"Preguntar por experiencias",a2-01,a2-02 a2-03 a2-05
+a2.spk.nunca-he,a2,speaking,1,"Hablar de lo que nunca he hecho",a2-01,a2-02 a2-03 a2-05
+a2.gram.indefinido-regular,a2,grammar,2,"Pretérito indefinido regular",a2-02,a2-04 a2-05
+a2.gram.marcadores-pasado,a2,grammar,2,"Marcadores de pasado",a2-02,a2-04 a2-05
+a2.voc.fin-de-semana,a2,vocabulary,2,"Actividades del fin de semana",a2-02,a2-04 a2-05
+a2.pron.acento-tiempos,a2,pronunciation,2,"Acento que cambia el tiempo verbal",a2-02,a2-04 a2-05
+a2.fun.contar-ayer,a2,functional,2,"Contar qué hiciste",a2-02,a2-04 a2-05
+a2.lis.relato-breve,a2,listening,2,"Escuchar un relato breve",a2-02,a2-04 a2-05
+a2.gram.indefinido-irregular,a2,grammar,3,"Indefinido irregular",a2-03,a2-05
+a2.gram.ser-ir-indefinido,a2,grammar,3,"Ser e ir en indefinido",a2-03,a2-05
+a2.voc.etapas-vida,a2,vocabulary,3,"Etapas de la vida",a2-03,a2-05
+a2.pron.tilde-diacritica,a2,pronunciation,3,"La tilde diacrítica",a2-03,a2-05
+a2.fun.biografia,a2,functional,3,"Contar una biografía",a2-03,a2-05
+a2.read.biografia,a2,reading,3,"Leer una biografía",a2-03,a2-05
+a2.gram.imperfecto,a2,grammar,4,"Pretérito imperfecto",a2-04,a2-05 a2-06
+a2.gram.soler,a2,grammar,4,"Soler + infinitivo",a2-04,a2-05 a2-06
+a2.voc.infancia,a2,vocabulary,4,"Infancia, escuela y juegos",a2-04,a2-05 a2-06
+a2.pron.s-aspirada,a2,pronunciation,4,"La s final aspirada",a2-04,a2-05 a2-06
+a2.fun.comparar-antes,a2,functional,4,"Comparar antes y ahora",a2-04,a2-05 a2-06
+a2.wri.recuerdo,a2,writing,4,"Escribir un recuerdo",a2-04,a2-05 a2-06
+a2.rev.checkpoint-1,a2,review,5,"Checkpoint 1: mi pasado",a2-05,a2-07 a2-11
+a2.lis.podcast-recuerdos,a2,listening,5,"Escuchar recuerdos",a2-05,a2-07 a2-11
+a2.gram.indefinido-imperfecto,a2,grammar,6,"Indefinido frente a imperfecto",a2-06,a2-08 a2-10 b1-01
+a2.disc.secuenciar,a2,discourse,6,"Secuenciar un relato",a2-06,a2-08 a2-10 b1-01
+a2.voc.anecdotas,a2,vocabulary,6,"Anécdotas e imprevistos",a2-06,a2-08 a2-10
+a2.pron.grupos-fonicos,a2,pronunciation,6,"Pausas y grupos fónicos",a2-06,a2-08 a2-10
+a2.fun.anecdota,a2,functional,6,"Contar una anécdota",a2-06,a2-08 a2-10
+a2.spk.anecdota,a2,speaking,6,"Anécdota en un minuto",a2-06,a2-08 a2-10
+a2.gram.comparativos,a2,grammar,7,"Comparativos",a2-07,a2-09 a2-10
+a2.gram.superlativos,a2,grammar,7,"Superlativos e irregulares",a2-07,a2-09 a2-10
+a2.voc.ciudades-campo,a2,vocabulary,7,"Ciudad, campo y clima",a2-07,a2-09 a2-10
+a2.pron.foco-contraste,a2,pronunciation,7,"Acento de frase y contraste",a2-07,a2-09 a2-10
+a2.fun.comparar-elegir,a2,functional,7,"Comparar y elegir",a2-07,a2-09 a2-10
+a2.read.articulo-ciudades,a2,reading,7,"Leer una comparación",a2-07,a2-09 a2-10
+a2.voc.vivienda-servicios,a2,vocabulary,7,"Vivienda, alquiler y servicios",a2-07,a2-09 a2-10
+a2.gram.oi-pronombres,a2,grammar,8,"Objeto indirecto: le, les",a2-08,a2-10
+a2.gram.se-lo,a2,grammar,8,"Combinación se lo",a2-08,a2-10
+a2.voc.regalos-prestamos,a2,vocabulary,8,"Regalos, préstamos y favores",a2-08,a2-10
+a2.pron.cliticos-acento,a2,pronunciation,8,"Pronombres pegados y acento",a2-08,a2-10
+a2.fun.favores,a2,functional,8,"Pedir y ofrecer favores",a2-08,a2-10
+a2.wri.mensaje-favor,a2,writing,8,"Mensaje para pedir un favor",a2-08,a2-10
+a2.gram.imperativo-afirmativo,a2,grammar,9,"Imperativo afirmativo",a2-09,a2-10 a2-11
+a2.gram.imperativo-pronombres,a2,grammar,9,"Imperativo con pronombres",a2-09,a2-10 a2-11
+a2.voc.cocina-recetas,a2,vocabulary,9,"Cocina y recetas",a2-09,a2-10 a2-11
+a2.pron.entonacion-imperativo,a2,pronunciation,9,"Entonación de órdenes y consejos",a2-09,a2-10 a2-11
+a2.fun.instrucciones,a2,functional,9,"Dar instrucciones",a2-09,a2-10 a2-11
+a2.lis.receta,a2,listening,9,"Escuchar una receta",a2-09,a2-10 a2-11
+a2.rev.checkpoint-2,a2,review,10,"Checkpoint 2: relatos, comparaciones e instrucciones",a2-10,a2-12 a2-16
+a2.read.blog-viaje,a2,reading,10,"Leer un blog de viaje",a2-10,a2-12 a2-16
+a2.gram.estar-gerundio,a2,grammar,11,"Estar + gerundio",a2-11,a2-13 a2-15
+a2.gram.perifrasis-fase,a2,grammar,11,"Perífrasis de fase",a2-11,a2-13 a2-15
+a2.voc.cambios-habitos,a2,vocabulary,11,"Cambios de hábitos",a2-11,a2-13 a2-15
+a2.pron.asimilacion-nasal,a2,pronunciation,11,"La n ante b, p, m",a2-11,a2-13 a2-15
+a2.fun.describir-cambios,a2,functional,11,"Describir cambios personales",a2-11,a2-13 a2-15
+a2.spk.videollamada,a2,speaking,11,"Describir lo que está pasando",a2-11,a2-13 a2-15
+a2.gram.futuro-simple,a2,grammar,12,"Futuro simple: ampliación guiada",a2-12,a2-14 a2-15
+a2.gram.si-presente,a2,grammar,12,"Si + presente, futuro",a2-12,a2-14 a2-15
+a2.voc.tecnologia-futuro,a2,vocabulary,12,"Tecnología y futuro",a2-12,a2-14 a2-15
+a2.pron.vocales-atonas,a2,pronunciation,12,"Vocales átonas plenas",a2-12,a2-14 a2-15
+a2.fun.predecir-prometer,a2,functional,12,"Predecir y prometer",a2-12,a2-14 a2-15
+a2.read.horoscopo-predicciones,a2,reading,12,"Leer predicciones",a2-12,a2-14 a2-15
+a2.gram.doler,a2,grammar,13,"Doler y estar + síntomas",a2-13,a2-15
+a2.gram.consejos-deberias,a2,grammar,13,"Consejos con fórmulas frecuentes",a2-13,a2-15
+a2.voc.cuerpo-salud,a2,vocabulary,13,"El cuerpo y la salud",a2-13,a2-15
+a2.pron.letra-x,a2,pronunciation,13,"Los sonidos de la x",a2-13,a2-15
+a2.fun.medico,a2,functional,13,"En la consulta",a2-13,a2-15
+a2.lis.consulta,a2,listening,13,"Escuchar una consulta médica",a2-13,a2-15
+a2.gram.condicional-cortesia,a2,grammar,14,"Condicional de cortesía",a2-14,a2-15 a2-16
+a2.voc.hotel-transporte,a2,vocabulary,14,"Hotel, aeropuerto y reservas",a2-14,a2-15 a2-16
+a2.pron.cortesia-entonacion,a2,pronunciation,14,"Entonación de cortesía",a2-14,a2-15 a2-16
+a2.fun.reclamar,a2,functional,14,"Pedir y reclamar con cortesía",a2-14,a2-15 a2-16
+a2.wri.correo-reserva,a2,writing,14,"Correo para una reserva",a2-14,a2-15 a2-16
+a2.read.condiciones,a2,reading,14,"Leer condiciones de un servicio",a2-14,a2-15 a2-16
+a2.rev.checkpoint-3,a2,review,15,"Checkpoint 3: viajar y resolver",a2-15,a2-17
+a2.spk.resolver-problema,a2,speaking,15,"Resolver un problema por teléfono",a2-15,a2-17
+a2.fun.transmitir-acuerdo,a2,functional,15,"Transmitir información práctica",a2-15,a2-17
+a2.disc.conectores-causa-consecuencia,a2,discourse,16,"Porque, como, por eso, así que",a2-16,a2-18 a2-20
+a2.gram.antes-despues-inf,a2,grammar,16,"Antes de, después de, al + infinitivo; cuando",a2-16,a2-18 a2-20
+a2.voc.estudio-trabajo,a2,vocabulary,16,"Estudios y trabajo",a2-16,a2-18 a2-20
+a2.pron.conectores-entonacion,a2,pronunciation,16,"La entonación de los conectores",a2-16,a2-18 a2-20
+a2.fun.explicar-decisiones,a2,functional,16,"Explicar decisiones",a2-16,a2-18 a2-20
+a2.wri.historia-conectada,a2,writing,16,"Texto narrativo conectado",a2-16,a2-18 a2-20
+a2.gram.por-para,a2,grammar,17,"Por y para",a2-17,a2-19 a2-20
+a2.voc.compras-online,a2,vocabulary,17,"Compras en línea y envíos",a2-17,a2-19 a2-20
+a2.pron.palabras-largas,a2,pronunciation,17,"Palabras largas y ritmo",a2-17,a2-19 a2-20
+a2.fun.finalidad,a2,functional,17,"Expresar finalidad y causa",a2-17,a2-19 a2-20
+a2.lis.atencion-cliente,a2,listening,17,"Escuchar un servicio de atención",a2-17,a2-19 a2-20
+a2.gram.indefinidos,a2,grammar,18,"Indefinidos: algo, nada, alguien, nadie",a2-18,a2-20
+a2.gram.relativo-que,a2,grammar,18,"Oraciones de relativo con que y donde",a2-18,a2-20
+a2.voc.objetos-perdidos,a2,vocabulary,18,"Objetos y su descripción",a2-18,a2-20
+a2.pron.diptongos-verbales,a2,pronunciation,18,"Diptongos que van y vienen",a2-18,a2-20
+a2.fun.describir-objeto,a2,functional,18,"Describir algo cuyo nombre no sé",a2-18,a2-20
+a2.read.objetos-perdidos,a2,reading,18,"Leer avisos de objetos perdidos",a2-18,a2-20
+a2.gram.opinion-indicativo,a2,grammar,19,"Creo que, pienso que, me parece que",a2-19,a2-20
+a2.fun.acuerdo-desacuerdo,a2,functional,19,"Acuerdo y desacuerdo",a2-19,a2-20
+a2.voc.temas-sociales,a2,vocabulary,19,"Temas cercanos de debate",a2-19,a2-20
+a2.pron.entonacion-duda,a2,pronunciation,19,"Entonación de duda y acuerdo",a2-19,a2-20
+a2.disc.turnos,a2,discourse,19,"Tomar y ceder el turno",a2-19,a2-20
+a2.spk.opinion-breve,a2,speaking,19,"Opinar dos minutos",a2-19,a2-20
+a2.rev.checkpoint-final,a2,review,20,"Checkpoint final A2",a2-20,
+a2.wri.texto-a2,a2,writing,20,"Texto final A2",a2-20,
+a2.gram.indefinido-ortografia,a2,grammar,2,"Ortografía del indefinido",a2-02,a2-04 a2-05
+a2.gram.indefinido-ver-dar,a2,grammar,3,"Ver y dar en indefinido",a2-03,a2-05
+a2.gram.posesivos-tonicos,a2,grammar,18,"Posesivos tónicos y referencia",a2-18,a2-20
+b1.gram.pluscuamperfecto,b1,grammar,1,"Pretérito pluscuamperfecto",b1-01,b1-02 b1-05
+b1.disc.marcadores-relato,b1,discourse,1,"Marcadores del relato",b1-01,b1-02 b1-05
+b1.voc.viajes-imprevistos,b1,vocabulary,1,"Viajes e imprevistos",b1-01,b1-02 b1-05
+b1.pron.entonacion-narrativa,b1,pronunciation,1,"Entonación narrativa",b1-01,b1-02 b1-05
+b1.fun.narrar-viaje,b1,functional,1,"Narrar un viaje con complicaciones",b1-01,b1-02 b1-05
+b1.lis.anecdota-radio,b1,listening,1,"Escuchar una anécdota de radio",b1-01,b1-02 b1-05
+b1.gram.contraste-pasados,b1,grammar,2,"Contraste de los cuatro pasados",b1-02,b1-03 b1-05
+b1.voc.noticias-sucesos,b1,vocabulary,2,"Sucesos y noticias breves",b1-02,b1-03 b1-05
+b1.pron.habla-rapida,b1,pronunciation,2,"Reducciones del habla rápida",b1-02,b1-03 b1-05
+b1.fun.reaccionar-relato,b1,functional,2,"Reaccionar ante un relato",b1-02,b1-03 b1-05
+b1.read.cronica,b1,reading,2,"Leer una crónica breve",b1-02,b1-03 b1-05
+b1.pron.reducciones-preposiciones,b1,pronunciation,2,"Preposiciones en el habla rápida",b1-02,b1-03 b1-05
+b1.gram.referencia-nominal,b1,grammar,2,"Género, número y referencia nominal",b1-02,b1-03 b1-05
+b1.gram.subjuntivo-presente-formas,b1,grammar,3,"Presente de subjuntivo: formas",b1-03,b1-04 b1-05
+b1.gram.deseos,b1,grammar,3,"Expresar deseos",b1-03,b1-04 b1-05
+b1.voc.celebraciones-deseos,b1,vocabulary,3,"Fórmulas para desear",b1-03,b1-04 b1-05
+b1.pron.acento-subjuntivo,b1,pronunciation,3,"Acento en las formas de subjuntivo",b1-03,b1-04 b1-05
+b1.fun.desear,b1,functional,3,"Desear y felicitar",b1-03,b1-04 b1-05
+b1.wri.mensaje-deseos,b1,writing,3,"Mensaje de despedida",b1-03,b1-04 b1-05
+b1.gram.grado-adjetivo,b1,grammar,3,"Grado y apócope del adjetivo",b1-03,b1-04 b1-05
+b1.gram.influencia,b1,grammar,4,"Recomendar y pedir con subjuntivo",b1-04,b1-05 b2-01
+b1.gram.imperativo-negativo,b1,grammar,4,"Imperativo negativo",b1-04,b1-05
+b1.voc.bienestar,b1,vocabulary,4,"Bienestar y hábitos sanos",b1-04,b1-05
+b1.pron.entonacion-consejo,b1,pronunciation,4,"Entonación del consejo",b1-04,b1-05
+b1.fun.aconsejar,b1,functional,4,"Aconsejar y advertir",b1-04,b1-05
+b1.spk.consejo-audio,b1,speaking,4,"Consejo en un audio",b1-04,b1-05
+b1.rev.checkpoint-1,b1,review,5,"Checkpoint 1: narrar y aconsejar",b1-05,b1-06
+b1.lis.podcast-consejos,b1,listening,5,"Escuchar un consultorio",b1-05,b1-06
+b1.gram.opinion-subjuntivo,b1,grammar,6,"Opinión: indicativo y subjuntivo",b1-06,b1-07 b1-10
+b1.gram.valoracion,b1,grammar,6,"Es verdad que / es posible que",b1-06,b1-07 b1-10 b2-01
+b1.voc.medios-redes,b1,vocabulary,6,"Medios y redes sociales",b1-06,b1-07 b1-10
+b1.pron.duda-certeza,b1,pronunciation,6,"Entonación de duda y certeza",b1-06,b1-07 b1-10
+b1.fun.opinar-matizar,b1,functional,6,"Opinar y matizar",b1-06,b1-07 b1-10
+b1.read.articulo-opinion,b1,reading,6,"Leer un artículo de opinión",b1-06,b1-07 b1-10
+b1.gram.demostrativos-discurso,b1,grammar,6,"Demostrativos y referencia en el discurso",b1-06,b1-07 b1-10
+b1.gram.emociones-subjuntivo,b1,grammar,7,"Reaccionar con emociones",b1-07,b1-08 b1-10
+b1.gram.mismo-sujeto,b1,grammar,7,"Infinitivo y oración en reacciones",b1-07,b1-08 b1-10
+b1.voc.sentimientos,b1,vocabulary,7,"Sentimientos y estados de ánimo",b1-07,b1-08 b1-10
+b1.pron.entonacion-emocion,b1,pronunciation,7,"La emoción en la voz",b1-07,b1-08 b1-10
+b1.fun.expresar-sentimientos,b1,functional,7,"Expresar sentimientos",b1-07,b1-08 b1-10
+b1.wri.correo-personal,b1,writing,7,"Correo personal con emociones",b1-07,b1-08 b1-10
+b1.voc.relaciones,b1,vocabulary,7,"Relaciones personales",b1-07,b1-08 b1-10
+b1.fun.hablar-relaciones,b1,functional,7,"Hablar de relaciones",b1-07,b1-08 b1-10
+b1.gram.posesivos-relacion,b1,grammar,7,"Posesivos y relaciones personales",b1-07,b1-08 b1-10
+b1.gram.relativas-modo,b1,grammar,8,"Relativas con indicativo y subjuntivo",b1-08,b1-09 b1-10
+b1.gram.relativos-quien-donde,b1,grammar,8,"El que, quien, donde, lo que",b1-08,b1-09 b1-10
+b1.voc.vivienda-convivencia,b1,vocabulary,8,"Vivienda y convivencia",b1-08,b1-09 b1-10
+b1.pron.pausas-relativas,b1,pronunciation,8,"Pausas en las relativas",b1-08,b1-09 b1-10
+b1.fun.describir-ideal,b1,functional,8,"Describir lo que se busca",b1-08,b1-09 b1-10
+b1.lis.anuncios-busco,b1,listening,8,"Escuchar anuncios de búsqueda",b1-08,b1-09 b1-10
+b1.gram.cuantificacion-busqueda,b1,grammar,8,"Cuantificadores y negación en búsquedas",b1-08,b1-09 b1-10
+b1.gram.condicional-simple,b1,grammar,9,"Condicional simple",b1-09,b1-10
+b1.voc.trabajo-entrevistas,b1,vocabulary,9,"Trabajo y entrevistas",b1-09,b1-10
+b1.pron.modalidad-cortesia,b1,pronunciation,9,"Cortesía y modalidad",b1-09,b1-10
+b1.fun.entrevista-trabajo,b1,functional,9,"Entrevista de trabajo",b1-09,b1-10
+b1.spk.entrevista-simulada,b1,speaking,9,"Entrevista simulada",b1-09,b1-10
+b1.gram.probabilidad,b1,grammar,9,"Hipótesis y probabilidad",b1-09,b1-10
+b1.voc.misterios,b1,vocabulary,9,"Pistas y explicaciones posibles",b1-09,b1-10
+b1.pron.entonacion-hipotesis,b1,pronunciation,9,"Entonación de hipótesis",b1-09,b1-10
+b1.fun.suponer,b1,functional,9,"Suponer y especular",b1-09,b1-10
+b1.read.relato-misterio,b1,reading,9,"Inferir a partir de pistas",b1-09,b1-10
+b1.rev.checkpoint-2,b1,review,10,"Checkpoint 2: opinar, sentir y suponer",b1-10,b1-11
+b1.wri.foro,b1,writing,10,"Intervención en un foro",b1-10,b1-11
+b1.gram.temporales-subjuntivo,b1,grammar,11,"Cuando + subjuntivo",b1-11,b1-12 b1-15
+b1.voc.proyectos-metas,b1,vocabulary,11,"Proyectos y metas",b1-11,b1-12 b1-15
+b1.pron.enlaces-rapidos,b1,pronunciation,11,"Enlaces vocálicos rápidos",b1-11,b1-12 b1-15
+b1.fun.planificar-condiciones,b1,functional,11,"Planificar con condiciones de tiempo",b1-11,b1-12 b1-15
+b1.lis.mensaje-planes,b1,listening,11,"Escuchar planes encadenados",b1-11,b1-12 b1-15
+b1.gram.cliticos-combinados,b1,grammar,11,"Pronombres de objeto en planes y recados",b1-11,b1-12 b1-15
+b1.gram.finales,b1,grammar,12,"Para + infinitivo / para que + subjuntivo",b1-12,b1-13 b1-15
+b1.disc.causales,b1,discourse,12,"Porque, como, ya que, es que",b1-12,b1-13 b1-15
+b1.voc.medio-ambiente,b1,vocabulary,12,"Medio ambiente",b1-12,b1-13 b1-15
+b1.pron.enfasis-contraste,b1,pronunciation,12,"Énfasis contrastivo",b1-12,b1-13 b1-15
+b1.fun.justificar,b1,functional,12,"Justificar acciones y propuestas",b1-12,b1-13 b1-15
+b1.read.campana,b1,reading,12,"Leer una campaña",b1-12,b1-13 b1-15
+b1.gram.por-para-ampliacion,b1,grammar,12,"Por y para: usos ampliados",b1-12,b1-13 b1-15
+b1.gram.estilo-indirecto,b1,grammar,13,"Estilo indirecto",b1-13,b1-14 b1-15
+b1.gram.preguntas-indirectas,b1,grammar,13,"Preguntas indirectas",b1-13,b1-14 b1-15
+b1.voc.verbos-comunicacion,b1,vocabulary,13,"Verbos de comunicación",b1-13,b1-14 b1-15
+b1.pron.voz-citas,b1,pronunciation,13,"Cambiar la voz al citar",b1-13,b1-14 b1-15
+b1.fun.transmitir,b1,functional,13,"Transmitir mensajes",b1-13,b1-14 b1-15
+b1.wri.resumen-conversacion,b1,writing,13,"Resumir una conversación",b1-13,b1-14 b1-15
+b1.gram.ser-estar-avanzado,b1,grammar,14,"Ser y estar con cambio de significado",b1-14,b1-15
+b1.gram.se-impersonal,b1,grammar,14,"Se impersonal y se pasiva refleja",b1-14,b1-15
+b1.voc.costumbres,b1,vocabulary,14,"Costumbres y normas sociales",b1-14,b1-15
+b1.pron.r-andina,b1,pronunciation,14,"Claridad y reparación ante variación",b1-14,b1-15
+b1.fun.describir-costumbres,b1,functional,14,"Describir costumbres",b1-14,b1-15
+b1.lis.costumbres-variedades,b1,listening,14,"Escuchar explicaciones de costumbres",b1-14,b1-15
+b1.gram.se-reciproco,b1,grammar,14,"Distinguir reflexividad, reciprocidad e impersonalidad",b1-14,b1-15
+b1.rev.checkpoint-3,b1,review,15,"Checkpoint 3: planificar, justificar y transmitir",b1-15,b1-16
+b1.read.reportaje,b1,reading,15,"Leer un reportaje",b1-15,b1-16
+b1.gram.verbos-cambio,b1,grammar,16,"Verbos de cambio",b1-16,b1-17 b1-20
+b1.gram.llevar-gerundio,b1,grammar,16,"Llevar + gerundio y hace… que",b1-16,b1-17 b1-20
+b1.voc.vida-cambios,b1,vocabulary,16,"Grandes cambios de vida",b1-16,b1-17 b1-20
+b1.pron.j-variacion,b1,pronunciation,16,"Inteligibilidad de la jota",b1-16,b1-17 b1-20
+b1.fun.contar-cambios,b1,functional,16,"Contar un cambio de vida",b1-16,b1-17 b1-20
+b1.spk.historia-cambio,b1,speaking,16,"Historia de un cambio",b1-16,b1-17 b1-20
+b1.gram.verbos-preposicion,b1,grammar,16,"Verbos con preposición",b1-16,b1-17 b1-20
+b1.gram.perifrasis-proceso,b1,grammar,16,"Perífrasis para etapas de un proceso",b1-16,b1-17 b1-20
+b1.gram.subjuntivo-imperfecto-formas,b1,grammar,17,"Imperfecto de subjuntivo: formas",b1-17,b1-18 b1-20
+b1.gram.si-hipotetico,b1,grammar,17,"Condiciones hipotéticas",b1-17,b1-18 b1-20
+b1.voc.suenos,b1,vocabulary,17,"Sueños y alternativas",b1-17,b1-18 b1-20
+b1.pron.entonacion-condicional,b1,pronunciation,17,"Entonación de las condicionales",b1-17,b1-18 b1-20
+b1.fun.imaginar,b1,functional,17,"Imaginar y plantear dilemas",b1-17,b1-18 b1-20
+b1.lis.dilemas,b1,listening,17,"Escuchar un debate de dilemas",b1-17,b1-18 b1-20
+b1.disc.conectores-contraste,b1,discourse,18,"Contraste y adición",b1-18,b1-19 b1-20
+b1.disc.estructura-texto,b1,discourse,18,"Estructurar un texto de opinión",b1-18,b1-19 b1-20
+b1.voc.educacion,b1,vocabulary,18,"Educación y aprendizaje",b1-18,b1-19 b1-20
+b1.pron.lectura-argumentos,b1,pronunciation,18,"Leer en voz alta un argumento",b1-18,b1-19 b1-20
+b1.wri.texto-opinion,b1,writing,18,"Texto de opinión",b1-18,b1-19 b1-20
+b1.read.argumentos,b1,reading,18,"Leer un texto argumentativo",b1-18,b1-19 b1-20
+b1.fun.quejarse-formal,b1,functional,19,"Quejas y reclamaciones formales",b1-19,b1-20
+b1.gram.registro-formal,b1,grammar,19,"Registro formal: usted y fórmulas",b1-19,b1-20
+b1.voc.consumo-tramites,b1,vocabulary,19,"Consumo y trámites",b1-19,b1-20
+b1.pron.llamada-formal,b1,pronunciation,19,"Claridad en una llamada formal",b1-19,b1-20
+b1.wri.reclamacion,b1,writing,19,"Carta de reclamación",b1-19,b1-20
+b1.lis.llamada-servicio,b1,listening,19,"Escuchar una llamada de reclamación",b1-19,b1-20
+b1.spk.conflicto,b1,speaking,19,"Mediar en un conflicto",b1-19,b1-20
+b1.rev.checkpoint-final,b1,review,20,"Checkpoint final B1",b1-20,
+b1.wri.texto-final-b1,b1,writing,20,"Texto final B1",b1-20,
+b2.gram.sustantivas-sistema,b2,grammar,1,"Subjuntivo en oraciones sustantivas",b2-01,b2-02 b2-04 b2-05 b2-10 b2-15 b2-20 c1-01
+b2.gram.decir-doble-valor,b2,grammar,1,"Decir, insistir, recordar: informar o pedir",b2-01,b2-02 b2-04 b2-05
+b2.voc.trabajo-equipo,b2,vocabulary,1,"Trabajo en equipo y liderazgo",b2-01,b2-02 b2-04 b2-05
+b2.pron.influencia-mitigada,b2,pronunciation,1,"Entonación de peticiones indirectas",b2-01,b2-02 b2-04 b2-05
+b2.fun.pedir-exigir,b2,functional,1,"Pedir, exigir y negociar tareas",b2-01,b2-02 b2-04 b2-05
+b2.read.correo-equipo,b2,reading,1,"Leer un correo de coordinación",b2-01,b2-02 b2-04 b2-05
+b2.gram.subjuntivo-imperfecto-usos,b2,grammar,2,"Imperfecto de subjuntivo y correlación",b2-02,b2-03 b2-05
+b2.gram.como-si,b2,grammar,2,"Como si + imperfecto de subjuntivo",b2-02,b2-03 b2-05
+b2.voc.familia-generaciones,b2,vocabulary,2,"Generaciones y educación familiar",b2-02,b2-03 b2-05
+b2.pron.acento-ra-ra,b2,pronunciation,2,"Hablara frente a hablará",b2-02,b2-03 b2-05
+b2.fun.recordar-expectativas,b2,functional,2,"Recordar lo que se esperaba de mí",b2-02,b2-03 b2-05
+b2.lis.entrevista-generaciones,b2,listening,2,"Escuchar una entrevista sobre generaciones",b2-02,b2-03 b2-05
+b2.gram.subjuntivo-compuestos,b2,grammar,3,"Perfecto y pluscuamperfecto de subjuntivo",b2-03,b2-04 b2-05 b2-06
+b2.voc.logros-fracasos,b2,vocabulary,3,"Logros, fracasos y aprendizajes",b2-03,b2-04 b2-05 b2-06
+b2.pron.compuestos-largos,b2,pronunciation,3,"Ritmo en formas compuestas largas",b2-03,b2-04 b2-05 b2-06
+b2.fun.valorar-hechos,b2,functional,3,"Valorar hechos pasados",b2-03,b2-04 b2-05 b2-06
+b2.wri.carta-felicitacion,b2,writing,3,"Carta de felicitación o pésame",b2-03,b2-04 b2-05 b2-06
+b2.gram.condicionales-irreales,b2,grammar,4,"Condicionales irreales y mixtas",b2-04,b2-05 b2-07
+b2.gram.condicional-compuesto,b2,grammar,4,"Condicional compuesto",b2-04,b2-05 b2-07
+b2.voc.decisiones-consecuencias,b2,vocabulary,4,"Decisiones y consecuencias",b2-04,b2-05 b2-07
+b2.pron.reproche,b2,pronunciation,4,"Entonación del reproche",b2-04,b2-05 b2-07
+b2.fun.lamentar-reprochar,b2,functional,4,"Lamentar y reprochar",b2-04,b2-05 b2-07
+b2.spk.historia-alternativa,b2,speaking,4,"Historia alternativa",b2-04,b2-05 b2-07
+b2.fun.mediacion-fuentes,b2,functional,5,"Mediar entre fuentes y participantes",b2-05,b2-06 b2-08
+b2.rev.checkpoint-1,b2,review,5,"Checkpoint 1: modo y tiempo",b2-05,b2-06 b2-08
+b2.lis.debate-radio,b2,listening,5,"Escuchar un debate radiofónico",b2-05,b2-06 b2-08
+b2.gram.concesivas,b2,grammar,6,"Oraciones concesivas",b2-06,b2-07 b2-09 b2-10 b2-15 b2-20
+b2.voc.tecnologia-etica,b2,vocabulary,6,"Tecnología y ética",b2-06,b2-07 b2-09 b2-10
+b2.pron.concesion,b2,pronunciation,6,"Prosodia de la concesión",b2-06,b2-07 b2-09 b2-10
+b2.fun.conceder-objetar,b2,functional,6,"Conceder y objetar",b2-06,b2-07 b2-09 b2-10
+b2.read.columna,b2,reading,6,"Leer una columna de opinión",b2-06,b2-07 b2-09 b2-10
+b2.gram.relativas-avanzadas,b2,grammar,7,"Relativas con preposición, cuyo y lo cual",b2-07,b2-08 b2-10
+b2.gram.explicativas-especificativas,b2,grammar,7,"Especificativas y explicativas",b2-07,b2-08 b2-10
+b2.voc.arte-cultura,b2,vocabulary,7,"Arte, museos y patrimonio",b2-07,b2-08 b2-10
+b2.pron.jerarquia-pausas,b2,pronunciation,7,"Pausas y jerarquía en oraciones largas",b2-07,b2-08 b2-10
+b2.fun.describir-precision,b2,functional,7,"Describir con precisión",b2-07,b2-08 b2-10
+b2.wri.resena-exposicion,b2,writing,7,"Reseña de una exposición",b2-07,b2-08 b2-10
+b2.gram.condicionales-conectores,b2,grammar,8,"Conectores condicionales",b2-08,b2-09 b2-10 b2-11
+b2.gram.consecutivas,b2,grammar,8,"Oraciones consecutivas",b2-08,b2-09 b2-10 b2-11
+b2.voc.acuerdos-contratos,b2,vocabulary,8,"Acuerdos, contratos y condiciones",b2-08,b2-09 b2-10 b2-11
+b2.pron.foco-solo-si,b2,pronunciation,8,"Foco en la condición",b2-08,b2-09 b2-10 b2-11
+b2.fun.negociar-condiciones,b2,functional,8,"Negociar condiciones",b2-08,b2-09 b2-10 b2-11
+b2.spk.negociacion,b2,speaking,8,"Negociación breve",b2-08,b2-09 b2-10 b2-11
+b2.gram.pasiva-impersonalidad,b2,grammar,9,"Pasiva e impersonalidad",b2-09,b2-10 b2-12 b2-15 b2-20
+b2.voc.prensa,b2,vocabulary,9,"Prensa y actualidad",b2-09,b2-10 b2-12
+b2.pron.lectura-noticias,b2,pronunciation,9,"Leer noticias en voz alta",b2-09,b2-10 b2-12
+b2.fun.informar-objetivamente,b2,functional,9,"Informar con distancia",b2-09,b2-10 b2-12
+b2.read.noticia,b2,reading,9,"Leer una noticia completa",b2-09,b2-10 b2-12
+b2.gram.estilo-indirecto-avanzado,b2,grammar,10,"Estilo indirecto avanzado",b2-10,b2-11 b2-13
+b2.voc.verbos-lengua,b2,vocabulary,10,"Verbos para citar",b2-10,b2-11 b2-13
+b2.pron.cita-ironia,b2,pronunciation,10,"Citar con ironía",b2-10,b2-11 b2-13
+b2.fun.resumir-declaraciones,b2,functional,10,"Resumir declaraciones",b2-10,b2-11 b2-13
+b2.lis.rueda-prensa,b2,listening,10,"Escuchar una rueda de prensa",b2-10,b2-11 b2-13
+b2.rev.checkpoint-2,b2,review,10,"Checkpoint 2: conceder, describir e informar",b2-10,b2-11 b2-13
+b2.wri.informe-breve,b2,writing,10,"Informe breve",b2-10,b2-11 b2-13
+b2.disc.argumentacion,b2,discourse,11,"Estructura argumentativa",b2-11,b2-12 b2-14 b2-15 c1-01
+b2.disc.posicionamiento,b2,discourse,11,"Marcar la postura",b2-11,b2-12 b2-14 b2-15
+b2.voc.ciudad-sostenible,b2,vocabulary,11,"Urbanismo y movilidad",b2-11,b2-12 b2-14 b2-15
+b2.pron.exposicion-oral,b2,pronunciation,11,"Ritmo de una exposición oral",b2-11,b2-12 b2-14 b2-15
+b2.wri.ensayo-argumentativo,b2,writing,11,"Ensayo argumentativo",b2-11,b2-12 b2-14 b2-15
+b2.spk.exposicion,b2,speaking,11,"Exposición de dos minutos",b2-11,b2-12 b2-14 b2-15
+b2.gram.probabilidad-pasado,b2,grammar,12,"Probabilidad en el pasado",b2-12,b2-13 b2-15 b2-20
+b2.voc.investigacion,b2,vocabulary,12,"Investigación y pruebas",b2-12,b2-13 b2-15
+b2.pron.conjetura,b2,pronunciation,12,"Entonación de la conjetura",b2-12,b2-13 b2-15
+b2.fun.especular-pasado,b2,functional,12,"Especular sobre lo que pasó",b2-12,b2-13 b2-15
+b2.read.caso,b2,reading,12,"Leer un caso",b2-12,b2-13 b2-15
+b2.gram.verbos-cambio-sistema,b2,grammar,13,"El sistema de los verbos de cambio",b2-13,b2-14 b2-15 b2-16
+b2.gram.ser-estar-matices,b2,grammar,13,"Ser y estar: matices de percepción",b2-13,b2-14 b2-15 b2-16
+b2.voc.personalidad,b2,vocabulary,13,"Personalidad y transformaciones",b2-13,b2-14 b2-15 b2-16
+b2.pron.chile,b2,pronunciation,13,"Rasgos del español de Chile",b2-13,b2-14 b2-15 b2-16
+b2.fun.describir-transformacion,b2,functional,13,"Describir una transformación",b2-13,b2-14 b2-15 b2-16
+b2.lis.voces-chile,b2,listening,13,"Comprender una conversación sobre cambio y variación chilena",b2-13,b2-14 b2-15 b2-16
+b2.gram.valores-se,b2,grammar,14,"Valores de se",b2-14,b2-15 b2-17
+b2.voc.accidentes-cotidianos,b2,vocabulary,14,"Accidentes y descuidos",b2-14,b2-15 b2-17
+b2.pron.cliticos-cadena,b2,pronunciation,14,"Clíticos en cadena",b2-14,b2-15 b2-17
+b2.fun.disculparse-responsabilidad,b2,functional,14,"Disculparse y asumir responsabilidad",b2-14,b2-15 b2-17
+b2.spk.disculpa,b2,speaking,14,"Disculpa difícil",b2-14,b2-15 b2-17
+b2.rev.checkpoint-3,b2,review,15,"Checkpoint 3: argumentar y especular",b2-15,b2-16 b2-18
+b2.read.dossier,b2,reading,15,"Leer un dossier",b2-15,b2-16 b2-18
+b2.voc.colocaciones,b2,vocabulary,16,"Colocaciones frecuentes",b2-16,b2-17 b2-19 b2-20
+b2.voc.formacion-palabras,b2,vocabulary,16,"Formación de palabras",b2-16,b2-17 b2-19 b2-20
+b2.gram.nominalizacion,b2,grammar,16,"Nominalización",b2-16,b2-17 b2-19 b2-20
+b2.pron.acento-derivados,b2,pronunciation,16,"Acento en derivados",b2-16,b2-17 b2-19 b2-20
+b2.wri.reescritura-precisa,b2,writing,16,"Reescribir con precisión",b2-16,b2-17 b2-19 b2-20
+b2.fun.definir,b2,functional,16,"Definir y explicar conceptos",b2-16,b2-17 b2-19 b2-20
+b2.fun.mitigacion,b2,functional,17,"Cortesía y mitigación",b2-17,b2-18 b2-20
+b2.gram.importar-que,b2,grammar,17,"¿Te importa que…? y fórmulas con subjuntivo",b2-17,b2-18 b2-20
+b2.voc.correspondencia-formal,b2,vocabulary,17,"Correspondencia profesional",b2-17,b2-18 b2-20
+b2.pron.mitigacion-prosodia,b2,pronunciation,17,"Prosodia de la mitigación",b2-17,b2-18 b2-20
+b2.wri.correo-delicado,b2,writing,17,"Correo delicado",b2-17,b2-18 b2-20
+b2.lis.reunion,b2,listening,17,"Escuchar una reunión",b2-17,b2-18 b2-20
+b2.disc.marcadores-conversacionales,b2,discourse,18,"Marcadores conversacionales",b2-18,b2-19 b2-20
+b2.disc.reformuladores,b2,discourse,18,"Reformuladores",b2-18,b2-19 b2-20
+b2.voc.expresiones-coloquiales,b2,vocabulary,18,"Expresiones coloquiales frecuentes",b2-18,b2-19 b2-20
+b2.pron.prosodia-marcadores,b2,pronunciation,18,"Prosodia de los marcadores",b2-18,b2-19 b2-20
+b2.fun.gestionar-conversacion,b2,functional,18,"Gestionar una conversación",b2-18,b2-19 b2-20
+b2.spk.conversacion-natural,b2,speaking,18,"Conversación espontánea",b2-18,b2-19 b2-20
+b2.gram.tiempos-relato,b2,grammar,19,"Tiempos del relato y variación",b2-19,b2-20
+b2.voc.descripcion-literaria,b2,vocabulary,19,"Descripción literaria",b2-19,b2-20
+b2.pron.lectura-expresiva,b2,pronunciation,19,"Lectura expresiva",b2-19,b2-20
+b2.read.cuento,b2,reading,19,"Leer un microrrelato",b2-19,b2-20
+b2.wri.microrrelato,b2,writing,19,"Escribir un microrrelato",b2-19,b2-20
+b2.gram.voseo,b2,grammar,19,"Voseo",b2-19,b2-20
+b2.gram.ustedes-vosotros,b2,grammar,19,"Ustedes y vosotros",b2-19,b2-20
+b2.voc.lexico-regional,b2,vocabulary,19,"Léxico regional",b2-19,b2-20
+b2.pron.sheismo-voseo,b2,pronunciation,19,"Sheísmo y acento del voseo",b2-19,b2-20
+b2.fun.adaptarse-variedad,b2,functional,19,"Adaptarse a la variedad",b2-19,b2-20
+b2.lis.rioplatense,b2,listening,19,"Comprender diálogo con léxico y formas rioplatenses",b2-19,b2-20
+b2.rev.checkpoint-final,b2,review,20,"Checkpoint final B2",b2-20,
+b2.wri.texto-final-b2,b2,writing,20,"Texto final B2",b2-20,
+c1.gram.sustantivas-matices,c1,grammar,1,"Modo en sustantivas: matices",c1-01,c1-02 c1-05 c1-20
+c1.disc.registro-academico,c1,discourse,1,"Registro académico",c1-01,c1-02 c1-05
+c1.voc.ciencia-divulgacion,c1,vocabulary,1,"Ciencia y divulgación",c1-01,c1-02 c1-05
+c1.pron.lectura-academica,c1,pronunciation,1,"Lectura académica en voz alta",c1-01,c1-02 c1-05
+c1.lis.conferencia,c1,listening,1,"Escuchar una conferencia breve",c1-01,c1-02 c1-05
+c1.fun.matizar-interpretacion,c1,functional,1,"Matizar una interpretación",c1-01,c1-02 c1-05
+c1.gram.nominalizacion-avanzada,c1,grammar,2,"Nominalización y condensación",c1-02,c1-03 c1-05
+c1.voc.economia-sociedad,c1,vocabulary,2,"Economía y sociedad",c1-02,c1-03 c1-05
+c1.pron.incisos,c1,pronunciation,2,"Incisos y enumeraciones",c1-02,c1-03 c1-05
+c1.read.informe,c1,reading,2,"Leer un informe",c1-02,c1-03 c1-05
+c1.wri.resumen-tecnico,c1,writing,2,"Resumen técnico",c1-02,c1-03 c1-05
+c1.gram.perifrasis-relativo,c1,grammar,3,"Oraciones hendidas y pseudohendidas",c1-03,c1-04 c1-05
+c1.disc.estructura-informativa,c1,discourse,3,"Tema y foco",c1-03,c1-04 c1-05 c1-20
+c1.voc.comunicacion-medios,c1,vocabulary,3,"Comunicación y discurso público",c1-03,c1-04 c1-05
+c1.pron.foco-prosodico,c1,pronunciation,3,"Foco prosódico",c1-03,c1-04 c1-05
+c1.spk.presentacion-foco,c1,speaking,3,"Presentación con énfasis",c1-03,c1-04 c1-05
+c1.gram.conectores-matices,c1,grammar,4,"Conectores con matices",c1-04,c1-05 c1-20
+c1.voc.derecho-normas,c1,vocabulary,4,"Normas, derechos y obligaciones",c1-04,c1-05
+c1.pron.peninsular,c1,pronunciation,4,"Variación peninsular",c1-04,c1-05
+c1.fun.advertir-condicionar,c1,functional,4,"Condicionar y advertir",c1-04,c1-05
+c1.read.normativa,c1,reading,4,"Leer un texto normativo",c1-04,c1-05
+c1.rev.checkpoint-1,c1,review,5,"Checkpoint 1: precisión y foco",c1-05,c1-06
+c1.lis.debate-academico,c1,listening,5,"Escuchar un debate académico",c1-05,c1-06
+c1.gram.perifrasis-aspecto,c1,grammar,6,"Perífrasis aspectuales y modales",c1-06,c1-07 c1-10
+c1.voc.habla-coloquial,c1,vocabulary,6,"Lengua coloquial",c1-06,c1-07 c1-10
+c1.pron.habla-espontanea,c1,pronunciation,6,"Ritmo del habla espontánea",c1-06,c1-07 c1-10
+c1.lis.conversacion-real,c1,listening,6,"Escuchar una conversación espontánea",c1-06,c1-07 c1-10
+c1.fun.insistir-quejarse,c1,functional,6,"Insistir y protestar",c1-06,c1-07 c1-10
+c1.disc.implicaturas,c1,discourse,7,"Implicaturas y sobreentendidos",c1-07,c1-08 c1-10 c1-20
+c1.disc.ironia-receptiva,c1,discourse,7,"Ironía",c1-07,c1-08 c1-10
+c1.voc.relaciones-sociales,c1,vocabulary,7,"Relaciones sociales y tensiones",c1-07,c1-08 c1-10
+c1.pron.ironia,c1,pronunciation,7,"Entonación irónica",c1-07,c1-08 c1-10
+c1.read.dialogo-teatral,c1,reading,7,"Leer un diálogo con subtexto",c1-07,c1-08 c1-10
+c1.fun.peticiones-indirectas,c1,functional,8,"Peticiones y rechazos indirectos",c1-08,c1-09 c1-10
+c1.gram.atenuacion-gramatical,c1,grammar,8,"Atenuación gramatical",c1-08,c1-09 c1-10 c1-20
+c1.voc.mundo-laboral,c1,vocabulary,8,"Cultura laboral",c1-08,c1-09 c1-10
+c1.pron.prosodia-indirecta,c1,pronunciation,8,"Prosodia de lo indirecto",c1-08,c1-09 c1-10
+c1.spk.feedback-dificil,c1,speaking,8,"Dar feedback difícil",c1-08,c1-09 c1-10
+c1.disc.reformulacion,c1,discourse,9,"Reformular y parafrasear",c1-09,c1-10
+c1.disc.sintesis,c1,discourse,9,"Sintetizar varias fuentes",c1-09,c1-10 c1-20 c2-01
+c1.voc.salud-publica,c1,vocabulary,9,"Salud pública",c1-09,c1-10
+c1.pron.resumen-oral,c1,pronunciation,9,"Resumir en voz alta",c1-09,c1-10
+c1.wri.sintesis-fuentes,c1,writing,9,"Síntesis de fuentes",c1-09,c1-10
+c1.rev.checkpoint-2,c1,review,10,"Checkpoint 2: implícitos y reformulación",c1-10,c1-11
+c1.read.ensayo,c1,reading,10,"Leer un ensayo",c1-10,c1-11
+c1.disc.contraargumentacion,c1,discourse,11,"Contraargumentación",c1-11,c1-12 c1-15 c1-20
+c1.disc.atenuar-intensificar,c1,discourse,11,"Atenuar e intensificar la postura",c1-11,c1-12 c1-15
+c1.voc.politica-debate,c1,vocabulary,11,"Debate público",c1-11,c1-12 c1-15
+c1.pron.debate-prosodia,c1,pronunciation,11,"Prosodia del debate",c1-11,c1-12 c1-15
+c1.spk.debate,c1,speaking,11,"Debate de cuatro minutos",c1-11,c1-12 c1-15
+c1.voc.verbos-precisos,c1,vocabulary,12,"Verbos precisos",c1-12,c1-13 c1-15
+c1.voc.registro-lexico,c1,vocabulary,12,"Léxico según el registro",c1-12,c1-13 c1-15 c1-20
+c1.pron.acentuacion-culta,c1,pronunciation,12,"Acentuación de cultismos",c1-12,c1-13 c1-15
+c1.wri.revision-registro,c1,writing,12,"Revisar el registro",c1-12,c1-13 c1-15 c2-01
+c1.fun.adecuar-registro,c1,functional,12,"Adecuar el registro",c1-12,c1-13 c1-15
+c1.gram.regimen-preposicional,c1,grammar,13,"Régimen preposicional avanzado",c1-13,c1-14 c1-15 c1-20
+c1.voc.educacion-superior,c1,vocabulary,13,"Universidad e investigación",c1-13,c1-14 c1-15
+c1.pron.enlaces-cultos,c1,pronunciation,13,"Enlaces en el registro formal",c1-13,c1-14 c1-15
+c1.wri.correo-academico,c1,writing,13,"Correo académico",c1-13,c1-14 c1-15
+c1.read.convocatoria,c1,reading,13,"Leer una convocatoria",c1-13,c1-14 c1-15
+c1.lis.notas-jerarquia,c1,listening,14,"Tomar notas de un discurso largo",c1-14,c1-15 c1-20
+c1.disc.marcadores-discurso-oral,c1,discourse,14,"Marcadores del discurso oral formal",c1-14,c1-15
+c1.voc.cultura-identidad,c1,vocabulary,14,"Cultura, identidad y memoria",c1-14,c1-15
+c1.pron.variedades-hispanas,c1,pronunciation,14,"Variedades en contacto",c1-14,c1-15
+c1.spk.resumen-ponencia,c1,speaking,14,"Resumir una ponencia",c1-14,c1-15
+c1.rev.checkpoint-3,c1,review,15,"Checkpoint 3: debatir con precisión",c1-15,c1-16
+c1.wri.articulo-opinion,c1,writing,15,"Artículo de opinión",c1-15,c1-16
+c1.gram.orden-palabras,c1,grammar,16,"Orden de palabras y dislocación",c1-16,c1-17 c1-20
+c1.voc.medios-digitales,c1,vocabulary,16,"Ecosistema digital",c1-16,c1-17 c1-20
+c1.pron.dislocacion-prosodia,c1,pronunciation,16,"Prosodia de la dislocación",c1-16,c1-17 c1-20
+c1.read.reportaje-largo,c1,reading,16,"Leer un reportaje largo",c1-16,c1-17 c1-20
+c1.fun.destacar-retomar,c1,functional,16,"Destacar y retomar temas",c1-16,c1-17 c1-20
+c1.gram.tiempos-literarios,c1,grammar,17,"Tiempos literarios y restringidos",c1-17,c1-18 c1-20
+c1.voc.literatura,c1,vocabulary,17,"Literatura y crítica",c1-17,c1-18 c1-20
+c1.pron.lectura-literaria,c1,pronunciation,17,"Lectura literaria",c1-17,c1-18 c1-20
+c1.read.fragmento-novela,c1,reading,17,"Leer un fragmento de novela",c1-17,c1-18 c1-20
+c1.wri.relato-estilo,c1,writing,17,"Relato con estilo indirecto libre",c1-17,c1-18 c1-20
+c1.fun.mediacion-conflicto,c1,functional,18,"Mediar en un conflicto",c1-18,c1-19 c1-20
+c1.disc.necesidades-condiciones,c1,discourse,18,"Necesidades, condiciones y preferencias",c1-18,c1-19 c1-20
+c1.pron.confirmacion-mediadora,c1,pronunciation,18,"Prosodia de la comprobación",c1-18,c1-19 c1-20
+c1.wri.doble-audiencia,c1,writing,19,"Síntesis para dos públicos",c1-19,c1-20
+c1.disc.coherencia-editorial,c1,discourse,19,"Coherencia entre versiones",c1-19,c1-20
+c1.rev.checkpoint-final,c1,review,20,"Checkpoint final C1",c1-20,
+c1.spk.ponencia-final,c1,speaking,20,"Ponencia final C1",c1-20,
+c2.gram.ambiguedad-sintactica,c2,grammar,1,"Ambigüedad sintáctica",c2-01,c2-02 c2-05
+c2.disc.desambiguar,c2,discourse,1,"Desambiguar en la escritura",c2-01,c2-02 c2-05
+c2.voc.polisemia-avanzada,c2,vocabulary,1,"Polisemia y homonimia",c2-01,c2-02 c2-05
+c2.pron.prosodia-desambiguadora,c2,pronunciation,1,"Prosodia que desambigua",c2-01,c2-02 c2-05
+c2.read.textos-ambiguos,c2,reading,1,"Leer titulares y cláusulas ambiguas",c2-01,c2-02 c2-05
+c2.disc.ironia-productiva,c2,discourse,2,"Ironía, litote e hipérbole",c2-02,c2-03 c2-05 c2-06
+c2.voc.evaluacion-implicita,c2,vocabulary,2,"Léxico evaluativo implícito",c2-02,c2-03 c2-05 c2-06
+c2.pron.ironia-variedades,c2,pronunciation,2,"Prosodia e ironía contextual",c2-02,c2-03 c2-05 c2-06
+c2.lis.humor-ironico,c2,listening,2,"Escuchar una tertulia irónica",c2-02,c2-03 c2-05 c2-06
+c2.spk.comentario-ironico,c2,speaking,2,"Comentario con ironía controlada",c2-02,c2-03 c2-05 c2-06
+c2.disc.cambio-registro,c2,discourse,3,"Alternancia de registros",c2-03,c2-04 c2-05 c2-07
+c2.voc.lenguaje-juridico,c2,vocabulary,3,"Lenguaje jurídico-administrativo",c2-03,c2-04 c2-05 c2-07
+c2.gram.futuro-subjuntivo-juridico,c2,grammar,3,"Futuro de subjuntivo y fórmulas arcaizantes",c2-03,c2-04 c2-05 c2-07
+c2.pron.registro-voz,c2,pronunciation,3,"Registro y voz",c2-03,c2-04 c2-05 c2-07
+c2.wri.traduccion-registro,c2,writing,3,"Traducción intralingüística",c2-03,c2-04 c2-05 c2-07
+c2.disc.subtexto,c2,discourse,4,"Subtexto e inferencia",c2-04,c2-05 c2-08
+c2.voc.verbos-dicendi-matices,c2,vocabulary,4,"Verbos introductores con matiz",c2-04,c2-05 c2-08
+c2.pron.intencion-pragmatica,c2,pronunciation,4,"Entonación e intención contextual",c2-04,c2-05 c2-08
+c2.read.relato-subtexto,c2,reading,4,"Leer un relato con subtexto",c2-04,c2-05 c2-08
+c2.wri.dialogo-subtexto,c2,writing,4,"Escribir un diálogo con subtexto",c2-04,c2-05 c2-08
+c2.rev.checkpoint-1,c2,review,5,"Checkpoint 1: alcance, ironía, registro y subtexto",c2-05,c2-06 c2-09
+c2.read.contrato-cronica,c2,reading,5,"Leer textos de registros opuestos",c2-05,c2-06 c2-09
+c2.disc.recursos-retoricos,c2,discourse,6,"Recursos retóricos",c2-06,c2-07 c2-10
+c2.voc.lexico-persuasivo,c2,vocabulary,6,"Léxico persuasivo",c2-06,c2-07 c2-10
+c2.pron.oratoria,c2,pronunciation,6,"Oratoria",c2-06,c2-07 c2-10
+c2.lis.discurso-politico,c2,listening,6,"Escuchar un discurso",c2-06,c2-07 c2-10
+c2.spk.discurso-breve,c2,speaking,6,"Discurso persuasivo",c2-06,c2-07 c2-10
+c2.read.prosa-densa,c2,reading,7,"Prosa académica y ensayística densa",c2-07,c2-08 c2-10 c2-11
+c2.gram.sintaxis-compleja,c2,grammar,7,"Sintaxis compleja",c2-07,c2-08 c2-10 c2-11
+c2.voc.conectores-cultos,c2,vocabulary,7,"Conectores cultos",c2-07,c2-08 c2-10 c2-11
+c2.pron.lectura-densa,c2,pronunciation,7,"Leer prosa densa en voz alta",c2-07,c2-08 c2-10 c2-11
+c2.wri.abstract,c2,writing,7,"Resumen académico",c2-07,c2-08 c2-10 c2-11
+c2.voc.casi-sinonimos,c2,vocabulary,8,"Casi sinónimos y connotación",c2-08,c2-09 c2-10 c2-12
+c2.voc.refranes-intertextualidad,c2,vocabulary,8,"Refranes, citas e intertextualidad",c2-08,c2-09 c2-10 c2-12
+c2.pron.matiz-lexico-voz,c2,pronunciation,8,"Matiz léxico y voz",c2-08,c2-09 c2-10 c2-12
+c2.wri.precision-lexica,c2,writing,8,"Precisión léxica",c2-08,c2-09 c2-10 c2-12
+c2.read.columna-literaria,c2,reading,8,"Leer una columna literaria",c2-08,c2-09 c2-10 c2-12
+c2.pron.variacion-avanzada,c2,pronunciation,9,"Variación fonética y selección de muestras",c2-09,c2-10 c2-13
+c2.voc.variacion-lexica-pragmatica,c2,vocabulary,9,"Variación léxica y pragmática",c2-09,c2-10 c2-13
+c2.gram.variacion-gramatical,c2,grammar,9,"Variación gramatical",c2-09,c2-10 c2-13
+c2.lis.voces-mundo,c2,listening,9,"Escucha flexible y reparación",c2-09,c2-10 c2-13
+c2.fun.mediacion-variedades,c2,functional,9,"Mediar entre variedades",c2-09,c2-10 c2-13
+c2.rev.checkpoint-2,c2,review,10,"Checkpoint 2: retórica, densidad, precisión y variación",c2-10,c2-11 c2-14
+c2.lis.mesa-redonda,c2,listening,10,"Escuchar una mesa de evaluación",c2-10,c2-11 c2-14
+c2.disc.humor-juegos,c2,discourse,11,"Humor y juegos de palabras",c2-11,c2-12 c2-15
+c2.voc.expresiones-idiomaticas,c2,vocabulary,11,"Expresiones idiomáticas con matiz",c2-11,c2-12 c2-15
+c2.pron.ritmo-humor,c2,pronunciation,11,"Ritmo del humor",c2-11,c2-12 c2-15
+c2.read.humor-escrito,c2,reading,11,"Leer humor escrito",c2-11,c2-12 c2-15
+c2.spk.anecdota-humor,c2,speaking,11,"Anécdota con humor",c2-11,c2-12 c2-15
+c2.disc.mediacion,c2,discourse,12,"Mediación de textos",c2-12,c2-13 c2-15 c2-16
+c2.voc.lexico-tecnico-divulgativo,c2,vocabulary,12,"De lo técnico a lo divulgativo",c2-12,c2-13 c2-15 c2-16
+c2.pron.claridad-mediacion,c2,pronunciation,12,"Claridad al mediar",c2-12,c2-13 c2-15 c2-16
+c2.wri.informe-mediacion,c2,writing,12,"Informe de mediación",c2-12,c2-13 c2-15 c2-16
+c2.lis.fuentes-contradictorias,c2,listening,12,"Escuchar fuentes contradictorias",c2-12,c2-13 c2-15 c2-16
+c2.disc.control-estilistico,c2,discourse,13,"Control estilístico",c2-13,c2-14 c2-15 c2-17
+c2.gram.recursos-cohesion,c2,grammar,13,"Recursos de cohesión",c2-13,c2-14 c2-15 c2-17
+c2.voc.estilo-lexico,c2,vocabulary,13,"Elecciones léxicas de estilo",c2-13,c2-14 c2-15 c2-17
+c2.pron.ritmo-prosa,c2,pronunciation,13,"El ritmo de la prosa",c2-13,c2-14 c2-15 c2-17
+c2.wri.edicion-estilo,c2,writing,13,"Editar un texto",c2-13,c2-14 c2-15 c2-17
+c2.disc.debate-hostil,c2,discourse,14,"Debate bajo presión",c2-14,c2-15 c2-18
+c2.disc.falacias,c2,discourse,14,"Falacias argumentativas",c2-14,c2-15 c2-18
+c2.voc.negociacion-alto-nivel,c2,vocabulary,14,"Negociación de alto nivel",c2-14,c2-15 c2-18
+c2.pron.control-presion,c2,pronunciation,14,"Control prosódico bajo presión",c2-14,c2-15 c2-18
+c2.spk.entrevista-hostil,c2,speaking,14,"Entrevista difícil",c2-14,c2-15 c2-18
+c2.rev.checkpoint-3,c2,review,15,"Checkpoint 3: humor, mediación, estilo y presión",c2-15,c2-16 c2-19
+c2.wri.cronica-personal,c2,writing,15,"Crónica personal",c2-15,c2-16 c2-19
+c2.gram.modalidad-evidencial,c2,grammar,16,"Modalidad y fuente",c2-16,c2-17 c2-20
+c2.disc.responsabilidad-fuentes,c2,discourse,16,"Responsabilidad de atribución",c2-16,c2-17 c2-20
+c2.voc.certeza-documental,c2,vocabulary,16,"Léxico de la prueba",c2-16,c2-17 c2-20
+c2.pron.reserva-epistemica,c2,pronunciation,16,"Prosodia de la reserva",c2-16,c2-17 c2-20
+c2.wri.rectificacion,c2,writing,16,"Rectificación periodística",c2-16,c2-17 c2-20
+c2.gram.agencia-reparacion,c2,grammar,17,"Agencia y reconocimiento",c2-17,c2-18 c2-20
+c2.fun.disculpa-reparacion,c2,functional,17,"Disculpa y reparación",c2-17,c2-18 c2-20
+c2.pron.serenidad-no-condescendiente,c2,pronunciation,17,"Serenidad y cortesía",c2-17,c2-18 c2-20
+c2.wri.comunicado-reparacion,c2,writing,17,"Comunicado de reparación",c2-17,c2-18 c2-20
+c2.gram.temporalidad-perspectiva,c2,grammar,18,"Temporalidad y perspectiva",c2-18,c2-19 c2-20
+c2.disc.fiabilidad-narrativa,c2,discourse,18,"Fiabilidad narrativa",c2-18,c2-19 c2-20
+c2.read.lectura-contrapunto,c2,reading,18,"Lectura en contrapunto",c2-18,c2-19 c2-20
+c2.spk.defensa-interpretacion,c2,speaking,18,"Defensa de una interpretación",c2-18,c2-19 c2-20
+c2.disc.compresion-jerarquica,c2,discourse,19,"Compresión con jerarquía",c2-19,c2-20
+c2.pron.foco-compresion,c2,pronunciation,19,"Foco en la síntesis oral",c2-19,c2-20
+c2.fun.adaptacion-inmediata,c2,functional,19,"Adaptación durante la interacción",c2-19,c2-20
+c2.spk.sintesis-tiempo,c2,speaking,19,"Síntesis con tiempo limitado",c2-19,c2-20
+c2.rev.checkpoint-final,c2,review,20,"Checkpoint final C2",c2-20,
+c2.wri.ensayo-final-c2,c2,writing,20,"Dossier final C2",c2-20,
