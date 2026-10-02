@@ -1,12 +1,11 @@
 name: Deploy Staging (Cloudflare)
 
-# STAGING only. Every push to main deploys staging automatically so merged
-# work is immediately reviewable. Manual dispatch remains available for
-# deploy/rollback. This workflow cannot deploy production:
-# scripts/prepare-staging-worker-config.mjs forces the spanishcue-staging
-# Worker, the spanishcue-staging D1, workers.dev only and no routes, and
-# fails on any production name, route or the placeholder D1.
-# It never applies D1 migrations and never touches spanishcue.com.
+# Every verified merge is deployed to staging first. After staging smoke passes,
+# this workflow automatically dispatches the owner-authorized production release
+# for the exact same SHA and waits for its production smoke/rollback result.
+# The staging build itself remains isolated: scripts/prepare-staging-worker-config.mjs
+# forces the spanishcue-staging Worker, spanishcue-staging D1, workers.dev only
+# and no routes. It never applies D1 migrations or touches spanishcue.com directly.
 
 on:
   push:
@@ -31,6 +30,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  actions: write
   contents: read
 
 jobs:
@@ -147,6 +147,52 @@ jobs:
       - name: Fail first deploy with failed smoke
         if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'failure'
         run: exit 1
+
+      - name: Promote verified staging SHA to production
+        if: (github.event_name == 'push' || inputs.action == 'deploy') && steps.smoke.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CURRENT_MAIN="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          if [ "$CURRENT_MAIN" != "$SHA" ]; then
+            echo "main advanced to $CURRENT_MAIN after staging $SHA; a newer staging run will promote it."
+            exit 0
+          fi
+
+          SUCCESS_RUN="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${SHA}&per_page=100" \
+            --jq '[.workflow_runs[] | select(.name == "Deploy Production (Cloudflare, owner-authorized)" and .conclusion == "success")] | sort_by(.id) | last | .id // empty')"
+          if [ -n "$SUCCESS_RUN" ]; then
+            echo "Production already succeeded for $SHA in run $SUCCESS_RUN."
+            exit 0
+          fi
+
+          ACTIVE_RUN="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${SHA}&per_page=100" \
+            --jq '[.workflow_runs[] | select(.name == "Deploy Production (Cloudflare, owner-authorized)" and (.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending"))] | sort_by(.id) | last | .id // empty')"
+
+          if [ -z "$ACTIVE_RUN" ]; then
+            BEFORE_ID="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?per_page=100" \
+              --jq '[.workflow_runs[] | select(.name == "Deploy Production (Cloudflare, owner-authorized)") | .id] | max // 0')"
+
+            gh workflow run deploy-production.yml \
+              --ref main \
+              -f action=deploy \
+              -f mode=release \
+              -f sha="$SHA" \
+              -f confirm="deploy $SHA"
+
+            for attempt in $(seq 1 60); do
+              ACTIVE_RUN="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${SHA}&per_page=100" \
+                --jq "[.workflow_runs[] | select(.name == \"Deploy Production (Cloudflare, owner-authorized)\" and .id > $BEFORE_ID)] | sort_by(.id) | last | .id // empty")"
+              if [ -n "$ACTIVE_RUN" ]; then
+                break
+              fi
+              sleep 2
+            done
+          fi
+
+          test -n "$ACTIVE_RUN"
+          echo "Production run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${ACTIVE_RUN}"
+          timeout 1800 gh run watch "$ACTIVE_RUN" --exit-status
 
       - name: Manual staging rollback
         if: github.event_name == 'workflow_dispatch' && inputs.action == 'rollback'
