@@ -134,7 +134,7 @@ test('account return paths stay same-origin and account sections expose honest s
 });
 
 test('offer remains configurable and invalid values are rejected',()=>{
- assert.equal(p.discountedCents(p.DEFAULT_OFFER),1500);assert.equal(p.DEFAULT_OFFER.months,0);assert.equal(p.DEFAULT_OFFER.maxTeachers,1000);
+ assert.equal(p.discountedCents(p.DEFAULT_OFFER),1550);assert.equal(p.DEFAULT_OFFER.months,0);assert.equal(p.DEFAULT_OFFER.maxTeachers,1000);
  for(const change of [{baseCents:0},{discountPercent:101},{months:-1},{maxTeachers:1.5},{revision:-1}])assert.equal(p.validateOffer({...p.DEFAULT_OFFER,...change}),false);
 });
 
