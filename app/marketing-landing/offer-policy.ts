@@ -10,5 +10,5 @@ export function liveFounderOffer(value: unknown): value is FounderStatus {
   return s.mode === 'live' && s.checkoutLive === true && s.enabled === true && s.available === true && s.priceUsd === 15 && s.limit === 1000 && Number.isInteger(s.remaining) && s.remaining > 0 && s.remaining <= s.limit;
 }
 export function shouldShowOffer(s: { live: boolean; pro: boolean; seen: boolean; converted: boolean; engagedMs: number; scroll: number; exit: boolean }) {
-  return s.live && !s.pro && !s.seen && !s.converted && (s.engagedMs >= 30000 || (s.engagedMs >= 3000 && s.scroll >= .5) || (s.engagedMs >= 5000 && s.exit));
+  return s.live && !s.pro && !s.seen && !s.converted && (s.engagedMs >= 12000 || (s.engagedMs >= 3000 && s.scroll >= .25) || (s.engagedMs >= 3000 && s.exit));
 }
