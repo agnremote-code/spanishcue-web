@@ -41,7 +41,7 @@ export async function verifyGuestPaddlePayment(db: D1Database, paddle: PaddleRun
   if (!paidThrough) return null;
   return recordVerifiedPurchase(db, claim.claimId, "paddle", {
     subscriptionId, paymentId: transactionId, customerId, email: customer.email,
-    amountCents: 1500, currency: "USD", paidThrough, paidAt: Math.floor(Date.now() / 1000),
+    amountCents: 1550, currency: "USD", paidThrough, paidAt: Math.floor(Date.now() / 1000),
     eventId, providerStatus: typeof subscription.status === "string" ? subscription.status : "active",
   });
 }
