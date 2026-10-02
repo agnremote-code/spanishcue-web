@@ -1,7 +1,7 @@
 import type { BillingRuntimeConfig } from "./billing-config";
 import type { PaddleRuntimeConfig } from "./paddle-config";
 import {
-  getPaddleSubscription, getPaddleTransaction,
+  getPaddleSubscription, getPaddleTransaction, paddleCompletedPayment,
   validatePaddleClaimSubscription, validatePaddleClaimTransaction,
 } from "./paddle-server";
 import {
@@ -26,22 +26,24 @@ function cents(value: unknown) {
 /** Payment confirmation is read from Paddle's API, never from a JS checkout event. */
 export async function verifyGuestPaddlePayment(db: D1Database, paddle: PaddleRuntimeConfig, claim: PurchaseClaim, transactionId: string, eventId?: string) {
   if (claim.provider !== "paddle" || claim.environment !== "live" ||
-      (claim.providerPaymentId && claim.providerPaymentId !== transactionId)) return null;
+      (claim.providerPaymentId && claim.providerPaymentId !== transactionId && !claim.providerSubscriptionId)) return null;
+  if (claim.amountCents === 1500 && claim.paidAt && claim.providerSubscriptionId) paddle = { ...paddle, legacyMonthly: true };
   const transaction = await getPaddleTransaction(paddle, transactionId);
   if (!validatePaddleClaimTransaction(transaction, paddle, claim.claimId, claim.offerCode)) return null;
   const subscriptionId = typeof transaction.subscription_id === "string" ? transaction.subscription_id : "";
   if (!/^sub_[a-z0-9]{26}$/.test(subscriptionId)) return null;
   const subscription = await getPaddleSubscription(paddle, subscriptionId);
-  if (!validatePaddleClaimSubscription(subscription, paddle, claim.claimId, claim.offerCode)) return null;
+  if (!validatePaddleClaimSubscription(subscription, paddle, claim.claimId, claim.offerCode)
+      || (claim.providerSubscriptionId && claim.providerSubscriptionId !== subscriptionId)) return null;
   const customerId = typeof subscription.customer_id === "string" ? subscription.customer_id : "";
   if (!customerId || (typeof transaction.customer_id === "string" && transaction.customer_id !== customerId)) return null;
   const customer = transaction.customer;
   if (customer?.id !== customerId || typeof customer.email !== "string" || !customer.email) return null;
-  const paidThrough = seconds(subscription.current_billing_period?.ends_at);
-  if (!paidThrough) return null;
+  const payment = paddleCompletedPayment(transaction, subscription, paddle);
+  if (!payment) return null;
   return recordVerifiedPurchase(db, claim.claimId, "paddle", {
     subscriptionId, paymentId: transactionId, customerId, email: customer.email,
-    amountCents: 1500, currency: "USD", paidThrough, paidAt: Math.floor(Date.now() / 1000),
+    amountCents: payment.amountCents, currency: "USD", paidThrough: payment.paidThrough, paidAt: payment.paidAt,
     eventId, providerStatus: typeof subscription.status === "string" ? subscription.status : "active",
   });
 }

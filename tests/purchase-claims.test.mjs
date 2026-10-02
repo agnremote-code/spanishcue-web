@@ -203,7 +203,7 @@ test('anonymous Paddle route returns a real transaction token without a SPANISHC
     PAYPAL_LIVE_CLIENT_ID: 'client', PAYPAL_LIVE_CLIENT_SECRET: 'private',
     PAYPAL_LIVE_WEBHOOK_ID: 'webhook', PAYPAL_LIVE_PRODUCT_ID: 'product',
     PAYPAL_LIVE_FOUNDER_PLAN_ID: 'P-15', PADDLE_API_KEY: 'paddle-key',
-    PADDLE_CLIENT_TOKEN: 'client-token', PADDLE_PRICE_ID: 'pri_founder', PADDLE_WEBHOOK_SECRET: 'webhook-secret',
+    PADDLE_CLIENT_TOKEN: 'client-token', PADDLE_PRICE_ID: 'pri_01m38sk06dtyhga2d4h36rt5dc', PADDLE_WEBHOOK_SECRET: 'webhook-secret',
     LEGAL_OPERATOR_JSON: JSON.stringify({
       legalName: 'Test', entityType: 'Particular', address: 'Test address', country: 'Argentina',
       taxId: '', registration: '', supportEmail: 'support@example.test', privacyEmail: 'privacy@example.test',
@@ -504,10 +504,10 @@ test('Paddle API must confirm exact price, completed transaction and customer em
   const paymentId = `txn_${'a'.repeat(26)}`;
   const subscriptionId = `sub_${'b'.repeat(26)}`;
   await claims.markPurchaseCheckout(db, claimId, 'paddle', { paymentId });
-  const price = { id: 'pri_founder', unit_price: { amount: '1500', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
+  const price = { id: 'pri_01m38sk06dtyhga2d4h36rt5dc', product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal', unit_price: { amount: '1550', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
   const custom_data = { spanishcue_claim_id: claimId, spanishcue_offer_code: 'founder-1000-usd15-monthly' };
   let customerEmail;
-  let total = '1500';
+  let total = '1550';
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async url => {
     if (String(url).includes('/transactions/')) {
@@ -515,7 +515,7 @@ test('Paddle API must confirm exact price, completed transaction and customer em
       return Response.json({ data: {
       id: paymentId, status: 'completed', subscription_id: subscriptionId, customer_id: 'ctm_1',
       customer: { id: 'ctm_1', email: customerEmail }, custom_data,
-      items: [{ quantity: 1, price }], currency_code: 'USD', details: { totals: { total } },
+      billing_period: { starts_at: new Date(Date.now()).toISOString(), ends_at: new Date(Date.now()+30*86400000).toISOString() }, items: [{ quantity: 1, price }], currency_code: 'USD', details: { totals: { total } },
     } });
     }
     if (String(url).includes('/subscriptions/')) return Response.json({ data: {
@@ -525,11 +525,11 @@ test('Paddle API must confirm exact price, completed transaction and customer em
     throw new Error('No separate customer.read API call is needed');
   };
   try {
-    const config = { apiKey: 'test', priceId: 'pri_founder' };
+    const config = { apiKey: 'test', priceId: 'pri_01m38sk06dtyhga2d4h36rt5dc' };
     assert.equal(await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId), null);
     customerEmail = 'ale@example.test'; total = '1400';
     assert.equal(await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId), null);
-    total = '1500';
+    total = '1550';
     assert.equal((await claims.verifyGuestPaddlePayment(db, config, await claims.getPurchaseClaim(db, claimId), paymentId))?.status, 'paid');
     assert.equal(sqlite.prepare('SELECT normalized_email FROM billing_purchase_claims WHERE claim_id = ?').get(claimId).normalized_email, customerEmail);
   } finally { globalThis.fetch = originalFetch; sqlite.close(); }
@@ -545,7 +545,7 @@ test('claimed Paddle renewal accepts a verified customer whose billing email lat
   const db = asD1(sqlite);
   const env = {
     DB: db, PAYPAL_ENV: 'live', PADDLE_API_KEY: 'paddle-key',
-    PADDLE_CLIENT_TOKEN: 'client-token', PADDLE_PRICE_ID: 'pri_founder', PADDLE_WEBHOOK_SECRET: 'signing-secret',
+    PADDLE_CLIENT_TOKEN: 'client-token', PADDLE_PRICE_ID: 'pri_01m38sk06dtyhga2d4h36rt5dc', PADDLE_WEBHOOK_SECRET: 'signing-secret',
   };
   globalThis.__issue40TestEnv = env;
   const config = claims.billingConfig(env);
@@ -563,15 +563,15 @@ test('claimed Paddle renewal accepts a verified customer whose billing email lat
     amountCents: 1500, currency: 'USD', paidAt: Math.floor(Date.now() / 1000),
     paidThrough: Math.floor(Date.now() / 1000) + 2592000,
   });
-  await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'ale@example.test', config, 'pri_founder');
+  await claims.bindPurchaseToUser(db, claimId, 'teacher-1', 'ale@example.test', config, 'pri_01m38sk06dtyhga2d4h36rt5dc');
   const { POST } = await route('app/api/billing/paddle/webhook/route.ts');
   const custom_data = { spanishcue_claim_id: claimId, spanishcue_offer_code: config.founderOffer.code };
-  const price = { id: 'pri_founder', unit_price: { amount: '1500', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
+  const price = { id: 'pri_01m38sk06dtyhga2d4h36rt5dc', product_id:'pro_01m38sbhv4c8756pat80kfhda0',tax_mode:'internal', unit_price: { amount: '1500', currency_code: 'USD' }, billing_cycle: { interval: 'month', frequency: 1 }, trial_period: null };
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async url => Response.json({ data: String(url).includes('/transactions/') ? {
     id: renewal, status: 'completed', subscription_id: subscriptionId, customer_id: 'ctm_1',
     customer: { id: 'ctm_1', email: 'updated@example.test' }, custom_data,
-    items: [{ quantity: 1, price }], details: { totals: { total: '1500' } }, currency_code: 'USD',
+    billing_period: { starts_at: new Date(Date.now()+30*86400000).toISOString(), ends_at: new Date(Date.now()+60*86400000).toISOString() }, items: [{ quantity: 1, price }], details: { totals: { total: '1500' } }, currency_code: 'USD',
   } : {
     id: subscriptionId, customer_id: 'ctm_1', status: 'active', custom_data,
     items: [{ quantity: 1, price }], current_billing_period: { ends_at: new Date(Date.now() + 60 * 86400000).toISOString() },

@@ -104,14 +104,15 @@ export async function recordVerifiedPurchase(db: D1Database, claimId: string, pr
 }) {
   const normalized = input.email.trim().toLowerCase();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized) ||
-      !input.subscriptionId || !input.paymentId || input.amountCents !== APPROVED_PRICE_CENTS ||
+      !input.subscriptionId || !input.paymentId || !(provider === "paddle" ? [200, 1500, 1550].includes(input.amountCents) : input.amountCents === APPROVED_PRICE_CENTS) ||
       input.currency !== "USD" || !Number.isInteger(input.paidAt) || input.paidAt <= 0 ||
       !Number.isInteger(input.paidThrough) || input.paidThrough <= input.paidAt) {
     throw new Error("purchase_provider_verification_missing");
   }
   const already = await getPurchaseClaim(db, claimId);
-  if (already?.status === "paid" && already.provider === provider && already.providerPaymentId === input.paymentId &&
-      already.providerSubscriptionId === input.subscriptionId && already.normalizedEmail === normalized) return already;
+  if (already?.status === "paid" && already.provider === provider &&
+      already.providerSubscriptionId === input.subscriptionId && already.normalizedEmail === normalized &&
+      (already.paidThrough ?? 0) >= input.paidThrough) return already;
   const stamp = now();
   const result = await db.prepare(`UPDATE billing_purchase_claims SET
     status = 'paid', buyer_email = ?, normalized_email = ?,
@@ -121,14 +122,18 @@ export async function recordVerifiedPurchase(db: D1Database, claimId: string, pr
     expires_at = ?, updated_at = ?
     WHERE claim_id = ? AND provider = ? AND status IN ('checkout', 'paid')
       AND (provider_subscription_id IS NULL OR provider_subscription_id = ?)
-      AND (provider_payment_id IS NULL OR provider_payment_id = ?)
-      AND (normalized_email IS NULL OR normalized_email = ?)`)
+      AND (provider_payment_id IS NULL OR provider_payment_id = ? OR (provider = 'paddle' AND status = 'paid' AND provider_subscription_id = ? AND provider_customer_id = ?))
+      AND (normalized_email IS NULL OR normalized_email = ?)
+      AND (paid_through IS NULL OR paid_through < ?)`)
     .bind(input.email.trim(), normalized, input.customerId ?? null, input.subscriptionId, input.paymentId,
       input.eventId ?? null, input.providerStatus ?? null, input.amountCents, input.currency,
       input.paidThrough, input.paidAt, stamp + 30 * 86400, stamp, claimId, provider,
-      input.subscriptionId, input.paymentId, normalized).run();
+      input.subscriptionId, input.paymentId, input.subscriptionId, input.customerId ?? null, normalized, input.paidThrough).run();
   if ((result.meta.changes ?? 0) !== 1) {
     const existing = await getPurchaseClaim(db, claimId);
+    if (existing?.status === "paid" && existing.provider === provider &&
+        existing.providerSubscriptionId === input.subscriptionId && existing.normalizedEmail === normalized &&
+        existing.providerCustomerId === (input.customerId ?? null) && (existing.paidThrough ?? 0) >= input.paidThrough) return existing;
     if (existing?.status === "claimed" && existing.provider === provider &&
         existing.providerSubscriptionId === input.subscriptionId && existing.providerPaymentId === input.paymentId) return existing;
     throw new Error("purchase_verification_conflict");

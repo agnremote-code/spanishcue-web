@@ -148,7 +148,7 @@ test("paywall puts dual-provider purchase actions directly below the price", asy
   const checkout = page.indexOf("<CheckoutButton", price);
   const facts = page.indexOf('className="paywall-billing-facts"', price);
   assert.ok(price >= 0 && checkout > price && facts > checkout);
-  assert.match(button, /Pagar con tarjeta · US\$15\/mes/);
+  assert.match(button, /Pagar con tarjeta · US\$15\.50\/mes/);
   assert.match(button, /Pagar con PayPal/);
   assert.match(button, /cdn\.paddle\.com\/paddle\/v2\/paddle\.js/);
   assert.match(button, /checkout\.completed/);

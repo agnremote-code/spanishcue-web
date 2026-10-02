@@ -14,7 +14,7 @@ export async function bindPurchaseToUser(
 ) {
   const claim = await beginPurchaseBind(db, claimId, userId, verifiedEmail);
   if (!claim || claim.environment !== config.paypalEnv || claim.offerCode !== config.founderOffer.code ||
-      claim.amountCents !== 1500 || claim.currency !== "USD" ||
+      typeof claim.amountCents !== "number" || !(claim.provider === "paddle" ? [200, 1500, 1550].includes(claim.amountCents ?? 0) : claim.amountCents === 1500) || claim.currency !== "USD" ||
       !claim.providerSubscriptionId || !claim.providerPaymentId || !claim.paidAt ||
       !claim.paidThrough || claim.paidThrough <= Math.floor(Date.now() / 1000)) return null;
 
@@ -45,7 +45,7 @@ export async function bindPurchaseToUser(
     });
     await recordPaddleCompletedPayment(db, {
       userId, subscriptionId: claim.providerSubscriptionId, transactionId: claim.providerPaymentId,
-      eventId: claim.providerEventId, amountCents: claim.amountCents, currency: claim.currency,
+      eventId: claim.providerEventId, amountCents: claim.amountCents, currency: claim.currency, isTrial: claim.amountCents === 200,
       occurredAt: claim.paidAt, paidThrough: claim.paidThrough,
     }, config);
     if (claim.providerStatus === "paused" || claim.providerStatus === "past_due" || claim.providerStatus === "canceled") {
