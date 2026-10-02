@@ -33,3 +33,26 @@
 @media(prefers-reduced-motion:reduce){.premium-scene>img,.premium-back span,.founder-form button{animation:none;transition:none}}
 .pro-result{min-height:100vh;display:grid;place-content:center;justify-items:center;gap:18px;padding:86px 20px 40px;background:radial-gradient(circle at 50% 20%,#168cff55,transparent 35%),#03112d;color:#f8fcff;text-align:center;font-family:Inter,ui-sans-serif,system-ui;position:relative}.pro-result-language{position:absolute;top:22px;right:22px}.pro-result img{width:min(220px,55vw);height:160px;object-fit:contain;filter:drop-shadow(0 18px 30px #0009)}.pro-result>span{color:#67d8ff;font-size:12px;font-weight:900;letter-spacing:1.5px}.pro-result h1{margin:0;font-size:clamp(40px,8vw,76px);letter-spacing:-3px;text-transform:uppercase}.pro-result p{max-width:540px;margin:0;color:#c9d9eb;font-size:18px;line-height:1.55}.pro-success-status{display:grid;justify-items:center;gap:18px}.pro-success-button,.pro-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border:0;border-radius:10px;background:#67e8df;color:#041327!important;text-decoration:none;font-size:13px;font-weight:950;cursor:pointer}.pro-secondary{margin-top:-10px;background:transparent;color:#9de9ff!important;border:1px solid #55d7ff66}.pro-success-note{font-size:15px!important;color:#aebbd2!important}
 .paywall-billing-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:15px 0}.paywall-billing-facts div{padding:11px;border:1px solid #d6e4ef;border-radius:10px;background:#f6fbff}.paywall-billing-facts dt{color:#506f8a;font-size:11px;font-weight:900;text-transform:uppercase}.paywall-billing-facts dd{margin:4px 0 0;color:#173c65;font-size:13px;font-weight:800;line-height:1.35}.checkout-legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 13px;margin-top:12px}.checkout-legal-links a{color:#bdeaff;font-size:12px;font-weight:750;text-decoration:underline;text-underline-offset:3px}@media(max-width:430px){.paywall-billing-facts{grid-template-columns:1fr}}
+
+
+/* Payment brand treatment shared by /acceso and paid-search checkout blocks. */
+.checkout-action .checkout-card-button{background:#fff;color:#071a36;border:1px solid #d7e2ec;box-shadow:0 10px 26px #00152e24}
+.checkout-action .checkout-card-button:hover:not(:disabled){background:#f8fbff;box-shadow:0 15px 30px #00152e30}
+.checkout-action .checkout-paypal-button{background:#ffc439;color:#003087;box-shadow:0 10px 28px #ffc4392e}
+.checkout-action .checkout-paypal-button:hover:not(:disabled){background:#ffcf5a;box-shadow:0 15px 32px #ffc43942}
+.checkout-button-content{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;width:100%}
+.checkout-paypal-content{gap:9px}
+.brand-paypal{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:7px;background:#0070ba;color:#fff;font-family:Arial Black,Arial,sans-serif;font-size:17px;font-style:italic;line-height:1;box-shadow:inset -4px 0 0 #003087}
+.card-brands{display:inline-flex;align-items:center;gap:7px;height:24px}
+.brand-visa,.brand-amex{display:inline-flex;align-items:center;justify-content:center;height:20px;padding:0 5px;border-radius:4px;font-family:Arial Black,Arial,sans-serif;font-size:9px;line-height:1;letter-spacing:.25px}
+.brand-visa{background:#fff;color:#17357a;border:1px solid #ccd6e5;font-style:italic}
+.brand-amex{background:#2b9ecb;color:#fff;border:1px solid #188ab5}
+.brand-mastercard{position:relative;display:inline-block;width:29px;height:20px}
+.brand-mastercard i{position:absolute;top:2px;width:16px;height:16px;border-radius:50%}
+.brand-mastercard i:first-child{left:1px;background:#eb001b}
+.brand-mastercard i:last-child{right:1px;background:#f79e1b;mix-blend-mode:multiply}
+@media(max-width:430px){
+ .checkout-button-content{gap:8px}
+ .card-brands{gap:5px}
+ .brand-visa,.brand-amex{font-size:8px}
+}
