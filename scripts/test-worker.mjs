@@ -10,6 +10,7 @@ const workerEnv={...process.env,NODE_OPTIONS:[process.env.NODE_OPTIONS,shim].fil
 let server;
 const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});
 try{
+ await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);
  await run(['--test','tests/urban-city.test.mjs','tests/noche-abierta.test.mjs']);
  await run(['--test','tests/autoestudio-curriculum.test.mjs']);
  await run(['--test','tests/firebase-admin-worker.test.mjs']);
