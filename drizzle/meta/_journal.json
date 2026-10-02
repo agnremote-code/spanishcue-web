@@ -71,6 +71,13 @@
       "when": 1790228420420,
       "tag": "0009_glossy_mariko_yashida",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1790906096677,
+      "tag": "0010_lesson_reports",
+      "breakpoints": true
     }
   ]
 }
