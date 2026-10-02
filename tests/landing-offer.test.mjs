@@ -3,7 +3,7 @@ import test from 'node:test';
 import { build } from 'esbuild';
 const built = await build({ stdin: { contents: 'export * from "./app/marketing-landing/offer-policy"', resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'node' });
 const { isFounderStatus, liveFounderOffer, shouldShowOffer } = await import(`data:text/javascript;base64,${Buffer.from(built.outputFiles[0].text).toString('base64')}`);
-const live = { mode:'live', checkoutLive:true, enabled:true, available:true, remaining:42, limit:1000, priceUsd:15 };
+const live = { mode:'live', checkoutLive:true, enabled:true, available:true, remaining:42, limit:1000, priceUsd:15.5 };
 test('commercial offer requires confirmed live billing and real valid availability', () => {
  assert.equal(liveFounderOffer(live), true);
  for (const invalid of [null, {}, {...live,mode:'sandbox'}, {...live,checkoutLive:false}, {...live,remaining:0}, {...live,remaining:1001}, {...live,remaining:-1}, {...live,enabled:false}, {...live,available:false}, {...live,remaining:'42'}, {...live,priceUsd:20}]) assert.equal(liveFounderOffer(invalid), false);

@@ -1,4 +1,11 @@
-import type { PaddleRuntimeConfig } from "./paddle-config";
+import { PADDLE_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_PRODUCT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
+
+type PaddlePrice = {
+  id?: unknown; product_id?: unknown; tax_mode?: unknown;
+  unit_price?: { amount?: unknown; currency_code?: unknown };
+  billing_cycle?: { interval?: unknown; frequency?: unknown } | null;
+  trial_period?: { interval?: unknown; frequency?: unknown; requires_payment_method?: unknown; unit_price?: { amount?: unknown; currency_code?: unknown } | null } | null;
+};
 
 type PaddleTransaction = {
   id?: unknown;
@@ -8,15 +15,10 @@ type PaddleTransaction = {
   customer?: { id?: unknown; email?: unknown } | null;
   custom_data?: unknown;
   currency_code?: unknown;
-  billing_period?: { ends_at?: unknown } | null;
+  billing_period?: { starts_at?: unknown; ends_at?: unknown } | null;
   items?: Array<{
     quantity?: unknown;
-    price?: {
-      id?: unknown;
-      unit_price?: { amount?: unknown; currency_code?: unknown };
-      billing_cycle?: { interval?: unknown; frequency?: unknown } | null;
-      trial_period?: unknown;
-    };
+    price?: PaddlePrice;
   }>;
   details?: { totals?: { total?: unknown } };
 };
@@ -30,12 +32,7 @@ type PaddleSubscription = {
   current_billing_period?: { starts_at?: unknown; ends_at?: unknown } | null;
   items?: Array<{
     quantity?: unknown;
-    price?: {
-      id?: unknown;
-      unit_price?: { amount?: unknown; currency_code?: unknown };
-      billing_cycle?: { interval?: unknown; frequency?: unknown } | null;
-      trial_period?: unknown;
-    };
+    price?: PaddlePrice;
   }>;
 };
 
@@ -93,16 +90,18 @@ async function paddleJson<T>(config: PaddleRuntimeConfig, path: string, init: Re
 
 export async function createPaddleCheckoutTransaction(
   config: PaddleRuntimeConfig,
-  input: { userId: string; claimId?: never; offerCode: string } | { claimId: string; userId?: never; offerCode: string },
+  input: { userId: string; claimId?: never; offerCode: string; offer?: PaddleOffer } | { claimId: string; userId?: never; offerCode: string; offer?: PaddleOffer },
 ) {
   const data = await paddleJson<PaddleTransaction>(config, "/transactions", {
     method: "POST",
     body: JSON.stringify({
-      items: [{ price_id: config.priceId, quantity: 1 }],
+      items: [{ price_id: input.offer === "trial" ? config.trialPriceId : config.priceId, quantity: 1 }],
+      currency_code: "USD",
       collection_mode: "automatic",
       custom_data: {
         ...(input.claimId ? { spanishcue_claim_id: input.claimId } : { spanishcue_user_id: input.userId }),
         spanishcue_offer_code: input.offerCode,
+        spanishcue_checkout_offer: input.offer || "monthly",
       },
     }),
   });
@@ -134,7 +133,7 @@ export function validatePaddleClaimTransaction(transaction: PaddleTransaction, c
   return claimFromCustomData(transaction.custom_data, offerCode) === claimId
     && validatePaddleTransaction(transaction, config, claimId, "spanishcue_claim_id")
     && transaction.status === "completed"
-    && Number(transaction.details?.totals?.total) === 1500
+    && paddleTransactionAmountValid(transaction, config)
     && transaction.currency_code === "USD";
 }
 
@@ -144,31 +143,62 @@ export function validatePaddleSubscription(subscription: PaddleSubscription, con
     ? subscription.custom_data as Record<string, unknown>
     : {};
   if (custom[customKey] !== userId) return false;
-  const item = Array.isArray(subscription.items) && subscription.items.length === 1 ? subscription.items[0] : null;
-  if (!item || item.quantity !== 1 || item.price?.id !== config.priceId) return false;
-  return item.price?.unit_price?.amount === "1500"
-    && item.price?.unit_price?.currency_code === "USD"
-    && item.price?.billing_cycle?.interval === "month"
-    && item.price?.billing_cycle?.frequency === 1
-    && item.price?.trial_period == null;
+  return paddleOffer(subscription, config) !== null
+    && (subscription.status !== "trialing" || paddleOffer(subscription, config) === "trial");
 }
 
 export function validatePaddleTransaction(transaction: PaddleTransaction, config: PaddleRuntimeConfig, userId: string, customKey: "spanishcue_user_id" | "spanishcue_claim_id" = "spanishcue_user_id") {
   const custom = transaction.custom_data && typeof transaction.custom_data === "object"
-    ? transaction.custom_data as Record<string, unknown>
-    : {};
-  if (custom[customKey] !== userId) return false;
-  const item = Array.isArray(transaction.items) && transaction.items.length === 1 ? transaction.items[0] : null;
-  return Boolean(
-    item
-    && item.quantity === 1
-    && item.price?.id === config.priceId
-    && item.price?.unit_price?.amount === "1500"
-    && item.price?.unit_price?.currency_code === "USD"
-    && item.price?.billing_cycle?.interval === "month"
-    && item.price?.billing_cycle?.frequency === 1
-    && item.price?.trial_period == null
-  );
+    ? transaction.custom_data as Record<string, unknown> : {};
+  return custom[customKey] === userId && paddleOffer(transaction, config) !== null;
+}
+
+/** Only the two configured catalog prices are valid. The trial remains on its
+ * original price ID after conversion; its base billing cycle is still monthly. */
+export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: PaddleRuntimeConfig): PaddleOffer | null {
+  if (config.priceId !== PADDLE_MONTHLY_PRICE_ID || (config.trialPriceId && config.trialPriceId !== PADDLE_TRIAL_PRICE_ID)) return null;
+  const item = entity.items?.length === 1 ? entity.items[0] : null;
+  const price = item?.price;
+  if (!price || item?.quantity !== 1 || price.product_id !== PADDLE_PRODUCT_ID
+      || price.tax_mode !== "internal" || !(price.unit_price?.amount === String(PADDLE_MONTHLY_CENTS) || (config.legacyMonthly && price.id === config.priceId && price.unit_price?.amount === "1500"))
+      || price.unit_price?.currency_code !== "USD" || price.billing_cycle?.interval !== "month"
+      || price.billing_cycle.frequency !== 1) return null;
+  if (price.id === config.priceId && price.trial_period == null) return "monthly";
+  const trial = price.trial_period;
+  if (config.trialPriceId && config.trialPriceId !== config.priceId && price.id === config.trialPriceId
+      && trial?.interval === "day" && trial.frequency === 1 && trial.requires_payment_method !== false
+      && trial.unit_price?.amount === String(PADDLE_TRIAL_CENTS) && trial.unit_price.currency_code === "USD") return "trial";
+  return null;
+}
+
+function paddleTransactionAmountValid(transaction: PaddleTransaction, config: PaddleRuntimeConfig) {
+  const offer = paddleOffer(transaction, config);
+  const amount = Number(transaction.details?.totals?.total);
+  return offer !== null && (amount === Number(transaction.items?.[0].price?.unit_price?.amount) || (offer === "trial" && amount === PADDLE_TRIAL_CENTS));
+}
+
+/** Derive grants from the paid transaction's period, never from a newer
+ * subscription period: replaying yesterday's trial cannot buy another month. */
+export function paddleCompletedPayment(transaction: PaddleTransaction, subscription: PaddleSubscription, config: PaddleRuntimeConfig) {
+  const offer = paddleOffer(transaction, config);
+  if (!offer || paddleOffer(subscription, config) !== offer
+      || transaction.items?.[0].price?.id !== subscription.items?.[0].price?.id
+      || transaction.status !== "completed" || transaction.currency_code !== "USD"
+      || !paddleTransactionAmountValid(transaction, config)
+      || transaction.subscription_id !== subscription.id || !transaction.customer_id
+      || transaction.customer_id !== subscription.customer_id) return null;
+  const amountCents = Number(transaction.details?.totals?.total);
+  const isTrial = amountCents === PADDLE_TRIAL_CENTS;
+  const period = transaction.billing_period ?? (isTrial && subscription.status === "trialing" ? subscription.current_billing_period : null);
+  const start = typeof period?.starts_at === "string" ? Math.floor(Date.parse(period.starts_at) / 1000) : NaN;
+  const end = typeof period?.ends_at === "string" ? Math.floor(Date.parse(period.ends_at) / 1000) : NaN;
+  if (!Number.isInteger(start) || !Number.isInteger(end) || end <= start
+      || (isTrial && end - start !== 86400)
+      || (!isTrial && (end - start < 28 * 86400 || end - start > 31 * 86400))
+      || (subscription.status === "trialing" && !isTrial)
+      || !["active", "trialing", "canceled", "paused", "past_due"].includes(String(subscription.status))) return null;
+  return { amountCents, currency: "USD", isTrial, paidThrough: end, paidAt: start,
+    priceId: String(transaction.items![0].price!.id) };
 }
 
 export async function pausePaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {

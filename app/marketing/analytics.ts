@@ -15,6 +15,7 @@ export const marketingEvents = [
   "pricing_view",
   "paywall_view",
   "checkout_start",
+  "trial_checkout_start",
   "subscription_first_paid",
   "search_used",
   "filter_used",

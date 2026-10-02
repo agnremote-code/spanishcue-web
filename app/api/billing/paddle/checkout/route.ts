@@ -2,8 +2,8 @@ import { env } from "cloudflare:workers";
 import { accountIdFromHeaders, fullAccessFromHeaders, safeRelativeReturnPath } from "../../../../access-policy";
 import { billingConfig, billingReadiness } from "../../../../billing-config";
 import { legalOperator } from "../../../../legal/operator";
-import { paddleConfig, paddleReady } from "../../../../paddle-config";
-import { createPaddleCheckoutTransaction } from "../../../../paddle-server";
+import { paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
+import { createPaddleCheckoutTransaction, getPaddleTransaction, paddleOffer } from "../../../../paddle-server";
 import { getFounderOfferStatus } from "../../../../../db/billing";
 import { authorizePurchaseClaim, getOrCreatePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { lockPurchaseCheckout, markPurchaseCheckout, releasePurchaseCheckout } from "../../../../../db/purchase-claims";
@@ -40,16 +40,26 @@ export async function POST(request: Request) {
   if (!founder.available) return Response.json({ error: "El precio fundador ya no está disponible." }, { status: 409 });
 
   let returnTo = "/";
+  let offer: PaddleOffer = "monthly";
   try {
     const raw = await request.text();
     if (raw.length > 1000) throw new Error("invalid_request");
-    const requested = JSON.parse(raw) as { returnTo?: unknown };
+    const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown };
+    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial")) throw new Error("invalid_offer");
+    offer = requested.offer === "trial" ? "trial" : "monthly";
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
 
   try {
     if (!userId) {
-      const { claim, setCookie } = await getOrCreatePurchaseClaim(env.DB, request.headers.get("cookie"), "paddle", {
+      let cookie = request.headers.get("cookie");
+      const previous = await authorizePurchaseClaim(env.DB, cookie, "paddle");
+      if (previous?.status === "checkout" && previous.providerPaymentId) {
+        const transaction = await getPaddleTransaction(paddle, previous.providerPaymentId);
+        if (transaction.status === "completed") return Response.json({ claimUrl: "/pro/claim?provider=paddle" });
+        if (paddleOffer(transaction, paddle) !== offer) cookie = null;
+      }
+      const { claim, setCookie } = await getOrCreatePurchaseClaim(env.DB, cookie, "paddle", {
         environment: "live", offerCode: billing.founderOffer.code, returnTo,
       });
       const headers = { "cache-control": "private, no-store", ...(setCookie ? { "set-cookie": setCookie } : {}) };
@@ -60,7 +70,7 @@ export async function POST(request: Request) {
       if (!locked) return Response.json({ error: "Estamos preparando tu pago. Reintentá en unos segundos." }, { status: 409, headers });
       try {
         const transactionId = await createPaddleCheckoutTransaction(paddle, {
-          claimId: claim.claimId, offerCode: billing.founderOffer.code,
+          claimId: claim.claimId, offerCode: billing.founderOffer.code, offer,
         });
         await markPurchaseCheckout(env.DB, claim.claimId, "paddle", { paymentId: transactionId });
         return Response.json({ transactionId, clientToken: paddle.clientToken }, { headers });
@@ -71,6 +81,7 @@ export async function POST(request: Request) {
     }
     const transactionId = await createPaddleCheckoutTransaction(paddle, {
       userId,
+      offer,
       offerCode: billing.founderOffer.code,
     });
     return Response.json(

@@ -187,6 +187,7 @@ export async function recordPaddleCompletedPayment(
     transactionId: string;
     eventId?: string | null;
     amountCents: number;
+    isTrial?: boolean;
     currency: string;
     occurredAt: number;
     paidThrough: number;
@@ -194,6 +195,7 @@ export async function recordPaddleCompletedPayment(
   config: BillingRuntimeConfig,
 ) {
   if (config.paypalEnv !== "live") throw new Error("paddle_requires_live_billing");
+  if (input.currency !== "USD" || (input.isTrial ? input.amountCents !== 200 : ![1500, 1550].includes(input.amountCents))) throw new Error("paddle_payment_amount_invalid");
   const subscription = await paddleSubscriptionById(db, input.subscriptionId);
   if (!subscription || subscription.userId !== input.userId) throw new Error("paddle_subscription_unknown");
 
@@ -232,19 +234,19 @@ export async function recordPaddleCompletedPayment(
   if (!payment) throw new Error("paddle_payment_not_persisted");
 
   const earliest = await db.prepare(
-    `SELECT id FROM billing_payments WHERE subscription_id = ? ORDER BY occurred_at, id LIMIT 1`,
+    `SELECT id FROM billing_payments WHERE subscription_id = ? AND amount_cents >= 1500 AND status = 'COMPLETED' ORDER BY occurred_at, id LIMIT 1`,
   ).bind(subscription.id).first<{ id: number }>();
-  const isFirst = earliest?.id === payment.id;
+  const isFirst = !input.isTrial && earliest?.id === payment.id;
   const paidThrough = Math.max(subscription.paidThrough ?? 0, input.paidThrough);
   await db.prepare(
     `UPDATE billing_subscriptions SET
       status = CASE WHEN status IN ('CANCELLED', 'SUSPENDED', 'EXPIRED') THEN status ELSE 'ACTIVE' END,
       first_payment_at = COALESCE(first_payment_at, ?),
-      last_payment_at = ?,
-      paid_through = ?,
+      last_payment_at = MAX(COALESCE(last_payment_at, 0), ?),
+      paid_through = MAX(COALESCE(paid_through, 0), ?),
       updated_at = ?
      WHERE id = ?`,
-  ).bind(input.occurredAt, input.occurredAt, paidThrough, stamp, subscription.id).run();
+  ).bind(input.isTrial ? null : input.occurredAt, input.occurredAt, paidThrough, stamp, subscription.id).run();
 
   await db.prepare(
     `INSERT INTO access_grants (
@@ -256,7 +258,7 @@ export async function recordPaddleCompletedPayment(
       source_reference = excluded.source_reference,
       plan_code = excluded.plan_code,
       status = 'active',
-      expires_at = excluded.expires_at,
+      expires_at = MAX(COALESCE(access_grants.expires_at, 0), excluded.expires_at),
       updated_at = excluded.updated_at`,
   ).bind(
     input.userId,
@@ -273,7 +275,7 @@ export async function recordPaddleCompletedPayment(
     await claimFounderSlot(db, subscription.id, input.userId, config);
   }
 
-  const eventName = isFirst ? "first_subscription_paid" : "subscription_renewed";
+  const eventName = input.isTrial ? "trial_paid" : isFirst ? "first_subscription_paid" : "subscription_renewed";
   await db.prepare(
     `INSERT INTO billing_outbox_events (
       provider, environment, event_key, event_name, user_id, subscription_id, payment_id, occurred_at, created_at

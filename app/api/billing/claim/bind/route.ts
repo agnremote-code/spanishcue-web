@@ -1,6 +1,7 @@
 import { env } from "cloudflare:workers";
 import { accountIdFromHeaders, emailFromHeaders } from "../../../../access-policy";
 import { billingConfig } from "../../../../billing-config";
+import { getPaddleTransaction, validatePaddleClaimTransaction } from "../../../../paddle-server";
 import { paddleConfig } from "../../../../paddle-config";
 import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { bindPurchaseToUser } from "../../../../../db/purchase-binding";
@@ -25,14 +26,21 @@ export async function POST(request: Request) {
   if (!cookieClaim || cookieClaim.provider !== provider) return Response.json({ error: "No encontramos esta compra en el navegador." }, { status: 404 });
   const config = billingConfig(env);
   if (cookieClaim.environment !== config.paypalEnv || cookieClaim.offerCode !== config.founderOffer.code ||
-      cookieClaim.amountCents !== 1500 || cookieClaim.currency !== "USD") {
+      !(provider === "paddle" ? [200, 1500, 1550].includes(cookieClaim.amountCents ?? 0) : cookieClaim.amountCents === 1500) || cookieClaim.currency !== "USD") {
     return Response.json({ error: "La compra no coincide con la oferta." }, { status: 409 });
   }
   if (cookieClaim.normalizedEmail !== email.trim().toLowerCase()) {
     return Response.json({ error: "Ingresá con el mismo email confirmado por el proveedor de pago." }, { status: 409 });
   }
   try {
-    const result = await bindPurchaseToUser(env.DB, cookieClaim.claimId, userId, email, config, paddleConfig(env).priceId);
+    const paddle = { ...paddleConfig(env), legacyMonthly: cookieClaim.amountCents === 1500 && !!cookieClaim.paidAt };
+    let priceId = paddle.priceId;
+    if (provider === "paddle") {
+      const transaction = await getPaddleTransaction(paddle, cookieClaim.providerPaymentId || "");
+      if (!validatePaddleClaimTransaction(transaction, paddle, cookieClaim.claimId, cookieClaim.offerCode)) throw new Error("paddle_claim_mismatch");
+      priceId = String(transaction.items![0].price!.id);
+    }
+    const result = await bindPurchaseToUser(env.DB, cookieClaim.claimId, userId, email, config, priceId);
     if (!result) return Response.json({ error: "Estamos esperando la confirmación del pago." }, { status: 409 });
     return Response.json({ accessConfirmed: true, ...result },
       { headers: { "cache-control": "private, no-store" } });

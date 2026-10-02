@@ -2,6 +2,8 @@ import { env } from "cloudflare:workers";
 import { billingConfig } from "../../../../billing-config";
 import { paddleConfig, paddleReady } from "../../../../paddle-config";
 import {
+  paddleCompletedPayment,
+  validatePaddleTransaction,
   getPaddleSubscription,
   getPaddleTransaction,
   validatePaddleClaimSubscription,
@@ -12,6 +14,7 @@ import {
   type PaddleTransaction,
 } from "../../../../paddle-server";
 import {
+  paddleSubscriptionById,
   applyPaddleLifecycle,
   finishPaddleWebhook,
   markPaddleWebhookReceived,
@@ -38,7 +41,7 @@ function seconds(value: unknown) {
 }
 
 function subscriptionStatus(value: unknown): SubscriptionStatus {
-  if (value === "active") return "ACTIVE";
+  if (value === "active" || value === "trialing") return "ACTIVE";
   if (value === "paused" || value === "past_due") return "SUSPENDED";
   if (value === "canceled") return "CANCELLED";
   return "APPROVAL_PENDING";
@@ -56,22 +59,8 @@ function customClaimId(value: { custom_data?: unknown }) {
   return typeof custom.spanishcue_claim_id === "string" ? custom.spanishcue_claim_id : "";
 }
 
-function validTransactionPrice(transaction: PaddleTransaction, priceId: string) {
-  const item = Array.isArray(transaction.items) && transaction.items.length === 1 ? transaction.items[0] : null;
-  return Boolean(
-    item
-    && item.quantity === 1
-    && item.price?.id === priceId
-    && item.price?.unit_price?.amount === "1500"
-    && item.price?.unit_price?.currency_code === "USD"
-    && item.price?.billing_cycle?.interval === "month"
-    && item.price?.billing_cycle?.frequency === 1
-    && item.price?.trial_period == null
-  );
-}
-
 export async function POST(request: Request) {
-  const paddle = paddleConfig(env);
+  let paddle = paddleConfig(env);
   const billing = billingConfig(env);
   if (!paddleReady(paddle) || billing.paypalEnv !== "live") {
     return new Response("billing unavailable", { status: 503 });
@@ -104,6 +93,11 @@ export async function POST(request: Request) {
   }
 
   try {
+    const existingId = eventType.startsWith("subscription.") ? data.id : data.subscription_id;
+    if (typeof existingId === "string") {
+      const existing = await paddleSubscriptionById(env.DB, existingId);
+      if (existing?.firstPaymentAt) paddle = { ...paddle, legacyMonthly: true };
+    }
     const occurredAt = seconds(event.occurred_at) ?? Math.floor(Date.now() / 1000);
 
     if (eventType === "transaction.completed") {
@@ -115,6 +109,7 @@ export async function POST(request: Request) {
       if (claimId) {
         const claim = await getPurchaseClaim(env.DB, claimId);
         if (!claim || claim.provider !== "paddle" || claim.environment !== "live") throw new Error("paddle_claim_unknown");
+        if (claim.amountCents === 1500 && claim.paidAt && claim.providerSubscriptionId) paddle = { ...paddle, legacyMonthly: true };
         if (claim.status === "claimed" && claim.claimedUserId) {
           if (!validatePaddleClaimTransaction(remoteTransaction, paddle, claimId, claim.offerCode)) {
             throw new Error("paddle_claim_transaction_mismatch");
@@ -129,15 +124,15 @@ export async function POST(request: Request) {
           if (!customer || customer.id !== customerId || customerId !== claim.providerCustomerId) {
             throw new Error("paddle_claim_customer_mismatch");
           }
-          const paidThrough = seconds(subscription.current_billing_period?.ends_at);
-          if (!paidThrough) throw new Error("paddle_claim_period_missing");
+          const payment = paddleCompletedPayment(remoteTransaction, subscription, paddle);
+          if (!payment || subscriptionId !== claim.providerSubscriptionId) throw new Error("paddle_claim_period_missing");
           await upsertPaddleSubscription(env.DB, {
-            userId: claim.claimedUserId, subscriptionId, customerId, priceId: paddle.priceId,
-            offerCode: claim.offerCode, status: "ACTIVE", nextBillingTime: subscription.next_billed_at, occurredAt,
+            userId: claim.claimedUserId, subscriptionId, customerId, priceId: payment.priceId,
+            offerCode: claim.offerCode, status: subscriptionStatus(subscription.status), nextBillingTime: subscription.next_billed_at, occurredAt,
           });
           await recordPaddleCompletedPayment(env.DB, {
             userId: claim.claimedUserId, subscriptionId, transactionId, eventId,
-            amountCents: 1500, currency: "USD", occurredAt, paidThrough,
+            ...payment, occurredAt,
           }, billing);
         } else if (!(await verifyGuestPaddlePayment(env.DB, paddle, claim, transactionId, eventId))) {
           throw new Error("paddle_claim_payment_pending");
@@ -145,29 +140,22 @@ export async function POST(request: Request) {
         await finishPaddleWebhook(env.DB, eventId, "processed");
         return Response.json({ ok: true });
       }
-      const subscriptionId = typeof transaction.subscription_id === "string" ? transaction.subscription_id : "";
-      if (!subscriptionId || !validTransactionPrice(transaction, paddle.priceId)) {
-        throw new Error("paddle_transaction_mismatch");
-      }
+      const subscriptionId = typeof remoteTransaction.subscription_id === "string" ? remoteTransaction.subscription_id : "";
+      if (!subscriptionId) throw new Error("paddle_transaction_mismatch");
       const subscription = await getPaddleSubscription(paddle, subscriptionId);
       const userId = customUserId(subscription);
-      if (!userId || !validatePaddleSubscription(subscription, paddle, userId)) {
-        throw new Error("paddle_subscription_mismatch");
-      }
-      const paidThrough = seconds(subscription.current_billing_period?.ends_at);
-      const amountCents = Number(transaction.details?.totals?.total);
-      const currency = typeof transaction.currency_code === "string" ? transaction.currency_code : "";
-      if (!paidThrough || !Number.isInteger(amountCents) || amountCents !== 1500 || currency !== "USD") {
-        throw new Error("paddle_payment_mismatch");
-      }
+      if (!userId || !validatePaddleSubscription(subscription, paddle, userId)
+          || !validatePaddleTransaction(remoteTransaction, paddle, userId)) throw new Error("paddle_subscription_mismatch");
+      const payment = paddleCompletedPayment(remoteTransaction, subscription, paddle);
+      if (!payment) throw new Error("paddle_payment_mismatch");
 
       await upsertPaddleSubscription(env.DB, {
         userId,
         subscriptionId,
         customerId: typeof subscription.customer_id === "string" ? subscription.customer_id : null,
-        priceId: paddle.priceId,
+        priceId: String(subscription.items?.[0].price?.id || ""),
         offerCode: billing.founderOffer.code,
-        status: "ACTIVE",
+        status: subscriptionStatus(subscription.status),
         nextBillingTime: subscription.next_billed_at,
         occurredAt,
       });
@@ -176,16 +164,14 @@ export async function POST(request: Request) {
         subscriptionId,
         transactionId,
         eventId,
-        amountCents,
-        currency,
+        ...payment,
         occurredAt,
-        paidThrough,
       }, billing);
       await finishPaddleWebhook(env.DB, eventId, "processed");
       return Response.json({ ok: true });
     }
 
-    if (eventType === "subscription.created" || eventType === "subscription.updated" || eventType === "subscription.canceled") {
+    if (eventType === "subscription.created" || eventType === "subscription.updated" || eventType === "subscription.canceled" || eventType === "subscription.activated" || eventType === "subscription.trialing" || eventType === "subscription.paused" || eventType === "subscription.past_due") {
       const subscription = data as unknown as PaddleSubscription;
       const subscriptionId = typeof subscription.id === "string" ? subscription.id : "";
       const claimId = customClaimId(subscription);
@@ -204,7 +190,7 @@ export async function POST(request: Request) {
           await upsertPaddleSubscription(env.DB, {
             userId: claim.claimedUserId, subscriptionId,
             customerId: typeof subscription.customer_id === "string" ? subscription.customer_id : null,
-            priceId: paddle.priceId, offerCode: claim.offerCode, status,
+            priceId: String(subscription.items?.[0].price?.id || ""), offerCode: claim.offerCode, status,
             nextBillingTime: subscription.next_billed_at, occurredAt,
           });
           if (status === "CANCELLED" || status === "SUSPENDED") {
@@ -225,7 +211,7 @@ export async function POST(request: Request) {
         userId,
         subscriptionId,
         customerId: typeof subscription.customer_id === "string" ? subscription.customer_id : null,
-        priceId: paddle.priceId,
+        priceId: String(subscription.items?.[0].price?.id || ""),
         offerCode: billing.founderOffer.code,
         status,
         nextBillingTime: subscription.next_billed_at,
@@ -268,7 +254,7 @@ export async function POST(request: Request) {
             userId,
             subscriptionId,
             customerId: typeof subscription.customer_id === "string" ? subscription.customer_id : null,
-            priceId: paddle.priceId,
+            priceId: String(subscription.items?.[0].price?.id || ""),
             offerCode: billing.founderOffer.code,
             status: "SUSPENDED",
             nextBillingTime: subscription.next_billed_at,

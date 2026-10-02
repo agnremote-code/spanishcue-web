@@ -1,0 +1,6 @@
+.checkout-action .payment-brands{display:inline-flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;vertical-align:middle}
+.checkout-action .checkout-card-button,.checkout-action .checkout-paypal-button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;width:100%;white-space:normal}
+.checkout-action .checkout-trial{display:grid;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid #8098ad55;text-align:center}
+.checkout-action .checkout-trial button.checkout-trial-button{background:transparent;color:inherit;border:1px solid currentColor;box-shadow:none;min-height:44px;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:650;cursor:pointer}
+.checkout-action .checkout-trial small{font-size:12px;line-height:1.5}
+.checkout-action .checkout-price-note{font-size:12px;line-height:1.5;margin:0}

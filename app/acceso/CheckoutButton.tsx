@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useI18n } from "../i18n/LocaleProvider";
+import PaymentBrands from "./PaymentBrands";
+import "./payment-options.css";
 import { trackMarketingEvent } from "../marketing/analytics";
 
 type FounderStatus = {
@@ -12,6 +14,8 @@ type FounderStatus = {
   checkoutLive: boolean;
   checkoutAvailable: boolean;
   paddleCheckoutAvailable?: boolean;
+  trialCheckoutAvailable?: boolean;
+  paypalPriceUsd?: number;
   mode: "sandbox" | "live";
 };
 
@@ -125,10 +129,10 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
     window.location.assign(signedIn ? "/cuenta?checkout=paddle" : "/pro/claim?provider=paddle");
   }
 
-  async function checkoutPaddle() {
+  async function checkoutPaddle(offer: "monthly" | "trial" = "monthly") {
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
-    if (!founder?.available || !founder.paddleCheckoutAvailable) return;
-    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paddle" });
+    if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable)) return;
+    trackMarketingEvent(offer === "trial" ? "trial_checkout_start" : "checkout_start", { plan: "founder-1000-usd15-monthly", value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -136,7 +140,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
         method: "POST",
         credentials: "same-origin",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ returnTo }),
+        body: JSON.stringify({ returnTo, offer }),
       });
       const body = await response.json() as { transactionId?: unknown; clientToken?: unknown; claimUrl?: unknown; error?: unknown };
       if (response.ok && body.claimUrl === "/pro/claim?provider=paddle") {
@@ -216,20 +220,31 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
     </strong>
 
     {founder.paddleCheckoutAvailable && (
-      <button className="checkout-card-button" type="button" onClick={checkoutPaddle} disabled={busy || !founder.available}>
+      <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !founder.available}>
         {status === "paddle" || status === "confirming"
           ? (locale === "es" ? "Procesando pago…" : "Processing payment…")
-          : (locale === "es" ? "Pagar con tarjeta · US$15/mes" : "Pay by card · US$15/month")}
+          : (locale === "es" ? "Pagar con tarjeta · US$15.50/mes" : "Pay by card · US$15.50/month")}
+        <PaymentBrands /><span className="sr-only">Visa, Mastercard, American Express</span>
       </button>
     )}
+
+    {founder.paddleCheckoutAvailable && <p className="checkout-price-note">{locale === "es" ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</p>}
 
     {founder.checkoutLive && (
       <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>
         {status === "paypal"
           ? t("checkout.openingPayPal")
-          : (locale === "es" ? "Pagar con PayPal" : "Pay with PayPal")}
+           : (locale === "es" ? `Pagar con PayPal · US$${founder.paypalPriceUsd ?? 15}/mes` : `Pay with PayPal · US$${founder.paypalPriceUsd ?? 15}/month`)}
+        <PaymentBrands paypal />
       </button>
     )}
+
+    {founder.trialCheckoutAvailable && <div className="checkout-trial">
+      <button className="checkout-trial-button" type="button" onClick={() => checkoutPaddle("trial")} disabled={busy || !founder.available}>
+        {locale === "es" ? "Probá 1 día por US$2" : "Try 1 day for US$2"}
+      </button>
+      <small>{locale === "es" ? "Después, US$15.50/mes. Cancelá cuando quieras. Impuestos incluidos." : "Then US$15.50/month. Cancel anytime. Taxes included."}</small>
+    </div>}
 
     <p>{locale === "es"
       ? "Pagá primero. Después vinculás la compra a tu cuenta para entrar a PRO."

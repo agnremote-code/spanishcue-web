@@ -3,6 +3,7 @@ import { accountIdFromHeaders } from "../../../../access-policy";
 import { billingConfig } from "../../../../billing-config";
 import { paddleConfig, paddleReady } from "../../../../paddle-config";
 import {
+  paddleCompletedPayment,
   getPaddleSubscription,
   getPaddleTransaction,
   validatePaddleSubscription,
@@ -13,12 +14,6 @@ import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { verifyGuestPaddlePayment } from "../../../../guest-purchase-verification";
 
 export const dynamic = "force-dynamic";
-
-function seconds(value: unknown) {
-  if (typeof value !== "string") return null;
-  const parsed = Date.parse(value);
-  return Number.isFinite(parsed) ? Math.floor(parsed / 1000) : null;
-}
 
 export async function POST(request: Request) {
   if (request.headers.get("origin") !== new URL(request.url).origin) {
@@ -70,21 +65,17 @@ export async function POST(request: Request) {
     if (!validatePaddleSubscription(subscription, paddle, userId)) {
       return Response.json({ error: "La suscripción no coincide con tu cuenta." }, { status: 409 });
     }
-    const paidThrough = seconds(subscription.current_billing_period?.ends_at);
+    const payment = paddleCompletedPayment(transaction, subscription, paddle);
     const occurredAt = Math.floor(Date.now() / 1000);
-    const amountCents = Number(transaction.details?.totals?.total);
-    const currency = typeof transaction.currency_code === "string" ? transaction.currency_code : "";
-    if (!paidThrough || amountCents !== 1500 || currency !== "USD") {
-      return Response.json({ pending: true, accessConfirmed: false }, { status: 202 });
-    }
+    if (!payment) return Response.json({ pending: true, accessConfirmed: false }, { status: 202 });
 
     await upsertPaddleSubscription(env.DB, {
       userId,
       subscriptionId,
       customerId: typeof subscription.customer_id === "string" ? subscription.customer_id : null,
-      priceId: paddle.priceId,
+      priceId: payment.priceId,
       offerCode: billing.founderOffer.code,
-      status: "ACTIVE",
+      status: subscription.status === "canceled" ? "CANCELLED" : ["paused", "past_due"].includes(String(subscription.status)) ? "SUSPENDED" : "ACTIVE",
       nextBillingTime: subscription.next_billed_at,
       occurredAt,
     });
@@ -92,10 +83,8 @@ export async function POST(request: Request) {
       userId,
       subscriptionId,
       transactionId,
-      amountCents,
-      currency,
+      ...payment,
       occurredAt,
-      paidThrough,
     }, billing);
 
     return Response.json(
