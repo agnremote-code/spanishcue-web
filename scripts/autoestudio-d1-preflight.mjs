@@ -4,18 +4,21 @@ import { readFile,writeFile,mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { cloudflareRead } from './autoestudio-release-gate.mjs';
+import { targetFor } from './autoestudio-migration-operation.mjs';
 const hash=value=>createHash('sha256').update(value).digest('hex');
-const id=process.env.PRODUCTION_D1_ID;
-const report={sourceSha:process.env.GITHUB_SHA,createdAt:new Date().toISOString(),readOnlyProduction:true};
+const target=targetFor(process.env.AUTOESTUDIO_MIGRATION_TARGET||'production');
+const id=process.env.PRODUCTION_D1_ID||target.id;
+const report={sourceSha:process.env.RELEASE_SOURCE_SHA||process.env.GITHUB_SHA,createdAt:new Date().toISOString(),readOnlyRemote:true};
 await mkdir('migration-evidence',{recursive:true});
 try {
  assert.match(id||'',/^[a-f0-9-]{36}$/,'Missing production D1 identifier');
- const settings=await cloudflareRead('/workers/scripts/spanishcue/settings');
+ assert.equal(id,target.id,'Configured D1 differs from approved target');
+ const settings=await cloudflareRead(`/workers/scripts/${target.worker}/settings`);
  const binding=settings.bindings?.find(b=>b.name==='DB'&&b.type==='d1');
  assert.equal(binding?.id,id,'Production Worker binding differs from configured production D1');
  const database=await cloudflareRead(`/d1/database/${id}`);
- assert.equal(database.name,'spanishcue-production','Unexpected production database name');
- report.binding={worker:'spanishcue',binding:'DB',id,name:database.name};
+ assert.equal(database.name,target.name,'Unexpected database name');
+ report.binding={worker:target.worker,binding:'DB',id,name:database.name};
  report.signingSecretPresent=settings.bindings.some(b=>b.type==='secret_text'&&b.name==='AUTOESTUDIO_SHARE_SECRET');
  const query=async sql=>{const result=await cloudflareRead(`/d1/database/${id}/query`,{sql});assert.ok(result[0]?.success!==false,'Read-only D1 query failed');return result[0].results;};
  const schema=await query("SELECT type,name,sql FROM sqlite_master WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' ORDER BY name");
@@ -34,6 +37,7 @@ try {
  }
  report.existingShareObjects=schema.filter(r=>r.name.startsWith('autoestudio_')).map(r=>r.name);
  report.ledgerTables=schema.filter(r=>r.type==='table'&&/migration/i.test(r.name)).map(r=>r.name);
+ assert.ok(report.ledgerTables.includes('d1_migrations'),'Recognized migration ledger absent; no operation allowed');
  if(report.ledgerTables.includes('d1_migrations'))report.ledger=await query('SELECT id,name,applied_at FROM d1_migrations ORDER BY id');
  report.releaseBlockers=[];
  if(!reports)report.releaseBlockers.push('Canonical 0010 lesson_reports table is absent; do not apply 0011');
