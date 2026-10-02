@@ -47,10 +47,15 @@ test("the official young man in black replaces legacy mascot assets on product s
   assert.doesNotMatch(`${library}\n${brand}\n${success}`, /chespanish-guide-avatar|\/mascots\//);
 });
 
-test("every main library category card uses a SPANISHCUE mascot illustration", async () => {
-  const library = await source("app/Library.tsx");
+test("visible library features use distinct official mascot poses", async () => {
+  const [library, brand, banner, entry] = await Promise.all([
+    source("app/Library.tsx"),
+    source("app/SpanishCueBrand.tsx"),
+    source("app/NewLessonsBanner.tsx"),
+    source("app/autoestudio/LibraryEntry.tsx"),
+  ]);
   for (const asset of [
-    "/brand/mascot/pointing.webp",
+    "/autoestudio/mascot/writing.webp",
     "/brand/mascot/walking.webp",
     "/brand/mascot/seated.webp",
     "/brand/mascot/speaking.webp",
@@ -58,6 +63,10 @@ test("every main library category card uses a SPANISHCUE mascot illustration", a
   ]) {
     assert.match(library, new RegExp(asset.replaceAll("/", "\\/")));
   }
+  const visibleRoutes = library.slice(library.indexOf('className="route-divider"'), library.indexOf("<AutoestudioLibraryEntry"));
+  const poses = [brand.match(/sc-mascot-cue[^]*?src="([^"]+)"/)?.[1], banner.match(/new-lessons-intro[^]*?src="([^"]+)"/)?.[1], ...[...visibleRoutes.matchAll(/src="(\/(?:brand|autoestudio)\/mascot\/[^"]+)"/g)].map(match => match[1]), entry.match(/ae-library-entry-art[^]*?src="([^"]+)"/)?.[1]];
+  assert.equal(poses.length, 8);
+  assert.equal(new Set(poses).size, poses.length, "hero, banner and library paths should not repeat one cutout");
   assert.doesNotMatch(library, /route-symbol route-mouth|route-symbol route-vocabulary/);
 });
 

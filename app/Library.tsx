@@ -1675,7 +1675,7 @@ export default function Library({
               aria-pressed={category === "Gramática"}
             >
               <span className="route-mascot">
-                <img src="/brand/mascot/pointing.webp" alt="" />
+                <img src="/autoestudio/mascot/writing.webp" alt="" />
               </span>
               <div>
                 <small>{t("common.route", { number: "01" })}</small>

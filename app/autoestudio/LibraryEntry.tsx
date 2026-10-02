@@ -15,7 +15,7 @@ export default function AutoestudioLibraryEntry() {
   return (
     <Link href={href} className="ae-library-entry" aria-label={en ? "Autoestudio: self-study course" : "Autoestudio: curso para estudiar entre clases"}>
       <span className="ae-library-entry-art" aria-hidden="true">
-        <img src="/brand/mascot/studying.webp" alt="" width="900" height="1350" />
+        <img src="/autoestudio/mascot/noting.webp" alt="" width="900" height="1350" />
       </span>
       <span className="ae-library-entry-copy">
         <small>{en ? "NEW · SELF-STUDY COURSE" : "NUEVO · CURSO DE AUTOESTUDIO"}</small>
