@@ -422,3 +422,6 @@
 @media (max-height: 640px) and (min-width: 761px) {
   .na-ts-warmup { display: none; }
 }
+
+/* Travel is visible before the consequence card opens. */
+.na-journey { position:absolute; z-index:12; left:50%; bottom:8%; transform:translateX(-50%); width:max-content; max-width:85%; padding:12px 20px; border:1px solid #ffffff30; border-radius:12px; background:#14202eed; color:#fff7e9; font:500 14px/1.5 system-ui,sans-serif; text-align:center; pointer-events:none; }

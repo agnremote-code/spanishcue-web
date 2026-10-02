@@ -145,7 +145,7 @@ function headGeometry() {
 }
 
 export function createHero(shadows = true): Hero {
-  const skin = material('#cc9670', 0.58);
+  const skin = material('#d4a07b', 0.62);
   const shirt = material('#17171a', 0.72);
   const seam = material('#26262b', 0.6);
   const trousers = material('#121215', 0.64);
@@ -247,8 +247,11 @@ export function createHero(shadows = true): Hero {
     // Sideburns.
     mesh(new THREE.BoxGeometry(0.01, 0.036, 0.018), hair, head, side * 0.095, 0.222, 0.032);
   }
+  // Keep the face readable at the conversational camera distance.
+  head.scale.set(1.12, 1.07, 1.1);
   // Straight nose and a calm mouth.
-  mesh(new THREE.BoxGeometry(0.017, 0.048, 0.022), skin, head, 0, 0.19, 0.11, -0.28);
+  const nose = mesh(new THREE.SphereGeometry(1, 12, 10), skin, head, 0, 0.19, 0.11, -0.28);
+  nose.scale.set(0.011, 0.028, 0.018);
   mesh(new THREE.SphereGeometry(0.013, 8, 6), skin, head, 0, 0.17, 0.118);
   mesh(new THREE.BoxGeometry(0.034, 0.007, 0.008), lip, head, 0, 0.145, 0.1);
 
@@ -258,6 +261,7 @@ export function createHero(shadows = true): Hero {
   const shell = mesh(new THREE.SphereGeometry(1, 24, 14, 0, Math.PI * 2, 0, Math.PI * 0.5), hair, head, 0, 0.212, -0.006, -0.45);
   shell.scale.set(0.108, 0.136, 0.122);
   const lump = new THREE.SphereGeometry(1, 12, 8);
+  const hairLight = material('#543521', 0.82);
   const hairAt = (polar: number, azimuth: number, size: number, lift: number) => {
     const piece = mesh(lump, hair, head,
       Math.sin(polar) * Math.sin(azimuth) * 0.104 * lift,
@@ -279,7 +283,7 @@ export function createHero(shadows = true): Hero {
     }
   });
   for (const [x, y, z, s, rz] of [[-0.06, 0.298, 0.08, 0.04, 0.5], [-0.022, 0.31, 0.095, 0.044, 0.35], [0.02, 0.302, 0.1, 0.04, 0.25], [0.058, 0.286, 0.088, 0.034, 0.1], [-0.035, 0.282, 0.106, 0.026, 0.6]]) {
-    const piece = mesh(lump, hair, head, x, y, z, 0.7, 0, rz);
+    const piece = mesh(lump, x < 0 ? hairLight : hair, head, x, y, z, 0.7, 0, rz);
     piece.scale.set(s * 1.3, s * 0.6, s);
   }
 

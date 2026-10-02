@@ -85,3 +85,6 @@ export function toggleCriterion(state: NightState, criterionId: string): NightSt
 export function nightClock(state: NightState): string;
 export function nightSummary(state: NightState): SummaryItem[];
 export function isValidState(value: unknown): value is NightState;
+
+export type WorldOutcome = { key: string; location: string; travel: "walk" | "ride" | "wait" | "turn"; label: string };
+export function worldOutcome(state: NightState): WorldOutcome | null;

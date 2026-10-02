@@ -911,6 +911,20 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
   root.add(box(0.46, 0.5, 0.06, chair, 13.4, 0.74, -4.46, false));
   stringLights(root, new THREE.Vector3(8.4, 3.3, -7.2), new THREE.Vector3(18.6, 3.3, -7.2), 0.35, night);
 
+  // A small night market and music corner give the plaza taxi outcomes
+  // a real visible destination, beyond a generic patch of grass.
+  for (const [x, cloth] of [[29, '#a04f3c'], [33, '#397467']] as const) {
+    root.add(box(2.6, 0.12, 1.3, solid('#977452'), x, 0.9, 29));
+    root.add(box(3, 0.08, 1.8, solid(cloth), x, 2.5, 29));
+    for (const side of [-1.2, 1.2]) root.add(box(0.05, 2.5, 0.05, solid('#d2bc96'), x + side, 1.25, 29));
+    for (let i = 0; i < 7; i++) root.add(box(0.22, 0.22 + (i % 3) * 0.06, 0.28, solid(['#d9b565', '#ce6755', '#719367'][i % 3]), x - 0.9 + i * 0.3, 1.07, 29));
+  }
+  root.add(box(3.4, 0.25, 2, solid('#564737'), 14, 0.125, 29));
+  for (const x of [12.6, 15.4]) root.add(box(0.5, 0.9, 0.4, solid('#25272c'), x, 0.7, 28.5));
+  const musician = createPerson({ shirt: '#68866d', hair: '#30251e', skin: '#ce9e7c' }, false);
+  placePerson(musician, 14, 28.9, Math.PI, 0.25); root.add(musician.root);
+  root.add(cylinder(0.025, 0.025, 1.45, solid('#303339'), 14, 0.97, 28.3, 6));
+
   // Rooftop of the tall building: railing, lights, a small group.
   const terraza = BUILDINGS.find(b => b.rooftop)!;
   const rail = solid('#9ab1ab', 0.4, 0.6);
@@ -933,6 +947,14 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
     const plant = new THREE.Mesh(new THREE.IcosahedronGeometry(0.6, 1), solid('#3a5a34'));
     plant.position.set(x, top + 1, z);
     root.add(plant);
+  }
+  root.add(box(2.1, 2.5, 2.1, solid('#526962'), 29.7, top + 1.25, -20));
+  root.add(box(0.85, 2.05, 0.035, solid('#d0b486'), 29.7, top + 1.025, -18.93));
+  const roofExit = new THREE.Mesh(new THREE.PlaneGeometry(1, 0.22), new THREE.MeshStandardMaterial({ map: signTexture('ASCENSOR', '#23463d', '#fff7df') }));
+  roofExit.position.set(29.7, top + 2.23, -18.92); root.add(roofExit);
+  for (const z of [-17.2, -18.2]) {
+    root.add(box(1.8, 0.1, 0.55, solid('#81664b'), 23.5, top + 0.46, z));
+    for (const x of [22.8, 24.2]) root.add(box(0.07, 0.46, 0.5, rail, x, top + 0.23, z));
   }
   const rooftop: Person[] = [];
   const looks: Look[] = [
@@ -1233,7 +1255,12 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
     let n = 0;
     const color = new THREE.Color();
     for (const sx of [-3.8, 3.6]) {
-      group.add(box(0.6, 1.9, 6, metal, cx + sx, 0.95, -1.4));
+      // Open shelving: the former solid box hid every product inside it.
+      for (const z of [-4.35, 1.55]) group.add(box(0.66, 1.95, 0.05, metal, cx + sx, 0.975, z));
+      for (const y of [0.35, 0.85, 1.35, 1.8]) {
+        group.add(box(0.76, 0.045, 6, metal, cx + sx, y, -1.4));
+        group.add(box(0.025, 0.08, 6, solid('#f3eee1'), cx + sx + (sx < 0 ? 0.39 : -0.39), y, -1.4));
+      }
       for (const y of [0.35, 0.85, 1.35, 1.8]) for (const side of [-0.22, 0.22]) for (let i = 0; i < 22 && n < 360; i++) {
         if (rand() < 0.15) continue;
         products.setMatrixAt(n, new THREE.Matrix4().setPosition(cx + sx + side, y + 0.14, -4.2 + i * 0.26));
@@ -1247,11 +1274,23 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
     for (let i = 0; i < 4; i++) {
       group.add(box(1.8, 2.1, 0.7, solid('#e8ebee', 0.4, 0.3), cx - 2.8 + i * 1.9, 1.05, -d / 2 + 0.45));
       const door = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 1.8), fridge);
-      door.position.set(cx - 2.8 + i * 1.9, 1.1, -d / 2 + 0.81);
+      door.position.set(cx - 2.8 + i * 1.9, 1.1, -d / 2 + 0.79);
       group.add(door);
-      for (let j = 0; j < 12; j++) group.add(cylinder(0.04, 0.04, 0.26, solid(['#3a8a3a', '#b33a2c', '#e8c640', '#f0ece4'][(i + j) % 4], 0.3), cx - 3.45 + i * 1.9 + (j % 6) * 0.25, 0.55 + Math.floor(j / 6) * 0.6, -d / 2 + 0.75, 6));
+      for (let j = 0; j < 12; j++) group.add(cylinder(0.04, 0.04, 0.26, solid(['#3a8a3a', '#b33a2c', '#e8c640', '#f0ece4'][(i + j) % 4], 0.3), cx - 3.45 + i * 1.9 + (j % 6) * 0.25, 0.55 + Math.floor(j / 6) * 0.6, -d / 2 + 0.91, 6));
     }
+    const sign = (text: string, x: number, y: number, z: number, width: number) => {
+      const panel = new THREE.Mesh(new THREE.PlaneGeometry(width, 0.35), new THREE.MeshStandardMaterial({ map: signTexture(text, '#23463d', '#fff6dd'), roughness: 0.8 }));
+      panel.position.set(x, y, z); group.add(panel);
+    };
+    sign('BEBIDAS · LÁCTEOS · HIELO', cx, 2.65, -d / 2 + 0.83, 7);
+    sign('ALMACÉN 24 H', cx - 2.7, 2.7, -4.5, 3);
     group.add(box(2.2, 1, 0.7, solid('#7a5a3c', 0.6), cx + 1.4, 0.5, 1.6));
+    sign('CAJA', cx + 1.4, 0.73, 1.97, 1.1);
+    const payment = new THREE.MeshStandardMaterial({ color: '#28383e', roughness: 0.45 });
+    group.add(box(0.16, 0.12, 0.25, payment, cx + 0.8, 1.08, 1.65));
+    group.add(box(0.14, 0.01, 0.15, glow('#7cb89c', 0.6), cx + 0.8, 1.145, 1.65));
+    for (let i = 0; i < 3; i++) group.add(box(0.55, 0.14, 0.42, solid('#9a4936'), cx - 1.9, 0.1 + i * 0.15, 3.9));
+    group.add(box(1.7, 0.025, 1.1, solid('#35413d'), cx, 0.03, 4.5));
     group.add(box(0.4, 0.3, 0.35, solid('#2a2a2a', 0.4, 0.4), cx + 1.9, 1.15, 1.6));
     const tube = glow('#f4f8ff', 2.2);
     for (const z of [-3.5, 0, 3.5]) group.add(box(3.6, 0.06, 0.3, tube, cx, 3.15, z, false));

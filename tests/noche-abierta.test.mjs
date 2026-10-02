@@ -332,7 +332,7 @@ test('the final stage recaps the actual night and the teacher notes stay qualita
   assert.equal(state.phase, 'cierre');
   assert.equal(engine.openLocation(state, 'plaza'), state, 'the city is closed during the recap');
   const summary = engine.nightSummary(state);
-  assert.deepEqual(summary.map(item => item.id), ['departamento', 'taxi', 'tienda', 'terraza', 'museo']);
+  assert.deepEqual(summary.map(item => item.id), ['departamento', 'taxi', 'terraza', 'tienda', 'museo'], 'the accepted taxi destination is visited before the next manual stop');
   assert.ok(summary.every(item => item.done && item.situations.length === 1));
   assert.equal(summary.find(item => item.id === 'taxi').choices.length, 1, 'the taxi decision is remembered');
   state = engine.toggleCriterion(state, 'razones');
@@ -742,4 +742,16 @@ test('the title screen and the HUD carry the level picker; the library lists one
   for (const level of levels.LEVELS) assert.ok(filterLessons(lessons, { level }).includes(card), `found under ${level}`);
   assert.ok(filterLessons(lessons, { category: 'Conversación' }).includes(card));
   assert.ok(filterLessons(lessons, { query: 'Noche abierta' }).includes(card));
+});
+
+test('taxi arrival keeps its consequence but presents the destination in the fallback UI', async () => {
+  const Page = await component('app/noche-abierta/NocheAbierta.tsx');
+  for (const [activity, choice, label] of [['taxi-cortado', 'rodear', 'llegada a la terraza'], ['taxi-mayor', 'bajar', 'ayuda en el almacén']]) {
+    const state = engine.chooseOption(engine.openLocation(engine.startExploring(engine.initialState()), 'taxi', activity), choice);
+    const html = renderToString(React.createElement(Page, { initial: state }));
+    assert.ok(html.includes(label));
+    assert.ok(html.includes(engine.currentView(state).beat.context));
+    assert.ok(!html.includes('Bajar del taxi'), 'already out of the taxi at this destination');
+    assert.ok(engine.isValidState(engine.leaveLocation(state)));
+  }
 });

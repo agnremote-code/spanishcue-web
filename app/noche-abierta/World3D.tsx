@@ -7,9 +7,9 @@
 // walk around in; the plaza is full of people you can talk to.
 import * as THREE from 'three';
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from 'react';
-import { LOCATIONS, type Phase } from './engine.mjs';
+import { LOCATIONS, type Phase, type WorldOutcome } from './engine.mjs';
 import {
-  BUILDINGS, CAMERA_PRESETS, NPCS, PARK_LANE, PLAZA, ROOM_PRESET, SPAWN, STAGES, TARGETS, TRAFFIC, VEHICLE_SIZE, WORLD_BOUNDS,
+  BUILDINGS, CAMERA_PRESETS, NPCS, PARK_LANE, PLAZA, ROOM_PRESET, SPAWN, STAGES, TARGETS, TRAFFIC, TRAFFIC_LANE, VEHICLE_SIZE, WORLD_BOUNDS,
   angleBetween, canUseKeys, colliders, exitSpot, followCamera, followYaw, inputFrom, keyAction, nearestTarget, roomLayout,
   stepPlayer, stepTraffic, streetFraming, toMinimap,
   type Box, type Hotspot, type MovingCar, type RoomExit, type RoomLayout, type Target,
@@ -20,6 +20,8 @@ import { animateHero, createHero } from './hero3d';
 
 export type WorldProps = {
   phase: Phase;
+  outcome: WorldOutcome | null;
+  onTransition: (busy: boolean) => void;
   active: string | null;
   activity: string | null;
   played: string[];
@@ -68,6 +70,7 @@ export default function World3D(props: WorldProps) {
   const minimap = useRef<HTMLCanvasElement>(null);
   const knob = useRef<HTMLSpanElement>(null);
   const api = useRef<{ interact: (key: 'E' | 'F') => void; cycleCamera: () => void; held: Set<string>; joy: { x: number; y: number } } | null>(null);
+  const [journey, setJourney] = useState('');
   const [prompt, setPrompt] = useState<Prompt | null>(null);
   const [mapOpen, setMapOpen] = useState(!props.narrow);
   const [help, setHelp] = useState(false);
@@ -207,7 +210,7 @@ export default function World3D(props: WorldProps) {
       riding: false,
       target: null as Spot | null,
       promptId: '',
-      seen: { active: null as string | null, activity: null as string | null, goTo: live.current.goTo?.n ?? 0, phase: '' as string },
+      seen: { outcome: '' as string, active: null as string | null, activity: null as string | null, goTo: live.current.goTo?.n ?? 0, phase: '' as string },
       clock: 0,
       frames: 0,
       fpsAt: 0,
@@ -223,9 +226,33 @@ export default function World3D(props: WorldProps) {
     sim.yaw = sim.player.heading;
     placePerson(hero, sim.player.x, sim.player.z, sim.player.heading);
 
-    const setModeBoth = (next: Mode) => { sim.mode = next; box.dataset.mode = next; setMode(next); };
+    let disposed = false;
+    const setModeBoth = (next: Mode) => {
+      if (disposed) return;
+      sim.mode = next; box.dataset.mode = next; setMode(next);
+      live.current.onTransition(next === 'busy');
+      if (next === 'busy') { sim.held.clear(); sim.joy.x = sim.joy.y = 0; sim.target = null; }
+      else setJourney('');
+    };
     const reduced = () => live.current.reducedMotion;
-    const wait = (ms: number) => new Promise<void>(resolve => window.setTimeout(resolve, reduced() ? 0 : ms));
+    const wait = (ms: number) => new Promise<void>((resolve, reject) => window.setTimeout(() => disposed ? reject(new Error('World disposed')) : resolve(), reduced() ? 0 : ms));
+    const animate = async (ms: number, update: (t: number) => void) => {
+      if (reduced()) { update(1); return; }
+      const start = performance.now();
+      let t = 0;
+      while (t < 1) { await wait(16); t = Math.min(1, (performance.now() - start) / ms); update(t); }
+    };
+    const walkSegment = async (x: number, z: number) => {
+      const from = { ...sim.player };
+      const distance = Math.hypot(x - from.x, z - from.z);
+      const heading = faceTo(from, { x, z });
+      await animate(Math.max(300, distance / 3.4 * 1000), t => {
+        placePlayer(from.x + (x - from.x) * t, from.z + (z - from.z) * t, heading, sim.y);
+        sim.player.speed = reduced() ? 0 : 3.4;
+        followShot();
+      });
+      sim.player.speed = 0;
+    };
     const fade = async (to: number, ms: number) => {
       const el = fader.current;
       if (!el) return;
@@ -234,7 +261,7 @@ export default function World3D(props: WorldProps) {
       await wait(ms);
     };
     let chain = Promise.resolve();
-    const queue = (task: () => Promise<void>) => { chain = chain.then(task).catch(() => undefined); };
+    const queue = (task: () => Promise<void>) => { chain = chain.then(() => disposed ? undefined : task()).catch(() => { if (!disposed) live.current.onFail(); }); };
 
     const targetFor = (location: string, activity?: string | null): Target | null => {
       const base = (activity && TARGETS.find(item => item.location === location && item.activity === activity)) || TARGETS.find(item => item.location === location);
@@ -318,11 +345,12 @@ export default function World3D(props: WorldProps) {
       setModeBoth('walk');
     });
 
-    const enter = (location: string, activity: string | null) => queue(async () => {
+    const enter = async (location: string, activity: string | null) => {
       const target = targetFor(location, activity);
       if (!target) return;
       setModeBoth('busy');
       sim.scene = target;
+      setJourney(target.stage === 'terraza' ? 'Entrada al edificio → ascensor → terraza' : `Entrando · ${names[location]}`);
       const layout = roomLayout(target.stage);
       const stage = STAGES[target.stage];
       if (layout) {
@@ -337,6 +365,7 @@ export default function World3D(props: WorldProps) {
         sim.yaw = layout.spawn.heading;
         followShot(true);
         await fade(0, 380);
+        box.dataset.location = location; box.dataset.stage = target.stage;
         setModeBoth('room');
         if (live.current.activity) focusHotspot(live.current.activity);
         return;
@@ -344,7 +373,13 @@ export default function World3D(props: WorldProps) {
       if (stage) {
         // Camera moves in toward the door, the screen fades, the room appears.
         setShot(target.x + 1.2, 2.2, target.z + (target.z < 0 ? 2.4 : -2.4), target.x, 1.7, target.z + (target.z < 0 ? -1.2 : 1.2));
-        await wait(340);
+        const door = BUILDINGS.find(b => b.location === location && b.door);
+        if (door) {
+          if (Math.hypot(sim.player.x - target.x, sim.player.z - target.z) > 4) {
+            await fade(1, 180); placePlayer(target.x, target.z, door.door!.side === 'south' ? Math.PI : 0); await fade(0, 180);
+          }
+          await walkSegment(target.x, door.door!.side === 'south' ? door.z1 + 0.35 : door.z0 - 0.35);
+        } else await wait(340);
         await fade(1, 260);
         if (stage.size) ensureInterior(target.stage);
         showIndoor(stage.size ? target.stage : null);
@@ -359,12 +394,7 @@ export default function World3D(props: WorldProps) {
         hero.root.rotation.y = Math.PI / 2;
         hero.root.scale.setScalar(0.92);
         sim.riding = true;
-        taxi.goal = taxi.x > 0 ? { x: -28, z: -PARK_LANE, heading: Math.PI } : { x: 14, z: PARK_LANE, heading: 0 };
-        if (taxi.goal.z !== taxi.z) {
-          taxi.z = taxi.goal.z;
-          taxi.heading = taxi.goal.heading;
-          taxi.x = taxi.goal.x > 0 ? -12 : 26;
-        }
+        taxi.goal = null;
         sim.snap = true;
         await fade(0, 340);
       } else {
@@ -387,10 +417,12 @@ export default function World3D(props: WorldProps) {
         setShot(framing.camera.x, framing.camera.y, framing.camera.z, framing.look.x, framing.look.y, framing.look.z, reduced());
         await wait(260);
       }
+      box.dataset.location = location;
+      box.dataset.stage = target.stage;
       setModeBoth('scene');
-    });
+    };
 
-    const exit = (location: string) => queue(async () => {
+    const exit = async (location: string) => {
       const target = sim.scene ?? targetFor(location);
       sim.scene = null;
       if (!target) return;
@@ -425,8 +457,89 @@ export default function World3D(props: WorldProps) {
         for (const rig of city.npcs.values()) npcFacing(rig.data.id, null);
         sim.yaw = sim.player.heading;
       }
+      box.dataset.location = target.location;
       setModeBoth(phaseMode(live.current.phase));
-    });
+    };
+
+    // A decision is enacted before the consequence card appears. The same
+    // hero is reparented out of the cab and then enters the chosen place.
+    const enact = async (outcome: WorldOutcome) => {
+      if (!sim.riding) { await exit(sim.scene?.location ?? 'taxi'); await enter('taxi', null); }
+      setModeBoth('busy');
+      setJourney(outcome.label);
+      taxi.goal = null;
+      if (outcome.travel === 'wait') { await wait(500); setModeBoth('scene'); return; }
+      const drive = async (x: number, z: number) => {
+        const from = { x: taxi.x, z: taxi.z };
+        const distance = Math.hypot(x - from.x, z - from.z);
+        if (distance < 0.05) return;
+        const heading = Math.atan2(z - from.z, x - from.x);
+        const before = taxi.heading;
+        await animate(350, t => { taxi.heading = before + angleBetween(before, heading) * t; });
+        await animate(Math.max(600, distance / 12 * 1000), t => {
+          taxi.x = from.x + (x - from.x) * t; taxi.z = from.z + (z - from.z) * t;
+        });
+        placeVehicle(taxiRig.group, taxi.x, taxi.z, taxi.heading);
+      };
+      if (outcome.travel === 'turn') {
+        const endX = taxi.x < 25 ? taxi.x + 12 : taxi.x - 12;
+        const lane = endX > taxi.x ? TRAFFIC_LANE : -TRAFFIC_LANE;
+        await drive(taxi.x, lane);
+        await drive(endX, lane);
+        await drive(endX, endX > 25 ? PARK_LANE : -PARK_LANE);
+        const turnFrom = taxi.heading;
+        const parkedHeading = lane > 0 ? 0 : Math.PI;
+        await animate(350, t => { taxi.heading = turnFrom + angleBetween(turnFrom, parkedHeading) * t; });
+        placeVehicle(taxiRig.group, taxi.x, taxi.z, taxi.heading);
+        box.dataset.location = 'taxi'; setModeBoth('scene'); return;
+      }
+      const plaza = outcome.location === 'plaza';
+      const recital = outcome.key.endsWith('/caminar');
+      const target: Target = plaza ? {
+        id: recital ? 'plaza-recital' : 'plaza-mercado', location: 'plaza', stage: 'calle',
+        x: recital ? 14 : 29, z: 26.6, radius: 1.6, key: 'E', verb: 'MIRAR',
+      } : targetFor(outcome.location)!;
+      const north = outcome.location === 'terraza';
+      // Both drop-offs use the avenue, on the same side as their destination.
+      if (outcome.travel === 'ride') {
+        const dropX = plaza ? 10 : target.x;
+        const lane = dropX > taxi.x ? TRAFFIC_LANE : -TRAFFIC_LANE;
+        await drive(taxi.x, lane);
+        await drive(dropX, lane);
+        await drive(dropX, north ? -PARK_LANE : PARK_LANE);
+        const turnFrom = taxi.heading;
+        const parkedHeading = north ? Math.PI : 0;
+        await animate(350, t => { taxi.heading = turnFrom + angleBetween(turnFrom, parkedHeading) * t; });
+        placeVehicle(taxiRig.group, taxi.x, taxi.z, taxi.heading);
+      }
+      setJourney(outcome.travel === 'ride' ? `Llegamos · ${names[outcome.location]} · bajando del taxi` : `Bajando del taxi · a pie hacia ${names[outcome.location]}`);
+      await wait(350);
+      sim.riding = false; hero.seated = false; hero.root.scale.setScalar(1); scene.add(hero.root);
+      const dropNorth = taxi.z < 0;
+      placePlayer(taxi.x, taxi.z + (dropNorth ? -1.25 : 1.25), dropNorth ? Math.PI : 0);
+      sim.yaw = sim.player.heading;
+      followShot(true);
+      await walkSegment(taxi.x, dropNorth ? -4.6 : 5.4);
+      if (dropNorth !== north) {
+        setJourney('A pie · cruzando la avenida hacia el destino');
+        await walkSegment(0, dropNorth ? -4.6 : 5.4);
+        await walkSegment(0, north ? -4.6 : 5.4);
+      }
+      // The west edge of the plaza avoids its fountain and seated people.
+      await walkSegment(plaza ? 10 : target.x, north ? -4.6 : 5.4);
+      if (plaza) {
+        await walkSegment(10, target.z);
+        await walkSegment(target.x, target.z);
+        sim.scene = target;
+        placePlayer(target.x, target.z, 0);
+        setShot(target.x - 2, 2.6, target.z - 3, target.x, 1.25, 29);
+        box.dataset.location = 'plaza'; box.dataset.stage = target.id;
+        setModeBoth('scene');
+      } else {
+        await walkSegment(target.x, target.z);
+        await enter(outcome.location, null);
+      }
+    };
 
     // Inside a room: walk up to a piece or a person and the card opens; the
     // camera frames them while you talk, then gives you the room back.
@@ -564,8 +677,19 @@ export default function World3D(props: WorldProps) {
         const previous = sim.seen.active;
         sim.seen.active = p.active;
         sim.seen.activity = p.activity;
-        if (previous) exit(previous);
-        if (p.active) enter(p.active, p.activity);
+        sim.seen.outcome = p.outcome?.key ?? '';
+        queue(async () => {
+          if (previous) await exit(previous);
+          if (p.active) await enter(p.active, p.activity);
+          if (p.outcome) await enact(p.outcome);
+        });
+      } else if ((p.outcome?.key ?? '') !== sim.seen.outcome) {
+        sim.seen.outcome = p.outcome?.key ?? '';
+        sim.seen.activity = p.activity;
+        queue(async () => {
+          if (p.outcome) await enact(p.outcome);
+          else { await exit(sim.scene?.location ?? 'taxi'); await enter('taxi', p.activity); }
+        });
       } else if (p.activity !== sim.seen.activity) {
         sim.seen.activity = p.activity;
         if (sim.room) queue(async () => { if (live.current.activity) focusHotspot(live.current.activity); else unfocus(); });
@@ -608,7 +732,7 @@ export default function World3D(props: WorldProps) {
         const activity = t && 'activity' in t && t.activity ? titles[`${t.location}/${t.activity}`] : null;
         setPrompt(t ? { id: t.id, key: t.key, verb: t.verb, name: 'exit' in t ? 'Volver a la calle' : activity ?? names[t.location] ?? t.location } : null);
       }
-      animateHero(hero, dt, walking ? sim.player.speed : 0, sim.turn, hero.seated ? 'seated' : sim.mode === 'scene' ? 'talk' : 'move', reduced());
+      animateHero(hero, dt, walking || sim.mode === 'busy' ? sim.player.speed : 0, sim.turn, hero.seated ? 'seated' : sim.mode === 'scene' ? 'talk' : 'move', reduced());
 
       // Camera per mode.
       if (sim.mode === 'intro') {
@@ -630,6 +754,11 @@ export default function World3D(props: WorldProps) {
           if (Math.abs(dx) < 0.02) taxi.goal = null;
         }
         placeVehicle(taxiRig.group, taxi.x, taxi.z, taxi.heading);
+        const hx = Math.abs(Math.cos(taxi.heading)) * 2.15 + Math.abs(Math.sin(taxi.heading)) * 0.9;
+        const hz = Math.abs(Math.sin(taxi.heading)) * 2.15 + Math.abs(Math.cos(taxi.heading)) * 0.9;
+        taxiBox.x0 = taxi.x - hx; taxiBox.x1 = taxi.x + hx;
+        taxiBox.z0 = taxi.z - hz; taxiBox.z1 = taxi.z + hz;
+        sim.player.x = taxi.x; sim.player.z = taxi.z;
         const ahead = Math.cos(taxi.heading);
         const side = taxi.z < 0 ? 1 : -1;
         setShot(taxi.x + ahead * 2.6, 2.3, taxi.z + side * 6.2, taxi.x - ahead * 0.2, 0.95, taxi.z);
@@ -688,7 +817,7 @@ export default function World3D(props: WorldProps) {
         }
         for (const person of city.rooftop) animatePerson(person, dt, 0, talking?.location === 'terraza');
         if (taxiRig.driver) animatePerson(taxiRig.driver, dt, 0, sim.riding);
-        traffic = stepTraffic(traffic, sim.player, dt);
+        traffic = stepTraffic(traffic, sim.player, dt, [{ x: taxi.x, z: taxi.z }]);
         traffic.forEach((car, i) => {
           placeVehicle(trafficRigs[i].group, car.x, car.lane, car.dir > 0 ? 0 : Math.PI);
           const b = trafficBoxes[i];
@@ -804,6 +933,7 @@ export default function World3D(props: WorldProps) {
 
     return () => {
       cancelAnimationFrame(raf);
+      disposed = true;
       observer.disconnect();
       canvas.removeEventListener('pointerdown', down);
       canvas.removeEventListener('webglcontextlost', lostContext);
@@ -876,6 +1006,7 @@ export default function World3D(props: WorldProps) {
     onKeyDown={onKeyDown} onKeyUp={onKeyUp} onBlur={releaseKeys}>
     <div className="na-world-canvas" ref={mount} />
     <div className="na-fade" ref={fader} aria-hidden="true" />
+    {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
     <p id="na-world-help" className="na-sr">Barrio en 3D. Corré con W, A, S y D o con las flechas; Shift va más rápido y Alt camina. Acercate a un lugar o a una persona y tocá E para interactuar, F para subir o bajar del taxi. Arrastrá con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
     <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Tocá ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
     {prompt && walking && <button ref={promptEl} type="button" tabIndex={-1} className="na-prompt3d" onClick={() => api.current?.interact(prompt.key as 'E' | 'F')}>
