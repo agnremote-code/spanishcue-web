@@ -5,7 +5,7 @@ name: Deploy Staging (Cloudflare)
 # for the exact same SHA and waits for its production smoke/rollback result.
 # The staging build itself remains isolated: scripts/prepare-staging-worker-config.mjs
 # forces the spanishcue-staging Worker, spanishcue-staging D1, workers.dev only
-# and no routes. It never applies D1 migrations or touches spanishcue.com directly.
+# and no routes. It applies only the owner-authorized CREATE-only lesson_reports SQL; no other D1 migrations or touches spanishcue.com directly.
 
 on:
   push:
@@ -93,6 +93,13 @@ jobs:
         if: github.event_name == 'push' || inputs.action == 'deploy'
         run: node scripts/prepare-staging-worker-config.mjs dist/server/wrangler.json
 
+      - name: Prepare authorized lesson reports table in staging
+        if: github.event_name == 'push' || inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0010_lesson_reports.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(lesson_reports)" --json > report-schema.json
+          node scripts/verify-lesson-reports-schema.mjs report-schema.json
+
       - name: Record current staging version
         if: github.event_name == 'push' || inputs.action == 'deploy'
         id: previous
@@ -135,6 +142,7 @@ jobs:
           SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.url }}
         run: |
           node scripts/production-smoke.mjs
+          node scripts/lesson-reports-smoke.mjs
           curl -sfI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'
           curl -sf "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" | grep -q '"mode":"sandbox"'
 

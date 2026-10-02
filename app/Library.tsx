@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import NewLessonsBanner from "./NewLessonsBanner";
+import LessonReportPanel from "./lesson-reports/LessonReportPanel";
 import MoodTenseDisclosure from "./verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "./verbal-system/VerbalPosition";
 import GrammarStep from "./grammar-steps/GrammarStep";
@@ -60,6 +62,7 @@ import {
 type Category =
   "Gramática" | "Conversación" | "Escucha" | "Fonética" | "Vocabulario";
 export type CatalogItem = {
+  news?:{addedAt:string;featured:boolean};
   familyId?: string;
   legacyLessonIds?: number[];
   searchAliases?: string[];
@@ -1073,6 +1076,8 @@ export default function Library({
         ),
       );
     const onKey = (event: KeyboardEvent) => {
+      // Native report dialogs own their focus trap and Escape lifecycle.
+      if (modal.querySelector('dialog[open]')) return;
       if (event.key === "Escape") {
         event.preventDefault();
         closeActiveLesson();
@@ -1622,6 +1627,7 @@ export default function Library({
           </div>
         )}
         <SpanishCueHero />
+        <NewLessonsBanner lessons={lessons} />
         <section className="library-heading" id="library-results">
           <div>
             <p className="eyebrow">
@@ -1958,6 +1964,7 @@ export default function Library({
                 <span>✓ {t("common.readyToTeach")}</span>
               </div>
             </header>
+            <LessonReportPanel key={activeLesson.id} lesson={activeLesson} signedIn={signedIn} inline />
             <div className="viewer-body">
               {activeLesson.category === "Gramática" ? (
                 <div className="grammar-step-stack viewer-grammar-steps">

@@ -15,7 +15,7 @@ function ringsFor(feature: Feature): Position[][] {
     : (feature.geometry.coordinates as Position[][][]).flat();
 }
 
-export const mexicoShapes = (geojson.features as Feature[]).map((feature) => {
+export const mexicoShapes = (geojson.features as unknown as Feature[]).map((feature) => {
   const rings = ringsFor(feature);
   const projected = rings.map((ring) => ring.map(project));
   const d = projected.map((ring) => ring.map(([x, y], index) => `${index ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ") + " Z").join(" ");

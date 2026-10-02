@@ -9,6 +9,8 @@ import "./marketing/free-lesson-gate.css";
 import "./marketing-landing/style.css";
 import "./marketing-landing/overrides.css";
 import "./privacy/consent.css";
+import LessonReportRoutes from "./lesson-reports/LessonReportRoutes";
+import { conversationFamilyByLessonId } from "./conversation-families/catalog";
 import AuthSessionSync from "./AuthSessionSync";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 import { localeFromHeaders, translate } from "./i18n/messages";
@@ -105,6 +107,7 @@ export default async function RootLayout({
             lessonTitle={currentLesson?.title}
           />
           {children}
+          <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (
             <FreeLessonRegistrationGate lessonId={currentLesson.id} lessonTitle={currentLesson.title} />

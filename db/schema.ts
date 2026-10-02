@@ -419,3 +419,12 @@ export const verificationEmailDeliveries = sqliteTable(
     index("verification_email_recipient_time").on(table.recipient, table.requestedAt),
   ],
 );
+
+/** User feedback only; never executes AI-authored code or stores credentials. */
+export const lessonReports = sqliteTable("lesson_reports", {
+ id:text("id").primaryKey(), userId:text("user_id").notNull(), userEmail:text("user_email"),
+ lessonId:integer("lesson_id").notNull(), lessonSlug:text("lesson_slug").notNull(), lessonTitle:text("lesson_title").notNull(), lessonCategory:text("lesson_category").notNull(),
+ level:text("level").notNull(), url:text("url").notNull(), message:text("message").notNull(), category:text("category").notNull().default("Otro"), contextJson:text("context_json").notNull().default("{}"),
+ status:text("status").notNull().default("new"), aiStatus:text("ai_status").notNull().default("pending"), resolution:text("resolution").notNull().default(""),
+ createdAt:text("created_at").notNull(), updatedAt:text("updated_at").notNull(), resolvedAt:text("resolved_at"),
+}, table => [index("lesson_reports_user_time").on(table.userId,table.createdAt), index("lesson_reports_status_time").on(table.status,table.createdAt)]);
