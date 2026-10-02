@@ -214,7 +214,7 @@ export const STAGES = {
   "interior-tienda": { origin: { x: 280, z: 0 }, size: { w: 11, d: 12 }, spot: { x: 280, z: 3.6, heading: Math.PI }, camera: { x: 283.4, y: 2.3, z: 6.4 }, look: { x: 279, y: 1.2, z: -1.5 } },
   "interior-museo": { origin: { x: 320, z: 0 }, size: { w: 18, d: 14 }, walk: true, spot: { x: 320, z: 5.1, heading: Math.PI }, camera: { x: 320, y: 3, z: 9.4 }, look: { x: 320, y: 1.3, z: 2 } },
   "interior-bar": { origin: { x: 370, z: 0 }, size: { w: 14, d: 11 }, walk: true, spot: { x: 365, z: 3.9, heading: Math.PI }, camera: { x: 365, y: 2.6, z: 7.8 }, look: { x: 365, y: 1.3, z: 1 } },
-  terraza: { origin: { x: 27, z: -15 }, roof: 25, spot: { x: 27, z: -11.5, heading: Math.PI }, camera: { x: 31, y: 28.2, z: -7.6 }, look: { x: 25, y: 25.8, z: -16 } },
+  terraza: { origin: { x: 27, z: -15 }, roof: 25, spot: { x: 29.7, z: -17.8, heading: 0 }, camera: { x: 31, y: 28.2, z: -7.6 }, look: { x: 25, y: 25.8, z: -16 } },
 };
 
 // Encounter framing in the street: a fixed shot when the place has one,

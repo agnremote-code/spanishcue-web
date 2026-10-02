@@ -114,6 +114,28 @@ function updateProgress(state, change) {
   return { ...state, encounters: { ...state.encounters, [location.id]: { ...encounter, acts, done: encounter.done || after.done } } };
 }
 
+// Stable choice ids bind the six language levels to the same physical world.
+// Keep the taxi dialogue open at the destination until its reflection is done.
+const TAXI_OUTCOMES = {
+  "taxi-cortado": {
+    caminar: { location: "plaza", travel: "walk", label: "A pie · recital en la plaza" },
+    rodear: { location: "terraza", travel: "ride", label: "Taxi · llegada a la terraza" },
+    esperar: { location: "taxi", travel: "wait", label: "Taxi detenido · esperando" },
+  },
+  "taxi-mayor": {
+    seguir: { location: "plaza", travel: "ride", label: "Taxi · mercado de la plaza" },
+    volver: { location: "taxi", travel: "turn", label: "Taxi · de vuelta por la avenida" },
+    bajar: { location: "tienda", travel: "walk", label: "A pie · ayuda en el almacén" },
+  },
+};
+export function worldOutcome(state) {
+  if (state.phase !== "encuentro" || state.position !== "taxi") return null;
+  const progress = state.encounters.taxi?.acts[state.activity];
+  if (!progress?.choice || progress.beat < 1) return null;
+  const outcome = TAXI_OUTCOMES[state.activity]?.[progress.choice];
+  return outcome ? { ...outcome, key: `${state.activity}/${progress.choice}` } : null;
+}
+
 export function chooseOption(state, optionId) {
   return updateProgress(state, (type, activity, progress) => choose(type, activity, progress, optionId));
 }
@@ -162,7 +184,13 @@ export function leaveLocation(state, id = state.position) {
   if (!encounter) return state;
   const done = encounter.done || Object.values(encounter.acts).some((progress) => progress.done);
   const phase = state.event && !state.event.resolved ? "evento" : "ciudad";
+  const destination = worldOutcome(state)?.location;
   const next = { ...state, phase, activity: null, encounters: { ...state.encounters, [id]: { ...encounter, done } } };
+  if (destination && destination !== id) {
+    next.position = destination;
+    next.visitOrder = next.visitOrder.includes(destination) ? next.visitOrder : [...next.visitOrder, destination];
+    next.encounters[destination] ??= blankEncounter();
+  }
   return eventReady(next) ? triggerEvent(next, suggestedEvent(next)) : next;
 }
 

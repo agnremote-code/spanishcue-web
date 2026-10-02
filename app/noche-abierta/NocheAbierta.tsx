@@ -7,7 +7,7 @@ import {
   DEFAULT_LEVEL, LEVELS, LOCATIONS, MECHANICS, contentFor, isLevel, setLevel,
   advanceBeat, chooseOption, closeActivity, completedIds, currentView, finalAvailable, initialState, inspectItem, isValidState,
   leaveLocation, locationById, markDone, nightClock, nightSummary, openActivity, openFinal, openLocation, otherActivity, resolveEvent,
-  restartActivity, startExploring, toggleCriterion, triggerEvent,
+  restartActivity, startExploring, worldOutcome, toggleCriterion, triggerEvent,
   type Grammar, type Help, type Level, type Location, type NightState, type View,
 } from './engine.mjs';
 import type { Beat, Media } from './activities.mjs';
@@ -69,6 +69,8 @@ function useMedia(query: string) {
 
 export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const [state, setState] = useState<NightState>(initial ?? initialState());
+  const [worldKey, setWorldKey] = useState(0);
+  const [travelling, setTravelling] = useState(false);
   const [teacher, setTeacher] = useState(false);
   const [placesOpen, setPlacesOpen] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
@@ -114,11 +116,11 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const switchView = () => {
     const next = view === '3d' || view === 'loading' ? 'map' : '3d';
     try { window.sessionStorage.setItem(VIEW_KEY, next); } catch { /* ignore */ }
-    if (next === 'map') setView('map');
+    if (next === 'map') { setTravelling(false); setView('map'); }
     else if (World) setView('3d');
     else load3d();
   };
-  const fail3d = useCallback(() => { setCanUse3d(false); setView('map'); }, []);
+  const fail3d = useCallback(() => { setTravelling(false); setCanUse3d(false); setView('map'); }, []);
   // Changing the level only swaps the texts: the world, the camera and the
   // route stay exactly where they are.
   const level: Level = isLevel(state.level) ? state.level : DEFAULT_LEVEL;
@@ -137,8 +139,10 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const card = currentView(state);
   const content = contentFor(state.level);
   const event = state.event ? content.CITY_EVENTS.find(item => item.id === state.event!.id) ?? null : null;
-  const standing = state.position ? PLACES[state.position].spot : ARRIVAL_SPOT;
-  const focus = state.phase === 'encuentro' ? state.position : null;
+  const outcome = worldOutcome(state);
+  const physicalPlace = outcome?.location ?? state.position;
+  const standing = physicalPlace ? PLACES[physicalPlace].spot : ARRIVAL_SPOT;
+  const focus = state.phase === 'encuentro' ? physicalPlace : null;
   const exploring = state.phase === 'ciudad';
   // In 3D, the museum and the bar are rooms you walk around in.
   const walkingInside = in3d && state.phase === 'encuentro' && Boolean(state.position && WALKABLE_STAGES.has(state.position));
@@ -180,6 +184,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     });
   }, [refocus]);
   const reset = () => {
+    setWorldKey(value => value + 1);
+    setTravelling(false);
     setConfirmReset(false);
     setPlacesOpen(false);
     setState(initialState());
@@ -187,7 +193,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   };
 
   useEffect(() => {
-    if (state.phase !== 'encuentro') return;
+    if (state.phase !== 'encuentro' || (in3d && travelling)) return;
     const onKey = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
       const typing = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
@@ -197,7 +203,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [state.phase, state.position, back, leave]);
+  }, [state.phase, state.position, back, leave, travelling, in3d]);
 
   // On narrow screens the city pans sideways: keep the learner in view.
   useEffect(() => {
@@ -235,13 +241,13 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     </header>
 
     <div className="na-stage">
-      {in3d && World ? <World phase={state.phase} active={state.phase === 'encuentro' ? state.position : null} activity={state.activity} last={state.position} done={done}
+      {in3d && World ? <World key={worldKey} phase={state.phase} outcome={outcome} onTransition={setTravelling} active={state.phase === 'encuentro' ? state.position : null} activity={state.activity} last={state.position} done={done}
         played={state.position ? Object.keys(state.encounters[state.position]?.acts ?? {}).filter(id => state.encounters[state.position!].acts[id].done) : []}
-        event={state.event?.id ?? null} goTo={goTo} narrow={narrow} reducedMotion={reducedMotion} panel={showCard} onInteract={open}
+        event={state.event?.id ?? null} goTo={goTo} narrow={narrow} reducedMotion={reducedMotion} panel={showCard && !travelling} onInteract={open}
         onOpenActivity={id => setState(current => openActivity(current, id))} onLeave={leave} onFail={fail3d} />
         : <div className="na-scroll" ref={scroller}>
           <div className="na-camera" style={camera}>
-            <CityScene places={places} visited={state.visitOrder} done={done} position={state.position} standing={standing} focus={focus}
+            <CityScene places={places} visited={state.visitOrder} done={done} position={physicalPlace} standing={standing} focus={focus}
               weather={state.event?.id === 'lluvia' ? 'rain' : 'clear'} busOut={state.event?.id === 'transporte'} interactive={exploring} onOpen={id => open(id)} />
           </div>
         </div>}
@@ -262,7 +268,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         <p>{card?.location.hubPrompt} Acercate y tocá E. Para salir, andá a la puerta o tocá Esc.</p>
       </div>}
 
-      {card && showCard && !(hubInStreet && !card.activity) && <ActivityCard key={`${level}-${card.location.id}-${card.activity?.id ?? 'hub'}`} view={card} state={state} teacher={teacher} world={in3d}
+      {card && showCard && !(in3d && travelling) && !(hubInStreet && !card.activity) && <ActivityCard key={`${level}-${card.location.id}-${card.activity?.id ?? 'hub'}`} view={card} state={state} teacher={teacher} world={in3d}
         inside={walkingInside}
         onChoose={id => setState(current => chooseOption(current, id))}
         onInspect={id => setState(current => inspectItem(current, id))}
@@ -441,7 +447,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
   const focusRef = useRef<HTMLDivElement>(null);
   const stepKey = view.activity ? `${view.activity.id}-${view.index}` : 'hub';
   useEffect(() => { focusRef.current?.focus({ preventScroll: true }); }, [stepKey]);
-  const taxi = location.id === 'taxi';
+  const taxi = location.id === 'taxi' && (!worldOutcome(state) || worldOutcome(state)?.location === 'taxi');
   const exitLabel = taxi ? 'Bajar del taxi' : inside && view.activity ? 'Seguir recorriendo' : view.activity && location.hub && !world ? 'Volver' : 'Volver a la calle';
   const exitKey = taxi ? 'F' : 'Esc';
   const encounter = state.encounters[location.id];
@@ -459,7 +465,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
   const canGo = view.activity && !view.last && (view.beat.kind !== 'choose') && (view.beat.kind !== 'inspect' || view.progress.seen.length >= 2);
   return <section className={`na-card${world ? ' is-world' : ''}`} aria-labelledby="na-card-title" data-type={location.type} data-beat={view.activity ? view.beat.kind : 'hub'} data-step={view.activity ? view.index : -1} onKeyDown={onKey}>
     <header className="na-card-head">
-      <p className="na-card-place"><span>{location.name}</span><em>{mechanic.mechanic}</em></p>
+      <p className="na-card-place"><span>{worldOutcome(state)?.label ?? location.name}</span><em>{mechanic.mechanic}</em></p>
       <button type="button" className="na-close" onClick={view.activity && location.hub && !world ? onBack : inside && !view.activity ? onLeave : onBack} aria-label={exitLabel}>×</button>
     </header>
 
