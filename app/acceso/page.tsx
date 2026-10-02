@@ -50,7 +50,7 @@ export default async function Access({
     translate(locale, key, values);
   const signedIn = signedInFromHeaders(requestHeaders);
   const config = billingConfig(env);
-  const priceLabel = `US$${config.founderOffer.priceUsd}`;
+  const priceLabel = `US${config.founderOffer.priceUsd.toFixed(2)}`;
   // In Sandbox the same paywall opens the test checkout; Live still requires
   // the legal operator data before the public billing flow is enabled.
   const readiness = billingReadiness(config, Boolean(legalOperator(env)));
