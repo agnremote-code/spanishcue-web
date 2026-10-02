@@ -9,6 +9,7 @@ import "./marketing/free-lesson-gate.css";
 import "./marketing-landing/style.css";
 import "./marketing-landing/overrides.css";
 import "./privacy/consent.css";
+import LessonReportPanel from "./lesson-reports/LessonReportPanel";
 import AuthSessionSync from "./AuthSessionSync";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 import { localeFromHeaders, translate } from "./i18n/messages";
@@ -105,6 +106,7 @@ export default async function RootLayout({
             lessonTitle={currentLesson?.title}
           />
           {children}
+          {currentLesson && <LessonReportPanel key={pathname} lesson={currentLesson} signedIn={signedIn} />}
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (
             <FreeLessonRegistrationGate lessonId={currentLesson.id} lessonTitle={currentLesson.title} />

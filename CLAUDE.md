@@ -1,5 +1,11 @@
 # CLAUDE.md — SPANISHCUE operating instructions
 
+## Owner authorization — 2026-10-02 (supersedes older delivery restrictions)
+
+For SpanishCue implementations approved by the owner, complete implementation, all required tests and reasonable fixes, commit, push, non-draft PR, verified merge to main, production deploy, and production smoke. Do not ask the owner to review branches, PRs, diffs, commits or previews, or reconfirm these technical steps. Use CI + Auto Merge when available and verify the resulting main SHA. Publish main through **Deploy Production (Cloudflare, owner-authorized)** with action `deploy`, mode `release`, exact main SHA, and confirmation `deploy <sha>`. GitHub/browser/workflow use is explicitly authorized. Continue investigating and correcting recoverable failures until production is verified. Consult only for a materially new product decision or an actual access limitation that cannot be resolved. This authorization applies to future work in this repository.
+
+Cloudflare is now the canonical production publisher; the previous Sites controller is disabled. Older text below describing Sites as active or requiring agents to stop before publication is historical and superseded. Preserve release locks, secrets, billing, auth, and unrelated work. For the approved reports feature, the owner also authorizes the exact additive, retry-safe `drizzle/0010_lesson_reports.sql` preparation in the official production workflow. No permission for destructive schema/data operations is implied.
+
 This file is the permanent operating contract for Claude Code on SPANISHCUE.
 
 Claude Code is the primary development agent. Codex is the secondary agent.

@@ -34,7 +34,7 @@ function fixture() {
     payment_webhook_events: [{ provider: "paypal", environment: "live", event_id: "WH-1", event_type: "PAYMENT.SALE.COMPLETED", resource_id: "PAY-1", received_at: t, processed_at: t, processing_status: "processed", error_code: null }],
     students: [{ id: "s1", owner_id: "owner", alias: "Ana O'Neil", last_name: null, email: null, level: "A2", goal: "", status: "active", created_at: "2026-09-01T00:00:00Z", updated_at: "2026-09-01T00:00:00Z" }],
     class_records: [{ id: "c1", owner_id: "owner", student_id: "s1", lesson_id: null, free_title: "Repaso", starts_at: "2026-09-02T10:00:00Z", timezone: "Asia/Taipei", duration_minutes: 45, status: "done", pedagogical_note: "", next_step: "", request_key: "k1", created_at: "2026-09-02T10:00:00Z", updated_at: "2026-09-02T10:00:00Z" }],
-    lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
+    lesson_reports: [], lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
   };
 }
 
@@ -52,7 +52,7 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 17);
+  assert.equal(order.length, 18);
   assert.ok(order.indexOf("users") < order.indexOf("auth_identities"));
   assert.ok(order.indexOf("billing_subscriptions") < order.indexOf("billing_payments"));
   assert.ok(order.indexOf("billing_payments") < order.indexOf("billing_outbox_events"));

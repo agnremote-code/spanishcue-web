@@ -35,6 +35,7 @@ export default async function Admin() {
           <div>Administra la oferta y el acceso de cada profesor desde un solo lugar.</div>
         </section>
         <p><Link href="/?vista=profesor">Probar la vista de profesor →</Link></p>
+        <p><Link href="/admin/reportes">Reportes de clases →</Link></p>
         <OfferEditor initial={offer} />
         <TeacherAccessEditor initial={teachers} />
         <section className="teacher-world">
