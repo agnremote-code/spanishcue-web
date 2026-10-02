@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState, type ComponentType, type CSSP
 import CityScene from './CityScene';
 import {
   DEFAULT_LEVEL, LEVELS, LOCATIONS, MECHANICS, contentFor, isLevel, setLevel,
-  advanceBeat, chooseOption, closeActivity, completedIds, currentView, finalAvailable, initialState, inspectItem, isValidState,
+  previousBeat, previousActivity, advanceBeat, chooseOption, closeActivity, completedIds, currentView, finalAvailable, initialState, inspectItem, isValidState,
   leaveLocation, locationById, markDone, nightClock, nightSummary, openActivity, openFinal, openLocation, otherActivity, resolveEvent,
   restartActivity, startExploring, worldOutcome, toggleCriterion, triggerEvent,
   type Grammar, type Help, type Level, type Location, type NightState, type View,
@@ -272,6 +272,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         inside={walkingInside}
         onChoose={id => setState(current => chooseOption(current, id))}
         onInspect={id => setState(current => inspectItem(current, id))}
+        onPrevious={() => setState(current => previousBeat(current))}
+        onPreviousActivity={() => setState(current => previousActivity(current))}
         onNext={() => setState(current => advanceBeat(current))}
         onOther={() => setState(current => otherActivity(current))}
         onPick={id => setState(current => openActivity(current, id))}
@@ -436,9 +438,9 @@ function BeatView({ beat, onChoose, onInspect }: { beat: Beat; onChoose: (id: st
   </>;
 }
 
-function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect, onNext, onOther, onPick, onRestart, onDone, onBack, onLeave }: {
+function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect, onPrevious, onPreviousActivity, onNext, onOther, onPick, onRestart, onDone, onBack, onLeave }: {
   view: View; state: NightState; teacher: boolean; world: boolean; inside: boolean;
-  onChoose: (id: string) => void; onInspect: (id: string) => void; onNext: () => void; onOther: () => void; onPick: (id: string) => void;
+  onChoose: (id: string) => void; onInspect: (id: string) => void; onPrevious: () => void; onPreviousActivity: () => void; onNext: () => void; onOther: () => void; onPick: (id: string) => void;
   onRestart: () => void; onDone: () => void; onBack: () => void; onLeave: () => void;
 }) {
   const { TEACHER_MOVES } = contentFor(state.level);
@@ -454,15 +456,19 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
 
   // Number keys or letters pick an option, like a game menu.
   const onKey = (event: ReactKeyboardEvent<HTMLElement>) => {
-    if (!view.activity || view.beat.kind !== 'choose' || !view.beat.options) return;
+    if (!view.activity) return;
     const target = event.target as HTMLElement;
-    if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
+    if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable) return;
+    if (event.metaKey || event.ctrlKey || event.altKey) return;
+    if (event.key === 'ArrowLeft' && view.index > 0) { event.preventDefault(); event.stopPropagation(); onPrevious(); return; }
+    if (event.key === 'ArrowRight' && !view.last && (view.beat.kind !== 'choose' || view.progress.choice)) { event.preventDefault(); event.stopPropagation(); onNext(); return; }
+    if (view.beat.kind !== 'choose' || !view.beat.options) return;
     const index = /^[1-4]$/.test(event.key) ? Number(event.key) - 1 : LETTERS.indexOf(event.key.toUpperCase());
     const option = view.beat.options[index];
     if (option && !event.metaKey && !event.ctrlKey && !event.altKey) { event.preventDefault(); onChoose(option.id); }
   };
 
-  const canGo = view.activity && !view.last && (view.beat.kind !== 'choose') && (view.beat.kind !== 'inspect' || view.progress.seen.length >= 2);
+  const canGo = view.activity && !view.last && (view.beat.kind !== 'choose' || view.progress.choice !== null) && (view.beat.kind !== 'inspect' || view.progress.seen.length >= 2);
   return <section className={`na-card${world ? ' is-world' : ''}`} aria-labelledby="na-card-title" data-type={location.type} data-beat={view.activity ? view.beat.kind : 'hub'} data-step={view.activity ? view.index : -1} onKeyDown={onKey}>
     <header className="na-card-head">
       <p className="na-card-place"><span>{worldOutcome(state)?.label ?? location.name}</span><em>{mechanic.mechanic}</em></p>
@@ -488,6 +494,10 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
       </div>
     </div>}
 
+    {view.activity && location.activities.length > 1 && <nav className="na-situation-nav" aria-label="Ejercicios del lugar">
+      <button type="button" className="na-secondary" onClick={onPreviousActivity}>← Ejercicio anterior</button>
+      <button type="button" className="na-secondary" onClick={onOther}>Ejercicio siguiente →</button>
+    </nav>}
     {help && <HelpPanel help={location.help} grammar={location.grammar} />}
 
     <footer className="na-card-foot">
@@ -496,8 +506,11 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
       </button>
       <div className="na-actions">
         <button type="button" className="na-secondary" onClick={inside && !view.activity ? onLeave : onBack}>{exitLabel}{world && <kbd>{exitKey}</kbd>}</button>
-        {canGo && <button type="button" className="na-primary" onClick={onNext}>Seguir</button>}
-        {view.activity && view.last && <button type="button" className="na-primary" onClick={location.hub && world ? onBack : onOther}>{location.hub && world ? (inside ? 'Seguir recorriendo' : 'Volver a la calle') : mechanic.more}</button>}
+        {view.activity && <nav className="na-question-nav" aria-label="Preguntas del ejercicio">
+          <button type="button" className="na-secondary" aria-label="Pregunta anterior" disabled={view.index === 0} onClick={onPrevious}>←</button>
+          <span>{view.index + 1} / {view.total}</span>
+          <button type="button" className="na-primary" aria-label="Pregunta siguiente" disabled={!canGo} onClick={onNext}>→</button>
+        </nav>}
       </div>
     </footer>
 
@@ -533,7 +546,8 @@ function EventCard({ state, eventId, teacher, onContinue }: { state: NightState;
     <p className="na-ask" key={prompt}>{event.prompts[prompt]}</p>
     {teacher && <p className="na-teacher-note">{event.teacher}</p>}
     <div className="na-row">
-      {!lastPrompt && <button type="button" className="na-primary" onClick={() => setPrompt(value => value + 1)}>Siguiente pregunta</button>}
+      <button type="button" className="na-secondary" disabled={prompt === 0} aria-label="Pregunta anterior" onClick={() => setPrompt(value => value - 1)}>←</button>
+      <button type="button" className="na-primary" disabled={lastPrompt} aria-label="Pregunta siguiente" onClick={() => setPrompt(value => value + 1)}>→</button>
       <button type="button" className={lastPrompt ? 'na-primary' : 'na-secondary'} onClick={onContinue}>Seguir con el nuevo plan</button>
     </div>
   </section>;
@@ -558,8 +572,8 @@ function FinalRecap({ state, teacher, onToggle, onReset }: { state: NightState; 
     </ol>
     <p className={isHypothetical ? 'na-ask is-hypothetical' : 'na-ask'} key={prompt}>{questions[prompt]}</p>
     <div className="na-row">
-      {prompt > 0 && <button type="button" className="na-secondary" onClick={() => setPrompt(value => value - 1)}>Anterior</button>}
-      {!isHypothetical && <button type="button" className="na-primary" onClick={() => setPrompt(value => value + 1)}>Siguiente pregunta</button>}
+      {prompt > 0 && <button type="button" className="na-secondary" onClick={() => setPrompt(value => value - 1)}>← Anterior</button>}
+      {!isHypothetical && <button type="button" className="na-primary" onClick={() => setPrompt(value => value + 1)}>Siguiente →</button>}
       <button type="button" className={`na-help-toggle${help ? ' is-open' : ''}`} aria-expanded={help} onClick={() => setHelp(value => !value)}>Necesito ayuda</button>
     </div>
     {help && <HelpPanel help={FINAL.help} />}

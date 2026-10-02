@@ -1,3 +1,5 @@
+import { consequenceFor } from "./consequences.mjs";
+
 // Modo Play activity types. Each type turns one activity's content into an
 // ordered list of beats; a card shows one beat at a time. Beats are plain
 // data, so every world (this night, a future market, a future airport) can
@@ -132,7 +134,18 @@ export function emptyProgress() {
 export function beatsOf(type, activity, progress = emptyProgress()) {
   const kind = ACTIVITY_TYPES[type];
   if (!kind) throw new Error(`Unknown activity type: ${type}`);
-  return kind.beats(activity, progress);
+  const beats = kind.beats(activity, progress);
+  if (type === "decisiones" || type === "comparar") {
+    beats[beats.length - 1] = { ...beats.at(-1), label: "Reflexión final" };
+    return beats;
+  }
+  const story = consequenceFor(activity.id, activity.lessonLevel ?? "B1");
+  const chosen = story.options.find(o => o.id === progress.choice);
+  return [...beats,
+    { kind: "choose", label: "Tu decisión", prompt: story.prompt, options: story.options.map(({ id, label }) => ({ id, label })) },
+    { kind: "result", label: "Consecuencia", chosen: chosen?.label ?? null, context: chosen?.result ?? "", prompt: chosen?.ask ?? "" },
+    { kind: "talk", label: "Reflexión final", prompt: story.reflection },
+  ];
 }
 
 // Whether the learner can move past the current beat.
