@@ -7,6 +7,17 @@ import assert from 'node:assert/strict';
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   {
+    id:225,path:'/la-entonacion-cambia-todo',
+    files:/^(?:app\/la-entonacion-cambia-todo\/|app\/phonetics-family\/|public\/(?:la-entonacion-cambia-todo|audio\/la-entonacion-cambia-todo)\/|tests\/entonacion[^/]*\.test\.mjs$|scripts\/generate-entonacion-audio\.py$|docs\/lessons\/la-entonacion-cambia-todo\.md$)/,
+    edits:{
+      '.github/workflows/ci-automerge.yml':[text=>{const step='      - name: Install audio verification dependency\n        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg\n\n';assert.equal(text.split(step).length-1,2,'audio dependency for both CI verification jobs');return text.split(step).join('');}],
+      'app/lesson-catalog.ts':[text=>{const lines=text.split('\n');const at=lines.flatMap((line,i)=>line.startsWith('  {id:225,')&&line.includes('path:"/la-entonacion-cambia-todo"')?[i]:[]);assert.equal(at.length,1,'one intonation catalog entry');lines.splice(at[0],1);return lines.join('\n');},['"Fonética":[201,202,38,224,225],','"Fonética":[201,202,38,224],']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 117);','assert.equal(lessons.length, 116);'],['assert.equal(a1Lessons.length, 34);','assert.equal(a1Lessons.length, 33);'],["idsFor('Fonética'), [201, 202, 38, 224, 225]","idsFor('Fonética'), [201, 202, 38, 224]"]],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/81(?:<!-- -->|\\s)+resultados/);assert.match(html,/110(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/80(?:<!-- -->|\\s)+resultados/);assert.match(html,/109(?:<!-- -->|\\s)+clases totales/);']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);\n",'']],
+    },
+  },
+  {
     id: 224, path: '/hablar-sin-cortar',
     files: /^(?:app\/(?:hablar-sin-cortar|phonetics-family)\/|public\/(?:hablar-sin-cortar|audio\/hablar-sin-cortar)\/|tests\/hablar-sin-cortar[^/]*\.test\.mjs$|scripts\/generate-hablar-audio\.py$|docs\/(?:lessons\/hablar-sin-cortar[^/]*|superpowers\/plans\/2026-10-01-hablar-sin-cortar)\.md$)/,
     edits: {
