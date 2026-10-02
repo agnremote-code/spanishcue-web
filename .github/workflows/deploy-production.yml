@@ -141,6 +141,45 @@ jobs:
           npm run build
           npm run validate:artifact
 
+      # Owner authorization 2026-10-02: resolve the two Autoestudio release gates.
+      # This step is idempotent and fail-closed: existing secrets are never
+      # rotated, and 0011 runs only when no autoestudio_* schema objects exist.
+      - name: Bootstrap Autoestudio Share Pass prerequisites in production
+        if: inputs.action == 'deploy'
+        env:
+          AUTOESTUDIO_EXPECTED_PRODUCTION_D1_ID: 343ac454-a056-4c40-a893-f8be572665a6
+          AUTOESTUDIO_WORKER: spanishcue
+          AUTOESTUDIO_SQL_SHA256: 4a040f541101ea47766b1403ad933accd8cc1afb73b4c8dec2f04d30118ca51d
+        run: |
+          test "$PRODUCTION_D1_ID" = "$AUTOESTUDIO_EXPECTED_PRODUCTION_D1_ID"
+          ACTUAL_SQL_SHA256="$(sha256sum drizzle/0011_autoestudio_share.sql | awk '{print $1}')"
+          test "$ACTUAL_SQL_SHA256" = "$AUTOESTUDIO_SQL_SHA256"
+
+          curl -fsS \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/$AUTOESTUDIO_WORKER/settings" \
+            > autoestudio-worker-settings.json
+
+          if ! jq -e '.result.bindings[]? | select(.type == "secret_text" and .name == "AUTOESTUDIO_SHARE_SECRET")' autoestudio-worker-settings.json >/dev/null; then
+            AUTOESTUDIO_SHARE_SECRET="$(openssl rand -hex 32)"
+            echo "::add-mask::$AUTOESTUDIO_SHARE_SECRET"
+            printf '%s' "$AUTOESTUDIO_SHARE_SECRET" | npx wrangler secret put AUTOESTUDIO_SHARE_SECRET --name "$AUTOESTUDIO_WORKER"
+          fi
+
+          npx wrangler d1 execute "$PRODUCTION_D1_ID" --remote \
+            --command "SELECT name FROM sqlite_master WHERE name LIKE 'autoestudio_%' ORDER BY name" \
+            --json > autoestudio-schema-before.json
+          OBJECT_COUNT="$(jq '[.[].results[]? | select(.name | startswith("autoestudio_"))] | length' autoestudio-schema-before.json)"
+          if [ "$OBJECT_COUNT" = "0" ]; then
+            npx wrangler d1 execute "$PRODUCTION_D1_ID" --remote --file=drizzle/0011_autoestudio_share.sql --yes
+          fi
+
+          curl -fsS \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/$AUTOESTUDIO_WORKER/settings" \
+            > autoestudio-worker-settings-after.json
+          jq -e '.result.bindings[]? | select(.type == "secret_text" and .name == "AUTOESTUDIO_SHARE_SECRET")' autoestudio-worker-settings-after.json >/dev/null
+
       - name: Rewrite build config for production
         if: inputs.action == 'deploy'
         env:
