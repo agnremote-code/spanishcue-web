@@ -86,7 +86,7 @@ test("marketing surfaces stay reusable and the free lesson close is global", asy
   assert.match(gate, /href="\/terms"/);
   assert.match(gate, /href="\/privacy"/);
   assert.match(checkout, /checkout_start/);
-  assert.match(checkout, /value: 15/);
+  assert.match(checkout, /value: founder\.priceUsd/);
   assert.match(checkout, /currency: "USD"/);
   assert.match(checkout, /founder-status/);
   assert.match(sections, /subscriptionCtaFor\(audience\)/);
