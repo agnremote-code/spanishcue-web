@@ -33,3 +33,14 @@ test('database atomically bounds bursts per authenticated user',async()=>{
  assert.equal(results.filter(r=>r.status===201).length,5); assert.equal(results.filter(r=>r.status===429).length,2);
  assert.equal((await routes.POST(req('POST',valid,{user:'other'}))).status,201);
 });
+test('canonical schema retries reuse one persisted row and edited payloads remain distinct',async()=>{
+ const body={...valid,requestKey:'retry-key-1234567890'};
+ const send=()=>routes.POST(req('POST',body,{user:'retry'}));
+ const first=await send();const again=await send();assert.equal(first.status,201);assert.equal(again.status,201);assert.equal((await first.json()).id,(await again.json()).id);
+ assert.equal(db.prepare('SELECT count(*) AS n FROM lesson_reports WHERE user_id=?').get('retry').n,1);
+ const edited=await routes.POST(req('POST',{...body,message:'Otro detalle corregido.'},{user:'retry'}));assert.equal(edited.status,201);assert.equal(db.prepare('SELECT count(*) AS n FROM lesson_reports WHERE user_id=?').get('retry').n,2);
+});
+test('expanded conversation family level persists C1 instead of raw seed A2',async()=>{
+ const bundle=await build({stdin:{contents:"export {conversationFamilies} from './app/conversation-families/catalog';",resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});const {conversationFamilies}=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));const family=conversationFamilies.find(f=>f.availableLevels.includes('C1'));
+ const response=await routes.POST(req('POST',{...valid,lessonId:family.canonicalLessonId,url:family.canonicalPath+'?level=C1',level:'C1'},{user:'family'}));assert.equal(response.status,201);const {id}=await response.json();assert.equal(db.prepare('SELECT level FROM lesson_reports WHERE id=?').get(id).level,'C1');
+});

@@ -1,3 +1,4 @@
+import { conversationFamilyByLessonId } from '../conversation-families/catalog';
 import { lessons } from '../lesson-catalog';
 import { localLessonPath } from '../access-policy';
 import { reportCategories,reportStatuses,type ReportRow } from './contracts';
@@ -11,7 +12,7 @@ export function validateReport(value:unknown) {
  const message=typeof v.message==='string'?v.message.trim():'';
  if(message.length<3 || message.length>2000) throw new ReportError('Escribí entre 3 y 2000 caracteres.');
  const level=text(v.level,10)||lesson.level;
- if(!(lesson.levels||[lesson.level]).includes(level)) throw new ReportError('Nivel no válido.');
+ if(!(conversationFamilyByLessonId.get(lesson.id)?.availableLevels||lesson.levels||[lesson.level]).includes(level)) throw new ReportError('Nivel no válido.');
  const path=localLessonPath(lesson);
  const url=text(v.url,1000);
  if(!path || !url.startsWith('/') || url.startsWith('//') || url.includes('\\')) throw new ReportError('URL no válida.');
@@ -23,12 +24,17 @@ export function validateReport(value:unknown) {
  const context=Object.fromEntries(['sectionId','activityId','questionId','blockId','sectionLabel','viewport','userAgent'].map(k=>[k,text(rawContext[k],300)]).filter(([,v])=>v));
  // Only useful navigation state. Never persist tokens or arbitrary query data.
  const query=new URLSearchParams(); if(parsed.pathname==='/')query.set('lessonId',String(lesson.id)); if(parsed.searchParams.has('level'))query.set('level',level);
- return {lesson,message,level,url:parsed.pathname+(query.size?'?'+query.toString():'')+parsed.hash.slice(0,150),category:String(category),context};
+ return {lesson,message,level,url:parsed.pathname+(query.size?'?'+query.toString():''),category:String(category),context};
 }
 export async function createReport(db:D1Database,userId:string,email:string|null,value:unknown) {
- const r=validateReport(value); const now=new Date().toISOString(); const cutoff=new Date(Date.now()-600_000).toISOString(); const id=crypto.randomUUID();
+ const r=validateReport(value); const now=new Date().toISOString(); const cutoff=new Date(Date.now()-600_000).toISOString(); const key=(value as Record<string,unknown>).requestKey;
+ let id=crypto.randomUUID() as string;
+ if(key!==undefined){if(typeof key!=='string'||!/^[a-zA-Z0-9_-]{16,100}$/.test(key))throw new ReportError('Clave de envío no válida.');
+ const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify([userId,key,r.lesson.id,r.level,r.url,r.message,r.category,r.context])));id='report-'+Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
+ const existing=await db.prepare('SELECT id FROM lesson_reports WHERE id=? AND user_id=?').bind(id,userId).first();if(existing)return id;}
  const result=await db.prepare(`INSERT INTO lesson_reports (id,user_id,user_email,lesson_id,lesson_slug,lesson_title,lesson_category,level,url,message,category,context_json,created_at,updated_at)
- SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT count(*) FROM lesson_reports WHERE user_id=? AND created_at>=?) < 5`).bind(id,userId,email,r.lesson.id,localLessonPath(r.lesson)!,r.lesson.title,r.lesson.category,r.level,r.url,r.message,r.category,JSON.stringify(r.context),now,now,userId,cutoff).run();
+ SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT count(*) FROM lesson_reports WHERE user_id=? AND created_at>=?) < 5 ON CONFLICT(id) DO NOTHING`).bind(id,userId,email,r.lesson.id,localLessonPath(r.lesson)!,r.lesson.title,r.lesson.category,r.level,r.url,r.message,r.category,JSON.stringify(r.context),now,now,userId,cutoff).run();
+ if(!result.meta.changes){const existing=await db.prepare('SELECT id FROM lesson_reports WHERE id=? AND user_id=?').bind(id,userId).first();if(existing)return id;}
  if(!result.meta.changes)throw new ReportError('Ya enviaste varios reportes. Probá nuevamente en unos minutos.',429);
  return id;
 }

@@ -6,9 +6,11 @@ name: Deploy Production (Cloudflare, owner-authorized)
 # CLOUDFLARE_API_TOKEN_PRODUCTION, CLOUDFLARE_ACCOUNT_ID, PRODUCTION_D1_ID,
 # PRODUCTION_VARS_JSON).
 #
-# Never triggered by pushes or merges. Every run is a manual dispatch with an
-# exact SHA on main plus a typed confirmation, then a reviewer approval on the
-# `production` environment.
+# Never triggered by pushes or merges directly. Every run is an explicit
+# workflow_dispatch for an exact SHA on main plus the typed confirmation.
+# Successful staging now dispatches this workflow automatically for that exact
+# SHA; manual dispatch remains available for controlled deploys and rollbacks.
+# Any protection configured on the `production` environment still applies.
 #
 # Modes:
 #   inert   - deploys Worker `spanishcue` on workers.dev only. No spanishcue.com
@@ -149,7 +151,10 @@ jobs:
       # This exact idempotent CREATE-only SQL leaves existing data/schema intact.
       - name: Prepare authorized lesson reports table
         if: inputs.action == 'deploy'
-        run: npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0010_lesson_reports.sql --yes
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0010_lesson_reports.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(lesson_reports)" --json > report-schema.json
+          node scripts/verify-lesson-reports-schema.mjs report-schema.json
 
       - name: Record current production version
         if: inputs.action == 'deploy'
