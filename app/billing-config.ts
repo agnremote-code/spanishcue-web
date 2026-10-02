@@ -1,6 +1,6 @@
 export const PRO_PRODUCT_CODE = "spanishcue-pro";
 export const FOUNDER_PLAN_CODE = "spanishcue-founder-monthly";
-export const APPROVED_PRICE_CENTS = 1500;
+export const APPROVED_PRICE_CENTS = 1550;
 export const APPROVED_CURRENCY = "USD";
 export const APPROVED_FOUNDER_LIMIT = 1000;
 export const APPROVED_INTERVAL = { unit: "MONTH", count: 1 } as const;
@@ -58,6 +58,12 @@ function whole(value: string | undefined, fallback: number, min: number, max: nu
   return Number.isInteger(parsed) && parsed >= min && parsed <= max ? parsed : fallback;
 }
 
+function money(value: string | undefined, fallback: number, min: number, max: number) {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed < min || parsed > max) return fallback;
+  return Math.round(parsed * 100) / 100;
+}
+
 export function billingConfig(values: unknown): BillingRuntimeConfig {
   const runtime = values && typeof values === "object" ? values as RuntimeValues : {};
   const paypalEnv = runtime.PAYPAL_ENV === "live" ? "live" : "sandbox";
@@ -82,7 +88,7 @@ export function billingConfig(values: unknown): BillingRuntimeConfig {
       enabled: bool(runtime.FOUNDER_OFFER_ENABLED, true),
       code: runtime.FOUNDER_OFFER_CODE?.trim() || "founder-1000-usd15-monthly",
       limit: whole(runtime.FOUNDER_LIMIT, APPROVED_FOUNDER_LIMIT, 1, APPROVED_FOUNDER_LIMIT),
-      priceUsd: whole(runtime.FOUNDER_PRICE_USD, 15, 1, 100000),
+      priceUsd: money(runtime.FOUNDER_PRICE_USD, 15.5, 1, 100000),
     },
   };
 }
