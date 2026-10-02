@@ -16,6 +16,8 @@ test('all six authored versions share the same activity contract', async () => {
   assert.equal(c.route.reduce((sum,s)=>sum+s.minutes,0),50);
   assert.ok(c.final.steps.length>=3 && c.final.criteria.length===3);
   for(const a of c.activities){assert.ok(a.prompt&&a.text&&a.explanation&&a.transfer&&a.teacher);if(level!=='A1'){const b=base.activities.find(b=>b.id===a.id);for(const field of ['prompt','text','explanation','transfer','teacher'])assert.notEqual(a[field],b[field],`${level} ${a.id} ${field}`);}}
+  assert.equal(c.activities.find(a=>a.kind==='connect').analysisTarget,'connectedSpeech');
+  assert.equal(c.activities.find(a=>a.kind==='transfer').analysisTarget,'manual');
  }
 });
 test('changing level retains stage, clears attempts and observations, and ignores stale audio callbacks', async()=>{
