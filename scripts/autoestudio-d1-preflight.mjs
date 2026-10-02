@@ -21,6 +21,17 @@ try {
  const schema=await query("SELECT type,name,sql FROM sqlite_master WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' ORDER BY name");
  const reports=schema.find(r=>r.name==='lesson_reports');
  report.lessonReportsExists=Boolean(reports);
+ report.lessonReportsSchemaVerified=false;
+ if(reports){
+  const expected=new DatabaseSync(':memory:');
+  try{
+   expected.exec(await readFile('drizzle/0010_lesson_reports.sql','utf8'));
+   const objects=expected.prepare("SELECT name,sql FROM sqlite_master WHERE sql IS NOT NULL AND name LIKE 'lesson_reports%'").all();
+   const normalize=value=>value.replace(/\bIF NOT EXISTS\b/gi,'').replace(/[\"`\[\]\s;]/g,'').toLowerCase();
+   for(const object of objects)assert.equal(normalize(schema.find(row=>row.name===object.name)?.sql||''),normalize(object.sql),'Canonical reports schema mismatch: '+object.name);
+   report.lessonReportsSchemaVerified=true;
+  }finally{expected.close();}
+ }
  report.existingShareObjects=schema.filter(r=>r.name.startsWith('autoestudio_')).map(r=>r.name);
  report.ledgerTables=schema.filter(r=>r.type==='table'&&/migration/i.test(r.name)).map(r=>r.name);
  if(report.ledgerTables.includes('d1_migrations'))report.ledger=await query('SELECT id,name,applied_at FROM d1_migrations ORDER BY id');
@@ -50,7 +61,11 @@ try {
  report.backup={provider:'Cloudflare D1 native export',bookmark:exported.at_bookmark||bookmark,createdAt:new Date().toISOString(),bytes:Buffer.byteLength(dump),sha256:hash(dump),downloadWindow:'one hour; refresh before execution if expired'};
  const db=new DatabaseSync(':memory:');
  try{
+  // D1 exports can list child rows before their parent tables. Restore into a
+  // disposable DB with FK enforcement off, then verify every FK before rehearsal.
+  db.exec('PRAGMA foreign_keys=OFF');
   db.exec(dump);
+  db.exec('PRAGMA foreign_keys=ON');
   assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check,'ok','Export restore failed integrity check');
   assert.equal(db.prepare('PRAGMA foreign_key_check').all().length,0,'Export has foreign key violations');
   const tables=db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE '_cf_%'").all().map(r=>r.name);
