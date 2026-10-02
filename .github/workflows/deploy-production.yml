@@ -152,7 +152,7 @@ jobs:
       - name: Prepare authorized lesson reports table
         if: inputs.action == 'deploy'
         run: |
-          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0010_lesson_reports.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "$(cat drizzle/0010_lesson_reports.sql)" --yes
           npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(lesson_reports)" --json > report-schema.json
           node scripts/verify-lesson-reports-schema.mjs report-schema.json
 
