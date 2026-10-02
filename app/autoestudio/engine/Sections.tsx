@@ -5,11 +5,10 @@ import type { Example, Listening, Module, Pronunciation, QuizItem, Reading, Spea
 import { ChoiceQuestion, ExerciseView, GapLine, OpenTask, OrderBuilder, PlayButton, TextAnswer, type EngineContext } from "./Exercises";
 import { Recorder, SpeakTimer } from "./Recorder";
 import { Rich } from "./Rich";
+import { audioKey } from "../curriculum/audio-key";
 import { playClips, stopAudio } from "./speech";
 import { checkAnswer, countWords } from "./text";
 
-const flags: Record<string, string> = { MX: "🇲🇽", ES: "🇪🇸", AR: "🇦🇷", CO: "🇨🇴", CL: "🇨🇱", PE: "🇵🇪", CU: "🇨🇺", US: "🇺🇸", VE: "🇻🇪", UY: "🇺🇾", GQ: "🇬🇶" };
-export const voiceFlag = (voice?: string) => flags[voice?.split("-")[1] ?? ""] ?? "🌎";
 
 function ExampleList({ examples, ctx, speak = true }: { examples: Example[]; ctx: EngineContext; speak?: boolean }) {
   return (
@@ -270,6 +269,7 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
   const [showTranscript, setShowTranscript] = useState(false);
   useEffect(() => () => stopAudio(), []);
   const voices = Object.fromEntries(listening.speakers.map((speaker) => [speaker.id, speaker.voice]));
+  const synthetic = listening.script.some(line => !ctx.audio?.[audioKey(line.text, voices[line.speaker])]);
   const names = Object.fromEntries(listening.speakers.map((speaker) => [speaker.id, speaker.name]));
   const play = async (rate: number) => {
     if (playing) {
@@ -294,12 +294,13 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
         <ul className="ae-speakers">
           {listening.speakers.map((speaker) => (
             <li key={speaker.id}>
-              <span aria-hidden="true">{voiceFlag(speaker.voice)}</span> {speaker.name}
+              {speaker.name}
               {speaker.role && <small> · {speaker.role}</small>}
             </li>
           ))}
         </ul>
       </div>
+      {synthetic && <p className="ae-hint">Audio con voz sintética de tu dispositivo. Las voces pueden coincidir y no garantizan un acento regional. Si no escuchás, comprobá que tu dispositivo tenga una voz en español.</p>}
       <div className="ae-player">
         <button type="button" className={`ae-bigplay ${playing ? "playing" : ""}`} onClick={() => play(1)}>
           <span aria-hidden="true">{playing ? "◼" : "▶"}</span>
@@ -341,7 +342,7 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
                 {listening.script.map((line, index) => (
                   <div key={index}>
                     <dt>
-                      {voiceFlag(voices[line.speaker])} {names[line.speaker]}
+                      {names[line.speaker]}
                     </dt>
                     <dd>{line.text}</dd>
                   </div>

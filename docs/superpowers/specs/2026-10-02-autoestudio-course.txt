@@ -1,0 +1,2257 @@
+You are working directly on the CURRENT SpanishCue repository:
+
+agnremote-code/spanishcue-web
+
+Use GPT-6 Astra for this task.
+
+THIS IS A LARGE, HIGH-ATTENTION PRODUCT + CURRICULUM + ACCESS-SYSTEM IMPLEMENTATION.
+
+The current product is live at:
+
+https://spanishcue.com/autoestudio
+
+The existing A1 implementation is the canonical reference.
+
+Your job is to:
+
+1. preserve and understand the current A1 Autoestudio system;
+2. build the complete remaining course:
+   A2
+   B1
+   B2
+   C1
+   C2
+3. maintain the SAME product pattern and architecture established by A1;
+4. implement a privacy-minimized TEACHER SHARE PASS system;
+5. let students enter through a private level-specific link WITHOUT creating an account;
+6. ask the student only for a simple ALIAS / NICKNAME;
+7. synchronize progress so the teacher can see that student's progress;
+8. keep public previews available;
+9. make the rest of the course visible enough to create curiosity about SpanishCue;
+10. preserve proper access control;
+11. test everything;
+12. merge everything through the repository's verified workflow;
+13. publish everything that can be safely published;
+14. leave the final product online.
+
+DO NOT stop at planning.
+
+==================================================
+FIRST: READ CURRENT MAIN
+==================================================
+
+Current main is canonical.
+
+Before editing anything:
+
+- fetch current main
+- read AGENTS.md
+- inspect open PRs
+- inspect recent Autoestudio work
+- inspect PR #86 and the merged implementation if useful
+- inspect the entire current Autoestudio implementation
+
+At minimum inspect:
+
+app/autoestudio/
+app/autoestudio/curriculum/
+app/autoestudio/curriculum/objectives/
+app/autoestudio/curriculum/modules/a1/
+app/autoestudio/engine/
+app/autoestudio/progress/
+app/autoestudio/access.ts
+app/autoestudio/AutoestudioLanding.tsx
+app/autoestudio/LevelMap.tsx
+app/autoestudio/ModulePlayer.tsx
+app/access-policy.ts
+
+Also inspect:
+
+/cuenta?tab=alumnos
+the current student tracker
+current auth
+current Worker access enforcement
+current D1 schema
+current migration policy
+current tests
+current billing/access architecture
+
+DO NOT overwrite concurrent work.
+
+Follow AGENTS.md exactly regarding:
+- branch ownership
+- PRs
+- migrations
+- merge
+- deployment
+- sensitive files
+- concurrent agents
+
+==================================================
+A1 IS THE CANONICAL REFERENCE
+==================================================
+
+The existing A1 Autoestudio implementation defines the PRODUCT PATTERN.
+
+A1 currently has a data-driven weekly course and should remain the model.
+
+Do NOT redesign the product from scratch.
+
+Do NOT replace A1 with a different system.
+
+A2–C2 must feel like one continuous SpanishCue course.
+
+Use the same fundamental architecture:
+
+/autoestudio
+/autoestudio/a1
+/autoestudio/a2
+/autoestudio/b1
+/autoestudio/b2
+/autoestudio/c1
+/autoestudio/c2
+
+and dynamic module routes such as:
+
+/autoestudio/a2/semana-1
+/autoestudio/b1/semana-8
+etc.
+
+==================================================
+COURSE PRODUCT PRINCIPLE
+==================================================
+
+Autoestudio is not a collection of random exercises.
+
+It is a COMPLETE SPANISH COURSE.
+
+The goal is that a learner progressing through:
+
+A1 → A2 → B1 → B2 → C1 → C2
+
+receives systematic coverage of the Spanish required at each CEFR level.
+
+The course must prepare learners for:
+- real communication
+- formal language-school expectations
+- CEFR-aligned progression
+- DELE-style competencies and task demands
+
+Do NOT claim that Autoestudio itself is an official DELE course or official Instituto Cervantes material.
+
+Do NOT reproduce copyrighted DELE exam texts.
+
+Create ORIGINAL material informed by official standards.
+
+==================================================
+AUTHORITATIVE CURRICULUM SOURCES
+==================================================
+
+Before authoring A2–C2, research and use authoritative sources.
+
+Prioritize:
+
+1. Council of Europe CEFR / CEFR Companion Volume
+2. Instituto Cervantes Plan Curricular del Instituto Cervantes (PCIC)
+3. official Instituto Cervantes DELE specifications, guides and sample task structures
+4. current official documentation on mediation, interaction, phonological control and proficiency descriptors
+
+Avoid relying on generic language-learning blogs.
+
+Build a curriculum coverage map from these sources.
+
+==================================================
+FOUR MACRO-SKILLS
+==================================================
+
+Organize the learner-facing curriculum around FOUR primary skills:
+
+READING
+LISTENING
+WRITING
+SPEAKING
+
+These are the four macro-skills.
+
+Do NOT present phonetics as a fake fifth DELE exam paper.
+
+==================================================
+PHONETICS / PRONUNCIATION — TRANSVERSAL
+==================================================
+
+Pronunciation, phonological control, rhythm, stress, intonation and perception must be integrated TRANSVERSALLY.
+
+They must appear throughout:
+
+LISTENING
++
+SPEAKING
+
+and where useful through explicit pronunciation activities.
+
+The learner must systematically develop:
+
+- intelligibility
+- sound perception
+- articulation
+- word stress
+- sentence stress
+- rhythm
+- connected speech
+- intonation
+- prosodic grouping
+- regional listening flexibility
+- pragmatic prosody at advanced levels
+
+The objective is NOT accent elimination.
+
+The objective is:
+clear, controlled, intelligible Spanish.
+
+==================================================
+LANGUAGE SYSTEMS
+==================================================
+
+GRAMMAR and VOCABULARY are enabling systems feeding the four skills.
+
+They are not isolated trivia sections.
+
+Every important grammar and vocabulary objective should eventually be used in:
+
+reading
+listening
+writing
+and/or speaking
+
+as appropriate.
+
+==================================================
+MEDIATION AND INTERACTION
+==================================================
+
+Especially from B1 upward, integrate:
+
+- interaction
+- negotiation of meaning
+- reformulation
+- summarising
+- explaining information
+- mediation
+- adapting a message to another person
+- register
+- discourse organisation
+
+C1 and C2 must include sophisticated integrated skills.
+
+==================================================
+COURSE COMPLETENESS
+==================================================
+
+The curriculum source of truth must make it possible to answer:
+
+“What has this learner actually covered?”
+
+Every objective must have:
+
+- unique objective ID
+- level
+- domain
+- topic
+- first-teaching module
+- later review/retrieval modules
+- prerequisite where relevant
+
+No objective should exist in the map without being taught.
+
+No core taught objective should disappear without later retrieval.
+
+Create automated coverage validation.
+
+==================================================
+LEVEL STRUCTURE
+==================================================
+
+Follow the established A1 pattern.
+
+Unless current A1 architecture requires another exact count, target:
+
+20 weeks per level
+
+A2: 20
+B1: 20
+B2: 20
+C1: 20
+C2: 20
+
+Keep checkpoint rhythm consistent with A1:
+
+week 5
+week 10
+week 15
+week 20
+
+The checkpoint must integrate prior material rather than simply repeating quizzes.
+
+==================================================
+DO NOT GENERICALLY CLONE A1
+==================================================
+
+The ENGINE can be reused.
+
+The CONTENT must evolve dramatically.
+
+Do NOT create:
+
+A1 sentence
+→ slightly longer A2 sentence
+→ longer B1 sentence
+→ sophisticated adjective at C1
+
+That is not CEFR progression.
+
+Each level must change:
+
+- autonomy
+- linguistic complexity
+- text length
+- listening density
+- lexical precision
+- inferential demand
+- discourse organisation
+- register
+- interaction
+- production length
+- mediation demand
+- amount of scaffolding
+
+==================================================
+SCAFFOLDING BY LEVEL
+==================================================
+
+A1:
+strong support
+
+A2:
+moderate support
+
+B1:
+Spanish-first
+
+B2:
+mostly Spanish
+
+C1:
+Spanish-only except exceptional accessibility support
+
+C2:
+Spanish-only
+
+Reuse current support architecture.
+
+==================================================
+A2 — COMPLETE LEVEL
+==================================================
+
+Build complete A2.
+
+The learner should be able to handle increasingly independent everyday life.
+
+Include comprehensive coverage such as:
+
+- past experiences
+- narrative sequencing
+- daily life
+- travel
+- services
+- appointments
+- health
+- housing
+- work/study
+- plans
+- comparisons
+- instructions
+- preferences
+- opinions with reasons
+- descriptions
+- requests
+- complaints at an appropriate level
+- direct/indirect object use as required
+- pronouns
+- common periphrases
+- past contrasts appropriate to A2
+- future/planning
+- everyday connectors
+- lexical chunks
+- real-world listening
+- short personal/formal writing
+- interaction
+
+Use the actual official objective audit to determine final coverage.
+
+Do not treat this list as exhaustive.
+
+==================================================
+B1 — COMPLETE LEVEL
+==================================================
+
+B1 must represent genuine independent-user ability.
+
+Include systematic work with:
+
+- narration
+- all important past contrasts required at B1
+- experiences and events
+- opinions
+- justification
+- advice
+- hypotheses
+- plans
+- problems and solutions
+- complaints
+- personal and semi-formal writing
+- connected discourse
+- relative structures
+- reported information where appropriate
+- conditional structures
+- subjunctive functions appropriate to B1
+- discourse markers
+- extended listening
+- interviews
+- informal authentic-style speech
+- speaking turns with organisation
+- interaction and mediation
+
+Again:
+audit against official standards.
+
+==================================================
+B2 — COMPLETE LEVEL
+==================================================
+
+B2 must feel substantially different from B1.
+
+Include:
+
+- nuanced argument
+- sustained discourse
+- hypotheses
+- mood and tense selection
+- register
+- mitigation
+- disagreement
+- persuasion
+- negotiation
+- complex connectors
+- sophisticated narration
+- impersonal/passive structures
+- reported speech
+- lexical collocation
+- multi-speaker listening
+- regional variation
+- inference
+- longer reading
+- structured essays/messages
+- extended oral production
+- integrated tasks
+- mediation
+
+==================================================
+C1 — COMPLETE LEVEL
+==================================================
+
+C1 must require advanced operational command.
+
+Include:
+
+- implicit meaning
+- stance
+- register
+- reformulation
+- synthesis
+- complex discourse organisation
+- advanced connectors
+- lexical nuance
+- collocation
+- connotation
+- idiomatic but appropriate language
+- advanced tense/mood choice
+- information structure
+- extended authentic-style reading
+- sustained listening
+- multi-source synthesis
+- formal writing
+- argumentative writing
+- oral presentation
+- negotiation
+- mediation
+- pragmatic prosody
+
+==================================================
+C2 — COMPLETE LEVEL
+==================================================
+
+C2 must NOT simply be “hard C1”.
+
+Include:
+
+- fine semantic distinctions
+- ambiguity
+- irony
+- subtext
+- rhetorical control
+- register switching
+- stylistic choice
+- dense discourse
+- complex source synthesis
+- mediation across audiences
+- advanced reformulation
+- subtle pragmatics
+- nuanced idiomatic usage
+- rhetorical speaking
+- precise writing
+- critical reading
+- challenging listening
+- prosody as an expressive resource
+
+C2 work must reward precision rather than obscure vocabulary for its own sake.
+
+==================================================
+WEEKLY MODULE PATTERN
+==================================================
+
+Reuse the successful A1 data-driven structure.
+
+Each normal week should continue to contain the equivalent of the current complete station pattern.
+
+At minimum ensure meaningful work in:
+
+- objective / mission
+- explanation
+- grammar
+- vocabulary
+- pronunciation / phonology
+- listening
+- reading
+- practice
+- writing
+- speaking
+- use it in class
+- mixed assessment / quiz
+- completion / retrieval
+
+Use the existing A1 contract unless a carefully bounded extension is necessary.
+
+==================================================
+READING
+==================================================
+
+Reading must be genuine reading.
+
+Do not build every reading from 4 artificial sentences.
+
+Progressively include:
+
+A2:
+short notices, messages, practical texts, simple narratives
+
+B1:
+articles, interviews, personal narratives, practical informational texts
+
+B2:
+longer journalism-style texts, arguments, reviews, multi-position material
+
+C1:
+complex articles, essays, professional/formal material, implicit stance
+
+C2:
+dense nuanced texts, rhetorical structure, ambiguity, stylistic interpretation
+
+Always create ORIGINAL texts.
+
+==================================================
+LISTENING
+==================================================
+
+Listening must not be “reading with a play button”.
+
+Audio first.
+
+Use progression such as:
+
+global meaning
+→ specific information
+→ inference / noticing
+→ optional transcript
+
+Never reveal transcript before the listening task by default.
+
+Build increasingly sustained listening.
+
+Include multiple voices/varieties when verified audio supports that claim.
+
+Do NOT pretend synthetic audio demonstrates a regional variety unless it genuinely does.
+
+==================================================
+WRITING
+==================================================
+
+Writing must move from controlled to independent.
+
+Include:
+
+- models
+- planning
+- useful language
+- checklist
+- actual written production
+- revision
+
+Do not make writing only:
+“write three sentences”.
+
+By B2–C2 include:
+- organisation
+- register
+- cohesion
+- argument
+- synthesis
+- reformulation
+
+==================================================
+SPEAKING
+==================================================
+
+Speaking must be substantial.
+
+Include:
+
+- planning
+- timed speaking
+- interaction prompts
+- reformulation
+- follow-up questions
+- role/context
+- transfer to live class
+
+The browser must NOT pretend to automatically judge pronunciation or oral quality.
+
+Recording may remain local unless explicitly required.
+
+Do NOT upload student audio as part of this project.
+
+==================================================
+DELE-STYLE PRACTICE
+==================================================
+
+Use ORIGINAL tasks inspired by the kinds of competencies and interaction demands found in official DELE exams.
+
+Do not copy exam material.
+
+Make the format familiar enough that a learner develops:
+
+- reading task strategies
+- listening task strategies
+- structured writing
+- oral presentation/interaction
+- integrated skills at higher levels
+
+But Autoestudio remains a SpanishCue learning course, not a mock-exam factory.
+
+==================================================
+USE IT IN CLASS
+==================================================
+
+This remains critical.
+
+Every week must finish by preparing something the learner can use with their teacher.
+
+Examples:
+
+tell
+ask
+compare
+defend
+explain
+negotiate
+summarise
+react
+present
+mediate
+
+The live lesson should feel like the natural continuation of the homework.
+
+==================================================
+NEW ACCESS MODEL
+==================================================
+
+Implement a new concept:
+
+TEACHER SHARE PASS
+
+This is a level-scoped access link for one learner.
+
+Example concept:
+
+Teacher creates:
+“A2 access”
+
+SpanishCue returns a secure link.
+
+The teacher sends that link to the learner.
+
+The learner does NOT need:
+
+- an email
+- a password
+- a SpanishCue account
+- Google login
+- Firebase login
+- phone number
+- real name
+
+==================================================
+ONE PASS = ONE LEARNER + ONE LEVEL
+==================================================
+
+The access model should be:
+
+ONE TEACHER
++
+ONE ANONYMOUS LEARNER
++
+ONE ASSIGNED LEVEL
+
+Example:
+
+Teacher generates an A2 pass.
+
+That pass unlocks:
+
+ALL A2 modules
+
+but does NOT unlock:
+
+B1
+B2
+C1
+C2
+teacher tools
+the lesson library
+billing/admin
+another teacher's data
+
+Level access must be server-authorized.
+
+Do not trust query parameters.
+
+==================================================
+STUDENT ALIAS / NICKNAME
+==================================================
+
+On the FIRST use of a brand-new teacher pass, ask for ONE thing:
+
+AN ALIAS / NICKNAME
+
+Example UI:
+
+“¿Cómo querés aparecer para tu profe?”
+
+Helper text:
+
+“Elegí un apodo para que tu profe reconozca tu progreso.
+No uses tu nombre completo, email, teléfono ni usuario de redes.”
+
+Example:
+Luna
+Mate27
+JaviB
+BluePanda
+
+Do NOT request:
+- surname
+- email
+- phone
+- birthday
+- address
+- social username
+- Preply username
+- any contact information
+
+This is intentionally privacy-minimized.
+
+Do NOT claim an alias can never be personally identifying.
+
+Instead encourage a non-identifying nickname.
+
+==================================================
+ALIAS VALIDATION
+==================================================
+
+Use sensible validation.
+
+For example:
+
+- 2–24 characters
+- trim whitespace
+- unicode letters/numbers allowed
+- simple spaces / hyphen / underscore if appropriate
+
+Reject or warn on obvious:
+- email addresses
+- URLs
+- phone-number-like strings
+
+Do not collect unnecessary identity data.
+
+==================================================
+CRYPTOGRAPHIC TEACHER SHARE PASS
+==================================================
+
+The share URL must NOT be:
+
+?level=a2&free=true
+
+or any client-controlled unlock.
+
+Implement a real server-authorized cryptographic pass.
+
+Use a design such as:
+
+version
+pass ID
+high-entropy random secret/nonce
+level scope
+cryptographic HMAC signature
+
+with a server-only secret such as:
+
+AUTOESTUDIO_SHARE_SECRET
+
+Never expose that secret to the client.
+
+Never commit it.
+
+Never log it.
+
+Do not store usable raw bearer secrets unnecessarily.
+
+Prefer hashes where persistence is required.
+
+==================================================
+PASS LIFETIME
+==================================================
+
+The pass should last for the learner's course/assigned level.
+
+NO routine short expiration.
+
+Default:
+
+ACTIVE UNTIL THE TEACHER REVOKES IT.
+
+The learner should not have to request a new link every week.
+
+One A2 pass should remain valid across the entire A2 course.
+
+The teacher can:
+
+- revoke it
+- rotate/regenerate the secret if the link leaks
+- create a pass for the next level later
+
+Rotating the link must NOT delete learner progress.
+
+==================================================
+SHARE LINK FLOW
+==================================================
+
+Target UX:
+
+1. Teacher clicks:
+   “Crear acceso Autoestudio”
+
+2. Select level:
+   A1 / A2 / B1 / B2 / C1 / C2
+
+3. SpanishCue creates one secure pass.
+
+4. Teacher gets:
+   [ COPIAR LINK ]
+
+5. Teacher sends it normally.
+
+6. Student opens something like:
+   /s/<secure-token>
+
+7. Server validates:
+   signature
+   pass state
+   teacher ownership record
+   level
+   revocation state
+
+8. If new:
+   ask for alias.
+
+9. Bind pass to learner profile.
+
+10. Establish a secure signed session/cookie.
+
+11. Redirect to clean URL:
+    /autoestudio/a2
+
+Do NOT leave the bearer token permanently in every navigation URL.
+
+==================================================
+NO BROWSER LOGIN FOR THE STUDENT
+==================================================
+
+A student coming through a valid teacher pass must NOT be forced through:
+
+Firebase
+Google login
+email verification
+SpanishCue account creation
+
+The pass IS the student's scoped access credential.
+
+==================================================
+CROSS-DEVICE USE
+==================================================
+
+The original share link acts as the learner's recovery/access link.
+
+If the learner opens the same teacher link on another device:
+
+- validate the same pass
+- restore the same anonymous learner profile
+- restore server-side progress
+- do not create another learner accidentally
+
+The student should not need an email to sync across devices.
+
+==================================================
+ANONYMOUS LEARNER MODEL
+==================================================
+
+Create a clean anonymous learner model.
+
+Prefer a structure conceptually equivalent to:
+
+autoestudio_learners
+
+- id
+- teacher/owner ID
+- alias
+- created_at
+- updated_at
+
+and:
+
+autoestudio_passes
+
+- id
+- learner_id nullable until first claim
+- teacher/owner ID
+- level
+- token/hash/signature metadata
+- status
+- created_at
+- last_used_at
+- revoked_at
+
+The final schema must be designed after inspecting current D1 conventions.
+
+Do not blindly copy these exact columns if a better compatible schema exists.
+
+==================================================
+NEXT LEVEL
+==================================================
+
+When the learner finishes A2, the teacher can create another pass for THAT EXISTING anonymous learner.
+
+For example:
+
+Luna
+A2 ✓ complete
+
+[ DAR ACCESO A B1 ]
+
+That creates a new B1-scoped pass for the same anonymous learner identity.
+
+The alias does not need to be entered again.
+
+This allows the teacher to see long-term progression:
+
+A2 → B1 → B2 etc.
+
+==================================================
+TEACHER PROGRESS DASHBOARD
+==================================================
+
+The teacher MUST be able to see student progress.
+
+Integrate this naturally with the existing:
+
+/cuenta?tab=alumnos
+
+or the most appropriate current student/account UI after inspecting it.
+
+Do not create a disconnected admin app.
+
+Create an Autoestudio area such as:
+
+AUTOESTUDIO
+
+Luna
+A2
+Semana actual: 7
+5/20 completadas
+Progreso: 28%
+Última actividad: ayer
+
+[ VER PROGRESO ]
+[ COPIAR LINK ]
+[ CAMBIAR NIVEL / DAR SIGUIENTE NIVEL ]
+[ REGENERAR LINK ]
+[ REVOCAR ]
+
+Keep it extremely simple.
+
+==================================================
+WHAT THE TEACHER CAN SEE
+==================================================
+
+Teacher dashboard should show useful learning progress such as:
+
+- alias
+- assigned/current level
+- weeks started
+- weeks completed
+- current/last module
+- overall level progress %
+- section completion
+- checkpoint completion
+- quiz summary if pedagogically useful
+- last activity time
+
+Do NOT store or expose more than necessary.
+
+==================================================
+DO NOT STORE RAW STUDENT CONTENT
+==================================================
+
+For this project, do NOT upload/store:
+
+- microphone recordings
+- raw student voice
+- full written answers
+- private notes entered by the learner
+- unnecessary interaction logs
+
+Server-side progress should be primarily structural:
+
+completed sections
+module status
+quiz summary
+timestamps
+current position
+
+If local writing/recording already exists, keep it local unless current architecture explicitly requires otherwise.
+
+==================================================
+SERVER PROGRESS
+==================================================
+
+Current Autoestudio progress uses a local adapter.
+
+Preserve that abstraction.
+
+Extend it.
+
+Desired behavior:
+
+NORMAL PUBLIC VISITOR:
+local progress only
+
+LOGGED-IN PRO USER:
+preserve current behavior unless existing product architecture says otherwise
+
+TEACHER SHARE PASS LEARNER:
+server-backed progress
++
+local cache if useful
+
+The teacher-pass server record becomes authoritative for that anonymous learner.
+
+Do not couple every component directly to D1.
+
+Keep a progress adapter abstraction.
+
+==================================================
+NO CROSS-STUDENT PROGRESS LEAKS
+==================================================
+
+Very important.
+
+A browser may have been used by:
+- a public visitor
+- one pass learner
+- another pass learner
+- a logged-in teacher
+
+Progress must NOT leak between them.
+
+Namespace local cached state appropriately.
+
+When an active teacher pass is present, never accidentally import another student's generic local progress.
+
+==================================================
+PUBLIC PREVIEW
+==================================================
+
+The public Autoestudio product must remain discoverable.
+
+Anyone should be able to visit:
+
+/autoestudio
+
+and see:
+
+A1
+A2
+B1
+B2
+C1
+C2
+
+their outcomes
+their routes
+their module maps/previews
+what SpanishCue teaches
+
+No login required just to explore.
+
+==================================================
+FREE SAMPLE PER LEVEL
+==================================================
+
+Keep current A1 public access intact.
+
+Do NOT remove existing free A1 weeks.
+
+Additionally, give every newly built level at least ONE real public sample module:
+
+A2 week 1
+B1 week 1
+B2 week 1
+C1 week 1
+C2 week 1
+
+These are PUBLIC preview modules.
+
+The rest remains locked for ordinary visitors unless:
+
+- they have normal PRO/full access
+OR
+- they have a valid teacher share pass for that level
+
+==================================================
+ASSIGNED LEVEL UX
+==================================================
+
+When a student arrives through an A2 teacher pass, the course should visually communicate:
+
+A1 🔒 / preview
+A2 ✓ ACCESO DE TU PROFE
+B1 🔒
+B2 🔒
+C1 🔒
+C2 🔒
+
+Do not hide the broader SpanishCue journey.
+
+The learner should understand that SpanishCue contains an entire A1→C2 pathway.
+
+==================================================
+SUBTLE SPANISHCUE DISCOVERY / CONVERSION
+==================================================
+
+Autoestudio should also work as a subtle product-discovery funnel.
+
+Do NOT interrupt homework with aggressive advertising.
+
+Do NOT cover activities with upgrade modals.
+
+Instead, naturally expose:
+
+- SpanishCue branding
+- full A1→C2 map
+- other locked levels
+- polished product quality
+- a discreet way to learn more about SpanishCue
+
+Possible copy:
+
+“¿Querés seguir estudiando por tu cuenta?”
+
+or:
+
+“Explorar SpanishCue”
+
+Inspect CURRENT billing/access product before deciding where this CTA leads.
+
+Do NOT invent a new paid student plan unless current billing actually supports it.
+
+Do NOT promise a product that does not exist.
+
+If generic SpanishCue PRO already works for any account regardless of occupation, the CTA may use the existing access flow.
+
+Otherwise use a neutral product-discovery CTA.
+
+==================================================
+NO THIRD-PARTY EVASION SYSTEM
+==================================================
+
+Do not implement obfuscated links, coded contact information, hidden email exchange or mechanisms designed to bypass marketplace moderation.
+
+The system should simply avoid needing personal contact data at all.
+
+Use a normal HTTPS SpanishCue share link.
+
+No student email is required.
+
+No phone number is required.
+
+No personal contact exchange is required.
+
+==================================================
+ACCESS SECURITY
+==================================================
+
+A teacher share pass is a bearer credential.
+
+Treat it seriously.
+
+Requirements:
+
+- cryptographically strong randomness
+- server-side validation
+- scoped to exactly one level
+- revocable
+- rotatable
+- not enumerable
+- no predictable IDs alone
+- no access based only on URL query flags
+- secure cookie
+- HttpOnly
+- Secure
+- SameSite appropriate to normal link navigation
+- clean redirect after token validation
+- do not expose token to client bundles
+- do not put signing secrets in NEXT_PUBLIC variables
+- do not log secrets
+- do not expose tokens to analytics
+- appropriate Referrer-Policy on token landing route
+- rate limiting for pass generation/claim/update endpoints
+- origin/CSRF protection for state-changing requests
+
+==================================================
+WORKER / RSC ENFORCEMENT
+==================================================
+
+Current Autoestudio protection already covers direct module navigation and RSC payloads.
+
+Extend access correctly.
+
+A valid teacher pass for A2 must allow:
+
+/autoestudio/a2/semana-*
+
+and the required protected assets/data for that assigned level.
+
+It must NOT unlock:
+
+/autoestudio/b1/semana-*
+etc.
+
+Test direct URL requests.
+
+Test client navigation.
+
+Test `.rsc` access.
+
+Never rely exclusively on client-side locking.
+
+==================================================
+TEACHER AUTHORIZATION
+==================================================
+
+Only an authenticated authorized teacher/owner should be able to:
+
+- generate passes
+- list their learners
+- see progress
+- rotate a link
+- revoke a pass
+- create the next-level pass
+
+A teacher must NEVER see another teacher's learners.
+
+Use current internal account/user ownership.
+
+Do not trust client-submitted owner IDs.
+
+==================================================
+WHO CAN CREATE PASSES
+==================================================
+
+Inspect current access model.
+
+Teacher Share Pass creation should normally be a PRO/full-access teacher capability.
+
+Owner has access.
+
+Do not accidentally allow anonymous/public users to mint course passes.
+
+==================================================
+MASCOT — ALWAYS PRESENT AND INTERACTIVE
+==================================================
+
+CRITICAL SPANISHCUE RULE:
+
+The official current SpanishCue mascot must be part of the Autoestudio experience.
+
+The mascot is NOT decorative branding only.
+
+Use him throughout:
+
+- landing
+- level maps
+- module introductions
+- transitions
+- listening/pronunciation guidance
+- writing moments
+- speaking moments
+- checkpoints
+- feedback
+- completion
+- “use it in class”
+- share-pass welcome where appropriate
+
+Use varied meaningful poses.
+
+Examples:
+
+- walking along the route
+- reading beside the learner
+- listening with headphones
+- pointing at a key idea
+- writing notes
+- holding a cue card
+- reacting to module completion
+- guiding toward “Use it in class”
+
+Do NOT paste the same mascot image repeatedly.
+
+==================================================
+SPANISHCUE VISUAL RULE — GROUNDED REALISM
+==================================================
+
+CRITICAL ART DIRECTION:
+
+SPANISHCUE must NOT default to futuristic / sci-fi imagery.
+
+Avoid the recurring AI aesthetic of:
+
+- holograms
+- floating transparent glass blocks
+- glowing neon waveforms
+- cyberpunk lighting
+- futuristic laboratories
+- sci-fi interfaces embedded inside scenes
+- blue energy trails
+- impossible floating objects
+- “Back to the Future” technology
+- generic AI-generated tech environments
+
+Unless the concept explicitly requires science fiction, DO NOT use these motifs.
+
+The world should feel PHYSICALLY REAL and believable.
+
+Target aesthetic:
+
+REAL PLACE
++
+CINEMATIC PHOTOGRAPHY
++
+PREMIUM EDITORIAL ART DIRECTION
++
+SPANISHCUE INTERACTIVITY
+
+Use:
+
+- real architecture
+- real furniture
+- real objects
+- tactile materials
+- natural human-scale proportions
+- believable lighting
+- believable shadows
+- wood
+- metal
+- fabric
+- paper
+- concrete
+- normal glass
+- practical lights
+- cinematic depth of field
+- subtle imperfections
+
+==================================================
+AUTOESTUDIO VISUAL NOTE
+==================================================
+
+The current Autoestudio map/route UI may remain illustrative because it is INTERFACE.
+
+Do not gratuitously destroy successful A1 visual language.
+
+But any NEW environmental images, heroes, module scenes or generated visual assets must follow grounded realism.
+
+The interface can be stylised.
+
+A real-world SCENE must remain believable.
+
+==================================================
+REALISM TEST
+==================================================
+
+Before accepting any new scene ask:
+
+“Could this photograph plausibly have been taken somewhere in the real world today?”
+
+If NO:
+redesign it.
+
+Premium does NOT mean futuristic.
+
+Interactive does NOT mean holographic.
+
+SpanishCue should feel like:
+
+REAL LIFE MADE INTERACTIVE.
+
+==================================================
+DATA MODEL / D1
+==================================================
+
+Teacher-visible anonymous progress requires server persistence.
+
+Do NOT hack progress into unrelated columns.
+
+Do NOT misuse:
+
+students.goal
+class notes
+billing tables
+lesson_progress
+
+simply to avoid a migration.
+
+Design the correct minimal D1 model.
+
+Likely concepts include:
+
+anonymous Autoestudio learner
+share pass
+module progress
+
+Keep it minimal.
+
+==================================================
+IMPORTANT: EXISTING STUDENT TABLE
+==================================================
+
+The repository already has a teacher-owned `students` model.
+
+Inspect it carefully.
+
+Do NOT blindly duplicate concepts.
+
+Determine whether anonymous Autoestudio learners should:
+
+A)
+cleanly reuse an existing student record with only alias + level and no email/name
+
+OR
+
+B)
+use a separate privacy-minimized Autoestudio learner record
+
+Choose based on:
+- semantics
+- data ownership
+- existing APIs
+- future progression
+- security
+- migration cost
+
+Do NOT force a bad abstraction merely to avoid a new table.
+
+Document the decision.
+
+==================================================
+MIGRATION POLICY — MUST FOLLOW REPOSITORY RULES
+==================================================
+
+Any modification to:
+
+db/schema.ts
+drizzle/
+D1 bindings
+migration infrastructure
+
+is migration-sensitive.
+
+Read:
+
+docs/releases/MIGRATION_RELEASE.md
+
+Follow it exactly.
+
+Do NOT hide a schema change inside an ordinary feature PR.
+
+If new tables are required:
+
+1. create the proper migration source changes
+2. produce exact forward SQL
+3. test against a disposable/local database with representative existing data
+4. document old/new Worker compatibility
+5. document data impact
+6. document backup/recovery
+7. use the dedicated migration release process required by the repo
+
+Automatic deploys must NOT mutate production D1.
+
+==================================================
+ONLY ALLOWED APPROVAL STOP
+==================================================
+
+The owner does NOT want design review checkpoints.
+
+The owner does NOT want to approve:
+
+- code
+- UI
+- branches
+- PRs
+- merges
+- staging
+- ordinary production deployment
+
+Proceed automatically through those.
+
+HOWEVER:
+
+If current MIGRATION_RELEASE.md requires a separate explicit authorization for the exact PRODUCTION D1 operation after the final SQL/schema diff is known, obey that repository safety requirement.
+
+That is the ONLY acceptable approval checkpoint.
+
+If such authorization is required:
+
+- finish the implementation
+- finish tests
+- finish staging
+- prepare the exact migration operation
+- report ONLY the exact database operation requiring authorization
+- do not ask unrelated questions
+- do not require UI review
+- do not require staging review
+
+After the required database authorization is provided, continue automatically through migration + production release + smoke without asking again.
+
+==================================================
+PROGRESS MODEL
+==================================================
+
+Server-side teacher-visible progress should store only what is needed.
+
+Suggested concepts:
+
+per learner / module:
+
+- module id
+- started
+- current section
+- completed sections
+- completed flag
+- quiz summary
+- started_at
+- updated_at
+- completed_at
+
+Do not persist every click.
+
+Do not build surveillance analytics.
+
+==================================================
+QUIZ SUMMARY
+==================================================
+
+If showing quiz results to the teacher, keep them useful and simple.
+
+For example:
+
+Semana 8
+Quiz: 8/10
+
+Do not store unnecessary raw answer history unless the current pedagogical architecture explicitly requires it.
+
+==================================================
+TEACHER DETAIL VIEW
+==================================================
+
+A teacher should be able to open an alias and see something like:
+
+LUNA
+
+Nivel actual
+A2
+
+Progreso
+7 / 20 semanas
+
+Actual
+Semana 8 · Pedir y resolver
+
+Skills this week
+✓ Reading
+✓ Listening
+✓ Writing
+◐ Speaking
+
+Checkpoint
+5 ✓
+10 —
+
+Última actividad
+2 Oct · 08:14
+
+Do not overcomplicate this dashboard.
+
+==================================================
+PUBLIC VS PASS VS PRO ACCESS
+==================================================
+
+Define access clearly.
+
+PUBLIC VISITOR:
+- landing
+- level maps
+- public preview modules only
+
+TEACHER SHARE PASS:
+- landing
+- maps
+- public samples
+- ALL modules in assigned level
+- own progress
+- NO other premium SpanishCue areas
+
+NORMAL PRO USER:
+- full existing access according to current policy
+
+OWNER:
+- full access
+
+==================================================
+LEVEL LOCK PRESENTATION
+==================================================
+
+Locked levels should still be visible.
+
+Do not make the product look empty.
+
+For a learner with A2 pass:
+
+A1
+Preview available
+
+A2
+✓ Tu nivel
+
+B1
+🔒
+
+B2
+🔒
+
+C1
+🔒
+
+C2
+🔒
+
+Allow exploring summaries/maps without exposing locked module bodies.
+
+==================================================
+CURRICULUM VALIDATION
+==================================================
+
+Build automated validation that checks ALL levels.
+
+At minimum:
+
+- every published level has required week count
+- unique module IDs
+- unique objective IDs
+- no invalid prerequisite
+- all new objectives are introduced
+- required reviews occur
+- checkpoint coverage
+- no orphan objectives
+- all four macro-skills represented sufficiently
+- phonological work represented across every level
+- writing production present
+- speaking production present
+- listening audio present
+- reading present
+- assessment mix
+- use-in-class present
+- progressive scaffolding
+- no accidentally duplicated modules
+- no placeholder text
+- no “TODO”
+- no fake “coming soon” inside published levels
+
+==================================================
+QUALITY AUDIT PER LEVEL
+==================================================
+
+Before considering each level complete, read its content.
+
+Do NOT accept completion based only on file counts.
+
+Check:
+
+A2 independently
+B1 independently
+B2 independently
+C1 independently
+C2 independently
+
+Ask:
+
+Does this actually feel like this CEFR level?
+
+Is the input long enough?
+
+Is the output demanding enough?
+
+Is support appropriate?
+
+Are tasks varied?
+
+Are there repeated prompts?
+
+Are there generic AI phrases?
+
+Does grammar feed communication?
+
+Does vocabulary recur?
+
+Is pronunciation meaningful?
+
+Does listening require actual listening?
+
+Does writing require actual writing?
+
+Does speaking require actual speaking?
+
+==================================================
+IMPLEMENTATION STRATEGY — SEQUENTIAL PRs
+==================================================
+
+Do NOT put the entire remaining product into one unreviewable mega-commit.
+
+Use sequential, coherent work.
+
+Recommended phases:
+
+PHASE 1
+Teacher Share Pass + anonymous learner/progress architecture
+and required migration preparation
+
+PHASE 2
+A2 complete
+
+PHASE 3
+B1 complete
+
+PHASE 4
+B2 complete
+
+PHASE 5
+C1 complete
+
+PHASE 6
+C2 complete
+
+PHASE 7
+whole-course audit A1→C2
+
+Use the repository's branch/PR rules.
+
+After each merged PR:
+
+- fetch fresh main
+- use a fresh branch for the next task
+- do not resurrect deleted merged branches
+
+Do NOT stop after A2.
+
+Continue sequentially through C2 unless a genuine migration authorization gate blocks the access-system portion.
+
+Content work may continue when safe even if that specific database authorization is pending.
+
+==================================================
+DO NOT DESTROY A1
+==================================================
+
+A1 is already implemented.
+
+Do not rewrite all A1 content.
+
+Only make bounded changes to A1 when necessary for:
+
+- shared access architecture
+- progress adapter compatibility
+- course-wide consistency
+- free-preview metadata
+- critical bug fixes found during audit
+
+Preserve A1's current educational content unless there is a demonstrated defect.
+
+==================================================
+AUDIO
+==================================================
+
+Audit current Autoestudio audio architecture.
+
+Prefer finite, versioned audio assets over unpredictable runtime synthesis when practical.
+
+Do not falsely claim audio has been human-listened if it has not.
+
+For each recorded file verify:
+
+- referenced
+- exists
+- decodes
+- non-empty
+- no orphan
+- correct metadata
+
+==================================================
+SECURITY TESTS
+==================================================
+
+Add tests for at least:
+
+1. valid A2 pass unlocks A2
+
+2. same A2 pass does NOT unlock B1
+
+3. tampered token fails
+
+4. random token fails
+
+5. revoked token fails
+
+6. rotated old token fails
+
+7. rotated new token succeeds
+
+8. anonymous user cannot mint a pass
+
+9. free account cannot mint pass if PRO is required
+
+10. teacher A cannot list teacher B learners
+
+11. teacher A cannot revoke teacher B pass
+
+12. student pass cannot access teacher dashboard
+
+13. alias claim works once correctly
+
+14. same share link on another client resolves same learner
+
+15. progress updates are scoped to the correct learner
+
+16. progress cannot be posted for a module outside assigned level
+
+17. public sample works without pass
+
+18. locked module does not leak through `.rsc`
+
+19. locked module body does not leak into public client bundles
+
+20. signing secret never appears in client output
+
+==================================================
+PRIVACY TESTS / AUDIT
+==================================================
+
+Verify that the student flow does NOT require:
+
+email
+phone
+full name
+social handle
+
+Verify the pass landing does not leak its token in:
+
+client analytics
+visible navigation
+subsequent URLs
+
+Use suitable Referrer-Policy.
+
+Do not log raw bearer tokens.
+
+==================================================
+RESPONSIVE QA
+==================================================
+
+Test:
+
+1440×900
+1366×768
+tablet
+390px
+320px
+
+At minimum inspect:
+
+/autoestudio
+each level map
+normal module
+checkpoint
+teacher pass claim
+alias screen
+teacher progress dashboard
+locked level
+free sample
+assigned level
+
+==================================================
+MASCOT QA
+==================================================
+
+Verify the current official mascot appears meaningfully throughout the new level experience.
+
+Do not count a tiny logo as mascot integration.
+
+The mascot should actively guide the journey.
+
+==================================================
+ACCESS UX QA
+==================================================
+
+A teacher should be able to go from:
+
+“Quiero darle A2 a un alumno”
+
+to:
+
+“Copié el link”
+
+in very few interactions.
+
+A student should be able to go from:
+
+“I received the link”
+
+to:
+
+“I am studying”
+
+with:
+
+ONE alias field
+and no account-registration bureaucracy.
+
+==================================================
+FUNNEL QA
+==================================================
+
+The student should naturally see:
+
+SpanishCue
+A1→C2
+their assigned level
+other future levels
+
+without being interrupted by aggressive sales.
+
+The quality of the product itself should create curiosity.
+
+==================================================
+GITHUB — NEVER USE INTERNAL BROWSER LOGIN
+==================================================
+
+NEVER use the internal Cloud Browser to log into GitHub.
+
+NEVER ask the owner to:
+
+- log into GitHub
+- enter 2FA
+- choose a GitHub authentication method
+- manually run GitHub Actions
+- manually merge a PR
+
+Use only already-authenticated:
+
+git
+gh
+GitHub API
+GitHub connector
+repository CI/CD
+
+==================================================
+NORMAL DELIVERY AUTHORIZATION
+==================================================
+
+The owner does NOT want manual review gates.
+
+For all NON-MIGRATION operations, proceed automatically:
+
+implement
+→ test
+→ browser QA
+→ commit
+→ push
+→ non-draft PR
+→ CI
+→ Auto Merge
+→ staging
+→ production release
+→ smoke
+
+Do not ask:
+
+“Do you approve?”
+“Should I merge?”
+“Should I deploy?”
+“Can you review?”
+“Can you log in?”
+
+==================================================
+PRODUCTION DEPLOYMENT
+==================================================
+
+For ordinary verified source changes, use the repository's CURRENT canonical production mechanism.
+
+Do NOT create a second deployment system.
+
+Do NOT bypass AGENTS.md.
+
+Do NOT use browser login.
+
+When the exact merged main SHA is eligible for normal release and no migration gate is pending, continue through the repository-authorized production release flow automatically.
+
+Verify:
+
+production deployment
+production smoke
+final URL
+
+==================================================
+MIGRATION EXCEPTION
+==================================================
+
+A production D1 schema operation is different from ordinary source deployment.
+
+Follow MIGRATION_RELEASE.md exactly.
+
+Do NOT let a generic “deploy everything automatically” instruction override database migration safety.
+
+If explicit authorization of the exact database operation is required by that runbook, stop ONLY at that exact gate.
+
+Everything else should already be finished.
+
+==================================================
+FINAL WHOLE-COURSE AUDIT
+==================================================
+
+When A2–C2 are complete, audit the entire course:
+
+A1
+A2
+B1
+B2
+C1
+C2
+
+Generate a machine-readable + human-readable coverage report.
+
+It should answer:
+
+- total weeks
+- total objectives
+- objectives by level
+- grammar coverage
+- vocabulary/function coverage
+- reading coverage
+- listening coverage
+- writing coverage
+- speaking coverage
+- phonological coverage
+- mediation/interaction coverage
+- spaced-review coverage
+- checkpoint coverage
+- missing objectives
+- duplicates
+- orphan objectives
+
+Target:
+
+0 missing required objectives
+0 orphan objectives
+0 accidental duplicate modules
+0 published placeholder levels
+
+==================================================
+FINAL PRODUCT EXPECTATION
+==================================================
+
+The final user experience should be:
+
+TEACHER:
+
+I log into SpanishCue.
+I open Autoestudio / Mis alumnos.
+I click “Crear acceso”.
+I select A2.
+I copy one link.
+I send it.
+
+STUDENT:
+
+I click the link.
+SpanishCue asks:
+
+“¿Cómo querés aparecer para tu profe?”
+
+I type:
+
+Luna
+
+That is all.
+
+No email.
+No password.
+No account.
+
+I receive complete A2 access.
+
+My teacher can see my progress.
+
+I can return with the same link from another device.
+
+I can see that SpanishCue has:
+
+A1
+A2
+B1
+B2
+C1
+C2
+
+but only my assigned level is unlocked, plus public samples.
+
+When I finish A2, my teacher can give my same anonymous learner profile access to B1.
+
+==================================================
+FINAL OUTPUT
+==================================================
+
+At completion report:
+
+1. COURSE
+- A2 modules
+- B1 modules
+- B2 modules
+- C1 modules
+- C2 modules
+- total course weeks
+
+2. STANDARDS
+- CEFR mapping
+- PCIC mapping
+- DELE-style competency coverage
+- coverage-report result
+
+3. FOUR SKILLS
+- reading
+- listening
+- writing
+- speaking
+- transversal phonological progression
+
+4. SHARE PASS
+- token architecture
+- pass scope
+- alias flow
+- cookie/session design
+- revocation
+- rotation
+- cross-device behavior
+
+5. TEACHER PROGRESS
+- dashboard behavior
+- what is stored
+- what is deliberately NOT stored
+
+6. PRIVACY
+- no email requirement
+- no phone requirement
+- alias-only learner identity
+- secret/token protections
+
+7. DATABASE
+- exact schema changes
+- migration status
+- production migration result if authorized
+
+8. TESTS
+- exact counts/results
+
+9. BROWSER QA
+- exact tested viewports and flows
+
+10. GITHUB
+- PRs
+- merged SHAs
+
+11. DEPLOYMENT
+- staging results
+- production results
+- smoke results
+
+12. FINAL URLS
+- https://spanishcue.com/autoestudio
+- each published level route
+
+Do not call the work complete if only A2 exists.
+
+Do not call it complete if the access system is only mocked.
+
+Do not call it complete if teacher progress is fake/local-only.
+
+Do not call it complete if A2–C2 contain placeholders.
+
+START NOW.
+
+First inspect current main and current Autoestudio A1.
+
+Then build the secure share-pass architecture and continue level by level through C2.

@@ -36,7 +36,8 @@ test('six levels exist with outcomes, routes and an objective map', () => {
     assert.ok(level.outcome.length > 40 && level.route && level.color && level.mascot.startsWith('/brand/mascot/'), level.id);
     assert.ok(course.plannedWeeks(level.id) >= 16, `${level.id} has a full objective map`);
   }
-  assert.ok(published.includes('a1'), 'A1 is published');
+  assert.deepEqual(published, levelIds, 'all six levels are complete');
+  for (const level of levelIds) assert.equal(modulesByLevel[level].length,20);
   // Levels ship in order: no gaps in the published route.
   assert.deepEqual(published, levelIds.slice(0, published.length));
 });
@@ -125,13 +126,14 @@ test('landing summaries carry no lesson bodies', () => {
   for (const mod of allModules) assert.ok(!overview.includes(mod.listening.script[0].text), `${mod.id} listening stays out of the landing`);
 });
 
-test('access: A1 weeks 1 and 2 are free, every other mod is PRO, maps are public', () => {
+test('access: A1 weeks 1–2 and one sample per new level are free, maps are public', () => {
   const { access } = course;
   assert.ok(access.isFreeAutoestudioModule('/autoestudio/a1/semana-1'));
   assert.ok(access.isFreeAutoestudioModule('/autoestudio/a1/semana-2/'));
   assert.ok(access.isFreeAutoestudioModule('/autoestudio/a1/semana-2.rsc'));
   for (const path of ['/autoestudio/a1/semana-3', '/autoestudio/a1/semana-3.rsc', '/autoestudio/b2/semana-11', '/autoestudio/c2/semana-16/']) assert.ok(access.isPremiumAutoestudioPath(path), path);
   for (const path of ['/autoestudio', '/autoestudio/a1', '/autoestudio/c2', '/autoestudio.rsc', '/', '/noche-abierta']) assert.ok(!access.isPremiumAutoestudioPath(path), path);
+  for (const level of levelIds) assert.ok(access.isFreeAutoestudioModule(`/autoestudio/${level}/semana-1`));
   assert.ok(access.isAutoestudioPath('/autoestudio/a1'));
   assert.ok(!access.isAutoestudioPath('/autoestudios'));
   for (const mod of allModules) {
@@ -145,14 +147,15 @@ test('access: A1 weeks 1 and 2 are free, every other mod is PRO, maps are public
 
 test('the Worker gates PRO weeks and the client engines never import course data', async () => {
   const worker = readFileSync('worker/index.ts', 'utf8');
-  assert.match(worker, /\(premiumAutoestudio&&!fullAccess\)/);
-  assert.match(worker, /\|\|autoestudio\|\|Boolean\(lesson\)/);
+  assert.match(worker, /\(premiumAutoestudio&&!fullAccess&&!shareAllowsPath\(pathname,shareSession\)\)/);
+  assert.match(worker, /\|\|autoestudio\|\|shareApi\|\|Boolean\(lesson\)/);
   const protect = readFileSync('scripts/protect-client-assets.mjs', 'utf8');
   for (const root of ['AutoestudioLanding', 'LevelMap', 'ModulePlayer']) assert.match(protect, new RegExp(`app/autoestudio/${root}\\.tsx`));
-  for (const entry of ['app/autoestudio/AutoestudioLanding.tsx', 'app/autoestudio/LevelMap.tsx', 'app/autoestudio/ModulePlayer.tsx', 'app/autoestudio/LibraryEntry.tsx']) {
+  for (const entry of ['app/autoestudio/AutoestudioLanding.tsx', 'app/autoestudio/LevelMap.tsx', 'app/autoestudio/ModulePlayer.tsx', 'app/autoestudio/LibraryEntry.tsx','app/autoestudio/claim/ClaimClient.tsx','app/autoestudio/TeacherPasses.tsx']) {
     const result = await build({ entryPoints: [entry], bundle: true, write: false, metafile: true, format: 'esm', platform: 'browser', jsx: 'automatic', external: ['react', 'react-dom', 'next/*', 'next'], loader: { '.css': 'empty' }, logLevel: 'error' });
     const inputs = Object.keys(result.metafile.inputs);
     assert.ok(!inputs.some((input) => /autoestudio\/curriculum\/(modules|course|objectives)/.test(input)), `${entry} stays free of course data`);
+    assert.ok(!inputs.some(input => /autoestudio\/share\/(server|runtime)/.test(input)), `${entry} excludes server credential code`);
   }
   const page = readFileSync('app/autoestudio/[level]/[module]/page.tsx', 'utf8');
   assert.match(page, /fullAccess/);

@@ -81,6 +81,8 @@ const publicRoots = new Set([
   "app/autoestudio/AutoestudioLanding.tsx",
   "app/autoestudio/LevelMap.tsx",
   "app/autoestudio/ModulePlayer.tsx",
+  "app/autoestudio/claim/ClaimClient.tsx",
+  "app/autoestudio/TeacherPasses.tsx",
   "virtual:vinext-app-browser-entry",
   ...Object.keys(manifest).filter((key) => /(^|\/)node_modules\//.test(key)),
 ]);

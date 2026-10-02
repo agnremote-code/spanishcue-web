@@ -1,10 +1,8 @@
 import { defineObjectives } from "../define";
 
-/**
- * B2 — precision, mood choice and argument. 22 weeks: 18 core weeks and 4
- * checkpoints (5, 11, 16, 22). Mostly Spanish. The journey crosses the
- * Southern Cone, so voseo, sheísmo and Chilean features appear in context.
- */
+/** B2: twenty weeks, with integrated checkpoints 5, 10, 15 and 20.
+ * Original Spanish-first argument, mediation and interaction. Regional listening
+ * requires real examples in class; synthesis never certifies a regional accent. */
 export const b2Objectives = defineObjectives("b2", [
   // Week 1 · Lo que quieren de ti
   [1, "gram", "sustantivas-sistema", "Subjuntivo en oraciones sustantivas", "Puedo elegir el modo según el verbo principal: influencia, valoración, emoción, percepción o comunicación.", ["b1.gram.influencia", "b1.gram.valoracion", "b1.gram.emociones-subjuntivo"], { pcic: "Gramática 15.1" }],
@@ -36,6 +34,8 @@ export const b2Objectives = defineObjectives("b2", [
   [4, "pron", "reproche", "Entonación del reproche", "Puedo distinguir un reproche de una hipótesis neutra por la entonación.", ["b1.pron.entonacion-condicional"]],
   [4, "fun", "lamentar-reprochar", "Lamentar y reprochar", "Puedo expresar arrepentimiento, reprochar con tacto y responder a un reproche.", ["b2.gram.condicional-compuesto"]],
   [4, "spk", "historia-alternativa", "Historia alternativa", "Puedo contar cómo habría sido mi vida si una decisión hubiera sido distinta.", []],
+
+  [5, "fun", "mediacion-fuentes", "Mediar entre fuentes y participantes", "Puedo sintetizar posiciones, conservar reservas y adaptar la información a otra persona sin inventar acuerdos.", ["b2.fun.pedir-exigir", "b2.fun.valorar-hechos"]],
 
   // Week 5 · Checkpoint 1
   [5, "rev", "checkpoint-1", "Checkpoint 1: modo y tiempo", "Puedo elegir modo y tiempo en sustantivas y condicionales para pedir, valorar e imaginar.", ["b2.gram.sustantivas-sistema", "b2.gram.subjuntivo-compuestos", "b2.gram.condicionales-irreales"]],
@@ -78,84 +78,84 @@ export const b2Objectives = defineObjectives("b2", [
   [10, "fun", "resumir-declaraciones", "Resumir declaraciones", "Puedo resumir lo que dijeron varias personas y marcar mi distancia.", ["b2.gram.estilo-indirecto-avanzado"]],
   [10, "lis", "rueda-prensa", "Escuchar una rueda de prensa", "Puedo identificar promesas, negaciones y evasivas.", []],
 
-  // Week 11 · Checkpoint 2
-  [11, "rev", "checkpoint-2", "Checkpoint 2: conceder, describir e informar", "Puedo conceder y objetar, describir con precisión, negociar condiciones e informar con distancia.", ["b2.gram.concesivas", "b2.gram.relativas-avanzadas", "b2.gram.condicionales-conectores", "b2.gram.estilo-indirecto-avanzado"]],
-  [11, "wri", "informe-breve", "Informe breve", "Puedo escribir un informe breve que presenta datos, declaraciones y una recomendación.", []],
+  // Week 10 · Checkpoint 2
+  [10, "rev", "checkpoint-2", "Checkpoint 2: conceder, describir e informar", "Puedo conceder y objetar, describir con precisión, negociar condiciones e informar con distancia.", ["b2.gram.concesivas", "b2.gram.relativas-avanzadas", "b2.gram.condicionales-conectores", "b2.gram.estilo-indirecto-avanzado"]],
+  [10, "wri", "informe-breve", "Informe breve", "Puedo escribir un informe breve que presenta datos, declaraciones y una recomendación.", []],
 
-  // Week 12 · Argumentar
-  [12, "disc", "argumentacion", "Estructura argumentativa", "Puedo organizar tesis, argumentos, contraargumentos y conclusión con conectores variados.", ["b1.disc.estructura-texto", "b2.gram.concesivas"], { pcic: "Funciones 2" }],
-  [12, "disc", "posicionamiento", "Marcar la postura", "Puedo marcar mi postura y el grado de certeza: es indudable que, cabe pensar que, no está tan claro que.", ["b2.gram.sustantivas-sistema"]],
-  [12, "voc", "ciudad-sostenible", "Urbanismo y movilidad", "Puedo debatir sobre transporte, vivienda, gentrificación y espacio público.", ["a2.voc.ciudades-campo"]],
-  [12, "pron", "exposicion-oral", "Ritmo de una exposición oral", "Puedo usar pausas estratégicas y énfasis para hacer clara una exposición.", ["b2.pron.jerarquia-pausas"]],
-  [12, "wri", "ensayo-argumentativo", "Ensayo argumentativo", "Puedo escribir un ensayo de 220 palabras con contraargumento.", ["b1.wri.texto-opinion"]],
-  [12, "spk", "exposicion", "Exposición de dos minutos", "Puedo defender una propuesta en dos minutos con estructura clara.", []],
+  // Week 11 · Argumentar
+  [11, "disc", "argumentacion", "Estructura argumentativa", "Puedo organizar tesis, argumentos, contraargumentos y conclusión con conectores variados.", ["b1.disc.estructura-texto", "b2.gram.concesivas"], { pcic: "Funciones 2" }],
+  [11, "disc", "posicionamiento", "Marcar la postura", "Puedo marcar mi postura y el grado de certeza: es indudable que, cabe pensar que, no está tan claro que.", ["b2.gram.sustantivas-sistema"]],
+  [11, "voc", "ciudad-sostenible", "Urbanismo y movilidad", "Puedo debatir sobre transporte, vivienda, gentrificación y espacio público.", ["a2.voc.ciudades-campo"]],
+  [11, "pron", "exposicion-oral", "Ritmo de una exposición oral", "Puedo usar pausas estratégicas y énfasis para hacer clara una exposición.", ["b2.pron.jerarquia-pausas"]],
+  [11, "wri", "ensayo-argumentativo", "Ensayo argumentativo", "Puedo escribir un ensayo de 220 palabras con contraargumento.", ["b1.wri.texto-opinion"]],
+  [11, "spk", "exposicion", "Exposición de dos minutos", "Puedo defender una propuesta en dos minutos con estructura clara.", []],
 
-  // Week 13 · Habrá sido
-  [13, "gram", "probabilidad-pasado", "Probabilidad en el pasado", "Puedo especular sobre el pasado con habrá salido, habría llegado y debió de pasar.", ["b1.gram.probabilidad", "b2.gram.condicional-compuesto"], { pcic: "Gramática 9.1", related: ["/sistema-verbal/futuro-compuesto-indicativo"] }],
-  [13, "voc", "investigacion", "Investigación y pruebas", "Puedo hablar de indicios, pruebas, versiones y conclusiones.", ["b1.voc.misterios"]],
-  [13, "pron", "conjetura", "Entonación de la conjetura", "Puedo distinguir una afirmación de una conjetura por la prosodia.", ["b1.pron.entonacion-hipotesis"]],
-  [13, "fun", "especular-pasado", "Especular sobre lo que pasó", "Puedo formular y descartar hipótesis sobre un hecho pasado.", ["b2.gram.probabilidad-pasado"]],
-  [13, "read", "caso", "Leer un caso", "Puedo inferir lo que probablemente pasó a partir de varios documentos.", []],
+  // Week 12 · Habrá sido
+  [12, "gram", "probabilidad-pasado", "Probabilidad en el pasado", "Puedo especular sobre el pasado con habrá salido, habría llegado y debió de pasar.", ["b1.gram.probabilidad", "b2.gram.condicional-compuesto"], { pcic: "Gramática 9.1", related: ["/sistema-verbal/futuro-compuesto-indicativo"] }],
+  [12, "voc", "investigacion", "Investigación y pruebas", "Puedo hablar de indicios, pruebas, versiones y conclusiones.", ["b1.voc.misterios"]],
+  [12, "pron", "conjetura", "Entonación de la conjetura", "Puedo distinguir una afirmación de una conjetura por la prosodia.", ["b1.pron.entonacion-hipotesis"]],
+  [12, "fun", "especular-pasado", "Especular sobre lo que pasó", "Puedo formular y descartar hipótesis sobre un hecho pasado.", ["b2.gram.probabilidad-pasado"]],
+  [12, "read", "caso", "Leer un caso", "Puedo inferir lo que probablemente pasó a partir de varios documentos.", []],
 
-  // Week 14 · Volverse, hacerse, convertirse
-  [14, "gram", "verbos-cambio-sistema", "El sistema de los verbos de cambio", "Puedo elegir entre ponerse, volverse, hacerse, convertirse en, llegar a ser y quedarse.", ["b1.gram.verbos-cambio"], { pcic: "Gramática 9.2" }],
-  [14, "gram", "ser-estar-matices", "Ser y estar: matices de percepción", "Puedo usar estar para percepciones y cambios: está muy joven, está carísimo.", ["b1.gram.ser-estar-avanzado"], { pcic: "Gramática 9.1" }],
-  [14, "voc", "personalidad", "Personalidad y transformaciones", "Puedo describir rasgos de carácter con matices.", ["a1.voc.descripcion-personas"]],
-  [14, "pron", "chile", "Rasgos del español de Chile", "Puedo reconocer la s aspirada, la ch fricativa y marcadores como po en el habla chilena.", ["a2.pron.s-aspirada"]],
-  [14, "fun", "describir-transformacion", "Describir una transformación", "Puedo contar cómo cambió una persona o un lugar y valorarlo.", ["b2.gram.verbos-cambio-sistema"]],
-  [14, "lis", "voces-chile", "Escuchar una conversación chilena", "Puedo seguir una conversación informal con rasgos chilenos.", []],
+  // Week 13 · Volverse, hacerse, convertirse
+  [13, "gram", "verbos-cambio-sistema", "El sistema de los verbos de cambio", "Puedo elegir entre ponerse, volverse, hacerse, convertirse en, llegar a ser y quedarse.", ["b1.gram.verbos-cambio"], { pcic: "Gramática 9.2" }],
+  [13, "gram", "ser-estar-matices", "Ser y estar: matices de percepción", "Puedo usar estar para percepciones y cambios: está muy joven, está carísimo.", ["b1.gram.ser-estar-avanzado"], { pcic: "Gramática 9.1" }],
+  [13, "voc", "personalidad", "Personalidad y transformaciones", "Puedo describir rasgos de carácter con matices.", ["a1.voc.descripcion-personas"]],
+  [13, "pron", "chile", "Rasgos del español de Chile", "Puedo describir rasgos variables del habla chilena y contrastarlos con una muestra real en clase, sin atribuirlos a una voz sintética.", ["a2.pron.s-aspirada"]],
+  [13, "fun", "describir-transformacion", "Describir una transformación", "Puedo contar cómo cambió una persona o un lugar y valorarlo.", ["b2.gram.verbos-cambio-sistema"]],
+  [13, "lis", "voces-chile", "Comprender una conversación sobre cambio y variación chilena", "Puedo seguir posiciones sobre cambios sociales y explicar marcadores locales; contrasto la fonética chilena con una muestra real en clase.", []],
 
-  // Week 15 · Se me olvidó
-  [15, "gram", "valores-se", "Valores de se", "Puedo distinguir se reflexivo, recíproco, involuntario (se me olvidó) y pronominal con cambio de significado.", ["b1.gram.se-impersonal", "a2.gram.se-lo"], { pcic: "Gramática 7.1" }],
-  [15, "voc", "accidentes-cotidianos", "Accidentes y descuidos", "Puedo contar descuidos con se me cayó, se nos olvidó, se le rompió.", []],
-  [15, "pron", "cliticos-cadena", "Clíticos en cadena", "Puedo decir se me cayó o se nos fue con el ritmo de una sola palabra.", ["a2.pron.cliticos-acento"]],
-  [15, "fun", "disculparse-responsabilidad", "Disculparse y asumir responsabilidad", "Puedo disculparme, presentar algo como involuntario y ofrecer una reparación.", ["b2.gram.valores-se"]],
-  [15, "spk", "disculpa", "Disculpa difícil", "Puedo resolver oralmente una situación en la que tengo parte de la culpa.", []],
+  // Week 14 · Se me olvidó
+  [14, "gram", "valores-se", "Valores de se", "Puedo distinguir se reflexivo, recíproco, involuntario (se me olvidó) y pronominal con cambio de significado.", ["b1.gram.se-impersonal", "a2.gram.se-lo"], { pcic: "Gramática 7.1" }],
+  [14, "voc", "accidentes-cotidianos", "Accidentes y descuidos", "Puedo contar descuidos con se me cayó, se nos olvidó, se le rompió.", []],
+  [14, "pron", "cliticos-cadena", "Clíticos en cadena", "Puedo decir se me cayó o se nos fue con el ritmo de una sola palabra.", ["a2.pron.cliticos-acento"]],
+  [14, "fun", "disculparse-responsabilidad", "Disculparse y asumir responsabilidad", "Puedo disculparme, presentar algo como involuntario y ofrecer una reparación.", ["b2.gram.valores-se"]],
+  [14, "spk", "disculpa", "Disculpa difícil", "Puedo resolver oralmente una situación en la que tengo parte de la culpa.", []],
 
-  // Week 16 · Checkpoint 3
-  [16, "rev", "checkpoint-3", "Checkpoint 3: argumentar y especular", "Puedo argumentar, especular sobre el pasado, describir cambios y asumir responsabilidad.", ["b2.disc.argumentacion", "b2.gram.probabilidad-pasado", "b2.gram.verbos-cambio-sistema", "b2.gram.valores-se"]],
-  [16, "read", "dossier", "Leer un dossier", "Puedo comparar posturas en varios textos breves sobre un mismo tema.", []],
+  // Week 15 · Checkpoint 3
+  [15, "rev", "checkpoint-3", "Checkpoint 3: argumentar y especular", "Puedo argumentar, especular sobre el pasado, describir cambios y asumir responsabilidad.", ["b2.disc.argumentacion", "b2.gram.probabilidad-pasado", "b2.gram.verbos-cambio-sistema", "b2.gram.valores-se"]],
+  [15, "read", "dossier", "Leer un dossier", "Puedo comparar posturas en varios textos breves sobre un mismo tema.", []],
 
-  // Week 17 · La palabra justa
-  [17, "voc", "colocaciones", "Colocaciones frecuentes", "Puedo combinar palabras de forma natural: tomar una decisión, plantear un problema, sacar conclusiones.", []],
-  [17, "voc", "formacion-palabras", "Formación de palabras", "Puedo deducir y crear palabras con prefijos y sufijos frecuentes.", []],
-  [17, "gram", "nominalizacion", "Nominalización", "Puedo transformar verbos en sustantivos para escribir con concisión.", ["b2.gram.pasiva-impersonalidad"], { pcic: "Gramática 10", related: ["/precision-grupo-nominal-adjetival"] }],
-  [17, "pron", "acento-derivados", "Acento en derivados", "Puedo pronunciar carácter/caracteres, régimen/regímenes y adverbios en -mente con dos acentos.", ["a2.pron.palabras-largas"]],
-  [17, "wri", "reescritura-precisa", "Reescribir con precisión", "Puedo mejorar un texto sustituyendo verbos comodín y repeticiones.", []],
-  [17, "fun", "definir", "Definir y explicar conceptos", "Puedo definir un concepto, dar un ejemplo y diferenciarlo de otro parecido.", ["b2.gram.relativas-avanzadas"]],
+  // Week 16 · La palabra justa
+  [16, "voc", "colocaciones", "Colocaciones frecuentes", "Puedo combinar palabras de forma natural: tomar una decisión, plantear un problema, sacar conclusiones.", []],
+  [16, "voc", "formacion-palabras", "Formación de palabras", "Puedo deducir y crear palabras con prefijos y sufijos frecuentes.", []],
+  [16, "gram", "nominalizacion", "Nominalización", "Puedo transformar verbos en sustantivos para escribir con concisión.", ["b2.gram.pasiva-impersonalidad"], { pcic: "Gramática 10", related: ["/precision-grupo-nominal-adjetival"] }],
+  [16, "pron", "acento-derivados", "Acento en derivados", "Puedo pronunciar carácter/caracteres, régimen/regímenes y adverbios en -mente con dos acentos.", ["a2.pron.palabras-largas"]],
+  [16, "wri", "reescritura-precisa", "Reescribir con precisión", "Puedo mejorar un texto sustituyendo verbos comodín y repeticiones.", []],
+  [16, "fun", "definir", "Definir y explicar conceptos", "Puedo definir un concepto, dar un ejemplo y diferenciarlo de otro parecido.", ["b2.gram.relativas-avanzadas"]],
 
-  // Week 18 · Con todo respeto
-  [18, "fun", "mitigacion", "Cortesía y mitigación", "Puedo suavizar peticiones, críticas y desacuerdos: ¿te importaría que…?, convendría, quizás no sea lo ideal.", ["b1.gram.registro-formal", "b2.gram.sustantivas-sistema"], { pcic: "Tácticas y estrategias pragmáticas 3" }],
-  [18, "gram", "importar-que", "¿Te importa que…? y fórmulas con subjuntivo", "Puedo pedir permiso y hacer peticiones indirectas con subjuntivo.", ["b2.gram.subjuntivo-imperfecto-usos"], { pcic: "Gramática 15.1" }],
-  [18, "voc", "correspondencia-formal", "Correspondencia profesional", "Puedo usar fórmulas de inicio, cierre y transición en correos formales.", []],
-  [18, "pron", "mitigacion-prosodia", "Prosodia de la mitigación", "Puedo suavizar con alargamientos, pausas y un tono más bajo.", ["b2.pron.influencia-mitigada"]],
-  [18, "wri", "correo-delicado", "Correo delicado", "Puedo escribir un correo profesional que rechaza una propuesta sin dañar la relación.", []],
-  [18, "lis", "reunion", "Escuchar una reunión", "Puedo reconocer desacuerdos mitigados y lo que realmente se decide.", []],
+  // Week 17 · Con todo respeto
+  [17, "fun", "mitigacion", "Cortesía y mitigación", "Puedo suavizar peticiones, críticas y desacuerdos: ¿te importaría que…?, convendría, quizás no sea lo ideal.", ["b1.gram.registro-formal", "b2.gram.sustantivas-sistema"], { pcic: "Tácticas y estrategias pragmáticas 3" }],
+  [17, "gram", "importar-que", "¿Te importa que…? y fórmulas con subjuntivo", "Puedo pedir permiso y hacer peticiones indirectas con subjuntivo.", ["b2.gram.subjuntivo-imperfecto-usos"], { pcic: "Gramática 15.1" }],
+  [17, "voc", "correspondencia-formal", "Correspondencia profesional", "Puedo usar fórmulas de inicio, cierre y transición en correos formales.", []],
+  [17, "pron", "mitigacion-prosodia", "Prosodia de la mitigación", "Puedo suavizar con alargamientos, pausas y un tono más bajo.", ["b2.pron.influencia-mitigada"]],
+  [17, "wri", "correo-delicado", "Correo delicado", "Puedo escribir un correo profesional que rechaza una propuesta sin dañar la relación.", []],
+  [17, "lis", "reunion", "Escuchar una reunión", "Puedo reconocer desacuerdos mitigados y lo que realmente se decide.", []],
 
-  // Week 19 · O sea…
-  [19, "disc", "marcadores-conversacionales", "Marcadores conversacionales", "Puedo usar bueno, pues, vamos, a ver, la verdad es que y hombre/mujer según la intención.", ["a2.disc.turnos"], { pcic: "Gramática 14" }],
-  [19, "disc", "reformuladores", "Reformuladores", "Puedo reformular con o sea, es decir, mejor dicho, en otras palabras y vamos.", ["b2.disc.marcadores-conversacionales"]],
-  [19, "voc", "expresiones-coloquiales", "Expresiones coloquiales frecuentes", "Puedo entender y usar expresiones frecuentes como dar igual, pasarse, quedar bien o mal.", []],
-  [19, "pron", "prosodia-marcadores", "Prosodia de los marcadores", "Puedo dar a bueno o pues valores distintos con la entonación.", ["a2.pron.entonacion-duda"]],
-  [19, "fun", "gestionar-conversacion", "Gestionar una conversación", "Puedo ganar tiempo, reformular, interrumpir con educación y retomar.", ["b2.disc.marcadores-conversacionales"]],
-  [19, "spk", "conversacion-natural", "Conversación espontánea", "Puedo mantener una conversación de tres minutos sin bloquearme.", []],
+  // Week 18 · O sea…
+  [18, "disc", "marcadores-conversacionales", "Marcadores conversacionales", "Puedo usar bueno, pues, vamos, a ver, la verdad es que y hombre/mujer según la intención.", ["a2.disc.turnos"], { pcic: "Gramática 14" }],
+  [18, "disc", "reformuladores", "Reformuladores", "Puedo reformular con o sea, es decir, mejor dicho, en otras palabras y vamos.", ["b2.disc.marcadores-conversacionales"]],
+  [18, "voc", "expresiones-coloquiales", "Expresiones coloquiales frecuentes", "Puedo entender y usar expresiones frecuentes como dar igual, pasarse, quedar bien o mal.", []],
+  [18, "pron", "prosodia-marcadores", "Prosodia de los marcadores", "Puedo dar a bueno o pues valores distintos con la entonación.", ["a2.pron.entonacion-duda"]],
+  [18, "fun", "gestionar-conversacion", "Gestionar una conversación", "Puedo ganar tiempo, reformular, interrumpir con educación y retomar.", ["b2.disc.marcadores-conversacionales"]],
+  [18, "spk", "conversacion-natural", "Conversación espontánea", "Puedo mantener una conversación de tres minutos sin bloquearme.", []],
 
-  // Week 20 · Contar como un escritor
-  [20, "gram", "tiempos-relato", "Tiempos del relato y variación", "Puedo usar el presente histórico y reconozco el uso del perfecto y del indefinido en España y en América.", ["b1.gram.contraste-pasados"], { pcic: "Gramática 9.1" }],
-  [20, "voc", "descripcion-literaria", "Descripción literaria", "Puedo describir atmósferas, gestos y sensaciones con precisión.", []],
-  [20, "pron", "lectura-expresiva", "Lectura expresiva", "Puedo leer un fragmento narrativo con cambios de ritmo y de voz.", ["b1.pron.entonacion-narrativa"]],
-  [20, "read", "cuento", "Leer un microrrelato", "Puedo interpretar el giro final de un microrrelato.", []],
-  [20, "wri", "microrrelato", "Escribir un microrrelato", "Puedo escribir un relato de 200 palabras con tiempos del pasado variados.", []],
+  // Week 19 · Contar como un escritor
+  [19, "gram", "tiempos-relato", "Tiempos del relato y variación", "Puedo usar el presente histórico y reconozco el uso del perfecto y del indefinido en España y en América.", ["b1.gram.contraste-pasados"], { pcic: "Gramática 9.1" }],
+  [19, "voc", "descripcion-literaria", "Descripción literaria", "Puedo describir atmósferas, gestos y sensaciones con precisión.", []],
+  [19, "pron", "lectura-expresiva", "Lectura expresiva", "Puedo leer un fragmento narrativo con cambios de ritmo y de voz.", ["b1.pron.entonacion-narrativa"]],
+  [19, "read", "cuento", "Leer un microrrelato", "Puedo interpretar el giro final de un microrrelato.", []],
+  [19, "wri", "microrrelato", "Escribir un microrrelato", "Puedo escribir un relato de 200 palabras con tiempos del pasado variados.", []],
 
-  // Week 21 · El español del Río de la Plata
-  [21, "gram", "voseo", "Voseo", "Puedo reconocer y usar las formas de vos en presente e imperativo (vos tenés, vení, decime).", ["a2.gram.imperativo-afirmativo"], { pcic: "Gramática 9.1", related: ["/argento"] }],
-  [21, "gram", "ustedes-vosotros", "Ustedes y vosotros", "Puedo adaptar el plural de segunda persona según la variedad.", ["a1.gram.ser-plural"], { pcic: "Gramática 7.1" }],
-  [21, "voc", "lexico-regional", "Léxico regional", "Puedo reconocer variantes léxicas frecuentes: auto/coche/carro, departamento/piso, celular/móvil.", []],
-  [21, "pron", "sheismo-voseo", "Sheísmo y acento del voseo", "Puedo reconocer el sheísmo rioplatense y el acento agudo del voseo.", ["a1.pron.n-ll-y"]],
-  [21, "fun", "adaptarse-variedad", "Adaptarse a la variedad", "Puedo entender a hablantes de distintas variedades y pedir aclaraciones sobre léxico regional.", ["b2.voc.lexico-regional"]],
-  [21, "lis", "rioplatense", "Escuchar una conversación rioplatense", "Puedo seguir una conversación informal porteña.", []],
+  // Week 19 · El español del Río de la Plata
+  [19, "gram", "voseo", "Voseo", "Puedo reconocer y usar las formas de vos en presente e imperativo (vos tenés, vení, decime).", ["a2.gram.imperativo-afirmativo"], { pcic: "Gramática 9.1", related: ["/argento"] }],
+  [19, "gram", "ustedes-vosotros", "Ustedes y vosotros", "Puedo adaptar el plural de segunda persona según la variedad.", ["a1.gram.ser-plural"], { pcic: "Gramática 7.1" }],
+  [19, "voc", "lexico-regional", "Léxico regional", "Puedo reconocer variantes léxicas frecuentes: auto/coche/carro, departamento/piso, celular/móvil.", []],
+  [19, "pron", "sheismo-voseo", "Sheísmo y acento del voseo", "Puedo producir el acento del voseo y contrastar el sheísmo con una muestra real identificada en clase.", ["a1.pron.n-ll-y"]],
+  [19, "fun", "adaptarse-variedad", "Adaptarse a la variedad", "Puedo entender a hablantes de distintas variedades y pedir aclaraciones sobre léxico regional.", ["b2.voc.lexico-regional"]],
+  [19, "lis", "rioplatense", "Comprender diálogo con léxico y formas rioplatenses", "Puedo seguir un diálogo con voseo y léxico rioplatense sin confundir síntesis con una muestra de acento verificada.", []],
 
-  // Week 22 · Checkpoint final B2
-  [22, "rev", "checkpoint-final", "Checkpoint final B2", "Puedo argumentar, negociar, informar, mitigar y adaptarme a distintas variedades con precisión.", ["b2.rev.checkpoint-3", "b2.fun.mitigacion", "b2.disc.reformuladores", "b2.gram.voseo"]],
-  [22, "wri", "texto-final-b2", "Texto final B2", "Puedo escribir 250 palabras argumentativas con concesión, matiz y conclusión.", ["b2.wri.ensayo-argumentativo"]],
+  // Week 20 · Checkpoint final B2
+  [20, "rev", "checkpoint-final", "Checkpoint final B2", "Puedo argumentar, negociar, informar, mitigar y adaptarme a distintas variedades con precisión.", ["b2.rev.checkpoint-3", "b2.fun.mitigacion", "b2.disc.reformuladores", "b2.gram.voseo"]],
+  [20, "wri", "texto-final-b2", "Texto final B2", "Puedo escribir 250 palabras argumentativas con concesión, matiz y conclusión.", ["b2.wri.ensayo-argumentativo"]],
 ]);

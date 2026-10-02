@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { fullAccessFromHeaders } from "../access-policy";
+import { shareSessionFromHeaders } from "./session-display";
 import AutoestudioLanding from "./AutoestudioLanding";
 import { publishedLevels } from "./curriculum/course";
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const fullAccess = fullAccessFromHeaders(await headers());
-  return <AutoestudioLanding levels={publishedLevels()} fullAccess={fullAccess} />;
+  const h = await headers();
+  const fullAccess = fullAccessFromHeaders(h);
+  return <AutoestudioLanding levels={publishedLevels()} fullAccess={fullAccess} session={shareSessionFromHeaders(h)} />;
 }

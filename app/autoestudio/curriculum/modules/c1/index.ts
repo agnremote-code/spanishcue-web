@@ -1,3 +1,23 @@
 import type { Module } from "../../types";
+import { c1w01 } from "./w01";
+import { c1w02 } from "./w02";
+import { c1w03 } from "./w03";
+import { c1w04 } from "./w04";
+import { c1w05 } from "./w05";
+import { c1w06 } from "./w06";
+import { c1w07 } from "./w07";
+import { c1w08 } from "./w08";
+import { c1w09 } from "./w09";
+import { c1w10 } from "./w10";
+import { c1w11 } from "./w11";
+import { c1w12 } from "./w12";
+import { c1w13 } from "./w13";
+import { c1w14 } from "./w14";
+import { c1w15 } from "./w15";
+import { c1w16 } from "./w16";
+import { c1w17 } from "./w17";
+import { c1w18 } from "./w18";
+import { c1w19 } from "./w19";
+import { c1w20 } from "./w20";
 
-export const c1Modules: Module[] = [];
+export const c1Modules: Module[] = [c1w01, c1w02, c1w03, c1w04, c1w05, c1w06, c1w07, c1w08, c1w09, c1w10, c1w11, c1w12, c1w13, c1w14, c1w15, c1w16, c1w17, c1w18, c1w19, c1w20];

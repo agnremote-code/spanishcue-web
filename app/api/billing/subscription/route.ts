@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       if (!["pause", "resume", "cancel"].includes(String(parsed.action))) {
         return Response.json({ error: "Acción no válida." }, { status: 400 });
       }
-      action = parsed.action as typeof action;
+      action = parsed.action as "pause" | "resume" | "cancel";
     }
   } catch {
     return Response.json({ error: "Solicitud no válida." }, { status: 400 });

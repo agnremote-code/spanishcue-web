@@ -7,6 +7,8 @@ import {
   localLessonPath,
   ownerFromHeaders,
 } from "../app/access-policy";
+import { verifyShareSession, redeem, privateHeaders } from "../app/autoestudio/share/server";
+import { applyShareHeaders, shareAllowsPath } from "./autoestudio-access";
 import { lessons } from "../app/lesson-catalog";
 import { isPremiumBoardPath } from "../app/boards/access";
 import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";
@@ -36,6 +38,7 @@ interface Env {
   CHESPANISH_OWNER_EMAIL?: string;
   SPANISHCUE_DEPLOYMENT?: string;
   SPANISHCUE_WRITE_FREEZE?: string;
+  AUTOESTUDIO_SHARE_SECRET?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -52,7 +55,7 @@ interface ExecutionContext {
 
 function setSecurityHeaders(headers: Headers, url: URL, locale: string): void {
   headers.set('X-Content-Type-Options','nosniff');
-  headers.set('Referrer-Policy','strict-origin-when-cross-origin');
+  headers.set('Referrer-Policy',url.pathname.startsWith('/s/') || url.pathname.startsWith('/api/autoestudio/') || url.pathname === '/autoestudio/claim' ? 'no-referrer' : 'strict-origin-when-cross-origin');
   headers.set('X-Frame-Options','DENY');
   // Autoestudio lets learners record themselves; the audio never leaves the browser.
   headers.set('Permissions-Policy',isAutoestudioPath(url.pathname)?'camera=(), microphone=(self), geolocation=()':'camera=(), microphone=(), geolocation=()');
@@ -118,6 +121,25 @@ function assetResponse(response: Response, pathname: string): Response {
 const app = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+    // Bearer URLs never reach the application layout, RSC renderer, or analytics.
+    if (url.pathname === '/s' || url.pathname.startsWith('/s/')) {
+      if (request.method !== 'GET') return new Response(null,{status:405,headers:{...privateHeaders,Allow:'GET'}});
+      if ((url.hostname === 'spanishcue.com' || url.hostname === 'www.spanishcue.com') && (url.protocol !== 'https:' || url.hostname !== 'spanishcue.com')) {
+        url.protocol='https:'; url.hostname='spanishcue.com';
+        return noStoreRedirect(url,localeFromHeaders(request.headers),308);
+      }
+      const match=/^\/s\/([^/]+)\/?$/.exec(url.pathname);
+      let token=''; try { token=match?decodeURIComponent(match[1]):''; } catch { /* Invalid token uses the same clean redirect. */ }
+      try {
+        const result=await redeem(request,token,env);
+        const safe=new Response(result.body,result);
+        setSecurityHeaders(safe.headers,url,localeFromHeaders(request.headers));
+        safe.headers.set('Referrer-Policy','no-referrer');
+        return safe;
+      } catch {
+        return new Response('Este acceso no está disponible. Volvé a consultar a tu profe.',{status:503,headers:{...privateHeaders,'content-type':'text/plain; charset=utf-8'}});
+      }
+    }
 
     // Coalesce host, scheme, legacy lesson slugs and trailing slashes into one
     // permanent redirect. Local preview hosts intentionally remain untouched.
@@ -168,11 +190,12 @@ const app = {
     const lesson=lessonAtPath(pathname,lessons);
     const premiumBoard=isPremiumBoardPath(pathname);
     const autoestudio=isAutoestudioPath(pathname);
+    const shareApi=pathname.startsWith('/api/autoestudio/');
     const premiumAutoestudio=isPremiumAutoestudioPath(pathname);
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
     const administrative=pathname==='/admin'||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||Boolean(lesson);
+    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
     const verifiedUser=identityAware&&firebaseTokenFromHeaders(routedHeaders)
       ? await getFirebaseUserFromHeaders(routedHeaders)
       : null;
@@ -181,6 +204,10 @@ const app = {
       ? await resolveFirebaseAccount(env.DB,verifiedUser).catch(()=>null)
       : null;
     const verifiedHeaders=authenticatedRequestHeaders(routedHeaders,verifiedUser,account,ownerIdentity);
+    const shareSession=(autoestudio || shareApi)
+      ? await verifyShareSession(routedHeaders.get("cookie"),env).catch(()=>null)
+      : null;
+    applyShareHeaders(verifiedHeaders,shareSession);
     const verifiedRequest=new Request(routedRequest,{headers:verifiedHeaders});
     const owner=ownerFromHeaders(verifiedHeaders);
     const fullAccess=fullAccessFromHeaders(verifiedHeaders);
@@ -190,7 +217,7 @@ const app = {
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
     }
-    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess)) {
+    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!shareAllowsPath(pathname,shareSession))) {
       if(pathname.startsWith('/api/')) {
         const headers = new Headers({'content-type':'application/json','Cache-Control':'private, no-store'});
         setSecurityHeaders(headers,url,verifiedLocale);

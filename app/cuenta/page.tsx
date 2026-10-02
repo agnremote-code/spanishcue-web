@@ -16,6 +16,7 @@ import "../teachers.css";
 import "./style.css";
 import SubscriptionManager from "./SubscriptionManager";
 import { lessons } from "../lesson-catalog";
+import TeacherPasses from "../autoestudio/TeacherPasses";
 import { StudentTracker } from "../student-tracker/StudentTracker";
 
 export const dynamic = "force-dynamic";
@@ -108,7 +109,10 @@ export default async function Account({
         )}
 
         {activeTab === "alumnos" && (
-          <StudentTracker draftScope={session.userId || "unknown"} lessons={lessons.map(({ id, title }) => ({ id, title }))} />
+          <>
+            <TeacherPasses enabled={session.isPro || session.isOwner} />
+            <StudentTracker draftScope={session.userId || "unknown"} lessons={lessons.map(({ id, title }) => ({ id, title }))} />
+          </>
         )}
 
         {activeTab === "historial" && (

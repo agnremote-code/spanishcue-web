@@ -11,6 +11,11 @@ export const AUTOESTUDIO_ROOT = "/autoestudio";
 export const freeAutoestudioModules: ReadonlySet<string> = new Set([
   "/autoestudio/a1/semana-1",
   "/autoestudio/a1/semana-2",
+  "/autoestudio/a2/semana-1",
+  "/autoestudio/b1/semana-1",
+  "/autoestudio/b2/semana-1",
+  "/autoestudio/c1/semana-1",
+  "/autoestudio/c2/semana-1",
 ]);
 
 const modulePattern = /^\/autoestudio\/(a1|a2|b1|b2|c1|c2)\/semana-([1-9]\d?)$/;

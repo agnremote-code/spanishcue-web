@@ -8,6 +8,7 @@ import { moduleClips } from "../../curriculum/audio-clips";
 import { findModule, neighbours } from "../../curriculum/course";
 import { levelMeta } from "../../curriculum/levels";
 import { objectiveById } from "../../curriculum/objectives";
+import { shareSessionFromHeaders } from "../../session-display";
 import ModulePlayer from "../../ModulePlayer";
 import audioManifest from "../../audio-manifest.json";
 
@@ -28,9 +29,12 @@ export default async function Page({ params }: { params: Promise<{ level: string
   if (!mod || !level) notFound();
 
   const path = modulePath(mod.level, mod.week);
-  const fullAccess = fullAccessFromHeaders(await headers());
+  const h = await headers();
+  const fullAccess = fullAccessFromHeaders(h);
+  const session = shareSessionFromHeaders(h);
+  const levelAccess = fullAccess || session?.level === mod.level;
   // The Worker already redirects locked requests; this keeps the page fail-closed too.
-  if (!isFreeAutoestudioModule(path) && !fullAccess) {
+  if (!isFreeAutoestudioModule(path) && !levelAccess) {
     return (
       <main className="ae-locked">
         <img src="/brand/mascot/standing-crossed.webp" alt="" width="600" height="900" style={{ display: "block", height: 220, width: "auto", margin: "0 auto 12px" }} />
@@ -49,10 +53,11 @@ export default async function Page({ params }: { params: Promise<{ level: string
   const related = mod.related ?? [];
   const recorded = (audioManifest as { clips: Record<string, string> }).clips;
   const clips = Object.fromEntries(moduleClips(mod).filter((clip) => recorded[clip.key]).map((clip) => [clip.key, recorded[clip.key]]));
-  const nextLocked = Boolean(next && !next.free && !fullAccess);
+  const nextLocked = Boolean(next && !next.free && !fullAccess && session?.level !== next.level);
   return (
     <ModulePlayer
       module={mod}
+      session={session}
       level={{ id: level.id, code: level.code, name: level.name, color: level.color, mascot: level.mascot, support: level.support }}
       objectives={objectives}
       previous={previous}

@@ -34,6 +34,10 @@ function fixture() {
     payment_webhook_events: [{ provider: "paypal", environment: "live", event_id: "WH-1", event_type: "PAYMENT.SALE.COMPLETED", resource_id: "PAY-1", received_at: t, processed_at: t, processing_status: "processed", error_code: null }],
     students: [{ id: "s1", owner_id: "owner", alias: "Ana O'Neil", last_name: null, email: null, level: "A2", goal: "", status: "active", created_at: "2026-09-01T00:00:00Z", updated_at: "2026-09-01T00:00:00Z" }],
     class_records: [{ id: "c1", owner_id: "owner", student_id: "s1", lesson_id: null, free_title: "Repaso", starts_at: "2026-09-02T10:00:00Z", timezone: "Asia/Taipei", duration_minutes: 45, status: "done", pedagogical_note: "", next_step: "", request_key: "k1", created_at: "2026-09-02T10:00:00Z", updated_at: "2026-09-02T10:00:00Z" }],
+    autoestudio_learners: [{id: 'learner1', owner_id: 'owner', alias: 'Luna', created_at: '2026-10-02'}],
+    autoestudio_passes: [{id: 'pass1', owner_id: 'owner', learner_id: 'learner1', level: 'a2', revision: 2, revoked_at: null, created_at: '2026-10-02'}],
+    autoestudio_progress: [{learner_id: 'learner1', module_id: 'a2-01', started_at: '2026-10-02', updated_at: '2026-10-02', sections: '{"reading":"2026-10-02"}', last_section: 'reading', completed_at: null, quiz_score: null, quiz_total: null, quiz_best: null, quiz_attempts: null, quiz_at: null}],
+    autoestudio_rate_limits: [{bucket: 12, window: 1, hits: 3}],
     lesson_progress: [], offer_settings: [], founder_leads: [], billing_checkout_locks: [], billing_purchase_claims: [], verification_email_deliveries: [],
   };
 }
@@ -52,7 +56,9 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 17);
+  assert.equal(order.length, 21);
+  assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_passes"));
+  assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_progress"));
   assert.ok(order.indexOf("users") < order.indexOf("auth_identities"));
   assert.ok(order.indexOf("billing_subscriptions") < order.indexOf("billing_payments"));
   assert.ok(order.indexOf("billing_payments") < order.indexOf("billing_outbox_events"));
@@ -73,6 +79,9 @@ test("a complete export rehearses cleanly: counts, integrity, founder PRO, sandb
     assert.deepEqual(failed, []);
     assert.equal(db.prepare("SELECT claimed FROM founder_offer_state WHERE environment = 'live'").get().claimed, 1, "trigger must not double count");
     assert.equal(db.prepare("SELECT alias FROM students").get().alias, "Ana O'Neil");
+    assert.equal(db.prepare("SELECT alias FROM autoestudio_learners").get().alias, "Luna");
+    assert.equal(db.prepare("SELECT revision FROM autoestudio_passes").get().revision, 2);
+    assert.deepEqual(JSON.parse(db.prepare("SELECT sections FROM autoestudio_progress").get().sections), {reading:"2026-10-02"});
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
@@ -185,6 +194,9 @@ test("the owner export route output unpacks into an export that rehearses cleanl
     importInto(db, model, loaded.data);
     assert.deepEqual((await verifyImported(db, model, loaded.data)).filter(check => !check.ok), []);
     assert.equal(db.prepare("SELECT alias FROM students").get().alias, "Ana O'Neil");
+    assert.equal(db.prepare("SELECT alias FROM autoestudio_learners").get().alias, "Luna");
+    assert.equal(db.prepare("SELECT revision FROM autoestudio_passes").get().revision, 2);
+    assert.deepEqual(JSON.parse(db.prepare("SELECT sections FROM autoestudio_progress").get().sections), {reading:"2026-10-02"});
 
     const tampered = { ...bundle, files: { ...bundle.files, "users.jsonl": "" } };
     await writeFile(join(dir, "tampered.json"), JSON.stringify(tampered));

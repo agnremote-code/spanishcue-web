@@ -1,0 +1,2702 @@
+{
+  "level": "a2",
+  "moduleCount": 20,
+  "objectiveCount": 109,
+  "checkpoints": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "coverage": [
+    {
+      "id": "a2.gram.perfecto-compuesto",
+      "week": 1,
+      "domain": "gram",
+      "topic": "Pretérito perfecto compuesto",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.perfecto-compuesto",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.gram.perfecto-compuesto",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.gram.perfecto-compuesto",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.participios-irregulares",
+      "week": 1,
+      "domain": "gram",
+      "topic": "Participios irregulares",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.participios-irregulares",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.gram.participios-irregulares",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.gram.participios-irregulares",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.ya-todavia",
+      "week": 1,
+      "domain": "gram",
+      "topic": "Ya, todavía no, alguna vez, nunca",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.ya-todavia",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.gram.ya-todavia",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.gram.ya-todavia",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.experiencias-viaje",
+      "week": 1,
+      "domain": "voc",
+      "topic": "Experiencias y viajes",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.experiencias-viaje",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.voc.experiencias-viaje",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.voc.experiencias-viaje",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.sinalefa-compuestos",
+      "week": 1,
+      "domain": "pron",
+      "topic": "Enlace en los tiempos compuestos",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.sinalefa-compuestos",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.pron.sinalefa-compuestos",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.pron.sinalefa-compuestos",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.experiencias",
+      "week": 1,
+      "domain": "fun",
+      "topic": "Preguntar por experiencias",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.experiencias",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.fun.experiencias",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.fun.experiencias",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.spk.nunca-he",
+      "week": 1,
+      "domain": "spk",
+      "topic": "Hablar de lo que nunca he hecho",
+      "introducedIn": [
+        "a2-01"
+      ],
+      "reviewedIn": [
+        "a2-02",
+        "a2-03",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.spk.nunca-he",
+          "moduleId": "a2-02",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.spk.nunca-he",
+          "moduleId": "a2-03",
+          "exerciseId": "retrieval-week-01"
+        },
+        {
+          "objectiveId": "a2.spk.nunca-he",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-01"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.indefinido-regular",
+      "week": 2,
+      "domain": "gram",
+      "topic": "Pretérito indefinido regular",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.indefinido-regular",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.gram.indefinido-regular",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.marcadores-pasado",
+      "week": 2,
+      "domain": "gram",
+      "topic": "Marcadores de pasado",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.marcadores-pasado",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.gram.marcadores-pasado",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.fin-de-semana",
+      "week": 2,
+      "domain": "voc",
+      "topic": "Actividades del fin de semana",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.fin-de-semana",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.voc.fin-de-semana",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.acento-tiempos",
+      "week": 2,
+      "domain": "pron",
+      "topic": "Acento que cambia el tiempo verbal",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.acento-tiempos",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.pron.acento-tiempos",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.contar-ayer",
+      "week": 2,
+      "domain": "fun",
+      "topic": "Contar qué hiciste",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.contar-ayer",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.fun.contar-ayer",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.lis.relato-breve",
+      "week": 2,
+      "domain": "lis",
+      "topic": "Escuchar un relato breve",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.lis.relato-breve",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.lis.relato-breve",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.indefinido-irregular",
+      "week": 3,
+      "domain": "gram",
+      "topic": "Indefinido irregular",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.indefinido-irregular",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.ser-ir-indefinido",
+      "week": 3,
+      "domain": "gram",
+      "topic": "Ser e ir en indefinido",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.ser-ir-indefinido",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.etapas-vida",
+      "week": 3,
+      "domain": "voc",
+      "topic": "Etapas de la vida",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.etapas-vida",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.tilde-diacritica",
+      "week": 3,
+      "domain": "pron",
+      "topic": "La tilde diacrítica",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.tilde-diacritica",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.biografia",
+      "week": 3,
+      "domain": "fun",
+      "topic": "Contar una biografía",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.biografia",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.read.biografia",
+      "week": 3,
+      "domain": "read",
+      "topic": "Leer una biografía",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.read.biografia",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.imperfecto",
+      "week": 4,
+      "domain": "gram",
+      "topic": "Pretérito imperfecto",
+      "introducedIn": [
+        "a2-04"
+      ],
+      "reviewedIn": [
+        "a2-05",
+        "a2-06"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.imperfecto",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-04"
+        },
+        {
+          "objectiveId": "a2.gram.imperfecto",
+          "moduleId": "a2-06",
+          "exerciseId": "retrieval-week-04"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.soler",
+      "week": 4,
+      "domain": "gram",
+      "topic": "Soler + infinitivo",
+      "introducedIn": [
+        "a2-04"
+      ],
+      "reviewedIn": [
+        "a2-05",
+        "a2-06"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.soler",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-04"
+        },
+        {
+          "objectiveId": "a2.gram.soler",
+          "moduleId": "a2-06",
+          "exerciseId": "retrieval-week-04"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.infancia",
+      "week": 4,
+      "domain": "voc",
+      "topic": "Infancia, escuela y juegos",
+      "introducedIn": [
+        "a2-04"
+      ],
+      "reviewedIn": [
+        "a2-05",
+        "a2-06"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.infancia",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-04"
+        },
+        {
+          "objectiveId": "a2.voc.infancia",
+          "moduleId": "a2-06",
+          "exerciseId": "retrieval-week-04"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.s-aspirada",
+      "week": 4,
+      "domain": "pron",
+      "topic": "La s final aspirada",
+      "introducedIn": [
+        "a2-04"
+      ],
+      "reviewedIn": [
+        "a2-05",
+        "a2-06"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.s-aspirada",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-04"
+        },
+        {
+          "objectiveId": "a2.pron.s-aspirada",
+          "moduleId": "a2-06",
+          "exerciseId": "retrieval-week-04"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.comparar-antes",
+      "week": 4,
+      "domain": "fun",
+      "topic": "Comparar antes y ahora",
+      "introducedIn": [
+        "a2-04"
+      ],
+      "reviewedIn": [
+        "a2-05",
+        "a2-06"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.comparar-antes",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-04"
+        },
+        {
+          "objectiveId": "a2.fun.comparar-antes",
+          "moduleId": "a2-06",
+          "exerciseId": "retrieval-week-04"
+        }
+      ]
+    },
+    {
+      "id": "a2.wri.recuerdo",
+      "week": 4,
+      "domain": "wri",
+      "topic": "Escribir un recuerdo",
+      "introducedIn": [
+        "a2-04"
+      ],
+      "reviewedIn": [
+        "a2-05",
+        "a2-06"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.wri.recuerdo",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-04"
+        },
+        {
+          "objectiveId": "a2.wri.recuerdo",
+          "moduleId": "a2-06",
+          "exerciseId": "retrieval-week-04"
+        }
+      ]
+    },
+    {
+      "id": "a2.rev.checkpoint-1",
+      "week": 5,
+      "domain": "rev",
+      "topic": "Checkpoint 1: mi pasado",
+      "introducedIn": [
+        "a2-05"
+      ],
+      "reviewedIn": [
+        "a2-07",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.rev.checkpoint-1",
+          "moduleId": "a2-07",
+          "exerciseId": "retrieval-week-05"
+        },
+        {
+          "objectiveId": "a2.rev.checkpoint-1",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-05"
+        }
+      ]
+    },
+    {
+      "id": "a2.lis.podcast-recuerdos",
+      "week": 5,
+      "domain": "lis",
+      "topic": "Escuchar recuerdos",
+      "introducedIn": [
+        "a2-05"
+      ],
+      "reviewedIn": [
+        "a2-07",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.lis.podcast-recuerdos",
+          "moduleId": "a2-07",
+          "exerciseId": "retrieval-week-05"
+        },
+        {
+          "objectiveId": "a2.lis.podcast-recuerdos",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-05"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.indefinido-imperfecto",
+      "week": 6,
+      "domain": "gram",
+      "topic": "Indefinido frente a imperfecto",
+      "introducedIn": [
+        "a2-06"
+      ],
+      "reviewedIn": [
+        "a2-08",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.indefinido-imperfecto",
+          "moduleId": "a2-08",
+          "exerciseId": "retrieval-week-06"
+        },
+        {
+          "objectiveId": "a2.gram.indefinido-imperfecto",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-06"
+        }
+      ]
+    },
+    {
+      "id": "a2.disc.secuenciar",
+      "week": 6,
+      "domain": "disc",
+      "topic": "Secuenciar un relato",
+      "introducedIn": [
+        "a2-06"
+      ],
+      "reviewedIn": [
+        "a2-08",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.disc.secuenciar",
+          "moduleId": "a2-08",
+          "exerciseId": "retrieval-week-06"
+        },
+        {
+          "objectiveId": "a2.disc.secuenciar",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-06"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.anecdotas",
+      "week": 6,
+      "domain": "voc",
+      "topic": "Anécdotas e imprevistos",
+      "introducedIn": [
+        "a2-06"
+      ],
+      "reviewedIn": [
+        "a2-08",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.anecdotas",
+          "moduleId": "a2-08",
+          "exerciseId": "retrieval-week-06"
+        },
+        {
+          "objectiveId": "a2.voc.anecdotas",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-06"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.grupos-fonicos",
+      "week": 6,
+      "domain": "pron",
+      "topic": "Pausas y grupos fónicos",
+      "introducedIn": [
+        "a2-06"
+      ],
+      "reviewedIn": [
+        "a2-08",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.grupos-fonicos",
+          "moduleId": "a2-08",
+          "exerciseId": "retrieval-week-06"
+        },
+        {
+          "objectiveId": "a2.pron.grupos-fonicos",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-06"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.anecdota",
+      "week": 6,
+      "domain": "fun",
+      "topic": "Contar una anécdota",
+      "introducedIn": [
+        "a2-06"
+      ],
+      "reviewedIn": [
+        "a2-08",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.anecdota",
+          "moduleId": "a2-08",
+          "exerciseId": "retrieval-week-06"
+        },
+        {
+          "objectiveId": "a2.fun.anecdota",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-06"
+        }
+      ]
+    },
+    {
+      "id": "a2.spk.anecdota",
+      "week": 6,
+      "domain": "spk",
+      "topic": "Anécdota en un minuto",
+      "introducedIn": [
+        "a2-06"
+      ],
+      "reviewedIn": [
+        "a2-08",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.spk.anecdota",
+          "moduleId": "a2-08",
+          "exerciseId": "retrieval-week-06"
+        },
+        {
+          "objectiveId": "a2.spk.anecdota",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-06"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.comparativos",
+      "week": 7,
+      "domain": "gram",
+      "topic": "Comparativos",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.comparativos",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.gram.comparativos",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.superlativos",
+      "week": 7,
+      "domain": "gram",
+      "topic": "Superlativos e irregulares",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.superlativos",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.gram.superlativos",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.ciudades-campo",
+      "week": 7,
+      "domain": "voc",
+      "topic": "Ciudad, campo y clima",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.ciudades-campo",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.voc.ciudades-campo",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.foco-contraste",
+      "week": 7,
+      "domain": "pron",
+      "topic": "Acento de frase y contraste",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.foco-contraste",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.pron.foco-contraste",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.comparar-elegir",
+      "week": 7,
+      "domain": "fun",
+      "topic": "Comparar y elegir",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.comparar-elegir",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.fun.comparar-elegir",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.read.articulo-ciudades",
+      "week": 7,
+      "domain": "read",
+      "topic": "Leer una comparación",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.read.articulo-ciudades",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.read.articulo-ciudades",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.vivienda-servicios",
+      "week": 7,
+      "domain": "voc",
+      "topic": "Vivienda, alquiler y servicios",
+      "introducedIn": [
+        "a2-07"
+      ],
+      "reviewedIn": [
+        "a2-09",
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.vivienda-servicios",
+          "moduleId": "a2-09",
+          "exerciseId": "retrieval-week-07"
+        },
+        {
+          "objectiveId": "a2.voc.vivienda-servicios",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-07"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.oi-pronombres",
+      "week": 8,
+      "domain": "gram",
+      "topic": "Objeto indirecto: le, les",
+      "introducedIn": [
+        "a2-08"
+      ],
+      "reviewedIn": [
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.oi-pronombres",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-08"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.se-lo",
+      "week": 8,
+      "domain": "gram",
+      "topic": "Combinación se lo",
+      "introducedIn": [
+        "a2-08"
+      ],
+      "reviewedIn": [
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.se-lo",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-08"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.regalos-prestamos",
+      "week": 8,
+      "domain": "voc",
+      "topic": "Regalos, préstamos y favores",
+      "introducedIn": [
+        "a2-08"
+      ],
+      "reviewedIn": [
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.regalos-prestamos",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-08"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.cliticos-acento",
+      "week": 8,
+      "domain": "pron",
+      "topic": "Pronombres pegados y acento",
+      "introducedIn": [
+        "a2-08"
+      ],
+      "reviewedIn": [
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.cliticos-acento",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-08"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.favores",
+      "week": 8,
+      "domain": "fun",
+      "topic": "Pedir y ofrecer favores",
+      "introducedIn": [
+        "a2-08"
+      ],
+      "reviewedIn": [
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.favores",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-08"
+        }
+      ]
+    },
+    {
+      "id": "a2.wri.mensaje-favor",
+      "week": 8,
+      "domain": "wri",
+      "topic": "Mensaje para pedir un favor",
+      "introducedIn": [
+        "a2-08"
+      ],
+      "reviewedIn": [
+        "a2-10"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.wri.mensaje-favor",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-08"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.imperativo-afirmativo",
+      "week": 9,
+      "domain": "gram",
+      "topic": "Imperativo afirmativo",
+      "introducedIn": [
+        "a2-09"
+      ],
+      "reviewedIn": [
+        "a2-10",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.imperativo-afirmativo",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-09"
+        },
+        {
+          "objectiveId": "a2.gram.imperativo-afirmativo",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-09"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.imperativo-pronombres",
+      "week": 9,
+      "domain": "gram",
+      "topic": "Imperativo con pronombres",
+      "introducedIn": [
+        "a2-09"
+      ],
+      "reviewedIn": [
+        "a2-10",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.imperativo-pronombres",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-09"
+        },
+        {
+          "objectiveId": "a2.gram.imperativo-pronombres",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-09"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.cocina-recetas",
+      "week": 9,
+      "domain": "voc",
+      "topic": "Cocina y recetas",
+      "introducedIn": [
+        "a2-09"
+      ],
+      "reviewedIn": [
+        "a2-10",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.cocina-recetas",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-09"
+        },
+        {
+          "objectiveId": "a2.voc.cocina-recetas",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-09"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.entonacion-imperativo",
+      "week": 9,
+      "domain": "pron",
+      "topic": "Entonación de órdenes y consejos",
+      "introducedIn": [
+        "a2-09"
+      ],
+      "reviewedIn": [
+        "a2-10",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.entonacion-imperativo",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-09"
+        },
+        {
+          "objectiveId": "a2.pron.entonacion-imperativo",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-09"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.instrucciones",
+      "week": 9,
+      "domain": "fun",
+      "topic": "Dar instrucciones",
+      "introducedIn": [
+        "a2-09"
+      ],
+      "reviewedIn": [
+        "a2-10",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.instrucciones",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-09"
+        },
+        {
+          "objectiveId": "a2.fun.instrucciones",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-09"
+        }
+      ]
+    },
+    {
+      "id": "a2.lis.receta",
+      "week": 9,
+      "domain": "lis",
+      "topic": "Escuchar una receta",
+      "introducedIn": [
+        "a2-09"
+      ],
+      "reviewedIn": [
+        "a2-10",
+        "a2-11"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.lis.receta",
+          "moduleId": "a2-10",
+          "exerciseId": "retrieval-week-09"
+        },
+        {
+          "objectiveId": "a2.lis.receta",
+          "moduleId": "a2-11",
+          "exerciseId": "retrieval-week-09"
+        }
+      ]
+    },
+    {
+      "id": "a2.rev.checkpoint-2",
+      "week": 10,
+      "domain": "rev",
+      "topic": "Checkpoint 2: relatos, comparaciones e instrucciones",
+      "introducedIn": [
+        "a2-10"
+      ],
+      "reviewedIn": [
+        "a2-12",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.rev.checkpoint-2",
+          "moduleId": "a2-12",
+          "exerciseId": "retrieval-week-10"
+        },
+        {
+          "objectiveId": "a2.rev.checkpoint-2",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-10"
+        }
+      ]
+    },
+    {
+      "id": "a2.read.blog-viaje",
+      "week": 10,
+      "domain": "read",
+      "topic": "Leer un blog de viaje",
+      "introducedIn": [
+        "a2-10"
+      ],
+      "reviewedIn": [
+        "a2-12",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.read.blog-viaje",
+          "moduleId": "a2-12",
+          "exerciseId": "retrieval-week-10"
+        },
+        {
+          "objectiveId": "a2.read.blog-viaje",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-10"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.estar-gerundio",
+      "week": 11,
+      "domain": "gram",
+      "topic": "Estar + gerundio",
+      "introducedIn": [
+        "a2-11"
+      ],
+      "reviewedIn": [
+        "a2-13",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.estar-gerundio",
+          "moduleId": "a2-13",
+          "exerciseId": "retrieval-week-11"
+        },
+        {
+          "objectiveId": "a2.gram.estar-gerundio",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-11"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.perifrasis-fase",
+      "week": 11,
+      "domain": "gram",
+      "topic": "Perífrasis de fase",
+      "introducedIn": [
+        "a2-11"
+      ],
+      "reviewedIn": [
+        "a2-13",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.perifrasis-fase",
+          "moduleId": "a2-13",
+          "exerciseId": "retrieval-week-11"
+        },
+        {
+          "objectiveId": "a2.gram.perifrasis-fase",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-11"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.cambios-habitos",
+      "week": 11,
+      "domain": "voc",
+      "topic": "Cambios de hábitos",
+      "introducedIn": [
+        "a2-11"
+      ],
+      "reviewedIn": [
+        "a2-13",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.cambios-habitos",
+          "moduleId": "a2-13",
+          "exerciseId": "retrieval-week-11"
+        },
+        {
+          "objectiveId": "a2.voc.cambios-habitos",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-11"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.asimilacion-nasal",
+      "week": 11,
+      "domain": "pron",
+      "topic": "La n ante b, p, m",
+      "introducedIn": [
+        "a2-11"
+      ],
+      "reviewedIn": [
+        "a2-13",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.asimilacion-nasal",
+          "moduleId": "a2-13",
+          "exerciseId": "retrieval-week-11"
+        },
+        {
+          "objectiveId": "a2.pron.asimilacion-nasal",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-11"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.describir-cambios",
+      "week": 11,
+      "domain": "fun",
+      "topic": "Describir cambios personales",
+      "introducedIn": [
+        "a2-11"
+      ],
+      "reviewedIn": [
+        "a2-13",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.describir-cambios",
+          "moduleId": "a2-13",
+          "exerciseId": "retrieval-week-11"
+        },
+        {
+          "objectiveId": "a2.fun.describir-cambios",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-11"
+        }
+      ]
+    },
+    {
+      "id": "a2.spk.videollamada",
+      "week": 11,
+      "domain": "spk",
+      "topic": "Describir lo que está pasando",
+      "introducedIn": [
+        "a2-11"
+      ],
+      "reviewedIn": [
+        "a2-13",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.spk.videollamada",
+          "moduleId": "a2-13",
+          "exerciseId": "retrieval-week-11"
+        },
+        {
+          "objectiveId": "a2.spk.videollamada",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-11"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.futuro-simple",
+      "week": 12,
+      "domain": "gram",
+      "topic": "Futuro simple: ampliación guiada",
+      "introducedIn": [
+        "a2-12"
+      ],
+      "reviewedIn": [
+        "a2-14",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.futuro-simple",
+          "moduleId": "a2-14",
+          "exerciseId": "retrieval-week-12"
+        },
+        {
+          "objectiveId": "a2.gram.futuro-simple",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-12"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.si-presente",
+      "week": 12,
+      "domain": "gram",
+      "topic": "Si + presente, futuro",
+      "introducedIn": [
+        "a2-12"
+      ],
+      "reviewedIn": [
+        "a2-14",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.si-presente",
+          "moduleId": "a2-14",
+          "exerciseId": "retrieval-week-12"
+        },
+        {
+          "objectiveId": "a2.gram.si-presente",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-12"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.tecnologia-futuro",
+      "week": 12,
+      "domain": "voc",
+      "topic": "Tecnología y futuro",
+      "introducedIn": [
+        "a2-12"
+      ],
+      "reviewedIn": [
+        "a2-14",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.tecnologia-futuro",
+          "moduleId": "a2-14",
+          "exerciseId": "retrieval-week-12"
+        },
+        {
+          "objectiveId": "a2.voc.tecnologia-futuro",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-12"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.vocales-atonas",
+      "week": 12,
+      "domain": "pron",
+      "topic": "Vocales átonas plenas",
+      "introducedIn": [
+        "a2-12"
+      ],
+      "reviewedIn": [
+        "a2-14",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.vocales-atonas",
+          "moduleId": "a2-14",
+          "exerciseId": "retrieval-week-12"
+        },
+        {
+          "objectiveId": "a2.pron.vocales-atonas",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-12"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.predecir-prometer",
+      "week": 12,
+      "domain": "fun",
+      "topic": "Predecir y prometer",
+      "introducedIn": [
+        "a2-12"
+      ],
+      "reviewedIn": [
+        "a2-14",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.predecir-prometer",
+          "moduleId": "a2-14",
+          "exerciseId": "retrieval-week-12"
+        },
+        {
+          "objectiveId": "a2.fun.predecir-prometer",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-12"
+        }
+      ]
+    },
+    {
+      "id": "a2.read.horoscopo-predicciones",
+      "week": 12,
+      "domain": "read",
+      "topic": "Leer predicciones",
+      "introducedIn": [
+        "a2-12"
+      ],
+      "reviewedIn": [
+        "a2-14",
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.read.horoscopo-predicciones",
+          "moduleId": "a2-14",
+          "exerciseId": "retrieval-week-12"
+        },
+        {
+          "objectiveId": "a2.read.horoscopo-predicciones",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-12"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.doler",
+      "week": 13,
+      "domain": "gram",
+      "topic": "Doler y estar + síntomas",
+      "introducedIn": [
+        "a2-13"
+      ],
+      "reviewedIn": [
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.doler",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-13"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.consejos-deberias",
+      "week": 13,
+      "domain": "gram",
+      "topic": "Consejos con fórmulas frecuentes",
+      "introducedIn": [
+        "a2-13"
+      ],
+      "reviewedIn": [
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.consejos-deberias",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-13"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.cuerpo-salud",
+      "week": 13,
+      "domain": "voc",
+      "topic": "El cuerpo y la salud",
+      "introducedIn": [
+        "a2-13"
+      ],
+      "reviewedIn": [
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.cuerpo-salud",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-13"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.letra-x",
+      "week": 13,
+      "domain": "pron",
+      "topic": "Los sonidos de la x",
+      "introducedIn": [
+        "a2-13"
+      ],
+      "reviewedIn": [
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.letra-x",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-13"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.medico",
+      "week": 13,
+      "domain": "fun",
+      "topic": "En la consulta",
+      "introducedIn": [
+        "a2-13"
+      ],
+      "reviewedIn": [
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.medico",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-13"
+        }
+      ]
+    },
+    {
+      "id": "a2.lis.consulta",
+      "week": 13,
+      "domain": "lis",
+      "topic": "Escuchar una consulta médica",
+      "introducedIn": [
+        "a2-13"
+      ],
+      "reviewedIn": [
+        "a2-15"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.lis.consulta",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-13"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.condicional-cortesia",
+      "week": 14,
+      "domain": "gram",
+      "topic": "Condicional de cortesía",
+      "introducedIn": [
+        "a2-14"
+      ],
+      "reviewedIn": [
+        "a2-15",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.condicional-cortesia",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-14"
+        },
+        {
+          "objectiveId": "a2.gram.condicional-cortesia",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-14"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.hotel-transporte",
+      "week": 14,
+      "domain": "voc",
+      "topic": "Hotel, aeropuerto y reservas",
+      "introducedIn": [
+        "a2-14"
+      ],
+      "reviewedIn": [
+        "a2-15",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.hotel-transporte",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-14"
+        },
+        {
+          "objectiveId": "a2.voc.hotel-transporte",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-14"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.cortesia-entonacion",
+      "week": 14,
+      "domain": "pron",
+      "topic": "Entonación de cortesía",
+      "introducedIn": [
+        "a2-14"
+      ],
+      "reviewedIn": [
+        "a2-15",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.cortesia-entonacion",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-14"
+        },
+        {
+          "objectiveId": "a2.pron.cortesia-entonacion",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-14"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.reclamar",
+      "week": 14,
+      "domain": "fun",
+      "topic": "Pedir y reclamar con cortesía",
+      "introducedIn": [
+        "a2-14"
+      ],
+      "reviewedIn": [
+        "a2-15",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.reclamar",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-14"
+        },
+        {
+          "objectiveId": "a2.fun.reclamar",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-14"
+        }
+      ]
+    },
+    {
+      "id": "a2.wri.correo-reserva",
+      "week": 14,
+      "domain": "wri",
+      "topic": "Correo para una reserva",
+      "introducedIn": [
+        "a2-14"
+      ],
+      "reviewedIn": [
+        "a2-15",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.wri.correo-reserva",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-14"
+        },
+        {
+          "objectiveId": "a2.wri.correo-reserva",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-14"
+        }
+      ]
+    },
+    {
+      "id": "a2.read.condiciones",
+      "week": 14,
+      "domain": "read",
+      "topic": "Leer condiciones de un servicio",
+      "introducedIn": [
+        "a2-14"
+      ],
+      "reviewedIn": [
+        "a2-15",
+        "a2-16"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.read.condiciones",
+          "moduleId": "a2-15",
+          "exerciseId": "retrieval-week-14"
+        },
+        {
+          "objectiveId": "a2.read.condiciones",
+          "moduleId": "a2-16",
+          "exerciseId": "retrieval-week-14"
+        }
+      ]
+    },
+    {
+      "id": "a2.rev.checkpoint-3",
+      "week": 15,
+      "domain": "rev",
+      "topic": "Checkpoint 3: viajar y resolver",
+      "introducedIn": [
+        "a2-15"
+      ],
+      "reviewedIn": [
+        "a2-17"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.rev.checkpoint-3",
+          "moduleId": "a2-17",
+          "exerciseId": "retrieval-week-15"
+        }
+      ]
+    },
+    {
+      "id": "a2.spk.resolver-problema",
+      "week": 15,
+      "domain": "spk",
+      "topic": "Resolver un problema por teléfono",
+      "introducedIn": [
+        "a2-15"
+      ],
+      "reviewedIn": [
+        "a2-17"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.spk.resolver-problema",
+          "moduleId": "a2-17",
+          "exerciseId": "retrieval-week-15"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.transmitir-acuerdo",
+      "week": 15,
+      "domain": "fun",
+      "topic": "Transmitir información práctica",
+      "introducedIn": [
+        "a2-15"
+      ],
+      "reviewedIn": [
+        "a2-17"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.transmitir-acuerdo",
+          "moduleId": "a2-17",
+          "exerciseId": "retrieval-week-15"
+        }
+      ]
+    },
+    {
+      "id": "a2.disc.conectores-causa-consecuencia",
+      "week": 16,
+      "domain": "disc",
+      "topic": "Porque, como, por eso, así que",
+      "introducedIn": [
+        "a2-16"
+      ],
+      "reviewedIn": [
+        "a2-18",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.disc.conectores-causa-consecuencia",
+          "moduleId": "a2-18",
+          "exerciseId": "retrieval-week-16"
+        },
+        {
+          "objectiveId": "a2.disc.conectores-causa-consecuencia",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-16"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.antes-despues-inf",
+      "week": 16,
+      "domain": "gram",
+      "topic": "Antes de, después de, al + infinitivo; cuando",
+      "introducedIn": [
+        "a2-16"
+      ],
+      "reviewedIn": [
+        "a2-18",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.antes-despues-inf",
+          "moduleId": "a2-18",
+          "exerciseId": "retrieval-week-16"
+        },
+        {
+          "objectiveId": "a2.gram.antes-despues-inf",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-16"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.estudio-trabajo",
+      "week": 16,
+      "domain": "voc",
+      "topic": "Estudios y trabajo",
+      "introducedIn": [
+        "a2-16"
+      ],
+      "reviewedIn": [
+        "a2-18",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.estudio-trabajo",
+          "moduleId": "a2-18",
+          "exerciseId": "retrieval-week-16"
+        },
+        {
+          "objectiveId": "a2.voc.estudio-trabajo",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-16"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.conectores-entonacion",
+      "week": 16,
+      "domain": "pron",
+      "topic": "La entonación de los conectores",
+      "introducedIn": [
+        "a2-16"
+      ],
+      "reviewedIn": [
+        "a2-18",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.conectores-entonacion",
+          "moduleId": "a2-18",
+          "exerciseId": "retrieval-week-16"
+        },
+        {
+          "objectiveId": "a2.pron.conectores-entonacion",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-16"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.explicar-decisiones",
+      "week": 16,
+      "domain": "fun",
+      "topic": "Explicar decisiones",
+      "introducedIn": [
+        "a2-16"
+      ],
+      "reviewedIn": [
+        "a2-18",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.explicar-decisiones",
+          "moduleId": "a2-18",
+          "exerciseId": "retrieval-week-16"
+        },
+        {
+          "objectiveId": "a2.fun.explicar-decisiones",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-16"
+        }
+      ]
+    },
+    {
+      "id": "a2.wri.historia-conectada",
+      "week": 16,
+      "domain": "wri",
+      "topic": "Texto narrativo conectado",
+      "introducedIn": [
+        "a2-16"
+      ],
+      "reviewedIn": [
+        "a2-18",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.wri.historia-conectada",
+          "moduleId": "a2-18",
+          "exerciseId": "retrieval-week-16"
+        },
+        {
+          "objectiveId": "a2.wri.historia-conectada",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-16"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.por-para",
+      "week": 17,
+      "domain": "gram",
+      "topic": "Por y para",
+      "introducedIn": [
+        "a2-17"
+      ],
+      "reviewedIn": [
+        "a2-19",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.por-para",
+          "moduleId": "a2-19",
+          "exerciseId": "retrieval-week-17"
+        },
+        {
+          "objectiveId": "a2.gram.por-para",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-17"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.compras-online",
+      "week": 17,
+      "domain": "voc",
+      "topic": "Compras en línea y envíos",
+      "introducedIn": [
+        "a2-17"
+      ],
+      "reviewedIn": [
+        "a2-19",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.compras-online",
+          "moduleId": "a2-19",
+          "exerciseId": "retrieval-week-17"
+        },
+        {
+          "objectiveId": "a2.voc.compras-online",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-17"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.palabras-largas",
+      "week": 17,
+      "domain": "pron",
+      "topic": "Palabras largas y ritmo",
+      "introducedIn": [
+        "a2-17"
+      ],
+      "reviewedIn": [
+        "a2-19",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.palabras-largas",
+          "moduleId": "a2-19",
+          "exerciseId": "retrieval-week-17"
+        },
+        {
+          "objectiveId": "a2.pron.palabras-largas",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-17"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.finalidad",
+      "week": 17,
+      "domain": "fun",
+      "topic": "Expresar finalidad y causa",
+      "introducedIn": [
+        "a2-17"
+      ],
+      "reviewedIn": [
+        "a2-19",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.finalidad",
+          "moduleId": "a2-19",
+          "exerciseId": "retrieval-week-17"
+        },
+        {
+          "objectiveId": "a2.fun.finalidad",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-17"
+        }
+      ]
+    },
+    {
+      "id": "a2.lis.atencion-cliente",
+      "week": 17,
+      "domain": "lis",
+      "topic": "Escuchar un servicio de atención",
+      "introducedIn": [
+        "a2-17"
+      ],
+      "reviewedIn": [
+        "a2-19",
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.lis.atencion-cliente",
+          "moduleId": "a2-19",
+          "exerciseId": "retrieval-week-17"
+        },
+        {
+          "objectiveId": "a2.lis.atencion-cliente",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-17"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.indefinidos",
+      "week": 18,
+      "domain": "gram",
+      "topic": "Indefinidos: algo, nada, alguien, nadie",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.indefinidos",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.relativo-que",
+      "week": 18,
+      "domain": "gram",
+      "topic": "Oraciones de relativo con que y donde",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.relativo-que",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.objetos-perdidos",
+      "week": 18,
+      "domain": "voc",
+      "topic": "Objetos y su descripción",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.objetos-perdidos",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.diptongos-verbales",
+      "week": 18,
+      "domain": "pron",
+      "topic": "Diptongos que van y vienen",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.diptongos-verbales",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.describir-objeto",
+      "week": 18,
+      "domain": "fun",
+      "topic": "Describir algo cuyo nombre no sé",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.describir-objeto",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    },
+    {
+      "id": "a2.read.objetos-perdidos",
+      "week": 18,
+      "domain": "read",
+      "topic": "Leer avisos de objetos perdidos",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.read.objetos-perdidos",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.opinion-indicativo",
+      "week": 19,
+      "domain": "gram",
+      "topic": "Creo que, pienso que, me parece que",
+      "introducedIn": [
+        "a2-19"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.opinion-indicativo",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-19"
+        }
+      ]
+    },
+    {
+      "id": "a2.fun.acuerdo-desacuerdo",
+      "week": 19,
+      "domain": "fun",
+      "topic": "Acuerdo y desacuerdo",
+      "introducedIn": [
+        "a2-19"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.fun.acuerdo-desacuerdo",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-19"
+        }
+      ]
+    },
+    {
+      "id": "a2.voc.temas-sociales",
+      "week": 19,
+      "domain": "voc",
+      "topic": "Temas cercanos de debate",
+      "introducedIn": [
+        "a2-19"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.voc.temas-sociales",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-19"
+        }
+      ]
+    },
+    {
+      "id": "a2.pron.entonacion-duda",
+      "week": 19,
+      "domain": "pron",
+      "topic": "Entonación de duda y acuerdo",
+      "introducedIn": [
+        "a2-19"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.pron.entonacion-duda",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-19"
+        }
+      ]
+    },
+    {
+      "id": "a2.disc.turnos",
+      "week": 19,
+      "domain": "disc",
+      "topic": "Tomar y ceder el turno",
+      "introducedIn": [
+        "a2-19"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.disc.turnos",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-19"
+        }
+      ]
+    },
+    {
+      "id": "a2.spk.opinion-breve",
+      "week": 19,
+      "domain": "spk",
+      "topic": "Opinar dos minutos",
+      "introducedIn": [
+        "a2-19"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.spk.opinion-breve",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-19"
+        }
+      ]
+    },
+    {
+      "id": "a2.rev.checkpoint-final",
+      "week": 20,
+      "domain": "rev",
+      "topic": "Checkpoint final A2",
+      "introducedIn": [
+        "a2-20"
+      ],
+      "reviewedIn": [],
+      "retrievalExercises": []
+    },
+    {
+      "id": "a2.wri.texto-a2",
+      "week": 20,
+      "domain": "wri",
+      "topic": "Texto final A2",
+      "introducedIn": [
+        "a2-20"
+      ],
+      "reviewedIn": [],
+      "retrievalExercises": []
+    },
+    {
+      "id": "a2.gram.indefinido-ortografia",
+      "week": 2,
+      "domain": "gram",
+      "topic": "Ortografía del indefinido",
+      "introducedIn": [
+        "a2-02"
+      ],
+      "reviewedIn": [
+        "a2-04",
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.indefinido-ortografia",
+          "moduleId": "a2-04",
+          "exerciseId": "retrieval-week-02"
+        },
+        {
+          "objectiveId": "a2.gram.indefinido-ortografia",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-02"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.indefinido-ver-dar",
+      "week": 3,
+      "domain": "gram",
+      "topic": "Ver y dar en indefinido",
+      "introducedIn": [
+        "a2-03"
+      ],
+      "reviewedIn": [
+        "a2-05"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.indefinido-ver-dar",
+          "moduleId": "a2-05",
+          "exerciseId": "retrieval-week-03"
+        }
+      ]
+    },
+    {
+      "id": "a2.gram.posesivos-tonicos",
+      "week": 18,
+      "domain": "gram",
+      "topic": "Posesivos tónicos y referencia",
+      "introducedIn": [
+        "a2-18"
+      ],
+      "reviewedIn": [
+        "a2-20"
+      ],
+      "retrievalExercises": [
+        {
+          "objectiveId": "a2.gram.posesivos-tonicos",
+          "moduleId": "a2-20",
+          "exerciseId": "retrieval-week-18"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "readingWords": [
+      141,
+      140,
+      149,
+      148,
+      227,
+      140,
+      166,
+      151,
+      161,
+      233,
+      164,
+      152,
+      161,
+      168,
+      323,
+      164,
+      173,
+      172,
+      167,
+      404
+    ],
+    "listeningWords": [
+      119,
+      114,
+      132,
+      125,
+      193,
+      140,
+      123,
+      122,
+      126,
+      217,
+      138,
+      118,
+      144,
+      137,
+      287,
+      132,
+      149,
+      132,
+      136,
+      307
+    ],
+    "writingWords": [
+      [
+        60,
+        100
+      ],
+      [
+        60,
+        100
+      ],
+      [
+        60,
+        100
+      ],
+      [
+        60,
+        100
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        80,
+        120
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        100,
+        140
+      ],
+      [
+        120,
+        150
+      ]
+    ],
+    "speakingSeconds": [
+      180,
+      180,
+      180,
+      180,
+      240,
+      180,
+      180,
+      180,
+      180,
+      240,
+      180,
+      180,
+      180,
+      180,
+      240,
+      210,
+      210,
+      210,
+      210,
+      240
+    ]
+  },
+  "validation": {
+    "missingIntroductions": [],
+    "duplicateIntroductions": [],
+    "orphanObjectiveReferences": [],
+    "unretrievedBeforeFinalWeek": [],
+    "terminalObjectivesWithoutLaterA2Week": [
+      "a2.rev.checkpoint-final",
+      "a2.wri.texto-a2"
+    ]
+  }
+}
