@@ -15,13 +15,24 @@ test('provider receives private key and WAV; only transcript and word timing are
  assert.match(request.url,/transcriptions:transcribe\?api-version=2025-10-15/);
  assert.equal(request.options.headers['Ocp-Apim-Subscription-Key'],'private');
  assert.equal(request.options.body.get('audio').type,'audio/wav');
- assert.deepEqual(JSON.parse(request.options.body.get('definition')),{locales:['es-AR'],wordLevelTimestampsEnabled:true});
+ assert.deepEqual(JSON.parse(request.options.body.get('definition')),{locales:['es-ES'],wordLevelTimestampsEnabled:true});
 });
 test('provider failure has no invented transcription',async()=>{
  const result=await recognizeSpanish(new Uint8Array(44),'Es una casa.',{AZURE_SPEECH_KEY:'private',AZURE_SPEECH_REGION:'eastus'},async()=>new Response('error',{status:503}));
- assert.deepEqual(result,{kind:'unavailable'});
+ assert.deepEqual(result,{kind:'unavailable',reason:'provider'});
 });
 test('free speech does not send a forced reference text',async()=>{
  let definition;await recognizeSpanish(new Uint8Array(44),'',{AZURE_SPEECH_KEY:'private',AZURE_SPEECH_REGION:'eastus'},async(_url,options)=>{definition=JSON.parse(options.body.get('definition'));return Response.json({phrases:[]});});
  assert.equal(JSON.stringify(definition).includes('ReferenceText'),false);
+});
+
+test('timeouts and rejected credentials remain explicit failures',async()=>{
+ const config={AZURE_SPEECH_KEY:'test',AZURE_SPEECH_REGION:'eastus'};
+ assert.equal((await recognizeSpanish(new Uint8Array(44),'',config,async()=>{throw new DOMException('timeout','TimeoutError');})).reason,'timeout');
+ assert.equal((await recognizeSpanish(new Uint8Array(44),'',config,async()=>new Response('',{status:401}))).reason,'credentials');
+});
+test('a transcript without timing or confidence stays uncertain instead of fabricated',async()=>{
+ const config={AZURE_SPEECH_KEY:'test',AZURE_SPEECH_REGION:'eastus'};
+ const result=await recognizeSpanish(new Uint8Array(44),'',config,async()=>Response.json({phrases:[{text:'Es una casa.'}]}));
+ assert.equal(result.transcript,'Es una casa.');assert.deepEqual(result.words,[]);assert.equal(result.confidence,undefined);
 });

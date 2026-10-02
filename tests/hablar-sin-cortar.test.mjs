@@ -49,3 +49,12 @@ test('single PRO record appears in each level filter; matching links carry level
  assert.ok(existsSync('app/hablar-sin-cortar/page.tsx'));
  assert.match(readFileSync('app/Library.tsx','utf8'),/phoneticsFamilyHref\(lesson, selectedLevel\)/);
 });
+
+test('every scripted repeat has a connected-speech target across all six levels',async()=>{
+ const {contentFor}=await import('../app/hablar-sin-cortar/levels.mjs');
+ for(const level of ['A1','A2','B1','B2','C1','C2'])for(const a of contentFor(level).activities.filter(a=>a.kind!=='transfer')){
+  assert.equal(a.analysisTarget,'connectedSpeech',`${level}/${a.id}`);
+  assert.ok(a.analysisBoundary>=0&&a.analysisBoundary<a.text.split(/\s+/).length-1);
+  assert.doesNotMatch(a.text.split(/\s+/)[a.analysisBoundary],/[.!?;:,]$/);
+ }
+});

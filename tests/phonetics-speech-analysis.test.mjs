@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {interpretConnectedSpeech} from '../app/phonetics-family/speech-analysis.mjs';
 
 const words=(values)=>values.map(([text,start,end])=>({text,start,end}));
-const input={expected:'Es una casa.',targetBoundary:0,durationMs:1600,voicedMs:1100,
+const input={confidence:.9,expected:'Es una casa.',targetBoundary:0,durationMs:1600,voicedMs:1100,
  transcript:'Es una casa.',words:words([['Es',100,350],['una',390,680],['casa',700,1350]]),silences:[]};
 
 test('recognizes a supported continuous target boundary without scoring accent',()=>{
@@ -28,4 +28,18 @@ test('missing word timing or uncertain recognition does not certify continuity',
 });
 test('an unrelated silence does not become a target-boundary error',()=>{
  assert.equal(interpretConnectedSpeech({...input,silences:[{start:1050,end:1350}]}).kind,'continuous');
+});
+
+test('missing confidence cannot certify recognized speech',()=>{
+ assert.equal(interpretConnectedSpeech({...input,confidence:undefined}).kind,'uncertain');
+});
+test('invalid and nonmonotonic timing cannot certify continuity',()=>{
+ for(const invalid of [words([['Es',350,100],['una',150,680],['casa',700,1350]]),words([['Es',100,350],['una',390,680],['casa',700,1800]]),words([['Es',100,350],['una',-10,680],['casa',700,1350]])]){
+  assert.equal(interpretConnectedSpeech({...input,confidence:.9,words:invalid}).kind,'uncertain');
+ }
+});
+
+test('overlapping and backwards word ends never certify fluent speech',()=>{
+ const invalid=words([['Es',100,1800],['una',1400,1600],['casa',1700,2100]]);
+ assert.equal(interpretConnectedSpeech({...input,durationMs:5000,words:invalid,silences:[{start:1000,end:1400}]}).kind,'uncertain');
 });
