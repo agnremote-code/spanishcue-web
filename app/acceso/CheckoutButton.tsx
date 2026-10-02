@@ -12,6 +12,7 @@ type FounderStatus = {
   checkoutLive: boolean;
   checkoutAvailable: boolean;
   paddleCheckoutAvailable?: boolean;
+  priceUsd: number;
   mode: "sandbox" | "live";
 };
 
@@ -128,7 +129,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
   async function checkoutPaddle() {
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
     if (!founder?.available || !founder.paddleCheckoutAvailable) return;
-    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paddle" });
+    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: founder.priceUsd, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -177,7 +178,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
   async function checkoutPayPal() {
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_paypal", signed_in: signedIn });
     if (!founder?.available || !founder.checkoutLive) return;
-    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paypal" });
+    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: founder.priceUsd, currency: "USD", method: "paypal" });
     setStatus("paypal"); setMessage("");
     try {
       const response = await fetch("/api/billing/checkout", {
@@ -219,7 +220,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       <button className="checkout-card-button" type="button" onClick={checkoutPaddle} disabled={busy || !founder.available}>
         {status === "paddle" || status === "confirming"
           ? (locale === "es" ? "Procesando pago…" : "Processing payment…")
-          : (locale === "es" ? "Pagar con tarjeta · US$15/mes" : "Pay by card · US$15/month")}
+          : <span className="checkout-button-content"><span>{locale === "es" ? `Pagar con tarjeta · US${founder.priceUsd.toFixed(2)}/mes` : `Pay by card · US${founder.priceUsd.toFixed(2)}/month`}</span><span className="card-brands" aria-hidden="true"><span className="brand-visa">VISA</span><span className="brand-mastercard"><i></i><i></i></span><span className="brand-amex">AMEX</span></span></span>}
       </button>
     )}
 
@@ -227,7 +228,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       <button className="checkout-paypal-button" type="button" onClick={checkoutPayPal} disabled={busy || !founder.available}>
         {status === "paypal"
           ? t("checkout.openingPayPal")
-          : (locale === "es" ? "Pagar con PayPal" : "Pay with PayPal")}
+          : <span className="checkout-button-content checkout-paypal-content"><span className="brand-paypal" aria-hidden="true">P</span><span>{locale === "es" ? "Pagar con PayPal" : "Pay with PayPal"}</span></span>}
       </button>
     )}
 
