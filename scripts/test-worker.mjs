@@ -13,6 +13,7 @@ let server;
 let workerOutput="";
 const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});
 try{
+ await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);
  await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);
  await run(['--test','tests/urban-city.test.mjs','tests/noche-abierta.test.mjs']);
  await run(['--test','tests/autoestudio-curriculum.test.mjs','tests/autoestudio-a2.test.mjs','tests/autoestudio-b1.test.mjs','tests/autoestudio-b2.test.mjs','tests/autoestudio-c1.test.mjs','tests/autoestudio-c2.test.mjs','tests/autoestudio-share.test.mjs','tests/autoestudio-server-adapter.test.mjs','tests/autoestudio-pass-boundary.test.mjs','tests/autoestudio-audio-ui.test.mjs','tests/autoestudio-release-gate.test.mjs','tests/autoestudio-migration-operation.test.mjs']);

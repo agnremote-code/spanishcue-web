@@ -9,7 +9,7 @@ import type {Attempt,Action} from './state.mjs';
 export default function ActivityCard({activity:a,attempt,definition,level='A1',teacher,onAction,onNext}:{activity:Activity;attempt:Attempt;definition:WorldDefinition;level?:string;teacher:boolean;onAction:(action:Action)=>void;onNext?:()=>void}) {
  const voiceLesson=definition.id==='hablar-sin-cortar';
  const clips=a.kind==='ab'?(a.answer===0?[a.clip,a.secondClip!]:[a.secondClip!,a.clip]):[a.clip];
- const [take,setTake]=useState(()=>voiceLesson?clips.indexOf(a.clip):0),[replay,setReplay]=useState(0),[checking,setChecking]=useState(false);
+ const [take,setTake]=useState(()=>voiceLesson?clips.indexOf(a.clip):0),[replay,setReplay]=useState(0),[checking,setChecking]=useState(false),[stopModel,setStopModel]=useState(0);
  const timer=useRef<ReturnType<typeof setTimeout>|null>(null);
  useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current);},[]);
  const clip=definition.clips[clips[take]];
@@ -29,9 +29,9 @@ export default function ActivityCard({activity:a,attempt,definition,level='A1',t
  return <article data-activity-id={a.id} className="pf-activity" data-state={state} aria-busy={checking}>
   <div className="pf-task-heading"><div><p className="pf-eyebrow">{voiceLesson?'ESCUCHÁ Y DECILO IGUAL':oral?'TU TURNO AL MICRÓFONO':a.kind==='group'?'MARCÁ LAS PAUSAS':a.kind==='connect'?'CONECTÁ LAS PALABRAS':a.kind==='rebuild'?'ARMÁ LA FRASE':'ESCUCHÁ Y ELEGÍ'}</p><h2>{voiceLesson?'Escuchá. Después decilo vos.':a.prompt}</h2></div>{!definition.guide&&<StudioGuide definition={definition} state={success||attempt.produced?'success':wrong||ready?'guide':'listen'}/>}</div>
   {a.kind==='ab'&&(!voiceLesson||attempt.produced)&&<div className="pf-takes" aria-label="Elegir toma">{clips.map((id,i)=><button key={id} type="button" aria-pressed={take===i} onClick={()=>{setTake(i);setReplay(0);}}>Toma {i===0?'A':'B'} {attempt.heard.includes(id)&&<span aria-label="escuchada">✓</span>}</button>)}</div>}
-  {clip?.src?<StudioAudio key={clip.id} src={clip.src} heard={attempt.heard.includes(clip.id)} onComplete={()=>onAction({type:'heard',clip:clip.id})} allowSlow={a.kind!=='ab'} replay={replay}/>:<p className="pf-notice" role="status">{voiceLesson?'Audio no disponible. Practicá con la frase y pedile un modelo a tu profe.':'Audio no disponible. Abrí el texto de apoyo para practicar con tu profe.'}</p>}
+  {clip?.src?<StudioAudio key={clip.id} src={clip.src} heard={attempt.heard.includes(clip.id)} onComplete={()=>onAction({type:'heard',clip:clip.id})} allowSlow={a.kind!=='ab'} replay={replay} stopSignal={stopModel}/>:<p className="pf-notice" role="status">{voiceLesson?'Audio no disponible. Practicá con la frase y pedile un modelo a tu profe.':'Audio no disponible. Abrí el texto de apoyo para practicar con tu profe.'}</p>}
   {!ready&&<p className="pf-listening-cue">{voiceLesson?'Escuchá el modelo para empezar.':a.kind==='ab'?'Escuchá ambas tomas para elegir.':'Primero escuchá. Después elegís.'}</p>}
-  {voiceLesson&&ready&&<SpeechAttempt level={level} activityId={a.id} text={a.text} produced={attempt.produced} onComplete={()=>{if(!attempt.produced)onAction({type:'produce'});}}/>}
+  {voiceLesson&&<SpeechAttempt level={level} activityId={a.id} text={a.text} teacher={teacher} onCapture={()=>setStopModel(n=>n+1)} onModel={()=>{setTake(clips.indexOf(a.clip));setReplay(n=>n+1);}} produced={attempt.produced} onComplete={()=>{if(!attempt.produced)onAction({type:'produce'});}}/>}
   {(!voiceLesson||attempt.produced)&&<Extra className="pf-extra-practice">{voiceLesson&&<summary>Explorar esta escucha</summary>}
   {ready&&a.options&&<div className="pf-choices" role="group" aria-label="Tu respuesta">{a.options.map((o,i)=>{
    const selected=attempt.selected[0]===i;

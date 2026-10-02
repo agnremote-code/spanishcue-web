@@ -2,11 +2,12 @@
 import {useEffect,useRef,useState} from 'react';
 
 /** Task audio: completion is recorded only by the real media ended event. */
-export default function StudioAudio({src,heard,onComplete,allowSlow=true,replay=0}:{src:string;heard:boolean;onComplete:()=>void;allowSlow?:boolean;replay?:number}) {
+export default function StudioAudio({src,heard,onComplete,allowSlow=true,replay=0,stopSignal=0}:{src:string;heard:boolean;onComplete:()=>void;allowSlow?:boolean;replay?:number;stopSignal?:number}) {
  const audio=useRef<HTMLAudioElement>(null);
  const [playing,setPlaying]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState(false),[rate,setRate]=useState(1),[progress,setProgress]=useState(0);
  const start=async()=>{const el=audio.current;if(!el)return;setError(false);setLoading(true);try{el.playbackRate=rate;await el.play();}catch{setError(true);setLoading(false);}};
  useEffect(()=>{const el=audio.current;return()=>{el?.pause();};},[]);
+ useEffect(()=>{if(stopSignal)audio.current?.pause();},[stopSignal]);
  useEffect(()=>{if(!replay)return;const el=audio.current;if(el){el.currentTime=0;el.play().catch(()=>setError(true));}},[replay]);
  return <div className="pf-audio" data-playing={playing}>
   <audio ref={audio} src={src} preload="metadata" onPlaying={()=>{setError(false);setPlaying(true);setLoading(false);}} onPause={()=>setPlaying(false)} onWaiting={()=>setLoading(true)} onError={()=>{setError(true);setLoading(false);setPlaying(false);}} onTimeUpdate={()=>{const el=audio.current;if(el&&Number.isFinite(el.duration))setProgress(el.currentTime/el.duration);}} onEnded={()=>{setPlaying(false);setLoading(false);setProgress(1);onComplete();}}/>
