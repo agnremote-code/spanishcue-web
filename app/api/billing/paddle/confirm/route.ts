@@ -74,7 +74,7 @@ export async function POST(request: Request) {
     const occurredAt = Math.floor(Date.now() / 1000);
     const amountCents = Number(transaction.details?.totals?.total);
     const currency = typeof transaction.currency_code === "string" ? transaction.currency_code : "";
-    if (!paidThrough || amountCents !== 1500 || currency !== "USD") {
+    if (!paidThrough || amountCents !== 1550 || currency !== "USD") {
       return Response.json({ pending: true, accessConfirmed: false }, { status: 202 });
     }
 
