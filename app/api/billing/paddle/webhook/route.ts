@@ -62,7 +62,7 @@ function validTransactionPrice(transaction: PaddleTransaction, priceId: string) 
     item
     && item.quantity === 1
     && item.price?.id === priceId
-    && item.price?.unit_price?.amount === "1500"
+    && item.price?.unit_price?.amount === "1550"
     && item.price?.unit_price?.currency_code === "USD"
     && item.price?.billing_cycle?.interval === "month"
     && item.price?.billing_cycle?.frequency === 1
@@ -137,7 +137,7 @@ export async function POST(request: Request) {
           });
           await recordPaddleCompletedPayment(env.DB, {
             userId: claim.claimedUserId, subscriptionId, transactionId, eventId,
-            amountCents: 1500, currency: "USD", occurredAt, paidThrough,
+            amountCents: 1550, currency: "USD", occurredAt, paidThrough,
           }, billing);
         } else if (!(await verifyGuestPaddlePayment(env.DB, paddle, claim, transactionId, eventId))) {
           throw new Error("paddle_claim_payment_pending");
@@ -157,7 +157,7 @@ export async function POST(request: Request) {
       const paidThrough = seconds(subscription.current_billing_period?.ends_at);
       const amountCents = Number(transaction.details?.totals?.total);
       const currency = typeof transaction.currency_code === "string" ? transaction.currency_code : "";
-      if (!paidThrough || !Number.isInteger(amountCents) || amountCents !== 1500 || currency !== "USD") {
+      if (!paidThrough || !Number.isInteger(amountCents) || amountCents !== 1550 || currency !== "USD") {
         throw new Error("paddle_payment_mismatch");
       }
 
