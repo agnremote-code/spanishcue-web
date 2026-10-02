@@ -108,9 +108,17 @@ jobs:
             > autoestudio-worker-settings.json
 
           if ! jq -e '.result.bindings[]? | select(.type == "secret_text" and .name == "AUTOESTUDIO_SHARE_SECRET")' autoestudio-worker-settings.json >/dev/null; then
+            echo "Provisioning missing Autoestudio signing secret on $AUTOESTUDIO_WORKER."
             AUTOESTUDIO_SHARE_SECRET="$(openssl rand -hex 32)"
             echo "::add-mask::$AUTOESTUDIO_SHARE_SECRET"
-            printf '%s' "$AUTOESTUDIO_SHARE_SECRET" | npx wrangler secret put AUTOESTUDIO_SHARE_SECRET --name "$AUTOESTUDIO_WORKER"
+            SECRET_PAYLOAD="$(jq -nc --arg text "$AUTOESTUDIO_SHARE_SECRET" '{name:"AUTOESTUDIO_SHARE_SECRET",text:$text,type:"secret_text"}')"
+            curl --fail-with-body -sS -X PUT \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              -H "Content-Type: application/json" \
+              --data "$SECRET_PAYLOAD" \
+              "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/$AUTOESTUDIO_WORKER/secrets" \
+              > autoestudio-secret-put.json
+            jq -e '.success == true' autoestudio-secret-put.json >/dev/null
           fi
 
           npx wrangler d1 execute "$AUTOESTUDIO_D1_ID" --remote \
