@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { trackMarketingEvent } from '../marketing/analytics';
 import { consentFor, CONSENT_EVENT } from '../privacy/consent';
 import { campaignCopy } from './campaign-copy';
-import CheckoutButton from '../acceso/CheckoutButton';
 import { isFounderStatus, liveFounderOffer, shouldShowOffer, type FounderStatus } from './offer-policy';
 
 const seenKey = 'spanishcue.founder-modal.seen';
@@ -29,6 +28,7 @@ export default function LandingConversion({ locale, pro, signedIn, slug, hero = 
  const soldOut = status?.mode === 'live' && status.checkoutLive && !live;
  const unavailableTitle = locale === 'es' ? 'Conoce tu próximo paso con PRO.' : 'Find your next step with PRO.';
  const unavailableCopy = soldOut ? (locale === 'es' ? 'La oferta fundadora ya no está disponible. Consulta las opciones actuales de acceso.' : 'The Founder offer is no longer available. Check the current access options.') : (locale === 'es' ? 'Consulta la disponibilidad y las condiciones actuales de acceso a la biblioteca.' : 'Check current availability and terms for full library access.');
+ const destination = signedIn ? '/acceso' : '/ingresar?modo=registro&returnTo=%2Facceso';
  useEffect(() => {
   if (pro) return;
   const controller = new AbortController();
@@ -97,15 +97,15 @@ export default function LandingConversion({ locale, pro, signedIn, slug, hero = 
   return () => { observer.disconnect(); window.removeEventListener(CONSENT_EVENT, run); };
  }, [hero, pro, slug]);
  if (pro) return hero ? null : <section className="landing-pro-ready"><h2>{locale === 'es' ? 'Tu biblioteca PRO te espera.' : 'Your PRO library is ready.'}</h2><Link className="lp-button" href="/#library-results">{locale === 'es' ? 'ABRIR BIBLIOTECA' : 'OPEN THE LIBRARY'}</Link></section>;
- if (hero) return <div className="landing-hero-offer landing-hero-checkout">{live ? <><span className="lp-eyebrow">FOUNDING TEACHERS</span><strong>{c.unlock}</strong><p><b>US$15</b> / {c.month}</p><CheckoutButton signedIn={signedIn} returnTo="/" /><small>{status.remaining} {c.remaining} · {c.keep}</small></> : <small>{launch ? (locale === 'es' ? 'PRO próximamente · precio fundador previsto US$15/mes' : 'PRO coming soon · planned Founder Price US$15/month') : unavailableTitle}</small>}</div>;
+ if (hero) return <div className="landing-hero-offer">{live ? <><LandingLink href={destination} placement={`landing_hero_offer_${slug}`}>{c.unlock} →</LandingLink><small>{locale === 'es' ? 'Precio fundador · US$15/mes · primeras 1.000 suscripciones activadas' : 'Founder Price · US$15/month · first 1,000 activated subscriptions'}</small></> : <small>{launch ? (locale === 'es' ? 'PRO próximamente · precio fundador previsto US$15/mes' : 'PRO coming soon · planned Founder Price US$15/month') : unavailableTitle}</small>}</div>;
  return <>
   <section ref={offer} id="founder-offer" className="landing-founder" aria-labelledby="founder-title">
    <div><span className="lp-eyebrow">FOUNDING TEACHERS</span><h2 id="founder-title">{live ? c.founder : launch ? c.launch : unavailableTitle}</h2><p>{live ? c.founderCopy : launch ? c.launchCopy : unavailableCopy}</p>{live && <p>{c.keep}</p>}</div>
-   <div className="landing-founder-deal">{(live || launch) && <p className="landing-founder-price"><b>US$15</b><span>/ {c.month}</span></p>}<h3>{c.full}</h3>{live && <p className="landing-availability">{status.remaining} {c.remaining}</p>}{live ? <CheckoutButton signedIn={signedIn} returnTo="/" /> : <LandingLink href="/pricing" placement={`landing_founder_${slug}`} className="lp-button">{launch ? c.launchCta : (locale === 'es' ? 'VER OPCIONES PRO' : 'VIEW PRO OPTIONS')}</LandingLink>}<small>{live ? c.payment : launch ? (locale === 'es' ? 'Sin cobros hoy. Sin tarjeta.' : 'No payment today. No card.') : c.tryFirst}</small></div>
+   <div className="landing-founder-deal">{(live || launch) && <p className="landing-founder-price"><b>US$15</b><span>/ {c.month}</span></p>}<h3>{c.full}</h3>{live && <p className="landing-availability">{status.remaining} {c.remaining}</p>}<LandingLink href={live ? destination : '/pricing'} placement={`landing_founder_${slug}`} className="lp-button">{live ? c.unlock : launch ? c.launchCta : (locale === 'es' ? 'VER OPCIONES PRO' : 'VIEW PRO OPTIONS')}</LandingLink><small>{live ? c.payment : launch ? (locale === 'es' ? 'Sin cobros hoy. Sin tarjeta.' : 'No payment today. No card.') : c.tryFirst}</small></div>
   </section>
-  {live && pastHero && !open && !converted && <aside className="landing-sticky" aria-label="Founder Price"><span>Founder Price · <strong>US$15/{c.month}</strong><small>{c.founderCopy}</small></span><button className="lp-button" type="button" onClick={() => { seen.current = true; sessionSet(seenKey); trigger.current = document.activeElement as HTMLElement; setOpen(true); trackMarketingEvent('founder_modal_click', { landing:slug, placement:'sticky' }); }}>{locale === 'es' ? 'Comprar PRO · US$15/mes' : 'Buy PRO · US$15/month'}</button></aside>}
+  {live && pastHero && !open && !converted && <aside className="landing-sticky" aria-label="Founder Price"><span>Founder Price · <strong>US$15/{c.month}</strong><small>{c.founderCopy}</small></span><LandingLink className="lp-button" href={destination} placement={`landing_sticky_${slug}`}>{locale === 'es' ? 'Desbloquear biblioteca' : 'Unlock the library'}</LandingLink></aside>}
   {live && <dialog ref={dialog} className="landing-modal" aria-labelledby="founder-modal-title" aria-describedby="founder-modal-copy" onCancel={() => setOpen(false)} onClose={() => setOpen(false)}>
-   <button className="landing-modal-close" type="button" aria-label={c.close} onClick={() => setOpen(false)}>×</button><span className="lp-eyebrow">FOUNDING TEACHERS</span><h2 id="founder-modal-title">{c.modalTitle}</h2><p id="founder-modal-copy">{c.founderCopy}</p><p>{c.keep}</p><p className="landing-availability">{status.remaining} {c.remaining}</p><CheckoutButton signedIn={signedIn} returnTo="/" /><button className="landing-modal-continue" type="button" onClick={() => setOpen(false)}>{c.continue}</button><small>{c.tryFirst}</small>
+   <button className="landing-modal-close" type="button" aria-label={c.close} onClick={() => setOpen(false)}>×</button><span className="lp-eyebrow">FOUNDING TEACHERS</span><h2 id="founder-modal-title">{c.modalTitle}</h2><p id="founder-modal-copy">{c.founderCopy}</p><p>{c.keep}</p><p className="landing-availability">{status.remaining} {c.remaining}</p><a className="lp-button" href={destination} onClick={() => { sessionSet(convertedKey); trackMarketingEvent('founder_modal_click', { landing:slug }); }}>{c.unlock}</a><button className="landing-modal-continue" type="button" onClick={() => setOpen(false)}>{c.continue}</button><small>{c.tryFirst}</small>
   </dialog>}
  </>;
 }
