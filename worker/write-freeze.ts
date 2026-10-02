@@ -26,6 +26,8 @@ export function writeFreezeResponse(request: Request, value: string | undefined)
         "Cache-Control": "private, no-store",
         "Retry-After": "300",
         "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "no-referrer",
+        "X-Robots-Tag": "noindex, nofollow",
       },
     },
   );

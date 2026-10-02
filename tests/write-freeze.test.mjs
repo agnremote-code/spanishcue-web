@@ -34,6 +34,9 @@ test("while frozen, reads and pages keep working", () => {
 test('freeze blocks Share Pass reads that persist D1 rate counters',()=>{
  for(const path of ['/s','/s/v1.test','/api/autoestudio/passes','/api/autoestudio/progress','/api/autoestudio/learners/test']){
   for(const method of ['GET','HEAD'])assert.equal(writeFreezeResponse(request(method,path),'true')?.status,503,method+' '+path);
+  const frozen=writeFreezeResponse(request('GET',path),'true');
+  assert.equal(frozen.headers.get('Referrer-Policy'),'no-referrer');
+  assert.match(frozen.headers.get('X-Robots-Tag'),/noindex/);
   assert.equal(writeFreezeResponse(request('GET',path),'false'),null);
  }
 });
