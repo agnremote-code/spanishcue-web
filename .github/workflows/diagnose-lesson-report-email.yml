@@ -36,6 +36,8 @@ jobs:
             | @tsv
           ' worker-settings.json
 
+          echo "SECRET_BINDING_NAMES:"
+          jq -r '.result.bindings[] | select(.type=="secret_text") | .name' worker-settings.json | sort
           if jq -e '.result.bindings[] | select(.name=="RESEND_API_KEY" and .type=="secret_text")' worker-settings.json >/dev/null; then
             echo "WORKER_RESEND_API_KEY_PRESENT=true"
           else
