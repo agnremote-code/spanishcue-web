@@ -80,7 +80,7 @@ try {
   assert.equal(db.prepare('PRAGMA foreign_key_check').all().length,0,'Forward SQL broke foreign keys');
   report.restoreTest={integrity:'ok',foreignKeys:'ok',existingTablesVerified:tables.length,existingDataUnchanged:true,forwardSql:'passed'};
  }finally{db.close();}
- report.exactCommand=`npx wrangler d1 execute ${id} --remote --file=drizzle/0011_autoestudio_share.sql`;
+ report.exactCommand=`npx wrangler d1 execute ${target.name} --remote --file=drizzle/0011_autoestudio_share.sql`;
  report.status=report.releaseBlockers.length?'blocked':'prepared-awaiting-exact-owner-authorization';
  if(report.releaseBlockers.length)process.exitCode=1;
 } catch(error){report.status='blocked';report.blocker=error.message;process.exitCode=1;}

@@ -44,7 +44,9 @@ export function authorizeOperation({target,confirm,sql,evidence,now=Date.now()})
  assert.ok(evidence.backup.bytes>0,'Empty backup');
  assert.match(evidence.backup.sha256,/^[a-f0-9]{64}$/,'Backup hash required');
  for(const [key,value] of Object.entries({integrity:'ok',foreignKeys:'ok',existingDataUnchanged:true,forwardSql:'passed'}))assert.equal(evidence.restoreTest?.[key],value,'Restore/rehearsal must pass');
- return ['wrangler','d1','execute',expected.id,'--remote','--file=drizzle/0011_autoestudio_share.sql'];
+ // Wrangler execute resolves a binding/name, unlike its info API which accepts UUIDs.
+ // The name AND immutable ID were both matched against the live binding above.
+ return ['wrangler','d1','execute',expected.name,'--remote','--file=drizzle/0011_autoestudio_share.sql'];
 }
 async function provisionSecret(){
  assert.equal(process.env.AUTOESTUDIO_AUTHORIZATION,`apply 0011 ${approvedHash}`,'Exact owner authorization is required');
@@ -76,6 +78,8 @@ async function run(){
  await checkCoordination();
  const settings=await cloudflareRead(`/workers/scripts/${expected.worker}/settings`);
  verifyShareBinding(settings.bindings||[],expected.id);
+ const database=await cloudflareRead(`/d1/database/${expected.id}`);
+ assert.equal(database.name,expected.name,'Verified database name changed; stop');
  const query=async sql=>{const result=await cloudflareRead(`/d1/database/${expected.id}/query`,{sql});assert.ok(result[0]?.success!==false,'Schema read failed');return result[0].results;};
  const before=await query("SELECT type,name,sql FROM sqlite_master WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' ORDER BY name");
  assert.ok(!before.some(row=>row.name.startsWith('autoestudio_')),'0011 appeared after preflight; stop');

@@ -13,7 +13,9 @@ GitHub environments and respective tokens/concurrency groups. Existing gates
 and environment approvals remain in force.
 
 The sole production database mutation is:
-`npx wrangler d1 execute 343ac454-a056-4c40-a893-f8be572665a6 --remote --file=drizzle/0011_autoestudio_share.sql`.
+`npx wrangler d1 execute spanishcue-production --remote --file=drizzle/0011_autoestudio_share.sql`.
+This is the verified name of UUID `343ac454-a056-4c40-a893-f8be572665a6`;
+the live binding, immutable UUID and name are checked before execution.
 SHA-256: `4a040f541101ea47766b1403ad933accd8cc1afb73b4c8dec2f04d30118ca51d`.
 The same unchanged 0011 is prepared separately on the isolated staging binding
 `23fe3c11-85f7-48e1-9dd0-d508893625c9` as part of the requested staging release.
@@ -44,3 +46,13 @@ Independent review: fixed three important findings before remote execution:
 secret initialization now precedes SQL; absent/unrecognized ledger refuses SQL;
 only explicit HTTP 404 means a free merge lock (403/429/5xx fail closed), and
 controller state is rechecked under the protected deployment concurrency group.
+
+First execution reconciliation: run 36971793520 prepared the secret without a
+traffic change and passed export/restore. Wrangler 4.92.0 rejected the UUID as
+a database **name** before importing or executing any SQL. Its installed
+`getDatabaseByNameOrBinding` implementation accepts a binding or name, not UUID.
+The invocation now uses the already verified database name for the same exact
+UUID and unchanged SQL/hash. This is a CLI resolution correction, not a new
+database operation or a SQL retry. Fresh absent-schema/export preflight is
+required again. Policy regression tests failed with the UUID and pass with the
+verified name; no other execution logic or application behavior changed.
