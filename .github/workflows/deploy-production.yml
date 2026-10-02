@@ -198,6 +198,7 @@ jobs:
           SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.origin }}
         run: |
           node scripts/production-smoke.mjs
+          node scripts/lesson-reports-smoke.mjs
           if curl -sI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'; then
             echo "::error::Production must not carry the staging noindex header."; exit 1
           fi

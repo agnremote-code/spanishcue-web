@@ -142,6 +142,7 @@ jobs:
           SPANISHCUE_PRODUCTION_ORIGIN: ${{ steps.deploy.outputs.url }}
         run: |
           node scripts/production-smoke.mjs
+          node scripts/lesson-reports-smoke.mjs
           curl -sfI "$SPANISHCUE_PRODUCTION_ORIGIN/" | grep -qi '^x-robots-tag: noindex'
           curl -sf "$SPANISHCUE_PRODUCTION_ORIGIN/api/billing/founder-status" | grep -q '"mode":"sandbox"'
 
