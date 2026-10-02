@@ -85,7 +85,8 @@ New data/asset/catalog and rendering tests are included in `npm test` via the
 existing Worker test driver. Historical snapshot counts are updated by exactly
 one addition, and the existing preservation helper reverses only its bounded
 shared-file edits when checking prior lesson fixtures. No auth, billing, D1,
-Autoestudio or existing lesson content modifications.
+Autoestudio or existing lesson content modifications. CI installs FFmpeg in
+both verification jobs so the full audio-decoding checks also run on GitHub.
 
 Local full suite/build and lint succeeded in the first run. Targeted regression
 suite: 35 tests passed. Global typecheck has **11 pre-existing errors** in billing
