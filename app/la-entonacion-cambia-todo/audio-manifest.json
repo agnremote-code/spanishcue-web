@@ -1,0 +1,2244 @@
+{
+  "voice": "es-AR-TomasNeural",
+  "locale": "es-AR",
+  "producer": "Microsoft Edge edge-tts 7.2.8 + Praat PSOLA via praat-parselmouth 0.4.7",
+  "synthetic": true,
+  "generatedAt": "2026-10-02T01:48:24.744082+00:00",
+  "humanListeningQA": false,
+  "pedagogicalScope": "Schematic rehearsal contours; contextual interpretations are hypotheses. Teacher models extend fine-grained stance, irony, focus and parenthetical tone.",
+  "transcriptValidation": "Exact generation input and service word metadata, not independent transcription.",
+  "clips": [
+    {
+      "id": "a1-listen-01",
+      "text": "Vamos mañana.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-listen-01.mp3",
+      "status": "generated",
+      "sha256": "a6c5bacb321cafc79d8833b340f9b9272ff0487d533344414e3ff31e035b1491",
+      "durationSeconds": 1.92,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18847,
+      "rmsPCM": 2029.37,
+      "wordMetadata": "audio-words/a1-listen-01.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.16599999999999993,
+        0.8759999999999999
+      ],
+      "measuredPitchRangeHz": [
+        140.21,
+        204.3
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-listen-01"
+    },
+    {
+      "id": "a1-listen-02",
+      "text": "Qué bueno, gracias.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-listen-02.mp3",
+      "status": "generated",
+      "sha256": "ca41598b2531809d8a3480fa1829eea335cdf2c1e6e3137a3bf5315df86f1699",
+      "durationSeconds": 2.352,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15718,
+      "rmsPCM": 2441.67,
+      "wordMetadata": "audio-words/a1-listen-02.words.json",
+      "delivery": "amplitud marcada y caída expresiva",
+      "pitchAnchorsHz": [
+        195,
+        235,
+        180,
+        135
+      ],
+      "voicedSpanSeconds": [
+        0.2269999999999998,
+        1.2269999999999996
+      ],
+      "measuredPitchRangeHz": [
+        127.7,
+        234.48
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-listen-02"
+    },
+    {
+      "id": "a1-compare-01",
+      "text": "Nos vemos mañana.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-compare-01.mp3",
+      "status": "generated",
+      "sha256": "22d7766acce548425d8cc0f9a216f4a0824f148d1876890b02938737cd3019a2",
+      "durationSeconds": 2.04,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14010,
+      "rmsPCM": 2153.57,
+      "wordMetadata": "audio-words/a1-compare-01.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.18600000000000003,
+        1.086
+      ],
+      "measuredPitchRangeHz": [
+        105.33,
+        165.14
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-compare-01"
+    },
+    {
+      "id": "a1-compare-01-alternate",
+      "text": "Nos vemos mañana.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-compare-01-alternate.mp3",
+      "status": "generated",
+      "sha256": "ca8a4dc9eaeeb391c1329c966a3d5a2838a274747df8aa833165f11517e93e40",
+      "durationSeconds": 2.04,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14003,
+      "rmsPCM": 2168.67,
+      "wordMetadata": "audio-words/a1-compare-01.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.18600000000000003,
+        1.086
+      ],
+      "measuredPitchRangeHz": [
+        134.05,
+        202.49
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-compare-01"
+    },
+    {
+      "id": "a1-context-01",
+      "text": "Muchas gracias, Ana.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-context-01.mp3",
+      "status": "generated",
+      "sha256": "30a8ea1d6f819c83b078ee2cd077ef29bb62f20fb283fabfe999c5aea190bdd6",
+      "durationSeconds": 2.376,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14637,
+      "rmsPCM": 1958.52,
+      "wordMetadata": "audio-words/a1-context-01.words.json",
+      "delivery": "amplitud suave y caída acompañada",
+      "pitchAnchorsHz": [
+        165,
+        185,
+        155,
+        130
+      ],
+      "voicedSpanSeconds": [
+        0.1739999999999999,
+        1.424
+      ],
+      "measuredPitchRangeHz": [
+        129.75,
+        184.36
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-context-01"
+    },
+    {
+      "id": "a1-echo-01",
+      "text": "Estás bien, Ana.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-echo-01.mp3",
+      "status": "generated",
+      "sha256": "45a07d0d4d40d507c2784c9c5d773a4eda8ce071b388ae8263d838a73f4def40",
+      "durationSeconds": 2.136,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14557,
+      "rmsPCM": 1857.68,
+      "wordMetadata": "audio-words/a1-echo-01.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.16400000000000015,
+        1.1740000000000002
+      ],
+      "measuredPitchRangeHz": [
+        140.87,
+        205.01
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-echo-01"
+    },
+    {
+      "id": "a1-compare-02",
+      "text": "Sí, vamos ahora.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-compare-02.mp3",
+      "status": "generated",
+      "sha256": "7a4428f198ee4ce8432e5e458e64614086d3c05a374e3a0df916f998ac5882b8",
+      "durationSeconds": 2.352,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19062,
+      "rmsPCM": 2200.21,
+      "wordMetadata": "audio-words/a1-compare-02.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.3469999999999998,
+        1.3869999999999998
+      ],
+      "measuredPitchRangeHz": [
+        105.15,
+        165.19
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-compare-02"
+    },
+    {
+      "id": "a1-compare-02-alternate",
+      "text": "Sí, vamos ahora.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-compare-02-alternate.mp3",
+      "status": "generated",
+      "sha256": "34ed58e5cc94fd92bf992c8429b0d79ed78c3252793964d1acd3fda1e3babf07",
+      "durationSeconds": 2.352,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19492,
+      "rmsPCM": 2299.63,
+      "wordMetadata": "audio-words/a1-compare-02.words.json",
+      "delivery": "suspensión y subida suave",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        140,
+        175
+      ],
+      "voicedSpanSeconds": [
+        0.3469999999999998,
+        1.3869999999999998
+      ],
+      "measuredPitchRangeHz": [
+        140.77,
+        174.13
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-compare-02"
+    },
+    {
+      "id": "a1-delivery-01",
+      "text": "Qué lindo lugar.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-delivery-01.mp3",
+      "status": "generated",
+      "sha256": "4ebf32404d0fb0a8efa28fe05ad0960b6e8d91db8872ac2ac0663957782c081d",
+      "durationSeconds": 1.92,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14032,
+      "rmsPCM": 2372.81,
+      "wordMetadata": "audio-words/a1-delivery-01.words.json",
+      "delivery": "amplitud marcada y caída expresiva",
+      "pitchAnchorsHz": [
+        195,
+        235,
+        180,
+        135
+      ],
+      "voicedSpanSeconds": [
+        0.22599999999999992,
+        0.816
+      ],
+      "measuredPitchRangeHz": [
+        137.15,
+        233.49
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-delivery-01"
+    },
+    {
+      "id": "a1-roleplay-01",
+      "text": "Un café, por favor.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-roleplay-01.mp3",
+      "status": "generated",
+      "sha256": "7cbcd829580b246b1c6c0d3f2f52bf969b83098bc997559d38802bc3420f1bba",
+      "durationSeconds": 2.352,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15459,
+      "rmsPCM": 2009.58,
+      "wordMetadata": "audio-words/a1-roleplay-01.words.json",
+      "delivery": "amplitud suave y caída acompañada",
+      "pitchAnchorsHz": [
+        165,
+        185,
+        155,
+        130
+      ],
+      "voicedSpanSeconds": [
+        0.16699999999999982,
+        1.3469999999999998
+      ],
+      "measuredPitchRangeHz": [
+        129.36,
+        184.68
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-roleplay-01"
+    },
+    {
+      "id": "a1-bank-listen",
+      "text": "Sí, está bien.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-bank-listen.mp3",
+      "status": "generated",
+      "sha256": "a18072f47009334df7afbb5a8cf7454f6461ff2a9e056d41d4320d0974808321",
+      "durationSeconds": 2.136,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 13001,
+      "rmsPCM": 1910.18,
+      "wordMetadata": "audio-words/a1-bank-listen.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.3240000000000001,
+        1.194
+      ],
+      "measuredPitchRangeHz": [
+        150.07,
+        169.67
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-bank-listen"
+    },
+    {
+      "id": "a1-bank-context",
+      "text": "Venís mañana.",
+      "src": "/audio/la-entonacion-cambia-todo/a1-bank-context.mp3",
+      "status": "generated",
+      "sha256": "0afc3ae4c69c5c3430c2a83704378187ad6000a2a31083e08dbb14f138012a13",
+      "durationSeconds": 1.944,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 13918,
+      "rmsPCM": 1866.85,
+      "wordMetadata": "audio-words/a1-bank-context.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.1779999999999999,
+        0.978
+      ],
+      "measuredPitchRangeHz": [
+        140.26,
+        204.44
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a1-bank-context"
+    },
+    {
+      "id": "a2-listen-01",
+      "text": "Podemos ir el sábado.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-listen-01.mp3",
+      "status": "generated",
+      "sha256": "5236dd4ade92e3aa994f0cf7d5c53e9ee94cfd1d9a65f7e7d96c078948fd3386",
+      "durationSeconds": 2.232,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15363,
+      "rmsPCM": 2556.28,
+      "wordMetadata": "audio-words/a2-listen-01.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.2269999999999998,
+        1.2369999999999997
+      ],
+      "measuredPitchRangeHz": [
+        138.17,
+        204.48
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-listen-01"
+    },
+    {
+      "id": "a2-listen-02",
+      "text": "Sí, creo que puedo.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-listen-02.mp3",
+      "status": "generated",
+      "sha256": "9956c093b1f596a0cc4f7e1aedffce852af6e37ab933fa0a3e791e1cca5427f3",
+      "durationSeconds": 2.4,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16331,
+      "rmsPCM": 2167.59,
+      "wordMetadata": "audio-words/a2-listen-02.words.json",
+      "delivery": "suspensión y subida suave",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        140,
+        175
+      ],
+      "voicedSpanSeconds": [
+        0.29599999999999993,
+        1.4459999999999997
+      ],
+      "measuredPitchRangeHz": [
+        136.65,
+        174.54
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-listen-02"
+    },
+    {
+      "id": "a2-compare-01",
+      "text": "La reserva es para hoy.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-compare-01.mp3",
+      "status": "generated",
+      "sha256": "f9d552288dacdcd3e37e949b8cdf96fd34dcdd70567c549360bba96fb90c874b",
+      "durationSeconds": 2.328,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18402,
+      "rmsPCM": 2591.07,
+      "wordMetadata": "audio-words/a2-compare-01.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.2249999999999998,
+        1.3549999999999998
+      ],
+      "measuredPitchRangeHz": [
+        139.47,
+        204.7
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-compare-01"
+    },
+    {
+      "id": "a2-compare-01-alternate",
+      "text": "La reserva es para hoy.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-compare-01-alternate.mp3",
+      "status": "generated",
+      "sha256": "b6b6227a9fe9e80d6341e11414846df736950188879652ed6217fe5ee9606add",
+      "durationSeconds": 2.328,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18232,
+      "rmsPCM": 2549.88,
+      "wordMetadata": "audio-words/a2-compare-01.words.json",
+      "delivery": "caída moderada",
+      "pitchAnchorsHz": [
+        155,
+        150,
+        145,
+        125
+      ],
+      "voicedSpanSeconds": [
+        0.2249999999999998,
+        1.3549999999999998
+      ],
+      "measuredPitchRangeHz": [
+        124.8,
+        157.37
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-compare-01"
+    },
+    {
+      "id": "a2-context-01",
+      "text": "Me ayudás con la valija.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-context-01.mp3",
+      "status": "generated",
+      "sha256": "d5c827dfe39a20136fbc6d47902339122c929c09aff69186cd95858c780c6369",
+      "durationSeconds": 2.424,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15173,
+      "rmsPCM": 2619.76,
+      "wordMetadata": "audio-words/a2-context-01.words.json",
+      "delivery": "amplitud suave y caída acompañada",
+      "pitchAnchorsHz": [
+        165,
+        185,
+        155,
+        130
+      ],
+      "voicedSpanSeconds": [
+        0.2079999999999999,
+        1.4779999999999998
+      ],
+      "measuredPitchRangeHz": [
+        129.09,
+        184.73
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-context-01"
+    },
+    {
+      "id": "a2-echo-01",
+      "text": "Nos encontramos a las seis.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-echo-01.mp3",
+      "status": "generated",
+      "sha256": "1a9167eb34ede5300e23f682856322a8ff3e794f74077de32a4c6df0302f5cc4",
+      "durationSeconds": 2.4,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 13768,
+      "rmsPCM": 1900.52,
+      "wordMetadata": "audio-words/a2-echo-01.words.json",
+      "delivery": "caída moderada",
+      "pitchAnchorsHz": [
+        155,
+        150,
+        145,
+        125
+      ],
+      "voicedSpanSeconds": [
+        0.16599999999999993,
+        1.3159999999999998
+      ],
+      "measuredPitchRangeHz": [
+        126.39,
+        154.7
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-echo-01"
+    },
+    {
+      "id": "a2-compare-02",
+      "text": "El pasaje está comprado.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-compare-02.mp3",
+      "status": "generated",
+      "sha256": "e5418bec0a26d31c83cb5f5f2593189c1d72f53d6f864ec510ed1024ea52c2b4",
+      "durationSeconds": 2.376,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16587,
+      "rmsPCM": 2237.26,
+      "wordMetadata": "audio-words/a2-compare-02.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.2039999999999999,
+        1.414
+      ],
+      "measuredPitchRangeHz": [
+        105.09,
+        165.02
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-compare-02"
+    },
+    {
+      "id": "a2-compare-02-alternate",
+      "text": "El pasaje está comprado.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-compare-02-alternate.mp3",
+      "status": "generated",
+      "sha256": "22eed5d646397914274ce0ba1123069ce295c4bb221dbaa27e38f3acbd6b2e59",
+      "durationSeconds": 2.376,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16397,
+      "rmsPCM": 2252.15,
+      "wordMetadata": "audio-words/a2-compare-02.words.json",
+      "delivery": "suspensión y subida suave",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        140,
+        175
+      ],
+      "voicedSpanSeconds": [
+        0.2039999999999999,
+        1.414
+      ],
+      "measuredPitchRangeHz": [
+        139.79,
+        174.58
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-compare-02"
+    },
+    {
+      "id": "a2-delivery-01",
+      "text": "No sabía que venías.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-delivery-01.mp3",
+      "status": "generated",
+      "sha256": "9e118e781cba20e31f5def63e1ff72a39859b3eb4121b7cc0e22350a695a4ec8",
+      "durationSeconds": 2.304,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 13716,
+      "rmsPCM": 2332.23,
+      "wordMetadata": "audio-words/a2-delivery-01.words.json",
+      "delivery": "amplitud marcada y caída expresiva",
+      "pitchAnchorsHz": [
+        195,
+        235,
+        180,
+        135
+      ],
+      "voicedSpanSeconds": [
+        0.1779999999999999,
+        1.158
+      ],
+      "measuredPitchRangeHz": [
+        135.2,
+        233.78
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-delivery-01"
+    },
+    {
+      "id": "a2-roleplay-01",
+      "text": "Necesito una habitación tranquila.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-roleplay-01.mp3",
+      "status": "generated",
+      "sha256": "b1a3a437e8f0d1b4d81e1ed29ecf2a3ea20fa3e95a4b754de0159c90507eb7ea",
+      "durationSeconds": 2.856,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15345,
+      "rmsPCM": 2438.4,
+      "wordMetadata": "audio-words/a2-roleplay-01.words.json",
+      "delivery": "amplitud suave y caída acompañada",
+      "pitchAnchorsHz": [
+        165,
+        185,
+        155,
+        130
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        1.8739999999999999
+      ],
+      "measuredPitchRangeHz": [
+        130.29,
+        184.54
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-roleplay-01"
+    },
+    {
+      "id": "a2-bank-listen",
+      "text": "Podría ser una buena idea.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-bank-listen.mp3",
+      "status": "generated",
+      "sha256": "bd980aba4fca14a7fca512f30c4364bcc35bc1a083c12ff51412b5062405b57c",
+      "durationSeconds": 2.496,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15252,
+      "rmsPCM": 2457.37,
+      "wordMetadata": "audio-words/a2-bank-listen.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        1.5339999999999998
+      ],
+      "measuredPitchRangeHz": [
+        149.83,
+        171.95
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-bank-listen"
+    },
+    {
+      "id": "a2-bank-context",
+      "text": "Me decís dónde sale el bus.",
+      "src": "/audio/la-entonacion-cambia-todo/a2-bank-context.mp3",
+      "status": "generated",
+      "sha256": "d39a3c031ea51151a434a6a5c1aa215b7774afc90b834c9fee6610c6cf5e82ae",
+      "durationSeconds": 2.664,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 13856,
+      "rmsPCM": 2293.36,
+      "wordMetadata": "audio-words/a2-bank-context.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.21800000000000014,
+        1.528
+      ],
+      "measuredPitchRangeHz": [
+        139.7,
+        204.06
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "a2-bank-context"
+    },
+    {
+      "id": "b1-listen-01",
+      "text": "Ya le mandé el mensaje.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-listen-01.mp3",
+      "status": "generated",
+      "sha256": "65f2ee8ebac25635cb2c514544e3e35d7b3a0e9854e9e0b7d7811d54bcc89814",
+      "durationSeconds": 2.304,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15925,
+      "rmsPCM": 2383.98,
+      "wordMetadata": "audio-words/b1-listen-01.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.24799999999999991,
+        1.3579999999999999
+      ],
+      "measuredPitchRangeHz": [
+        103.96,
+        164.25
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-listen-01"
+    },
+    {
+      "id": "b1-listen-02",
+      "text": "Bueno, podemos intentarlo.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-listen-02.mp3",
+      "status": "generated",
+      "sha256": "b1a4bccae49f18c1a6465af3023059d600fcea00bb106268897a75defc019575",
+      "durationSeconds": 2.856,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19387,
+      "rmsPCM": 2450.07,
+      "wordMetadata": "audio-words/b1-listen-02.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.2139999999999999,
+        1.8739999999999999
+      ],
+      "measuredPitchRangeHz": [
+        146.12,
+        170.05
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-listen-02"
+    },
+    {
+      "id": "b1-compare-01",
+      "text": "Lo vas a resolver hoy.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-compare-01.mp3",
+      "status": "generated",
+      "sha256": "2628962d8a590374c831872e8a6ef01ffdb7c72968654fd43efa8ff2f83f91b3",
+      "durationSeconds": 2.232,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 20115,
+      "rmsPCM": 2747.61,
+      "wordMetadata": "audio-words/b1-compare-01.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.2069999999999998,
+        1.2469999999999997
+      ],
+      "measuredPitchRangeHz": [
+        141.18,
+        202.71
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-compare-01"
+    },
+    {
+      "id": "b1-compare-01-alternate",
+      "text": "Lo vas a resolver hoy.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-compare-01-alternate.mp3",
+      "status": "generated",
+      "sha256": "a8ea270a28d3dcccc4c179e4919555695c2c28385ffbf277a09f6a1883275610",
+      "durationSeconds": 2.232,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 20124,
+      "rmsPCM": 2682.82,
+      "wordMetadata": "audio-words/b1-compare-01.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.2069999999999998,
+        1.2469999999999997
+      ],
+      "measuredPitchRangeHz": [
+        104.95,
+        167.3
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-compare-01"
+    },
+    {
+      "id": "b1-context-01",
+      "text": "Yo lo pedí ayer.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-context-01.mp3",
+      "status": "generated",
+      "sha256": "ad42b5290b5ece7cd756c034bc1f9e9cecdda18ea3a89f58f03ce2b94ec2fdd8",
+      "durationSeconds": 1.992,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16449,
+      "rmsPCM": 2410.44,
+      "wordMetadata": "audio-words/b1-context-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.29699999999999993,
+        0.967
+      ],
+      "measuredPitchRangeHz": [
+        114.8,
+        208.9
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-context-01"
+    },
+    {
+      "id": "b1-echo-01",
+      "text": "Todavía tenemos tiempo.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-echo-01.mp3",
+      "status": "generated",
+      "sha256": "f6ad0b424432855b66b2c31425413237738a4d00d42200667883db256a37af2e",
+      "durationSeconds": 2.304,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14408,
+      "rmsPCM": 2732.1,
+      "wordMetadata": "audio-words/b1-echo-01.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.21799999999999992,
+        1.3379999999999999
+      ],
+      "measuredPitchRangeHz": [
+        118.91,
+        179.86
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-echo-01"
+    },
+    {
+      "id": "b1-compare-02",
+      "text": "No pasa nada, lo hablamos.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-compare-02.mp3",
+      "status": "generated",
+      "sha256": "339ca054d4e29a0c2a487e44ca9d3a72f4e594249a9f06ca26743a3464c3265c",
+      "durationSeconds": 2.856,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19459,
+      "rmsPCM": 2470.46,
+      "wordMetadata": "audio-words/b1-compare-02.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.2039999999999999,
+        1.674
+      ],
+      "measuredPitchRangeHz": [
+        118.87,
+        179.8
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-compare-02"
+    },
+    {
+      "id": "b1-compare-02-alternate",
+      "text": "No pasa nada, lo hablamos.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-compare-02-alternate.mp3",
+      "status": "generated",
+      "sha256": "464a6888e1897227e6629a389c9e4010fdec8c95741890665652356c44a5b069",
+      "durationSeconds": 2.856,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19476,
+      "rmsPCM": 2448.04,
+      "wordMetadata": "audio-words/b1-compare-02.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.2039999999999999,
+        1.674
+      ],
+      "measuredPitchRangeHz": [
+        143.25,
+        154.79
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-compare-02"
+    },
+    {
+      "id": "b1-delivery-01",
+      "text": "No dije que fuera imposible.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-delivery-01.mp3",
+      "status": "generated",
+      "sha256": "be17e3c961689e34e10a19a89f0f8957e2ade2e563ef9206a482a46f59858c24",
+      "durationSeconds": 2.472,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17426,
+      "rmsPCM": 2355.31,
+      "wordMetadata": "audio-words/b1-delivery-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.20700000000000002,
+        1.517
+      ],
+      "measuredPitchRangeHz": [
+        115.33,
+        209.59
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-delivery-01"
+    },
+    {
+      "id": "b1-roleplay-01",
+      "text": "Me parece que no me entendiste.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-roleplay-01.mp3",
+      "status": "generated",
+      "sha256": "4d6cd43d956885d773cc386db8fc40798df22b21c82c0aafab734be4c79d5041",
+      "durationSeconds": 2.592,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16827,
+      "rmsPCM": 2383.4,
+      "wordMetadata": "audio-words/b1-roleplay-01.words.json",
+      "delivery": "amplitud suave y caída acompañada",
+      "pitchAnchorsHz": [
+        165,
+        185,
+        155,
+        130
+      ],
+      "voicedSpanSeconds": [
+        0.21700000000000003,
+        1.647
+      ],
+      "measuredPitchRangeHz": [
+        130.23,
+        184.95
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-roleplay-01"
+    },
+    {
+      "id": "b1-bank-listen",
+      "text": "Ah, eso cambia las cosas.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-bank-listen.mp3",
+      "status": "generated",
+      "sha256": "3f859eb80bee5c3b6ae571ba7fc2691483e42bda87242f0690e4ed1351954dd6",
+      "durationSeconds": 2.688,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15717,
+      "rmsPCM": 2246.0,
+      "wordMetadata": "audio-words/b1-bank-listen.words.json",
+      "delivery": "amplitud marcada y caída expresiva",
+      "pitchAnchorsHz": [
+        195,
+        235,
+        180,
+        135
+      ],
+      "voicedSpanSeconds": [
+        0.18500000000000003,
+        1.575
+      ],
+      "measuredPitchRangeHz": [
+        134.82,
+        231.96
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-bank-listen"
+    },
+    {
+      "id": "b1-bank-context",
+      "text": "Sí, podría funcionar así.",
+      "src": "/audio/la-entonacion-cambia-todo/b1-bank-context.mp3",
+      "status": "generated",
+      "sha256": "4a5fc84002e8106d8e46069c66775bdf1ccbcf028ed7656792d22544f29bf8fe",
+      "durationSeconds": 2.736,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 14616,
+      "rmsPCM": 2394.93,
+      "wordMetadata": "audio-words/b1-bank-context.words.json",
+      "delivery": "suspensión y subida suave",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        140,
+        175
+      ],
+      "voicedSpanSeconds": [
+        0.3439999999999999,
+        1.7739999999999998
+      ],
+      "measuredPitchRangeHz": [
+        139.94,
+        174.6
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b1-bank-context"
+    },
+    {
+      "id": "b2-listen-01",
+      "text": "Eso podría funcionar, supongo.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-listen-01.mp3",
+      "status": "generated",
+      "sha256": "b2819bfe94e6ced3b69cf982905594e0abbfd80a48e5a4e676ec6456deaa11fd",
+      "durationSeconds": 2.952,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16987,
+      "rmsPCM": 2292.69,
+      "wordMetadata": "audio-words/b2-listen-01.words.json",
+      "delivery": "suspensión y subida suave",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        140,
+        175
+      ],
+      "voicedSpanSeconds": [
+        0.19700000000000004,
+        1.9669999999999999
+      ],
+      "measuredPitchRangeHz": [
+        139.02,
+        174.53
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-listen-01"
+    },
+    {
+      "id": "b2-listen-02",
+      "text": "Está resuelto, podés quedarte tranquilo.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-listen-02.mp3",
+      "status": "generated",
+      "sha256": "ec14d7f7cd9c8f36d8e75599f7e0c29b7e03d6cd125a40491393de3919f18b11",
+      "durationSeconds": 3.408,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17457,
+      "rmsPCM": 2683.37,
+      "wordMetadata": "audio-words/b2-listen-02.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.2349999999999998,
+        2.425
+      ],
+      "measuredPitchRangeHz": [
+        119.82,
+        179.84
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-listen-02"
+    },
+    {
+      "id": "b2-compare-01",
+      "text": "Entonces seguimos con el próximo punto.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-compare-01.mp3",
+      "status": "generated",
+      "sha256": "d068a09c341717c4b6aec4aefc30ca4b333dd2abddf306405fa62acc427f6f6d",
+      "durationSeconds": 3.216,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17619,
+      "rmsPCM": 2514.12,
+      "wordMetadata": "audio-words/b2-compare-01.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        2.244
+      ],
+      "measuredPitchRangeHz": [
+        105.31,
+        165.45
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-compare-01"
+    },
+    {
+      "id": "b2-compare-01-alternate",
+      "text": "Entonces seguimos con el próximo punto.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-compare-01-alternate.mp3",
+      "status": "generated",
+      "sha256": "527342a141a2c7abf1e76cf26e5d3473bc837ec391f2378c84fef0e07dde0146",
+      "durationSeconds": 3.216,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17789,
+      "rmsPCM": 2606.87,
+      "wordMetadata": "audio-words/b2-compare-01.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        2.244
+      ],
+      "measuredPitchRangeHz": [
+        149.9,
+        179.74
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-compare-01"
+    },
+    {
+      "id": "b2-context-01",
+      "text": "Esta vez va a estar listo.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-context-01.mp3",
+      "status": "generated",
+      "sha256": "c9c63c5e965e41000d0583e5775e573fd83169c955d2b60dd33328944a68b7dc",
+      "durationSeconds": 2.496,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18130,
+      "rmsPCM": 2833.74,
+      "wordMetadata": "audio-words/b2-context-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        1.5139999999999998
+      ],
+      "measuredPitchRangeHz": [
+        84.85,
+        208.95
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-context-01"
+    },
+    {
+      "id": "b2-echo-01",
+      "text": "Entiendo tu punto, pero no lo veo igual.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-echo-01.mp3",
+      "status": "generated",
+      "sha256": "0a1aaa802d7cfebdc6b6a39781a2ce52e12c94733c3d7ccba76c2767a1533759",
+      "durationSeconds": 3.36,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16308,
+      "rmsPCM": 2766.18,
+      "wordMetadata": "audio-words/b2-echo-01.words.json",
+      "delivery": "amplitud suave y caída acompañada",
+      "pitchAnchorsHz": [
+        165,
+        185,
+        155,
+        130
+      ],
+      "voicedSpanSeconds": [
+        0.22599999999999992,
+        2.356
+      ],
+      "measuredPitchRangeHz": [
+        128.88,
+        184.86
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-echo-01"
+    },
+    {
+      "id": "b2-compare-02",
+      "text": "Lo revisamos juntos antes de enviarlo.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-compare-02.mp3",
+      "status": "generated",
+      "sha256": "61b7584647da3b09c2317334a5c30aff7c50e8e71f13e3bbde0b60665cc90431",
+      "durationSeconds": 2.976,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15758,
+      "rmsPCM": 2676.27,
+      "wordMetadata": "audio-words/b2-compare-02.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        1.9839999999999998
+      ],
+      "measuredPitchRangeHz": [
+        120.16,
+        180.71
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-compare-02"
+    },
+    {
+      "id": "b2-compare-02-alternate",
+      "text": "Lo revisamos juntos antes de enviarlo.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-compare-02-alternate.mp3",
+      "status": "generated",
+      "sha256": "75678195a107c773c1b0e23ce215e85d3981e94e0ee4ff484130040e015aa9e9",
+      "durationSeconds": 2.976,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15801,
+      "rmsPCM": 2653.69,
+      "wordMetadata": "audio-words/b2-compare-02.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.22399999999999992,
+        1.9839999999999998
+      ],
+      "measuredPitchRangeHz": [
+        67.33,
+        164.35
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-compare-02"
+    },
+    {
+      "id": "b2-delivery-01",
+      "text": "No es exactamente lo que habíamos acordado.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-delivery-01.mp3",
+      "status": "generated",
+      "sha256": "4afa25b4e3617d022bd13f3220bb72d0c4fe62c8f7e0b8979f9f315e47e9872d",
+      "durationSeconds": 3.336,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17282,
+      "rmsPCM": 2856.57,
+      "wordMetadata": "audio-words/b2-delivery-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.2139999999999999,
+        2.364
+      ],
+      "measuredPitchRangeHz": [
+        115.44,
+        214.45
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-delivery-01"
+    },
+    {
+      "id": "b2-roleplay-01",
+      "text": "Podemos resolverlo si ajustamos el plazo.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-roleplay-01.mp3",
+      "status": "generated",
+      "sha256": "cb8168d3881ac613f1cbeca70d25db2ad64d6b468d2460b9298bedc9c3fb3187",
+      "durationSeconds": 3.24,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17321,
+      "rmsPCM": 2833.16,
+      "wordMetadata": "audio-words/b2-roleplay-01.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.2359999999999999,
+        2.266
+      ],
+      "measuredPitchRangeHz": [
+        120.35,
+        180.62
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-roleplay-01"
+    },
+    {
+      "id": "b2-bank-listen",
+      "text": "Sí, claro, sería ideal.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-bank-listen.mp3",
+      "status": "generated",
+      "sha256": "db10df4e934bfe7deedda17c7fd9f0b22ecff8c65b630e065ab392b3bbac570c",
+      "durationSeconds": 3.024,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16884,
+      "rmsPCM": 2145.45,
+      "wordMetadata": "audio-words/b2-bank-listen.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.3279999999999999,
+        2.028
+      ],
+      "measuredPitchRangeHz": [
+        137.96,
+        154.81
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-bank-listen"
+    },
+    {
+      "id": "b2-bank-context",
+      "text": "Podemos seguir, si les parece.",
+      "src": "/audio/la-entonacion-cambia-todo/b2-bank-context.mp3",
+      "status": "generated",
+      "sha256": "1ada44fbc1f815ae9b7d9beab5d014ee15b3d877dc01fb82d516fe878549470c",
+      "durationSeconds": 2.808,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15913,
+      "rmsPCM": 2508.41,
+      "wordMetadata": "audio-words/b2-bank-context.words.json",
+      "delivery": "subida final para una pregunta de confirmación",
+      "pitchAnchorsHz": [
+        145,
+        140,
+        155,
+        205
+      ],
+      "voicedSpanSeconds": [
+        0.2249999999999998,
+        1.8349999999999997
+      ],
+      "measuredPitchRangeHz": [
+        139.93,
+        204.05
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "b2-bank-context"
+    },
+    {
+      "id": "c1-listen-01",
+      "text": "No era mi intención cuestionar tu trabajo.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-listen-01.mp3",
+      "status": "generated",
+      "sha256": "c4a2a429c39ed1f6fcfb32ffaa8806f106a03d3156ea6c13e2d60df235b5119e",
+      "durationSeconds": 3.24,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17534,
+      "rmsPCM": 2838.3,
+      "wordMetadata": "audio-words/c1-listen-01.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.21599999999999991,
+        2.246
+      ],
+      "measuredPitchRangeHz": [
+        119.91,
+        183.32
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-listen-01"
+    },
+    {
+      "id": "c1-listen-02",
+      "text": "Bueno, parece que esta vez sí encontraron la solución.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-listen-02.mp3",
+      "status": "generated",
+      "sha256": "0700e466ed7d4e9a06255fdb1534f8307f1b7e02ad071e877d5cfd02548922a9",
+      "durationSeconds": 3.984,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17937,
+      "rmsPCM": 2680.64,
+      "wordMetadata": "audio-words/c1-listen-02.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.22799999999999992,
+        2.998
+      ],
+      "measuredPitchRangeHz": [
+        138.52,
+        155.05
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-listen-02"
+    },
+    {
+      "id": "c1-compare-01",
+      "text": "Quizás convendría revisar ese supuesto.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-compare-01.mp3",
+      "status": "generated",
+      "sha256": "4aaa2a14f77d5630061ead40342ae97bb0f47289655b146ed8d2419edf126db4",
+      "durationSeconds": 3.144,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15842,
+      "rmsPCM": 2509.5,
+      "wordMetadata": "audio-words/c1-compare-01.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.24799999999999991,
+        2.148
+      ],
+      "measuredPitchRangeHz": [
+        150.47,
+        181.62
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-compare-01"
+    },
+    {
+      "id": "c1-compare-01-alternate",
+      "text": "Quizás convendría revisar ese supuesto.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-compare-01-alternate.mp3",
+      "status": "generated",
+      "sha256": "8b77dd59efa8771c41e90d8c9cf63e086456c463593527679e3d21f15517c892",
+      "durationSeconds": 3.144,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16112,
+      "rmsPCM": 2466.69,
+      "wordMetadata": "audio-words/c1-compare-01.words.json",
+      "delivery": "caída definida",
+      "pitchAnchorsHz": [
+        165,
+        150,
+        125,
+        105
+      ],
+      "voicedSpanSeconds": [
+        0.24799999999999991,
+        2.148
+      ],
+      "measuredPitchRangeHz": [
+        104.73,
+        165.21
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-compare-01"
+    },
+    {
+      "id": "c1-context-01",
+      "text": "En ese punto te doy la razón.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-context-01.mp3",
+      "status": "generated",
+      "sha256": "06cb463bfa04c5598c15b6951a28caaddd1fbc20b5abec7152a29d52413323fb",
+      "durationSeconds": 2.664,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15855,
+      "rmsPCM": 2722.1,
+      "wordMetadata": "audio-words/c1-context-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.21800000000000014,
+        1.698
+      ],
+      "measuredPitchRangeHz": [
+        114.22,
+        213.69
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-context-01"
+    },
+    {
+      "id": "c1-echo-01",
+      "text": "El plan, por lo que entiendo, sigue en marcha.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-echo-01.mp3",
+      "status": "generated",
+      "sha256": "c57c35b5851140ed0675599651519ab01f104dd8b7da94a91547e672675e9238",
+      "durationSeconds": 3.888,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16964,
+      "rmsPCM": 2453.43,
+      "wordMetadata": "audio-words/c1-echo-01.words.json",
+      "delivery": "caída moderada",
+      "pitchAnchorsHz": [
+        155,
+        150,
+        145,
+        125
+      ],
+      "voicedSpanSeconds": [
+        0.2249999999999998,
+        2.925
+      ],
+      "measuredPitchRangeHz": [
+        124.74,
+        155.19
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-echo-01"
+    },
+    {
+      "id": "c1-compare-02",
+      "text": "Podemos revisarlo sin convertirlo en un problema mayor.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-compare-02.mp3",
+      "status": "generated",
+      "sha256": "39f73527ecda2af2a460c1fc5eae05a37501faf98d5628845466085abe850f3c",
+      "durationSeconds": 3.768,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16295,
+      "rmsPCM": 2825.15,
+      "wordMetadata": "audio-words/c1-compare-02.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.2349999999999998,
+        2.775
+      ],
+      "measuredPitchRangeHz": [
+        119.93,
+        179.86
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-compare-02"
+    },
+    {
+      "id": "c1-compare-02-alternate",
+      "text": "Podemos revisarlo sin convertirlo en un problema mayor.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-compare-02-alternate.mp3",
+      "status": "generated",
+      "sha256": "03b27f5aef57aea6613e5963ad06aa32e2f18e303893385400165795616238be",
+      "durationSeconds": 3.768,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16202,
+      "rmsPCM": 2730.03,
+      "wordMetadata": "audio-words/c1-compare-02.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.2349999999999998,
+        2.775
+      ],
+      "measuredPitchRangeHz": [
+        73.08,
+        155.3
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-compare-02"
+    },
+    {
+      "id": "c1-delivery-01",
+      "text": "No sé si ese es el mejor momento para plantearlo.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-delivery-01.mp3",
+      "status": "generated",
+      "sha256": "221d9dbbe1b372bffc91780af639fe91b76e649558bbd644ba0aa452ae564684",
+      "durationSeconds": 3.624,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15679,
+      "rmsPCM": 2494.65,
+      "wordMetadata": "audio-words/c1-delivery-01.words.json",
+      "delivery": "suspensión y subida suave",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        140,
+        175
+      ],
+      "voicedSpanSeconds": [
+        0.21799999999999992,
+        2.638
+      ],
+      "measuredPitchRangeHz": [
+        139.31,
+        174.87
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-delivery-01"
+    },
+    {
+      "id": "c1-roleplay-01",
+      "text": "Lo que propongo es revisar el criterio, no el esfuerzo del equipo.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-roleplay-01.mp3",
+      "status": "generated",
+      "sha256": "9f970633743c52adcfdc2377be3b22cfb56c35701ac30e2d6e9db8e472eba365",
+      "durationSeconds": 4.512,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17470,
+      "rmsPCM": 2780.17,
+      "wordMetadata": "audio-words/c1-roleplay-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.2269999999999998,
+        3.537
+      ],
+      "measuredPitchRangeHz": [
+        114.47,
+        214.26
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-roleplay-01"
+    },
+    {
+      "id": "c1-bank-listen",
+      "text": "No digo que sea imposible, solo que habría que pensarlo.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-bank-listen.mp3",
+      "status": "generated",
+      "sha256": "bd7ba673b867620d28c25cdfcbcb463a63077e52dbdf714309d39e3b0915b403",
+      "durationSeconds": 4.152,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16538,
+      "rmsPCM": 2513.51,
+      "wordMetadata": "audio-words/c1-bank-listen.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.2169999999999998,
+        3.1369999999999996
+      ],
+      "measuredPitchRangeHz": [
+        137.09,
+        170.46
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-bank-listen"
+    },
+    {
+      "id": "c1-bank-context",
+      "text": "Qué oportuno que aparezca la solución justo ahora.",
+      "src": "/audio/la-entonacion-cambia-todo/c1-bank-context.mp3",
+      "status": "generated",
+      "sha256": "a4d4eaf17d44aef0cb2e5314b0ded35c8a1055dca52802ebfd381cdcb5778b74",
+      "durationSeconds": 3.456,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17053,
+      "rmsPCM": 2686.54,
+      "wordMetadata": "audio-words/c1-bank-context.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.2439999999999999,
+        2.484
+      ],
+      "measuredPitchRangeHz": [
+        143.52,
+        155.24
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c1-bank-context"
+    },
+    {
+      "id": "c2-listen-01",
+      "text": "Eso dice bastante sobre nuestras prioridades.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-listen-01.mp3",
+      "status": "generated",
+      "sha256": "2cf99d93794f75f1a4ccc0e44d4bf1b0fd29fa4fdf0710fa0c6904c47674ddd7",
+      "durationSeconds": 3.504,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18668,
+      "rmsPCM": 2611.8,
+      "wordMetadata": "audio-words/c2-listen-01.words.json",
+      "delivery": "arco amplio con cierre descendente",
+      "pitchAnchorsHz": [
+        170,
+        220,
+        190,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.21799999999999992,
+        2.368
+      ],
+      "measuredPitchRangeHz": [
+        114.94,
+        217.5
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-listen-01"
+    },
+    {
+      "id": "c2-listen-02",
+      "text": "Naturalmente, ahora sí podemos confiar en el procedimiento.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-listen-02.mp3",
+      "status": "generated",
+      "sha256": "cb35dc615e1215295c6b1ffe0d10f86afabccc77379c17d059e94166ec9e04f2",
+      "durationSeconds": 4.296,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16002,
+      "rmsPCM": 2731.71,
+      "wordMetadata": "audio-words/c2-listen-02.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.22400000000000014,
+        3.314
+      ],
+      "measuredPitchRangeHz": [
+        143.91,
+        155.94
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-listen-02"
+    },
+    {
+      "id": "c2-compare-01",
+      "text": "Y esa es la cuestión que nos queda por resolver.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-compare-01.mp3",
+      "status": "generated",
+      "sha256": "c52f8b0c3195ccc860854cf61a7d94ea536ca7d89cb533f398a75ce42a66caf0",
+      "durationSeconds": 3.528,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17937,
+      "rmsPCM": 2838.74,
+      "wordMetadata": "audio-words/c2-compare-01.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.21500000000000002,
+        2.535
+      ],
+      "measuredPitchRangeHz": [
+        67.65,
+        169.85
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-compare-01"
+    },
+    {
+      "id": "c2-compare-01-alternate",
+      "text": "Y esa es la cuestión que nos queda por resolver.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-compare-01-alternate.mp3",
+      "status": "generated",
+      "sha256": "d5562878ba833ce5ae5fe63ef559797de25f5021aa8a4140d5af3ee47cc743b3",
+      "durationSeconds": 3.528,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18079,
+      "rmsPCM": 2899.11,
+      "wordMetadata": "audio-words/c2-compare-01.words.json",
+      "delivery": "arco amplio con cierre descendente",
+      "pitchAnchorsHz": [
+        170,
+        220,
+        190,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.21500000000000002,
+        2.535
+      ],
+      "measuredPitchRangeHz": [
+        67.65,
+        217.82
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-compare-01"
+    },
+    {
+      "id": "c2-context-01",
+      "text": "No podría decir que me sorprende.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-context-01.mp3",
+      "status": "generated",
+      "sha256": "093b412643af42aad1d183a91a6ddc0f47ad18fefab6fa6d5b3bb0f2880273f7",
+      "durationSeconds": 2.76,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 18921,
+      "rmsPCM": 2542.54,
+      "wordMetadata": "audio-words/c2-context-01.words.json",
+      "delivery": "rango estrecho, leve suspensión final",
+      "pitchAnchorsHz": [
+        145,
+        150,
+        145,
+        155
+      ],
+      "voicedSpanSeconds": [
+        0.21599999999999991,
+        1.8159999999999998
+      ],
+      "measuredPitchRangeHz": [
+        144.2,
+        155.26
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-context-01"
+    },
+    {
+      "id": "c2-echo-01",
+      "text": "Si eso es lo que querían, lo consiguieron.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-echo-01.mp3",
+      "status": "generated",
+      "sha256": "6a5c5d399691a37749c4706fbb3e1d4410b720a35ec6889a7a63e11eaccac580",
+      "durationSeconds": 3.456,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 17814,
+      "rmsPCM": 2692.8,
+      "wordMetadata": "audio-words/c2-echo-01.words.json",
+      "delivery": "caída moderada",
+      "pitchAnchorsHz": [
+        155,
+        150,
+        145,
+        125
+      ],
+      "voicedSpanSeconds": [
+        0.3339999999999999,
+        2.474
+      ],
+      "measuredPitchRangeHz": [
+        125.67,
+        155.01
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-echo-01"
+    },
+    {
+      "id": "c2-compare-02",
+      "text": "Todavía podemos elegir cómo terminar esta historia.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-compare-02.mp3",
+      "status": "generated",
+      "sha256": "3838940141d068e4b29bc6763245d89004e6df69093484ed73c12f7e94b260d4",
+      "durationSeconds": 3.528,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15583,
+      "rmsPCM": 2936.4,
+      "wordMetadata": "audio-words/c2-compare-02.words.json",
+      "delivery": "descenso amplio y suave",
+      "pitchAnchorsHz": [
+        180,
+        170,
+        150,
+        120
+      ],
+      "voicedSpanSeconds": [
+        0.22500000000000003,
+        2.575
+      ],
+      "measuredPitchRangeHz": [
+        119.65,
+        180.13
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-compare-02"
+    },
+    {
+      "id": "c2-compare-02-alternate",
+      "text": "Todavía podemos elegir cómo terminar esta historia.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-compare-02-alternate.mp3",
+      "status": "generated",
+      "sha256": "20a245dd5d80a70742640e6e628cec3cb6d8ae47cd1ec81299683b35b6dc94f3",
+      "durationSeconds": 3.528,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 15659,
+      "rmsPCM": 2981.35,
+      "wordMetadata": "audio-words/c2-compare-02.words.json",
+      "delivery": "arco amplio con cierre descendente",
+      "pitchAnchorsHz": [
+        170,
+        220,
+        190,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.22500000000000003,
+        2.575
+      ],
+      "measuredPitchRangeHz": [
+        114.82,
+        219.72
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-compare-02"
+    },
+    {
+      "id": "c2-delivery-01",
+      "text": "Lo significativo no es el resultado, sino cómo llegamos a él.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-delivery-01.mp3",
+      "status": "generated",
+      "sha256": "38c224439182abd61187d4873e9d4fcda7e419bbd44d31ced6fbc5db68ba6896",
+      "durationSeconds": 4.56,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16034,
+      "rmsPCM": 2615.25,
+      "wordMetadata": "audio-words/c2-delivery-01.words.json",
+      "delivery": "relieve en el centro y caída final",
+      "pitchAnchorsHz": [
+        145,
+        215,
+        165,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.22599999999999992,
+        3.596
+      ],
+      "measuredPitchRangeHz": [
+        114.96,
+        214.61
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-delivery-01"
+    },
+    {
+      "id": "c2-roleplay-01",
+      "text": "Podríamos dejarlo aquí, si todos estamos de acuerdo.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-roleplay-01.mp3",
+      "status": "generated",
+      "sha256": "c4cb0ab96360a370ac89b5e45642ef817a1f584fe60bbb88aa4a582058630b71",
+      "durationSeconds": 3.936,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16819,
+      "rmsPCM": 2988.32,
+      "wordMetadata": "audio-words/c2-roleplay-01.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.2439999999999999,
+        2.974
+      ],
+      "measuredPitchRangeHz": [
+        147.21,
+        171.44
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-roleplay-01"
+    },
+    {
+      "id": "c2-bank-listen",
+      "text": "Al final, todo quedó exactamente donde debía quedar.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-bank-listen.mp3",
+      "status": "generated",
+      "sha256": "9e4d1ba3cebcb28de733a275d5205efedec49c164c9c0c6267004b2a9352954f",
+      "durationSeconds": 4.032,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 19427,
+      "rmsPCM": 2745.85,
+      "wordMetadata": "audio-words/c2-bank-listen.words.json",
+      "delivery": "arco amplio con cierre descendente",
+      "pitchAnchorsHz": [
+        170,
+        220,
+        190,
+        115
+      ],
+      "voicedSpanSeconds": [
+        0.22700000000000004,
+        3.007
+      ],
+      "measuredPitchRangeHz": [
+        113.5,
+        219.06
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-bank-listen"
+    },
+    {
+      "id": "c2-bank-context",
+      "text": "Hay maneras de decirlo y maneras de hacerlo.",
+      "src": "/audio/la-entonacion-cambia-todo/c2-bank-context.mp3",
+      "status": "generated",
+      "sha256": "e6addc77bd0020b88614595a58ea190e6e238f9715838a59923802d928264ad0",
+      "durationSeconds": 3.192,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 16569,
+      "rmsPCM": 2895.97,
+      "wordMetadata": "audio-words/c2-bank-context.words.json",
+      "delivery": "final sostenido, abierto a continuación",
+      "pitchAnchorsHz": [
+        150,
+        170,
+        165,
+        170
+      ],
+      "voicedSpanSeconds": [
+        0.2269999999999998,
+        2.1969999999999996
+      ],
+      "measuredPitchRangeHz": [
+        149.79,
+        173.87
+      ],
+      "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
+      "sourceClip": "c2-bank-context"
+    }
+  ]
+}

@@ -45,3 +45,13 @@
 @media(prefers-reduced-motion:reduce){.pf-world *{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
 /* The shared deck uses a pale selected rate; preserve contrast in this dark deck. */
 .pf-activity .audio-deck .audio-rate button.active{background:#efbd7a;color:#241b10;border-color:#efbd7a}
+/* Opt-in in-world guide; existing lessons retain their visual shell. */
+.pf-guide{display:flex;align-items:center;gap:1rem;margin:0 0 1.2rem;padding:.7rem 1rem;border:1px solid #a8b7a044;border-radius:18px;background:#293b3140;min-height:96px;overflow:hidden}
+.pf-guide img{width:70px;height:100px;flex:0 0 70px;object-fit:contain;object-position:50% 30%;filter:drop-shadow(0 4px 9px #0006)}
+.pf-guide p{margin:0;line-height:1.5;max-width:65ch}.pf-guide .pf-eyebrow{display:block;margin-bottom:.35rem;font-size:.64rem}
+.pf-guide-react{background:#44362140}.pf-guide-complete{border-color:#b9d3a966}.pf-guide-teacher{max-width:800px}
+.pf-world[data-lesson="la-entonacion-cambia-todo"]{--pf-accent:#e4c9a4}
+.pf-world[data-lesson="la-entonacion-cambia-todo"] .pf-entry-shade{background:linear-gradient(90deg,#18211dee 0%,#18211dd9 30%,#18211d96 48%,#18211d10 70%),linear-gradient(0deg,#18211d70,transparent 45%)}
+.pf-world[data-lesson="la-entonacion-cambia-todo"] .pf-entry-copy{max-width:690px}
+.pf-world[data-lesson="la-entonacion-cambia-todo"] .pf-entry-copy h1{font-size:clamp(3rem,5.5vw,5.6rem)}
+@media(max-width:700px){.pf-guide{padding:.55rem .7rem;gap:.65rem}.pf-guide img{width:52px;flex-basis:52px;height:85px}.pf-guide p{font-size:.85rem}.pf-world[data-lesson="la-entonacion-cambia-todo"] .pf-room{object-position:64% center}.pf-world[data-lesson="la-entonacion-cambia-todo"] .pf-entry-shade{background:linear-gradient(0deg,#18211dfc 0%,#18211de8 48%,#18211d44 100%)} }
