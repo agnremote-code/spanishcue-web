@@ -134,7 +134,7 @@ export function validatePaddleClaimTransaction(transaction: PaddleTransaction, c
   return claimFromCustomData(transaction.custom_data, offerCode) === claimId
     && validatePaddleTransaction(transaction, config, claimId, "spanishcue_claim_id")
     && transaction.status === "completed"
-    && Number(transaction.details?.totals?.total) === 1500
+    && Number(transaction.details?.totals?.total) === 1550
     && transaction.currency_code === "USD";
 }
 
@@ -146,7 +146,7 @@ export function validatePaddleSubscription(subscription: PaddleSubscription, con
   if (custom[customKey] !== userId) return false;
   const item = Array.isArray(subscription.items) && subscription.items.length === 1 ? subscription.items[0] : null;
   if (!item || item.quantity !== 1 || item.price?.id !== config.priceId) return false;
-  return item.price?.unit_price?.amount === "1500"
+  return item.price?.unit_price?.amount === "1550"
     && item.price?.unit_price?.currency_code === "USD"
     && item.price?.billing_cycle?.interval === "month"
     && item.price?.billing_cycle?.frequency === 1
@@ -163,7 +163,7 @@ export function validatePaddleTransaction(transaction: PaddleTransaction, config
     item
     && item.quantity === 1
     && item.price?.id === config.priceId
-    && item.price?.unit_price?.amount === "1500"
+    && item.price?.unit_price?.amount === "1550"
     && item.price?.unit_price?.currency_code === "USD"
     && item.price?.billing_cycle?.interval === "month"
     && item.price?.billing_cycle?.frequency === 1
