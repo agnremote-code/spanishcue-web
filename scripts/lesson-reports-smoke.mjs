@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 const origin=new URL(process.env.SPANISHCUE_PRODUCTION_ORIGIN||'https://spanishcue.com').origin;
 const checks=[];
-async function request(path,options={}){return fetch(origin+path,{...options,redirect:'manual',signal:AbortSignal.timeout(20000)});}
+async function request(path,options={}){return fetch(origin+path,{...options,headers:{connection:'close',...options.headers},redirect:'manual',signal:AbortSignal.timeout(20000)});}
 const home=await request('/');assert.equal(home.status,200);assert.match(await home.text(),/class="new-lessons"/);checks.push('canonical news banner renders');
 const lesson=await request('/la-fabrica-de-los-nombres');assert.equal(lesson.status,200);assert.match(await lesson.text(),/Reportar un problema/);checks.push('report launcher renders on a real public lesson');
 const forged={'x-chespanish-owner':'1','x-chespanish-user-uid':'smoke-forged','x-chespanish-access-level':'full',origin,'content-type':'application/json'};
