@@ -27,7 +27,7 @@ export default function PhoneticsWorld({definition:d}:{definition:WorldDefinitio
  const core=Object.entries(state.attempts).filter(([k])=>coreKeys.has(k)).map(([,v])=>v);
  const go=(stage:string)=>dispatch({type:'stage',stage});
  const reset=()=>{dispatch({type:'reset'});setEpoch(e=>e+1);};
- return <main className="pf-world" data-lesson={d.id}>
+ return <main className="pf-world" data-lesson={d.id} data-report-level={state.level} data-report-section={state.stage}>
   <header className="pf-top"><Link href="/" className="pf-brand">SPANISH<span>CUE</span><small>← Biblioteca</small></Link><span className="pf-top-title">{d.title}</span><div className="pf-tools"><div className="pf-desktop-picker"><LevelPicker level={state.level} onChange={changeLevel}/></div><div className="pf-mobile-picker"><LevelPicker compact level={state.level} onChange={changeLevel}/></div><button type="button" aria-pressed={state.teacherMode} onClick={()=>dispatch({type:'teacher'})}>Profe</button><button type="button" onClick={reset}>Reiniciar</button></div></header>
   {state.stage==='entry'?<section className="pf-entry" aria-labelledby="pf-title">
    <img className="pf-room" src={d.art} alt="Estudio de grabación con paneles de madera, micrófono y auriculares" width={1672} height={941}/>

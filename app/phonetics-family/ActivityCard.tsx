@@ -16,7 +16,7 @@ export default function ActivityCard({activity:a,attempt,definition,teacher,onAc
  const select=(selected:number[])=>onAction({type:'select',selected});
  const toggle=(i:number)=>select(attempt.selected.includes(i)?attempt.selected.filter(n=>n!==i):[...attempt.selected,i]);
  const oral=['repeat','transfer'].includes(a.kind);
- return <article className="pf-activity">
+ return <article className="pf-activity" data-report-activity={a.id}>
   <p className="pf-eyebrow">{a.optional?'BANCO OPCIONAL':'RECORRIDO CENTRAL'} · {a.kind==='ab'?'DOS TOMAS':oral?'A TU VOZ':'PRIMERO EL OÍDO'}</p>
   <h2>{a.prompt}</h2>
   {a.kind==='ab'&&<div className="pf-actions" aria-label="Elegir toma">{clips.map((id,i)=><button key={id} type="button" aria-pressed={take===i} onClick={()=>setTake(i)}>Toma {i===0?'A':'B'} {attempt.heard.includes(id)?'· escuchada':''}</button>)}</div>}

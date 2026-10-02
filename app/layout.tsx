@@ -13,10 +13,12 @@ import AuthSessionSync from "./AuthSessionSync";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 import { localeFromHeaders, translate } from "./i18n/messages";
 import { lessons } from "./lesson-catalog";
+import { conversationFamilyByLessonId } from "./conversation-families/catalog";
 import {
   fullAccessFromHeaders,
   isFreeLesson,
   lessonAtPath,
+  localLessonPath,
   signedInFromHeaders,
 } from "./access-policy";
 import MarketingAttribution from "./marketing/MarketingAttribution";
@@ -24,6 +26,7 @@ import GoogleAnalytics from "./marketing/GoogleAnalytics";
 import { FreeLessonConversionBar } from "./marketing/MarketingSections";
 import FreeLessonRegistrationGate from "./marketing/FreeLessonRegistrationGate";
 import { audienceFromAccess, primaryCtaFor } from "./marketing/cta-state";
+import LessonFeedback from './lesson-reports/LessonFeedback';
 import CookieConsent from "./privacy/CookieConsent";
 import { isSearchPrivatePath, localizedUrl } from "./seo";
 import { socialPreviewImage, socialPreviewUrl } from "./social-preview";
@@ -105,6 +108,7 @@ export default async function RootLayout({
             lessonTitle={currentLesson?.title}
           />
           {children}
+          <LessonFeedback lessons={lessons.flatMap(lesson=>{const href=localLessonPath(lesson);return href?[{id:lesson.id,title:lesson.title,level:lesson.level,levels:conversationFamilyByLessonId.get(lesson.id)?.availableLevels||lesson.levels,path:lesson.path,href}]:[]})} signedIn={signedIn} />
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (
             <FreeLessonRegistrationGate lessonId={currentLesson.id} lessonTitle={currentLesson.title} />

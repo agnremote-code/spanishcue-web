@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {build}from'esbuild';
+const bundle=await build({stdin:{contents:"export {submissionIdentity} from './app/lesson-reports/submission'",resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});
+const {submissionIdentity}=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
+test('unchanged retry preserves key; edits after uncertain persistence receive a new identity',()=>{const first=submissionIdentity(null,{lessonId:224,message:'Original',category:'text',context:{activityId:'q3'}});const retry=submissionIdentity(first,{lessonId:224,message:'Original',category:'text',context:{activityId:'q3'}});assert.equal(retry.key,first.key);const changed=submissionIdentity(retry,{lessonId:224,message:'Edited report',category:'text',context:{activityId:'q3'}});assert.notEqual(changed.key,first.key)});

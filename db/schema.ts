@@ -419,3 +419,17 @@ export const verificationEmailDeliveries = sqliteTable(
     index("verification_email_recipient_time").on(table.recipient, table.requestedAt),
   ],
 );
+
+/** Teacher feedback. Identity is the verified Firebase uid; account_id is an
+ * optional provider-neutral reference. Context IDs are observations, not authority. */
+export const lessonReports = sqliteTable('lesson_reports', {
+  id: text('id').primaryKey(), createdAt: text('created_at').notNull(), updatedAt: text('updated_at').notNull(),
+  userId: text('user_id').notNull(), accountId: text('account_id'), reporterEmail: text('reporter_email'), requestKey: text('request_key').notNull(),
+  lessonId: integer('lesson_id').notNull(), lessonSlug: text('lesson_slug').notNull(), lessonTitle: text('lesson_title').notNull(),
+  lessonLevel: text('lesson_level').notNull(), lessonCategory: text('lesson_category').notNull(),
+  sectionId: text('section_id'), activityId: text('activity_id'), questionId: text('question_id'), componentId: text('component_id'),
+  category: text('category').notNull(), issueType: text('issue_type').notNull(), message: text('message').notNull(),
+  pageUrl: text('page_url').notNull(), routePath: text('route_path').notNull(), contextJson: text('context_json').notNull(),
+  status: text('status').notNull().default('new'), aiStatus: text('ai_status').notNull().default('unprocessed'), aiAnalysis: text('ai_analysis'),
+  resolution: text('resolution'), resolvedAt: text('resolved_at'), resolvedBy: text('resolved_by'), changeReference: text('change_reference'),
+}, table => [uniqueIndex('lesson_reports_user_request_unique').on(table.userId,table.requestKey),index('lesson_reports_user_created_idx').on(table.userId,table.createdAt),index('lesson_reports_status_created_idx').on(table.status,table.createdAt)]);

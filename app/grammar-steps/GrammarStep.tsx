@@ -37,6 +37,7 @@ export default function GrammarStep({
     <section
       className={`grammar-step ${open ? "is-open" : ""} ${className}`.trim()}
       style={style}
+      data-report-section={`grammar-${number}`}
       data-grammar-step
       data-grammar-kind={kind}
       data-default-state={defaultOpen ? "open" : "closed"}

@@ -109,7 +109,7 @@ export default async function LessonPage({
             >
               <section className="teaching-section">
                 {lesson.practice.map((item, index) => (
-                  <details key={item}>
+                  <details key={item} data-report-activity={`practice-${index + 1}`}>
                     <summary>Actividad {index + 1}</summary>
                     <p>{item}</p>
                   </details>
@@ -124,7 +124,7 @@ export default async function LessonPage({
             >
               <section className="teaching-section">
                 {lesson.speaking.map((item, index) => (
-                  <details key={item}>
+                  <details key={item} data-report-activity={`speaking-${index + 1}`}>
                     <summary>Ronda {index + 1}</summary>
                     <p>{item}</p>
                   </details>
@@ -147,33 +147,33 @@ export default async function LessonPage({
                 ))}
               </ul>
             </section>
-            <section className="teaching-section">
+            <section className="teaching-section" data-report-section="step-01">
               <h2>01 · Para empezar</h2>
               <p>{lesson.warmup}</p>
             </section>
-            <section className="teaching-section">
+            <section className="teaching-section" data-report-section="step-02">
               <h2>02 · La idea clave</h2>
               <p>{lesson.explanation}</p>
             </section>
-            <section className="teaching-section">
+            <section className="teaching-section" data-report-section="step-03">
               <h2>03 · Práctica guiada</h2>
               {lesson.practice.map((item, index) => (
-                <details key={item}>
+                <details key={item} data-report-activity={`practice-${index + 1}`}>
                   <summary>Actividad {index + 1}</summary>
                   <p>{item}</p>
                 </details>
               ))}
             </section>
-            <section className="teaching-section">
+            <section className="teaching-section" data-report-section="step-04">
               <h2>04 · A conversar</h2>
               {lesson.speaking.map((item, index) => (
-                <details key={item}>
+                <details key={item} data-report-activity={`speaking-${index + 1}`}>
                   <summary>Ronda {index + 1}</summary>
                   <p>{item}</p>
                 </details>
               ))}
             </section>
-            <section className="teaching-section">
+            <section className="teaching-section" data-report-section="step-05">
               <h2>05 · Para seguir</h2>
               <p>{lesson.homework}</p>
             </section>

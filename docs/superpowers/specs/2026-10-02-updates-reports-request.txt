@@ -1,0 +1,730 @@
+Quiero implementar dos mejoras IMPORTANTES en SpanishCue, con acabado premium y totalmente integradas al diseño actual.
+
+==================================================
+OBJETIVO GENERAL
+==================================================
+
+1. Agregar en la HOME un banner/sección promocional dinámica para mostrar CLASES NUEVAS y NOVEDADES.
+2. Crear dentro de las clases un sistema elegante para que los PROFESORES puedan reportar errores, inconsistencias o mejoras.
+3. Guardar desde ahora esos reportes de forma estructurada para poder revisarlos y, en una fase futura, permitir que CLAUDE los analice y eventualmente administre/corrija automáticamente.
+
+IMPORTANTE:
+- El usuario principal de SpanishCue es el PROFESOR, no el alumno.
+- No quiero una solución improvisada o visualmente básica.
+- Tiene que sentirse como parte nativa de un producto premium.
+- Revisá primero la arquitectura actual del proyecto y reutilizá componentes, estilos, base de datos y patrones existentes siempre que tenga sentido.
+- No rompas funcionalidades actuales.
+- Hacé implementación responsive y accesible.
+- Verificá desktop y mobile.
+- No hagas merge ni deploy a producción salvo que te lo pida explícitamente.
+
+==================================================
+1. HOME — BANNER DE “NUEVAS CLASES / NOVEDADES”
+==================================================
+
+En la página principal YA EXISTE una parte superior/hero con la chica/personaje principal.
+
+NO CAMBIAR esa parte superior.
+
+Quiero que INMEDIATAMENTE DEBAJO de esa zona aparezca un bloque promocional para destacar contenido nuevo.
+
+No quiero simplemente un título que diga “Nuevas clases”.
+
+Tiene que ser visualmente atractivo, tipo banner editorial/promocional de una plataforma de contenido.
+
+IDEA:
+
+- “Nuevas clases”
+- “Recién llegado”
+- “Nuevo en SpanishCue”
+- “Lo último”
+- o copy equivalente que encaje mejor con el producto.
+
+Debe permitir destacar varias clases o novedades.
+
+Podría funcionar como:
+- carrusel horizontal,
+- slider,
+- cards promocionales grandes,
+- o una combinación elegante.
+
+Elegí la solución que mejor encaje con la UI existente.
+
+Debe poder mostrar, por ejemplo:
+
+NUEVA CLASE
+Hablar sin cortar
+Fonética · A1–C2
+[Explorar clase]
+
+y pasar luego a otra clase nueva.
+
+REQUISITOS:
+
+- Que llame la atención sin parecer publicidad barata.
+- Que sea claramente visible apenas entrás.
+- Que tenga imágenes/previews reales de las clases cuando existan.
+- Mostrar título, categoría, nivel y CTA.
+- Poder navegar manualmente entre novedades.
+- Si hay auto-rotación, que sea lenta y no molesta.
+- Pausar/interrumpir correctamente la rotación cuando el usuario interactúa.
+- Touch/swipe en mobile si corresponde.
+- No hacer un carrusel infinito agresivo.
+- No saturar la home.
+- Mantener excelente performance.
+- Evitar layout shift.
+
+MUY IMPORTANTE:
+No hardcodear todo de una manera que después requiera modificar el componente manualmente cada vez que agregamos una clase.
+
+Preparar una estructura/data source razonable para poder marcar clases como:
+- new
+- featured
+- announcement
+
+o el equivalente que encaje mejor con la arquitectura actual.
+
+Si el sistema actual ya tiene metadata de clases, reutilizarla.
+
+Idealmente el banner debe poder alimentarse desde la misma información de las clases.
+
+==================================================
+MASCOTA DE SPANISHCUE
+==================================================
+
+La mascota oficial de SpanishCue debe aparecer e INTERACTUAR con esta nueva sección cuando tenga sentido.
+
+No quiero simplemente pegar el dibujo de la mascota en una esquina.
+
+La mascota debe sentirse integrada a la escena/UI.
+
+Ejemplos:
+- presentando la nueva clase,
+- señalando la card destacada,
+- sosteniendo un cartel “NEW”,
+- apoyándose en el banner,
+- reaccionando visualmente a una novedad,
+- guiando al profesor hacia el CTA.
+
+Usar SIEMPRE la mascota oficial existente del proyecto.
+
+NO inventar otra mascota.
+NO sustituirla por un personaje genérico.
+NO usar el logo como si fuera la mascota.
+
+==================================================
+SPANISHCUE VISUAL RULE — GROUNDED REALISM
+==================================================
+
+CRITICAL ART DIRECTION:
+
+SPANISHCUE must NOT default to futuristic / sci-fi imagery.
+
+Avoid the recurring AI aesthetic of:
+- holograms
+- floating transparent glass blocks
+- glowing neon waveforms
+- cyberpunk lighting
+- futuristic laboratories
+- sci-fi interfaces embedded inside the scene
+- blue energy trails
+- impossible floating objects
+- “Back to the Future” technology
+- generic AI-generated tech environments
+
+Unless the lesson concept EXPLICITLY requires science fiction, DO NOT use these motifs.
+
+The world should feel PHYSICALLY REAL and believable.
+
+Target aesthetic:
+
+REAL PLACE
++
+CINEMATIC PHOTOGRAPHY
++
+PREMIUM EDITORIAL ART DIRECTION
++
+SPANISHCUE INTERACTIVITY
+
+Think:
+a beautifully photographed real environment that could actually exist today.
+
+Use:
+- real architecture
+- real furniture
+- real objects
+- tactile materials
+- natural human-scale proportions
+- believable lighting
+- cinematic composition
+- editorial photography
+- tasteful depth
+- subtle 3D interaction only where appropriate
+
+The mascot may interact playfully with the UI/world, but the environment itself should remain believable.
+
+==================================================
+2. DENTRO DE CADA CLASE — “REPORTAR UN PROBLEMA”
+==================================================
+
+Quiero agregar dentro de las clases una función para reportar errores.
+
+La referencia conceptual es algo como:
+
+“¿Encontraste un error?”
+“Reportalo”
+
+Al tocarlo, se abre un pequeño formulario.
+
+Pero NO copies la UI del screenshot de referencia.
+
+El ejemplo que te pasé se ve:
+- básico,
+- genérico,
+- viejo,
+- poco integrado,
+- demasiado parecido a un formulario cualquiera.
+
+Quiero una versión MUCHÍSIMO mejor diseñada para SpanishCue.
+
+==================================================
+UBICACIÓN
+==================================================
+
+Debe estar disponible dentro de las clases.
+
+Pensá muy bien dónde ponerlo para que:
+
+- sea fácil de encontrar cuando un profesor detecta algo,
+- no interrumpa la experiencia de la clase,
+- no parezca un botón de soporte enorme,
+- no ensucie visualmente cada actividad.
+
+Puede ser algo como:
+
+⚑ ¿Encontraste algo para mejorar?
+
+o
+
+¿Algo no está bien?
+Reportalo en 20 segundos.
+
+o una solución equivalente con mejor UX/copy.
+
+No quiero que parezca una denuncia ni algo negativo.
+
+Tiene que transmitir:
+“SpanishCue mejora constantemente y tu feedback nos ayuda”.
+
+==================================================
+INTERACCIÓN
+==================================================
+
+Al tocar/clickear:
+
+abrir un panel / popover / modal / drawer elegante.
+
+Elegí el patrón que mejor funcione en desktop y mobile.
+
+Debe permitir escribir libremente algo como:
+
+“En la pregunta 3 dice ‘estuvistes’ y debería decir ‘estuviste’.”
+
+o
+
+“Esta respuesta podría aceptar otra opción.”
+
+o
+
+“El audio no corresponde con este ejercicio.”
+
+==================================================
+FORMULARIO
+==================================================
+
+Mantenerlo SIMPLE.
+
+No quiero hacer completar diez campos.
+
+Campo principal:
+
+“¿Qué encontraste?”
+
+placeholder sugerido:
+
+“Contanos qué está mal o qué mejorarías…”
+
+Opcionalmente puede haber categorías rápidas:
+
+- Error de texto
+- Respuesta incorrecta
+- Audio
+- Imagen
+- Instrucción poco clara
+- Problema técnico
+- Sugerencia
+- Otro
+
+Pero no conviertas esto en burocracia.
+
+Agregar CTA claro:
+
+“Enviar reporte”
+
+y feedback inmediato al completar:
+
+“Gracias. Lo vamos a revisar.”
+
+o una variante más SpanishCue.
+
+No usar lenguaje corporativo robótico.
+
+==================================================
+3. CONTEXTO AUTOMÁTICO DEL REPORTE
+==================================================
+
+El profesor NO debería tener que explicar dónde estaba.
+
+Cuando envía el reporte, guardar automáticamente todo el contexto técnicamente disponible.
+
+Por ejemplo:
+
+- report ID
+- teacher/user ID si está autenticado
+- teacher email si corresponde y está permitido por la arquitectura
+- lesson ID
+- lesson slug
+- lesson title
+- lesson level
+- lesson category
+- section/activity ID
+- question ID si existe
+- block/component ID si existe
+- page URL
+- ruta actual
+- texto del reporte
+- categoría seleccionada
+- timestamp
+- app/version/build info si es útil
+- browser/device info básico si es útil para bugs técnicos
+
+NO almacenar información innecesariamente sensible.
+
+==================================================
+4. BASE DE DATOS / STORAGE
+==================================================
+
+ESTO ES IMPORTANTE:
+
+Los reportes NO pueden simplemente enviarse a console.log, email o desaparecer.
+
+Desde esta primera versión quiero que queden guardados persistentemente.
+
+Revisá la infraestructura actual de SpanishCue y usá la solución de persistencia que tenga más sentido dentro del stack actual.
+
+Crear una estructura limpia, por ejemplo conceptualmente:
+
+lesson_reports
+
+con campos similares a:
+
+id
+created_at
+user_id
+lesson_id
+lesson_slug
+section_id
+activity_id
+question_id
+category
+message
+page_url
+status
+ai_status
+resolution
+resolved_at
+
+Adaptalo al stack real del proyecto.
+
+Estados iniciales posibles:
+
+- new
+- reviewing
+- accepted
+- rejected
+- resolved
+
+No hace falta exponer todos al usuario.
+
+==================================================
+5. ÁREA INTERNA PARA REVISAR REPORTES
+==================================================
+
+Crear una vista interna/admin sencilla pero bien hecha para poder consultar esos reportes.
+
+No tiene que ser una plataforma gigantesca todavía.
+
+Quiero poder ver:
+
+- reporte
+- clase
+- actividad/sección
+- categoría
+- fecha
+- profesor que lo reportó cuando corresponda
+- estado
+
+Y poder filtrar por:
+
+- pendientes
+- aceptados
+- rechazados
+- resueltos
+
+Agregar acceso únicamente para usuarios/admin autorizados según el sistema actual de permisos.
+
+NO exponer esta sección públicamente.
+
+==================================================
+6. PREPARARLO PARA CLAUDE — FUTURO
+==================================================
+
+Esto es especialmente importante para la arquitectura.
+
+A FUTURO, quien administrará automáticamente este sistema será CLAUDE.
+
+No ChatGPT.
+
+La idea futura es:
+
+Profesor reporta algo
+↓
+el reporte queda guardado
+↓
+Claude analiza automáticamente el contexto
+↓
+Claude determina si:
+
+A) es un error real,
+B) es una mejora válida,
+C) es una sugerencia subjetiva,
+D) es ruido / incorrecto / no requiere modificación.
+
+Si Claude considera que realmente requiere corrección, a futuro quiero que pueda:
+
+1. localizar exactamente el contenido afectado,
+2. analizar el contexto completo de la clase,
+3. proponer la corrección,
+4. validar que no rompa pedagogía, UX ni código,
+5. modificar el contenido correspondiente,
+6. correr pruebas,
+7. registrar qué cambió,
+8. marcar el reporte como resuelto.
+
+PERO:
+
+NO IMPLEMENTAR AHORA un agente que modifique producción automáticamente.
+
+Eso será otra fase.
+
+Por ahora solamente dejar una arquitectura que no nos obligue a rehacer todo para agregar esta automatización después.
+
+Podrían existir campos preparados como:
+
+ai_status
+ai_analysis
+ai_confidence
+ai_recommended_action
+ai_processed_at
+resolution_type
+resolved_by
+change_reference
+
+Solo agregarlos si tienen sentido técnicamente.
+
+NO sobreingenierizar.
+
+==================================================
+7. POSIBLE FLUJO FUTURO
+==================================================
+
+Diseñá el modelo considerando este futuro flujo:
+
+NEW
+↓
+CLAUDE_ANALYZING
+↓
+VALID_REPORT / INVALID_REPORT / NEEDS_REVIEW
+↓
+CHANGE_PROPOSED
+↓
+VALIDATED
+↓
+RESOLVED
+
+Pero NO hace falta habilitar todo ese flujo ahora.
+
+La versión actual solamente necesita:
+
+Profesor
+→ reporta
+→ se guarda
+→ admin puede verlo y gestionarlo.
+
+==================================================
+8. UX / VISUAL DEL SISTEMA DE REPORTES
+==================================================
+
+Tiene que sentirse como SpanishCue.
+
+No quiero:
+
+- un textarea gris genérico,
+- un modal enorme,
+- una pantalla de soporte externa,
+- una UI tipo Jira,
+- una caja fea ocupando media clase,
+- estilos inconsistentes,
+- elementos visuales que compitan con la actividad.
+
+Quiero:
+
+- microinteracción elegante,
+- buena tipografía,
+- espaciado cuidado,
+- bordes/radius coherentes,
+- excelente jerarquía visual,
+- animaciones sutiles,
+- feedback instantáneo,
+- mobile impecable.
+
+La mascota también puede aparecer de forma MUY SUTIL en el estado de éxito, por ejemplo celebrando que el reporte fue enviado.
+
+No exagerarla.
+
+==================================================
+9. NO CONFUNDIR “REPORTE DE CONTENIDO” CON BUG REPORT
+==================================================
+
+La función debe poder recibir tanto:
+
+CONTENT ISSUE:
+“Hay una respuesta incorrecta.”
+
+como:
+
+IMPROVEMENT:
+“Esta instrucción podría ser más clara.”
+
+como:
+
+TECHNICAL ISSUE:
+“El audio no reproduce.”
+
+La arquitectura debería permitir diferenciar estos casos.
+
+==================================================
+10. SEGURIDAD / SPAM
+==================================================
+
+Evitar abuso del endpoint/formulario.
+
+Aplicar las protecciones razonables que encajen con el stack:
+
+- autenticación cuando corresponda,
+- validación server-side,
+- sanitización,
+- límite razonable de longitud,
+- rate limiting si la infraestructura actual lo permite,
+- no confiar exclusivamente en valores enviados por cliente para IDs sensibles.
+
+No agregues CAPTCHA salvo que realmente sea necesario.
+
+==================================================
+11. DETALLES IMPORTANTES DEL BANNER DE NOVEDADES
+==================================================
+
+También quiero que esta sección pueda servir más adelante no solamente para clases nuevas sino para:
+
+- nueva colección,
+- nueva función,
+- Modo Play nuevo,
+- actualización importante,
+- contenido especial.
+
+Por eso la arquitectura podría usar un concepto más amplio como:
+
+featuredUpdates
+
+o equivalente.
+
+Pero visualmente, cuando existan clases nuevas, quiero que la HOME deje CLARÍSIMO que hay contenido nuevo disponible.
+
+Podría haber una pequeña etiqueta:
+
+NEW
+
+NUEVO
+
+RECIÉN AGREGADO
+
+etc.
+
+Mantener la estética premium, sin convertir todo en rojo brillante o badges por todos lados.
+
+==================================================
+12. ANIMACIÓN / MOVIMIENTO
+==================================================
+
+El banner puede tener movimiento, pero con criterio.
+
+Permitido:
+
+- transición suave entre cards,
+- pequeño movimiento de la mascota,
+- parallax mínimo,
+- entrada elegante,
+- hover interactivo.
+
+Evitar:
+
+- autoplay rápido,
+- elementos saltando,
+- glow futurista,
+- animaciones permanentes que distraigan,
+- exceso de motion.
+
+Respetar prefers-reduced-motion.
+
+==================================================
+13. RESPONSIVE
+==================================================
+
+Verificar especialmente:
+
+DESKTOP:
+- 1440px
+- 1280px
+- 1024px
+
+TABLET
+
+MOBILE:
+- ~390px
+- ~430px
+
+El banner no debe volverse una miniatura ilegible.
+
+El sistema de reportes debe ser muy cómodo con touch.
+
+==================================================
+14. IMPLEMENTACIÓN
+==================================================
+
+Antes de cambiar código:
+
+1. inspeccioná la arquitectura actual,
+2. identificá:
+   - home,
+   - componentes de lesson/class,
+   - routing,
+   - auth,
+   - permisos/admin,
+   - storage/database,
+   - metadata de lessons,
+   - componentes UI reutilizables,
+   - sistema actual de mascot assets,
+3. decidí la implementación mínima y sólida.
+
+NO crees sistemas paralelos si ya existe infraestructura equivalente.
+
+==================================================
+15. TESTING
+==================================================
+
+Agregar/actualizar tests relevantes.
+
+Comprobar como mínimo:
+
+HOME:
+- banner aparece debajo del hero actual,
+- muestra contenido marcado como nuevo/featured,
+- links llevan a la clase correcta,
+- navegación funciona,
+- mobile funciona,
+- no rompe el hero actual.
+
+REPORTES:
+- formulario abre/cierra correctamente,
+- envío válido funciona,
+- datos quedan persistidos,
+- lesson/activity context se guarda,
+- usuario no puede enviar payload inválido,
+- estado de éxito funciona,
+- error de red tiene feedback correcto,
+- admin puede leer los reportes,
+- usuario no autorizado NO puede acceder al área admin.
+
+Verificar también que las clases existentes sigan funcionando.
+
+==================================================
+16. COPY
+==================================================
+
+El producto está orientado principalmente a profesores de español.
+
+No llenar la UI de textos explicativos.
+
+Usar microcopy corta, clara y natural.
+
+Ejemplos orientativos, NO obligación literal:
+
+HOME:
+
+“Nuevas clases”
+“Lo nuevo en SpanishCue”
+“Recién agregado”
+
+REPORT:
+
+“¿Encontraste algo para mejorar?”
+“Reportar un problema”
+“Contanos qué encontraste”
+“Enviar reporte”
+“Gracias. Ya quedó registrado.”
+
+==================================================
+17. RESULTADO ESPERADO
+==================================================
+
+Quiero terminar con:
+
+A) una home que comunique inmediatamente que SpanishCue recibe contenido nuevo continuamente,
+
+B) un sistema de feedback dentro de cada clase que haga sentir al profesor que el producto está vivo y mejora,
+
+C) una base de datos real de reportes,
+
+D) una pequeña interfaz interna donde administrarlos,
+
+E) una arquitectura lista para que, en una segunda fase, CLAUDE pueda analizar esos reportes automáticamente y participar en el mantenimiento del contenido.
+
+==================================================
+ENTREGA
+==================================================
+
+Implementalo completamente en una rama nueva.
+
+Al terminar:
+
+- indicá qué archivos/componentes cambiaste,
+- explicá brevemente el modelo de datos creado,
+- indicá dónde queda la vista admin,
+- indicá cómo se determina qué aparece en “Nuevas clases”,
+- listá los tests ejecutados y sus resultados,
+- verificá visualmente desktop + mobile,
+- incluí screenshots si el entorno lo permite,
+- commit y push de la rama.
+
+NO MERGE.
+NO DEPLOY A PRODUCCIÓN.
