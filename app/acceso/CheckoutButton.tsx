@@ -220,7 +220,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       <button className="checkout-card-button" type="button" onClick={checkoutPaddle} disabled={busy || !founder.available}>
         {status === "paddle" || status === "confirming"
           ? (locale === "es" ? "Procesando pago…" : "Processing payment…")
-          : <span className="checkout-button-content"><span>{locale === "es" ? `Pagar con tarjeta · US${founder.priceUsd.toFixed(2)}/mes` : `Pay by card · US${founder.priceUsd.toFixed(2)}/month`}</span><span className="card-brands" aria-hidden="true"><span className="brand-visa">VISA</span><span className="brand-mastercard"><i></i><i></i></span><span className="brand-amex">AMEX</span></span></span>}
+          : <span className="checkout-button-content"><span>{locale === "es" ? `Pagar con tarjeta · US$${founder.priceUsd.toFixed(2)}/mes` : `Pay by card · US$${founder.priceUsd.toFixed(2)}/month`}</span><span className="card-brands" aria-hidden="true"><span className="brand-visa">VISA</span><span className="brand-mastercard"><i></i><i></i></span><span className="brand-amex">AMEX</span></span></span>}
       </button>
     )}
 
