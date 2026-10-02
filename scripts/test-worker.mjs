@@ -8,6 +8,7 @@ const config='dist/server/wrangler.json';
 const shim=`--require ${resolvePath('scripts/network-interfaces-shim.cjs')}`;
 const workerEnv={...process.env,NODE_OPTIONS:[process.env.NODE_OPTIONS,shim].filter(Boolean).join(' '),WRANGLER_SEND_METRICS:'false'};
 let server;
+let workerOutput='';
 const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});
 try{
  await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);
@@ -16,9 +17,18 @@ try{
  await run(['--test','tests/firebase-admin-worker.test.mjs']);
  for(const migration of (await readdir('drizzle')).filter(f=>f.endsWith('.sql')).sort())await run([cli,'d1','execute','site-creator-d1','--local','--config',config,'--persist-to',state,'--file',`drizzle/${migration}`]);
  server=spawn(process.execPath,[cli,'dev','--config',config,'--port','0','--ip','127.0.0.1','--local','--persist-to',state],{env:workerEnv,stdio:['ignore','pipe','pipe']});
+ for(const stream of [server.stdout,server.stderr])stream.on('data',chunk=>{workerOutput=(workerOutput+chunk.toString()).slice(-12000)});
  const origin=await new Promise((resolve,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error(`Worker startup timed out: ${output.slice(-2400)}`)),Number(process.env.SPANISHCUE_TEST_WORKER_TIMEOUT_MS)||30000);function read(chunk){output+=chunk.toString();const m=output.match(/Ready on (http:\/\/127\.0\.0\.1:\d+)/);if(m){clearTimeout(timer);resolve(m[1])}}server.stdout.on('data',read);server.stderr.on('data',read);server.once('error',reject);server.once('exit',code=>{clearTimeout(timer);reject(new Error(`Worker exited ${code}: ${output.slice(-1200)}`))})});
+ // Wrangler's listening announcement precedes completion of the first app render.
+ // Establish real HTTP readiness before running security assertions.
+ let ready=false,lastReadinessError;
+ for(let attempt=0;attempt<4&&!ready;attempt++){
+  try{const response=await fetch(origin+'/',{headers:{connection:'close'},signal:AbortSignal.timeout(15000)});const html=await response.text();if(response.status!==200||!/SPANISHCUE/i.test(html))throw new Error('Worker readiness response '+response.status);ready=true;}
+  catch(error){lastReadinessError=error;}
+ }
+ if(!ready)throw new Error('Worker never completed its HTTP readiness render',{cause:lastReadinessError});
  await run(['--test','tests/lesson-reports-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/country-flagships.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/autoestudio-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/conversation-family-rendering.test.mjs','tests/conversation-families.test.mjs','tests/conversation-variants.test.mjs','tests/uk-relief-levels.test.mjs','tests/conversation-resources.test.mjs','tests/conversation-family-routes.test.mjs','tests/ads-readiness.test.mjs','tests/backend-contract.test.mjs','tests/billing-lifecycle.test.mjs','tests/purchase-claims.test.mjs','tests/paddle-diagnostics.test.mjs','tests/build-packaging.test.mjs','tests/marketing-conversion.test.mjs','tests/teacher-access.test.mjs','tests/library-filters.test.mjs','tests/level-cleanup.test.mjs','tests/personal-trainer.test.mjs','tests/rendered-html.test.mjs','tests/verbal-help-contract.test.mjs','tests/verbal-system-contract.test.mjs','tests/spanishcue-brand.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
-}finally{if(server&&server.exitCode===null){server.kill('SIGTERM');await new Promise(resolve=>{server.once('exit',resolve);setTimeout(()=>{server.kill('SIGKILL');resolve()},3000).unref()})}await rm(state,{recursive:true,force:true})}
+}catch(error){console.error('Local Worker diagnostic output:\n'+workerOutput);throw error;}finally{if(server&&server.exitCode===null){server.kill('SIGTERM');await new Promise(resolve=>{server.once('exit',resolve);setTimeout(()=>{server.kill('SIGKILL');resolve()},3000).unref()})}await rm(state,{recursive:true,force:true})}
