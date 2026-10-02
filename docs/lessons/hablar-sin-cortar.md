@@ -18,7 +18,17 @@ Para otra clase: definir sus contenidos/recorridos y niveles con el contrato `Wo
 
 El selector acepta `?level=`, recuerda solamente el nivel localmente y actualiza la URL sin navegar. Una URL inválida usa A1; una URL válida tiene prioridad sobre la preferencia guardada. Las flechas, Home y End operan como grupo de radios. En móvil hay selector compacto con cierre por Escape.
 
-Al cambiar de nivel se conserva la etapa amplia y el modo profe, y se eliminan respuestas, reproducciones registradas, ayudas, marcas de producción y observaciones. Una devolución de audio de otro nivel se ignora. Los intentos se separan por nivel/actividad. Reiniciar borra el recorrido. No se graba, sube, analiza ni guarda voz.
+Al cambiar de nivel se conserva la etapa amplia y el modo profe, y se eliminan respuestas, reproducciones registradas, ayudas, marcas de producción y observaciones. Una devolución de audio de otro nivel se ignora. Los intentos se separan por nivel/actividad. Reiniciar borra el recorrido. El nuevo turno de micrófono conserva la toma solo en memoria del navegador durante la visita y revoca el enlace al cambiar de actividad. No se guarda audio en D1 ni se manda a analytics.
+
+## Reparación del turno oral (2026-10-02)
+
+El flujo inicial de cada actividad ahora es escuchar el modelo y decir la frase en un micrófono real. La grabación dura hasta 29 segundos, se puede detener y reproducir, y los ejercicios anteriores quedan disponibles después de la toma en «Explorar esta escucha». El desafío final permite grabar una muestra de hasta 30 segundos y continuar la tarea larga con el profesor. Una denegación del micrófono ofrece reintentar o práctica manual, sin simular una evaluación.
+
+`SpeechAttempt.tsx` captura la toma y convierte el audio decodificado a WAV PCM mono de 16 kHz. `audio-signal.mjs` mide envolvente RMS en tramos de 20 ms y silencios de al menos 180 ms. El endpoint `/api/phonetics/speech-attempt` exige sesión PRO verificada y origen propio, valida el formato y límite de 30 segundos, y consulta Azure Speech Fast Transcription con `es-AR` y tiempos por palabra si están configuradas las variables privadas `AZURE_SPEECH_KEY` y `AZURE_SPEECH_REGION` en el Worker. No se coloca ninguna credencial en el navegador. El resultado síncrono no se conserva en la app.
+
+`speech-analysis.mjs` compara palabras normalizadas antes de juzgar la continuidad. Si falta una palabra, ofrece repetir el modelo; si el audio es corto o silencioso, solicita otro intento. Para una frontera explícita de la actividad, una separación de al menos 300 ms **y** un silencio local coincidente de al menos 180 ms produce una corrección de pausa; una separación de hasta 180 ms sin silencio coincidente permite una devolución positiva. Valores intermedios, tiempos por palabra ausentes o transcripción insegura reciben una respuesta incierta. No hay puntuación de acento ni juicio de variedad. En tareas de habla libre, la transcripción sirve de apoyo y la devolución sigue siendo humana. Los parámetros `analysisTarget` y `analysisBoundary` dejan el objetivo separado de la captura y del proveedor.
+
+Sin las dos variables privadas, la interfaz muestra expresamente que no hay corrección automática y conserva grabar, escuchar y practicar con el profesor. La activación de Azure requiere una cuenta de Speech con Fast Transcription en una región compatible y configurar ambas variables como secreto y variable del Worker de staging y producción, respectivamente; nunca compartir la clave en chat ni en el repositorio. Referencia de formato, locales y autenticación: Microsoft Learn, «Use the fast transcription API».
 
 ## Contenido por nivel
 
