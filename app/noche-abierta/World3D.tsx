@@ -44,7 +44,7 @@ type Prompt = { id: string; key: string; verb: string; name: string };
 
 const names: Record<string, string> = Object.fromEntries(LOCATIONS.map(item => [item.id, item.name]));
 const titles: Record<string, string> = Object.fromEntries(LOCATIONS.flatMap(item => item.activities.map(activity => [`${item.id}/${activity.id}`, activity.title])));
-const HELP_LINES = ['WASD / FLECHAS · CORRER', 'SHIFT · MÁS RÁPIDO', 'ALT · CAMINAR', 'E · INTERACTUAR', 'ARRASTRAR · GIRAR LA CÁMARA', 'V · CÁMARA', 'M · MAPA', 'ESC · SALIR'];
+const HELP_LINES = ['WASD / FLECHAS · CORRER', 'SHIFT · MÁS RÁPIDO', 'ALT · CAMINAR', 'ESPACIO · SALTAR', 'E · INTERACTUAR', 'ARRASTRAR · GIRAR LA CÁMARA', 'V · CÁMARA', 'M · MAPA', 'ESC · SALIR'];
 const CARD_WIDTH = 440;
 
 const faceTo = (from: { x: number; z: number }, to: { x: number; z: number }) => Math.atan2(to.x - from.x, to.z - from.z);
@@ -169,7 +169,7 @@ export default function World3D(props: WorldProps) {
       scene.add(rig.group);
       return rig;
     });
-    const trafficBoxes: Box[] = TRAFFIC.map(() => ({ x0: 0, x1: 0, z0: 0, z1: 0, vehicle: 'trafico' }));
+    const trafficBoxes: Box[] = TRAFFIC.map(() => ({ x0: 0, x1: 0, z0: 0, z1: 0, vehicle: 'trafico', top: 1.6 }));
     boxes.push(...trafficBoxes);
 
     // Rain for the rainy-night event.
@@ -187,7 +187,7 @@ export default function World3D(props: WorldProps) {
     scene.add(rain);
 
     const sim = {
-      player: { x: SPAWN.x, z: SPAWN.z, heading: SPAWN.heading, speed: 0, moving: false },
+      player: { x: SPAWN.x, z: SPAWN.z, heading: SPAWN.heading, speed: 0, y: 0, vy: 0, jumpHeld: false, moving: false },
       y: 0,
       turn: 0,
       mode: 'intro' as Mode,
@@ -273,7 +273,7 @@ export default function World3D(props: WorldProps) {
     const roomSpots = (): Spot[] => (sim.room ? [...sim.room.hotspots, sim.room.exit] : []);
 
     const placePlayer = (x: number, z: number, heading: number, y = 0) => {
-      Object.assign(sim.player, { x, z, heading, speed: 0, moving: false });
+      Object.assign(sim.player, { x, z, heading, speed: 0, y: 0, vy: 0, jumpHeld: false, moving: false });
       sim.y = y;
       placePerson(hero, x, z, heading, y);
     };
@@ -284,7 +284,7 @@ export default function World3D(props: WorldProps) {
     };
     const followShot = (snap = false) => {
       const f = followCamera(sim.player, sim.room ? ROOM_PRESET : CAMERA_PRESETS[sim.preset], sim.yaw, sim.room?.bounds ?? null);
-      setShot(f.x, f.y + sim.y, f.z, f.look.x, f.look.y + sim.y, f.look.z, snap);
+      setShot(f.x, f.y + sim.y + (sim.player.y || 0), f.z, f.look.x, f.look.y + sim.y + (sim.player.y || 0), f.look.z, snap);
     };
     const showIndoor = (stage: string | null) => {
       sim.indoor = stage;
@@ -714,9 +714,10 @@ export default function World3D(props: WorldProps) {
         }
         const before = sim.player.heading;
         const next = stepPlayer(sim.player, { ...input, yaw: sim.yaw }, dt, sim.room ? sim.room.solids : boxes, sim.room?.bounds);
+        sim.held.delete("jump");
         Object.assign(sim.player, next);
         sim.turn = dt > 0 ? angleBetween(before, next.heading) / dt : 0;
-        placePerson(hero, next.x, next.z, next.heading);
+        placePerson(hero, next.x, next.z, next.heading, sim.y + next.y);
         if (!sim.dragging && sim.clock - sim.dragAt > 1.2) sim.yaw = followYaw(sim.yaw, next.heading, next.speed, dt);
         followShot();
         sim.target = nearestTarget(sim.player, sim.room ? roomSpots() : liveTargets());
@@ -972,6 +973,7 @@ export default function World3D(props: WorldProps) {
     if (action === 'vehicle') { if (!event.repeat) controls.interact('F'); return; }
     if (action === 'camera') { if (!event.repeat) controls.cycleCamera(); return; }
     if (action === 'map') { if (!event.repeat) setMapOpen(value => !value); return; }
+    if (action === 'jump' && event.repeat) return;
     controls.held.add(action);
   }, []);
   const onKeyUp = useCallback((event: ReactKeyboardEvent<HTMLDivElement>) => {
@@ -1007,7 +1009,7 @@ export default function World3D(props: WorldProps) {
     <div className="na-world-canvas" ref={mount} />
     <div className="na-fade" ref={fader} aria-hidden="true" />
     {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
-    <p id="na-world-help" className="na-sr">Barrio en 3D. Corré con W, A, S y D o con las flechas; Shift va más rápido y Alt camina. Acercate a un lugar o a una persona y tocá E para interactuar, F para subir o bajar del taxi. Arrastrá con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
+    <p id="na-world-help" className="na-sr">Barrio en 3D. Corré con W, A, S y D o con las flechas; Shift va más rápido, Alt camina y la barra espaciadora salta. Acercate a un lugar o a una persona y tocá E para interactuar, F para subir o bajar del taxi. Arrastrá con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
     <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Tocá ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
     {prompt && walking && <button ref={promptEl} type="button" tabIndex={-1} className="na-prompt3d" onClick={() => api.current?.interact(prompt.key as 'E' | 'F')}>
       <kbd>{prompt.key}</kbd><span>{prompt.verb}</span><small>{prompt.name}</small>
@@ -1018,6 +1020,7 @@ export default function World3D(props: WorldProps) {
     {walking && <div className="na-world-tools">
       {!touch && <button type="button" className="na-chip" aria-pressed={help} onClick={() => setHelp(value => !value)}>Controles</button>}
       {mode === 'walk' && <button type="button" className="na-chip" aria-pressed={mapOpen} onClick={() => setMapOpen(value => !value)}>Mapa</button>}
+      <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.held.add("jump"); }}>Saltar ↑</button>
       <button type="button" className="na-chip" onClick={() => api.current?.cycleCamera()}>Cámara</button>
     </div>}
     {mapOpen && mode === 'walk' && <canvas ref={minimap} className="na-minimap" width={176} height={176} aria-label="Mapa del barrio" role="img" />}

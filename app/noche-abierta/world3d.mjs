@@ -243,7 +243,7 @@ export function colliders() {
     const along = Math.abs(Math.cos(v.heading)) > 0.5;
     const hx = (along ? VEHICLE_SIZE.length : VEHICLE_SIZE.width) / 2;
     const hz = (along ? VEHICLE_SIZE.width : VEHICLE_SIZE.length) / 2;
-    boxes.push({ x0: v.x - hx, x1: v.x + hx, z0: v.z - hz, z1: v.z + hz, vehicle: v.id });
+    boxes.push({ x0: v.x - hx, x1: v.x + hx, z0: v.z - hz, z1: v.z + hz, vehicle: v.id, top: 1.6 });
   }
   const f = PLAZA.fountain;
   boxes.push({ x0: f.x - f.r, x1: f.x + f.r, z0: f.z - f.r, z1: f.z + f.r });
@@ -308,12 +308,34 @@ export function stepPlayer(player, input, dt, boxes = SOLIDS, bounds = WORLD_BOU
   const dx = Math.sin(heading) * speed * step;
   const dz = Math.cos(heading) * speed * step;
   let { x, z } = player;
-  if (!blocked(x + dx, z, boxes, PLAYER_RADIUS, bounds)) x += dx;
-  if (!blocked(x, z + dz, boxes, PLAYER_RADIUS, bounds)) z += dz;
+  const oldY = player.y || 0;
+  const contains = (b, px, pz) => px > b.x0 - PLAYER_RADIUS && px < b.x1 + PLAYER_RADIUS && pz > b.z0 - PLAYER_RADIUS && pz < b.z1 + PLAYER_RADIUS;
+  const support = boxes.reduce((h, b) => b.vehicle && contains(b, x, z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h, b.top ?? 1.6) : h, 0);
+  let vy = player.vy || 0;
+  if (input.jump && !player.jumpHeld && oldY <= support + 0.001) vy = 10.5;
+  let y = oldY + vy * step - 9 * step * step;
+  vy -= 18 * step;
+  if (y <= support) { y = support; vy = 0; }
+  const activeBoxes = boxes.filter(b => !b.vehicle || y < (b.top ?? 1.6) - 0.001);
+  // A moving car can enter the avatar's footprint. Resolve that overlap
+  // toward the nearest clear side instead of rejecting every escape step.
+  for (const b of activeBoxes) {
+    if (!b.vehicle || !contains(b, x, z)) continue;
+    const candidates = [
+      { x: b.x0 - PLAYER_RADIUS - 0.002, z }, { x: b.x1 + PLAYER_RADIUS + 0.002, z },
+      { x, z: b.z0 - PLAYER_RADIUS - 0.002 }, { x, z: b.z1 + PLAYER_RADIUS + 0.002 },
+    ].sort((a,c) => Math.hypot(a.x-x,a.z-z)-Math.hypot(c.x-x,c.z-z));
+    const clear = candidates.find(c => !blocked(c.x,c.z,activeBoxes,PLAYER_RADIUS,bounds));
+    if (clear) { x = clear.x; z = clear.z; }
+  }
+  if (!blocked(x + dx, z, activeBoxes, PLAYER_RADIUS, bounds)) x += dx;
+  if (!blocked(x, z + dz, activeBoxes, PLAYER_RADIUS, bounds)) z += dz;
+  const floor = boxes.reduce((h,b) => b.vehicle && contains(b,x,z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h,b.top ?? 1.6) : h, 0);
+  if (y <= floor) { y = floor; vy = 0; }
   const moved = Math.hypot(x - player.x, z - player.z);
   // Against a wall the legs stop too: speed is what actually moved.
   const real = step > 0 ? Math.min(speed, moved / step) : 0;
-  return { x, z, heading, speed: real, moving: moved > 1e-4 };
+  return { x, z, y, vy, jumpHeld: Boolean(input.jump), heading, speed: real, moving: moved > 1e-4 };
 }
 
 // The camera drifts back behind the avatar while it runs away from the
@@ -397,7 +419,8 @@ export function keyAction(code) {
     case "KeyD": case "ArrowRight": return "right";
     case "ShiftLeft": case "ShiftRight": return "sprint";
     case "AltLeft": case "AltRight": return "walk";
-    case "KeyE": case "Enter": case "Space": return "interact";
+    case "Space": return "jump";
+    case "KeyE": case "Enter": return "interact";
     case "KeyF": return "vehicle";
     case "KeyV": return "camera";
     case "KeyM": return "map";
@@ -412,6 +435,7 @@ export function inputFrom(held) {
     y: (held.has("forward") ? 1 : 0) - (held.has("back") ? 1 : 0),
     sprint: held.has("sprint"),
     walk: held.has("walk"),
+    jump: held.has("jump"),
   };
 }
 

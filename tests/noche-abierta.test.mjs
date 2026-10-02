@@ -246,9 +246,9 @@ test('places with people or objects open on their list; closing an activity goes
   state = engine.openActivity(state, 'kenji');
   let view = engine.currentView(state);
   assert.equal(view.beat.media.type, 'quote');
-  assert.equal(view.total, 3, 'a question and two follow-ups');
+  assert.equal(view.total, 6, 'conversation, decision, consequence and reflection');
   state = engine.advanceBeat(engine.advanceBeat(state));
-  assert.equal(engine.currentView(state).last, true);
+  assert.equal(engine.currentView(state).last, false, 'the decision and reflection still follow');
   state = engine.closeActivity(state);
   assert.equal(state.phase, 'encuentro');
   assert.equal(state.activity, null);
@@ -291,7 +291,7 @@ test('conditions pile up one by one in the broken-car game', () => {
     assert.equal(beat.media.now, activity.conditions[i].text);
     state = engine.advanceBeat(state);
   }
-  assert.equal(engine.currentView(state).last, true);
+  assert.equal(engine.currentView(state).last, false, "decision and reflection follow the conditions");
   assert.match(engine.currentView(state).beat.prompt, /«si»/);
 });
 
@@ -409,7 +409,7 @@ test('the rendered lesson: one question at a time, compact options, help folded,
   assert.match(result, /class="na-outcome"/);
   assert.match(result, /Cada uno paga lo suyo/);
   assert.equal((result.match(/class="na-ask"/g) || []).length, 1);
-  assert.match(result, />Seguir</);
+  assert.match(result, /aria-label="Pregunta siguiente"/);
 
   const hub = render(engine.openLocation(engine.startExploring(engine.initialState()), 'plaza'));
   assert.equal((hub.match(/<li><button type="button"/g) || []).length, 7, 'seven people to talk to');
@@ -587,11 +587,11 @@ test('3D world: traffic keeps moving, stops for the learner and loops', () => {
 test('3D world: keys map to the documented controls and never fire while typing', () => {
   const { keyAction, inputFrom, canUseKeys } = world;
   const expected = { KeyW: 'forward', ArrowUp: 'forward', KeyS: 'back', ArrowDown: 'back', KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right',
-    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map' };
+    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map', Space: 'jump' };
   for (const [code, action] of Object.entries(expected)) assert.equal(keyAction(code), action, code);
   assert.equal(keyAction('KeyQ'), null);
-  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false });
-  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false, jump: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false, jump: false });
   assert.equal(canUseKeys({ tagName: 'INPUT' }), false);
   assert.equal(canUseKeys({ tagName: 'TEXTAREA' }), false);
   assert.equal(canUseKeys({ tagName: 'DIV', isContentEditable: true }), false);

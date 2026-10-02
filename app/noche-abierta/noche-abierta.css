@@ -216,7 +216,7 @@
 .na-help-toggle.is-open::before { background: #1a130e22; }
 
 .na-card-foot { display: flex; flex-wrap: wrap; row-gap: 8px; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 14px 14px 20px; margin-top: 4px; border-top: 1px solid #ffffff0f; }
-.na-actions { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-end; gap: 6px; margin-left: auto; }
+.na-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px; margin-left: auto; }
 .na-card-foot .na-secondary { border-color: transparent; color: var(--na-text-2); padding: 0 8px; font-size: 13px; white-space: nowrap; }
 .na-card-foot .na-primary { white-space: nowrap; }
 .na-card-body:focus, .na-card-body:focus-visible, .na-event h2:focus, .na-final h2:focus { outline: none; }
@@ -425,3 +425,8 @@
 
 /* Travel is visible before the consequence card opens. */
 .na-journey { position:absolute; z-index:12; left:50%; bottom:8%; transform:translateX(-50%); width:max-content; max-width:85%; padding:12px 20px; border:1px solid #ffffff30; border-radius:12px; background:#14202eed; color:#fff7e9; font:500 14px/1.5 system-ui,sans-serif; text-align:center; pointer-events:none; }
+
+.na-question-nav { display: flex; align-items: center; gap: 8px; }
+.na-question-nav span { font-size: .8rem; white-space: nowrap; }
+.na-question-nav button { min-width: 44px; min-height: 44px; font-size: 1.2rem; }
+.na-situation-nav { display: flex; justify-content: space-between; gap: 8px; padding: 10px 16px; flex-wrap: wrap; }

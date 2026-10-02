@@ -74,7 +74,7 @@ export function contentFor(level = DEFAULT_LEVEL) {
     level: key,
     ARRIVAL: merge(BASE.ARRIVAL, patch.arrival),
     MECHANICS: BASE.MECHANICS,
-    LOCATIONS: merge(BASE.LOCATIONS, patch.locations),
+    LOCATIONS: key === "B1" ? BASE.LOCATIONS : merge(BASE.LOCATIONS, patch.locations).map(location => ({ ...location, activities: location.activities.map(activity => ({ ...activity, lessonLevel: key })) })),
     CITY_EVENTS: merge(BASE.CITY_EVENTS, patch.events),
     FINAL: merge(BASE.FINAL, patch.final),
     TEACHER_MOVES: merge(BASE.TEACHER_MOVES, patch.teacherMoves),
@@ -85,7 +85,7 @@ export function contentFor(level = DEFAULT_LEVEL) {
 }
 
 // Keys that name things rather than ask for language: they may stay as in B1.
-const SHARED_KEYS = new Set(["id", "name", "short", "type", "title", "object", "year", "who", "from", "time", "kicker", "facts", "mechanic", "more", "minutes", "affects", "hub"]);
+const SHARED_KEYS = new Set(["lessonLevel", "id", "name", "short", "type", "title", "object", "year", "who", "from", "time", "kicker", "facts", "mechanic", "more", "minutes", "affects", "hub"]);
 
 // Every learner-facing string in B1 that a level leaves untouched. Used by the
 // tests (and by whoever writes a level) to make sure a level really rewrites

@@ -94,10 +94,20 @@ export function closeActivity(state) {
 }
 
 // Another situation in the same place (the next one, round the list).
+export function previousActivity(state) {
+  const location = placeOf(state);
+  if (!location || state.phase !== "encuentro") return state;
+  const index = location.activities.findIndex(a => a.id === state.activity);
+  return { ...state, activity: location.activities[(index - 1 + location.activities.length) % location.activities.length].id };
+}
+
+export function previousBeat(state) {
+  return updateProgress(state, (type, activity, progress) => progress.beat > 0 ? { ...progress, beat: progress.beat - 1 } : progress);
+}
+
 export function otherActivity(state) {
   const location = placeOf(state);
   if (!location) return state;
-  if (location.hub) return { ...state, activity: null };
   const encounter = state.encounters[location.id];
   return { ...state, activity: nextFor(location, encounter, state.activity) };
 }
@@ -131,7 +141,7 @@ const TAXI_OUTCOMES = {
 export function worldOutcome(state) {
   if (state.phase !== "encuentro" || state.position !== "taxi") return null;
   const progress = state.encounters.taxi?.acts[state.activity];
-  if (!progress?.choice || progress.beat < 1) return null;
+  if (!progress?.choice) return null;
   const outcome = TAXI_OUTCOMES[state.activity]?.[progress.choice];
   return outcome ? { ...outcome, key: `${state.activity}/${progress.choice}` } : null;
 }
