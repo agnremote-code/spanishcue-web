@@ -33,21 +33,21 @@ try{
  // Launch the actual protected production Worker in the same execution namespace.
  worker=spawn(process.execPath,['node_modules/wrangler/bin/wrangler.js','dev','--config','dist/server/wrangler.json','--port','0','--ip','127.0.0.1','--local'],{env:{...process.env,WRANGLER_SEND_METRICS:'false',NODE_OPTIONS:`--require ${resolve('scripts/network-interfaces-shim.cjs')}`},stdio:['ignore','pipe','pipe']});
  const origin=await new Promise((done,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error('Preview startup timed out: '+output.slice(-800))),40000);const read=chunk=>{output+=chunk;const m=output.match(/Ready on (http:\/\/127\.0\.0\.1:\d+)/);if(m){clearTimeout(timer);done(m[1])}};worker.stdout.on('data',read);worker.stderr.on('data',read);worker.on('exit',code=>{clearTimeout(timer);reject(new Error('Worker exit '+code+' '+output.slice(-800)))})});
- const home=await browser.newPage();home.on('pageerror',e=>console.log('PAGE ERROR',e.message));
+ const home=await browser.newPage();await home.context().addCookies([{url:origin,name:'spanishcue-consent-v1',value:encodeURIComponent(JSON.stringify({version:1,decided:true,preferences:false,analytics:false,marketing:false,updatedAt:new Date().toISOString()}))}]);await home.route('https://**/*',route=>route.abort());home.on('pageerror',e=>console.log('PAGE ERROR',e.message));
  for(const width of [1440,1280,1024,768,430,390]){
-   await home.setViewportSize({width,height:980});const response=await home.goto(origin,{waitUntil:'networkidle'});console.log('HOME',response.status(),await home.title(),(await response.text()).length,JSON.stringify(await response.allHeaders()));if(!await home.locator('.sc-updates').count()){console.log('DOM', (await home.content()).slice(0,1800));console.log('TEXT',(await home.locator('body').innerText()).slice(0,1200));await home.screenshot({path:`${out}/startup-error.png`});}
+   await home.setViewportSize({width,height:980});await home.goto(origin,{waitUntil:'domcontentloaded'});
    const banner=home.locator('.sc-updates');await banner.waitFor();await banner.scrollIntoViewIfNeeded();
    const box=await banner.boundingBox();check(box.width<=width&&box.x>=0,`banner fits ${width}px`);
    check(await home.locator('.sc-update-preview').evaluate(img=>img.complete&&img.naturalWidth>0),`real preview loads ${width}px`);
    check(await home.locator('.sc-update-mascot').evaluate(img=>img.complete&&img.naturalWidth>0),`official mascot loads ${width}px`);
    check(await home.locator('.sc-update-cta').getAttribute('href')==='/hablar-sin-cortar',`correct new-class link ${width}px`);
    check(await home.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`no page overflow ${width}px`);
-   if(width===1440||width===390)await home.screenshot({path:`${out}/home-${width}.png`});
+   if(width===1440||width===390)await banner.screenshot({path:`${out}/home-${width}.png`});
  }
  check(await home.locator('.sc-updates').evaluate(el=>el.previousElementSibling?.className.includes('sc-hero')||!!el.previousElementSibling?.querySelector('[class*="hero"]')),'banner immediately after existing hero');
  await home.getByRole('button',{name:'Siguiente novedad',exact:true}).click();check(await home.locator('.sc-update-copy h2').textContent()==='Noche abierta','manual next works');
  await home.getByRole('button',{name:'Novedad anterior',exact:true}).click();check(await home.locator('.sc-update-copy h2').textContent()==='Hablar sin cortar','manual previous works');
- await home.locator('.sc-updates').dispatchEvent('touchstart',{touches:[{clientX:330,clientY:300}]});await home.locator('.sc-updates').dispatchEvent('touchend',{changedTouches:[{clientX:170,clientY:305}]});check(await home.locator('.sc-update-copy h2').textContent()==='Noche abierta','mobile swipe works');
+ await home.locator('.sc-updates').evaluate(el=>{const start=new Event('touchstart',{bubbles:true});Object.defineProperty(start,'touches',{value:[{clientX:330,clientY:300}]});el.dispatchEvent(start);const end=new Event('touchend',{bubbles:true});Object.defineProperty(end,'changedTouches',{value:[{clientX:170,clientY:305}]});el.dispatchEvent(end)});check(await home.locator('.sc-update-copy h2').textContent()==='Noche abierta','mobile swipe works');
  await home.emulateMedia({reducedMotion:'reduce'});check(await home.locator('.sc-update-copy').evaluate(el=>getComputedStyle(el).animationName==='none'),'reduced motion respected');
  const spoof=await home.request.post(`${origin}/api/lesson-reports`,{headers:{origin,'x-chespanish-user-uid':'spoof','x-chespanish-owner':'1'},data:{lessonId:224,message:'A fake request'}});check(spoof.status()===401,'actual Worker strips spoofed teacher identity');
  const privateApi=await home.request.get(`${origin}/api/admin/lesson-reports`,{headers:{'x-chespanish-owner':'1'}});check(privateApi.status()===403,'actual Worker guards private API');

@@ -6,14 +6,14 @@ export function contextFromElement(element: Element | null): ReportContext {
   const activity=element?.closest('[data-report-activity], [data-activity-id]')||null;
   const question=element?.closest('[data-question-id]')||null;
   const block=element?.closest('article, section')||null;
-  const level=element?.closest('[data-report-level]')||null;
+  const level=element?.closest('[data-report-level], [data-conversation-family][data-level]')||null;
   const heading=block?.querySelector('h2, h3, summary');
   return {
     sectionId:attr(section,'data-report-section')||attr(section,'data-section-id')||section?.id||null,
     activityId:attr(activity,'data-report-activity')||attr(activity,'data-activity-id'),
     questionId:attr(question,'data-question-id'),
     componentId:attr(element?.closest('[data-component-id]')||null,'data-component-id')||block?.id?.slice(0,160)||null,
-    level:attr(level,'data-report-level'),
+    level:attr(level,'data-report-level')||attr(level,'data-level'),
     locationLabel:heading?.textContent?.trim().replace(/\s+/g,' ').slice(0,180)||null,
   };
 }

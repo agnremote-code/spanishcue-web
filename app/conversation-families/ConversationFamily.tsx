@@ -24,7 +24,7 @@ export function ConversationFamily({ id, title, levels, defaultLevel, children }
     window.history.pushState(null, '', conversationLevelUrl(window.location.href, {availableLevels: levels, defaultLevel}, requested));
     window.dispatchEvent(new Event(levelEvent));
   };
-  return <div className="cf-family" data-conversation-family={id} data-level={level} data-report-level={level}>
+  return <div className="cf-family" data-conversation-family={id} data-level={level}>
     <div className="cf-level-bar">
       <div className="cf-family-title"><span>CONVERSACIÓN</span><strong>{title}</strong></div>
       <div className="cf-level-control" role="group" aria-label="Nivel de la conversación">
