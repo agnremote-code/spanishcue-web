@@ -1020,7 +1020,7 @@ export default function World3D(props: WorldProps) {
     {walking && <div className="na-world-tools">
       {!touch && <button type="button" className="na-chip" aria-pressed={help} onClick={() => setHelp(value => !value)}>Controles</button>}
       {mode === 'walk' && <button type="button" className="na-chip" aria-pressed={mapOpen} onClick={() => setMapOpen(value => !value)}>Mapa</button>}
-      <button type="button" className="na-chip" onClick={() => { api.current?.held.add("jump"); container.current?.focus({ preventScroll: true }); }}>Saltar ↑</button>
+      <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.held.add("jump"); }}>Saltar ↑</button>
       <button type="button" className="na-chip" onClick={() => api.current?.cycleCamera()}>Cámara</button>
     </div>}
     {mapOpen && mode === 'walk' && <canvas ref={minimap} className="na-minimap" width={176} height={176} aria-label="Mapa del barrio" role="img" />}
