@@ -98,7 +98,7 @@ function validPlan(runtime) {
       tenure_type: "REGULAR",
       sequence: 1,
       total_cycles: 0,
-      pricing_scheme: { fixed_price: { value: "15.00", currency_code: "USD" } },
+      pricing_scheme: { fixed_price: { value: "15.50", currency_code: "USD" } },
     }],
     payment_preferences: { setup_fee: { value: "0.00", currency_code: "USD" } },
   };
@@ -151,7 +151,7 @@ test("provider identities and checkout locks are isolated by environment", async
   const payment = database.prepare(`INSERT INTO billing_payments (
     user_id, subscription_id, provider, environment, provider_payment_id,
     amount_cents, currency, status, occurred_at, created_at, updated_at
-  ) VALUES ('user-1', ?, 'paypal', ?, 'SALE-SAME', 1500, 'USD', 'COMPLETED', 2, 2, 2)`);
+  ) VALUES ('user-1', ?, 'paypal', ?, 'SALE-SAME', 1550, 'USD', 'COMPLETED', 2, 2, 2)`);
   payment.run(sandboxSubscription, "sandbox");
   payment.run(liveSubscription, "live");
   assert.throws(() => payment.run(sandboxSubscription, "sandbox"), /UNIQUE/);
@@ -215,9 +215,9 @@ test("subscription ownership requires the configured environment, plan and custo
   assert.equal(billing.validatePaypalSubscription(subscription, { subscriptionId: "I-1", userId: "user-1", config: runtime }), true);
   assert.equal(billing.validatePaypalSubscription({ ...subscription, plan_id: "wrong" }, { subscriptionId: "I-1", userId: "user-1", config: runtime }), false);
   assert.equal(billing.validatePaypalSubscription({ ...subscription, custom_id: "user-2" }, { subscriptionId: "I-1", userId: "user-1", config: runtime }), false);
-  assert.equal(billing.validatePaypalPayment({ value: "15.00", currency_code: "USD" }, runtime), true);
+  assert.equal(billing.validatePaypalPayment({ value: "15.50", currency_code: "USD" }, runtime), true);
   assert.equal(billing.validatePaypalPayment({ value: "15.01", currency_code: "USD" }, runtime), false);
-  assert.equal(billing.validatePaypalPayment({ value: "15.00", currency_code: "EUR" }, runtime), false);
+  assert.equal(billing.validatePaypalPayment({ value: "15.50", currency_code: "EUR" }, runtime), false);
 });
 
 test("webhook verification rejects missing headers and provider signature failures", async () => {
@@ -266,7 +266,7 @@ test("ACTIVE alone grants nothing; confirmed payments are first, renewal and ide
   const now = Math.floor(Date.now() / 1000);
   const first = await billing.recordPaypalPayment(db, {
     environment: "sandbox", paypalSubscriptionId: "I-1", providerPaymentId: "SALE-1",
-    providerEventId: "WH-1", amountCents: 1500, currency: "USD", status: "COMPLETED",
+    providerEventId: "WH-1", amountCents: 1550, currency: "USD", status: "COMPLETED",
     occurredAt: now, paidThrough: now + 86400,
   }, runtime);
   assert.equal(first.kind, "first");
@@ -276,7 +276,7 @@ test("ACTIVE alone grants nothing; confirmed payments are first, renewal and ide
 
   const duplicate = await billing.recordPaypalPayment(db, {
     environment: "sandbox", paypalSubscriptionId: "I-1", providerPaymentId: "SALE-1",
-    providerEventId: "WH-DUP", amountCents: 1500, currency: "USD", status: "COMPLETED",
+    providerEventId: "WH-DUP", amountCents: 1550, currency: "USD", status: "COMPLETED",
     occurredAt: now, paidThrough: now + 86400,
   }, runtime);
   assert.equal(duplicate.kind, "duplicate");
@@ -284,7 +284,7 @@ test("ACTIVE alone grants nothing; confirmed payments are first, renewal and ide
 
   const renewal = await billing.recordPaypalPayment(db, {
     environment: "sandbox", paypalSubscriptionId: "I-1", providerPaymentId: "SALE-2",
-    providerEventId: "WH-2", amountCents: 1500, currency: "USD", status: "COMPLETED",
+    providerEventId: "WH-2", amountCents: 1550, currency: "USD", status: "COMPLETED",
     occurredAt: now + 86400, paidThrough: now + 172800,
   }, runtime);
   assert.equal(renewal.kind, "renewal");
@@ -320,14 +320,14 @@ test("refund and reversal revoke only when no completed paid period remains", as
   await billing.createPendingSubscription(db, { environment: "sandbox", userId: "user-1", paypalSubscriptionId: "I-REFUND", planId: runtime.founderPlanId, offerCode: runtime.founderOffer.code });
   const now = Math.floor(Date.now() / 1000);
   for (const [providerPaymentId, paidThrough] of [["SALE-A", now + 86400], ["SALE-B", now + 172800]]) {
-    await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId, amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: now, paidThrough }, runtime);
+    await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId, amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: now, paidThrough }, runtime);
   }
-  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId: "SALE-B", amountCents: 1500, currency: "USD", status: "REFUNDED", occurredAt: now + 1, paidThrough: now + 172800 }, runtime);
+  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId: "SALE-B", amountCents: 1550, currency: "USD", status: "REFUNDED", occurredAt: now + 1, paidThrough: now + 172800 }, runtime);
   assert.equal(database.prepare("SELECT status FROM access_grants WHERE source_reference = 'I-REFUND'").get().status, "active");
-  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId: "SALE-A", amountCents: 1500, currency: "USD", status: "REVERSED", occurredAt: now + 2, paidThrough: now + 86400 }, runtime);
+  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId: "SALE-A", amountCents: 1550, currency: "USD", status: "REVERSED", occurredAt: now + 2, paidThrough: now + 86400 }, runtime);
   assert.equal(database.prepare("SELECT status FROM access_grants WHERE source_reference = 'I-REFUND'").get().status, "inactive");
   assert.equal(database.prepare("SELECT COUNT(*) AS total FROM billing_outbox_events WHERE event_name IN ('subscription_refunded','subscription_reversed')").get().total, 2);
-  const recovered = await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId: "SALE-C", amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: now + 3, paidThrough: now + 259200 }, runtime);
+  const recovered = await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-REFUND", providerPaymentId: "SALE-C", amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: now + 3, paidThrough: now + 259200 }, runtime);
   assert.equal(recovered.kind, "renewal");
   assert.equal(database.prepare("SELECT COUNT(*) AS total FROM billing_outbox_events WHERE event_name = 'first_subscription_paid'").get().total, 1);
   database.close();
@@ -340,7 +340,7 @@ test("failed payment and cancellation preserve only an already paid period; expi
   const runtime = config("sandbox");
   const stamp = Math.floor(Date.now() / 1000);
   await billing.createPendingSubscription(db, { environment: "sandbox", userId: "user-1", paypalSubscriptionId: "I-CANCEL", planId: runtime.founderPlanId, offerCode: runtime.founderOffer.code });
-  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-CANCEL", providerPaymentId: "SALE-CANCEL", amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: stamp, paidThrough: stamp + 86400 }, runtime);
+  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-CANCEL", providerPaymentId: "SALE-CANCEL", amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: stamp, paidThrough: stamp + 86400 }, runtime);
   await billing.applyPaypalSubscriptionLifecycle(db, "sandbox", "I-CANCEL", { status: "SUSPENDED", eventType: "BILLING.SUBSCRIPTION.PAYMENT.FAILED", occurredAt: stamp + 1 });
   assert.equal(database.prepare("SELECT status FROM access_grants WHERE source_reference = 'I-CANCEL'").get().status, "active");
   await billing.applyPaypalSubscriptionLifecycle(db, "sandbox", "I-CANCEL", { status: "CANCELLED", eventType: "BILLING.SUBSCRIPTION.CANCELLED", occurredAt: stamp + 2 });
@@ -348,7 +348,7 @@ test("failed payment and cancellation preserve only an already paid period; expi
   assert.deepEqual({ ...cancelled }, { status: "active", expires_at: stamp + 86400 });
 
   await billing.createPendingSubscription(db, { environment: "sandbox", userId: "user-1", paypalSubscriptionId: "I-EXPIRED", planId: runtime.founderPlanId, offerCode: runtime.founderOffer.code });
-  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-EXPIRED", providerPaymentId: "SALE-EXPIRED", amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: stamp - 90000, paidThrough: stamp - 1 }, runtime);
+  await billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-EXPIRED", providerPaymentId: "SALE-EXPIRED", amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: stamp - 90000, paidThrough: stamp - 1 }, runtime);
   await billing.applyPaypalSubscriptionLifecycle(db, "sandbox", "I-EXPIRED", { status: "EXPIRED", eventType: "BILLING.SUBSCRIPTION.EXPIRED", occurredAt: stamp + 3 });
   assert.equal(database.prepare("SELECT status FROM access_grants WHERE source_reference = 'I-EXPIRED'").get().status, "inactive");
   database.close();
@@ -364,8 +364,8 @@ test("concurrent first payments cannot over-allocate the founder limit", async (
   await billing.createPendingSubscription(db, { environment: "sandbox", userId: "user-2", paypalSubscriptionId: "I-C2", planId: runtime.founderPlanId, offerCode: runtime.founderOffer.code });
   const now = Math.floor(Date.now() / 1000);
   await Promise.all([
-    billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-C1", providerPaymentId: "SALE-C1", amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: now, paidThrough: now + 86400 }, runtime),
-    billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-C2", providerPaymentId: "SALE-C2", amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: now, paidThrough: now + 86400 }, runtime),
+    billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-C1", providerPaymentId: "SALE-C1", amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: now, paidThrough: now + 86400 }, runtime),
+    billing.recordPaypalPayment(db, { environment: "sandbox", paypalSubscriptionId: "I-C2", providerPaymentId: "SALE-C2", amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: now, paidThrough: now + 86400 }, runtime),
   ]);
   assert.equal(database.prepare("SELECT COUNT(*) AS total FROM founder_assignments").get().total, 1);
   assert.equal(database.prepare("SELECT claimed FROM founder_offer_state WHERE offer_code = ?").get(runtime.founderOffer.code).claimed, 1);
@@ -387,7 +387,7 @@ test("Sandbox payments never consume the Live founder allocation", async () => {
     const stamp = Math.floor(Date.now() / 1000);
     await billing.recordPaypalPayment(db, {
       environment, paypalSubscriptionId: subscriptionId, providerPaymentId: `SALE-${environment.toUpperCase()}`,
-      amountCents: 1500, currency: "USD", status: "COMPLETED", occurredAt: stamp, paidThrough: stamp + 86400,
+      amountCents: 1550, currency: "USD", status: "COMPLETED", occurredAt: stamp, paidThrough: stamp + 86400,
     }, runtime);
   }
   const allocations = database.prepare(
