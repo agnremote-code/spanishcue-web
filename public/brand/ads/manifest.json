@@ -159,6 +159,76 @@
   ],
   "assets": [
     {
+      "path": "/brand/spanishcue-hero-online.webp",
+      "title": "Homepage artwork · online",
+      "kind": "hero"
+    },
+    {
+      "path": "/brand/spanishcue-hero-v2.webp",
+      "title": "Homepage artwork · v2",
+      "kind": "hero"
+    },
+    {
+      "path": "/brand/ads/teach-more-square-en.png",
+      "title": "teach more square en",
+      "kind": "ad"
+    },
+    {
+      "path": "/brand/ads/teach-more-portrait-es.png",
+      "title": "teach more portrait es",
+      "kind": "ad"
+    },
+    {
+      "path": "/brand/ads/choose-open-wide-en.png",
+      "title": "choose open wide en",
+      "kind": "ad"
+    },
+    {
+      "path": "/brand/ads/home-public.jpg",
+      "title": "Public homepage screenshot · October 2026",
+      "kind": "screenshot"
+    },
+    {
+      "path": "/brand/ads/library-public.jpg",
+      "title": "Public catalog screenshot · October 2026",
+      "kind": "screenshot"
+    },
+    {
+      "path": "/brand/campaign/conversation.webp",
+      "title": "Campaign artwork · conversation",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/campaign/ele.webp",
+      "title": "Campaign artwork · ele",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/campaign/free-lesson.webp",
+      "title": "Campaign artwork · free-lesson",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/campaign/online.webp",
+      "title": "Campaign artwork · online",
+      "kind": "campaign"
+    },
+    {
+      "path": "/social/spanishcue-og-v2.jpg",
+      "title": "Official social preview",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/ads/spanishcue-logo-light.svg",
+      "title": "SpanishCue wordmark · light",
+      "kind": "logo"
+    },
+    {
+      "path": "/brand/ads/spanishcue-logo-dark.svg",
+      "title": "SpanishCue wordmark · dark",
+      "kind": "logo"
+    },
+    {
       "path": "/brand/mascot/portrait.webp",
       "title": "Official mascot · portrait",
       "kind": "mascot"
@@ -202,76 +272,6 @@
       "path": "/brand/mascot/kneeling.webp",
       "title": "Official mascot · kneeling",
       "kind": "mascot"
-    },
-    {
-      "path": "/brand/campaign/conversation.webp",
-      "title": "Campaign artwork · conversation",
-      "kind": "campaign"
-    },
-    {
-      "path": "/brand/campaign/ele.webp",
-      "title": "Campaign artwork · ele",
-      "kind": "campaign"
-    },
-    {
-      "path": "/brand/campaign/free-lesson.webp",
-      "title": "Campaign artwork · free-lesson",
-      "kind": "campaign"
-    },
-    {
-      "path": "/brand/campaign/online.webp",
-      "title": "Campaign artwork · online",
-      "kind": "campaign"
-    },
-    {
-      "path": "/brand/spanishcue-hero-online.webp",
-      "title": "Homepage artwork · online",
-      "kind": "hero"
-    },
-    {
-      "path": "/brand/spanishcue-hero-v2.webp",
-      "title": "Homepage artwork · v2",
-      "kind": "hero"
-    },
-    {
-      "path": "/social/spanishcue-og-v2.jpg",
-      "title": "Official social preview",
-      "kind": "campaign"
-    },
-    {
-      "path": "/brand/ads/spanishcue-logo-light.svg",
-      "title": "SpanishCue wordmark · light",
-      "kind": "logo"
-    },
-    {
-      "path": "/brand/ads/spanishcue-logo-dark.svg",
-      "title": "SpanishCue wordmark · dark",
-      "kind": "logo"
-    },
-    {
-      "path": "/brand/ads/home-public.jpg",
-      "title": "Public homepage screenshot · October 2026",
-      "kind": "screenshot"
-    },
-    {
-      "path": "/brand/ads/library-public.jpg",
-      "title": "Public catalog screenshot · October 2026",
-      "kind": "screenshot"
-    },
-    {
-      "path": "/brand/ads/teach-more-square-en.png",
-      "title": "teach more square en",
-      "kind": "ad"
-    },
-    {
-      "path": "/brand/ads/teach-more-portrait-es.png",
-      "title": "teach more portrait es",
-      "kind": "ad"
-    },
-    {
-      "path": "/brand/ads/choose-open-wide-en.png",
-      "title": "choose open wide en",
-      "kind": "ad"
     }
   ]
 }
