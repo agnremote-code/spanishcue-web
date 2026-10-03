@@ -69,7 +69,7 @@ const localWords:Record<string,[string,string][]>={
 export const a1Support={
  starters:pairList([['Quiero visitar…','I want to visit…'],['Veo…','I see…'],['Prefiero…','I prefer…'],['Me gusta…','I like…']]),
  connectors:pairList([['y…','and…'],['también…','also…'],['porque…','because…']]),
- depthMoves:pairList([['Decí el nombre de un lugar.','Name one place.'],['Elegí una de dos opciones.','Choose one of two options.'],['Decí qué ves en el mapa.','Say what you see on the map.'],['Preguntá: ¿dónde está?','Ask: where is it?']]),
+ depthMoves:pairList([['Di el nombre de un lugar.','Name one place.'],['Elige una de dos opciones.','Choose one of two options.'],['Di qué ves en el mapa.','Say what you see on the map.'],['Pregunta: ¿dónde está?','Ask: where is it?']]),
  stances:{elegiria:p('Me gusta este lugar.','I like this place.'),depende:p('Quiero ir.','I want to go.'),otra:p('Prefiero otro lugar.','I prefer another place.')},
 };
 export function a1QuestionsFor(area:UKArea):Pair[]{
@@ -82,5 +82,5 @@ export function a1PlacesFor(area:UKArea):UKPlace[]{
 }
 export function a1AreaFor(area:UKArea):UKArea{
  const note=notes[area.code];if(!note)throw new Error(`Missing A1 context for ${area.code}`);
- return {...area,hook:p(note[0],note[1]),fact:p(note[2],note[3]),mission:p('Elegí un lugar y decí qué te gusta.','Choose a place and say what you like.'),words:[...basicWords,...pairList(localWords[area.code])]};
+ return {...area,hook:p(note[0],note[1]),fact:p(note[2],note[3]),mission:p('Elige un lugar y di qué te gusta.','Choose a place and say what you like.'),words:[...basicWords,...pairList(localWords[area.code])]};
 }

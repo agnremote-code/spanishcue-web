@@ -1084,7 +1084,7 @@ export default function ObjectAdventure() {
                       ],
                       [
                         "¿Dónde va en esta construcción?",
-                        "Con presente: antes. Si hay dos, mantenelos juntos.",
+                        "Con presente: antes. Si hay dos, mantenlos juntos.",
                       ],
                     ].map(([q, a], i) => (
                       <article key={q}>

@@ -86,7 +86,7 @@ export const chapters: ConditionalChapter[] = [
     exercises: [
       { prompt: "Si mañana ___ (llover), cancelaremos el picnic.", promptEn: "If it rains tomorrow, we will cancel the picnic.", answer: "llueve", why: "Después de si usamos presente, aunque hablamos del futuro.", whyEn: "After si we use the present, even when we are talking about the future." },
       { prompt: "Te ___ (llamar) si tengo novedades.", promptEn: "I will call you if I have news.", answer: "llamaré / llamo", why: "El resultado admite futuro o presente con sentido futuro.", whyEn: "The result can use the future or the present with a future meaning." },
-      { prompt: "Si ves a Ana, ___ (decirle) que llego tarde.", promptEn: "If you see Ana, tell her I am running late.", answer: "decile / dile", why: "La consecuencia es una orden: imperativo.", whyEn: "The result is a command, so we use the imperative." }
+      { prompt: "Si ves a Ana, ___ (decirle) que llego tarde.", promptEn: "If you see Ana, tell her I am running late.", answer: "dile", why: "La consecuencia es una orden: imperativo.", whyEn: "The result is a command, so we use the imperative." }
     ],
     speaking: [
       { es: "Si tienes un día libre mañana, ¿qué vas a hacer?", en: "If you have a free day tomorrow, what will you do?" },

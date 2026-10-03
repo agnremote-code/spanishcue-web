@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "exemptions": [
+    {
+      "path": "app/condicionales-b1/data.ts",
+      "text": "vivís",
+      "category": "neutral-context",
+      "reason": "Vosotros present indicative of vivir in the complete international paradigm, not a vos default."
+    },
+    {
+      "path": "app/condicionales-b1/data.ts",
+      "text": "No sabía la verdad y decidí lo que decidí.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/condicionales-b1/data.ts",
+      "text": "No aprendí antes y hoy tengo menos libertad.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/condicionales/data.ts",
+      "text": "Variante rioplatense: Si vos ___ (tener) dudas, preguntame.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/condicionales/data.ts",
+      "text": "tenés",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/condicionales/data.ts",
+      "text": "Con vos: tenés. El resultado es una instrucción.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/condicionales/data.ts",
+      "text": "Presentamos situaciones imaginarias, poco probables o directamente contrarias al presente. También sirve para consejos con Si yo fuera tú… (variante rioplatense: Si yo fuera vos…).",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/condicionales/data.ts",
+      "text": "Da un consejo real a otra persona usando Si yo fuera tú… (variante rioplatense: Si yo fuera vos…).",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/condicionales/data.ts",
+      "text": "vivís",
+      "category": "neutral-context",
+      "reason": "Vosotros present indicative of vivir in the complete international paradigm, not a vos default."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "1 CLIENTE · VOS",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "Cliente rioplatense: dirigime con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "HACÉ…",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "MANTENÉ…",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "REPETÍ…",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/entrenador-personal/engine.mjs",
+      "text": "No dormí, pero quiero entrenar fuerte.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/entrenador-personal/engine.mjs",
+      "text": "No dormí nada, pero quiero entrenar.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/grammar-worlds/data-next.ts",
+      "text": "Tú, usted, vosotros y ustedes; vos en zonas voseantes",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/grammar-worlds/data-next.ts",
+      "text": "En gran parte de Hispanoamérica se usa ustedes para el plural; en Argentina, vos es cotidiano.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/grammar-worlds/data-next.ts",
+      "text": "FUI / HICE / COMÍ",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/grammar-worlds/data-next.ts",
+      "text": "viví ayer",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "comí",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "viví",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "dormí · INDEFINIDO",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Viví · INDEFINIDO",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "viví · INDEFINIDO",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Anoche comí pizza.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Viví en México cinco años.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Me levanté → desayuné → salí.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Viví en Londres durante tres años.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "TÚ y VOS tienen la misma forma aquí: hablaste / comiste / viviste.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "TÚ and VOS use the same form here: hablaste / comiste / viviste.",
+      "category": "neutral-context",
+      "reason": "Unchanged English translation inside the bilingual Pair prop, explicitly comparing tú/vos preterite forms."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "me dormí",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Trabajaba cuando recibí un mensaje.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/past-b1/page.tsx",
+      "text": "Llegué. / Comí. / Me fui.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/phrase-labs/data-advanced.ts",
+      "text": "Tomás,",
+      "category": "neutral-context",
+      "reason": "Proper name Tomás in the apposition word-order exercise, not the second-person verb tomar."
+    },
+    {
+      "path": "app/syntax-labs/data.ts",
+      "text": "Aunque perdí el vuelo mañana, llegaré a tiempo.",
+      "category": "neutral-context",
+      "reason": "Intentional tense-mismatch distractor using first-person preterite perdí, not an imperative."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Variante regional: ¿Dónde ___ vos?",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "vivís",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Con vos, vivir forma vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Tú hablás no es estándar: tú hablas; vos hablás.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Viví en Chile en 2022.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Conecta con hoy: Esta mañana perdí el pasaporte.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "De repente entendí todo.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Viví dos años en Lima.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Viví en Madrid dos años.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "abrí",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "comprendí",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Viví en Lima de 2023 a 2025.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Anoche comí…",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Aprendí… cuando…",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "El año pasado decidí…",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Vos usa las mismas formas de indefinido que tú en el estándar general: hablaste, comiste.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Viví en Roma tres años.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Vos no cambia las formas del imperfecto: vos hablabas, comías, vivías.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Las terminaciones son iguales con tú y vos: hablarás.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Elige la persona y la variedad: tú, vos, usted, ustedes o vosotros.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Variante rioplatense: Vení. / Tú: Ven.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Vos/tú son cercanos; usted construye distancia o cortesía.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Variante regional: imperativo afirmativo con vos de hablar…",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "hablá",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Dale tres instrucciones al profesor para preparar un mate o té.",
+      "category": "neutral-context",
+      "reason": "Standard tú imperative da plus indirect-object le; means give it/the teacher, not the regional discourse marker."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Vos: hablá, comé, viví; tú: habla, come, vive.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "En el habla informal, algunas variedades alternan con imperfecto: Yo que vos, no iba.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Descubrí que habían cambiado la reserva.",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "El voseo puede aparecer en la subordinada sin cambiar esta serie: quería que vos vinieras.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
+    },
+    {
+      "path": "app/verbal-system/lesson-data.ts",
+      "text": "Dale tono narrativo formal: Terminó y salió inmediatamente.",
+      "category": "neutral-context",
+      "reason": "Standard tú imperative da plus indirect-object le; means give it/the teacher, not the regional discourse marker."
+    },
+    {
+      "path": "app/verbal-system/positions.ts",
+      "text": "hablé · comí · fui",
+      "category": "neutral-context",
+      "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
+    },
+    {
+      "path": "app/entrenador-personal/PersonalTrainer.tsx",
+      "text": "corregime",
+      "category": "neutral-context",
+      "reason": "Stable internal station ID used by navigation/state, not user-visible copy; visible title is Corrígeme."
+    },
+    {
+      "path": "app/entrenador-personal/engine.mjs",
+      "text": "corregime",
+      "category": "neutral-context",
+      "reason": "Stable internal station ID used by navigation/state, not user-visible copy; visible title is Corrígeme."
+    }
+  ]
+}

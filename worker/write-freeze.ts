@@ -18,7 +18,7 @@ export function writeFreezeResponse(request: Request, value: string | undefined)
   if (!counterWrite && SAFE_METHODS.has(request.method.toUpperCase())) return null;
   if (!counterWrite && !path.startsWith("/api/")) return null;
   return new Response(
-    JSON.stringify({ code: "WRITE_FREEZE", error: "SPANISHCUE está en mantenimiento breve. Intentá de nuevo en unos minutos." }),
+    JSON.stringify({ code: "WRITE_FREEZE", error: "SPANISHCUE está en mantenimiento breve. Inténtalo de nuevo en unos minutos." }),
     {
       status: 503,
       headers: {

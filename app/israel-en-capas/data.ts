@@ -32,8 +32,8 @@ export const topics:IsraelTopic[] = [
       p("¿Cuándo el turismo protege el patrimonio y cuándo empieza a perjudicar la vida de los residentes?","When does tourism protect heritage and when does it begin to harm residents’ lives?"),
       p("¿Cómo contarías la historia de Jerusalén sin presentar una sola versión como la única posible?","How would you tell Jerusalem’s history without presenting one version as the only possible one?"),
       p("Los sonidos, aromas y rituales cambian según el barrio. ¿Qué elemento sensorial te ayuda más a recordar una ciudad?","Sounds, aromas and rituals change from one neighbourhood to another. Which sensory element helps you remember a city most?"),
-      p("Compará una ciudad antigua con una ciudad diseñada recientemente. ¿Cuál permite una vida más humana?","Compare an ancient city with a recently planned city. Which one allows for a more human life?"),
-      p("Tenés un solo día y no querés correr. Diseñá una ruta respetuosa por Jerusalén y justificá qué dejás afuera.","You have only one day and do not want to rush. Design a respectful route through Jerusalem and justify what you leave out."),
+      p("Compara una ciudad antigua con una ciudad diseñada recientemente. ¿Cuál permite una vida más humana?","Compare an ancient city with a recently planned city. Which one allows for a more human life?"),
+      p("Tienes un solo día y no quieres correr. Diseña una ruta respetuosa por Jerusalén y justifica qué dejas afuera.","You have only one day and do not want to rush. Design a respectful route through Jerusalem and justify what you leave out."),
     ]
   },
   {
@@ -49,7 +49,7 @@ export const topics:IsraelTopic[] = [
       p("¿Cómo puede Jaffa conservar su historia sin quedar congelada como una decoración para turistas?","How can Jaffa preserve its history without becoming frozen as decoration for tourists?"),
       p("La vida nocturna genera trabajo y cultura, pero también ruido. ¿Qué acuerdo sería justo para visitantes y residentes?","Nightlife creates jobs and culture, but also noise. What agreement would be fair for visitors and residents?"),
       p("Cuando una ciudad se vuelve muy cara, ¿qué parte de su identidad corre peligro de desaparecer primero?","When a city becomes very expensive, which part of its identity is at risk of disappearing first?"),
-      p("Imaginá un fin de semana sin autos en el centro. ¿Quién gana, quién pierde y qué habría que organizar?","Imagine a car-free weekend in the centre. Who benefits, who loses and what would need to be organised?"),
+      p("Imagina un fin de semana sin autos en el centro. ¿Quién gana, quién pierde y qué habría que organizar?","Imagine a car-free weekend in the centre. Who benefits, who loses and what would need to be organised?"),
     ]
   },
   {
@@ -64,8 +64,8 @@ export const topics:IsraelTopic[] = [
       p("Un puerto conecta una ciudad con el mundo, pero también ocupa mucho espacio. ¿Qué debería recibir la comunidad a cambio?","A port connects a city with the world, but also takes up a lot of space. What should the community receive in return?"),
       p("Haifa suele presentarse como una ciudad diversa. ¿Qué acciones cotidianas demuestran convivencia mejor que un eslogan?","Haifa is often presented as a diverse city. Which everyday actions demonstrate coexistence better than a slogan?"),
       p("¿Los jardines públicos pueden crear calma y contacto entre personas que normalmente no se encuentran?","Can public gardens create calm and contact between people who do not usually meet?"),
-      p("Para conocer una ciudad con desniveles, ¿preferís caminar, usar transporte público o mirar desde arriba? Defendé tu elección.","To explore a city with steep slopes, do you prefer walking, public transport or viewing it from above? Defend your choice."),
-      p("Creá una campaña para Haifa que muestre su diversidad sin reducirla a una imagen perfecta e irreal.","Create a campaign for Haifa that shows its diversity without reducing it to a perfect, unrealistic image."),
+      p("Para conocer una ciudad con desniveles, ¿prefieres caminar, usar transporte público o mirar desde arriba? Defiende tu elección.","To explore a city with steep slopes, do you prefer walking, public transport or viewing it from above? Defend your choice."),
+      p("Crea una campaña para Haifa que muestre su diversidad sin reducirla a una imagen perfecta e irreal.","Create a campaign for Haifa that shows its diversity without reducing it to a perfect, unrealistic image."),
     ]
   },
   {
@@ -80,8 +80,8 @@ export const topics:IsraelTopic[] = [
       p("La restauración puede mejorar edificios y aumentar alquileres. ¿Cómo evitar que los residentes originales tengan que irse?","Restoration can improve buildings and increase rents. How can original residents be protected from having to leave?"),
       p("Akko conserva capas cruzadas, otomanas, árabes y modernas. ¿Cómo debería un museo presentar historias que compiten entre sí?","Akko preserves Crusader, Ottoman, Arab and modern layers. How should a museum present histories that compete with one another?"),
       p("¿La comida callejera ayuda a comprender una ciudad o solamente ofrece una experiencia rápida?","Does street food help people understand a city or only offer a quick experience?"),
-      p("Elegí una parte de una ciudad antigua que jamás modernizarías y otra que sí. Explicá el límite.","Choose one part of an old city you would never modernise and another you would. Explain the boundary."),
-      p("Proponé una mejora para Akko que beneficie al mismo tiempo al patrimonio, a los comerciantes y a los vecinos.","Propose one improvement for Akko that benefits heritage, shopkeepers and residents at the same time."),
+      p("Elige una parte de una ciudad antigua que jamás modernizarías y otra que sí. Explica el límite.","Choose one part of an old city you would never modernise and another you would. Explain the boundary."),
+      p("Propón una mejora para Akko que beneficie al mismo tiempo al patrimonio, a los comerciantes y a los vecinos.","Propose one improvement for Akko that benefits heritage, shopkeepers and residents at the same time."),
     ]
   },
   {
@@ -96,8 +96,8 @@ export const topics:IsraelTopic[] = [
       p("Un lago sirve para beber, cultivar, descansar y mantener ecosistemas. ¿Cómo decidirías el orden de prioridades?","A lake provides drinking water, farming, recreation and ecosystems. How would you decide the order of priorities?"),
       p("¿Qué gana y qué pierde una persona cuando deja una gran ciudad para vivir en un pueblo pequeño?","What does a person gain and lose when leaving a big city to live in a small town?"),
       p("La Galilea reúne comunidades con religiones y lenguas diferentes. ¿Qué espacios pueden facilitar encuentros naturales?","Galilee brings together communities with different religions and languages. Which spaces can facilitate natural encounters?"),
-      p("¿Preferís recorrer una región en auto, en transporte público o a pie? Compará libertad, impacto y contacto humano.","Would you rather explore a region by car, public transport or on foot? Compare freedom, impact and human contact."),
-      p("Diseñá una experiencia de dos días que genere ingresos sin llenar la zona de hoteles y vehículos.","Design a two-day experience that generates income without filling the area with hotels and vehicles."),
+      p("¿Prefieres recorrer una región en auto, en transporte público o a pie? Compara libertad, impacto y contacto humano.","Would you rather explore a region by car, public transport or on foot? Compare freedom, impact and human contact."),
+      p("Diseña una experiencia de dos días que genere ingresos sin llenar la zona de hoteles y vehículos.","Design a two-day experience that generates income without filling the area with hotels and vehicles."),
     ]
   },
   {
@@ -113,7 +113,7 @@ export const topics:IsraelTopic[] = [
       p("¿La tecnología de realidad aumentada mejora una visita histórica o distrae de los restos reales?","Does augmented reality improve a historical visit or distract from the real remains?"),
       p("Cuando la arqueología ocupa una zona costera, ¿cómo se equilibra el patrimonio con el acceso público al mar?","When archaeology occupies a coastal area, how can heritage be balanced with public access to the sea?"),
       p("¿Qué objeto cotidiano actual sería útil para explicar nuestra sociedad dentro de dos mil años?","Which everyday object from today would be useful to explain our society two thousand years from now?"),
-      p("Prepará una visita para alguien que dice que la historia le aburre. ¿Cómo despertarías su curiosidad?","Prepare a visit for someone who says history is boring. How would you awaken their curiosity?"),
+      p("Prepara una visita para alguien que dice que la historia le aburre. ¿Cómo despertarías su curiosidad?","Prepare a visit for someone who says history is boring. How would you awaken their curiosity?"),
     ]
   },
   {
@@ -129,7 +129,7 @@ export const topics:IsraelTopic[] = [
       p("¿Los productos cosméticos basados en recursos naturales deberían pagar una contribución especial para restaurar el ambiente?","Should cosmetic products based on natural resources pay a special contribution to restore the environment?"),
       p("El calor extremo cambia horarios y riesgos. ¿Qué obligaciones tiene un destino turístico con visitantes poco preparados?","Extreme heat changes schedules and risks. What obligations does a tourist destination have towards unprepared visitors?"),
       p("¿Un sitio de memoria debe inspirar orgullo, advertir sobre el pasado o permitir interpretaciones diferentes?","Should a site of memory inspire pride, warn about the past or allow different interpretations?"),
-      p("Organizá un día responsable en esta región: transporte, agua, horarios y una actividad que evitarías.","Plan a responsible day in this region: transport, water, schedule and one activity you would avoid."),
+      p("Organiza un día responsable en esta región: transporte, agua, horarios y una actividad que evitarías.","Plan a responsible day in this region: transport, water, schedule and one activity you would avoid."),
     ]
   },
   {
@@ -144,8 +144,8 @@ export const topics:IsraelTopic[] = [
       p("En un lugar con poca agua, ¿qué hábitos deberían considerarse obligatorios y no solamente voluntarios?","In a place with little water, which habits should be considered compulsory rather than merely voluntary?"),
       p("La energía solar necesita mucho espacio. ¿El desierto es el lugar ideal o también hay ecosistemas que proteger?","Solar energy needs a lot of space. Is the desert the ideal place, or are there ecosystems to protect there too?"),
       p("¿Por qué el silencio y un cielo oscuro se están convirtiendo en recursos turísticos valiosos?","Why are silence and a dark sky becoming valuable tourism resources?"),
-      p("Compará vivir en el desierto con vivir en una ciudad costera. ¿Qué capacidad humana se desarrolla más en cada lugar?","Compare living in the desert with living in a coastal city. Which human ability develops more in each place?"),
-      p("Diseñá un pequeño centro en Makhtesh Ramon: elegí entre ciencia, turismo o vida comunitaria y defendé la prioridad.","Design a small centre at Makhtesh Ramon: choose science, tourism or community life and defend the priority."),
+      p("Compara vivir en el desierto con vivir en una ciudad costera. ¿Qué capacidad humana se desarrolla más en cada lugar?","Compare living in the desert with living in a coastal city. Which human ability develops more in each place?"),
+      p("Diseña un pequeño centro en Makhtesh Ramon: elige entre ciencia, turismo o vida comunitaria y defiende la prioridad.","Design a small centre at Makhtesh Ramon: choose science, tourism or community life and defend the priority."),
     ]
   },
   {
@@ -160,8 +160,8 @@ export const topics:IsraelTopic[] = [
       p("El Mar Rojo conecta varios países. ¿Qué problemas ambientales solamente pueden resolverse con cooperación regional?","The Red Sea connects several countries. Which environmental problems can only be solved through regional cooperation?"),
       p("¿Una ciudad con sol casi todo el año atrae libertad o termina creando una identidad demasiado dependiente del turismo?","Does a city with sunshine almost all year attract freedom, or does it create an identity too dependent on tourism?"),
       p("Hoteles, vuelos y excursiones crean empleo. ¿Qué porcentaje de sus ganancias debería volver a la conservación?","Hotels, flights and excursions create jobs. What percentage of their profits should return to conservation?"),
-      p("¿Preferís observar vida marina desde la superficie o bucear? Compará impacto, emoción y accesibilidad.","Would you rather observe marine life from the surface or dive? Compare impact, emotion and accessibility."),
-      p("Creá un código de siete reglas para una visita al coral que un turista realmente quiera seguir.","Create a seven-rule code for a coral visit that a tourist would actually want to follow."),
+      p("¿Prefieres observar vida marina desde la superficie o bucear? Compara impacto, emoción y accesibilidad.","Would you rather observe marine life from the surface or dive? Compare impact, emotion and accessibility."),
+      p("Crea un código de siete reglas para una visita al coral que un turista realmente quiera seguir.","Create a seven-rule code for a coral visit that a tourist would actually want to follow."),
     ]
   },
   {
@@ -177,7 +177,7 @@ export const topics:IsraelTopic[] = [
       p("¿Tomar decisiones entre todos produce mejores resultados o solamente procesos más lentos?","Does making decisions together produce better results or only slower processes?"),
       p("¿Por qué una persona joven elegiría hoy una comunidad pequeña en vez de una gran ciudad?","Why might a young person choose a small community over a big city today?"),
       p("¿Qué tarea comunitaria debería realizar todo el mundo, incluso quien tiene mucho dinero?","Which community task should everyone do, even someone with a lot of money?"),
-      p("Inventá un kibutz para 2035: definí tres cosas compartidas, tres privadas y una regla para resolver conflictos.","Invent a kibbutz for 2035: define three shared things, three private things and one rule for resolving conflicts."),
+      p("Inventa un kibutz para 2035: define tres cosas compartidas, tres privadas y una regla para resolver conflictos.","Invent a kibbutz for 2035: define three shared things, three private things and one rule for resolving conflicts."),
     ]
   },
   {
@@ -193,7 +193,7 @@ export const topics:IsraelTopic[] = [
       p("¿Un acento muestra falta de dominio o una historia personal? ¿Por qué algunas sociedades lo juzgan tanto?","Does an accent show lack of proficiency or a personal history? Why do some societies judge it so strongly?"),
       p("Familias migrantes pueden perder su lengua en dos generaciones. ¿Quién debería ayudar a conservarla?","Migrant families can lose their language within two generations. Who should help preserve it?"),
       p("¿Una escuela multilingüe prepara mejor para la convivencia o complica el aprendizaje?","Does a multilingual school prepare students better for coexistence or complicate learning?"),
-      p("Diseñá un barrio lingüísticamente inclusivo: elegí qué aparece en señales, escuelas, hospitales y aplicaciones.","Design a linguistically inclusive neighbourhood: choose what appears on signs, in schools, hospitals and apps."),
+      p("Diseña un barrio lingüísticamente inclusivo: elige qué aparece en señales, escuelas, hospitales y aplicaciones.","Design a linguistically inclusive neighbourhood: choose what appears on signs, in schools, hospitals and apps."),
     ]
   },
   {
@@ -208,8 +208,8 @@ export const topics:IsraelTopic[] = [
       p("¿Un mercado tradicional ofrece una conexión más humana que un supermercado o también puede ser incómodo y poco práctico?","Does a traditional market offer a more human connection than a supermarket, or can it also be uncomfortable and impractical?"),
       p("Las recetas cambian cuando una familia migra. ¿Una versión nueva sigue siendo auténtica?","Recipes change when a family migrates. Is a new version still authentic?"),
       p("¿La comida puede crear diálogo entre comunidades incluso cuando existen conflictos políticos?","Can food create dialogue between communities even when political conflicts exist?"),
-      p("Diseñá un menú que reconozca claramente sus influencias sin presentar toda la cocina como una sola tradición.","Design a menu that clearly acknowledges its influences without presenting all food as a single tradition."),
-      p("Organizá una mesa para personas con costumbres religiosas, culturales y alimentarias diferentes. ¿Qué servís y qué preguntás antes?","Organise a table for people with different religious, cultural and dietary practices. What do you serve and what do you ask beforehand?"),
+      p("Diseña un menú que reconozca claramente sus influencias sin presentar toda la cocina como una sola tradición.","Design a menu that clearly acknowledges its influences without presenting all food as a single tradition."),
+      p("Organiza una mesa para personas con costumbres religiosas, culturales y alimentarias diferentes. ¿Qué sirves y qué preguntas antes?","Organise a table for people with different religious, cultural and dietary practices. What do you serve and what do you ask beforehand?"),
     ]
   },
   {
@@ -222,10 +222,10 @@ export const topics:IsraelTopic[] = [
       p("¿Una sociedad necesita un día compartido de pausa o cada persona debería elegir su propio momento?","Does a society need a shared day of rest or should each person choose their own time?"),
       p("Cuando el transporte público se reduce por tradición, ¿cómo se equilibran identidad colectiva y libertad de movimiento?","When public transport is reduced because of tradition, how can collective identity and freedom of movement be balanced?"),
       p("¿Cerrar negocios un día protege a trabajadores y familias o limita innecesariamente a consumidores?","Does closing businesses for one day protect workers and families or unnecessarily limit consumers?"),
-      p("Una práctica religiosa también puede tener valor para personas no religiosas. ¿Qué ejemplos conocés?","A religious practice can also have value for non-religious people. Which examples do you know?"),
+      p("Una práctica religiosa también puede tener valor para personas no religiosas. ¿Qué ejemplos conoces?","A religious practice can also have value for non-religious people. Which examples do you know?"),
       p("¿Una pausa sin celular debería ser una decisión individual, una regla familiar o una costumbre social?","Should a break without phones be an individual decision, a family rule or a social custom?"),
-      p("Compará el shabat con el domingo, la siesta u otra pausa cultural. ¿Qué protege cada tradición?","Compare Shabbat with Sunday, siesta or another cultural pause. What does each tradition protect?"),
-      p("Creá un ritual semanal de descanso para una persona moderna con poco tiempo. Explicá qué prohíbe y qué hace posible.","Create a weekly rest ritual for a modern person with little time. Explain what it forbids and what it makes possible."),
+      p("Compara el shabat con el domingo, la siesta u otra pausa cultural. ¿Qué protege cada tradición?","Compare Shabbat with Sunday, siesta or another cultural pause. What does each tradition protect?"),
+      p("Crea un ritual semanal de descanso para una persona moderna con poco tiempo. Explica qué prohíbe y qué hace posible.","Create a weekly rest ritual for a modern person with little time. Explain what it forbids and what it makes possible."),
     ]
   },
   {
@@ -241,7 +241,7 @@ export const topics:IsraelTopic[] = [
       p("En una sequía, ¿qué debería recibir prioridad: hogares, agricultura, industria o naturaleza?","During a drought, what should receive priority: households, agriculture, industry or nature?"),
       p("¿Un país que desarrolla una tecnología esencial tiene responsabilidad de compartirla a un precio accesible?","Does a country that develops an essential technology have a responsibility to share it at an affordable price?"),
       p("La cultura de las start-ups valora la velocidad y el riesgo. ¿Qué problemas no deberían resolverse con esa lógica?","Start-up culture values speed and risk. Which problems should not be solved with that logic?"),
-      p("Diseñá una solución para ahorrar agua en tu ciudad: explicá el problema, el cambio de hábito y la tecnología necesaria.","Design a water-saving solution for your city: explain the problem, the behaviour change and the technology needed."),
+      p("Diseña una solución para ahorrar agua en tu ciudad: explica el problema, el cambio de hábito y la tecnología necesaria.","Design a water-saving solution for your city: explain the problem, the behaviour change and the technology needed."),
     ]
   },
 ];
@@ -261,10 +261,10 @@ export const connectors:Pair[] = [
 ];
 
 export const depthMoves:Pair[] = [
-  p("Dá una razón concreta.","Give a concrete reason."),
-  p("Agregá un ejemplo real.","Add a real example."),
-  p("Reconocé una desventaja.","Acknowledge one disadvantage."),
-  p("Comparalo con otro país.","Compare it with another country."),
-  p("Explicá una consecuencia futura.","Explain one future consequence."),
-  p("Hacé una pregunta de seguimiento.","Ask a follow-up question."),
+  p("Da una razón concreta.","Give a concrete reason."),
+  p("Agrega un ejemplo real.","Add a real example."),
+  p("Reconoce una desventaja.","Acknowledge one disadvantage."),
+  p("Compáralo con otro país.","Compare it with another country."),
+  p("Explica una consecuencia futura.","Explain one future consequence."),
+  p("Haz una pregunta de seguimiento.","Ask a follow-up question."),
 ];

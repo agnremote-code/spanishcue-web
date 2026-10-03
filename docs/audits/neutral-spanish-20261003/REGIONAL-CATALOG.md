@@ -36,3 +36,7 @@ Compared base and working runtime data for `argento/data.ts`, `argento/practice-
 - `git diff --check`: **pass**.
 
 Parent agent owns the remote checkpoint, global registry merge, full-suite QA and delivery. This batch is ready for that checkpoint.
+
+## Follow-up: enclitic review
+
+Reviewed all unique runtime tokens ending in me/nos/lo/la/los/las/le/les/te throughout the owned scope, including forms without any accented vowel. Corrected `SORPRENDEME → SORPRÉNDEME`, `AYUDAME → AYÚDAME`, `Expresalo → Exprésalo`, `mantenelos → mantenlos`, `Giralo → Gíralo`, and the additional ordinary Buenos Aires mission `Decile… pedile… → Dile… pídele…`. Unaccented Argentine dialogue examples such as `Mandame`, `acercalo`, `apoyala`, `bancame`, `bajate` and `fijate` remain intentional. Added a focused regression covering each ordinary instruction and preserving a regional dialogue example. `wave2-argento.test.mjs`: 11/11 pass; `git diff --check`: pass. English text was not edited.

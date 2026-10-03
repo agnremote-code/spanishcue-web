@@ -130,7 +130,7 @@ export default async function Access({
           </div>
           <p className="founder-price-copy">{checkoutLive
             ? (locale === "es"
-              ? "Acceso PRO inmediato a toda la biblioteca. Sin permanencia: pausá o cancelá desde Mi cuenta."
+              ? "Acceso PRO inmediato a toda la biblioteca. Sin permanencia: pausa o cancela desde Mi cuenta."
               : "Instant PRO access to the full library. No lock-in: pause or cancel from My account.")
             : locale === "es"
               ? `Precio fundador previsto: ${priceLabel}/mes. El checkout público aún no está activo.`

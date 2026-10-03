@@ -294,7 +294,7 @@ export const conectaLaFrase: SyntaxLabData = {
     },
     {
       title: "Trabajo en equipo",
-      prompt: "Repartí cuatro tareas entre dos personas y explica el plan en voz alta.",
+      prompt: "Reparte cuatro tareas entre dos personas y explica el plan en voz alta.",
       checklist: ["uno… otro", "acciones diferentes", "una conexión final con y o pero"],
     },
   ],
@@ -674,7 +674,7 @@ export const antesDespuesCuando: SyntaxLabData = {
     { intention: "TRABAJO", prompt: "Explica tres acciones habituales desde que llegas al trabajo.", challenge: "Incluye cuando + presente y una estructura con infinitivo." },
     { intention: "VIAJE", prompt: "Reconstruye un viaje con comprar, esperar, subir y llegar.", challenge: "Cambia el orden de una frase sin cambiar la cronología." },
     { intention: "COCINA", prompt: "Describe un proceso sencillo con cuatro acciones.", challenge: "Comprueba el infinitivo después de antes de y después de en las estructuras practicadas." },
-    { intention: "FIN DE SEMANA", prompt: "Cuenta una rutina real sin banco de respuestas.", challenge: "Repetila con menos pausas y al menos tres enlaces temporales." },
+    { intention: "FIN DE SEMANA", prompt: "Cuenta una rutina real sin banco de respuestas.", challenge: "Repítela con menos pausas y al menos tres enlaces temporales." },
   ],
   production: [
     { title: "Un día laboral", prompt: "Narra desde que te levantas hasta que empiezas a trabajar.", checklist: ["6 acciones", "las tres estructuras", "orden cronológico claro"] },
@@ -758,7 +758,7 @@ export const siPasaEsto: SyntaxLabData = {
     { prompt: "El orden puede variar, pero ambas ideas necesitan verbo.", original: "Nos quedamos en casa si lluvia.", options: ["Nos quedamos en casa si llueve.", "Si lluvia, nos quedamos.", "Sí llueve, nos quedamos en casa."], correct: 0, feedback: "Llueve completa la condición en presente; la posición final de la cláusula es perfectamente posible." },
   ],
   retrieval: [
-    { intention: "TIEMPO", prompt: "Sin banco de respuestas: propón dos planes según el tiempo.", challenge: "Variá el orden de una condición sin cambiar su sentido." },
+    { intention: "TIEMPO", prompt: "Sin banco de respuestas: propón dos planes según el tiempo.", challenge: "Varía el orden de una condición sin cambiar su sentido." },
     { intention: "TRANSPORTE", prompt: "Resuelve un retraso y una cancelación con dos condiciones reales.", challenge: "Usa dos consecuencias prácticas diferentes." },
     { intention: "DINERO", prompt: "Decide qué haces si un precio es alto o bajo.", challenge: "Incluye una confirmación con sí y una condición con si." },
     { intention: "PLAN SOCIAL", prompt: "Negocia hora, lugar y comida usando palabras clave solamente.", challenge: "Responde a un cambio sin leer ninguna fórmula." },
@@ -947,7 +947,7 @@ export const laPersonaQueTengoEnMente: SyntaxLabData = {
   ],
   questionAnswerCycle: [],
   repairs: [
-    { prompt: "Marta vive en Valencia; su amiga vive en Córdoba. Aclaralo sin cambiar quién vive en cada ciudad.", original: "Busco a la amiga de Marta que vive en Valencia.", options: ["Busco a la amiga de Marta; la amiga vive en Valencia.", "Marta vive en Valencia; busco a su amiga.", "Busco a la que vive en Valencia."], correct: 1, feedback: "Nombrar primero a Marta y luego retomar a su amiga resuelve la ambigüedad: Marta es quien vive en Valencia." },
+    { prompt: "Marta vive en Valencia; su amiga vive en Córdoba. Acláralo sin cambiar quién vive en cada ciudad.", original: "Busco a la amiga de Marta que vive en Valencia.", options: ["Busco a la amiga de Marta; la amiga vive en Valencia.", "Marta vive en Valencia; busco a su amiga.", "Busco a la que vive en Valencia."], correct: 1, feedback: "Nombrar primero a Marta y luego retomar a su amiga resuelve la ambigüedad: Marta es quien vive en Valencia." },
     { prompt: "Añade el antecedente que falta.", original: "Que está junto a la estación abre temprano.", options: ["El café que está junto a la estación abre temprano.", "Quien está junto a la estación abre temprano.", "El café donde que está junto a la estación abre temprano."], correct: 0, feedback: "El café funciona como antecedente expreso y permite interpretar qué elemento identifica la cláusula relativa." },
     { prompt: "Ana trabaja en recepción de noche, Eva en recepción de día y Luz en cocina de noche. Buscas a Ana: elige la descripción que solo encaja con ella.", original: "Busco a la persona que trabaja.", options: ["Busco a la persona que trabaja en recepción por la noche.", "Busco a la persona que es una persona.", "Busco a quien trabaja."], correct: 0, feedback: "El lugar y el horario vuelven específica la descripción; decir solo trabaja deja demasiadas candidatas." },
     { prompt: "Ya sabemos de qué teléfono hablamos. Corrige el relativo y conserva la información adicional entre comas.", original: "El teléfono, quien compré ayer, no funciona.", options: ["El teléfono, que compré ayer, no funciona.", "El teléfono, quien compré ayer, no funciona.", "Quien teléfono compré ayer no funciona."], correct: 0, feedback: "Teléfono es una cosa: usamos que. Las comas conservan el dato adicional sobre el teléfono ya identificado." },

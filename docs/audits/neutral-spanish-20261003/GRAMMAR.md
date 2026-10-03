@@ -22,4 +22,9 @@ Complete tables now distinguish tú, usted, nosotros, vosotros and ustedes. Cond
 - New `tests/neutral-grammar.test.mjs`: complete person coverage, independent vosotros expected forms across 16 tenses, imperative negative/positive contrast, conditional/subjunctive coverage and narrow regional-exercise preservation. Pass.
 - Existing verbal-system and verbal-help contracts pass.
 - Existing personal-trainer checks pass with escalated local subprocess access.
-- Existing grammar-wave1/wave3 tests need reviewed neutral-copy fixture/expectation refresh; behavior tests execute, but old string/hash snapshots predictably fail. Work ongoing.
+- Existing grammar-wave1/wave3 expectations and full content/render fingerprints refreshed against reviewed neutral copy. Historical renderer comparison applies only the six enumerated approved UI string edits; access-policy comparison remains exact. The catalog uses a complete reviewed-source SHA-256 fingerprint. The syntax data fingerprint fixture removes dependence on an unavailable historical data file while preserving all five complete banks.
+- Final focused run: 73/73 tests pass across neutral-grammar, verbal-system-contract, verbal-help-contract, grammar-wave1-repair, a1-syntax-lessons, wave3-grammar-content, wave3-grammar-interaction and personal-trainer.
+- Compared 782 English-key, English-tuple and English-looking source candidates against base 43e4b3e: English copy unchanged. Four flagged changes were exclusively Spanish morphology or the Spanish half of mixed headings; BUILD THE STORY and YOUR TURN remained exact.
+- Final scanner run with grammar-exemptions.json: zero findings in all owned roots. The 70 exact entries also document preterites, vosotros vivís, proper name Tomás, standard da+le and the unchanged English Pair note.
+- Additional targeted checks preserve accented ordinary enclitics (Prepárame, Corrígeme, dirígenos, Respóndeme, Detente, Acláralo, Tradúcela), preserve the internal corregime station ID, and ensure the ordinary conditional answer is dile.
+- Full TypeScript no-emit and focused ESLint validation completed; see parent QA for aggregate run.

@@ -37,12 +37,12 @@ export function verificationEmail(locale: Locale, actionUrl: string) {
     subject: "Tu biblioteca SPANISHCUE está casi lista",
     headline: "¿Listo para enseñar?",
     lead: "Solo falta un paso.",
-    body: "Verificá tu email para activar tu cuenta de profesor y entrar a tu biblioteca SPANISHCUE.",
-    next: "Tus próximas clases ya están listas. Elegí una, abrila y empezá a enseñar.",
+    body: "Verifica tu email para activar tu cuenta de profesor y entrar a tu biblioteca SPANISHCUE.",
+    next: "Tus próximas clases ya están listas. Elige una, ábrela y empieza a enseñar.",
     cta: "Verificar mi email",
     secure: "Este enlace es personal y seguro.",
     newest: "Si pediste un nuevo email de verificación, usa siempre el mensaje más reciente.",
-    fallback: "Si el botón no funciona, copiá y abrí este enlace:",
+    fallback: "Si el botón no funciona, copia y abre este enlace:",
   };
   const url = escapeHtml(actionUrl);
   return {

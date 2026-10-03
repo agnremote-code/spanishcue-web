@@ -964,7 +964,7 @@ export default function CondicionalesPage() {
               <GrammarStep
                 number="08"
                 eyebrow="CONVERSACIÓN"
-                title="Ahora usalo para hablar"
+                title="Ahora úsalo para hablar"
                 description="Cambia condiciones y compara resultados."
                 accent={active.color}
               >
@@ -976,7 +976,7 @@ export default function CondicionalesPage() {
                   <header>
                     <span>07 · PREGUNTAS · QUESTIONS</span>
                     <h2>
-                      Ahora sí: usalo para hablar.
+                      Ahora sí: úsalo para hablar.
                       <small className="co-en">Now use it to speak.</small>
                     </h2>
                     <p>

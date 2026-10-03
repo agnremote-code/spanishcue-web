@@ -129,7 +129,7 @@ export const rounds: IslandRound[] = [
       title: "Primer conflicto de poder",
       copy: "La autoridad elegida entrega el mejor refugio a una amiga porque «trabaja más que los demás». No hubo consulta.",
       questions: [
-        "¿Es favoritismo o una recompensa razonable? Defendé tu respuesta.",
+        "¿Es favoritismo o una recompensa razonable? Defiende tu respuesta.",
         "¿Quién debería investigar la decisión sin paralizar el trabajo?",
         "¿Qué límite nuevo agregarías antes de que vuelva a pasar?",
       ],
@@ -213,10 +213,10 @@ export const rounds: IslandRound[] = [
       questions: [
         "¿Protestar justifica romper una regla recién aprobada?",
         "¿La respuesta debería ser castigo, diálogo o cambio de ley?",
-        "¿Cómo protegés al mismo tiempo el descanso y la libertad de protesta?",
+        "¿Cómo proteges al mismo tiempo el descanso y la libertad de protesta?",
       ],
     },
-    recordLabel: "Redactá una ley en una sola oración",
+    recordLabel: "Redacta una ley en una sola oración",
     recordPlaceholder: "En la isla, toda persona tiene que / puede / no puede…",
   },
   {
@@ -254,10 +254,10 @@ export const rounds: IslandRound[] = [
       questions: [
         "¿El motivo cambia la culpa, el castigo o solamente nuestra opinión?",
         "¿Quién falló primero: la persona o el sistema de prioridades?",
-        "Proponé una sentencia que repare el daño sin ignorar el riesgo.",
+        "Propón una sentencia que repare el daño sin ignorar el riesgo.",
       ],
     },
-    recordLabel: "Escribí la sentencia acordada",
+    recordLabel: "Escribe la sentencia acordada",
     recordPlaceholder: "La comunidad decide que… porque…",
   },
   {
@@ -360,7 +360,7 @@ export const rounds: IslandRound[] = [
       "¿Pedir trabajo a cambio de entrada es cooperación o abuso?",
       "¿Qué criterios de admisión serían humanos y no discriminatorios?",
       "¿Existe una diferencia entre habitante, miembro y ciudadano?",
-      "¿Qué le dirías cara a cara a una familia que no podés recibir?",
+      "¿Qué le dirías cara a cara a una familia que no puedes recibir?",
     ],
     roles: [
       { name: "La recién llegada", brief: "No pide privilegios: ofrece trabajar y reclama ser tratada como persona." },
@@ -377,9 +377,9 @@ export const rounds: IslandRound[] = [
       title: "La información incompleta",
       copy: "Entre las nueve personas hay una mecánica que puede reparar la radio, dos niños y alguien con síntomas de una infección desconocida.",
       questions: [
-        "¿La nueva información cambia tu voto? Explicá qué pesa más.",
+        "¿La nueva información cambia tu voto? Explica qué pesa más.",
         "¿Se puede separar al grupo para aceptar solamente a algunas personas?",
-        "Diseñá una condición de entrada que proteja sin humillar.",
+        "Diseña una condición de entrada que proteja sin humillar.",
       ],
     },
     recordLabel: "Regla para nuevas personas",
@@ -434,7 +434,7 @@ export const finalQuestions = [
   "¿Tu isla priorizó más la libertad, la igualdad, la seguridad o la eficiencia?",
   "¿Qué grupo tuvo menos poder en sus decisiones?",
   "¿Qué ley funcionaría en una isla, pero sería peligrosa en un país real?",
-  "¿Qué contradicción encontrás entre dos acuerdos de la constitución?",
+  "¿Qué contradicción encuentras entre dos acuerdos de la constitución?",
   "¿Vivirías seis meses en la sociedad que creaste? ¿Bajo qué condición?",
   "Si mañana hubiera elecciones, ¿qué promesa harías para ganar?",
 ];

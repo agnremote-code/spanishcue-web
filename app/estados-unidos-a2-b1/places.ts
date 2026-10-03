@@ -13,12 +13,12 @@ const stateNames:Record<string,string>={
 
 const followUps:Pair[]=[
   p("¿Qué parte de esta realidad te parece más interesante y por qué?","Which part of this reality seems most interesting to you, and why?"),
-  p("¿Qué ventaja y qué dificultad imaginás en un lugar así?","What advantage and what difficulty do you imagine in a place like this?"),
-  p("¿Cómo pensás que esta característica influye en la identidad local?","How do you think this feature shapes local identity?"),
+  p("¿Qué ventaja y qué dificultad imaginas en un lugar así?","What advantage and what difficulty do you imagine in a place like this?"),
+  p("¿Cómo piensas que esta característica influye en la identidad local?","How do you think this feature shapes local identity?"),
   p("¿Qué pregunta le harías a una persona que vive o trabaja allí?","What would you ask someone who lives or works there?"),
-  p("¿Te gustaría vivir esta experiencia o solamente visitarla? Explicá.","Would you like to live this experience or only visit it? Explain."),
+  p("¿Te gustaría vivir esta experiencia o solamente visitarla? Explica.","Would you like to live this experience or only visit it? Explain."),
   p("¿Qué detalle cambia más la idea que tenías de este estado?","Which detail changes your idea of this state the most?"),
-  p("¿Cómo compararías esta realidad con un lugar que conocés?","How would you compare this reality with a place you know?"),
+  p("¿Cómo compararías esta realidad con un lugar que conoces?","How would you compare this reality with a place you know?"),
   p("¿Qué debería comprender un visitante antes de llegar?","What should a visitor understand before arriving?"),
   p("¿Qué parte conservarías y qué parte cambiarías para el futuro?","Which part would you preserve and which part would you change for the future?"),
   p("¿Qué tipo de persona disfrutaría más este lugar?","What kind of person would enjoy this place the most?"),
@@ -28,17 +28,17 @@ const followUps:Pair[]=[
 
 const fallbackQuestions:Record<string,Pair[]>={
   ciudad:[
-    p("¿Qué hace que una ciudad sea inolvidable para vos: la gente, la arquitectura, la comida o su ritmo?","What makes a city unforgettable for you: its people, architecture, food or pace?"),
-    p("¿Preferís una ciudad fácil y cómoda o una ciudad caótica pero llena de personalidad?","Do you prefer an easy, comfortable city or a chaotic city full of personality?"),
+    p("¿Qué hace que una ciudad sea inolvidable para ti: la gente, la arquitectura, la comida o su ritmo?","What makes a city unforgettable for you: its people, architecture, food or pace?"),
+    p("¿Prefieres una ciudad fácil y cómoda o una ciudad caótica pero llena de personalidad?","Do you prefer an easy, comfortable city or a chaotic city full of personality?"),
     p("Si pudieras mejorar una sola cosa de tu ciudad, ¿qué cambiarías primero?","If you could improve one thing in your city, what would you change first?"),
   ],
   naturaleza:[
-    p("¿Preferís paisajes que te hacen sentir pequeño o lugares donde sentís que tenés el control?","Do you prefer landscapes that make you feel small or places where you feel in control?"),
+    p("¿Prefieres paisajes que te hacen sentir pequeño o lugares donde sientes que tienes el control?","Do you prefer landscapes that make you feel small or places where you feel in control?"),
     p("¿Qué regla debería respetar toda persona cuando visita un espacio natural?","Which rule should everyone respect when visiting a natural place?"),
     p("¿Qué te conecta más con la naturaleza: caminar, observar animales, acampar o estar en silencio?","What connects you most with nature: hiking, watching animals, camping or silence?"),
   ],
   historia:[
-    p("Cuando viajás, ¿te interesa más un lugar hermoso o un lugar con una historia complicada?","When you travel, are you more interested in a beautiful place or a place with a complicated history?"),
+    p("Cuando viajas, ¿te interesa más un lugar hermoso o un lugar con una historia complicada?","When you travel, are you more interested in a beautiful place or a place with a complicated history?"),
     p("¿Cómo debería una ciudad recordar una parte dolorosa de su pasado?","How should a city remember a painful part of its past?"),
     p("¿Un museo puede cambiar de verdad nuestra opinión sobre un país?","Can a museum truly change our opinion about a country?"),
   ],
@@ -49,12 +49,12 @@ const fallbackQuestions:Record<string,Pair[]>={
   ],
   comida:[
     p("¿Puede un solo plato representar una región entera o es una simplificación?","Can one dish represent an entire region, or is that an oversimplification?"),
-    p("¿Qué comida de tu infancia usarías para explicar de dónde venís?","Which childhood food would you use to explain where you come from?"),
-    p("¿Conocés mejor un lugar cuando probás su comida local? ¿Por qué?","Do you understand a place better when you try its local food? Why?"),
+    p("¿Qué comida de tu infancia usarías para explicar de dónde vienes?","Which childhood food would you use to explain where you come from?"),
+    p("¿Conoces mejor un lugar cuando pruebas su comida local? ¿Por qué?","Do you understand a place better when you try its local food? Why?"),
   ],
   musica:[
     p("¿Qué canción o estilo musical te hace pensar inmediatamente en un lugar?","Which song or musical style immediately makes you think of a place?"),
-    p("¿Preferís escuchar música en la calle, en un bar pequeño o en un estadio?","Would you rather hear music in the street, a small bar or a stadium?"),
+    p("¿Prefieres escuchar música en la calle, en un bar pequeño o en un estadio?","Would you rather hear music in the street, a small bar or a stadium?"),
     p("¿La música cuenta la historia de una comunidad mejor que un libro?","Can music tell a community's story better than a book?"),
   ],
   costa:[
@@ -65,7 +65,7 @@ const fallbackQuestions:Record<string,Pair[]>={
   deporte:[
     p("¿Se puede disfrutar el ambiente de un evento deportivo sin entender el deporte?","Can you enjoy the atmosphere of a sports event without understanding the sport?"),
     p("¿Qué une más a una comunidad: un equipo deportivo, una fiesta o una causa común?","What unites a community more: a sports team, a festival or a shared cause?"),
-    p("¿Preferís practicar un deporte o mirar una competencia importante?","Would you rather play a sport or watch an important competition?"),
+    p("¿Prefieres practicar un deporte o mirar una competencia importante?","Would you rather play a sport or watch an important competition?"),
   ],
   ciencia:[
     p("¿Qué te despierta más curiosidad: un laboratorio, un museo o un experimento real?","What makes you more curious: a laboratory, a museum or a real experiment?"),
@@ -74,11 +74,11 @@ const fallbackQuestions:Record<string,Pair[]>={
   ],
   ruta:[
     p("En un viaje por carretera, ¿es más importante el destino o el camino?","On a road trip, is the destination or the journey more important?"),
-    p("¿Preferís planificar cada parada o decidir durante el viaje?","Would you rather plan every stop or decide during the journey?"),
+    p("¿Prefieres planificar cada parada o decidir durante el viaje?","Would you rather plan every stop or decide during the journey?"),
     p("¿Con quién harías un viaje largo y qué regla sería indispensable?","Who would you take on a long trip, and which rule would be essential?"),
   ],
   evento:[
-    p("¿Preferís un festival enorme y famoso o una celebración local pequeña?","Do you prefer a huge famous festival or a small local celebration?"),
+    p("¿Prefieres un festival enorme y famoso o una celebración local pequeña?","Do you prefer a huge famous festival or a small local celebration?"),
     p("¿Qué necesita un evento para que quieras volver el año siguiente?","What does an event need to make you want to return the following year?"),
     p("¿Una multitud mejora la energía de una experiencia o la arruina?","Does a crowd improve an experience's energy or ruin it?"),
   ],

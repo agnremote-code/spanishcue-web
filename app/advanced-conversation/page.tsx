@@ -33,7 +33,7 @@ const topics:Topic[]=[
     "Cuando visitamos otro país, ¿hasta qué punto tenemos la obligación de adaptarnos a valores locales con los que estamos profundamente en desacuerdo?",
     "¿Es posible conocer realmente una cultura como visitante o el turismo, incluso cuando es respetuoso, siempre nos deja observándola desde afuera?",
     "¿Qué cambia más nuestra percepción de un lugar: lo que encontramos allí o la etapa de nuestra vida en la que llegamos?",
-    "Si pudieras volver a un lugar que significó muchísimo para vos pero supieras que probablemente destruiría el recuerdo idealizado que tenés, ¿volverías?"
+    "Si pudieras volver a un lugar que significó muchísimo para ti pero supieras que probablemente destruiría el recuerdo idealizado que tienes, ¿volverías?"
   ]},
   {emoji:"🌍",title:"Sociedad",label:"Sociedad y valores",questions:[
     "¿Qué comportamiento aceptamos como “normal” únicamente porque demasiada gente lo hace como para cuestionarlo seriamente?",
@@ -129,7 +129,7 @@ export default function AdvancedConversation(){
   return <main className="advanced-shell">
     <div className="advanced-frame">
       <header className="advanced-header"><Link href="/" className="advanced-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN AVANZADA</small></span></Link><Link href="/" className="back-library">← Biblioteca</Link></header>
-      <section className="advanced-intro"><div><i/><p>CONVERSACIÓN · NIVEL C1</p><h1>Preguntas que dan ganas de hablar.</h1></div><p>Elegí una categoría. Elegí una pregunta. Respondé con libertad. Seguí la conversación.</p></section>
+      <section className="advanced-intro"><div><i/><p>CONVERSACIÓN · NIVEL C1</p><h1>Preguntas que dan ganas de hablar.</h1></div><p>Elige una categoría. Elige una pregunta. Responde con libertad. Sigue la conversación.</p></section>
       <nav className="advanced-nav" aria-label="Categorías de conversación">{topics.map((item,index)=><button key={item.title} className={index===active?"active":""} aria-pressed={index===active} onClick={()=>chooseTopic(index)}>{item.emoji} {item.title}</button>)}</nav>
       <section className="advanced-panel" aria-label={topic.label} key={topic.title}>
         <div className="panel-title"><div><span>{topic.emoji}</span><h2>{topic.title}</h2></div><b>{String(active+1).padStart(2,"0")} / {topics.length}</b></div>

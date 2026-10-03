@@ -158,7 +158,7 @@ export const unidades: Unidad[] = [
     ejercicios: [
       { consigna: "Si mañana ___, cancelaremos el picnic. (llover)", respuesta: "llueve", explicacion: "La condición futura se expresa con presente de indicativo." },
       { consigna: "Te ___ si tengo novedades. (llamar)", respuesta: "llamaré / llamo", explicacion: "Ambas formas son posibles: futuro explícito o presente con valor futuro." },
-      { consigna: "Si ves a Ana, ___ que llego tarde. (decirle)", respuesta: "decile / dile", explicacion: "La consecuencia es una orden." },
+      { consigna: "Si ves a Ana, ___ que llego tarde. (decirle)", respuesta: "dile", explicacion: "La consecuencia es una orden." },
       { consigna: "Si no salimos ahora, no ___ a tiempo. (llegar)", respuesta: "llegaremos / vamos a llegar", explicacion: "La consecuencia es una predicción futura." },
     ],
     conversacion: [

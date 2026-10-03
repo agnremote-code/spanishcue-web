@@ -12,7 +12,7 @@ export function RepairGuide({ kind }: { kind: RepairKind }) {
     <details>
       <summary>Ruta docente · unos 45 minutos · selección sugerida</summary>
       <p><strong>Meta:</strong> {guide.outcome}</p>
-      <p>Clase guiada, en pareja o con el docente. El tiempo es una estimación; no hace falta recorrer todo el banco. Se parte de nombres cotidianos y presente básico. Las consignas usan voseo.</p>
+      <p>Clase guiada, en pareja o con el docente. El tiempo es una estimación; no hace falta recorrer todo el banco. Se parte de nombres cotidianos y presente básico. Las consignas usan tú.</p>
       <ol>{guide.route.map(step => <li key={step}>{step}</li>)}</ol>
       <p>{guide.optional}</p><p><strong>Criterio de cierre:</strong> {guide.criterion}</p>
       <p>Ayudas a demanda: primero deja intentar; después abre un modelo. Los botones de observación registran el juicio del docente, no una evaluación automática de la voz.</p>
@@ -58,7 +58,7 @@ export function QuantityTask() {
     {model && <p className="gw-repair-model" data-model="order">Quiero {quantityPhrase('bottles', target.bottles)} de agua y {quantityPhrase('apples', target.apples)}.</p>}
     <div role="status" className="gw-repair-status">{checked && (exact ? <p><strong>Pedido completo.</strong> Ahora dilo sin leer. La cantidad coincide; la voz la observa tu docente.</p> : <ul>{products.map(product => {
       const result = quantityStatus(counts[product], target[product]);
-      return <li key={product}>{result.kind === 'exact' ? `${product === 'bottles' ? 'Botellas' : 'Manzanas'}: cantidad exacta.` : `${result.kind === 'short' ? (result.difference === 1 ? 'Falta' : 'Faltan') : (result.difference === 1 ? 'Sobra' : 'Sobran')} ${quantityPhrase(product, result.difference)}. Ajustá la canasta.`}</li>;
+      return <li key={product}>{result.kind === 'exact' ? `${product === 'bottles' ? 'Botellas' : 'Manzanas'}: cantidad exacta.` : `${result.kind === 'short' ? (result.difference === 1 ? 'Falta' : 'Faltan') : (result.difference === 1 ? 'Sobra' : 'Sobran')} ${quantityPhrase(product, result.difference)}. Ajusta la canasta.`}</li>;
     })}</ul>)}</div>
     {checked && exact && <div className="gw-repair-controls">
       {phase === 0 ? <button type="button" data-action="retrieve-order" onClick={() => { setPhase(1); setCounts({ bottles: 0, apples: 0 }); setChecked(false); setModel(false); setObserved(false); }}>Segundo pedido · sin modelo</button> : <button type="button" data-action="confirm-order" aria-pressed={observed} onClick={() => setObserved(true)}>Docente: escuché las dos cantidades</button>}

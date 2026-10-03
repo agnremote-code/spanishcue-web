@@ -25,7 +25,7 @@ export default function ModeTimeIntro({compact=false}:{compact?:boolean}) {
       </article>
     </div>
     <div className="vs-analysis-grid" aria-label="Ejemplos analizados por modo y tiempo">
-      {[['canta','Indicativo','Presente'],['cantó','Indicativo','Pretérito perfecto simple'],['cantara / cantase','Subjuntivo','Pretérito imperfecto'],['haya cantado','Subjuntivo','Pretérito perfecto'],['cantá / canta','Imperativo','Sin oposición temporal propia']].map(item=><article key={item[0]}><b>{item[0]}</b><span>MODO · {item[1]}</span><span>TIEMPO · {item[2]}</span></article>)}
+      {[['canta','Indicativo','Presente'],['cantó','Indicativo','Pretérito perfecto simple'],['cantara / cantase','Subjuntivo','Pretérito imperfecto'],['haya cantado','Subjuntivo','Pretérito perfecto'],['canta','Imperativo','Sin oposición temporal propia']].map(item=><article key={item[0]}><b>{item[0]}</b><span>MODO · {item[1]}</span><span>TIEMPO · {item[2]}</span></article>)}
     </div>
     <p className="vs-layer-note"><b>UNA FORMA · VARIAS CAPAS</b> Una forma verbal puede comunicar simultáneamente modo, tiempo, aspecto, anterioridad y la perspectiva del hablante.</p>
     {!compact&&<aside className="vs-precision"><b>Una precisión que evita errores</b><p>El subjuntivo no es simplemente “irrealidad” y el indicativo no es simplemente “realidad”. El condicional pertenece al indicativo en la clasificación académica actual. Modo, tiempo y tipo de oración son capas diferentes.</p><Link href="/modo-vs-tiempo-verbal">Abrir la mini clase base →</Link></aside>}

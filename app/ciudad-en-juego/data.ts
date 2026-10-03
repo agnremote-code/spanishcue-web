@@ -66,7 +66,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "parks-housing",
     category: "BASE",
-    question: "Queda un gran terreno libre en el centro. ¿Qué construís?",
+    question: "Queda un gran terreno libre en el centro. ¿Qué construyes?",
     options: [
       { label: "MÁS PARQUES", impact: { calidad: 8, ambiente: 12, presupuesto: -5 }, feedback: "La ciudad respira mejor, pero hay menos suelo disponible para vivir." },
       { label: "MÁS VIVIENDAS", impact: { equidad: 9, calidad: 3, ambiente: -7 }, feedback: "Entra más gente al centro, pero el espacio verde queda bajo presión." },
@@ -76,7 +76,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "metro-buses",
     category: "MOVILIDAD",
-    question: "Solo podés financiar una gran mejora de transporte. ¿Cuál?",
+    question: "Solo puedes financiar una gran mejora de transporte. ¿Cuál?",
     options: [
       { label: "METRO 24 HORAS", impact: { movilidad: 12, calidad: 5, presupuesto: -10 }, feedback: "Los viajes centrales mejoran mucho, aunque la obra y la operación cuestan más." },
       { label: "MÁS BUSES EN CADA BARRIO", impact: { movilidad: 9, equidad: 8, presupuesto: -6 }, feedback: "La red llega a más personas, pero puede ser más lenta y difícil de coordinar." },
@@ -86,7 +86,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "tourism-local",
     category: "VIDA",
-    question: "El centro necesita actividad económica. ¿Qué priorizás?",
+    question: "El centro necesita actividad económica. ¿Qué priorizas?",
     options: [
       { label: "MÁS TURISMO", impact: { presupuesto: 10, calidad: -4, equidad: -5 }, feedback: "Entra dinero y empleo, pero suben la presión sobre los precios y el espacio." },
       { label: "MÁS VIDA LOCAL", impact: { calidad: 9, equidad: 6, presupuesto: -3 }, feedback: "El centro conserva comunidad, aunque recauda menos a corto plazo." },
@@ -106,7 +106,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "affordable-iconic",
     category: "VIVIENDA",
-    question: "Podés transformar el centro con un solo proyecto. ¿Cuál elegís?",
+    question: "Puedes transformar el centro con un solo proyecto. ¿Cuál eliges?",
     options: [
       { label: "VIVIENDA ACCESIBLE", impact: { equidad: 12, calidad: 5, presupuesto: -8 }, feedback: "Más personas pueden vivir cerca de los servicios, pero requiere inversión pública constante." },
       { label: "UN CENTRO MÁS EXCLUSIVO", impact: { presupuesto: 10, calidad: 2, equidad: -12 }, feedback: "La zona atrae inversión, pero muchas personas ya no pueden pagarla." },
@@ -116,7 +116,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "public-commerce",
     category: "BASE",
-    question: "Una avenida enorme deja de usarse para autos. ¿Cómo repartís el espacio?",
+    question: "Una avenida enorme deja de usarse para autos. ¿Cómo repartes el espacio?",
     options: [
       { label: "MÁS ESPACIO PÚBLICO", impact: { calidad: 10, ambiente: 6, presupuesto: -3 }, feedback: "La calle gana vida común, pero genera menos ingresos directos." },
       { label: "MÁS COMERCIO", impact: { presupuesto: 9, calidad: 3, ambiente: -2 }, feedback: "Hay más actividad y empleo, aunque el espacio deja de ser realmente libre." },
@@ -146,7 +146,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "security-surveillance",
     category: "FUTURO",
-    question: "Aumentan los delitos en espacios públicos. ¿Qué respuesta apoyás?",
+    question: "Aumentan los delitos en espacios públicos. ¿Qué respuesta apoyas?",
     options: [
       { label: "MÁS VIGILANCIA", impact: { calidad: 3, presupuesto: -5, equidad: -4 }, feedback: "Puede aumentar la sensación de seguridad, pero también el control y los errores." },
       { label: "MÁS PRESENCIA COMUNITARIA", impact: { calidad: 7, equidad: 7, presupuesto: -7 }, feedback: "Fortalece vínculos y prevención, aunque sus resultados tardan más en verse." },
@@ -156,12 +156,12 @@ export const cityChoices: CityChoice[] = [
   {
     id: "jobs-air",
     category: "FUTURO",
-    question: "Una fábrica ofrece 5.000 empleos, pero empeorará la calidad del aire. ¿Qué elegís?",
+    question: "Una fábrica ofrece 5.000 empleos, pero empeorará la calidad del aire. ¿Qué eliges?",
     options: [
       { label: "MÁS EMPLEO AHORA", impact: { presupuesto: 11, equidad: 5, ambiente: -13, calidad: -4 }, feedback: "Miles consiguen trabajo, pero toda la ciudad asume el costo ambiental." },
       { label: "AIRE LIMPIO", impact: { ambiente: 12, calidad: 8, presupuesto: -8 }, feedback: "Se protege la salud, aunque hay que crear otra fuente de empleo." },
     ],
-    follow: "¿Aceptarías la fábrica con condiciones? Nombrá dos que fueran obligatorias.",
+    follow: "¿Aceptarías la fábrica con condiciones? Nombra dos que fueran obligatorias.",
   },
   {
     id: "culture-health",
@@ -186,7 +186,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "heritage-new",
     category: "BASE",
-    question: "Un edificio histórico ocupa un terreno muy valioso. ¿Qué hacés?",
+    question: "Un edificio histórico ocupa un terreno muy valioso. ¿Qué haces?",
     options: [
       { label: "CONSERVARLO", impact: { calidad: 5, presupuesto: -7 }, feedback: "La ciudad protege su memoria, pero renuncia a un proyecto más rentable." },
       { label: "REEMPLAZARLO", impact: { presupuesto: 9, equidad: 2, calidad: -4 }, feedback: "Aparece un uso nuevo, pero una parte de la identidad urbana desaparece." },
@@ -216,7 +216,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "dense-large",
     category: "VIVIENDA",
-    question: "¿Cómo construís las próximas 10.000 viviendas?",
+    question: "¿Cómo construyes las próximas 10.000 viviendas?",
     options: [
       { label: "MÁS DEPARTAMENTOS COMPACTOS", impact: { equidad: 8, movilidad: 5, ambiente: 3 }, feedback: "Entra más gente cerca de todo, pero se reduce el espacio privado." },
       { label: "MENOS CASAS, MÁS GRANDES", impact: { calidad: 6, equidad: -9, movilidad: -4 }, feedback: "Cada hogar gana espacio, pero menos familias acceden y las distancias crecen." },
@@ -226,7 +226,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "hospital-clinics",
     category: "VIDA",
-    question: "La red de salud necesita una reforma. ¿Qué construís primero?",
+    question: "La red de salud necesita una reforma. ¿Qué construyes primero?",
     options: [
       { label: "UN GRAN HOSPITAL CENTRAL", impact: { calidad: 8, presupuesto: -9, movilidad: -4 }, feedback: "Concentra especialistas y tecnología, pero obliga a muchos a viajar lejos." },
       { label: "CLÍNICAS DE BARRIO", impact: { equidad: 10, calidad: 6, presupuesto: -7 }, feedback: "La atención básica queda cerca, aunque los casos complejos siguen viajando." },
@@ -236,7 +236,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "events-calm",
     category: "VIDA",
-    question: "¿Qué querés que pase cada fin de semana en el centro?",
+    question: "¿Qué quieres que pase cada fin de semana en el centro?",
     options: [
       { label: "GRANDES EVENTOS", impact: { presupuesto: 8, calidad: 3, ambiente: -3 }, feedback: "La ciudad se llena de actividad, pero también de ruido, basura y visitantes." },
       { label: "UN CENTRO TRANQUILO", impact: { calidad: 7, presupuesto: -5 }, feedback: "La vida diaria es más calma, aunque hay menos oferta y movimiento económico." },
@@ -256,7 +256,7 @@ export const cityChoices: CityChoice[] = [
   {
     id: "fast-human",
     category: "FUTURO",
-    question: "¿Cómo querés que funcionen los trámites de la ciudad?",
+    question: "¿Cómo quieres que funcionen los trámites de la ciudad?",
     options: [
       { label: "TODO RÁPIDO Y AUTOMÁTICO", impact: { presupuesto: 7, calidad: 4, equidad: -6 }, feedback: "La mayoría ahorra tiempo, pero quien no entiende el sistema queda solo." },
       { label: "ATENCIÓN HUMANA SIEMPRE", impact: { equidad: 8, calidad: 6, presupuesto: -9 }, feedback: "Nadie queda sin ayuda, aunque el servicio cuesta más y puede ser más lento." },
@@ -266,16 +266,16 @@ export const cityChoices: CityChoice[] = [
 ];
 
 export const priorityRounds: PriorityRound[] = [
-  { id: "city", situation: "Tu ciudad empieza desde cero. Elegí sus DOS prioridades.", items: ["SEGURIDAD", "VIVIENDA", "TRANSPORTE", "AMBIENTE", "TRABAJO"], follow: "¿Por qué esas dos van antes? ¿Qué problema crea dejar las otras para después?" },
-  { id: "cut", situation: "El presupuesto baja. Solo DOS áreas quedan protegidas.", items: ["HOSPITALES", "ESCUELAS", "TRANSPORTE", "VIVIENDA", "CULTURA"], follow: "Defendé las dos protegidas frente a alguien que necesita una de las áreas que recortaste." },
-  { id: "center", situation: "Rediseñás el centro. Elegí los DOS intereses principales.", items: ["RESIDENTES", "COMERCIO", "TURISMO", "PATRIMONIO", "ESPACIO VERDE"], follow: "¿Cómo se notaría tu orden en una calle real? Da tres cambios concretos." },
-  { id: "neighborhood", situation: "Un barrio recibe una inversión única. Elegí DOS mejoras.", items: ["LIMPIEZA", "SOMBRA", "TRANSPORTE", "DEPORTE", "ENCUENTRO"], follow: "¿Cuál produciría el cambio más rápido y cuál duraría más años?" },
-  { id: "groups", situation: "Una nueva política debe empezar por DOS grupos.", items: ["NIÑOS", "MAYORES", "MIGRANTES", "PERSONAS CON DISCAPACIDAD", "TRABAJADORES NOCTURNOS"], follow: "¿Por qué ellos primero? Buscá una política que también ayude indirectamente a los demás." },
-  { id: "climate", situation: "La ciudad se prepara para un clima más extremo. Elegí DOS inversiones.", items: ["ÁRBOLES", "DRENAJE", "REFUGIOS CLIMÁTICOS", "ENERGÍA LIMPIA", "EDIFICIOS AISLADOS"], follow: "Compará una solución inmediata con otra de largo plazo." },
-  { id: "identity", situation: "El barrio está perdiendo identidad. Salvá DOS elementos.", items: ["COMERCIO LOCAL", "ARQUITECTURA", "FIESTAS", "MERCADOS", "ESPACIOS CULTURALES"], follow: "¿La identidad se puede proteger por ley o necesita seguir cambiando?" },
-  { id: "transport", situation: "Ordená la red de transporte según sus DOS objetivos esenciales.", items: ["VELOCIDAD", "PRECIO", "FRECUENCIA", "ALCANCE", "ACCESIBILIDAD"], follow: "¿Qué objetivo suele recibir más atención de la que merece y cuál menos?" },
+  { id: "city", situation: "Tu ciudad empieza desde cero. Elige sus DOS prioridades.", items: ["SEGURIDAD", "VIVIENDA", "TRANSPORTE", "AMBIENTE", "TRABAJO"], follow: "¿Por qué esas dos van antes? ¿Qué problema crea dejar las otras para después?" },
+  { id: "cut", situation: "El presupuesto baja. Solo DOS áreas quedan protegidas.", items: ["HOSPITALES", "ESCUELAS", "TRANSPORTE", "VIVIENDA", "CULTURA"], follow: "Defiende las dos protegidas frente a alguien que necesita una de las áreas que recortaste." },
+  { id: "center", situation: "Rediseñas el centro. Elige los DOS intereses principales.", items: ["RESIDENTES", "COMERCIO", "TURISMO", "PATRIMONIO", "ESPACIO VERDE"], follow: "¿Cómo se notaría tu orden en una calle real? Da tres cambios concretos." },
+  { id: "neighborhood", situation: "Un barrio recibe una inversión única. Elige DOS mejoras.", items: ["LIMPIEZA", "SOMBRA", "TRANSPORTE", "DEPORTE", "ENCUENTRO"], follow: "¿Cuál produciría el cambio más rápido y cuál duraría más años?" },
+  { id: "groups", situation: "Una nueva política debe empezar por DOS grupos.", items: ["NIÑOS", "MAYORES", "MIGRANTES", "PERSONAS CON DISCAPACIDAD", "TRABAJADORES NOCTURNOS"], follow: "¿Por qué ellos primero? Busca una política que también ayude indirectamente a los demás." },
+  { id: "climate", situation: "La ciudad se prepara para un clima más extremo. Elige DOS inversiones.", items: ["ÁRBOLES", "DRENAJE", "REFUGIOS CLIMÁTICOS", "ENERGÍA LIMPIA", "EDIFICIOS AISLADOS"], follow: "Compara una solución inmediata con otra de largo plazo." },
+  { id: "identity", situation: "El barrio está perdiendo identidad. Salva DOS elementos.", items: ["COMERCIO LOCAL", "ARQUITECTURA", "FIESTAS", "MERCADOS", "ESPACIOS CULTURALES"], follow: "¿La identidad se puede proteger por ley o necesita seguir cambiando?" },
+  { id: "transport", situation: "Ordena la red de transporte según sus DOS objetivos esenciales.", items: ["VELOCIDAD", "PRECIO", "FRECUENCIA", "ALCANCE", "ACCESIBILIDAD"], follow: "¿Qué objetivo suele recibir más atención de la que merece y cuál menos?" },
   { id: "home", situation: "La política de vivienda solo puede garantizar DOS cosas.", items: ["PRECIO", "TAMAÑO", "UBICACIÓN", "CALIDAD", "SEGURIDAD"], follow: "¿Qué mínimo debería garantizarse incluso si una persona paga muy poco?" },
-  { id: "future", situation: "La ciudad de 2046 tendrá DOS principios no negociables.", items: ["SOSTENIBILIDAD", "INNOVACIÓN", "IGUALDAD", "RESILIENCIA", "COMUNIDAD"], follow: "Convertí cada principio elegido en una regla concreta y medible." },
+  { id: "future", situation: "La ciudad de 2046 tendrá DOS principios no negociables.", items: ["SOSTENIBILIDAD", "INNOVACIÓN", "IGUALDAD", "RESILIENCIA", "COMUNIDAD"], follow: "Convierte cada principio elegido en una regla concreta y medible." },
 ];
 
 export const urbanProblems: UrbanProblem[] = [
@@ -373,45 +373,45 @@ export const negotiationRounds: NegotiationRound[] = [
 ];
 
 export const changeRounds: ChangeRound[] = [
-  { id: "free-transit", decision: "Hiciste gratuito todo el transporte público.", change: "El presupuesto de la ciudad baja un 20 %.", question: "¿Mantenés la gratuidad, la limitás o buscás otra fuente de dinero?" },
-  { id: "tourism-rent", decision: "Lanzaste una campaña para atraer mucho más turismo.", change: "Los alquileres del centro suben y desaparecen negocios cotidianos.", question: "¿Seguís promocionando la ciudad? ¿Qué límite imponés?" },
-  { id: "parks-shortage", decision: "Convertiste varios terrenos en parques.", change: "La lista de familias que necesitan vivienda se duplica.", question: "¿Protegés todos los parques o cambiás una parte del plan?" },
-  { id: "cameras-errors", decision: "Instalaste cámaras inteligentes para mejorar la seguridad.", change: "El sistema acusa por error a una persona cada dos días.", question: "¿Lo suspendés, lo restringís o aceptás el costo?" },
-  { id: "car-free", decision: "Prohibiste los autos particulares en todo el centro.", change: "Pequeños comercios dicen que no pueden recibir mercadería ni clientes mayores.", question: "¿Creás excepciones o mantenés la regla igual para todos?" },
-  { id: "metro-years", decision: "Elegiste construir una nueva línea de metro.", change: "La obra durará ocho años y cerrará una avenida comercial.", question: "¿Seguís con el proyecto? ¿Qué compensación ofrecés mientras tanto?" },
-  { id: "dense-housing", decision: "Aprobaste 2.000 viviendas de alquiler accesible.", change: "Vecinos protestan porque los edificios serán mucho más altos.", question: "¿Reducís la altura, cambiás el lugar o defendés el plan original?" },
-  { id: "night-economy", decision: "Autorizaste más actividades y transporte durante la noche.", change: "Las quejas por ruido aumentan un 60 %.", question: "¿Qué parte del plan cambiás sin apagar la vida nocturna?" },
-  { id: "big-company", decision: "Ofreciste beneficios fiscales para atraer una gran empresa.", change: "Llegan empleos, pero los alquileres cercanos aumentan muy rápido.", question: "¿Renegociás el acuerdo o considerás que el beneficio general lo justifica?" },
-  { id: "green-tax", decision: "Creaste una tasa alta para actividades contaminantes.", change: "El costo termina afectando más a hogares de bajos ingresos.", question: "¿Eliminás la tasa, compensás a esos hogares o cambiás el diseño?" },
-  { id: "demolition", decision: "Permitiste reemplazar edificios antiguos por viviendas nuevas.", change: "Un movimiento ciudadano demuestra que el barrio perdería su identidad.", question: "¿Qué edificios salvás y con qué criterio?" },
-  { id: "wifi-data", decision: "Instalaste wifi gratuito en toda la ciudad.", change: "La empresa proveedora quiere analizar los movimientos de los usuarios.", question: "¿Cancelás el contrato, pagás más por privacidad o aceptás el intercambio?" },
+  { id: "free-transit", decision: "Hiciste gratuito todo el transporte público.", change: "El presupuesto de la ciudad baja un 20 %.", question: "¿Mantienes la gratuidad, la limitas o buscas otra fuente de dinero?" },
+  { id: "tourism-rent", decision: "Lanzaste una campaña para atraer mucho más turismo.", change: "Los alquileres del centro suben y desaparecen negocios cotidianos.", question: "¿Sigues promocionando la ciudad? ¿Qué límite impones?" },
+  { id: "parks-shortage", decision: "Convertiste varios terrenos en parques.", change: "La lista de familias que necesitan vivienda se duplica.", question: "¿Proteges todos los parques o cambias una parte del plan?" },
+  { id: "cameras-errors", decision: "Instalaste cámaras inteligentes para mejorar la seguridad.", change: "El sistema acusa por error a una persona cada dos días.", question: "¿Lo suspendes, lo restringes o aceptas el costo?" },
+  { id: "car-free", decision: "Prohibiste los autos particulares en todo el centro.", change: "Pequeños comercios dicen que no pueden recibir mercadería ni clientes mayores.", question: "¿Creas excepciones o mantienes la regla igual para todos?" },
+  { id: "metro-years", decision: "Elegiste construir una nueva línea de metro.", change: "La obra durará ocho años y cerrará una avenida comercial.", question: "¿Sigues con el proyecto? ¿Qué compensación ofreces mientras tanto?" },
+  { id: "dense-housing", decision: "Aprobaste 2.000 viviendas de alquiler accesible.", change: "Vecinos protestan porque los edificios serán mucho más altos.", question: "¿Reduces la altura, cambias el lugar o defiendes el plan original?" },
+  { id: "night-economy", decision: "Autorizaste más actividades y transporte durante la noche.", change: "Las quejas por ruido aumentan un 60 %.", question: "¿Qué parte del plan cambias sin apagar la vida nocturna?" },
+  { id: "big-company", decision: "Ofreciste beneficios fiscales para atraer una gran empresa.", change: "Llegan empleos, pero los alquileres cercanos aumentan muy rápido.", question: "¿Renegocias el acuerdo o consideras que el beneficio general lo justifica?" },
+  { id: "green-tax", decision: "Creaste una tasa alta para actividades contaminantes.", change: "El costo termina afectando más a hogares de bajos ingresos.", question: "¿Eliminas la tasa, compensas a esos hogares o cambias el diseño?" },
+  { id: "demolition", decision: "Permitiste reemplazar edificios antiguos por viviendas nuevas.", change: "Un movimiento ciudadano demuestra que el barrio perdería su identidad.", question: "¿Qué edificios salvas y con qué criterio?" },
+  { id: "wifi-data", decision: "Instalaste wifi gratuito en toda la ciudad.", change: "La empresa proveedora quiere analizar los movimientos de los usuarios.", question: "¿Cancelas el contrato, pagas más por privacidad o aceptas el intercambio?" },
 ];
 
 export const cityEvents: CityEvent[] = [
-  { id: "heat", title: "OLA DE CALOR", detail: "La temperatura llegará a 44 °C durante cinco días y varios barrios casi no tienen sombra.", question: "Tenés una hora para anunciar un plan. ¿Qué hacés primero?", cues: ["MEDIDA URGENTE", "GRUPO PRIORITARIO", "CAMBIO PERMANENTE"] },
-  { id: "company", title: "LLEGA UNA GRAN EMPRESA", detail: "Promete 8.000 empleos, pero exige beneficios fiscales y un terreno central.", question: "¿Aceptás? Respondé con una condición no negociable.", cues: ["BENEFICIO", "COSTO", "CONDICIÓN"] },
-  { id: "budget", title: "BAJA EL PRESUPUESTO", detail: "La ciudad pierde de golpe el 18 % de sus ingresos para el próximo año.", question: "¿Qué protegés, qué pausás y cómo lo explicás públicamente?", cues: ["PROTEGER", "PAUSAR", "EXPLICAR"] },
-  { id: "protest", title: "UN BARRIO PROTESTA", detail: "Miles de personas rechazan una obra que beneficiará al resto de la ciudad.", question: "¿Frenás, negociás o seguís? Justificá el procedimiento.", cues: ["ESCUCHAR", "DECIDIR", "COMPENSAR"] },
-  { id: "viral", title: "LA CIUDAD SE VUELVE VIRAL", detail: "Un video transforma un barrio tranquilo en el nuevo destino de moda.", question: "¿Cómo aprovechás la oportunidad sin destruir lo que la hizo atractiva?", cues: ["PRIMER LÍMITE", "OPORTUNIDAD", "SEÑAL DE ALERTA"] },
+  { id: "heat", title: "OLA DE CALOR", detail: "La temperatura llegará a 44 °C durante cinco días y varios barrios casi no tienen sombra.", question: "Tienes una hora para anunciar un plan. ¿Qué haces primero?", cues: ["MEDIDA URGENTE", "GRUPO PRIORITARIO", "CAMBIO PERMANENTE"] },
+  { id: "company", title: "LLEGA UNA GRAN EMPRESA", detail: "Promete 8.000 empleos, pero exige beneficios fiscales y un terreno central.", question: "¿Aceptas? Responde con una condición no negociable.", cues: ["BENEFICIO", "COSTO", "CONDICIÓN"] },
+  { id: "budget", title: "BAJA EL PRESUPUESTO", detail: "La ciudad pierde de golpe el 18 % de sus ingresos para el próximo año.", question: "¿Qué proteges, qué pausas y cómo lo explicas públicamente?", cues: ["PROTEGER", "PAUSAR", "EXPLICAR"] },
+  { id: "protest", title: "UN BARRIO PROTESTA", detail: "Miles de personas rechazan una obra que beneficiará al resto de la ciudad.", question: "¿Frenas, negocias o sigues? Justifica el procedimiento.", cues: ["ESCUCHAR", "DECIDIR", "COMPENSAR"] },
+  { id: "viral", title: "LA CIUDAD SE VUELVE VIRAL", detail: "Un video transforma un barrio tranquilo en el nuevo destino de moda.", question: "¿Cómo aprovechas la oportunidad sin destruir lo que la hizo atractiva?", cues: ["PRIMER LÍMITE", "OPORTUNIDAD", "SEÑAL DE ALERTA"] },
   { id: "storm", title: "TORMENTA HISTÓRICA", detail: "Una lluvia extrema inunda estaciones, escuelas y dos hospitales.", question: "¿Cuál es tu orden de acción durante las primeras seis horas?", cues: ["RESCATAR", "COMUNICAR", "PREVENIR"] },
-  { id: "metro", title: "NUEVA LÍNEA POSIBLE", detail: "El gobierno nacional ofrece pagar el 70 % de una línea de metro si la ciudad decide el trazado hoy.", question: "¿Qué información necesitás y qué barrio conectarías primero?", cues: ["CRITERIO", "TRAZADO", "RIESGO"] },
-  { id: "arrival", title: "LLEGAN 20.000 PERSONAS", detail: "Una crisis regional provoca una llegada rápida de nuevas familias que necesitan vivienda y servicios.", question: "¿Cómo respondés sin enfrentar a recién llegados y residentes?", cues: ["HOY", "EN SEIS MESES", "CONVIVENCIA"] },
+  { id: "metro", title: "NUEVA LÍNEA POSIBLE", detail: "El gobierno nacional ofrece pagar el 70 % de una línea de metro si la ciudad decide el trazado hoy.", question: "¿Qué información necesitas y qué barrio conectarías primero?", cues: ["CRITERIO", "TRAZADO", "RIESGO"] },
+  { id: "arrival", title: "LLEGAN 20.000 PERSONAS", detail: "Una crisis regional provoca una llegada rápida de nuevas familias que necesitan vivienda y servicios.", question: "¿Cómo respondes sin enfrentar a recién llegados y residentes?", cues: ["HOY", "EN SEIS MESES", "CONVIVENCIA"] },
 ];
 
 export const bossPrompts: Array<[string, string]> = [
-  ["FOTO GENERAL", "Presentá tu ciudad en treinta segundos: ¿cómo se vive y qué la hace diferente?"],
-  ["TRES PRIORIDADES", "Nombrá las tres decisiones que definen tu modelo y explicá por qué van primero."],
+  ["FOTO GENERAL", "Presenta tu ciudad en treinta segundos: ¿cómo se vive y qué la hace diferente?"],
+  ["TRES PRIORIDADES", "Nombra las tres decisiones que definen tu modelo y explica por qué van primero."],
   ["EL SACRIFICIO", "¿Qué decidiste no ofrecer o reducir para poder sostener tus prioridades?"],
   ["GANADORES Y PERDEDORES", "¿A quién beneficia más tu ciudad y quién podría criticarla con razón?"],
-  ["EL ACUERDO DIFÍCIL", "Contá el conflicto más complejo y defendé la solución intermedia que elegiste."],
-  ["UNA REGLA", "Formulá una regla pública que represente el espíritu de tu ciudad y explicá su límite."],
+  ["EL ACUERDO DIFÍCIL", "Cuenta el conflicto más complejo y defiende la solución intermedia que elegiste."],
+  ["UNA REGLA", "Formula una regla pública que represente el espíritu de tu ciudad y explica su límite."],
   ["PRIMEROS 100 DÍAS", "¿Qué harías primero, qué dejarías para después y cómo medirías el resultado?"],
-  ["DENTRO DE 20 AÑOS", "Defendé por qué tu modelo seguirá funcionando y reconocé qué podría obligarlo a cambiar."],
+  ["DENTRO DE 20 AÑOS", "Defiende por qué tu modelo seguirá funcionando y reconoce qué podría obligarlo a cambiar."],
 ];
 
 export const finalQuestions = [
   "¿Qué hace que una ciudad sea realmente buena para vivir y no solo atractiva para visitar?",
-  "¿Qué problema resolverías primero en la ciudad donde vivís y por qué?",
+  "¿Qué problema resolverías primero en la ciudad donde vives y por qué?",
   "¿Qué debería pesar más en una decisión urbana: eficiencia o calidad de vida?",
   "¿Hasta qué punto habría que limitar el turismo cuando beneficia a la economía?",
   "¿Qué servicios deberían estar garantizados para todas las personas?",

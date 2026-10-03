@@ -53,8 +53,8 @@ test("conflict types are genuinely varied and money is not the default", () => {
 });
 
 test("prompts are varied and cannot be answered with sí/no/cambio/sigo igual", () => {
-  const banned = /seguís igual|¿cambiás\?|mantenés tu decisión|¿la mantenés|¿mantenés/i;
-  const opener = /(^|[\s:.])(¿(qué|cuál|cuáles|cómo|cuándo|cuánto|cuánta|cuántos|dónde|quién|a quién|en qué|con qué|con cuál|para qué|por qué)(?=[\s?])|(defendé|compará|convencé|explicá|contá|tenés que)(?=\s))/i;
+  const banned = /sigues igual|¿cambias\?|mantienes tu decisión|¿la mantienes|¿mantienes/i;
+  const opener = /(^|[\s:.])(¿(qué|cuál|cuáles|cómo|cuándo|cuánto|cuánta|cuántos|dónde|quién|a quién|en qué|con qué|con cuál|para qué|por qué)(?=[\s?])|(defiende|compara|convence|explica|cuenta|tienes que)(?=\s))/i;
   for (const prompt of [...prompts, ...choiceBank.map((item) => item.follow)]) {
     assert.doesNotMatch(prompt, banned, prompt);
     assert.match(prompt, opener, `consigna de sí/no o sin pedido de argumento: ${prompt}`);

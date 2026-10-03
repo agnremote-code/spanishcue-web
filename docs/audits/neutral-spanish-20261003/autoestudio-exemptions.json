@@ -1692,6 +1692,282 @@
       "text": "Puedo reconocer y usar las formas de vos en presente e imperativo (vos tenés, vení, decime).",
       "reason": "objective statement: Explicit voseo objective teaches present and imperative regional paradigms.",
       "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Soy Tomás. ¿Y tú?",
+      "reason": "theory.parts.examples.es: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Valeria y Tomás estudian en una escuela de idiomas de la colonia Roma. Escucha tres momentos del mismo día: en el café por la mañana, en la oficina por la tarde y en la puerta de la escuela por la noche.",
+      "reason": "listening.context: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Tomás",
+      "reason": "listening.speakers.name: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Hola. Me llamo Tomás. ¿Y tú?",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Yo soy Valeria. Mucho gusto, Tomás.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Buenas tardes, señora Ortiz. Soy Tomás Ruiz. Encantado.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "¡Hola, Martín! Hasta mañana, Tomás.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "¿Qué dice Tomás al final?",
+      "reason": "listening.stages.exercise.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "—¿Él es Tomás? —No, ___ ___ Tomás. Es Mateo.",
+      "reason": "grammar.exercises.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "Tomás es portugués.",
+      "reason": "quiz.items.source: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "trabajás",
+      "reason": "theory.parts.table.rows: The A1-04 table labels this as the regional Río de la Plata/Centroamérica row; its tip explicitly contrasts stress in trabajáis and trabajás.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "estudiás",
+      "reason": "theory.parts.table.rows: The A1-04 table labels this as the regional Río de la Plata/Centroamérica row; its tip explicitly contrasts stress in trabajáis and trabajás.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "Fíjate en la sílaba fuerte: **tra**-ba-jo, tra-**ba**-jas, tra-ba-**ja**-mos. En _trabajáis_ y _trabajás_ la fuerza va al final, por eso llevan tilde.",
+      "reason": "theory.parts.tip: The A1-04 table labels this as the regional Río de la Plata/Centroamérica row; its tip explicitly contrasts stress in trabajáis and trabajás.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "Es mi abuelo Tomás. Es muy serio en las fotos, pero en realidad es muy divertido.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "¿Cómo es el abuelo Tomás en realidad?",
+      "reason": "listening.stages.exercise.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "comés",
+      "reason": "grammar.exercises.items.options: A1-07 explicitly tests recognition of the vos -er form; the incorrect Tú comés sentence is an error-correction prompt with corrected tú/vos alternatives.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Vosotras aprendéis recetas y compartís la comida.",
+      "reason": "quiz.items.answers: Second-person plural vosotros/vosotras answer to an instruction explicitly asking for vosotras; not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Aprendéis recetas y compartís la comida.",
+      "reason": "quiz.items.answers: Second-person plural vosotros/vosotras answer to an instruction explicitly asking for vosotras; not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Tú comés pan todos los días, ¿no?",
+      "reason": "quiz.items.sentence: A1-07 explicitly tests recognition of the vos -er form; the incorrect Tú comés sentence is an error-correction prompt with corrected tú/vos alternatives.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "escribís",
+      "reason": "theory.parts.table.rows: Checkpoint table includes explicitly labelled regional vos and vosotros/as rows; escribís is the correct form in both paradigms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "jugás",
+      "reason": "theory.parts.table.rows: A1-11 explicit tú-versus-vos table in the Central American voseo lesson.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w18.ts",
+      "text": "Tareas de esta semana: Diego y Ana tienen que limpiar los baños. Bienvenido, a ti te toca la cocina: la nevera está muy sucia, hay que limpiarla el miércoles. Carmen y Tomás hacen la compra el jueves. ¡Necesitamos mucho arroz y un poco de café!",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w19.ts",
+      "text": "**Tomás:** ¡Felicidades, Yolanda! Muchas gracias por la invitación. Lo siento mucho, es que ese fin de semana es la boda de mi hermano en David. ¡Pero el domingo pasamos por su casa con un abrazo para la quinceañera!",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w19.ts",
+      "text": "¿Por qué no va Tomás?",
+      "reason": "reading.tasks.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "Nora: Muchas gracias. Mi compañero irá a buscarlo porque yo trabajo hasta tarde. Se llama Tomás. ¿Puedes dárselo a él? Le voy a explicar cómo llegar. El domingo te lo devolveré yo. Si prefieres, puedo dejarlo en recepción. Beto: Mejor en recepción, gracias. Allí registran las devoluciones y comprueban que estén los dos cables.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "Tomás",
+      "reason": "reading.tasks.items.options: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "La información de la situación corresponde a «Tomás»; comprueba la frase completa antes de volver a responder.",
+      "reason": "reading.tasks.items.why: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w01.ts",
+      "text": "Lucía insiste en que dispone de dos personas para revisar los datos. Tomás, en cambio, insiste en que asignemos una tercera persona al diseño. Ambas afirmaciones parecen incompatibles únicamente si damos por hecho que todas las tareas deben realizarse a la vez. Sugiero que Lucía cierre primero las cifras y que Tomás reciba apoyo después. Necesito que cada responsable indique, antes del miércoles, qué puede entregar sin comprometer la calidad. Nadie tiene que justificar públicamente sus circunstancias personales; basta con señalar su disponibilidad y las dependencias de su trabajo.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás intenta abreviar.",
+      "reason": "theory.parts.mistakes.wrong: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás intente abreviar.",
+      "reason": "theory.parts.mistakes.right: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Reformula sin atribuir certeza a la intención. Texto de partida: «Tomás quizá intentaba abreviar por falta de tiempo.»",
+      "reason": "grammar.exercises.items.prompt: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás intentara abreviar por falta de tiempo.",
+      "reason": "grammar.exercises.items.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Qué bien organizado está todo: ocho personas y siete carpetas. No, no hace falta que te levantes, puedo mirar con Tomás. Lo decía porque luego se nos pide que revisemos cada detalle, y una llega y piensa que quizá sobra. Bueno, dejémoslo. Quisiera saber cuánto tiempo reservamos al diagnóstico, porque sin esa parte la propuesta puede parecer una ocurrencia y no una respuesta a lo que hemos observado durante meses.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "¿Qué información reconoce Tomás que debería haber dado antes?",
+      "reason": "listening.stages.exercise.items.prompt: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La réplica sobre las carpetas admite una lectura irónica porque el elogio contradice la situación observada y provoca una justificación. No demuestra, por sí sola, que Tomás quiera excluir a Irene. El dato posterior sobre los diez minutos ofrece otra explicación de su propuesta de brevedad. La interpretación debe actualizarse sin borrar la tensión previa. En la lectura oral destacaría la aceptación exagerada de Irene y reduciría ese contraste cuando reconoce que la nueva información cambia el panorama.",
+      "reason": "listening.stages.exercise.items.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Cuando Irene llegó a la reunión, la única silla libre estaba junto a la puerta. Sobre la mesa habían colocado siete carpetas para ocho personas. Qué previsores, dijo, dejando el abrigo sobre el respaldo. Tomás respondió que podían compartir la suya. Nadie comentó la frase de Irene, pero la conversación cambió de ritmo. La secretaria, que había preparado la sala, empezó a justificar el reparto antes de que alguien la acusara de nada. El elogio literal había funcionado como reproche porque la situación hacía difícil interpretarlo como reconocimiento sincero.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La reunión debía decidir quién presentaría un proyecto a la dirección. Irene había elaborado el diagnóstico; Tomás, las diapositivas. Al revisar el orden del día, él observó que convenía una intervención ágil, sin entrar en todos los antecedentes. Irene contestó que, por supuesto, los antecedentes solo explicaban por qué estaban allí. La réplica no rechazaba expresamente la propuesta. Señalaba, mediante una aceptación exagerada, que suprimir el diagnóstico podía convertir el proyecto en una solución sin problema. El público de aquella pequeña escena disponía de información suficiente para inferir la crítica, pero no para saber si Tomás buscaba realmente desplazar a su compañera.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Conviene mantener esa diferencia. Inferir una intención comunicativa no autoriza a reconstruir con certeza una motivación personal. Podemos defender que Irene expresa desacuerdo irónico; no podemos asegurar que Tomás actúa por envidia. La lectura del subtexto se apoya en indicios, no en una licencia para inventar psicología. También cabe que él tema aburrir a la dirección o que haya recibido una instrucción que todavía no ha compartido. La interpretación más elaborada no es siempre la más acusatoria. A veces consiste en conservar varias hipótesis hasta que otra intervención las discrimina.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La directora del equipo preguntó entonces cuánto tiempo tendrían. Diez minutos, respondió Tomás, aunque añadió que solo se lo habían confirmado esa mañana. Irene guardó silencio y después dijo: eso cambia bastante el panorama. El dato no borraba la falta de carpeta ni convertía su protesta en injustificada. Sí modificaba el sentido de la recomendación de brevedad. Una lectura atenta debía actualizarse. El subtexto no es un mensaje secreto fijado de antemano; se construye y se revisa a medida que los interlocutores revelan información.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Al final acordaron una presentación compartida. Irene dispondría de tres minutos para explicar el diagnóstico; Tomás desarrollaría la propuesta y ambos responderían preguntas. La secretaria añadió una carpeta y preguntó si faltaba algo más. Esta vez Irene dijo que no, gracias, sin alargar el adverbio ni mirar a los demás. La misma cortesía recuperaba un valor literal porque habían cambiado el contexto y la forma de decirla. Ninguna marca escrita podía reproducir por completo esa diferencia; la representación oral debía elegir pausas, acentos y miradas compatibles con la interpretación.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "¿Qué obliga a revisar la interpretación de la propuesta de Tomás?",
+      "reason": "reading.tasks.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La propuesta de omitir antecedentes también admite una crítica implícita: Irene acepta exageradamente que esos antecedentes «solo» explican la necesidad del proyecto. El contraste permite inferir que rechaza su supresión, aunque no haya formulado todavía una negativa directa. Esa lectura se apoya en la relación entre diagnóstico y solución, no en suponer una enemistad previa. Atribuir a Tomás envidia o deseo de apropiarse del trabajo iría más allá de los indicios disponibles. Su explicación sobre el límite temporal ofrece una motivación alternativa que el análisis debe conservar y examinar.",
+      "reason": "writing.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La escena tampoco se vuelve armónica retrospectivamente cuando aparece el dato nuevo. La falta de carpeta sigue siendo un hecho, y la información sobre el tiempo podría haberse comunicado antes. Lo que cambia es la fuerza de una hipótesis sobre la propuesta de Tomás. En una segunda puesta en voz haría que Irene comenzara con humor y aumentara la seriedad al discutir el diagnóstico; esa lectura también resulta defendible. Compararía ambas versiones atendiendo a pausas, énfasis y reacción de los interlocutores. La interpretación más rigurosa conserva esta pluralidad limitada por el texto y distingue subtexto comunicativo de especulación psicológica.",
+      "reason": "writing.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás ___ abreviar.",
+      "reason": "quiz.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Reformula sin atribuir certeza a la intención. Escribe solo la reformulación. En una intervención sobre «Una cortesía demasiado perfecta» lees: «Tomás quizá intentaba abreviar por falta de tiempo.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
+      "reason": "quiz.items.prompt: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w04.ts",
+      "text": "Tomás",
+      "reason": "listening.speakers.name: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
     }
   ]
 }

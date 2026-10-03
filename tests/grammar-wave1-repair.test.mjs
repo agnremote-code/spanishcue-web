@@ -29,11 +29,11 @@ test('only the target catalog promises describe the selected route and implement
   assert.equal(lesson.path,id===45?'/el-mercado-de-las-cantidades':'/la-torre-de-las-coordenadas');
  }
  assert.match(lessons.find(item=>item.id===45).subtitle,/compra interactiva/);
- assert.match(lessons.find(item=>item.id===47).subtitle,/escena que podés mover/);
+ assert.match(lessons.find(item=>item.id===47).subtitle,/escena que puedes mover/);
 });
 const expected=[
  ['Necesito una botella de agua.','Hay muchos tomates en la caja.','Tengo poco tiempo hoy.','Trabajo todos los días.','Quiero otro café, por favor.','No hay nadie en el puesto.','Esta sopa tiene demasiada sal.','Este mercado no es tan caro.'],
- ['El museo está muy cerca.','Ana estudia mucho.','¿Cuándo empieza la clase?','No voy y Leo tampoco.','Primero cocino; después como.','Habla claramente.','¿Por qué estudiás? Porque viajo.','Las llaves están encima de la mesa.'],
+ ['El museo está muy cerca.','Ana estudia mucho.','¿Cuándo empieza la clase?','No voy y Leo tampoco.','Primero cocino; después como.','Habla claramente.','¿Por qué estudias? Porque viajo.','Las llaves están encima de la mesa.'],
 ];
 const validIndices=[[1,0,1,0,0,1,1,1],[1,0,0,1,1,1,1,0]];
 // Independent reviewed choice matrices. A grammatical alternative may be wrong for
@@ -63,7 +63,7 @@ test('ambiguous task readings are explicitly constrained and regional gender is 
  assert.doesNotMatch(JSON.stringify(banks[0].traps),/mucha calor/);
  assert.match(banks[0].bigIdea.contrast[3].detail,/contexto/);
 });
-test('all seven other GrammarWorld banks remain byte-equivalent data and target banks preserve their strong content',()=>{
+test('all GrammarWorld banks match the reviewed neutral copy baseline',()=>{
  for(const [key,bank] of Object.entries({...first,...next})){
   const fingerprint=baseline.banks[key];assert.ok(fingerprint,key);
   if(fingerprint.data)assert.equal(hash(bank),fingerprint.data,key);
@@ -121,12 +121,12 @@ test('real quiz handlers clear stale feedback, preserve other answers, reveal de
  assert.equal(button(render(),'check-market-bottle').props.disabled,true);
  button(render(),'select-market-bottle-0').props.onClick();
  button(render(),'check-market-bottle').props.onClick();
- assert.match(textOf(render()),/Probá otra vez/);
+ assert.match(textOf(render()),/Prueba otra vez/);
  assert.doesNotMatch(textOf(render()),/Solución:/);
  button(render(),'reveal-market-bottle').props.onClick();
  assert.match(textOf(render()),/Solución: Necesito una botella/);
  button(render(),'select-market-bottle-1').props.onClick();
- assert.doesNotMatch(textOf(render()),/Solución:|Probá otra vez/);
+ assert.doesNotMatch(textOf(render()),/Solución:|Prueba otra vez/);
  button(render(),'check-market-bottle').props.onClick();
  assert.match(textOf(render()),/1 correctas de 1 comprobadas/);
  button(render(),'select-market-tomatoes-0').props.onClick();
@@ -202,7 +202,7 @@ async function worldComponent(source, mockReact, globals={}){
  runInNewContext(`(function(require,module,exports){${r.outputFiles[0].text}\n})`,{console,...globals})(name=>name==='react'&&mockReact?mockReact:require(name),mod,mod.exports);
  return mod.exports.default;
 }
-test('all nine worlds SSR render; seven non-target renderings match the inherited renderer',async()=>{
+test('all nine worlds SSR render; seven non-target renderings match the reviewed neutral baseline',async()=>{
  const Current=await worldComponent();
  const normalize=html=>html.replace(/grammar-step-[^" ]+/g,'grammar-step-ID');
  for(const [key,bank] of Object.entries({...first,...next})){
@@ -243,10 +243,10 @@ test('every question has independent real select/check/retry/reveal behavior for
   for(const [i,item] of bank.practice.entries())for(let option=0;option<3;option++){
    button(render(),`select-${item.id}-${option}`).props.onClick();
    const article=find(render(),n=>n.type==='article')[i];
-   assert.doesNotMatch(textOf(article),/La frase funciona|Probá otra vez|Solución:/);
+   assert.doesNotMatch(textOf(article),/La frase funciona|Prueba otra vez|Solución:/);
    button(render(),`check-${item.id}`).props.onClick();
    const result=find(render(),n=>n.type==='article')[i];
-   assert.match(textOf(result),option===validIndices[b][i]?/La frase funciona/:/Probá otra vez/);
+   assert.match(textOf(result),option===validIndices[b][i]?/La frase funciona/:/Prueba otra vez/);
    if(option!==validIndices[b][i]){
     button(render(),`reveal-${item.id}`).props.onClick();
     assert.ok(textOf(find(render(),n=>n.type==='article')[i]).includes(`Solución: ${expected[b][i]}`));

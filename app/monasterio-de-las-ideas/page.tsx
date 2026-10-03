@@ -77,7 +77,7 @@ const rooms: Room[] = [
     lexicon: ["canon", "falibilidad", "inconmensurabilidad"],
     artifacts: [
       {icon:"◉", name:"La lechuza", detail:"Ve en la oscuridad, pero no por eso ve la verdad. Conocimiento y perspectiva no son sinónimos.", x:76, y:25, motion:"float"},
-      {icon:"◎", name:"El globo", detail:"Todo mapa vuelve centro el lugar desde donde se lo mira. Giralo mentalmente antes de responder.", x:65, y:67, motion:"drift"},
+      {icon:"◎", name:"El globo", detail:"Todo mapa vuelve centro el lugar desde donde se lo mira. Gíralo mentalmente antes de responder.", x:65, y:67, motion:"drift"},
       {icon:"▥", name:"El estante prohibido", detail:"Excluir un libro también puede volverlo más poderoso. ¿Quién administra ese efecto?", x:20, y:44, motion:"glow"}
     ], x: 19, y: 34
   },

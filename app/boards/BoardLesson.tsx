@@ -51,7 +51,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
   const selected = view.selectedCategories;
   const [ready, setReady] = useState(false);
   const [presentation, setPresentation] = useState(false);
-  const [notice, setNotice] = useState("Elegí una categoría o mezclá varias para empezar.");
+  const [notice, setNotice] = useState("Elige una categoría o mezcla varias para empezar.");
   const questionRef = useRef<HTMLHeadingElement>(null);
 
   const current = useMemo(
@@ -93,7 +93,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
           setView((currentView) => ({ ...currentView, selectedCategories: restored.selectedCategories }));
         }
       } catch {
-        setNotice("No pudimos recuperar la sesión anterior. Podés empezar una nueva.");
+        setNotice("No pudimos recuperar la sesión anterior. Puedes empezar una nueva.");
       }
       setReady(true);
     });
@@ -193,7 +193,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
   function startSession() {
     if (selected.length === 0) {
-      setNotice("Elegí al menos una categoría.");
+      setNotice("Elige al menos una categoría.");
       return;
     }
     setSession(createSession(bank, selected));
@@ -284,7 +284,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
     </nav>
 
     {view.phase === "questions" && view.choosing && <section className="board-selector" aria-labelledby="board-selector-title">
-      <span>ARMÁ ESTA SESIÓN</span><h2 id="board-selector-title">Elegí una categoría o mezclá varias.</h2>
+      <span>ARMA ESTA SESIÓN</span><h2 id="board-selector-title">Elige una categoría o mezcla varias.</h2>
       <div>{bank.categories.map((category) => {
         const taught = view.taughtCategories.includes(category);
         return <button
@@ -306,7 +306,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
     {view.phase === "questions" && !view.choosing && session?.exhausted && <section className="board-empty">
       <span>BANCO RECORRIDO</span><h2>Ya aparecieron todas las preguntas de esta selección.</h2>
-      <p>Podés cambiar categorías o volver a sortear las mismas. No repetimos automáticamente.</p>
+      <p>Puedes cambiar categorías o volver a sortear las mismas. No repetimos automáticamente.</p>
        <div><button type="button" onClick={openCategorySelector}>Cambiar categoría</button><button type="button" className="board-primary" onClick={restart}>Reiniciar sorteo</button></div>
     </section>}
 
@@ -318,7 +318,7 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
         <ol>{current.followUps.map((followUp) => <li key={followUp}>{followUp}</li>)}</ol>
         {current.conditionChange && <aside><b>CAMBIO OPCIONAL DE CONDICIÓN</b><p>{current.conditionChange}</p></aside>}
       </div>}
-      <details className="board-help"><summary>Ayudas opcionales</summary><div><p>Podés contar una experiencia, describir una escena, comparar dos momentos o explicar una razón.</p><span>Para empezar: «En mi caso…» · «Una vez…» · «Por un lado…»</span></div></details>
+      <details className="board-help"><summary>Ayudas opcionales</summary><div><p>Puedes contar una experiencia, describir una escena, comparar dos momentos o explicar una razón.</p><span>Para empezar: «En mi caso…» · «Una vez…» · «Por un lado…»</span></div></details>
       <div className="board-actions">
         <button type="button" onClick={goPrevious} disabled={session.cursor === 0}>← Anterior</button>
         <button type="button" onClick={deepen} aria-pressed={session.deepened}>Profundizar</button>
@@ -330,8 +330,8 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
     {view.phase === "student" && <section className="board-interlude">
       <span>5 min · CAMBIO DE ROLES</span><h2>Ahora el alumno pregunta al profesor.</h2>
-      <p>Elegí una pregunta del tablero que te dio curiosidad, adaptala y hacé una repregunta según la respuesta.</p>
-      <div><b>1</b><span>Elegí un tema de hoy.</span><b>2</b><span>Formulá tu propia pregunta.</span><b>3</b><span>Escuchá y profundizá.</span></div>
+      <p>Elige una pregunta del tablero que te dio curiosidad, adáptala y haz una repregunta según la respuesta.</p>
+      <div><b>1</b><span>Elige un tema de hoy.</span><b>2</b><span>Formula tu propia pregunta.</span><b>3</b><span>Escucha y profundiza.</span></div>
       <button type="button" className="board-primary" onClick={openFinal}>Ir a la conversación final →</button>
     </section>}
 

@@ -63,7 +63,7 @@ export const stops: CityStop[] = [
     words: [p("el colectivo", "city bus"), p("la parada", "bus stop"), p("el chofer", "driver"), p("la esquina", "corner"), p("el cinturón", "seat belt")],
     dialogues: [d("¿Me avisás en Corrientes?", "Sí, te aviso.", "Can you tell me when we reach Corrientes? — Yes, I will."), d("Voy hasta Plaza de Mayo.", "Son cuatro paradas.", "I'm going to Plaza de Mayo. — It is four stops."), d("¿Podés ir por acá?", "Sí, no hay problema.", "Can you go this way? — Yes, no problem.")],
     prompts: [q("¿Prefieres mirar la ciudad desde un colectivo o caminar?", "Do you prefer seeing the city from a bus or walking?", "Prefiero…"), q("¿Hablas con los taxistas cuando viajas?", "Do you talk to taxi drivers when travelling?", "Sí / No, porque…"), q("¿Qué transporte usas más en tu vida cotidiana?", "Which transport do you use most in everyday life?", "Uso más…")],
-    local: { es: "el bondi", en: "the bus", note: "Lunfardo cotidiano: «colectivo» y «bondi» significan bus urbano." }, mission: "Decile al chofer tu destino y pedile que te avise."
+    local: { es: "el bondi", en: "the bus", note: "Lunfardo cotidiano: «colectivo» y «bondi» significan bus urbano." }, mission: "Dile al chofer tu destino y pídele que te avise."
   },
   {
     id: "cafe", number: "06", title: "Café notable", english: "Historic café", zone: "Una pausa", atlas: 2, tile: 2, position: { x: 78, y: 39 },

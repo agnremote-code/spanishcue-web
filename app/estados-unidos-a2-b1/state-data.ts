@@ -74,24 +74,24 @@ export const states:USState[]=raw.trim().split("\n").map((line,index)=>{
   const places=placesByCode[code];
   const placeNames=places.map(place=>place.name).join(", ");
   const a2Questions=[
-    p(`Mirá las cuatro paradas de ${name}. ¿Cuál querés visitar primero y por qué?`,`Look at the four ${atlasName} stops. Which one do you want to visit first, and why?`),
-    p(`Imaginá un fin de semana en ${name}. ¿Preferís ciudad, naturaleza, comida o música?`,`Imagine a weekend in ${atlasName}. Do you prefer a city, nature, food or music?`),
-    p(`¿Te gustaría vivir un mes en ${name}? Contá cómo sería un día normal.`,`Would you like to live in ${atlasName} for one month? Describe a normal day.`),
+    p(`Mira las cuatro paradas de ${name}. ¿Cuál quieres visitar primero y por qué?`,`Look at the four ${atlasName} stops. Which one do you want to visit first, and why?`),
+    p(`Imagina un fin de semana en ${name}. ¿Prefieres ciudad, naturaleza, comida o música?`,`Imagine a weekend in ${atlasName}. Do you prefer a city, nature, food or music?`),
+    p(`¿Te gustaría vivir un mes en ${name}? Cuenta cómo sería un día normal.`,`Would you like to live in ${atlasName} for one month? Describe a normal day.`),
     p(`En tu región, ¿hay un paisaje o una actividad parecida a ${hook.toLowerCase()}?`,`In your region, is there a landscape or activity similar to ${hook.toLowerCase()}?`),
     p(`¿Qué persona disfrutaría más de ${name}: alguien activo, tranquilo, urbano o aventurero?`,`Who would enjoy ${atlasName} most: an active, calm, urban or adventurous person?`),
   ];
-  const b1Extension=p(`En ${name}, ¿qué tensión podría existir entre recibir visitantes y proteger la vida local? Proponé un equilibrio.`,`In ${atlasName}, what tension could exist between welcoming visitors and protecting local life? Propose a balance.`);
+  const b1Extension=p(`En ${name}, ¿qué tensión podría existir entre recibir visitantes y proteger la vida local? Propón un equilibrio.`,`In ${atlasName}, what tension could exist between welcoming visitors and protecting local life? Propose a balance.`);
   return {
     code,atlasName,name,nameEn:atlasName,capital,region,number:String(index+1).padStart(2,"0"),
     color:palette[index%palette.length],sceneItems:items.split(","),hook:p(hook),
     fact:p(`Este recorrido conecta ${placeNames}: cuatro formas distintas de entender ${name}.`,`This route connects ${placeNames}: four different ways to understand ${atlasName}.`),
-    mission:p(`Elegí una parada de ${name}, explicá por qué y comparala con un lugar que conocés.`,`Choose one ${atlasName} stop, explain why and compare it with a place you know.`),
+    mission:p(`Elige una parada de ${name}, explica por qué y compárala con un lugar que conoces.`,`Choose one ${atlasName} stop, explain why and compare it with a place you know.`),
     words:[p("la capital","state capital"),p("el paisaje","landscape"),p("la comunidad","community"),p("la tradición local","local tradition"),p("el viaje por carretera","road trip"),p("comparar","to compare")],
     a2Questions,b1Extension,questions:[...a2Questions,b1Extension],
     questionFallbacks:[
       ...places.map(place=>place.fallback),
-      p("Si no conocés este estado: ¿qué te ayuda más a entender un lugar nuevo: su naturaleza, sus ciudades, su historia o su comida?","If you do not know this state: what helps you understand a new place most—nature, cities, history or food?"),
-      p("Si no conocés este estado: ¿preferís viajar para confirmar una idea que ya tenías o para cambiarla por completo?","If you do not know this state: do you prefer travelling to confirm an idea you already had or to change it completely?"),
+      p("Si no conoces este estado: ¿qué te ayuda más a entender un lugar nuevo: su naturaleza, sus ciudades, su historia o su comida?","If you do not know this state: what helps you understand a new place most—nature, cities, history or food?"),
+      p("Si no conoces este estado: ¿prefieres viajar para confirmar una idea que ya tenías o para cambiarla por completo?","If you do not know this state: do you prefer travelling to confirm an idea you already had or to change it completely?"),
     ],
   };
 });
@@ -110,4 +110,4 @@ export const usaModes=["EXPLORE","RANDOM","THIS OR THAT","WHERE WOULD YOU LIVE?"
 
 export const starters=[p("Yo empezaría por… porque…","I would start with… because…"),p("Para mí, la mejor opción es…","For me, the best option is…"),p("Comparado con mi ciudad…","Compared with my city…"),p("Lo más interesante sería…","The most interesting thing would be…")];
 export const connectors=[p("porque","because"),p("además","in addition"),p("sin embargo","however"),p("por ejemplo","for example"),p("en cambio","whereas"),p("por eso","that is why")];
-export const depthMoves=[p("Agregá una experiencia personal.","Add a personal experience."),p("Comparalo con otro estado.","Compare it with another state."),p("Mencioná una ventaja y un problema.","Mention one advantage and one problem."),p("Defendé la opción contraria.","Defend the opposite option."),p("Creá un viaje de tres días.","Create a three-day trip."),p("Hacé una pregunta de seguimiento.","Ask a follow-up question.")];
+export const depthMoves=[p("Agrega una experiencia personal.","Add a personal experience."),p("Compáralo con otro estado.","Compare it with another state."),p("Menciona una ventaja y un problema.","Mention one advantage and one problem."),p("Defiende la opción contraria.","Defend the opposite option."),p("Crea un viaje de tres días.","Create a three-day trip."),p("Haz una pregunta de seguimiento.","Ask a follow-up question.")];

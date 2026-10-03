@@ -123,8 +123,8 @@ export default function FutureCity() {
             <p className="fc-year">AÑO 2076 · LA CIUDAD TE ESTÁ ESPERANDO</p>
             <h1>LA CIUDAD<br /><em>DEL FUTURO</em></h1>
             <p className="fc-cover-lead">
-              No venís a adivinar qué tecnología existirá. Venís a decidir cómo queremos vivir.
-              Entrá a 12 edificios realistas, elegí una puerta y enfrentá preguntas que no aparecen en una clase normal.
+              No vienes a adivinar qué tecnología existirá. Vienes a decidir cómo queremos vivir.
+              Entra a 12 edificios realistas, elige una puerta y enfrenta preguntas que no aparecen en una clase normal.
             </p>
             <div className="fc-cover-actions">
               <button onClick={() => show("map")}>ENTRAR A LA CIUDAD <span>→</span></button>
@@ -148,11 +148,11 @@ export default function FutureCity() {
           <header className="fc-page-head">
             <div>
               <span>DISTRITO CENTRAL · B1</span>
-              <h1>Elegí un edificio.<br />Cambiá la ciudad.</h1>
+              <h1>Elige un edificio.<br />Cambia la ciudad.</h1>
             </div>
             <div className="fc-map-intro">
               <p>Cada edificio abre un tema distinto. <b>Solo uno es TECH:</b> los otros once hablan de tiempo, salud, comida, poder, vínculos, migración y vida real.</p>
-              <button onClick={randomDistrict}>SORPRENDEME <span>↗</span></button>
+              <button onClick={randomDistrict}>SORPRÉNDEME <span>↗</span></button>
             </div>
           </header>
 
@@ -188,7 +188,7 @@ export default function FutureCity() {
 
           <section className="fc-city-rule">
             <span>REGLA DE LA CIUDAD</span>
-            <p>No busques la respuesta correcta. <b>Diseñá una respuesta posible, encontrá el problema que crea y mejorala.</b></p>
+            <p>No busques la respuesta correcta. <b>Diseña una respuesta posible, encuentra el problema que crea y mejórala.</b></p>
           </section>
         </section>
       )}
@@ -215,7 +215,7 @@ export default function FutureCity() {
           <div className="fc-district-body">
             <section className="fc-question-picker">
               <header>
-                <div><span>01 · ELEGÍ UNA PUERTA</span><h2>¿Qué pregunta querés abrir?</h2></div>
+                <div><span>01 · ELIGE UNA PUERTA</span><h2>¿Qué pregunta quieres abrir?</h2></div>
                 <p>Son B1 de verdad: claras para entender, difíciles de responder.</p>
               </header>
               <div>

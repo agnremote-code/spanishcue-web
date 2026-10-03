@@ -25,7 +25,7 @@ const stages: PlayStage[] = [
   { label: "ESO PROVOCA...", short: "EFECTO", minutes: 7, color: "#e64980" },
   { label: "OTRA SOLUCIÓN", short: "CONSEJO", minutes: 6, color: "#2eb16e" },
   {
-    label: "VOS DECIDÍS EL FINAL",
+    label: "TÚ DECIDES EL FINAL",
     short: "HISTORIA",
     minutes: 6,
     color: "#f1a100",
@@ -68,7 +68,7 @@ function SessionTools({
         <span>
           {mode === "session"
             ? "12 jugadas equilibradas · no hace falta completar el banco"
-            : "Elegí cualquier tipo y navegá sin límite"}
+            : "Elige cualquier tipo y navega sin límite"}
         </span>
       </div>
       <nav>
@@ -286,7 +286,7 @@ export default function YAhoraQue() {
       {stage === 0 && (
         <>
           <span className="play-kicker">
-            SITUACIÓN → REACCIÓN → DECÍ EXACTAMENTE QUÉ HACÉS
+            SITUACIÓN → REACCIÓN → DI EXACTAMENTE QUÉ HACES
           </span>
           {mode === "free" && (
             <SituationFilters value={category} onChange={chooseCategory} />
@@ -298,7 +298,7 @@ export default function YAhoraQue() {
             </small>
             <h2>{currentSituation.text}</h2>
           </div>
-          <SpeakPrompt>¿Qué hacés?</SpeakPrompt>
+          <SpeakPrompt>¿Qué haces?</SpeakPrompt>
           <div className="reaction-grid">
             {currentSituation.reactions.map((item) => (
               <button
@@ -328,14 +328,14 @@ export default function YAhoraQue() {
       {stage === 1 && (
         <>
           <span className="play-kicker">
-            OPINÁ PRIMERO · DESPUÉS ABRÍ EL DATO
+            OPINA PRIMERO · DESPUÉS ABRE EL DATO
           </span>
           <div className="scenario-card">
             <span className="scenario-icon">...</span>
             <small>{currentSocial.category}</small>
             <h2>{currentSocial.text}</h2>
           </div>
-          <SpeakPrompt>¿Qué pensás y qué harías?</SpeakPrompt>
+          <SpeakPrompt>¿Qué piensas y qué harías?</SpeakPrompt>
           <div className="cue-row">
             {currentSocial.cues.map((item) => (
               <button key={item} onClick={() => setCue(item)}>
@@ -345,7 +345,7 @@ export default function YAhoraQue() {
           </div>
           {cue && (
             <SpeakPrompt tone="coral">
-              Usá la idea «{cue.toLowerCase()}» y decí exactamente cómo
+              Usa la idea «{cue.toLowerCase()}» y di exactamente cómo
               actuarías.
             </SpeakPrompt>
           )}
@@ -377,7 +377,7 @@ export default function YAhoraQue() {
       {stage === 2 && (
         <>
           <span className="play-kicker">
-            UN MENSAJE POR VEZ · RESPONDÉ ANTES DE ABRIR EL SIGUIENTE
+            UN MENSAJE POR VEZ · RESPONDE ANTES DE ABRIR EL SIGUIENTE
           </span>
           <div className="chat-window">
             <header>
@@ -407,7 +407,7 @@ export default function YAhoraQue() {
           )}
           {chatStep === 2 && (
             <SpeakPrompt tone="coral">
-              Respondé el mensaje completo como si estuvieras escribiendo ahora.
+              Responde el mensaje completo como si estuvieras escribiendo ahora.
             </SpeakPrompt>
           )}
           <BankNav
@@ -422,7 +422,7 @@ export default function YAhoraQue() {
       {stage === 3 && (
         <>
           <span className="play-kicker">
-            DECIDÍ · JUSTIFICÁ · DESCUBRÍ EL RESULTADO
+            DECIDE · JUSTIFICA · DESCUBRE EL RESULTADO
           </span>
           <div className="scenario-card">
             <span className="scenario-icon">→</span>
@@ -442,7 +442,7 @@ export default function YAhoraQue() {
           </div>
           {reaction && (
             <SpeakPrompt>
-              ¿Por qué elegiste {reaction.toLowerCase()}? Decí qué esperás que
+              ¿Por qué elegiste {reaction.toLowerCase()}? Di qué esperas que
               pase.
             </SpeakPrompt>
           )}
@@ -461,8 +461,8 @@ export default function YAhoraQue() {
                 <b>{currentEffect.consequence}</b>
               </div>
               <SpeakPrompt tone="coral">
-                ¿Y ahora qué? Reaccioná al resultado: ¿mantenés, cambiás o
-                reparás tu decisión?
+                ¿Y ahora qué? Reacciona al resultado: ¿mantienes, cambias o
+                reparas tu decisión?
               </SpeakPrompt>
             </>
           )}
@@ -492,7 +492,7 @@ export default function YAhoraQue() {
             <h2>«{currentAdvice.problem}»</h2>
           </div>
           <SpeakPrompt>
-            ¿Qué le dirías? Dale un consejo concreto y explicá por qué puede
+            ¿Qué le dirías? Dale un consejo concreto y explica por qué puede
             funcionar.
           </SpeakPrompt>
           {adviceStep === 0 && (
@@ -520,7 +520,7 @@ export default function YAhoraQue() {
           )}
           {adviceStep === 1 && (
             <SpeakPrompt tone="coral">
-              Respondé a su objeción. ¿Mantenés tu consejo o lo adaptás?
+              Responde a su objeción. ¿Mantienes tu consejo o lo adaptas?
             </SpeakPrompt>
           )}
           {adviceStep === 1 && currentAdvice.refusal && (
@@ -531,7 +531,7 @@ export default function YAhoraQue() {
           {adviceStep === 2 && (
             <>
               <SpeakPrompt tone="lime">
-                Ofrecé un plan B realmente diferente.
+                Ofrece un plan B realmente diferente.
               </SpeakPrompt>
               <button
                 className="reveal-button"
@@ -543,7 +543,7 @@ export default function YAhoraQue() {
           )}
           {adviceStep === 3 && (
             <SpeakPrompt tone="coral">
-              Improvisá un plan C. ¿Qué pequeña acción sí podría aceptar?
+              Improvisa un plan C. ¿Qué pequeña acción sí podría aceptar?
             </SpeakPrompt>
           )}
           <BankNav
@@ -573,7 +573,7 @@ export default function YAhoraQue() {
             <h2>{currentStory.steps[storyStep]}</h2>
           </div>
           <SpeakPrompt>
-            {currentStory.questions[storyStep]} Explicá qué hacés exactamente.
+            {currentStory.questions[storyStep]} Explica qué haces exactamente.
           </SpeakPrompt>
           {storyStep < 2 && (
             <button
@@ -585,7 +585,7 @@ export default function YAhoraQue() {
           )}
           {storyStep === 2 && (
             <SpeakPrompt tone="lime">
-              Contá la historia completa y defendé tu decisión final.
+              Cuenta la historia completa y defiende tu decisión final.
             </SpeakPrompt>
           )}
           <BankNav
@@ -610,7 +610,7 @@ export default function YAhoraQue() {
                 <h2>{currentBoss}</h2>
               </div>
               <SpeakPrompt>
-                Desarrollá tu plan, anticipá un problema y reaccioná a la
+                Desarrolla tu plan, anticipa un problema y reacciona a la
                 objeción del profesor.
               </SpeakPrompt>
               <BankNav
@@ -638,7 +638,7 @@ export default function YAhoraQue() {
                 {finalQuestions[finalIndex].question}
               </h2>
               <SpeakPrompt>
-                {finalQuestions[finalIndex].follow} Escuchá al profesor y hacé
+                {finalQuestions[finalIndex].follow} Escucha al profesor y haz
                 una pregunta relacionada.
               </SpeakPrompt>
               <BankNav

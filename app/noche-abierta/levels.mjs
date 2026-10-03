@@ -25,7 +25,7 @@ export const PATCHES = { A1, A2, B1: {}, B2, C1, C2 };
 
 // What each level asks of the learner, shown on the selector and to the teacher.
 export const LEVEL_INFO = {
-  A1: { name: "Primeros pasos", demand: "Frases cortas en presente: pedir, elegir, decir qué hay y qué querés." },
+  A1: { name: "Primeros pasos", demand: "Frases cortas en presente: pedir, elegir, decir qué hay y qué quieres." },
   A2: { name: "Situaciones de todos los días", demand: "Contar lo que pasó, hacer planes y dar razones simples." },
   B1: { name: "Resolver y explicar", demand: "Narrar, justificar, comparar opciones y negociar." },
   B2: { name: "Argumentar con matices", demand: "Ventajas y desventajas, hipótesis, cortesía y desacuerdo." },

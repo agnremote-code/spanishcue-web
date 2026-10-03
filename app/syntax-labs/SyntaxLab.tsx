@@ -54,7 +54,7 @@ function DecisionCard({ data, item, index }: { data: SyntaxLabData; item: Syntax
           </button>
         ))}
       </div>
-      {answered && <p className="sx-feedback" role="status"><b>{correct ? "LA RELACIÓN FUNCIONA" : `PROBÁ: ${item.options[item.correct]}`}</b>{item.feedback}</p>}
+      {answered && <p className="sx-feedback" role="status"><b>{correct ? "LA RELACIÓN FUNCIONA" : `PRUEBA: ${item.options[item.correct]}`}</b>{item.feedback}</p>}
     </article>
   );
 }

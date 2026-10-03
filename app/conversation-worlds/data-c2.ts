@@ -495,9 +495,9 @@ export const absurdRulesC2: AbsurdRuleC2[] = [
     id:'c2-regla-turnos',title:'El último pasa primero',group:'El calendario se contradice',
     law:'En cualquier cola, la última persona debe ser atendida primero.',
     scene:'Eres el último de la heladería. Justo cuando te llaman llega alguien más y tu turno se escapa hacia atrás.',
-    developments:['Dos clientes se apartan y vuelven a ponerse al final a la vez. Cada uno sostiene que merece el siguiente helado.','La heladera congela una foto de la cola para decidir quién era el último. El inspector la multa por atender a alguien que ahora está delante de un recién llegado.'],
+    developments:['Dos clientes se apartan y vuelven a ponerse al final a la vez. Cada uno sostiene que merece el siguiente helado.','La nevera congela una foto de la cola para decidir quién era el último. El inspector la multa por atender a alguien que ahora está delante de un recién llegado.'],
     questions:['¿Último se decide al llegar, al abrir el puesto o al atender? Explica qué presupone la regla sobre una cola que sigue cambiando.','¿Volver a colocarte al final crea una llegada nueva o conserva tu lugar en la misma espera? Defiende ambas lecturas y señala qué incentivo produce cada una.','La foto hace posible atender, pero contradice una lectura del presente. Reescribe cuándo se fija el turno y prueba dos casos límite: llegadas simultáneas y alguien que se aparta para ayudar. Reconoce qué injusticia no resuelve tu versión.'],
-    teacherFollowUp:'Pide que expliques tu versión a la heladera en dos frases y compruebes si puede aplicarla sin interrumpir cada venta.',
+    teacherFollowUp:'Pide que expliques tu versión a la nevera en dos frases y compruebes si puede aplicarla sin interrumpir cada venta.',
     words:['momento de referencia','simultáneo','continuidad de la espera'],starter:'La palabra último no basta si no fijamos cuándo…',
   },
 ];

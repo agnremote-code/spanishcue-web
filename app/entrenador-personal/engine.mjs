@@ -1,9 +1,9 @@
 export const TRAINING_STAGES = [
   { id: "portada", title: "Entrenador personal", minutes: 1 },
-  { id: "calentamiento", title: "Preparame para entrenar", minutes: 5, target: 8 },
+  { id: "calentamiento", title: "Prepárame para entrenar", minutes: 5, target: 8 },
   { id: "objetivo", title: "Elige mi objetivo", minutes: 5, target: 8 },
   { id: "entrenamiento", title: "Entrenamiento en vivo", minutes: 8 },
-  { id: "corregime", title: "Corregime", minutes: 5 },
+  { id: "corregime", title: "Corrígeme", minutes: 5 },
   { id: "cliente-dificil", title: "Cliente difícil", minutes: 5 },
   { id: "semana", title: "Crea mi semana", minutes: 5 },
   { id: "emergencias", title: "Emergencias del gimnasio", minutes: 4, target: 5 },

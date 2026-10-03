@@ -44,3 +44,13 @@ test('ignores documented English support fields in Autoestudio modules only', ()
 test('checks publicly served text files', () => {
   assert.deepEqual(scanSource('Escuchá el audio y después contanos.', 'public/instructions.txt').map(f=>f.token), ['Escuchá','contanos']);
 });
+test('detects enclitic imperative families and additional voseo present forms', () => {
+  const terms = 'sorprendeme ayudame expresalo preparame corregime tocalas defendelas mantenelos justificalo giralo respondelas reescribilos comparalas detenete aclaralo traducila diriginos mandame dejás';
+  const findings = scanSource(`const label = ${JSON.stringify(terms)};`, file);
+  assert.deepEqual(findings.map(f => f.token), terms.split(' '));
+  assert.equal(scanSource('const label="sorpréndeme ayúdame exprésalo prepárame corrígeme tócalas defiéndelas mantenlos justifícalo gíralo respóndelas reescríbelos compáralas detente acláralo tradúcela dirígenos mándame dejas";', file).length, 0);
+});
+test('finite enclitic expansion does not flag neutral nouns, subjunctives or English homographs', () => {
+  assert.equal(scanSource('const text="animales generales formales hablase Create and generate an image, animate it, participate and unite";', file).length, 0);
+  assert.deepEqual(scanSource('const text="Ajustá Variá Fijá contámelo explicánoslo";', file).map(f=>f.token), ['Ajustá','Variá','Fijá','contámelo','explicánoslo']);
+});

@@ -65,14 +65,14 @@ const regions: Record<MexicoRegion, Pair> = {
 };
 
 const questionBanks = [
-  (name: string, life: string) => pair(`¿Qué parte de ${life} sería fácil para vos en ${name} y qué parte sería difícil?`, `What part of ${life} would be easy for you in ${name}, and what would be difficult?`),
-  (name: string, life: string) => pair(`Imaginá un lunes normal en ${name}. ¿Cómo cambiaría tu rutina con ${life}?`, `Imagine a normal Monday in ${name}. How would your routine change with ${life}?`),
+  (name: string, life: string) => pair(`¿Qué parte de ${life} sería fácil para ti en ${name} y qué parte sería difícil?`, `What part of ${life} would be easy for you in ${name}, and what would be difficult?`),
+  (name: string, life: string) => pair(`Imagina un lunes normal en ${name}. ¿Cómo cambiaría tu rutina con ${life}?`, `Imagine a normal Monday in ${name}. How would your routine change with ${life}?`),
   (name: string, life: string) => pair(`¿Qué necesitarías para disfrutar de ${life} durante un año en ${name}?`, `What would you need to enjoy ${life} for a year in ${name}?`),
   (name: string, life: string) => pair(`¿A qué tipo de persona le recomendarías ${name} por su forma de ${life}?`, `Who would you recommend ${name} to because of its way of ${life}?`),
   (name: string) => pair(`¿Qué hábito personal conservarías y cuál cambiarías para vivir en ${name}?`, `Which personal habit would you keep, and which would you change to live in ${name}?`),
-  (name: string, life: string) => pair(`Sin buscar información extra, ¿qué te da curiosidad de ${name} cuando pensás en ${life}?`, `Without looking anything up, what makes you curious about ${name} when you think about ${life}?`),
+  (name: string, life: string) => pair(`Sin buscar información extra, ¿qué te da curiosidad de ${name} cuando piensas en ${life}?`, `Without looking anything up, what makes you curious about ${name} when you think about ${life}?`),
   (name: string, life: string) => pair(`¿Cómo sería un fin de semana ideal en ${name} para alguien que quiere ${life}?`, `What would an ideal weekend in ${name} be like for someone who wants ${life}?`),
-  (name: string, life: string) => pair(`¿Qué ventaja y qué reto imaginás en ${name} si tu prioridad es ${life}?`, `What advantage and challenge do you imagine in ${name} if your priority is ${life}?`),
+  (name: string, life: string) => pair(`¿Qué ventaja y qué reto imaginas en ${name} si tu prioridad es ${life}?`, `What advantage and challenge do you imagine in ${name} if your priority is ${life}?`),
 ];
 
 export const mexicoEntities: MexicoEntity[] = raw.trim().split("\n").map((line, index) => {
@@ -93,10 +93,10 @@ export const mexicoEntities: MexicoEntity[] = raw.trim().split("\n").map((line, 
     vocabulary,
     questions: [
       personal,
-      pair(`Para una semana en ${name}, ¿elegís ${first} o ${second}? Explicá tu decisión.`, `For one week in ${name}, would you choose ${first} or ${second}? Explain your choice.`),
-      pair(`¿Qué detalle de este paisaje —${visual.toLowerCase()}— se parece a un lugar que conocés?`, `Which part of this landscape —${visual.toLowerCase()}— resembles a place you know?`),
+      pair(`Para una semana en ${name}, ¿eliges ${first} o ${second}? Explica tu decisión.`, `For one week in ${name}, would you choose ${first} or ${second}? Explain your choice.`),
+      pair(`¿Qué detalle de este paisaje —${visual.toLowerCase()}— se parece a un lugar que conoces?`, `Which part of this landscape —${visual.toLowerCase()}— resembles a place you know?`),
       pair(`Si pudieras trabajar o estudiar desde ${name} durante un mes, ¿cómo organizarías tus días?`, `If you could work or study from ${name} for a month, how would you organize your days?`),
-      pair(`Compará ${name} con tu país: ¿dónde preferirías vivir, viajar y descansar?`, `Compare ${name} with your country: where would you rather live, travel and rest?`),
+      pair(`Compara ${name} con tu país: ¿dónde preferirías vivir, viajar y descansar?`, `Compare ${name} with your country: where would you rather live, travel and rest?`),
     ],
     followups: [
       pair("¿Qué ejemplo personal apoya tu respuesta?", "What personal example supports your answer?"),
@@ -107,6 +107,6 @@ export const mexicoEntities: MexicoEntity[] = raw.trim().split("\n").map((line, 
 });
 
 export const mexicoRegionNames = regions;
-export const mexicoModes = ["EXPLORAR", "AL AZAR", "ELEGÍ ENTRE DOS", "¿DÓNDE VIVIRÍAS?", "TU PAÍS VS MÉXICO", "TU MÉXICO IDEAL"] as const;
+export const mexicoModes = ["EXPLORAR", "AL AZAR", "ELIGE ENTRE DOS", "¿DÓNDE VIVIRÍAS?", "TU PAÍS VS MÉXICO", "TU MÉXICO IDEAL"] as const;
 export const mexicoIdealCategories = ["vivir", "trabajar", "vacacionar", "comer", "retirarte"] as const;
 export const mexicoPromptCount = mexicoEntities.reduce((sum, entity) => sum + entity.questions.length, 0);

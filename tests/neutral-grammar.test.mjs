@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
 import { verbalParadigms, paradigmPersons } from '../app/verbal-system/paradigms.ts';
 import { verbalLessons } from '../app/verbal-system/lesson-data.ts';
 import { tenseTables } from '../app/condicionales/data.ts';
@@ -36,4 +37,21 @@ test('neutral examples and labeled regional comparisons coexist', () => {
   const regional = present.practice.find(choice => choice.prompt.startsWith('Variante regional:'));
   assert.equal(regional.options[regional.answer], 'vivís');
   assert.equal(regional.whyEn, 'With vos, vivir becomes vivís.');
+});
+
+test("subjunctive archival guidance uses the accented tú clitic", () => {
+  const source = readFileSync("app/subjuntivo-pais-maravillas/data.ts", "utf8");
+  assert.ok(source.includes("Tradúcela mentalmente"));
+  assert.ok(!source.includes("Traducila mentalmente"));
+});
+
+test('ordinary clitic instructions use tú while internal trainer IDs stay stable', () => {
+  const trainer = readFileSync('app/entrenador-personal/PersonalTrainer.tsx','utf8');
+  const engine = readFileSync('app/entrenador-personal/engine.mjs','utf8');
+  for (const value of ['PREPÁRAME','CORRÍGEME','dirígenos a todos','Respóndeme']) assert.ok(trainer.includes(value),value);
+  assert.ok(engine.includes('id: "corregime", title: "Corrígeme"'));
+  assert.ok(trainer.includes('stage.id === "corregime"'));
+  assert.ok(readFileSync('app/syntax-labs/RepairSyntaxLab.tsx','utf8').includes('Detente después del cierre.'));
+  assert.ok(readFileSync('app/syntax-labs/data.ts','utf8').includes('Acláralo sin cambiar'));
+  for (const path of ['app/condicionales/data.ts','app/condicionales-b1/data.ts']) assert.ok(!readFileSync(path,'utf8').includes('decile / dile'));
 });

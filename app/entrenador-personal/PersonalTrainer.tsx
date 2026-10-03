@@ -44,7 +44,7 @@ const focusAreas = ["Entrenamiento", "Descanso", "Comida", "Frecuencia", "Hábit
 const audienceModes = [
   { id: "tu", label: "1 CLIENTE · TÚ", cue: "Ahora trátame de tú y sigue dando órdenes.", frames: ["HAZ…", "MANTÉN…", "REPITE…", "NO…"] },
   { id: "vos", label: "1 CLIENTE · VOS", cue: "Cliente rioplatense: dirigime con vos.", frames: ["HACÉ…", "MANTENÉ…", "REPETÍ…", "NO…"] },
-  { id: "ustedes", label: "GRUPO · USTEDES", cue: "Ahora somos tres clientes: diriginos a todos.", frames: ["HAGAN…", "MANTENGAN…", "REPITAN…", "NO…"] },
+  { id: "ustedes", label: "GRUPO · USTEDES", cue: "Ahora somos tres clientes: dirígenos a todos.", frames: ["HAGAN…", "MANTENGAN…", "REPITAN…", "NO…"] },
 ];
 const forbidden = ["tienes que", "deberías", "puedes"];
 const allowed = ["Haz…", "No hagas…", "Prueba…", "Empieza…", "Evita…", "Cambia…", "Descansa…"];
@@ -215,7 +215,7 @@ export default function PersonalTrainer() {
         {stage.id === "calentamiento" && (
           <section className="pt-panel pt-warmup">
             <div className="pt-panel-heading">
-              <div><p className="pt-kicker">ESTACIÓN 01 · CALENTAMIENTO</p><h1>PREPARAME PARA ENTRENAR</h1></div>
+              <div><p className="pt-kicker">ESTACIÓN 01 · CALENTAMIENTO</p><h1>PREPÁRAME PARA ENTRENAR</h1></div>
               <p className="pt-situation"><span>CLIENTE</span> Acabo de llegar al gimnasio.</p>
             </div>
             <div className="pt-warmup-layout">
@@ -300,7 +300,7 @@ export default function PersonalTrainer() {
         {stage.id === "corregime" && (
           <section className="pt-panel pt-correct-me">
             <div className="pt-panel-heading compact">
-              <div><p className="pt-kicker">ESTACIÓN 04 · TÉCNICA</p><h1>CORREGIME</h1></div>
+              <div><p className="pt-kicker">ESTACIÓN 04 · TÉCNICA</p><h1>CORRÍGEME</h1></div>
               <p className="pt-instruction">Reacciona rápido. Solo puedes usar órdenes.</p>
             </div>
             <div className="pt-error-card">
@@ -319,7 +319,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-difficult">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 05 · MOTIVACIÓN</p><h1>CLIENTE DIFÍCIL</h1></div>
-              <p className="pt-instruction">Respondeme sin negociar la forma gramatical.</p>
+              <p className="pt-instruction">Respóndeme sin negociar la forma gramatical.</p>
             </div>
             <div className="pt-difficult-layout">
               <div className="pt-client-scene">

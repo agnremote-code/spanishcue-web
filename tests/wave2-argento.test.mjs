@@ -81,3 +81,16 @@ test('session reset also clears the page self-report and restores model/page def
  find(progress(),n=>n.type==='button')[0].props.onClick();assert.equal(find(progress(),n=>n.props?.['aria-pressed']===true).length,1);
  const child=find(r(),n=>n.props?.worldId&&n.props?.setMode)[0];assert.equal(typeof child.props.onReset,'function','reset must include page observations');child.props.onReset();assert.equal(find(progress(),n=>n.props?.['aria-pressed']===true).length,0);
 });
+
+test('regional lesson outer instructions use accented neutral tú enclitics',async()=>{
+ const cases=[
+  ['app/argento/page.tsx', ['SORPRÉNDEME','AYÚDAME'], /\b(?:SORPRENDEME|AYUDAME)\b/u],
+  ['app/argento/practice-data.ts', ['Exprésalo con cortesía.'], /\bExpresalo\b/u],
+  ['app/la-estacion-de-los-dos-destinos/page.tsx', ['mantenlos juntos.'], /\bmantenelos\b/u],
+  ['app/monasterio-de-las-ideas/page.tsx', ['Gíralo mentalmente'], /\bGiralo\b/u],
+  ['app/buenos-aires-en-la-calle/data.ts', ['Dile al chofer tu destino y pídele que te avise.'], /\b(?:Decile|pedile)\b/u],
+ ];
+ for(const [path,expected,regional] of cases){const source=await readFile(path,'utf8');for(const text of expected)assert.ok(source.includes(text),`${path}: missing ${text}`);assert.doesNotMatch(source,regional,path);}
+ const roleplay=await readFile('app/argento-roleplays/data.ts','utf8');
+ assert.ok(roleplay.includes('Perfecto. Mandame la dirección.'),'intentional Argentine dialogue keeps its enclitic form');
+});

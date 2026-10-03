@@ -470,3 +470,5 @@ Each row below names the runtime module field and exact phrase. These are narrow
 ## Machine-readable registry
 
 `autoestudio-exemptions.json` records 282 exact scanner path/text pairs with reasons and categories. It additionally covers the scanner’s expanded first-person-past families, food noun `tomate`, and legitimate vosotros `vivís`/`salís`/`preferís`/`pedís`. English support arrays are excluded from this registry and must be classified as English by the scanner. No authentic-transcript exceptions are needed: the curriculum uses synthetic speech.
+
+Expanded-scanner follow-up: reviewed all 59 residual findings and added 46 exact path/text pairs (328 total), covering the proper name Tomás, intentionally taught regional forms trabajás/estudiás/comés/jugás/escribís, and vosotros compartís. No new ordinary-copy errors were found.

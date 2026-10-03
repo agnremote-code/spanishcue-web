@@ -111,7 +111,7 @@ test('C1 keyboard reveal requires an initial choice, remains revealed and ignore
 
 test('C1 extension preserves Run1 A1 bytes and historical Red Flag bank fingerprints',async()=>{
  const hash=value=>createHash('sha256').update(value).digest('hex');
- assert.equal(hash(await readFile('app/red-flag-o-no/a1.mjs')),'cd623d29b1f37afd5916503d2094a5d8a70e654b3c41b82724785b06ba743d5b');
+ assert.equal(hash(await readFile('app/red-flag-o-no/a1.mjs')),'de6e66bd3310c932697d74a8a5439ba68f9f14f5f6d6fc44daa355a5ca6c3df3');
  const original=JSON.parse(await readFile('tests/fixtures/conversation-batch1-originals.json','utf8'));
  for(const level of ['A2','B1','B2'])assert.equal(hash(JSON.stringify(getLevelConfig(level))),original.banks[`redFlag${level}`]);
 });

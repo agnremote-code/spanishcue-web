@@ -54,6 +54,18 @@
       "text": "Cuando dijiste que no hacía falta que viniera, entendí que mi presencia te molestaba. ¿Era eso lo que querías decir?",
       "category": "neutral-context",
       "reason": "Contextually standard Spanish: first-person past narration, or tú imperative da + le (dale). Not a voseo instruction."
+    },
+    {
+      "path": "app/la-mesa-de-las-tres-ofertas/page.tsx",
+      "text": "Tomás Vidal",
+      "category": "neutral-context",
+      "reason": "Proper character name Tomás, not second-person verb."
+    },
+    {
+      "path": "app/la-noche-de-las-invitaciones-cruzadas/page.tsx",
+      "text": "Tomás",
+      "category": "neutral-context",
+      "reason": "Proper character name Tomás, not second-person verb."
     }
   ]
 }
