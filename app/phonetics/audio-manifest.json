@@ -399,16 +399,17 @@
     },
     {
       "id": "stress-phrase-1",
-      "text": "¿Tomás café?",
+      "text": "¿Tomas café?",
       "src": "/audio/phonetics/stress-phrase-1.mp3",
       "lessonIds": [
         202
       ],
-      "durationSeconds": 2.088,
+      "durationSeconds": 1.872,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "sha256": "8cba371053eabf66ed6ad47a8406463b30d4ed219880f504a84ecdc7612e8e15"
+      "sha256": "da8d6a0266a4aa576aeea589993df5bda190ad05159f80e76162b51860771e4c",
+      "wordMetadata": "audio-words/stress-phrase-1.words.json"
     },
     {
       "id": "stress-phrase-2",
@@ -433,5 +434,12 @@
       "Isolated vowel spellings can be interpreted as letter names or conjunctions by synthesis; verify the intended five vowel sounds by ear.",
       "Stress contrasts (público/publico/publicó, término/termino/terminó, hablo/habló) require actual audition; distinct file hashes do not prove the requested stress contrast."
     ]
+  },
+  "neutralSpanishRegeneration": {
+    "clipIds": [
+      "stress-phrase-1"
+    ],
+    "generatedAt": "2026-10-03T02:50:25.605301+00:00",
+    "humanListeningQA": false
   }
 }

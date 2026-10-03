@@ -35,8 +35,10 @@ test('A1-C2 preserve ids, fully replace pedagogical text and provide distinct fi
  assert.equal(new Set(LEVELS.map(l=>JSON.stringify(contentFor(l).final.criteria))).size,6);
  assert.equal(new Set(LEVELS.map(l=>contentFor(l).activities.find(a=>a.kind==='ab').answer)).size,2);
 });
-test('new media namespace remains PRO and existing phonetics files match task base byte for byte',async()=>{
+test('new media namespace remains PRO and phonetics behavior/style/access sources match task base',async()=>{
  const {build}=await import('esbuild');const b=await build({stdin:{contents:"export * from './app/access-policy';",resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});const p=await import('data:text/javascript;base64,'+Buffer.from(b.outputFiles[0].text).toString('base64'));
  assert.equal(p.freeAudioPrefixes.has('hablar-sin-cortar'),false);assert.equal(p.isFreeLesson(224),false);
- for(const file of ['app/phonetics/PhoneticsLesson.tsx','app/phonetics/data.ts','app/phonetics/state.ts','app/phonetics/navigation.ts','app/phonetics/phonetics.css','app/phonetics/audio-manifest.json','app/access-policy.ts'])assert.deepEqual(readFileSync(file),execFileSync('git',['show',`1d0c76564d664df74918aacccf14f355849f0f75:${file}`]),file);
+ const reviewed=JSON.parse(readFileSync('tests/fixtures/neutral-audio-reviewed.json','utf8')).sources;
+ for(const file of ['app/phonetics/PhoneticsLesson.tsx','app/phonetics/data.ts','app/phonetics/audio-manifest.json'])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),reviewed[file],file);
+ for(const file of ['app/phonetics/state.ts','app/phonetics/navigation.ts','app/phonetics/phonetics.css','app/access-policy.ts'])assert.deepEqual(readFileSync(file),execFileSync('git',['show',`1d0c76564d664df74918aacccf14f355849f0f75:${file}`]),file);
 });

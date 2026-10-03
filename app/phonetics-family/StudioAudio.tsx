@@ -14,6 +14,6 @@ export default function StudioAudio({src,heard,onComplete,allowSlow=true,replay=
   <button type="button" className="pf-listen" aria-label={playing?'Pausar audio':heard?'Otra vez':'Escuchar audio'} onClick={()=>{if(playing)audio.current?.pause();else void start();}}><span aria-hidden="true">{playing?'Ⅱ':heard?'↻':'▶'}</span><b>{loading?'Cargando…':playing?'Pausar':heard?'Otra vez':'Escuchar'}</b><span className="pf-audio-bars" aria-hidden="true"><i/><i/><i/><i/><i/></span></button>
   <div className="pf-audio-track" role="progressbar" aria-label="Reproducción" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress*100)}><span style={{width:`${progress*100}%`}}/></div>
   {heard&&allowSlow&&<div className="pf-speed" aria-label="Velocidad">{[.75,1].map(v=><button key={v} type="button" aria-pressed={rate===v} onClick={()=>{setRate(v);if(audio.current)audio.current.playbackRate=v;}}>{v===.75?'0.75× · más lento':'1×'}</button>)}</div>}
-  {error&&<p role="alert" className="pf-audio-error">No se pudo reproducir. Probá otra vez o abrí el texto de apoyo.</p>}
+  {error&&<p role="alert" className="pf-audio-error">No se pudo reproducir. Prueba otra vez o abre el texto de apoyo.</p>}
  </div>;
 }

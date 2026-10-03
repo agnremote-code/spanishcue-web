@@ -1,0 +1,314 @@
+[
+  {
+    "path": "app/el-hotel-de-lo-imposible/audio-manifest.json",
+    "text": "La primera noche en el hotel escuché música justo cuando apoyé la cabeza en la almohada. Pensé que venía de la habitación de al lado, pero al levantarme la música paró. Probé otra vez y empezó una canción de mi infancia. La almohada tenía una etiqueta que decía: elige un recuerdo y duerme con su sonido. Me acordé de las vacaciones en casa de mis abuelos y escuché el mar. Era precioso, pero también se oía al perro de mi abuelo, que ladraba sin parar. Después pensé en una tarde en la biblioteca. Por fin hubo silencio, hasta que alguien empezó a pasar páginas muy rápido. A las doce llamé a recepción para pedir una almohada normal. La nueva no tenía música ni recuerdos. Dormí ocho horas seguidas y no soñé con ningún perro.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/audio-manifest.json",
+    "text": "El teléfono de mi habitación sonó el martes a las diez de la noche. Contesté y escuché mi propia voz. La persona dijo: soy tú, pero te llamo desde mañana. Pensé que era una broma de mi hermano. Sin embargo, la voz sabía que yo estaba comiendo galletas en la cama. Me dio un solo consejo: no lleves el paraguas negro al museo. Al día siguiente llovía mucho. Recordé la llamada y pedí un paraguas amarillo en recepción. En el museo vi a cinco personas con paraguas negros idénticos. Al salir, todos discutían porque no sabían cuál era el suyo. Yo encontré el amarillo enseguida y me fui tranquilo. Esa noche intenté llamar al día siguiente para preguntar los números de la lotería, pero el teléfono solo repetía: este servicio resuelve problemas pequeños.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/audio-words/el-telefono.words.json",
+    "text": "pedí",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/audio-words/la-almohada.words.json",
+    "text": "Dormí",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "Reservé tres noches en el hotel porque necesitaba descansar. Mi habitación tenía una ventana enorme y tres botones: sol, lluvia y nieve. El primer día elegí sol y me senté a leer junto a la ventana. Afuera, sin embargo, toda la ciudad estaba bajo la lluvia. El clima especial solo existía delante de mi habitación. Por la tarde pulsé nieve para hacerle una foto a mi sobrino. Fue divertido hasta que olvidé cerrar la ventana. En diez minutos, la alfombra quedó blanca y mis zapatos estaban llenos de nieve. Llamé al servicio de limpieza. El empleado no trajo una aspiradora, sino un secador de pelo gigante. Después de media hora todo estaba seco. Desde entonces, miro el clima desde la cama y dejo los botones tranquilos.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "El sábado tenía una cena importante a las nueve. A las siete empecé a prepararme en el baño del hotel. Me puse una camisa verde y me miré al espejo, pero mi reflejo llevaba un pijama amarillo. Pensé que era una broma. Me lavé la cara y miré otra vez: el reflejo seguía en pijama y ahora tenía una taza de té. En la pared había una nota: este espejo muestra lo que tu cuerpo necesita. Esa semana había dormido muy poco y había trabajado hasta tarde todos los días. Llamé a mi amiga y le expliqué que estaba agotada. Cambiamos la cena por un almuerzo el domingo. Me puse el pijama, pedí una sopa y me acosté temprano. A la mañana siguiente, mi reflejo sonreía y llevaba ropa para salir.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "Ayer entré al ascensor para subir al quinto piso. Apreté el cinco, pero las puertas se abrieron en un bosque. Había árboles altísimos y un banco de madera. Un señor con una bicicleta me preguntó si buscaba el desayuno. Le dije que solo quería volver a mi habitación. Entonces me mostró un cartel junto al ascensor: no elijas un número, decí adónde querés ir. Volví a entrar y dije recepción. Las puertas se cerraron y, unos segundos después, estaba frente a la recepcionista. Ella me explicó que el ascensor se había cansado de subir y bajar por los mismos pisos. Ahora prefería visitar lugares nuevos. Antes de volver a mi cuarto, le pedí ir a la terraza. Esta vez llegué bien, aunque había una ardilla sentada en una de las sillas.",
+    "reason": "Exact finite regional listening script. Existing voice/variety metadata explicitly identifies the regional speaker; surrounding instructions are neutral. Preserve synchronization.",
+    "category": "authentic-transcript"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "La primera noche en el hotel escuché música justo cuando apoyé la cabeza en la almohada. Pensé que venía de la habitación de al lado, pero al levantarme la música paró. Probé otra vez y empezó una canción de mi infancia. La almohada tenía una etiqueta que decía: elige un recuerdo y duerme con su sonido. Me acordé de las vacaciones en casa de mis abuelos y escuché el mar. Era precioso, pero también se oía al perro de mi abuelo, que ladraba sin parar. Después pensé en una tarde en la biblioteca. Por fin hubo silencio, hasta que alguien empezó a pasar páginas muy rápido. A las doce llamé a recepción para pedir una almohada normal. La nueva no tenía música ni recuerdos. Dormí ocho horas seguidas y no soñé con ningún perro.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "En mi habitación había un reloj sin agujas y una caja de monedas. Cada moneda te daba diez minutos extra, pero después tenías que devolverlos. El domingo tenía una excursión a las cuatro y quería dormir un poco más. Puse dos monedas en el reloj y tuve veinte minutos de siesta sin llegar tarde. Cuando bajé, el guía ya estaba junto a la puerta. Fuimos a un jardín lleno de flores que brillaban de noche. Todo salió perfecto. Al volver, encontré una nota sobre la cama: mañana vas a esperar veinte minutos más en algún lugar. No le di importancia. El lunes fui a comprar un café y la persona delante de mí pidió bebidas para toda su oficina. Miré el reloj y entendí todo. Ahora prefiero poner una alarma normal.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "Dejé mi abrigo rojo dentro del armario antes de bajar a cenar. Cuando volví, el abrigo no estaba. En su lugar encontré una postal de una playa y unas sandalias pequeñas. Pensé que alguien había entrado en mi habitación, así que llamé al recepcionista. Él me pidió que esperara hasta las diez. A esa hora escuché un golpe suave dentro del armario. Abrí la puerta y allí estaba mi abrigo, caliente y lleno de arena. En un bolsillo había una foto: el abrigo estaba sobre una silla frente al mar. El recepcionista explicó que la ropa también necesitaba vacaciones. Al día siguiente guardé mis zapatos viejos y les dejé una nota: por favor, vuelvan antes de las siete. Volvieron a las seis y media, muy limpios, con un billete de tren entre los cordones.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "El teléfono de mi habitación sonó el martes a las diez de la noche. Contesté y escuché mi propia voz. La persona dijo: soy tú, pero te llamo desde mañana. Pensé que era una broma de mi hermano. Sin embargo, la voz sabía que yo estaba comiendo galletas en la cama. Me dio un solo consejo: no lleves el paraguas negro al museo. Al día siguiente llovía mucho. Recordé la llamada y pedí un paraguas amarillo en recepción. En el museo vi a cinco personas con paraguas negros idénticos. Al salir, todos discutían porque no sabían cuál era el suyo. Yo encontré el amarillo enseguida y me fui tranquilo. Esa noche intenté llamar al día siguiente para preguntar los números de la lotería, pero el teléfono solo repetía: este servicio resuelve problemas pequeños.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "Pedí sal y encontré compañía",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "Viajé sola al hotel para pasar un fin de semana tranquilo. El viernes pedí la cena a mi habitación: una sopa y pan. Cuando probé la sopa, le faltaba sal. Abrí la puerta para buscar a alguien y, en lugar del pasillo, encontré una cocina enorme. Había un hombre preparando pizza y una mujer cortando tomates. Los dos también eran huéspedes. El hombre buscaba un cuchillo y la mujer quería hablar con alguien porque extrañaba a su familia. En una pared leímos una frase: esta puerta te lleva a donde alguien puede ayudarte. Encontré la sal, el hombre encontró su cuchillo y la mujer encontró compañía. Cenamos los tres en una mesa redonda. El sábado volví a abrir la puerta, pero solo vi el pasillo. No necesitaba nada: ya tenía dos amigos y un plan para el almuerzo.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/el-hotel-de-lo-imposible/data.ts",
+    "text": "Tomate",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/audio-manifest.json",
+    "text": "A ver, yo había reservado una habitación tranquila y una cena por mi aniversario. Al llegar me dijeron que la cuatrocientos dos tenía un problema de agua y acepté pasar a la quinientos ocho. Dejé en recepción una torta pequeña, refrigerada, con mi apellido. Cuando volví de cenar, cerca de las diez, la llave ya no abría. Tardaron unos veinte minutos en traer otra. Y esta mañana, a las cinco y media, recibí una llamada automática que nunca pedí. Ninguna de esas cosas, por separado, sería gravísima; juntas dan la sensación de que nadie sabía que yo estaba allí.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/audio-manifest.json",
+    "text": "Tomás",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/audio-manifest.json",
+    "text": "Yo estaba en la quinientos diez, viendo un partido, aunque eso no viene al caso. Cerca de las diez menos diez escuché el carro de limpieza. Unos minutos después salí por hielo y vi a una mujer intentando abrir la quinientos ocho. También sonaba un pitido en el pasillo; pensé que era su cerradura y llamé a recepción. Me dijeron que enviarían a alguien. No vi que nadie entrara en su habitación ni escuché una discusión. Lo que sí recuerdo es que ella llevaba una bolsa de restaurante, pero no una torta.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "A ver, yo había reservado una habitación tranquila y una cena por mi aniversario. Al llegar me dijeron que la cuatrocientos dos tenía un problema de agua y acepté pasar a la quinientos ocho. Dejé en recepción una torta pequeña, refrigerada, con mi apellido. Cuando volví de cenar, cerca de las diez, la llave ya no abría. Tardaron unos veinte minutos en traer otra. Y esta mañana, a las cinco y media, recibí una llamada automática que nunca pedí. Ninguna de esas cosas, por separado, sería gravísima; juntas dan la sensación de que nadie sabía que yo estaba allí.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "recibí una llamada automática que nunca pedí.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Tomás Rincón",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Tomás",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Tomás completó la actualización digital del cambio.",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Tomás dio un aviso verbal y programó una llave.",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Tomás dejó la torta en la cámara fría sin anotar el número.",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Yo estaba en la quinientos diez, viendo un partido, aunque eso no viene al caso. Cerca de las diez menos diez escuché el carro de limpieza. Unos minutos después salí por hielo y vi a una mujer intentando abrir la quinientos ocho. También sonaba un pitido en el pasillo; pensé que era su cerradura y llamé a recepción. Me dijeron que enviarían a alguien. No vi que nadie entrara en su habitación ni escuché una discusión. Lo que sí recuerdo es que ella llevaba una bolsa de restaurante, pero no una torta.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Ana atribuye toda la responsabilidad a Tomás.",
+    "reason": "Tomás is the speaker’s proper name, not a second-person conjugation.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/audio-manifest.json",
+    "text": "Esta mañana perdí el autobús y llegué tarde al trabajo.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/audio-words/a2-listen-02.words.json",
+    "text": "perdí",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/content.mjs",
+    "text": "Dale 30 segundos para pensar. Si necesita lectura, usa el apoyo y registra práctica acompañada.",
+    "reason": "Da + le is also the correct tú imperative here (give someone time/advice); this is not the regional interjection.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/levels/a2.mjs",
+    "text": "Esta mañana perdí el autobús y llegué tarde al trabajo.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/levels/a2.mjs",
+    "text": "«Perdí el autobús» se escucha dentro de una cadena, no como tres grabaciones sueltas.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/levels/a2.mjs",
+    "text": "Dale al profe otra hora y otro lugar; pídele que confirme los datos.",
+    "reason": "Da + le is also the correct tú imperative here (give someone time/advice); this is not the regional interjection.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/hablar-sin-cortar/levels/a2.mjs",
+    "text": "Dale otro consejo de viaje a tu compañero.",
+    "reason": "Da + le is also the correct tú imperative here (give someone time/advice); this is not the regional interjection.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-ciudad-no-duerme/content.json",
+    "text": "Dale un consejo concreto y explica por qué puede servir.",
+    "reason": "Da + le is also the correct tú imperative here (give someone time/advice); this is not the regional interjection.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-entonacion-cambia-todo/audio-manifest.json",
+    "text": "Yo lo pedí ayer.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-entonacion-cambia-todo/audio-words/b1-context-01.words.json",
+    "text": "pedí",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-entonacion-cambia-todo/levels/b1.mjs",
+    "text": "Di «Yo lo pedí ayer». ¿Qué palabra destacarías para corregir quién lo pidió?",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-entonacion-cambia-todo/levels/b1.mjs",
+    "text": "Yo lo pedí ayer.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-entonacion-cambia-todo/levels/b1.mjs",
+    "text": "Yo lo pedí… / No dije que… / Lo que quería decir era…",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/la-entrevista-que-no-salio-al-aire/content.json",
+    "text": "Mirá, al principio nos desbordó todo: trabajábamos a los tumbos y prometíamos fechas imposibles. Después hubo una reorganización estratégica de funciones y algunas posiciones dejaron de ser sostenibles. Ya sé cómo suena. Tres contratos no se renovaron, dos personas aceptaron irse y las demás encontraron otros proyectos antes de que pudiéramos ofrecerles algo razonable. Si digo que fue una transición ordenada, te estaría vendiendo un folleto.",
+    "reason": "Exact finite regional listening script. Existing voice/variety metadata explicitly identifies the regional speaker; surrounding instructions are neutral. Preserve synchronization.",
+    "category": "authentic-transcript"
+  },
+  {
+    "path": "app/la-entrevista-que-no-salio-al-aire/content.json",
+    "text": "Esperá, esto sí quiero dejarlo grabado. Yo firmé la expansión, aprobé la primera lista del patrocinador y repetí que el equipo podía con todo. Después fue fácil hablar como si hubiera visto venir el choque. No lo vi, o no quise verlo. Si publican mi frase más brillante sobre la independencia y cortan esta parte, me convierten en el héroe de una historia en la que también tomé decisiones bastante torpes. No sería una edición: sería ponerle un moño a mi versión.",
+    "reason": "Exact finite regional listening script. Existing voice/variety metadata explicitly identifies the regional speaker; surrounding instructions are neutral. Preserve synchronization.",
+    "category": "authentic-transcript"
+  },
+  {
+    "path": "app/latinoamerica-al-oido/data.ts",
+    "text": "Che, te cuento lo que me pasó ayer. Salí del trabajo a las seis y quería tomar el colectivo para encontrarme con Lucía. Cuando llegué a la parada, vi que había un montón de gente. Al final, el colectivo tardó casi cuarenta minutos. Lucía me mandó un mensaje y me dijo que no había problema. Nos encontramos en un café de Almagro, pedimos dos medialunas y compartimos un café con leche. Yo estaba cansado, pero la charla me cambió el ánimo. Volví a casa cerca de las diez y pensé: a veces un plan simple te salva el día, ¿viste?",
+    "reason": "Exact finite regional listening script. Existing voice/variety metadata explicitly identifies the regional speaker; surrounding instructions are neutral. Preserve synchronization.",
+    "category": "authentic-transcript"
+  },
+  {
+    "path": "app/latinoamerica-al-oido/data.ts",
+    "text": "Esta mañana salí temprano para una reunión en el centro. Como tenía tiempo, entré a un café y pedí un tinto. Revisé unos mensajes, pagué y me fui caminando. Diez minutos después, sentí que me faltaba algo: había dejado la mochila junto a la silla. Qué pena. Llamé al café y una chica me dijo: tranquilo, acá la tenemos. Volví rápidamente y la encontré en la caja. Dentro estaban mi computadora y todos mis documentos. Le agradecí varias veces a la chica y compré dos panes de queso para compartir con ella. Por suerte, todo terminó bien.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/latinoamerica-al-oido/data.ts",
+    "text": "Ayer salí de mi casa con sol y sin chaqueta porque la mañana estaba bastante agradable. Tenía que hacer una presentación en la oficina y no quería llegar con muchas cosas. A la hora del almuerzo, el cielo cambió completamente y empezó a correr un viento helado. Una compañera me dijo: te avisaron que hoy iba a cambiar el tiempo, po. Yo no había mirado el pronóstico. Cuando salimos del trabajo, además empezó a lloviznar. Por suerte, mi compañero Matías tenía una chaqueta extra en el auto y me la prestó. Desde ahora voy a revisar el tiempo antes de salir.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/latinoamerica-al-oido/data.ts",
+    "text": "El martes era el cumpleaños de mi hermana y yo tenía que llevarle un regalo a su trabajo. Salí con tiempo, pero una avenida estaba cerrada y los autobuses casi no avanzaban. Como su oficina quedaba lejos, decidí usar el teleférico. Desde arriba vi toda la ciudad y las montañas estaban clarísimas. El viaje fue más rápido de lo que esperaba, aunque tuve que cambiar de línea una vez. Llegué cinco minutos antes de que mi hermana saliera a almorzar. Cuando abrió la bolsa y vio el suéter que había elegido, sonrió y me abrazó. Después comimos juntos en un restaurante pequeño cerca de su oficina.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/radio-despues-de-medianoche/content.json",
+    "text": "Trabajo como diseñador y el martes tenía que presentar el menú nuevo de un restaurante. Entré al enlace que aparecía primero en mi calendario. Había ocho personas muy serias, todas con traje. Compartí la pantalla y hablé casi cinco minutos sobre colores, platos y tipografías. Nadie me interrumpía. Entonces una mujer levantó la mano y preguntó qué relación tenía el menú con una demanda laboral. Miré el nombre de la reunión: era el despacho de abogados del piso de arriba. Cerré la presentación, pedí disculpas y salí. Lo peor es que uno de ellos me escribió después para pedirme el teléfono del restaurante.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/radio-despues-de-medianoche/content.json",
+    "text": "Para un viaje largo reservé el asiento junto a la ventana y pagué un poco más. Cuando subí, una pareja me pidió cambiarlo por uno del fondo para poder sentarse junta. El otro asiento no se reclinaba y estaba al lado del baño, así que dije que prefería quedarme donde estaba. No discutieron, pero una señora detrás de mí comentó que la gente ya no hacía favores. Durante el viaje me sentí culpable, aunque había elegido y pagado ese lugar. Todavía no sé si fui poco amable o si la pareja simplemente organizó mal su reserva.",
+    "reason": "First-person preterite in a narrative or its exact evidence/transcript; changing the accent would change tense or falsify audio.",
+    "category": "neutral-context"
+  },
+  {
+    "path": "app/frecuencia-abierta/content.json",
+    "text": "Yo gané dos horas de vida al dejar de cruzar la ciudad, eso no lo negocio. Ahora, tampoco compro el relato de que trabajar desde casa es libertad automática. Antes la oficina era un lugar del que uno se iba; ahora la oficina se mudó conmigo y, de paso, aprendió a mandar mensajes a cualquier hora. Mi jefa dice «contestá cuando puedas», pero si el punto verde sigue encendido a las once, todos entendemos un subtexto. Me encanta el trabajo remoto. Lo que no me encanta es que la flexibilidad siempre parezca flexible para el mismo lado.",
+    "reason": "Exact regional listening turn; existing es-AR or Medellín/es-CO speaker metadata is intentional regional content. UI remains neutral.",
+    "category": "authentic-transcript"
+  },
+  {
+    "path": "app/frecuencia-abierta/content.json",
+    "text": "Yo vivo de que la gente salga de su casa, así que mi interés está sobre la mesa. Dicho eso, no creo que un coworking sustituya una oficina ni que toda persona necesite uno. Lo que veo es gente que llega buscando wifi y termina encontrando un parche profesional: alguien que recomienda un cliente, revisa una propuesta o simplemente nota que llevás seis horas sin levantarte. Sí, cobramos por el espacio. También diseñamos las condiciones para que ocurran encuentros que en el apartamento no ocurren. Llamarlo comunidad puede sonar conveniente; fingir que solo alquilamos escritorios también sería incompleto.",
+    "reason": "Exact regional listening turn; existing es-AR or Medellín/es-CO speaker metadata is intentional regional content. UI remains neutral.",
+    "category": "authentic-transcript"
+  },
+  {
+    "path": "app/habitacion-508/audio-manifest.json",
+    "text": "Cuando tomé el caso, corregí la ficha: pasé a Laura de la cuatrocientos dos a la quinientos ocho y emití una llave nueva. Me concentré en que pudiera entrar cuanto antes. La quinientos ocho conservaba una llamada de despertador de las cinco y media, solicitada por el huésped anterior. Normalmente se borra al cerrar la habitación, pero como el sistema la consideraba libre y después pendiente, ese cierre no ocurrió. Yo revisé pagos, llave y nombre; no revisé servicios programados. Fue otro control parcial dentro de una noche llena de controles parciales.",
+    "category": "neutral-context",
+    "reason": "First-person preterite in the exact Ana transcript; the speaker says she corrected the record. Preserve asset concordance."
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "Cuando tomé el caso, corregí la ficha: pasé a Laura de la cuatrocientos dos a la quinientos ocho y emití una llave nueva. Me concentré en que pudiera entrar cuanto antes. La quinientos ocho conservaba una llamada de despertador de las cinco y media, solicitada por el huésped anterior. Normalmente se borra al cerrar la habitación, pero como el sistema la consideraba libre y después pendiente, ese cierre no ocurrió. Yo revisé pagos, llave y nombre; no revisé servicios programados. Fue otro control parcial dentro de una noche llena de controles parciales.",
+    "category": "neutral-context",
+    "reason": "First-person preterite in the exact Ana transcript; the speaker says she corrected the record. Preserve asset concordance."
+  },
+  {
+    "path": "app/habitacion-508/content.json",
+    "text": "¿Qué debería hacer una empresa cuando comete un error?",
+    "category": "neutral-context",
+    "reason": "Third-person singular of cometer: una persona comete un error. Not the voseo imperative comete (eat it)."
+  }
+]

@@ -225,7 +225,7 @@ function CityExperience() {
         <div className="city-kicker"><span /> BARRIO DEL SUR · 23:40</div>
         <h1 id="city-title">LA CIUDAD<br />NO <em>DUERME.</em></h1>
         <p>Una calle. Mil formas de verla.</p>
-        <p className="city-intro-copy">Recorré el barrio. Elegí dónde parar.<br />Hablá de lo que pasa.</p>
+        <p className="city-intro-copy">Recorre el barrio. Elige dónde parar.<br />Habla de lo que pasa.</p>
         <button className="city-primary" onClick={returnToStreet}>SALIR A LA CALLE <span>→</span></button>
         <div className="city-intro-controls"><kbd>←</kbd><kbd>→</kbd> caminar <span>·</span> <kbd>↵</kbd> acercarte</div>
         <small>CONVERSACIÓN B1 <span> / </span> ≈ 45 MIN <span> / </span> A TU RITMO</small>
@@ -233,17 +233,17 @@ function CityExperience() {
 
       {view === 'street' && <>
         <div className="city-location"><span>BARRIO DEL SUR</span><strong>{nearby?.name || 'Entre una esquina y otra'}</strong></div>
-        <div className="city-explore-note">Cuando algo llame tu atención, acercate.</div>
+        <div className="city-explore-note">Cuando algo llame tu atención, acércate.</div>
         <div className="city-bottom">
           <button className="city-map-toggle" onClick={() => { stopMovement(); setMap(true); }}><span className="city-map-glyph" aria-hidden="true">▤</span><span>EL BARRIO<small>{visited.length} de 10 lugares conversados</small></span></button>
           <div className="city-controls" aria-label="Controles de movimiento">
             <button aria-label="Caminar a la izquierda" onPointerDown={event => movePointer(event, -1)} onPointerUp={stopMovement} onPointerCancel={stopMovement} onLostPointerCapture={stopMovement} onClick={event => { if (event.detail === 0) travelTo([...stops].reverse().find(stop => stop.x < actor.x - 20)?.id || stops[0].id); }}>←</button>
-            <button className="city-interact" disabled={!nearby} onClick={() => nearby && openStop(nearby.id)}><span>{nearby ? 'ACERCARME' : 'EXPLORÁ'}</span><kbd>↵</kbd></button>
+            <button className="city-interact" disabled={!nearby} onClick={() => nearby && openStop(nearby.id)}><span>{nearby ? 'ACERCARME' : 'EXPLORA'}</span><kbd>↵</kbd></button>
             <button aria-label="Caminar a la derecha" onPointerDown={event => movePointer(event, 1)} onPointerUp={stopMovement} onPointerCancel={stopMovement} onLostPointerCapture={stopMovement} onClick={event => { if (event.detail === 0) travelTo(stops.find(stop => stop.x > actor.x + 20)?.id || stops.at(-1)!.id); }}>→</button>
           </div>
-          <span className="city-walking-hint"><kbd>←</kbd> <kbd>→</kbd> Avanzá por la ciudad</span>
+          <span className="city-walking-hint"><kbd>←</kbd> <kbd>→</kbd> Avanza por la ciudad</span>
         </div>
-        <span className="city-sr-only" role="status">{nearby ? `Cerca de ${nearby.name}. Enter para acercarte.` : 'Seguí explorando la calle.'}</span>
+        <span className="city-sr-only" role="status">{nearby ? `Cerca de ${nearby.name}. Enter para acercarte.` : 'Sigue explorando la calle.'}</span>
       </>}
 
       {view === 'focus' && <CityDialogue
@@ -267,7 +267,7 @@ function CityExperience() {
           <div className="city-kicker">LA ÚLTIMA PARADA</div>
           {!endingPlace ? <>
             <h2 id="city-final-title">¿Dónde termina<br />tu noche?</h2>
-            <p>Elegí un lugar para mirar atrás.</p>
+            <p>Elige un lugar para mirar atrás.</p>
             <div className="city-ending-places">
               <button onClick={() => setEndingPlace('rooftop')}>En la terraza <span>La ciudad, desde arriba ↗</span></button>
               <button onClick={() => setEndingPlace('bar')}>En el bar <span>Una última conversación ↗</span></button>
@@ -283,7 +283,7 @@ function CityExperience() {
         </div>
       </section>}
 
-      {missingArt && <p className="city-asset-error" role="alert">No se pudo cargar el barrio. Recargá la página para volver a intentarlo.</p>}
+      {missingArt && <p className="city-asset-error" role="alert">No se pudo cargar el barrio. Recarga la página para volver a intentarlo.</p>}
     </div>
 
     {guide && <CityGuide onClose={() => { setGuide(false); requestAnimationFrame(() => stage.current?.focus({ preventScroll: true })); }} />}
@@ -296,7 +296,7 @@ function CityMap({ visited, onTravel, onClose }: { visited: string[]; onTravel: 
   useEffect(() => { dialog.current?.showModal(); }, []);
   return <dialog className="city-modal city-map-modal" ref={dialog} onCancel={onClose} aria-labelledby="city-map-title">
     <button className="city-modal-close" onClick={onClose} aria-label="Cerrar el mapa">×</button>
-    <div className="city-kicker">A PIE, A TU RITMO</div><h2 id="city-map-title">Elegí tu próxima parada.</h2>
+    <div className="city-kicker">A PIE, A TU RITMO</div><h2 id="city-map-title">Elige tu próxima parada.</h2>
     <p>El personaje camina hasta el lugar que elijas.</p>
     <nav aria-label="Lugares del barrio">{stops.map((stop, index) => <button key={stop.id} onClick={() => onTravel(stop.id)}><span>{String(index + 1).padStart(2, '0')}</span><strong>{stop.name}<small>{stop.topic}</small></strong><i>{visited.includes(stop.id) ? 'Volver ↗' : 'Ir →'}</i></button>)}</nav>
   </dialog>;

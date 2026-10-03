@@ -1968,6 +1968,30 @@
       "text": "Tomás",
       "reason": "listening.speakers.name: Tomás is the personal name of the character, not the voseo conjugation tomás.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Ella comé pan.",
+      "reason": "Intentionally incorrect conjugation in a mistakes.wrong example; neutral correction is taught alongside it.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w16.ts",
+      "text": "¿Qué error comete mucha gente, según Marisol?",
+      "reason": "Third-person present comete un error, not voseo cómete command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w09.ts",
+      "text": "Tienes razón. La empresa me dijo que habían reforzado la línea y yo resumí demasiado. Se observaron dos jornadas sin cancelaciones, aunque hubo retrasos menores. También se entrevistó a varias personas en la parada, pero no hicimos una encuesta representativa.",
+      "reason": "Explicit yo resumí is first-person preterite narration; preserve synthetic script and duplicate quiz audio.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w19.ts",
+      "text": "La propuesta final fue un ensayo limitado a consultas generales, con revisión de errores y posibilidad clara de derivación humana. El comité rechazó tanto anunciar una solución personalizada definitiva como descartar toda utilidad por sus fallos iniciales. Estableció qué resultados justificarían ampliar el servicio y cuáles obligarían a modificarlo. El éxito del proyecto dependería de esa evaluación, pero también de la calidad de su comunicación. Una herramienta puede estar técnicamente acotada y ser presentada con promesas desmesuradas; en ese caso, el primer error no lo comete el sistema, sino el relato institucional que lo rodea.",
+      "reason": "Third-person present comete un error, not voseo cómete command.",
+      "category": "neutral-context"
     }
   ]
 }

@@ -351,16 +351,16 @@
     },
     {
       "id": "a1-bank-context",
-      "text": "Venís mañana.",
+      "text": "Vienes mañana.",
       "src": "/audio/la-entonacion-cambia-todo/a1-bank-context.mp3",
       "status": "generated",
-      "sha256": "0afc3ae4c69c5c3430c2a83704378187ad6000a2a31083e08dbb14f138012a13",
+      "sha256": "1a09cfc61c6f0514d53e1b67da017805a6b5548456ed3815b3951d18343a4697",
       "durationSeconds": 1.944,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 13918,
-      "rmsPCM": 1866.85,
+      "peakPCM": 13637,
+      "rmsPCM": 1785.08,
       "wordMetadata": "audio-words/a1-bank-context.words.json",
       "delivery": "subida final para una pregunta de confirmación",
       "pitchAnchorsHz": [
@@ -370,12 +370,12 @@
         205
       ],
       "voicedSpanSeconds": [
-        0.1779999999999999,
+        0.16799999999999993,
         0.978
       ],
       "measuredPitchRangeHz": [
-        140.26,
-        204.44
+        139.34,
+        203.67
       ],
       "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
       "sourceClip": "a1-bank-context"
@@ -506,16 +506,16 @@
     },
     {
       "id": "a2-context-01",
-      "text": "Me ayudás con la valija.",
+      "text": "Me ayudas con la maleta.",
       "src": "/audio/la-entonacion-cambia-todo/a2-context-01.mp3",
       "status": "generated",
-      "sha256": "d5c827dfe39a20136fbc6d47902339122c929c09aff69186cd95858c780c6369",
+      "sha256": "8a5934bf6b53dc74e26fea2558488b4f811a8a75c15acf0d4e70610ce82fad17",
       "durationSeconds": 2.424,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 15173,
-      "rmsPCM": 2619.76,
+      "peakPCM": 14223,
+      "rmsPCM": 2550.26,
       "wordMetadata": "audio-words/a2-context-01.words.json",
       "delivery": "amplitud suave y caída acompañada",
       "pitchAnchorsHz": [
@@ -525,12 +525,12 @@
         130
       ],
       "voicedSpanSeconds": [
-        0.2079999999999999,
-        1.4779999999999998
+        0.22799999999999992,
+        1.4479999999999997
       ],
       "measuredPitchRangeHz": [
-        129.09,
-        184.73
+        130.25,
+        184.17
       ],
       "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
       "sourceClip": "a2-context-01"
@@ -723,16 +723,16 @@
     },
     {
       "id": "a2-bank-context",
-      "text": "Me decís dónde sale el bus.",
+      "text": "Me dices dónde sale el bus.",
       "src": "/audio/la-entonacion-cambia-todo/a2-bank-context.mp3",
       "status": "generated",
-      "sha256": "d39a3c031ea51151a434a6a5c1aa215b7774afc90b834c9fee6610c6cf5e82ae",
+      "sha256": "8137df36b1df05a5012900464f05773e6313dde3a1413aff321e1c8f4bdcd91c",
       "durationSeconds": 2.664,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 13856,
-      "rmsPCM": 2293.36,
+      "peakPCM": 14627,
+      "rmsPCM": 2367.24,
       "wordMetadata": "audio-words/a2-bank-context.words.json",
       "delivery": "subida final para una pregunta de confirmación",
       "pitchAnchorsHz": [
@@ -746,8 +746,8 @@
         1.528
       ],
       "measuredPitchRangeHz": [
-        139.7,
-        204.06
+        139.73,
+        204.17
       ],
       "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
       "sourceClip": "a2-bank-context"
@@ -1157,16 +1157,16 @@
     },
     {
       "id": "b2-listen-02",
-      "text": "Está resuelto, podés quedarte tranquilo.",
+      "text": "Está resuelto, puedes quedarte tranquilo.",
       "src": "/audio/la-entonacion-cambia-todo/b2-listen-02.mp3",
       "status": "generated",
-      "sha256": "ec14d7f7cd9c8f36d8e75599f7e0c29b7e03d6cd125a40491393de3919f18b11",
-      "durationSeconds": 3.408,
+      "sha256": "5044b4248fe2747ba858c26ca441841b36464ea0a68ca62d89e753437935b979",
+      "durationSeconds": 3.36,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 17457,
-      "rmsPCM": 2683.37,
+      "peakPCM": 17357,
+      "rmsPCM": 2690.86,
       "wordMetadata": "audio-words/b2-listen-02.words.json",
       "delivery": "descenso amplio y suave",
       "pitchAnchorsHz": [
@@ -1176,12 +1176,12 @@
         120
       ],
       "voicedSpanSeconds": [
-        0.2349999999999998,
-        2.425
+        0.22599999999999992,
+        2.376
       ],
       "measuredPitchRangeHz": [
-        119.82,
-        179.84
+        119.22,
+        180.54
       ],
       "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
       "sourceClip": "b2-listen-02"
@@ -2240,5 +2240,16 @@
       "edit": "Praat PSOLA replacement pitch tier; same segments and duration for paired takes",
       "sourceClip": "c2-bank-context"
     }
-  ]
+  ],
+  "neutralSpanishRegeneration": {
+    "generatedAt": "2026-10-03T02:48:13.117181+00:00",
+    "clipIds": [
+      "a1-bank-context",
+      "a2-context-01",
+      "a2-bank-context",
+      "b2-listen-02"
+    ],
+    "humanListeningQA": false,
+    "scope": "Only changed source phrases; original voice and canonical finite generation workflow retained."
+  }
 }

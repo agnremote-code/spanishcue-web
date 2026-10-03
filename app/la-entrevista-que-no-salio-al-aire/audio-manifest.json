@@ -1,0 +1,34 @@
+{
+  "scope": "Only neutral-Spanish replacement clip; other lesson assets unchanged.",
+  "synthetic": true,
+  "producer": "Microsoft Edge edge-tts 7.2.8 + ffmpeg PCM segment concatenation; authored 190 ms pause retained",
+  "humanListeningQA": false,
+  "clips": [
+    {
+      "id": "ironia",
+      "segments": [
+        {
+          "speaker": "Nora",
+          "voice": "es-ES-ElviraNeural",
+          "rate": "+7%",
+          "text": "La campaña tuvo millones de visualizaciones. ¿La consideras un éxito?",
+          "pause": 190
+        },
+        {
+          "speaker": "León",
+          "voice": "es-AR-TomasNeural",
+          "rate": "+8%",
+          "text": "Claro, un éxito rotundo. Conseguimos que todo el mundo hablara del color del cartel y casi nadie de los artistas. Durante cuarenta y ocho horas fuimos tendencia; después preguntamos al público quién actuaba y no recordaban un solo nombre. Si la misión era volver inolvidable una discusión que no importaba, la clavamos. Para el festival, en cambio… bueno, digamos que aprendimos una lección carísima."
+        }
+      ],
+      "sha256": "9b7db5702f3a2105105ac9407ee36182da387db28070886c7b6b21441cf4edcb",
+      "durationSeconds": 29.424,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 353421,
+      "src": "/audio/entrevista-no-salio/04-ironia.mp3",
+      "segmentWordMetadata": "audio-words/ironia.words.json"
+    }
+  ]
+}

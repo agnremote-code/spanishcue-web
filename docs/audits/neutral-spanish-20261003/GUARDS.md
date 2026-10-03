@@ -1,6 +1,6 @@
 # Neutral Spanish and English-copy guards
 
-The language guard uses the installed TypeScript parser rather than scanning raw code. It reads runtime string literals, template literals, JSX text and accessible attributes, JSON values, and public plain text. Identifiers, comments, type annotations, imports and technical JSX attributes do not become copy.
+The language guard uses the installed TypeScript parser rather than scanning raw code. It reads runtime string literals, template literals, JSX text and accessible attributes, JSON values, and public plain text. Identifiers, comments, type annotations, imports and technical JSX attributes do not become copy. Complete URL/path values and machine identifiers are excluded from the Spanish token check.
 
 ## Commands and API
 
@@ -15,11 +15,11 @@ Covered roots: `app`, `components`, `lib`, `content`, `data`, `public`, `server`
 
 ## Language classification
 
-English properties/dictionaries (`en`, `english`, `*En`, `*_en`), `t(es, en)`, locally declared factories whose first parameters are `es, en`, explicit language ternaries and recognized boolean aliases are classified separately. Typed `Pair` arrays and locally declared `Pair` fields preserve the second tuple element as English. Dedicated English paths, the English `app/guides` collection, and the English `support` field in Autoestudio curriculum modules are protected as English. Ordinary two-element arrays receive no automatic exemption.
+English properties/dictionaries (`en`, `english`, `*En`, `*_en`), `t(es, en)`, locally declared factories whose first parameters are `es, en`, explicit language ternaries and recognized boolean aliases are classified separately. Typed `Pair` arrays and locally declared `Pair` fields preserve the second tuple element as English. Dedicated English paths, the English `app/guides` collection and `app/resources/[slug]/page.tsx` public template, and the English `support` field in Autoestudio curriculum modules are protected as English. Ordinary two-element arrays receive no automatic exemption.
 
 The scanner uses Unicode letter/mark tokenization, so `vosotros`, `nuevos`, and larger accented words do not match `vos`. The explicit vocabulary covers voseo pronouns, present forms, imperatives and common attached pronouns. A finite imperative lexicon expands object/reflexive pronoun families, including `corregime`, `reescribilos`, `defendelas`, `mantenelos`, `contámelo` and `explicánoslo`. It does not infer arbitrary accented endings. Non-diagnostic generated homographs (`animales`, `generales`, `formales`, `hablase`, and English `create`/`generate`/`animate`/`participate`/`unite`) are avoided; contextual human review still covers ambiguous forms. It is a regression guard, not a complete Spanish morphology engine; contextual audit remains necessary.
 
-Potential preterites such as `escribí`, `seguí`, `elegí`, `sentí`, `compartí`, and `abrí`, plus contextual `dale`, produce `context-review` findings. They are not blindly rewritten as commands. Correct first-person past examples receive a reviewed `neutral-context` exception.
+Potential preterites such as `escribí`, `seguí`, `elegí`, `sentí`, `compartí`, and `abrí`, `resumí` and `corregí`, plus contextual `dale`, produce `context-review` findings. They are not blindly rewritten as commands. Correct first-person past examples receive a reviewed `neutral-context` exception.
 
 ## Exact exception registry
 
@@ -47,6 +47,6 @@ The English guard inventories the baseline with `git ls-tree`, so deleted files 
 
 ## Verification checkpoint
 
-The 17 focused tests passed, including negative fixtures for Unicode boundaries, JSX, templates, JSON, typed bilingual tuples, exact exception scope, first-person past review, standalone English dictionaries, English additions/deletions and Autoestudio support. The expanded baseline check found 10,840 English strings across 125 files with zero differences. This is a checkpoint result; rerun after all content edits.
+The 20 focused tests passed, including negative fixtures for Unicode boundaries, JSX, templates, JSON, typed bilingual tuples, exact exception scope, first-person past review, standalone English dictionaries, English additions/deletions and Autoestudio support. The expanded baseline check found 10,882 English strings across 126 files with zero differences. This is a checkpoint result; rerun after all content edits.
 
 An intermediate concurrent-work scan found 967 unresolved language tokens before the coordinator's final registry pass. This is not a final product pass. The full project suite, final zero-finding scan and delivery verification are performed by the coordinator.

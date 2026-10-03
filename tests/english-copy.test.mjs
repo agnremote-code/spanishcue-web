@@ -27,3 +27,6 @@ test('flags new English strings in existing and new files', () => {
   assert.equal(compare('const en={a:"Hello"}', 'const en={a:"Hello",b:"New"}').length, 1);
   assert.equal(compareEnglishCopy(new Map(), new Map([['app/en.json','{"a":"New"}']])).length, 1);
 });
+test('protects English resource-template text', () => {
+  assert.equal(compare('const ui=<p>Evaluate the lesson.</p>', 'const ui=<p>Read the lesson.</p>', 'app/resources/[slug]/page.tsx').length, 2);
+});

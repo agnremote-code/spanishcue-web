@@ -11,3 +11,5 @@ Next: review classified source areas, commit and push every coherent batch; do n
 Checkpoint: global/UI messages and Autoestudio first pass ready; tests in GLOBAL.md. Remote checkpoint uses GitHub connection because git HTTPS push has no credentials. Coordinator stores remote SHA after API commit; no local-only completion claims.
 
 Checkpoint: catalog/regional UI and complete grammar/paradigms committed remotely. Conversation/Modo Play and final morphology review ready. Independent review found and fixed stem-changing/clitic errors. English check 10,840 values unchanged. Pending audio asset completion, final combined registry, full QA, PR and official deployment.
+
+Audio checkpoint: 12 MP3s regenerated with synchronized scripts, timings and manifests. 245 audio assets checked by scoped tests. Canonical language suite 39/39 passes, scanner 0 unresolved across 825 source files, English 10,882 values /126 files unchanged. Build + artifact validation passed. Remaining: final full suite/lint/typecheck, visual QA if available, non-draft PR/CI/merge/staging/production.

@@ -27,14 +27,14 @@ export function CityDialogue({ stop, choice, twist, style, onChoice, onTwist, on
     <div className={`city-scene-image${(choice?.scene || stop.scene) === 'street' ? ' is-street-detail' : ''}`} style={style} />
     <div className="city-cinema-bars" aria-hidden="true" />
     <button className="city-scene-back" onClick={onReturn}>← VOLVER A LA CALLE <kbd>Esc</kbd></button>
-    <div className="city-scene-caption"><span>{stop.topic}</span><strong>{stop.name}</strong><i>{twist ? 'OTRA MIRADA' : 'ACERCATE'}</i></div>
+    <div className="city-scene-caption"><span>{stop.topic}</span><strong>{stop.name}</strong><i>{twist ? 'OTRA MIRADA' : 'ACÉRCATE'}</i></div>
     <div className="city-dialogue" ref={panel}>
       <div className="city-kicker">{twist ? 'ALGO CAMBIA' : 'ESTÁS ACÁ'} <span className="city-dialogue-place">{stop.sign}</span></div>
       {choice ? <>
         <div className="city-your-choice">ELEGISTE <strong>{choice.label}</strong></div>
         <p className="city-reaction">{choice.reaction}</p>
         <h2 id="city-encounter-title" ref={heading} tabIndex={-1}>{choice.question}</h2>
-        <div className="city-speaking-cue">Contá por qué. Sumá un ejemplo.</div>
+        <div className="city-speaking-cue">Cuenta por qué. Suma un ejemplo.</div>
         <details className="city-teacher-follow" key={`${twist}-${choice.id}`}><summary>Una pregunta más</summary><p>{choice.teacher}</p></details>
         <details className="city-language-help" key={`help-${twist}-${choice.id}`}><summary>Una mano para empezar</summary><ul>{content.help.map(phrase => <li key={phrase}>{phrase}</li>)}</ul></details>
         <div className="city-dialogue-actions">
@@ -45,10 +45,10 @@ export function CityDialogue({ stop, choice, twist, style, onChoice, onTwist, on
       </> : <>
         <p className="city-situation">{situation.description}</p>
         <h2 id="city-encounter-title" ref={heading} tabIndex={-1}>{situation.question}</h2>
-        <div className="city-choices" role="group" aria-label="Elegí una opción para conversar">
+        <div className="city-choices" role="group" aria-label="Elige una opción para conversar">
           {situation.choices.map((item, index) => <button key={item.id} onClick={() => onChoice(item)}><span>{String.fromCharCode(65 + index)}</span><strong>{item.label}</strong><i>↗</i></button>)}
         </div>
-        <p className="city-choice-note">Elegí lo que harías vos. Después, lo conversamos.</p>
+        <p className="city-choice-note">Elige lo que harías tú. Después, lo conversamos.</p>
       </>}
     </div>
   </section>;
@@ -66,7 +66,7 @@ export function CityGuide({ onClose }: { onClose: () => void }) {
     <button className="city-modal-close" onClick={onClose} aria-label="Cerrar la guía docente">×</button>
     <div className="city-kicker">GUÍA DOCENTE · B1</div><h2 id="city-guide-title">La conversación marca el ritmo.</h2>
     {sections.map(([title, description]) => <section key={title}><h3>{title}</h3><p>{description}</p></section>)}
-    <section><h3>Controles</h3><p>Flechas ← y → para caminar. Enter o espacio para acercarse. También podés tocar un lugar o elegirlo en «El barrio». En celular, mantené presionadas las flechas. Esc vuelve a la calle. Tab recorre los botones.</p></section>
+    <section><h3>Controles</h3><p>Flechas ← y → para caminar. Enter o espacio para acercarse. También puedes tocar un lugar o elegirlo en «El barrio». En celular, mantén presionadas las flechas. Esc vuelve a la calle. Tab recorre los botones.</p></section>
     <button className="city-primary" onClick={onClose}>VOLVER A LA CLASE <span>→</span></button>
   </dialog>;
 }

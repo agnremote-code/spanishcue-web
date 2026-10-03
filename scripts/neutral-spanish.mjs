@@ -23,12 +23,12 @@ for (const imperative of encliticImperatives) {
 for (const homograph of ['create', 'generate', 'animate', 'participate', 'unite']) certain.delete(homograph);
 for (const present of ['dejás', 'ajustás', 'variás', 'fijás', 'expresás', 'preparás', 'corregís', 'defendés', 'mantenés', 'justificás', 'girás', 'reescribís', 'aclarás', 'traducís', 'dirigís', 'mandás', 'detenés', 'sorprendés']) certain.add(present);
 // These are also valid first-person past forms: a human reviews their sentence.
-const ambiguous = new Set(`elegí seguí repetí sentí escribí decí abrí viví salí subí compartí recibí descubrí decidí pedí dormí partí permití aprendí comprendí entendí respondí cumplí serví insistí discutí existí resolví incluí construí contribuí distribuí consumí asumí recurrí acudí sufrí admití añadí describí perdí bebí comí corrí vendí asistí dale tomate comete`.split(' '));
+const ambiguous = new Set(`elegí seguí repetí sentí escribí decí abrí viví salí subí compartí recibí descubrí decidí pedí dormí partí permití aprendí comprendí entendí respondí cumplí serví insistí discutí existí resolví incluí construí contribuí distribuí consumí asumí recurrí acudí sufrí admití añadí describí perdí bebí comí corrí vendí asistí resumí corregí dirigí convertí imprimí dividí vestí reí sonreí uní reuní dale tomate comete`.split(' '));
 const ignoredAttributes = /^(?:className|id|key|href|src|type|role|target|rel|style|data-.+|aria-hidden)$/;
 const propertyName = node => node && (ts.isIdentifier(node) || ts.isStringLiteralLike(node) || ts.isNumericLiteral(node)) ? node.text : '';
 const englishKey = key => key === 'en' || key === 'english' || /(?:_en|En)$/.test(key);
 const spanishKey = key => key === 'es' || key === 'spanish' || /(?:_es|Es)$/.test(key);
-export function isEnglishPath(path) { return path.startsWith('app/guides/') || /(?:^|\/)(?:en|english)(?:\/|\.)|(?:[._-]en)\.[^/]+$/.test(path); }
+export function isEnglishPath(path) { return path === 'app/resources/[slug]/page.tsx' || path.startsWith('app/guides/') || /(?:^|\/)(?:en|english)(?:\/|\.)|(?:[._-]en)\.[^/]+$/.test(path); }
 
 /** Extract runtime copy using the TypeScript parser; identifiers/comments are never text. */
 export function extractCopy(source, path) {
@@ -133,6 +133,8 @@ export function scanSource(source, path, registry = { version: 1, exemptions: []
   const findings = [];
   for (const copy of extractCopy(source, path)) {
     if (copy.language === 'en' || exempt.has(copy.text)) continue;
+    // Entire URL/path values and machine error/lookup keys are not user copy.
+    if (/^(?:https?:\/\/|\/)[^\s]+$/.test(copy.text) || /^[a-z][a-z0-9]*(?:[_:-][a-z0-9]+)+$/i.test(copy.text)) continue;
     // Tokenization uses Unicode letters/marks, not JS's ASCII-only \b (vosotros is safe).
     for (const match of copy.text.normalize('NFC').matchAll(/[\p{L}\p{M}]+/gu)) {
       const token = match[0]; const lower = token.toLocaleLowerCase('es');

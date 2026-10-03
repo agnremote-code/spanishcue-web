@@ -28,9 +28,11 @@ test('all finite recordings exist, match scripts, decode, and have no orphan fil
  for(const l of levels)for(const a of contentFor(l).activities){const first=manifest.clips.find(c=>c.id===a.clip);assert.equal(first.text,a.text);if(a.secondClip){const second=manifest.clips.find(c=>c.id===a.secondClip);assert.equal(second.text,a.text);assert.notEqual(first.sha256,second.sha256);assert.notDeepEqual(first.pitchAnchorsHz,second.pitchAnchorsHz);}}
  assert.equal(manifest.synthetic,true);assert.equal(manifest.humanListeningQA,false);
 });
-// Homework evolves ModulePlayer and the studio UX evolves HablarSinCortar; preserve authored A1 content.
-test('unrelated lesson, A1 content and auth sources remain byte-identical to intonation baseline',()=>{
- for(const file of ['app/hablar-sin-cortar/content.mjs','app/noche-abierta/page.tsx','app/autoestudio/curriculum/modules/a1/w01.ts','app/access-policy.ts']){assert.deepEqual(readFileSync(file),execFileSync('git',['show',`829bfdef46e1b2fdb1fd81eb0836ab3e5155eb13:${file}`]));}
+// Exact reviewed copy is pinned after the neutral-Spanish audit; access policy keeps its original freeze.
+test('reviewed lesson copy is pinned and access policy matches intonation baseline',()=>{
+ const reviewed=JSON.parse(readFileSync('tests/fixtures/neutral-audio-reviewed.json','utf8')).sources;
+ for(const file of ['app/hablar-sin-cortar/content.mjs','app/noche-abierta/page.tsx','app/autoestudio/curriculum/modules/a1/w01.ts'])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),reviewed[file],file);
+ for(const file of ['app/access-policy.ts']){assert.deepEqual(readFileSync(file),execFileSync('git',['show',`829bfdef46e1b2fdb1fd81eb0836ab3e5155eb13:${file}`]));}
 
 });
 test('in-world guide offers phase-specific hints without exposing hidden sentence text',async()=>{

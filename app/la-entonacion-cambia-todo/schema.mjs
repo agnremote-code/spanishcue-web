@@ -1,5 +1,5 @@
 // Stable phonetics-family stages; only labels and authored interactions differ.
-export const ROUTE=[{id:'listen',name:'Escuchá la intención',minutes:8},{id:'boundaries',name:'¿Suena igual?',minutes:8},{id:'connect',name:'Cambiá el tono',minutes:8},{id:'rhythm',name:'Decilo de otra manera',minutes:8},{id:'speak',name:'Usalo en contexto',minutes:8},{id:'final',name:'Desafío final',minutes:10}];
+export const ROUTE=[{id:'listen',name:'Escucha la intención',minutes:8},{id:'boundaries',name:'¿Suena igual?',minutes:8},{id:'connect',name:'Cambia el tono',minutes:8},{id:'rhythm',name:'Dilo de otra manera',minutes:8},{id:'speak',name:'Úsalo en contexto',minutes:8},{id:'final',name:'Desafío final',minutes:10}];
 export const SHAPE=[['listen-01','listen','choice'],['listen-02','listen','choice'],['compare-01','boundaries','ab'],['context-01','connect','choice'],['echo-01','connect','repeat'],['compare-02','rhythm','ab'],['delivery-01','rhythm','repeat'],['roleplay-01','speak','transfer'],['bank-listen','listen','choice',true],['bank-context','connect','choice',true]];
 // Explicit target contours for synthetic rehearsal contrasts, not universal
 // emotion classifiers or claims about native speakers. Hz anchors span voiced input.

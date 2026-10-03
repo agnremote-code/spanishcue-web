@@ -918,6 +918,18 @@
       "text": "Sí, esperá un minuto.",
       "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
       "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Perfecto. Mandame la dirección.",
+      "reason": "Explicit Argentine roleplay dialogue and quoted response model; surrounding UI remains neutral.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Mandame la dirección.",
+      "reason": "Explicit Argentine roleplay dialogue and quoted response model; surrounding UI remains neutral.",
+      "category": "regional-pedagogy"
     }
   ]
 }

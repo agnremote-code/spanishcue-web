@@ -1,0 +1,667 @@
+[
+  {
+    "offset": 1000000,
+    "duration": 2000000,
+    "text": "El"
+  },
+  {
+    "offset": 3125000,
+    "duration": 4875000,
+    "text": "teléfono"
+  },
+  {
+    "offset": 8125000,
+    "duration": 1000000,
+    "text": "de"
+  },
+  {
+    "offset": 9250000,
+    "duration": 1125000,
+    "text": "mi"
+  },
+  {
+    "offset": 10500000,
+    "duration": 5750000,
+    "text": "habitación"
+  },
+  {
+    "offset": 16375000,
+    "duration": 2875000,
+    "text": "sonó"
+  },
+  {
+    "offset": 19375000,
+    "duration": 875000,
+    "text": "el"
+  },
+  {
+    "offset": 20375000,
+    "duration": 4625000,
+    "text": "martes"
+  },
+  {
+    "offset": 25125000,
+    "duration": 625000,
+    "text": "a"
+  },
+  {
+    "offset": 25875000,
+    "duration": 2125000,
+    "text": "las"
+  },
+  {
+    "offset": 28125000,
+    "duration": 2375000,
+    "text": "diez"
+  },
+  {
+    "offset": 30625000,
+    "duration": 750000,
+    "text": "de"
+  },
+  {
+    "offset": 31500000,
+    "duration": 750000,
+    "text": "la"
+  },
+  {
+    "offset": 32375000,
+    "duration": 4250000,
+    "text": "noche"
+  },
+  {
+    "offset": 45250000,
+    "duration": 5625000,
+    "text": "Contesté"
+  },
+  {
+    "offset": 51000000,
+    "duration": 1250000,
+    "text": "y"
+  },
+  {
+    "offset": 52375000,
+    "duration": 4250000,
+    "text": "escuché"
+  },
+  {
+    "offset": 56750000,
+    "duration": 1250000,
+    "text": "mi"
+  },
+  {
+    "offset": 58125000,
+    "duration": 3500000,
+    "text": "propia"
+  },
+  {
+    "offset": 61750000,
+    "duration": 4125000,
+    "text": "voz"
+  },
+  {
+    "offset": 74500000,
+    "duration": 1625000,
+    "text": "La"
+  },
+  {
+    "offset": 76250000,
+    "duration": 3875000,
+    "text": "persona"
+  },
+  {
+    "offset": 80250000,
+    "duration": 3625000,
+    "text": "dijo"
+  },
+  {
+    "offset": 86750000,
+    "duration": 2375000,
+    "text": "soy"
+  },
+  {
+    "offset": 89250000,
+    "duration": 2375000,
+    "text": "tú"
+  },
+  {
+    "offset": 94625000,
+    "duration": 2125000,
+    "text": "pero"
+  },
+  {
+    "offset": 96875000,
+    "duration": 1125000,
+    "text": "te"
+  },
+  {
+    "offset": 98125000,
+    "duration": 3000000,
+    "text": "llamo"
+  },
+  {
+    "offset": 101250000,
+    "duration": 2625000,
+    "text": "desde"
+  },
+  {
+    "offset": 104000000,
+    "duration": 5250000,
+    "text": "mañana"
+  },
+  {
+    "offset": 117875000,
+    "duration": 3750000,
+    "text": "Pensé"
+  },
+  {
+    "offset": 121750000,
+    "duration": 1625000,
+    "text": "que"
+  },
+  {
+    "offset": 123500000,
+    "duration": 1750000,
+    "text": "era"
+  },
+  {
+    "offset": 125375000,
+    "duration": 1875000,
+    "text": "una"
+  },
+  {
+    "offset": 127375000,
+    "duration": 3000000,
+    "text": "broma"
+  },
+  {
+    "offset": 130500000,
+    "duration": 1125000,
+    "text": "de"
+  },
+  {
+    "offset": 131750000,
+    "duration": 1250000,
+    "text": "mi"
+  },
+  {
+    "offset": 133125000,
+    "duration": 4625000,
+    "text": "hermano"
+  },
+  {
+    "offset": 146375000,
+    "duration": 2750000,
+    "text": "Sin"
+  },
+  {
+    "offset": 149250000,
+    "duration": 4750000,
+    "text": "embargo"
+  },
+  {
+    "offset": 157500000,
+    "duration": 750000,
+    "text": "la"
+  },
+  {
+    "offset": 158375000,
+    "duration": 1750000,
+    "text": "voz"
+  },
+  {
+    "offset": 160250000,
+    "duration": 3375000,
+    "text": "sabía"
+  },
+  {
+    "offset": 163750000,
+    "duration": 1250000,
+    "text": "que"
+  },
+  {
+    "offset": 165125000,
+    "duration": 1875000,
+    "text": "yo"
+  },
+  {
+    "offset": 167125000,
+    "duration": 3375000,
+    "text": "estaba"
+  },
+  {
+    "offset": 170625000,
+    "duration": 4375000,
+    "text": "comiendo"
+  },
+  {
+    "offset": 175125000,
+    "duration": 5250000,
+    "text": "galletas"
+  },
+  {
+    "offset": 180500000,
+    "duration": 750000,
+    "text": "en"
+  },
+  {
+    "offset": 181375000,
+    "duration": 750000,
+    "text": "la"
+  },
+  {
+    "offset": 182250000,
+    "duration": 4000000,
+    "text": "cama"
+  },
+  {
+    "offset": 194875000,
+    "duration": 1625000,
+    "text": "Me"
+  },
+  {
+    "offset": 196625000,
+    "duration": 1625000,
+    "text": "dio"
+  },
+  {
+    "offset": 198375000,
+    "duration": 1125000,
+    "text": "un"
+  },
+  {
+    "offset": 199625000,
+    "duration": 2625000,
+    "text": "solo"
+  },
+  {
+    "offset": 202375000,
+    "duration": 5250000,
+    "text": "consejo"
+  },
+  {
+    "offset": 210875000,
+    "duration": 1250000,
+    "text": "no"
+  },
+  {
+    "offset": 212250000,
+    "duration": 3375000,
+    "text": "lleves"
+  },
+  {
+    "offset": 215750000,
+    "duration": 1000000,
+    "text": "el"
+  },
+  {
+    "offset": 216875000,
+    "duration": 4500000,
+    "text": "paraguas"
+  },
+  {
+    "offset": 221500000,
+    "duration": 2750000,
+    "text": "negro"
+  },
+  {
+    "offset": 224375000,
+    "duration": 750000,
+    "text": "al"
+  },
+  {
+    "offset": 225250000,
+    "duration": 4875000,
+    "text": "museo"
+  },
+  {
+    "offset": 238750000,
+    "duration": 2000000,
+    "text": "Al"
+  },
+  {
+    "offset": 240875000,
+    "duration": 2000000,
+    "text": "día"
+  },
+  {
+    "offset": 243000000,
+    "duration": 4875000,
+    "text": "siguiente"
+  },
+  {
+    "offset": 248000000,
+    "duration": 3875000,
+    "text": "llovía"
+  },
+  {
+    "offset": 252000000,
+    "duration": 4250000,
+    "text": "mucho"
+  },
+  {
+    "offset": 264875000,
+    "duration": 4500000,
+    "text": "Recordé"
+  },
+  {
+    "offset": 269500000,
+    "duration": 875000,
+    "text": "la"
+  },
+  {
+    "offset": 270500000,
+    "duration": 4375000,
+    "text": "llamada"
+  },
+  {
+    "offset": 275000000,
+    "duration": 750000,
+    "text": "y"
+  },
+  {
+    "offset": 275875000,
+    "duration": 2500000,
+    "text": "pedí"
+  },
+  {
+    "offset": 278500000,
+    "duration": 1250000,
+    "text": "un"
+  },
+  {
+    "offset": 279875000,
+    "duration": 4875000,
+    "text": "paraguas"
+  },
+  {
+    "offset": 284875000,
+    "duration": 4375000,
+    "text": "amarillo"
+  },
+  {
+    "offset": 289375000,
+    "duration": 750000,
+    "text": "en"
+  },
+  {
+    "offset": 290250000,
+    "duration": 6500000,
+    "text": "recepción"
+  },
+  {
+    "offset": 305375000,
+    "duration": 1750000,
+    "text": "En"
+  },
+  {
+    "offset": 307250000,
+    "duration": 1000000,
+    "text": "el"
+  },
+  {
+    "offset": 308375000,
+    "duration": 3750000,
+    "text": "museo"
+  },
+  {
+    "offset": 312250000,
+    "duration": 1500000,
+    "text": "vi"
+  },
+  {
+    "offset": 313875000,
+    "duration": 500000,
+    "text": "a"
+  },
+  {
+    "offset": 314500000,
+    "duration": 3625000,
+    "text": "cinco"
+  },
+  {
+    "offset": 318250000,
+    "duration": 5250000,
+    "text": "personas"
+  },
+  {
+    "offset": 323625000,
+    "duration": 1750000,
+    "text": "con"
+  },
+  {
+    "offset": 325500000,
+    "duration": 4625000,
+    "text": "paraguas"
+  },
+  {
+    "offset": 330250000,
+    "duration": 3875000,
+    "text": "negros"
+  },
+  {
+    "offset": 334250000,
+    "duration": 7125000,
+    "text": "idénticos"
+  },
+  {
+    "offset": 350000000,
+    "duration": 1875000,
+    "text": "Al"
+  },
+  {
+    "offset": 352000000,
+    "duration": 3875000,
+    "text": "salir"
+  },
+  {
+    "offset": 358875000,
+    "duration": 2875000,
+    "text": "todos"
+  },
+  {
+    "offset": 361875000,
+    "duration": 5750000,
+    "text": "discutían"
+  },
+  {
+    "offset": 367750000,
+    "duration": 3000000,
+    "text": "porque"
+  },
+  {
+    "offset": 370875000,
+    "duration": 1500000,
+    "text": "no"
+  },
+  {
+    "offset": 372500000,
+    "duration": 4125000,
+    "text": "sabían"
+  },
+  {
+    "offset": 376750000,
+    "duration": 2375000,
+    "text": "cuál"
+  },
+  {
+    "offset": 379250000,
+    "duration": 1375000,
+    "text": "era"
+  },
+  {
+    "offset": 380750000,
+    "duration": 750000,
+    "text": "el"
+  },
+  {
+    "offset": 381625000,
+    "duration": 4250000,
+    "text": "suyo"
+  },
+  {
+    "offset": 394500000,
+    "duration": 1750000,
+    "text": "Yo"
+  },
+  {
+    "offset": 396375000,
+    "duration": 4500000,
+    "text": "encontré"
+  },
+  {
+    "offset": 401000000,
+    "duration": 1000000,
+    "text": "el"
+  },
+  {
+    "offset": 402125000,
+    "duration": 3625000,
+    "text": "amarillo"
+  },
+  {
+    "offset": 405875000,
+    "duration": 5500000,
+    "text": "enseguida"
+  },
+  {
+    "offset": 411500000,
+    "duration": 750000,
+    "text": "y"
+  },
+  {
+    "offset": 412375000,
+    "duration": 1250000,
+    "text": "me"
+  },
+  {
+    "offset": 413750000,
+    "duration": 1875000,
+    "text": "fui"
+  },
+  {
+    "offset": 415750000,
+    "duration": 5875000,
+    "text": "tranquilo"
+  },
+  {
+    "offset": 430250000,
+    "duration": 2875000,
+    "text": "Esa"
+  },
+  {
+    "offset": 433250000,
+    "duration": 3000000,
+    "text": "noche"
+  },
+  {
+    "offset": 436375000,
+    "duration": 4375000,
+    "text": "intenté"
+  },
+  {
+    "offset": 440875000,
+    "duration": 3375000,
+    "text": "llamar"
+  },
+  {
+    "offset": 444375000,
+    "duration": 1125000,
+    "text": "al"
+  },
+  {
+    "offset": 445625000,
+    "duration": 2000000,
+    "text": "día"
+  },
+  {
+    "offset": 447750000,
+    "duration": 5250000,
+    "text": "siguiente"
+  },
+  {
+    "offset": 453125000,
+    "duration": 2250000,
+    "text": "para"
+  },
+  {
+    "offset": 455500000,
+    "duration": 5250000,
+    "text": "preguntar"
+  },
+  {
+    "offset": 460875000,
+    "duration": 1750000,
+    "text": "los"
+  },
+  {
+    "offset": 462750000,
+    "duration": 3875000,
+    "text": "números"
+  },
+  {
+    "offset": 466750000,
+    "duration": 750000,
+    "text": "de"
+  },
+  {
+    "offset": 467625000,
+    "duration": 750000,
+    "text": "la"
+  },
+  {
+    "offset": 468500000,
+    "duration": 5375000,
+    "text": "lotería"
+  },
+  {
+    "offset": 477000000,
+    "duration": 2000000,
+    "text": "pero"
+  },
+  {
+    "offset": 479125000,
+    "duration": 875000,
+    "text": "el"
+  },
+  {
+    "offset": 480125000,
+    "duration": 4750000,
+    "text": "teléfono"
+  },
+  {
+    "offset": 485000000,
+    "duration": 3125000,
+    "text": "solo"
+  },
+  {
+    "offset": 488250000,
+    "duration": 6000000,
+    "text": "repetía"
+  },
+  {
+    "offset": 497250000,
+    "duration": 2750000,
+    "text": "este"
+  },
+  {
+    "offset": 500125000,
+    "duration": 5250000,
+    "text": "servicio"
+  },
+  {
+    "offset": 505500000,
+    "duration": 4625000,
+    "text": "resuelve"
+  },
+  {
+    "offset": 510250000,
+    "duration": 5125000,
+    "text": "problemas"
+  },
+  {
+    "offset": 515500000,
+    "duration": 6625000,
+    "text": "pequeños"
+  }
+]

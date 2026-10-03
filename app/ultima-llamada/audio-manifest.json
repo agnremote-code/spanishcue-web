@@ -134,16 +134,24 @@
           "speaker": "Diego",
           "voice": "es-CO-GonzaloNeural",
           "rate": "-6%",
-          "text": "Hola, soy Diego, tu conductor en Lima. Te espero en la salida tres hasta las veintidós veinte. Si el vuelo se retrasa, mandame un mensaje y cambio la hora sin problema."
+          "text": "Hola, soy Diego, tu conductor en Lima. Te espero en la salida tres hasta las veintidós veinte. Si el vuelo se retrasa, mándame un mensaje y cambio la hora sin problema."
         }
       ],
       "declaredVariety": "Colombia",
-      "durationSeconds": 12.168,
+      "durationSeconds": 12.12,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "byteLength": 73245,
-      "sha256": "b9c72a8590ea14526b00b8795a03d325d1cd1efe987ca15808d774b62561245e"
+      "byteLength": 72720,
+      "sha256": "d693c339282a760cbba3f2db4e68f2d3876336e69aa05984d78ed703bf7f424e",
+      "segmentWordMetadata": "audio-words/conductor.words.json"
     }
-  ]
+  ],
+  "neutralSpanishRegeneration": {
+    "clipIds": [
+      "conductor"
+    ],
+    "generatedAt": "2026-10-03T02:58:31.836246+00:00",
+    "humanListeningQA": false
+  }
 }

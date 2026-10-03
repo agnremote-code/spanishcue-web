@@ -54,3 +54,11 @@ test('finite enclitic expansion does not flag neutral nouns, subjunctives or Eng
   assert.equal(scanSource('const text="animales generales formales hablase Create and generate an image, animate it, participate and unite";', file).length, 0);
   assert.deepEqual(scanSource('const text="Ajustá Variá Fijá contámelo explicánoslo";', file).map(f=>f.token), ['Ajustá','Variá','Fijá','contámelo','explicánoslo']);
 });
+test('ignores complete URLs and machine identifiers while scanning ordinary user copy', () => {
+  const source = 'const url = `/v1/billing/subscriptions/${encodeURIComponent(id)}/activate`; throw new Error("paypal_subscription_activate_failed"); const label="Activá tu cuenta";';
+  assert.deepEqual(scanSource(source, file).map(f=>f.token), ['Activá']);
+});
+test('protects the English public resource template and reviews resumí/corregí as possible past tense', () => {
+  assert.equal(scanSource('const ui=<p>Teachers evaluate the complete lesson.</p>', 'app/resources/[slug]/page.tsx').length, 0);
+  assert.deepEqual(scanSource('const line="Yo resumí el informe y corregí la ficha."', file).map(f=>f.kind), ['context-review','context-review']);
+});
