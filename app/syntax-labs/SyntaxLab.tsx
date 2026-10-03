@@ -65,7 +65,7 @@ function RepairCard({ item, index }: { item: SyntaxRepair; index: number }) {
   const correct = selected === item.correct;
   return (
     <article className={`sx-repair ${answered ? (correct ? "correct" : "retry") : ""}`}>
-      <header><span>{String(index + 1).padStart(2, "0")}</span><div><small>REPARÁ EL MENSAJE</small><h3>{item.prompt}</h3></div></header>
+      <header><span>{String(index + 1).padStart(2, "0")}</span><div><small>REPARA EL MENSAJE</small><h3>{item.prompt}</h3></div></header>
       <blockquote>{item.original}</blockquote>
       <div className="sx-repair-options">
         {item.options.map((option, optionIndex) => (
@@ -117,7 +117,7 @@ function LegacySyntaxLab({ data }: { data: SyntaxLabData }) {
       <section className="sx-boundary"><b>LÍMITE {data.level}</b><p>{data.boundaries}</p></section>
 
       <section className="grammar-step-stack sx-steps" id="recorrido">
-        <GrammarStep number="01" eyebrow={`ACTIVACIÓN · ${data.timeline[0].minutes} MIN`} title="¿Qué relación escuchás?" description="Primero interpretar; después elegir una forma." accent={data.accent}>
+        <GrammarStep number="01" eyebrow={`ACTIVACIÓN · ${data.timeline[0].minutes} MIN`} title="¿Qué relación escuchas?" description="Primero interpretar; después elegir una forma." accent={data.accent}>
           <p className="sx-instruction">{data.activation.instruction}</p>
           <div className="sx-activation-grid">
             {data.activation.cards.map((card, index) => <article key={`${card.first}-${card.second}`}><small>{String(index + 1).padStart(2, "0")} · {card.intention}</small><p>{card.first}</p><i aria-hidden="true">+</i><p>{card.second}</p></article>)}
@@ -143,7 +143,7 @@ function LegacySyntaxLab({ data }: { data: SyntaxLabData }) {
         </GrammarStep>
 
         {data.questionAnswerCycle.length > 0 && (
-          <GrammarStep number="04" eyebrow="MICROCICLO · PREGUNTA / RESPUESTA" title="¿Por qué? se pregunta; porque responde" description="Decilo en voz alta y después cambiá el dato con información propia." accent={data.accent}>
+          <GrammarStep number="04" eyebrow="MICROCICLO · PREGUNTA / RESPUESTA" title="¿Por qué? se pregunta; porque responde" description="Dilo en voz alta y después cambia el dato con información propia." accent={data.accent}>
             <div className="sx-qa-grid">{data.questionAnswerCycle.map((item) => <article key={item.question}><small>{item.cue}</small><h3>{item.question}</h3><p>{item.answer}</p></article>)}</div>
           </GrammarStep>
         )}
@@ -152,11 +152,11 @@ function LegacySyntaxLab({ data }: { data: SyntaxLabData }) {
           <div className="sx-repair-grid">{data.repairs.map((item, index) => <RepairCard item={item} index={index} key={item.original} />)}</div>
         </GrammarStep>
 
-        <GrammarStep number={data.questionAnswerCycle.length ? "06" : "05"} eyebrow="RECUPERACIÓN SIN APOYO" title="Ahora la estructura sale de vos" description="Primera producción, repetición y menos apoyo visual." accent={data.accent}>
+        <GrammarStep number={data.questionAnswerCycle.length ? "06" : "05"} eyebrow="RECUPERACIÓN SIN APOYO" title="Ahora la estructura sale de ti" description="Primera producción, repetición y menos apoyo visual." accent={data.accent}>
           <div className="sx-retrieval-grid">{data.retrieval.map((item, index) => <article key={item.prompt}><span>{String(index + 1).padStart(2, "0")}</span><small>{item.intention}</small><h3>{item.prompt}</h3><p>{item.challenge}</p></article>)}</div>
         </GrammarStep>
 
-        <GrammarStep number={data.questionAnswerCycle.length ? "07" : "06"} eyebrow="PRODUCCIÓN ORAL" title="Construí una intervención completa" description="No hay respuestas modelo: el contenido tiene que ser verdadero o defendible." accent={data.accent}>
+        <GrammarStep number={data.questionAnswerCycle.length ? "07" : "06"} eyebrow="PRODUCCIÓN ORAL" title="Construye una intervención completa" description="No hay respuestas modelo: el contenido tiene que ser verdadero o defendible." accent={data.accent}>
           <div className="sx-production-grid">{data.production.map((item, index) => <article key={item.title}><span>{String(index + 1).padStart(2, "0")}</span><small>{item.title}</small><h3>{item.prompt}</h3><ul>{item.checklist.map((point) => <li key={point}>{point}</li>)}</ul></article>)}</div>
         </GrammarStep>
 

@@ -162,7 +162,7 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
           ))}
         </div>
         <div className="gw-scroll">
-          DESLIZÁ PARA ENTRAR <span />
+          DESLIZA PARA ENTRAR <span />
         </div>
       </section>
 
@@ -284,7 +284,7 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
             Todo conectado.
           </h2>
           <p>
-            Bajá por la clase o usá el menú superior para saltar a una estación.
+            Baja por la clase o usa el menú superior para saltar a una estación.
             El contenido central ya está abierto; los detalles opcionales siguen
             plegados.
           </p>
@@ -323,7 +323,7 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
                     <h3>{item.title}</h3>
                   </div>
                 </div>
-                {data.repair && <p className="gw-repair-station-label">{(data.repair === "quantity" ? itemIndex > 1 : itemIndex > 2) ? "EXTENSIÓN A2 · Opcional: elegí este contenido según el grupo." : "NÚCLEO A1 · Elegí dos ejemplos y probá una frase propia."}</p>}
+                {data.repair && <p className="gw-repair-station-label">{(data.repair === "quantity" ? itemIndex > 1 : itemIndex > 2) ? "EXTENSIÓN A2 · Opcional: elige este contenido según el grupo." : "NÚCLEO A1 · Elige dos ejemplos y prueba una frase propia."}</p>}
                 <div className="grammar-step-stack gw-station-steps">
                   <GrammarStep number="01" eyebrow="IDEA CENTRAL" title="¿Qué es?" accent={data.accent}>
                     <p className="gw-step-summary">{item.summary}</p>
@@ -334,7 +334,7 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
                           ? "Ser, estar y haber son verbos. Aquí los comparamos conjugados en presente de indicativo: es, está y hay."
                           : item.id === "future"
                             ? "Hablamos del futuro con una perífrasis. El significado futuro no convierte a «voy» en futuro simple."
-                            : "Ubicá la forma antes de aprender sus terminaciones. El verbo es la palabra; el modo y el tiempo son características de su conjugación."}
+                            : "Ubica la forma antes de aprender sus terminaciones. El verbo es la palabra; el modo y el tiempo son características de su conjugación."}
                       />
                     )}
                   </GrammarStep>
@@ -375,12 +375,12 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
                 <article key={trap.wrong}>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <div>
-                    <small>EVITÁ</small>
+                    <small>EVITA</small>
                     <b>{trap.wrong}</b>
                   </div>
                   <i>→</i>
                   <div>
-                    <small>USÁ</small>
+                    <small>USA</small>
                     <b>{trap.right}</b>
                   </div>
                   <p>{trap.explanation}</p>
@@ -392,15 +392,15 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
         <GrammarStep
           number="06"
           eyebrow="PRÁCTICA"
-          title="Elegí, comprobá y entendé"
+          title="Elige, comprueba y entiende"
           accent={data.accent}
         >
           {data.repair ? <RepairPractice key={data.slug} items={data.practice} kind={data.repair} /> : <section className="gw-practice">
             <header>
               <span>LABORATORIO {data.level}</span>
-              <h2>Elegí. Comprobá. Entendé.</h2>
+              <h2>Elige. Comprueba. Entiende.</h2>
               <p>
-                Las respuestas no aparecen antes de decidir. Al final recibís
+                Las respuestas no aparecen antes de decidir. Al final recibes
                 una explicación para cada elección.
               </p>
             </header>
@@ -475,7 +475,7 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
         <GrammarStep
           number="07"
           eyebrow="CONVERSACIÓN"
-          title={data.repair ? "Banco oral opcional · elegí una propuesta" : "Del sistema a tu voz"}
+          title={data.repair ? "Banco oral opcional · elige una propuesta" : "Del sistema a tu voz"}
           defaultOpen={!data.repair}
           kind={data.repair ? "optional" : "core"}
           accent={data.accent}
@@ -485,7 +485,7 @@ function GrammarWorldContent({ data }: { data: GrammarWorldData }) {
               <span>DEL SISTEMA A TU VOZ</span>
               <h2>Ahora la gramática tiene que vivir.</h2>
               <p>
-                No hace falta hablar rápido. Construí, comprobá y después repetí
+                No hace falta hablar rápido. Construye, comprueba y después repite
                 la idea con más libertad.
               </p>
             </div>

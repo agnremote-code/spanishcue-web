@@ -14,7 +14,7 @@ export default function ModeTimeIntro({compact=false}:{compact?:boolean}) {
         <p><b>Indicativo</b> presenta información; <b>subjuntivo</b> integra la acción en otra perspectiva; <b>imperativo</b> intenta dirigir una acción.</p>
         <div><span>INFORMO</span><b>Viene.</b></div>
         <div><span>FILTRO</span><b>Dudo que venga.</b></div>
-        <div><span>DIRIJO</span><b>Vení. / Ven.</b></div>
+        <div><span>DIRIJO</span><b>Ven. / Venga.</b></div>
       </article>
       <article className="time">
         <small>TIEMPO · ¿DESDE CUÁNDO LO MIRO?</small>

@@ -216,7 +216,7 @@ export default function CondicionalesB1Page() {
             </div>
             <div>
               <p>
-                Abrí cada paso cuando llegue el momento de explicarlo. La ruta
+                Abre cada paso cuando llegue el momento de explicarlo. La ruta
                 avanza de la idea general a cada tipo de condicional.
               </p>
               <button
@@ -261,7 +261,7 @@ export default function CondicionalesB1Page() {
                   <i>→</i>
                   <span>
                     <small>CONSECUENCIA</small>
-                    <b>…voy con vos.</b>
+                    <b>…voy contigo.</b>
                   </span>
                 </div>
               </section>
@@ -271,7 +271,7 @@ export default function CondicionalesB1Page() {
               number="02"
               eyebrow="PASO PREVIO"
               title="¿Cuáles son sus dos partes?"
-              description="Separá condición y consecuencia antes de elegir los verbos."
+              description="Separa condición y consecuencia antes de elegir los verbos."
               accent="#5cc8ff"
             >
               <section className="co-course-intro cb-course-intro-inner">
@@ -290,7 +290,7 @@ export default function CondicionalesB1Page() {
                     <span>2</span>
                     <div>
                       <small>CONSECUENCIA</small>
-                      <b>…voy con vos.</b>
+                      <b>…voy contigo.</b>
                       <p>
                         Explica qué ocurre, ocurrirá, ocurriría o habría
                         ocurrido.
@@ -328,7 +328,7 @@ export default function CondicionalesB1Page() {
                       <b>sí</b> con tilde expresa afirmación o funciona como
                       pronombre.
                     </p>
-                    <em>Si venís, avisame. · Sí, voy.</em>
+                    <em>Si vienes, avísame. · Sí, voy.</em>
                   </article>
                   <article>
                     <b>Orden y coma</b>
@@ -437,7 +437,7 @@ export default function CondicionalesB1Page() {
             <div className="co-chapter-title cb-collapsible-title">
               <small>{activa.subtitulo}</small>
               <h1>{activa.nombre}</h1>
-              <b>ABRÍ LOS PASOS UNO POR UNO</b>
+              <b>ABRE LOS PASOS UNO POR UNO</b>
             </div>
           </header>
 
@@ -447,7 +447,7 @@ export default function CondicionalesB1Page() {
                 number="01"
                 eyebrow="IDEA CENTRAL"
                 title={`¿Qué ${activa.id === "mixtos" ? "son" : "es"} ${nombreEnPregunta[activa.id]}?`}
-                description="Empezá por el significado, sin mirar todavía la fórmula."
+                description="Empieza por el significado, sin mirar todavía la fórmula."
               >
                 <section className="cb-definition">
                   <p className="cb-definition-main">{activa.idea}</p>
@@ -463,7 +463,7 @@ export default function CondicionalesB1Page() {
                 number="02"
                 eyebrow="USOS"
                 title={`¿Para qué usamos ${nombreEnPregunta[activa.id]}?`}
-                description="Abrí este paso para ver las situaciones más frecuentes."
+                description="Abre este paso para ver las situaciones más frecuentes."
               >
                 <section className="co-uses cb-step-section">
                   <div>
@@ -485,7 +485,7 @@ export default function CondicionalesB1Page() {
                 number="03"
                 eyebrow="FÓRMULA"
                 title="¿Cuál es la fórmula?"
-                description="Recién ahora separá la condición de la consecuencia."
+                description="Recién ahora separa la condición de la consecuencia."
               >
                 <section className="cb-formula-step">
                   <div className="cb-formula-focus">
@@ -512,7 +512,7 @@ export default function CondicionalesB1Page() {
                   </div>
                   <VerbalPosition
                     items={conditionalPosition[activa.id]}
-                    context="El nombre de este bloque identifica un tipo de oración condicional, no un nuevo tiempo. Ubicá por separado las formas de la condición y de la consecuencia."
+                    context="El nombre de este bloque identifica un tipo de oración condicional, no un nuevo tiempo. Ubica por separado las formas de la condición y de la consecuencia."
                   />
                 </section>
               </GrammarStep>
@@ -521,7 +521,7 @@ export default function CondicionalesB1Page() {
                 number="04"
                 eyebrow="CONSTRUCCIÓN"
                 title="¿Cómo se construye?"
-                description="Formá cada tiempo verbal en un orden claro."
+                description="Forma cada tiempo verbal en un orden claro."
               >
                 <section className="cb-construccion cb-step-section">
                   <div>
@@ -545,11 +545,11 @@ export default function CondicionalesB1Page() {
                 number="05"
                 eyebrow="CONJUGACIONES"
                 title="¿Cómo se conjugan los verbos?"
-                description="Consultá solo las tablas necesarias para este condicional."
+                description="Consulta solo las tablas necesarias para este condicional."
               >
                 <section className="co-conjugations cb-step-section">
                   <p className="cb-step-intro">
-                    Las tablas muestran únicamente los tiempos que necesitás en
+                    Las tablas muestran únicamente los tiempos que necesitas en
                     este bloque.
                   </p>
                   <div className="co-tense-grid">
@@ -564,7 +564,7 @@ export default function CondicionalesB1Page() {
                 number="06"
                 eyebrow="EJEMPLOS"
                 title="¿Cómo funciona en contexto?"
-                description="Mirá qué expresa cada parte de la oración."
+                description="Mira qué expresa cada parte de la oración."
               >
                 <section className="co-examples cb-ejemplos cb-step-section">
                   <div>
@@ -596,7 +596,7 @@ export default function CondicionalesB1Page() {
                 number="07"
                 eyebrow="ERRORES CLAVE"
                 title="¿Qué errores hay que evitar?"
-                description="Compará la forma incorrecta con la correcta."
+                description="Compara la forma incorrecta con la correcta."
               >
                 <section className="co-traps cb-errores cb-traps-inner">
                   <div className="co-trap-character" aria-hidden="true">
@@ -618,7 +618,7 @@ export default function CondicionalesB1Page() {
                 number="08"
                 eyebrow="PRÁCTICA CONTROLADA"
                 title="Ejercicios"
-                description="Resolvé primero; después abrí cada respuesta."
+                description="Resuelve primero; después abre cada respuesta."
               >
                 <section className="co-practice cb-step-section">
                   <p className="cb-step-intro">
@@ -657,7 +657,7 @@ export default function CondicionalesB1Page() {
                 number="09"
                 eyebrow="PRODUCCIÓN ORAL"
                 title="Conversación"
-                description="Terminá usando la estructura en situaciones propias."
+                description="Termina usando la estructura en situaciones propias."
               >
                 <section className="co-speaking cb-speaking-inner">
                   <span className="co-speaking-orbit" aria-hidden="true">
@@ -666,7 +666,7 @@ export default function CondicionalesB1Page() {
                   </span>
                   <header>
                     <p>
-                      Respondé con la estructura de la unidad y agregá un
+                      Responde con la estructura de la unidad y agrega un
                       detalle.
                     </p>
                   </header>
@@ -676,7 +676,7 @@ export default function CondicionalesB1Page() {
                         <span>{indice + 1}</span>
                         <b>{item.pregunta}</b>
                         <span>
-                          <strong>Podés empezar:</strong> {item.inicio}
+                          <strong>Puedes empezar:</strong> {item.inicio}
                         </span>
                       </article>
                     ))}
@@ -706,12 +706,12 @@ export default function CondicionalesB1Page() {
             <button onClick={() => mostrar("mapa")}>← VOLVER A LA RUTA</button>
             <span>B1 · SÍNTESIS GRAMATICAL</span>
             <h1>
-              Elegí por
+              Elige por
               <br />
               significado.
             </h1>
             <p>
-              La fórmula correcta aparece cuando primero ubicás la condición en
+              La fórmula correcta aparece cuando primero ubicas la condición en
               la realidad y después en el tiempo.
             </p>
           </header>
@@ -720,7 +720,7 @@ export default function CondicionalesB1Page() {
               <span>COMPARACIÓN FINAL</span>
               <h2>Todo el sistema en una sola tabla.</h2>
               <p>
-                Usá este cuadro después de estudiar las unidades por separado,
+                Usa este cuadro después de estudiar las unidades por separado,
                 no como sustituto del recorrido.
               </p>
             </section>
@@ -746,10 +746,10 @@ export default function CondicionalesB1Page() {
             <section className="cb-diagnostico">
               <header>
                 <span>DIAGNÓSTICO EN CINCO PREGUNTAS</span>
-                <h2>No traduzcas: diagnosticá.</h2>
+                <h2>No traduzcas: diagnostica.</h2>
                 <p>
-                  Empezá por arriba y elegí la primera pregunta que describa
-                  exactamente lo que querés expresar.
+                  Empieza por arriba y elige la primera pregunta que describa
+                  exactamente lo que quieres expresar.
                 </p>
               </header>
               <div>
@@ -768,7 +768,7 @@ export default function CondicionalesB1Page() {
                 <span>MISIÓN FINAL</span>
                 <h2>Una misma situación, cinco perspectivas.</h2>
                 <p>
-                  Elegí una situación real de tu vida y transformala sin cambiar
+                  Elige una situación real de tu vida y transfórmala sin cambiar
                   el tema central.
                 </p>
               </header>
@@ -785,7 +785,7 @@ export default function CondicionalesB1Page() {
                 </article>
                 <article>
                   <span>02</span>
-                  <b>Lo que imaginás como diferente</b>
+                  <b>Lo que imaginas como diferente</b>
                   <i>Si…, …ría.</i>
                 </article>
                 <article>

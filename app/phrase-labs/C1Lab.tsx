@@ -20,11 +20,11 @@ function OrderCard({ task, index }: { task:C1LabData["orderTasks"][number]; inde
   return <article className={`pl-order-card ${checked?(correct?"correct":"retry"):""}`}>
     <header><span>{String(index+1).padStart(2,"0")}</span><div><small>RECONSTRUCCIÓN</small><h3>{task.prompt}</h3></div></header>
     <div className="pl-answer-line" aria-label="Tu reformulación">
-      {chosen.length?chosen.map(token=><button type="button" key={token} onClick={()=>{setChosen(current=>current.filter(item=>item!==token));setChecked(false)}}>{token}</button>):<p>Construí la versión precisa.</p>}
+      {chosen.length?chosen.map(token=><button type="button" key={token} onClick={()=>{setChosen(current=>current.filter(item=>item!==token));setChecked(false)}}>{token}</button>):<p>Construye la versión precisa.</p>}
     </div>
     <div className="pl-token-pool" aria-label="Piezas disponibles">{available.map(token=><button type="button" key={token} onClick={()=>{setChosen(current=>[...current,token]);setChecked(false)}}>{token}</button>)}</div>
     <div className="pl-board-actions"><button type="button" className="secondary" disabled={!chosen.length} onClick={()=>{setChosen([]);setChecked(false)}}>REINICIAR</button><button type="button" disabled={chosen.length!==task.tokens.length} onClick={()=>setChecked(true)}>COMPROBAR</button></div>
-    {checked&&<p className="pl-feedback" role="status"><b>{correct?"LECTURA CONTROLADA":"REVISÁ LA CONEXIÓN"}</b>{correct?task.explanation:"Mové una pieza y comprobá qué relación queda visible."}</p>}
+    {checked&&<p className="pl-feedback" role="status"><b>{correct?"LECTURA CONTROLADA":"REVISA LA CONEXIÓN"}</b>{correct?task.explanation:"Mueve una pieza y comprueba qué relación queda visible."}</p>}
   </article>;
 }
 
@@ -72,7 +72,7 @@ export default function C1Lab({ data }: { data:C1LabData }) {
     <section className="pl-audit-note"><span>AUDITORÍA DE CONTENIDOS</span><p>{data.auditNote}</p></section>
 
     <section className="grammar-step-stack pl-steps c1-steps" id="recorrido">
-      <GrammarStep number="01" eyebrow="PERSPECTIVA · 5 MIN" title={data.discovery.question} description="Primero formulá una hipótesis; después buscá evidencia." accent={data.accent}>
+      <GrammarStep number="01" eyebrow="PERSPECTIVA · 5 MIN" title={data.discovery.question} description="Primero formula una hipótesis; después busca evidencia." accent={data.accent}>
         <div className="pl-discovery"><p>{data.discovery.instruction}</p><div>{data.discovery.contrast.map((item,index)=><article key={item}><small>{String(index+1).padStart(2,"0")}</small><b>{item}</b></article>)}</div></div>
       </GrammarStep>
 
@@ -84,7 +84,7 @@ export default function C1Lab({ data }: { data:C1LabData }) {
         </div>
       </GrammarStep>)}
 
-      <GrammarStep number="08" eyebrow="INTERPRETACIÓN + PRÁCTICA · 15 MIN" title="Abrir expedientes y controlar la lectura" description="Proponé, contrastá, reformulá y comprobá." accent={data.accent}>
+      <GrammarStep number="08" eyebrow="INTERPRETACIÓN + PRÁCTICA · 15 MIN" title="Abrir expedientes y controlar la lectura" description="Propón, contrasta, reformula y comprueba." accent={data.accent}>
         <div className="c1-case-lab">
           <nav aria-label="Expedientes lingüísticos">{data.cases.map((item,index)=><button type="button" aria-pressed={index===activeCase} onClick={()=>setActiveCase(index)} key={item.sentence}>{String(index+1).padStart(2,"0")} · {item.source}</button>)}</nav>
           <article>

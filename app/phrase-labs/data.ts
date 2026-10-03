@@ -99,7 +99,7 @@ export const gruposConSentido: PhraseLabData = {
   discovery: {
     question: "¿Qué versión permite imaginar mejor el lugar?",
     instruction:
-      "Leé las cuatro versiones sin explicar la regla. El alumno elige la más informativa y dice qué agrega cada capa.",
+      "Lee las cuatro versiones sin explicar la regla. El alumno elige la más informativa y dice qué agrega cada capa.",
     contrast: [
       "casa",
       "una casa",
@@ -193,21 +193,21 @@ export const gruposConSentido: PhraseLabData = {
   ],
   orderTasks: [
     {
-      prompt: "Construí un grupo para describir una vivienda.",
+      prompt: "Construye un grupo para describir una vivienda.",
       tokens: ["con balcón", "luminoso", "un departamento"],
       answers: [["un departamento", "luminoso", "con balcón"]],
       explanation:
         "Primero aparece el núcleo presentado; después, la cualidad y la característica adicional.",
     },
     {
-      prompt: "Construí un grupo para identificar una parte.",
+      prompt: "Construye un grupo para identificar una parte.",
       tokens: ["la página", "interesante", "del libro"],
       answers: [["la página", "interesante", "del libro"]],
       explanation:
         "Del libro precisa qué página. Interesante concuerda con página.",
     },
     {
-      prompt: "Armá una llamada natural.",
+      prompt: "Arma una llamada natural.",
       tokens: ["tu mochila", "está acá.", "Ana,"],
       answers: [["Ana,", "tu mochila", "está acá."]],
       explanation:
@@ -256,31 +256,31 @@ export const gruposConSentido: PhraseLabData = {
   production: [
     {
       title: "Un objeto imprescindible",
-      prompt: "Elegí un objeto que usás todos los días y describilo por capas.",
+      prompt: "Elige un objeto que usas todos los días y descríbelo por capas.",
       checklist: ["determinante + sustantivo", "una cualidad", "un complemento con de, con o para"],
     },
     {
       title: "Un lugar real",
-      prompt: "Describí un lugar de tu ciudad sin construir una frase artificialmente larga.",
+      prompt: "Describe un lugar de tu ciudad sin construir una frase artificialmente larga.",
       checklist: ["dos grupos nominales", "muy, poco o bastante", "una precisión útil"],
     },
     {
       title: "Una persona",
-      prompt: "Presentá a una persona importante y agregá dos datos que permitan imaginarla.",
+      prompt: "Presenta a una persona importante y agrega dos datos que permitan imaginarla.",
       checklist: ["un grupo para identificar", "un adjetivo que concuerda", "una característica con de o con"],
     },
   ],
   conversation: [
     { question: "¿Cómo es tu casa?", starter: "Mi casa es… / Tiene…", vocabulary: "grande, pequeña, luminosa, con balcón, con jardín", followUp: "¿Qué parte de la casa te gusta más?" },
     { question: "¿Cuál es tu lugar favorito de tu ciudad?", starter: "Mi lugar favorito es…", vocabulary: "un parque tranquilo, una cafetería pequeña, una plaza con árboles", followUp: "¿Qué tiene de especial?" },
-    { question: "¿Cómo es una persona importante para vos?", starter: "Es una persona…", vocabulary: "muy amable, bastante divertida, con mucha energía", followUp: "¿Qué hacen juntos?" },
-    { question: "¿Qué objeto usás todos los días?", starter: "Uso…", vocabulary: "un teléfono, una computadora, una botella de agua", followUp: "¿Cómo es y para qué lo usás?" },
-    { question: "¿Cómo es tu habitación?", starter: "Es una habitación…", vocabulary: "cómoda, poco luminosa, con una ventana grande", followUp: "¿Qué querés cambiar?" },
+    { question: "¿Cómo es una persona importante para ti?", starter: "Es una persona…", vocabulary: "muy amable, bastante divertida, con mucha energía", followUp: "¿Qué hacen juntos?" },
+    { question: "¿Qué objeto usas todos los días?", starter: "Uso…", vocabulary: "un teléfono, una computadora, una botella de agua", followUp: "¿Cómo es y para qué lo usas?" },
+    { question: "¿Cómo es tu habitación?", starter: "Es una habitación…", vocabulary: "cómoda, poco luminosa, con una ventana grande", followUp: "¿Qué quieres cambiar?" },
     { question: "¿Qué tipo de comida te gusta?", starter: "Me gusta la comida…", vocabulary: "picante, casera, de mi país, con muchas verduras", followUp: "¿Cuál es un plato concreto?" },
     { question: "¿Cuál es un buen lugar para descansar en tu ciudad?", starter: "Un buen lugar es…", vocabulary: "un parque con sombra, una playa tranquila, una cafetería silenciosa", followUp: "¿Cuándo vas normalmente?" },
-    { question: "¿Qué llevás normalmente en tu mochila o bolso?", starter: "Llevo…", vocabulary: "un libro de…, una botella con…, una libreta pequeña", followUp: "¿Qué objeto es el más importante?" },
-    { question: "¿Cómo es una clase de español ideal para vos?", starter: "Para mí, una clase ideal es…", vocabulary: "muy práctica, bastante dinámica, con conversación", followUp: "¿Qué actividad no puede faltar?" },
-    { question: "¿Qué lugar de tu país querés conocer?", starter: "Quiero conocer…", vocabulary: "una ciudad con…, un pueblo pequeño, una zona de montañas", followUp: "¿Por qué ese lugar?" },
+    { question: "¿Qué llevas normalmente en tu mochila o bolso?", starter: "Llevo…", vocabulary: "un libro de…, una botella con…, una libreta pequeña", followUp: "¿Qué objeto es el más importante?" },
+    { question: "¿Cómo es una clase de español ideal para ti?", starter: "Para mí, una clase ideal es…", vocabulary: "muy práctica, bastante dinámica, con conversación", followUp: "¿Qué actividad no puede faltar?" },
+    { question: "¿Qué lugar de tu país quieres conocer?", starter: "Quiero conocer…", vocabulary: "una ciudad con…, un pueblo pequeño, una zona de montañas", followUp: "¿Por qué ese lugar?" },
   ],
 };
 
@@ -314,7 +314,7 @@ export const oracionesCompletas: PhraseLabData = {
   discovery: {
     question: "¿Cuándo deja de ser una lista y aparece una idea completa?",
     instruction:
-      "Mostrá las piezas una por una. El alumno decide desde qué capa puede entender quién hace qué.",
+      "Muestra las piezas una por una. El alumno decide desde qué capa puede entender quién hace qué.",
     contrast: [
       "Ana / Madrid / lunes",
       "Ana / trabaja",
@@ -408,25 +408,25 @@ export const oracionesCompletas: PhraseLabData = {
   ],
   orderTasks: [
     {
-      prompt: "Construí la oración neutra.",
+      prompt: "Construye la oración neutra.",
       tokens: ["en Madrid", "Ana", "los lunes.", "trabaja"],
       answers: [["Ana", "trabaja", "en Madrid", "los lunes."]],
       explanation: "El orden neutro presenta sujeto, verbo, lugar y tiempo.",
     },
     {
-      prompt: "Mové el tiempo al comienzo sin romper la oración.",
+      prompt: "Mueve el tiempo al comienzo sin romper la oración.",
       tokens: ["estudio", "Por la mañana,", "español.", "yo"],
       answers: [["Por la mañana,", "yo", "estudio", "español."]],
       explanation: "El complemento temporal puede abrir la oración; la estructura central sigue intacta.",
     },
     {
-      prompt: "Construí una oración negativa.",
+      prompt: "Construye una oración negativa.",
       tokens: ["los domingos.", "no", "Mi hermano", "cocina"],
       answers: [["Mi hermano", "no", "cocina", "los domingos."]],
       explanation: "No aparece inmediatamente antes del verbo conjugado.",
     },
     {
-      prompt: "Construí una pregunta parcial neutra.",
+      prompt: "Construye una pregunta parcial neutra.",
       tokens: ["Ana?", "trabaja", "¿Dónde"],
       answers: [["¿Dónde", "trabaja", "Ana?"]],
       explanation: "La palabra interrogativa abre la pregunta y el sujeto puede aparecer después del verbo.",
@@ -447,21 +447,21 @@ export const oracionesCompletas: PhraseLabData = {
     { label: "TIEMPO PRIMERO", sentence: "Los lunes, Ana trabaja en Madrid.", note: "La misma acción con otro punto de partida." },
   ],
   production: [
-    { title: "Tu mañana", prompt: "Construí tres oraciones completas sobre una mañana normal.", checklist: ["quién", "verbo que concuerda", "una información de tiempo o lugar"] },
-    { title: "Tres transformaciones", prompt: "Elegí una oración tuya y convertíla en negación, pregunta total y pregunta parcial.", checklist: ["no delante del verbo", "signos de pregunta", "palabra interrogativa adecuada"] },
-    { title: "Otra persona", prompt: "Describí la rutina de una persona y después cambiala a plural.", checklist: ["sujeto claro", "concordancia verbal", "una descripción con ser"] },
+    { title: "Tu mañana", prompt: "Construye tres oraciones completas sobre una mañana normal.", checklist: ["quién", "verbo que concuerda", "una información de tiempo o lugar"] },
+    { title: "Tres transformaciones", prompt: "Elige una oración tuya y conviértela en negación, pregunta total y pregunta parcial.", checklist: ["no delante del verbo", "signos de pregunta", "palabra interrogativa adecuada"] },
+    { title: "Otra persona", prompt: "Describe la rutina de una persona y después cámbiala a plural.", checklist: ["sujeto claro", "concordancia verbal", "una descripción con ser"] },
   ],
   conversation: [
-    { question: "¿Dónde trabajás o estudiás?", starter: "Trabajo / Estudio…", vocabulary: "en casa, en una oficina, en una universidad", followUp: "¿Qué te gusta de ese lugar?" },
-    { question: "¿Qué hacés normalmente por la mañana?", starter: "Por la mañana, yo…", vocabulary: "me levanto, desayuno, trabajo, estudio", followUp: "¿A qué hora empezás?" },
-    { question: "¿Con quién hablás mucho durante la semana?", starter: "Hablo mucho con…", vocabulary: "mi familia, un amigo, mis compañeros", followUp: "¿De qué hablan normalmente?" },
-    { question: "¿Qué hacés los fines de semana?", starter: "Los fines de semana…", vocabulary: "descanso, salgo, cocino, visito…", followUp: "¿Dónde lo hacés?" },
-    { question: "¿Qué cosas no hacés nunca?", starter: "Yo nunca… / No… nunca.", vocabulary: "cocinar, correr, trabajar de noche, mirar televisión", followUp: "¿Por qué no?" },
-    { question: "¿Qué lugar visitás frecuentemente?", starter: "Visito…", vocabulary: "un parque, una cafetería, la casa de…", followUp: "¿Cuándo vas normalmente?" },
-    { question: "¿Qué querés hacer esta semana?", starter: "Esta semana quiero…", vocabulary: "descansar, estudiar, visitar, comprar", followUp: "¿Con quién?" },
-    { question: "¿Qué pregunta querés hacerle al profesor?", starter: "Quiero preguntarte… / ¿…?", vocabulary: "dónde, cuándo, qué, quién, cómo", followUp: "¿Podés hacer otra pregunta sobre la respuesta?" },
+    { question: "¿Dónde trabajas o estudias?", starter: "Trabajo / Estudio…", vocabulary: "en casa, en una oficina, en una universidad", followUp: "¿Qué te gusta de ese lugar?" },
+    { question: "¿Qué haces normalmente por la mañana?", starter: "Por la mañana, yo…", vocabulary: "me levanto, desayuno, trabajo, estudio", followUp: "¿A qué hora empiezas?" },
+    { question: "¿Con quién hablas mucho durante la semana?", starter: "Hablo mucho con…", vocabulary: "mi familia, un amigo, mis compañeros", followUp: "¿De qué hablan normalmente?" },
+    { question: "¿Qué haces los fines de semana?", starter: "Los fines de semana…", vocabulary: "descanso, salgo, cocino, visito…", followUp: "¿Dónde lo haces?" },
+    { question: "¿Qué cosas no haces nunca?", starter: "Yo nunca… / No… nunca.", vocabulary: "cocinar, correr, trabajar de noche, mirar televisión", followUp: "¿Por qué no?" },
+    { question: "¿Qué lugar visitas frecuentemente?", starter: "Visito…", vocabulary: "un parque, una cafetería, la casa de…", followUp: "¿Cuándo vas normalmente?" },
+    { question: "¿Qué quieres hacer esta semana?", starter: "Esta semana quiero…", vocabulary: "descansar, estudiar, visitar, comprar", followUp: "¿Con quién?" },
+    { question: "¿Qué pregunta quieres hacerle al profesor?", starter: "Quiero preguntarte… / ¿…?", vocabulary: "dónde, cuándo, qué, quién, cómo", followUp: "¿Puedes hacer otra pregunta sobre la respuesta?" },
     { question: "¿Cómo es un día normal para una persona de tu familia?", starter: "Mi… trabaja / estudia…", vocabulary: "por la mañana, en…, normalmente", followUp: "¿Qué hace diferente los fines de semana?" },
-    { question: "¿Qué actividad hacés bien y qué actividad no hacés bien?", starter: "Yo… bien, pero no… bien.", vocabulary: "cocino, dibujo, hablo, canto, organizo", followUp: "¿Querés mejorar esa actividad?" },
+    { question: "¿Qué actividad haces bien y qué actividad no haces bien?", starter: "Yo… bien, pero no… bien.", vocabulary: "cocino, dibujo, hablo, canto, organizo", followUp: "¿Quieres mejorar esa actividad?" },
   ],
 };
 
@@ -492,7 +492,7 @@ export const describirConPrecision: PhraseLabData = {
     { label: "Conversar", minutes: "10+ min" },
   ],
   discovery: {
-    question: "¿Qué versión ayuda más a decidir si querés ver la película?",
+    question: "¿Qué versión ayuda más a decidir si quieres ver la película?",
     instruction:
       "El alumno ordena las versiones de menos a más informativas y explica qué dato nuevo aporta cada una.",
     contrast: [
@@ -560,19 +560,19 @@ export const describirConPrecision: PhraseLabData = {
   ],
   orderTasks: [
     {
-      prompt: "Construí una recomendación compacta.",
+      prompt: "Construye una recomendación compacta.",
       tokens: ["y muy interesante", "una película", "conocida"],
       answers: [["una película", "conocida", "y muy interesante"]],
       explanation: "El grupo suma un dato reconocible y una valoración sin repetir el núcleo.",
     },
     {
-      prompt: "Identificá a la persona sin una oración extra.",
+      prompt: "Identifica a la persona sin una oración extra.",
       tokens: ["vive en Berlín.", "mi hermano Juan", "Ahora"],
       answers: [["Ahora", "mi hermano Juan", "vive en Berlín."]],
       explanation: "Juan identifica directamente a mi hermano mediante aposición.",
     },
     {
-      prompt: "Armá una comparación completa.",
+      prompt: "Arma una comparación completa.",
       tokens: ["que el centro.", "es menos ruidoso", "Este barrio"],
       answers: [["Este barrio", "es menos ruidoso", "que el centro."]],
       explanation: "Menos + adjetivo + que establece la comparación.",
@@ -594,21 +594,21 @@ export const describirConPrecision: PhraseLabData = {
     { label: "REACCIÓN", sentence: "¡Qué interesante!", note: "La otra persona responde de forma natural." },
   ],
   production: [
-    { title: "Cartel de cine", prompt: "Recomendá una película o serie con una descripción precisa de dos o tres rasgos.", checklist: ["un participio-adjetivo", "una valoración graduada", "sin redundancias"] },
-    { title: "Guía de ciudad", prompt: "Compará dos zonas y recomendá una según una necesidad concreta.", checklist: ["más, menos o tan", "dos grupos informativos", "una razón clara"] },
-    { title: "Presentación breve", prompt: "Presentá a una persona usando una aposición y una cualidad relevante.", checklist: ["relación + nombre", "concordancia", "un dato que ayude a imaginarla"] },
+    { title: "Cartel de cine", prompt: "Recomienda una película o serie con una descripción precisa de dos o tres rasgos.", checklist: ["un participio-adjetivo", "una valoración graduada", "sin redundancias"] },
+    { title: "Guía de ciudad", prompt: "Compara dos zonas y recomienda una según una necesidad concreta.", checklist: ["más, menos o tan", "dos grupos informativos", "una razón clara"] },
+    { title: "Presentación breve", prompt: "Presenta a una persona usando una aposición y una cualidad relevante.", checklist: ["relación + nombre", "concordancia", "un dato que ayude a imaginarla"] },
   ],
   conversation: [
     { question: "¿Qué ciudad te parece especialmente interesante? ¿Por qué?", starter: "Me parece especialmente interesante…", vocabulary: "costera, histórica, poco conocida, muy animada", followUp: "¿Es más tranquila o más activa que tu ciudad?" },
     { question: "¿Quién es una persona conocida que te parece interesante?", starter: "Una persona conocida que me parece interesante es…", vocabulary: "admirada, reconocida, creativa, polémica", followUp: "¿Qué aspecto de su vida te interesa?" },
     { question: "¿Qué película o serie viste recientemente?", starter: "Vi una película / serie…", vocabulary: "recomendada, divertida, bastante lenta, muy conocida", followUp: "¿La recomendarías? ¿A quién?" },
-    { question: "¿Cuál es el lugar más bonito que conocés?", starter: "El lugar más bonito que conozco es…", vocabulary: "rodeado de…, menos turístico, tan bonito como…", followUp: "¿Qué detalle recordás mejor?" },
+    { question: "¿Cuál es el lugar más bonito que conoces?", starter: "El lugar más bonito que conozco es…", vocabulary: "rodeado de…, menos turístico, tan bonito como…", followUp: "¿Qué detalle recuerdas mejor?" },
     { question: "¿Qué comida de tu país es difícil de explicar a un extranjero?", starter: "Es una comida…", vocabulary: "preparada con…, parecida a…, más dulce que…", followUp: "¿En qué momento se come?" },
     { question: "¿Qué lugar de tu ciudad recomendarías y cómo lo describirías?", starter: "Recomendaría… Es un lugar…", vocabulary: "bien ubicado, poco conocido, muy agradable", followUp: "¿Para qué tipo de persona es ideal?" },
     { question: "¿Qué cosa te parece demasiado cara actualmente?", starter: "Me parece demasiado caro/a…", vocabulary: "más caro que antes, menos accesible, bastante necesario", followUp: "¿Existe una opción más barata?" },
     { question: "¿Qué fue lo más interesante de tu última semana?", starter: "Lo más interesante fue…", vocabulary: "inesperado, organizado, compartido, emocionante", followUp: "¿Por qué fue especial?" },
-    { question: "¿Qué producto conocido te parece sobrevalorado?", starter: "Me parece sobrevalorado…", vocabulary: "tan bueno como…, menos útil que…, demasiado caro", followUp: "¿Qué alternativa preferís?" },
-    { question: "¿Cómo describirías a tu familia o a un grupo importante para vos?", starter: "Mi familia / mi grupo es…", vocabulary: "grande, unido, diverso, bastante tranquilo", followUp: "¿Qué hacen juntos?" },
+    { question: "¿Qué producto conocido te parece sobrevalorado?", starter: "Me parece sobrevalorado…", vocabulary: "tan bueno como…, menos útil que…, demasiado caro", followUp: "¿Qué alternativa prefieres?" },
+    { question: "¿Cómo describirías a tu familia o a un grupo importante para ti?", starter: "Mi familia / mi grupo es…", vocabulary: "grande, unido, diverso, bastante tranquilo", followUp: "¿Qué hacen juntos?" },
   ],
 };
 
@@ -642,7 +642,7 @@ export const oracionFlexible: PhraseLabData = {
   discovery: {
     question: "¿Estas dos frases cuentan el mismo hecho? ¿Qué destaca cada una?",
     instruction:
-      "Leé ambas versiones en voz alta. El alumno marca la información que escucha primero y decide si el hecho central cambia.",
+      "Lee ambas versiones en voz alta. El alumno marca la información que escucha primero y decide si el hecho central cambia.",
     contrast: [
       "Por la tarde tomo café con mi abuela.",
       "Tomo café con mi abuela por la tarde.",
@@ -678,16 +678,16 @@ export const oracionFlexible: PhraseLabData = {
       title: "La pregunta disyuntiva ofrece alternativas",
       explanation:
         "La conjunción o conecta dos opciones dentro de una misma pregunta.",
-      formula: "¿PREFERÍS X O Y?",
-      examples: ["¿Preferís té o café?", "¿Trabajás en casa o en una oficina?"],
+      formula: "¿PREFIERES X O Y?",
+      examples: ["¿Prefieres té o café?", "¿Trabajas en casa o en una oficina?"],
     },
     {
       kicker: "REACCIÓN Y ACCIÓN",
       title: "Exclamar o exhortar cambia la intención",
       explanation:
         "Una exclamativa reacciona; una exhortativa invita, pide o indica una acción. Aquí usamos formas frecuentes sin volver a enseñar toda la conjugación.",
-      formula: "¡QUÉ CALOR! · ABRÍ LA VENTANA, POR FAVOR.",
-      examples: ["¡Qué bien trabajás!", "Tomá asiento.", "Vamos al parque."],
+      formula: "¡QUÉ CALOR! · ABRE LA VENTANA, POR FAVOR.",
+      examples: ["¡Qué bien trabajas!", "Toma asiento.", "Vamos al parque."],
     },
     {
       kicker: "CLIMA IMPERSONAL",
@@ -708,25 +708,25 @@ export const oracionFlexible: PhraseLabData = {
   ],
   orderTasks: [
     {
-      prompt: "Construí una versión con el tiempo al principio.",
+      prompt: "Construye una versión con el tiempo al principio.",
       tokens: ["con mi abuela.", "tomo café", "Por la tarde,"],
       answers: [["Por la tarde,", "tomo café", "con mi abuela."]],
       explanation: "El marco temporal abre la frase y la acción central permanece unida.",
     },
     {
-      prompt: "Construí otra versión natural del mismo hecho.",
+      prompt: "Construye otra versión natural del mismo hecho.",
       tokens: ["por la tarde.", "Tomo café", "con mi abuela"],
       answers: [["Tomo café", "con mi abuela", "por la tarde."]],
       explanation: "El tiempo también puede cerrar la escena.",
     },
     {
-      prompt: "Construí una pregunta con dos opciones.",
-      tokens: ["té", "¿Preferís", "café?", "o"],
-      answers: [["¿Preferís", "té", "o", "café?"]],
+      prompt: "Construye una pregunta con dos opciones.",
+      tokens: ["té", "¿Prefieres", "café?", "o"],
+      answers: [["¿Prefieres", "té", "o", "café?"]],
       explanation: "O enlaza las dos alternativas de la pregunta.",
     },
     {
-      prompt: "Describí el clima sin inventar un sujeto.",
+      prompt: "Describe el clima sin inventar un sujeto.",
       tokens: ["mucho calor", "Hoy", "hace"],
       answers: [["Hoy", "hace", "mucho calor"]],
       explanation: "Hace funciona de forma impersonal en expresiones meteorológicas.",
@@ -734,36 +734,36 @@ export const oracionFlexible: PhraseLabData = {
   ],
   choices: [
     { prompt: "¿Qué versión suena natural para destacar la tarde?", options: ["Por la tarde, tomo café con mi abuela.", "Yo por la tarde café tomo con mi abuela.", "Por la tomo tarde con café mi abuela."], correct: 0, explanation: "El complemento temporal abre la oración y la estructura central sigue clara." },
-    { prompt: "¿Cuál es una pregunta disyuntiva?", options: ["¿Preferís té?", "¿Preferís té o café?", "Preferís té y café."], correct: 1, explanation: "La pregunta ofrece dos alternativas conectadas por o." },
+    { prompt: "¿Cuál es una pregunta disyuntiva?", options: ["¿Prefieres té?", "¿Prefieres té o café?", "Prefieres té y café."], correct: 1, explanation: "La pregunta ofrece dos alternativas conectadas por o." },
     { prompt: "¿Qué expresión del clima es impersonal y natural?", options: ["Es calor.", "Tiene calor el día.", "Hace calor."], correct: 2, explanation: "Para el clima usamos hacer de forma impersonal: hace calor." },
-    { prompt: "¿Cuál es una exhortación sencilla?", options: ["Abrí la ventana, por favor.", "La ventana está abierta.", "¡Qué ventana!"], correct: 0, explanation: "La frase pide una acción de manera directa y cortés." },
+    { prompt: "¿Cuál es una exhortación sencilla?", options: ["Abre la ventana, por favor.", "La ventana está abierta.", "¡Qué ventana!"], correct: 0, explanation: "La frase pide una acción de manera directa y cortés." },
     { prompt: "¿Qué significa que ninguna otra persona trabaja los lunes?", options: ["Ana trabaja solo los lunes.", "Solo Ana trabaja los lunes.", "Los lunes trabajan solo."], correct: 1, explanation: "Solo junto a Ana limita quién realiza la acción." },
     { prompt: "¿Qué frase conserva el hecho y cambia solamente el marco inicial?", options: ["En casa trabajo mejor. / Trabajo mejor en casa.", "Solo Ana trabaja. / Ana trabaja solo los lunes.", "Hace frío. / Tengo frío."], correct: 0, explanation: "Las dos versiones mantienen la misma relación entre trabajar mejor y estar en casa." },
   ],
   transformations: [
-    { label: "BASE", sentence: "Trabajás desde casa por la mañana.", note: "La información temporal cierra la oración." },
-    { label: "MARCO PRIMERO", sentence: "Por la mañana, trabajás desde casa.", note: "El tiempo queda en primer plano." },
-    { label: "NEGACIÓN", sentence: "Por la mañana, no trabajás desde casa.", note: "La negación transforma la acción." },
-    { label: "DOS OPCIONES", sentence: "¿Trabajás desde casa o en una oficina por la mañana?", note: "La pregunta ofrece dos lugares posibles." },
-    { label: "REACCIÓN", sentence: "¡Qué bien trabajás desde casa!", note: "La exclamativa reacciona al modo." },
-    { label: "EXHORTACIÓN", sentence: "Trabajá desde casa por la mañana.", note: "La misma escena se convierte en indicación." },
+    { label: "BASE", sentence: "Trabajas desde casa por la mañana.", note: "La información temporal cierra la oración." },
+    { label: "MARCO PRIMERO", sentence: "Por la mañana, trabajas desde casa.", note: "El tiempo queda en primer plano." },
+    { label: "NEGACIÓN", sentence: "Por la mañana, no trabajas desde casa.", note: "La negación transforma la acción." },
+    { label: "DOS OPCIONES", sentence: "¿Trabajas desde casa o en una oficina por la mañana?", note: "La pregunta ofrece dos lugares posibles." },
+    { label: "REACCIÓN", sentence: "¡Qué bien trabajas desde casa!", note: "La exclamativa reacciona al modo." },
+    { label: "EXHORTACIÓN", sentence: "Trabaja desde casa por la mañana.", note: "La misma escena se convierte en indicación." },
   ],
   production: [
-    { title: "Rutina flexible", prompt: "Contá tres acciones de tu día y mové el tiempo en la segunda versión de cada una.", checklist: ["tiempo al principio o al final", "estructura central clara", "una forma que suene natural"] },
-    { title: "Elegir entre dos", prompt: "Creá tres preguntas disyuntivas sobre comida, trabajo y tiempo libre.", checklist: ["dos opciones reales", "o como enlace", "una repregunta después de elegir"] },
-    { title: "Clima y plan", prompt: "Describí el clima de hoy y proponé una acción adecuada.", checklist: ["hace + clima", "una exhortación sencilla", "tiempo o lugar"] },
+    { title: "Rutina flexible", prompt: "Cuenta tres acciones de tu día y mueve el tiempo en la segunda versión de cada una.", checklist: ["tiempo al principio o al final", "estructura central clara", "una forma que suene natural"] },
+    { title: "Elegir entre dos", prompt: "Crea tres preguntas disyuntivas sobre comida, trabajo y tiempo libre.", checklist: ["dos opciones reales", "o como enlace", "una repregunta después de elegir"] },
+    { title: "Clima y plan", prompt: "Describe el clima de hoy y propón una acción adecuada.", checklist: ["hace + clima", "una exhortación sencilla", "tiempo o lugar"] },
   ],
   conversation: [
-    { question: "¿Qué hacés normalmente después de trabajar o estudiar?", starter: "Después de trabajar / estudiar…", vocabulary: "descanso, voy a…, hablo con…, tranquilamente", followUp: "¿Dónde lo hacés normalmente?" },
-    { question: "¿Qué preferís hacer por la mañana y qué preferís hacer por la noche?", starter: "Por la mañana prefiero…, pero por la noche…", vocabulary: "trabajar, entrenar, cocinar, descansar", followUp: "¿Por qué cambia tu preferencia?" },
-    { question: "¿Cómo cambia tu rutina los fines de semana?", starter: "Los fines de semana…", vocabulary: "más tarde, con calma, afuera, en casa", followUp: "¿Qué actividad movés a otro momento?" },
-    { question: "¿Qué hacés cuando hace mucho calor?", starter: "Cuando hace mucho calor…", vocabulary: "me quedo en…, voy a…, tomo…, por la tarde", followUp: "¿Y cuando hace frío?" },
-    { question: "¿Preferís trabajar desde casa o ir a un lugar de trabajo? ¿Por qué?", starter: "Prefiero… porque…", vocabulary: "más tranquilo, con otras personas, por la mañana", followUp: "¿Tu respuesta cambia según el día?" },
-    { question: "¿Qué plan tenés para los próximos días?", starter: "En los próximos días…", vocabulary: "voy a…, primero, después, en…", followUp: "¿Podés decir la misma idea empezando por el lugar?" },
+    { question: "¿Qué haces normalmente después de trabajar o estudiar?", starter: "Después de trabajar / estudiar…", vocabulary: "descanso, voy a…, hablo con…, tranquilamente", followUp: "¿Dónde lo haces normalmente?" },
+    { question: "¿Qué prefieres hacer por la mañana y qué prefieres hacer por la noche?", starter: "Por la mañana prefiero…, pero por la noche…", vocabulary: "trabajar, entrenar, cocinar, descansar", followUp: "¿Por qué cambia tu preferencia?" },
+    { question: "¿Cómo cambia tu rutina los fines de semana?", starter: "Los fines de semana…", vocabulary: "más tarde, con calma, afuera, en casa", followUp: "¿Qué actividad mueves a otro momento?" },
+    { question: "¿Qué haces cuando hace mucho calor?", starter: "Cuando hace mucho calor…", vocabulary: "me quedo en…, voy a…, tomo…, por la tarde", followUp: "¿Y cuando hace frío?" },
+    { question: "¿Prefieres trabajar desde casa o ir a un lugar de trabajo? ¿Por qué?", starter: "Prefiero… porque…", vocabulary: "más tranquilo, con otras personas, por la mañana", followUp: "¿Tu respuesta cambia según el día?" },
+    { question: "¿Qué plan tienes para los próximos días?", starter: "En los próximos días…", vocabulary: "voy a…, primero, después, en…", followUp: "¿Puedes decir la misma idea empezando por el lugar?" },
     { question: "¿Qué actividad te gustaría hacer más seguido?", starter: "Me gustaría… más seguido.", vocabulary: "caminar, cocinar, estudiar, ver a…", followUp: "¿Cuándo podrías hacerla?" },
-    { question: "¿Cómo es un día normal para vos?", starter: "Normalmente, por la mañana…", vocabulary: "primero, después, en casa, con…", followUp: "¿Qué parte del día es más flexible?" },
-    { question: "¿Preferís hacer ejercicio solo o con otra persona?", starter: "Prefiero hacer ejercicio…", vocabulary: "solo, con amigos, por la noche, al aire libre", followUp: "¿Dónde y cuándo?" },
-    { question: "¿Qué consejo simple le darías a una persona que visita tu ciudad?", starter: "Visitá… / No vayas… / Tomá…", vocabulary: "por la mañana, cuando hace calor, en el centro", followUp: "¿Qué dos opciones puede elegir esa persona?" },
+    { question: "¿Cómo es un día normal para ti?", starter: "Normalmente, por la mañana…", vocabulary: "primero, después, en casa, con…", followUp: "¿Qué parte del día es más flexible?" },
+    { question: "¿Prefieres hacer ejercicio solo o con otra persona?", starter: "Prefiero hacer ejercicio…", vocabulary: "solo, con amigos, por la noche, al aire libre", followUp: "¿Dónde y cuándo?" },
+    { question: "¿Qué consejo simple le darías a una persona que visita tu ciudad?", starter: "Visita… / No vayas… / Toma…", vocabulary: "por la mañana, cuando hace calor, en el centro", followUp: "¿Qué dos opciones puede elegir esa persona?" },
   ],
 };
 

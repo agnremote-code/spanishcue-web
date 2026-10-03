@@ -284,7 +284,7 @@ function MapScreen({
           number="01"
           eyebrow="FÓRMULA BASE"
           title="¿Cómo se organiza la frase?"
-          description="Separá filtro, nexo y segunda acción."
+          description="Separa filtro, nexo y segunda acción."
           accent="#aa75ff"
         >
           <section className="sj-anatomy">
@@ -324,8 +324,8 @@ function MapScreen({
           <span>MAPA DE LA AVENTURA</span>
           <h2>De la primera puerta al archivo perdido</h2>
           <p>
-            Recorré los mundos en orden o entrá directamente al tema que
-            necesitás.
+            Recorre los mundos en orden o entra directamente al tema que
+            necesitas.
           </p>
         </header>
         <div className="sj-route-grid">
@@ -351,7 +351,7 @@ function MapScreen({
         <span>REGLA DE ORO</span>
         <h2>No busques una “palabra mágica”.</h2>
         <p>
-          Preguntate qué afirma el hablante, qué filtra y desde qué momento mira
+          Pregúntate qué afirma el hablante, qué filtra y desde qué momento mira
           la segunda acción.
         </p>
         <button onClick={() => setScreen("atlas")}>
@@ -425,7 +425,7 @@ function Chapter({
             number="01"
             eyebrow="IDEA CENTRAL"
             title="¿Qué expresa esta forma?"
-            description="Empezá por la mirada del hablante."
+            description="Empieza por la mirada del hablante."
             accent={unit.color}
           >
             <VerbalPosition
@@ -468,7 +468,7 @@ function Chapter({
               number="03"
               eyebrow="CONJUGACIÓN"
               title="Las formas completas"
-              description="Tú, vos, usted, nosotros, vosotros y ustedes."
+              description="Yo, tú, él/ella/usted, nosotros, vosotros y ellos/ellas/ustedes."
               accent={unit.color}
             >
               <section className="sj-tables">
@@ -476,7 +476,7 @@ function Chapter({
                   <span>CONJUGACIÓN COMPLETA</span>
                   <h2>Las formas del mundo {unit.number}</h2>
                   <p>
-                    Incluye tú, vos, usted, nosotros, vosotros y ustedes. Las
+                    Incluye yo, tú, él/ella/usted, nosotros, vosotros y ellos/ellas/ustedes. Las
                     formas rioplatenses posibles aparecen donde corresponden.
                   </p>
                 </header>
@@ -521,7 +521,7 @@ function Chapter({
             number="05"
             eyebrow="CONTRASTE"
             title="Indicativo y subjuntivo"
-            description="Compará lo que cambia en el significado."
+            description="Compara lo que cambia en el significado."
             accent={unit.color}
           >
             <section className="sj-contrast">
@@ -583,15 +583,15 @@ function Chapter({
           <GrammarStep
             number="07"
             eyebrow="PRÁCTICA"
-            title="Abrí cada naipe y comprobá"
-            description="Respondé antes de revelar la solución."
+            title="Abre cada naipe y comprueba"
+            description="Responde antes de revelar la solución."
             accent={unit.color}
           >
             <section className="sj-practice">
               <header>
                 <span>LABORATORIO INTERACTIVO</span>
-                <h2>Abrí cada naipe y comprobá tu decisión</h2>
-                <p>Respondé en voz alta antes de revelar la solución.</p>
+                <h2>Abre cada naipe y comprueba tu decisión</h2>
+                <p>Responde en voz alta antes de revelar la solución.</p>
               </header>
               <div>
                 {unit.exercises.map((exercise, i) => {
@@ -622,7 +622,7 @@ function Chapter({
             number="08"
             eyebrow="CONVERSACIÓN"
             title="Ahora el modo es tuyo"
-            description="Usá la estructura para decir algo verdadero."
+            description="Usa la estructura para decir algo verdadero."
             accent={unit.color}
           >
             <section className="sj-speaking">
@@ -630,7 +630,7 @@ function Chapter({
                 <span>MESA DE CONVERSACIÓN</span>
                 <h2>Ahora el modo es tuyo</h2>
                 <p>
-                  Usá la estructura para decir algo verdadero sobre vos. La
+                  Usa la estructura para decir algo verdadero sobre ti. La
                   forma sirve al significado, no al revés.
                 </p>
               </div>
@@ -715,7 +715,7 @@ function Atlas({
             number="02"
             eyebrow="CONJUGACIONES"
             title="Todas las formas"
-            description="Abrí las tablas completas solamente cuando las necesites."
+            description="Abre las tablas completas solamente cuando las necesites."
             accent="#66d7cf"
           >
             <section className="sj-all-tables">

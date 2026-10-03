@@ -11,16 +11,16 @@ export function sentence(item: SyntaxDecision | SyntaxRepair, option: number) {
 // One focused clue per item. None requires the learner to read the full solution.
 export const hints: Record<string, { decisions: string[]; repairs: string[] }> = {
   'antes-despues-cuando': {
-    decisions: ['Ubicá la ducha en la secuencia: ¿ocurre primero o al final?', 'Los platos se lavan cuando la cena ya terminó.', 'El segundo verbo ya está conjugado: llego.', 'La mochila tiene que estar lista al salir.', 'Primero estás dentro del tren; buscás la salida al bajar.', 'El inicio de la reunión es el momento que activa tu hábito.', 'No se cocinan las verduras hasta terminar de cortarlas.', 'La jornada ya terminó al hacer la llamada.', 'Viajás y escuchás música como hábito en el mismo período.', 'Necesitás saber la dirección para pedir el taxi.'],
-    repairs: ['Fijate en la forma del verbo que sigue a la preposición.', 'Conservá el orden: terminar primero, llamar después.', 'La consigna pide conservar el enlace original y corregir solo el verbo.', 'La frase original es válida: cambiá el punto de partida, no los hechos.'],
+    decisions: ['Ubica la ducha en la secuencia: ¿ocurre primero o al final?', 'Los platos se lavan cuando la cena ya terminó.', 'El segundo verbo ya está conjugado: llego.', 'La mochila tiene que estar lista al salir.', 'Primero estás dentro del tren; buscas la salida al bajar.', 'El inicio de la reunión es el momento que activa tu hábito.', 'No se cocinan las verduras hasta terminar de cortarlas.', 'La jornada ya terminó al hacer la llamada.', 'Viajas y escuchas música como hábito en el mismo período.', 'Necesitas saber la dirección para pedir el taxi.'],
+    repairs: ['Fijate en la forma del verbo que sigue a la preposición.', 'Conserva el orden: terminar primero, llamar después.', 'La consigna pide conservar el enlace original y corregir solo el verbo.', 'La frase original es válida: cambia el punto de partida, no los hechos.'],
   },
   'pero-hay-un-matiz': {
     decisions: ['El contexto descarta las dos causas por igual.', 'El resultado positivo limita la impresión de dificultad.', 'La reserva es un adjetivo, no otra oración completa.', 'El verbo ya está negado: faltan los dos medios descartados.', 'Lejos no significa necesariamente mal conectado.', 'La segunda afirmación limita el valor de la popularidad.', 'La duración es una reserva sobre una reunión productiva.', 'La autonomía responde a la objeción de aislamiento.', 'La lentitud limita la valoración positiva; no es su consecuencia.', 'Pablo y Lucía quedan descartados por igual.'],
-    repairs: ['Separá las dos afirmaciones y marcá la pausa del conector.', 'La original ya es válida; conservá la negación del verbo al reformular.', 'El contexto afirma los dos rasgos; no niegues ninguno.', 'Precio alto y buen transporte son hechos afirmados en esta situación.'],
+    repairs: ['Separa las dos afirmaciones y marca la pausa del conector.', 'La original ya es válida; conserva la negación del verbo al reformular.', 'El contexto afirma los dos rasgos; no niegues ninguno.', 'Precio alto y buen transporte son hechos afirmados en esta situación.'],
   },
   'la-persona-que-tengo-en-mente': {
     decisions: ['El dato selecciona a una compañera entre dos, sin coma.', 'El café es un lugar, pero aquí el relativo es el sujeto de abre.', 'La mochila es la cosa comprada, no una persona.', 'La coma anuncia información adicional sobre una persona conocida. Puede haber más de una opción válida.', 'El documento es lo que fue enviado.', 'El hábito permite reconocer a un vecino entre otros.', 'La acción futura distingue a una guía entre varias.', 'La película es la cosa recomendada.', 'La información entre comas no elige entre varios Marios. Puede haber más de una opción válida.', 'El pueblo es el sujeto de aparece y ya está nombrado.'],
-    repairs: ['Comprobá quién vive en cada ciudad según la consigna.', 'Necesitás nombrar el establecimiento del que hablás.', 'Compará lugar y turno: cada dato por separado deja dos candidatas.', 'Conservá las dos comas: el dato sigue siendo adicional.'],
+    repairs: ['Comprueba quién vive en cada ciudad según la consigna.', 'Necesitas nombrar el establecimiento del que hablas.', 'Compara lugar y turno: cada dato por separado deja dos candidatas.', 'Conserva las dos comas: el dato sigue siendo adicional.'],
   },
 };
 export const timelineEvents = [
@@ -38,7 +38,7 @@ export function matchingCandidates(clues: boolean[]) {
   return candidates.filter(person => (!clues[0] || person.place === 'recepción') && (!clues[1] || person.shift === 'noche'));
 }
 export const contrastTask: SyntaxRepair = {
-  prompt: 'El precio y la distancia son aceptables. Ahora descubrís que el horario es imposible. Cambiá el balance sin negar el nuevo dato.',
+  prompt: 'El precio y la distancia son aceptables. Ahora descubres que el horario es imposible. Cambia el balance sin negar el nuevo dato.',
   original: 'El precio y la distancia no son un problema.',
   options: ['El horario tampoco es un problema.', 'El plan parece viable. Sin embargo, el horario es imposible.', 'El horario es cómodo, aunque imposible.'],
   correct: 1,
@@ -48,20 +48,20 @@ export const contrastTask: SyntaxRepair = {
 export const oralGuidance: Record<string, { criteria: string[]; change: string; help: string; recap: string }> = {
   'antes-despues-cuando': {
     criteria: ['La secuencia de seis acciones se entiende.', 'Usa antes de / después de con infinitivo y cuando habitual con presente.', 'Responde al cambio de horario sin invertir los hechos.'],
-    change: 'Tu transporte sale quince minutos antes. ¿Qué acción adelantás y qué hacés después?',
+    change: 'Tu transporte sale quince minutos antes. ¿Qué acción adelantas y qué haces después?',
     help: 'Antes de salir, reviso la mochila. Después de vestirme, desayuno. Cuando llego, aviso.',
-    recap: 'Volvé al desayuno y la salida del inicio: decí el mismo orden empezando por la otra acción.',
+    recap: 'Vuelve al desayuno y la salida del inicio: di el mismo orden empezando por la otra acción.',
   },
   'pero-hay-un-matiz': {
     criteria: ['Distingue los hechos afirmados de las dos opciones negadas.', 'Usa un contrapeso y una reserva breve, con pausas claras.', 'Responde al nuevo dato y reformula su decisión.'],
-    change: 'El plan que preferís ahora cuesta el doble y tarda menos. ¿Cambia tu postura? ¿Qué dos objeciones descartás?',
+    change: 'El plan que prefieres ahora cuesta el doble y tarda menos. ¿Cambia tu postura? ¿Qué dos objeciones descartas?',
     help: 'No me preocupan ni el precio ni la distancia. Es cómodo, aunque pequeño. Tiene ventajas. Sin embargo, el horario…',
-    recap: 'Retomá precio, distancia y horario: explicá qué cambió y qué dos datos no eran el problema.',
+    recap: 'Retoma precio, distancia y horario: explica qué cambió y qué dos datos no eran el problema.',
   },
   'la-persona-que-tengo-en-mente': {
     criteria: ['El interlocutor puede identificar una persona, un lugar y una cosa.', 'Las relativas se unen a un antecedente claro; las aclaraciones se distinguen con pausas.', 'Repara un candidato equivocado con un dato pertinente.'],
-    change: 'El docente propone una persona, un lugar u objeto parecido, pero equivocado. Añadí un dato que permita distinguirlo.',
+    change: 'El docente propone una persona, un lugar u objeto parecido, pero equivocado. Añade un dato que permita distinguirlo.',
     help: 'Busco a la persona que trabaja de noche. Ana, que trabaja en recepción, puede ayudar. Ana, quien trabaja en recepción, puede ayudar.',
-    recap: 'Volvé a Ana, Eva y Luz: identificá a una con dos datos sin decir su nombre.',
+    recap: 'Vuelve a Ana, Eva y Luz: identifica a una con dos datos sin decir su nombre.',
   },
 };

@@ -28,7 +28,7 @@ const PairText = ({
 
 const persons: Pair[] = [
   ["yo", "I"],
-  ["tú / vos", "you (singular)"],
+  ["tú", "you (singular)"],
   ["él / ella / usted", "he / she / you (formal)"],
   ["nosotros/as", "we"],
   ["vosotros/as", "you all (Spain)"],
@@ -261,7 +261,7 @@ const indefiniteClues: Pair[] = [
 ];
 const perfectForms: Pair[] = [
   ["yo · he surfeado", "I have surfed"],
-  ["tú / vos · has surfeado", "you have surfed"],
+  ["tú · has surfeado", "you have surfed"],
   ["él / ella · ha surfeado", "he / she has surfed"],
   ["nosotros/as · hemos surfeado", "we have surfed"],
   ["vosotros/as · habéis surfeado", "you all have surfed"],
@@ -661,17 +661,17 @@ export default function PastB1() {
         <GrammarStep
           number="04"
           eyebrow="PASO 4 · PRÁCTICA"
-          title="Probá primero"
+          title="Prueba primero"
           accent="#e46445"
         >
           <section className="section-wide compact">
             <div className="dark-practice">
               <small>MINI DESAFÍO · MINI CHALLENGE</small>
-              <h2>PROBÁ PRIMERO.</h2>
+              <h2>PRUEBA PRIMERO.</h2>
               <p>Try first. Then reveal the answer.</p>
               {[
                 ["Ayer yo ______ con mi mamá.", "hablé"],
-                ["Anoche vos ______ pizza.", "comiste"],
+                ["Anoche tú ______ pizza.", "comiste"],
                 ["Ella ______ en España durante dos años.", "vivió"],
                 ["Ayer ______ hasta tarde.", "trabajé"],
               ].map((item, index) => (
@@ -715,7 +715,7 @@ export default function PastB1() {
               ))}
             </div>
             <p className="past-note">
-              No necesitás memorizar todos hoy. Empezá por reconocerlos.
+              No necesitas memorizar todos hoy. Empieza por reconocerlos.
               <small>
                 You do not need to memorise all of them today. Start by
                 recognising them.
@@ -951,13 +951,13 @@ export default function PastB1() {
         <GrammarStep
           number="05"
           eyebrow="PASO 5 · CONVERSACIÓN / PRODUCCIÓN"
-          title="Hablá de tu infancia"
+          title="Habla de tu infancia"
           accent="#7559bd"
         >
           <SpeakingPanel
             tone="violet"
             title="CUANDO ERAS CHICO/A…"
-            prompt="HABLÁ DE TU INFANCIA"
+            prompt="HABLA DE TU INFANCIA"
             questions={[
               "¿Dónde vivías?",
               "¿Cómo era tu casa?",
@@ -1042,7 +1042,7 @@ export default function PastB1() {
             </div>
             <Callout
               pair={[
-                "IMPERFECTO = ABRÍS LA ESCENA · INDEFINIDO = HACÉS AVANZAR LA HISTORIA",
+                "IMPERFECTO = ABRES LA ESCENA · INDEFINIDO = HACES AVANZAR LA HISTORIA",
                 "IMPERFECT = SETTING · PRETERITE = EVENTS",
               ]}
             />
@@ -1213,13 +1213,13 @@ export default function PastB1() {
         <GrammarStep
           number="02"
           eyebrow="PASO 2 · PRÁCTICA"
-          title="¿Cuál elegís?"
+          title="¿Cuál eliges?"
           accent="#202025"
         >
           <section className="section-wide compact">
-            <SectionHead label="ELEGÍ · CHOOSE" title="¿CUÁL ELEGÍS?" />
+            <SectionHead label="ELIGE · CHOOSE" title="¿CUÁL ELIGES?" />
             <p className="past-note">
-              Elegí un tiempo. Después comprobá por qué.
+              Elige un tiempo. Después comprueba por qué.
               <small>Choose a tense. Then check why.</small>
             </p>
             <div className="choice-list">
@@ -1253,7 +1253,7 @@ export default function PastB1() {
                       ) : (
                         <PairText
                           pair={[
-                            "Probá la otra opción. Pensá: ¿escenario, hábito o acontecimiento?",
+                            "Prueba la otra opción. Piensa: ¿escenario, hábito o acontecimiento?",
                             "Try the other option. Think: setting, habit or completed event?",
                           ]}
                         />
@@ -1274,10 +1274,10 @@ export default function PastB1() {
         >
           <section className="section-wide compact">
             <div className="story-builder">
-              <small>CONSTRUÍ LA HISTORIA · BUILD THE STORY</small>
+              <small>CONSTRUYE LA HISTORIA · BUILD THE STORY</small>
               <h2>ESCENARIO + EVENTO</h2>
               <p>
-                Elegí los verbos correctos para crear escenario y
+                Elige los verbos correctos para crear escenario y
                 acontecimiento.
                 <span>
                   Choose the correct verbs to create the setting and event.
@@ -1335,15 +1335,15 @@ export default function PastB1() {
         <GrammarStep
           number="04"
           eyebrow="PASO 4 · CONVERSACIÓN"
-          title="Contame una historia"
+          title="Cuéntame una historia"
           accent="#e46445"
         >
           <SpeakingPanel
             tone="coral"
-            title="CONTAME UNA HISTORIA"
+            title="CUÉNTAME UNA HISTORIA"
             prompt="DESAFÍO FINAL · FINAL CHALLENGE"
             instruction={[
-              "Contá algo que te pasó. Usá IMPERFECTO para construir el escenario y usá INDEFINIDO para contar qué pasó.",
+              "Cuenta algo que te pasó. Usa IMPERFECTO para construir el escenario y usa INDEFINIDO para contar qué pasó.",
               "Tell something that happened to you. Use the IMPERFECT to build the setting and the PRETERITE to say what happened.",
             ]}
             questions={[
@@ -1492,7 +1492,7 @@ export default function PastB1() {
               <small>ÚLTIMO CHEQUEO</small>
               <h2>¿PASADO CERRADO O CONECTADO?</h2>
               <p>
-                Primero mirá la expresión de tiempo. Después preguntate desde
+                Primero mira la expresión de tiempo. Después pregúntate desde
                 dónde habla la cámara.
               </p>
               {[
@@ -1539,7 +1539,7 @@ export default function PastB1() {
           <b>¿QUÉ HA PASADO Y POR QUÉ IMPORTA AHORA? → PERFECTO</b>
         </div>
         <p>
-          YA NO ELEGÍS UN TIEMPO POR UNA PALABRA: ELEGÍS LA CÁMARA.
+          YA NO ELIGES UN TIEMPO POR UNA PALABRA: ELIGES LA CÁMARA.
           <small>NOW YOU CHOOSE THE POINT OF VIEW.</small>
         </p>
         <button onClick={() => scrollTo("top")}>
@@ -1714,7 +1714,7 @@ function SpeakingPanel({
   return (
     <section className="section-wide compact">
       <div className={`speaking-panel ${tone}`}>
-        <span>HABLÁ VOS · YOUR TURN</span>
+        <span>HABLA TÚ · YOUR TURN</span>
         <h2>{title}</h2>
         <p>{prompt}</p>
         {instruction && (
