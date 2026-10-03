@@ -67,7 +67,7 @@ export class TrackerError extends Error {
 }
 
 export class UnauthorizedError extends TrackerError {
-  constructor() { super('Iniciá sesión para acceder a tus alumnos.', 401, 'unauthorized'); }
+  constructor() { super('Inicia sesión para acceder a tus alumnos.', 401, 'unauthorized'); }
 }
 export class ValidationError extends TrackerError {
   constructor(message: string) { super(message, 400, 'validation_error'); }
@@ -77,7 +77,7 @@ export class NotFoundError extends TrackerError {
 }
 export class DuplicateRecordError extends TrackerError {
   constructor(public readonly existingId: string) {
-    super('Ya existe una clase similar. Confirmá si querés repetirla intencionalmente.', 409, 'probable_duplicate');
+    super('Ya existe una clase similar. Confirma si quieres repetirla intencionalmente.', 409, 'probable_duplicate');
   }
 }
 
@@ -125,7 +125,7 @@ export function parseClassRecordInput(value: unknown): Required<ClassRecordInput
   const lessonId = input.lessonId == null || input.lessonId === '' ? null : Number(input.lessonId);
   if (lessonId !== null && (!Number.isSafeInteger(lessonId) || lessonId <= 0)) throw new ValidationError('La clase SpanishCue no es válida.');
   const freeTitle = cleanText(input.freeTitle, 'El título', 160) || null;
-  if ((lessonId === null) === (freeTitle === null)) throw new ValidationError('Elegí una clase SpanishCue o escribí un solo título libre.');
+  if ((lessonId === null) === (freeTitle === null)) throw new ValidationError('Elige una clase SpanishCue o escribe un solo título libre.');
   const startsAt = cleanText(input.startsAt, 'La fecha', 40, true);
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(startsAt) || Number.isNaN(Date.parse(startsAt))) {
     throw new ValidationError('La fecha debe ser una fecha ISO válida.');

@@ -10,7 +10,7 @@ export function validateReport(value:unknown) {
  const lesson=lessons.find(l=>l.id===v.lessonId);
  if(!lesson) throw new ReportError('Clase no válida.');
  const message=typeof v.message==='string'?v.message.trim():'';
- if(message.length<3 || message.length>2000) throw new ReportError('Escribí entre 3 y 2000 caracteres.');
+ if(message.length<3 || message.length>2000) throw new ReportError('Escribe entre 3 y 2000 caracteres.');
  const level=text(v.level,10)||lesson.level;
  if(!(conversationFamilyByLessonId.get(lesson.id)?.availableLevels||lesson.levels||[lesson.level]).includes(level)) throw new ReportError('Nivel no válido.');
  const path=localLessonPath(lesson);
@@ -35,7 +35,7 @@ export async function createReport(db:D1Database,userId:string,email:string|null
  const result=await db.prepare(`INSERT INTO lesson_reports (id,user_id,user_email,lesson_id,lesson_slug,lesson_title,lesson_category,level,url,message,category,context_json,created_at,updated_at)
  SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT count(*) FROM lesson_reports WHERE user_id=? AND created_at>=?) < 5 ON CONFLICT(id) DO NOTHING`).bind(id,userId,email,r.lesson.id,localLessonPath(r.lesson)!,r.lesson.title,r.lesson.category,r.level,r.url,r.message,r.category,JSON.stringify(r.context),now,now,userId,cutoff).run();
  if(!result.meta.changes){const existing=await db.prepare('SELECT id FROM lesson_reports WHERE id=? AND user_id=?').bind(id,userId).first();if(existing)return {id,created:false,report:r,createdAt:now};}
- if(!result.meta.changes)throw new ReportError('Ya enviaste varios reportes. Probá nuevamente en unos minutos.',429);
+ if(!result.meta.changes)throw new ReportError('Ya enviaste varios reportes. Prueba nuevamente en unos minutos.',429);
  return {id,created:true,report:r,createdAt:now};
 }
 export async function listReports(db:D1Database,url:URL) {
@@ -58,4 +58,4 @@ export async function readReportJson(request:Request) {
  try{return JSON.parse(raw);}catch{throw new ReportError('Formato no válido.');}
 }
 export function requireReportOrigin(request:Request) {if(request.headers.get('origin')!==new URL(request.url).origin)throw new ReportError('Origen no válido.',403);}
-export function reportErrorResponse(error:unknown) {return Response.json({error:error instanceof ReportError?error.message:'No pudimos completar la operación. Intentá nuevamente.'},{status:error instanceof ReportError?error.status:503,headers:{'cache-control':'private, no-store'}});}
+export function reportErrorResponse(error:unknown) {return Response.json({error:error instanceof ReportError?error.message:'No pudimos completar la operación. Inténtalo de nuevo.'},{status:error instanceof ReportError?error.status:503,headers:{'cache-control':'private, no-store'}});}

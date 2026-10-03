@@ -80,10 +80,10 @@ function AllocationBoard({
   };
   return <section className="allocation-board">
     <header>
-      <div><span>MESA DE REPARTO</span><h3>{kind === "personas" ? "Distribuí los 24 turnos" : "Invertí las 20 fichas"}</h3></div>
+      <div><span>MESA DE REPARTO</span><h3>{kind === "personas" ? "Distribuye los 24 turnos" : "Invierte las 20 fichas"}</h3></div>
       <strong className={used === total ? "complete" : ""}>{used} / {total} {kind}</strong>
     </header>
-    <p>Para subir un área, primero bajá otra. Cada movimiento necesita una razón dicha en voz alta.</p>
+    <p>Para subir un área, primero baja otra. Cada movimiento necesita una razón dicha en voz alta.</p>
     <div className="allocation-grid">
       {items.map(item => <article key={item.id}>
         <div><b>{item.name}</b><small>{item.note}</small></div>
@@ -232,7 +232,7 @@ export default function IslandVotePage() {
           </div>
         </div>
         <aside className="briefing-console">
-          <header><span>ANTES DE EMPEZAR</span><b>Configurá la asamblea</b></header>
+          <header><span>ANTES DE EMPEZAR</span><b>Configura la asamblea</b></header>
           <label>Nombre de la isla<input value={islandName} maxLength={28} onChange={event => setIslandName(event.target.value)} placeholder="Nombre de la isla" /></label>
           <fieldset>
             <legend>Formato de clase</legend>
@@ -249,7 +249,7 @@ export default function IslandVotePage() {
         </aside>
       </section>
       <section className="warmup-strip">
-        <header><span>ACTIVACIÓN · 5 MIN</span><h2>Antes de crear un país, sobreviví el primer día.</h2></header>
+        <header><span>ACTIVACIÓN · 5 MIN</span><h2>Antes de crear un país, sobrevive el primer día.</h2></header>
         <div>{warmupQuestions.map((question, index) => <article key={question}><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></article>)}</div>
       </section>
     </main>;
@@ -334,7 +334,7 @@ export default function IslandVotePage() {
         <section className="motion-card">
           <span>MOCIÓN SOBRE LA MESA</span>
           <h2>{active.motion}</h2>
-          <p>Primero respondé una pregunta. Después escuchá una objeción. Recién entonces votá.</p>
+          <p>Primero responde una pregunta. Después escucha una objeción. Recién entonces vota.</p>
         </section>
 
         <DebateQuestion round={active} index={questionIndex} onIndex={index => setQuestionIndexes(current => ({ ...current, [active.id]: index }))} />
@@ -351,11 +351,11 @@ export default function IslandVotePage() {
         <section className="role-table">
           <header><span>{mode === "duo" ? "PERSPECTIVA PARA EL ALUMNO" : "REPARTO DE ROLES"}</span><h2>No defiendas siempre tu opinión personal.</h2></header>
           <div>{active.roles.map((role, index) => <button key={role.name} className={index === roleIndex ? "active" : ""} onClick={() => setRoleIndexes(current => ({ ...current, [active.id]: index }))}><span>{String(index + 1).padStart(2, "0")}</span><b>{role.name}</b><p>{role.brief}</p></button>)}</div>
-          <p className="role-instruction">{mode === "duo" ? "Alumno: defendé la perspectiva elegida. Profe: buscá el punto débil y exigí una condición." : "Cada persona toma una perspectiva. Para ganar la votación necesita formar una coalición."}</p>
+          <p className="role-instruction">{mode === "duo" ? "Alumno: defiende la perspectiva elegida. Profe: busca el punto débil y exige una condición." : "Cada persona toma una perspectiva. Para ganar la votación necesita formar una coalición."}</p>
         </section>
 
         <section className="policy-section">
-          <header><span>ABRIMOS LA VOTACIÓN</span><h2>Tres propuestas. Ninguna es perfecta.</h2><p>Elegí una, explicá qué costo aceptás y permití una última réplica.</p></header>
+          <header><span>ABRIMOS LA VOTACIÓN</span><h2>Tres propuestas. Ninguna es perfecta.</h2><p>Elige una, explica qué costo aceptas y permite una última réplica.</p></header>
           <div className="policy-grid">{active.options.map((option, index) => <button key={option.id} className={chosenId === option.id ? "selected" : ""} onClick={() => setVotes(current => ({ ...current, [active.id]: option.id }))}>
             <span className="policy-letter">{String.fromCharCode(65 + index)}</span>
             <small>{chosenId === option.id ? "TU VOTO" : "PROPUESTA"}</small>
@@ -381,7 +381,7 @@ export default function IslandVotePage() {
 
         <section className={"pressure-card " + (pressureOpen[active.id] ? "open" : "")}>
           {!pressureOpen[active.id] ? <button disabled={!chosen} onClick={() => setPressureOpen(current => ({ ...current, [active.id]: true }))}>
-            <span>{chosen ? "EL VOTO TIENE UNA CONSECUENCIA" : "PRIMERO ELEGÍ UNA PROPUESTA"}</span>
+            <span>{chosen ? "EL VOTO TIENE UNA CONSECUENCIA" : "PRIMERO ELIGE UNA PROPUESTA"}</span>
             <b>{chosen ? "Abrir el giro de la ronda" : "El conflicto permanece sellado"}</b>
             <i>↗</i>
           </button> : <div>

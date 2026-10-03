@@ -14,7 +14,7 @@ const expected={
  'publico-initial':'público','publico-middle':'publico','publico-final':'publicó',
  'termino-initial':'término','termino-middle':'termino','termino-final':'terminó',
  papel:'papel',telefono:'teléfono',cafe:'café','hablo-present':'hablo','hablo-past':'habló',
- 'stress-phrase-1':'¿Tomás café?','stress-phrase-2':'Sí, tomo café.',
+ 'stress-phrase-1':'¿Tomas café?','stress-phrase-2':'Sí, tomo café.',
 };
 
 test('all32 finite scripts have a matching nonempty decodable asset, duration and immutable checksum',()=>{

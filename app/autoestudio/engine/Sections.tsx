@@ -300,7 +300,7 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
           ))}
         </ul>
       </div>
-      {synthetic && <p className="ae-hint">Audio con voz sintética de tu dispositivo. Las voces pueden coincidir y no garantizan un acento regional. Si no escuchás, comprobá que tu dispositivo tenga una voz en español.</p>}
+      {synthetic && <p className="ae-hint">Audio con voz sintética de tu dispositivo. Las voces pueden coincidir y no garantizan un acento regional. Si no escuchas, comprueba que tu dispositivo tenga una voz en español.</p>}
       <div className="ae-player">
         <button type="button" className={`ae-bigplay ${playing ? "playing" : ""}`} onClick={() => play(1)}>
           <span aria-hidden="true">{playing ? "◼" : "▶"}</span>

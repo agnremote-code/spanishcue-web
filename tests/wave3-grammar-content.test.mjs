@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
-import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import ts from 'typescript';
-const base='2b48f28bc7b25f19c650e52cece8f59eca352936';
+const baseline=JSON.parse(readFileSync(new URL('./fixtures/syntax-neutral-baseline.json',import.meta.url),'utf8'));
 async function sourceData(source){const {outputText}=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext}});return import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);}
 const all=await sourceData(readFileSync('app/syntax-labs/data.ts','utf8'));
 const names=['antesDespuesCuando','peroHayUnMatiz','laPersonaQueTengoEnMente'];
@@ -14,7 +14,7 @@ const expected=[
 ];
 for(const [b,name] of names.entries())test(`${name}: all10 accepted decisions render the intended complete sentence`,()=>{const bank=all[name];assert.equal(bank.decisions.length,10);bank.decisions.forEach((item,i)=>assert.equal([item.left,item.options[item.correct],item.right].join(' '),expected[b][i],`${name} decision ${i+1}`));});
 test('explanatory que and quien alternatives are both accepted with commas',()=>{for(const i of [3,8])assert.deepEqual(all.laPersonaQueTengoEnMente.decisions[i].accepted,[0,1]);});
-test('all5 unrelated banks are deeply identical to the exact base',async()=>{const prior=await sourceData(execFileSync('git',['show',`${base}:app/syntax-labs/data.ts`],{encoding:'utf8'}));let count=0;for(const name of Object.keys(prior)){if(names.includes(name))continue;assert.deepEqual(all[name],prior[name],name);count++;}assert.equal(count,5);});
+test('all5 other banks match the reviewed neutral copy baseline',()=>{let count=0;for(const name of Object.keys(all)){if(names.includes(name))continue;assert.equal(createHash('sha256').update(JSON.stringify(all[name])).digest('hex'),baseline.banks[name],name);count++;}assert.equal(count,5);});
 test('models and explanations preserve temporal chronology and negative concord',()=>{
  assert.equal(all.antesDespuesCuando.patterns[1].preview.left,'Camino un poco');
  assert.match(all.antesDespuesCuando.patterns[0].explanation,/desayuno.*antes.*salir/);
@@ -75,7 +75,7 @@ test('all126 options and44 accepted outputs obey independent reviewed form/conte
  assert.equal(options,126);assert.equal(valid,44);
 });
 test('all9 complete pattern models, contexts, authored counts and oral endings remain meaningful',()=>{
- const models=[['Antes de salir, desayuno.','Después de comer, camino un poco.','Cuando llego, reviso el correo.'],['Ni el precio ni la distancia son el problema.','El plan es caro. Sin embargo, ahorra mucho tiempo.','La propuesta es útil, aunque cara.'],['Busco a la compañera que vive cerca del centro.','Elegí el café que abre hasta tarde.','Hablé con Lucía, quien coordinó el proyecto.']];
+ const models=[['Antes de salir, desayuno.','Después de comer, camino un poco.','Cuando llego, reviso el correo.'],['Ni el precio ni la distancia son el problema.','El plan es caro. Sin embargo, ahorra mucho tiempo.','La propuesta es útil, aunque cara.'],['Busco a la compañera que vive cerca del centro.','Elige el café que abre hasta tarde.','Hablé con Lucía, quien coordinó el proyecto.']];
  for(const [b,name] of names.entries()){
   const bank=all[name];assert.deepEqual(bank.patterns.map(p=>p.example),models[b]);assert.equal(bank.activation.cards.length,5);assert.equal(bank.retrieval.length,5);assert.equal(bank.production.length,3);assert.equal(bank.conversation.length,b===0?7:6);assert.equal(bank.timeline.reduce((sum,t)=>sum+t.minutes,0),45);
   for(const item of bank.patterns)assert.ok(item.explanation&&item.formula&&item.preview.left&&item.preview.right);
@@ -85,7 +85,7 @@ test('all9 complete pattern models, contexts, authored counts and oral endings r
   assert.equal(logic.oralGuidance[bank.slug].criteria.length,3);assert.ok(logic.oralGuidance[bank.slug].change);assert.ok(logic.oralGuidance[bank.slug].recap);
  }
  assert.match(all.antesDespuesCuando.repairs[3].prompt,/ya es correcta/);
- assert.match(all.antesDespuesCuando.repairs[2].prompt,/corregí solo/);
+ assert.match(all.antesDespuesCuando.repairs[2].prompt,/corrige solo/);
  assert.match(all.peroHayUnMatiz.repairs[1].feedback,/original.*válida/);
  assert.match(all.peroHayUnMatiz.repairs[3].prompt,/sí es caro.*sí tiene buen transporte/);
  assert.match(all.laPersonaQueTengoEnMente.repairs[0].prompt,/Marta vive en Valencia; su amiga vive en Córdoba/);

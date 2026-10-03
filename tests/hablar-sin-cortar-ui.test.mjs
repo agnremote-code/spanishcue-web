@@ -53,17 +53,17 @@ test('the connected-speech lesson uses a prominent real voice attempt across six
  for(const level of ['A1','A2','B1','B2','C1','C2']){
   const c=contentFor(level),oral=c.activities.find(a=>a.kind==='repeat');
   const rendered=html(oral,{...base,heard:[oral.clip]},true);
-  assert.match(rendered,/DECILO|GRABAR/i);assert.doesNotMatch(rendered,/Ya lo dije|Producción realizada|Registro manual/);
+  assert.match(rendered,/DILO|GRABAR/i);assert.doesNotMatch(rendered,/Ya lo dije|Producción realizada|Registro manual/);
   const connection=c.activities.find(a=>a.kind==='connect');
-  assert.match(html(connection,{...base,heard:[connection.clip],selected:connection.target,checked:true},true),/DECILO|GRABAR/i);
+  assert.match(html(connection,{...base,heard:[connection.clip],selected:connection.target,checked:true},true),/DILO|GRABAR/i);
   const initial=html(connection,{...base,heard:[connection.clip]},true);
-  assert.match(initial,/ESCUCHÁ Y DECILO IGUAL/);
+  assert.match(initial,/ESCUCHA Y DILO IGUAL/);
   assert.doesNotMatch(initial,/Tocá ·|Comprobar|Ruta central|Texto de apoyo|pf-tokenline/);
  }
 });
 test('the final challenge offers an actual recorded voice turn',()=>{
  const source=readFileSync('app/phonetics-family/PhoneticsWorld.tsx','utf8');
- assert.match(source,/d\.id==='hablar-sin-cortar'\?<><p className="pf-muted">Grabá[\s\S]*?<SpeechAttempt/);
+ assert.match(source,/d\.id==='hablar-sin-cortar'\?<><p className="pf-muted">Graba[\s\S]*?<SpeechAttempt/);
 });
 test('a contrast exercise begins with the continuous model, even when A is the chopped clip',()=>{
  const activity=contentFor('C2').activities.find(a=>a.kind==='ab');
@@ -74,6 +74,6 @@ test('a contrast exercise begins with the continuous model, even when A is the c
 test('missing model audio leaves voice practice available with an honest cue',()=>{
  const activity=contentFor('A1').activities[0],rendered=html(activity,base,true);
  assert.match(rendered,/Audio no disponible/);
- assert.match(rendered,/DECILO/);
- assert.match(rendered,/pedile un modelo a tu profe/);
+ assert.match(rendered,/DILO/);
+ assert.match(rendered,/pídele un modelo a tu profe/);
 });

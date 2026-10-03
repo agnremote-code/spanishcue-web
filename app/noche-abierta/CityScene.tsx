@@ -245,7 +245,7 @@ function Walker({ gx, gy }: { gx: number; gy: number }) {
     <ellipse cx="0" cy="0" rx="13" ry="5.5" className="na-walker-ring" />
     <path d="M-6,0 L-4.8,-22 Q0,-27 4.8,-22 L6,0 Z" className="na-walker-body" />
     <circle cx="0" cy="-29" r="5.6" className="na-walker-head" />
-    <g transform="translate(0 -52)"><rect x="-17" y="-10" width="34" height="18" rx="9" className="na-walker-tag" /><text x="0" y="3.5" textAnchor="middle">Vos</text></g>
+    <g transform="translate(0 -52)"><rect x="-17" y="-10" width="34" height="18" rx="9" className="na-walker-tag" /><text x="0" y="3.5" textAnchor="middle">Tú</text></g>
   </g>;
 }
 

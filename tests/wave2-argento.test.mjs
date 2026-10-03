@@ -12,7 +12,7 @@ async function loadData(path){const source=await readFile(path,'utf8');const js=
 const data=await loadData('app/argento/data.ts');
 test('complete regional bank and shared support are preserved',()=>{
  assert.equal(data.worlds.length,12); const words=data.worlds.flatMap(w=>w.words.map(p=>p[0])); assert.equal(words.length,144);assert.equal(new Set(words).size,133);
- assert.equal(hash(data.worlds.map(w=>[w.id,w.photo,w.words.map(p=>p[0]),w.q,w.subs,w.extra])),'249679fdc619ad9b28488ebb98d91017c4d59fc721384e01056e14bb719e006e');
+ assert.equal(hash(data.worlds.map(w=>[w.id,w.photo,w.words.map(p=>p[0]),w.q,w.subs,w.extra])),'32d41d077c665d5e24578b9a3b6d91bacb0b503aedc7cca5178675e3f22e7550');
  assert.equal(hash([data.starters,data.connectors,data.reactions]),'a4e425002dea099ae63fb15153d4d8abc305b83ae13b58b953cb56ca91e28850');
 });
 test('risky vocabulary cannot appear as unqualified friendly English glosses',()=>{
@@ -54,7 +54,7 @@ test('real recognition feedback follows answers and navigation alone cannot unlo
 });
 test('all 36 context options use real handlers, and oral close offers help without auto-grading',async()=>{
  const d=await loadData('app/argento/practice-data.ts');const keys=[1,0,2,0,1,2,0,1,2,0,1,2];
- for(const [i,world] of data.worlds.entries()){const h=await practiceHarness();h.props.worldId=world.id;for(let n=0;n<3;n++){action(h.render(),`choice-${n}`).props.onClick();action(h.render(),'check-context').props.onClick();assert.match(textOf(h.render()),new RegExp(n===keys[i]?'Contexto resuelto':'Probá otra opción'));assert.ok(textOf(h.render()).includes(d.practice[world.id].choice.feedback[n]));}action(h.render(),'start-close').props.onClick();assert.equal(find(h.render(),n=>n.props?.['data-model']).length,0);action(h.render(),'close-help').props.onClick();assert.equal(find(h.render(),n=>n.props?.['data-model']).length,3);action(h.render(),'confirm-close').props.onClick();assert.match(textOf(h.render()),/Intercambio observado/);}
+ for(const [i,world] of data.worlds.entries()){const h=await practiceHarness();h.props.worldId=world.id;for(let n=0;n<3;n++){action(h.render(),`choice-${n}`).props.onClick();action(h.render(),'check-context').props.onClick();assert.match(textOf(h.render()),new RegExp(n===keys[i]?'Contexto resuelto':'Prueba otra opción'));assert.ok(textOf(h.render()).includes(d.practice[world.id].choice.feedback[n]));}action(h.render(),'start-close').props.onClick();assert.equal(find(h.render(),n=>n.props?.['data-model']).length,0);action(h.render(),'close-help').props.onClick();assert.equal(find(h.render(),n=>n.props?.['data-model']).length,3);action(h.render(),'confirm-close').props.onClick();assert.match(textOf(h.render()),/Intercambio observado/);}
 });
 test('slang roleplay turn does not invite beginners to produce receptive-only items',async()=>{
  const h=await loadComponent('app/argento/page.tsx',true),r=()=>h.render('default',{});
@@ -80,4 +80,17 @@ test('session reset also clears the page self-report and restores model/page def
  const progress=()=>find(r(),n=>n.props?.className==='speaking-progress')[0];
  find(progress(),n=>n.type==='button')[0].props.onClick();assert.equal(find(progress(),n=>n.props?.['aria-pressed']===true).length,1);
  const child=find(r(),n=>n.props?.worldId&&n.props?.setMode)[0];assert.equal(typeof child.props.onReset,'function','reset must include page observations');child.props.onReset();assert.equal(find(progress(),n=>n.props?.['aria-pressed']===true).length,0);
+});
+
+test('regional lesson outer instructions use accented neutral tú enclitics',async()=>{
+ const cases=[
+  ['app/argento/page.tsx', ['SORPRÉNDEME','AYÚDAME'], /\b(?:SORPRENDEME|AYUDAME)\b/u],
+  ['app/argento/practice-data.ts', ['Exprésalo con cortesía.'], /\bExpresalo\b/u],
+  ['app/la-estacion-de-los-dos-destinos/page.tsx', ['mantenlos juntos.'], /\bmantenelos\b/u],
+  ['app/monasterio-de-las-ideas/page.tsx', ['Gíralo mentalmente'], /\bGiralo\b/u],
+  ['app/buenos-aires-en-la-calle/data.ts', ['Dile al chofer tu destino y pídele que te avise.'], /\b(?:Decile|pedile)\b/u],
+ ];
+ for(const [path,expected,regional] of cases){const source=await readFile(path,'utf8');for(const text of expected)assert.ok(source.includes(text),`${path}: missing ${text}`);assert.doesNotMatch(source,regional,path);}
+ const roleplay=await readFile('app/argento-roleplays/data.ts','utf8');
+ assert.ok(roleplay.includes('Perfecto. Mandame la dirección.'),'intentional Argentine dialogue keeps its enclitic form');
 });

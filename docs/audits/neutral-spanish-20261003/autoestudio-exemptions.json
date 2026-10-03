@@ -1,0 +1,1997 @@
+{
+  "version": 1,
+  "exemptions": [
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "En Argentina, Uruguay, Paraguay y gran parte de Centroamérica se usa **vos** en lugar de _tú_: **vos sos**. Esta semana solo necesitas reconocerlo.",
+      "reason": "theory.parts.body: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "vos",
+      "reason": "listening.stages.exercise.categories, theory.parts.table.rows: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "sos",
+      "reason": "theory.parts.table.rows: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Buenas noches. ¿Vos sos Valeria?",
+      "reason": "listening.script.text: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "¿Estas frases usan tú, usted o vos?",
+      "reason": "listening.stages.exercise.prompt: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "¿Vos sos Valeria?",
+      "reason": "listening.stages.exercise.items.text: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Martín es argentino: _vos sos_ = _tú eres_.",
+      "reason": "listening.stages.exercise.items.why: Explicit recognition of voseo; Martín is identified as Argentine; classification contrasts tú/usted/vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "vos (Río de la Plata, Centroamérica)",
+      "reason": "theory.parts.table.rows: Separate regional paradigm row explicitly labelled Río de la Plata/Centroamérica; ordinary paradigm is tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "vos",
+      "reason": "theory.parts.table.rows: Separate regional paradigm row explicitly labelled Río de la Plata/Centroamérica; ordinary paradigm is tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "sos",
+      "reason": "theory.parts.table.rows: Separate regional paradigm row explicitly labelled Río de la Plata/Centroamérica; ordinary paradigm is tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "¿Sos argentina?",
+      "reason": "theory.parts.table.rows: Separate regional paradigm row explicitly labelled Río de la Plata/Centroamérica; ordinary paradigm is tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "vos (Río de la Plata, Centroamérica)",
+      "reason": "theory.parts.table.rows: Separate regional -ar row explicitly labelled Río de la Plata/Centroamérica.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "—¿Vos ___ de Montevideo? —Sí, de Montevideo.",
+      "reason": "grammar.exercises.items.q: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "sos",
+      "reason": "grammar.exercises.items.options: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "Con **vos** la forma de ser es **sos**.",
+      "reason": "grammar.exercises.items.why: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "Yo soy Joaquín, de Montevideo. ¿Vos sos de acá, Rocío?",
+      "reason": "listening.script.text: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "de vos",
+      "reason": "listening.stages.exercise.items.options: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "vos",
+      "reason": "listening.stages.exercise.categories: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "¿Vos sos de acá, Rocío?",
+      "reason": "listening.stages.exercise.items.text: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "Joaquín es uruguayo: **vos sos** = tú eres.",
+      "reason": "listening.stages.exercise.items.why: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w05.ts",
+      "text": "Hacer las preguntas básicas para conocer a otra persona, de tú, de usted, a un grupo y reconocer vos y vosotros.",
+      "reason": "complete.canNow: Regional recognition objective; Joaquín explicitly identifies Montevideo; exercises compare forms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "Las formas de **yo** (tengo) y de **tú, él, ellos** (tienes, tiene, tienen) son irregulares; **nosotros** y **vosotros** son regulares. Con **vos** se dice **tenés**.",
+      "reason": "theory.parts.body: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "—Bruno, ¿vos ___ hermanos? —No, soy hijo único.",
+      "reason": "grammar.exercises.items.q: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "tenés",
+      "reason": "grammar.exercises.items.options: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "Con **vos**: tenés.",
+      "reason": "grammar.exercises.items.why: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "¿Y vos tenés hermanos?",
+      "reason": "listening.script.text: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "¿Vos tenés hermanos?",
+      "reason": "listening.stages.exercise.items.text: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "_Vos tenés_: voseo argentino.",
+      "reason": "listening.stages.exercise.items.why: Tener recognition contrasts tú/vos; Bruno is the Argentine character and feedback labels voseo argentino.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Con **vos** la terminación lleva tilde: **vos comés**, **vos vivís**. En América, **beber** se usa, pero para las bebidas es muy frecuente **tomar** (verbo en -ar): _¿Qué tomas?_",
+      "reason": "theory.parts.body: Explicit tú/vos contrast in -er/-ir explanation and correction practice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "vivís",
+      "reason": "theory.parts.table.rows: Second-person plural vosotros conjugation, not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "La forma de ella no lleva tilde: **come**. La tilde es para _vos comés_.",
+      "reason": "theory.parts.mistakes.why: Explicit tú/vos contrast in -er/-ir explanation and correction practice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "—¿Vos ___ carne? —No, soy vegetariano.",
+      "reason": "grammar.exercises.items.q: Explicit tú/vos contrast in -er/-ir explanation and correction practice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Vos + -er → **comés**, con tilde.",
+      "reason": "grammar.exercises.items.why: Explicit tú/vos contrast in -er/-ir explanation and correction practice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Vos comés pan todos los días, ¿no?",
+      "reason": "quiz.items.answers: Explicit tú/vos contrast in -er/-ir explanation and correction practice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Con **tú** la forma es _comes_, sin tilde; _comés_ es la forma de **vos**.",
+      "reason": "quiz.items.why: Explicit tú/vos contrast in -er/-ir explanation and correction practice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "-er/-ir solo cambian en nosotros y vosotros: comemos/vivimos, coméis/vivís.",
+      "reason": "complete.review: Second-person plural vosotros conjugation, not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w08.ts",
+      "text": "La pregunta clave es **¿Dónde está…?** (un lugar) o **¿Dónde están…?** (varios lugares). En Guatemala, Argentina y otros países con **vos**, la forma es la misma que con tú: **¿Dónde estás vos?**",
+      "reason": "theory.parts.body: Estar form comparison and treatment distractor. Dale is colloquial agreement by Andrés, a Colombian in Guatemala, not learner-facing instruction.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w08.ts",
+      "text": "Con **tú** (y con vos): estás.",
+      "reason": "grammar.exercises.items.why: Estar form comparison and treatment distractor. Dale is colloquial agreement by Andrés, a Colombian in Guatemala, not learner-facing instruction.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w08.ts",
+      "text": "Dale. ¡Nos vemos en un rato!",
+      "reason": "listening.script.text: Estar form comparison and treatment distractor. Dale is colloquial agreement by Andrés, a Colombian in Guatemala, not learner-facing instruction.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w08.ts",
+      "text": "de vos",
+      "reason": "listening.stages.exercise.items.options: Estar form comparison and treatment distractor. Dale is colloquial agreement by Andrés, a Colombian in Guatemala, not learner-facing instruction.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "¿Vos a qué hora ___ despertás?",
+      "reason": "grammar.exercises.items.q: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "vos",
+      "reason": "grammar.exercises.items.options: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Con vos el pronombre es **te**: _te despertás_.",
+      "reason": "grammar.exercises.items.why: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Yo me levanto temprano, no hay problema. ¿Y vos, Pablo, a qué hora te duchás?",
+      "reason": "listening.script.text: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Para vos todo es temprano, Pablo.",
+      "reason": "listening.script.text: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Forma de vos: **te** duchás.",
+      "reason": "listening.stages.exercise.items.why: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Te duchas por la mañana. (vos)",
+      "reason": "quiz.items.source: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Escribe la forma de vos.",
+      "reason": "quiz.items.instruction: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Vos te duchás por la mañana.",
+      "reason": "quiz.items.answers: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w09.ts",
+      "text": "Con vos, el pronombre es **te** y el verbo lleva acento al final: **duchás**.",
+      "reason": "quiz.items.why: Reflexive tú/vos recognition and transformation; Valentina is explicitly from Rosario.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "Todo tu día cabe en el presente. Los verbos en **-ar** llevan **-a-** en las terminaciones (_trabajo, trabajas, trabaja_…); los verbos en **-er** e **-ir** llevan **-e-** (_como, comes, come; vivo, vives, vive_), y solo se separan en nosotros y vosotros: **comemos / vivimos**, **coméis / vivís**.",
+      "reason": "theory.parts.body: Checkpoint recalls regional forms; Diego is explicitly Argentine and the listening quiz explains llevás as voseo.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "vos (variación regional)",
+      "reason": "theory.parts.table.rows: Checkpoint recalls regional forms; Diego is explicitly Argentine and the listening quiz explains llevás as voseo.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "¿Vos sabés si el comedor tiene comida vegetariana? Mi papá dice que hay frijoles, tortillas y pescado… ¡pero el pescado no es vegetariano! Bueno, nos vemos mañana.",
+      "reason": "listening.script.text: Checkpoint recalls regional forms; Diego is explicitly Argentine and the listening quiz explains llevás as voseo.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "_¿Vos sabés si el comedor tiene comida vegetariana?_",
+      "reason": "listening.stages.exercise.items.why: Checkpoint recalls regional forms; Diego is explicitly Argentine and the listening quiz explains llevás as voseo.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "¡Hola! Soy Martín. La cena es el viernes a las ocho en casa de mi hermana. Ella vive al lado del banco. Yo llevo la comida y vos llevás el jugo, ¿dale?",
+      "reason": "quiz.items.audio: Checkpoint recalls regional forms; Diego is explicitly Argentine and the listening quiz explains llevás as voseo.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "_Yo llevo la comida y vos llevás el jugo_: **llevás** es la forma de vos de _llevar_.",
+      "reason": "quiz.items.why: Checkpoint recalls regional forms; Diego is explicitly Argentine and the listening quiz explains llevás as voseo.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Reconoce el **vos** de Centroamérica: `vos querés`, `vos podés`.",
+      "reason": "goal.steps: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Esta semana estás en San Salvador. Tus amigos te escriben: «¿Querés subir al volcán el sábado?». Para responder necesitas verbos muy frecuentes que cambian una vocal: **querer**, **poder**, **preferir**, **jugar**…",
+      "reason": "theory.intro: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "pedís",
+      "reason": "theory.parts.table.rows: Form shared by vosotros and voseo; the surrounding paradigm/exercise explicitly identifies which person is being tested.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Vos querés, vos podés: el voseo en Centroamérica",
+      "reason": "theory.parts.heading: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "En El Salvador, Honduras, Nicaragua, Guatemala y Costa Rica, mucha gente usa **vos** con amigos y familia, igual que en Argentina y Uruguay. En este curso aprendes **tú** como forma principal, pero vas a oír _vos_ en la calle y en los mensajes.",
+      "reason": "theory.parts.body: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "La buena noticia: con **vos** estos verbos **no cambian la vocal**. La forma se parece al infinitivo y lleva tilde al final: querer → **vos querés**, poder → **vos podés**, jugar → **vos jugás**, preferir → **vos preferís**, pedir → **vos pedís**.",
+      "reason": "theory.parts.body: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Con verbos regulares pasa lo mismo: **vos trabajás**, **vos comés**, **vos vivís**. Con reflexivos, el pronombre es **te**: _¿A qué hora te levantás?_",
+      "reason": "theory.parts.body: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Tú y vos significan lo mismo. En San Salvador también se oye **usted** entre amigos y en familia: es una forma de cariño y respeto, no de distancia.",
+      "reason": "theory.parts.body: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Tú y vos en presente",
+      "reason": "theory.parts.table.caption: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "vos",
+      "reason": "theory.parts.table.head: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "querés",
+      "reason": "theory.parts.table.rows: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "podés",
+      "reason": "theory.parts.table.rows: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "preferís",
+      "reason": "grammar.exercises.items.options, theory.parts.table.rows: Form shared by vosotros and voseo; the surrounding paradigm/exercise explicitly identifies which person is being tested.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos querés subir al volcán el sábado?",
+      "reason": "theory.parts.examples.es: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Podés a las ocho?",
+      "reason": "theory.parts.examples.es: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Y vos qué preferís, cine o fútbol?",
+      "reason": "theory.parts.examples.es: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos quierés ir?",
+      "reason": "theory.parts.mistakes.wrong: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos querés ir?",
+      "reason": "theory.parts.mistakes.right: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Con _vos_ el acento cae en la terminación, así que la raíz no cambia: **querés**.",
+      "reason": "theory.parts.mistakes.why: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Si oyes una forma con tilde al final y sin cambio de vocal (_podés, jugás_), es casi seguro **vos**.",
+      "reason": "theory.parts.tip: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Para **aceptar**: **¡Sí, claro!**, **¡Buena idea!**, **¡Perfecto!** Cada región tiene su palabra rápida: **¡Va, pues!** en El Salvador y Honduras, **¡Dale!** en Centroamérica y el Río de la Plata, **¡Vale!** en España, **¡Sale!** o **¡Va!** en México.",
+      "reason": "theory.parts.body: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos querés venir? (voseo)",
+      "reason": "theory.parts.table.rows: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¡Va, pues! / ¡Dale!",
+      "reason": "theory.parts.table.rows: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "_Vosotros_ no cambia: **preferís**. Esta forma se usa en España.",
+      "reason": "grammar.exercises.items.why: Form shared by vosotros and voseo; the surrounding paradigm/exercise explicitly identifies which person is being tested.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Yo no juego al fútbol, pero quiero ver la película nueva de Pixar. ¿Vos querés ir al cine, Karla?",
+      "reason": "listening.script.text: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¡Va, pues! A las ocho. Lucía, ¿vos podés?",
+      "reason": "listening.script.text: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Entonces almorzamos juntos después. ¿Querés comer pupusas?",
+      "reason": "listening.script.text: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¡Dale! ¿Dónde está la pupusería?",
+      "reason": "listening.script.text: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¡Dale!",
+      "reason": "listening.stages.exercise.items.text: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Lucía es argentina: _¡Dale!_ = de acuerdo.",
+      "reason": "listening.stages.exercise.items.why: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "**@meli.sv:** @josue503 ¿Querés jugar en el torneo? Necesitamos un equipo de cinco 😅",
+      "reason": "reading.text: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Querés jugar en el torneo?",
+      "reason": "reading.noticing.items.quote: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Voseo salvadoreño: _querés_ = _quieres_. Sin cambio de vocal y con tilde al final.",
+      "reason": "reading.noticing.items.note: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Tu compañero hondureño: «¿Vos podés jugar al básquetbol el sábado?» Tú estás libre.",
+      "reason": "practice.exercises.items.context: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Vos podés.",
+      "reason": "practice.exercises.items.options: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "De tú a vos",
+      "reason": "practice.exercises.title: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Escribe la pregunta como la diría un amigo salvadoreño (con vos).",
+      "reason": "practice.exercises.prompt: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos querés venir?",
+      "reason": "practice.exercises.items.answers: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Querés venir?",
+      "reason": "practice.exercises.items.answers: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Con vos: **querés**, sin cambio de vocal y con tilde.",
+      "reason": "practice.exercises.items.why: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Podés el domingo?",
+      "reason": "practice.exercises.items.answers: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos podés el domingo?",
+      "reason": "practice.exercises.items.answers: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Con vos: **podés**.",
+      "reason": "practice.exercises.items.why: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Vos a qué hora te acostás los sábados?",
+      "reason": "practice.exercises.items.answers: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿A qué hora te acostás vos los sábados?",
+      "reason": "practice.exercises.items.answers: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "_Acostarse_ es o → ue con tú (te ac**ue**stas), pero con vos no cambia: **te acostás**.",
+      "reason": "practice.exercises.items.why: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Karla: «¿Querés jugar al básquetbol el sábado a las diez?» Tú puedes, pero prefieres otra hora. Acepta y propone otra hora.",
+      "reason": "practice.exercises.items.prompt: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Pregunta qué palabra usa tu profesor o profesora para decir «OK» a un plan (vale, dale, va, sale…) y si usa vos o tú con sus amigos.",
+      "reason": "useInClass.cards.task: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "¿Usas vos o tú?",
+      "reason": "useInClass.cards.phrases: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Un amigo de Tegucigalpa te dice «¿Vos querés ir al concierto?». ¿Qué significa?",
+      "reason": "quiz.items.q: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "_Vos querés_ es la forma de voseo de _tú quieres_.",
+      "reason": "quiz.items.why: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "Reconocer el voseo centroamericano: vos querés, vos podés.",
+      "reason": "complete.canNow: Voseo centroamericano is an explicit objective; Salvadoran/Honduran dialogue and contrasts plus Argentine Lucía; instructions remain tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w12.ts",
+      "text": "Para aclarar o insistir, añade **a + persona**: _**A Carlos** le gusta el rock_, _**A mí** me encanta_, _¿**A ti** te gusta?_ Con vos (Honduras, Nicaragua, El Salvador…): _¿**A vos** te gusta?_",
+      "reason": "theory.parts.body: Explicit gustar treatment comparison (a ti/a vos/a usted).",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w12.ts",
+      "text": "Para preguntar por los gustos de otra persona, la forma más rápida es **¿Y a ti?** (o **¿Y a vos?**, **¿Y a usted?**).",
+      "reason": "theory.parts.body: Explicit gustar treatment comparison (a ti/a vos/a usted).",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w12.ts",
+      "text": "¿A vos ___ gusta la punta?",
+      "reason": "grammar.exercises.items.q: Explicit gustar treatment comparison (a ti/a vos/a usted).",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w12.ts",
+      "text": "_Vos_ usa el mismo pronombre que _tú_: **te**.",
+      "reason": "grammar.exercises.items.why: Explicit gustar treatment comparison (a ti/a vos/a usted).",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w12.ts",
+      "text": "¿Y a ti? / ¿Y a vos?",
+      "reason": "vocabulary.groups.items.es: Explicit gustar treatment comparison (a ti/a vos/a usted).",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w13.ts",
+      "text": "Con los dependientes se usa normalmente **usted**: _¿Tiene…?_, _¿Me hace…?_ En Nicaragua oirás **vos** entre amigos (_¿Vos qué talla usás?_), pero en las tiendas lo más normal es _usted_.",
+      "reason": "theory.parts.body: Explicit Nicaraguan register note contrasts friends using vos with shop assistants using usted.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w14.ts",
+      "text": "salís",
+      "reason": "theory.parts.table.rows: Second-person plural vosotros conjugation, not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w14.ts",
+      "text": "Javier, ¿vos sabés cuánto es la propina acá?",
+      "reason": "listening.script.text: Camila is explicitly from Córdoba, Argentina; comprehension distractor identifies her treatment.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w14.ts",
+      "text": "De vos, como Camila",
+      "reason": "listening.stages.exercise.items.options: Camila is explicitly from Córdoba, Argentina; comprehension distractor identifies her treatment.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w14.ts",
+      "text": "**De primero:** sopa de albóndigas · ensalada de repollo y tomate (no tiene nada de carne)",
+      "reason": "reading.text: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "Esto es un **checkpoint**: no hay gramática nueva. Aquí ordenas lo que ya sabes y aclaras las confusiones más típicas. La parada es **San José, Costa Rica**, donde mucha gente usa **usted** incluso con amigos y familia (el _ustedeo_), y también **vos** entre amigos. Por eso esta semana aparece usted en situaciones muy informales.",
+      "reason": "theory.intro: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "En Costa Rica, entre amigos, oyes mucho **¿A usted le gusta…?** y **¿Usted quiere…?**: es el ustedeo tico, y no es frío ni distante. Entre amigos también se usa **vos**: _¿Vos querés venir?_",
+      "reason": "theory.parts.body: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "Yo quiero ver el Teatro Nacional. ¿Vos podés el sábado, Lucía?",
+      "reason": "listening.script.text: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "Tercera escucha: ¿cómo se tratan los amigos? Fíjate en tú, vos y usted.",
+      "reason": "listening.stages.prompt: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "vos",
+      "reason": "listening.stages.exercise.categories: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "¿Vos podés el sábado, Lucía?",
+      "reason": "listening.stages.exercise.items.text: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "Mateo es uruguayo: **vos podés** (= tú puedes).",
+      "reason": "listening.stages.exercise.items.why: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w15.ts",
+      "text": "Reconocer el ustedeo y el vos de Costa Rica.",
+      "reason": "complete.canNow: Ustedeo and vos in Costa Rica are explicit objectives; Mateo is Uruguayan; classification teaches the contrast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w16.ts",
+      "text": "El verbo **ir** es muy irregular: **voy, vas, va, vamos, vais, van**. Con **vos** es igual que con tú: _vos vas_. Solo cambia **ir**; el segundo verbo siempre está en infinitivo: _vamos a **cenar**_, nunca _vamos a cenamos_.",
+      "reason": "theory.parts.body: Explicit note explaining vos vas has the same form as tú vas.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w17.ts",
+      "text": "¡Qué salón tan luminoso! Bueno, aquí decís «sala», ¿no? Tiene mucha luz.",
+      "reason": "listening.script.text: Second-person plural vosotros conjugation, not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w19.ts",
+      "text": "**Invitar.** La forma más sencilla es una pregunta con _querer_: **¿Quieres venir a mi fiesta?** También: **¿Vienes a cenar el sábado?**, **Te invito a mi cumpleaños**. En España se oye mucho **¿Te apetece…?**; en muchos países de América, **¿Te animas a…?**. Con vos: **¿Querés venir?**",
+      "reason": "theory.parts.body: Explicit invitation comparison with vos; Nico uses es-UY voice within the regional cast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w19.ts",
+      "text": "Hola, Rosa. ¡Muchas felicidades! Pero… ¡qué pena! Es que ese fin de semana tengo que trabajar en Colón. Y vos, ¿estás libre el domingo 18? ¿Tomamos algo?",
+      "reason": "listening.script.text: Explicit invitation comparison with vos; Nico uses es-UY voice within the regional cast.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w20.ts",
+      "text": "Che, Valeria, ¿y vos qué vas a hacer después de Panamá?",
+      "reason": "listening.script.text: Martín is explicitly identified as Argentine; Che/vos/dale belong to his dialogue.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w20.ts",
+      "text": "Dale, el miércoles 14. Pero hay que reservar mesa. ¿Quién la reserva?",
+      "reason": "listening.script.text: Martín is explicitly identified as Argentine; Che/vos/dale belong to his dialogue.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "El indefinido presenta acciones terminadas: ayer, el sábado pasado, en 2022 o hace dos días. Verbos en -ar: visité, visitaste, visitó, visitamos, visitasteis, visitaron. En -er/-ir: comí, comiste, comió, comimos, comisteis, comieron; salí, saliste, salió, salimos, salisteis, salieron.",
+      "reason": "theory.parts.body: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "Ayer preparé una mochila y salí temprano.",
+      "reason": "theory.parts.examples.es, writing.useLanguage: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "Hace dos días recibí una invitación.",
+      "reason": "theory.parts.examples.es, writing.useLanguage: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "Recibí una carta.",
+      "reason": "grammar.exercises.items.answers: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "Yo recibí una carta.",
+      "reason": "grammar.exercises.items.answers: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "¿Qué hiciste ayer? Yo esperé tu mensaje para salir a caminar, pero no recibí nada. Al final limpié la cocina y terminé un libro que empecé hace un mes.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "Perdona. Dejé el móvil en casa. Salí a las nueve, caminé hasta el río y esperé a Julia delante del puente. Ella llegó tarde porque perdió el autobús.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "A mediodía comimos en un restaurante del barrio. Elisa pidió una sopa y yo probé un plato de verduras. Por la tarde regresamos al parque y leímos nuestros libros en silencio. A las cinco encendí el móvil. Recibí varios mensajes, pero ninguno era urgente. Al final del día escribí una nota para recordar la experiencia. Descansé mejor que otros sábados y decidí repetir el plan una vez al mes.",
+      "reason": "reading.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "salí",
+      "reason": "practice.exercises.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "recibí",
+      "reason": "practice.exercises.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w02.ts",
+      "text": "comí",
+      "reason": "quiz.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w03.ts",
+      "text": "Volví en 1982 y abrí la tienda dos años después. Conocí a tu abuela en 1985. Ella vino a comprar un cuaderno y hablamos toda la tarde. No pongas que fui un gran vendedor: ¡ese día olvidé cobrar el cuaderno!",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w04.ts",
+      "text": "Hace dos días desayuné temprano, caminé hasta el puerto, comí con una amiga y recibí una llamada. Después salí hacia casa. Hoy hablo del viaje; ayer habló mi amiga. Busqué la dirección, llegué temprano y empecé la visita.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w04.ts",
+      "text": "En mi nueva versión cambia el lugar o la persona: Hace dos días desayuné temprano, caminé hasta el puerto, comí con una amiga y recibí una llamada. Debo revisar también las referencias para que mi oyente entienda el cambio.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w05.ts",
+      "text": "Empecé el curso. Abrí el puesto en 1985. Antes trabajaba en una oficina y cocinaba solo para mi familia. Solía llevar comida a mis compañeras y ellas me animaron.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w05.ts",
+      "text": "Hace dos días desayuné temprano, caminé hasta el puerto, comí con una amiga y recibí una llamada. Después salí hacia casa. Hoy hablo del viaje; ayer habló mi amiga. Busqué la dirección, llegué temprano y empecé la visita.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w05.ts",
+      "text": "En mi nueva versión cambia el lugar o la persona: Hace dos días desayuné temprano, caminé hasta el puerto, comí con una amiga y recibí una llamada. Debo revisar también las referencias para que mi oyente entienda el cambio.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "El imperfecto prepara la escena: hacía calor, esperábamos, la estación estaba llena. El indefinido presenta lo que ocurrió: llegó el autobús, perdí la mochila, una mujer me ayudó. Una misma historia necesita ambos. No decidas solo por la duración: trabajó allí veinte años puede presentar una etapa terminada.",
+      "reason": "theory.parts.body: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "Mientras esperaba, perdí la mochila.",
+      "reason": "theory.parts.mistakes.right: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "Cuando salí, ___ mucho. (llover, contexto)",
+      "reason": "grammar.exercises.items.q: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "La estación estaba llena. Perdí el billete.",
+      "reason": "grammar.exercises.items.source: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "La estación estaba llena cuando perdí el billete.",
+      "reason": "grammar.exercises.items.answers: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "Ayer me pasó algo bastante tonto. Salí de casa para bajar la basura. Llevaba una bolsa en cada mano y la puerta se cerró detrás de mí. La llave estaba dentro.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "Mientras esperaba, abrí la bolsa para buscar el regalo. Dentro había unos zapatos enormes y un abrigo. No era mi bolsa. Primero llamé a la empresa de autobuses, pero nadie contestó. Después volví a la parada. Allí estaba un hombre con otra bolsa gris. Parecía preocupado y miraba su teléfono. Le pregunté si buscaba unos zapatos. Él se rio y me mostró mi regalo. Al final cambiamos las bolsas y tomamos un café. Desde ese día pongo una cinta de color en mi equipaje.",
+      "reason": "reading.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "Mientras esperaba, abrí la bolsa para buscar el regalo.",
+      "reason": "reading.noticing.items.quote: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w06.ts",
+      "text": "El martes llovía y yo esperaba el autobús para ir a clase. Llevaba una carpeta con mis apuntes. Cuando llegó el autobús, subí muy rápido y dejé la carpeta en el banco. Me di cuenta dos paradas después. Primero llamé a una compañera que vivía cerca. Ella fue a la parada y encontró la carpeta debajo de un periódico. Al final llegué tarde a clase, pero recuperé todos mis apuntes. Ahora siempre compruebo el banco antes de subir. Fue un problema pequeño, pero aprendí a salir con menos prisa.",
+      "reason": "quiz.items.model, writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "Esperaba en una tienda y llevaba un paraguas. Primero pagué. De repente empezó a llover y descubrí que el paraguas estaba en casa. Al final una vecina me acompañó hasta el autobús.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Para instrucciones afirmativas con tú usa corta, come, abre; hay formas irregulares como haz, pon, ten, ven, di, sal, sé y ve. Usted usa corte, coma, abra; ustedes corten, coman, abran. Vosotros: cortad, comed, abrid. En variedades con vos puedes oír cortá, comé, abrí. Elige una forma coherente con tu interlocutor.",
+      "reason": "theory.parts.body: Explicit imperative treatment comparison: tú/usted/vosotros/ustedes and marked voseo example/transformation.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "El pronombre se une al imperativo afirmativo: corta el tomate → córtalo; dé el plato → déselo. En una receta, empieza por materiales y cantidades; después ordena los pasos con primero, luego y al final. Por favor y un tono amable ayudan en una petición. No confundas una instrucción con una prohibición: aquí practicamos solo afirmativas.",
+      "reason": "theory.parts.body: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Cortá el pan; después ponelo en la mesa.",
+      "reason": "theory.parts.examples.es, writing.useLanguage: Explicit imperative treatment comparison: tú/usted/vosotros/ustedes and marked voseo example/transformation.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "___ el tomate en trozos. (cortar, tú)",
+      "reason": "grammar.exercises.items.q: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Cambia solo el imperativo a vos, sin escribir el pronombre vos; conserva el pan.",
+      "reason": "grammar.exercises.items.instruction: Explicit imperative treatment comparison: tú/usted/vosotros/ustedes and marked voseo example/transformation.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Lave el tomate y córtelo.",
+      "reason": "pronunciation.perceive.items.audio: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Para cuatro personas necesitas dos tazas de arroz ya cocido, un tomate grande, medio pepino, una zanahoria, dos cucharadas de aceite y el zumo de un limón. Esta receta se prepara con el arroz frío. Antes de empezar, comprueba que tienes un recipiente grande, un cuchillo y cuatro platos. Si cocinas para otras personas, pregunta primero si pueden comer todos los ingredientes.",
+      "reason": "reading.text: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Primero lava el tomate, el pepino y la zanahoria. Corta el tomate y el pepino en trozos pequeños. Ralla la zanahoria. Pon el arroz en el recipiente y añade las verduras. Después mezcla el aceite con el limón en un vaso y échalo sobre la ensalada. Remueve todo con una cuchara. Al final prueba una pequeña cantidad y añade sal si hace falta. Reparte la ensalada en los platos.",
+      "reason": "reading.text: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Para cuatro personas necesitas dos tazas de arroz ya cocido, un tomate grande, medio pepino, una zanahoria, dos cucharadas de aceite y el zumo de un limón.",
+      "reason": "reading.noticing.items.quote: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Primero lava el tomate, el pepino y la zanahoria.",
+      "reason": "reading.noticing.items.quote: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w09.ts",
+      "text": "Para preparar estas tostadas necesitas cuatro rebanadas de pan, dos tomates y un poco de aceite. Primero lava los tomates. Después córtalos en trozos pequeños y ponlos en un recipiente. Añade una cucharada de aceite y mezcla bien. Tuesta el pan y coloca el tomate encima. Reparte las tostadas en un plato grande. Sírvelas al momento. Antes de compartirlas, pregunta si alguien necesita otro tipo de pan y escribe los ingredientes en una tarjeta. Si alguien no puede comer tomate, prepara una tostada distinta y mantenla en otro plato.",
+      "reason": "quiz.items.model, writing.model: Tomate is the food noun (tomato) in this recipe/menu/example, not the voseo imperative of tomarse.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w10.ts",
+      "text": "Esperaba en una tienda y llevaba un paraguas. Primero pagué. De repente empezó a llover y descubrí que el paraguas estaba en casa. Al final una vecina me acompañó hasta el autobús.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w10.ts",
+      "text": "Reto de recuperación en la semana 10: Explica una receta distinta en seis pasos, con cantidades, herramientas y dos pronombres unidos al imperativo. Da una instrucción en tú, usted, vosotros, ustedes y vos. Tu pareja altera el orden de dos pasos: escucha y corrige amablemente. Pide que repita la cantidad antes de continuar.",
+      "reason": "practice.exercises.items.prompt: Retrieval task explicitly requires comparing five treatment forms in imperatives.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w10.ts",
+      "text": "Primero lava las frutas y córtalas. Mezcla el yogur y añádelo. Tú prueba la mezcla; usted pruébela; vosotros probadla; ustedes pruébenla; vos probala. ¿Puedes repetir cuántas cucharadas, por favor?",
+      "reason": "practice.exercises.items.model: Retrieval task explicitly requires comparing five treatment forms in imperatives.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w11.ts",
+      "text": "Sigo leyendo diez minutos al día. Ahora estoy leyendo una historia sencilla que elegí en la biblioteca. Acabo de terminar el primer capítulo y he vuelto a mirar las palabras que marqué el lunes. Algunas ya me resultan familiares. Los viernes hablo con una compañera del curso. Ella está preparando una entrevista y necesita practicar preguntas.",
+      "reason": "reading.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w11.ts",
+      "text": "Reto de recuperación en la semana 11: Explica una receta distinta en seis pasos, con cantidades, herramientas y dos pronombres unidos al imperativo. Da una instrucción en tú, usted, vosotros, ustedes y vos. Tu pareja altera el orden de dos pasos: escucha y corrige amablemente. Pide que repita la cantidad antes de continuar.",
+      "reason": "practice.exercises.items.prompt: Imperative retrieval explicitly compares treatments; unrelated elegí is first-person past.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w11.ts",
+      "text": "Primero lava las frutas y córtalas. Mezcla el yogur y añádelo. Tú prueba la mezcla; usted pruébela; vosotros probadla; ustedes pruébenla; vos probala. ¿Puedes repetir cuántas cucharadas, por favor?",
+      "reason": "practice.exercises.items.model: Imperative retrieval explicitly compares treatments; unrelated elegí is first-person past.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w14.ts",
+      "text": "Buenas tardes. Estoy en la habitación doce. Quería comentar un problema: en la confirmación pedí una habitación tranquila, pero esta está junto a la cocina y hay ruido desde muy temprano.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Elegí estudiar por la tarde",
+      "reason": "title: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Elegí estudiar por la tarde · formas que necesitas",
+      "reason": "theory.parts.heading: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Porque introduce una causa después de la idea: elegí el curso porque era práctico. Como puede presentar la causa al principio: como trabajaba por la mañana, elegí el turno de tarde. Por eso y así que presentan una consecuencia. No los cambies sin reorganizar el sentido de la frase.",
+      "reason": "theory.parts.body: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Elegí ese curso porque tenía prácticas.",
+      "reason": "theory.parts.examples.es, writing.useLanguage: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "El horario cambió; por eso pedí otro grupo.",
+      "reason": "theory.parts.examples.es, writing.useLanguage: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Elegí el turno de tarde ___ trabajo por la mañana.",
+      "reason": "grammar.exercises.items.q: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "El grupo estaba lleno, ___ que pedí otra fecha.",
+      "reason": "grammar.exercises.items.q: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Como trabajaba lejos / elegí otro horario.",
+      "reason": "pronunciation.produce.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Elegí",
+      "reason": "practice.exercises.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "pedí",
+      "reason": "practice.exercises.items.words, quiz.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Elegí el curso porque por eso así que.",
+      "reason": "practice.exercises.items.options: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "En esta interacción de «Elegí estudiar por la tarde», ¿cómo compruebas que puedes continuar?",
+      "reason": "practice.exercises.items.q: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Para «Elegí estudiar por la tarde», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
+      "reason": "practice.exercises.items.prompt: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "El año pasado decidí hacer un curso de atención al público.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "El año pasado decidí hacer un curso de atención al público. Trabajaba en una tienda, pero me costaba responder a las preguntas de los clientes. Como quería practicar con otras personas, elegí un grupo presencial. Antes de pagar, visité el centro y hablé con la profesora. Después de comprobar el horario, pedí cambiar un turno en el trabajo. Mi encargada aceptó, así que pude asistir todas las semanas. Al terminar, empecé a atender pedidos por teléfono. Todavía cometo errores, pero ahora pido aclaraciones con más seguridad. Por eso he decidido continuar con otro curso el próximo trimestre. Antes de apuntarme, comprobaré si el horario es posible para mí.",
+      "reason": "quiz.items.model, writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Como no tenía tiempo, porque elegí otro curso.",
+      "reason": "quiz.items.sentence: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "Como no tenía tiempo, elegí otro curso.",
+      "reason": "quiz.items.answers: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w16.ts",
+      "text": "En dos días, repite la misión «Elegí estudiar por la tarde» con personas y datos diferentes.",
+      "reason": "complete.review: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w17.ts",
+      "text": "Pagué treinta euros. Recibí una mochila.",
+      "reason": "grammar.exercises.items.source: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w18.ts",
+      "text": "Como quería cambiar de empleo, preparé una entrevista. Antes de enviar el formulario, lo revisé. Después de hablar con la encargada, acepté las prácticas. Cuando llegué, saludé al equipo. Aprendí mucho; por eso seguí allí.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w20.ts",
+      "text": "Le pedí el proyector a Ana y me lo prestó para la actividad.",
+      "reason": "theory.parts.examples.es, writing.useLanguage: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w20.ts",
+      "text": "pedí",
+      "reason": "practice.exercises.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w20.ts",
+      "text": "Como quería cambiar de empleo, preparé una entrevista. Antes de enviar el formulario, lo revisé. Después de hablar con la encargada, acepté las prácticas. Cuando llegué, saludé al equipo. Aprendí mucho; por eso seguí allí.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Cuando fui a pagar, descubrí que ___ la cartera en casa.",
+      "reason": "grammar.exercises.items.q: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "¿Te subiste a otro? A mí me pasó algo parecido el año pasado. Vi a unos viajeros con mochilas y los seguí sin preguntar adónde iban. ¿Cuándo te diste cuenta del error?",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Llegué a la boda de mi hermana con una mochila prestada y una historia que nadie esperaba. Había preparado el viaje con una semana de antelación: compré un billete temprano y guardé el traje en una maleta pequeña. La noche anterior miré el horario, pero no abrí el aviso que la compañía había enviado por correo. Pensé que era publicidad y seguí haciendo la cena.",
+      "reason": "reading.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Al llegar a la estación, el panel indicaba que mi tren salía de otra terminal. Una empleada me explicó que habían cambiado la salida por unas obras. Mientras me señalaba el camino, oí el anuncio de la última llamada. Corrí hasta el andén, pero las puertas ya estaban cerradas. No perdí el tren por llegar tarde a la estación; lo perdí porque no había comprobado el cambio.",
+      "reason": "reading.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Subí sin correr y avisé a mis compañeros. Aprendí que conviene comprobar los avisos antes de salir. ¿Te ha pasado algo parecido?",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Esperaba en la parada cuando llegó el autobús. Primero comprobé el destino y después subí.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Sin embargo, cuando llegué al punto de alquiler, estaba cerrado. La empresa había cambiado el horario y yo no había leído el mensaje. Mientras buscaba otra opción, una vecina me explicó dónde paraba el autobús. Por suerte, llevaba dinero suelto porque la máquina no aceptaba mi tarjeta. Llegué diez minutos después de la salida prevista, aunque el tren todavía estaba en el andén. Subí sin correr y avisé a mis compañeros. Aprendí que conviene comprobar los avisos antes de salir. ¿Te ha pasado algo parecido?",
+      "reason": "writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w01.ts",
+      "text": "Revisión breve de «El tren que ya había salido». Cuando fui a pagar, descubrí que ___ la cartera en casa.",
+      "reason": "quiz.items.q: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w03.ts",
+      "text": "Me vendría bien, pero preferiría no aprender un discurso de memoria. Quiero explicar por qué elegí el curso y preguntar cómo trabajaremos. ¿Puedes escucharme y decirme qué parte no se entiende?",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w05.ts",
+      "text": "No se trata de recibir atención individual en todo momento, sino de contar con información accesible. Espero que estas propuestas ayuden a las próximas personas que se inscriban. Gracias por escuchar la experiencia y por la ayuda que recibí al llegar.",
+      "reason": "practice.exercises.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w05.ts",
+      "text": "Mientras buscaba una explicación, otra participante me informó del traslado. Finalmente pude llegar al nuevo espacio, aunque me perdí la presentación. Me preocupó especialmente no saber a quién llamar. Recomiendo que envíen los cambios por correo además de publicarlos en el grupo. También sería útil incluir un teléfono de contacto en la confirmación. No se trata de recibir atención individual en todo momento, sino de contar con información accesible. Espero que estas propuestas ayuden a las próximas personas que se inscriban. Gracias por escuchar la experiencia y por la ayuda que recibí al llegar.",
+      "reason": "writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w06.ts",
+      "text": "Me lo envió un amigo. Creo que lo grabaron cerca de su casa, pero ahora que lo dices no estoy seguro. Lo compartí porque pensé que podía afectar al paseo que estamos preparando.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w09.ts",
+      "text": "Durante aquella experiencia aprendí que una explicación clara evita repetir gestiones y reduce la frustración de quien espera. Cuando no conocía una respuesta, la comprobaba con una compañera y después volvía a contactar con la persona interesada, sin dejar su consulta sin seguimiento.",
+      "reason": "writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w09.ts",
+      "text": "Como comenté, en mi trabajo anterior resolvía dudas sobre reservas y buscaba alternativas cuando faltaba algún material. Me gustaría aportar esa experiencia y aprender a utilizar su sistema. Quisiera confirmar dos detalles antes de la próxima reunión: ¿podría indicarme cuándo empezaría la formación y con cuánto tiempo se publican los turnos? Entendí que habría algunos sábados de trabajo, pero prefiero comprobar la frecuencia. También puedo enviar un ejemplo del procedimiento que seguíamos para registrar incidencias, sin incluir datos de usuarios. Quedo pendiente de sus noticias y agradezco el tiempo dedicado a explicar el puesto. Un saludo cordial.",
+      "reason": "writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w13.ts",
+      "text": "Le pedí que confirmara el dato por escrito.",
+      "reason": "quiz.items.audio, quiz.items.options, theory.parts.examples.es: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w13.ts",
+      "text": "pedí",
+      "reason": "quiz.items.words: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w16.ts",
+      "text": "Me puse nerviosa la primera vez que tuve una bicicleta delante sin el profesor. Me quedé bloqueada unos minutos. Después revisé mis notas y pedí ayuda. Con el tiempo me he vuelto menos impaciente; ahora compruebo cada paso en lugar de correr para parecer experta.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b1/w20.ts",
+      "text": "Me parece razonable. No creo que haga falta cambiarlo todo. Las veces que fui aprendí mucho y me alegró conocer a otras personas. Lo que necesito es entrar en la actividad sin sentir que llego siempre a mitad de una conversación.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w01.ts",
+      "text": "Puedo hacerlo si el informe pasa al lunes. Agradezco que lo plantees así. Cuando escuché que todos debíamos hacer un esfuerzo, entendí que se esperaba que trabajáramos el fin de semana. Con esta distribución, no sería necesario.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w02.ts",
+      "text": "En mi caso ocurre casi lo contrario. Mi familia esperaba que fuera a la universidad y se sorprendió cuando elegí una formación técnica. A veces hablan como si trabajar con las manos significara renunciar a pensar. Sé que no lo hacen para ofenderme, pero me pesa.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w02.ts",
+      "text": "Eso sí me ayudaría. También admito que respondí a la defensiva antes de explicar el programa. Podemos visitar el centro el sábado. No necesito que te entusiasme todo; me basta con que escuches mis razones antes de imaginar un fracaso.",
+      "reason": "listening.script.text, listening.stages.exercise.items.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w02.ts",
+      "text": "Mi familia esperaba que eligiera una profesión conocida. Durante mucho tiempo entendí sus preguntas como si fueran órdenes, aunque nunca me prohibieron buscar otra salida. Ahora veo que necesitaban información y que yo necesitaba reconocimiento. Propongo que cada uno exponga primero qué le preocupa y después repita la preocupación del otro. No se trata de aceptar cualquier argumento, sino de comprobar que estamos discutiendo sobre la misma cuestión.",
+      "reason": "practice.exercises.items.model, quiz.items.model, reading.tasks.items.model, speaking.tasks.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w02.ts",
+      "text": "Durante años, mi familia esperaba que eligiera una profesión conocida. Cuando anuncié que quería formarme en restauración musical, mi padre preguntó de qué iba a vivir. Yo escuché una prohibición, aunque él nunca me dijo que abandonara el proyecto. Respondí como si aquella pregunta demostrara que no confiaba en mí y dejamos de hablar de los aspectos concretos de la decisión.",
+      "reason": "writing.model: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w03.ts",
+      "text": "Texto de partida: «No respondí a tu carta y lo lamento ahora.» Expresa una valoración presente del hecho pasado.",
+      "reason": "grammar.exercises.items.prompt: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w03.ts",
+      "text": "Yo fui uno de los que se sintieron incómodos. Habíamos trabajado muchísimo y pensé que nos estaban reprochando no haber hecho suficiente. Después entendí que reconocer un error colectivo no significa despreciar el esfuerzo de cada persona. Aun así, habría preferido otra ocasión.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w13.ts",
+      "text": "Antes me ponía a la defensiva. Había dejado un trabajo estable para hacerme restauradora y sentía que cualquier objeción cuestionaba esa decisión. Después comprendí que una persona podía valorar el centro y, al mismo tiempo, preocuparse por los alquileres. No tenía que elegir una sola emoción.",
+      "reason": "listening.script.text, quiz.items.audio: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos tenés la maleta junto a la puerta.",
+      "reason": "pronunciation.examples.es, pronunciation.perceive.items.audio, pronunciation.produce.text, theory.parts.examples.es: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Imperativo de venir con vos: vení y mirá la etiqueta.",
+      "reason": "pronunciation.examples.es, pronunciation.produce.text, theory.parts.examples.es: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos tienes la misma maleta, dijo el personaje voseante.",
+      "reason": "practice.exercises.items.sentence, theory.parts.mistakes.wrong: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos tenés la misma maleta, dijo el personaje voseante.",
+      "reason": "practice.exercises.items.answers, theory.parts.mistakes.right: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "En el voseo rioplatense trabajado aquí se usa tenés; otras regiones tienen paradigmas distintos.",
+      "reason": "practice.exercises.items.why, theory.parts.mistakes.why: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "El voseo rioplatense utiliza formas como vos tenés, vení y decime; ustedes y vosotros seleccionan conjugaciones distintas. Auto/coche/carro, departamento/piso y celular/móvil son variantes léxicas. La sílaba tónica del voseo puede practicarse con síntesis, pero el sheísmo requiere una muestra real verificada en clase: una etiqueta de voz no demuestra una variedad.",
+      "reason": "theory.parts.body, writing.useLanguage: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos ___ la maleta junto a la puerta.",
+      "reason": "grammar.exercises.items.q: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "tenés",
+      "reason": "grammar.exercises.items.answers, pronunciation.perceive.items.options: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Imperativo de venir con vos: ___ y mirá la etiqueta.",
+      "reason": "grammar.exercises.items.q: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "vení",
+      "reason": "grammar.exercises.items.answers, practice.exercises.items.words: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos tenés la maleta; vení y decime qué pasó.",
+      "reason": "grammar.exercises.items.model: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Contrasta tenés/tienes y vení/ven; cambia ritmo y voz al pasar de narración a diálogo. Estudia sheísmo solo con una muestra real identificada.",
+      "reason": "pronunciation.explanation, pronunciation.focus, pronunciation.produce.tip: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Quería acercarlo. El viaje ya había ocurrido, pero al decir entonces suena el celular recupero la impresión de sorpresa. Después vuelvo al pasado. También mantuve vení y vos tenés porque forman parte de la voz del personaje, aunque yo use otras formas en la narración.",
+      "reason": "listening.script.text, quiz.items.audio: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "También me preguntaron por qué escribí hoy llegué y no hoy he llegado en otro fragmento. Las dos formas pueden aparecer según la variedad y la perspectiva temporal. No quería que una elección se presentara como error solo porque no coincide con el uso de otro país.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Entonces suena el celular. «¿Ya llegaste? Vení a la salida del costado; te estoy esperando en el auto». La voz no había cambiado tanto como ella temía. Elena se quedó inmóvil unos segundos antes de responder. En otra época habría corregido la expresión salida del costado, como si la manera de nombrar una puerta pudiera decir algo sobre la manera de vivir. Ahora preguntó simplemente a qué lado debía ir. El edificio había sido reformado y no quería convertir una duda práctica en otra pequeña batalla.",
+      "reason": "reading.text: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Su hermano estaba junto a un coche viejo. «Vos tenés la misma maleta», dijo, y sonrió sin acercarse todavía. Elena iba a responder que no, que aquella la había comprado hacía poco, cuando vio una marca en el asa. La maleta no era suya. Durante el viaje había tomado otra idéntica y no lo había advertido hasta ese momento. Los dos se miraron y comenzaron a reír, primero con sorpresa y después con una facilidad que ninguno había previsto.",
+      "reason": "reading.text: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Antes de salir, había ensayado varias disculpas. En la estación buscaba un rostro conocido cuando sonó el teléfono. «Vení a la entrada del costado», dijo mi hermano. Le pedí que precisara cuál, sin corregir su manera de decirlo. Entonces veo la etiqueta: llevaba otra maleta. Volvimos juntos al mostrador y empezamos a hablar de algo que podíamos resolver. No arreglamos veinte años; encontramos una primera conversación. Uso el presente histórico solo en el descubrimiento para destacar el giro.",
+      "reason": "practice.exercises.items.model, quiz.items.model, reading.tasks.items.model, speaking.tasks.model: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "vos:",
+      "reason": "practice.exercises.items.words: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "mirá",
+      "reason": "practice.exercises.items.words: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "En la estación sonó el celular. «Vení a la entrada del costado», dijo su hermano. Elena le pidió que precisara cuál: el edificio había cambiado y no reconocía las salidas. «La que da al estacionamiento; estoy junto al auto». Ella agradeció la explicación sin corregir ninguna palabra. Había pasado demasiado tiempo defendiendo maneras de decir cosas que ambos entendían.",
+      "reason": "writing.model: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Su hermano esperaba junto a un coche viejo. Miró el equipaje y sonrió: «Vos tenés la misma maleta». Elena iba a explicarle que era nueva cuando ve la etiqueta. No reconoce el nombre. Durante el viaje había tomado otra maleta idéntica. Los dos se quedaron en silencio unos segundos y después comenzaron a reír con una facilidad inesperada.",
+      "reason": "writing.model: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos ___ venir mañana, según el voseo del diálogo.",
+      "reason": "quiz.items.q: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "podés",
+      "reason": "quiz.items.answers: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vos venís con el celular y me contás qué ocurrió.",
+      "reason": "quiz.items.model: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vení y dígame qué pasó, le dijo a su hermano usando vos.",
+      "reason": "quiz.items.sentence: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w19.ts",
+      "text": "Vení y decime qué pasó, le dijo a su hermano usando vos.",
+      "reason": "quiz.items.answers: Voseo is an explicit curriculum objective; examples, quoted character speech and exercises teach tenés/vení/decime and preserve narrative voice.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w20.ts",
+      "text": "Sí, con una precisión: aceptaremos gestionar el sistema después de ver la versión reducida, no antes. Vos tenés nuestro contacto; mandanos el borrador y lo revisamos mañana. Si alguna expresión regional resulta poco clara para las otras asociaciones, la aclaramos sin cambiar el compromiso.",
+      "reason": "listening.script.text: Checkpoint retrieves B2-19 variation objective; discussion explicitly addresses regional expressions and adapting treatment across associations.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w20.ts",
+      "text": "Nota del voluntariado. Las asociaciones visitantes necesitan una explicación breve y coherente del acuerdo. Algunas utilizan ustedes y otras vosotros; en conversaciones informales también aparece vos. La coordinación no exige uniformar esas formas, pero sí evitar que diferentes versiones del programa indiquen condiciones distintas. Se propone una ficha común con salas disponibles, horarios confirmados, transporte y persona responsable de resolver dudas. Las adaptaciones lingüísticas deben conservar esos cuatro elementos.",
+      "reason": "reading.text: Checkpoint retrieves B2-19 variation objective; discussion explicitly addresses regional expressions and adapting treatment across associations.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w20.ts",
+      "text": "Guía de revisión, no texto para copiar: Puedo usar el presente histórico y reconozco el uso del perfecto y del indefinido en España y en América. Puedo describir atmósferas, gestos y sensaciones con precisión. Puedo leer un fragmento narrativo con cambios de ritmo y de voz. Puedo interpretar el giro final de un microrrelato. Puedo escribir un relato de 200 palabras con tiempos del pasado variados. Puedo reconocer y usar las formas de vos en presente e imperativo (vos tenés, vení, decime). Puedo adaptar el plural de segunda persona según la variedad. Puedo reconocer variantes léxicas frecuentes: auto/coche/carro, departamento/piso, celular/móvil. Puedo producir el acento del voseo y contrastar el sheísmo con una muestra real identificada en clase. Puedo entender a hablantes de distintas variedades y pedir aclaraciones sobre léxico regional. Puedo seguir un diálogo con voseo y léxico rioplatense sin confundir síntesis con una muestra de acento verificada.",
+      "reason": "practice.exercises.items.model: Checkpoint retrieves B2-19 variation objective; discussion explicitly addresses regional expressions and adapting treatment across associations.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w05.ts",
+      "text": "La distinción diferencia /s/ y /θ/; el seseo no establece esa oposición. Tú, vos y usted son formas de tratamiento, no pruebas acústicas de procedencia. Una etiqueta regional del sintetizador no acredita ninguno de estos rasgos.",
+      "reason": "practice.exercises.items.model: Metalinguistic caution: tú/vos/usted do not identify an accent or origin.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w08.ts",
+      "text": "Me parece posible, aunque antes necesitaría aclarar algo. El miércoles recibí cambios de dos departamentos y entendí que debían incorporarse antes de entregar. No quise mandar una versión que ustedes consideraran incompleta. Tal vez debería haber avisado de que eso alteraba el plazo. También me ayudaría saber quién puede introducir cambios después del lunes, porque si todas las peticiones son urgentes, termino decidiendo prioridades que quizá no me corresponden.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w10.ts",
+      "text": "Antes de cerrar, quiero confirmar qué estamos aceptando. La semana pasada interpreté que apoyaban el traslado completo y después recibí varios mensajes con reservas. Reconozco que quizá di por resuelto un punto que seguía abierto. La sala ofrece mejores equipos y fechas más estables; eso continúa siendo una ventaja. Lo que quisiera saber hoy es qué condiciones permitirían aprovecharla sin romper el vínculo del festival con el barrio.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w14.ts",
+      "text": "Reconoce cambios de tema y jerarquía aunque cambien léxico o tratamiento. Tú, vos y usted no identifican por sí solos una procedencia. Las etiquetas regionales de las voces son solicitudes de síntesis, no certificación acústica; la comparación de acentos requiere muestras verificadas o trabajo con el docente.",
+      "reason": "pronunciation.explanation, pronunciation.produce.tip, reading.noticing.items.note: Metalinguistic caution: treatment cannot certify origin or synthesized accent.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w15.ts",
+      "text": "La distinción diferencia /s/ y /θ/; el seseo no establece esa oposición. Tú, vos y usted son formas de tratamiento, no pruebas acústicas de procedencia. Una etiqueta regional del sintetizador no acredita ninguno de estos rasgos.",
+      "reason": "practice.exercises.items.model: Retrieval of the metalinguistic caution on treatment versus acoustic provenance.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w16.ts",
+      "text": "A mí lo que me preocupa es la comparación. Mi anuncio desapareció y otro prácticamente igual siguió visible durante una semana. No puedo demostrar por qué ocurrió, pero sí puedo mostrar la diferencia. Cuando lo señalé, recibí un enlace a las normas, como si no las hubiera leído. Las normas ya las conozco; lo que necesito es saber cómo se aplicaron a estos dos casos. Si hubo un error, prefiero que lo reconozcan a que repitan una explicación abstracta.",
+      "reason": "listening.script.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w08.ts",
+      "text": "Carta del restaurador. No me molesta que me llamen obstinado, escribió, si se explica cuándo insistí sin tener todavía una prueba suficiente. Me molesta que el hallazgo convierta todos mis intentos anteriores en aciertos. Dos análisis negativos me obligaron a cambiar de zona y uno de mis argumentos iniciales resultó equivocado. El testimonio complicaba la oposición entre héroe perseverante e institución resistente. También mostraba que una trayectoria puede contener persistencia valiosa y errores reales sin que un adjetivo único tenga que resolverla.",
+      "reason": "reading.text: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "El voseo combina formas de pronombre y verbo de manera variable: vos tenés y vos tienes no autorizan a deducir por sí solos una identidad nacional. El leísmo de persona masculino singular admitido en ciertos usos no convierte cualquier le por lo en equivalente general. La omisión de una preposición exigida en me di cuenta de que puede aparecer en usos coloquiales; al editar se distingue descripción de la variedad y norma del género. Comprender no exige imitar ni corregir el acento ajeno.",
+      "reason": "grammar.exercises.items.why, theory.parts.body: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "Vos tenés la copia; ¿podés revisarla?",
+      "reason": "theory.parts.examples.es, writing.useLanguage: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "Vos ___ la copia, según el ejemplo rioplatense.",
+      "reason": "grammar.exercises.items.q: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "tenés",
+      "reason": "grammar.exercises.items.answers: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "uso de vos y sus combinaciones verbales",
+      "reason": "vocabulary.exercises.pairs.right, vocabulary.groups.items.note: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "Nos han pedido hablar neutro, y yo necesito que me expliquen qué problema intentan resolver. Si un cliente no entiende una palabra, la reformulo. Pero cambiar vos por tú no aclara automáticamente un plazo ni convierte una respuesta en más respetuosa. En mi oficina, el tratamiento habitual depende de la relación, no de una escala universal de formalidad.",
+      "reason": "listening.script.text: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w09.ts",
+      "text": "La cooperativa abrió un servicio de atención compartido entre tres oficinas. El primer manual exigía emplear un español neutro, pero no definía qué entendía por neutro. Una supervisora tachó vos en un correo; otra pidió sustituir tú por usted para mantener la cercanía habitual de su equipo. Las dos justificaban la corrección por razones opuestas. La aparente solución universal escondía preferencias locales que adquirían autoridad al escribirse en un manual.",
+      "reason": "reading.text: Explicit grammatical/pragmatic variation objective; supplied contrasts and critical discussion of linguistic neutrality.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w10.ts",
+      "text": "Recuperación c2.voc.variacion-lexica-pragmatica. Intercambio escrito: agente A, «Ya lo revisamos: terminamos esta mañana»; agente B, «Ya lo revisamos: lo haremos antes de las cuatro». Tratamientos disponibles: «Vos podés avisarme» / «Usted me avisa cuando tenga la copia».\n\nExplica las dos lecturas temporales con una paráfrasis inequívoca. Propón un tratamiento coherente con una relación concreta sin declarar uno universalmente más cortés. Formula una pregunta que compruebe la interpretación y evita generalizar a una región a partir de este intercambio. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
+      "reason": "practice.exercises.items.prompt: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w10.ts",
+      "text": "A informa de una tarea terminada; B anuncia una tarea próxima. Para un compromiso operativo, B puede decir lo revisaremos antes de las cuatro. La elección entre vos y usted depende de relación y uso; ninguna forma garantiza por sí sola cercanía o distancia. Una comprobación útil sería: ¿queda entonces pendiente la revisión hasta esta tarde? En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
+      "reason": "practice.exercises.items.model: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w10.ts",
+      "text": "Recuperación c2.gram.variacion-gramatical. Contrastes escritos suministrados: «Vos tenés la copia» / «Tú tienes la copia»; «A Juan lo vi ayer» / «A Juan le vi ayer»; «Me di cuenta de que faltaba una página» / «Me di cuenta que faltaba una página»; «Hoy he enviado el escrito» / «Hoy envié el escrito».\n\nIdentifica voseo, tuteo, leísmo de persona masculino singular y omisión de la preposición exigida por darse cuenta de. Explica por qué los dos tiempos del último par pueden responder a usos distintos y por qué no basta una frase para asignar un país al hablante. Edita el ejemplo de darse cuenta para una nota formal. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
+      "reason": "practice.exercises.items.prompt: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w10.ts",
+      "text": "Vos tenés presenta voseo y tú tienes, tuteo. Le vi con Juan ilustra leísmo de persona masculino singular admitido en determinados usos; no autoriza cualquier sustitución de lo por le. En la nota formal se escribe me di cuenta de que. He enviado y envié pueden organizar de modo distinto la relación con hoy según el uso y el contexto; ninguna forma aislada determina una procedencia. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
+      "reason": "practice.exercises.items.model: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w10.ts",
+      "text": "Recuperación c2.fun.mediacion-variedades. Intercambio escrito: agente A, «Ya lo revisamos: terminamos esta mañana»; agente B, «Ya lo revisamos: lo haremos antes de las cuatro». Tratamientos disponibles: «Vos podés avisarme» / «Usted me avisa cuando tenga la copia».\n\nExplica las dos lecturas temporales con una paráfrasis inequívoca. Propón un tratamiento coherente con una relación concreta sin declarar uno universalmente más cortés. Formula una pregunta que compruebe la interpretación y evita generalizar a una región a partir de este intercambio. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
+      "reason": "practice.exercises.items.prompt: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w13.ts",
+      "text": "Recuperación c2.voc.variacion-lexica-pragmatica. Intercambio escrito: agente A, «Ya lo revisamos: terminamos esta mañana»; agente B, «Ya lo revisamos: lo haremos antes de las cuatro». Tratamientos disponibles: «Vos podés avisarme» / «Usted me avisa cuando tenga la copia».\n\nExplica las dos lecturas temporales con una paráfrasis inequívoca. Propón un tratamiento coherente con una relación concreta sin declarar uno universalmente más cortés. Formula una pregunta que compruebe la interpretación y evita generalizar a una región a partir de este intercambio. Contraste nuevo suministrado de «Editar sin borrar una voz»: «La restauradora pidió tiempo; el comité, resultados.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
+      "reason": "practice.exercises.items.prompt: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w13.ts",
+      "text": "A informa de una tarea terminada; B anuncia una tarea próxima. Para un compromiso operativo, B puede decir lo revisaremos antes de las cuatro. La elección entre vos y usted depende de relación y uso; ninguna forma garantiza por sí sola cercanía o distancia. Una comprobación útil sería: ¿queda entonces pendiente la revisión hasta esta tarde? En el nuevo contraste, «La restauradora pidió tiempo; el comité, resultados.» debe interpretarse dentro de esta cuestión: Cohesión, elipsis, ritmo y control estilístico. La semejanza de función no convierte ambos casos en hechos equivalentes.",
+      "reason": "practice.exercises.items.model: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w13.ts",
+      "text": "Recuperación c2.gram.variacion-gramatical. Contrastes escritos suministrados: «Vos tenés la copia» / «Tú tienes la copia»; «A Juan lo vi ayer» / «A Juan le vi ayer»; «Me di cuenta de que faltaba una página» / «Me di cuenta que faltaba una página»; «Hoy he enviado el escrito» / «Hoy envié el escrito».\n\nIdentifica voseo, tuteo, leísmo de persona masculino singular y omisión de la preposición exigida por darse cuenta de. Explica por qué los dos tiempos del último par pueden responder a usos distintos y por qué no basta una frase para asignar un país al hablante. Edita el ejemplo de darse cuenta para una nota formal. Contraste nuevo suministrado de «Editar sin borrar una voz»: «La restauradora pidió tiempo; el comité, resultados.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
+      "reason": "practice.exercises.items.prompt: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w13.ts",
+      "text": "Vos tenés presenta voseo y tú tienes, tuteo. Le vi con Juan ilustra leísmo de persona masculino singular admitido en determinados usos; no autoriza cualquier sustitución de lo por le. En la nota formal se escribe me di cuenta de que. He enviado y envié pueden organizar de modo distinto la relación con hoy según el uso y el contexto; ninguna forma aislada determina una procedencia. En el nuevo contraste, «La restauradora pidió tiempo; el comité, resultados.» debe interpretarse dentro de esta cuestión: Cohesión, elipsis, ritmo y control estilístico. La semejanza de función no convierte ambos casos en hechos equivalentes.",
+      "reason": "practice.exercises.items.model: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w13.ts",
+      "text": "Recuperación c2.fun.mediacion-variedades. Intercambio escrito: agente A, «Ya lo revisamos: terminamos esta mañana»; agente B, «Ya lo revisamos: lo haremos antes de las cuatro». Tratamientos disponibles: «Vos podés avisarme» / «Usted me avisa cuando tenga la copia».\n\nExplica las dos lecturas temporales con una paráfrasis inequívoca. Propón un tratamiento coherente con una relación concreta sin declarar uno universalmente más cortés. Formula una pregunta que compruebe la interpretación y evita generalizar a una región a partir de este intercambio. Contraste nuevo suministrado de «Editar sin borrar una voz»: «La restauradora pidió tiempo; el comité, resultados.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
+      "reason": "practice.exercises.items.prompt: Retrieval tasks explicitly analyze voseo/tuteo and treatment, not default learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objectives/a2.ts",
+      "text": "Puedo dar instrucciones con tú, usted, vosotros y ustedes, y conozco la forma de vos.",
+      "reason": "objective statement: Explicit objective compares tú/usted/vosotros/ustedes and recognizes regional vos.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objectives/b1.ts",
+      "text": "Puedo escribir 180 palabras que narran una experiencia y argumentan qué aprendí.",
+      "reason": "objective statement: First-person preterite in a narrated past, past-tense example, or words used to construct that past-tense sentence; not a learner-directed imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/objectives/b2.ts",
+      "text": "Puedo reconocer y usar las formas de vos en presente e imperativo (vos tenés, vení, decime).",
+      "reason": "objective statement: Explicit voseo objective teaches present and imperative regional paradigms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Soy Tomás. ¿Y tú?",
+      "reason": "theory.parts.examples.es: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Valeria y Tomás estudian en una escuela de idiomas de la colonia Roma. Escucha tres momentos del mismo día: en el café por la mañana, en la oficina por la tarde y en la puerta de la escuela por la noche.",
+      "reason": "listening.context: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Tomás",
+      "reason": "listening.speakers.name: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Hola. Me llamo Tomás. ¿Y tú?",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Yo soy Valeria. Mucho gusto, Tomás.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "Buenas tardes, señora Ortiz. Soy Tomás Ruiz. Encantado.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "¡Hola, Martín! Hasta mañana, Tomás.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w01.ts",
+      "text": "¿Qué dice Tomás al final?",
+      "reason": "listening.stages.exercise.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "—¿Él es Tomás? —No, ___ ___ Tomás. Es Mateo.",
+      "reason": "grammar.exercises.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w02.ts",
+      "text": "Tomás es portugués.",
+      "reason": "quiz.items.source: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "trabajás",
+      "reason": "theory.parts.table.rows: The A1-04 table labels this as the regional Río de la Plata/Centroamérica row; its tip explicitly contrasts stress in trabajáis and trabajás.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "estudiás",
+      "reason": "theory.parts.table.rows: The A1-04 table labels this as the regional Río de la Plata/Centroamérica row; its tip explicitly contrasts stress in trabajáis and trabajás.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w04.ts",
+      "text": "Fíjate en la sílaba fuerte: **tra**-ba-jo, tra-**ba**-jas, tra-ba-**ja**-mos. En _trabajáis_ y _trabajás_ la fuerza va al final, por eso llevan tilde.",
+      "reason": "theory.parts.tip: The A1-04 table labels this as the regional Río de la Plata/Centroamérica row; its tip explicitly contrasts stress in trabajáis and trabajás.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "Es mi abuelo Tomás. Es muy serio en las fotos, pero en realidad es muy divertido.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w06.ts",
+      "text": "¿Cómo es el abuelo Tomás en realidad?",
+      "reason": "listening.stages.exercise.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "comés",
+      "reason": "grammar.exercises.items.options: A1-07 explicitly tests recognition of the vos -er form; the incorrect Tú comés sentence is an error-correction prompt with corrected tú/vos alternatives.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Vosotras aprendéis recetas y compartís la comida.",
+      "reason": "quiz.items.answers: Second-person plural vosotros/vosotras answer to an instruction explicitly asking for vosotras; not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Aprendéis recetas y compartís la comida.",
+      "reason": "quiz.items.answers: Second-person plural vosotros/vosotras answer to an instruction explicitly asking for vosotras; not singular voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Tú comés pan todos los días, ¿no?",
+      "reason": "quiz.items.sentence: A1-07 explicitly tests recognition of the vos -er form; the incorrect Tú comés sentence is an error-correction prompt with corrected tú/vos alternatives.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w10.ts",
+      "text": "escribís",
+      "reason": "theory.parts.table.rows: Checkpoint table includes explicitly labelled regional vos and vosotros/as rows; escribís is the correct form in both paradigms.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w11.ts",
+      "text": "jugás",
+      "reason": "theory.parts.table.rows: A1-11 explicit tú-versus-vos table in the Central American voseo lesson.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w18.ts",
+      "text": "Tareas de esta semana: Diego y Ana tienen que limpiar los baños. Bienvenido, a ti te toca la cocina: la nevera está muy sucia, hay que limpiarla el miércoles. Carmen y Tomás hacen la compra el jueves. ¡Necesitamos mucho arroz y un poco de café!",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w19.ts",
+      "text": "**Tomás:** ¡Felicidades, Yolanda! Muchas gracias por la invitación. Lo siento mucho, es que ese fin de semana es la boda de mi hermano en David. ¡Pero el domingo pasamos por su casa con un abrazo para la quinceañera!",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w19.ts",
+      "text": "¿Por qué no va Tomás?",
+      "reason": "reading.tasks.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "Nora: Muchas gracias. Mi compañero irá a buscarlo porque yo trabajo hasta tarde. Se llama Tomás. ¿Puedes dárselo a él? Le voy a explicar cómo llegar. El domingo te lo devolveré yo. Si prefieres, puedo dejarlo en recepción. Beto: Mejor en recepción, gracias. Allí registran las devoluciones y comprueban que estén los dos cables.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "Tomás",
+      "reason": "reading.tasks.items.options: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a2/w08.ts",
+      "text": "La información de la situación corresponde a «Tomás»; comprueba la frase completa antes de volver a responder.",
+      "reason": "reading.tasks.items.why: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w01.ts",
+      "text": "Lucía insiste en que dispone de dos personas para revisar los datos. Tomás, en cambio, insiste en que asignemos una tercera persona al diseño. Ambas afirmaciones parecen incompatibles únicamente si damos por hecho que todas las tareas deben realizarse a la vez. Sugiero que Lucía cierre primero las cifras y que Tomás reciba apoyo después. Necesito que cada responsable indique, antes del miércoles, qué puede entregar sin comprometer la calidad. Nadie tiene que justificar públicamente sus circunstancias personales; basta con señalar su disponibilidad y las dependencias de su trabajo.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás intenta abreviar.",
+      "reason": "theory.parts.mistakes.wrong: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás intente abreviar.",
+      "reason": "theory.parts.mistakes.right: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Reformula sin atribuir certeza a la intención. Texto de partida: «Tomás quizá intentaba abreviar por falta de tiempo.»",
+      "reason": "grammar.exercises.items.prompt: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás intentara abreviar por falta de tiempo.",
+      "reason": "grammar.exercises.items.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Qué bien organizado está todo: ocho personas y siete carpetas. No, no hace falta que te levantes, puedo mirar con Tomás. Lo decía porque luego se nos pide que revisemos cada detalle, y una llega y piensa que quizá sobra. Bueno, dejémoslo. Quisiera saber cuánto tiempo reservamos al diagnóstico, porque sin esa parte la propuesta puede parecer una ocurrencia y no una respuesta a lo que hemos observado durante meses.",
+      "reason": "listening.script.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "¿Qué información reconoce Tomás que debería haber dado antes?",
+      "reason": "listening.stages.exercise.items.prompt: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La réplica sobre las carpetas admite una lectura irónica porque el elogio contradice la situación observada y provoca una justificación. No demuestra, por sí sola, que Tomás quiera excluir a Irene. El dato posterior sobre los diez minutos ofrece otra explicación de su propuesta de brevedad. La interpretación debe actualizarse sin borrar la tensión previa. En la lectura oral destacaría la aceptación exagerada de Irene y reduciría ese contraste cuando reconoce que la nueva información cambia el panorama.",
+      "reason": "listening.stages.exercise.items.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Cuando Irene llegó a la reunión, la única silla libre estaba junto a la puerta. Sobre la mesa habían colocado siete carpetas para ocho personas. Qué previsores, dijo, dejando el abrigo sobre el respaldo. Tomás respondió que podían compartir la suya. Nadie comentó la frase de Irene, pero la conversación cambió de ritmo. La secretaria, que había preparado la sala, empezó a justificar el reparto antes de que alguien la acusara de nada. El elogio literal había funcionado como reproche porque la situación hacía difícil interpretarlo como reconocimiento sincero.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La reunión debía decidir quién presentaría un proyecto a la dirección. Irene había elaborado el diagnóstico; Tomás, las diapositivas. Al revisar el orden del día, él observó que convenía una intervención ágil, sin entrar en todos los antecedentes. Irene contestó que, por supuesto, los antecedentes solo explicaban por qué estaban allí. La réplica no rechazaba expresamente la propuesta. Señalaba, mediante una aceptación exagerada, que suprimir el diagnóstico podía convertir el proyecto en una solución sin problema. El público de aquella pequeña escena disponía de información suficiente para inferir la crítica, pero no para saber si Tomás buscaba realmente desplazar a su compañera.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Conviene mantener esa diferencia. Inferir una intención comunicativa no autoriza a reconstruir con certeza una motivación personal. Podemos defender que Irene expresa desacuerdo irónico; no podemos asegurar que Tomás actúa por envidia. La lectura del subtexto se apoya en indicios, no en una licencia para inventar psicología. También cabe que él tema aburrir a la dirección o que haya recibido una instrucción que todavía no ha compartido. La interpretación más elaborada no es siempre la más acusatoria. A veces consiste en conservar varias hipótesis hasta que otra intervención las discrimina.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La directora del equipo preguntó entonces cuánto tiempo tendrían. Diez minutos, respondió Tomás, aunque añadió que solo se lo habían confirmado esa mañana. Irene guardó silencio y después dijo: eso cambia bastante el panorama. El dato no borraba la falta de carpeta ni convertía su protesta en injustificada. Sí modificaba el sentido de la recomendación de brevedad. Una lectura atenta debía actualizarse. El subtexto no es un mensaje secreto fijado de antemano; se construye y se revisa a medida que los interlocutores revelan información.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Al final acordaron una presentación compartida. Irene dispondría de tres minutos para explicar el diagnóstico; Tomás desarrollaría la propuesta y ambos responderían preguntas. La secretaria añadió una carpeta y preguntó si faltaba algo más. Esta vez Irene dijo que no, gracias, sin alargar el adverbio ni mirar a los demás. La misma cortesía recuperaba un valor literal porque habían cambiado el contexto y la forma de decirla. Ninguna marca escrita podía reproducir por completo esa diferencia; la representación oral debía elegir pausas, acentos y miradas compatibles con la interpretación.",
+      "reason": "reading.text: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "¿Qué obliga a revisar la interpretación de la propuesta de Tomás?",
+      "reason": "reading.tasks.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La propuesta de omitir antecedentes también admite una crítica implícita: Irene acepta exageradamente que esos antecedentes «solo» explican la necesidad del proyecto. El contraste permite inferir que rechaza su supresión, aunque no haya formulado todavía una negativa directa. Esa lectura se apoya en la relación entre diagnóstico y solución, no en suponer una enemistad previa. Atribuir a Tomás envidia o deseo de apropiarse del trabajo iría más allá de los indicios disponibles. Su explicación sobre el límite temporal ofrece una motivación alternativa que el análisis debe conservar y examinar.",
+      "reason": "writing.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "La escena tampoco se vuelve armónica retrospectivamente cuando aparece el dato nuevo. La falta de carpeta sigue siendo un hecho, y la información sobre el tiempo podría haberse comunicado antes. Lo que cambia es la fuerza de una hipótesis sobre la propuesta de Tomás. En una segunda puesta en voz haría que Irene comenzara con humor y aumentara la seriedad al discutir el diagnóstico; esa lectura también resulta defendible. Compararía ambas versiones atendiendo a pausas, énfasis y reacción de los interlocutores. La interpretación más rigurosa conserva esta pluralidad limitada por el texto y distingue subtexto comunicativo de especulación psicológica.",
+      "reason": "writing.model: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Es posible que Tomás ___ abreviar.",
+      "reason": "quiz.items.q: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w07.ts",
+      "text": "Reformula sin atribuir certeza a la intención. Escribe solo la reformulación. En una intervención sobre «Una cortesía demasiado perfecta» lees: «Tomás quizá intentaba abreviar por falta de tiempo.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
+      "reason": "quiz.items.prompt: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c2/w04.ts",
+      "text": "Tomás",
+      "reason": "listening.speakers.name: Tomás is the personal name of the character, not the voseo conjugation tomás.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w07.ts",
+      "text": "Ella comé pan.",
+      "reason": "Intentionally incorrect conjugation in a mistakes.wrong example; neutral correction is taught alongside it.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/a1/w16.ts",
+      "text": "¿Qué error comete mucha gente, según Marisol?",
+      "reason": "Third-person present comete un error, not voseo cómete command.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/b2/w09.ts",
+      "text": "Tienes razón. La empresa me dijo que habían reforzado la línea y yo resumí demasiado. Se observaron dos jornadas sin cancelaciones, aunque hubo retrasos menores. También se entrevistó a varias personas en la parada, pero no hicimos una encuesta representativa.",
+      "reason": "Explicit yo resumí is first-person preterite narration; preserve synthetic script and duplicate quiz audio.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/autoestudio/curriculum/modules/c1/w19.ts",
+      "text": "La propuesta final fue un ensayo limitado a consultas generales, con revisión de errores y posibilidad clara de derivación humana. El comité rechazó tanto anunciar una solución personalizada definitiva como descartar toda utilidad por sus fallos iniciales. Estableció qué resultados justificarían ampliar el servicio y cuáles obligarían a modificarlo. El éxito del proyecto dependería de esa evaluación, pero también de la calidad de su comunicación. Una herramienta puede estar técnicamente acotada y ser presentada con promesas desmesuradas; en ese caso, el primer error no lo comete el sistema, sino el relato institucional que lo rodea.",
+      "reason": "Third-person present comete un error, not voseo cómete command.",
+      "category": "neutral-context"
+    }
+  ]
+}

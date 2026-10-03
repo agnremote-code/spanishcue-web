@@ -67,7 +67,7 @@ export async function POST(request: Request) {
         return Response.json({ transactionId: claim.providerPaymentId, clientToken: paddle.clientToken }, { headers });
       }
       const locked = await lockPurchaseCheckout(env.DB, claim.claimId, "paddle");
-      if (!locked) return Response.json({ error: "Estamos preparando tu pago. Reintentá en unos segundos." }, { status: 409, headers });
+      if (!locked) return Response.json({ error: "Estamos preparando tu pago. Vuelve a intentarlo en unos segundos." }, { status: 409, headers });
       try {
         const transactionId = await createPaddleCheckoutTransaction(paddle, {
           claimId: claim.claimId, offerCode: billing.founderOffer.code, offer,

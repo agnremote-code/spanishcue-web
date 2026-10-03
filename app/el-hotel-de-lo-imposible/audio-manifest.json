@@ -1,0 +1,38 @@
+{
+  "scope": "Only neutral-Spanish replacement clips; other lesson assets unchanged.",
+  "synthetic": true,
+  "producer": "Microsoft Edge online speech via edge-tts 7.2.8",
+  "generatedAt": "2026-10-03T02:50:25.606150+00:00",
+  "humanListeningQA": false,
+  "transcriptValidation": "Exact finite generation input and service word metadata, not independent human transcription.",
+  "clips": [
+    {
+      "id": "la-almohada",
+      "src": "/audio/hotel/la-almohada.mp3",
+      "voice": "es-PE-CamilaNeural",
+      "rate": "+0%",
+      "text": "La primera noche en el hotel escuché música justo cuando apoyé la cabeza en la almohada. Pensé que venía de la habitación de al lado, pero al levantarme la música paró. Probé otra vez y empezó una canción de mi infancia. La almohada tenía una etiqueta que decía: elige un recuerdo y duerme con su sonido. Me acordé de las vacaciones en casa de mis abuelos y escuché el mar. Era precioso, pero también se oía al perro de mi abuelo, que ladraba sin parar. Después pensé en una tarde en la biblioteca. Por fin hubo silencio, hasta que alguien empezó a pasar páginas muy rápido. A las doce llamé a recepción para pedir una almohada normal. La nueva no tenía música ni recuerdos. Dormí ocho horas seguidas y no soñé con ningún perro.",
+      "sha256": "058246c88d5fe14e42b844e6dd27ddf1abe80b445e9a231db246a8bf8a777e6e",
+      "durationSeconds": 45.336,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 272016,
+      "wordMetadata": "audio-words/la-almohada.words.json"
+    },
+    {
+      "id": "el-telefono",
+      "src": "/audio/hotel/el-telefono.mp3",
+      "voice": "es-MX-JorgeNeural",
+      "rate": "+0%",
+      "text": "El teléfono de mi habitación sonó el martes a las diez de la noche. Contesté y escuché mi propia voz. La persona dijo: soy tú, pero te llamo desde mañana. Pensé que era una broma de mi hermano. Sin embargo, la voz sabía que yo estaba comiendo galletas en la cama. Me dio un solo consejo: no lleves el paraguas negro al museo. Al día siguiente llovía mucho. Recordé la llamada y pedí un paraguas amarillo en recepción. En el museo vi a cinco personas con paraguas negros idénticos. Al salir, todos discutían porque no sabían cuál era el suyo. Yo encontré el amarillo enseguida y me fui tranquilo. Esa noche intenté llamar al día siguiente para preguntar los números de la lotería, pero el teléfono solo repetía: este servicio resuelve problemas pequeños.",
+      "sha256": "2da210cce0d9a6bf93507512c157863cb9ac7c961f756ef3b9596d0461e3c740",
+      "durationSeconds": 53.088,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 318528,
+      "wordMetadata": "audio-words/el-telefono.words.json"
+    }
+  ]
+}

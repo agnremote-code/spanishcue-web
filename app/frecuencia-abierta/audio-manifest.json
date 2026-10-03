@@ -1,0 +1,24 @@
+{
+  "scope": "Only neutral-Spanish replacement clips; other lesson assets unchanged.",
+  "synthetic": true,
+  "producer": "Microsoft Edge online speech via edge-tts 7.2.8",
+  "generatedAt": "2026-10-03T02:50:25.606274+00:00",
+  "humanListeningQA": false,
+  "transcriptValidation": "Exact finite generation input and service word metadata, not independent human transcription.",
+  "clips": [
+    {
+      "id": "chile-lider",
+      "src": "/audio/frecuencia-abierta/05-chile-lider.mp3",
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "+12%",
+      "text": "En mi equipo nadie controla horarios, oficialmente. Cada cual se organiza y entrega. Fantástico. Después abres el chat a las ocho y media y ves que todos saludan para que conste que ya están; qué alivio tanta libertad. No es una orden, es una coreografía. Yo misma caigo: mando un mensaje temprano para que sepan que estoy y aclaro «no es urgente» a las once de la noche. Estamos intentando acordar ventanas de contacto de verdad, no esas reglas blanditas que nadie incumple porque nadie sabe exactamente qué significan.",
+      "sha256": "f4eaa7d2bf09bdbb3718937cf8bf7456b98d38eb45521645c9bc477a2c8016c7",
+      "durationSeconds": 31.512,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "byteLength": 189072,
+      "wordMetadata": "audio-words/chile-lider.words.json"
+    }
+  ]
+}

@@ -20,10 +20,10 @@ const stages=[
 
 const familyNames:Record<string,string>={
   words:"MATICES LÉXICOS",
-  premise:"CUESTIONÁ LA PREMISA",
+  premise:"CUESTIONA LA PREMISA",
   literal:"LITERALMENTE CIERTO",
-  wordshift:"CAMBIÁ UNA PALABRA",
-  opposite:"DEFENDÉ LO CONTRARIO",
+  wordshift:"CAMBIA UNA PALABRA",
+  opposite:"DEFIENDE LO CONTRARIO",
   effects:"2.º / 3.er EFECTO",
   patterns:"¿CASUALIDAD O PATRÓN?",
   speaker:"QUIÉN LO DICE",

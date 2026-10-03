@@ -44,19 +44,19 @@ function KingdomExperience({level}:{level:"A2"|"B1"}){
     </section>}
 
     {screen==="rules"&&<section className="pr-page pr-rules">
-      <header className="pr-page-head"><span>ANTES DE EMPEZAR · BEFORE YOU START</span><h1>Cómo se juega</h1><p>No necesitás palabras difíciles. Construí una respuesta clara con lo que ya sabés.</p></header>
+      <header className="pr-page-head"><span>ANTES DE EMPEZAR · BEFORE YOU START</span><h1>Cómo se juega</h1><p>No necesitas palabras difíciles. Construye una respuesta clara con lo que ya sabes.</p></header>
       <div className="pr-rule-grid">
-        <article><i>01</i><span>🗺️</span><h2>Elegí un mundo</h2><p>Cada mundo tiene cuatro preguntas cortas sobre un tema real.</p><small>Choose one world with four short questions about a real topic.</small></article>
-        <article><i>02</i><span>💬</span><h2>Da tu opinión</h2><p>Respondé con una frase y explicá por qué.</p><small>Answer with one sentence and explain why.</small></article>
-        <article><i>03</i><span>⭐</span><h2>Usá un apoyo</h2><p>Elegí una frase bilingüe para empezar o continuar.</p><small>Choose a bilingual phrase to start or continue.</small></article>
-        <article><i>04</i><span>❓</span><h2>Abrí un bloque</h2><p>Encontrá una pregunta extra y un reto simple para hablar.</p><small>Find one extra question and a simple speaking challenge.</small></article>
+        <article><i>01</i><span>🗺️</span><h2>Elige un mundo</h2><p>Cada mundo tiene cuatro preguntas cortas sobre un tema real.</p><small>Choose one world with four short questions about a real topic.</small></article>
+        <article><i>02</i><span>💬</span><h2>Da tu opinión</h2><p>Responde con una frase y explica por qué.</p><small>Answer with one sentence and explain why.</small></article>
+        <article><i>03</i><span>⭐</span><h2>Usa un apoyo</h2><p>Elige una frase bilingüe para empezar o continuar.</p><small>Choose a bilingual phrase to start or continue.</small></article>
+        <article><i>04</i><span>❓</span><h2>Abre un bloque</h2><p>Encuentra una pregunta extra y un reto simple para hablar.</p><small>Find one extra question and a simple speaking challenge.</small></article>
       </div>
       <section className="pr-golden-rule"><span>⚠️</span><div><small>REGLA DE ORO · GOLDEN RULE</small><h2>OPINIÓN <i>+</i> PORQUE <i>+</i> EJEMPLO <i>+</i> PREGUNTA</h2><p>Una respuesta simple y clara es suficiente. Lo importante es seguir hablando.</p></div></section>
       <div className="pr-center"><button className="pr-primary" onClick={()=>show("map")}>IR AL MAPA →</button></div>
     </section>}
 
     {screen==="map"&&<section className="pr-page pr-map">
-      <header className="pr-page-head"><span>MAPA DEL REINO · KINGDOM MAP</span><h1>Elegí una puerta del castillo.</h1><p>Cada puerta es un mundo. Abrila y descubrí qué pregunta está esperando adentro.</p></header>
+      <header className="pr-page-head"><span>MAPA DEL REINO · KINGDOM MAP</span><h1>Elige una puerta del castillo.</h1><p>Cada puerta es un mundo. Ábrela y descubre qué pregunta está esperando adentro.</p></header>
       <section className="pr-world-stage">
         <div className="pr-world-ribbon"><span>✦</span><div><small>REGIÓN 01 · REGION 01</small><b>LOS CATORCE REINOS</b></div><span>✦</span></div>
         <div className="pr-game-sky" aria-hidden="true"><span className="cloud-one">☁</span><span className="coin-one">●</span><span className="block-one">?</span><span className="cloud-two">☁</span><span className="coin-two">●</span></div>
@@ -73,7 +73,7 @@ function KingdomExperience({level}:{level:"A2"|"B1"}){
       </section>
       <div className="pr-map-title blocks"><div><span>02</span><h2>Torres extra <small>· Extra Towers</small></h2></div><b>{forbiddenBlocks.length} RETOS · FRASES CLARAS</b></div>
       <div className="pr-block-grid">{forbiddenBlocks.map((item,index)=><button key={item.name} onClick={()=>openBlock(index)} style={{"--block":item.color} as CSSProperties}><i>?</i><span>BLOQUE {String(index+1).padStart(2,"0")}</span><h3>{item.name}</h3><small className="pr-block-english-name"></small><b>ABRIR BLOQUE →</b></button>)}</div>
-      <div className="pr-map-actions"><button onClick={()=>show("powerups")}><span>⭐</span><div><b>POWER-UPS</b><small>Frases para ayudarte</small></div></button><button onClick={()=>show("boss")}><span>🏰</span><div><b>JEFE FINAL</b><small>El desafío {level}</small></div></button><button onClick={()=>show("feedback")}><span>📊</span><div><b>FEEDBACK</b><small>Registrá el resultado</small></div></button></div>
+      <div className="pr-map-actions"><button onClick={()=>show("powerups")}><span>⭐</span><div><b>POWER-UPS</b><small>Frases para ayudarte</small></div></button><button onClick={()=>show("boss")}><span>🏰</span><div><b>JEFE FINAL</b><small>El desafío {level}</small></div></button><button onClick={()=>show("feedback")}><span>📊</span><div><b>FEEDBACK</b><small>Registra el resultado</small></div></button></div>
     </section>}
 
     {screen==="topic"&&<section className="pr-page pr-topic-page" style={{"--topic":topic.color} as CSSProperties}>
@@ -90,36 +90,36 @@ function KingdomExperience({level}:{level:"A2"|"B1"}){
         </div>
       </section>
       <div className="pr-question-list">{topic.questions.map((question,index)=><article key={question}><span>{String(index+1).padStart(2,"0")}</span><div className="pr-question-copy"><small>PREGUNTA · QUESTION</small><h2>{question}</h2></div><div className={`pr-question-character sprite-${index+1}`} style={{"--character-sheet":`url(${questionCharacterSheets[topicIndex]})`} as CSSProperties} aria-hidden="true"><i>✦</i><span/></div></article>)}</div>
-      <section className="pr-speaking-kit"><header><span>🧰</span><div><small>APOYO {level}</small><h2>{content.answerGuide}</h2><p>Elegí una o dos frases y agregá tu idea.</p></div></header><div>{supportPhrases.map(pair=><Pair value={pair} key={pair[0]}/>)}</div></section>
+      <section className="pr-speaking-kit"><header><span>🧰</span><div><small>APOYO {level}</small><h2>{content.answerGuide}</h2><p>Elige una o dos frases y agrega tu idea.</p></div></header><div>{supportPhrases.map(pair=><Pair value={pair} key={pair[0]}/>)}</div></section>
       <footer className="pr-bottom-nav"><button onClick={()=>openTopic((topicIndex-1+topics.length)%topics.length)}>← MUNDO ANTERIOR</button><button className="random" onClick={randomTopic}>🎲 OTRO MUNDO</button><button onClick={()=>openTopic((topicIndex+1)%topics.length)}>MUNDO SIGUIENTE →</button></footer>
     </section>}
 
     {screen==="block"&&<section className="pr-page pr-block-page" style={{"--block":block.color} as CSSProperties}>
       <header className="pr-inside-head"><button onClick={()=>show("map")}>← VOLVER AL MAPA</button><span>BLOQUE {String(blockIndex+1).padStart(2,"0")} / {forbiddenBlocks.length}</span></header>
       <section className="pr-block-card"><div className="pr-big-question">?</div><small>BLOQUE EXTRA · EXTRA BLOCK</small><h1>{block.name}</h1><span className="pr-block-page-en"></span><p>{block.question}</p><aside><b>🎯 RETO DE EXPRESIÓN · SPEAKING CHALLENGE</b><Pair value={block.challenge}/></aside></section>
-      <section className="pr-block-support"><div><small>RECURSOS · SUPPORT</small><h2>Decilo con una frase clara.</h2></div><div>{supportPhrases.slice(0,6).map(pair=><Pair value={pair} key={pair[0]}/>)}</div></section>
+      <section className="pr-block-support"><div><small>RECURSOS · SUPPORT</small><h2>Dilo con una frase clara.</h2></div><div>{supportPhrases.slice(0,6).map(pair=><Pair value={pair} key={pair[0]}/>)}</div></section>
       <footer className="pr-bottom-nav"><button onClick={()=>openBlock((blockIndex-1+forbiddenBlocks.length)%forbiddenBlocks.length)}>← ANTERIOR</button><button className="random" onClick={randomBlock}>❓ OTRO BLOQUE</button><button onClick={()=>openBlock((blockIndex+1)%forbiddenBlocks.length)}>SIGUIENTE →</button></footer>
     </section>}
 
     {screen==="powerups"&&<section className="pr-page pr-powerups">
       <header className="pr-inside-head"><button onClick={()=>show("map")}>← VOLVER AL MAPA</button><span>FRASES PARA CONVERSAR · {level}</span></header>
-      <header className="pr-page-head"><span>⭐ POWER-UPS</span><h1>Frases para seguir hablando.</h1><p>Elegí una estructura y completala con tu idea.</p></header>
+      <header className="pr-page-head"><span>⭐ POWER-UPS</span><h1>Frases para seguir hablando.</h1><p>Elige una estructura y complétala con tu idea.</p></header>
       <div className="pr-power-grid">{powerUps.map((item,index)=><article key={item.name} style={{"--power":item.color} as CSSProperties}><span className="pr-power-number">{String(index+1).padStart(2,"0")}</span><i>{item.emoji}</i><h2>{item.name}</h2><small>{item.english}</small><div><b>{item.phrase}</b><span>{item.translation}</span></div></article>)}</div>
       <section className="pr-formula"><small>FÓRMULA {level}</small><h2>{content.formula}</h2></section>
     </section>}
 
     {screen==="boss"&&<section className="pr-page pr-boss">
       <header className="pr-inside-head"><button onClick={()=>show("map")}>← VOLVER AL MAPA</button><span>🏰 JEFE FINAL · FINAL BOSS</span></header>
-      <header className="pr-page-head"><span>DESAFÍO FINAL</span><h1>La última puerta.</h1><p>Elegí tres mundos y una torre extra. Después completá el desafío.</p></header>
-      <section className="pr-boss-layout"><div className="pr-boss-reflection"><small>PRIMERO RESPONDÉ · FIRST ANSWER</small>{content.closingConversation.map((question,index)=><article key={question}><span>{index+1}</span><p>{question}</p></article>)}</div><div className="pr-final-question">{level==="A2"?<><span>🔥 BOSS FINAL</span><h2>¿Qué tema es importante para vos y por qué?</h2><div><b>Tu respuesta necesita:</b><p>una opinión · una razón · un ejemplo · una pregunta</p></div></>:<><span>🔥 BOSS FINAL</span><h2>¿Qué parte de tu personalidad, tus valores o tus deseos sería difícil de defender si todos pudieran verla claramente?</h2><div><b>Tu respuesta necesita:</b><p>una postura · un matiz · una contradicción · una conclusión</p></div></>}</div></section>
-      <section className="pr-boss-phrases"><small>FRASES ÚTILES · USEFUL PHRASES</small><div>{[["Para mí…","For me…"],["Pienso que…","I think that…"],["La razón es que…","The reason is that…"],["Por ejemplo…","For example…"],["Entiendo, pero…","I understand, but…"],["No sé, necesito pensar.","I don’t know, I need to think."],["¿Y para vos?","And for you?"]].map(pair=><Pair value={pair as [string,string]} key={pair[0]}/>)}</div></section>
+      <header className="pr-page-head"><span>DESAFÍO FINAL</span><h1>La última puerta.</h1><p>Elige tres mundos y una torre extra. Después completa el desafío.</p></header>
+      <section className="pr-boss-layout"><div className="pr-boss-reflection"><small>PRIMERO RESPONDE · FIRST ANSWER</small>{content.closingConversation.map((question,index)=><article key={question}><span>{index+1}</span><p>{question}</p></article>)}</div><div className="pr-final-question">{level==="A2"?<><span>🔥 BOSS FINAL</span><h2>¿Qué tema es importante para ti y por qué?</h2><div><b>Tu respuesta necesita:</b><p>una opinión · una razón · un ejemplo · una pregunta</p></div></>:<><span>🔥 BOSS FINAL</span><h2>¿Qué parte de tu personalidad, tus valores o tus deseos sería difícil de defender si todos pudieran verla claramente?</h2><div><b>Tu respuesta necesita:</b><p>una postura · un matiz · una contradicción · una conclusión</p></div></>}</div></section>
+      <section className="pr-boss-phrases"><small>FRASES ÚTILES · USEFUL PHRASES</small><div>{[["Para mí…","For me…"],["Pienso que…","I think that…"],["La razón es que…","The reason is that…"],["Por ejemplo…","For example…"],["Entiendo, pero…","I understand, but…"],["No sé, necesito pensar.","I don’t know, I need to think."],["¿Y para ti?","And for you?"]].map(pair=><Pair value={pair as [string,string]} key={pair[0]}/>)}</div></section>
       <div className="pr-center"><button className="pr-primary" onClick={()=>show("feedback")}>IR AL FEEDBACK →</button></div>
     </section>}
 
     {screen==="feedback"&&<section className="pr-page pr-feedback">
       <header className="pr-inside-head"><button onClick={()=>show("map")}>← VOLVER AL MAPA</button><span>📊 RESULTADOS · RESULTS</span></header>
-      <header className="pr-page-head"><span>FEEDBACK DE LA AVENTURA</span><h1>Lo importante fue hablar.</h1><p>Registrá qué pudo hacer el alumno y qué necesita practicar.</p></header>
-      <div className="pr-feedback-grid">{feedbackLabels.map((label,index)=><label key={label[0]}><span>{String(index+1).padStart(2,"0")}</span><div><b>{label[0]}</b><small>{label[1]}</small><input value={feedback[index]} onChange={event=>setFeedback(current=>current.map((value,i)=>i===index?event.target.value:value))} placeholder="Escribí acá… / Write here…"/></div></label>)}</div>
+      <header className="pr-page-head"><span>FEEDBACK DE LA AVENTURA</span><h1>Lo importante fue hablar.</h1><p>Registra qué pudo hacer el alumno y qué necesita practicar.</p></header>
+      <div className="pr-feedback-grid">{feedbackLabels.map((label,index)=><label key={label[0]}><span>{String(index+1).padStart(2,"0")}</span><div><b>{label[0]}</b><small>{label[1]}</small><input value={feedback[index]} onChange={event=>setFeedback(current=>current.map((value,i)=>i===index?event.target.value:value))} placeholder="Escribe acá… / Write here…"/></div></label>)}</div>
       <section className="pr-win-message"><span>✓</span><p>Ganaste porque diste tu opinión, explicaste una razón y seguiste hablando aunque no conocías todas las palabras. 🎮</p></section>
       <div className="pr-center"><button className="pr-primary" onClick={()=>{setFeedback(feedbackLabels.map(()=>""));show("cover")}}>REINICIAR AVENTURA ↻</button></div>
     </section>}

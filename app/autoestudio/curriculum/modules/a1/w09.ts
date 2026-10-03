@@ -52,7 +52,7 @@ export const a1w09: Module = {
           head: ["Persona", "Pronombre + verbo", "English"],
           rows: [
             ["yo", "me levanto", "I get up"],
-            ["tú / vos", "te levantas / te levantás", "you get up"],
+            ["tú", "te levantas", "you get up"],
             ["usted, él, ella", "se levanta", "you (formal) / he / she gets up"],
             ["nosotros, nosotras", "nos levantamos", "we get up"],
             ["vosotros, vosotras (España)", "os levantáis", "you (plural, Spain) get up"],

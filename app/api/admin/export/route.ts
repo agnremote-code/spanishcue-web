@@ -23,6 +23,6 @@ export async function GET(request: Request) {
     });
   } catch (error) {
     const code = error instanceof Error && error.message.startsWith("EXPORT_COUNT_MISMATCH") ? error.message : "EXPORT_FAILED";
-    return Response.json({ error: "No pudimos exportar la base. Probá de nuevo.", code }, { status: 503, headers: { "cache-control": "private, no-store" } });
+    return Response.json({ error: "No pudimos exportar la base. Prueba de nuevo.", code }, { status: 503, headers: { "cache-control": "private, no-store" } });
   }
 }

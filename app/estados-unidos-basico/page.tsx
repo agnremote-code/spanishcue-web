@@ -73,7 +73,7 @@ export default function EstadosUnidosBasico(){
     </section>}
 
     {screen==="atlas"&&<section className="us-atlas">
-      <header className="us-atlas-head"><div><span>EL GRAN VIAJE · THE BIG TRIP</span><h1>Elegí una parada.<br/><em>Empezá a hablar.</em></h1></div><div><p>Catorce lugares reales y seis temas cotidianos. Cada parada abre seis preguntas A1, audio, respuestas rápidas y vocabulario bilingüe.</p><span className="us-en">Fourteen real places and six everyday themes. Every stop opens six A1 questions, audio, quick answers and bilingual vocabulary.</span><button onClick={surprise}><Glyph name="shuffle"/> ELEGIR POR MÍ · PICK FOR ME</button></div></header>
+      <header className="us-atlas-head"><div><span>EL GRAN VIAJE · THE BIG TRIP</span><h1>Elige una parada.<br/><em>Empieza a hablar.</em></h1></div><div><p>Catorce lugares reales y seis temas cotidianos. Cada parada abre seis preguntas A1, audio, respuestas rápidas y vocabulario bilingüe.</p><span className="us-en">Fourteen real places and six everyday themes. Every stop opens six A1 questions, audio, quick answers and bilingual vocabulary.</span><button onClick={surprise}><Glyph name="shuffle"/> ELEGIR POR MÍ · PICK FOR ME</button></div></header>
       <div className="us-tools"><div><button className={filter==="todo"?"active":""} onClick={()=>setNextFilter("todo")}>TODO · ALL</button><button className={filter==="lugar"?"active":""} onClick={()=>setNextFilter("lugar")}>MAPA · PLACES</button><button className={filter==="tema"?"active":""} onClick={()=>setNextFilter("tema")}>TEMAS · TOPICS</button></div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar lugar o tema · Search"/></label></div>
 
       <section className="us-explorer">
@@ -115,7 +115,7 @@ export default function EstadosUnidosBasico(){
           <div className="us-question-seal" aria-hidden="true"><Seal stop={active}/></div>
         </section>
 
-        <section className="us-fast-answer"><header><span>1 · RESPUESTA RÁPIDA · QUICK ANSWER</span><p>Tocá una opción para empezar. Después podés cambiarla.</p></header><div>{active.quick.map(pair=><button key={pair.es} onClick={()=>add(pair)}><b>{pair.es}</b><small className="us-en">{pair.en}</small><i>+</i></button>)}</div></section>
+        <section className="us-fast-answer"><header><span>1 · RESPUESTA RÁPIDA · QUICK ANSWER</span><p>Toca una opción para empezar. Después puedes cambiarla.</p></header><div>{active.quick.map(pair=><button key={pair.es} onClick={()=>add(pair)}><b>{pair.es}</b><small className="us-en">{pair.en}</small><i>+</i></button>)}</div></section>
 
         <section className="us-builder-tools">
           <button className="us-starter" onClick={()=>add(starters[question])}><span>2 · COMIENZO · STARTER</span><b>{starters[question].es}</b><small className="us-en">{starters[question].en}</small><i><Glyph name="plus"/> AGREGAR · ADD</i></button>
@@ -123,14 +123,14 @@ export default function EstadosUnidosBasico(){
         </section>
 
         <section className="us-answer-lab" aria-live="polite">
-          <header><div><span>TU RESPUESTA · YOUR ANSWER</span><h2>Construí una frase y decila en voz alta.</h2><p className="us-en">Build a sentence and say it out loud.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="trash"/> BORRAR</button></div></header>
-          <div className={`us-answer-canvas ${answerParts.length?"has-answer":""}`}>{answerParts.length?answerParts.map((pair,index)=><button key={`${pair.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{pair.es}</b><small className="us-en">{pair.en}</small></button>):<p><b>Tocá una respuesta rápida, un comienzo o una palabra.</b><span className="us-en">Tap a quick answer, starter or word.</span></p>}</div>
+          <header><div><span>TU RESPUESTA · YOUR ANSWER</span><h2>Construye una frase y dila en voz alta.</h2><p className="us-en">Build a sentence and say it out loud.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="trash"/> BORRAR</button></div></header>
+          <div className={`us-answer-canvas ${answerParts.length?"has-answer":""}`}>{answerParts.length?answerParts.map((pair,index)=><button key={`${pair.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{pair.es}</b><small className="us-en">{pair.en}</small></button>):<p><b>Toca una respuesta rápida, un comienzo o una palabra.</b><span className="us-en">Tap a quick answer, starter or word.</span></p>}</div>
           {answerParts.length>0&&<div className="us-readout"><b>{answerEs}</b><span className="us-en">{answerEn}</span></div>}
         </section>
 
         <section className="us-wordbank"><header><span>WORDBANK DE LA PARADA</span><h2>Ocho palabras para seguir hablando.</h2><p className="us-en">Eight words to keep talking.</p></header><div>{active.words.map((pair,index)=><button key={pair.es} onClick={()=>add(pair)}><span>{String(index+1).padStart(2,"0")}</span><b>{pair.es}</b><small className="us-en">{pair.en}</small><i>+</i></button>)}</div></section>
 
-        <section className="us-speaking-moves"><header><span>OTRA VUELTA · ONE MORE ROUND</span><h2>Elegí un desafío para hablar más.</h2></header><div>{speakingMoves.map((move,index)=><button key={move.es}><span>{index+1}</span><b>{move.es}</b><small className="us-en">{move.en}</small></button>)}</div></section>
+        <section className="us-speaking-moves"><header><span>OTRA VUELTA · ONE MORE ROUND</span><h2>Elige un desafío para hablar más.</h2></header><div>{speakingMoves.map((move,index)=><button key={move.es}><span>{index+1}</span><b>{move.es}</b><small className="us-en">{move.en}</small></button>)}</div></section>
 
         <nav className="us-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{active.questions.map((_,index)=><button key={index} className={question===index?"active":""} onClick={()=>changeQuestion(index)} aria-label={`Pregunta ${index+1}`}>{index+1}</button>)}</div><button onClick={()=>question===5?surprise():changeQuestion(question+1)}>{question===5?"OTRA PARADA · NEXT STOP →":"SIGUIENTE · NEXT →"}</button></nav>
       </div>

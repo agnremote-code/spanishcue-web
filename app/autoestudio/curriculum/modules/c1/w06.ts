@@ -339,11 +339,11 @@ export const c1w06: Module = {
     "script": [
       {
         "speaker": "a",
-        "text": "Mirá, yo no digo que no hayan trabajado. Digo que venimos avisando desde julio y todavía no sabemos cuándo podremos usar el ascensor con confianza. Ayer mi madre canceló una consulta porque no quería quedarse encerrada otra vez. Hemos llegado a organizar turnos para acompañarla, y eso no puede convertirse en la solución permanente. Cuando leo que el problema está prácticamente resuelto, siento que nuestra experiencia queda fuera del informe."
+        "text": "Mira, yo no digo que no hayan trabajado. Digo que venimos avisando desde julio y todavía no sabemos cuándo podremos usar el ascensor con confianza. Ayer mi madre canceló una consulta porque no quería quedarse encerrada otra vez. Hemos llegado a organizar turnos para acompañarla, y eso no puede convertirse en la solución permanente. Cuando leo que el problema está prácticamente resuelto, siento que nuestra experiencia queda fuera del informe."
       },
       {
         "speaker": "b",
-        "text": "Entiendo el enfado, pero dejame aclarar una cosa. Tenemos cambiado el motor y revisados los sensores; ahora la empresa está comprobando el cuadro eléctrico. Se va avanzando, aunque no al ritmo que quisiéramos. Yo también vivo aquí y tampoco puedo garantizar lo que no sé. Lo que me preocupa es que se ande diciendo que la comisión cobró por no hacer nada. Podemos cuestionar la gestión sin inventar una intención que nadie ha demostrado."
+        "text": "Entiendo el enfado, pero déjame aclarar una cosa. Tenemos cambiado el motor y revisados los sensores; ahora la empresa está comprobando el cuadro eléctrico. Se va avanzando, aunque no al ritmo que quisiéramos. Yo también vivo aquí y tampoco puedo garantizar lo que no sé. Lo que me preocupa es que se ande diciendo que la comisión cobró por no hacer nada. Podemos cuestionar la gestión sin inventar una intención que nadie ha demostrado."
       },
       {
         "speaker": "a",

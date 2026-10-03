@@ -55,7 +55,7 @@ export const a1w12: Module = {
           head: ["(para aclarar)", "pronombre", "+ una cosa / infinitivo", "+ varias cosas"],
           rows: [
             ["a mí", "me", "gusta el cine", "gustan las comedias"],
-            ["a ti / a vos", "te", "gusta bailar", "gustan los perros"],
+            ["a ti", "te", "gusta bailar", "gustan los perros"],
             ["a él / a ella / a usted", "le", "gusta la música", "gustan los videojuegos"],
             ["a nosotros / a nosotras", "nos", "gusta cocinar", "gustan las baleadas"],
             ["a vosotros / a vosotras", "os", "gusta el fútbol", "gustan los conciertos"],

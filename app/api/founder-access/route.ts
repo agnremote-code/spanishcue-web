@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       ? body.name.trim().slice(0, 80)
       : null;
     if (!validEmail(normalizedEmail)) {
-      return Response.json({ message: "Ingresá un email válido." }, { status: 400 });
+      return Response.json({ message: "Ingresa un email válido." }, { status: 400 });
     }
 
     const offer = await readOffer();
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
     );
   } catch {
     return Response.json(
-      { message: "No pudimos reservar tu lugar. Intentá nuevamente." },
+      { message: "No pudimos reservar tu lugar. Inténtalo de nuevo." },
       { status: 503 },
     );
   }

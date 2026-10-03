@@ -22,15 +22,15 @@ export default function ModoVsTiempoPage() {
           <div className="vmt-method-content">
             <header><small>PARA ANALIZAR CUALQUIER VERBO</small><h2>Tres preguntas, en este orden.</h2></header>
             <div>
-              <article><span>01</span><b>¿Cuál es el verbo conjugado?</b><p>Encontrá la forma exacta: viene, venga, viniera, abriría.</p></article>
-              <article><span>02</span><b>¿En qué modo está?</b><p>Decidí si presenta información, filtra la acción o dirige a otra persona.</p></article>
-              <article><span>03</span><b>¿En qué tiempo está?</b><p>Ubicá esa forma dentro de su modo y leé el contexto temporal.</p></article>
+              <article><span>01</span><b>¿Cuál es el verbo conjugado?</b><p>Encuentra la forma exacta: viene, venga, viniera, abriría.</p></article>
+              <article><span>02</span><b>¿En qué modo está?</b><p>Decide si presenta información, filtra la acción o dirige a otra persona.</p></article>
+              <article><span>03</span><b>¿En qué tiempo está?</b><p>Ubica esa forma dentro de su modo y lee el contexto temporal.</p></article>
             </div>
           </div>
         </GrammarStep>
       </section>
 
-      <footer><p>Ahora podés recorrer el sistema completo por modo o por tiempo: las dos rutas llegan a las mismas clases.</p><Link href="/sistema-verbal">★ ABRIR SISTEMA VERBAL →</Link></footer>
+      <footer><p>Ahora puedes recorrer el sistema completo por modo o por tiempo: las dos rutas llegan a las mismas clases.</p><Link href="/sistema-verbal">★ ABRIR SISTEMA VERBAL →</Link></footer>
     </main>
   );
 }

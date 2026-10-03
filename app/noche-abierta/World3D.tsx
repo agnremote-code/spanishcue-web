@@ -1009,8 +1009,8 @@ export default function World3D(props: WorldProps) {
     <div className="na-world-canvas" ref={mount} />
     <div className="na-fade" ref={fader} aria-hidden="true" />
     {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
-    <p id="na-world-help" className="na-sr">Barrio en 3D. Corré con W, A, S y D o con las flechas; Shift va más rápido, Alt camina y la barra espaciadora salta. Acercate a un lugar o a una persona y tocá E para interactuar, F para subir o bajar del taxi. Arrastrá con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
-    <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Tocá ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
+    <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
+    <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Toca ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
     {prompt && walking && <button ref={promptEl} type="button" tabIndex={-1} className="na-prompt3d" onClick={() => api.current?.interact(prompt.key as 'E' | 'F')}>
       <kbd>{prompt.key}</kbd><span>{prompt.verb}</span><small>{prompt.name}</small>
     </button>}

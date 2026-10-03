@@ -1,0 +1,11 @@
+{
+  "description": "Reviewed neutral Spanish copy baseline, 2026-10-03. Full content fingerprints retain the five non-wave3 banks; behavior assertions cover the three repaired banks. Catalog copy was reviewed in the separate regional/global batch; the full source hash preserves its byte identity.",
+  "catalogSource": "5b94a571a4bda405a5b65e8455b8d22382da1ca52f6ab254dd1ca4b4e60cb757",
+  "banks": {
+    "aunqueCambieElDato": "72f52f7ab31cb97f157ca1ee4a26e2b179dc65103ddac0cb38a9c3e2668a1716",
+    "conectaLaFrase": "36ea379d2ec6f533d2ca87f7a295b154dfe693aecc0f33b44f767631936ecd4f",
+    "ideasDentroDeIdeas": "26c00b7d448cc9a19c6081405381c545a808a1a25002b4418e0c1e988036ad74",
+    "siFueraDistinto": "31c9700a86a06eeb024ffc2a0fcce4c4d85290285c833b0c422c4d961c53241a",
+    "siPasaEsto": "8a70855c4be6ea6e98a9a25cce67989c0c121efe174fb52afd793203aaed9c9c"
+  }
+}

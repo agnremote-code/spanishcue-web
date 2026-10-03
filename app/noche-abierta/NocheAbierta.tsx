@@ -259,13 +259,13 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
       {exploring && <div className={`na-hint${in3d ? ' is-world' : ''}`} role="status">
         {finalAvailable(state)
-          ? <><p>La noche ya cambió. Podés seguir caminando o cerrar la noche.</p><button type="button" className="na-primary" onClick={() => setState(current => openFinal(current))}>Cerrar la noche</button></>
+          ? <><p>La noche ya cambió. Puedes seguir caminando o cerrar la noche.</p><button type="button" className="na-primary" onClick={() => setState(current => openFinal(current))}>Cerrar la noche</button></>
           : <p>{in3d
-            ? (state.visitOrder.length ? 'Seguí explorando. Acercate a algo que brille y tocá E.' : 'Caminá por el barrio. Acercate a un lugar y tocá E.')
-            : (state.visitOrder.length ? 'Elegí adónde seguir.' : 'Elegí adónde ir. No hace falta visitar todo.')}</p>}
+            ? (state.visitOrder.length ? 'Sigue explorando. Acércate a algo que brille y toca E.' : 'Camina por el barrio. Acércate a un lugar y toca E.')
+            : (state.visitOrder.length ? 'Elige adónde seguir.' : 'Elige adónde ir. No hace falta visitar todo.')}</p>}
       </div>}
       {walkingInside && !state.activity && <div className="na-hint is-world" role="status">
-        <p>{card?.location.hubPrompt} Acercate y tocá E. Para salir, andá a la puerta o tocá Esc.</p>
+        <p>{card?.location.hubPrompt} Acércate y toca E. Para salir, ve a la puerta o toca Esc.</p>
       </div>}
 
       {card && showCard && !(in3d && travelling) && !(hubInStreet && !card.activity) && <ActivityCard key={`${level}-${card.location.id}-${card.activity?.id ?? 'hub'}`} view={card} state={state} teacher={teacher} world={in3d}
@@ -325,7 +325,7 @@ function Arrival({ arrival, level, onLevel, teacher, onStart }: {
       <p className="na-kicker">{arrival.kicker}<span>Modo Play · 3D</span></p>
       <h1 id="na-arrival-title">{arrival.title}</h1>
       <p className="na-ts-lede">Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.</p>
-      <ul className="na-ts-verbs"><li>Caminá.</li><li>Entrá donde quieras.</li><li>Resolvé lo que pase.</li></ul>
+      <ul className="na-ts-verbs"><li>Camina.</li><li>Entra donde quieras.</li><li>Resuelve lo que pase.</li></ul>
       <div className="na-ts-level">
         <LevelPicker level={level} onChange={onLevel} />
         <p><b>{LEVEL_INFO[level].name}</b> · {LEVEL_INFO[level].demand}</p>
@@ -368,7 +368,7 @@ function LevelPicker({ level, onChange, compact = false }: { level: Level; onCha
 function PlacesList({ state, done, onOpen, onClose, disabled, walk = false }: { state: NightState; done: string[]; onOpen: (id: string) => void; onClose: () => void; disabled: boolean; walk?: boolean }) {
   return <section id="na-places" className="na-places" aria-label="Lugares del barrio">
     <div className="na-sheet-head"><h2>Lugares del barrio</h2><button type="button" className="na-close" onClick={onClose} aria-label="Cerrar la lista de lugares">×</button></div>
-    <p className="na-muted">{walk ? 'Elegí un lugar y vas caminando hasta ahí. Después tocá E.' : 'Cada lugar es un juego distinto. No hace falta visitar todo.'}</p>
+    <p className="na-muted">{walk ? 'Elige un lugar y vas caminando hasta ahí. Después toca E.' : 'Cada lugar es un juego distinto. No hace falta visitar todo.'}</p>
     <ul>{LOCATIONS.map(item => {
       const here = state.position === item.id && state.phase === 'encuentro';
       const status = here ? 'Estás acá' : done.includes(item.id) ? 'Ya fuiste' : state.visitOrder.includes(item.id) ? 'Pasaste' : '';
@@ -377,7 +377,7 @@ function PlacesList({ state, done, onOpen, onClose, disabled, walk = false }: { 
         {status && <em className={done.includes(item.id) ? 'is-done' : ''}>{done.includes(item.id) ? '✓ ' : ''}{status}</em>}
       </button></li>;
     })}</ul>
-    {disabled && <p className="na-muted">Terminá lo que estás haciendo para elegir otro lugar.</p>}
+    {disabled && <p className="na-muted">Termina lo que estás haciendo para elegir otro lugar.</p>}
   </section>;
 }
 
@@ -411,7 +411,7 @@ function MediaBlock({ media, onInspect }: { media: Media; onInspect: (id: string
         <button type="button" aria-expanded={item.seen} onClick={() => onInspect(item.id)}><b>{item.label}</b>{item.seen ? <span>{item.detail}</span> : <small>Mirar</small>}</button>
       </li>)}</ul>;
     case 'taboo':
-      return <div className="na-taboo"><p><span>Buscás</span>{media.need}</p><p><span>Sin decir</span>{media.banned.map(word => <s key={word}>{word}</s>)}</p></div>;
+      return <div className="na-taboo"><p><span>Buscas</span>{media.need}</p><p><span>Sin decir</span>{media.banned.map(word => <s key={word}>{word}</s>)}</p></div>;
     case 'people':
       return <ul className="na-people">{media.people.map(person => <li key={person.name}><b>{person.name}</b><span>{person.wants}</span><small>{person.reason}</small></li>)}</ul>;
     default:
@@ -612,7 +612,7 @@ function TeacherDesk({ state, onTrigger, onReset }: { state: NightState; onTrigg
       <p className="na-teacher-title">Cambiar la ciudad</p>
       {state.event ? <p className="na-muted">Ya pasó: {CITY_EVENTS.find(item => item.id === state.event!.id)?.title}.</p>
         : <div className="na-row">{CITY_EVENTS.map(item => <button type="button" key={item.id} className="na-secondary" disabled={!canTrigger || state.phase === 'encuentro'} onClick={() => onTrigger(item.id)}>{item.title}</button>)}</div>}
-      <p className="na-muted">Si no lo activás, pasa solo después del cuarto lugar.</p>
+      <p className="na-muted">Si no lo activas, pasa solo después del cuarto lugar.</p>
     </div>
     <div>
       <p className="na-teacher-title">Los juegos del barrio</p>

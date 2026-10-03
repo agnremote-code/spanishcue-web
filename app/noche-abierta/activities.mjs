@@ -49,7 +49,7 @@ export const ACTIVITY_TYPES = {
     beats(activity) {
       return [
         { kind: "talk", label: activity.who, media: quote(activity.title, activity.says), prompt: activity.ask },
-        ...activity.followUps.map((prompt, i) => ({ kind: "talk", label: i === 0 ? "Seguí la charla" : "Una más", prompt })),
+        ...activity.followUps.map((prompt, i) => ({ kind: "talk", label: i === 0 ? "Sigue la charla" : "Una más", prompt })),
       ];
     },
   },
@@ -90,7 +90,7 @@ export const ACTIVITY_TYPES = {
       return [
         { kind: "talk", label: "Situación", context: activity.situation, media: { type: "thread", messages: activity.thread, fresh: null }, prompt: activity.ask },
         { kind: "change", label: "Nuevo mensaje", media: { type: "thread", messages: activity.thread, fresh: activity.next }, prompt: activity.ask2 },
-        { kind: "task", label: "Respondé", prompt: activity.reply },
+        { kind: "task", label: "Responde", prompt: activity.reply },
       ];
     },
   },
@@ -98,8 +98,8 @@ export const ACTIVITY_TYPES = {
   observar: {
     beats(activity, progress) {
       return [
-        { kind: "inspect", label: "Mirá alrededor", context: activity.situation, media: { type: "items", items: activity.items.map((item) => ({ ...item, seen: progress.seen.includes(item.id) })) }, prompt: activity.ask },
-        { kind: "change", label: "Ahora sabés", context: activity.reveal, prompt: activity.ask2 },
+        { kind: "inspect", label: "Mira alrededor", context: activity.situation, media: { type: "items", items: activity.items.map((item) => ({ ...item, seen: progress.seen.includes(item.id) })) }, prompt: activity.ask },
+        { kind: "change", label: "Ahora sabes", context: activity.reveal, prompt: activity.ask2 },
       ];
     },
   },

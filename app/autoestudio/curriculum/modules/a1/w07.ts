@@ -51,7 +51,7 @@ export const a1w07: Module = {
           head: ["Persona", "tomar (-ar)", "comer (-er)", "vivir (-ir)"],
           rows: [
             ["yo", "tomo", "como", "vivo"],
-            ["tú / vos", "tomas / tomás", "comes / comés", "vives / vivís"],
+            ["tú", "tomas", "comes", "vives"],
             ["usted, él, ella", "toma", "come", "vive"],
             ["nosotros, nosotras", "tomamos", "comemos", "vivimos"],
             ["vosotros, vosotras", "tomáis", "coméis", "vivís"],

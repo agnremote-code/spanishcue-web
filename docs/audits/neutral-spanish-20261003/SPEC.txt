@@ -1,0 +1,903 @@
+RECONSTRUÍ Y TERMINÁ COMPLETAMENTE LA TAREA “RIOPLATENSE A NEUTRAL”.
+
+NO me pidas que vuelva a explicar el encargo.
+NO me pidas archivos ni una copia de la rama perdida.
+Tenemos suficiente información para reconstruirla correctamente.
+
+==================================================
+CONTEXTO DE RECUPERACIÓN — IMPORTANTE
+==================================================
+
+La ejecución anterior trabajaba sobre:
+
+codex/neutral-spanish-audit-20261002
+
+y reportó un commit LOCAL:
+
+1a5d2b0
+
+Ese commit nunca llegó a GitHub porque falló el push.
+
+Después el entorno temporal fue eliminado automáticamente.
+
+Ya se verificó externamente que:
+
+- `1a5d2b0` NO existe en GitHub;
+- la rama completa anterior no está disponible remotamente;
+- no hay que seguir perdiendo tiempo intentando recuperar ese commit inexistente.
+
+El checkpoint anterior informó aproximadamente:
+
+- 241 archivos modificados;
+- árbol local limpio al terminar ese checkpoint;
+- sin errores de sintaxis detectados;
+- trabajo realizado sobre:
+  - español visible;
+  - paradigmas gramaticales;
+  - audios/transcripciones cuando correspondía;
+  - política de variedad lingüística;
+  - regresiones/guardas automáticas;
+  - documentación del audit.
+
+También se había previsto documentación bajo algo equivalente a:
+
+docs/audits/neutral-spanish-20261002/
+
+incluyendo un RESUME.md.
+
+Si esos archivos no existen en el main actual, reconstruí documentación nueva.
+
+NO inventes que recuperaste el commit viejo.
+
+==================================================
+REGLA DE SEGURIDAD CRÍTICA PARA ESTA NUEVA EJECUCIÓN
+==================================================
+
+LOS WORKTREES DE LOS AGENTES SON EFÍMEROS.
+
+NO vuelvas a dejar trabajo importante únicamente local.
+
+Primero:
+
+1. `git fetch origin`
+2. inspeccioná CURRENT `origin/main`;
+3. inspeccioná PRs abiertos y posibles solapamientos;
+4. leé `AGENTS.md`;
+5. creá UNA rama nueva desde el main actual, por ejemplo:
+
+codex/neutral-spanish-audit-rebuild-20261003
+
+6. registrá el SHA base real.
+
+En este momento el último main observado era:
+
+43e4b3eb1dc76031481d2406a62b9210f0dd97e2
+
+PERO NO LO ASUMAS:
+volvé a consultar `origin/main` antes de crear la rama.
+
+MUY IMPORTANTE:
+
+Después de cada bloque coherente de trabajo:
+
+COMMIT + PUSH A LA RAMA REMOTA.
+
+Como mínimo hacé checkpoints remotos después de:
+
+- inventario/audit inicial;
+- UI/global copy;
+- lessons;
+- Autoestudio;
+- paradigmas/gramática;
+- audio/transcripciones;
+- excepciones + guardas;
+- QA final.
+
+NO esperes hasta el final para hacer el primer push.
+
+NO uses:
+- git reset --hard
+- git clean
+- git prune
+- git gc
+- reflog expire
+- checkout destructivo
+- force push innecesario
+
+==================================================
+OBJETIVO GLOBAL
+==================================================
+
+Auditar y reparar TODO SpanishCue para que:
+
+EL ESPAÑOL POR DEFECTO SEA:
+
+ESPAÑOL GENERAL / NEUTRAL INTERNACIONAL
+
+y NO español rioplatense por defecto.
+
+Esto aplica exclusivamente al contenido en ESPAÑOL.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+NO MODIFIQUES LA VERSIÓN EN INGLÉS.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+El inglés debe quedar intacto.
+
+Si un archivo contiene objetos como:
+
+es: ...
+en: ...
+
+modificá únicamente `es`.
+
+No “mejores”, reescribas, traduzcas, normalices ni reformatees el inglés.
+
+Agregá una comprobación automática que detecte cambios accidentales en el copy inglés cuando sea razonablemente posible.
+
+==================================================
+PRINCIPIO LINGÜÍSTICO
+==================================================
+
+Para instrucciones y comunicación directa con UN alumno:
+
+usar TÚ.
+
+Ejemplos:
+
+vos → tú
+sos → eres
+tenés → tienes
+querés → quieres
+podés → puedes
+venís → vienes
+hacés → haces
+sabés → sabes
+decís → dices
+pensás → piensas
+
+Imperativos:
+
+escuchá → escucha
+mirá → mira
+probá → prueba
+elegí → elige
+completá → completa
+arrastrá → arrastra
+tocá → toca
+marcá → marca
+escribí → escribe
+respondé → responde
+contá → cuenta
+compará → compara
+pensá → piensa
+imaginá → imagina
+seguí → sigue
+repetí → repite
+sentí → siente
+decilo → dilo
+hacelo → hazlo
+probalo → pruébalo
+contanos → cuéntanos
+ayudanos → ayúdanos
+
+Otros ejemplos:
+
+“Ahora vos” → “Ahora tú”
+“¿Qué pensás?” → “¿Qué piensas?”
+“Escuchá y elegí” → “Escucha y elige”
+“Probá otra vez” → “Prueba otra vez”
+“Decilo en voz alta” → “Dilo en voz alta”
+
+NO hagas búsqueda/reemplazo ciego.
+
+Reescribí gramaticalmente cada caso.
+
+Prestá especial atención a:
+
+- pronombres;
+- conjugaciones;
+- imperativos;
+- clíticos;
+- acentuación;
+- concordancia;
+- interrogativas;
+- instrucciones pedagógicas.
+
+==================================================
+ACENTUACIÓN
+==================================================
+
+Corregí también errores derivados de quitar voseo.
+
+Ejemplos obligatorios:
+
+AYUDANOS ❌
+AYÚDANOS ✅
+
+CONTANOS ❌
+CUÉNTANOS ✅
+
+DECILO ❌
+DILO ✅
+
+PROBÁ ❌
+PRUEBA ✅
+
+ESCUCHÁ ❌
+ESCUCHA ✅
+
+No basta con quitar tildes mecánicamente.
+
+==================================================
+NO CONVERTIR TODO A “ESPAÑOL DE ESPAÑA”
+==================================================
+
+El objetivo NO es español peninsular exclusivo.
+
+Es español internacional neutral.
+
+Para interacción individual:
+TÚ.
+
+Para plural y enseñanza gramatical completa:
+
+incluir y conservar cuando pedagógicamente corresponda:
+
+- vosotros / vosotras
+- ustedes
+
+Los paradigmas completos deben enseñar ambos correctamente.
+
+NO reemplaces todos los plurales por vosotros.
+
+NO elimines ustedes.
+
+==================================================
+PARADIGMAS GRAMATICALES
+==================================================
+
+Auditá las tablas y sistemas gramaticales completos.
+
+Especialmente:
+
+- Sistema Verbal;
+- conjugaciones A1–C2;
+- presente;
+- pasados;
+- futuro;
+- condicional;
+- subjuntivo;
+- imperativo;
+- pronombres;
+- posesivos;
+- artículos;
+- cualquier tabla reutilizable.
+
+Los paradigmas generales NO deben presentar `vos` como paradigma por defecto.
+
+Cuando sea una tabla internacional completa debería contemplar, según corresponda:
+
+yo
+tú
+él / ella / usted
+nosotros / nosotras
+vosotros / vosotras
+ellos / ellas / ustedes
+
+`vos` puede aparecer únicamente donde exista una razón pedagógica explícita.
+
+==================================================
+EXCEPCIONES QUE DEBEN CONSERVARSE
+==================================================
+
+NO elimines el rioplatense cuando SEA EL CONTENIDO QUE SE ESTÁ ENSEÑANDO.
+
+Conservar explícitamente:
+
+- Che Argento;
+- ARGENTO;
+- lecciones cuyo objetivo sea Argentina / rioplatense;
+- comparaciones tú vs. vos;
+- enseñanza explícita del voseo;
+- léxico argentino enseñado deliberadamente;
+- fonética rioplatense enseñada deliberadamente;
+- ejemplos marcados como argentinos;
+- diálogos auténticos argentinos;
+- citas auténticas;
+- transcripciones auténticas de hablantes argentinos;
+- materiales donde cambiar el voseo destruiría el objetivo pedagógico.
+
+IMPORTANTE:
+
+Que una historia ocurra en Argentina NO significa automáticamente que toda la UI pueda estar en rioplatense.
+
+Ejemplo:
+
+Un diálogo auténtico puede conservar:
+
+“¿Vos querés venir?”
+
+pero alrededor:
+
+botones
+instrucciones
+feedback
+hints
+navegación
+teacher notes generales
+
+deben seguir en español neutral, salvo que formen parte explícita de la enseñanza regional.
+
+==================================================
+METADATA DE EXCEPCIÓN
+==================================================
+
+Cuando la arquitectura lo permita, preferí una excepción explícita y verificable, por ejemplo:
+
+languageVariety: "rioplatense"
+
+o la convención equivalente ya existente.
+
+No dupliques arquitecturas si ya hay una forma canónica de marcar variedad.
+
+El objetivo es que el test automático pueda distinguir:
+
+1. contenido ordinario → neutral obligatorio;
+2. contenido regional intencional → permitido.
+
+==================================================
+ALCANCE — AUDITAR TODO EL PRODUCTO
+==================================================
+
+NO hagas solo la home.
+
+NO hagas solo unas pocas clases.
+
+Auditá TODO SpanishCue.
+
+Incluye, como mínimo:
+
+GLOBAL / PRODUCT UI
+- homepage
+- library
+- navegación
+- banners
+- novedades
+- botones
+- CTAs
+- modales
+- dialogs
+- tooltips
+- feedback
+- estados vacíos
+- errores
+- éxitos
+- ayuda
+- labels
+- placeholders
+- accesibilidad / aria cuando el texto sea español
+- login/signup español
+- cuenta
+- admin visible en español
+- reportes
+- pricing/checkout COPY en español
+- marketing/landing COPY en español
+
+NO cambies lógica de billing por esta tarea.
+NO cambies precios.
+NO cambies auth.
+Solo lenguaje donde corresponda.
+
+LECCIONES
+- Gramática
+- Conversación
+- Escucha
+- Fonética
+- Vocabulario
+- Países
+- Universos
+- Modo Play
+- Sistema Verbal
+- todas las clases tradicionales
+- clases multi-level
+- nuevos motores/familias
+
+CONTENIDO PEDAGÓGICO
+- títulos
+- subtítulos
+- prompts
+- instrucciones
+- preguntas
+- opciones
+- feedback
+- ejemplos
+- teacher notes
+- explicaciones
+- pistas
+- consejos
+- rubrics
+- desafíos finales
+- quizzes
+- producción oral
+- writing prompts
+- listening prompts
+
+AUTOESTUDIO
+Auditar TODO:
+
+app/autoestudio/
+
+incluyendo:
+
+A1
+A2
+B1
+B2
+C1
+C2
+
+y sus 120 semanas/módulos actuales.
+
+Revisar también:
+- curriculum
+- objectives
+- engine copy
+- share messages
+- alumno
+- profesor
+- progress UI
+- claim UI
+- landing
+- instrucciones
+
+==================================================
+AUDIO Y TRANSCRIPCIONES
+==================================================
+
+NO rompas sincronización audio/texto.
+
+Para cada texto relacionado con audio:
+
+primero determiná si es:
+
+A) UI/instrucción independiente del audio;
+B) transcript/script exacto de un asset existente;
+C) ejemplo regional intencional;
+D) texto generado a partir de una fuente regenerable.
+
+Reglas:
+
+- UI alrededor del audio → neutralizar.
+- Diálogo argentino intencional → conservar y marcar excepción.
+- Transcript de audio argentino auténtico → NO falsificarlo cambiando solo el texto.
+- Si un script NO es una excepción y el audio existente reproduce voseo, seguí el workflow CANÓNICO de generación de audio del repo para regenerar SOLO lo necesario.
+- No uses runtime browser TTS si el sistema no lo usa.
+- No inventes que un audio fue validado por humanos.
+- Verificá que los assets existan, decodifiquen y sigan referenciados.
+- No dejes transcript y audio diciendo cosas distintas.
+
+Si regenerar un audio no es viable o seguro, documentá exactamente el caso antes de alterar su transcript.
+
+==================================================
+BUSCAR MÁS QUE ESTAS PALABRAS
+==================================================
+
+Usá búsquedas amplias y revisión contextual.
+
+Familias de términos a revisar:
+
+vos
+sos
+tenés
+querés
+podés
+venís
+hacés
+sabés
+decís
+pensás
+creés
+sentís
+seguís
+elegís
+
+y variantes imperativas:
+
+mirá
+escuchá
+probá
+elegí
+completá
+arrastrá
+tocá
+marcá
+escribí
+respondé
+contá
+compará
+pensá
+imaginá
+seguí
+repetí
+sentí
+decí
+
+con clíticos:
+
+decilo
+hacelo
+miralo
+probalo
+contame
+decime
+mostrame
+contanos
+ayudanos
+
+También frases estructurales como:
+
+ahora vos
+¿qué pensás?
+¿qué harías vos?
+¿cómo lo dirías vos?
+si querés
+cuando quieras — NO cambiar si ya es neutral
+dale — revisar contexto, no reemplazar ciegamente
+
+NO consideres cualquier substring “vos” como error:
+`vosotros` NO es voseo.
+
+Usá word boundaries y revisión contextual.
+
+==================================================
+NO HACER REPLACE GLOBAL CIEGO
+==================================================
+
+PROHIBIDO resolver esta tarea con algo como:
+
+replaceAll("vos", "tú")
+
+o sustituciones masivas equivalentes.
+
+Eso rompe:
+
+- conjugaciones
+- pronombres
+- clíticos
+- audio
+- ejemplos regionales
+- vosotros
+- citas
+- intención pedagógica
+
+Cada caso debe clasificarse.
+
+==================================================
+REGRESSION GUARD
+==================================================
+
+Implementá un guard/test reutilizable para impedir que vuelva a entrar voseo no autorizado.
+
+Debe revisar contenido español ordinario y detectar, entre otros:
+
+“Escuchá”
+“Probá”
+“Decilo”
+“Ahora vos”
+“¿Qué pensás?”
+“Contanos”
+“Ayudanos”
+
+y variantes relevantes.
+
+Debe:
+
+- ignorar el inglés;
+- ignorar excepciones explícitamente autorizadas;
+- no marcar `vosotros` como `vos`;
+- generar mensajes útiles indicando archivo/string;
+- ejecutarse dentro de la suite normal o de una suite canónica de contenido.
+
+NO hagas un test tan frágil que obligue a añadir excepciones falsas solo para hacerlo pasar.
+
+==================================================
+PROTEGER EL INGLÉS
+==================================================
+
+Quiero una comprobación explícita de que EL INGLÉS NO FUE TOCADO.
+
+Antes de modificar contenido bilingüe:
+
+- identificá las fuentes `en`;
+- conservá sus valores.
+
+Al final:
+
+- compará contra el base SHA;
+- detectá cambios en strings/objetos ingleses;
+- revertí cualquier cambio accidental en inglés.
+
+Cambios técnicos inevitables de estructura pueden existir únicamente si NO modifican el copy inglés.
+
+En el reporte final indicá explícitamente:
+
+ENGLISH COPY: UNCHANGED
+
+solo si realmente lo verificaste.
+
+==================================================
+AUDIT DOCUMENTATION
+==================================================
+
+Creá:
+
+docs/audits/neutral-spanish-20261003/
+
+con al menos:
+
+AUDIT.md
+EXEMPTIONS.md
+RESUME.md
+
+AUDIT.md:
+- alcance escaneado;
+- categorías;
+- archivos modificados;
+- familias de errores encontradas;
+- conteos aproximados;
+- principales áreas reparadas;
+- paradigmas;
+- audios/transcripciones;
+- pruebas.
+
+EXEMPTIONS.md:
+- cada familia/archivo que conserva rioplatense;
+- por qué se conserva;
+- cómo lo reconoce el guard automático.
+
+RESUME.md:
+checkpoint reanudable para otra sesión:
+- branch;
+- base SHA;
+- último remote SHA;
+- batches terminados;
+- batches faltantes;
+- tests;
+- QA;
+- próximo comando/paso exacto.
+
+ACTUALIZÁ RESUME.md EN CADA CHECKPOINT GRANDE Y HACÉ PUSH.
+
+==================================================
+ORDEN DE IMPLEMENTACIÓN
+==================================================
+
+Trabajá por lotes para no perder el trabajo:
+
+BATCH 0
+- current main
+- open PRs
+- AGENTS.md
+- inventory
+- audit report inicial
+- exception model
+- regression scanner skeleton
+→ COMMIT + PUSH
+
+BATCH 1
+- global UI
+- homepage/library/navigation
+- dialogs/buttons/feedback/account/report/admin
+- marketing Spanish
+→ TEST + COMMIT + PUSH
+
+BATCH 2
+- grammar/system verbal/paradigms
+→ TEST + COMMIT + PUSH
+
+BATCH 3
+- conversation + vocabulary + countries + universes + Modo Play
+→ TEST + COMMIT + PUSH
+
+BATCH 4
+- phonetics + listening + audio-related content
+→ validate assets
+→ COMMIT + PUSH
+
+BATCH 5
+- Autoestudio A1–C2 completo
+→ TEST + COMMIT + PUSH
+
+BATCH 6
+- remaining lessons/content
+- exceptions
+- global scanner
+- English-copy verification
+→ COMMIT + PUSH
+
+BATCH 7
+- QA + full suite + fixes
+→ FINAL COMMIT + PUSH
+
+Podés reorganizar batches si la arquitectura actual sugiere una división mejor,
+pero NO vuelvas a acumular cientos de archivos sin ningún push remoto.
+
+==================================================
+QA
+==================================================
+
+Hacé QA representativo de:
+
+- homepage/library
+- gramática
+- conversación
+- fonética
+- escucha
+- vocabulario
+- Modo Play
+- Autoestudio A1
+- Autoestudio A2
+- Autoestudio B1
+- Autoestudio B2
+- Autoestudio C1
+- Autoestudio C2
+- reportes
+- cuenta/admin
+
+Desktop + mobile donde sea relevante.
+
+No bloquees toda la tarea porque una vista premium no pueda abrirse manualmente.
+
+Si producción/staging está protegida:
+
+- usá tests;
+- inspección de source;
+- local preview segura;
+- fixtures;
+- smoke automatizado;
+- mecanismos temporales de QA SOLO en desarrollo si son seguros y se eliminan antes del merge.
+
+NO debilites auth de producción.
+
+==================================================
+TESTS FINALES
+==================================================
+
+Como mínimo:
+
+- targeted linguistic guard
+- targeted lesson/content tests
+- Autoestudio tests
+- audio manifest/assets validation cuando aplique
+- npm test
+- npm run lint
+- npx tsc --noEmit
+- npm run build
+- npm run validate:artifact
+- git diff --check
+
+Corregí automáticamente fallos razonables causados por esta tarea.
+
+No tapes fallos reales con exclusiones arbitrarias.
+
+==================================================
+NO ROMPER / NO MEZCLAR
+==================================================
+
+Preservá sin cambios funcionales:
+
+- billing
+- Paddle
+- PayPal
+- Firebase/auth
+- D1/schema
+- Teacher Share Pass
+- reportes
+- deployment workflows
+- analytics
+- login
+- permisos
+- student tracking
+
+Esta es una tarea LINGÜÍSTICA y de contenido.
+
+No metas refactors no relacionados.
+
+No modifiques:
+- drizzle/**
+- db/schema.ts
+- secrets
+- workflows
+
+salvo que exista una razón absolutamente indispensable para el guard lingüístico; preferí no tocar infraestructura.
+
+==================================================
+WORKFLOW FINAL — ESTA VEZ TERMINALO
+==================================================
+
+La instrucción vieja de “no merge / no deploy” era para PAUSAR la ejecución anterior.
+
+YA NO APLICA.
+
+La autorización actual del repositorio permite completar el workflow entero.
+
+Cuando todo esté terminado:
+
+1. verificá que TODO esté pushed;
+2. abrí UN PR NON-DRAFT;
+3. no abras PRs competidores;
+4. dejá CI + Auto Merge verificarlo;
+5. si CI falla, corregí EN LA MISMA RAMA/PR;
+6. verificá el SHA mergeado;
+7. staging automático;
+8. staging smoke;
+9. producción mediante el workflow oficial de Cloudflare;
+10. production smoke;
+11. comprobación final live.
+
+NO hagas merge manual.
+NO pushes directo a main.
+NO uses un deploy alternativo.
+
+==================================================
+REPORTE FINAL OBLIGATORIO
+==================================================
+
+No digas simplemente “terminado”.
+
+Reportá:
+
+- branch utilizada;
+- base SHA;
+- número de PR;
+- merge SHA;
+- cantidad de archivos cambiados;
+- categorías auditadas;
+- ejemplos representativos antes → después;
+- excepciones rioplatenses preservadas;
+- paradigma tú/usted/nosotros/vosotros/ustedes verificado;
+- Autoestudio A1–C2 verificado;
+- audio/transcripciones: qué cambió y qué se preservó;
+- regression guard implementado;
+- ENGLISH COPY: UNCHANGED, solo si está comprobado;
+- tests;
+- lint;
+- typecheck;
+- build;
+- artifact validation;
+- staging smoke;
+- production smoke;
+- URL live.
+
+==================================================
+NO ME PIDAS MÁS DATOS
+==================================================
+
+No necesito revisar:
+
+- ramas
+- diffs
+- PRs
+- screenshots
+- previews
+- commits
+- staging
+
+No me pidas aprobación para pasos técnicos normales.
+
+No intentes recuperar indefinidamente `1a5d2b0`.
+
+Reconstruí desde el CURRENT main con estas reglas.
+
+PRIORIDAD:
+
+1. corrección lingüística;
+2. preservar excepciones pedagógicas;
+3. inglés intacto;
+4. audio/texto sincronizado;
+5. checkpoints REMOTOS frecuentes;
+6. no romper funcionalidad;
+7. terminar hasta producción.
+
+EMPEZÁ AHORA.

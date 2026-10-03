@@ -25,9 +25,9 @@ type ContextSupport = Omit<typeof c1Support, "cards"> & {
 };
 
 const rounds = {
-  quick: { label: "RONDA RÁPIDA", copy: "Elegí primero. Explicá en una frase.", minutes: 10 },
-  ambiguous: { label: "MÁS CONTEXTO", copy: "Buscá excepciones, dudas y condiciones.", minutes: 13 },
-  deep: { label: "A FONDO", copy: "Defendé el límite y escuchá otra lectura.", minutes: 13 },
+  quick: { label: "RONDA RÁPIDA", copy: "Elige primero. Explica en una frase.", minutes: 10 },
+  ambiguous: { label: "MÁS CONTEXTO", copy: "Busca excepciones, dudas y condiciones.", minutes: 13 },
+  deep: { label: "A FONDO", copy: "Defiende el límite y escucha otra lectura.", minutes: 13 },
 } as const;
 
 export default function RedFlagGame({ level }: { level: Level }) {
@@ -148,7 +148,7 @@ function RedFlagActivity({ level }: { level: Level }) {
           <p>NO HAY UNA RESPUESTA CORRECTA</p>
           <h1>{config.warmup}</h1>
           <div className="rf-intro-notes">
-            {(support?.intro ?? advanced?.intro ?? ["Elegí una señal verde.", "Elegí una señal roja.", "Decí una que depende del contexto."]).map(note => <span key={note}>{note}</span>)}
+            {(support?.intro ?? advanced?.intro ?? ["Elige una señal verde.", "Elige una señal roja.", "Di una que depende del contexto."]).map(note => <span key={note}>{note}</span>)}
           </div>
           <button className="rf-primary" onClick={() => startAt(0)}>EMPEZAR LA RONDA →</button>
           {(support || advanced) && <details className={advanced ? "rf-c1-teacher" : "rf-a1-teacher"}><summary>Para quien enseña</summary><p>{support?.teacher ?? advanced?.teacher}</p></details>}
@@ -196,7 +196,7 @@ function RedFlagActivity({ level }: { level: Level }) {
 
           {choice && !advanced && (
             <div className="rf-why">
-              <div><span>AHORA EXPLICÁ</span><h2>¿POR QUÉ?</h2></div>
+              <div><span>AHORA EXPLICA</span><h2>¿POR QUÉ?</h2></div>
               <button onClick={revealFollowUp} aria-expanded={Boolean(followUps[index])}>
                 {followUps[index] ? "OCULTAR REPREGUNTA" : "ABRIR REPREGUNTA OPCIONAL"}
               </button>
@@ -253,7 +253,7 @@ function RedFlagActivity({ level }: { level: Level }) {
         <section className="rf-panel rf-finale">
           <div className="rf-eyebrow">CONVERSACIÓN FINAL · 5 MIN</div>
           <h1>{support?.finaleTitle ?? advanced?.finaleTitle ?? "Tu mapa de señales"}</h1>
-          <p>{support?.finaleCopy ?? advanced?.finaleCopy ?? "No hace falta estar de acuerdo. Elegí, compará y defendé cada respuesta."}</p>
+          <p>{support?.finaleCopy ?? advanced?.finaleCopy ?? "No hace falta estar de acuerdo. Elige, compara y defiende cada respuesta."}</p>
           <div className="rf-finale-grid">
             {config.finale.map((prompt: string, promptIndex: number) => (
               <article key={prompt}>
@@ -277,7 +277,7 @@ function RedFlagActivity({ level }: { level: Level }) {
           </section>}
           {advanced && <section className="rf-c1-history" aria-label="Tu recorrido de juicios">
             <h2>Vuelve a tus decisiones</h2>
-            {Object.keys(answers).length === 0 && <p>{c2 ? "Todavía no has elegido ninguna señal. Abre una situación y completa sus tres fases para probar tu protocolo." : "Todavía no elegiste ninguna señal. Abrí una situación para probar tus criterios con un caso concreto."}</p>}
+            {Object.keys(answers).length === 0 && <p>{c2 ? "Todavía no has elegido ninguna señal. Abre una situación y completa sus tres fases para probar tu protocolo." : "Todavía no elegiste ninguna señal. Abre una situación para probar tus criterios con un caso concreto."}</p>}
             {Object.entries(answers).map(([answerIndex, initial]) => {
               const itemIndex = Number(answerIndex);
               return <article key={answerIndex}>

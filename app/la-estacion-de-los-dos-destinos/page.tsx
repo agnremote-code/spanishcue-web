@@ -138,7 +138,7 @@ function Quiz({
                 <strong>
                   {correct
                     ? "✓ Sí. Esa es la idea."
-                    : "Revisá la escena y probá otra vez."}
+                    : "Revisa la escena y prueba otra vez."}
                 </strong>
                 <p>{q.why}</p>
               </div>
@@ -204,10 +204,11 @@ function SentenceLab({ extra = false }: { extra?: boolean }) {
   return (
     <section className="od-sentence-lab">
       <header>
-        <span>TOCÁ CADA PIEZA</span>
+        <span>TOCA CADA PIEZA</span>
         <h2>La frase tiene un reparto</h2>
         <p>
-          Elegí una escena y tocá sus palabras para descubrir qué trabajo hacen.
+
+          Elige una escena y toca sus palabras para descubrir qué trabajo hacen.
         </p>
       </header>
       <div className="od-scene-tabs">
@@ -233,7 +234,7 @@ function SentenceLab({ extra = false }: { extra?: boolean }) {
             onClick={() => setPartIndex(i)}
           >
             <span>{text}</span>
-            <small>{partIndex === i ? role : "Tocá para explorar"}</small>
+            <small>{partIndex === i ? role : "Toca para explorar"}</small>
           </button>
         ))}
       </div>
@@ -256,7 +257,7 @@ const recipients = [
   { name: "a Ana", io: "le", pair: "se" },
   { name: "a Leo", io: "le", pair: "se" },
   { name: "a Ana y Eva", io: "les", pair: "se" },
-  { name: "a vos / a ti", io: "te", pair: "te" },
+  { name: "a ti", io: "te", pair: "te" },
   { name: "a nosotros", io: "nos", pair: "nos" },
 ];
 function DeliveryLab() {
@@ -265,14 +266,15 @@ function DeliveryLab() {
     [step, setStep] = useState(0);
   const o = parcels[object],
     r = recipients[recipient];
-  const label = recipient === 3 ? "a vos" : r.name;
+  const label = recipient === 3 ? "a ti" : r.name;
   return (
     <section className="od-delivery-lab">
       <header>
         <span>MESA DE ENVÍOS · AMPLIACIÓN GUIADA</span>
         <h2>Misma escena. Menos repeticiones.</h2>
         <p>
-          Cambiá el objeto o el destinatario y observá qué pronombre necesita
+
+          Cambia el objeto o el destinatario y observa qué pronombre necesita
           cambiar.
         </p>
       </header>
@@ -449,7 +451,7 @@ export default function ObjectAdventure() {
             SPANISHCUE · GRAMÁTICA A1 GUIADA
           </Link>
           <header className="sj-intro-heading">
-            <span>ANTES DE LA AVENTURA · ENTENDÉ LAS PIEZAS</span>
+            <span>ANTES DE LA AVENTURA · ENTIENDE LAS PIEZAS</span>
             <h1>
               Una cosa es la <em>palabra</em>.<br />
               Otra, su <em>función</em>.
@@ -503,7 +505,7 @@ export default function ObjectAdventure() {
             <GrammarStep
               number="02"
               eyebrow="PASO 2 · EJEMPLOS"
-              title="Probalo en una frase"
+              title="Pruébalo en una frase"
               accent="#52d9e8"
             >
               <SentenceLab />
@@ -517,9 +519,10 @@ export default function ObjectAdventure() {
               <section className="od-beginner-note">
                 <h2>Una regla por vez</h2>
                 <p>
+
                   La entrada es para A1, con ejemplos simples y vocabulario
                   repetido. El sistema completo incluye contenidos A2: las
-                  estaciones 05 y 06 son ampliaciones opcionales. Podés aprender
+                  estaciones 05 y 06 son ampliaciones opcionales. Puedes aprender
                   a distinguir las dos funciones antes de combinar dos
                   pronombres.
                 </p>
@@ -532,7 +535,8 @@ export default function ObjectAdventure() {
           </div>
           <footer className="sj-intro-footer">
             <p>
-              La estación está abierta. No necesitás saber los pronombres
+
+              La estación está abierta. No necesitas saber los pronombres
               todavía.
             </p>
             <button onClick={() => go("cover")}>ENTRAR A LA AVENTURA →</button>
@@ -558,7 +562,8 @@ export default function ObjectAdventure() {
           <p className="sj-cover-lead">
             Una carta. Un destinatario. Dos trabajos distintos.
             <br />
-            Descubrí qué representan <strong>
+
+            Descubre qué representan <strong>
               lo, la, le, me, te y nos
             </strong>{" "}
             sin adivinar por una letra.
@@ -661,7 +666,8 @@ export default function ObjectAdventure() {
               <span>MAPA DE LA AVENTURA</span>
               <h2>Ocho estaciones, una pieza por vez</h2>
               <p>
-                Seguí el orden o volvé al punto que te cuesta. Una estación
+
+                Sigue el orden o vuelve al punto que te cuesta. Una estación
                 cuenta como completada al resolver sus cuatro decisiones. El
                 progreso dura mientras esta página siga abierta.
               </p>
@@ -687,7 +693,7 @@ export default function ObjectAdventure() {
           <section className="sj-golden-rule">
             <span>LA BRÚJULA</span>
             <h2>Escena → función → pronombre.</h2>
-            <p>Primero entendé qué pasa. Después elegí cómo nombrarlo.</p>
+            <p>Primero entiende qué pasa. Después elige cómo nombrarlo.</p>
             <button onClick={() => go("atlas")}>
               ABRIR EL ATLAS COMPLETO →
             </button>
@@ -826,13 +832,13 @@ export default function ObjectAdventure() {
               <GrammarStep
                 number="05"
                 eyebrow="PASO 5 · CONTRASTES"
-                title="Compará lo que cambia"
+                title="Compara lo que cambia"
                 accent={active.color}
               >
                 <section className="sj-contrast">
                   <header>
                     <span>EL ESPEJO DEL SIGNIFICADO</span>
-                    <h2>Compará lo que cambia</h2>
+                    <h2>Compara lo que cambia</h2>
                   </header>
                   <div>
                     {active.contrasts.map((pair, i) => (
@@ -868,7 +874,7 @@ export default function ObjectAdventure() {
                     {active.errors.map((e) => (
                       <div key={e.wrong}>
                         <p>
-                          <small>REVISÁ</small>
+                          <small>REVISA</small>
                           <del>{e.wrong}</del>
                         </p>
                         <p>
@@ -884,16 +890,17 @@ export default function ObjectAdventure() {
               <GrammarStep
                 number="07"
                 eyebrow="PASO 7 · PRÁCTICA"
-                title="Elegí, comprobá y explicá"
+                title="Elige, comprueba y explica"
                 accent={active.color}
               >
                 <section className="od-practice">
                   <header>
                     <span>LABORATORIO INTERACTIVO</span>
-                    <h2>Elegí. Comprobá. Explicá.</h2>
+                    <h2>Elige. Comprueba. Explica.</h2>
                     <p>
-                      Son cuatro decisiones. Si te equivocás, leé la explicación
-                      y probá de nuevo.
+
+                      Son cuatro decisiones. Si te equivocas, lee la explicación
+                      y prueba de nuevo.
                     </p>
                   </header>
                   <Quiz
@@ -912,15 +919,16 @@ export default function ObjectAdventure() {
               <GrammarStep
                 number="08"
                 eyebrow="PASO 8 · CONVERSACIÓN / PRODUCCIÓN"
-                title="Ahora contá algo tuyo"
+                title="Ahora cuenta algo tuyo"
                 accent={active.color}
               >
                 <section className="sj-speaking">
                   <div>
                     <span>MESA DE CONVERSACIÓN</span>
-                    <h2>Ahora contá algo tuyo</h2>
+                    <h2>Ahora cuenta algo tuyo</h2>
                     <p>
-                      Usá los comienzos como ayuda. La respuesta puede ser
+
+                      Usa los comienzos como ayuda. La respuesta puede ser
                       corta; lo importante es entender qué representa cada
                       pronombre.
                     </p>
@@ -1027,7 +1035,7 @@ export default function ObjectAdventure() {
                 <section className="od-diagnostic">
                   <header>
                     <span>DIAGNÓSTICO FINAL</span>
-                    <h2>¿Entendés a quién o a qué se refiere?</h2>
+                    <h2>¿Entiendes a quién o a qué se refiere?</h2>
                     <p>
                       Las primeras seis decisiones repasan la base. Las últimas
                       dos son ampliación.
@@ -1076,7 +1084,7 @@ export default function ObjectAdventure() {
                       ],
                       [
                         "¿Dónde va en esta construcción?",
-                        "Con presente: antes. Si hay dos, mantenelos juntos.",
+                        "Con presente: antes. Si hay dos, mantenlos juntos.",
                       ],
                     ].map(([q, a], i) => (
                       <article key={q}>
@@ -1098,7 +1106,7 @@ export default function ObjectAdventure() {
                 accent="#52d9e8"
               >
                 <details className="od-reference-note">
-                  <summary>Si escuchás «le veo»</summary>
+                  <summary>Si escuchas «le veo»</summary>
                   <p>
                     Para aprender la distinción, aquí usamos «lo veo» para un OD
                     masculino y «le doy una carta» para un OI. También se admite

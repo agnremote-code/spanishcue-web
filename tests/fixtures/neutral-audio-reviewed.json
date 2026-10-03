@@ -1,0 +1,50 @@
+{
+  "sources": {
+    "app/hablar-sin-cortar/content.mjs": "610e7b3f2a83833777d7547b4cd098cde68d34344ea448b10bada3130f3ca2d1",
+    "app/noche-abierta/page.tsx": "832255c5de753f2c049176914eef7e708be3d2c77947c8adcc8825d02b834e37",
+    "app/autoestudio/curriculum/modules/a1/w01.ts": "c60d270ab335e650ab164f2f191ad0aa0c4c305170f376685e79a49d21ea296e",
+    "app/phonetics/PhoneticsLesson.tsx": "e0fdc126d78adde227f20fcd6b3574bba4df79bc834927f7e27ec4d6c67ccddc",
+    "app/phonetics/data.ts": "e65f85340ad6424fa1ad48c152eb8d3bd7469827a8a9157b0ea7bc1b71cf262a",
+    "app/phonetics/audio-manifest.json": "2401e8132cdd9f994f8b3f2036e8655b4d4ac26d9dba305ac9fc8cf808e2f5f0"
+  },
+  "listeningPrompts": {
+    "ultima-llamada": {
+      "finalQuestions": [
+        "¿Prefieres organizar todo antes de viajar o improvisar?",
+        "¿Alguna vez llegaste tarde a algo importante?",
+        "¿Qué fue lo último que salió diferente de lo planeado?",
+        "¿Te estresan los aeropuertos?",
+        "¿Qué haces si alguien llega muy tarde?",
+        "¿Prefieres viajar solo o acompañado?",
+        "¿Qué viaje recuerdas especialmente?",
+        "¿Qué cosa nunca olvidas llevar?"
+      ],
+      "supports": [
+        "Primero voy a…",
+        "Después tengo que…",
+        "El plan cambió porque…",
+        "Si llego tarde, voy a…",
+        "Prefiero… porque…"
+      ]
+    },
+    "habitacion-508": {
+      "finalQuestions": [
+        "¿Qué convierte un mal servicio en una experiencia realmente mala?",
+        "¿Cuándo vale la pena reclamar?",
+        "¿Qué debería hacer una empresa cuando comete un error?",
+        "¿Prefieres una disculpa o una compensación?",
+        "¿Alguna empresa resolvió muy bien un problema que tuviste?",
+        "¿Las reseñas online son fiables?",
+        "¿Qué puede destruir la reputación de un hotel o restaurante?",
+        "¿Hasta qué punto el cliente siempre tiene razón?"
+      ],
+      "supports": [
+        "Hasta ahora, parece que…",
+        "Este testimonio modifica…",
+        "No fue culpa de una persona, sino…",
+        "La empresa debería…",
+        "Entiendo esa postura; sin embargo…"
+      ]
+    }
+  }
+}

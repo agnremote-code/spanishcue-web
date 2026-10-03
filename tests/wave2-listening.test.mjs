@@ -16,12 +16,15 @@ test('131 navigation hides transcript and reset exists',async()=>{const h=await 
 test('133 independent reconstruction does not expose a solved numerical timeline',async()=>{const h=await harness('habitacion-508');h.click('RESPUESTA 8 MIN');assert.doesNotMatch(h.text(),/20:37 · Problema de agua/);assert.ok(h.button('REINICIAR LECCIÓN'));});
 test('both complete banks contain source-backed evidence and no fabricated event minutes',()=>{const a=json('ultima-llamada'),b=json('habitacion-508');assert.equal(a.signals.length,6);assert.equal(b.testimonies.length,6);for(const item of a.signals){assert.ok(item.fact,item.id);assert.ok(item.evidence,item.id);}for(const item of b.testimonies){assert.ok(item.claims?.length===3,item.id);assert.equal(item.events,undefined);assert.equal(item.time,undefined);}assert.ok(b.chronology?.constraints.length);});
 
-test('all13 recordings retain exact scripts, speaker/voice/rate, file maps and eight extension prompts from Wave1',()=>{
+test('13 recordings retain source mapping, one approved tú regeneration, and reviewed neutral prompts',()=>{
  for(const route of ['ultima-llamada','habitacion-508']){
   const original=JSON.parse(execFileSync('git',['show',`e8f38659588526253c51f638b39e337682729363:app/${route}/content.json`],{encoding:'utf8'}));
   const current=json(route),key=route==='ultima-llamada'?'signals':'testimonies';
   const projection=d=>[...d[key],...(d.resolution?[d.resolution]:[])].map(i=>({id:i.id??'resolution',file:i.file,segments:i.segments}));
-  assert.deepEqual(projection(current),projection(original));assert.deepEqual(current.finalQuestions,original.finalQuestions);assert.deepEqual(current.supports,original.supports);
+  if(route==='ultima-llamada')original.signals.find(i=>i.id==='conductor').segments[0].text=original.signals.find(i=>i.id==='conductor').segments[0].text.replace('mandame un mensaje','mándame un mensaje');
+  assert.deepEqual(projection(current),projection(original));
+  const reviewed=JSON.parse(readFileSync('tests/fixtures/neutral-audio-reviewed.json','utf8')).listeningPrompts[route];
+  assert.deepEqual(current.finalQuestions,reviewed.finalQuestions);assert.deepEqual(current.supports,reviewed.supports);
   for(const item of projection(current))assert.ok(readFileSync(`public${item.file}`).length>0);
  }
 });
@@ -134,5 +137,5 @@ test('131 camino keeps the seven-minute estimate at the speakers position, separ
  const data=json('ultima-llamada'),camino=data.signals.find(signal=>signal.id==='camino');
  assert.match(camino.fact,/Desde donde hablan los pasajeros hasta las puertas C: unos siete minutos/);
  assert.match(camino.evidence,/Desde aquí son unos siete minutos/);
- assert.match(data.mission.prompt,/Para esta situación, tomá unos siete minutos de caminata desde allí hasta C4/);
+ assert.match(data.mission.prompt,/Para esta situación, toma unos siete minutos de caminata desde allí hasta C4/);
 });

@@ -370,7 +370,7 @@ const libraryNews = [
     kicker: "NUEVO LABORATORIO · A1–C1",
     route: "FONÉTICA + BOCA + PRONUNCIACIÓN",
     title: "Spanish Mouth Lab",
-    copy: "Escuchá y contrastá pero/perro y caro/carro, practicá la colocación de la lengua y usá los sonidos en un intercambio breve. Seis estaciones originales quedan como consulta opcional.",
+    copy: "Escucha y contrasta pero/perro y caro/carro, practica la colocación de la lengua y usa los sonidos en un intercambio breve. Seis estaciones originales quedan como consulta opcional.",
     symbol: "ɾ",
     words: ["mirar", "colocar", "producir"],
   },
@@ -2024,7 +2024,7 @@ export default function Library({
                     number="03"
                     eyebrow="PRÁCTICA"
                     title="Completa y justifica"
-                    description="Resolvé una actividad por vez."
+                    description="Resuelve una actividad por vez."
                   >
                     <section className="lesson-section">
                       <article>
@@ -2037,7 +2037,7 @@ export default function Library({
                                 onClick={(e) => {
                                   e.currentTarget.textContent =
                                     e.currentTarget.textContent === "Ver pista"
-                                      ? "Pensá en el contexto"
+                                      ? "Piensa en el contexto"
                                       : "Ver pista";
                                 }}
                               >
@@ -2132,7 +2132,7 @@ export default function Library({
                               onClick={(e) => {
                                 e.currentTarget.textContent =
                                   e.currentTarget.textContent === "Ver pista"
-                                    ? "Pensá en el contexto"
+                                    ? "Piensa en el contexto"
                                     : "Ver pista";
                               }}
                             >

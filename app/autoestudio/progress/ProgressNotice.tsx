@@ -7,6 +7,6 @@ export default function ProgressNotice({status,localText,onRetry}:{status:SyncSt
     {status === 'loading' && 'Recuperando tu progreso…'}
     {status === 'syncing' && 'Guardando progreso…'}
     {status === 'offline' && <>No pudimos sincronizar. Tu profe todavía no ve los últimos cambios. <button type="button" onClick={()=>void onRetry()}>Reintentar</button></>}
-    {status === 'session-changed' && 'Este acceso cambió. Volvé a abrir el enlace de tu profe antes de continuar.'}
+    {status === 'session-changed' && 'Este acceso cambió. Vuelve a abrir el enlace de tu profe antes de continuar.'}
   </div>;
 }

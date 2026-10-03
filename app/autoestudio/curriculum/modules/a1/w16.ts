@@ -55,7 +55,7 @@ export const a1w16: Module = {
           head: ["Persona", "Ir", "+ a + infinitivo"],
           rows: [
             ["yo", "voy", "voy a dormir"],
-            ["tú / vos", "vas", "vas a salir"],
+            ["tú", "vas", "vas a salir"],
             ["él, ella, usted", "va", "va a llover"],
             ["nosotros, nosotras", "vamos", "vamos a viajar"],
             ["vosotros, vosotras (España)", "vais", "vais a comer"],

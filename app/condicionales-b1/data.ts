@@ -44,13 +44,13 @@ export const unidades: Unidad[] = [
     consecuencia: "Presente para un resultado regular; imperativo para una instrucción.",
     tiempo: "La relación no se limita a este momento. Puede expresar una regla general, una rutina o una reacción repetida.",
     usos: [
-      { titulo: "Verdad o relación general", explicacion: "Dos hechos se presentan como una relación estable de causa y efecto.", ejemplo: "Si calentás hielo, se derrite." },
+      { titulo: "Verdad o relación general", explicacion: "Dos hechos se presentan como una relación estable de causa y efecto.", ejemplo: "Si calientas hielo, se derrite." },
       { titulo: "Hábito o reacción personal", explicacion: "La consecuencia suele repetirse en la vida de una persona.", ejemplo: "Si duermo poco, estoy de mal humor." },
-      { titulo: "Instrucción condicionada", explicacion: "La condición es posible y la consecuencia indica qué hacer.", ejemplo: "Si no entendés, preguntá." },
+      { titulo: "Instrucción condicionada", explicacion: "La condición es posible y la consecuencia indica qué hacer.", ejemplo: "Si no entiendes, pregunta." },
     ],
     construccion: [
-      { titulo: "Después de «si»", regla: "Conjugá el verbo en presente de indicativo.", pasos: ["Identificá el sujeto.", "Elegí la terminación de presente.", "No uses infinitivo: si comer ❌ / si como ✅."] },
-      { titulo: "En la consecuencia", regla: "Elegí presente o imperativo según la intención.", pasos: ["Resultado habitual: presente.", "Consejo u orden: imperativo.", "La consecuencia también puede aparecer primero."] },
+      { titulo: "Después de «si»", regla: "Conjuga el verbo en presente de indicativo.", pasos: ["Identifica el sujeto.", "Elige la terminación de presente.", "No uses infinitivo: si comer ❌ / si como ✅."] },
+      { titulo: "En la consecuencia", regla: "Elige presente o imperativo según la intención.", pasos: ["Resultado habitual: presente.", "Consejo u orden: imperativo.", "La consecuencia también puede aparecer primero."] },
       { titulo: "Orden y puntuación", regla: "La posición cambia el foco, no la lógica.", pasos: ["Si A, B: normalmente lleva coma.", "B si A: normalmente no lleva coma.", "«Entonces» es posible, pero no obligatorio."] },
     ],
     tablas: [
@@ -59,44 +59,43 @@ export const unidades: Unidad[] = [
         nota: "Las tres familias regulares que aparecen después de «si».",
         columnas: ["Persona", "hablar", "comer", "vivir"],
         filas: [
-          ["yo", "hablo", "como", "vivo"], ["vos", "hablás", "comés", "vivís"], ["tú", "hablas", "comes", "vives"],
-          ["él / ella / usted", "habla", "come", "vive"], ["nosotros/as", "hablamos", "comemos", "vivimos"], ["ustedes / ellos/as", "hablan", "comen", "viven"],
+          ["yo", "hablo", "como", "vivo"], ["tú", "hablas", "comes", "vives"],
+          ["él / ella / usted", "habla", "come", "vive"], ["nosotros/as", "hablamos", "comemos", "vivimos"], ["vosotros/as", "habláis", "coméis", "vivís"], ["ellos / ellas / ustedes", "hablan", "comen", "viven"],
         ],
       },
       {
         titulo: "Imperativo útil",
-        nota: "La forma afirmativa y negativa cambia, especialmente con «vos».",
+        nota: "La forma afirmativa y negativa cambia, según la persona.",
         columnas: ["Persona", "hablar", "comer", "vivir"],
         filas: [
-          ["vos", "hablá / no hables", "comé / no comas", "viví / no vivas"],
-          ["tú", "habla / no hables", "come / no comas", "vive / no vivas"],
+                    ["tú", "habla / no hables", "come / no comas", "vive / no vivas"],
           ["usted", "hable / no hable", "coma / no coma", "viva / no viva"],
-          ["ustedes", "hablen / no hablen", "coman / no coman", "vivan / no vivan"],
+          ["vosotros/as", "hablad / no habléis", "comed / no comáis", "vivid / no viváis"], ["ustedes", "hablen / no hablen", "coman / no coman", "vivan / no vivan"],
         ],
       },
     ],
     ejemplos: [
       { oracion: "Si tomo café de noche, no duermo.", condicion: "tomo: presente", resultado: "no duermo: presente", lectura: "Consecuencia personal habitual." },
       { oracion: "Las plantas mueren si no reciben agua.", condicion: "no reciben: presente", resultado: "mueren: presente", lectura: "La consecuencia aparece primero." },
-      { oracion: "Si llegás tarde, avisame.", condicion: "llegás: presente", resultado: "avisame: imperativo", lectura: "Instrucción para una situación real." },
+      { oracion: "Si llegas tarde, avísame.", condicion: "llegas: presente", resultado: "avísame: imperativo", lectura: "Instrucción para una situación real." },
       { oracion: "Si estoy estresado, salgo a caminar.", condicion: "estoy: presente", resultado: "salgo: presente", lectura: "Reacción que se repite." },
     ],
     errores: [
       { incorrecto: "Si estoy cansado, descansar.", correcto: "Si estoy cansado, descanso.", explicacion: "La consecuencia necesita un verbo conjugado." },
-      { incorrecto: "Si no entendés, no preguntá.", correcto: "Si no entendés, no preguntes.", explicacion: "El imperativo negativo de «vos» usa presente de subjuntivo." },
+      { incorrecto: "Si no entiendes, no pregunta.", correcto: "Si no entiendes, no preguntes.", explicacion: "El imperativo negativo de «tú» usa presente de subjuntivo." },
       { incorrecto: "Si llueve usamos el subte.", correcto: "Si llueve, usamos el subte.", explicacion: "Cuando la condición aparece primero, se escribe coma entre los dos bloques." },
     ],
     ejercicios: [
       { consigna: "Si no ___ bien, me siento cansado. (comer)", respuesta: "como", explicacion: "Es una relación habitual: presente + presente." },
-      { consigna: "Si vos ___ dudas, preguntame. (tener)", respuesta: "tenés", explicacion: "Después de «si» va presente de indicativo; con «vos»: tenés." },
+      { consigna: "Si tú ___ dudas, pregúntame. (tener)", respuesta: "tienes", explicacion: "Después de «si» va presente de indicativo; con «tú»: tienes." },
       { consigna: "Las plantas mueren si no ___ agua. (recibir)", respuesta: "reciben", explicacion: "El sujeto es «las plantas», equivalente a «ellas»." },
       { consigna: "Si estás manejando, no ___ el celular. (usar)", respuesta: "uses", explicacion: "La consecuencia es un imperativo negativo." },
     ],
     conversacion: [
-      { pregunta: "¿Qué cambia en tu cuerpo si dormís menos de seis horas?", inicio: "Si duermo menos de seis horas…" },
-      { pregunta: "¿Qué hacés si una conversación se vuelve incómoda?", inicio: "Si una conversación se vuelve incómoda…" },
-      { pregunta: "Dame tres reglas para compartir una casa con vos.", inicio: "Si…, …" },
-      { pregunta: "¿Qué hábitos te ayudan si tenés un día difícil?", inicio: "Si tengo un día difícil…" },
+      { pregunta: "¿Qué cambia en tu cuerpo si duermes menos de seis horas?", inicio: "Si duermo menos de seis horas…" },
+      { pregunta: "¿Qué haces si una conversación se vuelve incómoda?", inicio: "Si una conversación se vuelve incómoda…" },
+      { pregunta: "Dame tres reglas para compartir una casa contigo.", inicio: "Si…, …" },
+      { pregunta: "¿Qué hábitos te ayudan si tienes un día difícil?", inicio: "Si tengo un día difícil…" },
     ],
   },
   {
@@ -115,13 +114,13 @@ export const unidades: Unidad[] = [
     tiempo: "La condición está abierta: todavía no sabemos si ocurrirá. El resultado depende de ella.",
     usos: [
       { titulo: "Predicción o consecuencia probable", explicacion: "El resultado se proyecta hacia el futuro.", ejemplo: "Si seguimos así, terminaremos antes." },
-      { titulo: "Promesa, decisión o advertencia", explicacion: "El hablante compromete una acción o avisa de una consecuencia.", ejemplo: "Si me escribís, te respondo esta noche." },
-      { titulo: "Instrucción futura", explicacion: "La condición indica cuándo debe cumplirse una orden.", ejemplo: "Si llegás primero, esperame afuera." },
+      { titulo: "Promesa, decisión o advertencia", explicacion: "El hablante compromete una acción o avisa de una consecuencia.", ejemplo: "Si me escribes, te respondo esta noche." },
+      { titulo: "Instrucción futura", explicacion: "La condición indica cuándo debe cumplirse una orden.", ejemplo: "Si llegas primero, espérame afuera." },
     ],
     construccion: [
       { titulo: "La condición futura", regla: "Después de «si» usamos presente, no futuro.", pasos: ["si llueve ✅", "si va a llover ❌ en la fórmula básica", "si lloverá ❌"] },
-      { titulo: "La consecuencia", regla: "Elegí la forma que expresa mejor la intención.", pasos: ["Predicción: futuro simple.", "Plan próximo: ir a + infinitivo.", "Decisión directa: presente.", "Orden: imperativo."] },
-      { titulo: "El presente con valor futuro", regla: "El presente puede sonar muy natural en decisiones ya asumidas.", pasos: ["Si venís, cocino.", "Si termino temprano, te llamo.", "El contexto futuro evita la ambigüedad."] },
+      { titulo: "La consecuencia", regla: "Elige la forma que expresa mejor la intención.", pasos: ["Predicción: futuro simple.", "Plan próximo: ir a + infinitivo.", "Decisión directa: presente.", "Orden: imperativo."] },
+      { titulo: "El presente con valor futuro", regla: "El presente puede sonar muy natural en decisiones ya asumidas.", pasos: ["Si vienes, cocino.", "Si termino temprano, te llamo.", "El contexto futuro evita la ambigüedad."] },
     ],
     tablas: [
       {
@@ -129,9 +128,9 @@ export const unidades: Unidad[] = [
         nota: "Se agrega la terminación al infinitivo completo.",
         columnas: ["Persona", "hablar", "comer", "vivir"],
         filas: [
-          ["yo", "hablaré", "comeré", "viviré"], ["vos / tú", "hablarás", "comerás", "vivirás"],
+          ["yo", "hablaré", "comeré", "viviré"], ["tú", "hablarás", "comerás", "vivirás"],
           ["él / ella / usted", "hablará", "comerá", "vivirá"], ["nosotros/as", "hablaremos", "comeremos", "viviremos"],
-          ["ustedes / ellos/as", "hablarán", "comerán", "vivirán"],
+          ["vosotros/as", "hablaréis", "comeréis", "viviréis"], ["ellos / ellas / ustedes", "hablarán", "comerán", "vivirán"],
         ],
       },
       {
@@ -148,25 +147,25 @@ export const unidades: Unidad[] = [
     ejemplos: [
       { oracion: "Si mañana hace sol, iremos al parque.", condicion: "hace: presente", resultado: "iremos: futuro", lectura: "Predicción sobre una posibilidad real." },
       { oracion: "Te aviso si termino temprano.", condicion: "termino: presente", resultado: "aviso: presente con valor futuro", lectura: "La consecuencia aparece primero." },
-      { oracion: "Si encontrás mi celular, no mires las fotos.", condicion: "encontrás: presente", resultado: "no mires: imperativo", lectura: "Orden para una situación posible." },
+      { oracion: "Si encuentras mi celular, no mires las fotos.", condicion: "encuentras: presente", resultado: "no mires: imperativo", lectura: "Orden para una situación posible." },
       { oracion: "Si conseguimos entradas, vamos a ver el partido.", condicion: "conseguimos: presente", resultado: "vamos a ver: futuro próximo", lectura: "Plan dependiente de una condición." },
     ],
     errores: [
       { incorrecto: "Si tendré tiempo, iré.", correcto: "Si tengo tiempo, iré.", explicacion: "Después de «si» no usamos futuro en esta estructura." },
       { incorrecto: "Si va a llover, cancelaremos.", correcto: "Si llueve, cancelaremos.", explicacion: "La forma básica expresa la condición futura con presente." },
-      { incorrecto: "Si vendrías, te mostraré todo.", correcto: "Si venís, te mostraré todo.", explicacion: "El condicional simple tampoco va después de «si» en una condición posible." },
+      { incorrecto: "Si vendrías, te mostraré todo.", correcto: "Si vienes, te mostraré todo.", explicacion: "El condicional simple tampoco va después de «si» en una condición posible." },
     ],
     ejercicios: [
       { consigna: "Si mañana ___, cancelaremos el picnic. (llover)", respuesta: "llueve", explicacion: "La condición futura se expresa con presente de indicativo." },
       { consigna: "Te ___ si tengo novedades. (llamar)", respuesta: "llamaré / llamo", explicacion: "Ambas formas son posibles: futuro explícito o presente con valor futuro." },
-      { consigna: "Si ves a Ana, ___ que llego tarde. (decirle)", respuesta: "decile / dile", explicacion: "La consecuencia es una orden." },
+      { consigna: "Si ves a Ana, ___ que llego tarde. (decirle)", respuesta: "dile", explicacion: "La consecuencia es una orden." },
       { consigna: "Si no salimos ahora, no ___ a tiempo. (llegar)", respuesta: "llegaremos / vamos a llegar", explicacion: "La consecuencia es una predicción futura." },
     ],
     conversacion: [
-      { pregunta: "Si recibís una oportunidad laboral inesperada, ¿cómo decidirás si aceptarla?", inicio: "Si recibo una oportunidad inesperada…" },
+      { pregunta: "Si recibes una oportunidad laboral inesperada, ¿cómo decidirás si aceptarla?", inicio: "Si recibo una oportunidad inesperada…" },
       { pregunta: "¿Qué pasará si tu ciudad prohíbe los autos en el centro?", inicio: "Si mi ciudad prohíbe los autos…" },
-      { pregunta: "Hacé una promesa y una advertencia para tu próximo viaje.", inicio: "Si…, voy a… / Si…, no…" },
-      { pregunta: "Si este año aprendés una habilidad nueva, ¿cuál vas a elegir y por qué?", inicio: "Si este año aprendo una habilidad nueva…" },
+      { pregunta: "Haz una promesa y una advertencia para tu próximo viaje.", inicio: "Si…, voy a… / Si…, no…" },
+      { pregunta: "Si este año aprendes una habilidad nueva, ¿cuál vas a elegir y por qué?", inicio: "Si este año aprendo una habilidad nueva…" },
     ],
   },
   {
@@ -186,11 +185,11 @@ export const unidades: Unidad[] = [
     usos: [
       { titulo: "Situación imaginaria", explicacion: "Se construye una realidad alternativa para explorar sus consecuencias.", ejemplo: "Si viviera frente al mar, nadaría todos los días." },
       { titulo: "Posibilidad poco probable", explicacion: "La situación no es imposible, pero el hablante la siente lejana.", ejemplo: "Si ganara la lotería, compraría una casa." },
-      { titulo: "Consejo", explicacion: "«Si yo fuera vos» permite recomendar sin ordenar directamente.", ejemplo: "Si yo fuera vos, hablaría con ella." },
+      { titulo: "Consejo", explicacion: "«Si yo fuera tú» permite recomendar sin ordenar directamente.", ejemplo: "Si yo fuera tú, hablaría con ella." },
     ],
     construccion: [
-      { titulo: "Formar el imperfecto de subjuntivo", regla: "Partí de la tercera persona plural del indefinido.", pasos: ["hablaron → habla-", "comieron → comie-", "vivieron → vivie-", "Agregá: -ra, -ras, -ra, -ramos, -ran."] },
-      { titulo: "Formar el condicional simple", regla: "Agregá las terminaciones al infinitivo completo.", pasos: ["-ía, -ías, -ía", "-íamos, -ían", "Las raíces irregulares son las mismas que en futuro."] },
+      { titulo: "Formar el imperfecto de subjuntivo", regla: "Parte de la tercera persona plural del indefinido.", pasos: ["hablaron → habla-", "comieron → comie-", "vivieron → vivie-", "Agrega: -ra, -ras, -ra, -ramos, -rais, -ran."] },
+      { titulo: "Formar el condicional simple", regla: "Agrega las terminaciones al infinitivo completo.", pasos: ["-ía, -ías, -ía", "-íamos, -ían", "Las raíces irregulares son las mismas que en futuro."] },
       { titulo: "Las variantes en -ra y -se", regla: "Ambas son correctas y equivalentes en esta estructura.", pasos: ["tuviera = tuviese", "pudieras = pudieses", "La forma en -ra es más frecuente en muchos países."] },
     ],
     tablas: [
@@ -199,9 +198,9 @@ export const unidades: Unidad[] = [
         nota: "La forma en -ra es la más frecuente en la conversación.",
         columnas: ["Persona", "hablar", "comer", "vivir"],
         filas: [
-          ["yo", "hablara", "comiera", "viviera"], ["vos / tú", "hablaras", "comieras", "vivieras"],
+          ["yo", "hablara", "comiera", "viviera"], ["tú", "hablaras", "comieras", "vivieras"],
           ["él / ella / usted", "hablara", "comiera", "viviera"], ["nosotros/as", "habláramos", "comiéramos", "viviéramos"],
-          ["ustedes / ellos/as", "hablaran", "comieran", "vivieran"],
+          ["vosotros/as", "hablarais", "comierais", "vivierais"], ["ellos / ellas / ustedes", "hablaran", "comieran", "vivieran"],
         ],
       },
       {
@@ -209,9 +208,9 @@ export const unidades: Unidad[] = [
         nota: "Las terminaciones se agregan al infinitivo; no cambian entre -ar, -er e -ir.",
         columnas: ["Persona", "hablar", "comer", "vivir"],
         filas: [
-          ["yo", "hablaría", "comería", "viviría"], ["vos / tú", "hablarías", "comerías", "vivirías"],
+          ["yo", "hablaría", "comería", "viviría"], ["tú", "hablarías", "comerías", "vivirías"],
           ["él / ella / usted", "hablaría", "comería", "viviría"], ["nosotros/as", "hablaríamos", "comeríamos", "viviríamos"],
-          ["ustedes / ellos/as", "hablarían", "comerían", "vivirían"],
+          ["vosotros/as", "hablaríais", "comeríais", "viviríais"], ["ellos / ellas / ustedes", "hablarían", "comerían", "vivirían"],
         ],
       },
     ],
@@ -219,15 +218,15 @@ export const unidades: Unidad[] = [
       { oracion: "Si tuviera más tiempo, aprendería japonés.", condicion: "tuviera: imperfecto de subjuntivo", resultado: "aprendería: condicional simple", lectura: "Ahora no tengo suficiente tiempo." },
       { oracion: "Compraría esa casa si fuera más barata.", condicion: "fuera: imperfecto de subjuntivo", resultado: "compraría: condicional simple", lectura: "El precio actual impide la compra." },
       { oracion: "Si pudieras hablar con tu yo del futuro, ¿qué le preguntarías?", condicion: "pudieras: imperfecto de subjuntivo", resultado: "preguntarías: condicional simple", lectura: "Hipótesis imaginaria." },
-      { oracion: "Si yo fuera vos, no tomaría esa decisión tan rápido.", condicion: "fuera: imperfecto de subjuntivo", resultado: "no tomaría: condicional simple", lectura: "Consejo indirecto." },
+      { oracion: "Si yo fuera tú, no tomaría esa decisión tan rápido.", condicion: "fuera: imperfecto de subjuntivo", resultado: "no tomaría: condicional simple", lectura: "Consejo indirecto." },
     ],
     errores: [
       { incorrecto: "Si tendría más tiempo, viajaría.", correcto: "Si tuviera más tiempo, viajaría.", explicacion: "Después de «si» va imperfecto de subjuntivo, no condicional." },
       { incorrecto: "Si tuviera más tiempo, viajaré.", correcto: "Si tuviera más tiempo, viajaría.", explicacion: "La consecuencia también debe mantener la distancia hipotética." },
-      { incorrecto: "Si sería vos, esperaría.", correcto: "Si fuera vos, esperaría.", explicacion: "La forma correcta de «ser» es «fuera» o «fuese»." },
+      { incorrecto: "Si sería tú, esperaría.", correcto: "Si fuera tú, esperaría.", explicacion: "La forma correcta de «ser» es «fuera» o «fuese»." },
     ],
     ejercicios: [
-      { consigna: "Si yo ___ vos, no aceptaría. (ser)", respuesta: "fuera / fuese", explicacion: "El consejo hipotético usa imperfecto de subjuntivo." },
+      { consigna: "Si yo ___ tú, no aceptaría. (ser)", respuesta: "fuera / fuese", explicacion: "El consejo hipotético usa imperfecto de subjuntivo." },
       { consigna: "¿Qué ___ si pudieras cambiar una ley? (hacer)", respuesta: "harías", explicacion: "La consecuencia usa condicional simple con raíz irregular har-." },
       { consigna: "Viajaríamos más si los vuelos ___ menos. (costar)", respuesta: "costaran / costasen", explicacion: "La condición puede aparecer después de la consecuencia." },
       { consigna: "Si no ___ trabajar, ¿cómo organizarías tu día? (necesitar)", respuesta: "necesitaras / necesitases", explicacion: "La situación es contraria o distante de la realidad actual." },
@@ -259,21 +258,22 @@ export const unidades: Unidad[] = [
       { titulo: "Alivio o valoración", explicacion: "También puede expresar que el resultado real fue mejor.", ejemplo: "Si hubiéramos salido antes, habríamos quedado atrapados en la tormenta." },
     ],
     construccion: [
-      { titulo: "La condición", regla: "Conjugá «haber» en imperfecto de subjuntivo y agregá el participio.", pasos: ["hubiera / hubiese", "hubieras / hubieses", "hubiéramos / hubiésemos", "hubieran / hubiesen"] },
-      { titulo: "La consecuencia", regla: "Conjugá «haber» en condicional y agregá el participio.", pasos: ["habría", "habrías", "habríamos", "habrían"] },
+      { titulo: "La condición", regla: "Conjuga «haber» en imperfecto de subjuntivo y agrega el participio.", pasos: ["hubiera / hubiese", "hubieras / hubieses", "hubiera / hubiese", "hubiéramos / hubiésemos", "hubierais / hubieseis", "hubieran / hubiesen"] },
+      { titulo: "La consecuencia", regla: "Conjuga «haber» en condicional y agrega el participio.", pasos: ["habría", "habrías", "habría", "habríamos", "habríais", "habrían"] },
       { titulo: "El participio", regla: "El participio no cambia con la persona ni con el género.", pasos: ["habría llegado", "habríamos llegado", "habrían llegado", "Nunca: habrían llegados ❌"] },
     ],
     tablas: [
       {
         titulo: "Los dos auxiliares",
-        nota: "Compará la condición con la consecuencia antes de agregar el participio.",
+        nota: "Compara la condición con la consecuencia antes de agregar el participio.",
         columnas: ["Persona", "Condición", "Consecuencia", "Con «salir»"],
         filas: [
           ["yo", "hubiera", "habría", "hubiera salido / habría salido"],
-          ["vos / tú", "hubieras", "habrías", "hubieras salido / habrías salido"],
+          ["tú", "hubieras", "habrías", "hubieras salido / habrías salido"],
           ["él / ella / usted", "hubiera", "habría", "hubiera salido / habría salido"],
           ["nosotros/as", "hubiéramos", "habríamos", "hubiéramos salido / habríamos salido"],
-          ["ustedes / ellos/as", "hubieran", "habrían", "hubieran salido / habrían salido"],
+          ["vosotros/as", "hubierais", "habríais", "hubierais salido / habríais salido"],
+          ["ellos / ellas / ustedes", "hubieran", "habrían", "hubieran salido / habrían salido"],
         ],
       },
       {
@@ -307,8 +307,8 @@ export const unidades: Unidad[] = [
     conversacion: [
       { pregunta: "¿Qué decisión pasada habría cambiado más tu vida si hubieras elegido otra opción?", inicio: "Si hubiera elegido otra opción…" },
       { pregunta: "¿Qué habría pasado si nunca hubieras empezado a aprender español?", inicio: "Si nunca hubiera empezado…" },
-      { pregunta: "Reescribí el final de un viaje real que no salió como esperabas.", inicio: "Si hubiéramos…" },
-      { pregunta: "Pensá en una casualidad positiva. ¿Qué no habría ocurrido sin ella?", inicio: "Si no hubiera ocurrido esa casualidad…" },
+      { pregunta: "Reescribe el final de un viaje real que no salió como esperabas.", inicio: "Si hubiéramos…" },
+      { pregunta: "Piensa en una casualidad positiva. ¿Qué no habría ocurrido sin ella?", inicio: "Si no hubiera ocurrido esa casualidad…" },
     ],
   },
   {
@@ -333,7 +333,7 @@ export const unidades: Unidad[] = [
     construccion: [
       { titulo: "Pasado → presente", regla: "Condición de tercero + consecuencia de segundo.", pasos: ["Si hubiera + participio", "condicional simple", "Marcadores útiles: ahora, hoy, actualmente."] },
       { titulo: "Presente → pasado", regla: "Condición de segundo + consecuencia de tercero.", pasos: ["Si + imperfecto de subjuntivo", "habría + participio", "Marcadores útiles: ayer, entonces, el año pasado."] },
-      { titulo: "Control temporal", regla: "No elijas por el nombre del condicional: dibujá la línea temporal.", pasos: ["¿Cuándo nace la causa?", "¿Cuándo aparece el resultado?", "¿La relación sigue siendo lógica?"] },
+      { titulo: "Control temporal", regla: "No elijas por el nombre del condicional: dibuja la línea temporal.", pasos: ["¿Cuándo nace la causa?", "¿Cuándo aparece el resultado?", "¿La relación sigue siendo lógica?"] },
     ],
     tablas: [
       {
@@ -356,7 +356,7 @@ export const unidades: Unidad[] = [
       },
     ],
     ejemplos: [
-      { oracion: "Si hubieras aceptado ese trabajo, ahora vivirías en Tokio.", condicion: "hubieras aceptado: causa pasada", resultado: "vivirías: resultado presente", lectura: "No aceptaste el trabajo y no vivís en Tokio." },
+      { oracion: "Si hubieras aceptado ese trabajo, ahora vivirías en Tokio.", condicion: "hubieras aceptado: causa pasada", resultado: "vivirías: resultado presente", lectura: "No aceptaste el trabajo y no vives en Tokio." },
       { oracion: "Si no fuera tan impulsivo, no habría comprado eso ayer.", condicion: "no fuera: característica presente", resultado: "no habría comprado: resultado pasado", lectura: "Soy impulsivo y eso influyó en la compra." },
       { oracion: "Si hubiera aprendido a manejar antes, hoy tendría más libertad.", condicion: "hubiera aprendido: pasado", resultado: "tendría: presente", lectura: "No aprendí antes y hoy tengo menos libertad." },
       { oracion: "Si fuera más cuidadoso, no habría roto el celular.", condicion: "fuera: rasgo presente", resultado: "no habría roto: pasado", lectura: "Mi forma de ser explica un accidente pasado." },
@@ -376,7 +376,7 @@ export const unidades: Unidad[] = [
       { pregunta: "¿Cómo sería tu vida hoy si hubieras nacido en otro país?", inicio: "Si hubiera nacido en otro país, hoy…" },
       { pregunta: "¿Qué habilidad pasada te daría más libertad hoy si la hubieras aprendido antes?", inicio: "Si hubiera aprendido…" },
       { pregunta: "¿Qué característica tuya explica una buena decisión que tomaste en el pasado?", inicio: "Si no fuera tan…, no habría…" },
-      { pregunta: "Elegí una decisión pasada y conectala con una consecuencia que todavía existe.", inicio: "Si hubiera…, ahora…" },
+      { pregunta: "Elige una decisión pasada y conéctala con una consecuencia que todavía existe.", inicio: "Si hubiera…, ahora…" },
     ],
   },
 ];

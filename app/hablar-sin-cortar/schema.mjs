@@ -1,5 +1,5 @@
 // Stable conceptual IDs and budgets shared by every authored level.
-export const ROUTE=[{id:'listen',name:'Escuchá el flujo',minutes:8},{id:'boundaries',name:'Encontrá los límites',minutes:8},{id:'connect',name:'Conectá',minutes:8},{id:'rhythm',name:'Llevá el ritmo',minutes:8},{id:'speak',name:'Hablá',minutes:8},{id:'final',name:'Desafío final',minutes:10}];
+export const ROUTE=[{id:'listen',name:'Escucha el flujo',minutes:8},{id:'boundaries',name:'Encuentra los límites',minutes:8},{id:'connect',name:'Conecta',minutes:8},{id:'rhythm',name:'Lleva el ritmo',minutes:8},{id:'speak',name:'Habla',minutes:8},{id:'final',name:'Desafío final',minutes:10}];
 export const SHAPE=[['listen-01','listen','choice'],['listen-02','listen','choice'],['boundary-01','boundaries','group'],['connect-01','connect','connect'],['rebuild-01','connect','rebuild'],['rhythm-01','rhythm','ab'],['repeat-01','rhythm','repeat'],['speak-01','speak','transfer'],['bank-listen','listen','choice',true],['bank-boundary','boundaries','group',true]];
 // A scripted echo measures one within-phrase boundary, never a punctuation pause.
 const echoBoundary=text=>Math.max(0,text.split(/\s+/).findIndex((word,i,words)=>i<words.length-1&&!/[.!?;:,]$/.test(word)));

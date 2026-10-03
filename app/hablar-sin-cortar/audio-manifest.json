@@ -346,16 +346,16 @@
     },
     {
       "id": "a2-bank-boundary",
-      "text": "Llevá un abrigo, porque a la noche hace frío.",
+      "text": "Lleva un abrigo, porque por la noche hace frío.",
       "src": "/audio/hablar-sin-cortar/a2-bank-boundary.mp3",
       "status": "generated",
-      "sha256": "22a109c05e02256fcfba1843ca2f8bdff473d531caa11693865cd5888967a45d",
-      "durationSeconds": 3.264,
+      "sha256": "e9ee018f576b492ea8fabae8cf4c8b14519aca2542761b03c4759d7138303c00",
+      "durationSeconds": 3.456,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 19846,
-      "rmsPCM": 2938.21,
+      "peakPCM": 19468,
+      "rmsPCM": 2925.87,
       "wordMetadata": "audio-words/a2-bank-boundary.words.json",
       "edit": null,
       "sourceClip": null
@@ -506,16 +506,16 @@
     },
     {
       "id": "b1-bank-listen",
-      "text": "Podríamos encontrarnos a las ocho, siempre que vos salgas a tiempo.",
+      "text": "Podríamos encontrarnos a las ocho, siempre que tú salgas a tiempo.",
       "src": "/audio/hablar-sin-cortar/b1-bank-listen.mp3",
       "status": "generated",
-      "sha256": "7a30e4b226ce74591405feca59c8e32368a016ac790fadba9469a3b8eb2e6add",
-      "durationSeconds": 4.512,
+      "sha256": "4922dc9caf905e46cf5e08125d29f93ccb5ca901703701f94e43f8e530aa0539",
+      "durationSeconds": 4.464,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 18480,
-      "rmsPCM": 2783.57,
+      "peakPCM": 17758,
+      "rmsPCM": 2702.56,
       "wordMetadata": "audio-words/b1-bank-listen.words.json",
       "edit": null,
       "sourceClip": null
@@ -1064,5 +1064,14 @@
       "edit": null,
       "sourceClip": null
     }
-  ]
+  ],
+  "neutralSpanishRegeneration": {
+    "generatedAt": "2026-10-03T02:47:24.170948+00:00",
+    "clipIds": [
+      "a2-bank-boundary",
+      "b1-bank-listen"
+    ],
+    "humanListeningQA": false,
+    "scope": "Only changed source phrases; original voice and canonical finite generation workflow retained."
+  }
 }

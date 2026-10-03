@@ -1,18 +1,18 @@
 {
   "baseCommit": "a736cfc49ab787ec6e26b9dc27d7de3060582baf",
   "banks": {
-    "redFlagA2": "d854fb4eb95713d57a3de523bc36054a905fd1993ed8c0e4bf11454b860c1f71",
-    "redFlagB1": "648ee09dfd3d5d97cccf8d96f894d9150c6a3ed0c826fc2baf8835625f2ea843",
-    "redFlagB2": "750a2916548b5a841f7c40cc356bda6522af473fe79731c8b2c871ffaee1bedc",
-    "talkA1": "0ee240f9ffc2f13adc3d1b527d57c5d2361030b24f10aa02f3a6933343f8c040",
+    "redFlagA2": "4365130a1c3027d8ad1c13822f7f9cfbf2fbabd27ebb684ff9b1153a59b1a5cf",
+    "redFlagB1": "8a9bdc733f477d176abba0194323479d2e25e074b48f02941ebf5d93ba2779ed",
+    "redFlagB2": "14bb089d5ce89ff0c5f4cf20a23149b60955973f008ef6da8ad0d1a1438f2116",
+    "talkA1": "d211ad9a80ebfcacad3cc740727f2f867d461d1615a602a84de8bd7ecbda697b",
     "talkA2": "9367779f920e61d130c49f7622aab8e7b2b9636189fbbe67f59f44f198cb1eea",
-    "talkB1": "d0563ed319e1133c6f21224306534c099e20e9e47fa377f37bf77112af1cc64e",
-    "eliminations": "eb3cd61a89defc29a742b0b052330f4c3d0a016d4b27e1875fc293f75df99323",
-    "absurdRules": "b84099e7ea90237499c7524053161ac7cdeb50f68279a9a4215112b4ef406326",
-    "eliminationsA2": "f0aa6f12a5df2ee20f215c8cd77663cf5b302789fcdf446cf4b603688b3628f1",
-    "absurdRulesA2": "fdbb3b1dab97453a5abdf5b017d49a609b8cd63fd43653b5e29a5f83c97c8e97"
+    "talkB1": "bfd5435d0039375d66af0a06efb148a0708a7c274b747da09ada0af575039c7a",
+    "eliminations": "b8c94485a3af1a19baba02fe3aacbccc781b5699fdb944a8159a20b045144fbf",
+    "absurdRules": "37b7d6c571b3dc0d1ee332c2e539c9555d406f272d4d4869dc2cbac26759e5ec",
+    "eliminationsA2": "20e6e7e34fc7063601a741c6b46cd20de9a80ff6f8d601d1544047385f30b98e",
+    "absurdRulesA2": "b484b34cc763002cde983e3a8e73b41ffd965bc841f340f53d161b1af5ffeab1"
   },
-  "routeLedger": "8aadf73d31301e524f24652812fc7cc76df84e30b98ec63fd5ed8b14ed70c9ee",
+  "routeLedger": "8b077b6ab73990771a8a01b97fee2fe736bb364dd5fdc69d20ab5145ce69ab6c",
   "families": [
     {
       "id": "red-flag-o-no",
@@ -123,7 +123,7 @@
       },
       "previewByLevel": {
         "A2": {
-          "hook": "30 decisiones sobre tu vida diaria. Elegí Sí o No, abrí la pregunta y descubrí una sorpresa.",
+          "hook": "30 decisiones sobre tu vida diaria. Elige Sí o No, abre la pregunta y descubre una sorpresa.",
           "image": "/conversation-worlds/elimination-machine.webp"
         },
         "B1": {
@@ -245,7 +245,7 @@
           "image": "/catalog-thumbnails/conversation-a2.webp"
         },
         "B1": {
-          "hook": "Elegí 1 tema, seleccioná solo 3 preguntas y hablá libremente",
+          "hook": "Elige 1 tema, selecciona solo 3 preguntas y habla libremente",
           "image": "/catalog-thumbnails/conversation-choice.webp"
         }
       }

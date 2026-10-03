@@ -19,7 +19,7 @@ function unique<T>(items: readonly T[]): T[] {
 function eligibleIds(bank: BoardBank, categories: readonly string[]): string[] {
   const validCategories = unique(categories).filter((category) => bank.categories.includes(category));
   if (validCategories.length === 0) {
-    throw new Error("Elegí al menos una categoría válida para empezar.");
+    throw new Error("Elige al menos una categoría válida para empezar.");
   }
   return bank.questions
     .filter((question) => validCategories.includes(question.category))

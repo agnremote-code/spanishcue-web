@@ -38,7 +38,7 @@ export function zonedLocalToIso(localDate: string, timezone: string): string {
   if (!sameParts(partsAt(new Date(guess), timezone), target)) throw new ValidationError('Esa hora local no existe en la zona elegida por el cambio de horario.');
   for (const offsetMinutes of [-120, -90, -60, -30, 30, 60, 90, 120]) {
     if (sameParts(partsAt(new Date(guess + offsetMinutes * 60_000), timezone), target)) {
-      throw new ValidationError('Esa hora local ocurre dos veces por el cambio estacional. Elegí una hora distinta para evitar ambigüedad.');
+      throw new ValidationError('Esa hora local ocurre dos veces por el cambio estacional. Elige una hora distinta para evitar ambigüedad.');
     }
   }
   return new Date(guess).toISOString();

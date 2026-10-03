@@ -57,8 +57,8 @@ export default function SpeechAttempt({level,activityId,text,produced,onComplete
  const done=phase==='result'||phase==='fallback';
  const marked=(joined:boolean)=>text.split(/\s+/).map((word,i)=>`${word}${i===result?.boundary?(joined?'‿':' | '):' '}`).join('').trim();
  return <section className="pf-voice" aria-label="Practica con tu voz" aria-busy={phase==='processing'}>
-  <p className="pf-eyebrow">AHORA VOS</p><p className="pf-voice-text">{text}</p>
-  {phase==='ready'&&<button type="button" className="pf-primary pf-mic" onClick={()=>void start()}>🎙 DECILO</button>}
+  <p className="pf-eyebrow">AHORA TÚ</p><p className="pf-voice-text">{text}</p>
+  {phase==='ready'&&<button type="button" className="pf-primary pf-mic" onClick={()=>void start()}>🎙 DILO</button>}
   {phase==='requesting'&&<div role="status"><p>Permite el acceso al micrófono para empezar.</p><button type="button" onClick={reset}>Cancelar</button></div>}
   {phase==='recording'&&<div className="pf-recording"><span role="status">● GRABANDO · {input.seconds}s</span><meter aria-label="Nivel real del micrófono" min={0} max={100} value={input.level}/><p role="status">{input.silent?'No te estamos escuchando. Acércate al micrófono y comprueba que esté activado.':'Di la frase completa y pulsa Detener.'}</p><button type="button" className="pf-primary" onClick={()=>void stop()}>DETENER</button></div>}
   {phase==='processing'&&<p role="status">ANALIZANDO…</p>}

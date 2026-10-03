@@ -248,7 +248,7 @@ const es = {
   "auth.error.passwordFirst": "Escribe tu contraseña para reenviar la verificación.",
   "auth.verifySent": "Te enviamos un email de verificación. Ábrelo antes de entrar.",
   "auth.verifyRequired": "Tu email todavía no está verificado. Revisa tu correo o reenvía la verificación.",
-  "auth.verifyResent": "Te enviamos un nuevo email de verificación. Usá siempre el mensaje más reciente.",
+  "auth.verifyResent": "Te enviamos un nuevo email de verificación. Usa siempre el mensaje más reciente.",
   "auth.resendVerification": "Reenviar email de verificación",
   "auth.resendWait": "Puedes reenviar en",
   "auth.verifyAlready": "Tu email ya está verificado. Puedes entrar a tu cuenta.",
@@ -264,7 +264,7 @@ const es = {
   "verification.enter": "Entrar a SPANISHCUE",
   "verification.invalidTitle": "Este enlace ya no es válido.",
   "verification.invalidCopy": "Puede haber expirado, ya haberse usado o haber sido reemplazado por un email más reciente.",
-  "verification.expiredCopy": "El enlace expiró. Pedí uno nuevo y usá siempre el mensaje más reciente.",
+  "verification.expiredCopy": "El enlace expiró. Pide uno nuevo y usa siempre el mensaje más reciente.",
   "verification.back": "Volver a SPANISHCUE",
   "verification.resend": "Reenviar email de verificación",
 

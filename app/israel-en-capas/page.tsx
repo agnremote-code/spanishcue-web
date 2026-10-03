@@ -85,7 +85,7 @@ export default function IsraelEnCapas(){
     </section>}
 
     {screen==="map"&&<section className="il-map-page">
-      <header className="il-map-head"><div><span>EL TERRITORIO Y SUS CAPAS · THE LAND AND ITS LAYERS</span><h1>Recorré el mapa.<br/><em>Después mirá más profundo.</em></h1></div><div><p>Nueve paradas geográficas y cinco lentes culturales. Cada una abre siete preguntas B1 con vocabulario, conectores y desafíos.</p><span className="il-en">Nine geographical stops and five cultural lenses. Each opens seven B1 questions with vocabulary, connectors and challenges.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA</button></div></header>
+      <header className="il-map-head"><div><span>EL TERRITORIO Y SUS CAPAS · THE LAND AND ITS LAYERS</span><h1>Recorre el mapa.<br/><em>Después mira más profundo.</em></h1></div><div><p>Nueve paradas geográficas y cinco lentes culturales. Cada una abre siete preguntas B1 con vocabulario, conectores y desafíos.</p><span className="il-en">Nine geographical stops and five cultural lenses. Each opens seven B1 questions with vocabulary, connectors and challenges.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA</button></div></header>
 
       <div className="il-map-tools"><div><button className={filter==="todo"?"active":""} onClick={()=>chooseFilter("todo")}>TODO · ALL</button><button className={filter==="lugar"?"active":""} onClick={()=>chooseFilter("lugar")}>MAPA · PLACES</button><button className={filter==="tema"?"active":""} onClick={()=>chooseFilter("tema")}>LENTES · LENSES</button></div><label><span>⌕</span><input value={query} onChange={event=>setQuery(event.target.value)} placeholder="Buscar tema · Search topic"/></label></div>
 
@@ -124,7 +124,7 @@ export default function IsraelEnCapas(){
       </header>
 
       <div className="il-classroom">
-        <section className="il-mission"><span>MISIÓN · MISSION</span><div><b>No respondas solamente “sí” o “no”. Construí una idea con razón, ejemplo y matiz.</b><em className="il-en">Do not answer only “yes” or “no”. Build an idea with a reason, example and nuance.</em></div><strong>{active.questionTheme.es}<small className="il-en">{active.questionTheme.en}</small></strong></section>
+        <section className="il-mission"><span>MISIÓN · MISSION</span><div><b>No respondas solamente “sí” o “no”. Construye una idea con razón, ejemplo y matiz.</b><em className="il-en">Do not answer only “yes” or “no”. Build an idea with a reason, example and nuance.</em></div><strong>{active.questionTheme.es}<small className="il-en">{active.questionTheme.en}</small></strong></section>
 
         <section className="il-question-stage">
           <div className="il-question-meta"><span>PREGUNTA · QUESTION</span><b>{String(question+1).padStart(2,"0")} <i>/ 07</i></b></div>
@@ -133,20 +133,20 @@ export default function IsraelEnCapas(){
         </section>
 
         <section className="il-response-tools">
-          <article className="il-stance"><span>1 · ELEGÍ TU POSTURA · CHOOSE YOUR STANCE</span><div>{(["acuerdo","depende","desacuerdo"] as const).map(value=><button key={value} className={stance===value?"active":""} onClick={()=>setStance(value)}><b>{stancePairs[value].es}</b><small className="il-en">{stancePairs[value].en}</small></button>)}</div></article>
-          <button className="il-starter" onClick={()=>addPart(starters[question])}><span>2 · ROBÁ ESTE COMIENZO · BORROW THIS START</span><b>{starters[question].es}</b><em className="il-en">{starters[question].en}</em><i><Glyph name="plus"/> AGREGAR · ADD</i></button>
-          <article className="il-connectors"><span>3 · CONECTÁ IDEAS · CONNECT IDEAS</span><div>{connectors.map(connector=><button key={connector.es} onClick={()=>addPart(connector)}><b>{connector.es}</b><small className="il-en">{connector.en}</small><i>+</i></button>)}</div></article>
+          <article className="il-stance"><span>1 · ELIGE TU POSTURA · CHOOSE YOUR STANCE</span><div>{(["acuerdo","depende","desacuerdo"] as const).map(value=><button key={value} className={stance===value?"active":""} onClick={()=>setStance(value)}><b>{stancePairs[value].es}</b><small className="il-en">{stancePairs[value].en}</small></button>)}</div></article>
+          <button className="il-starter" onClick={()=>addPart(starters[question])}><span>2 · ROBA ESTE COMIENZO · BORROW THIS START</span><b>{starters[question].es}</b><em className="il-en">{starters[question].en}</em><i><Glyph name="plus"/> AGREGAR · ADD</i></button>
+          <article className="il-connectors"><span>3 · CONECTA IDEAS · CONNECT IDEAS</span><div>{connectors.map(connector=><button key={connector.es} onClick={()=>addPart(connector)}><b>{connector.es}</b><small className="il-en">{connector.en}</small><i>+</i></button>)}</div></article>
         </section>
 
         <section className="il-answer-lab" aria-live="polite">
-          <header><div><span>LABORATORIO B1 · B1 ANSWER LAB</span><h2>Armá una respuesta que tenga capas.</h2><p className="il-en">Build an answer with layers.</p></div><div><button disabled={!answerPairs.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerPairs.length} onClick={()=>{setStance(null);setAnswerParts([])}}><Glyph name="clear"/> BORRAR</button></div></header>
-          <div className={`il-answer-canvas ${answerPairs.length?"has-answer":""}`}>{answerPairs.length?answerPairs.map((part,index)=><button key={`${part.es}-${index}`} onClick={()=>{if(stance&&index===0){setStance(null)}else{const partIndex=index-(stance?1:0);setAnswerParts(parts=>parts.filter((_,i)=>i!==partIndex))}}}><b>{part.es}</b><small className="il-en">{part.en}</small></button>):<p><b>Elegí una postura y tocá recursos para construir tu idea.</b><span className="il-en">Choose a stance and tap resources to build your idea.</span></p>}</div>
+          <header><div><span>LABORATORIO B1 · B1 ANSWER LAB</span><h2>Arma una respuesta que tenga capas.</h2><p className="il-en">Build an answer with layers.</p></div><div><button disabled={!answerPairs.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerPairs.length} onClick={()=>{setStance(null);setAnswerParts([])}}><Glyph name="clear"/> BORRAR</button></div></header>
+          <div className={`il-answer-canvas ${answerPairs.length?"has-answer":""}`}>{answerPairs.length?answerPairs.map((part,index)=><button key={`${part.es}-${index}`} onClick={()=>{if(stance&&index===0){setStance(null)}else{const partIndex=index-(stance?1:0);setAnswerParts(parts=>parts.filter((_,i)=>i!==partIndex))}}}><b>{part.es}</b><small className="il-en">{part.en}</small></button>):<p><b>Elige una postura y toca recursos para construir tu idea.</b><span className="il-en">Choose a stance and tap resources to build your idea.</span></p>}</div>
           {answerPairs.length>0&&<div className="il-answer-readout"><b>{answerEs}</b><span className="il-en">{answerEn}</span></div>}
         </section>
 
         <section className="il-wordbank"><header><span>WORDBANK DE LA CAPA · LAYER WORDBANK</span><h2>Vocabulario para pensar, no solamente nombrar.</h2><p className="il-en">Vocabulary for thinking, not only naming.</p></header><div>{active.words.map((word,index)=><button key={word.es} onClick={()=>addPart(word)}><span>{String(index+1).padStart(2,"0")}</span><b>{word.es}</b><small className="il-en">{word.en}</small><i>+</i></button>)}</div></section>
 
-        <section className="il-depth"><header><span>SUBÍ A B1 · GO DEEPER</span><h2>Después de responder, elegí una misión.</h2></header><div>{depthMoves.map((move,index)=><button key={move.es}><span>{String(index+1).padStart(2,"0")}</span><b>{move.es}</b><small className="il-en">{move.en}</small></button>)}</div></section>
+        <section className="il-depth"><header><span>SUBE A B1 · GO DEEPER</span><h2>Después de responder, elige una misión.</h2></header><div>{depthMoves.map((move,index)=><button key={move.es}><span>{String(index+1).padStart(2,"0")}</span><b>{move.es}</b><small className="il-en">{move.en}</small></button>)}</div></section>
 
         <nav className="il-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{active.questions.map((_,index)=><button key={index} aria-label={`Pregunta ${index+1}`} className={question===index?"active":""} onClick={()=>changeQuestion(index)}>{index+1}</button>)}</div><button onClick={()=>question===6?surprise():changeQuestion(question+1)}>{question===6?"OTRA CAPA · NEXT LAYER →":"SIGUIENTE · NEXT →"}</button></nav>
       </div>

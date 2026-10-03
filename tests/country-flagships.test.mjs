@@ -83,7 +83,7 @@ test("México supplies 32 selectable entities, 160 B1 prompts and all six modes"
   assert.ok(product.mexicoEntities.every((entity) => entity.vocabulary.length >= 4));
   assert.ok(product.mexicoEntities.every((entity) => entity.followups.length >= 3));
   assert.deepEqual(product.mexicoModes, [
-    "EXPLORAR", "AL AZAR", "ELEGÍ ENTRE DOS", "¿DÓNDE VIVIRÍAS?",
+    "EXPLORAR", "AL AZAR", "ELIGE ENTRE DOS", "¿DÓNDE VIVIRÍAS?",
     "TU PAÍS VS MÉXICO", "TU MÉXICO IDEAL",
   ]);
 });

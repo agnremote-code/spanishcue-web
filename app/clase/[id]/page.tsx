@@ -71,7 +71,7 @@ export default async function LessonPage({
               number="01"
               eyebrow="INICIO"
               title="Objetivos y activación"
-              description="Abrí para decidir desde dónde empezar."
+              description="Abre para decidir desde dónde empezar."
             >
               <section className="teaching-section">
                 <h2>Objetivos de la clase</h2>
@@ -105,7 +105,7 @@ export default async function LessonPage({
               number="03"
               eyebrow="PRÁCTICA"
               title="Práctica guiada"
-              description="Resolvé una actividad por vez."
+              description="Resuelve una actividad por vez."
             >
               <section className="teaching-section">
                 {lesson.practice.map((item, index) => (
@@ -120,7 +120,7 @@ export default async function LessonPage({
               number="04"
               eyebrow="PRODUCCIÓN"
               title="Conversación"
-              description="Usá la estructura para hablar."
+              description="Usa la estructura para hablar."
             >
               <section className="teaching-section">
                 {lesson.speaking.map((item, index) => (

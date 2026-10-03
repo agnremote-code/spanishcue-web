@@ -100,7 +100,7 @@ export const a1w10: Module = {
           head: ["Dueño", "una cosa", "varias cosas"],
           rows: [
             ["yo", "mi primo", "mis primos"],
-            ["tú / vos", "tu madre", "tus padres"],
+            ["tú", "tu madre", "tus padres"],
             ["usted, él, ella", "su casa", "sus casas"],
             ["nosotros, nosotras", "nuestro pueblo / nuestra calle", "nuestros hijos / nuestras hijas"],
             ["vosotros, vosotras (España)", "vuestro barrio / vuestra familia", "vuestros tíos / vuestras tías"],
@@ -135,7 +135,7 @@ export const a1w10: Module = {
           rows: [
             ["yo", "desayuno", "bebo", "escribo", "me ducho"],
             ["tú", "desayunas", "bebes", "escribes", "te duchas"],
-            ["vos", "desayunás", "bebés", "escribís", "te duchás"],
+            ["vos (variación regional)", "desayunás", "bebés", "escribís", "te duchás"],
             ["usted, él, ella", "desayuna", "bebe", "escribe", "se ducha"],
             ["nosotros/as", "desayunamos", "bebemos", "escribimos", "nos duchamos"],
             ["vosotros/as", "desayunáis", "bebéis", "escribís", "os ducháis"],

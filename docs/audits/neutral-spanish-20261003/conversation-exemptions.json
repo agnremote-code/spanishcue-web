@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "exemptions": [
+    {
+      "path": "app/choose-conversation/c2-data.ts",
+      "text": "En una charla informal argentina oyes «dale, después vemos» y una persona lo toma como acuerdo. ¿Cómo preguntarías qué quedó decidido sin afirmar que esa expresión siempre significa lo mismo?",
+      "category": "regional-pedagogy",
+      "reason": "Explicit Argentine expression taught as regional pragmatics or ARGENTO vocabulary."
+    },
+    {
+      "path": "app/irlanda-en-relieve/places.ts",
+      "text": "Boating and social weekends animate this small Shannon town.",
+      "category": "neutral-context",
+      "reason": "English translation: animate means enliven; English copy is unchanged."
+    },
+    {
+      "path": "app/la-isla-vota/data.ts",
+      "text": "Respondí a otra idea",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/life-roulette/data.ts",
+      "text": "Con el tiempo entendí…",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/life-roulette/data.ts",
+      "text": "dale",
+      "category": "regional-pedagogy",
+      "reason": "Explicit Argentine expression taught as regional pragmatics or ARGENTO vocabulary."
+    },
+    {
+      "path": "app/life-roulette/data.ts",
+      "text": "Dale, vamos.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit Argentine expression taught as regional pragmatics or ARGENTO vocabulary."
+    },
+    {
+      "path": "app/modo-play-y-ahora-que/data.ts",
+      "text": "Sé que ya te lo pedí la semana pasada.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/modo-play-y-ahora-que/data.ts",
+      "text": "TOMÁS",
+      "category": "neutral-context",
+      "reason": "Personal name TOMÁS, not a second-person verb."
+    },
+    {
+      "path": "app/modo-play-y-ahora-que/page.tsx",
+      "text": "¿Qué le dirías? Dale un consejo concreto y explica por qué puede\n            funcionar.",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/noche-abierta/content.mjs",
+      "text": "Me mudé hace una semana y todavía no conozco a nadie. Salí a dar una vuelta para no quedarme sola en casa.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/content.mjs",
+      "text": "Me cancelaron una cita a último momento, pero igual salí. ¿Te vienes a un bar de jazz acá a la vuelta? Dicen que es buenísimo.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/content.mjs",
+      "text": "En la máquina de escribir quedó una hoja con una sola línea: «Hoy decidí irme».",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a1.mjs",
+      "text": "En la máquina de escribir hay una hoja: «Hoy decidí irme».",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "Dos o tres minutos de charla. No corrijas todavía: escucha si usa el pretérito para contar (fui, comí, festejé) e «ir a + infinitivo» para los planes.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "Perdón, tuve un problema y salí tarde de casa",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "Martín no quiere hacer cuentas. Dale dos razones para aceptar tu idea.",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "Me mudé al barrio hace una semana. Todavía no conozco a nadie. Salí a caminar porque no quería estar sola en casa.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "¿Qué puede hacer Inés para conocer gente en el barrio? Dale dos o tres ideas.",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "Perdí el último autobús por un minuto. Vivo lejos, el taxi es muy caro y tengo poca batería en el celular.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "Me cancelaron una cita, pero igual salí. ¿Vienes conmigo a un bar de jazz? Está acá cerca y dicen que es muy bueno.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/a2.mjs",
+      "text": "En la máquina de escribir hay una hoja con una sola frase: «Hoy decidí irme».",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/b2.mjs",
+      "text": "Hace una semana que me mudé y no conozco a nadie. Salí a dar una vuelta porque, si me quedaba en casa, iba a terminar llamando a mi mamá.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/b2.mjs",
+      "text": "Perdí el último autobús por un minuto. Vivo lejísimos, el taxi me sale una fortuna y tengo el celular casi muerto. Una noche perfecta.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/b2.mjs",
+      "text": "Me cancelaron una cita a último momento, pero igual salí: no me iba a quedar encerrada. ¿Te vienes a un bar de jazz acá a la vuelta? Dicen que es buenísimo.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/b2.mjs",
+      "text": "En la máquina de escribir quedó una hoja con una sola línea, escrita con fuerza: «Hoy decidí irme».",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c1.mjs",
+      "text": "Escríbele a Lu: avísale del error, cuéntale qué le dijiste a Vale y dale a entender, con elegancia y sin enojarte, que leíste lo de «ya sabes quién».",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/noche-abierta/levels/c1.mjs",
+      "text": "Me mudé hace una semana. Todo bien, el barrio es lindo… Salí a dar una vuelta porque el departamento está muy silencioso.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c1.mjs",
+      "text": "Me cancelaron una cita a último momento, pero igual salí, ¿viste? Hay un bar de jazz acá a la vuelta. Si te copa, vente; si no, todo bien, eh.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c1.mjs",
+      "text": "En la máquina de escribir quedó una hoja con una sola línea: «Hoy decidí irme». Debajo, tapada con corrector, había otra palabra.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c2.mjs",
+      "text": "Si te entendí bien, …",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c2.mjs",
+      "text": "Perdí el último autobús por un minuto. Por un minuto. El chofer me vio, te juro que me vio, y aceleró con un cariño… Tengo el celular casi sin batería y un optimismo admirable.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c2.mjs",
+      "text": "Explícale qué quiere decir «algo tranqui» en este grupo, y dale otro ejemplo de frase en código que tampoco entendería.",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/noche-abierta/levels/c2.mjs",
+      "text": "En la máquina quedó una hoja con una sola línea: «Hoy decidí irme». Abajo, tachado: «Ojalá alguien lo note».",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/noche-abierta/levels/c2.mjs",
+      "text": "Un amigo llega empapado y pregunta «¿Me perdí algo?». Cuéntale la noche en dos versiones: una seria de treinta segundos y otra irónica.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in a story, reflection, or explicit past-tense example; not a voseo command."
+    },
+    {
+      "path": "app/red-flag-o-no/c1.mjs",
+      "text": "Dale una interpretación generosa y otra menos favorable al mismo gesto.",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/suiza-en-relieve/data.ts",
+      "text": "Dale una segunda vida a una tradición sin convertirla en una decoración vacía.",
+      "category": "neutral-context",
+      "reason": "Neutral tú imperative da + indirect-object pronoun le (give him/her), not Argentine encouragement."
+    },
+    {
+      "path": "app/conversation-worlds/data-b2.ts",
+      "text": "Una persona lleva comida que se enfría, otra va con un bebé dormido y una tercera tiene una entrega urgente.",
+      "category": "neutral-context",
+      "reason": "Noun bebé means baby, not an imperative."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "eliminate",
+      "category": "neutral-context",
+      "reason": "English technical state identifier, not learner-facing Spanish."
+    },
+    {
+      "path": "app/conversation-worlds/c2-presentation.tsx",
+      "text": "eliminate",
+      "category": "neutral-context",
+      "reason": "English technical state identifier, not learner-facing Spanish."
+    },
+    {
+      "path": "app/modo-play-uno-o-el-otro/page.tsx",
+      "text": "eliminate",
+      "category": "neutral-context",
+      "reason": "English technical state identifier, not learner-facing Spanish."
+    },
+    {
+      "path": "app/preguntas-prohibidas-a2/page.tsx",
+      "text": "LOS CATORCE REINOS",
+      "category": "neutral-context",
+      "reason": "Plural noun reinos means kingdoms, not a clitic imperative."
+    },
+    {
+      "path": "app/irlanda-en-relieve/data.ts",
+      "text": "Reinos antiguos, lagos interiores y una Irlanda rural que cuenta poder sin castillos perfectos.",
+      "category": "neutral-context",
+      "reason": "Plural noun reinos means kingdoms, not a clitic imperative."
+    },
+    {
+      "path": "app/suiza-en-relieve/data.ts",
+      "text": "¿Cómo debería reaccionar una persona cuando alguien comete un error en su idioma?",
+      "category": "neutral-context",
+      "reason": "Third-person present comete (commits an error), not a voseo command."
+    }
+  ]
+}

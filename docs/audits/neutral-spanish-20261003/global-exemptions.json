@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "exemptions": [
+    {
+      "path": "app/Library.tsx",
+      "text": "Presente con vos",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation."
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "Hablás, comés, vivís. Un patrón visual y sonoro para activar el español argentino.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation."
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "VOS",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation."
+    },
+    {
+      "path": "app/Library.tsx",
+      "text": "El voseo elige la persona «vos». No es un modo ni un tiempo aparte: «hablás», «comés» y «vivís» están en presente de indicativo.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching label or explanation."
+    },
+    {
+      "path": "app/el-ministerio-de-las-versiones/page.tsx",
+      "text": "Acababa de señalar el salón de patrocinadores. Yo entendí que hablaba de los invitados de marca, no de las entradas generales.",
+      "category": "neutral-context",
+      "reason": "Contextually standard Spanish: first-person past narration, or tú imperative da + le (dale). Not a voseo instruction."
+    },
+    {
+      "path": "app/el-teatro-de-las-coartadas/page.tsx",
+      "text": "A las 22:55 terminé de ensayar. Después fui al camarín y no salí hasta las 23:10.",
+      "category": "neutral-context",
+      "reason": "Contextually standard Spanish: first-person past narration, or tú imperative da + le (dale). Not a voseo instruction."
+    },
+    {
+      "path": "app/en-vivo-en-diez-minutos/page.tsx",
+      "text": "Elige quién toma el control, explica por qué y dale tres instrucciones.",
+      "category": "neutral-context",
+      "reason": "Contextually standard Spanish: first-person past narration, or tú imperative da + le (dale). Not a voseo instruction."
+    },
+    {
+      "path": "app/la-noche-de-las-siete-llamadas/page.tsx",
+      "text": "«Recibí una invitación que no esperaba.»",
+      "category": "neutral-context",
+      "reason": "Contextually standard Spanish: first-person past narration, or tú imperative da + le (dale). Not a voseo instruction."
+    },
+    {
+      "path": "app/la-sala-de-los-mensajes-fuera-de-contexto/page.tsx",
+      "text": "Cuando dijiste que no hacía falta que viniera, entendí que mi presencia te molestaba. ¿Era eso lo que querías decir?",
+      "category": "neutral-context",
+      "reason": "Contextually standard Spanish: first-person past narration, or tú imperative da + le (dale). Not a voseo instruction."
+    },
+    {
+      "path": "app/la-mesa-de-las-tres-ofertas/page.tsx",
+      "text": "Tomás Vidal",
+      "category": "neutral-context",
+      "reason": "Proper character name Tomás, not second-person verb."
+    },
+    {
+      "path": "app/la-noche-de-las-invitaciones-cruzadas/page.tsx",
+      "text": "Tomás",
+      "category": "neutral-context",
+      "reason": "Proper character name Tomás, not second-person verb."
+    }
+  ]
+}

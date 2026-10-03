@@ -75,7 +75,7 @@ export const nounFactory: GrammarWorldData = {
   title: "La Fábrica de los Nombres",
   displayTitle: "La Fábrica\nde los Nombres",
   subtitle: "Sustantivos, género y número desde cero",
-  intro: "Todo empieza cuando podemos nombrar el mundo. Entrá en la fábrica, reconocé qué es un sustantivo y aprendé a darle género y número sin memorizar listas infinitas.",
+  intro: "Todo empieza cuando podemos nombrar el mundo. Entra en la fábrica, reconoce qué es un sustantivo y aprende a darle género y número sin memorizar listas infinitas.",
   hero: "/grammar-worlds/noun-factory.webp",
   accent: "#f4b942",
   accent2: "#53d7d0",
@@ -122,7 +122,7 @@ export const nounFactory: GrammarWorldData = {
       kicker: "CLASIFICADOR DE GÉNERO",
       title: "Masculino y femenino",
       summary: "El final ayuda, pero el artículo confirma.",
-      rule: "Muchos sustantivos en -o son masculinos y muchos en -a son femeninos. Es una tendencia útil, no una regla perfecta. Aprendé siempre la palabra junto con su artículo.",
+      rule: "Muchos sustantivos en -o son masculinos y muchos en -a son femeninos. Es una tendencia útil, no una regla perfecta. Aprende siempre la palabra junto con su artículo.",
       formulas: ["-o → normalmente EL", "-a → normalmente LA", "-ción / -dad → normalmente LA"],
       examples: [
         { es: "el libro", en: "the book" },
@@ -188,7 +188,7 @@ export const nounFactory: GrammarWorldData = {
     { wrong: "las mapa", right: "los mapas", explanation: "Mapa es masculino y el plural necesita coincidencia completa." },
   ],
   practice: [
-    { prompt: "Elegí el sustantivo: rápido / ciudad / caminar", options: ["rápido", "ciudad", "caminar"], answer: 1, why: "Ciudad nombra un lugar." },
+    { prompt: "Elige el sustantivo: rápido / ciudad / caminar", options: ["rápido", "ciudad", "caminar"], answer: 1, why: "Ciudad nombra un lugar." },
     { prompt: "___ problema es difícil.", options: ["El", "La", "Las"], answer: 0, why: "Problema es una excepción frecuente: masculino." },
     { prompt: "Plural de canción", options: ["cancións", "canciones", "canciónes"], answer: 1, why: "Termina en consonante: agregamos -es y se ajusta el acento escrito." },
     { prompt: "Plural de luz", options: ["luzes", "luzs", "luces"], answer: 2, why: "Z cambia a c antes de -es." },
@@ -198,11 +198,11 @@ export const nounFactory: GrammarWorldData = {
     { prompt: "Tres ___", options: ["cafés", "café", "cafees"], answer: 0, why: "Café termina en vocal: agregamos -s." },
   ],
   speaking: [
-    { title: "Inventario de bolsillo", prompt: "Mostrá cinco objetos que tenés cerca y decí artículo + sustantivo.", support: "Tengo un teléfono, una taza…" },
-    { title: "La fábrica duplica", prompt: "Convertí esos cinco objetos al plural y hacé coincidir el artículo.", support: "un teléfono → unos teléfonos" },
-    { title: "Mi mundo en diez nombres", prompt: "Elegí diez sustantivos que representen tu vida y explicá por qué.", support: "Para mí, la música es importante porque…" },
+    { title: "Inventario de bolsillo", prompt: "Muestra cinco objetos que tienes cerca y di artículo + sustantivo.", support: "Tengo un teléfono, una taza…" },
+    { title: "La fábrica duplica", prompt: "Convierte esos cinco objetos al plural y haz coincidir el artículo.", support: "un teléfono → unos teléfonos" },
+    { title: "Mi mundo en diez nombres", prompt: "Elige diez sustantivos que representen tu vida y explica por qué.", support: "Para mí, la música es importante porque…" },
   ],
-  mission: "Diseñá una caja de viaje con ocho cosas. Nombrá cada objeto con artículo, después imaginá que preparás dos cajas y transformá toda la lista al plural.",
+  mission: "Diseña una caja de viaje con ocho cosas. Nombra cada objeto con artículo, después imagina que preparas dos cajas y transforma toda la lista al plural.",
 };
 
 export const agreementAtelier: GrammarWorldData = {
@@ -238,11 +238,11 @@ export const agreementAtelier: GrammarWorldData = {
     ],
   },
   stations: [
-    { id: "function", number: "01", kicker: "MESA DE DISEÑO", title: "Sustantivo + descripción", summary: "Primero identificamos quién recibe la característica.", rule: "El sustantivo nombra; el adjetivo describe. En la forma más neutra y frecuente del español, el adjetivo aparece después del sustantivo.", formulas: ["SUSTANTIVO + ADJETIVO", "una casa + bonita", "un café + tranquilo"], examples: [{es:"un libro interesante",en:"an interesting book"},{es:"una calle tranquila",en:"a quiet street"},{es:"un día difícil",en:"a difficult day"},{es:"una persona amable",en:"a kind person"}], note: "En inglés el adjetivo suele ir antes. En español, para empezar, usá sustantivo + adjetivo." },
+    { id: "function", number: "01", kicker: "MESA DE DISEÑO", title: "Sustantivo + descripción", summary: "Primero identificamos quién recibe la característica.", rule: "El sustantivo nombra; el adjetivo describe. En la forma más neutra y frecuente del español, el adjetivo aparece después del sustantivo.", formulas: ["SUSTANTIVO + ADJETIVO", "una casa + bonita", "un café + tranquilo"], examples: [{es:"un libro interesante",en:"an interesting book"},{es:"una calle tranquila",en:"a quiet street"},{es:"un día difícil",en:"a difficult day"},{es:"una persona amable",en:"a kind person"}], note: "En inglés el adjetivo suele ir antes. En español, para empezar, usa sustantivo + adjetivo." },
     { id: "oa", number: "02", kicker: "CORTE DE GÉNERO", title: "Adjetivos en -o", summary: "Cuatro formas para una misma cualidad.", rule: "Los adjetivos que terminan en -o suelen cambiar a -a para el femenino y agregan -s para el plural.", formulas: ["-O / -A", "-OS / -AS", "nuevo · nueva · nuevos · nuevas"], examples: [{es:"el barrio nuevo",en:"masculine singular"},{es:"la casa nueva",en:"feminine singular"},{es:"los barrios nuevos",en:"masculine plural"},{es:"las casas nuevas",en:"feminine plural"}], note: "Si el grupo tiene nombres masculinos y femeninos, el plural tradicional es masculino: Ana y Leo son argentinos." },
     { id: "invariable", number: "03", kicker: "TELAS FLEXIBLES", title: "Una forma para dos géneros", summary: "Los adjetivos en -e o consonante suelen conservar su forma de género.", rule: "Grande, interesante, fácil o azul no cambian por masculino/femenino. Sí cambian por número.", formulas: ["-E → misma forma", "consonante → misma forma", "+ S / ES para plural"], examples: [{es:"un hotel grande",en:"a large hotel"},{es:"una casa grande",en:"a large house"},{es:"dos hoteles grandes",en:"two large hotels"},{es:"unas calles azules",en:"some blue streets"}], note: "Nacionalidades en consonante sí pueden cambiar: español / española; francés / francesa." },
     { id: "intensity", number: "04", kicker: "CONTROL DE INTENSIDAD", title: "Muy no cambia", summary: "La intensidad se coloca antes del adjetivo.", rule: "Muy intensifica un adjetivo y siempre conserva la misma forma. El adjetivo sigue concordando con el sustantivo.", formulas: ["MUY + ADJETIVO", "muy bonito / muy bonita", "muy grandes"], examples: [{es:"Es muy caro.",en:"It is very expensive."},{es:"Son muy caras.",en:"They are very expensive."},{es:"La clase es muy útil.",en:"The class is very useful."},{es:"Los cafés son muy buenos.",en:"The cafés are very good."}], note: "No decimos mucha interesante. Mucho acompaña sustantivos; muy intensifica adjetivos y adverbios." },
-    { id: "position", number: "05", kicker: "PASARELA FINAL", title: "La posición también comunica", summary: "Después es la opción segura; antes puede añadir intención.", rule: "En A1 usamos normalmente el adjetivo después. Algunos adjetivos frecuentes aparecen antes: una buena idea, un gran día. La posición puede cambiar el matiz.", formulas: ["descripción → después", "valoración → a veces antes", "un hombre grande ≠ un gran hombre"], examples: [{es:"una mesa redonda",en:"a round table"},{es:"un coche rojo",en:"a red car"},{es:"una buena idea",en:"a good idea"},{es:"un gran día",en:"a great day"}], note: "Para comunicar con seguridad, colocá colores, formas y nacionalidades después del sustantivo." },
+    { id: "position", number: "05", kicker: "PASARELA FINAL", title: "La posición también comunica", summary: "Después es la opción segura; antes puede añadir intención.", rule: "En A1 usamos normalmente el adjetivo después. Algunos adjetivos frecuentes aparecen antes: una buena idea, un gran día. La posición puede cambiar el matiz.", formulas: ["descripción → después", "valoración → a veces antes", "un hombre grande ≠ un gran hombre"], examples: [{es:"una mesa redonda",en:"a round table"},{es:"un coche rojo",en:"a red car"},{es:"una buena idea",en:"a good idea"},{es:"un gran día",en:"a great day"}], note: "Para comunicar con seguridad, coloca colores, formas y nacionalidades después del sustantivo." },
   ],
   traps: [
     { wrong: "una casa bonito", right: "una casa bonita", explanation: "Casa es femenina singular; bonito debe cambiar a bonita." },
@@ -258,14 +258,14 @@ export const agreementAtelier: GrammarWorldData = {
     { prompt: "Orden neutro para A1", options: ["una roja mochila", "una mochila roja", "roja una mochila"], answer: 1, why: "La descripción neutra suele ir después del sustantivo." },
     { prompt: "Un estudiante ___", options: ["francés", "francesa", "franceses"], answer: 0, why: "Estudiante es masculino singular en este contexto." },
     { prompt: "Ana y Paula son ___", options: ["argentino", "argentinas", "argentina"], answer: 1, why: "El grupo es femenino plural." },
-    { prompt: "Elegí la combinación correcta", options: ["los libros útiles", "los libros útil", "las libros útiles"], answer: 0, why: "Artículo, sustantivo y adjetivo coinciden en género y número." },
+    { prompt: "Elige la combinación correcta", options: ["los libros útiles", "los libros útil", "las libros útiles"], answer: 0, why: "Artículo, sustantivo y adjetivo coinciden en género y número." },
   ],
   speaking: [
-    { title: "Estilista de espacios", prompt: "Describí una habitación ideal con cinco sustantivos y cinco adjetivos.", support: "Quiero una mesa grande y unas sillas cómodas." },
-    { title: "Contraste de looks", prompt: "Compará dos personas, lugares u objetos sin decir cuál preferís al principio.", support: "Uno es moderno y luminoso; el otro es clásico y oscuro." },
-    { title: "La prenda imposible", prompt: "Inventá una prenda extraña y describí color, forma, tamaño y material.", support: "Es una chaqueta larga, verde y muy ligera." },
+    { title: "Estilista de espacios", prompt: "Describe una habitación ideal con cinco sustantivos y cinco adjetivos.", support: "Quiero una mesa grande y unas sillas cómodas." },
+    { title: "Contraste de looks", prompt: "Compara dos personas, lugares u objetos sin decir cuál prefieres al principio.", support: "Uno es moderno y luminoso; el otro es clásico y oscuro." },
+    { title: "La prenda imposible", prompt: "Inventa una prenda extraña y describe color, forma, tamaño y material.", support: "Es una chaqueta larga, verde y muy ligera." },
   ],
-  mission: "Creá una colección de cuatro looks para cuatro situaciones: trabajo, viaje, fiesta y descanso. Usá al menos doce adjetivos con concordancia correcta.",
+  mission: "Crea una colección de cuatro looks para cuatro situaciones: trabajo, viaje, fiesta y descanso. Usa al menos doce adjetivos con concordancia correcta.",
 };
 
 export const articleGallery: GrammarWorldData = {
@@ -276,7 +276,7 @@ export const articleGallery: GrammarWorldData = {
   title: "La Galería de los Artículos",
   displayTitle: "La Galería de\nlos Artículos",
   subtitle: "El, la, un, una y la lógica de elegir",
-  intro: "Los artículos son pequeñas luces: muestran si hablamos de algo conocido, de algo nuevo o de una categoría general. Recorré la galería y aprendé a elegir por significado.",
+  intro: "Los artículos son pequeñas luces: muestran si hablamos de algo conocido, de algo nuevo o de una categoría general. Recorre la galería y aprende a elegir por significado.",
   hero: "/grammar-worlds/article-gallery.webp",
   accent: "#d6ad59",
   accent2: "#7d8cff",
@@ -301,9 +301,9 @@ export const articleGallery: GrammarWorldData = {
     ],
   },
   stations: [
-    { id: "system", number: "01", kicker: "VESTÍBULO", title: "Ocho formas, un sistema", summary: "El artículo concuerda con género y número.", rule: "Tenemos cuatro artículos definidos y cuatro indefinidos. La forma depende del sustantivo que acompaña.", formulas: ["EL · LA · LOS · LAS", "UN · UNA · UNOS · UNAS", "artículo + sustantivo"], examples: [{es:"el museo",en:"the museum"},{es:"la entrada",en:"the ticket / entrance"},{es:"unos cuadros",en:"some paintings"},{es:"unas esculturas",en:"some sculptures"}], note: "Aprendé sustantivo y artículo juntos: la noche, el viaje, la ciudad, el mapa." },
+    { id: "system", number: "01", kicker: "VESTÍBULO", title: "Ocho formas, un sistema", summary: "El artículo concuerda con género y número.", rule: "Tenemos cuatro artículos definidos y cuatro indefinidos. La forma depende del sustantivo que acompaña.", formulas: ["EL · LA · LOS · LAS", "UN · UNA · UNOS · UNAS", "artículo + sustantivo"], examples: [{es:"el museo",en:"the museum"},{es:"la entrada",en:"the ticket / entrance"},{es:"unos cuadros",en:"some paintings"},{es:"unas esculturas",en:"some sculptures"}], note: "Aprende sustantivo y artículo juntos: la noche, el viaje, la ciudad, el mapa." },
     { id: "unknown", number: "02", kicker: "SALA DE LO NUEVO", title: "Un / una presenta", summary: "Algo entra por primera vez en la conversación.", rule: "Usamos el indefinido cuando la identidad todavía no es compartida o cuando es un miembro cualquiera de un grupo.", formulas: ["PRIMERA MENCIÓN", "UNO ENTRE VARIOS", "Hay + un / una"], examples: [{es:"Hay un café cerca.",en:"There is a café nearby."},{es:"Necesito una farmacia.",en:"I need a pharmacy."},{es:"Tengo una pregunta.",en:"I have a question."},{es:"Veo unos amigos.",en:"I see some friends."}], note: "Un / una no siempre significa exactamente one. Muchas veces presenta algo nuevo." },
-    { id: "known", number: "03", kicker: "SALA DE LO CONOCIDO", title: "El / la señala", summary: "Las dos personas pueden identificar el referente.", rule: "Usamos el definido cuando ya mencionamos algo, es único en el contexto o el oyente puede reconocerlo.", formulas: ["SEGUNDA MENCIÓN", "CONTEXTO COMPARTIDO", "REFERENTE IDENTIFICABLE"], examples: [{es:"Veo un café. El café está lleno.",en:"A café → the café"},{es:"Cerrá la puerta.",en:"the door in this room"},{es:"El sol está fuerte.",en:"a unique referent"},{es:"¿Dónde está el baño?",en:"the relevant bathroom"}], note: "La pregunta clave no es ‘¿existe?’, sino ‘¿podemos identificarlo?’" },
+    { id: "known", number: "03", kicker: "SALA DE LO CONOCIDO", title: "El / la señala", summary: "Las dos personas pueden identificar el referente.", rule: "Usamos el definido cuando ya mencionamos algo, es único en el contexto o el oyente puede reconocerlo.", formulas: ["SEGUNDA MENCIÓN", "CONTEXTO COMPARTIDO", "REFERENTE IDENTIFICABLE"], examples: [{es:"Veo un café. El café está lleno.",en:"A café → the café"},{es:"Cierra la puerta.",en:"the door in this room"},{es:"El sol está fuerte.",en:"a unique referent"},{es:"¿Dónde está el baño?",en:"the relevant bathroom"}], note: "La pregunta clave no es ‘¿existe?’, sino ‘¿podemos identificarlo?’" },
     { id: "zero", number: "04", kicker: "SALA VACÍA", title: "Cuando no hay artículo", summary: "La ausencia también comunica.", rule: "Después de ser + profesión no usamos artículo. Tampoco suele aparecer con cantidades no específicas y ciertos nombres propios.", formulas: ["SER + PROFESIÓN", "cantidad no específica", "nombre propio"], examples: [{es:"Soy profesor.",en:"I am a teacher."},{es:"Necesito agua.",en:"I need water."},{es:"Compro libros.",en:"I buy books."},{es:"Vivo en Argentina.",en:"I live in Argentina."}], note: "Si describimos la profesión, el artículo puede volver: Es un profesor excelente." },
     { id: "contractions", number: "05", kicker: "PASILLO DE ENLACE", title: "Al y del", summary: "Dos combinaciones se fusionan obligatoriamente.", rule: "A + el se convierte en al. De + el se convierte en del. Con la, los y las no hay contracción.", formulas: ["A + EL = AL", "DE + EL = DEL", "a la / de la"], examples: [{es:"Voy al mercado.",en:"I go to the market."},{es:"Salgo del hotel.",en:"I leave the hotel."},{es:"Voy a la estación.",en:"I go to the station."},{es:"Vengo de la plaza.",en:"I come from the square."}], note: "No contraemos cuando El forma parte de un nombre propio: viajo a El Salvador." },
   ],
@@ -320,15 +320,15 @@ export const articleGallery: GrammarWorldData = {
     { prompt: "Mañana voy ___ aeropuerto.", options: ["a el", "al", "del"], answer: 1, why: "A + el = al." },
     { prompt: "Salimos ___ restaurante a las diez.", options: ["de el", "del", "al"], answer: 1, why: "De + el = del." },
     { prompt: "Necesito ___ información.", options: ["una", "la", "—"], answer: 2, why: "Información no específica e incontable puede ir sin artículo." },
-    { prompt: "¿Podés cerrar ___ ventana?", options: ["la", "una", "unas"], answer: 0, why: "En la situación, ambos pueden identificar la ventana relevante." },
+    { prompt: "¿Puedes cerrar ___ ventana?", options: ["la", "una", "unas"], answer: 0, why: "En la situación, ambos pueden identificar la ventana relevante." },
     { prompt: "Es ___ profesora muy creativa.", options: ["una", "la", "—"], answer: 0, why: "El adjetivo evalúa; presentamos a la persona como un tipo de profesora." },
   ],
   speaking: [
-    { title: "Primera y segunda mención", prompt: "Presentá tres objetos nuevos y después agregá un detalle sobre cada uno.", support: "Veo una lámpara. La lámpara es antigua." },
-    { title: "Ruta urbana", prompt: "Explicá un recorrido usando al, del, a la y de la.", support: "Salgo del hotel, voy al museo y después…" },
-    { title: "Quién soy", prompt: "Decí profesión, nacionalidad, ciudad y una descripción personal.", support: "Soy diseñador. Soy argentino. Vivo en… Soy una persona…" },
+    { title: "Primera y segunda mención", prompt: "Presenta tres objetos nuevos y después agrega un detalle sobre cada uno.", support: "Veo una lámpara. La lámpara es antigua." },
+    { title: "Ruta urbana", prompt: "Explica un recorrido usando al, del, a la y de la.", support: "Salgo del hotel, voy al museo y después…" },
+    { title: "Quién soy", prompt: "Di profesión, nacionalidad, ciudad y una descripción personal.", support: "Soy diseñador. Soy argentino. Vivo en… Soy una persona…" },
   ],
-  mission: "Imaginá que curás una exposición con seis objetos. Presentá cada objeto con un / una; después recorré la muestra otra vez usando el / la y explicando por qué cada pieza importa.",
+  mission: "Imagina que curas una exposición con seis objetos. Presenta cada objeto con un / una; después recorre la muestra otra vez usando el / la y explicando por qué cada pieza importa.",
 };
 
 export const demonstrativeObservatory: GrammarWorldData = {
@@ -339,7 +339,7 @@ export const demonstrativeObservatory: GrammarWorldData = {
   title: "El Observatorio de las Distancias",
   displayTitle: "El Observatorio\nde las Distancias",
   subtitle: "Este, ese, aquel y la perspectiva de quien habla",
-  intro: "Una misma cosa cambia de posición según desde dónde la miramos. Ajustá las lentes del observatorio y aprendé a señalar objetos, personas, lugares e ideas con precisión.",
+  intro: "Una misma cosa cambia de posición según desde dónde la miramos. Ajusta las lentes del observatorio y aprende a señalar objetos, personas, lugares e ideas con precisión.",
   hero: "/grammar-worlds/demonstrative-observatory.webp",
   accent: "#e4b858",
   accent2: "#55d4d0",
@@ -347,8 +347,8 @@ export const demonstrativeObservatory: GrammarWorldData = {
   duration: "65–80 min",
   world: {
     eyebrow: "MAPA 3D DEL OBSERVATORIO",
-    title: "Calibrá la distancia antes de elegir.",
-    instruction: "Cada consola abre una lente distinta. Elegí una, observá la escena y entrá en su explicación completa.",
+    title: "Calibra la distancia antes de elegir.",
+    instruction: "Cada consola abre una lente distinta. Elige una, observa la escena y entra en su explicación completa.",
     enterLabel: "ENTRAR EN LA LENTE",
   },
   curriculum: {
@@ -375,10 +375,10 @@ export const demonstrativeObservatory: GrammarWorldData = {
   },
   stations: [
     { id: "paradigm", number: "01", kicker: "LENTE DE CONCORDANCIA", title: "Doce formas que encajan", summary: "Distancia, género y número trabajan juntos.", rule: "Este grupo tiene cuatro formas por distancia. Elegimos masculino o femenino, singular o plural, según el sustantivo.", formulas: ["ESTE · ESTA · ESTOS · ESTAS", "ESE · ESA · ESOS · ESAS", "AQUEL · AQUELLA · AQUELLOS · AQUELLAS"], examples: [{es:"este teléfono",en:"this phone"},{es:"estas llaves",en:"these keys"},{es:"ese café",en:"that café"},{es:"aquellas montañas",en:"those mountains over there"}], note: "La distancia es relativa a la conversación: dos personas pueden organizar el espacio de manera diferente." },
-    { id: "distance", number: "02", kicker: "ANILLOS DE DISTANCIA", title: "Cerca, media y lejos", summary: "Tres zonas para orientar la conversación.", rule: "Usamos este para lo cercano, ese para una zona media o próxima al interlocutor y aquel para lo claramente lejano.", formulas: ["ESTE ↔ AQUÍ / ACÁ", "ESE ↔ AHÍ", "AQUEL ↔ ALLÍ / ALLÁ"], examples: [{es:"Esta taza de acá.",en:"this cup here"},{es:"Ese bolso de ahí.",en:"that bag there"},{es:"Aquel edificio de allá.",en:"that building over there"},{es:"¿Preferís esta mesa o esa?",en:"this table or that one?"}], note: "En la lengua real, este y ese cubren muchas situaciones. Aquel añade una distancia marcada o una perspectiva narrativa." },
+    { id: "distance", number: "02", kicker: "ANILLOS DE DISTANCIA", title: "Cerca, media y lejos", summary: "Tres zonas para orientar la conversación.", rule: "Usamos este para lo cercano, ese para una zona media o próxima al interlocutor y aquel para lo claramente lejano.", formulas: ["ESTE ↔ AQUÍ / ACÁ", "ESE ↔ AHÍ", "AQUEL ↔ ALLÍ / ALLÁ"], examples: [{es:"Esta taza de acá.",en:"this cup here"},{es:"Ese bolso de ahí.",en:"that bag there"},{es:"Aquel edificio de allá.",en:"that building over there"},{es:"¿Prefieres esta mesa o esa?",en:"this table or that one?"}], note: "En la lengua real, este y ese cubren muchas situaciones. Aquel añade una distancia marcada o una perspectiva narrativa." },
     { id: "neuter", number: "03", kicker: "CÁMARA DE LO DESCONOCIDO", title: "Esto, eso y aquello", summary: "Señalamos sin conocer el nombre.", rule: "Las formas neutras no acompañan un sustantivo. Sirven para preguntar por un objeto desconocido, resumir una situación o señalar una idea completa.", formulas: ["¿QUÉ ES ESTO?", "ESO ES IMPORTANTE", "AQUELLO FUE DIFÍCIL"], examples: [{es:"¿Qué es esto?",en:"What is this?"},{es:"Eso es un regalo.",en:"That is a gift."},{es:"No entiendo aquello.",en:"I don't understand that over there."},{es:"Esto es interesante.",en:"This is interesting."}], note: "Nunca decimos esto libro ni estos como plural de esto. Con sustantivo, elegimos este libro." },
     { id: "position", number: "04", kicker: "ÓRBITA DEL SUSTANTIVO", title: "Antes del nombre", summary: "El demostrativo ocupa el lugar del artículo.", rule: "En el uso básico, colocamos el demostrativo delante del sustantivo. No lo combinamos con el, la, los o las.", formulas: ["DEMOSTRATIVO + SUSTANTIVO", "ESTA casa", "no: LA ESTA casa"], examples: [{es:"este barrio",en:"this neighborhood"},{es:"esa película",en:"that film"},{es:"aquellos días",en:"those days"},{es:"estas personas",en:"these people"}], note: "El demostrativo ya identifica el sustantivo; por eso no necesita artículo delante." },
-    { id: "extension", number: "05", kicker: "TIEMPO Y SUSTITUCIÓN", title: "Más allá del espacio", summary: "También señalamos momentos y evitamos repeticiones.", rule: "En una expansión A2, los demostrativos pueden ubicar momentos —esta tarde, aquel año— y pueden reemplazar un sustantivo ya mencionado.", formulas: ["ESTA TARDE", "AQUEL AÑO", "PREFIERO ESA"], examples: [{es:"Esta semana trabajo mucho.",en:"this week"},{es:"Aquel verano fue especial.",en:"that summer long ago"},{es:"¿Qué camisa querés? Esa.",en:"Which shirt? That one."},{es:"Estos son mis amigos.",en:"These are my friends."}], note: "La tilde en éste, ésa o aquéllos ya no es necesaria según la norma actual." },
+    { id: "extension", number: "05", kicker: "TIEMPO Y SUSTITUCIÓN", title: "Más allá del espacio", summary: "También señalamos momentos y evitamos repeticiones.", rule: "En una expansión A2, los demostrativos pueden ubicar momentos —esta tarde, aquel año— y pueden reemplazar un sustantivo ya mencionado.", formulas: ["ESTA TARDE", "AQUEL AÑO", "PREFIERO ESA"], examples: [{es:"Esta semana trabajo mucho.",en:"this week"},{es:"Aquel verano fue especial.",en:"that summer long ago"},{es:"¿Qué camisa quieres? Esa.",en:"Which shirt? That one."},{es:"Estos son mis amigos.",en:"These are my friends."}], note: "La tilde en éste, ésa o aquéllos ya no es necesaria según la norma actual." },
   ],
   traps: [
     { wrong: "el este libro", right: "este libro", explanation: "El demostrativo ocupa el lugar del artículo." },
@@ -391,17 +391,17 @@ export const demonstrativeObservatory: GrammarWorldData = {
     { prompt: "___ montañas de allá", options: ["Estas", "Esos", "Aquellas"], answer: 2, why: "Son lejanas y montañas es femenino plural." },
     { prompt: "¿Qué es ___? No conozco ese objeto.", options: ["esto", "este", "esta"], answer: 0, why: "No sabemos qué sustantivo es; usamos el neutro." },
     { prompt: "___ mochila de ahí es tuya.", options: ["Ese", "Esa", "Esos"], answer: 1, why: "Mochila es femenina singular y está a distancia media." },
-    { prompt: "Elegí la combinación correcta", options: ["la esa calle", "esa calle", "eso calle"], answer: 1, why: "El demostrativo va delante del nombre sin artículo." },
+    { prompt: "Elige la combinación correcta", options: ["la esa calle", "esa calle", "eso calle"], answer: 1, why: "El demostrativo va delante del nombre sin artículo." },
     { prompt: "___ chicos de acá son mis amigos.", options: ["Estos", "Estas", "Aquellos"], answer: 0, why: "Chicos es masculino plural y está cerca." },
     { prompt: "Para hablar de un verano lejano", options: ["este verano", "aquel verano", "esto verano"], answer: 1, why: "Aquel puede marcar distancia temporal." },
-    { prompt: "¿Qué falda preferís? ___ de ahí.", options: ["Esa", "Eso", "Ese"], answer: 0, why: "Esa reemplaza a falda y conserva el femenino singular." },
+    { prompt: "¿Qué falda prefieres? ___ de ahí.", options: ["Esa", "Eso", "Ese"], answer: 0, why: "Esa reemplaza a falda y conserva el femenino singular." },
   ],
   speaking: [
-    { title: "Mesa en tres distancias", prompt: "Elegí objetos cercanos, medios y lejanos. Señalalos con un demostrativo y su nombre.", support: "Este cuaderno, esa ventana, aquellos edificios…" },
-    { title: "Sala de elecciones", prompt: "Compará dos objetos y decidí cuál preferís y por qué.", support: "Prefiero esta lámpara porque es más moderna que esa." },
-    { title: "Álbum del tiempo", prompt: "Señalá un momento actual, uno reciente y uno lejano de tu vida.", support: "Esta semana…, ese mes…, aquel año…" },
+    { title: "Mesa en tres distancias", prompt: "Elige objetos cercanos, medios y lejanos. Señálalos con un demostrativo y su nombre.", support: "Este cuaderno, esa ventana, aquellos edificios…" },
+    { title: "Sala de elecciones", prompt: "Compara dos objetos y decide cuál prefieres y por qué.", support: "Prefiero esta lámpara porque es más moderna que esa." },
+    { title: "Álbum del tiempo", prompt: "Señala un momento actual, uno reciente y uno lejano de tu vida.", support: "Esta semana…, ese mes…, aquel año…" },
   ],
-  mission: "Construí una escena con nueve elementos: tres cerca, tres a media distancia y tres lejos. Presentalos con demostrativos, después elegí tres sin repetir el sustantivo.",
+  mission: "Construye una escena con nueve elementos: tres cerca, tres a media distancia y tres lejos. Preséntalos con demostrativos, después elige tres sin repetir el sustantivo.",
 };
 
 export const possessionHouse: GrammarWorldData = {
@@ -412,7 +412,7 @@ export const possessionHouse: GrammarWorldData = {
   title: "La Casa de las Pertenencias",
   displayTitle: "La Casa de\nlas Pertenencias",
   subtitle: "Mi, tu, su, nuestro y la lógica de pertenecer",
-  intro: "Cada habitación guarda objetos, historias y propietarios. Abrí los baúles de la casa para descubrir quién tiene qué y cómo cambia el posesivo según la cosa poseída.",
+  intro: "Cada habitación guarda objetos, historias y propietarios. Abre los baúles de la casa para descubrir quién tiene qué y cómo cambia el posesivo según la cosa poseída.",
   hero: "/grammar-worlds/possession-house.webp",
   accent: "#d7ad64",
   accent2: "#63c49c",
@@ -420,7 +420,7 @@ export const possessionHouse: GrammarWorldData = {
   duration: "65–80 min",
   world: {
     eyebrow: "PLANO 3D DE LA CASA",
-    title: "Encontrá al dueño de cada historia.",
+    title: "Encuentra al dueño de cada historia.",
     instruction: "Cada llave abre una habitación con una relación distinta entre propietario y pertenencia.",
     enterLabel: "ABRIR LA HABITACIÓN",
   },
@@ -441,7 +441,7 @@ export const possessionHouse: GrammarWorldData = {
     body: "Mi, tu y su indican quién se relaciona con algo. La forma no describe al propietario: concuerda con la cosa poseída. Por eso una mujer puede decir mi hermano y un hombre puede decir mi hermana.",
     contrast: [
       { label: "YO", value: "mi llave / mis llaves", detail: "my" },
-      { label: "VOS / TÚ", value: "tu cuarto / tus cuartos", detail: "your" },
+      { label: "TÚ", value: "tu cuarto / tus cuartos", detail: "your" },
       { label: "ÉL / ELLA / USTED", value: "su casa / sus casas", detail: "his / her / your" },
       { label: "NOSOTROS", value: "nuestro hogar", detail: "our" },
     ],
@@ -461,20 +461,20 @@ export const possessionHouse: GrammarWorldData = {
   ],
   practice: [
     { prompt: "Yo tengo un pasaporte. Es ___ pasaporte.", options: ["mi", "mis", "su"], answer: 0, why: "El dueño es yo y el objeto es singular." },
-    { prompt: "Vos tenés dos entradas. Son ___ entradas.", options: ["tu", "tus", "sus"], answer: 1, why: "Entradas es plural: tus." },
+    { prompt: "Tú tienes dos entradas. Son ___ entradas.", options: ["tu", "tus", "sus"], answer: 1, why: "Entradas es plural: tus." },
     { prompt: "Nosotros vivimos acá. Es ___ casa.", options: ["nuestro", "nuestra", "nuestras"], answer: 1, why: "Casa es femenina singular." },
     { prompt: "Ana tiene un perro. Es ___ perro.", options: ["mi", "su", "sus"], answer: 1, why: "Su conecta a Ana con un objeto singular." },
-    { prompt: "Elegí la forma correcta", options: ["los mis libros", "mis libros", "mi libros"], answer: 1, why: "Mis concuerda con el plural y no lleva artículo." },
+    { prompt: "Elige la forma correcta", options: ["los mis libros", "mis libros", "mi libros"], answer: 1, why: "Mis concuerda con el plural y no lleva artículo." },
     { prompt: "Nosotros tenemos planes. Son ___ planes.", options: ["nuestra", "nuestros", "nuestro"], answer: 1, why: "Planes es masculino plural." },
     { prompt: "Este abrigo pertenece a mí. Es ___.", options: ["mío", "mía", "mi"], answer: 0, why: "Abrigo es masculino singular; usamos la forma tónica mío." },
     { prompt: "Para eliminar una ambigüedad", options: ["su mochila", "la mochila de Leo", "sus mochila"], answer: 1, why: "De Leo identifica al propietario con precisión." },
   ],
   speaking: [
-    { title: "Baúl de viaje", prompt: "Elegí seis objetos de una valija y explicá a quién pertenece cada uno.", support: "Este es mi pasaporte; esas son sus gafas…" },
-    { title: "Retrato de una casa", prompt: "Describí una casa compartida usando mi, tu, su y nuestro.", support: "Esta es nuestra cocina. Mi taza está junto a tu taza." },
-    { title: "Objetos perdidos", prompt: "Compará objetos parecidos y devolvelos a la persona correcta.", support: "Este paraguas no es mío; creo que es suyo." },
+    { title: "Baúl de viaje", prompt: "Elige seis objetos de una maleta y explica a quién pertenece cada uno.", support: "Este es mi pasaporte; esas son sus gafas…" },
+    { title: "Retrato de una casa", prompt: "Describe una casa compartida usando mi, tu, su y nuestro.", support: "Esta es nuestra cocina. Mi taza está junto a tu taza." },
+    { title: "Objetos perdidos", prompt: "Compara objetos parecidos y devuélvelos a la persona correcta.", support: "Este paraguas no es mío; creo que es suyo." },
   ],
-  mission: "Organizá doce objetos de una casa entre cuatro personas. Presentá cada pertenencia, aclará dos casos ambiguos con de + nombre y contrastá tres objetos con mío, tuyo o suyo.",
+  mission: "Organiza doce objetos de una casa entre cuatro personas. Presenta cada pertenencia, aclara dos casos ambiguos con de + nombre y contrasta tres objetos con mío, tuyo o suyo.",
 };
 
 export const quantityMarket: GrammarWorldData = {
@@ -486,7 +486,7 @@ export const quantityMarket: GrammarWorldData = {
   title: "El Mercado de las Cantidades",
   displayTitle: "El Mercado de\nlas Cantidades",
   subtitle: "Números, cantidades y comparaciones para comprar mejor",
-  intro: "En este mercado, cada decisión depende de cuánto hay, cuánto falta y cuánto necesitás. Recorré los puestos y convertí números y cantidades en español útil.",
+  intro: "En este mercado, cada decisión depende de cuánto hay, cuánto falta y cuánto necesitas. Recorre los puestos y convierte números y cantidades en español útil.",
   hero: "/grammar-worlds/quantity-market.webp",
   accent: "#e6a64f",
   accent2: "#49c1b4",
@@ -496,7 +496,7 @@ export const quantityMarket: GrammarWorldData = {
   nextTitle: "La Central de las Identidades",
   world: {
     eyebrow: "ESCENA DEL MERCADO",
-    title: "Medí antes de llenar la canasta.",
+    title: "Mide antes de llenar la canasta.",
     instruction: "Cada puesto cambia la escala: número exacto, cantidad aproximada, totalidad, ausencia y comparación.",
     enterLabel: "ENTRAR EN EL PUESTO",
   },
@@ -534,19 +534,19 @@ export const quantityMarket: GrammarWorldData = {
     { wrong: "muy comida", right: "mucha comida", explanation: "Muy intensifica adjetivos; mucho cuantifica sustantivos." },
   ],
   practice: [
-    { id: "market-bottle", context: "Pedís una sola botella de agua.", prompt: "Necesito ___ botella de agua.", options: ["un", "una", "uno"], answer: 1, hint: "Mirá el género y el número de botella.", why: "Una concuerda con botella, femenina singular: una botella." },
-    { id: "market-tomatoes", context: "La caja está llena de tomates. Elegí la forma de mucho que concuerda.", prompt: "Hay ___ tomates en la caja.", options: ["muchos", "mucho", "mucha"], answer: 0, hint: "Tomates termina en plural. Buscá también su género.", why: "Muchos concuerda con tomates: masculino plural." },
-    { id: "market-time", context: "Hoy solo tenés cinco minutos libres. Elegí la forma de poco.", prompt: "Tengo ___ tiempo hoy.", options: ["pocas", "poco", "pocos"], answer: 1, hint: "Tiempo no está en plural en esta frase.", why: "Poco concuerda con tiempo, masculino singular, aunque no contemos minutos aquí." },
-    { id: "market-days", extension: true, context: "Trabajás los siete días de la semana. No repitas las palabras que ya están escritas.", prompt: "Trabajo ___ los días.", options: ["todos", "todos los", "todo"], answer: 0, hint: "El artículo los ya está después del espacio.", why: "Todos + los + días. Insertamos solo todos: el artículo aparece una sola vez." },
-    { id: "market-coffee", context: "Ya tomaste un café y pedís uno más, de la misma clase.", prompt: "Quiero ___ café, por favor.", options: ["otro", "un otro", "otra"], answer: 0, hint: "Para pedir uno más, otro concuerda con café y va sin un.", why: "Otro café pide una unidad más. En este pedido cotidiano no añadimos un delante de otro." },
-    { id: "market-people", extension: true, context: "Hay fruta y otros productos, pero no hay personas. Hablá de la ausencia de gente.", prompt: "No hay ___ en el puesto.", options: ["nada", "nadie", "ningunos"], answer: 1, hint: "Buscamos una palabra para personas, no para productos.", why: "Nadie expresa ausencia de personas. Nada también forma una oración gramatical, pero no describe este puesto: sí hay productos." },
-    { id: "market-salt", extension: true, context: "La sopa está tan salada que no podés comerla. Expresá exceso.", prompt: "Esta sopa tiene ___ sal.", options: ["demasiado", "demasiada", "demasiadas"], answer: 1, hint: "Sal es femenina y aquí no es plural.", why: "Demasiada sal: el cuantificador concuerda y señala más sal de la deseada." },
-    { id: "market-degree", extension: true, context: "Comparás precios: este mercado cuesta menos de lo que esperabas.", prompt: "Este mercado no es ___ caro.", options: ["tanto", "tan", "mucho"], answer: 1, hint: "Caro es un adjetivo. ¿Qué forma expresa su grado?", why: "Tan modifica el adjetivo caro. Tanto cuantifica sustantivos o modifica un verbo." },
+    { id: "market-bottle", context: "Pides una sola botella de agua.", prompt: "Necesito ___ botella de agua.", options: ["un", "una", "uno"], answer: 1, hint: "Mira el género y el número de botella.", why: "Una concuerda con botella, femenina singular: una botella." },
+    { id: "market-tomatoes", context: "La caja está llena de tomates. Elige la forma de mucho que concuerda.", prompt: "Hay ___ tomates en la caja.", options: ["muchos", "mucho", "mucha"], answer: 0, hint: "Tomates termina en plural. Busca también su género.", why: "Muchos concuerda con tomates: masculino plural." },
+    { id: "market-time", context: "Hoy solo tienes cinco minutos libres. Elige la forma de poco.", prompt: "Tengo ___ tiempo hoy.", options: ["pocas", "poco", "pocos"], answer: 1, hint: "Tiempo no está en plural en esta frase.", why: "Poco concuerda con tiempo, masculino singular, aunque no contemos minutos aquí." },
+    { id: "market-days", extension: true, context: "Trabajas los siete días de la semana. No repitas las palabras que ya están escritas.", prompt: "Trabajo ___ los días.", options: ["todos", "todos los", "todo"], answer: 0, hint: "El artículo los ya está después del espacio.", why: "Todos + los + días. Insertamos solo todos: el artículo aparece una sola vez." },
+    { id: "market-coffee", context: "Ya tomaste un café y pides uno más, de la misma clase.", prompt: "Quiero ___ café, por favor.", options: ["otro", "un otro", "otra"], answer: 0, hint: "Para pedir uno más, otro concuerda con café y va sin un.", why: "Otro café pide una unidad más. En este pedido cotidiano no añadimos un delante de otro." },
+    { id: "market-people", extension: true, context: "Hay fruta y otros productos, pero no hay personas. Habla de la ausencia de gente.", prompt: "No hay ___ en el puesto.", options: ["nada", "nadie", "ningunos"], answer: 1, hint: "Buscamos una palabra para personas, no para productos.", why: "Nadie expresa ausencia de personas. Nada también forma una oración gramatical, pero no describe este puesto: sí hay productos." },
+    { id: "market-salt", extension: true, context: "La sopa está tan salada que no puedes comerla. Expresa exceso.", prompt: "Esta sopa tiene ___ sal.", options: ["demasiado", "demasiada", "demasiadas"], answer: 1, hint: "Sal es femenina y aquí no es plural.", why: "Demasiada sal: el cuantificador concuerda y señala más sal de la deseada." },
+    { id: "market-degree", extension: true, context: "Comparas precios: este mercado cuesta menos de lo que esperabas.", prompt: "Este mercado no es ___ caro.", options: ["tanto", "tan", "mucho"], answer: 1, hint: "Caro es un adjetivo. ¿Qué forma expresa su grado?", why: "Tan modifica el adjetivo caro. Tanto cuantifica sustantivos o modifica un verbo." },
   ],
   speaking: [
-    { title: "Canasta exacta", prompt: "Armá una compra de ocho productos y decidí cantidades concretas.", support: "Quiero dos kilos de papas y una botella de aceite." },
-    { title: "Puestos opuestos", prompt: "Compará dos puestos usando más, menos, mucho, poco y bastante.", support: "Este tiene más fruta, pero aquel tiene menos gente." },
-    { title: "Compra responsable", prompt: "Explicá qué comprás mucho, poco o nunca y por qué.", support: "Compro bastante verdura porque cocino en casa." },
+    { title: "Canasta exacta", prompt: "Arma una compra de ocho productos y decide cantidades concretas.", support: "Quiero dos kilos de papas y una botella de aceite." },
+    { title: "Puestos opuestos", prompt: "Compara dos puestos usando más, menos, mucho, poco y bastante.", support: "Este tiene más fruta, pero aquel tiene menos gente." },
+    { title: "Compra responsable", prompt: "Explica qué compras mucho, poco o nunca y por qué.", support: "Compro bastante verdura porque cocino en casa." },
   ],
-  mission: "Planificá una compra para una cena de cuatro personas. Incluí diez productos, cantidades exactas, dos comparaciones y una corrección por exceso o falta.",
+  mission: "Planifica una compra para una cena de cuatro personas. Incluye diez productos, cantidades exactas, dos comparaciones y una corrección por exceso o falta.",
 };

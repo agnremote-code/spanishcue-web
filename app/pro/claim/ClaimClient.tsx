@@ -52,7 +52,7 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
       }
       window.location.assign(body.returnTo);
     } catch {
-      setMessage(es ? "No pudimos activar PRO todavía. Reintentá." : "We could not activate PRO yet. Try again.");
+      setMessage(es ? "No pudimos activar PRO todavía. Vuelve a intentarlo." : "We could not activate PRO yet. Try again.");
       setState("error");
     } finally { binding.current = false; }
   }, [es]);
@@ -104,7 +104,7 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
       const authProvider = new GoogleAuthProvider();
       authProvider.setCustomParameters({ prompt: "select_account" });
       const { user } = await signInWithPopup(firebaseAuth, authProvider);
-      if (!user.emailVerified) throw new Error(es ? "Verificá tu email antes de continuar." : "Verify your email before continuing.");
+      if (!user.emailVerified) throw new Error(es ? "Verifica tu email antes de continuar." : "Verify your email before continuing.");
       await establishSession(user, returnPath);
     } catch (error) {
       setMessage(error instanceof Error ? error.message : (es ? "No pudimos ingresar con Google." : "Google sign-in failed."));
@@ -126,7 +126,7 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
       <button className="pro-success-button" type="button" onClick={() => void check()}>{es ? "Volver a comprobar" : "Check again"}</button>
     </>}
     {state === "paid" && !signedIn && <>
-      <p>{es ? "Vinculá la compra a tu cuenta para abrir la clase." : "Link your purchase to an account to open the lesson."}</p>
+      <p>{es ? "Vincula la compra a tu cuenta para abrir la clase." : "Link your purchase to an account to open the lesson."}</p>
       {email && <p>{es ? "Email confirmado para la compra:" : "Confirmed buyer email:"} <strong>{email}</strong></p>}
       <button className="pro-success-button" type="button" disabled={busy} onClick={() => void google()}>{es ? "Continuar con Google" : "Continue with Google"}</button>
       <p><Link className="pro-secondary" href={registrationUrl} onClick={() => { if (email) sessionStorage.setItem("spanishcue.claim.confirmedEmail", email); }}>{es ? "Crear cuenta con email" : "Create account with email"}</Link></p>

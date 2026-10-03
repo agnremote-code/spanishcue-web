@@ -30,7 +30,7 @@ export default function LatamGlobe({ countries, onChoose }: { countries: Country
   return <div className="la-real-map-card">
     <div className="la-real-map-heading">
       <div><span>MAPA REAL · REAL MAP</span><b>Latinoamérica en proyección ortográfica</b></div>
-      <small>TOCÁ UNA SEÑAL</small>
+      <small>TOCA UNA SEÑAL</small>
     </div>
     <div className="la-real-globe-stage">
       <div className="la-globe-orbit" aria-hidden="true"><i/><i/><i/></div>

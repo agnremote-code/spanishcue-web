@@ -60,16 +60,16 @@ const provincePositions = Object.fromEntries(
 
 function questionsFor(p: Province): Question[] {
   return [
-    {es:`Si viajás a ${p.name}, ¿querés conocer ${p.place.es}?`,en:`If you travel to ${p.name}, do you want to visit ${p.place.en}?`,starter:{es:"Sí, quiero conocer… / No, prefiero…",en:"Yes, I want to visit… / No, I prefer…"},choices:smallChoices.yesNo,spark:{es:"¿Con quién vas?",en:"Who do you go with?"}},
+    {es:`Si viajas a ${p.name}, ¿quieres conocer ${p.place.es}?`,en:`If you travel to ${p.name}, do you want to visit ${p.place.en}?`,starter:{es:"Sí, quiero conocer… / No, prefiero…",en:"Yes, I want to visit… / No, I prefer…"},choices:smallChoices.yesNo,spark:{es:"¿Con quién vas?",en:"Who do you go with?"}},
     {es:`¿Te gustaría ${p.action.es}?`,en:`Would you like to ${p.action.en}?`,starter:{es:"Sí, me gustaría… / No, no me gustaría…",en:"Yes, I would like to… / No, I wouldn’t like to…"},choices:smallChoices.yesNo,spark:{es:"¿De día o de noche?",en:"During the day or at night?"}},
-    {es:`¿Preferís ${p.choiceA.es} o ${p.choiceB.es}?`,en:`Do you prefer ${p.choiceA.en} or ${p.choiceB.en}?`,starter:{es:`Prefiero ${p.choiceA.es} / ${p.choiceB.es}.`,en:`I prefer ${p.choiceA.en} / ${p.choiceB.en}.`},choices:[p.choiceA,p.choiceB],spark:{es:"¿Por qué?",en:"Why?"}},
-    {es:`¿Qué te parece ${p.thing.es}?`,en:`What do you think about ${p.thing.en}?`,starter:{es:"Me parece…",en:"I think it is…"},choices:[{es:"Interesante",en:"Interesting"},{es:"Hermoso/a",en:"Beautiful"},{es:"Extraño/a",en:"Unusual"},{es:"Importante",en:"Important"}],spark:{es:"¿Querés sacar una foto?",en:"Do you want to take a photo?"}},
-    {es:`¿Te gustaría ver ${p.animal.es} durante el viaje?`,en:`Would you like to see ${p.animal.en} during the trip?`,starter:{es:"Sí, me gustaría verlo/a…",en:"Yes, I would like to see it…"},choices:[{es:"Sí, mucho",en:"Yes, very much"},{es:"Tal vez",en:"Maybe"},{es:"No es mi prioridad",en:"It is not my priority"}],spark:{es:"¿Querés observarlo o sacarle una foto?",en:"Do you want to observe it or take a photo?"}},
-    {es:`¿Qué llevás en la mochila para visitar ${p.place.es}?`,en:`What do you pack to visit ${p.place.en}?`,starter:{es:"Llevo…",en:"I pack…"},choices:[{es:"Agua",en:"Water"},{es:"Protector solar",en:"Sunscreen"},{es:"Una cámara",en:"A camera"},{es:"Ropa cómoda",en:"Comfortable clothes"}],spark:{es:"¿Qué más necesitás?",en:"What else do you need?"}},
-    {es:`¿Querés probar ${p.food.es}?`,en:`Do you want to try ${p.food.en}?`,starter:{es:"Sí, quiero probar… / No, gracias.",en:"Yes, I want to try… / No, thank you."},choices:[{es:"Sí, por favor",en:"Yes, please"},{es:"No, gracias",en:"No, thank you"},{es:"Tal vez",en:"Maybe"}],spark:{es:"¿Te gusta probar comida nueva?",en:"Do you like trying new food?"}},
-    {es:`¿Cuántos días querés pasar en ${p.name}?`,en:`How many days do you want to spend in ${p.name}?`,starter:{es:"Quiero pasar…",en:"I want to spend…"},choices:[{es:"Dos días",en:"Two days"},{es:"Cuatro días",en:"Four days"},{es:"Una semana",en:"One week"}],spark:{es:"¿Es suficiente?",en:"Is that enough?"}},
-    {es:`Después de visitar ${p.place.es}, ¿cómo te sentís?`,en:`After visiting ${p.place.en}, how do you feel?`,starter:{es:"Me siento…",en:"I feel…"},choices:smallChoices.feeling,spark:{es:"¿Qué fue lo mejor?",en:"What was the best part?"}},
-    {es:`Armá tu día en ${p.name}: ¿qué hacés por la mañana, por la tarde y por la noche?`,en:`Plan your day in ${p.name}: what do you do in the morning, afternoon and evening?`,starter:{es:"Por la mañana… Después… Por la noche…",en:"In the morning… Then… In the evening…"},choices:[p.action,{es:`probar ${p.food.es}`,en:`try ${p.food.en}`},{es:"caminar y sacar fotos",en:"walk and take photos"}],spark:{es:"¿Con quién compartís ese día?",en:"Who do you share that day with?"}},
+    {es:`¿Prefieres ${p.choiceA.es} o ${p.choiceB.es}?`,en:`Do you prefer ${p.choiceA.en} or ${p.choiceB.en}?`,starter:{es:`Prefiero ${p.choiceA.es} / ${p.choiceB.es}.`,en:`I prefer ${p.choiceA.en} / ${p.choiceB.en}.`},choices:[p.choiceA,p.choiceB],spark:{es:"¿Por qué?",en:"Why?"}},
+    {es:`¿Qué te parece ${p.thing.es}?`,en:`What do you think about ${p.thing.en}?`,starter:{es:"Me parece…",en:"I think it is…"},choices:[{es:"Interesante",en:"Interesting"},{es:"Hermoso/a",en:"Beautiful"},{es:"Extraño/a",en:"Unusual"},{es:"Importante",en:"Important"}],spark:{es:"¿Quieres sacar una foto?",en:"Do you want to take a photo?"}},
+    {es:`¿Te gustaría ver ${p.animal.es} durante el viaje?`,en:`Would you like to see ${p.animal.en} during the trip?`,starter:{es:"Sí, me gustaría verlo/a…",en:"Yes, I would like to see it…"},choices:[{es:"Sí, mucho",en:"Yes, very much"},{es:"Tal vez",en:"Maybe"},{es:"No es mi prioridad",en:"It is not my priority"}],spark:{es:"¿Quieres observarlo o sacarle una foto?",en:"Do you want to observe it or take a photo?"}},
+    {es:`¿Qué llevas en la mochila para visitar ${p.place.es}?`,en:`What do you pack to visit ${p.place.en}?`,starter:{es:"Llevo…",en:"I pack…"},choices:[{es:"Agua",en:"Water"},{es:"Protector solar",en:"Sunscreen"},{es:"Una cámara",en:"A camera"},{es:"Ropa cómoda",en:"Comfortable clothes"}],spark:{es:"¿Qué más necesitas?",en:"What else do you need?"}},
+    {es:`¿Quieres probar ${p.food.es}?`,en:`Do you want to try ${p.food.en}?`,starter:{es:"Sí, quiero probar… / No, gracias.",en:"Yes, I want to try… / No, thank you."},choices:[{es:"Sí, por favor",en:"Yes, please"},{es:"No, gracias",en:"No, thank you"},{es:"Tal vez",en:"Maybe"}],spark:{es:"¿Te gusta probar comida nueva?",en:"Do you like trying new food?"}},
+    {es:`¿Cuántos días quieres pasar en ${p.name}?`,en:`How many days do you want to spend in ${p.name}?`,starter:{es:"Quiero pasar…",en:"I want to spend…"},choices:[{es:"Dos días",en:"Two days"},{es:"Cuatro días",en:"Four days"},{es:"Una semana",en:"One week"}],spark:{es:"¿Es suficiente?",en:"Is that enough?"}},
+    {es:`Después de visitar ${p.place.es}, ¿cómo te sientes?`,en:`After visiting ${p.place.en}, how do you feel?`,starter:{es:"Me siento…",en:"I feel…"},choices:smallChoices.feeling,spark:{es:"¿Qué fue lo mejor?",en:"What was the best part?"}},
+    {es:`Arma tu día en ${p.name}: ¿qué haces por la mañana, por la tarde y por la noche?`,en:`Plan your day in ${p.name}: what do you do in the morning, afternoon and evening?`,starter:{es:"Por la mañana… Después… Por la noche…",en:"In the morning… Then… In the evening…"},choices:[p.action,{es:`probar ${p.food.es}`,en:`try ${p.food.en}`},{es:"caminar y sacar fotos",en:"walk and take photos"}],spark:{es:"¿Con quién compartes ese día?",en:"Who do you share that day with?"}},
   ];
 }
 
@@ -137,7 +137,7 @@ export default function IndonesiaFantastica() {
         <div className="id-kicker"><span>A1</span> 1000% CONVERSACIÓN · 1000% CONVERSATION</div>
         <p className="id-overline">38 PROVINCIAS REALES · CULTURA REAL · 38 REAL PROVINCES</p>
         <h1>INDONESIA<br/><em>FANTÁSTICA</em></h1>
-        <p className="id-lead">Entrá en un archipiélago vivo y empezá a hablar desde la primera pregunta.<b> Sin gramática. Sin respuestas perfectas. Todo bilingüe.</b><span className="id-en">Enter a living archipelago and start speaking from the first question. No grammar. No perfect answers. Everything is bilingual.</span></p>
+        <p className="id-lead">Entra en un archipiélago vivo y empieza a hablar desde la primera pregunta.<b> Sin gramática. Sin respuestas perfectas. Todo bilingüe.</b><span className="id-en">Enter a living archipelago and start speaking from the first question. No grammar. No perfect answers. Everything is bilingual.</span></p>
         <div className="id-cover-actions"><button onClick={()=>show("map")}>EXPLORAR EL MAPA <span>→</span><small className="id-en">EXPLORE THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> DESTINO SORPRESA<small className="id-en">SURPRISE DESTINATION</small></button></div>
         <div className="id-stats"><article><b>38</b><span>provincias<br/><small>provinces</small></span></article><article><b>380</b><span>preguntas<br/><small>questions</small></span></article><article><b>∞</b><span>respuestas posibles<br/><small>possible answers</small></span></article></div>
       </div>
@@ -146,7 +146,7 @@ export default function IndonesiaFantastica() {
     </section>}
 
     {screen==="map"&&<section className="id-map">
-      <header className="id-map-head"><div><span>EL ATLAS VIVO · THE LIVING ATLAS</span><h1>No elijas una tarjeta.<br/><em>Abrí un destino real.</em></h1></div><div><p>Los puntos luminosos son provincias reales. Tocá uno para descubrir sus lugares, comidas, culturas y animales.</p><span className="id-en">The glowing points are real provinces. Tap one to discover its places, food, culture and wildlife.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA · LET THE MAP CHOOSE</button></div></header>
+      <header className="id-map-head"><div><span>EL ATLAS VIVO · THE LIVING ATLAS</span><h1>No elijas una tarjeta.<br/><em>Abre un destino real.</em></h1></div><div><p>Los puntos luminosos son provincias reales. Toca uno para descubrir sus lugares, comidas, culturas y animales.</p><span className="id-en">The glowing points are real provinces. Tap one to discover its places, food, culture and wildlife.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA · LET THE MAP CHOOSE</button></div></header>
 
       <div className="id-atlas-toolbar">
         <div className="id-regions">{regions.map(r=><button className={region===r?"active":""} onClick={()=>chooseRegion(r)} key={r}>{r}</button>)}</div>
@@ -165,7 +165,7 @@ export default function IndonesiaFantastica() {
               return <button key={p.id} disabled={!visible} onClick={()=>setAtlasPick(p)} className={`id-atlas-node ${atlasPick.id===p.id?"selected":""} ${visited.has(p.id)?"visited":""} ${visible?"":"hidden-node"}`} style={{left:`${x}%`,top:`${y}%`,"--province":p.color} as CSSProperties} aria-label={`${p.name}: ${p.title.es}`}><b>{p.number}</b><span><strong>{localNames[p.id]}</strong><small>{p.title.es}</small></span></button>;
             })}
             <div className="id-compass-rose" aria-hidden="true"><span>N</span><i/><b/></div>
-            <p className="id-map-hint">TOCÁ UN PUNTO · TAP A POINT</p>
+            <p className="id-map-hint">TOCA UN PUNTO · TAP A POINT</p>
           </div>
         </div>
 
@@ -176,7 +176,7 @@ export default function IndonesiaFantastica() {
       </section>
 
       <section className="id-route-strip"><header><span>RUTA DE PORTALES · PORTAL ROUTE</span><b>{visited.size} descubiertos · discovered</b></header><div>{list.map(p=><button key={p.id} onClick={()=>setAtlasPick(p)} className={`${atlasPick.id===p.id?"active":""} ${visited.has(p.id)?"visited":""}`} style={{"--province":p.color} as CSSProperties}><span>{p.number}</span><b>{localNames[p.id]}</b><small>{regionCopy[p.region].code}</small></button>)}</div></section>
-      {!list.length&&<div className="id-empty"><b>Este portal no aparece en el mapa.</b><span>Probá otra provincia o región. · Try another province or region.</span></div>}
+      {!list.length&&<div className="id-empty"><b>Este portal no aparece en el mapa.</b><span>Prueba otra provincia o región. · Try another province or region.</span></div>}
     </section>}
 
     {screen==="province"&&<section className="id-world" style={{"--province":active.color} as CSSProperties}>
@@ -188,7 +188,7 @@ export default function IndonesiaFantastica() {
       </header>
 
       <div className="id-classroom">
-        <section className="id-rule"><span>ÚNICA REGLA · ONLY RULE</span><b>Respondé como puedas: una palabra también cuenta.</b><em className="id-en">Answer any way you can: one word counts too.</em></section>
+        <section className="id-rule"><span>ÚNICA REGLA · ONLY RULE</span><b>Responde como puedas: una palabra también cuenta.</b><em className="id-en">Answer any way you can: one word counts too.</em></section>
 
         <section className="id-question-stage">
           <div className="id-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question+1).padStart(2,"0")} <i>/ 10</i></b></div>
@@ -197,20 +197,20 @@ export default function IndonesiaFantastica() {
         </section>
 
         <section className="id-support-grid">
-          <button className="id-starter" onClick={()=>addPart(current.starter)}><span>EMPEZÁ ASÍ · START LIKE THIS</span><b>{current.starter.es}</b><em className="id-en">{current.starter.en}</em><i><Glyph name="plus"/> AGREGAR · ADD</i></button>
-          <article className="id-options"><span>TOCÁ PALABRAS · TAP WORDS</span><div>{current.choices.map(choice=><button key={choice.es} onClick={()=>addPart(choice)}><b>{choice.es}</b><small className="id-en">{choice.en}</small><i>+</i></button>)}</div></article>
-          <article className="id-spark"><span>SEGUÍ HABLANDO · KEEP TALKING</span><b>{current.spark.es}</b><em className="id-en">{current.spark.en}</em></article>
+          <button className="id-starter" onClick={()=>addPart(current.starter)}><span>EMPIEZA ASÍ · START LIKE THIS</span><b>{current.starter.es}</b><em className="id-en">{current.starter.en}</em><i><Glyph name="plus"/> AGREGAR · ADD</i></button>
+          <article className="id-options"><span>TOCA PALABRAS · TAP WORDS</span><div>{current.choices.map(choice=><button key={choice.es} onClick={()=>addPart(choice)}><b>{choice.es}</b><small className="id-en">{choice.en}</small><i>+</i></button>)}</div></article>
+          <article className="id-spark"><span>SIGUE HABLANDO · KEEP TALKING</span><b>{current.spark.es}</b><em className="id-en">{current.spark.en}</em></article>
         </section>
 
         <section className="id-answer-builder" aria-live="polite">
-          <header><div><span>LABORATORIO DE RESPUESTAS · ANSWER LAB</span><h2>Construí tu frase tocando palabras.</h2><p className="id-en">Build your sentence by tapping words.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button></div></header>
+          <header><div><span>LABORATORIO DE RESPUESTAS · ANSWER LAB</span><h2>Construye tu frase tocando palabras.</h2><p className="id-en">Build your sentence by tapping words.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button></div></header>
           <div className={`id-answer-canvas ${answerParts.length?"has-answer":""}`}>{answerParts.length?answerParts.map((part,index)=><button key={`${part.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{part.es.replace(/[.…]+/g,"")}</b><small className="id-en">{part.en.replace(/[.…]+/g,"")}</small></button>):<p><b>Tu respuesta aparece acá…</b><span className="id-en">Your answer appears here…</span></p>}</div>
           {answerParts.length>0&&<div className="id-answer-readout"><b>{answerEs}</b><span className="id-en">{answerEn}</span></div>}
         </section>
 
-        <section className="id-wordbank"><header><span>WORDBANK DEL MUNDO · WORLD WORDBANK</span><h2>Todo lo que necesitás está acá.</h2><p className="id-en">Everything you need is right here. Tap any word to add it.</p></header><div>{wordbank.map((word,index)=><button onClick={()=>addPart(word)} key={`${word.es}-${index}`}><span>{word.code}</span><small>{word.label}</small><b>{word.es}</b><em className="id-en">{word.en}</em><i>+</i></button>)}</div></section>
+        <section className="id-wordbank"><header><span>WORDBANK DEL MUNDO · WORLD WORDBANK</span><h2>Todo lo que necesitas está acá.</h2><p className="id-en">Everything you need is right here. Tap any word to add it.</p></header><div>{wordbank.map((word,index)=><button onClick={()=>addPart(word)} key={`${word.es}-${index}`}><span>{word.code}</span><small>{word.label}</small><b>{word.es}</b><em className="id-en">{word.en}</em><i>+</i></button>)}</div></section>
 
-        <section className="id-answer-tools"><header><span>BOTIQUÍN DE RESPUESTAS · ANSWER TOOLKIT</span><h2>Robá un comienzo y completalo.</h2><p className="id-en">Borrow a beginning and complete it.</p></header><div>{answerTools.map(tool=><button onClick={()=>addPart(tool)} key={tool.es}><b>{tool.es}</b><span className="id-en">{tool.en}</span><i>+</i></button>)}</div></section>
+        <section className="id-answer-tools"><header><span>BOTIQUÍN DE RESPUESTAS · ANSWER TOOLKIT</span><h2>Roba un comienzo y complétalo.</h2><p className="id-en">Borrow a beginning and complete it.</p></header><div>{answerTools.map(tool=><button onClick={()=>addPart(tool)} key={tool.es}><b>{tool.es}</b><span className="id-en">{tool.en}</span><i>+</i></button>)}</div></section>
 
         <nav className="id-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{questions.map((_,index)=><button aria-label={`Pregunta ${index+1}`} className={index===question?"active":""} onClick={()=>changeQuestion(index)} key={index}>{index+1}</button>)}</div><button onClick={()=>question===9?surprise():changeQuestion(question+1)}>{question===9?"NUEVO MUNDO · NEW WORLD →":"SIGUIENTE · NEXT →"}</button></nav>
       </div>

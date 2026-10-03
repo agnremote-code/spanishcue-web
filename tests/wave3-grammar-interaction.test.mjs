@@ -4,6 +4,7 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {reconciledMain,reconciledMainPaths} from './helpers/wave3-preservation.mjs';
 import {withoutApprovedAdditions} from './helpers/catalog-additions.mjs';
@@ -17,28 +18,28 @@ const visibleWords=t=>t?.props?.hidden?'':typeof t==='string'||typeof t==='numbe
 const words=t=>typeof t==='string'||typeof t==='number'?String(t):Array.isArray(t)?t.map(words).join(''):t?.props?words(t.props.children):'';
 async function harness(name,props){const state=[];let slot=0;const runtime={...React,useState:init=>{const i=slot++;if(!(i in state))state[i]=typeof init==='function'?init():init;return[state[i],v=>state[i]=typeof v==='function'?v(state[i]):v];},useRef:init=>{const i=slot++;return state[i]??(state[i]={current:init});}};const components=await load('app/syntax-labs/RepairSyntaxLab.tsx',runtime);const render=()=>{slot=0;return components[name](props);};const button=id=>walk(render(),n=>n.type==='button'&&n.props['data-action']===id)[0];return{render,button,text:()=>visibleWords(render()),click:id=>{const b=button(id);assert.ok(b,id);assert.ok(!b.props.disabled,id);b.props.onClick();}};}
 test('target SSR supplies actual practice path, deliberate reset and teacher assessment',async()=>{const {default:Lab}=await load('app/syntax-labs/SyntaxLab.tsx');for(const name of targets){const html=renderToString(React.createElement(Lab,{data:banks[name]}));assert.match(html,/REINICIAR LECCIÓN/);assert.match(html,/45 minutos/);assert.match(html,/docente/);assert.match(html,/RECUPERAR SIN APOYO/);}});
-test('all5 non-target lab SSR and visual source stay identical to base',async()=>{const base='2b48f28bc7b25f19c650e52cece8f59eca352936';const {default:Current}=await load('app/syntax-labs/SyntaxLab.tsx');const {default:Previous}=await load(null,React,execFileSync('git',['show',`${base}:app/syntax-labs/SyntaxLab.tsx`],{encoding:'utf8'}));for(const name of Object.keys(banks)){if(targets.includes(name))continue;assert.equal(renderToString(React.createElement(Current,{data:banks[name]})),renderToString(React.createElement(Previous,{data:banks[name]})),name);}const mainPaths=reconciledMainPaths();for(const path of ['app/syntax-labs/SyntaxVisuals.tsx','app/syntax-labs/style.css'])assert.equal(readFileSync(path,'utf8'),execFileSync('git',['show',`${mainPaths.has(path)?reconciledMain.head:base}:${path}`],{encoding:'utf8'}));});
+test('all5 non-target lab SSR and visual source stay identical to base',async()=>{const base='2b48f28bc7b25f19c650e52cece8f59eca352936';const {default:Current}=await load('app/syntax-labs/SyntaxLab.tsx');let priorUi=execFileSync('git',['show',`${base}:app/syntax-labs/SyntaxLab.tsx`],{encoding:'utf8'});for(const [before,after] of [['REPARÁ EL MENSAJE','REPARA EL MENSAJE'],['¿Qué relación escuchás?','¿Qué relación escuchas?'],['Decilo en voz alta y después cambiá el dato con información propia.','Dilo en voz alta y después cambia el dato con información propia.'],['Ahora la estructura sale de vos','Ahora la estructura sale de ti'],['Construí una intervención completa','Construye una intervención completa'],['PROBÁ:','PRUEBA:']])priorUi=priorUi.replace(before,after);const {default:Previous}=await load(null,React,priorUi);for(const name of Object.keys(banks)){if(targets.includes(name))continue;assert.equal(renderToString(React.createElement(Current,{data:banks[name]})),renderToString(React.createElement(Previous,{data:banks[name]})),name);}const mainPaths=reconciledMainPaths();for(const path of ['app/syntax-labs/SyntaxVisuals.tsx','app/syntax-labs/style.css'])assert.equal(readFileSync(path,'utf8'),execFileSync('git',['show',`${mainPaths.has(path)?reconciledMain.head:base}:${path}`],{encoding:'utf8'}));});
 test('every real decision/repair handler checks all options; hints, retry, reveal and reset cannot retain stale feedback',async()=>{
  for(const name of targets)for(const kind of ['decisions','repairs'])for(const [index,item] of banks[name][kind].entries()){
   const h=await harness('CheckedChoice',{item,index,kind,slug:banks[name].slug});
   assert.equal(h.button('check').props.disabled,true);
   for(let i=0;i<item.options.length;i++){
-   h.click(`select-${i}`);assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|VOLVÉ A MIRAR|Solución:/);
+   h.click(`select-${i}`);assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|VUELVE A MIRAR|Solución:/);
    h.click('check');const correct=(item.accepted??[item.correct]).includes(i);
-   assert.match(h.text(),correct?/RELACIÓN VÁLIDA/:/VOLVÉ A MIRAR/);
+   assert.match(h.text(),correct?/RELACIÓN VÁLIDA/:/VUELVE A MIRAR/);
    if(!correct)assert.ok(!h.text().includes(item.feedback),'wrong choice does not leak solution rationale');
    h.click('hint');assert.match(h.text(),/PISTA/);
-   h.click('retry');assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|VOLVÉ A MIRAR|PISTA:|Solución:/);
+   h.click('retry');assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|VUELVE A MIRAR|PISTA:|Solución:/);
   }
   h.click('reveal');assert.match(h.text(),/Solución:/);assert.ok(h.text().includes(item.feedback));
-  h.click('reset');assert.equal(h.button('check').props.disabled,true);assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|VOLVÉ A MIRAR|PISTA:|Solución:/);
+  h.click('reset');assert.equal(h.button('check').props.disabled,true);assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|VUELVE A MIRAR|PISTA:|Solución:/);
  }
 });
 test('timeline moves actual events, explains reverse order, and resets',async()=>{
- const h=await harness('TimelineStation',{});h.click('check');assert.match(h.text(),/Revisá/);h.click('up-1');h.click('check');assert.match(h.text(),/Orden coherente/);h.click('reverse');assert.match(h.text(),/Después de desayunar, salgo de casa/);h.click('down-0');assert.doesNotMatch(h.text(),/Orden coherente/);h.click('reset');assert.doesNotMatch(h.text(),/Orden coherente|Después de desayunar, salgo/);
+ const h=await harness('TimelineStation',{});h.click('check');assert.match(h.text(),/Revisa/);h.click('up-1');h.click('check');assert.match(h.text(),/Orden coherente/);h.click('reverse');assert.match(h.text(),/Después de desayunar, salgo de casa/);h.click('down-0');assert.doesNotMatch(h.text(),/Orden coherente/);h.click('reset');assert.doesNotMatch(h.text(),/Orden coherente|Después de desayunar, salgo/);
 });
 test('contrast changes negative position and responds to an actual third datum',async()=>{
- const h=await harness('ContrastStation',{});h.click('front');assert.match(h.text(),/Ni el precio ni la distancia son el problema/);h.click('back');assert.match(h.text(),/El problema no es ni el precio ni la distancia/);h.click('third');assert.match(h.text(),/horario/);h.click('choose-0');h.click('check');assert.match(h.text(),/VOLVÉ A MIRAR/);h.click('choose-1');assert.doesNotMatch(h.text(),/VOLVÉ A MIRAR/);h.click('check');assert.match(h.text(),/RELACIÓN VÁLIDA/);h.click('reset');assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|El horario es imposible/);
+ const h=await harness('ContrastStation',{});h.click('front');assert.match(h.text(),/Ni el precio ni la distancia son el problema/);h.click('back');assert.match(h.text(),/El problema no es ni el precio ni la distancia/);h.click('third');assert.match(h.text(),/horario/);h.click('choose-0');h.click('check');assert.match(h.text(),/VUELVE A MIRAR/);h.click('choose-1');assert.doesNotMatch(h.text(),/VUELVE A MIRAR/);h.click('check');assert.match(h.text(),/RELACIÓN VÁLIDA/);h.click('reset');assert.doesNotMatch(h.text(),/RELACIÓN VÁLIDA|El horario es imposible/);
 });
 test('referent filter needs both clues; changing reference invalidates confirmation',async()=>{
  const h=await harness('ReferentStation',{});h.click('clue-0');assert.match(h.text(),/2 candidatos/);h.click('clue-1');assert.match(h.text(),/1 candidato/);h.click('check');assert.match(h.text(),/Ana/);h.click('clue-0');assert.doesNotMatch(h.text(),/REFERENTE IDENTIFICADO/);h.click('reset');assert.match(h.text(),/3 candidatos/);
@@ -66,14 +67,14 @@ test('all3 exact routes render target lesson and metadata; catalog and PRO polic
   const html=renderToString(React.createElement(Page));assert.ok(html.includes(bank.title));assert.match(html,/sx-repaired/);
   const lesson=lessonAtPath('/'+bank.slug,lessons);assert.equal(lesson.id,id);assert.equal(lesson.title,bank.title);assert.equal(lesson.level,bank.level);assert.equal(isFreeLesson(id),false);
  }
- for(const path of ['app/lesson-catalog.ts','app/access-policy.ts'])assert.equal(withoutApprovedAdditions(path,readFileSync(path)).toString('utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
+ const approvedCatalog=JSON.parse(readFileSync(new URL('./fixtures/syntax-neutral-baseline.json',import.meta.url),'utf8')).catalogSource;assert.equal(createHash('sha256').update(readFileSync('app/lesson-catalog.ts')).digest('hex'),approvedCatalog,'reviewed neutral catalog source remains unchanged');const path='app/access-policy.ts';assert.equal(withoutApprovedAdditions(path,readFileSync(path)).toString('utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
 });
 test('all24 timeline permutations are controllable by real move handlers; only chronological order passes',async()=>{
  function permutations(xs){return xs.length?xs.flatMap((x,i)=>permutations(xs.filter((_,j)=>i!==j)).map(rest=>[x,...rest])):[[]];}
  for(const target of permutations([0,1,2,3])){
   const h=await harness('TimelineStation',{}),order=[1,0,2,3];
   for(let i=0;i<4;i++){let p=order.indexOf(target[i]);while(p>i){h.click(`up-${p}`);[order[p],order[p-1]]=[order[p-1],order[p]];p--;}}
-  h.click('check');assert.match(h.text(),target.every((v,i)=>v===i)?/Orden coherente/:/Revisá las horas/);
+  h.click('check');assert.match(h.text(),target.every((v,i)=>v===i)?/Orden coherente/:/Revisa las horas/);
  }
 });
 test('relative known-person comparison accepts both forms and cannot remain after changing clues',async()=>{

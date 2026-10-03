@@ -53,7 +53,7 @@ export const a1w06: Module = {
           head: ["Persona", "Tener", "Ejemplo"],
           rows: [
             ["yo", "tengo", "Tengo un hermano mayor."],
-            ["tú / vos", "tienes / tenés", "¿Tienes hijos? · ¿Tenés hermanos?"],
+            ["tú", "tienes", "¿Tienes hijos?"],
             ["usted, él, ella", "tiene", "Mi abuelo tiene noventa años."],
             ["nosotros, nosotras", "tenemos", "Tenemos tres primos en Chiapas."],
             ["vosotros, vosotras", "tenéis", "¿Tenéis sobrinos?"],
@@ -90,7 +90,7 @@ export const a1w06: Module = {
           head: ["Poseedor", "Un poseído", "Varios poseídos"],
           rows: [
             ["yo", "mi tío / mi tía", "mis tíos / mis tías"],
-            ["tú / vos", "tu primo", "tus primos"],
+            ["tú", "tu primo", "tus primos"],
             ["usted, él, ella", "su hijo", "sus hijos"],
             ["nosotros, nosotras", "nuestro padre / nuestra madre", "nuestros padres / nuestras hermanas"],
             ["vosotros, vosotras", "vuestro abuelo / vuestra abuela", "vuestros abuelos / vuestras abuelas"],

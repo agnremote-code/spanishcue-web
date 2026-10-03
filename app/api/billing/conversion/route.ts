@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     return new Response(null, { status: 204, headers: { "cache-control": "private, no-store" } });
   }
   const userId = accountIdFromHeaders(request.headers);
-  if (!userId) return Response.json({ error: "Iniciá sesión para continuar." }, { status: 401 });
+  if (!userId) return Response.json({ error: "Inicia sesión para continuar." }, { status: 401 });
   const raw = await request.text();
   let subscriptionId = "";
   try { subscriptionId = (JSON.parse(raw) as { subscriptionId?: unknown }).subscriptionId as string; } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }

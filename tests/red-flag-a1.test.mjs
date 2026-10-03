@@ -53,7 +53,7 @@ test('A1 closing task elicits a concrete exchange and historical levels retain t
  const closing=activity.html('A1',['finale',17,{0:'green',1:'red'},{}]);
  assert.match(closing,/Nuestra próxima cita/);
  assert.match(closing,/¿Dónde nos vemos/);
- assert.match(closing,/Cambiá los papeles/);
+ assert.match(closing,/Cambia los papeles/);
  const old=activity.html('A2',['play',0,{0:'green'},{0:true}]);
  assert.match(old,/GREEN FLAG/);
  assert.match(old,/RED FLAG/);

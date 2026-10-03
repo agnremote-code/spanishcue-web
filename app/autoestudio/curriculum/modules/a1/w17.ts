@@ -87,7 +87,7 @@ export const a1w17: Module = {
           head: ["Persona", "Estar", "Ejemplo"],
           rows: [
             ["yo", "estoy", "Estoy muy cansado."],
-            ["tú / vos", "estás", "¿Estás contenta con tu casa?"],
+            ["tú", "estás", "¿Estás contenta con tu casa?"],
             ["usted, él, ella", "está", "La puerta está abierta."],
             ["nosotros, nosotras", "estamos", "Estamos ocupados hoy."],
             ["vosotros, vosotras (España)", "estáis", "¿Estáis cansados?"],

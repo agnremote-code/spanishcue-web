@@ -12,10 +12,10 @@ export function RepairGuide({ kind }: { kind: RepairKind }) {
     <details>
       <summary>Ruta docente · unos 45 minutos · selección sugerida</summary>
       <p><strong>Meta:</strong> {guide.outcome}</p>
-      <p>Clase guiada, en pareja o con el docente. El tiempo es una estimación; no hace falta recorrer todo el banco. Se parte de nombres cotidianos y presente básico. Las consignas usan voseo.</p>
+      <p>Clase guiada, en pareja o con el docente. El tiempo es una estimación; no hace falta recorrer todo el banco. Se parte de nombres cotidianos y presente básico. Las consignas usan tú.</p>
       <ol>{guide.route.map(step => <li key={step}>{step}</li>)}</ol>
       <p>{guide.optional}</p><p><strong>Criterio de cierre:</strong> {guide.criterion}</p>
-      <p>Ayudas a demanda: primero dejá intentar; después abrí un modelo. Los botones de observación registran el juicio del docente, no una evaluación automática de la voz.</p>
+      <p>Ayudas a demanda: primero deja intentar; después abre un modelo. Los botones de observación registran el juicio del docente, no una evaluación automática de la voz.</p>
     </details>
   </aside>;
 }
@@ -35,9 +35,9 @@ export function QuantityTask() {
   };
   const reset = () => { setPhase(0); setCounts({ bottles: 0, apples: 0 }); setChecked(false); setModel(false); setObserved(false); };
   return <section id="gw-repair-task" className="gw-repair gw-repair-task" aria-labelledby="market-task-title">
-    <header><span>{phase ? '02 · RECUPERÁ SIN LEER' : '01 · OBSERVÁ Y ARMÁ'}</span>
+    <header><span>{phase ? '02 · RECUPERA SIN LEER' : '01 · OBSERVA Y ARMA'}</span>
       <h2 id="market-task-title">Un pedido, una canasta.</h2>
-      <p>{phase ? 'Cambió el pedido. Armalo y decilo en voz alta antes de abrir el modelo.' : 'Mirá el pedido. ¿Qué falta? Agregá o quitá productos; después pedí la compra en voz alta.'}</p>
+      <p>{phase ? 'Cambió el pedido. Ármalo y dilo en voz alta antes de abrir el modelo.' : 'Mira el pedido. ¿Qué falta? Agrega o quita productos; después pide la compra en voz alta.'}</p>
     </header>
     <p className="gw-repair-order"><strong>Pedido:</strong> {target.bottles} botellas de agua + {target.apples} manzanas.</p>
     <div className="gw-repair-basket">
@@ -56,14 +56,14 @@ export function QuantityTask() {
       <button type="button" data-action="show-order-model" aria-expanded={model} onClick={() => setModel(value => !value)}>{model ? 'Ocultar modelo' : 'Ayuda: modelo del pedido'}</button>
     </div>
     {model && <p className="gw-repair-model" data-model="order">Quiero {quantityPhrase('bottles', target.bottles)} de agua y {quantityPhrase('apples', target.apples)}.</p>}
-    <div role="status" className="gw-repair-status">{checked && (exact ? <p><strong>Pedido completo.</strong> Ahora decilo sin leer. La cantidad coincide; la voz la observa tu docente.</p> : <ul>{products.map(product => {
+    <div role="status" className="gw-repair-status">{checked && (exact ? <p><strong>Pedido completo.</strong> Ahora dilo sin leer. La cantidad coincide; la voz la observa tu docente.</p> : <ul>{products.map(product => {
       const result = quantityStatus(counts[product], target[product]);
-      return <li key={product}>{result.kind === 'exact' ? `${product === 'bottles' ? 'Botellas' : 'Manzanas'}: cantidad exacta.` : `${result.kind === 'short' ? (result.difference === 1 ? 'Falta' : 'Faltan') : (result.difference === 1 ? 'Sobra' : 'Sobran')} ${quantityPhrase(product, result.difference)}. Ajustá la canasta.`}</li>;
+      return <li key={product}>{result.kind === 'exact' ? `${product === 'bottles' ? 'Botellas' : 'Manzanas'}: cantidad exacta.` : `${result.kind === 'short' ? (result.difference === 1 ? 'Falta' : 'Faltan') : (result.difference === 1 ? 'Sobra' : 'Sobran')} ${quantityPhrase(product, result.difference)}. Ajusta la canasta.`}</li>;
     })}</ul>)}</div>
     {checked && exact && <div className="gw-repair-controls">
       {phase === 0 ? <button type="button" data-action="retrieve-order" onClick={() => { setPhase(1); setCounts({ bottles: 0, apples: 0 }); setChecked(false); setModel(false); setObserved(false); }}>Segundo pedido · sin modelo</button> : <button type="button" data-action="confirm-order" aria-pressed={observed} onClick={() => setObserved(true)}>Docente: escuché las dos cantidades</button>}
     </div>}
-    {observed && <p role="status">Pedido oral observado. Pasá al intercambio final y resolvé una falta real de productos.</p>}
+    {observed && <p role="status">Pedido oral observado. Pasa al intercambio final y resuelve una falta real de productos.</p>}
     <button type="button" className="gw-repair-reset" data-action="reset-order" onClick={reset}>Reiniciar canasta, pedido y observación</button>
   </section>;
 }
@@ -76,8 +76,8 @@ export function CoordinateTask() {
   const position = positions[selected];
   const choose = (index: number) => { setSelected(index); setObserved(false); setModel(false); };
   return <section id="gw-repair-task" className="gw-repair gw-repair-task" aria-labelledby="tower-task-title">
-    <header><span>{retrieval ? '02 · RECUPERÁ Y SITUÁ EN EL TIEMPO' : '01 · MOVÉ Y DESCRIBÍ'}</span><h2 id="tower-task-title">¿Dónde están las llaves?</h2>
-      <p>{retrieval ? 'Describí la nueva posición sin leer el modelo. Después contá dos acciones de tu día en orden: ¿qué hacés primero y qué hacés después?' : 'Elegí una posición. Mirá qué cambia y describí dónde están las llaves antes de pedir ayuda.'}</p></header>
+    <header><span>{retrieval ? '02 · RECUPERA Y SITÚA EN EL TIEMPO' : '01 · MUEVE Y DESCRIBE'}</span><h2 id="tower-task-title">¿Dónde están las llaves?</h2>
+      <p>{retrieval ? 'Describe la nueva posición sin leer el modelo. Después cuenta dos acciones de tu día en orden: ¿qué haces primero y qué haces después?' : 'Elige una posición. Mira qué cambia y describe dónde están las llaves antes de pedir ayuda.'}</p></header>
     <div className="gw-repair-scene">
       <svg viewBox="0 0 600 240" role="img" aria-label={`Escena: las llaves están ${position.phrase}. Una mesa a la izquierda y una caja a la derecha.`}>
         <path d="M20 219H580" stroke="#bcc5c2" strokeWidth="2" />
@@ -92,7 +92,7 @@ export function CoordinateTask() {
       </svg>
     </div>
     <p className="gw-repair-scene-legend">Mesa a la izquierda · caja abierta a la derecha.</p>
-    <p className="gw-repair-access-note">La descripción accesible de la imagen informa la posición. Si usás esa ayuda, reconstruí la frase oralmente después de escucharla.</p>
+    <p className="gw-repair-access-note">La descripción accesible de la imagen informa la posición. Si usas esa ayuda, reconstruye la frase oralmente después de escucharla.</p>
     <div className="gw-repair-controls" role="group" aria-label="Mover las llaves">
       {positions.map((item, index) => <button type="button" key={item.id} data-action={`position-${item.id}`} aria-pressed={selected === index} onClick={() => choose(index)}>Posición {index + 1}</button>)}
     </div>
@@ -102,7 +102,7 @@ export function CoordinateTask() {
     </div>
     {model && <div className="gw-repair-model" data-model="position"><p>Las llaves están {position.phrase}.</p><p>También: {position.alternatives.join(' / ')}.</p>{retrieval && <p>Primero desayuno; después salgo. Hoy necesito las llaves.</p>}</div>}
     {retrieval && <button type="button" data-action="confirm-position" aria-pressed={observed} onClick={() => setObserved(true)}>Docente: la descripción coincide y la secuencia se entiende</button>}
-    <p role="status">{observed ? 'Descripción observada. Una persona puede encontrar las llaves y seguir el orden de las dos acciones.' : 'Decí una frase propia. La aplicación mueve las llaves; tu docente escucha la descripción.'}</p>
+    <p role="status">{observed ? 'Descripción observada. Una persona puede encontrar las llaves y seguir el orden de las dos acciones.' : 'Di una frase propia. La aplicación mueve las llaves; tu docente escucha la descripción.'}</p>
     <button type="button" className="gw-repair-reset" data-action="reset-position" onClick={() => { setSelected(0); setRetrieval(false); setModel(false); setObserved(false); }}>Reiniciar posición, ayuda y observación</button>
   </section>;
 }
@@ -114,7 +114,7 @@ export function RepairPractice({ items, kind }: { items: Practice[]; kind: Repai
   const correct = items.filter(item => attempts[item.id!]?.checked && isCorrect(item, attempts[item.id!]?.selection)).length;
   const update = (id: string, value: Attempt) => setAttempts(current => ({ ...current, [id]: value }));
   return <section className="gw-repair gw-repair-practice" aria-label="Práctica con contexto y reintento">
-    <header><span>PRÁCTICA EN CONTEXTO</span><h2>Elegí. Probá. Ajustá.</h2><p>Comprobá cada frase cuando quieras. Si necesitás ayuda, intentá otra vez antes de abrir la solución. {kind === 'quantity' ? 'Núcleo A1: 1, 2, 3 y 5.' : 'Núcleo A1: 1–4.'} El resto es extensión opcional.</p></header>
+    <header><span>PRÁCTICA EN CONTEXTO</span><h2>Elige. Prueba. Ajusta.</h2><p>Comprueba cada frase cuando quieras. Si necesitas ayuda, intenta otra vez antes de abrir la solución. {kind === 'quantity' ? 'Núcleo A1: 1, 2, 3 y 5.' : 'Núcleo A1: 1–4.'} El resto es extensión opcional.</p></header>
     <div className="gw-repair-questions">{items.map((item, index) => {
       const id = item.id!;
       const attempt = attempts[id] ?? {};
@@ -127,12 +127,12 @@ export function RepairPractice({ items, kind }: { items: Practice[]; kind: Repai
         </div>
         {attempt.selection !== undefined && <p className="gw-repair-composition"><strong>Tu frase:</strong> {completeSentence(item, attempt.selection)}</p>}
         <button type="button" data-action={`check-${id}`} disabled={attempt.selection === undefined} onClick={() => update(id, { ...attempt, checked: true })}>Comprobar frase {index + 1}</button>
-        <div role="status">{attempt.checked && <p><strong>{right ? 'La frase funciona. ' : 'Probá otra vez. '}</strong>{right ? item.why : item.hint}</p>}</div>
+        <div role="status">{attempt.checked && <p><strong>{right ? 'La frase funciona. ' : 'Prueba otra vez. '}</strong>{right ? item.why : item.hint}</p>}</div>
         {attempt.checked && !right && <button type="button" data-action={`reveal-${id}`} aria-expanded={!!attempt.revealed} onClick={() => update(id, { ...attempt, revealed: !attempt.revealed })}>{attempt.revealed ? 'Ocultar solución' : 'Mostrar solución y motivo'}</button>}
         {attempt.revealed && <p className="gw-repair-model"><strong>Solución: {completeSentence(item, item.answer)}</strong><br />{item.why}</p>}
       </article>;
     })}</div>
-    <p role="status" className="gw-repair-score">{correct} correctas de {checked} comprobadas · banco de {items.length} frases. Podés volver a intentar; esto no evalúa tu producción oral.</p>
+    <p role="status" className="gw-repair-score">{correct} correctas de {checked} comprobadas · banco de {items.length} frases. Puedes volver a intentar; esto no evalúa tu producción oral.</p>
     <button type="button" className="gw-repair-reset" data-action="reset-practice" onClick={() => setAttempts({})}>Reiniciar respuestas, comprobaciones y soluciones</button>
   </section>;
 }
@@ -146,9 +146,9 @@ export function RepairClose({ kind }: { kind: RepairKind }) {
     <p>{close.instruction}</p><p>{close.cue}</p>
     <button type="button" data-action="close-help" aria-expanded={help} onClick={() => setHelp(value => !value)}>{help ? 'Ocultar ejemplo' : 'Ayuda: un ejemplo de intercambio'}</button>
     {help && <p className="gw-repair-model" data-model="closing">{close.model}</p>}
-    <details><summary>Para el docente · cuándo cerrar</summary><p>{close.criterion}</p><p>Si se necesitó el ejemplo, ocultalo y repetí con otras cantidades o con otra posición. No se puntúa automáticamente la voz.</p></details>
+    <details><summary>Para el docente · cuándo cerrar</summary><p>{close.criterion}</p><p>Si se necesitó el ejemplo, ocúltalo y repite con otras cantidades o con otra posición. No se puntúa automáticamente la voz.</p></details>
     <button type="button" data-action="close-confirm" aria-pressed={observed} onClick={() => setObserved(true)}>Docente: observé el intercambio y el objetivo</button>
-    <p role="status">{observed ? 'Intercambio observado por el docente. Nombrá una cosa que ahora podés pedir o ubicar con más claridad.' : 'Hablá para que la otra persona pueda actuar; no hace falta copiar el ejemplo.'}</p>
+    <p role="status">{observed ? 'Intercambio observado por el docente. Nombra una cosa que ahora puedes pedir o ubicar con más claridad.' : 'Habla para que la otra persona pueda actuar; no hace falta copiar el ejemplo.'}</p>
     <button type="button" className="gw-repair-reset" data-action="close-reset" onClick={() => { setHelp(false); setObserved(false); }}>Reiniciar ayuda y observación oral</button>
   </section>;
 }

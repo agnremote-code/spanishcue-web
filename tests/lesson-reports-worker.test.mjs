@@ -14,13 +14,13 @@ test('inline lesson delegates Escape and focus to the native report dialog',asyn
 test('flag launcher and participatory dialog keep accessible activation and CSS-only reveal',async()=>{
  const source=await readFile('app/lesson-reports/LessonReportPanel.tsx','utf8');
  const css=await readFile('app/lesson-reports/reports.css','utf8');
- assert.match(source,/aria-label="Ayudanos a mejorar"/);
+ assert.match(source,/aria-label="Ayúdanos a mejorar"/);
  assert.match(source,/<span className="report-flag" aria-hidden="true">⚑<\/span>/);
- assert.match(source,/<span className="report-trigger-label" aria-hidden="true">Ayudanos a mejorar<\/span>/);
+ assert.match(source,/<span className="report-trigger-label" aria-hidden="true">Ayúdanos a mejorar<\/span>/);
  assert.match(source,/className="report-trigger"[^>]*onClick=\{open\}/);
  assert.ok(!/onMouseEnter|onFocus=|setInterval|requestAnimationFrame/.test(source));
  assert.match(source,/¿Qué podemos mejorar\?/);
- assert.match(source,/Contanos qué viste, qué no quedó claro o qué mejorarías…/);
+ assert.match(source,/Cuéntanos qué viste, qué no quedó claro o qué mejorarías…/);
  assert.match(source,/Gracias por ayudarnos a mejorar SpanishCue\./);
  assert.match(css,/\.report-trigger-label\s*\{[^}]*visibility:\s*hidden/);
  assert.match(css,/\.report-trigger:focus-visible \.report-trigger-label\s*\{[^}]*visibility:\s*visible/);

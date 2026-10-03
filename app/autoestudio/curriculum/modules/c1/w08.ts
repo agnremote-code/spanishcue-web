@@ -350,7 +350,7 @@ export const c1w08: Module = {
       },
       {
         "speaker": "a",
-        "text": "Tenés razón en ese punto. No habíamos establecido un corte y eso te dejó con instrucciones incompatibles. Mantengo que debías avisar, pero sería injusto presentar la demora como una decisión exclusivamente tuya. Propongo que cualquier cambio posterior pase por coordinación. Si lo aceptamos, indicaremos qué entrega se desplaza. Me gustaría además que el lunes señalases los apartados provisionales, para que nadie interprete una versión de trabajo como un documento validado."
+        "text": "Tienes razón en ese punto. No habíamos establecido un corte y eso te dejó con instrucciones incompatibles. Mantengo que debías avisar, pero sería injusto presentar la demora como una decisión exclusivamente tuya. Propongo que cualquier cambio posterior pase por coordinación. Si lo aceptamos, indicaremos qué entrega se desplaza. Me gustaría además que el lunes señalases los apartados provisionales, para que nadie interprete una versión de trabajo como un documento validado."
       },
       {
         "speaker": "b",

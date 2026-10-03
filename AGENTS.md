@@ -80,3 +80,7 @@ There is exactly one canonical deployment mechanism at any time.
 ## Secrets
 
 Never commit secret values, and never ask the owner to paste them into a chat, issue, PR or file. Refer to secrets by name only. Values live in the hosting provider, GitHub encrypted secrets, or provider consoles.
+
+## Spanish language consistency
+
+Follow `docs/LANGUAGE_POLICY.md`: international neutral Spanish and tú for default instructions; full paradigms include vosotros/vosotras and ustedes. Preserve explicitly taught regional examples, English copy and audio/transcript synchronization. Run the linguistic guard and English-copy protection when changing content; use exact justified exemptions rather than blanket file exclusions.

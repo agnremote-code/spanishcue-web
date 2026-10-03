@@ -30,7 +30,7 @@ export default async function Admin() {
       <main className="teacher-main">
         <Link href="/">← Mi biblioteca</Link>
         <section className="teacher-intro" style={{ marginTop: 32 }}>
-          <p>SOLO VOS · ADMINISTRACIÓN</p>
+          <p>SOLO TÚ · ADMINISTRACIÓN</p>
           <h1>Tu SPANISHCUE.</h1>
           <div>Administra la oferta y el acceso de cada profesor desde un solo lugar.</div>
         </section>

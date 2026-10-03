@@ -24,7 +24,7 @@ const entries: [number, string, string, string][] = [
   [12, "cuadra", "a dos cuadras de aquí", "El artículo una ya está escrito."],
   [13, "la vereda", "caminar por la vereda", "Busca el espacio por donde caminan las personas."],
   [14, "cruzar", "cruzar la avenida", "Hay que pasar de un lado al otro."],
-  [15, "doblá", "doblar a la derecha", "Da una indicación: puedes usar vos, tú o usted."],
+  [15, "dobla", "doblar a la derecha", "Da una indicación: puedes usar tú o usted."],
   [16, "la parada", "la parada del colectivo", "Es el lugar donde esperas el transporte."],
   [17, "un embotellamiento", "un embotellamiento en la autopista", "Presenta algo nuevo con hay: usa un artículo indefinido."],
   [18, "queda cerca", "queda cerca de la estación", "El lugar está a poca distancia; mantén la expresión completa."],
@@ -74,10 +74,10 @@ const entries: [number, string, string, string][] = [
 export const lexicalPractice: Record<number, LexicalPractice> = Object.fromEntries(
   entries.map(([id, answer, combination, hint]) => [id, { answer, combination, hint, register: "neutral" as const }]),
 );
-Object.assign(lexicalPractice[15], { register: "contextual", use: "El modelo usa vos: doblá. Con tú: dobla; con usted: doble. Elige el trato adecuado para la persona." });
+Object.assign(lexicalPractice[15], { register: "contextual", use: "El modelo usa tú: dobla. Con vos: doblá; con usted: doble. Elige el trato adecuado para la persona." });
 Object.assign(lexicalPractice[25], { register: "contextual", use: "En el restaurante, por favor suaviza el pedido. Con usted: ¿Nos puede traer los cubiertos, por favor?" });
 Object.assign(lexicalPractice[26], { register: "contextual", use: "La cuenta, por favor es un pedido breve y cortés. También puedes decir: ¿Me trae la cuenta, por favor?" });
-Object.assign(lexicalPractice[38], { register: "contextual", use: "A alguien de confianza: ¿Nos podés sacar una foto? A una persona que tratas de usted: ¿Nos puede sacar una foto, por favor?" });
+Object.assign(lexicalPractice[38], { register: "contextual", use: "A alguien de confianza: ¿Nos puedes sacar una foto? A una persona que tratas de usted: ¿Nos puede sacar una foto, por favor?" });
 Object.assign(lexicalPractice[56], { register: "regional", use: "La tarjeta original señala el uso frecuente en Argentina. También se usa hacer un examen; el profesor acepta la variante habitual del alumno." });
 export const completedGap = (card: WordCard) => card.gap.replace("___", lexicalPractice[card.id].answer);
 

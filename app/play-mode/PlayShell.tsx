@@ -9,15 +9,15 @@ export type PlayStage = { label: string; short: string; minutes: number; color: 
 export type PlayPowerUp = readonly [label: string, prompt: string];
 
 const POWER_UPS = [
-  ["¿POR QUÉ?", "¿Por qué esa opción funciona mejor para vos?"],
-  ["EJEMPLO", "¿Podés dar un ejemplo concreto de lo que decís?"],
-  ["¿Y VOS?", "¿Cómo aparece esta elección en tu propia vida?"],
-  ["COMPARÁ", "¿Cuál es la diferencia más importante entre las dos opciones?"],
-  ["CONDICIÓN EXTRA", "Imaginá que tu opción te obliga a madrugar todos los días. ¿Qué harías para que siga valiendo la pena?"],
-  ["NO ESTOY DE ACUERDO", "No estoy convencido: creo que la otra opción es más práctica. Defendé la tuya."],
-  ["CONTAME MÁS", "¿Qué es lo más importante para vos de esa opción?"],
+  ["¿POR QUÉ?", "¿Por qué esa opción funciona mejor para ti?"],
+  ["EJEMPLO", "¿Puedes dar un ejemplo concreto de lo que dices?"],
+  ["¿Y TÚ?", "¿Cómo aparece esta elección en tu propia vida?"],
+  ["COMPARA", "¿Cuál es la diferencia más importante entre las dos opciones?"],
+  ["CONDICIÓN EXTRA", "Imagina que tu opción te obliga a madrugar todos los días. ¿Qué harías para que siga valiendo la pena?"],
+  ["NO ESTOY DE ACUERDO", "No estoy convencido: creo que la otra opción es más práctica. Defiende la tuya."],
+  ["CUÉNTAME MÁS", "¿Qué es lo más importante para ti de esa opción?"],
   ["PASADO", "¿Alguna vez elegiste algo parecido? ¿Qué pasó?"],
-  ["FUTURO", "¿Creés que elegirías lo mismo dentro de diez años?"],
+  ["FUTURO", "¿Crees que elegirías lo mismo dentro de diez años?"],
   ["VENTAJA", "¿Cuál es la mayor ventaja de la opción que elegiste?"],
   ["DESVENTAJA", "¿Qué desventaja aceptarías y cuál no?"],
   ["¿SIEMPRE?", "¿En qué situación dejaría de convencerte tu opción?"],
@@ -26,14 +26,14 @@ const POWER_UPS = [
 
 const SITUATION_POWER_UPS = [
   ["¿POR QUÉ?", "¿Por qué reaccionarías así y no de otra manera?"],
-  ["EJEMPLO", "¿Te pasó alguna vez algo parecido? Contá qué ocurrió."],
-  ["¿Y VOS?", "¿Qué harías realmente vos en esta situación?"],
-  ["COMPARÁ", "Compará tu reacción con la de alguien más directo o más paciente."],
+  ["EJEMPLO", "¿Te pasó alguna vez algo parecido? Cuenta qué ocurrió."],
+  ["¿Y TÚ?", "¿Qué harías realmente tú en esta situación?"],
+  ["COMPARA", "Compara tu reacción con la de alguien más directo o más paciente."],
   ["CAMBIO", "Ahora la otra persona es alguien muy cercano. ¿Cambia tu respuesta?"],
-  ["NO ESTOY DE ACUERDO", "No estoy convencido: tu solución puede crear otro problema. Defendela o cambiala."],
-  ["CONTAME MÁS", "¿Qué dirías exactamente y qué esperás que pase después?"],
+  ["NO ESTOY DE ACUERDO", "No estoy convencido: tu solución puede crear otro problema. Defiéndela o cámbiala."],
+  ["CUÉNTAME MÁS", "¿Qué dirías exactamente y qué esperas que pase después?"],
   ["PASADO", "¿Te pasó alguna vez algo parecido? ¿Cómo terminó?"],
-  ["FUTURO", "¿Creés que reaccionarías igual dentro de diez años?"],
+  ["FUTURO", "¿Crees que reaccionarías igual dentro de diez años?"],
   ["VENTAJA", "¿Cuál es la principal ventaja de tu solución?"],
   ["DESVENTAJA", "¿Qué problema podría provocar tu decisión?"],
   ["¿SIEMPRE?", "¿Reaccionarías así en cualquier contexto?"],
@@ -68,7 +68,7 @@ export default function PlayShell({lesson,title,stages,stage,onStageChange,child
       <button className="support-toggle" onClick={()=>setSupport(value=>!value)}>AYUDA {supportLevel} {support?"−":"+"}</button>
     </aside>
     {power&&<div className="power-toast" role="status"><small>POWER-UP</small><b>{power}</b><button aria-label="Cerrar" onClick={()=>setPower(null)}>×</button></div>}
-    {support&&<section className="support-drawer"><div><small>PARA ARRANCAR</small><b>Elegí una frase. Después seguí con tus palabras.</b></div><p>{SUPPORT.map(item=><span key={item}>{item}</span>)}</p><button onClick={()=>setSupport(false)}>CERRAR</button></section>}
+    {support&&<section className="support-drawer"><div><small>PARA ARRANCAR</small><b>Elige una frase. Después sigue con tus palabras.</b></div><p>{SUPPORT.map(item=><span key={item}>{item}</span>)}</p><button onClick={()=>setSupport(false)}>CERRAR</button></section>}
   </main>;
 }
 
@@ -77,5 +77,5 @@ export function CardNav({index,total,onPrevious,onNext}:{index:number;total:numb
 }
 
 export function SpeakPrompt({children,tone="blue"}:{children:ReactNode;tone?:"blue"|"coral"|"lime"}){
-  return <div className={`speak-prompt ${tone}`}><small>AHORA HABLÁ</small><strong>{children}</strong></div>;
+  return <div className={`speak-prompt ${tone}`}><small>AHORA HABLA</small><strong>{children}</strong></div>;
 }

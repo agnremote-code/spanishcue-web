@@ -48,12 +48,12 @@ export default function SystemHub({lessons}:{lessons:VerbalLessonSummary[]}){
   return <main className="vs-shell">
     <header className="vs-topbar"><Link href="/" aria-label="Volver a la biblioteca">←</Link><SpanishCueBrand variant="compact" tone="light" context="SISTEMA VERBAL"/><span>16 TIEMPOS · 3 MODOS</span></header>
     <section className="vs-hero">
-      <div><span>★ RUTA FUNDAMENTAL · A1–C2</span><h1>El sistema verbal,<br/><em>por dos caminos.</em></h1><p>Entrá por la mirada del hablante o por la línea temporal. Las dos rutas llevan a las mismas clases.</p></div>
+      <div><span>★ RUTA FUNDAMENTAL · A1–C2</span><h1>El sistema verbal,<br/><em>por dos caminos.</em></h1><p>Entra por la mirada del hablante o por la línea temporal. Las dos rutas llevan a las mismas clases.</p></div>
       <div className="vs-hero-stat"><strong>16</strong><span>TIEMPOS</span><strong>+1</strong><span>IMPERATIVO</span></div>
     </section>
     <ModeTimeIntro/>
     <section className="vs-explorer" id="explorar">
-      <header><span>UNA BIBLIOTECA · DOS RECORRIDOS</span><h2>Elegí cómo querés entrar.</h2></header>
+      <header><span>UNA BIBLIOTECA · DOS RECORRIDOS</span><h2>Elige cómo quieres entrar.</h2></header>
       <div className="vs-view-switch" role="tablist" aria-label="Forma de explorar">
         <button role="tab" aria-selected={view==="mode"} aria-controls="verbal-results" id="verbal-view-mode" tabIndex={view==="mode"?0:-1} className={view==="mode"?"active":""} onKeyDown={moveView} onClick={()=>selectView("mode")}><small>RUTA 01</small><b>POR MODO</b><span>Indicativo · subjuntivo · imperativo</span></button>
         <button role="tab" aria-selected={view==="time"} aria-controls="verbal-results" id="verbal-view-time" tabIndex={view==="time"?0:-1} className={view==="time"?"active":""} onKeyDown={moveView} onClick={()=>selectView("time")}><small>RUTA 02</small><b>POR TIEMPO</b><span>Presente · pasado · futuro · condicional</span></button>

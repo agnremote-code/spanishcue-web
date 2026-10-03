@@ -6,9 +6,9 @@ export const dynamic='force-dynamic';
 export async function POST(request:Request) {
  try {
   const session=getUserSessionFromHeaders(request.headers);
-  if(!session.userId)throw new ReportError('Ingresá para enviar un reporte.',401);
+  if(!session.userId)throw new ReportError('Ingresa para enviar un reporte.',401);
   requireReportOrigin(request);const value=await readReportJson(request);const {lesson}=validateReport(value);
-  if(!fullAccessFromHeaders(request.headers)&&!isFreeLesson(lesson.id))throw new ReportError('No tenés acceso a esta clase.',403);
+  if(!fullAccessFromHeaders(request.headers)&&!isFreeLesson(lesson.id))throw new ReportError('No tienes acceso a esta clase.',403);
   const saved=await createReport(env.DB,session.userId,session.email,value);
   if(saved.created)await notifyLessonReport(env as unknown as ReportNotificationEnvironment,saved.id,saved.report,saved.createdAt);
   const id=saved.id;

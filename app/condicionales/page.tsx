@@ -99,7 +99,7 @@ const grammarBlueprints: Record<
     result: "EL TIEMPO DE LA CONSECUENCIA",
     resultWhy:
       "Después ubicamos cuándo se siente el resultado: pasado o presente.",
-    memory: "NO COPIES TIEMPOS: SEGUÍ LA LÍNEA TEMPORAL.",
+    memory: "NO COPIES TIEMPOS: SIGUE LA LÍNEA TEMPORAL.",
   },
 };
 
@@ -325,7 +325,7 @@ export default function CondicionalesPage() {
             </div>
             <div>
               <p>
-                Empezá por el primer portal y avanzá de a poco. Cada nueva
+                Empieza por el primer portal y avanza de a poco. Cada nueva
                 estructura se apoya en la lógica que ya aprendiste.
                 <span className="co-en">
                   Start with the first portal and move forward step by step.
@@ -391,7 +391,7 @@ export default function CondicionalesPage() {
                     <span>2</span>
                     <div>
                       <small>CONSECUENCIA · RESULT</small>
-                      <b>…voy con vos.</b>
+                      <b>…voy contigo.</b>
                       <p>
                         El resultado de esa condición.
                         <span className="co-en">
@@ -409,7 +409,7 @@ export default function CondicionalesPage() {
                         <span className="co-en">REALITY + TIME</span>
                       </b>
                       <p>
-                        Primero preguntá: ¿es real o imaginario? Después: ¿hablo
+                        Primero pregunta: ¿es real o imaginario? Después: ¿hablo
                         del presente, futuro o pasado?
                         <span className="co-en">
                           First ask: is it real or imaginary? Then: am I talking
@@ -425,20 +425,20 @@ export default function CondicionalesPage() {
               number="02"
               eyebrow="MAPA GRAMATICAL"
               title="¿Qué fórmulas forman el sistema?"
-              description="Compará los cinco portales sin mezclar sus tiempos."
+              description="Compara los cinco portales sin mezclar sus tiempos."
               accent="#ffb44c"
             >
               <section className="co-master-ladder">
                 <header>
                   <span>MAPA GRAMATICAL · GRAMMAR MAP</span>
                   <h2>
-                    Primero elegí la realidad. Después, el tiempo.
+                    Primero elige la realidad. Después, el tiempo.
                     <small className="co-en">
                       First choose the reality. Then choose the time.
                     </small>
                   </h2>
                   <p>
-                    Recordá estas cinco fórmulas: con ellas vas a poder
+                    Recuerda estas cinco fórmulas: con ellas vas a poder
                     reconstruir todo el sistema de los condicionales.
                     <span className="co-en">
                       Remember these five formulas: they let you rebuild the
@@ -604,7 +604,7 @@ export default function CondicionalesPage() {
                 number="01"
                 eyebrow="IDEA CENTRAL"
                 title={`¿Qué es ${active.title.toLowerCase()}?`}
-                description="Empezá por el significado antes de mirar las terminaciones."
+                description="Empieza por el significado antes de mirar las terminaciones."
                 accent={active.color}
               >
                 <VerbalPosition
@@ -616,7 +616,7 @@ export default function CondicionalesPage() {
                   <article>
                     <span>INTRODUCCIÓN GRAMATICAL · GRAMMAR INTRODUCTION</span>
                     <h2>
-                      Primero entendé la idea.
+                      Primero entiende la idea.
                       <small className="co-en">
                         First understand the idea.
                       </small>
@@ -679,7 +679,7 @@ export default function CondicionalesPage() {
                 number="02"
                 eyebrow="FÓRMULA"
                 title="¿Cómo se construye?"
-                description="Separá la condición del resultado."
+                description="Separa la condición del resultado."
                 accent={active.color}
               >
                 <section className="co-grammar-breakdown">
@@ -688,7 +688,7 @@ export default function CondicionalesPage() {
                       GRAMÁTICA EN TRES PASOS · GRAMMAR IN THREE STEPS
                     </span>
                     <h2>
-                      Armá la oración sin adivinar.
+                      Arma la oración sin adivinar.
                       <small className="co-en">
                         Build the sentence without guessing.
                       </small>
@@ -745,20 +745,20 @@ export default function CondicionalesPage() {
                 number="03"
                 eyebrow="CONJUGACIONES"
                 title="¿Cómo se forman los tiempos?"
-                description="Consultá solo las tablas de este portal."
+                description="Consulta solo las tablas de este portal."
                 accent={active.color}
               >
                 <section className="co-conjugations">
                   <header>
                     <span>02 · CONJUGACIONES · CONJUGATIONS</span>
                     <h2>
-                      Ahora sí: construí cada bloque.
+                      Ahora sí: construye cada bloque.
                       <small className="co-en">Now build each part.</small>
                     </h2>
                     <p>
-                      Leé primero la columna de personas y después compará
+                      Lee primero la columna de personas y después compara
                       HABLAR, COMER y VIVIR. No memorices una oración completa:
-                      aprendé el patrón de cada tiempo.
+                      aprende el patrón de cada tiempo.
                       {isBasic && (
                         <span className="co-en">
                           Read the person column first, then compare HABLAR,
@@ -830,7 +830,7 @@ export default function CondicionalesPage() {
                 number="05"
                 eyebrow="EJEMPLOS"
                 title="La regla funcionando"
-                description="Compará condición, resultado y orden."
+                description="Compara condición, resultado y orden."
                 accent={active.color}
               >
                 <section className="co-examples">
@@ -874,7 +874,7 @@ export default function CondicionalesPage() {
                 number="06"
                 eyebrow="ERRORES CLAVE"
                 title="¿Qué conviene evitar?"
-                description="Revisá los contrastes antes de practicar."
+                description="Revisa los contrastes antes de practicar."
                 accent={active.color}
               >
                 <section className="co-traps">
@@ -884,7 +884,7 @@ export default function CondicionalesPage() {
                   <article>
                     <span>05 · ERRORES CLAVE · KEY MISTAKES</span>
                     <h2>
-                      Antes de practicar, revisá esto.
+                      Antes de practicar, revisa esto.
                       <small className="co-en">
                         Review this before practising.
                       </small>
@@ -901,19 +901,19 @@ export default function CondicionalesPage() {
               <GrammarStep
                 number="07"
                 eyebrow="PRÁCTICA"
-                title="Comprobá que entendiste"
-                description="Resolvé primero; revelá la explicación después."
+                title="Comprueba que entendiste"
+                description="Resuelve primero; revela la explicación después."
                 accent={active.color}
               >
                 <section className="co-practice">
                   <header>
                     <span>06 · PRÁCTICA · PRACTICE</span>
                     <h2>
-                      Comprobá que entendiste.
+                      Comprueba que entendiste.
                       <small className="co-en">Check your understanding.</small>
                     </h2>
                     <p>
-                      Completá primero sin mirar. Después tocá la tarjeta para
+                      Completa primero sin mirar. Después toca la tarjeta para
                       ver la respuesta y, más importante, la explicación.
                       {isBasic && (
                         <span className="co-en">
@@ -964,8 +964,8 @@ export default function CondicionalesPage() {
               <GrammarStep
                 number="08"
                 eyebrow="CONVERSACIÓN"
-                title="Ahora usalo para hablar"
-                description="Cambiá condiciones y compará resultados."
+                title="Ahora úsalo para hablar"
+                description="Cambia condiciones y compara resultados."
                 accent={active.color}
               >
                 <section className="co-speaking">
@@ -976,12 +976,12 @@ export default function CondicionalesPage() {
                   <header>
                     <span>07 · PREGUNTAS · QUESTIONS</span>
                     <h2>
-                      Ahora sí: usalo para hablar.
+                      Ahora sí: úsalo para hablar.
                       <small className="co-en">Now use it to speak.</small>
                     </h2>
                     <p>
-                      Primero respondé. Después preguntá “¿por qué?”. Finalmente
-                      cambiá una condición y compará el nuevo resultado.
+                      Primero responde. Después pregunta “¿por qué?”. Finalmente
+                      cambia una condición y compara el nuevo resultado.
                       {isBasic && (
                         <span className="co-en">
                           First answer. Then ask “why?”. Finally, change one
@@ -1022,7 +1022,7 @@ export default function CondicionalesPage() {
               <em>las conjugaciones</em>
             </h1>
             <p>
-              Todo lo que necesitás para construir cualquier condicional sin
+              Todo lo que necesitas para construir cualquier condicional sin
               mezclar tiempos.
             </p>
           </header>
@@ -1046,7 +1046,7 @@ export default function CondicionalesPage() {
                     <span>SI</span>
                     <div>
                       <b>si = if</b>
-                      <p>Sin tilde: Si venís, cocino.</p>
+                      <p>Sin tilde: Si vienes, cocino.</p>
                     </div>
                   </article>
                   <article>
@@ -1121,7 +1121,7 @@ export default function CondicionalesPage() {
                         hablase · hablases · hablase · hablásemos · hablasen
                       </b>
                       <p>
-                        Podés reemplazar -ra por -se sin cambiar el significado:
+                        Puedes reemplazar -ra por -se sin cambiar el significado:
                         si tuviera = si tuviese. La forma -ra es mucho más
                         frecuente en la conversación.
                       </p>
@@ -1232,7 +1232,7 @@ export default function CondicionalesPage() {
                     <span>MISIÓN FINAL</span>
                     <h2>Cinco frases. Cinco universos. Una historia.</h2>
                     <p>
-                      Respondé en orden y después conectá las cinco ideas como
+                      Responde en orden y después conecta las cinco ideas como
                       si fueran versiones alternativas de tu vida.
                     </p>
                   </header>

@@ -96,7 +96,7 @@ function OrderBoard({
       </div>
       {checked && (
         <p className="pl-feedback" role="status">
-          <b>{correct ? "BIEN CONSTRUIDA" : "REVISÁ EL ORDEN"}</b>
+          <b>{correct ? "BIEN CONSTRUIDA" : "REVISA EL ORDEN"}</b>
           {correct ? task.explanation : "Retira una pieza y prueba otra posición."}
         </p>
       )}
@@ -291,7 +291,7 @@ export default function PhraseLab({ data }: { data: PhraseLabData }) {
           number="05"
           eyebrow="TRANSFORMAR Y EXPANDIR · 3–5 MIN"
           title={data.transformTitle ?? "Una idea, varias versiones"}
-          description={data.transformDescription ?? "Cambia una pieza y observá qué cambia en el mensaje."}
+          description={data.transformDescription ?? "Cambia una pieza y observa qué cambia en el mensaje."}
           accent={data.accent}
         >
           <div className="pl-transform">

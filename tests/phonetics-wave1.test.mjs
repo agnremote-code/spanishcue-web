@@ -33,8 +33,8 @@ test('existing free class URLs render a listening experience after the unchanged
   for (const id of ['201','202']) {
     const html = renderToString(await Page({params:Promise.resolve({id})}));
     assert.match(html, /<audio\b/, id);
-    assert.match(html, /Escuchá y distinguí/, id);
-    assert.match(html, /Hablá y reutilizá/, id);
+    assert.match(html, /Escucha y distingue/, id);
+    assert.match(html, /Habla y reutiliza/, id);
   }
   await assert.rejects(Page({params:Promise.resolve({id:'38'})}), /redirect:\/acceso\?returnTo=%2Fclase%2F38/);
   for (const id of ['45','47','999999']) {
@@ -97,13 +97,13 @@ async function lessonHarness(id) {
 
 test('real vowel controls enforce listen/answer/retry/reveal and isolate all eight trial attempts',async()=>{
   const h=await lessonHarness(201);
-  h.click('Escuchá y distinguí');
+  h.click('Escucha y distingue');
   assert.ok(h.button('Comprobar').props.disabled);
   assert.ok(h.button('mesa').props.disabled);
   h.hear();h.click('misa');h.click('Comprobar');
-  assert.match(h.text(),/Volvé a escuchar/);
+  assert.match(h.text(),/Vuelve a escuchar/);
   assert.doesNotMatch(h.text(),/Sonó: mesa/);
-  h.click('mesa');assert.ok(!h.text().includes('Volvé a escuchar'));
+  h.click('mesa');assert.ok(!h.text().includes('Vuelve a escuchar'));
   h.click('Comprobar');assert.match(h.text(),/Sonó: mesa/);
   h.click('Siguiente escucha');assert.ok(h.button('casa').props.disabled);
   assert.doesNotMatch(h.text(),/Sonó: mesa/);
@@ -113,13 +113,13 @@ test('real vowel controls enforce listen/answer/retry/reveal and isolate all eig
   assert.match(h.text(),/Práctica con apoyo/);
   h.click('Anterior escucha');assert.match(h.text(),/Sonó: mesa/);
   h.click('Reiniciar lección');assert.match(h.text(),/Modelos/);
-  h.click('Escuchá y distinguí');assert.ok(h.button('mesa').props.disabled);
+  h.click('Escucha y distingue');assert.ok(h.button('mesa').props.disabled);
   assert.doesNotMatch(h.text(),/Sonó: mesa/);
 });
 
 test('stress task uses neutral syllable choices before the reveal; production needs no written quiz unlock',async()=>{
   const h=await lessonHarness(202);
-  h.click('Escuchá y distinguí');
+  h.click('Escucha y distingue');
   assert.doesNotMatch(h.text(),/Sonó: casa/);
   assert.ok(h.button('Sílaba 1').props.disabled);
   assert.equal(find(h.render(),n=>n.props?.className==='ph-stressed').length,0);
@@ -128,18 +128,18 @@ test('stress task uses neutral syllable choices before the reveal; production ne
   h.click('Sílaba 1');h.click('Comprobar');
   assert.match(h.text(),/Sonó: casa/);
   assert.equal(find(h.render(),n=>n.props?.className==='ph-stressed').length,1);
-  h.click('Hablá y reutilizá');
+  h.click('Habla y reutiliza');
   assert.match(h.text(),/Sin mirar/);
   assert.match(h.text(),/No evalúa automáticamente/);
   assert.equal(find(h.render(),n=>n.type==='input'&&n.props.type==='checkbox').length,3);
-  h.click('Mostrar frase');assert.match(h.text(),/¿Tomás café\?/);
-  h.click('Ocultar frase');assert.doesNotMatch(h.text(),/¿Tomás café\?/);
+  h.click('Mostrar frase');assert.match(h.text(),/¿Tomas café\?/);
+  h.click('Ocultar frase');assert.doesNotMatch(h.text(),/¿Tomas café\?/);
 });
 
 test('all20 trials validate every choice without carrying a previous answer into the next item',async()=>{
  const {phoneticsLessons}=await load('app/phonetics/data.ts');
  for(const id of [201,202]){
-  const h=await lessonHarness(id);h.click('Escuchá y distinguí');
+  const h=await lessonHarness(id);h.click('Escucha y distingue');
   for(const [n,trial] of phoneticsLessons[id].trials.entries()){
    assert.ok(h.button('Comprobar').props.disabled,trial.id);h.hear();
    for(const [choice,label] of trial.options.entries()){
@@ -157,11 +157,11 @@ test('whole-lesson reset hides oral supports and clears teacher observations; pl
  const h=await lessonHarness(201);
  const deck=()=>find(h.render(),n=>typeof n.type==='function'&&typeof n.props.src==='string')[0];
  const modelKey=deck().key;h.click('En una palabra');assert.notEqual(deck().key,modelKey);
- h.click('Hablá y reutilizá');h.click('Mostrar frase');h.click('Ayuda para empezar');
+ h.click('Habla y reutiliza');h.click('Mostrar frase');h.click('Ayuda para empezar');
  const boxes=()=>find(h.render(),n=>n.type==='input'&&n.props.type==='checkbox');
  boxes()[0].props.onChange({target:{checked:true}});assert.equal(boxes()[0].props.checked,true);
  const phraseKey=deck().key;h.click('Frase 2');assert.notEqual(deck().key,phraseKey);assert.doesNotMatch(h.text(),/Mi casa tiene una mesa/);
  h.click('Reiniciar lección');assert.notEqual(deck().key,modelKey);
- h.click('Hablá y reutilizá');assert.equal(boxes().filter(b=>b.props.checked).length,0);
+ h.click('Habla y reutiliza');assert.equal(boxes().filter(b=>b.props.checked).length,0);
  assert.ok(h.button('Mostrar frase'));assert.ok(h.button('Ayuda para empezar'));
 });
