@@ -9,7 +9,7 @@ import {LEVELS as intonationLevels,contentFor as intonationContent} from '../app
 
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const normal=s=>s.toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]/gu,'');
-function dataFile(path){const compiled=ts.transpileModule(readFileSync(path,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;const module={exports:{}};new Function('exports','module',compiled)(module.exports,module);return module.exports;}
+function dataFile(path){const compiled=ts.transpileModule(readFileSync(path,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;const lessonModule={exports:{}};new Function('exports','module',compiled)(lessonModule.exports,lessonModule);return lessonModule.exports;}
 const modules=['phonetics','mouth-lab','hablar-sin-cortar','la-entonacion-cambia-todo','habitacion-508','ultima-llamada','el-hotel-de-lo-imposible','frecuencia-abierta','la-entrevista-que-no-salio-al-aire'];
 
 test('finite phonetics generation inputs agree with manifests, reconstruction tokens and service words',()=>{

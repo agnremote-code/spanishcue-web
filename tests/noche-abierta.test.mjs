@@ -173,13 +173,13 @@ test('open activities have no false choices and the people, objects and problems
   for (const pattern of [/llov/i, /4 %/, /llevar/i, /cierra/i]) assert.match(conditions, pattern);
 });
 
-test('the texts read like one evening: no repeated questions, no tuteo, no stock phrasing', () => {
+test('the texts read like one evening: no repeated questions, neutral tú, no stock phrasing', () => {
   const texts = learnerText();
   const asks = allActivities().flatMap(({ activity }) => [activity.prompt, activity.ask, activity.ask2, activity.task, activity.task2, ...(activity.followUps ?? []), ...(activity.options ?? []).map(item => item.ask)]).filter(Boolean);
   assert.equal(new Set(asks).size, asks.length, 'no question is asked twice');
   assert.ok(texts.filter(text => /¿Qué harías\?/.test(text)).length <= 1, '«¿Qué harías?» is not the default question');
   for (const text of texts) {
-    assert.doesNotMatch(text, /\b(tienes|puedes|quieres|eres|sabes|piensas|crees|prefieres|harías tú)\b/i, `voseo, not tuteo: ${text}`);
+    assert.doesNotMatch(text, /\b(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|harías vos)\b/i, `neutral tú, no unintended voseo: ${text}`);
     assert.doesNotMatch(text, /\b(?:como modelo|en conclusión|cabe destacar|sumérgete|¡Bienvenido)\b/i, text);
     assert.doesNotMatch(text, /\s{2,}|\s[,.;:]/, `clean spacing: ${text}`);
   }
@@ -227,7 +227,7 @@ test('a decision moves straight to its own consequence, then to the conversation
   state = engine.chooseOption(state, 'otra');
   view = engine.currentView(state);
   assert.equal(view.beat.kind, 'result');
-  assert.equal(view.beat.chosen, 'Proponés otra solución.');
+  assert.equal(view.beat.chosen, 'Propones otra solución.');
   assert.match(view.beat.context, /Lu sonríe/);
   assert.equal(engine.chooseOption(state, 'iguales'), state, 'the choice is final once made');
   state = engine.advanceBeat(state);
@@ -237,7 +237,7 @@ test('a decision moves straight to its own consequence, then to the conversation
   assert.equal(engine.currentView(state).activity.id, 'resto-plato', 'another situation at the same table');
   state = engine.leaveLocation(state);
   assert.deepEqual(engine.completedIds(state), ['restaurante']);
-  assert.deepEqual(engine.nightSummary(state)[0].choices, ['Proponés otra solución.']);
+  assert.deepEqual(engine.nightSummary(state)[0].choices, ['Propones otra solución.']);
 });
 
 test('places with people or objects open on their list; closing an activity goes back to it', () => {
@@ -668,7 +668,7 @@ test('one world, six levels: same places, mechanics and ids, different language 
   assert.equal(levels.contentFor('A1'), levels.contentFor('A1'), 'bundles are cached');
 });
 
-test('every level asks its own questions, in voseo, without mixing levels', () => {
+test('every level asks its own questions, in neutral tú, without mixing levels', () => {
   const byLevel = Object.fromEntries(levels.LEVELS.map(level => [level, leveledActivities(levels.contentFor(level)).flatMap(({ activity }) => asksOf(activity))]));
   for (const level of levels.LEVELS) {
     const asks = byLevel[level];
@@ -678,7 +678,7 @@ test('every level asks its own questions, in voseo, without mixing levels', () =
       assert.ok(shared.length <= 2, `${level} and ${other} share questions: ${shared.join(' | ')}`);
     }
     for (const text of textsOf(levels.contentFor(level))) {
-      assert.doesNotMatch(text, /\b(tienes|puedes|quieres|eres|sabes|piensas|crees|prefieres|harías tú)\b/i, `${level} voseo, not tuteo: ${text}`);
+      assert.doesNotMatch(text, /\b(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|harías vos)\b/i, `${level} neutral tú, no unintended voseo: ${text}`);
       assert.doesNotMatch(text, /\s{2,}|\s[,.;:]/, `${level} clean spacing: ${text}`);
     }
   }
