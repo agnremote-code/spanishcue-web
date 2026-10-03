@@ -1,0 +1,277 @@
+{
+  "origin": "https://spanishcue.com",
+  "kitUrl": "https://spanishcue.com/zeely",
+  "updated": "2026-10-03",
+  "brand": {
+    "name": "SPANISHCUE",
+    "tagline": "CHOOSE. OPEN. TEACH.",
+    "description": "Ready-to-teach visual Spanish lessons for teachers and tutors.",
+    "descriptionEs": "Clases visuales de español listas para usar por profesores y tutores.",
+    "audience": [
+      "Independent Spanish teachers",
+      "Online Spanish tutors",
+      "ELE teachers",
+      "Language schools"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "categories": [
+      "Grammar",
+      "Conversation",
+      "Listening",
+      "Pronunciation",
+      "Vocabulary"
+    ],
+    "colors": {
+      "navy": "#06152F",
+      "blue": "#087EFF",
+      "cyan": "#6CDAF5",
+      "paper": "#F4F9FF"
+    }
+  },
+  "features": [
+    {
+      "en": "Choose by level, topic or teaching objective.",
+      "es": "Elige por nivel, tema u objetivo."
+    },
+    {
+      "en": "Open visual lessons in the browser and share your screen.",
+      "es": "Abre clases visuales en el navegador y comparte tu pantalla."
+    },
+    {
+      "en": "Combine explanations, practice and conversation in one teaching experience.",
+      "es": "Combina explicación, práctica y conversación en una experiencia."
+    },
+    {
+      "en": "Explore Modo Play, Universos and country-themed activities.",
+      "es": "Explora Modo Play, Universos y actividades por países."
+    },
+    {
+      "en": "Try 10 complete free lessons across five categories without a card.",
+      "es": "Prueba 10 clases completas gratuitas de cinco categorías sin tarjeta."
+    }
+  ],
+  "pricing": {
+    "currency": "USD",
+    "monthly": {
+      "name": "Founder monthly plan",
+      "amount": 15.5,
+      "taxIncluded": true,
+      "renews": "monthly",
+      "terms": "Card subscription: US$15.50 now and monthly until cancelled. Founder offer for the first 1,000 eligible subscriptions. Preserve founder price while the same subscription remains active. Provider amounts must match checkout."
+    },
+    "paidTrial": {
+      "amount": 2,
+      "days": 1,
+      "thenMonthly": 15.5,
+      "provider": "Paddle / card",
+      "terms": "Optional paid trial: US$2 for 1 day, then US$15.50/month, automatically renewing until cancelled. Do not call this a free trial."
+    },
+    "free": {
+      "amount": 0,
+      "lessons": 10,
+      "cardRequired": false
+    },
+    "source": "https://spanishcue.com/pricing"
+  },
+  "copy": [
+    {
+      "en": "Stop building every Spanish lesson from scratch.",
+      "es": "Deja de crear cada clase de español desde cero."
+    },
+    {
+      "en": "Teach more. Prep less.",
+      "es": "Enseña más. Prepara menos."
+    },
+    {
+      "en": "Your next Spanish class, ready to open.",
+      "es": "Tu próxima clase de español, lista para abrir."
+    },
+    {
+      "en": "Choose a level. Open a lesson. Start teaching.",
+      "es": "Elige un nivel. Abre una clase. Empieza a enseñar."
+    },
+    {
+      "en": "Less preparation. More real conversation.",
+      "es": "Menos preparación. Más conversación real."
+    }
+  ],
+  "ctas": [
+    {
+      "en": "Try a free lesson",
+      "es": "Prueba una clase gratis",
+      "url": "https://spanishcue.com/el-hotel-de-lo-imposible"
+    },
+    {
+      "en": "Explore the library",
+      "es": "Explora la biblioteca",
+      "url": "https://spanishcue.com/"
+    },
+    {
+      "en": "See plans",
+      "es": "Ver planes",
+      "url": "https://spanishcue.com/pricing"
+    }
+  ],
+  "examples": [
+    {
+      "title": "La Fábrica de los Nombres",
+      "level": "A1",
+      "category": "Grammar",
+      "url": "https://spanishcue.com/la-fabrica-de-los-nombres",
+      "description": "A visual introduction to nouns, gender and number."
+    },
+    {
+      "title": "MÉXICO",
+      "level": "B1",
+      "category": "Conversation",
+      "url": "https://spanishcue.com/mexico",
+      "description": "A country-themed free conversation lesson."
+    },
+    {
+      "title": "El hotel de lo imposible",
+      "level": "A2",
+      "category": "Listening",
+      "url": "https://spanishcue.com/el-hotel-de-lo-imposible",
+      "description": "A listening lesson set in a fantastical hotel."
+    },
+    {
+      "title": "ARGENTO",
+      "level": "A1–A2",
+      "category": "Vocabulary",
+      "url": "https://spanishcue.com/argento",
+      "description": "Free visual vocabulary with an Argentine setting."
+    }
+  ],
+  "usage": [
+    "Use the official brand name SPANISHCUE and preserve mascot identity.",
+    "Only marketing assets and free sample links are included. This kit does not grant paid access.",
+    "Do not invent testimonials, student results, certifications or quantified time savings.",
+    "No affiliation with or endorsement by Instituto Cervantes.",
+    "New ad layouts are marketing creatives, not screenshots of lesson interfaces.",
+    "All material here is public; hidden navigation and noindex are not access controls."
+  ],
+  "assets": [
+    {
+      "path": "/brand/mascot/portrait.webp",
+      "title": "Official mascot · portrait",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/pointing.webp",
+      "title": "Official mascot · pointing",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/speaking.webp",
+      "title": "Official mascot · speaking",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/standing.webp",
+      "title": "Official mascot · standing",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/studying.webp",
+      "title": "Official mascot · studying",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/seated.webp",
+      "title": "Official mascot · seated",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/standing-crossed.webp",
+      "title": "Official mascot · standing-crossed",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/walking.webp",
+      "title": "Official mascot · walking",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/mascot/kneeling.webp",
+      "title": "Official mascot · kneeling",
+      "kind": "mascot"
+    },
+    {
+      "path": "/brand/campaign/conversation.webp",
+      "title": "Campaign artwork · conversation",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/campaign/ele.webp",
+      "title": "Campaign artwork · ele",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/campaign/free-lesson.webp",
+      "title": "Campaign artwork · free-lesson",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/campaign/online.webp",
+      "title": "Campaign artwork · online",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/spanishcue-hero-online.webp",
+      "title": "Homepage artwork · online",
+      "kind": "hero"
+    },
+    {
+      "path": "/brand/spanishcue-hero-v2.webp",
+      "title": "Homepage artwork · v2",
+      "kind": "hero"
+    },
+    {
+      "path": "/social/spanishcue-og-v2.jpg",
+      "title": "Official social preview",
+      "kind": "campaign"
+    },
+    {
+      "path": "/brand/ads/spanishcue-logo-light.svg",
+      "title": "SpanishCue wordmark · light",
+      "kind": "logo"
+    },
+    {
+      "path": "/brand/ads/spanishcue-logo-dark.svg",
+      "title": "SpanishCue wordmark · dark",
+      "kind": "logo"
+    },
+    {
+      "path": "/brand/ads/home-public.jpg",
+      "title": "Public homepage screenshot · October 2026",
+      "kind": "screenshot"
+    },
+    {
+      "path": "/brand/ads/library-public.jpg",
+      "title": "Public catalog screenshot · October 2026",
+      "kind": "screenshot"
+    },
+    {
+      "path": "/brand/ads/teach-more-square-en.png",
+      "title": "teach more square en",
+      "kind": "ad"
+    },
+    {
+      "path": "/brand/ads/teach-more-portrait-es.png",
+      "title": "teach more portrait es",
+      "kind": "ad"
+    },
+    {
+      "path": "/brand/ads/choose-open-wide-en.png",
+      "title": "choose open wide en",
+      "kind": "ad"
+    }
+  ]
+}
