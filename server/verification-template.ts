@@ -41,7 +41,7 @@ export function verificationEmail(locale: Locale, actionUrl: string) {
     next: "Tus próximas clases ya están listas. Elegí una, abrila y empezá a enseñar.",
     cta: "Verificar mi email",
     secure: "Este enlace es personal y seguro.",
-    newest: "Si pediste un nuevo email de verificación, usá siempre el mensaje más reciente.",
+    newest: "Si pediste un nuevo email de verificación, usa siempre el mensaje más reciente.",
     fallback: "Si el botón no funciona, copiá y abrí este enlace:",
   };
   const url = escapeHtml(actionUrl);

@@ -139,7 +139,7 @@ const app = {
         safe.headers.set('Referrer-Policy','no-referrer');
         return safe;
       } catch {
-        return new Response('Este acceso no está disponible. Volvé a consultar a tu profe.',{status:503,headers:{...privateHeaders,'content-type':'text/plain; charset=utf-8'}});
+        return new Response('Este acceso no está disponible. Vuelve a consultar a tu profesor.',{status:503,headers:{...privateHeaders,'content-type':'text/plain; charset=utf-8'}});
       }
     }
 

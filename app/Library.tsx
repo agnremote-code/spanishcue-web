@@ -2024,7 +2024,7 @@ export default function Library({
                     number="03"
                     eyebrow="PRÁCTICA"
                     title="Completa y justifica"
-                    description="Resolvé una actividad por vez."
+                    description="Resuelve una actividad por vez."
                   >
                     <section className="lesson-section">
                       <article>
@@ -2037,7 +2037,7 @@ export default function Library({
                                 onClick={(e) => {
                                   e.currentTarget.textContent =
                                     e.currentTarget.textContent === "Ver pista"
-                                      ? "Pensá en el contexto"
+                                      ? "Piensa en el contexto"
                                       : "Ver pista";
                                 }}
                               >
@@ -2132,7 +2132,7 @@ export default function Library({
                               onClick={(e) => {
                                 e.currentTarget.textContent =
                                   e.currentTarget.textContent === "Ver pista"
-                                    ? "Pensá en el contexto"
+                                    ? "Piensa en el contexto"
                                     : "Ver pista";
                               }}
                             >
