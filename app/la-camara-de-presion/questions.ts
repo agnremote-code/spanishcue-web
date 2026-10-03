@@ -41,7 +41,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"p",family:"premise",familyLabel:"CUESTIONÁ LA PREMISA",topic:"LA PREGUNTA YA TOMÓ PARTIDO",
+    prefix:"p",family:"premise",familyLabel:"CUESTIONA LA PREMISA",topic:"LA PREGUNTA YA TOMÓ PARTIDO",
     prompts:[
       "La pregunta «¿por qué la gente perdió la capacidad de escuchar?» ya afirma que hubo una pérdida: ¿cómo la reformularías sin aceptar esa conclusión?",
       "Si alguien pregunta cómo reparar «el daño inevitable del turismo», ¿qué dos presuposiciones deberías discutir antes de responder?",
@@ -63,7 +63,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"c",family:"wordshift",familyLabel:"CAMBIÁ UNA PALABRA",topic:"UN VERBO, OTRO RELATO",
+    prefix:"c",family:"wordshift",familyLabel:"CAMBIA UNA PALABRA",topic:"UN VERBO, OTRO RELATO",
     prompts:[
       "«El gobierno corrigió, modificó o revirtió su política»: ¿qué relato sobre el pasado instala cada verbo?",
       "«La plataforma detecta, vigila o rastrea el comportamiento»: ¿qué cambia si la acción técnica es idéntica?",
@@ -74,7 +74,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"o",family:"opposite",familyLabel:"DEFENDÉ LO CONTRARIO",topic:"LA MEJOR VERSIÓN DEL ADVERSARIO",
+    prefix:"o",family:"opposite",familyLabel:"DEFIENDE LO CONTRARIO",topic:"LA MEJOR VERSIÓN DEL ADVERSARIO",
     prompts:[
       "¿Qué espacio de anonimato digital conservarías y cuál es el argumento más fuerte para eliminarlo?",
       "¿Puede una transición energética responsable excluir la energía nuclear y cuál es la mejor objeción a tu respuesta?",
@@ -118,12 +118,12 @@ export const evergreenQuestions:PressureQuestion[]=expand([
   {
     prefix:"i",family:"personal",familyLabel:"PERSONAL C2",topic:"UNA RESPUESTA QUE NO SEA AUTOMÁTICA",
     prompts:[
-      "¿Qué opinión tuya cambió tanto por acumulación que no podés identificar el momento exacto en que dejó de ser la anterior?",
-      "¿Qué rasgo que llamás personalidad podría ser una adaptación tan antigua que ya no sabés distinguirla de tu identidad?",
-      "¿Qué principio aplicás con mayor indulgencia a tus propias decisiones que a las decisiones ajenas?",
-      "¿Qué decisión considerás racional en abstracto pero sospechás que no tomarías si mañana afectara a alguien que amás?",
-      "¿Qué versión de vos mismo intentás proteger cuando rechazás una crítica antes de comprobar si es válida?",
-      "¿Qué experiencia importante recordás a través de una interpretación que tal vez construiste mucho después?",
+      "¿Qué opinión tuya cambió tanto por acumulación que no puedes identificar el momento exacto en que dejó de ser la anterior?",
+      "¿Qué rasgo que llamas personalidad podría ser una adaptación tan antigua que ya no sabes distinguirla de tu identidad?",
+      "¿Qué principio aplicas con mayor indulgencia a tus propias decisiones que a las decisiones ajenas?",
+      "¿Qué decisión consideras racional en abstracto pero sospechas que no tomarías si mañana afectara a alguien que amas?",
+      "¿Qué versión de ti mismo intentas proteger cuando rechazas una crítica antes de comprobar si es válida?",
+      "¿Qué experiencia importante recuerdas a través de una interpretación que tal vez construiste mucho después?",
       "¿Qué convicción conservarías aunque descubrieras que nació de una razón completamente equivocada?"
     ]
   },
@@ -140,17 +140,17 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"n",family:"nodepends",familyLabel:"SIN DERECHO A «DEPENDE»",topic:"TOMÁ POSICIÓN Y DESPUÉS MATIZÁ",
+    prefix:"n",family:"nodepends",familyLabel:"SIN DERECHO A «DEPENDE»",topic:"TOMA POSICIÓN Y DESPUÉS MATIZA",
     prompts:[
-      "Sin usar «depende»: ¿la transparencia aumenta la confianza? Elegí una dirección y defendela.",
-      "Sin usar «depende»: ¿la tecnología amplía la libertad humana? Definí primero qué entendés por libertad.",
-      "Sin usar «depende»: ¿es posible la neutralidad institucional? Respondé sí o no antes de introducir matices.",
-      "Sin usar «depende»: ¿una democracia debe tolerar movimientos que quieren desmantelarla? Fijá un límite.",
-      "Sin usar «depende»: ¿el progreso material vuelve mejor a una sociedad? Elegí el criterio con el que aceptarías perder la discusión."
+      "Sin usar «depende»: ¿la transparencia aumenta la confianza? Elige una dirección y defiéndela.",
+      "Sin usar «depende»: ¿la tecnología amplía la libertad humana? Define primero qué entiendes por libertad.",
+      "Sin usar «depende»: ¿es posible la neutralidad institucional? Responde sí o no antes de introducir matices.",
+      "Sin usar «depende»: ¿una democracia debe tolerar movimientos que quieren desmantelarla? Fija un límite.",
+      "Sin usar «depende»: ¿el progreso material vuelve mejor a una sociedad? Elige el criterio con el que aceptarías perder la discusión."
     ]
   },
   {
-    prefix:"d",family:"newfact",familyLabel:"EL DATO QUE CAMBIA TODO",topic:"REVISÁ TU RESPUESTA SIN ESCAPAR",
+    prefix:"d",family:"newfact",familyLabel:"EL DATO QUE CAMBIA TODO",topic:"REVISA TU RESPUESTA SIN ESCAPAR",
     prompts:[
       "¿Prohibirías los alquileres de menos de treinta días si supieras que el 38 % de los anfitriones usa ese ingreso para pagar su única vivienda?",
       "¿Aceptarías que una IA priorice pacientes si mejora el promedio de espera pero concentra sus errores en un grupo pequeño y predecible?",
@@ -177,14 +177,14 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     prompts:[
       "¿Qué afirmación que hiciste hoy cambiarías si tuvieras que defenderla ante una persona directamente afectada?",
       "¿Cuál de tus respuestas dependía de una palabra ambigua y cómo la reformularías ahora con mayor precisión?",
-      "Elegí la postura que defendiste con más seguridad: ¿qué evidencia concreta te obligaría a abandonarla?",
+      "Elige la postura que defendiste con más seguridad: ¿qué evidencia concreta te obligaría a abandonarla?",
       "¿Cuál fue la objeción contraria más fuerte que apareció hoy y qué parte de tu posición sobrevivió?",
       "¿En qué tema confundiste una explicación de lo ocurrido con una justificación de lo ocurrido?",
       "¿Qué pregunta de hoy tenía una presuposición que aceptaste demasiado rápido?",
       "¿Qué tema actual analizaste con un criterio que no aplicarías con la misma dureza a tu propia vida?",
       "Si tuvieras que publicar una sola frase de esta conversación, ¿cuál elegirías y qué matiz añadirías para evitar que se malinterprete?",
       "¿Qué respuesta tuya fue intelectualmente coherente pero emocionalmente poco convincente?",
-      "Después de toda la conversación, ¿qué idea sostenés con menos certeza, pero con mejores razones?"
+      "Después de toda la conversación, ¿qué idea sostienes con menos certeza, pero con mejores razones?"
     ]
   }
 ]);

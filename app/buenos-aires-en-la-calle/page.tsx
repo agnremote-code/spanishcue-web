@@ -64,7 +64,7 @@ export default function BuenosAiresEnLaCalle() {
       <div className="ba-cover-copy">
         <span className="ba-kicker">EVERYDAY HOLIDAY SPANISH · A2</span>
         <h1>BUENOS AIRES<br /><em>EN LA CALLE</em></h1>
-        <p>Una ciudad viva para hablar sin presión. Entrá, resolvé una situación cotidiana y seguí paseando.</p>
+        <p>Una ciudad viva para hablar sin presión. Entra, resuelve una situación cotidiana y sigue paseando.</p>
         {english && <p className="ba-english">A low-key holiday lesson for a hard day: useful words, short answers and no pressure to be perfect.</p>}
         <div className="ba-cover-actions"><button onClick={() => setScreen("map")}>ENTRAR A LA CIUDAD <span>→</span></button><small>16 lugares · español rioplatense · traducciones opcionales</small></div>
       </div>
@@ -73,14 +73,14 @@ export default function BuenosAiresEnLaCalle() {
     </section>}
 
     {screen === "map" && <section className="ba-map-page">
-      <header className="ba-map-head"><div><span>MAPA 3D · ELEGÍ TU PRÓXIMA PARADA</span><h1>La ciudad está despierta.</h1><p>Hoy no necesitás hacer todo. Elegí cuatro lugares que realmente usarías durante tus vacaciones.</p></div><button onClick={() => setScreen("intro")}>VER PORTADA</button></header>
+      <header className="ba-map-head"><div><span>MAPA 3D · ELIGE TU PRÓXIMA PARADA</span><h1>La ciudad está despierta.</h1><p>Hoy no necesitas hacer todo. Elige cuatro lugares que realmente usarías durante tus vacaciones.</p></div><button onClick={() => setScreen("intro")}>VER PORTADA</button></header>
       <div className="ba-city-frame">
         <div className="ba-city-image" role="img" aria-label="Mapa tridimensional interactivo de Buenos Aires">
           <div className="ba-city-pan" />
           <div className="ba-city-lights" />
           {stops.map(stop => <button key={stop.id} className={`ba-pin ${visited.includes(stop.id) ? "visited" : ""}`} style={{ left: `${stop.position.x}%`, top: `${stop.position.y}%` }} onClick={() => openStop(stop.id)} aria-label={`Abrir ${stop.title}`}><PortalThumb stop={stop} /><b>{stop.title}</b></button>)}
         </div>
-        <div className="ba-map-caption"><span>BUENOS AIRES · NOCHE AZUL</span><p>Mové la mirada por la ciudad y abrí una puerta. Cada miniatura muestra el mundo que vas a encontrar.</p></div>
+        <div className="ba-map-caption"><span>BUENOS AIRES · NOCHE AZUL</span><p>Mueve la mirada por la ciudad y abre una puerta. Cada miniatura muestra el mundo que vas a encontrar.</p></div>
       </div>
       <div className="ba-stop-index">{stops.map(stop => <button key={stop.id} className={visited.includes(stop.id) ? "visited" : ""} onClick={() => openStop(stop.id)}><PortalThumb stop={stop} /><div><b>{stop.title}</b><small>{stop.zone} · {stop.english}</small></div><i>→</i></button>)}</div>
     </section>}
@@ -98,18 +98,18 @@ export default function BuenosAiresEnLaCalle() {
         <aside className="ba-route-panel"><span>TU RUTA HOY</span><b>{calm ? "Una frase alcanza." : "Práctica completa."}</b><p>{calm ? "3 palabras · 1 diálogo · 1 pregunta básica · 1 conversación abierta" : "5 palabras · 3 diálogos · 3 preguntas básicas · 1 conversación abierta"}</p><button onClick={() => setCalm(value => !value)}>{calm ? "ABRIR TODO" : "VOLVER A MODO TRANQUI"}</button><div><small>PORTEÑO PARA EL OÍDO</small><strong>{selected.local.es}</strong>{english && <em>{selected.local.en}</em>}<p>{selected.local.note}</p></div></aside>
 
         <div className="ba-lesson-content">
-          <section className="ba-block ba-wordbank"><header><span>01</span><div><small>PRIMERO, MIRÁ</small><h2>Palabras que vas a usar</h2></div></header><div>{visibleWords.map(word => <article key={word.es}><b>{word.es}</b>{english && <span>{word.en}</span>}</article>)}</div></section>
+          <section className="ba-block ba-wordbank"><header><span>01</span><div><small>PRIMERO, MIRA</small><h2>Palabras que vas a usar</h2></div></header><div>{visibleWords.map(word => <article key={word.es}><b>{word.es}</b>{english && <span>{word.en}</span>}</article>)}</div></section>
 
-          <section className="ba-block ba-dialogues"><header><span>02</span><div><small>DESPUÉS, ESCUCHÁ CON LOS OJOS</small><h2>Así suena en la calle</h2></div></header><div>{visibleDialogues.map((dialogue, index) => <article key={dialogue.a}><i>{String(index + 1).padStart(2, "0")}</i><p><b>{dialogue.a}</b><strong>{dialogue.b}</strong>{english && <small>{dialogue.en}</small>}</p></article>)}</div></section>
+          <section className="ba-block ba-dialogues"><header><span>02</span><div><small>DESPUÉS, ESCUCHA CON LOS OJOS</small><h2>Así suena en la calle</h2></div></header><div>{visibleDialogues.map((dialogue, index) => <article key={dialogue.a}><i>{String(index + 1).padStart(2, "0")}</i><p><b>{dialogue.a}</b><strong>{dialogue.b}</strong>{english && <small>{dialogue.en}</small>}</p></article>)}</div></section>
 
-          <section className="ba-block ba-prompts"><header><span>03</span><div><small>AHORA, HABLÁ</small><h2>Una pregunta está bien</h2></div></header><div>{visiblePrompts.map((prompt, index) => <article key={prompt.es}><span>PREGUNTA {String(index + 1).padStart(2, "0")}</span><h3>{prompt.es}</h3>{english && <p>{prompt.en}</p>}<div><small>EMPEZÁ ASÍ</small><b>{prompt.starter}</b></div></article>)}</div></section>
+          <section className="ba-block ba-prompts"><header><span>03</span><div><small>AHORA, HABLA</small><h2>Una pregunta está bien</h2></div></header><div>{visiblePrompts.map((prompt, index) => <article key={prompt.es}><span>PREGUNTA {String(index + 1).padStart(2, "0")}</span><h3>{prompt.es}</h3>{english && <p>{prompt.en}</p>}<div><small>EMPIEZA ASÍ</small><b>{prompt.starter}</b></div></article>)}</div></section>
 
           <section className="ba-opinion">
             <div className="ba-opinion-visual"><PortalThumb stop={selected} /><span>CONVERSACIÓN ABIERTA</span></div>
-            <div className="ba-opinion-copy"><small>AL FINAL · PARA HABLAR DE VERDAD</small><h2>¿Qué pensás vos?</h2><p>{openPrompt.intro}</p>{english && <p className="ba-opinion-en">{openPrompt.introEn}</p>}<h3>{openPrompt.question}</h3>{english && <p className="ba-opinion-en">{openPrompt.questionEn}</p>}<div><small>EMPEZÁ ASÍ</small><b>{openPrompt.starter}</b></div></div>
+            <div className="ba-opinion-copy"><small>AL FINAL · PARA HABLAR DE VERDAD</small><h2>¿Qué piensas tú?</h2><p>{openPrompt.intro}</p>{english && <p className="ba-opinion-en">{openPrompt.introEn}</p>}<h3>{openPrompt.question}</h3>{english && <p className="ba-opinion-en">{openPrompt.questionEn}</p>}<div><small>EMPIEZA ASÍ</small><b>{openPrompt.starter}</b></div></div>
           </section>
 
-          <section className="ba-mission"><div><small>MISIÓN DE VIAJE</small><h2>{selected.mission}</h2><p>No busques una respuesta perfecta. Hacelo con palabras simples, pedí que repitan si hace falta y seguí.</p></div><button onClick={complete}>LISTO, VOLVER AL MAPA <span>→</span></button></section>
+          <section className="ba-mission"><div><small>MISIÓN DE VIAJE</small><h2>{selected.mission}</h2><p>No busques una respuesta perfecta. Hazlo con palabras simples, pide que repitan si hace falta y sigue.</p></div><button onClick={complete}>LISTO, VOLVER AL MAPA <span>→</span></button></section>
         </div>
       </div>
     </section>}

@@ -39,12 +39,12 @@ const rooms: Room[] = [
       "¿En qué momento la coherencia deja de ser una virtud y se convierte en una forma sofisticada de vanidad moral?",
       "¿Tiene una figura pública el derecho de no formar una opinión sobre cada crisis o su silencio ya constituye una intervención?"
     ],
-    moves: ["Defendé el silencio que inicialmente considerarías más sospechoso.", "Construí un caso en el que hablar con absoluta honestidad sea moralmente irresponsable."],
+    moves: ["Defiende el silencio que inicialmente considerarías más sospechoso.", "Construye un caso en el que hablar con absoluta honestidad sea moralmente irresponsable."],
     lexicon: ["reserva", "aquiescencia", "opacidad"],
     artifacts: [
       {icon:"◉", name:"La fuente", detail:"El agua repite sin conservar. ¿Puede una tradición seguir siendo la misma si cambia a quienes la transmiten?", x:49, y:68, motion:"glow"},
       {icon:"♙", name:"La caminante", detail:"La monja recorre el mismo circuito cada día. La repetición puede disciplinar el cuerpo o liberar la atención.", x:26, y:52, motion:"drift"},
-      {icon:"⌁", name:"Las palomas", detail:"Una interrupción mínima desarma el silencio colectivo. Observá quién decide cuándo recomienza.", x:71, y:29, motion:"float"}
+      {icon:"⌁", name:"Las palomas", detail:"Una interrupción mínima desarma el silencio colectivo. Observa quién decide cuándo recomienza.", x:71, y:29, motion:"float"}
     ], x: 50, y: 54
   },
   {
@@ -56,10 +56,10 @@ const rooms: Room[] = [
       "¿En qué punto el contexto histórico deja de explicar una idea y comienza a funcionar como una coartada para no juzgarla?",
       "¿Puede una doctrina seguir siendo la misma si debe reemplazar por completo el vocabulario con el que fue formulada?"
     ],
-    moves: ["Reformulá la pregunta desde la posición del traductor y después desde la comunidad afectada.", "Distinguí intención, significado y efecto sin permitir que uno cancele a los otros dos."],
+    moves: ["Reformula la pregunta desde la posición del traductor y después desde la comunidad afectada.", "Distingue intención, significado y efecto sin permitir que uno cancele a los otros dos."],
     lexicon: ["exégesis", "anacronismo", "indeterminación"],
     artifacts: [
-      {icon:"✒", name:"La pluma", detail:"Cada palabra elegida descarta otras. Tocá la pluma: traducir también es ejercer poder.", x:45, y:55, motion:"drift"},
+      {icon:"✒", name:"La pluma", detail:"Cada palabra elegida descarta otras. Toca la pluma: traducir también es ejercer poder.", x:45, y:55, motion:"drift"},
       {icon:"▤", name:"El palimpsesto", detail:"Bajo el texto visible persiste una voz borrada. ¿Qué argumento depende de no verla?", x:72, y:63, motion:"glow"},
       {icon:"◔", name:"El gato", detail:"El único testigo que no interpreta parece, sin embargo, comprender la escena entera.", x:22, y:72, motion:"float"}
     ], x: 29, y: 55
@@ -70,10 +70,10 @@ const rooms: Room[] = [
     scene: "/monastery-worlds/03-biblioteca.webp", cast: "Una monja asciende por la escalera, un sacerdote lee junto al globo y una lechuza observa desde las vigas.",
     questions: [
       "¿Cuántas ideas llamamos universales solamente porque se perdieron las voces capaces de contradecirlas?",
-      "¿Cómo distinguís la complejidad que nace del rigor de la complejidad utilizada para impedir que una posición sea refutada?",
+      "¿Cómo distingues la complejidad que nace del rigor de la complejidad utilizada para impedir que una posición sea refutada?",
       "¿Qué tipo de conocimiento solo se vuelve visible después de que una institución fracasa?"
     ],
-    moves: ["Elegí una idea que excluirías del canon y defendé por qué debería permanecer.", "Diferenciá influencia, verdad y utilidad como tres criterios incompatibles."],
+    moves: ["Elige una idea que excluirías del canon y defiende por qué debería permanecer.", "Diferencia influencia, verdad y utilidad como tres criterios incompatibles."],
     lexicon: ["canon", "falibilidad", "inconmensurabilidad"],
     artifacts: [
       {icon:"◉", name:"La lechuza", detail:"Ve en la oscuridad, pero no por eso ve la verdad. Conocimiento y perspectiva no son sinónimos.", x:76, y:25, motion:"float"},
@@ -90,7 +90,7 @@ const rooms: Room[] = [
       "Cuando una institución presta autoridad a una persona, ¿cómo distinguimos la autoridad del cargo del magnetismo de quien lo ocupa?",
       "¿La transparencia radical fortalece la confianza o convierte la vida privada en un examen permanente de pureza?"
     ],
-    moves: ["Respondé separando persona, función e institución.", "Buscá un límite que proteja al líder sin volverlo inmune al escrutinio."],
+    moves: ["Responde separando persona, función e institución.", "Busca un límite que proteja al líder sin volverlo inmune al escrutinio."],
     lexicon: ["investidura", "fuero íntimo", "legitimidad"],
     artifacts: [
       {icon:"◇", name:"La vestidura", detail:"El símbolo vuelve visible la función, pero puede volver invisible a la persona.", x:37, y:45, motion:"drift"},
@@ -107,7 +107,7 @@ const rooms: Room[] = [
       "¿Hasta qué punto el consumo ético es una responsabilidad real y hasta qué punto es un lujo moral reservado a quienes pueden pagarlo?",
       "¿Por qué desconfiamos del placer cuando no puede justificarse mediante productividad, salud o mérito?"
     ],
-    moves: ["Introducí dinero, clase social y trabajo invisible en tu respuesta.", "Defendé una forma de placer que no necesite producir ninguna mejora personal."],
+    moves: ["Introduce dinero, clase social y trabajo invisible en tu respuesta.", "Defiende una forma de placer que no necesite producir ninguna mejora personal."],
     lexicon: ["ascetismo", "reciprocidad", "frugalidad"],
     artifacts: [
       {icon:"◒", name:"El pan", detail:"Compartir no borra quién amasó, quién sirve ni quién puede negarse a agradecer.", x:50, y:63, motion:"float"},
@@ -124,7 +124,7 @@ const rooms: Room[] = [
       "¿Puede una institución hablar más fuerte para evitar volverse irrelevante sin deformar aquello que pretende comunicar?",
       "¿Cuántas veces debe repetirse una afirmación antes de adquirir la apariencia social de una verdad?"
     ],
-    moves: ["Diseñá una regla para decidir qué merece interrumpir a una sociedad.", "Aplicá tu criterio tanto a una iglesia como a una plataforma digital."],
+    moves: ["Diseña una regla para decidir qué merece interrumpir a una sociedad.", "Aplica tu criterio tanto a una iglesia como a una plataforma digital."],
     lexicon: ["interpelación", "saturación", "resonancia"],
     artifacts: [
       {icon:"◖", name:"La campana", detail:"Su vibración no pide permiso: convierte el espacio acústico común en mensaje.", x:51, y:33, motion:"swing"},
@@ -141,7 +141,7 @@ const rooms: Room[] = [
       "¿Cómo se acompaña a alguien sin convertir su vida en un proyecto que confirma la bondad de quien ayuda?",
       "¿La gratitud es una respuesta libre o una deuda silenciosa que la hospitalidad produce incluso cuando afirma no exigir nada?"
     ],
-    moves: ["Respondé primero como anfitrión y luego como huésped que no puede irse.", "Incluí un límite concreto y explicá quién carga con su costo."],
+    moves: ["Responde primero como anfitrión y luego como huésped que no puede irse.", "Incluye un límite concreto y explica quién carga con su costo."],
     lexicon: ["alteridad", "deuda simbólica", "umbral"],
     artifacts: [
       {icon:"⌂", name:"El umbral", detail:"La frontera parece una línea, pero funciona como una negociación prolongada.", x:35, y:57, motion:"glow"},
@@ -158,7 +158,7 @@ const rooms: Room[] = [
       "¿Toda belleza cultivada depende de alguna forma de exclusión, poda o violencia selectiva?",
       "¿Cómo protegemos los proyectos lentos en sociedades que solo reconocen como real aquello que produce resultados medibles?"
     ],
-    moves: ["Compará el cuidado de una planta, una tradición y una relación.", "Señalá qué parte de tu respuesta depende de resultados y cuál del acto mismo."],
+    moves: ["Compara el cuidado de una planta, una tradición y una relación.", "Señala qué parte de tu respuesta depende de resultados y cuál del acto mismo."],
     lexicon: ["custodia", "latencia", "interdependencia"],
     artifacts: [
       {icon:"♧", name:"La hierba amarga", detail:"Su valor no coincide con su sabor inmediato. ¿Qué formas de bien exigen tiempo para ser reconocidas?", x:34, y:64, motion:"float"},
@@ -175,7 +175,7 @@ const rooms: Room[] = [
       "¿Puede aceptarse dinero de un origen moralmente cuestionable para financiar un bien indiscutible sin convertir ese bien en legitimación del donante?",
       "¿Cuándo el consenso distribuye sabiamente la autoridad y cuándo solamente logra que nadie sea responsable del fracaso?"
     ],
-    moves: ["Tomá una decisión concreta y aceptá públicamente qué valor estás sacrificando.", "Separá legalidad, legitimidad y prudencia institucional."],
+    moves: ["Toma una decisión concreta y acepta públicamente qué valor estás sacrificando.", "Separa legalidad, legitimidad y prudencia institucional."],
     lexicon: ["gobernanza", "rendición de cuentas", "discrecionalidad"],
     artifacts: [
       {icon:"⌛", name:"El reloj de arena", detail:"Decidir tarde también es decidir. La demora distribuye costos aunque no firme documentos.", x:73, y:44, motion:"drift"},
@@ -192,7 +192,7 @@ const rooms: Room[] = [
       "¿Puede la esperanza transformarse en una exigencia institucional que impide expresar miedo, cansancio o deseo de renunciar?",
       "¿Cómo debería entenderse la autonomía cuando una decisión personal reorganiza por completo la vida de quienes cuidan?"
     ],
-    moves: ["Eliminá de tu respuesta las palabras fuerza, dignidad y esperanza; reformulala.", "Pensá una solución que no dependa de que alguien sea excepcionalmente bueno."],
+    moves: ["Elimina de tu respuesta las palabras fuerza, dignidad y esperanza; reformúlala.", "Piensa una solución que no dependa de que alguien sea excepcionalmente bueno."],
     lexicon: ["vulnerabilidad", "agencia", "paternalismo"],
     artifacts: [
       {icon:"≋", name:"El hervidor", detail:"El cuidado ocurre en tareas pequeñas que rara vez entran en el relato heroico.", x:70, y:63, motion:"float"},
@@ -209,7 +209,7 @@ const rooms: Room[] = [
       "¿Por qué algunas relaciones consideran la desaparición de toda cicatriz como prueba de reparación, mientras otras necesitan que la marca permanezca visible?",
       "¿Puede una institución pedir perdón de manera creíble si conserva intacta la estructura de poder que hizo posible el daño?"
     ],
-    moves: ["Aplicá la misma definición de reparación a un objeto, una persona y una institución.", "Nombrá aquello que no puede recuperarse y explicá qué podría construirse en su lugar."],
+    moves: ["Aplica la misma definición de reparación a un objeto, una persona y una institución.", "Nombra aquello que no puede recuperarse y explica qué podría construirse en su lugar."],
     lexicon: ["restitución", "autenticidad", "reparación"],
     artifacts: [
       {icon:"◩", name:"La grieta dorada", detail:"Una reparación visible puede recordar el daño o convertirlo en decoración moral.", x:46, y:48, motion:"glow"},
@@ -226,7 +226,7 @@ const rooms: Room[] = [
       "¿Puede haber perdón auténtico si una comunidad conserva activamente la memoria del daño para evitar que se repita?",
       "¿Una biografía justa debe equilibrar virtudes y defectos o esa simetría produce una imagen artificial de la vida?"
     ],
-    moves: ["Diferenciá recordar, conmemorar y absolver.", "Construí una política de memoria que también pueda aplicarse a tus propios héroes."],
+    moves: ["Diferencia recordar, conmemorar y absolver.", "Construye una política de memoria que también pueda aplicarse a tus propios héroes."],
     lexicon: ["legado", "memoria ejemplar", "responsabilidad heredada"],
     artifacts: [
       {icon:"✦", name:"La vela compartida", detail:"Recordar ilumina una parte del pasado y deja otra inevitablemente en sombra.", x:44, y:58, motion:"glow"},
@@ -334,7 +334,7 @@ export default function MonasterioDeLasIdeas() {
             <span className="chapter">CAPÍTULO ÚNICO · UNA CLASE PARA RYAN</span>
             <h1>El Monasterio<br/><em>de las Ideas</em></h1>
           </div>
-          <p>Doce mundos interiores. Entrá en cada espacio, explorá sus objetos vivos y enfrentá tres preguntas C2 antes de volver a la maqueta.</p>
+          <p>Doce mundos interiores. Entra en cada espacio, explora sus objetos vivos y enfrenta tres preguntas C2 antes de volver a la maqueta.</p>
           <div className="intro-stats"><span><b>12</b> mundos 3D</span><span><b>{totalQuestions}</b> preguntas C2</span><span><b>12</b> escenas vivas</span></div>
         </section>
 
@@ -359,7 +359,7 @@ export default function MonasterioDeLasIdeas() {
                   aria-label={"Entrar en 3D a " + room.name}
                 ><i>{room.number}</i><span>ENTRAR · {room.name}</span></button>)}
               </div>
-              <div className="map-caption"><span>Mové el cursor para recorrer la maqueta</span><b>◉ Tocá un punto para entrar en 3D</b></div>
+              <div className="map-caption"><span>Mueve el cursor para recorrer la maqueta</span><b>◉ Toca un punto para entrar en 3D</b></div>
             </div>
             <div className="room-grid" aria-label="Lista de mundos del monasterio">
               {rooms.map(room => <button key={room.id} onClick={() => enterRoom(room)}><small>{room.number}</small><span>{room.name}</span>{visitedRooms.includes(room.id) && <b>✓</b>}</button>)}
@@ -371,9 +371,9 @@ export default function MonasterioDeLasIdeas() {
             <span className="panel-kicker">PUERTA DE ENTRADA</span>
             <h2>Acá no se elige una tarjeta. Se entra.</h2>
             <p>Cada punto abre un interior distinto. La imagen cobra vida con movimientos propios de ese lugar y después aparecen tres preguntas extremadamente avanzadas.</p>
-            <blockquote>¿Qué idea defendés correctamente en público, pero todavía discutís en privado?</blockquote>
+            <blockquote>¿Qué idea defiendes correctamente en público, pero todavía discutes en privado?</blockquote>
             <button className="bell-button" onClick={ringForRoom}><span>♟</span><b>Hacer sonar la campana</b><small>El monasterio abre una puerta al azar</small></button>
-            <div className="class-rules"><span>REGLAS</span><p>Observá qué está pasando en la escena antes de responder.</p><p>Sin “depende” sin explicar de qué.</p><p>Sin citar para evitar responder.</p></div>
+            <div className="class-rules"><span>REGLAS</span><p>Observa qué está pasando en la escena antes de responder.</p><p>Sin “depende” sin explicar de qué.</p><p>Sin citar para evitar responder.</p></div>
           </aside>
         </section>
 
@@ -427,7 +427,7 @@ export default function MonasterioDeLasIdeas() {
           <button className="leave-world" onClick={returnToMap}>← Volver a la maqueta</button>
 
           <div className="scene-cast"><span>EN ESCENA</span><p>{active.cast}</p></div>
-          <div className="scene-instruction">Mové el cursor · la escena se anima sola</div>
+          <div className="scene-instruction">Mueve el cursor · la escena se anima sola</div>
         </div>
 
         <aside className="world-question-panel">
@@ -461,7 +461,7 @@ export default function MonasterioDeLasIdeas() {
           <button className={"depth-button " + (depthOpen ? "active" : "")} onClick={() => setDepthOpen(value => !value)}>
             {depthOpen ? "Cerrar contrapuntos" : "Abrir contrapuntos filosóficos"} <span>＋</span>
           </button>
-          {depthOpen && <div className="depth-panel"><small>NO CAMBIES DE TEMA: CAMBIÁ EL ÁNGULO</small>{active.moves.map((move,index) => <p key={move}><b>0{index + 1}</b>{move}</p>)}</div>}
+          {depthOpen && <div className="depth-panel"><small>NO CAMBIES DE TEMA: CAMBIA EL ÁNGULO</small>{active.moves.map((move,index) => <p key={move}><b>0{index + 1}</b>{move}</p>)}</div>}
           <div className="world-actions">
             <button onClick={returnToMap}>Salir al mapa</button>
             <button className="primary" onClick={nextQuestion}>{questionIndex === 2 ? "Volver a la pregunta 1 ↺" : "Siguiente pregunta →"}</button>

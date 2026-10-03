@@ -1,0 +1,923 @@
+{
+  "version": 1,
+  "exemptions": [
+    {
+      "path": "app/argento/page.tsx",
+      "text": "Profesor: Hola, ¿qué querés tomar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "Todo bien, gracias. ¿Y vos?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Che, ¡pasá! ¿Todo bien?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Todo bien, ¿vos?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Gracias, che. ¿Querés comer algo?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés una birra o una gaseosa?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Comés pizza?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés salir a caminar después?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Hola, che. ¿Qué querés?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Pará, ¿querés bolsa?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Listo. Acá tenés el ticket.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés algo para tomar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés bolsa?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Necesitás el ticket?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Acá tenés. ¿Todo bien?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Hola, ¿qué querés tomar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés medialunas también?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Che, ¿comés carne?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés birra?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Es queso caliente. Probá un poco.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés chori o carne?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Comés ensalada?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés tomar algo?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés postre?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Che, ¿tomás mate?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Tomá, está acá.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés mate?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Tomá, probá un poco.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Qué querés tomar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Querés papas también?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Preferís sentarte adentro o afuera?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés pedir algo para comer?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Podés tomar el subte.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Sí, a dos cuadras. Bajás en Plaza Italia.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "No, llegás al toque.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Necesitás la tarjeta SUBE.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿A dónde querés ir?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Preferís bondi o subte?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Tenés tarjeta SUBE?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Bajás en la próxima parada.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Sabés qué línea tomar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Che, ¿querés salir el sábado?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés comida argentina o italiana?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Qué comida preferís?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Si querés, vení con alguien.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés venir a la juntada?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Podés traer algo para tomar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés venir con alguien?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Hola, che. ¿Buscás algo?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Qué talle necesitás?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Qué buscás?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Te la querés probar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Te la llevás?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¡Gol! ¿Qué decís?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Tenés una reunión ahora?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Necesitás ayuda con algo?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Tenés una reunión?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Querés un café?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Necesitás ayuda?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Qué hacés los fines de semana?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Vivís cerca de acá?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Qué hacés el fin de semana?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Vivís cerca?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Tenés apuro?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Che, ¿necesitás ayuda?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Entendés?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Mal, tenés razón.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Tenés tarjeta SUBE?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "En Buenos Aires usamos «vos»: cargás, tenés, querés.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Imperativo de vos: bajate, fijate, seguí.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Podés ir por acá?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Tenés pollo?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Cómo querés la carne?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Comés acá?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Tenés fiebre?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Qué síntomas tenés?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Tenés otro color?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Sí, mirá estos.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Me hacés precio?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Mirá",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Imperativo de vos. También vas a oír: probá, vení, fijate.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Qué te pedís?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Querés hielo?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿De dónde sos?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Querés bailar?",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/banco-de-palabras/practice.ts",
+      "text": "El modelo usa tú: dobla. Con vos: doblá; con usted: doble. Elige el trato adecuado para la persona.",
+      "reason": "Explicit contrast of tú, regional vos and usted; neutral tú is the default model.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/clase/[id]/page.tsx",
+      "text": "El voseo elige la persona «vos». No es un modo ni un tiempo aparte: «hablás», «comés» y «vivís» están en presente de indicativo.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Reconocer vos, che, dale y vocabulario porteño frecuente",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Presente con vos",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Hablás, comés, vivís: el patrón rioplatense",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Usar vos con seguridad",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Pregunta de práctica con vos: «¿Qué hacés normalmente por la mañana?». Usa palabras sueltas si todavía no puedes formar frases.",
+      "reason": "Explicit quoted voseo production prompt; its outer instruction is neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Con vos, los verbos regulares llevan el acento al final: hablás, comés, vivís. El pronombre puede omitirse cuando el contexto es claro.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Vos ___ (trabajar) desde casa.",
+      "reason": "Explicit Argentine dialogue or voseo teaching example; surrounding instructions use neutral tú.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/lesson-catalog.ts",
+      "text": "Escribe 10 preguntas con vos para usar en la próxima clase.",
+      "reason": "Instruction to produce the regional paradigm being taught, not voseo learner address.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/additional-samples.ts",
+      "text": "Pregunta: ¿Tomás café? / ¿Tomas café? Elige el tratamiento habitual de tu variedad y mantenlo.",
+      "reason": "Explicit stress contrast between voseo and tuteo with neutral surrounding instruction.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/data.ts",
+      "text": "dale",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/data.ts",
+      "text": "¿Qué significa “dale”?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/data.ts",
+      "text": "Dale, vamos.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/page.tsx",
+      "text": "Alumno: Dale. ¿Adónde vamos?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/page.tsx",
+      "text": "🔁 Seguí hablando.",
+      "reason": "First-person preterite self-assessment, not an imperative.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "«Dale» puede aceptar una propuesta: «Sí, vamos».",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "Hoy puedo usar «dale» o «¿de verdad?». No necesito usar palabras vulgares.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "argento-dale",
+      "reason": "Stable identifier or unchanged English translation referencing the taught regional word.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "dale",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "Dale, vamos.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale, gracias. Qué lindo el departamento.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale, me encanta la idea.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale, obvio.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Coca o naranja?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Puedo pagar con tarjeta?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Grande o chico?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Pagás ahora o después?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Chori también?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Amargo o dulce?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Siempre toman del mismo mate?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. Yo pido en la barra.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale, de una.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Reservamos una mesa?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. ¿Llevo algo?",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. Capaz viene mi amiga Sara.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Caé tipo ocho, ¿dale?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale, necesito un café.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. Lo miramos después del café.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale. Hay un quilombo de tráfico.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "dale",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Dale, vamos.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Venís? De una.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/page.tsx",
+      "text": "DALE",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Dale, vamos.",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Dale",
+      "reason": "Argentine discourse marker or dialogue model deliberately taught as regional speech.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Me traés la carta?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Pagás con tarjeta?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/banco-de-palabras/data.ts",
+      "text": "Dale indicaciones a alguien que acaba de llegar.",
+      "reason": "Neutral tú imperative da + indirect-object le; means give someone directions.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/argento/practice-data.ts",
+      "text": "Puedo decir «che» con amigos; con un desconocido, «disculpá».",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Gracias. ¿A qué hora cerrás?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿A qué hora cerrás?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Cuando terminás, me lo pasás.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Caé tipo nueve. Tranqui.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Qué bajón. ¿Laburás desde casa?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Joya. Me salvás.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "¿Laburás desde casa?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "Sí. Cruzás la calle y la vas a ver.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/argento-roleplays/data.ts",
+      "text": "bancá / bancame",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Disculpá, ¿dónde está la salida?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Perfecto. ¿Me mostrás el pasaporte?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Me cargás cinco mil?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Me cargás la SUBE?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Me avisás en Corrientes?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Qué me recomendás para la parrilla?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "¿Qué me recomendás?",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/buenos-aires-en-la-calle/data.ts",
+      "text": "Sí, esperá un minuto.",
+      "reason": "Situated Argentine dialogue, local phrase or explicitly regional lexical example.",
+      "category": "regional-pedagogy"
+    }
+  ]
+}
