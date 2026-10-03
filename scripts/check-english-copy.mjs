@@ -8,7 +8,7 @@ export const BASE_SHA = '43e4b3eb1dc76031481d2406a62b9210f0dd97e2';
 export function compareEnglishCopy(beforeFiles, afterFiles) {
   const findings = [];
   for (const path of new Set([...beforeFiles.keys(), ...afterFiles.keys()])) {
-    const source = beforeFiles.get(path) || ''; 
+    const source = beforeFiles.get(path) || '';
     const before = extractCopy(source, path).filter(c => c.language === 'en');
     const after = extractCopy(afterFiles.get(path) || '', path).filter(c => c.language === 'en');
     const counts = new Map();
