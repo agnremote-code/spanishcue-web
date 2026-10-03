@@ -37,10 +37,10 @@ export function createServerProgressAdapter(
   const readCache = () => { try { return parseProgress(JSON.parse(storage?.getItem(key) || 'null')); } catch { return emptyProgress(); } };
   const sameSession = (value: ShareSession | null) => value?.passId === session.passId && value?.learnerId === session.learnerId && value?.revision === session.revision && value?.level === session.level;
   const decode = async (response: Response): Promise<ProgressState> => {
-    if ([401, 403, 409].includes(response.status)) { setStatus('session-changed'); throw new Error('La sesión cambió. Abrí de nuevo el enlace de tu profe.'); }
+    if ([401, 403, 409].includes(response.status)) { setStatus('session-changed'); throw new Error('La sesión cambió. Abre de nuevo el enlace de tu profe.'); }
     if (!response.ok) throw new Error('No se pudo sincronizar.');
     const data = await response.json() as { session: ShareSession; progress: unknown };
-    if (!sameSession(data.session)) { setStatus('session-changed'); throw new Error('La sesión cambió. Abrí de nuevo el enlace de tu profe.'); }
+    if (!sameSession(data.session)) { setStatus('session-changed'); throw new Error('La sesión cambió. Abre de nuevo el enlace de tu profe.'); }
     return parseProgress(data.progress);
   };
   const eligible = (id: string) => new RegExp(`^${session.level}-(0[1-9]|1[0-9]|20)$`).test(id);

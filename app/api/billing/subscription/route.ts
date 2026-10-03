@@ -27,7 +27,7 @@ function safe(subscription: Awaited<ReturnType<typeof currentSubscriptionForUser
 
 export async function GET(request: Request) {
   const userId = accountIdFromHeaders(request.headers);
-  if (!userId) return Response.json({ error: "Iniciá sesión para continuar." }, { status: 401 });
+  if (!userId) return Response.json({ error: "Inicia sesión para continuar." }, { status: 401 });
   const config = billingConfig(env);
   return Response.json({ subscription: safe(await currentSubscriptionForUser(env.DB, userId, config.paypalEnv)) }, { headers: { "cache-control": "no-store" } });
 }
@@ -35,7 +35,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   if (request.headers.get("origin") !== new URL(request.url).origin) return Response.json({ error: "Origen no válido." }, { status: 403 });
   const userId = accountIdFromHeaders(request.headers);
-  if (!userId) return Response.json({ error: "Iniciá sesión para continuar." }, { status: 401 });
+  if (!userId) return Response.json({ error: "Inicia sesión para continuar." }, { status: 401 });
 
   const raw = await request.text();
   let action: "pause" | "resume" | "cancel" = "cancel";

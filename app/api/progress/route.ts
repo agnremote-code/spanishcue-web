@@ -12,7 +12,7 @@ function sameOrigin(request: Request): boolean {
 
 export async function GET(request: Request) {
   const userId = accountIdFromHeaders(request.headers);
-  if (!userId) return Response.json({ error: "Iniciá sesión." }, { status: 401 });
+  if (!userId) return Response.json({ error: "Inicia sesión." }, { status: 401 });
   try {
     return Response.json(
       { items: await listLessonProgress(env.DB, userId) },
@@ -25,7 +25,7 @@ export async function GET(request: Request) {
 
 export async function PUT(request: Request) {
   const userId = accountIdFromHeaders(request.headers);
-  if (!userId) return Response.json({ error: "Iniciá sesión." }, { status: 401 });
+  if (!userId) return Response.json({ error: "Inicia sesión." }, { status: 401 });
   if (!sameOrigin(request)) return Response.json({ error: "Origen no válido." }, { status: 403 });
   if (!request.headers.get("content-type")?.startsWith("application/json")) {
     return Response.json({ error: "Formato no válido." }, { status: 415 });

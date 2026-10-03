@@ -35,7 +35,7 @@ export async function createReport(db:D1Database,userId:string,email:string|null
  const result=await db.prepare(`INSERT INTO lesson_reports (id,user_id,user_email,lesson_id,lesson_slug,lesson_title,lesson_category,level,url,message,category,context_json,created_at,updated_at)
  SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,? WHERE (SELECT count(*) FROM lesson_reports WHERE user_id=? AND created_at>=?) < 5 ON CONFLICT(id) DO NOTHING`).bind(id,userId,email,r.lesson.id,localLessonPath(r.lesson)!,r.lesson.title,r.lesson.category,r.level,r.url,r.message,r.category,JSON.stringify(r.context),now,now,userId,cutoff).run();
  if(!result.meta.changes){const existing=await db.prepare('SELECT id FROM lesson_reports WHERE id=? AND user_id=?').bind(id,userId).first();if(existing)return {id,created:false,report:r,createdAt:now};}
- if(!result.meta.changes)throw new ReportError('Ya enviaste varios reportes. Probá nuevamente en unos minutos.',429);
+ if(!result.meta.changes)throw new ReportError('Ya enviaste varios reportes. Prueba nuevamente en unos minutos.',429);
  return {id,created:true,report:r,createdAt:now};
 }
 export async function listReports(db:D1Database,url:URL) {

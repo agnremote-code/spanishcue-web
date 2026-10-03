@@ -69,7 +69,7 @@ export const a1w05: Module = {
           head: ["Persona", "Ser", "Ejemplo"],
           rows: [
             ["yo", "soy", "Soy de Mérida."],
-            ["tú / vos", "eres / sos", "¿Eres ingeniera? · ¿Sos uruguayo?"],
+            ["tú", "eres", "¿Eres ingeniera?"],
             ["usted, él, ella", "es", "Usted es el coordinador, ¿no?"],
             ["nosotros, nosotras", "somos", "Somos estudiantes."],
             ["vosotros, vosotras (España)", "sois", "¿Sois de Barcelona?"],
@@ -138,7 +138,7 @@ export const a1w05: Module = {
           head: ["Persona", "Forma", "Ejemplo"],
           rows: [
             ["yo", "trabajo", "Trabajo en un hotel."],
-            ["tú / vos", "trabajas / trabajás", "¿Dónde trabajas? · ¿Dónde trabajás?"],
+            ["tú", "trabajas", "¿Dónde trabajas?"],
             ["usted, él, ella", "trabaja", "Nadia trabaja con computadora."],
             ["nosotros, nosotras", "trabajamos", "No trabajamos por la tarde."],
             ["vosotros, vosotras", "trabajáis", "¿Trabajáis aquí?"],

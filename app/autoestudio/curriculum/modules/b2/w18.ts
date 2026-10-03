@@ -343,7 +343,7 @@ export const b2w18: Module = {
       },
       {
         "speaker": "s2",
-        "text": "A mí me da igual, o sea, me da igual el día. No me da igual cuánto gastemos. Si usamos todo el fondo en la feria, después no podremos pagar el taller. Perdona, Nora, te interrumpí para aclarar eso; seguí con tu idea."
+        "text": "A mí me da igual, o sea, me da igual el día. No me da igual cuánto gastemos. Si usamos todo el fondo en la feria, después no podremos pagar el taller. Perdona, Nora, te interrumpí para aclarar eso; sigue con tu idea."
       },
       {
         "speaker": "s1",
@@ -764,7 +764,7 @@ export const b2w18: Module = {
       },
       {
         "type": "listen",
-        "audio": "A mí me da igual, o sea, me da igual el día. No me da igual cuánto gastemos. Si usamos todo el fondo en la feria, después no podremos pagar el taller. Perdona, Nora, te interrumpí para aclarar eso; seguí con tu idea.",
+        "audio": "A mí me da igual, o sea, me da igual el día. No me da igual cuánto gastemos. Si usamos todo el fondo en la feria, después no podremos pagar el taller. Perdona, Nora, te interrumpí para aclarar eso; sigue con tu idea.",
         "voice": "es-MX-m",
         "q": "Al escuchar de nuevo a Mateo en «O sea: reformular para seguir hablando», ¿qué intervención reconoces?",
         "options": [

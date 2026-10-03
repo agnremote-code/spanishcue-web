@@ -59,7 +59,7 @@ export default function AutoestudioLanding({ levels, fullAccess, session }: { se
               </a>
             </div>
           )}
-          {!fullAccess && <p className="ae-hint">{en ? "Try a real sample in each level. A1 weeks 1 and 2 are free." : "Probá una semana real de cada nivel. Las semanas 1 y 2 de A1 son gratis."}</p>}
+          {!fullAccess && <p className="ae-hint">{en ? "Try a real sample in each level. A1 weeks 1 and 2 are free." : "Prueba una semana real de cada nivel. Las semanas 1 y 2 de A1 son gratis."}</p>}
         </div>
         <div className="ae-landing-art" aria-hidden="true">
           <span className="ae-sun" />

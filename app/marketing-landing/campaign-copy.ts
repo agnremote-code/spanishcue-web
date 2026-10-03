@@ -16,7 +16,7 @@ export const campaignCopy = {
   madeCopy: 'SPANISHCUE nace de un problema real: dedicar horas a preparar una sola clase. Por eso cada experiencia se centra en lo que pasa cuando tienes un alumno delante: explicar, practicar, reaccionar y hablar.',
   founder: 'SÉ UNO DE LOS PRIMEROS 1.000 PROFESORES.', founderCopy: 'Precio fundador para las primeras 1.000 suscripciones activadas.',
   keep: 'Mantienes US$15.50/mes mientras esa misma suscripción continúe activa.', month: 'mes', full: 'Toda la biblioteca.',
-  payment: 'Tarjeta o PayPal. Cancelación online. Pagás primero y después vinculás la compra a tu cuenta.',
+  payment: 'Tarjeta o PayPal. Cancelación online. Pagas primero y después vinculas la compra a tu cuenta.',
   launch: 'Tu próxima clase, gratis. PRO, próximamente.', launchCopy: 'Precio fundador previsto: US$15.50/mes. Los pagos aún no están habilitados. Puedes conocer el lanzamiento sin tarjeta ni cobro.',
   launchCta: 'CONOCER EL LANZAMIENTO PRO', remaining: 'de 1.000 lugares disponibles', free: 'GRATIS', pro: 'PRO', open: 'ABRIR CLASE REAL', viewPro: 'DESBLOQUEAR CON PRO · US$15.50/MES',
   modalTitle: 'Toda SPANISHCUE por US$15.50/mes.', continue: 'SEGUIR MIRANDO CLASES', tryFirst: 'Puedes probar clases reales gratis primero.', close: 'Cerrar oferta', login: 'Mi cuenta', loginVisitor: 'Entrar',

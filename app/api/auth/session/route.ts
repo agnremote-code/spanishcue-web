@@ -67,7 +67,7 @@ export async function POST(request: Request) {
     account = await syncFirebaseAccount(env.DB, user, ownerIdentity);
   } catch {
     return Response.json(
-      { error: "No pudimos preparar tu cuenta. Intentá nuevamente." },
+      { error: "No pudimos preparar tu cuenta. Inténtalo de nuevo." },
       { status: 503 },
     );
   }

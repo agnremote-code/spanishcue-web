@@ -370,7 +370,7 @@ const libraryNews = [
     kicker: "NUEVO LABORATORIO · A1–C1",
     route: "FONÉTICA + BOCA + PRONUNCIACIÓN",
     title: "Spanish Mouth Lab",
-    copy: "Escuchá y contrastá pero/perro y caro/carro, practicá la colocación de la lengua y usá los sonidos en un intercambio breve. Seis estaciones originales quedan como consulta opcional.",
+    copy: "Escucha y contrasta pero/perro y caro/carro, practica la colocación de la lengua y usa los sonidos en un intercambio breve. Seis estaciones originales quedan como consulta opcional.",
     symbol: "ɾ",
     words: ["mirar", "colocar", "producir"],
   },

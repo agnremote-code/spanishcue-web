@@ -63,7 +63,7 @@ const COMPACT_DEFAULTS = {
   governingLaw: "República Argentina",
   courts: "Ciudad Autónoma de Buenos Aires, Argentina",
   effectiveDate: "2026-09-23",
-  refundPolicyEs: "Podés cancelar en cualquier momento. Los cargos ya realizados no se reembolsan automáticamente, salvo cuando lo exijan la ley aplicable o PayPal, o ante cargos duplicados, no autorizados o falta sustancial de prestación.",
+  refundPolicyEs: "Puedes cancelar en cualquier momento. Los cargos ya realizados no se reembolsan automáticamente, salvo cuando lo exijan la ley aplicable o PayPal, o ante cargos duplicados, no autorizados o falta sustancial de prestación.",
   refundPolicyEn: "You may cancel at any time. Completed charges are not automatically refundable, except where required by applicable law or PayPal, or for duplicate or unauthorized charges or material failure to provide the service.",
   withdrawalPolicyEs: "Se respetan los derechos de desistimiento o revocación que sean obligatorios según la ley aplicable. El acceso al servicio no implica por sí solo una renuncia a esos derechos.",
   withdrawalPolicyEn: "Any mandatory withdrawal or cancellation rights under applicable law are respected. Accessing the service does not by itself constitute a waiver of those rights.",

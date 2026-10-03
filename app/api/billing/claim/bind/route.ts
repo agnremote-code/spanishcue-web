@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   if (request.headers.get("origin") !== new URL(request.url).origin) return Response.json({ error: "Origen no válido." }, { status: 403 });
   const userId = accountIdFromHeaders(request.headers);
   const email = emailFromHeaders(request.headers);
-  if (!userId || !email) return Response.json({ error: "Ingresá a tu cuenta para activar PRO." }, { status: 401 });
+  if (!userId || !email) return Response.json({ error: "Ingresa a tu cuenta para activar PRO." }, { status: 401 });
   let provider: PurchaseProvider;
   try {
     const raw = await request.text();
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "La compra no coincide con la oferta." }, { status: 409 });
   }
   if (cookieClaim.normalizedEmail !== email.trim().toLowerCase()) {
-    return Response.json({ error: "Ingresá con el mismo email confirmado por el proveedor de pago." }, { status: 409 });
+    return Response.json({ error: "Ingresa con el mismo email confirmado por el proveedor de pago." }, { status: 409 });
   }
   try {
     const paddle = { ...paddleConfig(env), legacyMonthly: cookieClaim.amountCents === 1500 && !!cookieClaim.paidAt };
@@ -46,6 +46,6 @@ export async function POST(request: Request) {
       { headers: { "cache-control": "private, no-store" } });
   } catch {
     // The claim stays bound to this user in 'claiming', so the same account can safely retry.
-    return Response.json({ error: "No pudimos activar PRO todavía. Reintentá en unos segundos." }, { status: 503 });
+    return Response.json({ error: "No pudimos activar PRO todavía. Vuelve a intentarlo en unos segundos." }, { status: 503 });
   }
 }

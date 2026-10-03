@@ -50,7 +50,7 @@ export const a1w08: Module = {
           head: ["Persona", "Estar", "Ejemplo"],
           rows: [
             ["yo", "estoy", "Estoy en la parada del bus."],
-            ["tú / vos", "estás", "¿Dónde estás?"],
+            ["tú", "estás", "¿Dónde estás?"],
             ["usted, él, ella", "está", "La farmacia está en la esquina."],
             ["nosotros, nosotras", "estamos", "Estamos en el Parque Central."],
             ["vosotros, vosotras (España)", "estáis", "¿Estáis en el hotel?"],

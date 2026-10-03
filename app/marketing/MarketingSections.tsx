@@ -32,7 +32,7 @@ const copy = {
     cueWay: "Con SPANISHCUE",
     cueItems: ["Elegir por nivel", "Abrir la clase", "Enseñar y conversar"],
     previewKicker: "CLASES DESTACADAS",
-    previewTitle: "Probá una clase antes de elegir.",
+    previewTitle: "Prueba una clase antes de elegir.",
     previewCopy: "Cuatro ejemplos gratuitos para conocer la experiencia.",
     previewOpen: "Ver clase gratis",
     previewFree: "CLASE GRATUITA",

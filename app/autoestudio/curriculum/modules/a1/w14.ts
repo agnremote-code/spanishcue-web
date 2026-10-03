@@ -127,14 +127,14 @@ export const a1w14: Module = {
         ],
         table: {
           caption: "Solo cambia yo",
-          head: ["Infinitivo", "yo", "tú / vos", "él, ella, usted", "nosotros", "ellos, ustedes"],
+          head: ["Infinitivo", "yo", "tú", "él, ella, usted", "nosotros, nosotras", "vosotros, vosotras", "ellos, ellas, ustedes"],
           rows: [
-            ["hacer", "hago", "haces / hacés", "hace", "hacemos", "hacen"],
-            ["poner", "pongo", "pones / ponés", "pone", "ponemos", "ponen"],
-            ["traer", "traigo", "traes / traés", "trae", "traemos", "traen"],
-            ["salir", "salgo", "sales / salís", "sale", "salimos", "salen"],
-            ["conocer", "conozco", "conoces / conocés", "conoce", "conocemos", "conocen"],
-            ["saber", "sé", "sabes / sabés", "sabe", "sabemos", "saben"],
+            ["hacer", "hago", "haces", "hace", "hacemos", "hacéis", "hacen"],
+            ["poner", "pongo", "pones", "pone", "ponemos", "ponéis", "ponen"],
+            ["traer", "traigo", "traes", "trae", "traemos", "traéis", "traen"],
+            ["salir", "salgo", "sales", "sale", "salimos", "salís", "salen"],
+            ["conocer", "conozco", "conoces", "conoce", "conocemos", "conocéis", "conocen"],
+            ["saber", "sé", "sabes", "sabe", "sabemos", "sabéis", "saben"],
           ],
         },
         examples: [

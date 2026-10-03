@@ -35,7 +35,7 @@ export async function POST(request: Request) {
   // Sandbox is intentionally available for the end-to-end test flow. Live
   // remains blocked until the complete legal operator profile is configured.
   if (billingReadiness(config, Boolean(legalOperator(env))) === "unconfigured") {
-    return Response.json({ error: "El pago se está preparando. Volvé a intentarlo pronto." }, { status: 503 });
+    return Response.json({ error: "El pago se está preparando. Vuelve a intentarlo pronto." }, { status: 503 });
   }
   if (!checkoutAllowed(config, userId)) {
     return Response.json({ error: "El checkout público todavía no está habilitado." }, { status: 503 });
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
         return Response.json({ approvalUrl: claim.approvalUrl }, { headers });
       }
       const locked = await lockPurchaseCheckout(env.DB, claim.claimId, "paypal");
-      if (!locked) return Response.json({ error: "Estamos preparando tu suscripción. Reintentá en unos segundos." }, { status: 409, headers });
+      if (!locked) return Response.json({ error: "Estamos preparando tu suscripción. Vuelve a intentarlo en unos segundos." }, { status: 409, headers });
       try {
         const paypal = await createPaypalSubscription(config, {
           origin, returnTo, claimId: claim.claimId, requestId: locked.checkoutRequestId || undefined,
@@ -82,7 +82,7 @@ export async function POST(request: Request) {
       return Response.json({ approvalUrl: lock.approvalUrl }, { headers: { "cache-control": "no-store" } });
     }
     if (lock.kind === "busy") {
-      return Response.json({ error: "Ya estamos preparando tu suscripción. Reintentá en unos segundos." }, { status: 409 });
+      return Response.json({ error: "Ya estamos preparando tu suscripción. Vuelve a intentarlo en unos segundos." }, { status: 409 });
     }
     try {
       const paypal = await createPaypalSubscription(config, { origin, returnTo, userId, requestId: lock.requestId });
@@ -100,6 +100,6 @@ export async function POST(request: Request) {
       throw error;
     }
   } catch {
-    return Response.json({ error: "No pudimos iniciar el pago. Intentá nuevamente." }, { status: 502 });
+    return Response.json({ error: "No pudimos iniciar el pago. Inténtalo de nuevo." }, { status: 502 });
   }
 }

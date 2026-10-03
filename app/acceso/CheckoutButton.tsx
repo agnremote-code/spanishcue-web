@@ -241,7 +241,7 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
 
     {founder.trialCheckoutAvailable && <div className="checkout-trial">
       <button className="checkout-trial-button" type="button" onClick={() => checkoutPaddle("trial")} disabled={busy || !founder.available}>
-        {locale === "es" ? "Probá 1 día por US$2" : "Try 1 day for US$2"}
+        {locale === "es" ? "Prueba 1 día por US$2" : "Try 1 day for US$2"}
       </button>
       <small>{locale === "es" ? "Después, US$15.50/mes. Cancelá cuando quieras. Impuestos incluidos." : "Then US$15.50/month. Cancel anytime. Taxes included."}</small>
     </div>}
