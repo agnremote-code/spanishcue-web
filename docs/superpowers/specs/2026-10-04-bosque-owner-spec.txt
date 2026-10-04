@@ -1,0 +1,1661 @@
+YOU ARE WORKING DIRECTLY ON THE CURRENT SPANISHCUE REPOSITORY:
+
+agnremote-code/spanishcue-web
+
+CREATE AND SHIP A NEW COMPLETE SPANISHCUE CONVERSATION LESSON:
+
+EL BOSQUE DE LOS HONGOS GIGANTES
+
+THIS IS A LARGE, PREMIUM, THIRD-PERSON 3D PLATFORMER CONVERSATION EXPERIENCE.
+
+DO NOT MAKE A SMALL PROTOTYPE.
+DO NOT MAKE A STATIC WEB PAGE.
+DO NOT MAKE A FAKE 3D HERO.
+DO NOT REDUCE THE SCOPE UNLESS A REAL TECHNICAL LIMITATION REQUIRES IT.
+
+==================================================
+FIRST — IMPORTANT: MUCH OF THE PRODUCT DESIGN IS ALREADY DONE
+==================================================
+
+Do NOT spend a long exploration cycle reinventing the idea.
+
+Inspect current main and use existing architecture intelligently.
+
+I already identified these useful canonical references:
+
+- app/noche-abierta/World3D.tsx
+- app/noche-abierta/NocheAbierta.tsx
+- app/noche-abierta/hero3d.ts
+- app/noche-abierta/world3d.mjs
+- app/noche-abierta/build3d.ts
+- app/noche-abierta/noche-abierta.css
+- app/play-mode/PlayShell.tsx
+- app/play-mode/play-mode.css
+- app/conversation-worlds/
+- app/conversation-families/
+- app/lesson-catalog.ts
+- current mascot assets
+- current neutral-Spanish linguistic guards
+- tests for Noche abierta / Modo Play / conversation families
+
+Use Noche abierta primarily as the technical reference for:
+- real-time Three.js world
+- third-person navigation
+- keyboard/mobile controls
+- camera system
+- jump
+- collision
+- WebGL fallback
+- reduced-motion handling
+- lazy loading
+- responsive behavior
+- game state persistence
+
+BUT:
+
+DO NOT copy Noche abierta's pedagogical/narrative structure.
+
+This new lesson must feel like an entirely different game.
+
+==================================================
+PRODUCT RULE
+==================================================
+
+ONE IDEA
+ONE CLASS
+ONE CATALOG CARD
+ONE ROUTE
+ONE ENGINE
+SIX FULLY AUTHORED LEVELS INSIDE IT:
+
+A1
+A2
+B1
+B2
+C1
+C2
+
+Display:
+
+A1–C2
+
+Category:
+
+Conversación
+
+Collection:
+
+Modo Play
+
+Suggested route:
+
+/bosque-de-los-hongos-gigantes
+
+Determine the next valid unused lesson ID from CURRENT main.
+DO NOT assume an ID.
+
+Suggested duration:
+
+45–60 min
+
+High replayability.
+
+==================================================
+CORE IDEA
+==================================================
+
+EL BOSQUE DE LOS HONGOS GIGANTES
+
+The learner controls the OFFICIAL SpanishCue mascot as an original superhero inside an enormous realistic-fantasy forest.
+
+It is a THIRD-PERSON 3D PLATFORMER.
+
+The learner:
+
+- runs;
+- walks;
+- jumps;
+- climbs through routes;
+- lands on giant mushroom caps;
+- crosses logs;
+- uses vines / wooden bridges where appropriate;
+- enters caves;
+- reaches high branches;
+- bounces from selected mushroom caps;
+- discovers hidden paths;
+- finds optional conversation zones;
+- reaches a huge final mushroom at the top of the forest.
+
+BUT THE GAMEPLAY IS THE CONTAINER.
+
+THE ACTUAL PEDAGOGY IS PURE CONVERSATION.
+
+==================================================
+VERY IMPORTANT — THIS IS NOT ANOTHER GTA / NIGHT-OPEN ROLEPLAY
+==================================================
+
+DO NOT build:
+
+- NPC roleplay chains;
+- taxi decisions;
+- restaurants;
+- phone calls;
+- narrative crises;
+- “someone says X, what do you do?” as the dominant mechanic;
+- story consequences;
+- branching social simulations;
+- long situational scripts.
+
+I specifically want to move AWAY from that model.
+
+The learner should primarily LAND ON / REACH conversation challenges organized by CATEGORY.
+
+The forest is the videogame layer.
+
+The content should be:
+
+- personal questions;
+- opinions;
+- real-life questions;
+- isolated real-life hypotheticals;
+- suppositions;
+- statements to react to;
+- multiple choice + justification;
+- rankings;
+- comparisons;
+- predictions;
+- personal memories;
+- agree / disagree / depends;
+- finish the sentence;
+- defend a position;
+- change your mind;
+- choose and explain;
+- estimate;
+- imagine;
+- prioritize;
+- “which one fits you?”;
+- “what would have to change?”;
+- reverse argument;
+- quick-response prompts;
+- deeper follow-ups.
+
+NO CORRECT ANSWER.
+
+The goal is to MAKE THE STUDENT TALK.
+
+==================================================
+VISUAL QUALITY — VERY IMPORTANT
+==================================================
+
+This should be one of the most impressive visual lessons in SpanishCue.
+
+NOT FUTURISTIC.
+
+NO:
+- holograms;
+- cyberpunk;
+- neon tech;
+- sci-fi machinery;
+- floating glass UI in the forest;
+- generic AI futuristic world.
+
+The forest itself should feel physically believable but oversized and magical.
+
+Think:
+
+REAL FOREST
++
+GIANT MUSHROOM ECOSYSTEM
++
+CINEMATIC PLATFORM GAME
++
+PREMIUM THIRD-PERSON 3D
+
+Build a genuinely large world.
+
+Include:
+
+- enormous mushrooms at multiple heights;
+- detailed stems and caps;
+- realistic bark;
+- moss;
+- rocks;
+- roots;
+- fallen trunks;
+- small streams;
+- waterfall zone if performant;
+- mist;
+- foliage;
+- ferns;
+- flowers;
+- ground vegetation;
+- sunbeams;
+- natural shadows;
+- leaf movement;
+- particles/spores used subtly;
+- caves;
+- verticality;
+- distant scenery;
+- multiple routes;
+- recognizable visual zones;
+- checkpoints;
+- real depth.
+
+Use physically plausible materials and lighting within browser limits.
+
+Grounded fantasy, NOT sci-fi.
+
+==================================================
+THE HERO — OFFICIAL MASCOT AS ORIGINAL SUPERHERO
+==================================================
+
+The playable character is the CURRENT OFFICIAL SPANISHCUE MASCOT.
+
+DO NOT INVENT ANOTHER PERSON.
+
+Preserve as closely as technically possible:
+
+- face identity;
+- hair;
+- age;
+- proportions;
+- attractive young adult appearance;
+- personality;
+- recognizable SpanishCue look.
+
+For this world, turn him into an ORIGINAL SpanishCue superhero.
+
+NO copyrighted superhero copying.
+
+NO Superman costume.
+NO Batman costume.
+NO Marvel/DC insignias.
+
+Design an original outfit based on the existing mascot:
+
+- realistic human proportions;
+- face visible;
+- same recognizable hair;
+- elegant black / very dark navy base;
+- subtle SpanishCue blue accents;
+- subtle warm/gold detail;
+- fitted but tasteful hero outfit;
+- gloves / boots only if visually appropriate;
+- long premium cape;
+- cape in dark navy / SpanishCue blue family;
+- subtle C / Cue motif, not a giant cheesy superhero logo.
+
+NO MASK over the face.
+
+The cape matters.
+
+Implement visible cape motion:
+- idle;
+- walking;
+- running;
+- jumping;
+- falling;
+- landing.
+
+A simple performant cloth/segmented animation is acceptable if visually convincing.
+
+Do NOT accept a blocky mannequin or crude primitive character as final.
+
+If the repo lacks a faithful rigged GLB/GLTF:
+- inspect every available mascot asset first;
+- use the highest-quality available identity references;
+- build the best high-fidelity hybrid possible;
+- preserve the face/hair identity;
+- use the actual mascot portrait/art in intro/support UI if needed to keep identity unmistakable.
+
+Do not falsely claim that a crude procedural avatar is “the mascot”.
+
+==================================================
+THIRD-PERSON MOVEMENT
+==================================================
+
+Desktop:
+
+WASD / arrows = move
+SHIFT = run
+ALT or equivalent = walk if useful
+SPACE = jump
+drag mouse = orbit camera
+V = camera mode if useful
+M = map if useful
+ESC = close panel
+
+Mobile:
+
+- touch joystick;
+- jump button;
+- interact/open button if necessary;
+- camera drag.
+
+The player must actually:
+
+- move;
+- jump;
+- fall;
+- land;
+- traverse platforms.
+
+NOT click-to-teleport disguised as gameplay.
+
+==================================================
+PLATFORMER PHYSICS
+==================================================
+
+Implement actual usable platform mechanics.
+
+Required:
+
+- gravity;
+- jump arc;
+- stable ground detection;
+- mushroom/platform landing;
+- fall detection;
+- respawn/checkpoint;
+- safe forgiveness around platform edges;
+- no frustrating pixel-perfect jumps;
+- keyboard and mobile support.
+
+Some selected mushrooms may provide:
+
+BOUNCE
+
+with a higher jump.
+
+Make bounce behavior visually obvious.
+
+Falling should NOT mean “game over”.
+
+Respawn at the most recent safe checkpoint quickly.
+
+No punishment that wastes class time.
+
+==================================================
+WORLD STRUCTURE
+==================================================
+
+Create approximately 12 major conversation zones.
+
+The world should be semi-open rather than a straight corridor.
+
+Suggested macro progression:
+
+00 · CLARO DE ENTRADA
+01 · HONGOS DE TI
+02 · HONGOS DE VIDA REAL
+03 · HONGOS DE ELECCIÓN
+04 · HONGOS DE OPINIÓN
+05 · HONGOS DE SUPOSICIÓN
+06 · HONGOS DE AFIRMACIONES
+07 · HONGOS DE COMPARAR
+08 · CUEVA DE RECUERDOS
+09 · COPAS DEL FUTURO
+10 · SENDERO DEL CAMBIO DE IDEA
+11 · HONGO CORONA / GRAN SALTO FINAL
+
+Improve names if you find stronger ones.
+
+Every zone should have a visually distinct color/material/ecology.
+
+Do NOT make the world feel like 12 menu screens.
+
+The categories should be discoverable through the environment itself.
+
+==================================================
+CONVERSATION ZONES
+==================================================
+
+Each major zone corresponds to a conversational CATEGORY.
+
+Suggested categories:
+
+1. SOBRE TI
+personal preferences, habits, identity, tastes
+
+2. VIDA REAL
+work, study, food, routines, friends, travel, money, home, technology, free time
+
+3. ELIGE Y JUSTIFICA
+2–4 options, but ALWAYS explain
+
+4. OPINIÓN
+open opinion questions
+
+5. SUPOSICIONES
+“imagina que…”
+“supón que…”
+“¿qué crees que pasaría si…?”
+
+These are isolated conversational hypotheticals,
+NOT roleplay narratives.
+
+6. AFIRMACIÓN
+Show a statement.
+
+Learner chooses:
+
+DE ACUERDO
+NO ESTOY DE ACUERDO
+DEPENDE
+
+Then must explain.
+
+7. COMPARA / ORDENA
+rank
+compare
+prioritize
+choose most/least important
+
+8. RECUERDOS
+short personal memory/story prompts
+
+9. FUTURO
+prediction
+plans
+expectations
+change over time
+
+10. CAMBIA DE IDEA
+learner gives first answer;
+second card changes one condition;
+learner decides whether to maintain or revise the answer
+
+11. DEFIENDE LO CONTRARIO
+at appropriate levels:
+choose an opinion, then briefly defend the opposite
+
+12. GRAN HONGO FINAL
+mixed conversation challenge.
+
+==================================================
+PROMPT TYPES — DATA MODEL
+==================================================
+
+Build a reusable typed content system.
+
+Something conceptually like:
+
+{
+  id,
+  level,
+  zone,
+  type,
+  question,
+  statement?,
+  choices?,
+  followUps,
+  glosses?,
+  teacherNote?,
+  visualCue?
+}
+
+Prompt types should include:
+
+- open
+- choice
+- statement
+- scale
+- ranking
+- compare
+- suppose
+- memory
+- future
+- finish
+- reverse
+- change-condition
+- quick
+- final
+
+Do not overengineer.
+
+==================================================
+CONTENT VOLUME — DO NOT SKIMP
+==================================================
+
+This must be HIGHLY REPLAYABLE.
+
+AUTHOR REAL CONTENT FOR ALL SIX LEVELS.
+
+Minimum target:
+
+12 conversation categories
+×
+at least 6 authored prompts per category
+×
+6 CEFR levels
+
+≈ 72 authored prompts PER LEVEL.
+
+Target total:
+
+432+ authored conversation prompts.
+
+Do NOT generate them dynamically from a single generic template at runtime.
+
+Do NOT clone A1 and simply change a few words.
+
+Each level must genuinely be authored for its proficiency level.
+
+A normal 45–60 minute playthrough should expose only part of the bank.
+
+The teacher should be able to replay the lesson on another day and encounter many different questions.
+
+Avoid repeating a prompt during the same session.
+
+A deterministic shuffled deck or session shuffle is fine.
+
+==================================================
+EVERY PROMPT MUST PRODUCE SPEECH
+==================================================
+
+Multiple choice alone is NOT an activity.
+
+Example:
+
+Which matters more when choosing where to live?
+
+A · price
+B · location
+C · space
+D · safety
+
+After the choice:
+
+“Why?”
+“Which one comes second?”
+“What would make you choose differently?”
+
+Good.
+
+Bad:
+
+select option → green check → next.
+
+There are NO quiz-style correct answers.
+
+==================================================
+MULTIPLE CHOICE DESIGN
+==================================================
+
+Use MCQs as conversation launchers.
+
+Examples:
+
+“¿Qué te ayuda más a descansar?”
+
+A · dormir
+B · salir
+C · estar solo
+D · hablar con alguien
+
+Then:
+
+“¿Por qué?”
+“¿Qué opción nunca eliges?”
+“¿Cambiaría tu respuesta durante las vacaciones?”
+
+At upper levels, options can encode values or perspectives rather than objects.
+
+==================================================
+AFFIRMATION CARDS
+==================================================
+
+Use statements such as:
+
+“Trabajar desde casa mejora la calidad de vida.”
+
+Choices:
+
+DE ACUERDO
+NO ESTOY DE ACUERDO
+DEPENDE
+
+Then follow-ups appropriate to the level.
+
+Never score the answer.
+
+==================================================
+REAL-LIFE CONTENT
+==================================================
+
+Topics should feel adult, modern and useful.
+
+Use varied domains:
+
+- routines;
+- friendships;
+- relationships without making the whole class dating-focused;
+- family;
+- food;
+- work;
+- study;
+- travel;
+- cities;
+- housing;
+- money;
+- shopping;
+- technology;
+- phones;
+- social media;
+- exercise;
+- health habits, non-medical;
+- hobbies;
+- entertainment;
+- music;
+- movies;
+- transport;
+- environment;
+- personal goals;
+- decisions;
+- communication;
+- culture;
+- language;
+- time;
+- stress in ordinary life;
+- productivity;
+- vacations;
+- memories;
+- plans.
+
+Do not make every prompt about “what would you do in this crisis?”
+
+==================================================
+LEVEL A1
+==================================================
+
+A1 MUST BE ACTUALLY A1.
+
+Do not write fake A1 with B1 questions.
+
+Focus on:
+
+- name;
+- country/city;
+- home;
+- family basics;
+- food;
+- work/study;
+- daily routine;
+- days/times;
+- clothes;
+- weather;
+- transport;
+- basic likes/dislikes;
+- simple preferences;
+- simple descriptions;
+- simple present;
+- hay;
+- tener;
+- gustar;
+- querer;
+- ir;
+- poder at an accessible level.
+
+Answers can initially be:
+
+1–3 short sentences.
+
+Examples:
+
+“¿Qué prefieres para desayunar?”
+A café
+B té
+C jugo
+D agua
+
+Follow-up:
+“¿Por qué?”
+“¿Qué comes?”
+
+“Tu casa ideal es…”
+A grande
+B pequeña
+C en la ciudad
+D cerca de la naturaleza
+
+“¿Qué hay en tu habitación?”
+
+“Completa:
+Los domingos yo…”
+
+Statement:
+“Es mejor vivir cerca del trabajo.”
+
+AGREE / DISAGREE / DEPENDS
+with sentence support.
+
+A1 assistance should be generous.
+
+==================================================
+LEVEL A2
+==================================================
+
+Everyday life with slightly longer reasoning.
+
+Use:
+
+- plans;
+- recent experiences;
+- simple past;
+- routines;
+- travel;
+- invitations;
+- preferences;
+- comparisons;
+- practical decisions;
+- simple hypothetical ideas;
+- near future.
+
+Expected output:
+
+2–5 sentences.
+
+Examples:
+
+“¿Qué hace que un viaje sea bueno para ti?”
+
+“Ordena:
+precio / comodidad / ubicación / tiempo”
+
+“Supón que tienes tres días libres.
+¿Dónde prefieres estar y por qué?”
+
+“Una casa pequeña es mejor que una casa grande.”
+
+agree / disagree / depends.
+
+==================================================
+LEVEL B1
+==================================================
+
+Require:
+
+- reasons;
+- examples;
+- experiences;
+- consequences;
+- comparisons;
+- narrating;
+- opinions;
+- everyday hypotheticals.
+
+Expected output:
+
+short developed turns.
+
+Examples:
+
+“¿Qué costumbre tuya cambió más en los últimos cinco años?”
+
+“¿Qué hace que una ciudad sea cómoda para vivir?”
+
+“Si pudieras eliminar una tarea doméstica para siempre, ¿cuál sería?”
+
+“Las redes sociales ayudan más de lo que perjudican.”
+
+agree / disagree / depends + example.
+
+==================================================
+LEVEL B2
+==================================================
+
+Require:
+
+- nuance;
+- conditions;
+- trade-offs;
+- argument;
+- counterargument;
+- priorities;
+- implication;
+- hypotheticals.
+
+Examples:
+
+“Ordena estas prioridades al elegir trabajo:
+dinero / tiempo / estabilidad / interés / libertad.”
+
+Then:
+
+“Defiende tu primer lugar.”
+“¿Qué tendría que cambiar para moverlo al último?”
+
+“Una vida cómoda puede ser menos interesante.”
+
+agree / disagree / depends.
+
+==================================================
+LEVEL C1
+==================================================
+
+No simplistic “harder B2”.
+
+Use:
+
+- nuanced opinions;
+- social norms;
+- ambiguity;
+- values;
+- identity;
+- interpersonal effects;
+- complex hypotheticals;
+- perspective change;
+- abstract-but-relatable questions.
+
+Require developed reasoning.
+
+Examples:
+
+“¿Cuándo una decisión ‘práctica’ deja de ser una buena decisión?”
+
+“¿Qué costumbre social te parece útil aunque personalmente no te guste?”
+
+“¿Qué pesa más al juzgar una decisión:
+la intención o el resultado?”
+
+Then change a condition.
+
+==================================================
+LEVEL C2
+==================================================
+
+C2 must be genuinely sophisticated.
+
+Use:
+
+- paradoxes;
+- framing;
+- ambiguity;
+- contradictory values;
+- cultural assumptions;
+- rhetorical positions;
+- subtle trade-offs;
+- social interpretation;
+- conceptual questions linked to real life.
+
+Avoid pointless academic obscurity.
+
+Examples:
+
+“¿Hasta qué punto cambiar de opinión demuestra coherencia y no inconsistencia?”
+
+“¿Puede una elección ser racional y, aun así, ser una mala decisión?”
+
+“¿Qué perdemos cuando intentamos optimizar cada parte de nuestra vida?”
+
+At C2 include:
+- defend opposite;
+- reinterpret;
+- narrow/broaden a claim;
+- challenge premise;
+- reframe.
+
+==================================================
+NEW PERMANENT CONVERSATION RULE — ENGLISH VOCAB GLOSSES
+==================================================
+
+THIS IS IMPORTANT.
+
+FROM NOW ON, SPANISHCUE CONVERSATION CONTENT FOR NON-ADVANCED LEVELS MUST SUPPORT DIRECT ENGLISH TRANSLATION OF NEW WORDS.
+
+For THIS lesson implement the reusable pattern.
+
+Apply to:
+
+A1
+A2
+B1
+B2
+
+C1 and C2 do NOT require the automatic English vocabulary gloss.
+
+Do NOT translate the whole question.
+
+Do NOT turn the lesson bilingual.
+
+Instead, directly show genuinely new/useful vocabulary.
+
+Example:
+
+PALABRAS NUEVAS
+
+el bosque — forest
+la sombra — shade
+ahorrar — to save
+mudarse — to move house
+
+For A1:
+typically 3–6 glosses when needed.
+
+A2:
+2–5.
+
+B1:
+1–4.
+
+B2:
+only genuinely useful/high-value lexical items.
+
+C1/C2:
+no automatic gloss requirement.
+
+==================================================
+IMPLEMENT THIS AS A REUSABLE PATTERN
+==================================================
+
+Create a small reusable conversation vocabulary/gloss component or data contract so future SpanishCue conversation lessons can use the same convention.
+
+For example:
+
+glosses: [
+  { es: "ahorrar", en: "to save" }
+]
+
+Render:
+
+SPANISH — ENGLISH
+
+Clearly but unobtrusively.
+
+Do NOT retrofit every old lesson in this task.
+
+Just create a clean reusable convention and use it throughout El bosque de los hongos gigantes.
+
+Tests must verify it.
+
+==================================================
+NEUTRAL SPANISH
+==================================================
+
+SpanishCue default Spanish is now international neutral Spanish.
+
+For UI and ordinary prompts:
+
+use TÚ.
+
+Use:
+
+elige
+mira
+salta
+cuenta
+explica
+compara
+piensa
+prueba
+dime
+
+NOT:
+
+elegí
+mirá
+saltá
+contá
+explicá
+compará
+pensá
+probá
+decime
+
+Do not touch intentional regional examples outside this lesson.
+
+Do not modify English site copy.
+
+==================================================
+THE 3D WORLD IS A CATEGORY SELECTOR
+==================================================
+
+Each mushroom cluster should make the conversational category visually recognizable.
+
+Example:
+
+BLUE MUSHROOM GROVE
+“ELIGE”
+
+ORANGE MUSHROOMS
+“OPINA”
+
+GREEN MUSHROOMS
+“VIDA REAL”
+
+PURPLE MUSHROOM CAVE
+“SUPÓN”
+
+etc.
+
+Do this through grounded signs / banners / carved markers / visual color language.
+
+NO holographic floating sci-fi panels.
+
+==================================================
+LANDING FLOW
+==================================================
+
+When the player lands on or reaches an active mushroom:
+
+1. game slows/pauses cleanly;
+2. conversation panel opens;
+3. category is visible;
+4. prompt appears;
+5. optional choices appear;
+6. new-vocabulary gloss appears for A1–B2 if relevant;
+7. student answers orally;
+8. teacher can open follow-up;
+9. teacher can request another question;
+10. mark as discussed / continue;
+11. return immediately to the 3D world.
+
+No fake microphone scoring.
+
+The teacher controls progression.
+
+==================================================
+TEACHER CONTROLS
+==================================================
+
+Include useful tools:
+
+- SIGUIENTE PREGUNTA
+- OTRA DE ESTA CATEGORÍA
+- CAMBIAR CATEGORÍA
+- REPREGUNTA
+- MÁS DIFÍCIL
+- MÁS FÁCIL when appropriate
+- ¿POR QUÉ?
+- DAME UN EJEMPLO
+- COMPARA
+- ¿Y TÚ?
+- ¿QUÉ CAMBIARÍA TU RESPUESTA?
+- DEFIENDE LO CONTRARIO at suitable levels
+- MARCAR COMO HABLADA
+
+Do not overwhelm the UI.
+
+==================================================
+WORLD PROGRESSION
+==================================================
+
+Do NOT require every prompt.
+
+Suggested session loop:
+
+- initial tutorial;
+- reach 2–3 categories;
+- choose route;
+- complete approximately 10–14 conversation landings;
+- reach upper canopy;
+- unlock final giant mushroom;
+- final mixed conversation challenge.
+
+Keep free exploration possible after completion.
+
+==================================================
+FINAL GIANT MUSHROOM
+==================================================
+
+The final destination should be visually spectacular.
+
+A giant crown-like mushroom above the canopy.
+
+Reach it through a final sequence of:
+
+- giant cap jumps;
+- moving/tilting natural platforms if technically stable;
+- trunk bridge;
+- bounce mushroom;
+- final leap.
+
+At the top:
+
+GRAN CONVERSACIÓN FINAL
+
+Select 3–5 mixed prompts from categories visited during that session.
+
+Finish with one personalized question.
+
+No score.
+
+Completion should feel like finishing a game level.
+
+==================================================
+COLLECTIBLES
+==================================================
+
+Optional, simple, tasteful.
+
+For example:
+
+small “Cue” tokens / forest badges / golden spores.
+
+But do NOT make collecting objects the learning objective.
+
+Use them to encourage exploration only.
+
+No currency/shop/economy.
+
+==================================================
+MAP
+==================================================
+
+Include a simple map/minimap showing:
+
+- player;
+- major category areas;
+- explored/unexplored zones;
+- final mushroom;
+- checkpoints.
+
+Avoid overloading it.
+
+==================================================
+CAMERA
+==================================================
+
+Third-person follow camera.
+
+Needs:
+
+- smooth follow;
+- orbit;
+- collision/near-wall protection;
+- usable framing during jumps;
+- no constant camera clipping;
+- mobile-friendly drag.
+
+Optional second preset:
+
+wider cinematic camera.
+
+==================================================
+INTRO
+==================================================
+
+Create a strong game-like title sequence.
+
+Text:
+
+CONVERSACIÓN · A1–C2
+
+EL BOSQUE DE LOS HONGOS GIGANTES
+
+Possible hook:
+
+“Salta. Elige. Habla. Cada camino abre una conversación.”
+
+Show:
+
+- official mascot superhero;
+- cape;
+- giant mushrooms;
+- forest depth;
+- level selector;
+- controls;
+- duration;
+- start game CTA.
+
+==================================================
+LEVEL SWITCH
+==================================================
+
+Reuse the proven one-route six-level behavior.
+
+Top selector:
+
+A1 A2 B1 B2 C1 C2
+
+Requirements:
+
+- query parameter;
+- no page reload;
+- switching level does NOT rebuild the 3D world unnecessarily;
+- player position may remain;
+- active prompt must reset to the new level version;
+- no state leakage;
+- no previous answer/prompt leakage.
+
+==================================================
+RESPONSIVE / PERFORMANCE
+==================================================
+
+Desktop should be visually ambitious.
+
+Mobile must remain playable.
+
+Use adaptive quality:
+
+Desktop:
+- better shadows;
+- richer foliage;
+- more particles;
+- higher pixel ratio.
+
+Mobile/coarse pointer:
+- reduced shadow cost;
+- reduced vegetation density;
+- fewer decorative particles;
+- sensible pixel ratio;
+- touch controls.
+
+Do not destroy visual identity on mobile.
+
+==================================================
+2D / WEBGL FALLBACK
+==================================================
+
+If WebGL fails:
+
+the class MUST still work.
+
+Create a good fallback view using:
+
+- illustrated forest map;
+- category nodes;
+- same content banks;
+- same level;
+- same progress.
+
+Do NOT show an error-only screen.
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Respect:
+
+prefers-reduced-motion.
+
+Keyboard access to conversation UI.
+
+Visible focus.
+
+Useful aria labels.
+
+Do not force motion-heavy sequences when reduced motion is active.
+
+==================================================
+NO AUDIO REQUIREMENT
+==================================================
+
+This is Conversation.
+
+Do NOT burn time generating unnecessary audio.
+
+No runtime TTS.
+
+Ambient forest audio is optional ONLY if there is already a safe canonical audio workflow and it adds clear value.
+
+Conversation does not depend on audio.
+
+==================================================
+CONTENT STORAGE
+==================================================
+
+Keep the huge authored prompt bank separate from rendering logic.
+
+Suggested shape:
+
+app/bosque-hongos-gigantes/
+  page.tsx
+  BosqueHongos.tsx
+  World3D.tsx
+  world3d.*
+  forest3d.ts
+  hero3d.ts or reuse bounded shared pieces
+  content/
+    types.ts
+    a1.ts
+    a2.ts
+    b1.ts
+    b2.ts
+    c1.ts
+    c2.ts
+    categories.ts
+  forest.css
+
+Use the architecture that best fits CURRENT repo conventions.
+
+Do not create unnecessary generic frameworks.
+
+==================================================
+CATALOG
+==================================================
+
+Exactly ONE catalog entry.
+
+Title:
+
+El bosque de los hongos gigantes
+
+Category:
+
+Conversación
+
+Display level:
+
+A1–C2
+
+Levels:
+
+A1
+A2
+B1
+B2
+C1
+C2
+
+Mode:
+
+Modo Play / conversationMode play, following current architecture.
+
+Search aliases should include:
+
+bosque
+hongos
+hongo
+setas
+platformer
+plataformas
+saltar
+videojuego
+conversación
+preguntas
+opiniones
+suposiciones
+vida real
+multiple choice
+elecciones
+hablar
+modo play
+a1
+a2
+b1
+b2
+c1
+c2
+
+==================================================
+PREVIEW / THUMBNAIL
+==================================================
+
+Create a premium catalog preview.
+
+It should show:
+
+- enormous forest;
+- giant mushroom platforms;
+- official mascot superhero with cape;
+- depth;
+- 3D game feel.
+
+NO fake text-heavy thumbnail.
+
+NO Mario imagery.
+
+==================================================
+COPYRIGHT / ORIGINALITY
+==================================================
+
+The idea can evoke the joy of classic platform games.
+
+BUT:
+
+DO NOT COPY MARIO.
+
+No:
+
+- Mario character;
+- Mario clothing;
+- Mario mushroom designs;
+- Mario pipes;
+- question blocks;
+- coins styled like Mario;
+- Nintendo logos;
+- recognizable Mario level geometry;
+- copyrighted sound effects;
+- copied enemy designs.
+
+Create an ORIGINAL SpanishCue world.
+
+==================================================
+TESTS — STRONG AND SPECIFIC
+==================================================
+
+Add tests that verify at minimum:
+
+CATALOG
+- exactly one record;
+- route exists;
+- all six levels;
+- visible under all six filters;
+- no duplicate lesson ID;
+- no duplicate route.
+
+CONTENT
+- all six authored level banks exist;
+- minimum 72 prompts per level;
+- required category coverage;
+- required prompt-type coverage;
+- no placeholder prompts;
+- no empty follow-up banks;
+- choices have meaningful follow-ups;
+- no quiz answer key;
+- every multiple-choice prompt asks for justification/follow-up;
+- final prompts exist.
+
+VOCAB RULE
+- A1 supports direct ES→EN word glosses;
+- A2 supports them;
+- B1 supports them;
+- B2 supports them;
+- C1 does not require automatic glosses;
+- C2 does not require automatic glosses;
+- no full-question English translation masquerading as vocabulary;
+- reusable gloss component/data contract works.
+
+LANGUAGE
+- neutral Spanish guard passes;
+- no unauthorized voseo introduced.
+
+LEVEL STATE
+- ?level=A1 through C2;
+- invalid level fallback;
+- switching resets prompt-specific state;
+- world position/state does not leak wrong content;
+- no level answer leakage.
+
+GAME
+- jump physics tests where deterministic logic allows;
+- checkpoint/fall respawn;
+- category activation;
+- prompt deck avoids immediate repeats;
+- final unlock logic;
+- session completion.
+
+FALLBACK
+- no WebGL still exposes full lesson;
+- content bank remains usable.
+
+REGRESSIONS
+- Noche abierta;
+- La ciudad no duerme;
+- Modo Play;
+- conversation families;
+- Autoestudio;
+- catalog;
+- access rules.
+
+==================================================
+VISUAL QA
+==================================================
+
+Test representative:
+
+desktop wide
+1366×768
+1024×768
+tablet
+390px
+320px
+
+Test:
+
+- third-person movement;
+- jump;
+- high mushroom landing;
+- fall/respawn;
+- camera;
+- cape;
+- prompt opening;
+- MCQ;
+- follow-up;
+- vocab gloss;
+- level switch;
+- map;
+- mobile joystick;
+- reduced motion;
+- 2D fallback.
+
+If visual QA is blocked by premium access:
+
+DO NOT STOP.
+
+Use source/test/local safe mechanisms and automated validation.
+
+Do not weaken production auth.
+
+==================================================
+PERSISTENCE — IMPORTANT
+==================================================
+
+DO NOT repeat the previous mistake of leaving hours of work only local.
+
+Before large implementation:
+
+1. inspect current main;
+2. inspect open PRs;
+3. create ONE task branch from fresh main:
+
+codex/bosque-hongos-gigantes-a1-c2-20261004
+
+or equivalent.
+
+After each coherent block:
+
+COMMIT + PUSH REMOTELY.
+
+Suggested checkpoints:
+
+1. architecture + content schema
+2. A1/A2 authored banks
+3. B1/B2 authored banks
+4. C1/C2 authored banks
+5. 3D forest/world
+6. superhero hero + cape
+7. conversation UI/gloss system
+8. mobile/fallback
+9. tests/QA
+
+Do not leave meaningful work only in an ephemeral Work environment.
+
+==================================================
+DO NOT TOUCH UNRELATED SYSTEMS
+==================================================
+
+Do NOT modify unnecessarily:
+
+- billing;
+- Paddle;
+- PayPal;
+- auth;
+- Firebase;
+- D1/schema;
+- Autoestudio;
+- lesson reports;
+- deployment workflows;
+- analytics;
+- unrelated lesson content.
+
+No database migration is needed for this lesson.
+
+==================================================
+FINAL VALIDATION
+==================================================
+
+Run:
+
+targeted tests
+npm test
+npm run lint
+npx tsc --noEmit
+npm run build
+npm run validate:artifact
+git diff --check
+
+Fix reasonable failures caused by this task.
+
+==================================================
+DELIVERY — DO EVERYTHING
+==================================================
+
+Do NOT stop after coding.
+
+Owner authorizes the normal complete SpanishCue workflow.
+
+1. commit;
+2. push;
+3. open ONE non-draft PR;
+4. CI + Auto Merge;
+5. fix failures in SAME PR;
+6. verify merged SHA;
+7. automatic staging;
+8. staging smoke;
+9. official Cloudflare production deployment;
+10. production smoke;
+11. verify live route.
+
+Do not ask me to review:
+- branch;
+- PR;
+- diff;
+- preview;
+- staging;
+- merge.
+
+Do not ask for another approval.
+
+==================================================
+DEFINITION OF DONE
+==================================================
+
+Do NOT call this complete unless:
+
+- giant 3D forest is real and playable;
+- character runs and jumps;
+- character has recognizable official mascot identity;
+- original superhero appearance;
+- cape visibly moves;
+- 12 conversation areas exist;
+- 432+ authored prompts total;
+- six genuinely distinct CEFR levels;
+- content is categorical/conversational, not roleplay-story driven;
+- MCQs require speech and justification;
+- real-life questions exist;
+- suppositions exist;
+- statement/react questions exist;
+- ranking/comparison exists;
+- A1–B2 vocabulary includes direct English glosses;
+- C1/C2 stay advanced without forced translation;
+- neutral Spanish;
+- mobile works;
+- WebGL fallback works;
+- catalog has exactly one A1–C2 card;
+- tests pass;
+- production is deployed;
+- production smoke passes.
+
+MAKE THIS ONE OF THE BIGGEST AND MOST IMPRESSIVE SPANISHCUE MODO PLAY LESSONS.
+DO NOT SKIMP.
