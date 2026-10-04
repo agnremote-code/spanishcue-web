@@ -1,4 +1,4 @@
-export default [
+const prompts = [
   { id: 'b2-sobre-ti-01', level: 'B2', zone: 'sobre-ti', type: 'open', question: '¿En qué aspectos de tu vida buscas estabilidad y en cuáles necesitas margen para cambiar?', followUps: ['¿Qué has ganado y a qué has renunciado con esa combinación?', '¿Qué circunstancia te haría invertir tus prioridades?'], glosses: [{ es: 'margen', en: 'room or leeway' }, { es: 'renunciar a', en: 'to give up' }] },
   { id: 'b2-sobre-ti-02', level: 'B2', zone: 'sobre-ti', type: 'scale', question: 'Del uno al diez, ¿cuánta importancia das a cumplir tus propios planes? Matiza tu puntuación según el contexto.', followUps: ['¿Cuándo cambiar de plan es flexibilidad y cuándo es falta de compromiso?', '¿Qué ejemplo de tu vida muestra el límite entre las dos cosas?'], glosses: [{ es: 'matizar', en: 'to qualify or add nuance' }] },
   { id: 'b2-sobre-ti-03', level: 'B2', zone: 'sobre-ti', type: 'finish', question: 'Completa y desarrolla: «Me cuesta poner límites cuando…, pero he aprendido que…».', followUps: ['¿Qué efecto tienen esos límites en las personas cercanas a ti?', '¿En qué situación aceptarías una excepción sin abandonar tu criterio?'], glosses: [{ es: 'poner límites', en: 'to set boundaries' }, { es: 'criterio', en: 'guiding judgment or principle' }] },
@@ -72,3 +72,5 @@ export default [
   { id: 'b2-final-05', level: 'B2', zone: 'final', type: 'final', question: 'Escoge una predicción o suposición que has hecho hoy. ¿Qué tendría que ocurrir para que dejaras de considerarla probable?', followUps: ['¿Qué parte de tu razonamiento depende de tu experiencia personal?', '¿Cómo formularías ahora la idea para expresar mejor su incertidumbre?'], glosses: [{ es: 'incertidumbre', en: 'uncertainty' }, { es: 'razonamiento', en: 'reasoning' }] },
   { id: 'b2-final-06', level: 'B2', zone: 'final', type: 'final', question: '¿Qué cuestión de esta sesión merece una conversación más larga con alguien que te conoce bien? Explica qué te gustaría contrastar.', followUps: ['¿Qué parte de tu propia respuesta crees que esa persona cuestionaría?', '¿Qué desacuerdo podría ayudarte a comprender mejor tus decisiones?'], glosses: [{ es: 'contrastar', en: 'to compare or check against another view' }] },
 ];
+
+export default prompts;

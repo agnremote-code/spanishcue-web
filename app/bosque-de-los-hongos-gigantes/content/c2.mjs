@@ -1,4 +1,4 @@
-export default [
+const prompts = [
   { id: 'c2-01', level: 'C2', zone: 'sobre-ti', type: 'open', question: '¿En qué sentido sigues siendo la misma persona si hoy rechazas algunas convicciones que antes te definían? Pon a prueba la propia idea de «seguir siendo».', followUps: ['¿Qué continuidad reconoces en tus maneras de cambiar?', '¿Qué relato sobre tu evolución resulta cómodo, pero simplifica demasiado lo ocurrido?'] },
   { id: 'c2-02', level: 'C2', zone: 'sobre-ti', type: 'finish', question: 'Completa y después cuestiona tu propia frase: Solo puedo ser plenamente yo cuando…', followUps: ['¿La frase describe una necesidad real o una imagen exigente de autenticidad?', '¿Cómo la reformularías sin suponer que existe una única versión verdadera de ti?'] },
   { id: 'c2-03', level: 'C2', zone: 'sobre-ti', type: 'quick', question: 'Da una respuesta inmediata: ¿qué elogio te incomoda? Después analiza qué expectativa se esconde en esa aparente aprobación.', followUps: ['¿La incomodidad procede del elogio o del papel que te invita a mantener?', '¿Cómo podrías aceptarlo sin comprometerte a reproducir siempre esa cualidad?'] },
@@ -72,3 +72,5 @@ export default [
   { id: 'c2-71', level: 'C2', zone: 'final', type: 'final', question: 'A partir de una experiencia personal mencionada hoy, plantea una conclusión general y luego explica por qué tu propio caso no basta para demostrarla.', followUps: ['¿Qué valor conserva la experiencia como argumento?', '¿Qué otra perspectiva podría modificar la conclusión sin invalidar lo vivido?'] },
   { id: 'c2-72', level: 'C2', zone: 'final', type: 'final', question: '¿Qué pregunta sobre tu forma de vivir se ha vuelto más difícil, pero también más precisa, después de esta conversación? Formúlala sin forzar una respuesta definitiva.', followUps: ['¿Qué palabras de la pregunta ya no usarías sin aclararlas?', '¿Qué decisión concreta podrías tomar aun manteniendo abierta esa incertidumbre?'] },
 ];
+
+export default prompts;

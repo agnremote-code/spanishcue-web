@@ -1,4 +1,4 @@
-export default [
+const prompts = [
   { id: 'a2-ti-01', level: 'A2', zone: 'sobre-ti', type: 'open', question: '¿Qué actividad haces bien y cómo aprendiste a hacerla?', followUps: ['¿Quién te ayudó al principio?', '¿Qué consejo sencillo puedes dar a una persona que empieza?'], glosses: [{ es: 'aprender', en: 'to learn' }, { es: 'al principio', en: 'at first' }, { es: 'el consejo', en: 'advice' }], support: ['Se me da bien… Aprendí con…'] },
   { id: 'a2-ti-02', level: 'A2', zone: 'sobre-ti', type: 'finish', question: 'Completa y explica con un ejemplo: Me siento en casa cuando…', followUps: ['¿Qué persona o lugar te hace sentir así?', '¿También puedes sentirte así en una ciudad nueva?'], glosses: [{ es: 'sentirse en casa', en: 'to feel at home' }, { es: 'así', en: 'like that' }], support: ['Me siento en casa cuando… Por ejemplo…'] },
   { id: 'a2-ti-03', level: 'A2', zone: 'sobre-ti', type: 'scale', question: 'Del uno al cinco, ¿cuánto te gusta organizar tus días? Uno es poco y cinco es mucho. Explica tu número.', followUps: ['¿Qué organizaste esta semana?', '¿Qué prefieres decidir en el momento?'], glosses: [{ es: 'organizar', en: 'to organize' }, { es: 'en el momento', en: 'on the spot' }], support: ['Elijo el… porque normalmente…'] },
@@ -72,3 +72,5 @@ export default [
   { id: 'a2-fin-05', level: 'A2', zone: 'final', type: 'final', question: 'Elige una actividad que disfrutas con otras personas. Cuenta una experiencia y propón un próximo plan.', followUps: ['¿Qué hace especial esa actividad para ti?', '¿Cómo puedes hacerla con poco tiempo disponible?'], glosses: [{ es: 'disfrutar de', en: 'to enjoy' }, { es: 'disponible', en: 'available' }] },
   { id: 'a2-fin-06', level: 'A2', zone: 'final', type: 'final', question: 'Vuelve a una elección de esta conversación. Explica tu respuesta, una ventaja de la otra opción y tu preferencia ahora.', followUps: ['¿Qué experiencia personal ayuda a explicar tu elección?', '¿Qué pregunta sobre ese tema quieres hacer a tu profesor o compañero?'], glosses: [{ es: 'la elección', en: 'choice' }, { es: 'la preferencia', en: 'preference' }, { es: 'el compañero', en: 'classmate / partner' }] },
 ];
+
+export default prompts;

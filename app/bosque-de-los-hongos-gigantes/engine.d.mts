@@ -17,4 +17,4 @@ export function finalUnlocked(session:Session):boolean;
 export function beginFinal(session:Session,bank:Prompt[]):{session:Session;prompts:Prompt[]};
 export function completeFinalPrompt(session:Session,id:string):Session;
 export function finishSession(session:Session):Session;
-export function restoreSession(raw:string|null):Session|null;
+export function restoreSession(raw:string|null,banks?:Partial<Record<Level,Prompt[]>>):Session|null;

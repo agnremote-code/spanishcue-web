@@ -1,4 +1,4 @@
-export default [
+const prompts = [
   { id: 'a1-ti-01', level: 'A1', zone: 'sobre-ti', type: 'open', question: '¿Cómo te llamas y de qué ciudad eres?', followUps: ['¿Tu ciudad es grande o pequeña?', '¿Qué te gusta de tu ciudad?'], glosses: [{ es: 'la ciudad', en: 'city' }, { es: 'grande', en: 'big' }, { es: 'pequeña', en: 'small' }], support: ['Me llamo… Soy de…', 'Mi ciudad es… Me gusta…'] },
   { id: 'a1-ti-02', level: 'A1', zone: 'sobre-ti', type: 'finish', question: 'Completa: En mi tiempo libre, me gusta…', followUps: ['¿En casa o fuera de casa?', '¿Con quién haces esta actividad?'], glosses: [{ es: 'el tiempo libre', en: 'free time' }, { es: 'fuera', en: 'outside' }, { es: 'con', en: 'with' }], support: ['Me gusta…', 'En… con…'] },
   { id: 'a1-ti-03', level: 'A1', zone: 'sobre-ti', type: 'choice', question: '¿Qué ropa te gusta para un día libre? Elige y di por qué.', choices: ['Ropa deportiva', 'Jeans y camiseta', 'Ropa elegante'], followUps: ['¿Qué color te gusta para esa ropa?', '¿Qué llevas hoy?'], glosses: [{ es: 'la ropa', en: 'clothes' }, { es: 'la camiseta', en: 'T-shirt' }, { es: 'llevar', en: 'to wear' }], support: ['Prefiero… porque es cómoda / bonita.', 'Hoy llevo…'] },
@@ -72,3 +72,5 @@ export default [
   { id: 'a1-fin-05', level: 'A1', zone: 'final', type: 'final', question: 'Habla de una comida que te gusta: qué lleva, cuándo la comes y con quién.', followUps: ['¿Es fácil de preparar?', '¿Qué otra comida te gusta también?'], glosses: [{ es: 'llevar', en: 'to contain' }, { es: 'cuándo', en: 'when' }, { es: 'fácil', en: 'easy' }], support: ['Me gusta… Lleva… La como… con…', 'Es fácil / difícil. También me gusta…'] },
   { id: 'a1-fin-06', level: 'A1', zone: 'final', type: 'final', question: 'Elige un tema de esta conversación que te gusta y di tres cosas sobre ti.', followUps: ['¿Por qué te gusta hablar de ese tema?', '¿Qué pregunta quieres hacer sobre ese tema?'], glosses: [{ es: 'el tema', en: 'topic' }, { es: 'la pregunta', en: 'question' }, { es: 'hablar de', en: 'to talk about' }], support: ['Elijo… Yo… También…', 'Me gusta hablar de… ¿Te gusta…?'] },
 ];
+
+export default prompts;

@@ -1,4 +1,4 @@
-export default [
+const prompts = [
   { id: 'c1-01', level: 'C1', zone: 'sobre-ti', type: 'open', question: '¿Qué rasgo tuyo valoras, aunque a veces complique la convivencia contigo?', followUps: ['¿Dónde termina ese rasgo y empieza una excusa para no cambiar?', '¿Cómo lo describiría alguien que te conoce en un contexto distinto?'] },
   { id: 'c1-02', level: 'C1', zone: 'sobre-ti', type: 'finish', question: 'Completa y desarrolla: Me reconozco menos en la imagen que los demás tienen de mí cuando…', followUps: ['¿Qué parte de esa imagen has contribuido a crear?', '¿En qué circunstancias prefieres no corregir esa impresión?'] },
   { id: 'c1-03', level: 'C1', zone: 'sobre-ti', type: 'scale', question: 'Del uno al diez, ¿hasta qué punto tus rutinas expresan tus valores? Explica qué contradicción impide que elijas un diez.', followUps: ['¿Qué limitación práctica explica esa contradicción sin justificarla del todo?', '¿Qué cambio pequeño haría tu vida más coherente?'] },
@@ -72,3 +72,5 @@ export default [
   { id: 'c1-71', level: 'C1', zone: 'final', type: 'final', question: 'Piensa en un valor que hayas mencionado hoy. ¿Cómo se traduce en una conducta concreta tuya y con qué otro valor entra en tensión?', followUps: ['¿Qué renuncia estás dispuesto a asumir para sostenerlo?', '¿Qué circunstancia justificaría darle menos prioridad?'] },
   { id: 'c1-72', level: 'C1', zone: 'final', type: 'final', question: 'A partir de lo que has contado hoy, ¿qué pregunta te ayudaría a entender mejor una contradicción de tu propia vida? Formúlala y empieza a responderla.', followUps: ['¿Qué parte puedes aclarar hablando y qué parte requiere experiencia?', '¿Qué respuesta provisional te parece honesta en este momento?'] },
 ];
+
+export default prompts;

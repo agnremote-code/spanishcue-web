@@ -1,4 +1,4 @@
-export default [
+const prompts = [
   { id: 'b1-sobre-ti-01', level: 'B1', zone: 'sobre-ti', type: 'open', question: '¿Qué costumbre has cambiado en los últimos años y qué te ayudó a cambiarla?', followUps: ['Cuenta cómo era un día tuyo antes de ese cambio.', '¿Qué consejo darías a alguien que quiere cambiar la misma costumbre?'], glosses: [{ es: 'costumbre', en: 'habit' }] },
   { id: 'b1-sobre-ti-02', level: 'B1', zone: 'sobre-ti', type: 'scale', question: 'Del uno al cinco, ¿cuánta paciencia tienes cuando aprendes algo nuevo? Explica tu número.', followUps: ['Describe una ocasión en la que tuviste que practicar mucho.', '¿Aprendes mejor a solas o con ayuda? Da un ejemplo.'], glosses: [{ es: 'a solas', en: 'on your own' }] },
   { id: 'b1-sobre-ti-03', level: 'B1', zone: 'sobre-ti', type: 'finish', question: 'Completa con una experiencia: «Me siento a gusto en un grupo cuando…».', followUps: ['¿Qué haces tú para que una persona nueva se sienta cómoda?', '¿Te resulta más fácil hablar en grupos grandes o pequeños? Explica por qué.'], glosses: [{ es: 'a gusto', en: 'at ease' }] },
@@ -72,3 +72,5 @@ export default [
   { id: 'b1-final-05', level: 'B1', zone: 'final', type: 'final', question: 'Diseña un fin de semana que combine dos ideas que te hayan interesado hoy y explica por qué las eliges.', followUps: ['¿Cómo repartirías el tiempo entre las dos actividades?', '¿Qué alternativa tendrías si el primer plan no fuera posible?'], glosses: [{ es: 'repartir', en: 'to divide or allocate' }] },
   { id: 'b1-final-06', level: 'B1', zone: 'final', type: 'final', question: '¿Qué pregunta de esta sesión te gustaría hacerle a una persona que conoces bien, y qué contarías tú sobre ese tema?', followUps: ['¿Por qué crees que podría surgir una conversación interesante?', '¿Qué te gustaría comprender mejor sobre esa persona?'], glosses: [{ es: 'surgir', en: 'to arise' }, { es: 'comprender', en: 'to understand' }] },
 ];
+
+export default prompts;

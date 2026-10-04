@@ -7,6 +7,17 @@ import assert from 'node:assert/strict';
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   {
+    id:226,path:'/bosque-de-los-hongos-gigantes',
+    files:/^(?:app\/bosque-de-los-hongos-gigantes\/|app\/conversation-vocabulary\/|public\/bosque-hongos\/|tests\/bosque-[^/]*\.test\.mjs$|docs\/superpowers\/(?:plans|specs)\/2026-10-04-bosque[^/]*|docs\/audits\/bosque-vocabulary-additions-20261004\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{const lines=text.split('\n');const at=lines.flatMap((line,i)=>line.startsWith('  {id:226,')&&line.includes('path:"/bosque-de-los-hongos-gigantes"')?[i]:[]);assert.equal(at.length,1,'one forest catalog entry');lines.splice(at[0],1);return lines.join('\n');},[',129,136,223,226],',',129,136,223],']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 118);','assert.equal(lessons.length, 117);'],['assert.equal(a1Lessons.length, 35);','assert.equal(a1Lessons.length, 34);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/82(?:<!-- -->|\\s)+resultados/);assert.match(html,/111(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/81(?:<!-- -->|\\s)+resultados/);assert.match(html,/110(?:<!-- -->|\\s)+clases totales/);']],
+      'package.json':[text=>{const pkg=JSON.parse(text);assert.ok(pkg.scripts['test:bosque']);assert.equal(pkg.devDependencies.jsdom,'^26.1.0');delete pkg.scripts['test:bosque'];delete pkg.devDependencies.jsdom;assert.ok(pkg.scripts.test.includes(' && npm run test:bosque'));pkg.scripts.test=pkg.scripts.test.replace(' && npm run test:bosque','');return JSON.stringify(pkg,null,2)+'\n';}],
+      'package-lock.json':[text=>withoutForestTestPackages(text)],
+    },
+  },
+  {
     id:225,path:'/la-entonacion-cambia-todo',
     files:/^(?:app\/la-entonacion-cambia-todo\/|app\/phonetics-family\/|public\/(?:la-entonacion-cambia-todo|audio\/la-entonacion-cambia-todo)\/|tests\/entonacion[^/]*\.test\.mjs$|scripts\/generate-entonacion-audio\.py$|docs\/lessons\/la-entonacion-cambia-todo\.md$)/,
     edits:{
@@ -112,6 +123,18 @@ const repairs = [
     },
   },
 ];
+
+
+const forestTestPackages = ["node_modules/@asamuzakjp/css-color", "node_modules/@asamuzakjp/css-color/node_modules/lru-cache", "node_modules/@csstools/color-helpers", "node_modules/@csstools/css-calc", "node_modules/@csstools/css-color-parser", "node_modules/@csstools/css-parser-algorithms", "node_modules/@csstools/css-tokenizer", "node_modules/cssstyle", "node_modules/data-urls", "node_modules/data-urls/node_modules/tr46", "node_modules/data-urls/node_modules/webidl-conversions", "node_modules/data-urls/node_modules/whatwg-url", "node_modules/decimal.js", "node_modules/entities", "node_modules/html-encoding-sniffer", "node_modules/iconv-lite", "node_modules/is-potential-custom-element-name", "node_modules/jsdom", "node_modules/jsdom/node_modules/tr46", "node_modules/jsdom/node_modules/webidl-conversions", "node_modules/jsdom/node_modules/whatwg-url", "node_modules/nwsapi", "node_modules/parse5", "node_modules/rrweb-cssom", "node_modules/safer-buffer", "node_modules/saxes", "node_modules/symbol-tree", "node_modules/tldts", "node_modules/tldts-core", "node_modules/tough-cookie", "node_modules/w3c-xmlserializer", "node_modules/whatwg-encoding", "node_modules/whatwg-mimetype", "node_modules/xml-name-validator", "node_modules/xmlchars"];
+function withoutForestTestPackages(text) {
+ const lock=JSON.parse(withoutPackages(text,forestTestPackages,{devDependencies:['jsdom']}));
+ const proxy=lock.packages['node_modules/http-proxy-agent'];
+ assert.equal(proxy.devOptional,true);
+ const {devOptional,...preserved}=proxy;
+ void devOptional;
+ lock.packages['node_modules/http-proxy-agent']={version:preserved.version,resolved:preserved.resolved,integrity:preserved.integrity,license:preserved.license,optional:true,dependencies:preserved.dependencies,engines:preserved.engines};
+ return JSON.stringify(lock,null,2)+'\n';
+}
 
 const threePackages = ['@dimforge/rapier3d-compat', '@tweenjs/tween.js', '@types/stats.js', '@types/three', '@types/three/node_modules/fflate', '@types/webxr', 'meshoptimizer', 'three'].map(name => `node_modules/${name}`);
 
