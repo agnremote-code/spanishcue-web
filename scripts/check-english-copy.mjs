@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CONTENT_ROOTS, SOURCE_EXTENSION, extractCopy, sourceFiles } from './neutral-spanish.mjs';
@@ -25,6 +25,12 @@ export function compareEnglishCopy(beforeFiles, afterFiles) {
   }
   return findings;
 }
+// Exact owner-authorized lexical additions; existing English edits/deletions
+// are never exempt. The reviewable manifest carries each path and literal.
+export function filterApprovedAdditions(findings, additions) {
+  const allowed = new Set(additions.map(a => JSON.stringify([a.path, a.text])));
+  return findings.filter(f => f.kind !== 'english-added' || !allowed.has(JSON.stringify([f.path, f.text])));
+}
 export function checkEnglishCopy(root, base = BASE_SHA) {
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
   // The base inventory deliberately includes files deleted from the working tree.
@@ -40,7 +46,9 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
     const source = readFileSync(resolve(root, path), 'utf8');
     if (extractCopy(source, path).some(c => c.language === 'en')) after.set(path, source);
   }
-  return { findings: compareEnglishCopy(before, after), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
+  const additionsPath = resolve(root, 'docs/audits/bosque-vocabulary-additions-20261004.json');
+  const additions = existsSync(additionsPath) ? JSON.parse(readFileSync(additionsPath, 'utf8')).additions : [];
+  return { findings: filterApprovedAdditions(compareEnglishCopy(before, after), additions), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const result = checkEnglishCopy(process.cwd(), process.argv.find(a => a.startsWith('--base='))?.slice(7) || BASE_SHA);

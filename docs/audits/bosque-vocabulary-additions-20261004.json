@@ -1,0 +1,2230 @@
+{
+  "version": 1,
+  "authorization": "Owner specification: new direct English vocabulary glosses for A1–B2 in El bosque de los hongos gigantes. Existing English copy remains protected.",
+  "additions": [
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "city"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "big"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "small"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "free time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "outside"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "with"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "clothes"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "T-shirt"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to wear"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "room"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "there is / there are"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to use"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to work"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to study"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to start"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to cook"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "a little"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "alone"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to walk"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "near"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to need"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "first"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to have breakfast"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "afterwards"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to buy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "market"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "every week"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "it is cold"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "it is hot"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "it is raining"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to rest"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "in silence"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to listen"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to eat"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to drink"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "breakfast"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "hot"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to read"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "sofa"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "library"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to have dinner"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "soup"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "vegetables"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "Sunday"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to visit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to go out"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "shop"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "station"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to learn"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "word"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to write"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "day"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "week"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to spend time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "neighborhood"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "place"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "noise"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "afternoon"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "drink"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "good"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "music"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "singer"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "every day"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "spring"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "summer"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "autumn"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "winter"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "light"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "space"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "silence"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "one hour"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "free"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "something"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "new"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "wall"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "table"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "without"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "inside"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to be able to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "plant"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to put"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "window"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "museum"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "city center"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "garden"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "balcony"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "furniture"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "chair"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "better"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to live"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "work"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "meal"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "usually"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "more"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "comfortable"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "always"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "party"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to be at home"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "that day"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "pet"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "cheerful"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "animal"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "a way"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "someone"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "coffee"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "tea"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "milk"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to clean"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "easy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "house"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "morning"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "night"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to get up"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "train"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "bus"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "journey"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "beach"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "mountain"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "according to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to eat out"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "today"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to prefer"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "childhood"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "photo"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to appear"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to contain"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "now"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to prepare"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "song"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "fast"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "slow"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "since childhood"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "kind"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "fun"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "vacation"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "sea"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "building"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "object"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "for a long time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to keep"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "after"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "class"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "where to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "at noon"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "weekend"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "Saturday"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to practice"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "this week"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "next"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "shopping"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "fruit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "jacket"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "short"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "rain"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "umbrella"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "cold"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to change"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "quiet"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "only"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "minute"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "ingredients"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "on top"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to exercise"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "the other option"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "friends"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "also"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "countryside"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "the other place"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "there"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "advantage"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "different"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "cheap"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "early"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "late"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "ideal"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "company"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "part"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to have"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "favorite"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "important"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "likes"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "together"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to choose"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "visit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "when"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "topic"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "question"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a1.mjs",
+      "text": "to talk about"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to learn"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "at first"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "advice"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to feel at home"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "like that"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to organize"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "on the spot"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to represent"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to share"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "for the last time / most recently"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to help"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to have time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "way of life"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to add"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "list"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to decide"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "last time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to take a walk"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "distance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "variety"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to meet / fulfill"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to change plans"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "situation"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "task"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to write down"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to forget"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "housework"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "easily"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to be difficult"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "accommodation"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "central"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "service"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "recipe"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "hands-on"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "materials"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to receive"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to fit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "gift"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "day trip"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "board games"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "exhibition"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "route"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to follow"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "without a plan"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "routine"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "change"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to seem"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to enjoy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "trip"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "punctuality"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "on time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "neighbor"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "relationship"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "privacy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to try"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to recommend"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "visitor"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "rest"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "company"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "busy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "useful"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to solve"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "app"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to suppose"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "near"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "appliance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "space"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "what for"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to spend time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to miss"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "free of charge"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to be useful"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to devote"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "sports center"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "public"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "light"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "inside"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "outside"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "comfortable"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "advantage"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "preparation"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to practice"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "quality"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "few"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "inexpensive"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to discover"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "it is necessary to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to photograph"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to put away"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "in each case"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "simple"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to try on"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "purchase"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "from Monday to Friday"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "journey"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "heavy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "practical"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "familiar"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "instructions"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "studies"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "at the moment"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to repeat"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "really"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "planned"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "dish"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to do again"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to remember"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "current"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to learn to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "object"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "tradition"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to take part"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "still"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "next month"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to book"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "in advance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "realistic"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to start"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to set aside a moment"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "region"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "time of year"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "in a year"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to organize oneself"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "short getaway"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "available"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to keep"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to save time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "on your own"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "sport"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "screen"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "backpack"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "format"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to stay"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "seated"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "daily"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "public transportation"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "in favor of"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to be useful / suit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to continue to prefer"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "reason"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "while"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "silence"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "online"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "in person"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "keepsakes"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to give as a gift"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to propose"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "similar"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "priority"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "to return"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "feature"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "choice"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "preference"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "classmate / partner"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "habit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "on your own"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "at ease"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "skill"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to be good at"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to switch off mentally"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "as you go along"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "leftovers"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to waste"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to be worth it"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to repair"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "improvement"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "neighborhood"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to sign up"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "unfinished tasks"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to distract"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "living together"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "short getaway"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "item of clothing"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "usual"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "on my own"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "without a set destination"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "unexpected"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "journey"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to value"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "from time to time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "news and updates"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "loan"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "review"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "rating"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "talent"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "achievement"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to offer"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to take into account"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to fit or suit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "what you have learned"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "routine"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to adapt"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to recover or get back"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "device"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to save"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "workshop"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "in return"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "hobby"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "with company"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "handmade"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "effort"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to reflect"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "consistency and persistence"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "drawback"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to share an opinion"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "fresh produce"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "rented"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "format"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to get around"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "stage of life"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to stop doing"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to realize"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "company or companionship"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "route or journey"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to feel part of something"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to give a second chance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to achieve"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to make progress"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to take a step"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to preserve or keep"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to add or incorporate"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "home or housing"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to keep or maintain"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "ten years from now"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to get together"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to make good use of"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "pace"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "secondhand"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "warranty"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "agreement"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "in person"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to be worth the extra effort"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to improvise"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "time of year"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "the outskirts"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "in favor of"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to miss out on something"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "in silence"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to make sense"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to set a limit"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to avoid"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to recommend"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to make a decision"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to get closer to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to become clear"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to divide or allocate"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to arise"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b1.mjs",
+      "text": "to understand"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "room or leeway"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to give up"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to qualify or add nuance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to set boundaries"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "guiding judgment or principle"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to fully engross"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to neglect"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "belonging to someone else"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "approach"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "reversible"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "division or allocation"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "demand or standard"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "in exchange for"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to enroll"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to delegate"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to be worthwhile"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "misunderstanding"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "loan"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "subscription"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to do without"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "nuisance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "living together"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "autonomy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "income"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to prioritize"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to adapt or adjust"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "something given up"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "itinerary"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "accuracy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "tension or conflict"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to put into practice"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "commitment"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to spread or publicize"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "sustainable over time"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "source of income"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to conflict"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "demanding"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "measurable"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "time slot"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "restriction"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to broaden"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "position or stance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "reliable"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "other people’s expectations"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "working day"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to be worth it"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to require or demand"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "support network"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "in advance"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "effectiveness"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to launch or get started"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to what extent"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to take responsibility for"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to take on"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "scope"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "belonging to others"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to support or endorse"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to discourage"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to renew or update"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to specialize"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to take a risk"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to give up or yield"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to sway"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "in writing"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "long-lasting"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "ownership"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "left behind"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "challenged or stimulated"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "bond or connection"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to be due to"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "judgment"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to impose on oneself"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "firsthand"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to draw conclusions"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "contribution"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to contribute or provide value"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to start making sense"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to rephrase"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "calculated choice or bet"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "than expected"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to reconsider"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to establish firmly"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "feasible"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to support with evidence"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to exclude"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "availability"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to point toward or suggest"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "non-negotiable"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "inflexibility"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "predictability"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to sacrifice or give up"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "natural site or setting"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "deadline"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to overestimate or overvalue"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "reservations or doubts"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "limited mobility"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "willingness"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "exposed or vulnerable"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to explore in greater depth"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to spread oneself too thin"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "persuasive"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "objection"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to interfere"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "consensus"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "procedure"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to set a goal"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "decisive"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to meet a need"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to return to or pick up again"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "incompatible"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "well-founded"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to put to the test"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "under what conditions"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "uncertainty"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "reasoning"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
+      "text": "to compare or check against another view"
+    }
+  ]
+}

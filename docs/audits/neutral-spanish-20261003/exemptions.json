@@ -3978,6 +3978,18 @@
       "text": "Mandame la dirección.",
       "reason": "Explicit Argentine roleplay dialogue and quoted response model; surrounding UI remains neutral.",
       "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "Se me da bien… Aprendí con…",
+      "category": "neutral-context",
+      "reason": "A2 sentence support uses first-person preterite aprendí, not a regional imperative."
+    },
+    {
+      "path": "app/bosque-de-los-hongos-gigantes/content/a2.mjs",
+      "text": "Aprendí a usar… Me ayudó…",
+      "category": "neutral-context",
+      "reason": "A2 sentence support uses first-person preterite aprendí, not a regional imperative."
     }
   ]
 }
