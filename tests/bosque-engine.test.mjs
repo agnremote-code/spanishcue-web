@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {existsSync} from 'node:fs';
+const url=new URL('../app/bosque-de-los-hongos-gigantes/engine.mjs',import.meta.url);
+test('physics, traversal, decks and level isolation',async()=>{assert.ok(existsSync(url),'forest engine exists');const e=await import(url);
+let p=e.spawnPlayer();p=e.stepPlayer(p,{x:0,z:0,jump:true},1/60);assert.ok(p.y>0);assert.ok(p.vy>0);
+for(let i=0;i<180;i++)p=e.stepPlayer(p,{x:0,z:0},1/60);assert.equal(p.y,0);assert.equal(p.grounded,true);
+const cap=e.PLATFORMS.find(x=>x.zone==='sobre-ti');p={...e.spawnPlayer(),x:cap.x,z:cap.z,y:cap.y+1,vy:-5,grounded:false};for(let i=0;i<35;i++)p=e.stepPlayer(p,{x:0,z:0},1/60);assert.equal(p.y,cap.y);assert.equal(p.platform,cap.id);
+p={...p,y:-30};p=e.stepPlayer(p,{x:0,z:0},1/60);assert.equal(p.y,p.checkpoint.y);assert.equal(p.vy,0);
+assert.equal(e.parseLevel('no'),'A1');for(const l of e.LEVELS)assert.equal(e.parseLevel(l),l);
+let s=e.newSession('A1',12);const prompts=[{id:'1'},{id:'2'},{id:'3'}];const ids=[];for(let i=0;i<3;i++){const d=e.drawPrompt(s,prompts);s=d.session;ids.push(d.prompt.id)}assert.equal(new Set(ids).size,3);assert.equal(e.drawPrompt(s,prompts).prompt,null);
+s={...s,discussed:['A1-1'],visited:['sobre-ti'],active:'A1-1'};const b=e.switchLevel(s,'B2');assert.equal(b.level,'B2');assert.deepEqual(b.seen,[]);assert.deepEqual(b.discussed,[]);assert.equal(b.active,null);
+assert.equal(e.finalUnlocked({...s,discussed:Array.from({length:10},(_,i)=>String(i)),visited:['sobre-ti','vida-real','elige']}),true);
+assert.equal(e.finalUnlocked(s),false);assert.deepEqual(e.restoreSession('{bad'),null);
+});
