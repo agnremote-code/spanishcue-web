@@ -16,8 +16,9 @@ Implementation:
 Verification at source checkpoint:
 - New contract tests failed in all six levels before implementation (the café produced six story beats).
 - 57 focused tests now pass, including all 240 combinations, invalid/blocked choices, back/revisit, world/navigation and taxi outcomes.
-- Language suite: 39 tests, no unresolved language findings, English copy unchanged. No new linguistic exemptions are required.
-- Lint and TypeScript passed at first verification; final rerun pending after review.
+- Language suite: 39 tests, no unresolved language findings, English copy unchanged. No new linguistic exemptions are required. CI caught a newly introduced ambiguous preterite in a distractor; its wording was corrected and the language test rerun successfully.
+- TypeScript and focused lint passed after review. Full lint initially scanned a leftover generated `.sites-safe-dist` directory and exhausted heap; this is generated build output, not a source-code failure.
+- Real React DOM controls passed in A1/B2/C1 across café, plaza NPC, bar NPC, museum object and taxi (15 rendered interactions). This validates click/disabled/back behavior, not authenticated browser access.
 - Full suite reached build, which encountered the existing premium-media copy race; unchanged official build passed on retry, without weakening artifact guards.
 
 Live QA boundary: production redirected this browser to the premium access page, without a teacher session. The browser also blocked the loopback local component harness. Neither is a successful live lesson QA. Production authentication must be verified separately; do not claim it from source or DOM tests.
