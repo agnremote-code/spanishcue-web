@@ -2225,6 +2225,11 @@
     {
       "path": "app/bosque-de-los-hongos-gigantes/content/b2.mjs",
       "text": "to compare or check against another view"
+    },
+    {
+      "path": "app/autoestudio/engine/copy.ts",
+      "text": "Audio could not play. Tap Listen again. If it continues, check that your device has a Spanish voice installed.",
+      "authorization": "Owner authorized necessary audio error messages in the 2026-10-05 mobile/tablet audio fix; no existing English copy changes."
     }
   ]
 }

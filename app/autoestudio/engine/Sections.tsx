@@ -264,6 +264,8 @@ export function PronunciationSection({ pronunciation, ctx }: { pronunciation: Pr
 // 06 ---------------------------------------------------------------------------
 export function ListeningSection({ listening, ctx }: { listening: Listening; ctx: EngineContext }) {
   const [plays, setPlays] = useState(0);
+  const [audioError, setAudioError] = useState(false);
+  const request = useRef(0);
   const [playing, setPlaying] = useState(false);
   const [unlocked, setUnlocked] = useState(1);
   const [showTranscript, setShowTranscript] = useState(false);
@@ -272,15 +274,23 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
   const synthetic = listening.script.some(line => !ctx.audio?.[audioKey(line.text, voices[line.speaker])]);
   const names = Object.fromEntries(listening.speakers.map((speaker) => [speaker.id, speaker.name]));
   const play = async (rate: number) => {
+    const id = ++request.current;
+    setAudioError(false);
     if (playing) {
       stopAudio();
       setPlaying(false);
       return;
     }
     setPlaying(true);
-    setPlays((count) => count + 1);
-    await playClips(listening.script.map((line) => ({ text: line.text, voice: voices[line.speaker] })), { rate, audio: ctx.audio });
-    setPlaying(false);
+    try {
+      await playClips(listening.script.map((line) => ({ text: line.text, voice: voices[line.speaker] })), {
+        rate, audio: ctx.audio, onStart: () => setPlays((count) => count + 1),
+      });
+    } catch {
+      if (id === request.current) setAudioError(true);
+    } finally {
+      if (id === request.current) setPlaying(false);
+    }
   };
   const transcriptOpen = unlocked > 1 && plays > 0;
   const stageLabel = (stage: Listening["stages"][number]["stage"]) => (stage === "gist" ? "Idea general" : stage === "detail" ? "Detalles" : "Fíjate");
@@ -313,6 +323,7 @@ export function ListeningSection({ listening, ctx }: { listening: Listening; ctx
           {plays} {ctx.t.plays}
         </small>
       </div>
+      {audioError && <p role="alert">{ctx.t.audioError}</p>}
       {listening.stages.map((stage, index) =>
         index < unlocked ? (
           <section key={index} className="ae-lstage">
