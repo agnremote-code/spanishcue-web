@@ -1,9 +1,12 @@
+import { authDiagnostic, authStage, confirmSessionCookie } from "./auth-diagnostics";
+
 export type FirebaseSessionUser = {
   getIdToken(): Promise<string>;
 };
 
 type SessionSyncOptions = {
   serverSignedIn: boolean;
+  initialEvent?: boolean;
   fetcher?: typeof fetch;
   pathname: string;
   reload: () => void;
@@ -17,9 +20,12 @@ export async function syncFirebaseSession(
   // Firebase can briefly report no client user while browser persistence restores.
   // Only an explicit sign-out should clear the independent server cookie.
   if (!user) return;
+  // AuthForm owns new sign-ins. Only the initial persisted user may restore
+  // this page, otherwise the token listener races its redirect/verification.
+  if (options.pathname === "/ingresar" && !options.initialEvent) return;
 
   try {
-    const idToken = await user.getIdToken();
+    const idToken = await authStage("id-token", () => user.getIdToken());
     const response = await (options.fetcher ?? fetch)("/api/auth/session", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -30,10 +36,13 @@ export async function syncFirebaseSession(
       await options.signOut();
       return;
     }
-    if (response.ok && !options.serverSignedIn && options.pathname !== "/ingresar") {
+    if (response.ok && !options.serverSignedIn) {
+      // A blocked or rejected cookie must not cause an endless reload loop.
+      await confirmSessionCookie(options.fetcher ?? fetch);
       options.reload();
     }
-  } catch {
-    // The next explicit sign-in can safely restore the server session.
+  } catch (reason) {
+    const diagnostic = authDiagnostic(reason);
+    if (diagnostic) console.warn("[SpanishCue auth restore]", diagnostic);
   }
 }

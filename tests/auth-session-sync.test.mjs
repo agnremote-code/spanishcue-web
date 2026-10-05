@@ -37,8 +37,8 @@ test("a restored Firebase user re-establishes the server session", async () => {
     {
       serverSignedIn: false,
       fetcher: async (url, init) => {
-        request = { url, init };
-        return new Response(null, { status: 200 });
+        if (init.method === "POST") request = { url, init };
+        return Response.json({ authenticated: true });
       },
       pathname: "/cuenta",
       reload: () => { reloads += 1; },
@@ -64,4 +64,42 @@ test("an explicitly rejected Firebase user is signed out", async () => {
     },
   );
   assert.equal(signOuts, 1);
+});
+
+test("a persisted user on the login page resumes only after the server reads its cookie", async () => {
+  const methods = [];
+  let reloads = 0;
+  await syncFirebaseSession({ getIdToken: async () => "persisted-test-token" }, {
+    serverSignedIn: false, pathname: "/ingresar", initialEvent: true,
+    fetcher: async (_url, init) => {
+      methods.push(init.method);
+      return Response.json(init.method === "POST" ? {} : { authenticated: true });
+    },
+    reload: () => { reloads += 1; }, signOut: async () => assert.fail("must preserve the user"),
+  });
+  assert.deepEqual(methods, ["POST", "GET"]);
+  assert.equal(reloads, 1, "the login page must leave its stale anonymous render");
+});
+
+test("a missing server cookie does not trigger a login reload loop", async () => {
+  let probes = 0;
+  await syncFirebaseSession({ getIdToken: async () => "persisted-test-token" }, {
+    serverSignedIn: false, pathname: "/ingresar", initialEvent: true,
+    fetcher: async (_url, init) => {
+      if (init.method === "GET") probes += 1;
+      return Response.json({ authenticated: false });
+    },
+    reload: () => assert.fail("cookie was not accepted"), signOut: async () => assert.fail("must not delete persistence"),
+  });
+  assert.equal(probes, 1);
+});
+
+test("the token listener must not compete with an explicit login attempt", async () => {
+  let tokenReads = 0;
+  await syncFirebaseSession({ getIdToken: async () => { tokenReads += 1; return "test-token"; } }, {
+    serverSignedIn: false, pathname: "/ingresar", initialEvent: false,
+    fetcher: async () => assert.fail("duplicate session request"),
+    reload: () => assert.fail("must not interrupt the login redirect"), signOut: async () => assert.fail("must not sign out"),
+  });
+  assert.equal(tokenReads, 0, "AuthForm owns this token event");
 });
