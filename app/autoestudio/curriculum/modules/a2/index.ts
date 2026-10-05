@@ -1,3 +1,23 @@
 import type { Module } from "../../types";
+import { a2w01 } from "./w01";
+import { a2w02 } from "./w02";
+import { a2w03 } from "./w03";
+import { a2w04 } from "./w04";
+import { a2w05 } from "./w05";
+import { a2w06 } from "./w06";
+import { a2w07 } from "./w07";
+import { a2w08 } from "./w08";
+import { a2w09 } from "./w09";
+import { a2w10 } from "./w10";
+import { a2w11 } from "./w11";
+import { a2w12 } from "./w12";
+import { a2w13 } from "./w13";
+import { a2w14 } from "./w14";
+import { a2w15 } from "./w15";
+import { a2w16 } from "./w16";
+import { a2w17 } from "./w17";
+import { a2w18 } from "./w18";
+import { a2w19 } from "./w19";
+import { a2w20 } from "./w20";
 
-export const a2Modules: Module[] = [];
+export const a2Modules: Module[] = [a2w01, a2w02, a2w03, a2w04, a2w05, a2w06, a2w07, a2w08, a2w09, a2w10, a2w11, a2w12, a2w13, a2w14, a2w15, a2w16, a2w17, a2w18, a2w19, a2w20];
