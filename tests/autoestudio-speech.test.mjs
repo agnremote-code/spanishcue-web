@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { build } from 'esbuild';
 import { runInNewContext } from 'node:vm';
 const built = await build({entryPoints:['app/autoestudio/engine/speech.ts'],bundle:true,format:'cjs',platform:'node',write:false});
-function harness({voices=[],paused=false,available=true}={}) {
+function harness({voices=[{lang:"es-MX",name:"Native"}],paused=false,available=true}={}) {
   const calls=[],warnings=[],timers=new Map(),listeners=new Map(); let id=0;
   class Utterance { constructor(text){this.text=text;} }
   class Audio { constructor(){this.paused=true;} play(){this.paused=false;calls.push(['play',this]);return Promise.resolve();} pause(){this.paused=true;} }
@@ -21,11 +21,11 @@ test('first tap queues every utterance synchronously, in Spanish, with the exact
  assert.equal(h.utterances().length,2); assert.equal(h.utterances()[0].lang,'es-MX');assert.equal(h.utterances()[0].rate,0.7);
  h.utterances()[0].onstart();h.utterances()[0].onend();h.utterances()[1].onstart();h.utterances()[1].onend();assert.equal(await done,true);
 });
-test('empty voices do not defer the tap; voiceschanged supplies a Spanish voice for later playback',async()=>{
- const h=harness();h.api.warmVoices();h.api.warmVoices();assert.equal(h.listeners.size,1);
- const first=h.api.playClips([clips[0]]);assert.equal(h.utterances().length,1);h.utterances()[0].onend();await first;
+test('empty voices reject without default speech; voiceschanged supplies the requested voice for a later tap',async()=>{
+ const h=harness({voices:[]});h.api.warmVoices();h.api.warmVoices();assert.equal(h.listeners.size,1);
+ await assert.rejects(h.api.playClips([clips[0]]),/speech-spanish-voice-unavailable/);assert.equal(h.utterances().length,0);
  const voice={lang:'es_ES',name:'Monica'};h.synth.voices=[{lang:'en-US',name:'English'},voice];h.listeners.get('voiceschanged')();
- const second=h.api.playClips([clips[0]]);assert.equal(h.utterances()[1].voice,voice);h.utterances()[1].onend();await second;
+ const second=h.api.playClips([{text:'Hola',voice:'es-ES-f'}]);assert.equal(h.utterances()[0].voice,voice);h.utterances()[0].onend();await second;
 });
 test('paused engine resumes inside playback and does not cancel an idle first tap',async()=>{
  const h=harness({paused:true});const done=h.api.playClips([clips[0]]);
@@ -59,4 +59,37 @@ test('recorded audio reuses its unlocked element, propagates rejection, and acce
  const done=h.api.playClips(clips,{audio,rate:0.7});const el=h.calls[0][1];assert.equal(el.playbackRate,0.7);el.onplaying();el.onended();
  assert.equal(h.calls[1][1],el);el.onended();assert.equal(await done,true);
  const failed=h.api.playClips(clips,{audio});el.error={code:4};el.onerror();await assert.rejects(failed,/media-4/);
+});
+
+for (const locale of ['es-MX','es-AR','es-CO','es-ES','es-US']) {
+ test(`exact ${locale} beats every fallback regardless of voice list order`,async()=>{
+  const native={lang:locale,name:'Native'};
+  const h=harness({voices:[{lang:'en-US',name:'English'},{lang:'es-US',name:'Google español de Estados Unidos'},...['es-MX','es-CO','es-AR','es-ES'].filter(x=>x!==locale).map(lang=>({lang,name:'Other'})),native]});
+  const done=h.api.playClips([{text:'Hola',voice:`${locale}-f`}]);
+  assert.equal(h.utterances()[0].voice.lang,locale);h.utterances()[0].onend();await done;
+ });
+}
+const nativeOrder=['es-MX','es-CO','es-AR','es-CL','es-PE','es-UY','es-VE'];
+for(let i=0;i<nativeOrder.length;i++){
+ test(`Latin fallback priority selects ${nativeOrder[i]} before later locales and never es-US`,async()=>{
+  const voices=[{lang:'es-US',name:'Google español de Estados Unidos'},...nativeOrder.slice(i).reverse().map(lang=>({lang,name:'Native'}))];
+  const h=harness({voices});const done=h.api.playClips([{text:'Hola',voice:'es-BO-f'}]);
+  assert.equal(h.utterances()[0].voice.lang,nativeOrder[i]);h.utterances()[0].onend();await done;
+ });
+}
+for(const voices of [[],[{lang:'en-US',name:'English'}],[{lang:'es-US',name:'Google español de Estados Unidos'}],[{lang:'en-US',name:'Español'}]]){
+ test(`rejects unavailable native voices without speaking: ${JSON.stringify(voices)}`,async()=>{
+  const h=harness({voices});const done=h.api.playClips([{text:'Hola',voice:'es-MX-f'}]);
+  const rejected=assert.rejects(done,/speech-spanish-voice-unavailable/);
+  for(const u of h.utterances())u.onend?.();
+  await rejected;assert.equal(h.utterances().length,0);
+ });
+}
+test('es-ES requires a Spain voice and does not silently replace its variety',async()=>{
+ const h=harness({voices:[{lang:'es-MX',name:'Mexican'}]});const done=h.api.playClips([{text:'Hola',voice:'es-ES-f'}]);
+ const rejected=assert.rejects(done,/speech-spanish-voice-unavailable/);for(const u of h.utterances())u.onend?.();await rejected;assert.equal(h.utterances().length,0);
+});
+test('default voice excludes es-US, and underscore/case tags normalize for exact matching',async()=>{
+ const h=harness({voices:[{lang:'es-US',name:'Google español de Estados Unidos'},{lang:'ES_mx',name:'Native'}]});
+ const done=h.api.playClips([{text:'Hola'}]);assert.equal(h.utterances()[0].voice.lang,'ES_mx');h.utterances()[0].onend();await done;
 });
