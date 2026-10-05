@@ -15,11 +15,11 @@
 
 ## Task 1: Prevent draft loss before the editor's 600 ms timer
 
-- [ ] Add a DOM regression using the real WritingSection, useProgress and local adapter: edit, immediately unmount/remount, assert the latest draft survives. Include replacing and clearing text.
-- [ ] Run it against unchanged source and observe missing saved draft.
-- [ ] Remove only WritingSection's delayed callback; call onDraft on each edit.
-- [ ] Run the focused DOM and server-adapter privacy regressions, then full tests, lint, typecheck, build/artifact validation.
-- [ ] Commit and push; review the diff and preserve sanitized QA evidence.
+- [x] Add a DOM regression using the real WritingSection, useProgress and local adapter: edit, immediately unmount/remount, assert the latest draft survives. Include replacing and clearing text.
+- [x] Run it against unchanged source and observe missing saved draft.
+- [x] Remove only WritingSection's delayed callback; call onDraft on each edit.
+- [x] Run the focused DOM and server-adapter privacy regressions, then full tests, lint, typecheck, build/artifact validation.
+- [x] Commit and push; review the diff and preserve sanitized QA evidence.
 - [ ] Open PR, resolve CI failures, verify official staging and production release, rerun live smoke and the browser reproduction.
 
 ## QA boundaries
@@ -32,3 +32,8 @@ Check public samples, locked routes/RSC, forged headers, local progress, draft r
 - Browser confirmed anonymous /cuenta redirects to login; no teacher session available.
 - Browser reproduced draft loss twice: the editor displayed 12 words, then zero after immediate reload.
 - Ruling: use the fresh task-specific clone in place on one codex branch, avoiding another implementation/worktree.
+
+- Task 1 implementation complete: red/green DOM regression plus 727 passing full-suite tests, lint, typecheck and artifact validation.
+- Independent read-only review approved the scoped change; focused 9/9 tests rerun.
+- Local lint initially overlapped the build and scanned its temporary `.sites-safe-dist`, exhausting heap. Serial rerun after build completed passed unchanged.
+- Source checkpoint pushed through authenticated GitHub connector because terminal Git has no credentials; local and remote tree equality verified.
