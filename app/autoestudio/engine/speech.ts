@@ -39,15 +39,21 @@ export function warmVoices() {
 function pickVoice(voice: Voice | undefined): SpeechSynthesisVoice | null {
   if (!speechAvailable()) return null;
   warmVoices();
-  const voices = cachedVoices.filter((candidate) => /^es(?:[-_]|$)/i.test(candidate.lang));
-  if (!voices.length) return null;
-  const [lang, region, gender] = (voice ?? "es-MX-f").split("-");
-  const tag = `${lang}-${region}`.toLowerCase();
-  const regional = voices.filter((candidate) => candidate.lang.toLowerCase().replace("_", "-") === tag);
-  const latam = voices.filter((candidate) => !/^es[-_]es$/i.test(candidate.lang));
-  const pool = regional.length ? regional : region !== "ES" && latam.length ? latam : voices;
-  const female = /(female|mujer|paulina|monica|mónica|helena|laura|lucia|lucía|sabina|elvira|dalia|salome|salomé|elena|camila|paloma|marisol|google español de estados unidos)/i;
-  const preferred = pool.find((candidate) => (gender === "f" ? female.test(candidate.name) : !female.test(candidate.name)));
+  const [language, region, gender] = (voice ?? "es-MX-f").split("-");
+  const requested = `${language}-${region}`.toLowerCase();
+  const locale = (candidate: SpeechSynthesisVoice) => candidate.lang.toLowerCase().replaceAll("_", "-");
+  // Exact variety wins. US Spanish is opt-in only, never a generic fallback.
+  // For Spain retain the requested variety; Latin requests use this fixed order.
+  const allowed = requested === "es-es"
+    ? [requested]
+    : [requested, "es-mx", "es-co", "es-ar", "es-cl", "es-pe", "es-uy", "es-ve"];
+  const tag = allowed.find(tag => /^es-[a-z]{2}$/.test(tag)
+    && (tag !== "es-us" || requested === "es-us")
+    && cachedVoices.some(candidate => locale(candidate) === tag));
+  if (!tag) return null;
+  const pool = cachedVoices.filter(candidate => locale(candidate) === tag);
+  const female = /(female|mujer|paulina|monica|mónica|helena|laura|lucia|lucía|sabina|elvira|dalia|salome|salomé|elena|camila|paloma|marisol)/i;
+  const preferred = pool.find(candidate => gender === "f" ? female.test(candidate.name) : !female.test(candidate.name));
   return preferred ?? pool[0];
 }
 
@@ -138,13 +144,19 @@ export function playClips(clips: Clip[], options: Options = {}): Promise<boolean
         // cancel() does not clear paused; a paused global engine queues forever.
         if (synth.speaking || synth.pending) synth.cancel();
         if (synth.paused) synth.resume();
+        const selectedVoices = clips.map(clip => pickVoice(clip.voice));
+        // Never delegate voice selection to the browser's English/default voice.
+        // An empty/lazy catalog must be retried after voiceschanged, not spoken
+        // with an unknown accent. The existing UI exposes this error and resets.
+        if (selectedVoices.some(voice => !voice)) {
+          fail("speech-spanish-voice-unavailable");
+          return;
+        }
         run.utterances = clips.map((clip, index) => {
           const utterance = new SpeechSynthesisUtterance(clip.text);
-          const voice = pickVoice(clip.voice);
-          utterance.lang = voice?.lang ?? (clip.voice?.slice(0, 5) || "es-MX");
-          // Empty getVoices() is not proof of no installed voice. Let the engine
-          // resolve the Spanish language now; voiceschanged refreshes later taps.
-          if (voice) utterance.voice = voice;
+          const voice = selectedVoices[index]!;
+          utterance.lang = voice.lang.replaceAll("_", "-");
+          utterance.voice = voice;
           utterance.rate = rate;
           utterance.pitch = clip.voice?.endsWith("-m") ? 0.92 : 1.06;
           utterance.onstart = () => onStart(index);
