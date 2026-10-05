@@ -33,7 +33,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué tomas en una cafetería? ¿Con quién vas?",
+      "¿Qué te gusta tomar cuando vas a una cafetería?",
       "¿Cuándo vas a una cafetería y qué sueles pedir?",
       "¿Tienes una cafetería favorita? Cuenta cómo la conociste y por qué vuelves.",
       "¿Qué tipo de cafeterías te gustan y qué hace que quieras volver a un lugar?",
@@ -73,7 +73,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gusta el té o el café? ¿Lo tomas con leche?",
+      "¿Cómo preparas tu bebida favorita?",
       "¿Qué bebida preparas en casa y cómo la preparas?",
       "¿Alguna vez te sirvieron algo distinto de lo que pediste? Cuenta qué hiciste.",
       "¿Cómo reaccionas cuando un servicio no cumple tus expectativas? Cuenta una experiencia.",
@@ -113,10 +113,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Dónde te gusta hablar con tus amigos? ¿En casa o en un café?",
+      "¿Dónde te gusta conversar con tus amigos?",
       "¿Con qué frecuencia te reúnes con tus amigos y qué hacen juntos?",
       "¿Cómo organizas una salida con amigos cuando cada uno quiere algo diferente?",
-      "¿Prefieres reunirte con pocas personas o con grupos grandes? Explica qué cambia para ti.",
+      "¿Qué cambia para ti al reunirte con pocas personas o con un grupo grande?",
       "¿Cómo han cambiado tus maneras de mantener las amistades y qué papel tienen los encuentros presenciales?",
       "¿En qué medida tus espacios habituales de encuentro condicionan las conversaciones que tienes? Contrasta situaciones de tu propia vida."
     ]
@@ -153,7 +153,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué lugar de tu casa te gusta más? ¿Qué hay allí?",
+      "¿Cómo es tu lugar favorito de tu casa?",
       "¿Cómo es tu casa y dónde pasas más tiempo?",
       "¿Qué haces para sentirte cómodo cuando llegas a una casa nueva?",
       "¿Qué necesitas para sentirte en casa y qué cosas puedes dejar de lado?",
@@ -193,7 +193,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Recibes amigos en tu casa? ¿Qué hacen juntos?",
+      "¿Qué haces con tus amigos cuando están en tu casa?",
       "¿Qué preparas cuando alguien viene a visitarte?",
       "¿Prefieres visitar a tus amigos o invitarlos a casa? Explica por qué.",
       "¿Qué costumbres de tus invitados te hacen sentir cómodo o incómodo?",
@@ -238,10 +238,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué comida pides en un restaurante? ¿Qué bebes?",
+      "¿Qué te gusta pedir cuando comes en un restaurante?",
       "¿Con quién comes fuera y qué restaurantes te gustan?",
       "¿Cómo suelen pagar la cuenta tú y tus amigos? Explica qué prefieres.",
-      "¿Qué te parece más justo al repartir los gastos de una salida? ¿Depende del grupo?",
+      "¿Cómo decides qué reparto de gastos te parece justo cuando sales con distintas personas?",
       "¿Cómo influyen las diferencias de ingresos en los planes que haces con otras personas?",
       "¿Cómo negocias la generosidad, la reciprocidad y los límites económicos en tus relaciones? Apóyate en situaciones que conozcas."
     ]
@@ -278,7 +278,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué comida te gusta mucho? ¿Qué comida no te gusta?",
+      "¿Qué ingredientes tiene tu comida favorita?",
       "¿Qué sueles comer durante la semana y qué comes en ocasiones especiales?",
       "¿Has cambiado alguna costumbre alimentaria? Cuenta qué cambió y por qué.",
       "¿Qué pesa más cuando eliges qué comer: sabor, precio, salud o comodidad? Explica cómo decides.",
@@ -318,7 +318,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gusta comer en lugares tranquilos o con música? ¿Con quién vas?",
+      "¿Cómo es un restaurante que te gusta?",
       "¿Cómo es un restaurante que te gusta? Describe el lugar.",
       "¿Qué experiencia en un restaurante recuerdas especialmente y por qué?",
       "¿Qué hace que una comida fuera de casa valga lo que cuesta para ti?",
@@ -357,7 +357,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿A qué hora ves a tus amigos? ¿Llegas temprano o tarde?",
+      "¿Cómo saludas a tus amigos?",
       "¿Qué haces cuando tienes que esperar a alguien?",
       "¿Qué importancia tiene la puntualidad para ti? Cuenta una experiencia.",
       "¿Cuánto estás dispuesto a esperar a alguien y de qué depende tu límite?",
@@ -396,7 +396,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Cómo es tu barrio? ¿Qué lugares te gustan?",
+      "¿Qué lugares te gustan de tu barrio?",
       "¿Conoces a tus vecinos? ¿Dónde hablas con ellos?",
       "¿Te has mudado alguna vez? Cuenta cómo fue adaptarte, o cómo imaginas una mudanza.",
       "¿Qué te ayuda a crear una vida social cuando llegas a un lugar nuevo?",
@@ -435,10 +435,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gusta bailar? ¿Qué música te gusta?",
+      "¿Qué te gusta hacer cuando sales con tus amigos?",
       "¿Qué haces normalmente los fines de semana?",
       "¿Cómo eliges un plan cuando sales con alguien que tiene gustos diferentes?",
-      "¿Prefieres ceder, negociar o hacer planes separados cuando no hay acuerdo? Explica con ejemplos.",
+      "¿Cómo decides entre ceder, negociar o hacer planes separados cuando no hay acuerdo?",
       "¿Cómo distingues en tus relaciones entre una concesión saludable y renunciar demasiado a tus preferencias?",
       "¿Qué lugar ocupa el desacuerdo en tus relaciones cercanas? Explora cuándo enriquece los planes compartidos y cuándo los desgasta."
     ]
@@ -474,7 +474,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Cómo vas al trabajo o a clase? ¿Caminas o tomas un autobús?",
+      "¿Cómo vas al trabajo o a clase?",
       "¿Cómo vuelves a casa cuando sales por la noche?",
       "¿Alguna vez te perdiste o perdiste un transporte? Cuenta qué hiciste.",
       "¿Cómo decides entre comodidad, costo y seguridad al moverte de noche?",
@@ -513,7 +513,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Cómo celebras tu cumpleaños? ¿Con quién estás?",
+      "¿Cómo celebras tu cumpleaños?",
       "¿Qué fechas celebras con tu familia o tus amigos?",
       "¿Qué logro personal te dio mucha alegría y cómo lo celebraste?",
       "¿Qué cambio de etapa ha sido importante para ti y cómo lo viviste?",
@@ -552,7 +552,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué lugares de tu ciudad te gustan? ¿Qué puedes hacer allí?",
+      "¿Qué haces cuando no entiendes una palabra en español?",
       "¿Qué te gusta visitar cuando viajas a otra ciudad?",
       "¿Qué lugar recomendarías a alguien que visita tu ciudad por primera vez y por qué?",
       "¿Qué buscas cuando viajas: conocer gente, descansar, visitar lugares o probar cosas nuevas?",
@@ -591,10 +591,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué música escuchas? ¿Dónde la escuchas?",
+      "¿Qué música te gusta escuchar?",
       "¿Te gustan los planes de último momento? ¿Qué sueles hacer?",
       "¿Cuándo aceptaste una invitación inesperada y cómo te fue?",
-      "¿Te resulta fácil empezar una conversación con alguien que no conoces? ¿En qué situaciones?",
+      "¿Cómo decides si aceptar una invitación cuando ya tienes otros compromisos?",
       "¿Cómo decides cuándo abrirte a una experiencia imprevista y cuándo proteger tu tiempo?",
       "¿Qué papel han tenido los encuentros casuales en tu vida y cómo valoras ahora oportunidades que antes habrías rechazado?"
     ]
@@ -630,7 +630,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gustan los bares con música? ¿Qué música prefieres?",
+      "¿Cómo es un lugar donde te gusta escuchar música?",
       "¿Dónde te gusta salir por la noche y con quién?",
       "¿Qué hace que para ti un bar tenga buen ambiente?",
       "¿Cómo afecta el ruido a tus ganas de quedarte en un lugar? Cuenta alguna experiencia.",
@@ -669,10 +669,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿A qué hora te acuestas? ¿Te gusta levantarte temprano?",
+      "¿Qué haces antes de acostarte?",
       "¿Qué haces para descansar después de un día de trabajo o estudio?",
       "¿Cómo organizas tu descanso cuando tienes muchos planes?",
-      "¿Te cuesta decir que no cuando tus amigos insisten? Explica cómo lo manejas.",
+      "¿Cómo manejas la insistencia de tus amigos cuando necesitas decir que no?",
       "¿Cómo reconoces tus límites de energía y cómo los comunicas sin sentir que debes justificarlos?",
       "¿Cómo ha cambiado tu relación con el tiempo libre y con la presión de aprovecharlo? Describe qué significa para ti descansar de verdad."
     ]
@@ -708,7 +708,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Pagas con efectivo o con tarjeta? ¿Qué prefieres?",
+      "¿Cómo prefieres pagar tus compras?",
       "¿Qué llevas siempre cuando sales de casa?",
       "¿Alguna vez olvidaste algo importante al salir? Cuenta cómo lo resolviste.",
       "¿Qué acuerdos te parecen necesarios cuando prestas dinero a alguien cercano?",
@@ -825,7 +825,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Haces planes con tus amigos por teléfono o por mensajes?",
+      "¿Cómo haces planes con tus amigos?",
       "¿Qué haces cuando un plan se cancela?",
       "¿Recuerdas un cambio de planes que terminó siendo positivo? Cuéntalo.",
       "¿Qué necesitas de tus amigos para sentir que puedes contar con ellos?",
@@ -864,7 +864,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué ropa te gusta para salir? ¿Qué colores usas?",
+      "¿Cómo recibes a un amigo cuando llega a una reunión?",
       "¿Cómo eliges la ropa para una fiesta?",
       "¿Alguna vez te vestiste de manera diferente al resto? Cuenta cómo te sentiste.",
       "¿Cuánto influye tu ropa en cómo te sientes cuando conoces gente nueva?",
@@ -904,7 +904,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué transporte usas para viajar? ¿Te gusta viajar en auto?",
+      "¿Qué transporte usas para viajar?",
       "¿Qué preparas antes de hacer un viaje?",
       "¿Tuviste algún problema de transporte en un viaje? Cuenta cómo lo resolviste.",
       "¿Cómo reaccionas cuando un imprevisto pone en riesgo un plan importante?",
@@ -944,10 +944,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gusta caminar o ir en auto? ¿Adónde vas normalmente?",
+      "¿Adónde vas normalmente en auto o en autobús?",
       "¿Usas mapas en el teléfono cuando no conoces un lugar?",
       "¿Cómo te orientas en una ciudad nueva? Cuenta algún ejemplo.",
-      "¿Prefieres pedir indicaciones o buscar por tu cuenta? Explica de qué depende.",
+      "¿Cómo decides cuándo pedir indicaciones y cuándo buscar por tu cuenta?",
       "¿Cómo valoras la confianza que depositas en indicaciones de desconocidos y en herramientas digitales?",
       "¿En qué situaciones la tecnología aumenta tu autonomía y en cuáles sientes que te vuelve dependiente? Parte de cómo te orientas o te desplazas."
     ]
@@ -984,10 +984,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gusta hacer fotos? ¿Qué fotografías?",
+      "¿Qué te gusta fotografiar?",
       "¿Guardas fotos de tus vacaciones? ¿Dónde las guardas?",
       "¿Qué foto tuya te trae un recuerdo especial y por qué?",
-      "¿Prefieres fotografiar mucho o vivir el momento sin sacar fotos? Explica cómo decides.",
+      "¿Cómo decides cuándo hacer fotos y cuándo disfrutar del momento sin fotografiarlo?",
       "¿Cómo cambia tu recuerdo de una experiencia al volver a mirar sus fotografías?",
       "¿Qué relación hay entre lo que recuerdas y las imágenes que has elegido conservar? Explora también lo que queda fuera de tu archivo personal."
     ]
@@ -1024,7 +1024,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Con quién hablas por teléfono? ¿Hablas todos los días?",
+      "¿De qué hablas por teléfono con tus amigos o tu familia?",
       "¿Prefieres llamar o enviar mensajes? ¿Cuándo usas cada opción?",
       "¿Cómo mantienes el contacto con personas que viven lejos?",
       "¿Qué conversaciones prefieres tener en persona y cuáles por mensaje? Explica por qué.",
@@ -1064,10 +1064,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Adónde quieres viajar? ¿Con quién?",
+      "¿Adónde te gustaría viajar?",
       "¿Te gusta viajar en tren, en avión o en autobús? ¿Por qué?",
       "¿Qué viaje recuerdas con más cariño y qué pasó en él?",
-      "¿Hay algún viaje que hayas pospuesto? Explica qué necesitarías para hacerlo.",
+      "¿Qué viaje te gustaría hacer y qué necesitarías para organizarlo?",
       "¿Cómo han cambiado tus motivos para viajar a lo largo de tu vida?",
       "¿Qué viajes que no llegaste a hacer han influido en tu manera de imaginar el futuro? Puedes hablar también de destinos que dejaron de interesarte."
     ]
@@ -1104,7 +1104,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿A quién escribes mensajes? ¿Qué le cuentas?",
+      "¿Qué cuentas en los mensajes que escribes a tus amigos?",
       "¿Te gusta recibir mensajes largos o cortos? ¿Por qué?",
       "¿Guardas alguna carta o mensaje especial? Explica qué significa para ti, sin compartir nada privado.",
       "¿Qué puedes expresar mejor por escrito que en una conversación?",
@@ -1144,10 +1144,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué llevas en tu maleta? Nombra tres cosas importantes para ti.",
+      "¿Qué tres cosas importantes para ti llevas en tu maleta?",
       "¿Preparas la maleta con tiempo o el último día?",
       "¿Qué objeto llevas siempre cuando viajas y por qué?",
-      "¿Prefieres viajar con poco equipaje o llevar cosas por si acaso? Cuenta cómo te ha funcionado.",
+      "¿Cómo eliges qué llevar en tu equipaje según el viaje que vas a hacer?",
       "¿Qué te cuesta dejar atrás cuando cambias de lugar y qué descubres que no necesitabas?",
       "¿Qué objetos vinculas con tu identidad y cuáles podrías perder sin sentir que pierdes parte de ti? Relaciónalo con viajes, mudanzas o cambios personales."
     ]
@@ -1184,7 +1184,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué programas o videos te gusta ver? ¿Cuándo los ves?",
+      "¿Qué programas o videos te gusta ver?",
       "¿Ves películas solo o con otras personas? ¿Qué prefieres?",
       "¿Qué programa o película recuerdas de tu infancia y por qué?",
       "¿Cómo eliges qué ver cuando tienes muchas opciones disponibles?",
@@ -1224,10 +1224,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Sabes andar en bicicleta? ¿Dónde te gusta pasear?",
+      "¿Dónde te gusta pasear en bicicleta o a pie?",
       "¿Qué medio de transporte usabas cuando eras niño?",
       "¿Qué actividad aprendiste de pequeño y todavía disfrutas?",
-      "¿Qué trabajos de tu entorno han cambiado mucho con la tecnología? ¿Cómo te afecta?",
+      "¿Cómo te afectan los cambios tecnológicos en los trabajos de tu entorno?",
       "¿Qué habilidades de tu trabajo o de tu vida cotidiana crees que seguirán siendo valiosas aunque cambie la tecnología?",
       "¿Cómo decides qué aprendizajes conservar y cuáles dejar atrás cuando cambia la forma de hacer las cosas? Usa ejemplos de tu experiencia."
     ]
@@ -1264,7 +1264,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Cómo es tu habitación? ¿Qué hay cerca de tu cama?",
+      "¿Cómo es tu habitación?",
       "¿Qué cosas tienes en tu habitación y cuál te gusta más?",
       "¿Cómo era tu habitación cuando eras niño? Describe lo que recuerdas.",
       "¿Qué cambiarías de tu espacio personal para sentirte más cómodo?",
@@ -1304,7 +1304,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué canción te gusta mucho? ¿Cuándo la escuchas?",
+      "¿Cuándo escuchas tu canción favorita?",
       "¿Qué música escuchas cuando estás contento o cuando quieres descansar?",
       "¿Qué canción te recuerda una persona o una etapa de tu vida?",
       "¿Cómo han cambiado tus gustos musicales y qué canciones siguen siendo importantes para ti?",
@@ -1349,10 +1349,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Prefieres caminar o tomar un taxi? ¿Adónde vas en taxi?",
+      "¿Adónde vas cuando tomas un taxi?",
       "¿Cuándo usas taxi y cuándo transporte público?",
       "¿Cómo te mueves cuando visitas una ciudad nueva? Explica qué te resulta práctico.",
-      "Cuando viajas a una ciudad nueva, ¿prefieres usar taxi, transporte público o caminar? ¿Por qué?",
+      "¿Qué influye en tu elección de transporte cuando visitas una ciudad nueva?",
       "¿Cómo equilibras tiempo, dinero, comodidad e impacto ambiental en tus desplazamientos?",
       "¿Qué revela tu manera de desplazarte sobre cómo valoras tu tiempo y tu autonomía? Explica contradicciones entre tus preferencias y tus decisiones reales."
     ]
@@ -1394,7 +1394,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué lugares están cerca de tu casa? ¿Cómo llegas a ellos?",
+      "¿Cómo llegas a tu lugar favorito cerca de casa?",
       "¿Te resulta fácil encontrar direcciones? ¿Qué haces cuando no encuentras un lugar?",
       "¿Alguna vez hubo una confusión con una dirección o una reserva? Cuenta qué pasó.",
       "¿Cómo compruebas que otra persona entendió lo que necesitas cuando viajas?",
@@ -1434,7 +1434,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué aparatos usas todos los días? ¿Para qué los usas?",
+      "¿Para qué usas tu teléfono todos los días?",
       "¿Qué llevas para cargar tus aparatos cuando viajas?",
       "¿Qué problema práctico tuviste alguna vez durante un viaje y cómo lo resolviste?",
       "¿Qué haces cuando necesitas comprar algo cuyo nombre no sabes en otro idioma?",
@@ -1477,7 +1477,7 @@ const rows = {
       "¿Qué compras en una tienda cerca de tu casa?",
       "¿Qué compras cuando organizas una reunión en casa?",
       "¿Cómo preparas una reunión para que no falte lo necesario?",
-      "¿Prefieres planificar las compras o resolver lo que falta a último momento? Cuenta qué te funciona.",
+      "¿Cómo organizas tus compras para tener lo que necesitas sin comprar de más?",
       "¿Cómo decides si vale la pena pagar más por un producto reutilizable o de mejor calidad?",
       "¿Qué contradicciones encuentras entre consumir menos, ahorrar y resolver necesidades inmediatas? Habla de decisiones concretas tuyas."
     ]
@@ -1514,7 +1514,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué regalo te gusta recibir? ¿Qué regalos compras?",
+      "¿Qué regalo te gusta recibir?",
       "¿A quién le haces regalos y en qué ocasiones?",
       "¿Qué regalo recuerdas especialmente y por qué fue importante?",
       "¿Qué hace especial un regalo para ti: su utilidad, la sorpresa o lo que significa?",
@@ -1554,10 +1554,10 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Qué te gusta hacer por la noche? ¿Sales o te quedas en casa?",
+      "¿Qué te gusta hacer por la noche?",
       "¿Cómo es una noche ideal para ti?",
       "¿Qué salida reciente disfrutaste y qué la hizo especial?",
-      "¿Prefieres terminar un buen plan a tiempo o seguir mientras haya ganas? Explica tu experiencia.",
+      "¿Cómo decides cuándo terminar una salida que estás disfrutando?",
       "¿Cómo ha cambiado tu idea de pasarlo bien con los años? Compara lo que buscabas antes con lo que valoras ahora.",
       "¿Cómo reconoces que una experiencia ha sido satisfactoria sin medirla por cuánto duró o cuántas cosas hiciste?"
     ]
@@ -1594,7 +1594,7 @@ const rows = {
       ]
     ],
     "personal": [
-      "¿Te gusta salir en fotos? ¿Con quién tienes fotos?",
+      "¿Qué fotos te gusta hacer con tus amigos o tu familia?",
       "¿Compartes fotos con amigos o en redes sociales? ¿Qué fotos eliges?",
       "¿Qué cosas de tu vida te gusta compartir en internet y cuáles prefieres guardar?",
       "¿Cómo decides qué publicar y quién puede verlo? Explica tus criterios.",

@@ -1,6 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as engine from '../app/noche-abierta/engine.mjs';
+for (const level of ['A1', 'B2', 'C1']) test(`${level}: the speaking turn presents one open personal question`, () => {
+  for (const place of engine.contentFor(level).LOCATIONS) for (const activity of place.activities) {
+    const initial = engine.openLocation(engine.startExploring(engine.initialState(level)), place.id, activity.id);
+    const first = engine.currentView(initial);
+    const speaking = engine.currentView(engine.chooseOption(initial, first.beat.options[0].id)).beat;
+    assert.equal((speaking.prompt.match(/¿/g) || []).length, 1, `${activity.id}: one question`);
+    assert.equal((speaking.prompt.match(/\?/g) || []).length, 1, `${activity.id}: one question`);
+    assert.match(speaking.prompt, /^¿(?:Qué|Cómo|Cuándo|Cuánto|Dónde|Adónde|Con quién|A quién|A qué|De qué|Para qué|En qué)/, `${activity.id}: open prompt`);
+  }
+});
 for (const level of engine.LEVELS) test(`${level}: every person, object and place has exactly choice then personal speaking`, () => {
   const questions = new Set();
   for (const location of engine.contentFor(level).LOCATIONS) for (const activity of location.activities) {
