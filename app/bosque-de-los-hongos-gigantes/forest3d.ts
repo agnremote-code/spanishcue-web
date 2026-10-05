@@ -53,14 +53,20 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
       for(let k=0;k<3;k++){const rootlet=mesh(new THREE.CylinderGeometry(.08,.14,p.r*1.8,6),barkMat,p.x+(k-1)*.85,p.y-.7,p.z);rootlet.rotation.x=Math.PI/2;}
     } else {
       // The plateau occupies the full collision disk. The rolled lip and gills sit below it.
-      const cap=mesh(new THREE.CylinderGeometry(p.r,p.r*.94,.25,48),capMats.get(shade)!,p.x,p.y-.125,p.z,true);cap.name=p.id;
-      const profile=[new THREE.Vector2(p.r*.14,-p.r*.48),new THREE.Vector2(p.r*.48,-p.r*.37),new THREE.Vector2(p.r*.84,-p.r*.17),new THREE.Vector2(p.r*.99,-.22),new THREE.Vector2(p.r,-.12)];
-      mesh(new THREE.LatheGeometry(profile,48),ivory,p.x,p.y,p.z);
+      // A broad walkable crown rolls into a substantial organic cap, not a thin disk.
+      const crownProfile=[new THREE.Vector2(0,0),new THREE.Vector2(p.r*.55,0),new THREE.Vector2(p.r*.84,-.035),new THREE.Vector2(p.r*.97,-.09),new THREE.Vector2(p.r,-.17),new THREE.Vector2(p.r*.98,-p.r*.16),new THREE.Vector2(p.r*.83,-p.r*.29)];
+      const cap=mesh(new THREE.LatheGeometry(crownProfile,48),capMats.get(shade)!,p.x,p.y,p.z,true);cap.name=p.id;
+      capMats.get(shade)!.side=THREE.DoubleSide;
+      const profile=[new THREE.Vector2(p.r*.14,-p.r*.48),new THREE.Vector2(p.r*.48,-p.r*.43),new THREE.Vector2(p.r*.83,-p.r*.29)];
+      const underside=mesh(new THREE.LatheGeometry(profile,48),ivory,p.x,p.y,p.z,true);ivory.side=THREE.DoubleSide;
+      underside.name=`${p.id}-gills`;
+      // Subtle freckles break up the crown without hiding its landing surface.
+      for(let k=0;k<7;k++){const a=random()*Math.PI*2,r=p.r*(.25+random()*.48);const spot=mesh(new THREE.SphereGeometry(.10+random()*.16,7,4),ivory,p.x+Math.cos(a)*r,p.y-.015,p.z+Math.sin(a)*r);spot.scale.set(1,.12,.7);spot.castShadow=false;}
       const stemHeight=Math.max(.4,p.y-p.r*.38+.1);
       const stem=mesh(new THREE.CylinderGeometry(p.r*.15,p.r*.27,stemHeight,14,4),stemMat,p.x,stemHeight/2-.1,p.z,true);
       stem.rotation.z=(random()-.5)*.035;
       const gillPositions:number[]=[];
-      for(let k=0;k<48;k++){const a=k/48*Math.PI*2;gillPositions.push(Math.cos(a)*p.r*.2,-p.r*.455,Math.sin(a)*p.r*.2,Math.cos(a)*p.r*.95,-.28,Math.sin(a)*p.r*.95);}
+      for(let k=0;k<48;k++){const a=k/48*Math.PI*2;gillPositions.push(Math.cos(a)*p.r*.2,-p.r*.455,Math.sin(a)*p.r*.2,Math.cos(a)*p.r*.81,-p.r*.30,Math.sin(a)*p.r*.81);}
       const gills=new THREE.LineSegments(new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute(gillPositions,3)),new THREE.LineBasicMaterial({color:'#786b52',transparent:true,opacity:.32}));gills.position.set(p.x,p.y,p.z);root.add(gills);
       for(let k=0;k<4;k++){const a=k*Math.PI/2;const rootCurve=new THREE.CatmullRomCurve3([new THREE.Vector3(p.x,p.r*.12,p.z),new THREE.Vector3(p.x+Math.cos(a)*p.r*.3,.16,p.z+Math.sin(a)*p.r*.3),new THREE.Vector3(p.x+Math.cos(a)*p.r*.55,.03,p.z+Math.sin(a)*p.r*.55)]);mesh(new THREE.TubeGeometry(rootCurve,6,p.r*.05,5,false),stemMat);}
     }
@@ -69,17 +75,28 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
       const sprout=mesh(new THREE.CylinderGeometry(.15,.22,.32,8),mat('#e7d59a'),p.x,p.y+.16,p.z);sprout.castShadow=false;
     }
     if(zone){
-      const poleX=p.x+p.r*.64,poleZ=p.z+p.r*.18;
-      mesh(new THREE.CylinderGeometry(.07,.12,2.7,7),barkMat,poleX,p.y+1.35,poleZ,true);
-      const canvas=document.createElement('canvas');canvas.width=768;canvas.height=220;const c=canvas.getContext('2d')!;
-      c.fillStyle='#263b2b';c.beginPath();c.roundRect(7,7,754,206,24);c.fill();c.strokeStyle='#c8b987';c.lineWidth=3;c.stroke();
-      c.fillStyle='#d8c98f';c.textAlign='center';c.font='500 24px sans-serif';c.fillText(zone.id==='final'?'LA CIMA DEL BOSQUE':'REFUGIO DE CONVERSACIÓN',384,58);
-      c.fillStyle='#f9f3de';c.font='600 43px serif';c.fillText(zone.name,384,125);c.font='23px sans-serif';c.fillStyle='#d6ddc6';c.fillText(zone.id==='final'?'GRAN CONVERSACIÓN FINAL':'Llega · detente · habla',384,173);
+      const index=ZONES.indexOf(zone),previous=index?ZONES[index-1]:{x:0,z:0};
+      const facing=Math.atan2(previous.x-p.x,previous.z-p.z);
+      const signRoot=new THREE.Group();signRoot.position.set(p.x+Math.cos(facing)*p.r*.63,p.y,p.z-Math.sin(facing)*p.r*.63);signRoot.rotation.y=facing;root.add(signRoot);
+      for(const x of [-1.2,1.2]){const post=new THREE.Mesh(new THREE.CylinderGeometry(.07,.1,1.85,7),barkMat);post.position.set(x,.925,0);post.castShadow=!low;signRoot.add(post);solids.push(post);}
+      const board=new THREE.Mesh(new THREE.BoxGeometry(2.85,.9,.13),barkMat);board.position.y=1.7;board.castShadow=!low;signRoot.add(board);solids.push(board);
+      const canvas=document.createElement('canvas');canvas.width=768;canvas.height=240;const c=canvas.getContext('2d')!;
+      c.fillStyle='#344736';c.fillRect(0,0,768,240);c.strokeStyle='#aa9870';c.lineWidth=8;c.strokeRect(8,8,752,224);
+      c.fillStyle='#f5ebcd';c.textAlign='center';c.font='600 53px sans-serif';c.fillText(`${String(index+1).padStart(2,'0')} · ${zone.short}`,384,102);
+      c.fillStyle='#d5dabc';c.font='29px sans-serif';c.fillText(zone.id==='final'?'LA CORONA':'REFUGIO DE CONVERSACIÓN',384,172);
       const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;textures.push(map);
-      const sign=new THREE.Sprite(new THREE.SpriteMaterial({map,depthTest:true}));sign.position.set(poleX,p.y+3.05,poleZ);sign.scale.set(5.4,1.55,1);root.add(sign);
+      const signMaterial=new THREE.MeshStandardMaterial({map,roughness:1,side:THREE.DoubleSide});
+      for(const side of [-1,1]){const sign=new THREE.Mesh(new THREE.PlaneGeometry(2.75,.8),signMaterial);sign.position.set(0,1.7,side*.071);sign.rotation.y=side===1?0:Math.PI;signRoot.add(sign);}
+      // Moss and small plants at the outer edge leave the center and approach clear.
+      for(let k=0;k<5;k++){const a=facing+1.5+k*.3;const tuft=mesh(new THREE.IcosahedronGeometry(.22,1),mossMat,p.x+Math.sin(a)*p.r*.82,p.y+.10,p.z+Math.cos(a)*p.r*.82);tuft.scale.set(1.5,.5,1);}
       // Small physical trail stones distinguish each category and checkpoint.
       for(let k=0;k<8;k++){const a=k/8*Math.PI*2;const pebble=mesh(new THREE.IcosahedronGeometry(.14+random()*.08,0),stoneMat,p.x+Math.cos(a)*p.r*.76,p.y+.07,p.z+Math.sin(a)*p.r*.76);pebble.scale.y=.45;}
     }
+  }
+  // A worn entrance trail leads directly toward the first reachable stepping cap.
+  for(let i=1;i<16;i++){
+    const stone=mesh(new THREE.IcosahedronGeometry(.17+random()*.13,0),ivory,i*.48,.035,Math.sin(i*.3)*.3);
+    stone.scale.set(1.2,.15,.8);stone.castShadow=false;
   }
   // Monumental trunks around the traversable groves frame the ascent and distant canopy.
   const crowns: THREE.Mesh[]=[];
@@ -123,8 +140,8 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   for(let i=0;i<4;i++){const s=new THREE.Sprite(new THREE.SpriteMaterial({map:mistTexture,transparent:true,opacity:.7,depthWrite:false}));s.position.set(cliffX+(i-1.5)*1.5,1,cliffZ+4);s.scale.set(8,5,1);root.add(s);}
   const cave=ZONES.find(z=>z.id==='recuerdos')!;
   // An elevated cave sits on its actual checkpoint, with an open approach from the south.
-  for(let i=0;i<7;i++){const a=Math.PI*.1+i/6*Math.PI*.8;const rock=mesh(new THREE.IcosahedronGeometry(1.6,1),stoneMat,cave.x+Math.cos(a)*3.25,cave.y+1.8+Math.sin(a)*1.2,cave.z-1.45,true);rock.scale.set(1,1.3,1.35);}
-  mesh(new THREE.SphereGeometry(3.65,16,8,Math.PI,Math.PI,0,Math.PI/2),new THREE.MeshStandardMaterial({color:'#303d34',side:THREE.DoubleSide,roughness:1}),cave.x,cave.y,cave.z-1.6,true);
+  for(let i=0;i<7;i++){const a=Math.PI*.1+i/6*Math.PI*.8;const rock=mesh(new THREE.IcosahedronGeometry(1.2,1),stoneMat,cave.x+Math.cos(a)*3.25,cave.y+1.8+Math.sin(a)*1.2,cave.z-4.7,true);rock.scale.set(1,1.3,1.35);}
+  mesh(new THREE.SphereGeometry(3.65,16,8,Math.PI,Math.PI,0,Math.PI/2),new THREE.MeshStandardMaterial({color:'#303d34',side:THREE.DoubleSide,roughness:1}),cave.x,cave.y,cave.z-5.3,true);
   const caveLight=new THREE.PointLight('#d7bf87',2,9,2);caveLight.position.set(cave.x,cave.y+2,cave.z);root.add(caveLight);
   // High crown ribs remain outside the flat landing area.
   const final=ZONES[ZONES.length-1];
@@ -140,12 +157,13 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   // Batch immobile organic scenery by material. Keep invisible originals for
   // exact camera raycasts; their world matrices continue updating with the scene.
   const collisionRoot=new THREE.Group();collisionRoot.visible=false;collisionRoot.name='camera-collision-surfaces';
-  const batches=new Map<THREE.Material,THREE.Mesh[]>();
+  const batches=new Map<string,{material:THREE.Material;objects:THREE.Mesh[]}>();
   for(const object of [...root.children]){
     if(!(object instanceof THREE.Mesh)||object instanceof THREE.InstancedMesh||rings.includes(object)||beams.includes(object)||Array.isArray(object.material))continue;
-    const batch=batches.get(object.material)||[];batch.push(object);batches.set(object.material,batch);
+    const key=`${object.material.uuid}/${Boolean(object.geometry.index)}/${Object.keys(object.geometry.attributes).sort().join(',')}`;
+    const batch:{material:THREE.Material;objects:THREE.Mesh[]}=batches.get(key)??{material:object.material,objects:[]};batch.objects.push(object);batches.set(key,batch);
   }
-  for(const [material,objects] of batches){
+  for(const {material,objects} of batches.values()){
     if(objects.length<2)continue;
     const pieces=objects.map(object=>object.geometry.clone().applyMatrix4(object.matrixWorld));
     const combined=mergeGeometries(pieces,false);
