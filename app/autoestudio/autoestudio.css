@@ -212,6 +212,8 @@
 
 /* Audio */
 .ae-play{display:inline-flex;align-items:center;gap:4px;flex:0 0 auto}
+.ae-play.has-error{flex-wrap:wrap;max-width:100%;flex-shrink:1}
+.ae-play [role="alert"]{flex-basis:100%;white-space:normal;overflow-wrap:anywhere}
 .ae-play button{display:inline-flex;align-items:center;gap:6px;border:1px solid #bcd0ea;background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:800;color:var(--ae-cobalt);min-height:36px}
 .ae-play.compact button{width:36px;height:36px;padding:0;justify-content:center}
 .ae-play button.playing{background:var(--ae-cobalt);color:#fff;border-color:var(--ae-cobalt)}

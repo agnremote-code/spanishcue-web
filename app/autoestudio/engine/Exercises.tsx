@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, useRef, useState, type ReactNode } from "react";
 import type { ChoiceItem, ClassifyItem, ErrorItem, Exercise, GapItem, MatchPair, OpenItem, OrderItem, TransformItem } from "../curriculum/types";
 import type { Copy } from "./copy";
 import { Rich } from "./Rich";
@@ -11,13 +11,22 @@ export type EngineContext = { t: Copy; audio?: AudioMap; showEnglish: boolean };
 
 export function PlayButton({ text, voice, ctx, label, compact = false }: { text: string; voice?: ChoiceItem["voice"]; ctx: EngineContext; label?: string; compact?: boolean }) {
   const [playing, setPlaying] = useState(false);
+  const [audioError, setAudioError] = useState(false);
+  const request = useRef(0);
   const play = async (rate: number) => {
+    const id = ++request.current;
+    setAudioError(false);
     setPlaying(true);
-    await playClips([{ text, voice }], { rate, audio: ctx.audio });
-    setPlaying(false);
+    try {
+      await playClips([{ text, voice }], { rate, audio: ctx.audio });
+    } catch {
+      if (id === request.current) setAudioError(true);
+    } finally {
+      if (id === request.current) setPlaying(false);
+    }
   };
   return (
-    <span className={`ae-play ${compact ? "compact" : ""}`}>
+    <span className={`ae-play ${compact ? "compact" : ""} ${audioError ? "has-error" : ""}`}>
       <button type="button" className={playing ? "playing" : ""} onClick={() => play(1)} aria-label={`${ctx.t.listen}${label ? `: ${label}` : ""}`}>
         <span aria-hidden="true">{playing ? "◼" : "▶"}</span>
         {!compact && <b>{label ?? ctx.t.listen}</b>}
@@ -27,6 +36,7 @@ export function PlayButton({ text, voice, ctx, label, compact = false }: { text:
           0.7×
         </button>
       )}
+      {audioError && <small role="alert">{ctx.t.audioError}</small>}
     </span>
   );
 }
