@@ -32,6 +32,9 @@ export async function runSmoke(origin, fetcher = fetch) {
   assert.equal((await verification.json()).code, "INVALID_SESSION");
   const session = await check("/api/auth/session", 401, { method: "POST", headers, body: '{"idToken":"invalid-release-smoke"}' });
   assert.ok((await session.json()).error);
+  const sessionStatus = await check("/api/auth/session", 200, { method: "GET" });
+  assert.deepEqual(await sessionStatus.json(), { authenticated: false });
+  assert.match(sessionStatus.headers.get("cache-control") || "", /private, no-store/i);
   return results;
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -8,6 +8,7 @@ import {
   FIREBASE_SESSION_COOKIE,
   ownerIdentityFromEnvironment,
   verifyFirebaseIdToken,
+  getFirebaseUserFromHeaders,
 } from "../../../firebase-session";
 
 export const dynamic = "force-dynamic";
@@ -15,6 +16,13 @@ export const dynamic = "force-dynamic";
 function sameOrigin(request: Request): boolean {
   const origin = request.headers.get("origin");
   return Boolean(origin && origin === new URL(request.url).origin);
+}
+
+export async function GET(request: Request) {
+  const user = await getFirebaseUserFromHeaders(request.headers);
+  return Response.json({ authenticated: Boolean(user) }, {
+    headers: { "cache-control": "private, no-store" },
+  });
 }
 
 export async function POST(request: Request) {
