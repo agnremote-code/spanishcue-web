@@ -16,6 +16,7 @@ import {
 import { FormEvent, type KeyboardEvent as ReactKeyboardEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { firebaseAuth } from "../firebase-client";
+import { authDiagnostic, authStage, AuthStageError, confirmSessionCookie } from "../auth-diagnostics";
 import { useI18n } from "../i18n/LocaleProvider";
 import type { Locale, MessageKey } from "../i18n/messages";
 import { SpanishCueBrand } from "../SpanishCueBrand";
@@ -99,40 +100,34 @@ export function authMessageKeyFor(error: unknown): MessageKey {
 }
 
 export async function establishSession(user: User, returnTo?: string) {
-  let lastError: unknown = authError("auth/session-failed");
+  let lastError: unknown = new AuthStageError("session-post", "auth/session-failed");
   for (let attempt = 0; attempt < 2; attempt += 1) {
+    let response: Response;
     try {
-      const idToken = await user.getIdToken(true);
-      const response = await fetch("/api/auth/session", {
+      const idToken = await authStage("id-token", () => user.getIdToken(true));
+      response = await authStage("session-post", () => fetch("/api/auth/session", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ idToken }),
         credentials: "same-origin",
-      });
-      if (response.ok) {
-        const body = await response.json().catch(() => null) as { postPaymentProvider?: unknown } | null;
-        if (typeof body?.postPaymentProvider === "string" && !returnTo?.startsWith("/pro/claim")) {
-          window.location.assign(`/pro/claim?provider=${body.postPaymentProvider === "paddle" ? "paddle" : "paypal"}`);
-        } else if (returnTo) window.location.assign(returnTo);
-        return;
-      }
-      const body = await response.json().catch(() => null) as { code?: unknown } | null;
-      if (response.status === 403 && body?.code === "EMAIL_NOT_VERIFIED") {
-        throw authError("auth/email-not-verified");
-      }
-      if (response.status < 500) throw authError("auth/session-failed");
-      lastError = authError("auth/session-failed");
+      }));
     } catch (reason) {
-      if (
-        typeof reason === "object" &&
-        reason &&
-        "code" in reason &&
-        String((reason as { code: unknown }).code).includes("email-not-verified")
-      ) {
-        throw reason;
-      }
       lastError = reason;
+      continue;
     }
+    const body = await response.json().catch(() => null) as { code?: unknown; postPaymentProvider?: unknown } | null;
+    if (!response.ok) {
+      const code = response.status === 403 && body?.code === "EMAIL_NOT_VERIFIED"
+        ? "auth/email-not-verified" : "auth/session-failed";
+      lastError = new AuthStageError("session-post", code, response.status);
+      if (response.status < 500) throw lastError;
+      continue;
+    }
+    await confirmSessionCookie();
+    if (typeof body?.postPaymentProvider === "string" && !returnTo?.startsWith("/pro/claim")) {
+      window.location.assign(`/pro/claim?provider=${body.postPaymentProvider === "paddle" ? "paddle" : "paypal"}`);
+    } else if (returnTo) window.location.assign(returnTo);
+    return;
   }
   throw lastError;
 }
@@ -154,6 +149,7 @@ export default function AuthForm({
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [diagnostic, setDiagnostic] = useState("");
   const [notice, setNotice] = useState(initialVerificationPending ? t("auth.verifyRequired") : "");
   const [verificationPending, setVerificationPending] = useState(initialVerificationPending);
   const [cooldownUntil, setCooldownUntil] = useState(0);
@@ -190,6 +186,9 @@ export default function AuthForm({
     if (typeof reason === "object" && reason && "retryAfterSeconds" in reason && typeof reason.retryAfterSeconds === "number") {
       startVerificationCooldown(reason.retryAfterSeconds);
     }
+    const detail = authDiagnostic(reason);
+    setDiagnostic(detail);
+    if (detail) console.warn("[SpanishCue auth]", detail);
     setError(t(authMessageKeyFor(reason)));
   };
 
@@ -199,6 +198,7 @@ export default function AuthForm({
     }
     setMode(nextMode);
     setError("");
+    setDiagnostic("");
     setNotice("");
     setVerificationPending(false);
   };
@@ -222,11 +222,12 @@ export default function AuthForm({
     authAttemptRef.current = true;
     setBusy(true);
     setError("");
+    setDiagnostic("");
     setNotice("");
     setVerificationPending(false);
     try {
-      await preparePersistence();
-      const result = await action();
+      await authStage("persistence", preparePersistence);
+      const result = await authStage("credentials", action);
       if (result.newAccount) trackMarketingEvent("signup_complete", { method: result.method });
       if (!result.user.emailVerified) {
         setMode("entrar");
@@ -280,10 +281,11 @@ export default function AuthForm({
     authAttemptRef.current = true;
     setBusy(true);
     setError("");
+    setDiagnostic("");
     setNotice("");
     try {
-      await preparePersistence();
-      const credential = await signInWithEmailAndPassword(firebaseAuth, cleanEmail, password);
+      await authStage("persistence", preparePersistence);
+      const credential = await authStage("credentials", () => signInWithEmailAndPassword(firebaseAuth, cleanEmail, password));
       if (credential.user.emailVerified) {
         await establishSession(credential.user, returnTo);
         return;
@@ -332,6 +334,7 @@ export default function AuthForm({
     }
     setBusy(true);
     setError("");
+    setDiagnostic("");
     setNotice("");
     try {
       await sendPasswordResetEmail(firebaseAuth, cleanEmail);
@@ -372,7 +375,10 @@ export default function AuthForm({
         <label>{t("auth.email")}<input type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="teacher@email.com" /></label>
         <label>{t("auth.password")}<input type="password" autoComplete={mode === "registro" ? "new-password" : "current-password"} minLength={6} required value={password} onChange={(event) => setPassword(event.target.value)} placeholder={t("auth.passwordPlaceholder")} /></label>
         {mode === "entrar" && <button className="forgot-button" type="button" onClick={resetPassword} disabled={busy}>{t("auth.forgot")}</button>}
-        {error && <p className="auth-message error" role="alert">{error}</p>}
+        {error && <div className="auth-message error" role="alert">
+          <p>{error}</p>
+          {diagnostic && <code>{diagnostic}</code>}
+        </div>}
         {notice && <p className="auth-message success" role="status">{notice}</p>}
         {verificationPending && (
           <button className="forgot-button" type="button" onClick={resendVerification} disabled={busy || cooldownSeconds > 0}>
