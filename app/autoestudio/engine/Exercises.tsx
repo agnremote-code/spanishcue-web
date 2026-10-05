@@ -26,7 +26,7 @@ export function PlayButton({ text, voice, ctx, label, compact = false }: { text:
     }
   };
   return (
-    <span className={`ae-play ${compact ? "compact" : ""}`}>
+    <span className={`ae-play ${compact ? "compact" : ""} ${audioError ? "has-error" : ""}`}>
       <button type="button" className={playing ? "playing" : ""} onClick={() => play(1)} aria-label={`${ctx.t.listen}${label ? `: ${label}` : ""}`}>
         <span aria-hidden="true">{playing ? "◼" : "▶"}</span>
         {!compact && <b>{label ?? ctx.t.listen}</b>}
