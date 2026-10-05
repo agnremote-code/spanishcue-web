@@ -12,6 +12,7 @@
 // by id; other arrays of objects merge by position; arrays of strings and
 // plain strings replace.
 
+import { pedagogyFor, pedagogySupportFor, PEDAGOGY_MECHANICS, PEDAGOGY_TEACHER_MOVES } from "./pedagogy.mjs";
 import * as BASE from "./content.mjs";
 import A1 from "./levels/a1.mjs";
 import A2 from "./levels/a2.mjs";
@@ -73,11 +74,11 @@ export function contentFor(level = DEFAULT_LEVEL) {
   const bundle = Object.freeze({
     level: key,
     ARRIVAL: merge(BASE.ARRIVAL, patch.arrival),
-    MECHANICS: BASE.MECHANICS,
-    LOCATIONS: key === "B1" ? BASE.LOCATIONS : merge(BASE.LOCATIONS, patch.locations).map(location => ({ ...location, activities: location.activities.map(activity => ({ ...activity, lessonLevel: key })) })),
+    MECHANICS: PEDAGOGY_MECHANICS,
+    LOCATIONS: merge(BASE.LOCATIONS, patch.locations).map(location => ({ ...location, ...pedagogySupportFor(location, key), activities: location.activities.map(activity => pedagogyFor(activity, key)) })),
     CITY_EVENTS: merge(BASE.CITY_EVENTS, patch.events),
     FINAL: merge(BASE.FINAL, patch.final),
-    TEACHER_MOVES: merge(BASE.TEACHER_MOVES, patch.teacherMoves),
+    TEACHER_MOVES: PEDAGOGY_TEACHER_MOVES,
     ROUTE_PLAN: merge(BASE.ROUTE_PLAN, patch.routePlan),
   });
   cache.set(key, bundle);

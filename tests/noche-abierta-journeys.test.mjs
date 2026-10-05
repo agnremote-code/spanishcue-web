@@ -14,7 +14,7 @@ for (const level of engine.LEVELS) {
       assert.equal(outcome.location, location);
       assert.equal(outcome.travel, travel);
       assert.equal(engine.currentView(selected).progress.choice, choice);
-      assert.equal(engine.currentView(selected).beat.kind, 'result');
+      assert.equal(engine.currentView(selected).beat.kind, 'talk');
       assert.equal(engine.worldOutcome(engine.advanceBeat(selected)).location, location);
       assert.equal(engine.worldOutcome(engine.restartActivity(selected)), null);
       const left = engine.leaveLocation(selected);

@@ -142,41 +142,23 @@ test('ten places, each its own game, with enough to play in every one', () => {
   assert.ok(engine.locationById('museo').grammar.rows.length >= 3, 'the museum has optional past-tense help');
 });
 
-test('decisions have real consequences: each option leads somewhere different', () => {
-  for (const id of ['restaurante', 'taxi']) {
-    for (const activity of engine.locationById(id).activities) {
-      assert.ok(activity.options.length >= 2 && activity.options.length <= 3, activity.id);
-      assert.equal(new Set(activity.options.map(item => item.result)).size, activity.options.length, `${activity.id}: different consequences`);
-      assert.equal(new Set(activity.options.map(item => item.ask)).size, activity.options.length, `${activity.id}: different follow-up`);
-      for (const option of activity.options) assert.ok(option.result.length > 40 && option.ask.endsWith('.') || option.ask.endsWith('?'), `${activity.id}.${option.id}`);
-      assert.ok(activity.close, `${activity.id} closes with a conversation`);
-    }
+test('all people and museum objects retain their identities and offer three contextual choices', () => {
+  for (const { activity } of allActivities()) {
+    assert.equal(activity.options.length, 3);
+    assert.ok(activity.situation && activity.prompt && activity.close);
+    assert.equal(activity.ask2, undefined, 'no continuation question');
+    assert.equal(activity.followUps, undefined, 'no extra speaking steps');
   }
-  assert.equal(engine.locationById('restaurante').activities.length, 3, 'several situations at the table');
-  for (const activity of engine.locationById('taxi').activities) for (const option of activity.options) assert.ok(option.facts.length >= 2, `${activity.id}.${option.id} facts`);
-});
-
-test('open activities have no false choices and the people, objects and problems are distinct', () => {
-  for (const id of ['plaza', 'bar', 'museo', 'auto', 'tienda', 'terraza', 'cafe', 'departamento']) {
-    for (const activity of engine.locationById(id).activities) assert.equal(activity.options, undefined, `${id}/${activity.id} is open`);
-  }
-  for (const activity of engine.locationById('plaza').activities) {
-    assert.ok(activity.who && activity.says && activity.ask, activity.id);
-    assert.equal(activity.followUps.length, 2, activity.id);
-  }
-  for (const activity of engine.locationById('bar').activities) assert.ok(activity.situation && activity.task && activity.pushback && activity.task2, activity.id);
-  const museum = engine.locationById('museo').activities;
-  assert.equal(museum.length, 9);
-  for (const activity of museum) assert.ok(activity.object && activity.year && activity.plaque && activity.ask && activity.detail && activity.ask2, activity.id);
-  for (const activity of engine.locationById('auto').activities) assert.ok(activity.conditions.length >= 3, activity.id);
-  const conditions = engine.locationById('auto').activities.flatMap(item => item.conditions.map(c => c.text)).join(' ');
-  for (const pattern of [/llov/i, /4 %/, /llevar/i, /cierra/i]) assert.match(conditions, pattern);
+  assert.equal(engine.locationById('plaza').activities.length, 7);
+  assert.equal(engine.locationById('museo').activities.length, 9);
+  for (const activity of engine.locationById('museo').activities) assert.ok(activity.object && activity.year);
 });
 
 test('the texts read like one evening: no repeated questions, neutral tú, no stock phrasing', () => {
   const texts = learnerText();
   const asks = allActivities().flatMap(({ activity }) => [activity.prompt, activity.ask, activity.ask2, activity.task, activity.task2, ...(activity.followUps ?? []), ...(activity.options ?? []).map(item => item.ask)]).filter(Boolean);
-  assert.equal(new Set(asks).size, asks.length, 'no question is asked twice');
+  const personal = allActivities().map(({activity}) => activity.close);
+  assert.equal(new Set(personal).size, personal.length, 'each interaction has its own personal question');
   assert.ok(texts.filter(text => /¿Qué harías\?/.test(text)).length <= 1, '«¿Qué harías?» is not the default question');
   for (const text of texts) {
     assert.doesNotMatch(text, /\b(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|harías vos)\b/i, `neutral tú, no unintended voseo: ${text}`);
@@ -217,7 +199,7 @@ test('the lesson plan adds up to 45 minutes in the agreed stages', () => {
 
 // ------------------------------------------------------------ engine
 
-test('a decision moves straight to its own consequence, then to the conversation', () => {
+test('a decision moves straight to the independent personal conversation', () => {
   let state = engine.openLocation(engine.startExploring(engine.initialState()), 'restaurante');
   let view = engine.currentView(state);
   assert.equal(view.activity.id, 'resto-cuenta', 'a sequential place opens on its first situation');
@@ -226,9 +208,9 @@ test('a decision moves straight to its own consequence, then to the conversation
   assert.equal(engine.chooseOption(state, 'nope'), state);
   state = engine.chooseOption(state, 'otra');
   view = engine.currentView(state);
-  assert.equal(view.beat.kind, 'result');
-  assert.equal(view.beat.chosen, 'Propones otra solución.');
-  assert.match(view.beat.context, /Lu sonríe/);
+  assert.equal(view.beat.kind, 'talk');
+  assert.equal(view.beat.context, undefined);
+  assert.equal(view.beat.prompt, view.activity.close);
   assert.equal(engine.chooseOption(state, 'iguales'), state, 'the choice is final once made');
   state = engine.advanceBeat(state);
   assert.equal(engine.currentView(state).last, true);
@@ -237,7 +219,7 @@ test('a decision moves straight to its own consequence, then to the conversation
   assert.equal(engine.currentView(state).activity.id, 'resto-plato', 'another situation at the same table');
   state = engine.leaveLocation(state);
   assert.deepEqual(engine.completedIds(state), ['restaurante']);
-  assert.deepEqual(engine.nightSummary(state)[0].choices, ['Propones otra solución.']);
+  assert.deepEqual(engine.nightSummary(state)[0].choices, ['Hoy pago yo la cuenta completa.']);
 });
 
 test('places with people or objects open on their list; closing an activity goes back to it', () => {
@@ -245,54 +227,37 @@ test('places with people or objects open on their list; closing an activity goes
   assert.equal(engine.currentView(state).activity, null, 'the plaza opens on its people');
   state = engine.openActivity(state, 'kenji');
   let view = engine.currentView(state);
-  assert.equal(view.beat.media.type, 'quote');
-  assert.equal(view.total, 6, 'conversation, decision, consequence and reflection');
-  state = engine.advanceBeat(engine.advanceBeat(state));
-  assert.equal(engine.currentView(state).last, false, 'the decision and reflection still follow');
+  assert.equal(view.beat.kind, 'choose');
+  assert.equal(view.total, 2);
+  state = engine.chooseOption(state, view.beat.options[0].id);
+  assert.equal(engine.currentView(state).last, true);
   state = engine.closeActivity(state);
   assert.equal(state.phase, 'encuentro');
   assert.equal(state.activity, null);
   assert.equal(state.encounters.plaza.acts.kenji.done, true);
   state = engine.openActivity(state, 'kenji');
-  assert.equal(engine.currentView(state).index, 2, 'reopening keeps where the talk was');
+  assert.equal(engine.currentView(state).index, 1, 'reopening keeps where the talk was');
   state = engine.restartActivity(state);
   assert.equal(engine.currentView(state).index, 0, 'the teacher can restart it');
   assert.equal(engine.openActivity(state, 'nadie'), state);
   const direct = engine.openLocation(engine.startExploring(engine.initialState()), 'museo', 'televisor');
   assert.equal(direct.activity, 'televisor', 'walking up to a piece opens it directly');
-  assert.equal(engine.currentView(direct).beat.media.year, '1969');
+  assert.equal(engine.currentView(direct).activity.year, '1969');
   state = engine.leaveLocation(state);
   assert.deepEqual(engine.completedIds(state), ['plaza']);
 });
 
-test('looking around comes before guessing', () => {
-  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'departamento');
-  const items = engine.currentView(state).beat.media.items;
-  assert.ok(items.length >= 3);
-  assert.equal(engine.advanceBeat(state), state, 'nothing seen yet');
-  state = engine.inspectItem(state, items[0].id);
-  state = engine.inspectItem(state, items[0].id);
-  assert.deepEqual(state.encounters.departamento.acts[state.activity].seen, [items[0].id]);
-  assert.equal(engine.advanceBeat(state), state, 'one thing is not enough');
-  state = engine.inspectItem(state, items[1].id);
-  state = engine.advanceBeat(state);
-  assert.equal(engine.currentView(state).beat.kind, 'change');
-  assert.equal(engine.inspectItem(state, 'nada'), state);
-});
-
-test('conditions pile up one by one in the broken-car game', () => {
-  let state = engine.openLocation(engine.startExploring(engine.initialState()), 'auto');
-  const activity = engine.currentView(state).activity;
-  state = engine.advanceBeat(state);
-  for (let i = 0; i < activity.conditions.length; i++) {
-    const beat = engine.currentView(state).beat;
-    assert.equal(beat.kind, 'change');
-    assert.equal(beat.media.before.length, i, 'earlier conditions stay on screen');
-    assert.equal(beat.media.now, activity.conditions[i].text);
-    state = engine.advanceBeat(state);
+test('apartment and car cannot skip the choice or add fictional complications', () => {
+  for (const id of ['departamento', 'auto']) {
+    let state = engine.openLocation(engine.startExploring(engine.initialState()), id);
+    const view = engine.currentView(state);
+    assert.equal(engine.advanceBeat(state), state);
+    assert.equal(engine.inspectItem(state, 'invented'), state);
+    state = engine.chooseOption(state, view.beat.options[0].id);
+    assert.equal(engine.currentView(state).beat.kind, 'talk');
+    assert.equal(engine.currentView(state).total, 2);
+    assert.equal(engine.currentView(state).last, true);
   }
-  assert.equal(engine.currentView(state).last, false, "decision and reflection follow the conditions");
-  assert.match(engine.currentView(state).beat.prompt, /«si»/);
 });
 
 test('the city changes once, after the fourth place, and connects to where the learner went', () => {
@@ -406,15 +371,15 @@ test('the rendered lesson: one question at a time, compact options, help folded,
   assert.doesNotMatch(decision.replace(/<div class="na-levels"[\s\S]*?<\/div>/, ''), /tabindex="0"/, 'the city pauses while a place is open');
   state = engine.chooseOption(state, 'cada-uno');
   const result = render(state);
-  assert.match(result, /class="na-outcome"/);
-  assert.match(result, /Cada uno paga lo suyo/);
+  assert.doesNotMatch(result, /class="na-outcome"/);
+  assert.match(result, /Ahora habla de ti/);
   assert.equal((result.match(/class="na-ask"/g) || []).length, 1);
   assert.match(result, /aria-label="Pregunta siguiente"/);
 
   const hub = render(engine.openLocation(engine.startExploring(engine.initialState()), 'plaza'));
   assert.equal((hub.match(/<li><button type="button"/g) || []).length, 7, 'seven people to talk to');
   const piece = render(engine.openLocation(engine.startExploring(engine.initialState()), 'museo', 'carta'));
-  assert.match(piece, /class="na-plaque"/);
+  assert.match(piece, /data-beat="choose"/);
   assert.match(piece, /Ayuda y gramática/, 'the museum offers grammar help');
 
   const event = render(play(['cafe', 'plaza', 'taxi', 'terraza']).trail.find(item => item.phase === 'evento'));
@@ -638,7 +603,6 @@ test('3D world: original procedural assets only, and three.js stays inside appro
 
 const levels = await import('../app/noche-abierta/levels.mjs');
 const leveledActivities = bundle => bundle.LOCATIONS.flatMap(location => location.activities.map(activity => ({ location, activity })));
-const asksOf = activity => [activity.prompt, activity.ask, activity.ask2, activity.task, activity.task2, ...(activity.followUps ?? []), ...(activity.options ?? []).map(item => item.ask), ...(activity.conditions ?? []).map(item => item.ask)].filter(Boolean);
 const textsOf = bundle => {
   const out = [];
   const walk = value => {
@@ -663,14 +627,14 @@ test('one world, six levels: same places, mechanics and ids, different language 
     assert.deepEqual(bundle.CITY_EVENTS.map(item => item.id), base.CITY_EVENTS.map(item => item.id), `${level} keeps the same events`);
     assert.equal(bundle.MECHANICS, base.MECHANICS, `${level} keeps the same mechanics`);
     assert.ok(levels.LEVEL_INFO[level].name && levels.LEVEL_INFO[level].demand, `${level} explains what it asks`);
-    if (level !== 'B1') assert.ok(levels.untouched(level).length <= 2, `${level} rewrites the night: ${levels.untouched(level).join(', ')}`);
+    for (const location of bundle.LOCATIONS) for (const activity of location.activities) assert.equal(activity.lessonLevel, level);
   }
   assert.equal(levels.contentFor('Z9').level, 'B1', 'an unknown level falls back to B1');
   assert.equal(levels.contentFor('A1'), levels.contentFor('A1'), 'bundles are cached');
 });
 
 test('every level asks its own questions, in neutral tú, without mixing levels', () => {
-  const byLevel = Object.fromEntries(levels.LEVELS.map(level => [level, leveledActivities(levels.contentFor(level)).flatMap(({ activity }) => asksOf(activity))]));
+  const byLevel = Object.fromEntries(levels.LEVELS.map(level => [level, leveledActivities(levels.contentFor(level)).map(({ activity }) => activity.close)]));
   for (const level of levels.LEVELS) {
     const asks = byLevel[level];
     assert.ok(asks.length >= 30, `${level} has enough to ask`);
@@ -751,7 +715,7 @@ test('taxi arrival keeps its consequence but presents the destination in the fal
     const state = engine.chooseOption(engine.openLocation(engine.startExploring(engine.initialState()), 'taxi', activity), choice);
     const html = renderToString(React.createElement(Page, { initial: state }));
     assert.ok(html.includes(label));
-    assert.ok(html.includes(engine.currentView(state).beat.context));
+    assert.ok(html.includes(engine.currentView(state).beat.prompt));
     assert.ok(!html.includes('Bajar del taxi'), 'already out of the taxi at this destination');
     assert.ok(engine.isValidState(engine.leaveLocation(state)));
   }

@@ -7,8 +7,10 @@
 // speaking; the state only records where the learner went and what they chose.
 
 import { advance, beatsOf, choose, emptyProgress, inspect, isLastBeat } from "./activities.mjs";
-import { ARRIVAL, CITY_EVENTS, FINAL, LOCATIONS, MECHANICS, ROUTE_PLAN, TEACHER_MOVES } from "./content.mjs";
+
 import { DEFAULT_LEVEL, LEVELS, contentFor, isLevel } from "./levels.mjs";
+
+const { ARRIVAL, CITY_EVENTS, FINAL, LOCATIONS, MECHANICS, ROUTE_PLAN, TEACHER_MOVES } = contentFor(DEFAULT_LEVEL);
 
 // The B1 texts, for code that only needs ids and names (the same at every level).
 export { ARRIVAL, CITY_EVENTS, FINAL, LOCATIONS, MECHANICS, ROUTE_PLAN, TEACHER_MOVES };

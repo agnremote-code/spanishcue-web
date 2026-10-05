@@ -17,8 +17,8 @@ import { LEVEL_INFO } from './levels.mjs';
 import type { WorldProps } from './World3D';
 import './noche-abierta.css';
 
-// v3: places became small games with their own situations, so older saved nights no longer fit.
-const STORAGE_KEY = 'spanishcue:noche-abierta:v3';
+// v4: exactly two moments per interaction; old multi-step positions are incompatible.
+const STORAGE_KEY = 'spanishcue:noche-abierta:v4';
 const VIEW_KEY = 'spanishcue:noche-abierta:vista';
 const LEVEL_KEY = 'spanishcue:noche-abierta:nivel';
 const places = LOCATIONS.map(({ id, name, short }) => ({ id, name, short }));
@@ -368,7 +368,7 @@ function LevelPicker({ level, onChange, compact = false }: { level: Level; onCha
 function PlacesList({ state, done, onOpen, onClose, disabled, walk = false }: { state: NightState; done: string[]; onOpen: (id: string) => void; onClose: () => void; disabled: boolean; walk?: boolean }) {
   return <section id="na-places" className="na-places" aria-label="Lugares del barrio">
     <div className="na-sheet-head"><h2>Lugares del barrio</h2><button type="button" className="na-close" onClick={onClose} aria-label="Cerrar la lista de lugares">×</button></div>
-    <p className="na-muted">{walk ? 'Elige un lugar y vas caminando hasta ahí. Después toca E.' : 'Cada lugar es un juego distinto. No hace falta visitar todo.'}</p>
+    <p className="na-muted">{walk ? 'Elige un lugar y vas caminando hasta ahí. Después toca E.' : 'En cada lugar, elige una respuesta y después habla de ti. No hace falta visitar todo.'}</p>
     <ul>{LOCATIONS.map(item => {
       const here = state.position === item.id && state.phase === 'encuentro';
       const status = here ? 'Estás acá' : done.includes(item.id) ? 'Ya fuiste' : state.visitOrder.includes(item.id) ? 'Pasaste' : '';
@@ -490,6 +490,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
         {view.total > 1 && <ol className="na-steps" aria-label={`Paso ${view.index + 1} de ${view.total}`}>{view.beats.map((_, i) => <li key={i} className={i < view.index ? 'is-past' : i === view.index ? 'is-now' : ''} />)}</ol>}
       </div>
       <div className="na-beat" key={stepKey}>
+        <p className="na-kicker">{view.beat.label}</p>
         <BeatView beat={view.beat} onChoose={onChoose} onInspect={onInspect} />
       </div>
     </div>}

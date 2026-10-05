@@ -29,15 +29,16 @@ test('a car overlapping the player cannot trap them', () => {
   assert.ok(Math.abs(p.x)>1.5,JSON.stringify(p));
 });
 for(const level of engine.LEVELS) {
-  test(`${level}: every story has a decision, distinct consequences and final reflection`, () => {
+  test(`${level}: every interaction has exactly choice then personal speaking`, () => {
     for(const l of engine.contentFor(level).LOCATIONS)for(const a of l.activities){
       const initial=beatsOf(l.type,a);
       const index=initial.findIndex(b=>b.kind==='choose');
       assert.ok(index>=0,a.id);
       const outcomes=initial[index].options.map(o=>beatsOf(l.type,a,{...emptyProgress(),choice:o.id})[index+1]);
-      assert.ok(outcomes.every(b=>b.kind==='result'&&b.context&&b.prompt),a.id);
-      assert.equal(new Set(outcomes.map(b=>b.context)).size,outcomes.length,a.id);
-      assert.equal(initial.at(-1).label,'Reflexión final',a.id);
+      assert.ok(outcomes.every(b=>b.kind==='talk'&&!b.context&&b.prompt),a.id);
+      assert.equal(new Set(outcomes.map(b=>b.prompt)).size,1,a.id);
+      assert.equal(initial.length,2,a.id);
+      assert.equal(initial.at(-1).label,'2. Ahora habla de ti',a.id);
       assert.ok(initial.at(-1).prompt.includes('¿'),a.id);
     }
   });
@@ -47,9 +48,7 @@ test('back restores exact questions, choice and inspected clues; activities navi
   let s=engine.openLocation(engine.startExploring(engine.initialState()),'restaurante','resto-cuenta');
   s=engine.chooseOption(s,'cada-uno');
   const result=engine.currentView(s).beat;
-  s=engine.advanceBeat(s);
-  s=engine.previousBeat(s);
-  assert.deepEqual(engine.currentView(s).beat,result);
+  assert.equal(engine.currentView(s).last,true);
   s=engine.previousBeat(s);
   assert.equal(engine.currentView(s).progress.choice,'cada-uno');
   s=engine.advanceBeat(s);
@@ -58,10 +57,8 @@ test('back restores exact questions, choice and inspected clues; activities navi
   s=engine.previousActivity(s);
   assert.deepEqual(engine.currentView(s).beat,result);
   s=engine.openLocation(s,'departamento','depto-un-minuto');
-  s=engine.inspectItem(engine.inspectItem(s,'entrada'),'heladera');
-  s=engine.advanceBeat(s);
-  s=engine.previousBeat(s);
-  assert.deepEqual(engine.currentView(s).progress.seen,['entrada','heladera']);
+  assert.equal(engine.currentView(s).beat.kind,'choose');
+  assert.deepEqual(engine.currentView(s).progress.seen,[]);
 });
 
 test('reviewing a taxi question keeps its chosen journey without replaying travel', () => {
