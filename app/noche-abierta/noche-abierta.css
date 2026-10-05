@@ -277,6 +277,10 @@
   .na-progress > span:last-child { display: none; }
 }
 
+@media (max-width: 1200px) {
+  .na-title small { display: none; }
+}
+
 @media (max-width: 760px) {
   .na-top { gap: 10px; padding: 0 12px; }
   .na-title small, .na-progress { display: none; }

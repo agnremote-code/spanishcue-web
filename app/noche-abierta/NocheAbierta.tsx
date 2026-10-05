@@ -77,6 +77,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const restored = useRef(Boolean(initial));
   const scroller = useRef<HTMLDivElement>(null);
   const narrow = useMedia('(max-width: 760px)');
+  const compactLevels = useMedia('(max-width: 1200px)');
   const reducedMotion = useMedia('(prefers-reduced-motion: reduce)');
   // The 3D street loads after the page is interactive; the SVG map is the
   // server render, the loading state and the fallback without WebGL.
@@ -228,7 +229,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     <header className="na-top">
       <Link href="/" className="na-brand" aria-label="Volver a la biblioteca de SpanishCue">SPANISH<span>CUE</span></Link>
       <p className="na-title"><span>Noche abierta</span><small>Sábado · {nightClock(state)}</small></p>
-      {state.phase !== 'llegada' && <LevelPicker level={level} onChange={changeLevel} compact={narrow} />}
+      {state.phase !== 'llegada' && <LevelPicker level={level} onChange={changeLevel} compact={compactLevels} />}
       {state.phase !== 'llegada' && <p className="na-progress" aria-label={`${done.length} de ${LOCATIONS.length} lugares explorados`}>
         <span className="na-progress-dots" aria-hidden="true">{LOCATIONS.map(item => <i key={item.id} className={done.includes(item.id) ? 'is-done' : ''} />)}</span>
         <span>{done.length} / {LOCATIONS.length} lugares</span>
