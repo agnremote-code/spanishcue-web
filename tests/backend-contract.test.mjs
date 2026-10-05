@@ -118,7 +118,8 @@ test("session creation and account provisioning reject unverified emails", async
   assert.match(authForm, /browserLocalPersistence/);
   assert.match(sessionSyncHelper, /!options\.serverSignedIn/);
   assert.match(sessionSyncHelper, /options\.reload\(\)/);
-  assert.match(sessionSyncHelper, /options\.pathname !== "\/ingresar"/);
+  // Login restoration and explicit sign-in ownership are exercised by
+  // auth-session-sync.test.mjs, rather than requiring the old stuck-page branch.
   assert.match(layout, /<AuthSessionSync serverSignedIn=\{signedIn\}/);
 });
 
