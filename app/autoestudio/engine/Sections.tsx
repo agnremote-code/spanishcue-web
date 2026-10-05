@@ -412,7 +412,6 @@ export function ReadingSection({ reading, ctx }: { reading: Reading; ctx: Engine
 export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writing; ctx: EngineContext; draft: string; onDraft: (text: string) => void }) {
   const [text, setText] = useState(draft);
   const [showModel, setShowModel] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setText(draft), [draft]);
   const words = countWords(text);
@@ -455,8 +454,8 @@ export function WritingSection({ writing, ctx, draft, onDraft }: { writing: Writ
           onChange={(event) => {
             const value = event.target.value;
             setText(value);
-            if (timer.current) clearTimeout(timer.current);
-            timer.current = setTimeout(() => onDraft(value), 600);
+            // Drafts stay local. Save before a reload or navigation can discard this edit.
+            onDraft(value);
           }}
         />
         <small>{ctx.t.draftSaved}</small>
