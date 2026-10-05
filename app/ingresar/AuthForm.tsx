@@ -377,7 +377,7 @@ export default function AuthForm({
         {mode === "entrar" && <button className="forgot-button" type="button" onClick={resetPassword} disabled={busy}>{t("auth.forgot")}</button>}
         {error && <div className="auth-message error" role="alert">
           <p>{error}</p>
-          {diagnostic && <details><summary>{t("auth.diagnostic")}</summary><code>{diagnostic}</code></details>}
+          {diagnostic && <code>{diagnostic}</code>}
         </div>}
         {notice && <p className="auth-message success" role="status">{notice}</p>}
         {verificationPending && (

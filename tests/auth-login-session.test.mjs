@@ -6,9 +6,9 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const built = await build({entryPoints:['app/ingresar/AuthForm.tsx'], bundle:true,
   platform:'node', format:'cjs', write:false, jsx:'automatic', packages:'external'});
-const module = { exports: {} };
-new Function('require','module','exports',built.outputFiles[0].text)(require,module,module.exports);
-const { establishSession } = module.exports;
+const compiled = { exports: {} };
+new Function('require','module','exports',built.outputFiles[0].text)(require,compiled,compiled.exports);
+const { establishSession } = compiled.exports;
 const originalFetch = globalThis.fetch;
 const originalWindow = globalThis.window;
 test.afterEach(() => { globalThis.fetch = originalFetch; globalThis.window = originalWindow; });
