@@ -293,6 +293,10 @@
   .na-camera { width: 800px; height: 100%; }
   .na-hint, .na-card, .na-event, .na-final, .na-places { position: fixed; left: 0; right: 0; bottom: 0; top: auto; width: auto; max-width: none; transform: none; border-radius: 20px 20px 0 0; border-bottom: 0; max-height: 84svh; z-index: 20; animation: na-sheet .3s var(--na-ease); }
   .na-event, .na-final, .na-places { overflow: auto; }
+  /* One scroll area keeps questions usable when help and teacher notes expand. */
+  .na-card { overflow-y: auto; overscroll-behavior: contain; }
+  .na-card > * { flex-shrink: 0; }
+  .na-card-body { overflow-y: visible; }
   .na-hint { border-radius: 16px 16px 0 0; justify-content: space-between; padding: 10px 12px 10px 16px; }
   .na-card-body { padding: 4px 16px; }
   .na-card-head { padding: 10px 8px 0 16px; }
