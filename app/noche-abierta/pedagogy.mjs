@@ -27,7 +27,7 @@ const rows = {
         "¿Qué respuesta expresa mejor tu intención?",
         [
           "Quizá no me expliqué bien: lo quería para llevar. ¿Podrían cambiármelo?",
-          "Lo pedí para llevar. ¿Por qué me lo han servido en taza?",
+          "Lo había pedido para llevar. ¿Por qué me lo han servido en taza?",
           "No importa, lo tomo aquí; ya pediré otro para llevar."
         ]
       ]
@@ -1120,8 +1120,8 @@ const rows = {
         "¿Qué preguntas?",
         [
           "¿Es de cuero o de tela?",
-          "¿Es de mañana o de noche?",
-          "¿Es de ida o de vuelta?"
+          "¿Es grande o pequeña?",
+          "¿Es nueva o antigua?"
         ]
       ],
       [
@@ -1160,8 +1160,8 @@ const rows = {
         "¿Qué preguntas?",
         [
           "¿Este televisor funciona?",
-          "¿Este televisor es una radio?",
-          "¿Este televisor tiene ruedas?"
+          "¿Este televisor tiene sonido?",
+          "¿Este televisor es de los años sesenta?"
         ]
       ],
       [

@@ -156,7 +156,6 @@ test('all people and museum objects retain their identities and offer three cont
 
 test('the texts read like one evening: no repeated questions, neutral tú, no stock phrasing', () => {
   const texts = learnerText();
-  const asks = allActivities().flatMap(({ activity }) => [activity.prompt, activity.ask, activity.ask2, activity.task, activity.task2, ...(activity.followUps ?? []), ...(activity.options ?? []).map(item => item.ask)]).filter(Boolean);
   const personal = allActivities().map(({activity}) => activity.close);
   assert.equal(new Set(personal).size, personal.length, 'each interaction has its own personal question');
   assert.ok(texts.filter(text => /¿Qué harías\?/.test(text)).length <= 1, '«¿Qué harías?» is not the default question');
