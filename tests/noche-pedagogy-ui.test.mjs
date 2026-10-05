@@ -44,3 +44,18 @@ for (const level of ['A1','B2','C1']) test(`${level}: real rendered controls enf
     } finally { await act(()=>root.unmount()); }
   }
 });
+
+test('level arrow keys move focus after the React event has finished', async () => {
+  const frames = [];
+  window.requestAnimationFrame = callback => { frames.push(callback); return frames.length; };
+  const root = createRoot(document.getElementById('root'));
+  try {
+    await act(() => root.render(React.createElement(compiled.exports.default, { initial: engine.initialState('A1') })));
+    const first = document.querySelector('[data-level="A1"]');
+    first.focus();
+    await act(() => first.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true })));
+    assert.equal(document.querySelector('[data-level="A2"]').getAttribute('aria-checked'), 'true');
+    assert.doesNotThrow(() => frames.splice(0).forEach(callback => callback()));
+    assert.equal(document.activeElement.dataset.level, 'A2');
+  } finally { await act(() => root.unmount()); }
+});

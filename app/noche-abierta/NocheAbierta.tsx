@@ -345,9 +345,10 @@ function LevelPicker({ level, onChange, compact = false }: { level: Level; onCha
     const step = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
     if (!step) return;
     event.preventDefault();
+    const group = event.currentTarget;
     const next = LEVELS[(LEVELS.indexOf(level) + step + LEVELS.length) % LEVELS.length];
     onChange(next);
-    window.requestAnimationFrame(() => (event.currentTarget.querySelector(`[data-level="${next}"]`) as HTMLElement | null)?.focus());
+    window.requestAnimationFrame(() => (group.querySelector(`[data-level="${next}"]`) as HTMLElement | null)?.focus());
   };
   const group = <div className="na-levels" role="radiogroup" aria-label="Nivel" onKeyDown={onKey}>
     {LEVELS.map(item => <button key={item} type="button" role="radio" data-level={item} aria-checked={item === level} tabIndex={item === level ? 0 : -1}
