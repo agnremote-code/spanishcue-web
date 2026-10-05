@@ -18,8 +18,8 @@ const built = await build({entryPoints:['app/noche-abierta/NocheAbierta.tsx'],bu
   b.onResolve({filter:/^next\/link$/},()=>({path:'link',namespace:'stub'}));
   b.onLoad({filter:/.*/,namespace:'stub'},()=>({contents:"import React from 'react';export default function Link(p){return <a {...p}/>}",loader:'jsx',resolveDir:process.cwd()}));
 }}]});
-const module = {exports:{}};
-new Function('require','module','exports',built.outputFiles[0].text)(require,module,module.exports);
+const compiled = {exports:{}};
+new Function('require','module','exports',built.outputFiles[0].text)(require,compiled,compiled.exports);
 
 for (const level of ['A1','B2','C1']) test(`${level}: real rendered controls enforce choice then personal speaking in five places`, async () => {
   for (const [place,id] of [['cafe','cafe-alla'],['plaza','kenji'],['bar','caro'],['museo','foto'],['taxi','taxi-cortado']]) {
@@ -27,7 +27,7 @@ for (const level of ['A1','B2','C1']) test(`${level}: real rendered controls enf
     const expected=engine.currentView(initial);
     const root=createRoot(document.getElementById('root'));
     try {
-      await act(()=>root.render(React.createElement(module.exports.default,{initial})));
+      await act(()=>root.render(React.createElement(compiled.exports.default,{initial})));
       assert.equal(document.querySelector('.na-card').dataset.beat,'choose');
       assert.equal(document.querySelectorAll('.na-options button').length,3);
       assert.equal(document.querySelector('[aria-label="Pregunta siguiente"]').disabled,true);

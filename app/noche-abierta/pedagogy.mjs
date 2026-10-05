@@ -733,7 +733,7 @@ const rows = {
         [
           "Disculpa, yo estaba esperando antes. La fila empieza allí.",
           "Adelante, no estoy esperando para pedir.",
-          "Como te has puesto delante, voy a empujarte."
+          "Pasa tú primero; todavía no sé qué pedir."
         ]
       ],
       [
@@ -802,7 +802,7 @@ const rows = {
         [
           "¿Nos vemos mañana?",
           "Te espero aquí hoy.",
-          "Nos vemos el año pasado."
+          "¿Nos vemos la semana que viene?"
         ]
       ],
       [
@@ -1089,8 +1089,8 @@ const rows = {
         "¿Qué le pides al personal?",
         [
           "¿Tienen una transcripción que pueda leer?",
-          "¿Puedo abrir la vitrina sin permiso?",
-          "¿Me prestan un bolígrafo para corregir la carta?"
+          "¿Me permite fotografiar la carta desde aquí?",
+          "¿Puede contarme quién escribió la carta?"
         ]
       ],
       [
