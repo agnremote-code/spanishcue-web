@@ -7,7 +7,7 @@ function fixture(overrides = {}) {
     const path = new URL(url).pathname;
     if (overrides[path]) return overrides[path]();
     if (path === '/cuenta') return new Response(null, { status: 307, headers: { location: '/ingresar?next=/cuenta' } });
-    if (path === '/tablero-de-eso-si-hablo') return new Response(null, { status: 302, headers: { location: '/acceso' } });
+    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta') return new Response(null, { status: 302, headers: { location: '/acceso' } });
     if (path.startsWith('/audio/')) return new Response('Forbidden', { status: 403 });
     if (path === '/api/students') return Response.json({ error: 'unauthorized' }, { status: 401, headers: { 'cache-control': 'private, no-store' } });
     if (path === '/api/auth/verification-email') return Response.json({ code: 'INVALID_SESSION' }, { status: 401 });
@@ -21,6 +21,16 @@ function fixture(overrides = {}) {
 }
 test('valid 307 and 302 protection plus bounded invalid-token checks pass', async () => {
   assert.ok((await runSmoke('https://spanishcue.com', fixture())).length >= 9);
+});
+test('the three reviewed Noche level URLs fail smoke if any deployed route breaks', async () => {
+  for (const level of ['A1', 'B2', 'C1']) {
+    const normal = fixture();
+    await assert.rejects(() => runSmoke('https://spanishcue.com', (url, options) => {
+      const parsed = new URL(url);
+      return parsed.pathname === '/noche-abierta' && parsed.searchParams.get('level') === level
+        ? new Response('Worker error', { status: 500 }) : normal(url, options);
+    }));
+  }
 });
 test('anonymous session status cannot report authentication or be cached', async () => {
   for(const response of [

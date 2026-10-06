@@ -24,6 +24,9 @@ export async function runSmoke(origin, fetcher = fetch) {
   assert.match(await (await check("/la-fabrica-de-los-nombres", 200)).text(), /Fábrica|Fábrica de los Nombres|fabrica-de-los-nombres/i);
   await protectedRedirect("/cuenta", "/ingresar");
   await protectedRedirect("/tablero-de-eso-si-hablo", "/acceso");
+  for (const level of ["A1", "B2", "C1"]) {
+    await protectedRedirect(`/noche-abierta?level=${level}`, "/acceso");
+  }
   await check("/audio/habitacion-508/release-smoke.mp3", 403);
   const students = await check("/api/students", 401);
   assert.match(students.headers.get("cache-control") || "", /no-store/i);

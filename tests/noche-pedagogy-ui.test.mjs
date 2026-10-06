@@ -44,3 +44,33 @@ for (const level of ['A1','B2','C1']) test(`${level}: real rendered controls enf
     } finally { await act(()=>root.unmount()); }
   }
 });
+
+test('level arrow keys move focus after the React event has finished', async () => {
+  const frames = [];
+  window.requestAnimationFrame = callback => { frames.push(callback); return frames.length; };
+  const root = createRoot(document.getElementById('root'));
+  try {
+    await act(() => root.render(React.createElement(compiled.exports.default, { initial: engine.initialState('A1') })));
+    const first = document.querySelector('[data-level="A1"]');
+    first.focus();
+    await act(() => first.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true })));
+    assert.equal(document.querySelector('[data-level="A2"]').getAttribute('aria-checked'), 'true');
+    assert.doesNotThrow(() => frames.splice(0).forEach(callback => callback()));
+    assert.equal(document.activeElement.dataset.level, 'A2');
+  } finally { await act(() => root.unmount()); }
+});
+
+test('tablet header uses the compact level picker and keeps all levels selectable', async () => {
+  const matchMedia = window.matchMedia;
+  window.matchMedia = query => ({ matches: query === '(max-width: 1200px)', addEventListener(){}, removeEventListener(){} });
+  const root = createRoot(document.getElementById('root'));
+  try {
+    await act(() => root.render(React.createElement(compiled.exports.default, { initial: engine.startExploring(engine.initialState('A1')) })));
+    const picker = document.querySelector('.na-top .na-levels-compact button');
+    assert.ok(picker, 'compact header leaves room for the lesson title');
+    await act(() => picker.click());
+    assert.equal(document.querySelectorAll('.na-levels-pop [role="radio"]').length, 6);
+    await act(() => document.querySelector('.na-levels-pop [data-level="C1"]').click());
+    assert.equal(document.querySelector('.na-levels-compact button').textContent, 'C1');
+  } finally { await act(() => root.unmount()); window.matchMedia = matchMedia; }
+});
