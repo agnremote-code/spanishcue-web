@@ -1,6 +1,6 @@
 export const LEVELS = ['A1','A2','B1','B2','C1','C2'];
 export const CATEGORIES = [
- {id:'sobre-ti',name:'Hongos de ti',short:'Sobre ti',color:'#59879d',ecology:'Un claro de musgo y hongos azules'},
+ {id:'sobre-ti',name:'Claro de las historias',short:'Sobre ti',color:'#59879d',ecology:'Un claro de musgo y hongos azules'},
  {id:'vida-real',name:'Jardín cotidiano',short:'Vida real',color:'#789a57',ecology:'Helechos, raíces y agua fresca'},
  {id:'elige',name:'Las dos sendas',short:'Elige',color:'#c9a05b',ecology:'Dos puentes entre sombreros dorados'},
  {id:'opinion',name:'Arboleda de las voces',short:'Opina',color:'#b66b42',ecology:'Hongos de cobre bajo el sol'},
