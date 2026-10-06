@@ -37,7 +37,7 @@ async function moveOutOfPublicBuild(source, destination) {
 const built = await build({
   stdin: {
     contents:
-      'export {lessons} from "./app/lesson-catalog"; export {freeAudioPrefixes,isFreeLesson} from "./app/access-policy";',
+      'export {lessons} from "./app/lesson-catalog"; export {freeAudioPrefixes,isFreeLesson} from "./app/access-policy"; export {isFreeAutoestudioAudio} from "./app/autoestudio/audio-access";',
     resolveDir: root,
   },
   bundle: true,
@@ -158,7 +158,7 @@ for (const file of await walk(audioRoot)) {
   const relativePath = relative(audioRoot, file).split("\\").join("/");
   const [prefix] = relativePath.split("/");
   const publicPath = `/audio/${relativePath}`;
-  if (policy.freeAudioPrefixes.has(prefix)) {
+  if (policy.freeAudioPrefixes.has(prefix) || policy.isFreeAutoestudioAudio(publicPath)) {
     publicMediaFiles.push(publicPath);
     continue;
   }
@@ -259,7 +259,7 @@ await writeFile(
 );
 
 const authRuntime = await build({
-  entryPoints: ["worker/private-asset-auth.ts"],
+  stdin: { contents: 'export {hasFullLibraryAccess} from "./worker/private-asset-auth"; export {hasAutoestudioAudioAccess} from "./worker/autoestudio-audio-auth";', resolveDir: root },
   bundle: true,
   format: "esm",
   platform: "browser",
@@ -279,7 +279,7 @@ export * from './app-worker.js';
 import privateAssets from './private-client-assets.js';
 import privateMedia from './private-media-assets.js';
 import routedWebp from './public-webp-assets.js';
-import {hasFullLibraryAccess} from './private-access-runtime.js';
+import {hasFullLibraryAccess,hasAutoestudioAudioAccess} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
 const base64Bytes=value=>Uint8Array.from(atob(value),character=>character.charCodeAt(0));
@@ -336,7 +336,7 @@ export default {async fetch(request,env,ctx){
  let path;try{path=decodeURIComponent(new URL(request.url).pathname)}catch{return new Response('Bad request',{status:400})}
  const media=privateMedia.assets[path];
  if(Object.hasOwn(privateAssets,path)||media){
-  if(!await hasFullLibraryAccess(request,env))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
+  if(!await hasFullLibraryAccess(request,env)&&!(media&&await hasAutoestudioAudioAccess(request,env)))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
   if(request.method!=='GET'&&request.method!=='HEAD'){const headers=privateHeaders();headers.set('Allow','GET, HEAD');return new Response('Method not allowed',{status:405,headers});}
   if(media)return servePrivateMedia(request,env,media);
   return new Response(request.method==='HEAD'?null:privateAssets[path],{headers:{'Content-Type':'text/javascript; charset=utf-8','Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});

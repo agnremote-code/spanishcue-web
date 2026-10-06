@@ -9,6 +9,7 @@ import {
 } from "../app/access-policy";
 import { verifyShareSession, redeem, privateHeaders } from "../app/autoestudio/share/server";
 import { applyShareHeaders, shareAllowsPath } from "./autoestudio-access";
+import { isFreeAutoestudioAudio, shareAllowsAudio } from "../app/autoestudio/audio-access";
 import { lessons } from "../app/lesson-catalog";
 import { isPremiumBoardPath } from "../app/boards/access";
 import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";
@@ -195,7 +196,7 @@ const app = {
     const shareApi=pathname.startsWith('/api/autoestudio/');
     const premiumAutoestudio=isPremiumAutoestudioPath(pathname);
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
-    const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
+    const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix) && !isFreeAutoestudioAudio(pathname));
     const administrative=(pathname==='/admin'||pathname.startsWith('/admin/'))||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
     const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
     const verifiedUser=identityAware&&firebaseTokenFromHeaders(routedHeaders)
@@ -206,7 +207,7 @@ const app = {
       ? await resolveFirebaseAccount(env.DB,verifiedUser).catch(()=>null)
       : null;
     const verifiedHeaders=authenticatedRequestHeaders(routedHeaders,verifiedUser,account,ownerIdentity);
-    const shareSession=(autoestudio || shareApi)
+    const shareSession=(autoestudio || shareApi || audioPrefix === "autoestudio")
       ? await verifyShareSession(routedHeaders.get("cookie"),env).catch(()=>null)
       : null;
     applyShareHeaders(verifiedHeaders,shareSession);
@@ -214,7 +215,7 @@ const app = {
     const owner=ownerFromHeaders(verifiedHeaders);
     const fullAccess=fullAccessFromHeaders(verifiedHeaders);
     const verifiedLocale=localeFromHeaders(verifiedHeaders);
-    if (premiumAudio && !fullAccess) {
+    if (premiumAudio && !fullAccess && !shareAllowsAudio(pathname, shareSession)) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
@@ -258,6 +259,7 @@ const app = {
     const publicCacheAllowed = request.method === 'GET'
       && response.ok
       && !requestedLocale
+      && !premiumAudio
       && !safeResponse.headers.has('Set-Cookie');
     safeResponse.headers.set(
       'Cache-Control',

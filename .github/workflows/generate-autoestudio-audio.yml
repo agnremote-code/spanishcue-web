@@ -1,0 +1,62 @@
+name: Generate finite Autoestudio MP3 assets
+
+# One task branch only; never generates on playback, deployment, main or student requests.
+on:
+  push:
+    branches: [codex/autoestudio-neural-mp3-20261006]
+    paths: [.github/workflows/generate-autoestudio-audio.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-autoestudio-neural-assets
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install generation dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          npm run install:ci
+          python -m pip install edge-tts==7.2.8
+      - name: Generate and decode every required MP3
+        run: python scripts/generate-autoestudio-audio.py --jobs 12
+      - name: Verify complete curriculum coverage and audio quality
+        run: |
+          node --test tests/autoestudio-neural-assets.test.mjs tests/autoestudio-audio-access.test.mjs
+          python tests/autoestudio-audio-validation_test.py
+          python scripts/validate-autoestudio-audio.py
+      - name: Commit static assets to the same task branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/audio/autoestudio app/autoestudio/audio-manifest.json app/autoestudio/audio-provenance.json app/autoestudio/audio-access.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Generate and validate all finite Autoestudio neural MP3 assets'
+          git push origin HEAD:${GITHUB_REF_NAME}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: autoestudio-neural-assets
+          path: |
+            public/audio/autoestudio
+            app/autoestudio/audio-manifest.json
+            app/autoestudio/audio-provenance.json
+            app/autoestudio/audio-access.json
+            .sites-runtime/autoestudio-audio
+          include-hidden-files: true
+          retention-days: 7

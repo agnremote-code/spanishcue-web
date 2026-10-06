@@ -21,7 +21,7 @@ import {
   VocabularySection,
   WritingSection,
 } from "./engine/Sections";
-import { stopAudio, warmVoices, type AudioMap } from "./engine/speech";
+import { stopAudio, type AudioMap } from "./engine/speech";
 import { completeSection, isModuleComplete, recordQuiz, saveDraft, startModule, visitSection } from "./progress/model";
 import type { ShareSession } from "./progress/server-adapter";
 import ProgressNotice from "./progress/ProgressNotice";
@@ -52,7 +52,6 @@ export default function ModulePlayer({ module, level, objectives, previous, next
   const progress = state.modules[module.id];
 
   useEffect(() => {
-    warmVoices();
     return () => stopAudio();
   }, []);
 
