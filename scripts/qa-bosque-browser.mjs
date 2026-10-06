@@ -79,20 +79,41 @@ async function travel(page,id){
 }
 
 try{
- browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE_PATH?{executablePath:process.env.CHROMIUM_EXECUTABLE_PATH}:{}),args:JSON.parse(process.env.CHROMIUM_ARGS||'[]')});
  const sizes=[['desktop',1440,900],['laptop',1366,768],['tablet',768,1024],['mobile',390,844],['small',320,700],['landscape',844,390]];
  for(const [size,width,height] of sizes){
   if(process.env.BOSQUE_QA_FAST&&size!=='desktop')continue;
+  if(process.env.BOSQUE_QA_SIZES&&!process.env.BOSQUE_QA_SIZES.split(',').includes(size))continue;
+  browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE_PATH?{executablePath:process.env.CHROMIUM_EXECUTABLE_PATH}:{}),args:JSON.parse(process.env.CHROMIUM_ARGS||'[]')});
   const context=await browser.newContext({viewport:{width,height},hasTouch:width<=768||size==='landscape',isMobile:width<=768||size==='landscape',reducedMotion:'no-preference'});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(`${size}: ${e.message}`));
-  if(process.env.BOSQUE_QA_REFUGE){const z=ZONES.find(z=>z.id===process.env.BOSQUE_QA_REFUGE);await page.addInitScript(p=>localStorage.setItem('spanishcue:bosque:world:v1',JSON.stringify({version:1,position:p,checkpoint:p})),{x:z.x,y:z.y,z:z.z});}
+  if(process.env.BOSQUE_QA_REFUGE||process.env.BOSQUE_QA_FINISH){const z=ZONES.find(z=>z.id===(process.env.BOSQUE_QA_REFUGE||'sobre-ti'));await page.addInitScript(p=>localStorage.setItem('spanishcue:bosque:world:v1',JSON.stringify({version:1,position:p,checkpoint:p})),{x:z.x,y:z.y,z:z.z});}
   await page.goto(`${origin}/?level=B1`);
   await page.getByRole('button',{name:'Entrar en el bosque'}).click();
   await page.waitForFunction(()=>window.__forestQA?.snapshot);
   await page.waitForTimeout(800);
   await page.screenshot({path:resolve(out,`${size}-entrance.png`)});
   console.log(JSON.stringify({size,stage:'entrance',state:await page.evaluate(()=>window.__forestQA.snapshot())}));
-  if(process.env.BOSQUE_QA_FAST){await context.close();continue;}
+  if(process.env.BOSQUE_QA_FINISH){
+   await layout(page,`${size}: refuge checkpoint`);
+   await page.locator('.bfg-world-converse').click();
+   const dialog=page.getByRole('dialog',{name:'Conversación del bosque'});await dialog.waitFor();
+   const bounds=await dialog.evaluate(e=>{const r=e.getBoundingClientRect();return {fits:e.scrollWidth<=e.clientWidth+1,x:r.x,y:r.y,right:r.right,bottom:r.bottom};});
+   assert.ok(bounds.fits&&bounds.x>=0&&bounds.y>=0&&bounds.right<=width&&bounds.bottom<=height,`${size}: dialogue bounds`);
+   await page.screenshot({path:resolve(out,`${size}-dialogue.png`)});
+   await page.getByRole('button',{name:'Volver al bosque',exact:true}).click();
+   assert.doesNotMatch(await page.locator('.bfg-world-converse').innerText(),/Volver/);
+   await page.locator('.bfg-world-converse').click();await page.getByRole('button',{name:'Marcar como hablada'}).click();
+   await page.waitForFunction(()=>document.querySelector('.bfg-world-location')?.textContent.includes('Destino: Vida real'));
+   await layout(page,`${size}: onward destination`);
+   await page.screenshot({path:resolve(out,`${size}-next-destination.png`)});
+   await steer(page,{x:15,z:-1.8});await page.waitForFunction(()=>Math.abs(window.__forestQA.snapshot().player.z+1.8)<.2);await stop(page);await layout(page,`${size}: close to sign`);
+   await page.getByRole('button',{name:'Cambiar distancia de cámara'}).click();
+   const canvas=await page.locator('.bfg-world-canvas canvas').boundingBox();
+   await page.mouse.move(canvas.x+canvas.width*.5,canvas.y+canvas.height*.5);await page.mouse.down();await page.mouse.move(canvas.x+canvas.width*.5+100,canvas.y+canvas.height*.5+20,{steps:10});await page.mouse.up();await page.waitForTimeout(400);
+   await layout(page,`${size}: camera orbit by sign`);await page.screenshot({path:resolve(out,`${size}-sign-orbit.png`)});
+   results.push({size,width,height,cases:5,passed:true});console.log(JSON.stringify(results.at(-1)));await browser.close();continue;
+  }
+  if(process.env.BOSQUE_QA_FAST){await browser.close();continue;}
   await layout(page,`${size}: entrance`);
   let passed=1;
   if(width<=768||size==='landscape'){
@@ -127,14 +148,15 @@ try{
    await page.waitForFunction(()=>!window.__forestQA.snapshot().player.grounded);await page.waitForFunction(()=>window.__forestQA.snapshot().player.grounded);passed++;
   }
   await page.getByRole('button',{name:'Abrir mapa del bosque',exact:true}).click();await page.getByRole('dialog',{name:'Mapa del bosque',exact:true}).waitFor();await page.screenshot({path:resolve(out,`${size}-map.png`)});await page.keyboard.press('Escape');passed++;
-  await page.getByRole('button',{name:'Ampliar mapa: refugios, punto de regreso y posición'}).click();await page.getByRole('button',{name:'Cerrar mapa',exact:true}).click();passed++;
+  const minimap=page.getByRole('button',{name:'Ampliar mapa: refugios, punto de regreso y posición'});
+  if(await minimap.isVisible()){await minimap.click();await page.getByRole('button',{name:'Cerrar mapa',exact:true}).click();}else{assert.equal(size,'landscape');assert.ok(await page.getByRole('button',{name:'Abrir mapa del bosque',exact:true}).isVisible());}passed++;
   await page.getByRole('button',{name:'Cambiar distancia de cámara'}).click();assert.equal(await page.getByRole('button',{name:'Cambiar distancia de cámara'}).getAttribute('aria-pressed'),'true');await page.waitForTimeout(300);await layout(page,`${size}: wide camera`);await page.keyboard.press('v');passed++;
   const beforeFall=(await state(page)).player;
   await steer(page,{x:95,z:95});await page.waitForFunction(n=>window.__forestQA.snapshot().player.respawns>n,beforeFall.respawns,{timeout:45000});await stop(page);
   assert.ok((await state(page)).player.respawns>beforeFall.respawns);await page.waitForTimeout(300);await layout(page,`${size}: recovery`);passed++;
   await page.screenshot({path:resolve(out,`${size}-recovery.png`)});
   results.push({size,width,height,cases:passed,passed:true});console.log(JSON.stringify(results.at(-1)));
-  await context.close();
+  await browser.close();
  }
  assert.deepEqual(errors,[]);
 }finally{await writeFile(resolve(out,'results.json'),JSON.stringify({results,errors},null,2));await browser?.close();server.close();console.log(`Evidence: ${out}`);}

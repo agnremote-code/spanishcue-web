@@ -169,10 +169,11 @@ export default function World3D(props: WorldProps) {
 
   const updateJoy=(event:ReactPointerEvent<HTMLDivElement>)=>{if(joyPointer.current!==event.pointerId||props.paused||mapOpen)return;const rect=event.currentTarget.getBoundingClientRect();const x=(event.clientX-rect.left-rect.width/2)/(rect.width*.33),y=(event.clientY-rect.top-rect.height/2)/(rect.height*.33),length=Math.max(1,Math.hypot(x,y));if(api.current){api.current.joy.x=x/length;api.current.joy.y=y/length;}if(stick.current)stick.current.style.transform=`translate(${x/length*30}px, ${y/length*30}px)`;};
   const endJoy=()=>{joyPointer.current=null;if(api.current){api.current.joy.x=0;api.current.joy.y=0;}if(stick.current)stick.current.style.transform='translate(0, 0)';};
+  const pendingRefuge=activeZone&&!props.visited.includes(activeZone);
   return <div className={`bfg-world${props.paused||mapOpen?' bfg-world-paused':''}`}>
     <div className="bfg-world-canvas" ref={host}/>
     <div className="bfg-world-vignette"/>
-    <div className="bfg-world-location"><span>{place}</span><strong>{!activeZone&&<span className="bfg-world-bearing" aria-hidden="true" style={{transform:`rotate(${destination.bearing}rad)`}}>↑</span>}{activeZone?'Refugio de conversación':`Destino: ${destination.name}`}</strong><small>{activeZone?ZONES.find(z=>z.id===activeZone)?.short:`${destination.distance} m · salta entre los hongos`}</small></div>
+    <div className="bfg-world-location"><span>{place}</span><strong>{!pendingRefuge&&<span className="bfg-world-bearing" aria-hidden="true" style={{transform:`rotate(${destination.bearing}rad)`}}>↑</span>}{pendingRefuge?'Refugio de conversación':`Destino: ${destination.name}`}</strong><small>{pendingRefuge?ZONES.find(z=>z.id===activeZone)?.short:`${destination.distance} m · salta entre los hongos`}</small></div>
     <div className="bfg-world-tools"><button onClick={()=>setMapOpen(v=>!v)} aria-label="Abrir mapa del bosque" aria-expanded={mapOpen}>Mapa <kbd>M</kbd></button><button onClick={()=>api.current?.view()} aria-label="Cambiar distancia de cámara" aria-pressed={wideView}>Cámara <kbd>V</kbd></button></div>
     <button className="bfg-world-minimap" onClick={()=>setMapOpen(true)} aria-label="Ampliar mapa: refugios, punto de regreso y posición"><canvas width={190} height={190} ref={mapCanvas}/><span>▲ Tú · ● Refugios</span></button>
     <div className="bfg-world-interaction">

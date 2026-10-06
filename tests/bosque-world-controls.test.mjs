@@ -36,7 +36,7 @@ test('landing does not open a dialog; E and the button honor first/repeat and pa
   await t.advance();assert.deepEqual(t.calls,[]);assert.match(document.querySelector('.bfg-world-converse').textContent,/Conversar/);assert.doesNotMatch(document.querySelector('.bfg-world-converse').textContent,/Volver/);
   await click('.bfg-world-converse');assert.deepEqual(t.calls,['sobre-ti']);assert.equal(document.activeElement.tagName,'CANVAS');
   await t.render({paused:true});await key('KeyE');assert.equal(t.calls.length,1);
-  await t.render({paused:false,visited:['sobre-ti']});await t.advance();assert.match(document.querySelector('.bfg-world-converse').textContent,/Volver a conversar/);
+  await t.render({paused:false,visited:['sobre-ti']});await t.advance();assert.match(document.querySelector('.bfg-world-converse').textContent,/Volver a conversar/);assert.match(document.querySelector('.bfg-world-location').textContent,/Destino: Vida real/);
   await key('KeyE');assert.equal(t.calls.length,2);await key('KeyE','keyup');
  }finally{await t.stop();}
 });
