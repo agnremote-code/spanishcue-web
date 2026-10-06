@@ -77,7 +77,11 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
     if(zone){
       const index=ZONES.indexOf(zone),previous=index?ZONES[index-1]:{x:0,z:0};
       const facing=Math.atan2(previous.x-p.x,previous.z-p.z);
-      const signRoot=new THREE.Group();signRoot.position.set(p.x+Math.cos(facing)*p.r*.63,p.y,p.z-Math.sin(facing)*p.r*.63);signRoot.rotation.y=facing;root.add(signRoot);
+      // Choose the shoulder with the most clearance from neighbouring caps.
+      const shoulders=[-1,1].map(side=>({x:p.x+side*Math.cos(facing)*p.r*.63,z:p.z-side*Math.sin(facing)*p.r*.63}));
+      const clearance=(a:{x:number;z:number})=>Math.min(...PLATFORMS.filter(other=>other.id!==p.id).map(other=>Math.hypot(a.x-other.x,a.z-other.z)-other.r));
+      const anchor=shoulders.sort((a,b)=>clearance(b)-clearance(a))[0];
+      const signRoot=new THREE.Group();signRoot.position.set(anchor.x,p.y,anchor.z);signRoot.rotation.y=facing;root.add(signRoot);
       for(const x of [-1.2,1.2]){const post=new THREE.Mesh(new THREE.CylinderGeometry(.07,.1,1.85,7),barkMat);post.position.set(x,.925,0);post.castShadow=!low;signRoot.add(post);solids.push(post);}
       const board=new THREE.Mesh(new THREE.BoxGeometry(2.85,.9,.13),barkMat);board.position.y=1.7;board.castShadow=!low;signRoot.add(board);solids.push(board);
       const canvas=document.createElement('canvas');canvas.width=768;canvas.height=240;const c=canvas.getContext('2d')!;
@@ -111,7 +115,10 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   }
   const dummy=new THREE.Object3D();
   const grassCount=low?1400:4000;
-  const grassGeometry=new THREE.PlaneGeometry(.28,1.3);grassGeometry.translate(0,.65,0);
+  // Tapered, bent blades read as grass rather than tall rectangular cards.
+  const grassGeometry=new THREE.BufferGeometry();
+  grassGeometry.setAttribute('position',new THREE.Float32BufferAttribute([-.07,0,0,.07,0,0,-.05,.28,.035,.05,.28,.035,-.02,.49,.09,.02,.49,.09,.035,.66,.15],3));
+  grassGeometry.setIndex([0,1,2,1,3,2,2,3,4,3,5,4,4,5,6]);grassGeometry.computeVertexNormals();
   const grassMaterial=new THREE.MeshStandardMaterial({color:'#657d42',side:THREE.DoubleSide,roughness:1});
   const grass=new THREE.InstancedMesh(grassGeometry,grassMaterial,grassCount);grass.receiveShadow=true;
   for(let i=0;i<grassCount;i++){const a=random()*Math.PI*2,r=Math.sqrt(random())*64;dummy.position.set(Math.cos(a)*r,0,Math.sin(a)*r);dummy.rotation.set((random()-.5)*.3,random()*Math.PI, (random()-.5)*.25);dummy.scale.setScalar(.35+random()*.8);dummy.updateMatrix();grass.setMatrixAt(i,dummy.matrix);grass.setColorAt(i,new THREE.Color().setHSL(.20+random()*.08,.25+random()*.2,.2+random()*.15));}root.add(grass);
