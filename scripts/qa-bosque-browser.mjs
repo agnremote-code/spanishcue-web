@@ -99,6 +99,7 @@ try{
    const dialog=page.getByRole('dialog',{name:'Conversación del bosque'});await dialog.waitFor();
    const bounds=await dialog.evaluate(e=>{const r=e.getBoundingClientRect();return {fits:e.scrollWidth<=e.clientWidth+1,x:r.x,y:r.y,right:r.right,bottom:r.bottom};});
    assert.ok(bounds.fits&&bounds.x>=0&&bounds.y>=0&&bounds.right<=width&&bounds.bottom<=height,`${size}: dialogue bounds`);
+   const clearLabel=await dialog.evaluate(e=>{const a=e.querySelector('.bh-dialog-close').getBoundingClientRect(),b=e.querySelector('.bh-prompt-label').lastElementChild.getBoundingClientRect();return Math.min(a.right,b.right)<=Math.max(a.left,b.left)||Math.min(a.bottom,b.bottom)<=Math.max(a.top,b.top);});assert.ok(clearLabel,`${size}: close button overlaps level`);
    await page.screenshot({path:resolve(out,`${size}-dialogue.png`)});
    await page.getByRole('button',{name:'Volver al bosque',exact:true}).click();
    assert.doesNotMatch(await page.locator('.bfg-world-converse').innerText(),/Volver/);
