@@ -74,3 +74,13 @@ The catalogue contract in `level-coverage.ts` requires each future conversation 
 - The shared selector tests preserve query/hash/history and isolate activity state. TypeScript, lint, neutral-Spanish and exact English-copy guards cover integration.
 
 Local browser screenshot checks were unavailable because browser-binary downloads failed. Responsive behavior was checked in CSS and DOM/source tests; this is a limitation of local validation, not a claim of visual verification.
+
+## Validated delivery checkpoint
+
+- 551 pre-build regression tests passed, including 153 historical conversation tests and 100 all-level/native interaction tests.
+- Protected production build and `validate:artifact` passed; 85 private client modules and 193 premium media files remain protected.
+- 359 Worker integration tests passed, including anonymous/free/paid route behavior and premium client/media protection.
+- TypeScript, ESLint, neutral-Spanish, English-copy and whitespace checks passed.
+- The historical Noche tests now assert seven levels and use the published family catalogue. A0 bilingual text is excluded from the old Spanish-only byte-length proxy for complexity; the original A1–C2 comparison remains.
+
+The task branch is preserved remotely. PR creation, CI merge and production publication are pending the repository overlap rule: draft SEO PR #126 also edits `app/clase/[id]/page.tsx` and `package.json`. No changes were made to that branch or to production.

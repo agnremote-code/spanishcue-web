@@ -613,8 +613,8 @@ const textsOf = bundle => {
   return out;
 };
 
-test('one world, six levels: same places, mechanics and ids, different language work', () => {
-  assert.deepEqual(levels.LEVELS, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+test('one world, seven levels: same places, mechanics and ids, different language work', () => {
+  assert.deepEqual(levels.LEVELS, ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
   assert.equal(levels.DEFAULT_LEVEL, 'B1');
   const base = levels.contentFor('B1');
   assert.equal(base.LOCATIONS, engine.LOCATIONS, 'B1 is the base content');
@@ -648,7 +648,8 @@ test('every level asks its own questions, in neutral tú, without mixing levels'
   }
   // The restaurant bill, scaled: the same scene asks for more as the level goes up.
   const restaurant = level => JSON.stringify(levels.contentFor(level).LOCATIONS.find(item => item.id === 'restaurante'));
-  const lengths = levels.LEVELS.map(level => restaurant(level).length);
+  // A0 contains full English support; byte length is not a complexity metric for it.
+  const lengths = ['A1','A2','B1','B2','C1','C2'].map(level => restaurant(level).length);
   assert.ok(lengths[0] < lengths[2] && lengths[2] < lengths[5], `the restaurant grows with the level: ${lengths}`);
 });
 
@@ -684,22 +685,22 @@ test('switching level keeps the walk and resets only the open activity', () => {
   assert.equal(engine.isValidState({ ...switched, level: 'D1' }), false);
 });
 
-test('the title screen and the HUD carry the level picker; the library lists one A1–C2 card', async () => {
+test('the title screen and the HUD carry the level picker; the library lists one A0–C2 card', async () => {
   const NocheAbierta = await component('app/noche-abierta/NocheAbierta.tsx');
   const title = renderToString(React.createElement(NocheAbierta));
   assert.match(title, /class="na-title-screen/);
   assert.match(title, /Empezar la noche/);
   assert.match(title, /\/brand\/mascot\/kneeling\.webp/, 'the official mascot is the hero');
-  assert.equal((title.match(/role="radio"/g) ?? []).length, 6);
+  assert.equal((title.match(/role="radio"/g) ?? []).length, 7);
   assert.match(title, /data-level="B1" aria-checked="true"/, 'B1 by default');
   assert.doesNotMatch(title, /<select/, 'no plain select');
   assert.ok(existsSync('public/noche-abierta/mascot-wink.webp'));
-  const { lessons } = await catalog();
+  const { catalogLessons: lessons } = await catalog();
   const cards = lessons.filter(item => item.path === '/noche-abierta');
   assert.equal(cards.length, 1, 'one card');
   const [card] = cards;
   assert.deepEqual(card.levels, levels.LEVELS);
-  assert.equal(card.displayLevel, 'A1–C2');
+  assert.equal(card.displayLevel, 'A0–C2');
   assert.equal(card.category, 'Conversación');
   assert.equal(card.conversationMode, 'play');
   const { filterLessons } = await import('../app/library-filters.mjs');
