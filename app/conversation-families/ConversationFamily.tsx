@@ -14,11 +14,11 @@ function subscribe(onChange: () => void) {
     window.removeEventListener(levelEvent, onChange);
   };
 }
-export function ConversationFamily({ id, title, levels, defaultLevel, children }: {
-  id: string; title: string; levels: readonly CEFRLevel[]; defaultLevel: CEFRLevel;
-  children: (level: CEFRLevel) => ReactNode;
+export function ConversationFamily<const Level extends CEFRLevel>({ id, title, levels, defaultLevel, children, bilingual = false }: {
+  id: string; title: string; levels: readonly Level[]; defaultLevel: Level; bilingual?: boolean;
+  children: (level: Level) => ReactNode;
 }) {
-  const snapshot = useCallback(() => resolveConversationLevel({availableLevels: levels, defaultLevel}, new URLSearchParams(window.location.search).get('level')), [levels, defaultLevel]);
+  const snapshot = useCallback(() => resolveConversationLevel({availableLevels: levels, defaultLevel}, new URLSearchParams(window.location.search).get('level')) as Level, [levels, defaultLevel]);
   const level = useSyncExternalStore(subscribe, snapshot, () => defaultLevel);
   const changeLevel = (requested: string) => {
     window.history.pushState(null, '', conversationLevelUrl(window.location.href, {availableLevels: levels, defaultLevel}, requested));
@@ -26,9 +26,9 @@ export function ConversationFamily({ id, title, levels, defaultLevel, children }
   };
   return <div className="cf-family" data-conversation-family={id} data-level={level}>
     <div className="cf-level-bar">
-      <div className="cf-family-title"><span>CONVERSACIÓN</span><strong>{title}</strong></div>
+      <div className="cf-family-title"><span>{bilingual ? 'CONVERSACIÓN / CONVERSATION' : 'CONVERSACIÓN'}</span><strong>{title}</strong></div>
       <div className="cf-level-control" role="group" aria-label="Nivel de la conversación">
-        <span>Nivel</span>
+        <span>{bilingual ? 'Nivel / Level' : 'Nivel'}</span>
         {levels.map(item => <button type="button" key={item} aria-pressed={item === level} onClick={() => item !== level && changeLevel(item)}>{item}</button>)}
       </div>
       <span className="cf-sr-only" role="status">Nivel {level}</span>

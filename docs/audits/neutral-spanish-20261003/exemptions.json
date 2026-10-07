@@ -3990,6 +3990,114 @@
       "text": "Aprendí a usar… Me ayudó…",
       "category": "neutral-context",
       "reason": "A2 sentence support uses first-person preterite aprendí, not a regional imperative."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "Contrast vos, tú and usted without ranking varieties. What prestige judgements hide in “speaking well”?",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "En Argentina vas a escuchar: tú → vos; eres → sos; tienes → tenés; quieres → querés. Reconocerlo basta.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "In Argentina you will hear: tú → vos; eres → sos; tienes → tenés; quieres → querés. Recognition is enough.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "Opcional: «¿Vos querés mate?» = «¿Tú quieres mate?». Puedes responder «Sí, gracias» sin usar vos.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "Optional: “¿Vos querés mate?” = “¿Tú quieres mate?” (Would you like mate?). You can answer “Sí, gracias” (Yes, thank you) without using vos.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "Practica reconocer y, si quieres, usar el voseo: «Vos sos de…», «Vos tenés…», «¿Vos querés…?». Compara con tú.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "Vos does not imply disrespect. Variety, relationship and situation shape register; usted also exists.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "Vos no equivale a falta de respeto. Variedad, vínculo y situación influyen en el registro; usted también existe.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "«¿Tú quieres agua?» y «¿Vos querés agua?» expresan la misma pregunta. No tienes que cambiar tu variedad.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/data.ts",
+      "text": "“¿Tú quieres agua?” and “¿Vos querés agua?” ask the same question. You do not have to change your variety.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/lessons.ts",
+      "text": "Escucha «¿Vos querés mate?». Solo reconoce la oferta y responde. No necesitas usar vos.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/lessons.ts",
+      "text": "Listen to “¿Vos querés mate?” (Would you like mate?). Just recognise the offer and reply. You do not need to use vos.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/lessons.ts",
+      "text": "¿VOS QUERÉS? and ¿TÚ QUIERES? are two ways to ask the same thing here.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/lessons.ts",
+      "text": "¿VOS QUERÉS? y ¿TÚ QUIERES? son dos formas de preguntar lo mismo aquí.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/prompts.ts",
+      "text": "Compara «¿Tú quieres?» y «¿Vos querés?» en distintos vínculos. ¿La variedad determina por sí sola la formalidad?",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/prompts.ts",
+      "text": "Escucha «¿Vos querés mate?». Compáralo con «¿Tú quieres mate?». Responde usando la forma que prefieras.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/prompts.ts",
+      "text": "Interpreta un diálogo con «vos». Compara el efecto de reconocer una variedad y tratar de imitarla.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/country-atlas/prompts.ts",
+      "text": "Transforma «tú eres, tienes, quieres» en «vos sos, tenés, querés» para reconocerlas. Cuenta qué formas usas tú.",
+      "category": "regional-pedagogy",
+      "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
     }
   ]
 }

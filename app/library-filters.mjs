@@ -18,7 +18,7 @@ export function filterLessons(lessons, { level = 'Todos', category = 'Todas', qu
 export function availableLevels(lessons, category = 'Todas') {
   const present = new Set(lessons.filter(l => category === 'Todas' || l.category === category)
     .flatMap(l => [l.level, ...(l.levels || [])]));
-  return ['A1','A2','B1','B2','C1','C2'].filter(level => present.has(level));
+  return ['A0','A1','A2','B1','B2','C1','C2'].filter(level => present.has(level));
 }
 
 /** Return the exact lesson collection opened by a category/family action. */
@@ -64,7 +64,7 @@ export function familyLessonsForCategory(
 }
 
 /** Build short level shelves for the "Todos" view without changing catalog data. */
-export function groupLessonsByLevel(lessons, levels = ['A1','A2','B1','B2','C1','C2'], limit = 4) {
+export function groupLessonsByLevel(lessons, levels = ['A0','A1','A2','B1','B2','C1','C2'], limit = 4) {
   const displayedFamilies = new Set();
   return levels.flatMap(level => {
     const allMatching = filterLessons(lessons, { level });
