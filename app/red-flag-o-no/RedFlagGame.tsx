@@ -36,6 +36,7 @@ export default function RedFlagGame({ level }: { level: Level }) {
 }
 
 function RedFlagActivity({ level }: { level: Level }) {
+  const a0Text=(es:string,en:string)=>level==='A0'?`${es} / ${en}`:es;
   const config = useMemo(() => getLevelConfig(level), [level]);
   const [view, setView] = useState<View>("warmup");
   const [index, setIndex] = useState(0);
@@ -115,44 +116,44 @@ function RedFlagActivity({ level }: { level: Level }) {
   return (
     <main className={`rf-game${support ? " rf-a1" : c2 ? " rf-c1 rf-c2" : advanced ? " rf-c1" : ""}`} style={{ "--rf-accent": config.accent, "--rf-accent-text": config.accentText } as React.CSSProperties}>
       <header className="rf-header">
-        <Link href="/" aria-label="Volver a la biblioteca">
+        <Link href="/" aria-label={a0Text("Volver a la biblioteca","Back to the library")}>
           <SpanishCueBrand variant="compact" tone="dark" />
         </Link>
         <div className="rf-title-lockup">
-          <span>{localized ? "A JUGAR" : "MODO PLAY"}</span>
-          <strong>{localized ? "¿SEÑAL ROJA O VERDE?" : "RED FLAG O NO"}</strong>
+          <span>{localized ? a0Text("A JUGAR","LET’S PLAY") : "MODO PLAY"}</span>
+          <strong>{localized ? a0Text("¿SEÑAL ROJA O VERDE?","RED OR GREEN FLAG?") : "RED FLAG O NO"}</strong>
         </div>
-        <div className="rf-level">NIVEL {level}</div>
+        <div className="rf-level">{a0Text("NIVEL","LEVEL")} {level}</div>
       </header>
 
-      <nav className="rf-timeline" aria-label="Etapas de la clase">
+      <nav className="rf-timeline" aria-label={a0Text("Etapas de la clase","Lesson stages")}>
         <button className={view === "warmup" ? "active" : ""} onClick={() => setView("warmup")}>
-          <b>01</b><span>CALENTAMIENTO</span><small>4 min</small>
+          <b>01</b><span>{a0Text("CALENTAMIENTO","WARM-UP")}</span><small>4 min</small>
         </button>
         <button className={view === "play" && roundKey === "quick" ? "active" : ""} onClick={() => startAt(0)}>
-          <b>02</b><span>{support ? "GESTOS" : c2 ? "PALABRAS" : advanced ? "IMPRESIONES" : "RÁPIDA"}</span><small>10 min</small>
+          <b>02</b><span>{support ? a0Text("GESTOS","GESTURES") : c2 ? "PALABRAS" : advanced ? "IMPRESIONES" : "RÁPIDA"}</span><small>10 min</small>
         </button>
         <button className={view === "play" && roundKey === "ambiguous" ? "active" : ""} onClick={() => startAt(6)}>
-          <b>03</b><span>{support ? "PLANES" : "CONTEXTO"}</span><small>13 min</small>
+          <b>03</b><span>{support ? a0Text("PLANES","PLANS") : "CONTEXTO"}</span><small>13 min</small>
         </button>
         <button className={view === "play" && roundKey === "deep" ? "active" : ""} onClick={() => startAt(12)}>
-          <b>04</b><span>{support ? "HABLAMOS" : c2 ? "RELATOS" : advanced ? "DOS LECTURAS" : "A FONDO"}</span><small>13 min</small>
+          <b>04</b><span>{support ? a0Text("HABLAMOS","LET’S TALK") : c2 ? "RELATOS" : advanced ? "DOS LECTURAS" : "A FONDO"}</span><small>13 min</small>
         </button>
         <button className={view === "finale" ? "active" : ""} onClick={() => setView("finale")}>
-          <b>05</b><span>CIERRE</span><small>5 min</small>
+          <b>05</b><span>{a0Text("CIERRE","CLOSING")}</span><small>5 min</small>
         </button>
       </nav>
 
       {view === "warmup" && (
         <section className="rf-panel rf-intro">
-          <div className="rf-eyebrow">CALENTAMIENTO · 4 MIN</div>
-          <p>NO HAY UNA RESPUESTA CORRECTA</p>
+          <div className="rf-eyebrow">{a0Text("CALENTAMIENTO · 4 MIN","WARM-UP · 4 MIN")}</div>
+          <p>{a0Text("NO HAY UNA RESPUESTA CORRECTA","THERE IS NO CORRECT ANSWER")}</p>
           <h1>{config.warmup}</h1>
           <div className="rf-intro-notes">
             {(support?.intro ?? advanced?.intro ?? ["Elige una señal verde.", "Elige una señal roja.", "Di una que depende del contexto."]).map(note => <span key={note}>{note}</span>)}
           </div>
-          <button className="rf-primary" onClick={() => startAt(0)}>EMPEZAR LA RONDA →</button>
-          {(support || advanced) && <details className={advanced ? "rf-c1-teacher" : "rf-a1-teacher"}><summary>Para quien enseña</summary><p>{support?.teacher ?? advanced?.teacher}</p></details>}
+          <button className="rf-primary" onClick={() => startAt(0)}>{a0Text("EMPEZAR LA RONDA →","START THE ROUND →")}</button>
+          {(support || advanced) && <details className={advanced ? "rf-c1-teacher" : "rf-a1-teacher"}><summary>{a0Text("Para quien enseña","Teacher notes")}</summary><p>{support?.teacher ?? advanced?.teacher}</p></details>}
         </section>
       )}
 
@@ -165,7 +166,7 @@ function RedFlagActivity({ level }: { level: Level }) {
             </div>
             <strong>{String(index + 1).padStart(2, "0")} <i>/ 18</i></strong>
           </div>
-          <div className="rf-progress" aria-label={`Situación ${index + 1} de 18`}>
+          <div className="rf-progress" aria-label={a0Text(`Situación ${index + 1} de 18`,`Situation ${index + 1} of 18`)}>
             <span style={{ width: `${((index + 1) / config.situations.length) * 100}%` }} />
           </div>
 
@@ -176,22 +177,22 @@ function RedFlagActivity({ level }: { level: Level }) {
 
           {contextCard && <p className="rf-c1-first-look">{contextCard.firstLook}</p>}
           {advanced && followUps[index] && <p className="rf-c1-instruction">{c2 && alternativeReveals[index] ? "Con las dos versiones: elige una señal, matiza o suspende el juicio. Distingue evidencia, interpretación e incertidumbre." : "Con el contexto: vuelve a elegir una señal o matiza tu juicio. Explica qué dato sostiene tu decisión."}</p>}
-          <div className="rf-choices" role="group" aria-label={localized ? "¿Señal verde o señal roja?" : "¿Green flag o red flag?"}>
+          <div className="rf-choices" role="group" aria-label={localized ? a0Text("¿Señal verde o señal roja?","Green or red flag?") : "¿Green flag o red flag?"}>
             <button className={visibleChoice === "green" ? "green selected" : "green"} aria-pressed={visibleChoice === "green"} onClick={() => choose("green")}>
-              <span>🟢</span><b>{level==='A0'?'VERDE / GREEN':localized ? "SEÑAL VERDE" : "GREEN FLAG"}</b><small>tecla G</small>
+              <span>🟢</span><b>{level==='A0'?'VERDE / GREEN':localized ? "SEÑAL VERDE" : "GREEN FLAG"}</b><small>{a0Text("tecla G","G key")}</small>
             </button>
             <button className={visibleChoice === "red" ? "red selected" : "red"} aria-pressed={visibleChoice === "red"} onClick={() => choose("red")}>
-              <span>🔴</span><b>{level==='A0'?'ROJA / RED':localized ? "SEÑAL ROJA" : "RED FLAG"}</b><small>tecla R</small>
+              <span>🔴</span><b>{level==='A0'?'ROJA / RED':localized ? "SEÑAL ROJA" : "RED FLAG"}</b><small>{a0Text("tecla R","R key")}</small>
             </button>
           </div>
 
           {support && cardSupport && (
-            <aside className="rf-a1-support" aria-label="Ayuda para hablar">
-              <h2>Para hablar</h2>
+            <aside className="rf-a1-support" aria-label={a0Text("Ayuda para hablar","Speaking help")}>
+              <h2>{a0Text("Para hablar","To speak")}</h2>
               <div className="rf-a1-frames">{support.frames.map(frame => <span key={frame}>{frame}</span>)}</div>
-              <p><strong>Palabras útiles:</strong> {cardSupport.chunks.join(" · ")}</p>
+              <p><strong>{a0Text("Palabras útiles:","Useful words:")}</strong> {cardSupport.chunks.join(" · ")}</p>
               <details open={level==='A0'}><summary>{level==='A0'?'Un modelo / A model':'Un ejemplo'}</summary><p>{cardSupport.reason}</p></details>
-              <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{cardSupport.teacher}</p></details>
+              <details className="rf-a1-teacher"><summary>{a0Text("Para quien enseña","Teacher notes")}</summary><p>{cardSupport.teacher}</p></details>
             </aside>
           )}
 
@@ -199,7 +200,7 @@ function RedFlagActivity({ level }: { level: Level }) {
             <div className="rf-why">
               <div><span>{level==='A0'?'AHORA HABLA / NOW SPEAK':'AHORA EXPLICA'}</span><h2>{level==='A0'?'Repite el modelo. / Repeat the model.':'¿POR QUÉ?'}</h2></div>
               <button onClick={revealFollowUp} aria-expanded={Boolean(followUps[index])}>
-                {followUps[index] ? "OCULTAR REPREGUNTA" : "ABRIR REPREGUNTA OPCIONAL"}
+                {followUps[index] ? a0Text("OCULTAR REPREGUNTA","HIDE FOLLOW-UP") : a0Text("ABRIR REPREGUNTA OPCIONAL","OPEN OPTIONAL FOLLOW-UP")}
               </button>
               {followUps[index] && <p>{followUp}</p>}
             </div>
@@ -242,17 +243,17 @@ function RedFlagActivity({ level }: { level: Level }) {
           )}
 
           <footer className="rf-controls">
-            <button onClick={goPrevious}>← ANTERIOR</button>
-            <button className="random" onClick={goRandom}>SITUACIÓN AL AZAR ↻ <small>tecla S</small></button>
-            <button className="next" onClick={goNext}>{index === 17 ? "IR AL CIERRE →" : "SIGUIENTE →"}</button>
+            <button onClick={goPrevious}>{a0Text("← ANTERIOR","← PREVIOUS")}</button>
+            <button className="random" onClick={goRandom}>{a0Text("SITUACIÓN AL AZAR","RANDOM SITUATION")} ↻ <small>{a0Text("tecla S","S key")}</small></button>
+            <button className="next" onClick={goNext}>{index === 17 ? a0Text("IR AL CIERRE →","GO TO CLOSING →") : a0Text("SIGUIENTE →","NEXT →")}</button>
           </footer>
-          <p className="rf-shortcuts">{c2 ? "← → navegar · G verde · R roja · espacio revelar la siguiente fuente tras elegir · S azar" : advanced ? "← → navegar · G verde · R roja · espacio revelar contexto · S azar" : "← → navegar · G verde · R roja · espacio repregunta · S azar"}</p>
+          <p className="rf-shortcuts">{c2 ? "← → navegar · G verde · R roja · espacio revelar la siguiente fuente tras elegir · S azar" : advanced ? "← → navegar · G verde · R roja · espacio revelar contexto · S azar" : a0Text("← → navegar · G verde · R roja · espacio repregunta · S azar","← → navigate · G green · R red · space follow-up · S random")}</p>
         </section>
       )}
 
       {view === "finale" && (
         <section className="rf-panel rf-finale">
-          <div className="rf-eyebrow">CONVERSACIÓN FINAL · 5 MIN</div>
+          <div className="rf-eyebrow">{a0Text("CONVERSACIÓN FINAL · 5 MIN","FINAL CONVERSATION · 5 MIN")}</div>
           <h1>{support?.finaleTitle ?? advanced?.finaleTitle ?? "Tu mapa de señales"}</h1>
           <p>{support?.finaleCopy ?? advanced?.finaleCopy ?? "No hace falta estar de acuerdo. Elige, compara y defiende cada respuesta."}</p>
           <div className="rf-finale-grid">
@@ -263,10 +264,10 @@ function RedFlagActivity({ level }: { level: Level }) {
               </article>
             ))}
           </div>
-          {support && <aside className="rf-a1-support" aria-label="Ayuda para la conversación final">
-            <h2>Frases para la cita</h2>
+          {support && <aside className="rf-a1-support" aria-label={a0Text("Ayuda para la conversación final","Help for the final conversation")}>
+            <h2>{a0Text("Frases para la cita","Phrases for the date")}</h2>
             <div className="rf-a1-frames">{support.finaleFrames.map(frame => <span key={frame}>{frame}</span>)}</div>
-            <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{support.finaleTeacher}</p></details>
+            <details className="rf-a1-teacher"><summary>{a0Text("Para quien enseña","Teacher notes")}</summary><p>{support.finaleTeacher}</p></details>
           </aside>}
           {c2 && <section className="rf-c2-protocol" aria-label="Tus principios personales">
             <h2>Escribe o ensaya tus principios</h2>
@@ -301,8 +302,8 @@ function RedFlagActivity({ level }: { level: Level }) {
             <ol>{principles.filter(principle => principle.trim()).map((principle, principleIndex) => <li key={principleIndex}>{principle}</li>)}</ol>
           </section>}
           <div className="rf-final-actions">
-            <button onClick={() => { setView("play"); setIndex(17); }}>← ÚLTIMA SITUACIÓN</button>
-            <button className="rf-primary" onClick={() => { setAnswers({}); setFollowUps({}); setRevisions({}); setAlternativeReveals({}); setFinalJudgments({}); setPrinciples(["", "", "", "", ""]); setTrialIndex(null); setIndex(0); setView("warmup"); }}>NUEVA PARTIDA ↻</button>
+            <button onClick={() => { setView("play"); setIndex(17); }}>{a0Text("← ÚLTIMA SITUACIÓN","← LAST SITUATION")}</button>
+            <button className="rf-primary" onClick={() => { setAnswers({}); setFollowUps({}); setRevisions({}); setAlternativeReveals({}); setFinalJudgments({}); setPrinciples(["", "", "", "", ""]); setTrialIndex(null); setIndex(0); setView("warmup"); }}>{a0Text("NUEVA PARTIDA ↻","NEW GAME ↻")}</button>
           </div>
         </section>
       )}

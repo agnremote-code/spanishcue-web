@@ -9,7 +9,7 @@ import {contentFor} from '../app/noche-abierta/levels.mjs';
 import * as night from '../app/noche-abierta/engine.mjs';
 import forestA0 from '../app/bosque-de-los-hongos-gigantes/content/a0.mjs';
 const require=createRequire(import.meta.url);
-async function load(path){const result=await build({entryPoints:[path],bundle:true,write:false,format:'cjs',platform:'node',external:['react','react-dom','next/*'],loader:{'.css':'empty'}});const module={exports:{}};runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,{console,URL,URLSearchParams,process})(require,module,module.exports);return module.exports;}
+async function load(path){const result=await build({entryPoints:[path],bundle:true,write:false,format:'cjs',platform:'node',external:['react','react-dom','next/*'],loader:{'.css':'empty'}});const loadedModule={exports:{}};runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,{console,URL,URLSearchParams,process})(require,loadedModule,loadedModule.exports);return loadedModule.exports;}
 const levels=['A0','A1','A2','B1','B2','C1','C2'];
 const sample=['A0','A1','B1','C2'];
 test('Red Flag retains complete rounds and distinct A0/A1/B1/C2 oral content',()=>{const banks=sample.map(getLevelConfig);assert.equal(new Set(banks.map(c=>c.warmup)).size,4);for(const bank of banks){assert.ok(bank.situations.length>=18);assert.ok(bank.finale.length>=3);}assert.ok(banks[0].situations.every(s=>s.includes(' / ')));});

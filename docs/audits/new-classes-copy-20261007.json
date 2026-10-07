@@ -9289,6 +9289,828 @@
       "text": "Close support",
       "kind": "english-added",
       "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "CONVERSATION WORLDS",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "← Library",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "CONVERSATION",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Pause movement",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Enable movement",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "EXPERIMENT 01 · CHOOSE AND RECONSIDER",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "EXPERIMENT 02 · IMAGINE ANOTHER LIFE",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "BEFORE THE EXPERIMENT · 5 MIN",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Prepare to speak",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Teacher guide",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "45 minutes",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "The decision machine",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "The rule of the universe",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "REMOVAL CHAMBER",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "CHANGED UNIVERSE",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "completed decisions",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "discussed rules",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Conversation progress",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "The twists are fictional speaking situations, not predictions. There are no correct answers.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "You can change your mind, skip a rule or keep talking. There are no correct answers.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Restart round",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "BEFORE PRESSING THE BUTTON",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Do you remove it or keep it?",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "YES",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "NO",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Choose first. The question is on the other side.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "YOUR FIRST DECISION",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "REMOVE",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "KEEP",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "NOW, LET’S TALK",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "What happens next?",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "TWIST · IF IT DISAPPEARS…",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Do you change your mind?",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "I do not change my mind",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "I change my mind",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Final decision: ",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "NEW RULE OF THE UNIVERSE",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "RULE",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "IMAGINE THIS",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Open the first question",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Questions about this rule",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "My reaction",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "My day",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "My choice",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Next question",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "We have finished this rule",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Rule discussed. Choose another universe whenever you like.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Change round",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "← Previous",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "of",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Another decision",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Another rule",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "You can choose any round in the panel below.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "CHOOSE WHERE TO GO NEXT",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Everyday things. You choose.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "A different life in each round.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "You do not have to finish them all today.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "You can open the rules in any order.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Filter rounds",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "All",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Discussed",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "In progress",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Decide",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Explore the rule",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "TO FINISH · 10 MIN",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "TO FINISH · 10 MIN",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Your decisions today",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "The rules we discussed",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "remove",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "keep",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Changed my mind",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Choose some things and see what happens. Your decisions appear here.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Answer the three questions about a rule. Your rules appear here.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Free conversation",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Level",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "New conversation",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Go to Your life with an absurd rule",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-worlds/ConversationWorld.tsx",
+      "text": "Go to The machine that removes things",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Back to the library",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "LET’S PLAY",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "RED OR GREEN FLAG?",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "LEVEL",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Lesson stages",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "WARM-UP",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "GESTURES",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "PLANS",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "LET’S TALK",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "CLOSING",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "WARM-UP · 4 MIN",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "THERE IS NO CORRECT ANSWER",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "START THE ROUND →",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Teacher notes",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Situation ${index + 1} of 18",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Green or red flag?",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "G key",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "R key",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Speaking help",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "To speak",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Useful words:",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Teacher notes",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "HIDE FOLLOW-UP",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "OPEN OPTIONAL FOLLOW-UP",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "← PREVIOUS",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "RANDOM SITUATION",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "S key",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "GO TO CLOSING →",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "NEXT →",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "← → navigate · G green · R red · space follow-up · S random",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "FINAL CONVERSATION · 5 MIN",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Help for the final conversation",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Phrases for the date",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "Teacher notes",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "← LAST SITUATION",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/red-flag-o-no/RedFlagGame.tsx",
+      "text": "NEW GAME ↻",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "León does not want a heavy mask.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Camila wants a different mask for the costume.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Omar wants fewer reflections onstage.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Vera has to take care of the mask.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "León questions the mask’s weight, but a preference does not prove an action.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Camila defends the costume’s coherence; that interest allows different interpretations.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Omar considers the reflections problematic, though that concern has yet to be connected to the facts.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Vera is responsible for protecting the mask; that responsibility does not establish what she did.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "My proposal is “${scene.options[0][1]}”. I thought something different before, but now I want to ask a question before deciding.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "Using only what has been revealed, I would review my initial reading. From the other perspective, “${scene.options[1][1]}” may also be reasonable; I would review the assumption that we share the same priority.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
+    },
+    {
+      "path": "app/conversation-narratives/native-adapter.tsx",
+      "text": "A plausible interpretation does not alone justify attributing intent. Privately I would ask what was omitted; publicly I would defend “${scene.options[0][1]}”, explicitly stating what evidence would make me revise.",
+      "kind": "english-added",
+      "reason": "Owner-authorized bilingual A0 instructions, scene choices, speaking models and contextual language support."
     }
   ]
 }

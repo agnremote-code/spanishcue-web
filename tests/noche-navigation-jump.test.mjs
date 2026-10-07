@@ -39,7 +39,7 @@ for(const level of engine.LEVELS) {
       assert.equal(new Set(outcomes.map(b=>b.prompt)).size,1,a.id);
       assert.equal(initial.length,2,a.id);
       assert.equal(initial.at(-1).label,'2. Ahora habla de ti',a.id);
-      if (level === 'A0') assert.match(initial.at(-1).prompt, /(?:¿|Di ).* \/ /, a.id);
+      if (level === 'A0') assert.match(initial.at(-1).prompt, /(?:¿|Di[: ]).* \/ /, a.id);
       else assert.ok(initial.at(-1).prompt.includes('¿'),a.id);
     }
   });

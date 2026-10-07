@@ -22,9 +22,9 @@ async function harness(){
  const runtime={...React,useMemo:fn=>fn(),useEffect:()=>{},useRef:()=>({current:null}),useState:initial=>{const i=slot++;if(!(i in state))state[i]=typeof initial==='function'?initial():initial;return[state[i],value=>{state[i]=typeof value==='function'?value(state[i]):value;}];}};
  const path=resolve('app/modo-play-uno-o-el-otro/page.tsx');
  const result=await build({stdin:{contents:readFileSync(path,'utf8')+'\nexport {ChoiceActivity};',resolveDir:dirname(path),sourcefile:path,loader:'tsx'},bundle:true,write:false,format:'cjs',platform:'node',jsx:'automatic',external:['react','react-dom','next/*'],loader:{'.css':'empty'}});
- const module={exports:{}};
- runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,{console,URL,URLSearchParams,process})(name=>name==='react'?runtime:require(name),module,module.exports);
- const render=()=>{slot=0;return module.exports.ChoiceActivity({level:'A0'});};
+ const loadedModule={exports:{}};
+ runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,{console,URL,URLSearchParams,process})(name=>name==='react'?runtime:require(name),loadedModule,loadedModule.exports);
+ const render=()=>{slot=0;return loadedModule.exports.ChoiceActivity({level:'A0'});};
  const component=(name,tree=render())=>find(tree,node=>typeof node.type==='function'&&node.type.name===name)[0];
  const category=name=>{const bank=component('BankTools');const button=find(bank.type(bank.props),node=>node.type==='button'&&words(node).startsWith(name))[0];assert.ok(button,`category ${name}`);button.props.onClick();};
  const model=()=>component('GameSpeech').props.model;
