@@ -12,6 +12,9 @@ export type ForestHero = {
   /** A ring of air left behind by the second jump. */
   puff: THREE.Mesh<THREE.RingGeometry, THREE.MeshBasicMaterial>; spin: number; doubleJumps: number;
   heading: number; air: number; landing: number; lastGrounded: boolean; dispose: () => void;
+  /** After a bad fall: the pieces in world space, a few cartoon drops of blood and a small stain. */
+  debris: THREE.Group; blood: THREE.Points<THREE.BufferGeometry, THREE.PointsMaterial>; splat: THREE.Mesh<THREE.CircleGeometry, THREE.MeshBasicMaterial>;
+  broken: { t: number; floor: number; pieces: { obj: THREE.Object3D; parent: THREE.Object3D; pos: THREE.Vector3; quat: THREE.Quaternion; scale: THREE.Vector3; vel: THREE.Vector3; spin: THREE.Vector3 }[]; drops: THREE.Vector3[] } | null;
 };
 const TURN_RATE = 14;
 const wrap = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
@@ -27,13 +30,21 @@ export function createForestHero(shadows = true): ForestHero {
   const shadow = new THREE.Mesh(new THREE.CircleGeometry(.62, 24).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 }));
   shadow.renderOrder = 2;
   const puff = new THREE.Mesh(new THREE.RingGeometry(.45, .62, 32).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: '#fff3c4', transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending }));
+  const debris = new THREE.Group();
+  const dropCount = 34, bloodGeo = new THREE.BufferGeometry(); bloodGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(dropCount * 3), 3));
+  const blood = new THREE.Points(bloodGeo, new THREE.PointsMaterial({ color: '#b3121c', size: .11, transparent: true, opacity: 0, depthWrite: false }));
+  blood.frustumCulled = false;
+  const stain = document.createElement('canvas'); stain.width = stain.height = 64; const sc = stain.getContext('2d')!;
+  sc.fillStyle = '#9e0f18'; for (const [x, y, r] of [[32, 32, 14], [20, 28, 7], [44, 36, 8], [30, 46, 6], [40, 20, 5], [16, 40, 4]]) { sc.beginPath(); sc.arc(x, y, r, 0, Math.PI * 2); sc.fill(); }
+  const stainMap = new THREE.CanvasTexture(stain);
+  const splat = new THREE.Mesh(new THREE.CircleGeometry(.55, 20).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map: stainMap, transparent: true, opacity: 0, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -3 }));
   let disposed = false;
   return {
-    root, hero, shadow, puff, spin: 0, doubleJumps: 0, heading: 0, air: 0, landing: 0, lastGrounded: true,
+    root, hero, shadow, puff, debris, blood, splat, broken: null, spin: 0, doubleJumps: 0, heading: 0, air: 0, landing: 0, lastGrounded: true,
     dispose() {
       if (disposed) return; disposed = true;
       root.traverse(o => { if (o instanceof THREE.Mesh) { o.geometry.dispose(); for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.dispose(); } });
-      shadow.geometry.dispose(); shadow.material.dispose(); map.dispose(); puff.geometry.dispose(); puff.material.dispose();
+      shadow.geometry.dispose(); shadow.material.dispose(); map.dispose(); puff.geometry.dispose(); puff.material.dispose(); bloodGeo.dispose(); blood.material.dispose(); splat.geometry.dispose(); splat.material.dispose(); stainMap.dispose();
     },
   };
 }
@@ -45,7 +56,48 @@ export function surfaceBelow(x: number, y: number, z: number) {
   return top;
 }
 
+/** The hero falls apart: head, arms, legs, torso and backpack fly off, with a few drops of cartoon blood. */
+export function breakForestHero(h: ForestHero, player: Player, reduced = false) {
+  if (h.broken) return;
+  const p = h.hero.parts, floor = Math.max(surfaceBelow(player.x, player.y + .1, player.z), player.y - 30);
+  if (!h.debris.parent) h.root.parent?.add(h.debris);
+  h.root.updateMatrixWorld(true);
+  const pieces = [p.head, p.armL, p.armR, p.pack, p.legL, p.legR, p.torso].map(obj => {
+    const parent = obj.parent!, pos = obj.position.clone(), quat = obj.quaternion.clone(), scale = obj.scale.clone();
+    h.debris.attach(obj);
+    const a = Math.random() * Math.PI * 2, out = reduced ? 0 : 1.6 + Math.random() * 2.2;
+    return { obj, parent, pos, quat, scale, vel: new THREE.Vector3(Math.cos(a) * out, reduced ? 0 : 3 + Math.random() * 3, Math.sin(a) * out), spin: new THREE.Vector3((Math.random() - .5) * 12, (Math.random() - .5) * 12, (Math.random() - .5) * 12).multiplyScalar(reduced ? 0 : 1) };
+  });
+  const drops = Array.from({ length: 34 }, () => new THREE.Vector3((Math.random() - .5) * 3.2, 1.5 + Math.random() * 3.5, (Math.random() - .5) * 3.2));
+  h.broken = { t: 0, floor: Number.isFinite(floor) ? floor : player.y, pieces, drops };
+  h.blood.material.opacity = 1; h.blood.position.set(player.x, player.y + .9, player.z);
+  h.splat.position.set(player.x, h.broken.floor + .03, player.z); h.splat.material.opacity = .85; h.splat.scale.setScalar(.6); h.splat.rotation.y = Math.random() * 6;
+  h.shadow.visible = false;
+}
+/** Back in one piece on the last cap. */
+export function reassembleForestHero(h: ForestHero) {
+  if (!h.broken) return;
+  for (const piece of [...h.broken.pieces].reverse()) { piece.parent.add(piece.obj); piece.obj.position.copy(piece.pos); piece.obj.quaternion.copy(piece.quat); piece.obj.scale.copy(piece.scale); }
+  h.broken = null; h.blood.material.opacity = 0; h.hero.root.visible = true;
+}
 export function animateForestHero(h: ForestHero, dt: number, player: Player, speed: number, reduced = false, talking = false) {
+  // The stain fades on its own, also after the hero is rebuilt.
+  if (h.splat.material.opacity > 0) { h.splat.material.opacity = Math.max(0, h.splat.material.opacity - dt * .3); h.splat.scale.setScalar(Math.min(1.25, h.splat.scale.x + dt * 2)); }
+  if (h.broken) {
+    const b = h.broken; b.t += dt;
+    for (const piece of b.pieces) {
+      piece.vel.y -= 16 * dt; piece.obj.position.addScaledVector(piece.vel, dt);
+      const world = piece.obj.getWorldPosition(new THREE.Vector3());
+      if (world.y < b.floor + .12 && piece.vel.y < 0) { piece.obj.position.y += b.floor + .12 - world.y; piece.vel.y *= -.35; piece.vel.x *= .6; piece.vel.z *= .6; piece.spin.multiplyScalar(.6); }
+      piece.obj.rotation.x += piece.spin.x * dt; piece.obj.rotation.y += piece.spin.y * dt; piece.obj.rotation.z += piece.spin.z * dt;
+    }
+    const pos = h.blood.geometry.attributes.position as THREE.BufferAttribute;
+    for (let i = 0; i < b.drops.length; i++) { const v = b.drops[i]; const y = Math.max(b.floor - h.blood.position.y + .02, v.y * b.t - 8 * b.t * b.t); pos.setXYZ(i, v.x * b.t, y, v.z * b.t); }
+    pos.needsUpdate = true; h.blood.material.opacity = Math.max(0, 1 - b.t / 1.8);
+    // The rest of the body vanishes in a puff of spores once the pieces fly.
+    h.hero.root.visible = b.t < .05;
+    return;
+  }
   // Turn smoothly toward where the learner is moving instead of snapping.
   const before = h.heading;
   if (speed > .2) h.heading = wrap(h.heading + wrap(player.yaw - h.heading) * (1 - Math.exp(-TURN_RATE * dt)));

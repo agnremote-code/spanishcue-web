@@ -53,3 +53,8 @@
 /* Phones: the camera tools stack under the minimap so the location card keeps its width. */
 @media(pointer:coarse),(max-width:800px){.bfg-world-tools{top:186px;flex-direction:column;align-items:stretch;width:112px}.bh .bfg-world .bfg-world-tools button{min-height:36px;padding:7px 8px}.bfg-world-location{max-width:calc(100% - 148px)}}
 @media(max-height:600px) and (pointer:coarse){.bfg-world-tools{top:8px;flex-direction:row;width:auto}.bfg-world-location{max-width:calc(100% - 330px)}}
+
+.bfg-world-banner-summit strong{color:#ffe7a3}.bfg-world-banner-summit{animation-duration:5s}
+.bfg-world-ouch{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);pointer-events:none;font:900 clamp(44px,7vw,88px)/1 Georgia,serif;color:#fff4e0;-webkit-text-stroke:3px #7a1016;text-shadow:0 6px 0 #7a1016,0 10px 30px #00000080;animation:bfg-ouch 1.6s ease-out forwards}
+@keyframes bfg-ouch{0%{opacity:0;transform:translate(-50%,-50%) scale(.4) rotate(-8deg)}14%{opacity:1;transform:translate(-50%,-50%) scale(1.15) rotate(4deg)}26%{transform:translate(-50%,-50%) scale(1) rotate(-2deg)}75%{opacity:1}100%{opacity:0;transform:translate(-50%,-62%) scale(1)}}
+@media(prefers-reduced-motion:reduce){.bfg-world-ouch{animation:none;opacity:0}}

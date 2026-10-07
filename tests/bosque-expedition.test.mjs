@@ -117,3 +117,15 @@ test('double jump rescues a jump that falls short; falls return to the last cap,
   for (let i = 0; i < 60; i++) p = e.stepPlayer(p, { x: 0, z: 0 }, dt);
   assert.equal(p.respawns, 1); assert.equal(p.y, route[6].y);
 });
+
+test('staged falls and the summit: the world drives the fall, reaching the top opens the final', async () => {
+  const e = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+  const cap = ZONES[6];
+  let p = { ...e.spawnPlayer(), x: cap.x + 30, y: cap.y, z: cap.z, grounded: false, platform: null, checkpoint: { x: cap.x, y: cap.y, z: cap.z } };
+  for (let i = 0; i < 120; i++) p = e.stepPlayer(p, { x: 0, z: 0, stagedFalls: true }, 1 / 90);
+  assert.equal(p.falling, true); assert.equal(p.respawns, 0, 'no instant teleport while the fall is staged');
+  p = e.respawnAt(p); assert.deepEqual([p.x, p.y, p.z, p.falling, p.respawns], [cap.x, cap.y, cap.z, false, 1]);
+  let s = e.newSession('B1', 3); assert.equal(e.finalUnlocked(s), false);
+  s = e.reachSummit(s); assert.equal(e.finalUnlocked(s), true);
+  assert.equal(e.restoreSession(JSON.stringify(s), { B1: [] }).summit, true);
+});
