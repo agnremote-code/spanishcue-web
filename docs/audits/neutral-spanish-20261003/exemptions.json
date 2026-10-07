@@ -4500,6 +4500,66 @@
       "text": "Transforma «tú eres, tienes, quieres» en «vos sos, tenés, querés» para reconocerlas. Cuenta qué formas usas tú.",
       "category": "regional-pedagogy",
       "reason": "Owner-requested Argentina lesson explicitly teaches recognition and comparison of voseo; surrounding instructions remain neutral Spanish. English support quotes the same taught regional examples."
+    },
+    {
+      "path": "app/the-sound-map/ScenePanel.tsx",
+      "text": "Respondí oralmente",
+      "category": "neutral-context",
+      "reason": "First-person preterite in narrative or learner self-assessment; neutral Spanish, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/ScenePanel.tsx",
+      "text": "Ya compartí mi respuesta",
+      "category": "neutral-context",
+      "reason": "First-person preterite in narrative or learner self-assessment; neutral Spanish, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Baja un poco la música, por favor. La vecina tiene un bebé.",
+      "category": "neutral-context",
+      "reason": "Bebé is the neutral Spanish noun for baby, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Por un bebé",
+      "category": "neutral-context",
+      "reason": "Bebé is the neutral Spanish noun for baby, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "La vecina tiene un bebé.",
+      "category": "neutral-context",
+      "reason": "Bebé is the neutral Spanish noun for baby, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Guardé tu llave en un cajón, al lado de un billete viejo. Dijiste: vuelvo en un mes; ya cambió de color el invierno. Hoy abrí todas las ventanas, dejé la llave donde estaba. No sé si espero que regreses o que la casa sea otra casa.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in narrative or learner self-assessment; neutral Spanish, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Culpable. La diferencia, espero, es que la historia no sustituya al tomate. Pruébelo.",
+      "category": "neutral-context",
+      "reason": "Tomate is the noun tomato in this exact dialogue, not the imperative tómate."
+    },
+    {
+      "path": "app/the-sound-map/audio-manifest.json",
+      "text": "Baja un poco la música, por favor. La vecina tiene un bebé.",
+      "category": "neutral-context",
+      "reason": "Bebé is the neutral noun baby, not a voseo imperative."
+    },
+    {
+      "path": "app/the-sound-map/audio-manifest.json",
+      "text": "Guardé tu llave en un cajón, al lado de un billete viejo. Dijiste: vuelvo en un mes; ya cambió de color el invierno. Hoy abrí todas las ventanas, dejé la llave donde estaba. No sé si espero que regreses o que la casa sea otra casa.",
+      "category": "neutral-context",
+      "reason": "First-person preterite in original song narrative; audio generation input exactly matches transcript."
+    },
+    {
+      "path": "app/the-sound-map/audio-manifest.json",
+      "text": "Culpable. La diferencia, espero, es que la historia no sustituya al tomate. Pruébelo.",
+      "category": "neutral-context",
+      "reason": "Tomate is the noun tomato, not an imperative."
     }
   ]
 }

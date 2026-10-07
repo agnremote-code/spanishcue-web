@@ -7,6 +7,14 @@ import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './gram
 // found exactly once, so drift or a second copy still fails the old hashes.
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
+  {
+    id:236,path:'/the-sound-map',files:/^(?:app\/the-sound-map\/|public\/(?:the-sound-map|audio\/the-sound-map)\/|tests\/sound-map[^/]*\.test\.mjs$|scripts\/generate-sound-map-audio\.py$)/,
+    edits:{
+      'tests/rendered-html.test.mjs':[['assert.match(html,/106(?:<!-- -->|\\s)+resultados/);assert.match(html,/121(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/105(?:<!-- -->|\\s)+resultados/);assert.match(html,/120(?:<!-- -->|\\s)+clases totales/);']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/sound-map.test.mjs','tests/sound-map-ui.test.mjs','tests/sound-map-page-ui.test.mjs','tests/sound-map-audio-ui.test.mjs']);\n",'']],
+      'app/lesson-catalog.ts':[text=>{const lines=text.split('\n');const at=lines.flatMap((line,i)=>line.startsWith('  {"id":236,')&&line.includes('"path":"/the-sound-map"')?[i]:[]);assert.equal(at.length,1,'one sound map entry');lines.splice(at[0],1);return lines.join('\n');},['"Escucha":[130,131,105,28,132,133,134,135,236],','"Escucha":[130,131,105,28,132,133,134,135],']],
+    },
+  },
   // Owner-requested country atlases. Exact inversions preserve every historical byte.
   {
     id:227,path:'/suecia',files:/^(?:app\/(?:country-atlas|suecia|argentina|espana)\/|public\/country-atlas\/|tests\/country-atlas[^/]*\.test\.mjs$)/,
@@ -175,8 +183,18 @@ export function isApprovedAdditionPath(path) {
 }
 
 export function withoutApprovedAdditions(path, bytes) {
+  // Undo this later additive lesson before the grammar snapshot's exact inversions.
+  const latestSteps=additions.find(item=>item.id===236).edits[path]||[];
+  if(latestSteps.length){
+   let latest=bytes.toString('utf8');
+   for(const step of latestSteps){
+    if(typeof step==='function'){latest=step(latest);continue;}
+    const [after,before]=step;assert.equal(latest.split(after).length-1,1,`one sound map edit in ${path}`);latest=latest.replace(after,before);
+  }
+   bytes=Buffer.from(latest);
+  }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions, ...repairs].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==236), ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
