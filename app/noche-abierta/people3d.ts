@@ -22,16 +22,23 @@ export type Build = 'slim' | 'average' | 'athletic' | 'heavy';
 export type HairStyle = 'short' | 'long' | 'bob' | 'buzz' | 'curly' | 'bun' | 'bald' | 'ponytail' | 'afro' | 'braids' | 'cap';
 export type Top = 'coat' | 'jacket' | 'dress' | 'shirt' | 'sweater' | 'uniform' | 'apron' | 'suit' | 'scrubs' | 'hoodie' | 'tshirt';
 export type Bottom = 'skirt' | 'jeans' | 'pants' | 'shorts';
-export type Mood = 'neutral' | 'smile' | 'love' | 'sad' | 'scared' | 'angry' | 'surprised' | 'worried' | 'pain' | 'tipsy' | 'sleepy';
+export type Mood =
+  | 'neutral' | 'smile' | 'love' | 'sad' | 'scared' | 'angry' | 'surprised' | 'worried' | 'pain' | 'tipsy' | 'sleepy'
+  | 'smitten' | 'laugh' | 'terror' | 'furious';
 export type Pose =
   | 'stand' | 'sit' | 'ground' | 'lie' | 'phone' | 'cry' | 'lean' | 'dance' | 'guitar' | 'sleep' | 'crouch' | 'arms'
   | 'wave' | 'balcony' | 'walk' | 'run' | 'window' | 'sweep' | 'carry' | 'smoke-free' | 'fish' | 'cook' | 'swing'
-  | 'read' | 'bike' | 'hug';
+  | 'read' | 'bike' | 'hug'
+  | 'hands-up' | 'knife' | 'scream' | 'kiss' | 'fallen' | 'injured' | 'fight' | 'cuffed' | 'sign' | 'bag-run' | 'point';
 
-export const PERSON_MOODS: readonly Mood[] = ['neutral', 'smile', 'love', 'sad', 'scared', 'angry', 'surprised', 'worried', 'pain', 'tipsy', 'sleepy'];
+export const PERSON_MOODS: readonly Mood[] = [
+  'neutral', 'smile', 'love', 'sad', 'scared', 'angry', 'surprised', 'worried', 'pain', 'tipsy', 'sleepy',
+  'smitten', 'laugh', 'terror', 'furious',
+];
 export const PERSON_POSES: readonly Pose[] = [
   'stand', 'sit', 'ground', 'lie', 'phone', 'cry', 'lean', 'dance', 'guitar', 'sleep', 'crouch', 'arms', 'wave', 'balcony',
   'walk', 'run', 'window', 'sweep', 'carry', 'smoke-free', 'fish', 'cook', 'swing', 'read', 'bike', 'hug',
+  'hands-up', 'knife', 'scream', 'kiss', 'fallen', 'injured', 'fight', 'cuffed', 'sign', 'bag-run', 'point',
 ];
 
 // Every field but skin is optional. The first four are the original colour
@@ -105,6 +112,14 @@ let blushMaterial: THREE.MeshStandardMaterial | null = null;
 function blushMat() {
   blushMaterial ??= new THREE.MeshStandardMaterial({ color: '#e46a80', emissive: '#ff5a7a', emissiveIntensity: 0.35, transparent: true, opacity: 0.55, depthWrite: false, roughness: 0.7 });
   return blushMaterial;
+}
+
+// Fresh blood: dark red with a wet sheen, the same for every wound.
+function bloodMat() { return mat('#7a0c12', 0.3, 0.05); }
+let heartMaterial: THREE.MeshStandardMaterial | null = null;
+function heartMat() {
+  heartMaterial ??= new THREE.MeshStandardMaterial({ color: '#e8143c', emissive: '#ff2a55', emissiveIntensity: 0.6, roughness: 0.35 });
+  return heartMaterial;
 }
 
 const geometryCache = new Map<string, THREE.BufferGeometry>();
@@ -300,7 +315,130 @@ function lipGeometry(step: number) {
   });
 }
 
+// A small flat heart facing +z, the size of an iris, for smitten eyes.
+function heartGeometry() {
+  return cached('heart', () => {
+    const h = new THREE.Shape();
+    h.moveTo(0, -0.012);
+    h.bezierCurveTo(-0.004, -0.006, -0.013, -0.002, -0.013, 0.004);
+    h.bezierCurveTo(-0.013, 0.01, -0.007, 0.013, 0, 0.007);
+    h.bezierCurveTo(0.007, 0.013, 0.013, 0.01, 0.013, 0.004);
+    h.bezierCurveTo(0.013, -0.002, 0.004, -0.006, 0, -0.012);
+    const g = new THREE.ShapeGeometry(h, 6);
+    g.translate(0, 0.001, 0);
+    return g;
+  });
+}
+
+// Wounds: dark red blobs and trickles pushed just out of skin or cloth, so
+// they read from a distance. Each is one merged geometry placed on a part.
+function cutGeometry() {
+  return cached('wound-cut', () => merge([
+    moved(new THREE.BoxGeometry(0.042, 0.009, 0.01), 0, 0, 0, 0, 0, 0.55),
+    moved(new THREE.SphereGeometry(0.011, 7, 6), 0.004, -0.004, 0, 0, 0, 0, 1.3, 0.8, 0.5),
+    moved(new THREE.CapsuleGeometry(0.0045, 0.06, 3, 6), 0.034, -0.04, -0.014, 0.2, 0, -0.12),
+    moved(new THREE.SphereGeometry(0.006, 6, 5), 0.04, -0.078, -0.018),
+  ]));
+}
+function stainGeometry(key: string, sx: number, sy: number) {
+  return cached(`wound-stain-${key}`, () => merge([
+    moved(new THREE.SphereGeometry(1, 10, 8), 0, 0, 0, 0, 0, 0, sx, sy, 0.014),
+    moved(new THREE.SphereGeometry(1, 8, 6), sx * 0.55, -sy * 0.75, 0, 0, 0, 0, sx * 0.45, sy * 0.5, 0.012),
+    moved(new THREE.SphereGeometry(1, 8, 6), -sx * 0.5, sy * 0.4, 0, 0, 0, 0, sx * 0.35, sy * 0.35, 0.011),
+    moved(new THREE.CapsuleGeometry(0.006, sy * 1.2, 3, 6), -sx * 0.25, -sy * 1.3, 0.004),
+    moved(new THREE.CapsuleGeometry(0.004, sy * 0.7, 3, 6), sx * 0.35, -sy * 1.5, 0.004),
+  ]));
+}
+// A band of blood on a limb, with a trickle running down it.
+function limbWoundGeometry(key: string, radius: number) {
+  return cached(`wound-limb-${key}-${radius.toFixed(3)}`, () => merge([
+    // A ring just outside the limb, a raised gash on its front, trickles below.
+    moved(new THREE.TorusGeometry(radius * 0.72, radius * 0.4, 6, 14), 0, 0, 0, Math.PI / 2),
+    moved(new THREE.SphereGeometry(1, 10, 7), 0, 0.01, radius * 0.72, 0, 0, 0.4, radius * 0.5, radius * 0.9, radius * 0.5),
+    moved(new THREE.CapsuleGeometry(0.0065, 0.1, 3, 6), 0.004, -0.09, radius * 0.88),
+    moved(new THREE.CapsuleGeometry(0.0045, 0.06, 3, 6), -radius * 0.55, -0.07, radius * 0.7),
+    moved(new THREE.SphereGeometry(0.008, 6, 5), 0.004, -0.15, radius * 0.82),
+  ]));
+}
+// The torn edge of a sleeve: a jagged ring where the cloth ends.
+function tornSleeveGeometry(radius: number) {
+  return cached(`torn-sleeve-${radius.toFixed(3)}`, () => merge([0, 1, 2, 3, 4, 5, 6].map(i =>
+    moved(new THREE.ConeGeometry(radius * 0.42, 0.045 + (i % 3) * 0.012, 4), Math.cos(i * 0.9) * radius, -0.02 - (i % 2) * 0.012, Math.sin(i * 0.9) * radius, Math.PI, i * 0.9, 0))));
+}
+
 // ------------------------------------------------------------------ props
+
+const SLOGANS = ['NO AL CIERRE', 'QUEREMOS LUZ', 'BASTA', 'NI UN DESALOJO', 'AGUA PARA TODOS', 'JUSTICIA YA', 'NO AL PEAJE'];
+const signTextures = new Map<string, THREE.CanvasTexture>();
+function signTexture(text: string) {
+  let texture = signTextures.get(text);
+  if (!texture && typeof document !== 'undefined') {
+    const canvas = document.createElement('canvas');
+    canvas.width = 384; canvas.height = 256;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = '#efe6cf';
+    ctx.fillRect(0, 0, 384, 256);
+    ctx.fillStyle = '#d8ccb0';
+    for (let i = 0; i < 40; i++) ctx.fillRect((i * 97) % 384, (i * 61) % 256, 18, 2);
+    ctx.fillStyle = '#1a1416';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const words = text.split(' ');
+    const lines = words.length > 2 ? [words.slice(0, 2).join(' '), words.slice(2).join(' ')] : words.length === 2 && text.length > 11 ? words : [text];
+    const size = Math.min(96, Math.floor(600 / Math.max(...lines.map(l => l.length))));
+    ctx.font = `bold ${size}px sans-serif`;
+    lines.forEach((line, i) => ctx.fillText(line, 192, 128 + (i - (lines.length - 1) / 2) * size * 1.1));
+    ctx.strokeStyle = '#1a1416';
+    ctx.lineWidth = 6;
+    ctx.strokeRect(10, 10, 364, 236);
+    texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    signTextures.set(text, texture);
+  }
+  return texture ?? null;
+}
+const signMaterials = new Map<string, THREE.MeshStandardMaterial>();
+// A protest sign: a 60 x 40 cm board on a stick, the slogan picked by seed.
+function signProp(seed: number) {
+  const text = SLOGANS[Math.floor(rng(seed ^ 0x5106)() * SLOGANS.length) % SLOGANS.length];
+  const group = new THREE.Group();
+  group.add(new THREE.Mesh(cached('sign-stick', () => moved(new THREE.CylinderGeometry(0.014, 0.014, 0.62, 6), 0, -0.31, 0)), mat('#b48a4e', 0.9)));
+  let board = signMaterials.get(text);
+  if (!board) {
+    const map = signTexture(text);
+    board = new THREE.MeshStandardMaterial({ color: map ? '#ffffff' : '#efe6cf', map, roughness: 0.9 });
+    signMaterials.set(text, board);
+  }
+  const plank = new THREE.Mesh(cached('sign-board', () => new THREE.BoxGeometry(0.6, 0.4, 0.016)), board);
+  // The stick runs down the hand (-y) and the arms point up, so the board
+  // sits at the far end and is turned over to read upright.
+  plank.position.set(0, -0.8, 0);
+  plank.rotation.z = Math.PI;
+  group.add(plank);
+  group.userData.slogan = text;
+  return group;
+}
+
+// A kitchen knife: a 22 cm blade on a dark handle, the blade along +z.
+function knifeProp() {
+  const group = new THREE.Group();
+  group.add(new THREE.Mesh(cached('knife-handle', () => moved(new THREE.BoxGeometry(0.026, 0.032, 0.11), 0, 0, -0.045)), mat('#1c1a1c', 0.6)));
+  group.add(new THREE.Mesh(cached('knife-blade', () => {
+    const outline = new THREE.Shape([new THREE.Vector2(0, -0.016), new THREE.Vector2(0.17, -0.016), new THREE.Vector2(0.22, 0.004), new THREE.Vector2(0.17, 0.016), new THREE.Vector2(0, 0.016)]);
+    return moved(new THREE.ExtrudeGeometry(outline, { depth: 0.003, bevelEnabled: false }), 0, 0, 0.01, 0, -Math.PI / 2, 0);
+  }), mat('#d4d8de', 0.3, 0.45)));
+  return group;
+}
+
+// A small stolen handbag with its strap, clutched to the chest.
+function bagProp() {
+  return new THREE.Mesh(cached('handbag', () => merge([
+    moved(new THREE.BoxGeometry(0.24, 0.16, 0.09), 0, 0, 0),
+    moved(new THREE.BoxGeometry(0.24, 0.05, 0.095), 0, 0.075, 0, 0.25),
+    moved(new THREE.TorusGeometry(0.1, 0.008, 5, 12, Math.PI), 0, 0.08, 0),
+    moved(new THREE.SphereGeometry(0.012, 6, 5), 0.06, 0.055, 0.05),
+  ])), mat('#6b2430', 0.55));
+}
 
 function phoneProp() {
   const group = new THREE.Group();
@@ -326,10 +464,13 @@ function guitarProp() {
   return group;
 }
 
-function prop(kind: string): THREE.Object3D {
+function prop(kind: string, seed = 0): THREE.Object3D {
   switch (kind) {
     case 'phone': return phoneProp();
     case 'guitar': return guitarProp();
+    case 'knife': return knifeProp();
+    case 'sign': return signProp(seed);
+    case 'handbag': return bagProp();
     case 'broom': return new THREE.Mesh(cached('broom', () => merge([
       moved(new THREE.CylinderGeometry(0.013, 0.013, 1.25, 6), 0, -0.45, 0),
       moved(new THREE.BoxGeometry(0.3, 0.12, 0.06), 0, -1.1, 0),
@@ -476,7 +617,9 @@ type Rig = {
   full: Full;
   handL: THREE.Group; handR: THREE.Group;
   eyes: THREE.Group[]; irises: THREE.Mesh[]; brows: THREE.Mesh[]; browY: number;
-  lip: THREE.Mesh; lipStep: number; mouth: THREE.Mesh; blush: THREE.Mesh;
+  lip: THREE.Mesh; lipStep: number; lipW: number; mouth: THREE.Mesh; blush: THREE.Mesh; teeth: THREE.Mesh;
+  // The iris as made, kept to swap back after heart eyes.
+  irisGeo: THREE.BufferGeometry; irisMat: THREE.Material; hearts: boolean;
   torsoLen: { thigh: number; shin: number };
   props: Map<string, THREE.Object3D>;
   handheld: THREE.Object3D | null;
@@ -497,7 +640,7 @@ const KEYS = [
   'torX', 'torY', 'torZ', 'headX', 'headY', 'headZ',
   'aX0', 'aZ0', 'aY0', 'e0', 'w0', 'aX1', 'aZ1', 'aY1', 'e1', 'w1',
   'lX0', 'lZ0', 'k0', 'lX1', 'lZ1', 'k1',
-  'eye', 'brow', 'browIn', 'smile', 'open', 'blush', 'gazeY',
+  'eye', 'brow', 'browIn', 'smile', 'open', 'blush', 'gazeY', 'pucker', 'teeth',
 ] as const;
 type Key = typeof KEYS[number];
 type Frame = Record<Key, number>;
@@ -570,7 +713,7 @@ export function createPerson(look: Look, shadows = true): Person {
   }
   if (L.top === 'apron') mesh(cached('apron', () => new THREE.BoxGeometry(0.27, 0.66, 0.012)), cloth(L.topColor), torso, 0, 0.06, front + 0.01).rotation.x = -0.04;
   if (L.top === 'hoodie') mesh(cached('hood', () => moved(new THREE.SphereGeometry(0.1, 12, 8, 0, Math.PI * 2, 0, Math.PI * 0.6), 0, 0, 0, -0.9, 0, 0, 1.25, 0.8, 0.9)), cloth(L.topColor), torso, 0, 0.44, -front * 0.75);
-  if (L.top === 'uniform') mesh(cached('belt', () => moved(new THREE.TorusGeometry(1, 0.06, 4, 16), 0, 0, 0, Math.PI / 2, 0, 0, 1, 1, 0.75)), mat('#1a1a1c', 0.5), torso, 0, -0.06, 0).scale.set(d.waist * 1.04, d.waist * 1.04, 1);
+  if (L.top === 'uniform') mesh(cached('belt', () => moved(new THREE.TorusGeometry(1, 0.06, 4, 16), 0, 0, 0, Math.PI / 2, 0, 0, 1, 1, 0.75)), mat('#1a1a1c', 0.5), torso, 0, -0.06, 0).scale.set(d.waist * 1.04, d.waist * 1.04, d.waist * 1.04);
 
   // Head: skull, features and hair.
   const head = new THREE.Group();
@@ -620,6 +763,8 @@ export function createPerson(look: Look, shadows = true): Person {
   const mouth = mesh(cached('mouth', () => new THREE.SphereGeometry(0.013, 10, 8)), mat('#3a1416', 0.9), head, 0, HEAD_Y - 0.054, 0.09);
   mouth.scale.set(1.2, 0.001, 0.45);
   mouth.visible = false;
+  const teeth = mesh(cached('teeth', () => new THREE.BoxGeometry(0.03, 0.0055, 0.006)), mat('#f1ece2', 0.4), head, 0, HEAD_Y - 0.047, 0.094);
+  teeth.visible = false;
   const blush = mesh(cached('blush', () => merge([-1, 1].map(s => moved(new THREE.SphereGeometry(0.018, 8, 6), s * 0.052, 0, 0, 0, s * 0.5, 0, 1.1, 0.75, 0.35)))), blushMat(), head, 0, HEAD_Y - 0.016, 0.08);
   blush.visible = false;
 
@@ -646,6 +791,19 @@ export function createPerson(look: Look, shadows = true): Person {
     b.scale.set(0.098, 0.1, 0.112);
     b.rotation.z = 0.12;
   }
+  const blood = bloodMat();
+  if (ex.has('blood-head')) {
+    const cut = mesh(cutGeometry(), blood, head, 0.028, HEAD_Y + 0.058, 0.088);
+    cut.rotation.set(-0.35, 0.3, 0);
+    cut.scale.setScalar(wide);
+  }
+  if (ex.has('bruise')) {
+    const bruise = mesh(cached('bruise', () => merge([
+      moved(new THREE.SphereGeometry(1, 10, 8), 0, 0, 0, 0, 0, 0, 0.036, 0.032, 0.007),
+      moved(new THREE.SphereGeometry(1, 8, 6), 0.016, -0.02, 0, 0, 0, 0, 0.02, 0.017, 0.006),
+    ])), mat('#4e2466', 0.7), head, 0.05 * wide, HEAD_Y - 0.022, 0.078);
+    bruise.rotation.y = 0.6;
+  }
   const hatColor = r() < 0.5 ? '#1e2026' : shade(L.topColor, -0.1);
   if (L.hairStyle === 'cap' || L.top === 'uniform') {
     const cap = mesh(cached('cap', () => merge([
@@ -668,6 +826,12 @@ export function createPerson(look: Look, shadows = true): Person {
     moved(new THREE.TorusGeometry(0.128, 0.008, 5, 20, Math.PI), 0, 0, 0),
     ...[-1, 1].map(s => moved(new THREE.CylinderGeometry(0.034, 0.034, 0.03, 12), s * 0.106, -0.005, 0, 0, 0, Math.PI / 2)),
   ])), mat('#1c1d22', 0.4), head, 0, HEAD_Y + 0.005, -0.005);
+
+  // A spreading stain on the top, high on the chest.
+  if (ex.has('blood-shirt')) {
+    const stain = mesh(stainGeometry('shirt', 0.075, 0.085), blood, torso, 0.03, 0.2, front * 0.96);
+    stain.rotation.set(-0.12, 0.12, 0);
+  }
 
   // Neck and shoulder extras.
   if (ex.has('scarf')) mesh(cached('scarf', () => merge([
@@ -713,6 +877,15 @@ export function createPerson(look: Look, shadows = true): Person {
     const h = mesh(handGeo, skin, hand);
     h.rotation.y = side * 0.5;
     h.scale.setScalar(L.body === 'f' ? 0.88 : 1);
+    if (ex.has('blood-hands')) {
+      const palm = mesh(cached('bloody-palm', () => new THREE.SphereGeometry(1, 9, 7)), blood, hand, -side * 0.011, -0.042, 0.008);
+      palm.scale.set(0.022, 0.052, 0.042);
+      palm.rotation.y = side * 0.5;
+    }
+    if (side === 1 && ex.has('blood-arm')) {
+      if (longSleeves) mesh(tornSleeveGeometry(armR * 0.84), sleeve, fore, 0, -0.07, 0);
+      mesh(limbWoundGeometry('arm', armR * 0.8), blood, fore, 0, -0.13, 0);
+    }
     return { arm, fore, hand };
   };
   const right = makeArm(-1);
@@ -730,6 +903,7 @@ export function createPerson(look: Look, shadows = true): Person {
     leg.position.set(side * d.hip * 0.47, -HIP_DROP, 0);
     hips.add(leg);
     mesh(thighGeo, thighMat, leg);
+    if (side === -1 && ex.has('blood-leg')) mesh(limbWoundGeometry('leg', legRad * 0.92), blood, leg, 0, -0.2, 0);
     const shin = new THREE.Group();
     shin.position.y = -THIGH;
     leg.add(shin);
@@ -764,7 +938,8 @@ export function createPerson(look: Look, shadows = true): Person {
 
   const rig: Rig = {
     body: bodyGroup, scale, full: L, handL: left.hand, handR: right.hand,
-    eyes, irises, brows, browY, lip, lipStep: 6, mouth, blush,
+    eyes, irises, brows, browY, lip, lipStep: 6, lipW: lip.scale.x, mouth, blush, teeth,
+    irisGeo: irises[0].geometry, irisMat: irises[0].material as THREE.Material, hearts: false,
     torsoLen: { thigh: THIGH, shin: SHIN },
     props: new Map(), handheld,
     now: blankFrame(), goal: blankFrame(), ready: false,
@@ -901,7 +1076,10 @@ export function randomLook(seed: number, district?: string): Look {
 
 // ------------------------------------------------------------------ mood and pose
 
-const SEATED: Pose[] = ['sit', 'swing', 'sleep', 'ground', 'bike'];
+const SEATED: Pose[] = ['sit', 'swing', 'sleep', 'ground', 'bike', 'injured'];
+// Poses that lay the body on the ground (the root stays between the feet).
+const LYING: Pose[] = ['lie', 'fallen'];
+const RUNNING: Pose[] = ['run', 'bag-run'];
 const POSE_PROPS: Partial<Record<Pose, { kind: string; hand: 'R' | 'L' | 'torso'; at: [number, number, number]; rot: [number, number, number] }>> = {
   phone: { kind: 'phone', hand: 'R', at: [0, -0.07, 0.03], rot: [-1.3, 0, 0] },
   guitar: { kind: 'guitar', hand: 'torso', at: [-0.1, 0.1, 0.2], rot: [0, 0.15, 0.5] },
@@ -910,6 +1088,10 @@ const POSE_PROPS: Partial<Record<Pose, { kind: string; hand: 'R' | 'L' | 'torso'
   fish: { kind: 'rod', hand: 'R', at: [0, -0.05, 0.02], rot: [2.3, 0, 0] },
   cook: { kind: 'spatula', hand: 'R', at: [0, -0.05, 0.02], rot: [-0.3, 0, 0] },
   read: { kind: 'book', hand: 'torso', at: [0, 0.2, 0.3], rot: [-0.85, 0, 0] },
+  // The fist points down the forearm (-y of the hand), so the blade goes there.
+  knife: { kind: 'knife', hand: 'R', at: [0, -0.045, 0.03], rot: [Math.PI / 2 + 0.2, 0, 0] },
+  sign: { kind: 'sign', hand: 'R', at: [0, -0.03, 0.01], rot: [0, 0, 0] },
+  'bag-run': { kind: 'handbag', hand: 'torso', at: [0.05, 0.22, 0.3], rot: [0.1, 0, -0.15] },
 };
 
 export function setMood(person: Person, mood: Mood | string) {
@@ -917,6 +1099,21 @@ export function setMood(person: Person, mood: Mood | string) {
   if (next === person.mood) return;
   person.mood = next;
   person.rig.blend = 0;
+  heartEyes(person, next === 'smitten');
+}
+
+// Heart-shaped pupils: the iris meshes swap to a small glowing red heart and
+// back. The smitten mood uses it; it can also be switched on its own.
+export function heartEyes(person: Person, on: boolean) {
+  const rig = person.rig;
+  if (rig.hearts === on) return;
+  rig.hearts = on;
+  for (const iris of rig.irises) {
+    iris.geometry = on ? heartGeometry() : rig.irisGeo;
+    iris.material = on ? heartMat() : rig.irisMat;
+    iris.scale.set(on ? 1.25 : 1, on ? 1.25 : 1, on ? 1 : 0.55);
+    iris.position.z = on ? 0.0125 : 0.0095;
+  }
 }
 
 export function setPose(person: Person, pose: Pose | string, seated?: boolean) {
@@ -927,16 +1124,17 @@ export function setPose(person: Person, pose: Pose | string, seated?: boolean) {
   person.seated = sit;
   person.rig.blend = 0;
   const rig = person.rig;
+  if (next === 'injured' && person.mood === 'neutral') setMood(person, 'pain');
   for (const [key, object] of rig.props) object.visible = key === next;
   const spec = POSE_PROPS[next];
   if (spec && !rig.props.has(next)) {
-    const object = prop(spec.kind);
+    const object = prop(spec.kind, rig.full.seed);
     object.position.set(...spec.at);
     object.rotation.set(...spec.rot);
     if (spec.hand === 'torso') {
       const front = person.parts.torso.children[0] as THREE.Mesh;
       front.geometry.computeBoundingBox();
-      object.position.z = Math.max(spec.at[2], front.geometry.boundingBox!.max.z + (next === 'carry' ? 0.16 : next === 'read' ? 0.24 : 0.07));
+      object.position.z = Math.max(spec.at[2], front.geometry.boundingBox!.max.z + (next === 'carry' ? 0.16 : next === 'read' ? 0.24 : next === 'bag-run' ? 0.08 : 0.07));
     }
     (spec.hand === 'R' ? rig.handR : spec.hand === 'L' ? rig.handL : person.parts.torso).add(object);
     object.traverse(o => { if ((o as THREE.Mesh).isMesh) o.castShadow = (person.parts.hips.children[0] as THREE.Mesh).castShadow; });
@@ -944,7 +1142,12 @@ export function setPose(person: Person, pose: Pose | string, seated?: boolean) {
   }
   if (rig.handheld) rig.handheld.visible = !RIGHT_HAND_BUSY.has(next) || rig.handheld.userData.kind === 'flowers';
 }
-const RIGHT_HAND_BUSY = new Set<Pose>(['phone', 'cry', 'guitar', 'wave', 'balcony', 'window', 'sweep', 'carry', 'fish', 'cook', 'read', 'arms', 'bike', 'hug', 'swing', 'dance', 'lie']);
+const RIGHT_HAND_BUSY = new Set<Pose>([
+  'phone', 'cry', 'guitar', 'wave', 'balcony', 'window', 'sweep', 'carry', 'fish', 'cook', 'read', 'arms', 'bike', 'hug', 'swing', 'dance', 'lie',
+  'hands-up', 'knife', 'scream', 'kiss', 'fallen', 'injured', 'fight', 'cuffed', 'sign', 'bag-run', 'point',
+]);
+// A bump that peaks at `at` within a 0..1 cycle, `w` wide.
+const pulse = (u: number, at: number, w: number) => Math.exp(-(((u - at) / w) ** 2));
 
 // ------------------------------------------------------------------ animation
 
@@ -983,8 +1186,8 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
   for (const k of KEYS) f[k] = 0;
   f.eye = 1; f.smile = 0.08;
   const pose = person.pose;
-  const cycle = speed > 0.1 ? speed : pose === 'walk' ? 1.25 : pose === 'run' ? 3.6 : 0;
-  const moving = cycle > 0 && !person.seated && pose !== 'lie' && pose !== 'ground';
+  const cycle = speed > 0.1 ? speed : pose === 'walk' ? 1.25 : RUNNING.includes(pose) ? 3.6 : 0;
+  const moving = cycle > 0 && !person.seated && !LYING.includes(pose) && pose !== 'ground';
   const run = cycle > 3.2;
   let armsFree = !RIGHT_HAND_BUSY.has(pose) && pose !== 'smoke-free';
   let lowerFree = true;
@@ -1001,11 +1204,30 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
     legs(f, 0, 0, 0.02); legs(f, 1, -0.5 - Math.sin(t * 0.4) * 0.05, 1.0);
     f.headX = -0.1; f.headY *= 0.4;
     lowerFree = false;
+  } else if (pose === 'fallen') {
+    // Face down along +z, one arm trapped under the chest, the other flung
+    // out, one knee drawn up; only the breathing moves.
+    f.bodyRX = Math.PI / 2; f.bodyY = 0.13; f.bodyZ = -0.82 * s;
+    legs(f, 0, 0.04, 0.03, 0.06); legs(f, 1, 0.06, 0.55, 0.5);
+    arms(f, 0, -1.35, 0.1, 0.4, -0.9); arms(f, 1, 0.1, 1.45, 0.3, -0.5);
+    f.torX = Math.sin(t * 1.1) * 0.02; f.headX = 0.08; f.headY = 1.05; f.headZ = 0.1;
+    f.eye = 0.12; f.smile = -0.2; f.open = 0.1;
+    lowerFree = false;
   } else if (pose === 'ground') {
     f.seat = 0.17 / s;
     legs(f, 0, -1.45, 0.12, 0.1); legs(f, 1, -1.9, 2.05, 0.12);
     f.torX = -0.18 + Math.sin(t * 1.7) * 0.01;
     both(f, 0.55, 0.22, 0, -0.08);
+    armsFree = false;
+  } else if (pose === 'injured') {
+    // Sitting on the ground, the right leg stretched out, both hands pressed
+    // on the wounded thigh (or the belly), rocking with the pain.
+    const rock = Math.sin(t * 2.3) * 0.05;
+    f.seat = 0.17 / s;
+    legs(f, 0, -1.5, 0.04, 0.08); legs(f, 1, -1.85, 2.0, 0.14);
+    if (rig.variant % 2) both(f, -1.25, 0.15, 0.5, -0.5 + rock);
+    else both(f, -0.85, 0.08, 0.55, -1.5 + rock);
+    f.torX = 0.3 + rock; f.headX = 0.45; f.headY *= 0.2;
     armsFree = false;
   } else if (person.seated && pose === 'bike') {
     // Saddle at 0.86 m, cranks under it, hands on the bars.
@@ -1046,7 +1268,14 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
     const swing = run ? 0.9 : old ? 0.22 : 0.45;
     arms(f, 0, -Math.sin(p) * swing, 0.08, 0.1, run ? -1.35 : -0.22 - Math.max(0, Math.sin(p)) * 0.25);
     arms(f, 1, Math.sin(p) * swing, 0.08, 0.1, run ? -1.35 : -0.22 - Math.max(0, -Math.sin(p)) * 0.25);
+    if (pose === 'bag-run') { arms(f, 1, -1.05, 0.25, 0.85, -2.1); f.torX += 0.1; f.headY = -0.35 + Math.sin(t * 2.1) * 0.25; f.eye = 1.2; f.brow = 0.5; }
     armsFree = false;
+  } else if (pose === 'fight' || pose === 'knife') {
+    // A fighting stance: left foot forward, knees bent, weight shifting.
+    const shift = Math.sin(t * 1.6);
+    legs(f, 0, 0.22, 0.42, 0.14); legs(f, 1, -0.4, 0.5, 0.12);
+    f.hipZ = 0.04; f.hipRoll = shift * 0.03; f.torZ = -shift * 0.03; f.torX = 0.2;
+    f.headX = -0.08; f.headY *= 0.25;
   } else if (pose === 'crouch') {
     legs(f, 0, -1.95, 2.3, 0.18); legs(f, 1, -1.85, 2.25, 0.16);
     f.hipZ = -0.24; f.torX = 0.5; f.headX = -0.35;
@@ -1149,6 +1378,58 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
       both(f, -0.55, 0.12, 0.55, -1.3);
       f.headX = 0.4; f.headY *= 0.1; f.gazeY = -1;
       break;
+    case 'hands-up': {
+      const tremble = Math.sin(t * 29) * 0.03;
+      arms(f, 0, 0.1 + tremble, 2.95, 0.1, -0.08); arms(f, 1, 0.1 - tremble, 2.95, 0.1, -0.08);
+      f.headX = -0.2; f.eye = 1.3; f.brow = 0.7; f.browIn = 0.4; f.open = 0.2; f.smile = -0.2;
+      break;
+    }
+    case 'knife': {
+      const shift = Math.sin(t * 1.6);
+      arms(f, 0, -0.55 + shift * 0.05, 0.25, 0.1, -0.95 + shift * 0.08);
+      arms(f, 1, -0.85, 0.45, 0.6, -1.35 - shift * 0.06);
+      f.smile = -0.35; f.brow = -0.2; f.browIn = -0.5; f.eye = 0.85;
+      break;
+    }
+    case 'fight': {
+      // Guard, jab, cross, reset: one loop per phase cycle, hips twisting.
+      const u = ((person.phase * 1.3) % (Math.PI * 2)) / (Math.PI * 2);
+      const jab = pulse(u, 0.3, 0.07), cross = pulse(u, 0.62, 0.08), bob = Math.abs(Math.sin(person.phase * 2.6)) * 0.08;
+      arms(f, 0, -1.35 - cross * 0.25, 0.3 - cross * 0.18, 0.55 + cross * 0.4, -2.25 + cross * 2.0);
+      arms(f, 1, -1.3 - jab * 0.3, 0.3 - jab * 0.18, 0.55 + jab * 0.3, -2.2 + jab * 1.95);
+      f.torY = -jab * 0.3 + cross * 0.45; f.hipYaw = -jab * 0.15 + cross * 0.25;
+      f.torX += bob * 0.5 + cross * 0.1; f.k0 += bob; f.k1 += bob;
+      f.headX = 0.08; f.brow = -0.3; f.browIn = -0.6; f.smile = -0.3; f.open = cross * 0.3;
+      break;
+    }
+    case 'scream': {
+      const tremble = Math.sin(t * 33) * 0.03;
+      if (rig.variant % 2) { arms(f, 0, -1.1 + tremble, 0.5, 0.6, -2.4); arms(f, 1, -1.1 - tremble, 0.5, 0.6, -2.4); }
+      else { arms(f, 0, -0.95 + tremble, 0.2, 0.9, -2.3); arms(f, 1, -0.35, 0.3, 0.2, -1.1); }
+      f.torX = -0.2 + tremble; f.torZ = tremble * 0.6; f.headX = -0.22; f.headY *= 0.2;
+      f.open = 0.95; f.eye = 1.3; f.brow = 0.8; f.browIn = 0.5; f.smile = -0.4;
+      break;
+    }
+    case 'kiss':
+      f.torX = 0.3; f.headX = -0.08; f.headZ = 0.14; f.headY *= 0.1;
+      both(f, -0.95, 0.3, 0.5, -0.55);
+      f.pucker = 1; f.eye = 0.04; f.smile = 0.25; f.brow = 0.15; f.blush = 0.5;
+      break;
+    case 'cuffed':
+      both(f, 0.5, 0.1, 1.15, -1.05);
+      f.torX = 0.24; f.headX = 0.42; f.headY *= 0.3; f.smile = -0.25; f.gazeY = -0.6;
+      break;
+    case 'sign': {
+      // Both arms straight up, hands meeting on the stick, the board swaying.
+      const sway = Math.sin(t * 2.1) * 0.12;
+      arms(f, 0, -0.1, Math.PI + 0.3 + sway, 0, -0.12, sway * 0.5); arms(f, 1, -0.1, Math.PI + 0.3 - sway, 0, -0.12, -sway * 0.5);
+      f.torZ += sway * 0.15; f.headX = -0.15; f.open = talk ? f.open : Math.max(0, Math.sin(t * 2.1)) * 0.5; f.brow = 0.2;
+      break;
+    }
+    case 'point':
+      arms(f, 0, -1.55, 0.05, 0, -0.04 + Math.sin(t * 3) * 0.03); arms(f, 1, 0.1, 0.75, 1.57, -1.65);
+      f.torY = -0.1; f.headY *= 0.15; f.browIn = -0.2;
+      break;
     case 'hug': {
       const sway = Math.sin(t * 1.2);
       both(f, -1.25, 0.32, 0.95, -1.15);
@@ -1219,6 +1500,30 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
       if (lowerFree && !person.seated) { f.lZ0 += 0.06; f.lZ1 += 0.06; }
       break;
     }
+    case 'smitten':
+      f.smile = 0.95; f.eye = 0.9; f.brow = 0.35; f.browIn = 0.2; f.blush = 1; f.headZ += 0.22; f.headX += 0.04;
+      if (calm) both(f, -1.15, 0.1, 0.75, -2.4);
+      break;
+    case 'laugh': {
+      const bounce = Math.abs(Math.sin(t * 10.5));
+      f.smile = 0.95; f.open = 0.5 + bounce * 0.3; f.eye = 0.22; f.brow = 0.3; f.headX -= 0.18; f.headZ += 0.06;
+      f.torX += 0.05 - bounce * 0.06; f.aZ0 += bounce * 0.12; f.aZ1 += bounce * 0.12;
+      if (calm) arms(f, 1, -0.6, 0.1, 0.9, -1.9);
+      break;
+    }
+    case 'terror': {
+      const shake = Math.sin(t * 41) * 0.035;
+      f.smile = -0.4; f.open = 0.9; f.eye = 1.45; f.brow = 1; f.browIn = 0.45; f.torX -= 0.16 + shake; f.torZ += shake; f.headZ += shake * 0.8; f.headX -= 0.1;
+      if (lowerFree && !person.seated) { f.k0 += 0.4; f.k1 += 0.4; f.lX0 -= 0.1; f.lX1 -= 0.1; f.lZ0 += 0.05; f.lZ1 += 0.05; }
+      if (calm) both(f, -1.15 + shake, 0.45, 0.3, -1.95);
+      break;
+    }
+    case 'furious': {
+      const heave = Math.sin(t * 4.2) * 0.03;
+      f.smile = -0.6; f.open = 0.3; f.teeth = 1; f.eye = 0.85; f.brow = -0.5; f.browIn = -1; f.headX += 0.12; f.torX += 0.22 + heave;
+      if (calm) both(f, -0.2, 0.3 + heave, 0.5, -0.85);
+      break;
+    }
     case 'sleepy': {
       rig.nodClock += dt;
       const nod = (rig.nodClock % 7) / 7;
@@ -1233,14 +1538,14 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
   if (pose === 'sleep') f.eye = 0.02;
 
   // Age: a slight stoop, the head pushed forward to look ahead.
-  if (rig.old && pose !== 'lie') { f.torX += 0.14; f.headX -= 0.12; if (!person.seated) { f.k0 += 0.06; f.k1 += 0.06; } }
+  if (rig.old && !LYING.includes(pose)) { f.torX += 0.14; f.headX -= 0.12; if (!person.seated) { f.k0 += 0.06; f.k1 += 0.06; } }
 
   // Talking: the mouth moves, the head nods and a hand gestures.
   if (talk) {
     f.open = Math.max(f.open, 0.08 + Math.abs(Math.sin(t * 9.3) * Math.sin(t * 3.7 + 1)) * 0.42);
     f.headX += Math.sin(t * 2.9) * 0.05;
     f.brow += Math.max(0, Math.sin(t * 1.3)) * 0.25;
-    if (calm && pose !== 'arms' && mood !== 'love' && mood !== 'scared') {
+    if (calm && pose !== 'arms' && mood !== 'love' && mood !== 'scared' && mood !== 'smitten' && mood !== 'terror') {
       const g = Math.sin(t * 2.3);
       arms(f, 0, -0.38 + g * 0.08, 0.16, 0.35, -1.05 + Math.sin(t * 3.1) * 0.25);
       if (Math.sin(t * 0.5) > 0.4) arms(f, 1, -0.3, 0.22, 0.3, -0.95 + g * 0.2);
@@ -1262,7 +1567,7 @@ export function animatePerson(person: Person, dt: number, speed: number, talk = 
   dt = Math.min(dt, 0.1);
   rig.clock += dt;
   // Gait: two steps per cycle, shorter steps for older people.
-  const cycle = speed > 0.1 ? speed : person.pose === 'walk' ? 1.25 : person.pose === 'run' ? 3.6 : 0;
+  const cycle = speed > 0.1 ? speed : person.pose === 'walk' ? 1.25 : RUNNING.includes(person.pose) ? 3.6 : 0;
   const step = rig.scale * (cycle > 3.2 ? 1.25 : rig.old ? 0.5 : 0.72);
   if (person.pose === 'bike') person.phase += dt * (1.6 + speed * 0.8);
   else if (cycle > 0) person.phase += (dt * cycle * Math.PI) / step;
@@ -1332,6 +1637,10 @@ export function animatePerson(person: Person, dt: number, speed: number, talk = 
   rig.mouth.visible = mouthOpen > 0.03;
   rig.mouth.scale.set(1.1 + Math.max(0, -n.smile) * 0.4 * mouthOpen, Math.max(0.001, mouthOpen * 1.15), 0.45);
   rig.lip.position.y = HEAD_Y - 0.05 + mouthOpen * 0.006;
+  const pucker = clamp(n.pucker, 0, 1);
+  rig.lip.position.z = 0.094 + pucker * 0.014;
+  rig.lip.scale.set(rig.lipW * (1 - pucker * 0.45), 1 + pucker * 1.6, 1 + pucker * 1.4);
+  rig.teeth.visible = n.teeth > 0.35 && mouthOpen > 0.1;
   rig.blush.visible = n.blush > 0.03;
   rig.blush.scale.setScalar(Math.max(0.001, n.blush));
 }

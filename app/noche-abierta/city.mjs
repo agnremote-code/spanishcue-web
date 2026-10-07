@@ -12,6 +12,10 @@
 // axis-aligned box so the collision code stays the same. The renderer
 // (district3d.ts) only draws what this file describes; the tests walk it.
 
+import { PLACEMENTS as CAOS_NORTE_PLACES } from "./street/caos-norte.mjs";
+import { PLACEMENTS as CAOS_CENTRO_PLACES } from "./street/caos-centro.mjs";
+import { PLACEMENTS as CAOS_SUR_PLACES } from "./street/caos-sur.mjs";
+
 export const CITY_BOUNDS = { minX: -126, maxX: 126, minZ: -122, maxZ: 116 };
 
 // Roads. The two original ones now cross the whole city.
@@ -220,6 +224,40 @@ export const CITY_PROPS = [
   { id: "contenedor-1", kind: "container", x0: 112, x1: 124, z0: 100, z1: 102.6, h: 2.6 },
   { id: "contenedor-2", kind: "container", x0: 114, x1: 124, z0: 106, z1: 108.6, h: 2.6 },
   { id: "soga-fila", kind: "rope", x0: 76, x1: 81.5, z0: 58.2, z1: 58.5, h: 1 },
+
+  // More benches, where the new sitters sit.
+  { id: "banco-costa-3", kind: "bench", x0: 94.3, x1: 95, z0: 30, z1: 32, h: 0.9 },
+  { id: "banco-parque-sur-2", kind: "bench", x0: -42, x1: -40, z0: 90, z1: 90.7, h: 0.9 },
+  { id: "banco-plaza-estacion-2", kind: "bench", x0: -90, x1: -88, z0: 60, z1: 60.7, h: 0.9 },
+  { id: "banco-tilos-3", kind: "bench", x0: -16, x1: -14, z0: -112.2, z1: -111.5, h: 0.9 },
+  { id: "banco-parque-rio-3", kind: "bench", x0: 110.6, x1: 111.3, z0: 14, z1: 16, h: 0.9 },
+  { id: "banco-playon", kind: "bench", x0: 118, x1: 120, z0: 90, z1: 90.7, h: 0.9 },
+
+  // Street dressing: bins and garbage bags on the corners, cones by the
+  // building sites, a newspaper rack, a lost shopping cart, closed kiosks.
+  { id: "tacho-centro", kind: "bin", x0: -62.9, x1: -62.4, z0: -57, z1: -56.5, h: 0.9 },
+  { id: "tacho-alto", kind: "bin", x0: 22.2, x1: 22.7, z0: -56.9, z1: -56.4, h: 0.9 },
+  { id: "tacho-clinica", kind: "bin", x0: 98.2, x1: 98.7, z0: -57.9, z1: -57.4, h: 0.9 },
+  { id: "tacho-costa", kind: "bin", x0: 92.2, x1: 92.7, z0: -7.9, z1: -7.4, h: 0.9 },
+  { id: "tacho-estacion", kind: "bin", x0: -73.6, x1: -73.1, z0: 56.2, z1: 56.7, h: 0.9 },
+  { id: "tacho-sur", kind: "bin", x0: 30.2, x1: 30.7, z0: 58.2, z1: 58.7, h: 0.9 },
+  { id: "tacho-galpones", kind: "bin", x0: 100.2, x1: 100.7, z0: 60.2, z1: 60.7, h: 0.9 },
+  { id: "tacho-mercado", kind: "bin", x0: -75.9, x1: -75.4, z0: -40.9, z1: -40.4, h: 0.9 },
+  { id: "tacho-viejo", kind: "bin", x0: -91.2, x1: -90.7, z0: -56.9, z1: -56.4, h: 0.9 },
+  { id: "bolsas-viejo", kind: "bags", x0: -92.2, x1: -91.3, z0: -57, z1: -56.4, h: 0.6 },
+  { id: "bolsas-centro", kind: "bags", x0: -62.9, x1: -62.4, z0: -58.2, z1: -57.3, h: 0.6 },
+  { id: "bolsas-galpones", kind: "bags", x0: 101, x1: 101.9, z0: 60.2, z1: 60.8, h: 0.6 },
+  { id: "bolsas-sur", kind: "bags", x0: 30.2, x1: 30.8, z0: 59, z1: 59.9, h: 0.6 },
+  { id: "cono-viejo-1", kind: "cone", x0: -101.4, x1: -101, z0: -109.2, z1: -108.8, h: 0.6 },
+  { id: "cono-viejo-2", kind: "cone", x0: -101.4, x1: -101, z0: -103.2, z1: -102.8, h: 0.6 },
+  { id: "cono-galpones-1", kind: "cone", x0: 96.8, x1: 97.2, z0: 100.8, z1: 101.2, h: 0.6 },
+  { id: "cono-galpones-2", kind: "cone", x0: 96.8, x1: 97.2, z0: 106.8, z1: 107.2, h: 0.6 },
+  { id: "cono-clinica-1", kind: "cone", x0: 89.8, x1: 90.2, z0: -95.7, z1: -95.3, h: 0.6 },
+  { id: "cono-clinica-2", kind: "cone", x0: 91.8, x1: 92.2, z0: -95.7, z1: -95.3, h: 0.6 },
+  { id: "diarios-estacion", kind: "newsrack", x0: -100, x1: -99.2, z0: 81.2, z1: 81.7, h: 1.1 },
+  { id: "changuito", kind: "cart", x0: -78, x1: -77.1, z0: -36.3, z1: -35.75, h: 1 },
+  { id: "kiosco-cerrado-estacion", kind: "kiosk-closed", x0: -80, x1: -77.6, z0: 77, z1: 78.6, h: 2.6 },
+  { id: "kiosco-cerrado-costa", kind: "kiosk-closed", x0: 88.4, x1: 90.8, z0: 36, z1: 37.6, h: 2.6 },
 ];
 
 // Places where the camera must stay low (a roof over the player).
@@ -233,6 +271,8 @@ export const CEILINGS = [
 // `walk` makes the person stroll along a line between two points (the circle
 // moves with them and they stop when the learner is close).
 export const PLACEMENTS = {
+  // The strong street events bring their own spots (see street/caos-*.mjs).
+  ...CAOS_NORTE_PLACES, ...CAOS_CENTRO_PLACES, ...CAOS_SUR_PLACES,
   // Barrio Viejo.
   "viejo-herido": { x: -110, z: -88.2, face: 0, circle: { x: -110, z: -86.4 } },
   "viejo-auto": { x: -61.2, z: -97, face: -Math.PI / 2, car: { x: -59.05, z: -97, heading: Math.PI / 2 }, circle: { x: -62.9, z: -97 } },
@@ -421,6 +461,18 @@ export const WALKER_ROUTES = [
   { id: "ruta-anden", points: [[-120, 101.6], [-64, 101.6]], count: 2 },
   { id: "ruta-centro-norte", points: [[-46, -31], [46, -31]], count: 3 },
   { id: "ruta-centro-sur", points: [[-46, 35], [-18, 35]], count: 2 },
+  // More of the city on foot: the north of the Barrio Alto, the inner park
+  // loop at the river, the clinic's car park, the warehouses' front, the
+  // Barrio Viejo passage, the alley by the school, the market's south, the
+  // riverside houses.
+  { id: "ruta-alto-norte", points: [[-44, -84], [-8, -84]], count: 2 },
+  { id: "ruta-parque-rio-2", points: [[113, -34], [119, -34], [119, 34], [113, 34]], count: 2 },
+  { id: "ruta-clinica-cochera", points: [[104, -98], [104, -72]], count: 2 },
+  { id: "ruta-galpones-frente", points: [[102, 57.5], [124, 57.5]], count: 2 },
+  { id: "ruta-pasaje-norte", points: [[-98, -91], [-64, -91]], count: 2 },
+  { id: "ruta-sur-callejon", points: [[32, 60], [32, 114]], count: 2 },
+  { id: "ruta-mercado-sur", points: [[-96, 6], [-96, 44]], count: 2 },
+  { id: "ruta-costa-casas", points: [[88, 12], [88, 42]], count: 2 },
 ];
 
 // Groups of people talking among themselves (they glance at you, then go on).
@@ -445,6 +497,20 @@ export const GROUPS = [
   { id: "grupo-viejo", x: -116, z: -88, size: 2, district: "viejo" },
   { id: "grupo-esquina", x: -48, z: 42, size: 2, district: "centro" },
   { id: "grupo-cine", x: 20, z: -31.6, size: 3, district: "centro" },
+  // More corners with people: smokers outside the bars, queues, couples.
+  { id: "grupo-fumadores-vinoteca", x: 36, z: -54.6, size: 3, district: "alto" },
+  { id: "grupo-cola-cine", x: 10, z: -32.4, size: 4, district: "centro", line: true },
+  { id: "grupo-pareja-costanera", x: 92, z: 40, size: 2, district: "costa" },
+  { id: "grupo-pareja-parque-sur", x: -20, z: 106, size: 2, district: "sur" },
+  { id: "grupo-fumadores-fabrica", x: 70, z: 57, size: 3, district: "galpones" },
+  { id: "grupo-charla-estacion", x: -69, z: 75, size: 3, district: "estacion" },
+  { id: "grupo-kiosco-viejo", x: -92, z: -54.6, size: 2, district: "viejo" },
+  { id: "grupo-fumadores-clinica", x: 66, z: -56, size: 2, district: "clinica", uniform: "#7fb7a8" },
+  { id: "grupo-cola-mercado", x: -108, z: -6, size: 4, district: "mercado", line: true },
+  { id: "grupo-embajada", x: 19, z: -82, size: 2, district: "alto" },
+  { id: "grupo-playon-2", x: 108, z: 112, size: 2, district: "galpones" },
+  { id: "grupo-conventillo", x: -77, z: -66, size: 3, district: "viejo" },
+  { id: "grupo-costa-pareja-2", x: 112, z: -26, size: 2, district: "costa" },
 ];
 
 // People sitting on the benches nobody uses for a scene.
@@ -454,6 +520,12 @@ export const SITTERS = [
   { id: "sentado-parque-sur", x: -20, z: 95.35, face: 0 },
   { id: "sentado-placita", x: -67.3, z: -110.25, face: Math.PI },
   { id: "sentado-clinica", x: 74.6, z: -56.65, face: 0, tired: true },
+  { id: "sentado-costa-3", x: 94.65, z: 31, face: -Math.PI / 2 },
+  { id: "sentado-parque-sur-2", x: -41, z: 90.35, face: 0 },
+  { id: "sentado-plaza-estacion", x: -89, z: 60.35, face: 0 },
+  { id: "sentado-tilos-3", x: -15, z: -111.85, face: 0 },
+  { id: "sentado-parque-rio", x: 110.95, z: 15, face: Math.PI / 2, tired: true },
+  { id: "sentado-playon", x: 119, z: 90.35, face: Math.PI },
 ];
 
 // People on balconies and in windows: on the facade of a building, at a floor.
@@ -466,6 +538,17 @@ export const BALCONY_PEOPLE = [
   { id: "balcon-6", x: -46, z: 56.6, floor: 2, face: Math.PI },
   { id: "balcon-7", x: 48, z: 57.6, floor: 3, face: Math.PI },
   { id: "balcon-8", x: -34, z: -43.4, floor: 1, face: Math.PI },
+  { id: "balcon-9", x: -30, z: 44.4, floor: 2, face: 0 },
+  { id: "balcon-10", x: 36, z: -32.6, floor: 3, face: 0 },
+  { id: "balcon-11", x: -44.6, z: -100, floor: 4, face: Math.PI / 2 },
+  { id: "balcon-12", x: 40, z: -85.6, floor: 2, face: 0 },
+  { id: "balcon-13", x: -70, z: -21.6, floor: 2, face: 0 },
+  { id: "balcon-14", x: -97.6, z: 30, floor: 3, face: Math.PI / 2 },
+  { id: "balcon-15", x: 84.4, z: 30, floor: 2, face: Math.PI / 2 },
+  { id: "balcon-16", x: 20, z: 95.6, floor: 1, face: Math.PI },
+  { id: "balcon-17", x: -36, z: 56.6, floor: 3, face: Math.PI },
+  { id: "balcon-18", x: -71.6, z: -104, floor: 3, face: Math.PI / 2 },
+  { id: "balcon-19", x: 30, z: -43.4, floor: 2, face: Math.PI },
 ];
 
 // Animals of the night.
@@ -477,6 +560,10 @@ export const ANIMALS = [
   { id: "perro-paseo", species: "dog", route: "ruta-costanera", color: "#e2d7c2", size: "medium" },
   { id: "perro-tilos", species: "dog", route: "ruta-tilos", color: "#2b2724", size: "small" },
   { id: "perro-sur", species: "dog", route: "ruta-parque-sur", color: "#8a5a32", size: "medium" },
+  { id: "perro-rio", species: "dog", route: "ruta-parque-rio-2", color: "#f0e6d2", size: "small" },
+  { id: "perro-alto", species: "dog", route: "ruta-alto-norte", color: "#4a3a2e", size: "medium" },
+  { id: "gato-sur", species: "cat", x: -39.4, z: 91.6, face: 2.4, color: "#8a8a8e" },
+  { id: "gato-costa", species: "cat", x: 91.6, z: -14.2, face: -0.8, color: "#e8d8b8" },
 ];
 
 // Moving traffic on the new streets. They are one-way, with parked cars on
@@ -499,6 +586,14 @@ export const CITY_TRAFFIC = [
   { id: "bici-2", road: "calle-estacion", axis: "x", lane: mid("calle-estacion") + 1.25, dir: 1, start: 30, speed: 4.6, kind: "bike", color: "#c45a2a" },
   { id: "bici-3", road: "calle-este", axis: "z", lane: mid("calle-este") - 1.25, dir: 1, start: 0, speed: 4, kind: "bike", color: "#3a8a5a" },
   { id: "bici-4", road: "calle-oeste", axis: "z", lane: mid("calle-oeste") + 1.25, dir: -1, start: 20, speed: 4.4, kind: "bike", color: "#8a3a7a" },
+  // Motorbikes: the kerb side opposite the bicycles, faster than the cars, and
+  // narrow enough to slip between the moving lane and the parked cars.
+  { id: "moto-1", road: "calle-alta", axis: "x", lane: mid("calle-alta") + 1.25, dir: -1, start: 30, speed: 10, kind: "moto", color: "#b8252a" },
+  { id: "moto-2", road: "calle-alta", axis: "x", lane: mid("calle-alta") + 1.25, dir: -1, start: -80, speed: 9.2, kind: "moto", color: "#1f1f22" },
+  { id: "moto-3", road: "calle-estacion", axis: "x", lane: mid("calle-estacion") - 1.25, dir: 1, start: 90, speed: 10.5, kind: "moto", color: "#2f6a8a" },
+  { id: "moto-4", road: "calle-estacion", axis: "x", lane: mid("calle-estacion") - 1.25, dir: 1, start: -20, speed: 9.4, kind: "moto", color: "#e0a020" },
+  { id: "moto-5", road: "calle-este", axis: "z", lane: mid("calle-este") + 1.25, dir: 1, start: -60, speed: 11, kind: "moto", color: "#c8c8cc" },
+  { id: "moto-6", road: "calle-oeste", axis: "z", lane: mid("calle-oeste") - 1.25, dir: -1, start: 80, speed: 9.8, kind: "moto", color: "#3a6a3a" },
 ];
 // The ambulance comes now and then along the east street and the avenue.
 export const AMBULANCE_ROUTE = [[56.5, -120], [56.5, -1.2], [-124, -1.2]];
@@ -507,7 +602,7 @@ export const AMBULANCE_EVERY = 75;
 // Parked cars along the new streets (static; they block walking like the others).
 export const CITY_PARKED = [
   { id: "aparcado-1", kind: "sedan", x: -40, z: -51, heading: Math.PI, color: "#2f3b4a" },
-  { id: "aparcado-2", kind: "coupe", x: 30, z: -46.1, heading: 0, color: "#8c8f94" },
+  { id: "aparcado-2", kind: "coupe", x: 30, z: -46, heading: 0, color: "#8c8f94" },
   { id: "aparcado-3", kind: "sedan", x: 86, z: -51, heading: Math.PI, color: "#5a2d3a" },
   { id: "aparcado-4", kind: "taxi", x: -66, z: 62, heading: Math.PI / 2, color: "#f2c230" },
   { id: "aparcado-5", kind: "taxi", x: -66, z: 70.4, heading: Math.PI / 2, color: "#f2c230" },
@@ -659,8 +754,9 @@ export function cityColliders(castSizes = {}) {
 // ------------------------------------------------------------ traffic
 
 const roadById = new Map(ROADS.map((road) => [road.id, road]));
-const LENGTH = { bike: 1.8, default: 4.3 };
-const halfLength = (car) => (car.kind === "bike" ? LENGTH.bike : LENGTH.default) / 2;
+const LENGTH = { bike: 1.8, moto: 1.8, default: 4.3 };
+const narrow = (car) => car.kind === "bike" || car.kind === "moto";
+const halfLength = (car) => (narrow(car) ? LENGTH[car.kind] : LENGTH.default) / 2;
 
 // A vehicle on a street, ready to move: `x`/`z` are its centre.
 export function trafficCar(entry) {
@@ -710,7 +806,7 @@ export function stepCityTraffic(cars, people, dt, blockers = [], avenueSpan = 12
     const half = halfLength(car);
     let free = Infinity;
     for (const person of people) {
-      if (Math.abs(side(person) - lane) > (car.kind === "bike" ? 1.1 : 1.9)) continue;
+      if (Math.abs(side(person) - lane) > (narrow(car) ? 1.1 : 1.9)) continue;
       const gap = ahead(person);
       if (gap > 0) free = Math.min(free, gap - half - 0.5);
     }

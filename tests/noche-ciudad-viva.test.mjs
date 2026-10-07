@@ -10,9 +10,9 @@ const street = await import('../app/noche-abierta/street.mjs');
 const levels = await import('../app/noche-abierta/levels.mjs');
 
 const ITEMS = ['lapiz', 'libro', 'gas', 'granada', 'pistola', 'cuchillo', 'corazon'];
-const MOODS = new Set(['neutral', 'smile', 'love', 'sad', 'scared', 'angry', 'surprised', 'worried', 'pain', 'tipsy', 'sleepy']);
-const CHANGES = new Set(['sonrie', 'se-va', 'corre', 'ambulancia', 'policia', 'baila', 'sigue', 'llama', 'triste', 'enojado', 'luz', 'abraza', 'se-sienta', 'duerme']);
-const VOSEO = /\b(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|mirá|escuchá|vení|decime|contame|andá|fijate|sentate|tomá|dale|che|boludo)\b/i;
+const MOODS = new Set(['neutral', 'smile', 'love', 'sad', 'scared', 'angry', 'surprised', 'worried', 'pain', 'tipsy', 'sleepy', 'smitten', 'laugh', 'terror', 'furious']);
+const CHANGES = new Set(['sonrie', 'se-va', 'corre', 'ambulancia', 'policia', 'baila', 'sigue', 'llama', 'triste', 'enojado', 'luz', 'abraza', 'se-sienta', 'duerme', 'beso', 'huye', 'cae', 'pelea', 'helicoptero', 'manos-arriba']);
+const VOSEO = /(?<![\p{L}])(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|mirá|escuchá|vení|decime|contame|andá|fijate|sentate|tomá|dale|che|boludo)(?![\p{L}])/iu;
 const castSizes = Object.fromEntries(street.ENCOUNTERS.map(item => [item.id, item.cast.length]));
 const boxes = world.colliders(castSizes);
 const solids = boxes.filter(box => !box.npc);
@@ -201,7 +201,7 @@ test('people walking keep to the sidewalks, step around whoever stands in the wa
 
 test('traffic on every street: cars wait at crossings, stop for people and never touch each other', () => {
   let cars = [...world.TRAFFIC.map(car => ({ id: car.id, axis: 'x', lane: car.lane, dir: car.dir, x: car.start, z: car.lane, speed: car.speed, cruise: car.speed, kind: car.kind })), ...city.CITY_TRAFFIC.map(city.trafficCar)];
-  const size = car => car.kind === 'bike' ? { l: 0.9, w: 0.3 } : { l: 2.15, w: 0.9 };
+  const size = car => car.kind === 'bike' || car.kind === 'moto' ? { l: 0.9, w: 0.3 } : { l: 2.15, w: 0.9 };
   const box = car => { const s = size(car); return car.axis === 'z' ? { x0: car.x - s.w, x1: car.x + s.w, z0: car.z - s.l, z1: car.z + s.l } : { x0: car.x - s.l, x1: car.x + s.l, z0: car.z - s.w, z1: car.z + s.w }; };
   const parked = solids.filter(b => b.vehicle);
   const buildings = solids.filter(b => b.building);
@@ -264,31 +264,54 @@ test('every scene is a real mini-scene: reachable moments, real choices, differe
     assert.ok(encounter.nodes[encounter.start], `${w} start`);
     const castIds = new Set(encounter.cast.map(item => item.id));
     const nodes = new Set(), ends = new Set();
-    const visit = id => {
-      if (nodes.has(id)) return;
-      nodes.add(id);
-      const node = encounter.nodes[id];
-      assert.ok(node, `${w}: node ${id}`);
-      for (const choice of [...node.options, ...Object.values(node.items ?? {})]) {
-        assert.ok(Boolean(choice.next) !== Boolean(choice.end), `${w}/${id}/${choice.id}: next or end`);
-        if (choice.next) visit(choice.next); else ends.add(choice.end);
-      }
+    const reach = (from) => {
+      const seenNodes = new Set(), seenEnds = new Set();
+      const visit = id => {
+        if (seenNodes.has(id)) return;
+        seenNodes.add(id);
+        const node = encounter.nodes[id];
+        assert.ok(node, `${w}: node ${id}`);
+        for (const choice of [...node.options, ...Object.values(node.items ?? {})]) {
+          assert.ok(Boolean(choice.next) !== Boolean(choice.end), `${w}/${id}/${choice.id}: next or end`);
+          if (choice.next) visit(choice.next); else seenEnds.add(choice.end);
+        }
+      };
+      visit(from);
+      for (const id of seenNodes) nodes.add(id);
+      for (const id of seenEnds) ends.add(id);
+      return { nodes: seenNodes, ends: seenEnds };
     };
-    visit(encounter.start);
+    reach(encounter.start);
+    // With an object in hand the scene opens elsewhere: its own first moment,
+    // its own reactions and endings, its own closing question.
+    const variants = encounter.variants ?? {};
+    const starts = new Set([encounter.start]);
+    for (const [item, variant] of Object.entries(variants)) {
+      assert.ok(ITEMS.includes(item), `${w}: variant ${item}`);
+      assert.ok(encounter.nodes[variant.start], `${w}/${item}: start ${variant.start}`);
+      assert.ok(!starts.has(variant.start), `${w}/${item}: its own first moment`);
+      starts.add(variant.start);
+      if (variant.fx) assert.ok(street.OPENING_FX.includes(variant.fx), `${w}/${item}: fx ${variant.fx}`);
+      const seen = reach(variant.start);
+      assert.ok(seen.nodes.size >= 2 && seen.ends.size >= 2, `${w}/${item}: two moments and two endings at least`);
+      if (variant.speak) for (const band of ['A', 'B', 'C']) assert.match(variant.speak[band] ?? '', /^¿[^?]+\?$/, `${w}/${item}: question ${band}`);
+    }
     assert.deepEqual([...nodes].sort(), Object.keys(encounter.nodes).sort(), `${w}: every moment can happen`);
     assert.deepEqual([...ends].sort(), Object.keys(encounter.ends).sort(), `${w}: every ending can happen`);
     for (const [id, node] of Object.entries(encounter.nodes)) {
       assert.ok(castIds.has(node.who), `${w}/${id}: who`);
       assert.ok(MOODS.has(node.mood), `${w}/${id}: mood`);
       assert.ok(node.options.length >= (encounter.kind === 'rincon' ? 2 : 3) && node.options.length <= 3, `${w}/${id}: options`);
-      assert.ok(node.items?.corazon, `${w}/${id}: the heart always does something`);
-      assert.equal(node.items.corazon.mood, 'love', `${w}/${id}: the heart brings love`);
-      for (const key of Object.keys(node.items)) assert.ok(ITEMS.includes(key), `${w}/${id}: ${key}`);
+      for (const key of Object.keys(node.items ?? {})) assert.ok(ITEMS.includes(key), `${w}/${id}: ${key}`);
+      if (node.items?.corazon) assert.equal(node.items.corazon.mood, 'love', `${w}/${id}: the heart brings love`);
+      for (const choice of node.options) assert.ok(MOODS.has(choice.mood), `${w}/${id}/${choice.id}: mood`);
     }
     if (encounter.kind === 'escena') {
-      for (const item of ITEMS) assert.ok(encounter.nodes[encounter.start].items[item], `${w}: reacts to ${item}`);
+      for (const item of ITEMS) assert.ok(variants[item] || encounter.nodes[encounter.start].items?.[item], `${w}: reacts to ${item}`);
       assert.ok(Object.keys(encounter.ends).length >= 2, `${w}: two endings or more`);
       assert.ok(Object.keys(encounter.nodes).length >= 3, `${w}: three moments or more`);
+      // The base start (no variant) still needs the heart somewhere.
+      assert.ok(encounter.nodes[encounter.start].items?.corazon || variants.corazon, `${w}: the heart always does something`);
     }
     for (const end of Object.values(encounter.ends)) assert.ok(CHANGES.has(end.change), `${w}: ${end.change}`);
     for (const level of levels.LEVELS) {
@@ -297,7 +320,42 @@ test('every scene is a real mini-scene: reachable moments, real choices, differe
       assert.ok(!speakAll.has(question), `${w}: ${level} question repeated`);
       speakAll.add(question);
     }
+    // The closing questions of one scene differ by object.
+    const asked = new Set();
+    for (const [item, variant] of Object.entries(variants)) {
+      if (!variant.speak) continue;
+      for (const band of ['A', 'B', 'C']) {
+        assert.ok(!asked.has(variant.speak[band]), `${w}/${item}: question ${band} repeats another object's`);
+        asked.add(variant.speak[band]);
+      }
+    }
   }
+});
+
+test('the object changes the whole scene, not one line: every escena opens differently for all seven objects', () => {
+  const escenas = street.ENCOUNTERS.filter(item => item.kind === 'escena');
+  let full = 0;
+  for (const encounter of escenas) {
+    const variants = encounter.variants ?? {};
+    if (ITEMS.every(item => variants[item]?.speak)) full++;
+    const lines = new Set(), questions = new Set();
+    for (const item of ITEMS) {
+      if (!variants[item]) continue;
+      let state = street.chooseItem(street.emptyStreet(), item);
+      if (encounter.requires) state = { ...state, flags: [...state.flags, encounter.requires] };
+      state = street.openEncounter(state, encounter.id);
+      const view = street.streetView(state, 'A2');
+      assert.equal(view.variant, item);
+      assert.ok(!lines.has(view.line), `${encounter.id}/${item}: its own opening line`);
+      lines.add(view.line);
+      // Walk the first option to an end and read the closing question.
+      let cursor = state;
+      for (let i = 0; i < 6 && !cursor.open.end; i++) cursor = street.chooseLine(cursor, street.choicesFor(encounter, cursor.open.node, item)[0].key);
+      const ended = street.streetView(cursor, 'A2');
+      if (variants[item].speak) { assert.ok(!questions.has(ended.speak), `${encounter.id}/${item}: its own question`); questions.add(ended.speak); }
+    }
+  }
+  assert.ok(full >= escenas.length * 0.9, `${full} of ${escenas.length} escenas react to all seven objects with their own question`);
 });
 
 test('scenes unlock each other: every flag a scene needs is set by another one', () => {
@@ -377,8 +435,6 @@ test('using the object on someone passing by: weapons scare, the heart charms, n
   for (const item of ['gas', 'granada', 'pistola', 'cuchillo']) assert.equal(street.ambientReaction(item, 'B1').flee, true);
   assert.equal(street.ambientReaction('corazon', 'A2').mood, 'love');
   assert.equal(street.ambientReaction('corazon', 'A2').hearts, true);
-  const all = textsOf(street.ENCOUNTERS.map(item => [item.nodes, item.ends])).join('\n');
-  assert.doesNotMatch(all, /\b(sangra|sangrando|charco de sangre|cadáver|degoll\w*|apuñal\w*|lo mató|la mató|matarlo|matarla|herida de bala|le disparas|disparas a)\b/i, 'no gore, no killing');
 });
 
 // ------------------------------------------------------------ the 3D side

@@ -1977,6 +1977,72 @@ function prop(ctx: Ctx, p: Prop) {
       for (const x of [p.x0 + 0.02, p.x1 - 0.02]) slab(g, x - 0.03, x + 0.03, 0.1, p.h - 0.1, cz - 0.02, cz + 0.02, solid('#3a3a3a', 0.6, 0.6), false);
       return;
     }
+    case 'bin': {
+      // A street litter bin: a dark drum on a short post, instanced.
+      kit.inst.add('bin', () => new THREE.CylinderGeometry(0.24, 0.2, 0.62, 10), solid('#2f3a36', 0.6, 0.4), m4(cx, p.h - 0.31, cz));
+      kit.inst.add('bin-post', () => new THREE.CylinderGeometry(0.03, 0.03, 1, 6), iron(), m4(cx, (p.h - 0.62) / 2, cz, 0, 1, p.h - 0.62, 1));
+      kit.inst.add('bin-lid', () => new THREE.CylinderGeometry(0.26, 0.26, 0.04, 10), solid('#1d2422', 0.6, 0.4), m4(cx, p.h - 0.02, cz));
+      return;
+    }
+    case 'bags': {
+      // Garbage bags piled by a wall: a few dark lumps, instanced.
+      const rand = random(idSeed(p.id));
+      const n = 3 + Math.floor(rand() * 3);
+      for (let i = 0; i < n; i++) {
+        const r = 0.22 + rand() * 0.1;
+        const x = p.x0 + r + rand() * Math.max(0.01, w - r * 2), z = p.z0 + r + rand() * Math.max(0.01, d - r * 2);
+        const y = i >= 3 ? r * 1.6 : r * 0.9;
+        kit.inst.add('bag', () => new THREE.IcosahedronGeometry(1, 1), solid('#1c1d21', 0.55, 0.15), m4(x, y, z, rand() * TAU, r, r * 0.85, r * 1.1), i % 3 === 2 ? '#2a2f33' : '#1c1d21');
+      }
+      return;
+    }
+    case 'cone': {
+      kit.inst.add('cone-base', () => new THREE.BoxGeometry(0.4, 0.03, 0.4), solid('#1d1d1f', 0.8), m4(cx, 0.015, cz));
+      kit.inst.add('cone', () => new THREE.CylinderGeometry(0.03, 0.17, 0.58, 10), solid('#ff6a1f', 0.6), m4(cx, 0.32, cz));
+      kit.inst.add('cone-band', () => new THREE.CylinderGeometry(0.1, 0.13, 0.1, 10), solid('#f4f1ea', 0.5), m4(cx, 0.36, cz));
+      return;
+    }
+    case 'newsrack': {
+      // A newspaper rack on the pavement: a slanted frame with papers.
+      slab(g, p.x0, p.x1, 0, 0.08, p.z0, p.z1, iron());
+      for (const x of [p.x0 + 0.04, p.x1 - 0.04]) slab(g, x - 0.02, x + 0.02, 0, p.h, cz - 0.02, cz + 0.02, iron());
+      for (let i = 0; i < 4; i++) {
+        const y = 0.3 + i * 0.22;
+        const shelf = slab(g, p.x0 + 0.04, p.x1 - 0.04, y, y + 0.025, p.z0 + 0.02, p.z1 - 0.02, iron());
+        shelf.rotation.x = -0.35;
+        const papers = slab(g, p.x0 + 0.08, p.x1 - 0.08, y + 0.03, y + 0.08, p.z0 + 0.06, p.z1 - 0.04, solid(i % 2 ? '#e8e2d4' : '#d8cfb8', 0.95), false);
+        papers.rotation.x = -0.35;
+      }
+      sign(ctx, 'DIARIOS', '#1d1d1f', '#f4f1ea', w, 0.14, new THREE.Vector3(cx, p.h + 0.08, cz), 0);
+      return;
+    }
+    case 'cart': {
+      // A shopping cart nobody came back for: wire basket on four wheels.
+      const basket = ctx.kit.chain;
+      g.add(box(w - 0.1, 0.5, d - 0.08, basket, cx, 0.7, cz, false));
+      slab(g, p.x0 + 0.05, p.x1 - 0.05, 0.44, 0.47, p.z0 + 0.04, p.z1 - 0.04, iron());
+      for (const [x, z] of [[p.x0 + 0.1, p.z0 + 0.08], [p.x1 - 0.1, p.z0 + 0.08], [p.x0 + 0.1, p.z1 - 0.08], [p.x1 - 0.1, p.z1 - 0.08]]) {
+        slab(g, x - 0.02, x + 0.02, 0.1, 0.45, z - 0.02, z + 0.02, iron());
+        g.add(cylinder(0.06, 0.06, 0.04, solid('#151515'), x, 0.06, z, 8));
+      }
+      const handle = box(0.03, 0.03, d, solid('#c0342b', 0.6), alongX ? p.x0 + 0.02 : cx, 1.02, cz, false);
+      g.add(handle);
+      return;
+    }
+    case 'kiosk-closed': {
+      // A street kiosk shut for the night: a box with a rolled shutter, a
+      // little roof and a dark sign.
+      const body = solid(p.id.endsWith('costa') ? '#5a7a6a' : '#6a5a4a', 0.85);
+      texturedSlab(g, p.x0, p.x1, 0, p.h - 0.3, p.z0, p.z1, kit.brickDark, 1.2).material = body;
+      slab(g, p.x0 - 0.25, p.x1 + 0.25, p.h - 0.3, p.h - 0.1, p.z0 - 0.25, p.z1 + 0.25, solid('#3a3330', 0.9));
+      slab(g, cx - 0.5, cx + 0.5, p.h - 0.1, p.h, cz - 0.3, cz + 0.3, solid('#3a3330', 0.9), false);
+      const front = faceOf(p, alongX ? 'south' : 'east');
+      const shutter = new THREE.MeshStandardMaterial({ map: shutterTexture(idSeed(p.id)), roughness: 0.6, metalness: 0.3 });
+      facePlane(g, front, alongX ? cx : cz, (p.h - 0.3) / 2 + 0.1, 0.02, (alongX ? w : d) - 0.4, p.h - 0.8, shutter);
+      slab(g, p.x0, p.x1, p.h - 0.5, p.h - 0.3, p.z0 - 0.02, p.z1 + 0.02, iron(), false);
+      sign(ctx, p.id.endsWith('costa') ? 'HELADOS' : 'REVISTAS · GOLOSINAS', '#2a2420', '#d8cfb8', (alongX ? w : d) - 0.3, 0.34, onFace(front, alongX ? cx : cz, p.h - 0.48, 0.03), front.ry);
+      return;
+    }
     case 'rope': {
       const posts: THREE.Vector3[] = [];
       for (let x = p.x0 + 0.1; x <= p.x1 - 0.1 + 1e-6; x += (w - 0.2) / 3) posts.push(new THREE.Vector3(x, p.h - 0.1, cz));
@@ -2720,6 +2786,112 @@ function galponesExtras(ctx: Ctx) {
   for (const [x, z] of [[101.4, 86], [101.4, 86.8]] as const) g.add(cylinder(0.3, 0.3, 0.9, solid('#2f5a8a', 0.5, 0.4), x, 0.45, z, 12));
 }
 
+// More life on the walls and corners of every district: steam from the
+// vents, posters, string lights outside the bars, a few more lit signs with
+// invented names. None of it blocks walking.
+function dressing(ctxAt: (x: number, z: number) => Ctx) {
+  const by = new Map(BUILDINGS.map(b => [b.id, b]));
+  // Steam vents: a grate in the pavement, slow white wisps.
+  for (const [x, z] of [[-49.5, -41.4], [49.8, 42], [-64.5, 60.5]] as const) {
+    const ctx = ctxAt(x, z);
+    quad(ctx.group, 0.8, 0.8, solid('#2a2c2e', 0.9), x, 0.02, z, 0).rotation.x = -Math.PI / 2;
+    for (const i of [0, 1, 2]) {
+      const bar = box(0.7, 0.02, 0.06, iron(), x, 0.03, z - 0.2 + i * 0.2, false);
+      ctx.group.add(bar);
+    }
+    steam(ctx, x, z);
+  }
+  // Posters on blank walls: three invented bills on one sheet, shared.
+  const sheet = posterSheet();
+  const bill = (id: string, side: Side, t: number, y: number, which: number, lean = 0) => {
+    const b = by.get(id);
+    if (!b) return;
+    const ctx = ctxAt((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2);
+    const f = faceOf(b, side);
+    const mesh = facePlane(ctx.group, f, t, y, 0.03, 0.62, 0.88, sheet);
+    mesh.rotation.z = lean;
+    const uv = mesh.geometry.getAttribute('uv') as THREE.BufferAttribute;
+    for (let i = 0; i < uv.count; i++) uv.setX(i, (which + uv.getX(i)) / 3);
+  };
+  bill('v-conventillo-e', 'east', -80, 1.7, 0); bill('v-conventillo-e', 'east', -79.2, 1.6, 1, 0.04);
+  bill('k-cochera', 'south', 100, 1.8, 2); bill('k-cochera', 'south', 100.75, 1.75, 0, -0.03);
+  bill('s-cochera', 'west', 70, 1.7, 1); bill('s-cochera', 'west', 70.8, 1.65, 2, 0.05);
+  bill('g-galpon', 'north', 110, 1.8, 0); bill('g-galpon', 'north', 110.7, 1.9, 1);
+  bill('e-estacion', 'north', -80, 1.8, 2); bill('e-estacion', 'north', -79.3, 1.75, 0, -0.04);
+  bill('c-norte-2', 'south', -12, 1.8, 1); bill('m-oeste', 'east', -26, 1.7, 2);
+  bill('a-fila', 'east', -90, 1.7, 0); bill('r-viviendas', 'east', -22, 1.7, 1);
+  // String lights outside the party house, the river café, the food truck and the Barrio Viejo kiosk.
+  const string = (from: THREE.Vector3, to: THREE.Vector3, drop: number, count: number, colors: string[], poles: THREE.Vector3[] = []) => {
+    const ctx = ctxAt((from.x + to.x) / 2, (from.z + to.z) / 2);
+    for (const pole of poles) ctx.group.add(cylinder(0.05, 0.07, pole.y, solid('#2b3230', 0.6, 0.4), pole.x, pole.y / 2, pole.z, 8));
+    bulbString(ctx, from, to, drop, count, colors);
+  };
+  string(new THREE.Vector3(-26, 4.4, 56.9), new THREE.Vector3(-8, 4.4, 56.9), 0.6, 20, ['#ff4fa3', '#4fd8ff', '#ffb347', '#a46bff']);
+  string(new THREE.Vector3(88, 3.1, -8.05), new THREE.Vector3(88.4, 3.4, -2.2), 0.4, 8, ['#ffd27a', '#ffe9a0'], [new THREE.Vector3(88.4, 3.4, -2.2)]);
+  string(new THREE.Vector3(92, 3.1, -8.05), new THREE.Vector3(91.6, 3.4, -2.2), 0.4, 8, ['#ffd27a', '#ffe9a0'], [new THREE.Vector3(91.6, 3.4, -2.2)]);
+  string(new THREE.Vector3(102, 2.9, 91.9), new THREE.Vector3(112, 3.4, 91.9), 0.7, 14, ['#ffcf7a', '#ff7a5a', '#7ad1ff'], [new THREE.Vector3(112, 3.4, 91.9)]);
+  string(new THREE.Vector3(-98.05, 3.3, -58.5), new THREE.Vector3(-92.2, 3.6, -54.4), 0.5, 9, ['#ffd9a0', '#ffffff'], [new THREE.Vector3(-92.2, 3.6, -54.4)]);
+  // Lit signs with invented names on fronts that had none.
+  const lit = (id: string, side: Side, t: number, y: number, text: string, bg: string, fg: string, w: number, h = 0.7) => {
+    const b = by.get(id);
+    if (!b) return;
+    const ctx = ctxAt((b.x0 + b.x1) / 2, (b.z0 + b.z1) / 2);
+    const f = faceOf(b, side);
+    sign(ctx, text, bg, fg, w, h, onFace(f, t, y, 0.06), f.ry);
+  };
+  lit('c-sur-2', 'south', 28, 3.6, 'PIZZERÍA LUNA', '#2a1a3a', '#ff9ad1', 4.6);
+  lit('a-norte', 'south', -25, 4.2, 'HOSTEL NORTE', '#1a2a3a', '#7ad1ff', 4.2);
+  lit('g-galpon', 'north', 116, 4.6, 'DISCO ÓRBITA', '#140a24', '#ff6fae', 5.2, 0.9);
+  lit('s-casas', 'north', 26, 3.4, 'ROTISERÍA DON ZETA', '#3a1a10', '#ffd27a', 4.4);
+  lit('v-ferreteria', 'south', -68.5, 4.4, 'PELUQUERÍA GLAM', '#2a1a1a', '#ff9ad1', 4);
+  lit('m-oeste', 'east', -30, 4.2, 'TATUAJES', '#101820', '#7cff9a', 3.4);
+  lit('r-viviendas-2', 'east', 16, 3.2, 'BAR EL FARO', '#1a2430', '#ffd27a', 3.6);
+  lit('e-hostal', 'north', -64.4, 3.2, 'CAMBIO · CAFÉ', '#2a2420', '#f4f1ea', 2.8, 0.5);
+}
+
+// Slow wisps of steam rising from a vent in the pavement.
+function steam(ctx: Ctx, x: number, z: number) {
+  puff ??= canvas(64, 64, c => {
+    const gradient = c.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gradient.addColorStop(0, 'rgba(210,210,210,.7)'); gradient.addColorStop(1, 'rgba(210,210,210,0)');
+    c.fillStyle = gradient; c.fillRect(0, 0, 64, 64);
+  });
+  for (let i = 0; i < 3; i++) {
+    const material = new THREE.SpriteMaterial({ map: puff, transparent: true, depthWrite: false, opacity: 0.25, color: '#e8ecf0' });
+    const sprite = new THREE.Sprite(material);
+    ctx.group.add(sprite);
+    ctx.keep.push(sprite);
+    ctx.kit.animate.push(time => {
+      const t = (time * 0.16 + i / 3) % 1;
+      sprite.position.set(x + Math.sin(time * 0.5 + i * 2) * 0.3 * t, 0.2 + t * 2.4, z + Math.cos(time * 0.4 + i) * 0.3 * t);
+      sprite.scale.setScalar(0.7 + t * 1.6);
+      material.opacity = 0.28 * (1 - t) * Math.min(1, t * 6);
+    });
+  }
+}
+
+// Three bills on one sheet: a concert, a flat to let, a book fair.
+let posterMaterial: THREE.MeshStandardMaterial | null = null;
+function posterSheet() {
+  if (posterMaterial) return posterMaterial;
+  const map = canvas(768, 360, c => {
+    c.fillStyle = '#f2e9d2'; c.fillRect(0, 0, 256, 360);
+    c.fillStyle = '#1d1d1f'; c.fillRect(8, 8, 240, 344);
+    c.fillStyle = '#ffd36a'; c.font = '900 40px "Arial Black", Impact, sans-serif'; c.textAlign = 'center';
+    c.fillText('LOS FAROLES', 128, 110); c.fillText('EN VIVO', 128, 160);
+    c.fillStyle = '#f4f1ea'; c.font = '700 26px Georgia, serif'; c.fillText('SÁBADO · 23 H', 128, 230); c.fillText('LA FÁBRICA', 128, 270);
+    c.fillStyle = '#e8e2d4'; c.fillRect(256, 0, 256, 360);
+    c.fillStyle = '#c0342b'; c.font = '900 54px "Arial Black", Impact, sans-serif'; c.fillText('SE ALQUILA', 384, 120);
+    c.fillStyle = '#1d1d1f'; c.font = '26px Georgia, serif'; c.fillText('2 ambientes · luminoso', 384, 190); c.fillText('llamar por la tarde', 384, 230);
+    for (let i = 0; i < 6; i++) { c.fillStyle = '#1d1d1f'; c.fillRect(268 + i * 40, 300, 30, 48); c.fillStyle = '#e8e2d4'; c.font = '14px sans-serif'; c.fillText('555', 283 + i * 40, 330); }
+    c.fillStyle = '#3b6a8a'; c.fillRect(512, 0, 256, 360);
+    c.fillStyle = '#f4f1ea'; c.font = '900 46px "Arial Black", Impact, sans-serif'; c.fillText('FERIA DEL', 640, 110); c.fillText('LIBRO', 640, 165);
+    c.fillStyle = '#ffd36a'; c.font = '700 28px Georgia, serif'; c.fillText('PLAZA DE LA ESTACIÓN', 640, 240); c.fillText('TODO EL MES', 640, 285);
+  });
+  posterMaterial = new THREE.MeshStandardMaterial({ map, roughness: 0.95 });
+  return posterMaterial;
+}
+
 // ---------------------------------------------------------------- streets
 
 // Lamps with a lantern on a post (parks, the riverside), instanced.
@@ -3059,6 +3231,7 @@ export function buildDistricts(night: Night, options: { shadows: boolean; asphal
   estacionExtras(contexts.get('estacion')!);
   surExtras(contexts.get('sur')!);
   galponesExtras(contexts.get('galpones')!);
+  dressing(ctxAt);
 
   // Close each district: one sign texture, one set of wires, then merge every
   // static mesh per material. Only big things cast shadows.

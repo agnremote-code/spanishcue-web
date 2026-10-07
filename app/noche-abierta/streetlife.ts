@@ -14,13 +14,14 @@ import {
   castSpots, districtAt, emergencyRoute, groupMembers, makeWalkers, pathLength, placementOf, pointOnPath, stepCityTraffic, stepWalkers, trafficCar,
   type MovingVehicle, type Walker,
 } from './city.mjs';
-import { ENCOUNTERS, heartsUsed, isAvailable, moodOf, type CastMember, type Change, type Encounter, type ItemId, type Mood, type StreetState } from './street.mjs';
+import { ENCOUNTERS, heartsUsed, isAvailable, moodOf, type CastMember, type Change, type Encounter, type ItemId, type Mood, type OpeningFx, type StreetState } from './street.mjs';
 import { TRAFFIC, insideBuilding, type Box } from './world3d.mjs';
 import { addBlobShadow, animatePerson, createPerson, lookFromCast, randomLook, setMood, setPose, type Person } from './people3d';
 import { animateAnimal, createAnimal, type Animal } from './animals3d';
 import { makeCar, placeVehicle, type Night } from './build3d';
 import { createHeartBurst } from './items3d';
 import { balconyHeight } from './district3d';
+import { makeMoto } from './events3d';
 
 export type StreetSpot = {
   id: string; x: number; z: number; radius: number; key: 'E'; verb: string; name: string;
@@ -37,7 +38,7 @@ type Ctx = {
 const NEAR_RIG = 20;
 const FAR_SHOW = 65;
 const RING_SHOW = { escena: 60, rincon: 22 };
-const GONE: Change[] = ['corre', 'se-va'];
+const GONE: Change[] = ['corre', 'se-va', 'huye'];
 
 const radians = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
 const faceTo = (from: { x: number; z: number }, to: { x: number; z: number }) => Math.atan2(to.x - from.x, to.z - from.z);
@@ -114,6 +115,10 @@ type Body = {
   rig: Person | null; far: THREE.Mesh | null; x: number; z: number; y: number; heading: number;
   mood: Mood; moodUntil: number; speed: number; seated: boolean; attention: number; blob: boolean; hidden: boolean;
   react?: { mood: Mood; until: number; flee: boolean };
+  // A pose that wins over the usual one for a while (hands up, a kiss…).
+  override?: { pose: string; until: number };
+  // Where the person belongs, to come back after stepping away.
+  home?: { x: number; z: number; heading: number };
 };
 function makeBody(key: string, look: ReturnType<typeof lookFromCast>, pose: string, at: { x: number; z: number; y?: number; heading: number }, seed: number): Body {
   const group = new THREE.Group();
@@ -127,7 +132,11 @@ type EncounterRig = {
   encounter: Encounter; spots: { x: number; z: number; y: number; face: number }[]; bodies: Body[]; animals: Animal[];
   ring: THREE.Mesh; beacon: THREE.Mesh | null; extra: THREE.Group; walk: { t: number; dir: number } | null;
   leaving: { t: number; dir: { x: number; z: number } } | null; lantern: THREE.Object3D | null;
+  // The short choreography the object set off when the scene opened.
+  fx: { kind: OpeningFx | Change; t: number; rival: Body | null; runners: Body[]; done: boolean } | null;
 };
+// What the street can ask the rest of the world for.
+type Hooks = { fly?: (x: number, z: number) => void; police?: (x: number, z: number) => void };
 
 export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { low: boolean; boxes: Box[] }) {
   const root = new THREE.Group();
@@ -205,7 +214,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     const spots = castSpots(encounter.id, Math.max(1, encounter.cast.length)).map(spot => ({ x: spot.x, z: spot.z, y: spot.y ?? place.y, face: spot.face }));
     const group = new THREE.Group();
     root.add(group);
-    const rig: EncounterRig = { encounter, spots, bodies: [], animals: [], ring: new THREE.Mesh(ringGeometry, encounter.kind === 'escena' ? ringMaterials.escena : ringMaterials.rincon), beacon: null, extra: group, walk: place.walk ? { t: 0, dir: 1 } : null, leaving: null, lantern: null };
+    const rig: EncounterRig = { encounter, spots, bodies: [], animals: [], ring: new THREE.Mesh(ringGeometry, encounter.kind === 'escena' ? ringMaterials.escena : ringMaterials.rincon), beacon: null, extra: group, walk: place.walk ? { t: 0, dir: 1 } : null, leaving: null, lantern: null, fx: null };
     if (!place.nobody) encounter.cast.forEach((member: CastMember, i: number) => {
       const spot = spots[i] ?? spots[0];
       if (member.kind === 'animal') {
@@ -285,11 +294,13 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   const carRigs = new Map<string, Rig>();
   const movingBoxes: Box[] = [];
   for (const car of cars) {
-    if (car.kind === 'bike') {
-      const group = makeBike(car.color ?? '#2b6a8a');
-      const rider = createPerson(randomLook(hash(car.id), 'centro'), false);
+    if (car.kind === 'bike' || car.kind === 'moto') {
+      // A motorbike is a bicycle to the traffic: same lane logic, its own look (events3d).
+      const moto = car.kind === 'moto';
+      const group = moto ? makeMoto(car.color ?? '#b8252a') : makeBike(car.color ?? '#2b6a8a');
+      const rider = createPerson(randomLook(hash(car.id), moto ? 'galpones' : 'centro'), false);
       setPose(rider, 'bike');
-      rider.root.position.set(0, 0, -0.1);
+      rider.root.position.set(0, moto ? 0.06 : 0, -0.1);
       animatePerson(rider, 0.6, 0, false);
       // From afar the rider is one baked mesh; the full body only up close.
       const far = bake(rider);
@@ -355,6 +366,153 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   let heartsSeen = 0;
   let openSeen: string | null = null;
   const closedSeen = new Set<string>();
+  const hooks: Hooks = {};
+
+  // Extras for the choreographies: someone who pulls a knife too, and a few
+  // people who run when a grenade comes out. Hidden until needed.
+  const HIDDEN = { x: 9999, z: 9999 };
+  const rival = addBody(makeBody('fx/rival', randomLook(hash('rival'), 'galpones'), 'knife', { ...HIDDEN, heading: 0 }, 7));
+  rival.hidden = true;
+  const runners = Array.from({ length: 5 }, (_, i) => {
+    const body = addBody(makeBody(`fx/runner-${i}`, randomLook(hash(`runner-${i}`), 'centro'), 'run', { ...HIDDEN, heading: 0 }, 11 + i));
+    body.hidden = true;
+    return body;
+  });
+  const park = (body: Body) => { body.hidden = true; body.x = HIDDEN.x; body.z = HIDDEN.z; body.override = undefined; body.speed = 0; };
+  const stepTo = (body: Body, x: number, z: number, speed: number, dt: number) => {
+    const dx = x - body.x, dz = z - body.z;
+    const d = Math.hypot(dx, dz);
+    if (d < 0.05) { body.speed = 0; return true; }
+    const step = Math.min(d, speed * dt);
+    const nx = body.x + (dx / d) * step, nz = body.z + (dz / d) * step;
+    if (!blockedAt(nx, nz) || d < 1) { body.x = nx; body.z = nz; }
+    body.heading = Math.atan2(dx, dz);
+    body.speed = speed;
+    return d - step < 0.05;
+  };
+  const scatter = (around: { x: number; z: number }, count: number, time: number) => {
+    const free = runners.filter(body => body.hidden).slice(0, count);
+    free.forEach((body, i) => {
+      const a = (i / Math.max(1, free.length)) * Math.PI * 2 + 0.7;
+      let x = around.x + Math.sin(a) * 2.6, z = around.z + Math.cos(a) * 2.6;
+      if (blockedAt(x, z)) { x = around.x; z = around.z; }
+      body.hidden = false; body.x = x; body.z = z; body.heading = a; body.pose = 'run'; body.speed = 4.4;
+      body.react = { mood: 'terror', until: time + 9, flee: true };
+      body.override = { pose: 'run', until: time + 9 };
+    });
+    return free;
+  };
+
+  // The object came out and the scene opens on it: the person reacts in the
+  // body, not only in words.
+  function playFx(id: string, kind: OpeningFx | Change, player: { x: number; z: number }, time: number) {
+    const rig = encounterRigs.get(id);
+    if (!rig || !rig.bodies.length) return;
+    const lead = rig.bodies[0];
+    for (const body of rig.bodies) body.home ??= { x: body.x, z: body.z, heading: body.heading };
+    rig.fx = { kind, t: 0, rival: null, runners: [], done: false };
+    const hold = (body: Body, pose: string, seconds: number) => { body.override = { pose, until: time + seconds }; };
+    const anchor = placementOf(id)!;
+    switch (kind) {
+      case 'manos-arriba': for (const body of rig.bodies) if (!body.seated) hold(body, 'hands-up', 40); break;
+      case 'grita': hold(lead, 'scream', 6); for (const body of rig.bodies.slice(1)) hold(body, 'hands-up', 10); break;
+      case 'huye': rig.fx.runners = scatter(lead, 3, time); hold(lead, 'scream', 5); break;
+      case 'evacuacion': rig.fx.runners = scatter(lead, 5, time); for (const body of rig.bodies) if (!body.seated) hold(body, 'hands-up', 12); hooks.police?.(anchor.x, anchor.z); break;
+      case 'helicoptero': rig.fx.runners = scatter(lead, 4, time); hooks.fly?.(anchor.x, anchor.z); break;
+      case 'policia': hooks.police?.(anchor.x, anchor.z); for (const body of rig.bodies) if (!body.seated) hold(body, 'hands-up', 14); break;
+      case 'duelo-cuchillo': {
+        const side = { x: Math.cos(faceTo(player, lead)), z: -Math.sin(faceTo(player, lead)) };
+        let x = lead.x + side.x * 2.2, z = lead.z + side.z * 2.2;
+        if (blockedAt(x, z)) { x = lead.x - side.x * 2.2; z = lead.z - side.z * 2.2; }
+        if (blockedAt(x, z)) { x = lead.x; z = lead.z + 0.9; }
+        rival.hidden = false; rival.x = x; rival.z = z; rival.heading = faceTo(rival, player); rival.pose = 'knife';
+        rival.react = { mood: 'furious', until: time + 12, flee: false };
+        hold(rival, 'knife', 9);
+        hold(lead, 'scream', 4);
+        rig.fx.rival = rival;
+        break;
+      }
+      case 'defensa': for (const body of rig.bodies) if (!body.seated) hold(body, 'arms', 20); break;
+      case 'beso': case 'abrazo': case 'corazon': case 'calma': hearts.play(new THREE.Vector3(lead.x, lead.y, lead.z)); break;
+      case 'cae': lead.pose = 'fallen'; lead.seated = true; break;
+      case 'pelea': for (const body of rig.bodies.slice(0, 2)) if (!body.seated) hold(body, 'fight', 7); break;
+      default: break;
+    }
+  }
+
+  // One step of a running choreography.
+  function stepFx(rig: EncounterRig, player: { x: number; z: number }, time: number, dt: number) {
+    const fx = rig.fx;
+    if (!fx || fx.done) return;
+    fx.t += dt;
+    const lead = rig.bodies[0];
+    const home = lead.home ?? { x: lead.x, z: lead.z, heading: lead.heading };
+    const away = { x: -Math.sin(faceTo(lead, player)), z: -Math.cos(faceTo(lead, player)) };
+    switch (fx.kind) {
+      case 'retrocede': case 'defensa': case 'grita': case 'huye': case 'evacuacion': case 'helicoptero': case 'duelo-cuchillo': {
+        // A step back, then stay there.
+        if (fx.t < 1.1 && !lead.seated) stepTo(lead, home.x + away.x * 1.3, home.z + away.z * 1.3, 2.2, dt);
+        else lead.speed = 0;
+        if (fx.kind === 'duelo-cuchillo' && fx.rival) {
+          const r = fx.rival;
+          if (fx.t < 6) {
+            // Circling at knife's reach, feinting in and out.
+            const a = faceTo(player, r) + Math.sin(fx.t * 1.6) * 0.5;
+            const reach = 1.9 + Math.sin(fx.t * 3.1) * 0.35;
+            stepTo(r, player.x + Math.sin(a) * reach, player.z + Math.cos(a) * reach, 2.6, dt);
+            r.heading = faceTo(r, player);
+            r.speed = 0;
+          } else if (fx.t < 11) {
+            // Backs off and keeps the distance, knife down.
+            const a = faceTo(player, r);
+            stepTo(r, player.x + Math.sin(a) * 5.2, player.z + Math.cos(a) * 5.2, 2.4, dt);
+            r.heading = faceTo(r, player);
+            r.override = { pose: 'arms', until: time + 60 };
+          } else if (fx.t < 30) { r.speed = 0; r.heading = faceTo(r, player); } else { park(r); fx.rival = null; }
+        }
+        for (const body of fx.runners) {
+          if (body.hidden) continue;
+          const dir = { x: Math.sin(body.heading), z: Math.cos(body.heading) };
+          const nx = body.x + dir.x * 4.4 * dt, nz = body.z + dir.z * 4.4 * dt;
+          if (!blockedAt(nx, nz)) { body.x = nx; body.z = nz; } else body.heading += 1.3;
+          if (Math.hypot(body.x - lead.x, body.z - lead.z) > 34) park(body);
+        }
+        if (fx.t > 40 && !fx.rival && fx.runners.every(body => body.hidden)) fx.done = true;
+        break;
+      }
+      case 'curioso': {
+        if (fx.t < 1 && !lead.seated) stepTo(lead, home.x - away.x * 0.6, home.z - away.z * 0.6, 1.2, dt); else lead.speed = 0;
+        if (fx.t > 2) fx.done = true;
+        break;
+      }
+      case 'beso': case 'abrazo': {
+        if (lead.seated) { fx.done = true; break; }
+        const pose = fx.kind === 'beso' ? 'kiss' : 'hug';
+        if (fx.t < 2.2) {
+          // Walks up to you, then the kiss or the hug, then back home.
+          const at = { x: player.x - away.x * 0.72, z: player.z - away.z * 0.72 };
+          const there = stepTo(lead, at.x, at.z, 1.5, dt);
+          lead.heading = faceTo(lead, player);
+          if (there) lead.override = { pose, until: time + 2.4 };
+        } else if (fx.t < 4.6) {
+          lead.speed = 0; lead.heading = faceTo(lead, player);
+          lead.override ??= { pose, until: time + 2.2 };
+          if (fx.t > 2.4 && fx.t < 2.4 + dt * 1.5) hearts.play(new THREE.Vector3(lead.x, lead.y, lead.z));
+        } else if (fx.t < 8) {
+          lead.override = undefined;
+          if (stepTo(lead, home.x, home.z, 1.2, dt)) { lead.heading = faceTo(lead, player); lead.speed = 0; fx.done = true; }
+        } else fx.done = true;
+        break;
+      }
+      case 'pelea': {
+        const [a, b] = rig.bodies;
+        if (a && b && fx.t < 7) { a.heading = faceTo(a, b); b.heading = faceTo(b, a); }
+        if (b && fx.t >= 7 && !fx.done) { b.pose = 'fallen'; b.seated = true; b.override = undefined; fx.done = true; }
+        break;
+      }
+      default: fx.done = fx.t > 3; break;
+    }
+  }
 
   // ---------------------------------------------------------- per frame
   const visible = (encounter: Encounter, street: StreetState, eventId: string | null) => {
@@ -369,6 +527,8 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     if (change === 'duerme') return 'sleep';
     if (change === 'llama') return 'phone';
     if (change === 'abraza') return 'hug';
+    if (change === 'manos-arriba') return 'hands-up';
+    if (change === 'cae') return 'fallen';
     if (mood === 'love' && base === 'stand') return 'stand';
     return base;
   };
@@ -418,10 +578,16 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
           if (route && anchor.y < 1) queue.push(runFrom(change === 'ambulancia' ? 'ambulance' : 'police', route.points, route.stopAt, encounter.id));
         }
         if (change === 'luz' && !rig.lantern) rig.lantern = addLantern(rig, anchor);
+        if (change === 'huye') { rig.fx = null; rig.leaving = { t: 0, dir: { x: -Math.sin(faceTo(rig.bodies[0] ?? anchor, player)), z: -Math.cos(faceTo(rig.bodies[0] ?? anchor, player)) } }; scatter(anchor, 3, time).forEach(body => rig.fx?.runners.push(body)); }
+        if (change === 'beso' || change === 'pelea' || change === 'cae' || change === 'helicoptero') playFx(encounter.id, change, player, time);
       }
+      if (rig.fx) stepFx(rig, player, time, dt);
       const leavingDone = rig.leaving && rig.leaving.t > 7;
       const showBodies = show || Boolean(rig.leaving && !leavingDone);
-      const mood = moodOf(street, encounter.id);
+      const baseMood = moodOf(street, encounter.id);
+      // With the heart out, love shows in the eyes.
+      const smitten = rig.fx && ['corazon', 'beso', 'abrazo', 'calma'].includes(rig.fx.kind);
+      const mood = baseMood === 'love' && smitten ? 'smitten' : baseMood;
       for (const body of rig.bodies) {
         if (body.x > 9000) continue;
         body.hidden = !showBodies;
@@ -431,9 +597,9 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
       for (const animal of rig.animals) animal.root.visible = show;
       if (rig.leaving && !leavingDone) {
         rig.leaving.t += dt;
-        const fast = change === 'corre' ? 4.6 : 1.4;
+        const fast = change === 'corre' || change === 'huye' ? 4.6 : 1.4;
         for (const body of rig.bodies) {
-          body.pose = change === 'corre' ? 'run' : 'walk';
+          body.pose = change === 'corre' || change === 'huye' ? 'run' : 'walk';
           body.heading = Math.atan2(rig.leaving.dir.x, rig.leaving.dir.z);
           const nx = body.x + rig.leaving.dir.x * fast * dt, nz = body.z + rig.leaving.dir.z * fast * dt;
           if (!blockedAt(nx, nz)) { body.x = nx; body.z = nz; }
@@ -543,11 +709,13 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
         if (body.far) body.far.visible = false;
         const mood = body.react && body.react.until > time ? body.react.mood : body.mood;
         setMood(rig, mood);
-        setPose(rig, body.pose);
+        const pose = body.override && body.override.until > time ? body.override.pose : body.pose;
+        if (body.override && body.override.until <= time) body.override = undefined;
+        setPose(rig, pose);
         const talking = Boolean(ctx.open && body.key.startsWith(`${ctx.open}/`));
         rig.look = !body.seated && body.attention > 0.45 && d < 6 && body.pose !== 'walk' && body.pose !== 'run'
           ? Math.max(-1.1, Math.min(1.1, radians(faceTo(body, player) - body.heading))) : null;
-        animatePerson(rig, dt, body.pose === 'walk' || body.pose === 'run' ? body.speed : 0, talking);
+        animatePerson(rig, dt, pose === 'walk' || pose === 'run' || pose === 'bag-run' ? Math.max(body.speed, pose === 'run' ? 3.5 : 0) : 0, talking);
       } else {
         const far = ensureFar(body);
         far.visible = true;
@@ -688,6 +856,22 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     if (!best) return null;
     best.react = { mood: reaction.mood, until: time + (reaction.hearts ? 7 : 5), flee: reaction.flee };
     if (reaction.flee && best.pose !== 'walk') best.pose = best.seated ? 'crouch' : 'arms';
+    if (reaction.flee) {
+      // A weapon out in the street: whoever is near backs off too, hands up or running.
+      const weapon = item === 'pistola' || item === 'granada';
+      for (const body of bodies) {
+        if (body === best || body.key.includes('/') || body.hidden || body.y > 1) continue;
+        const d = Math.hypot(body.x - player.x, body.z - player.z);
+        if (d > 9) continue;
+        body.react = { mood: weapon ? 'terror' : 'scared', until: time + 6, flee: true };
+        if (!body.seated && body.pose !== 'walk' && body.pose !== 'run') body.override = { pose: weapon ? 'hands-up' : 'arms', until: time + 6 };
+      }
+      if (item === 'granada') scatter(player, 3, time);
+    }
+    if (reaction.hearts) {
+      best.override = { pose: 'stand', until: time + 0.1 };
+      best.react = { mood: 'smitten', until: time + 7, flee: false };
+    }
     if (reaction.hearts) hearts.play(new THREE.Vector3(best.x, best.y, best.z));
     if (!reaction.flee) best.heading = faceTo(best, player);
     return { x: best.x, y: best.y + 2.1, z: best.z, key: best.key };
@@ -713,7 +897,8 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
 
   // Everyone in a scene looks at you when it opens; the room spots come from STREET_ROOMS.
   void STREET_ROOMS;
-  return { root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, cars: () => cars, walkers: () => walkers };
+  const setHooks = (next: Hooks) => Object.assign(hooks, next);
+  return { root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, cars: () => cars, walkers: () => walkers };
 }
 
 export type StreetCrowd = ReturnType<typeof createStreetCrowd>;

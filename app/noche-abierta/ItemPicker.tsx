@@ -42,7 +42,6 @@ export default function ItemPicker({ initial = null, onChoose, onClose }: ItemPi
 
   const current = selected ?? null;
   const tabStop = selected ?? focused ?? ITEM_ORDER[0];
-  const fictionOn = [selected, focused].some(id => id && ITEM_META[id].fiction);
 
   const pick = (id: ItemId, moveFocus = false) => {
     setSelected(id);
@@ -113,15 +112,15 @@ export default function ItemPicker({ initial = null, onChoose, onClose }: ItemPi
           <span className="na-pick-art"><ItemIcon id={id} size={use3d ? 30 : 64} /></span>
           <span className="na-pick-name"><span aria-hidden="true">{meta.emoji}</span> {meta.label}</span>
           <span className="na-pick-note">{NOTES[id]}</span>
-          {(meta.power || meta.fiction) && <span className={`na-pick-tag${meta.power ? ' is-power' : ''}`}>{meta.power ? 'Poder' : 'Ficción'}</span>}
+          {meta.power && <span className="na-pick-tag is-power">Poder</span>}
           <kbd className="na-pick-key" aria-hidden="true">{i + 1}</kbd>
         </button>;
       })}
     </div>
 
     <footer className="na-pick-foot">
-      <p className={`na-pick-fiction${fictionOn ? ' is-on' : ''}`}>
-        <span aria-hidden="true">✦</span> Es ficción: nadie sale herido. Cambia cómo reaccionan las personas.
+      <p className="na-pick-fiction is-on">
+        <span aria-hidden="true">✦</span> Lo que lleves cambia cómo te recibe la ciudad.
       </p>
       <button type="button" className="na-primary na-pick-go" disabled={!current} onClick={() => choose(current)}>
         {current ? <>Llevar {ITEM_META[current].withArticle} <kbd>Enter</kbd></> : 'Elige una cosa'}
