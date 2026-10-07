@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "authorization": "Owner requested the home banner's English title and label be replaced by NEW CLASSES! on 2026-10-07.",
+  "changes": [
+    {
+      "path": "app/NewLessonsBanner.tsx",
+      "text": "JUST ADDED",
+      "kind": "english-changed-or-deleted",
+      "reason": "Remove the old left-column label."
+    },
+    {
+      "path": "app/NewLessonsBanner.tsx",
+      "text": "New in SpanishCue",
+      "kind": "english-changed-or-deleted",
+      "reason": "Remove the oversized left-column title."
+    },
+    {
+      "path": "app/NewLessonsBanner.tsx",
+      "text": "NEW CLASSES!",
+      "kind": "english-added",
+      "reason": "Introduce the owner-requested compact editorial heading."
+    }
+  ]
+}
