@@ -2,8 +2,9 @@ import { additionalSamples } from "./additional-samples";
 import { boardLessonEntries } from "./boards/catalog-adapter";
 import { conversationLessons } from "./conversation-worlds/catalog";
 import { verbalLessons } from "./verbal-system/lesson-data";
+import { applyGrammarMetadata, newGrammarEntries } from "./grammar-classroom/catalog";
 export type Category = "Gramática" | "Conversación" | "Escucha" | "Fonética" | "Vocabulario";
-export type Lesson = { news?:{addedAt:string;featured:boolean}; id:number; level:string; levels?:string[]; displayLevel?:string; category:Category; conversationMode?:"worlds"|"play"|"boards"; collection?:string; countryCollection?:boolean; countrySequence?:number; searchAliases?:string[]; verbalSystem?:boolean; verbalMood?:string; temporalPlane?:string; productiveStatus?:string; title:string; subtitle:string; duration:string; tag:string; goals:string[]; warmup:string; explanation:string; practice:string[]; speaking:string[]; homework:string; special?:boolean; path?:string; image:string; curriculumOrder?:number; curriculumSequence?:number; routeOrder:number; routeSequence:number; requires?:number[] };
+export type Lesson = { grammarTopic?:string; news?:{addedAt:string;featured:boolean}; id:number; level:string; levels?:string[]; displayLevel?:string; category:Category; conversationMode?:"worlds"|"play"|"boards"; collection?:string; countryCollection?:boolean; countrySequence?:number; searchAliases?:string[]; verbalSystem?:boolean; verbalMood?:string; temporalPlane?:string; productiveStatus?:string; title:string; subtitle:string; duration:string; tag:string; goals:string[]; warmup:string; explanation:string; practice:string[]; speaking:string[]; homework:string; special?:boolean; path?:string; image:string; curriculumOrder?:number; curriculumSequence?:number; routeOrder:number; routeSequence:number; requires?:number[] };
 export type LessonSource = Omit<Lesson,"image"|"curriculumSequence"|"routeOrder"|"routeSequence"> & { image?:string };
 
 const lessonPreviews:Record<number,string> = {
@@ -254,10 +255,11 @@ const lessonSources:LessonSource[] = [
   {id:3,curriculumOrder:900,requires:[48],level:"A1",category:"Gramática",title:"Presente con vos",subtitle:"Hablás, comés, vivís: el patrón rioplatense",duration:"60 min",tag:"Argentina real",goals:["Conjugar verbos regulares","Usar vos con seguridad","Hablar de rutinas"],warmup:"Pregunta de práctica con vos: «¿Qué hacés normalmente por la mañana?». Usa palabras sueltas si todavía no puedes formar frases.",explanation:"Con vos, los verbos regulares llevan el acento al final: hablás, comés, vivís. El pronombre puede omitirse cuando el contexto es claro.",practice:["Vos ___ (trabajar) desde casa.","¿___ (comer) carne?","___ (vivir) en Londres.","¿Qué ___ (hacer) hoy?"],speaking:["Cuenta tu rutina de lunes.","Compara tu mañana con la de tu profesor.","Entrevista a alguien sobre sus hábitos."],homework:"Escribe 10 preguntas con vos para usar en la próxima clase."},
   {id:11,level:"C1",category:"Conversación",title:"Preguntas que dan ganas de hablar",subtitle:"16 categorías y 80 preguntas para una conversación avanzada libre",duration:"75 min",tag:"80 preguntas",special:true,path:"/advanced-conversation",goals:["Sostener ideas complejas","Matizar opiniones","Conectar experiencias y argumentos"],warmup:"Elige una categoría y una pregunta que realmente te dé ganas de responder.",explanation:"Conversación libre de nivel avanzado.",practice:[],speaking:[],homework:""},
   ...additionalSamples,
+  ...newGrammarEntries,
 ];
 
 const levelOrder:Record<string,number> = {A1:1,A2:2,B1:3,B2:4,C1:5,C2:6};
-const previewedLessons = lessonSources.map(withPreview);
+const previewedLessons = lessonSources.map(applyGrammarMetadata).map(withPreview);
 const orderedGrammar = previewedLessons
   .filter((lesson) => lesson.category === "Gramática")
   .sort((a,b) => (levelOrder[a.level] ?? 99) - (levelOrder[b.level] ?? 99) || (a.curriculumOrder ?? Number.MAX_SAFE_INTEGER) - (b.curriculumOrder ?? Number.MAX_SAFE_INTEGER));

@@ -5,6 +5,7 @@ import LessonReportPanel from "./lesson-reports/LessonReportPanel";
 import MoodTenseDisclosure from "./verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "./verbal-system/VerbalPosition";
 import GrammarStep from "./grammar-steps/GrammarStep";
+import { grammarTopics } from "./grammar-classroom/catalog";
 import LogoutButton from "./LogoutButton";
 import LessonPreview from "./LessonPreview";
 import AutoestudioLibraryEntry from "./autoestudio/LibraryEntry";
@@ -62,6 +63,7 @@ import {
 type Category =
   "Gramática" | "Conversación" | "Escucha" | "Fonética" | "Vocabulario";
 export type CatalogItem = {
+  grammarTopic?: string;
   news?:{addedAt:string;featured:boolean};
   familyId?: string;
   legacyLessonIds?: number[];
@@ -781,7 +783,7 @@ export default function Library({
   const [level, setLevel] = useState("Todos");
   const [category, setCategory] = useState<"Todas" | Category>("Todas");
   const [conversationMode, setConversationMode] = useState<"all" | "worlds" | "play" | "boards" | "countries">("all");
-  const [grammarMode, setGrammarMode] = useState<"all" | "general" | "system">("general");
+  const [grammarTopic, setGrammarTopic] = useState("all");
   const [query, setQuery] = useState("");
   const [catalogSearchActive, setCatalogSearchActive] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -843,7 +845,7 @@ export default function Library({
     `/acceso?returnTo=${encodeURIComponent(lessonPath(lesson, selectedLevel))}`;
   const lessonHref = (lesson: Lesson, selectedLevel = level) =>
     canOpen(lesson)
-      ? phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.id === 38 ? "/clase/38" : null) || (lesson.special ? "/choose-conversation" : null)
+      ? phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.category === "Gramática" ? `/clase/${lesson.id}` : lesson.id === 38 ? "/clase/38" : null) || (lesson.special ? "/choose-conversation" : null)
       : lockedPath(lesson, selectedLevel);
   const prepareLessonNavigation = (lesson: Lesson, placement = "library_card", selectedLevel = level) => {
     trackMarketingEvent("lesson_preview_open", {
@@ -870,8 +872,8 @@ export default function Library({
     [lessons],
   );
   const familyLessonSource = useMemo(() => {
-    return familyLessonsForCategory(lessons, { category, conversationMode, grammarMode });
-  }, [category, conversationMode, grammarMode, lessons]);
+    return familyLessonsForCategory(lessons, { category, conversationMode, grammarTopic });
+  }, [category, conversationMode, grammarTopic, lessons]);
   const categoryLevels = useMemo(
     () => availableLevels(familyLessonSource, category),
     [category, familyLessonSource],
@@ -954,7 +956,7 @@ export default function Library({
     setLevel("Todos");
     setCategory(nextCategory);
     if (nextCategory !== "Conversación") setConversationMode("all");
-    setGrammarMode(nextCategory === "Gramática" ? "all" : "general");
+    setGrammarTopic("all");
     if (sidebarOpen) closeSidebar();
     scrollToResults();
   };
@@ -963,7 +965,7 @@ export default function Library({
     setLevel("Todos");
     setCategory("Todas");
     setConversationMode("all");
-    setGrammarMode("general");
+    setGrammarTopic("all");
     setQuery("");
     setCatalogSearchActive(false);
     setSearchOpen(false);
@@ -1124,18 +1126,6 @@ export default function Library({
     setView("Biblioteca");
     setCategory("Conversación");
     setConversationMode("countries");
-    setLevel("Todos");
-    setQuery("");
-    setCatalogSearchActive(false);
-    setSearchOpen(false);
-    scrollToResults();
-  };
-  const openVerbalSystem = () => {
-    trackMarketingEvent("filter_used", { filter: "grammar_collection", value: "verbal_system" });
-    setView("Biblioteca");
-    setCategory("Gramática");
-    setGrammarMode("system");
-    setConversationMode("all");
     setLevel("Todos");
     setQuery("");
     setCatalogSearchActive(false);
@@ -1644,8 +1634,8 @@ export default function Library({
                   ? t("common.favorites")
                   : conversationMode === "countries"
                     ? t("library.countries")
-                    : category === "Gramática" && grammarMode === "system"
-                      ? "★ Sistema verbal"
+                    : category === "Gramática" && grammarTopic !== "all"
+                      ? grammarTopics.find(topic => topic.id === grammarTopic)?.label
                     : category === "Conversación"
                       ? `${categoryLabel(category)} · ${conversationFamilyLabel(conversationMode)}`
                     : category !== "Todas"
@@ -1774,17 +1764,19 @@ export default function Library({
           </section>
         )}
         {view === "Biblioteca" && category === "Gramática" && (
-          <section className="grammar-family-filter" aria-label="Colecciones de Gramática">
-            <div>
-              <small>COLECCIONES DE GRAMÁTICA</small>
-              <strong>{grammarMode === "system" ? "★ SISTEMA VERBAL" : grammarMode === "general" ? "RUTA GENERAL" : "TODAS"}</strong>
-            </div>
-            <nav aria-label="Colecciones de Gramática">
-              <button className={grammarMode === "all" ? "active" : ""} aria-pressed={grammarMode === "all"} onClick={()=>{setGrammarMode("all");setLevel("Todos");setCatalogSearchActive(false);scrollToResults()}}><span>●</span><b>TODAS</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:"Gramática", grammarMode:"all"}), {category:"Gramática"}).length}</small></button>
-              <button className={`verbal-tab ${grammarMode === "system" ? "active" : ""}`} aria-pressed={grammarMode === "system"} onClick={openVerbalSystem}><span>★</span><b>SISTEMA VERBAL</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:"Gramática", grammarMode:"system"}), {category:"Gramática"}).length}</small></button>
-              <button className={grammarMode === "general" ? "active" : ""} aria-pressed={grammarMode === "general"} onClick={()=>{setGrammarMode("general");setLevel("Todos");setCatalogSearchActive(false);scrollToResults()}}><span>01</span><b>GRAMÁTICA GENERAL</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:"Gramática", grammarMode:"general"}), {category:"Gramática"}).length}</small></button>
-              <Link href="/sistema-verbal"><span>↗</span><b>MAPA MODO / TIEMPO</b><small>ABRIR</small></Link>
+          <section className="grammar-topic-filter" aria-label="Temas de gramática">
+            <div><small>GRAMÁTICA PARA UNA CLASE DE 60 MINUTOS</small><h3>¿Qué quieres enseñar?</h3></div>
+            <nav aria-label="Temas de gramática">
+              {[{id:"all",label:"Todos los temas"},...grammarTopics].map(topic => {
+                const matches = familyLessonsForCategory(lessons,{category:"Gramática",grammarTopic:topic.id});
+                return <button type="button" key={topic.id} aria-pressed={grammarTopic===topic.id} onClick={()=>{
+                  setGrammarTopic(topic.id);
+                  if(level!=="Todos"&&!availableLevels(matches,"Gramática").includes(level))setLevel("Todos");
+                  trackMarketingEvent("filter_used",{filter:"grammar_topic",value:topic.id});scrollToResults();
+                }}>{topic.label}<span>{matches.length}</span></button>;
+              })}
             </nav>
+            <Link href="/sistema-verbal">Consultar el mapa de modos y tiempos →</Link>
           </section>
         )}
         {view === "Biblioteca" && (
