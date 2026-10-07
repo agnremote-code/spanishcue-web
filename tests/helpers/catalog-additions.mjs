@@ -6,6 +6,19 @@ import assert from 'node:assert/strict';
 // found exactly once, so drift or a second copy still fails the old hashes.
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
+  // Owner-requested country atlases. Exact inversions preserve every historical byte.
+  {
+    id:227,path:'/suecia',files:/^(?:app\/(?:country-atlas|suecia|argentina|espana)\/|public\/country-atlas\/|tests\/country-atlas[^/]*\.test\.mjs$)/,
+    edits:{
+      'tests/rendered-html.test.mjs':[['assert.match(html,/114(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/111(?:<!-- -->|\\s)+clases totales/);']],
+
+      'app/lesson-catalog.ts':[text=>{const lines=text.split('\n');for(const [id,path] of [[227,'/suecia'],[228,'/argentina'],[229,'/espana']]){const at=lines.flatMap((line,i)=>line.startsWith(`  {"id":${id},`)&&line.includes(`"path":"${path}"`)?[i]:[]);assert.equal(at.length,1,'one country catalog entry');lines.splice(at[0],1);}return lines.join('\n');},[', 39, 210, 227, 228, 229]);',', 39, 210]);'],[',136,223,226,227,228,229],',',136,223,226],']],
+      'app/conversation-families/ConversationFamily.tsx':[["export function ConversationFamily<const Level extends CEFRLevel>({ id, title, levels, defaultLevel, children, bilingual = false }: {\n  id: string; title: string; levels: readonly Level[]; defaultLevel: Level; bilingual?: boolean;\n  children: (level: Level) => ReactNode;\n", "export function ConversationFamily({ id, title, levels, defaultLevel, children }: {\n  id: string; title: string; levels: readonly CEFRLevel[]; defaultLevel: CEFRLevel;\n  children: (level: CEFRLevel) => ReactNode;\n"], ["  const snapshot = useCallback(() => resolveConversationLevel({availableLevels: levels, defaultLevel}, new URLSearchParams(window.location.search).get('level')) as Level, [levels, defaultLevel]);\n", "  const snapshot = useCallback(() => resolveConversationLevel({availableLevels: levels, defaultLevel}, new URLSearchParams(window.location.search).get('level')), [levels, defaultLevel]);\n"], ["      <div className=\"cf-family-title\"><span>{bilingual ? 'CONVERSACIÓN / CONVERSATION' : 'CONVERSACIÓN'}</span><strong>{title}</strong></div>\n", "      <div className=\"cf-family-title\"><span>CONVERSACIÓN</span><strong>{title}</strong></div>\n"], ["        <span>{bilingual ? 'Nivel / Level' : 'Nivel'}</span>\n", "        <span>Nivel</span>\n"]]
+    }
+  },
+  {id:228,path:'/argentina',files:/^app\/argentina\//,edits:{}},
+  {id:229,path:'/espana',files:/^app\/espana\//,edits:{}},
+
   {
     id:226,path:'/bosque-de-los-hongos-gigantes',
     files:/^(?:app\/bosque-de-los-hongos-gigantes\/|app\/conversation-vocabulary\/|public\/bosque-hongos\/|tests\/bosque-[^/]*\.test\.mjs$|docs\/superpowers\/(?:plans|specs)\/2026-10-04-bosque[^/]*|docs\/audits\/bosque-vocabulary-additions-20261004\.json$)/,
