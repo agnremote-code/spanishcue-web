@@ -31,3 +31,10 @@
   .na-district { animation: none; opacity: 1; }
   .na-bubble { transition: none; }
 }
+
+/* The object you carry: top left of the street, name and key always shown
+   on a computer, the icon alone on touch screens (tap to use). */
+.na-inv-slot { position: absolute; left: 16px; top: 16px; z-index: 3; }
+.na-inv-slot:not(.is-touch) .na-inv { gap: 8px; padding-right: 12px; }
+.na-inv-slot:not(.is-touch) .na-inv-name, .na-inv-slot:not(.is-touch) .na-inv-key { max-width: 14em; opacity: 1; }
+.na-inv-slot.is-touch { left: 16px; top: auto; bottom: 156px; }

@@ -1,5 +1,5 @@
 // Noche abierta · calle · Barrio Sur y Los Galpones: balcones con luz, vecinos en pijama y bajos que atraviesan las paredes de los galpones.
-export default [
+const encounters = [
   {
     id: "sur-balcon",
     kind: "escena",
@@ -1732,3 +1732,4 @@ export default [
     },
   },
 ];
+export default encounters;

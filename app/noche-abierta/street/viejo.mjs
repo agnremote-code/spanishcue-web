@@ -1,5 +1,5 @@
 // Noche abierta · calle · Barrio Viejo: paredes descascaradas, luces que parpadean y vecinos que no duermen; tranquilo, un poco triste, un poco mágico.
-export default [
+const encounters = [
   {
     id: "viejo-herido",
     kind: "escena",
@@ -1785,3 +1785,4 @@ export default [
     },
   },
 ];
+export default encounters;

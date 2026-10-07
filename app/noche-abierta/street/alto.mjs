@@ -1,5 +1,5 @@
 // Noche abierta · calle · Barrio Alto: luz blanca y cálida, fachadas pulidas, tilos con lucecitas y un silencio un poco presumido.
-export default [
+const encounters = [
   // ─────────────────────────────────────────── ESCENA 1
   {
     id: "alto-reconoce",
@@ -1693,3 +1693,4 @@ export default [
     },
   },
 ];
+export default encounters;

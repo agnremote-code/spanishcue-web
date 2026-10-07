@@ -117,10 +117,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (saved || level) setState(current => setLevel(saved ?? current, level ?? saved?.level ?? DEFAULT_LEVEL));
     const savedStreet = readStreet();
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (savedStreet) setStreet({ ...savedStreet, open: null });
     // Back in the middle of a night without an object: choose it first.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (saved && saved.phase !== 'llegada' && !savedStreet?.item) setPicking(true);
   }, []);
   useEffect(() => {

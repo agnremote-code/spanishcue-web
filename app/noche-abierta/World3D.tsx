@@ -15,12 +15,12 @@ import {
   type Box, type Hotspot, type RoomExit, type RoomLayout, type Target,
 } from './world3d.mjs';
 import { CANAL, CEILINGS, CITY_BUILDINGS, DISTRICT_ZONES, ROADS, STREET_ROOMS, districtAt, streetRoomLayout, type MovingVehicle } from './city.mjs';
-import { ambientReaction, itemById, type ItemId, type StreetState } from './street.mjs';
+import { ambientReaction, type ItemId, type StreetState } from './street.mjs';
 import { buildCity, buildInterior, placePerson, placeVehicle, type City, type Interior } from './build3d';
 import { buildDistricts, buildStreetRoom } from './district3d';
 import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
 import { createItemUseFx, disposeItem, heroHand, holdItem } from './items3d';
-import ItemIcon from './ItemIcon';
+import { ItemInventory } from './ItemIcon';
 import { animatePerson } from './people3d';
 import { animateHero, createHero } from './hero3d';
 
@@ -167,7 +167,7 @@ export default function World3D(props: WorldProps) {
     const city: City = buildCity({ shadows: !low, crowd: !low });
     scene.add(city.root);
     // The districts around the centre, streamed in and out by distance.
-    const districts = buildDistricts(city.night, { shadows: !low });
+    const districts = buildDistricts(city.night, { shadows: !low, asphalt: city.asphalt });
     scene.add(districts.root);
     const interiors = new Map<string, Interior>();
     const rings = new Map<string, Map<string, THREE.Mesh>>();
@@ -437,6 +437,8 @@ export default function World3D(props: WorldProps) {
       if (!who) {
         fx.play(new THREE.Vector3(sim.player.x, sim.y, sim.player.z));
         if (item === 'corazon') crowd.playHearts(new THREE.Vector3(sim.player.x, sim.y, sim.player.z));
+        sim.bubble = { x: sim.player.x, y: sim.y + 2.3, z: sim.player.z, until: sim.clock + 2.6 };
+        setBubble(current => ({ text: 'No hay nadie cerca. Acércate a alguien.', n: (current?.n ?? 0) + 1 }));
         return;
       }
       if (item !== 'corazon') fx.play(new THREE.Vector3(who.x, who.y - 2.1, who.z));
@@ -1098,6 +1100,22 @@ export default function World3D(props: WorldProps) {
     // Browser QA only (?na-qa in the URL): put the learner at a point of the
     // city to check far districts. It changes nothing a lesson keeps.
     if (new URLSearchParams(window.location.search).has('na-qa')) {
+      // Visible meshes per top-level group, to see where draw calls go.
+      (box as HTMLDivElement & { naCalls?: () => Record<string, number> }).naCalls = () => {
+        const out: Record<string, number> = {};
+        for (const top of scene.children) {
+          let n = 0;
+          top.traverseVisible(o => { if ((o as THREE.Mesh).isMesh || (o as THREE.InstancedMesh).isInstancedMesh) n++; });
+          const key = top.name || top.type;
+          out[key] = (out[key] ?? 0) + n;
+          if (top.name === 'street-life' || top.name === 'districts') top.children.forEach((child, i) => {
+            let m = 0;
+            child.traverseVisible(o => { if ((o as THREE.Mesh).isMesh) m++; });
+            if (m > 12) out[`${top.name}/${child.name || child.type}#${i}`] = m;
+          });
+        }
+        return out;
+      };
       (box as HTMLDivElement & { naWarp?: (x: number, z: number, heading?: number) => void }).naWarp = (x, z, heading = Math.PI) => {
         if (sim.streetRoom) { sim.streetRoom = null; sim.room = null; showIndoor(null); }
         placePlayer(x, z, heading); sim.yaw = heading; followShot(true);
@@ -1200,10 +1218,9 @@ export default function World3D(props: WorldProps) {
       <button type="button" className="na-chip" onClick={() => api.current?.cycleCamera()}>Cámara</button>
     </div>}
     {mapOpen && mode === 'walk' && <canvas ref={minimap} className="na-minimap" width={176} height={176} aria-label="Mapa del barrio" role="img" />}
-    {props.street.item && walking && <button type="button" className="na-inv" onClick={() => api.current?.useItem()}
-      aria-label={`Usar ${itemById(props.street.item)?.name.toLowerCase()} con la persona más cercana`}>
-      <ItemIcon id={props.street.item} size={22} /><span>{itemById(props.street.item)?.short}</span>{!touch && <kbd>Q</kbd>}
-    </button>}
+    {props.street.item && walking && <div className={`na-inv-slot${touch ? ' is-touch' : ''}`}>
+      <ItemInventory id={props.street.item} onUse={() => api.current?.useItem()} />
+    </div>}
     {touch && walking && <div className="na-touch">
       <div className="na-stick" aria-label="Mover" role="presentation"
         onPointerDown={event => { event.currentTarget.setPointerCapture(event.pointerId); stick.current = { id: event.pointerId, x: event.clientX, y: event.clientY }; }}

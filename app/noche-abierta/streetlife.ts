@@ -18,8 +18,9 @@ import { ENCOUNTERS, heartsUsed, isAvailable, moodOf, type CastMember, type Chan
 import { TRAFFIC, insideBuilding, type Box } from './world3d.mjs';
 import { addBlobShadow, animatePerson, createPerson, lookFromCast, randomLook, setMood, setPose, type Person } from './people3d';
 import { animateAnimal, createAnimal, type Animal } from './animals3d';
-import { makeCar, placePerson, placeVehicle, type Night } from './build3d';
+import { makeCar, placeVehicle, type Night } from './build3d';
 import { createHeartBurst } from './items3d';
+import { balconyHeight } from './district3d';
 
 export type StreetSpot = {
   id: string; x: number; z: number; radius: number; key: 'E'; verb: string; name: string;
@@ -33,8 +34,8 @@ type Ctx = {
 };
 
 // The ones you only notice up close stay hidden from afar.
-const NEAR_RIG = 26;
-const FAR_SHOW = 85;
+const NEAR_RIG = 20;
+const FAR_SHOW = 65;
 const RING_SHOW = { escena: 60, rincon: 22 };
 const GONE: Change[] = ['corre', 'se-va'];
 
@@ -76,6 +77,37 @@ function bake(person: Person): THREE.Mesh {
 let baked: THREE.MeshStandardMaterial | null = null;
 const bakedMaterial = () => (baked ??= new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.85 }));
 
+// A vehicle (or several) drawn with one mesh per material instead of one per
+// part: same look, a fraction of the draw calls. Sprites are left out.
+function compactByMaterial(source: THREE.Object3D): THREE.Group {
+  source.updateMatrixWorld(true);
+  const inverse = new THREE.Matrix4().copy(source.matrixWorld).invert();
+  const byMaterial = new Map<THREE.Material, THREE.BufferGeometry[]>();
+  let shadow = false;
+  source.traverse(object => {
+    const mesh = object as THREE.Mesh;
+    if (!mesh.isMesh || Array.isArray(mesh.material)) return;
+    const geometry = mesh.geometry.index ? mesh.geometry.toNonIndexed() : mesh.geometry.clone();
+    for (const name of Object.keys(geometry.attributes)) if (!['position', 'normal', 'uv'].includes(name)) geometry.deleteAttribute(name);
+    if (!geometry.attributes.uv) geometry.setAttribute('uv', new THREE.BufferAttribute(new Float32Array(geometry.attributes.position.count * 2), 2));
+    geometry.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inverse, mesh.matrixWorld));
+    const list = byMaterial.get(mesh.material) ?? [];
+    list.push(geometry);
+    byMaterial.set(mesh.material, list);
+    shadow ||= mesh.castShadow;
+  });
+  const out = new THREE.Group();
+  for (const [material, parts] of byMaterial) {
+    const merged = mergeGeometries(parts, false);
+    for (const part of parts) part.dispose();
+    if (!merged) continue;
+    const mesh = new THREE.Mesh(merged, material);
+    mesh.castShadow = shadow && !(material as THREE.MeshStandardMaterial).transparent;
+    out.add(mesh);
+  }
+  return out;
+}
+
 // Someone in the city: a full rig when close, a baked silhouette when far.
 type Body = {
   key: string; look: ReturnType<typeof lookFromCast>; pose: string; group: THREE.Group;
@@ -101,7 +133,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   const root = new THREE.Group();
   root.name = 'street-life';
   scene.add(root);
-  const maxRigs = options.low ? 7 : 14;
+  const maxRigs = options.low ? 5 : 8;
   const shadows = false;
 
   // ---------------------------------------------------------- materials
@@ -228,7 +260,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   }
   for (const person of BALCONY_PEOPLE) {
     const seed = hash(person.id);
-    const body = makeBody(person.id, randomLook(seed, districtAt(person.x, person.z)), 'balcony', { x: person.x, z: person.z, y: 0.15 + person.floor * 3.1, heading: person.face }, seed);
+    const body = makeBody(person.id, randomLook(seed, districtAt(person.x, person.z)), 'balcony', { x: person.x, z: person.z, y: balconyHeight(person.x, person.z, person.floor), heading: person.face }, seed);
     body.blob = false;
     addBody(body);
   }
@@ -244,7 +276,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   const standing = bodies.filter(body => body.pose !== 'walk' && body.y < 0.5).map(body => ({ x: body.x, z: body.z }));
 
   // ---------------------------------------------------------- traffic
-  type Rig = ReturnType<typeof makeCar> | { group: THREE.Group; bike: true; rider: Person };
+  type Rig = ReturnType<typeof makeCar> | { group: THREE.Group; bike: true; rider: Person; far: THREE.Mesh };
   // The avenue's own cars join the new streets' traffic, so they all wait for each other at crossings.
   let cars: MovingVehicle[] = [
     ...TRAFFIC.map(car => ({ id: car.id, axis: 'x' as const, lane: car.lane, dir: car.dir, x: car.start, z: car.lane, speed: car.speed, cruise: car.speed, kind: car.kind, color: car.color })),
@@ -258,22 +290,30 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
       const rider = createPerson(randomLook(hash(car.id), 'centro'), false);
       setPose(rider, 'bike');
       rider.root.position.set(0, 0, -0.1);
-      group.add(rider.root);
+      animatePerson(rider, 0.6, 0, false);
+      // From afar the rider is one baked mesh; the full body only up close.
+      const far = bake(rider);
+      far.position.copy(rider.root.position);
+      group.add(rider.root, far);
       root.add(group);
-      carRigs.set(car.id, { group, bike: true, rider });
+      carRigs.set(car.id, { group, bike: true, rider, far });
       continue;
     }
-    const rig = makeCar((car.kind === 'taxi' ? 'taxi' : car.kind) as Parameters<typeof makeCar>[0], car.color, night);
+    const full = makeCar((car.kind === 'taxi' ? 'taxi' : car.kind) as Parameters<typeof makeCar>[0], car.color, night);
+    const rig = { ...full, group: compactByMaterial(full.group) };
     root.add(rig.group);
     carRigs.set(car.id, rig);
     const box = { x0: 0, x1: 0, z0: 0, z1: 0, vehicle: car.id, top: 1.6 };
     movingBoxes.push(box);
   }
+  // The parked cars never move: all of them in one handful of meshes.
+  const parkedAll = new THREE.Group();
   for (const parked of CITY_PARKED) {
     const rig = makeCar(parked.kind as Parameters<typeof makeCar>[0], parked.color, night);
     placeVehicle(rig.group, parked.x, parked.z, parked.heading);
-    root.add(rig.group);
+    parkedAll.add(rig.group);
   }
+  root.add(compactByMaterial(parkedAll));
   // The car of the woman locked out in the Barrio Viejo, hazards on.
   const lockedOut = PLACEMENTS['viejo-auto']?.car;
   let lockedRig: ReturnType<typeof makeCar> | null = null;
@@ -314,7 +354,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   scene.add(hearts.group);
   let heartsSeen = 0;
   let openSeen: string | null = null;
-  let closedSeen = new Set<string>();
+  const closedSeen = new Set<string>();
 
   // ---------------------------------------------------------- per frame
   const visible = (encounter: Encounter, street: StreetState, eventId: string | null) => {
@@ -535,11 +575,13 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
       const rig = carRigs.get(car.id)!;
       const heading = car.axis === 'z' ? (car.dir > 0 ? Math.PI / 2 : -Math.PI / 2) : (car.dir > 0 ? 0 : Math.PI);
       const d = Math.hypot(car.x - player.x, car.z - player.z);
-      rig.group.visible = d < 110 && !ctx.room;
+      rig.group.visible = d < 90 && !ctx.room;
       if ('bike' in rig) {
         rig.group.position.set(car.x, 0, car.z);
         rig.group.rotation.y = -heading + Math.PI / 2;
-        if (rig.group.visible) { spinWheels(rig.group, car.speed * dt); animatePerson(rig.rider, dt, 0, false); }
+        const near = d < NEAR_RIG;
+        rig.rider.root.visible = near; rig.far.visible = !near;
+        if (rig.group.visible) { spinWheels(rig.group, car.speed * dt); if (near) animatePerson(rig.rider, dt, 0, false); }
         continue;
       }
       placeVehicle(rig.group, car.x, car.z, heading);

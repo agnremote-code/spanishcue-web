@@ -1,7 +1,7 @@
 // Noche abierta · calle · Hospital y comisaría: luces blancas y frías, gente que espera, personal cansado y una ciudad que no duerme del todo.
 const CORAZON = { A: "Usas el corazón.", B: "Usas el corazón.", C: "Usas el corazón." };
 
-export default [
+const encounters = [
   // ───────────────────────────── ESCENA 1 ─────────────────────────────
   {
     id: "clinica-ambulancia",
@@ -1711,3 +1711,4 @@ export default [
     },
   },
 ];
+export default encounters;

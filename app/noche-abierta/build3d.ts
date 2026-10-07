@@ -761,7 +761,7 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
   // whose water lies below street level; the river beyond the east edge too.
   const sidewalkTex = tiles('#8a847b', 'rgba(40,36,32,.35)', 128, 4);
   const sidewalk = new THREE.MeshStandardMaterial({ map: sidewalkTex, color: '#b9b2a7', roughness: 0.95 });
-  const east = CITY_BOUNDS.maxX + 1;
+  const east = CITY_BOUNDS.maxX + 0.6;
   for (const [x0, x1, z0, z1] of [[-130, CANAL.x0, -130, 130], [CANAL.x1, east, -130, 130], [CANAL.x0, CANAL.x1, -130, CANAL.z0], [CANAL.x0, CANAL.x1, CANAL.z1, 130]]) {
     const geometry = new THREE.PlaneGeometry(x1 - x0, z1 - z0);
     const uv = geometry.getAttribute('uv') as THREE.BufferAttribute;

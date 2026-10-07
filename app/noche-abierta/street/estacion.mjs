@@ -1,7 +1,7 @@
 // Noche abierta · calle · La Estación: un reloj parado, ecos en el túnel, anuncios que nadie entiende y gente con prisa.
 const HEART = { A: "Usas el corazón.", B: "Usas el corazón.", C: "Usas el corazón." };
 
-export default [
+const encounters = [
   // ─────────────────────────────────────────────────────────────── ESCENA 1
   {
     id: "estacion-taxi",
@@ -1564,3 +1564,4 @@ export default [
     },
   },
 ];
+export default encounters;

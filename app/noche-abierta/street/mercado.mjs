@@ -1,7 +1,7 @@
 // Noche abierta · calle · Mercado nocturno: humo de parrilla, luces de colores, música y gente que se busca entre los puestos.
 const CORAZON = { A: "Usas el corazón.", B: "Usas el corazón.", C: "Usas el corazón." };
 
-export default [
+const encounters = [
   // ───────────────────────────── ESCENA 1 ─────────────────────────────
   {
     id: "mercado-perro",
@@ -1760,3 +1760,4 @@ export default [
     },
   },
 ];
+export default encounters;

@@ -1,5 +1,5 @@
 // Noche abierta · calle · La Costanera: un paseo junto al canal, tranquilo, romántico y un poco melancólico, con viento.
-export default [
+const encounters = [
   // ───────────────────────────── 1. Alguien llora junto al agua
   {
     id: "costa-llorando",
@@ -1654,3 +1654,4 @@ export default [
     },
   },
 ];
+export default encounters;
