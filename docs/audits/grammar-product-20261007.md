@@ -1,6 +1,6 @@
 # Gramática SpanishCue: auditoría y rediseño — 7 de octubre de 2026
 
-Base de la auditoría: `b5a8cad64bbdfffd2c895884ef355f0be8c6f1bb` de `agnremote-code/spanishcue-web/main`. Rama: `codex/grammar-product-20261007`. La auditoría se completó antes de seleccionar y redactar las seis incorporaciones. Se integró main hasta `d01d95890c17096652ce375b69a1eb4475315f5e`. Como los atlas de países ya publicados ocuparon los IDs 227–229 durante el trabajo, las seis incorporaciones de Gramática usan 230–235; sus slugs no cambian.
+Base de la auditoría: `b5a8cad64bbdfffd2c895884ef355f0be8c6f1bb` de `agnremote-code/spanishcue-web/main`. Rama: `codex/grammar-product-20261007`. La auditoría se completó antes de seleccionar y redactar las seis incorporaciones. Se integró main hasta `040d5e172c5a07877f14b76fdf60178ec8d7881d`, incluidos los atlas de países, SEO y sus nuevas previsualizaciones. Como los atlas de países ya publicados ocuparon los IDs 227–229 durante el trabajo, las seis incorporaciones de Gramática usan 230–235; sus slugs no cambian.
 
 El catálogo auditado contiene **51 clases de Gramática**: 17 A1, 9 A2, 10 B1, 9 B2, 5 C1 y 1 C2. La propuesta conserva las 51 identidades y rutas, añade exactamente seis clases y ofrece una secuencia docente de 60 minutos para las 57. Los bancos anteriores siguen accesibles como consulta y ampliación.
 
@@ -151,7 +151,13 @@ Los 57 archivos de escucha usan voces neuronales nativas es-MX-DaliaNeural y es-
 
 - Línea de base: 53/53 pruebas relevantes pasaron antes de la implementación.
 - Revisión independiente: contenido, claves y modelos de las seis incorporaciones y los 51 contextos existentes; corregidos los hallazgos concretos.
-- Estado de integración y batería final: en curso; se registra el resultado definitivo antes de abrir el PR.
+- Verificación sobre el commit local `e10fa80c41c5efaa8763b7c816dda2282582bc72`, con main integrado hasta `040d5e172c5a07877f14b76fdf60178ec8d7881d`, en una copia limpia: `npm test` finaliza con código 0, 21 grupos y 847 ejecuciones de prueba sin fallos. Incluye build protegido, pruebas de Worker, SEO, rutas, acceso, autenticación y pagos existentes.
+- `npm run lint`, `npx tsc --noEmit`, `npm run validate:artifact` y `git diff --check`: código 0. Comprobación adicional de compatibilidad de gramática, navegación y ayudas verbales: 29/29.
+- 17 pruebas nuevas del aula: catálogo/filtros (2), contenido (4), interacción React/jsdom (6), audio (2), rutas y protección en Worker (3). Comprueban las 57 identidades, seis incorporaciones, paráfrasis sin corrección automática, edición y pegado, retención al navegar, foco, detención del audio, copia con éxito/fallo y separación pública/premium.
+- Las 57 grabaciones coinciden con manifiesto y transcripciones y se decodifican completamente. El paquete final contiene exactamente 2 grabaciones gratuitas y 55 protegidas, sin medios de Gramática huérfanos.
+- Comprobación histórica suplementaria fuera de `npm test`: las suites archivadas Wave2/Wave3 dieron 40/48 tanto en la rama inicial como en una copia del SHA base. Sus ocho fallos ya existían (hashes de fuentes históricas y expectativas anteriores de voseo); se documentan como deuda previa, sin cambiar contenido ajeno para ocultarlos. Las interacciones y claves de los bancos de sintaxis se conservaron; las referencias de rutas migradas apuntan a los bancos originales.
+- La revisión de duración es editorial, basada en el alcance y las tareas. Quedan fuera de esta comprobación una sesión piloto con estudiantes y una evaluación humana de pronunciación.
+- El PR, SHA integrado y resultado del despliegue se comunican en la entrega. Los cambios posteriores a este commit de verificación son documentación de resultados.
 - Límite de entorno: no hay un controlador de previsualización local autorizado para QA visual. Los puntos de corte y estructura responsive se revisan en código; una revisión visual móvil real no se presenta como realizada. La comprobación del sitio publicado depende de la integración y el despliegue.
 - Los tiempos estimados y la naturalidad de la voz no se presentan como observaciones de una prueba docente humana.
 

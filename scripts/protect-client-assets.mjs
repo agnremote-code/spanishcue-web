@@ -58,6 +58,9 @@ const publicRoots = new Set([
   "app/Library.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
   "app/resources/ResourceCatalog.tsx",
+  // Public question bank filters: the questions are free teaching content and
+  // already sit in the server HTML; the chunk carries no lesson bodies.
+  "app/spanish-conversation-questions/QuestionBank.tsx",
   "app/PasswordResetButton.tsx",
   "app/acceso/CheckoutButton.tsx",
   "app/acceso/FounderAccessForm.tsx",

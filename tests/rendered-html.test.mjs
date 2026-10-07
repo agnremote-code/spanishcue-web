@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import { JSDOM } from 'jsdom';
 const root=process.env.CHESPANISH_TEST_ORIGIN||'http://127.0.0.1:8787';
 
 test('unknown public routes return a real 404 response',async()=>{
@@ -71,25 +72,103 @@ test('English UI is server-rendered, persists by cookie and leaves lesson conten
  assert.match(html,/<html[^>]*lang="en"/);assert.match(html,/Stop building every lesson/);
  assert.match(html,/Try it free/);assert.match(html,/Lesson 01/);
  assert.match(html,/Sustantivos: nombrar personas, lugares y cosas/);assert.doesNotMatch(html,/The Noun Factory/);
- assert.match(html,/hreflang="es"/i);assert.match(html,/hreflang="en"/i);assert.match(html,/hreflang="x-default"/i);
- assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/\?lang=en"/i);
- assert.match(html,/hreflang="es" href="https:\/\/spanishcue\.com\/"/i);
- assert.match(html,/hreflang="en" href="https:\/\/spanishcue\.com\/\?lang=en"/i);
- assert.match(html,/hreflang="x-default" href="https:\/\/spanishcue\.com\/"/i);
+ // The language toggle never creates a second indexable URL: clean canonical, no hreflang.
+ assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/"/i);
+ assert.doesNotMatch(html,/rel="canonical" href="[^"]*\?lang=/i);
+ assert.doesNotMatch(html,/hreflang=/i);
  const persisted=await fetch(root,{headers:{cookie:'spanishcue_locale=en'}});assert.equal(persisted.status,200);
  assert.match(await persisted.text(),/Stop building every lesson/);
 });
 
-test('SEO metadata gives each localized public URL its own canonical and noindexes account or checkout surfaces', async () => {
+test('SEO metadata gives each public URL one clean canonical and noindexes account or checkout surfaces without robots.txt blocks', async () => {
  const [layout, sitemap, robots] = await Promise.all([
   readFile('app/layout.tsx','utf8'), readFile('app/sitemap.ts','utf8'), readFile('app/robots.ts','utf8'),
  ]);
  assert.match(layout,/isSearchPrivatePath/);
  assert.match(layout,/robots:\s*isSearchPrivatePath\(pathname\)\s*\?\s*\{\s*index:\s*false/);
- assert.match(layout,/const canonical = localizedUrl\(pathname, locale\)/);
- assert.match(sitemap,/alternates:/);
- assert.match(sitemap,/languages:/);
- assert.match(robots,/\/ingresar/);
- assert.match(robots,/\/cuenta/);
- assert.match(robots,/\/acceso/);
+ assert.match(layout,/const canonical = canonicalUrl\(pathname\)/);
+ assert.doesNotMatch(layout,/localizedUrl/);
+ assert.doesNotMatch(sitemap,/\?lang=(?:en|es|\$\{)|localizedUrl/);
+ // noindex pages must stay crawlable so Google can read the directive.
+ assert.doesNotMatch(robots,/\/ingresar|\/cuenta|\/acceso|\/pro\/|\/admin/);
+ assert.match(robots,/"\/api\/"/);
+});
+
+test('robots.txt and sitemap.xml expose the organic architecture and nothing private',async()=>{
+ const robots=await fetch(root+'/robots.txt');assert.equal(robots.status,200);const robotsText=await robots.text();
+ assert.match(robotsText,/Disallow: \/api\//);assert.doesNotMatch(robotsText,/Disallow: \/(?:acceso|ingresar|cuenta|zeely|lp)/);assert.match(robotsText,/Sitemap: https:\/\/spanishcue\.com\/sitemap\.xml/);
+ const sitemap=await fetch(root+'/sitemap.xml');assert.equal(sitemap.status,200);const xml=await sitemap.text();
+ for(const path of ['/spanish-teacher-resources','/spanish-conversation-activities','/spanish-conversation-activities/a1','/spanish-conversation-activities/c2','/spanish-conversation-questions','/resources','/guides','/autoestudio','/autoestudio/a1','/mexico','/pricing']){
+  assert.match(xml,new RegExp(`<loc>https://spanishcue\\.com${path.replace(/\//g,'\\/')}</loc>`),path);
+ }
+ assert.doesNotMatch(xml,/\?lang=/);assert.doesNotMatch(xml,/spanishcue\.com\/(?:lp|zeely|acceso|ingresar|cuenta|pro)\b/);
+});
+
+test('private, campaign and tooling surfaces carry noindex in the header and the HTML',async()=>{
+ for(const [path,directive] of [['/acceso','noindex, nofollow'],['/ingresar','noindex, nofollow'],['/zeely','noindex, nofollow'],['/lp/spanish-conversation-activities','noindex, follow']]){
+  const response=await fetch(root+path);assert.equal(response.headers.get('x-robots-tag'),directive,path);
+  if(response.status===200)assert.match(await response.text(),/<meta name="robots" content="noindex/i,path);
+ }
+ const home=await fetch(root);assert.equal(home.headers.get('x-robots-tag'),null);
+ const hub=await fetch(root+'/spanish-conversation-activities');assert.equal(hub.headers.get('x-robots-tag'),null);
+});
+
+test('campaign landings under /lp reuse the conversion template with a self canonical and stay out of search',async()=>{
+ const response=await fetch(root+'/lp/spanish-conversation-activities');assert.equal(response.status,200);const html=await response.text();
+ assert.match(html,/campaign-page/);assert.match(html,/id="founder-offer"/);
+ assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/lp\/spanish-conversation-activities"/i);
+ assert.match(html,/<meta name="robots" content="noindex, follow"/i);assert.doesNotMatch(html,/hreflang=/i);
+ assert.equal(response.headers.get('content-language'),'en');
+ const spanish=await fetch(root+'/lp/ele-recursos-profesores');assert.equal(spanish.status,200);assert.equal(spanish.headers.get('content-language'),'es');
+ assert.equal((await fetch(root+'/lp/does-not-exist')).status,404);
+});
+
+test('the conversation hub is an indexable English CollectionPage linking every level',async()=>{
+ const response=await fetch(root+'/spanish-conversation-activities');assert.equal(response.status,200);const html=await response.text();
+ assert.equal(response.headers.get('content-language'),'en');assert.match(html,/<html[^>]*lang="en"/);
+ assert.match(html,/<h1[^>]*>Spanish Conversation Activities by Level/);
+ assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/spanish-conversation-activities"/i);
+ assert.doesNotMatch(html,/hreflang=/i);assert.doesNotMatch(html,/<meta name="robots" content="noindex/i);
+ assert.match(html,/"@type":"CollectionPage"/);assert.match(html,/"@type":"BreadcrumbList"/);
+ for(const level of ['a1','a2','b1','b2','c1','c2'])assert.match(html,new RegExp(`href="/spanish-conversation-activities/${level}"`),level);
+ assert.match(html,/href="\/spanish-conversation-questions"/);assert.match(html,/href="\/mexico"/);assert.match(html,/href="\/guides\/spanish-conversation-activities-by-level"/);
+ // Check the page's authored copy, not the serialized report catalog containing
+ // explicitly regional lessons; word boundaries also exclude words like adjetivos.
+ const dom=new JSDOM(html);
+ dom.window.document.querySelectorAll('script,style').forEach(node=>node.remove());
+ assert.doesNotMatch(dom.window.document.body.textContent,/\b(?:Vos|vos|tenés|querés|podés)\b/u);
+ dom.window.close();
+});
+
+test('level pages render their activities, questions and real lessons with a clean canonical',async()=>{
+ const response=await fetch(root+'/spanish-conversation-activities/b1');assert.equal(response.status,200);const html=await response.text();
+ assert.match(html,/<h1[^>]*>B1 Spanish Conversation Activities/);assert.match(html,/Rank and defend/);assert.match(html,/Story with a twist/);
+ assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/spanish-conversation-activities\/b1"/i);
+ assert.match(html,/href="\/mexico"/);assert.match(html,/href="\/resources\/spanish-conversation-activity-/);
+ assert.match(html,/href="\/spanish-conversation-activities\/a2"/);assert.match(html,/href="\/spanish-conversation-activities\/b2"/);
+ assert.match(html,/"educationalLevel":"B1"/);assert.match(html,/MÉXICO/);
+ assert.equal((await fetch(root+'/spanish-conversation-activities/zz')).status,404);
+});
+
+test('the question bank serves every graded question in the initial HTML',async()=>{
+ const response=await fetch(root+'/spanish-conversation-questions');assert.equal(response.status,200);const html=await response.text();
+ // React separates adjacent text nodes with an empty comment.
+ assert.match(html,/<h1[^>]*>150(?:<!-- -->)? Spanish Conversation Questions/);
+ assert.ok((html.match(/<b lang="es">/g)||[]).length>=150,'all 150 questions server-rendered');
+ assert.match(html,/id="b1"/);assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/spanish-conversation-questions"/i);
+ assert.match(html,/¿Qué hiciste el fin de semana pasado\?|¿Qué hiciste ayer por la tarde\?/);
+});
+
+test('the teacher-resources hub, homepage and pricing page expose clean canonicals and site schema',async()=>{
+ const hub=await fetch(root+'/spanish-teacher-resources');assert.equal(hub.status,200);const hubHtml=await hub.text();
+ assert.match(hubHtml,/<h1[^>]*>Spanish Teacher Resources/);assert.match(hubHtml,/rel="canonical" href="https:\/\/spanishcue\.com\/spanish-teacher-resources"/i);
+ assert.match(hubHtml,/href="\/spanish-conversation-activities"/);assert.match(hubHtml,/href="\/guides"/);assert.match(hubHtml,/href="\/autoestudio"/);assert.doesNotMatch(hubHtml,/hreflang=/i);
+ const home=await fetch(root);const homeHtml=await home.text();
+ assert.match(homeHtml,/"@type":"Organization"/);assert.match(homeHtml,/"@type":"WebSite"/);assert.doesNotMatch(homeHtml,/id="spanishcue-marketing-assets"/);assert.match(homeHtml,/href="\/zeely"/);
+ assert.match(homeHtml,/<title>Clases de español listas para enseñar \(A1–C2\) \| SPANISHCUE<\/title>/);
+ const englishHome=await fetch(root+'/?lang=en');assert.match(await englishHome.text(),/<title>Interactive Spanish Lessons for Teachers \(A1–C2\) \| SPANISHCUE<\/title>/);
+ const pricing=await fetch(root+'/pricing?lang=en');const pricingHtml=await pricing.text();
+ assert.match(pricingHtml,/rel="canonical" href="https:\/\/spanishcue\.com\/pricing"/i);assert.doesNotMatch(pricingHtml,/hreflang=/i);
+ const resource=await fetch(root+'/resources/spanish-conversation-activity-b1-mexico');assert.equal(resource.status,200);
+ assert.match(await resource.text(),/href="\/spanish-conversation-activities\/b1"/);
 });
