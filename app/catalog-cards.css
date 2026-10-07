@@ -143,7 +143,7 @@
   box-shadow: 0 15px 34px rgba(6, 28, 61, .17);
 }
 
-.grammar-topic-filter{margin:20px 0;padding:22px;border:1px solid #ffffff20;border-radius:20px;background:#ffffff06}
+.grammar-topic-filter{margin:20px 0;padding:22px;border:1px solid #193755;border-radius:20px;background:#102b45}
 .grammar-topic-filter small{font-size:10px;font-weight:800;letter-spacing:1.2px;color:#ff9b82}
 .grammar-topic-filter h3{margin:5px 0 16px;font-size:23px;color:#f4f6fa}
 .grammar-topic-filter nav{display:flex;gap:8px;flex-wrap:wrap}

@@ -4,12 +4,12 @@ import test from "node:test";
 
 const source = async (path) => readFile(path, "utf8");
 
-test("the same collapsible mood/tense help is present in every verbal lesson", async () => {
+test("the original reference banks preserve their collapsible mood/tense help", async () => {
   for (const path of [
-    "app/subjuntivo-pais-maravillas/page.tsx",
-    "app/condicionales-b1/page.tsx",
-    "app/condicionales/page.tsx",
-    "app/past-b1/page.tsx",
+    "app/subjuntivo-pais-maravillas/LegacyLesson.tsx",
+    "app/condicionales-b1/LegacyLesson.tsx",
+    "app/condicionales/LegacyLesson.tsx",
+    "app/past-b1/LegacyLesson.tsx",
     "app/grammar-worlds/GrammarWorld.tsx",
     "app/Library.tsx",
     "app/clase/[id]/page.tsx",
@@ -23,16 +23,16 @@ test("the same collapsible mood/tense help is present in every verbal lesson", a
 
 test("the mood/tense theory has one canonical standalone lesson", async () => {
   const catalog = await source("app/lesson-catalog.ts");
-  const page = await source("app/modo-vs-tiempo-verbal/page.tsx");
+  const page = await source("app/modo-vs-tiempo-verbal/LegacyLesson.tsx");
   assert.match(catalog, /id:107[^\n]+path:"\/modo-vs-tiempo-verbal"/);
   assert.match(page, /MoodTenseDisclosure showLessonLink=\{false\}/);
   assert.doesNotMatch(page, /MoodTenseDisclosure defaultOpen/);
 });
 
 test("subjunctive and B1 conditionals no longer duplicate the removed introductions", async () => {
-  const subjunctivePage = await source("app/subjuntivo-pais-maravillas/page.tsx");
+  const subjunctivePage = await source("app/subjuntivo-pais-maravillas/LegacyLesson.tsx");
   const subjunctiveData = await source("app/subjuntivo-pais-maravillas/data.ts");
-  const conditionals = await source("app/condicionales-b1/page.tsx");
+  const conditionals = await source("app/condicionales-b1/LegacyLesson.tsx");
   assert.doesNotMatch(subjunctivePage, /GrammarIntro|screen === "intro"/);
   assert.doesNotMatch(subjunctiveData, /id:"modos"/);
   assert.doesNotMatch(conditionals, /ModoTiempoIntro|co-master-ladder|co-learning-order|co-memory-rule/);

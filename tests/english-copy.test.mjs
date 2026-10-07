@@ -1,7 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { compareEnglishCopy } from '../scripts/check-english-copy.mjs';
+import { compareEnglishCopy, relocateEnglishSources, filterReviewedChanges } from '../scripts/check-english-copy.mjs';
 const compare = (before, after, path = 'app/example.tsx') => compareEnglishCopy(new Map([[path, before]]), new Map([[path, after]]));
+test('exact reference-page relocation preserves English checks for edits, omissions and duplicate copies',()=>{
+  const from='app/past-b1/page.tsx',to='app/past-b1/LegacyLesson.tsx',source='const en={title:"Past habits"};';
+  const before=relocateEnglishSources(new Map([[from,source]]));
+  assert.deepEqual(compareEnglishCopy(before,new Map([[to,source]])),[]);
+  assert.equal(compareEnglishCopy(before,new Map([[to,source.replace('habits','events')]])).length,2);
+  assert.equal(compareEnglishCopy(before,new Map()).length,1);
+  assert.equal(compareEnglishCopy(before,new Map([[from,source],[to,source]])).length,1);
+});
 test('allows Spanish edits while preserving explicit English objects, helpers and ternaries', () => {
   const before = 'const c = {en:{help:"Listen"},es:{help:"Escuchá"}}; t("Probá", "Try"); const es = locale === "es"; const a = es ? "Mirá" : "Look";';
   assert.deepEqual(compare(before, before.replace('Escuchá', 'Escucha').replace('Probá', 'Prueba').replace('Mirá', 'Mira')), []);
@@ -29,4 +37,18 @@ test('flags new English strings in existing and new files', () => {
 });
 test('protects English resource-template text', () => {
   assert.equal(compare('const ui=<p>Evaluate the lesson.</p>', 'const ui=<p>Read the lesson.</p>', 'app/resources/[slug]/page.tsx').length, 2);
+});
+test('reviewed banner change exempts only its exact path, text and occurrence', () => {
+  const path = 'app/NewLessonsBanner.tsx';
+  const findings = [
+    {path, text:'JUST ADDED', kind:'english-changed-or-deleted'},
+    {path, text:'NEW CLASSES!', kind:'english-added'},
+    {path, text:'JUST ADDED', kind:'english-changed-or-deleted'},
+    {path:'app/other.tsx', text:'JUST ADDED', kind:'english-changed-or-deleted'},
+    {path, text:'Open lesson', kind:'english-changed-or-deleted'}
+  ];
+  assert.deepEqual(filterReviewedChanges(findings, [
+    {path, text:'JUST ADDED', kind:'english-changed-or-deleted', reason:'Owner requested banner redesign'},
+    {path, text:'NEW CLASSES!', kind:'english-added', reason:'Owner requested banner redesign'}
+  ]), findings.slice(2));
 });

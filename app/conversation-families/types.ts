@@ -1,4 +1,4 @@
-export const CEFR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
+export const CEFR_LEVELS = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
 export type CEFRLevel = typeof CEFR_LEVELS[number];
 export type LevelPreview = { hook: string; image?: string; explanation?: string; warmup?: string };
 /** Public summaries only. Never put a question bank in this manifest. */

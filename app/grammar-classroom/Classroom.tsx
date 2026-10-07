@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import type { ClassroomLesson, Question } from './types';
 import './classroom.css';
 
@@ -37,7 +38,12 @@ export default function Classroom({lesson}:{lesson:ClassroomLesson}) {
   const [audioError,setAudioError]=useState(false);
   const titleRef=useRef<HTMLHeadingElement>(null);
   const audioRef=useRef<HTMLAudioElement>(null);
-  useEffect(()=>{titleRef.current?.focus({preventScroll:true});},[stage]);
+  const firstStage=useRef(true);
+  useEffect(()=>{
+    if(firstStage.current){firstStage.current=false;return;}
+    titleRef.current?.focus({preventScroll:true});
+    titleRef.current?.scrollIntoView?.({block:'start',behavior:'instant'});
+  },[stage]);
   const current=stages[stage];
   const go=(index:number)=>{
     if(audioRef.current){audioRef.current.pause();audioRef.current.currentTime=0;}
@@ -55,7 +61,7 @@ export default function Classroom({lesson}:{lesson:ClassroomLesson}) {
   const wordCount=writingText.trim()?writingText.trim().split(/\s+/u).length:0;
 
   return <main className="gc-shell" data-grammar-classroom={lesson.id}>
-    <header className="gc-top"><a href="/" className="gc-brand" aria-label="SpanishCue, volver a la biblioteca">SPANISH<span>CUE</span><small>CHOOSE. OPEN. TEACH.</small></a><a className="gc-back" href="/">← Biblioteca</a></header>
+    <header className="gc-top"><Link href="/" className="gc-brand" aria-label="SpanishCue, volver a la biblioteca">SPANISH<span>CUE</span><small>CHOOSE. OPEN. TEACH.</small></Link><Link className="gc-back" href="/">← Biblioteca</Link></header>
     <section className="gc-heading"><div className="gc-meta"><span>{lesson.level}</span><span>{lesson.topic}</span><span>60 min · clase guiada</span></div><h1>{lesson.title}</h1><p>Lee, escucha, conversa y escribe para usar la gramática en una situación real.</p></section>
     <div className="gc-layout">
       <aside className="gc-sidebar"><p className="gc-eyebrow">TU CLASE, PASO A PASO</p><nav aria-label="Actividades de la clase">{stages.map((item,index)=><button type="button" key={item.id} data-stage={item.id} aria-current={index===stage?'step':undefined} onClick={()=>go(index)}><span className="gc-step-number">{index+1}</span><span>{item.label}</span><small>{item.minutes} min</small></button>)}</nav><p className="gc-sidebar-note">Tiempos orientativos para una clase individual. Las respuestas se mantienen al cambiar de actividad.</p></aside>
@@ -109,7 +115,7 @@ export default function Classroom({lesson}:{lesson:ClassroomLesson}) {
 
         {current.id==='closing'&&<>
           <p className="gc-lead">Usa lo aprendido una vez más.</p><h3>{lesson.closing.prompt}</h3><details className="gc-teacher"><summary>Un posible cierre</summary><p>{lesson.closing.model}</p></details>
-          <div className="gc-outcome"><h3>Antes de terminar</h3><ol><li>Elige una frase tuya y explica qué comunica.</li><li>Reformula una respuesta después del comentario del profesor.</li><li>Decide en qué situación real puedes usarla esta semana.</li></ol></div><a href="/" className="gc-finish">Volver a la biblioteca →</a>
+          <div className="gc-outcome"><h3>Antes de terminar</h3><ol><li>Elige una frase tuya y explica qué comunica.</li><li>Reformula una respuesta después del comentario del profesor.</li><li>Decide en qué situación real puedes usarla esta semana.</li></ol></div><Link href="/" className="gc-finish">Volver a la biblioteca →</Link>
         </>}
 
         <footer className="gc-navigation"><button type="button" disabled={stage===0} onClick={()=>go(stage-1)}>← Anterior</button><span>{stage+1} de {stages.length}</span>{stage<stages.length-1&&<button type="button" data-next onClick={()=>go(stage+1)}>Siguiente: {stages[stage+1].label} →</button>}</footer>

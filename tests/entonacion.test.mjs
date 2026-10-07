@@ -4,6 +4,7 @@ import {existsSync,readFileSync,readdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
+import {beforeGrammarBytes} from './helpers/grammar-preservation.mjs';
 const root='app/la-entonacion-cambia-todo';
 const levels=['A1','A2','B1','B2','C1','C2'];
 async function lesson(){assert.ok(existsSync(`${root}/levels.mjs`),'complete intonation lesson exists');return import(`../${root}/levels.mjs`);}
@@ -32,7 +33,7 @@ test('all finite recordings exist, match scripts, decode, and have no orphan fil
 test('reviewed lesson copy is pinned and access policy matches intonation baseline',()=>{
  const reviewed=JSON.parse(readFileSync('tests/fixtures/neutral-audio-reviewed.json','utf8')).sources;
  for(const file of ['app/hablar-sin-cortar/content.mjs','app/noche-abierta/page.tsx','app/autoestudio/curriculum/modules/a1/w01.ts'])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),reviewed[file],file);
- for(const file of ['app/access-policy.ts']){assert.deepEqual(readFileSync(file),execFileSync('git',['show',`829bfdef46e1b2fdb1fd81eb0836ab3e5155eb13:${file}`]));}
+ for(const file of ['app/access-policy.ts']){assert.deepEqual(beforeGrammarBytes(file,readFileSync(file)),execFileSync('git',['show',`829bfdef46e1b2fdb1fd81eb0836ab3e5155eb13:${file}`]));}
 
 });
 test('in-world guide offers phase-specific hints without exposing hidden sentence text',async()=>{

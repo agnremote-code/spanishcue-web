@@ -19,6 +19,6 @@ export function getClassroomLesson(id:number):ClassroomLesson|undefined{
   return {...context,...core,id,title:catalog.title,level:catalog.level as Level,
     topic:grammarTopics.find(t=>t.id===catalog.grammarTopic)!.label,
     objectives:[outcome.charAt(0).toUpperCase()+outcome.slice(1)+'.','Comprender mensajes sobre esta situación y responder con una intervención oral y un texto breve.'],
-    audioSrc:`/audio/${[40,41].includes(id)?'grammar-free':'grammar-classroom'}/${id}.mp3`,originalPath:path,isNew:id>=227,
+    audioSrc:`/audio/${[40,41].includes(id)?'grammar-free':'grammar-classroom'}/${id}.mp3`,originalPath:path,isNew:id>=230,
     paradigm:verbalParadigms[id]};
 }

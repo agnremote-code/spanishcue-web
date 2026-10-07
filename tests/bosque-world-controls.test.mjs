@@ -22,7 +22,7 @@ async function mount(){
  const frames=new Map();let frameId=0,time=0;
  globalThis.requestAnimationFrame=fn=>{frames.set(++frameId,fn);return frameId;};globalThis.cancelAnimationFrame=id=>frames.delete(id);
  globalThis.ResizeObserver=class{observe(){}disconnect(){}};globalThis.IS_REACT_ACT_ENVIRONMENT=true;
- const z=ZONES[0],position={x:z.x,y:z.y,z:z.z};localStorage.setItem('spanishcue:bosque:world:v1',JSON.stringify({version:1,position,checkpoint:position}));
+ const z=ZONES[0],position={x:z.x,y:z.y,z:z.z};localStorage.setItem('spanishcue:bosque:world:v2',JSON.stringify({version:2,position,checkpoint:position}));
  const calls=[],positions=[];let props={paused:false,visited:[],completed:false,unlocked:false,onZone:zone=>calls.push(zone),onFail:()=>assert.fail('GPU fixture failed'),onPosition:p=>positions.push(p)};
  const root=createRoot(document.getElementById('root'));
  const render=async more=>{props={...props,...more};await act(()=>root.render(React.createElement(m.exports.default,props)));};
@@ -36,7 +36,7 @@ test('landing does not open a dialog; E and the button honor first/repeat and pa
   await t.advance();assert.deepEqual(t.calls,[]);assert.match(document.querySelector('.bfg-world-converse').textContent,/Conversar/);assert.doesNotMatch(document.querySelector('.bfg-world-converse').textContent,/Volver/);
   await click('.bfg-world-converse');assert.deepEqual(t.calls,['sobre-ti']);assert.equal(document.activeElement.tagName,'CANVAS');
   await t.render({paused:true});await key('KeyE');assert.equal(t.calls.length,1);
-  await t.render({paused:false,visited:['sobre-ti']});await t.advance();assert.match(document.querySelector('.bfg-world-converse').textContent,/Volver a conversar/);assert.match(document.querySelector('.bfg-world-location').textContent,/Destino: Vida real/);
+  await t.render({paused:false,visited:['sobre-ti']});await t.advance();assert.match(document.querySelector('.bfg-world-converse').textContent,/Volver a conversar/);assert.match(document.querySelector('.bfg-world-location').textContent,/Destino: La cesta olvidada/);assert.match(document.querySelector('.bfg-world-location').textContent,/Vida real · \d+ m · ↑ \d+ m más arriba/);
   await key('KeyE');assert.equal(t.calls.length,2);await key('KeyE','keyup');
  }finally{await t.stop();}
 });
@@ -47,8 +47,8 @@ test('map pauses traversal, Escape returns canvas focus, walking and jumping res
   await key('KeyW');await t.advance();assert.deepEqual(t.positions.at(-1),start);
   await key('Escape');assert.equal(document.querySelector('[role="dialog"]'),null);assert.equal(document.activeElement.tagName,'CANVAS');
   await key('KeyW');await key('Space');await t.advance();await key('KeyW','keyup');await key('Space','keyup');
-  assert.ok(t.positions.at(-1).x>start.x+.5);assert.ok(t.positions.at(-1).y>start.y+.5);
+  assert.ok(Math.hypot(t.positions.at(-1).x-start.x,t.positions.at(-1).z-start.z)>.5);assert.ok(t.positions.at(-1).y>start.y+.5);
   assert.equal(document.querySelector('.bfg-world-converse'),null,'no interaction while airborne');
-  await click('[aria-label="Cambiar distancia de cámara"]');assert.equal(document.querySelector('[aria-label="Cambiar distancia de cámara"]').getAttribute('aria-pressed'),'true');
+  await click('[aria-label="Cambiar distancia de cámara"]');assert.equal(document.querySelector('[aria-label="Cambiar distancia de cámara"]').getAttribute('aria-pressed'),'true');assert.match(document.querySelector('[aria-label="Cambiar distancia de cámara"]').textContent,/Lejos/);
  }finally{await t.stop();}
 });

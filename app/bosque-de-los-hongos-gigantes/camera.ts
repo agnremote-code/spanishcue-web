@@ -48,3 +48,29 @@ export function solveForestCamera(target: THREE.Vector3, yaw: number, pitch: num
 export function destinationBearing(dx: number, dz: number, yaw: number) {
   return yaw + Math.PI - Math.atan2(dx, dz);
 }
+
+// Third-person framing adapted from La Noche Abierta: three distances to cycle
+// with V, free zoom with the wheel or a pinch, and an orbit that drifts back
+// behind the hero only while the hero runs away from the camera.
+export const CAMERA_PRESETS = [
+  { id: 'cerca', label: 'Cerca', distance: 5.2 },
+  { id: 'media', label: 'Media', distance: 8.8 },
+  { id: 'lejos', label: 'Lejos', distance: 15 },
+];
+export const MIN_DISTANCE = 3.2, MAX_DISTANCE = 26;
+/** Below this the orbit stops descending and the view tilts up toward the climb instead. */
+export const LOOK_UP_FROM = .14, PITCH_MIN = -.62, PITCH_MAX = 1.38;
+const wrap = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
+
+export function followYaw(yaw: number, heading: number, speed: number, dt: number, runSpeed = 9) {
+  if (speed < .5) return yaw;
+  const behind = heading + Math.PI, diff = wrap(behind - yaw);
+  const ahead = Math.max(0, Math.cos(diff));
+  const rate = 2.2 * ahead * Math.min(1, speed / runSpeed);
+  return wrap(yaw + diff * (1 - Math.exp(-rate * Math.min(dt, .1))));
+}
+
+/** Orbit elevation and how far the look target rises when the learner looks up. */
+export function orbitFor(pitch: number) {
+  return { elevation: Math.max(pitch, LOOK_UP_FROM), lift: Math.max(0, LOOK_UP_FROM - pitch) * 30 };
+}

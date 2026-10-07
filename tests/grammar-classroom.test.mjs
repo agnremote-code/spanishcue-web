@@ -18,10 +18,12 @@ test('a teacher can combine a grammar topic with level and text search',()=>{
 
 test('the six missing teacher-led lessons are individually routable alongside all existing grammar',()=>{
  const grammar=lessons.filter(l=>l.category==='Gramática');
+ assert.equal(new Set(lessons.map(l=>l.id)).size,lessons.length,'global lesson identities remain unique alongside country additions');
  assert.equal(grammar.length,57);
- for(const id of [227,228,229,230,231,232]){
+ for(const id of [230,231,232,233,234,235]){
   const l=grammar.find(l=>l.id===id);assert.ok(l,`lesson ${id}`);
   assert.ok(l.path?.startsWith('/gramatica/'));assert.ok(l.grammarTopic);
+  assert.equal(l.countryCollection,false,'grammar must never enter the country collection');
  }
  assert.equal(new Set(grammar.map(l=>l.id)).size,57);
  assert.equal(grammar.find(l=>l.id===40).path,'/la-fabrica-de-los-nombres');

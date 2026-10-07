@@ -1,5 +1,5 @@
 {
-  "227": {
+  "230": {
     "scope": "A2: punto de inicio y duración de una situación que continúa, con presente; hecho terminado con hace + cantidad de tiempo. Recupera el presente y un indefinido frecuente, sin introducir llevar + gerundio como objetivo. La primera escucha busca el tema; la segunda, fechas y duración.",
     "warmup": [
       "¿Desde cuándo vives en tu ciudad? Puedes responder primero con un año.",
@@ -202,7 +202,7 @@
       "model": "La primera frase cuenta la llegada; la segunda dice cuánto dura mi vida aquí hasta ahora."
     }
   },
-  "228": {
+  "231": {
     "scope": "B1: por para causa, recorrido e intercambio; para para finalidad, destinatario y plazo. Se trabaja la intención en contexto, sin presentar una regla absoluta ni cubrir todos los usos idiomáticos. Si dos lecturas son posibles, el docente pide explicar la intención.",
     "warmup": [
       "¿Qué diferencia hay entre la razón de hacer algo y lo que quieres conseguir?",
@@ -414,7 +414,7 @@
       "model": "Por un retraso presenta la causa; para llegar a tiempo presenta el objetivo."
     }
   },
-  "229": {
+  "232": {
     "scope": "B2: elegir foco entre activa, pasiva con ser, pasiva refleja e impersonal con se. Contrasta concordancia con cosas y se + verbo singular + a + personas específicas. No presentar la pasiva como siempre preferible ni pedir terminología antes de comprender el mensaje.",
     "warmup": [
       "En un aviso público, ¿cuándo importa quién realiza una acción y cuándo importa el resultado?",
@@ -616,7 +616,7 @@
       "model": "En la primera hay sujeto plural y concordancia. En la segunda, a los dos técnicos es complemento; la construcción impersonal lleva singular."
     }
   },
-  "230": {
+  "233": {
     "scope": "B2: transmitir afirmaciones, preguntas y peticiones con un verbo introductor en pasado. Elegir referencias y tiempos según el momento de transmisión; conservar el presente si el contenido sigue vigente y se adopta esa perspectiva. No aplicar una tabla mecánica ni exigir un único tiempo sin contexto.",
     "warmup": [
       "¿Qué información se pierde cuando alguien resume un mensaje de otra persona?",
@@ -820,7 +820,7 @@
       "model": "No. Puedo mantener abre si presento el horario como actual; abría conserva la perspectiva pasada y tampoco implica necesariamente que haya cambiado."
     }
   },
-  "231": {
+  "234": {
     "scope": "B2: relativas especificativas con preposición + el/la/los/las que y con quien/quienes para personas; selección de preposición por el verbo y concordancia del artículo. Se excluye cuyo como objetivo C1. No se evalúa puntuación de relativas explicativas en esta sesión.",
     "warmup": [
       "Describe a una persona por algo que haces con ella, sin decir su nombre.",
@@ -828,7 +828,7 @@
     ],
     "reading": {
       "title": "Elegir un espacio para un proyecto",
-      "text": "Un grupo de profesionales busca un local para compartir. En la primera visita conocen a Laura, la arquitecta con la que han hablado por teléfono, y a Sergio, el propietario del edificio en el que se encuentra el local. Hay dos salas parecidas, pero solo una tiene acceso directo desde la calle. Esa es la sala por la que el grupo está más interesado, porque recibirán a personas con movilidad reducida. Laura les enseña el informe del que depende la autorización de la reforma. Todavía falta una firma, así que no pueden confirmar una fecha de apertura. El equipo también compara las condiciones a las que tendrían que adaptarse: horario de acceso, uso de las zonas comunes y límite de ruido. Antes de irse, anotan el nombre de la persona a quien deben enviar las preguntas. Quieren preparar un mensaje que identifique cada espacio y cada documento sin repetir sus nombres en todas las frases.",
+      "text": "Un grupo de profesionales busca un local para compartir. En la primera visita conocen a Laura, la arquitecta con la que han hablado por teléfono, y a Sergio, el propietario del edificio en el que se encuentra el local. Hay dos salas parecidas, pero solo una tiene acceso directo desde la calle. Esa es la sala en la que el grupo está más interesado, porque recibirán a personas con movilidad reducida. Laura les enseña el informe del que depende la autorización de la reforma. Todavía falta una firma, así que no pueden confirmar una fecha de apertura. El equipo también compara las condiciones a las que tendrían que adaptarse: horario de acceso, uso de las zonas comunes y límite de ruido. Antes de irse, anotan el nombre de la persona a quien deben enviar las preguntas. Quieren preparar un mensaje que identifique cada espacio y cada documento sin repetir sus nombres en todas las frases.",
       "questions": [
         {
           "kind": "meaning",
@@ -969,7 +969,7 @@
     "listening": {
       "title": "Una aclaración sobre los documentos",
       "voice": "es-MX-DaliaNeural",
-      "transcript": "Hola, Laura. Te llamo porque hemos mezclado dos documentos. El informe del que depende la autorización no es el presupuesto de las obras. El presupuesto es el documento en el que aparecen los precios y los materiales; ese ya lo tenemos. Nos falta la versión firmada del informe técnico. ¿Puedes indicarnos quién es la persona a la que debemos solicitarla? También queremos confirmar una condición sobre las salas. La sala por la que estamos interesados es la que tiene entrada desde la calle, pero no sabemos si podemos utilizar el pasillo con el que comunica. Para nosotros es importante, porque es el espacio por el que saldrían las personas en caso de emergencia. Si te parece, podemos hablar con la administradora con quien nos reunimos el martes.",
+      "transcript": "Hola, Laura. Te llamo porque hemos mezclado dos documentos. El informe del que depende la autorización no es el presupuesto de las obras. El presupuesto es el documento en el que aparecen los precios y los materiales; ese ya lo tenemos. Nos falta la versión firmada del informe técnico. ¿Puedes indicarnos quién es la persona a la que debemos solicitarla? También queremos confirmar una condición sobre las salas. La sala en la que estamos interesados es la que tiene entrada desde la calle, pero no sabemos si podemos utilizar el pasillo con el que comunica. Para nosotros es importante, porque es el espacio por el que saldrían las personas en caso de emergencia. Si te parece, podemos hablar con la administradora con quien nos reunimos el martes.",
       "questions": [
         {
           "kind": "meaning",
@@ -1013,7 +1013,7 @@
         80,
         110
       ],
-      "model": "Hola, Laura. Quería confirmar dos datos del local en el que nos reunimos el martes. La sala por la que estamos interesados es la que tiene entrada desde la calle. ¿Podemos utilizar también el pasillo con el que comunica? Necesitamos saberlo antes de organizar las visitas. Además, todavía no tenemos la versión firmada del informe del que depende la autorización. ¿Podrías indicarnos quién es la persona a la que debemos solicitarla? Con esa información podremos revisar las condiciones y decidir si el espacio se adapta a nuestro proyecto.",
+      "model": "Hola, Laura. Quería confirmar dos datos del local en el que nos reunimos el martes. La sala en la que estamos interesados es la que tiene entrada desde la calle. ¿Podemos utilizar también el pasillo con el que comunica? Necesitamos saberlo antes de organizar las visitas. Además, todavía no tenemos la versión firmada del informe del que depende la autorización. ¿Podrías indicarnos quién es la persona a la que debemos solicitarla? Con esa información podremos revisar las condiciones y decidir si el espacio se adapta a nuestro proyecto.",
       "checklist": [
         "Se identifica cada antecedente sin ambigüedad.",
         "Conservo la preposición de la relación original.",
@@ -1025,7 +1025,7 @@
       "model": "La persona en quien/en la que confío; las condiciones a las que me adapto. Confiar en y adaptarse a determinan la preposición."
     }
   },
-  "232": {
+  "235": {
     "scope": "B2: resultado ligado a intensidad con tan/tanto… que y consecuencia entre hechos con así que. Concordancia de tanto con nombres y forma invariable con verbos; diferenciar causa, resultado y finalidad. No se trabaja como prueba de causalidad científica ni se exige una formulación única.",
     "warmup": [
       "Recuerda una situación en la que una cantidad o una intensidad obligó a cambiar un plan.",

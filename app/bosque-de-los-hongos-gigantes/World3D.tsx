@@ -2,11 +2,11 @@
 
 import * as THREE from 'three';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { PLATFORMS, ZONES, spawnPlayer, stepPlayer, type Position, type Player } from './engine.mjs';
+import { PLATFORMS, ZONES, STAGES, stageAt, spawnPlayer, stepPlayer, RUN_SPEED, type Position, type Player } from './engine.mjs';
 import type { CategoryId } from './content/types';
-import { buildForest } from './forest3d';
+import { buildForest, atmosphereAt } from './forest3d';
 import { createForestHero, animateForestHero } from './hero3d';
-import { solveForestCamera, cameraClearDistance, destinationBearing } from './camera';
+import { solveForestCamera, cameraClearDistance, destinationBearing, followYaw, orbitFor, CAMERA_PRESETS, MIN_DISTANCE, MAX_DISTANCE, PITCH_MIN, PITCH_MAX } from './camera';
 import './world.css';
 
 export type WorldProps = {
@@ -18,169 +18,256 @@ export type WorldProps = {
   onFail: () => void;
   onPosition?: (p: Position) => void;
 };
-const POSITION_KEY = 'spanishcue:bosque:world:v1';
+const POSITION_KEY = 'spanishcue:bosque:world:v2';
+const TOP = 62;
+export const STAGE_COLORS = ['#7d9a55', '#a9b85d', '#e5a93a', '#c8405a', '#45c4dc', '#c9b27e', '#7fb069', '#dfe8ea', '#9cc7f2', '#f2c25b'];
+const STAGE_HINTS = [
+  'Sigue los hongos bajos hacia la luz. Espacio para saltar.',
+  'Los sombreros suben poco a poco. Arrastra para mirar hacia arriba.',
+  'Setas doradas: ¿se comen o no? Busca el globo ¿? para conversar.',
+  'Colores intensos, cuidado. Los anillos dorados te impulsan.',
+  'Hongos que brillan. Mira atrás: ya estás muy alto.',
+  'Sombreros gigantes a la altura de los árboles.',
+  'Hongos de repisa en los troncos. Sigue subiendo.',
+  'La niebla tapa el camino. Salta con calma, cada hongo está cerca.',
+  'Sobre las nubes. Mira hacia abajo: el bosque desapareció.',
+  'La cima. Mira todo el camino que recorriste.',
+];
 const finitePosition = (p: unknown): p is Position => {
   if (!p || typeof p !== 'object') return false;
   const v = p as Position;
-  return [v.x,v.y,v.z].every(Number.isFinite) && Math.hypot(v.x,v.z)<65 && v.y>=0 && v.y<55;
+  return [v.x, v.y, v.z].every(Number.isFinite) && Math.hypot(v.x, v.z) < 65 && v.y >= 0 && v.y < TOP + 8;
 };
 function surfaceAt(p: Position) {
-  return PLATFORMS.find(s => Math.abs(p.y-s.y)<.1 && Math.hypot(p.x-s.x,p.z-s.z)<=s.r+.15);
+  return PLATFORMS.find(s => Math.abs(p.y - s.y) < .1 && Math.hypot(p.x - s.x, p.z - s.z) <= s.r + .15);
 }
 function restorePlayer(): Player {
-  const player=spawnPlayer();
+  const player = spawnPlayer();
   try {
-    const stored=JSON.parse(localStorage.getItem(POSITION_KEY)||'null');
-    if(stored?.version!==1 || !finitePosition(stored.position) || !finitePosition(stored.checkpoint))return player;
-    const cp=surfaceAt(stored.checkpoint),surface=surfaceAt(stored.position);
-    if(stored.checkpoint.y!==0 && !cp?.checkpoint)return player;
-    if(stored.position.y!==0 && !surface)return player;
-    return {...player,...stored.position,checkpoint:{...stored.checkpoint},platform:surface?.id||'ground'};
-  } catch {return player;}
+    const stored = JSON.parse(localStorage.getItem(POSITION_KEY) || 'null');
+    if (stored?.version !== 2 || !finitePosition(stored.position) || !finitePosition(stored.checkpoint)) return player;
+    const cp = surfaceAt(stored.checkpoint), surface = surfaceAt(stored.position);
+    if (stored.checkpoint.y !== 0 && !cp?.checkpoint) return player;
+    if (stored.position.y !== 0 && !surface) return player;
+    return { ...player, ...stored.position, checkpoint: { ...stored.checkpoint }, platform: surface?.id || 'ground' };
+  } catch { return player; }
 }
 
 export default function World3D(props: WorldProps) {
-  const live=useRef(props);
-  useEffect(()=>{live.current=props;});
-  const host=useRef<HTMLDivElement>(null),mapCanvas=useRef<HTMLCanvasElement>(null),largeMap=useRef<HTMLCanvasElement>(null),stick=useRef<HTMLSpanElement>(null);
-  const api=useRef<{clear:()=>void;jump:()=>void;interact:()=>void;view:()=>void;joy:{x:number;y:number}}|null>(null);
-  const joyPointer=useRef<number|null>(null);
-  const [mapOpen,setMapOpen]=useState(false),[place,setPlace]=useState('Claro de entrada'),[hint,setHint]=useState('Sigue los hongos bajos. Espacio para saltar.'),[activeZone,setActiveZone]=useState<CategoryId|null>(null),[destination,setDestination]=useState({name:'Sobre ti',distance:15,bearing:0}),[wideView,setWideView]=useState(false);
-  const mapPanel=useRef<HTMLDivElement>(null);
-  useEffect(()=>{if(!mapOpen)return;const previous=document.activeElement as HTMLElement|null;const panel=mapPanel.current;const gameCanvas=host.current?.querySelector('canvas');panel?.focus();const trap=(e:KeyboardEvent)=>{if(e.key==='Tab'){e.preventDefault();panel?.querySelector<HTMLButtonElement>('button')?.focus();}};document.addEventListener('keydown',trap);return()=>{document.removeEventListener('keydown',trap);(gameCanvas??previous)?.focus({preventScroll:true});};},[mapOpen]);
-  const mapOpenRef=useRef(false);
-  useEffect(()=>{mapOpenRef.current=mapOpen;if(mapOpen)api.current?.clear();},[mapOpen]);
-  useEffect(()=>{if(props.paused){api.current?.clear();joyPointer.current=null;if(stick.current)stick.current.style.transform='translate(0, 0)';}},[props.paused]);
+  const live = useRef(props);
+  useEffect(() => { live.current = props; });
+  const host = useRef<HTMLDivElement>(null), mapCanvas = useRef<HTMLCanvasElement>(null), largeMap = useRef<HTMLCanvasElement>(null), stick = useRef<HTMLSpanElement>(null);
+  const api = useRef<{ clear: () => void; jump: () => void; interact: () => void; view: () => void; joy: { x: number; y: number } } | null>(null);
+  const joyPointer = useRef<number | null>(null);
+  const [mapOpen, setMapOpen] = useState(false), [place, setPlace] = useState('Suelo del bosque'), [stage, setStage] = useState({ name: STAGES[0].name, index: 0, altitude: 0 });
+  const [hint, setHint] = useState(STAGE_HINTS[0]), [activeZone, setActiveZone] = useState<CategoryId | null>(null);
+  const [destination, setDestination] = useState({ name: ZONES[0].place, short: ZONES[0].short, distance: 15, rise: 0, bearing: 0 }), [view, setView] = useState(1);
+  const mapPanel = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (!mapOpen) return; const previous = document.activeElement as HTMLElement | null; const panel = mapPanel.current; const gameCanvas = host.current?.querySelector('canvas'); panel?.focus(); const trap = (e: KeyboardEvent) => { if (e.key === 'Tab') { e.preventDefault(); panel?.querySelector<HTMLButtonElement>('button')?.focus(); } }; document.addEventListener('keydown', trap); return () => { document.removeEventListener('keydown', trap); (gameCanvas ?? previous)?.focus({ preventScroll: true }); }; }, [mapOpen]);
+  const mapOpenRef = useRef(false);
+  useEffect(() => { mapOpenRef.current = mapOpen; if (mapOpen) api.current?.clear(); }, [mapOpen]);
+  useEffect(() => { if (props.paused) { api.current?.clear(); joyPointer.current = null; if (stick.current) stick.current.style.transform = 'translate(0, 0)'; } }, [props.paused]);
 
-  useEffect(()=>{
-    const mount=host.current;if(!mount)return;
-    const low=window.matchMedia('(pointer: coarse)').matches || window.innerWidth<760;
-    const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let renderer:THREE.WebGLRenderer;
-    try{renderer=new THREE.WebGLRenderer({antialias:!low,alpha:false,powerPreference:'high-performance'});}catch{live.current.onFail();return;}
-    let ratio=Math.min(window.devicePixelRatio||1,low?1.25:1.75);
-    renderer.setPixelRatio(ratio);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.16;renderer.shadowMap.enabled=!low;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
-    renderer.domElement.setAttribute('aria-label','Bosque tridimensional. Usa WASD o flechas para moverte y espacio para saltar.');renderer.domElement.tabIndex=0;mount.appendChild(renderer.domElement);
-    const scene=new THREE.Scene();scene.background=new THREE.Color('#aebfac');scene.fog=new THREE.FogExp2('#aebfac',.0085);
-    const camera=new THREE.PerspectiveCamera(54,1,.12,260);
-    const skyMaterial=new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,uniforms:{},vertexShader:'varying vec3 v;void main(){v=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'varying vec3 v;void main(){float h=clamp(normalize(v).y,0.,1.);gl_FragColor=vec4(mix(vec3(.75,.80,.67),vec3(.28,.48,.52),pow(h,.6)),1.);}'});
-    const sky=new THREE.Mesh(new THREE.SphereGeometry(230,24,12),skyMaterial);scene.add(sky);
-    scene.add(new THREE.HemisphereLight('#e8f0cf','#435039',2.1));
-    const sun=new THREE.DirectionalLight('#ffe1a8',3.2);sun.castShadow=!low;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-23,right:23,top:23,bottom:-23,near:1,far:135});sun.shadow.normalBias=.05;sun.shadow.bias=-.0002;scene.add(sun,sun.target);
-    const forest=buildForest({low,reducedMotion});scene.add(forest.root);
-    const hero=createForestHero(!low);scene.add(hero.root);
-    let player=restorePlayer(),yaw=-Math.PI/2,pitch=.55,wide=false,jumpQueued=false,alive=true,frame=0,lastTime=0,elapsed=0,uiTime=0,saveTime=0,frames=0,slowTime=0;
-    let currentZone:CategoryId|null=null,previousRespawns=player.respawns,toastUntil=0;
-    const held=new Set<string>(),joy={x:0,y:0};
-    const look=new THREE.Vector3(player.x,player.y+1.4,player.z),pvec=new THREE.Vector3();
-    const clear=()=>{held.clear();joy.x=0;joy.y=0;jumpQueued=false;};
-    const toast=(message:string)=>{setHint(message);toastUntil=elapsed+5;};
-    const interact=()=>{
-      if(live.current.paused||mapOpenRef.current)return;
-      const zone=ZONES.find(z=>z.id===currentZone);if(!zone){toast('Aterriza en un refugio para abrir una conversación.');return;}
-      if(zone.id==='final'&&!live.current.unlocked){toast('La corona se abre tras conversar sobre 10 preguntas de al menos 3 categorías.');return;}
-      clear();renderer.domElement.focus({preventScroll:true});live.current.onZone(zone.id);
+  useEffect(() => {
+    const mount = host.current; if (!mount) return;
+    const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let renderer: THREE.WebGLRenderer;
+    try { renderer = new THREE.WebGLRenderer({ antialias: !low, alpha: false, powerPreference: 'high-performance' }); } catch { live.current.onFail(); return; }
+    let ratio = Math.min(window.devicePixelRatio || 1, low ? 1.25 : 1.75);
+    renderer.setPixelRatio(ratio); renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.1; renderer.shadowMap.enabled = !low; renderer.shadowMap.type = THREE.PCFShadowMap;
+    renderer.domElement.setAttribute('aria-label', 'Bosque tridimensional. Usa WASD o flechas para moverte, espacio para saltar y arrastra para mirar.'); renderer.domElement.tabIndex = 0; mount.appendChild(renderer.domElement);
+    const scene = new THREE.Scene();
+    const air = atmosphereAt(0);
+    scene.background = air.horizon.clone(); scene.fog = new THREE.FogExp2(air.fog.getHex(), air.density);
+    const camera = new THREE.PerspectiveCamera(56, 1, .1, 620);
+    const skyUniforms = { top: { value: air.top.clone() }, horizon: { value: air.horizon.clone() } };
+    const skyMaterial = new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false, uniforms: skyUniforms, vertexShader: 'varying vec3 v;void main(){v=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}', fragmentShader: 'uniform vec3 top;uniform vec3 horizon;varying vec3 v;void main(){float h=clamp(normalize(v).y,-.2,1.);gl_FragColor=vec4(mix(horizon,top,pow(max(h,0.),.55)),1.);}' });
+    const sky = new THREE.Mesh(new THREE.SphereGeometry(560, 24, 12), skyMaterial); scene.add(sky);
+    const hemi = new THREE.HemisphereLight('#eaf2d6', '#4a5a3c', air.hemi); scene.add(hemi);
+    const sun = new THREE.DirectionalLight('#ffe4b0', air.sun); sun.castShadow = !low; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -24, right: 24, top: 24, bottom: -24, near: 1, far: 150 }); sun.shadow.normalBias = .05; sun.shadow.bias = -.0002; scene.add(sun, sun.target);
+    const forest = buildForest({ low, reducedMotion }); scene.add(forest.root);
+    const hero = createForestHero(!low); scene.add(hero.root, hero.shadow);
+    let player = restorePlayer(), alive = true, frame = 0, lastTime = 0, elapsed = 0, uiTime = 0, saveTime = 0, frames = 0, slowTime = 0, solidTime = 99;
+    const firstZone = ZONES[0];
+    // Start looking along the route toward the first landmark, the climb visible ahead.
+    let yaw = Math.atan2(player.x - firstZone.x, player.z - firstZone.z), pitch = .38, distance = CAMERA_PRESETS[1].distance, preset = 1, jumpQueued = false, dragAt = -10;
+    hero.heading = yaw + Math.PI;
+    let currentZone: CategoryId | null = null, previousRespawns = player.respawns, toastUntil = 0, lastStage = -1;
+    const known = new Set<string>(live.current.visited);
+    const held = new Set<string>(), joy = { x: 0, y: 0 };
+    const look = new THREE.Vector3(player.x, player.y + 1.5, player.z), pvec = new THREE.Vector3();
+    let nearSolids: THREE.Object3D[] = forest.solids;
+    const clear = () => { held.clear(); joy.x = 0; joy.y = 0; jumpQueued = false; };
+    const toast = (message: string) => { setHint(message); toastUntil = elapsed + 5; };
+    const interact = () => {
+      if (live.current.paused || mapOpenRef.current) return;
+      const zone = ZONES.find(z => z.id === currentZone); if (!zone) { toast('Busca el globo ¿? sobre un hongo grande para conversar.'); return; }
+      if (zone.id === 'final' && !live.current.unlocked) { toast('El mirador se abre tras conversar sobre 10 preguntas en al menos 3 paradas.'); return; }
+      clear(); renderer.domElement.focus({ preventScroll: true }); live.current.onZone(zone.id);
     };
-    api.current={clear,jump:()=>{if(!live.current.paused&&!mapOpenRef.current)jumpQueued=true;},interact,view:()=>{wide=!wide;setWideView(wide);canvas.focus({preventScroll:true});},joy};
-    const usable=(event:KeyboardEvent)=>{const t=event.target as HTMLElement|null;return !t?.closest('input,textarea,select,a,[contenteditable="true"],[role="dialog"]');};
-    const keydown=(event:KeyboardEvent)=>{
-      const code=event.code;
-      if(!live.current.paused&&!mapOpenRef.current&&event.target instanceof HTMLElement&&event.target.closest('button')&&['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(code))renderer.domElement.focus({preventScroll:true});
-      if((mapOpenRef.current)&&code==='Escape'){event.preventDefault();setMapOpen(false);clear();return;}
-      if(mapOpenRef.current&&code==='KeyM'&&usable(event)){event.preventDefault();setMapOpen(false);clear();return;}
-      if((code==='Space'&&event.target instanceof HTMLElement&&event.target.closest('button'))||!usable(event)||live.current.paused||mapOpenRef.current)return;
-      if(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','ShiftLeft','ShiftRight','KeyE','KeyV','KeyM'].includes(code))event.preventDefault();
-      if(event.repeat)return;
+    const setPreset = (next: number) => { preset = (next + CAMERA_PRESETS.length) % CAMERA_PRESETS.length; distance = CAMERA_PRESETS[preset].distance; setView(preset); };
+    api.current = { clear, jump: () => { if (!live.current.paused && !mapOpenRef.current) jumpQueued = true; }, interact, view: () => { setPreset(preset + 1); canvas.focus({ preventScroll: true }); }, joy };
+    const usable = (event: KeyboardEvent) => { const t = event.target as HTMLElement | null; return !t?.closest('input,textarea,select,a,[contenteditable="true"],[role="dialog"]'); };
+    const keydown = (event: KeyboardEvent) => {
+      const code = event.code;
+      if (!live.current.paused && !mapOpenRef.current && event.target instanceof HTMLElement && event.target.closest('button') && ['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(code)) renderer.domElement.focus({ preventScroll: true });
+      if (mapOpenRef.current && code === 'Escape') { event.preventDefault(); setMapOpen(false); clear(); return; }
+      if (mapOpenRef.current && code === 'KeyM' && usable(event)) { event.preventDefault(); setMapOpen(false); clear(); return; }
+      if ((code === 'Space' && event.target instanceof HTMLElement && event.target.closest('button')) || !usable(event) || live.current.paused || mapOpenRef.current) return;
+      if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space', 'ShiftLeft', 'ShiftRight', 'KeyE', 'KeyV', 'KeyM', 'KeyR', 'KeyF', 'Equal', 'Minus', 'NumpadAdd', 'NumpadSubtract'].includes(code)) event.preventDefault();
+      if (event.repeat) return;
       held.add(code);
-      if(code==='Space')jumpQueued=true;
-      if(code==='KeyE')interact();
-      if(code==='KeyV'){wide=!wide;setWideView(wide);}
-      if(code==='KeyM')setMapOpen(v=>!v);
+      if (code === 'Space') jumpQueued = true;
+      if (code === 'KeyE') interact();
+      if (code === 'KeyV') setPreset(preset + 1);
+      if (code === 'KeyM') setMapOpen(v => !v);
+      if (code === 'Equal' || code === 'NumpadAdd') distance = Math.max(MIN_DISTANCE, distance / 1.2);
+      if (code === 'Minus' || code === 'NumpadSubtract') distance = Math.min(MAX_DISTANCE, distance * 1.2);
     };
-    const keyup=(event:KeyboardEvent)=>held.delete(event.code);
-    let orbit:{id:number;x:number;y:number}|null=null;
-    const pointerdown=(event:PointerEvent)=>{if(live.current.paused||mapOpenRef.current)return;orbit={id:event.pointerId,x:event.clientX,y:event.clientY};renderer.domElement.setPointerCapture(event.pointerId);renderer.domElement.focus({preventScroll:true});};
-    const pointermove=(event:PointerEvent)=>{if(!orbit||orbit.id!==event.pointerId||live.current.paused)return;yaw-=(event.clientX-orbit.x)*.005;pitch=THREE.MathUtils.clamp(pitch+(event.clientY-orbit.y)*.003,.45,1.15);orbit.x=event.clientX;orbit.y=event.clientY;};
-    const pointerend=()=>{orbit=null;};
-    const blur=()=>{clear();pointerend();joyPointer.current=null;if(stick.current)stick.current.style.transform='translate(0, 0)';};
-    const visibility=()=>{if(document.hidden)blur();};
-    const contextLost=(event:Event)=>{event.preventDefault();alive=false;cancelAnimationFrame(frame);live.current.onFail();};
-    window.addEventListener('keydown',keydown);window.addEventListener('keyup',keyup);window.addEventListener('blur',blur);document.addEventListener('visibilitychange',visibility);
-    const canvas=renderer.domElement;canvas.addEventListener('pointerdown',pointerdown);canvas.addEventListener('pointermove',pointermove);canvas.addEventListener('pointerup',pointerend);canvas.addEventListener('pointercancel',blur);canvas.addEventListener('lostpointercapture',pointerend);canvas.addEventListener('webglcontextlost',contextLost);
-    const resize=()=>{const w=mount.clientWidth,h=mount.clientHeight;if(!w||!h)return;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();};
-    const observer=new ResizeObserver(resize);observer.observe(mount);resize();
-    const drawMap=(target:HTMLCanvasElement|null,expanded:boolean)=>{
-      if(!target)return;const c=target.getContext('2d');if(!c)return;const size=target.width,pad=expanded?42:16,scale=(size-pad*2)/100,cx=size/2,cy=size/2;
-      const x=(v:number)=>cx+v*scale,z=(v:number)=>cy+v*scale;
-      c.clearRect(0,0,size,size);c.fillStyle='#172d24';c.fillRect(0,0,size,size);
-      c.strokeStyle='#65826a';c.lineWidth=expanded?1.7:1;c.setLineDash([3,4]);c.beginPath();c.moveTo(x(0),z(0));for(const zone of ZONES)c.lineTo(x(zone.x),z(zone.z));c.stroke();c.setLineDash([]);
-      for(const p of PLATFORMS){if(p.zone)continue;c.beginPath();c.arc(x(p.x),z(p.z),expanded?2:1,0,Math.PI*2);c.fillStyle=p.bounce?'#b6ab74':'#536d58';c.fill();}
-      for(const zone of ZONES){const visited=live.current.visited.includes(zone.id),final=zone.id==='final';c.beginPath();c.arc(x(zone.x),z(zone.z),expanded?6:3.5,0,Math.PI*2);c.fillStyle=visited?'#b7c9b0':final?'#ad9254':'#f1c96e';c.fill();if(final){c.strokeStyle='#f7df9d';c.lineWidth=1.5;c.stroke();}if(expanded){c.font='12px system-ui';c.textAlign=zone.x<0?'right':'left';c.fillStyle=visited?'#f5edd8':'#c5d4c7';c.fillText(zone.short,x(zone.x)+(zone.x<0?-11:11),z(zone.z)+4);}}
-      c.strokeStyle='#f9e4a9';c.lineWidth=2;c.strokeRect(x(player.checkpoint.x)-4,z(player.checkpoint.z)-4,8,8);
-      c.save();c.translate(x(player.x),z(player.z));c.rotate(-player.yaw);c.beginPath();c.moveTo(0,7);c.lineTo(-4,-4);c.lineTo(4,-4);c.closePath();c.fillStyle='#ffffff';c.fill();c.restore();
-      c.font=expanded?'13px system-ui':'10px system-ui';c.fillStyle='#b9cdbb';c.textAlign='center';c.fillText('N',cx,expanded?23:12);
-    };
-    const save=()=>{if(!player.grounded)return;try{localStorage.setItem(POSITION_KEY,JSON.stringify({version:1,position:{x:player.x,y:player.y,z:player.z},checkpoint:player.checkpoint}));}catch{/* Storage is optional in private browsing. */}};
-    camera.position.set(player.x-8,player.y+6,player.z+8);
-    const tick=(time:number)=>{
-      if(!alive)return;frame=requestAnimationFrame(tick);const dt=Math.min((time-lastTime)/1000||.016,.05);lastTime=time;elapsed+=dt;
-      if(!live.current.paused&&!mapOpenRef.current&&!document.hidden){
-        const ix=(held.has('KeyD')||held.has('ArrowRight')?1:0)-(held.has('KeyA')||held.has('ArrowLeft')?1:0)+joy.x;
-        const iz=(held.has('KeyS')||held.has('ArrowDown')?1:0)-(held.has('KeyW')||held.has('ArrowUp')?1:0)+joy.y;
-        const dx=Math.cos(yaw)*ix+Math.sin(yaw)*iz,dz=-Math.sin(yaw)*ix+Math.cos(yaw)*iz;
-        // A fixed maximum substep keeps landings stable on slow touch devices.
-        let remaining=dt;const beforeX=player.x,beforeZ=player.z;
-        while(remaining>0){const step=Math.min(remaining,1/90);player=stepPlayer(player,{x:dx,z:dz,jump:jumpQueued,run:held.has('ShiftLeft')||held.has('ShiftRight')||Math.hypot(joy.x,joy.y)>.85},step);jumpQueued=false;remaining-=step;}
-        const floor=PLATFORMS.find(p=>p.id===player.platform);currentZone=player.grounded?(floor?.zone??null):null;
-        // Landing establishes a checkpoint; only E or the visible button opens a conversation.
-        if(player.respawns>previousRespawns){previousRespawns=player.respawns;toast('De vuelta al último refugio. Tu conversación sigue aquí.');}
-        animateForestHero(hero,elapsed,dt,player,Math.hypot(player.x-beforeX,player.z-beforeZ)/dt,camera);
-      }else animateForestHero(hero,elapsed,dt,player,0,camera);
-      hero.root.position.set(player.x,player.y,player.z);
-      // Never smooth the look target through a landing surface or a recovery jump.
-      look.set(player.x,player.y+1.4,player.z);
-      scene.updateMatrixWorld(true);
-      const distance=wide?11.5:8.8;
-      const desired=solveForestCamera(look,yaw,pitch,distance,forest.solids);
-      const candidate=camera.position.clone().lerp(desired,reducedMotion?1:1-Math.exp(-dt*9));
-      const safe=cameraClearDistance(look,candidate,forest.solids);
-      if(safe<candidate.distanceTo(look)-.01||candidate.y<look.y+.6||candidate.distanceTo(look)>distance+2)camera.position.copy(desired);
-      else camera.position.copy(candidate);
-      camera.lookAt(look);
-      pvec.set(player.x,player.y,player.z);forest.update(reducedMotion?0:elapsed,pvec);sun.position.set(player.x-28,player.y+65,player.z+25);sun.target.position.set(player.x,player.y,player.z);
-      renderer.render(scene,camera);
-      uiTime+=dt;saveTime+=dt;frames++;slowTime+=dt;
-      if(uiTime>.2){
-        uiTime=0;drawMap(mapCanvas.current,false);if(mapOpenRef.current)drawMap(largeMap.current,true);
-        setActiveZone(currentZone);
-        const refuge=ZONES.find(z=>z.id===currentZone);
-        setPlace(refuge?refuge.name:player.y<.5?'Claro de entrada':'Sendero entre hongos');
-        const next=ZONES.find(z=>!live.current.visited.includes(z.id))??ZONES[ZONES.length-1];
-        setDestination({name:next.short,distance:Math.round(Math.hypot(next.x-player.x,next.z-player.z,next.y-player.y)),bearing:destinationBearing(next.x-player.x,next.z-player.z,yaw)});
-        if(elapsed>toastUntil)setHint(currentZone?'Punto de regreso guardado':player.y<1?'Sigue los hongos bajos. Espacio para saltar.':'Salta entre los sombreros. Los anillos dorados te impulsan.');
-        live.current.onPosition?.({x:player.x,y:player.y,z:player.z});
+    const keyup = (event: KeyboardEvent) => held.delete(event.code);
+    // Drag to orbit and tilt, wheel or pinch to zoom.
+    const pointers = new Map<number, { x: number; y: number }>();
+    let pinch = 0;
+    const pointerdown = (event: PointerEvent) => { if (live.current.paused || mapOpenRef.current) return; pointers.set(event.pointerId, { x: event.clientX, y: event.clientY }); renderer.domElement.setPointerCapture?.(event.pointerId); renderer.domElement.focus({ preventScroll: true }); if (pointers.size === 2) { const [a, b] = [...pointers.values()]; pinch = Math.hypot(a.x - b.x, a.y - b.y); } };
+    const pointermove = (event: PointerEvent) => {
+      const last = pointers.get(event.pointerId); if (!last || live.current.paused) return;
+      if (pointers.size === 2) {
+        pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+        const [a, b] = [...pointers.values()], d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (pinch > 0 && d > 0) distance = THREE.MathUtils.clamp(distance * pinch / d, MIN_DISTANCE, MAX_DISTANCE);
+        pinch = d; return;
       }
-      if(saveTime>2){saveTime=0;save();}
-      if(slowTime>4){if(frames/slowTime<35&&ratio>.85){ratio=Math.max(.85,ratio-.2);renderer.setPixelRatio(ratio);resize();}frames=0;slowTime=0;}
+      yaw -= (event.clientX - last.x) * .0055; pitch = THREE.MathUtils.clamp(pitch + (event.clientY - last.y) * .0042, PITCH_MIN, PITCH_MAX);
+      pointers.set(event.pointerId, { x: event.clientX, y: event.clientY }); dragAt = elapsed;
     };
-    frame=requestAnimationFrame(tick);
-    return ()=>{alive=false;save();cancelAnimationFrame(frame);clear();api.current=null;observer.disconnect();window.removeEventListener('keydown',keydown);window.removeEventListener('keyup',keyup);window.removeEventListener('blur',blur);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('pointerdown',pointerdown);canvas.removeEventListener('pointermove',pointermove);canvas.removeEventListener('pointerup',pointerend);canvas.removeEventListener('pointercancel',blur);canvas.removeEventListener('lostpointercapture',pointerend);canvas.removeEventListener('webglcontextlost',contextLost);forest.dispose();hero.dispose();sky.geometry.dispose();skyMaterial.dispose();sun.shadow.map?.dispose();renderer.dispose();canvas.remove();};
-  },[]);
+    const pointerend = (event?: PointerEvent) => { if (event) pointers.delete(event.pointerId); else pointers.clear(); pinch = 0; };
+    const wheel = (event: WheelEvent) => { if (live.current.paused || mapOpenRef.current) return; event.preventDefault(); distance = THREE.MathUtils.clamp(distance * Math.exp(event.deltaY * .0012), MIN_DISTANCE, MAX_DISTANCE); };
+    const blur = () => { clear(); pointerend(); joyPointer.current = null; if (stick.current) stick.current.style.transform = 'translate(0, 0)'; };
+    const visibility = () => { if (document.hidden) blur(); };
+    const contextLost = (event: Event) => { event.preventDefault(); alive = false; cancelAnimationFrame(frame); live.current.onFail(); };
+    window.addEventListener('keydown', keydown); window.addEventListener('keyup', keyup); window.addEventListener('blur', blur); document.addEventListener('visibilitychange', visibility);
+    const canvas = renderer.domElement;
+    const onUp = (e: Event) => pointerend(e as PointerEvent), onCancel = () => blur();
+    canvas.addEventListener('pointerdown', pointerdown); canvas.addEventListener('pointermove', pointermove); canvas.addEventListener('pointerup', onUp); canvas.addEventListener('pointercancel', onCancel); canvas.addEventListener('lostpointercapture', onUp); canvas.addEventListener('wheel', wheel, { passive: false }); canvas.addEventListener('webglcontextlost', contextLost);
+    const resize = () => { const w = mount.clientWidth, h = mount.clientHeight; if (!w || !h) return; renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); };
+    const observer = new ResizeObserver(resize); observer.observe(mount); resize();
+    const route = PLATFORMS.filter(p => !p.id.startsWith('side'));
+    const drawMap = (target: HTMLCanvasElement | null, expanded: boolean) => {
+      if (!target) return; const c = target.getContext('2d'); if (!c) return;
+      const w = target.width, h = target.height, bar = expanded ? 120 : 26, pad = expanded ? 30 : 10, size = Math.min(w - bar - pad, h) - pad * 2, scale = size / 104, cx = pad + size / 2, cy = h / 2;
+      const x = (v: number) => cx + v * scale, z = (v: number) => cy + v * scale;
+      c.clearRect(0, 0, w, h); c.fillStyle = '#132820'; c.fillRect(0, 0, w, h);
+      // Top view: the spiral, coloured by stage, so later turns read as higher.
+      c.lineWidth = expanded ? 3 : 1.6; c.lineCap = 'round';
+      for (let i = 1; i < route.length; i++) { const a = route[i - 1], b = route[i]; c.strokeStyle = STAGE_COLORS[b.stage]; c.globalAlpha = .35 + .65 * (b.y / TOP); c.beginPath(); c.moveTo(x(a.x), z(a.z)); c.lineTo(x(b.x), z(b.z)); c.stroke(); }
+      c.globalAlpha = 1;
+      const pendingZones = ZONES.filter(zn => !live.current.visited.includes(zn.id)), next = pendingZones.find(zn => zn.y >= player.y - 3) ?? pendingZones[0];
+      for (const zone of ZONES) {
+        const visited = live.current.visited.includes(zone.id), final = zone.id === 'final';
+        c.beginPath(); c.arc(x(zone.x), z(zone.z), expanded ? (final ? 8 : 6) : (final ? 4 : 3), 0, Math.PI * 2);
+        c.fillStyle = visited ? '#f2cd6b' : final ? '#fff3c4' : '#d5e3d2'; c.fill();
+        if (zone === next) { c.strokeStyle = '#ffe9a6'; c.lineWidth = 2; c.beginPath(); c.arc(x(zone.x), z(zone.z), expanded ? 11 : 6, 0, Math.PI * 2); c.stroke(); }
+        if (expanded) { c.font = '11px system-ui'; c.textAlign = zone.x < 0 ? 'right' : 'left'; c.fillStyle = visited ? '#f5e3b0' : '#c5d4c7'; c.fillText(`${zone.place} · ${Math.round(zone.y)} m`, x(zone.x) + (zone.x < 0 ? -12 : 12), z(zone.z) + 4); }
+      }
+      c.strokeStyle = '#f9e4a9'; c.lineWidth = 1.5; c.strokeRect(x(player.checkpoint.x) - 3.5, z(player.checkpoint.z) - 3.5, 7, 7);
+      c.save(); c.translate(x(player.x), z(player.z)); c.rotate(-hero.heading); c.beginPath(); c.moveTo(0, 7); c.lineTo(-4, -4); c.lineTo(4, -4); c.closePath(); c.fillStyle = '#ffffff'; c.fill(); c.restore();
+      // Side view: altitude is the real progress of the climb.
+      const bx = w - bar + (expanded ? 14 : 6), bw = expanded ? 14 : 10, top = pad + 4, bottom = h - pad - 4, ay = (v: number) => bottom - (v / TOP) * (bottom - top);
+      for (let i = 0; i < STAGES.length; i++) { const from = Math.max(0, STAGES[i].from), to = STAGES[i + 1]?.from ?? TOP; c.fillStyle = STAGE_COLORS[i]; c.globalAlpha = i === stageAt(player.y) ? 1 : .5; c.fillRect(bx, ay(to), bw, ay(from) - ay(to)); if (expanded) { c.globalAlpha = 1; c.font = '10px system-ui'; c.textAlign = 'left'; c.fillStyle = i === stageAt(player.y) ? '#fff5d6' : '#a9bcae'; c.fillText(STAGES[i].name, bx + bw + 6, (ay(from) + ay(to)) / 2 + 3); } }
+      c.globalAlpha = 1;
+      for (const zone of ZONES) { c.fillStyle = live.current.visited.includes(zone.id) ? '#f2cd6b' : '#20382d'; c.fillRect(bx - 2, ay(zone.y) - 1, bw + 4, 2); }
+      c.fillStyle = '#ffffff'; c.beginPath(); c.moveTo(bx - 3, ay(player.y)); c.lineTo(bx - 9, ay(player.y) - 4); c.lineTo(bx - 9, ay(player.y) + 4); c.closePath(); c.fill();
+      if (expanded) { c.font = '12px system-ui'; c.fillStyle = '#e8eedf'; c.textAlign = 'center'; c.fillText(`${Math.round(player.y)} m`, bx + bw / 2, h - 8); }
+    };
+    const save = () => { if (!player.grounded) return; try { localStorage.setItem(POSITION_KEY, JSON.stringify({ version: 2, position: { x: player.x, y: player.y, z: player.z }, checkpoint: player.checkpoint })); } catch { /* Storage is optional in private browsing. */ } };
+    camera.position.set(player.x + Math.sin(yaw) * distance, player.y + 4, player.z + Math.cos(yaw) * distance);
+    const desired = new THREE.Vector3();
+    const tick = (time: number) => {
+      if (!alive) return; frame = requestAnimationFrame(tick); const raw = Math.min((time - lastTime) / 1000 || .016, 1), dt = Math.min(raw, .05); lastTime = time; elapsed += dt;
+      let speed = 0;
+      if (!live.current.paused && !mapOpenRef.current && !document.hidden) {
+        const ix = (held.has('KeyD') || held.has('ArrowRight') ? 1 : 0) - (held.has('KeyA') || held.has('ArrowLeft') ? 1 : 0) + joy.x;
+        const iz = (held.has('KeyS') || held.has('ArrowDown') ? 1 : 0) - (held.has('KeyW') || held.has('ArrowUp') ? 1 : 0) + joy.y;
+        const dx = Math.cos(yaw) * ix + Math.sin(yaw) * iz, dz = -Math.sin(yaw) * ix + Math.cos(yaw) * iz;
+        // A fixed maximum substep keeps landings stable on slow touch devices.
+        let remaining = dt; const beforeX = player.x, beforeZ = player.z;
+        while (remaining > 0) { const step = Math.min(remaining, 1 / 90); player = stepPlayer(player, { x: dx, z: dz, jump: jumpQueued, run: held.has('ShiftLeft') || held.has('ShiftRight') || Math.hypot(joy.x, joy.y) > .85 }, step); jumpQueued = false; remaining -= step; }
+        speed = Math.hypot(player.x - beforeX, player.z - beforeZ) / dt;
+        if (held.has('KeyR')) pitch = Math.max(PITCH_MIN, pitch - dt * 1.4);
+        if (held.has('KeyF')) pitch = Math.min(PITCH_MAX, pitch + dt * 1.4);
+        // Like La Noche Abierta: the orbit settles behind a hero running away from the camera.
+        if (elapsed - dragAt > 1.4 && !reducedMotion) yaw = followYaw(yaw, player.yaw, speed, dt, RUN_SPEED);
+        const floor = PLATFORMS.find(p => p.id === player.platform); currentZone = player.grounded ? (floor?.zone ?? null) : null;
+        // Landing establishes a checkpoint; only E or the visible button opens a conversation.
+        if (player.respawns > previousRespawns) { previousRespawns = player.respawns; toast('De vuelta al último hongo seguro. Tu conversación sigue aquí.'); }
+      }
+      animateForestHero(hero, dt, player, speed, reducedMotion, live.current.paused);
+      // Completed stations react: lantern, halo and a burst of spores.
+      for (const zone of live.current.visited) if (!known.has(zone)) { known.add(zone); forest.celebrate(zone); }
+      // Never smooth the look target through a landing surface or a recovery jump.
+      const orbit = orbitFor(pitch);
+      look.set(player.x, player.y + 1.5 + orbit.lift, player.z);
+      scene.updateMatrixWorld(false);
+      solidTime += dt;
+      if (solidTime > .3) { solidTime = 0; const reach = distance + 8; nearSolids = forest.solids.filter(o => { const s = o as THREE.Mesh; if (!s.geometry.boundingSphere) s.geometry.computeBoundingSphere(); const c = s.geometry.boundingSphere!; const wx = o.position.x + c.center.x, wy = o.position.y + c.center.y, wz = o.position.z + c.center.z; return Math.hypot(wx - player.x, wy - player.y, wz - player.z) < reach + c.radius * Math.max(o.scale.x, o.scale.y, o.scale.z); }); }
+      const head = desired.set(player.x, player.y + 1.5, player.z);
+      const solved = solveForestCamera(head, yaw, orbit.elevation, distance, nearSolids);
+      const candidate = camera.position.clone().lerp(solved, reducedMotion ? 1 : 1 - Math.exp(-dt * 10));
+      const safe = cameraClearDistance(head, candidate, nearSolids);
+      if (safe < candidate.distanceTo(head) - .01 || candidate.y < head.y - .2 || candidate.distanceTo(head) > distance + 2.5) camera.position.copy(solved);
+      else camera.position.copy(candidate);
+      if (camera.position.y < .35 && Math.hypot(camera.position.x, camera.position.z) < 66) camera.position.y = .35;
+      camera.lookAt(look);
+      // The air changes with altitude.
+      atmosphereAt(Math.max(player.y, camera.position.y - 2), air);
+      (scene.fog as THREE.FogExp2).color.copy(air.fog); (scene.fog as THREE.FogExp2).density = air.density;
+      skyUniforms.top.value.copy(air.top); skyUniforms.horizon.value.copy(air.horizon); (scene.background as THREE.Color).copy(air.horizon);
+      hemi.intensity = air.hemi; sun.intensity = air.sun; sky.position.copy(camera.position);
+      pvec.set(player.x, player.y, player.z);
+      // Guide forward: the first pending station at or above the learner, else the lowest pending one.
+      const pending = ZONES.filter(z => !live.current.visited.includes(z.id));
+      const nextZone = pending.find(z => z.y >= player.y - 3) ?? pending[0] ?? null;
+      forest.update(reducedMotion ? 0 : elapsed, pvec, { visited: live.current.visited, next: nextZone?.id ?? null, unlocked: live.current.unlocked });
+      sun.position.set(player.x - 30, player.y + 62, player.z + 26); sun.target.position.set(player.x, player.y, player.z);
+      renderer.render(scene, camera);
+      // HUD, saving and the frame-rate monitor run on wall-clock time, so a slow device still sees current guidance.
+      uiTime += raw; saveTime += raw; frames++; slowTime += raw;
+      if (uiTime > .2) {
+        uiTime = 0; drawMap(mapCanvas.current, false); if (mapOpenRef.current) drawMap(largeMap.current, true);
+        setActiveZone(currentZone);
+        const refuge = ZONES.find(z => z.id === currentZone), stageIndex = stageAt(player.y);
+        setPlace(refuge ? refuge.place : STAGES[stageIndex].name);
+        setStage({ name: STAGES[stageIndex].name, index: stageIndex, altitude: Math.round(player.y) });
+        const next = nextZone ?? ZONES[ZONES.length - 1];
+        setDestination({ name: next.place, short: next.short, distance: Math.round(Math.hypot(next.x - player.x, next.z - player.z)), rise: Math.round(next.y - player.y), bearing: destinationBearing(next.x - player.x, next.z - player.z, yaw) });
+        if (stageIndex !== lastStage && player.grounded) { if (lastStage >= 0 && stageIndex > lastStage) toast(`${STAGES[stageIndex].name} · ${STAGE_HINTS[stageIndex]}`); lastStage = stageIndex; }
+        if (elapsed > toastUntil) setHint(currentZone ? 'Punto de regreso guardado. Pulsa E para conversar.' : STAGE_HINTS[stageIndex]);
+        live.current.onPosition?.({ x: player.x, y: player.y, z: player.z });
+      }
+      if (saveTime > 2) { saveTime = 0; save(); }
+      if (slowTime > 4) { if (frames / slowTime < 35 && ratio > .85) { ratio = Math.max(.85, ratio - .2); renderer.setPixelRatio(ratio); resize(); } frames = 0; slowTime = 0; }
+    };
+    frame = requestAnimationFrame(tick);
+    return () => { alive = false; save(); cancelAnimationFrame(frame); clear(); api.current = null; observer.disconnect(); window.removeEventListener('keydown', keydown); window.removeEventListener('keyup', keyup); window.removeEventListener('blur', blur); document.removeEventListener('visibilitychange', visibility); canvas.removeEventListener('pointerdown', pointerdown); canvas.removeEventListener('pointermove', pointermove); canvas.removeEventListener('pointerup', onUp); canvas.removeEventListener('pointercancel', onCancel); canvas.removeEventListener('lostpointercapture', onUp); canvas.removeEventListener('wheel', wheel); canvas.removeEventListener('webglcontextlost', contextLost); forest.dispose(); hero.dispose(); sky.geometry.dispose(); skyMaterial.dispose(); sun.shadow.map?.dispose(); renderer.dispose(); canvas.remove(); };
+  }, []);
 
-  const updateJoy=(event:ReactPointerEvent<HTMLDivElement>)=>{if(joyPointer.current!==event.pointerId||props.paused||mapOpen)return;const rect=event.currentTarget.getBoundingClientRect();const x=(event.clientX-rect.left-rect.width/2)/(rect.width*.33),y=(event.clientY-rect.top-rect.height/2)/(rect.height*.33),length=Math.max(1,Math.hypot(x,y));if(api.current){api.current.joy.x=x/length;api.current.joy.y=y/length;}if(stick.current)stick.current.style.transform=`translate(${x/length*30}px, ${y/length*30}px)`;};
-  const endJoy=()=>{joyPointer.current=null;if(api.current){api.current.joy.x=0;api.current.joy.y=0;}if(stick.current)stick.current.style.transform='translate(0, 0)';};
-  const pendingRefuge=activeZone&&!props.visited.includes(activeZone);
-  return <div className={`bfg-world${props.paused||mapOpen?' bfg-world-paused':''}`}>
-    <div className="bfg-world-canvas" ref={host}/>
-    <div className="bfg-world-vignette"/>
-    <div className="bfg-world-location"><span>{place}</span><strong>{!pendingRefuge&&<span className="bfg-world-bearing" aria-hidden="true" style={{transform:`rotate(${destination.bearing}rad)`}}>↑</span>}{pendingRefuge?'Refugio de conversación':`Destino: ${destination.name}`}</strong><small>{pendingRefuge?ZONES.find(z=>z.id===activeZone)?.short:`${destination.distance} m · salta entre los hongos`}</small></div>
-    <div className="bfg-world-tools"><button onClick={()=>setMapOpen(v=>!v)} aria-label="Abrir mapa del bosque" aria-expanded={mapOpen}>Mapa <kbd>M</kbd></button><button onClick={()=>api.current?.view()} aria-label="Cambiar distancia de cámara" aria-pressed={wideView}>Cámara <kbd>V</kbd></button></div>
-    <button className="bfg-world-minimap" onClick={()=>setMapOpen(true)} aria-label="Ampliar mapa: refugios, punto de regreso y posición"><canvas width={190} height={190} ref={mapCanvas}/><span>▲ Tú · ● Refugios</span></button>
+  const updateJoy = (event: ReactPointerEvent<HTMLDivElement>) => { if (joyPointer.current !== event.pointerId || props.paused || mapOpen) return; const rect = event.currentTarget.getBoundingClientRect(); const x = (event.clientX - rect.left - rect.width / 2) / (rect.width * .33), y = (event.clientY - rect.top - rect.height / 2) / (rect.height * .33), length = Math.max(1, Math.hypot(x, y)); if (api.current) { api.current.joy.x = x / length; api.current.joy.y = y / length; } if (stick.current) stick.current.style.transform = `translate(${x / length * 30}px, ${y / length * 30}px)`; };
+  const endJoy = () => { joyPointer.current = null; if (api.current) { api.current.joy.x = 0; api.current.joy.y = 0; } if (stick.current) stick.current.style.transform = 'translate(0, 0)'; };
+  const pendingRefuge = activeZone && !props.visited.includes(activeZone);
+  const done = props.visited.filter(z => ZONES.some(zone => zone.id === z)).length;
+  return <div className={`bfg-world${props.paused || mapOpen ? ' bfg-world-paused' : ''}`} style={{ '--stage': STAGE_COLORS[stage.index] } as React.CSSProperties}>
+    <div className="bfg-world-canvas" ref={host} />
+    <div className="bfg-world-vignette" />
+    <div className="bfg-world-location"><span>{place} · <b>{stage.altitude} m</b></span><strong>{!pendingRefuge && <span className="bfg-world-bearing" aria-hidden="true" style={{ transform: `rotate(${destination.bearing}rad)` }}>↑</span>}{pendingRefuge ? 'Parada de conversación' : `Destino: ${destination.name}`}</strong><small>{pendingRefuge ? ZONES.find(z => z.id === activeZone)?.place : `${destination.short} · ${destination.distance} m${destination.rise > 1 ? ` · ↑ ${destination.rise} m más arriba` : ''}`}</small></div>
+    <div className="bfg-world-climb" aria-label={`Ascenso: ${stage.name}, ${stage.altitude} metros, ${done} de ${ZONES.length} paradas`}><span style={{ height: `${Math.min(100, stage.altitude / TOP * 100)}%` }} /><small>{done}/{ZONES.length}</small></div>
+    <div className="bfg-world-tools"><button onClick={() => setMapOpen(v => !v)} aria-label="Abrir mapa del bosque" aria-expanded={mapOpen}>Mapa <kbd>M</kbd></button><button onClick={() => api.current?.view()} aria-label="Cambiar distancia de cámara" aria-pressed={view !== 1}>Cámara · {CAMERA_PRESETS[view].label} <kbd>V</kbd></button></div>
+    <button className="bfg-world-minimap" onClick={() => setMapOpen(true)} aria-label="Ampliar mapa: paradas, altura y posición"><canvas width={190} height={160} ref={mapCanvas} /><span>▲ Tú · ● Paradas · ▮ Altura</span></button>
     <div className="bfg-world-interaction">
-      {activeZone&&<button className="bfg-world-converse" disabled={props.paused||mapOpen||(activeZone==='final'&&!props.unlocked)} onClick={()=>api.current?.interact()}><kbd>E</kbd><span>{activeZone==='final'&&!props.unlocked?'Corona cerrada':props.visited.includes(activeZone)?'Volver a conversar':'Conversar'}</span></button>}
-      <p className="bfg-world-hint" role="status">{activeZone==='final'&&!props.unlocked?'Habla sobre 10 preguntas de 3 categorías para abrir la corona.':hint}</p>
+      {activeZone && <button className="bfg-world-converse" disabled={props.paused || mapOpen || (activeZone === 'final' && !props.unlocked)} onClick={() => api.current?.interact()}><kbd>E</kbd><span>{activeZone === 'final' && !props.unlocked ? 'Mirador cerrado' : props.visited.includes(activeZone) ? 'Volver a conversar' : 'Conversar'}</span></button>}
+      <p className="bfg-world-hint" role="status">{activeZone === 'final' && !props.unlocked ? 'Habla sobre 10 preguntas en al menos 3 paradas para abrir el mirador.' : hint}</p>
     </div>
-    {mapOpen&&<div className="bfg-world-map" ref={mapPanel} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Mapa del bosque"><div className="bfg-world-map-heading"><div><span>TU TRAVESÍA</span><strong>Un bosque, muchos caminos</strong></div><button onClick={()=>setMapOpen(false)} aria-label="Cerrar mapa">✕</button></div><canvas ref={largeMap} width={600} height={600}/><p>▲ Tú · □ Regreso · ● Pendiente · <span>●</span> Explorado · ◉ Corona</p><small>El mapa te orienta. Recorre los caminos y salta entre los hongos.</small></div>}
-    <div className="bfg-world-touch" aria-label="Controles táctiles"><div className="bfg-world-joystick" role="group" aria-label="Control táctil de movimiento" onPointerDown={e=>{if(props.paused||mapOpen)return;joyPointer.current=e.pointerId;e.currentTarget.setPointerCapture(e.pointerId);updateJoy(e);}} onPointerMove={updateJoy} onPointerUp={endJoy} onPointerCancel={endJoy} onLostPointerCapture={endJoy}><span ref={stick}/></div><div className="bfg-world-touch-actions"><button disabled={props.paused||mapOpen} onPointerDown={e=>{e.preventDefault();api.current?.jump();}} aria-label="Saltar">↑<small>Saltar</small></button></div></div>
+    {mapOpen && <div className="bfg-world-map" ref={mapPanel} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Mapa del bosque"><div className="bfg-world-map-heading"><div><span>TU ASCENSO</span><strong>Del suelo del bosque a las nubes</strong></div><button onClick={() => setMapOpen(false)} aria-label="Cerrar mapa">✕</button></div><canvas ref={largeMap} width={640} height={520} /><p>▲ Tú · □ Regreso · ● Pendiente · <span>●</span> Conversada · ◯ Siguiente</p><small>Vista desde arriba: las vueltas interiores están más altas. La barra muestra tu altura real.</small></div>}
+    <div className="bfg-world-touch" aria-label="Controles táctiles"><div className="bfg-world-joystick" role="group" aria-label="Control táctil de movimiento" onPointerDown={e => { if (props.paused || mapOpen) return; joyPointer.current = e.pointerId; e.currentTarget.setPointerCapture(e.pointerId); updateJoy(e); }} onPointerMove={updateJoy} onPointerUp={endJoy} onPointerCancel={endJoy} onLostPointerCapture={endJoy}><span ref={stick} /></div><div className="bfg-world-touch-actions"><button disabled={props.paused || mapOpen} onPointerDown={e => { e.preventDefault(); api.current?.jump(); }} aria-label="Saltar">↑<small>Saltar</small></button></div></div>
   </div>;
 }

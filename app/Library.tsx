@@ -639,7 +639,10 @@ function NewsCarousel({
     () =>
       libraryNews.filter((item) =>
         lessons.some((lesson) => lesson.id === item.lessonId),
-      ),
+      ).map(item=>{
+        const lesson=lessons.find(lesson=>lesson.id===item.lessonId)!;
+        return lesson.category==='Gramática'?{...item,title:lesson.title,copy:`${lesson.duration}. ${lesson.subtitle}`,route:lesson.tag}:item;
+      }),
     [lessons],
   );
   const [newsIndex, setNewsIndex] = useState(0);
@@ -770,7 +773,7 @@ export default function Library({
 }) {
   const { t, locale } = useI18n();
   const routeCount = new Set(lessons.map((lesson) => lesson.category)).size;
-  const levelScale = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  const levelScale = ["A0", "A1", "A2", "B1", "B2", "C1", "C2"];
   const levelsPresent = levelScale.filter((item) => lessons.some((lesson) => `${lesson.level} ${lesson.displayLevel || ""}`.includes(item)));
   const levelRange = levelsPresent.length ? `${levelsPresent[0]}–${levelsPresent[levelsPresent.length - 1]}` : "A1–C2";
   const categoryLabel = (value: Category) => t(categoryMessageKeys[value]);
@@ -891,8 +894,8 @@ export default function Library({
       if (lesson.conversationMode === "boards") return locale === "es" ? "TABLEROS" : "BOARDS";
       return locale === "es" ? "UNIVERSOS" : "WORLDS";
     }
-    if (lesson.category === "Gramática" && lesson.verbalSystem) {
-      return locale === "es" ? "SISTEMA VERBAL" : "VERB SYSTEM";
+    if (lesson.category === "Gramática") {
+      return grammarTopics.find(topic=>topic.id===lesson.grammarTopic)?.label.toUpperCase()||categoryLabel(lesson.category).toUpperCase();
     }
     return categoryLabel(lesson.category).toUpperCase();
   };
@@ -901,7 +904,7 @@ export default function Library({
       const source = view === "Biblioteca" ? familyLessonSource : lessons;
       const items=filterLessons(source, { level, category, query: catalogQuery }) as Lesson[];
       if (view !== "Biblioteca") return items;
-      if (category === "Todas") return items.filter((lesson) => !lesson.countryCollection && !lesson.verbalSystem);
+      if (category === "Todas") return items.filter((lesson) => !lesson.countryCollection);
       return items;
     },
     [level, category, catalogQuery, familyLessonSource, lessons, view],

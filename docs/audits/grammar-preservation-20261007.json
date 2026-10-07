@@ -1,0 +1,2279 @@
+{
+  "baseSha": "b5a8cad64bbdfffd2c895884ef355f0be8c6f1bb",
+  "reason": "Exact reversible metadata and shared-source edits for the authorized grammar redesign; unrelated bytes remain hash-checked.",
+  "sourceEdits": {
+    "app/lesson-catalog.ts": [
+      {
+        "before": "import { conversationLessons } from \"./conversation-worlds/catalog\";\nimport { verbalLessons } from \"./verbal-system/lesson-data\";\nexport type Category = \"Gramática\" | \"Conversación\" | \"Escucha\" | \"Fonética\" | \"Vocabulario\";\nexport type Lesson = { news?:{addedAt:string;featured:boolean}; id:number; level:string; levels?:string[]; displayLevel?:string; category:Category; conversationMode?:\"worlds\"|\"play\"|\"boards\"; collection?:string; countryCollection?:boolean; countrySequence?:number; searchAliases?:string[]; verbalSystem?:boolean; verbalMood?:string; temporalPlane?:string; productiveStatus?:string; title:string; subtitle:string; duration:string; tag:string; goals:string[]; warmup:string; explanation:string; practice:string[]; speaking:string[]; homework:string; special?:boolean; path?:string; image:string; curriculumOrder?:number; curriculumSequence?:number; routeOrder:number; routeSequence:number; requires?:number[] };\nexport type LessonSource = Omit<Lesson,\"image\"|\"curriculumSequence\"|\"routeOrder\"|\"routeSequence\"> & { image?:string };\n\n",
+        "after": "import { conversationLessons } from \"./conversation-worlds/catalog\";\nimport { verbalLessons } from \"./verbal-system/lesson-data\";\nimport { applyGrammarMetadata, newGrammarEntries } from \"./grammar-classroom/catalog\";\nexport type Category = \"Gramática\" | \"Conversación\" | \"Escucha\" | \"Fonética\" | \"Vocabulario\";\nexport type Lesson = { grammarTopic?:string; news?:{addedAt:string;featured:boolean}; id:number; level:string; levels?:string[]; displayLevel?:string; category:Category; conversationMode?:\"worlds\"|\"play\"|\"boards\"; collection?:string; countryCollection?:boolean; countrySequence?:number; searchAliases?:string[]; verbalSystem?:boolean; verbalMood?:string; temporalPlane?:string; productiveStatus?:string; title:string; subtitle:string; duration:string; tag:string; goals:string[]; warmup:string; explanation:string; practice:string[]; speaking:string[]; homework:string; special?:boolean; path?:string; image:string; curriculumOrder?:number; curriculumSequence?:number; routeOrder:number; routeSequence:number; requires?:number[] };\nexport type LessonSource = Omit<Lesson,\"image\"|\"curriculumSequence\"|\"routeOrder\"|\"routeSequence\"> & { image?:string };\n\n"
+      },
+      {
+        "before": "  {id:11,level:\"C1\",category:\"Conversación\",title:\"Preguntas que dan ganas de hablar\",subtitle:\"16 categorías y 80 preguntas para una conversación avanzada libre\",duration:\"75 min\",tag:\"80 preguntas\",special:true,path:\"/advanced-conversation\",goals:[\"Sostener ideas complejas\",\"Matizar opiniones\",\"Conectar experiencias y argumentos\"],warmup:\"Elige una categoría y una pregunta que realmente te dé ganas de responder.\",explanation:\"Conversación libre de nivel avanzado.\",practice:[],speaking:[],homework:\"\"},\n  ...additionalSamples,\n];\n\nconst levelOrder:Record<string,number> = {A1:1,A2:2,B1:3,B2:4,C1:5,C2:6};\nconst previewedLessons = lessonSources.map(withPreview);\nconst orderedGrammar = previewedLessons\n  .filter((lesson) => lesson.category === \"Gramática\")\n",
+        "after": "  {id:11,level:\"C1\",category:\"Conversación\",title:\"Preguntas que dan ganas de hablar\",subtitle:\"16 categorías y 80 preguntas para una conversación avanzada libre\",duration:\"75 min\",tag:\"80 preguntas\",special:true,path:\"/advanced-conversation\",goals:[\"Sostener ideas complejas\",\"Matizar opiniones\",\"Conectar experiencias y argumentos\"],warmup:\"Elige una categoría y una pregunta que realmente te dé ganas de responder.\",explanation:\"Conversación libre de nivel avanzado.\",practice:[],speaking:[],homework:\"\"},\n  ...additionalSamples,\n  ...newGrammarEntries,\n];\n\nconst levelOrder:Record<string,number> = {A1:1,A2:2,B1:3,B2:4,C1:5,C2:6};\nconst previewedLessons = lessonSources.map(applyGrammarMetadata).map(withPreview);\nconst orderedGrammar = previewedLessons\n  .filter((lesson) => lesson.category === \"Gramática\")\n"
+      }
+    ],
+    "app/access-policy.ts": [
+      {
+        "before": "export const isFreeLesson = (id:number) => freeLessonIds.includes(id);\n/** Audio collections attached to the existing FREE listening and phonetics samples. */\nexport const freeAudioPrefixes = new Set(['hotel','latam','phonetics']);\nexport type RoutableLesson = {id:number;path?:string;special?:boolean};\nexport function normalizeLocalPath(pathname:string) {\n",
+        "after": "export const isFreeLesson = (id:number) => freeLessonIds.includes(id);\n/** Audio collections attached to the existing FREE listening and phonetics samples. */\nexport const freeAudioPrefixes = new Set(['hotel','latam','phonetics','grammar-free']);\nexport type RoutableLesson = {id:number;path?:string;special?:boolean};\nexport function normalizeLocalPath(pathname:string) {\n"
+      }
+    ],
+    "app/Library.tsx": [
+      {
+        "before": "import VerbalPosition from \"./verbal-system/VerbalPosition\";\nimport GrammarStep from \"./grammar-steps/GrammarStep\";\nimport LogoutButton from \"./LogoutButton\";\nimport LessonPreview from \"./LessonPreview\";\n",
+        "after": "import VerbalPosition from \"./verbal-system/VerbalPosition\";\nimport GrammarStep from \"./grammar-steps/GrammarStep\";\nimport { grammarTopics } from \"./grammar-classroom/catalog\";\nimport LogoutButton from \"./LogoutButton\";\nimport LessonPreview from \"./LessonPreview\";\n"
+      },
+      {
+        "before": "  \"Gramática\" | \"Conversación\" | \"Escucha\" | \"Fonética\" | \"Vocabulario\";\nexport type CatalogItem = {\n  news?:{addedAt:string;featured:boolean};\n  familyId?: string;\n",
+        "after": "  \"Gramática\" | \"Conversación\" | \"Escucha\" | \"Fonética\" | \"Vocabulario\";\nexport type CatalogItem = {\n  grammarTopic?: string;\n  news?:{addedAt:string;featured:boolean};\n  familyId?: string;\n"
+      },
+      {
+        "before": "      libraryNews.filter((item) =>\n        lessons.some((lesson) => lesson.id === item.lessonId),\n      ),\n    [lessons],\n  );\n",
+        "after": "      libraryNews.filter((item) =>\n        lessons.some((lesson) => lesson.id === item.lessonId),\n      ).map(item=>{\n        const lesson=lessons.find(lesson=>lesson.id===item.lessonId)!;\n        return lesson.category==='Gramática'?{...item,title:lesson.title,copy:`${lesson.duration}. ${lesson.subtitle}`,route:lesson.tag}:item;\n      }),\n    [lessons],\n  );\n"
+      },
+      {
+        "before": "  const [category, setCategory] = useState<\"Todas\" | Category>(\"Todas\");\n  const [conversationMode, setConversationMode] = useState<\"all\" | \"worlds\" | \"play\" | \"boards\" | \"countries\">(\"all\");\n  const [grammarMode, setGrammarMode] = useState<\"all\" | \"general\" | \"system\">(\"general\");\n  const [query, setQuery] = useState(\"\");\n  const [catalogSearchActive, setCatalogSearchActive] = useState(false);\n",
+        "after": "  const [category, setCategory] = useState<\"Todas\" | Category>(\"Todas\");\n  const [conversationMode, setConversationMode] = useState<\"all\" | \"worlds\" | \"play\" | \"boards\" | \"countries\">(\"all\");\n  const [grammarTopic, setGrammarTopic] = useState(\"all\");\n  const [query, setQuery] = useState(\"\");\n  const [catalogSearchActive, setCatalogSearchActive] = useState(false);\n"
+      },
+      {
+        "before": "  const lessonHref = (lesson: Lesson, selectedLevel = level) =>\n    canOpen(lesson)\n      ? phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.id === 38 ? \"/clase/38\" : null) || (lesson.special ? \"/choose-conversation\" : null)\n      : lockedPath(lesson, selectedLevel);\n  const prepareLessonNavigation = (lesson: Lesson, placement = \"library_card\", selectedLevel = level) => {\n",
+        "after": "  const lessonHref = (lesson: Lesson, selectedLevel = level) =>\n    canOpen(lesson)\n      ? phoneticsFamilyHref(lesson, selectedLevel) || conversationLessonHref(lesson, selectedLevel) || phoneticsHref(lesson.id) || (lesson.category === \"Gramática\" ? `/clase/${lesson.id}` : lesson.id === 38 ? \"/clase/38\" : null) || (lesson.special ? \"/choose-conversation\" : null)\n      : lockedPath(lesson, selectedLevel);\n  const prepareLessonNavigation = (lesson: Lesson, placement = \"library_card\", selectedLevel = level) => {\n"
+      },
+      {
+        "before": "  );\n  const familyLessonSource = useMemo(() => {\n    return familyLessonsForCategory(lessons, { category, conversationMode, grammarMode });\n  }, [category, conversationMode, grammarMode, lessons]);\n  const categoryLevels = useMemo(\n    () => availableLevels(familyLessonSource, category),\n",
+        "after": "  );\n  const familyLessonSource = useMemo(() => {\n    return familyLessonsForCategory(lessons, { category, conversationMode, grammarTopic });\n  }, [category, conversationMode, grammarTopic, lessons]);\n  const categoryLevels = useMemo(\n    () => availableLevels(familyLessonSource, category),\n"
+      },
+      {
+        "before": "      return locale === \"es\" ? \"UNIVERSOS\" : \"WORLDS\";\n    }\n    if (lesson.category === \"Gramática\" && lesson.verbalSystem) {\n      return locale === \"es\" ? \"SISTEMA VERBAL\" : \"VERB SYSTEM\";\n    }\n    return categoryLabel(lesson.category).toUpperCase();\n",
+        "after": "      return locale === \"es\" ? \"UNIVERSOS\" : \"WORLDS\";\n    }\n    if (lesson.category === \"Gramática\") {\n      return grammarTopics.find(topic=>topic.id===lesson.grammarTopic)?.label.toUpperCase()||categoryLabel(lesson.category).toUpperCase();\n    }\n    return categoryLabel(lesson.category).toUpperCase();\n"
+      },
+      {
+        "before": "      const items=filterLessons(source, { level, category, query: catalogQuery }) as Lesson[];\n      if (view !== \"Biblioteca\") return items;\n      if (category === \"Todas\") return items.filter((lesson) => !lesson.countryCollection && !lesson.verbalSystem);\n      return items;\n    },\n",
+        "after": "      const items=filterLessons(source, { level, category, query: catalogQuery }) as Lesson[];\n      if (view !== \"Biblioteca\") return items;\n      if (category === \"Todas\") return items.filter((lesson) => !lesson.countryCollection);\n      return items;\n    },\n"
+      },
+      {
+        "before": "    setCategory(nextCategory);\n    if (nextCategory !== \"Conversación\") setConversationMode(\"all\");\n    setGrammarMode(nextCategory === \"Gramática\" ? \"all\" : \"general\");\n    if (sidebarOpen) closeSidebar();\n    scrollToResults();\n",
+        "after": "    setCategory(nextCategory);\n    if (nextCategory !== \"Conversación\") setConversationMode(\"all\");\n    setGrammarTopic(\"all\");\n    if (sidebarOpen) closeSidebar();\n    scrollToResults();\n"
+      },
+      {
+        "before": "    setCategory(\"Todas\");\n    setConversationMode(\"all\");\n    setGrammarMode(\"general\");\n    setQuery(\"\");\n    setCatalogSearchActive(false);\n",
+        "after": "    setCategory(\"Todas\");\n    setConversationMode(\"all\");\n    setGrammarTopic(\"all\");\n    setQuery(\"\");\n    setCatalogSearchActive(false);\n"
+      },
+      {
+        "before": "    setCategory(\"Conversación\");\n    setConversationMode(\"countries\");\n    setLevel(\"Todos\");\n    setQuery(\"\");\n    setCatalogSearchActive(false);\n    setSearchOpen(false);\n    scrollToResults();\n  };\n  const openVerbalSystem = () => {\n    trackMarketingEvent(\"filter_used\", { filter: \"grammar_collection\", value: \"verbal_system\" });\n    setView(\"Biblioteca\");\n    setCategory(\"Gramática\");\n    setGrammarMode(\"system\");\n    setConversationMode(\"all\");\n    setLevel(\"Todos\");\n    setQuery(\"\");\n",
+        "after": "    setCategory(\"Conversación\");\n    setConversationMode(\"countries\");\n    setLevel(\"Todos\");\n    setQuery(\"\");\n"
+      },
+      {
+        "before": "                  : conversationMode === \"countries\"\n                    ? t(\"library.countries\")\n                    : category === \"Gramática\" && grammarMode === \"system\"\n                      ? \"★ Sistema verbal\"\n                    : category === \"Conversación\"\n                      ? `${categoryLabel(category)} · ${conversationFamilyLabel(conversationMode)}`\n",
+        "after": "                  : conversationMode === \"countries\"\n                    ? t(\"library.countries\")\n                    : category === \"Gramática\" && grammarTopic !== \"all\"\n                      ? grammarTopics.find(topic => topic.id === grammarTopic)?.label\n                    : category === \"Conversación\"\n                      ? `${categoryLabel(category)} · ${conversationFamilyLabel(conversationMode)}`\n"
+      },
+      {
+        "before": "        )}\n        {view === \"Biblioteca\" && category === \"Gramática\" && (\n          <section className=\"grammar-family-filter\" aria-label=\"Colecciones de Gramática\">\n            <div>\n              <small>COLECCIONES DE GRAMÁTICA</small>\n              <strong>{grammarMode === \"system\" ? \"★ SISTEMA VERBAL\" : grammarMode === \"general\" ? \"RUTA GENERAL\" : \"TODAS\"}</strong>\n            </div>\n            <nav aria-label=\"Colecciones de Gramática\">\n              <button className={grammarMode === \"all\" ? \"active\" : \"\"} aria-pressed={grammarMode === \"all\"} onClick={()=>{setGrammarMode(\"all\");setLevel(\"Todos\");setCatalogSearchActive(false);scrollToResults()}}><span>●</span><b>TODAS</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:\"Gramática\", grammarMode:\"all\"}), {category:\"Gramática\"}).length}</small></button>\n              <button className={`verbal-tab ${grammarMode === \"system\" ? \"active\" : \"\"}`} aria-pressed={grammarMode === \"system\"} onClick={openVerbalSystem}><span>★</span><b>SISTEMA VERBAL</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:\"Gramática\", grammarMode:\"system\"}), {category:\"Gramática\"}).length}</small></button>\n              <button className={grammarMode === \"general\" ? \"active\" : \"\"} aria-pressed={grammarMode === \"general\"} onClick={()=>{setGrammarMode(\"general\");setLevel(\"Todos\");setCatalogSearchActive(false);scrollToResults()}}><span>01</span><b>GRAMÁTICA GENERAL</b><small>{filterLessons(familyLessonsForCategory(lessons, {category:\"Gramática\", grammarMode:\"general\"}), {category:\"Gramática\"}).length}</small></button>\n              <Link href=\"/sistema-verbal\"><span>↗</span><b>MAPA MODO / TIEMPO</b><small>ABRIR</small></Link>\n            </nav>\n          </section>\n        )}\n",
+        "after": "        )}\n        {view === \"Biblioteca\" && category === \"Gramática\" && (\n          <section className=\"grammar-topic-filter\" aria-label=\"Temas de gramática\">\n            <div><small>GRAMÁTICA PARA UNA CLASE DE 60 MINUTOS</small><h3>¿Qué quieres enseñar?</h3></div>\n            <nav aria-label=\"Temas de gramática\">\n              {[{id:\"all\",label:\"Todos los temas\"},...grammarTopics].map(topic => {\n                const matches = familyLessonsForCategory(lessons,{category:\"Gramática\",grammarTopic:topic.id});\n                return <button type=\"button\" key={topic.id} aria-pressed={grammarTopic===topic.id} onClick={()=>{\n                  setGrammarTopic(topic.id);\n                  if(level!==\"Todos\"&&!availableLevels(matches,\"Gramática\").includes(level))setLevel(\"Todos\");\n                  trackMarketingEvent(\"filter_used\",{filter:\"grammar_topic\",value:topic.id});scrollToResults();\n                }}>{topic.label}<span>{matches.length}</span></button>;\n              })}\n            </nav>\n            <Link href=\"/sistema-verbal\">Consultar el mapa de modos y tiempos →</Link>\n          </section>\n        )}\n"
+      }
+    ],
+    "app/page.tsx": [
+      {
+        "before": "    // Only authorized, inline lessons need their teaching content in the browser.\n    const inline=(fullAccess||isFreeLesson(l.id))&&!l.path&&!l.special;\n    return {news:l.news,id:l.id,title:l.title,familyId:l.familyId,previewByLevel:l.previewByLevel,legacyLessonIds:l.legacyLessonIds,searchAliases:l.searchAliases,countrySequence:l.countrySequence,subtitle:l.subtitle,level:l.level,levels:l.levels,displayLevel:l.displayLevel,category:l.category,conversationMode:l.conversationMode,countryCollection:l.countryCollection,verbalSystem:l.verbalSystem,verbalMood:l.verbalMood,temporalPlane:l.temporalPlane,productiveStatus:l.productiveStatus,duration:l.duration,tag:l.tag,image:l.image,path:l.path,special:l.special,href:localLessonPath(l) || '/',free:isFreeLesson(l.id),curriculumOrder:l.curriculumOrder,curriculumSequence:l.curriculumSequence,routeOrder:l.routeOrder,routeSequence:l.routeSequence,\n      goals:inline?l.goals:[],warmup:inline?l.warmup:'',explanation:inline?l.explanation:'',practice:inline?l.practice:[],speaking:inline?l.speaking:[],homework:inline?l.homework:''};\n  });\n",
+        "after": "    // Only authorized, inline lessons need their teaching content in the browser.\n    const inline=(fullAccess||isFreeLesson(l.id))&&!l.path&&!l.special;\n    return {news:l.news,id:l.id,title:l.title,familyId:l.familyId,previewByLevel:l.previewByLevel,legacyLessonIds:l.legacyLessonIds,searchAliases:l.searchAliases,countrySequence:l.countrySequence,subtitle:l.subtitle,level:l.level,levels:l.levels,displayLevel:l.displayLevel,category:l.category,grammarTopic:l.grammarTopic,conversationMode:l.conversationMode,countryCollection:l.countryCollection,verbalSystem:l.verbalSystem,verbalMood:l.verbalMood,temporalPlane:l.temporalPlane,productiveStatus:l.productiveStatus,duration:l.duration,tag:l.tag,image:l.image,path:l.path,special:l.special,href:localLessonPath(l) || '/',free:isFreeLesson(l.id),curriculumOrder:l.curriculumOrder,curriculumSequence:l.curriculumSequence,routeOrder:l.routeOrder,routeSequence:l.routeSequence,\n      goals:inline?l.goals:[],warmup:inline?l.warmup:'',explanation:inline?l.explanation:'',practice:inline?l.practice:[],speaking:inline?l.speaking:[],homework:inline?l.homework:''};\n  });\n"
+      }
+    ],
+    "app/library-filters.mjs": [
+      {
+        "before": "/** Combine all facets; changing one selection must never clear the other. */\nexport function filterLessons(lessons, { level = 'Todos', category = 'Todas', query = '' } = {}) {\n  const normalize = value => value.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase();\n  const search = normalize(query.trim());\n",
+        "after": "/** Combine all facets; changing one selection must never clear the other. */\nexport function filterLessons(lessons, { level = 'Todos', category = 'Todas', query = '', grammarTopic = 'all' } = {}) {\n  const normalize = value => value.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase();\n  const search = normalize(query.trim());\n"
+      },
+      {
+        "before": "    (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&\n    (category === 'Todas' || lesson.category === category) &&\n    normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag} ${(lesson.searchAliases || []).join(' ')}`).includes(search)\n  );\n",
+        "after": "    (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&\n    (category === 'Todas' || lesson.category === category) &&\n    (grammarTopic === 'all' || lesson.category !== 'Gramática' || lesson.grammarTopic === grammarTopic) &&\n    normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag} ${(lesson.searchAliases || []).join(' ')}`).includes(search)\n  );\n"
+      },
+      {
+        "before": "export function familyLessonsForCategory(\n  lessons,\n  { category = 'Todas', conversationMode = 'all', grammarMode = 'general' } = {},\n) {\n  if (category === 'Todas') {\n    return lessons.filter(lesson => !lesson.countryCollection && !lesson.verbalSystem);\n  }\n  if (category === 'Gramática') {\n    if (grammarMode === 'all') {\n      return lessons.filter(lesson => lesson.category === 'Gramática');\n",
+        "after": "export function familyLessonsForCategory(\n  lessons,\n  { category = 'Todas', conversationMode = 'all', grammarMode = 'general', grammarTopic = '' } = {},\n) {\n  if (category === 'Todas') {\n    return lessons.filter(lesson => !lesson.countryCollection);\n  }\n  if (category === 'Gramática') {\n    if (grammarTopic) return lessons.filter(lesson => lesson.category === 'Gramática' && (grammarTopic === 'all' || lesson.grammarTopic === grammarTopic));\n    if (grammarMode === 'all') {\n      return lessons.filter(lesson => lesson.category === 'Gramática');\n"
+      }
+    ],
+    "scripts/test-worker.mjs": [
+      {
+        "before": "const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});\ntry{\n await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);\n await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);\n",
+        "after": "const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});\ntry{\n await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);\n await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);\n await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);\n"
+      },
+      {
+        "before": " for(const stream of [server.stdout,server.stderr])stream.on('data',chunk=>{workerOutput=(workerOutput+chunk.toString().replaceAll(shareTestSecret,'[test-secret]')).slice(-16000)});\n const origin=await new Promise((resolve,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error(`Worker startup timed out: ${output.slice(-2400)}`)),Number(process.env.SPANISHCUE_TEST_WORKER_TIMEOUT_MS)||30000);function read(chunk){output+=chunk.toString();const m=output.match(/Ready on (http:\\/\\/127\\.0\\.0\\.1:\\d+)/);if(m){clearTimeout(timer);resolve(m[1])}}server.stdout.on('data',read);server.stderr.on('data',read);server.once('error',reject);server.once('exit',code=>{clearTimeout(timer);reject(new Error(`Worker exited ${code}: ${output.slice(-1200)}`))})});\n await run(['--test','tests/lesson-reports-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});\n await run(['--test','tests/country-flagships.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});\n",
+        "after": " for(const stream of [server.stdout,server.stderr])stream.on('data',chunk=>{workerOutput=(workerOutput+chunk.toString().replaceAll(shareTestSecret,'[test-secret]')).slice(-16000)});\n const origin=await new Promise((resolve,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error(`Worker startup timed out: ${output.slice(-2400)}`)),Number(process.env.SPANISHCUE_TEST_WORKER_TIMEOUT_MS)||30000);function read(chunk){output+=chunk.toString();const m=output.match(/Ready on (http:\\/\\/127\\.0\\.0\\.1:\\d+)/);if(m){clearTimeout(timer);resolve(m[1])}}server.stdout.on('data',read);server.stderr.on('data',read);server.once('error',reject);server.once('exit',code=>{clearTimeout(timer);reject(new Error(`Worker exited ${code}: ${output.slice(-1200)}`))})});\n await run(['--test','tests/grammar-classroom-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});\n await run(['--test','tests/lesson-reports-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});\n await run(['--test','tests/country-flagships.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});\n"
+      }
+    ],
+    "scripts/protect-client-assets.mjs": [
+      {
+        "before": "  \"app/verbal-system/SystemHub.tsx\",\n  \"app/grammar-worlds/GrammarWorld.tsx\",\n  \"app/conversation-worlds/ConversationWorld.tsx\",\n  // Autoestudio engines carry no lesson bodies: module data arrives only in\n",
+        "after": "  \"app/verbal-system/SystemHub.tsx\",\n  \"app/grammar-worlds/GrammarWorld.tsx\",\n  // Shared renderer only; paid lesson bodies arrive in authorized page props.\n  \"app/grammar-classroom/Classroom.tsx\",\n  \"app/conversation-worlds/ConversationWorld.tsx\",\n  // Autoestudio engines carry no lesson bodies: module data arrives only in\n"
+      }
+    ],
+    "tests/level-cleanup.test.mjs": [
+      {
+        "before": "\ntest('all former A0 lessons are A1 without A0 metadata', () => {\n  assert.equal(lessons.length, 121);\n  for (const id of movedLessonIds) {\n    const lesson = lessons.find((candidate) => candidate.id === id);\n",
+        "after": "\ntest('all former A0 lessons are A1 without A0 metadata', () => {\n  assert.equal(lessons.length, 127);\n  for (const id of movedLessonIds) {\n    const lesson = lessons.find((candidate) => candidate.id === id);\n"
+      }
+    ],
+    "tests/rendered-html.test.mjs": [
+      {
+        "before": " assert.match(html,/SPANISHCUE/);assert.match(html,/Deja de crear cada clase/);assert.match(html,/>Entrar</);assert.match(html,/Probar gratis/);\n assert.match(html,/rel=\"canonical\" href=\"https:\\/\\/spanishcue\\.com\\/\"/i);\n assert.match(html,/Clase 01/);assert.match(html,/href=\"\\/mexico\"/);assert.match(html,/51 clases/);assert.match(html,/data-curriculum-order=\"100\"/);\n assert.doesNotMatch(html,/SORPRÉNDEME|Sorpréndeme/);\n assert.doesNotMatch(html,/Promoción de lanzamiento|(?:US\\$|\\$)\\s*(?:7\\.49|14\\.99)|library-access-dialog/);\n",
+        "after": " assert.match(html,/SPANISHCUE/);assert.match(html,/Deja de crear cada clase/);assert.match(html,/>Entrar</);assert.match(html,/Probar gratis/);\n assert.match(html,/rel=\"canonical\" href=\"https:\\/\\/spanishcue\\.com\\/\"/i);\n assert.match(html,/Clase 01/);assert.match(html,/href=\"\\/mexico\"/);assert.match(html,/57 clases/);assert.match(html,/data-curriculum-order=\"100\"/);\n assert.doesNotMatch(html,/SORPRÉNDEME|Sorpréndeme/);\n assert.doesNotMatch(html,/Promoción de lanzamiento|(?:US\\$|\\$)\\s*(?:7\\.49|14\\.99)|library-access-dialog/);\n"
+      },
+      {
+        "before": " const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();\n assert.match(html,/class=\"card-hitarea\" href=\"\\/acceso\\?returnTo=/);assert.match(html,/class=\"card-hitarea\" href=\"\\/el-hotel-de-lo-imposible\"/);\n assert.match(html,/82(?:<!-- -->|\\s)+resultados/);assert.match(html,/114(?:<!-- -->|\\s)+clases totales/);\n assert.match(html,/No está afiliado ni respaldado por el Instituto Cervantes/);\n});\n",
+        "after": " const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();\n assert.match(html,/class=\"card-hitarea\" href=\"\\/acceso\\?returnTo=/);assert.match(html,/class=\"card-hitarea\" href=\"\\/el-hotel-de-lo-imposible\"/);\n assert.match(html,/105(?:<!-- -->|\\s)+resultados/);assert.match(html,/120(?:<!-- -->|\\s)+clases totales/);\n assert.match(html,/No está afiliado ni respaldado por el Instituto Cervantes/);\n});\n"
+      },
+      {
+        "before": " assert.match(html,/<html[^>]*lang=\"en\"/);assert.match(html,/Stop building every lesson/);\n assert.match(html,/Try it free/);assert.match(html,/Lesson 01/);\n assert.match(html,/La Fábrica de los Nombres/);assert.doesNotMatch(html,/The Noun Factory/);\n assert.match(html,/hreflang=\"es\"/i);assert.match(html,/hreflang=\"en\"/i);assert.match(html,/hreflang=\"x-default\"/i);\n assert.match(html,/rel=\"canonical\" href=\"https:\\/\\/spanishcue\\.com\\/\\?lang=en\"/i);\n",
+        "after": " assert.match(html,/<html[^>]*lang=\"en\"/);assert.match(html,/Stop building every lesson/);\n assert.match(html,/Try it free/);assert.match(html,/Lesson 01/);\n assert.match(html,/Sustantivos: nombrar personas, lugares y cosas/);assert.doesNotMatch(html,/The Noun Factory/);\n assert.match(html,/hreflang=\"es\"/i);assert.match(html,/hreflang=\"en\"/i);assert.match(html,/hreflang=\"x-default\"/i);\n assert.match(html,/rel=\"canonical\" href=\"https:\\/\\/spanishcue\\.com\\/\\?lang=en\"/i);\n"
+      }
+    ]
+  },
+  "metadata": [
+    {
+      "id": 220,
+      "fields": {
+        "curriculumSequence": {
+          "before": 45,
+          "after": 47,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 45,
+          "after": 47,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Aunque cambie el dato…"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Indicativo o subjuntivo con aunque según la postura: información afirmada, presupuesta o hipotética",
+          "after": "Conceder una objeción y mantener tu postura. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 15.3.9 · concesivas B2",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Aunque cambie el dato…",
+          "after": "Aunque: conceder una objeción y mantener tu postura",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 219,
+      "fields": {
+        "curriculumSequence": {
+          "before": 44,
+          "after": 46,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "condicionales",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 44,
+          "after": 46,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Si fuera distinto…"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Condiciones hipotéticas presentes o futuras con imperfecto de subjuntivo y condicional simple",
+          "after": "Negociar posibilidades. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 15.3.6 · condicionales B2",
+          "after": "Condicionales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Si fuera distinto…",
+          "after": "Si + imperfecto de subjuntivo: negociar posibilidades",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 140,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Presente de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué ocurre ahora, habitualmente o en general?",
+          "after": "Hablar de hábitos y horarios. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Presente · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Presente de indicativo",
+          "after": "Presente de indicativo: hablar de hábitos y horarios",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 141,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito perfecto compuesto de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué pasado sigue conectado con el presente?",
+          "after": "Contar experiencias y novedades. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Pasado · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito perfecto compuesto de indicativo",
+          "after": "Pretérito perfecto: contar experiencias y novedades",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 142,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito perfecto simple de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué ocurrió y quedó cerrado?",
+          "after": "Contar qué pasó. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Pasado · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito perfecto simple de indicativo",
+          "after": "Pretérito indefinido: contar qué pasó",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 143,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito imperfecto de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Cómo era la escena o qué ocurría habitualmente?",
+          "after": "Describir cómo eran las cosas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Pasado · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito imperfecto de indicativo",
+          "after": "Pretérito imperfecto: describir cómo eran las cosas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 144,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Futuro simple de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué ocurrirá o qué suponemos que ocurre?",
+          "after": "Hacer predicciones y promesas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Futuro · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Futuro simple de indicativo",
+          "after": "Futuro simple: hacer predicciones y promesas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 145,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "imperativo",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Imperativo afirmativo y negativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Cómo dirigimos una acción?",
+          "after": "Dar instrucciones afirmativas y negativas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Imperativo · Sin oposición temporal · Productivo",
+          "after": "Imperativo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Imperativo afirmativo y negativo",
+          "after": "Imperativo: dar instrucciones afirmativas y negativas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 146,
+      "fields": {
+        "curriculumSequence": {
+          "before": 31,
+          "after": 32,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 31,
+          "after": 32,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Condicional simple de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué ocurriría bajo una condición o desde una perspectiva pasada?",
+          "after": "Pedir, aconsejar e imaginar. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Condicional · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Condicional simple de indicativo",
+          "after": "Condicional simple: pedir, aconsejar e imaginar",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 147,
+      "fields": {
+        "curriculumSequence": {
+          "before": 32,
+          "after": 33,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 32,
+          "after": 33,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito pluscuamperfecto de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué ya había ocurrido antes de otro momento pasado?",
+          "after": "Explicar qué había pasado antes. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Pasado · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito pluscuamperfecto de indicativo",
+          "after": "Pluscuamperfecto: explicar qué había pasado antes",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 148,
+      "fields": {
+        "curriculumSequence": {
+          "before": 35,
+          "after": 36,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 35,
+          "after": 36,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Presente de subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿La acción se afirma o aparece filtrada por otra perspectiva?",
+          "after": "Expresar deseos y recomendaciones. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Subjuntivo · Presente · Productivo",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Presente de subjuntivo",
+          "after": "Presente de subjuntivo: expresar deseos y recomendaciones",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 149,
+      "fields": {
+        "curriculumSequence": {
+          "before": 36,
+          "after": 37,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 36,
+          "after": 37,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito perfecto de subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿La acción filtrada ya ocurrió antes de una reacción actual?",
+          "after": "Reaccionar a lo que ha pasado. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Subjuntivo · Pasado · Productivo",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito perfecto de subjuntivo",
+          "after": "Perfecto de subjuntivo: reaccionar a lo que ha pasado",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 150,
+      "fields": {
+        "curriculumSequence": {
+          "before": 40,
+          "after": 42,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 40,
+          "after": 42,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito imperfecto de subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿La acción depende de un pasado, una hipótesis o una distancia discursiva?",
+          "after": "Deseos y perspectivas del pasado. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Subjuntivo · Pasado · Productivo",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito imperfecto de subjuntivo",
+          "after": "Imperfecto de subjuntivo: deseos y perspectivas del pasado",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 151,
+      "fields": {
+        "curriculumSequence": {
+          "before": 41,
+          "after": 43,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 41,
+          "after": 43,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito pluscuamperfecto de subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Imaginamos o valoramos una acción anterior dentro del pasado?",
+          "after": "Valorar un pasado alternativo. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Subjuntivo · Pasado · Productivo",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito pluscuamperfecto de subjuntivo",
+          "after": "Pluscuamperfecto de subjuntivo: valorar un pasado alternativo",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 152,
+      "fields": {
+        "curriculumSequence": {
+          "before": 42,
+          "after": 44,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 42,
+          "after": 44,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Condicional compuesto de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué resultado pasado habría ocurrido bajo otras condiciones?",
+          "after": "Explicar lo que habría ocurrido. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Condicional · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Condicional compuesto de indicativo",
+          "after": "Condicional compuesto: explicar lo que habría ocurrido",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 153,
+      "fields": {
+        "curriculumSequence": {
+          "before": 43,
+          "after": 45,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 43,
+          "after": 45,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Futuro compuesto de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Qué estará terminado antes de un punto futuro?",
+          "after": "Prever resultados y hacer conjeturas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Futuro · Productivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Futuro compuesto de indicativo",
+          "after": "Futuro compuesto: prever resultados y hacer conjeturas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 154,
+      "fields": {
+        "curriculumSequence": {
+          "before": 49,
+          "after": 55,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 49,
+          "after": 55,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pretérito anterior de indicativo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Una acción terminó inmediatamente antes de otra en un relato formal?",
+          "after": "Interpretar y reformular textos. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Indicativo · Pasado · Receptivo",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pretérito anterior de indicativo",
+          "after": "Pretérito anterior: interpretar y reformular textos",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 155,
+      "fields": {
+        "curriculumSequence": {
+          "before": 50,
+          "after": 56,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 50,
+          "after": 56,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Futuro simple de subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Estamos ante una condición futura jurídica, solemne o fosilizada?",
+          "after": "Comprender usos formales e históricos. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Subjuntivo · Futuro · Histórico / restringido",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Futuro simple de subjuntivo",
+          "after": "Futuro de subjuntivo: comprender usos formales e históricos",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 156,
+      "fields": {
+        "curriculumSequence": {
+          "before": 51,
+          "after": 57,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 51,
+          "after": 57,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Futuro perfecto de subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "¿Una condición formal mira una acción ya completada desde el futuro?",
+          "after": "Interpretar fórmulas antiguas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Subjuntivo · Futuro · Histórico / restringido",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Futuro perfecto de subjuntivo",
+          "after": "Futuro perfecto de subjuntivo: interpretar fórmulas antiguas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 218,
+      "fields": {
+        "curriculumSequence": {
+          "before": 28,
+          "after": 29,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "pronombres",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 28,
+          "after": 29,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La persona que tengo en mente"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Relativas B1 para identificar personas, lugares y cosas, y reparar referencias ambiguas",
+          "after": "Identificar a la persona que buscas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 15.2 · relativas B1",
+          "after": "Pronombres y relativos",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La persona que tengo en mente",
+          "after": "Que y quien: identificar a la persona que buscas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 217,
+      "fields": {
+        "curriculumSequence": {
+          "before": 27,
+          "after": 28,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 27,
+          "after": 28,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Pero hay un matiz"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Ni… ni, sin embargo y aunque adversativo para organizar contrastes y contraargumentos B1",
+          "after": "Añadir un matiz a una opinión. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 14.1 / 14.3 · coordinación B1",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Pero hay un matiz",
+          "after": "Conectores de contraste: añadir un matiz a una opinión",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 214,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "condicionales",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Si pasa esto…"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Condiciones reales y consecuencias prácticas para decidir, resolver y negociar planes cotidianos",
+          "after": "Acordar qué hacer en cada caso. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 15.3.6 · condicionales A2",
+          "after": "Condicionales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Si pasa esto…",
+          "after": "Si + presente: acordar qué hacer en cada caso",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 213,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Antes, después, cuando"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Secuencias habituales y factuales con antes de, después de y cuando",
+          "after": "Ordenar acciones. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 15.3.1 · temporales A2",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Antes, después, cuando",
+          "after": "Antes, después y cuando: ordenar acciones",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 212,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Ideas dentro de ideas"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Actividades, gustos, deseos, opiniones, identificación, razones y objetivos dentro de mensajes A1",
+          "after": "Expresar ideas, razones y objetivos. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 15 · subordinación A1",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Ideas dentro de ideas",
+          "after": "Que, porque y para: expresar ideas, razones y objetivos",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 211,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Conecta la frase"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Y, ni, o, pero y uno… otro para pasar de frases aisladas a mensajes conectados",
+          "after": "Conectar ideas cotidianas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 14 · coordinación A1",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Conecta la frase",
+          "after": "Y, o, pero, ni: conectar ideas cotidianas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 119,
+      "fields": {
+        "curriculumSequence": {
+          "before": 47,
+          "after": 53,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "perifrasis",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 47,
+          "after": 53,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Cámara de la Acción"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Inicio, proceso, logro, acumulación, resultado y aproximación desde la perspectiva del hablante",
+          "after": "Mostrar cómo avanza una acción. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 12 · arquitectura verbal C1",
+          "after": "Perífrasis verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Cámara de la Acción",
+          "after": "Aspecto y perífrasis: mostrar cómo avanza una acción",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 118,
+      "fields": {
+        "curriculumSequence": {
+          "before": 46,
+          "after": 52,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 46,
+          "after": 52,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Archivo de las Dos Lecturas"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Elipsis, dislocación, nominalización y concordancia avanzada para investigar matices y ambigüedades",
+          "after": "Aclarar dos interpretaciones. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 10–11 · sintagmas avanzados C1",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Archivo de las Dos Lecturas",
+          "after": "Ambigüedad gramatical: aclarar dos interpretaciones",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 117,
+      "fields": {
+        "curriculumSequence": {
+          "before": 38,
+          "after": 40,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "preposiciones",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 38,
+          "after": 40,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Panel de Conexiones"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Régimen preposicional y complemento predicativo: conexiones que completan el verbo y precisan estados",
+          "after": "Conectar ideas con precisión. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 12.2.5–12.2.6 · B2",
+          "after": "Preposiciones",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Panel de Conexiones",
+          "after": "Verbos con preposición: conectar ideas con precisión",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 116,
+      "fields": {
+        "curriculumSequence": {
+          "before": 37,
+          "after": 39,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 37,
+          "after": 39,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Mesa del Editor"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Elipsis contextual, alcance, complementos ambiguos y selección del adjetivo para escribir con precisión",
+          "after": "Escribir con precisión. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 10–11 · precisión B2",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Mesa del Editor",
+          "after": "Grupos nominales complejos: escribir con precisión",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 115,
+      "fields": {
+        "curriculumSequence": {
+          "before": 33,
+          "after": 34,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "perifrasis",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 33,
+          "after": 34,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Línea de los Cambios"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Soler, volver a, dejar de, ponerse a, estar a punto de y seguir para contar cambios de vida",
+          "after": "Seguir, volver y dejar de hacer algo. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 12.1 · perífrasis B1",
+          "after": "Perífrasis verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Línea de los Cambios",
+          "after": "Perífrasis: seguir, volver y dejar de hacer algo",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 114,
+      "fields": {
+        "curriculumSequence": {
+          "before": 29,
+          "after": 30,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 29,
+          "after": 30,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Laboratorio de la Segunda Versión"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Elipsis, aposición explicativa, restricción e intensidad para decir más sin repetirlo todo",
+          "after": "Decir más sin repetir. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 10–11 · elipsis y modificación B1",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Laboratorio de la Segunda Versión",
+          "after": "Elipsis y reformulación: decir más sin repetir",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 113,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Sala de las Posiciones"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Mover tiempo, lugar y modo; preguntar, exclamar y exhortar sin volver la oración robótica",
+          "after": "Destacar la información importante. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 12–13 · extensión A2",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Sala de las Posiciones",
+          "after": "Orden de la oración: destacar la información importante",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 112,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Estudio del Detalle"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Participios adjetivales, aposición, colectivos, comparación y reacción para describir con precisión",
+          "after": "Identificar y comparar. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 10–11 · extensión A2",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Estudio del Detalle",
+          "after": "Descripciones precisas: identificar y comparar",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 111,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "oraciones",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Mesa de Montaje"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Quién, verbo e información: construir, negar, preguntar y mover una oración completa",
+          "after": "Afirmar, negar y preguntar. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 12–13 · oración simple A1",
+          "after": "Oraciones y conectores",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Mesa de Montaje",
+          "after": "Oraciones básicas: afirmar, negar y preguntar",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 110,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Taller de las Capas"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Determinante, sustantivo, adjetivo y complementos para dejar atrás las frases telegráficas",
+          "after": "Añadir información a una descripción. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC 10–11 · grupos nominales A1",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Taller de las Capas",
+          "after": "Grupos nominales: añadir información a una descripción",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 107,
+      "fields": {
+        "duration": {
+          "before": "20–30 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Modo vs. tiempo verbal"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "La diferencia esencial para entender indicativo, subjuntivo, imperativo y condicional",
+          "after": "Orientarse en una frase. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Mapa del sistema verbal",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Modo vs. tiempo verbal",
+          "after": "Modo y tiempo verbal: orientarse en una frase",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 106,
+      "fields": {
+        "duration": {
+          "before": "2 encuentros · a elección",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "pronombres",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La estación de los dos destinos"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Objeto directo e indirecto desde cero: pronombres, 8 estaciones, 40 decisiones explicadas y atlas",
+          "after": "Evitar repeticiones. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "OD / OI · lo, la, le, me, te, nos",
+          "after": "Pronombres y relativos",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La estación de los dos destinos",
+          "after": "Objeto directo e indirecto: evitar repeticiones",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 46,
+      "fields": {
+        "duration": {
+          "before": "75–90 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "pronombres",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Central de las Identidades"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Pronombres sujeto, objeto, destinatario, reflexivos e interrogativos en una central 3D",
+          "after": "Hablar de quién hace qué. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 7. El pronombre",
+          "after": "Pronombres y relativos",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Central de las Identidades",
+          "after": "Pronombres personales y reflexivos: hablar de quién hace qué",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 47,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min + banco opcional",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "adverbios",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Torre de las Coordenadas"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Lugar, tiempo, cantidad, modo y conexiones con una escena que puedes mover",
+          "after": "Explicar dónde, cuándo y cómo. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 8. El adverbio y las locuciones adverbiales",
+          "after": "Lugar y tiempo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Torre de las Coordenadas",
+          "after": "Adverbios: explicar dónde, cuándo y cómo",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 48,
+      "fields": {
+        "duration": {
+          "before": "90–110 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "ser-estar",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Ciudad de los Motores"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "El sistema verbal desde presente, ser/estar/hay y planes hasta las bases del pasado",
+          "after": "Describir personas y lugares. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 9. El verbo",
+          "after": "Ser, estar y haber",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Ciudad de los Motores",
+          "after": "Ser, estar y hay: describir personas y lugares",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 43,
+      "fields": {
+        "duration": {
+          "before": "65–80 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "determinantes",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Observatorio de las Distancias"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Este, ese, aquel, concordancia y formas neutras dentro de un observatorio 3D",
+          "after": "Elegir entre este, ese y aquel. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 4. Los demostrativos",
+          "after": "Artículos y determinantes",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Observatorio de las Distancias",
+          "after": "Demostrativos: elegir entre este, ese y aquel",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 44,
+      "fields": {
+        "duration": {
+          "before": "65–80 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "determinantes",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Casa de las Pertenencias"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Mi, tu, su, nuestro y la relación entre propietarios y pertenencias en una mansión 3D",
+          "after": "Explicar de quién es cada cosa. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 5. Los posesivos",
+          "after": "Artículos y determinantes",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Casa de las Pertenencias",
+          "after": "Posesivos: explicar de quién es cada cosa",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 45,
+      "fields": {
+        "duration": {
+          "before": "≈ 45 min + banco opcional",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "cantidad",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Mercado de las Cantidades"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Números, cantidades y comparación en un mercado nocturno con una compra interactiva",
+          "after": "Organizar una compra. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 6. Los cuantificadores",
+          "after": "Comparación y cantidad",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Mercado de las Cantidades",
+          "after": "Cantidades: organizar una compra",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 40,
+      "fields": {
+        "duration": {
+          "before": "65–80 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Fábrica de los Nombres"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "El primer mundo A1: sustantivos, género y número desde cero en una fábrica 3D",
+          "after": "Nombrar personas, lugares y cosas. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 1. El sustantivo",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Fábrica de los Nombres",
+          "after": "Sustantivos: nombrar personas, lugares y cosas",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 41,
+      "fields": {
+        "duration": {
+          "before": "60–75 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "concordancia",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Atelier de la Concordancia"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Adjetivos, género, número y posición dentro de un atelier art déco 3D",
+          "after": "Describir lo que ves. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 2. El adjetivo",
+          "after": "Sustantivos y concordancia",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Atelier de la Concordancia",
+          "after": "Adjetivos y concordancia: describir lo que ves",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 42,
+      "fields": {
+        "duration": {
+          "before": "65–80 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "determinantes",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "La Galería de los Artículos"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "El, la, un, una, ausencia de artículo, al y del en una galería 3D",
+          "after": "Presentar algo y volver a mencionarlo. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "PCIC · 3. El artículo",
+          "after": "Artículos y determinantes",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "La Galería de los Artículos",
+          "after": "Artículos: presentar algo y volver a mencionarlo",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 37,
+      "fields": {
+        "curriculumSequence": {
+          "before": 48,
+          "after": 54,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "90+ min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "subjuntivo",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 48,
+          "after": 54,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El País del Subjuntivo"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "El modo completo: 7 mundos 3D, 6 tiempos, 28 desafíos y un atlas maestro",
+          "after": "Cambiar de perspectiva. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Clase maestra · C1",
+          "after": "Subjuntivo",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El País del Subjuntivo",
+          "after": "Subjuntivo y concordancia temporal: cambiar de perspectiva",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 31,
+      "fields": {
+        "curriculumSequence": {
+          "before": 34,
+          "after": 35,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "90+ min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "condicionales",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 34,
+          "after": 35,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Condicionales paso a paso"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Cero, primero, segundo, tercero y mixtos · una estructura por vez · 100% en español",
+          "after": "Proponer soluciones. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Clase completa",
+          "after": "Condicionales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Condicionales paso a paso",
+          "after": "Condiciones y consejos: proponer soluciones",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 23,
+      "fields": {
+        "curriculumSequence": {
+          "before": 39,
+          "after": 41,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "90+ min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "condicionales",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 39,
+          "after": 41,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Multiverso del ‘Si’"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Todos los condicionales, desde la realidad hasta los universos mixtos",
+          "after": "Imaginar otros resultados. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Clase maestra · B2–C1",
+          "after": "Condicionales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Multiverso del ‘Si’",
+          "after": "Condicionales del pasado: imaginar otros resultados",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 18,
+      "fields": {
+        "curriculumSequence": {
+          "before": 30,
+          "after": 31,
+          "hadBefore": true
+        },
+        "duration": {
+          "before": "90 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "routeSequence": {
+          "before": 30,
+          "after": 31,
+          "hadBefore": true
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "El Pasado"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Indefinido + imperfecto + perfecto compuesto con una comparación visual inolvidable",
+          "after": "Describir y contar qué pasó. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Clase completa",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "El Pasado",
+          "after": "Imperfecto e indefinido: describir y contar qué pasó",
+          "hadBefore": true
+        }
+      }
+    },
+    {
+      "id": 3,
+      "fields": {
+        "duration": {
+          "before": "60 min",
+          "after": "≈ 60 min",
+          "hadBefore": true
+        },
+        "grammarTopic": {
+          "before": null,
+          "after": "tiempos",
+          "hadBefore": false
+        },
+        "searchAliases": {
+          "before": null,
+          "after": [
+            "Presente con vos"
+          ],
+          "hadBefore": false
+        },
+        "subtitle": {
+          "before": "Hablás, comés, vivís: el patrón rioplatense",
+          "after": "Hablar de tu rutina en Argentina. Lectura, escucha, conversación y escritura con apoyo docente.",
+          "hadBefore": true
+        },
+        "tag": {
+          "before": "Argentina real",
+          "after": "Tiempos verbales",
+          "hadBefore": true
+        },
+        "title": {
+          "before": "Presente con vos",
+          "after": "Presente con vos: hablar de tu rutina en Argentina",
+          "hadBefore": true
+        }
+      }
+    }
+  ],
+  "newIds": [
+    230,
+    231,
+    232,
+    233,
+    234,
+    235
+  ]
+}

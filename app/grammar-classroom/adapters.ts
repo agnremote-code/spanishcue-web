@@ -17,6 +17,13 @@ const choice=(prompt:string,options:string[],answer:number,explanation:string,ac
 const open=(prompt:string,model:string,criterion:string):Exercise=>({kind:'open',prompt,model,criteria:[criterion,'Se aceptan otras formulaciones que conservan el significado y la estructura objetivo.']});
 
 const choiceIndices:Record<number,number[]>={40:[0,1,2,3],41:[0,1,2,5],42:[0,1,6,7],43:[0,1,2,3],44:[0,1,2,7],45:[0,1,2,3],47:[0,1,2,4],110:[0,1,2,3],111:[0,1,2,3],112:[0,2,3],114:[0,1,2],115:[0,1,3,5],211:[0,2,3,5]};
+const verbChoices:Record<number,number[]>={140:[0,4],143:[0,1,3,4],144:[0,1,3,4],145:[0],148:[0,2],149:[0,1,2,4],152:[1,2,3,4]};
+const verbTransforms:Record<number,number[]>={143:[0,2],144:[0,2],145:[0],148:[1]};
+const verbExtra:Record<number,Exercise[]>={
+  140:[choice('Yo ___ en una oficina todos los días.',['trabajo','trabaja','trabajamos'],0,'Yo concuerda con trabajo en el presente habitual.'),choice('Tú ___ cerca del centro.',['viven','vives','vivimos'],1,'Tú corresponde a la terminación -es de vivir.')],
+  145:[choice('Da una instrucción afirmativa con tú: ___ la puerta.',['Abre','Abres','Abrir'],0,'El imperativo afirmativo de abrir para tú es abre.'),choice('Da una instrucción negativa con tú para no tocar un cable: ___ el cable.',['No toca','No toques','No tocas'],1,'La instrucción negativa usa no + presente de subjuntivo.'),choice('Da una instrucción afirmativa con tú para organizar una visita.',['Ven mañana.','Vienes mañana.','Viene mañana.'],0,'Ven es el imperativo irregular afirmativo de venir para tú.'),open('Da dos instrucciones con tú: esperar aquí y no abrir la ventana.','Espera aquí. No abras la ventana.','Distingue la forma afirmativa y la negativa del imperativo de tú.')],
+  148:[choice('Expresa una valoración de una acción ajena: es importante que tú ___ la dirección.',['confirmes','confirmas','confirmar'],0,'Es importante que introduce una valoración y selecciona subjuntivo.'),choice('Expresa un deseo para otra persona: espero que Ana ___ tiempo.',['tiene','tenga','tener'],1,'Espero que presenta un deseo y lleva subjuntivo.'),open('Pide que otra persona confirme una cita usando quiero que.','Quiero que confirmes la cita.','Usa subjuntivo con quiero que y una persona distinta; acepta confirme/confirmen según el destinatario.')],
+};
 const applications:Record<number,Exercise[]>={
   40:[open('Escribe en plural: una luz, una canción, un libro.','Unas luces, unas canciones, unos libros.','Conserva género y aplica -ces, -es y -s.'),open('Nombra dos objetos y un lugar de tu entorno con su artículo.','La mesa, el teléfono y la oficina.','Distingue nombres y mantiene el artículo correspondiente.')],
   41:[open('Cambia a plural: una oficina tranquila y grande.','Unas oficinas tranquilas y grandes.','Concuerdan sustantivo y adjetivos.'),open('Describe dos objetos reales con adjetivos distintos.','Mi mesa es pequeña. Mis sillas son cómodas.','Las cualidades concuerdan con el objeto descrito.')],
@@ -45,7 +52,7 @@ export function adaptCore(id:number,path:string,context:LessonContext):{grammar:
   if(world){
     grammar=pick(world.stations,indices).map(x=>({title:x.title,form:x.formulas.join(' · '),meaning:x.rule,examples:x.examples.map(e=>e.es),contrast:x.note}));
     if(id===40)grammar[0].title='Personas, lugares, objetos e ideas';
-    practice=pick(world.practice,choiceIndices[id]||[0,1,2,3]).map(x=>choice(x.prompt,x.options,x.answer,x.why));
+    practice=pick(world.practice,choiceIndices[id]||[0,1,2,3]).map(x=>choice(`${x.context?x.context+' ':''}${id===42&&x.prompt.includes('cerrar')?'Ambos ven una única ventana abierta. ':''}${x.prompt}`,x.options,x.answer,x.why));
   }else if(phrase||advancedPhrase){
     const source=phrase||advancedPhrase!;
     const rules:{title:string;formula:string;explanation:string;examples:string[]}[]=phrase?phrase.principles:advancedPhrase!.chapters;
@@ -55,12 +62,18 @@ export function adaptCore(id:number,path:string,context:LessonContext):{grammar:
     grammar=pick(sentence.patterns,indices).map(x=>({title:x.label,form:x.formula,meaning:x.explanation,examples:[x.example]}));
     const decisions=pick(sentence.decisions,choiceIndices[id]||[0,1,2,3]);
     practice=decisions.map(x=>choice(`${x.prompt} ${x.left} … ${x.right}`.trim(),x.options,x.correct,x.feedback,x.accepted));
+    if(id===220){
+      const shared=practice[1];
+      if(shared.kind==='choice'){shared.answers=[0,1];shared.explanation='Esté trata la cancelación compartida como objeción de fondo; está vuelve a afirmarla. Compartir el dato no obliga por sí solo a usar subjuntivo. Explica la perspectiva elegida.';}
+    }
     // Repairs already carry meaning-specific prompts. Accept alternate solutions manually.
     practice.push(...sentence.repairs.slice(0,2).map(x=>open(`${x.prompt} Frase que revisar: «${x.original}»`,x.options[x.correct],x.feedback)));
   }else if(verb){
-    grammar=[{title:'Formación y perspectiva',form:verb.formula,meaning:verb.formation.join(' '),examples:verb.examples.slice(0,2).map(x=>x.es),contrast:verb.core},...pick(verb.uses,indices.filter(i=>i<verb.uses.length).slice(0,2)).map(x=>({title:x.title,form:verb.formula,meaning:x.explanation,examples:[x.example.es]}))];
-    practice=verb.practice.slice(0,4).map(x=>choice(x.prompt,x.options,x.answer,x.why));
-    practice.push(...verb.transform.slice(0,2).map(x=>open(x.prompt,x.answer,x.why)));
+    grammar=[{title:'Formación y perspectiva',form:verb.formula,meaning:verb.formation.join(' '),examples:verb.examples.slice(0,2).map(x=>x.es),contrast:verb.core},...pick(verb.uses,indices.filter(i=>i<verb.uses.length)).map(x=>({title:x.title,form:verb.formula,meaning:x.explanation,examples:[x.example.es]}))];
+    practice=pick(verb.practice,verbChoices[id]||[0,1,2,3]).map(x=>choice(x.prompt,x.options,x.answer,x.why));
+    const extra=verbExtra[id]||[];
+    practice.push(...extra.filter(x=>x.kind==='choice'));
+    practice.push(...pick(verb.transform,verbTransforms[id]||[0,1]).map(x=>open(x.prompt,x.answer,x.why)),...extra.filter(x=>x.kind==='open'));
   }
   if(applications[id])practice.push(...applications[id]);
   return {grammar:context.grammar||grammar,practice:context.practice||practice};

@@ -3249,7 +3249,7 @@
     ],
     "reading": {
       "title": "Cambiar la presentación",
-      "text": "El lunes, la coordinadora dijo que la presentación empezaría el viernes a las diez. También explicó que cada participante tendría cinco minutos para hablar. Julia preparó sus diapositivas con ese horario en mente, pero ayer recibió una invitación con una hora diferente. Ahora quiere aclararlo sin molestar al equipo. Escribe: «¿Podrías confirmar la hora? Preferiría presentar después de Marta porque compartimos parte del tema. También me gustaría saber si habría tiempo para preguntas». Julia no exige una decisión inmediata: propone opciones y busca información. Su compañero responde que revisaría el programa por la tarde y enviaría una versión nueva. Mientras espera, Julia organiza un resumen que serviría para una presentación más corta.",
+      "text": "El lunes, la coordinadora dijo que la presentación empezaría el viernes a las diez. También explicó que cada participante tendría cinco minutos para hablar. Julia preparó sus diapositivas con ese horario en mente, pero ayer recibió una invitación con una hora diferente. Ahora quiere aclararlo sin molestar al equipo. Escribe: «¿Podrías confirmar la hora? Preferiría presentar después de Marta porque compartimos parte del tema. También me gustaría saber si habría tiempo para preguntas». Julia no exige una decisión inmediata: propone opciones y busca información. Su compañero respondió que revisaría el programa por la tarde y enviaría una versión nueva. Mientras espera, Julia organiza un resumen que serviría para una presentación más corta.",
       "questions": [
         {
           "kind": "meaning",
@@ -4695,7 +4695,7 @@
         {
           "kind": "meaning",
           "prompt": "¿Por qué esperó para avisar?",
-          "model": "Quería ofrecer una solución completa, aunque causó menos margen al otro.",
+          "model": "Quería ofrecer una solución completa, aunque dejó menos margen a Julia.",
           "criteria": [
             "Interpreta intención y consecuencia"
           ]
@@ -6036,7 +6036,7 @@
         100,
         140
       ],
-      "model": "La forma «hubo terminado» presenta la lectura como completada inmediatamente antes de la entrega de documentos. Para el boletín propongo «apenas terminó la lectura, la secretaria entregó los documentos», que mantiene el orden y un ritmo cercano al original. La revisión de la lista también precede a la salida. Podemos escribir «después de revisar la lista, los asistentes salieron». Si interesa destacar un estado anterior, conviene otra formulación con había, pero cambia el foco. Conservaría una cita breve para mostrar el registro de la crónica y añadiría una explicación. No trasladaría esas formas al correo cotidiano del equipo. del centro cultural.",
+      "model": "La forma «hubo terminado» presenta la lectura como completada inmediatamente antes de la entrega de documentos. Para el boletín propongo «apenas terminó la lectura, la secretaria entregó los documentos», que mantiene el orden y un ritmo cercano al original. La revisión de la lista también precede a la salida. Podemos escribir «después de revisar la lista, los asistentes salieron». Si interesa destacar un estado anterior, conviene otra formulación con había, pero cambia el foco. Conservaría una cita breve para mostrar el registro de la crónica y añadiría una explicación. No trasladaría esas formas al correo cotidiano del equipo del centro cultural.",
       "checklist": [
         "Interpreta anterioridad inmediata",
         "Moderniza sin alterar orden temporal",

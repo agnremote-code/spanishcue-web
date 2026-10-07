@@ -67,12 +67,12 @@ export const grammarMetadata: Record<number, { title: string; grammarTopic: stri
 ].map(([id, grammarTopic, title]) => [id, { title, grammarTopic }])) as Record<number, { title: string; grammarTopic: string }>;
 
 const additions = [
-  [227, 'A2', 'adverbios', 'desde-hace-duracion', 'Desde y hace: contar cuánto tiempo llevas así', 'Distingue el punto de inicio y la duración al hablar de tu vida actual.', 4100, [47,140]],
-  [228, 'B1', 'preposiciones', 'por-para-razones-objetivos', 'Por y para: explicar razones, objetivos y destinatarios', 'Organiza una entrega y explica motivos, plazos, recorridos e intercambios.', 4200, [47,212]],
-  [229, 'B2', 'voz', 'pasiva-impersonal-informar', 'Pasiva e impersonal: informar sin nombrar a quien actúa', 'Elige entre se, una pasiva y una frase activa para escribir avisos claros.', 4300, [46,142]],
-  [230, 'B2', 'discurso', 'estilo-indirecto-transmitir', 'Estilo indirecto: transmitir lo que alguien dijo o pidió', 'Comunica cambios de una cita conservando la intención y la referencia temporal.', 4400, [147,150]],
-  [231, 'B2', 'pronombres', 'relativos-con-preposicion', 'Relativos con preposición: precisar de quién y de qué hablas', 'Relaciona personas, lugares y propuestas sin perder la preposición necesaria.', 4500, [218,117]],
-  [232, 'B2', 'oraciones', 'consecuencias-tan-tanto', 'Tan, tanto y así que: explicar consecuencias', 'Relaciona intensidad, hechos y resultados para justificar una decisión.', 4600, [45,217]],
+  [230, 'A2', 'adverbios', 'desde-hace-duracion', 'Desde y hace: contar cuánto tiempo llevas así', 'Distingue el punto de inicio y la duración al hablar de tu vida actual.', 4100, [47,140]],
+  [231, 'B1', 'preposiciones', 'por-para-razones-objetivos', 'Por y para: explicar razones, objetivos y destinatarios', 'Organiza una entrega y explica motivos, plazos, recorridos e intercambios.', 4200, [47,212]],
+  [232, 'B2', 'voz', 'pasiva-impersonal-informar', 'Pasiva e impersonal: informar sin nombrar a quien actúa', 'Elige entre se, una pasiva y una frase activa para escribir avisos claros.', 4300, [46,142]],
+  [233, 'B2', 'discurso', 'estilo-indirecto-transmitir', 'Estilo indirecto: transmitir lo que alguien dijo o pidió', 'Comunica cambios de una cita conservando la intención y la referencia temporal.', 4400, [147,150]],
+  [234, 'B2', 'pronombres', 'relativos-con-preposicion', 'Relativos con preposición: precisar de quién y de qué hablas', 'Relaciona personas, lugares y propuestas sin perder la preposición necesaria.', 4500, [218,117]],
+  [235, 'B2', 'oraciones', 'consecuencias-tan-tanto', 'Tan, tanto y así que: explicar consecuencias', 'Relaciona intensidad, hechos y resultados para justificar una decisión.', 4600, [45,217]],
 ] as const;
 
 export const newGrammarEntries: LessonSource[] = additions.map(([id,level,grammarTopic,slug,title,subtitle,curriculumOrder,requires]) => {
@@ -87,6 +87,8 @@ export function applyGrammarMetadata<T extends LessonSource>(lesson:T):T & {gram
   if (lesson.category !== 'Gramática') return lesson;
   const metadata=grammarMetadata[lesson.id];
   if (!metadata) throw new Error(`Falta la categoría gramatical de ${lesson.id}`);
-  return {...lesson,...metadata,duration:'≈ 60 min',searchAliases:[...(lesson.searchAliases||[]),lesson.title],
+  const use=metadata.title.split(': ').slice(1).join(': ');
+  const subtitle=lesson.id>=230?lesson.subtitle:`${use.charAt(0).toUpperCase()+use.slice(1)}. Lectura, escucha, conversación y escritura con apoyo docente.`;
+  return {...lesson,...metadata,subtitle,duration:'≈ 60 min',searchAliases:[...(lesson.searchAliases||[]),lesson.title],
     tag:grammarTopics.find(t=>t.id===metadata.grammarTopic)!.label};
 }

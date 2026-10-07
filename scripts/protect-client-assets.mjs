@@ -76,6 +76,8 @@ const publicRoots = new Set([
   "app/sistema-verbal/page.tsx",
   "app/verbal-system/SystemHub.tsx",
   "app/grammar-worlds/GrammarWorld.tsx",
+  // Shared renderer only; paid lesson bodies arrive in authorized page props.
+  "app/grammar-classroom/Classroom.tsx",
   "app/conversation-worlds/ConversationWorld.tsx",
   // Autoestudio engines carry no lesson bodies: module data arrives only in
   // the authorized page render (the Worker gates PRO weeks).

@@ -4,12 +4,12 @@ import fs from 'node:fs';
 import {build} from 'esbuild';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
-await build({entryPoints:['app/grammar-classroom/lessons.ts'],outfile:'.sites-runtime/tests/classroom-lessons.cjs',bundle:true,platform:'node',format:'cjs'});
-const {getClassroomLesson,classroomIds}=require('../.sites-runtime/tests/classroom-lessons.cjs');
+await build({entryPoints:['app/grammar-classroom/lessons.ts'],outfile:'node_modules/.cache/grammar-classroom/classroom-lessons.cjs',bundle:true,platform:'node',format:'cjs'});
+const {getClassroomLesson,classroomIds}=require('../node_modules/.cache/grammar-classroom/classroom-lessons.cjs');
 const baseline=JSON.parse(fs.readFileSync('docs/audits/grammar-catalog-20261007.json','utf8'));
 const words=s=>s.trim().split(/\s+/u).length;
 test('all original routes and six new curricula have substantial, distinct four-skill material',()=>{
-  assert.deepEqual([...classroomIds].sort((a,b)=>a-b),[...baseline.lessons.map(x=>x.id),227,228,229,230,231,232].sort((a,b)=>a-b));
+  assert.deepEqual([...classroomIds].sort((a,b)=>a-b),[...baseline.lessons.map(x=>x.id),230,231,232,233,234,235].sort((a,b)=>a-b));
   const readings=new Set(),scripts=new Set();
   for(const id of classroomIds){
     const x=getClassroomLesson(id);assert.ok(x,`lesson ${id}`);
@@ -40,4 +40,21 @@ test('all original routes and six new curricula have substantial, distinct four-
 });
 test('historic tenses explicitly prioritize reception and contemporary reformulation',()=>{
   for(const id of [154,155,156])assert.match(getClassroomLesson(id).scope,/recep|reconoc|interpret/iu);
+});
+test('objective answers preserve the task context and permit a defensible modal alternative',()=>{
+  const time=getClassroomLesson(47).practice.find(x=>x.prompt.includes('empieza la clase'));
+  assert.match(time.prompt,/hora|nueve/iu);
+  const window=getClassroomLesson(42).practice.find(x=>x.prompt.includes('cerrar'));
+  assert.match(window.prompt,/única ventana/iu);
+  const concession=getClassroomLesson(220).practice[1];
+  assert.equal(concession.kind,'choice');assert.deepEqual(concession.answers,[0,1]);
+  assert.match(concession.explanation,/no obliga/iu);
+});
+test('focused productive verbal practice does not require the declared extensions',()=>{
+  const imperative=JSON.stringify(getClassroomLesson(145).practice);
+  assert.doesNotMatch(imperative,/vos|usted|Cuéntamelo|Dímelo/);
+  const subjunctive=getClassroomLesson(148);
+  assert.ok(subjunctive.grammar.some(x=>x.title==='Finalidad'));
+  assert.doesNotMatch(JSON.stringify(subjunctive.practice),/Cuando ___ mañana|referente buscado/);
+  assert.doesNotMatch(JSON.stringify(getClassroomLesson(144).practice),/estará trabajando|Ana estará/);
 });

@@ -1,43 +1,78 @@
 import * as THREE from 'three';
-import type { Player } from './engine.mjs';
-// No rigged model is present in the brand repository. The identity-preserving
-// directional atlas is a deliberate hybrid; the cape is an actual 3D surface.
-export type ForestHero = { root: THREE.Group; body: THREE.Mesh; cape: THREE.Mesh<THREE.PlaneGeometry,THREE.MeshStandardMaterial>; atlas: THREE.Texture; phase:number; lastGrounded:boolean; landing:number; dispose:()=>void };
-export function createForestHero(shadows=true):ForestHero {
- const root=new THREE.Group();
- const atlas=new THREE.TextureLoader().load('/bosque-hongos/hero-atlas.webp');atlas.colorSpace=THREE.SRGBColorSpace;atlas.repeat.set(.25,.25);atlas.offset.set(0,.25);atlas.magFilter=THREE.LinearFilter;
- const material=new THREE.MeshStandardMaterial({map:atlas,transparent:true,alphaTest:.16,side:THREE.DoubleSide,roughness:.75});
- const body=new THREE.Mesh(new THREE.PlaneGeometry(2.05,2.05),material);body.position.y=1.025;body.castShadow=shadows;root.add(body);
- const cloth=new THREE.PlaneGeometry(1.1,1.5,12,18);const cape=new THREE.Mesh(cloth,new THREE.MeshStandardMaterial({color:'#132b50',side:THREE.DoubleSide,roughness:.8,metalness:.12}));cape.castShadow=shadows;cape.receiveShadow=shadows;root.add(cape);
- const clasp=new THREE.Mesh(new THREE.TorusGeometry(.075,.022,8,20,Math.PI*1.7),new THREE.MeshStandardMaterial({color:'#c8aa66',metalness:.65,roughness:.35}));clasp.position.set(.23,1.58,.03);body.add(clasp);clasp.position.y=.48;
- let disposed=false;
- return{root,body,cape,atlas,phase:0,lastGrounded:true,landing:0,dispose(){if(disposed)return;disposed=true;root.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});atlas.dispose();}};
+import { createHero, animateHero, type Hero } from '../noche-abierta/hero3d';
+import { PLATFORMS, type Player } from './engine.mjs';
+
+// The forest uses the same procedural SpanishCue mascot as La Noche Abierta:
+// a real 3D figure with a distance-driven run cycle. The forest adds what a
+// platformer needs: a smooth turn toward the movement, a readable jump pose,
+// a landing squash and a contact shadow on the surface right below the feet,
+// so the learner always sees where a jump will land.
+export type ForestHero = {
+  root: THREE.Group; hero: Hero; shadow: THREE.Mesh<THREE.CircleGeometry, THREE.MeshBasicMaterial>;
+  heading: number; air: number; landing: number; lastGrounded: boolean; dispose: () => void;
+};
+const TURN_RATE = 14;
+const wrap = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
+
+export function createForestHero(shadows = true): ForestHero {
+  const root = new THREE.Group();
+  const hero = createHero(shadows);
+  root.add(hero.root);
+  const canvas = document.createElement('canvas'); canvas.width = canvas.height = 64;
+  const c = canvas.getContext('2d')!;
+  const g = c.createRadialGradient(32, 32, 2, 32, 32, 31); g.addColorStop(0, 'rgba(10,20,12,.55)'); g.addColorStop(1, 'rgba(10,20,12,0)'); c.fillStyle = g; c.fillRect(0, 0, 64, 64);
+  const map = new THREE.CanvasTexture(canvas);
+  const shadow = new THREE.Mesh(new THREE.CircleGeometry(.62, 24).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 }));
+  shadow.renderOrder = 2;
+  let disposed = false;
+  return {
+    root, hero, shadow, heading: 0, air: 0, landing: 0, lastGrounded: true,
+    dispose() {
+      if (disposed) return; disposed = true;
+      root.traverse(o => { if (o instanceof THREE.Mesh) { o.geometry.dispose(); for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.dispose(); } });
+      shadow.geometry.dispose(); shadow.material.dispose(); map.dispose();
+    },
+  };
 }
-export function animateForestHero(hero:ForestHero,time:number,dt:number,player:Player,speed:number,camera:THREE.Camera){
- hero.root.position.set(player.x,player.y,player.z);
- const facing=Math.atan2(camera.position.x-player.x,camera.position.z-player.z);
- hero.body.rotation.y=facing;
- const relative=THREE.MathUtils.euclideanModulo(player.yaw-facing,Math.PI*2);
- const view=Math.round(relative/(Math.PI/2))%4;
- // Atlas rows: front, right profile, back, left profile.
- const row=[0,1,2,3][view];
- hero.phase+=dt*speed*1.35;
- const frame=speed>.15?Math.floor(hero.phase)%4:0;
- hero.atlas.offset.set(frame*.25,(3-row)*.25);
- if(player.grounded&&!hero.lastGrounded)hero.landing=.13;
- hero.landing=Math.max(0,hero.landing-dt);hero.lastGrounded=player.grounded;
- hero.body.scale.y=1-hero.landing*.4;hero.body.position.y=1.025-hero.landing*.35+(player.grounded&&speed<.1?Math.sin(time*2)*.012:0);
- // Segmented cape, attached at the shoulders, with gravity and trailing waves.
- const positions=hero.cape.geometry.attributes.position;
- for(let i=0;i<positions.count;i++){
-  const u=(i%13)/12,v=Math.floor(i/13)/18;
-  const width=.32+v*.86;
-  const x=(u-.5)*width;
-  const fall=player.vy<0?Math.min(.65,-player.vy*.04):0;
-  const drag=Math.min(.9,speed*.08)+(player.grounded?0:.2);
-  const y=1.64-v*(1.36-fall*.45)-hero.landing*.3;
-  const z=-.15-v*drag+Math.sin(time*5-v*5+u*5)*v*(.055+speed*.012)+Math.sin(u*Math.PI*7)*v*.045;
-  positions.setXYZ(i,x,y,z);
- }
- positions.needsUpdate=true;hero.cape.geometry.computeVertexNormals();hero.cape.rotation.y=player.yaw;
+
+/** Highest walkable surface under (x, z) at or below y. */
+export function surfaceBelow(x: number, y: number, z: number) {
+  let top = Math.hypot(x, z) < 65 ? 0 : -Infinity;
+  for (const p of PLATFORMS) if (p.y <= y + .05 && p.y > top && Math.hypot(x - p.x, z - p.z) <= p.r + .24) top = p.y;
+  return top;
+}
+
+export function animateForestHero(h: ForestHero, dt: number, player: Player, speed: number, reduced = false, talking = false) {
+  // Turn smoothly toward where the learner is moving instead of snapping.
+  const before = h.heading;
+  if (speed > .2) h.heading = wrap(h.heading + wrap(player.yaw - h.heading) * (1 - Math.exp(-TURN_RATE * dt)));
+  const turn = dt > 0 ? wrap(h.heading - before) / dt : 0;
+  h.root.position.set(player.x, player.y, player.z);
+  h.hero.root.rotation.y = h.heading;
+  animateHero(h.hero, dt, player.grounded ? speed : speed * .3, turn, talking ? 'talk' : 'move', reduced);
+  // Jump pose: knees tuck and arms rise while airborne, blended in and out.
+  h.air += ((player.grounded ? 0 : 1) - h.air) * Math.min(1, dt * (player.grounded ? 14 : 9));
+  const p = h.hero.parts, a = h.air, rising = player.vy > 0 ? 1 : 0;
+  if (a > .01) {
+    p.legL.rotation.x += (-.95 * rising - .35 - p.legL.rotation.x) * a;
+    p.legR.rotation.x += (-.25 - .5 * rising - p.legR.rotation.x) * a;
+    p.shinL.rotation.x += (1.35 - p.shinL.rotation.x) * a;
+    p.shinR.rotation.x += (.6 + .5 * rising - p.shinR.rotation.x) * a;
+    p.armL.rotation.x += (-1.9 - p.armL.rotation.x) * a * .8;
+    p.armR.rotation.x += (-1.6 - p.armR.rotation.x) * a * .8;
+    p.armL.rotation.z += (.5 - p.armL.rotation.z) * a; p.armR.rotation.z += (-.5 - p.armR.rotation.z) * a;
+    p.torso.rotation.x += (.18 - p.torso.rotation.x) * a;
+  }
+  // Landing squash.
+  if (player.grounded && !h.lastGrounded) h.landing = .16;
+  h.lastGrounded = player.grounded; h.landing = Math.max(0, h.landing - dt);
+  h.hero.body.scale.set(1 + h.landing * .5, 1 - h.landing * .9, 1 + h.landing * .5);
+  // Contact shadow on the landing surface: smaller and fainter the higher you are.
+  const ground = surfaceBelow(player.x, player.y, player.z);
+  const height = Number.isFinite(ground) ? player.y - ground : 99;
+  h.shadow.visible = height < 30;
+  h.shadow.position.set(player.x, (Number.isFinite(ground) ? ground : 0) + .05, player.z);
+  const k = Math.max(.35, 1 - height / 14);
+  h.shadow.scale.setScalar(k);
+  h.shadow.material.opacity = Math.max(.25, k);
 }
