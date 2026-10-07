@@ -55,7 +55,7 @@ Clusters in priority order. Volume labels are directional (from SERP research on
 /spanish-conversation-questions     Question bank, 150 questions (EN, server-rendered, client filters)
 /spanish-grammar-lessons            Grammar landing (EN) — next hub to rebuild
 /free-spanish-lesson, /online-spanish-teaching-resources, /ele-recursos-profesores   Landings (indexable, template)
-/resources, /resources/{slug}       Lesson library and 111 public lesson pages (EN, LearningResource schema)
+/resources, /resources/{slug}       Lesson library and 114 public lesson pages (EN, LearningResource schema; count computed from the catalog)
 /guides, /guides/{slug}             63 guides (EN, Article + BreadcrumbList)
 /autoestudio, /autoestudio/{level}, free weeks   Self-study course (ES)
 /pricing, legal pages, free lesson routes
