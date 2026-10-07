@@ -80,7 +80,7 @@ export const newGrammarEntries: LessonSource[] = additions.map(([id,level,gramma
   return { id, level, category:'Gramática', title, subtitle, duration:'≈ 60 min',
     curriculumOrder, requires:[...requires], path:`/gramatica/${slug}`, special:true,
     news:{addedAt:'2026-10-07',featured:true}, tag:grammarTopics.find(t=>t.id===grammarTopic)!.label,
-    image:'/brand/spanishcue-global-stage.webp', goals:[subtitle],warmup:'',explanation:'',practice:[],speaking:[],homework:'' };
+    image:`/grammar-classroom/previews/${slug}.webp`, goals:[subtitle],warmup:'',explanation:'',practice:[],speaking:[],homework:'' };
 });
 
 export function applyGrammarMetadata<T extends LessonSource>(lesson:T):T & {grammarTopic?:string} {
