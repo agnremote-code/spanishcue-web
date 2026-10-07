@@ -52,9 +52,16 @@ export default function SuccessClient({ subscriptionId, returnTo }: { subscripti
           body: JSON.stringify({ subscriptionId }),
         });
         if (response.ok && response.status !== 204) {
-          const body = await response.json() as { transactionId?: unknown };
-          if (typeof body.transactionId === "string" && !cancelled) {
-            trackMarketingEvent("subscription_first_paid", { transaction_id: body.transactionId });
+          const body = await response.json() as { transactionId?: unknown; value?: unknown; currency?: unknown };
+          if (typeof body.transactionId === "string"
+              && typeof body.value === "number" && Number.isFinite(body.value) && body.value > 0
+              && typeof body.currency === "string" && /^[A-Z]{3}$/.test(body.currency)
+              && !cancelled) {
+            trackMarketingEvent("subscription_first_paid", {
+              transaction_id: body.transactionId,
+              value: body.value,
+              currency: body.currency,
+            });
             conversionChecked.current = true;
           }
           return;
