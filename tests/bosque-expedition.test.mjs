@@ -43,3 +43,41 @@ test('B1 expedition: one authored station per landmark, a choice that triggers t
   }
   assert.equal(b1.find(p => p.zone === 'cambia').type, 'change-condition'); assert.ok(b1.find(p => p.zone === 'cambia').condition);
 });
+
+test('clean playable space: station props leave arrivals and departures open, solids never sit in a jump corridor', async () => {
+  const { OBSTACLES, MICRO_SPOTS, stepPlayer, spawnPlayer } = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+  const route = PLATFORMS.filter(p => !p.id.startsWith('side'));
+  for (const zone of ZONES) {
+    const i = route.findIndex(p => p.zone === zone.id), cap = route[i];
+    for (const neighbour of [route[i - 1], route[i + 1]].filter(Boolean)) {
+      // The straight line from the centre to the neighbour crosses the rim without touching a prop.
+      const dx = neighbour.x - cap.x, dz = neighbour.z - cap.z, d = Math.hypot(dx, dz);
+      for (let t = 0; t <= cap.r + .3; t += .1) {
+        const x = cap.x + dx / d * t, z = cap.z + dz / d * t;
+        for (const o of OBSTACLES.filter(o => o.id.startsWith(`${zone.id}-`))) assert.ok(Math.hypot(x - o.x, z - o.z) > o.r + .35, `${o.id} blocks the way between ${cap.id} and ${neighbour.id}`);
+      }
+    }
+    // Landing in the centre is never inside a prop.
+    for (const o of OBSTACLES.filter(o => o.id.startsWith(`${zone.id}-`))) assert.ok(Math.hypot(o.x - cap.x, o.z - cap.z) > o.r + 1.2, `${o.id} sits on the landing spot`);
+  }
+  // A walk into a station prop stops at its surface instead of passing through it.
+  const zone = ZONES[4], prop = OBSTACLES.find(o => o.id === `${zone.id}-prop`);
+  let p = { ...spawnPlayer(), x: zone.x, y: zone.y, z: zone.z, platform: `zone-${zone.id}`, checkpoint: { x: zone.x, y: zone.y, z: zone.z } };
+  for (let k = 0; k < 120; k++) { const dx = prop.x - p.x, dz = prop.z - p.z, d = Math.hypot(dx, dz) || 1; p = stepPlayer(p, { x: dx / d, z: dz / d }, 1 / 60); }
+  assert.ok(Math.hypot(p.x - prop.x, p.z - prop.z) >= prop.r + .34, 'the player cannot enter a prop');
+  assert.equal(p.y, zone.y, 'and stays on the cap');
+  // Stems and trunks around the route are solid but never inside a corridor that a jump uses.
+  for (const o of OBSTACLES.filter(o => o.id.endsWith('-trunk'))) assert.ok(PLATFORMS.every(q => q.kind === 'shelf' || Math.hypot(q.x - o.x, q.z - o.z) > q.r + o.r - .5 || q.y > o.y1), o.id);
+  assert.ok(MICRO_SPOTS.length >= 18, 'short conversation moments between stations');
+  assert.equal(new Set(MICRO_SPOTS.map(m => m.platform)).size, MICRO_SPOTS.length);
+  for (const m of MICRO_SPOTS) assert.ok(!PLATFORMS.find(p => p.id === m.platform).zone, `${m.id} is not on a station`);
+});
+
+test('B1 short moments: one per spot, varied, spoken and never checked', async () => {
+  const { MICRO_SPOTS } = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+  const { micro } = await import('../app/bosque-de-los-hongos-gigantes/content/stations/b1.mjs');
+  assert.deepEqual(micro.map(m => m.id).sort(), MICRO_SPOTS.map(m => m.id).sort());
+  assert.ok(new Set(micro.map(m => m.type)).size >= 5, 'observe, react, choose, imagine, tell, compare');
+  for (const m of micro) { assert.ok(m.prompt.length > 30 && m.label && m.hint); assert.ok(!Object.keys(m).some(k => /answer|score|correct/i.test(k))); if (m.choices) assert.ok(m.choices.length >= 2); }
+  assert.equal(new Set(micro.map(m => m.prompt)).size, micro.length);
+});

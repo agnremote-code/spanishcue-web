@@ -41,3 +41,15 @@
  .bh .bfg-world button.bfg-world-converse{position:static;min-height:40px;padding:7px 12px}
  .bfg-world-hint{font-size:9px;padding:5px 8px}
 }
+
+.bfg-world-climb i{position:absolute;left:-4px;width:14px;height:3px;margin-bottom:-1px;border-radius:2px;background:#0f241ccc;border:1px solid #f1ebd755}.bfg-world-climb i.passed{background:#f1ebd7aa}.bfg-world-climb i.done{background:#f2cd6b;border-color:#fff3c4;box-shadow:0 0 6px #f2cd6b}
+.bfg-world-climb small{line-height:1.35;text-align:left;left:-4px;transform:none;padding:3px 6px;border-radius:6px;background:#0f241cd9}
+.bfg-world-banner{position:absolute;left:50%;top:22%;transform:translateX(-50%);pointer-events:none;text-align:center;color:#fff8e4;text-shadow:0 2px 18px #00000080;animation:bfg-banner 3.6s ease forwards}
+.bfg-world-banner span{display:block;font:700 10px Arial,sans-serif;letter-spacing:.3em;color:#f4d58c}.bfg-world-banner strong{display:block;font:400 clamp(30px,4.4vw,54px)/1.05 Georgia,serif;margin:8px 0}.bfg-world-banner small{display:block;font-size:14px;color:#eef3e4}
+@keyframes bfg-banner{0%{opacity:0;transform:translate(-50%,10px)}12%{opacity:1;transform:translate(-50%,0)}80%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.bfg-world-banner{animation:none}}
+@media(pointer:coarse),(max-width:800px){.bfg-world-banner{top:30%;width:calc(100% - 40px)}.bfg-world-banner small{font-size:12px}}
+
+/* Phones: the camera tools stack under the minimap so the location card keeps its width. */
+@media(pointer:coarse),(max-width:800px){.bfg-world-tools{top:186px;flex-direction:column;align-items:stretch;width:112px}.bh .bfg-world .bfg-world-tools button{min-height:36px;padding:7px 8px}.bfg-world-location{max-width:calc(100% - 148px)}}
+@media(max-height:600px) and (pointer:coarse){.bfg-world-tools{top:8px;flex-direction:row;width:auto}.bfg-world-location{max-width:calc(100% - 330px)}}

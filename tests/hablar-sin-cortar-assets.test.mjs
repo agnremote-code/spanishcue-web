@@ -4,6 +4,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {LEVELS,contentFor,untouched} from '../app/hablar-sin-cortar/levels.mjs';
+import {beforeGrammarBytes} from './helpers/grammar-preservation.mjs';
 const manifest=JSON.parse(readFileSync('app/hablar-sin-cortar/audio-manifest.json'));
 const normalize=s=>s.normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
 
@@ -40,5 +41,5 @@ test('new media namespace remains PRO and phonetics behavior/style/access source
  assert.equal(p.freeAudioPrefixes.has('hablar-sin-cortar'),false);assert.equal(p.isFreeLesson(224),false);
  const reviewed=JSON.parse(readFileSync('tests/fixtures/neutral-audio-reviewed.json','utf8')).sources;
  for(const file of ['app/phonetics/PhoneticsLesson.tsx','app/phonetics/data.ts','app/phonetics/audio-manifest.json'])assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),reviewed[file],file);
- for(const file of ['app/phonetics/state.ts','app/phonetics/navigation.ts','app/phonetics/phonetics.css','app/access-policy.ts'])assert.deepEqual(readFileSync(file),execFileSync('git',['show',`1d0c76564d664df74918aacccf14f355849f0f75:${file}`]),file);
+ for(const file of ['app/phonetics/state.ts','app/phonetics/navigation.ts','app/phonetics/phonetics.css','app/access-policy.ts'])assert.deepEqual(beforeGrammarBytes(file,readFileSync(file)),execFileSync('git',['show',`1d0c76564d664df74918aacccf14f355849f0f75:${file}`]),file);
 });

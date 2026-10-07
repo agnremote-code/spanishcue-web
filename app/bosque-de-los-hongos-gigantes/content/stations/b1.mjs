@@ -188,3 +188,31 @@ const stations = [
   },
 ];
 export default stations;
+
+// Short moments between stations: one on the middle cap of each stretch (tramo)
+// and one on each optional lookout (mirador). They take 30–60 seconds, keep the
+// talk going while climbing and grow with the altitude: notice, react, choose,
+// imagine, tell. No answer is checked.
+export const micro = [
+  { id: 'tramo-1', type: 'observa', label: 'MIRA A TU ALREDEDOR', prompt: 'Describe tres cosas que ves desde este hongo: un color, una forma y algo que te sorprende.', hint: 'Veo… / Me sorprende que…' },
+  { id: 'mirador-1', type: 'rapida', label: 'RESPUESTA RÁPIDA', prompt: '¿Qué prefieres para desconectar: un bosque, la playa o una ciudad grande? Di por qué en dos frases.', choices: ['Un bosque', 'La playa', 'Una ciudad grande'], hint: 'Prefiero… porque…' },
+  { id: 'tramo-2', type: 'cuenta', label: 'CUENTA', prompt: 'Las setas doradas huelen a comida. ¿Qué olor te recuerda a tu infancia? Describe dónde estabas.', hint: 'Ese olor me recuerda a…' },
+  { id: 'mirador-2', type: 'elige', label: 'ELIGE Y EXPLICA', prompt: 'Si fueras cocinero por un día, ¿qué plato prepararías con estas setas?', choices: ['Una sopa', 'Un risotto', 'Una tortilla'], hint: 'Yo haría… con…' },
+  { id: 'tramo-3', type: 'rapida', label: 'RESPUESTA RÁPIDA', prompt: '¿Eres una persona que prueba de todo o que pide siempre lo mismo en un restaurante?', choices: ['Pruebo de todo', 'Siempre lo mismo'], hint: 'Normalmente… / Depende de…' },
+  { id: 'mirador-3', type: 'observa', label: 'MIRA HACIA ABAJO', prompt: 'Desde aquí ves el claro de la entrada. Compara cómo te sentías allí abajo y cómo te sientes aquí arriba.', hint: 'Allí abajo… En cambio, aquí…' },
+  { id: 'tramo-4', type: 'observa', label: 'ATENCIÓN', prompt: 'Los colores cambiaron: rojo, violeta, negro. ¿Qué sensación te dan estos colores? ¿Calma, peligro, curiosidad?', hint: 'Estos colores me hacen pensar en…' },
+  { id: 'mirador-4', type: 'imagina', label: 'IMAGINA', prompt: 'Imagina que este jardín venenoso fuera una persona. ¿Cómo sería su carácter?', hint: 'Sería una persona… que…' },
+  { id: 'tramo-5', type: 'cuenta', label: 'CUENTA', prompt: '¿Cuándo fue la última vez que ignoraste una advertencia? ¿Qué pasó después?', hint: 'Una vez no hice caso a…' },
+  { id: 'mirador-5', type: 'elige', label: 'ELIGE Y EXPLICA', prompt: '¿Qué te da más miedo de verdad?', choices: ['Las alturas', 'La oscuridad', 'Los lugares desconocidos'], hint: 'Me da más miedo… porque…' },
+  { id: 'tramo-6', type: 'observa', label: 'MIRA A TU ALREDEDOR', prompt: 'Los hongos brillan sin sol. Inventa una explicación: ¿por qué brillan?', hint: 'Creo que brillan porque…' },
+  { id: 'mirador-6', type: 'compara', label: 'COMPARA', prompt: 'Compara este bosque con un lugar real que conoces. ¿En qué se parecen y en qué no?', hint: 'Se parece a… pero…' },
+  { id: 'tramo-7', type: 'rapida', label: 'RESPUESTA RÁPIDA', prompt: '¿Llevas la cuenta de cuánto subiste? ¿Te gusta medir tus progresos o prefieres no pensarlo?', choices: ['Me gusta medirlos', 'Prefiero no pensarlo'], hint: 'Me motiva… / Me agobia…' },
+  { id: 'mirador-7', type: 'cuenta', label: 'MIRA ATRÁS', prompt: 'Mira todo el camino que hiciste. ¿Qué meta personal te costó mucho y al final conseguiste?', hint: 'Me costó mucho… pero al final…' },
+  { id: 'tramo-8', type: 'imagina', label: 'IMAGINA', prompt: 'Una ardilla vive en esta copa desde hace años. ¿Qué te diría sobre los humanos que pasan por aquí?', hint: 'Diría que los humanos…' },
+  { id: 'mirador-8', type: 'elige', label: 'ELIGE Y EXPLICA', prompt: '¿Con quién te gustaría hacer esta subida?', choices: ['Con un amigo', 'Con mi familia', 'Solo'], hint: 'Me gustaría hacerla con… porque…' },
+  { id: 'tramo-9', type: 'rapida', label: 'RESPUESTA RÁPIDA', prompt: 'La niebla no te deja ver lejos. ¿Te gusta improvisar o necesitas saber qué viene después?', choices: ['Me gusta improvisar', 'Necesito saberlo'], hint: 'Yo necesito… / A mí me encanta…' },
+  { id: 'mirador-9', type: 'cuenta', label: 'CUENTA', prompt: 'Cuenta un momento de tu vida en el que todo estaba un poco «con niebla» y luego se aclaró.', hint: 'Durante un tiempo… hasta que…' },
+  { id: 'tramo-10', type: 'observa', label: 'MIRA HACIA ABAJO', prompt: 'Debajo solo hay nubes. ¿Qué crees que está pasando ahora mismo en el bosque, allí abajo?', hint: 'Seguramente allí abajo…' },
+  { id: 'mirador-10', type: 'imagina', label: 'IMAGINA', prompt: 'Si pudieras dejar un mensaje aquí para la próxima persona que suba, ¿qué le escribirías?', hint: 'Le escribiría: «…»' },
+  { id: 'tramo-11', type: 'compara', label: 'COMPARA', prompt: 'Compara la primera parada del recorrido con este momento: ¿qué cambió en tus respuestas o en tu forma de hablar?', hint: 'Al principio… ahora…' },
+];

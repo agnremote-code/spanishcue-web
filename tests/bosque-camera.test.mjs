@@ -66,3 +66,22 @@ test('destination arrow uses screen-right and screen-left consistently',async()=
  assert.ok(Math.abs(destinationBearing(0,10,yaw)-Math.PI/2)<1e-8,'right');
  assert.ok(Math.abs(destinationBearing(0,-10,yaw)+Math.PI/2)<1e-8,'left');
 });
+
+test('generated scenery keeps out of the climb: trunks, logs and large mushrooms avoid every cap and jump corridor',async()=>{
+ const {JSDOM}=await import('jsdom');
+ const {mergeGeometries}=await import('three/addons/utils/BufferGeometryUtils.js');
+ const {PLATFORMS,corridorClear}=await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+ const dom=new JSDOM();const previous=globalThis.document;globalThis.document=dom.window.document;
+ dom.window.HTMLCanvasElement.prototype.getContext=()=>new Proxy({createRadialGradient:()=>({addColorStop(){}})},{get:(o,k)=>o[k]??(()=>{})});
+ let forest;
+ try{
+  const compiled=await build({entryPoints:['app/bosque-de-los-hongos-gigantes/forest3d.ts'],bundle:true,platform:'node',format:'cjs',write:false,external:['three','three/*']});
+  const m={exports:{}};new Function('require','module','exports',compiled.outputFiles[0].text)(name=>name.includes('BufferGeometryUtils')?{mergeGeometries}:require(name),m,m.exports);
+  forest=m.exports.buildForest({low:false,reducedMotion:true});
+  assert.ok(forest.obstacles.length>40,'scenery is solid');
+  for(const o of forest.obstacles){
+   assert.ok(corridorClear(o.x,o.z,Math.min(o.r,1.5),0,Math.min(o.y1,4),0)||o.id.startsWith('tree'),`${o.id} stands in a jump corridor`);
+   for(const p of PLATFORMS)if(p.y<=o.y1+.5)assert.ok(Math.hypot(p.x-o.x,p.z-o.z)>p.r+o.r*.6,`${o.id} pierces ${p.id}`);
+  }
+ }finally{forest?.dispose();globalThis.document=previous;dom.window.close();}
+});

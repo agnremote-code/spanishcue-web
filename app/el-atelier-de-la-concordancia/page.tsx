@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { agreementAtelier } from "../grammar-worlds/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = { title: "El Atelier de la Concordancia · SPANISHCUE", description: agreementAtelier.subtitle };
-export default function Page() { return <GrammarWorld data={agreementAtelier} />; }
+export const metadata=grammarPageMetadata(41);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={41} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
+}

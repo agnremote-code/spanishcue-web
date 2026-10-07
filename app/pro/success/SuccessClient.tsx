@@ -6,7 +6,10 @@ import { useI18n } from "../../i18n/LocaleProvider";
 import { trackMarketingEvent } from "../../marketing/analytics";
 import { CONSENT_EVENT, consentFor } from "../../privacy/consent";
 
-const measurementConfigured = /^G-[A-Z0-9]+$/i.test(process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "");
+const ga4Configured = /^G-[A-Z0-9]+$/i.test(typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "") : "");
+const adsConversionConfigured = /^AW-[0-9]+$/i.test(typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "")
+  && /^[A-Za-z0-9_-]+$/.test(typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || "") : "");
+const measurementConfigured = ga4Configured || adsConversionConfigured;
 
 export default function SuccessClient({ subscriptionId, returnTo }: { subscriptionId: string; returnTo: string }) {
   const { locale, t } = useI18n();
@@ -37,8 +40,9 @@ export default function SuccessClient({ subscriptionId, returnTo }: { subscripti
     let cancelled = false;
     let attempts = 0;
     let retry: number | undefined;
+    const hasMeasurementConsent = () => consentFor("analytics") || consentFor("marketing");
     const attempt = async () => {
-      if (cancelled || conversionChecked.current || !consentFor("analytics")) return;
+      if (cancelled || conversionChecked.current || !hasMeasurementConsent()) return;
       attempts += 1;
       try {
         const response = await fetch("/api/billing/conversion", {
@@ -59,7 +63,7 @@ export default function SuccessClient({ subscriptionId, returnTo }: { subscripti
       } catch {}
       if (!cancelled && attempts < 5) retry = window.setTimeout(attempt, 2_000);
     };
-    const onConsent = () => { if (consentFor("analytics")) void attempt(); };
+    const onConsent = () => { if (hasMeasurementConsent()) void attempt(); };
     void attempt();
     window.addEventListener(CONSENT_EVENT, onConsent);
     return () => {

@@ -54,17 +54,19 @@ test("GA4 is optional, direct and uses Consent Mode v2 before any measurement", 
   assert.match(consent,/gtag\("consent", "update"/);
   assert.match(tag,/gtag\/js\?id=/);
   assert.doesNotMatch(tag,/googletagmanager\.com\/gtm\.js|GTM-/);
-  assert.match(tag,/ga-disable-/);
-  assert.match(tag,/page_referrer: ""/);
+  assert.doesNotMatch(tag,/ga-disable-/);
+  assert.match(tag,/"page_view"/);
   const scriptInjection = tag.search(/document\.head\.append(?:Child)?\(script\)/);
   assert.ok(scriptInjection >= 0);
-  assert.ok(tag.indexOf('window.gtag?.("config", id') < scriptInjection);
+  assert.ok(tag.indexOf('window.gtag?.("config", measurementId') < scriptInjection);
   assert.match(layout,/GoogleAnalytics/);
   assert.match(analytics,/window\.location\.pathname/);
   assert.doesNotMatch(analytics,/page_path: `\$\{window\.location\.pathname\}\$\{window\.location\.search\}`/);
   assert.match(analytics,/allowedPropertyKeys/);
   assert.match(consent,/updateGoogleConsent/);
   assert.match(env,/NEXT_PUBLIC_GA4_MEASUREMENT_ID=/);
+  assert.match(env,/NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID=/);
+  assert.match(env,/NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL=/);
   assert.match(env,/ANALYTICS_CONVERSIONS_ENABLED=false/);
 });
 

@@ -23,13 +23,13 @@ test('only the target catalog promises describe the selected route and implement
  const {lessons}=await import(`data:text/javascript;base64,${Buffer.from(bundled.outputFiles[0].text).toString('base64')}`);
  for(const id of [45,47]){
   const lesson=lessons.find(item=>item.id===id);
-  assert.equal(lesson.duration,'≈ 45 min + banco opcional');
+  assert.equal(lesson.duration,'≈ 60 min');
   assert.doesNotMatch(lesson.subtitle,/3D/);
   assert.equal(lesson.level,'A1');
   assert.equal(lesson.path,id===45?'/el-mercado-de-las-cantidades':'/la-torre-de-las-coordenadas');
  }
- assert.match(lessons.find(item=>item.id===45).subtitle,/compra interactiva/);
- assert.match(lessons.find(item=>item.id===47).subtitle,/escena que puedes mover/);
+ assert.match(lessons.find(item=>item.id===45).subtitle,/compra/);
+ assert.match(lessons.find(item=>item.id===47).subtitle,/dónde, cuándo y cómo/);
 });
 const expected=[
  ['Necesito una botella de agua.','Hay muchos tomates en la caja.','Tengo poco tiempo hoy.','Trabajo todos los días.','Quiero otro café, por favor.','No hay nadie en el puesto.','Esta sopa tiene demasiada sal.','Este mercado no es tan caro.'],

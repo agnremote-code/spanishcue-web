@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import SyntaxLab from "../syntax-labs/SyntaxLab";
-import { conectaLaFrase } from "../syntax-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "Conecta la frase · Gramática A1 · SPANISHCUE",
-  description: conectaLaFrase.subtitle,
-};
-
-export default function Page() {
-  return <SyntaxLab data={conectaLaFrase} />;
+export const metadata=grammarPageMetadata(211);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={211} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

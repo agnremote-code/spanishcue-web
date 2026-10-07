@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner requested the home banner's English title and label be replaced by NEW CLASSES! on 2026-10-07.",
+  "authorization": "Owner requested the home banner's English title and label be replaced by NEW CLASSES! on 2026-10-07. Owner requested The Sound Map A0 bilingual listening support on 2026-10-07.",
   "changes": [
     {
       "path": "app/NewLessonsBanner.tsx",
@@ -19,6 +19,408 @@
       "text": "NEW CLASSES!",
       "kind": "english-added",
       "reason": "Introduce the owner-requested compact editorial heading."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Open windows",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Half a song",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "The city on the radio",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "The usual bench",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "The last crate",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Rooftop lights",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Recognise one word. Build your first sentence.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Say: “My plant. Sorry”.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Build and say: “My home”.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Say: “Today, music”.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Greet someone: “Hi, Ana”.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Ask for: “Two oranges”.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Reply: “Yes, thank you”.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Find who, what and where.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Follow changes and reconstruct the plan.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Reconstruct the situation without inventing details.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Listen for statements and implications.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Compare framing, intentions and perspectives.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Defend an interpretation and recognise its limits.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two neighbours talk across their balconies.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A singer rehearses an original song by the river.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "You hear local radio through a taxi window.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Two people chat on a park bench.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "A street vendor calls out about fruit on a corner.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/the-sound-map/content.json",
+      "text": "Voices drift down from a rooftop party.",
+      "kind": "english-added",
+      "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
     }
   ]
 }

@@ -1,0 +1,1231 @@
+{
+  "230": {
+    "scope": "A2: punto de inicio y duración de una situación que continúa, con presente; hecho terminado con hace + cantidad de tiempo. Recupera el presente y un indefinido frecuente, sin introducir llevar + gerundio como objetivo. La primera escucha busca el tema; la segunda, fechas y duración.",
+    "warmup": [
+      "¿Desde cuándo vives en tu ciudad? Puedes responder primero con un año.",
+      "Piensa en una actividad que haces ahora y una que empezaste hace poco."
+    ],
+    "reading": {
+      "title": "Un nuevo horario en el barrio",
+      "text": "Hola, soy Elena. Vivo en este barrio desde marzo y trabajo en la biblioteca desde hace seis meses. Antes vivía lejos y llegaba a casa muy tarde. Hace dos semanas cambié mi horario: ahora trabajo por la mañana. Desde entonces tengo las tardes libres. Los martes estudio español con una vecina. Hace un mes que estudiamos juntas y ya podemos hablar de nuestras rutinas. Todavía no conozco a muchas personas, pero desde el sábado voy también al grupo de paseos del barrio. ¿Tú haces alguna actividad por aquí?",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué Elena puede hacer más actividades ahora?",
+          "model": "Porque cambió su horario de trabajo y tiene las tardes libres.",
+          "criteria": [
+            "Relaciona el cambio de horario con el tiempo disponible.",
+            "Se admite «ya no trabaja por la tarde» sin repetir el texto."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué empezó hace un mes y qué empezó hace dos semanas?",
+          "model": "Hace un mes empezó a estudiar con una vecina; hace dos semanas cambió el horario.",
+          "criteria": [
+            "Distingue las dos actividades y sus duraciones."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "Compara «desde marzo» y «desde hace seis meses». ¿Cuál señala una fecha y cuál una cantidad de tiempo?",
+        "model": "Marzo es el punto de inicio; seis meses expresa cuánto dura la situación hasta ahora."
+      },
+      {
+        "prompt": "¿Por qué aparecen vivo y trabajo en presente, pero cambié en pasado?",
+        "model": "Vivir y trabajar continúan. Cambiar el horario fue un hecho terminado."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "El comienzo",
+        "form": "desde + fecha / momento",
+        "meaning": "Señala cuándo empezó algo que continúa.",
+        "examples": [
+          "Vivo aquí desde marzo.",
+          "Estudio español desde 2024.",
+          "Desde el lunes trabajo en casa."
+        ],
+        "contrast": "Desde marzo no significa durante todo marzo: la situación sigue."
+      },
+      {
+        "title": "La duración hasta ahora",
+        "form": "presente + desde hace + tiempo / hace + tiempo + que + presente",
+        "meaning": "Dos formas de decir cuánto tiempo continúa una situación.",
+        "examples": [
+          "Trabajo aquí desde hace seis meses.",
+          "Hace seis meses que trabajo aquí."
+        ],
+        "contrast": "Desde hace seis meses, no «desde seis meses»."
+      },
+      {
+        "title": "Un hecho terminado",
+        "form": "hace + tiempo + verbo en pasado",
+        "meaning": "Cuenta cuánto tiempo pasó desde un hecho.",
+        "examples": [
+          "Hace dos semanas cambié mi horario.",
+          "Llegué hace un año."
+        ],
+        "contrast": "Llegué hace un año cuenta la llegada; vivo aquí desde hace un año describe la situación actual."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "El curso empezó en enero y continúa. Estudio español ___ enero.",
+        "options": [
+          "desde",
+          "hace",
+          "desde hace"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Enero identifica el punto de inicio."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Empecé a trabajar aquí tres meses atrás y sigo aquí. Trabajo aquí ___.",
+        "options": [
+          "desde tres meses",
+          "desde hace tres meses",
+          "hace que tres meses"
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Desde hace introduce una cantidad de tiempo que llega hasta ahora."
+      },
+      {
+        "kind": "choice",
+        "prompt": "El cambio ocurrió dos semanas atrás: ___ dos semanas cambié de horario.",
+        "options": [
+          "Desde",
+          "Hace",
+          "Desde hace"
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Hace + tiempo sitúa un hecho terminado."
+      },
+      {
+        "kind": "choice",
+        "prompt": "¿Qué frase equivale a «Vivo aquí desde hace dos años»?",
+        "options": [
+          "Hace dos años que vivo aquí.",
+          "Viví aquí durante dos años y me fui.",
+          "Vivo aquí desde dos años."
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Hace dos años que vivo aquí mantiene la idea de una situación actual."
+      },
+      {
+        "kind": "open",
+        "prompt": "Convierte «Empecé este trabajo en mayo y todavía trabajo aquí» en una frase con desde.",
+        "model": "Trabajo aquí desde mayo.",
+        "criteria": [
+          "Conserva mayo como inicio.",
+          "Usa presente para la situación que continúa."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Escribe dos frases verdaderas: una sobre algo que continúa y otra sobre un cambio terminado.",
+        "model": "Estudio español desde hace un año. Hace dos meses cambié de profesor.",
+        "criteria": [
+          "Distingue situación actual y hecho terminado.",
+          "Acepta otras experiencias y fechas coherentes."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "Nota de voz de un vecino",
+      "voice": "es-MX-DaliaNeural",
+      "transcript": "Hola, Elena. Soy Pablo, tu vecino del segundo. Vivo en el edificio desde septiembre. Hace tres semanas que voy a los paseos del barrio. El grupo sale los sábados a las diez, pero desde el sábado pasado nos encontramos en la plaza, no en la biblioteca. Yo no puedo caminar mucho: hace cinco días me hice daño en un pie. Esta semana voy solamente al café después del paseo. ¿Quieres venir? Podemos encontrarnos allí a las once y media.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué Pablo propone ir al café y no hacer el paseo completo?",
+          "model": "Porque tiene una lesión en el pie y no puede caminar mucho.",
+          "criteria": [
+            "Explica la relación entre el problema del pie y el plan.",
+            "Se admiten palabras sencillas como «le duele el pie»."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué cambió el sábado pasado y dónde propone verse Pablo?",
+          "model": "El punto de encuentro del grupo cambió a la plaza; Pablo propone verse en el café.",
+          "criteria": [
+            "Distingue la salida del grupo y la cita de Pablo."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Explica desde cuándo vives en tu casa o en tu ciudad. Tu docente pregunta por un cambio reciente.",
+        "followUp": "¿Qué hacías antes y qué haces ahora?",
+        "support": "Vivo… desde… / Hace… cambié…"
+      },
+      {
+        "prompt": "Tu docente llega al barrio. Cuéntale dos actividades que haces y desde cuándo.",
+        "followUp": "Ahora cambia una fecha y aclara el dato: «No, desde…».",
+        "support": "Hace… que… / Desde hace…"
+      },
+      {
+        "prompt": "Decide con tu docente qué actividad podrían hacer juntos esta semana. Explica tu experiencia y tus horarios.",
+        "followUp": "Tu docente no puede el día propuesto: ofrece otra posibilidad.",
+        "support": "Voy… desde… / Podemos… porque…"
+      }
+    ],
+    "writing": {
+      "prompt": "Escribe un mensaje para presentarte a un grupo del barrio. Cuenta desde cuándo vives allí, una actividad que continúa y un cambio reciente. Termina con una pregunta.",
+      "words": [
+        45,
+        65
+      ],
+      "model": "Hola, soy Omar. Vivo en este barrio desde abril y trabajo en una tienda desde hace dos años. Hace tres semanas cambié de horario y ahora tengo libres los miércoles. Hace un mes que estudio español en el centro cultural. ¿Alguien quiere tomar un café después de la clase?",
+      "checklist": [
+        "Indico un punto de inicio con desde.",
+        "Expreso una duración con desde hace o hace… que.",
+        "Distingo un cambio terminado de una situación actual."
+      ]
+    },
+    "closing": {
+      "prompt": "Sin mirar, explica la diferencia entre «llegué hace un año» y «vivo aquí desde hace un año». Da un ejemplo tuyo.",
+      "model": "La primera frase cuenta la llegada; la segunda dice cuánto dura mi vida aquí hasta ahora."
+    }
+  },
+  "231": {
+    "scope": "B1: por para causa, recorrido e intercambio; para para finalidad, destinatario y plazo. Se trabaja la intención en contexto, sin presentar una regla absoluta ni cubrir todos los usos idiomáticos. Si dos lecturas son posibles, el docente pide explicar la intención.",
+    "warmup": [
+      "¿Qué diferencia hay entre la razón de hacer algo y lo que quieres conseguir?",
+      "Cuenta una ocasión en la que tuviste que organizar una entrega o una compra para otra persona."
+    ],
+    "reading": {
+      "title": "Organizar una entrega compartida",
+      "text": "El viernes entregamos los materiales para el taller del centro cultural. Eva escribe al equipo: «He reservado una furgoneta por cuarenta euros. La necesitamos para transportar las mesas, porque son demasiado grandes para mi coche. Primero pasaremos por la imprenta y después iremos al centro. Los carteles son para las personas que visitan el barrio por primera vez, así que deben ser fáciles de entender. Necesito la lista de materiales para el jueves por la tarde; el viernes ya no tendremos tiempo de comprar nada. Por las obras de la avenida, haremos un recorrido un poco más largo. No compren vasos nuevos: podemos cambiar los que sobraron por servilletas. Gracias por la ayuda. Con esta organización evitaremos viajes innecesarios y llegaremos a tiempo para preparar la sala»",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué Eva pide la lista el jueves, aunque el taller es el viernes?",
+          "model": "Porque necesita tiempo para comprar lo que falte antes de la entrega.",
+          "criteria": [
+            "Explica el propósito de anticipar la lista.",
+            "No exige repetir las palabras del mensaje."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué determina el recorrido y para quién son los carteles?",
+          "model": "Las obras obligan a cambiar el recorrido; los carteles son para quienes visitan el barrio por primera vez.",
+          "criteria": [
+            "Distingue causa y destinatario."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "En «por las obras» y «para transportar las mesas», ¿qué expresión mira a una causa y cuál a un objetivo?",
+        "model": "Por las obras explica la causa; para transportar indica el objetivo."
+      },
+      {
+        "prompt": "¿Para significa lo mismo en «para las personas» y «para el jueves»?",
+        "model": "No. En el primer caso presenta al destinatario; en el segundo, el plazo."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "Razón y objetivo",
+        "form": "por + nombre / para + infinitivo",
+        "meaning": "Por explica qué motiva la acción; para expresa qué se quiere conseguir.",
+        "examples": [
+          "Cambiamos la ruta por las obras.",
+          "Cambiamos la ruta para llegar antes."
+        ],
+        "contrast": "La elección depende del significado. «Trabajo por mi familia» presenta una motivación; «esto es para mi familia» presenta un destinatario."
+      },
+      {
+        "title": "Destinatario y plazo",
+        "form": "para + persona / para + momento límite",
+        "meaning": "Indica quién recibe algo o cuándo tiene que estar preparado.",
+        "examples": [
+          "Estos carteles son para los visitantes.",
+          "Necesito la lista para el jueves."
+        ],
+        "contrast": "El jueves sitúa una acción; para el jueves marca un plazo."
+      },
+      {
+        "title": "Trayecto e intercambio",
+        "form": "por + lugar / por + precio o producto",
+        "meaning": "Por puede indicar el lugar por donde se pasa o lo que se da a cambio.",
+        "examples": [
+          "Pasamos por la imprenta.",
+          "Alquilamos la furgoneta por cuarenta euros.",
+          "Cambiamos los vasos por servilletas."
+        ],
+        "contrast": "Para también puede señalar dirección en otros contextos; aquí trabajamos pasar por un lugar."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "La sala está cerrada ___ una avería. Indica la causa.",
+        "options": [
+          "por",
+          "para"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "La avería causa el cierre."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Llamo ___ confirmar la hora. Indica el objetivo.",
+        "options": [
+          "por",
+          "para"
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Para + infinitivo introduce la finalidad."
+      },
+      {
+        "kind": "choice",
+        "prompt": "La entrega es el lunes; necesito terminar antes. Lo necesito ___ el lunes.",
+        "options": [
+          "por",
+          "para"
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Para el lunes marca el plazo."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Quiero decir que atravesamos el parque: fuimos ___ el parque.",
+        "options": [
+          "por",
+          "para"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Por presenta el trayecto; no solo el destino."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Compré esta lámpara ___ veinte euros y es ___ mi hermana.",
+        "options": [
+          "por / para",
+          "para / por",
+          "para / para"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Veinte euros es el precio; mi hermana es la destinataria."
+      },
+      {
+        "kind": "open",
+        "prompt": "Da dos razones diferentes para cambiar una reunión: una causa con por y un objetivo con para.",
+        "model": "La cambiamos por un problema de horarios. La cambiamos para que pueda venir todo el equipo.",
+        "criteria": [
+          "Distingue causa y objetivo.",
+          "También acepta para + infinitivo, por ejemplo «para reunir a todo el equipo»."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Un mensaje dice «La caja es por Ana». Aclara que Ana va a recibirla y añade un plazo.",
+        "model": "La caja es para Ana. Tiene que estar lista para el martes.",
+        "criteria": [
+          "Usa para para la destinataria y el plazo.",
+          "Acepta cualquier fecha coherente."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "Cambio de plan en la imprenta",
+      "voice": "es-ES-AlvaroNeural",
+      "transcript": "Hola, Eva. Acabo de hablar con la imprenta. Los carteles no estarán listos por la mañana por un problema con el papel. Nos los preparan para las tres. Para no perder tiempo, propongo llevar primero las mesas al centro cultural y pasar por la imprenta después. Nos ofrecen un descuento de diez euros por la espera. He dicho que prefiero cambiar ese descuento por veinte copias más, porque siempre llega más gente de la prevista. Las copias nuevas son para las tiendas de la zona. ¿Te parece bien? Llámame para confirmar el cambio antes de que hagan la factura. Yo puedo recoger todo por la tarde.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Qué intenta conseguir la persona con el nuevo orden de las entregas?",
+          "model": "Quiere aprovechar el tiempo llevando las mesas mientras terminan los carteles.",
+          "criteria": [
+            "Relaciona el retraso con el cambio de orden.",
+            "Acepta «evitar esperar sin hacer nada»."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué prefiere recibir en lugar del descuento y quién recibirá esas copias?",
+          "model": "Prefiere veinte copias más para las tiendas de la zona.",
+          "criteria": [
+            "Identifica el intercambio y el destinatario."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Organiza con tu docente la entrega de un objeto grande: explica el motivo, el objetivo y dos paradas.",
+        "followUp": "Una calle está cerrada. Cambia el recorrido y justifícalo.",
+        "support": "Por una avería… / Para evitar… / Pasamos por…"
+      },
+      {
+        "prompt": "Tu docente necesita un regalo. Pregunta quién lo recibirá, qué plazo tiene y cuánto quiere pagar.",
+        "followUp": "Propón dos alternativas y explica por qué elegirías una.",
+        "support": "Es para… / Lo necesitas para… / Por ese precio…"
+      },
+      {
+        "prompt": "Negocia una compensación por una entrega tardía: descuento o cambio de producto.",
+        "followUp": "Resume el acuerdo e indica qué debe estar listo y para cuándo.",
+        "support": "Por el retraso… / Cambiar… por… / Para el viernes…"
+      }
+    ],
+    "writing": {
+      "prompt": "Escribe al equipo para reorganizar una entrega. Explica una causa del cambio, el objetivo del nuevo plan, un recorrido, un destinatario y un plazo. El mensaje debe permitir actuar sin hacer más preguntas.",
+      "words": [
+        65,
+        90
+      ],
+      "model": "Hola, equipo. Por las obras de la avenida, mañana cambiaremos el recorrido. Primero pasaremos por la tienda para recoger las cajas y después iremos al centro cultural. Los materiales son para las personas del taller de fotografía. Necesito la lista completa para las diez, porque saldremos a las once. Para evitar otro viaje, confirmen hoy si falta algo. He conseguido la furgoneta por treinta euros. ¿Quién puede acompañarme y ayudar con la entrega?",
+      "checklist": [
+        "Cada por o para tiene una intención clara.",
+        "Incluyo destinatario, recorrido y plazo.",
+        "Explico la causa y el objetivo con información suficiente."
+      ]
+    },
+    "closing": {
+      "prompt": "Tu docente dice «Cambié el plan por…» y después «Cambié el plan para…». Completa ambas frases y explica la diferencia.",
+      "model": "Por un retraso presenta la causa; para llegar a tiempo presenta el objetivo."
+    }
+  },
+  "232": {
+    "scope": "B2: elegir foco entre activa, pasiva con ser, pasiva refleja e impersonal con se. Contrasta concordancia con cosas y se + verbo singular + a + personas específicas. No presentar la pasiva como siempre preferible ni pedir terminología antes de comprender el mensaje.",
+    "warmup": [
+      "En un aviso público, ¿cuándo importa quién realiza una acción y cuándo importa el resultado?",
+      "Recuerda un aviso poco claro. ¿Qué información faltaba para poder actuar?"
+    ],
+    "reading": {
+      "title": "Cómo informar sobre la reforma de una biblioteca",
+      "text": "La biblioteca municipal prepara una reforma y el equipo revisa tres borradores del aviso. El primero dice: «La empresa contratada cerrará la sala de estudio el lunes». El segundo propone: «La sala de estudio será cerrada el lunes por la empresa contratada». El tercero resume: «Se cerrará la sala de estudio el lunes». La coordinadora prefiere el último porque los usuarios necesitan saber qué espacio no estará disponible, no quién colocará la valla. Añade que se habilitarán veinte puestos en el edificio de al lado y que se atenderá a los usuarios con cita en la entrada principal. Un compañero observa que, cuando se informe sobre la adjudicación, sí será relevante identificar a la empresa. El aviso final incluye fechas, alternativas y un teléfono. No evita nombrar a los responsables por sistema: selecciona la información que ayuda a entender cada situación. También aclara que en la sala provisional se trabaja en silencio.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué la coordinadora elige una frase con se, pero acepta nombrar a la empresa en otro texto?",
+          "model": "Porque el foco cambia: en el aviso importan el cierre y las alternativas; en la adjudicación importa quién recibe el contrato.",
+          "criteria": [
+            "Relaciona la elección con la información relevante para cada destinatario.",
+            "No afirma que la pasiva o se sean siempre mejores."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué alternativa tienen los usuarios y dónde se atenderá a quienes tengan cita?",
+          "model": "Habrá veinte puestos en el edificio de al lado; las citas se atenderán en la entrada principal.",
+          "criteria": [
+            "Recupera ambas alternativas sin inventar horarios."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "Compara «se habilitarán veinte puestos» y «se atenderá a los usuarios». ¿Por qué el verbo no está en plural en las dos?",
+        "model": "Veinte puestos es el sujeto de una pasiva refleja y concuerda en plural. A los usuarios es el complemento de una impersonal; el verbo va en singular."
+      },
+      {
+        "prompt": "¿Qué añade «por la empresa» en una pasiva con ser?",
+        "model": "Identifica al agente, quien realiza la acción, si esa información resulta relevante."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "Elegir qué va en primer plano",
+        "form": "activa: agente + verbo / pasiva: sujeto paciente + ser + participio (+ por + agente)",
+        "meaning": "La pasiva permite empezar por lo que recibe la acción; el participio concuerda con ese sujeto.",
+        "examples": [
+          "La empresa revisará las instalaciones.",
+          "Las instalaciones serán revisadas por la empresa."
+        ],
+        "contrast": "Una activa puede ser más directa. No conviertas automáticamente todos los avisos en pasivas."
+      },
+      {
+        "title": "Pasiva refleja",
+        "form": "se + verbo que concuerda con el sujeto",
+        "meaning": "Se destaca una acción sobre algo y se omite el agente.",
+        "examples": [
+          "Se habilita una sala.",
+          "Se habilitan veinte puestos.",
+          "Se publicarán los horarios."
+        ],
+        "contrast": "En estos ejemplos normativos, se publicarán los horarios, no «se publicará los horarios»."
+      },
+      {
+        "title": "Impersonal con se",
+        "form": "se + verbo en tercera persona singular",
+        "meaning": "No hay sujeto gramatical. Se habla de una actividad general o de personas específicas con a.",
+        "examples": [
+          "Aquí se trabaja en silencio.",
+          "Se atenderá a los usuarios con cita.",
+          "Se entrevistó a las candidatas."
+        ],
+        "contrast": "Distingue se buscan profesionales (pasiva, sin a) de se busca a los profesionales inscritos (impersonal, con a)."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "Elige el aviso con concordancia normativa: ___.",
+        "options": [
+          "Se alquilan dos salas.",
+          "Se alquila dos salas."
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Dos salas es el sujeto plural de la pasiva refleja."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Elige la impersonal normativa con personas específicas.",
+        "options": [
+          "Se entrevistaron a las candidatas.",
+          "Se entrevistó a las candidatas."
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Con a las candidatas no hay un sujeto plural: el verbo impersonal va en singular."
+      },
+      {
+        "kind": "choice",
+        "prompt": "La revisión importa y también quién la realiza: las instalaciones ___ por una empresa externa.",
+        "options": [
+          "serán revisadas",
+          "serán revisado",
+          "será revisadas"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Ser y el participio concuerdan con las instalaciones."
+      },
+      {
+        "kind": "choice",
+        "prompt": "¿Qué frase expresa una norma general sin sujeto concreto?",
+        "options": [
+          "Se trabaja en silencio.",
+          "Los técnicos trabajan en silencio."
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Se trabaja es impersonal; los técnicos sí es un sujeto explícito."
+      },
+      {
+        "kind": "open",
+        "prompt": "Reescribe «El personal publicará las fechas mañana» poniendo las fechas en primer plano y sin nombrar al personal.",
+        "model": "Se publicarán las fechas mañana.",
+        "criteria": [
+          "Conserva la publicación futura y mañana.",
+          "Acepta «Las fechas serán publicadas mañana», aunque resulta más formal."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Redacta dos avisos: uno sobre la apertura de tres salas y otro sobre la atención a las personas inscritas.",
+        "model": "Se abrirán tres salas. Se atenderá a las personas inscritas en recepción.",
+        "criteria": [
+          "Plural con tres salas.",
+          "Singular impersonal con a las personas.",
+          "Valora primero que el aviso permita actuar."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "Aclaraciones antes de publicar el aviso",
+      "voice": "es-MX-DaliaNeural",
+      "transcript": "Buenos días. Antes de publicar el aviso, revisemos dos puntos. Las salas no se cerrarán todas al mismo tiempo: primero se reformará la planta baja y después se cambiarán las ventanas del piso superior. Durante la primera semana se atenderá a las personas que necesiten ayuda con los ordenadores en la sala provisional. No escriban que se suspende toda la actividad, porque los préstamos continuarán. También quiero que el informe técnico mencione a la empresa: las ventanas serán instaladas por el equipo que ganó el concurso. En el cartel para los usuarios basta con explicar qué servicios cambian. Se publicarán las fechas definitivas mañana por la tarde, cuando el equipo de obras confirme el calendario. Hasta entonces, el texto debe indicar que las fechas son provisionales.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué sería engañoso escribir «se suspende toda la actividad»?",
+          "model": "Porque solo cambian ciertos espacios y servicios; los préstamos seguirán funcionando.",
+          "criteria": [
+            "Distingue cierre parcial y suspensión total.",
+            "Admite una explicación equivalente."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Cuándo se publicarán las fechas definitivas y qué información debe mantener el informe técnico?",
+          "model": "Mañana por la tarde, tras la confirmación; el informe debe identificar a la empresa que instalará las ventanas.",
+          "criteria": [
+            "Conserva la condición de confirmación y la identidad del agente en el informe."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Explica a tu docente, que usa la biblioteca, qué cambia durante una reforma y qué servicio continúa.",
+        "followUp": "Tu docente interpreta que todo cierra. Corrige esa conclusión con dos datos.",
+        "support": "Se cerrará… / Se mantendrán… / Se atenderá a…"
+      },
+      {
+        "prompt": "Compara una activa y una pasiva para informar de una reparación. Decide cuál usar en un cartel y en un informe.",
+        "followUp": "¿Cambiarías la frase si hubiera que reconocer públicamente el trabajo de una persona?",
+        "support": "La empresa… / El sistema fue reparado por…"
+      },
+      {
+        "prompt": "Acuerda con tu docente tres normas de una sala compartida y cómo anunciar una nueva actividad.",
+        "followUp": "Una norma resulta ambigua: reformúlala para que se entienda a quién afecta.",
+        "support": "Aquí se… / Se organizarán… / Se informará a…"
+      }
+    ],
+    "writing": {
+      "prompt": "Redacta un aviso de una reforma para los usuarios. Indica dos cambios, un servicio que continúa, dónde se atenderá a las personas y cuándo se confirmarán las fechas. Elige se, activa o pasiva según la información que importa.",
+      "words": [
+        80,
+        110
+      ],
+      "model": "Durante la próxima semana se reformará la sala de estudio de la planta baja. Se habilitarán veinte puestos en el edificio de al lado y se mantendrá el servicio de préstamo en su horario habitual. Se atenderá a las personas con cita en la entrada principal. Las ventanas serán instaladas por una empresa especializada, pero los trabajos no afectarán al acceso. El calendario definitivo se publicará el jueves, después de la reunión técnica. Si necesitas un puesto adaptado, puedes llamar a recepción para reservarlo. Gracias por tu comprensión.",
+      "checklist": [
+        "El lector sabe qué cambia y qué continúa.",
+        "Hay concordancia en las pasivas y singular en las impersonales.",
+        "Incluyo al agente cuando aporta información útil."
+      ]
+    },
+    "closing": {
+      "prompt": "Explica por qué decimos «se necesitan dos técnicos» y «se necesita a los dos técnicos del turno».",
+      "model": "En la primera hay sujeto plural y concordancia. En la segunda, a los dos técnicos es complemento; la construcción impersonal lleva singular."
+    }
+  },
+  "233": {
+    "scope": "B2: transmitir afirmaciones, preguntas y peticiones con un verbo introductor en pasado. Elegir referencias y tiempos según el momento de transmisión; conservar el presente si el contenido sigue vigente y se adopta esa perspectiva. No aplicar una tabla mecánica ni exigir un único tiempo sin contexto.",
+    "warmup": [
+      "¿Qué información se pierde cuando alguien resume un mensaje de otra persona?",
+      "Tu docente dice «Mañana te llamo». ¿Cómo transmitirías ese mensaje una semana después?"
+    ],
+    "reading": {
+      "title": "La cita que cambió dos veces",
+      "text": "El lunes, Marta llamó a la oficina de mantenimiento y recibió este mensaje de Julia: «El técnico vendrá mañana a las nueve. ¿Puedes estar en casa? Deja libre el espacio delante de la ventana». Marta avisó a su compañero de piso de que el técnico iría el martes a las nueve. Le explicó que Julia había preguntado si podían estar en casa y les había pedido que dejaran libre el espacio de la ventana. Sin embargo, el martes por la mañana Julia volvió a llamar: «Tenemos una avería urgente. Hoy no podemos ir; iremos el jueves». Cuando Marta transmitió el cambio esa misma mañana, dijo que no podían ir ese día y que irían el jueves. Añadió que Julia había confirmado que la oficina abre a las ocho todos los días. Su compañero entendió las fechas, pero preguntó si la petición de despejar la ventana seguía vigente. Marta comprobó el mensaje: sí, esa instrucción no había cambiado.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué no basta con repetir mañana al transmitir el primer mensaje días después?",
+          "model": "Porque mañana depende del día en que habla cada persona; hay que conservar la fecha real de la visita.",
+          "criteria": [
+            "Distingue las palabras originales de su referencia temporal.",
+            "Acepta indicar el martes o la fecha concreta."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué cambió y qué instrucción se mantuvo?",
+          "model": "La visita pasó del martes al jueves; debía seguir libre el espacio delante de la ventana.",
+          "criteria": [
+            "Conserva el nuevo día y la instrucción vigente."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "¿Qué diferencia hay entre «preguntó si podían estar» y «pidió que dejaran libre el espacio»?",
+        "model": "La primera transmite una pregunta de sí o no. La segunda transmite una petición, con que y subjuntivo."
+      },
+      {
+        "prompt": "¿Por qué puede mantenerse abre en «confirmó que la oficina abre a las ocho»?",
+        "model": "El horario sigue vigente y quien lo transmite lo presenta como un dato actual; no todos los presentes deben cambiar automáticamente."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "Transmitir afirmaciones",
+        "form": "dijo / explicó / confirmó que + frase",
+        "meaning": "Desde una perspectiva pasada, presente suele pasar a imperfecto, futuro a condicional y pasado anterior a pluscuamperfecto.",
+        "examples": [
+          "«Estoy ocupada» → Dijo que estaba ocupada.",
+          "«Iré el jueves» → Dijo que iría el jueves.",
+          "«Ya he enviado el aviso» → Dijo que ya había enviado el aviso."
+        ],
+        "contrast": "Puede mantenerse un presente vigente: dijo que la oficina abre a las ocho. Importa el contexto, no una sustitución automática."
+      },
+      {
+        "title": "Transmitir preguntas y peticiones",
+        "form": "preguntó si / cuándo / dónde…; pidió que + subjuntivo",
+        "meaning": "Conserva la intención: preguntar no equivale a ordenar.",
+        "examples": [
+          "«¿Puedes venir?» → Preguntó si podía ir.",
+          "«¿A qué hora llegas?» → Preguntó a qué hora llegaba.",
+          "«Deja libre la ventana» → Pidió que dejara libre la ventana."
+        ],
+        "contrast": "La pregunta indirecta mantiene cuándo o dónde con tilde, pero no lleva signos de interrogación si toda la frase es afirmativa."
+      },
+      {
+        "title": "Mantener la referencia",
+        "form": "ajustar persona, lugar y tiempo según quién cuenta, cuándo y dónde",
+        "meaning": "Te, aquí, hoy y mañana no se copian sin comprobar a qué se refieren.",
+        "examples": [
+          "El lunes: «Mañana vendré». El viernes: Dijo que iría el martes.",
+          "«Te llamo aquí» puede ser «Dijo que me llamaría allí», según el contexto."
+        ],
+        "contrast": "Si el mensaje se transmite el mismo día y lugar, hoy y aquí pueden mantenerse."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "El lunes dijo «Iré el martes». Lo cuentas el viernes desde una perspectiva pasada.",
+        "options": [
+          "Dijo que iría el martes.",
+          "Dijo que irá mañana.",
+          "Dijo que vaya el martes."
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Iría conserva el futuro visto desde el lunes; el martes mantiene la fecha."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Julia preguntó «¿Puedes estar en casa?». Marta lo cuenta sobre sí misma.",
+        "options": [
+          "Preguntó que podía estar.",
+          "Preguntó si podía estar.",
+          "Pidió si pudiera estar."
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Una pregunta de sí o no se introduce con si."
+      },
+      {
+        "kind": "choice",
+        "prompt": "«Deja libre la ventana». Transmite la petición.",
+        "options": [
+          "Pidió que dejara libre la ventana.",
+          "Dijo si dejaba libre la ventana.",
+          "Preguntó que dejó libre la ventana."
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Pedir que exige subjuntivo; la perspectiva pasada favorece dejara o dejase."
+      },
+      {
+        "kind": "choice",
+        "prompt": "El horario sigue vigente. ¿Qué formulaciones pueden ser adecuadas según la perspectiva?",
+        "options": [
+          "Dijo que la oficina abre a las ocho.",
+          "Dijo que la oficina abría a las ocho.",
+          "Las dos pueden ser adecuadas."
+        ],
+        "answers": [
+          2
+        ],
+        "explanation": "Abre presenta el horario como actual; abría mantiene la perspectiva del relato. No obliga a entender que el horario cambió."
+      },
+      {
+        "kind": "open",
+        "prompt": "El martes Ana dijo: «Hoy no puedo; iré el jueves». Lo cuentas el miércoles. Conserva la fecha y la intención.",
+        "model": "Ana dijo que el martes no podía y que iría el jueves.",
+        "criteria": [
+          "Sitúa correctamente el día en que no podía.",
+          "Mantiene el jueves como visita futura respecto del mensaje."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Un compañero dijo: «¿Dónde está la factura? Envíamela esta tarde». Resume la pregunta y la petición al día siguiente.",
+        "model": "Preguntó dónde estaba la factura y pidió que se la enviara esa tarde.",
+        "criteria": [
+          "Distingue pregunta y petición.",
+          "Ajusta persona y referencia temporal; acepta variantes coherentes con quién la enviaba."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "El mensaje de recepción",
+      "voice": "es-ES-AlvaroNeural",
+      "transcript": "Hola, Marta. Soy Diego. Acabo de hablar con Julia y quiero asegurarme de que he entendido todo. Me dijo que el técnico iría el jueves entre las nueve y las diez, no exactamente a las nueve. También preguntó si había alguien en casa que pudiera abrir el cuarto de instalaciones. Le expliqué que tú trabajarías desde casa y me pidió que te enviara su número por si surgía algún problema. Sobre la ventana, confirmó que teníamos que dejar libre el espacio, pero aclaró que no hacía falta quitar las cortinas. Por último, dijo que la oficina abre a las ocho y que podemos llamar desde esa hora. Te mando este resumen para que no tengamos tres versiones distintas. Si alguno de estos datos no coincide con lo que te dijeron, lo comprobamos antes del jueves.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Para qué Diego envía un resumen si Marta ya habló con Julia?",
+          "model": "Para unificar la información, comprobar diferencias y evitar malentendidos antes de la visita.",
+          "criteria": [
+            "Identifica la intención de coordinar y verificar.",
+            "No reduce el mensaje a anunciar una nueva cancelación."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué precisión hay sobre la hora y qué no hace falta hacer con la ventana?",
+          "model": "El técnico llegará entre las nueve y las diez; no hace falta quitar las cortinas.",
+          "criteria": [
+            "Conserva el intervalo horario y la excepción."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Tu docente deja tres mensajes: una afirmación, una pregunta y una petición sobre una cita. Transmítelos a una tercera persona imaginada.",
+        "followUp": "Ahora los cuentas dos días después: ajusta las fechas que lo necesiten.",
+        "support": "Dijo que… / Preguntó si… / Pidió que…"
+      },
+      {
+        "prompt": "Compara dos versiones de un aviso que tu docente acaba de decir. Identifica qué dato falta o cambia.",
+        "followUp": "Formula una pregunta para confirmar el dato sin atribuir una culpa.",
+        "support": "Entendí que… / ¿Confirmó si…?"
+      },
+      {
+        "prompt": "Resume una conversación real o verosímil sobre trabajo, vivienda o estudios.",
+        "followUp": "Tu docente pide distinguir las palabras exactas de tu interpretación.",
+        "support": "Explicó que… / No dijo que…; yo entendí que…"
+      }
+    ],
+    "writing": {
+      "prompt": "Escribe a una persona que no escuchó una llamada sobre una visita técnica. Transmite una afirmación, una pregunta y una petición. Incluye la fecha concreta y aclara qué dato está pendiente de confirmación.",
+      "words": [
+        80,
+        110
+      ],
+      "model": "Hola, Clara. Esta mañana hablé con recepción. Julia me dijo que el técnico vendría el jueves entre las nueve y las diez. Preguntó si habría alguien para abrir el cuarto de instalaciones y le confirmé que trabajarías desde casa. También pidió que dejáramos libre el espacio delante de la ventana, aunque aclaró que no era necesario quitar las cortinas. El horario de llegada todavía depende de la visita anterior; prometió que nos avisaría si había un retraso. ¿Puedes guardar su número y revisar que tengas la llave del cuarto?",
+      "checklist": [
+        "Distingo afirmación, pregunta y petición.",
+        "Las personas y las fechas siguen siendo identificables.",
+        "Los tiempos verbales corresponden a la perspectiva elegida."
+      ]
+    },
+    "closing": {
+      "prompt": "¿Es siempre obligatorio cambiar abre por abría al contar lo que alguien dijo? Explica con un horario vigente.",
+      "model": "No. Puedo mantener abre si presento el horario como actual; abría conserva la perspectiva pasada y tampoco implica necesariamente que haya cambiado."
+    }
+  },
+  "234": {
+    "scope": "B2: relativas especificativas con preposición + el/la/los/las que y con quien/quienes para personas; selección de preposición por el verbo y concordancia del artículo. Se excluye cuyo como objetivo C1. No se evalúa puntuación de relativas explicativas en esta sesión.",
+    "warmup": [
+      "Describe a una persona por algo que haces con ella, sin decir su nombre.",
+      "Piensa en un lugar del que tengas que hablar con precisión: ¿qué dato permitiría identificarlo?"
+    ],
+    "reading": {
+      "title": "Elegir un espacio para un proyecto",
+      "text": "Un grupo de profesionales busca un local para compartir. En la primera visita conocen a Laura, la arquitecta con la que han hablado por teléfono, y a Sergio, el propietario del edificio en el que se encuentra el local. Hay dos salas parecidas, pero solo una tiene acceso directo desde la calle. Esa es la sala en la que el grupo está más interesado, porque recibirán a personas con movilidad reducida. Laura les enseña el informe del que depende la autorización de la reforma. Todavía falta una firma, así que no pueden confirmar una fecha de apertura. El equipo también compara las condiciones a las que tendrían que adaptarse: horario de acceso, uso de las zonas comunes y límite de ruido. Antes de irse, anotan el nombre de la persona a quien deben enviar las preguntas. Quieren preparar un mensaje que identifique cada espacio y cada documento sin repetir sus nombres en todas las frases.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué el grupo prefiere una de las salas, aunque las dos se parecen?",
+          "model": "Porque la que tiene acceso desde la calle facilita la entrada a personas con movilidad reducida.",
+          "criteria": [
+            "Identifica la diferencia funcional relevante.",
+            "Acepta explicarlo sin utilizar una relativa."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué impide confirmar la apertura y a qué condiciones deben adaptarse?",
+          "model": "Falta una firma del informe; deben considerar acceso, zonas comunes y ruido.",
+          "criteria": [
+            "Menciona la firma pendiente y al menos dos condiciones."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "Relaciona «han hablado con Laura» con «Laura, con la que han hablado». ¿Qué ocurre con con?",
+        "model": "La preposición que necesita hablar con se conserva delante del relativo."
+      },
+      {
+        "prompt": "En «el informe del que depende la autorización», ¿por qué aparece del?",
+        "model": "Depender exige de; de + el se contrae en del. El artículo concuerda con informe."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "Conservar la relación",
+        "form": "preposición + el/la/los/las que",
+        "meaning": "La preposición depende de la relación original: hablar con, depender de, adaptarse a, interesarse por.",
+        "examples": [
+          "La arquitecta con la que hablamos.",
+          "El informe del que depende la autorización.",
+          "Las condiciones a las que debemos adaptarnos."
+        ],
+        "contrast": "No elimines la preposición: «las condiciones que debemos adaptarnos» no conserva adaptarse a."
+      },
+      {
+        "title": "Identificar personas",
+        "form": "preposición + quien/quienes",
+        "meaning": "Quien y quienes se refieren a personas y concuerdan en número; pueden alternar con el/la/los/las que.",
+        "examples": [
+          "La persona a quien envié el mensaje.",
+          "Los compañeros con quienes trabajo.",
+          "La persona a la que envié el mensaje."
+        ],
+        "contrast": "Quien no lleva artículo: con quien, no «con el quien»."
+      },
+      {
+        "title": "Concordancia y contracciones",
+        "form": "el/la/los/las según el antecedente; a + el = al; de + el = del",
+        "meaning": "El artículo señala el género y número del nombre al que vuelve la relativa.",
+        "examples": [
+          "La sala en la que nos reunimos.",
+          "Los locales por los que preguntamos.",
+          "El edificio al que vamos."
+        ],
+        "contrast": "La preposición no depende del género del nombre, sino de su función en la frase."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "Nos adaptamos a unas condiciones. Son las condiciones ___ debemos adaptarnos.",
+        "options": [
+          "a las que",
+          "de las que",
+          "las que"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Adaptarse exige a; condiciones es femenino plural."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Hablamos con dos asesoras. Son las asesoras ___.",
+        "options": [
+          "con quienes hablamos",
+          "con los quienes hablamos",
+          "a quien hablamos"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Con quienes conserva la preposición y el plural; quien no lleva artículo."
+      },
+      {
+        "kind": "choice",
+        "prompt": "La autorización depende del informe. Este es el informe ___.",
+        "options": [
+          "del que depende la autorización",
+          "al que depende la autorización",
+          "que depende la autorización"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Depender de conserva de; de + el forma del."
+      },
+      {
+        "kind": "choice",
+        "prompt": "¿Qué dos formas identifican correctamente a una persona destinataria?",
+        "options": [
+          "La persona a quien escribí / la persona a la que escribí.",
+          "La persona quien escribí / la persona que escribí.",
+          "La persona al quien escribí / la persona al que escribí."
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Escribir a una persona permite a quien y a la que."
+      },
+      {
+        "kind": "open",
+        "prompt": "Une sin repetir local: «Visitamos un local. En ese local queremos trabajar».",
+        "model": "Visitamos un local en el que queremos trabajar.",
+        "criteria": [
+          "Conserva en y la referencia a local.",
+          "También acepta «un local donde queremos trabajar»."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Describe dos personas de tu entorno mediante relaciones distintas: trabajar con, confiar en o pedir ayuda a.",
+        "model": "La compañera con la que trabajo conoce al técnico en quien confío.",
+        "criteria": [
+          "Elige la preposición exigida por cada relación.",
+          "Identifica personas con concordancia adecuada; acepta relaciones inventadas plausibles."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "Una aclaración sobre los documentos",
+      "voice": "es-MX-DaliaNeural",
+      "transcript": "Hola, Laura. Te llamo porque hemos mezclado dos documentos. El informe del que depende la autorización no es el presupuesto de las obras. El presupuesto es el documento en el que aparecen los precios y los materiales; ese ya lo tenemos. Nos falta la versión firmada del informe técnico. ¿Puedes indicarnos quién es la persona a la que debemos solicitarla? También queremos confirmar una condición sobre las salas. La sala en la que estamos interesados es la que tiene entrada desde la calle, pero no sabemos si podemos utilizar el pasillo con el que comunica. Para nosotros es importante, porque es el espacio por el que saldrían las personas en caso de emergencia. Si te parece, podemos hablar con la administradora con quien nos reunimos el martes.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué el grupo pide una aclaración antes de aceptar el local?",
+          "model": "Porque necesita distinguir los documentos y confirmar el uso de un paso importante para la salida.",
+          "criteria": [
+            "Relaciona la claridad documental y la seguridad del recorrido.",
+            "No exige repetir la estructura relativa."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué documento ya tienen y qué versión les falta?",
+          "model": "Tienen el presupuesto; les falta la versión firmada del informe técnico.",
+          "criteria": [
+            "Distingue ambos documentos y el requisito de firma."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Describe a tres personas de un equipo sin usar sus nombres. Tu docente identifica sus funciones.",
+        "followUp": "Aclara una descripción ambigua añadiendo con quién trabaja o de qué depende su tarea.",
+        "support": "La persona con la que… / El equipo del que…"
+      },
+      {
+        "prompt": "Compara dos espacios para una actividad e identifica el que elegirías mediante dos relativas.",
+        "followUp": "Tu docente cambia una condición del contrato. Explica cómo afecta a tu decisión.",
+        "support": "El local en el que… / Las condiciones a las que…"
+      },
+      {
+        "prompt": "Aclara un malentendido sobre dos documentos o contactos parecidos.",
+        "followUp": "Resume qué documento falta y a quién hay que pedirlo.",
+        "support": "El documento al que me refiero… / La persona a quien…"
+      }
+    ],
+    "writing": {
+      "prompt": "Escribe una consulta sobre un espacio compartido. Identifica un local, un documento y una persona mediante relativas. Formula dos preguntas concretas y explica por qué necesitas esas respuestas antes de decidir.",
+      "words": [
+        80,
+        110
+      ],
+      "model": "Hola, Laura. Quería confirmar dos datos del local en el que nos reunimos el martes. La sala en la que estamos interesados es la que tiene entrada desde la calle. ¿Podemos utilizar también el pasillo con el que comunica? Necesitamos saberlo antes de organizar las visitas. Además, todavía no tenemos la versión firmada del informe del que depende la autorización. ¿Podrías indicarnos quién es la persona a la que debemos solicitarla? Con esa información podremos revisar las condiciones y decidir si el espacio se adapta a nuestro proyecto.",
+      "checklist": [
+        "Se identifica cada antecedente sin ambigüedad.",
+        "Conservo la preposición de la relación original.",
+        "Concuerdan artículos o quien/quienes con el antecedente."
+      ]
+    },
+    "closing": {
+      "prompt": "Completa y justifica: «la persona ___ confío» y «las condiciones ___ me adapto».",
+      "model": "La persona en quien/en la que confío; las condiciones a las que me adapto. Confiar en y adaptarse a determinan la preposición."
+    }
+  },
+  "235": {
+    "scope": "B2: resultado ligado a intensidad con tan/tanto… que y consecuencia entre hechos con así que. Concordancia de tanto con nombres y forma invariable con verbos; diferenciar causa, resultado y finalidad. No se trabaja como prueba de causalidad científica ni se exige una formulación única.",
+    "warmup": [
+      "Recuerda una situación en la que una cantidad o una intensidad obligó a cambiar un plan.",
+      "¿En qué se diferencia decir «había mucha gente» de explicar qué consecuencia tuvo?"
+    ],
+    "reading": {
+      "title": "Un taller con más demanda de la prevista",
+      "text": "El centro cultural había preparado un taller de reparación para doce personas, pero recibió tantas solicitudes que abrió una segunda sesión. La coordinadora estaba contenta con la respuesta, aunque el cambio exigía revisar el plan. La sala original era tan pequeña que no permitía trabajar con dos grupos a la vez. Además, algunos participantes llevaban objetos tan grandes que ocupaban una mesa completa. El equipo decidió separar las sesiones por horario, así que nadie tuvo que quedarse sin plaza. Al principio, los voluntarios explicaban cada paso tan deprisa que varias personas se perdían. Después redujeron el ritmo y prepararon instrucciones con fotografías. Trabajaron tanto en esa mejora que terminaron el documento el mismo día. En la evaluación final no atribuyeron todos los problemas a la cantidad de asistentes: también influyeron el espacio, el tipo de objetos y la claridad de las explicaciones. El próximo taller tendrá menos plazas por sesión, pero ofrecerá más fechas.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué reducir las plazas por sesión no equivale a atender a menos personas en total?",
+          "model": "Porque el centro puede ofrecer más sesiones y repartir a las personas entre ellas.",
+          "criteria": [
+            "Relaciona tamaño de grupo y número de sesiones.",
+            "Acepta explicar que se mantiene o amplía la capacidad total."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué dos cambios ayudaron a entender las instrucciones?",
+          "model": "Explicar más despacio y preparar instrucciones con fotografías.",
+          "criteria": [
+            "Recupera el cambio de ritmo y el apoyo visual."
+          ]
+        }
+      ]
+    },
+    "discovery": [
+      {
+        "prompt": "Compara «tan pequeña», «tantas solicitudes» y «trabajaron tanto». ¿Qué palabra recibe la intensidad en cada caso?",
+        "model": "Tan modifica un adjetivo; tantas acompaña un nombre femenino plural; tanto modifica el verbo."
+      },
+      {
+        "prompt": "¿Qué cambia entre «La sala era tan pequeña que…» y «La sala estaba cerrada, así que…»?",
+        "model": "La primera vincula un resultado a un grado de intensidad. La segunda presenta una consecuencia de un hecho, sin indicar grado."
+      }
+    ],
+    "grammar": [
+      {
+        "title": "Intensidad de una cualidad o manera",
+        "form": "tan + adjetivo/adverbio + que + resultado",
+        "meaning": "Presenta un grado suficiente para producir o explicar el resultado.",
+        "examples": [
+          "La sala era tan pequeña que cambiamos de lugar.",
+          "Hablaban tan deprisa que no entendíamos."
+        ],
+        "contrast": "Tan no cambia de género ni número: eran tan pequeñas."
+      },
+      {
+        "title": "Cantidad de cosas o de acción",
+        "form": "tanto/a/os/as + nombre + que; verbo + tanto + que",
+        "meaning": "Con un nombre, tanto concuerda; con un verbo, se mantiene tanto.",
+        "examples": [
+          "Recibimos tantas solicitudes que abrimos otra sesión.",
+          "Había tanto ruido que salimos.",
+          "Trabajamos tanto que terminamos hoy."
+        ],
+        "contrast": "No uses tan directamente ante un nombre: tantas solicitudes, no «tan solicitudes»."
+      },
+      {
+        "title": "Consecuencia entre hechos",
+        "form": "hecho, así que + consecuencia",
+        "meaning": "Relaciona una situación y su resultado sin necesidad de expresar intensidad.",
+        "examples": [
+          "La sala estaba ocupada, así que cambiamos el horario.",
+          "Faltaban herramientas, así que compartimos las mesas."
+        ],
+        "contrast": "Porque introduce causa; así que introduce resultado; para + infinitivo expresa finalidad."
+      }
+    ],
+    "practice": [
+      {
+        "kind": "choice",
+        "prompt": "Recibimos ___ solicitudes que abrimos otra sesión.",
+        "options": [
+          "tan",
+          "tantas",
+          "tanto"
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Tantas concuerda con solicitudes."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Las instrucciones eran ___ claras que nadie pidió ayuda.",
+        "options": [
+          "tantas",
+          "tanto",
+          "tan"
+        ],
+        "answers": [
+          2
+        ],
+        "explanation": "Tan modifica el adjetivo claras y permanece invariable."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Trabajamos ___ que terminamos antes.",
+        "options": [
+          "tanto",
+          "tan",
+          "tantos"
+        ],
+        "answers": [
+          0
+        ],
+        "explanation": "Tanto modifica el verbo trabajar y es invariable."
+      },
+      {
+        "kind": "choice",
+        "prompt": "Elige la consecuencia, no la causa ni el propósito: faltaban sillas, ___.",
+        "options": [
+          "porque llegaron más personas",
+          "así que usamos otra sala",
+          "para recibir al grupo"
+        ],
+        "answers": [
+          1
+        ],
+        "explanation": "Así que introduce el resultado de la falta de sillas."
+      },
+      {
+        "kind": "open",
+        "prompt": "Une mediante intensidad: «La explicación fue muy rápida. Varias personas no la entendieron».",
+        "model": "La explicación fue tan rápida que varias personas no la entendieron.",
+        "criteria": [
+          "Relaciona rapidez y resultado con tan… que.",
+          "Conserva quién tuvo dificultades."
+        ]
+      },
+      {
+        "kind": "open",
+        "prompt": "Cuenta un cambio de plan con así que. Después expresa una versión con tan o tanto… que, añadiendo una intensidad coherente.",
+        "model": "Había ruido, así que cambiamos de sala. Había tanto ruido que cambiamos de sala.",
+        "criteria": [
+          "Ambas frases presentan un resultado comprensible.",
+          "La segunda añade grado o cantidad, sin cambiar arbitrariamente los hechos."
+        ]
+      }
+    ],
+    "listening": {
+      "title": "Evaluación del segundo taller",
+      "voice": "es-ES-AlvaroNeural",
+      "transcript": "Hola, equipo. Ya tenemos los comentarios de la segunda sesión. Esta vez las instrucciones fueron tan claras que casi todos empezaron a trabajar sin pedir ayuda. Sin embargo, trajeron tantas bicicletas que nos faltaron soportes. No fue un problema de número de personas: el grupo era pequeño, pero había varios objetos del mismo tipo. Compartimos los soportes, así que algunas reparaciones terminaron más tarde. Una voluntaria explicó los pasos tan despacio que pudo seguirlos incluso la persona que llegó a mitad de la sesión. Para la próxima fecha vamos a preguntar antes qué objeto traerá cada participante. Así podremos calcular mejor los materiales. No hace falta comprar de todo: necesitamos conocer la demanda y distribuir las herramientas que ya tenemos. El presupuesto sigue siendo el mismo.",
+      "questions": [
+        {
+          "kind": "meaning",
+          "prompt": "¿Por qué la propuesta final es preguntar por los objetos y no reducir el grupo?",
+          "model": "Porque el problema fue la concentración de bicicletas y la falta de soportes, no la cantidad total de personas.",
+          "criteria": [
+            "Distingue el tipo de demanda del tamaño del grupo.",
+            "Explica cómo la información previa ayuda a organizar materiales."
+          ]
+        },
+        {
+          "kind": "fact",
+          "prompt": "¿Qué consecuencia tuvo compartir los soportes y qué ocurrirá con el presupuesto?",
+          "model": "Algunas reparaciones acabaron más tarde; el presupuesto no cambia.",
+          "criteria": [
+            "Recupera el retraso parcial y el presupuesto estable."
+          ]
+        }
+      ]
+    },
+    "speaking": [
+      {
+        "prompt": "Describe un evento que tuvo más o menos demanda de la prevista y explica dos consecuencias.",
+        "followUp": "Tu docente cuestiona una relación causal. Aclara qué sabes y qué supones.",
+        "support": "Hubo tantas… que… / Pasó…, así que…"
+      },
+      {
+        "prompt": "Compara dos formas de explicar una tarea: rapidez, claridad y detalle. Decide cuál ayuda más a un principiante.",
+        "followUp": "Introduce una excepción: ¿puede una explicación ser demasiado lenta?",
+        "support": "Era tan… que… / Explicó tanto que…"
+      },
+      {
+        "prompt": "Propón una mejora para una actividad con presupuesto fijo. Justifica el cambio con un problema y su resultado.",
+        "followUp": "Tu docente aporta un dato nuevo; reformula la propuesta.",
+        "support": "Había tanto… que… / No teníamos…, así que…"
+      }
+    ],
+    "writing": {
+      "prompt": "Escribe una evaluación breve de un taller o reunión. Explica un resultado positivo y una dificultad mediante tan/tanto… que. Añade una consecuencia con así que y propone una mejora basada en esos datos.",
+      "words": [
+        80,
+        110
+      ],
+      "model": "El taller tuvo una buena respuesta. Las instrucciones eran tan claras que la mayoría pudo empezar sin ayuda. Sin embargo, llegaron tantas bicicletas que no teníamos suficientes soportes para repararlas al mismo tiempo. Compartimos el material, así que algunas personas terminaron más tarde de lo previsto. Para la próxima sesión propongo preguntar antes qué objeto traerá cada participante. Esa información nos permitirá distribuir mejor las herramientas y organizar turnos. No creo que debamos reducir el grupo todavía: el problema principal fue el tipo de objetos y no la cantidad de asistentes.",
+      "checklist": [
+        "Cada resultado se relaciona con un hecho concreto.",
+        "Tan y tanto tienen la forma que exige lo que modifican.",
+        "La mejora responde al problema descrito."
+      ]
+    },
+    "closing": {
+      "prompt": "Completa tres frases sobre una misma situación usando tan, tanto/tanta/tantos/tantas y así que. Explica qué enfoca cada una.",
+      "model": "La sala era tan pequeña que salimos. Había tantas personas que salimos. La sala estaba llena, así que salimos. Cambia el foco: cualidad, cantidad o consecuencia de un hecho."
+    }
+  }
+}

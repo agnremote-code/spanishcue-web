@@ -1,7 +1,7 @@
 import a1 from './a1.mjs';import a2 from './a2.mjs';import b1 from './b1.mjs';import b2 from './b2.mjs';import c1 from './c1.mjs';import c2 from './c2.mjs';
 import type { Level, Prompt } from './types';
 import { STATION_LEVELS } from './stations';
-export { stationFor, hasExpedition } from './stations';
+export { stationFor, hasExpedition, microFor, type MicroPrompt } from './stations';
 const decks:Record<Level,Prompt[]>={A1:a1 as Prompt[],A2:a2 as Prompt[],B1:b1 as Prompt[],B2:b2 as Prompt[],C1:c1 as Prompt[],C2:c2 as Prompt[]};
 // A level's bank is its category deck plus any authored expedition stations.
 export const BANKS=Object.fromEntries(Object.entries(decks).map(([level,deck])=>[level,[...deck,...(STATION_LEVELS[level as Level]??[])]])) as Record<Level,Prompt[]>;

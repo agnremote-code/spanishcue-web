@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { oracionesCompletas } from "../phrase-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "La Mesa de Montaje · Gramática A1 · SPANISHCUE",
-  description: oracionesCompletas.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={oracionesCompletas} />;
+export const metadata=grammarPageMetadata(111);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={111} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

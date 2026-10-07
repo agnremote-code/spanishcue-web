@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { verbosConConexion } from "../phrase-labs/data-advanced";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "El Panel de Conexiones · Gramática B2 · SPANISHCUE",
-  description: verbosConConexion.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={verbosConConexion} />;
+export const metadata=grammarPageMetadata(117);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={117} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

@@ -42,6 +42,16 @@ test("production refuses placeholder, staging or malformed D1 ids", () => {
   assert.throws(() => productionConfig(generated(), { d1Id: "prod" }));
 });
 
+test("public Google measurement vars are allowed in production", () => {
+  const vars = {
+    NEXT_PUBLIC_GA4_MEASUREMENT_ID: "G-TEST123",
+    NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID: "AW-123456789",
+    NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL: "purchase_label",
+  };
+  const config = productionConfig(generated(), { d1Id: D1, vars });
+  assert.deepEqual(config.vars, vars);
+});
+
 test("only allow-listed plain vars are accepted; secrets and staging labels are rejected", () => {
   const config = productionConfig(generated(), { d1Id: D1, vars: { PAYPAL_ENV: "live", SPANISHCUE_WRITE_FREEZE: "true" } });
   assert.deepEqual(config.vars, { PAYPAL_ENV: "live", SPANISHCUE_WRITE_FREEZE: "true" });
