@@ -10,8 +10,8 @@ import {
 } from "../privacy/consent";
 
 const scriptId = "spanishcue-google-tag";
-const measurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "";
-const googleAdsConversionId = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "";
+const measurementId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "") : "";
+const googleAdsConversionId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "";
 
 function usableMeasurementId(value: string): boolean {
   return /^G-[A-Z0-9]+$/i.test(value);
