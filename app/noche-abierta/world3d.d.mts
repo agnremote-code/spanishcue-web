@@ -40,6 +40,7 @@ export type Preset = { id: string; distance: number; height: number; ahead: numb
 export type Shot = { camera: { x: number; y: number; z: number }; look: { x: number; y: number; z: number } };
 
 export const WORLD_BOUNDS: Bounds;
+export const CENTRE_BOUNDS: Bounds;
 export const ROAD_HALF: number;
 export const SIDEWALK: number;
 export const PLAYER_RADIUS: number;
@@ -71,7 +72,7 @@ export const STAGES: Record<string, Stage>;
 export const CAMERA_PRESETS: Preset[];
 export const ROOM_PRESET: Preset;
 export function streetFraming(target: Target, player: { x: number; z: number }): Shot;
-export function colliders(): Box[];
+export function colliders(castSizes?: Record<string, number>): Box[];
 export function insideBuilding(x: number, z: number, margin?: number): boolean;
 export function isWalkable(x: number, z: number, boxes?: Box[], bounds?: Bounds): boolean;
 export function angleBetween(from: number, to: number): number;

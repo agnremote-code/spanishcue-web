@@ -14,13 +14,23 @@ import type { Beat, Media } from './activities.mjs';
 import { ARRIVAL_SPOT, PLACES, VIEWBOX, iso } from './scene.mjs';
 import { WALKABLE_STAGES } from './world3d.mjs';
 import { LEVEL_INFO } from './levels.mjs';
+import {
+  chooseItem, chooseLine, closeEncounter, emptyStreet, isValidStreet, itemById, openEncounter, restartEncounter, stepBack, streetSummary,
+  type ItemId, type StreetState,
+} from './street.mjs';
+import StreetCard from './StreetCard';
+import ItemPicker from './ItemPicker';
+import ItemIcon from './ItemIcon';
 import type { WorldProps } from './World3D';
 import './noche-abierta.css';
+import './street.css';
 
 // v4: exactly two moments per interaction; old multi-step positions are incompatible.
 const STORAGE_KEY = 'spanishcue:noche-abierta:v4';
 const VIEW_KEY = 'spanishcue:noche-abierta:vista';
 const LEVEL_KEY = 'spanishcue:noche-abierta:nivel';
+// The street scenes and the object you carry live beside the lesson state.
+const STREET_KEY = 'spanishcue:noche-abierta:calle:v1';
 const places = LOCATIONS.map(({ id, name, short }) => ({ id, name, short }));
 const LETTERS = ['A', 'B', 'C', 'D'];
 type ViewMode = 'map' | 'loading' | '3d';
@@ -36,9 +46,10 @@ function focusWorld() {
   window.setTimeout(() => (document.querySelector('.na-world') as HTMLElement | null)?.focus({ preventScroll: true }), 60);
 }
 
-// A level in the link (?level=A1, as the library sends it) wins over the saved one.
+// A level in the link (?level=A1, as the library sends it, or ?nivel=A1) wins over the saved one.
 function readLevel(): Level | null {
-  const linked = new URLSearchParams(window.location.search).get('level');
+  const params = new URLSearchParams(window.location.search);
+  const linked = params.get('level') ?? params.get('nivel');
   if (isLevel(linked)) return linked;
   try {
     const value = window.localStorage.getItem(LEVEL_KEY);
@@ -52,6 +63,15 @@ function readSaved(): NightState | null {
     if (!raw) return null;
     const value = JSON.parse(raw);
     return isValidState(value) ? value : null;
+  } catch { return null; }
+}
+
+function readStreet(): StreetState | null {
+  try {
+    const raw = window.sessionStorage.getItem(STREET_KEY);
+    if (!raw) return null;
+    const value = JSON.parse(raw);
+    return isValidStreet(value) ? value : null;
   } catch { return null; }
 }
 
@@ -85,6 +105,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const [canUse3d, setCanUse3d] = useState(false);
   const [World, setWorld] = useState<ComponentType<WorldProps> | null>(null);
   const [goTo, setGoTo] = useState<{ id: string; n: number } | null>(null);
+  const [street, setStreet] = useState<StreetState>(emptyStreet);
+  const [picking, setPicking] = useState(false);
 
   useEffect(() => {
     if (restored.current) return;
@@ -94,10 +116,17 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     // Restoring saved progress and the chosen level after hydration is an external-store sync.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (saved || level) setState(current => setLevel(saved ?? current, level ?? saved?.level ?? DEFAULT_LEVEL));
+    const savedStreet = readStreet();
+    if (savedStreet) setStreet({ ...savedStreet, open: null });
+    // Back in the middle of a night without an object: choose it first.
+    if (saved && saved.phase !== 'llegada' && !savedStreet?.item) setPicking(true);
   }, []);
   useEffect(() => {
     try { window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch { /* private mode: the lesson still works */ }
   }, [state]);
+  useEffect(() => {
+    try { window.sessionStorage.setItem(STREET_KEY, JSON.stringify(street)); } catch { /* private mode */ }
+  }, [street]);
 
   const load3d = useCallback(() => {
     setView('loading');
@@ -129,8 +158,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     setState(current => setLevel(current, next));
     try { window.localStorage.setItem(LEVEL_KEY, next); } catch { /* private mode */ }
     const url = new URL(window.location.href);
-    if (url.searchParams.has('level')) {
-      url.searchParams.set('level', next);
+    for (const key of ['level', 'nivel']) if (url.searchParams.has(key)) {
+      url.searchParams.set(key, next);
       window.history.replaceState(window.history.state, '', url);
     }
   }, []);
@@ -190,8 +219,23 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     setConfirmReset(false);
     setPlacesOpen(false);
     setState(initialState());
-    try { window.sessionStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
+    setStreet(emptyStreet());
+    setPicking(false);
+    try { window.sessionStorage.removeItem(STORAGE_KEY); window.sessionStorage.removeItem(STREET_KEY); } catch { /* ignore */ }
   };
+
+  // Street scenes: opened from the 3D street, closed with Esc or the card.
+  const eventId = state.event?.id ?? null;
+  const openStreet = useCallback((id: string) => setStreet(current => openEncounter(current, id, eventId)), [eventId]);
+  const closeStreet = useCallback(() => { setStreet(current => closeEncounter(current)); focusWorld(); }, []);
+  const pick = (id: ItemId) => { setStreet(current => chooseItem(current, id)); setPicking(false); if (in3d) focusWorld(); };
+  const streetOpen = in3d && Boolean(street.open) && state.phase === 'ciudad';
+  useEffect(() => {
+    if (!streetOpen) return;
+    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') { event.preventDefault(); closeStreet(); } };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [streetOpen, closeStreet]);
 
   useEffect(() => {
     if (state.phase !== 'encuentro' || (in3d && travelling)) return;
@@ -234,6 +278,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         <span className="na-progress-dots" aria-hidden="true">{LOCATIONS.map(item => <i key={item.id} className={done.includes(item.id) ? 'is-done' : ''} />)}</span>
         <span>{done.length} / {LOCATIONS.length} lugares</span>
       </p>}
+      {street.item && state.phase !== 'llegada' && !in3d && <p className="na-inv is-header" title={itemById(street.item)?.name}><ItemIcon id={street.item} size={18} /><span>{itemById(street.item)?.short}</span></p>}
       <nav className="na-tools" aria-label="Herramientas de la clase">
         {canUse3d && <button type="button" className="na-tool" onClick={switchView} aria-label={view === 'map' ? 'Ver el barrio en 3D' : 'Ver el mapa en 2D'}>{view === 'map' ? '3D' : '2D'}</button>}
         {state.phase !== 'llegada' && state.phase !== 'cierre' && <button type="button" className="na-tool" aria-expanded={placesOpen} aria-controls="na-places" onClick={() => setPlacesOpen(value => !value)}>Lugares</button>}
@@ -244,7 +289,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     <div className="na-stage">
       {in3d && World ? <World key={worldKey} phase={state.phase} outcome={outcome} onTransition={setTravelling} active={state.phase === 'encuentro' ? state.position : null} activity={state.activity} last={state.position} done={done}
         played={state.position ? Object.keys(state.encounters[state.position]?.acts ?? {}).filter(id => state.encounters[state.position!].acts[id].done) : []}
-        event={state.event?.id ?? null} goTo={goTo} narrow={narrow} reducedMotion={reducedMotion} panel={showCard && !travelling} onInteract={open}
+        event={state.event?.id ?? null} goTo={goTo} narrow={narrow} reducedMotion={reducedMotion} panel={(showCard && !travelling) || streetOpen} onInteract={open}
+        street={street} level={level} onStreet={openStreet}
         onOpenActivity={id => setState(current => openActivity(current, id))} onLeave={leave} onFail={fail3d} />
         : <div className="na-scroll" ref={scroller}>
           <div className="na-camera" style={camera}>
@@ -256,9 +302,15 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
       {placesOpen && state.phase !== 'cierre' && <PlacesList state={state} done={done} onOpen={in3d ? walkTo : id => open(id)} onClose={() => setPlacesOpen(false)} disabled={!exploring} walk={in3d} />}
 
-      {state.phase === 'llegada' && <Arrival arrival={content.ARRIVAL} level={level} onLevel={changeLevel} teacher={teacher} onStart={() => { setState(current => startExploring(current)); if (in3d) focusWorld(); }} />}
+      {state.phase === 'llegada' && <Arrival arrival={content.ARRIVAL} level={level} onLevel={changeLevel} teacher={teacher} onStart={() => { setState(current => startExploring(current)); if (!street.item) setPicking(true); else if (in3d) focusWorld(); }} />}
 
-      {exploring && <div className={`na-hint${in3d ? ' is-world' : ''}`} role="status">
+      {picking && state.phase !== 'llegada' && <ItemPicker initial={street.item} onChoose={pick} onClose={street.item ? () => setPicking(false) : undefined} />}
+
+      {streetOpen && <StreetCard key={`${level}-${street.open!.id}`} street={street} level={level} teacher={teacher}
+        onChoose={key => setStreet(current => chooseLine(current, key))} onBack={() => setStreet(current => stepBack(current))}
+        onRestart={() => setStreet(current => restartEncounter(current))} onClose={closeStreet} />}
+
+      {exploring && !streetOpen && <div className={`na-hint${in3d ? ' is-world' : ''}`} role="status">
         {finalAvailable(state)
           ? <><p>La noche ya cambió. Puedes seguir caminando o cerrar la noche.</p><button type="button" className="na-primary" onClick={() => setState(current => openFinal(current))}>Cerrar la noche</button></>
           : <p>{in3d
@@ -284,10 +336,10 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
       {state.phase === 'evento' && event && <EventCard key={level} state={state} eventId={event.id} teacher={teacher} onContinue={() => setState(current => resolveEvent(current))} />}
 
-      {state.phase === 'cierre' && <FinalRecap state={state} teacher={teacher} onToggle={id => setState(current => toggleCriterion(current, id))} onReset={() => setConfirmReset(true)} />}
+      {state.phase === 'cierre' && <FinalRecap state={state} street={street} teacher={teacher} onToggle={id => setState(current => toggleCriterion(current, id))} onReset={() => setConfirmReset(true)} />}
     </div>
 
-    {teacher && <TeacherDesk state={state} onTrigger={id => setState(current => triggerEvent(current, id))} onReset={() => setConfirmReset(true)} />}
+    {teacher && <TeacherDesk state={state} street={street} onTrigger={id => setState(current => triggerEvent(current, id))} onReset={() => setConfirmReset(true)} onItem={() => setPicking(true)} />}
 
     {confirmReset && <div className="na-confirm" role="alertdialog" aria-modal="true" aria-labelledby="na-confirm-title">
       <div>
@@ -556,7 +608,7 @@ function EventCard({ state, eventId, teacher, onContinue }: { state: NightState;
   </section>;
 }
 
-function FinalRecap({ state, teacher, onToggle, onReset }: { state: NightState; teacher: boolean; onToggle: (id: string) => void; onReset: () => void }) {
+function FinalRecap({ state, street, teacher, onToggle, onReset }: { state: NightState; street: StreetState; teacher: boolean; onToggle: (id: string) => void; onReset: () => void }) {
   const { CITY_EVENTS, FINAL } = contentFor(state.level);
   const [prompt, setPrompt] = useState(0);
   const [help, setHelp] = useState(false);
@@ -572,6 +624,7 @@ function FinalRecap({ state, teacher, onToggle, onReset }: { state: NightState; 
     <ol className="na-trail" aria-label="Tu recorrido">
       {night.map(item => <li key={item.id}><b>{item.name}</b>{item.situations.length > 0 && <span>{item.situations.join(' · ')}</span>}{item.choices.length > 0 && <small>{item.choices.join(' · ')}</small>}</li>)}
       {event && <li className="is-affected"><b>{event.title}</b></li>}
+      {streetSummary(street).map(item => <li key={item.id} className="is-street"><b>{item.title}</b><span>{item.district}</span><small>{item.recap}</small></li>)}
     </ol>
     <p className={isHypothetical ? 'na-ask is-hypothetical' : 'na-ask'} key={prompt}>{questions[prompt]}</p>
     <div className="na-row">
@@ -595,7 +648,7 @@ function FinalRecap({ state, teacher, onToggle, onReset }: { state: NightState; 
   </section>;
 }
 
-function TeacherDesk({ state, onTrigger, onReset }: { state: NightState; onTrigger: (id: string) => void; onReset: () => void }) {
+function TeacherDesk({ state, street, onTrigger, onReset, onItem }: { state: NightState; street: StreetState; onTrigger: (id: string) => void; onReset: () => void; onItem: () => void }) {
   const { CITY_EVENTS, ROUTE_PLAN } = contentFor(state.level);
   const canTrigger = !state.event && state.phase !== 'cierre' && state.phase !== 'llegada';
   const now = state.phase === 'encuentro' || state.phase === 'ciudad' ? 'exploracion' : state.phase;
@@ -616,6 +669,11 @@ function TeacherDesk({ state, onTrigger, onReset }: { state: NightState; onTrigg
       {state.event ? <p className="na-muted">Ya pasó: {CITY_EVENTS.find(item => item.id === state.event!.id)?.title}.</p>
         : <div className="na-row">{CITY_EVENTS.map(item => <button type="button" key={item.id} className="na-secondary" disabled={!canTrigger || state.phase === 'encuentro'} onClick={() => onTrigger(item.id)}>{item.title}</button>)}</div>}
       <p className="na-muted">Si no lo activas, pasa solo después del cuarto lugar.</p>
+    </div>
+    <div>
+      <p className="na-teacher-title">La calle</p>
+      <p className="na-muted">{Object.keys(street.done).length} escenas en la calle · llevas {itemById(street.item)?.name.toLowerCase() ?? 'nada todavía'}.</p>
+      <button type="button" className="na-secondary" disabled={state.phase === 'llegada'} onClick={onItem}>Cambiar el objeto</button>
     </div>
     <div>
       <p className="na-teacher-title">Los juegos del barrio</p>

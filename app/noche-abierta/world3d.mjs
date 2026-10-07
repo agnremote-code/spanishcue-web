@@ -8,8 +8,15 @@
 // VEHICLES, NPCS, TARGETS, STAGES, ROOMS) and the lesson content; the
 // movement, camera and interaction functions below do not know about
 // this particular night.
+//
+// The original neighbourhood is the centre of a larger city (city.mjs): its
+// districts, props and parked cars join the collisions here.
 
-export const WORLD_BOUNDS = { minX: -44, maxX: 44, minZ: -40, maxZ: 38 };
+import { CITY_BOUNDS, cityColliders, CITY_BUILDINGS } from "./city.mjs";
+
+export const WORLD_BOUNDS = CITY_BOUNDS;
+// The original neighbourhood, for the close-up minimap and the old checks.
+export const CENTRE_BOUNDS = { minX: -44, maxX: 44, minZ: -40, maxZ: 38 };
 export const ROAD_HALF = 4;
 export const SIDEWALK = 3.2;
 export const PLAYER_RADIUS = 0.35;
@@ -72,7 +79,8 @@ export const TRAFFIC = [
   { id: "trafico-3", lane: TRAFFIC_LANE, dir: 1, start: -10, speed: 8, kind: "sedan", color: "#d8d2c4" },
   { id: "trafico-4", lane: TRAFFIC_LANE, dir: 1, start: 40, speed: 9, kind: "coupe", color: "#2e3b52" },
 ];
-export const TRAFFIC_SPAN = 62;
+// The avenue now crosses the whole city: cars loop from one end to the other.
+export const TRAFFIC_SPAN = 124;
 
 // Street furniture that blocks walking: the bus shelter, the restaurant's
 // outdoor table (with the friends sitting at it) and the overpass pillars.
@@ -237,7 +245,7 @@ export function streetFraming(target, player) {
 
 // Solid boxes used for collision: buildings, vehicles, the fountain basin,
 // street furniture and people standing still. Interiors are separate stages.
-export function colliders() {
+export function colliders(castSizes = {}) {
   const boxes = BUILDINGS.map((b) => ({ x0: b.x0, x1: b.x1, z0: b.z0, z1: b.z1 }));
   for (const v of VEHICLES) {
     const along = Math.abs(Math.cos(v.heading)) > 0.5;
@@ -253,12 +261,13 @@ export function colliders() {
     if (npc.walk || npc.seated) continue;
     boxes.push({ x0: npc.x - 0.25, x1: npc.x + 0.25, z0: npc.z - 0.25, z1: npc.z + 0.25, npc: npc.id });
   }
-  return boxes;
+  return [...boxes, ...cityColliders(castSizes)];
 }
 const SOLIDS = colliders();
 
+const ALL_BUILDINGS = [...BUILDINGS, ...CITY_BUILDINGS];
 export function insideBuilding(x, z, margin = 0) {
-  return BUILDINGS.some((b) => x > b.x0 - margin && x < b.x1 + margin && z > b.z0 - margin && z < b.z1 + margin);
+  return ALL_BUILDINGS.some((b) => x > b.x0 - margin && x < b.x1 + margin && z > b.z0 - margin && z < b.z1 + margin);
 }
 
 function blocked(x, z, boxes, radius, bounds) {

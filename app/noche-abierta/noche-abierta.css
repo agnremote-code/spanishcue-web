@@ -438,3 +438,98 @@
 .na-question-nav span { font-size: .8rem; white-space: nowrap; }
 .na-question-nav button { min-width: 44px; min-height: 44px; font-size: 1.2rem; }
 .na-situation-nav { display: flex; justify-content: space-between; gap: 8px; padding: 10px 16px; flex-wrap: wrap; }
+
+/* ---- object choice (¿qué llevas esta noche?) ---- */
+/* Full-screen night overlay: title, the 3D shelf, seven cards (a radio group)
+   and a confirm bar. Tokens are repeated here so it also works outside .na-root. */
+.na-pick { --na-amber: #f0b45c; --na-cream: #f3e7d3; --na-muted: #a79a88; --na-text: #f3e7d3; --na-text-2: #cbbba3; --na-card-soft: #ffffff0b; --na-card-soft-2: #ffffff14; --na-ease: cubic-bezier(.2, .8, .2, 1);
+  position: fixed; inset: 0; z-index: 40; display: grid; grid-template-rows: auto auto auto auto; align-content: center; gap: clamp(10px, 2vh, 20px); padding: clamp(16px, 3vh, 36px) clamp(16px, 4vw, 56px); overflow-y: auto; overscroll-behavior: contain; color: var(--na-text); background: #0b1016; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; animation: na-fade-in .35s ease-out; }
+.na-pick *, .na-pick *::before, .na-pick *::after { box-sizing: border-box; }
+.na-pick h2, .na-pick p { margin: 0; }
+.na-pick button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.na-pick :focus-visible { outline: 3px solid var(--na-amber); outline-offset: 3px; }
+.na-pick-sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(70% 55% at 50% 38%, #f0b45c14, #f0b45c00 70%), radial-gradient(120% 90% at 50% 0%, #1b2736 0%, #0f151c 55%, #080b10 100%); }
+.na-pick-sky::after { content: ""; position: absolute; inset: 0; opacity: .5; background-image: radial-gradient(1px 1px at 12% 18%, #fff8 50%, #0000), radial-gradient(1px 1px at 33% 9%, #fff6 50%, #0000), radial-gradient(1.5px 1.5px at 58% 14%, #fff7 50%, #0000), radial-gradient(1px 1px at 76% 6%, #fff5 50%, #0000), radial-gradient(1px 1px at 88% 22%, #fff6 50%, #0000), radial-gradient(1px 1px at 4% 34%, #fff4 50%, #0000); }
+.na-pick-head { position: relative; display: grid; justify-items: center; gap: 8px; text-align: center; animation: na-pick-in .5s var(--na-ease) both; }
+.na-pick-head h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: clamp(30px, 4.2vw, 54px); line-height: 1; letter-spacing: -.5px; color: #fff4e2; text-shadow: 0 6px 30px #000c; }
+.na-pick-lede { max-width: 48ch; font-size: 15px; line-height: 1.5; color: var(--na-text-2); text-wrap: pretty; }
+.na-pick-close { position: absolute; right: -6px; top: -6px; }
+.na-pick-stage { position: relative; width: 100%; height: clamp(190px, 34vh, 380px); border-radius: 22px; overflow: hidden; background: radial-gradient(60% 80% at 50% 100%, #f0b45c12, #f0b45c00 70%); }
+.na-pick-stage.is-loading { background: radial-gradient(60% 80% at 50% 100%, #f0b45c12, #f0b45c00 70%), linear-gradient(90deg, #ffffff00 0%, #ffffff08 50%, #ffffff00 100%) 0 0 / 200% 100%; animation: na-pick-shimmer 1.4s linear infinite; }
+.na-pick-canvas { display: block; width: 100%; height: 100%; touch-action: pan-y; }
+
+.na-pick-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; animation: na-pick-in .5s .08s var(--na-ease) both; }
+.na-pick-card { --na-pick-tone: var(--na-amber); position: relative; min-width: 0; min-height: 44px; display: grid; align-content: start; justify-items: center; gap: 6px; padding: 12px 10px 14px; border: 1px solid #ffffff14; border-radius: 16px; background: linear-gradient(180deg, #ffffff0c, #ffffff04); color: var(--na-text); text-align: center; transition: border-color .18s, background .18s, transform .18s var(--na-ease), box-shadow .18s; }
+.na-pick-card:hover, .na-pick-card.is-focused { border-color: #ffffff38; background: linear-gradient(180deg, #ffffff14, #ffffff06); transform: translateY(-2px); }
+.na-pick-card.is-selected { border-color: var(--na-amber); background: linear-gradient(180deg, #f0b45c26, #f0b45c0a); box-shadow: 0 0 0 1px var(--na-amber), 0 14px 34px #f0b45c26; }
+.na-pick-card.is-power.is-selected { border-color: #ff6f91; background: linear-gradient(180deg, #ff4d6d29, #ff4d6d0a); box-shadow: 0 0 0 1px #ff6f91, 0 14px 34px #ff4d6d33; }
+.na-pick-art { display: grid; place-items: center; color: var(--na-cream); }
+.na-pick-card.is-selected .na-pick-art { color: #fff4e2; }
+.na-pick-name { font-size: 12.5px; font-weight: 850; letter-spacing: 1.2px; line-height: 1.25; }
+.na-pick-note { font-size: 12.5px; line-height: 1.4; color: var(--na-text-2); text-wrap: pretty; }
+.na-pick-tag { position: absolute; left: 8px; top: 8px; padding: 2px 7px; border-radius: 999px; background: #ffffff12; color: var(--na-muted); font-size: 9.5px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
+.na-pick-tag.is-power { background: #ff4d6d2b; color: #ffb3c4; }
+.na-pick-key { position: absolute; right: 8px; top: 8px; min-width: 18px; padding: 1px 5px; border: 1px solid #ffffff2a; border-radius: 5px; color: var(--na-muted); font: 800 10px Inter, ui-sans-serif, system-ui, sans-serif; }
+.na-pick-card::after { content: ""; position: absolute; left: 50%; bottom: -1px; width: 34%; height: 2px; border-radius: 2px; background: var(--na-pick-tone); opacity: 0; transform: translateX(-50%) scaleX(.4); transition: opacity .2s, transform .25s var(--na-ease); }
+.na-pick-card.is-selected::after, .na-pick-card.is-focused::after { opacity: .9; transform: translateX(-50%); }
+
+/* Without WebGL the cards carry big illustrations instead of the shelf. */
+.na-pick.is-flat .na-pick-card { padding-top: 18px; }
+.na-pick.is-flat .na-pick-art { width: 92px; height: 92px; border-radius: 50%; background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--na-pick-tone) 30%, transparent), #0000 70%); }
+.na-pick.is-flat .na-pick-art .na-item-icon { filter: drop-shadow(0 6px 12px #0008); }
+
+.na-pick-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; animation: na-pick-in .5s .14s var(--na-ease) both; }
+.na-pick-fiction { display: flex; align-items: baseline; gap: 8px; font-size: 12.5px; line-height: 1.45; color: var(--na-muted); transition: color .2s; }
+.na-pick-fiction span { color: var(--na-amber); }
+.na-pick-fiction.is-on { color: var(--na-text); }
+.na-pick-go { min-height: 52px; padding: 0 26px; border-radius: 12px; font-size: 16px; font-weight: 850; letter-spacing: .3px; box-shadow: 0 10px 30px #f0b45c40; }
+.na-pick-go:not(:disabled):hover { filter: brightness(1.06); transform: translateY(-1px); }
+
+@keyframes na-pick-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes na-pick-shimmer { from { background-position: 0 0, 200% 0; } to { background-position: 0 0, -200% 0; } }
+
+@media (max-width: 1100px) {
+  .na-pick-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .na-pick { align-content: start; gap: 12px; padding: 16px 16px 0; }
+  .na-pick-head h2 { font-size: 28px; }
+  .na-pick-lede { font-size: 13.5px; }
+  .na-pick-close { right: -8px; top: -8px; }
+  .na-pick-stage { height: clamp(170px, 30svh, 260px); border-radius: 16px; }
+  .na-pick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .na-pick-card { grid-template-columns: auto 1fr; justify-items: start; align-items: center; text-align: left; gap: 2px 10px; padding: 10px 12px; }
+  .na-pick-art { grid-row: span 2; }
+  .na-pick-note { grid-column: 2; font-size: 12px; }
+  .na-pick-key { display: none; }
+  .na-pick-tag { position: static; grid-column: 2; justify-self: start; margin-top: 4px; }
+  .na-pick.is-flat .na-pick-card { padding-top: 10px; }
+  .na-pick.is-flat .na-pick-art { width: 64px; height: 64px; }
+  .na-pick-foot { position: sticky; bottom: 0; margin: 0 -16px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: #0b1016f2; border-top: 1px solid #ffffff12; backdrop-filter: blur(8px); }
+  .na-pick-go { width: 100%; }
+}
+@media (hover: none) { .na-pick-key { display: none; } }
+
+/* HUD inventory: a small round chip; the name opens on hover or focus. */
+.na-inv { --na-amber: #f0b45c; position: relative; display: inline-flex; align-items: center; gap: 0; min-width: 44px; min-height: 44px; margin: 0; padding: 0 3px; border: 1px solid #f0b45c55; border-radius: 999px; background: #120e0be6; color: #f3e7d3; font: 800 12px Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; box-shadow: 0 8px 24px #0009, inset 0 1px 0 #ffffff12; backdrop-filter: blur(6px); transition: gap .25s var(--na-ease, ease), padding .25s var(--na-ease, ease), border-color .2s, background .2s; }
+.na-inv-icon { width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle at 50% 35%, #f0b45c33, #f0b45c08 70%); color: #fff4e2; }
+.na-inv-name, .na-inv-key { max-width: 0; overflow: hidden; opacity: 0; transition: max-width .3s var(--na-ease, ease), opacity .2s; }
+.na-inv-key { padding: 1px 0; border: 1px solid #0000; border-radius: 5px; color: var(--na-amber); font: 800 10px Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: .6px; }
+.na-inv:hover, .na-inv:focus-visible, .na-inv:focus-within { gap: 8px; padding-right: 12px; border-color: var(--na-amber); }
+.na-inv:hover .na-inv-name, .na-inv:focus-visible .na-inv-name, .na-inv:focus-within .na-inv-name { max-width: 14em; opacity: 1; }
+button.na-inv { cursor: pointer; }
+button.na-inv:active { transform: translateY(1px); }
+.na-inv.is-power { border-color: #ff6f9177; }
+.na-inv.is-power .na-inv-icon { background: radial-gradient(circle at 50% 35%, #ff4d6d44, #ff4d6d08 70%); }
+.na-inv.is-used .na-inv-icon { animation: na-inv-use .5s var(--na-ease, ease); }
+@keyframes na-inv-use { 40% { transform: scale(1.18); } }
+@media (hover: hover) and (pointer: fine) {
+  button.na-inv:hover .na-inv-key, button.na-inv:focus-visible .na-inv-key { max-width: 8em; padding: 1px 5px; border-color: #f0b45c66; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .na-pick, .na-pick-head, .na-pick-grid, .na-pick-foot, .na-pick-stage.is-loading, .na-inv.is-used .na-inv-icon { animation: none; }
+  .na-pick-card, .na-pick-card::after, .na-inv, .na-inv-name, .na-inv-key { transition: none; }
+  .na-pick-card:hover, .na-pick-card.is-focused { transform: none; }
+}
+/* ---- end object choice ---- */
