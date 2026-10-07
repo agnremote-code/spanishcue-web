@@ -18,12 +18,16 @@ await build({stdin:{contents:`import React from 'react';import{createRoot}from'r
  b.onLoad({filter:/.*/,namespace:'preview'},()=>({contents:'export default function Link({children,...props}){return <a {...props}>{children}</a>}',loader:'jsx',resolveDir:repo}));
  b.onLoad({filter:/bosque-de-los-hongos-gigantes\/World3D\.tsx$/},async({path})=>{
   let source=await readFile(path,'utf8');
-  source=source.replace('const ix=(held.has',`if(window.__forestQA?.aim){const a=window.__forestQA.aim;const dx=a.x-player.x,dz=a.z-player.z,d=Math.hypot(dx,dz),amount=Math.min(1,d/.15);joy.x=d?amount*(Math.cos(yaw)*dx-Math.sin(yaw)*dz)/d:0;joy.y=d?amount*(Math.sin(yaw)*dx+Math.cos(yaw)*dz)/d:0;}
-        const ix=(held.has`);
-  source=source.replace('renderer.render(scene,camera);',`if(!window.__forestQA?.lastRender||time-window.__forestQA.lastRender>250){renderer.render(scene,camera);window.__forestQA??={};window.__forestQA.lastRender=time;}
+  // Headless software GL stalls animation frames while it renders: drive time from performance.now()
+  // and allow larger (still 1/90 s sub-stepped) physics steps so journeys progress at wall-clock speed;
+  // steering is then applied per sub-step so it never overshoots the aim.
+  source=source.replace('const tick = (time: number) => {','const tick = (_frameTime: number) => { const time = performance.now();').replace('dt = Math.min(raw, .05)','dt = Math.min(raw, .25)').replace('player = stepPlayer(player, { x: dx, z: dz,','player = stepPlayer(player, { ...(window.__forestQA?.aim ? (()=>{const a=window.__forestQA.aim,ex=a.x-player.x,ez=a.z-player.z,d=Math.hypot(ex,ez),k=Math.min(1,d/(9*step*1.05));return {x:d?ex/d*k:0,z:d?ez/d*k:0};})() : { x: dx, z: dz }),');
+  source=source.replace('const ix = (held.has',`if(window.__forestQA?.aim){const a=window.__forestQA.aim;const dx=a.x-player.x,dz=a.z-player.z,d=Math.hypot(dx,dz),amount=Math.min(1,d/.15);joy.x=d?amount*(Math.cos(yaw)*dx-Math.sin(yaw)*dz)/d:0;joy.y=d?amount*(Math.sin(yaw)*dx+Math.cos(yaw)*dz)/d:0;}
+        const ix = (held.has`);
+  source=source.replace('renderer.render(scene, camera);',`if(!window.__forestQA?.lastRender||time-window.__forestQA.lastRender>250){renderer.render(scene,camera);window.__forestQA??={};window.__forestQA.lastRender=time;}
       window.__forestQA ??= {};
       window.__forestQA.stop=()=>{joy.x=0;joy.y=0;};
-      window.__forestQA.snapshot=()=>({player:{...player},camera:camera.position.toArray(),yaw,near:camera.near,zone:currentZone,heroHead:new THREE.Vector3(player.x,player.y+2,player.z).project(camera).toArray(),heroFeet:new THREE.Vector3(player.x,player.y,player.z).project(camera).toArray(),distance:camera.position.distanceTo(look),visible:cameraClearDistance(look,camera.position,forest.solids)>=camera.position.distanceTo(look)-.02});`);
+      window.__forestQA.snapshot=()=>({player:{...player},camera:camera.position.toArray(),yaw,near:camera.near,zone:currentZone,heroHead:new THREE.Vector3(player.x,player.y+2,player.z).project(camera).toArray(),heroFeet:new THREE.Vector3(player.x,player.y,player.z).project(camera).toArray(),distance:camera.position.distanceTo(head),visible:cameraClearDistance(head,camera.position,forest.solids)>=camera.position.distanceTo(head)-.02});`);
   return{contents:source,loader:'tsx',resolveDir:dirname(path)};
  });
 }}]});
@@ -72,8 +76,8 @@ async function travel(page,id){
  const steps=route((await state(page)).player,id);console.log({route:steps.map(p=>p.id)});
  for(const step of steps){console.log({jump:step.id});
   await steer(page,{x:step.x,z:step.z});await page.locator('.bfg-world-canvas canvas').focus();await page.keyboard.press('Space');
-  await page.waitForFunction(id=>{const p=window.__forestQA.snapshot().player;return p.grounded&&p.platform===id;},step.id,{timeout:20000});
-  await page.waitForFunction(p=>{const a=window.__forestQA.snapshot().player;return Math.hypot(a.x-p.x,a.z-p.z)<.2;},step,{timeout:10000});
+  await page.waitForFunction(id=>{const p=window.__forestQA.snapshot().player;return p.grounded&&p.platform===id;},step.id,{timeout:Number(process.env.BOSQUE_QA_STEP_MS||20000)});
+  await page.waitForFunction(p=>{const a=window.__forestQA.snapshot().player;return Math.hypot(a.x-p.x,a.z-p.z)<.2;},step,{timeout:Number(process.env.BOSQUE_QA_STEP_MS||10000)});
  }
  await stop(page);await page.waitForTimeout(350);
 }
@@ -86,7 +90,7 @@ try{
   browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE_PATH?{executablePath:process.env.CHROMIUM_EXECUTABLE_PATH}:{}),args:JSON.parse(process.env.CHROMIUM_ARGS||'[]')});
   const context=await browser.newContext({viewport:{width,height},hasTouch:width<=768||size==='landscape',isMobile:width<=768||size==='landscape',reducedMotion:'no-preference'});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(`${size}: ${e.message}`));
-  if(process.env.BOSQUE_QA_REFUGE||process.env.BOSQUE_QA_FINISH){const z=ZONES.find(z=>z.id===(process.env.BOSQUE_QA_REFUGE||'sobre-ti'));await page.addInitScript(p=>localStorage.setItem('spanishcue:bosque:world:v1',JSON.stringify({version:1,position:p,checkpoint:p})),{x:z.x,y:z.y,z:z.z});}
+  if(process.env.BOSQUE_QA_REFUGE||process.env.BOSQUE_QA_FINISH){const z=ZONES.find(z=>z.id===(process.env.BOSQUE_QA_REFUGE||'sobre-ti'));await page.addInitScript(p=>localStorage.setItem('spanishcue:bosque:world:v2',JSON.stringify({version:2,position:p,checkpoint:p})),{x:z.x,y:z.y,z:z.z});}
   await page.goto(`${origin}/?level=B1`);
   await page.getByRole('button',{name:'Entrar en el bosque'}).click();
   await page.waitForFunction(()=>window.__forestQA?.snapshot);
@@ -104,10 +108,10 @@ try{
    await page.getByRole('button',{name:'Volver al bosque',exact:true}).click();
    assert.doesNotMatch(await page.locator('.bfg-world-converse').innerText(),/Volver/);
    await page.locator('.bfg-world-converse').click();await page.getByRole('button',{name:'Marcar como hablada'}).click();
-   await page.waitForFunction(()=>document.querySelector('.bfg-world-location')?.textContent.includes('Destino: Vida real'));
+   await page.waitForFunction(()=>document.querySelector('.bfg-world-location')?.textContent.includes('Destino: La cesta olvidada'));
    await layout(page,`${size}: onward destination`);
    await page.screenshot({path:resolve(out,`${size}-next-destination.png`)});
-   await steer(page,{x:15,z:-1.8});await page.waitForFunction(()=>Math.abs(window.__forestQA.snapshot().player.z+1.8)<.2);await stop(page);await layout(page,`${size}: close to sign`);
+   const sign={x:ZONES[0].x+ZONES[0].r*.55,z:ZONES[0].z};await steer(page,sign);await page.waitForFunction(p=>{const q=window.__forestQA.snapshot().player;return Math.hypot(q.x-p.x,q.z-p.z)<.2;},sign);await stop(page);await layout(page,`${size}: close to sign`);
    await page.getByRole('button',{name:'Cambiar distancia de cámara'}).click();
    const canvas=await page.locator('.bfg-world-canvas canvas').boundingBox();
    await page.mouse.move(canvas.x+canvas.width*.5,canvas.y+canvas.height*.5);await page.mouse.down();await page.mouse.move(canvas.x+canvas.width*.5+100,canvas.y+canvas.height*.5+20,{steps:10});await page.mouse.up();await page.waitForTimeout(400);
@@ -130,8 +134,8 @@ try{
   }
   // Real keyboard movement and jump, then physical route through three refuges.
   await page.locator('.bfg-world-canvas canvas').focus();const start=(await state(page)).player;
-  await page.keyboard.down('w');await page.waitForFunction(x=>window.__forestQA.snapshot().player.x>x+.8,start.x);await page.keyboard.up('w');
-  assert.ok((await state(page)).player.x>start.x+.7);passed++;
+  await page.keyboard.down('w');await page.waitForFunction(p=>{const q=window.__forestQA.snapshot().player;return Math.hypot(q.x-p.x,q.z-p.z)>.8;},start);await page.keyboard.up('w');
+  {const q=(await state(page)).player;assert.ok(Math.hypot(q.x-start.x,q.z-start.z)>.7);}passed++;
   for(const [index,zone] of ZONES.slice(0,3).entries()){
    console.log(`${size}: traveling to ${zone.id}`);await travel(page,`zone-${zone.id}`);
    assert.equal(await page.locator('[aria-label="Conversación del bosque"]').count(),0);
@@ -149,7 +153,7 @@ try{
    await page.waitForFunction(()=>!window.__forestQA.snapshot().player.grounded);await page.waitForFunction(()=>window.__forestQA.snapshot().player.grounded);passed++;
   }
   await page.getByRole('button',{name:'Abrir mapa del bosque',exact:true}).click();await page.getByRole('dialog',{name:'Mapa del bosque',exact:true}).waitFor();await page.screenshot({path:resolve(out,`${size}-map.png`)});await page.keyboard.press('Escape');passed++;
-  const minimap=page.getByRole('button',{name:'Ampliar mapa: refugios, punto de regreso y posición'});
+  const minimap=page.getByRole('button',{name:'Ampliar mapa: paradas, altura y posición'});
   if(await minimap.isVisible()){await minimap.click();await page.getByRole('button',{name:'Cerrar mapa',exact:true}).click();}else{assert.equal(size,'landscape');assert.ok(await page.getByRole('button',{name:'Abrir mapa del bosque',exact:true}).isVisible());}passed++;
   await page.getByRole('button',{name:'Cambiar distancia de cámara'}).click();assert.equal(await page.getByRole('button',{name:'Cambiar distancia de cámara'}).getAttribute('aria-pressed'),'true');await page.waitForTimeout(300);await layout(page,`${size}: wide camera`);await page.keyboard.press('v');passed++;
   const beforeFall=(await state(page)).player;

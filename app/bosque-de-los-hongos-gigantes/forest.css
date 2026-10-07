@@ -13,3 +13,10 @@
 .bh-playing .bh-session-bar strong{font-size:11px}.bh-playing .bh-session-bar span{font-size:11px;margin:0}
 .bh-playing .bh-map-view{flex:1;min-height:0;overflow:auto}.bh-playing .bh-loading{flex:1;min-height:0}
 @media(max-width:700px){.bh-playing .bh-top{padding:7px 12px;gap:5px;min-height:92px}.bh-playing .bh-levels{gap:3px}.bh-playing .bh-levels button{min-height:36px;padding:6px}.bh-playing .bh-session-bar{padding:7px 12px}.bh-playing .bh-session-bar>div{gap:4px 10px}.bh-playing .bh-session-bar strong,.bh-playing .bh-session-bar span{font-size:10px}}
+
+/* Expedition stations: the world sets the scene, the choice reacts, an open question follows. */
+.bh-scene{margin:22px 0 0;padding:14px 18px;border-radius:10px;background:#20372d;color:#f3ecd6;font:italic 16px/1.55 Georgia,serif}.bh-scene span{display:block;font:700 9px Arial,sans-serif;letter-spacing:.22em;color:#e3c27c;margin-bottom:6px;font-style:normal}
+.bh-open{margin:16px 0 6px;padding:18px 20px;border-radius:12px;background:#f3e2b4;border-left:4px solid #b88a2e;animation:bh-open-in .35s ease-out}.bh-open small{font-size:9px;letter-spacing:.22em;color:#6e5418;font-weight:700}.bh-open p{margin:8px 0 0;font:21px/1.4 Georgia,serif;color:#1b3529}
+.bh .bh-open-skip{border:0;background:transparent;padding:6px 0;color:#59704f;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+@keyframes bh-open-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.bh-scene{font-size:14px;padding:12px 14px}.bh-open p{font-size:18px}}
