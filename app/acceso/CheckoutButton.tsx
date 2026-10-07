@@ -96,9 +96,15 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
         body: JSON.stringify({ subscriptionId }),
       });
       if (!response.ok || response.status === 204) return;
-      const body = await response.json() as { transactionId?: unknown };
-      if (typeof body.transactionId === "string") {
-        trackMarketingEvent("subscription_first_paid", { transaction_id: body.transactionId });
+      const body = await response.json() as { transactionId?: unknown; value?: unknown; currency?: unknown };
+      if (typeof body.transactionId === "string"
+          && typeof body.value === "number" && Number.isFinite(body.value) && body.value > 0
+          && typeof body.currency === "string" && /^[A-Z]{3}$/.test(body.currency)) {
+        trackMarketingEvent("subscription_first_paid", {
+          transaction_id: body.transactionId,
+          value: body.value,
+          currency: body.currency,
+        });
       }
     } catch {}
   }
