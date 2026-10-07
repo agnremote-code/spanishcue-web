@@ -27,7 +27,7 @@
   grid-column:1/-1;
   grid-row:2;
   display:grid;
-  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:clamp(22px,3vw,46px);
   align-items:center;
   min-width:0;
@@ -37,7 +37,7 @@
 .new-lessons-preview{
   display:block;
   width:100%;
-  height:clamp(225px,24vw,330px);
+  height:clamp(220px,20vw,280px);
   object-fit:cover;
   border:1px solid #d7e3e8;
   border-radius:13px;
