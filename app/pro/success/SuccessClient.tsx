@@ -6,9 +6,9 @@ import { useI18n } from "../../i18n/LocaleProvider";
 import { trackMarketingEvent } from "../../marketing/analytics";
 import { CONSENT_EVENT, consentFor } from "../../privacy/consent";
 
-const ga4Configured = /^G-[A-Z0-9]+$/i.test(process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "");
-const adsConversionConfigured = /^AW-[0-9]+$/i.test(process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "")
-  && /^[A-Za-z0-9_-]+$/.test(process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || "");
+const ga4Configured = /^G-[A-Z0-9]+$/i.test(typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "") : "");
+const adsConversionConfigured = /^AW-[0-9]+$/i.test(typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "")
+  && /^[A-Za-z0-9_-]+$/.test(typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || "") : "");
 const measurementConfigured = ga4Configured || adsConversionConfigured;
 
 export default function SuccessClient({ subscriptionId, returnTo }: { subscriptionId: string; returnTo: string }) {
