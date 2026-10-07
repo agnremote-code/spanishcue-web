@@ -82,9 +82,15 @@ function sendGoogleAdsPurchase(properties: Record<string, string | number | bool
   const transactionId = typeof properties.transaction_id === "string"
     ? clean(properties.transaction_id)
     : undefined;
-  if (!transactionId) return;
+  const value = typeof properties.value === "number" && Number.isFinite(properties.value) && properties.value > 0
+    ? properties.value
+    : undefined;
+  const currency = typeof properties.currency === "string" ? clean(properties.currency)?.toUpperCase() : undefined;
+  if (!transactionId || value === undefined || !currency || !/^[A-Z]{3}$/.test(currency)) return;
   window.gtag?.("event", "conversion", {
     send_to: `${googleAdsConversionId}/${googleAdsPurchaseLabel}`,
+    value,
+    currency,
     transaction_id: transactionId,
   });
 }
