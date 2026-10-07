@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevelByCode, conversationLevels, type ConversationLevelCode } from "./conversation-levels";
+import { GRAMMAR_HUB_PATH, grammarLevels, grammarLevelBySlug } from './grammar';
 import styles from "./growth.module.css";
 
 /**
@@ -11,6 +12,10 @@ export default function LevelCrossLinks({ level, cluster }: { level?: string; cl
   const code = (level || "").slice(0, 2).toUpperCase() as ConversationLevelCode;
   const match = conversationLevelByCode.get(code);
   const conversation = cluster === "conversation" || cluster === "Conversación";
+  if (cluster === "grammar" || cluster === "Gramática") {
+    const grammarLevel = grammarLevelBySlug.get(code.toLowerCase());
+    return <nav className={styles.footnote} aria-label="Spanish grammar teaching resources"><p><Link className={styles.textLink} href={grammarLevel?.path ?? GRAMMAR_HUB_PATH}>{grammarLevel ? `More ${grammarLevel.code} grammar activities` : "Spanish grammar lessons by level"}</Link></p><p>{grammarLevels.map((item,index)=><span key={item.slug}>{index ? " · " : ""}<Link className={styles.textLink} href={item.path}>{item.code}</Link></span>)}{" · "}<Link className={styles.textLink} href={`${GRAMMAR_HUB_PATH}#c2`}>C2 reference</Link>{" · "}<Link className={styles.textLink} href="/about">Teaching methodology</Link></p></nav>;
+  }
   return (
     <nav className={styles.footnote} aria-label="Spanish conversation activities by level">
       <p style={{ margin: "0 0 6px", fontWeight: 800 }}>

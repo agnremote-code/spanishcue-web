@@ -10,6 +10,10 @@ const acquisitionLandings = new Set([
   "/spanish-conversation-activities",
   "/spanish-conversation-questions",
   "/spanish-grammar-lessons",
+  "/about",
+  "/guides/how-to-teach-ser-vs-estar",
+  "/guides/preterite-vs-imperfect-activities",
+  "/guides/spanish-subjunctive-lesson-plan",
   "/ele-recursos-profesores",
   "/online-spanish-teaching-resources",
   "/free-spanish-lesson",
@@ -22,7 +26,7 @@ const acquisitionLandings = new Set([
 function landingName(pathname: string): string | null {
   if (pathname === "/") return "home";
   if (acquisitionLandings.has(pathname)) return pathname.slice(1);
-  if (pathname.startsWith("/spanish-conversation-activities/") || pathname.startsWith("/lp/")) return pathname.slice(1);
+  if (pathname.startsWith("/spanish-conversation-activities/") || pathname.startsWith("/spanish-grammar-lessons/") || pathname.startsWith("/lp/")) return pathname.slice(1);
   return null;
 }
 

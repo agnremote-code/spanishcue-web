@@ -4560,6 +4560,24 @@
       "text": "Culpable. La diferencia, espero, es que la historia no sustituya al tomate. Pruébelo.",
       "category": "neutral-context",
       "reason": "Tomate is the noun tomato, not an imperative."
+    },
+    {
+      "path": "app/growth/grammar-topics.ts",
+      "text": "Pedí que incluyeran una actividad práctica.",
+      "category": "neutral-context",
+      "reason": "Phase 2 teaching example: first-person singular preterite in a past narrative, not a regional imperative."
+    },
+    {
+      "path": "app/growth/grammar.ts",
+      "text": "Primero salí de casa. Después llegué al museo.",
+      "category": "neutral-context",
+      "reason": "Phase 2 teaching example: first-person singular preterite in a past narrative, not a regional imperative."
+    },
+    {
+      "path": "app/growth/grammar.ts",
+      "text": "Visité el museo, comí con una amiga y volví a las seis.",
+      "category": "neutral-context",
+      "reason": "Phase 2 teaching example: first-person singular preterite in a past narrative, not a regional imperative."
     }
   ]
 }

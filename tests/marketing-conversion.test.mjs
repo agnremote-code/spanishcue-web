@@ -133,20 +133,28 @@ test("search landings, including a dedicated free demo, and crawl controls are i
   ]);
   // Organic hubs are dedicated CollectionPage templates; the rest still use the
   // conversion template, which /lp/[slug] reuses as noindex campaign variants.
-  const organicHubs = new Set(["spanish-teacher-resources", "spanish-conversation-activities"]);
+  const organicHubs = new Set(["spanish-teacher-resources", "spanish-conversation-activities", "spanish-grammar-lessons"]);
   for (const routeName of routeNames) {
     const page = await source(`app/${routeName}/page.tsx`);
     if (organicHubs.has(routeName)) {
       assert.match(page, /collectionPageSchema/);
       assert.match(page, /Breadcrumbs/);
-      assert.match(page, /canonicalUrl\(/);
+      if (routeName === "spanish-grammar-lessons") {
+        assert.match(page, /grammarMetadata\(GRAMMAR_HUB_PATH/);
+        const metadata = await source("app/growth/grammar-metadata.ts");
+        assert.match(metadata, /canonicalUrl\(/);
+        assert.match(metadata, /index: true, follow: true/);
+      } else {
+        assert.match(page, /canonicalUrl\(/);
+      }
       assert.doesNotMatch(page, /MarketingLanding/);
     } else {
       assert.match(page, /MarketingLanding/);
       assert.match(page, /generateLandingMetadata/);
     }
-    // The conversation hub reaches the sitemap through its shared path constant.
-    assert.match(sitemap, routeName === "spanish-conversation-activities" ? /CONVERSATION_HUB_PATH/ : new RegExp(routeName));
+    // The conversation hub uses a shared path constant in its sitemap entry.
+    const sitemapPath = routeName === "spanish-conversation-activities" ? /CONVERSATION_HUB_PATH/ : new RegExp(routeName);
+    assert.match(sitemap, sitemapPath);
   }
   const campaign = await source("app/lp/[slug]/page.tsx");
   assert.match(campaign, /MarketingLanding/);

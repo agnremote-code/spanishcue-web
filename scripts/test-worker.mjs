@@ -25,7 +25,7 @@ try{
  server=spawn(process.execPath,[cli,'dev','--config',config,'--port','0','--ip','127.0.0.1','--local','--persist-to',state,'--var',`AUTOESTUDIO_SHARE_SECRET:${shareTestSecret}`],{env:workerEnv,stdio:['ignore','pipe','pipe']});
  for(const stream of [server.stdout,server.stderr])stream.on('data',chunk=>{workerOutput=(workerOutput+chunk.toString().replaceAll(shareTestSecret,'[test-secret]')).slice(-16000)});
  const origin=await new Promise((resolve,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error(`Worker startup timed out: ${output.slice(-2400)}`)),Number(process.env.SPANISHCUE_TEST_WORKER_TIMEOUT_MS)||30000);function read(chunk){output+=chunk.toString();const m=output.match(/Ready on (http:\/\/127\.0\.0\.1:\d+)/);if(m){clearTimeout(timer);resolve(m[1])}}server.stdout.on('data',read);server.stderr.on('data',read);server.once('error',reject);server.once('exit',code=>{clearTimeout(timer);reject(new Error(`Worker exited ${code}: ${output.slice(-1200)}`))})});
- await run(['--test','tests/grammar-classroom-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
+ await run(['--test','tests/grammar-classroom-routes.test.mjs','tests/grammar-seo-rendered.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/lesson-reports-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/country-flagships.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/autoestudio-routes.test.mjs','tests/autoestudio-share-worker.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin,AUTOESTUDIO_TEST_SHARE_SECRET:shareTestSecret});

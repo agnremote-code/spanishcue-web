@@ -8,6 +8,7 @@ import { collectionPageSchema } from "../growth/schema";
 import { canonicalUrl, languageAlternates } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import { teachingGuideBySlug, teachingGuides } from "../teaching-guides";
+import { grammarLevels, grammarLessonsAtLevel } from '../growth/grammar';
 import styles from "../growth/growth.module.css";
 
 const PATH = "/spanish-teacher-resources";
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 
 const skillSections = [
   { name: "Spanish conversation activities", href: CONVERSATION_HUB_PATH, copy: `${catalogSummary.conversation} conversation worlds plus step-by-step activities, sentence frames and questions for every CEFR level.` },
-  { name: "Spanish grammar lessons", href: "/spanish-grammar-lessons", copy: `${catalogSummary.grammar} visual grammar worlds and a complete verbal system map, one tense at a time, from A1 to C2.` },
+  { name: "Spanish grammar lessons", href: "/spanish-grammar-lessons", copy: `${catalogSummary.grammar} teacher-led grammar classrooms with reading, audio, speaking and writing, organized by their actual teaching level.` },
   { name: "Listening activities", href: "/resources", copy: `${catalogSummary.listening} listening worlds with audio, comprehension tasks and a speaking follow-up, two of them free.` },
   { name: "Pronunciation and vocabulary", href: "/resources", copy: `${catalogSummary.pronunciation + catalogSummary.vocabulary} pronunciation and vocabulary lessons, including free sound and word-bank lessons for beginners.` },
 ];
@@ -84,6 +85,11 @@ export default function SpanishTeacherResourcesPage() {
                 </Link>
               ))}
             </div>
+          </Section>
+
+          <Section id="grammar-levels" title="Grammar that leads to a useful exchange" intro="Choose a classroom level or a focused activity kit. The grammar hub includes free activities, real lesson previews and practical correction notes.">
+            <div className={styles.cardGrid}>{grammarLevels.map(level=><Link className={styles.levelCard} href={level.path} key={level.code}><b>{level.code} grammar</b><span>{level.focus}</span><em>{grammarLessonsAtLevel(level.code).length} classrooms</em></Link>)}</div>
+            <p className={styles.footnote}><Link className={styles.textLink} href="/spanish-grammar-lessons">Explore all grammar resources</Link>{" · "}<Link className={styles.textLink} href="/about">The teaching practice and methodology behind SpanishCue</Link></p>
           </Section>
 
           <Section id="free" title={`${freeLessons.length} free interactive Spanish lessons`} intro="Complete lessons, not demos: grammar, conversation, listening, pronunciation and vocabulary. No card, no download, ready for screen sharing.">

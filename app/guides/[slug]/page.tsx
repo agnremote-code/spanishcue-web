@@ -5,6 +5,9 @@ import { teachingGuideBySlug, teachingGuides } from "../../teaching-guides";
 import { lessons, type Lesson } from "../../lesson-catalog";
 import { resourceLevelLabel, resourcePathForLesson } from "../../resource-seo";
 import { formatReviewedDate, guideModifiedDate } from "../guide-format";
+import GrammarTopicPage from '../../growth/GrammarTopicPage';
+import { grammarTopicByPath } from '../../growth/grammar-topics';
+import { grammarMetadata } from '../../growth/grammar-metadata';
 import LevelCrossLinks from "../../growth/LevelCrossLinks";
 import styles from "../guides.module.css";
 
@@ -20,6 +23,8 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   const { slug } = await params;
   const guide = teachingGuideBySlug.get(slug);
   if (!guide) return {};
+  const topic = grammarTopicByPath.get(`/guides/${slug}`);
+  if (topic) return grammarMetadata(topic.path, topic.title, topic.description);
 
   const canonical = "https://spanishcue.com/guides/" + guide.slug;
   return {
@@ -46,6 +51,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const { slug } = await params;
   const guide = teachingGuideBySlug.get(slug);
   if (!guide) notFound();
+  const topic = grammarTopicByPath.get(`/guides/${slug}`);
+  if (topic) return <GrammarTopicPage topic={topic} guide={guide} />;
 
   const canonical = "https://spanishcue.com/guides/" + guide.slug;
   const relatedGuides = (guide.relatedGuideSlugs ?? [])

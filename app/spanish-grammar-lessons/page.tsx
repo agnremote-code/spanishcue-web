@@ -1,9 +1,39 @@
-import MarketingLanding from "../marketing-landing/MarketingLanding";
-import { landingConfigs } from "../marketing-landing/config";
-import { generateLandingMetadata } from "../marketing-landing/metadata";
-
-export const generateMetadata = () => generateLandingMetadata(landingConfigs["spanish-grammar-lessons"]);
-
-export default function Page() {
-  return <MarketingLanding config={landingConfigs["spanish-grammar-lessons"]} />;
+import Link from 'next/link';
+import { Breadcrumbs, CtaBand, GrowthFooter, GrowthTopbar, JsonLd, LessonGrid, Section } from '../growth/components';
+import { GrammarActivities, GrammarHero, GrammarLessonList, GrammarLevelNav, GrammarTopicLinks } from '../growth/GrammarComponents';
+import { grammarInventory, grammarLevels, grammarLessonsAtLevel, GRAMMAR_HUB_PATH } from '../growth/grammar';
+import { grammarTopicPages } from '../growth/grammar-topics';
+import { grammarMetadata } from '../growth/grammar-metadata';
+import { lessonCards } from '../growth/lessons';
+import { collectionPageSchema } from '../growth/schema';
+import TeachingProof from '../growth/TeachingProof';
+import styles from '../growth/growth.module.css';
+import grammar from '../growth/grammar.module.css';
+const title = 'Spanish Grammar Activities for Teachers | SPANISHCUE';
+const description = 'Ready-to-teach Spanish grammar lessons for adults, organized by CEFR level. Explore real classrooms, free activities, audio and practical teaching guides.';
+export const metadata = grammarMetadata(GRAMMAR_HUB_PATH, title, description);
+export default function GrammarHub() {
+  const free = grammarLessonsAtLevel('A1').filter(lesson=>lesson.free);
+  return <><main className={styles.page}><div className={styles.shell}>
+    <JsonLd data={collectionPageSchema({pathname:GRAMMAR_HUB_PATH,name:title,description,about:['Spanish grammar activities for teachers','Communicative Spanish grammar','Spanish grammar lesson plans'],items:[...grammarLevels.map(level=>({name:`${level.code} grammar activities`,href:level.path})),...grammarTopicPages.map(topic=>({name:topic.h1,href:topic.path}))]})}/>
+    <GrowthTopbar current={GRAMMAR_HUB_PATH}/><Breadcrumbs items={[{name:'SPANISHCUE',href:'/'},{name:'Teacher resources',href:'/spanish-teacher-resources'},{name:'Grammar lessons',href:GRAMMAR_HUB_PATH}]}/>
+    <GrammarHero kicker='Grammar for teachers · Choose. Open. Teach.' title='Spanish grammar lessons that turn a rule into a real conversation.' intro='Find the structure your learner needs, choose a classroom and teach it through reading, listening, speaking and writing. Start with a free activity or explore the lessons by level.' previewId={48} primaryHref='#levels' primaryLabel='Find your grammar lesson'/>
+    <div className={grammar.statRow}><span><strong>{grammarInventory.length} grammar classrooms</strong> in the current catalog</span><span><strong>{free.length} free A1 classrooms</strong></span><span>Teacher-led · Around 60 minutes each</span></div>
+    <nav className={grammar.jump} aria-label='On this page'><a href='#levels'>Choose a level</a><a href='#topics'>Choose a grammar focus</a><a href='#activities'>Use a free activity</a><a href='#inventory'>Full lesson inventory</a><a href='#free'>Try the classroom</a></nav>
+    <Section id='levels' title='What do you want your learner to do?' intro='The labels below follow the core classroom level. Older reference banks can include extensions; they do not turn a beginner classroom into an advanced course.'>
+      <GrammarLevelNav/><div className={styles.cardGrid}>{grammarLevels.map(level=><Link className={styles.levelCard} key={level.code} href={level.path}><em>{level.code} · {grammarLessonsAtLevel(level.code).length} classrooms</em><b>{level.focus}</b><span>{level.outcomes[0]}</span></Link>)}</div>
+      <p className={styles.footnote}>Levels are teaching references, not a promise that every learner follows the same grammar sequence. <Link className={styles.textLink} href='/about#cefr'>How we use CEFR and PCIC →</Link></p>
+    </Section>
+    <Section id='topics' title='Start with a specific teaching problem' intro='Four focused activity kits with Spanish prompts, teacher instructions, common errors and the matching lesson.'><GrammarTopicLinks/></Section>
+    <Section id='activities' title='Two free grammar activities to teach today' intro='A beginner task and an intermediate decision. Both work with a teacher as the conversation partner; no downloads or account needed for these activities.'><GrammarActivities activities={[grammarLevels[0].activities[0],grammarLevels[2].activities[0]]}/></Section>
+    <Section id='inventory' title='The current grammar lesson inventory' intro='Open a level to see every classroom at that starting level. Free links open the lesson; PRO links show a public preview with objectives and access details.'>
+      {grammarLevels.map(level=><details className={grammar.inventory} key={level.code}><summary>{level.code} · {grammarLessonsAtLevel(level.code).length} grammar classrooms</summary><GrammarLessonList lessons={grammarLessonsAtLevel(level.code)}/></details>)}
+      <article id='c2' className={grammar.inventory}><h3>C2 · Historical language and careful interpretation</h3><p>The current C2 grammar classroom focuses on recognizing the future perfect subjunctive in historical language and reformulating it in contemporary Spanish. It is a focused receptive lesson, not a full C2 grammar course.</p><GrammarLessonList lessons={grammarLessonsAtLevel('C2')}/><p className={styles.footnote}>For contemporary precision work, review the <Link className={styles.textLink} href='/spanish-grammar-lessons/c1'>C1 ambiguity and aspect activities</Link>, then adapt the demand to your learner.</p></article>
+    </Section>
+    <Section id='free' title='Try the full grammar classroom' intro='These A1 lessons are free. Explore the reading, audio, guided practice, speaking and writing sequence before choosing a PRO lesson.'><LessonGrid lessons={free}/><div className={styles.panel}><h3>Listen before you explain</h3><p>Play the material-order audio from the free nouns classroom. Ask the learner to note the objects and quantities, then check them in the lesson’s transcript.</p><audio className={grammar.audio} controls preload='none' src='/audio/grammar-free/40.mp3'>Your browser does not support audio. Open the free lesson for the transcript.</audio><p><Link className={styles.textLink} href='/la-fabrica-de-los-nombres'>Open the free lesson and transcript →</Link></p></div></Section>
+    <Section title='Turn a grammar point into a communicative lesson'><ol className={grammar.methodSteps}><li><h3>Notice in context</h3><p>Use the reading or audio to establish who needs to say what. Ask a meaning question before naming the form.</p></li><li><h3>Make a choice</h3><p>Compare two messages, model a useful frame and ask the learner to solve a small problem with it.</p></li><li><h3>Transfer and revisit</h3><p>Use a speaking decision and a short written outcome. Give focused feedback, then repeat with one new detail.</p></li></ol><nav className={grammar.contextLinks}><Link href='/guides/how-to-teach-spanish-grammar-communicatively'>Communicative grammar methodology</Link><Link href='/sistema-verbal'>Explore the verbal system map</Link><Link href='/about'>About SpanishCue</Link></nav></Section>
+    <TeachingProof/>
+    <Section title='Keep the grammar working in conversation' intro='Follow a focused grammar lesson with a related conversation or listening task. Check the level and objective rather than assuming every topic fits every learner.'><LessonGrid lessons={lessonCards([15,132,236]).slice(0,3)}/><nav className={grammar.contextLinks}><Link href='/spanish-conversation-activities'>Conversation activities by level</Link><Link href='/resources'>Listening and lesson library</Link><Link href='/spanish-teacher-resources'>All teacher resources</Link><Link href='/guides'>Teaching guides</Link></nav></Section>
+    <CtaBand title='Choose the grammar. Keep the conversation.' copy='Try a free classroom, then explore the full library when you find the right fit for your teaching.' primary={{href:'/la-fabrica-de-los-nombres',label:'Open a free grammar lesson'}} secondary={{href:'/pricing',label:'Explore PRO access'}}/>
+  </div></main><GrowthFooter/></>;
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner brief of 2026-10-07 (project thread \"SEO foundation\"): build the organic-growth foundation in English for Spanish teachers, including improved homepage title/description, footer navigation to the new hubs, and the conversation cluster data (sentence frames, sample questions and their English glosses). Existing English copy remains protected; this manifest only approves the exact new literals listed below.",
+  "authorization": "Owner brief of 2026-10-07 (project thread \"SEO foundation\"): build the organic-growth foundation in English for Spanish teachers, including improved homepage title/description, footer navigation to the new hubs, and the conversation cluster data (sentence frames, sample questions and their English glosses). Existing English copy remains protected; this manifest only approves the exact new literals listed below. Phase 2: owner-requested About navigation and truthful reviewed dates on the three enhanced grammar guides.",
   "additions": [
     {
       "path": "app/SpanishCueBrand.tsx",
@@ -385,6 +385,14 @@
     {
       "path": "app/seo.ts",
       "text": "Interactive Spanish lessons for teachers and online tutors: conversation, grammar, listening and pronunciation from A1 to C2. Choose a lesson, open it, teach."
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "About SpanishCue"
+    },
+    {
+      "path": "app/guides/data/core.ts",
+      "text": "2026-10-07"
     }
   ]
 }
