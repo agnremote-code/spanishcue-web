@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { compareEnglishCopy } from '../scripts/check-english-copy.mjs';
+import { compareEnglishCopy, filterReviewedChanges } from '../scripts/check-english-copy.mjs';
 const compare = (before, after, path = 'app/example.tsx') => compareEnglishCopy(new Map([[path, before]]), new Map([[path, after]]));
 test('allows Spanish edits while preserving explicit English objects, helpers and ternaries', () => {
   const before = 'const c = {en:{help:"Listen"},es:{help:"Escuchá"}}; t("Probá", "Try"); const es = locale === "es"; const a = es ? "Mirá" : "Look";';
@@ -29,4 +29,18 @@ test('flags new English strings in existing and new files', () => {
 });
 test('protects English resource-template text', () => {
   assert.equal(compare('const ui=<p>Evaluate the lesson.</p>', 'const ui=<p>Read the lesson.</p>', 'app/resources/[slug]/page.tsx').length, 2);
+});
+test('reviewed banner change exempts only its exact path, text and occurrence', () => {
+  const path = 'app/NewLessonsBanner.tsx';
+  const findings = [
+    {path, text:'JUST ADDED', kind:'english-changed-or-deleted'},
+    {path, text:'NEW CLASSES!', kind:'english-added'},
+    {path, text:'JUST ADDED', kind:'english-changed-or-deleted'},
+    {path:'app/other.tsx', text:'JUST ADDED', kind:'english-changed-or-deleted'},
+    {path, text:'Open lesson', kind:'english-changed-or-deleted'}
+  ];
+  assert.deepEqual(filterReviewedChanges(findings, [
+    {path, text:'JUST ADDED', kind:'english-changed-or-deleted', reason:'Owner requested banner redesign'},
+    {path, text:'NEW CLASSES!', kind:'english-added', reason:'Owner requested banner redesign'}
+  ]), findings.slice(2));
 });

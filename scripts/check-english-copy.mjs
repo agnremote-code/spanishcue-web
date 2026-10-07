@@ -31,6 +31,21 @@ export function filterApprovedAdditions(findings, additions) {
   const allowed = new Set(additions.map(a => JSON.stringify([a.path, a.text])));
   return findings.filter(f => f.kind !== 'english-added' || !allowed.has(JSON.stringify([f.path, f.text])));
 }
+/** Exact, counted owner-requested copy changes; unrelated English remains protected. */
+export function filterReviewedChanges(findings, reviewed) {
+  const counts = new Map();
+  for (const {path, text, kind} of reviewed) {
+    const key = JSON.stringify([path, text, kind]);
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return findings.filter(f => {
+    const key = JSON.stringify([f.path, f.text, f.kind]);
+    const remaining = counts.get(key) || 0;
+    if (!remaining) return true;
+    counts.set(key, remaining - 1);
+    return false;
+  });
+}
 export function checkEnglishCopy(root, base = BASE_SHA) {
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
   // The base inventory deliberately includes files deleted from the working tree.
@@ -48,7 +63,9 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   }
   const additionsPath = resolve(root, 'docs/audits/bosque-vocabulary-additions-20261004.json');
   const additions = existsSync(additionsPath) ? JSON.parse(readFileSync(additionsPath, 'utf8')).additions : [];
-  return { findings: filterApprovedAdditions(compareEnglishCopy(before, after), additions), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
+  const reviewedPath = resolve(root, 'docs/audits/new-classes-copy-20261007.json');
+  const reviewed = existsSync(reviewedPath) ? JSON.parse(readFileSync(reviewedPath, 'utf8')).changes : [];
+  return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(before, after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const result = checkEnglishCopy(process.cwd(), process.argv.find(a => a.startsWith('--base='))?.slice(7) || BASE_SHA);
