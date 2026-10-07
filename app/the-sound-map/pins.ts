@@ -22,3 +22,6 @@ export function layoutPins(pins:MapPin[],width:number,height:number):MapPin[]{
  }
  return placed;
 }
+
+/** Shared isometric projection for the illustrated city and its DOM hotspots. */
+export function planPoint(x:number,y:number,z:number):[number,number]{return [60+(x-z)*1.9,57+(x+z)*.92-y*2.8];}

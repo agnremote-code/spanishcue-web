@@ -23,6 +23,8 @@ test('saved/linked level works without WebGL; scene close restores keyboard focu
  const trigger=document.querySelector('[data-sound-location="balcony"]');trigger.focus();await click(trigger);
  await act(async()=>{await new Promise(resolve=>setTimeout(resolve,10));});
  assert.equal(document.activeElement.id,'sm-scene-title');
+ assert.match(document.querySelector('.sm-map-now').textContent,/Ventanas abiertas/);
+ assert.equal(document.querySelector('.sm-pin.active').dataset.soundLocation,'balcony');
  await click(document.querySelector('.sm-panel-head button'));
  assert.equal(document.querySelector('.sm-panel'),null);assert.equal(document.activeElement,trigger);
  const pin=document.querySelectorAll('.sm-pin')[1];
