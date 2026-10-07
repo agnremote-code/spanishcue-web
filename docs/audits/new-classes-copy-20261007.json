@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner requested the home banner's English title and label be replaced by NEW CLASSES! on 2026-10-07. Owner requested The Sound Map A0 bilingual listening support on 2026-10-07.",
+  "authorization": "Owner requested the home banner's English title and label be replaced by NEW CLASSES! on 2026-10-07. Owner requested The Sound Map A0 bilingual listening support on 2026-10-07. On 2026-10-07, the owner requested retirement of /estados-unidos-basico while keeping /estados-unidos-a2-b1; the exact removed A1 copy is recorded below.",
   "changes": [
     {
       "path": "app/NewLessonsBanner.tsx",
@@ -421,6 +421,2634 @@
       "text": "Voices drift down from a rooftop party.",
       "kind": "english-added",
       "reason": "Owner-requested The Sound Map bilingual A0 support and explicit English navigation/help; no existing English modified."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "New York City",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Skyscrapers, neighbourhoods and movement",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "New York has five boroughs, a large subway system and communities from many parts of the world.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about big cities and your ideal day.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I love it.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "It is too big.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to visit it.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "skyscraper",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "subway",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "neighbourhood",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "park",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "museum",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "noisy",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "walk",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "street food",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like big cities? Why?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer walking or taking the subway?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you want to visit: a park, a museum or a skyscraper?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What street food do you want to try?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Is your city quiet or noisy?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "You have one afternoon in New York. What do you do first?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Washington, D.C.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Museums, monuments and capital city",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Washington is the country’s capital. Many Smithsonian museums have free admission.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about history, museums and capital cities.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I am interested in history.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer art.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want a free museum.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "capital city",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "monument",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "museum",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "history",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "free",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "government",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "visit",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "learn",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What is the capital of your country?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like museums? What type?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer learning history from a book or in a real place?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which famous monument do you know?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Is it important for some museums to be free?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "You have three hours. Do you choose art, science or history?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Miami and the Everglades",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Beach, Spanish and wetlands",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Miami has a large bilingual community. Nearby, the Everglades protect wetlands and many animals.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about weather, the beach and animals.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to go to the beach.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer nature.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I do not like heat.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "beach",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "heat",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "wetland",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "alligator",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "bilingual",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "boat",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "protect",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "humid",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like hot and humid weather?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer the beach or a natural park?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What animal do you want to see in the Everglades?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you speak more than one language? Which ones?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you take for a very hot day?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Choose: a morning on a boat or an afternoon at the beach. Why?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "New Orleans",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Music, food and cultural mixture",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "The city is known for jazz and for Creole and Cajun cultures present in its music and food.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about music, dancing and new foods.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to listen to jazz.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to try the food.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer something quiet.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "jazz",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "band",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "dance",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "spicy",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "seafood",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "festival",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "historic district",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Creole food",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like jazz? What music do you listen to?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like dancing in public?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you eat spicy food?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer listening to music in the street or in a theatre?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which food from your city represents a cultural mixture?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Plan an evening: music, dinner and a walk. In what order?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Chicago",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Architecture, wind and lake",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Chicago is beside Lake Michigan and is famous for its architecture, neighbourhoods and musical history.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about buildings, weather and life by the water.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like architecture.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I do not like cold weather.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to walk by the lake.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "lake",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "building",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "architecture",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "wind",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "winter",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "boat",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "neighbourhood",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "view",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like modern or old buildings?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What is winter like in your city?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer living by a lake or by the sea?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like looking at a city from above?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What activity do you do when it is very cold?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Choose an outing: boat, architecture or food. Why?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Nashville",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Guitars and country songs",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Nashville is a centre for country music, with studios, venues and many musicians.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about songs, instruments and concerts.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like live music.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to play guitar.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer listening at home.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "guitar",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "song",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "singer",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "concert",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "stage",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "lyrics",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "live music",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "learn",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What music do you listen to every day?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you play an instrument? Which one?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer big or small concerts?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which song makes you happy?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Are lyrics or music more important to you?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "You are a singer for one day. What type of song do you sing?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Austin and Texas",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Big spaces, music and barbecue",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Texas is a very large state. Austin combines live music, parks and a strong food culture.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about distances, food and big cities.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to try barbecue.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like big spaces.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer a small city.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "state",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "big",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "barbecue",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "pickup truck",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "live music",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "park",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "heat",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "distance",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you live in a big or small city?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like travelling many hours by car?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you eat meat, vegetables or both at a barbecue?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you do in a park with friends?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer lots of space or everything nearby?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Plan a Saturday in Austin: what do you eat and what music do you listen to?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Denver and the Rockies",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Altitude, snow and the outdoors",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Denver is near the Rocky Mountains, a popular region for hiking, skiing and watching nature.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about mountains, sports and holidays.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like mountains.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to see snow.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer resting.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "mountain",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "snow",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "hike",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "ski",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "altitude",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "forest",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "backpack",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "view",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like mountains?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Can you ski? Do you want to learn?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you take in a backpack for hiking?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer active or relaxing holidays?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Are there mountains near your city?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Choose: hiking in summer or skiing in winter. Why?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Grand Canyon",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Rocks, river and time",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "The Colorado River and erosion formed an enormous canyon with many visible rock layers.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about landscapes, photos and adventure.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "The view is amazing.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to hike.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "It scares me a little.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "canyon",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "rock",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "river",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "trail",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "deep",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "viewpoint",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "sunset",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "take care",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like desert landscapes?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer seeing the canyon from a viewpoint or hiking?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What time is better for a photo: morning or sunset?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Are you afraid of heights?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What colours do you see in a rocky landscape?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "You have water, food and three hours. What is your plan?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Yellowstone",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Geysers and wild animals",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Yellowstone was the country’s first national park and has geysers, hot springs and wild animals.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about animals, safety and parks.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to see a geyser.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like animals.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer watching from far away.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "geyser",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "hot spring",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "bison",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "bear",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "wild",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "distance",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "camp",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "safe",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which wild animal do you want to see?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like camping?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer animals or landscapes?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which rules are important near wild animals?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Have you ever seen a geyser or hot spring?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Choose three things for a day in the park. What do you take?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "California Coast",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Ocean, cities and giant trees",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "California has large cities, Pacific coastline, deserts and redwood forests.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about the sea, forests and different plans.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to see the Pacific.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer the forest.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like both.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "coast",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "ocean",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "redwood",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "bridge",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "road",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "fog",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "surfing",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "forest",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer the ocean or the forest?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Would you like to learn to surf?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which city in California do you know?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like road trips beside the sea?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you do on a foggy day?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "You have two days: beach, city or redwoods. How do you organise them?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Seattle and the Pacific",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Coffee, rain and mountains",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Seattle sits between water and mountains. The region is known for forests, markets and coffee culture.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about rain, coffee and routines.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like rain.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want a coffee.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer sunshine.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "rain",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "coffee",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "market",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "ferry",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "forest",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "mountain",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "cloudy",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "umbrella",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like rain?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you drink coffee, tea or mate?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you do on a cloudy day?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer a market or a shopping centre?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Would you like to travel by ferry?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Plan a quiet morning in Seattle. What do you do?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Alaska",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Glaciers, long distances and nature",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Alaska is the largest state by area and has glaciers, mountains and very remote communities.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about cold, distance and nature.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to see a glacier.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I do not like cold weather.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like nature.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "glacier",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "cold",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "remote",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "mountain",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "whale",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "small plane",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "coat",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "summer",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like cold weather?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What clothes do you wear in winter?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you want to see a glacier, a whale or a mountain?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Can you live far from a city?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer travelling in summer or winter?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Pack a suitcase for Alaska. Choose five things.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Hawaii",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Islands, volcanoes and Hawaiian culture",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Hawaii is a Pacific archipelago with active volcanoes and a living Native Hawaiian culture.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about islands, volcanoes and cultural respect.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to see a volcano.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer the beach.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to learn about local culture.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "island",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "volcano",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "lava",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "beach",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "local culture",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "respect",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "ocean",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "flower",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Would you like to live on an island?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer seeing a volcano or going to the beach?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you know about Hawaii?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "How can a tourist respect local culture?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What activity do you want to do in the ocean?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "You have one day: nature, culture and food. What do you choose first?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Road trips",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Long roads and small stops",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Road trips are part of the country’s imagination; historic Route 66 connects Chicago with California.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about transport, company and luggage.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like travelling by car.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer the train.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I need many stops.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "road",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "car",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "stop",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "map",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "luggage",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "gas",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "motel",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "travel companion",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like long car trips?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Who do you want to travel with?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What music do you listen to on the road?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer planning everything or stopping spontaneously?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which three things do you always take?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Choose a three-stop route on the map.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Food and migrations",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Recipes from many communities",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Food in the country combines Native, African, European, Latin American, Asian and many other traditions.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about tastes, ingredients and family foods.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to try it.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer homemade food.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I do not eat that.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "recipe",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "ingredient",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "sweet",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "savoury",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "spicy",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "homemade",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "share",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "family",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What is your favourite food?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer sweet, savoury or spicy?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you cook at home? What do you make?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which recipe is important in your family?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which food from the United States do you want to try?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Create a dinner with a starter, main course and dessert.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Music in the USA",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Sounds that travelled around the world",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Jazz, blues, hip-hop and country have different histories and strong regional and community roots.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about artists, moments and emotions.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like this music.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to dance.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "It is not my style.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "rhythm",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "artist",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "band",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "voice",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "dance",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "relax",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "concert",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "favourite",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Who is your favourite artist?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What music do you listen to for work?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What music do you listen to for dancing?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer a band or a solo artist?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Have you been to a concert? What was it like?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Create a three-song playlist for a trip.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Languages and communities",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "English, Spanish and hundreds of languages",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Millions of people speak a language other than English at home; Spanish is the most common among them.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about languages, learning and identity.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I speak two languages.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I am learning Spanish.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to practise more.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "language",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "accent",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "learn",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "practise",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "family",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "community",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "bilingual sign",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "understand",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which languages do you speak?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Why are you studying Spanish?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Where do you practise languages?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you like listening to different accents?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Are there bilingual signs in your city?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which Spanish word do you use a lot?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Sports and teams",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Baseball, basketball, soccer and more",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Professional and university sports bring large fan communities together in many cities.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about games, teams and weekends.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I like sports.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer watching.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I do not follow a team.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "team",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "game",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "stadium",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "player",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "win",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "lose",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "train",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "fan",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which sport do you like?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you play any sport?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you prefer playing or watching?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you have a favourite team?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Who do you watch games with?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Invent a team: name, colours and city.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Everyday life",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Distances, schedules and ways of living",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Life changes greatly between a big city, a suburb, a small town and a rural area.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Talk about your home, routine and ideal place.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I prefer the city.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want more peace and quiet.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I need public transport.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "city",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "suburb",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "small town",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "countryside",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "neighbour",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "car",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "work",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "near",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Where do you live: city, suburb, small town or countryside?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you use a car or public transport?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Which places are near your home?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Do you know your neighbours?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "What do you normally do at the weekend?",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Describe your ideal place to live in five words.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Yes, I like…",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "No, I prefer…",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "I want to visit…",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "In my city…",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Normally, I…",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "My plan is…",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "because",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "also",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "but",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "with",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "first",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "afterwards",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Add a reason with “because”.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Add a personal example.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Compare it with your city or country.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Ask the teacher the same question.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Answer again without looking at the English.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
+    },
+    {
+      "path": "app/estados-unidos-basico/data.ts",
+      "text": "Add two words from the wordbank.",
+      "kind": "english-changed-or-deleted",
+      "reason": "Owner-requested retirement of the A1 lesson at /estados-unidos-basico on 2026-10-07; this exact English copy is no longer served."
     }
   ]
 }
