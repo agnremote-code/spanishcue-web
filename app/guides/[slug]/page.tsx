@@ -5,6 +5,7 @@ import { teachingGuideBySlug, teachingGuides } from "../../teaching-guides";
 import { lessons, type Lesson } from "../../lesson-catalog";
 import { resourceLevelLabel, resourcePathForLesson } from "../../resource-seo";
 import { formatReviewedDate, guideModifiedDate } from "../guide-format";
+import LevelCrossLinks from "../../growth/LevelCrossLinks";
 import styles from "../guides.module.css";
 
 type GuidePageProps = {
@@ -156,6 +157,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
               </ul>
             </section>
           ) : null}
+
+          <LevelCrossLinks cluster={guide.cluster} />
 
           <aside className={styles.articleCta}>
             <p className={styles.eyebrow}>USE IT IN CLASS</p>
