@@ -15,7 +15,7 @@ import {
   type Box, type Hotspot, type RoomExit, type RoomLayout, type Target,
 } from './world3d.mjs';
 import { CANAL, CEILINGS, CITY_BUILDINGS, DISTRICT_ZONES, ROADS, STREET_ROOMS, districtAt, streetRoomLayout, type MovingVehicle } from './city.mjs';
-import { ambientReaction, type ItemId, type StreetState } from './street.mjs';
+import { ambientReaction, openingFx, type ItemId, type StreetState } from './street.mjs';
 import { buildCity, buildInterior, placePerson, placeVehicle, type City, type Interior } from './build3d';
 import { buildDistricts, buildStreetRoom } from './district3d';
 import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
@@ -416,6 +416,10 @@ export default function World3D(props: WorldProps) {
       if (lead) { sim.player.heading = faceTo(sim.player, lead); placePerson(hero, sim.player.x, sim.player.z, sim.player.heading, sim.y); }
       setShot(shot.camera.x, shot.camera.y, shot.camera.z, shot.look.x, shot.look.y, shot.look.z, reduced());
       box.dataset.street = id;
+      // The object you carry decides how the scene opens: hands up, a scream, a kiss…
+      const fx = openingFx(live.current.street, id);
+      box.dataset.fx = fx ?? '';
+      if (fx) crowd.playFx(id, fx, { x: sim.player.x, z: sim.player.z }, sim.clock);
     };
     const closeStreet = () => {
       sim.street = null;

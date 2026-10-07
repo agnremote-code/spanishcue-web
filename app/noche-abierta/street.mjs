@@ -5,7 +5,9 @@
 // decision appears, something changes in the world, and the scene closes with
 // one personal question about the learner's real life. The object the learner
 // carries tonight (lápiz, libro, gas pimienta, granada, pistola, cuchillo or
-// the corazón) adds its own option to every decision it fits.
+// the corazón) changes the scene: most scenes open on a different moment for
+// each object (`variants`), with its own reactions, choices, endings and
+// closing question, and the object also adds its own option wherever it fits.
 //
 // Pure data and state, no DOM: the 3D world reads which people stand where
 // and how they feel; the card reads what to say. Texts come in three bands
@@ -19,15 +21,18 @@ import ESTACION from "./street/estacion.mjs";
 import MERCADO from "./street/mercado.mjs";
 import SUR from "./street/sur.mjs";
 import VIEJO from "./street/viejo.mjs";
+import CAOS_NORTE from "./street/caos-norte.mjs";
+import CAOS_CENTRO from "./street/caos-centro.mjs";
+import CAOS_SUR from "./street/caos-sur.mjs";
 
 // What the learner can carry. The heart is not an object but a power.
 export const ITEMS = [
   { id: "lapiz", name: "Lápiz", short: "Lápiz", note: "Escribir, dibujar, dejar una nota." },
   { id: "libro", name: "Libro", short: "Libro", note: "Buscar, enseñar, regalar." },
   { id: "gas", name: "Gas pimienta", short: "Gas", note: "Por si te sientes en peligro." },
-  { id: "granada", name: "Granada", short: "Granada", note: "Ficción pura: cambia cómo te miran." },
-  { id: "pistola", name: "Pistola", short: "Pistola", note: "Ficción pura: nadie sale herido." },
-  { id: "cuchillo", name: "Cuchillo", short: "Cuchillo", note: "Cortar, abrir… o asustar sin querer." },
+  { id: "granada", name: "Granada", short: "Granada", note: "Nadie sabe si es de verdad. Nadie quiere averiguarlo." },
+  { id: "pistola", name: "Pistola", short: "Pistola", note: "Todo el mundo la ve antes de verte a ti." },
+  { id: "cuchillo", name: "Cuchillo", short: "Cuchillo", note: "Cortar, abrir… o que alguien saque el suyo." },
   { id: "corazon", name: "Corazón", short: "Corazón", note: "Un poder: cambia la actitud de quien lo recibe." },
 ];
 export const ITEM_IDS = ITEMS.map((item) => item.id);
@@ -46,7 +51,7 @@ export const DISTRICTS = {
   galpones: "Los Galpones",
 };
 
-export const ENCOUNTERS = Object.freeze([...VIEJO, ...ALTO, ...CLINICA, ...MERCADO, ...COSTA, ...ESTACION, ...SUR]);
+export const ENCOUNTERS = Object.freeze([...VIEJO, ...ALTO, ...CLINICA, ...MERCADO, ...COSTA, ...ESTACION, ...SUR, ...CAOS_NORTE, ...CAOS_CENTRO, ...CAOS_SUR]);
 const byId = new Map(ENCOUNTERS.map((encounter) => [encounter.id, encounter]));
 export const encounterById = (id) => byId.get(id) ?? null;
 
@@ -89,10 +94,29 @@ export function availableEncounters(street, eventId = null) {
   return ENCOUNTERS.filter((encounter) => isAvailable(street, encounter, eventId));
 }
 
+// The object in hand decides where a scene opens: its own first moment when
+// the scene has one for it, the plain start otherwise.
+export function variantOf(encounter, item) {
+  return (item && encounter?.variants?.[item]) || null;
+}
+export function startFor(encounter, item) {
+  return variantOf(encounter, item)?.start ?? encounter.start;
+}
+// The short choreography the 3D world plays when a scene opens with this
+// object (people step back, raise their hands, run, lean in, kiss…).
+export const OPENING_FX = Object.freeze([
+  "retrocede", "manos-arriba", "grita", "huye", "evacuacion", "duelo-cuchillo", "policia", "helicoptero",
+  "defensa", "risa", "curioso", "corazon", "beso", "abrazo", "calma",
+]);
+export function openingFx(street, id = street.open?.id) {
+  const variant = variantOf(encounterById(id), street.item);
+  return variant?.fx ?? (street.item === "corazon" ? "corazon" : null);
+}
+
 export function openEncounter(street, id, eventId = null) {
   const encounter = encounterById(id);
   if (!encounter || street.open || street.done[id] || !isAvailable(street, encounter, eventId)) return street;
-  return { ...street, open: { id, node: encounter.start, trail: [], end: null } };
+  return { ...street, open: { id, node: startFor(encounter, street.item), trail: [], end: null } };
 }
 
 // The choices on screen: the three ways to answer, then the learner's
@@ -129,7 +153,7 @@ export function stepBack(street) {
 export function restartEncounter(street) {
   const encounter = encounterById(street.open?.id);
   if (!encounter) return street;
-  return { ...street, open: { id: encounter.id, node: encounter.start, trail: [], end: null } };
+  return { ...street, open: { id: encounter.id, node: startFor(encounter, street.item), trail: [], end: null } };
 }
 
 // Leaving the scene. A scene that reached an end is remembered (and sets its
@@ -159,7 +183,7 @@ export function moodOf(street, id) {
     return encounter.nodes[open.node]?.mood ?? "neutral";
   }
   const end = street.done[id];
-  if (!end) return encounter.nodes[encounter.start].mood;
+  if (!end) return encounter.nodes[startFor(encounter, street.item)].mood;
   return ENDING_MOOD[encounter.ends[end].change] ?? "neutral";
 }
 const ENDING_MOOD = {
@@ -177,13 +201,17 @@ export function streetView(street, level) {
   const lastChoice = lastStep ? choicesFor(encounter, lastStep.node, street.item).find((item) => item.key === lastStep.choice) : null;
   const said = lastChoice ? { act: text(lastChoice.act, band), say: text(lastChoice.say, band), reply: text(lastChoice.reply, band), item: lastChoice.item } : null;
   const castName = (id) => encounter.cast.find((person) => person.id === id)?.name ?? "";
+  const variant = variantOf(encounter, street.item);
   const base = {
     id: encounter.id, title: encounter.title, district: encounter.district, districtName: DISTRICTS[encounter.district] ?? "",
     goal: encounter.goal, kind: encounter.kind, step: open.trail.length, said, mood: moodOf(street, encounter.id),
+    variant: variant ? street.item : null, fx: openingFx(street, encounter.id),
   };
   if (open.end) {
     const end = encounter.ends[open.end];
-    return { ...base, ended: true, end: { id: open.end, text: text(end.text, band), change: end.change, recap: end.recap }, speak: encounter.speak[level] ?? encounter.speak.B1 };
+    // The closing question follows the object when the scene wrote one for it.
+    const speak = text(variant?.speak, band) || encounter.speak[level] || encounter.speak.B1;
+    return { ...base, ended: true, end: { id: open.end, text: text(end.text, band), change: end.change, recap: end.recap }, speak };
   }
   const node = encounter.nodes[open.node];
   return {
@@ -209,8 +237,8 @@ export function heartsUsed(street) {
 }
 
 // Using the object on someone who is just passing by (Q in the street):
-// a short reaction, no scene. Weapons are fiction: people get scared and
-// walk away fast, nobody is hurt. The heart always wins a smile.
+// a short reaction, no scene. People get scared of a weapon and walk away
+// fast. The heart always wins a smile.
 const AMBIENT = {
   lapiz: { mood: "surprised", A: ["¿Un lápiz? ¿Para qué?", "¿Me quieres dibujar? ¡Qué bien!", "Gracias, pero no tengo papel."], B: ["¿Me estás pidiendo un autógrafo? Nadie me lo pidió nunca.", "Si me dibujas, sácame más alto, por favor.", "¿Un lápiz a esta hora? Debes de ser profe."], C: ["¿Un lápiz? Qué analógico. Me cae bien la gente que todavía escribe a mano.", "Si es para apuntar mi número, lo siento: ya tengo quien me llame tarde.", "Ojalá todos salieran de noche con un lápiz en vez de con prisa."] },
   libro: { mood: "smile", A: ["¡Me gusta ese libro!", "¿Es bueno? ¿Cómo se llama?", "Yo leo en el autobús."], B: ["¿Lo estás leyendo ahora? Yo me lo leí en una noche.", "Si me lo prestas, te lo devuelvo… algún día.", "Un libro de noche siempre es buena compañía."], C: ["¿Me lo recomiendas o me lo estás vendiendo? Porque con esa cara de entusiasmo, no sé.", "Hace años que no leo nada que no sea el móvil. Igual me tienta.", "Dicen que uno se parece a lo que lee. ¿Qué dice eso de ti?"] },

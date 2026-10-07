@@ -12,6 +12,10 @@
 // axis-aligned box so the collision code stays the same. The renderer
 // (district3d.ts) only draws what this file describes; the tests walk it.
 
+import { PLACEMENTS as CAOS_NORTE_PLACES } from "./street/caos-norte.mjs";
+import { PLACEMENTS as CAOS_CENTRO_PLACES } from "./street/caos-centro.mjs";
+import { PLACEMENTS as CAOS_SUR_PLACES } from "./street/caos-sur.mjs";
+
 export const CITY_BOUNDS = { minX: -126, maxX: 126, minZ: -122, maxZ: 116 };
 
 // Roads. The two original ones now cross the whole city.
@@ -233,6 +237,8 @@ export const CEILINGS = [
 // `walk` makes the person stroll along a line between two points (the circle
 // moves with them and they stop when the learner is close).
 export const PLACEMENTS = {
+  // The strong street events bring their own spots (see street/caos-*.mjs).
+  ...CAOS_NORTE_PLACES, ...CAOS_CENTRO_PLACES, ...CAOS_SUR_PLACES,
   // Barrio Viejo.
   "viejo-herido": { x: -110, z: -88.2, face: 0, circle: { x: -110, z: -86.4 } },
   "viejo-auto": { x: -61.2, z: -97, face: -Math.PI / 2, car: { x: -59.05, z: -97, heading: Math.PI / 2 }, circle: { x: -62.9, z: -97 } },

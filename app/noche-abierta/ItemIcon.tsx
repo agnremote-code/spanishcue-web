@@ -19,20 +19,18 @@ type Meta = {
   withArticle: string;
   /** Accent used for the faint fill and the card glow. */
   tone: string;
-  /** Fiction props: the picker adds the «es ficción» note. */
-  fiction: boolean;
   /** The heart is a power, not an object. */
   power: boolean;
 };
 
 export const ITEM_META: Record<ItemId, Meta> = {
-  lapiz: { label: 'LÁPIZ', emoji: '✏️', withArticle: 'el lápiz', tone: '#f2c230', fiction: false, power: false },
-  libro: { label: 'LIBRO', emoji: '📖', withArticle: 'el libro', tone: '#4f9a94', fiction: false, power: false },
-  gas: { label: 'GAS PIMIENTA', emoji: '🌶️', withArticle: 'el gas pimienta', tone: '#e2463a', fiction: false, power: false },
-  granada: { label: 'GRANADA', emoji: '💣', withArticle: 'la granada', tone: '#8aa05a', fiction: true, power: false },
-  pistola: { label: 'PISTOLA', emoji: '🔫', withArticle: 'la pistola', tone: '#f08a3c', fiction: true, power: false },
-  cuchillo: { label: 'CUCHILLO', emoji: '🔪', withArticle: 'el cuchillo', tone: '#c99a6a', fiction: true, power: false },
-  corazon: { label: 'CORAZÓN', emoji: '❤️', withArticle: 'el corazón', tone: '#ff4d6d', fiction: false, power: true },
+  lapiz: { label: 'LÁPIZ', emoji: '✏️', withArticle: 'el lápiz', tone: '#f2c230', power: false },
+  libro: { label: 'LIBRO', emoji: '📖', withArticle: 'el libro', tone: '#4f9a94', power: false },
+  gas: { label: 'GAS PIMIENTA', emoji: '🌶️', withArticle: 'el gas pimienta', tone: '#e2463a', power: false },
+  granada: { label: 'GRANADA', emoji: '💣', withArticle: 'la granada', tone: '#8aa05a', power: false },
+  pistola: { label: 'PISTOLA', emoji: '🔫', withArticle: 'la pistola', tone: '#f08a3c', power: false },
+  cuchillo: { label: 'CUCHILLO', emoji: '🔪', withArticle: 'el cuchillo', tone: '#c99a6a', power: false },
+  corazon: { label: 'CORAZÓN', emoji: '❤️', withArticle: 'el corazón', tone: '#ff4d6d', power: true },
 };
 
 export const isItemId = (value: unknown): value is ItemId => typeof value === 'string' && (ITEM_ORDER as readonly string[]).includes(value);

@@ -207,13 +207,500 @@ const encounters = [
           },
         },
       },
+      // ── variantes por objeto ──
+      "cuchillo-inicio": {
+        who: "camila", mood: "scared",
+        line: {
+          A: "Una chica busca bajo los puestos con una correa vacía. Ve tu cuchillo y da un paso atrás. «¡Eh! ¿Qué haces con ese cuchillo? No te acerques así.»",
+          B: "Una chica con sudadera amarilla se agacha bajo los puestos con una correa vacía. Al levantarse ve tu cuchillo y retrocede hasta un cubo de flores. «¿Qué haces con eso? ¿Estás loco? No te acerques.»",
+          C: "Una chica recorre los puestos agachada, correa vacía en mano. Se incorpora, ve el cuchillo y retrocede dos pasos, calculando la distancia a la salida. «Dime que eso tiene una explicación, porque desde aquí parece una amenaza.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón, perdón. Lo guardo. ¿Buscas algo?", B: "Perdona, lo guardo ahora mismo. ¿Estás buscando algo?", C: "Perdona, lo guardo. Es un cuchillo de trabajo, no de problemas. ¿Qué buscas con esa correa?" },
+            reply: { A: "Camila no se acerca. «A mi perro. Se llama Toto. ¿Lo viste?»", B: "Camila sigue a distancia. «A mi perro, Toto. Se me escapó… ¿Lo has visto? Y no saques eso otra vez.»", C: "Camila no cede terreno. «A mi perro. Toto. Y te aviso: si vuelve a salir ese cuchillo, grito.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "correa",
+            say: { A: "Es para cortar cuerda. Tu correa está vacía. ¿Te hago una?", B: "Es para cortar cuerda, nada más. Veo que tu correa está vacía… ¿Te preparo otra?", C: "Es para cortar cuerda de los toldos, no personas. Veo una correa vacía: ¿necesitas una de repuesto?" },
+            reply: { A: "Camila mira la correa, después el cuchillo. «Mi perro se escapó. Pero guarda eso, por favor.»", B: "Camila mira la correa y luego el cuchillo. «Se me escapó el perro… Pero primero guarda eso. Hablamos después.»", C: "Camila alterna la mirada entre la correa y la hoja. «Mi perro se escapó. Y tu oferta mejora mucho sin el cuchillo en la mano.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "broma",
+            say: { A: "Tranquila. Es solo un cuchillo. No pasa nada.", B: "Tranquila, mujer, es solo un cuchillo. No pasa nada.", C: "Relájate, es solo un cuchillo. En este mercado hay cien, uno por cada parrilla." },
+            reply: { A: "Camila grita: «¡Socorro! ¡Tiene un cuchillo!» La gente mira.", B: "Camila grita con todo el pulmón: «¡Socorro! ¡Tiene un cuchillo!» Medio mercado se da la vuelta.", C: "«¿Solo?», dice Camila, y grita: «¡Socorro! ¡Un cuchillo!» El mercado entero se gira hacia ti." },
+            mood: "terror", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-calma": {
+        who: "camila", mood: "worried",
+        line: {
+          A: "Camila respira. Todavía mira tu bolsillo. «Bueno. Toto es pequeño y marrón. Se escapó con la música.»",
+          B: "Camila respira hondo sin dejar de mirar el bolsillo donde guardaste el cuchillo. «Bueno… Toto es pequeño, marrón, con collar rojo. Se asustó con la música y salió corriendo.»",
+          C: "Camila recupera el aliento, aunque sus ojos siguen vigilando tu bolsillo. «Está bien. Toto: pequeño, marrón, collar rojo. La música lo espantó. Igual que tú a mí, hace un minuto.»",
+        },
+        options: [
+          {
+            id: "buscar",
+            say: { A: "Vamos a buscarlo juntos. Yo voy delante, sin cuchillo.", B: "Vamos a buscarlo juntos. Yo voy delante, con las manos vacías, ¿de acuerdo?", C: "Lo buscamos juntos. Yo camino delante, manos a la vista, para que no haya más sustos." },
+            reply: { A: "Camila dice que sí. «Vamos al río. Pero tú delante.»", B: "Camila asiente despacio. «Vamos al río. Tú delante, que yo te veo mejor así.»", C: "«Delante y a tres pasos», dice Camila. «Al río. Toto busca agua cuando tiene miedo.»" },
+            mood: "neutral", end: "cuchillo-rio",
+          },
+          {
+            id: "cuerda",
+            act: { A: "Sacas el cuchillo otra vez y cortas una cuerda.", B: "Vuelves a sacar el cuchillo y cortas un trozo de cuerda de un toldo.", C: "Sacas de nuevo el cuchillo y cortas un metro de cuerda de un toldo." },
+            say: { A: "Mira: una correa nueva para Toto.", B: "Mira, una correa de emergencia para cuando aparezca.", C: "Una correa provisional, para cuando Toto decida volver." },
+            reply: { A: "Camila grita y se va corriendo. «¡Te dije que no sacaras eso!»", B: "Camila grita y sale corriendo entre los puestos. «¡Te dije que no lo sacaras más!»", C: "Camila no espera a ver la cuerda. Grita «¡te lo advertí!» y desaparece entre los puestos." },
+            mood: "terror", end: "cuchillo-grito",
+          },
+          {
+            id: "disculpa",
+            say: { A: "Perdón otra vez. ¿Dónde lo viste por última vez?", B: "Perdona otra vez por el susto. ¿Dónde lo viste por última vez?", C: "Siento de verdad el susto. Empecemos otra vez: ¿dónde lo viste por última vez?" },
+            reply: { A: "Camila señala el humo. «En el puesto de empanadas. Hace veinte minutos.»", B: "Camila señala el humo de la parrilla. «Junto al puesto de empanadas, hace veinte minutos.»", C: "Camila señala el humo. «En el puesto de empanadas, hace veinte minutos. Y gracias por guardar eso.»" },
+            mood: "worried", next: "pista",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "camila", mood: "terror",
+        line: {
+          A: "Una chica busca bajo los puestos con una correa vacía. Ve tu pistola. Levanta las manos. «¡No, por favor! Solo busco a mi perro.»",
+          B: "Una chica con sudadera amarilla se agacha bajo un puesto, con una correa vacía. Al levantarse ve tu pistola y alza las manos, correa incluida. «No, por favor. No tengo nada. Solo busco a mi perro.»",
+          C: "Una chica se incorpora de debajo de un puesto, correa vacía en mano, y ve la pistola antes que a ti. Levanta las manos muy despacio. «No quiero problemas. Busco a mi perro, nada más. ¿Por qué llevas un arma?»",
+        },
+        options: [
+          {
+            id: "bajar",
+            say: { A: "Baja las manos, por favor. No es para ti.", B: "Baja las manos, por favor. No va contigo, te lo prometo.", C: "Baja las manos, por favor. No es para ti ni para nadie de este mercado." },
+            reply: { A: "Camila baja las manos un poco. «¿Entonces para quién es?»", B: "Camila baja las manos a medias. «¿Y entonces para quién es? Porque aquí solo hay empanadas y un perro perdido.»", C: "Camila baja las manos a medias. «Tranquiliza mucho saber que no es para mí. ¿Para quién es, entonces?»" },
+            mood: "scared", next: "pistola-miedo",
+          },
+          {
+            id: "guardar",
+            act: { A: "Guardas la pistola dentro de la chaqueta.", B: "Guardas la pistola dentro de la chaqueta y enseñas las manos.", C: "Guardas la pistola en la chaqueta y muestras las palmas." },
+            say: { A: "Perdón. Ya está. ¿Cómo se llama tu perro?", B: "Perdona, ya está guardada. ¿Cómo se llama tu perro?", C: "Perdona. Guardada. Hablemos de lo importante: ¿cómo se llama tu perro?" },
+            reply: { A: "Camila respira. «Toto. Pequeño, marrón… Oye, ¿eso es de verdad?»", B: "Camila suelta el aire. «Toto. Pequeño, marrón, collar rojo… Oye, ¿eso era de verdad?»", C: "Camila baja las manos. «Toto. Pequeño, marrón, collar rojo. Y no me has respondido: ¿era de verdad?»" },
+            mood: "scared", next: "pistola-miedo",
+          },
+          {
+            id: "quieta",
+            say: { A: "No te muevas. ¿Qué hay en la correa?", B: "No te muevas. ¿Qué escondes en esa correa?", C: "Quieta ahí. ¿Qué llevas en esa correa, exactamente?" },
+            reply: { A: "Camila suelta la correa y corre. «¡Socorro!»", B: "Camila suelta la correa y sale corriendo entre los puestos, gritando «¡socorro!».", C: "Camila deja caer la correa y huye entre los puestos. Su grito de «¡socorro!» se oye hasta el escenario." },
+            mood: "terror", end: "pistola-huye",
+          },
+        ],
+      },
+      "pistola-miedo": {
+        who: "camila", mood: "scared",
+        line: {
+          A: "Camila no se acerca. «Mira, yo solo quiero a Toto. ¿Me ayudas o me voy?»",
+          B: "Camila mantiene dos metros de distancia. «Mira, yo solo quiero encontrar a Toto. ¿Me ayudas, sin pistola, o me voy por mi lado?»",
+          C: "Camila conserva una distancia prudente. «Lo único que quiero esta noche es a Toto. Si me ayudas, es sin pistola. Si no, cada uno por su lado.»",
+        },
+        options: [
+          {
+            id: "ayudar",
+            say: { A: "Te ayudo. Sin pistola. Vamos al río.", B: "Te ayudo, sin pistola, te lo prometo. Creo que fue al río.", C: "Te ayudo, y la pistola se queda guardada. Apuesto por el río: los perros asustados buscan agua." },
+            reply: { A: "Camila va delante, mirando atrás. «Bueno… Al río.»", B: "Camila camina delante, mirando hacia atrás cada tres pasos. «Está bien. Al río.»", C: "Camila echa a andar delante de ti, vigilándote por el rabillo del ojo. «Al río. Y tú, a la vista.»" },
+            mood: "worried", end: "pistola-rio",
+          },
+          {
+            id: "legal",
+            say: { A: "Es legal. No pasa nada. Describe a Toto.", B: "Es completamente legal, no te preocupes. Descríbeme a Toto.", C: "Está todo en regla, no hay de qué preocuparse. Descríbeme a Toto y seguimos." },
+            reply: { A: "Camila saca el celular. «Perdona. Voy a llamar a la policía. Es mejor.»", B: "Camila saca el celular sin dejar de mirarte. «Perdona, pero voy a llamar a la policía. Es lo mejor para los dos.»", C: "Camila saca el celular. «En regla o no, prefiero que lo decida la policía.» Y marca." },
+            mood: "scared", end: "pistola-patrulla",
+          },
+          {
+            id: "perdon",
+            say: { A: "Perdón por el susto. ¿Dónde viste a Toto?", B: "Perdona el susto, de verdad. ¿Dónde lo viste por última vez?", C: "Perdona el susto. Volvamos a Toto: ¿dónde lo viste por última vez?" },
+            reply: { A: "Camila señala el humo. «En las empanadas. Hace veinte minutos.»", B: "Camila señala el humo de la parrilla. «Junto al puesto de empanadas, hace veinte minutos. Y gracias por guardarla.»", C: "Camila señala la parrilla. «En el puesto de empanadas, hace veinte minutos. Y que siga guardada, por favor.»" },
+            mood: "worried", next: "pista",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "camila", mood: "terror",
+        line: {
+          A: "Una chica busca bajo los puestos con una correa vacía. Ve tu granada y grita: «¡Una granada! ¡Todos fuera!» La gente grita.",
+          B: "Una chica con sudadera amarilla se levanta de debajo de un puesto y ve la granada en tu mano. Grita con todas sus fuerzas: «¡Una granada! ¡Salgan todos!» Tres puestos empiezan a gritar también.",
+          C: "Una chica se incorpora de debajo de un puesto, correa vacía en mano, y ve la granada. Su grito se oye por encima de la música: «¡Una granada! ¡Evacúen!» El pánico se contagia puesto por puesto.",
+        },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "¡Es de juguete! ¡Es de juguete!", B: "¡Tranquilos! ¡Es de juguete, de verdad!", C: "¡Calma todo el mundo! Es de juguete. Casi seguro." },
+            reply: { A: "Camila se esconde detrás de un puesto. «¡¿Casi?! ¿Por qué la llevas?»", B: "Camila se esconde tras un puesto de frutas. «¿Y quién lleva una granada de juguete a un mercado? ¡Guárdala!»", C: "Camila se parapeta tras un puesto de frutas. «¿Casi seguro? Pues yo estoy casi segura de que llamo a la policía.»" },
+            mood: "scared", next: "granada-panico",
+          },
+          {
+            id: "ladron",
+            say: { A: "Es para el ladrón de tu perro. ¿Quién fue?", B: "La traigo por si alguien robó a tu perro. ¿Sospechas de alguien?", C: "Es para quien se haya llevado a tu perro. Dime un nombre y voy." },
+            reply: { A: "Camila grita más. «¡Nadie lo robó! ¡Se escapó! ¡Guarda eso!»", B: "Camila grita todavía más. «¡Nadie lo robó, se escapó con la música! ¡Guarda eso!»", C: "Camila grita, incrédula: «¡Se escapó por la música, nadie lo secuestró! ¡Guarda esa cosa!»" },
+            mood: "scared", next: "granada-panico",
+          },
+          {
+            id: "no-explota",
+            act: { A: "Levantas la granada para que la vean.", B: "Levantas la granada para que todos la vean bien.", C: "Alzas la granada en alto, como si eso tranquilizara." },
+            say: { A: "¡Tranquilos! ¡No explota!", B: "¡Tranquilos todos! ¡No explota!", C: "¡Calma! ¡Que no explota, de verdad!" },
+            reply: { A: "Nadie escucha. La gente corre. Los vendedores apagan las parrillas.", B: "Nadie te escucha. La gente corre hacia las salidas y los vendedores apagan las parrillas a toda prisa.", C: "La aclaración llega tarde. El mercado se vacía en segundos y las parrillas se apagan una tras otra." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-panico": {
+        who: "camila", mood: "scared",
+        line: {
+          A: "Camila está detrás del puesto. Los vendedores gritan: «¡Policía!» Ella te mira. «Guárdala. Ahora.»",
+          B: "Camila asoma la cabeza por detrás del puesto. Los vendedores gritan «¡policía!» desde todas partes. «Guárdala ahora mismo o esto termina muy mal.»",
+          C: "Camila asoma desde su trinchera de frutas mientras los vendedores piden policía a gritos. «Guárdala ahora. Después hablamos de lo loco que estás.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas la granada en la mochila.", B: "Guardas la granada en el fondo de la mochila.", C: "Guardas la granada en el fondo de la mochila, lejos de la vista." },
+            say: { A: "Ya está. Perdón. ¿Dónde viste a Toto?", B: "Listo, guardada. Perdón. ¿Dónde viste a Toto por última vez?", C: "Guardada. Perdón por el caos. ¿Dónde viste a Toto por última vez?" },
+            reply: { A: "Un perro pequeño sale de debajo del puesto. ¡Es Toto! Camila llora.", B: "Con el silencio, un perro marrón sale temblando de debajo del puesto. «¡Toto!», grita Camila, y se le cae la correa.", C: "Del fondo del puesto sale un perro marrón, temblando. Camila se deja caer de rodillas. «¡Toto! ¡Los gritos lo espantaron hasta aquí!»" },
+            mood: "surprised", end: "granada-toto",
+          },
+          {
+            id: "policia",
+            say: { A: "Que venga la policía. No me importa.", B: "Que venga la policía si quiere. No tengo nada que esconder.", C: "Que venga la policía, el ejército, quien sea. No tengo nada que ocultar." },
+            reply: { A: "Camila mira al cielo. Se oye un helicóptero. «Ya vienen.»", B: "Camila mira hacia arriba. Un helicóptero ilumina el mercado. «Pues ya vienen. Todos.»", C: "Camila levanta la vista. Un helicóptero barre el mercado con su foco. «Pediste a todos. Ahí los tienes.»" },
+            mood: "terror", end: "granada-helicoptero",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Suerte con Toto.", B: "Mejor me voy antes de que llegue alguien. Suerte con Toto.", C: "Creo que mi presencia no ayuda. Me voy. Ojalá Toto aparezca." },
+            reply: { A: "Camila no dice nada. Sigue escondida.", B: "Camila no contesta. Se queda detrás del puesto hasta que te alejas.", C: "Camila no responde. Sigue detrás del puesto, esperando a que desaparezcas." },
+            mood: "sad", end: "sola",
+          },
+        ],
+      },
+      "gas-inicio": {
+        who: "camila", mood: "surprised",
+        line: {
+          A: "Una chica corre hacia ti con una correa vacía. Sacas el gas pimienta. Ella se para. «¡Eh, eh! Yo también tengo. Mira.» Saca el suyo.",
+          B: "Una chica con sudadera amarilla corre hacia ti con una correa vacía y tú levantas el gas pimienta. Ella frena en seco y saca el suyo. «¡Quieto! Yo también llevo. ¿Qué quieres?»",
+          C: "Una chica se te acerca corriendo, correa vacía en mano, y tú levantas el gas pimienta. Ella frena y saca el suyo en un movimiento idéntico. «Vaya. Dos paranoicos en el mismo mercado. ¿Qué quieres?»",
+        },
+        options: [
+          {
+            id: "perdon",
+            say: { A: "Perdón. El mercado de noche da miedo. ¿Buscas algo?", B: "Perdona, es que el mercado de noche me pone nervioso. ¿Buscas algo?", C: "Perdona, el reflejo fue más rápido que yo. Este mercado de noche me tiene en alerta. ¿Qué buscas?" },
+            reply: { A: "Camila baja el gas. «A mi perro, Toto. Se escapó. ¿Lo viste?»", B: "Camila baja el gas, pero no lo guarda. «A mi perro, Toto. Se me escapó con la música. ¿Lo has visto?»", C: "Camila baja el gas sin guardarlo. «A mi perro, Toto. Lo espantó la música. Y tú casi me espantas a mí.»" },
+            mood: "worried", next: "gas-dos",
+          },
+          {
+            id: "bien",
+            say: { A: "¿Tú también llevas? Bien hecho. Es peligroso de noche.", B: "¿Tú también llevas gas? Bien hecho. De noche nunca se sabe.", C: "¿También llevas gas? Me parece de lo más sensato. De noche, mejor prevenir." },
+            reply: { A: "Camila sonríe un poco. «Mi madre me lo dio. Busco a mi perro, Toto.»", B: "Camila sonríe a medias. «Me lo dio mi madre cuando empecé a salir de noche. Oye, busco a mi perro, Toto.»", C: "Camila casi sonríe. «Regalo de mi madre. Primera vez que lo saco. Busco a mi perro, Toto, por cierto.»" },
+            mood: "worried", next: "gas-dos",
+          },
+          {
+            id: "lejos",
+            say: { A: "No te acerques. Vete.", B: "No te acerques más. Vete por donde viniste.", C: "Mantén la distancia y sigue tu camino. No tengo nada para ti." },
+            reply: { A: "Camila guarda el gas. «Solo quería preguntar por mi perro.» Se va.", B: "Camila guarda el gas, dolida. «Solo quería preguntar por mi perro, pero bueno.» Y se aleja.", C: "Camila guarda el gas con un gesto cansado. «Solo iba a preguntar por mi perro. Buena noche, paranoico.»" },
+            mood: "sad", end: "gas-lejos",
+          },
+        ],
+      },
+      "gas-dos": {
+        who: "camila", mood: "worried",
+        line: {
+          A: "Camila y tú guardan el gas al mismo tiempo. Ella casi se ríe. «Bueno. Toto es pequeño y marrón. ¿Me ayudas?»",
+          B: "Los dos guardan el gas a la vez y Camila suelta una risa nerviosa. «Qué noche. Bueno: Toto es pequeño, marrón, con collar rojo. ¿Me ayudas a buscarlo?»",
+          C: "Guardan el gas al mismo tiempo, como un duelo cancelado, y Camila se ríe sin querer. «Qué manera de conocernos. Toto: pequeño, marrón, collar rojo. ¿Me ayudas?»",
+        },
+        options: [
+          {
+            id: "rio",
+            say: { A: "Sí. Vamos al río. Los perros buscan agua.", B: "Claro. Vamos al río: cuando se asustan, buscan agua.", C: "Por supuesto. Al río: un perro asustado busca agua antes que nada." },
+            reply: { A: "Camila asiente. «Al río. Y los dos con el gas guardado, ¿eh?»", B: "Camila asiente. «Al río. Y los dos con el gas bien guardado, por favor.»", C: "Camila asiente. «Al río. Y pacto de no agresión: el gas se queda en el bolsillo.»" },
+            mood: "smile", end: "gas-rio",
+          },
+          {
+            id: "olor",
+            say: { A: "¿Y si Toto huele el gas y viene?", B: "¿Y si Toto huele el gas pimienta y viene a ver qué pasa?", C: "Idea cuestionable: ¿y si Toto detecta el gas y viene a investigar?" },
+            reply: { A: "Camila se ríe mucho. «¡Toto odia la pimienta! Pero gracias por la risa.»", B: "Camila se ríe de verdad por primera vez. «Toto huye de la pimienta como del veterinario. Pero gracias, necesitaba reírme.»", C: "Camila estalla en una carcajada. «Toto estornuda con la pimienta de las empanadas. Pero gracias: era la primera risa de la noche.»" },
+            mood: "laugh", end: "gas-risa",
+          },
+          {
+            id: "plan",
+            say: { A: "Primero, un plan. ¿Dónde lo viste?", B: "Primero necesitamos un plan. ¿Dónde lo viste por última vez?", C: "Antes de correr, un plan. ¿Dónde lo viste por última vez?" },
+            reply: { A: "Camila guarda el celular. «En las empanadas. Hace veinte minutos.»", B: "Camila señala la parrilla. «Junto al puesto de empanadas, hace veinte minutos.»", C: "Camila señala el humo. «En el puesto de empanadas, hace veinte minutos. Y ya sin gas, por favor.»" },
+            mood: "worried", next: "plan",
+          },
+        ],
+      },
+      "lapiz-inicio": {
+        who: "camila", mood: "surprised",
+        line: {
+          A: "Una chica con una correa vacía ve tu lápiz y tu papel. «¿Dibujas? ¡Perfecto! Mi perro se escapó. ¿Me dibujas a Toto para un cartel?»",
+          B: "Una chica con sudadera amarilla y una correa vacía se fija en tu lápiz. «¿Tú dibujas? ¡Qué suerte! Mi perro Toto se escapó y necesito carteles. ¿Me ayudas?»",
+          C: "Una chica con una correa vacía mira tu lápiz como si fuera una señal del cielo. «¿Dibujas? Mi perro se escapó, se llama Toto, y mi hermano dibuja perros con seis patas. Te necesito.»",
+        },
+        options: [
+          {
+            id: "describe",
+            say: { A: "Sí. Descríbeme a Toto. Yo dibujo.", B: "Claro. Descríbemelo bien y yo lo dibujo.", C: "Encantado. Descríbemelo con detalle; prometo no pasar de las cuatro patas." },
+            reply: { A: "Camila sonríe. «Pequeño, marrón, collar rojo. ¡Y orejas grandes!»", B: "Camila sonríe por primera vez. «Pequeño, marrón, collar rojo. Y unas orejas enormes, eso es lo más importante.»", C: "Camila sonríe, aliviada. «Pequeño, marrón, collar rojo, orejas desproporcionadas. Si las orejas están bien, el resto da igual.»" },
+            mood: "smile", next: "lapiz-cartel",
+          },
+          {
+            id: "mapa",
+            act: { A: "Dibujas un mapa del mercado en el papel.", B: "Dibujas un mapa rápido del mercado en el papel.", C: "Trazas un mapa del mercado a mano alzada, puesto por puesto." },
+            say: { A: "Primero, un mapa. ¿Dónde lo viste?", B: "Primero hagamos un mapa. ¿Dónde lo viste por última vez?", C: "Antes del cartel, un mapa. Marca dónde lo viste por última vez." },
+            reply: { A: "Camila marca una X. «Aquí, en las empanadas. Hace veinte minutos.»", B: "Camila marca una X con el dedo. «Aquí, junto a las empanadas, hace veinte minutos. ¡Qué buena idea!»", C: "Camila pone el dedo en el mapa. «Aquí, en las empanadas, hace veinte minutos. Eres la primera persona con un plan esta noche.»" },
+            mood: "smile", next: "lapiz-mapa",
+          },
+          {
+            id: "numero",
+            say: { A: "Escribo tu número en las mesas de los puestos.", B: "Puedo escribir tu número en todas las mesas de los puestos.", C: "Puedo dejar tu número escrito en cada puesto del mercado, mesa por mesa." },
+            reply: { A: "Camila se ríe. «¡Los vendedores me van a matar! Mejor un cartel.»", B: "Camila se ríe. «¡Los vendedores me matan! Mejor hacemos un cartel bonito.»", C: "Camila se ríe. «Don Aurelio me mata si le escribes en la mesa. Mejor un cartel, por favor.»" },
+            mood: "laugh", next: "lapiz-cartel",
+          },
+        ],
+      },
+      "lapiz-cartel": {
+        who: "camila", mood: "smile",
+        line: {
+          A: "Camila mira tu dibujo. «¡Es Toto! ¿Qué escribimos debajo?»",
+          B: "Camila mira el dibujo con los ojos brillantes. «¡Es él, es Toto! ¿Y qué ponemos debajo?»",
+          C: "Camila contempla el dibujo como si fuera un retrato de familia. «Es Toto. Más guapo que el original, incluso. ¿Qué escribimos debajo?»",
+        },
+        options: [
+          {
+            id: "texto",
+            say: { A: "«Se busca Toto. Collar rojo.» Y tu teléfono.", B: "«Se busca Toto, collar rojo, orejas grandes» y tu teléfono.", C: "«Se busca Toto: collar rojo, orejas memorables.» Y tu número bien grande." },
+            reply: { A: "Camila escribe su número. «Vamos a pegarlo en todos los puestos.»", B: "Camila escribe su número con tu lápiz. «Lo pegamos en todos los puestos. ¡Gracias!»", C: "Camila escribe su número con tu lápiz y firma. «Lo pegamos en cada puesto. Eres mi héroe con lápiz.»" },
+            mood: "smile", end: "lapiz-carteles",
+          },
+          {
+            id: "recompensa",
+            say: { A: "¿Ponemos una recompensa?", B: "¿Y si ponemos una recompensa? La gente busca más.", C: "¿Añadimos una recompensa? La generosidad agudiza la vista." },
+            reply: { A: "Camila piensa. «Recompensa: una empanada y mi gratitud.»", B: "Camila lo piensa. «Pon: recompensa, una empanada y mi gratitud eterna. Es lo que tengo.»", C: "Camila sonríe. «Escribe: recompensa, una empanada de Don Aurelio y gratitud de por vida. Es una oferta seria.»" },
+            mood: "laugh", end: "lapiz-recompensa",
+          },
+          {
+            id: "firma",
+            say: { A: "Firma tú. Es tu perro.", B: "Firma tú el cartel, que es tu perro.", C: "Fírmalo tú: el artista soy yo, pero el perro es tuyo." },
+            reply: { A: "Camila firma. «Camila y Toto. Vamos a pegarlos.»", B: "Camila firma con cuidado. «Camila y Toto. Ahora, a pegarlos por todo el mercado.»", C: "Camila firma: «Camila, en nombre de Toto». «A pegarlos. Hoy el mercado trabaja para nosotros.»" },
+            mood: "smile", end: "lapiz-carteles",
+          },
+        ],
+      },
+      "lapiz-mapa": {
+        who: "camila", mood: "worried",
+        line: {
+          A: "Camila mira el mapa. «Toto tiene miedo de la música. ¿Hacia dónde fue?»",
+          B: "Camila estudia el mapa con el dedo en la X. «Cuando empezó la música, Toto salió corriendo. ¿Hacia dónde iría?»",
+          C: "Camila recorre el mapa con el dedo desde la X. «La música lo espantó. Un perro asustado, ¿hacia dónde corre?»",
+        },
+        options: [
+          {
+            id: "flecha",
+            act: { A: "Dibujas una flecha hacia el río.", B: "Dibujas una flecha desde la X hasta el río.", C: "Trazas una flecha desde la X hasta el río, al este." },
+            say: { A: "Lejos de la música. Al río.", B: "Lejos de la música y hacia el agua. Al río.", C: "Lejos del ruido, hacia el agua: al río, al este." },
+            reply: { A: "Camila toma el mapa. «¡Al río! Gracias por el mapa.»", B: "Camila se guarda el mapa en el bolsillo. «¡Al río! Me llevo tu mapa, eh.»", C: "Camila dobla el mapa como un tesoro. «Al río. Y el mapa me lo quedo, por si me pierdo yo también.»" },
+            mood: "smile", end: "lapiz-rio",
+          },
+          {
+            id: "nota",
+            act: { A: "Escribes una nota para el vendedor de empanadas.", B: "Escribes una nota para el vendedor de empanadas.", C: "Escribes una nota para Don Aurelio, el de las empanadas." },
+            say: { A: "Le dejo una nota al vendedor: «Si ves a Toto, llama».", B: "Le dejo una nota al de las empanadas: «Si ves a Toto, llama a este número».", C: "Le dejo una nota al vendedor: «Si ves a Toto, llama a este número. Paga en empanadas»." },
+            reply: { A: "Camila sonríe. «Él ve todo desde la parrilla. Buena idea.»", B: "Camila sonríe. «Desde esa parrilla lo ve todo. Buena idea.» Y escribe su número.", C: "Camila sonríe. «Ese señor es la cámara de seguridad del mercado.» Y escribe su número debajo." },
+            mood: "smile", end: "lapiz-carteles",
+          },
+          {
+            id: "plan",
+            say: { A: "¿Qué hacemos ahora? Tú decides.", B: "¿Y ahora qué hacemos? Tú conoces a Toto.", C: "El siguiente paso lo decides tú, que conoces a Toto." },
+            reply: { A: "Camila guarda el celular. «Necesito un plan.»", B: "Camila se ata la coleta. «Bueno. Necesito un plan.»", C: "Camila se ajusta la coleta. «Un plan. Necesito un plan.»" },
+            mood: "worried", next: "plan",
+          },
+        ],
+      },
+      "libro-inicio": {
+        who: "camila", mood: "surprised",
+        line: {
+          A: "Una chica con una correa vacía mira tu libro. «¿Un libro? ¿En el mercado, de noche? Perdona… ¿viste a un perro pequeño?»",
+          B: "Una chica con sudadera amarilla y una correa vacía se queda mirando tu libro. «¿Quién lee en un mercado a estas horas? Perdona… ¿has visto un perro pequeño? Se llama Toto.»",
+          C: "Una chica con una correa vacía se detiene ante tu libro como ante un animal raro. «Un libro, de noche, entre parrillas. Interesante. Perdona: ¿has visto un perro pequeño con cara de culpable?»",
+        },
+        options: [
+          {
+            id: "perros",
+            act: { A: "Abres el libro. Hay un capítulo sobre perros.", B: "Abres el libro por un capítulo sobre el comportamiento de los perros.", C: "Abres el libro por un capítulo sobre el comportamiento de los perros asustados." },
+            say: { A: "Mira. Aquí dice: los perros asustados buscan agua.", B: "Mira lo que dice aquí: los perros asustados buscan agua y lugares bajos.", C: "Escucha esto: «Un perro asustado busca agua y escondites bajos». ¿Hay un río cerca?" },
+            reply: { A: "Camila lee. «¡El río! Toto adora el río.»", B: "Camila lee por encima de tu hombro. «¡El río! Toto se vuelve loco con el río.»", C: "Camila lee en voz alta y se le ilumina la cara. «El río. Toto adora el río, aunque luego le dé miedo.»" },
+            mood: "surprised", next: "libro-agua",
+          },
+          {
+            id: "excusa",
+            say: { A: "El libro es una excusa para pasear. ¿Cómo es tu perro?", B: "El libro es mi excusa para pasear de noche. ¿Cómo es tu perro?", C: "El libro es una coartada para pasear sin que me pregunten nada. ¿Cómo es tu perro?" },
+            reply: { A: "Camila se ríe. «Pequeño, marrón, collar rojo. Y tú, raro.»", B: "Camila se ríe a pesar de todo. «Pequeño, marrón, collar rojo. Y tú eres un poco raro, ¿eh?»", C: "Camila se ríe. «Pequeño, marrón, collar rojo. Y tú, el paseante más raro del mercado.»" },
+            mood: "laugh", next: "libro-risa",
+          },
+          {
+            id: "regalo",
+            say: { A: "Cuando aparezca tu perro, te regalo el libro.", B: "Si aparece tu perro esta noche, te regalo el libro.", C: "Trato: cuando aparezca tu perro, el libro es tuyo." },
+            reply: { A: "Camila sonríe. «Trato. Se llama Toto. Pequeño y marrón.»", B: "Camila sonríe. «Trato hecho. Se llama Toto: pequeño, marrón, collar rojo.»", C: "Camila sonríe. «Acepto el trato. Toto: pequeño, marrón, collar rojo, orejas prestadas.»" },
+            mood: "smile", next: "libro-agua",
+          },
+        ],
+      },
+      "libro-agua": {
+        who: "camila", mood: "worried",
+        line: {
+          A: "Camila mira el libro. «¿Qué más dice? ¿Cómo lo llamo?»",
+          B: "Camila señala el libro. «¿Y qué más dice ahí? ¿Cómo hago para que venga?»",
+          C: "Camila da golpecitos en la página. «Sigue leyendo. ¿Qué dice sobre cómo hacer que vuelva?»",
+        },
+        options: [
+          {
+            id: "rio",
+            say: { A: "Dice: ve al agua. Vamos al río.", B: "Dice que busques cerca del agua. Vamos al río.", C: "Dice: «búscalo cerca del agua». Vamos al río, al este." },
+            reply: { A: "Camila cierra el libro. «¡Al río! Gracias.»", B: "Camila cierra el libro por ti. «¡Al río! Y gracias por leer de noche.»", C: "Camila cierra el libro con decisión. «Al río. Bendito sea el raro que lee en los mercados.»" },
+            mood: "smile", end: "libro-rio",
+          },
+          {
+            id: "silbar",
+            say: { A: "Dice: silba fuerte. Los perros oyen de lejos.", B: "Dice que silbes fuerte: los perros te oyen desde muy lejos.", C: "Dice que un silbido agudo llega más lejos que cualquier grito. Silba." },
+            reply: { A: "Camila silba. Lejos, un perro ladra. «¡Es Toto! ¡Es su ladrido!»", B: "Camila silba con dos dedos. A lo lejos, un ladrido. «¡Es Toto! ¡Reconozco su ladrido!»", C: "Camila silba con dos dedos y, desde el fondo del mercado, responde un ladrido. «¡Toto! ¡Ese es su ladrido!»" },
+            mood: "surprised", end: "libro-silbido",
+          },
+          {
+            id: "plan",
+            say: { A: "El libro no lo sabe todo. ¿Qué hacemos?", B: "El libro no lo sabe todo. ¿Qué hacemos ahora?", C: "Hasta aquí llega el libro. El resto lo decidimos nosotros. ¿Qué hacemos?" },
+            reply: { A: "Camila guarda el celular. «Necesito un plan.»", B: "Camila se ata la coleta. «Bueno. Necesito un plan.»", C: "Camila se ajusta la coleta. «Bien. Necesito un plan.»" },
+            mood: "worried", next: "plan",
+          },
+        ],
+      },
+      "libro-risa": {
+        who: "camila", mood: "laugh",
+        line: {
+          A: "Camila se ríe todavía. «Un libro en el mercado. Bueno, ¿me ayudas o lees?»",
+          B: "Camila todavía se ríe. «Un libro, de noche, en el mercado. Bueno, ¿me ayudas a buscar o sigues leyendo?»",
+          C: "Camila no termina de reírse. «Un libro entre las parrillas. En fin: ¿me ayudas a buscar o la lectura es sagrada?»",
+        },
+        options: [
+          {
+            id: "ayudar",
+            say: { A: "Te ayudo. El libro espera.", B: "Te ayudo, claro. El libro puede esperar.", C: "Te ayudo. El libro lleva cien años esperando; puede esperar una hora más." },
+            reply: { A: "Camila sonríe. «Mira, el libro tiene un capítulo de perros.»", B: "Camila abre tu libro al azar. «Mira, tiene un capítulo sobre perros. Lee.»", C: "Camila hojea tu libro. «Hay un capítulo sobre perros. Lee en voz alta, lector nocturno.»" },
+            mood: "smile", next: "libro-agua",
+          },
+          {
+            id: "prestar",
+            say: { A: "Toma el libro. Léelo mientras esperas a Toto.", B: "Toma, llévate el libro. Léelo mientras esperas a Toto en casa.", C: "Quédate el libro. Para las noches de espera, que esta no será la última." },
+            reply: { A: "Camila toma el libro. «Gracias. Es raro, pero gracias.»", B: "Camila acepta el libro, sorprendida. «Es lo más raro que me han regalado. Gracias.»", C: "Camila acepta el libro. «El regalo más raro de mi vida, en la peor noche. Gracias.»" },
+            mood: "smile", end: "libro-regalo",
+          },
+          {
+            id: "leer",
+            say: { A: "Voy a leer a otro sitio. Suerte.", B: "Me voy a leer a un sitio más tranquilo. Suerte con Toto.", C: "La lectura es sagrada, sí. Me busco un banco. Suerte con Toto." },
+            reply: { A: "Camila deja de reírse. Sigue buscando sola.", B: "Camila deja de reírse de golpe y vuelve a agacharse bajo los puestos.", C: "La risa de Camila se apaga. Vuelve a los puestos, sola, sin mirarte." },
+            mood: "sad", end: "sola",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "camila", mood: "sad",
+        line: {
+          A: "Una chica llora bajo un puesto con una correa vacía. Ve el corazón y respira. «No sé por qué, pero contigo me siento mejor. Mi perro se escapó.»",
+          B: "Una chica con sudadera amarilla llora en silencio con una correa vacía en la mano. Al ver el corazón, algo en su cara se afloja. «No te conozco, pero contigo me siento mejor. Se me escapó el perro, Toto.»",
+          C: "Una chica llora sin ruido bajo las luces, correa vacía en mano. El corazón le llega antes que tus palabras y suelta el aire. «Qué raro. Contigo delante ya no tengo tanto miedo. Mi perro se escapó. Toto.»",
+        },
+        options: [
+          {
+            id: "consolar",
+            say: { A: "Tranquila. Llora si quieres. Yo estoy aquí.", B: "Tranquila. Llora lo que necesites, yo me quedo aquí contigo.", C: "No tienes que aguantarte las lágrimas. Yo me quedo aquí el tiempo que haga falta." },
+            reply: { A: "Camila llora un poco más. «Toto era de mi abuela.»", B: "Camila se deja llorar un momento. «Toto era de mi abuela. Es lo único que me queda de ella.»", C: "Camila llora con alivio. «Toto era de mi abuela. Perderlo es perderla dos veces.»" },
+            mood: "love", next: "corazon-abuela",
+          },
+          {
+            id: "contar",
+            say: { A: "Cuéntame de Toto. ¿Cómo es?", B: "Cuéntame de Toto. ¿Cómo es? ¿Qué le gusta?", C: "Háblame de Toto. Cómo es, qué le gusta, a quién quiere." },
+            reply: { A: "Camila sonríe entre lágrimas. «Pequeño, marrón. Le gusta el agua. Era de mi abuela.»", B: "Camila sonríe entre lágrimas. «Pequeño, marrón, orejas enormes. Le gusta el agua y robar empanadas. Era de mi abuela.»", C: "Camila sonríe con los ojos mojados. «Pequeño, marrón, orejas prestadas. Adora el agua y las empanadas ajenas. Era de mi abuela.»" },
+            mood: "love", next: "corazon-abuela",
+          },
+          {
+            id: "juntos",
+            say: { A: "Vamos a buscarlo juntos. Ahora.", B: "Vamos a buscarlo juntos, ahora mismo.", C: "Lo buscamos juntos, ahora mismo. Dos pares de ojos ven más que uno." },
+            reply: { A: "Camila te toma la mano. «Al río. Toto adora el río.»", B: "Camila te toma la mano sin pensarlo. «Al río. Toto adora el río. Gracias.»", C: "Camila te toma la mano con naturalidad. «Al río. Toto siempre acaba en el río. Gracias por venir conmigo.»" },
+            mood: "love", end: "corazon-rio",
+          },
+        ],
+      },
+      "corazon-abuela": {
+        who: "camila", mood: "love",
+        line: {
+          A: "Camila se seca los ojos. «Mi abuela decía que Toto tiene alma de explorador. ¿Tú qué crees?»",
+          B: "Camila se seca los ojos con la manga. «Mi abuela decía que Toto tiene alma de explorador y que siempre vuelve. ¿Tú qué crees?»",
+          C: "Camila se seca los ojos con la manga de la sudadera. «Mi abuela decía que Toto tiene alma de explorador y corazón de hogar. ¿Tú qué crees?»",
+        },
+        options: [
+          {
+            id: "orgullo",
+            say: { A: "Tu abuela estaría orgullosa de ti. Lo buscas con amor.", B: "Tu abuela estaría orgullosa de verte buscarlo así, con tanto amor.", C: "Tu abuela estaría orgullosa: nadie busca así a un perro si no sabe querer." },
+            reply: { A: "Camila te abraza fuerte. «Gracias. Lo necesitaba.»", B: "Camila te abraza con fuerza, correa y todo. «Gracias. No sabes cuánto lo necesitaba.»", C: "Camila te abraza de golpe, con la correa enredada entre los dos. «Gracias. Eso era lo que necesitaba oír.»" },
+            mood: "love", end: "corazon-abrazo",
+          },
+          {
+            id: "promesa",
+            say: { A: "Creo que Toto vuelve. Te lo prometo.", B: "Creo que tu abuela tenía razón. Toto vuelve, te lo prometo.", C: "Creo que tu abuela tenía razón: los exploradores siempre vuelven a casa. Te lo prometo." },
+            reply: { A: "Camila te da un beso en la mejilla. «Gracias. Vamos al río.»", B: "Camila te da un beso rápido en la mejilla. «Gracias. Vamos al río, explorador.»", C: "Camila te besa la mejilla, sin pensarlo. «Gracias. Al río, que los exploradores se encuentran entre sí.»" },
+            mood: "love", end: "corazon-beso",
+          },
+          {
+            id: "rio",
+            say: { A: "Creo que está en el río. Vamos.", B: "Creo que está en el río. Vamos, no perdamos tiempo.", C: "Creo que un explorador con miedo va al agua. Vamos al río." },
+            reply: { A: "Camila sonríe. «Al río. Contigo.»", B: "Camila sonríe y echa a andar. «Al río. Contigo, mejor.»", C: "Camila sonríe y te toma del brazo. «Al río. Y esta vez no voy sola.»" },
+            mood: "love", end: "corazon-rio",
+          },
+        ],
+      },
     },
     ends: {
+      "cuchillo-rio": { text: { A: "Vas delante, sin cuchillo. Camila te sigue a tres pasos hacia el río.", B: "Caminas delante, con las manos a la vista, y Camila te sigue a tres pasos hacia el río. El susto del cuchillo todavía se nota.", C: "Avanzas hacia el río con las manos a la vista; Camila te sigue a tres pasos, sin olvidar el cuchillo, pero con la correa lista." }, change: "se-va", flag: "toto-buscado", recap: "Asustaste a Camila con el cuchillo, pero fueron juntos al río a buscar a Toto." },
+      "cuchillo-grito": { text: { A: "Camila corre y grita. Los vendedores te miran. Guardas el cuchillo y te vas.", B: "Camila huye gritando que tienes un cuchillo. Los vendedores te rodean con la mirada y tú guardas el cuchillo y te alejas.", C: "Camila desaparece gritando «¡cuchillo!». Los vendedores te miran como a un sospechoso y te retiras, con la cuerda inútil en la mano." }, change: "huye", recap: "Sacaste el cuchillo dos veces y Camila huyó gritando." },
+      "cuchillo-policia": { text: { A: "Llega la policía. Te quitan el cuchillo. Camila sigue buscando a Toto lejos de ti.", B: "Llega una patrulla y te quitan el cuchillo. Camila declara contra ti y sigue buscando a Toto lo más lejos posible.", C: "La patrulla se lleva tu cuchillo y tu versión no convence a nadie. Camila sigue buscando a Toto en la otra punta del mercado." }, change: "policia", recap: "El cuchillo asustó a Camila y terminó con la policía." },
+      "pistola-huye": { text: { A: "Camila corre. La correa queda en el suelo. Todos te miran.", B: "Camila huye y deja la correa en el suelo. Todo el mercado te mira y nadie se acerca.", C: "Camila huye sin mirar atrás. La correa queda en el suelo como una acusación, y el mercado te abre un círculo de vacío." }, change: "huye", recap: "Apuntaste a Camila y huyó sin su correa." },
+      "pistola-rio": { text: { A: "Camila va delante hacia el río. No se acerca a ti. Pero van juntos.", B: "Camila camina hacia el río sin acercarse a ti, mirando atrás cada tres pasos. Juntos, pero con la pistola entre los dos.", C: "Camila avanza hacia el río manteniendo la distancia. Van juntos, aunque la pistola, guardada, sigue entre los dos." }, change: "se-va", flag: "toto-buscado", recap: "Camila aceptó tu ayuda, con la pistola guardada y mucha distancia." },
+      "pistola-patrulla": { text: { A: "Llega una patrulla. Levantas las manos. Camila explica lo de la pistola.", B: "Llega una patrulla y levantas las manos. Camila explica, temblando, lo de la pistola. Toto sigue perdido.", C: "Una patrulla llega con las luces encendidas y tú levantas las manos. Camila relata lo de la pistola, y nadie busca a Toto." }, change: "manos-arriba", recap: "Camila llamó a la policía por tu pistola." },
+      "granada-evacuacion": { text: { A: "El mercado está vacío. Las parrillas apagadas. Camila se fue corriendo.", B: "El mercado se vacía en minutos. Parrillas apagadas, luces encendidas y nadie. Camila huyó con los demás.", C: "Un mercado vacío, con las parrillas humeando y la música sonando para nadie. Camila huyó con el resto." }, change: "corre", recap: "Vaciaste el mercado con la granada." },
+      "granada-toto": { text: { A: "Toto aparece por el miedo. Camila lo abraza. Te mira: «Gracias. Y nunca más eso».", B: "Toto aparece temblando por los gritos y Camila lo abraza llorando. Te mira: «Gracias. Y no vuelvas a sacar eso nunca».", C: "Los gritos espantan a Toto hasta los brazos de Camila. Ella lo abraza y te dedica una mirada: «Gracias. Y jamás, jamás saques eso otra vez»." }, change: "sonrie", recap: "El caos de la granada hizo aparecer a Toto." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina el mercado. Llega la policía. Camila se va.", B: "Un helicóptero ilumina el mercado y la policía te rodea. Camila se aleja sin mirar atrás.", C: "El helicóptero convierte el mercado en un escenario y la policía te rodea. Camila se marcha sin volver la vista." }, change: "helicoptero", recap: "La granada trajo un helicóptero al mercado." },
+      "gas-lejos": { text: { A: "Camila se va, triste. Guardas el gas. Nadie busca a Toto contigo.", B: "Camila se aleja, dolida. Guardas el gas y te quedas solo con tu miedo.", C: "Camila se marcha, herida por la desconfianza. Guardas el gas y te queda la noche entera para pensar en ello." }, change: "triste", recap: "Tu gas pimienta alejó a Camila." },
+      "gas-rio": { text: { A: "Camila y tú van al río, con el gas guardado. Son un equipo raro.", B: "Camila y tú caminan hacia el río, gas guardado y risa nerviosa. Un equipo raro, pero un equipo.", C: "Camila y tú avanzan hacia el río, con el gas guardado y un pacto tácito. El equipo más desconfiado del mercado." }, change: "se-va", flag: "toto-buscado", recap: "Camila y tú, ambos con gas pimienta, fueron juntos al río." },
+      "gas-risa": { text: { A: "Camila se ríe mucho. «Gracias por la risa.» Sigue buscando con más ánimo.", B: "Camila se ríe hasta que le duele. «Gracias, necesitaba reírme.» Y sigue buscando con otro ánimo.", C: "Camila se ríe hasta las lágrimas, esta vez de las buenas. Sigue buscando a Toto con una energía nueva." }, change: "sonrie", recap: "Tu broma sobre el gas y Toto hizo reír a Camila." },
+      "lapiz-carteles": { text: { A: "Pegan tu dibujo de Toto en diez puestos. Camila está contenta.", B: "Pegan tu dibujo de Toto en diez puestos. En minutos, varias personas empiezan a buscar.", C: "Tu retrato de Toto cuelga en diez puestos y medio mercado busca a un perro con orejas memorables." }, change: "sonrie", recap: "Dibujaste a Toto para los carteles de Camila." },
+      "lapiz-recompensa": { text: { A: "El cartel dice: «Recompensa: una empanada». La gente se ríe y busca.", B: "El cartel promete una empanada de recompensa. La gente se ríe, pero busca.", C: "La recompensa en empanadas se convierte en el chiste del mercado, y en su misión colectiva." }, change: "sonrie", recap: "Escribiste un cartel con recompensa en empanadas." },
+      "lapiz-rio": { text: { A: "Camila va al río con tu mapa en la mano.", B: "Camila se va hacia el río con tu mapa en la mano, siguiendo la flecha.", C: "Camila se aleja hacia el río siguiendo tu flecha a lápiz, mapa en mano." }, change: "se-va", flag: "toto-buscado", recap: "Dibujaste un mapa y Camila fue al río." },
+      "libro-rio": { text: { A: "Camila va al río. Tu libro tenía razón.", B: "Camila se va hacia el río, convencida por tu libro.", C: "Camila se marcha hacia el río, con la autoridad de un libro de su lado." }, change: "se-va", flag: "toto-buscado", recap: "Tu libro mandó a Camila al río." },
+      "libro-silbido": { text: { A: "Camila corre hacia el ladrido. «¡Toto!» Lo encuentra bajo un puesto.", B: "Camila corre hacia el ladrido y encuentra a Toto bajo un puesto de frutas. Llora de alegría.", C: "Camila sigue el ladrido hasta un puesto de frutas y rescata a Toto, culpable y feliz. Llora y ríe a la vez." }, change: "sonrie", recap: "Un consejo de tu libro hizo aparecer a Toto." },
+      "libro-regalo": { text: { A: "Camila se va con tu libro y su correa vacía. Sonríe un poco.", B: "Camila se aleja con tu libro bajo el brazo y la correa vacía. Sonríe un poco, por primera vez.", C: "Camila se marcha con tu libro y su correa vacía, sonriendo por primera vez en la noche." }, change: "sonrie", recap: "Le regalaste tu libro a Camila." },
+      "corazon-rio": { text: { A: "Camila y tú van al río de la mano. Ella ya no llora.", B: "Camila y tú caminan hacia el río de la mano. Ya no llora.", C: "Camila y tú avanzan hacia el río de la mano. Las lágrimas se quedaron en el mercado." }, change: "se-va", flag: "toto-buscado", recap: "Consolaste a Camila y fueron juntos al río." },
+      "corazon-abrazo": { text: { A: "Camila te abraza mucho tiempo. Después, va al río.", B: "Camila te abraza largo rato. Luego se va hacia el río, más fuerte.", C: "Camila te abraza largo rato y se marcha hacia el río con la fuerza que le faltaba." }, change: "abraza", flag: "toto-buscado", recap: "Camila te abrazó antes de ir al río." },
+      "corazon-beso": { text: { A: "Camila te da un beso y corre al río.", B: "Camila te da un beso en la mejilla y corre hacia el río, sonriendo.", C: "Camila te besa la mejilla y echa a correr hacia el río, con la sonrisa de quien vuelve a tener esperanza." }, change: "beso", flag: "toto-buscado", recap: "Camila te dio un beso y fue al río por Toto." },
       rio: { text: { A: "Camila va hacia el río, al este. Antes de irse, te dice: «Gracias».", B: "Camila se va hacia el paseo del río, al este. Te grita desde lejos que te avisará si lo encuentra.", C: "Camila se aleja a paso rápido hacia el este, rumbo al río, con la correa lista y la esperanza intacta." }, change: "se-va", flag: "toto-buscado", recap: "Ayudaste a Camila a buscar a Toto: puede estar en el río." },
       carteles: { text: { A: "Pones carteles de Toto en los puestos. Mucha gente los lee.", B: "Ponen carteles en diez puestos. Enseguida varias personas empiezan a buscar a Toto.", C: "En diez minutos, la cara de Toto está en todo el mercado y medio barrio busca a un perro con orejas prestadas." }, change: "sonrie", recap: "Pusiste carteles de Toto por todo el mercado." },
       casa: { text: { A: "Camila habla por teléfono. Toto no está en casa, pero ella está más tranquila.", B: "Camila habla con su compañera de piso. Toto no ha vuelto, pero ella va a esperarlo en la puerta.", C: "Toto no ha vuelto a casa, pero la compañera de piso promete montar guardia en la puerta con una galleta." }, change: "llama", recap: "Le sugeriste a Camila llamar a casa." },
       policia: { text: { A: "Llega la policía. Explicas todo. Es un malentendido.", B: "Llega un coche de policía. Te cuesta un buen rato explicar el malentendido.", C: "Llega la policía. Entre explicaciones y disculpas, Toto sigue sin aparecer, y tú tampoco quedas muy bien." }, change: "policia", recap: "Un susto con Camila terminó con la policía." },
       sola: { text: { A: "Te vas. Camila busca a Toto sola.", B: "Te alejas. Camila sigue buscando sola, cada vez más triste.", C: "Te alejas. Desde lejos ves a Camila mirando bajo cada puesto, cada vez con menos fuerza." }, change: "triste", recap: "Dejaste a Camila buscando a Toto sola." },
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando alguien te asusta?", B: "¿Alguna vez un desconocido te dio miedo por la noche y qué hiciste?", C: "¿Cómo distingues una amenaza real de un malentendido cuando el miedo ya está en el cuerpo?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces si ves un arma?", B: "¿Qué le dirías a alguien que lleva un arma por la calle?", C: "¿Hasta qué punto la presencia de un arma cambia una conversación aunque nadie la use?" } },
+      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Qué haces cuando hay mucho ruido y caos?", B: "¿Cuál fue la situación más absurda que viviste en un lugar público?", C: "¿Por qué el pánico colectivo se contagia más rápido que la calma?" } },
+      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Llevas algo para defenderte?", B: "¿Qué haces para sentirte seguro cuando sales de noche?", C: "¿Dónde termina la prevención y empieza la paranoia?" } },
+      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Qué dibujas bien?", B: "¿Alguna vez hiciste un cartel o una nota para ayudar a alguien?", C: "¿Qué poder tiene una nota escrita a mano frente a un mensaje de celular?" } },
+      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Qué libro llevas contigo?", B: "¿Qué libro te ayudó en un momento difícil?", C: "¿Qué libro regalarías a alguien que está pasando un mal momento, y por qué?" } },
+      corazon: { start: "corazon-inicio", fx: "calma", speak: { A: "¿Quién te consuela cuando estás triste?", B: "¿Cómo consuelas a un amigo que ha perdido algo importante?", C: "¿Por qué a veces un desconocido consuela mejor que alguien cercano?" } },
     },
     speak: {
       A1: "¿Qué animal tienes o quieres tener?",
