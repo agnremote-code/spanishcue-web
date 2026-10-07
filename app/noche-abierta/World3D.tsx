@@ -19,6 +19,7 @@ import { ambientReaction, openingFx, type ItemId, type StreetState } from './str
 import { buildCity, buildInterior, placePerson, placeVehicle, type City, type Interior } from './build3d';
 import { buildDistricts, buildStreetRoom } from './district3d';
 import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
+import { createStreetEvents } from './events3d';
 import { createItemUseFx, disposeItem, heroHand, holdItem } from './items3d';
 import { ItemInventory } from './ItemIcon';
 import { animatePerson } from './people3d';
@@ -179,6 +180,9 @@ export default function World3D(props: WorldProps) {
     const taxiBox = boxes.find(item => item.vehicle === 'taxi')!;
     const crowd = createStreetCrowd(scene, city.night, { low, boxes });
     boxes.push(...crowd.movingBoxes);
+    const events = createStreetEvents(scene, city.night, { low, boxes });
+    boxes.push(...events.movingBoxes);
+    crowd.setHooks({ fly: (x: number, z: number) => events.fly('helicopter', x, z), police: (x: number, z: number) => { events.callPolice(x, z); } });
     const streetRooms = new Map<string, ReturnType<typeof buildStreetRoom>>();
     // The object you carry, in your free hand.
     let held: { id: ItemId; holder: THREE.Object3D } | null = null;
@@ -329,6 +333,7 @@ export default function World3D(props: WorldProps) {
       city.root.visible = !stage;
       districts.root.visible = !stage;
       crowd.root.visible = !stage || stage === 'sala-lavanderia';
+      events.root.visible = crowd.root.visible;
       for (const [id, room] of streetRooms) if (room && !STREET_ROOMS[id].roof) room.group.visible = id === stage;
       const interior = stage ? interiors.get(stage) : null;
       // One lamp from the room, one soft fill from the camera side so faces read.
@@ -1014,8 +1019,14 @@ export default function World3D(props: WorldProps) {
         crowd.update(dt, {
           clock: sim.clock, player: { x: sim.player.x, z: sim.player.z, y: sim.y }, street: p.street, eventId: p.event,
           open: sim.street, walking: sim.mode === 'walk', reduced: reduced(), room: sim.streetRoom, level: p.level,
-          blockers: [{ x: taxi.x, z: taxi.z }],
+          blockers: [{ x: taxi.x, z: taxi.z }, ...events.blockers()],
         });
+        events.update(dt, { clock: sim.clock, player: { x: sim.player.x, z: sim.player.z, y: sim.y }, walking: sim.mode === 'walk', room: sim.streetRoom, level: p.level, cars: crowd.cars(), reduced: reduced() });
+        const shout = events.shout();
+        if (shout && sim.mode === 'walk' && (!sim.bubble || sim.clock > sim.bubble.until)) {
+          sim.bubble = { x: shout.x, y: shout.y, z: shout.z, until: sim.clock + 3 };
+          setBubble(current => ({ text: shout.text, n: (current?.n ?? 0) + 1 }));
+        }
       }
       for (const fx of useFx.values()) fx.update(dt);
       // Entering another district: its name, for a moment.

@@ -21,6 +21,7 @@ import { animateAnimal, createAnimal, type Animal } from './animals3d';
 import { makeCar, placeVehicle, type Night } from './build3d';
 import { createHeartBurst } from './items3d';
 import { balconyHeight } from './district3d';
+import { makeMoto } from './events3d';
 
 export type StreetSpot = {
   id: string; x: number; z: number; radius: number; key: 'E'; verb: string; name: string;
@@ -293,11 +294,13 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   const carRigs = new Map<string, Rig>();
   const movingBoxes: Box[] = [];
   for (const car of cars) {
-    if (car.kind === 'bike') {
-      const group = makeBike(car.color ?? '#2b6a8a');
-      const rider = createPerson(randomLook(hash(car.id), 'centro'), false);
+    if (car.kind === 'bike' || car.kind === 'moto') {
+      // A motorbike is a bicycle to the traffic: same lane logic, its own look (events3d).
+      const moto = car.kind === 'moto';
+      const group = moto ? makeMoto(car.color ?? '#b8252a') : makeBike(car.color ?? '#2b6a8a');
+      const rider = createPerson(randomLook(hash(car.id), moto ? 'galpones' : 'centro'), false);
       setPose(rider, 'bike');
-      rider.root.position.set(0, 0, -0.1);
+      rider.root.position.set(0, moto ? 0.06 : 0, -0.1);
       animatePerson(rider, 0.6, 0, false);
       // From afar the rider is one baked mesh; the full body only up close.
       const far = bake(rider);

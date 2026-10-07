@@ -201,7 +201,7 @@ test('people walking keep to the sidewalks, step around whoever stands in the wa
 
 test('traffic on every street: cars wait at crossings, stop for people and never touch each other', () => {
   let cars = [...world.TRAFFIC.map(car => ({ id: car.id, axis: 'x', lane: car.lane, dir: car.dir, x: car.start, z: car.lane, speed: car.speed, cruise: car.speed, kind: car.kind })), ...city.CITY_TRAFFIC.map(city.trafficCar)];
-  const size = car => car.kind === 'bike' ? { l: 0.9, w: 0.3 } : { l: 2.15, w: 0.9 };
+  const size = car => car.kind === 'bike' || car.kind === 'moto' ? { l: 0.9, w: 0.3 } : { l: 2.15, w: 0.9 };
   const box = car => { const s = size(car); return car.axis === 'z' ? { x0: car.x - s.w, x1: car.x + s.w, z0: car.z - s.l, z1: car.z + s.l } : { x0: car.x - s.l, x1: car.x + s.l, z0: car.z - s.w, z1: car.z + s.w }; };
   const parked = solids.filter(b => b.vehicle);
   const buildings = solids.filter(b => b.building);
