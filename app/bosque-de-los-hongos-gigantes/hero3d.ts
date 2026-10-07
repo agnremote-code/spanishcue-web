@@ -9,6 +9,8 @@ import { PLATFORMS, type Player } from './engine.mjs';
 // so the learner always sees where a jump will land.
 export type ForestHero = {
   root: THREE.Group; hero: Hero; shadow: THREE.Mesh<THREE.CircleGeometry, THREE.MeshBasicMaterial>;
+  /** A ring of air left behind by the second jump. */
+  puff: THREE.Mesh<THREE.RingGeometry, THREE.MeshBasicMaterial>; spin: number; doubleJumps: number;
   heading: number; air: number; landing: number; lastGrounded: boolean; dispose: () => void;
 };
 const TURN_RATE = 14;
@@ -24,13 +26,14 @@ export function createForestHero(shadows = true): ForestHero {
   const map = new THREE.CanvasTexture(canvas);
   const shadow = new THREE.Mesh(new THREE.CircleGeometry(.62, 24).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 }));
   shadow.renderOrder = 2;
+  const puff = new THREE.Mesh(new THREE.RingGeometry(.45, .62, 32).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: '#fff3c4', transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending }));
   let disposed = false;
   return {
-    root, hero, shadow, heading: 0, air: 0, landing: 0, lastGrounded: true,
+    root, hero, shadow, puff, spin: 0, doubleJumps: 0, heading: 0, air: 0, landing: 0, lastGrounded: true,
     dispose() {
       if (disposed) return; disposed = true;
       root.traverse(o => { if (o instanceof THREE.Mesh) { o.geometry.dispose(); for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.dispose(); } });
-      shadow.geometry.dispose(); shadow.material.dispose(); map.dispose();
+      shadow.geometry.dispose(); shadow.material.dispose(); map.dispose(); puff.geometry.dispose(); puff.material.dispose();
     },
   };
 }
@@ -48,7 +51,12 @@ export function animateForestHero(h: ForestHero, dt: number, player: Player, spe
   if (speed > .2) h.heading = wrap(h.heading + wrap(player.yaw - h.heading) * (1 - Math.exp(-TURN_RATE * dt)));
   const turn = dt > 0 ? wrap(h.heading - before) / dt : 0;
   h.root.position.set(player.x, player.y, player.z);
-  h.hero.root.rotation.y = h.heading;
+  // Second jump: a quick twirl and a ring of air pushed down from the feet.
+  if ((player.doubleJumps ?? 0) > h.doubleJumps) { h.doubleJumps = player.doubleJumps ?? 0; h.spin = reduced ? 0 : .42; h.puff.position.set(player.x, player.y + .1, player.z); h.puff.material.opacity = .9; h.puff.scale.setScalar(1); }
+  h.spin = Math.max(0, h.spin - dt);
+  const twirl = h.spin > 0 ? (1 - h.spin / .42) : 0;
+  h.hero.root.rotation.y = h.heading + Math.PI * 2 * (1 - Math.pow(1 - twirl, 2)) * (h.spin > 0 ? 1 : 0);
+  if (h.puff.material.opacity > 0) { h.puff.material.opacity = Math.max(0, h.puff.material.opacity - dt * 2.4); h.puff.scale.multiplyScalar(1 + dt * 3.2); }
   animateHero(h.hero, dt, player.grounded ? speed : speed * .3, turn, talking ? 'talk' : 'move', reduced);
   // Jump pose: knees tuck and arms rise while airborne, blended in and out.
   h.air += ((player.grounded ? 0 : 1) - h.air) * Math.min(1, dt * (player.grounded ? 14 : 9));

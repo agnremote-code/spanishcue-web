@@ -81,3 +81,39 @@ test('B1 short moments: one per spot, varied, spoken and never checked', async (
   for (const m of micro) { assert.ok(m.prompt.length > 30 && m.label && m.hint); assert.ok(!Object.keys(m).some(k => /answer|score|correct/i.test(k))); if (m.choices) assert.ok(m.choices.length >= 2); }
   assert.equal(new Set(micro.map(m => m.prompt)).size, micro.length);
 });
+
+test('double jump: one softer second jump in the air per landing, reset on landing', async () => {
+  const e = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+  const dt = 1 / 90, idle = { x: 0, z: 0 };
+  let p = e.spawnPlayer();
+  p = e.stepPlayer(p, { ...idle, jump: true }, dt); assert.ok(p.vy > e.DOUBLE_JUMP_SPEED, 'first jump is the full jump');
+  for (let i = 0; i < 30; i++) p = e.stepPlayer(p, idle, dt);
+  const before = p.y; p = e.stepPlayer(p, { ...idle, jump: true }, dt);
+  assert.ok(Math.abs(p.vy - (e.DOUBLE_JUMP_SPEED - e.GRAVITY * dt)) < 1e-9, 'second jump in the air'); assert.equal(p.airJumps, 0); assert.equal(p.doubleJumps, 1);
+  assert.ok(e.DOUBLE_JUMP_SPEED < e.JUMP_SPEED, 'the second jump is softer');
+  for (let i = 0; i < 20; i++) p = e.stepPlayer(p, idle, dt);
+  const vy = p.vy; p = e.stepPlayer(p, { ...idle, jump: true }, dt); assert.ok(p.vy < vy, 'no third jump'); assert.ok(p.y > before - 5);
+  for (let i = 0; i < 400 && !p.grounded; i++) p = e.stepPlayer(p, idle, dt);
+  assert.equal(p.grounded, true); assert.equal(p.airJumps, 1, 'landing restores the second jump');
+});
+
+test('double jump rescues a jump that falls short; falls return to the last cap, never to the forest floor', async () => {
+  const e = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+  const route = e.PLATFORMS.filter(p => !p.id.startsWith('side')), dt = 1 / 90;
+  const a = route.find(p => p.y > 12), b = route[route.indexOf(a) + 1];
+  const run = (doubleAt) => {
+    let p = { ...e.spawnPlayer(), x: a.x, y: a.y, z: a.z, platform: a.id, checkpoint: { x: a.x, y: a.y, z: a.z } };
+    // A walking (not running) jump toward the next cap falls short without help.
+    for (let i = 0; i < 400; i++) { const dx = b.x - p.x, dz = b.z - p.z, d = Math.hypot(dx, dz) || 1; p = e.stepPlayer(p, { x: dx / d * Math.min(1, d / .15), z: dz / d * Math.min(1, d / .15), jump: i === 0 || i === doubleAt }, dt); if (p.respawns || (i > 5 && p.grounded)) break; }
+    return p;
+  };
+  const short = run(-1);
+  assert.equal(short.respawns, 1, 'a walking jump misses');
+  assert.deepEqual([short.x, short.y, short.z], [a.x, a.y, a.z], 'the fall returns to the cap it left');
+  const saved = run(70);
+  assert.equal(saved.platform, b.id, 'a second jump at the top of the arc reaches the next cap');
+  // Landing on the forest floor after the climb has begun puts you back on the last cap.
+  let p = { ...e.spawnPlayer(), x: 0, y: 1, z: 0, vy: 0, grounded: false, platform: null, checkpoint: { x: route[6].x, y: route[6].y, z: route[6].z } };
+  for (let i = 0; i < 60; i++) p = e.stepPlayer(p, { x: 0, z: 0 }, dt);
+  assert.equal(p.respawns, 1); assert.equal(p.y, route[6].y);
+});

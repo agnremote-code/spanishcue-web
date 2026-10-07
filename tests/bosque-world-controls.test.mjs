@@ -62,3 +62,12 @@ test('a short moment between stations: landing reports the spot, E marks it said
   await click('[aria-label="Mirar hacia el destino"]');await t.advance(40);
  }finally{await t.stop();}
 });
+
+test('Space in the air gives one second jump; the next cap is marked and the route resumes after a fall',async()=>{
+ const t=await mount();try{
+  await t.advance();await key('Space');await key('Space','keyup');await t.advance(12);
+  const top=t.positions.at(-1).y;await key('Space');await key('Space','keyup');await t.advance(12);
+  assert.ok(t.positions.at(-1).y>top,'the second jump lifts the hero again');
+  await t.advance(160);assert.match(document.querySelector('.bfg-world-hint').textContent,/segundo salto|Punto de regreso|Conversar|E para conversar/);
+ }finally{await t.stop();}
+});
