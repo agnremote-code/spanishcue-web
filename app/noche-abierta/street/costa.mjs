@@ -4097,11 +4097,197 @@ const encounters = [
           },
         },
       },
+      "cuchillo-inicio": {
+        who: "cosme", mood: "scared",
+        line: {
+          A: "Cosme ve tu cuchillo y se levanta con la caña en la mano. «¡Eh! ¡Atrás! ¿Qué hace con eso? ¡Voy a llamar a la policía!»",
+          B: "Cosme ve el cuchillo y se pone de pie, con la caña como una lanza. «¡Eh, atrás! ¿Qué hace usted con ese cuchillo? ¡Llamo a la policía!»",
+          C: "Cosme ve el cuchillo, se levanta con una agilidad que no sospechabas y blande la caña. «¡Quieto ahí! ¿Qué pretende con eso? Tengo el celular a mano y la policía, a una llamada.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón, señor. Lo guardo. Es para cortar pescado.", B: "Perdone, señor, lo guardo ahora mismo. Es para cortar pescado, nada más.", C: "Disculpe, señor: ya está guardado. Es para limpiar pescado, y hoy no hay ninguno." },
+            reply: { A: "Cosme baja la caña. «¿Pescado? ¡Aquí no hay! Pero guárdelo, por favor.»", B: "Cosme baja la caña despacio. «¿Pescado? Aquí no hay ni uno desde hace cuarenta años. Pero guárdelo.»", C: "Cosme baja la caña. «¿Pescado? Cuarenta años aquí y jamás tuve que limpiar uno. Guárdelo, por favor.»" },
+            mood: "worried", next: "cuchillo-pescado",
+          },
+          {
+            id: "policia",
+            say: { A: "Llame a la policía, si quiere. Yo espero.", B: "Llame a la policía si lo prefiere. Yo espero aquí, tranquilo.", C: "Llame a la policía si se queda más tranquilo. Yo espero aquí, con las manos a la vista." },
+            reply: { A: "Cosme llama. Una patrulla llega y te pregunta por el cuchillo.", B: "Cosme llama sin dudar. Llega una patrulla y los agentes te preguntan por el cuchillo.", C: "Cosme llama sin vacilar. Llega una patrulla y los agentes te piden explicaciones sobre el cuchillo." },
+            mood: "worried", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-pescado": {
+        who: "cosme", mood: "worried",
+        line: {
+          A: "Cosme se sienta otra vez, pero te vigila. «Perdone el susto. Aquí todos tienen cuchillo, pero nadie lo saca.»",
+          B: "Cosme vuelve a sentarse sin quitarte ojo. «Perdone el grito. Aquí casi todos llevan cuchillo, pero nadie lo saca.»",
+          C: "Cosme se acomoda de nuevo, sin dejar de vigilarte. «Disculpe la reacción. Aquí todo el mundo lleva un cuchillo, pero la buena educación es no sacarlo.»",
+        },
+        options: [
+          {
+            id: "pescar",
+            say: { A: "¿Me enseña a pescar? Con su caña. Sin cuchillo.", B: "¿Me enseña a pescar? Con su caña y sin cuchillos de por medio.", C: "¿Me enseña a pescar? Con su caña y, esta vez, sin cuchillos de por medio." },
+            reply: { A: "Cosme sonríe. «Cuarenta años y ningún pez. Pero la técnica sí se la enseño.»", B: "Cosme sonríe a medias. «Cuarenta años y ningún pez, pero la técnica se la enseño encantado.»", C: "Cosme sonríe. «Cuarenta años sin un solo pez, pero en técnica soy un catedrático.»" },
+            mood: "smile", end: "cuchillo-leccion",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Perdón otra vez.", B: "Mejor me voy. Perdone otra vez por el susto.", C: "Mejor me retiro. Le pido perdón una vez más por el susto." },
+            reply: { A: "Cosme asiente. «Buenas noches. Y guarde eso en casa.»", B: "Cosme asiente. «Buenas noches. Y ese cuchillo, mejor en casa.»", C: "Cosme asiente. «Buenas noches. Y el cuchillo, en un cajón, que de noche asusta.»" },
+            mood: "neutral", end: "cuchillo-adios",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "cosme", mood: "terror",
+        line: {
+          A: "Cosme ve tu pistola y suelta la caña. Levanta las manos despacio. «Joven, joven… Yo solo pesco. No tengo nada. ¿Qué quiere?»",
+          B: "Cosme ve la pistola, suelta la caña y levanta las manos despacio. «Calma, joven. Yo solo pesco. No tengo nada de valor. ¿Qué quiere de mí?»",
+          C: "Cosme ve la pistola, deja caer la caña y alza las manos con una dignidad impecable. «Joven, aquí solo hay un cubo vacío y cuarenta años de paciencia. ¿Qué es lo que busca?»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Nada, señor. Perdón. Ya la guardo.", B: "Nada, señor, perdone. Ya la guardo.", C: "Nada en absoluto, señor. Perdóneme: ya la guardo." },
+            reply: { A: "Cosme baja las manos. «Casi me da un infarto. ¿Por qué lleva eso?»", B: "Cosme baja las manos, pálido. «Casi me da un infarto. ¿Por qué lleva usted eso?»", C: "Cosme baja las manos, pálido como el cubo. «Casi me da un infarto. ¿Y se puede saber por qué pasea con eso?»" },
+            mood: "scared", next: "pistola-susto",
+          },
+          {
+            id: "robar",
+            say: { A: "El cubo. Dame el cubo. Y el reloj.", B: "Dame el cubo y el reloj. Rápido.", C: "El reloj y el cubo. Ahora mismo." },
+            reply: { A: "Cosme te da el cubo vacío y el reloj. Llama a la policía en cuanto te vas.", B: "Cosme te entrega el cubo vacío y el reloj, temblando. En cuanto te vas, llama a la policía.", C: "Cosme te entrega el reloj y el cubo vacío. En cuanto te alejas, marca a la policía con pulso firme." },
+            mood: "terror", end: "pistola-robo",
+          },
+        ],
+      },
+      "pistola-susto": {
+        who: "cosme", mood: "scared",
+        line: {
+          A: "Cosme se sienta con la mano en el pecho. «Cuarenta años aquí y nunca vi una pistola. Siéntese. Hable. Pero lejos.»",
+          B: "Cosme se sienta con la mano en el pecho. «Cuarenta años pescando aquí y nunca vi una pistola. Siéntese, hable, pero a distancia.»",
+          C: "Cosme se sienta con la mano en el pecho. «Cuarenta años junto a este canal y jamás vi una pistola. Siéntese y hable, pero a una distancia prudente.»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "La llevo por miedo. De noche me da miedo.", B: "La llevo por miedo. De noche me da miedo la ciudad.", C: "La llevo por miedo, sí. De noche la ciudad me intimida más de lo que admito." },
+            reply: { A: "Cosme asiente. «Yo también tengo miedo. Pero pesco. Es mi pistola.»", B: "Cosme asiente despacio. «Yo también tengo miedo, joven. Mi arma es la caña.»", C: "Cosme asiente. «Todos tenemos miedo. Yo lo combato con una caña; usted, con eso. Elija mejor.»" },
+            mood: "worried", end: "pistola-consejo",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Perdone.", B: "Mejor me voy. Perdone el susto, señor.", C: "Será mejor que me vaya. Perdone el susto, señor." },
+            reply: { A: "Cosme llama a la policía en cuanto te alejas.", B: "En cuanto te alejas, Cosme llama a la policía.", C: "En cuanto te pierdes de vista, Cosme marca el número de la policía." },
+            mood: "worried", end: "pistola-adios",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "cosme", mood: "surprised",
+        line: {
+          A: "Cosme ve tu granada y la mira un buen rato. «Ah. Una granada. Pesqué una en 1987. Era un zapato con ganas. ¿Me la deja ver?»",
+          B: "Cosme ve la granada y la mira un buen rato sin inmutarse. «Una granada. Pesqué una en 1987, aunque era un zapato con ínfulas. ¿Me la deja ver?»",
+          C: "Cosme ve la granada y la contempla con desconcertante calma. «Una granada. Saqué una en 1987; resultó ser un zapato con aspiraciones. ¿Me permite verla?»",
+        },
+        options: [
+          {
+            id: "dar",
+            say: { A: "Tenga. Pero con cuidado.", B: "Tenga, pero con mucho cuidado.", C: "Tenga, aunque con sumo cuidado." },
+            reply: { A: "Cosme la huele. «Pesa. Es de verdad.» Se la devuelve despacio.", B: "Cosme la huele y la sopesa. «Pesa demasiado. Esta es de verdad.» Te la devuelve con delicadeza.", C: "Cosme la sopesa, la huele. «Esta no es un zapato.» Te la devuelve con el pulso firme de un pescador." },
+            mood: "surprised", next: "granada-pesa",
+          },
+          {
+            id: "correr",
+            say: { A: "¡Corra, señor! ¡Es de verdad! ¡Váyase!", B: "¡Corra, señor, es de verdad! ¡Aléjese!", C: "¡Corra, señor! ¡Es auténtica! ¡Aléjese del canal!" },
+            reply: { A: "Cosme recoge la caña y el cubo y se va corriendo, a su ritmo. Se oyen sirenas.", B: "Cosme recoge caña y cubo y se aleja corriendo, a su manera. A lo lejos, sirenas.", C: "Cosme recoge caña y cubo y se retira al trote, con dignidad. A lo lejos se oyen sirenas." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-pesa": {
+        who: "cosme", mood: "worried",
+        line: {
+          A: "Cosme la mira de lejos. «En esta ciudad, todos llevan algo. Yo llevo paciencia. Usted, esto. ¿Qué pretende?»",
+          B: "Cosme la mira ya desde lejos. «En esta ciudad todos llevan algo: yo, paciencia; usted, esto. ¿Qué pretende hacer con ella?»",
+          C: "Cosme la observa desde una distancia respetable. «Cada cual lleva algo en esta ciudad. Yo, paciencia; usted, una granada. ¿Qué piensa hacer con ella?»",
+        },
+        options: [
+          {
+            id: "agua",
+            say: { A: "Nada. La tiro al canal. ¿Le parece bien?", B: "Nada. La tiro al canal, si le parece bien.", C: "Nada. La arrojo al canal, si no le molesta que interrumpa su pesca." },
+            reply: { A: "Cosme sonríe. «Mejor que pesque algo.» ¡Plof! No pasa nada. Se ríen.", B: "Cosme sonríe. «Así por fin pesco algo cuando la saque.» ¡Plof! Nada ocurre. Se ríen los dos.", C: "Cosme sonríe. «Por fin algo en mi canal.» ¡Plof! Silencio. Los dos se ríen." },
+            mood: "laugh", end: "granada-pesca",
+          },
+          {
+            id: "quedarme",
+            say: { A: "Me la quedo. Es mía. Buenas noches.", B: "Me la quedo, es mía. Buenas noches.", C: "Me la quedo; es mía. Buenas noches, señor." },
+            reply: { A: "Cosme llama a la policía en cuanto te vas. Llega un helicóptero.", B: "En cuanto te alejas, Cosme llama a la policía. Poco después llega un helicóptero.", C: "En cuanto te pierdes de vista, Cosme avisa a la policía. Minutos después, un helicóptero ilumina el canal." },
+            mood: "worried", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "cosme", mood: "love",
+        line: {
+          A: "El corazón llega a Cosme. Sonríe. Hay corazones sobre el canal. «Joven, hoy el agua huele a mar. Y tengo una sensación… Rosa estaría contenta.»",
+          B: "El corazón alcanza a Cosme. Sonríe y unos corazones flotan sobre el canal. «Hoy el agua huele a mar, joven, y tengo una sensación rara… Rosa estaría contenta.»",
+          C: "El corazón envuelve a Cosme. Sonríe, y los corazones se mecen sobre el canal. «Hoy el agua huele a mar, joven. Y algo me dice que Rosa, dondequiera que esté, estaría contenta.»",
+        },
+        options: [
+          {
+            id: "rosa",
+            say: { A: "Cuénteme de Rosa. ¿Cómo era?", B: "Cuénteme de Rosa. ¿Cómo era ella?", C: "Cuénteme de Rosa. ¿Cómo era ella, de verdad?" },
+            reply: { A: "Cosme sonríe. «Reía mucho. Sacaba peces. Y bailaba aquí, sin música.»", B: "Cosme sonríe con los ojos húmedos. «Reía mucho, sacaba peces y bailaba aquí mismo, sin música.»", C: "Cosme sonríe con los ojos húmedos. «Reía a carcajadas, sacaba peces como quien saca conejos y bailaba aquí, sin música, para escándalo de los patos.»" },
+            mood: "smitten", next: "corazon-rosa",
+          },
+          {
+            id: "abrazo",
+            say: { A: "¿Un abrazo, señor Cosme?", B: "¿Me permite un abrazo, señor Cosme?", C: "¿Me permite un abrazo, señor Cosme? Sin motivo." },
+            reply: { A: "Cosme te abraza fuerte. Los corazones suben. Se le cae la caña al agua. No le importa.", B: "Cosme te abraza con fuerza. Los corazones suben al cielo y la caña se le cae al canal. No le importa.", C: "Cosme te abraza con una fuerza inesperada. Los corazones se elevan y la caña cae al agua sin que le importe." },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-rosa": {
+        who: "cosme", mood: "smitten",
+        line: {
+          A: "Cosme mira el canal. «Hoy no necesito pescar. Hoy hablo con usted. ¿Quiere bailar un poco, como ella?»",
+          B: "Cosme mira el canal con ternura. «Hoy no necesito pescar, joven. Hoy prefiero hablar con usted. ¿Quiere bailar un poco, como ella?»",
+          C: "Cosme mira el canal con ternura. «Hoy no necesito pescar nada. ¿Se atrevería a bailar un poco, como lo hacía ella?»",
+        },
+        options: [
+          {
+            id: "bailar",
+            say: { A: "Sí. Bailamos. Sin música.", B: "Sí, bailemos. Sin música, como ella.", C: "Con mucho gusto. Bailemos sin música, como ella." },
+            reply: { A: "Cosme baila despacio contigo. Los corazones giran. Los patos miran.", B: "Cosme baila despacio contigo junto al canal. Los corazones giran alrededor y los patos miran.", C: "Cosme baila contigo, despacio, junto al canal. Los corazones giran y hasta los patos guardan silencio." },
+            mood: "love", end: "corazon-baile",
+          },
+          {
+            id: "sentarse",
+            say: { A: "Mejor me siento con usted. Y escucho.", B: "Mejor me siento a su lado y lo escucho.", C: "Prefiero sentarme a su lado y escucharlo toda la noche." },
+            reply: { A: "Cosme sonríe. Hablan de Rosa hasta que sale la luna. Los corazones se quedan.", B: "Cosme sonríe. Hablan de Rosa hasta que sale la luna. Los corazones se quedan con ellos.", C: "Cosme sonríe. Hablan de Rosa hasta que la luna sube. Los corazones se quedan, discretos." },
+            mood: "love", end: "paciencia",
+          },
+        ],
+      },
     },
     ends: {
       amigos: { text: { A: "Cosme y tú se ríen juntos. Te invita a volver mañana.", B: "Te quedas un rato riéndote con Cosme. Al despedirse, te invita a volver mañana.", C: "Te despides de Cosme con la sensación de haber hecho un amigo. Mañana, dice, te guarda un taburete." }, change: "sonrie", recap: "Te hiciste amigo de Don Cosme, el pescador." },
       paciencia: { text: { A: "Te sientas con Cosme. Miran el agua en silencio.", B: "Te sientas al lado de Cosme y miran el agua en silencio. No pescan nada. No importa.", C: "Te sientas con Cosme a no pescar nada. Es, sorprendentemente, uno de los mejores ratos de la noche." }, change: "se-sienta", recap: "Pescaste nada, en silencio, con Don Cosme." },
       pez: { text: { A: "Cosme saca algo del agua… ¡Es un zapato! Se ríe mucho.", B: "Cosme tira de la caña con emoción y saca… un zapato viejo. Se ríe tanto que casi se cae.", C: "Tras cuarenta años, Cosme saca su primera captura: una bota de goma. La levanta como un trofeo." }, change: "sonrie", recap: "Viste a Don Cosme pescar… un zapato." },
+      "cuchillo-policia": { text: { A: "Llega una patrulla. Explicas el cuchillo. Cosme vuelve a su caña. Dice: «Ni un pez, ni un cuchillo.»", B: "Llega una patrulla. Explicas lo del cuchillo mientras Cosme vuelve a su caña. «Ni un pez, ni un cuchillo útil», murmura.", C: "Llega una patrulla. Das tus explicaciones mientras Cosme regresa a su caña. «Ni peces ni cuchillos con sentido», murmura." }, change: "policia", recap: "Cosme llamó a la policía por tu cuchillo." },
+      "cuchillo-leccion": { text: { A: "Cosme te enseña a lanzar la caña. Tú no pescas nada. Pero te ríes. Cosme también.", B: "Cosme te enseña a lanzar la caña. No pescas nada, pero te ríes. Cosme también, después de mucho tiempo.", C: "Cosme te enseña a lanzar la caña. No pescas nada, pero os reís los dos; hace mucho que Cosme no se reía así." }, change: "sonrie", recap: "Cosme te enseñó a pescar después del susto del cuchillo." },
+      "cuchillo-adios": { text: { A: "Te vas. Cosme vuelve a sentarse. Mira el agua. Ya no le tiembla la mano.", B: "Te alejas. Cosme vuelve a sentarse, mira el agua y, poco a poco, deja de temblarle la mano.", C: "Te alejas. Cosme vuelve a su banquito, mira el agua y espera a que el pulso le vuelva a la normalidad." }, change: "se-va", recap: "Dejaste a Cosme asustado por tu cuchillo." },
+      "pistola-adios": { text: { A: "Te vas. Cosme llama a la policía con la mano temblando. El cubo sigue vacío.", B: "Te alejas. Cosme llama a la policía con la mano temblando. El cubo sigue vacío, como siempre.", C: "Te alejas. Cosme marca a la policía con el pulso roto. El cubo sigue tan vacío como siempre." }, change: "policia", recap: "Cosme llamó a la policía por tu pistola." },
+      "pistola-robo": { text: { A: "Te vas con el cubo vacío y el reloj. A lo lejos oyes una sirena. Cosme te vio.", B: "Te vas con el cubo vacío y el reloj. A lo lejos oyes una sirena: Cosme ya llamó.", C: "Te alejas con un cubo vacío y un reloj. Una sirena empieza a sonar a lo lejos: Cosme no ha tardado en llamar." }, change: "policia", recap: "Cosme llamó a la policía cuando intentaste robarle." },
+      "pistola-consejo": { text: { A: "Cosme te presta la caña. «Pruebe. Es mejor que eso.» Tú guardas la pistola. Pescas… un zapato.", B: "Cosme te presta la caña. «Pruebe, es mejor que eso.» Guardas la pistola. Pescas un zapato.", C: "Cosme te presta su caña. «Pruebe, es más segura que eso.» Guardas la pistola y, tras media hora, pescas un zapato." }, change: "sonrie", recap: "Cosme te aconsejó cambiar la pistola por una caña." },
+      "granada-evacuacion": { text: { A: "Cosme se va. Se oyen sirenas. Un helicóptero vuela sobre el canal. Tú y tu granada, protagonistas.", B: "Cosme se va a paso lento. Llegan las sirenas y un helicóptero ilumina el canal. Tú y tu granada, protagonistas.", C: "Cosme se retira sin prisa. Las sirenas se acercan y un helicóptero barre el canal con su foco. Tú y tu granada, protagonistas absolutos." }, change: "helicoptero", recap: "Tu granada vació el canal y trajo un helicóptero." },
+      "granada-pesca": { text: { A: "Cosme saca algo con la caña. Es un zapato. Se ríen mucho. Es el mejor pez de su vida.", B: "Cosme lanza la caña y saca un zapato. Se ríen mucho: es el mejor pez de su vida.", C: "Cosme lanza la caña y saca otro zapato. Os reís hasta llorar: es el mejor pez de su vida." }, change: "sonrie", recap: "Tiraste la granada al canal y Cosme pescó un zapato." },
+      "corazon-abrazo": { text: { A: "Cosme te abraza. La caña flota en el canal. Los corazones suben. Él no se mueve.", B: "Cosme te abraza con fuerza. La caña flota en el canal. Los corazones suben y él no se mueve.", C: "Cosme te abraza sin soltarte. La caña flota a la deriva, los corazones suben, y él no se mueve en un buen rato." }, change: "abraza", recap: "Cosme te abrazó entre corazones." },
+      "corazon-baile": { text: { A: "Cosme y tú bailan junto al canal. Sin música. Hay corazones. Los patos aplauden con las alas.", B: "Cosme y tú bailan junto al canal sin música, entre corazones. Los patos aplauden con las alas.", C: "Cosme y tú bailan junto al canal sin música, rodeados de corazones. Los patos aplauden con las alas, sin pudor." }, change: "baila", recap: "Bailaste con Cosme en recuerdo de Rosa." },
     },
     speak: {
       A1: "¿Qué haces para relajarte?",
@@ -4110,6 +4296,12 @@ const encounters = [
       B2: "¿Qué valoras más en un pasatiempo, el resultado o el proceso?",
       C1: "¿Qué diferencia ves entre la paciencia y la resignación?",
       C2: "¿Qué rituales cotidianos crees que nos sirven para mantener vivos a quienes ya no están?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces si alguien te amenaza?", B: "¿Cuándo sentiste que debías pedir ayuda por miedo a alguien?", C: "¿Dónde pondrías el límite entre una advertencia y una amenaza?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Tienes miedo de noche?", B: "¿Qué harías si alguien te asaltara?", C: "¿Qué consecuencias tiene sentir miedo todo el tiempo?" } },
+      granada: { start: "granada-inicio", fx: "curioso", speak: { A: "¿Qué cosa rara pescaste o encontraste alguna vez?", B: "¿Cuál fue la broma más pesada que viviste?", C: "¿Por qué crees que la calma ante el caos asusta más que el pánico?" } },
+      corazon: { start: "corazon-inicio", fx: "corazon", speak: { A: "¿Con quién bailas?", B: "¿Qué recuerdo de alguien querido te hace sonreír?", C: "¿Cómo se honra a alguien que ya no está, sin quedarse atrapado en su ausencia?" } },
     },
   },
 
@@ -4210,10 +4402,193 @@ const encounters = [
           },
         },
       },
+      "cuchillo-inicio": {
+        who: "marisa", mood: "surprised",
+        line: {
+          A: "Marisa ve tu cuchillo desde la cubierta y suelta la regadera. «¡Ay! ¿Qué hace con eso? Si viene a robarme los tomates, ¡le aviso que los cuento todos!»",
+          B: "Marisa ve tu cuchillo desde la cubierta y deja caer la regadera. «¡Ay, Dios! ¿Qué hace con eso? Si viene por mis tomates, le advierto que los tengo contados.»",
+          C: "Marisa ve el cuchillo desde la cubierta, suelta la regadera y se pone entre tú y los tomates. «¿Qué pretende con eso? Si viene por la cosecha, le aviso que tengo hasta los tomates numerados.»",
+        },
+        options: [
+          {
+            id: "tomates",
+            say: { A: "No, señora. Es para cortar tomates. Huelen muy bien.", B: "No, señora, es para ayudarle a cortar tomates. Huelen de maravilla desde aquí.", C: "Ni mucho menos, señora: vine a ofrecerme para cortar tomates. Huelen de maravilla desde el muelle." },
+            reply: { A: "Marisa lo piensa. «Ah… ¿Cortar? Bueno. Pero guárdelo hasta que suba.»", B: "Marisa lo piensa un momento. «¿Cortar? Bueno, eso sí. Pero guárdelo hasta que suba a bordo.»", C: "Marisa se lo piensa. «Cortar, dice. Pues bien. Pero guárdelo hasta que pise la cubierta.»" },
+            mood: "worried", next: "cuchillo-cubierta",
+          },
+          {
+            id: "policia",
+            say: { A: "Si quiere, llame a la policía. Yo espero aquí.", B: "Si quiere, llame a la policía. Yo espero en el muelle.", C: "Si lo prefiere, llame a la policía. Yo aguardo en el muelle." },
+            reply: { A: "Marisa marca el celular. Una patrulla llega por el canal.", B: "Marisa marca el celular sin dudar. Una patrulla llega pronto al muelle.", C: "Marisa marca el celular con firmeza. Una patrulla de río atraca pronto junto al barco." },
+            mood: "worried", end: "cuchillo-patrulla",
+          },
+        ],
+      },
+      "cuchillo-cubierta": {
+        who: "marisa", mood: "worried",
+        line: {
+          A: "Marisa te ofrece una tabla. «Cuatro tomates. Cortados finos. Con cuidado. Y luego me explica por qué lleva ese cuchillo de noche.»",
+          B: "Marisa te pasa una tabla de madera. «Cuatro tomates, cortados finos y con cuidado. Y luego me explica por qué lleva un cuchillo de noche.»",
+          C: "Marisa te tiende una tabla. «Cuatro tomates, cortados finos. Y después me cuenta qué hace un cuchillo como ese en la Costanera a estas horas.»",
+        },
+        options: [
+          {
+            id: "cortar",
+            say: { A: "Claro, señora. Aquí está el primero.", B: "Claro, señora. Mire, el primero ya está.", C: "Con mucho gusto, señora. El primero ya está listo." },
+            reply: { A: "Marisa sonríe. «Bien. Se nota que sabe. Lléveselos.»", B: "Marisa sonríe y asiente. «Bien cortado. Se nota que sabe. Lléveselos.»", C: "Marisa asiente, satisfecha. «Corte de profesional. Llévese unos tomates por el trabajo.»" },
+            mood: "smile", end: "regalo",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor no. Me voy. Perdón por el susto.", B: "Mejor lo dejo. Me voy, perdone el susto.", C: "Creo que ya he asustado bastante. Me voy, perdone." },
+            reply: { A: "Marisa enciende un farol. «Buenas noches. Y guarde eso, que asusta.»", B: "Marisa enciende un farol. «Buenas noches. Y ese cuchillo, mejor guardado.»", C: "Marisa enciende un farol. «Buenas noches. Y el cuchillo, en un cajón, por favor.»" },
+            mood: "neutral", end: "luces",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "marisa", mood: "terror",
+        line: {
+          A: "Marisa ve tu pistola desde la cubierta. Levanta las manos. «No dispare. Por favor. Es solo un barco con plantas. Llévese los tomates.»",
+          B: "Marisa ve la pistola desde la cubierta y levanta las manos. «No dispare, por favor. Esto es solo un barco con plantas. Llévese los tomates si quiere.»",
+          C: "Marisa ve la pistola desde la cubierta y alza las manos, aferrada a una maceta. «No dispare. Esto es un barco con plantas. Si quiere, le doy los tomates y no hablamos más.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón. No quiero tomates. Ya la guardo.", B: "Perdone, no quiero tomates. Ya la guardo.", C: "Perdone, no quiero sus tomates. Ya la guardo." },
+            reply: { A: "Marisa baja las manos. «Casi me muero. Suba o váyase, pero guarde eso.»", B: "Marisa baja las manos, temblando. «Casi me muero. Suba o váyase, pero guarde eso.»", C: "Marisa baja las manos con un suspiro. «Casi me muero del susto. Suba o váyase, pero guarde eso.»" },
+            mood: "scared", next: "pistola-cubierta",
+          },
+          {
+            id: "tomates",
+            say: { A: "Entonces, los tomates. Todos.", B: "Entonces dame todos los tomates, rápido.", C: "Entonces sí: los tomates, todos, y sin hacer ruido." },
+            reply: { A: "Marisa te da los tomates con las manos temblando. Cuando te vas, llama a la policía.", B: "Marisa te entrega los tomates temblando. En cuanto te alejas, llama a la policía.", C: "Marisa te entrega la cosecha entera con pulso trémulo. Cuando te alejas, marca a la policía." },
+            mood: "terror", end: "pistola-robo",
+          },
+        ],
+      },
+      "pistola-cubierta": {
+        who: "marisa", mood: "scared",
+        line: {
+          A: "Marisa se sienta entre las macetas. «Vivo aquí sola. Los barcos son tranquilos. ¿Por qué lleva una pistola?»",
+          B: "Marisa se sienta entre las macetas. «Vivo aquí sola y el barco siempre fue tranquilo. ¿Por qué lleva usted una pistola?»",
+          C: "Marisa se deja caer entre las macetas. «Llevo años viviendo sola en este barco, y la paz era mi principal cultivo. ¿Por qué lleva usted una pistola?»",
+        },
+        options: [
+          {
+            id: "miedo",
+            say: { A: "Tengo miedo de noche. Pensé que ayudaba.", B: "Tengo miedo de noche y pensé que me ayudaba.", C: "Tengo miedo de noche y creí que esto ayudaría. No ayuda." },
+            reply: { A: "Marisa suspira. «Yo planto tomates. Ayudan más. Suba, que le preparo té.»", B: "Marisa suspira. «Yo planto tomates y ayudan más. Suba, que le preparo un té.»", C: "Marisa suspira. «Yo planto tomates, y ayudan bastante más. Suba, que le preparo un té.»" },
+            mood: "smile", end: "pistola-te",
+          },
+          {
+            id: "policia",
+            say: { A: "Si quiere llamar a la policía, lo entiendo.", B: "Si quiere llamar a la policía, lo entiendo perfectamente.", C: "Si prefiere llamar a la policía, lo comprendo perfectamente." },
+            reply: { A: "Marisa llama. La patrulla llega en el barco vecino. Levantas las manos.", B: "Marisa llama de inmediato. Una patrulla llega junto al barco y levantas las manos.", C: "Marisa marca sin vacilar. Una patrulla atraca junto al barco y levantas las manos." },
+            mood: "worried", end: "pistola-patrulla",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "marisa", mood: "terror",
+        line: {
+          A: "Marisa ve tu granada y grita. «¡Mi barco! ¡Mis tomates! ¡No la tire aquí, por favor!» Los vecinos de los otros barcos salen a mirar.",
+          B: "Marisa ve tu granada y grita. «¡Mi barco! ¡Mis tomates! ¡No la tire aquí, por favor!» Los vecinos de los otros barcos asoman las cabezas.",
+          C: "Marisa ve la granada y su grito sacude el muelle. «¡Mi barco! ¡Mis tomates! ¡Aquí no, por lo que más quiera!» Los vecinos de los otros barcos empiezan a asomarse.",
+        },
+        options: [
+          {
+            id: "falsa",
+            say: { A: "Es falsa, señora. Es un llavero. Mire.", B: "Es falsa, señora, un llavero. Mire.", C: "Es de mentira, señora. Un llavero, mire." },
+            reply: { A: "Marisa respira. «¿Un llavero? ¡Casi me mata del susto!» Se acerca y la toca.", B: "Marisa respira hondo. «¿Un llavero? ¡Casi me mata del susto!» Se acerca y la toca con un dedo.", C: "Marisa respira hondo. «¿Un llavero? Casi me provoca un infarto.» Se acerca y la toca con la punta del dedo." },
+            mood: "scared", next: "granada-llavero",
+          },
+          {
+            id: "tirar",
+            say: { A: "¡No se preocupe! ¡La tiro al canal!", B: "¡No se preocupe, la tiro al canal ahora mismo!", C: "¡Tranquila, la lanzo al canal ahora mismo!" },
+            reply: { A: "Marisa grita: «¡Mis peces!» Los vecinos gritan. Alguien llama a la policía. Se oye un helicóptero.", B: "Marisa grita: «¡Mis peces, mis plantas!» Los vecinos corren. Alguien llama a la policía y se oye un helicóptero.", C: "Marisa grita: «¡Mis plantas, mis peces!» Los vecinos huyen de los barcos. Alguien llama a la policía y un helicóptero se acerca." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-llavero": {
+        who: "marisa", mood: "furious",
+        line: {
+          A: "Marisa se pone la mano en el pecho. «Joven, casi me da un infarto. Para compensar, riegue todas mis macetas. Todas. Sin preguntar.»",
+          B: "Marisa se pone la mano en el pecho. «Joven, casi me da un infarto. Para compensarme, va a regar todas mis macetas, sin quejarse.»",
+          C: "Marisa se lleva la mano al pecho. «Joven, casi me provoca un infarto. Como compensación, va a regar mis macetas, todas, sin rechistar.»",
+        },
+        options: [
+          {
+            id: "regar",
+            say: { A: "Sí, señora. Perdón. Empiezo ahora.", B: "Sí, señora, perdone. Empiezo ahora mismo.", C: "Por supuesto, señora, y perdone. Empiezo ahora mismo." },
+            reply: { A: "Marisa te da la regadera. Riegas. Ella se ríe. «Ahora sí. Lleve tomates.»", B: "Marisa te da la regadera. Riegas todo el barco mientras ella se ríe. «Ahora sí: lleve tomates.»", C: "Marisa te entrega la regadera. Riegas todo el barco mientras ella se ríe a gusto. «Ahora sí: llévese unos tomates.»" },
+            mood: "smile", end: "regalo",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Perdón otra vez.", B: "Mejor me voy. Perdone otra vez, señora.", C: "Prefiero retirarme. Perdone una vez más, señora." },
+            reply: { A: "Marisa enciende las luces. «Y no vuelva con eso.» El barco brilla.", B: "Marisa enciende las luces del barco. «Y no vuelva con eso.» El barco brilla en el agua.", C: "Marisa enciende las luces del barco. «Y no vuelva con esas cosas.» El barco brilla sobre el agua." },
+            mood: "neutral", end: "luces",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "marisa", mood: "love",
+        line: {
+          A: "El corazón llega a Marisa. Sonríe. Los tomates parecen más rojos. «Joven, usted tiene algo… ¿quiere subir? Tengo té, tomates y una guitarra.»",
+          B: "El corazón alcanza a Marisa. Sonríe, y los tomates parecen más rojos. «Joven, usted tiene algo especial. ¿Quiere subir? Tengo té, tomates y una guitarra.»",
+          C: "El corazón envuelve a Marisa. Sonríe, y hasta los tomates parecen más rojos. «Joven, usted irradia algo. ¿Sube? Tengo té, tomates y una guitarra desafinada.»",
+        },
+        options: [
+          {
+            id: "subir",
+            say: { A: "Sí, gracias. Subo con mucho gusto.", B: "Sí, gracias. Subo encantado.", C: "Con muchísimo gusto, subo." },
+            reply: { A: "Marisa te toma de la mano para subir. Los corazones te siguen. «Bienvenido a casa.»", B: "Marisa te toma de la mano para ayudarte a subir. Los corazones te siguen. «Bienvenido a casa.»", C: "Marisa te ayuda a subir ofreciéndote la mano. Los corazones te siguen. «Bienvenido a bordo, que aquí se cuida a las visitas.»" },
+            mood: "smitten", next: "corazon-cubierta",
+          },
+          {
+            id: "cumplido",
+            say: { A: "Señora, es el barco más bonito del canal.", B: "Señora, su barco es el más bonito del canal.", C: "Señora, su barco es, sin discusión, el más bonito del canal." },
+            reply: { A: "Marisa se sonroja. Hay corazones sobre el barco. Te regala los tomates más grandes.", B: "Marisa se sonroja entre los corazones. Te regala los tomates gigantes, lo mejor de la cosecha.", C: "Marisa se sonroja. Los corazones cubren la cubierta. Te regala los tomates más grandes de la cosecha." },
+            mood: "love", end: "corazon-tomate",
+          },
+        ],
+      },
+      "corazon-cubierta": {
+        who: "marisa", mood: "smitten",
+        line: {
+          A: "Marisa saca la guitarra. «Hace años que nadie sube. ¿Quiere que cante una canción? O prefiere un té y silencio.»",
+          B: "Marisa saca la guitarra de debajo de un banco. «Hace años que nadie sube. ¿Quiere que cante una canción, o prefiere té y silencio?»",
+          C: "Marisa saca la guitarra. «Hace años que nadie sube a esta cubierta. ¿Le canto una canción, o prefiere un té y un silencio bien regado?»",
+        },
+        options: [
+          {
+            id: "cancion",
+            say: { A: "Una canción, por favor.", B: "Una canción, por favor. Me encantaría.", C: "Una canción, por favor; sería un honor." },
+            reply: { A: "Marisa canta. Desafina. Los corazones bailan. Es la mejor noche del canal.", B: "Marisa canta y desafina con alma. Los corazones bailan sobre el agua. Es la mejor noche del canal.", C: "Marisa canta desafinando con alma. Los corazones bailan en el aire. Es, sin duda, la mejor noche del canal." },
+            mood: "love", end: "corazon-cancion",
+          },
+          {
+            id: "te",
+            say: { A: "Un té y silencio. Y mirar las luces.", B: "Un té y silencio, y mirar las luces del agua.", C: "Un té, silencio y las luces del canal." },
+            reply: { A: "Marisa sirve el té. Miran el agua. Enciende las luces del barco. Los corazones brillan.", B: "Marisa sirve el té y enciende las luces del barco. Miran el agua mientras los corazones brillan.", C: "Marisa sirve el té y enciende las luces del barco. Contemplan el agua mientras los corazones centellean." },
+            mood: "love", end: "luces",
+          },
+        ],
+      },
     },
     ends: {
       regalo: { text: { A: "Marisa te da unos tomates. Te dice adiós desde el barco.", B: "Bajas del barco con unos tomates en la mano. Marisa te dice adiós con la regadera.", C: "Bajas a tierra con unos tomates de regalo. Marisa te despide agitando la regadera como un pañuelo." }, change: "sonrie", recap: "Visitaste el barco de Marisa y te regaló tomates." },
       luces: { text: { A: "Marisa enciende unas luces. El barco brilla en el agua.", B: "Marisa enciende una guirnalda de luces. El barco brilla sobre el canal.", C: "Marisa enciende una guirnalda y el barco entero se refleja en el canal, como un farol flotante." }, change: "luz", recap: "Charlaste con Marisa y vio su barco iluminado." },
+      "cuchillo-patrulla": { text: { A: "La patrulla llega al muelle. Explicas el cuchillo. Marisa observa desde la cubierta, con la regadera.", B: "La patrulla llega al muelle. Explicas el cuchillo mientras Marisa te observa desde la cubierta, regadera en mano.", C: "La patrulla llega al muelle. Explicas lo del cuchillo mientras Marisa te vigila desde la cubierta, regadera en ristre." }, change: "policia", recap: "Marisa llamó a la policía por tu cuchillo." },
+      "pistola-robo": { text: { A: "Te vas con tomates. Marisa llama a la policía. Un barco patrulla llega pronto.", B: "Te vas con una bolsa de tomates. Marisa llama a la policía y un barco patrulla llega pronto.", C: "Te alejas con una bolsa de tomates. Marisa llama a la policía y una patrulla fluvial llega sin demora." }, change: "policia", recap: "Marisa llamó a la policía cuando le pediste los tomates con una pistola." },
+      "pistola-te": { text: { A: "Subes. Marisa te da té y tomates. Guardas la pistola en una maceta. Aprendes a regar.", B: "Subes. Marisa te da té y tomates. Guardas la pistola en el fondo de la mochila y aprendes a regar.", C: "Subes. Marisa te sirve té y tomates. La pistola queda en el fondo de la mochila mientras aprendes a regar." }, change: "sonrie", recap: "Marisa te invitó a un té después de ver tu pistola." },
+      "pistola-patrulla": { text: { A: "La patrulla llega. Levantas las manos. Marisa observa. Los tomates siguen rojos.", B: "La patrulla llega y levantas las manos. Marisa observa desde la cubierta. Los tomates siguen igual de rojos.", C: "La patrulla llega y levantas las manos. Marisa observa desde la cubierta. Los tomates, impasibles, siguen igual de rojos." }, change: "manos-arriba", recap: "Marisa llamó a la policía por tu pistola." },
+      "granada-evacuacion": { text: { A: "Los barcos se vacían. La policía llega. Un helicóptero vuela sobre el canal. Los tomates, a salvo.", B: "Los barcos se vacían en minutos. Llega la policía y un helicóptero ilumina el canal. Los tomates, a salvo.", C: "Los barcos se vacían en minutos. Llega la policía y un helicóptero barre el canal con su foco. Los tomates, milagrosamente a salvo." }, change: "helicoptero", recap: "Tu granada evacuó los barcos del canal." },
+      "corazon-tomate": { text: { A: "Marisa te da los tomates más grandes. Hay corazones alrededor. Te vas sonriendo. El barco brilla.", B: "Marisa te da los tomates más grandes. Los corazones te acompañan hasta el final del muelle. El barco brilla detrás.", C: "Marisa te da los tomates más grandes del barco. Los corazones te acompañan hasta el final del muelle, y el barco brilla a tu espalda." }, change: "beso", recap: "Marisa te regaló sus mejores tomates con un beso en la mejilla." },
+      "corazon-cancion": { text: { A: "Marisa canta. Los vecinos de los barcos aplauden. Es la mejor noche del canal.", B: "Marisa canta y desafina. Los vecinos de los otros barcos aplauden. Es la mejor noche del canal.", C: "Marisa canta y desafina con orgullo. Los vecinos de los otros barcos aplauden desde sus cubiertas. Es la mejor noche del canal." }, change: "baila", recap: "Marisa cantó para ti en su barco." },
     },
     speak: {
       A1: "¿Qué plantas tienes en casa?",
@@ -4222,6 +4597,12 @@ const encounters = [
       B2: "¿Qué cambiarías en tu vida si pudieras empezar una profesión completamente distinta?",
       C1: "¿Qué distingue, en tu opinión, una vida sencilla de una vida simplemente austera?",
       C2: "¿Qué hace falta para atreverse a abandonar una vida estable por una que nos parezca más auténtica?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando alguien te asusta sin querer?", B: "¿Qué harías si alguien se acercara a tu casa con un cuchillo?", C: "¿Cómo distingues la prudencia de la desconfianza hacia los desconocidos?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Vives solo o acompañado?", B: "¿Qué harías si alguien te asaltara en tu propia casa?", C: "¿Qué precio tiene sentirse seguro en casa?" } },
+      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Qué plantas cuidas?", B: "¿Qué hiciste la última vez que alguien te asustó con una broma pesada?", C: "¿Por qué las bromas pesadas nos dicen tanto de quien las hace?" } },
+      corazon: { start: "corazon-inicio", fx: "corazon", speak: { A: "¿Quién te invita a su casa?", B: "¿Cuándo fue la última vez que alguien te trató con cariño sin conocerte?", C: "¿Qué hace que una casa acogedora se sienta como un abrazo?" } },
     },
   },
 
@@ -4292,10 +4673,212 @@ const encounters = [
           },
         },
       },
+      "cuchillo-inicio": {
+        who: "camila", mood: "scared",
+        line: {
+          A: "Camila ve tu cuchillo y se pone delante de Toto. Toto ladra fuerte. «¡Atrás! ¿Qué haces con eso? ¡Soy yo, Camila! ¡La del perro!»",
+          B: "Camila ve el cuchillo y se interpone entre Toto y tú. Toto ladra sin parar. «¡Atrás! ¿Qué haces con eso? ¡Soy Camila, la del perro!»",
+          C: "Camila ve el cuchillo y protege a Toto con el cuerpo. Toto ladra como una alarma. «¡Atrás! ¿Qué pretendes con eso? ¡Soy Camila, la del perro que encontraste!»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón, perdón. Ya lo guardo. Mira.", B: "Perdona, ya lo guardo. Mira, ya está.", C: "Perdóname, ya está guardado. Mira, sin cuchillo." },
+            reply: { A: "Camila respira. «Casi grito. Toto, tranquilo.» Toto deja de ladrar.", B: "Camila respira hondo. «Casi grito. Toto, tranquilo.» Toto deja de ladrar, aunque te vigila.", C: "Camila respira aliviada. «Casi grito de verdad. Toto, tranquilo.» Toto se calla, sin quitarte ojo." },
+            mood: "scared", next: "cuchillo-perdon",
+          },
+          {
+            id: "correa",
+            say: { A: "Es para cortar la correa. Se enredó.", B: "Es para cortar la correa de Toto, que se enredó.", C: "Es para cortar la correa de Toto, que se te enredó en el banco." },
+            reply: { A: "Camila mira la correa. Es verdad. «Ah. Qué susto. Hazlo con cuidado.»", B: "Camila mira la correa enredada y baja la guardia. «Ah, era eso. Qué susto. Hazlo con cuidado.»", C: "Camila comprueba la correa enredada. «Ah, era eso. Qué susto me diste. Hazlo con mucho cuidado.»" },
+            mood: "worried", next: "cuchillo-perdon",
+          },
+        ],
+      },
+      "cuchillo-perdon": {
+        who: "camila", mood: "worried",
+        line: {
+          A: "Camila acaricia a Toto. «Hoy ya tuvimos un susto grande. No necesitamos otro. ¿Qué haces por aquí con un cuchillo?»",
+          B: "Camila acaricia a Toto, que sigue tenso. «Ya tuvimos un susto grande esta semana, no necesitamos otro. ¿Qué haces con un cuchillo por aquí?»",
+          C: "Camila acaricia a Toto, todavía en tensión. «Con el susto de la otra noche ya tuvimos suficiente. ¿Se puede saber qué haces paseando con un cuchillo?»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Es de la cocina. Salgo del trabajo. Perdón.", B: "Es de la cocina, salgo del trabajo. Perdona el susto.", C: "Es de la cocina; salgo del trabajo. Disculpa, de verdad." },
+            reply: { A: "Camila se ríe, nerviosa. «Cocinero. Claro. Ven, caminemos. Toto, shh.»", B: "Camila se ríe de los nervios. «Cocinero, claro. Ven, caminemos un poco. Toto, tranquilo.»", C: "Camila suelta una risa nerviosa. «Un cocinero con cuchillo, por supuesto. Ven, caminemos. Toto, calma.»" },
+            mood: "smile", end: "paseo",
+          },
+          {
+            id: "irme",
+            say: { A: "Mejor me voy. Perdón. Saluda a Toto.", B: "Mejor me voy. Perdona, y saluda a Toto de mi parte.", C: "Mejor me retiro. Perdona, y abraza a Toto de mi parte." },
+            reply: { A: "Camila asiente. Toto ladra una vez, desde lejos. Te vas rápido.", B: "Camila asiente. Toto ladra una vez más cuando te alejas.", C: "Camila asiente. Toto lanza un último ladrido de advertencia cuando te alejas." },
+            mood: "sad", end: "cuchillo-adios",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "camila", mood: "terror",
+        line: {
+          A: "Camila ve tu pistola y levanta las manos. Toto ladra y se esconde detrás de ella. «¡No, por favor! ¡Soy Camila! ¡La del perro!»",
+          B: "Camila ve la pistola, levanta las manos y Toto se esconde tras sus piernas. «¡No, por favor! ¡Soy Camila, la del perro que encontraste!»",
+          C: "Camila ve la pistola, levanta las manos y Toto se parapeta entre sus piernas, ladrando. «¡No, por favor! ¡Soy Camila, la del perro! ¿Qué te pasó?»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón, Camila. Ya la guardo. Perdón.", B: "Perdona, Camila, ya la guardo. Perdóname.", C: "Perdóname, Camila. Ya está guardada. No te haré nada." },
+            reply: { A: "Camila baja las manos. «¡Casi me muero! ¿Por qué llevas eso?»", B: "Camila baja las manos, pálida. «¡Casi me muero! ¿Por qué llevas eso?»", C: "Camila baja las manos, temblando. «Casi me da algo. ¿Por qué llevas eso encima?»" },
+            mood: "scared", next: "pistola-susto",
+          },
+          {
+            id: "hola",
+            say: { A: "¡Hola, Camila! ¿Cómo está Toto?", B: "¡Hola, Camila! ¿Y Toto? ¿Cómo está?", C: "¡Camila, qué alegría! ¿Cómo sigue Toto?" },
+            reply: { A: "Camila no baja las manos. «¡Guarda eso! ¡Llamo a la policía!» Toto ladra.", B: "Camila no baja las manos. «¡Guarda eso o llamo a la policía!» Toto ladra a todo pulmón.", C: "Camila no baja las manos ni un centímetro. «¡Guarda eso o llamo a la policía!» Toto ladra con furia." },
+            mood: "furious", end: "pistola-policia",
+          },
+        ],
+      },
+      "pistola-susto": {
+        who: "camila", mood: "angry",
+        line: {
+          A: "Camila se acerca. «Me dijiste que eras amigo de Toto. ¿Qué es esto? ¿Cuándo empezaste a llevar eso?»",
+          B: "Camila da un paso adelante, furiosa. «Te portaste muy bien con Toto. ¿Qué es esto? ¿Desde cuándo llevas eso?»",
+          C: "Camila avanza, más furiosa que asustada. «Fuiste un héroe con Toto. ¿Qué significa esto? ¿Desde cuándo paseas con eso?»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Tengo miedo de noche. Pensé que ayudaba.", B: "Tengo miedo de noche y pensé que ayudaba.", C: "Tengo miedo de noche y pensé que esto ayudaría. Me equivoqué." },
+            reply: { A: "Camila suspira. «Yo tengo a Toto. Ven con nosotros.» Caminan juntos.", B: "Camila suspira y se calma. «Yo tengo a Toto, que me protege mejor. Ven con nosotros.» Caminan juntos.", C: "Camila suspira y se ablanda. «Yo tengo a Toto, que es mejor protección. Ven con nosotros.» Caminan juntos." },
+            mood: "worried", end: "paseo",
+          },
+          {
+            id: "seguir",
+            say: { A: "No pasa nada. Solo paseaba.", B: "No pasa nada. Solo estaba paseando.", C: "No pasa nada, de verdad. Solo daba un paseo." },
+            reply: { A: "Camila saca el celular. «¿Policía? Hay un hombre con una pistola en la Costanera.»", B: "Camila saca el celular. «¿Policía? Hay un hombre armado en la Costanera, junto al puente.»", C: "Camila saca el celular sin dejar de mirarte. «¿Policía? Hay un hombre armado en la Costanera, junto al puente.»" },
+            mood: "furious", end: "pistola-policia",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "camila", mood: "surprised",
+        line: {
+          A: "Camila ve tu granada. Toto la ve también y se pone a saltar. «¡Toto, no! ¡No es una pelota! ¡Ay, Dios!»",
+          B: "Camila ve tu granada. Toto también, y empieza a saltar como loco. «¡Toto, no! ¡No es una pelota! ¡Ay, Dios!»",
+          C: "Camila ve tu granada. Toto, que también la ve, se vuelve loco de emoción. «¡Toto, no! ¡Eso no es una pelota! ¡Por favor!»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón. La guardo. Toto, no.", B: "Perdona, la guardo ahora. Toto, no, no es tuya.", C: "Perdona, la guardo enseguida. Toto, no es para ti." },
+            reply: { A: "Camila sujeta a Toto. «Casi nos da un infarto a los dos. ¿Qué haces con una granada?»", B: "Camila sujeta a Toto en brazos. «Casi nos da un infarto a los dos. ¿Qué haces con una granada?»", C: "Camila sujeta a Toto en brazos. «Casi nos provocas un infarto a los dos. ¿Y se puede saber por qué llevas una granada?»" },
+            mood: "scared", next: "granada-juego",
+          },
+          {
+            id: "lanzar",
+            say: { A: "¡Toto! ¡Busca! ¡Busca la pelota!", B: "¡Toto, busca! ¡Busca la pelotita!", C: "¡Toto, a por ella! ¡Busca la pelota!" },
+            reply: { A: "Camila grita. Toto corre y la atrapa. Todo el paseo huye. Llega un helicóptero.", B: "Camila grita. Toto corre y la atrapa con la boca. Todo el paseo huye y un helicóptero llega al canal.", C: "Camila grita. Toto sale disparado y la atrapa. El paseo entero huye y un helicóptero aparece sobre el canal." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-juego": {
+        who: "camila", mood: "angry",
+        line: {
+          A: "Camila te mira, furiosa. «Es la segunda vez que casi pierdo a Toto por tu culpa. ¿Es falsa? ¿Verdad? Dime que es falsa.»",
+          B: "Camila te mira furiosa. «Es la segunda vez que casi pierdo a Toto por tu culpa. ¿Es falsa, verdad? Dime que es falsa.»",
+          C: "Camila te fulmina con la mirada. «Es la segunda vez que me haces temer por Toto. Dime que es falsa. Por favor, dime que es falsa.»",
+        },
+        options: [
+          {
+            id: "falsa",
+            say: { A: "Sí. Es un llavero. Mira.", B: "Sí, es un llavero. Mira, pesa poco.", C: "Sí, es un llavero de utilería. Mira, ni siquiera pesa." },
+            reply: { A: "Camila la toma. Se ríe, aliviada. «Idiota.» Toto la muerde. Caminan juntos.", B: "Camila la toma y se ríe, aliviada. «Eres un idiota.» Toto intenta morderla. Caminan juntos.", C: "Camila la sopesa y se ríe, aliviada. «Eres un idiota.» Toto intenta apropiársela. Caminan los tres juntos." },
+            mood: "laugh", end: "paseo",
+          },
+          {
+            id: "no",
+            say: { A: "No sé. Me la dieron así.", B: "La verdad, no sé. Me la dieron así.", C: "La verdad, no lo sé. Me la dieron sin instrucciones." },
+            reply: { A: "Camila retrocede con Toto. Llama a la policía mientras corre.", B: "Camila retrocede con Toto en brazos y llama a la policía mientras corre.", C: "Camila retrocede con Toto en brazos y marca a la policía mientras huye." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "camila", mood: "love",
+        line: {
+          A: "El corazón llega a Camila y a Toto. Camila sonríe. Toto salta. Hay corazones alrededor. «¡Eres tú! Te iba a buscar. Toto te echó de menos.»",
+          B: "El corazón alcanza a Camila y a Toto. Camila sonríe y Toto salta de alegría entre corazones. «¡Eres tú! Te iba a buscar. Toto te echaba de menos.»",
+          C: "El corazón envuelve a Camila y a Toto. Camila sonríe, Toto salta, los corazones llenan el aire. «¡Eres tú! Justo te iba a buscar. Toto te echaba de menos, y yo también.»",
+        },
+        options: [
+          {
+            id: "abrazo",
+            say: { A: "Yo también. Dame un abrazo.", B: "Yo también los echaba de menos. Ven, un abrazo.", C: "Yo también los echaba de menos. Ven aquí, un abrazo." },
+            reply: { A: "Camila te abraza. Toto salta entre los dos. Los corazones suben.", B: "Camila te abraza fuerte. Toto salta entre los dos y los corazones suben.", C: "Camila te abraza con fuerza. Toto salta entre los dos y los corazones suben hasta el puente." },
+            mood: "love", next: "corazon-abrazo",
+          },
+          {
+            id: "pasear",
+            say: { A: "¿Caminamos? Los tres.", B: "¿Caminamos un rato? Los tres juntos.", C: "¿Damos un paseo? Los tres, junto al canal." },
+            reply: { A: "Camila toma tu brazo. Toto camina entre ustedes. Los corazones los siguen.", B: "Camila toma tu brazo y Toto camina entre los dos. Los corazones los siguen por el paseo.", C: "Camila se cuelga de tu brazo y Toto camina entre ustedes. Los corazones los siguen por el paseo." },
+            mood: "love", next: "corazon-paseo",
+          },
+        ],
+      },
+      "corazon-abrazo": {
+        who: "camila", mood: "smitten",
+        line: {
+          A: "Camila no te suelta. «Eres muy especial. Toto lo sabe. Yo también.» Te mira un momento largo.",
+          B: "Camila tarda en soltarte. «Eres muy especial. Toto lo sabe y yo también.» Te mira un momento largo.",
+          C: "Camila tarda en soltarte. «Eres alguien muy especial. Toto lo supo desde el principio; yo, un poco más tarde.» Te mira largo rato.",
+        },
+        options: [
+          {
+            id: "beso",
+            say: { A: "Tú también. Un beso en la mejilla, ¿sí?", B: "Tú también. ¿Puedo darte un beso en la mejilla?", C: "Tú también lo eres. ¿Me permites un beso en la mejilla?" },
+            reply: { A: "Camila te besa la mejilla. Toto ladra contento. Los corazones suben al cielo.", B: "Camila te besa la mejilla. Toto ladra contento y los corazones suben al cielo.", C: "Camila te besa la mejilla. Toto ladra, feliz, y los corazones suben al cielo del canal." },
+            mood: "love", end: "corazon-beso",
+          },
+          {
+            id: "cafe",
+            say: { A: "Mañana, un café. Los tres. ¿Sí?", B: "Mañana, un café los tres. ¿Te parece?", C: "Mañana, un café los tres, en el banco donde encontré a Toto. ¿Te parece?" },
+            reply: { A: "Camila sonríe. «Sí. A las ocho. Toto invita.» Se ríen.", B: "Camila sonríe. «Sí. A las ocho. Invita Toto.» Se ríen.", C: "Camila sonríe. «A las ocho, en ese banco. Invita Toto, que es quien más te debe.» Se ríen." },
+            mood: "love", end: "paseo",
+          },
+        ],
+      },
+      "corazon-paseo": {
+        who: "camila", mood: "smitten",
+        line: {
+          A: "Camila camina muy cerca. «Gracias por todo. No sé cómo darte las gracias.» Toto se adelanta y vuelve cada diez pasos.",
+          B: "Camila camina muy cerca. «Gracias por todo. No sé cómo agradecértelo.» Toto se adelanta y vuelve cada diez pasos a comprobar que sigues ahí.",
+          C: "Camila camina pegada a ti. «Gracias por todo; no sé cómo agradecértelo.» Toto se adelanta y regresa cada diez pasos para comprobar que sigues ahí.",
+        },
+        options: [
+          {
+            id: "nada",
+            say: { A: "No me debes nada. Fue un placer.", B: "No me debes nada. Fue un placer ayudar.", C: "No me debes nada, de verdad. Fue un auténtico placer." },
+            reply: { A: "Camila sonríe. Te toma de la mano. Caminan hasta el puente con corazones alrededor.", B: "Camila sonríe y te toma de la mano. Caminan hasta el puente entre corazones.", C: "Camila sonríe y te toma de la mano. Caminan hasta el puente rodeados de corazones, con Toto de escolta." },
+            mood: "love", end: "paseo",
+          },
+          {
+            id: "abrazo",
+            say: { A: "Un abrazo sí. Lo acepto.", B: "Un abrazo sí lo acepto como pago.", C: "Un abrazo, ese sí lo acepto como pago." },
+            reply: { A: "Camila te abraza. Toto salta. Los corazones brillan sobre el agua.", B: "Camila te abraza y Toto salta alrededor. Los corazones brillan sobre el agua.", C: "Camila te abraza mientras Toto salta alrededor. Los corazones brillan sobre el agua del canal." },
+            mood: "love", end: "corazon-beso",
+          },
+        ],
+      },
     },
     ends: {
       abrazo: { text: { A: "Camila te abraza. Toto salta a tu alrededor.", B: "Camila te abraza fuerte mientras Toto da vueltas a tu alrededor.", C: "Camila te abraza y Toto, por no ser menos, se te sube a los pies." }, change: "abraza", recap: "Te reencontraste con Camila y Toto." },
       paseo: { text: { A: "Caminas con Camila y Toto por el canal.", B: "Paseas con Camila y Toto a lo largo del canal. Toto no se aleja de ti.", C: "Paseas con Camila y Toto junto al canal. Toto no pierde de vista a ningún gato, ni a ti." }, change: "se-va", recap: "Paseaste con Camila y Toto junto al canal." },
+      "cuchillo-adios": { text: { A: "Camila toma a Toto en brazos y se va. Toto te mira por encima del hombro, serio.", B: "Camila toma a Toto en brazos y se va. Toto te mira por encima de su hombro, muy serio.", C: "Camila carga a Toto y se aleja. Toto te vigila por encima de su hombro, con la seriedad de un guardaespaldas." }, change: "se-va", recap: "Camila se fue con Toto después del susto del cuchillo." },
+      "pistola-policia": { text: { A: "Llega una patrulla. Levantas las manos. Camila abraza a Toto. Toto te ladra.", B: "Llega una patrulla. Levantas las manos mientras Camila abraza a Toto. Toto te ladra con ganas.", C: "Llega una patrulla. Levantas las manos. Camila abraza a Toto, que te ladra con indignación de testigo." }, change: "manos-arriba", recap: "Camila llamó a la policía por tu pistola." },
+      "granada-evacuacion": { text: { A: "El paseo se vacía. Toto corre con la granada en la boca. Un helicóptero. Camila grita su nombre.", B: "El paseo se vacía. Toto corre con la granada en la boca, feliz. Un helicóptero sobrevuela el canal y Camila grita su nombre.", C: "El paseo se vacía. Toto corre feliz con la granada en la boca. Un helicóptero barre el canal y Camila grita su nombre." }, change: "helicoptero", recap: "Toto corrió con tu granada y el paseo se evacuó." },
+      "corazon-beso": { text: { A: "Camila te besa la mejilla. Toto ladra feliz. Los corazones suben al cielo.", B: "Camila te besa la mejilla. Toto ladra feliz y los corazones suben al cielo del canal.", C: "Camila te besa la mejilla. Toto ladra, feliz, y los corazones ascienden hasta las farolas." }, change: "beso", recap: "Camila te dio un beso de agradecimiento." },
     },
     speak: {
       A1: "¿Qué haces con tus amigos los fines de semana?",
@@ -4304,6 +4887,12 @@ const encounters = [
       B2: "¿Qué harías para celebrar un reencuentro con alguien muy querido?",
       C1: "¿Qué diferencia hay entre devolver un favor y agradecerlo de verdad?",
       C2: "¿Por qué crees que algunos encuentros fortuitos acaban siendo más significativos que relaciones de años?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Proteges a alguien que quieres?", B: "¿Alguna vez reaccionaste mal por proteger a alguien?", C: "¿Qué hace que el instinto de protección se confunda con la agresividad?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces cuando tienes miedo por alguien?", B: "¿Qué harías si alguien amenazara a tu mascota?", C: "¿Cómo se repara la confianza después de un susto injusto?" } },
+      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Tienes mascota?", B: "¿Qué hizo tu mascota o la de un amigo que casi termina mal?", C: "¿Qué cosa peligrosa dejaste alguna vez al alcance de alguien que no lo entendía?" } },
+      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿A quién abrazas cuando lo ves?", B: "¿Cómo agradeces a alguien que te ayudó mucho?", C: "¿Qué distingue un agradecimiento sincero de uno de cortesía?" } },
     },
   },
 
@@ -4399,12 +4988,193 @@ const encounters = [
           },
         },
       },
+      "cuchillo-inicio": {
+        who: "german", mood: "scared",
+        line: {
+          A: "Germán ve tu cuchillo bajo la lluvia. Retrocede, pegado a la farola. «Eh, eh. Tranquilo. Estoy mojado, no tengo nada. ¿Qué haces con eso?»",
+          B: "Germán ve el cuchillo bajo la lluvia y retrocede hasta pegarse a la farola. «Eh, tranquilo. Estoy empapado, no tengo nada de valor. ¿Qué haces con eso?»",
+          C: "Germán ve el cuchillo bajo la lluvia y retrocede hasta la farola. «Tranquilo, amigo. Estoy empapado y sin un peso. ¿Qué pretendes con eso a estas horas?»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón. Lo guardo. Es para cortar una rama.", B: "Perdona, lo guardo ahora. Es para cortar una rama de paraguas.", C: "Perdona, lo guardo enseguida. Pensaba cortar una rama para improvisar un paraguas." },
+            reply: { A: "Germán se ríe, nervioso. «¿Un paraguas de rama? Guárdalo y ven debajo del puente.»", B: "Germán se ríe, nervioso. «¿Un paraguas de ramas? Guarda eso y ven debajo del puente.»", C: "Germán se ríe, nervioso. «¿Un paraguas de ramas? Guárdalo y vente conmigo bajo el puente.»" },
+            mood: "worried", next: "cuchillo-puente",
+          },
+          {
+            id: "policia",
+            say: { A: "Si quieres llamar a la policía, adelante.", B: "Si quieres llamar a la policía, hazlo. Yo espero.", C: "Si prefieres llamar a la policía, adelante. Aquí espero." },
+            reply: { A: "Germán llama. La lluvia moja el celular. Llega una patrulla.", B: "Germán llama bajo la lluvia, con el celular empapado. Llega una patrulla.", C: "Germán llama, protegiendo el celular de la lluvia. Una patrulla llega con las luces encendidas." },
+            mood: "worried", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-puente": {
+        who: "german", mood: "worried",
+        line: {
+          A: "Bajo el puente no llueve. Germán te mira. «Me diste un susto de muerte. ¿Siempre sacas el cuchillo cuando llueve?»",
+          B: "Bajo el puente no llueve. Germán te mira de reojo. «Me diste un susto de muerte. ¿Siempre sacas el cuchillo cuando llueve?»",
+          C: "Bajo el puente no llueve. Germán te observa con desconfianza. «Me diste un susto de muerte. ¿Es costumbre tuya sacar el cuchillo cuando llueve?»",
+        },
+        options: [
+          {
+            id: "broma",
+            say: { A: "Solo cuando hay lluvia y un desconocido.", B: "Solo cuando llueve y hay un desconocido mojado.", C: "Solo cuando llueve y aparece un desconocido empapado. Es mi rutina." },
+            reply: { A: "Germán se ríe. «Pues ya somos conocidos.» La lluvia sigue. Esperan juntos.", B: "Germán se ríe. «Pues entonces ya somos conocidos.» La lluvia sigue y esperan juntos.", C: "Germán se ríe. «Entonces ya no soy un desconocido.» La lluvia sigue y esperan juntos, en tregua." },
+            mood: "laugh", end: "puente",
+          },
+          {
+            id: "lluvia",
+            say: { A: "Perdón de nuevo. ¿Te gusta la lluvia?", B: "Perdón otra vez. ¿Te gusta la lluvia, al menos?", C: "Disculpa de nuevo. ¿Te gusta la lluvia, al menos?" },
+            reply: { A: "Germán mira el agua. «En mi pueblo todos salen a mirarla. Aquí, con cuchillos.» Sonríe.", B: "Germán mira el agua caer. «En mi pueblo todos salen a mirarla. Aquí, con cuchillos.» Sonríe a medias.", C: "Germán mira la lluvia. «En mi pueblo todos salen a mirarla. Aquí, con cuchillos.» Sonríe a medias, ya sin miedo." },
+            mood: "smile", end: "charla",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "german", mood: "terror",
+        line: {
+          A: "Germán ve tu pistola y levanta las manos. «¡No! ¡Nada! No tengo nada. Estoy mojado y ya está.» La lluvia le cae por la cara.",
+          B: "Germán ve la pistola y levanta las manos. «¡No, nada! No tengo nada, estoy empapado y ya está.» La lluvia le corre por la cara.",
+          C: "Germán ve la pistola y levanta las manos de golpe. «¡Nada! No tengo nada. Estoy empapado, eso es todo.» La lluvia le resbala por la cara.",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Perdón. Ya la guardo. No quiero nada.", B: "Perdona, ya la guardo. No quiero nada de ti.", C: "Perdona, la guardo ahora mismo. No quiero absolutamente nada." },
+            reply: { A: "Germán baja las manos, pálido. «Casi me desmayo. ¿Por qué llevas eso?»", B: "Germán baja las manos, pálido. «Casi me desmayo. ¿Por qué llevas eso con esta lluvia?»", C: "Germán baja las manos, pálido. «Casi me desmayo. ¿Y por qué llevas eso con esta lluvia?»" },
+            mood: "scared", next: "pistola-susto",
+          },
+          {
+            id: "paraguas",
+            say: { A: "Dame tu paraguas. Ahora.", B: "Dame el paraguas. Rápido.", C: "Dame el paraguas y no hagas preguntas." },
+            reply: { A: "Germán no tiene paraguas. Corre bajo la lluvia, sin mirar atrás. Llama a la policía.", B: "Germán no tiene paraguas, pero corre bajo la lluvia sin mirar atrás. Más tarde llama a la policía.", C: "Germán no tiene paraguas, así que huye bajo la lluvia sin mirar atrás. Esa misma noche llama a la policía." },
+            mood: "terror", end: "pistola-corre",
+          },
+        ],
+      },
+      "pistola-susto": {
+        who: "german", mood: "scared",
+        line: {
+          A: "Germán respira rápido. «Me asustaste. Hoy me dijeron que no llovía… y ahora esto. ¿Qué buscas?»",
+          B: "Germán respira rápido. «Me diste un susto horrible. Hoy dijeron que no llovía, y mira lo que pasa. ¿Qué buscas?»",
+          C: "Germán respira agitado. «Me has dado un susto enorme. Hoy prometieron que no llovería, y ahora esto. ¿Qué buscas, exactamente?»",
+        },
+        options: [
+          {
+            id: "paraguas",
+            say: { A: "Nada. Quería refugio. Bajo el puente.", B: "Nada. Quería refugiarme de la lluvia. Bajo el puente.", C: "Nada, de verdad. Quería resguardarme de la lluvia bajo el puente." },
+            reply: { A: "Germán señala el puente. «Ven. Pero la pistola, bien guardada.» Corren bajo la lluvia.", B: "Germán señala el puente. «Ven, pero con la pistola bien guardada.» Corren juntos bajo la lluvia.", C: "Germán señala el puente. «Vamos, pero con la pistola bien guardada.» Corren juntos bajo la lluvia." },
+            mood: "worried", end: "puente",
+          },
+          {
+            id: "irse",
+            say: { A: "Perdón. Me voy.", B: "Perdona. Me voy.", C: "Perdóname. Me voy." },
+            reply: { A: "Germán llama a la policía. La lluvia apaga el celular. Se queda mojado y solo.", B: "Germán llama a la policía. La lluvia empapa el celular y se queda mojado y solo.", C: "Germán intenta llamar a la policía, pero la lluvia empapa el celular. Se queda solo y mojado." },
+            mood: "worried", end: "pistola-corre",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "german", mood: "surprised",
+        line: {
+          A: "Germán ve tu granada y suelta una carcajada. «¡Ja! ¿Una granada? ¿Para qué? ¿Para secar la lluvia?» Se acerca, curioso.",
+          B: "Germán ve la granada y suelta una carcajada. «¡Ja! ¿Una granada con esta lluvia? ¿Qué piensas hacer, secar el cielo?» Se acerca, curioso.",
+          C: "Germán ve la granada y estalla en carcajadas. «¿Una granada? ¿Con esta lluvia? ¿Piensas secar el cielo a explosiones?» Se acerca, curioso.",
+        },
+        options: [
+          {
+            id: "verdad",
+            say: { A: "Es de verdad. No te acerques.", B: "Es de verdad. No te acerques tanto.", C: "Es auténtica, y te pido que no te acerques tanto." },
+            reply: { A: "Germán se detiene. Se le va la sonrisa. «¿De verdad? ¡Todos fuera!» Corre bajo la lluvia gritando.", B: "Germán se detiene en seco. Se le borra la sonrisa. «¿De verdad? ¡Todos fuera!» Corre bajo la lluvia gritando.", C: "Germán se queda helado. La sonrisa le desaparece. «¿Auténtica? ¡Todos fuera!» Sale corriendo bajo la lluvia, gritando." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+          {
+            id: "broma",
+            say: { A: "Es una broma. Es un llavero.", B: "Es una broma, un llavero de mal gusto.", C: "Es una broma: un llavero de pésimo gusto." },
+            reply: { A: "Germán la toma, ríe. «Qué gracioso.» La lanza al canal sin pensar. ¡Plof!", B: "Germán la toma, se ríe y la lanza al canal sin pensar. ¡Plof!", C: "Germán la toma, la examina con una risa y la lanza al canal sin pensarlo. ¡Plof!" },
+            mood: "laugh", next: "granada-plof",
+          },
+        ],
+      },
+      "granada-plof": {
+        who: "german", mood: "laugh",
+        line: {
+          A: "Nada explota. Germán y tú miran el agua. Un pato se acerca. Germán dice: «Esa era la mejor broma que me hicieron en años.»",
+          B: "Nada explota. Germán y tú miran el agua. Un pato se acerca a olerla. Germán dice: «Es la mejor broma que me han hecho en años.»",
+          C: "Nada explota. Germán y tú miran el agua y un pato se acerca a husmear. Germán sentencia: «Esa es, con diferencia, la mejor broma que me han hecho en años.»",
+        },
+        options: [
+          {
+            id: "bailar",
+            say: { A: "Celebremos. Bailamos bajo la lluvia.", B: "Para celebrarlo, bailemos bajo la lluvia.", C: "Para celebrar el estallido que no fue, bailemos bajo la lluvia." },
+            reply: { A: "Germán se ríe y baila bajo la lluvia. Tú también. La gente mira y sonríe.", B: "Germán se ríe y empieza a bailar bajo la lluvia. Tú también. La gente del paseo mira y sonríe.", C: "Germán se echa a reír y baila bajo la lluvia. Tú también. La gente del paseo mira y sonríe." },
+            mood: "laugh", end: "baila",
+          },
+          {
+            id: "puente",
+            say: { A: "Mejor vamos bajo el puente. Hay frío.", B: "Mejor vamos bajo el puente, que hace frío.", C: "Mejor nos refugiamos bajo el puente, que ya hace frío." },
+            reply: { A: "Germán asiente, empapado. Esperan juntos hasta que para la lluvia.", B: "Germán asiente, empapado. Esperan juntos bajo el puente hasta que para la lluvia.", C: "Germán asiente, calado hasta los huesos. Esperan juntos bajo el puente hasta que escampa." },
+            mood: "smile", end: "puente",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "german", mood: "love",
+        line: {
+          A: "El corazón llega a Germán. Deja de temblar de frío. Sonríe. Hay corazones bajo la lluvia. «Qué raro. Ya no me importa estar mojado. ¿Bailamos?»",
+          B: "El corazón alcanza a Germán. Deja de temblar de frío y sonríe, con corazones flotando bajo la lluvia. «Qué raro, ya no me importa estar mojado. ¿Bailamos?»",
+          C: "El corazón envuelve a Germán. Deja de tiritar y sonríe, con corazones suspendidos bajo la lluvia. «Qué extraño: estar empapado ya no me molesta. ¿Bailamos?»",
+        },
+        options: [
+          {
+            id: "bailar",
+            say: { A: "Sí. Bailamos bajo la lluvia.", B: "Claro que sí. Bailemos bajo la lluvia.", C: "Con muchísimo gusto. Bailemos bajo esta lluvia." },
+            reply: { A: "Germán te toma de las manos. Bailan bajo la lluvia. Los corazones giran.", B: "Germán te toma de las manos y bailan bajo la lluvia mientras los corazones giran.", C: "Germán te toma de las manos. Bailan bajo la lluvia, y los corazones giran a su alrededor como luciérnagas." },
+            mood: "love", end: "baila",
+          },
+          {
+            id: "abrazo",
+            say: { A: "Mejor un abrazo. Te calienta.", B: "Mejor un abrazo, que te calienta.", C: "Mejor un abrazo: calienta más que cualquier baile." },
+            reply: { A: "Germán te abraza. Los corazones brillan. La lluvia sigue, pero ya no hace frío.", B: "Germán te abraza fuerte. Los corazones brillan y la lluvia sigue, pero ya no hace frío.", C: "Germán te abraza con fuerza. Los corazones brillan, la lluvia sigue, y el frío desaparece de golpe." },
+            mood: "love", next: "corazon-calor",
+          },
+        ],
+      },
+      "corazon-calor": {
+        who: "german", mood: "smitten",
+        line: {
+          A: "Germán se aparta, rojo. «Perdona. Me siento… muy bien. Es la lluvia. O tú. ¿Quieres un café caliente?»",
+          B: "Germán se aparta, sonrojado. «Perdona, me siento muy bien. Será la lluvia, o serás tú. ¿Quieres un café caliente?»",
+          C: "Germán se separa, sonrojado. «Perdona. Me siento de maravilla; será la lluvia o será por ti. ¿Te invito a un café caliente?»",
+        },
+        options: [
+          {
+            id: "cafe",
+            say: { A: "Sí. Un café caliente.", B: "Sí, un café caliente suena perfecto.", C: "Sí, un café caliente suena perfecto después de esto." },
+            reply: { A: "Germán te toma del brazo. Corren a la cafetería. Los corazones los siguen.", B: "Germán te toma del brazo y corren a la cafetería más cercana. Los corazones los siguen bajo la lluvia.", C: "Germán te toma del brazo y corren hacia la cafetería. Los corazones los persiguen, empapándose igual." },
+            mood: "love", end: "corazon-cafe",
+          },
+          {
+            id: "beso",
+            say: { A: "Primero, un beso en la mejilla.", B: "Primero, un beso en la mejilla, si quieres.", C: "Primero, un beso en la mejilla, si me lo permites." },
+            reply: { A: "Germán te besa en la mejilla. Los corazones suben. La lluvia deja de caer un momento.", B: "Germán te besa en la mejilla y los corazones suben al cielo. La lluvia parece detenerse un instante.", C: "Germán te besa en la mejilla. Los corazones ascienden y, por un instante, la lluvia parece detenerse." },
+            mood: "love", end: "corazon-beso",
+          },
+        ],
+      },
     },
     ends: {
       puente: { text: { A: "Esperas con Germán debajo del puente. Hablan hasta que para la lluvia.", B: "Esperas con Germán bajo el puente, charlando, hasta que la lluvia se calma.", C: "Bajo el puente, Germán y tú esperan a que escampe. Cuando por fin para, ninguno de los dos tiene prisa." }, change: "se-va", recap: "Te refugiaste de la lluvia con Germán bajo el puente." },
       charla: { text: { A: "Germán y tú miran la lluvia juntos. Él está feliz.", B: "Germán y tú miran la lluvia en silencio, contentos. Ya no importa estar mojado.", C: "Germán y tú miran caer la lluvia sobre el canal. Mojados, pero extrañamente en paz." }, change: "sonrie", recap: "Hablaste de la lluvia con Germán." },
       corre: { text: { A: "Germán corre bajo la lluvia. Se ríe.", B: "Germán se aleja corriendo bajo la lluvia, riéndose a carcajadas.", C: "Germán desaparece bajo el aguacero, riéndose como si fuera el primer día de lluvia del mundo." }, change: "corre", recap: "Germán se fue corriendo bajo la lluvia." },
       baila: { text: { A: "Germán baila bajo la lluvia. La gente lo mira y sonríe.", B: "Germán baila bajo la lluvia junto al canal. Desde las ventanas, la gente se asoma y sonríe.", C: "Germán baila bajo la lluvia, empapado y feliz. Desde el barco de las plantas, alguien aplaude." }, change: "baila", recap: "Hiciste bailar a Germán bajo la lluvia." },
+      "cuchillo-policia": { text: { A: "Llega una patrulla. Explicas el cuchillo bajo la lluvia. Germán sonríe, mojado, sin entender.", B: "Llega una patrulla. Explicas el cuchillo bajo la lluvia mientras Germán, empapado, observa sin entender nada.", C: "Llega una patrulla. Explicas el cuchillo bajo la lluvia mientras Germán, calado, te mira con cara de no entender nada." }, change: "policia", recap: "Germán llamó a la policía por tu cuchillo." },
+      "pistola-corre": { text: { A: "Germán desaparece bajo la lluvia. Tú te quedas con la pistola y el frío. Se oyen sirenas.", B: "Germán desaparece bajo la lluvia. Te quedas con la pistola y el frío. A lo lejos, sirenas.", C: "Germán se pierde bajo la lluvia. Te quedas con la pistola, el frío y una sirena que se acerca." }, change: "huye", recap: "Germán huyó de tu pistola bajo la lluvia." },
+      "granada-evacuacion": { text: { A: "Germán corre gritando. La gente huye. Llega la policía. Un helicóptero vuela sobre el canal bajo la lluvia.", B: "Germán corre gritando. La gente del paseo huye. Llega la policía y un helicóptero sobrevuela el canal bajo la lluvia.", C: "Germán corre gritando bajo la lluvia. El paseo huye, llega la policía y un helicóptero barre el canal con su foco." }, change: "helicoptero", recap: "Tu granada evacuó el paseo bajo la lluvia." },
+      "corazon-cafe": { text: { A: "Germán y tú toman un café caliente. Hay corazones en la ventana. La lluvia sigue. No importa.", B: "Germán y tú toman un café caliente junto a la ventana, que se llena de corazones. La lluvia sigue, pero ya no importa.", C: "Germán y tú toman un café humeante; los corazones empañan la ventana. La lluvia sigue, y ninguno de los dos se acuerda de ella." }, change: "sonrie", recap: "Germán te invitó a un café caliente después de la lluvia." },
+      "corazon-beso": { text: { A: "Germán te besa la mejilla. Los corazones suben. La lluvia para un momento. Después sigue.", B: "Germán te besa la mejilla y los corazones suben. La lluvia se detiene un momento y luego sigue.", C: "Germán te besa la mejilla; los corazones ascienden y la lluvia se detiene un instante, antes de continuar." }, change: "beso", recap: "Germán te dio un beso bajo la lluvia." },
     },
     speak: {
       A1: "¿Qué haces cuando llueve?",
@@ -4413,6 +5183,12 @@ const encounters = [
       B2: "¿Qué echarías de menos del clima de tu ciudad si vivieras en otro lugar?",
       C1: "¿En qué medida crees que el clima de un lugar moldea el carácter de su gente?",
       C2: "¿Por qué crees que algunas incomodidades compartidas generan una complicidad inmediata entre desconocidos?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando llueve y estás solo en la calle?", B: "¿Cuándo te asustó alguien por un malentendido?", C: "¿Cómo se desactiva un malentendido que empieza con miedo?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Obedeces cuando alguien te grita?", B: "¿Qué haces cuando alguien te exige algo con miedo?", C: "¿Qué se pierde cuando la obediencia nace del miedo?" } },
+      granada: { start: "granada-inicio", fx: "risa", speak: { A: "¿Cuál fue tu broma más grande?", B: "¿Qué broma pesada hiciste o te hicieron?", C: "¿Qué límite tiene el humor frente a lo peligroso?" } },
+      corazon: { start: "corazon-inicio", fx: "corazon", speak: { A: "¿Bailas bajo la lluvia?", B: "¿Qué hace que un momento incómodo se vuelva un recuerdo agradable?", C: "¿Qué te enseñan los gestos espontáneos sobre la alegría compartida?" } },
     },
   },
 ];

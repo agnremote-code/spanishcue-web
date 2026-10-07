@@ -12,7 +12,7 @@ const levels = await import('../app/noche-abierta/levels.mjs');
 const ITEMS = ['lapiz', 'libro', 'gas', 'granada', 'pistola', 'cuchillo', 'corazon'];
 const MOODS = new Set(['neutral', 'smile', 'love', 'sad', 'scared', 'angry', 'surprised', 'worried', 'pain', 'tipsy', 'sleepy', 'smitten', 'laugh', 'terror', 'furious']);
 const CHANGES = new Set(['sonrie', 'se-va', 'corre', 'ambulancia', 'policia', 'baila', 'sigue', 'llama', 'triste', 'enojado', 'luz', 'abraza', 'se-sienta', 'duerme', 'beso', 'huye', 'cae', 'pelea', 'helicoptero', 'manos-arriba']);
-const VOSEO = /\b(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|mirá|escuchá|vení|decime|contame|andá|fijate|sentate|tomá|dale|che|boludo)\b/i;
+const VOSEO = /(?<![\p{L}])(vos|sos|tenés|podés|querés|sabés|pensás|creés|preferís|mirá|escuchá|vení|decime|contame|andá|fijate|sentate|tomá|dale|che|boludo)(?![\p{L}])/iu;
 const castSizes = Object.fromEntries(street.ENCOUNTERS.map(item => [item.id, item.cast.length]));
 const boxes = world.colliders(castSizes);
 const solids = boxes.filter(box => !box.npc);
@@ -342,6 +342,7 @@ test('the object changes the whole scene, not one line: every escena opens diffe
     for (const item of ITEMS) {
       if (!variants[item]) continue;
       let state = street.chooseItem(street.emptyStreet(), item);
+      if (encounter.requires) state = { ...state, flags: [...state.flags, encounter.requires] };
       state = street.openEncounter(state, encounter.id);
       const view = street.streetView(state, 'A2');
       assert.equal(view.variant, item);

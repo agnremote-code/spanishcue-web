@@ -2482,3 +2482,1135 @@ const encounters = [
       corazon: { start: "corazon-inicio", fx: "calma", speak: { A: "¿Qué cocina tu madre?", B: "¿Qué recuerdo de tu familia aparece con un olor o un sabor?", C: "¿Cómo cambia nuestra idea de la justicia cuando recordamos de dónde venimos?" } },
     },
   },
+
+  // ───────────────────────────── ESCENA 5 · COSTA ─────────────────────────────
+  {
+    id: "costa-discusion",
+    kind: "escena",
+    district: "costa",
+    title: "Junto al canal, a gritos",
+    verb: "SEPARAR",
+    goal: "Intervenir en una discusión que se descontrola, hablar con firmeza, calmar, preguntar cómo está alguien y decidir si llamas a la policía.",
+    cast: [
+      {
+        id: "karina", name: "Karina", role: "Mujer a la que agarran del brazo",
+        age: "adult", body: "f", build: "slim", height: 1.67,
+        hair: "long", hairColor: "#1c140e", skin: "#c99064",
+        top: "dress", topColor: "#a8442f", bottom: "skirt", bottomColor: "#a8442f",
+        extras: ["phone"], pose: "scream", props: [],
+      },
+      {
+        id: "mauro", name: "Mauro", role: "Su pareja, fuera de sí",
+        age: "adult", body: "m", build: "athletic", height: 1.82,
+        hair: "short", hairColor: "#2a1a12", skin: "#d9a77c",
+        top: "jacket", topColor: "#26303a", bottom: "jeans", bottomColor: "#2c3a55",
+        extras: [], pose: "fight", props: [],
+      },
+    ],
+    start: "inicio",
+    nodes: {
+      inicio: {
+        who: "karina", mood: "terror",
+        line: {
+          A: "Junto al canal, un hombre agarra a una mujer del brazo. Ella grita: «¡Suéltame! ¡Me haces daño!» Él grita más fuerte. Te ven.",
+          B: "Junto al canal, un hombre sujeta a una mujer del brazo mientras los dos se gritan. Ella forcejea: «¡Suéltame! ¡Me estás haciendo daño!» Los dos te ven.",
+          C: "Junto al canal, un hombre aferra el brazo de una mujer y los gritos de ambos espantan hasta a las palomas. Ella tira: «¡Suéltame, me estás lastimando!» Los dos reparan en ti.",
+        },
+        options: [
+          {
+            id: "separar",
+            say: { A: "¡Oye! ¡Suéltala ahora mismo!", B: "¡Eh, tú! ¡Suéltala ahora mismo!", C: "¡Suéltala! Ahora mismo, y sin discutir." },
+            reply: { A: "Mauro la suelta, pero te mira con rabia. «¡Es mi novia! ¡No te metas!»", B: "Mauro la suelta de golpe y se vuelve hacia ti. «¡Es mi novia! ¡Esto no es asunto tuyo!»", C: "Mauro la suelta y gira hacia ti con los puños cerrados. «Es mi novia y esto es privado. Largo.»" },
+            mood: "furious", next: "mauro",
+          },
+          {
+            id: "ella",
+            say: { A: "¿Estás bien? ¿Quieres que llame a la policía?", B: "¿Estás bien? ¿Quieres que llame a la policía?", C: "¿Estás bien? Dime si quieres que llame a la policía y lo hago ahora." },
+            reply: { A: "Karina llora. «No sé… Me siguió. Me leyó el celular. Tengo miedo.»", B: "Karina se limpia la cara. «No sé… Me siguió hasta aquí y me quitó el celular. Tengo miedo.»", C: "Karina se limpia las lágrimas con el dorso de la mano. «No sé. Me siguió hasta aquí, me quitó el celular… Tengo miedo, la verdad.»" },
+            mood: "scared", next: "karina",
+          },
+          {
+            id: "calma",
+            say: { A: "Tranquilo. Respira. Suéltala y hablamos.", B: "Tranquilo, respira hondo. Suéltala y hablamos los tres.", C: "Respira. Suéltala y hablamos como adultos; así no se arregla nada." },
+            reply: { A: "Mauro duda. Suelta a Karina. «Ella empezó.»", B: "Mauro duda, aprieta la mandíbula y la suelta. «Ella empezó. Pregúntale a ella.»", C: "Mauro duda, resopla y la suelta. «Ella empezó todo, para que lo sepas.»" },
+            mood: "angry", next: "mauro",
+          },
+        ],
+      },
+      mauro: {
+        who: "mauro", mood: "furious",
+        line: {
+          A: "Mauro se acerca a ti. «Ella me mintió. Tiene otro. ¡Lo vi en el celular!» Karina: «¡Es mi hermano!»",
+          B: "Mauro se te acerca con la cara roja. «Me mintió. Tiene a otro, lo vi en su celular.» Karina grita desde atrás: «¡Es mi hermano, imbécil!»",
+          C: "Mauro avanza hacia ti con la vena del cuello hinchada. «Me mintió: tiene a otro, lo leí en su celular.» Karina, desde atrás: «¡Era mi hermano, imbécil!»",
+        },
+        options: [
+          {
+            id: "razonar",
+            say: { A: "Aunque mintiera, no puedes agarrarla así.", B: "Aunque te hubiera mentido, no puedes agarrarla así. Nadie puede.", C: "Aunque tuvieras razón, que no la tienes, nadie agarra así a nadie. Se acabó." },
+            reply: { A: "Mauro te empuja con las dos manos. «¡Tú qué sabes!»", B: "Mauro te empuja con las dos manos y retrocedes un paso. «¡Tú qué sabes de lo mío!»", C: "Mauro te empuja con las dos manos, más fuerte de lo que esperabas. «¡Tú qué vas a saber!»" },
+            mood: "furious", end: "pelea",
+          },
+          {
+            id: "escuchar",
+            say: { A: "Karina, cuéntame tú. ¿Qué pasó?", B: "Karina, cuéntame tu versión. ¿Qué pasó de verdad?", C: "Karina, ahora tú: cuéntame qué pasó, sin gritos, y empezando por el principio." },
+            reply: { A: "Karina respira. «Mi hermano me escribió. Él me quitó el celular.»", B: "Karina respira hondo. «Mi hermano me escribió para verme. Mauro me quitó el celular y me siguió hasta aquí.»", C: "Karina respira, temblando. «Mi hermano me escribió para verme esta noche. Mauro me arrancó el celular y me persiguió hasta el canal.»" },
+            mood: "worried", next: "karina",
+          },
+          {
+            id: "policia",
+            say: { A: "Voy a llamar a la policía. Quédense ahí.", B: "Voy a llamar a la policía. Los dos se quedan ahí.", C: "Llamo a la policía. Que lo expliquen ellos, que para eso están." },
+            reply: { A: "Mauro se pone pálido. «No hace falta.» Karina asiente: «Sí, llámala.»", B: "Mauro se pone pálido de golpe. «No, no hace falta.» Karina asiente: «Sí. Llámala.»", C: "Mauro cambia de color. «No hace falta nada de eso.» Karina, firme: «Hace falta, y mucha. Llámala.»" },
+            mood: "scared", end: "policia",
+          },
+        ],
+      },
+      karina: {
+        who: "karina", mood: "sad",
+        line: {
+          A: "Karina abraza su bolso. Mauro está a dos pasos, con los brazos cruzados. Ella te mira. «No sé qué hacer. Lo quiero. Pero hoy me asustó.»",
+          B: "Karina abraza su bolso. Mauro, a dos pasos, respira por la nariz. Ella te mira: «No sé qué hacer. Lo quiero, pero hoy me dio miedo de verdad.»",
+          C: "Karina aprieta el bolso contra el pecho. Mauro, a dos pasos, respira como un toro. Ella te mira: «No sé qué hacer. Lo quiero, y hoy me dio miedo; las dos cosas son ciertas.»",
+        },
+        options: [
+          {
+            id: "irse",
+            say: { A: "Vete a casa de una amiga. Yo me quedo con él.", B: "Vete a casa de una amiga esta noche. Yo me quedo con él un rato.", C: "Vete esta noche a casa de alguien de confianza. Yo me quedo con él hasta que se le pase." },
+            reply: { A: "Karina asiente y se va rápido. Mauro la mira alejarse. «Se acabó.»", B: "Karina asiente, recoge el celular que Mauro le devuelve y se va rápido. Él la mira alejarse: «Se acabó, ¿verdad?»", C: "Karina asiente, recupera su celular y se va sin mirar atrás. Mauro la sigue con los ojos: «Se acabó, ¿no?»" },
+            mood: "sad", end: "ella-se-va",
+          },
+          {
+            id: "denunciar",
+            say: { A: "Si te agarró así, puedes denunciarlo. Te acompaño.", B: "Si te agarró así, puedes denunciarlo. Te acompaño a la comisaría.", C: "Lo que hizo tiene nombre y se puede denunciar. Si quieres, te acompaño a la comisaría ahora mismo." },
+            reply: { A: "Karina mira a Mauro. Él baja la cabeza. «Perdón.» Ella: «Llama.»", B: "Karina mira a Mauro largo rato. Él baja la cabeza: «Perdón.» Ella, sin dudar: «Llama a la policía.»", C: "Karina mira a Mauro un buen rato. Él baja la cabeza: «Perdón.» Ella, con la voz firme: «Perdón no basta. Llama a la policía.»" },
+            mood: "neutral", end: "policia",
+          },
+          {
+            id: "hablar",
+            say: { A: "Hablen cinco minutos. Yo me quedo aquí.", B: "Hablen cinco minutos, sin gritar. Yo me quedo aquí cerca.", C: "Cinco minutos de conversación, sin gritos y con testigo. Yo me quedo aquí cerca, sin escuchar." },
+            reply: { A: "Hablan bajo. Karina llora. Mauro también. Se sientan en un banco.", B: "Hablan en voz baja junto al canal. Karina llora y Mauro también. Al final se sientan en un banco, separados por un metro.", C: "Hablan en voz baja junto al canal. Karina llora, Mauro también. Terminan sentados en un banco, separados por un metro de silencio." },
+            mood: "sad", end: "separan",
+          },
+        ],
+      },
+
+      // ── cuchillo: Mauro saca una navaja.
+      "cuchillo-inicio": {
+        who: "mauro", mood: "furious",
+        line: {
+          A: "Sacas el cuchillo. Mauro suelta a Karina y saca una navaja. Los dos se miran con las armas en alto. Karina grita: «¡No! ¡Basta!»",
+          B: "Sacas el cuchillo y Mauro suelta a Karina de golpe. Sin pensarlo, saca una navaja del bolsillo. Los dos se miran con las armas en alto. Karina grita: «¡No! ¡Basta ya!»",
+          C: "Sacas el cuchillo y Mauro suelta a Karina; en un segundo tiene una navaja en la mano. Dos filos frente a frente, el canal detrás. Karina grita: «¡Basta! ¡Los dos!»",
+        },
+        options: [
+          {
+            id: "bajar",
+            say: { A: "Baja eso. Yo bajo el mío. Calma.", B: "Baja la navaja y yo bajo el cuchillo. Calma.", C: "Bajamos las armas a la vez. Tú primero o yo, me da igual, pero ya." },
+            reply: { A: "Mauro duda. «Tú primero.» Karina se pone en medio.", B: "Mauro duda con la mandíbula tensa. «Tú primero.» Karina se mete en medio, con las manos abiertas.", C: "Mauro duda, tenso como una cuerda. «Tú primero.» Karina se interpone entre los dos con las manos abiertas." },
+            mood: "scared", next: "cuchillo-duelo",
+          },
+          {
+            id: "karina",
+            say: { A: "Karina, corre. Yo lo miro.", B: "Karina, vete corriendo. Yo no le quito los ojos de encima.", C: "Karina, vete ahora, corriendo. Yo me ocupo de que no te siga." },
+            reply: { A: "Karina corre. Mauro grita: «¡Vuelve!» y avanza hacia ti.", B: "Karina sale corriendo por el paseo. Mauro grita «¡Vuelve!» y avanza hacia ti con la navaja.", C: "Karina huye por el paseo. Mauro grita «¡Vuelve!» y se lanza hacia ti con la navaja por delante." },
+            mood: "furious", end: "cuchillo-policia",
+          },
+          {
+            id: "amenazar",
+            say: { A: "¡Suelta eso o te corto!", B: "¡Suelta eso o te hago un corte!", C: "¡Suelta esa navaja o hacemos esto por las malas!" },
+            reply: { A: "Mauro ríe sin gracia. «Hazlo.» Karina grita. Se acerca gente.", B: "Mauro ríe sin gracia. «Hazlo, a ver.» Karina grita y varias personas del paseo se acercan corriendo.", C: "Mauro ríe sin gracia. «Hazlo, valiente.» Karina grita y un grupo del paseo corre hacia ustedes, con celulares en alto." },
+            mood: "terror", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-duelo": {
+        who: "karina", mood: "terror",
+        line: {
+          A: "Karina está entre los dos filos. «¡Si se hieren, me voy y no vuelvo!» Mauro baja un poco la navaja. Esperan tu movimiento.",
+          B: "Karina, entre los dos filos, grita: «¡Si alguien se hiere, me voy para siempre!» Mauro baja un poco la navaja. Todos esperan tu movimiento.",
+          C: "Karina, plantada entre los dos filos, amenaza: «¡Si alguien sangra, desaparezco para siempre!» Mauro baja la navaja unos centímetros. Todos esperan tu movimiento.",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Está bien. Lo guardo. Mauro, tú también.", B: "Está bien, lo guardo. Mauro, haz lo mismo y hablamos.", C: "Lo guardo, Karina. Mauro, haz lo mismo y sigamos con palabras, que se nos dan mejor." },
+            reply: { A: "Mauro cierra la navaja. Karina llora. Nadie dice nada.", B: "Mauro cierra la navaja con un clic y la guarda. Karina llora de alivio. Nadie dice nada durante un rato largo.", C: "Mauro cierra la navaja con un clic seco. Karina llora de alivio. El silencio dura más que la pelea entera." },
+            mood: "worried", end: "cuchillo-calma",
+          },
+          {
+            id: "policia",
+            say: { A: "Ya llamé a la policía. Vienen.", B: "Ya he llamado a la policía. Llegan en dos minutos.", C: "Ya avisé a la policía; llegan en dos minutos. Decidan cómo quieren que los encuentren." },
+            reply: { A: "Mauro tira la navaja al canal. Karina lo abraza. Tú guardas el cuchillo.", B: "Mauro tira la navaja al agua del canal. Karina corre y lo abraza llorando. Tú guardas el cuchillo, temblando.", C: "Mauro lanza la navaja al canal sin pensarlo. Karina se cuelga de su cuello llorando. Tú guardas el cuchillo, con las rodillas flojas." },
+            mood: "scared", end: "cuchillo-calma",
+          },
+          {
+            id: "provocar",
+            say: { A: "Tú empezaste. Mereces un corte.", B: "Tú empezaste todo esto. Te mereces un corte.", C: "Tú empezaste, Mauro. Si alguien se merece un corte, ya sabes quién." },
+            reply: { A: "Mauro se lanza. Karina grita. Alguien llama a la policía.", B: "Mauro se lanza contra ti. Karina grita. Alguien del paseo, a lo lejos, llama a la policía.", C: "Mauro se lanza contra ti y Karina grita. A lo lejos, alguien del paseo ya está llamando a la policía." },
+            mood: "furious", end: "cuchillo-policia",
+          },
+        ],
+      },
+
+      // ── pistola: Mauro se arrodilla.
+      "pistola-inicio": {
+        who: "mauro", mood: "terror",
+        line: {
+          A: "Se ve tu pistola. Mauro suelta a Karina y levanta las manos. «No, por favor. Solo discutíamos.» Karina retrocede, con miedo de los dos.",
+          B: "Tu pistola asoma de la chaqueta. Mauro suelta a Karina como si quemara y levanta las manos. «No, por favor, solo discutíamos.» Karina retrocede, con miedo de los dos.",
+          C: "Tu pistola queda a la vista. Mauro suelta a Karina y alza las manos. «No hace falta nada de eso, solo discutíamos.» Karina retrocede un paso: ahora teme a los dos hombres.",
+        },
+        options: [
+          {
+            id: "suelo",
+            say: { A: "De rodillas. Las manos en la cabeza.", B: "De rodillas, las manos en la cabeza. Ahora.", C: "De rodillas y las manos en la nuca. No te lo repito." },
+            reply: { A: "Mauro se arrodilla. Llora. «Perdón, Karina. Perdón.» Ella no se acerca.", B: "Mauro se arrodilla en el suelo, llorando. «Perdón, Karina, perdón.» Ella no se acerca ni un paso.", C: "Mauro se arrodilla temblando y rompe a llorar. «Perdóname, Karina.» Ella no se mueve; mira tu chaqueta, no a él." },
+            mood: "terror", next: "pistola-rodillas",
+          },
+          {
+            id: "karina",
+            say: { A: "Karina, no tengas miedo. Estás a salvo.", B: "Karina, no tengas miedo. Estás a salvo, aunque parezca raro.", C: "Karina, estás a salvo, aunque con esta pistola cueste creerlo. Respira." },
+            reply: { A: "Karina te mira la chaqueta. «¿A salvo con una pistola?» Mauro no se mueve.", B: "Karina mira tu chaqueta y luego a ti. «¿A salvo, con eso? Perdona, no te creo.» Mauro sigue con las manos arriba.", C: "Karina mira la pistola y luego tus ojos. «¿A salvo, con eso en la mano? Perdona que no te crea.» Mauro, con las manos arriba, asiente a todo." },
+            mood: "scared", next: "pistola-rodillas",
+          },
+          {
+            id: "guardar",
+            say: { A: "La guardo. Mauro, vete y no vuelvas.", B: "La guardo. Mauro, vete de aquí y no vuelvas a acercarte a ella.", C: "Guardada. Mauro, desaparece y no vuelvas a acercarte a ella. Ni a llamarla." },
+            reply: { A: "Mauro corre hacia el puente. Karina te mira con miedo. «Gracias… creo.»", B: "Mauro sale corriendo hacia el puente sin mirar atrás. Karina te mira con miedo: «Gracias… creo.»", C: "Mauro huye hacia el puente sin mirar atrás. Karina te observa con recelo: «Gracias. Creo que es lo que corresponde decir.»" },
+            mood: "scared", end: "pistola-huye",
+          },
+        ],
+      },
+      "pistola-rodillas": {
+        who: "karina", mood: "scared",
+        line: {
+          A: "Mauro está de rodillas junto al canal. Karina murmura: «No quiero que lo maten. Solo quería que me soltara.»",
+          B: "Mauro sigue de rodillas junto al canal, llorando. Karina murmura: «No quiero que le pase nada. Solo quería que me soltara.»",
+          C: "Mauro sigue de rodillas junto al canal, deshecho. Karina murmura: «No quiero que le hagan daño. Solo quería que me soltara, nada más.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Está bien. La guardo. Mauro, levántate y vete.", B: "Está bien, la guardo. Mauro, levántate y vete a tu casa. Ahora.", C: "De acuerdo, la guardo. Mauro, levántate, vete a tu casa y piensa en lo que has hecho." },
+            reply: { A: "Mauro se levanta y se va sin mirarla. Karina se sienta en un banco, temblando.", B: "Mauro se levanta y se va sin atreverse a mirarla. Karina se deja caer en un banco, temblando.", C: "Mauro se levanta como puede y se aleja sin mirarla. Karina se desploma en un banco, temblando de pies a cabeza." },
+            mood: "worried", end: "pistola-calma",
+          },
+          {
+            id: "policia",
+            say: { A: "Llamo a la policía. Ellos deciden.", B: "Llamo a la policía. Que lo decidan ellos.", C: "Llamo a la policía; esto lo deciden ellos, no tú, no yo y menos esta pistola." },
+            reply: { A: "Karina asiente. Llega una patrulla y ve la pistola. Te apuntan.", B: "Karina asiente. La patrulla llega rápido y lo primero que ve es la pistola. Te apuntan, y levantas las manos.", C: "Karina asiente en silencio. La patrulla llega y, de todo el cuadro, solo ve la pistola. Te apuntan y levantas las manos." },
+            mood: "scared", end: "pistola-policia",
+          },
+          {
+            id: "disparar",
+            say: { A: "¡No te muevas! ¡O disparo!", B: "¡Ni un movimiento o disparo!", C: "¡Ni un solo movimiento, o esto se pone peor!" },
+            reply: { A: "Karina grita. Alguien llama a la policía. Mauro llora más fuerte.", B: "Karina grita desesperada. Alguien del paseo llama a la policía. Mauro llora más fuerte todavía.", C: "Karina grita fuera de sí. Alguien del paseo, escondido tras un banco, llama a la policía. Mauro sigue llorando." },
+            mood: "terror", end: "pistola-policia",
+          },
+        ],
+      },
+
+      // ── granada: los dos se unen contra ti.
+      "granada-inicio": {
+        who: "karina", mood: "terror",
+        line: {
+          A: "Sacas la granada. Mauro y Karina dejan de pelear al instante. Se abrazan. «¡Ni se te ocurra!», gritan los dos.",
+          B: "Sacas la granada. Mauro y Karina dejan de pelear al instante, se abrazan y gritan a coro: «¡Ni se te ocurra!»",
+          C: "Sacas la granada y la pelea se evapora: Mauro y Karina se abrazan como náufragos y gritan a coro: «¡Ni se te ocurra!»",
+        },
+        options: [
+          {
+            id: "falsa",
+            say: { A: "Es falsa. Era para separarlos.", B: "Es falsa, tranquilos. Solo quería separarlos.", C: "Es de juguete. Quería separarlos y, miren, funcionó." },
+            reply: { A: "Los dos se miran. Karina se ríe. Mauro también. «¡Estás loco!»", B: "Los dos se miran y, de pronto, Karina empieza a reírse. Mauro la sigue. «¡Estás loco, de verdad!»", C: "Los dos se miran, atónitos, y Karina estalla en risa. Mauro la acompaña. «¡Estás loco!», dicen a la vez." },
+            mood: "laugh", next: "granada-juntos",
+          },
+          {
+            id: "amenaza",
+            say: { A: "Si pelean otra vez, la tiro al canal.", B: "Si vuelven a pelear, la tiro al canal. Y a ustedes detrás.", C: "Si vuelven a pelear, la tiro. Al canal, y ustedes pueden ir detrás si quieren." },
+            reply: { A: "Gritan, corren, se separan. Alguien en el paseo llama a la policía.", B: "Los dos gritan, corren en direcciones opuestas y alguien del paseo llama a la policía en voz alta.", C: "Los dos huyen gritando, cada uno por su lado. En el paseo, alguien ya marca el número de la policía." },
+            mood: "terror", end: "granada-huye",
+          },
+          {
+            id: "huir",
+            say: { A: "¡Perdón! ¡Me voy!", B: "¡Perdón, perdón! ¡Me voy!", C: "¡Perdón! ¡Me retiro con la granada y mi dignidad!" },
+            reply: { A: "Corres. Atrás los dos gritan: «¡Un loco con una bomba!»", B: "Corres por el paseo. Detrás, los dos gritan: «¡Un loco con una bomba!»", C: "Corres por el paseo. Detrás, la pareja reconciliada grita a coro: «¡Un loco con una bomba!»" },
+            mood: "terror", end: "granada-huye",
+          },
+        ],
+      },
+      "granada-juntos": {
+        who: "mauro", mood: "laugh",
+        line: {
+          A: "Mauro y Karina siguen abrazados y riendo. «Tuvimos una pelea tonta», dice él. «Y un loco nos salvó.» Alguien grita: «¡Policía!»",
+          B: "Mauro y Karina siguen abrazados, riendo con nervios. «Fue una pelea tonta», dice él. «Y un loco con una granada nos reconcilió.» Desde el paseo alguien grita: «¡Policía, rápido!»",
+          C: "Mauro y Karina siguen abrazados, riendo. «Una pelea tonta», admite él, «y un lunático con una granada nos reconcilió.» Desde el paseo, alguien grita: «¡Llamen a la policía!»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Esperamos a la policía y explicamos todo.", B: "Esperamos a la policía y explicamos todo, los tres juntos.", C: "Esperamos a la policía y lo explicamos entre los tres; la verdad suena menos grave." },
+            reply: { A: "Un helicóptero llega primero. Los tres levantan las manos.", B: "Un helicóptero llega primero y los ilumina. Los tres levantan las manos, sin saber muy bien por qué.", C: "Un helicóptero llega antes que nadie y los ilumina. Los tres levantan las manos, aunque nadie sepa de qué se les acusa." },
+            mood: "scared", end: "granada-helicoptero",
+          },
+          {
+            id: "huir",
+            say: { A: "Mejor nos vamos los tres. Rápido.", B: "Mejor nos vamos los tres antes de que lleguen. Rápido.", C: "Mejor desaparecemos los tres antes de que la historia se complique." },
+            reply: { A: "Corren por el paseo, riendo. Atrás suenan sirenas.", B: "Corren por el paseo agarrados de la mano, riendo. Detrás suenan las sirenas.", C: "Corren por el paseo, riendo como adolescentes. Detrás, las sirenas dibujan el mapa de la noche." },
+            mood: "laugh", end: "granada-risa",
+          },
+          {
+            id: "beso",
+            say: { A: "Y ahora bésense. Se lo ganaron.", B: "Y ahora bésense. Se lo han ganado después de este susto.", C: "Y ahora, un beso: se lo han ganado, y yo tengo que irme antes de que lleguen." },
+            reply: { A: "Se besan. Tú te vas. Nadie te sigue.", B: "Se besan largo, mientras tú te alejas por el paseo. Nadie te sigue.", C: "Se besan como en una película y tú te esfumas entre la gente. Nadie te sigue; todos miran el beso." },
+            mood: "love", end: "granada-risa",
+          },
+        ],
+      },
+
+      // ── gas: Karina te anima a rociarlo.
+      "gas-inicio": {
+        who: "karina", mood: "angry",
+        line: {
+          A: "Sacas el gas pimienta. Mauro suelta a Karina. Ella grita: «¡Rocíalo! ¡Se lo merece!» Él: «¡Estás loca!»",
+          B: "Sacas el gas pimienta y Mauro suelta a Karina al instante. Ella grita: «¡Rocíalo, se lo merece!» Él: «¡Estás loca, Karina!»",
+          C: "Sacas el gas pimienta. Mauro suelta a Karina de golpe; ella, con los ojos encendidos: «¡Rocíalo, se lo ha ganado!» Él: «¡Estás loca!»",
+        },
+        options: [
+          {
+            id: "distancia",
+            say: { A: "Mauro, atrás. Dos pasos. Ahora.", B: "Mauro, da dos pasos atrás. Ahora mismo.", C: "Mauro, dos pasos atrás y las manos donde yo las vea." },
+            reply: { A: "Mauro retrocede. «Ya, ya. No hace falta.» Karina te mira, aliviada.", B: "Mauro retrocede con las manos abiertas. «Ya, ya, tranquilo.» Karina te mira, aliviada y temblando.", C: "Mauro retrocede con las manos abiertas. «Tranquilo, ya está.» Karina respira por primera vez en un minuto." },
+            mood: "scared", next: "gas-distancia",
+          },
+          {
+            id: "rociar",
+            say: { A: "¡Y no vuelvas a tocarla!", B: "¡Y no vuelvas a ponerle una mano encima!", C: "¡Y no vuelvas a ponerle una mano encima, nunca!" },
+            reply: { A: "Rocías a Mauro. Cae al suelo gritando. Karina se asusta de ti.", B: "Rocías a Mauro en la cara. Cae de rodillas gritando. Karina da un paso atrás, asustada de ti también.", C: "Rocías a Mauro en la cara y cae de rodillas, aullando. Karina retrocede: ya no sabe de quién tiene más miedo." },
+            mood: "furious", end: "gas-cae",
+          },
+          {
+            id: "guardar",
+            say: { A: "Karina, esto no es un juego. Lo guardo.", B: "Karina, esto no es un juego. Lo guardo y hablamos.", C: "Karina, esto no es un juego ni un castigo. Lo guardo y hablamos con calma." },
+            reply: { A: "Karina asiente con rabia. «Tienes razón. Pero tengo miedo.»", B: "Karina asiente, con los ojos llenos de rabia. «Tienes razón, pero tengo mucho miedo.»", C: "Karina asiente con rabia contenida. «Tienes razón. Y aun así, tengo miedo, y eso no se me quita.»" },
+            mood: "worried", next: "karina",
+          },
+        ],
+      },
+      "gas-distancia": {
+        who: "mauro", mood: "worried",
+        line: {
+          A: "Mauro, a dos pasos, habla sin acercarse. «Estoy mal. Se me fue la cabeza. Me voy.» Karina: «¿Y mañana?»",
+          B: "Mauro, a distancia, habla sin acercarse. «Estoy mal, se me fue la cabeza. Me voy.» Karina cruza los brazos: «¿Y mañana qué?»",
+          C: "Mauro, a distancia prudente, habla sin acercarse. «Me pasé, se me fue la cabeza. Me voy.» Karina cruza los brazos: «¿Y mañana, Mauro? ¿Mañana qué?»",
+        },
+        options: [
+          {
+            id: "irse",
+            say: { A: "Sí, vete. Karina, ¿quieres que te acompañe?", B: "Sí, vete a tu casa. Karina, ¿quieres que te acompañe?", C: "Sí, vete y respira. Karina, ¿quieres que te acompañe hasta tu casa?" },
+            reply: { A: "Mauro se va. Karina acepta. Caminan juntos hacia el puente.", B: "Mauro se va sin mirar atrás. Karina acepta tu ayuda y caminan juntos hacia el puente.", C: "Mauro se aleja sin volver la cabeza. Karina acepta y caminan juntos hacia el puente, sin hablar." },
+            mood: "worried", end: "gas-calma",
+          },
+          {
+            id: "policia",
+            say: { A: "Mejor llamo a la policía. Para estar seguros.", B: "Mejor llamo a la policía, para que quede constancia.", C: "Prefiero llamar a la policía, aunque solo sea para que quede constancia de esta noche." },
+            reply: { A: "Mauro suspira. «Haz lo que quieras.» Karina asiente. La patrulla llega.", B: "Mauro suspira. «Haz lo que quieras.» Karina asiente despacio. La patrulla llega a los pocos minutos.", C: "Mauro suspira, resignado. «Haz lo que quieras.» Karina asiente. La patrulla llega y escucha tres versiones y un gas pimienta." },
+            mood: "neutral", end: "gas-policia",
+          },
+          {
+            id: "razonable",
+            say: { A: "Llevar esto es razonable. Pero hoy no lo uso.", B: "Llevar esto es razonable en la calle, pero hoy no hizo falta.", C: "Llevar esto me parece razonable en una ciudad de noche; que hoy no haya hecho falta es un alivio." },
+            reply: { A: "Mauro asiente. «Tienes razón.» Karina se ríe un poco. Se acercan al banco.", B: "Mauro asiente, vencido. «Tienes razón, la verdad.» Karina se ríe un poco y los dos se acercan al banco.", C: "Mauro asiente, vencido. «Razón no te falta.» Karina se ríe un poco y los tres se acercan al banco, a distancia prudente." },
+            mood: "smile", end: "gas-calma",
+          },
+        ],
+      },
+
+      // ── lápiz: anotas, y le pasas a Karina un número.
+      "lapiz-inicio": {
+        who: "mauro", mood: "surprised",
+        line: {
+          A: "Sacas el lápiz y escribes algo rápido en un papel. Mauro suelta a Karina. «¿Qué escribes?» Karina te mira, desconcertada.",
+          B: "Sacas el lápiz y empiezas a escribir en un papel, sin dejar de mirarlos. Mauro suelta a Karina, descolocado. «¿Qué escribes? ¿Qué es eso?» Karina te mira, desconcertada.",
+          C: "Sacas el lápiz y empiezas a escribir con calma de notario. Mauro suelta a Karina, descolocado. «¿Qué escribes ahí?» Karina te mira sin entender nada.",
+        },
+        options: [
+          {
+            id: "testigo",
+            say: { A: "La hora, el lugar, lo que vi. Soy testigo.", B: "La hora, el lugar y lo que acabo de ver. Soy testigo.", C: "Hora, lugar y hechos. Un testigo que escribe es un testigo difícil de callar." },
+            reply: { A: "Mauro se pone nervioso. «Rompe eso.» Karina mira el papel.", B: "Mauro se pone nervioso. «Rompe eso ahora.» Karina, en cambio, mira el papel con atención.", C: "Mauro se pone visiblemente nervioso. «Rompe eso.» Karina, en cambio, se queda mirando el papel con interés." },
+            mood: "worried", next: "lapiz-nota",
+          },
+          {
+            id: "numero",
+            say: { A: "Karina, escribo aquí un número de ayuda. Tómalo.", B: "Karina, te escribo un número de ayuda. Guárdalo, por si lo necesitas.", C: "Karina, te apunto un teléfono de ayuda. Guárdalo; no tienes que usarlo hoy, pero que lo tengas." },
+            reply: { A: "Karina toma el papel. Mauro quiere quitárselo. Ella lo esconde.", B: "Karina toma el papel y lo esconde en el puño. Mauro intenta quitárselo; ella retrocede.", C: "Karina toma el papel y lo cierra en el puño. Mauro intenta arrebatárselo y ella se aparta, esta vez sin miedo." },
+            mood: "worried", next: "lapiz-nota",
+          },
+          {
+            id: "dibujar",
+            say: { A: "Dibujo un corazón. Ustedes, calma.", B: "Estoy dibujando un corazón. Respiren los dos, por favor.", C: "Dibujo un corazón torcido, para bajar la tensión. Respiren, que el arte no muerde." },
+            reply: { A: "Mauro mira el dibujo y se ríe sin querer. Karina, no. Sigue seria.", B: "Mauro mira el dibujo y se le escapa una risa corta. Karina no se ríe: sigue seria, mirándolo a él.", C: "Mauro mira el corazón torcido y se ríe a su pesar. Karina no: sigue seria, esperando lo que él diga." },
+            mood: "neutral", end: "lapiz-rompe",
+          },
+        ],
+      },
+      "lapiz-nota": {
+        who: "karina", mood: "worried",
+        line: {
+          A: "Karina guarda el papel en el bolso. «Gracias. Pero Mauro se enoja si me ve con eso.» Mauro, de lejos: «¿Qué te dio?»",
+          B: "Karina guarda el papel en el bolso. «Gracias. Pero si Mauro lo ve, se enoja.» Él, a cinco pasos: «¿Qué te dio ese?»",
+          C: "Karina esconde el papel en el bolso. «Gracias; pero si Mauro lo ve, se enciende.» Él, a cinco pasos: «¿Qué te ha dado ese tipo?»",
+        },
+        options: [
+          {
+            id: "decir",
+            say: { A: "Dile la verdad. Es un teléfono de ayuda.", B: "Dile la verdad: es un teléfono de ayuda, no un secreto.", C: "Dile la verdad: es un teléfono de ayuda. Que sepa que existe y que lo conoces." },
+            reply: { A: "Karina se lo dice. Mauro se calla. Se sienta en el suelo.", B: "Karina se lo dice mirándolo a los ojos. Mauro se calla de golpe y se sienta en el suelo, con las manos en la cabeza.", C: "Karina se lo dice sin apartar la mirada. Mauro se queda mudo y se deja caer en el suelo, con la cabeza entre las manos." },
+            mood: "sad", end: "lapiz-ayuda",
+          },
+          {
+            id: "irse",
+            say: { A: "Vete ahora. Llama a ese número mañana.", B: "Vete ahora, y llama a ese número mañana por la mañana.", C: "Vete ahora y llama a ese número mañana a primera hora; no esperes a que pase otra noche así." },
+            reply: { A: "Karina se va rápido. Mauro quiere seguirla. Te pones delante.", B: "Karina se va a paso rápido. Mauro quiere seguirla y te pones delante de él, sin tocarlo.", C: "Karina se aleja a paso rápido. Mauro intenta seguirla y te interpones, sin tocarlo, con el lápiz como única arma." },
+            mood: "worried", end: "lapiz-ayuda",
+          },
+          {
+            id: "firma",
+            say: { A: "Mauro, firma aquí que no la vas a seguir.", B: "Mauro, firma aquí que no vas a seguirla esta noche.", C: "Mauro, firma aquí que esta noche no la sigues. Un papel firmado pesa más que una promesa." },
+            reply: { A: "Mauro rompe el papel. «Yo no firmo nada.» Se va furioso.", B: "Mauro te arranca el papel y lo rompe en cuatro. «Yo no firmo nada.» Se va furioso por el paseo.", C: "Mauro te arranca el papel y lo hace trizas. «Yo no firmo nada.» Se aleja furioso, con la promesa hecha pedazos en el suelo." },
+            mood: "furious", end: "lapiz-rompe",
+          },
+        ],
+      },
+
+      // ── libro: la excusa de la dirección.
+      "libro-inicio": {
+        who: "mauro", mood: "surprised",
+        line: {
+          A: "Te metes entre los dos con tu libro. «Perdón, ¿esta calle dónde queda?» Mauro y Karina se quedan quietos, con la boca abierta.",
+          B: "Te metes entre los dos, abres el libro y finges buscar una dirección: «Perdón, ¿saben dónde queda esta calle?» Mauro y Karina se quedan quietos, con la boca abierta.",
+          C: "Te metes entre los dos con el libro abierto y cara de turista perdido: «Perdón, ¿sabrían decirme dónde queda esta calle?» Mauro y Karina se quedan petrificados.",
+        },
+        options: [
+          {
+            id: "seguir",
+            say: { A: "Es urgente. ¿Me ayudan? Aquí, en el mapa.", B: "Es urgente, de verdad. ¿Me ayudan a encontrarla en el mapa?", C: "Es muy urgente, ya me ven. ¿Pueden ayudarme con el mapa, los dos?" },
+            reply: { A: "Karina mira el libro. «Eso no es un mapa. Es una novela.» Mauro se ríe.", B: "Karina mira el libro y levanta una ceja. «Eso no es un mapa, es una novela.» Mauro, sin querer, se ríe.", C: "Karina examina el libro. «Eso no es un mapa, es una novela rosa.» Mauro suelta una risa nerviosa a su pesar." },
+            mood: "laugh", next: "libro-excusa",
+          },
+          {
+            id: "verdad",
+            say: { A: "No busco una calle. Quiero que dejen de gritar.", B: "En realidad no busco ninguna calle. Quiero que dejen de gritarse.", C: "Mentira: no busco ninguna calle. Quiero que dejen de gritarse y respiren." },
+            reply: { A: "Karina baja la voz. «Gracias.» Mauro, rojo: «No te metas en esto.»", B: "Karina baja la voz y te sonríe sin ganas. «Gracias.» Mauro, rojo de vergüenza, gruñe: «No te metas.»", C: "Karina baja la voz: «Gracias por la excusa.» Mauro, rojo, gruñe: «Nadie te pidió que te metieras.»" },
+            mood: "worried", next: "libro-excusa",
+          },
+          {
+            id: "regalar",
+            say: { A: "Tomen. Léanlo juntos. Es mi regalo.", B: "Tomen el libro. Léanlo juntos esta noche, es mi regalo.", C: "Quédense con el libro. Léanlo juntos esta noche; es mi regalo para este desastre." },
+            reply: { A: "Karina toma el libro. Mauro no. Ella se va con el libro.", B: "Karina toma el libro, mira a Mauro y no dice nada. Él no lo toca. Ella se va con el libro bajo el brazo.", C: "Karina acepta el libro, mira a Mauro con pena y se marcha con él bajo el brazo. Mauro se queda mirando el canal." },
+            mood: "sad", end: "libro-ella-se-va",
+          },
+        ],
+      },
+      "libro-excusa": {
+        who: "karina", mood: "smile",
+        line: {
+          A: "Karina casi sonríe. «Qué raro eres. Mauro, mira: alguien se preocupa por nosotros.» Él evita mirarla.",
+          B: "Karina casi sonríe por primera vez. «Qué raro eres. Mauro, mira: un desconocido se preocupa más por nosotros que tú.» Él evita su mirada.",
+          C: "Karina casi sonríe. «Eres rarísimo. Mauro, un desconocido con una novela se preocupa más por nosotros que tú.» Él evita su mirada.",
+        },
+        options: [
+          {
+            id: "juntos",
+            say: { A: "Siéntense en el banco. Los dos. Respiren.", B: "Siéntense en ese banco, los dos. Respiren y hablen más bajo.", C: "Siéntense en ese banco y hablen más bajo; las cosas dichas en voz baja pesan menos." },
+            reply: { A: "Se sientan, sin tocarse. Mauro llora. Karina le pasa un pañuelo.", B: "Se sientan, separados por un metro. Mauro empieza a llorar y Karina, sin mirarlo, le pasa un pañuelo.", C: "Se sientan, con un metro de distancia. Mauro empieza a llorar y Karina, tras un largo silencio, le pasa un pañuelo." },
+            mood: "sad", end: "libro-separa",
+          },
+          {
+            id: "irse",
+            say: { A: "Karina, vete a casa. Mauro, mañana hablan.", B: "Karina, vete a casa hoy. Mauro, mañana hablan con calma.", C: "Karina, esta noche a casa. Mauro, mañana, con la cabeza fría, hablan de todo." },
+            reply: { A: "Karina asiente y se va. Mauro mira el canal y no la sigue.", B: "Karina asiente y se aleja. Mauro mira el canal un buen rato y no la sigue.", C: "Karina asiente y se va con paso firme. Mauro mira el agua oscura y, por una vez, no la sigue." },
+            mood: "neutral", end: "libro-ella-se-va",
+          },
+          {
+            id: "leer",
+            say: { A: "Leo un párrafo para los dos. Escuchen.", B: "Les leo un párrafo y luego deciden. Escuchen.", C: "Les leo un párrafo; si después de eso siguen gritando, me retiro." },
+            reply: { A: "Lees en voz alta. Los dos escuchan. Se ríen de la frase final.", B: "Lees en voz alta junto al canal. Los dos escuchan, serios al principio y riendo con la frase final.", C: "Lees en voz alta junto al agua. Escuchan en silencio y terminan riéndose de la frase final, incluso él." },
+            mood: "laugh", end: "libro-separa",
+          },
+        ],
+      },
+
+      // ── corazón: Mauro rompe a llorar.
+      "corazon-inicio": {
+        who: "mauro", mood: "sad",
+        line: {
+          A: "Usas el corazón. Mauro suelta a Karina y se echa a llorar. «No sé qué me pasa. Tengo miedo de perderla.» Karina se queda quieta.",
+          B: "Usas el corazón. Mauro suelta a Karina y se echa a llorar, tapándose la cara. «No sé qué me pasa. Tengo miedo de perderla.» Karina se queda inmóvil.",
+          C: "Usas el corazón. Mauro suelta a Karina y se derrumba, con la cara entre las manos. «No sé qué me pasa; tengo tanto miedo de perderla que la ahogo.» Karina se queda inmóvil.",
+        },
+        options: [
+          {
+            id: "mauro",
+            say: { A: "Mauro, respira. Esto no se arregla gritando.", B: "Mauro, respira. Gritando no vas a conseguir que se quede.", C: "Mauro, respira. Con gritos no se retiene a nadie; con gritos solo se la aleja." },
+            reply: { A: "Mauro respira. «Perdón, Karina. Perdón.» Ella lo mira, con lágrimas.", B: "Mauro respira temblando. «Perdóname, Karina. Perdóname.» Ella lo mira con los ojos llenos de lágrimas.", C: "Mauro respira con esfuerzo. «Perdóname, Karina.» Ella lo mira con los ojos llenos de lágrimas y de dudas." },
+            mood: "love", next: "corazon-pareja",
+          },
+          {
+            id: "karina",
+            say: { A: "Karina, ¿estás bien? Tú decides qué hacer.", B: "Karina, ¿estás bien? Tú decides qué quieres hacer ahora.", C: "Karina, ¿cómo estás? Lo que pase ahora lo decides tú, y nadie más." },
+            reply: { A: "Karina se seca la cara. «Estoy bien. Mauro, ven.» Lo abraza.", B: "Karina se seca la cara. «Estoy bien. Mauro, ven aquí.» Y lo abraza, aunque le tiemblan los brazos.", C: "Karina se limpia la cara con la manga. «Estoy bien, gracias.» Mira a Mauro un instante y lo abraza, con los brazos aún temblando." },
+            mood: "love", next: "corazon-pareja",
+          },
+          {
+            id: "irse",
+            say: { A: "Ya se hablan solos. Me voy.", B: "Ya pueden hablar solos. Yo me retiro.", C: "Ya pueden arreglárselas solos. Yo me retiro, que aquí sobro." },
+            reply: { A: "Karina te sonríe. «Gracias.» Mauro sigue llorando, pero ya la abraza.", B: "Karina te sonríe con ojos húmedos. «Gracias.» Mauro sigue llorando, pero ya la abraza.", C: "Karina te sonríe, empapada en lágrimas. «Gracias por todo.» Mauro llora aún, pero ya la tiene entre los brazos." },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-pareja": {
+        who: "karina", mood: "smitten",
+        line: {
+          A: "Karina mira a Mauro. «Te quiero. Pero esto no vuelve a pasar. Si pasa, me voy.» Mauro asiente: «Lo prometo.»",
+          B: "Karina mira a Mauro a los ojos. «Te quiero, pero esto no vuelve a pasar. Si pasa otra vez, me voy.» Mauro asiente: «Lo prometo, de verdad.»",
+          C: "Karina mira a Mauro fijamente. «Te quiero, y precisamente por eso: esto no vuelve a pasar. Si pasa otra vez, me voy.» Mauro asiente: «Te lo prometo.»",
+        },
+        options: [
+          {
+            id: "beso",
+            say: { A: "Bésense. Después hablan con calma.", B: "Bésense, si es lo que sienten. Después hablan con calma.", C: "Si el cariño es verdad, bésense; la conversación seria puede esperar a mañana." },
+            reply: { A: "Se besan junto al canal. Tú te alejas despacio.", B: "Se besan junto al canal, con los ojos cerrados. Tú te alejas despacio, sin hacer ruido.", C: "Se besan junto al agua mientras tú te alejas de puntillas. La noche, por una vez, se porta bien." },
+            mood: "love", end: "corazon-beso",
+          },
+          {
+            id: "ayuda",
+            say: { A: "Si necesitan ayuda, hay gente que ayuda. Hablen con alguien.", B: "Si necesitan ayuda, pidan: hay gente que ayuda a las parejas. No es una vergüenza.", C: "Pidan ayuda a un profesional: no es una vergüenza, es la forma más barata de no repetir esta noche." },
+            reply: { A: "Los dos asienten. Karina te da las gracias. Mauro baja la cabeza.", B: "Los dos asienten. Karina te da las gracias con un apretón de manos. Mauro baja la cabeza, avergonzado.", C: "Los dos asienten en silencio. Karina te aprieta las manos y Mauro baja la cabeza, sin excusas." },
+            mood: "love", end: "corazon-abrazo",
+          },
+          {
+            id: "policia",
+            say: { A: "Una promesa no basta. ¿Llamamos a alguien?", B: "Una promesa no siempre basta. ¿Quieres que llamemos a alguien de confianza?", C: "Las promesas no siempre bastan, Karina. ¿Hay alguien de confianza a quien podamos llamar ahora?" },
+            reply: { A: "Karina llama a su hermano. Llega con una mirada seria. Mauro lo espera sin hablar.", B: "Karina llama a su hermano. Llega en diez minutos con cara seria. Mauro lo espera sin decir una palabra.", C: "Karina llama a su hermano y llega en diez minutos, serio. Mauro lo espera sin levantar la vista, sabiendo lo que le toca." },
+            mood: "neutral", end: "separan",
+          },
+        ],
+      },
+    },
+    ends: {
+      separan: { text: { A: "Mauro y Karina se quedan en el banco. Hablan en voz baja. Tú te vas.", B: "Mauro y Karina se quedan en el banco, hablando en voz baja. Tú te vas con la sensación de que la noche pudo ser peor.", C: "Mauro y Karina se quedan en el banco, hablando por fin en voz baja. Te vas con la sensación incómoda de que la noche pudo ser mucho peor." }, change: "se-sienta", recap: "Separaste una discusión descontrolada junto al canal." },
+      "ella-se-va": { text: { A: "Karina se va. Mauro se queda mirando el canal. No dice nada.", B: "Karina se va con el celular en la mano. Mauro se queda mirando el canal, sin decir nada, mucho rato.", C: "Karina se marcha con el celular recuperado. Mauro se queda mirando el canal, sin una palabra, hasta que el agua se lleva su enojo." }, change: "se-va", recap: "Ayudaste a Karina a irse y Mauro se quedó solo." },
+      policia: { text: { A: "Llega la policía. Karina cuenta todo. Mauro se va con los agentes.", B: "Llega la policía. Karina cuenta todo con voz firme y Mauro se va con los agentes, cabizbajo.", C: "Llega la patrulla. Karina declara con voz firme y Mauro se va con los agentes, cabizbajo y sin una sola excusa." }, change: "policia", recap: "La policía se llevó a Mauro después de la discusión." },
+      pelea: { text: { A: "Mauro te golpea. Rodáis por el suelo. Karina grita. Alguien llama a la policía.", B: "Mauro te golpea y ruedan por el suelo del paseo. Karina grita que paren. Alguien llama a la policía.", C: "Mauro te golpea y ruedan por el suelo junto al canal. Karina grita que paren y, a lo lejos, alguien marca el número de la policía." }, change: "pelea", recap: "La discusión terminó en una pelea junto al canal." },
+      "cuchillo-calma": { text: { A: "Nadie sangra. Mauro guarda la navaja. Karina llora. Tú también.", B: "Nadie sangra. Mauro guarda la navaja y Karina llora contra su pecho. Tú guardas el cuchillo con la mano temblando.", C: "Nadie sangra, y es casi un milagro. Mauro guarda la navaja, Karina llora contra su pecho y tú guardas el cuchillo con la mano temblando." }, change: "abraza", recap: "Dos cuchillos en alto y nadie herido: Karina los detuvo." },
+      "cuchillo-policia": { text: { A: "Llega la policía. Ven un cuchillo y una navaja. Todos terminan en la comisaría.", B: "Llega la policía y ve un cuchillo y una navaja. Todos terminan en la comisaría, cada uno con su versión.", C: "Llega la policía, cuenta un cuchillo y una navaja, y no distingue buenos de malos. Todos terminan en la comisaría, cada uno con su versión." }, change: "policia", recap: "Los dos cuchillos junto al canal terminaron con la policía." },
+      "pistola-calma": { text: { A: "Mauro se va. Karina se queda, temblando. Tú guardas la pistola.", B: "Mauro se va con la cabeza baja. Karina se queda en el banco, temblando. Tú guardas la pistola con la mano fría.", C: "Mauro se va con la cabeza baja y Karina se queda temblando en el banco. Guardas la pistola, preguntándote qué has hecho." }, change: "se-va", recap: "La pistola paró la discusión, pero asustó a Karina también." },
+      "pistola-huye": { text: { A: "Mauro huye por el puente. Karina te mira con miedo. «Gracias, pero guarda eso.»", B: "Mauro huye por el puente sin mirar atrás. Karina te mira con miedo: «Gracias, pero guarda eso, por favor.»", C: "Mauro huye por el puente sin mirar atrás. Karina te mira con más miedo que alivio: «Gracias. Y ahora, por favor, guarda eso.»" }, change: "huye", recap: "La pistola hizo huir a Mauro por el puente." },
+      "pistola-policia": { text: { A: "La policía te apunta. Karina grita que la ayudaste. Levantas las manos.", B: "La policía te apunta y levantas las manos. Karina grita que la ayudaste, pero la pistola habla más fuerte.", C: "La policía te apunta y levantas las manos. Karina insiste en que la ayudaste, pero la pistola grita más que ella." }, change: "manos-arriba", recap: "La pistola junto al canal terminó con las manos arriba." },
+      "granada-huye": { text: { A: "Todos corren. Tú también. Suenan sirenas y alguien grita: «¡Bomba!»", B: "Todos corren por el paseo, tú también. Suenan sirenas y alguien grita «¡Bomba!» desde el puente.", C: "El paseo entero corre, tú incluido. Suenan sirenas y alguien grita «¡Bomba!» desde el puente, con una dicción perfecta." }, change: "huye", recap: "La granada vació el paseo junto al canal." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina el canal. Los tres levantan las manos. Karina ríe.", B: "Un helicóptero ilumina el canal y los tres levantan las manos. Karina, a pesar de todo, no puede dejar de reír.", C: "Un helicóptero ilumina el canal y los tres levantan las manos. Karina, absurdamente, no puede dejar de reír." }, change: "helicoptero", recap: "La granada trajo un helicóptero y una pareja reconciliada." },
+      "granada-risa": { text: { A: "La pareja se va riendo. La granada falsa en tu bolsillo. Nadie sabe qué pasó.", B: "La pareja se aleja riendo, de la mano. La granada falsa vuelve a tu bolsillo y nadie sabe bien qué pasó.", C: "La pareja se aleja riendo, de la mano. La granada de juguete vuelve a tu bolsillo; la reconciliación ya forma parte de la leyenda del paseo." }, change: "sonrie", recap: "La granada falsa reconcilió a una pareja a punto de romperse." },
+      "gas-cae": { text: { A: "Mauro grita en el suelo. Karina lo ayuda y te mira con odio. Llega la policía.", B: "Mauro grita en el suelo con los ojos cerrados. Karina corre a ayudarlo y te mira con odio. Llega la policía.", C: "Mauro aúlla en el suelo, ciego. Karina corre a socorrerlo y te mira con un odio nuevo. La policía llega a una escena que ya no tiene sentido." }, change: "cae", recap: "Rociaste a Mauro y Karina se puso de su lado." },
+      "gas-calma": { text: { A: "Mauro se va. Tú acompañas a Karina hasta su casa. Guardas el gas.", B: "Mauro se va por el puente. Acompañas a Karina hasta la puerta de su casa. Guardas el gas pimienta.", C: "Mauro se pierde por el puente. Acompañas a Karina hasta su puerta, en silencio. Guardas el gas: hoy le bastó con asomar." }, change: "se-va", recap: "El gas pimienta sin usar bastó para detener la discusión." },
+      "gas-policia": { text: { A: "La policía escucha tres versiones. Ven tu gas. Mauro se va con ellos.", B: "La policía escucha tres versiones y ve tu gas pimienta. Mauro se va con los agentes; Karina y tú, a declarar.", C: "La policía escucha tres versiones, repara en tu gas y decide. Mauro se va con los agentes; Karina y tú, a declarar a la comisaría." }, change: "policia", recap: "El gas pimienta y la policía cerraron la noche de Mauro." },
+      "lapiz-ayuda": { text: { A: "Karina guarda el papel con el número de ayuda. Mañana llama. Tú sigues tu camino.", B: "Karina guarda el papel con el número de ayuda en el bolso. Mañana llama. Tú sigues tu camino, con el lápiz en el bolsillo.", C: "Karina guarda el papel con el número de ayuda en el bolso: mañana, a primera hora, llama. Sigues tu camino con el lápiz en el bolsillo." }, change: "luz", recap: "Tu lápiz dejó a Karina un número de ayuda para mañana." },
+      "lapiz-rompe": { text: { A: "El papel roto en el suelo. Mauro se va. Karina se queda sin número. Tu lápiz no sirvió.", B: "El papel queda roto en el suelo. Mauro se va furioso y Karina se queda sin número y sin respuestas. Tu lápiz no sirvió de mucho.", C: "El papel queda hecho trizas en el suelo. Mauro se va furioso; Karina se queda sin número y sin respuestas. Tu lápiz hoy no alcanzó." }, change: "enojado", recap: "Mauro rompió el papel que escribiste." },
+      "libro-ella-se-va": { text: { A: "Karina se va con tu libro. Mauro mira el canal. Nadie pelea más.", B: "Karina se va con tu libro bajo el brazo. Mauro se queda mirando el canal. Ya nadie pelea.", C: "Karina se va con tu libro bajo el brazo y Mauro se queda mirando el canal. Nadie pelea más: se acabó la función." }, change: "se-va", recap: "Tu libro sirvió de excusa para separar a la pareja." },
+      "libro-separa": { text: { A: "Los dos se quedan en el banco. Se ríen un poco. Tu libro vuelve a tu bolso.", B: "Los dos se quedan en el banco, hablando bajo y riéndose de vez en cuando. Tu libro vuelve a tu bolso.", C: "Los dos se quedan en el banco, hablando bajo y riéndose a ratos. Tu libro vuelve al bolso, con un nuevo capítulo que nadie escribió." }, change: "sonrie", recap: "Tu libro paró una pelea con una pregunta sobre una calle." },
+      "corazon-abrazo": { text: { A: "Karina y Mauro se abrazan. Tú te alejas. El canal brilla.", B: "Karina y Mauro se abrazan junto al canal. Tú te alejas y el agua brilla bajo las farolas.", C: "Karina y Mauro se abrazan junto al canal. Te alejas despacio, con el agua brillando bajo las farolas como si lo aprobara." }, change: "abraza", recap: "El corazón convirtió la pelea en un abrazo junto al canal." },
+      "corazon-beso": { text: { A: "Karina y Mauro se besan. Un grupo del paseo aplaude. Tú sonríes y sigues.", B: "Karina y Mauro se besan junto al canal. Un grupo del paseo aplaude sin saber qué pasó. Tú sonríes y sigues tu camino.", C: "Karina y Mauro se besan junto al canal y un grupo del paseo aplaude sin conocer el primer acto. Sonríes y sigues tu camino." }, change: "beso", recap: "Después de la pelea, la pareja se reconcilió con un beso." },
+    },
+    speak: {
+      A1: "¿Te gusta pasear junto a un canal o un río?",
+      A2: "¿Qué haces cuando dos amigos se pelean?",
+      B1: "¿Cómo reaccionas cuando alguien grita cerca de ti en la calle?",
+      B2: "¿Cuándo crees que es correcto meterse en la discusión de otros?",
+      C1: "¿Qué responsabilidad tiene un testigo ante la violencia entre dos personas que se quieren?",
+      C2: "¿Por qué resulta tan difícil nombrar la violencia en las relaciones cuando hay cariño de por medio?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Qué haces si dos personas tienen cuchillos?", B: "¿Cuál es la peor forma de resolver una discusión, según tú?", C: "¿Por qué una escalada de violencia parece siempre más fácil que retroceder?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué sientes cuando alguien llora delante de ti?", B: "¿Has hecho llorar a alguien sin querer, y cómo lo arreglaste?", C: "¿Qué distingue la protección de la intimidación cuando el que protege va armado?" } },
+      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Haces reír a la gente cuando hay tensión?", B: "¿Qué broma salvó alguna vez una situación tensa para ti?", C: "¿Por qué un enemigo común reconcilia a veces mejor que cualquier argumento?" } },
+      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Te sientes seguro en tu barrio de noche?", B: "¿Qué harías si una amiga te dijera que tiene miedo de su pareja?", C: "¿Dónde pondrías el límite entre proteger a alguien y decidir por ella?" } },
+      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Escribes tu agenda en papel?", B: "¿Conoces algún teléfono de ayuda en tu ciudad y sabrías dónde encontrarlo?", C: "¿Qué recursos debería conocer cualquier persona antes de necesitarlos?" } },
+      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Te pierdes en las calles de tu ciudad?", B: "¿Has usado alguna vez una excusa tonta para interrumpir algo incómodo?", C: "¿Por qué una pregunta absurda desarma a veces más que una orden seria?" } },
+      corazon: { start: "corazon-inicio", fx: "calma", speak: { A: "¿Lloras delante de otras personas?", B: "¿Cuándo pediste perdón de verdad por última vez?", C: "¿Qué hace falta para que una disculpa sea más que una palabra?" } },
+    },
+  },
+
+  // ───────────────────────────── ESCENA 6 · COSTA ─────────────────────────────
+  {
+    id: "costa-canal",
+    kind: "escena",
+    district: "costa",
+    title: "Alguien cayó al canal",
+    verb: "RESCATAR",
+    goal: "Pedir ayuda con urgencia, dar instrucciones claras, llamar a emergencias con una dirección precisa y tranquilizar a alguien en peligro.",
+    cast: [
+      {
+        id: "irene", name: "Irene", role: "Pide ayuda a gritos en la orilla",
+        age: "adult", body: "f", build: "average", height: 1.64,
+        hair: "ponytail", hairColor: "#3b2418", skin: "#e0b089",
+        top: "hoodie", topColor: "#5b4a8a", bottom: "jeans", bottomColor: "#2c3a55",
+        extras: [], pose: "scream", props: [],
+      },
+      {
+        id: "tomas", name: "Tobías", role: "Cayó al canal y se agarra del borde",
+        age: "adult", body: "m", build: "average", height: 1.75,
+        hair: "short", hairColor: "#1c140e", skin: "#c99064",
+        top: "shirt", topColor: "#6a7f8f", bottom: "pants", bottomColor: "#26303a",
+        extras: ["blood-head"], pose: "ground", props: [],
+      },
+    ],
+    start: "inicio",
+    nodes: {
+      inicio: {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Una mujer grita junto al canal: «¡Se cayó! ¡Mi amigo se cayó al agua! ¡Ayuda!» Un hombre se agarra del borde con una mano. Sangra de la frente.",
+          B: "Una mujer grita al borde del canal: «¡Se resbaló y se cayó al agua! ¡Ayuda, por favor!» Un hombre se agarra del borde con una mano; le sangra la frente y el agua está helada.",
+          C: "Una mujer grita al borde del canal: «¡Se resbaló y cayó! ¡Alguien, por favor!» Un hombre cuelga del borde con una sola mano, la frente abierta y el agua negra tirando de él.",
+        },
+        options: [
+          {
+            id: "mano",
+            say: { A: "¡Dame la mano! ¡Yo te saco!", B: "¡Dame la mano, yo te saco! ¡Aguanta!", C: "¡Dame la mano y no te sueltes! ¡Yo te saco, mírame!" },
+            reply: { A: "Tobías intenta soltar el borde. Te mira con miedo. «Estoy muy cansado.»", B: "Tobías intenta alcanzar tu mano, pero resbala. «No puedo… estoy congelado, estoy muy cansado.»", C: "Tobías estira la mano libre y falla por poco. «No puedo, no siento los dedos, estoy muy cansado.»" },
+            mood: "pain", next: "orilla",
+          },
+          {
+            id: "llamar",
+            say: { A: "Irene, ¿verdad? ¿Dónde estamos? Llamo a emergencias.", B: "Llamo a emergencias ahora. ¿Cómo se llama? ¿Y dónde exactamente estamos?", C: "Llamo a emergencias en este instante. Necesito su nombre y una referencia exacta del lugar." },
+            reply: { A: "«Irene. Junto al canal, cerca del café. Tobías se llama.» Llora.", B: "«Me llamo Irene y él es Tobías. Estamos en el paseo del canal, cerca del café, al norte del puente.» Llora sin parar.", C: "«Irene; él es Tobías. Paseo del canal, a cien metros al norte del puente, junto al café.» Llora, pero la dirección sale perfecta." },
+            mood: "worried", next: "irene",
+          },
+          {
+            id: "cuerda",
+            say: { A: "¿Hay una cuerda o un salvavidas? ¡Búscalo!", B: "¿Hay una cuerda, un salvavidas, algo? ¡Búscalo ya!", C: "¿Una cuerda, un salvavidas, un palo largo? ¡Lo que sea, rápido!" },
+            reply: { A: "Irene corre al café. Vuelve con una cuerda gruesa. «¡Es lo que hay!»", B: "Irene corre al café y vuelve con una cuerda gruesa de amarre. «¡Esto es todo lo que había!»", C: "Irene sale disparada hacia el café y vuelve con una cuerda de amarre mojada. «¡Es todo lo que encontré!»" },
+            mood: "worried", next: "orilla",
+          },
+        ],
+      },
+      orilla: {
+        who: "tomas", mood: "pain",
+        line: {
+          A: "Tobías tiembla. «Me duele la cabeza. No siento las piernas. No puedo más.» Sus dedos resbalan.",
+          B: "Tobías tiembla, con los labios morados. «Me duele la cabeza, no siento las piernas… no aguanto más.» Los dedos le resbalan del borde.",
+          C: "Tobías tiembla, con los labios morados. «La cabeza me estalla y las piernas ya no son mías. No aguanto más.» Los dedos le resbalan, centímetro a centímetro.",
+        },
+        options: [
+          {
+            id: "tirar",
+            say: { A: "Agárrate a la cuerda. En tres, yo tiro. Uno, dos, tres.", B: "Agárrate a la cuerda con las dos manos. En tres tiro: uno, dos, tres.", C: "Agárrate a la cuerda con las dos manos. A la una, a las dos y a las tres, yo tiro; tú solo no sueltes." },
+            reply: { A: "Tiras con todas tus fuerzas. Tobías sube hasta el borde. Irene lo agarra del cinturón.", B: "Tiras con todas tus fuerzas y Tobías sube centímetro a centímetro. Irene lo agarra del cinturón y lo arrastra hasta el suelo.", C: "Tiras hasta que te arden las manos. Tobías sube, centímetro a centímetro, e Irene lo agarra del cinturón y lo arrastra sobre las piedras." },
+            mood: "worried", end: "salvado",
+          },
+          {
+            id: "hablar",
+            say: { A: "No cierres los ojos. Háblame. ¿Cuántos años tienes?", B: "No cierres los ojos, Tobías. Háblame: ¿cuántos años tienes, qué cenaste?", C: "Mírame, Tobías, no cierres los ojos. Cuéntame cualquier cosa: tu edad, tu cena, tu peor jefe." },
+            reply: { A: "«Treinta y dos… Pollo.» Se ríe un poco. Aguanta.", B: "«Treinta y dos… Pollo con arroz.» Se ríe un poco, tosiendo. Aguanta unos segundos más.", C: "«Treinta y dos… y mi jefe, Valdés, es lo peor.» Se ríe, tosiendo agua, y sus dedos vuelven a agarrar con fuerza." },
+            mood: "pain", next: "irene",
+          },
+          {
+            id: "esperar",
+            say: { A: "Aguanta. Ya vienen. No te muevas.", B: "Aguanta un poco. La ambulancia ya viene. No te muevas.", C: "Aguanta, que ya vienen. Lo único que tienes que hacer es no soltarte." },
+            reply: { A: "Tobías intenta aguantar. Pero resbala. Cae al agua con un golpe.", B: "Tobías intenta aguantar, pero el borde está mojado. Resbala y cae al agua de golpe, salpicando todo.", C: "Tobías hace lo posible, pero el borde es de piedra mojada. Resbala y se hunde con un golpe seco que te hiela." },
+            mood: "terror", end: "resbala",
+          },
+        ],
+      },
+      irene: {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Irene llora y tiembla. «¡No sé nadar! ¡Se va a morir! ¿Qué hago?» Tobías sigue colgado.",
+          B: "Irene llora y se aprieta las manos. «¡No sé nadar y se va a morir! ¿Qué hago? ¡Dime qué hago!» Tobías sigue colgado del borde.",
+          C: "Irene se aprieta las manos, entre sollozos. «¡No sé nadar y se va a morir! ¡Dime qué hago, por favor!» Tobías sigue colgado, perdiendo fuerza.",
+        },
+        options: [
+          {
+            id: "ambulancia",
+            say: { A: "Llama a la ambulancia. Dices: canal, cerca del café.", B: "Llama a una ambulancia ahora. Di: paseo del canal, junto al café, una persona en el agua.", C: "Llama a una ambulancia y repite esto: paseo del canal, junto al café, una persona en el agua, herida en la cabeza." },
+            reply: { A: "Irene marca. «¡Ambulancia! ¡Canal! ¡Rápido!» Los vecinos se acercan.", B: "Irene marca con manos temblorosas. «¡Ambulancia, rápido, en el canal, junto al café!» Varios paseantes se acercan corriendo.", C: "Irene marca y repite tus frases como un papagayo asustado. «¡Paseo del canal, junto al café, herido en la cabeza!» Varios paseantes corren hacia ustedes." },
+            mood: "worried", end: "llamada",
+          },
+          {
+            id: "sujetar",
+            say: { A: "Sujétame los pies. Yo me acerco más.", B: "Sujétame de los pies, Irene. Yo me acerco más al borde y lo agarro.", C: "Agárrame de los pies con las dos manos, Irene. Yo me asomo más y lo atrapo; no me sueltes pase lo que pase." },
+            reply: { A: "Irene te agarra. Tú estiras el brazo. Tobías te toma la muñeca.", B: "Irene te sujeta los tobillos con todas sus fuerzas. Estiras el brazo hasta que Tobías te toma la muñeca.", C: "Irene te sujeta los tobillos como si fueran una cuerda. Estiras el brazo hasta lo imposible y Tobías te toma la muñeca con la mano libre." },
+            mood: "worried", end: "salvado",
+          },
+          {
+            id: "gritar",
+            say: { A: "¡Ayuda! ¡Hay alguien en el agua! ¡Aquí!", B: "¡Ayuda! ¡Hay una persona en el agua! ¡Vengan todos!", C: "¡Ayuda! ¡Una persona en el agua! ¡Todos los que puedan, aquí, ahora!" },
+            reply: { A: "Cuatro personas llegan corriendo. Entre todos tiran de Tobías.", B: "Cuatro personas llegan corriendo del paseo. Entre todos tiran de Tobías hasta sacarlo.", C: "Cuatro personas llegan corriendo del paseo y se forma una cadena humana. Entre todos sacan a Tobías del agua." },
+            mood: "worried", end: "salvado",
+          },
+        ],
+      },
+
+      // ── cuchillo: la cuerda de amarre le atrapó la pierna.
+      "cuchillo-inicio": {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Sacas el cuchillo porque la cuerda de un bote enreda la pierna de Tobías en el agua. Irene grita: «¡No lo toques! ¿Qué haces con eso?»",
+          B: "Sacas el cuchillo porque una cuerda de amarre se ha enredado en la pierna de Tobías y lo arrastra hacia abajo. Irene grita: «¡No lo toques! ¿Qué haces con un cuchillo?»",
+          C: "Sacas el cuchillo porque una cuerda de amarre le ha apresado la pierna a Tobías bajo el agua. Irene grita: «¡Aléjate! ¿Qué pretendes hacer con un cuchillo?»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "La cuerda lo hunde. Debo cortarla. ¡Confía!", B: "La cuerda le atrapa la pierna y lo hunde. Tengo que cortarla. ¡Confía en mí!", C: "La cuerda le atrapa la pierna y lo hunde. O la corto o se ahoga. ¡Confía en mí, Irene!" },
+            reply: { A: "Irene mira la cuerda. «¡Corta! ¡Corta rápido!» Tobías grita desde el agua.", B: "Irene mira la cuerda tensa y se tapa la boca. «¡Corta, corta, rápido!» Tobías grita desde el agua.", C: "Irene mira la cuerda y lo entiende de golpe. «¡Corta! ¡Corta ya!» Tobías aúlla desde el agua, hundido hasta el pecho." },
+            mood: "terror", next: "cuchillo-cuerda",
+          },
+          {
+            id: "guardar",
+            say: { A: "Perdón. Lo guardo. Entonces, ayúdame a tirar.", B: "Perdona, tienes razón. Lo guardo. Ayúdame a tirar de él.", C: "Perdona, el cuchillo asusta. Lo guardo y tiramos juntos, aunque no sé si hay tiempo." },
+            reply: { A: "Tiran juntos. La cuerda no cede. Tobías se hunde un poco más.", B: "Tiran juntos con todas sus fuerzas. La cuerda del bote no cede y Tobías se hunde otro poco.", C: "Tiran juntos hasta quedarse sin aliento. La cuerda no cede y Tobías se hunde un poco más; el tiempo corre en contra." },
+            mood: "pain", next: "orilla",
+          },
+          {
+            id: "apartar",
+            say: { A: "¡Apártate! ¡No hay tiempo!", B: "¡Apártate, Irene! ¡No hay tiempo que perder!", C: "¡Apártate de mi camino! ¡Cada segundo es una persona menos!" },
+            reply: { A: "Irene grita aún más fuerte. Un paseante ve el cuchillo y llama a la policía.", B: "Irene grita aún más fuerte. Un paseante ve el cuchillo y, sin entender nada, llama a la policía.", C: "Irene se pone a gritar «¡Socorro!». Un paseante ve el cuchillo, no ve la cuerda y llama a la policía." },
+            mood: "furious", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-cuerda": {
+        who: "tomas", mood: "terror",
+        line: {
+          A: "Tobías tira de la pierna. «¡No siento el pie! ¡Corta! ¡Pero no me cortes a mí!» Irene sujeta la cuerda con las dos manos.",
+          B: "Tobías patalea, con la voz rota. «¡No siento el pie! ¡Corta la cuerda, pero no me cortes a mí!» Irene sujeta la cuerda con las dos manos.",
+          C: "Tobías se agita en el agua. «¡Corta la cuerda, pero por favor, ni un milímetro de mi pierna!» Irene sostiene la cuerda tensa con las dos manos, blanca como el papel.",
+        },
+        options: [
+          {
+            id: "cortar",
+            say: { A: "Quieto. Un corte. Irene, tira ahora.", B: "Quédate quieto. Un solo corte. Irene, tira cuando te diga.", C: "Quieto, Tobías. Un corte limpio y listo. Irene, tira cuando yo lo diga y no antes." },
+            reply: { A: "Cortas. La cuerda salta. Tobías sube. Irene lo agarra. Todos caen al suelo.", B: "Cortas la cuerda de un tajo. Tobías sube de golpe e Irene lo agarra. Los tres caen al suelo del paseo, mojados y vivos.", C: "Cortas la cuerda de un tajo limpio. Tobías emerge como un corcho e Irene lo agarra; los tres caen sobre las piedras, mojados y vivos." },
+            mood: "worried", end: "cuchillo-libre",
+          },
+          {
+            id: "prisa",
+            say: { A: "¡Rápido! ¡Corto!", B: "¡Corto ya! ¡No hay tiempo para más!", C: "¡Corto ahora mismo, aunque tiemble! ¡Se acabó el tiempo!" },
+            reply: { A: "Cortas rápido. La mano resbala. Te cortas el brazo. Sangre en el borde.", B: "Cortas con prisa y la mano resbala sobre la piedra mojada. Te abres el antebrazo. La sangre gotea en el borde del canal.", C: "Cortas con prisa y la mano resbala. Te abres el antebrazo y la sangre mancha las piedras, pero la cuerda cede y Tobías sube." },
+            mood: "pain", end: "cuchillo-herida",
+          },
+          {
+            id: "irene",
+            say: { A: "Irene, corta tú. Yo sujeto.", B: "Irene, corta tú la cuerda. Yo lo sujeto con las dos manos.", C: "Irene, el cuchillo es tuyo ahora. Corta tú; yo lo sujeto con todo el cuerpo." },
+            reply: { A: "Irene corta. Gritando. Tobías sube. Los tres lloran en el suelo.", B: "Irene corta con los ojos cerrados, gritando. La cuerda cede, sacas a Tobías y los tres lloran en el suelo del paseo.", C: "Irene corta con los ojos cerrados, gritando como una guerrera. La cuerda cede, sacas a Tobías y los tres terminan llorando en el suelo." },
+            mood: "worried", end: "cuchillo-libre",
+          },
+        ],
+      },
+
+      // ── pistola: Irene te obedece y sujeta a Tobías.
+      "pistola-inicio": {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Te agachas y se ve tu pistola. Irene levanta las manos. «¡Por favor! ¡Sálvalo, haré lo que digas!» Tobías sigue colgado.",
+          B: "Te agachas al borde y tu pistola asoma de la chaqueta. Irene levanta las manos, temblando. «¡Por favor, sálvalo! ¡Haré lo que digas, lo que quieras!» Tobías sigue colgado.",
+          C: "Al agacharte, la pistola queda a la vista. Irene levanta las manos, entre el pánico y la súplica. «¡Sálvalo, por favor, y haré lo que digas!» Tobías cuelga del borde, sin aliento.",
+        },
+        options: [
+          {
+            id: "ordenar",
+            say: { A: "Baja las manos. Agarra su otra mano. ¡Ahora!", B: "Baja las manos y agarra su otra mano. ¡No lo sueltes pase lo que pase!", C: "Baja las manos y agárralo con las dos. No lo sueltes pase lo que pase; es una orden." },
+            reply: { A: "Irene obedece. Agarra la mano de Tobías. «¡Lo tengo! ¡Lo tengo!»", B: "Irene obedece al instante, se tira al suelo y agarra la mano de Tobías. «¡Lo tengo, lo tengo!»", C: "Irene obedece como un reloj, se arroja al suelo y agarra la mano de Tobías con las dos suyas. «¡Lo tengo, no lo suelto!»" },
+            mood: "scared", next: "pistola-juntos",
+          },
+          {
+            id: "guardar",
+            say: { A: "No es para ustedes. La guardo. Ayuda.", B: "Esto no es para ustedes, la guardo. Ayúdame a sacarlo.", C: "Esto no tiene nada que ver con ustedes. La guardo y nos ponemos a sacarlo, ya." },
+            reply: { A: "Irene respira. Tira con tu ayuda. Tobías empieza a subir.", B: "Irene respira aliviada y tira contigo. Tobías empieza a subir poco a poco, resoplando.", C: "Irene suelta el aire que no sabía que contenía y tira contigo. Tobías sube, poco a poco, con los dientes apretados." },
+            mood: "worried", end: "pistola-salvado",
+          },
+          {
+            id: "disparar",
+            say: { A: "¡Ayuda! ¡Disparo al aire si hace falta!", B: "¡Ayuda! ¡Si nadie viene, disparo al aire!", C: "¡Alguien que venga! ¡Si nadie reacciona, disparo al aire para que se enteren!" },
+            reply: { A: "Disparas al cielo. Todo el paseo grita. Llega una patrulla en segundos.", B: "Disparas al cielo. El paseo entero grita y corre. Una patrulla llega en segundos, con las luces encendidas.", C: "Disparas al cielo. El paseo se llena de gritos y una patrulla que pasaba por el puente da la vuelta con las luces a tope." },
+            mood: "terror", end: "pistola-policia",
+          },
+        ],
+      },
+      "pistola-juntos": {
+        who: "tomas", mood: "scared",
+        line: {
+          A: "Tobías ve la pistola en tu cintura. «¿Eres policía? ¿O ladrón? ¡No me sueltes, por favor!» Irene llora y tira.",
+          B: "Tobías ve la pistola en tu cintura y abre los ojos. «¿Eres policía o ladrón? ¡Da igual, no me sueltes!» Irene llora y tira con todas sus fuerzas.",
+          C: "Tobías ve la pistola en tu cintura entre jadeos. «¿Policía o ladrón? ¡Me da lo mismo, pero no me sueltes!» Irene llora y tira con las dos manos.",
+        },
+        options: [
+          {
+            id: "tirar",
+            say: { A: "Ni uno ni otro. Soy un testigo. Agárrate.", B: "Ni lo uno ni lo otro. Soy alguien que pasaba. Agárrate fuerte.", C: "Ni policía ni ladrón: alguien que pasaba. Agárrate fuerte, y las preguntas, después." },
+            reply: { A: "Tiran los tres. Tobías sube. Cae sobre el paseo tosiendo agua.", B: "Tiran los tres a la vez. Tobías sube sobre el borde y cae al paseo tosiendo agua. Irene llora encima de él.", C: "Tiran los tres a la vez y Tobías emerge sobre el borde. Cae al paseo tosiendo agua mientras Irene llora y se ríe encima de él." },
+            mood: "worried", end: "pistola-salvado",
+          },
+          {
+            id: "policia",
+            say: { A: "Llamo a la policía. Aguanten.", B: "Llamo a la policía y a la ambulancia. Aguanten.", C: "Llamo a la policía y a la ambulancia, en ese orden o en el contrario. Aguanten." },
+            reply: { A: "Una patrulla llega pronto. Ven la pistola y gritan: «¡Quieto!»", B: "Una patrulla llega pronto. Los agentes ven la pistola antes que a Tobías y gritan: «¡Quieto! ¡Manos arriba!»", C: "La patrulla llega pronto. Los agentes ven la pistola antes que a las víctimas y gritan: «¡Quieto! ¡Manos donde las veamos!»" },
+            mood: "terror", end: "pistola-policia",
+          },
+          {
+            id: "dejar",
+            say: { A: "La dejo aquí, en el suelo. Ya tiran ustedes.", B: "Dejo la pistola aquí, en el suelo, para tener las manos libres.", C: "Dejo la pistola en el suelo, lejos de todos, y uso las dos manos. Hoy hace más falta un brazo que un arma." },
+            reply: { A: "Dejas la pistola. Tiran los tres. Tobías sale del agua.", B: "Dejas la pistola en el suelo y tiran los tres. Tobías sale del agua y se desploma sobre las piedras.", C: "Dejas la pistola a un lado y tiran los tres con las manos libres. Tobías sale del agua y se desploma sobre las piedras, vivo." },
+            mood: "worried", end: "pistola-salvado",
+          },
+        ],
+      },
+
+      // ── granada: el paseo se vacía y los bomberos llegan.
+      "granada-inicio": {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Buscas la cuerda y sacas la granada por error. Irene grita: «¡Una granada! ¡Todos fuera!» El paseo corre. Tobías grita: «¡No me dejen aquí!»",
+          B: "Buscas una cuerda en la chaqueta y lo que sacas es la granada. Irene grita: «¡Una granada! ¡Todos fuera!» El paseo entero corre. Tobías, colgado, grita: «¡No me dejen aquí!»",
+          C: "Buscas una cuerda en la chaqueta y sacas, por desgracia, la granada. Irene chilla «¡Granada! ¡Evacuen!» y el paseo se vacía en diez segundos. Tobías, colgado, aúlla: «¡Pero a mí no me dejen!»",
+        },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "Es falsa. Irene, vuelve. ¡Ayuda!", B: "Es falsa, Irene. Vuelve, que lo necesitamos. ¡Ayuda!", C: "Es de juguete, Irene. Vuelve; con el susto, nadie se acordó de que hay un hombre colgando." },
+            reply: { A: "Irene frena. Mira la granada. «¿Falsa?» Tobías: «¡Me da igual! ¡Tiren!»", B: "Irene frena a diez metros y mira la granada. «¿Falsa?» Tobías, desde el borde: «¡Me da igual, tiren de una vez!»", C: "Irene frena a diez metros y desconfía. «¿De juguete?» Tobías, desde el borde: «¡Me importa un pimiento, tiren!»" },
+            mood: "surprised", next: "granada-tomas",
+          },
+          {
+            id: "tirar",
+            say: { A: "¡La tiro lejos! ¡Corran!", B: "¡La tiro al otro lado! ¡Corran todos!", C: "¡La lanzo al otro lado del canal! ¡Que corra quien quiera!" },
+            reply: { A: "Lanzas la granada. Todos gritan. Alguien llama a la policía.", B: "Lanzas la granada falsa al otro lado del canal. Todos gritan y corren. Alguien llama a la policía a voces.", C: "Lanzas la granada de juguete al otro lado del canal. El paseo se convierte en estampida y alguien llama a la policía a voces." },
+            mood: "terror", end: "granada-huye",
+          },
+          {
+            id: "tomas",
+            say: { A: "Tobías, aguanta. Ya vienen los bomberos.", B: "Tobías, aguanta, ya vienen los bomberos. Todo el paseo los llamó.", C: "Tobías, aguanta: gracias a mi granada, medio cuerpo de bomberos ya viene hacia aquí." },
+            reply: { A: "Se oyen sirenas. Un helicóptero llega. Tobías mira al cielo, increíble.", B: "Se oyen sirenas por todas partes. Un helicóptero aparece sobre el canal. Tobías mira al cielo, incrédulo.", C: "Suenan sirenas desde todas partes y un helicóptero se planta sobre el canal. Tobías mira al cielo y suelta una carcajada de pura incredulidad." },
+            mood: "surprised", end: "granada-helicoptero",
+          },
+        ],
+      },
+      "granada-tomas": {
+        who: "tomas", mood: "furious",
+        line: {
+          A: "Tobías grita desde el borde. «¡Cuando salga, me explicas lo de la granada! ¡Pero tira de mí ahora!» Irene regresa despacio.",
+          B: "Tobías grita desde el borde, furioso y azul de frío. «¡Cuando salga, me explicas lo de la granada! ¡Pero ahora tira de mí!» Irene regresa despacio.",
+          C: "Tobías grita desde el borde, furioso y morado de frío. «¡Cuando salga, me explicas esa granada con todo detalle! ¡Pero ahora tira de mí!» Irene regresa, a pasos cortos.",
+        },
+        options: [
+          {
+            id: "tirar",
+            say: { A: "Perdón. Tiramos los dos. A la una, a las dos, a las tres.", B: "Perdón por el susto. Tiramos los dos: a la una, a las dos, a las tres.", C: "Te debo una explicación y una disculpa. Ahora tiramos los dos: a la una, a las dos y a las tres." },
+            reply: { A: "Tiran juntos. Tobías sale del agua. Se oyen sirenas y un helicóptero.", B: "Tiran juntos y Tobías sale del agua. Justo entonces se oyen sirenas y un helicóptero ilumina el canal.", C: "Tiran juntos y Tobías emerge del canal. En ese preciso instante suenan las sirenas y un helicóptero los baña de luz." },
+            mood: "worried", end: "granada-rescate",
+          },
+          {
+            id: "broma",
+            say: { A: "Es un llavero. Qué susto, ¿no?", B: "Es solo un llavero, Tobías. ¿Qué susto, no?", C: "Es un llavero con ínfulas, Tobías. Si sales, te lo regalo de recuerdo." },
+            reply: { A: "Tobías grita. Irene también. Casi lo sueltas. Alguien llama a la policía.", B: "Tobías grita y a Irene se le escapa un grito más. Casi lo sueltas. Alguien del paseo ya está llamando a la policía.", C: "Tobías aúlla con toda la rabia que le queda e Irene casi lo suelta. Alguien del paseo ya marca el número de la policía." },
+            mood: "furious", end: "granada-helicoptero",
+          },
+          {
+            id: "bomberos",
+            say: { A: "Esperamos a los bomberos. Aguanta.", B: "Mejor esperamos a los bomberos, que traen equipo. Aguanta.", C: "Esperamos a los bomberos, que traen equipo de verdad. Aguanta un poco más, Tobías." },
+            reply: { A: "Tobías se resbala. Cae al agua. Gritos. Los bomberos llegan justo.", B: "Tobías se resbala y cae al agua. Gritos. Los bomberos llegan justo a tiempo y lo sacan con un gancho.", C: "A Tobías se le escapan los dedos y cae al canal. Gritos de todo el paseo. Los bomberos llegan por los pelos y lo pescan con un gancho." },
+            mood: "terror", end: "granada-rescate",
+          },
+        ],
+      },
+
+      // ── gas: Irene te acusa de haberlo empujado.
+      "gas-inicio": {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Irene te señala. «¡Tú lo empujaste!» Sacas el gas pimienta por reflejo. Ella retrocede. «¡No me rocíes! ¡Fuiste tú!»",
+          B: "Irene te señala con el dedo temblando. «¡Tú lo empujaste, lo vi!» Sacas el gas pimienta por reflejo y ella retrocede. «¡No me rocíes! ¡Fuiste tú!»",
+          C: "Irene te señala, descompuesta. «¡Tú lo empujaste, te vi!» Sacas el gas pimienta por puro reflejo y ella retrocede, aterrada. «¡No me rocíes! ¡Fuiste tú, asesino!»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Yo no lo empujé. Acabo de llegar. ¡Ayúdame a sacarlo!", B: "Yo no lo empujé, acabo de llegar. ¡Ayúdame a sacarlo y después me acusas!", C: "No lo empujé: llegué hace treinta segundos. Ayúdame a sacarlo y después me acusas con todos los detalles." },
+            reply: { A: "Irene duda. Mira a Tobías. Tobías grita: «¡No fue él! ¡Me resbalé!»", B: "Irene duda y mira a Tobías. Él, desde el borde, grita con la voz rota: «¡No fue él, me resbalé yo solo!»", C: "Irene duda un segundo. Tobías, desde el borde, lo resuelve con un hilo de voz: «No fue él, Irene… me resbalé yo solo, como un idiota.»" },
+            mood: "worried", next: "gas-irene",
+          },
+          {
+            id: "guardar",
+            say: { A: "Está bien, lo guardo. Pero ayúdame ya.", B: "Está bien, lo guardo. Pero ayúdame ya, que se hunde.", C: "Lo guardo, ves. Pero discutimos después; ahora hay un hombre que se hunde." },
+            reply: { A: "Irene asiente con las manos temblando. Ambos agarran a Tobías.", B: "Irene asiente con las manos temblando y los dos agarran a Tobías de la ropa. Empiezan a tirar.", C: "Irene asiente, sin dejar de temblar, y los dos agarran a Tobías de la camisa. Empiezan a tirar con todas sus fuerzas." },
+            mood: "worried", end: "gas-salvado",
+          },
+          {
+            id: "rociar",
+            say: { A: "¡Cállate y atrás!", B: "¡Cállate y échate atrás, no tengo tiempo para esto!", C: "¡Cállate y atrás! ¡Tu teoría la escucho cuando él esté fuera!" },
+            reply: { A: "Rocías a Irene. Cae al suelo tosiendo. Tobías grita solo.", B: "Rocías a Irene en la cara. Cae al suelo tosiendo, sin ver. Tobías, colgado, grita sin ayuda.", C: "Rocías a Irene sin pensarlo. Cae de rodillas tosiendo, ciega. Tobías, colgado del borde, se queda sin nadie." },
+            mood: "furious", end: "gas-cae",
+          },
+        ],
+      },
+      "gas-irene": {
+        who: "irene", mood: "worried",
+        line: {
+          A: "Irene se seca la cara. «Perdón. Pensé que… Estaba muy asustada.» Tobías: «¡Pueden pedir perdón después!»",
+          B: "Irene se seca la cara con la manga. «Perdón, perdón. Estaba tan asustada que pensé cualquier cosa.» Tobías: «¡Perdónense después, por favor!»",
+          C: "Irene se seca la cara. «Perdóname: el miedo me hizo ver culpables donde no había.» Tobías, desde el borde: «¡Los perdones, mejor después!»",
+        },
+        options: [
+          {
+            id: "salvar",
+            say: { A: "Tranquila. Agárralo de un brazo. Yo del otro.", B: "Tranquila, no pasa nada. Agárralo de un brazo y yo del otro.", C: "Sin rencor, Irene. Agárralo de un brazo, yo del otro, y a la una, a las dos, a las tres." },
+            reply: { A: "Tiran los dos. Tobías sale del agua. Los tres caen al suelo. Se ríen.", B: "Tiran los dos a la vez y Tobías sale del agua. Los tres caen sobre el paseo, empapados, y empiezan a reírse como locos.", C: "Tiran a la vez y Tobías emerge del agua. Los tres ruedan por el paseo, empapados, riendo con esa risa que viene después del miedo." },
+            mood: "smile", end: "gas-salvado",
+          },
+          {
+            id: "policia",
+            say: { A: "Llama a la policía y a la ambulancia. Yo lo sujeto.", B: "Llama a la ambulancia y a la policía. Yo lo sujeto mientras tanto.", C: "Llama a la ambulancia y, ya que estás, a la policía: la versión completa conviene que conste. Yo lo sujeto." },
+            reply: { A: "Irene llama. Llegan las dos. La policía ve tu gas. Pregunta mucho.", B: "Irene llama a las dos. Llegan a la vez; la policía ve tu gas pimienta y pregunta mucho antes de dejarte ir.", C: "Irene llama a las dos y ambas llegan a la vez. La policía repara en tu gas pimienta y hace una larga ronda de preguntas." },
+            mood: "worried", end: "gas-policia",
+          },
+          {
+            id: "gas",
+            say: { A: "Tengo gas. Es normal llevarlo de noche.", B: "Llevo el gas porque es normal llevarlo de noche en esta ciudad.", C: "Llevo el gas porque, de noche, en esta ciudad, es sensato llevarlo. Hoy casi me delata." },
+            reply: { A: "Tobías se ríe. «Hoy te salva.» Irene sonríe. Los dos tiran.", B: "Tobías se ríe a pesar de todo. «Hoy, si me sacas, te salva a ti.» Irene sonríe y los dos tiran de él.", C: "Tobías, entre dientes que castañetean, se ríe. «Hoy te ha delatado; mañana igual te salva.» Irene sonríe y los dos tiran de él." },
+            mood: "laugh", end: "gas-salvado",
+          },
+        ],
+      },
+
+      // ── lápiz: escribes la dirección exacta.
+      "lapiz-inicio": {
+        who: "irene", mood: "terror",
+        line: {
+          A: "Sacas el lápiz y escribes en tu mano: «canal, café, norte, puente». Irene: «¿Qué haces? ¡Ayúdalo! ¡No sé la dirección exacta!»",
+          B: "Sacas el lápiz y escribes en tu mano: «paseo del canal, café, 100 m norte del puente». Irene grita: «¿Qué haces? ¡Ayúdalo! ¡No sé la dirección exacta!»",
+          C: "Sacas el lápiz y anotas en el dorso de la mano: «paseo del canal, café, cien metros al norte del puente». Irene chilla: «¿Escribes? ¡Ayúdalo, ni siquiera sé dónde estamos!»",
+        },
+        options: [
+          {
+            id: "llamar",
+            say: { A: "Estoy escribiendo dónde estamos. Para la ambulancia.", B: "Estoy anotando dónde estamos exactamente, para decírselo a la ambulancia.", C: "Estoy fijando dónde estamos, con precisión, para que la ambulancia no dé vueltas. Ahora llamo." },
+            reply: { A: "Llamas. Lees tu mano. «Ocho minutos.» Irene respira un poco.", B: "Llamas a emergencias y lees tu mano palabra por palabra. «Ocho minutos», dicen. Irene respira un poco.", C: "Llamas y lees tu mano como un parte de guerra. «Ocho minutos», responden. Irene respira por primera vez en un rato." },
+            mood: "worried", next: "lapiz-espera",
+          },
+          {
+            id: "mapa",
+            say: { A: "Irene, dibuja cómo llegar. Para los bomberos.", B: "Irene, dibuja cómo llegar desde el puente. Para los bomberos, que no conocen el paseo.", C: "Irene, esboza el camino desde el puente hasta aquí; los bomberos llegarán antes con un buen croquis." },
+            reply: { A: "Irene dibuja con manos temblando. «Aquí el café. Aquí el puente.» Tobías grita.", B: "Irene dibuja con manos temblorosas. «Aquí el puente, aquí el café, aquí estamos.» Tobías grita pidiendo que se apuren.", C: "Irene traza un mapa nervioso. «El puente, el café, el banco… y nosotros.» Tobías, colgado, grita que dibuje más rápido." },
+            mood: "worried", next: "lapiz-espera",
+          },
+          {
+            id: "nota",
+            say: { A: "Tobías, aguanta. Escribo tu nombre en mi mano.", B: "Tobías, aguanta. Escribo tu nombre en mi mano y se lo digo a los médicos.", C: "Tobías, aguanta, que ya tengo tu nombre apuntado y los médicos sabrán a quién buscan." },
+            reply: { A: "Tobías grita: «¡Deja de escribir! ¡Tira de mí!» Se suelta del borde.", B: "Tobías grita: «¡Deja de escribir y tira de mí!» Se le resbala el dedo y cae al agua.", C: "Tobías aúlla: «¡Menos notas y más manos!» Un dedo se le resbala y cae al agua con un chapoteo." },
+            mood: "terror", end: "lapiz-resbala",
+          },
+        ],
+      },
+      "lapiz-espera": {
+        who: "tomas", mood: "pain",
+        line: {
+          A: "Tobías aguanta con una mano. «Ocho minutos es mucho. Mis dedos no… no pueden más.»",
+          B: "Tobías aguanta como puede con una mano. «Ocho minutos es una eternidad. Mis dedos ya no… no pueden más.»",
+          C: "Tobías aguanta con una sola mano, azulado. «Ocho minutos es una eternidad para estos dedos. No pueden más.»",
+        },
+        options: [
+          {
+            id: "cuerda",
+            say: { A: "Irene, trae la cuerda. Lo atamos a la baranda.", B: "Irene, trae la cuerda del café. Lo atamos a la baranda para que no caiga.", C: "Irene, la cuerda del café: lo atamos a la baranda del paseo y ganamos tiempo hasta que lleguen." },
+            reply: { A: "Irene trae la cuerda. Atan a Tobías. Respira mejor. La ambulancia llega.", B: "Irene trae la cuerda del café. Atan a Tobías por debajo de los brazos a la baranda y respira por fin. La ambulancia llega.", C: "Irene trae la cuerda y entre los dos lo aseguran a la baranda. Tobías respira por fin con calma. La ambulancia llega puntual." },
+            mood: "worried", end: "lapiz-llamada",
+          },
+          {
+            id: "hablar",
+            say: { A: "Cuéntame qué cenaste. Habla, Tobías.", B: "Cuéntame algo, Tobías: qué cenaste, de dónde eres. Habla.", C: "Habla, Tobías: lo que sea, tu mejor anécdota. La voz mantiene despierto al cuerpo." },
+            reply: { A: "Tobías habla. Ocho minutos pasan. Llega la ambulancia.", B: "Tobías habla de su ciudad natal sin parar. Los ocho minutos pasan sin sentir y llega la ambulancia.", C: "Tobías cuenta una anécdota interminable sobre su jefe. Los ocho minutos pasan y llega la ambulancia con él todavía hablando." },
+            mood: "smile", end: "lapiz-llamada",
+          },
+          {
+            id: "sacar",
+            say: { A: "No esperamos. Lo sacamos ahora, entre los dos.", B: "No podemos esperar más: lo sacamos ahora entre los dos.", C: "No esperamos: lo sacamos nosotros, ahora, con todo lo que tengamos." },
+            reply: { A: "Tiran los dos. Tobías sale del agua. Llega la ambulancia.", B: "Tiran los dos y Tobías sale del agua, temblando. Un minuto después llega la ambulancia.", C: "Tiran los dos y Tobías emerge del canal. Un minuto después, la ambulancia frena junto al paseo." },
+            mood: "worried", end: "lapiz-salvado",
+          },
+        ],
+      },
+
+      // ── libro: el libro como compresa y como distracción.
+      "libro-inicio": {
+        who: "irene", mood: "surprised",
+        line: {
+          A: "Tobías está en el suelo, ya fuera del agua, sangrando. Sacas tu libro y se lo pones en la frente. Irene: «¿Un libro? ¡Eso no sirve!»",
+          B: "Tobías ya está fuera del agua, tumbado y sangrando de la frente. Sacas tu libro y se lo presionas contra la herida. Irene: «¿Un libro? ¡Eso no es una venda!»",
+          C: "Tobías ya está fuera del agua, tumbado y sangrando de la frente. Sacas tu libro y se lo presionas contra la herida. Irene, desencajada: «¿Un libro? ¡Eso no es una gasa, es literatura!»",
+        },
+        options: [
+          {
+            id: "presionar",
+            say: { A: "Presionar frena la sangre. Es lo único que tengo.", B: "Presionar frena la sangre, y es lo único que tengo a mano.", C: "Presionar frena la hemorragia, y la tapa dura es lo único limpio que llevo. Hoy la literatura sirve." },
+            reply: { A: "Tobías gime. «Duele… pero para.» Irene mira el libro con respeto.", B: "Tobías gime. «Duele, pero la sangre para.» Irene mira el libro con un respeto que antes no tenía.", C: "Tobías gime, aliviado. «Duele, pero la sangre para.» Irene mira el libro con el respeto de un converso." },
+            mood: "pain", next: "libro-herida",
+          },
+          {
+            id: "ambulancia",
+            say: { A: "Tú presiona. Yo llamo a la ambulancia.", B: "Irene, presiona tú con el libro. Yo llamo a la ambulancia.", C: "Irene, presiona tú con el libro y no lo muevas. Yo llamo a la ambulancia." },
+            reply: { A: "Irene presiona con las dos manos. Tú llamas. «Cinco minutos.»", B: "Irene presiona con las dos manos, llorando. Llamas a emergencias: «Cinco minutos», dicen.", C: "Irene presiona con las dos manos, concentradísima. Llamas a emergencias: «Cinco minutos», responden, sin saber del libro." },
+            mood: "worried", next: "libro-herida",
+          },
+          {
+            id: "leer",
+            say: { A: "Tobías, te leo un poco. Para que no te duermas.", B: "Tobías, te leo un párrafo. Hay que mantenerte despierto.", C: "Tobías, te leo un párrafo en voz alta; el truco es no dejar que cierres los ojos, y este libro es aburrido." },
+            reply: { A: "Lees. Tobías sonríe. «Qué aburrido.» Irene se ríe llorando.", B: "Lees en voz alta. Tobías sonríe con los labios morados. «Qué aburrido…» Irene se ríe llorando.", C: "Lees un párrafo solemne. Tobías sonríe, tiritando. «Qué soporífero.» Irene se ríe y llora a la vez, sin saber cuál ganar." },
+            mood: "laugh", end: "libro-regalo",
+          },
+        ],
+      },
+      "libro-herida": {
+        who: "tomas", mood: "sleepy",
+        line: {
+          A: "Tobías tiene los ojos casi cerrados. «Tengo sueño… Solo un momento.» Irene: «¡No te duermas!»",
+          B: "Tobías cierra los ojos poco a poco. «Tengo mucho sueño… solo un momento.» Irene lo sacude: «¡No te duermas, Tobías!»",
+          C: "Tobías deja caer los párpados. «Tengo mucho sueño; solo un momento.» Irene lo sacude suavemente: «¡Ni se te ocurra dormirte!»",
+        },
+        options: [
+          {
+            id: "hablar",
+            say: { A: "Tobías, ¿de qué es tu libro favorito? Cuéntame.", B: "Tobías, cuéntame cuál es tu libro favorito. Sin dormirte.", C: "Tobías, cuéntame tu libro favorito y por qué. Si te duermes en la mitad, lo repetimos." },
+            reply: { A: "Tobías habla despacio. Despierto. Llega la ambulancia.", B: "Tobías habla despacio de una novela que se sabe de memoria. Despierto. Llega la ambulancia y se lo llevan hablando.", C: "Tobías narra una novela entera con voz débil, despierto de puro amor al argumento. La ambulancia llega y se lo llevan todavía contando." },
+            mood: "smile", end: "libro-ambulancia",
+          },
+          {
+            id: "regalar",
+            say: { A: "El libro es tuyo. Léelo cuando salgas del hospital.", B: "El libro es tuyo. Léelo cuando salgas del hospital; tendrás tiempo.", C: "Quédate con el libro: cuando salgas del hospital tendrás tiempo, y te debo una página manchada de sangre." },
+            reply: { A: "Tobías sonríe. Lo abraza. Llega la ambulancia.", B: "Tobías sonríe y abraza el libro contra el pecho. La ambulancia llega y se lo lleva con él.", C: "Tobías sonríe y abraza el libro con la mano libre. La ambulancia llega y se lo lleva con libro, sangre y sonrisa." },
+            mood: "love", end: "libro-regalo",
+          },
+          {
+            id: "irene",
+            say: { A: "Irene, háblale tú. Dile cosas buenas.", B: "Irene, háblale tú. Dile cosas buenas, lo que sea.", C: "Irene, háblale tú de lo que más quiera oír: que lo quieren, que lo esperan. Lo que sea, pero habla." },
+            reply: { A: "Irene le habla al oído. Tobías sonríe. La ambulancia llega.", B: "Irene le habla al oído de su familia y de su perro. Tobías sonríe con los ojos cerrados. La ambulancia llega.", C: "Irene le susurra todo lo que lo esperan en casa. Tobías sonríe con los ojos cerrados, pero escucha. La ambulancia llega." },
+            mood: "love", end: "libro-ambulancia",
+          },
+        ],
+      },
+
+      // ── corazón: Tobías deja de luchar y se calma.
+      "corazon-inicio": {
+        who: "irene", mood: "sad",
+        line: {
+          A: "Usas el corazón. Irene deja de gritar. Tobías deja de luchar contra el agua. Los dos te miran. «Tengo mucho miedo», dice él, bajito.",
+          B: "Usas el corazón. Irene deja de gritar y Tobías deja de pelear con el agua. Los dos te miran en silencio. «Tengo mucho miedo», dice él, muy bajito.",
+          C: "Usas el corazón. Irene deja de gritar; Tobías, de debatirse contra el agua. Los dos te miran y la noche se detiene un segundo. «Tengo muchísimo miedo», dice él, casi sin voz.",
+        },
+        options: [
+          {
+            id: "calmar",
+            say: { A: "Lo sé. Yo estoy aquí. Respira conmigo.", B: "Lo sé, Tobías. Yo estoy aquí. Respira conmigo, despacio.", C: "Lo sé, y es normal. Yo estoy aquí y no me voy. Respira conmigo, despacio, como si no pasara nada." },
+            reply: { A: "Tobías respira. Su mano deja de temblar. «Gracias.»", B: "Tobías respira contigo, una vez, dos veces. Su mano deja de temblar. «Gracias. Ya puedo.»", C: "Tobías respira contigo, una vez, dos veces, tres. Su mano deja de temblar sobre la piedra. «Gracias. Ahora sí puedo.»" },
+            mood: "love", next: "corazon-tomas",
+          },
+          {
+            id: "irene",
+            say: { A: "Irene, tú también. Agárrame la mano.", B: "Irene, tú también respira. Agárrame de la mano y ayúdame.", C: "Irene, tú también: respira y agárrame de la mano. Entre los tres, esto sale." },
+            reply: { A: "Irene te toma de la mano. Llora, pero está tranquila. «Dime qué hago.»", B: "Irene te toma de la mano y llora, pero ya sin pánico. «Dime qué hago y lo hago.»", C: "Irene te toma de la mano, con lágrimas y sin pánico. «Dime qué hago, y lo hago bien.»" },
+            mood: "love", next: "corazon-tomas",
+          },
+          {
+            id: "llamar",
+            say: { A: "Voy a llamar a la ambulancia. Quédate con él.", B: "Voy a llamar a la ambulancia. Irene, quédate con él.", C: "Voy a llamar a la ambulancia. Irene, quédate con él y no le quites los ojos de encima." },
+            reply: { A: "Irene se arrodilla junto al borde. Le habla bajito. Tobías sonríe.", B: "Irene se arrodilla junto al borde y le habla bajito, acariciándole la mano. Tobías sonríe, tranquilo.", C: "Irene se arrodilla junto al borde y le habla bajito, sin soltarle la mano. Tobías sonríe, más tranquilo de lo que nadie esperaba." },
+            mood: "love", end: "corazon-ambulancia",
+          },
+        ],
+      },
+      "corazon-tomas": {
+        who: "tomas", mood: "smitten",
+        line: {
+          A: "Tobías mira a Irene. «Si salgo de esta, te invito a cenar. En serio.» Irene se ríe llorando: «Primero sal.»",
+          B: "Tobías mira a Irene con los ojos brillantes. «Si salgo de esta, te invito a cenar, en serio.» Irene se ríe entre lágrimas: «Primero sal, tonto.»",
+          C: "Tobías mira a Irene con una ternura inesperada. «Si salgo de esta, te invito a cenar; llevo un año queriéndote decir esto.» Irene se ríe llorando: «Primero sal, tonto.»",
+        },
+        options: [
+          {
+            id: "tirar",
+            say: { A: "Pues a salir. A la una, a las dos, a las tres.", B: "Pues a salir de ahí. A la una, a las dos, a las tres.", C: "Entonces hay que salir de ahí con urgencia romántica. A la una, a las dos y a las tres." },
+            reply: { A: "Tiran los tres. Tobías sale. Irene lo abraza. Llora y ríe.", B: "Tiran los tres a la vez. Tobías sale del agua e Irene se lanza a abrazarlo, llorando y riendo.", C: "Tiran los tres a coro. Tobías emerge del canal e Irene se le cuelga del cuello, llorando y riendo a partes iguales." },
+            mood: "love", end: "corazon-abrazo",
+          },
+          {
+            id: "beso",
+            say: { A: "Irene, un beso para que no suelte.", B: "Irene, un beso de ánimo para que no se suelte.", C: "Irene, un beso de motivación; en estas circunstancias, la ciencia lo recomienda." },
+            reply: { A: "Irene lo besa en la frente. Tobías sonríe. Llegan los bomberos.", B: "Irene le da un beso en la frente, junto a la herida. Tobías sonríe. Llegan los bomberos y lo sacan sin esfuerzo.", C: "Irene le da un beso suave en la frente, junto a la herida. Tobías sonríe como un tonto. Llegan los bomberos y lo sacan en dos movimientos." },
+            mood: "love", end: "corazon-beso",
+          },
+          {
+            id: "ambulancia",
+            say: { A: "Primero, la ambulancia. La cena, después.", B: "Primero la ambulancia, Tobías. La cena, después de que te cosan.", C: "Primero la ambulancia y luego los planes. La cena, cuando te hayan cosido la frente." },
+            reply: { A: "Tobías se ríe. «Trato.» La ambulancia llega. Irene sube con él.", B: "Tobías se ríe entre dientes. «Trato hecho.» La ambulancia llega y Irene sube con él, sin soltarle la mano.", C: "Tobías se ríe, tiritando. «Trato hecho.» La ambulancia llega y Irene sube con él, sin soltarle la mano un solo segundo." },
+            mood: "love", end: "corazon-ambulancia",
+          },
+        ],
+      },
+    },
+    ends: {
+      salvado: { text: { A: "Tobías está en el suelo, vivo. Irene lo abraza. Llega la ambulancia.", B: "Tobías yace en el paseo, tosiendo agua pero vivo. Irene lo abraza llorando. Llega la ambulancia con las luces encendidas.", C: "Tobías yace en el paseo, tosiendo agua del canal, pero vivo. Irene lo abraza sin soltarlo y llora. La ambulancia llega con las luces encendidas." }, change: "ambulancia", recap: "Sacaste a Tobías del canal y llegó la ambulancia." },
+      resbala: { text: { A: "Tobías cae al agua. Un paseante salta y lo saca. Todos gritan.", B: "Tobías cae al agua. Un paseante valiente salta, lo agarra y lo trae hasta el borde entre gritos.", C: "Tobías se hunde. Un paseante salta de inmediato, lo agarra por la camisa y lo lleva hasta el borde entre gritos, mientras tú maldices el tiempo perdido." }, change: "cae", recap: "Tobías cayó al canal por aguantar poco y otro lo rescató." },
+      llamada: { text: { A: "Los vecinos sacan a Tobías. La ambulancia llega rápido. Tú diste la dirección.", B: "Los paseantes sacan a Tobías entre todos. La ambulancia llega rápido: tú diste la dirección exacta.", C: "Los paseantes forman una cadena y sacan a Tobías. La ambulancia llega en tiempo récord: la dirección exacta fue tuya." }, change: "llama", recap: "Tu llamada con la dirección exacta salvó tiempo valioso." },
+      "cuchillo-policia": { text: { A: "Llega la policía. Ven el cuchillo. Irene explica. Tobías ya se ahogó o no. Todo es caos.", B: "Llega la policía y lo primero que ve es el cuchillo. Mientras Irene explica a gritos, otros pescan a Tobías del agua.", C: "Llega la policía, repara en el cuchillo y apunta. Mientras Irene intenta explicar la cuerda, otros paseantes pescan a Tobías del agua." }, change: "policia", recap: "Tu cuchillo confundió a todos mientras Tobías seguía en el agua." },
+      "cuchillo-libre": { text: { A: "Tobías sale del agua, libre. Irene te abraza. Llega la ambulancia. Guardas el cuchillo.", B: "Tobías sale del agua, libre de la cuerda. Irene te abraza llorando. Llega la ambulancia y guardas el cuchillo.", C: "Tobías sale del agua, libre de la cuerda y de la muerte. Irene te abraza sin entender cómo. Guardas el cuchillo mientras llega la ambulancia." }, change: "ambulancia", recap: "Cortaste la cuerda que ahogaba a Tobías." },
+      "cuchillo-herida": { text: { A: "Tobías sale. Tú sangras del brazo. Llega la ambulancia para los dos.", B: "Tobías sale del canal. Tú sangras del brazo, con un corte feo. La ambulancia llega para los dos.", C: "Tobías sale del canal y tú te quedas sangrando del antebrazo. La ambulancia llega con dos pacientes y un solo cuchillo." }, change: "ambulancia", recap: "Cortaste la cuerda de Tobías con prisa y terminaste herido." },
+      "pistola-salvado": { text: { A: "Tobías sale del agua. Irene te mira: «Guarda eso.» Llega la ambulancia.", B: "Tobías sale del agua, tosiendo. Irene te mira con ojos enormes: «Gracias, y guarda eso.» Llega la ambulancia.", C: "Tobías sale del agua, tosiendo. Irene te mira con lágrimas: «Gracias. Y, por favor, guarda eso.» Llega la ambulancia." }, change: "ambulancia", recap: "Con la pistola a un lado, sacaste a Tobías del canal." },
+      "pistola-policia": { text: { A: "La policía te apunta. Irene grita que lo ayudaste. Tobías sale gracias a un paseante.", B: "La policía te apunta y levantas las manos. Irene grita que lo ayudaste. Entre tanto, otro paseante saca a Tobías.", C: "La policía te apunta y alzas las manos. Irene grita que lo ayudaste, pero nadie la oye. Entre tanto, un paseante saca a Tobías del agua." }, change: "manos-arriba", recap: "La pistola junto al canal trajo una patrulla y las manos arriba." },
+      "granada-huye": { text: { A: "El paseo se vacía. Tobías sigue colgado. Alguien llama a los bomberos.", B: "El paseo se vacía entre gritos. Tobías sigue colgado del borde. Alguien, lejos, llama a los bomberos.", C: "El paseo se vacía en estampida. Tobías sigue colgado del borde; a lo lejos, un valiente llama a los bomberos." }, change: "huye", recap: "La granada vació el paseo y dejó a Tobías colgado." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina el canal. Los bomberos sacan a Tobías. Nadie cree lo de la granada.", B: "Un helicóptero ilumina el canal. Los bomberos sacan a Tobías con un gancho. Nadie cree lo de la granada falsa.", C: "Un helicóptero inunda el canal de luz. Los bomberos sacan a Tobías con un gancho. Lo de la granada falsa es una frase que ya nadie escucha." }, change: "helicoptero", recap: "La granada trajo un helicóptero y bomberos al canal." },
+      "granada-rescate": { text: { A: "Los bomberos sacan a Tobías. Irene y tú explican lo de la granada. Tobías ríe.", B: "Los bomberos sacan a Tobías del agua. Irene y tú explican lo de la granada falsa. Tobías, en la camilla, ríe.", C: "Los bomberos sacan a Tobías del agua. Irene y tú explican a los agentes lo de la granada de juguete; Tobías, en la camilla, ríe sin parar." }, change: "ambulancia", recap: "Tobías fue rescatado por los bomberos que llamó tu granada." },
+      "gas-cae": { text: { A: "Irene llora en el suelo. Tobías grita solo. Un paseante lo saca. Todos te miran mal.", B: "Irene llora en el suelo, ciega. Tobías grita solo, hasta que un paseante lo saca. Todos te miran mal.", C: "Irene llora en el suelo, ciega y furiosa. Tobías grita solo hasta que un paseante lo rescata. Todos te miran con un juicio silencioso." }, change: "cae", recap: "Rociaste a Irene y Tobías tuvo que salvarse sin ti." },
+      "gas-salvado": { text: { A: "Tobías sale. Los tres ríen en el suelo. Guardas el gas. Llega la ambulancia.", B: "Tobías sale del agua y los tres ríen en el suelo del paseo. Guardas el gas pimienta. Llega la ambulancia.", C: "Tobías sale del agua y los tres ríen en el suelo del paseo, empapados. Guardas el gas, hoy desmentido; la ambulancia llega a una escena feliz." }, change: "ambulancia", recap: "Aclaraste el malentendido y sacaste a Tobías con Irene." },
+      "gas-policia": { text: { A: "Llega la ambulancia con la policía. Ven tu gas. Todos explican. Tobías sobrevive.", B: "Llega la ambulancia con la policía. Ven tu gas y preguntan. Todos explican, y Tobías sobrevive.", C: "Ambulancia y policía llegan a la vez. Reparan en tu gas y preguntan largo. Todos explican; lo importante es que Tobías sobrevive." }, change: "policia", recap: "La policía interrogó a todos mientras Tobías se recuperaba." },
+      "lapiz-resbala": { text: { A: "Tobías cae al agua. Un paseante salta. Lo sacan. Tu nota no sirvió.", B: "Tobías cae al agua mientras escribes. Un paseante salta y lo saca. Tu nota no sirvió de nada.", C: "Tobías se hunde mientras apuntas su nombre. Un paseante salta y lo rescata. Tu nota solo sirvió para recordar que no era el momento." }, change: "cae", recap: "Escribiste mientras Tobías se soltaba del borde." },
+      "lapiz-llamada": { text: { A: "Llega la ambulancia. Lees tu mano. Tobías se va hablando con los paramédicos.", B: "Llega la ambulancia puntual. Lees tu mano a los paramédicos y Tobías se va hablando con ellos.", C: "Llega la ambulancia puntual gracias a tu mano escrita. Los paramédicos se llevan a Tobías, que no deja de hablar de su jefe." }, change: "llama", recap: "La dirección escrita en tu mano guió a la ambulancia." },
+      "lapiz-salvado": { text: { A: "Tobías sale del agua. Llega la ambulancia con la dirección de tu mano.", B: "Tobías sale del agua gracias a los dos. Llega la ambulancia con la dirección exacta de tu mano.", C: "Tobías sale del agua gracias a tu decisión. La ambulancia llega guiada por la dirección que escribiste en tu mano." }, change: "ambulancia", recap: "Escribiste la dirección y sacaste a Tobías entre los dos." },
+      "libro-regalo": { text: { A: "Tobías se va con tu libro en el pecho. Irene sonríe. Te dice gracias.", B: "Tobías se va en la camilla con tu libro en el pecho. Irene sonríe y te da las gracias con la mano.", C: "Tobías se va en la camilla con tu libro apretado contra el pecho. Irene te sonríe desde la ambulancia y articula un «gracias» silencioso." }, change: "sonrie", recap: "Tobías se fue a urgencias con tu libro en el pecho." },
+      "libro-ambulancia": { text: { A: "La ambulancia llega. Tobías habla con los médicos. Irene te abraza.", B: "La ambulancia llega mientras Tobías todavía habla. Los médicos lo cuidan e Irene te abraza fuerte.", C: "La ambulancia llega mientras Tobías aún cuenta su novela. Los médicos lo cuidan e Irene te abraza como a un viejo amigo." }, change: "ambulancia", recap: "Tu libro mantuvo despierto a Tobías hasta que llegó la ambulancia." },
+      "corazon-abrazo": { text: { A: "Irene y Tobías se abrazan empapados. Tú sonríes. Llega la ambulancia.", B: "Irene y Tobías se abrazan empapados en el suelo. Tú sonríes. La ambulancia llega y los encuentra riendo.", C: "Irene y Tobías se abrazan empapados sobre las piedras. Sonríes. La ambulancia llega y los encuentra riendo y llorando a la vez." }, change: "abraza", recap: "El corazón salvó a Tobías y juntó a dos amigos en un abrazo." },
+      "corazon-beso": { text: { A: "Irene besa a Tobías. Los bomberos lo sacan. Todo el paseo aplaude.", B: "Irene besa a Tobías en la frente. Los bomberos lo sacan en un minuto y todo el paseo aplaude.", C: "Irene besa a Tobías en la frente; los bomberos lo sacan en un abrir y cerrar de ojos y todo el paseo aplaude, sin saber de qué." }, change: "beso", recap: "Un beso en la frente cerró el rescate de Tobías." },
+      "corazon-ambulancia": { text: { A: "La ambulancia llega. Irene sube con Tobías. Él sonríe. Tú te quedas.", B: "La ambulancia llega y Irene sube con Tobías, sin soltarle la mano. Él sonríe. Tú te quedas en el paseo.", C: "La ambulancia llega y Irene sube con Tobías, sin soltarle la mano. Él sonríe con los labios morados. Tú te quedas en el paseo, con las manos vacías y llenas." }, change: "ambulancia", recap: "Calmaste a Tobías hasta que llegó la ambulancia." },
+    },
+    speak: {
+      A1: "¿Sabes nadar?",
+      A2: "¿Qué número llamas en tu país si hay una emergencia?",
+      B1: "¿Cómo ayudarías a alguien que cae al agua si no sabes nadar?",
+      B2: "¿Qué información das primero cuando llamas a emergencias?",
+      C1: "¿Cómo se mantiene la calma en una emergencia cuando todo depende de ti?",
+      C2: "¿Qué distingue al héroe improvisado del imprudente cuando la vida de otro está en juego?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "grita", speak: { A: "¿Qué herramientas llevas en tu mochila?", B: "¿Alguna vez una herramienta tuya salvó una situación?", C: "¿Cómo se distingue un instrumento de un arma cuando solo hay segundos para decidir?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Obedeces rápido si alguien te da una orden?", B: "¿Hasta qué punto el miedo hace obedecer a la gente?", C: "¿Qué puede lograr la autoridad que da el miedo, y qué no podrá lograr jamás?" } },
+      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Qué haces si todos corren y tú no sabes por qué?", B: "¿Alguna vez saliste corriendo sin saber de qué huías?", C: "¿Qué dice de nosotros que ante el pánico olvidemos al que más ayuda necesita?" } },
+      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Culpas rápido a otros cuando tienes miedo?", B: "¿Acusaste alguna vez a alguien por miedo y te equivocaste?", C: "¿Cómo se frena la tendencia a buscar culpables cuando el miedo manda?" } },
+      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Escribes tu dirección en tu agenda?", B: "¿Sabrías decirle a un operador de emergencias dónde estás ahora mismo?", C: "¿Qué datos sobre tu entorno deberías conocer de memoria por si ocurre algo?" } },
+      libro: { start: "libro-inicio", fx: "curioso", speak: { A: "¿Qué cosa de tu bolso sirve para ayudar?", B: "¿Qué objeto cotidiano te ha sacado de un apuro?", C: "¿Qué enseña una emergencia sobre el valor práctico de las cosas más inútiles?" } },
+      corazon: { start: "corazon-inicio", fx: "calma", speak: { A: "¿Quién te calma cuando tienes miedo?", B: "¿Qué le dirías a un amigo para calmarlo en una emergencia?", C: "¿Por qué las confesiones más sinceras aparecen justo cuando creemos que no hay otra salida?" } },
+    },
+  },
+];
+
+// Dónde está cada escena: la persona de pie en (x, z) mirando a `face`, y el círculo del alumno delante.
+export const PLACEMENTS = {
+  "centro-choque": { x: 41.5, z: -6.4, face: -Math.PI / 2, circle: { x: 39.5, z: -6.4 } },
+  "centro-desmayo": { x: 28, z: 6.4, face: -Math.PI / 2, circle: { x: 26, z: 6.4 } },
+  "mercado-robo": { x: -110.5, z: -12.5, face: Math.PI / 2, circle: { x: -108.6, z: -12.5 } },
+  "mercado-inspectores": { x: -68, z: 12, face: 0, circle: { x: -68, z: 13.8 } },
+  "costa-discusion": { x: 90.2, z: -26, face: Math.PI / 2, circle: { x: 92.2, z: -26 } },
+  "costa-canal": { x: 94.6, z: 34, face: -Math.PI / 2, circle: { x: 92.7, z: 34 } },
+};
+
+export default encounters;

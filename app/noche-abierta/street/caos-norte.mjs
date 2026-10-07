@@ -484,7 +484,7 @@ const encounters = [
         options: [
           {
             id: "corazon-hermana",
-            say: { A: "Nadia, míralo. Él quiere al gato. Dale una oportunidad.", B: "Nadia, míralo: quiere a ese gato de verdad. Dales una oportunidad a los dos.", C: "Nadia, míralo bien: quiere a ese gato más de lo que admite. Dales una oportunidad a los dos." },
+            say: { A: "Nadia, míralo. Él quiere al gato. Dejen que se quede una semana.", B: "Nadia, míralo: quiere a ese gato de verdad. Dales una oportunidad a los dos.", C: "Nadia, míralo bien: quiere a ese gato más de lo que admite. Dales una oportunidad a los dos." },
             reply: { A: "Nadia abraza a su hermano. «Está bien. Humo se queda.»", B: "Nadia abraza a su hermano de golpe. «Está bien, tonto. Humo se queda.»", C: "Nadia abraza a su hermano sin avisar. «Está bien, tonto. Humo se queda. Pero duerme contigo.»" },
             mood: "love", end: "corazon-abrazo",
           },
@@ -1160,9 +1160,9 @@ const encounters = [
       "corazon-beto": {
         who: "beto", mood: "pain",
         line: {
-          A: "Beto abre los ojos. Ve a Ofelia llorando. «Señora. Usted me tapó con su abrigo. Yo lo sentí. Gracias.»",
-          B: "Beto abre los ojos y ve a Ofelia llorando sobre él. «Señora, usted me tapó con su abrigo. Lo sentí, aunque no podía hablar. Gracias.»",
-          C: "Beto abre los ojos y encuentra a Ofelia llorando sobre él. «Señora, usted me tapó con su abrigo. Lo sentí, aunque no pudiera decirlo. Gracias.»",
+          A: "Beto abre los ojos. Ve a Ofelia llorando. «Señora. Usted me tapó con su abrigo. Yo lo noté. Gracias.»",
+          B: "Beto abre los ojos y ve a Ofelia llorando sobre él. «Señora, usted me tapó con su abrigo. Lo noté, aunque no podía hablar. Gracias.»",
+          C: "Beto abre los ojos y encuentra a Ofelia llorando sobre él. «Señora, usted me tapó con su abrigo. Lo noté, aunque no pudiera decirlo. Gracias.»",
         },
         options: [
           {
@@ -1365,7 +1365,7 @@ const encounters = [
           },
           {
             id: "disculpa",
-            say: { A: "Pídale perdón a ella. Después hablamos.", B: "Primero pídale perdón a ella. Después lo que quiera.", C: "Antes de hablar de su trabajo, pídale perdón a ella. Después, lo que usted quiera." },
+            say: { A: "Que le pida perdón a ella. Después hablamos.", B: "Primero que le pida perdón a ella. Después lo que quiera.", C: "Antes de hablar de su trabajo, que le pida perdón a ella. Después, lo que usted quiera." },
             reply: { A: "Gustavo mira a Ivana. «Perdón. Me pasé.» Ivana: «Sí. Se pasó.»", B: "Gustavo mira a Ivana y le cuesta. «Perdón. Me pasé.» Ivana: «Sí. Se pasó mucho.»", C: "A Gustavo le cuesta mirarla. «Perdón. Me he pasado.» Ivana: «Sí. Se ha pasado mucho. Pero vale.»" },
             mood: "sad", end: "suelta-fin",
           },
@@ -1650,7 +1650,7 @@ const encounters = [
           },
           {
             id: "lapiz-romper",
-            say: { A: "Gustavo, pida perdón y rompo el papel.", B: "Gustavo, pídale perdón y rompo el papel delante de usted.", C: "Gustavo, pídale perdón de verdad y rompo el papel aquí mismo." },
+            say: { A: "Gustavo, pida perdón y rompo el papel.", B: "Gustavo, pida perdón y rompo el papel delante de usted.", C: "Gustavo, pida perdón de verdad y rompo el papel aquí mismo." },
             reply: { A: "Gustavo mira a Ivana. «Perdón. De verdad.» Rompes el papel.", B: "Gustavo mira a Ivana. «Perdón. De verdad, perdón.» Rompes el papel en dos.", C: "Gustavo mira a Ivana a los ojos. «Perdón. De verdad.» Rompes el papel en cuatro." },
             mood: "sad", end: "lapiz-perdon",
           },
@@ -1743,7 +1743,7 @@ const encounters = [
           {
             id: "corazon-hijos",
             say: { A: "¿Cómo se llaman sus hijos?", B: "¿Cómo se llaman sus hijos, Gustavo?", C: "Cuénteme: ¿cómo se llaman sus hijos, Gustavo?" },
-            reply: { A: "«Lucía y Tomás.» Gustavo sonríe por fin. «Lucía pega pegatinas en todas partes.»", B: "«Lucía y Tomás.» Gustavo sonríe por primera vez. «Lucía pega pegatinas por toda la casa.»", C: "«Lucía y Tomás.» Gustavo sonríe por primera vez en la noche. «Lucía pega pegatinas por toda la casa. Y nunca la he agarrado del brazo.»" },
+            reply: { A: "«Lucía y Pablo.» Gustavo sonríe por fin. «Lucía pega pegatinas en todas partes.»", B: "«Lucía y Pablo.» Gustavo sonríe por primera vez. «Lucía pega pegatinas por toda la casa.»", C: "«Lucía y Pablo.» Gustavo sonríe por primera vez en la noche. «Lucía pega pegatinas por toda la casa. Y nunca la he agarrado del brazo.»" },
             mood: "love", next: "corazon-escalon",
           },
         ],
@@ -1967,7 +1967,7 @@ const encounters = [
           {
             id: "no-justo",
             say: { A: "No es justo. Pero seguirla toda la noche tampoco. Váyase a casa.", B: "No es justo, no. Pero seguirla toda la noche tampoco lo es. Váyase a casa.", C: "No, no es justo. Pero seguirla por media ciudad tampoco lo es. Váyase a casa y mañana lo mira con otros ojos." },
-            reply: { A: "Mateo se calla. Deja el celular en el suelo. «Tienes razón.»", B: "Mateo se queda callado un momento. Deja el celular en el suelo. «Tienes razón.»", C: "Mateo guarda silencio. Deja el celular en el suelo, con cuidado. «Tienes razón. No sé en qué momento me convertí en esto.»" },
+            reply: { A: "Mateo se calla. Deja el celular en el suelo. «Tienes razón.»", B: "Mateo se queda callado un momento. Deja el celular en el suelo. «Tienes razón.»", C: "Mateo guarda silencio. Deja el celular en el suelo, con cuidado. «Tienes razón. No sé en qué momento llegué a esto.»" },
             mood: "sad", end: "taxi",
           },
         ],
@@ -2528,3 +2528,862 @@ const encounters = [
       corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Perdonas rápido?", B: "¿Cuándo fue la última vez que perdonaste a alguien que te gritó?", C: "¿Es posible querer a alguien y, por eso mismo, dejarlo?" } },
     },
   },
+
+  // ───────────────────────────── CLINICA 1 ─────────────────────────────
+  {
+    id: "clinica-urgencias",
+    kind: "escena",
+    district: "clinica",
+    title: "Entrada de urgencias",
+    verb: "EXIGIR",
+    goal: "Pedir atención urgente, describir una herida, discutir con quien aplica una norma y decidir si avisar a la policía.",
+    cast: [
+      {
+        id: "marta", name: "Marta", role: "Enfermera de admisión",
+        age: "adult", body: "f", build: "average", height: 1.62,
+        hair: "bun", hairColor: "#2a1c14", skin: "#d9a77c",
+        top: "scrubs", topColor: "#4f9a8a", bottom: "pants", bottomColor: "#4f9a8a",
+        extras: ["glasses"], pose: "stand",
+      },
+      {
+        id: "hugo", name: "Hugo", role: "Herido sentado",
+        age: "young", body: "m", build: "slim", height: 1.77,
+        hair: "short", hairColor: "#1a1410", skin: "#b07a56",
+        top: "tshirt", topColor: "#8a2d2d", bottom: "jeans", bottomColor: "#20242c",
+        extras: ["blood-shirt"], pose: "injured",
+      },
+    ],
+    start: "inicio",
+    nodes: {
+      inicio: {
+        who: "marta", mood: "worried",
+        line: {
+          A: "En la puerta de urgencias, un joven está sentado en el suelo. Se agarra el costado: tiene sangre en la camiseta. La enfermera dice: «Sin documento no puedo registrarlo. Hay cola.»",
+          B: "En la entrada de urgencias, un joven sentado en el suelo se aprieta el costado; la camiseta está empapada de sangre. La enfermera de admisión insiste: «Sin documento no puedo registrarlo. Hay seis personas antes que él.»",
+          C: "En la entrada de urgencias, un joven se desliza contra la pared, apretándose el costado con una camiseta que ya no es blanca ni roja del todo. La enfermera de admisión no levanta la vista de la pantalla: «Sin documento no hay registro, y hay seis personas antes que él.»",
+        },
+        options: [
+          {
+            id: "urgente",
+            say: { A: "Está sangrando mucho. Es urgente. Llame a un médico.", B: "Está sangrando mucho, esto es urgente. Llame a un médico ahora, el papeleo después.", C: "Está perdiendo sangre ahora mismo. Esto es una urgencia, no una cola: llame a un médico y el papeleo, después." },
+            reply: { A: "Marta mira el costado de Hugo. Se pone pálida. «Un momento.»", B: "Marta por fin mira la camiseta de Hugo y se queda sin color. «Un momento. Un momento.»", C: "Marta levanta por fin la vista, ve la camiseta de Hugo y las normas se le caen de golpe. «Un momento. Un momento, por favor.»" },
+            mood: "worried", next: "herida",
+          },
+          {
+            id: "documento",
+            say: { A: "Hugo, ¿tienes tu documento? Marta lo necesita.", B: "Hugo, ¿llevas algún documento encima? Marta lo necesita para registrarte.", C: "Hugo, ¿llevas algún documento encima? Si no, dile a Marta tu nombre y empezamos por ahí." },
+            reply: { A: "Hugo niega con la cabeza. «No. Me fui corriendo de una pelea.»", B: "Hugo niega, sin fuerzas. «No. Me fui corriendo de una pelea y lo dejé todo.»", C: "Hugo niega con un gesto cansado. «Nada. Me fui corriendo de una pelea y lo dejé todo tirado.»" },
+            mood: "pain", next: "documento",
+          },
+          {
+            id: "medico",
+            say: { A: "¡Necesitamos un médico aquí! ¡Una camilla!", B: "¡Necesitamos un médico aquí fuera! ¡Una camilla, por favor!", C: "¡Un médico, por favor, y una camilla! ¡Aquí fuera hay un herido que no puede esperar!" },
+            reply: { A: "Dos enfermeros salen corriendo con una camilla. Marta suspira.", B: "Dos enfermeros salen corriendo con una camilla. Marta se tapa la cara: «Perdón. Es el reglamento.»", C: "Dos enfermeros salen corriendo con una camilla. Marta se tapa la cara con las manos: «Perdón. El reglamento me gana siempre.»" },
+            mood: "surprised", end: "camilla",
+          },
+        ],
+        items: {
+          corazon: {
+            act: CORAZON,
+            say: { A: "Marta, se nota que está cansada. Pero Hugo nos necesita.", B: "Marta, se nota que lleva un turno larguísimo. Pero Hugo nos necesita a las dos.", C: "Marta, se le nota el turno larguísimo. Pero ahora mismo Hugo nos necesita a las dos, y yo sola no puedo." },
+            reply: { A: "Marta respira. «Tienes razón. Perdón.» Se agacha junto a Hugo.", B: "Marta respira hondo. «Tienes razón. Perdón.» Se agacha junto a Hugo.", C: "Marta cierra los ojos un segundo. «Tienes razón. Perdón.» Se agacha junto a Hugo con el ordenador abandonado." },
+            mood: "love", next: "herida",
+          },
+        },
+      },
+      herida: {
+        who: "hugo", mood: "pain",
+        line: {
+          A: "Hugo aparta la camiseta. Hay un corte largo. «Me cortaron en una pelea. No quiero a la policía. Por favor.»",
+          B: "Hugo aparta la camiseta: un corte largo y profundo en el costado. «Me cortaron en una pelea en el bar. No quiero que llamen a la policía. Por favor.»",
+          C: "Hugo aparta la camiseta y enseña un corte largo y profundo en el costado. «Me cortaron en una pelea, en el bar. No quiero policía; con el hospital me basta. Por favor.»",
+        },
+        options: [
+          {
+            id: "describir",
+            say: { A: "Marta, un corte en el costado. Mucha sangre. Está consciente.", B: "Marta, corte profundo en el costado, mucha sangre, está consciente y habla.", C: "Marta, herida punzante en el costado, hemorragia importante, consciente y orientado. Hace falta cirugía menor, como mínimo." },
+            reply: { A: "Marta escribe rápido. «Cirugía. Ya.» Los enfermeros se llevan a Hugo.", B: "Marta lo anota en dos segundos. «Cirugía menor, ya.» Los enfermeros se llevan a Hugo.", C: "Marta lo anota en dos segundos. «Cirugía menor, y rápido.» Los enfermeros se llevan a Hugo a toda prisa." },
+            mood: "worried", end: "camilla",
+          },
+          {
+            id: "policia",
+            say: { A: "Hugo, es un delito. Alguien te hizo daño. Hay que avisar.", B: "Hugo, es un delito. Alguien te cortó y puede volver a hacerlo. Hay que avisar a la policía.", C: "Hugo, esto es una agresión con arma blanca. Quien te hizo esto puede repetirlo; hay que avisar a la policía." },
+            reply: { A: "Hugo cierra los ojos. «Está bien.» Marta llama a la comisaría de enfrente.", B: "Hugo cierra los ojos. «Está bien… tienes razón.» Marta llama a la comisaría de enfrente.", C: "Hugo cierra los ojos, vencido. «Tienes razón.» Marta ya está marcando el número de la comisaría de enfrente." },
+            mood: "sad", end: "policia",
+          },
+          {
+            id: "calmar",
+            say: { A: "Respira, Hugo. Mírame. Ya estás aquí.", B: "Respira, Hugo, mírame. Ya estás en el hospital, lo peor pasó.", C: "Respira, Hugo, y mírame a mí, no a la sangre. Ya estás en el sitio correcto." },
+            reply: { A: "Hugo respira con dificultad. Se queda quieto y espera.", B: "Hugo respira con dificultad, pero se queda quieto. Marta le pone una gasa mientras espera la camilla.", C: "Hugo respira con dificultad, pero obedece. Marta le coloca una gasa mientras llega la camilla, y la mano ya no le tiembla." },
+            mood: "worried", end: "espera",
+          },
+        ],
+      },
+      documento: {
+        who: "marta", mood: "angry",
+        line: {
+          A: "Marta se cruza de brazos. «Sin documento, hay que llenar otro formulario. Y esta noche el sistema va lento.»",
+          B: "Marta se cruza de brazos. «Sin documento hay que llenar otro formulario, y esta noche el sistema va lentísimo. No es culpa mía.»",
+          C: "Marta se cruza de brazos, a la defensiva. «Sin documento hay otro formulario, y esta noche el sistema va a paso de tortuga. Yo no hice las reglas.»",
+        },
+        options: [
+          {
+            id: "yo-lleno",
+            say: { A: "Yo lleno el formulario. Usted atiende a Hugo. ¿Trato?", B: "El formulario lo lleno yo. Usted llama a un médico para Hugo. ¿Trato?", C: "Yo relleno el formulario mientras usted atiende a Hugo. Lo que sea necesario para que la burocracia no lo mate." },
+            reply: { A: "Marta mira a Hugo. «Está bien.» Llama a los enfermeros.", B: "Marta mira por fin la camiseta de Hugo. «Está bien. Trato.» Llama a los enfermeros.", C: "Marta mira por fin la camiseta de Hugo y se rinde. «Trato hecho.» Llama a los enfermeros." },
+            mood: "worried", end: "camilla",
+          },
+          {
+            id: "jefe",
+            say: { A: "Quiero hablar con el médico de guardia. Ahora.", B: "Quiero hablar con el médico de guardia, ahora mismo.", C: "Llame al médico de guardia: prefiero explicarle esto a él que seguir discutiendo con el sistema." },
+            reply: { A: "Marta resopla. Pero sale. Vuelve con un médico y una camilla.", B: "Marta resopla, pero entra. Vuelve a los dos minutos con un médico y una camilla.", C: "Marta resopla, pero entra. Vuelve a los dos minutos con el médico de guardia y una camilla; el sistema, por una vez, espera." },
+            mood: "neutral", end: "camilla",
+          },
+          {
+            id: "herida2",
+            say: { A: "Hugo, enséñale la herida. Que la vea ella.", B: "Hugo, enséñale la herida. Que la vea con sus propios ojos.", C: "Hugo, enséñale la herida. Que la vea con sus propios ojos antes de volver al formulario." },
+            reply: { A: "Hugo aparta la camiseta. Marta se queda helada.", B: "Hugo aparta la camiseta. Marta se queda helada, con el bolígrafo en el aire.", C: "Hugo aparta la camiseta. Marta se queda helada, con el bolígrafo suspendido en el aire." },
+            mood: "worried", next: "herida",
+          },
+        ],
+      },
+      // ── cuchillo.
+      "cuchillo-inicio": {
+        who: "marta", mood: "terror",
+        line: {
+          A: "Marta ve tu cuchillo y grita: «¡Seguridad!» Hugo, en el suelo: «¡Ese no fue! ¡El que me cortó era otro!» Un guardia corre hacia ti.",
+          B: "Marta ve el cuchillo y grita: «¡Seguridad! ¡Seguridad!» Hugo, desde el suelo: «¡Ese no fue! ¡El que me cortó era otro!» Un guardia del hospital corre hacia ti.",
+          C: "Marta ve el cuchillo y su grito atraviesa el vestíbulo: «¡Seguridad!» Hugo, desde el suelo: «¡Ese no fue! ¡El que me cortó era otro, lo juro!» Un guardia del hospital ya viene corriendo.",
+        },
+        options: [
+          {
+            id: "cuchillo-guardar",
+            say: { A: "¡Perdón! Lo guardo. Yo solo quiero ayudar a Hugo.", B: "¡Perdón, lo guardo ya! Yo solo quiero ayudar a Hugo.", C: "¡Perdón, ya lo guardo! Solo quería ayudar a Hugo; el cuchillo sobra." },
+            reply: { A: "El guardia se detiene a un metro. Marta: «Despacio. Muy despacio.»", B: "El guardia se detiene a un metro. Marta, temblando: «Despacio. Muy despacio con eso.»", C: "El guardia se detiene a un metro, con la mano en el cinturón. Marta, temblando: «Despacio. Muy despacio con eso.»" },
+            mood: "scared", next: "herida",
+          },
+          {
+            id: "cuchillo-entregar",
+            say: { A: "Tome el cuchillo. Se lo doy al guardia. Soy testigo.", B: "Tome el cuchillo, se lo doy al guardia. Quiero declarar como testigo.", C: "Se lo entrego al guardia, mango por delante. Y quiero declarar: puedo describir a quien lo cortó." },
+            reply: { A: "El guardia toma el cuchillo y llama a la policía. Marta ya no grita.", B: "El guardia toma el cuchillo con un pañuelo y llama a la policía. Marta deja de gritar.", C: "El guardia toma el cuchillo con un pañuelo y llama a la policía. Marta deja de gritar y te mira con otros ojos." },
+            mood: "worried", end: "cuchillo-policia",
+          },
+          {
+            id: "cuchillo-huir",
+            say: { A: "¡No fui yo! ¡Me voy!", B: "¡Yo no he hecho nada! ¡Me voy de aquí!", C: "¡Yo no tengo nada que ver! Me voy antes de que esto se malinterprete." },
+            reply: { A: "Corres. El guardia grita. Hugo, desde el suelo: «¡Déjalo!»", B: "Sales corriendo. El guardia grita detrás de ti. Hugo, desde el suelo: «¡Déjenlo ir!»", C: "Sales corriendo. El guardia grita a tu espalda y Hugo, desde el suelo, intenta pararlo: «¡Déjenlo ir, no fue él!»" },
+            mood: "scared", end: "cuchillo-huye",
+          },
+        ],
+      },
+      // ── pistola.
+      "pistola-inicio": {
+        who: "marta", mood: "terror",
+        line: {
+          A: "Marta ve la pistola y se tira detrás del mostrador. «¡No dispare! ¡Por favor!» Hugo levanta una mano. «¡Eh, tranquilo!»",
+          B: "Marta ve la pistola y se agacha detrás del mostrador. «¡No dispare! ¡Por favor, no dispare!» Hugo levanta una mano temblorosa. «¡Eh! ¡Tranquilo!»",
+          C: "Marta ve la pistola y se agacha detrás del mostrador con un reflejo que no se aprende en la facultad. «¡No dispare, por favor!» Hugo levanta una mano temblorosa: «¡Eh, eh, tranquilo!»",
+        },
+        options: [
+          {
+            id: "pistola-guardar",
+            say: { A: "Lo siento. La guardo. Hugo necesita un médico.", B: "Lo siento mucho, la guardo. Hugo necesita un médico ahora.", C: "Lo siento, de verdad. Ya la guardo. Lo que necesita Hugo es un médico, no esto." },
+            reply: { A: "Marta asoma la cabeza. «Muy bien. Despacio. ¿Qué le pasa a su amigo?»", B: "Marta asoma la cabeza, pálida. «Muy bien. Despacio. ¿Qué le pasa a su amigo?»", C: "Marta asoma la cabeza, blanca como su uniforme. «Muy bien. Despacio. ¿Qué le ha pasado a su amigo?»" },
+            mood: "scared", next: "herida",
+          },
+          {
+            id: "pistola-orden",
+            say: { A: "¡Una camilla! ¡Ahora! ¡Rápido!", B: "¡Una camilla, ahora mismo! ¡Rápido!", C: "¡Una camilla ahora mismo, y sin hacer ninguna tontería!" },
+            reply: { A: "Marta llama con la mano temblando. Llegan enfermeros. Alguien llama a la policía.", B: "Marta pulsa el timbre con la mano temblando. Llegan los enfermeros y, en el pasillo, alguien ya está llamando a la policía.", C: "Marta pulsa el timbre con la mano temblando. Llegan los enfermeros; en el pasillo, alguien ya está hablando con la policía." },
+            mood: "scared", end: "pistola-policia",
+          },
+          {
+            id: "pistola-irse",
+            say: { A: "Perdón. Me voy. Cuiden a Hugo.", B: "Perdón por el susto. Me voy. Cuiden de Hugo.", C: "Perdón por el susto. Me voy; cuiden de Hugo como se merece." },
+            reply: { A: "Te alejas. Detrás, Marta sale de su escondite y llama a seguridad.", B: "Te alejas deprisa. Detrás, Marta sale de su escondite y llama a seguridad.", C: "Te alejas a paso rápido. Detrás, Marta sale de su escondite y llama a seguridad con voz firme." },
+            mood: "scared", end: "pistola-corre",
+          },
+        ],
+      },
+      // ── granada.
+      "granada-inicio": {
+        who: "marta", mood: "terror",
+        line: {
+          A: "Marta ve la granada y pulsa una alarma roja. Suena una sirena. «¡Evacuación! ¡Todos fuera!» Hugo intenta levantarse y se cae.",
+          B: "Marta ve la granada y golpea la alarma roja de la pared. Suena una sirena por todo el edificio. «¡Evacuación! ¡Todo el mundo fuera!» Hugo intenta levantarse y se cae de rodillas.",
+          C: "Marta ve la granada y golpea la alarma roja de la pared. La sirena atraviesa todo el hospital. «¡Evacuación inmediata!» Hugo intenta levantarse, no puede, y vuelve a caer de rodillas.",
+        },
+        options: [
+          {
+            id: "granada-plastico",
+            say: { A: "¡Es de plástico! ¡Es falsa! ¡Paren la alarma!", B: "¡Es de plástico! ¡Es falsa, paren la alarma!", C: "¡Es de plástico, es una réplica! ¡Paren la alarma antes de vaciar el hospital!" },
+            reply: { A: "Nadie te escucha. Pacientes en bata corren por el pasillo. Un enfermero ríe nervioso.", B: "Nadie te escucha con la sirena. Pacientes en bata y suero corren por el pasillo. Un enfermero se ríe, histérico.", C: "Nadie te oye con la sirena. Pacientes en bata y con suero ya corren por el pasillo; un enfermero se ríe, histérico, sin poder parar." },
+            mood: "laugh", end: "granada-risa",
+          },
+          {
+            id: "granada-hugo",
+            say: { A: "Yo ayudo a Hugo. ¡Marta, agarre su otro brazo!", B: "Yo ayudo a Hugo. ¡Marta, agárrele el otro brazo!", C: "Yo cargo con Hugo. ¡Marta, agárrele el otro brazo, que lo sacamos entre los dos!" },
+            reply: { A: "Marta y tú levantan a Hugo. Él grita de dolor. Salen a la calle.", B: "Marta y tú levantan a Hugo entre los dos. Él grita de dolor. Salen a la calle con la sirena detrás.", C: "Marta y tú levantan a Hugo entre los dos. Él grita de dolor. Salen a la calle con la sirena persiguiéndolos." },
+            mood: "scared", next: "herida",
+          },
+          {
+            id: "granada-correr",
+            say: { A: "¡Todos fuera! ¡Corran!", B: "¡Todos fuera, corran! ¡Yo la llevo lejos!", C: "¡Todos fuera, corran! ¡Yo me la llevo lejos de aquí!" },
+            reply: { A: "Gritos. Luces. Sirenas. Llega un helicóptero.", B: "Gritos, luces, sirenas. En pocos minutos llega un helicóptero sobre el hospital.", C: "Gritos, luces, sirenas por todas partes. En pocos minutos, un helicóptero aparece sobre el hospital." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+        ],
+      },
+      // ── gas.
+      "gas-inicio": {
+        who: "marta", mood: "angry",
+        line: {
+          A: "Marta ve el gas pimienta. «Guarde eso. Aquí hay enfermos.» Hugo tose. «No lo uses, por favor, me ahogo.»",
+          B: "Marta ve el gas pimienta y levanta la mano. «Guarde eso ahora mismo. Aquí hay enfermos.» Hugo tose, asustado: «No lo uses, por favor, me ahogo.»",
+          C: "Marta ve el gas pimienta y levanta la palma como un policía de tráfico. «Guarde eso ahora mismo; esto es un hospital.» Hugo tose, asustado: «Por favor, no lo uses, con este costado me ahogo.»",
+        },
+        options: [
+          {
+            id: "gas-guardar",
+            say: { A: "Perdón. Lo guardo. Solo es por si acaso.", B: "Perdón, lo guardo. Lo llevo por si acaso, nada más.", C: "Perdón, lo guardo. Lo llevo por prevención, no por costumbre." },
+            reply: { A: "Marta se tranquiliza un poco. «Bien. Ahora, ¿qué le pasa a su amigo?»", B: "Marta se tranquiliza un poco. «Bien. Ahora cuénteme qué le pasa a su amigo.»", C: "Marta se tranquiliza un poco. «Mejor así. Ahora cuénteme qué le pasa a su amigo.»" },
+            mood: "worried", next: "herida",
+          },
+          {
+            id: "gas-explicar",
+            say: { A: "Lo llevo porque la calle es peligrosa. Hugo lo sabe.", B: "Lo llevo porque la calle es peligrosa de noche. Hugo lo sabe mejor que nadie.", C: "Lo llevo porque la calle es peligrosa de noche; Hugo es la prueba de que no exagero." },
+            reply: { A: "Hugo se ríe y se queja de dolor. «Tiene razón, Marta.»", B: "Hugo se ríe y se queja del dolor al mismo tiempo. «Tiene razón, Marta. A mí me hubiera venido bien.»", C: "Hugo se ríe y se encoge de dolor al mismo tiempo. «Tiene razón, Marta. A mí me habría venido de maravilla.»" },
+            mood: "laugh", next: "documento",
+          },
+          {
+            id: "gas-rociar",
+            say: { A: "¡Atrás! ¡Alguien viene corriendo!", B: "¡Atrás! ¡Viene alguien corriendo hacia nosotros!", C: "¡Atrás todos! ¡Viene alguien corriendo y no sé si es el agresor!" },
+            reply: { A: "Rocías. Era un enfermero. Cae tosiendo. Hugo gime.", B: "Rocías sin mirar bien. Era un enfermero con una bolsa de suero. Cae tosiendo y Hugo gime.", C: "Rocías sin mirar bien. Era un enfermero con una bolsa de suero: cae tosiendo, la bolsa rueda y Hugo gime." },
+            mood: "pain", end: "gas-cae",
+          },
+        ],
+      },
+      // ── lápiz.
+      "lapiz-inicio": {
+        who: "marta", mood: "surprised",
+        line: {
+          A: "Sacas el lápiz. Marta lo mira. «¿Tiene lápiz? El mío se perdió. ¡Anote! Nombre, edad, herida. Yo busco al médico.»",
+          B: "Sacas el lápiz y Marta lo mira como si fuera un milagro. «¿Tiene lápiz? ¡El mío desapareció! Anote usted: nombre, edad, tipo de herida. Yo busco al médico.»",
+          C: "Sacas el lápiz y Marta lo mira como si fuera un milagro. «¿Un lápiz? ¡Aquí no hay ni uno que escriba! Anote usted nombre, edad y tipo de herida; yo voy a por el médico.»",
+        },
+        options: [
+          {
+            id: "lapiz-ficha",
+            say: { A: "Hugo, ¿cómo te llamas? ¿Qué edad tienes? ¿Eres alérgico?", B: "Hugo, ¿nombre completo, edad, alergias? Lo apunto todo para el médico.", C: "Hugo, dime nombre completo, edad y alergias. Lo apunto todo para que el médico no pierda ni un minuto." },
+            reply: { A: "Hugo responde bajo: «Hugo Díaz. Veintiséis. Alérgico a la penicilina.» Marta vuelve con el médico.", B: "Hugo responde con un hilo de voz: «Hugo Díaz, veintiséis, alérgico a la penicilina.» Marta vuelve con el médico y una camilla.", C: "Hugo responde con un hilo de voz: «Hugo Díaz, veintiséis, alérgico a la penicilina.» Marta vuelve con el médico, que lee tu ficha antes de tocar nada." },
+            mood: "neutral", end: "lapiz-ficha",
+          },
+          {
+            id: "lapiz-herida",
+            say: { A: "Primero, la herida. Hugo, enséñala.", B: "Primero la herida: Hugo, enséñala para anotar dónde está.", C: "Primero la herida: Hugo, enséñala y la dibujo, que luego la sangre no deja ver." },
+            reply: { A: "Hugo aparta la camiseta. Dibujas el corte. Marta mira. «Perfecto.»", B: "Hugo aparta la camiseta y dibujas el corte con su largo y su posición. Marta lo mira. «Perfecto. Muy claro.»", C: "Hugo aparta la camiseta; dibujas el corte con largo, posición y profundidad. Marta lo mira con respeto. «Esto vale más que mi formulario.»" },
+            mood: "worried", next: "herida",
+          },
+          {
+            id: "lapiz-regalar",
+            say: { A: "Tome mi lápiz, Marta. Pero atienda a Hugo ya.", B: "Quédese mi lápiz, Marta. Pero atienda a Hugo ya.", C: "Quédese con mi lápiz, Marta; a cambio, atienda a Hugo ya." },
+            reply: { A: "Marta se ríe. Toma el lápiz. «Trato.» Llama a los enfermeros.", B: "Marta se ríe, toma el lápiz y asiente. «Trato.» Llama a los enfermeros.", C: "Marta se ríe, toma el lápiz con ceremonia y asiente. «Trato cerrado.» Llama a los enfermeros." },
+            mood: "smile", end: "camilla",
+          },
+        ],
+      },
+      // ── libro.
+      "libro-inicio": {
+        who: "marta", mood: "surprised",
+        line: {
+          A: "Abres tu libro. Marta lo mira. «¿Un libro? ¿Ahora?» Hugo, en el suelo: «Ponlo aquí. Detrás de mi cabeza. Estoy incómodo.»",
+          B: "Abres tu libro. Marta lo mira, incrédula. «¿Un libro? ¿Ahora, en urgencias?» Hugo, desde el suelo: «Ponlo aquí, detrás de mi cabeza. Estoy muy incómodo.»",
+          C: "Abres tu libro. Marta lo mira, incrédula. «¿Un libro? ¿Ahora, y en urgencias?» Hugo, desde el suelo, con humor negro: «Ponlo detrás de mi cabeza. Si me desangro, que sea con cultura.»",
+        },
+        options: [
+          {
+            id: "libro-almohada",
+            say: { A: "Sí. Hugo, levanta la cabeza. Así.", B: "Claro. Hugo, levanta un poco la cabeza. Así, despacio.", C: "Claro. Hugo, levanta la cabeza, despacio. Así tendrás al menos una almohada con argumento." },
+            reply: { A: "Hugo se apoya en el libro. Cierra los ojos. «Mejor.» Marta suspira.", B: "Hugo apoya la cabeza en el libro y cierra los ojos. «Mejor. Mucho mejor.» Marta suspira.", C: "Hugo apoya la cabeza en el libro y cierra los ojos. «Mejor. Con diferencia.» Marta suspira, desarmada." },
+            mood: "smile", next: "herida",
+          },
+          {
+            id: "libro-regalar",
+            say: { A: "Tome, Marta. Lea en el turno. Y atienda a Hugo.", B: "Tome, Marta, para sus pausas. Pero atienda a Hugo ahora.", C: "Tome, Marta, para las pausas que nunca tiene. Pero antes, Hugo." },
+            reply: { A: "Marta sonríe por primera vez. «Gracias.» Llama a los enfermeros.", B: "Marta sonríe por primera vez en toda la noche. «Gracias.» Llama a los enfermeros.", C: "Marta sonríe por primera vez en la noche. «Gracias. Pausas, ya ve.» Y llama a los enfermeros." },
+            mood: "smile", end: "libro-sala",
+          },
+          {
+            id: "libro-excusa",
+            say: { A: "Perdón. Es mi costumbre. Voy a buscar un médico.", B: "Perdona, es la costumbre de llevarlo siempre. Voy a buscar un médico.", C: "Disculpa, es la costumbre de ir siempre con un libro. Voy a buscar un médico yo mismo." },
+            reply: { A: "Marta suspira. «No hace falta. Los llamo yo.» Y los llama.", B: "Marta suspira. «No hace falta, ya los llamo yo.» Y por fin los llama.", C: "Marta suspira y levanta el teléfono. «No hace falta, los llamo yo. Faltaba más.»" },
+            mood: "neutral", end: "camilla",
+          },
+        ],
+      },
+      // ── corazón.
+      "corazon-inicio": {
+        who: "marta", mood: "sad",
+        line: {
+          A: "Marta ve el corazón y se le llenan los ojos. «Perdón. Llevo catorce horas. Ya no veo a las personas, veo formularios.»",
+          B: "Marta ve el corazón y se le llenan los ojos de lágrimas. «Perdón. Llevo catorce horas de turno y ya no veo personas, solo formularios.»",
+          C: "Marta ve el corazón y la dureza se le quiebra. «Perdón. Catorce horas seguidas y he dejado de ver personas; veo formularios, filas y nada más.»",
+        },
+        options: [
+          {
+            id: "corazon-hugo",
+            say: { A: "Mire a Hugo, Marta. Solo a Hugo.", B: "Mire a Hugo, Marta. Solo a él, un momento.", C: "Mire a Hugo, Marta, solo a él. Lo demás puede esperar un minuto." },
+            reply: { A: "Marta se arrodilla junto a Hugo. Le toma la mano. «Perdóname. Ahora sí.»", B: "Marta se arrodilla junto a Hugo y le toma la mano. «Perdóname. Ahora sí te veo.»", C: "Marta se arrodilla junto a Hugo y le toma la mano manchada de sangre. «Perdóname. Ahora sí te veo.»" },
+            mood: "love", next: "herida",
+          },
+          {
+            id: "corazon-abrazo",
+            say: { A: "Marta, usted también necesita un descanso. Un abrazo.", B: "Marta, usted también necesita un descanso. Un abrazo, aunque sea corto.", C: "Marta, usted también necesita que alguien la cuide. Un abrazo, aunque sea corto." },
+            reply: { A: "Marta te abraza. Llora un poco. Después llama a los enfermeros.", B: "Marta te abraza de golpe y llora un poco. Después se seca la cara y llama a los enfermeros.", C: "Marta te abraza de golpe y llora un poco. Después se seca la cara, se endereza y llama a los enfermeros con la voz de siempre." },
+            mood: "love", end: "corazon-abrazo",
+          },
+          {
+            id: "corazon-camilla",
+            say: { A: "Una camilla para Hugo. Y un café para usted.", B: "Una camilla para Hugo, y yo le traigo un café a usted.", C: "Una camilla para Hugo ahora, y yo le traigo un café después; negociable, pero no la camilla." },
+            reply: { A: "Marta ríe. «Café con leche.» Y llama a los enfermeros.", B: "Marta se ríe un poco. «Con leche, por favor.» Y llama a los enfermeros.", C: "Marta se ríe, sorprendida. «Con leche y sin azúcar.» Y llama a los enfermeros." },
+            mood: "love", end: "camilla",
+          },
+        ],
+      },
+    },
+    ends: {
+      camilla: {
+        text: { A: "Los enfermeros se llevan a Hugo en una camilla. Marta te da las gracias.", B: "Los enfermeros se llevan a Hugo en una camilla hacia el quirófano. Marta te da las gracias en voz baja.", C: "Los enfermeros se llevan a Hugo en una camilla hacia el quirófano. Marta te da las gracias en voz baja, ya sin la rigidez del reglamento." },
+        change: "ambulancia", recap: "Conseguiste que Hugo entrara en urgencias.",
+      },
+      policia: {
+        text: { A: "Llega un policía de la comisaría. Hugo cuenta todo. Después, entra al quirófano.", B: "Llega un policía de la comisaría de enfrente. Hugo cuenta lo que pasó y después entra al quirófano.", C: "Llega un policía de la comisaría de enfrente. Hugo lo cuenta todo con la poca voz que le queda y después entra al quirófano." },
+        change: "policia", recap: "Hugo denunció la agresión en la puerta de urgencias.",
+      },
+      espera: {
+        text: { A: "Hugo espera, con una gasa en el costado. Marta busca al médico. La cola avanza.", B: "Hugo espera con una gasa apretada contra el costado. Marta busca al médico. Poco a poco, la cola avanza.", C: "Hugo espera con la gasa apretada contra el costado y la cabeza apoyada en la pared. Marta busca al médico a toda prisa. La cola, por fin, avanza." },
+        change: "se-sienta", recap: "Calmaste a Hugo mientras llegaba el médico.",
+      },
+      "cuchillo-policia": {
+        text: { A: "Llega la policía. Tomas declaración. Tu cuchillo queda en una bolsa de plástico. Hugo entra al quirófano.", B: "Llega la policía y tomas declaración. Tu cuchillo acaba en una bolsa de plástico y Hugo entra al quirófano.", C: "Llega la policía y declaras durante un buen rato. Tu cuchillo acaba en una bolsa de pruebas y Hugo, por fin, entra al quirófano." },
+        change: "policia", recap: "Entregaste tu cuchillo a seguridad en urgencias.",
+      },
+      "cuchillo-huye": {
+        text: { A: "Corres por el estacionamiento. Nadie te sigue. Detrás, Hugo entra en el hospital.", B: "Corres por el estacionamiento. Nadie te sigue. Detrás de ti, Hugo por fin entra al hospital.", C: "Corres por el estacionamiento. Nadie te alcanza. A tu espalda, Hugo por fin entra al hospital, y el cuchillo pesa más que antes." },
+        change: "corre", recap: "Huiste de urgencias con el cuchillo en la mano.",
+      },
+      "pistola-policia": {
+        text: { A: "Llega un patrullero. Manos arriba. Hugo entra al quirófano. Tú, a la comisaría.", B: "Llega un patrullero. Manos arriba. Hugo entra al quirófano y tú acabas en la comisaría.", C: "Llega un patrullero. Manos arriba, de cara a la pared. Hugo entra al quirófano y tú, a la comisaría de enfrente." },
+        change: "manos-arriba", recap: "La pistola en urgencias terminó con las manos arriba.",
+      },
+      "pistola-corre": {
+        text: { A: "Corres hasta la avenida. Detrás, suena la alarma del hospital.", B: "Corres hasta la avenida con la alarma del hospital sonando a tu espalda.", C: "Corres hasta la avenida con la alarma del hospital sonando a tu espalda, como una acusación." },
+        change: "corre", recap: "Huiste de urgencias con la pistola.",
+      },
+      "granada-helicoptero": {
+        text: { A: "Helicóptero. Patrulleros. Pacientes en bata en el estacionamiento. Una noche inolvidable.", B: "Un helicóptero, patrulleros y pacientes en bata y con suero en el estacionamiento. Una noche inolvidable.", C: "Un helicóptero, patrulleros y pacientes en bata, con suero y con cara de no entender nada, en el estacionamiento. Una noche inolvidable." },
+        change: "helicoptero", recap: "Tu granada evacuó el hospital entero.",
+      },
+      "granada-risa": {
+        text: { A: "Paran la alarma. Todos se ríen. Hugo también, y le duele. Entra en el quirófano riendo.", B: "Apagan la alarma. Todos se ríen, Hugo también, aunque le duela. Entra al quirófano riéndose.", C: "Apagan la alarma. Todos se ríen, Hugo el primero, aunque cada carcajada le cueste. Entra al quirófano riéndose, que no es poco." },
+        change: "sonrie", recap: "Tu granada de plástico hizo reír a todo el hospital.",
+      },
+      "gas-cae": {
+        text: { A: "El enfermero tose en el suelo. Marta te mira con rabia. Hugo, con miedo. Llega seguridad.", B: "El enfermero tose en el suelo. Marta te mira con rabia y Hugo, con miedo. Llega seguridad.", C: "El enfermero tose en el suelo. Marta te mira con una rabia helada; Hugo, con miedo. Llega seguridad antes de que puedas explicarte." },
+        change: "cae", recap: "Rociaste a un enfermero con gas por error.",
+      },
+      "lapiz-ficha": {
+        text: { A: "El médico lee tu ficha. Hugo entra en el quirófano sin perder un minuto.", B: "El médico lee tu ficha y Hugo entra al quirófano sin perder un minuto. Marta guarda tu lápiz.", C: "El médico lee tu ficha de principio a fin y Hugo entra al quirófano sin perder un minuto. Marta guarda tu lápiz como un trofeo." },
+        change: "ambulancia", recap: "Escribiste la ficha de Hugo para el médico.",
+      },
+      "libro-sala": {
+        text: { A: "Hugo entra a la sala. Marta se sienta con tu libro. Es la primera pausa de la noche.", B: "Hugo entra a la sala de curas. Marta se sienta un minuto con tu libro: la primera pausa de la noche.", C: "Hugo entra a la sala de curas. Marta se sienta un minuto con tu libro: la primera pausa de la noche, y la más bien aprovechada." },
+        change: "se-va", recap: "Le regalaste tu libro a la enfermera de urgencias.",
+      },
+      "corazon-abrazo": {
+        text: { A: "Marta te abraza. Hugo entra al quirófano. Ella respira por primera vez en catorce horas.", B: "Marta te abraza. Hugo entra al quirófano. Ella respira por primera vez en catorce horas.", C: "Marta te abraza antes de volver al trabajo. Hugo entra al quirófano. Ella respira, por primera vez en catorce horas, hasta el fondo." },
+        change: "abraza", recap: "Le diste un abrazo a la enfermera agotada.",
+      },
+    },
+    speak: {
+      A1: "¿Cuándo fuiste a un hospital?",
+      A2: "¿Qué haces cuando algo es muy urgente y alguien dice que hay que esperar?",
+      B1: "¿Alguna vez esperaste mucho en un hospital?",
+      B2: "¿Qué cambiarías en la atención de urgencias de tu ciudad?",
+      C1: "¿Dónde termina el cumplimiento de una norma y empieza la indiferencia?",
+      C2: "¿Qué pierde una persona que trabaja catorce horas cuidando a otros?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces si alguien te acusa por error?", B: "¿Cómo explicarías que no eres culpable si todos te señalan?", C: "¿Por qué el miedo lleva a señalar al primero que parece peligroso?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Hay seguridad en los hospitales de tu país?", B: "¿Cómo reaccionarías ante un arma en un lugar donde hay enfermos?", C: "¿Qué lugares deberían estar siempre libres de violencia?" } },
+      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Conoces las salidas de emergencia de tu casa?", B: "¿Participaste alguna vez en una evacuación?", C: "¿Qué hace una persona en un edificio que se vacía por una falsa alarma?" } },
+      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Es peligrosa tu calle de noche?", B: "¿Crees que llevar algo para defenderse es prevenir o ser desconfiado?", C: "¿Cuándo la prevención se convierte en una forma de miedo?" } },
+      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Cómo se escribe tu nombre?", B: "¿Qué datos médicos importantes sabes de memoria?", C: "¿Qué parte de nuestros datos médicos deberíamos llevar siempre encima?" } },
+      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Tienes un libro favorito?", B: "¿Qué libro llevarías a una larga espera en un hospital?", C: "¿Hay momentos en que un libro sirve más como compañía que como lectura?" } },
+      corazon: { start: "corazon-inicio", fx: "calma", speak: { A: "¿Te cansas en el trabajo?", B: "¿Cuándo fue la última vez que alguien te agradeció algo en tu trabajo?", C: "¿Cómo se conserva la empatía después de muchas horas de cansancio?" } },
+    },
+  },
+
+  // ───────────────────────────── CLINICA 2 ─────────────────────────────
+  {
+    id: "clinica-fuga",
+    kind: "escena",
+    district: "clinica",
+    title: "Se escapó el de la chaqueta roja",
+    verb: "DECLARAR",
+    goal: "Declarar como testigo, describir a una persona y la dirección de su huida, cuestionar una detención y decidir cuánto contar a la policía.",
+    cast: [
+      {
+        id: "rios", name: "Inspector Ríos", role: "Policía sin aliento",
+        age: "adult", body: "m", build: "heavy", height: 1.82,
+        hair: "short", hairColor: "#2a2420", skin: "#c9a07a",
+        top: "uniform", topColor: "#1f2e4a", bottom: "pants", bottomColor: "#1f2e4a",
+        extras: ["mustache"], pose: "run",
+      },
+      {
+        id: "lalo", name: "Lalo", role: "Detenido con esposas",
+        age: "adult", body: "m", build: "slim", height: 1.72,
+        hair: "curly", hairColor: "#1a1410", skin: "#9c6a48",
+        top: "jacket", topColor: "#b0302a", bottom: "jeans", bottomColor: "#2b3446",
+        extras: ["blood-head"], pose: "cuffed",
+      },
+    ],
+    start: "inicio",
+    nodes: {
+      inicio: {
+        who: "rios", mood: "angry",
+        line: {
+          A: "Delante de la comisaría, un policía llega corriendo. Sin aliento, dice: «¿Vio a un hombre con chaqueta roja? Se escapó. Corría hacia aquí.» Cerca, un hombre con esposas, con la chaqueta roja, mira al suelo.",
+          B: "Delante de la comisaría, un policía llega corriendo, sin aliento. «¿Ha visto a un hombre con chaqueta roja? Se nos escapó en la puerta. Corría hacia aquí.» A pocos pasos, un hombre esposado, que lleva una chaqueta roja, mira al suelo.",
+          C: "Delante de la comisaría, un policía llega a la carrera, con el pecho subiéndole y bajándole. «¿Ha visto a un hombre con chaqueta roja? Se nos escapó en la puerta y corría hacia aquí.» A pocos pasos, un hombre esposado, con una chaqueta roja que no puede ser casualidad, mira fijamente el suelo.",
+        },
+        options: [
+          {
+            id: "describir",
+            say: { A: "Vi a un hombre corriendo. Fue hacia la avenida. Era alto, con gorra.", B: "Vi a alguien correr hacia la avenida hace un minuto. Alto, con gorra. No sé si llevaba chaqueta roja.", C: "Vi a alguien cruzar corriendo hacia la avenida hace un minuto: alto, con gorra. La chaqueta, no pude verla." },
+            reply: { A: "Ríos apunta. «¡La avenida!» Habla por radio. Lalo levanta la cabeza.", B: "Ríos lo anota y grita por radio: «¡Avenida, sospechoso alto con gorra!» Lalo levanta la cabeza, sorprendido.", C: "Ríos lo anota sin dejar de correr con los ojos y pide refuerzos por radio. Lalo levanta la cabeza: lo que has dicho no encaja con él." },
+            mood: "neutral", next: "testigo",
+          },
+          {
+            id: "lalo",
+            say: { A: "Ese hombre tiene una chaqueta roja. ¿Es él?", B: "Ese hombre de ahí lleva una chaqueta roja. ¿No es él?", C: "Perdone, pero ese hombre esposado lleva una chaqueta roja. ¿No será él?" },
+            reply: { A: "Ríos mira a Lalo. «No. Es otro. Pero mismo color.» Lalo: «¡Yo no hice nada!»", B: "Ríos mira a Lalo con cansancio. «No, ese es otro detenido. Pero mismo color de chaqueta.» Lalo protesta: «¡Yo no he hecho nada!»", C: "Ríos mira a Lalo con cansancio. «Ese es otro detenido, y la coincidencia me está volviendo loco.» Lalo protesta: «¡Yo no he hecho nada!»" },
+            mood: "angry", next: "lalo",
+          },
+          {
+            id: "no-vi",
+            say: { A: "No vi nada. Lo siento. Voy a la clínica.", B: "No he visto nada, lo siento. Voy a la clínica.", C: "No he visto nada, lo lamento. Voy de paso a la clínica y no me he fijado en nadie." },
+            reply: { A: "Ríos resopla. «Gracias.» Corre hacia la avenida con la radio.", B: "Ríos resopla. «Gracias de todos modos.» Sale corriendo hacia la avenida con la radio.", C: "Ríos resopla, resignado. «Gracias de todos modos.» Sale corriendo hacia la avenida, hablando por radio." },
+            mood: "neutral", end: "nada",
+          },
+        ],
+        items: {
+          corazon: {
+            act: CORAZON,
+            say: { A: "Inspector, respire. Siéntese un momento. Yo le cuento lo que vi.", B: "Inspector, respire un segundo. Siéntese. Le cuento todo lo que vi, con calma.", C: "Inspector, respire. Siéntese medio minuto; así lo que le cuente no se pierde entre jadeos." },
+            reply: { A: "Ríos se apoya en el muro. «Gracias. Hace veinte años que no corro tanto.»", B: "Ríos se apoya en el muro y sonríe sin ganas. «Gracias. Hacía veinte años que no corría tanto.»", C: "Ríos se apoya en el muro, resoplando. «Gracias. Hacía veinte años que no corría así; me estoy haciendo viejo.»" },
+            mood: "love", next: "testigo",
+          },
+        },
+      },
+      testigo: {
+        who: "rios", mood: "worried",
+        line: {
+          A: "Ríos te mira fijo. «Piense. ¿A qué hora? ¿Hacia dónde? ¿Iba solo? Todo ayuda.»",
+          B: "Ríos te mira fijo. «Piénselo bien: ¿a qué hora lo vio, hacia dónde iba, si estaba solo? Todo ayuda.»",
+          C: "Ríos te mira fijo, con los ojos de quien lleva horas sin dormir. «Piénselo: hora, dirección, si iba solo o con alguien. Todo detalle ayuda.»",
+        },
+        options: [
+          {
+            id: "detalles",
+            say: { A: "A las once. Iba solo. Giró por la calle del estacionamiento.", B: "Sobre las once, solo. Giró por la calle del estacionamiento de la cochera.", C: "Serían las once, solo, y giró por la calle de la cochera; cojeaba un poco, ahora que lo pienso." },
+            reply: { A: "Ríos apunta y sale corriendo. Unos segundos después, se oye una sirena.", B: "Ríos lo anota y sale corriendo. Unos segundos después se oye una sirena y un patrullero arranca.", C: "Ríos lo anota y echa a correr. Segundos después, se oyen sirenas y un patrullero sale chillando por la puerta de la comisaría." },
+            mood: "worried", end: "persecucion",
+          },
+          {
+            id: "acompanar",
+            say: { A: "Puedo ir con usted a mostrar el lugar. Dos minutos.", B: "Puedo acompañarlo y señalarle exactamente dónde giró. Son dos minutos.", C: "Puedo acompañarlo y mostrarle el punto exacto donde giró; son dos minutos, no más." },
+            reply: { A: "Ríos duda. «Bien. Pero detrás de mí.» Corren juntos.", B: "Ríos duda un segundo. «Bien, pero siempre detrás de mí.» Corren juntos hacia la cochera.", C: "Ríos duda un segundo. «De acuerdo, pero siempre detrás de mí y sin heroicidades.» Corren juntos hacia la cochera." },
+            mood: "neutral", end: "persecucion",
+          },
+          {
+            id: "no-seguro",
+            say: { A: "No estoy seguro de todo. Tal vez fue otro. Prefiero no equivocarme.", B: "Ahora no estoy seguro de nada. Tal vez era otra persona; prefiero no acusar a nadie.", C: "Ahora que lo pienso, no estoy seguro. Podría haber sido otra persona, y no quiero ser el testigo que mande a un inocente a la cárcel." },
+            reply: { A: "Ríos asiente. «Eso también es útil. Gracias.» Y se va.", B: "Ríos asiente despacio. «Eso también es útil. Honestidad, no la oigo mucho. Gracias.»", C: "Ríos asiente despacio y te mira, por primera vez, con respeto. «Eso también es útil, y poco frecuente. Gracias.»" },
+            mood: "neutral", end: "nada",
+          },
+        ],
+      },
+      lalo: {
+        who: "lalo", mood: "sad",
+        line: {
+          A: "Lalo habla bajo. «Me detuvieron por la chaqueta. Yo trabajo en la cochera. Fui a ver una pelea y me llevaron.»",
+          B: "Lalo habla en voz baja, con las esposas tintineando. «Me detuvieron por la chaqueta. Trabajo en la cochera de enfrente. Fui a ver una pelea y me llevaron a mí.»",
+          C: "Lalo habla en voz baja, con las esposas tintineando. «Me detuvieron por la chaqueta, nada más. Trabajo en la cochera. Fui a ver una pelea y el que acabó esposado fui yo.»",
+        },
+        options: [
+          {
+            id: "defender",
+            say: { A: "Inspector, este hombre tiene una herida en la cabeza. ¿Quién lo golpeó?", B: "Inspector, este hombre tiene una herida en la cabeza. ¿Lo golpeó alguien al detenerlo?", C: "Inspector, este hombre sangra de la cabeza. ¿Quién lo golpeó, y en qué momento?" },
+            reply: { A: "Ríos se calla. «Se cayó al correr.» Lalo: «Yo no corría.»", B: "Ríos se queda callado un momento. «Se cayó al correr.» Lalo, bajito: «Yo no corría.»", C: "Ríos tarda en contestar. «Se cayó al correr.» Lalo, entre dientes: «Yo no corría en toda la noche.»" },
+            mood: "angry", end: "detenido",
+          },
+          {
+            id: "alibi",
+            say: { A: "Lalo, ¿quién puede decir que trabajas allí? Dime un nombre.", B: "Lalo, ¿hay alguien que pueda confirmar que trabajas en la cochera? Dame un nombre.", C: "Lalo, necesitamos a alguien que confirme dónde estabas. Dame un nombre y un teléfono." },
+            reply: { A: "Lalo piensa. «Mi jefa, Doña Elba. Está en la cochera.» Ríos suspira.", B: "Lalo piensa. «Doña Elba, mi jefa. Está ahora mismo en la cochera.» Ríos suspira y toma nota.", C: "Lalo piensa un instante. «Doña Elba, mi jefa; sigue en la cochera.» Ríos suspira y apunta el nombre." },
+            mood: "worried", end: "coartada",
+          },
+          {
+            id: "testigo2",
+            say: { A: "Inspector, yo vi a otro hombre. No fue Lalo.", B: "Inspector, yo vi a otro hombre correr. Lalo no fue.", C: "Inspector, yo vi a otro hombre correr, y no era Lalo. Puede quitarle las esposas." },
+            reply: { A: "Ríos te mira. «Cuéntemelo todo.»", B: "Ríos se vuelve hacia ti de golpe. «Cuéntemelo todo, con detalles.»", C: "Ríos se vuelve hacia ti de golpe. «Entonces cuéntemelo todo, con detalles y sin adornos.»" },
+            mood: "neutral", next: "testigo",
+          },
+        ],
+      },
+      // ── cuchillo.
+      "cuchillo-inicio": {
+        who: "rios", mood: "furious",
+        line: {
+          A: "Ríos ve tu cuchillo. Saca su arma. «¡Tire eso! ¡Ahora!» Lalo grita: «¡Es él!» Los dos te apuntan.",
+          B: "Ríos ve tu cuchillo y saca el arma. «¡Suelte eso! ¡Ahora mismo!» Lalo, esposado, grita: «¡Es él, es él!» Los dos te señalan.",
+          C: "Ríos ve tu cuchillo y desenfunda en medio segundo. «¡Suelte eso, ahora mismo!» Lalo, esposado, grita lo que más le conviene: «¡Es él, es él!»",
+        },
+        options: [
+          {
+            id: "cuchillo-tirar",
+            say: { A: "¡Lo tiro! ¡Mire! ¡No soy yo!", B: "¡Lo tiro, mire! ¡No soy el que busca!", C: "¡Lo suelto, mire, lo dejo en el suelo! ¡Yo no soy a quien busca!" },
+            reply: { A: "El cuchillo suena en el suelo. Ríos lo patea lejos. «Manos arriba.»", B: "El cuchillo suena en el pavimento. Ríos lo aparta de una patada. «Manos arriba, despacio.»", C: "El cuchillo rebota en el pavimento. Ríos lo aparta de una patada sin dejar de apuntarte. «Manos arriba, y despacio.»" },
+            mood: "scared", next: "cuchillo-registro",
+          },
+          {
+            id: "cuchillo-explicar",
+            say: { A: "Lo llevo para cortar fruta. Soy testigo. Vi al hombre.", B: "Es un cuchillo de cocina, lo uso para trabajar. Soy testigo, vi al hombre que busca.", C: "Es un cuchillo de cocina; lo uso en mi trabajo. Y soy testigo: vi al hombre que busca." },
+            reply: { A: "Ríos duda. «Primero tírelo. Después habla.»", B: "Ríos duda con el dedo en el gatillo. «Primero tírelo. Después habla.»", C: "Ríos duda, con el arma todavía arriba. «Primero tírelo. Después habla, y despacito.»" },
+            mood: "angry", next: "cuchillo-registro",
+          },
+          {
+            id: "cuchillo-huir",
+            say: { A: "¡Yo no hice nada! ¡Me voy!", B: "¡Yo no he hecho nada! ¡Me largo!", C: "¡Yo no tengo nada que ver con esto! ¡Me voy!" },
+            reply: { A: "Corres. Ríos grita. Un patrullero arranca detrás de ti.", B: "Corres. Ríos grita y un patrullero arranca detrás de ti con las luces encendidas.", C: "Corres. Ríos grita una orden y un patrullero arranca detrás de ti con las luces encendidas." },
+            mood: "terror", end: "persecucion",
+          },
+        ],
+      },
+      "cuchillo-registro": {
+        who: "rios", mood: "angry",
+        line: {
+          A: "Ríos te registra. Solo hay un cuchillo. Lalo dice: «Ese no es. El fugitivo era más alto.» Ríos guarda el arma.",
+          B: "Ríos te registra rápido. No llevas nada más. Lalo comenta: «Ese no es. El fugitivo era más alto.» Ríos, por fin, guarda el arma.",
+          C: "Ríos te registra con eficiencia. No llevas nada más. Lalo, con retintín: «Ese no es. El fugitivo era más alto.» Ríos, por fin, enfunda el arma.",
+        },
+        options: [
+          {
+            id: "cuchillo-declarar",
+            say: { A: "Vi al fugitivo. Alto, con gorra, hacia la avenida.", B: "Vi al fugitivo: alto, con gorra, hacia la avenida. Se lo cuento ahora.", C: "Vi al fugitivo, alto y con gorra, rumbo a la avenida. Se lo cuento todo, pero primero baje la voz." },
+            reply: { A: "Ríos apunta. «¿Y el cuchillo?» «Para trabajar.» Él gruñe.", B: "Ríos lo anota. «¿Y el cuchillo?» «Es de cocina.» Ríos gruñe, nada convencido.", C: "Ríos lo anota. «¿Y el cuchillo?» «De cocina.» Ríos gruñe, nada convencido, pero lo escribe." },
+            mood: "neutral", end: "cuchillo-policia",
+          },
+          {
+            id: "cuchillo-lalo",
+            say: { A: "Lalo no corrió. Mire su ropa: está limpia.", B: "Lalo no corrió: tiene la ropa limpia y no suda. Suéltelo.", C: "Lalo no corrió. Mire cómo tiene la ropa y la respiración; usted sí que está sudando." },
+            reply: { A: "Ríos mira a Lalo. Después a sí mismo. «Tiene razón.» Le quita las esposas.", B: "Ríos mira a Lalo y después se mira a sí mismo, empapado. «Tiene razón.» Le quita las esposas.", C: "Ríos mira a Lalo, luego se mira a sí mismo, empapado en sudor. «Touché.» Y le quita las esposas." },
+            mood: "smile", end: "hermano",
+          },
+          {
+            id: "cuchillo-irse",
+            say: { A: "¿Puedo irme? Ya contesté todo.", B: "¿Puedo irme ya? He contestado todo lo que sé.", C: "¿Puedo irme ya? He contestado todo lo que sé, y el cuchillo ya no lo tengo." },
+            reply: { A: "Ríos asiente. «Váyase. Pero no se aleje de la ciudad.» Te vas con el pulso a mil.", B: "Ríos asiente. «Váyase. Pero no se aleje de la ciudad.» Te vas con el pulso a mil.", C: "Ríos asiente. «Váyase, pero no salga de la ciudad.» Te alejas con el pulso a mil." },
+            mood: "worried", end: "nada",
+          },
+        ],
+      },
+      // ── pistola.
+      "pistola-inicio": {
+        who: "rios", mood: "terror",
+        line: {
+          A: "Ríos ve tu pistola. Levanta las manos. «¡Tranquilo! ¡Soy policía!» Lalo, esposado, se tira al suelo. De la comisaría salen dos agentes con el arma en la mano.",
+          B: "Ríos ve tu pistola y levanta las manos despacio. «¡Tranquilo! ¡Soy policía!» Lalo, esposado, se tira al suelo. Desde la comisaría salen dos agentes con el arma en la mano.",
+          C: "Ríos ve tu pistola y levanta las manos, sin perder la compostura. «Tranquilo. Soy policía.» Lalo se tira al suelo como puede. De la comisaría salen dos agentes con el arma desenfundada.",
+        },
+        options: [
+          {
+            id: "pistola-tirar",
+            say: { A: "¡No disparo! La dejo en el suelo. Hablemos.", B: "¡No voy a disparar! La dejo en el suelo. Hablemos.", C: "No voy a disparar. La dejo en el suelo, mire; ahora hablemos como personas." },
+            reply: { A: "Dejas la pistola. Los agentes te esposan. Ríos suspira. «¿Y ahora qué quieres?»", B: "Dejas la pistola en el suelo. Los agentes te esposan. Ríos suspira. «¿Y ahora qué quiere?»", C: "Dejas la pistola en el suelo. Los agentes te esposan sin muchos modales. Ríos suspira. «A ver, ¿qué quería usted exactamente?»" },
+            mood: "scared", next: "pistola-esposado",
+          },
+          {
+            id: "pistola-fugitivo",
+            say: { A: "¡Busco al hombre de la chaqueta roja! ¡Vi adónde fue!", B: "¡Yo también busco al de la chaqueta roja! ¡Vi adónde fue!", C: "¡Yo también busco al de la chaqueta roja, y sé adónde fue!" },
+            reply: { A: "Ríos duda. «Baje eso y dígame.» Los agentes no bajan el arma.", B: "Ríos duda un segundo. «Baje eso y dígame adónde.» Los agentes no bajan el arma.", C: "Ríos duda. «Baje eso y dígame adónde, rápido.» Los agentes mantienen el arma en alto." },
+            mood: "scared", next: "pistola-esposado",
+          },
+          {
+            id: "pistola-huir",
+            say: { A: "¡Atrás! ¡No se acerquen!", B: "¡Atrás! ¡Que nadie se acerque!", C: "¡Atrás todos! ¡Que nadie se me acerque ni un paso!" },
+            reply: { A: "Llegan dos patrulleros. Luces azules. «¡Manos arriba!»", B: "Frenan dos patrulleros con luces azules. «¡Suelte el arma! ¡Manos arriba!»", C: "Frenan dos patrulleros en seco, con las luces azules inundando la calle. «¡Suelte el arma! ¡Manos arriba!»" },
+            mood: "terror", end: "pistola-patrulla",
+          },
+        ],
+      },
+      "pistola-esposado": {
+        who: "lalo", mood: "surprised",
+        line: {
+          A: "Estás esposado junto a Lalo. Él te mira: «Qué noche. Dos con chaqueta y pistola. Todo mal.» Ríos escucha.",
+          B: "Estás esposado junto a Lalo, contra el muro de la comisaría. Él te mira de reojo. «Qué noche. Dos detenidos, una chaqueta roja y una pistola. Todo mal.» Ríos escucha desde la puerta.",
+          C: "Estás esposado junto a Lalo, contra el muro de la comisaría. Él te mira de reojo. «Qué noche la nuestra. Una chaqueta roja, una pistola y ningún culpable.» Ríos escucha desde la puerta, sin disimulo.",
+        },
+        options: [
+          {
+            id: "pistola-contar",
+            say: { A: "Inspector, la pistola es mía y la llevaba por miedo. El fugitivo fue a la avenida.", B: "Inspector, la pistola es mía y la llevo por miedo. Y el fugitivo se fue hacia la avenida.", C: "Inspector, la pistola es mía y la llevo por miedo, no por maldad. Y mi información sobre el fugitivo sigue en pie." },
+            reply: { A: "Ríos llama por radio: «Avenida.» Después te mira. «Vamos adentro.»", B: "Ríos llama por radio: «Todas las unidades a la avenida.» Después te mira. «Y usted, adentro, a declarar.»", C: "Ríos lanza la orden por radio: «Todas las unidades, a la avenida.» Después te mira. «Y usted, adentro, a declarar sobre esa pistola.»" },
+            mood: "worried", end: "pistola-patrulla",
+          },
+          {
+            id: "pistola-lalo",
+            say: { A: "Inspector, suelte a Lalo. Él no corrió.", B: "Inspector, suelte a Lalo. Él no corrió nunca.", C: "Inspector, suelte a Lalo: no ha corrido ni un metro, y yo soy el que debería estar esposado." },
+            reply: { A: "Ríos se frota la cara. Quita las esposas a Lalo. «Fuera.»", B: "Ríos se frota la cara y suspira. Le quita las esposas a Lalo. «Largo de aquí.»", C: "Ríos se frota la cara, agotado. Le quita las esposas a Lalo. «Largo de aquí, y gracias por no morirte.»" },
+            mood: "smile", end: "hermano",
+          },
+          {
+            id: "pistola-callar",
+            say: { A: "No digo nada sin abogado.", B: "No voy a decir nada sin un abogado.", C: "No voy a declarar nada sin un abogado presente." },
+            reply: { A: "Ríos asiente. «Es su derecho.» Te llevan adentro.", B: "Ríos asiente. «Es su derecho.» Te llevan a la comisaría.", C: "Ríos asiente con frialdad. «Es su derecho.» Te llevan a la comisaría sin una palabra más." },
+            mood: "neutral", end: "detenido",
+          },
+        ],
+      },
+      // ── granada.
+      "granada-inicio": {
+        who: "rios", mood: "terror",
+        line: {
+          A: "Ríos ve la granada y grita: «¡Granada! ¡Todos al suelo!» Lalo corre, esposado, hacia la comisaría. Se enciende la alarma. Sale gente corriendo.",
+          B: "Ríos ve la granada y grita con todo el aire que le queda: «¡Granada! ¡Todos al suelo!» Lalo corre, esposado, hacia la comisaría. Se enciende la alarma y salen policías corriendo.",
+          C: "Ríos ve la granada y ruge con todo el aire que le queda: «¡Granada! ¡Todos al suelo!» Lalo echa a correr, esposado, hacia la comisaría. La alarma salta y los policías salen en tropel.",
+        },
+        options: [
+          {
+            id: "granada-falsa",
+            say: { A: "¡Es de mentira! ¡Mire! ¡Es de plástico!", B: "¡Es de mentira, mire! ¡Es de plástico!", C: "¡Es de mentira, inspector, es de plástico! ¡Mírela antes de movilizar a toda la comisaría!" },
+            reply: { A: "Ríos la toma. La golpea contra el suelo. No pasa nada. Respira. Lalo ríe.", B: "Ríos la toma con dos dedos y la golpea contra el suelo. No pasa nada. Respira hondo. Lalo se ríe a carcajadas.", C: "Ríos la toma con dos dedos y la golpea contra el suelo. No pasa nada. Respira hondo, con la cara de quien se muere de vergüenza. Lalo se ríe a carcajadas." },
+            mood: "laugh", end: "granada-risa",
+          },
+          {
+            id: "granada-fugitivo",
+            say: { A: "¡Aproveche! El fugitivo corre. ¡Vaya por la avenida!", B: "¡Inspector, el fugitivo sigue libre! ¡Vaya por la avenida mientras yo guardo esto!", C: "¡Inspector, mientras discutimos, el fugitivo se aleja! ¡Vaya por la avenida, que yo me encargo de esto!" },
+            reply: { A: "Ríos te agarra del brazo, sin oír la alarma. «¿El fugitivo? ¡Hable ya!»", B: "Ríos te agarra del brazo, sordo a la alarma. «¿Qué fugitivo ha visto? ¡Hable, rápido!»", C: "Ríos te agarra del brazo, sordo a la alarma. «¿Qué sabe usted del fugitivo? ¡Hable, y rápido!»" },
+            mood: "worried", next: "testigo",
+          },
+          {
+            id: "granada-correr",
+            say: { A: "¡Corran! ¡Yo la tiro lejos!", B: "¡Corran todos! ¡Yo me la llevo lejos!", C: "¡Corran todos, yo me la llevo lejos de aquí!" },
+            reply: { A: "La gente corre. Tú corres también. Detrás, el helicóptero.", B: "La gente corre en todas direcciones. Tú también. Detrás, llega un helicóptero.", C: "La gente se dispersa en todas direcciones. Tú también. Detrás de ti, un helicóptero ilumina la calle." },
+            mood: "scared", end: "granada-helicoptero",
+          },
+        ],
+      },
+      // ── gas.
+      "gas-inicio": {
+        who: "lalo", mood: "scared",
+        line: {
+          A: "Lalo ve tu gas pimienta. «¡Eh! ¡No me eches eso! ¡Estoy esposado!» Ríos, entre jadeos: «¿Qué hace? ¡Guarde eso!»",
+          B: "Lalo ve el gas pimienta y se encoge. «¡Eh! ¡No me lo eches, estoy esposado!» Ríos, entre jadeos: «¿Qué hace usted? ¡Guarde eso ahora!»",
+          C: "Lalo ve el gas pimienta y se encoge contra el muro. «¡Eh! ¡Ni se te ocurra, que estoy esposado!» Ríos, entre jadeos: «¿Qué hace usted? ¡Guarde eso ahora mismo!»",
+        },
+        options: [
+          {
+            id: "gas-guardar",
+            say: { A: "Perdón. Es por si el fugitivo vuelve. Lo guardo.", B: "Perdón, lo llevo por si el fugitivo vuelve. Lo guardo.", C: "Perdón, lo llevo por si el fugitivo vuelve por aquí. Lo guardo, no es para ustedes." },
+            reply: { A: "Ríos resopla. «Buena idea. Y dígame todo lo que vio.»", B: "Ríos resopla. «No es mala idea, pero guárdelo. Y cuénteme todo lo que vio.»", C: "Ríos resopla. «No es mala idea, pero guárdelo ya. Y cuénteme lo que vio, con orden.»" },
+            mood: "worried", next: "testigo",
+          },
+          {
+            id: "gas-vigilar",
+            say: { A: "Yo vigilo a Lalo con el gas. Usted persiga al fugitivo.", B: "Yo vigilo a Lalo con el gas. Usted vaya por el fugitivo.", C: "Yo vigilo a Lalo, con el gas listo. Usted vaya por el fugitivo, que el tiempo corre." },
+            reply: { A: "Lalo llora. «¡No me echen gas! ¡Soy inocente!» Ríos se va.", B: "Lalo gimotea. «¡Por favor, no me echen gas, soy inocente!» Ríos duda y se va corriendo.", C: "Lalo gimotea. «¡Por favor, no me eches gas! ¡Soy inocente!» Ríos duda un instante y sale corriendo detrás del fugitivo." },
+            mood: "scared", end: "persecucion",
+          },
+          {
+            id: "gas-rociar",
+            say: { A: "¡Atrás! ¡Alguien viene!", B: "¡Atrás! ¡Alguien viene corriendo!", C: "¡Atrás! ¡Alguien viene corriendo hacia aquí y no sé quién es!" },
+            reply: { A: "Rocías. Era un agente. Cae tosiendo. Todos gritan.", B: "Rocías. Era un agente que volvía de patrullar. Cae tosiendo y todos gritan.", C: "Rocías sin mirar. Era un agente que volvía de patrullar: cae tosiendo y la comisaría entera sale a ver qué pasa." },
+            mood: "pain", end: "gas-cae",
+          },
+        ],
+      },
+      // ── lápiz.
+      "lapiz-inicio": {
+        who: "rios", mood: "surprised",
+        line: {
+          A: "Ríos ve tu lápiz y un papel. «¡Perfecto! Dibuje al fugitivo. Lo vio, ¿no? Tengo tres minutos antes de que llegue a la avenida.»",
+          B: "Ríos ve tu lápiz y el papel y se anima. «¡Perfecto! Dibújeme al fugitivo, que usted lo vio, ¿no? Tengo tres minutos antes de que llegue a la avenida.»",
+          C: "Ríos ve tu lápiz y el papel y se le ilumina la cara sudada. «¡Perfecto! Hágame un retrato hablado del fugitivo mientras lo tiene fresco; me quedan tres minutos antes de que llegue a la avenida.»",
+        },
+        options: [
+          {
+            id: "lapiz-retrato",
+            say: { A: "Alto, gorra, cojea. Lo dibujo así.", B: "Alto, con gorra, cojeaba de la pierna izquierda. Lo dibujo así, rápido.", C: "Alto, gorra, un andar cojo de la izquierda. Lo dibujo con esos rasgos y el resto lo completa usted." },
+            reply: { A: "Dibujas. Ríos mira. «¡Eso es! Lo conozco.» Sale corriendo.", B: "Dibujas con trazos rápidos. Ríos mira el papel. «¡Es él, lo conozco!» Y sale corriendo con el dibujo en la mano.", C: "Dibujas con trazos rápidos y seguros. Ríos mira el papel. «Lo conozco: es él.» Y sale corriendo con tu dibujo en la mano." },
+            mood: "neutral", end: "lapiz-retrato",
+          },
+          {
+            id: "lapiz-mapa",
+            say: { A: "Mejor un mapa. Aquí giró. Aquí se fue.", B: "Mejor un mapa: aquí giró, aquí se escondió, aquí lo dejé de ver.", C: "Mejor un croquis: aquí giró, aquí se escondió, aquí lo dejé de ver. Con flechas, para que no se pierdan." },
+            reply: { A: "Ríos mira el mapa. Llama por radio. Lalo: «Qué buen mapa.»", B: "Ríos mira el mapa y lo dicta por radio. Lalo, desde el muro: «Qué buen mapa, de verdad.»", C: "Ríos mira el croquis y lo dicta por radio. Lalo, desde el muro, con ironía: «Qué buena letra para un testigo.»" },
+            mood: "smile", next: "testigo",
+          },
+          {
+            id: "lapiz-firma",
+            say: { A: "Lalo, firma aquí que no corriste. Ríos, firme usted también.", B: "Lalo, firme aquí que no corrió. Inspector, firme también que lo vio.", C: "Lalo, firme aquí que no corrió; inspector, firme usted debajo que lo comprueba. Así queda constancia." },
+            reply: { A: "Ríos duda. Firma. Lalo, con la mano libre del anillo de esposas, también.", B: "Ríos duda, pero firma. Lalo, como puede, también firma.", C: "Ríos duda, pero firma con un suspiro. Lalo, como puede con las esposas, también firma." },
+            mood: "neutral", end: "coartada",
+          },
+        ],
+      },
+      // ── libro.
+      "libro-inicio": {
+        who: "rios", mood: "surprised",
+        line: {
+          A: "Abres tu libro. Ríos te mira, sin aliento. «¿Un libro? ¿Ahora? ¡Hay un fugitivo!» Lalo sonríe: «Yo lo leí. Es bueno.»",
+          B: "Abres tu libro. Ríos te mira, sin aliento. «¿Un libro? ¿Justo ahora? ¡Hay un fugitivo suelto!» Lalo sonríe desde el muro: «Yo lo leí. Es bueno.»",
+          C: "Abres tu libro. Ríos te mira, sin aliento. «¿Un libro? ¿Justo ahora, con un fugitivo suelto?» Lalo sonríe desde el muro, esposado y todo: «Yo lo he leído. Es muy bueno.»",
+        },
+        options: [
+          {
+            id: "libro-detalle",
+            say: { A: "Lalo, ¿lo leíste? Entonces eres lector. ¿Dónde trabajas?", B: "Lalo, ¿lo leíste? Entonces cuéntame: ¿dónde trabajas, qué hacías esta noche?", C: "Lalo, ¿de verdad lo leíste? Cuéntame de qué trata y, de paso, qué hacías esta noche." },
+            reply: { A: "Lalo cuenta el argumento y la cochera. Ríos escucha. «Puede ser.»", B: "Lalo cuenta el argumento sin errores y después su turno en la cochera. Ríos escucha, mordiéndose el labio. «Puede ser…»", C: "Lalo resume el argumento sin un solo error y después su turno en la cochera. Ríos escucha, mordiéndose el labio. «Vaya. Puede que sea cierto.»" },
+            mood: "smile", next: "lalo",
+          },
+          {
+            id: "libro-regalar",
+            say: { A: "Tome, inspector. Para las esperas. Y suelte a Lalo.", B: "Tome, inspector, para las esperas en la guardia. Y suelte a Lalo, por favor.", C: "Tome, inspector, para las guardias eternas. Y suelte a Lalo: un lector no se escapa." },
+            reply: { A: "Ríos mira el libro, el reloj, a Lalo. Se ríe. «Le quito las esposas.»", B: "Ríos mira el libro, el reloj y a Lalo. Se ríe, sin querer. «Le quito las esposas. Por el libro.»", C: "Ríos mira el libro, el reloj y a Lalo. Se ríe, sin querer. «Le quito las esposas. Los lectores no huyen.»" },
+            mood: "laugh", end: "libro-sala",
+          },
+          {
+            id: "libro-pista",
+            say: { A: "En el libro hay un mapa de la zona. Mire por dónde pudo ir.", B: "El libro trae un plano de la zona. Mire por dónde pudo escapar.", C: "El libro trae un plano de la zona; mire por dónde pudo escapar un hombre que no conoce el barrio." },
+            reply: { A: "Ríos mira el plano. Señala una calle. «¡Aquí!» Y sale corriendo.", B: "Ríos estudia el plano un segundo. Señala una calle. «¡Por aquí!» Y sale corriendo.", C: "Ríos estudia el plano medio segundo. Señala una calle sin salida. «¡Ahí lo tenemos!» Y echa a correr." },
+            mood: "surprised", end: "persecucion",
+          },
+        ],
+      },
+      // ── corazón.
+      "corazon-inicio": {
+        who: "lalo", mood: "love",
+        line: {
+          A: "Lalo ve el corazón y llora. «Gracias. Nadie me cree. Me duele la cabeza y estoy esposado.» Ríos baja el arma. «Perdón, Lalo.»",
+          B: "Lalo ve el corazón y se le llenan los ojos. «Gracias. Nadie me cree, me duele la cabeza y estoy esposado por una chaqueta.» Ríos baja los hombros. «Perdón, Lalo.»",
+          C: "Lalo ve el corazón y empieza a llorar sin ruido. «Gracias. Nadie me cree, me duele la cabeza y estoy esposado por una chaqueta.» Ríos baja los hombros, humano de pronto. «Perdona, Lalo.»",
+        },
+        options: [
+          {
+            id: "corazon-perdon",
+            say: { A: "Inspector, quítele las esposas. Yo me quedo de testigo.", B: "Inspector, quítele las esposas. Yo me quedo de testigo y lo acompaño a la clínica.", C: "Inspector, quítele las esposas; yo me quedo como testigo y lo acompaño a la clínica si hace falta." },
+            reply: { A: "Ríos le quita las esposas. Lalo se frota las muñecas y sonríe.", B: "Ríos le quita las esposas. Lalo se frota las muñecas y, con una sonrisa temblorosa, te abraza.", C: "Ríos le quita las esposas con cierta vergüenza. Lalo se frota las muñecas y, con una sonrisa temblorosa, te abraza." },
+            mood: "love", end: "corazon-abrazo",
+          },
+          {
+            id: "corazon-herida",
+            say: { A: "Lalo, ¿te duele mucho la cabeza? Vamos a la clínica.", B: "Lalo, esa herida de la cabeza hay que verla ahora. Vamos a la clínica, yo te llevo.", C: "Lalo, esa herida no puede esperar a los trámites. Vamos a la clínica; yo te acompaño y el inspector nos sigue." },
+            reply: { A: "Ríos asiente. «Vayan.» Lalo, con tu ayuda, cruza la calle.", B: "Ríos asiente, avergonzado. «Vayan, vayan.» Lalo cruza la calle apoyado en ti.", C: "Ríos asiente, avergonzado. «Vayan. Yo me encargo de lo demás.» Lalo cruza la calle apoyado en ti." },
+            mood: "love", end: "hermano",
+          },
+          {
+            id: "corazon-fugitivo",
+            say: { A: "Inspector, yo vi al fugitivo. Se lo cuento.", B: "Inspector, yo vi al verdadero fugitivo. Se lo cuento ahora.", C: "Inspector, yo vi al verdadero fugitivo, y no fue Lalo. Se lo cuento ahora, con calma." },
+            reply: { A: "Ríos respira. «Cuente.»", B: "Ríos respira y se endereza. «Cuénteme.»", C: "Ríos respira hondo, y vuelve a ser inspector. «Cuénteme, desde el principio.»" },
+            mood: "neutral", next: "testigo",
+          },
+        ],
+      },
+    },
+    ends: {
+      nada: {
+        text: { A: "Ríos corre hacia la avenida. Tú te vas a la clínica. No sabes cómo termina.", B: "Ríos corre hacia la avenida y tú sigues hacia la clínica. Nunca sabrás cómo termina la persecución.", C: "Ríos corre hacia la avenida y tú sigues camino a la clínica. Nunca sabrás cómo termina la persecución, y es lo más honesto." },
+        change: "sigue", recap: "No pudiste ayudar al inspector con el fugitivo.",
+      },
+      persecucion: {
+        text: { A: "Un patrullero arranca. Ríos corre. Se oyen sirenas por la avenida. La calle se llena de luces azules.", B: "Un patrullero arranca y Ríos corre detrás. Las sirenas llenan la avenida y la calle se tiñe de luces azules.", C: "Un patrullero arranca en seco y Ríos corre detrás. Las sirenas inundan la avenida y la calle se tiñe de azul. Tú te quedas con la sensación de haber empujado algo grande." },
+        change: "corre", recap: "Tu declaración puso en marcha la persecución.",
+      },
+      detenido: {
+        text: { A: "Los agentes se llevan a Lalo dentro. Él te mira desde la puerta. Se oye cerrar una puerta.", B: "Los agentes se llevan a Lalo a la comisaría. Te mira desde la puerta antes de que se cierre.", C: "Los agentes se llevan a Lalo dentro. Te mira desde la puerta hasta que se cierra, y esa mirada no es de reproche, es de cansancio." },
+        change: "policia", recap: "Lalo siguió detenido en la comisaría.",
+      },
+      coartada: {
+        text: { A: "Doña Elba llega con su cartera. Dice que Lalo trabaja con ella. Ríos le quita las esposas.", B: "Doña Elba llega desde la cochera, jura que Lalo trabaja con ella y Ríos le quita las esposas.", C: "Doña Elba llega desde la cochera, jura ante Dios y ante la policía que Lalo trabaja con ella, y Ríos le quita las esposas con cara de pocos amigos." },
+        change: "llama", recap: "Ayudaste a que Lalo probara dónde estaba.",
+      },
+      hermano: {
+        text: { A: "Lalo, sin esposas, se frota las muñecas. Cruza la calle hacia la clínica. Te saluda desde lejos.", B: "Lalo, sin esposas, se frota las muñecas y cruza la calle hacia la clínica. Te saluda desde lejos.", C: "Lalo, sin esposas, se frota las muñecas y cruza la calle hacia la clínica, a que le cosan la cabeza. Te saluda desde lejos, con la mano en alto." },
+        change: "se-va", recap: "Conseguiste que soltaran a Lalo.",
+      },
+      "cuchillo-policia": {
+        text: { A: "Ríos se queda con tu cuchillo y tus datos. Llama al fiscal. Tú esperas dentro, sentado.", B: "Ríos se queda con tu cuchillo y tus datos. Llama al fiscal de guardia y te hace esperar dentro, sentado.", C: "Ríos se queda con tu cuchillo y tus datos, y llama al fiscal de guardia. Te hacen esperar dentro, sentado, hasta que alguien decida qué eres." },
+        change: "policia", recap: "Tu cuchillo terminó en la comisaría.",
+      },
+      "pistola-patrulla": {
+        text: { A: "Dos patrulleros bloquean la calle. Te esposan. Tu pistola va a una bolsa. La noche acaba en una celda.", B: "Dos patrulleros bloquean la calle y te esposan. Tu pistola va a una bolsa de pruebas. La noche acaba en una celda.", C: "Dos patrulleros bloquean la calle y te esposan con eficacia. Tu pistola va a una bolsa de pruebas y la noche acaba, sin sorpresas, en una celda." },
+        change: "manos-arriba", recap: "Tu pistola frente a la comisaría terminó con las manos arriba.",
+      },
+      "granada-helicoptero": {
+        text: { A: "Helicóptero. Patrulleros. Toda la comisaría en la calle. Una noche que nadie olvida.", B: "Un helicóptero, patrulleros y toda la comisaría en la calle. Una noche que nadie va a olvidar.", C: "Un helicóptero, patrulleros por todas partes y toda la comisaría en la calle, mirando al cielo. Una noche que la ciudad no va a olvidar." },
+        change: "helicoptero", recap: "Tu granada vació la comisaría y llenó el cielo.",
+      },
+      "granada-risa": {
+        text: { A: "Todos se ríen, hasta Ríos. Lalo con las esposas. La granada, en el bolsillo del inspector.", B: "Todos se ríen, hasta Ríos. Lalo, con las esposas puestas, se desternilla. La granada acaba en el bolsillo del inspector.", C: "Todos se ríen, hasta Ríos, que es mucho decir. Lalo se desternilla con las esposas puestas. La granada acaba como souvenir en el bolsillo del inspector." },
+        change: "sonrie", recap: "Tu granada de plástico hizo reír a la comisaría.",
+      },
+      "gas-cae": {
+        text: { A: "El agente tose en el suelo. Ríos grita. Lalo ríe. Te llevan dentro, llorando tú también.", B: "El agente tose en el suelo, Ríos grita y Lalo se ríe. Te llevan dentro, con los ojos llorosos tú también.", C: "El agente tose en el suelo, Ríos ruge y Lalo, esposado, se ríe a mandíbula batiente. Te llevan dentro, con los ojos llorosos tú también: el gas se esparció." },
+        change: "cae", recap: "Rociaste a un agente con gas por error.",
+      },
+      "lapiz-retrato": {
+        text: { A: "Tu dibujo circula por radio. Una hora después, atrapan al fugitivo. Ríos te manda una nota.", B: "Tu dibujo circula por todas las radios. Una hora después atrapan al fugitivo. Ríos te manda una nota de agradecimiento.", C: "Tu dibujo circula por todas las radios de la zona. Una hora después atrapan al fugitivo, y Ríos te manda una nota con una sola frase: «Buen pulso»." },
+        change: "corre", recap: "Dibujaste al fugitivo para la policía.",
+      },
+      "libro-sala": {
+        text: { A: "Ríos guarda el libro en el bolsillo. Lalo va libre. Los dos se ríen del cansancio.", B: "Ríos guarda el libro en el bolsillo y Lalo queda libre. Los dos se ríen de puro cansancio.", C: "Ríos guarda el libro en el bolsillo y Lalo queda libre. Los dos se ríen de puro cansancio, que es la risa más sincera que existe." },
+        change: "sonrie", recap: "Un libro ayudó a liberar a Lalo.",
+      },
+      "corazon-abrazo": {
+        text: { A: "Lalo te abraza. Ríos mira al suelo. La calle vuelve a estar tranquila.", B: "Lalo te abraza con las manos ya libres. Ríos mira al suelo, incómodo. La calle vuelve a estar tranquila.", C: "Lalo te abraza con las manos ya libres. Ríos mira al suelo, incómodo y conmovido. La calle, por fin, vuelve a estar tranquila." },
+        change: "abraza", recap: "Lalo, liberado, te abrazó en la puerta de la comisaría.",
+      },
+    },
+    speak: {
+      A1: "¿De qué color es tu chaqueta favorita?",
+      A2: "¿Qué haces si alguien te pregunta por una persona que viste en la calle?",
+      B1: "¿Alguna vez fuiste testigo de algo importante?",
+      B2: "¿Cómo describirías a una persona sin que se parezca a nadie más?",
+      C1: "¿Cuánto vale la palabra de un testigo que vio algo solo un segundo?",
+      C2: "¿Cómo se evita que una apariencia termine convirtiéndose en una acusación?",
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "manos-arriba", speak: { A: "¿Tienes miedo de la policía?", B: "¿Qué harías si un policía te apuntara por error?", C: "¿Qué es más difícil: callar bajo presión o contar la verdad a quien no te cree?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Obedeces a la policía?", B: "¿Cómo reaccionarías si te esposaran sin motivo?", C: "¿Qué derechos mantiene una persona cuando ya está esposada?" } },
+      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Tu ciudad tiene helicópteros de policía?", B: "¿Cuál fue la falsa alarma más grande que viviste?", C: "¿Cuándo un exceso de reacción hace más daño que la amenaza?" } },
+      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Te sientes seguro de noche?", B: "¿Confías en la policía de tu barrio?", C: "¿Cuánta vigilancia ciudadana es sana y cuánta es peligrosa?" } },
+      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Sabes dibujar?", B: "¿Podrías dibujar de memoria la cara de alguien que viste ayer?", C: "¿Qué detalles de una cara se pierden primero en la memoria?" } },
+      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Qué libro leíste este año?", B: "¿Qué libro recomendarías a alguien que espera mucho en una comisaría?", C: "¿Por qué leer ayuda a ver a las personas con más matices?" } },
+      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Te cuesta pedir perdón?", B: "¿Cuándo pediste perdón por haber acusado mal a alguien?", C: "¿Qué hace falta para reconocer a tiempo un error que ya hizo daño?" } },
+    },
+  },
+];
+
+// Where each scene stands. The person faces `face`; the learner's circle is in front.
+export const PLACEMENTS = {
+  "viejo-esquina": { x: -104, z: -55.4, face: 0, circle: { x: -104, z: -53.7 } },
+  "viejo-sombra": { x: -100.4, z: -100.8, face: Math.PI / 2, circle: { x: -98.6, z: -100.8 } },
+  "alto-seguridad": { x: 19, z: -80, face: Math.PI, circle: { x: 19, z: -82 } },
+  "alto-pareja": { x: 42, z: -54, face: 0, circle: { x: 42, z: -52.4 } },
+  "clinica-urgencias": { x: 84.5, z: -56.2, face: 0, circle: { x: 84.5, z: -54.4 } },
+  "clinica-fuga": { x: 110, z: -93, face: 0, circle: { x: 110, z: -91.2 } },
+};
+
+export default encounters;
