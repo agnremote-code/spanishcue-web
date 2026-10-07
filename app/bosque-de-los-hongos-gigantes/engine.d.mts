@@ -6,7 +6,7 @@ export type Obstacle={id:string;x:number;z:number;r:number;y0:number;y1:number};
 export type MicroSpot={id:string;platform:string;x:number;y:number;z:number;r:number;stage:number;kind:'tramo'|'mirador'};
 export type Stage={id:string;name:string;from:number};
 export type Zone=Position&{id:CategoryId;name:string;short:string;color:string;ecology:string;r:number;species:string;place:string;stage:number;theta:number;layout:{arrive:number;leave:number;sign:Anchor;lamp:Anchor;prop:Anchor}};
-export type Player=Position&{vy:number;grounded:boolean;platform:string|null;checkpoint:Position;yaw:number;coyote:number;respawns:number};
+export type Player=Position&{vy:number;grounded:boolean;platform:string|null;checkpoint:Position;yaw:number;coyote:number;respawns:number;airJumps?:number;doubleJumps?:number};
 export type Session={version:number;level:Level;seed:number;seen:string[];discussed:string[];visited:CategoryId[];active:string|null;complete:boolean;finalIds:string[];finalDone:string[];personalized:boolean;micro:string[]};
 export const LEVELS:Level[];export const CATEGORIES:Omit<Zone,'x'|'y'|'z'>[];export const ZONES:Zone[];export const PLATFORMS:Platform[];export const SPAWN:Position;export const STAGES:Stage[];
 export function stageAt(y:number):number;
@@ -17,7 +17,7 @@ export function resolveObstacles<T extends {x:number;y:number;z:number}>(p:T,obs
 export function routePoint(theta:number):{x:number;z:number;R:number};
 export function clearOf(c:{x:number;z:number;y:number;r:number;kind?:string},list:Platform[],except?:Platform|null):boolean;
 export function columnClear(x:number,z:number,radius:number,bottom:number,top:number,list?:Platform[],except?:Platform|null):boolean;
-export const GRAVITY:number,JUMP_SPEED:number,RUN_SPEED:number,WALK_SPEED:number;
+export const GRAVITY:number,JUMP_SPEED:number,DOUBLE_JUMP_SPEED:number,FALL_RECOVERY:number,RUN_SPEED:number,WALK_SPEED:number;
 export function parseLevel(value:unknown):Level;
 export function spawnPlayer():Player;
 export function stepPlayer(player:Player,input:{x:number;z:number;jump?:boolean;run?:boolean},delta:number,platforms?:Platform[],obstacles?:Obstacle[]):Player;

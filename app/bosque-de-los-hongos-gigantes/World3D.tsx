@@ -39,7 +39,7 @@ const STAGE_INTROS = [
   'La cima. Todo el camino está a tus pies.',
 ];
 const STAGE_HINTS = [
-  'Sigue los hongos bajos hacia la luz. Espacio para saltar.',
+  'Sigue el hongo marcado. Espacio para saltar; en el aire, otra vez para un segundo salto.',
   'Los sombreros suben poco a poco. Arrastra para mirar hacia arriba.',
   'Setas doradas: ¿se comen o no? Busca el globo ¿? para conversar.',
   'Colores intensos, cuidado. Los anillos dorados te impulsan.',
@@ -64,7 +64,7 @@ function restorePlayer(): Player {
     const stored = JSON.parse(localStorage.getItem(POSITION_KEY) || 'null');
     if (stored?.version !== 2 || !finitePosition(stored.position) || !finitePosition(stored.checkpoint)) return player;
     const cp = surfaceAt(stored.checkpoint), surface = surfaceAt(stored.position);
-    if (stored.checkpoint.y !== 0 && !cp?.checkpoint) return player;
+    if (stored.checkpoint.y !== 0 && !cp) return player;
     if (stored.position.y !== 0 && !surface) return player;
     return { ...player, ...stored.position, checkpoint: { ...stored.checkpoint }, platform: surface?.id || 'ground' };
   } catch { return player; }
@@ -104,7 +104,7 @@ export default function World3D(props: WorldProps) {
     const hemi = new THREE.HemisphereLight('#eaf2d6', '#4a5a3c', air.hemi); scene.add(hemi);
     const sun = new THREE.DirectionalLight('#ffe4b0', air.sun); sun.castShadow = !low; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -24, right: 24, top: 24, bottom: -24, near: 1, far: 150 }); sun.shadow.normalBias = .05; sun.shadow.bias = -.0002; scene.add(sun, sun.target);
     const forest = buildForest({ low, reducedMotion }); scene.add(forest.root);
-    const hero = createForestHero(!low); scene.add(hero.root, hero.shadow);
+    const hero = createForestHero(!low); scene.add(hero.root, hero.shadow, hero.puff);
     let player = restorePlayer(), alive = true, frame = 0, lastTime = 0, elapsed = 0, uiTime = 0, saveTime = 0, frames = 0, slowTime = 0, solidTime = 99;
     const firstZone = ZONES[0];
     // Start looking along the route toward the first landmark, the climb visible ahead.
@@ -112,6 +112,18 @@ export default function World3D(props: WorldProps) {
     hero.heading = yaw + Math.PI;
     let currentZone: CategoryId | null = null, currentMicro: string | null = null, previousRespawns = player.respawns, toastUntil = 0, lastStage = -1, highestStage = stageAt(player.y), lookTimer = 0, lookYaw = 0, lookPitch = .35, bannerUntil = 0;
     const obstacles = [...OBSTACLES, ...forest.obstacles];
+    // The route is fixed: the next cap is the one after the last cap the learner stood on.
+    const route = PLATFORMS.filter(p => !p.id.startsWith('side'));
+    const nextCapOf = (cp: Position) => {
+      const here = PLATFORMS.find(p => Math.abs(p.x - cp.x) < .01 && Math.abs(p.z - cp.z) < .01 && Math.abs(p.y - cp.y) < .01);
+      if (!here) return route[0];
+      const i = route.indexOf(here);
+      if (i >= 0) return route[i + 1] ?? null;
+      // From a detour, the route resumes at the cap after its station.
+      const zoneIndex = Number(here.id.split('-')[1]), station = route.findIndex(p => p.zone === ZONES[zoneIndex]?.id);
+      return route[station + 1] ?? null;
+    };
+    let nextCap = nextCapOf(player.checkpoint);
     const known = new Set<string>(live.current.visited);
     const held = new Set<string>(), joy = { x: 0, y: 0 };
     const look = new THREE.Vector3(player.x, player.y + 1.5, player.z), pvec = new THREE.Vector3();
@@ -175,7 +187,6 @@ export default function World3D(props: WorldProps) {
     canvas.addEventListener('pointerdown', pointerdown); canvas.addEventListener('pointermove', pointermove); canvas.addEventListener('pointerup', onUp); canvas.addEventListener('pointercancel', onCancel); canvas.addEventListener('lostpointercapture', onUp); canvas.addEventListener('wheel', wheel, { passive: false }); canvas.addEventListener('webglcontextlost', contextLost);
     const resize = () => { const w = mount.clientWidth, h = mount.clientHeight; if (!w || !h) return; renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); };
     const observer = new ResizeObserver(resize); observer.observe(mount); resize();
-    const route = PLATFORMS.filter(p => !p.id.startsWith('side'));
     const drawMap = (target: HTMLCanvasElement | null, expanded: boolean) => {
       if (!target) return; const c = target.getContext('2d'); if (!c) return;
       const w = target.width, h = target.height, bar = expanded ? 120 : 26, pad = expanded ? 30 : 10, size = Math.min(w - bar - pad, h) - pad * 2, scale = size / 104, cx = pad + size / 2, cy = h / 2;
@@ -212,7 +223,12 @@ export default function World3D(props: WorldProps) {
       if (!live.current.paused && !mapOpenRef.current && !document.hidden) {
         const ix = (held.has('KeyD') || held.has('ArrowRight') ? 1 : 0) - (held.has('KeyA') || held.has('ArrowLeft') ? 1 : 0) + joy.x;
         const iz = (held.has('KeyS') || held.has('ArrowDown') ? 1 : 0) - (held.has('KeyW') || held.has('ArrowUp') ? 1 : 0) + joy.y;
-        const dx = Math.cos(yaw) * ix + Math.sin(yaw) * iz, dz = -Math.sin(yaw) * ix + Math.cos(yaw) * iz;
+        let dx = Math.cos(yaw) * ix + Math.sin(yaw) * iz, dz = -Math.sin(yaw) * ix + Math.cos(yaw) * iz;
+        // Air assist: while flying toward the next cap, steering bends gently to its centre.
+        if (!player.grounded && nextCap && (dx || dz)) {
+          const tx = nextCap.x - player.x, tz = nextCap.z - player.z, d = Math.hypot(tx, tz), m = Math.hypot(dx, dz);
+          if (d < nextCap.r + 7 && (dx * tx + dz * tz) / (m * d || 1) > .35) { dx = dx / m * .62 + tx / d * .38; dz = dz / m * .62 + tz / d * .38; const k = Math.hypot(dx, dz) || 1; dx = dx / k * Math.min(1, m); dz = dz / k * Math.min(1, m); }
+        }
         // A fixed maximum substep keeps landings stable on slow touch devices.
         let remaining = dt; const beforeX = player.x, beforeZ = player.z;
         while (remaining > 0) { const step = Math.min(remaining, 1 / 90); player = stepPlayer(player, { x: dx, z: dz, jump: jumpQueued, run: held.has('ShiftLeft') || held.has('ShiftRight') || Math.hypot(joy.x, joy.y) > .85 }, step, PLATFORMS, obstacles); jumpQueued = false; remaining -= step; }
@@ -224,9 +240,15 @@ export default function World3D(props: WorldProps) {
         else if (elapsed - dragAt > 1.4 && !reducedMotion) yaw = followYaw(yaw, player.yaw, speed, dt, RUN_SPEED);
         const floor = PLATFORMS.find(p => p.id === player.platform); currentZone = player.grounded ? (floor?.zone ?? null) : null;
         const micro = player.grounded ? (floor?.micro ?? null) : null;
+        nextCap = nextCapOf(player.checkpoint);
+        // Standing still on the route, the camera turns to show the next jump.
+        if (player.grounded && speed < .2 && nextCap && elapsed - dragAt > 2.2 && lookTimer <= 0 && !reducedMotion) {
+          const want = Math.atan2(player.x - nextCap.x, player.z - nextCap.z);
+          yaw += Math.atan2(Math.sin(want - yaw), Math.cos(want - yaw)) * (1 - Math.exp(-dt * 1.6));
+        }
         if (micro !== currentMicro) { currentMicro = micro; live.current.onMicroSpot?.(micro); }
         // Landing establishes a checkpoint; only E or the visible button opens a conversation.
-        if (player.respawns > previousRespawns) { previousRespawns = player.respawns; toast('De vuelta al último hongo seguro. Tu conversación sigue aquí.'); }
+        if (player.respawns > previousRespawns) { previousRespawns = player.respawns; toast('De vuelta al último hongo. Consejo: en el aire, pulsa Saltar otra vez para un segundo salto.'); }
       }
       animateForestHero(hero, dt, player, speed, reducedMotion, live.current.paused);
       // Completed stations react: lantern, halo and a burst of spores.
@@ -255,7 +277,7 @@ export default function World3D(props: WorldProps) {
       // Guide forward: the first pending station at or above the learner, else the lowest pending one.
       const pending = ZONES.filter(z => !live.current.visited.includes(z.id));
       const nextZone = pending.find(z => z.y >= player.y - 3) ?? pending[0] ?? null;
-      forest.update(reducedMotion ? 0 : elapsed, pvec, { visited: live.current.visited, next: nextZone?.id ?? null, unlocked: live.current.unlocked, micro: live.current.micro ?? [] });
+      forest.update(reducedMotion ? 0 : elapsed, pvec, { visited: live.current.visited, next: nextZone?.id ?? null, unlocked: live.current.unlocked, micro: live.current.micro ?? [], nextCap: nextCap?.id ?? null });
       sun.position.set(player.x - 30, player.y + 62, player.z + 26); sun.target.position.set(player.x, player.y, player.z);
       renderer.render(scene, camera);
       // HUD, saving and the frame-rate monitor run on wall-clock time, so a slow device still sees current guidance.

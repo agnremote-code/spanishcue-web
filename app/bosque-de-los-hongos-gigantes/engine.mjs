@@ -53,6 +53,8 @@ export function routePoint(theta){const R=R0-TIGHTEN*(theta-THETA0);return{x:Mat
 const startPoint=routePoint(THETA0);
 export const SPAWN={x:Math.round(startPoint.x*100)/100,y:0,z:Math.round(startPoint.z*100)/100};
 export const GRAVITY=20, JUMP_SPEED=11, RUN_SPEED=9, WALK_SPEED=4.8;
+// A second, softer jump in the air: a recovery when a jump was misjudged. One per landing.
+export const DOUBLE_JUMP_SPEED=8.4, FALL_RECOVERY=7;
 // Species along the climb: the stage decides what grows there.
 const PATH_SPECIES=[['bolete','stump','bolete'],['bolete','puffball','bolete'],['chanterelle','oyster','bolete'],['amanita','violet','amanita'],['glow','spiral','glow'],['parasol','parasol','bolete'],['shelf','shelf','parasol'],['ghost','ghost','ghost'],['sky','sky','sky'],['sky','sky','sky']];
 let seed=7719;const rand=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
@@ -180,7 +182,7 @@ export function resolveObstacles(p,obstacles=OBSTACLES){
  return p;
 }
 export function parseLevel(value){return LEVELS.includes(value)?value:'A1';}
-export function spawnPlayer(){return{...SPAWN,vy:0,grounded:true,platform:'ground',checkpoint:{...SPAWN},yaw:0,coyote:.12,respawns:0};}
+export function spawnPlayer(){return{...SPAWN,vy:0,grounded:true,platform:'ground',checkpoint:{...SPAWN},yaw:0,coyote:.12,respawns:0,airJumps:1,doubleJumps:0};}
 export function stepPlayer(player,input,delta,platforms=PLATFORMS,obstacles=OBSTACLES){
  const p={...player,checkpoint:{...player.checkpoint}};const dt=Math.max(0,Math.min(delta,.04));
  const length=Math.hypot(input.x||0,input.z||0)||1;const speed=input.run?RUN_SPEED:WALK_SPEED;
@@ -189,12 +191,18 @@ export function stepPlayer(player,input,delta,platforms=PLATFORMS,obstacles=OBST
  resolveObstacles(p,obstacles);
  p.coyote=p.grounded?.12:Math.max(0,(p.coyote||0)-dt);
  if(input.jump&&(p.grounded||p.coyote>0)){p.vy=JUMP_SPEED;p.grounded=false;p.coyote=0;p.platform=null;}
+ else if(input.jump&&(p.airJumps??1)>0){p.vy=DOUBLE_JUMP_SPEED;p.airJumps=0;p.doubleJumps=(p.doubleJumps||0)+1;p.platform=null;}
  const before=p.y;p.vy-=GRAVITY*dt;p.y+=p.vy*dt;p.grounded=false;
  const surfaces=platforms.filter(s=>Math.hypot(p.x-s.x,p.z-s.z)<=s.r+.24&&before>=s.y-.08&&p.y<=s.y&&p.vy<=0).sort((a,b)=>b.y-a.y);
  const floor=surfaces[0]??(Math.hypot(p.x,p.z)<65&&p.y<=0&&before>=-.08?{id:'ground',y:0,checkpoint:false}:null);
- if(floor){p.y=floor.y;p.vy=0;p.grounded=true;p.platform=floor.id;p.coyote=.12;if(floor.checkpoint)p.checkpoint={x:floor.x,y:floor.y,z:floor.z};if(floor.bounce){p.vy=15;p.grounded=false;p.coyote=0;}}
+ if(floor){p.y=floor.y;p.vy=0;p.grounded=true;p.platform=floor.id;p.coyote=.12;p.airJumps=1;
+  // Every cap of the climb is a safe point: a fall costs one hop, never the whole ascent.
+  if(floor.id!=='ground'&&!floor.bounce)p.checkpoint={x:floor.x,y:floor.y,z:floor.z};
+  if(floor.bounce){p.vy=15;p.grounded=false;p.coyote=0;}}
  if(!p.grounded)p.platform=null;
- if(p.y<Math.max(-10,p.checkpoint.y-12)||!Number.isFinite(p.y)||Math.hypot(p.x,p.z)>90){Object.assign(p,p.checkpoint,{vy:0,grounded:true,coyote:.12,platform:null,respawns:p.respawns+1});}
+ // Falling to the forest floor once the climb has begun returns you to the last cap, not among the stems.
+ const fellToFloor=p.grounded&&p.platform==='ground'&&p.checkpoint.y>2.5;
+ if(fellToFloor||p.y<Math.max(-10,p.checkpoint.y-FALL_RECOVERY)||!Number.isFinite(p.y)||Math.hypot(p.x,p.z)>90){Object.assign(p,p.checkpoint,{vy:0,grounded:true,coyote:.12,platform:null,airJumps:1,respawns:p.respawns+1});}
  return p;
 }
 export function newSession(level='A1',seed=Date.now()%2147483647){return{version:1,level:parseLevel(level),seed,seen:[],discussed:[],visited:[],active:null,complete:false,finalIds:[],finalDone:[],personalized:false,micro:[]};}

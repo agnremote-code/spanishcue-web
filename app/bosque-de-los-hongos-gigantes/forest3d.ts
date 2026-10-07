@@ -3,7 +3,7 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { PLATFORMS, ZONES, SPAWN, MICRO_SPOTS, columnClear, corridorClear, stemRadiusOf } from './engine.mjs';
 import { SPECIES, capGeometry, gillGeometry, stemGeometry, spiralStemGeometry, ringGeometry, decorMushroomGeometry, bracketGeometry, capSurfaceY, stemAttachY, type SpeciesStyle } from './mushrooms3d';
 
-export type ForestState = { visited: string[]; next: string | null; unlocked: boolean; micro?: string[] };
+export type ForestState = { visited: string[]; next: string | null; unlocked: boolean; micro?: string[]; nextCap?: string | null };
 export type Obstacle = { id: string; x: number; z: number; r: number; y0: number; y1: number };
 export type Forest = {
   root: THREE.Group; solids: THREE.Object3D[]; obstacles: Obstacle[];
@@ -556,6 +556,11 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   const trail = new THREE.Points(trailGeo, new THREE.PointsMaterial({ color: '#ffe39a', map: haloTex, size: .55, transparent: true, opacity: .9, depthWrite: false, blending: THREE.AdditiveBlending }));
   trail.frustumCulled = false; dynamic.add(trail);
   const routeCaps = PLATFORMS.filter(p => !p.id.startsWith('side'));
+  // The next cap to land on: a pulsing golden ring on its rim and a marker above it.
+  const target = new THREE.Mesh(new THREE.TorusGeometry(1, .07, 8, 64), new THREE.MeshBasicMaterial({ color: '#ffe08a', transparent: true, opacity: .9, depthWrite: false, blending: THREE.AdditiveBlending, fog: false }));
+  target.rotation.x = Math.PI / 2; target.visible = false; dynamic.add(target);
+  const arrowTex = canvasTexture((c, s) => { c.fillStyle = '#ffe9a6'; c.strokeStyle = '#5a3f0a'; c.lineWidth = 6; c.beginPath(); c.moveTo(s * .2, s * .3); c.lineTo(s * .8, s * .3); c.lineTo(s * .5, s * .78); c.closePath(); c.fill(); c.stroke(); }, 64, false);
+  const arrow = new THREE.Sprite(new THREE.SpriteMaterial({ map: arrowTex, transparent: true, depthWrite: false, fog: false })); arrow.scale.setScalar(.9); arrow.visible = false; dynamic.add(arrow);
   const nearestRoute = (v: THREE.Vector3) => { let best = -1, d = Infinity; for (let i = 0; i < routeCaps.length; i++) { const p = routeCaps[i]; const k = Math.hypot(p.x - v.x, p.z - v.z) - p.r + Math.abs(p.y - v.y) * 1.5; if (k < d) { d = k; best = i; } } return v.y < .5 && d > 4 ? -1 : best; };
   // ---------------------------------------------------------- instanced decor and warts
   for (const [name, list] of decor) {
@@ -668,6 +673,13 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
           (sprite.material as THREE.SpriteMaterial).map = done ? microDoneTex : microTex;
           (sprite.material as THREE.SpriteMaterial).opacity = done ? .55 : 1;
           sprite.position.y = (MICRO_SPOTS.find(m => m.id === id)?.y ?? 0) + 2.7 + Math.sin(time * 1.9 + sprite.position.x) * .14 * motion;
+        }
+        const cap = state.nextCap ? PLATFORMS.find(p => p.id === state.nextCap) : null;
+        target.visible = arrow.visible = Boolean(cap) && (cap!.zone !== 'final' || state.unlocked);
+        if (cap) {
+          const s = SPECIES[cap.species] ?? SPECIES.bolete, rim = cap.y + capSurfaceY(s.shape, s.depth, .92) * cap.r + .08, pulse = 1 + Math.sin(time * 3.2) * .04 * motion;
+          target.position.set(cap.x, rim, cap.z); target.scale.setScalar(cap.r * .92 * pulse);
+          arrow.position.set(cap.x, cap.y + 2.1 + Math.sin(time * 2.6) * .25 * motion, cap.z);
         }
         // Trail: from the cap the learner stands on (or the entrance) to the next three caps, never beyond the next station.
         const from = nearestRoute(player), next = ZONES.find(z => z.id === state.next);
