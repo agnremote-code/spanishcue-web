@@ -9,6 +9,7 @@ import {
   type Building, type Npc, type Vehicle,
 } from './world3d.mjs';
 import { addBlobShadow, createPerson, type Look, type Person } from './people3d';
+import { CANAL, CITY_BOUNDS, ROADS } from './city.mjs';
 
 export type Night = {
   windows: THREE.MeshStandardMaterial[];
@@ -39,7 +40,7 @@ export type Interior = {
 };
 
 // Seeded random numbers so the city looks the same on every visit.
-function random(seed: number) {
+export function random(seed: number) {
   let value = seed >>> 0 || 1;
   return () => {
     value = (value * 1664525 + 1013904223) >>> 0;
@@ -58,11 +59,11 @@ export function solid(color: string, roughness = 0.85, metalness = 0) {
   return material;
 }
 
-function glow(color: string, intensity = 1) {
+export function glow(color: string, intensity = 1) {
   return new THREE.MeshStandardMaterial({ color: '#111111', emissive: color, emissiveIntensity: intensity, roughness: 0.6 });
 }
 
-function canvas(width: number, height: number, draw: (ctx: CanvasRenderingContext2D) => void, repeat = false) {
+export function canvas(width: number, height: number, draw: (ctx: CanvasRenderingContext2D) => void, repeat = false) {
   const element = document.createElement('canvas');
   element.width = width;
   element.height = height;
@@ -74,7 +75,7 @@ function canvas(width: number, height: number, draw: (ctx: CanvasRenderingContex
   return texture;
 }
 
-function box(w: number, h: number, d: number, material: THREE.Material, x = 0, y = 0, z = 0, shadows = true) {
+export function box(w: number, h: number, d: number, material: THREE.Material, x = 0, y = 0, z = 0, shadows = true) {
   const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), material);
   mesh.position.set(x, y, z);
   mesh.castShadow = shadows;
@@ -82,7 +83,7 @@ function box(w: number, h: number, d: number, material: THREE.Material, x = 0, y
   return mesh;
 }
 
-function cylinder(rTop: number, rBottom: number, h: number, material: THREE.Material, x = 0, y = 0, z = 0, segments = 12) {
+export function cylinder(rTop: number, rBottom: number, h: number, material: THREE.Material, x = 0, y = 0, z = 0, segments = 12) {
   const mesh = new THREE.Mesh(new THREE.CylinderGeometry(rTop, rBottom, h, segments), material);
   mesh.position.set(x, y, z);
   mesh.castShadow = true;
@@ -94,7 +95,7 @@ function cylinder(rTop: number, rBottom: number, h: number, material: THREE.Mate
 
 // A facade tile: 4 × 4 windows, 3 m wide and 3.2 m tall each. The colour map
 // is neutral (tinted by the material); the emissive map lights some windows.
-function facadeTextures(seed: number) {
+export function facadeTextures(seed: number) {
   const rand = random(seed);
   const lit: number[] = [];
   for (let i = 0; i < 16; i++) lit.push(rand());
@@ -148,7 +149,7 @@ function facadeTextures(seed: number) {
   return { map, emissive };
 }
 
-function signTexture(text: string, background: string, color: string) {
+export function signTexture(text: string, background: string, color: string) {
   return canvas(1024, 192, ctx => {
     ctx.fillStyle = background;
     ctx.fillRect(0, 0, 1024, 192);
@@ -165,7 +166,7 @@ function signTexture(text: string, background: string, color: string) {
   });
 }
 
-function storefrontTexture(tone: 'warm' | 'cool' | 'red', door: number) {
+export function storefrontTexture(tone: 'warm' | 'cool' | 'red', door: number) {
   return canvas(512, 256, ctx => {
     const glass = ctx.createLinearGradient(0, 0, 0, 256);
     glass.addColorStop(0, tone === 'cool' ? '#f4f7ff' : '#ffe2a8');
@@ -205,7 +206,7 @@ function storefrontTexture(tone: 'warm' | 'cool' | 'red', door: number) {
   });
 }
 
-function stripes(a: string, b: string) {
+export function stripes(a: string, b: string) {
   return canvas(256, 64, ctx => {
     for (let i = 0; i < 8; i++) {
       ctx.fillStyle = i % 2 ? b : a;
@@ -216,7 +217,7 @@ function stripes(a: string, b: string) {
   }, true);
 }
 
-function tiles(base: string, line: string, size = 128, cells = 4) {
+export function tiles(base: string, line: string, size = 128, cells = 4) {
   return canvas(size, size, ctx => {
     ctx.fillStyle = base;
     ctx.fillRect(0, 0, size, size);
@@ -235,7 +236,7 @@ function tiles(base: string, line: string, size = 128, cells = 4) {
   }, true);
 }
 
-function poolTexture() {
+export function poolTexture() {
   return canvas(128, 128, ctx => {
     const g = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
     g.addColorStop(0, 'rgba(255,200,120,1)');
@@ -294,16 +295,38 @@ function muralTexture() {
 
 // ---------------------------------------------------------------- pieces
 
-function addBuilding(parent: THREE.Group, b: Building, index: number, night: Night) {
+// Optional: `wall` shares a facade material between buildings (the caller
+// registers it for the night), `split` makes the walls and the roof two
+// single-material meshes so static batching can merge them, `bare` stops
+// after the mass (no parapet, roof units or front).
+export type BuildingOptions = { wall?: THREE.MeshStandardMaterial; split?: boolean; bare?: boolean };
+
+function boxFaces(geometry: THREE.BoxGeometry, groups: number[]) {
+  const index = geometry.getIndex()!;
+  const picked: number[] = [];
+  for (const g of groups) {
+    const group = geometry.groups[g];
+    for (let i = group.start; i < group.start + group.count; i++) picked.push(index.getX(i));
+  }
+  const out = new THREE.BufferGeometry();
+  for (const name of ['position', 'normal', 'uv']) out.setAttribute(name, geometry.getAttribute(name));
+  out.setIndex(picked);
+  return out;
+}
+
+export function addBuilding(parent: THREE.Group, b: Building, index: number, night: Night, options: BuildingOptions = {}) {
   const w = b.x1 - b.x0, d = b.z1 - b.z0;
   const cx = (b.x0 + b.x1) / 2, cz = (b.z0 + b.z1) / 2;
   const tints: Record<string, string> = {
     cream: '#e6d5b2', slate: '#8f98a4', brick: '#b0634a', teal: '#6fa39b', plaster: '#d9b89a',
     cafe: '#c79e76', restaurant: '#b86a50', store: '#ddd3c1', museum: '#d6ccb8', bar: '#8a4a38',
   };
-  const { map, emissive } = facadeTextures(index * 7 + 3);
-  const wall = new THREE.MeshStandardMaterial({ map, emissiveMap: emissive, emissive: '#ffffff', emissiveIntensity: 0.2, color: tints[b.style] ?? '#cccccc', roughness: 0.92 });
-  night.windows.push(wall);
+  let wall = options.wall;
+  if (!wall) {
+    const { map, emissive } = facadeTextures(index * 7 + 3);
+    wall = new THREE.MeshStandardMaterial({ map, emissiveMap: emissive, emissive: '#ffffff', emissiveIntensity: 0.2, color: tints[b.style] ?? '#cccccc', roughness: 0.92 });
+    night.windows.push(wall);
+  }
   const roof = solid('#3a3835', 0.95);
   const geometry = new THREE.BoxGeometry(w, b.h, d);
   const uv = geometry.getAttribute('uv') as THREE.BufferAttribute;
@@ -315,11 +338,16 @@ function addBuilding(parent: THREE.Group, b: Building, index: number, night: Nig
       uv.setXY(i, uv.getX(i) * (length / 12), uv.getY(i) * (b.h / 12.8));
     }
   }
-  const mass = new THREE.Mesh(geometry, [wall, wall, roof, roof, wall, wall]);
-  mass.position.set(cx, b.h / 2, cz);
-  mass.castShadow = true;
-  mass.receiveShadow = true;
-  parent.add(mass);
+  const masses = options.split
+    ? [new THREE.Mesh(boxFaces(geometry, [0, 1, 4, 5]), wall), new THREE.Mesh(boxFaces(geometry, [2]), roof)]
+    : [new THREE.Mesh(geometry, [wall, wall, roof, roof, wall, wall])];
+  for (const mass of masses) {
+    mass.position.set(cx, b.h / 2, cz);
+    mass.castShadow = true;
+    mass.receiveShadow = true;
+    parent.add(mass);
+  }
+  if (options.bare) return;
 
   const parapet = solid('#6f675e');
   parent.add(box(w + 0.3, 0.55, 0.25, parapet, cx, b.h + 0.27, b.z0 + 0.1, false));
@@ -509,7 +537,7 @@ function addLamp(parent: THREE.Group, x: number, z: number, armX: number, armZ: 
   parent.add(spot);
 }
 
-function addPalm(parent: THREE.Group, x: number, z: number, height: number, seed: number) {
+export function addPalm(parent: THREE.Group, x: number, z: number, height: number, seed: number) {
   const rand = random(seed);
   const trunk = solid('#6b5642', 0.95);
   const leaf = solid('#2f4d2b', 0.9);
@@ -546,7 +574,7 @@ function addPalm(parent: THREE.Group, x: number, z: number, height: number, seed
   parent.add(group);
 }
 
-function addTree(parent: THREE.Group, x: number, z: number, seed: number) {
+export function addTree(parent: THREE.Group, x: number, z: number, seed: number) {
   const rand = random(seed);
   parent.add(cylinder(0.14, 0.2, 2.4, solid('#4a3a2c'), x, 1.2, z, 8));
   const leaves = solid(rand() > 0.5 ? '#2f4b2c' : '#3a5530', 0.95);
@@ -558,7 +586,7 @@ function addTree(parent: THREE.Group, x: number, z: number, seed: number) {
   }
 }
 
-function sag(from: THREE.Vector3, to: THREE.Vector3, drop: number) {
+export function sag(from: THREE.Vector3, to: THREE.Vector3, drop: number) {
   const path: THREE.Vector3[] = [];
   for (let i = 0; i <= 12; i++) {
     const t = i / 12;
@@ -570,7 +598,7 @@ function sag(from: THREE.Vector3, to: THREE.Vector3, drop: number) {
 }
 
 const carGlass = new THREE.MeshStandardMaterial({ color: '#1a222b', roughness: 0.1, metalness: 0.6, transparent: true, opacity: 0.55 });
-export function makeCar(kind: Vehicle['kind'], color = '#777777', night?: Night): CarRig {
+export function makeCar(kind: Vehicle['kind'] | 'van', color = '#777777', night?: Night): CarRig {
   const group = new THREE.Group();
   const taxi = kind === 'taxi';
   const bodyColor = taxi ? '#141517' : kind === 'broken' ? '#8fb1b8' : color;
@@ -578,9 +606,17 @@ export function makeCar(kind: Vehicle['kind'], color = '#777777', night?: Night)
   const glass = carGlass;
   const dark = solid('#151515', 0.8);
   const coupe = kind === 'coupe';
-  group.add(box(4.3, 0.62, 1.8, paint, 0, 0.62, 0));
-  group.add(box(coupe ? 1.9 : 2.3, 0.52, 1.6, glass, coupe ? -0.35 : -0.25, 1.18, 0));
-  group.add(box(coupe ? 1.7 : 2.1, 0.07, 1.56, taxi ? solid('#f2c230', 0.4, 0.2) : paint, coupe ? -0.35 : -0.25, 1.47, 0));
+  if (kind === 'van') {
+    // A delivery van: one tall body, a windscreen and side windows up front.
+    group.add(box(4.3, 1.5, 1.86, paint, 0, 1.1, 0));
+    group.add(box(0.06, 0.6, 1.62, glass, 2.15, 1.42, 0, false));
+    for (const z of [0.94, -0.94]) group.add(box(0.9, 0.5, 0.04, glass, 1.4, 1.45, z, false));
+    group.add(box(0.05, 1.2, 0.03, dark, -0.4, 1.05, 0.94, false));
+  } else {
+    group.add(box(4.3, 0.62, 1.8, paint, 0, 0.62, 0));
+    group.add(box(coupe ? 1.9 : 2.3, 0.52, 1.6, glass, coupe ? -0.35 : -0.25, 1.18, 0));
+    group.add(box(coupe ? 1.7 : 2.1, 0.07, 1.56, taxi ? solid('#f2c230', 0.4, 0.2) : paint, coupe ? -0.35 : -0.25, 1.47, 0));
+  }
   group.add(box(0.14, 0.2, 1.84, dark, 2.18, 0.45, 0, false));
   group.add(box(0.14, 0.2, 1.84, dark, -2.18, 0.45, 0, false));
   const wheel = new THREE.CylinderGeometry(0.34, 0.34, 0.24, 14);
@@ -655,7 +691,7 @@ export function placeVehicle(group: THREE.Object3D, x: number, z: number, headin
   group.rotation.y = -heading;
 }
 
-function addBench(parent: THREE.Group, x: number, z: number, rotation: number) {
+export function addBench(parent: THREE.Group, x: number, z: number, rotation: number) {
   const group = new THREE.Group();
   const wood = solid('#6b4a33');
   const iron = solid('#262a2c', 0.5, 0.5);
@@ -694,7 +730,7 @@ function addBike(parent: THREE.Group, x: number, z: number) {
   parent.add(group);
 }
 
-function stringLights(parent: THREE.Group, from: THREE.Vector3, to: THREE.Vector3, drop: number, night: Night) {
+export function stringLights(parent: THREE.Group, from: THREE.Vector3, to: THREE.Vector3, drop: number, night: Night) {
   parent.add(new THREE.Line(sag(from, to, drop), new THREE.LineBasicMaterial({ color: '#2b241d' })));
   const bulb = glow('#ffd27a', 1);
   night.lamps.push(bulb);
@@ -721,36 +757,51 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
   const night: Night = { windows: [], lamps: [], pools: [], lights: [], signs: [], headlights: [] };
 
   // Ground: sidewalks everywhere, asphalt for the two streets, a paved plaza.
+  // The sidewalk ground is cut in four pieces around the canal (city.mjs),
+  // whose water lies below street level; the river beyond the east edge too.
   const sidewalkTex = tiles('#8a847b', 'rgba(40,36,32,.35)', 128, 4);
-  sidewalkTex.repeat.set(130, 130);
-  const ground = new THREE.Mesh(new THREE.PlaneGeometry(260, 260), new THREE.MeshStandardMaterial({ map: sidewalkTex, color: '#b9b2a7', roughness: 0.95 }));
-  ground.rotation.x = -Math.PI / 2;
-  ground.receiveShadow = true;
-  root.add(ground);
+  const sidewalk = new THREE.MeshStandardMaterial({ map: sidewalkTex, color: '#b9b2a7', roughness: 0.95 });
+  const east = CITY_BOUNDS.maxX + 1;
+  for (const [x0, x1, z0, z1] of [[-130, CANAL.x0, -130, 130], [CANAL.x1, east, -130, 130], [CANAL.x0, CANAL.x1, -130, CANAL.z0], [CANAL.x0, CANAL.x1, CANAL.z1, 130]]) {
+    const geometry = new THREE.PlaneGeometry(x1 - x0, z1 - z0);
+    const uv = geometry.getAttribute('uv') as THREE.BufferAttribute;
+    // Same 2 m tiles everywhere, whatever the piece.
+    for (let i = 0; i < uv.count; i++) uv.setXY(i, (x0 + uv.getX(i) * (x1 - x0)) / 2, (-z1 + uv.getY(i) * (z1 - z0)) / 2);
+    const piece = new THREE.Mesh(geometry, sidewalk);
+    piece.rotation.x = -Math.PI / 2;
+    piece.position.set((x0 + x1) / 2, 0, (z0 + z1) / 2);
+    piece.receiveShadow = true;
+    root.add(piece);
+  }
+  // The avenue and the cross street run from edge to edge of the city.
   const asphalt = new THREE.MeshStandardMaterial({ color: '#2a2d31', roughness: 0.9, metalness: 0 });
-  const avenue = new THREE.Mesh(new THREE.PlaneGeometry(260, 8), asphalt);
+  const { minX, maxX, minZ, maxZ } = CITY_BOUNDS;
+  const avenue = new THREE.Mesh(new THREE.PlaneGeometry(maxX - minX, 8), asphalt);
   avenue.rotation.x = -Math.PI / 2;
-  avenue.position.y = 0.02;
+  avenue.position.set((minX + maxX) / 2, 0.02, 0);
   avenue.receiveShadow = true;
   root.add(avenue);
-  const cross = new THREE.Mesh(new THREE.PlaneGeometry(8, 260), asphalt);
+  const cross = new THREE.Mesh(new THREE.PlaneGeometry(8, maxZ - minZ), asphalt);
   cross.rotation.x = -Math.PI / 2;
-  cross.position.y = 0.021;
+  cross.position.set(0, 0.021, (minZ + maxZ) / 2);
   cross.receiveShadow = true;
   root.add(cross);
+  // Kerbs inside the centre only: district3d.ts draws them beyond, with
+  // gaps where the new streets cross.
   const curb = solid('#9d978e', 0.9);
   for (const sign of [-1, 1]) {
-    root.add(box(126, 0.14, 0.22, curb, sign * 67, 0.07, 4.1, false));
-    root.add(box(126, 0.14, 0.22, curb, sign * 67, 0.07, -4.1, false));
-    root.add(box(0.22, 0.14, 126, curb, 4.1, 0.07, sign * 67, false));
-    root.add(box(0.22, 0.14, 126, curb, -4.1, 0.07, sign * 67, false));
+    root.add(box(48.9, 0.14, 0.22, curb, sign * 28.55, 0.07, 4.1, false));
+    root.add(box(48.9, 0.14, 0.22, curb, sign * 28.55, 0.07, -4.1, false));
   }
+  for (const [z0, z1] of [[-45, -4], [4, 46]]) for (const x of [-4.1, 4.1]) root.add(box(0.22, 0.14, z1 - z0, curb, x, 0.07, (z0 + z1) / 2, false));
   const paint = new THREE.MeshStandardMaterial({ color: '#d9cba4', roughness: 0.8 });
   const dash = new THREE.PlaneGeometry(2, 0.14);
   const dashes: THREE.Matrix4[] = [];
   const m = new THREE.Matrix4();
-  for (let x = -128; x < 128; x += 5) if (Math.abs(x) > 7) dashes.push(m.clone().makeRotationX(-Math.PI / 2).setPosition(x, 0.03, 0));
-  for (let z = -128; z < 128; z += 5) if (Math.abs(z) > 7) dashes.push(new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(-Math.PI / 2, 0, Math.PI / 2)).setPosition(0, 0.03, z));
+  // No centre line inside a crossing with one of the new streets.
+  const crossed = (t: number, axis: 'x' | 'z') => ROADS.some(road => road.axis !== axis && (axis === 'x' ? t > road.x0 - 1.5 && t < road.x1 + 1.5 : t > road.z0 - 1.5 && t < road.z1 + 1.5));
+  for (let x = minX + 2; x < maxX - 2; x += 5) if (Math.abs(x) > 7 && !crossed(x, 'x')) dashes.push(m.clone().makeRotationX(-Math.PI / 2).setPosition(x, 0.03, 0));
+  for (let z = minZ + 2; z < maxZ - 2; z += 5) if (Math.abs(z) > 7 && !crossed(z, 'z')) dashes.push(new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(-Math.PI / 2, 0, Math.PI / 2)).setPosition(0, 0.03, z));
   const stripe = new THREE.PlaneGeometry(2.4, 0.45);
   const zebra = new THREE.InstancedMesh(stripe, paint, 32);
   let zi = 0;
@@ -783,19 +834,8 @@ export function buildCity(options: { shadows: boolean; crowd: boolean }): City {
     root.add(box(w + 0.3, 0.25, 0.15, curb, x, 0.12, z - d / 2, false), box(w + 0.3, 0.25, 0.15, curb, x, 0.12, z + d / 2, false));
   }
 
-  // Buildings, then a ring of darker blocks beyond the edge of the district.
+  // Buildings. The districts around the centre come from district3d.ts.
   BUILDINGS.forEach((b, i) => addBuilding(root, b, i, night));
-  const rand = random(99);
-  for (let i = 0; i < 34; i++) {
-    const angle = (i / 34) * Math.PI * 2;
-    const radius = 64 + rand() * 18;
-    const h = 8 + rand() * 26;
-    const b: Building = { id: `far-${i}`, x0: 0, x1: 8 + rand() * 8, z0: 0, z1: 8 + rand() * 8, h, style: ['slate', 'brick', 'cream', 'plaster'][i % 4] };
-    const group = new THREE.Group();
-    addBuilding(group, b, 20 + i, night);
-    group.position.set(Math.cos(angle) * radius - b.x1 / 2, 0, Math.sin(angle) * radius - b.z1 / 2);
-    root.add(group);
-  }
 
   // Mural on the side wall facing the cross street (original canvas art).
   const mural = new THREE.Mesh(new THREE.PlaneGeometry(9, 6.4), new THREE.MeshStandardMaterial({ map: muralTexture(), roughness: 0.95, emissive: '#ffffff', emissiveIntensity: 0 }));
@@ -1074,7 +1114,7 @@ function room(group: THREE.Group, cx: number, w: number, d: number, h: number, w
   group.add(ceiling);
 }
 
-function nightWindow(group: THREE.Group, x: number, y: number, z: number, w: number, h: number, rotation: number) {
+export function nightWindow(group: THREE.Group, x: number, y: number, z: number, w: number, h: number, rotation: number) {
   const view = canvas(256, 160, ctx => {
     const sky = ctx.createLinearGradient(0, 0, 0, 160);
     sky.addColorStop(0, '#0d1526');
@@ -1103,13 +1143,13 @@ function nightWindow(group: THREE.Group, x: number, y: number, z: number, w: num
   group.add(pane);
 }
 
-function table(group: THREE.Group, x: number, z: number, top: THREE.Material, round = true) {
+export function table(group: THREE.Group, x: number, z: number, top: THREE.Material, round = true) {
   if (round) group.add(cylinder(0.42, 0.42, 0.05, top, x, 0.76, z, 18));
   else group.add(box(1, 0.05, 0.7, top, x, 0.76, z));
   group.add(cylinder(0.04, 0.04, 0.74, solid('#2a2a2a', 0.5, 0.5), x, 0.37, z, 6));
 }
 
-function seat(group: THREE.Group, x: number, z: number, rotation: number, material: THREE.Material) {
+export function seat(group: THREE.Group, x: number, z: number, rotation: number, material: THREE.Material) {
   const chair = new THREE.Group();
   chair.add(box(0.44, 0.05, 0.44, material, 0, 0.46, 0, false));
   chair.add(box(0.44, 0.5, 0.05, material, 0, 0.72, -0.2, false));
@@ -1306,7 +1346,7 @@ function interiorScene(stage: string, shadows: boolean): Interior | null {
 }
 
 // A room you walk around in: four walls, the street door in the south wall.
-function walkRoom(group: THREE.Group, cx: number, w: number, d: number, h: number, wallColor: string, floor: THREE.Texture, floorRepeat: number, doorX: number, ceilingColor: string) {
+export function walkRoom(group: THREE.Group, cx: number, w: number, d: number, h: number, wallColor: string, floor: THREE.Texture, floorRepeat: number, doorX: number, ceilingColor: string) {
   floor.repeat.set(floorRepeat, floorRepeat * (d / w));
   const base = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshStandardMaterial({ map: floor, roughness: 0.55 }));
   base.rotation.x = -Math.PI / 2;
@@ -1338,14 +1378,14 @@ function walkRoom(group: THREE.Group, cx: number, w: number, d: number, h: numbe
   group.add(ceiling);
 }
 
-function lightPool(group: THREE.Group, x: number, z: number, radius: number, color = '#ffdca8', opacity = 0.32) {
+export function lightPool(group: THREE.Group, x: number, z: number, radius: number, color = '#ffdca8', opacity = 0.32) {
   const pool = new THREE.Mesh(new THREE.CircleGeometry(radius, 24), new THREE.MeshBasicMaterial({ map: poolTexture(), color, transparent: true, opacity, blending: THREE.AdditiveBlending, depthWrite: false }));
   pool.rotation.x = -Math.PI / 2;
   pool.position.set(x, 0.02, z);
   group.add(pool);
 }
 
-function framed(group: THREE.Group, texture: THREE.Texture, x: number, y: number, z: number, w: number, h: number, rotation: number, frame = '#3a2a1e') {
+export function framed(group: THREE.Group, texture: THREE.Texture, x: number, y: number, z: number, w: number, h: number, rotation: number, frame = '#3a2a1e') {
   const holder = new THREE.Group();
   holder.position.set(x, y, z);
   holder.rotation.y = rotation;
