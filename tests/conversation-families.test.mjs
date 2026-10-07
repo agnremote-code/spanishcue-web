@@ -14,9 +14,9 @@ if (existsSync(path)) {
   assert.equal(new Set(ids).size,ids.length);
   assert.deepEqual(p.catalogLessons.filter(l=>l.category!=='Conversación'),p.lessons.filter(l=>l.category!=='Conversación'));
  });
- test('Red Flag is one card with six genuinely available levels',()=>{
+ test('Red Flag is one card with seven genuinely available levels',()=>{
   const cards=p.catalogLessons.filter(l=>l.familyId==='red-flag-o-no');
-  assert.equal(cards.length,1); assert.deepEqual(cards[0].levels,['A1','A2','B1','B2','C1','C2']);
+  assert.equal(cards.length,1); assert.deepEqual(cards[0].levels,['A0','A1','A2','B1','B2','C1','C2']);
   assert.equal(cards[0].title,'Red Flag o No');
   assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'B2'}).length,1);
   assert.equal(p.filterLessons(p.catalogLessons,{query:'red flag',level:'A1'}).length,1);
@@ -33,10 +33,11 @@ if (existsSync(path)) {
   assert.equal(p.conversationLessonHref(l,'B2'),l.path+'?level=B2');
   assert.equal(p.conversationLessonHref(l,'C3'),l.path+'?level=A2');
  });
- test('free atlas never absorbs paid USA A1',()=>{
+ test('USA is one catalogue family while historical paid route keeps its access policy',()=>{
   const free=p.conversationFamilies.find(f=>f.legacyLessonIds.includes(36));
   const paid=p.conversationFamilies.find(f=>f.legacyLessonIds.includes(26));
-  assert.notEqual(free.id,paid.id); assert.equal(free.access,'free'); assert.equal(paid.access,'pro');
+  assert.equal(free.id,paid.id); assert.equal(free.access,'free');
+  assert.deepEqual(free.legacyLessonIds,[36,26]);
  });
 }
 test('shared level selector supports URL history without importing private content', async()=>{

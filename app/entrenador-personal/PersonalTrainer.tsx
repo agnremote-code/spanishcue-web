@@ -1,15 +1,13 @@
 "use client";
 
+import {ConversationFamily} from "../conversation-families/ConversationFamily";
+import {CEFR_LEVELS,type CEFRLevel} from "../conversation-families/types";
+import {GameSpeech} from "../conversation-families/game-language";
+import {trainerContent} from "./levels";
 import Link from "next/link";
 import { type Dispatch, type SetStateAction, useMemo, useState } from "react";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import {
-  CORRECTION_ERRORS,
-  DIFFICULT_CLIENT_LINES,
-  EMERGENCIES,
-  EXERCISES,
-  GOALS,
-  SURPRISES,
   TRAINING_STAGES,
   countImperatives,
   counterKeyForStage,
@@ -19,7 +17,7 @@ import {
 } from "./engine.mjs";
 import "./personal-trainer.css";
 
-const warmupStops = [
+const baseWarmupStops = [
   { number: "01", label: "Botella de agua", icon: "H₂O" },
   { number: "02", label: "Zapatillas", icon: "CALZA" },
   { number: "03", label: "Vestuario", icon: "CAMBIA" },
@@ -27,7 +25,7 @@ const warmupStops = [
   { number: "05", label: "Zona de estiramiento", icon: "MUEVE" },
 ];
 
-const warmupHelp = [
+const baseWarmupHelp = [
   "Cámbiate.",
   "Toma agua.",
   "Camina cinco minutos.",
@@ -41,15 +39,15 @@ const warmupHelp = [
 ];
 
 const focusAreas = ["Entrenamiento", "Descanso", "Comida", "Frecuencia", "Hábitos"];
-const audienceModes = [
+const baseAudienceModes = [
   { id: "tu", label: "1 CLIENTE · TÚ", cue: "Ahora trátame de tú y sigue dando órdenes.", frames: ["HAZ…", "MANTÉN…", "REPITE…", "NO…"] },
   { id: "vos", label: "1 CLIENTE · VOS", cue: "Cliente rioplatense: dirigime con vos.", frames: ["HACÉ…", "MANTENÉ…", "REPETÍ…", "NO…"] },
   { id: "ustedes", label: "GRUPO · USTEDES", cue: "Ahora somos tres clientes: dirígenos a todos.", frames: ["HAGAN…", "MANTENGAN…", "REPITAN…", "NO…"] },
 ];
 const forbidden = ["tienes que", "deberías", "puedes"];
-const allowed = ["Haz…", "No hagas…", "Prueba…", "Empieza…", "Evita…", "Cambia…", "Descansa…"];
-const weekDays = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO", "DOMINGO"];
-const bossRoute = [
+const baseAllowed = ["Haz…", "No hagas…", "Prueba…", "Empieza…", "Evita…", "Cambia…", "Descansa…"];
+const baseWeekDays = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO", "DOMINGO"];
+const baseBossRoute = [
   { title: "Entrada", copy: "Dime qué hago apenas llego." },
   { title: "Calentamiento", copy: "Prepara todo mi cuerpo para empezar." },
   { title: "Fuerza", copy: "Dirige una serie completa de fuerza." },
@@ -59,7 +57,17 @@ const bossRoute = [
   { title: "Recuperación", copy: "Dime cómo descansar y cuándo volver." },
 ];
 
-export default function PersonalTrainer() {
+export default function PersonalTrainer() {return <ConversationFamily id="entrenador-personal" title="Entrenador personal" levels={CEFR_LEVELS} defaultLevel="B1">{level=><TrainerActivity key={level} level={level}/>}</ConversationFamily>;}
+function TrainerActivity({level}:{level:CEFRLevel}) {
+  const lesson=trainerContent(level);
+  const stagePrompt=(index:number,original:string)=>level==="B1"?original:lesson.tasks[index];
+  const warmupStops=baseWarmupStops.map((stop,i)=>({...stop,label:level==="A0"?`${stop.label} / ${["Water bottle","Trainers","Changing room","Treadmill","Stretching area"][i]}`:stop.label}));
+  const allowed=level==="A0"?["Camina. / Walk.","Para. / Stop.","Descansa. / Rest.","Toma agua. / Drink water."]:baseAllowed;
+  const weekDays=baseWeekDays.map((day,i)=>level==="A0"?`${day} / ${["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][i]}`:day);
+  const {CORRECTION_ERRORS,DIFFICULT_CLIENT_LINES,EMERGENCIES,EXERCISES,GOALS,SURPRISES}=lesson;
+  const warmupHelp=level==="A0"?["Toma agua. / Drink water.","Camina. / Walk.","Descansa. / Rest.","Para. / Stop."]:baseWarmupHelp;
+  const audienceModes=level==="A0"?[{id:"tu",label:"TÚ / YOU",cue:"Copy these complete instructions aloud.",frames:["Camina. / Walk.","Para. / Stop.","Descansa. / Rest.","Toma agua. / Drink water."]}]:baseAudienceModes;
+  const bossRoute=baseBossRoute.map((r,i)=>({...r,copy:level==="B1"?r.copy:lesson.tasks[Math.min(i+1,8)]}));
   const [stageIndex, setStageIndex] = useState(0);
   const [selectedGoal, setSelectedGoal] = useState(0);
   const [selectedExercise, setSelectedExercise] = useState(0);
@@ -72,7 +80,7 @@ export default function PersonalTrainer() {
   const [bossIndex, setBossIndex] = useState(0);
   const [visitedDays, setVisitedDays] = useState<number[]>([]);
   const [visitedBossStops, setVisitedBossStops] = useState<number[]>([]);
-  const [showHelp, setShowHelp] = useState(false);
+  const [showHelp, setShowHelp] = useState(level==="A0");
   const [counts, setCounts] = useState<Record<string, number>>({});
 
   const stage = TRAINING_STAGES[stageIndex];
@@ -121,6 +129,7 @@ export default function PersonalTrainer() {
   };
 
   const counter = (target: number, useTotal = false, label = "IMPERATIVOS") => {
+    if(level==="A0"){target=useTotal?10:2;label="FRASES / PHRASES";}
     const value = useTotal ? totalImperatives : stageCount;
     return (
       <aside className="pt-counter-card" aria-label={`${value} de ${target} imperativos`}>
@@ -144,7 +153,7 @@ export default function PersonalTrainer() {
           <SpanishCueBrand variant="compact" tone="light" />
         </Link>
         <div className="pt-header-center">
-          <span>B1</span>
+          <span>{level}</span>
           <b>IMPERATIVO</b>
         </div>
         <div className="pt-header-actions">
@@ -188,24 +197,25 @@ export default function PersonalTrainer() {
       )}
 
       {stageIndex > 0 && stageIndex < TRAINING_STAGES.length - 1 && (
-        <div className="pt-command-banner"><span>●</span> DA ÓRDENES. USA EL IMPERATIVO.</div>
+        <div className="pt-command-banner"><span>●</span> {stagePrompt(stageIndex,"DA ÓRDENES. USA EL IMPERATIVO.")}</div>
       )}
 
       <div className="pt-stage-shell" key={stage.id} aria-live="polite">
+        <GameSpeech level={level} model={lesson.models[stageIndex]}/>
         {stage.id === "portada" && (
           <section className="pt-cover">
             <div className="pt-cover-image" role="img" aria-label="Entrenador y cliente dentro de un gimnasio moderno" />
             <div className="pt-cover-copy">
-              <p className="pt-kicker"><span>B1</span> GIMNASIO ORAL</p>
+              <p className="pt-kicker"><span>{level}</span> GIMNASIO ORAL</p>
               <h1>ENTRENADOR<br /><em>PERSONAL</em></h1>
-              <h2>Hoy tú mandas.</h2>
-              <p>Conviértete en entrenador y dirige toda la sesión usando imperativos.</p>
+              <h2>{level==="A0"?"Tú hablas. / You speak.":"Hoy tú mandas."}</h2>
+              <p>{stagePrompt(0,"Conviértete en entrenador y dirige toda la sesión usando imperativos.")}</p>
               <button type="button" className="pt-primary" onClick={() => changeStage(1)}>
                 EMPEZAR ENTRENAMIENTO <span>→</span>
               </button>
               <div className="pt-cover-stats">
                 <span><b>45</b> MINUTOS</span>
-                <span><b>30+</b> ÓRDENES</span>
+                <span><b>{level==="A0"?"1–2":"30+"}</b> {level==="A0"?"FRASES / PHRASES":"ÓRDENES"}</span>
                 <span><b>1</b> ENTRENADOR: TÚ</span>
               </div>
             </div>
@@ -216,11 +226,11 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-warmup">
             <div className="pt-panel-heading">
               <div><p className="pt-kicker">ESTACIÓN 01 · CALENTAMIENTO</p><h1>PREPÁRAME PARA ENTRENAR</h1></div>
-              <p className="pt-situation"><span>CLIENTE</span> Acabo de llegar al gimnasio.</p>
+              <p className="pt-situation"><span>CLIENTE</span> {level==="A0"?"Hola. / Hello.":"Acabo de llegar al gimnasio."}</p>
             </div>
             <div className="pt-warmup-layout">
               <div>
-                <p className="pt-instruction">Dame órdenes desde que entro hasta que estoy listo.</p>
+                <p className="pt-instruction">{stagePrompt(1,"Dame órdenes desde que entro hasta que estoy listo.")}</p>
                 <div className="pt-warmup-flow">
                   {warmupStops.map((stop, index) => (
                     <article key={stop.label}>
@@ -242,7 +252,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-goals">
             <div className="pt-panel-heading">
               <div><p className="pt-kicker">ESTACIÓN 02 · PLAN PERSONAL</p><h1>ELIGE MI OBJETIVO</h1></div>
-              <p className="pt-instruction">Selecciona una meta. Después, dame al menos 8 órdenes.</p>
+              <p className="pt-instruction">{stagePrompt(2,"Selecciona una meta. Después, dame al menos 8 órdenes.")}</p>
             </div>
             <div className="pt-goal-grid">
               {GOALS.map((goal: { id: string; title: string }, index: number) => (
@@ -264,7 +274,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-live-training">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 03 · SALA PRINCIPAL</p><h1>ENTRENAMIENTO EN VIVO</h1></div>
-              <p className="pt-instruction">Elige un ejercicio y dirígeme en tiempo real.</p>
+              <p className="pt-instruction">{stagePrompt(3,"Elige un ejercicio y dirígeme en tiempo real.")}</p>
             </div>
             <div className="pt-exercise-tabs" role="group" aria-label="Ejercicios disponibles">
               {EXERCISES.map((exercise: { id: string; title: string }, index: number) => (
@@ -290,7 +300,7 @@ export default function PersonalTrainer() {
                 <h2>{EXERCISES[selectedExercise].title}</h2>
               </div>
               <div className="pt-command-frames">
-                <p>DA CUATRO TIPOS DE INSTRUCCIONES</p>
+                <p>{level==="A0"?"DI UNA FRASE / SAY ONE PHRASE":"DA CUATRO TIPOS DE INSTRUCCIONES"}</p>
                 {audienceModes[selectedAudience].frames.map((frame, index) => <article key={frame}><span>0{index + 1}</span><b>{frame}</b></article>)}
               </div>
             </div>
@@ -301,7 +311,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-correct-me">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 04 · TÉCNICA</p><h1>CORRÍGEME</h1></div>
-              <p className="pt-instruction">Reacciona rápido. Solo puedes usar órdenes.</p>
+              <p className="pt-instruction">{stagePrompt(4,"Reacciona rápido. Solo puedes usar órdenes.")}</p>
             </div>
             <div className="pt-error-card">
               <div className="pt-error-signal"><span>!</span><b>ERROR {String(errorIndex + 1).padStart(2, "0")}</b></div>
@@ -319,7 +329,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-difficult">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 05 · MOTIVACIÓN</p><h1>CLIENTE DIFÍCIL</h1></div>
-              <p className="pt-instruction">Respóndeme sin negociar la forma gramatical.</p>
+              <p className="pt-instruction">{stagePrompt(5,"Respóndeme sin negociar la forma gramatical.")}</p>
             </div>
             <div className="pt-difficult-layout">
               <div className="pt-client-scene">
@@ -327,7 +337,7 @@ export default function PersonalTrainer() {
                 <div className="pt-speech-bubble"><span>CLIENTE DICE</span><blockquote>“{DIFFICULT_CLIENT_LINES[difficultIndex]}”</blockquote></div>
               </div>
               <aside className="pt-language-rules">
-                <div className="pt-forbidden"><span>PROHIBIDO</span>{forbidden.map((item) => <b key={item}>✕ {item}</b>)}</div>
+                {level!=="A0"&&<div className="pt-forbidden"><span>PROHIBIDO</span>{forbidden.map((item) => <b key={item}>✕ {item}</b>)}</div>}
                 <div className="pt-allowed"><span>USA ÓRDENES</span>{allowed.map((item) => <b key={item}>{item}</b>)}</div>
               </aside>
             </div>
@@ -343,7 +353,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-week">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 06 · PLAN SEMANAL</p><h1>CREA MI SEMANA</h1></div>
-              <p className="pt-instruction">Toca cada día y organízame usando órdenes.</p>
+              <p className="pt-instruction">{stagePrompt(6,"Toca cada día y organízame usando órdenes.")}</p>
             </div>
             <div className="pt-profile-strip">
               <b>33 AÑOS</b><span>Muchas horas sentado</span><span>Ganar músculo</span><span>Odia madrugar</span><span>4 días por semana</span><span>Entrena fuerte</span><span>Come sano + pizza</span><span>Sin obsesionarse</span>
@@ -357,7 +367,7 @@ export default function PersonalTrainer() {
             </div>
             <div className="pt-day-focus">
               <div><span>DÍA {String(dayIndex + 1).padStart(2, "0")}</span><h2>{weekDays[dayIndex]}</h2></div>
-              <p>Dime si entreno o descanso. Ordéname qué hago, cuándo lo hago, qué como y cómo recupero.</p>
+              <p>{stagePrompt(6,"Dime si entreno o descanso. Ordéname qué hago, cuándo lo hago, qué como y cómo recupero.")}</p>
               <button type="button" className="pt-primary" onClick={() => selectDay((dayIndex + 1) % weekDays.length)}>SIGUIENTE DÍA →</button>
             </div>
           </section>
@@ -367,7 +377,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-emergencies">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 07 · SEGURIDAD</p><h1>EMERGENCIAS DEL GIMNASIO</h1></div>
-              <p className="pt-instruction">Reacciona rápido. Dame 5 órdenes.</p>
+              <p className="pt-instruction">{stagePrompt(7,"Reacciona rápido. Dame 5 órdenes.")}</p>
             </div>
             <div className="pt-alert-layout">
               <article className="pt-alert-card">
@@ -389,7 +399,7 @@ export default function PersonalTrainer() {
           <section className="pt-panel pt-boss">
             <div className="pt-panel-heading compact">
               <div><p className="pt-kicker">ESTACIÓN 08 · DESAFÍO FINAL</p><h1>MODO ENTRENADOR PERSONAL</h1></div>
-              <p className="pt-situation"><span>CLIENTE</span> Desde ahora yo no tomo ninguna decisión.</p>
+              <p className="pt-situation"><span>CLIENTE</span> {level==="A0"?"Escucho tus instrucciones. / I listen to your instructions.":"Desde ahora yo no tomo ninguna decisión."}</p>
             </div>
             <div className="pt-boss-layout">
               <nav className="pt-boss-route" aria-label="Ruta de la sesión final">
@@ -426,7 +436,7 @@ export default function PersonalTrainer() {
               <span className={totalImperatives >= 21 && totalImperatives <= 29 ? "active" : ""}><b>21–29</b>PRO</span>
               <span className={totalImperatives >= 30 ? "active" : ""}><b>30+</b>MODO ENTRENADOR</span>
             </div>
-            <div className="pt-final-prompt"><span>CIERRE ORAL · 5 ÓRDENES MÁS</span><h3>Dame 5 consejos finales para esta semana.</h3><p>Todo debe estar en imperativo.</p></div>
+            <div className="pt-final-prompt"><span>CIERRE ORAL · 5 ÓRDENES MÁS</span><h3>{stagePrompt(9,"Dame 5 consejos finales para esta semana.")}</h3><p>{level==="A0"?"Copy two complete Spanish instructions aloud.":level==="B1"?"Todo debe estar en imperativo.":"Formula instrucciones claras y adapta el tono al cliente."}</p></div>
             <div className="pt-result-actions"><button type="button" onClick={() => changeStage(8)}>← VOLVER AL DESAFÍO</button><button type="button" className="pt-primary" onClick={resetLesson}>NUEVO ENTRENAMIENTO ↻</button></div>
           </section>
         )}

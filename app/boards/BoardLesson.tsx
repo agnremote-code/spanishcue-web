@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
+import { CEFR_LEVELS } from "../conversation-families/types";
+import { boardForLevel } from "./level-data";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   advanceSession,
@@ -14,6 +17,7 @@ import {
 } from "./engine";
 import type { BoardBank, BoardSession } from "./types";
 import "./board.css";
+import { bilingualUi } from "./bilingual-ui";
 
 type Phase = "questions" | "student" | "final";
 type SavedView = {
@@ -44,6 +48,10 @@ function shuffledIds(ids: readonly string[]): string[] {
 }
 
 export default function BoardLesson({ bank }: { bank: BoardBank }) {
+  return <ConversationFamily id={bank.id.startsWith("de-eso") ? "de-eso-si-hablo" : "no-es-tan-simple"} title={bank.title} levels={CEFR_LEVELS} defaultLevel={bank.level}>{level => <BoardSessionView key={level} bank={boardForLevel(bank, level)} />}</ConversationFamily>;
+}
+
+function BoardSessionView({ bank }: { bank: BoardBank }) {
   const sessionKey = `spanishcue.boards.${bank.id}.session.v1`;
   const viewKey = `spanishcue.boards.${bank.id}.view.v1`;
   const [session, setSession] = useState<BoardSession | null>(null);
@@ -248,9 +256,9 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
     focusQuestion();
   }
 
-  if (!ready) return <main className="board-loading">Preparando el tablero…</main>;
+  if (!ready) return bilingualUi(<main className="board-loading">Preparando el tablero…</main>, bank.level);
 
-  return <main className={`board-page board-${bank.level.toLowerCase()} ${presentation ? "board-presentation" : ""}`}>
+  return bilingualUi(<main className={`board-page ${bank.id.startsWith("no-es-tan-simple") ? "board-b2" : "board-b1"} ${presentation ? "board-presentation" : ""}`}>
     {presentation && <button type="button" className="board-presentation-exit" onClick={togglePresentation}>Salir de presentación</button>}
     <header className="board-topbar">
       <Link href="/#library-results" className="board-back">← Biblioteca</Link>
@@ -318,7 +326,8 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
         <ol>{current.followUps.map((followUp) => <li key={followUp}>{followUp}</li>)}</ol>
         {current.conditionChange && <aside><b>CAMBIO OPCIONAL DE CONDICIÓN</b><p>{current.conditionChange}</p></aside>}
       </div>}
-      <details className="board-help"><summary>Ayudas opcionales</summary><div><p>Puedes contar una experiencia, describir una escena, comparar dos momentos o explicar una razón.</p><span>Para empezar: «En mi caso…» · «Una vez…» · «Por un lado…»</span></div></details>
+      {current.support && <p className="board-help" data-level-support={bank.level}>{current.support}</p>}
+      <details className="board-help"><summary>Ayudas opcionales</summary><div>{bank.level === "A0" ? <p>{current.support}</p> : <><p>Puedes contar una experiencia, describir una escena, comparar dos momentos o explicar una razón.</p><span>Para empezar: «En mi caso…» · «Una vez…» · «Por un lado…»</span></>}</div></details>
       <div className="board-actions">
         <button type="button" onClick={goPrevious} disabled={session.cursor === 0}>← Anterior</button>
         <button type="button" onClick={deepen} aria-pressed={session.deepened}>Profundizar</button>
@@ -330,18 +339,18 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
     {view.phase === "student" && <section className="board-interlude">
       <span>5 min · CAMBIO DE ROLES</span><h2>Ahora el alumno pregunta al profesor.</h2>
-      <p>Elige una pregunta del tablero que te dio curiosidad, adáptala y haz una repregunta según la respuesta.</p>
+      <p>{bank.level === "A0" ? "Pregunta: «¿Café o té?» / Ask: “Coffee or tea?” · «¿Y tú?» / “And you?” · Escucha y responde: «Yo prefiero…». / Listen and answer: “I prefer…”." : "Elige una pregunta del tablero que te dio curiosidad, adáptala y haz una repregunta según la respuesta."}</p>
       <div><b>1</b><span>Elige un tema de hoy.</span><b>2</b><span>Formula tu propia pregunta.</span><b>3</b><span>Escucha y profundiza.</span></div>
       <button type="button" className="board-primary" onClick={openFinal}>Ir a la conversación final →</button>
     </section>}
 
     {view.phase === "final" && finalQuestion && <section className="board-final">
       <span>10 min · CONVERSACIÓN FINAL ABIERTA</span><h2 ref={questionRef} tabIndex={-1}>{finalQuestion.prompt}</h2>
-      <p>Sin respuesta modelo. Conecten esta pregunta con algo que apareció antes y dejen que la conversación encuentre su propio cierre.</p>
+      <p>{bank.level === "A0" ? "Yo prefiero… / I prefer… · Yo quiero… / I want… · ¿Y tú? / And you? · Repite una frase y cambia una palabra. / Repeat a sentence and change one word." : "Sin respuesta modelo. Conecten esta pregunta con algo que apareció antes y dejen que la conversación encuentre su propio cierre."}</p>
       <div><button type="button" onClick={() => setView((state) => ({ ...state, finalCursor: Math.max(0, state.finalCursor - 1) }))} disabled={view.finalCursor === 0}>← Anterior</button><button type="button" className="board-primary" onClick={nextFinal} disabled={view.finalCursor >= view.finalOrder.length - 1}>Otra final →</button></div>
     </section>}
 
     <p className="board-status" role="status" aria-live="polite">{notice}</p>
     <footer className="board-footer"><span>Atajos: ← anterior · → otra · D profundizar · P pasar · C categorías · F presentación</span><button type="button" onClick={restart} disabled={!session}>Reiniciar sesión</button></footer>
-  </main>;
+  </main>, bank.level);
 }

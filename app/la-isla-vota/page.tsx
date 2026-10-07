@@ -5,17 +5,21 @@ import Link from "next/link";
 import {
   baseMetrics,
   budgetAreas,
-  debateTools,
-  finalQuestions,
+  debateTools as originalTools,
+  finalQuestions as originalFinals,
   jobs,
   metricLabels,
-  rounds,
+  rounds as originalRounds,
   speakingMoves,
-  warmupQuestions,
+  warmupQuestions as originalWarmup,
   type IslandRound,
   type Metric,
 } from "./data";
 import "./style.css";
+import { bilingualUi } from "../boards/bilingual-ui";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
+import { CEFR_LEVELS, type CEFRLevel } from "../conversation-families/types";
+import { islandRoundsForLevel, islandLanguage } from "./level-data";
 
 type SessionMode = "duo" | "group";
 type Screen = "briefing" | "session" | "constitution";
@@ -45,8 +49,8 @@ function formatTime(seconds: number) {
   return minutes + ":" + remainder;
 }
 
-function MetricBoard({ values }: { values: Record<Metric, number> }) {
-  return <section className="island-metrics" aria-label="Estado actual de la isla">
+function MetricBoard({ values, level }: { values: Record<Metric, number>; level: CEFRLevel }) {
+  return bilingualUi(<section className="island-metrics" aria-label="Estado actual de la isla">
     {metricOrder.map(metric => {
       const value = values[metric];
       const state = value < 35 ? "danger" : value < 55 ? "warning" : "stable";
@@ -55,7 +59,7 @@ function MetricBoard({ values }: { values: Record<Metric, number> }) {
         <i><span style={{ "--metric-value": value + "%" } as CSSProperties} /></i>
       </article>;
     })}
-  </section>;
+  </section>, level);
 }
 
 function AllocationBoard({
@@ -64,12 +68,14 @@ function AllocationBoard({
   total,
   onChange,
   kind,
+  level,
 }: {
   items: { id: string; name: string; note: string }[];
   values: Record<string, number>;
   total: number;
   onChange: (next: Record<string, number>) => void;
   kind: "personas" | "fichas";
+  level: CEFRLevel;
 }) {
   const used = Object.values(values).reduce((sum, value) => sum + value, 0);
   const adjust = (id: string, amount: number) => {
@@ -78,7 +84,7 @@ function AllocationBoard({
     if (amount > 0 && used >= total) return;
     onChange({ ...values, [id]: current + amount });
   };
-  return <section className="allocation-board">
+  return bilingualUi(<section className="allocation-board">
     <header>
       <div><span>MESA DE REPARTO</span><h3>{kind === "personas" ? "Distribuye los 24 turnos" : "Invierte las 20 fichas"}</h3></div>
       <strong className={used === total ? "complete" : ""}>{used} / {total} {kind}</strong>
@@ -94,15 +100,17 @@ function AllocationBoard({
         </div>
       </article>)}
     </div>
-  </section>;
+  </section>, level);
 }
 
 function DebateQuestion({
   round,
+  level,
   index,
   onIndex,
 }: {
   round: IslandRound;
+  level: CEFRLevel;
   index: number;
   onIndex: (index: number) => void;
 }) {
@@ -114,7 +122,7 @@ function DebateQuestion({
     if (next === index) next = (next + 1) % round.questions.length;
     onIndex(next);
   };
-  return <section className="question-deck">
+  return bilingualUi(<section className="question-deck">
     <header><span>DETONADOR {String(index + 1).padStart(2, "0")} / {String(round.questions.length).padStart(2, "0")}</span><button onClick={randomQuestion}>Pregunta sorpresa ↗</button></header>
     <div className="question-card"><i>?</i><h3>{round.questions[index]}</h3></div>
     <nav aria-label="Cambiar pregunta">
@@ -123,13 +131,22 @@ function DebateQuestion({
       <button disabled={index === round.questions.length - 1} onClick={() => onIndex(index + 1)}>Siguiente →</button>
     </nav>
     <details>
-      <summary>Ver las 7 preguntas de esta ronda</summary>
+      <summary>Ver las preguntas de esta ronda</summary>
       <ol>{round.questions.map(question => <li key={question}>{question}</li>)}</ol>
     </details>
-  </section>;
+  </section>, level);
 }
 
 export default function IslandVotePage() {
+  return <ConversationFamily id="la-isla-vota" title="La isla vota" levels={CEFR_LEVELS} defaultLevel="B1">{level => <IslandSession key={level} level={level} />}</ConversationFamily>;
+}
+
+function IslandSession({ level }: { level: CEFRLevel }) {
+  const rounds = useMemo(() => islandRoundsForLevel(originalRounds, level), [level]);
+  const language = islandLanguage(level);
+  const warmupQuestions = level === "B1" ? originalWarmup : language.warmup;
+  const finalQuestions = level === "B1" ? originalFinals : language.closing;
+  const debateTools = level === "B1" ? originalTools : language.tools;
   const [screen, setScreen] = useState<Screen>("briefing");
   const [mode, setMode] = useState<SessionMode>("duo");
   const [islandName, setIslandName] = useState("Isla Común");
@@ -161,7 +178,7 @@ export default function IslandVotePage() {
       for (const metric of metricOrder) next[metric] = clamp(next[metric] + (option.delta[metric] || 0));
     }
     return next;
-  }, [votes]);
+  }, [votes, rounds]);
 
   useEffect(() => {
     if (!timerRunning || seconds <= 0) return;
@@ -208,9 +225,9 @@ export default function IslandVotePage() {
   };
 
   if (screen === "briefing") {
-    return <main className="island-app island-briefing">
+    return bilingualUi(<main className="island-app island-briefing">
       <nav className="island-topbar">
-        <Link href="/" className="island-brand"><span>SC</span><div><b>SPANISHCUE</b><small>CONVERSACIÓN B1</small></div></Link>
+        <Link href="/" className="island-brand"><span>SC</span><div><b>SPANISHCUE</b><small>CONVERSACIÓN {level}</small></div></Link>
         <div className="topbar-rule"><i /> SIMULACIÓN CÍVICA · 100% CONVERSACIÓN</div>
         <Link href="/" className="library-link">← Biblioteca</Link>
       </nav>
@@ -252,13 +269,13 @@ export default function IslandVotePage() {
         <header><span>ACTIVACIÓN · 5 MIN</span><h2>Antes de crear un país, sobrevive el primer día.</h2></header>
         <div>{warmupQuestions.map((question, index) => <article key={question}><span>{String(index + 1).padStart(2, "0")}</span><p>{question}</p></article>)}</div>
       </section>
-    </main>;
+    </main>, level);
   }
 
   if (screen === "constitution") {
-    return <main className="island-app constitution-screen">
+    return bilingualUi(<main className="island-app constitution-screen">
       <nav className="island-topbar constitution-topbar">
-        <Link href="/" className="island-brand"><span>SC</span><div><b>SPANISHCUE</b><small>CONVERSACIÓN B1</small></div></Link>
+        <Link href="/" className="island-brand"><span>SC</span><div><b>SPANISHCUE</b><small>CONVERSACIÓN {level}</small></div></Link>
         <button onClick={() => setScreen("session")}>← Volver al debate</button>
         <button onClick={() => window.print()}>Imprimir acta</button>
       </nav>
@@ -285,7 +302,7 @@ export default function IslandVotePage() {
           </ol>
         </section>
         <aside className="constitution-side">
-          <MetricBoard values={metrics} />
+          <MetricBoard level={level} values={metrics} />
           <section className="identity-card"><span>IDENTIDAD</span><h2>{islandName.trim() || "La isla sin nombre"}</h2><p><b>Gobierno:</b> {records.poder || "Sin nombre registrado"}</p><p><b>Economía:</b> {records.economia || "Sin nombre registrado"}</p></section>
           <section className="reflection-card">
             <span>DEBATE FINAL · 15 MIN</span>
@@ -295,12 +312,12 @@ export default function IslandVotePage() {
           <button className="restart-button" onClick={restart}>Crear otra sociedad desde cero</button>
         </aside>
       </div>
-    </main>;
+    </main>, level);
   }
 
-  return <main className="island-app session-screen">
+  return bilingualUi(<main className="island-app session-screen">
     <nav className="island-topbar session-topbar">
-      <Link href="/" className="island-brand"><span>SC</span><div><b>SPANISHCUE</b><small>LA ISLA VOTA · B1</small></div></Link>
+      <Link href="/" className="island-brand"><span>SC</span><div><b>SPANISHCUE</b><small>LA ISLA VOTA · {level}</small></div></Link>
       <div className="session-progress"><span>{completed} / 8 ACUERDOS</span><i><b style={{ width: (completed / rounds.length) * 100 + "%" }} /></i></div>
       <button className="constitution-button" disabled={completed === 0} onClick={() => setScreen("constitution")}>Ver constitución</button>
       <Link href="/" className="library-link">Biblioteca</Link>
@@ -314,7 +331,7 @@ export default function IslandVotePage() {
           <figcaption><span>MAPA OPERATIVO</span><b>{islandName.trim() || "Isla sin nombre"}</b></figcaption>
           {markerPositions.map(marker => <button key={marker.label} className={["map-marker", marker.className, marker.index === activeIndex ? "active" : "", votes[rounds[marker.index].id] ? "decided" : ""].join(" ")} onClick={() => goToRound(marker.index)} aria-label={"Abrir " + rounds[marker.index].shortTitle}><i />{marker.label}</button>)}
         </figure>
-        <MetricBoard values={metrics} />
+        <MetricBoard level={level} values={metrics} />
         <nav className="round-rail" aria-label="Rondas de la asamblea">
           {rounds.map((round, index) => <button key={round.id} className={[index === activeIndex ? "active" : "", votes[round.id] ? "decided" : ""].join(" ")} onClick={() => goToRound(index)}>
             <span>{round.number}</span><div><small>{round.ministry}</small><b>{round.shortTitle}</b></div><i>{votes[round.id] ? "✓" : "→"}</i>
@@ -334,28 +351,28 @@ export default function IslandVotePage() {
         <section className="motion-card">
           <span>MOCIÓN SOBRE LA MESA</span>
           <h2>{active.motion}</h2>
-          <p>Primero responde una pregunta. Después escucha una objeción. Recién entonces vota.</p>
+          <p>{level === "A0" ? "Escucha el modelo. Di tu elección. El profesor registra tu voto. / Listen to the model. Say your choice. The teacher records your vote." : "Primero responde una pregunta. Después escucha una objeción. Recién entonces vota."}</p>
         </section>
 
-        <DebateQuestion round={active} index={questionIndex} onIndex={index => setQuestionIndexes(current => ({ ...current, [active.id]: index }))} />
+        <DebateQuestion level={level} round={active} index={questionIndex} onIndex={index => setQuestionIndexes(current => ({ ...current, [active.id]: index }))} />
 
         <section className="speaking-lab">
           <header><div><span>CONTROL DE CONVERSACIÓN</span><h2>Una respuesta no alcanza.</h2></div><strong>{roundMoves.length} / {speakingMoves.length} movimientos</strong></header>
           <div className="speaking-moves">{speakingMoves.map(move => <button key={move.id} className={roundMoves.includes(move.id) ? "done" : ""} onClick={() => toggleMove(move.id)} title={move.help}><i>{roundMoves.includes(move.id) ? "✓" : "+"}</i><span>{move.label}</span></button>)}</div>
-          <details className="language-drawer">
+          <details className="language-drawer" open={level === "A0" || level === "A1"}>
             <summary>Necesito una frase para negociar</summary>
             <div>{debateTools.map(tool => <button key={tool} onClick={() => navigator.clipboard?.writeText(tool)}>{tool}</button>)}</div>
           </details>
         </section>
 
         <section className="role-table">
-          <header><span>{mode === "duo" ? "PERSPECTIVA PARA EL ALUMNO" : "REPARTO DE ROLES"}</span><h2>No defiendas siempre tu opinión personal.</h2></header>
+          <header><span>{mode === "duo" ? "PERSPECTIVA PARA EL ALUMNO" : "REPARTO DE ROLES"}</span><h2>{level === "A0" ? "Elige una voz y di su frase. / Choose a voice and say its sentence." : "No defiendas siempre tu opinión personal."}</h2></header>
           <div>{active.roles.map((role, index) => <button key={role.name} className={index === roleIndex ? "active" : ""} onClick={() => setRoleIndexes(current => ({ ...current, [active.id]: index }))}><span>{String(index + 1).padStart(2, "0")}</span><b>{role.name}</b><p>{role.brief}</p></button>)}</div>
-          <p className="role-instruction">{mode === "duo" ? "Alumno: defiende la perspectiva elegida. Profe: busca el punto débil y exige una condición." : "Cada persona toma una perspectiva. Para ganar la votación necesita formar una coalición."}</p>
+          <p className="role-instruction">{level === "A0" ? "El profesor elige una voz. Tú dices: «Yo quiero…». Escucha otra voz y pregunta: «¿Y tú?». / The teacher chooses a voice. Say: “I want…”. Listen to another voice and ask: “And you?”." : mode === "duo" ? "Alumno: defiende la perspectiva elegida. Profe: busca el punto débil y exige una condición." : "Cada persona toma una perspectiva. Para ganar la votación necesita formar una coalición."}</p>
         </section>
 
         <section className="policy-section">
-          <header><span>ABRIMOS LA VOTACIÓN</span><h2>Tres propuestas. Ninguna es perfecta.</h2><p>Elige una, explica qué costo aceptas y permite una última réplica.</p></header>
+          <header><span>ABRIMOS LA VOTACIÓN</span><h2>Tres propuestas. Ninguna es perfecta.</h2><p>{level === "A0" ? "Lee una frase «Yo quiero…» y dila en voz alta. / Read an “I want…” sentence and say it aloud." : "Elige una, explica qué costo aceptas y permite una última réplica."}</p></header>
           <div className="policy-grid">{active.options.map((option, index) => <button key={option.id} className={chosenId === option.id ? "selected" : ""} onClick={() => setVotes(current => ({ ...current, [active.id]: option.id }))}>
             <span className="policy-letter">{String.fromCharCode(65 + index)}</span>
             <small>{chosenId === option.id ? "TU VOTO" : "PROPUESTA"}</small>
@@ -370,8 +387,8 @@ export default function IslandVotePage() {
           </button>)}</div>
         </section>
 
-        {active.special === "jobs" && <AllocationBoard items={jobs} values={jobsState} total={24} onChange={setJobsState} kind="personas" />}
-        {active.special === "budget" && <AllocationBoard items={budgetAreas} values={budgetState} total={20} onChange={setBudgetState} kind="fichas" />}
+        {active.special === "jobs" && <AllocationBoard level={level} items={jobs} values={jobsState} total={24} onChange={setJobsState} kind="personas" />}
+        {active.special === "budget" && <AllocationBoard level={level} items={budgetAreas} values={budgetState} total={20} onChange={setBudgetState} kind="fichas" />}
 
         <section className="minutes-card">
           <label><span>ACTA DE LA RONDA</span>{active.recordLabel}</label>
@@ -401,5 +418,5 @@ export default function IslandVotePage() {
         </footer>
       </section>
     </div>
-  </main>;
+  </main>, level);
 }

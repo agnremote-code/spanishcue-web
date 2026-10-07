@@ -1,17 +1,22 @@
 "use client";
 
+import {ConversationFamily} from '../conversation-families/ConversationFamily';
+import {OralBuilder} from '../conversation-families/OralBuilder';
+import type {CEFRLevel} from '../conversation-families/types';
+import {agencyDossiersForLevel,agencyFinals,agencyInterview,agencyLanguage,agencySupport,agencyTask,agencyValueEnglish} from './agency-levels';
+import {narratives,narrativeLevels} from '../conversation-narratives/data';
 import Link from "next/link";
 import {useState} from "react";
 import "./style.css";
 
-type Dossier={
+export type Dossier={
   id:string;code:string;door:string;signal:string;decision:string;probe:string;
   consequence:string;consequencePrompt:string;cost:string;reconsider:string;
   person:{name:string;role:string;line:string;teacher:string};
   rewrite:string;ripples:[string,string];finalPrompt:string;
 };
 
-const dossiers:Dossier[]=[
+const originalDossiers:Dossier[]=[
   {
     id:"husos",code:"VP–041",door:"EL ASCENSOR DE LAS 05:40",signal:"Tres ciudades mantienen una luz encendida.",
     decision:"A los 32 aceptaste dirigir un estudio internacional. El sueldo era el doble y el cargo parecía imposible de rechazar.",
@@ -86,12 +91,12 @@ const dossiers:Dossier[]=[
   }
 ];
 
-const stages=[
+const originalStages=[
   ["Recepción","3 min"],["Expedientes","15 min"],["Entrevista","6 min"],
   ["Balance","5 min"],["Modificación","6 min"],["Conversación final","10 min"]
 ] as const;
 
-const interviewQuestions=[
+const originalInterviewQuestions=[
   "¿Qué detalle de esta vida defenderías aunque nadie más lo valorara?",
   "¿Qué parte de tu versión del éxito no aparece en el expediente?",
   "¿Qué le envidias, en secreto, a la vida que no elegiste?",
@@ -100,7 +105,7 @@ const interviewQuestions=[
 
 const values=["TIEMPO","VÍNCULOS","DINERO","LIBERTAD","ESTABILIDAD","RECONOCIMIENTO"] as const;
 
-const finalQuestions=[
+const originalFinalQuestions=[
   {q:"¿Crees que las decisiones importantes dependen más del carácter o de las circunstancias?",f:"Piensa en dos personas distintas ante la misma oportunidad.",c:"Si todo dependiera del carácter, ¿no estaríamos ignorando privilegios y límites reales?"},
   {q:"¿Hay decisiones aparentemente pequeñas que pueden cambiar una vida entera?",f:"Propón una que solo revele su importancia muchos años después.",c:"¿Estamos viendo causalidad real o construyendo una historia coherente a posteriori?"},
   {q:"¿Qué valoras más en esta etapa: estabilidad o libertad?",f:"Define ambos términos con ejemplos antes de elegir.",c:"¿Y si la estabilidad fuera precisamente lo que permite ejercer una libertad más profunda?"},
@@ -113,13 +118,17 @@ const finalQuestions=[
   {q:"¿Una vida más fácil necesariamente sería una vida mejor?",f:"¿Qué dificultad conservarías porque produce algo valioso?",c:"Cuidado con romantizar obstáculos que simplemente desgastan."}
 ] as const;
 
-const languageSupport={
+const originalLanguageSupport={
   "HIPÓTESIS":["Probablemente habría…","Me cuesta imaginar que…","Lo que habría cambiado realmente sería…"],
   "MATIZ":["Hasta cierto punto…","Dicho eso…","Aunque pudiera parecer…"],
   "REVISIÓN":["Visto desde otra perspectiva…","No necesariamente.","Ahora matizaría lo anterior porque…"]
 } as const;
 
-export default function AgenciaDeVidasParalelas(){
+export function AgenciaDeVidasParalelasNative({level}:{level:CEFRLevel}){
+  const t=(es:string,en:string)=>level==='A0'?`${es} / ${en}`:es;
+  const stages=originalStages.map(([name,time],index)=>[t(name,narratives.agency.stages[index][1]),time] as const);
+  const dossiers=agencyDossiersForLevel(originalDossiers,level);
+  const finalQuestions=agencyFinals(level,originalFinalQuestions);
   const [stage,setStage]=useState(0);
   const [activeIndex,setActiveIndex]=useState(0);
   const [openLevels,setOpenLevels]=useState<Record<string,number>>({});
@@ -130,8 +139,11 @@ export default function AgenciaDeVidasParalelas(){
   const [ripplesOpen,setRipplesOpen]=useState(false);
   const [finalIndex,setFinalIndex]=useState(0);
   const [finalDepth,setFinalDepth]=useState(false);
-  const [support,setSupport]=useState<keyof typeof languageSupport|null>(null);
+  const [support,setSupport]=useState<string|null>(level==='A0'||level==='A1'?"HIPÓTESIS":null);
   const [pace,setPace]=useState<"short"|"long"|null>(null);
+  const supportIndex=stage===4?rewriteIndex:activeIndex;
+  const interviewQuestions=agencyInterview(level,activeIndex,originalInterviewQuestions);
+  const languageSupport=agencyLanguage(level,originalLanguageSupport,supportIndex);
   const active=dossiers[activeIndex];
   const layer=openLevels[active.id]??0;
   const visited=dossiers.filter(item=>(openLevels[item.id]??0)>=3).length;
@@ -144,53 +156,58 @@ export default function AgenciaDeVidasParalelas(){
 
   return <main className="parallel-app">
     <nav className="parallel-nav">
-      <Link href="/" className="parallel-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN</small></span></Link>
-      <div className="agency-status"><i/> AGENCIA ABIERTA · SESIÓN 45 MIN</div>
-      <Link href="/">BIBLIOTECA</Link>
+      <Link href="/" className="parallel-brand"><img src="/brand/mascot/portrait.webp" alt=""/><span><b>SPANISHCUE</b><small>{level} {t("· CONVERSACIÓN","· CONVERSATION")}</small></span></Link>
+      <div className="agency-status"><i/> {t("AGENCIA ABIERTA · SESIÓN 45 MIN","AGENCY OPEN · 45-MINUTE SESSION")}</div>
+      <Link href="/">{t("BIBLIOTECA","LIBRARY")}</Link>
     </nav>
 
-    <div className="parallel-rail" aria-label="Recorrido de la clase">{stages.map(([name,time],index)=><button key={name} className={stage===index?"active":stage>index?"done":""} onClick={()=>go(index)}><span>{stage>index?"✓":String(index+1).padStart(2,"0")}</span><b>{name}</b><small>{time}</small></button>)}</div>
+    <div className="parallel-rail" aria-label={t("Recorrido de la clase","Class stages")}>{stages.map(([name,time],index)=><button key={name} className={stage===index?"active":stage>index?"done":""} onClick={()=>go(index)}><span>{stage>index?"✓":String(index+1).padStart(2,"0")}</span><b>{name}</b><small>{time}</small></button>)}</div>
 
     {stage===0&&<section className="agency-lobby">
       <div className="lobby-image"/><div className="lobby-shade"/>
-      <div className="lobby-copy"><span>C1 · HIPÓTESIS, CONSECUENCIAS Y DECISIONES</span><h1>La Agencia de<br/><em>Vidas Paralelas</em></h1><p>Seis puertas conservan vidas que pudieron ocurrir. Elige una sin conocer la decisión, anticipa lo que hay detrás y habla antes de desbloquear cada capa.</p><aside><small>PRIMERA PREGUNTA · HABLA AHORA</small><h2>¿Una vida alternativa revela lo que deseamos o solo lo que hoy echamos de menos?</h2></aside></div>
-      <div className="portal-console"><header><span>SEIS ACCESOS</span><b>{visited} expedientes completos</b></header>{dossiers.map((item,index)=><button key={item.id} onClick={()=>enter(index)} className={(openLevels[item.id]??0)>=3?"visited":""}><small>{item.code}</small><strong>{item.door}</strong><span>{item.signal}</span><i>{(openLevels[item.id]??0)>=3?"REVISITAR":"ENTRAR"} →</i></button>)}</div>
+      <div className="lobby-copy"><span>{level} {t("· HIPÓTESIS, CONSECUENCIAS Y DECISIONES","· POSSIBILITIES, CONSEQUENCES AND DECISIONS")}</span><h1>{t("La Agencia de","The Agency of")}<br/><em>{t("Vidas Paralelas","Parallel Lives")}</em></h1><p>{t("Seis puertas conservan vidas que pudieron ocurrir. Elige una sin conocer la decisión, anticipa lo que hay detrás y habla antes de desbloquear cada capa.","Six doors hold possible lives. Choose one, imagine what is behind it and speak before opening each layer.")}</p><aside><small>{t("PRIMERA PREGUNTA · HABLA AHORA","FIRST QUESTION · SPEAK NOW")}</small><h2>{level==="C1"?"¿Una vida alternativa revela lo que deseamos o solo lo que hoy echamos de menos?":agencyTask(0,activeIndex,level)}</h2></aside></div>
+      <div className="portal-console"><header><span>{t("SEIS ACCESOS","SIX DOORS")}</span><b>{visited} {t("expedientes completos","completed files")}</b></header>{dossiers.map((item,index)=><button key={item.id} onClick={()=>enter(index)} className={(openLevels[item.id]??0)>=3?"visited":""}><small>{item.code}</small><strong>{item.door}</strong><span>{item.signal}</span><i>{(openLevels[item.id]??0)>=3?t("REVISITAR","REVISIT"):t("ENTRAR","ENTER")} →</i></button>)}</div>
     </section>}
 
     {stage===1&&<section className="agency-file-stage">
-      <aside className="file-index"><header><span>ARCHIVO PERSONAL</span><b>{visited} / 3 recomendados</b></header>{dossiers.map((item,index)=><button key={item.id} className={activeIndex===index?"active":(openLevels[item.id]??0)>=3?"visited":""} onClick={()=>{setActiveIndex(index);setTeacherOpen(false);}}><small>{item.code}</small><span>{item.door}</span><i>{openLevels[item.id]??0}/3</i></button>)}</aside>
+      <aside className="file-index"><header><span>{t("ARCHIVO PERSONAL","PERSONAL FILES")}</span><b>{visited} {t("/ 3 recomendados","/ 3 recommended")}</b></header>{dossiers.map((item,index)=><button key={item.id} className={activeIndex===index?"active":(openLevels[item.id]??0)>=3?"visited":""} onClick={()=>{setActiveIndex(index);setTeacherOpen(false);}}><small>{item.code}</small><span>{item.door}</span><i>{openLevels[item.id]??0}/3</i></button>)}</aside>
       <article className="active-file">
-        <header><div><span>{active.code} · EXPEDIENTE ACTIVO</span><h1>{active.door}</h1><p>{active.signal}</p></div><div className="layer-meter"><i className={layer>=1?"on":""}/><i className={layer>=2?"on":""}/><i className={layer>=3?"on":""}/></div></header>
-        {layer===0&&<div className="sealed-layer"><div className="portal-orbit"><i/><i/><span>?</span></div><small>LA PUERTA NO REVELA LA DECISIÓN</small><h2>¿Qué clase de vida crees que esconde este acceso?</h2><p>Formula dos hipótesis distintas. Explica qué indicio te hace confiar más en una y qué dato podría cambiarla.</p><button onClick={reveal}>REVELAR DECISIÓN →</button></div>}
+        <header><div><span>{active.code} {t("· EXPEDIENTE ACTIVO","· CURRENT FILE")}</span><h1>{active.door}</h1><p>{active.signal}</p></div><div className="layer-meter"><i className={layer>=1?"on":""}/><i className={layer>=2?"on":""}/><i className={layer>=3?"on":""}/></div></header>
+        {layer===0&&<div className="sealed-layer"><div className="portal-orbit"><i/><i/><span>?</span></div><small>{t("LA PUERTA NO REVELA LA DECISIÓN","THE DOOR DOES NOT REVEAL THE DECISION")}</small><h2>{level==="C1"?"¿Qué clase de vida crees que esconde este acceso?":agencyTask(1,activeIndex,level)}</h2><p>{level==="C1"?"Formula dos hipótesis distintas. Explica qué indicio te hace confiar más en una y qué dato podría cambiarla.":level==="A0"?t("Mira la puerta. Escucha las frases y elige una.","Look at the door. Listen to the sentences and choose one."):level==="A1"?"Di: Quiero entrar. ¿Qué hay aquí?":"Anticipa una ventaja y un problema antes de abrir."}</p><button onClick={reveal}>{t("REVELAR DECISIÓN →","REVEAL DECISION →")}</button></div>}
         {layer>=1&&<section className="life-layers">
-          <article className="life-layer decision open"><span>01 · DECISIÓN</span><h2>{active.decision}</h2><p>{active.probe}</p></article>
-          {layer===1&&<button className="next-layer" onClick={reveal}><small>HABLA ANTES DE ABRIR</small>DESBLOQUEAR CONSECUENCIA →</button>}
-          {layer>=2&&<article className="life-layer consequence open"><span>02 · CONSECUENCIA</span><h2>{active.consequence}</h2><p>{active.consequencePrompt}</p></article>}
-          {layer===2&&<button className="next-layer" onClick={reveal}><small>¿MANTIENES TU POSICIÓN?</small>DESCUBRIR COSTO OCULTO →</button>}
-          {layer>=3&&<article className="life-layer hidden-cost open"><span>03 · COSTO OCULTO</span><h2>{active.cost}</h2><p>{active.reconsider}</p></article>}
-          {layer===3&&<div className="file-verdict"><small>REVISIÓN OBLIGATORIA</small><h3>Resume tu posición inicial. Después cambia, limita o refuerza una parte concreta a la luz del costo oculto.</h3><button onClick={()=>go(2)}>ENTREVISTAR ESTA VIDA →</button></div>}
+          <article className="life-layer decision open"><span>{t("01 · DECISIÓN","01 · DECISION")}</span><h2>{active.decision}</h2><p>{active.probe}</p></article>
+          {layer===1&&<button className="next-layer" onClick={reveal}><small>{t("HABLA ANTES DE ABRIR","SPEAK BEFORE OPENING")}</small>{t("DESBLOQUEAR CONSECUENCIA →","UNLOCK CONSEQUENCE →")}</button>}
+          {layer>=2&&<article className="life-layer consequence open"><span>{t("02 · CONSECUENCIA","02 · CONSEQUENCE")}</span><h2>{active.consequence}</h2><p>{active.consequencePrompt}</p></article>}
+          {layer===2&&<button className="next-layer" onClick={reveal}><small>{t("¿MANTIENES TU POSICIÓN?","DO YOU KEEP YOUR CHOICE?")}</small>{t("DESCUBRIR COSTO OCULTO →","REVEAL HIDDEN COST →")}</button>}
+          {layer>=3&&<article className="life-layer hidden-cost open"><span>{t("03 · COSTO OCULTO","03 · HIDDEN COST")}</span><h2>{active.cost}</h2><p>{active.reconsider}</p></article>}
+          {layer===3&&<div className="file-verdict"><small>{t("REVISIÓN OBLIGATORIA","REVIEW YOUR CHOICE")}</small><h3>{level==="C1"?"Resume tu posición inicial. Después cambia, limita o refuerza una parte concreta a la luz del costo oculto.":active.reconsider}</h3><button onClick={()=>go(2)}>{t("ENTREVISTAR ESTA VIDA →","INTERVIEW THIS PERSON →")}</button></div>}
         </section>}
-        <button className="teacher-seal" onClick={()=>setTeacherOpen(value=>!value)}>{teacherOpen?"CERRAR NOTA":"SOLO PROFESOR · ABRIR NOTA"}</button>
-        {teacherOpen&&<aside className="teacher-note"><span>INSTRUCCIÓN CONFIDENCIAL</span><p>No reveles la siguiente capa hasta que el alumno formule una hipótesis, una razón y una reserva. Cuestiona una certeza excesiva con: «¿Qué estás suponiendo para llegar a esa conclusión?»</p></aside>}
+        <button className="teacher-seal" onClick={()=>setTeacherOpen(value=>!value)}>{teacherOpen?t("CERRAR NOTA","CLOSE NOTE"):t("SOLO PROFESOR · ABRIR NOTA","TEACHER ONLY · OPEN NOTE")}</button>
+        {teacherOpen&&<aside className="teacher-note"><span>{t("INSTRUCCIÓN CONFIDENCIAL","TEACHER INSTRUCTION")}</span><p>{level==="C1"?"No reveles la siguiente capa hasta que el alumno formule una hipótesis, una razón y una reserva. Cuestiona una certeza excesiva con: «¿Qué estás suponiendo para llegar a esa conclusión?»":level==="A0"?t("Lee una frase. El alumno elige una opción y la dice. Después pulsa para abrir la siguiente capa.","Read a sentence. The student chooses an option and says it. Then click to open the next layer."):agencyTask(1,activeIndex,level)}</p></aside>}
       </article>
     </section>}
 
     {stage===2&&<section className="alternate-room">
-      <div className="alternate-portrait"><span>VERSIÓN {active.code}</span><div className="holo-person"><img src="/conversation-premium/agencia-vidas-paralelas.webp" alt="Sala de conexión con distintas vidas alternativas"/><i/><i/><b>{active.person.name.split(" ").map(part=>part[0]).join("")}</b></div><h2>{active.person.name}</h2><p>{active.person.role}</p></div>
-      <article className="interview-console"><header><span>CONEXIÓN CON LA VIDA ALTERNATIVA · 6 MIN</span><h1>La versión que siguió ese camino</h1><blockquote>“{active.person.line}”</blockquote></header><div className="interview-question"><small>PREGUNTA {interviewIndex+1} / {interviewQuestions.length}</small><h2>{interviewQuestions[interviewIndex]}</h2><p>Escucha la respuesta del profesor, cuestiona una premisa y formula una repregunta que no pueda responderse con sí o no.</p></div><nav>{interviewQuestions.map((_,index)=><button key={index} className={interviewIndex===index?"active":""} onClick={()=>setInterviewIndex(index)}>{String(index+1).padStart(2,"0")}</button>)}</nav><button className="teacher-seal light" onClick={()=>setTeacherOpen(value=>!value)}>{teacherOpen?"OCULTAR PAPEL":"PROFESOR · REVELAR PAPEL"}</button>{teacherOpen&&<aside className="teacher-note light"><span>PERSONAJE · {active.person.name.toUpperCase()}</span><p>{active.person.teacher}</p></aside>}</article>
+      <div className="alternate-portrait"><span>{t("VERSIÓN","VERSION")} {active.code}</span><div className="holo-person"><img src="/conversation-premium/agencia-vidas-paralelas.webp" alt={t("Sala de conexión con distintas vidas alternativas","Room connecting different possible lives")}/><i/><i/><b>{active.person.name.split(" ").map(part=>part[0]).join("")}</b></div><h2>{active.person.name}</h2><p>{active.person.role}</p></div>
+      <article className="interview-console"><header><span>{t("CONEXIÓN CON LA VIDA ALTERNATIVA · 6 MIN","CONNECT WITH THE OTHER LIFE · 6 MIN")}</span><h1>{t("La versión que siguió ese camino","The person who took that path")}</h1><blockquote>“{active.person.line}”</blockquote></header><div className="interview-question"><small>{t("PREGUNTA","QUESTION")} {interviewIndex+1} / {interviewQuestions.length}</small><h2>{interviewQuestions[interviewIndex]}</h2><p>{level==="C1"?"Escucha la respuesta del profesor, cuestiona una premisa y formula una repregunta que no pueda responderse con sí o no.":agencyTask(2,activeIndex,level)}</p></div><nav>{interviewQuestions.map((_,index)=><button key={index} className={interviewIndex===index?"active":""} onClick={()=>setInterviewIndex(index)}>{String(index+1).padStart(2,"0")}</button>)}</nav><button className="teacher-seal light" onClick={()=>setTeacherOpen(value=>!value)}>{teacherOpen?t("OCULTAR PAPEL","HIDE ROLE"):t("PROFESOR · REVELAR PAPEL","TEACHER · REVEAL ROLE")}</button>{teacherOpen&&<aside className="teacher-note light"><span>{t("PERSONAJE ·","CHARACTER ·")} {active.person.name.toUpperCase()}</span><p>{active.person.teacher}</p></aside>}</article>
     </section>}
 
-    {stage===3&&<section className="values-chamber"><header><span>CÁMARA DE BALANCE · 5 MIN</span><h1>Toda vida optimiza algo.</h1><p>Elige solo tres valores que esta vida debería proteger. Después identifica la contradicción entre dos de ellos y explica cuál cedería primero bajo presión.</p></header><div className="value-orbit"><div className="value-core"><small>CONSERVAR</small><b>{priorities.length} / 3</b></div>{values.map((value,index)=><button key={value} className={priorities.includes(value)?"active":""} data-index={index} disabled={!priorities.includes(value)&&priorities.length===3} onClick={()=>togglePriority(value)}><span>{String(index+1).padStart(2,"0")}</span>{value}</button>)}</div>{priorities.length===3&&<aside className="contradiction-card"><span>CONTRADICCIÓN DETECTADA</span><h2>“Quiero conservar {priorities[0].toLowerCase()} y {priorities[1].toLowerCase()}, aunque eso podría reducir {priorities[2].toLowerCase()}.”</h2><p>Reformula la frase desde la perspectiva de alguien que ordenaría esos valores de otra manera.</p></aside>}
+    {stage===3&&<section className="values-chamber"><header><span>{t("CÁMARA DE BALANCE · 5 MIN","PRIORITY ROOM · 5 MIN")}</span><h1>{t("Toda vida optimiza algo.","Every life prioritizes something.")}</h1><p>{level==="C1"?"Elige solo tres valores que esta vida debería proteger. Después identifica la contradicción entre dos de ellos y explica cuál cedería primero bajo presión.":agencyTask(3,activeIndex,level)}</p></header><div className="value-orbit"><div className="value-core"><small>{t("CONSERVAR","KEEP")}</small><b>{priorities.length} / 3</b></div>{values.map((value,index)=><button key={value} className={priorities.includes(value)?"active":""} data-index={index} disabled={!priorities.includes(value)&&priorities.length===3} onClick={()=>togglePriority(value)}><span>{String(index+1).padStart(2,"0")}</span>{t(value,agencyValueEnglish[value])}</button>)}</div>{priorities.length===3&&<aside className="contradiction-card"><span>{t("CONTRADICCIÓN DETECTADA","PRIORITIES CHOSEN")}</span><h2>{level==="A0"?t(`Yo quiero ${priorities[0].toLowerCase()} y ${priorities[1].toLowerCase()}. También quiero ${priorities[2].toLowerCase()}.`,`I want ${agencyValueEnglish[priorities[0]].toLowerCase()} and ${agencyValueEnglish[priorities[1]].toLowerCase()}. I also want ${agencyValueEnglish[priorities[2]].toLowerCase()}.`):`“Quiero conservar ${priorities[0].toLowerCase()} y ${priorities[1].toLowerCase()}, aunque eso podría reducir ${priorities[2].toLowerCase()}.”`}</h2><p>{level==="C1"?"Reformula la frase desde la perspectiva de alguien que ordenaría esos valores de otra manera.":level==="A0"?t("Di tus tres elecciones. Pregunta: ¿Y tú?","Say your three choices. Ask: And you?"):agencyTask(3,activeIndex,level)}</p></aside>}
     </section>}
 
-    {stage===4&&<section className="rewrite-vault"><header><span>AUTORIZACIÓN ÚNICA · 6 MIN</span><h1>Puedes cambiar una decisión.</h1><p>Elige el expediente que quieres reescribir. Primero defiende el cambio; después abre la propagación y negocia los dos efectos que no puedes evitar.</p></header><div className="rewrite-strip">{dossiers.map((item,index)=><button key={item.id} className={rewriteIndex===index?"active":""} onClick={()=>selectRewrite(index)}><small>{item.code}</small><span>{item.door}</span></button>)}</div><div className="rewrite-machine"><section><small>MODIFICACIÓN SOLICITADA</small><h2>{dossiers[rewriteIndex].rewrite}</h2><p>¿Qué problema resuelve? ¿Qué valor protege? ¿Qué riesgo estás dispuesto a aceptar?</p><button onClick={()=>setRipplesOpen(true)}>{ripplesOpen?"PROPAGACIÓN ABIERTA":"ACTIVAR CAMBIO →"}</button></section><aside className={ripplesOpen?"revealed":""}>{ripplesOpen?<><span>EL CAMBIO ALTERA DOS ÁREAS</span>{dossiers[rewriteIndex].ripples.map((item,index)=><article key={item}><small>EFECTO {index+1}</small><p>{item}</p></article>)}<h3>{dossiers[rewriteIndex].finalPrompt}</h3><p>El profesor exige que mantengas uno de los dos efectos y agrava el otro. Negocia una versión que todavía puedas defender.</p></>:<><span>EFECTOS BLOQUEADOS</span><p>Habla antes de activar la modificación.</p></>}</aside></div>
+    {stage===4&&<section className="rewrite-vault"><header><span>{t("AUTORIZACIÓN ÚNICA · 6 MIN","ONE CHANGE ALLOWED · 6 MIN")}</span><h1>{t("Puedes cambiar una decisión.","You can change one decision.")}</h1><p>{level==="C1"?"Elige el expediente que quieres reescribir. Primero defiende el cambio; después abre la propagación y negocia los dos efectos que no puedes evitar.":agencyTask(4,rewriteIndex,level)}</p></header><div className="rewrite-strip">{dossiers.map((item,index)=><button key={item.id} className={rewriteIndex===index?"active":""} onClick={()=>selectRewrite(index)}><small>{item.code}</small><span>{item.door}</span></button>)}</div><div className="rewrite-machine"><section><small>{t("MODIFICACIÓN SOLICITADA","REQUESTED CHANGE")}</small><h2>{dossiers[rewriteIndex].rewrite}</h2><p>{level==="C1"?"¿Qué problema resuelve? ¿Qué valor protege? ¿Qué riesgo estás dispuesto a aceptar?":dossiers[rewriteIndex].probe}</p><button onClick={()=>setRipplesOpen(true)}>{ripplesOpen?t("PROPAGACIÓN ABIERTA","EFFECTS OPEN"):t("ACTIVAR CAMBIO →","ACTIVATE CHANGE →")}</button></section><aside className={ripplesOpen?"revealed":""}>{ripplesOpen?<><span>{t("EL CAMBIO ALTERA DOS ÁREAS","THE CHANGE HAS TWO EFFECTS")}</span>{dossiers[rewriteIndex].ripples.map((item,index)=><article key={item}><small>{t("EFECTO","EFFECT")} {index+1}</small><p>{item}</p></article>)}<h3>{dossiers[rewriteIndex].finalPrompt}</h3><p>{level==="C1"?"El profesor exige que mantengas uno de los dos efectos y agrava el otro. Negocia una versión que todavía puedas defender.":dossiers[rewriteIndex].reconsider}</p></>:<><span>{t("EFECTOS BLOQUEADOS","EFFECTS LOCKED")}</span><p>{t("Habla antes de activar la modificación.","Speak before activating the change.")}</p></>}</aside></div>
     </section>}
 
-    {stage===5&&<section className="parallel-final"><header><span>FUERA DE LA AGENCIA · CONVERSACIÓN ABIERTA · 10–15 MIN</span><h1>La vida que no viene con expediente</h1><p>Una pregunta por vez. Desarróllala con una historia, una distinción o un ejemplo; después abre la repregunta y el contraargumento.</p></header><div className="final-single"><aside><span>{String(finalIndex+1).padStart(2,"0")}</span><small>DE {finalQuestions.length}</small></aside><article><h2>{finalQuestions[finalIndex].q}</h2><button onClick={()=>setFinalDepth(value=>!value)}>{finalDepth?"CERRAR PROFUNDIDAD":"ABRIR REPREGUNTA + CONTRAARGUMENTO"}</button>{finalDepth&&<div className="final-depth"><p><b>REPREGUNTA</b>{finalQuestions[finalIndex].f}</p><p><b>EL PROFESOR CUESTIONA</b>{finalQuestions[finalIndex].c}</p></div>}</article></div><nav className="final-navigation"><button onClick={()=>moveFinal(-1)}>← ANTERIOR</button><div>{finalQuestions.map((_,index)=><button key={index} aria-label={`Pregunta ${index+1}`} className={finalIndex===index?"active":""} onClick={()=>{setFinalIndex(index);setFinalDepth(false);}}/>)}</div><button onClick={()=>moveFinal(1)}>SIGUIENTE →</button></nav><aside className="parallel-closing"><span>CIERRE · 90 SEGUNDOS</span><h2>Una decisión ficticia que ahora juzgas de otra manera</h2><p>Explica tu primera lectura, el dato que la modificó y la posición que defenderías ahora sin borrar la contradicción.</p></aside></section>}
+    {stage===5&&<section className="parallel-final"><header><span>{t("FUERA DE LA AGENCIA · CONVERSACIÓN ABIERTA · 10–15 MIN","OUTSIDE THE AGENCY · OPEN CONVERSATION · 10–15 MIN")}</span><h1>{t("La vida que no viene con expediente","Life beyond the files")}</h1><p>{level==="C1"?"Una pregunta por vez. Desarróllala con una historia, una distinción o un ejemplo; después abre la repregunta y el contraargumento.":agencyTask(5,activeIndex,level)}</p></header><div className="final-single"><aside><span>{String(finalIndex+1).padStart(2,"0")}</span><small>{t("DE","OF")} {finalQuestions.length}</small></aside><article><h2>{finalQuestions[finalIndex].q}</h2><button onClick={()=>setFinalDepth(value=>!value)}>{finalDepth?t("CERRAR PROFUNDIDAD","CLOSE FOLLOW-UP"):t("ABRIR REPREGUNTA + CONTRAARGUMENTO","OPEN FOLLOW-UP + ANOTHER VIEW")}</button>{finalDepth&&<div className="final-depth"><p><b>{t("REPREGUNTA","FOLLOW-UP")}</b>{finalQuestions[finalIndex].f}</p><p><b>{t("EL PROFESOR CUESTIONA","THE TEACHER CHALLENGES")}</b>{finalQuestions[finalIndex].c}</p></div>}</article></div><nav className="final-navigation"><button onClick={()=>moveFinal(-1)}>{t("← ANTERIOR","← PREVIOUS")}</button><div>{finalQuestions.map((_,index)=><button key={index} aria-label={t(`Pregunta ${index+1}`,`Question ${index+1}`)} className={finalIndex===index?"active":""} onClick={()=>{setFinalIndex(index);setFinalDepth(false);}}/>)}</div><button onClick={()=>moveFinal(1)}>{t("SIGUIENTE →","NEXT →")}</button></nav><aside className="parallel-closing"><span>{t("CIERRE · 90 SEGUNDOS","CLOSING · 90 SECONDS")}</span><h2>{t("Una decisión ficticia que ahora juzgas de otra manera","A fictional decision you now see differently")}</h2><p>{level==="C1"?"Explica tu primera lectura, el dato que la modificó y la posición que defenderías ahora sin borrar la contradicción.":agencyTask(5,activeIndex,level)}</p></aside></section>}
 
-    <button className="parallel-support-trigger" onClick={()=>setSupport(support?null:"HIPÓTESIS")}>{support?"CERRAR APOYO":"APOYO C1"}</button>
-    {support&&<aside className="parallel-support"><header><b>APOYO OPCIONAL</b><button onClick={()=>setSupport(null)}>×</button></header><nav>{(Object.keys(languageSupport) as (keyof typeof languageSupport)[]).map(key=><button key={key} className={support===key?"active":""} onClick={()=>setSupport(key)}>{key}</button>)}</nav><div>{languageSupport[support].map(item=><span key={item}>{item}</span>)}</div><footer><b>RITMO · SOLO PROFESOR</b><button className={pace==="short"?"active":""} onClick={()=>setPace(pace==="short"?null:"short")}>HABLA POCO</button><button className={pace==="long"?"active":""} onClick={()=>setPace(pace==="long"?null:"long")}>HABLA MUCHO</button>{pace&&<p>{pace==="short"?"Ofrece dos opciones concretas, pide un ejemplo y modela una primera frase sin completar la idea por el alumno.":"Interrumpe con un costo nuevo, exige una síntesis de 45 segundos y pide que defienda la perspectiva contraria."}</p>}</footer></aside>}
+    <button className="parallel-support-trigger" onClick={()=>setSupport(support?null:"HIPÓTESIS")}>{support?t("CERRAR APOYO","CLOSE SUPPORT"):t(`APOYO ${level}`,`SUPPORT ${level}`)}</button>
+    {support&&<aside className="parallel-support" style={level==="A0"||level==="A1"?{maxHeight:"calc(100dvh - 170px)",overflowY:"auto"}:undefined}><header><b>{t("APOYO OPCIONAL","OPTIONAL SUPPORT")}</b><button aria-label={t("Cerrar apoyo","Close support")} onClick={()=>setSupport(null)}>×</button></header><nav>{(Object.keys(languageSupport) as (keyof typeof languageSupport)[]).map(key=><button key={key} className={support===key?"active":""} onClick={()=>setSupport(key)}>{t(key,key==="HIPÓTESIS"?"IDEAS":key==="MATIZ"?"DETAIL":"CHANGE")}</button>)}</nav>{level==="A0"&&<OralBuilder key={supportIndex} support={agencySupport(supportIndex)}/>}<div>{languageSupport[support].map(item=><span key={item}>{item}</span>)}</div><footer><b>{t("RITMO · SOLO PROFESOR","PACE · TEACHER ONLY")}</b><button className={pace==="short"?"active":""} onClick={()=>setPace(pace==="short"?null:"short")}>{t("HABLA POCO","SHORT ANSWERS")}</button><button className={pace==="long"?"active":""} onClick={()=>setPace(pace==="long"?null:"long")}>{t("HABLA MUCHO","LONG ANSWERS")}</button>{pace&&<p>{level==="A0"?t("Lee una frase corta. El alumno repite y cambia una opción.","Read a short sentence. The student repeats it and changes one option."):pace==="short"?t("Ofrece dos opciones concretas, pide un ejemplo y modela una primera frase sin completar la idea por el alumno.","Offer two specific choices, ask for an example and model a first sentence while leaving the choice to the student."):t("Interrumpe con un costo nuevo, exige una síntesis de 45 segundos y pide que defienda la perspectiva contraria.","Add a new cost, ask for a 45-second summary and invite the learner to defend another point of view.")}</p>}</footer></aside>}
 
-    <footer className="parallel-controls"><button disabled={stage===0} onClick={()=>go(stage-1)}>← ANTERIOR</button><span><b>{stages[stage][0]}</b>{stages[stage][1]} · {stage+1}/{stages.length}</span>{stage<stages.length-1?<button onClick={()=>go(stage+1)}>SIGUIENTE →</button>:<Link href="/el-ministerio-de-las-versiones">SIGUIENTE CLASE · C2 →</Link>}</footer>
+    <footer className="parallel-controls"><button disabled={stage===0} onClick={()=>go(stage-1)}>{t("← ANTERIOR","← PREVIOUS")}</button><span><b>{stages[stage][0]}</b>{stages[stage][1]} · {stage+1}/{stages.length}</span>{stage<stages.length-1?<button onClick={()=>go(stage+1)}>{t("SIGUIENTE →","NEXT →")}</button>:<Link href={level==="C1"?"/el-ministerio-de-las-versiones":`/el-ministerio-de-las-versiones?level=${level}`}>{level==="C1"?"SIGUIENTE CLASE · C2 →":t(`SIGUIENTE CLASE · ${level} →`,`NEXT CLASS · ${level} →`)}</Link>}</footer>
   </main>;
+}
+
+export default function AgenciaDeVidasParalelas(){
+ const lesson=narratives.agency;
+ return <ConversationFamily id={lesson.id} title={lesson.title} levels={narrativeLevels} defaultLevel="C1">{level=><AgenciaDeVidasParalelasNative key={level} level={level}/>}</ConversationFamily>;
 }

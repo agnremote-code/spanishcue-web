@@ -1,0 +1,13 @@
+'use client';
+import {useState} from 'react';
+import type {CEFRLevel} from '../conversation-families/types';
+import {lessonTask} from '../conversation-narratives/pedagogy';
+import {ministryCopy,ministryScene} from './ministry-level-adapter';
+export function MinistrySpeaking({level,index,stage}:{level:CEFRLevel;index:number;stage:number}){
+ const scene=ministryScene(level,index),task=lessonTask('ministry',stage,scene,level);
+ const model=level==='A2'?`Primero: ${scene.fact[0]} Ahora quiero preguntar qué pasó después.`:level==='B1'?`Mi primera idea sobre «${scene.name[0]}» cambia con este dato. La explicación «${scene.options[0][0]}» necesita una razón y todavía admite una alternativa.`:level==='B2'?`Aunque «${scene.options[1][0]}» tiene ventajas, me inclino por «${scene.options[0][0]}». Revisaría esa lectura si apareciera una prueba contraria verificable.`:level==='C1'?`De haber conocido el contexto de «${scene.name[0]}», habría revisado mi primera interpretación. La perspectiva «${scene.options[1][0]}» cuestiona un supuesto que daba por sentado.`:scene.model[0];
+ const [choice,setChoice]=useState(0);
+ const [chunks,setChunks]=useState<number[]>([]);
+ const models=[['Yo no sé.','I do not know.'],['Yo sé esto.','I know this.'],['Otra vez, por favor.','Again, please.']];
+ return <aside className="ministry-speaking" data-ministry-speaking><h2>{ministryCopy(level,['Para hablar','Speaking support'])}</h2><p>{ministryCopy(level,task.expected)}</p><p>{ministryCopy(level,task.support)}</p>{level==='A0'?<><p>Profesor: pulsa una frase; el alumno la dice. Cambia la frase y repite.<small>Teacher: click a sentence; the learner says it. Change the sentence and repeat.</small></p><p>Yo = I · sé = know · no sé = do not know</p><div>{models.map(([es,en],i)=><button type="button" key={es} aria-pressed={choice===i} onClick={()=>setChoice(i)}>{es}<small>{en}</small></button>)}</div><output aria-live="polite">{models[choice][0]}<small>{models[choice][1]}</small></output><p>Una pieza del caso · A chunk from this case</p><div>{scene.words.map(([es,en],i)=><button type="button" key={es} onClick={()=>setChunks(current=>[...current,i])}>{es}<small>{en}</small></button>)}</div><output aria-live="polite" data-case-model>{chunks.length?chunks.map(i=>scene.words[i][0]).join(" "):scene.model[0]}<small>{chunks.length?chunks.map(i=>scene.words[i][1]).join(" "):scene.model[1]}</small></output><button type="button" onClick={()=>setChunks([])}>Volver al modelo · Back to the model</button><p>Consejo: usa «no sé» si falta una prueba. No necesitas inventar una respuesta.<small>Tip: use “no sé” when evidence is missing. You do not need to invent an answer.</small></p></>:<p data-case-model>{model}</p>}</aside>;
+}

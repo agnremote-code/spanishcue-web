@@ -1,3 +1,4 @@
+import MuseumConversation from "../../conversation-families/museum/MuseumConversation";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -51,6 +52,8 @@ export default async function LessonPage({
   if (!isFreeLesson(lesson.id) && !fullAccessFromHeaders(requestHeaders)) {
     redirect(`/acceso?returnTo=${encodeURIComponent(`/clase/${id}`)}`);
   }
+
+  if (lesson.id === 203) return <MuseumConversation lesson={lesson} />;
 
   if (isPhoneticsLesson(lesson.id)) return <PhoneticsLesson key={lesson.id} lessonId={lesson.id} />;
 

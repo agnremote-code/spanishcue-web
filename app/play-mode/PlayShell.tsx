@@ -1,6 +1,7 @@
 "use client";
 
 import { type ReactNode, useEffect, useMemo, useState } from "react";
+import {levelSupport,levelPowers} from "./level-support";
 import Link from "next/link";
 import { SpanishCueBrand } from "../SpanishCueBrand";
 import "./play-mode.css";
@@ -50,7 +51,7 @@ export default function PlayShell({lesson,title,stages,stage,onStageChange,child
   useEffect(()=>{ if(!running) return; const id=window.setInterval(()=>setSeconds(value=>value>0?value-1:0),1000); return()=>window.clearInterval(id); },[running]);
   const clock=useMemo(()=>`${String(Math.floor(seconds/60)).padStart(2,"0")}:${String(seconds%60).padStart(2,"0")}`,[seconds]);
   const current=stages[stage];
-  const powerUps=powerMode==="situation"?SITUATION_POWER_UPS:POWER_UPS;
+  const powerUps=levelPowers[supportLevel]??(powerMode==="situation"?SITUATION_POWER_UPS:POWER_UPS);
   return <main className="play-mode" style={{"--play-accent":current.color} as React.CSSProperties}>
     <header className="play-topbar">
       <Link href="/" className="play-brand"><SpanishCueBrand variant="compact" tone="dark"/><i>MODO PLAY</i></Link>
@@ -64,11 +65,11 @@ export default function PlayShell({lesson,title,stages,stage,onStageChange,child
     <section className="play-surface">{children}</section>
     <aside className="teacher-tools" aria-label="Power-ups del profesor">
       <div className="teacher-title"><span>PROFESOR</span><b>POWER-UPS</b></div>
-      <div className="power-list">{[...powerUps,...extraPowerUps].map(([label,prompt])=><button key={label} onClick={()=>setPower(prompt)}>{label}</button>)}</div>
+      <div className="power-list">{[...powerUps,...(supportLevel==="B1"?extraPowerUps:[])].map(([label,prompt])=><button key={label} onClick={()=>setPower(prompt)}>{label}</button>)}</div>
       <button className="support-toggle" onClick={()=>setSupport(value=>!value)}>AYUDA {supportLevel} {support?"−":"+"}</button>
     </aside>
     {power&&<div className="power-toast" role="status"><small>POWER-UP</small><b>{power}</b><button aria-label="Cerrar" onClick={()=>setPower(null)}>×</button></div>}
-    {support&&<section className="support-drawer"><div><small>PARA ARRANCAR</small><b>Elige una frase. Después sigue con tus palabras.</b></div><p>{SUPPORT.map(item=><span key={item}>{item}</span>)}</p><button onClick={()=>setSupport(false)}>CERRAR</button></section>}
+    {support&&<section className="support-drawer"><div><small>PARA ARRANCAR</small><b>{supportLevel==="A0"?"Elige y repite. / Choose and repeat.":"Elige una frase. Después sigue con tus palabras."}</b></div><p>{(levelSupport[supportLevel]??SUPPORT).map(item=><span key={item}>{item}</span>)}</p><button onClick={()=>setSupport(false)}>CERRAR</button></section>}
   </main>;
 }
 

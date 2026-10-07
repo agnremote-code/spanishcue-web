@@ -129,10 +129,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     setState(current => setLevel(current, next));
     try { window.localStorage.setItem(LEVEL_KEY, next); } catch { /* private mode */ }
     const url = new URL(window.location.href);
-    if (url.searchParams.has('level')) {
-      url.searchParams.set('level', next);
-      window.history.replaceState(window.history.state, '', url);
-    }
+    url.searchParams.set('level', next);
+    window.history.replaceState(window.history.state, '', url);
   }, []);
   const in3d = view === '3d' && Boolean(World);
 
@@ -325,8 +323,8 @@ function Arrival({ arrival, level, onLevel, teacher, onStart }: {
     <div className="na-ts-menu">
       <p className="na-kicker">{arrival.kicker}<span>Modo Play · 3D</span></p>
       <h1 id="na-arrival-title">{arrival.title}</h1>
-      <p className="na-ts-lede">Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.</p>
-      <ul className="na-ts-verbs"><li>Camina.</li><li>Entra donde quieras.</li><li>Resuelve lo que pase.</li></ul>
+      <p className="na-ts-lede">{level==='A0'?arrival.premise:'Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.'}</p>
+      <ul className="na-ts-verbs"><li>{level==='A0'?'Camina. / Walk.':'Camina.'}</li><li>{level==='A0'?'Elige un lugar. / Choose a place.':'Entra donde quieras.'}</li><li>{level==='A0'?'Habla. / Speak.':'Resuelve lo que pase.'}</li></ul>
       <div className="na-ts-level">
         <LevelPicker level={level} onChange={onLevel} />
         <p><b>{LEVEL_INFO[level].name}</b> · {LEVEL_INFO[level].demand}</p>

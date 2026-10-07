@@ -21,6 +21,8 @@ export type Choice={
   category:ChoiceCategory;
   options:[string,string];
   depth:1|2|3;
+  /** Complete oral models matching options A and B for absolute beginners. */
+  answerModels?:[string,string];
   /** Consigna después de la decisión inicial. */
   follow:string;
   condition1:Condition;

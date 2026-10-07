@@ -3,9 +3,11 @@ import { isFreeLesson, localLessonPath } from '../access-policy';
 import { CEFR_LEVELS, type CEFRLevel, type ConversationLessonFamily } from './types';
 import { validateConversationFamily } from './navigation';
 import { authoredConversationLevels } from './authored-levels';
+import { normalizedConversationIds, conversationLevelAims } from './level-coverage';
 export { resolveConversationLevel, validateConversationFamily, conversationLessonHref } from './navigation';
 
 const groups = [
+  { id: 'estados-unidos-a2-b1', ids: [36, 26], title: 'Estados Unidos', renderer: 'usa' },
   { id: 'red-flag-o-no', ids: [207, 208, 209], title: 'Red Flag o No', renderer: 'red-flag' },
   { id: 'la-maquina-que-elimina-cosas', ids: [101, 103], title: 'La máquina que elimina cosas del mundo', renderer: 'machine' },
   { id: 'tu-vida-con-una-regla-absurda', ids: [102, 104], title: 'Tu vida con una regla absurda', renderer: 'rules' },
@@ -22,15 +24,18 @@ function familyFromSeeds(seeds: Lesson[], group?: typeof groups[number]): Conver
   const path = localLessonPath(first)!;
   const id = group?.id || path.slice(1).replaceAll('/', '-');
   const additions = authoredConversationLevels[id];
-  const levels = CEFR_LEVELS.filter(level => additions?.[level] || seeds.some(seed => (seed.levels || [seed.level]).includes(level)));
+  if (!(normalizedConversationIds as readonly number[]).includes(first.id)) throw new Error(`${id}: add and verify A0–C2 content before publishing a conversation family`);
+  const levels = [...CEFR_LEVELS];
   const access = isFreeLesson(first.id) ? 'free' : 'pro';
-  if (seeds.some(seed => (isFreeLesson(seed.id) ? 'free' : 'pro') !== access)) throw new Error(`${id}: mixed entitlement family`);
+  // The owner explicitly unified USA; historical /estados-unidos-basico stays protected.
+  if (id !== 'estados-unidos-a2-b1' && seeds.some(seed => (isFreeLesson(seed.id) ? 'free' : 'pro') !== access)) throw new Error(`${id}: mixed entitlement family`);
   const variants = Object.fromEntries(levels.map(level => {
     const authored = additions?.[level];
     if (authored) return [level, { level, lessonId: first.id, communicativeObjectives: authored.objectives, expectedFunctions: authored.functions, contentRef: `${path}#${level}` }];
-    const seed = seeds.find(seed => (seed.levels || [seed.level]).includes(level))!;
-    const objectives = countryAims[seed.id]?.[level] || seed.goals;
-    return [level, { level, lessonId: seed.id, communicativeObjectives: objectives, expectedFunctions: objectives, contentRef: `${localLessonPath(seed)}#${level}` }];
+    const original = seeds.find(seed => (seed.levels || [seed.level]).includes(level));
+    const seed = original || first;
+    const objectives = countryAims[seed.id]?.[level] || (original ? seed.goals : [conversationLevelAims[level].objective]);
+    return [level, { level, lessonId: id === 'estados-unidos-a2-b1' ? first.id : seed.id, communicativeObjectives: objectives, expectedFunctions: original ? objectives : conversationLevelAims[level].functions, contentRef: `${id === 'estados-unidos-a2-b1' ? path : localLessonPath(seed)}#${level}` }];
   }));
   return validateConversationFamily({
     id, slug: id, title: group?.title || first.title, category: 'Conversación',
@@ -40,8 +45,9 @@ function familyFromSeeds(seeds: Lesson[], group?: typeof groups[number]): Conver
     preview: { image: first.image, hook: first.subtitle },
     previewByLevel: Object.fromEntries(levels.map(level => {
       if (additions?.[level]) return [level, additions[level]!.preview];
-      const seed = seeds.find(seed => (seed.levels || [seed.level]).includes(level))!;
-      return [level, { hook: countryAims[seed.id]?.[level]?.[0] || seed.subtitle, image: seed.image }];
+      const original = seeds.find(seed => (seed.levels || [seed.level]).includes(level));
+      const seed = original || first;
+      return [level, { hook: countryAims[seed.id]?.[level]?.[0] || (original ? seed.subtitle : conversationLevelAims[level].objective), image: seed.image }];
     })),
     visualWorld: { renderer: group?.renderer || `native:${path}`, sharedAssets: [...new Set(seeds.map(seed => seed.image))] },
     variants,

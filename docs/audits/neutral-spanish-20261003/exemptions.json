@@ -3992,6 +3992,96 @@
       "reason": "A2 sentence support uses first-person preterite aprendí, not a regional imperative."
     },
     {
+      "path": "app/conversation-narratives/data.ts",
+      "text": "Tomás · COMETA",
+      "category": "neutral-context",
+      "reason": "Tomás is the guest name, not a second-person verb; bilingual invitation labels preserve his identity."
+    },
+    {
+      "path": "app/conversation-narratives/data.ts",
+      "text": "Tomás · COMET",
+      "category": "neutral-context",
+      "reason": "Tomás is the guest name, not a second-person verb; bilingual invitation labels preserve his identity."
+    },
+    {
+      "path": "app/conversation-narratives/data.ts",
+      "text": "La invitación verde es para Tomás.",
+      "category": "neutral-context",
+      "reason": "Tomás is the guest name, not a second-person verb; bilingual invitation labels preserve his identity."
+    },
+    {
+      "path": "app/conversation-narratives/data.ts",
+      "text": "The green invitation is for Tomás.",
+      "category": "neutral-context",
+      "reason": "Tomás is the guest name, not a second-person verb; bilingual invitation labels preserve his identity."
+    },
+    {
+      "path": "app/conversation-narratives/pedagogy.ts",
+      "text": "Elegí… porque… Si eso pasa, podemos…",
+      "category": "neutral-context",
+      "reason": "First-person preterite elegí (I chose) recalls an earlier decision; it is not an imperative."
+    },
+    {
+      "path": "app/life-roulette/world-seeds.ts",
+      "text": "Un amigo argentino dice «dale» y no sabes si acepta o tiene prisa.",
+      "category": "regional-pedagogy",
+      "reason": "Explicitly Argentine quoted vocabulary challenge; surrounding instructions are neutral Spanish."
+    },
+    {
+      "path": "app/life-roulette/world-seeds.ts",
+      "text": "An Argentine friend says “dale” and you cannot tell whether they agree or are in a hurry.",
+      "category": "regional-pedagogy",
+      "reason": "Explicitly Argentine quoted vocabulary challenge; surrounding instructions are neutral Spanish."
+    },
+    {
+      "path": "app/conversation-narratives/NativeStageSupport.tsx",
+      "text": "Primero elegí una película. Después voy a confirmar la hora con mi amiga.",
+      "category": "neutral-context",
+      "reason": "First-person preterite elegí describes an earlier choice, not a command."
+    },
+    {
+      "path": "app/conversation-narratives/NativeStageSupport.tsx",
+      "text": "Elegí esta opción por la situación de ${scene.name[0]}. Si aparece otro problema, podemos cambiar el plan.",
+      "category": "neutral-context",
+      "reason": "First-person preterite elegí describes an earlier choice, not a command."
+    },
+    {
+      "path": "app/conversation-narratives/advanced.ts",
+      "text": "Tomás recibe preguntas sobre un paciente conocido; negarse bruscamente podría humillar a quien pregunta.",
+      "category": "neutral-context",
+      "reason": "Tomás is the character’s proper name, not a voseo verb."
+    },
+    {
+      "path": "app/conversation-narratives/advanced.ts",
+      "text": "Tomás receives questions about a well-known patient; a blunt refusal could embarrass the questioner.",
+      "category": "neutral-context",
+      "reason": "Tomás is the character’s proper name, not a voseo verb."
+    },
+    {
+      "path": "app/conversation-narratives/advanced.ts",
+      "text": "La información ya circula en redes, pero Tomás no puede confirmar ni siquiera que conoce al paciente.",
+      "category": "neutral-context",
+      "reason": "Tomás is the character’s proper name, not a voseo verb."
+    },
+    {
+      "path": "app/conversation-narratives/advanced.ts",
+      "text": "The information circulates online but Tomás cannot even confirm knowing the patient.",
+      "category": "neutral-context",
+      "reason": "Tomás is the character’s proper name, not a voseo verb."
+    },
+    {
+      "path": "app/conversation-narratives/advanced.ts",
+      "text": "The actor’s planned exit contradicts a spontaneous walkout but does not eliminate offense at an added private reference.",
+      "category": "neutral-context",
+      "reason": "English instructional translation, not a Spanish voseo command."
+    },
+    {
+      "path": "app/la-agencia-de-vidas-paralelas/agency-levels.ts",
+      "text": "Formulate a criterion that can justify this change without depending on whether the results benefit you.",
+      "category": "neutral-context",
+      "reason": "English instructional translation, not a Spanish voseo command."
+    },
+    {
       "path": "app/country-atlas/data.ts",
       "text": "Contrast vos, tú and usted without ranking varieties. What prestige judgements hide in “speaking well”?",
       "category": "regional-pedagogy",

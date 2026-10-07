@@ -1,11 +1,13 @@
+import a0 from './a0.mjs';
 import a1 from './a1.mjs';import a2 from './a2.mjs';import b1 from './b1.mjs';import b2 from './b2.mjs';import c1 from './c1.mjs';import c2 from './c2.mjs';
 import type { Level, Prompt } from './types';
 import { STATION_LEVELS } from './stations';
 export { stationFor, hasExpedition } from './stations';
-const decks:Record<Level,Prompt[]>={A1:a1 as Prompt[],A2:a2 as Prompt[],B1:b1 as Prompt[],B2:b2 as Prompt[],C1:c1 as Prompt[],C2:c2 as Prompt[]};
+const decks:Record<Level,Prompt[]>={A0:a0 as Prompt[],A1:a1 as Prompt[],A2:a2 as Prompt[],B1:b1 as Prompt[],B2:b2 as Prompt[],C1:c1 as Prompt[],C2:c2 as Prompt[]};
 // A level's bank is its category deck plus any authored expedition stations.
 export const BANKS=Object.fromEntries(Object.entries(decks).map(([level,deck])=>[level,[...deck,...(STATION_LEVELS[level as Level]??[])]])) as Record<Level,Prompt[]>;
 export const LEVEL_SUPPORT:Record<Level,{demand:string;starters:string[];personal:string}>={
+ A0:{demand:'Say one Spanish word, then copy a complete model. / Di una palabra y repite el modelo.',starters:['Yo quiero agua. / I want water.','Me gusta. / I like it.','¿Y tú? / And you?'],personal:'¿Agua o té? / Water or tea? Say: Quiero agua. / I want water.'},
  A1:{demand:'Habla con 1–3 frases cortas.',starters:['Me gusta…','Prefiero… porque…','En mi casa hay…'],personal:'¿Qué tema te gusta más? Di dos cosas sobre ti.'},
  A2:{demand:'Explica tu idea con 2–5 frases.',starters:['Para mí… porque…','La última vez…','Voy a…'],personal:'¿Qué pregunta tiene más relación con tu vida? Explica por qué.'},
  B1:{demand:'Desarrolla tu respuesta con una razón y un ejemplo.',starters:['En mi experiencia…','Por ejemplo…','Si pudiera…'],personal:'¿Qué respuesta de hoy te representa mejor? Conéctala con una experiencia.'},

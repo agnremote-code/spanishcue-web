@@ -1,4 +1,9 @@
 "use client";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
+import { COUNTRY_LEVELS, countryActivity } from "../conversation-families/country-levels";
+import { CountryTools, CountryClosing } from "../conversation-families/country-tools";
+import type { CEFRLevel } from "../conversation-families/types";
+
 
 import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
@@ -94,7 +99,10 @@ function WorldMark({province,compact=false}: {province:Province;compact?:boolean
   return <div className={`id-world-mark ${compact?"compact":""}`} aria-hidden="true"><i/><i/><span>{province.number}</span><small>{regionCopy[province.region].code}</small></div>;
 }
 
-export default function IndonesiaFantastica() {
+export default function IndonesiaFantastica(){
+ return <ConversationFamily id="indonesia-fantastica" title="Indonesia fantástica" levels={COUNTRY_LEVELS} defaultLevel="A1">{level=><CountryExperience key={level} level={level}/>}</ConversationFamily>;
+}
+function CountryExperience({level}:{level:CEFRLevel}){
   const [screen,setScreen] = useState<Screen>("cover");
   const [active,setActive] = useState<Province>(provinces[16]);
   const [atlasPick,setAtlasPick] = useState<Province>(provinces[16]);
@@ -106,7 +114,8 @@ export default function IndonesiaFantastica() {
   const [englishVisible,setEnglishVisible] = useState(true);
 
   const list = useMemo(()=>provinces.filter(p=>(region==="Todas"||p.region===region)&&`${p.name} ${localNames[p.id]} ${p.title.es} ${p.title.en}`.toLowerCase().includes(query.toLowerCase())),[region,query]);
-  const questions = useMemo(()=>questionsFor(active),[active]);
+  const context={name:active.name,places:[active.place,active.thing,active.food],words:[active.choiceA,active.choiceB],source:questionsFor(active)};
+  const questions = questionsFor(active).map((item,index)=>level==="A1"?item:{...item,...countryActivity(level,context,index)});
   const current = questions[question];
   const progress = Math.round((visited.size/provinces.length)*100);
   const answerEs = answerParts.map(part=>part.es.replace(/[.…]+/g,"").replace(/\s*\/.*$/,"")).join(" ");
@@ -120,33 +129,33 @@ export default function IndonesiaFantastica() {
   const enter = (p:Province,start=0) => { setActive(p); setAtlasPick(p); setQuestion(start); setAnswerParts([]); setVisited(v=>new Set([...v,p.id])); show("province"); };
   const surprise = () => { const pool=provinces.filter(p=>p.id!==active.id); const p=pool[Math.floor(Math.random()*pool.length)]||provinces[0]; enter(p,Math.floor(Math.random()*10)); };
   const chooseRegion = (next:string) => { setRegion(next); const first=provinces.find(p=>next==="Todas"||p.region===next); if(first)setAtlasPick(first); };
-  const addPart = (part:Pair) => setAnswerParts(parts=>[...parts,part]);
+  const addPart = (part:Pair) => setAnswerParts(parts=>level==="A0"?[part]:[...parts,part]);
   const changeQuestion = (next:number) => { setQuestion(Math.max(0,Math.min(9,next))); setAnswerParts([]); document.querySelector(".id-question-stage")?.scrollIntoView({behavior:"smooth",block:"center"}); };
   const speak = (text:string) => { if(typeof window==="undefined"||!("speechSynthesis" in window))return; window.speechSynthesis.cancel(); const voice=new SpeechSynthesisUtterance(text); voice.lang="es-AR"; voice.rate=.82; window.speechSynthesis.speak(voice); };
 
-  return <main className={`id-app ${englishVisible?"":"id-spanish-only"}`}>
+  return <main className={`id-app ${(level==="A0"||englishVisible)?"":"id-spanish-only"}`}>
     <nav className="id-nav">
       <Link href="/" className="id-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>CONVERSATION ADVENTURES</small></div></Link>
       <div className="id-nav-progress"><span>EXPEDICIÓN · EXPEDITION</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}/38</strong></div>
-      <div className="id-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={()=>show(screen==="cover"?"map":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA":" INICIO"}</button></div>
+      <div className="id-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA<span className="country-a0-en" lang="en"> / SURPRISE</span></button><button onClick={()=>show(screen==="cover"?"map":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA / MAP":" INICIO / HOME"}</button></div>
     </nav>
 
     {screen==="cover"&&<section className="id-cover">
       <Atmosphere/>
       <div className="id-cover-copy">
-        <div className="id-kicker"><span>A1</span> 1000% CONVERSACIÓN · 1000% CONVERSATION</div>
+        <div className="id-kicker"><span>{level}</span> 1000% CONVERSACIÓN · 1000% CONVERSATION</div>
         <p className="id-overline">38 PROVINCIAS REALES · CULTURA REAL · 38 REAL PROVINCES</p>
         <h1>INDONESIA<br/><em>FANTÁSTICA</em></h1>
         <p className="id-lead">Entra en un archipiélago vivo y empieza a hablar desde la primera pregunta.<b> Sin gramática. Sin respuestas perfectas. Todo bilingüe.</b><span className="id-en">Enter a living archipelago and start speaking from the first question. No grammar. No perfect answers. Everything is bilingual.</span></p>
-        <div className="id-cover-actions"><button onClick={()=>show("map")}>EXPLORAR EL MAPA <span>→</span><small className="id-en">EXPLORE THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> DESTINO SORPRESA<small className="id-en">SURPRISE DESTINATION</small></button></div>
-        <div className="id-stats"><article><b>38</b><span>provincias<br/><small>provinces</small></span></article><article><b>380</b><span>preguntas<br/><small>questions</small></span></article><article><b>∞</b><span>respuestas posibles<br/><small>possible answers</small></span></article></div>
+        <div className="id-cover-actions"><button onClick={()=>show("map")}>EXPLORAR EL MAPA<span className="country-a0-en" lang="en"> / EXPLORE THE MAP</span> <span>→</span><small className="id-en">EXPLORE THE MAP<span className="country-a0-en" lang="es"> / EXPLORAR EL MAPA</span></small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> DESTINO SORPRESA<span className="country-a0-en" lang="en"> / SURPRISE DESTINATION</span><small className="id-en">SURPRISE DESTINATION<span className="country-a0-en" lang="es"> / DESTINO SORPRESA</span></small></button></div>
+        <div className="id-stats"><article><b>38</b><span>provincias<span className="country-a0-en" lang="en"> / provinces</span><br/><small>provinces</small></span></article><article><b>380</b><span>preguntas<span className="country-a0-en" lang="en"> / questions</span><br/><small>questions</small></span></article><article><b>∞</b><span>respuestas posibles<span className="country-a0-en" lang="en"> / possible answers</span><br/><small>possible answers</small></span></article></div>
       </div>
       <div className="id-hero-art" aria-hidden="true"><img src="/indonesia-fantasy-hero.webp" alt=""/><span className="id-floating-tag tag-bali">BALI · PORTAL 17</span><span className="id-floating-tag tag-java">JAVA · 6 WORLDS</span><span className="id-floating-tag tag-papua">PAPUA · 6 WORLDS</span></div>
       <div className="id-waves" aria-hidden="true"><i/><i/><i/></div>
     </section>}
 
     {screen==="map"&&<section className="id-map">
-      <header className="id-map-head"><div><span>EL ATLAS VIVO · THE LIVING ATLAS</span><h1>No elijas una tarjeta.<br/><em>Abre un destino real.</em></h1></div><div><p>Los puntos luminosos son provincias reales. Toca uno para descubrir sus lugares, comidas, culturas y animales.</p><span className="id-en">The glowing points are real provinces. Tap one to discover its places, food, culture and wildlife.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA · LET THE MAP CHOOSE</button></div></header>
+      <header className="id-map-head"><div><span>EL ATLAS VIVO · THE LIVING ATLAS</span><h1>No elijas una tarjeta.<span className="country-a0-en" lang="en"> / Do not choose a card.</span><br/><em>Abre un destino real.<span className="country-a0-en" lang="en"> / Open a real destination.</span></em></h1></div><div><p>Los puntos luminosos son provincias reales. Toca uno para descubrir sus lugares, comidas, culturas y animales.</p><span className="id-en">The glowing points are real provinces. Tap one to discover its places, food, culture and wildlife.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MAPA DECIDA · LET THE MAP CHOOSE</button></div></header>
 
       <div className="id-atlas-toolbar">
         <div className="id-regions">{regions.map(r=><button className={region===r?"active":""} onClick={()=>chooseRegion(r)} key={r}>{r}</button>)}</div>
@@ -156,13 +165,13 @@ export default function IndonesiaFantastica() {
       <section className="id-atlas-board">
         <div className="id-atlas-frame">
           <div className="id-atlas-title"><span><Glyph name="compass"/> MAPA INTERACTIVO · INTERACTIVE MAP</span><b>{list.length} destinos visibles · visible destinations</b></div>
-          <div className="id-atlas" aria-label="Mapa interactivo de las provincias de Indonesia">
+          <div className="id-atlas" aria-label="Mapa interactivo de las provincias de Indonesia / Interactive map of Indonesian provinces">
             <div className="id-sea-lines" aria-hidden="true"><i/><i/><i/><i/></div>
             {Object.keys(regionCopy).map(r=><button key={r} className={`id-island id-island-${regionCopy[r].code.toLowerCase()} ${region!=="Todas"&&region!==r?"dim":""}`} onClick={()=>chooseRegion(region===r?"Todas":r)} aria-label={`Filtrar por ${r}`}><span>{regionCopy[r].code}</span><small>{r}</small></button>)}
             {provinces.map(p=>{
               const [x,y]=provincePositions[p.id];
               const visible=list.some(item=>item.id===p.id);
-              return <button key={p.id} disabled={!visible} onClick={()=>setAtlasPick(p)} className={`id-atlas-node ${atlasPick.id===p.id?"selected":""} ${visited.has(p.id)?"visited":""} ${visible?"":"hidden-node"}`} style={{left:`${x}%`,top:`${y}%`,"--province":p.color} as CSSProperties} aria-label={`${p.name}: ${p.title.es}`}><b>{p.number}</b><span><strong>{localNames[p.id]}</strong><small>{p.title.es}</small></span></button>;
+              return <button key={p.id} disabled={!visible} onClick={()=>setAtlasPick(p)} className={`id-atlas-node ${atlasPick.id===p.id?"selected":""} ${visited.has(p.id)?"visited":""} ${visible?"":"hidden-node"}`} style={{left:`${x}%`,top:`${y}%`,"--province":p.color} as CSSProperties} aria-label={`${p.name}: ${p.title.es}`}><b>{p.number}</b><span><strong>{localNames[p.id]}</strong><small>{p.title.es}<span className="country-a0-en" lang="en"> / {p.title.en}</span></small></span></button>;
             })}
             <div className="id-compass-rose" aria-hidden="true"><span>N</span><i/><b/></div>
             <p className="id-map-hint">TOCA UN PUNTO · TAP A POINT</p>
@@ -171,28 +180,28 @@ export default function IndonesiaFantastica() {
 
         <aside className="id-portal-card" style={{"--province":atlasPick.color} as CSSProperties}>
           <div className="id-portal-image"><img src="/indonesia-fantasy-hero.webp" alt="Paisaje fantástico inspirado en Indonesia"/><WorldMark province={atlasPick} compact/></div>
-          <div className="id-portal-copy"><span>PORTAL {atlasPick.number} · {atlasPick.region}</span><small>{localNames[atlasPick.id]}</small><h2>{atlasPick.title.es}</h2><h3 className="id-en">{atlasPick.title.en}</h3><p>{atlasPick.scene.es}</p><p className="id-en">{atlasPick.scene.en}</p><div><b>10 preguntas</b><b>Wordbank bilingüe</b><b>Audio en español</b></div><button onClick={()=>enter(atlasPick)}>ABRIR ESTE MUNDO <span>→</span><small className="id-en">OPEN THIS WORLD</small></button></div>
+          <div className="id-portal-copy"><span>PORTAL {atlasPick.number} · {atlasPick.region}</span><small>{localNames[atlasPick.id]}</small><h2>{atlasPick.title.es}</h2><h3 className="id-en">{atlasPick.title.en}</h3><p>{atlasPick.scene.es}</p><p className="id-en">{atlasPick.scene.en}</p><div><b>10 preguntas<span className="country-a0-en" lang="en"> / 10 questions</span></b><b>Wordbank bilingüe<span className="country-a0-en" lang="en"> / Bilingual word bank</span></b><b>Audio en español<span className="country-a0-en" lang="en"> / Spanish audio</span></b></div><button onClick={()=>enter(atlasPick)}>ABRIR ESTE MUNDO<span className="country-a0-en" lang="en"> / OPEN THIS WORLD</span> <span>→</span><small className="id-en">OPEN THIS WORLD<span className="country-a0-en" lang="es"> / ABRIR ESTE MUNDO</span></small></button></div>
         </aside>
       </section>
 
       <section className="id-route-strip"><header><span>RUTA DE PORTALES · PORTAL ROUTE</span><b>{visited.size} descubiertos · discovered</b></header><div>{list.map(p=><button key={p.id} onClick={()=>setAtlasPick(p)} className={`${atlasPick.id===p.id?"active":""} ${visited.has(p.id)?"visited":""}`} style={{"--province":p.color} as CSSProperties}><span>{p.number}</span><b>{localNames[p.id]}</b><small>{regionCopy[p.region].code}</small></button>)}</div></section>
-      {!list.length&&<div className="id-empty"><b>Este portal no aparece en el mapa.</b><span>Prueba otra provincia o región. · Try another province or region.</span></div>}
+      {!list.length&&<div className="id-empty"><b>Este portal no aparece en el mapa.<span className="country-a0-en" lang="en"> / This portal is not on the map.</span></b><span>Prueba otra provincia o región. · Try another province or region.</span></div>}
     </section>}
 
     {screen==="province"&&<section className="id-world" style={{"--province":active.color} as CSSProperties}>
       <header className="id-world-hero">
         <Atmosphere/>
-        <div className="id-world-top"><button onClick={()=>show("map")}>← MAPA · MAP</button><span>DESTINO {active.number} · {localNames[active.id]}</span><div><button className={englishVisible?"active":""} onClick={()=>setEnglishVisible(v=>!v)}>EN {englishVisible?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO MUNDO</button></div></div>
-        <div className="id-world-copy"><small>{active.region} · {localNames[active.id]}</small><h1>{active.title.es}</h1><h2 className="id-en">{active.title.en}</h2><p><b>{active.scene.es}</b><span className="id-en">{active.scene.en}</span></p><div className="id-world-tags"><span>Contenido real</span><span>10 preguntas</span><span>Audio</span><span>Respuesta interactiva</span></div></div>
+        <div className="id-world-top"><button onClick={()=>show("map")}>← MAPA · MAP</button><span>DESTINO<span className="country-a0-en" lang="en"> / DESTINATION</span> {active.number} · {localNames[active.id]}</span><div><button className={englishVisible?"active":""} disabled={level==="A0"} onClick={()=>setEnglishVisible(v=>!v)}>EN {englishVisible?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO MUNDO<span className="country-a0-en" lang="en"> / ANOTHER WORLD</span></button></div></div>
+        <div className="id-world-copy"><small>{active.region} · {localNames[active.id]}</small><h1>{active.title.es}</h1><h2 className="id-en">{active.title.en}</h2><p><b>{active.scene.es}</b><span className="id-en">{active.scene.en}</span></p><div className="id-world-tags"><span>Contenido real<span className="country-a0-en" lang="en"> / Real content</span></span><span>10 preguntas<span className="country-a0-en" lang="en"> / 10 questions</span></span><span>Audio</span><span>Respuesta interactiva<span className="country-a0-en" lang="en"> / Interactive answer</span></span></div></div>
         <div className="id-world-image" aria-hidden="true"><img src="/indonesia-fantasy-hero.webp" alt=""/><WorldMark province={active}/></div>
       </header>
 
-      <div className="id-classroom">
-        <section className="id-rule"><span>ÚNICA REGLA · ONLY RULE</span><b>Responde como puedas: una palabra también cuenta.</b><em className="id-en">Answer any way you can: one word counts too.</em></section>
+      <div className="id-classroom"><CountryTools level={level} context={context} index={question}/>
+        <section className="id-rule"><span>ÚNICA REGLA · ONLY RULE</span><b>Responde como puedas: una palabra también cuenta.<span className="country-a0-en" lang="en"> / Answer any way you can: one word counts too.</span></b><em className="id-en">Answer any way you can: one word counts too.</em></section>
 
         <section className="id-question-stage">
           <div className="id-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question+1).padStart(2,"0")} <i>/ 10</i></b></div>
-          <div className="id-question-copy"><small>{localNames[active.id]} · {active.title.en}</small><h2>{current.es}</h2><p className="id-en">{current.en}</p><button className="id-listen" onClick={()=>speak(current.es)}><Glyph name="sound"/> ESCUCHAR LA PREGUNTA</button></div>
+          <div className="id-question-copy"><small>{localNames[active.id]} · {active.title.en}</small><h2>{current.es}</h2><p className="id-en">{current.en}</p><button className="id-listen" onClick={()=>speak(current.es)}><Glyph name="sound"/> ESCUCHAR LA PREGUNTA<span className="country-a0-en" lang="en"> / LISTEN TO THE QUESTION</span></button></div>
           <div className="id-question-orbit" aria-hidden="true"><WorldMark province={active}/><i/><i/></div>
         </section>
 
@@ -203,17 +212,17 @@ export default function IndonesiaFantastica() {
         </section>
 
         <section className="id-answer-builder" aria-live="polite">
-          <header><div><span>LABORATORIO DE RESPUESTAS · ANSWER LAB</span><h2>Construye tu frase tocando palabras.</h2><p className="id-en">Build your sentence by tapping words.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button></div></header>
+          <header><div><span>LABORATORIO DE RESPUESTAS · ANSWER LAB</span><h2>Construye tu frase tocando palabras.<span className="country-a0-en" lang="en"> / Build your sentence by tapping words.</span></h2><p className="id-en">Build your sentence by tapping words.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR<span className="country-a0-en" lang="en"> / LISTEN</span></button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR<span className="country-a0-en" lang="en"> / CLEAR</span></button></div></header>
           <div className={`id-answer-canvas ${answerParts.length?"has-answer":""}`}>{answerParts.length?answerParts.map((part,index)=><button key={`${part.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{part.es.replace(/[.…]+/g,"")}</b><small className="id-en">{part.en.replace(/[.…]+/g,"")}</small></button>):<p><b>Tu respuesta aparece acá…</b><span className="id-en">Your answer appears here…</span></p>}</div>
           {answerParts.length>0&&<div className="id-answer-readout"><b>{answerEs}</b><span className="id-en">{answerEn}</span></div>}
         </section>
 
-        <section className="id-wordbank"><header><span>WORDBANK DEL MUNDO · WORLD WORDBANK</span><h2>Todo lo que necesitas está acá.</h2><p className="id-en">Everything you need is right here. Tap any word to add it.</p></header><div>{wordbank.map((word,index)=><button onClick={()=>addPart(word)} key={`${word.es}-${index}`}><span>{word.code}</span><small>{word.label}</small><b>{word.es}</b><em className="id-en">{word.en}</em><i>+</i></button>)}</div></section>
+        <section className="id-wordbank"><header><span>WORDBANK DEL MUNDO · WORLD WORDBANK</span><h2>Todo lo que necesitas está acá.<span className="country-a0-en" lang="en"> / Everything you need is here.</span></h2><p className="id-en">{level==="A0"?"Read these words for support. Choose a complete sentence above.":"Everything you need is right here. Tap any word to add it."}</p></header><div>{wordbank.map((word,index)=><button disabled={level==="A0"} onClick={()=>addPart(word)} key={`${word.es}-${index}`}><span>{word.code}</span><small>{word.label}</small><b>{word.es}</b><em className="id-en">{word.en}</em><i>+</i></button>)}</div></section>
 
-        <section className="id-answer-tools"><header><span>BOTIQUÍN DE RESPUESTAS · ANSWER TOOLKIT</span><h2>Roba un comienzo y complétalo.</h2><p className="id-en">Borrow a beginning and complete it.</p></header><div>{answerTools.map(tool=><button onClick={()=>addPart(tool)} key={tool.es}><b>{tool.es}</b><span className="id-en">{tool.en}</span><i>+</i></button>)}</div></section>
+        <section className="id-answer-tools"><header><span>BOTIQUÍN DE RESPUESTAS · ANSWER TOOLKIT</span><h2>Roba un comienzo y complétalo.<span className="country-a0-en" lang="en"> / Borrow a starter and complete it.</span></h2><p className="id-en">Borrow a beginning and complete it.</p></header><div>{answerTools.map(tool=><button onClick={()=>addPart(tool)} key={tool.es}><b>{tool.es}</b><span className="id-en">{tool.en}</span><i>+</i></button>)}</div></section>
 
         <nav className="id-question-nav"><button disabled={question===0} onClick={()=>changeQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{questions.map((_,index)=><button aria-label={`Pregunta ${index+1}`} className={index===question?"active":""} onClick={()=>changeQuestion(index)} key={index}>{index+1}</button>)}</div><button onClick={()=>question===9?surprise():changeQuestion(question+1)}>{question===9?"NUEVO MUNDO · NEW WORLD →":"SIGUIENTE · NEXT →"}</button></nav>
       </div>
     </section>}
-  </main>;
+  <CountryClosing level={level} context={context}/></main>;
 }

@@ -117,7 +117,7 @@ test('real selector handlers preserve query/hash and respond to simulated histor
     removeEventListener: name => callbacks.delete(name),
     dispatchEvent: event => callbacks.get(event.type)?.(),
   };
-  const hooks = {...React, useCallback: fn => fn, useSyncExternalStore: (subscribe, snapshot) => {
+  const hooks = {...React, useRef: value => ({current: value}), useEffect: () => {}, useCallback: fn => fn, useSyncExternalStore: (subscribe, snapshot) => {
     if (!cleanup) cleanup = subscribe(() => {changes++;});
     return snapshot();
   }};

@@ -1,6 +1,6 @@
 import type { AbsurdRule, Elimination } from './data';
 
-export type WorldLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+export type WorldLevel = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 export type WorldElimination = Elimination & { answerFrames?: string[]; followUp?: string; counterpoint?: string; revision?: string; depthPrompt?: string; reinterpretation?: string; teacherChallenge?: string; competingReading?: string; reformulationPrompt?: string };
 export type WorldRule = AbsurdRule & { questionFrames?: [string[], string[], string[]]; teacherFollowUp?: string; developments?: [string, string] };
 export type EliminationB2 = Elimination & { followUp: string; counterpoint: string; revision: string };

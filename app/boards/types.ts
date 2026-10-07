@@ -1,4 +1,5 @@
-export type BoardLevel = "B1" | "B2";
+import type { CEFRLevel } from "../conversation-families/types";
+export type BoardLevel = CEFRLevel;
 
 export type BoardQuestion = {
   id: string;
@@ -6,6 +7,7 @@ export type BoardQuestion = {
   prompt: string;
   followUps: readonly [string, string];
   conditionChange?: string;
+  support?: string;
 };
 
 export type BoardFinalQuestion = {

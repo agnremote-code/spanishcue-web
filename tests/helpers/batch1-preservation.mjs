@@ -36,3 +36,18 @@ export function batch1PreservedLedger(lessons) {
     return {...lesson, subtitle:copy[1], duration:'70–85 min'};
   });
 }
+
+// Owner-requested A0 integration changes these five renderers/loaders. Their
+// original A1–C2 BANK VALUES remain checked against historical hashes above;
+// route selection and actual controls are checked by the all-level UI tests.
+// Assets, standalone content banks, entitlements and all other files remain byte-locked.
+const allLevelHosts = new Set([
+  'app/conversation-families/ConversationFamily.tsx',
+  'app/red-flag-o-no/engine.mjs',
+  'app/red-flag-o-no/RedFlagGame.tsx',
+  'app/choose-conversation/variants.ts',
+  'app/choose-conversation/page.tsx',
+]);
+export function batch1ImmutableFiles(files) {
+  return Object.entries(files).filter(([path])=>!allLevelHosts.has(path));
+}

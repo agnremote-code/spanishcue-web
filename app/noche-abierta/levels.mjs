@@ -14,18 +14,20 @@
 
 import { pedagogyFor, pedagogySupportFor, PEDAGOGY_MECHANICS, PEDAGOGY_TEACHER_MOVES } from "./pedagogy.mjs";
 import * as BASE from "./content.mjs";
+import A0, {a0Activity,a0Help,a0Events,a0Final,a0Route} from "./levels/a0.mjs";
 import A1 from "./levels/a1.mjs";
 import A2 from "./levels/a2.mjs";
 import B2 from "./levels/b2.mjs";
 import C1 from "./levels/c1.mjs";
 import C2 from "./levels/c2.mjs";
 
-export const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+export const LEVELS = ["A0", "A1", "A2", "B1", "B2", "C1", "C2"];
 export const DEFAULT_LEVEL = "B1";
-export const PATCHES = { A1, A2, B1: {}, B2, C1, C2 };
+export const PATCHES = { A0, A1, A2, B1: {}, B2, C1, C2 };
 
 // What each level asks of the learner, shown on the selector and to the teacher.
 export const LEVEL_INFO = {
+  A0: { name: "Desde cero / From zero", demand: "Choose one word, then copy the Spanish model aloud. Teacher clicks." },
   A1: { name: "Primeros pasos", demand: "Frases cortas en presente: pedir, elegir, decir qué hay y qué quieres." },
   A2: { name: "Situaciones de todos los días", demand: "Contar lo que pasó, hacer planes y dar razones simples." },
   B1: { name: "Resolver y explicar", demand: "Narrar, justificar, comparar opciones y negociar." },
@@ -71,6 +73,11 @@ export function contentFor(level = DEFAULT_LEVEL) {
   const key = isLevel(level) ? level : DEFAULT_LEVEL;
   if (cache.has(key)) return cache.get(key);
   const patch = PATCHES[key];
+  if (key === "A0") {
+    const base = contentFor("A1");
+    const bundle = Object.freeze({...base, level:"A0", ARRIVAL:merge(base.ARRIVAL,A0.arrival), LOCATIONS:base.LOCATIONS.map(location=>({...location,help:a0Help,focus:"Elige y habla. / Choose and speak.",hubPrompt:"Elige una conversación. / Choose a conversation.",activities:location.activities.map(a0Activity)})), FINAL:a0Final, CITY_EVENTS:a0Events, ROUTE_PLAN:a0Route});
+    cache.set(key,bundle); return bundle;
+  }
   const bundle = Object.freeze({
     level: key,
     ARRIVAL: merge(BASE.ARRIVAL, patch.arrival),

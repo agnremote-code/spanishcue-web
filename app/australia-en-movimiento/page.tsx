@@ -1,10 +1,13 @@
 "use client";
-import { ConversationFamily, ConversationClosing } from "../conversation-families/ConversationFamily";
+import { COUNTRY_LEVELS, countryActivity, countrySupport } from "../conversation-families/country-levels";
+import { CountryTools, CountryClosing } from "../conversation-families/country-tools";
+import type { CEFRLevel } from "../conversation-families/types";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
 
 import {useState,type CSSProperties,type ReactNode} from "react";
 import Link from "next/link";
 import "./style.css";
-import {connectors,regions,speakingMoves,type AustraliaRegion,type Pair} from "./data";
+import {connectors as nativeConnectors,regions,speakingMoves as nativeSpeakingMoves,type AustraliaRegion,type Pair} from "./data";
 
 type Screen="cover"|"atlas"|"lesson";
 type GlyphName="map"|"shuffle"|"sound"|"trash"|"plus"|"home"|"wave"|"compass";
@@ -40,55 +43,60 @@ function Character({region,large=false,motion}:{region:AustraliaRegion;large?:bo
 }
 
 export default function AustraliaEnMovimiento(){
-  return <ConversationFamily id="australia-en-movimiento" title="Australia en Movimiento" levels={["A2","B1"]} defaultLevel="A2">{level=><CountryExperience key={level} level={level as "A2"|"B1"}/>}</ConversationFamily>;
+  return <ConversationFamily id="australia-en-movimiento" title="Australia en Movimiento" levels={COUNTRY_LEVELS} defaultLevel="A2">{level=><CountryExperience key={level} level={level}/>}</ConversationFamily>;
 }
-function CountryExperience({level}:{level:"A2"|"B1"}){
+function CountryExperience({level}:{level:CEFRLevel}){
   const [screen,setScreen]=useState<Screen>("cover");
   const [active,setActive]=useState<AustraliaRegion>(regions[0]);
   const [question,setQuestion]=useState(0);
   const [visited,setVisited]=useState<Set<string>>(new Set());
-  const [showEnglish,setShowEnglish]=useState(false);
+  const [showEnglish,setShowEnglish]=useState(level==="A0");
   const [answerParts,setAnswerParts]=useState<Pair[]>([]);
-  const activeQuestions=active.questions.filter(item=>item.level===level);
+  const context={name:active.name,places:active.places,words:active.words,source:active.questions.map(item=>item.prompt)};
+  const support=countrySupport(level,context);
+  const connectors=level==="A2"||level==="B1"?nativeConnectors:support.connectors;
+  const speakingMoves=level==="A2"||level==="B1"?nativeSpeakingMoves:[support.challenge,support.tip];
+  const questionsForLevel=(region:AustraliaRegion)=>level==="A2"||level==="B1"?region.questions.filter(item=>item.level===level):region.questions.map((item,index)=>({...item,level,prompt:countryActivity(level,{name:region.name,places:region.places,words:region.words,source:region.questions.map(item=>item.prompt)},index),quick:countryActivity(level,{name:region.name,places:region.places},index).choices}));
+  const activeQuestions=questionsForLevel(active);
   const current=activeQuestions[Math.min(question,activeQuestions.length-1)];
   const answerEs=answerParts.map(part=>part.es.replace(/[.…]+$/g,"")).join(" ");
   const answerEn=answerParts.map(part=>part.en.replace(/[.…]+$/g,"")).join(" ");
   const progress=Math.round(visited.size/regions.length*100);
   const activeIndex=regions.findIndex(region=>region.id===active.id);
   const nextRegion=regions[(activeIndex+1)%regions.length];
-  const questionCount=regions.reduce((sum,region)=>sum+region.questions.filter(item=>item.level===level).length,0);
+  const questionCount=regions.reduce((sum,region)=>sum+questionsForLevel(region).length,0);
   const atlasFact=`${regions.length} territorios · ${questionCount} preguntas ${level}`;
 
   const show=(next:Screen)=>{setScreen(next);window.scrollTo({top:0,behavior:"smooth"})};
-  const enter=(region:AustraliaRegion,start=0)=>{setActive(region);setQuestion(Math.min(start,region.questions.filter(item=>item.level===level).length-1));setAnswerParts([]);setVisited(old=>new Set([...old,region.id]));show("lesson")};
-  const surprise=()=>{const pool=regions.filter(region=>region.id!==active.id);const next=pool[Math.floor(Math.random()*pool.length)]||regions[0];enter(next,Math.floor(Math.random()*next.questions.filter(item=>item.level===level).length))};
+  const enter=(region:AustraliaRegion,start=0)=>{setActive(region);setQuestion(Math.min(start,questionsForLevel(region).length-1));setAnswerParts([]);setVisited(old=>new Set([...old,region.id]));show("lesson")};
+  const surprise=()=>{const pool=regions.filter(region=>region.id!==active.id);const next=pool[Math.floor(Math.random()*pool.length)]||regions[0];enter(next,Math.floor(Math.random()*questionsForLevel(next).length))};
   const moveQuestion=(next:number)=>{setQuestion(Math.max(0,Math.min(activeQuestions.length-1,next)));setAnswerParts([]);document.querySelector(".au-question-card")?.scrollIntoView({behavior:"smooth",block:"center"})};
   const speak=(text:string)=>{if(typeof window==="undefined"||!("speechSynthesis" in window))return;window.speechSynthesis.cancel();const voice=new SpeechSynthesisUtterance(text);voice.lang="es-AR";voice.rate=.82;window.speechSynthesis.speak(voice)};
-  const add=(part:Pair)=>setAnswerParts(parts=>[...parts,part]);
+  const add=(part:Pair)=>setAnswerParts(parts=>level==="A0"?[part]:[...parts,part]);
 
-  return <main className={`au-app ${showEnglish?"":"au-hide-en"}`}>
+  return <main className={`au-app ${(level==="A0"||showEnglish)?"":"au-hide-en"}`}>
     <nav className="au-nav">
       <Link href="/" className="au-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>AUSTRALIAN SPEAKING ADVENTURE</small></div></Link>
       <div className="au-progress"><span>TERRITORIOS EXPLORADOS · EXPLORED</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}<small>/8</small></strong></div>
-      <div className="au-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={()=>show(screen==="cover"?"atlas":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA":" INICIO"}</button></div>
+      <div className="au-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA<span className="country-a0-en" lang="en"> / SURPRISE</span></button><button onClick={()=>show(screen==="cover"?"atlas":"cover")}><Glyph name={screen==="cover"?"map":"home"}/>{screen==="cover"?" MAPA / MAP":" INICIO / HOME"}</button></div>
     </nav>
 
     {screen==="cover"&&<section className="au-cover">
       <div className="au-sun sun-one"/><div className="au-sun sun-two"/>
       <div className="au-cover-copy">
-        <div className="au-eyebrow"><span>{level}</span><i/>8 TERRITORIOS · {questionCount} PREGUNTAS</div>
-        <p className="au-kicker">LUGARES REALES · DECISIONES · CULTURA · NATURALEZA</p>
+        <div className="au-eyebrow"><span>{level}</span><i/>8 TERRITORIOS · {questionCount} PREGUNTAS<span className="country-a0-en" lang="en"> / QUESTIONS</span></div>
+        <p className="au-kicker">LUGARES REALES · DECISIONES · CULTURA · NATURALEZA<span className="country-a0-en" lang="en"> / REAL PLACES · CHOICES · CULTURE · NATURE</span></p>
         <h1>AUSTRALIA<br/><em>EN MOVIMIENTO</em></h1>
-        <p className="au-lead">Una expedición conversacional investigada con fuentes australianas. <b>Cada pregunta nace de un lugar concreto</b> con una ruta propia para el nivel {level}.<span className="au-en">A speaking expedition researched with Australian sources. Every question grows from a specific place and moves from A2 to accessible B1.</span></p>
-        <div className="au-cover-actions"><button onClick={()=>show("atlas")}>ENTRAR AL MAPA <Glyph name="map"/><small className="au-en">ENTER THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> ELIGE POR MÍ<small className="au-en">PICK FOR ME</small></button></div>
-        <div className="au-stats"><article><b>08</b><span>estados y territorios<small>states & territories</small></span></article><article><b>{questionCount}</b><span>preguntas {level}<small>brand-new prompts</small></span></article><article><b>{questionCount}</b><span>movimientos únicos<small>unique motions</small></span></article></div>
+        <p className="au-lead">Una expedición conversacional investigada con fuentes australianas. <b>Cada pregunta nace de un lugar concreto</b> con una ruta propia para el nivel<span className="country-a0-en" lang="en"> / with its own route for level</span> {level}.<span className="au-en">A speaking expedition researched with Australian sources. Every question grows from a specific place and moves from A2 to accessible B1.</span></p>
+        <div className="au-cover-actions"><button onClick={()=>show("atlas")}>ENTRAR AL MAPA<span className="country-a0-en" lang="en"> / ENTER THE MAP</span> <Glyph name="map"/><small className="au-en">ENTER THE MAP<span className="country-a0-en" lang="es"> / ENTRAR AL MAPA</span></small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> ELIGE POR MÍ<span className="country-a0-en" lang="en"> / CHOOSE FOR ME</span><small className="au-en">PICK FOR ME<span className="country-a0-en" lang="es"> / ELIGE POR MÍ</span></small></button></div>
+        <div className="au-stats"><article><b>08</b><span>estados y territorios<span className="country-a0-en" lang="en"> / states and territories</span><small>states & territories</small></span></article><article><b>{questionCount}</b><span>preguntas<span className="country-a0-en" lang="en"> / questions</span> {level}<small>brand-new prompts</small></span></article><article><b>{questionCount}</b><span>movimientos únicos<span className="country-a0-en" lang="en"> / unique moves</span><small>unique motions</small></span></article></div>
       </div>
       <div className="au-cover-art"><img src="/australia-3d-hero.webp" alt="Mapa 3D de Australia con mar, ciudades, desierto y animales"/><div className="au-orbit orbit-one"><span>{level}</span><b>{questionCount}</b></div><div className="au-orbit orbit-two"><span>REEF</span><b>QLD</b></div><div className="au-orbit orbit-three"><span>TASMANIA</span><b>TAS</b></div></div>
       <div className="au-wave-edge" aria-hidden="true"/>
     </section>}
 
     {screen==="atlas"&&<section className="au-atlas">
-      <header className="au-atlas-head"><div><span>ATLAS 3D · 3D SPEAKING ATLAS</span><h1>Australia sale del plano.<br/><em>Tú entras en el territorio.</em></h1></div><div><p>Elige directamente sobre el relieve. Cada territorio tiene una ruta real, {activeQuestions.length} preguntas {level} y una identidad visual propia.</p><span className="au-en">Choose directly on the relief map. Every territory has a real route, six A2/B1 prompts and its own visual identity.</span><button onClick={surprise}><Glyph name="shuffle"/> SORPRÉNDEME · SURPRISE ME</button></div></header>
+      <header className="au-atlas-head"><div><span>ATLAS 3D · 3D SPEAKING ATLAS</span><h1>Australia sale del plano.<span className="country-a0-en" lang="en"> / Australia comes off the map.</span><br/><em>Tú entras en el territorio.<span className="country-a0-en" lang="en"> / You enter the territory.</span></em></h1></div><div><p>Elige directamente sobre el relieve. Cada territorio tiene una ruta real, {activeQuestions.length} preguntas<span className="country-a0-en" lang="en"> / questions</span> {level} y una identidad visual propia.<span className="country-a0-en" lang="en"> / and its own visual identity.</span></p><span className="au-en">Choose directly on the relief map. Every territory has a real route, six A2/B1 prompts and its own visual identity.</span><button onClick={surprise}><Glyph name="shuffle"/> SORPRÉNDEME · SURPRISE ME</button></div></header>
       <div className="au-map-layout">
         <section className="au-map-card">
           <header><span><Glyph name="compass"/> AUSTRALIA · {atlasFact}</span><b>ÍNDICO ↔ PACÍFICO</b></header>
@@ -96,7 +104,7 @@ function CountryExperience({level}:{level:"A2"|"B1"}){
             <div className="au-ocean-label indian">OCÉANO ÍNDICO</div><div className="au-ocean-label pacific">OCÉANO PACÍFICO</div>
             <div className="au-map-shadow"/>
             <svg className="au-relief-map" viewBox="55 25 625 535" role="img" aria-labelledby="map-title map-description">
-              <title id="map-title">Mapa interactivo de los estados y territorios de Australia</title><desc id="map-description">Selecciona Nueva Gales del Sur, Victoria, Queensland, Territorio del Norte, Australia Meridional, Australia Occidental, Tasmania o el Territorio de la Capital Australiana.</desc>
+              <title id="map-title">Mapa interactivo de los estados y territorios de Australia / Interactive map of Australian states and territories</title><desc id="map-description">Selecciona Nueva Gales del Sur, Victoria, Queensland, Territorio del Norte, Australia Meridional, Australia Occidental, Tasmania o el Territorio de la Capital Australiana.</desc>
               <defs><filter id="au-land-glow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
               <g>{regions.map(region=><g key={region.id} className={`au-state-group ${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)} tabIndex={0} role="button" aria-label={`${region.name}. ${region.topic.es}`} onKeyDown={event=>{if(event.key==="Enter"||event.key===" ")setActive(region)}}>
                 {[18,14,10,6].map(offset=><path key={offset} d={mapShapes[region.id]} transform={`translate(0 ${offset})`} className="au-state-side"/>)}
@@ -104,50 +112,50 @@ function CountryExperience({level}:{level:"A2"|"B1"}){
               </g>)}</g>
               {regions.map(region=>{const labels:Record<string,[number,number]>={western:[220,250],northern:[385,170],queensland:[535,225],south:[385,345],sydney:[565,360],melbourne:[510,428],canberra:[559,363],tasmania:[540,512]};const [x,y]=labels[region.id];return <g key={region.id} className={`au-map-label label-${region.id}`} transform={`translate(${x} ${y})`} onClick={()=>setActive(region)}><circle r={region.id==="canberra"?16:22}/><text textAnchor="middle" dominantBaseline="central">{region.code}</text></g>})}
             </svg><span className="au-map-axis axis-a"/><span className="au-map-axis axis-b"/><span className="au-map-axis axis-c"/>
-            <div className="au-map-tip"><b>1 CLIC</b> para mirar · <b>2 CLICS</b> para entrar<span className="au-en">1 click to preview · 2 clicks to enter</span></div>
+            <div className="au-map-tip"><b>1 CLIC<span className="country-a0-en" lang="en"> / 1 CLICK</span></b> para mirar ·<span className="country-a0-en" lang="en"> / to preview ·</span> <b>2 CLICS<span className="country-a0-en" lang="en"> / 2 CLICKS</span></b> para entrar<span className="country-a0-en" lang="en"> / to enter</span><span className="au-en">1 click to preview · 2 clicks to enter</span></div>
           </div>
         </section>
 
         <aside className="au-region-preview" style={{"--region":active.color} as CSSProperties}>
           <div className="au-preview-top"><span>{active.number}</span><b>{active.code}</b><Character region={active}/></div>
-          <small>{active.capital} · {level}</small><h2>{active.name}</h2><h3>{active.topic.es}</h3><p>{active.fact.es}</p><p className="au-en">{active.fact.en}</p><div className="au-preview-places"><b>LUGARES DE ESTA RUTA</b><span>{active.places.map(place=><i key={place.es}>{place.es}</i>)}</span></div><div className="au-preview-tags"><span>{activeQuestions.length} preguntas {level}</span><span>WORDBANK</span><span>AUDIO</span></div><button onClick={()=>enter(active)}>ABRIR TERRITORIO <b>→</b><small className="au-en">OPEN TERRITORY</small></button>
+          <small>{active.capital} · {level}</small><h2>{active.name}</h2><h3>{active.topic.es}<span className="country-a0-en" lang="en"> / {active.topic.en}</span></h3><p>{active.fact.es}</p><p className="au-en">{active.fact.en}</p><div className="au-preview-places"><b>LUGARES DE ESTA RUTA<span className="country-a0-en" lang="en"> / PLACES ON THIS ROUTE</span></b><span>{active.places.map(place=><i key={place.es}>{place.es}<span className="country-a0-en" lang="en"> / {place.en}</span></i>)}</span></div><div className="au-preview-tags"><span>{activeQuestions.length} preguntas<span className="country-a0-en" lang="en"> / questions</span> {level}</span><span>WORDBANK</span><span>AUDIO</span></div><button onClick={()=>enter(active)}>ABRIR TERRITORIO<span className="country-a0-en" lang="en"> / OPEN THIS TERRITORY</span> <b>→</b><small className="au-en">OPEN TERRITORY<span className="country-a0-en" lang="es"> / ABRIR TERRITORIO</span></small></button>
         </aside>
       </div>
 
-      <section className="au-route-grid"><header><span>TODA LA RUTA · THE FULL ROUTE</span><h2>No se repite ningún tema.</h2><p>Cada tarjeta cambia la pregunta central, la energía visual y el tipo de conversación.</p></header><div>{regions.map(region=><button key={region.id} className={`${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)}><span>{region.number}</span><Character region={region}/><small>{region.code} · {region.capital}</small><b>{region.topic.es}</b><em className="au-en">{region.topic.en}</em><p>{region.places.slice(0,3).map(place=>place.es).join(" · ")}</p><i>EXPLORAR →</i></button>)}</div></section>
+      <section className="au-route-grid"><header><span>TODA LA RUTA · THE FULL ROUTE</span><h2>No se repite ningún tema.<span className="country-a0-en" lang="en"> / Every topic is different.</span></h2><p>Cada tarjeta cambia la pregunta central, la energía visual y el tipo de conversación.<span className="country-a0-en" lang="en"> / Each card changes the main question, the visual atmosphere and the kind of conversation.</span></p></header><div>{regions.map(region=><button key={region.id} className={`${active.id===region.id?"active":""} ${visited.has(region.id)?"visited":""}`} style={{"--region":region.color} as CSSProperties} onClick={()=>setActive(region)} onDoubleClick={()=>enter(region)}><span>{region.number}</span><Character region={region}/><small>{region.code} · {region.capital}</small><b>{region.topic.es}</b><em className="au-en">{region.topic.en}</em><p>{region.places.slice(0,3).map(place=>place.es).join(" · ")}</p><i>EXPLORAR →<span className="country-a0-en" lang="en"> / EXPLORE →</span></i></button>)}</div></section>
     </section>}
 
     {screen==="lesson"&&<section className="au-lesson" style={{"--region":active.color} as CSSProperties}>
       <header className="au-lesson-hero">
-        <div className="au-lesson-top"><button onClick={()=>show("atlas")}>← MAPA · MAP</button><span>TERRITORIO {active.number} · {active.code}</span><div><button className={showEnglish?"active":""} onClick={()=>setShowEnglish(value=>!value)}>EN {showEnglish?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA</button></div></div>
-        <div className="au-lesson-copy"><small>{active.topic.es}</small><h1>{active.name}</h1><h2 className="au-en">{active.nameEn} · {active.topic.en}</h2><p><b>{active.hook.es}</b><span className="au-en">{active.hook.en}</span></p><div><span>{level}</span><span>{activeQuestions.length} preguntas</span><span>Conversación real</span></div></div>
-        <div className="au-lesson-art"><div className="au-motion-label"><span>{current.level}</span><b>{current.place}</b><small>MOVIMIENTO {String(question+1).padStart(2,"0")}</small></div><Character region={active} large motion={current.motion}/><i/><i/></div>
+        <div className="au-lesson-top"><button onClick={()=>show("atlas")}>← MAPA · MAP</button><span>TERRITORIO<span className="country-a0-en" lang="en"> / TERRITORY</span> {active.number} · {active.code}</span><div><button className={showEnglish?"active":""} disabled={level==="A0"} onClick={()=>setShowEnglish(value=>!value)}>EN {showEnglish?"ON":"OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRA<span className="country-a0-en" lang="en"> / ANOTHER</span></button></div></div>
+        <div className="au-lesson-copy"><small>{active.topic.es}</small><h1>{active.name}</h1><h2 className="au-en">{active.nameEn} · {active.topic.en}</h2><p><b>{active.hook.es}</b><span className="au-en">{active.hook.en}</span></p><div><span>{level}</span><span>{activeQuestions.length} preguntas<span className="country-a0-en" lang="en"> / questions</span></span><span>Conversación real<span className="country-a0-en" lang="en"> / Real conversation</span></span></div></div>
+        <div className="au-lesson-art"><div className="au-motion-label"><span>{current.level}</span><b>{current.place}</b><small>MOVIMIENTO<span className="country-a0-en" lang="en"> / MOVE</span> {String(question+1).padStart(2,"0")}</small></div><Character region={active} large motion={current.motion}/><i/><i/></div>
       </header>
 
-      <div className="au-classroom">
-        <section className="au-mission"><span>TU MISIÓN · YOUR MISSION</span><div><b>{active.mission.es}</b><em className="au-en">{active.mission.en}</em></div><strong>IDEA + RAZÓN + DETALLE<small className="au-en">IDEA + REASON + DETAIL</small></strong></section>
+      <div className="au-classroom"><CountryTools level={level} context={context} index={question}/>
+        <section className="au-mission"><span>TU MISIÓN · YOUR MISSION</span><div><b>{active.mission.es}</b><em className="au-en">{active.mission.en}</em></div><strong>IDEA + RAZÓN + DETALLE<span className="country-a0-en" lang="en"> / IDEA + REASON + DETAIL</span><small className="au-en">IDEA + REASON + DETAIL</small></strong></section>
 
-        <section className="au-place-route"><header><span>RUTA REAL · REAL ROUTE</span><h2>{activeQuestions.length} lugares. Conversaciones {level}.</h2><a href={active.source.url} target="_blank" rel="noreferrer">{active.source.label} ↗</a></header><div>{activeQuestions.map((item,index)=><button type="button" key={item.motion} className={current===item?"active":""} aria-pressed={current===item} onClick={()=>moveQuestion(index)}><span>{String(index+1).padStart(2,"0")}</span><b>{item.place}</b></button>)}</div></section>
+        <section className="au-place-route"><header><span>RUTA REAL · REAL ROUTE</span><h2>{activeQuestions.length} lugares. Conversaciones<span className="country-a0-en" lang="en"> / places. Conversations at level</span> {level}.</h2><a href={active.source.url} target="_blank" rel="noreferrer">{active.source.label} ↗</a></header><div>{activeQuestions.map((item,index)=><button type="button" key={item.motion} className={current===item?"active":""} aria-pressed={current===item} onClick={()=>moveQuestion(index)}><span>{String(index+1).padStart(2,"0")}</span><b>{item.place}</b></button>)}</div></section>
 
         <section className="au-question-card">
           <div className="au-question-number"><span>{current.level} · {current.place}</span><b>{String(question+1).padStart(2,"0")}</b><i>/ {String(activeQuestions.length).padStart(2,"0")}</i></div>
-          <div className="au-question-copy"><small>{active.topic.es} · {current.level}</small><h2>{current.prompt.es}</h2><p className="au-en">{current.prompt.en}</p><button onClick={()=>speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR · LISTEN</button></div>
+          <div className="au-question-copy"><small>{active.topic.es}<span className="country-a0-en" lang="en"> / {active.topic.en}</span> · {current.level}</small><h2>{current.prompt.es}</h2><p className="au-en">{current.prompt.en}</p><button onClick={()=>speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR · LISTEN</button></div>
           <Character region={active} motion={current.motion}/>
         </section>
 
-        <section className="au-quick"><header><span>1 · ELIGE UN COMIENZO · PICK A START</span><p>Toca una opción. Después agrega palabras.</p></header><div>{current.quick.map(part=><button key={part.es} onClick={()=>add(part)}><b>{part.es}</b><small className="au-en">{part.en}</small><i>+</i></button>)}</div></section>
+        <section className="au-quick"><header><span>1 · ELIGE UN COMIENZO · PICK A START</span><p>Toca una opción. Después agrega palabras.<span className="country-a0-en" lang="en"> / Tap an option. Then add words.</span></p></header><div>{current.quick.map(part=><button key={part.es} onClick={()=>add(part)}><b>{part.es}</b><small className="au-en">{part.en}</small><i>+</i></button>)}</div></section>
 
         <section className="au-tools-row">
           <article><span>2 · CONECTORES · CONNECTORS</span><div>{connectors.map(part=><button key={part.es} onClick={()=>add(part)}><b>{part.es}</b><small className="au-en">{part.en}</small><i>+</i></button>)}</div></article>
-          <article><span>3 · WORDBANK · WORD BANK</span><div>{active.words.map(part=><button key={part.es} onClick={()=>add(part)}><b>{part.es}</b><small className="au-en">{part.en}</small><i>+</i></button>)}</div></article>
+          <article><span>3 · WORDBANK · WORD BANK</span><div>{active.words.map(part=><button disabled={level==="A0"} key={part.es} onClick={()=>add(part)}><b>{part.es}</b><small className="au-en">{part.en}</small><i>+</i></button>)}</div></article>
         </section>
 
-        <section className="au-answer" aria-live="polite"><header><div><span>TU RESPUESTA · YOUR ANSWER</span><h2>Ármala, escúchala y dila.</h2><p className="au-en">Build it, listen to it and say it.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="trash"/> BORRAR</button></div></header><div className={answerParts.length?"has-answer":""}>{answerParts.length?answerParts.map((part,index)=><button key={`${part.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{part.es}</b><small className="au-en">{part.en}</small></button>):<p><b>Toca opciones arriba para construir una respuesta.</b><span className="au-en">Tap the options above to build an answer.</span></p>}</div>{answerParts.length>0&&<aside><b>{answerEs}</b><span className="au-en">{answerEn}</span></aside>}</section>
+        <section className="au-answer" aria-live="polite"><header><div><span>TU RESPUESTA · YOUR ANSWER</span><h2>Ármala, escúchala y dila.<span className="country-a0-en" lang="en"> / Build it, listen to it and say it.</span></h2><p className="au-en">Build it, listen to it and say it.</p></div><div><button disabled={!answerParts.length} onClick={()=>speak(answerEs)}><Glyph name="sound"/> ESCUCHAR<span className="country-a0-en" lang="en"> / LISTEN</span></button><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="trash"/> BORRAR<span className="country-a0-en" lang="en"> / CLEAR</span></button></div></header><div className={answerParts.length?"has-answer":""}>{answerParts.length?answerParts.map((part,index)=><button key={`${part.es}-${index}`} onClick={()=>setAnswerParts(parts=>parts.filter((_,i)=>i!==index))}><b>{part.es}</b><small className="au-en">{part.en}</small></button>):<p><b>{level==="A0"?"Elige una frase completa y repítela.":"Toca opciones arriba para construir una respuesta."}</b><span className="au-en">{level==="A0"?"Choose one complete sentence and repeat it.":"Tap the options above to build an answer."}</span></p>}</div>{answerParts.length>0&&<aside><b>{answerEs}</b><span className="au-en">{answerEn}</span></aside>}</section>
 
-        <section className="au-speaking-moves"><header><span>UNA MÁS · ONE MORE</span><h2>Haz crecer la conversación.</h2></header><div>{speakingMoves.map((move,index)=><button key={move.es}><span>0{index+1}</span><b>{move.es}</b><small className="au-en">{move.en}</small></button>)}</div></section>
+        <section className="au-speaking-moves"><header><span>UNA MÁS · ONE MORE</span><h2>Haz crecer la conversación.<span className="country-a0-en" lang="en"> / Keep the conversation going.</span></h2></header><div>{speakingMoves.map((move,index)=><button key={move.es}><span>0{index+1}</span><b>{move.es}</b><small className="au-en">{move.en}</small></button>)}</div></section>
 
         <nav className="au-question-nav"><button disabled={question===0} onClick={()=>moveQuestion(question-1)}>← ANTERIOR · PREVIOUS</button><div>{activeQuestions.map((item,index)=><button key={index} className={`${question===index?"active":""} level-${item.level.toLowerCase()}`} onClick={()=>moveQuestion(index)} aria-label={`Pregunta ${index+1}, nivel ${item.level}`}>{index+1}</button>)}</div><button onClick={()=>question===activeQuestions.length-1?enter(nextRegion):moveQuestion(question+1)}>{question===activeQuestions.length-1?`SIGUIENTE TERRITORIO · ${nextRegion.code} →`:"SIGUIENTE · NEXT →"}</button></nav>
       </div>
     </section>}
-  <ConversationClosing questions={level==="A2"?["¿Qué lugar quieres visitar? Explica tu plan para un día.", "Tu compañero quiere hacer otra actividad. Acuerden un plan juntos."]:["¿Cómo puede una ruta turística beneficiar también a quienes viven allí?", "Comparen dos territorios y negocien una recomendación para viajeros con prioridades distintas."]} note="Elijan entre tres y cinco territorios para una clase de unos 45 minutos."/></main>;
+  <CountryClosing level={level} context={context}/></main>;
 }

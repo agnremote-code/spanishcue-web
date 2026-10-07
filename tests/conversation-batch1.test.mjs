@@ -21,15 +21,15 @@ const expected=[
 test('all four Run 1 variants remain discoverable, with no duplicate family cards or speculative levels',()=>{
  for(const [id,level,levels] of expected){
   const family=p.conversationFamilies.find(f=>f.id===id);
-  assert.deepEqual(family.availableLevels,levels,id);
+  assert.deepEqual(family.availableLevels.filter(level=>level!=='A0'),levels,id);
   assert.equal(family.variants[level].level,level);
   assert.equal(family.access,'pro');
   const cards=p.catalogLessons.filter(l=>l.familyId===id);
   assert.equal(cards.length,1,id);
-  assert.deepEqual(cards[0].levels,levels);
+  assert.deepEqual(cards[0].levels.filter(level=>level!=='A0'),levels);
   assert.equal(p.conversationLessonHref(cards[0],level),`${family.canonicalPath}?level=${level}`);
   const resource=p.lessonForResourceSlug(p.resourceSlugForLesson(cards[0]));
-  assert.deepEqual(resource.levels,levels);
+  assert.deepEqual(resource.levels.filter(level=>level!=='A0'),levels);
   assert.equal(resource.id,family.canonicalLessonId);
   assert.ok(family.variants[level].communicativeObjectives.length>=2);
  }

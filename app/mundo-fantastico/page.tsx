@@ -1,4 +1,9 @@
 "use client";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
+import { COUNTRY_LEVELS, countryActivity, countrySupport } from "../conversation-families/country-levels";
+import { CountryTools, CountryClosing } from "../conversation-families/country-tools";
+import type { CEFRLevel } from "../conversation-families/types";
+
 
 import Link from "next/link";
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
@@ -401,7 +406,10 @@ function questionVisual(place:Destination,index:number){
   return scenes[index]||scenes[0];
 }
 
-export default function MundoFantastico() {
+export default function MundoFantastico(){
+ return <ConversationFamily id="mundo-fantastico" title="Mundo fantástico" levels={COUNTRY_LEVELS} defaultLevel="A1">{level=><CountryExperience key={level} level={level}/>}</ConversationFamily>;
+}
+function CountryExperience({level}:{level:CEFRLevel}){
   const [screen, setScreen] = useState<Screen>("cover");
   const [active, setActive] = useState<Destination>(destinations[9]);
   const [atlasPick, setAtlasPick] = useState<Destination>(destinations[9]);
@@ -421,7 +429,8 @@ export default function MundoFantastico() {
     (continent === "Todos" || place.continent === continent) &&
     `${place.country} ${place.countryEn} ${place.capital.es} ${place.continent}`.toLowerCase().includes(query.trim().toLowerCase())
   ), [continent, query]);
-  const questions = useMemo(() => questionsFor(active), [active]);
+  const context={name:active.country,places:[active.landmark,active.capital],words:[active.landmark,active.capital],source:questionsFor(active).map(item=>item.prompt)};
+  const questions = questionsFor(active).map((item,index)=>level==="A1"?item:{...item,prompt:countryActivity(level,context,index),starter:countryActivity(level,context,index).starter,choices:countryActivity(level,context,index).choices,follow:{prompt:countryActivity(level,context,index).spark,choices:countryActivity(level,context,index).choices}});
   const current = questions[question];
   const progress = Math.round(visited.size / destinations.length * 100);
   const answerEs = answerParts.map(item => item.es.replace(/[.…]+/g, "")).join(" ");
@@ -453,37 +462,37 @@ export default function MundoFantastico() {
   const show = (next: Screen) => { setScreen(next); window.scrollTo({top:0,behavior:"smooth"}); };
   const enter = (place: Destination, start = 0) => { setActive(place); setAtlasPick(place); setQuestion(start); setAnswerParts([]); setBankTab("country"); setBankQuery(""); setBankOpen(false); setVisited(previous => new Set([...previous, place.id])); show("destination"); };
   const surprise = () => { const pool = destinations.filter(place => place.id !== active.id); const place = pool[Math.floor(Math.random() * pool.length)] || destinations[0]; enter(place, Math.floor(Math.random() * 10)); };
-  const addPart = (part: Pair) => setAnswerParts(parts => [...parts, part]);
+  const addPart = (part: Pair) => setAnswerParts(parts => level==="A0"?[part]:[...parts, part]);
   const changeQuestion = (next: number) => { setQuestion(Math.max(0, Math.min(9, next))); setAnswerParts([]); document.querySelector(".wf-question-stage")?.scrollIntoView({behavior:"smooth",block:"center"}); };
   const speak = (text: string) => { if (typeof window === "undefined" || !("speechSynthesis" in window)) return; window.speechSynthesis.cancel(); const voice = new SpeechSynthesisUtterance(text); voice.lang = "es-AR"; voice.rate = .76; window.speechSynthesis.speak(voice); };
 
-  return <main className={`wf-app ${englishVisible ? "" : "wf-spanish-only"}`}>
+  return <main className={`wf-app ${level==="A0" || englishVisible ? "" : "wf-spanish-only"}`}>
     <nav className="wf-nav">
       <Link href="/" className="wf-brand"><span><img src="/brand/mascot/portrait.webp" alt=""/></span><div><b>SPANISHCUE</b><small>CONVERSATION ADVENTURES</small></div></Link>
       <div className="wf-progress"><span>MUNDOS ABIERTOS · OPEN WORLDS</span><i><b style={{width:`${progress}%`}}/></i><strong>{visited.size}/40</strong></div>
-      <div className="wf-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA</button><button onClick={() => show(screen === "cover" ? "atlas" : "cover")}><Glyph name={screen === "cover" ? "map" : "home"}/>{screen === "cover" ? " MAPA" : " INICIO"}</button></div>
+      <div className="wf-nav-actions"><button onClick={surprise}><Glyph name="shuffle"/> SORPRESA<span className="country-a0-en" lang="en"> / SURPRISE</span></button><button onClick={() => show(screen === "cover" ? "atlas" : "cover")}><Glyph name={screen === "cover" ? "map" : "home"}/>{screen === "cover" ? " MAPA / MAP" : " INICIO / HOME"}</button></div>
     </nav>
 
     {screen === "cover" && <section className="wf-cover">
       <Sky dense/>
       <div className="wf-cover-copy">
-        <div className="wf-kicker"><span>A1</span> PARA EMPEZAR DE CERO · START FROM ZERO</div>
-        <p className="wf-overline">6 CONTINENTES · AMÉRICA = 1 CONTINENTE · 40 MUNDOS</p>
+        <div className="wf-kicker"><span>{level}</span> PARA EMPEZAR DE CERO · START FROM ZERO</div>
+        <p className="wf-overline">6 CONTINENTES · AMÉRICA = 1 CONTINENTE · 40 MUNDOS<span className="country-a0-en" lang="en"> / 6 CONTINENTS · AMERICA = 1 CONTINENT · 40 WORLDS</span></p>
         <h1>EL MUNDO<br/><em>FANTÁSTICO</em></h1>
         <p className="wf-lead">Viaja por el planeta y habla español desde la primera palabra.<b> Preguntas mínimas. Respuestas tocables. Wordbank completo.</b><span className="wf-en">Travel around the planet and speak Spanish from the very first word. Tiny questions, tappable answers and a complete word bank.</span></p>
-        <div className="wf-cover-actions"><button onClick={() => show("atlas")}>ABRIR EL MAPA <span>→</span><small className="wf-en">OPEN THE MAP</small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> PAÍS SORPRESA<small className="wf-en">SURPRISE COUNTRY</small></button></div>
-        <div className="wf-stats"><article><b>6</b><span>continentes<small>continents</small></span></article><article><b>40</b><span>mundos<small>worlds</small></span></article><article><b>400</b><span>preguntas A1<small>A1 questions</small></span></article><article><b>120+</b><span>palabras<small>words</small></span></article></div>
+        <div className="wf-cover-actions"><button onClick={() => show("atlas")}>ABRIR EL MAPA<span className="country-a0-en" lang="en"> / OPEN THE MAP</span> <span>→</span><small className="wf-en">OPEN THE MAP<span className="country-a0-en" lang="es"> / ABRIR EL MAPA</span></small></button><button className="ghost" onClick={surprise}><Glyph name="shuffle"/> PAÍS SORPRESA<span className="country-a0-en" lang="en"> / SURPRISE COUNTRY</span><small className="wf-en">SURPRISE COUNTRY<span className="country-a0-en" lang="es"> / PAÍS SORPRESA</span></small></button></div>
+        <div className="wf-stats"><article><b>6</b><span>continentes<span className="country-a0-en" lang="en"> / continents</span><small>continents</small></span></article><article><b>40</b><span>mundos<span className="country-a0-en" lang="en"> / worlds</span><small>worlds</small></span></article><article><b>400</b><span>preguntas<span className="country-a0-en" lang="en"> / questions</span> {level}<small>{level} questions</small></span></article><article><b>120+</b><span>palabras<span className="country-a0-en" lang="en"> / words</span><small>words</small></span></article></div>
       </div>
       <div className="wf-hero-map" aria-hidden="true">
         <div className="wf-globe"><img src="/world-map.svg" alt=""/><i/><i/><i/></div>
-        <span className="wf-orbit-label one">AMÉRICA · ONE CONTINENT</span><span className="wf-orbit-label two">A1 · ONE WORD COUNTS</span><span className="wf-orbit-label three">6 CONTINENTES</span>
+        <span className="wf-orbit-label one">AMÉRICA · ONE CONTINENT</span><span className="wf-orbit-label two">{level} · SPEAKING PRACTICE</span><span className="wf-orbit-label three">6 CONTINENTES<span className="country-a0-en" lang="en"> / 6 CONTINENTS</span></span>
         <div className="wf-hero-pin p1"/><div className="wf-hero-pin p2"/><div className="wf-hero-pin p3"/><div className="wf-hero-pin p4"/>
       </div>
       <div className="wf-horizon" aria-hidden="true"><i/><i/><i/></div>
     </section>}
 
     {screen === "atlas" && <section className="wf-atlas-screen">
-      <header className="wf-atlas-head"><div><span>ATLAS MUNDIAL · WORLD ATLAS</span><h1>Elige un continente.<br/><em>Abre un país. Habla.</em></h1></div><div><p>Los 40 puntos son mundos de conversación A1. América aparece como un solo continente.</p><span className="wf-en">The 40 points are A1 conversation worlds. America appears as one continent.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MUNDO DECIDA</button></div></header>
+      <header className="wf-atlas-head"><div><span>ATLAS MUNDIAL · WORLD ATLAS</span><h1>Elige un continente.<span className="country-a0-en" lang="en"> / Choose a continent.</span><br/><em>Abre un país. Habla.<span className="country-a0-en" lang="en"> / Open a country. Speak.</span></em></h1></div><div><p>Los 40 puntos son mundos de conversación A1. América aparece como un solo continente.</p><span className="wf-en">The 40 points are {level} conversation worlds. America appears as one continent.</span><button onClick={surprise}><Glyph name="shuffle"/> QUE EL MUNDO DECIDA<span className="country-a0-en" lang="en"> / LET THE WORLD CHOOSE</span></button></div></header>
 
       <div className="wf-toolbar">
         <div className="wf-continent-tabs">{continents.map(item => <button key={item} className={continent === item ? "active" : ""} style={{"--tab":item === "Todos" ? "#ffffff" : continentColors[item]} as CSSProperties} onClick={() => setContinent(item)}>{item}<small>{item === "Todos" ? "All" : continentEnglish[item]}</small></button>)}</div>
@@ -494,58 +503,58 @@ export default function MundoFantastico() {
         <div className="wf-map-frame">
           <header><span><Glyph name="compass"/> MAPA INTERACTIVO · INTERACTIVE MAP</span><b>{visibleDestinations.length} visibles · visible</b></header>
           <div className="wf-map-scroll">
-            <div className="wf-map" aria-label="Mapa mundial interactivo con cuarenta destinos">
-              <img src="/world-map.svg" alt="Mapa del mundo"/>
+            <div className="wf-map" aria-label="Mapa mundial interactivo con cuarenta destinos / Interactive world map with forty destinations">
+              <img src="/world-map.svg" alt="Mapa del mundo / World map"/>
               <div className="wf-map-grid" aria-hidden="true"/>
               {destinations.map(place => {
                 const visible = visibleDestinations.some(item => item.id === place.id);
                 return <button key={place.id} disabled={!visible} onClick={() => setAtlasPick(place)} className={`wf-map-node ${atlasPick.id === place.id ? "selected" : ""} ${visited.has(place.id) ? "visited" : ""} ${visible ? "" : "hidden"}`} style={{left:`${place.x}%`,top:`${place.y}%`,"--place":place.color} as CSSProperties} aria-label={`${place.country}: ${place.title.es}`}><b>{place.number}</b><span><strong>{place.country}</strong><small>{place.countryEn}</small></span></button>;
               })}
-              <div className="wf-america-note" aria-hidden="true"><b>AMÉRICA</b><span>1 CONTINENTE</span></div>
+              <div className="wf-america-note" aria-hidden="true"><b>AMÉRICA</b><span>1 CONTINENTE<span className="country-a0-en" lang="en"> / 1 CONTINENT</span></span></div>
               <p className="wf-map-instruction">TOCA UN PUNTO · TAP A POINT</p>
             </div>
           </div>
-          <footer>Mapa base: Natural Earth · CC0 <span>•</span> Los puntos son destinos de la clase, no capitales exactas.</footer>
+          <footer>Mapa base: Natural Earth · CC0<span className="country-a0-en" lang="en"> / Base map: Natural Earth · CC0</span> <span>•</span> Los puntos son destinos de la clase, no capitales exactas.<span className="country-a0-en" lang="en"> / The points are lesson destinations, not exact capital locations.</span></footer>
         </div>
 
         <aside className="wf-portal" style={{"--place":atlasPick.color} as CSSProperties}>
           <div className="wf-portal-map"><img src="/world-map.svg" alt=""/><Crest place={atlasPick}/></div>
-          <div className="wf-portal-copy"><span>{atlasPick.continent} · MUNDO {atlasPick.number}</span><small>{atlasPick.countryEn}</small><h2>{atlasPick.country}</h2><h3>{atlasPick.title.es}</h3><p className="wf-en">{atlasPick.title.en}</p><div className="wf-capital"><small>CAPITAL · CAPITAL</small><b>{atlasPick.capital.es}</b></div><div className="wf-portal-tags"><b>10 preguntas</b><b>Audio lento</b><b>Wordbank total</b></div><button onClick={() => enter(atlasPick)}>ABRIR ESTE MUNDO <span>→</span><small className="wf-en">OPEN THIS WORLD</small></button></div>
+          <div className="wf-portal-copy"><span>{atlasPick.continent} · MUNDO<span className="country-a0-en" lang="en"> / · WORLD</span> {atlasPick.number}</span><small>{atlasPick.countryEn}</small><h2>{atlasPick.country}</h2><h3>{atlasPick.title.es}</h3><p className="wf-en">{atlasPick.title.en}</p><div className="wf-capital"><small>CAPITAL · CAPITAL</small><b>{atlasPick.capital.es}<span className="country-a0-en" lang="en"> / {atlasPick.capital.en}</span></b></div><div className="wf-portal-tags"><b>10 preguntas<span className="country-a0-en" lang="en"> / 10 questions</span></b><b>Audio lento<span className="country-a0-en" lang="en"> / Slow audio</span></b><b>Wordbank total<span className="country-a0-en" lang="en"> / Complete word bank</span></b></div><button onClick={() => enter(atlasPick)}>ABRIR ESTE MUNDO<span className="country-a0-en" lang="en"> / OPEN THIS WORLD</span> <span>→</span><small className="wf-en">OPEN THIS WORLD<span className="country-a0-en" lang="es"> / ABRIR ESTE MUNDO</span></small></button></div>
         </aside>
       </section>
 
       <section className="wf-country-strip"><header><span>DESTINOS · DESTINATIONS</span><b>{visited.size} abiertos · opened</b></header><div>{visibleDestinations.map(place => <button key={place.id} onClick={() => setAtlasPick(place)} className={`${atlasPick.id === place.id ? "active" : ""} ${visited.has(place.id) ? "visited" : ""}`} style={{"--place":place.color} as CSSProperties}><span>{place.number}</span><b>{place.country}</b><small>{continentCodes[place.continent]}</small></button>)}</div></section>
-      {!visibleDestinations.length && <div className="wf-empty"><b>No encontramos ese lugar.</b><span>Prueba otro país o una capital. · Try another country or capital.</span></div>}
+      {!visibleDestinations.length && <div className="wf-empty"><b>No encontramos ese lugar.<span className="country-a0-en" lang="en"> / We could not find that place.</span></b><span>Prueba otro país o una capital. · Try another country or capital.</span></div>}
     </section>}
 
     {screen === "destination" && <section className={`wf-world wf-continent-${continentSlug[active.continent]} wf-country-${active.id}`} style={{"--place":active.color,"--continent":continentColors[active.continent]} as CSSProperties}>
       <header className="wf-world-hero">
         <Sky/>
-        <div className="wf-world-top"><button onClick={() => show("atlas")}>← MAPA · MAP</button><span>MUNDO {active.number} · {active.continent}</span><div><button className={englishVisible ? "active" : ""} onClick={() => setEnglishVisible(value => !value)}>EN {englishVisible ? "ON" : "OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO PAÍS</button></div></div>
-        <div className="wf-world-copy"><small>{active.continent} · {continentEnglish[active.continent]}</small><h1>{active.country}</h1><h2>{active.countryEn}</h2><p><b>{active.title.es}</b><span className="wf-en">{active.title.en}</span></p><div className="wf-world-facts"><span><small>CAPITAL</small>{active.capital.es}</span><span><small>HOLA</small>{active.greeting.es}</span><span><small>CLIMA</small>{active.climate.es}</span></div><div className="wf-typical-chips"><b>{active.landmark.es}</b><b>{active.food.es}</b><b>{active.animal.es}</b><b>{active.culture.es}</b></div></div>
+        <div className="wf-world-top"><button onClick={() => show("atlas")}>← MAPA · MAP</button><span>MUNDO<span className="country-a0-en" lang="en"> / WORLD</span> {active.number} · {active.continent}</span><div><button className={englishVisible ? "active" : ""} disabled={level==="A0"} onClick={() => setEnglishVisible(value => !value)}>EN {englishVisible ? "ON" : "OFF"}</button><button onClick={surprise}><Glyph name="shuffle"/> OTRO PAÍS<span className="country-a0-en" lang="en"> / ANOTHER COUNTRY</span></button></div></div>
+        <div className="wf-world-copy"><small>{active.continent} · {continentEnglish[active.continent]}</small><h1>{active.country}</h1><h2>{active.countryEn}</h2><p><b>{active.title.es}</b><span className="wf-en">{active.title.en}</span></p><div className="wf-world-facts"><span><small>CAPITAL</small>{active.capital.es}<span className="country-a0-en" lang="en"> / {active.capital.en}</span></span><span><small>HOLA</small>{active.greeting.es}<span className="country-a0-en" lang="en"> / {active.greeting.en}</span></span><span><small>CLIMA<span className="country-a0-en" lang="en"> / CLIMATE</span></small>{active.climate.es}<span className="country-a0-en" lang="en"> / {active.climate.en}</span></span></div><div className="wf-typical-chips"><b>{active.landmark.es}<span className="country-a0-en" lang="en"> / {active.landmark.en}</span></b><b>{active.food.es}<span className="country-a0-en" lang="en"> / {active.food.en}</span></b><b>{active.animal.es}<span className="country-a0-en" lang="en"> / {active.animal.en}</span></b><b>{active.culture.es}<span className="country-a0-en" lang="en"> / {active.culture.en}</span></b></div></div>
         <TypicalGallery place={active}/>
         <div className="wf-country-atmosphere" aria-hidden="true"><i/><i/><i/><i/><i/><i/></div>
       </header>
 
-      <div className="wf-classroom">
-        <section className="wf-rule"><span>A1 REAL · REAL A1</span><b>Una palabra es una respuesta. Una mini frase es una victoria.</b><em className="wf-en">One word is an answer. One tiny sentence is a victory.</em></section>
+      <div className="wf-classroom"><CountryTools level={level} context={context} index={question}/>
+        <section className="wf-rule"><span>{level} · CONVERSACIÓN<span className="country-a0-en" lang="en"> / · CONVERSATION</span></span><b>{countrySupport(level,context).tip.es}</b><em className="wf-en">{countrySupport(level,context).tip.en}</em></section>
 
         <section className="wf-question-stage">
           <div className="wf-question-count"><span>PREGUNTA · QUESTION</span><b>{String(question + 1).padStart(2,"0")} <i>/ 10</i></b></div>
-          <div className="wf-question-copy"><small>{active.country} · {active.countryEn}</small><h2>{current.prompt.es}</h2><p className="wf-en">{current.prompt.en}</p><div className="wf-question-actions"><button onClick={() => speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR LENTO</button><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> WORDBANK</button></div></div>
+          <div className="wf-question-copy"><small>{active.country} · {active.countryEn}</small><h2>{current.prompt.es}</h2><p className="wf-en">{current.prompt.en}</p><div className="wf-question-actions"><button onClick={() => speak(current.prompt.es)}><Glyph name="sound"/> ESCUCHAR LENTO<span className="country-a0-en" lang="en"> / LISTEN SLOWLY</span></button><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> WORDBANK</button></div></div>
           <div className="wf-question-picture"><WikiVisual key={`${active.id}-${question}`} query={currentVisual.query} alt={`${currentVisual.title}, ${active.country}`} label={currentVisual.label} subLabel={currentVisual.title} seed={current.visual} group={active.id}/></div>
         </section>
 
         <section className="wf-support">
-          <button className="wf-starter" onClick={() => addPart(current.starter)}><span>1 · EMPIEZA ASÍ · START</span><b>{current.starter.es}</b><em className="wf-en">{current.starter.en}</em><i><Glyph name="plus"/> AGREGAR</i></button>
+          <button className="wf-starter" onClick={() => addPart(current.starter)}><span>1 · EMPIEZA ASÍ · START</span><b>{current.starter.es}</b><em className="wf-en">{current.starter.en}</em><i><Glyph name="plus"/> AGREGAR<span className="country-a0-en" lang="en"> / ADD</span></i></button>
           <article className="wf-choices"><span>2 · ELIGE · CHOOSE</span><div>{current.choices.map((choice, index) => <button key={`${choice.es}-${index}`} onClick={() => addPart(choice)}><b>{choice.es}</b><small className="wf-en">{choice.en}</small><i>+</i></button>)}</div></article>
           <article className="wf-follow"><span>3 · UNA MÁS · ONE MORE</span><b>{current.follow.prompt.es}</b><em className="wf-en">{current.follow.prompt.en}</em><small>TOCA UNA RESPUESTA · TAP AN ANSWER</small><div>{current.follow.choices.map((choice,index)=><button key={`${choice.es}-${index}`} onClick={()=>addPart(choice)}><b>{choice.es}</b><small className="wf-en">{choice.en}</small><i>+</i></button>)}</div></article>
         </section>
 
-        <section className="wf-quick-bank"><header><div><span>WORDBANK INMEDIATO · QUICK WORDBANK</span><b>Sin bajar: toca una palabra o abre todo.</b></div><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> VER 120+ PALABRAS</button></header><div>{destinationWords.slice(0,8).map((word,index)=><button key={`${word.es}-${index}`} onClick={()=>addPart(word)}><small>{word.code}</small><b>{word.es}</b><span className="wf-en">{word.en}</span><i>+</i></button>)}</div></section>
+        <section className="wf-quick-bank"><header><div><span>WORDBANK INMEDIATO · QUICK WORDBANK</span><b>Sin bajar: toca una palabra o abre todo.<span className="country-a0-en" lang="en"> / Without scrolling: tap a word or open everything.</span></b></div><button onClick={() => {setBankTab("country");setBankOpen(true)}}><Glyph name="words"/> VER 120+ PALABRAS<span className="country-a0-en" lang="en"> / SEE 120+ WORDS</span></button></header><div>{destinationWords.slice(0,8).map((word,index)=><button key={`${word.es}-${index}`} disabled={level==="A0"} onClick={()=>addPart(word)}><small>{word.code}</small><b>{word.es}</b><span className="wf-en">{word.en}</span><i>+</i></button>)}</div></section>
 
         <section className="wf-builder" aria-live="polite">
-          <header><div><span>CONSTRUCTOR DE FRASES · SENTENCE BUILDER</span><h2>Toca palabras. Arma tu respuesta.</h2><p className="wf-en">Tap words. Build your answer.</p></div><div><button disabled={!answerParts.length} onClick={() => speak(answerEs)}><Glyph name="sound"/> ESCUCHAR</button><button disabled={!answerParts.length} onClick={() => setAnswerParts([])}><Glyph name="clear"/> BORRAR</button></div></header>
+          <header><div><span>CONSTRUCTOR DE FRASES · SENTENCE BUILDER</span><h2>{level==="A0"?"Elige una frase completa y repítela.":"Toca palabras. Arma tu respuesta."}</h2><p className="wf-en">{level==="A0"?"Choose one complete sentence and repeat it.":"Tap words. Build your answer."}</p></div><div><button disabled={!answerParts.length} onClick={() => speak(answerEs)}><Glyph name="sound"/> ESCUCHAR<span className="country-a0-en" lang="en"> / LISTEN</span></button><button disabled={!answerParts.length} onClick={() => setAnswerParts([])}><Glyph name="clear"/> BORRAR<span className="country-a0-en" lang="en"> / CLEAR</span></button></div></header>
           <div className={`wf-answer ${answerParts.length ? "ready" : ""}`}>{answerParts.length ? answerParts.map((part, index) => <button key={`${part.es}-${index}`} onClick={() => setAnswerParts(parts => parts.filter((_, itemIndex) => index !== itemIndex))}><b>{part.es.replace(/[.…]+/g, "")}</b><small className="wf-en">{part.en.replace(/[.…]+/g, "")}</small></button>) : <p><b>Tu respuesta aparece acá…</b><span className="wf-en">Your answer appears here…</span></p>}</div>
           {answerParts.length > 0 && <div className="wf-readout"><b>{answerEs}</b><span className="wf-en">{answerEn}</span></div>}
         </section>
@@ -555,12 +564,12 @@ export default function MundoFantastico() {
 
       <button className="wf-bank-fab" onClick={()=>setBankOpen(true)} aria-expanded={bankOpen}><Glyph name="words"/><span><b>WORDBANK</b><small>ABRIR SIN BAJAR · OPEN NOW</small></span><i>120+</i></button>
       {bankOpen&&<div ref={bankDialogRef} tabIndex={-1} className="wf-bank-overlay" role="dialog" aria-modal="true" aria-label="Wordbank bilingüe" onMouseDown={closeBank}><aside className="wf-bank-drawer" onMouseDown={event=>event.stopPropagation()}>
-        <header><div><span>WORDBANK SIEMPRE A MANO · ALWAYS READY</span><h2>{active.country}: habla sin buscar.</h2><p className="wf-en">Tap any word. It goes directly to your answer.</p></div><button onClick={closeBank} aria-label="Cerrar wordbank">×</button></header>
-        <label className="wf-bank-search"><span>⌕</span><input autoFocus value={bankQuery} onChange={event=>setBankQuery(event.target.value)} placeholder="Buscar español o inglés · Search Spanish or English"/><button disabled={!bankQuery} onClick={()=>setBankQuery("")}>BORRAR</button></label>
+        <header><div><span>WORDBANK SIEMPRE A MANO · ALWAYS READY</span><h2>{active.country}: habla sin buscar.<span className="country-a0-en" lang="en"> / : speak without looking things up.</span></h2><p className="wf-en">{level==="A0"?"Read these words for support. Choose a complete sentence above.":"Tap any word. It goes directly to your answer."}</p></div><button onClick={closeBank} aria-label="Cerrar wordbank / Close word bank">×</button></header>
+        <label className="wf-bank-search"><span>⌕</span><input autoFocus value={bankQuery} onChange={event=>setBankQuery(event.target.value)} placeholder="Buscar español o inglés · Search Spanish or English"/><button disabled={!bankQuery} onClick={()=>setBankQuery("")}>BORRAR<span className="country-a0-en" lang="en"> / CLEAR</span></button></label>
         <nav className="wf-drawer-tabs">{bankCatalog.map(group=><button key={group.id} className={bankTab===group.id&&!normalizedBankQuery?"active":""} onClick={()=>{setBankTab(group.id);setBankQuery("")}}><span>{group.code}</span><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></button>)}</nav>
-        <div className="wf-drawer-results">{visibleBankGroups.length?visibleBankGroups.map(group=><section key={group.id}><header><span>{group.code}</span><div><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></div><i>{group.words.length}</i></header><div>{group.words.map((word,index)=><button key={`${group.id}-${word.es}-${index}`} onClick={()=>addPart(word)}><b>{word.es}</b><small className="wf-en">{word.en}</small><i>+</i></button>)}</div></section>):<div className="wf-bank-empty"><b>No aparece esa palabra.</b><span>Prueba otra búsqueda. · Try another search.</span></div>}</div>
-        <footer><div><span>RESPUESTA ACTUAL · CURRENT ANSWER</span><b>{answerEs||"Todavía vacía…"}</b><small className="wf-en">{answerEn||"Still empty…"}</small></div><div><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR</button><button onClick={closeBank}>LISTO · DONE →</button></div></footer>
+        <div className="wf-drawer-results">{visibleBankGroups.length?visibleBankGroups.map(group=><section key={group.id}><header><span>{group.code}</span><div><b>{group.label.es}</b><small className="wf-en">{group.label.en}</small></div><i>{group.words.length}</i></header><div>{group.words.map((word,index)=><button key={`${group.id}-${word.es}-${index}`} disabled={level==="A0"} onClick={()=>addPart(word)}><b>{word.es}</b><small className="wf-en">{word.en}</small><i>+</i></button>)}</div></section>):<div className="wf-bank-empty"><b>No aparece esa palabra.<span className="country-a0-en" lang="en"> / That word was not found.</span></b><span>Prueba otra búsqueda. · Try another search.</span></div>}</div>
+        <footer><div><span>RESPUESTA ACTUAL · CURRENT ANSWER</span><b>{answerEs||"Todavía vacía…"}</b><small className="wf-en">{answerEn||"Still empty…"}</small></div><div><button disabled={!answerParts.length} onClick={()=>setAnswerParts([])}><Glyph name="clear"/> BORRAR<span className="country-a0-en" lang="en"> / CLEAR</span></button><button onClick={closeBank}>LISTO · DONE →</button></div></footer>
       </aside></div>}
     </section>}
-  </main>;
+  <CountryClosing level={level} context={context}/></main>;
 }

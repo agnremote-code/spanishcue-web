@@ -1,14 +1,12 @@
 "use client";
 
+import {ConversationFamily} from "../conversation-families/ConversationFamily";
+import {CEFR_LEVELS,type CEFRLevel} from "../conversation-families/types";
+import {GameSpeech,gameDemand} from "../conversation-families/game-language";
+import {nowContent} from "./levels";
 import { useMemo, useState } from "react";
 import PlayShell, { SpeakPrompt, type PlayStage } from "../play-mode/PlayShell";
 import {
-  adviceCases,
-  bossPrompts,
-  chats,
-  finalQuestions,
-  situations,
-  stories,
   type Situation,
   type SituationCategory,
 } from "./data";
@@ -145,7 +143,9 @@ function SituationFilters({
   );
 }
 
-export default function YAhoraQue() {
+export default function YAhoraQue() {return <ConversationFamily id="modo-play-y-ahora-que" title="¿Y ahora qué?" levels={CEFR_LEVELS} defaultLevel="B1">{level=><NowActivity key={level} level={level}/>}</ConversationFamily>;}
+function NowActivity({level}:{level:CEFRLevel}) {
+  const {adviceCases,bossPrompts,chats,finalQuestions,situations,stories}=useMemo(()=>nowContent(level),[level]);
   const [stage, setStage] = useState(0);
   const [index, setIndex] = useState(0);
   const [mode, setMode] = useState<Mode>("session");
@@ -162,11 +162,11 @@ export default function YAhoraQue() {
   const [finalIndex, setFinalIndex] = useState(0);
   const consequencePool = useMemo(
     () => situations.filter((item) => item.consequence),
-    [],
+    [situations],
   );
   const infoPool = useMemo(
     () => situations.filter((item) => item.missingInfo),
-    [],
+    [situations],
   );
   const recommended = useMemo(() => {
     const pick = (type: SituationCategory) => {
@@ -182,7 +182,7 @@ export default function YAhoraQue() {
       story: rotateTake(stories, sessionSeed, 1),
       boss: rotateTake(bossPrompts, sessionSeed, 1),
     };
-  }, [consequencePool, infoPool, sessionSeed]);
+  }, [consequencePool, infoPool, sessionSeed,situations,chats,adviceCases,stories,bossPrompts]);
   const reactionPool =
     mode === "session"
       ? recommended.reaction
@@ -266,14 +266,15 @@ export default function YAhoraQue() {
   };
 
   return (
-    <PlayShell
-      lesson="B1 · MODO PLAY · 02"
+    <PlayShell supportLevel={level}
+      lesson={`${level} · MODO PLAY · 02`}
       title="¿Y AHORA QUÉ?"
       stages={stages}
       stage={stage}
       onStageChange={changeStage}
       powerMode="situation"
     >
+      <GameSpeech level={level} model={stage===4?"Prueba el cine. / Try the cinema. Quédate en casa. / Stay home.":stage===2?"Hola. Sí, voy. / Hello. Yes, I am coming.":"Yo pido ayuda. / I ask for help. Yo espero. / I wait."}/>
       <SessionTools
         mode={mode}
         onMode={changeMode}
@@ -335,7 +336,7 @@ export default function YAhoraQue() {
             <small>{currentSocial.category}</small>
             <h2>{currentSocial.text}</h2>
           </div>
-          <SpeakPrompt>¿Qué piensas y qué harías?</SpeakPrompt>
+          <SpeakPrompt>{gameDemand[level]}</SpeakPrompt>
           <div className="cue-row">
             {currentSocial.cues.map((item) => (
               <button key={item} onClick={() => setCue(item)}>
@@ -407,7 +408,7 @@ export default function YAhoraQue() {
           )}
           {chatStep === 2 && (
             <SpeakPrompt tone="coral">
-              Responde el mensaje completo como si estuvieras escribiendo ahora.
+              {level==='A0'?'Di dos frases del chat. / Say two phrases from the chat.':'Responde al mensaje completo en voz alta.'}
             </SpeakPrompt>
           )}
           <BankNav
@@ -442,8 +443,7 @@ export default function YAhoraQue() {
           </div>
           {reaction && (
             <SpeakPrompt>
-              ¿Por qué elegiste {reaction.toLowerCase()}? Di qué esperas que
-              pase.
+              {level==='A0'?`${reaction}. / Say your chosen phrase aloud.`:`¿Por qué elegiste ${reaction.toLowerCase()}? Di qué esperas que pase.`}
             </SpeakPrompt>
           )}
           {reaction && !effectOpen && (
@@ -461,8 +461,7 @@ export default function YAhoraQue() {
                 <b>{currentEffect.consequence}</b>
               </div>
               <SpeakPrompt tone="coral">
-                ¿Y ahora qué? Reacciona al resultado: ¿mantienes, cambias o
-                reparas tu decisión?
+                {gameDemand[level]}
               </SpeakPrompt>
             </>
           )}
@@ -492,8 +491,7 @@ export default function YAhoraQue() {
             <h2>«{currentAdvice.problem}»</h2>
           </div>
           <SpeakPrompt>
-            ¿Qué le dirías? Dale un consejo concreto y explica por qué puede
-            funcionar.
+            {gameDemand[level]}
           </SpeakPrompt>
           {adviceStep === 0 && (
             <button className="reveal-button" onClick={() => setAdviceStep(1)}>
@@ -520,7 +518,7 @@ export default function YAhoraQue() {
           )}
           {adviceStep === 1 && (
             <SpeakPrompt tone="coral">
-              Responde a su objeción. ¿Mantienes tu consejo o lo adaptas?
+              {gameDemand[level]}
             </SpeakPrompt>
           )}
           {adviceStep === 1 && currentAdvice.refusal && (
@@ -531,7 +529,7 @@ export default function YAhoraQue() {
           {adviceStep === 2 && (
             <>
               <SpeakPrompt tone="lime">
-                Ofrece un plan B realmente diferente.
+                {gameDemand[level]}
               </SpeakPrompt>
               <button
                 className="reveal-button"
@@ -543,7 +541,7 @@ export default function YAhoraQue() {
           )}
           {adviceStep === 3 && (
             <SpeakPrompt tone="coral">
-              Improvisa un plan C. ¿Qué pequeña acción sí podría aceptar?
+              {gameDemand[level]}
             </SpeakPrompt>
           )}
           <BankNav
@@ -573,7 +571,7 @@ export default function YAhoraQue() {
             <h2>{currentStory.steps[storyStep]}</h2>
           </div>
           <SpeakPrompt>
-            {currentStory.questions[storyStep]} Explica qué haces exactamente.
+            {currentStory.questions[storyStep]} {level==='A0'?'Di el modelo. / Say the model.':'Explica qué haces exactamente.'}
           </SpeakPrompt>
           {storyStep < 2 && (
             <button
@@ -585,7 +583,7 @@ export default function YAhoraQue() {
           )}
           {storyStep === 2 && (
             <SpeakPrompt tone="lime">
-              Cuenta la historia completa y defiende tu decisión final.
+              {gameDemand[level]}
             </SpeakPrompt>
           )}
           <BankNav
@@ -606,12 +604,11 @@ export default function YAhoraQue() {
               </span>
               <h2 className="boss-word">¿Y AHORA QUÉ?</h2>
               <div className="scenario-card">
-                <span className="scenario-icon">B1</span>
+                <span className="scenario-icon">{level}</span>
                 <h2>{currentBoss}</h2>
               </div>
               <SpeakPrompt>
-                Desarrolla tu plan, anticipa un problema y reacciona a la
-                objeción del profesor.
+                {gameDemand[level]}
               </SpeakPrompt>
               <BankNav
                 index={index % bossPool.length}
@@ -638,8 +635,7 @@ export default function YAhoraQue() {
                 {finalQuestions[finalIndex].question}
               </h2>
               <SpeakPrompt>
-                {finalQuestions[finalIndex].follow} Escucha al profesor y haz
-                una pregunta relacionada.
+                {finalQuestions[finalIndex].follow} {level==='A0'?'Pregunta: ¿Y tú? / Ask: And you?':'Escucha al profesor y haz una pregunta relacionada.'}
               </SpeakPrompt>
               <BankNav
                 index={finalIndex}

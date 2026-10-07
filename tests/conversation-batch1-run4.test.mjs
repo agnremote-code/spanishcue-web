@@ -1,4 +1,4 @@
-import {batch1PreservedBytes, batch1PreservedLedger} from './helpers/batch1-preservation.mjs';
+import {batch1ImmutableFiles, batch1PreservedBytes, batch1PreservedLedger} from './helpers/batch1-preservation.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync, existsSync} from 'node:fs';
@@ -33,7 +33,7 @@ test('all twenty-two original and Run 1–3 banks, existing metadata and route l
 });
 
 test('existing standalone banks, support modules, thumbnails, routes and Run 1–3 history retain exact bytes', () => {
-  for (const [path, expected] of Object.entries(snapshot.immutableFiles)) assert.equal(hashBytes(batch1PreservedBytes(path)), expected, path);
+  for (const [path, expected] of batch1ImmutableFiles(snapshot.immutableFiles)) assert.equal(hashBytes(batch1PreservedBytes(path)), expected, path);
   const status = readFileSync('docs/lessons/conversation-family-production-status.md');
   assert.equal(hashBytes(status.subarray(0, snapshot.run3StatusPrefix.bytes)), snapshot.run3StatusPrefix.sha256);
 });
@@ -43,7 +43,7 @@ test('exactly the two Run 4 additions appear in the existing PRO family cards an
   for (const [id, level, levels] of additions) {
     const family = p.conversationFamilies.find(f => f.id === id);
     const original = snapshot.families.find(f => f.id === id);
-    assert.deepEqual(family.availableLevels, levels, id);
+    assert.deepEqual(family.availableLevels.filter(level=>level!=='A0'), levels, id);
     assert.equal(family.variants[level].level, level);
     assert.equal(family.variants[level].lessonId, family.canonicalLessonId);
     assert.equal(family.variants[level].contentRef, `${family.canonicalPath}#${level}`);
@@ -51,11 +51,11 @@ test('exactly the two Run 4 additions appear in the existing PRO family cards an
     added += levels.filter(item => !original.variants[item]).length;
     const cards = p.catalogLessons.filter(l => l.familyId === id);
     assert.equal(cards.length, 1);
-    assert.deepEqual(cards[0].levels, levels);
+    assert.deepEqual(cards[0].levels.filter(level=>level!=='A0'), levels);
     assert.equal(p.conversationLessonHref(cards[0], level), `${family.canonicalPath}?level=${level}`);
     const resource = p.lessonForResourceSlug(p.resourceSlugForLesson(cards[0]));
     assert.equal(resource.id, family.canonicalLessonId);
-    assert.deepEqual(resource.levels, levels);
+    assert.deepEqual(resource.levels.filter(level=>level!=='A0'), levels);
     assert.ok(family.variants[level].communicativeObjectives.length >= 3);
   }
   assert.equal(added, 2);
@@ -122,8 +122,8 @@ test('the four families are complete with exactly fourteen Batch 1 additions and
   for (const [id, added] of Object.entries(expected)) {
     const family = p.conversationFamilies.find(f => f.id === id);
     const original = originals.families.find(f => f.id === id);
-    assert.deepEqual(family.availableLevels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
-    assert.deepEqual(family.availableLevels.filter(level => !original.variants[level]), added);
+    assert.deepEqual(family.availableLevels.filter(level=>level!=='A0'), ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+    assert.deepEqual(family.availableLevels.filter(level => level !== 'A0' && !original.variants[level]), added);
     assert.equal(family.access, 'pro');
     assert.deepEqual(family.legacyLessonIds, original.legacyLessonIds);
     seedIds.push(...family.legacyLessonIds);

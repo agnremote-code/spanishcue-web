@@ -11,12 +11,13 @@ import {
   pickRandomIndex,
   shouldHandleShortcut,
 } from "./engine.mjs";
+import { a0Support } from "./a0.mjs";
 import { a1Support } from "./a1.mjs";
 import { c1Support } from "./c1.mjs";
 import { c2Support } from "./c2.mjs";
 import "./red-flag.css";
 
-type Level = "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
+type Level = "A0" | "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 type View = "warmup" | "play" | "finale";
 type FlagChoice = "green" | "red";
 type Judgment = FlagChoice | "qualified" | "uncertain";
@@ -31,7 +32,7 @@ const rounds = {
 } as const;
 
 export default function RedFlagGame({ level }: { level: Level }) {
-  return <ConversationFamily id="red-flag-o-no" title="Red Flag o No" levels={["A1", "A2", "B1", "B2", "C1", "C2"]} defaultLevel={level}>{selected => <RedFlagActivity key={selected} level={selected as Level} />}</ConversationFamily>;
+  return <ConversationFamily id="red-flag-o-no" title="Red Flag o No" levels={["A0", "A1", "A2", "B1", "B2", "C1", "C2"]} defaultLevel={level}>{selected => <RedFlagActivity key={selected} level={selected as Level} />}</ConversationFamily>;
 }
 
 function RedFlagActivity({ level }: { level: Level }) {
@@ -52,7 +53,7 @@ function RedFlagActivity({ level }: { level: Level }) {
   const situation = config.situations[index];
   const choice = answers[index];
   const roundKey = getRoundForIndex(index) as keyof typeof rounds;
-  const support = level === "A1" ? a1Support : null;
+  const support = level === "A0" ? a0Support : level === "A1" ? a1Support : null;
   const cardSupport = support?.cards[index];
   const round = support ? support.rounds[roundKey] : advanced ? advanced.rounds[roundKey] : rounds[roundKey];
   const localized = Boolean(support || advanced);
@@ -177,10 +178,10 @@ function RedFlagActivity({ level }: { level: Level }) {
           {advanced && followUps[index] && <p className="rf-c1-instruction">{c2 && alternativeReveals[index] ? "Con las dos versiones: elige una señal, matiza o suspende el juicio. Distingue evidencia, interpretación e incertidumbre." : "Con el contexto: vuelve a elegir una señal o matiza tu juicio. Explica qué dato sostiene tu decisión."}</p>}
           <div className="rf-choices" role="group" aria-label={localized ? "¿Señal verde o señal roja?" : "¿Green flag o red flag?"}>
             <button className={visibleChoice === "green" ? "green selected" : "green"} aria-pressed={visibleChoice === "green"} onClick={() => choose("green")}>
-              <span>🟢</span><b>{localized ? "SEÑAL VERDE" : "GREEN FLAG"}</b><small>tecla G</small>
+              <span>🟢</span><b>{level==='A0'?'VERDE / GREEN':localized ? "SEÑAL VERDE" : "GREEN FLAG"}</b><small>tecla G</small>
             </button>
             <button className={visibleChoice === "red" ? "red selected" : "red"} aria-pressed={visibleChoice === "red"} onClick={() => choose("red")}>
-              <span>🔴</span><b>{localized ? "SEÑAL ROJA" : "RED FLAG"}</b><small>tecla R</small>
+              <span>🔴</span><b>{level==='A0'?'ROJA / RED':localized ? "SEÑAL ROJA" : "RED FLAG"}</b><small>tecla R</small>
             </button>
           </div>
 
@@ -189,14 +190,14 @@ function RedFlagActivity({ level }: { level: Level }) {
               <h2>Para hablar</h2>
               <div className="rf-a1-frames">{support.frames.map(frame => <span key={frame}>{frame}</span>)}</div>
               <p><strong>Palabras útiles:</strong> {cardSupport.chunks.join(" · ")}</p>
-              <details><summary>Un ejemplo</summary><p>{cardSupport.reason}</p></details>
+              <details open={level==='A0'}><summary>{level==='A0'?'Un modelo / A model':'Un ejemplo'}</summary><p>{cardSupport.reason}</p></details>
               <details className="rf-a1-teacher"><summary>Para quien enseña</summary><p>{cardSupport.teacher}</p></details>
             </aside>
           )}
 
           {choice && !advanced && (
             <div className="rf-why">
-              <div><span>AHORA EXPLICA</span><h2>¿POR QUÉ?</h2></div>
+              <div><span>{level==='A0'?'AHORA HABLA / NOW SPEAK':'AHORA EXPLICA'}</span><h2>{level==='A0'?'Repite el modelo. / Repeat the model.':'¿POR QUÉ?'}</h2></div>
               <button onClick={revealFollowUp} aria-expanded={Boolean(followUps[index])}>
                 {followUps[index] ? "OCULTAR REPREGUNTA" : "ABRIR REPREGUNTA OPCIONAL"}
               </button>

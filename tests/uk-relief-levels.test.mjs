@@ -31,14 +31,13 @@ test('A1 uses the same twelve areas and 48 places, with its own eight simple que
   }
 });
 
-test('old A2 links fall back to B1 while the selector offers a distinct A1, without an A2 option', async () => {
+test('UK selector offers all levels while retaining its B1 default and native places', async () => {
   const page = await readFile('app/reino-unido-en-relieve/page.tsx', 'utf8');
-  const catalog = await readFile('app/lesson-catalog.ts', 'utf8');
-  const seed = catalog.split('\n').find(line => line.includes('{id:32,'));
-  assert.match(page, /levels=\{\["A1","B1"\]\} defaultLevel="B1"/);
-  assert.match(page, /placesForUKArea\(active,level\)/);
-  assert.match(seed, /level:"B1",levels:\["A1","B1"\]/);
-  assert.equal(resolveConversationLevel({availableLevels:['A1','B1'],defaultLevel:'B1'}, 'A2'), 'B1');
+  assert.match(page, /levels=\{COUNTRY_LEVELS\} defaultLevel="B1"/);
+  assert.match(page, /placesForUKArea\(active,/);
+  for (const level of ['A0','A1','A2','B1','B2','C1','C2']) {
+    assert.equal(resolveConversationLevel({availableLevels:['A0','A1','A2','B1','B2','C1','C2'],defaultLevel:'B1'}, level), level);
+  }
 });
 
 test('A1 speaking prompts compose as separate, complete ideas', () => {

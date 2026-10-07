@@ -2,8 +2,14 @@
 
 import { useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
+import {ConversationFamily} from "../conversation-families/ConversationFamily";
+import {CEFR_LEVELS,type CEFRLevel} from "../conversation-families/types";
+import {WorldSupport} from "../world-speaking/WorldSupport";
+import {worldSeeds} from "./world-seeds";
+
 import "./style.css";
-import { districts, speakingTools, type District } from "./data";
+import {type District} from "./data";
+import {cityVariants} from "./variants";
 
 type Screen = "cover" | "map" | "district";
 
@@ -57,7 +63,10 @@ function LivingBalconies({ district, question }: { district: District; question:
   );
 }
 
-export default function FutureCity() {
+export default function FutureCity(){return <ConversationFamily id="future-city" title="La ciudad del futuro" levels={CEFR_LEVELS} defaultLevel="B1">{level=><FutureCityExperience key={level} level={level}/>}</ConversationFamily>;}
+function FutureCityExperience({level}:{level:CEFRLevel}){
+ const ui=(es:string,en:string)=>level==='A0'?`${es} · ${en}`:es;
+  const {districts,speakingTools}=cityVariants[level];
   const [screen, setScreen] = useState<Screen>("cover");
   const [active, setActive] = useState<District | null>(null);
   const [question, setQuestion] = useState(0);
@@ -66,7 +75,7 @@ export default function FutureCity() {
 
   const currentIndex = useMemo(
     () => (active ? districts.findIndex((district) => district.id === active.id) : 0),
-    [active]
+    [active,districts]
   );
 
   const show = (next: Screen) => {
@@ -99,12 +108,12 @@ export default function FutureCity() {
           <b>SPANISHCUE</b>
         </Link>
         <div className="fc-nav-center" aria-label="Progreso de la ciudad">
-          <span>CIUDAD EXPLORADA</span>
+          <span>{ui("CIUDAD EXPLORADA","CITY EXPLORED")}</span>
           <i><b style={{ width: `${progress}%` }} /></i>
           <strong>{visited.size} / {districts.length}</strong>
         </div>
         <button onClick={() => show(screen === "cover" ? "map" : "cover")}>
-          {screen === "cover" ? "VER MAPA" : "INICIO"}
+          {screen === "cover" ? ui("VER MAPA","VIEW MAP") : ui("INICIO","HOME")}
         </button>
       </nav>
 
@@ -119,27 +128,26 @@ export default function FutureCity() {
           <div className="fc-scanline" aria-hidden="true" />
           <CityAtmosphere />
           <div className="fc-cover-copy">
-            <div className="fc-kicker"><span>B1</span> CONVERSACIÓN · URBAN LAB</div>
-            <p className="fc-year">AÑO 2076 · LA CIUDAD TE ESTÁ ESPERANDO</p>
-            <h1>LA CIUDAD<br /><em>DEL FUTURO</em></h1>
+            <div className="fc-kicker"><span>{level}</span> {ui("CONVERSACIÓN · URBAN LAB","CONVERSATION · URBAN LAB")}</div>
+            <p className="fc-year">{ui("AÑO 2076 · LA CIUDAD TE ESTÁ ESPERANDO","YEAR 2076 · THE CITY IS WAITING")}</p>
+            <h1>{ui("LA CIUDAD","THE CITY")}<br /><em>{ui("DEL FUTURO","OF THE FUTURE")}</em></h1>
             <p className="fc-cover-lead">
-              No vienes a adivinar qué tecnología existirá. Vienes a decidir cómo queremos vivir.
-              Entra a 12 edificios realistas, elige una puerta y enfrenta preguntas que no aparecen en una clase normal.
+              {level==="A0"?"Entra a un edificio. Escucha y elige una pieza. / Enter a building. Listen and choose a chunk.":<>No vienes a adivinar qué tecnología existirá. Vienes a decidir cómo queremos vivir. Entra a 12 edificios realistas, elige una puerta y enfrenta preguntas que no aparecen en una clase normal.</>}
             </p>
-            <div className="fc-cover-actions">
-              <button onClick={() => show("map")}>ENTRAR A LA CIUDAD <span>→</span></button>
-              <small>Future City · 48 preguntas bilingües</small>
+            {level==="A0"&&<WorldSupport seed={worldSeeds[0]} level={level}/>}<div className="fc-cover-actions">
+              <button onClick={() => show("map")}>{ui("ENTRAR A LA CIUDAD","ENTER THE CITY")} <span>→</span></button>
+              <small>{ui("Future City · 48 preguntas bilingües","Future City · 48 bilingual questions")}</small>
             </div>
             <div className="fc-cover-stats">
-              <article><b>12</b><span>edificios humanos</span></article>
-              <article><b>48</b><span>preguntas WOW</span></article>
-              <article><b>1</b><span>solo distrito TECH</span></article>
+              <article><b>12</b><span>{ui("edificios humanos","human buildings")}</span></article>
+              <article><b>48</b><span>{ui("preguntas WOW","WOW questions")}</span></article>
+              <article><b>1</b><span>{ui("solo distrito TECH","TECH district only")}</span></article>
             </div>
           </div>
           <div className="fc-floating-label label-one" aria-hidden="true"><b>HUMANIDAD</b><span>antes que tecnología</span></div>
           <div className="fc-floating-label label-two" aria-hidden="true"><b>2076</b><span>¿qué conservarías?</span></div>
           <div className="fc-future-sign" aria-hidden="true"><i /> METRO AÉREO <b>03 MIN</b><span>→</span></div>
-          <button className="fc-scroll-cue" onClick={() => show("map")} aria-label="Entrar a la ciudad"><span>↓</span> EXPLORAR</button>
+          <button className="fc-scroll-cue" onClick={() => show("map")} aria-label="Entrar a la ciudad"><span>↓</span> {ui("EXPLORAR","EXPLORE")}</button>
         </section>
       )}
 
@@ -147,12 +155,12 @@ export default function FutureCity() {
         <section className="fc-map-page">
           <header className="fc-page-head">
             <div>
-              <span>DISTRITO CENTRAL · B1</span>
-              <h1>Elige un edificio.<br />Cambia la ciudad.</h1>
+              <span>{ui("DISTRITO CENTRAL ·","CENTRAL DISTRICT ·")} {level}</span>
+              <h1>{ui("Elige un edificio.","Choose a building.")}<br />{ui("Cambia la ciudad.","Change the city.")}</h1>
             </div>
             <div className="fc-map-intro">
-              <p>Cada edificio abre un tema distinto. <b>Solo uno es TECH:</b> los otros once hablan de tiempo, salud, comida, poder, vínculos, migración y vida real.</p>
-              <button onClick={randomDistrict}>SORPRÉNDEME <span>↗</span></button>
+              <p>{ui("Cada edificio abre un tema distinto.","Each building opens a different topic.")} <b>{ui("Solo uno es TECH:","Only one is TECH:")}</b> {ui("los otros once hablan de tiempo, salud, comida, poder, vínculos, migración y vida real.","the other eleven explore time, health, food, power, relationships, migration and real life.")}</p>
+              <button onClick={randomDistrict}>{ui("SORPRÉNDEME","SURPRISE ME")} <span>↗</span></button>
             </div>
           </header>
 
@@ -180,15 +188,15 @@ export default function FutureCity() {
                   <small>{district.category}</small>
                   <b>{district.name}</b>
                   <em>{district.english}</em>
-                  <i>ENTRAR AL EDIFICIO <strong>→</strong></i>
+                  <i>{ui("ENTRAR AL EDIFICIO","ENTER THE BUILDING")} <strong>→</strong></i>
                 </span>
               </button>
             ))}
           </div>
 
           <section className="fc-city-rule">
-            <span>REGLA DE LA CIUDAD</span>
-            <p>No busques la respuesta correcta. <b>Diseña una respuesta posible, encuentra el problema que crea y mejórala.</b></p>
+            <span>{ui("REGLA DE LA CIUDAD","CITY RULE")}</span>
+            <p>{level==="A0"?"Escucha un modelo, elige una pieza y habla. / Listen to a model, choose a chunk and speak.":<>No busques la respuesta correcta. <b>Diseña una respuesta posible, encuentra el problema que crea y mejórala.</b></>}</p>
           </section>
         </section>
       )}
@@ -200,8 +208,8 @@ export default function FutureCity() {
             <span className="fc-district-shade" />
             <CityAtmosphere compact />
             <div className="fc-district-topline">
-              <button onClick={() => show("map")}>← MAPA DE LA CIUDAD</button>
-              <span>EDIFICIO {active.number} / {districts.length}</span>
+              <button onClick={() => show("map")}>{ui("← MAPA DE LA CIUDAD","← CITY MAP")}</button>
+              <span>{ui("EDIFICIO","BUILDING")} {active.number} / {districts.length}</span>
             </div>
             <div className="fc-district-title">
               <small>{active.category}</small>
@@ -215,8 +223,8 @@ export default function FutureCity() {
           <div className="fc-district-body">
             <section className="fc-question-picker">
               <header>
-                <div><span>01 · ELIGE UNA PUERTA</span><h2>¿Qué pregunta quieres abrir?</h2></div>
-                <p>Son B1 de verdad: claras para entender, difíciles de responder.</p>
+                <div><span>{ui("01 · ELIGE UNA PUERTA","01 · CHOOSE A DOOR")}</span><h2>{ui("¿Qué pregunta quieres abrir?","Which question do you want to open?")}</h2></div>
+                <p>Nivel {level} · Elige una pregunta y conversa. / Choose a question and speak.</p>
               </header>
               <div>
                 {active.questions.map((item, index) => (
@@ -232,11 +240,11 @@ export default function FutureCity() {
             <section className="fc-question-stage" key={`${active.id}-${question}`}>
               <LivingBalconies district={active} question={question} />
               <div className="fc-stage-content">
-                <div className="fc-stage-label"><span>PREGUNTA {question + 1}</span><b>B1 · 3–5 MIN</b></div>
+                <div className="fc-stage-label"><span>{ui("PREGUNTA","QUESTION")} {question + 1}</span><b>{level} · 3–5 MIN</b></div>
                 <h2>{active.questions[question].es}</h2>
                 <p>{active.questions[question].en}</p>
                 <aside>
-                  <span>GIRO WOW</span>
+                  <span>{ui("GIRO WOW","SPEAKING TURN")}</span>
                   <b>{active.questions[question].challenge}</b>
                 </aside>
               </div>
@@ -244,25 +252,26 @@ export default function FutureCity() {
 
             <section className="fc-language-lab">
               <div className="fc-vocab">
-                <header><span>02</span><div><small>PALABRAS DEL EDIFICIO</small><h2>Vocabulario útil</h2></div></header>
+                <header><span>02</span><div><small>{ui("PALABRAS DEL EDIFICIO","WORDS FOR THIS BUILDING")}</small><h2>{ui("Vocabulario útil","Useful vocabulary")}</h2></div></header>
                 <div>{active.vocabulary.map(([es, en]) => <article key={es}><b>{es}</b><span>{en}</span></article>)}</div>
               </div>
               <div className="fc-tools">
-                <header><span>03</span><div><small>NO TE QUEDES EN BLANCO</small><h2>Herramientas B1</h2></div></header>
+                <header><span>03</span><div><small>{ui("NO TE QUEDES EN BLANCO","HELP TO KEEP SPEAKING")}</small><h2>{ui("Herramientas","Tools")} {level}</h2></div></header>
                 <div>{speakingTools.map(([es, en]) => <article key={es}><b>{es}</b><span>{en}</span></article>)}</div>
               </div>
             </section>
 
-            <section className="fc-answer-formula">
+            <WorldSupport key={active.id} seed={worldSeeds[currentIndex]} level={level}/>
+            {level==="B1"&&<section className="fc-answer-formula">
               <span>FÓRMULA PARA UNA RESPUESTA WOW</span>
               <div><b>POSTURA</b><i>→</i><b>RAZÓN</b><i>→</i><b>EJEMPLO</b><i>→</i><b>CONSECUENCIA INESPERADA</b></div>
               <p>“Yo lo haría porque… Un ejemplo sería… Sin embargo, el riesgo es que…”</p>
             </section>
 
-            <footer className="fc-district-nav">
-              <button onClick={() => moveDistrict(-1)}>← EDIFICIO ANTERIOR</button>
-              <button onClick={randomDistrict}>EDIFICIO AL AZAR ↗</button>
-              <button onClick={() => moveDistrict(1)}>SIGUIENTE EDIFICIO →</button>
+            }<footer className="fc-district-nav">
+              <button onClick={() => moveDistrict(-1)}>{ui("← EDIFICIO ANTERIOR","← PREVIOUS BUILDING")}</button>
+              <button onClick={randomDistrict}>{ui("EDIFICIO AL AZAR ↗","RANDOM BUILDING ↗")}</button>
+              <button onClick={() => moveDistrict(1)}>{ui("SIGUIENTE EDIFICIO →","NEXT BUILDING →")}</button>
             </footer>
           </div>
         </section>

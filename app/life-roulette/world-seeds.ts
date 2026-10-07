@@ -1,0 +1,21 @@
+import {seed} from '../world-speaking/content';
+export const worldSeeds = [
+ seed("una película","a film","una canción","a song","Todos recomiendan una serie que a ti te aburre.","Everyone recommends a series you find boring.","Si es famoso, es bueno.","If it is famous, it is good."),
+ seed("un taxi","a taxi","un autobús","a bus","Pierdes el último autobús después de una fiesta.","You miss the last bus after a party.","Planear bien evita todo problema.","Good planning prevents every problem."),
+ seed("un teléfono","a phone","un libro","a book","Tu teléfono se rompe durante un fin de semana.","Your phone breaks during a weekend.","Sin tecnología vivimos mejor.","We live better without technology."),
+ seed("una pizza","a pizza","una ensalada","a salad","Tus invitados tienen gustos muy diferentes.","Your guests have very different tastes.","La comida une a todos.","Food brings everyone together."),
+ seed("la playa","the beach","la montaña","the mountains","Tu compañero de viaje quiere cambiar el destino.","Your travel partner wants to change destination.","Un buen viaje necesita un plan.","A good trip needs a plan."),
+ seed("un objeto","an object","un viaje","a trip","Compras algo barato que deja de funcionar al día siguiente.","You buy something cheap that stops working the next day.","Lo barato siempre sale caro.","Cheap things always cost more in the end."),
+ seed("trabajar","to work","descansar","to rest","Te ofrecen un empleo agradable con menos sueldo.","You are offered a pleasant job with lower pay.","El trabajo ideal no cansa.","The ideal job is not tiring."),
+ seed("compañía","company","espacio","space","Un amigo quiere hablar todos los días.","A friend wants to talk every day.","La amistad no necesita límites.","Friendship needs no boundaries."),
+ seed("un café","a coffee","una cena","a dinner","Tu cita mira el teléfono mientras hablas.","Your date looks at their phone while you speak.","La primera impresión nunca falla.","First impressions never fail."),
+ seed("silencio","silence","música","music","Un vecino ensaya con su banda todas las noches.","A neighbor rehearses with their band every night.","En mi casa hago lo que quiero.","I do whatever I want in my own home."),
+ seed("un parque","a park","un autobús","a bus","Tu ciudad elimina una línea de autobús poco utilizada.","Your city removes a rarely used bus route.","Una ciudad eficiente es una ciudad feliz.","An efficient city is a happy city."),
+ seed("fotos","photos","historias","stories","Dos amigos recuerdan la misma fiesta de maneras opuestas.","Two friends remember the same party differently.","Los recuerdos no mienten.","Memories do not lie."),
+ seed("fama","fame","privacidad","privacy","Un vídeo tuyo se vuelve famoso sin que lo esperes.","A video of you becomes famous unexpectedly.","La fama es un premio.","Fame is a reward."),
+ seed("ayuda","help","calma","calm","Debes presentar una idea delante de desconocidos.","You must present an idea to strangers.","El miedo es falta de preparación.","Fear means lack of preparation."),
+ seed("un cambio","a change","tiempo","time","Un consejo que rechazaste ahora te parece útil.","Advice you rejected now seems useful.","Cambiar de opinión es debilidad.","Changing your mind is weakness."),
+ seed("viajar","to travel","descansar","to rest","Tienes un mes libre pero tus amigos trabajan.","You have a month off but your friends are working.","El tiempo libre debe ser productivo.","Free time should be productive."),
+ seed("una fiesta","a party","una cena","a dinner","Un visitante no conoce las reglas de una celebración.","A visitor does not know the rules of a celebration.","Las tradiciones se entienden sin explicación.","Traditions need no explanation."),
+ seed("mate","mate tea","café","coffee","Un amigo argentino dice «dale» y no sabes si acepta o tiene prisa.","An Argentine friend says “dale” and you cannot tell whether they agree or are in a hurry.","Una palabra tiene un solo significado.","A word has only one meaning."),
+];

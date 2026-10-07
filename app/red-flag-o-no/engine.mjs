@@ -1,3 +1,4 @@
+import { a0Config } from "./a0.mjs";
 import { a1Config } from "./a1.mjs";
 import { c1Config } from "./c1.mjs";
 import { c2Config } from "./c2.mjs";
@@ -10,6 +11,7 @@ const sharedFinale = [
 ];
 
 const levels = {
+  A0: a0Config,
   A1: a1Config,
   C1: c1Config,
   C2: c2Config,

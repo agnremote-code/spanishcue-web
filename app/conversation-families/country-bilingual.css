@@ -1,0 +1,5 @@
+/* Native text gains an English gloss at absolute-beginner level. */
+.country-a0-en { display: none !important; }
+.cf-family[data-level="A0"] .country-a0-en { display: inline !important; font-size: .85em; font-weight: 400; letter-spacing: normal; position: static !important; background: none !important; color: inherit !important; padding: 0 !important; margin: 0 !important; border: 0 !important; box-shadow: none !important; transform: none !important; text-transform: none !important; }
+
+.cf-family[data-level="A0"] [class*="wordbank"] button:disabled { opacity: 1; cursor: default; }

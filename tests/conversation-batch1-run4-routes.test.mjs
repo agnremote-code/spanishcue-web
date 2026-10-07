@@ -52,7 +52,7 @@ test('all twenty-four level variants render through all ten historical adapters,
       const html = await renderRoute(route, `?locale=es&level=${level}&source=teacher`);
       assert.ok(html.includes(`data-level="${level}"`), `${route} ${level}`);
       assert.ok(html.includes(escaped(marker)), `${route} ${level}: bank-specific content`);
-      const controls = [...html.matchAll(/aria-pressed="(?:true|false)">(A1|A2|B1|B2|C1|C2)<\/button>/g)].map(match => match[1]);
+      const controls = [...html.matchAll(/aria-pressed="(?:true|false)">(A0|A1|A2|B1|B2|C1|C2)<\/button>/g)].map(match => match[1]);
       assert.deepEqual(controls, [...family.availableLevels], 'No speculative or missing selector level');
       for (const available of family.availableLevels) assert.ok(html.includes(`>${available}</button>`), `${id} exposes ${available}`);
       assert.ok(html.includes(`aria-pressed="true">${level}</button>`));
@@ -128,7 +128,7 @@ test('all four selectors preserve query/hash, isolate child keys, support back/f
       removeEventListener: name => callbacks.delete(name),
       dispatchEvent: event => callbacks.get(event.type)?.(),
     };
-    const hooks = {...React, useCallback: fn => fn, useSyncExternalStore: (subscribe, snapshot) => {
+    const hooks = {...React, useRef: value => ({current: value}), useEffect: () => {}, useCallback: fn => fn, useSyncExternalStore: (subscribe, snapshot) => {
       if (!cleanup) cleanup = subscribe(() => {notifications++;});
       return snapshot();
     }};

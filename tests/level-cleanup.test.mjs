@@ -52,14 +52,15 @@ test('A1 has the merged total and pedagogical route order', () => {
   }
 });
 
-test('legacy surfaces keep A0 absent outside the shared selector and three authored countries', async () => {
+test('A0 source additions stay within conversation engines and shared level navigation', async () => {
   const entries = await readdir(join(root, 'app'), { recursive: true, withFileTypes: true });
   const files = entries.filter((entry) => entry.isFile() && ['.ts', '.tsx', '.mjs', '.css'].includes(extname(entry.name)))
     .map((entry) => join(entry.parentPath, entry.name));
   for (const file of files) {
     const source = await readFile(file, 'utf8');
     const relative=file.slice(root.length+1);
-    const authored=relative.startsWith('app/country-atlas/')||['app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);
+    const nativeConversation = lessons.filter(l=>l.category==='Conversación'&&l.path).some(l=>relative.startsWith(`app/${l.path.replace(/^\//,'')}/`));
+    const authored=nativeConversation||/^app\/(?:conversation-(?:families|worlds|vocabulary|narratives)|country-atlas|boards|play-mode|world-speaking|red-flag-o-no|choose-conversation)\//.test(relative)||['app/Library.tsx','app/library-filters.mjs','app/lesson-catalog.ts','app/clase/[id]/page.tsx'].includes(relative);
     if(!authored) assert.doesNotMatch(source, /\bA0\b/, `${file} exposes unauthored A0`);
     assert.doesNotMatch(source, /(?:a0-entry|level-a0|accent-a0)/, `${file} retains A0 styling`);
   }

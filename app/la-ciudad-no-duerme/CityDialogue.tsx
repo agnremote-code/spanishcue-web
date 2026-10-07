@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useRef, type CSSProperties } from 'react';
-import content from './content.json';
+import type {CEFRLevel} from '../conversation-families/types';
+import base from './content.json';
 
 export type Choice = { id: string; label: string; reaction: string; question: string; teacher: string; scene?: string; goTo?: string };
 export type Stop = {
@@ -10,10 +11,11 @@ export type Stop = {
   twist: { description: string; question: string; choices: Choice[] };
 };
 
-export function CityDialogue({ stop, choice, twist, style, onChoice, onTwist, onReconsider, onReturn, onTravel }: {
-  stop: Stop; choice: Choice | null; twist: boolean; style: CSSProperties;
+export function CityDialogue({ level, content, stop, choice, twist, style, onChoice, onTwist, onReconsider, onReturn, onTravel }: {
+  level:CEFRLevel; content:typeof base; stop: Stop; choice: Choice | null; twist: boolean; style: CSSProperties;
   onChoice: (choice: Choice) => void; onTwist: () => void; onReconsider: () => void; onReturn: () => void; onTravel: (id: string) => void;
 }) {
+  const t=(es:string,en:string)=>level==="A0"?`${es} / ${en}`:es;
   const heading = useRef<HTMLHeadingElement>(null);
   const panel = useRef<HTMLDivElement>(null);
   const situation = twist ? stop.twist : stop;
@@ -34,13 +36,13 @@ export function CityDialogue({ stop, choice, twist, style, onChoice, onTwist, on
         <div className="city-your-choice">ELEGISTE <strong>{choice.label}</strong></div>
         <p className="city-reaction">{choice.reaction}</p>
         <h2 id="city-encounter-title" ref={heading} tabIndex={-1}>{choice.question}</h2>
-        <div className="city-speaking-cue">Cuenta por qué. Suma un ejemplo.</div>
-        <details className="city-teacher-follow" key={`${twist}-${choice.id}`}><summary>Una pregunta más</summary><p>{choice.teacher}</p></details>
-        <details className="city-language-help" key={`help-${twist}-${choice.id}`}><summary>Una mano para empezar</summary><ul>{content.help.map(phrase => <li key={phrase}>{phrase}</li>)}</ul></details>
+        <div className="city-speaking-cue">{level==='A0'?'Elige y repite el modelo. / Choose and repeat the model.':'Cuenta por qué. Suma un ejemplo.'}</div>
+        <details className="city-teacher-follow" key={`${twist}-${choice.id}`}><summary>{t('Una pregunta más','One more question')}</summary><p>{choice.teacher}</p></details>
+        <details open={level==="A0"} className="city-language-help" key={`help-${twist}-${choice.id}`}><summary>{t('Una mano para empezar','Help to start')}</summary><ul>{content.help.map(phrase => <li key={phrase}>{phrase}</li>)}</ul></details>
         <div className="city-dialogue-actions">
-          {!twist && <button className="city-primary" onClick={onTwist}>ALGO CAMBIA <span>↗</span></button>}
-          {destination ? <button className={twist ? 'city-primary' : 'city-secondary'} onClick={() => onTravel(destination.id)}>CAMINAR HASTA {destination.sign.replace(/^EL |^LA /, '')} →</button> : <button className={twist ? 'city-primary' : 'city-secondary'} onClick={onReturn}>SEGUIR EXPLORANDO →</button>}
-          <button className="city-reconsider" onClick={onReconsider}>Probar otra respuesta</button>
+          {!twist && <button className="city-primary" onClick={onTwist}>{t("ALGO CAMBIA","SOMETHING CHANGES")} <span>↗</span></button>}
+          {destination ? <button className={twist ? 'city-primary' : 'city-secondary'} onClick={() => onTravel(destination.id)}>CAMINAR HASTA {destination.sign.replace(/^EL |^LA /, '')} →</button> : <button className={twist ? 'city-primary' : 'city-secondary'} onClick={onReturn}>{t("SEGUIR EXPLORANDO","KEEP EXPLORING")} →</button>}
+          <button className="city-reconsider" onClick={onReconsider}>{t('Probar otra respuesta','Try another answer')}</button>
         </div>
       </> : <>
         <p className="city-situation">{situation.description}</p>
@@ -48,13 +50,14 @@ export function CityDialogue({ stop, choice, twist, style, onChoice, onTwist, on
         <div className="city-choices" role="group" aria-label="Elige una opción para conversar">
           {situation.choices.map((item, index) => <button key={item.id} onClick={() => onChoice(item)}><span>{String.fromCharCode(65 + index)}</span><strong>{item.label}</strong><i>↗</i></button>)}
         </div>
-        <p className="city-choice-note">Elige lo que harías tú. Después, lo conversamos.</p>
+        <p className="city-choice-note">{t('Elige lo que harías tú. Después, lo conversamos.','Choose and say the Spanish phrase aloud.')}</p>
       </>}
     </div>
   </section>;
 }
 
-export function CityGuide({ onClose }: { onClose: () => void }) {
+export function CityGuide({ level, content, onClose }: { level:CEFRLevel; content:typeof base; onClose: () => void }) {
+  const t=(es:string,en:string)=>level==="A0"?`${es} / ${en}`:es;
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => { dialog.current?.showModal(); }, []);
   const sections = [
@@ -64,7 +67,7 @@ export function CityGuide({ onClose }: { onClose: () => void }) {
   ];
   return <dialog ref={dialog} className="city-modal" onCancel={onClose} aria-labelledby="city-guide-title">
     <button className="city-modal-close" onClick={onClose} aria-label="Cerrar la guía docente">×</button>
-    <div className="city-kicker">GUÍA DOCENTE · B1</div><h2 id="city-guide-title">La conversación marca el ritmo.</h2>
+    <div className="city-kicker">GUÍA DOCENTE · {level}</div><h2 id="city-guide-title">{t('La conversación marca el ritmo.','Follow the learner’s speaking pace.')}</h2>
     {sections.map(([title, description]) => <section key={title}><h3>{title}</h3><p>{description}</p></section>)}
     <section><h3>Controles</h3><p>Flechas ← y → para caminar. Enter o espacio para acercarse. También puedes tocar un lugar o elegirlo en «El barrio». En celular, mantén presionadas las flechas. Esc vuelve a la calle. Tab recorre los botones.</p></section>
     <button className="city-primary" onClick={onClose}>VOLVER A LA CLASE <span>→</span></button>

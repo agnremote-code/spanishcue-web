@@ -258,6 +258,18 @@
       "text": "¿Cómo debería reaccionar una persona cuando alguien comete un error en su idioma?",
       "category": "neutral-context",
       "reason": "Third-person present comete (commits an error), not a voseo command."
+    },
+    {
+      "path": "app/life-roulette/world-seeds.ts",
+      "text": "Un amigo argentino dice «dale» y no sabes si acepta o tiene prisa.",
+      "category": "regional-pedagogy",
+      "reason": "Explicitly Argentine quoted vocabulary challenge; surrounding instructions are neutral Spanish."
+    },
+    {
+      "path": "app/life-roulette/world-seeds.ts",
+      "text": "An Argentine friend says “dale” and you cannot tell whether they agree or are in a hurry.",
+      "category": "regional-pedagogy",
+      "reason": "Explicitly Argentine quoted vocabulary challenge; surrounding instructions are neutral Spanish."
     }
   ]
 }

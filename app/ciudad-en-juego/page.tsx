@@ -1,19 +1,15 @@
 "use client";
 
+import {ConversationFamily} from "../conversation-families/ConversationFamily";
+import {CEFR_LEVELS,type CEFRLevel} from "../conversation-families/types";
+import {GameSpeech,gameDemand} from "../conversation-families/game-language";
+import {cityGameContent} from "./levels";
 import { useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import PlayShell, { CardNav, SpeakPrompt, type PlayPowerUp, type PlayStage } from "../play-mode/PlayShell";
 import {
-  bossPrompts,
-  changeRounds,
   cityChoiceCategories,
-  cityChoices,
-  cityEvents,
-  finalQuestions,
   lessonStats,
   metricLabels,
-  negotiationRounds,
-  priorityRounds,
-  urbanProblems,
   type MetricKey,
 } from "./data";
 import "./style.css";
@@ -74,7 +70,9 @@ function StageCard({ eyebrow, title, children }: { eyebrow: string; title: strin
   );
 }
 
-export default function CiudadEnJuego() {
+export default function CiudadEnJuego() {return <ConversationFamily id="ciudad-en-juego" title="Ciudad en juego" levels={CEFR_LEVELS} defaultLevel="B1">{level=><CityGameActivity key={level} level={level}/>}</ConversationFamily>;}
+function CityGameActivity({level}:{level:CEFRLevel}) {
+  const {bossPrompts,changeRounds,cityChoices,cityEvents,finalQuestions,negotiationRounds,priorityRounds,urbanProblems}=useMemo(()=>cityGameContent(level),[level]);
   const [stage, setStage] = useState(0);
   const [index, setIndex] = useState(0);
   const [category, setCategory] = useState<(typeof cityChoiceCategories)[number]>("TODO");
@@ -93,7 +91,7 @@ export default function CiudadEnJuego() {
 
   const choicePool = useMemo(
     () => cityChoices.filter((item) => category === "TODO" || item.category === category),
-    [category],
+    [category,cityChoices],
   );
   const choiceIndex = index % choicePool.length;
   const currentChoice = choicePool[choiceIndex];
@@ -110,7 +108,7 @@ export default function CiudadEnJuego() {
       });
     });
     return result;
-  }, [choiceSelections]);
+  }, [choiceSelections,cityChoices]);
 
   const profile = useMemo(() => {
     const choices = cityChoices.flatMap((item) => {
@@ -126,7 +124,7 @@ export default function CiudadEnJuego() {
       return [selected === 3 ? "SOLUCIÓN PROPIA" : item.options[selected].label];
     });
     return [...choices, ...priorities, ...solutions].slice(-8);
-  }, [choiceSelections, prioritySelections, problemSelections]);
+  }, [choiceSelections, prioritySelections, problemSelections,cityChoices,priorityRounds,urbanProblems]);
 
   const savedDecisions = Object.keys(choiceSelections).length +
     Object.values(prioritySelections).filter((items) => items.length === 2).length +
@@ -187,14 +185,15 @@ export default function CiudadEnJuego() {
 
   return (
     <PlayShell
-      lesson="B1 · CONVERSACIÓN · MODO PLAY · 03"
+      lesson={`${level} · CONVERSACIÓN · MODO PLAY · 03`}
       title="CIUDAD EN JUEGO"
       stages={stages}
       stage={stage}
       onStageChange={changeStage}
       extraPowerUps={extraPowerUps}
-      supportLevel="B1"
+      supportLevel={level}
     >
+      <GameSpeech level={level} model={stage===3?"Quiero música. Música baja, por favor. / I want music. Quiet music, please.":"Quiero un parque. / I want a park. Necesito agua. / I need water."}/>
       {stage < 6 && <CityConsole scores={scores} decisions={savedDecisions} />}
 
       {stage === 0 && currentChoice && (
@@ -274,11 +273,11 @@ export default function CiudadEnJuego() {
             </button>
           </div>
           {problemSelection !== undefined && problemSelection < 3 && !problemCost && (
-            <><SpeakPrompt>Explica por qué esta solución debería funcionar.</SpeakPrompt><button className="reveal-button" onClick={() => setProblemCost(true)}>VER COSTO OCULTO ↓</button></>
+            <><SpeakPrompt>{gameDemand[level]}</SpeakPrompt><button className="reveal-button" onClick={() => setProblemCost(true)}>VER COSTO OCULTO ↓</button></>
           )}
-          {problemSelection === 3 && <SpeakPrompt>Explica tu solución, cómo se pagaría y qué riesgo podría crear.</SpeakPrompt>}
+          {problemSelection === 3 && <SpeakPrompt>{gameDemand[level]}</SpeakPrompt>}
           {problemCost && problemSelection < 3 && (
-            <><div className="twist-card"><small>COSTO OCULTO</small><b>{problem.options[problemSelection].consequence}</b></div><SpeakPrompt tone="coral">¿Mantienes tu solución, la ajustas o cambias? Defiende la nueva versión.</SpeakPrompt></>
+            <><div className="twist-card"><small>COSTO OCULTO</small><b>{problem.options[problemSelection].consequence}</b></div><SpeakPrompt tone="coral">{gameDemand[level]}</SpeakPrompt></>
           )}
           <CardNav index={index % urbanProblems.length} total={urbanProblems.length} onPrevious={() => move(urbanProblems.length, -1)} onNext={() => move(urbanProblems.length, 1)} />
         </section>
@@ -302,15 +301,16 @@ export default function CiudadEnJuego() {
           {negotiationMode && !negotiationPressure && (
             <>
               <SpeakPrompt>
-                {negotiationMode === "PACTO" && "Propón una medida concreta que ambos podrían aceptar. ¿Qué cede cada lado?"}
-                {negotiationMode === "PARTIDO" && "Elige un lado, defiéndelo y reconoce qué reclamo razonable tiene el otro."}
-                {negotiationMode === "CONDICIÓN" && "Usa “lo aceptaría solo si…” y formula una condición verificable."}
+                {level==='A0'&&'Música baja, por favor. / Quiet music, please. Repite el modelo. / Repeat the model.'}
+                {level!=='A0'&&negotiationMode === "PACTO" && "Propón una medida concreta que ambos podrían aceptar. ¿Qué cede cada lado?"}
+                {level!=='A0'&&negotiationMode === "PARTIDO" && "Elige un lado, defiéndelo y reconoce qué reclamo razonable tiene el otro."}
+                {level!=='A0'&&negotiationMode === "CONDICIÓN" && "Usa “lo aceptaría solo si…” y formula una condición verificable."}
               </SpeakPrompt>
               <button className="reveal-button" onClick={() => setNegotiationPressure(true)}>NUEVA CONDICIÓN ↓</button>
             </>
           )}
           {negotiationPressure && (
-            <><div className="twist-card"><small>AHORA NEGOCIA CON ESTO</small><b>{negotiation.pressure}</b></div><SpeakPrompt tone="coral">Reformula el acuerdo. ¿Qué mantienes y qué concedes ahora?</SpeakPrompt></>
+            <><div className="twist-card"><small>AHORA NEGOCIA CON ESTO</small><b>{negotiation.pressure}</b></div><SpeakPrompt tone="coral">{gameDemand[level]}</SpeakPrompt></>
           )}
           <CardNav index={index % negotiationRounds.length} total={negotiationRounds.length} onPrevious={() => move(negotiationRounds.length, -1)} onNext={() => move(negotiationRounds.length, 1)} />
         </section>
@@ -321,7 +321,7 @@ export default function CiudadEnJuego() {
           <BankBar total={changeRounds.length} suggested="usa 3–4 cambios" onShuffle={() => shuffle(changeRounds.length)} />
           <StageCard eyebrow="TU DECISIÓN" title={change.decision} />
           {!changeRevealed ? (
-            <><SpeakPrompt>Defiende esa decisión con una ventaja y un objetivo.</SpeakPrompt><button className="city-change-trigger" onClick={() => setChangeRevealed(true)}>¡CAMBIO!<span>ABRIR NUEVA CONDICIÓN ↓</span></button></>
+            <><SpeakPrompt>{gameDemand[level]}</SpeakPrompt><button className="city-change-trigger" onClick={() => setChangeRevealed(true)}>¡CAMBIO!<span>ABRIR NUEVA CONDICIÓN ↓</span></button></>
           ) : (
             <>
               <div className="city-change-card"><small>CAMBIÓ LA REGLA</small><b>{change.change}</b><p>{change.question}</p></div>
@@ -329,7 +329,7 @@ export default function CiudadEnJuego() {
                 <button className={changeDecision === "MANTENGO" ? "active" : ""} onClick={() => setChangeDecision("MANTENGO")}>MANTENGO</button>
                 <button className={changeDecision === "CAMBIO" ? "active" : ""} onClick={() => setChangeDecision("CAMBIO")}>CAMBIO</button>
               </div>
-              {changeDecision && <SpeakPrompt tone={changeDecision === "MANTENGO" ? "lime" : "coral"}>{changeDecision === "MANTENGO" ? "Defiende qué beneficio justifica el nuevo costo y qué límite no cruzarías." : "Explica qué dato cambió tu postura y presenta una alternativa mejor."}</SpeakPrompt>}
+              {changeDecision && <SpeakPrompt tone={changeDecision === "MANTENGO" ? "lime" : "coral"}>{level==='A0'?'Cambio. / I change. Sigo. / I continue. Say your choice.':changeDecision === "MANTENGO" ? "Defiende qué beneficio justifica el nuevo costo y qué límite no cruzarías." : "Explica qué dato cambió tu postura y presenta una alternativa mejor."}</SpeakPrompt>}
             </>
           )}
           <CardNav index={index % changeRounds.length} total={changeRounds.length} onPrevious={() => move(changeRounds.length, -1)} onNext={() => move(changeRounds.length, 1)} />
@@ -348,7 +348,7 @@ export default function CiudadEnJuego() {
           <div className="city-event-cues">
             {event.cues.map((cue) => <button key={cue} className={eventCue === cue ? "active" : ""} onClick={() => setEventCue(cue)}>{cue}</button>)}
           </div>
-          {eventCue && <SpeakPrompt tone="coral">Empieza por “{eventCue.toLowerCase()}”. Reacciona en treinta segundos y anticipa una consecuencia.</SpeakPrompt>}
+          {eventCue && <SpeakPrompt tone="coral">{level==='A0'?`${eventCue} Repite. / Repeat.`:`Empieza por “${eventCue.toLowerCase()}”. Reacciona en treinta segundos y anticipa una consecuencia.`}</SpeakPrompt>}
           <CardNav index={index % cityEvents.length} total={cityEvents.length} onPrevious={() => move(cityEvents.length, -1)} onNext={() => move(cityEvents.length, 1)} />
         </section>
       )}

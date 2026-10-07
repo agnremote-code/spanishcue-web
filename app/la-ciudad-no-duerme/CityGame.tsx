@@ -1,25 +1,30 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useEffect, useRef, useState, type CSSProperties, type PointerEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent } from 'react';
 import { ConversationFamily } from '../conversation-families/ConversationFamily';
-import content from './content.json';
+import base from './content.json';
+import {cityContent} from './levels';
+import {CEFR_LEVELS, type CEFRLevel} from '../conversation-families/types';
 import { WORLD, cameraOffset, canHandleKeys, nearestStop, stepMotion } from './engine.mjs';
 import { CityDialogue, CityGuide, type Choice, type Stop } from './CityDialogue';
 import './city.css';
 
-const stops: Stop[] = content.stops;
+
 const asset = (name: string) => `/la-ciudad-no-duerme/${name}.webp`;
 type View = 'intro' | 'street' | 'focus' | 'ending';
-const levels = ['B1'] as const;
+const levels = CEFR_LEVELS;
 
 export default function CityGame() {
-  return <ConversationFamily id="la-ciudad-no-duerme" title={content.title} levels={levels} defaultLevel="B1">
-    {() => <CityExperience />}
+  return <ConversationFamily id="la-ciudad-no-duerme" title={base.title} levels={levels} defaultLevel="B1">
+    {level => <CityExperience key={level} level={level} />}
   </ConversationFamily>;
 }
 
-function CityExperience() {
+function CityExperience({level}:{level:CEFRLevel}) {
+  const t=(es:string,en:string)=>level==="A0"?`${es} / ${en}`:es;
+  const content = useMemo(()=>cityContent(level),[level]);
+  const stops:Stop[] = content.stops;
   const [view, setView] = useState<View>('intro');
   const [actor, setActor] = useState({ x: 250, moving: false, facing: 1 });
   const [size, setSize] = useState({ width: 1200, height: 700 });
@@ -77,7 +82,7 @@ function CityExperience() {
     motor.current.target = destination.x;
     motor.current.destination = id;
     requestAnimationFrame(() => stage.current?.focus({ preventScroll: true }));
-  }, [stopMovement]);
+  }, [stopMovement,stops]);
 
   useEffect(() => {
     const element = stage.current;
@@ -158,7 +163,7 @@ function CityExperience() {
       window.removeEventListener('blur', stopMovement);
       document.removeEventListener('visibilitychange', visibility);
     };
-  }, [view, guide, map, openStop, returnToStreet, stopMovement]);
+  }, [view, guide, map, openStop, returnToStreet, stopMovement,stops]);
 
   const movePointer = (event: PointerEvent<HTMLButtonElement>, direction: number) => {
     event.preventDefault();
@@ -188,12 +193,12 @@ function CityExperience() {
     backgroundPosition: `${(active.x / WORLD.width) * 100}% 48%`,
   } : { backgroundImage: `url(${asset(focusScene)})` };
 
-  return <main className={`city-game${reduced ? ' city-reduced' : ''}`} aria-label="La ciudad no duerme, conversación B1">
+  return <main className={`city-game${reduced ? ' city-reduced' : ''}`} aria-label={`La ciudad no duerme, conversación ${level}`}>
     <header className="city-header">
       <Link href="/" className="city-brand" aria-label="SPANISHCUE, volver a la biblioteca">SPANISH<span>CUE</span><i>↗</i></Link>
       <span className="city-header-name">LA CIUDAD NO DUERME</span>
       <div className="city-header-actions">
-        <span className="city-badge">B1</span>
+        <span className="city-badge">{level}</span>
         <button onClick={() => { stopMovement(); setGuide(true); }}>Guía docente</button>
         {view !== 'intro' && <button className="city-end-link" onClick={beginEnding}>Cerrar la noche ↗</button>}
       </div>
@@ -224,16 +229,16 @@ function CityExperience() {
       {view === 'intro' && <section className="city-intro" aria-labelledby="city-title">
         <div className="city-kicker"><span /> BARRIO DEL SUR · 23:40</div>
         <h1 id="city-title">LA CIUDAD<br />NO <em>DUERME.</em></h1>
-        <p>Una calle. Mil formas de verla.</p>
-        <p className="city-intro-copy">Recorre el barrio. Elige dónde parar.<br />Habla de lo que pasa.</p>
-        <button className="city-primary" onClick={returnToStreet}>SALIR A LA CALLE <span>→</span></button>
+        <p>{t('Una calle. Mil formas de verla.','One street. Many ways to see it.')}</p>
+        <p className="city-intro-copy">{t("Recorre el barrio. Elige dónde parar. Habla de lo que pasa.","Teacher moves and clicks. Learner chooses and says the Spanish model.")}</p>
+        <button className="city-primary" onClick={returnToStreet}>{t("SALIR A LA CALLE","START EXPLORING")} <span>→</span></button>
         <div className="city-intro-controls"><kbd>←</kbd><kbd>→</kbd> caminar <span>·</span> <kbd>↵</kbd> acercarte</div>
-        <small>CONVERSACIÓN B1 <span> / </span> ≈ 45 MIN <span> / </span> A TU RITMO</small>
+        <small>CONVERSACIÓN {level} <span> / </span> ≈ 45 MIN <span> / </span> A TU RITMO</small>
       </section>}
 
       {view === 'street' && <>
         <div className="city-location"><span>BARRIO DEL SUR</span><strong>{nearby?.name || 'Entre una esquina y otra'}</strong></div>
-        <div className="city-explore-note">Cuando algo llame tu atención, acércate.</div>
+        <div className="city-explore-note">{t('Cuando algo llame tu atención, acércate.','Choose a place to start a conversation.')}</div>
         <div className="city-bottom">
           <button className="city-map-toggle" onClick={() => { stopMovement(); setMap(true); }}><span className="city-map-glyph" aria-hidden="true">▤</span><span>EL BARRIO<small>{visited.length} de 10 lugares conversados</small></span></button>
           <div className="city-controls" aria-label="Controles de movimiento">
@@ -246,7 +251,7 @@ function CityExperience() {
         <span className="city-sr-only" role="status">{nearby ? `Cerca de ${nearby.name}. Enter para acercarte.` : 'Sigue explorando la calle.'}</span>
       </>}
 
-      {view === 'focus' && <CityDialogue
+      {view === 'focus' && <CityDialogue level={level} content={content}
         key={active.id}
         stop={active}
         choice={choice}
@@ -266,8 +271,8 @@ function CityExperience() {
         <div className="city-finale-copy">
           <div className="city-kicker">LA ÚLTIMA PARADA</div>
           {!endingPlace ? <>
-            <h2 id="city-final-title">¿Dónde termina<br />tu noche?</h2>
-            <p>Elige un lugar para mirar atrás.</p>
+            <h2 id="city-final-title">{t("¿Dónde termina tu noche?","Where does your night end?")}</h2>
+            <p>{t('Elige un lugar para mirar atrás.','Choose a place to finish.')}</p>
             <div className="city-ending-places">
               <button onClick={() => setEndingPlace('rooftop')}>En la terraza <span>La ciudad, desde arriba ↗</span></button>
               <button onClick={() => setEndingPlace('bar')}>En el bar <span>Una última conversación ↗</span></button>
@@ -276,7 +281,7 @@ function CityExperience() {
             <span className="city-ending-location">{endingPlace === 'rooftop' ? 'EN LA TERRAZA' : 'DE VUELTA EN LA ESQUINA'}</span>
             <h2 id="city-final-title">{content.finale.intro}</h2>
             <p className="city-final-question" aria-live="polite">{content.finale.questions[finalQuestion]}</p>
-            <nav className="city-final-nav" aria-label="Preguntas de cierre"><button disabled={finalQuestion === 0} onClick={() => setFinalQuestion(n => n - 1)}>← Anterior</button><span>{finalQuestion + 1} / 5</span><button disabled={finalQuestion === 4} onClick={() => setFinalQuestion(n => n + 1)}>Otra pregunta →</button></nav>
+            <nav className="city-final-nav" aria-label="Preguntas de cierre"><button disabled={finalQuestion === 0} onClick={() => setFinalQuestion(n => n - 1)}>← Anterior</button><span>{finalQuestion + 1} / {content.finale.questions.length}</span><button disabled={finalQuestion === content.finale.questions.length-1} onClick={() => setFinalQuestion(n => n + 1)}>Otra pregunta →</button></nav>
             <div className="city-finish-mark">FIN DEL RECORRIDO</div>
             <button className="city-primary" onClick={returnToStreet}>VOLVER A LA CIUDAD <span>↗</span></button>
           </>}
@@ -286,18 +291,19 @@ function CityExperience() {
       {missingArt && <p className="city-asset-error" role="alert">No se pudo cargar el barrio. Recarga la página para volver a intentarlo.</p>}
     </div>
 
-    {guide && <CityGuide onClose={() => { setGuide(false); requestAnimationFrame(() => stage.current?.focus({ preventScroll: true })); }} />}
-    {map && <CityMap visited={visited} onTravel={travelTo} onClose={() => { setMap(false); stage.current?.focus({ preventScroll: true }); }} />}
+    {guide && <CityGuide level={level} content={content} onClose={() => { setGuide(false); requestAnimationFrame(() => stage.current?.focus({ preventScroll: true })); }} />}
+    {map && <CityMap level={level} visited={visited} onTravel={travelTo} onClose={() => { setMap(false); stage.current?.focus({ preventScroll: true }); }} />}
   </main>;
 }
 
-function CityMap({ visited, onTravel, onClose }: { visited: string[]; onTravel: (id: string) => void; onClose: () => void }) {
+function CityMap({ level, visited, onTravel, onClose }: { level:CEFRLevel; visited: string[]; onTravel: (id: string) => void; onClose: () => void }) {
+  const t=(es:string,en:string)=>level==="A0"?`${es} / ${en}`:es;
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => { dialog.current?.showModal(); }, []);
   return <dialog className="city-modal city-map-modal" ref={dialog} onCancel={onClose} aria-labelledby="city-map-title">
     <button className="city-modal-close" onClick={onClose} aria-label="Cerrar el mapa">×</button>
-    <div className="city-kicker">A PIE, A TU RITMO</div><h2 id="city-map-title">Elige tu próxima parada.</h2>
-    <p>El personaje camina hasta el lugar que elijas.</p>
-    <nav aria-label="Lugares del barrio">{stops.map((stop, index) => <button key={stop.id} onClick={() => onTravel(stop.id)}><span>{String(index + 1).padStart(2, '0')}</span><strong>{stop.name}<small>{stop.topic}</small></strong><i>{visited.includes(stop.id) ? 'Volver ↗' : 'Ir →'}</i></button>)}</nav>
+    <div className="city-kicker">A PIE, A TU RITMO</div><h2 id="city-map-title">{t('Elige tu próxima parada.','Choose your next stop.')}</h2>
+    <p>{t('El personaje camina hasta el lugar que elijas.','The character walks to the place you choose.')}</p>
+    <nav aria-label="Lugares del barrio">{base.stops.map((stop, index) => <button key={stop.id} onClick={() => onTravel(stop.id)}><span>{String(index + 1).padStart(2, '0')}</span><strong>{stop.name}<small>{stop.topic}</small></strong><i>{visited.includes(stop.id) ? 'Volver ↗' : 'Ir →'}</i></button>)}</nav>
   </dialog>;
 }

@@ -25,7 +25,7 @@ export type Mechanic = { mechanic: string; more: string };
 export type CityEvent = { id: string; title: string; text: string; affects: string[]; prompts: string[]; teacher: string };
 export type Encounter = { done: boolean; acts: Record<string, Progress> };
 export type Phase = 'llegada' | 'ciudad' | 'encuentro' | 'evento' | 'cierre';
-export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+export type Level = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 export type NightState = {
   level?: Level; phase: Phase; position: string | null; activity: string | null; visitOrder: string[]; encounters: Record<string, Encounter>;
   event: { id: string; resolved: boolean } | null; final: { criteria: Record<string, boolean> };

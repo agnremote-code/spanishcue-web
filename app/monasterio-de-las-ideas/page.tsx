@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import "./style.css";
+import { bilingualUi } from "../boards/bilingual-ui";
+import { ConversationFamily } from "../conversation-families/ConversationFamily";
+import { CEFR_LEVELS, type CEFRLevel } from "../conversation-families/types";
+import { monasteryRoomsForLevel, monasteryClosing } from "./level-data";
 
 type Artifact = {
   icon: string;
@@ -13,7 +17,7 @@ type Artifact = {
   motion: "float" | "swing" | "glow" | "drift";
 };
 
-type Room = {
+export type Room = {
   id: string;
   number: string;
   name: string;
@@ -29,7 +33,7 @@ type Room = {
   y: number;
 };
 
-const rooms: Room[] = [
+const originalRooms: Room[] = [
   {
     id: "claustro", number: "01", name: "El claustro", subtitle: "El silencio que organiza",
     thesis: "No todo silencio es ausencia: algunos protegen, otros disciplinan y otros obligan a una comunidad a completar lo que nadie se atreve a decir.",
@@ -236,7 +240,7 @@ const rooms: Room[] = [
   }
 ];
 
-const totalQuestions = rooms.reduce((sum, room) => sum + room.questions.length, 0);
+const totalQuestions = originalRooms.reduce((sum, room) => sum + room.questions.length, 0);
 
 function playBell() {
   try {
@@ -258,6 +262,11 @@ function playBell() {
 }
 
 export default function MonasterioDeLasIdeas() {
+  return <ConversationFamily id="monasterio-de-las-ideas" title="El Monasterio de las Ideas" levels={CEFR_LEVELS} defaultLevel="C2">{level => <MonasterySession key={level} level={level} />}</ConversationFamily>;
+}
+
+function MonasterySession({ level }: { level: CEFRLevel }) {
+  const rooms = useMemo(() => monasteryRoomsForLevel(originalRooms, level), [level]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [view, setView] = useState<"map" | "entering" | "room">("map");
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -267,7 +276,7 @@ export default function MonasterioDeLasIdeas() {
   const [selectedArtifact, setSelectedArtifact] = useState<number | null>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [worldTilt, setWorldTilt] = useState({ x: 0, y: 0 });
-  const active = useMemo(() => rooms.find(room => room.id === activeId) ?? null, [activeId]);
+  const active = useMemo(() => rooms.find(room => room.id === activeId) ?? null, [activeId, rooms]);
   const progress = Math.round((visitedRooms.length / rooms.length) * 100);
 
   useEffect(() => {
@@ -319,11 +328,11 @@ export default function MonasterioDeLasIdeas() {
   const stageStyle = {"--tilt-x": tilt.y + "deg", "--tilt-y": tilt.x + "deg"} as CSSProperties;
   const worldStyle = {"--world-x": worldTilt.x + "px", "--world-y": worldTilt.y + "px"} as CSSProperties;
 
-  return (
+  return bilingualUi(
     <main className={"monastery-app view-" + view}>
       <div className="ambient" aria-hidden="true"><i/><i/><i/><i/><i/></div>
       <header className="monastery-nav">
-        <button className="monastery-brand brand-button" onClick={returnToMap}><span>SPANISH</span>CUE <small>C2 · CONVERSACIÓN FILOSÓFICA</small></button>
+        <button className="monastery-brand brand-button" onClick={returnToMap}><span>SPANISH</span>CUE <small>{level} · CONVERSACIÓN</small></button>
         <div className="monastery-progress"><span><b>{visitedRooms.length}</b> / {rooms.length} mundos</span><i><b style={{width: progress + "%"}}/></i></div>
         {view === "room" ? <button className="back-library" onClick={returnToMap}>← MAPA DEL MONASTERIO</button> : <Link href="/" className="back-library">← BIBLIOTECA</Link>}
       </header>
@@ -334,8 +343,8 @@ export default function MonasterioDeLasIdeas() {
             <span className="chapter">CAPÍTULO ÚNICO · UNA CLASE PARA RYAN</span>
             <h1>El Monasterio<br/><em>de las Ideas</em></h1>
           </div>
-          <p>Doce mundos interiores. Entra en cada espacio, explora sus objetos vivos y enfrenta tres preguntas C2 antes de volver a la maqueta.</p>
-          <div className="intro-stats"><span><b>12</b> mundos 3D</span><span><b>{totalQuestions}</b> preguntas C2</span><span><b>12</b> escenas vivas</span></div>
+          <p>Doce mundos interiores. Entra en cada espacio, explora sus objetos vivos y enfrenta tres preguntas {level} antes de volver a la maqueta.</p>
+          <div className="intro-stats"><span><b>12</b> mundos 3D</span><span><b>{totalQuestions}</b> preguntas {level}</span><span><b>12</b> escenas vivas</span></div>
         </section>
 
         <section className="monastery-workspace">
@@ -370,8 +379,8 @@ export default function MonasterioDeLasIdeas() {
             <div className="door-symbol" aria-hidden="true"><i/><span>Φ</span></div>
             <span className="panel-kicker">PUERTA DE ENTRADA</span>
             <h2>Acá no se elige una tarjeta. Se entra.</h2>
-            <p>Cada punto abre un interior distinto. La imagen cobra vida con movimientos propios de ese lugar y después aparecen tres preguntas extremadamente avanzadas.</p>
-            <blockquote>¿Qué idea defiendes correctamente en público, pero todavía discutes en privado?</blockquote>
+            <p>Cada punto abre un interior distinto. La imagen cobra vida con movimientos propios de ese lugar y después aparecen tres preguntas adaptadas al nivel elegido.</p>
+            <blockquote>{level === "C2" ? "¿Qué idea defiendes correctamente en público, pero todavía discutes en privado?" : rooms[0].questions[0]}</blockquote>
             <button className="bell-button" onClick={ringForRoom}><span>♟</span><b>Hacer sonar la campana</b><small>El monasterio abre una puerta al azar</small></button>
             <div className="class-rules"><span>REGLAS</span><p>Observa qué está pasando en la escena antes de responder.</p><p>Sin “depende” sin explicar de qué.</p><p>Sin citar para evitar responder.</p></div>
           </aside>
@@ -379,7 +388,7 @@ export default function MonasterioDeLasIdeas() {
 
         <section className="exit-question">
           <span>SALIDA DEL MONASTERIO</span>
-          <h2>¿Qué idea cambió de forma durante la conversación sin obligarte a cambiar completamente de bando?</h2>
+          <h2>{monasteryClosing(level)}</h2>
           <p>La respuesta final no resume: registra el movimiento intelectual.</p>
         </section>
       </>}
@@ -433,7 +442,7 @@ export default function MonasterioDeLasIdeas() {
         <aside className="world-question-panel">
           <div className="room-heading">
             <span>{active.number}</span>
-            <div><small>3 PREGUNTAS · C2 EXTREMO</small><h2>{active.name}</h2><p>{active.subtitle}</p></div>
+            <div><small>3 PREGUNTAS · {level}</small><h2>{active.name}</h2><p>{active.subtitle}</p></div>
           </div>
           <p className="room-thesis">{active.thesis}</p>
           <section className="scene-detail-list">
@@ -457,6 +466,7 @@ export default function MonasterioDeLasIdeas() {
             ><small>0{index + 1}</small><span>{index === questionIndex ? "EN DISCUSIÓN" : "ABRIR"}</span></button>)}
           </div>
           <article className="main-question world-main-question"><span>?</span><h3>{active.questions[questionIndex]}</h3></article>
+          {(level === "A0" || level === "A1") && <div className="depth-panel" data-level-support={level}>{active.moves.map(move => <p key={move}>{move}</p>)}</div>}
           <div className="lexicon"><small>PRECISIÓN DISPONIBLE</small>{active.lexicon.map(word => <span key={word}>{word}</span>)}</div>
           <button className={"depth-button " + (depthOpen ? "active" : "")} onClick={() => setDepthOpen(value => !value)}>
             {depthOpen ? "Cerrar contrapuntos" : "Abrir contrapuntos filosóficos"} <span>＋</span>
@@ -468,6 +478,6 @@ export default function MonasterioDeLasIdeas() {
           </div>
         </aside>
       </section>}
-    </main>
+    </main>, level
   );
 }
