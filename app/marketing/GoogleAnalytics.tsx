@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import {
   CONSENT_EVENT,
   initialiseGoogleConsent,
@@ -8,60 +9,83 @@ import {
   updateGoogleConsent,
 } from "../privacy/consent";
 
-const scriptId = "spanishcue-ga4";
-const measurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "";
+const scriptId = "spanishcue-google-tag";
+const measurementId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "") : "";
+const googleAdsConversionId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "";
 
 function usableMeasurementId(value: string): boolean {
   return /^G-[A-Z0-9]+$/i.test(value);
 }
 
-function removeTag(): void {
-  document.getElementById(scriptId)?.remove();
+function usableGoogleAdsId(value: string): boolean {
+  return /^AW-[0-9]+$/i.test(value);
 }
 
-function installTag(id: string): void {
-  if (document.getElementById(scriptId)) return;
-  (window as unknown as Record<string, boolean>)[`ga-disable-${id}`] = false;
-  // These commands must be queued before the network script starts, so an
-  // early product event always has a configured destination.
+function installGoogleTag(): void {
+  const tagId = usableMeasurementId(measurementId)
+    ? measurementId
+    : usableGoogleAdsId(googleAdsConversionId)
+      ? googleAdsConversionId
+      : "";
+  if (!tagId) return;
+
+  // Queue Consent Mode before the network script loads. The tag stays loaded
+  // even while storage is denied, so Google can honor consent changes without
+  // us tearing down and recreating the tag.
   window.gtag?.("js", new Date());
-  window.gtag?.("config", id, {
-    send_page_view: false,
-    allow_google_signals: false,
-    page_location: `${window.location.origin}${window.location.pathname}`,
-    page_referrer: "",
-  });
+  if (usableMeasurementId(measurementId)) {
+    window.gtag?.("config", measurementId, {
+      send_page_view: false,
+      allow_google_signals: false,
+    });
+  }
+  if (usableGoogleAdsId(googleAdsConversionId)) {
+    window.gtag?.("config", googleAdsConversionId, {
+      send_page_view: false,
+      allow_google_signals: false,
+    });
+  }
+
+  if (document.getElementById(scriptId)) return;
   const script = document.createElement("script");
   script.id = scriptId;
   script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(tagId)}`;
   document.head.appendChild(script);
 }
 
 export default function GoogleAnalytics() {
-  const installed = useRef(false);
+  const pathname = usePathname();
+  const lastPageView = useRef("");
+
+  const sendPageView = useCallback(() => {
+    if (!usableMeasurementId(measurementId) || !readConsent()?.analytics) return;
+    const pagePath = `${window.location.pathname}${window.location.search}`;
+    if (lastPageView.current === pagePath) return;
+    lastPageView.current = pagePath;
+    window.gtag?.("event", "page_view", {
+      send_to: measurementId,
+      page_location: window.location.href,
+      page_path: pagePath,
+      page_title: document.title,
+    });
+  }, []);
 
   useEffect(() => {
     initialiseGoogleConsent();
+    installGoogleTag();
     const sync = () => {
-      const consent = readConsent();
-      updateGoogleConsent(consent);
-      if (!consent?.analytics || !usableMeasurementId(measurementId)) {
-        if (usableMeasurementId(measurementId)) (window as unknown as Record<string, boolean>)[`ga-disable-${measurementId}`] = true;
-        removeTag();
-        installed.current = false;
-        return;
-      }
-      installTag(measurementId);
-      installed.current = true;
+      updateGoogleConsent(readConsent());
+      sendPageView();
     };
     sync();
     window.addEventListener(CONSENT_EVENT, sync);
-    return () => {
-      window.removeEventListener(CONSENT_EVENT, sync);
-      if (!installed.current) removeTag();
-    };
-  }, []);
+    return () => window.removeEventListener(CONSENT_EVENT, sync);
+  }, [sendPageView]);
+
+  useEffect(() => {
+    sendPageView();
+  }, [pathname, sendPageView]);
 
   return null;
 }

@@ -26,6 +26,8 @@ export type MarketingEvent = (typeof marketingEvents)[number];
 
 const attributionKey = "spanishcue.marketing.attribution.v1";
 const eventQueueKey = "spanishcue.marketing.events.v1";
+const googleAdsConversionId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "";
+const googleAdsPurchaseLabel = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || "") : "";
 const utmKeys = [
   "utm_source",
   "utm_medium",
@@ -52,13 +54,18 @@ declare global {
 const allowedPropertyKeys = new Set([
   "family",
   "level",
-  "access", "category", "cta_type", "filter", "landing", "lesson_id",
+  "access", "category", "cta_type", "currency", "filter", "landing", "lesson_id",
   "method", "placement", "plan", "query_length", "signed_in", "value",
   "transaction_id",
 ]);
 
 function clean(value: string | null) {
   return value?.trim().slice(0, 180) || undefined;
+}
+
+function usableGoogleAdsConversion(): boolean {
+  return /^AW-[0-9]+$/i.test(googleAdsConversionId)
+    && /^[A-Za-z0-9_-]+$/.test(googleAdsPurchaseLabel);
 }
 
 function valuesFromUrl(url: URL): UtmValues {
@@ -68,6 +75,18 @@ function valuesFromUrl(url: URL): UtmValues {
       return value ? [[key, value]] : [];
     }),
   );
+}
+
+function sendGoogleAdsPurchase(properties: Record<string, string | number | boolean | null | undefined>) {
+  if (!usableGoogleAdsConversion() || !consentFor("marketing")) return;
+  const transactionId = typeof properties.transaction_id === "string"
+    ? clean(properties.transaction_id)
+    : undefined;
+  if (!transactionId) return;
+  window.gtag?.("event", "conversion", {
+    send_to: `${googleAdsConversionId}/${googleAdsPurchaseLabel}`,
+    transaction_id: transactionId,
+  });
 }
 
 export function readMarketingAttribution(): Attribution | null {
@@ -138,12 +157,22 @@ export function trackMarketingEvent(
   if (event === "signup_complete" || event === "subscription_first_paid" || event === "subscription_complete") {
     try { window.sessionStorage.setItem("spanishcue.founder-modal.converted", "1"); } catch {}
   }
+
+  // Google Ads purchase measurement follows marketing consent independently
+  // from optional product analytics. The server-deduplicated transaction ID is
+  // still the only event allowed to reach the paid conversion destination.
+  if (event === "subscription_first_paid" && properties.transaction_id) {
+    sendGoogleAdsPurchase(properties);
+  }
+
   if (!consentFor("analytics")) return;
+
   // Keep the existing confirmed, server-deduplicated payment event as the authority.
   // The requested reporting alias is emitted only with that same transaction.
   if (event === "subscription_first_paid" && properties.transaction_id) {
     trackMarketingEvent("subscription_complete", properties);
   }
+
   const attribution = captureMarketingAttribution();
   const payload: Record<string, unknown> = {
     event,
