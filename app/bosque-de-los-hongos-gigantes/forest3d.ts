@@ -147,14 +147,16 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
     const attach = p.y + stemAttachY(s.shape, depth) * p.r + .05;
     if (p.kind === 'shelf' && p.trunk) {
       // An old oak carries the bracket; smaller brackets climb its bark.
-      const t = p.trunk, trunk = place(new THREE.CylinderGeometry(t.r * .82, t.r * 1.12, t.top, 14, 4), barkMat, t.x, t.top / 2, t.z, true);
+      const t = p.trunk, top = Math.min(t.top, p.y + 7), trunk = place(new THREE.CylinderGeometry(t.r * .82, t.r * 1.12, top, 14, 4), barkMat, t.x, top / 2, t.z, true);
       trunk.name = `${p.id}-trunk`;
-      treeCrown(t.x, t.top, t.z, t.r * 2.6);
-      for (let k = 0; k < 7; k++) bracketOnTrunk(t.x, t.z, t.r, 3 + random() * (t.top - 6));
+      treeCrown(t.x, top, t.z, t.r * 2.2);
+      for (let k = 0; k < 7; k++) bracketOnTrunk(t.x, t.z, t.r, 3 + random() * (top - 6));
     } else if (s.shape === 'stump') {
-      const stump = place(new THREE.CylinderGeometry(p.r * .97, p.r * 1.08, p.y + .02, segs, 2), barkMat, p.x, (p.y - .02) / 2, p.z, true);
+      const stump = place(new THREE.CylinderGeometry(p.r * .97, p.r * 1.12, p.y - .05, segs, 2, true), barkMat, p.x, (p.y - .05) / 2, p.z, true);
       stump.name = `${p.id}-stump`;
       for (let k = 0; k < 5; k++) { const a = k / 5 * Math.PI * 2 + random(); root3(p.x + Math.cos(a) * p.r * .9, p.z + Math.sin(a) * p.r * .9, a, p.r * .5); }
+    } else if (s.shape === 'ball' || attach < .4) {
+      // Puffballs rest on the forest floor: no stem.
     } else if (p.species === 'spiral') {
       const stem = place(spiralStemGeometry(stemR * .8, attach), stemMat(p.species, s), p.x, 0, p.z, true); stem.name = `${p.id}-stem`;
     } else {
@@ -269,6 +271,9 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
         place(new THREE.CylinderGeometry(.1, .14, 1.1, 10).rotateZ(1.1), standard('#c7a45a', .35, null, { metalness: .7 }), scope.x, scope.y + 1.25, scope.z);
         for (let k = 0; k < 3; k++) { const leg = place(new THREE.CylinderGeometry(.03, .03, 1.2, 5), barkMat, scope.x + Math.cos(k * 2.1) * .25, scope.y + .55, scope.z + Math.sin(k * 2.1) * .25); leg.rotation.z = Math.cos(k * 2.1) * .25; leg.rotation.x = Math.sin(k * 2.1) * .25; }
         const light = new THREE.PointLight('#ffd27a', 5, 24, 2); light.position.set(p.x, p.y + 3, p.z); dynamic.add(light); glowLights.push(light);
+        // A crown of golden spires around the rim: the payoff is visible from far below.
+        const gold = standard('#f6d27a', .35, null, { emissive: '#d99a2b', emissiveIntensity: .7, metalness: .3 });
+        for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2, rim = at(a, 1.05), h = 1.6 + (k % 2) * 1.2; const spire = place(new THREE.ConeGeometry(.22, h, 6), gold, rim.x, rim.y + h / 2 - .2, rim.z, false, false); spire.rotation.z = Math.cos(a) * -.25; spire.rotation.x = Math.sin(a) * .25; }
         break;
       }
     }
@@ -277,8 +282,8 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   // ---------------------------------------------------------- trees
   function treeCrown(x: number, top: number, z: number, size: number) {
     if (!columnClear(x, z, size * 1.2, top - size * .4, top + size)) return;
-    for (let k = 0; k < 3; k++) {
-      const a = random() * 6.28, d = k ? size * .6 : 0;
+    for (let k = 0; k < (low ? 3 : 5); k++) {
+      const a = random() * 6.28, d = k ? size * .65 : 0;
       const crown = place(new THREE.IcosahedronGeometry(size * (.75 + random() * .35), 1), standard(pick(['#3f6b3a', '#507d40', '#5d8a3f', '#466f45']), 1), x + Math.cos(a) * d, top + size * .3 + random() * size * .4, z + Math.sin(a) * d);
       crown.scale.set(1.25, .62, 1.25);
     }
@@ -297,12 +302,21 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
     place(new THREE.CylinderGeometry(r * .62, r, h, 12, 3), barkMat, x, h / 2 - .5, z, true);
     for (let k = 0; k < 4; k++) root3(x, z, k * 1.57 + random(), r * 2.2);
     treeCrown(x, h, z, crown);
+    // Leafy boughs at several heights: the climb passes through living trees, not bare poles.
+    for (let k = 0; k < (low ? 2 : 3); k++) {
+      const a = random() * Math.PI * 2, y = h * (.45 + random() * .4), reach = r + 2 + random() * 2.5, size = 2.2 + random() * 1.8;
+      const bx = x + Math.cos(a) * reach, bz = z + Math.sin(a) * reach;
+      if (!columnClear(bx, bz, size * 1.25, y - size, y + size)) continue;
+      const bough = new THREE.Vector3(bx, y, bz), start = new THREE.Vector3(x, y - 2.5, z);
+      const branch = place(new THREE.CylinderGeometry(.14, r * .35, start.distanceTo(bough), 6), barkMat); branch.position.copy(start).add(bough).multiplyScalar(.5); branch.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), bough.clone().sub(start).normalize());
+      const leaves = place(new THREE.IcosahedronGeometry(size, 1), standard(pick(['#4f7f3c', '#5f8f45', '#6a9a48', '#3f6e3c']), 1), bx, y + .4, bz); leaves.scale.set(1.3, .6, 1.3);
+    }
     for (let k = 0; k < (low ? 2 : 5); k++) bracketOnTrunk(x, z, r * (1 - .3 * random()), 1.5 + random() * h * .6);
   }
   // Inner trees grow between the turns of the climb, never through a cap.
   let inner = 0;
   for (let tries = 0; tries < 400 && inner < (low ? 10 : 18); tries++) {
-    const a = random() * Math.PI * 2, R = 8 + random() * 54, x = Math.cos(a) * R, z = Math.sin(a) * R, r = 1.2 + random() * 1.3, h = 24 + random() * 20, crown = 4 + random() * 3;
+    const a = random() * Math.PI * 2, R = 8 + random() * 54, x = Math.cos(a) * R, z = Math.sin(a) * R, r = 1.2 + random() * 1.3, h = 22 + random() * 13, crown = 4 + random() * 3;
     if (Math.hypot(x - SPAWN.x, z - SPAWN.z) < 10) continue;
     if (!columnClear(x, z, r * 1.3, 0, h) || !columnClear(x, z, crown * 1.3, h - crown, h + crown * 1.2)) continue;
     tree(x, z, r, h, crown); inner++;
@@ -310,7 +324,7 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   // The edge of the forest: a deep ring of trunks and canopy.
   for (let i = 0; i < (low ? 24 : 44); i++) {
     const a = i * 2.39996 + random() * .3, R = 68 + random() * 70;
-    tree(Math.cos(a) * R, Math.sin(a) * R, 1.6 + random() * 2.4, 34 + random() * 40, 7 + random() * 5);
+    tree(Math.cos(a) * R, Math.sin(a) * R, 1.6 + random() * 2.4, 26 + random() * 12, 7 + random() * 5);
   }
   // Colossal landmark mushrooms outside the route give scale from every height.
   const giants = [
@@ -342,13 +356,16 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
     place(hills, standard('#5d7444', 1, soilTex), 0, 0, 0, false, false);
   }
   // Biome under each part of the route: what grows on the ground there.
-  const biomeAt = (x: number, z: number) => { let best = PLATFORMS[0], d = Infinity; for (const p of PLATFORMS) { const k = Math.hypot(p.x - x, p.z - z); if (k < d) { d = k; best = p; } } return Math.min(best.stage, 4); };
+  // The ground below the first turn takes the biome of the caps above it; deeper in, the old forest.
+  const lowCaps = PLATFORMS.filter(p => p.y < 22);
+  const biomeAt = (x: number, z: number) => { let best = lowCaps[0], d = Infinity; for (const p of lowCaps) { const k = Math.hypot(p.x - x, p.z - z); if (k < d) { d = k; best = p; } } return d > 13 ? 5 : Math.min(best.stage, 4); };
   const BIOME = [
-    { mush: ['bolete', 'puffball', 'bolete', 'oyster'], flowers: ['#f2efe0', '#f3d36b', '#d9b2c4'], moss: '#6d8a43' },
+    { mush: ['bolete', 'bolete', 'puffball', 'parasol'], flowers: ['#f2efe0', '#f3d36b', '#d9b2c4'], moss: '#6d8a43' },
     { mush: ['bolete', 'oyster', 'puffball', 'parasol'], flowers: ['#f6d77a', '#f0f0e0', '#c9d97a'], moss: '#7a9445' },
     { mush: ['chanterelle', 'chanterelle', 'oyster', 'bolete'], flowers: ['#f7a536', '#ffd25a', '#f6e7a6'], moss: '#8a9a3f' },
     { mush: ['amanita', 'inkcap', 'violet', 'amanita'], flowers: ['#9e3bc0', '#d23a5a', '#5a2a6e'], moss: '#4c5f3b' },
     { mush: ['glow', 'spiral', 'ghost', 'glow'], flowers: ['#59d8ff', '#7a7bff', '#b8f3ff'], moss: '#3f6458' },
+    { mush: ['bolete', 'inkcap', 'glow', 'puffball', 'bolete'], flowers: ['#e9f0ff', '#8fb6ff', '#f2efe0'], moss: '#4f6b3d' },
   ];
   // Mushroom families on the forest floor: one big, many small.
   const pathClear = (x: number, z: number, margin: number) => PLATFORMS.slice(0, 6).every(p => Math.hypot(p.x - x, p.z - z) > margin) && Math.hypot(x - SPAWN.x, z - SPAWN.z) > margin + 2;
@@ -373,10 +390,10 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
   };
   const rockCount = low ? 90 : 180;
   instancedMesh(new THREE.IcosahedronGeometry(1, 0), stoneMat, rockCount, (i, m) => { const a = random() * 6.28, R = 6 + random() * 58; dummy.position.set(Math.cos(a) * R, .1, Math.sin(a) * R); dummy.rotation.set(random(), random() * 6, random()); dummy.scale.set(.3 + random() * 1.1, .25 + random() * .5, .3 + random() * 1); dummy.updateMatrix(); m.setMatrixAt(i, dummy.matrix); });
-  const moundCount = low ? 120 : 260;
+  const moundCount = low ? 110 : 220;
   instancedMesh(new THREE.IcosahedronGeometry(1, 1), standard('#ffffff', 1, mossTex), moundCount, (i, m) => {
     const a = random() * 6.28, R = 3 + random() * 60, x = Math.cos(a) * R, z = Math.sin(a) * R;
-    dummy.position.set(x, 0, z); dummy.rotation.set(0, random() * 6, 0); dummy.scale.set(.6 + random() * 1.8, .15 + random() * .35, .6 + random() * 1.8); dummy.updateMatrix();
+    dummy.position.set(x, 0, z); dummy.rotation.set(0, random() * 6, 0); dummy.scale.set(.4 + random() * .9, .25 + random() * .45, .4 + random() * .9); dummy.updateMatrix();
     m.setMatrixAt(i, dummy.matrix); m.setColorAt(i, new THREE.Color(BIOME[biomeAt(x, z)].moss).multiplyScalar(.9 + random() * .3));
   });
   const grassCount = low ? 1600 : 4200;
@@ -462,7 +479,7 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
 
   // ---------------------------------------------------------- instanced decor and warts
   for (const [name, list] of decor) {
-    const geometry = name === 'bracket' ? bracketGeometry() : decorMushroomGeometry(name, low ? 10 : 16);
+    const geometry = name === 'bracket' ? bracketGeometry() : decorMushroomGeometry(name, low ? 7 : 10);
     const s = SPECIES[name];
     const material = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: .8, emissive: s?.glow && s.glow > .3 ? (s.emissive ?? '#000') : '#000000', emissiveIntensity: s?.glow && s.glow > .3 ? s.glow * 1.4 : 0 });
     const mesh = new THREE.InstancedMesh(geometry, material, list.matrices.length);
@@ -470,7 +487,7 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
     mesh.receiveShadow = true; mesh.castShadow = false; root.add(mesh); instanced.push(mesh);
   }
   if (warts.length) {
-    const wartMesh = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 1), new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .6 }), warts.length);
+    const wartMesh = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 0), new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .6 }), warts.length);
     warts.forEach((w, i) => { dummy.position.set(w.x, w.y, w.z); dummy.rotation.set(0, random() * 6, 0); dummy.scale.set(w.s, w.s * .45, w.s); dummy.updateMatrix(); wartMesh.setMatrixAt(i, dummy.matrix); wartMesh.setColorAt(i, new THREE.Color(w.color)); });
     root.add(wartMesh); instanced.push(wartMesh);
   }

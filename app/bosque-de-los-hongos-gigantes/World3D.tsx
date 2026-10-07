@@ -75,7 +75,7 @@ export default function World3D(props: WorldProps) {
     let renderer: THREE.WebGLRenderer;
     try { renderer = new THREE.WebGLRenderer({ antialias: !low, alpha: false, powerPreference: 'high-performance' }); } catch { live.current.onFail(); return; }
     let ratio = Math.min(window.devicePixelRatio || 1, low ? 1.25 : 1.75);
-    renderer.setPixelRatio(ratio); renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.1; renderer.shadowMap.enabled = !low; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.setPixelRatio(ratio); renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.1; renderer.shadowMap.enabled = !low; renderer.shadowMap.type = THREE.PCFShadowMap;
     renderer.domElement.setAttribute('aria-label', 'Bosque tridimensional. Usa WASD o flechas para moverte, espacio para saltar y arrastra para mirar.'); renderer.domElement.tabIndex = 0; mount.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
     const air = atmosphereAt(0);
@@ -162,7 +162,7 @@ export default function World3D(props: WorldProps) {
       c.lineWidth = expanded ? 3 : 1.6; c.lineCap = 'round';
       for (let i = 1; i < route.length; i++) { const a = route[i - 1], b = route[i]; c.strokeStyle = STAGE_COLORS[b.stage]; c.globalAlpha = .35 + .65 * (b.y / TOP); c.beginPath(); c.moveTo(x(a.x), z(a.z)); c.lineTo(x(b.x), z(b.z)); c.stroke(); }
       c.globalAlpha = 1;
-      const next = ZONES.find(zn => !live.current.visited.includes(zn.id));
+      const pendingZones = ZONES.filter(zn => !live.current.visited.includes(zn.id)), next = pendingZones.find(zn => zn.y >= player.y - 3) ?? pendingZones[0];
       for (const zone of ZONES) {
         const visited = live.current.visited.includes(zone.id), final = zone.id === 'final';
         c.beginPath(); c.arc(x(zone.x), z(zone.z), expanded ? (final ? 8 : 6) : (final ? 4 : 3), 0, Math.PI * 2);
@@ -184,7 +184,7 @@ export default function World3D(props: WorldProps) {
     camera.position.set(player.x + Math.sin(yaw) * distance, player.y + 4, player.z + Math.cos(yaw) * distance);
     const desired = new THREE.Vector3();
     const tick = (time: number) => {
-      if (!alive) return; frame = requestAnimationFrame(tick); const dt = Math.min((time - lastTime) / 1000 || .016, .05); lastTime = time; elapsed += dt;
+      if (!alive) return; frame = requestAnimationFrame(tick); const raw = Math.min((time - lastTime) / 1000 || .016, 1), dt = Math.min(raw, .05); lastTime = time; elapsed += dt;
       let speed = 0;
       if (!live.current.paused && !mapOpenRef.current && !document.hidden) {
         const ix = (held.has('KeyD') || held.has('ArrowRight') ? 1 : 0) - (held.has('KeyA') || held.has('ArrowLeft') ? 1 : 0) + joy.x;
@@ -225,11 +225,14 @@ export default function World3D(props: WorldProps) {
       skyUniforms.top.value.copy(air.top); skyUniforms.horizon.value.copy(air.horizon); (scene.background as THREE.Color).copy(air.horizon);
       hemi.intensity = air.hemi; sun.intensity = air.sun; sky.position.copy(camera.position);
       pvec.set(player.x, player.y, player.z);
-      const nextZone = ZONES.find(z => !live.current.visited.includes(z.id)) ?? null;
+      // Guide forward: the first pending station at or above the learner, else the lowest pending one.
+      const pending = ZONES.filter(z => !live.current.visited.includes(z.id));
+      const nextZone = pending.find(z => z.y >= player.y - 3) ?? pending[0] ?? null;
       forest.update(reducedMotion ? 0 : elapsed, pvec, { visited: live.current.visited, next: nextZone?.id ?? null, unlocked: live.current.unlocked });
       sun.position.set(player.x - 30, player.y + 62, player.z + 26); sun.target.position.set(player.x, player.y, player.z);
       renderer.render(scene, camera);
-      uiTime += dt; saveTime += dt; frames++; slowTime += dt;
+      // HUD, saving and the frame-rate monitor run on wall-clock time, so a slow device still sees current guidance.
+      uiTime += raw; saveTime += raw; frames++; slowTime += raw;
       if (uiTime > .2) {
         uiTime = 0; drawMap(mapCanvas.current, false); if (mapOpenRef.current) drawMap(largeMap.current, true);
         setActiveZone(currentZone);

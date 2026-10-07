@@ -66,13 +66,14 @@ function wobble(geometry: THREE.BufferGeometry, amount: number, seed: number, ke
   return geometry;
 }
 export function capGeometry(shape: Shape, r: number, depth: number, seed = 1, segments = 40) {
-  const g = lathe(topProfile(shape, depth), r, r, segments);
+  // Lathe faces point outward when the profile runs bottom-to-top: walk the cap from rim to centre so its top faces the sky.
+  const g = lathe(topProfile(shape, depth).slice().reverse(), r, r, segments);
   return shape === 'stump' ? g : wobble(g, shape === 'funnel' ? .05 : .025, seed, -.05 * r);
 }
 export function gillGeometry(shape: Shape, r: number, depth: number, stemFraction: number, seed = 1, segments = 40) {
   const profile = gillProfile(shape, depth, stemFraction);
   if (!profile.length) return null;
-  return wobble(lathe(profile, r, r, segments), shape === 'funnel' ? .05 : .025, seed, 99);
+  return wobble(lathe(profile.slice().reverse(), r, r, segments), shape === 'funnel' ? .05 : .025, seed, 99);
 }
 /** Unit-height stem: a bulbous base, gentle taper and a flared top. */
 export function stemGeometry(radius: number, height: number, segments = 14, bulb = 1.35) {
@@ -103,7 +104,7 @@ export function decorMushroomGeometry(name: string, detail = 18) {
   const s = SPECIES[name] ?? SPECIES.bolete;
   const parts: THREE.BufferGeometry[] = [];
   if (s.shape === 'ball') {
-    const ball = lathe(topProfile('ball', 1), .42, .42, detail).translate(0, .5, 0);
+    const ball = lathe(topProfile('ball', 1).slice().reverse(), .42, .42, detail).translate(0, .5, 0);
     parts.push(colored(ball, s.cap));
   } else {
     const capR = s.shape === 'bell' ? .26 : s.shape === 'flat' ? .48 : s.shape === 'funnel' ? .34 : .38;
@@ -123,7 +124,7 @@ export function decorMushroomGeometry(name: string, detail = 18) {
 }
 /** A bracket fungus for trunks: a layered half-fan on +x, origin at the trunk surface. */
 export function bracketGeometry() {
-  const parts = [0, 1, 2].map(i => colored(lathe(topProfile('shelf', .3), .5 - i * .1, .5, 10, Math.PI).translate(0, -i * .16, 0), ['#d9802e', '#eaa75a', '#f2d29c'][i]));
+  const parts = [0, 1, 2].map(i => colored(lathe(topProfile('shelf', .3).slice().reverse(), .5 - i * .1, .5, 10, Math.PI).translate(0, -i * .16, 0), ['#d9802e', '#eaa75a', '#f2d29c'][i]));
   const merged = mergeGeometries(parts, false)!;
   for (const p of parts) p.dispose();
   merged.computeVertexNormals();

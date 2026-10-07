@@ -34,9 +34,9 @@ export function stageAt(y){let index=0;for(let i=0;i<STAGES.length;i++)if(y>=STA
 // Station landmarks: altitude, cap radius, species and the place name. Their
 // position on the spiral follows from the hops needed to climb to them.
 const STATIONS=[
- {id:'sobre-ti',y:1.3,r:4.6,species:'stump',place:'Claro de la entrada',hops:3},
- {id:'vida-real',y:4.4,r:4.4,species:'bolete',place:'La cesta olvidada',hops:3},
- {id:'elige',y:8.4,r:4.6,species:'chanterelle',place:'Setas doradas',hops:3},
+ {id:'sobre-ti',y:2.4,r:4.6,species:'stump',place:'Claro de la entrada',hops:3},
+ {id:'vida-real',y:5.4,r:4.4,species:'bolete',place:'La cesta olvidada',hops:3},
+ {id:'elige',y:9.2,r:4.6,species:'chanterelle',place:'Setas doradas',hops:3},
  {id:'opinion',y:12.2,r:4.5,species:'bolete',place:'Las setas gemelas',hops:2},
  {id:'suposiciones',y:16.4,r:4.8,species:'amanita',place:'El hongo perfecto',hops:2},
  {id:'afirmacion',y:20.6,r:4.6,species:'violet',place:'El círculo oscuro',hops:2},
@@ -77,7 +77,8 @@ for(const [i,station] of STATIONS.entries()){
  const category=CATEGORIES.find(c=>c.id===station.id);
  const rise=(station.y-previous.y)/(station.hops+1);
  for(let j=1;j<=station.hops;j++){
-  const y=previous.y+rise,stage=stageAt(y),species=PATH_SPECIES[stage][j%3];
+  // Near the ground a cap would hide its stem: giant puffballs make the first steps.
+  const y=previous.y+rise,stage=stageAt(y),species=y<1.8?'puffball':PATH_SPECIES[stage][j%3];
   const r=species==='puffball'||species==='stump'?2.5:2.6+rand()*.6;
   const at=advance(r,1.3+rand()*.8,Math.sin(i*2.1+j*1.7)*1.3);
   const p={id:`path-${i}-${j}`,x:round(at.x),z:round(at.z),y:round(y),r:round(r),kind:species==='shelf'?'shelf':'mushroom',species,stage,bounce:false,zone:null,checkpoint:j===station.hops&&y>8};

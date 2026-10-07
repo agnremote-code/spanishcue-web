@@ -7,7 +7,7 @@ test('the world climbs: stations rise from the forest floor through ten stages t
   assert.equal(STAGES.length, 10);
   assert.deepEqual(ZONES.map(z => z.id), CATEGORIES.map(c => c.id), 'one landmark per category, same order');
   for (let i = 1; i < ZONES.length; i++) assert.ok(ZONES[i].y > ZONES[i - 1].y + 2.5, `${ZONES[i].id} is higher than ${ZONES[i - 1].id}`);
-  assert.ok(ZONES[0].y < 2, 'the first station is near the ground');
+  assert.ok(ZONES[0].y < 3, 'the first station is near the ground');
   assert.ok(ZONES.at(-1).y >= 50, 'the summit is above the cloud layer');
   assert.ok(new Set(ZONES.map(z => z.stage)).size >= 9, 'stations spread over the stages');
   assert.equal(stageAt(0), 0); assert.equal(stageAt(ZONES.at(-1).y), STAGES.length - 1);
