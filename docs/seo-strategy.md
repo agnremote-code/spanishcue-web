@@ -136,7 +136,7 @@ Hidden text or links, cloaking, keyword stuffing, doorway pages, duplicate AI pa
 
 ## 10. Roadmap (12 months)
 
-**NOW (shipped in this PR, pending deploy)**
+**Phase 1 (already deployed; preserved during Phase 2)**
 
 - Technical foundation: clean canonicals, real-pair-only hreflang, robots/noindex alignment, `X-Robots-Tag`, sitemap rebuild, Organization/WebSite schema, hidden block removed, homepage title/description.
 - Attack cluster: conversation hub, six level pages, 150-question bank, teacher-resources hub, campaign `/lp/*` variants, internal links, tests, this document.
@@ -250,3 +250,14 @@ Keep HTML `private, no-store`: the shared layout consumes locale/access headers 
 3. Build the listening cornerstone from the real audio catalog, with public samples and distinct teacher tasks, if the next research pass supports it.
 4. Deepen contemporary C2 grammar classrooms and teacher materials before deciding on a separate C2 SEO URL; do not create a thin placeholder.
 5. Share the free activity kits with relevant teacher communities and newsletters through owner-authorized outreach; earn useful mentions without purchased links or unsolicited automated posting.
+
+### Phase 2 verification record (2026-10-07)
+
+- Fresh base: `f2ab15a4feb67c569e8fcc351611777c98307061`; task branch `codex/seo-phase2-grammar-20261007`. No recoverable Phase 2 remote branch or overlapping open PR was present at intake.
+- Independent GPT-6 Astra Ultra code review: no actionable defects. Source verification, browser QA and release verification remain the implementer's responsibility.
+- Full `npm test`: 942 tests passed, no failures or skips. Includes the build, language protections, SEO, rendered worker routes, access boundaries and existing product regressions. An old marketing-template expectation was updated to recognize the dedicated grammar CollectionPage and verify its metadata helper.
+- `npm run test:seo`: 20 passed. TypeScript, lint, artifact validation and whitespace checks passed. A final rebuild plus 23 focused grammar/marketing tests followed the visual CSS correction.
+- Browser QA: Chromium, 1440×1000 and 390×844, all eleven grammar/About URLs, teacher resources and the free nouns classroom; 26 page renders plus separate desktop/mobile proof captures. Every route returned 200; no broken images or uncaught page errors. Screenshots were visually inspected, including activities and the attributed testimonials.
+- Browser QA found the existing free classroom's mobile step navigation expanding the document to 838 px at a 390 px viewport. Giving the grid sidebar `min-width:0` contains its horizontal scrolling. The rebuilt classroom now has a 390 px document; the desktop layout and stage interactions pass. No lesson content changed.
+- All organic routes have one H1, a clean canonical, index/follow, valid structured data and sitemap coverage. Parameter variants canonicalize to the clean path; unsupported C2/unknown slugs return 404. Paid classroom/audio boundaries remain enforced, while the free nouns audio returns 200.
+- Shared auth/consent JavaScript remains; no synthetic Core Web Vitals or ranking gain is asserted. Production success must be verified from CI + Auto Merge and the established staging/production workflow, separately from these local results.
