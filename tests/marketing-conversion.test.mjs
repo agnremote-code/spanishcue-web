@@ -41,7 +41,11 @@ test("free lessons prompt registration after thirty active seconds", () => {
 });
 
 test("all requested funnel and product events use one analytics layer", async () => {
-  const [analytics, googleAnalytics] = await Promise.all([\n    source("app/marketing/analytics.ts"),\n    source("app/marketing/GoogleAnalytics.tsx"),\n  ]);\n  for (const event of [
+  const [analytics, googleAnalytics] = await Promise.all([
+    source("app/marketing/analytics.ts"),
+    source("app/marketing/GoogleAnalytics.tsx"),
+  ]);
+  for (const event of [
     "landing_view", "cta_click", "lesson_preview_open", "free_lesson_start",
     "signup_start", "signup_complete", "pricing_view", "paywall_view",
     "checkout_start", "subscription_first_paid", "search_used", "filter_used",
