@@ -119,6 +119,17 @@ export function extractCopy(source, path) {
   return copy;
 }
 
+/**
+ * Entire URL/path values, URL templates (`${origin}?lang=en`), lookup keys and
+ * bare locale codes are machine values, not user copy. Both guards skip them.
+ */
+export function isMachineValue(text) {
+  const value = text.trim();
+  return /^(?:https?:\/\/|\/)[^\s]+$/.test(value)
+    || /^[a-z][a-z0-9]*(?:[_:-][a-z0-9]+)+$/i.test(value)
+    || /^\$\{[^}]+\}[?&#\/=][^\s]*$/.test(value)
+    || /^(?:en|es)(?:[-_][A-Za-z]{2})?$/.test(value);
+}
 export function validateRegistry(registry) {
   if (registry.version !== 1 || !Array.isArray(registry.exemptions)) throw new Error('Expected registry version 1 and exemptions array');
   for (const e of registry.exemptions) {
@@ -134,7 +145,7 @@ export function scanSource(source, path, registry = { version: 1, exemptions: []
   for (const copy of extractCopy(source, path)) {
     if (copy.language === 'en' || exempt.has(copy.text)) continue;
     // Entire URL/path values and machine error/lookup keys are not user copy.
-    if (/^(?:https?:\/\/|\/)[^\s]+$/.test(copy.text) || /^[a-z][a-z0-9]*(?:[_:-][a-z0-9]+)+$/i.test(copy.text)) continue;
+    if (isMachineValue(copy.text)) continue;
     // Tokenization uses Unicode letters/marks, not JS's ASCII-only \b (vosotros is safe).
     for (const match of copy.text.normalize('NFC').matchAll(/[\p{L}\p{M}]+/gu)) {
       const token = match[0]; const lower = token.toLocaleLowerCase('es');
