@@ -138,7 +138,8 @@ jobs:
       - name: Export public analytics build variables
         if: inputs.action == 'deploy'
         run: |
-          VARS="${PRODUCTION_VARS_JSON:-{}}"
+          VARS="${PRODUCTION_VARS_JSON:-}"
+          if [ -z "$VARS" ]; then VARS='{}'; fi
           echo "$VARS" | jq -e 'type == "object"' >/dev/null
           for key in NEXT_PUBLIC_GA4_MEASUREMENT_ID NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL; do
             value="$(echo "$VARS" | jq -r --arg key "$key" '.[$key] // ""')"
