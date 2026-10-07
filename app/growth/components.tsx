@@ -15,8 +15,10 @@ const topLinks: { href: string; label: string }[] = [
   { href: "/spanish-teacher-resources", label: "Teacher resources" },
   { href: CONVERSATION_HUB_PATH, label: "Conversation activities" },
   { href: CONVERSATION_QUESTIONS_PATH, label: "Conversation questions" },
+  { href: "/spanish-grammar-lessons", label: "Grammar lessons" },
   { href: "/resources", label: "Lesson library" },
   { href: "/guides", label: "Guides" },
+  { href: "/about", label: "About" },
   { href: "/pricing", label: "Pricing" },
 ];
 

@@ -57,6 +57,7 @@ export function isEnglishDefaultPath(pathname: string): boolean {
   const path = normalizePathname(pathname);
   if (path === "/lp/ele-recursos-profesores") return false;
   return (
+    path === "/about" ||
     path === "/resources" ||
     path.startsWith("/resources/") ||
     path === "/guides" ||

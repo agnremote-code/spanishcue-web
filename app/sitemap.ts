@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { isFreeLesson, localLessonPath } from "./access-policy";
 import { freeAutoestudioModules } from "./autoestudio/access";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevels } from "./growth/conversation-levels";
+import { grammarLevels } from './growth/grammar';
+import { grammarTopicPages } from './growth/grammar-topics';
 import { guideModifiedDate } from "./guides/guide-format";
 import { lessons } from "./lesson-catalog";
 import { resourceLessons, resourcePathForLesson } from "./resource-seo";
@@ -28,7 +30,10 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/resources", priority: 0.8, changeFrequency: "weekly" },
   { path: "/guides", priority: 0.8, changeFrequency: "weekly" },
   { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/spanish-grammar-lessons", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/spanish-grammar-lessons", priority: 0.9, changeFrequency: "weekly" },
+  ...grammarLevels.map(level => ({path: level.path, priority: 0.8, changeFrequency: "monthly" as Frequency})),
+  ...grammarTopicPages.filter(topic => topic.path.startsWith("/spanish-grammar-lessons/")).map(topic => ({path: topic.path, priority: 0.7, changeFrequency: "monthly" as Frequency})),
+  { path: "/about", priority: 0.5, changeFrequency: "monthly" },
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },

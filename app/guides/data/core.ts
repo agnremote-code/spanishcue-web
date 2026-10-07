@@ -291,6 +291,7 @@ export const coreGuides: TeachingGuide[] = [
   },
   {
     slug: "how-to-teach-ser-vs-estar",
+    lastReviewed: "2026-10-07",
     pillar: "teach-spanish",
     cluster: "grammar",
     publishedAt: "2026-09-24",
@@ -346,6 +347,7 @@ export const coreGuides: TeachingGuide[] = [
   },
   {
     slug: "preterite-vs-imperfect-activities",
+    lastReviewed: "2026-10-07",
     pillar: "teach-spanish",
     cluster: "grammar",
     publishedAt: "2026-09-24",
@@ -400,6 +402,7 @@ export const coreGuides: TeachingGuide[] = [
   },
   {
     slug: "spanish-subjunctive-lesson-plan",
+    lastReviewed: "2026-10-07",
     pillar: "teach-spanish",
     cluster: "grammar",
     publishedAt: "2026-09-24",
