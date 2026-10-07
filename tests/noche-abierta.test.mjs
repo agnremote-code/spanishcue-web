@@ -587,7 +587,7 @@ test('3D world: original procedural assets only, and three.js stays inside appro
   assert.equal(pkg.dependencies.three, '0.186.1', 'three is pinned');
   const importers = execFileSync('git', ['grep', '-l', '-E', "from 'three'|from \"three\"|from 'three/", '--', 'app', 'lib', 'components'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   assert.ok(importers.length >= 1);
-  const forestModules = new Set(['app/bosque-de-los-hongos-gigantes/camera.ts', 'app/bosque-de-los-hongos-gigantes/World3D.tsx', 'app/bosque-de-los-hongos-gigantes/forest3d.ts', 'app/bosque-de-los-hongos-gigantes/hero3d.ts']);
+  const forestModules = new Set(['app/bosque-de-los-hongos-gigantes/camera.ts', 'app/bosque-de-los-hongos-gigantes/World3D.tsx', 'app/bosque-de-los-hongos-gigantes/forest3d.ts', 'app/bosque-de-los-hongos-gigantes/hero3d.ts', 'app/bosque-de-los-hongos-gigantes/mushrooms3d.ts']);
   assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path)), importers.join());
   const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
   assert.match(lesson, /import\('\.\/World3D'\)/, 'the 3D street is loaded on demand');
