@@ -435,7 +435,6 @@ test('using the object on someone passing by: weapons scare, the heart charms, n
   for (const item of ['gas', 'granada', 'pistola', 'cuchillo']) assert.equal(street.ambientReaction(item, 'B1').flee, true);
   assert.equal(street.ambientReaction('corazon', 'A2').mood, 'love');
   assert.equal(street.ambientReaction('corazon', 'A2').hearts, true);
-  const all = textsOf(street.ENCOUNTERS.map(item => [item.nodes, item.ends])).join('\n');
 });
 
 // ------------------------------------------------------------ the 3D side

@@ -2867,8 +2867,437 @@ const encounters = [
           },
         },
       },
+
+      // ── variantes
+      "cuchillo-inicio": {
+        who: "henrik", mood: "scared",
+        line: {
+          A: "Henrik ve el cuchillo y da dos pasos atrás. «¡Hola! Eh… ¿Por qué tienes un cuchillo? ¿Es normal aquí?»",
+          B: "Henrik te reconoce, sonríe… y ve el cuchillo. Se queda helado y retrocede. «Hola. Eh… ¿Por qué llevas un cuchillo? No me dijiste que aquí se saluda así.»",
+          C: "Henrik te reconoce, abre los brazos… y los baja al ver el cuchillo. «Mi guía… con un cuchillo. Mi libro de viaje no mencionaba esta variante del saludo.»",
+        },
+        options: [
+          {
+            id: "bocadillo",
+            act: { A: "Cortas tu bocadillo y le das la mitad.", B: "Cortas tu bocadillo en dos y le das la mitad.", C: "Partes el bocadillo en dos mitades justas y le ofreces una." },
+            say: { A: "Es para el bocadillo. Toma, para el tren.", B: "Es para el bocadillo. Toma una mitad, para el viaje.", C: "Es para el bocadillo, no para el turista. Toma una mitad, que en el tren no hay comida." },
+            reply: { A: "Henrik duda y la toma. «Gracias. Pero, por favor, guarda el cuchillo.»", B: "Henrik duda, pero acepta la mitad. «Gracias, de verdad. Pero guarda el cuchillo, por favor.»", C: "Henrik acepta la mitad con dos dedos. «Gracias. Pero guarda el cuchillo, o me atraganto de los nervios.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "disculpa",
+            act: { A: "Guardas el cuchillo.", B: "Guardas el cuchillo enseguida.", C: "Guardas el cuchillo con rapidez." },
+            say: { A: "No, no es normal. Perdón. Lo guardo.", B: "No, para nada. Perdóname, lo guardo ahora mismo.", C: "No, en absoluto. Perdona, qué manera de recibirte. Ya está guardado." },
+            reply: { A: "Henrik respira. «Uf. En mi país, nadie hace eso.»", B: "Henrik respira. «Uf. En Dinamarca, esto saldría en el periódico.»", C: "Henrik exhala. «En Dinamarca esto sería portada de periódico y tema de debate parlamentario.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "mostrar",
+            act: { A: "Levantas el cuchillo para enseñarlo.", B: "Levantas el cuchillo para enseñárselo.", C: "Levantas el cuchillo para explicar de qué se trata." },
+            say: { A: "Mira. Es muy bueno. ¡Mira!", B: "Mira, es un cuchillo buenísimo. ¡Míralo!", C: "Fíjate qué filo. Es un cuchillo extraordinario, ¿no?" },
+            reply: { A: "Henrik grita en danés y corre hacia un guardia. «¡Policía! ¡Cuchillo!»", B: "Henrik grita algo en danés y corre hacia un guardia. «¡Policía! ¡Ese hombre tiene un cuchillo!»", C: "Henrik suelta una frase en danés y corre hacia el guardia. «¡Policía! ¡Mi guía ha perdido la cabeza!»" },
+            mood: "terror", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-calma": {
+        who: "henrik", mood: "neutral",
+        line: {
+          A: "Henrik come un poco del bocadillo. «Bueno. Ahora enséñame una expresión. ¿Cómo se dice «tengo miedo» en español?»",
+          B: "Henrik respira y mordisquea el bocadillo. «Bueno, ya pasó. Ahora quiero aprender algo útil: ¿cómo se dice «tuve mucho miedo» en español?»",
+          C: "Henrik se recompone y muerde el bocadillo con dignidad. «Superado. Ahora, en el espíritu del aprendizaje: ¿cómo se dice «me has dado un susto de muerte»?»",
+        },
+        options: [
+          {
+            id: "miedo",
+            say: { A: "«Tengo miedo». O «Me asusté». Repite: ¡Me asusté!", B: "«Me has dado un susto». Repite despacio: ¡me has dado un susto!", C: "«Me has dado un susto de muerte». Repítelo con el acento de quien lo ha vivido." },
+            reply: { A: "Henrik repite: «Me asusté». Se ríe. El tren llega.", B: "Henrik repite con acento duro: «Me has dado un susto». Se ríe y se relaja. El tren anuncia su salida.", C: "Henrik lo repite con dramatismo. «Me has dado un susto de muerte.» Los dos se ríen. El tren anuncia su salida." },
+            mood: "smile", end: "cuchillo-tren",
+          },
+          {
+            id: "broma",
+            say: { A: "En español decimos: «Cuidado, que corta».", B: "En español decimos: «Cuidado con el cuchillo, que corta». Es una advertencia.", C: "Aprende esta: «Cuidado con la lengua, que corta más que un cuchillo». Es un refrán bien afilado." },
+            reply: { A: "Henrik no se ríe. «Mejor tomo el tren.» Se va rápido.", B: "Henrik no le ve la gracia. «Creo que mejor me voy al tren.» Se va rápido.", C: "Henrik anota el refrán, pero con la mirada en tu bolsillo. «Interesante. Pero tomaré el tren ya.» Se va con prisa." },
+            mood: "scared", end: "cuchillo-susto",
+          },
+          {
+            id: "amigos",
+            say: { A: "Perdón otra vez. ¿Me escribes cuando llegues?", B: "Perdón otra vez por el susto. ¿Me escribes cuando llegues a casa?", C: "Mil perdones. ¿Me escribes cuando llegues? Prometo que no habrá cuchillos en la respuesta." },
+            reply: { A: "Henrik se ríe y te da su correo. «Escríbeme tú.»", B: "Henrik se ríe y te escribe su correo en el mapa. «Escríbeme tú primero, en español.»", C: "Henrik se ríe y anota su correo en el mapa. «Escríbeme tú primero. Y sin cuchillos adjuntos.»" },
+            mood: "smile", end: "cuchillo-tren",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "henrik", mood: "terror",
+        line: {
+          A: "Henrik ve la pistola. Levanta las manos y suelta el mapa. «¡No, por favor! ¡Soy turista! ¡Toma mi dinero!»",
+          B: "Henrik ve la pistola y levanta las manos. El mapa cae al suelo. «¡No, por favor! ¡Soy turista! ¡Toma mi dinero, pero no me hagas nada!»",
+          C: "Henrik ve la pistola y sus dos metros de altura se encogen. Levanta las manos y el mapa se cae. «Por favor, soy un turista danés. Mi cartera es tuya, pero mi pasaporte no.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas la pistola enseguida.", B: "Guardas la pistola enseguida.", C: "Guardas la pistola de inmediato." },
+            say: { A: "¡No, Henrik! Soy yo, tu guía. Perdón.", B: "¡No, Henrik! Soy yo, tu guía. Perdóname, no es para ti.", C: "¡Henrik, soy yo, tu guía! Perdona: esto no es lo que parece." },
+            reply: { A: "Henrik baja las manos despacio. «¿Mi guía? ¿Por qué tienes una pistola?»", B: "Henrik baja las manos despacio. «¿Mi guía? ¿Por qué llevas una pistola? ¿Qué está pasando?»", C: "Henrik baja las manos con cautela. «¿Mi guía, armado? Esto merece una explicación en un español muy sencillo.»" },
+            mood: "worried", next: "pistola-miedo",
+          },
+          {
+            id: "tranquilizar",
+            say: { A: "Tranquilo. No quiero tu dinero. Solo saludar.", B: "Tranquilo, no quiero tu dinero. Solo vine a saludarte.", C: "Tranquilo, Henrik. Tu cartera está a salvo. Yo solo quería saludar." },
+            reply: { A: "Henrik no baja las manos. «¿Saludar con una pistola?»", B: "Henrik no baja las manos. «¿Saludar con una pistola? ¿Así saluda la gente aquí?»", C: "Henrik mantiene las manos arriba. «¿Saludar con una pistola? Eso no salía en el libro de frases útiles.»" },
+            mood: "scared", next: "pistola-miedo",
+          },
+          {
+            id: "ordenar",
+            act: { A: "No guardas la pistola.", B: "Sigues con la pistola en la mano.", C: "Mantienes la pistola en alto." },
+            say: { A: "Dame el mapa. Ahora.", B: "Dame el mapa y la cartera. Ahora mismo.", C: "El mapa y la cartera. No lo repetiré." },
+            reply: { A: "Henrik grita. Un guardia llega corriendo con la radio.", B: "Henrik grita en danés y un guardia llega corriendo con la radio. «¡Suelte el arma!»", C: "Henrik lanza un grito en danés y un guardia de la estación llega corriendo, radio en mano. «¡Suelte el arma, ahora!»" },
+            mood: "terror", end: "pistola-policia",
+          },
+        ],
+      },
+      "pistola-miedo": {
+        who: "henrik", mood: "scared",
+        line: {
+          A: "Henrik tiembla. «No quiero problemas. Solo quiero mi tren. ¿Cómo se dice «no quiero problemas» en español?»",
+          B: "Henrik tiembla un poco. «No quiero problemas, de verdad. Solo quiero mi tren. ¿Cómo se dice «no quiero problemas» en español?»",
+          C: "Henrik, pálido, saca la libreta por pura supervivencia. «No quiero problemas, solo mi tren. Y, ya que estamos, ¿cómo se dice eso mismo en español?»",
+        },
+        options: [
+          {
+            id: "frase",
+            say: { A: "«No quiero problemas». Repite conmigo.", B: "«No quiero problemas.» Repítelo despacio, sílaba por sílaba.", C: "«No quiero problemas.» Dilo con toda la convicción del mundo." },
+            reply: { A: "Henrik repite: «No quiero problemas». Sonríe un poco. Llega el tren.", B: "Henrik lo repite con su acento. Sonríe un poco, aliviado. El tren anuncia la salida.", C: "Henrik lo repite con voz de barítono asustado. Los dos se ríen un poco. El tren anuncia la salida." },
+            mood: "worried", end: "pistola-tren",
+          },
+          {
+            id: "disculpa",
+            say: { A: "Lo siento mucho. Fue un error. Ve a tu tren.", B: "Lo siento muchísimo. Fue un error mío. Ve a tu tren, por favor.", C: "Lo siento de verdad. Fue un error imperdonable. Ve a tu tren, que es lo único que importa." },
+            reply: { A: "Henrik asiente y recoge el mapa. Corre al andén sin mirar atrás.", B: "Henrik asiente, recoge el mapa y corre hacia el andén sin mirar atrás.", C: "Henrik asiente, recoge el mapa del suelo y desaparece hacia el andén sin volver la cabeza." },
+            mood: "sad", end: "pistola-susto",
+          },
+          {
+            id: "seguridad",
+            say: { A: "La llevo por seguridad. La ciudad es peligrosa.", B: "La llevo por seguridad, Henrik. La ciudad de noche es peligrosa.", C: "La llevo por seguridad, Henrik. Es un detalle más de la fauna local, por desgracia." },
+            reply: { A: "Henrik llama a la policía. «Aquí hay un hombre armado.»", B: "Henrik saca el celular y llama a la policía. «Hay un hombre armado en la estación.»", C: "Henrik saca el celular con dedos temblorosos y llama a la policía. «Un hombre armado en la estación. Sí, mi guía.»" },
+            mood: "scared", end: "pistola-policia",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "henrik", mood: "terror",
+        line: {
+          A: "Henrik ve la granada. Grita en danés y suelta su mapa. «¡Una granada! ¡Todos fuera!»",
+          B: "Henrik ve la granada y grita algo en danés. Suelta el mapa y se tapa la cabeza. «¡Una granada! ¡Todo el mundo fuera!»",
+          C: "Henrik ve la granada y suelta un grito en danés que hace volar las palomas de la estación. Tira el mapa y se tapa la cabeza. «¡Una granada! ¡Evacuen!»",
+        },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "¡Es de juguete! ¡Es un recuerdo!", B: "¡Es de juguete, Henrik! ¡Es un recuerdo de la ciudad!", C: "¡Es de plástico, Henrik! Un recuerdo de la ciudad, de lo más típico." },
+            reply: { A: "Henrik mira entre los dedos. «¿Un recuerdo? ¡Qué recuerdo tan malo!»", B: "Henrik mira entre los dedos. «¿Un recuerdo? ¿Quién vende recuerdos así?»", C: "Henrik mira entre los dedos. «¿Un recuerdo típico? Mi guía tiene un humor muy peculiar.»" },
+            mood: "scared", next: "granada-banco",
+          },
+          {
+            id: "tirar",
+            act: { A: "Tiras la granada lejos.", B: "Lanzas la granada hacia las vías.", C: "Lanzas la granada hacia las vías, lo más lejos posible." },
+            say: { A: "¡Al suelo, Henrik!", B: "¡Al suelo, Henrik! ¡Cúbrete!", C: "¡Al suelo, Henrik! ¡Cúbrete la cabeza!" },
+            reply: { A: "La granada rueda por la vía. No pasa nada. Suena la alarma. Llega la policía.", B: "La granada rueda por la vía y no explota. Suena la alarma de evacuación. Llega la policía y, poco después, un helicóptero.", C: "La granada rueda por la vía sin explotar. Suena la alarma, llega la policía y, minutos después, un helicóptero ilumina la estación." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+          {
+            id: "correr",
+            act: { A: "Corres con Henrik hacia la salida.", B: "Agarras a Henrik del brazo y corren juntos hacia la salida.", C: "Tomas a Henrik del brazo y corren juntos hacia la salida." },
+            say: { A: "¡Corre conmigo!", B: "¡Corre conmigo, Henrik!", C: "¡Corre, Henrik! ¡Tus piernas son más largas que las mías!" },
+            reply: { A: "Los dos corren. Henrik, con sus piernas largas, te deja atrás.", B: "Los dos corren por el andén entre gritos. Henrik, con sus piernas larguísimas, te adelanta enseguida.", C: "Corren por el andén entre gritos. Henrik, con sus piernas de jirafa, te deja atrás en tres zancadas." },
+            mood: "scared", next: "granada-banco",
+          },
+        ],
+      },
+      "granada-banco": {
+        who: "henrik", mood: "surprised",
+        line: {
+          A: "Fuera de la estación, Henrik respira fuerte. «Se me fue el tren por tu granada. ¡Pero qué aventura!»",
+          B: "Fuera de la estación, Henrik jadea. «Mi tren se fue sin mí por tu granada. Pero… ¡qué aventura! ¡Nadie en Dinamarca me va a creer!»",
+          C: "Fuera de la estación, Henrik se apoya en las rodillas, jadeando. «Mi tren se fue. Mi dignidad también. Pero tengo la mejor anécdota de mi viaje.»",
+        },
+        options: [
+          {
+            id: "expresion",
+            say: { A: "Aprende esta: «¡Qué susto!». Y esta: «¡Qué locura!».", B: "Aprende estas dos: «¡Qué susto!» y «¡Qué locura!». Hoy las vas a usar mucho.", C: "Dos expresiones para la ocasión: «¡Qué susto!» y «¡Qué locura!». Ambas son baratas y de mucho uso." },
+            reply: { A: "Henrik las repite riéndose. «¡Qué susto! ¡Qué locura!»", B: "Henrik las repite riéndose a carcajadas. «¡Qué susto! ¡Qué locura! Esta noche las he vivido.»", C: "Henrik las repite entre carcajadas. «¡Qué susto! ¡Qué locura! Las he vivido con la voz y con las piernas.»" },
+            mood: "laugh", end: "granada-tren",
+          },
+          {
+            id: "disculpa",
+            say: { A: "Perdóname. Te compro otro billete.", B: "Perdóname, Henrik. Te compro otro billete para el próximo tren.", C: "Perdóname. Te compro el próximo billete, es lo mínimo que puede hacer un guía temerario." },
+            reply: { A: "Henrik sonríe. «Acepto. Pero la granada se queda aquí.»", B: "Henrik sonríe, cansado. «Acepto. Pero la granada se queda aquí fuera, lejos de mí.»", C: "Henrik sonríe, vencido. «Acepto el billete. Pero la granada se queda en una alcantarilla, a ser posible.»" },
+            mood: "smile", end: "granada-tren",
+          },
+          {
+            id: "silencio",
+            act: { A: "No dices nada.", B: "No dices nada y miras al cielo.", C: "No dices nada. Miras al cielo, resignado." },
+            say: { A: "…", B: "…", C: "…" },
+            reply: { A: "Se oye un helicóptero. La policía cierra la calle.", B: "Se oye un helicóptero que se acerca. La policía cierra la calle y los rodea.", C: "Un helicóptero se acerca con su foco. La policía cierra la calle y los rodea con una calma profesional." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+        ],
+      },
+      "gas-inicio": {
+        who: "henrik", mood: "surprised",
+        line: {
+          A: "Henrik ve el gas pimienta y se tapa la cara con el mapa. «¡No! ¡Soy yo, Henrik! ¡El turista!»",
+          B: "Henrik ve el gas pimienta y se protege la cara con el mapa. «¡No, no! ¡Soy yo, Henrik! ¡El turista del mapa!»",
+          C: "Henrik ve el gas pimienta y levanta el mapa como un escudo. «¡Soy yo, Henrik! Mi cara es memorable por lo alta, no por lo peligrosa.»",
+        },
+        options: [
+          {
+            id: "bajar",
+            act: { A: "Bajas el gas.", B: "Bajas el gas pimienta.", C: "Bajas el gas pimienta con una media sonrisa." },
+            say: { A: "¡Henrik! Perdón. Fue un reflejo. Hay mucho miedo aquí.", B: "¡Henrik! Perdona, fue un reflejo. A esta hora hay mucho miedo en la estación.", C: "¡Henrik! Perdona, reflejo condicionado. A esta hora, la estación pone nervioso a cualquiera." },
+            reply: { A: "Henrik baja el mapa. «¡Casi me rocías! ¡Pero entiendo!»", B: "Henrik baja el mapa. «Casi me rocías. Pero entiendo, la estación a esta hora da respeto.»", C: "Henrik baja el mapa. «Casi me bautizas con pimienta. Pero entiendo: la estación de noche impone.»" },
+            mood: "smile", next: "gas-charla",
+          },
+          {
+            id: "apuntar",
+            act: { A: "Sigues apuntando.", B: "Sigues apuntando con el gas.", C: "Mantienes el gas apuntando a su cara." },
+            say: { A: "No te acerques. No te conozco.", B: "No te acerques. Ya no sé quién eres.", C: "No te acerques. A estas horas no me fío ni de mi sombra." },
+            reply: { A: "Henrik se asusta. «¡Eres mi guía!» Corre a buscar al guardia.", B: "Henrik se asusta de verdad. «¡Pero si eres mi guía!» Corre a buscar al guardia.", C: "Henrik se asusta de verdad. «¡Pero si eres mi guía! ¿Qué te pasa?» Corre a buscar a un guardia." },
+            mood: "scared", end: "gas-susto",
+          },
+          {
+            id: "rociar",
+            act: { A: "Se te escapa un poco de gas.", B: "Se te escapa un chorro de gas pimienta.", C: "Se te escapa un chorrito de gas pimienta hacia él." },
+            say: { A: "¡Ay! ¡Perdón, Henrik!", B: "¡Ay, Henrik! ¡Perdón, se me escapó!", C: "¡Ay, Henrik! ¡Perdón, ha sido sin querer!" },
+            reply: { A: "Henrik tose y llora. «¡Mis ojos! ¡Agua!» Llega una ambulancia.", B: "Henrik tose y llora, con los ojos rojos. «¡Mis ojos! ¡Necesito agua!» Un guardia llama a una ambulancia.", C: "Henrik tose y llora con los ojos rojos. «¡Mis ojos! ¡Agua, por favor!» Un guardia pide una ambulancia." },
+            mood: "pain", end: "gas-ambulancia",
+          },
+        ],
+      },
+      "gas-charla": {
+        who: "henrik", mood: "smile",
+        line: {
+          A: "Henrik se limpia la cara. «¿Cómo se dice gas pimienta en danés? «Peberspray». Y en español, ¿qué otra palabra enseñas?»",
+          B: "Henrik se seca la frente. «En danés se dice «peberspray». Ahora tú: ¿qué expresión me enseñas para una situación así?»",
+          C: "Henrik se seca la frente y recupera la libreta. «En danés se dice «peberspray», una palabra que ahora tiene para mí connotaciones. ¿Qué expresión española corresponde a este momento?»",
+        },
+        options: [
+          {
+            id: "expresion",
+            say: { A: "«No pasa nada». Y «Casi, casi». Escríbelas.", B: "«No pasa nada» y «Menos mal». Escríbelas, que hoy son muy útiles.", C: "«No pasa nada» y «Menos mal». Apúntalas con subrayado doble: te sobrevivirán." },
+            reply: { A: "Henrik las anota. Sonríe. «Gracias, guía.» Llega su tren.", B: "Henrik las anota con cuidado. Sonríe, ya relajado. «Gracias, guía.» El tren entra en el andén.", C: "Henrik las anota y las subraya dos veces. «Gracias, guía.» El tren entra en el andén y la noche se tranquiliza." },
+            mood: "smile", end: "gas-tren",
+          },
+          {
+            id: "consejo",
+            say: { A: "En esta ciudad, cuida tu mochila y no vayas solo.", B: "Un consejo, Henrik: en esta ciudad, de noche, cuida la mochila y no vayas solo.", C: "Un consejo de guía: de noche, cuida la mochila, acompáñate de gente y sonríe mucho." },
+            reply: { A: "Henrik asiente. «Gracias. Voy a tener cuidado.» Toma el tren.", B: "Henrik asiente, serio. «Gracias por el consejo. Prometo tener cuidado.» Toma el tren.", C: "Henrik asiente, solemne. «Consejo anotado. Y la sonrisa, también.» Toma el tren con paso firme." },
+            mood: "smile", end: "gas-tren",
+          },
+          {
+            id: "paranoia",
+            say: { A: "No te fíes de nadie, Henrik. De nadie.", B: "No te fíes de nadie en esta ciudad, Henrik. Ni de mí.", C: "No te fíes de nadie, Henrik. Ni de mí, por si acaso." },
+            reply: { A: "Henrik se pone nervioso. «Entonces me voy.» Se aleja rápido.", B: "Henrik se pone nervioso. «Entonces mejor me voy al tren, solo.» Se aleja rápido.", C: "Henrik traga saliva. «Entonces me voy al tren, solo y sin fiarme de nadie.» Se aleja con prisa." },
+            mood: "worried", end: "gas-susto",
+          },
+        ],
+      },
+      "lapiz-inicio": {
+        who: "henrik", mood: "smile",
+        line: {
+          A: "Henrik ve tu lápiz y sonríe. «¡Perfecto! ¿Puedes escribirme algo útil en mi mapa?»",
+          B: "Henrik ve tu lápiz y se anima. «¡Perfecto! Justo lo que necesito. ¿Me escribes algo útil en el mapa para el viaje?»",
+          C: "Henrik ve tu lápiz y exclama como quien encuentra un tesoro. «¡Un lápiz! Mi mapa está lleno de huecos. ¿Me dejas una huella de guía en él?»",
+        },
+        options: [
+          {
+            id: "frase",
+            act: { A: "Escribes una frase en el mapa.", B: "Escribes una frase útil en el margen del mapa.", C: "Escribes una frase en el margen del mapa, con letra clara." },
+            say: { A: "Mira: «¿Dónde está la estación?». Es muy útil.", B: "Mira: «¿Dónde está la estación, por favor?». Te sirve en cualquier ciudad.", C: "Mira: «¿Podría decirme dónde está la estación?». Elegante y a prueba de pánico." },
+            reply: { A: "Henrik lee. «¿Dónde está la estación?» Lo repite tres veces.", B: "Henrik lee en voz alta y lo repite tres veces. «¡Dónde está la estación, por favor!»", C: "Henrik lee en voz alta con entonación de actor. «Podría decirme dónde está la estación». Lo repite tres veces." },
+            mood: "smile", next: "lapiz-mapa",
+          },
+          {
+            id: "dibujo",
+            act: { A: "Dibujas un sol en el mapa.", B: "Dibujas un sol sonriente en el mapa.", C: "Dibujas un sol sonriente en la esquina del mapa." },
+            say: { A: "Mira. Es para que no te pierdas.", B: "Mira, es un sol. Para que tu viaje siempre tenga luz.", C: "Mira: un sol. Para que tu mapa, además de útil, sea optimista." },
+            reply: { A: "Henrik sonríe. «Es muy bonito. Gracias.»", B: "Henrik sonríe, conmovido. «Es muy bonito. Lo voy a enseñar en Dinamarca.»", C: "Henrik sonríe, conmovido. «Un sol español en un mapa danés. Eso sí es integración.»" },
+            mood: "love", next: "lapiz-mapa",
+          },
+          {
+            id: "firmar",
+            say: { A: "Firmo aquí: «Tu guía, siempre».", B: "Firmo aquí abajo: «Tu guía de siempre». Así me recuerdas.", C: "Firmo al pie: «Tu guía de fortuna». Para que la historia tenga firma." },
+            reply: { A: "Henrik se ríe. «¡Qué bien!» Guarda el mapa.", B: "Henrik se ríe y guarda el mapa como una joya. «¡Qué bien! Ahora sí es mi mapa.»", C: "Henrik se ríe y guarda el mapa en la mochila como una reliquia. «Autografiado y todo. Mis amigos no lo creerán.»" },
+            mood: "smile", end: "lapiz-amigos",
+          },
+        ],
+      },
+      "lapiz-mapa": {
+        who: "henrik", mood: "smile",
+        line: {
+          A: "Henrik mira el reloj. «Todavía tengo diez minutos. ¿Escribes otra frase? ¿Una para decir adiós?»",
+          B: "Henrik mira el reloj. «Me quedan diez minutos. ¿Me escribes otra frase, una para despedirme de la gente?»",
+          C: "Henrik consulta el reloj. «Diez minutos hasta el tren. ¿Me regalas una última frase, una para despedirme como un nativo?»",
+        },
+        options: [
+          {
+            id: "adios",
+            say: { A: "«Hasta pronto». Es corta y bonita.", B: "«Hasta pronto» o «Cuídate mucho». Las dos sirven para despedirse.", C: "«Hasta pronto» para los amigos y «Que tengas buen viaje» para los que ya lo son." },
+            reply: { A: "Henrik las lee. «Hasta pronto.» Te da la mano.", B: "Henrik las lee con cuidado. «Hasta pronto. Cuídate mucho.» Te da la mano.", C: "Henrik las lee con emoción. «Hasta pronto. Que tengas buen viaje.» Te estrecha la mano con las dos suyas." },
+            mood: "smile", end: "lapiz-aprende",
+          },
+          {
+            id: "direccion",
+            say: { A: "Te apunto mi correo. Escríbeme.", B: "Te apunto mi correo en el mapa. Escríbeme cuando llegues.", C: "Te apunto mi correo. Escríbeme en español, aunque sea mal." },
+            reply: { A: "Henrik guarda el mapa. «¡Escribo en español!» Se va contento.", B: "Henrik guarda el mapa con cariño. «Te escribo en español, lo prometo.» Se va contento.", C: "Henrik guarda el mapa con ceremonia. «Te escribo en español con todos los errores. Palabra de danés.» Se va contento." },
+            mood: "smile", end: "lapiz-amigos",
+          },
+          {
+            id: "tren",
+            say: { A: "¡Henrik, el tren! Corre.", B: "¡Henrik, mira el panel! ¡Tu tren sale ya!", C: "¡Henrik, el panel! Tu tren se despide y tú sigues aquí." },
+            reply: { A: "Henrik corre con el mapa en la mano. «¡Gracias!»", B: "Henrik sale corriendo con el mapa en la mano. «¡Gracias por todo, guía!»", C: "Henrik sale disparado, con el mapa ondeando. «¡Gracias, guía! ¡Hasta pronto!»" },
+            mood: "surprised", end: "lapiz-aprende",
+          },
+        ],
+      },
+      "libro-inicio": {
+        who: "henrik", mood: "surprised",
+        line: {
+          A: "Henrik ve tu libro. «¿Un libro? ¿Es un diccionario? ¡Perfecto! ¿Me enseñas una palabra bonita?»",
+          B: "Henrik ve tu libro y abre mucho los ojos. «¿Un libro? ¿Es un diccionario? ¡Genial! ¿Me enseñas una palabra bonita?»",
+          C: "Henrik ve tu libro y su cara se ilumina como si hubiera visto un oasis. «¿Un diccionario? ¡Un hombre con un libro! ¿Me regalas una palabra bonita para el viaje?»",
+        },
+        options: [
+          {
+            id: "palabra",
+            act: { A: "Abres el libro en una página.", B: "Abres el libro en una página al azar.", C: "Abres el libro en una página al azar y eliges una palabra." },
+            say: { A: "Mira: «sobremesa». Es un momento bonito después de comer.", B: "Mira: «sobremesa». Es el rato de charla después de comer. No tiene traducción.", C: "Mira: «sobremesa». Esa charla pausada de después de comer. Ninguna lengua nórdica tiene algo igual." },
+            reply: { A: "Henrik repite: «Sobremesa». Lo anota. «¡Qué bonito!»", B: "Henrik la repite despacio y la anota. «Sobremesa. Qué palabra tan bonita. En Dinamarca no existe.»", C: "Henrik la anota y la subraya. «Sobremesa. Mi país se ha quedado sin ese concepto. Voy a introducirlo.»" },
+            mood: "smile", next: "libro-frase",
+          },
+          {
+            id: "regalo",
+            say: { A: "Es para ti. Quédatelo. Para el viaje.", B: "Es para ti, Henrik. Quédatelo para el viaje.", C: "Es tuyo, Henrik. Un turista sin libro es solo un caminante con mapa." },
+            reply: { A: "Henrik abraza el libro. «¡Gracias! ¡Lo voy a leer!»", B: "Henrik abraza el libro, emocionado. «¡Gracias! Lo voy a leer en el tren, despacio.»", C: "Henrik abraza el libro, conmovido. «Gracias. Lo leeré entero, aunque tarde un año.»" },
+            mood: "love", next: "libro-frase",
+          },
+          {
+            id: "excusa",
+            say: { A: "No es un diccionario. Es mi excusa para no hablar con nadie.", B: "No es un diccionario. Es mi excusa para no hablar con nadie de noche.", C: "No es un diccionario. Es mi escudo contra las conversaciones nocturnas." },
+            reply: { A: "Henrik se ríe. «¡Pero yo sí quiero hablar!»", B: "Henrik se ríe a carcajadas. «¡Pues yo vengo a romper tu escudo!»", C: "Henrik se ríe a carcajadas. «Pues soy un especialista en romper escudos con preguntas.»" },
+            mood: "laugh", next: "libro-frase",
+          },
+        ],
+      },
+      "libro-frase": {
+        who: "henrik", mood: "smile",
+        line: {
+          A: "Henrik lee una frase del libro. «Hay palabras muy difíciles. ¿Cómo se dice esto?» Te enseña una línea.",
+          B: "Henrik hojea el libro y señala una línea. «Esta frase es difícil. ¿Me la lees tú, con tu voz? Quiero oír cómo suena.»",
+          C: "Henrik hojea el libro y señala una línea con el dedo. «Esta frase me retuerce la lengua. ¿Me la lees tú? Quiero oír cómo suena en una voz que sepa lo que dice.»",
+        },
+        options: [
+          {
+            id: "leer",
+            say: { A: "Claro. Escucha. Y repite.", B: "Con gusto. Escucha primero y repite después, despacio.", C: "Con placer. Escucha primero, repite después y no te preocupes por la erre." },
+            reply: { A: "Lees la frase. Henrik repite. Casi perfecto. Aplaude.", B: "Lees la frase. Henrik la repite con acento fuerte, pero casi perfecta. Aplaude contento.", C: "Lees la frase. Henrik la repite con acento fuerte, pero con un ritmo casi perfecto. Aplaude, orgulloso de sí mismo." },
+            mood: "smile", end: "libro-aprende",
+          },
+          {
+            id: "regalar",
+            say: { A: "Toma el libro. Es tuyo. Para el tren.", B: "Quédate el libro. Es tuyo. Para el tren y para la vuelta.", C: "Quédate el libro, Henrik. Léelo en el tren y que te acompañe de vuelta a casa." },
+            reply: { A: "Henrik lo guarda con cuidado. «Gracias.» Corre a su tren.", B: "Henrik lo guarda en la mochila con cuidado. «Gracias de corazón.» Corre al tren.", C: "Henrik lo guarda en la mochila, junto al mapa. «Gracias de corazón.» Corre al tren sin soltar la sonrisa." },
+            mood: "love", end: "libro-regalo",
+          },
+          {
+            id: "tren",
+            say: { A: "¡Henrik, tu tren! Léelo allí.", B: "¡Henrik, tu tren sale ya! Léelo en el viaje.", C: "¡Tu tren, Henrik! La frase te espera sentada, no corre." },
+            reply: { A: "Henrik mira el reloj. «¡Ay!» Toma el libro y corre.", B: "Henrik mira el reloj, pálido. «¡Ay!» Toma el libro y sale corriendo.", C: "Henrik mira el reloj, pálido. «¡Ay!» Se lleva el libro prestado y sale corriendo, olvidando devolverlo." },
+            mood: "surprised", end: "libro-regalo",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "henrik", mood: "smitten",
+        line: {
+          A: "Henrik te ve y abre los brazos. Sus ojos brillan. «¡Mi mejor guía! ¡Te echaba de menos! ¡Dame un abrazo!»",
+          B: "Henrik te ve y abre los brazos de par en par, con los ojos brillantes. «¡Mi mejor guía! ¡Te estaba buscando por toda la estación! ¡Dame un abrazo!»",
+          C: "Henrik te ve y abre sus larguísimos brazos, con los ojos brillantes. «¡Mi mejor guía! Te he buscado entre trenes y relojes. ¡Un abrazo, por favor!»",
+        },
+        options: [
+          {
+            id: "abrazo",
+            act: { A: "Lo abrazas.", B: "Le das un abrazo fuerte.", C: "Le devuelves el abrazo con todas tus fuerzas." },
+            say: { A: "¡Henrik! Qué alegría. Gracias por volver.", B: "¡Henrik! Qué alegría verte. Gracias por volver a buscarme.", C: "¡Henrik! Qué alegría. Gracias por volver: los guías también necesitamos que nos busquen." },
+            reply: { A: "Henrik te levanta del suelo. «¡Eres mi amigo!»", B: "Henrik te levanta unos centímetros del suelo. «¡Eres mi amigo español favorito!»", C: "Henrik te levanta del suelo con su metro noventa. «Eres el mejor amigo español que he hecho en una noche.»" },
+            mood: "love", next: "corazon-despedida",
+          },
+          {
+            id: "coquetear",
+            say: { A: "Qué alto eres. Y qué guapo. ¿Eres de verdad danés?", B: "Qué alto eres, Henrik, y qué guapo. ¿Todos los daneses son así?", C: "Qué alto y qué guapo. ¿Todos los daneses miden lo que tu sonrisa?" },
+            reply: { A: "Henrik se pone rojo. «¡Ay! Gracias. En español no sé responder.»", B: "Henrik se pone rojo hasta las orejas. «¡Ay! No sé cómo responder a esto en español. ¿Gracias?»", C: "Henrik se pone rojo hasta las orejas. «Esto no estaba en el capítulo de cortesía. ¿Gracias? ¿Muchas gracias?»" },
+            mood: "smitten", next: "corazon-despedida",
+          },
+          {
+            id: "beso",
+            act: { A: "Le das un beso en la mejilla.", B: "Le das un beso en la mejilla.", C: "Le das un beso en la mejilla, como se hace aquí." },
+            say: { A: "Así saludamos aquí, Henrik. Un beso.", B: "Así se saluda aquí, Henrik: con un beso en la mejilla.", C: "Así nos saludamos aquí, Henrik: un beso en la mejilla. Es la costumbre local de verdad." },
+            reply: { A: "Henrik se toca la mejilla y sonríe. «Me gusta esa costumbre.»", B: "Henrik se toca la mejilla, sonriendo como un niño. «Me gusta mucho esa costumbre. Dos besos, ¿no?»", C: "Henrik se toca la mejilla y sonríe. «Esa sí que es una costumbre con la que quiero integrarme.»" },
+            mood: "smitten", end: "corazon-beso",
+          },
+        ],
+      },
+      "corazon-despedida": {
+        who: "henrik", mood: "love",
+        line: {
+          A: "Henrik mira el reloj. «Mi tren sale ya. Pero antes, dime, ¿cómo se dice «te voy a echar de menos»?»",
+          B: "Henrik mira el reloj con tristeza. «Mi tren sale ya. Antes de irme, ¿cómo se dice «te voy a echar de menos» en español?»",
+          C: "Henrik mira el reloj con el gesto de quien no quiere despedirse. «Mi tren sale ya. Antes de irme, enséñame cómo se dice «te voy a echar de menos» sin que suene a telenovela.»",
+        },
+        options: [
+          {
+            id: "frase",
+            say: { A: "Se dice: «Te voy a echar de menos». Repite.", B: "Se dice: «Te voy a echar de menos». Dilo con los ojos en los míos.", C: "«Te voy a echar de menos.» Y si quieres telenovela, añade «con toda mi alma»." },
+            reply: { A: "Henrik lo dice. Los ojos le brillan. Te abraza otra vez.", B: "Henrik lo dice despacio, sin apartar la vista. Se le humedecen los ojos. Te abraza otra vez.", C: "Henrik lo dice despacio, con toda su alma. Se le humedecen los ojos. Te abraza otra vez, sin ironía." },
+            mood: "love", end: "corazon-abrazo",
+          },
+          {
+            id: "sellar",
+            act: { A: "Le das otro beso.", B: "Le das un beso en la mejilla.", C: "Le das un beso en la mejilla, para sellar la despedida." },
+            say: { A: "Hasta pronto, Henrik. Escríbeme.", B: "Hasta pronto, Henrik. Escríbeme en español.", C: "Hasta pronto, Henrik. Escríbeme, aunque sea con errores. Los errores son parte del cariño." },
+            reply: { A: "Henrik sonríe, se toca la mejilla y corre al tren.", B: "Henrik sonríe con los ojos húmedos, se toca la mejilla y corre al tren.", C: "Henrik sonríe, se toca la mejilla y corre al tren, girándose tres veces para saludarte." },
+            mood: "love", end: "corazon-beso",
+          },
+          {
+            id: "tren",
+            say: { A: "¡Corre, Henrik! No pierdas el tren.", B: "¡Corre, Henrik! No pierdas el tren por mí.", C: "¡Corre, Henrik! Que la despedida no te cueste el tren." },
+            reply: { A: "Henrik corre. Desde la puerta, grita: «¡Te voy a echar de menos!»", B: "Henrik corre al andén. Desde la puerta, grita: «¡Te voy a echar de menos, guía!»", C: "Henrik sale disparado. Desde la puerta del tren, grita con voz de bajo: «¡Te voy a echar de menos!»" },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
     },
     ends: {
+
+      "cuchillo-policia": { text: { A: "Llega la policía. Te quitan el cuchillo y te hacen preguntas. Henrik pierde su tren.", B: "Llega la policía. Te quitan el cuchillo y te hacen preguntas largas. Henrik pierde su tren por declarar.", C: "Llega la policía y confisca el cuchillo. Henrik pierde el tren por declarar como testigo de un saludo mal entendido." }, change: "policia", recap: "El cuchillo asustó a Henrik y llegó la policía." },
+      "cuchillo-tren": { text: { A: "Henrik toma el tren con su bocadillo. Te dice adiós y sonríe un poco.", B: "Henrik sube al tren con su mitad de bocadillo. Te dice adiós desde la puerta, ya sin miedo.", C: "Henrik sube al tren con su mitad de bocadillo y el susto digerido. Se despide desde la puerta con una sonrisa muy cauta." }, change: "se-va", recap: "Henrik tomó el tren con la mitad de tu bocadillo." },
+      "cuchillo-susto": { text: { A: "Henrik se va rápido al tren, sin despedirse. Mira atrás dos veces.", B: "Henrik se aleja rápido hacia el tren sin despedirse. Mira atrás dos veces, por si acaso.", C: "Henrik se aleja hacia el tren sin despedirse y mira atrás dos veces, con la prudencia de quien conoce ya la fauna local." }, change: "corre", recap: "Asustaste a Henrik con un cuchillo." },
+      "pistola-policia": { text: { A: "La policía te quita la pistola. Henrik declara. Pierde su tren.", B: "La policía te desarma en el andén. Henrik declara, temblando, y pierde su tren.", C: "La policía te desarma ante todo el andén. Henrik declara, aún pálido, y pierde su tren." }, change: "policia", recap: "La pistola asustó a Henrik y llegó la policía." },
+      "pistola-tren": { text: { A: "Henrik toma el tren. Desde la ventana, te mira con mucha atención.", B: "Henrik sube al tren. Desde la ventana, te mira con una mezcla de alivio y asombro.", C: "Henrik sube al tren. Desde la ventanilla, te observa con una mezcla de alivio, asombro y material para su próxima conversación." }, change: "se-va", recap: "Henrik tomó su tren después del susto de la pistola." },
+      "pistola-susto": { text: { A: "Henrik corre al andén sin mirar atrás. Tú te quedas solo.", B: "Henrik corre al andén sin mirar atrás. Te quedas solo, con la pistola y el mapa en el suelo.", C: "Henrik desaparece corriendo hacia el andén. Te quedas solo con la pistola y un mapa olvidado en el suelo." }, change: "huye", recap: "Tu pistola hizo huir a Henrik." },
+      "granada-helicoptero": { text: { A: "El helicóptero ilumina la estación. La policía te rodea. Henrik grita: «¡Qué locura!».", B: "El helicóptero ilumina la estación entera. La policía te rodea y Henrik, desde lejos, grita: «¡Qué locura!».", C: "El helicóptero baña la estación de luz mientras la policía te rodea. Henrik, desde lejos, grita la primera expresión que aprendió: «¡Qué locura!»." }, change: "helicoptero", recap: "La granada hizo llegar la policía y un helicóptero." },
+      "granada-tren": { text: { A: "Henrik toma otro tren. Se ríe mucho. Dice: «¡Qué locura!».", B: "Henrik toma el siguiente tren, riéndose todavía. «¡Qué susto! ¡Qué locura!», repite desde la ventana.", C: "Henrik toma el siguiente tren, riéndose todavía. «¡Qué susto! ¡Qué locura!», repite desde la ventana, convertido en un hombre con anécdota." }, change: "se-va", recap: "Henrik perdió su tren por la granada, pero aprendió expresiones nuevas." },
+      "gas-susto": { text: { A: "Henrik se aleja nervioso. Llama a un guardia. Tú te quedas con el gas.", B: "Henrik se aleja nervioso y habla con un guardia. Te quedas con el gas en la mano y mucha vergüenza.", C: "Henrik se aleja con prisa y habla con un guardia. Te quedas con el gas en la mano y con una vergüenza muy considerable." }, change: "corre", recap: "El gas pimienta asustó a Henrik." },
+      "gas-ambulancia": { text: { A: "Llega la ambulancia. Henrik se lava los ojos. Pierde el tren, pero se ríe.", B: "Llega la ambulancia. Henrik se lava los ojos con suero. Pierde el tren, pero a ratos se ríe.", C: "Llega la ambulancia y Henrik se lava los ojos con suero. Pierde el tren, pero conserva el humor, que es lo más danés que tiene." }, change: "ambulancia", recap: "Se te escapó gas pimienta y Henrik necesitó una ambulancia." },
+      "gas-tren": { text: { A: "Henrik toma el tren con la libreta llena. «¡Hasta pronto!»", B: "Henrik toma el tren con la libreta llena de expresiones nuevas. «¡Hasta pronto, guía!»", C: "Henrik toma el tren con la libreta repleta de expresiones. «¡Hasta pronto, guía!», grita, con ojos algo rojos todavía." }, change: "se-va", recap: "Henrik aprendió expresiones nuevas después del susto del gas." },
+      "lapiz-aprende": { text: { A: "Henrik guarda el mapa con tus frases. Sube al tren sonriendo.", B: "Henrik guarda el mapa con tus frases escritas. Sube al tren y repite «hasta pronto» desde la ventana.", C: "Henrik guarda el mapa con tus frases en el margen. Sube al tren y repite «hasta pronto» desde la ventana, saboreando cada vocal." }, change: "sonrie", recap: "Escribiste frases útiles en el mapa de Henrik." },
+      "lapiz-amigos": { text: { A: "Henrik te abraza. Guarda el mapa con tu firma. «¡Escríbeme!»", B: "Henrik te abraza y guarda el mapa con tu firma. «¡Escríbeme!», grita desde el andén.", C: "Henrik te abraza y guarda el mapa con tu firma como un pasaporte. «¡Escríbeme!», grita desde el andén." }, change: "abraza", recap: "Firmaste el mapa de Henrik con tu lápiz." },
+      "libro-aprende": { text: { A: "Henrik repite la frase. Está muy contento. Sube al tren.", B: "Henrik repite la frase tres veces. Muy contento, sube al tren y la dice desde la ventana.", C: "Henrik repite la frase tres veces, cada vez con menos acento. Sube al tren y la lanza por la ventana al andén." }, change: "sonrie", recap: "Le enseñaste a Henrik una palabra de tu libro." },
+      "libro-regalo": { text: { A: "Henrik se va con tu libro en la mochila. Te dice adiós con la mano.", B: "Henrik se va con tu libro en la mochila. Te dice adiós con la mano hasta que el tren se pierde.", C: "Henrik se va con tu libro en la mochila y la promesa de leerlo. Te dice adiós con la mano hasta que el tren se pierde en el túnel." }, change: "se-va", recap: "Le regalaste tu libro a Henrik." },
+      "corazon-abrazo": { text: { A: "Henrik te abraza otra vez y sube al tren. Desde la ventana dice: «Te voy a echar de menos».", B: "Henrik te abraza otra vez y sube al tren. Desde la ventana te grita: «¡Te voy a echar de menos!».", C: "Henrik te abraza una vez más y sube al tren. Desde la ventana te grita su primera frase de amor en español: «¡Te voy a echar de menos!»." }, change: "abraza", recap: "Te despediste de Henrik con un abrazo." },
+      "corazon-beso": { text: { A: "Henrik se toca la mejilla y sonríe. Sube al tren. Saluda hasta que desaparece.", B: "Henrik se toca la mejilla y sonríe. Sube al tren y te saluda hasta que desaparece en el túnel.", C: "Henrik se toca la mejilla, sonríe como un niño y sube al tren. Te saluda sin parar hasta que el túnel se lo traga." }, change: "beso", recap: "Le diste un beso de despedida a Henrik." },
       aprende: { text: { A: "Henrik escribe la expresión en su libreta. Está muy contento.", B: "Henrik apunta la expresión en su libreta y la repite en voz baja, feliz.", C: "Henrik archiva la expresión en su libreta como un tesoro y la murmura, satisfecho." }, change: "sonrie", recap: "Le enseñaste a Henrik una expresión nueva." },
       tren: { text: { A: "Henrik corre al tren. Desde la puerta, te dice adiós.", B: "Henrik llega al tren justo a tiempo. Desde la puerta, grita su nueva expresión.", C: "Henrik alcanza el tren por los pelos y, desde la puerta, grita su nueva expresión a todo el andén." }, change: "se-va", recap: "Henrik tomó su tren con una expresión nueva." },
       amigos: { text: { A: "Henrik te abraza. Te da su correo. «¡Escríbeme!»", B: "Henrik te abraza y te deja su correo en el mapa. «¡Escríbeme en español!»", C: "Henrik te abraza y te deja su correo. «Escríbeme en español. Sin piedad.»" }, change: "abraza", recap: "Te despediste de Henrik como amigos." },
@@ -2881,6 +3310,16 @@ const encounters = [
       B2: "¿Qué expresión de tu idioma le enseñarías a un turista, y por qué?",
       C1: "¿Qué expresiones de tu idioma son imposibles de traducir del todo?",
       C2: "¿Qué parte de tu identidad cambia cuando hablas otro idioma?",
+    },
+
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando alguien se asusta de ti?", B: "¿Cómo explicarías a un extranjero una costumbre tuya que parece peligrosa?", C: "¿Qué malentendidos culturales has vivido con un objeto cotidiano?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Cómo dices «no quiero problemas» en tu idioma?", B: "¿Qué consecuencias puede tener un malentendido con un turista?", C: "¿Qué frase te saldría sin pensar si alguien te apuntara?" } },
+      granada: { start: "granada-inicio", fx: "huye", speak: { A: "¿Qué haces cuando oyes un grito en una estación?", B: "¿Cuál es la anécdota de viaje más loca que cuentas?", C: "¿Qué locura de viaje has convertido en la mejor anécdota?" } },
+      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Qué consejo de seguridad das a un turista?", B: "¿Cómo se dice «peligro» y «cuidado» en tu idioma?", C: "¿Qué precauciones aconsejarías a quien visita tu ciudad de noche?" } },
+      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Qué frase escribirías en un mapa para un turista?", B: "¿Qué frase de despedida escribirías en el mapa de un viajero?", C: "¿Qué huella dejarías en el cuaderno de un viajero que apenas conoces?" } },
+      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Cuál es tu palabra española favorita?", B: "¿Qué palabra de tu idioma no tiene traducción en español?", C: "¿Qué palabra intraducible te gustaría regalarle a un extranjero?" } },
+      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿A quién echas de menos hoy?", B: "¿Cómo se despiden en tu país las personas que se quieren?", C: "¿Qué despedida de un viajero te marcó, y por qué?" } },
     },
   },
 
@@ -2975,8 +3414,231 @@ const encounters = [
           },
         },
       },
+
+      // ── variantes
+      "cuchillo-inicio": {
+        who: "faustino", mood: "angry",
+        line: {
+          A: "Don Faustino ve el cuchillo. Pone la mano en su radio. «¡Eh, tú! Baja eso ahora mismo. Esto es una estación, no una cocina.»",
+          B: "Don Faustino ve el cuchillo y lleva la mano a la radio del cinturón. «¡Eh, tú! Baja eso ahora mismo. Esto es una estación, no una carnicería.»",
+          C: "Don Faustino ve el cuchillo y su mano viaja a la radio con lentitud profesional. «Joven, baje eso. Treinta años en esta estación y nunca he necesitado el uniforme tanto como hoy.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas el cuchillo.", B: "Guardas el cuchillo con calma.", C: "Guardas el cuchillo con las manos a la vista." },
+            say: { A: "Perdón, guardia. Ya está guardado. Es para la fruta.", B: "Perdone, guardia. Ya está guardado. Lo uso para pelar fruta.", C: "Perdone, agente. Guardado. Es un cuchillo de fruta, nada más." },
+            reply: { A: "Don Faustino suelta la radio. «Bueno. Pero no se saca así.»", B: "Don Faustino suelta la radio, aliviado. «Bueno. Pero esas cosas no se sacan delante de un guardia.»", C: "Don Faustino retira la mano de la radio. «Bien. Pero un cuchillo en un andén, sea de fruta o de lo que sea, se esconde.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "explicar",
+            say: { A: "Es para cortar un pastel. Es mi cumpleaños.", B: "Es para cortar un pastel. Hoy es mi cumpleaños y estaba esperando a un amigo.", C: "Es para cortar un pastel. Mi cumpleaños. Sí, lo sé, la excusa suena a coartada." },
+            reply: { A: "Don Faustino duda. «¿Un pastel? ¿A medianoche?» Mira bien.", B: "Don Faustino arquea una ceja. «¿Un pastel a medianoche? Enséñamelo.» Te mira de arriba abajo.", C: "Don Faustino entrecierra los ojos. «Pastel, medianoche y cuchillo. Parece el principio de un chiste malo. Enséñeme el pastel.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "acercarse",
+            act: { A: "Das un paso hacia él con el cuchillo.", B: "Te acercas con el cuchillo todavía en la mano.", C: "Avanzas un paso, cuchillo en mano, para explicarte." },
+            say: { A: "Espere. Escuche.", B: "Espere, déjeme explicarle.", C: "Un momento, permítame explicarle." },
+            reply: { A: "Don Faustino pide refuerzos por radio. «¡Cuchillo en el andén!»", B: "Don Faustino pide refuerzos por radio. «¡Persona con un cuchillo junto al reloj! ¡Necesito ayuda!»", C: "Don Faustino pide refuerzos por radio con voz de bronce. «Persona armada junto al reloj. Repito, junto al reloj.»" },
+            mood: "terror", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-calma": {
+        who: "faustino", mood: "neutral",
+        line: {
+          A: "Don Faustino se relaja. «Bueno. Ya pasó. Pero que no se repita. Este reloj ha visto muchas cosas, pero nunca un cuchillo.»",
+          B: "Don Faustino se relaja un poco. «Bueno, ya pasó. Pero que no se repita. Este reloj lleva treinta años aquí y nunca vio un cuchillo.»",
+          C: "Don Faustino se relaja un poco, pero no del todo. «Ya pasó. Que conste que el reloj lleva treinta años aquí y jamás presenció una escena así.»",
+        },
+        options: [
+          {
+            id: "historia",
+            say: { A: "Perdón otra vez. ¿Por qué está parado el reloj?", B: "Perdón otra vez. Para compensar el susto, ¿me cuenta por qué está parado el reloj?", C: "Mil perdones. Para redimirme, ¿me cuenta la historia del reloj parado?" },
+            reply: { A: "Don Faustino sonríe. «Un rayo. Hace treinta años. Y mi mujer bajó del tren a esa hora.»", B: "Don Faustino sonríe un poco. «Un rayo en el noventa y cuatro. Y a esa hora bajó del tren mi mujer, la primera vez que la vi.»", C: "Don Faustino suaviza el gesto. «Un rayo, en el noventa y cuatro. Y a esa hora bajó mi mujer de un tren. Los relojes también saben guardar secretos.»" },
+            mood: "smile", end: "cuchillo-memoria",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Perdón por el susto.", B: "Mejor me voy y lo dejo tranquilo. Perdón por el susto.", C: "Me retiro, agente. Prometo que el cuchillo y yo no volveremos por aquí." },
+            reply: { A: "Don Faustino asiente. «Buenas noches. Y guarda eso.»", B: "Don Faustino asiente con dureza. «Buenas noches. Y guarda esa cosa para siempre.»", C: "Don Faustino asiente con gravedad. «Buenas noches. Y que esa hoja no vuelva a ver la luz de mi estación.»" },
+            mood: "neutral", end: "cuchillo-hora",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "faustino", mood: "terror",
+        line: {
+          A: "Don Faustino ve la pistola y levanta las manos. «¡No, por favor! ¡Soy un guardia viejo! ¡No tengo nada!»",
+          B: "Don Faustino ve la pistola, se queda blanco y levanta las manos. «¡No, por favor! ¡Soy un guardia viejo, no tengo nada que valga la pena!»",
+          C: "Don Faustino ve la pistola y levanta las manos con una dignidad temblorosa. «Hijo, soy un guardia de pensión corta. Aquí no hay nada que valga lo que cuesta esa pistola.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas la pistola.", B: "Guardas la pistola enseguida.", C: "Guardas la pistola de inmediato." },
+            say: { A: "No, no. Baje las manos. No es un robo.", B: "No, no es un robo. Baje las manos, por favor. Perdón.", C: "No es un robo, de verdad. Baje las manos, se lo ruego. Fue un error." },
+            reply: { A: "Don Faustino baja las manos despacio. «¿Entonces para qué la llevas?»", B: "Don Faustino baja las manos despacio. «¿Y entonces por qué llevas una pistola en una estación?»", C: "Don Faustino baja las manos con cautela. «¿Y para qué lleva usted un arma a mi estación, si no es para robar?»" },
+            mood: "worried", next: "pistola-calma",
+          },
+          {
+            id: "ordenar",
+            say: { A: "Calle. Quédese quieto.", B: "Cállese y quédese quieto, que no quiero problemas.", C: "Silencio y quietud. Nadie sale perjudicado si todos colaboran." },
+            reply: { A: "Don Faustino aprieta el botón de alarma con el codo. Suena una sirena.", B: "Don Faustino aprieta con el codo el botón de alarma del reloj. Una sirena llena la estación.", C: "Don Faustino pulsa con el codo, con maestría de veterano, la alarma del reloj. Una sirena inunda la estación." },
+            mood: "terror", end: "pistola-policia",
+          },
+          {
+            id: "huir",
+            act: { A: "Sales corriendo.", B: "Sales corriendo de la estación.", C: "Sales corriendo hacia la calle, pistola en mano." },
+            say: { A: "No me siga.", B: "No me siga. No quiero problemas.", C: "No me siga. Esto no tiene por qué empeorar." },
+            reply: { A: "Don Faustino llama por radio. «Un hombre armado sale por la puerta norte.»", B: "Don Faustino llama por radio con voz temblorosa. «Un hombre armado sale corriendo por la puerta norte.»", C: "Don Faustino lanza un aviso por radio, aún con las manos temblando. «Un hombre armado huye por la puerta norte. Repito, huye.»" },
+            mood: "terror", end: "pistola-huye",
+          },
+        ],
+      },
+      "pistola-calma": {
+        who: "faustino", mood: "angry",
+        line: {
+          A: "Don Faustino te mira serio. «Treinta años aquí y nadie me apuntó nunca. ¿Por qué llevas eso?»",
+          B: "Don Faustino te mira muy serio. «Treinta años en esta estación y nadie me apuntó jamás. ¿Qué haces tú con eso?»",
+          C: "Don Faustino te mira con la severidad de un viejo guardia. «Treinta años de servicio sin que nadie me apunte. Y llegas tú. Explícate.»",
+        },
+        options: [
+          {
+            id: "sincero",
+            say: { A: "Tengo miedo de la noche. Eso es todo.", B: "Tengo miedo de la noche, Don Faustino. Pensé que me haría sentir seguro.", C: "Miedo, Don Faustino. A la noche, a las calles, a todo. Pensé que esto lo curaría." },
+            reply: { A: "Don Faustino suspira. «El miedo no se cura con eso.» Te señala el reloj.", B: "Don Faustino suspira. «El miedo no se cura con eso, hijo.» Te señala el reloj. «Esto sí te calma.»", C: "Don Faustino suspira, casi con ternura. «El miedo no se cura con hierro, hijo.» Te señala el reloj parado. «Mira eso un rato y respira.»" },
+            mood: "worried", end: "pistola-hora",
+          },
+          {
+            id: "amenaza",
+            say: { A: "No se meta en mis cosas.", B: "No se meta en mis asuntos, viejo.", C: "No se meta en lo que no le importa, abuelo." },
+            reply: { A: "Don Faustino llama por radio. Llegan dos policías.", B: "Don Faustino llama por radio sin apartar la vista. Dos policías llegan corriendo por el andén.", C: "Don Faustino llama por radio sin pestañear. Dos policías aparecen corriendo, con la mano en la funda." },
+            mood: "angry", end: "pistola-policia",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "faustino", mood: "terror",
+        line: {
+          A: "Don Faustino ve la granada. Grita por la radio: «¡Bomba! ¡Evacuen la estación!» Suena una alarma.",
+          B: "Don Faustino ve la granada y grita por la radio, con la voz rota: «¡Bomba en el reloj! ¡Evacuen la estación!» Empieza a sonar una alarma.",
+          C: "Don Faustino ve la granada y, con la serenidad de un viejo guardia, enciende la alarma general. «Evacuación, evacuación. Bomba junto al reloj.» La estación entera empieza a vaciarse.",
+        },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "¡Es de juguete! ¡Es una broma!", B: "¡Es de juguete, Don Faustino! ¡Es una broma!", C: "¡Es de utilería, Don Faustino! ¡Una broma de pésimo gusto!" },
+            reply: { A: "Don Faustino no te escucha. La gente corre. Entra la policía.", B: "Don Faustino no te escucha entre la sirena. La gente corre hacia las salidas. Entra la policía en tropel.", C: "Don Faustino no te oye entre la sirena. La gente corre hacia las salidas y la policía irrumpe en tropel." },
+            mood: "terror", next: "granada-policia",
+          },
+          {
+            id: "tirar",
+            act: { A: "Tiras la granada lejos.", B: "Lanzas la granada hacia las vías.", C: "Lanzas la granada a las vías, lo más lejos posible." },
+            say: { A: "¡Al suelo!", B: "¡Al suelo, Don Faustino!", C: "¡Al suelo, Don Faustino, cúbrase!" },
+            reply: { A: "La granada rueda. No explota. Un helicóptero llega.", B: "La granada rueda por la vía y no explota. Pocos minutos después, un helicóptero ilumina la estación.", C: "La granada rueda por la vía sin explotar. Poco después, un helicóptero baña la estación de luz." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+          {
+            id: "correr",
+            act: { A: "Corres con todos hacia la calle.", B: "Corres con todos los demás hacia la calle.", C: "Te sumas a la estampida hacia la calle, granada en mano." },
+            say: { A: "¡Fuera todos!", B: "¡Fuera todos! ¡Rápido!", C: "¡Fuera todos, deprisa y sin empujar!" },
+            reply: { A: "Fuera, la policía te rodea. Don Faustino señala el reloj: «¡Allí!»", B: "Fuera, la policía te rodea. Don Faustino señala hacia el reloj parado: «¡Fue él, junto al reloj!»", C: "Fuera, la policía te rodea. Don Faustino te señala desde el umbral, con el reloj parado de testigo mudo." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-policia": {
+        who: "faustino", mood: "scared",
+        line: {
+          A: "La policía te rodea. Don Faustino se esconde detrás del reloj. «¡Es una bomba! ¿O no?»",
+          B: "La policía te rodea, armas en alto. Don Faustino se esconde detrás del mostrador del reloj. «¡Es una bomba! ¿O es de juguete? ¡Hable, hombre!»",
+          C: "La policía te rodea con las armas desenfundadas. Don Faustino, tras el mostrador del reloj, grita: «¿Es o no es? ¡La estación necesita saberlo!»",
+        },
+        options: [
+          {
+            id: "falsa",
+            act: { A: "Dejas la granada en el suelo.", B: "Dejas la granada en el suelo, con las manos arriba.", C: "Dejas la granada en el suelo y levantas las manos." },
+            say: { A: "Es falsa. Perdón. Fue una broma.", B: "Es falsa, es de plástico. Perdón, fue una broma de mal gusto.", C: "Es de plástico, lo juro. Una broma idiota de la que me arrepiento." },
+            reply: { A: "Un policía la revisa. «Es falsa.» Don Faustino respira.", B: "Un policía la revisa con cuidado. «Es falsa.» Don Faustino se deja caer en el banco, aliviado.", C: "Un policía la revisa con guantes. «Plástico.» Don Faustino se deja caer en el banco, con el corazón de un viejo guardia latiendo a mil." },
+            mood: "worried", end: "granada-evacuacion",
+          },
+          {
+            id: "huir",
+            act: { A: "Corres hacia la salida.", B: "Echas a correr hacia la salida.", C: "Intentas escapar hacia la salida." },
+            say: { A: "¡No me toquen!", B: "¡No me toquen! ¡Déjenme pasar!", C: "¡Déjenme pasar! ¡No he hecho nada!" },
+            reply: { A: "Los policías te placan. Un helicóptero llega.", B: "Dos policías te placan antes de que llegues a la puerta. Un helicóptero ilumina la estación.", C: "Dos policías te placan en plena huida. Un helicóptero fija su foco sobre el reloj parado." },
+            mood: "pain", end: "granada-helicoptero",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "faustino", mood: "smitten",
+        line: {
+          A: "Don Faustino te ve y se le ilumina la cara. «Hola, muchacho. Qué sonrisa tienes. Me recuerdas a mi mujer. ¿Quieres ver el reloj de cerca?»",
+          B: "Don Faustino te ve y sonríe de oreja a oreja. «Hola, muchacho. Qué sonrisa más buena tienes. Me recuerdas a mi mujer. ¿Quieres ver el reloj de cerca?»",
+          C: "Don Faustino te ve y se le suaviza el bigote. «Buenas noches. Qué sonrisa tan limpia tiene. Me recuerda a mi mujer, cuando bajó del tren. ¿Quiere ver el reloj de cerca?»",
+        },
+        options: [
+          {
+            id: "ver",
+            say: { A: "Sí, quiero verlo. Cuénteme su historia.", B: "Sí, claro. Cuénteme su historia con él, por favor.", C: "Con mucho gusto. Cuénteme su historia con este reloj; la noche es larga." },
+            reply: { A: "Don Faustino te lleva al pie del reloj y te cuenta. «A esa hora conocí a mi mujer.»", B: "Don Faustino te lleva al pie del reloj. «A las doce menos trece bajó mi mujer del tren. Por eso nadie lo toca.»", C: "Don Faustino te lleva al pie del reloj, casi de la mano. «A las doce menos trece bajó mi mujer de un tren. Desde entonces el tiempo se detuvo, por voluntad propia.»" },
+            mood: "love", next: "corazon-foto",
+          },
+          {
+            id: "consolar",
+            say: { A: "Se nota que la quiere mucho. ¿Dónde está ella?", B: "Se nota que la quiere mucho. ¿Dónde está ahora, Don Faustino?", C: "Se nota lo mucho que la quiere. ¿Dónde está ahora ella, Don Faustino?" },
+            reply: { A: "Don Faustino baja la mirada. «Murió hace tres años. Pero vengo cada noche.»", B: "Don Faustino baja la mirada, con los ojos húmedos. «Murió hace tres años. Pero vengo cada noche para estar con ella.»", C: "Don Faustino baja la mirada, con los ojos brillantes. «Se fue hace tres años. Por eso sigo viniendo cada noche: aquí el tiempo me la devuelve.»" },
+            mood: "love", next: "corazon-foto",
+          },
+          {
+            id: "abrazo",
+            act: { A: "Lo abrazas.", B: "Abrazas a Don Faustino.", C: "Abrazas a Don Faustino con mucho respeto." },
+            say: { A: "Gracias por cuidar la estación.", B: "Gracias por cuidar la estación todos estos años, Don Faustino.", C: "Gracias por cuidar este lugar durante treinta años. Alguien tenía que hacerlo." },
+            reply: { A: "Don Faustino te abraza con fuerza. «De nada, hijo.»", B: "Don Faustino te abraza con los ojos cerrados. «De nada, hijo. Pocos me lo agradecen.»", C: "Don Faustino te abraza, conmovido. «Treinta años y es la primera vez que alguien me lo agradece con un abrazo.»" },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-foto": {
+        who: "faustino", mood: "love",
+        line: {
+          A: "Don Faustino saca una foto de su cartera. «Mira. Ella, aquí, en este andén. A las doce menos trece.»",
+          B: "Don Faustino saca una foto vieja de la cartera y te la pone en las manos. «Mira. Ella, joven, en este mismo andén. A las doce menos trece.»",
+          C: "Don Faustino saca una foto en blanco y negro de la cartera, con un cuidado casi religioso. «Mírala. Ella, joven, en este andén, a las doce menos trece. No hay reloj que me enseñe más.»",
+        },
+        options: [
+          {
+            id: "beso",
+            act: { A: "Le das un beso en la mejilla.", B: "Le das un beso en la mejilla.", C: "Le das un beso en la mejilla, con ternura." },
+            say: { A: "Es muy guapa. Gracias por enseñármela.", B: "Es preciosa. Gracias por compartirla conmigo, Don Faustino.", C: "Es preciosa. Gracias por confiarme esta imagen, Don Faustino." },
+            reply: { A: "Don Faustino se toca la mejilla, rojo. «Hijo, qué cosas.»", B: "Don Faustino se toca la mejilla, rojo de emoción. «Hijo, qué cosas tienes.»", C: "Don Faustino se toca la mejilla, sonrojado. «Qué cosas… Hace tanto que nadie me da un beso que casi lo había olvidado.»" },
+            mood: "smitten", end: "corazon-beso",
+          },
+          {
+            id: "luz",
+            say: { A: "¿Podemos encender la luz del reloj para ella?", B: "¿Y si encendemos la luz del reloj para ella, esta noche?", C: "¿Y si encendemos la luz del reloj en su honor, ahora mismo?" },
+            reply: { A: "Don Faustino enciende la luz. El reloj brilla. Él llora y sonríe.", B: "Don Faustino enciende la luz. La esfera del reloj brilla sobre la plaza. Don Faustino llora y sonríe a la vez.", C: "Don Faustino enciende la luz con mano temblorosa. La esfera brilla sobre la plaza vacía. Don Faustino llora y sonríe a la vez." },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
     },
     ends: {
+
+      "cuchillo-policia": { text: { A: "Llegan dos policías. Te quitan el cuchillo. Don Faustino explica. Tú también.", B: "Llegan dos policías. Te quitan el cuchillo y toman nota. Don Faustino cuenta su versión; tú, la tuya, mucho más larga.", C: "Dos policías llegan en minutos, te desarman y toman nota. Don Faustino declara con voz de testigo; tú, con voz de acusado." }, change: "policia", recap: "El cuchillo asustó a Don Faustino y terminó con la policía." },
+      "cuchillo-memoria": { text: { A: "Don Faustino te cuenta su historia. Al final te da la mano. Guardas el cuchillo.", B: "Don Faustino te cuenta cómo conoció a su mujer. Al final te estrecha la mano. El cuchillo se queda guardado.", C: "Don Faustino te cuenta cómo conoció a su mujer bajo ese reloj. Al final te estrecha la mano; el cuchillo no vuelve a salir esta noche." }, change: "sonrie", recap: "Después del susto del cuchillo, Don Faustino te contó la historia del reloj." },
+      "cuchillo-hora": { text: { A: "Don Faustino te mira irte. Habla por radio. Tú sigues tu camino.", B: "Don Faustino te sigue con la mirada hasta que sales. Habla por radio, serio. Tú sigues tu camino.", C: "Don Faustino te sigue con la mirada hasta la puerta y habla por radio. Tú sigues tu camino con un cuchillo menos a la vista." }, change: "se-va", recap: "El cuchillo asustó a Don Faustino y te marchaste." },
+      "pistola-policia": { text: { A: "La policía llega rápido. Te quita la pistola. Don Faustino tiembla y habla.", B: "La policía llega rápido y te quita la pistola. Don Faustino, todavía temblando, relata los hechos.", C: "La policía llega en tiempo récord y te desarma. Don Faustino, aún temblando, relata los hechos con una precisión de notario." }, change: "policia", recap: "La pistola terminó con la policía en la estación." },
+      "pistola-huye": { text: { A: "Corres por la calle. Oyes sirenas atrás. Don Faustino mira el reloj parado.", B: "Corres por la calle oscura con la pistola en la mano. Oyes sirenas a lo lejos. Don Faustino vuelve a mirar el reloj parado.", C: "Corres por la calle oscura, pistola en mano, perseguido por sirenas. Don Faustino vuelve a su reloj, que sigue marcando la misma hora impasible." }, change: "huye", recap: "Huiste de la estación con una pistola." },
+      "pistola-hora": { text: { A: "Don Faustino te mira el reloj. Guardas la pistola. Te vas más tranquilo.", B: "Don Faustino te hace mirar el reloj un minuto entero. Guardas la pistola y te vas más tranquilo que cuando llegaste.", C: "Don Faustino te hace contemplar el reloj parado un minuto entero. Guardas la pistola y te marchas más sereno que cuando llegaste." }, change: "sigue", recap: "Don Faustino te calmó con la historia de su reloj." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina la estación. La policía te rodea. Don Faustino mira el reloj.", B: "Un helicóptero ilumina la estación entera. La policía te rodea. Don Faustino, impasible, mira el reloj parado.", C: "Un helicóptero baña la estación de luz mientras la policía te rodea. Don Faustino, impasible, mira el reloj parado: él ya lo ha visto todo." }, change: "helicoptero", recap: "La granada trajo un helicóptero a la estación." },
+      "granada-evacuacion": { text: { A: "La estación está vacía. Solo quedan tú, la policía y el reloj parado.", B: "La estación queda vacía. Solo quedan tú, la policía y el reloj parado, que sigue marcando las doce menos trece.", C: "La estación queda desierta. Solo quedan tú, la policía y el reloj parado, que sigue marcando las doce menos trece con indiferencia soberana." }, change: "huye", recap: "La granada vació la estación entera." },
+      "corazon-abrazo": { text: { A: "Don Faustino te abraza. La luz del reloj se enciende. Está muy contento.", B: "Don Faustino te abraza y la luz del reloj se enciende sobre la plaza. Está tan contento que canta bajito.", C: "Don Faustino te abraza y enciende la luz del reloj sobre la plaza. Tan contento está que se pone a tararear un tango muy viejo." }, change: "abraza", recap: "Abrazaste a Don Faustino y encendieron la luz del reloj." },
+      "corazon-beso": { text: { A: "Don Faustino guarda la foto. Sonríe como un niño. Te acompaña hasta la puerta.", B: "Don Faustino guarda la foto junto al corazón. Sonríe como un niño y te acompaña hasta la puerta.", C: "Don Faustino guarda la foto junto al corazón, sonríe como un niño y te acompaña hasta la puerta como a un invitado de honor." }, change: "beso", recap: "Le diste un beso a Don Faustino y te enseñó la foto de su mujer." },
       hora: { text: { A: "Don Faustino vuelve a mirar el reloj. Tú sigues tu camino.", B: "Don Faustino vuelve a su puesto. Tú sigues tu camino con la hora correcta.", C: "Don Faustino vuelve a su contemplación. Tú te vas con la hora del mundo, que es menos poética." }, change: "sigue", recap: "Preguntaste la hora a Don Faustino." },
       memoria: { text: { A: "Don Faustino está contento. Te da la mano.", B: "Don Faustino te da la mano, contento de que alguien piense como él.", C: "Don Faustino te estrecha la mano como a un aliado en la defensa del reloj." }, change: "sonrie", recap: "Hablaste con Don Faustino sobre el reloj parado." },
       luz: { text: { A: "El reloj se ilumina. Es precioso.", B: "La esfera del reloj se ilumina. Toda la plaza lo mira.", C: "La esfera se ilumina sobre la plaza. Parado, sí, pero radiante." }, change: "luz", recap: "Don Faustino encendió para ti la luz del reloj." },
@@ -2990,6 +3652,13 @@ const encounters = [
       B2: "¿Qué objeto de tu familia no cambiarías nunca, aunque estuviera roto?",
       C1: "¿Cómo cambia el valor de un objeto cuando se convierte en un recuerdo?",
       C2: "¿Por qué a veces preferimos detener el tiempo en lugar de seguir adelante?",
+    },
+
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando un guardia te habla serio?", B: "¿Alguna vez te confundieron con alguien peligroso?", C: "¿Qué objetos cotidianos pueden parecer una amenaza según el contexto?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces cuando tienes miedo?", B: "¿Qué consecuencias tiene una decisión tomada con miedo?", C: "¿Qué harías para recuperar la calma después de una situación de pánico?" } },
+      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Qué haces si suena una alarma?", B: "¿Cómo reaccionas ante el pánico de otras personas?", C: "¿Qué cambia en una ciudad cuando una broma provoca una evacuación?" } },
+      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿A quién echas de menos?", B: "¿Qué lugar de tu ciudad guarda un recuerdo de amor?", C: "¿Qué lugares sirven para guardar la memoria de alguien que ya no está?" } },
     },
   },
 
@@ -3084,8 +3753,232 @@ const encounters = [
           },
         },
       },
+
+      // ── variantes
+      "cuchillo-inicio": {
+        who: "yesica", mood: "terror",
+        line: {
+          A: "Yesica ve el cuchillo y grita. Suelta el celular. «¡No! ¡Aléjate! ¿Qué quieres? ¡Voy a llamar a la policía!» El altavoz sigue: «…vía cuatro…».",
+          B: "Yesica ve el cuchillo, grita y deja caer el celular. «¡Aléjate de mí! ¡Voy a llamar a la policía!» El altavoz, ajeno a todo, repite: «…retraso… vía cuatro…».",
+          C: "Yesica ve el cuchillo y su grito compite con el altavoz. El celular cae al suelo. «¡Aléjate o grito más fuerte!» Y el altavoz, indiferente: «…cambio… vía cuatro…».",
+        },
+        options: [
+          {
+            id: "bajar",
+            act: { A: "Bajas el cuchillo.", B: "Bajas el cuchillo despacio.", C: "Bajas el cuchillo con las manos abiertas." },
+            say: { A: "Perdón. Lo guardo. Solo quería ayudarte con el anuncio.", B: "Perdona, ya lo guardo. Solo quería ayudarte con el anuncio, de verdad.", C: "Perdona, lo guardo ya. Solo pretendía traducirte el altavoz, no cortarte el paso." },
+            reply: { A: "Yesica respira rápido. «¡Qué susto! ¿Por qué lo tenías en la mano?»", B: "Yesica respira rápido, con la mano en el pecho. «¡Qué susto! ¿Por qué llevabas eso en la mano?»", C: "Yesica respira hondo, con la mano en el pecho. «Dios mío. Un cuchillo y un altavoz: demasiada información para una noche.»" },
+            mood: "scared", next: "cuchillo-calma",
+          },
+          {
+            id: "fruta",
+            say: { A: "Estaba pelando una manzana. Mira, aquí está.", B: "Estaba pelando una manzana, mira. No es para ti.", C: "Estaba pelando una manzana, te lo juro. El cuchillo es inocente; yo, un descuidado." },
+            reply: { A: "Yesica mira la manzana. «¿Una manzana? ¡Qué susto más tonto!»", B: "Yesica mira la manzana, luego el cuchillo, y suspira. «Una manzana. Qué susto más tonto.»", C: "Yesica mira la manzana, luego el cuchillo, y deja escapar una risa nerviosa. «Una manzana. He estado a punto de pedir ayuda por una manzana.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "acercar",
+            act: { A: "Das un paso hacia ella.", B: "Das un paso hacia ella, con el cuchillo en la mano.", C: "Avanzas un paso, cuchillo en mano, para explicarte." },
+            say: { A: "Espera. Escucha el anuncio.", B: "Espera, déjame decirte lo que dice el altavoz.", C: "Un momento. Déjame traducirte el altavoz, es urgente." },
+            reply: { A: "Yesica grita más fuerte. Un guardia llega corriendo.", B: "Yesica grita con todas sus fuerzas. Un guardia de la estación llega corriendo con la radio.", C: "Yesica lanza un grito que supera al altavoz. Un guardia de la estación llega corriendo, radio en mano." },
+            mood: "terror", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-calma": {
+        who: "yesica", mood: "worried",
+        line: {
+          A: "Yesica recoge el celular. «Ya. Vale. Pero guarda eso. ¿Qué decía el anuncio? Me quedé sin palabras.»",
+          B: "Yesica recoge el celular con manos temblorosas. «Vale, vale. Pero guarda eso, por favor. ¿Y qué decía el anuncio? Se me enredó todo.»",
+          C: "Yesica recoge el celular con dedos temblorosos. «Vale. Pero primero guarda esa cosa. Luego me dices qué decía el anuncio, que con tanto susto he perdido hasta el idioma.»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Tu tren sale por la vía cuatro. Con retraso.", B: "Tu tren a Puerto Alto sale por la vía cuatro, con veinte minutos de retraso.", C: "Tu tren a Puerto Alto sale con veinte minutos de retraso, desde la vía cuatro. Ese es todo el misterio." },
+            reply: { A: "Yesica abre los ojos. «¡Vía cuatro! ¡Gracias!» Corre con la maleta.", B: "Yesica abre mucho los ojos. «¡Vía cuatro! Estaba en la dos. ¡Gracias!» Agarra la maleta y corre.", C: "Yesica abre los ojos como platos. «¡La cuatro! Llevo media hora en la dos. Gracias, y perdona el grito.» Agarra la maleta y corre." },
+            mood: "smile", end: "cuchillo-via",
+          },
+          {
+            id: "info",
+            say: { A: "Ven. Vamos juntos a información. Yo voy delante.", B: "Ven, vamos juntos a información. Yo camino delante para que me veas.", C: "Vamos a información. Yo camino delante y tú detrás, con tu vigilancia intacta." },
+            reply: { A: "Yesica duda. «Bueno. Pero camina delante.» En información todo se aclara.", B: "Yesica duda. «Vale. Pero tú delante, con las manos fuera de los bolsillos.» En información todo se aclara.", C: "Yesica acepta con condiciones. «Tú delante, manos a la vista y cuchillo olvidado.» En información todo se aclara." },
+            mood: "neutral", end: "cuchillo-info",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "yesica", mood: "terror",
+        line: {
+          A: "Yesica ve la pistola. Levanta las manos y suelta el celular. «¡No, por favor! ¡Toma mi maleta! ¡No quiero problemas!»",
+          B: "Yesica ve la pistola, se queda inmóvil y levanta las manos. El celular cae al suelo. «¡No, por favor! ¡Toma la maleta, lo que quieras! ¡No quiero problemas!»",
+          C: "Yesica ve la pistola y todo su cuerpo se congela. Las manos suben solas y el celular cae. «Toma la maleta, el celular, lo que sea. Por favor, no me hagas daño.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas la pistola.", B: "Guardas la pistola enseguida.", C: "Guardas la pistola de inmediato." },
+            say: { A: "¡No! Perdón. No es un robo. Baja las manos.", B: "¡No, no es un robo! Perdona. Baja las manos, por favor.", C: "¡No es un robo, te lo juro! Perdona el espectáculo. Baja las manos." },
+            reply: { A: "Yesica baja las manos con miedo. «¿Y por qué tienes una pistola?»", B: "Yesica baja las manos despacio, sin dejar de temblar. «¿Y entonces por qué llevas una pistola?»", C: "Yesica baja las manos despacio. «Entonces, ¿por qué llevas un arma en una estación? Explícame eso antes de que me desmaye.»" },
+            mood: "scared", next: "pistola-altavoz",
+          },
+          {
+            id: "tranquilizar",
+            say: { A: "Tranquila. Solo quiero decirte el anuncio.", B: "Tranquila. Solo me acerqué para decirte qué dice el altavoz.", C: "Tranquila. Solo quería traducirte el altavoz, no asaltarte." },
+            reply: { A: "Yesica no baja las manos. «¿Con una pistola?»", B: "Yesica no baja las manos ni un centímetro. «¿Y tenías que enseñarme una pistola para eso?»", C: "Yesica mantiene las manos arriba. «¿Y era imprescindible traer una pistola para traducir un altavoz?»" },
+            mood: "scared", next: "pistola-altavoz",
+          },
+          {
+            id: "ordenar",
+            act: { A: "No guardas la pistola.", B: "Sigues con la pistola en la mano.", C: "Mantienes la pistola en la mano." },
+            say: { A: "Dame tu billete. Ahora.", B: "Dame tu billete y tu celular. Ahora mismo.", C: "El billete y el celular. Sin ruido." },
+            reply: { A: "Yesica grita. Dos policías de la estación llegan corriendo.", B: "Yesica grita con todas sus fuerzas. Dos policías de la estación llegan corriendo por el andén.", C: "Yesica lanza un grito que silencia hasta el altavoz. Dos policías de la estación llegan corriendo, con las manos en las fundas." },
+            mood: "terror", end: "pistola-policia",
+          },
+        ],
+      },
+      "pistola-altavoz": {
+        who: "yesica", mood: "scared",
+        line: {
+          A: "El altavoz suena: «…personal de seguridad… andén dos…». Yesica llora un poco. «Creo que nos han visto. ¿Qué hacemos?»",
+          B: "El altavoz suena de pronto: «…se ruega al personal de seguridad acudir al andén dos…». Yesica, con lágrimas, murmura: «Creo que nos han visto. ¿Qué hacemos?»",
+          C: "El altavoz anuncia entre ecos: «…personal de seguridad al andén dos…». Yesica, con los ojos húmedos, susurra: «Creo que alguien ha dado la alarma. ¿Qué hacemos ahora?»",
+        },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Escúchame: guardo la pistola y voy contigo a la vía cuatro.", B: "Escúchame: ya la he guardado. Te acompaño a la vía cuatro y se acaba todo.", C: "Escúchame: guardo el arma y te acompaño a la vía cuatro. Que lo único dramático sea el retraso." },
+            reply: { A: "Yesica duda. Mira a los lados. «Bueno. Pero rápido.» Corren hacia la vía cuatro.", B: "Yesica duda, mira hacia las escaleras y asiente. «Está bien. Pero rápido.» Corren hacia la vía cuatro.", C: "Yesica duda, mira hacia las escaleras y asiente. «Rápido, antes de que llegue alguien.» Corren juntas hacia la vía cuatro." },
+            mood: "worried", end: "pistola-via",
+          },
+          {
+            id: "entregar",
+            act: { A: "Entregas la pistola a un guardia.", B: "Entregas la pistola al guardia que se acerca.", C: "Entregas la pistola al guardia que llega, con ambas manos." },
+            say: { A: "Tome. No quiero problemas. Fue un error.", B: "Tome, agente. No quiero problemas. Fue un error mío.", C: "Tome, agente. Reconozco mi error y me pongo a su disposición." },
+            reply: { A: "El guardia toma la pistola. «Venga con nosotros.» Yesica respira.", B: "El guardia toma la pistola con cuidado. «Acompáñeme.» Yesica respira, aliviada.", C: "El guardia toma el arma con guantes. «Acompáñeme, por favor.» Yesica suelta el aire que llevaba conteniendo diez minutos." },
+            mood: "worried", end: "pistola-policia",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "yesica", mood: "terror",
+        line: {
+          A: "Yesica ve la granada y grita: «¡Una bomba!» Agarra la maleta y corre. El altavoz dice: «…evacuación… salidas…».",
+          B: "Yesica ve la granada y chilla: «¡Una bomba!» Agarra la maleta y echa a correr. Justo entonces, el altavoz anuncia: «…se ruega evacuar la estación por las salidas…».",
+          C: "Yesica ve la granada y su grito supera al altavoz: «¡Una bomba!» Agarra la maleta y huye. El altavoz, con inoportuna sincronía: «…se ruega evacuar la estación…».",
+        },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "¡Es falsa! ¡Es de juguete!", B: "¡Es falsa! ¡Es de juguete, Yesica!", C: "¡Es de plástico! ¡Un accesorio de disfraz, nada más!" },
+            reply: { A: "Nadie te oye. La gente corre. Un policía te apunta desde lejos.", B: "Nadie te oye entre la sirena. La gente corre por todas partes. Un policía te apunta desde lejos.", C: "Nadie te oye entre el pánico. La gente corre en estampida y un policía te apunta desde la distancia." },
+            mood: "scared", next: "granada-evacuar",
+          },
+          {
+            id: "seguir",
+            act: { A: "Corres detrás de Yesica.", B: "Corres detrás de Yesica para aclarar todo.", C: "Corres detrás de Yesica para aclarar el malentendido." },
+            say: { A: "¡Espera! ¡No es una bomba!", B: "¡Espera! ¡Te lo explico todo, no es una bomba!", C: "¡Espera! ¡Esto tiene explicación!" },
+            reply: { A: "Yesica corre más rápido y grita. Un helicóptero llega.", B: "Yesica corre más rápido y grita todavía más fuerte. Un helicóptero aparece sobre el techo de la estación.", C: "Yesica acelera y grita aún más alto. Un helicóptero asoma sobre el techo de la estación, con su foco." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+          {
+            id: "tirar",
+            act: { A: "Tiras la granada a las vías.", B: "Lanzas la granada a las vías.", C: "Lanzas la granada hacia las vías, con alivio." },
+            say: { A: "¡Ya está! ¡Se acabó!", B: "¡Ya está! ¡Se acabó, ya no hay peligro!", C: "¡Ya está! ¡Fuera de peligro, damas y caballeros!" },
+            reply: { A: "No explota. Pero la policía te rodea.", B: "La granada rueda por la vía y no explota. Pero la policía ya te rodea con las armas en alto.", C: "La granada rueda por la vía sin explotar. Pero la policía ya te rodea con las armas en alto, sin ninguna intención de aplaudir." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+        ],
+      },
+      "granada-evacuar": {
+        who: "yesica", mood: "scared",
+        line: {
+          A: "Yesica te mira desde lejos, junto a la escalera. «¿De verdad es de juguete?» El altavoz repite: «…evacuación…».",
+          B: "Yesica te mira desde la escalera, con la maleta abrazada. «¿De verdad es de juguete? Júralo.» El altavoz sigue: «…evacuar la estación…».",
+          C: "Yesica te observa desde la escalera, con la maleta abrazada como un escudo. «¿De verdad es de juguete? Júralo por tu madre.» El altavoz insiste: «…evacuar la estación…».",
+        },
+        options: [
+          {
+            id: "jurar",
+            act: { A: "Dejas la granada en el suelo.", B: "Dejas la granada en el suelo y te alejas.", C: "Dejas la granada en el suelo y te alejas con las manos arriba." },
+            say: { A: "Te lo juro. Es de plástico. Perdón.", B: "Te lo juro: es de plástico. Perdona el pánico que causé.", C: "Te lo juro por lo que quieras. Plástico. Y perdona el pánico, que fue completamente mío." },
+            reply: { A: "Un policía la revisa. «Falsa.» Yesica se ríe de miedo.", B: "Un policía revisa la granada con cuidado. «Es falsa.» Yesica se ríe de puros nervios.", C: "Un policía revisa la granada con guantes. «Falsa.» Yesica estalla en una risa histérica que dura medio andén." },
+            mood: "worried", end: "granada-evacuacion",
+          },
+          {
+            id: "via",
+            say: { A: "Tu tren sale de la vía cuatro. Corre, yo me quedo.", B: "Tu tren sale de la vía cuatro, ve ahora. Yo me quedo aquí con la policía.", C: "Tu tren sale de la vía cuatro. Ve ahora; yo me quedo a dar explicaciones." },
+            reply: { A: "Yesica asiente y sale corriendo. La policía te rodea.", B: "Yesica asiente y sale corriendo hacia la vía cuatro. La policía te rodea y te hace preguntas.", C: "Yesica asiente, murmura un «gracias» incrédulo y corre hacia la vía cuatro. La policía te rodea, ya con preguntas." },
+            mood: "worried", end: "granada-helicoptero",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "yesica", mood: "smitten",
+        line: {
+          A: "Yesica te ve y sonríe. Se arregla el pelo. «Hola… ¡Qué bien que alguien amable está aquí! Este anuncio me tiene loca.»",
+          B: "Yesica te ve y sonríe, aliviada. Se arregla el pelo sin darse cuenta. «Hola. ¡Qué bien que haya alguien amable por aquí! Este anuncio me tiene loca.»",
+          C: "Yesica te ve y su preocupación se desvanece en una sonrisa. Se acomoda el pelo. «Hola. Qué alivio encontrar a alguien amable en esta estación. El anuncio me tiene al borde del colapso.»",
+        },
+        options: [
+          {
+            id: "traducir",
+            say: { A: "Te ayudo. Dice: vía cuatro, con retraso.", B: "Te ayudo con gusto. Dice que tu tren sale por la vía cuatro, con retraso.", C: "Encantado de traducir. Dice que tu tren sale por la vía cuatro, con retraso. Un honor." },
+            reply: { A: "Yesica se ríe. «¡Gracias! Eres un ángel.» Te toma de la mano.", B: "Yesica se ríe de alivio. «¡Gracias! Eres un ángel.» Te toma de la mano un segundo.", C: "Yesica se ríe y suspira. «Gracias. Eres un ángel con muy buen oído.» Te toma de la mano un segundo de más." },
+            mood: "smitten", next: "corazon-cafe",
+          },
+          {
+            id: "coquetear",
+            say: { A: "No te preocupes. Contigo cerca, el tren espera.", B: "No te preocupes. Con una sonrisa así, hasta el tren espera.", C: "No te preocupes: con esa sonrisa, el tren tiene que esperar por obligación." },
+            reply: { A: "Yesica se pone roja. «¡Ay! ¡Qué amable eres!»", B: "Yesica se pone roja. «¡Ay! Qué amable. Hacía horas que no sonreía.»", C: "Yesica se ruboriza. «Qué cosas dices. Llevaba horas sin sonreír y me lo has arreglado en una frase.»" },
+            mood: "smitten", next: "corazon-cafe",
+          },
+          {
+            id: "abrazo",
+            act: { A: "La abrazas.", B: "La abrazas con cariño.", C: "La abrazas con cuidado, como a una amiga." },
+            say: { A: "Tranquila. Todo va a salir bien.", B: "Tranquila, Yesica. Todo va a salir bien, ya verás.", C: "Tranquila. Todo va a salir bien, y si no, lo arreglamos juntos." },
+            reply: { A: "Yesica te abraza fuerte. «Gracias. Me sentía muy sola.»", B: "Yesica te abraza fuerte, con los ojos húmedos. «Gracias. Me sentía muy sola con tanto altavoz.»", C: "Yesica te abraza con ganas. «Gracias. Me sentía muy sola con mi primer viaje y este altavoz.»" },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-cafe": {
+        who: "yesica", mood: "love",
+        line: {
+          A: "Yesica te mira. «Tengo veinte minutos. ¿Me acompañas a tomar algo? No quiero estar sola.»",
+          B: "Yesica te mira con ojos brillantes. «Me quedan veinte minutos. ¿Me acompañas al quiosco a tomar algo? Me da pena esperar sola.»",
+          C: "Yesica te mira con una sonrisa tímida. «Tengo veinte minutos de tren y ninguna intención de pasarlos sola. ¿Me acompañas a por un café?»",
+        },
+        options: [
+          {
+            id: "si",
+            act: { A: "Le das la mano.", B: "Le ofreces el brazo y van al quiosco.", C: "Le ofreces el brazo y caminan juntos hacia el quiosco." },
+            say: { A: "Sí, claro. Vamos.", B: "Claro que sí. Me encantaría.", C: "Con muchísimo gusto. Es el mejor plan que me han ofrecido esta noche." },
+            reply: { A: "Yesica sonríe. Toman café juntos y hablan de su viaje.", B: "Yesica sonríe, feliz. Toman café juntos y ella te cuenta de su nuevo trabajo.", C: "Yesica sonríe, feliz. Toman café juntos y ella te cuenta de su nuevo trabajo, de su familia y de todo lo que el tren no cabe." },
+            mood: "love", end: "corazon-cafe",
+          },
+          {
+            id: "beso",
+            act: { A: "Le das un beso en la mejilla.", B: "Le das un beso suave en la mejilla.", C: "Le das un beso suave en la mejilla antes de contestar." },
+            say: { A: "Esto es para tu primer viaje sola. Mucha suerte.", B: "Esto es para tu primer viaje sola. Vas a hacerlo muy bien.", C: "Esto es para tu primer viaje y tu primer trabajo. Vas a deslumbrar a todos." },
+            reply: { A: "Yesica se queda muda, sonriendo. «Gracias.» Y sube al tren feliz.", B: "Yesica se queda un segundo sin habla, sonriendo. «Gracias.» Y corre hacia la vía cuatro, flotando.", C: "Yesica se queda sin habla y sonrojada. «Gracias.» Corre hacia la vía cuatro, flotando entre ecos de altavoz." },
+            mood: "smitten", end: "corazon-beso",
+          },
+        ],
+      },
     },
     ends: {
+
+      "cuchillo-policia": { text: { A: "El guardia te quita el cuchillo. Llega la policía. Yesica pierde su tren y llora un poco.", B: "El guardia te quita el cuchillo y llega la policía. Yesica pierde su tren mientras declara, llorando de puro susto.", C: "El guardia te desarma y llega la policía. Yesica pierde su tren mientras declara, entre sollozos y retraso." }, change: "policia", recap: "El cuchillo asustó a Yesica y terminó con la policía." },
+      "cuchillo-via": { text: { A: "Yesica corre a la vía cuatro. Sube al tren. Desde la ventana te mira, aún con miedo.", B: "Yesica corre a la vía cuatro y sube justo a tiempo. Desde la ventana te mira, todavía asustada, pero agradecida.", C: "Yesica llega a la vía cuatro y sube justo a tiempo. Desde la ventana te mira con una mezcla de gratitud y vigilancia." }, change: "corre", recap: "Después del susto del cuchillo, Yesica tomó su tren." },
+      "cuchillo-info": { text: { A: "En información todo se aclara. Yesica toma su tren. El guardia te mira el bolsillo.", B: "En información le confirman todo a Yesica. Toma su tren y el guardia te mira el bolsillo con desconfianza.", C: "En información le confirman todo a Yesica. Toma su tren y el guardia te mira el bolsillo durante un buen rato." }, change: "se-va", recap: "Acompañaste a Yesica a información después de asustarla con un cuchillo." },
+      "pistola-policia": { text: { A: "La policía llega rápido. Te quita la pistola. Yesica pierde su tren y declara.", B: "La policía llega rápido y te quita la pistola. Yesica pierde su tren mientras declara, todavía temblando.", C: "La policía llega en cuestión de segundos y te desarma. Yesica pierde su tren declarando, con la maleta abrazada." }, change: "policia", recap: "La pistola trajo a la policía a la estación." },
+      "pistola-via": { text: { A: "Yesica sube al tren. Desde la ventana te mira muy seria. Guardas la pistola.", B: "Yesica sube al tren en la vía cuatro. Desde la ventana te mira muy seria. Te quedas en el andén con la pistola bien guardada.", C: "Yesica sube al tren de la vía cuatro y te mira desde la ventana sin sonreír. Te quedas en el andén, con la pistola bien guardada y la conciencia revuelta." }, change: "se-va", recap: "Yesica tomó su tren después del susto de la pistola." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina la estación. La policía te rodea. Yesica mira desde lejos.", B: "Un helicóptero ilumina la estación entera. La policía te rodea mientras Yesica mira, de lejos, con la maleta abrazada.", C: "Un helicóptero baña la estación de luz y la policía te rodea. Yesica mira desde lejos, abrazada a la maleta, como espectadora de su propia pesadilla." }, change: "helicoptero", recap: "La granada trajo un helicóptero a la estación." },
+      "granada-evacuacion": { text: { A: "La estación está vacía. Yesica se ríe nerviosa. El altavoz dice: «Se puede volver».", B: "La estación se vacía y vuelve a llenarse. Yesica se ríe, nerviosa. El altavoz anuncia: «Pueden regresar al andén».", C: "La estación se vacía y vuelve a llenarse en media hora. Yesica se ríe, nerviosa. El altavoz, con tono neutro, anuncia: «Pueden regresar al andén»." }, change: "huye", recap: "Tu granada vació la estación, pero no pasó nada." },
+      "corazon-abrazo": { text: { A: "Yesica te abraza otra vez. Sube a su tren con una sonrisa.", B: "Yesica te abraza otra vez y sube a su tren con una sonrisa que no se le borra.", C: "Yesica te abraza una vez más y sube a su tren con una sonrisa que no se le borra en todo el camino a Puerto Alto." }, change: "abraza", recap: "Abrazaste a Yesica antes de su primer viaje sola." },
+      "corazon-cafe": { text: { A: "Toman café juntos. Yesica te da su número. «¡Escríbeme!»", B: "Toman un café juntos y Yesica te da su número. «Escríbeme cuando quieras.» Sube al tren sonriendo.", C: "Toman un café largo y Yesica te da su número en una servilleta. «Escríbeme.» Sube al tren sonriendo, con la servilleta como boleto de suerte." }, change: "sonrie", recap: "Tomaste un café con Yesica y te dio su número." },
+      "corazon-beso": { text: { A: "Yesica se toca la mejilla y corre al tren. Desde la puerta, te manda un beso.", B: "Yesica se toca la mejilla y corre hacia el tren. Desde la puerta, te manda un beso volando.", C: "Yesica se toca la mejilla, corre hacia el tren y, desde la puerta, te manda un beso volado que el altavoz casi interrumpe." }, change: "beso", recap: "Le diste un beso en la mejilla a Yesica antes de su tren." },
       via: { text: { A: "Yesica corre a la vía cuatro con su maleta.", B: "Yesica corre hacia la vía cuatro, con la maleta saltando detrás.", C: "Yesica sale disparada hacia la vía cuatro, con la maleta rebotando como un perrito." }, change: "corre", recap: "Le explicaste a Yesica el anuncio del tren." },
       info: { text: { A: "Vas con Yesica a información. Allí le explican todo.", B: "Acompañas a Yesica a información. Allí le confirman la vía y la hora.", C: "En información le confirman todo a Yesica con una claridad que el altavoz envidiaría." }, change: "se-va", recap: "Acompañaste a Yesica a información." },
       cafe: { text: { A: "Tomas un café con Yesica. Ella te cuenta de su viaje.", B: "Tomas un café con Yesica mientras esperan. Te cuenta adónde va y por qué.", C: "Compartes café con Yesica. En veinte minutos te cuenta media vida y sus planes nuevos." }, change: "se-sienta", recap: "Tomaste un café con Yesica mientras esperaba su tren." },
@@ -3098,6 +3991,13 @@ const encounters = [
       B2: "¿Qué te parece más difícil: entender un audio o una conversación cara a cara?",
       C1: "¿Cómo manejas la incertidumbre cuando la información es confusa?",
       C2: "¿Qué estrategias usas para fingir que entiendes, y cuándo dejas de hacerlo?",
+    },
+
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando alguien te grita de miedo?", B: "¿Cómo reaccionarías si alguien te asustara con un cuchillo en un lugar público?", C: "¿Qué se pierde en la comunicación cuando una de las dos partes tiene miedo?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces si ves un arma en un lugar público?", B: "¿Qué obedecerías por miedo y qué no?", C: "¿Quién debería intervenir en una situación de miedo en un lugar público?" } },
+      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Cómo te sientes en una evacuación?", B: "¿Alguna vez saliste corriendo de un lugar sin saber por qué?", C: "¿Cómo se contagia el pánico en un lugar público, y cómo se frena?" } },
+      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Con quién tomas un café para hablar?", B: "¿Cuándo un desconocido amable te hizo el día más fácil?", C: "¿Qué hace que un gesto de amabilidad nos desarme tan rápido?" } },
     },
   },
 
@@ -3198,8 +4098,239 @@ const encounters = [
           },
         },
       },
+
+      // ── variantes
+      "cuchillo-inicio": {
+        who: "ramon", mood: "terror",
+        line: {
+          A: "Ramón ve tu cuchillo. Abre un cajón y saca otro, el del pan. «¡Atrás! ¡Yo también tengo uno! ¡No te acerques al quiosco!»",
+          B: "Ramón ve tu cuchillo, se queda helado y abre un cajón. Saca el cuchillo del pan y lo levanta con las dos manos. «¡Atrás! ¡Yo también tengo uno! ¡No te acerques!»",
+          C: "Ramón ve tu cuchillo y, con una agilidad que el sueño no justificaba, saca del cajón el cuchillo del pan. «Dos cuchillos y un quiosco. Esto va a acabar en el periódico que vendo. ¡Atrás!»",
+        },
+        options: [
+          {
+            id: "bajar",
+            act: { A: "Bajas el cuchillo despacio.", B: "Bajas el cuchillo muy despacio.", C: "Bajas el cuchillo con las palmas abiertas." },
+            say: { A: "Tranquilo. Lo bajo. Solo quería un café.", B: "Tranquilo, lo bajo. Solo quería pedir un café, de verdad.", C: "Tranquilo, lo bajo. Quería un café, no una pelea. Bajemos los dos los cuchillos." },
+            reply: { A: "Ramón baja el suyo, temblando. «¡Qué susto! ¿Estás loco?»", B: "Ramón baja el suyo, temblando. «¡Qué susto me has dado! ¿Estás loco o qué?»", C: "Ramón baja el cuchillo del pan, sin soltarlo. «Qué susto. ¿Estás loco? Treinta años de turno y esto no lo vi nunca.»" },
+            mood: "scared", next: "cuchillo-calma",
+          },
+          {
+            id: "gritar",
+            say: { A: "¡No me amenaces! ¡Baja eso tú primero!", B: "¡No me amenaces! ¡Baja tú el cuchillo primero!", C: "¡Baja tú primero! Aquí el que está en inferioridad soy yo." },
+            reply: { A: "Ramón grita: «¡Policía!» Un taxista llama por teléfono.", B: "Ramón grita: «¡Policía, policía!» Un taxista que pasaba saca el celular y llama.", C: "Ramón ruge: «¡Policía!» Un taxista que pasaba, con instinto cívico, saca el celular y marca el número." },
+            mood: "terror", end: "cuchillo-policia",
+          },
+          {
+            id: "huir",
+            act: { A: "Retrocedes sin soltar el cuchillo.", B: "Retrocedes hacia la oscuridad sin soltar el cuchillo.", C: "Retrocedes hacia las sombras, cuchillo en mano." },
+            say: { A: "No quiero problemas. Me voy.", B: "No quiero problemas. Me voy ahora mismo.", C: "No quiero problemas con nadie. Me retiro." },
+            reply: { A: "Ramón no baja el cuchillo hasta que desapareces.", B: "Ramón mantiene el cuchillo en alto hasta que desapareces entre los andenes.", C: "Ramón mantiene el cuchillo en alto hasta que las sombras de los andenes te tragan." },
+            mood: "scared", end: "cuchillo-fuga",
+          },
+        ],
+      },
+      "cuchillo-calma": {
+        who: "ramon", mood: "worried",
+        line: {
+          A: "Ramón guarda el cuchillo del pan en el cajón. «Bueno. Perdona. A esta hora todo da miedo. ¿Un café?»",
+          B: "Ramón guarda el cuchillo del pan en el cajón, todavía pálido. «Perdona. A estas horas todo da miedo. Ni yo sé por qué saqué eso. ¿Te pongo un café?»",
+          C: "Ramón devuelve el cuchillo del pan a su cajón, pálido. «Perdona. De noche, todo se magnifica, incluso yo. ¿Un café para quitarnos el susto?»",
+        },
+        options: [
+          {
+            id: "cafe",
+            say: { A: "Sí, por favor. Un café con leche. Y perdón.", B: "Sí, por favor. Un café con leche, bien cargado. Y perdón otra vez.", C: "Con mucho gusto. Un café con leche, bien cargado, que lo necesitamos los dos. Y mil perdones." },
+            reply: { A: "Ramón sirve dos cafés. Los dos se sientan. «Invita la casa.»", B: "Ramón sirve dos cafés y saca un taburete para ti. «Invita la casa. Y ya está olvidado.»", C: "Ramón sirve dos cafés y saca un taburete. «Invita la casa. Los duelos de cuchillos se resuelven mejor con cafeína.»" },
+            mood: "smile", end: "cuchillo-cafe",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Lo siento.", B: "Mejor me voy. Lo siento mucho otra vez.", C: "Mejor me retiro. Lo lamento sinceramente, Ramón." },
+            reply: { A: "Ramón asiente. «Vale. Buenas noches.»", B: "Ramón asiente, sin muchas ganas de insistir. «Vale. Buenas noches, y guarda eso.»", C: "Ramón asiente, aliviado y cortés. «Buenas noches. Y que esa hoja no te acompañe la próxima vez.»" },
+            mood: "neutral", end: "cuchillo-fuga",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "ramon", mood: "terror",
+        line: {
+          A: "Ramón ve la pistola. Levanta las manos. «¡No dispares! ¡Toma el dinero! ¡Está en la caja!» Abre la caja con manos temblorosas.",
+          B: "Ramón ve la pistola y levanta las manos, pálido. «¡No dispares! ¡Toma el dinero, está en la caja!» Abre la caja registradora con manos temblorosas.",
+          C: "Ramón ve la pistola y levanta las manos sin necesidad de que se lo pidan. «Toma lo que quieras. La caja está abierta; los periódicos, a tu disposición.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas la pistola.", B: "Guardas la pistola enseguida.", C: "Guardas la pistola de inmediato." },
+            say: { A: "¡No! ¡No es un robo! Cierra la caja. Perdón.", B: "¡No es un robo! Cierra la caja, por favor. Perdona el susto.", C: "¡No es un robo! Cierra la caja, te lo ruego. Perdona el espectáculo." },
+            reply: { A: "Ramón respira. «¿Entonces para qué sacas eso?»", B: "Ramón respira, con la mano en el pecho. «¿Y entonces por qué sacas eso en mi quiosco?»", C: "Ramón respira, con la mano en el pecho. «¿Y entonces qué hace una pistola en mi mostrador? Aquí solo hay crucigramas y chicles.»" },
+            mood: "worried", next: "pistola-caja",
+          },
+          {
+            id: "dinero",
+            act: { A: "Miras la caja abierta.", B: "Miras la caja abierta sin tocarla.", C: "Miras la caja abierta con una duda evidente." },
+            say: { A: "No quiero dinero. Quiero un café.", B: "No quiero tu dinero. Solo quería un café.", C: "No quiero tu dinero. Quería un café y, por lo visto, lo he arruinado." },
+            reply: { A: "Ramón no entiende. «¿Un café? ¿Con una pistola?»", B: "Ramón no lo cree. «¿Un café? ¿Con una pistola en la mano?»", C: "Ramón no sabe si reír o llorar. «¿Un café, con una pistola? Qué manera tan extraña de pedirlo.»" },
+            mood: "scared", next: "pistola-caja",
+          },
+          {
+            id: "ordenar",
+            act: { A: "Sigues apuntando.", B: "Sigues apuntando a Ramón.", C: "Mantienes la pistola apuntando a Ramón." },
+            say: { A: "Dame la caja. Rápido.", B: "Dame todo el dinero. Rápido y sin gritar.", C: "Todo el dinero. Rápido y sin heroísmos." },
+            reply: { A: "Ramón pulsa un botón bajo el mostrador. Suena una alarma. Llega la policía.", B: "Ramón pulsa el botón de pánico bajo el mostrador. Suena una alarma silenciosa y, en minutos, llega la policía.", C: "Ramón pulsa con el pie el botón de pánico. La alarma es silenciosa, la policía no: llega en minutos con las sirenas." },
+            mood: "terror", end: "pistola-policia",
+          },
+        ],
+      },
+      "pistola-caja": {
+        who: "ramon", mood: "angry",
+        line: {
+          A: "Ramón cierra la caja. Te mira muy serio. «Soy padre de dos hijos. ¿Tú sabes lo que es esto para mí?»",
+          B: "Ramón cierra la caja con manos temblorosas y te mira muy serio. «Soy padre de dos hijos. ¿Tú sabes lo que he sentido hace un minuto?»",
+          C: "Ramón cierra la caja y te sostiene la mirada. «Tengo dos hijos y un turno de noche. Lo último que necesitaba hoy era una pistola. ¿Te das cuenta?»",
+        },
+        options: [
+          {
+            id: "disculpa",
+            say: { A: "Perdón, Ramón. Fue un error. Compro un café para los dos.", B: "Perdón, Ramón. Fue un error enorme. Te compro un café para los dos.", C: "Perdón, Ramón. Un error enorme y vergonzoso. Déjame invitarte a un café." },
+            reply: { A: "Ramón suspira. «Siéntate. Voy a hacer café.» Y habla contigo.", B: "Ramón suspira y asiente. «Siéntate, anda. Voy a hacer un café. Y a respirar.»", C: "Ramón suspira largo. «Siéntate. Café para los dos, que yo también lo necesito. Y no vuelvas a sacar eso.»" },
+            mood: "worried", end: "pistola-cafe",
+          },
+          {
+            id: "seguridad",
+            say: { A: "La llevo por seguridad. La estación es peligrosa de noche.", B: "La llevo por seguridad. La estación de noche es peligrosa.", C: "La llevo por seguridad. La estación de noche impone, ya lo sabes mejor que yo." },
+            reply: { A: "Ramón llama a la policía. «Aquí hay un hombre armado.»", B: "Ramón llama a la policía sin dejar de mirarte. «Hay una persona armada en el quiosco.»", C: "Ramón marca el número de la policía con calma de veterano. «Persona armada en el quiosco de la estación. Sí, hablando.»" },
+            mood: "angry", end: "pistola-policia",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy. Perdón.", B: "Mejor me voy y no vuelvo. Perdón otra vez.", C: "Mejor me voy y no vuelvo por aquí. Lo siento de verdad." },
+            reply: { A: "Ramón no dice nada. Se queda mirando cómo te vas.", B: "Ramón no dice nada. Se queda observando cómo desapareces por los andenes.", C: "Ramón guarda un silencio largo. Te sigue con la mirada hasta que los andenes te tragan." },
+            mood: "sad", end: "pistola-huye",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "ramon", mood: "terror",
+        line: {
+          A: "Ramón ve la granada. Se agacha detrás del mostrador. «¡Una granada! ¡Todos fuera!» El café vuela por el aire.",
+          B: "Ramón ve la granada y se tira detrás del mostrador. «¡Una granada! ¡Todo el mundo fuera!» La cafetera cae al suelo y el café sale volando.",
+          C: "Ramón ve la granada y desaparece detrás del mostrador con una rapidez que no le conocías. «¡Granada! ¡Evacuen!» La cafetera cae y el café se esparce por el suelo como un charco de pánico.",
+        },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "¡Es de juguete! ¡Sal de ahí!", B: "¡Es de juguete! ¡Sal de ahí, Ramón!", C: "¡Es de plástico! ¡Sal de ahí, hombre, que es una broma!" },
+            reply: { A: "Ramón asoma los ojos. «¿Juguete? ¡Qué broma más mala!»", B: "Ramón asoma los ojos por encima del mostrador. «¿De juguete? ¡Vaya broma más mala!»", C: "Ramón asoma los ojos por encima del mostrador. «¿Plástico? ¡Menuda broma, con la que está cayendo en esta estación!»" },
+            mood: "scared", next: "granada-caos",
+          },
+          {
+            id: "tirar",
+            act: { A: "Lanzas la granada lejos.", B: "Lanzas la granada a las vías.", C: "Lanzas la granada a las vías, con prisa." },
+            say: { A: "¡Al suelo, todos!", B: "¡Al suelo, todos! ¡Cúbranse!", C: "¡Al suelo, todos! ¡Cúbranse la cabeza!" },
+            reply: { A: "La granada no explota. Suena la alarma. Un helicóptero llega.", B: "La granada rueda por las vías sin explotar. Suena la alarma y, poco después, un helicóptero ilumina la estación.", C: "La granada rueda por las vías sin explotar. Suena la alarma y, enseguida, un helicóptero ilumina la estación como un teatro." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+          {
+            id: "correr",
+            act: { A: "Sales corriendo.", B: "Sales corriendo con la granada.", C: "Sales corriendo hacia los andenes, granada en mano." },
+            say: { A: "¡Fuera! ¡Todos fuera!", B: "¡Fuera de aquí! ¡Todos fuera!", C: "¡Evacuen la zona! ¡Todos fuera, rápido!" },
+            reply: { A: "La gente corre. La estación se vacía. Llega la policía.", B: "La gente de la estación echa a correr contigo. En pocos minutos, la estación se vacía y llega la policía.", C: "La gente de los andenes se suma a tu carrera. En pocos minutos la estación está vacía y la policía llega con las sirenas." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-caos": {
+        who: "ramon", mood: "furious",
+        line: {
+          A: "Ramón sale de detrás del mostrador, con café en la camisa. «¡Mi café! ¡Mis periódicos! ¡Esto va a salirte caro!»",
+          B: "Ramón se levanta con café por toda la camisa y los periódicos por el suelo. «¡Mi quiosco! ¡Mis periódicos! ¡Esto te va a costar caro!»",
+          C: "Ramón se levanta, chorreando café, entre una avalancha de periódicos. «¡Mi quiosco! ¡Mi turno! ¡Mi dignidad! Esto va a cobrártelo mi seguro, y mi abogado.»",
+        },
+        options: [
+          {
+            id: "pagar",
+            say: { A: "Perdón. Te ayudo a limpiar. Y te pago los periódicos.", B: "Perdón, Ramón. Te ayudo a limpiar y te pago los periódicos.", C: "Perdón, Ramón. Limpio todo yo y te pago hasta el último periódico. Es lo mínimo." },
+            reply: { A: "Ramón suspira. Los dos limpian. Después tomas un café con él.", B: "Ramón suspira, vencido. Limpian los dos entre risas nerviosas. Después compartes un café con él.", C: "Ramón suspira, vencido. Limpian juntos entre risas nerviosas. Después compartes con él el único café que se salvó." },
+            mood: "worried", end: "granada-cafe",
+          },
+          {
+            id: "huir",
+            act: { A: "Sales corriendo.", B: "Sales corriendo del quiosco.", C: "Sales corriendo del quiosco, dejando atrás el desastre." },
+            say: { A: "¡Perdón! ¡Me voy!", B: "¡Perdón, perdón! ¡Me voy!", C: "¡Mil perdones! ¡Ya hablaremos de la factura!" },
+            reply: { A: "Ramón llama a la policía. Un helicóptero te busca.", B: "Ramón llama a la policía. Poco después, un helicóptero sobrevuela la estación buscándote.", C: "Ramón llama a la policía con voz triunfal. Poco después, un helicóptero sobrevuela la estación buscándote con su foco." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "ramon", mood: "smitten",
+        line: {
+          A: "Ramón te ve y se le quita el sueño. Sonríe. «¡Hola, hola! Qué bien verte. Hacía horas que no entraba nadie tan simpático. ¿Qué te pongo?»",
+          B: "Ramón te ve y el sueño se le va de golpe. Sonríe de oreja a oreja. «¡Hola! Qué alegría verte. Hacía horas que no entraba nadie tan simpático al quiosco. ¿Qué te pongo?»",
+          C: "Ramón te ve y el sueño se evapora. Sonríe como si le hubieras traído el amanecer. «Buenas noches, o buenos días, o lo que sea. Llevaba horas sin ver una cara amable. ¿Qué le sirvo?»",
+        },
+        options: [
+          {
+            id: "cafe",
+            say: { A: "Un café. Y charlar contigo un rato.", B: "Un café con leche. Y un rato de charla, si tienes tiempo.", C: "Un café con leche y, si no es abusar, un rato de buena conversación." },
+            reply: { A: "Ramón prepara el café y saca un taburete. «Siéntate. Esta noche, tú eres mi invitado.»", B: "Ramón prepara el café con cariño y saca un taburete. «Siéntate, anda. Esta noche eres mi invitado de honor.»", C: "Ramón prepara el café como si fuera un ritual y saca el taburete. «Siéntese. Esta noche es usted mi invitado de honor.»" },
+            mood: "smitten", next: "corazon-novela",
+          },
+          {
+            id: "coquetear",
+            say: { A: "Tienes una sonrisa muy bonita, Ramón.", B: "Tienes una sonrisa preciosa, Ramón. Se nota que te gusta tu trabajo.", C: "Qué sonrisa tiene usted, Ramón. Con ella, el quiosco debería ser Patrimonio de la Humanidad." },
+            reply: { A: "Ramón se pone rojo. «¡Ay! Qué amable. ¡Gracias!»", B: "Ramón se pone rojo hasta las orejas. «¡Ay, qué amable! Hacía años que nadie me decía algo así.»", C: "Ramón se ruboriza hasta las gafas. «Qué cosas dice. Llevo años sin oír un piropo a las cuatro de la mañana.»" },
+            mood: "smitten", next: "corazon-novela",
+          },
+          {
+            id: "abrazo",
+            act: { A: "Le das la mano por encima del mostrador.", B: "Le tomas la mano por encima del mostrador.", C: "Le estrechas la mano por encima del mostrador, con mucha calidez." },
+            say: { A: "Gracias por estar aquí de noche.", B: "Gracias por estar aquí de noche, Ramón. Esta luz salva a mucha gente.", C: "Gracias por mantener esta luz encendida, Ramón. Más gente de la que crees la necesita." },
+            reply: { A: "Ramón se emociona. Sale del mostrador y te abraza.", B: "Ramón se emociona, sale del mostrador y te abraza con fuerza. «Qué detalle. De verdad.»", C: "Ramón se emociona, sale del mostrador y te abraza con fuerza. «Nadie me había dicho algo así en veinte años de turnos.»" },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-novela": {
+        who: "ramon", mood: "love",
+        line: {
+          A: "Ramón te da el café. «Escribo una novela. Es sobre una persona como tú, que sonríe en una noche difícil. ¿Quieres leer una página?»",
+          B: "Ramón te pone el café delante y baja la voz. «Te cuento un secreto: escribo una novela sobre gente de la noche. Un personaje se parece mucho a ti. ¿Quieres leer una página?»",
+          C: "Ramón te pone el café delante y baja la voz, cómplice. «Secreto de quiosquero: escribo una novela con la gente que pasa. El protagonista de esta página eres tú. ¿La lees?»",
+        },
+        options: [
+          {
+            id: "leer",
+            say: { A: "Sí, claro. Me encantaría.", B: "Sí, claro. Me encantaría leerla ahora mismo.", C: "Será un honor. Leeré con la reverencia que merece una primera lectora." },
+            reply: { A: "Lees la página. Ramón te mira, nervioso. Sonríes. Él sonríe.", B: "Lees la página en voz baja. Ramón te mira nervioso. Cuando sonríes, él suelta el aire.", C: "Lees la página sin prisa. Ramón te mira conteniendo la respiración. Cuando sonríes, él suelta el aire que llevaba años guardando." },
+            mood: "love", end: "corazon-novela",
+          },
+          {
+            id: "beso",
+            act: { A: "Le das un beso en la mejilla.", B: "Le das un beso en la mejilla por encima del mostrador.", C: "Le das un beso en la mejilla, por encima del mostrador, con ternura." },
+            say: { A: "Para tu novela. Para que tenga un buen final.", B: "Para tu novela. Que tenga un final muy feliz.", C: "Para tu novela. Que tu protagonista termine siendo querido, como mereces tú." },
+            reply: { A: "Ramón se toca la mejilla y sonríe. «Esto va en el último capítulo.»", B: "Ramón se toca la mejilla y sonríe como un niño. «Esto va directo al último capítulo.»", C: "Ramón se toca la mejilla, ruborizado. «Esto va directo al último capítulo. Con tu permiso y con subrayado.»" },
+            mood: "smitten", end: "corazon-beso",
+          },
+        ],
+      },
     },
     ends: {
+
+      "cuchillo-policia": { text: { A: "Llega la policía. Te quitan el cuchillo. A Ramón, el del pan. Los dos explican la historia.", B: "Llegan dos policías. Te quitan el cuchillo, y a Ramón el del pan. Los dos cuentan su versión del duelo.", C: "Llegan dos policías, te desarman y desarman a Ramón, que protesta por su cuchillo del pan. Cada uno cuenta su versión del duelo." }, change: "policia", recap: "Un duelo de cuchillos en el quiosco terminó con la policía." },
+      "cuchillo-cafe": { text: { A: "Se toman el café juntos, sin cuchillos. Ramón te cuenta su vida.", B: "Se toman el café juntos, sin cuchillos a la vista. Ramón te cuenta su vida entre sorbos.", C: "Se toman el café juntos, con los cuchillos exiliados al cajón. Ramón te cuenta su vida entre sorbos y suspiros." }, change: "se-sienta", recap: "Después del duelo de cuchillos, tomaste un café con Ramón." },
+      "cuchillo-fuga": { text: { A: "Te vas del quiosco. Ramón vuelve a su crucigrama. Con el cuchillo cerca.", B: "Te vas del quiosco. Ramón vuelve a su crucigrama, con el cuchillo del pan todavía a mano.", C: "Te vas del quiosco. Ramón vuelve a su crucigrama, con el cuchillo del pan estratégicamente cerca." }, change: "se-va", recap: "El cuchillo asustó a Ramón y te fuiste del quiosco." },
+      "pistola-policia": { text: { A: "La policía llega rápido. Te quita la pistola. Ramón declara muy pálido.", B: "La policía llega en minutos y te quita la pistola. Ramón declara, todavía pálido, apoyado en el mostrador.", C: "La policía llega en minutos y te desarma. Ramón declara, aún pálido, apoyado en el mostrador y rodeado de periódicos." }, change: "policia", recap: "La pistola en el quiosco terminó con la policía." },
+      "pistola-cafe": { text: { A: "Ramón prepara café. Hablan un rato. Tú guardas la pistola para siempre.", B: "Ramón prepara dos cafés y hablan un rato. Tú te prometes no volver a sacar esa pistola.", C: "Ramón prepara dos cafés y hablan un largo rato. Te prometes, entre sorbo y sorbo, que la pistola no volverá a salir." }, change: "se-sienta", recap: "Después del susto de la pistola, Ramón te invitó a un café." },
+      "pistola-huye": { text: { A: "Te vas. Ramón llama a un guardia. Tú desapareces entre los andenes.", B: "Te vas rápido. Ramón llama a un guardia. Desapareces entre los andenes antes de que llegue.", C: "Te vas rápido. Ramón llama a un guardia. Desapareces entre los andenes antes de que nadie pregunte por esa pistola." }, change: "huye", recap: "Huiste del quiosco después de sacar una pistola." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina el quiosco. La policía te rodea. Ramón grita: «¡Fue él!»", B: "Un helicóptero ilumina el quiosco y la policía te rodea. Ramón grita desde el mostrador: «¡Fue él, fue él!»", C: "Un helicóptero ilumina el quiosco y la policía te rodea. Ramón, chorreando café, te señala: «¡Fue él! ¡Ese del bolsillo!»" }, change: "helicoptero", recap: "La granada trajo un helicóptero al quiosco." },
+      "granada-evacuacion": { text: { A: "La estación está vacía. Solo quedan Ramón, tú y el café en el suelo.", B: "La estación queda vacía. Solo quedan Ramón, tú y un charco de café en el suelo.", C: "La estación queda desierta. Solo quedan Ramón, tú y el café derramado, que parece un mapa de la catástrofe." }, change: "huye", recap: "La granada vació la estación y tiró el café de Ramón." },
+      "granada-cafe": { text: { A: "Limpian juntos. Ramón te hace otro café. Ríen mucho del susto.", B: "Limpian juntos el desastre. Ramón te hace otro café y los dos se ríen del susto como si fuera una anécdota de años.", C: "Limpian juntos el desastre. Ramón te prepara otro café y los dos se ríen del susto como si fuera una anécdota de años." }, change: "sonrie", recap: "Después de la granada, limpiaste el quiosco con Ramón y tomaron café." },
+      "corazon-abrazo": { text: { A: "Ramón te abraza. Te da un chicle y un café gratis. Está muy contento.", B: "Ramón te abraza con fuerza. Te regala un chicle y un café. Se queda sonriendo toda la noche.", C: "Ramón te abraza con fuerza, te regala un chicle y un café y se queda sonriendo el resto del turno." }, change: "abraza", recap: "Le diste las gracias a Ramón y te abrazó." },
+      "corazon-novela": { text: { A: "Lees la página. Ramón escribe tu nombre en su cuaderno. Sonríe.", B: "Lees la página de su novela. Ramón escribe tu nombre en la primera línea del cuaderno y sonríe.", C: "Lees la página de su novela. Ramón escribe tu nombre en la dedicatoria del cuaderno y sonríe como un autor recién publicado." }, change: "sonrie", recap: "Leíste una página de la novela de Ramón." },
+      "corazon-beso": { text: { A: "Ramón se toca la mejilla. Escribe algo en su cuaderno. Sonríe toda la noche.", B: "Ramón se toca la mejilla y escribe algo en su cuaderno. Sonríe el resto del turno.", C: "Ramón se toca la mejilla y garabatea algo en su cuaderno. Sonríe el resto del turno, tan feliz como un quiosquero con final feliz." }, change: "beso", recap: "Le diste un beso a Ramón y entraste en su novela." },
       chicle: { text: { A: "Ramón te da un chicle y te dice adiós.", B: "Te llevas el café y un chicle de regalo. Ramón vuelve a su crucigrama.", C: "Te vas con café y chicle. Ramón vuelve al crucigrama, satisfecho con su buena obra." }, change: "sonrie", recap: "Tomaste un café en el quiosco de Ramón." },
       taburete: { text: { A: "Te sientas con Ramón. Hablan un rato.", B: "Te sientas en el taburete y charlas con Ramón un buen rato.", C: "Te sientas con Ramón y la conversación se alarga más que el café." }, change: "se-sienta", recap: "Charlaste con Ramón en el quiosco." },
       novela: { text: { A: "Ramón escribe algo en un cuaderno. Sonríe.", B: "Ramón saca un cuaderno lleno de notas y apunta algo sobre ti, sonriendo.", C: "Ramón abre un cuaderno gastado y te describe en dos líneas. No te deja leerlas." }, change: "sonrie", recap: "Ramón te contó que escribe una novela." },
@@ -3213,6 +4344,13 @@ const encounters = [
       B2: "¿Cómo sería tu vida si trabajaras siempre de noche?",
       C1: "¿Qué tipo de conversaciones solo ocurren de madrugada?",
       C2: "¿Quiénes son las personas invisibles que hacen funcionar tu ciudad?",
+    },
+
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Qué haces cuando alguien te amenaza?", B: "¿Cómo reaccionarías si un trabajador nocturno sacara un cuchillo para defenderse?", C: "¿Qué pasa por la cabeza de alguien que trabaja solo de noche cuando ve un arma?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Tienes miedo cuando estás solo de noche?", B: "¿Qué sentirías si te apuntaran en tu lugar de trabajo?", C: "¿Qué precio pagan los trabajadores nocturnos por la seguridad de los demás?" } },
+      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Qué rompes cuando te asustas?", B: "¿Qué pagarías para arreglar una broma que salió mal?", C: "¿Cómo se repara el daño de una broma desproporcionada?" } },
+      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Qué novela te gustaría escribir?", B: "¿Qué historia de la noche te gustaría contar en un libro?", C: "¿Qué detalles de tu vida cotidiana merecerían figurar en una novela?" } },
     },
   },
 
@@ -3308,8 +4446,241 @@ const encounters = [
           },
         },
       },
+
+      // ── variantes
+      "cuchillo-inicio": {
+        who: "noelia", mood: "angry",
+        line: {
+          A: "Noelia ve el cuchillo y no grita. Da un paso atrás. «Baja eso. Soy enfermera y he visto muchas cosas, pero no quiero ver una más esta noche.»",
+          B: "Noelia ve el cuchillo y, sin gritar, da un paso atrás con las manos a la vista. «Baja eso, por favor. Soy enfermera y esta noche ya vi suficiente sangre. No quiero más.»",
+          C: "Noelia ve el cuchillo y reacciona con la serenidad de quien ha pasado doce horas en urgencias. «Baja eso. He suturado heridas de todos los tamaños; prefiero no sumar la tuya a mi turno.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas el cuchillo.", B: "Guardas el cuchillo con cuidado.", C: "Guardas el cuchillo con cuidado, con la funda bien cerrada." },
+            say: { A: "Perdón. Lo guardo. No es para ti.", B: "Perdona, ya lo guardo. No es para ti, es por precaución.", C: "Perdona, ya está guardado. No es para ti; es mi manta de seguridad, muy mal elegida." },
+            reply: { A: "Noelia respira. «Gracias. Tengo los nervios de punta hoy.»", B: "Noelia respira hondo. «Gracias. Hoy ya tengo los nervios de punta. Casi me da algo.»", C: "Noelia suelta el aire. «Gracias. Con el día que llevo, un cuchillo era lo único que me faltaba para el bingo.»" },
+            mood: "worried", next: "cuchillo-calma",
+          },
+          {
+            id: "herida",
+            say: { A: "¿Estás herida? Si quieres, te ayudo.", B: "¿Estás bien? Si te sientes mal, yo te ayudo a llegar a casa.", C: "¿Estás bien? Si necesitas algo, soy un asustador con buenas intenciones." },
+            reply: { A: "Noelia casi se ríe. «Yo soy la que cura. Tú guarda eso.»", B: "Noelia casi se ríe, sorprendida. «Se supone que la enfermera soy yo. Pero gracias. Guarda eso.»", C: "Noelia casi sonríe. «Qué ironía: el que amenaza me ofrece su ayuda. Guarda eso y hablamos.»" },
+            mood: "surprised", next: "cuchillo-calma",
+          },
+          {
+            id: "acercarse",
+            act: { A: "Das un paso hacia ella.", B: "Das un paso hacia ella, cuchillo en mano.", C: "Avanzas un paso, cuchillo en mano, para explicarte." },
+            say: { A: "Espera. Escucha un momento.", B: "Espera, déjame explicarte.", C: "Un momento. Permíteme explicarte con calma." },
+            reply: { A: "Noelia grita muy fuerte. Un taxista que pasa llama a la policía.", B: "Noelia grita muy fuerte. Un taxista que pasaba frena, ve la escena y llama a la policía.", C: "Noelia lanza un grito que se oye en toda la avenida. Un taxista que pasaba frena en seco y marca el número de la policía." },
+            mood: "terror", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-calma": {
+        who: "noelia", mood: "neutral",
+        line: {
+          A: "Noelia mira el panel en rojo. «Necesito llegar a casa. Estoy muerta. ¿Me acompañas hasta la avenida? Pero sin cuchillo.»",
+          B: "Noelia mira el panel rojo y suspira. «Solo quiero llegar a casa. ¿Me acompañas hasta la avenida, donde hay más luz? Pero sin cuchillo, por favor.»",
+          C: "Noelia mira el panel en rojo con cansancio infinito. «Solo quiero mi cama. ¿Me acompañas hasta la avenida, que hay luz y taxis? Eso sí: el cuchillo se queda guardado.»",
+        },
+        options: [
+          {
+            id: "camina",
+            say: { A: "Sí. Te acompaño. Y busco un taxi.", B: "Claro que sí. Te acompaño y buscamos un taxi juntos.", C: "Por supuesto. Te acompaño, y el cuchillo y yo caminamos en silencio. Buscamos un taxi." },
+            reply: { A: "Noelia sonríe un poco. «Gracias. Vamos.» Caminan juntos.", B: "Noelia sonríe cansada. «Gracias. Vamos.» Caminan juntos hacia la avenida.", C: "Noelia sonríe a pesar de todo. «Gracias. Menos mal que existen los asustadores con modales.» Caminan juntos hacia la avenida." },
+            mood: "smile", end: "cuchillo-camina",
+          },
+          {
+            id: "corte",
+            act: { A: "Te cortas un poco al guardar el cuchillo.", B: "Te cortas un dedo al guardar el cuchillo.", C: "Te cortas un dedo al guardar el cuchillo, por los nervios." },
+            say: { A: "¡Ay! Me corté. Un poco.", B: "¡Ay! Me corté el dedo, qué torpe.", C: "¡Ay! Me he cortado. La ironía no podía faltar." },
+            reply: { A: "Noelia sonríe. «Déjame ver.» Te venda el dedo. Llama a una ambulancia por si acaso.", B: "Noelia suspira y saca un botiquín del bolso. «Déjame ver.» Te venda el dedo y llama a una ambulancia por precaución.", C: "Noelia suspira, saca un botiquín del bolso y te venda el dedo con precisión. «Por precaución, una ambulancia.» Y llama." },
+            mood: "pain", end: "cuchillo-ambulancia",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "noelia", mood: "scared",
+        line: {
+          A: "Noelia ve la pistola. Respira hondo. Levanta las manos despacio. «Tranquilo. No quiero problemas. Soy enfermera. Habla conmigo.»",
+          B: "Noelia ve la pistola, respira hondo y levanta las manos despacio. «Tranquilo. No quiero problemas. Soy enfermera, estoy acostumbrada a hablar con gente nerviosa. Habla conmigo.»",
+          C: "Noelia ve la pistola y, con una calma aprendida en urgencias, levanta las manos muy despacio. «Tranquilo. Respira conmigo. Soy enfermera y sé hablar con quien está asustado. Cuéntame qué pasa.»",
+        },
+        options: [
+          {
+            id: "guardar",
+            act: { A: "Guardas la pistola.", B: "Guardas la pistola enseguida.", C: "Guardas la pistola de inmediato." },
+            say: { A: "Perdón. No es para ti. Estoy asustado.", B: "Perdona. No es para ti. Estoy asustado y la saqué sin pensar.", C: "Perdona. No es para ti. Estoy aterrado, y el miedo me hizo sacar algo que no debí." },
+            reply: { A: "Noelia baja las manos. «Respira. Estás temblando.»", B: "Noelia baja las manos despacio. «Respira. Estás temblando, y yo sé reconocer eso.»", C: "Noelia baja las manos con cuidado. «Respira. Estás temblando, y eso lo reconozco mejor que cualquier síntoma.»" },
+            mood: "worried", next: "pistola-calma",
+          },
+          {
+            id: "ordenar",
+            say: { A: "Dame tu dinero. Ahora.", B: "Dame tu cartera y tu celular. Ahora mismo.", C: "La cartera y el celular. Sin ruido ni preguntas." },
+            reply: { A: "Noelia se las da. Un taxista pasa y llama a la policía. Llegan rápido.", B: "Noelia se las entrega sin discutir. Un taxista que pasaba lo ve todo y llama a la policía. Llegan en minutos.", C: "Noelia entrega ambas cosas sin discutir. Un taxista que pasaba lo ha visto todo y avisa a la policía, que llega en minutos." },
+            mood: "terror", end: "pistola-policia",
+          },
+          {
+            id: "huir",
+            act: { A: "Sales corriendo.", B: "Sales corriendo con la pistola.", C: "Sales corriendo, pistola en mano, hacia la calle oscura." },
+            say: { A: "¡No me sigas!", B: "¡No me sigas! ¡No llames a nadie!", C: "¡No me sigas ni llames a nadie!" },
+            reply: { A: "Noelia llama a la policía. «Un hombre armado corrió hacia el norte.»", B: "Noelia llama a la policía con voz firme. «Un hombre armado corrió hacia el norte por la avenida.»", C: "Noelia llama a la policía con voz firme y precisa. «Hombre armado, huyó hacia el norte por la avenida. Sí, llevo doce horas de turno.»" },
+            mood: "scared", end: "pistola-huye",
+          },
+        ],
+      },
+      "pistola-calma": {
+        who: "noelia", mood: "worried",
+        line: {
+          A: "Noelia se sienta en un banco. «Ven. Siéntate. ¿Por qué tienes esa pistola? ¿Alguien te hizo daño?»",
+          B: "Noelia se sienta en un banco y palmea el sitio de al lado. «Ven. Siéntate. ¿Por qué llevas esa pistola? ¿Alguien te hizo daño esta noche?»",
+          C: "Noelia se sienta en el banco y palmea el asiento de al lado, como en urgencias antes de dar una noticia. «Siéntate. ¿Por qué llevas esa pistola? ¿Alguien te hizo daño?»",
+        },
+        options: [
+          {
+            id: "sincero",
+            say: { A: "Tengo miedo. Me asaltaron una vez.", B: "Tengo miedo desde que me asaltaron el año pasado. Pensé que así estaría seguro.", C: "Tengo miedo desde que me asaltaron el año pasado. Pensé que esto me haría sentir fuerte; me siento ridículo." },
+            reply: { A: "Noelia te toma la mano. «Gracias por decirlo. Vamos juntos a buscar un taxi.»", B: "Noelia te toma la mano. «Gracias por decírmelo. Eso no se cura con una pistola. Vamos juntos a buscar un taxi.»", C: "Noelia te toma la mano con ternura profesional. «Gracias por decírmelo. Eso se cura hablando, no armado. Vamos juntos a por un taxi.»" },
+            mood: "love", end: "pistola-camina",
+          },
+          {
+            id: "hermana",
+            say: { A: "¿Puedes llamar a tu hermana? Me da miedo estar solo.", B: "¿Puedes llamar a tu hermana, por favor? Me da miedo quedarme solo ahora.", C: "¿Podrías llamar a tu hermana? Me aterra quedarme solo después de esto." },
+            reply: { A: "Noelia llama a su hermana. «Ven. Somos dos.» Esperan juntos.", B: "Noelia llama a su hermana. «Ven en coche. Somos dos y uno necesita compañía.» Esperan juntos.", C: "Noelia llama a su hermana. «Ven en coche, y trae manta. Somos dos y uno tiene el alma helada.» Esperan juntos." },
+            mood: "worried", end: "pistola-hermana",
+          },
+          {
+            id: "amenaza",
+            say: { A: "No digas nada a nadie.", B: "No le cuentes esto a nadie, ¿entendido?", C: "Esto no sale de aquí. ¿Entendido?" },
+            reply: { A: "Noelia asiente… y llama a la policía a escondidas. Llegan rápido.", B: "Noelia asiente con calma y, mientras hablas, marca el número de la policía sin que lo notes. Llegan rápido.", C: "Noelia asiente con una calma sospechosa y marca la policía bajo el bolso, sin que lo notes. Llegan rápido." },
+            mood: "angry", end: "pistola-policia",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "noelia", mood: "terror",
+        line: {
+          A: "Noelia ve la granada y grita. Corre hacia un autobús parado. «¡Una bomba! ¡Todos fuera!» El conductor sale corriendo.",
+          B: "Noelia ve la granada, grita y echa a correr hacia el autobús detenido. «¡Una bomba! ¡Todo el mundo fuera!» El conductor salta del autobús y corre también.",
+          C: "Noelia ve la granada y su grito de enfermera rasga la noche. Corre hacia el autobús detenido. «¡Una bomba! ¡Evacuen!» El conductor salta del autobús sin apagar el motor.",
+        },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "¡Es de juguete! ¡Vuelve!", B: "¡Es de juguete! ¡Vuelve, Noelia!", C: "¡Es de plástico! ¡Vuelve, Noelia, que es una broma estúpida!" },
+            reply: { A: "Noelia se para. «¿De juguete? ¡Qué susto!» Pero la gente ya corre.", B: "Noelia se detiene a diez metros. «¿De juguete? ¡Casi me da un infarto!» Pero la gente ya corre por la avenida.", C: "Noelia se detiene a diez metros. «¿De plástico? He tenido taquicardia de verdad.» Pero la avenida ya es una estampida." },
+            mood: "scared", next: "granada-caos",
+          },
+          {
+            id: "tirar",
+            act: { A: "Tiras la granada lejos.", B: "Lanzas la granada a un solar vacío.", C: "Lanzas la granada a un solar vacío, lo más lejos posible." },
+            say: { A: "¡Al suelo, todos!", B: "¡Al suelo, todos! ¡Cúbranse!", C: "¡Al suelo! ¡Cúbranse la cabeza!" },
+            reply: { A: "No explota. Suena una alarma. Un helicóptero llega.", B: "La granada no explota. Suena una alarma en el barrio y un helicóptero ilumina la avenida.", C: "La granada rueda sin explotar. Suena una alarma en todo el barrio y un helicóptero ilumina la avenida con su foco." },
+            mood: "terror", end: "granada-helicoptero",
+          },
+          {
+            id: "correr",
+            act: { A: "Corres con ella.", B: "Corres con Noelia hacia el autobús.", C: "Corres con Noelia, granada en la mano." },
+            say: { A: "¡Fuera de aquí!", B: "¡Fuera de aquí! ¡Rápido!", C: "¡Fuera de aquí! ¡Sálvese quien pueda!" },
+            reply: { A: "Todos corren. La avenida se queda vacía. Llega la policía.", B: "Todos corren. La avenida queda vacía de golpe y, minutos después, llega la policía.", C: "Todos corren a la vez. La avenida queda desierta en segundos y, poco después, llega la policía con las sirenas." },
+            mood: "terror", end: "granada-evacuacion",
+          },
+        ],
+      },
+      "granada-caos": {
+        who: "noelia", mood: "furious",
+        line: {
+          A: "Noelia vuelve. Está furiosa. «¡Tengo doce horas de turno y tú con una granada! ¿Estás loco?»",
+          B: "Noelia vuelve sobre sus pasos, furiosa. «¡Salgo de doce horas de turno y tú me asustas con una granada! ¿Estás loco o qué?»",
+          C: "Noelia vuelve sobre sus pasos, roja de furia. «Doce horas de guardia, tres bebés, cero descansos, ¿y tú con una granada? ¿Tienes idea de lo que has hecho?»",
+        },
+        options: [
+          {
+            id: "disculpa",
+            say: { A: "Perdón. Fue una broma tonta. Te acompaño a casa.", B: "Perdón, fue una broma tonta y pesada. Te acompaño hasta tu casa.", C: "Perdón, fue una broma idiota y sin gracia. Déjame acompañarte a casa como penitencia." },
+            reply: { A: "Noelia suspira. «Vale. Pero sin granada.» Caminan juntos.", B: "Noelia suspira, vencida por el cansancio. «Vale. Pero sin granada. Y sin bromas más.» Caminan juntos.", C: "Noelia suspira. «Penitencia aceptada. Sin granada y sin una sola broma en todo el camino.» Caminan juntos." },
+            mood: "worried", end: "granada-camina",
+          },
+          {
+            id: "taxi",
+            say: { A: "Mira, llega un taxi. Es tuyo. Yo pago.", B: "Mira, ahí llega un taxi libre. Es tuyo. Yo lo pago, por el susto.", C: "Mira, un taxi libre, por fin. Es tuyo, y lo pago yo, en concepto de indemnización por daños nerviosos." },
+            reply: { A: "Noelia sube al taxi. «Estás loco. Gracias.» Se va.", B: "Noelia sube al taxi, todavía furiosa. «Estás loco. Pero gracias por el taxi.» Se va.", C: "Noelia sube al taxi con dignidad ofendida. «Estás loco. Pero la indemnización es aceptable.» Se va." },
+            mood: "neutral", end: "granada-taxi",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "noelia", mood: "smitten",
+        line: {
+          A: "Noelia te ve y sonríe. Se le quita la cara de cansancio. «Hola… Qué suerte encontrar a alguien con buena energía. Llevo doce horas sin sonreír.»",
+          B: "Noelia te ve y se le suaviza la cara. «Hola. Qué suerte encontrarme con alguien con buena energía. Llevo doce horas de turno sin sonreír de verdad.»",
+          C: "Noelia te ve y el cansancio de doce horas parece aflojarse un poco. «Hola. Qué suerte tropezar con alguien que irradia buena energía. Llevo todo el turno sin una sonrisa sincera.»",
+        },
+        options: [
+          {
+            id: "consolar",
+            say: { A: "Pareces cansada. ¿Quieres sentarte conmigo?", B: "Pareces agotada. ¿Quieres sentarte un rato conmigo?", C: "Pareces exhausta. ¿Te sientas un rato conmigo? Hoy mereces que cuiden de ti." },
+            reply: { A: "Noelia se sienta. «Sí. Qué bien. Hoy nacieron tres bebés.»", B: "Noelia se sienta con un suspiro. «Sí, por favor. Hoy ayudé a nacer a tres bebés.»", C: "Noelia se sienta con un suspiro largo. «Sí, por favor. Hoy ayudé a tres bebés a nacer y no me ayudó nadie a mí.»" },
+            mood: "love", next: "corazon-sofa",
+          },
+          {
+            id: "coquetear",
+            say: { A: "Con esa sonrisa, no necesitas autobús. Llegas volando.", B: "Con esa sonrisa, no necesitas autobús ni taxi. Llegas a casa volando.", C: "Con esa sonrisa, el transporte público debería avergonzarse de fallarte." },
+            reply: { A: "Noelia se ríe y se sonroja. «¡Ay! ¡Qué amable!»", B: "Noelia se ríe y se pone colorada. «¡Ay, qué amable! Hacía mucho que nadie me hablaba así.»", C: "Noelia se ríe y se ruboriza. «Qué cosas dices. Llevaba meses sin oír un piropo, y justo hoy, sin autobús.»" },
+            mood: "smitten", next: "corazon-sofa",
+          },
+          {
+            id: "abrazo",
+            act: { A: "La abrazas.", B: "La abrazas con cariño.", C: "La abrazas con mucho cuidado, como a una amiga." },
+            say: { A: "Gracias por cuidar a las personas. Hoy te toca a ti.", B: "Gracias por cuidar a tanta gente. Hoy te toca a ti recibir.", C: "Gracias por cuidar a todos. Esta noche, la paciente eres tú." },
+            reply: { A: "Noelia te abraza y llora un poco. «Gracias. Lo necesitaba.»", B: "Noelia te abraza fuerte y llora un poco. «Gracias. Lo necesitaba más de lo que crees.»", C: "Noelia te abraza fuerte y se le escapan unas lágrimas. «Gracias. Nadie me había dado el alta emocional en meses.»" },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-sofa": {
+        who: "noelia", mood: "love",
+        line: {
+          A: "Noelia te mira. «Eres muy buena persona. Mi casa está lejos, pero tengo un sofá cómodo. ¿Vienes a tomar un té?»",
+          B: "Noelia te mira con ternura. «Eres muy buena persona. Mi casa está lejos, pero tengo un sofá cómodo y té. ¿Quieres venir? No tengo más planes que dormir.»",
+          C: "Noelia te mira con ternura. «Eres una buena persona y eso, de noche, vale oro. Mi casa está lejos, pero mi sofá es excelente y mi té, mejor. ¿Vienes?»",
+        },
+        options: [
+          {
+            id: "si",
+            act: { A: "Le das el brazo.", B: "Le ofreces el brazo y caminan juntos.", C: "Le ofreces el brazo y caminan juntos hacia la avenida." },
+            say: { A: "Sí, claro. Vamos juntos.", B: "Sí, encantado. Busquemos un taxi juntos.", C: "Encantado. Busquemos un taxi juntos y el té lo pago yo." },
+            reply: { A: "Noelia sonríe feliz. Un taxi llega. Suben juntos.", B: "Noelia sonríe, feliz. Un taxi aparece enseguida. Suben juntos y ella se duerme en tu hombro.", C: "Noelia sonríe, feliz. Un taxi aparece de la nada. Suben juntos y ella se duerme en tu hombro antes del primer semáforo." },
+            mood: "love", end: "corazon-taxi",
+          },
+          {
+            id: "beso",
+            act: { A: "Le das un beso en la mejilla.", B: "Le das un beso en la mejilla.", C: "Le das un beso suave en la mejilla." },
+            say: { A: "Hoy no puedo. Pero este beso es para ti.", B: "Hoy no puedo ir. Pero este beso es tuyo, para que duermas bien.", C: "Hoy me temo que no puedo. Pero este beso queda como aval de que volveré." },
+            reply: { A: "Noelia sonríe y se toca la mejilla. «Gracias. Un taxi llega.»", B: "Noelia sonríe y se toca la mejilla. «Gracias. Eso vale por tres horas de sueño.» Y llega un taxi.", C: "Noelia sonríe y se toca la mejilla. «Aval aceptado. Vale por tres turnos.» Y llega un taxi." },
+            mood: "smitten", end: "corazon-beso",
+          },
+        ],
+      },
     },
     ends: {
+
+      "cuchillo-policia": { text: { A: "La policía llega. Te quitan el cuchillo. Noelia explica todo con calma.", B: "La policía llega y te quita el cuchillo. Noelia explica lo ocurrido con la calma de quien lo ha visto todo.", C: "La policía llega y te desarma. Noelia explica lo ocurrido con la calma de una profesional del estrés." }, change: "policia", recap: "El cuchillo asustó a Noelia y terminó con la policía." },
+      "cuchillo-camina": { text: { A: "Caminan hasta la avenida. Hay un taxi. Noelia sube y te da las gracias.", B: "Caminan hasta la avenida sin hablar del cuchillo. Hay un taxi y Noelia sube dándote las gracias.", C: "Caminan hasta la avenida con el cuchillo olvidado. Hay un taxi y Noelia sube dándote las gracias, aún un poco desconfiada." }, change: "se-va", recap: "Acompañaste a Noelia hasta un taxi después del susto del cuchillo." },
+      "cuchillo-ambulancia": { text: { A: "Llega la ambulancia. Te curan el dedo. Noelia se ríe, cansada.", B: "Llega la ambulancia. Te curan el dedo y Noelia, cansada, se ríe por primera vez en doce horas.", C: "Llega la ambulancia y te curan el dedo. Noelia, agotada, se ríe por primera vez en doce horas: el paciente eres tú." }, change: "ambulancia", recap: "Te cortaste con tu propio cuchillo y Noelia te curó." },
+      "pistola-policia": { text: { A: "La policía llega rápido. Te quitan la pistola. Noelia habla con ellos.", B: "La policía llega rápido y te quita la pistola. Noelia declara con voz firme, aunque le tiemblan las manos.", C: "La policía llega rápido y te desarma. Noelia declara con voz firme, aunque las manos le tiemblan más que a ti." }, change: "policia", recap: "La pistola terminó con la policía y Noelia de testigo." },
+      "pistola-huye": { text: { A: "Corres por la avenida. Oyes sirenas. Noelia no se mueve del panel.", B: "Corres por la avenida oscura. Oyes sirenas a lo lejos. Noelia no se mueve del panel de transporte.", C: "Corres por la avenida oscura con las sirenas a tus espaldas. Noelia no se mueve del panel, con el celular en la oreja." }, change: "huye", recap: "Huiste con la pistola y Noelia llamó a la policía." },
+      "pistola-camina": { text: { A: "Noelia te acompaña a buscar un taxi. Guardas la pistola para siempre.", B: "Noelia camina contigo hasta la avenida y busca un taxi para los dos. Tú guardas la pistola para siempre.", C: "Noelia camina contigo hasta la avenida y busca un taxi para los dos. Prometes, en voz baja, que la pistola no volverá a salir." }, change: "se-va", recap: "Noelia te calmó después del susto de la pistola." },
+      "pistola-hermana": { text: { A: "La hermana llega en coche. Noelia te da un abrazo. Todo termina bien.", B: "La hermana de Noelia llega en coche con un abrigo. Noelia te abraza antes de subir. Todo termina mejor de lo esperado.", C: "La hermana de Noelia llega en coche, con abrigo y sin preguntas. Noelia te abraza antes de subir. Todo termina mucho mejor de lo que merecías." }, change: "llama", recap: "Noelia llamó a su hermana y no te dejó solo después de la pistola." },
+      "granada-helicoptero": { text: { A: "Un helicóptero ilumina la avenida. La policía te rodea. Noelia grita: «¡Es una broma!»", B: "Un helicóptero ilumina la avenida y la policía te rodea. Noelia, a lo lejos, grita: «¡Creo que es una broma!»", C: "Un helicóptero baña la avenida de luz y la policía te rodea. Noelia, a lo lejos, grita: «¡Creo que es una broma, pero llevo doce horas sin dormir!»" }, change: "helicoptero", recap: "La granada trajo un helicóptero a la avenida." },
+      "granada-evacuacion": { text: { A: "La avenida está vacía. Llega la policía. Noelia mira el panel en rojo, cansada.", B: "La avenida queda vacía. Llega la policía y Noelia, apoyada en el panel en rojo, mira el desastre sin fuerzas.", C: "La avenida queda desierta. Llega la policía y Noelia, apoyada en el panel en rojo, contempla el desastre con la mirada de quien ha visto de todo." }, change: "huye", recap: "La granada vació la avenida y no quedó ni un autobús." },
+      "granada-camina": { text: { A: "Caminan juntos hasta su casa. Noelia no habla. Al final te da las gracias.", B: "Caminan juntos una hora hasta su casa. Noelia habla poco. Al final te da las gracias, muy bajito.", C: "Caminan juntos una hora hasta su casa. Noelia habla poco y respira mucho. Al llegar te da las gracias, con la voz de quien perdona a medias." }, change: "se-va", recap: "Después de la granada, acompañaste a Noelia a su casa." },
+      "granada-taxi": { text: { A: "Noelia se va en taxi. Te mira por la ventana y niega con la cabeza.", B: "Noelia se va en taxi. Por la ventana te mira y niega con la cabeza, pero sonríe un poco.", C: "Noelia se va en taxi. Por la ventana te mira, niega con la cabeza y esboza una sonrisa que perdona la mitad." }, change: "se-va", recap: "Pagaste el taxi de Noelia para compensar la granada." },
+      "corazon-abrazo": { text: { A: "Noelia te abraza otra vez. Un taxi llega. Se va contenta.", B: "Noelia te abraza otra vez y llega un taxi libre. Sube con una sonrisa que no se le borra.", C: "Noelia te abraza una vez más y llega un taxi libre, como si la ciudad también se emocionara. Sube sonriendo." }, change: "abraza", recap: "Abrazaste a Noelia después de su turno." },
+      "corazon-taxi": { text: { A: "Suben al taxi juntos. Noelia se duerme. Tú sonríes, mirando la ciudad.", B: "Suben al taxi juntos. Noelia se duerme en tu hombro y tú sonríes mirando la ciudad dormida.", C: "Suben al taxi juntos. Noelia se duerme en tu hombro y tú, con una sonrisa, miras pasar la ciudad dormida." }, change: "se-va", recap: "Compartiste un taxi con Noelia y se durmió en tu hombro." },
+      "corazon-beso": { text: { A: "Noelia se toca la mejilla. Sube a un taxi sonriendo. Te manda un beso.", B: "Noelia se toca la mejilla, sube a un taxi y, sonriendo, te manda un beso desde la ventana.", C: "Noelia se toca la mejilla, sube a un taxi y te manda un beso desde la ventanilla, sellando la noche con una sonrisa agotada y feliz." }, change: "beso", recap: "Le diste un beso en la mejilla a Noelia antes de su taxi." },
       bici: { text: { A: "Tú y Noelia se van en bici por la calle vacía.", B: "Noelia y tú se van en bici por las calles vacías. Ella se ríe todo el camino.", C: "Noelia y tú pedalean por la ciudad dormida. Ella jura que no se cansa; sus piernas opinan otra cosa." }, change: "se-va", recap: "Fuiste en bici con Noelia hasta su barrio." },
       hermana: { text: { A: "Noelia llama a su hermana. Viene en diez minutos.", B: "Noelia llama a su hermana, que llega en diez minutos con el pijama debajo del abrigo.", C: "Noelia cobra su favor. La hermana llega en diez minutos, con pijama y cara de víctima." }, change: "llama", recap: "Ayudaste a Noelia a pedir ayuda a su hermana." },
       camina: { text: { A: "Caminas con Noelia hasta la avenida. Allí hay un taxi.", B: "Acompañas a Noelia hasta la avenida. Encuentran un taxi en cinco minutos.", C: "Acompañas a Noelia hasta la avenida. Al quinto minuto aparece un taxi, como premio a la paciencia." }, change: "se-va", recap: "Acompañaste a Noelia a buscar un taxi." },
@@ -3322,6 +4693,13 @@ const encounters = [
       B2: "¿Qué opción prefieres de noche: caminar, bici o taxi, y por qué?",
       C1: "¿Cómo cambia tu sensación de seguridad según el medio de transporte?",
       C2: "¿Qué revela una ciudad cuando su transporte público deja de funcionar?",
+    },
+
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando estás muy cansado y alguien te asusta?", B: "¿Cómo reaccionas ante un susto después de un día larguísimo?", C: "¿Qué profesiones enseñan a mantener la calma ante una amenaza?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Cómo calmas a una persona asustada?", B: "¿Qué le dirías a alguien con una pistola que tiene miedo?", C: "¿Cómo se negocia con alguien que actúa por miedo y no por maldad?" } },
+      granada: { start: "granada-inicio", fx: "huye", speak: { A: "¿Qué haces si tu transporte no funciona y hay pánico?", B: "¿Cuál fue el peor momento de pánico que viviste en la calle?", C: "¿Qué impacto tiene una broma peligrosa en alguien que ya está agotado?" } },
+      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Quién cuida de ti cuando estás cansado?", B: "¿Qué gesto de ternura te devolvería las fuerzas después de un día duro?", C: "¿Cómo cuidamos a quienes cuidan de los demás?" } },
     },
   },
 ];

@@ -1024,8 +1024,8 @@ const encounters = [
       "cuchillo-tregua": {
         who: "lucas", mood: "worried",
         line: {
-          A: "Lucas guarda la navaja. «Perdón. Es que me robaron el teléfono. O lo perdí. Y vi tu cuchillo y…»",
-          B: "Lucas guarda la navaja en la mochila. «Perdona. Creo que me robaron el teléfono, o lo perdí, no sé. Y al ver tu cuchillo pensé que querían el resto.»",
+          A: "Lucas guarda la navaja. «Perdón. Es que me robaron el teléfono. O se me perdió. Y vi tu cuchillo y…»",
+          B: "Lucas guarda la navaja en la mochila. «Perdona. Creo que me robaron el teléfono, o se me perdió, no sé. Y al ver tu cuchillo pensé que querían el resto.»",
           C: "Lucas guarda la navaja. «Perdona. Llevo una hora pensando que me robaron el teléfono, y al ver tu cuchillo pensé que volvían a por el resto.»",
         },
         options: [
@@ -1080,8 +1080,8 @@ const encounters = [
       "pistola-calma": {
         who: "lucas", mood: "worried",
         line: {
-          A: "Lucas respira. «Bueno. Perdí el teléfono. Y tú tienes una pistola. Esta noche es muy rara.»",
-          B: "Lucas respira hondo, sin despegarse de la puerta. «Vale. Yo perdí el teléfono y tú llevas una pistola. Es la noche más rara de mi vida.»",
+          A: "Lucas respira. «Bueno. Se me perdió el teléfono. Y tú tienes una pistola. Esta noche es muy rara.»",
+          B: "Lucas respira hondo, sin despegarse de la puerta. «Vale. A mí se me perdió el teléfono y tú llevas una pistola. Es la noche más rara de mi vida.»",
           C: "Lucas respira, sin alejarse de la puerta. «Resumen de la noche: yo sin teléfono y tú con pistola, frente a una comisaría. Nadie me va a creer.»",
         },
         options: [
@@ -1136,8 +1136,8 @@ const encounters = [
       "granada-puerta": {
         who: "lucas", mood: "worried",
         line: {
-          A: "Lucas mira la granada. «Bueno. Perdí el teléfono. Y tú tienes una granada. ¿Me ayudas igual?»",
-          B: "Lucas no quita los ojos de la granada. «Vale. Yo perdí el teléfono y tú paseas con una granada de plástico. ¿Me ayudas de todas formas?»",
+          A: "Lucas mira la granada. «Bueno. Se me perdió el teléfono. Y tú tienes una granada. ¿Me ayudas igual?»",
+          B: "Lucas no quita los ojos de la granada. «Vale. A mí se me perdió el teléfono y tú paseas con una granada de plástico. ¿Me ayudas de todas formas?»",
           C: "Lucas sigue vigilando la granada de reojo. «Bien. Yo sin teléfono y tú con una granada de atrezo. ¿Me ayudas o me entrego?»",
         },
         options: [
@@ -1164,21 +1164,21 @@ const encounters = [
       "gas-inicio": {
         who: "lucas", mood: "scared",
         line: {
-          A: "Lucas ve tu gas pimienta. Levanta las manos. «¡Eh, eh! ¡Estamos en la comisaría! ¡Solo perdí mi teléfono!»",
-          B: "Lucas ve el gas pimienta en tu mano y levanta las manos. «¡Eh! ¡Que estamos en la puerta de la comisaría! Solo perdí el teléfono, no soy un ladrón.»",
-          C: "Lucas ve el gas pimienta y levanta las manos con fastidio. «¿En serio? ¿Gas pimienta en la puerta de una comisaría? Solo perdí el teléfono, no te quiero robar.»",
+          A: "Lucas ve tu gas pimienta. Levanta las manos. «¡Eh, eh! ¡Estamos en la comisaría! ¡Solo se me perdió el teléfono!»",
+          B: "Lucas ve el gas pimienta en tu mano y levanta las manos. «¡Eh! ¡Que estamos en la puerta de la comisaría! Solo se me perdió el teléfono, no soy un ladrón.»",
+          C: "Lucas ve el gas pimienta y levanta las manos con fastidio. «¿En serio? ¿Gas pimienta en la puerta de una comisaría? Solo se me perdió el teléfono, no te quiero robar.»",
         },
         options: [
           {
             id: "guardar",
             say: { A: "Perdón. Lo guardo. ¿Qué te pasa?", B: "Perdona, me asustaste. Lo guardo. ¿Qué te pasa?", C: "Perdona, reflejo nocturno. Lo guardo. ¿Qué te pasa?" },
-            reply: { A: "Lucas baja las manos. «Perdí el teléfono. Iba a denunciarlo.»", B: "Lucas baja las manos. «Perdí el teléfono. Iba a entrar a denunciarlo, pero no sé ni por dónde empezar.»", C: "Lucas baja las manos. «Perdí el teléfono. Iba a denunciarlo, pero sin teléfono no sé ni la hora.»" },
+            reply: { A: "Lucas baja las manos. «Se me perdió el teléfono. Iba a denunciarlo.»", B: "Lucas baja las manos. «Se me perdió el teléfono. Iba a entrar a denunciarlo, pero no sé ni por dónde empezar.»", C: "Lucas baja las manos. «Se me perdió el teléfono. Iba a denunciarlo, pero sin teléfono no sé ni la hora.»" },
             mood: "worried", next: "gas-calma",
           },
           {
             id: "mantener",
             say: { A: "Quédate ahí. ¿Qué quieres?", B: "No te muevas. Dime qué quieres desde ahí.", C: "Quédate donde estás y habla. ¿Qué quieres?" },
-            reply: { A: "Lucas señala la puerta. «¡Nada! Solo iba a entrar. Perdí mi teléfono.»", B: "Lucas señala la puerta con la barbilla. «¡Nada! Solo iba a entrar a denunciar un teléfono perdido.»", C: "Lucas señala la puerta sin bajar las manos. «Nada. Iba a entrar a denunciar un teléfono. Lo más peligroso que llevo es un chicle.»" },
+            reply: { A: "Lucas señala la puerta. «¡Nada! Solo iba a entrar. Se me perdió el teléfono.»", B: "Lucas señala la puerta con la barbilla. «¡Nada! Solo iba a entrar a denunciar un teléfono perdido.»", C: "Lucas señala la puerta sin bajar las manos. «Nada. Iba a entrar a denunciar un teléfono. Lo más peligroso que llevo es un chicle.»" },
             mood: "worried", next: "gas-calma",
           },
           {
@@ -1230,7 +1230,7 @@ const encounters = [
             id: "ficha",
             act: { A: "Sacas un papel.", B: "Sacas un papel del bolsillo.", C: "Sacas un papel arrugado del bolsillo." },
             say: { A: "Toma. ¿Qué número es?", B: "Toma, escribe. ¿Qué número es tan importante?", C: "Aquí tienes. ¿Qué número vale tanto?" },
-            reply: { A: "Lucas escribe rápido. «El de una chica del autobús. Estaba en mi teléfono. Y perdí el teléfono.»", B: "Lucas escribe a toda velocidad. «Es el número de una chica que conocí hoy en el autobús. Estaba en el teléfono y perdí el teléfono.»", C: "Lucas escribe como si se le escapara. «Una chica del autobús. Me dio su número, lo guardé en el teléfono y perdí el teléfono. Todo en dos horas.»" },
+            reply: { A: "Lucas escribe rápido. «El de una chica del autobús. Estaba en mi teléfono. Y se me perdió el teléfono.»", B: "Lucas escribe a toda velocidad. «Es el número de una chica que conocí hoy en el autobús. Estaba en el teléfono y se me perdió el teléfono.»", C: "Lucas escribe como si se le escapara. «Una chica del autobús. Me dio su número, lo guardé en el teléfono y se me perdió el teléfono. Todo en dos horas.»" },
             mood: "smile", next: "lapiz-ficha",
           },
           {
@@ -1278,7 +1278,7 @@ const encounters = [
       "libro-inicio": {
         who: "lucas", mood: "laugh",
         line: {
-          A: "Lucas ve tu libro y se ríe. «¿Un libro? ¿En la puerta de la comisaría a esta hora? Yo perdí el teléfono y tú paseas con un libro.»",
+          A: "Lucas ve tu libro y se ríe. «¿Un libro? ¿En la puerta de la comisaría a esta hora? A mí se me perdió el teléfono y tú paseas con un libro.»",
           B: "Lucas ve tu libro y se ríe sin querer. «¿Un libro? ¿A estas horas, delante de la comisaría? Yo pierdo el teléfono y tú sales a leer. Qué noche.»",
           C: "Lucas ve tu libro y suelta una carcajada nerviosa. «¿Un libro? ¿En la puerta de una comisaría, de madrugada? Uno pierde el teléfono y otro sale de paseo con literatura.»",
         },
@@ -1336,9 +1336,9 @@ const encounters = [
       "corazon-inicio": {
         who: "lucas", mood: "love",
         line: {
-          A: "Lucas te ve y, de repente, sonríe. «Perdona… tienes algo que calma. Perdí el teléfono. Pero lo peor es otra cosa.»",
-          B: "Lucas te mira y, sin saber por qué, deja de buscar en los bolsillos. «No sé qué tienes, pero me calmas. Perdí el teléfono. Y lo peor no es el teléfono.»",
-          C: "Lucas te ve y los hombros se le relajan solos. «No sé qué tienes, pero es lo primero que me tranquiliza en una hora. Perdí el teléfono. Lo peor es lo que había dentro.»",
+          A: "Lucas te ve y, de repente, sonríe. «Perdona… tienes algo que calma. Se me perdió el teléfono. Pero lo peor es otra cosa.»",
+          B: "Lucas te mira y, sin saber por qué, deja de buscar en los bolsillos. «No sé qué tienes, pero me calmas. Se me perdió el teléfono. Y lo peor no es el teléfono.»",
+          C: "Lucas te ve y los hombros se le relajan solos. «No sé qué tienes, pero es lo primero que me tranquiliza en una hora. Se me perdió el teléfono. Lo peor es lo que había dentro.»",
         },
         options: [
           {
@@ -2709,7 +2709,7 @@ const encounters = [
           },
           {
             id: "mapa",
-            say: { A: "Me perdí. ¿Puede dibujarme el camino?", B: "Me perdí. ¿Puede dibujarme el camino a la avenida?", C: "Me perdí. ¿Puede dibujarme un mapa hasta la avenida? Mi sentido de la orientación es un mito." },
+            say: { A: "Estoy perdida. ¿Puede dibujarme el camino?", B: "Estoy perdida. ¿Puede dibujarme el camino a la avenida?", C: "Estoy perdida. ¿Puede dibujarme un mapa hasta la avenida? Mi sentido de la orientación es un mito." },
             reply: { A: "Ferreyra toma el lápiz. «Claro. Mire: esto es la comisaría.»", B: "Ferreyra toma el lápiz con gusto. «Claro. Mire: aquí la comisaría, aquí la avenida.»", C: "Ferreyra toma el lápiz con gusto. «Con placer. Aquí la comisaría, aquí la avenida; le marco la ruta con luz.»" },
             mood: "smile", end: "lapiz-mapa",
           },
@@ -4237,6 +4237,151 @@ const encounters = [
           },
         },
       },
+      // ── variantes por objeto ──
+      "cuchillo-inicio": {
+        who: "abril", mood: "terror",
+        line: { A: "Abril ve el cuchillo y da un grito. Se esconde detrás del cartel. «¡Aléjate! ¡Voy a llamar a la policía!»", B: "Abril ve el cuchillo y suelta un grito que se oye en toda la plaza. Se esconde tras el cartel de la película. «¡No te acerques! ¡Estoy llamando a la policía!»", C: "Abril ve el cuchillo y grita con un dramatismo digno de su carrera. Se parapeta detrás del cartel. «¡No des un paso más! ¡Estoy marcando el número de la policía!»" },
+        options: [
+          {
+            id: "cartel",
+            say: { A: "Es para cortar el cartel. Perdón.", B: "Es para despegar el cartel, perdona. Está pegado con mucho pegamento.", C: "Es para despegar una esquina del cartel. Me pareció que querías mirarlo mejor." },
+            reply: { A: "Abril asoma la cabeza. «¿Para el cartel? ¿Tú crees que soy tonta?»", B: "Abril asoma la cabeza con desconfianza. «¿Para el cartel? ¿Crees que me lo voy a creer?»", C: "Abril asoma la cabeza, escéptica. «¿Para despegar el cartel? Esa explicación la he visto en tres películas, y siempre miente el que la dice.»" },
+            mood: "scared", next: "cuchillo-cartel",
+          },
+          {
+            id: "huir",
+            say: { A: "Perdón. Me voy.", B: "Perdón, me voy.", C: "Disculpa, me retiro antes de arruinar tu tesis." },
+            reply: { A: "Te vas. Abril marca en el teléfono. Un patrullero llega en un minuto.", B: "Te alejas. Abril sigue marcando con las manos temblando y, en un minuto, un patrullero pasa por la plaza.", C: "Te alejas con prisa. Abril sigue gritando tu descripción por teléfono y, en un minuto, un patrullero ya patrulla la plaza." },
+            mood: "scared", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "cuchillo-cartel": {
+        who: "abril", mood: "worried",
+        line: { A: "Abril sigue lejos. «Deja el cuchillo en el suelo y después hablamos del cartel.»", B: "Abril mantiene la distancia. «Deja el cuchillo en el suelo y después hablamos del cartel y de lo que quieras.»", C: "Abril mantiene la distancia, con el teléfono en alto como un escudo. «Deja el cuchillo en el suelo y después debatimos sobre el cartel, la película y tu salud mental.»" },
+        options: [
+          {
+            id: "suelo",
+            say: { A: "Ya está en el suelo. Mira.", B: "Ya está en el suelo. Mira, tengo las manos vacías.", C: "Ya está en el suelo. Manos vacías y conciencia tranquila." },
+            reply: { A: "Abril se acerca despacio. «Vale. Entonces dime: ¿de qué crees que trata la película?»", B: "Abril se acerca despacio. «Vale. Entonces dime en serio: ¿de qué crees que trata la película?»", C: "Abril se acerca por fin. «Vale. Entonces, sin cuchillos: ¿cuál es tu teoría sobre la película del pulpo?»" },
+            mood: "worried", end: "cuchillo-teoria",
+          },
+          {
+            id: "pulpo",
+            say: { A: "Creo que el pulpo es el cuchillo de la película.", B: "Creo que el pulpo es una metáfora del cuchillo: todos lo temen y nadie sabe qué quiere.", C: "Mi teoría: el pulpo es la amenaza que nos persigue sin querer hacernos daño, como yo esta noche." },
+            reply: { A: "Abril abre la boca. «Eso es… raro. Pero no está mal.» Llama a la policía igual.", B: "Abril te mira. «Eso es raro. Pero no está mal.» Aun así, marca el número de la policía.", C: "Abril se queda pensando. «Eso tiene sentido, inquietantemente.» Aun así, marca el número de la policía, por prudencia." },
+            mood: "surprised", end: "cuchillo-policia",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "abril", mood: "terror",
+        line: { A: "Abril ve la pistola y levanta las manos. El cuaderno cae al suelo. «¡No! ¡No tengo nada!»", B: "Abril ve la pistola, levanta las manos y el cuaderno se le cae al suelo. «¡No, por favor! ¡No tengo nada de valor!»", C: "Abril ve la pistola y levanta las manos con tanto ímpetu que el cuaderno sale volando. «¡No, por favor! Solo llevo apuntes y un bocadillo. ¡Llévese el bocadillo!»" },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "La guardo. Perdón. No es para ti.", B: "La guardo ya. Perdona, no es para ti.", C: "La guardo ahora mismo. Perdona, no tenía intención de convertir tu noche en un thriller." },
+            reply: { A: "Abril baja las manos. «¿Entonces para qué la llevas?»", B: "Abril baja las manos, temblando. «¿Entonces para qué la llevas en la calle?»", C: "Abril baja las manos sin relajarse. «¿Y para qué la llevas por la calle, si se puede saber?»" },
+            mood: "scared", next: "pistola-cartel",
+          },
+          {
+            id: "exigir",
+            say: { A: "Dame el bocadillo y el cuaderno.", B: "Dame el bocadillo y el cuaderno. Rápido.", C: "Dame el bocadillo. Y el cuaderno, que parece lo más valioso." },
+            reply: { A: "Abril grita y corre hacia el cine. «¡Seguridad!» Dos policías salen de un coche.", B: "Abril grita y corre hacia la puerta del cine. «¡Seguridad!» Dos policías salen de un coche cercano.", C: "Abril grita y corre hacia la taquilla del cine. «¡Seguridad! ¡Hay un asalto!» Dos policías, que pasaban por casualidad, bajan del coche." },
+            mood: "terror", end: "pistola-patrulla",
+          },
+        ],
+      },
+      "pistola-cartel": {
+        who: "abril", mood: "worried",
+        line: { A: "Abril te mira. «Es un cartel de cine. ¿Eres actor? ¿Es de la película?»", B: "Abril te mira de arriba abajo. «Estás delante del cartel de una película. ¿Eres actor? ¿Es de utilería?»", C: "Abril te mira y su mente de cineasta intenta recomponer la escena. «Un cartel, una pistola, de noche. ¿Eres actor? ¿Es utilería?»" },
+        options: [
+          {
+            id: "actor",
+            say: { A: "Sí. Soy actor. Es de utilería.", B: "Sí, soy actor. Es de utilería, claro.", C: "Sí, soy actor. Es de utilería, por supuesto; hasta me han dado un papel de villano." },
+            reply: { A: "Abril se ríe, nerviosa. «¡Ay, qué susto! Pero esto ayuda a mi trabajo.» Te hace una entrevista.", B: "Abril se ríe, nerviosa. «¡Qué susto! Aunque esto le va de maravilla a mi trabajo.» Saca el cuaderno.", C: "Abril respira, entre aliviada y entusiasmada. «Menudo susto. Aunque, para mi trabajo, es oro.» Saca el cuaderno y te entrevista." },
+            mood: "surprised", end: "pistola-entrevista",
+          },
+          {
+            id: "mentir",
+            say: { A: "No. Es de verdad. Pero no es para ti.", B: "No, no soy actor. Es de verdad, pero no es para ti.", C: "No soy actor. Es de verdad, y no sé por qué te lo he confesado." },
+            reply: { A: "Abril grita y llama a la policía. Un patrullero llega enseguida.", B: "Abril retrocede, grita y llama a la policía. En un minuto, un patrullero ya está aquí.", C: "Abril retrocede, mira a su alrededor y marca. Un patrullero llega en un minuto, como si lo hubieran encargado." },
+            mood: "terror", end: "pistola-patrulla",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "abril", mood: "terror",
+        line: { A: "Abril ve la granada y empieza a grabar con el teléfono. «¡No me lo puedo creer! ¡Esto es increíble!»", B: "Abril ve la granada y, en lugar de huir, saca el teléfono y empieza a grabar. «¡No me lo puedo creer! ¡Esto es de película!»", C: "Abril ve la granada y su instinto de cineasta vence al de supervivencia: saca el teléfono y empieza a grabar. «¡Dios mío! Plano secuencia perfecto, no te muevas.»" },
+        options: [
+          {
+            id: "juguete",
+            say: { A: "Es de plástico. Para, no grabes.", B: "Es de plástico. Para, no grabes, por favor.", C: "Es de utilería. Por favor, apaga eso, que esto es un malentendido." },
+            reply: { A: "Abril sigue grabando. «¡Es oro!» Pero alguien ya ha llamado a la policía.", B: "Abril sigue grabando. «¡Es oro puro!» Pero alguien de la plaza ya ha llamado a la policía.", C: "Abril sigue grabando, entusiasmada. «¡Es oro puro!» Por desgracia, alguien de la plaza ha llamado a la policía." },
+            mood: "surprised", next: "granada-set",
+          },
+          {
+            id: "correr",
+            say: { A: "¡Perdón! ¡Me voy!", B: "¡Perdón! ¡Me voy ya!", C: "¡Me retiro! ¡No publiques eso!" },
+            reply: { A: "Corres. Abril grita «¡Granada!» y alguien llama a la policía. Un helicóptero llega.", B: "Corres. Abril grita «¡Granada!» a su teléfono y alguien llama a la policía. Poco después, un helicóptero sobrevuela la plaza.", C: "Corres con la granada. Abril, aún grabando, retransmite la huida con un entusiasmo preocupante. Un helicóptero llega a los dos minutos." },
+            mood: "terror", end: "granada-evacuan",
+          },
+        ],
+      },
+      "granada-set": {
+        who: "abril", mood: "worried",
+        line: { A: "Llega la policía. Abril baja el teléfono. «Es de plástico, agente. Es parte de mi proyecto.»", B: "Llega la policía. Abril baja el teléfono y se acerca al agente. «Es de plástico, agente. Es parte de mi proyecto de cine.»", C: "Llega la policía. Abril baja el teléfono y se adelanta al agente con una improvisación fulgurante. «Es de plástico, agente. Estamos rodando un proyecto universitario.»" },
+        options: [
+          {
+            id: "seguir",
+            say: { A: "Sí. Es una película. Perdón.", B: "Sí, es una película. Perdón por las molestias.", C: "Sí, estamos rodando. Pido disculpas por no haber avisado a la ciudad entera." },
+            reply: { A: "El agente suspira. «Que sea la última vez. Sin permiso no se rueda.» Abril ríe.", B: "El agente suspira. «Que sea la última vez. Sin permiso no se rueda.» Abril ríe, aliviada.", C: "El agente cierra los ojos un segundo. «Sin permiso de rodaje, nada de granadas. Ni de plástico.» Abril ríe, aliviada." },
+            mood: "smile", end: "granada-rodaje",
+          },
+          {
+            id: "confesar",
+            say: { A: "No es una película. Es una broma.", B: "No es una película, agente. Es una broma mía, y Abril me está cubriendo.", C: "No es una película, agente. Es una broma mía de muy mal gusto, y Abril me está encubriendo con generosidad." },
+            reply: { A: "Abril pone cara de horror. El agente toma nota. Llega un helicóptero.", B: "Abril pone cara de horror y el agente toma nota. Poco después, un helicóptero sobrevuela la plaza.", C: "Abril pone cara de «quería salvarte» y el agente toma nota de todo. Poco después llega un helicóptero, que no ayuda." },
+            mood: "worried", end: "granada-evacuan",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "abril", mood: "love",
+        line: { A: "Abril te mira y sonríe. «Tienes ojos de personaje de película. Déjame decirte una cosa: tengo un papel para ti.»", B: "Abril te mira y se le ilumina la cara. «Tienes la cara de un personaje de película. Tengo un papel para ti, en serio.»", C: "Abril te mira con ojos de directora. «Tienes la cara de un personaje que el público quiere. Tengo un papel para ti en mi cortometraje, si te animas.»" },
+        options: [
+          {
+            id: "aceptar",
+            say: { A: "¡Sí! ¿De qué trata?", B: "¡Claro! ¿De qué trata el corto?", C: "Acepto sin leer el guion. ¿Cuándo empezamos a rodar?" },
+            reply: { A: "Abril sonríe. «Un pulpo se enamora de un chofer. Tú eres el chofer.»", B: "Abril sonríe, emocionada. «Un pulpo se enamora de un chofer de autobús nocturno. Tú serías el chofer.»", C: "Abril sonríe, emocionada. «Un pulpo se enamora de un chofer de autobús nocturno. Tú serías el chofer, y tendrías que actuar enamorado.»" },
+            mood: "love", next: "corazon-guion",
+          },
+          {
+            id: "beso",
+            say: { A: "¡Qué ilusión! Gracias.", B: "Qué ilusión me haces, Abril. Gracias.", C: "Qué ilusión. Es la mejor oferta de trabajo que he recibido esta noche." },
+            reply: { A: "Abril se ríe y te da un beso en la mejilla. «Hecho. Anota mi número.»", B: "Abril se ríe y te da un beso en la mejilla. «Hecho. Apunta mi número.»", C: "Abril se ríe, te da un beso en la mejilla y te escribe su número en la mano. «Hecho. Mañana ensayamos.»" },
+            mood: "smitten", end: "corazon-beso",
+          },
+        ],
+      },
+      "corazon-guion": {
+        who: "abril", mood: "smitten",
+        line: { A: "Abril te enseña unas páginas. «Aquí está la escena de amor. Léela conmigo.»", B: "Abril saca unas hojas del cuaderno. «Aquí está la escena de amor entre el chofer y el pulpo. Léela conmigo, ahora.»", C: "Abril saca unas páginas arrugadas del cuaderno. «La escena de amor entre el chofer y el pulpo. Léela conmigo ahora; tu voz es exactamente la que imaginaba.»" },
+        options: [
+          {
+            id: "leer",
+            say: { A: "Leo contigo.", B: "Leo contigo. Tú eres el pulpo.", C: "Leo contigo, y tú eres el pulpo. No me mires así." },
+            reply: { A: "Leen la escena. Abril ríe. De repente, se acerca y te mira a los ojos. «Perfecto.»", B: "Leen la escena a media voz. Abril ríe, y de repente se acerca y te mira a los ojos. «Perfecto. Justo así.»", C: "Leen la escena a media voz bajo la luz del cartel. A mitad, Abril deja de leer y te mira a los ojos. «Perfecto. Justo así, no cambies nada.»" },
+            mood: "love", end: "corazon-beso",
+          },
+          {
+            id: "corregir",
+            say: { A: "Cambiaría el final. Que se besen.", B: "Cambiaría el final. Que el chofer y el pulpo se besen.", C: "Cambiaría el final: que el chofer y el pulpo se besen, aunque técnicamente sea difícil." },
+            reply: { A: "Abril se ríe a carcajadas. «¡Lo apunto!» Escribe con letra grande y te abraza.", B: "Abril se ríe a carcajadas. «¡Lo apunto!» Escribe el cambio con letra grande y te abraza.", C: "Abril se ríe a carcajadas. «Lo apunto: tu nombre en los créditos como coguionista.» Te abraza con el cuaderno entre los dos." },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
     },
     ends: {
       estreno: {
@@ -4247,6 +4392,44 @@ const encounters = [
         text: { A: "Abril escribe tu idea en su cuaderno y se va.", B: "Abril apunta tu teoría y se va hacia el metro, pensativa.", C: "Abril se aleja escribiendo mientras camina. Tu teoría ya forma parte de un trabajo universitario." },
         change: "se-va", recap: "Le diste a Abril una idea para su trabajo de cine.",
       },
+      "cuchillo-policia": {
+        text: { A: "Llega un patrullero. Un agente te quita el cuchillo. Abril anota todo en su cuaderno.", B: "Llega un patrullero. Un agente te quita el cuchillo y te hace preguntas. Abril anota todo en su cuaderno.", C: "Llega un patrullero. Un agente te desarma y te interroga. Abril, por supuesto, anota todo en su cuaderno: material para un guion." },
+        change: "policia", recap: "Tu cuchillo asustó a Abril y llegó un patrullero.",
+      },
+      "cuchillo-teoria": {
+        text: { A: "Abril guarda tu teoría en su cuaderno. Se despide con una sonrisa nerviosa.", B: "Abril anota tu teoría en su cuaderno y se despide con una sonrisa nerviosa. Recoges el cuchillo y lo guardas bien.", C: "Abril anota tu teoría en el cuaderno y se despide con una sonrisa cautelosa. Guardas el cuchillo en el fondo del bolso y prometes mejores entradas." },
+        change: "sigue", recap: "Después del susto del cuchillo, le diste a Abril una teoría para su trabajo.",
+      },
+      "pistola-patrulla": {
+        text: { A: "Llega un patrullero. Te quitan la pistola. Abril mira, con los ojos muy abiertos.", B: "Llega un patrullero. Te quitan la pistola y te interrogan. Abril mira, con los ojos muy abiertos y el cuaderno otra vez en la mano.", C: "Llega un patrullero. Te quitan la pistola y te interrogan. Abril lo observa todo con los ojos muy abiertos y, ya, un título posible: «Última parada, comisaría»." },
+        change: "policia", recap: "Tu pistola frente al cine terminó con un patrullero.",
+      },
+      "pistola-entrevista": {
+        text: { A: "Abril te entrevista como actor. Te cita en su trabajo. Guardas la pistola de plástico.", B: "Abril te hace una entrevista breve como «actor» y te cita en su trabajo. Guardas la pistola de plástico.", C: "Abril te entrevista como actor y te cita en su trabajo universitario. Guardas la pistola de utilería, con la sensación de haber interpretado el papel de tu vida." },
+        change: "sonrie", recap: "Abril te entrevistó como actor tras el susto de la pistola.",
+      },
+      "granada-evacuan": {
+        text: { A: "La policía evacúa la plaza. Un helicóptero vuela sobre el cine. La granada es de plástico.", B: "La policía evacúa la plaza y un helicóptero sobrevuela el cine. Al final, alguien confirma que la granada es de plástico.", C: "La policía evacúa la plaza, un helicóptero ilumina la fachada del cine y un artificiero confirma que la granada es de plástico. Abril, por supuesto, lo ha grabado todo." },
+        change: "helicoptero", recap: "Tu granada frente al cine provocó una evacuación con helicóptero.",
+      },
+      "granada-rodaje": {
+        text: { A: "Abril y tú se ríen. Ella dice: «¡Un rodaje sin permiso! ¡Qué escena!» Te invita a un café.", B: "Abril y tú se ríen. Ella dice: «¡Un rodaje sin permiso! Qué escena.» Te invita a un café.", C: "Abril y tú ríen cuando el agente se va. «Un rodaje improvisado, un helicóptero casi, una granada de plástico. Esto es oro.» Te invita a un café para escribirlo." },
+        change: "sonrie", recap: "Tu granada se convirtió en un rodaje improvisado con Abril.",
+      },
+      "corazon-beso": {
+        text: { A: "Abril te besa en la mejilla. Te da su número. «Mañana, ensayo.»", B: "Abril te besa en la mejilla y te da su número. «Mañana, ensayo.» Se aleja riéndose.", C: "Abril te besa en la mejilla, te da su número y se aleja riéndose bajo la luz del cartel. Mañana hay ensayo, y alguna otra cosa." },
+        change: "beso", recap: "Abril te besó en la mejilla y te invitó a su corto.",
+      },
+      "corazon-abrazo": {
+        text: { A: "Abril te abraza. «Eres mi coguionista.» Se va saltando.", B: "Abril te abraza con el cuaderno entre los dos. «Eres mi coguionista.» Se va saltando.", C: "Abril te abraza con el cuaderno entre los dos. «Eres oficialmente mi coguionista.» Se aleja saltando, con tu final bajo el brazo." },
+        change: "abraza", recap: "Te convertiste en coguionista del corto de Abril.",
+      },
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando alguien se asusta de ti?", B: "¿Qué escena de película te daría miedo vivir de verdad?", C: "¿Por qué nos asusta más lo que no entendemos que lo que sí sabemos que es peligroso?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Te asustan las películas de miedo?", B: "¿Qué película te dio más miedo de pequeño?", C: "¿Qué diferencia hay entre el miedo en el cine y el miedo cuando el peligro es real?" } },
+      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Qué harías si todos corrieran y tú estuvieras grabando?", B: "¿Qué escena de película te gustaría ver rodada en tu ciudad?", C: "¿Hasta dónde llega la curiosidad cuando lo absurdo se convierte en material creativo?" } },
+      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Con quién escribirías una historia de amor?", B: "¿Qué papel de película te gustaría interpretar por una noche?", C: "¿Qué tiene de seductora la gente que cree en una historia improbable?" } },
     },
     speak: {
       A1: "¿Qué películas te gustan?",
@@ -4348,6 +4531,151 @@ const encounters = [
           },
         },
       },
+      // ── variantes por objeto ──
+      "cuchillo-inicio": {
+        who: "kevin", mood: "terror",
+        line: { A: "Kevin ve el cuchillo y se sube a la patineta para huir. «¡Eh, tranquilo! ¡Yo no te hice nada!»", B: "Kevin ve el cuchillo, se sube de un salto a la patineta y se aleja unos metros. «¡Eh, eh! ¡Tranquilo! ¡Yo no te hice nada!»", C: "Kevin ve el cuchillo y, por puro instinto, se sube a la patineta y se aleja rodando. «¡Tranquilo, hermano! Yo solo quería un video, no un drama de acción.»" },
+        options: [
+          {
+            id: "grabar",
+            say: { A: "Tranquilo. Grábame tú a mí con el cuchillo.", B: "Tranquilo. Es para cortar la cinta de tu casco, mira.", C: "Tranquilo. Es para cortar la cinta adhesiva de tu casco nuevo, no para lo que piensas." },
+            reply: { A: "Kevin vuelve despacio. «¿La cinta? Qué susto.» Pero mira el cuchillo de reojo.", B: "Kevin vuelve despacio. «¿La cinta del casco? Qué susto.» No le quita ojo al cuchillo.", C: "Kevin vuelve rodando con precaución. «¿La cinta del casco? Qué susto.» No le quita ojo al cuchillo." },
+            mood: "scared", next: "cuchillo-casco",
+          },
+          {
+            id: "huir",
+            say: { A: "Perdón. Me voy.", B: "Perdón, me voy ya.", C: "Disculpa, me retiro antes de arruinarte la noche." },
+            reply: { A: "Te vas. Kevin llama a un amigo, que grita desde la esquina: «¡Cuchillo!» Llega un patrullero.", B: "Te alejas. Kevin llama a un amigo, que grita desde la esquina «¡Cuchillo!». Llega un patrullero.", C: "Te alejas. Kevin, al teléfono, relata la escena con detalles cinematográficos. Un patrullero aparece por la esquina." },
+            mood: "scared", end: "cuchillo-patrulla",
+          },
+        ],
+      },
+      "cuchillo-casco": {
+        who: "kevin", mood: "worried",
+        line: { A: "Kevin te mira. «Mi casco no tiene cinta. No tengo casco.»", B: "Kevin te mira, con la ceja levantada. «Mi casco no tiene cinta. En realidad no tengo casco, ¿sabes?»", C: "Kevin te mira con la ceja levantada. «Mi casco no tiene cinta. En realidad no tengo casco. Acabas de inventar una excusa pésima.»" },
+        options: [
+          {
+            id: "confesar",
+            say: { A: "Es verdad. Fue un error. Perdón.", B: "Tienes razón. Fue un error, perdón.", C: "Tienes razón: era una excusa pésima. Te pido perdón." },
+            reply: { A: "Kevin se ríe nervioso. «Eres un desastre.» Guardas el cuchillo y te graba haciendo una pirueta.", B: "Kevin se ríe, nervioso. «Eres un desastre.» Guardas el cuchillo y le propones grabar algo bueno.", C: "Kevin se ríe, nervioso. «Eres un desastre.» Guardas el cuchillo y él, por una vez, se calma del todo." },
+            mood: "smile", end: "cuchillo-truco",
+          },
+          {
+            id: "duelo",
+            say: { A: "Es para cortar tu video.", B: "Es para cortar tu video, si sale mal.", C: "Es para cortar el video si el truco sale mal, no a las personas." },
+            reply: { A: "Kevin saca una navaja pequeña. «¿Tú con cuchillo y yo con navaja?» Los dos se quedan quietos.", B: "Kevin saca una navaja pequeña de la mochila. «¿Tú con cuchillo y yo con navaja?» Los dos se quedan quietos, en un silencio ridículo.", C: "Kevin saca una navaja de la mochila, para cortar cordones. «Tú con cuchillo y yo con navaja: el tráiler perfecto.» Se quedan quietos, ridículos." },
+            mood: "surprised", end: "cuchillo-patrulla",
+          },
+        ],
+      },
+      "pistola-inicio": {
+        who: "kevin", mood: "terror",
+        line: { A: "Kevin ve la pistola y levanta las manos. «¡No me dispares! ¡Solo quería un video!»", B: "Kevin ve la pistola, levanta las manos y la patineta rueda sola. «¡No dispares! ¡Solo quería que me grabaras un video!»", C: "Kevin ve la pistola y levanta las manos. Su patineta se aleja rodando sola, sin dueño. «¡No, no! Solo quería un video para mi hermano, nada más.»" },
+        options: [
+          {
+            id: "guardar",
+            say: { A: "La guardo. No es para ti.", B: "La guardo. No es para ti, tranquilo.", C: "La guardo. No es para ti, ni para nadie esta noche." },
+            reply: { A: "Kevin baja las manos. «¿Por qué la llevas?» Va a buscar su patineta.", B: "Kevin baja las manos despacio. «¿Y por qué la llevas?» Camina hacia su patineta sin darte la espalda.", C: "Kevin baja las manos con cuidado. «¿Y por qué la llevas?» Recupera su patineta caminando de lado, sin darte la espalda." },
+            mood: "scared", next: "pistola-hermano",
+          },
+          {
+            id: "exigir",
+            say: { A: "Dame tu teléfono.", B: "Dame tu teléfono y la patineta.", C: "Dame el teléfono. Y no hagas ninguna tontería." },
+            reply: { A: "Kevin grita. Un vecino mira por la ventana. «¡Policía!» Una patrulla llega rápido.", B: "Kevin grita y un vecino asoma por la ventana. «¡Llamo a la policía!» Una patrulla llega en minutos.", C: "Kevin grita y un vecino asoma a la ventana con el teléfono ya en la oreja. Una patrulla llega a los pocos minutos, que se te hacen eternos." },
+            mood: "terror", end: "pistola-patrulla",
+          },
+        ],
+      },
+      "pistola-hermano": {
+        who: "kevin", mood: "worried",
+        line: { A: "Kevin mira el suelo. «Mi hermano está en el hospital. Quería mandarle un truco. No quiero problemas.»", B: "Kevin mira el suelo, con la patineta bajo el brazo. «Mi hermano está en el hospital. Quería grabar un truco para él. No quiero problemas, en serio.»", C: "Kevin mira el suelo. «Mi hermano está en el hospital, y yo solo quería mandarle un truco para que sonriera. No quiero problemas con nadie esta noche.»" },
+        options: [
+          {
+            id: "grabar",
+            say: { A: "Yo te grabo. Con tu teléfono. Sin pistola.", B: "Yo te grabo con tu teléfono. La guardo bien lejos.", C: "Yo te grabo. La pistola se queda guardada, y tú saltas. Te lo prometo." },
+            reply: { A: "Kevin duda. «¿En serio?» Salta, cae perfecto. Te mira. «Gracias.»", B: "Kevin duda un segundo. «¿En serio?» Salta y cae perfecto. «Gracias. Mi hermano se va a reír mucho.»", C: "Kevin duda. «¿En serio?» Salta, cae perfecto, y mira a cámara: «Esto es para ti, hermano.» Luego te mira, serio. «Gracias.»" },
+            mood: "worried", end: "pistola-truco",
+          },
+          {
+            id: "irse",
+            say: { A: "Mejor me voy.", B: "Mejor me voy y te dejo tranquilo.", C: "Mejor me retiro y te dejo en paz con tu truco." },
+            reply: { A: "Te vas. Kevin llama a su hermano. Un patrullero pasa y te mira.", B: "Te alejas. Kevin se sienta en el suelo. Un patrullero pasa lento y te sigue con la vista.", C: "Te alejas. Kevin se sienta en el bordillo, agotado. Un patrullero pasa despacio y te acompaña con la mirada." },
+            mood: "scared", end: "pistola-patrulla",
+          },
+        ],
+      },
+      "granada-inicio": {
+        who: "kevin", mood: "smile",
+        line: { A: "Kevin ve la granada y abre los ojos. «¡Qué locura! ¿Es de verdad? ¡Grábame con ella!»", B: "Kevin ve la granada y se le ilumina la cara. «¡Qué locura! ¿Es de verdad? ¡Grábame saltando con ella en la mano!»", C: "Kevin ve la granada y reacciona con un entusiasmo que debería preocuparte. «¡Qué locura! ¿Es de verdad? Grábame saltando con ella; será el video del siglo.»" },
+        options: [
+          {
+            id: "grabar",
+            say: { A: "¡No! ¡Es peligroso!", B: "¡No, Kevin! Es peligroso, ni de broma.", C: "No, ni hablar. La broma ya fue demasiado lejos." },
+            reply: { A: "Kevin se ríe. «Es una broma, ¿no?» Pero la gente de la plaza ya está corriendo.", B: "Kevin se ríe. «Es una broma, ¿verdad?» Pero medio parque ya está corriendo, gritando.", C: "Kevin se ríe. «Es una broma, ¿no?» No le contestas a tiempo: medio parque ya huye a gritos." },
+            mood: "surprised", next: "granada-plaza",
+          },
+          {
+            id: "juguete",
+            say: { A: "Es de plástico. Hagamos el video.", B: "Es de plástico. Salta con ella y te grabo.", C: "Es de plástico. Hagamos el video, pero con cuidado." },
+            reply: { A: "Kevin sube a la patineta con la granada. Salta… ¡y la granada vuela por los aires! La gente grita.", B: "Kevin salta con la granada en la mano, y esta se le escapa y rueda por el suelo. La gente grita y huye.", C: "Kevin salta con la granada en la mano. Aterriza, la suelta sin querer y esta rueda hasta los pies de una pareja, que sale volando." },
+            mood: "terror", end: "granada-evacuan",
+          },
+        ],
+      },
+      "granada-plaza": {
+        who: "kevin", mood: "surprised",
+        line: { A: "La plaza se vacía. Una pareja grita. Suenan sirenas. Kevin se quita el casco: «Ups.»", B: "La plaza se vacía en segundos. Una pareja grita, suenan sirenas. Kevin se rasca la cabeza, sin casco: «Ups. Esto no estaba en el plan.»", C: "La plaza se vacía en segundos. Una pareja chilla, las sirenas se acercan. Kevin, sin casco, murmura: «Ups. Mi video del año se ha convertido en un telediario.»" },
+        options: [
+          {
+            id: "explicar",
+            say: { A: "Es de plástico. Voy a decirlo.", B: "Es de plástico. Voy a explicarlo a la policía.", C: "Es de utilería. Voy a explicárselo a la policía antes de que lleguen los helicópteros." },
+            reply: { A: "Un policía llega. Mira la granada. «Plástico.» Kevin se ríe, aliviado. «¡Ya está!»", B: "Un policía llega, examina la granada y dice «Plástico.» Kevin se ríe, aliviado. «¡Menos mal!»", C: "Un policía llega, examina la granada con guantes y dice «Plástico.» Kevin se ríe, aliviado, y empieza a editar el video mentalmente." },
+            mood: "smile", end: "granada-video",
+          },
+          {
+            id: "huir",
+            say: { A: "Mejor nos vamos.", B: "Mejor nos vamos de aquí. Rápido.", C: "Mejor nos vamos de aquí, Kevin, y mañana lo contamos." },
+            reply: { A: "Corren. Kevin en la patineta, tú detrás. Un helicóptero los sigue desde el aire.", B: "Corren: Kevin sobre la patineta, tú detrás. Un helicóptero los sigue desde el aire, iluminando la plaza.", C: "Corren, Kevin sobre la patineta y tú tras él. Un helicóptero los sigue desde el aire, con un foco que los convierte en estrellas involuntarias." },
+            mood: "terror", end: "granada-evacuan",
+          },
+        ],
+      },
+      "corazon-inicio": {
+        who: "kevin", mood: "love",
+        line: { A: "Kevin te mira y se queda en silencio. Baja la patineta. «No sé por qué, pero quiero contarte algo.»", B: "Kevin te mira, baja la patineta y se sienta en el bordillo. «No sé por qué, pero quiero contarte algo. Mi hermano está en el hospital.»", C: "Kevin te mira, deja caer la patineta y se sienta en el bordillo. «No sé qué tienes, pero quiero contarte algo que no le he dicho a nadie. Mi hermano está ingresado.»" },
+        options: [
+          {
+            id: "escuchar",
+            say: { A: "Cuéntame. Estoy aquí.", B: "Cuéntame, Kevin. Estoy aquí, sin prisa.", C: "Cuéntame, Kevin. Aquí tienes a alguien con toda la noche por delante." },
+            reply: { A: "Kevin respira hondo. «Le prometí que haría este truco. Hoy es su cumpleaños.»", B: "Kevin respira hondo. «Le prometí que haría este truco antes de su cumpleaños. Es hoy, y no pude ir a verlo.»", C: "Kevin respira hondo. «Le prometí que haría este truco antes de su cumpleaños. Es hoy, no puede salir del hospital, y yo no he conseguido el truco.»" },
+            mood: "love", next: "corazon-hermano",
+          },
+          {
+            id: "abrazar",
+            say: { A: "Ven aquí. Un abrazo.", B: "Ven, Kevin. Un abrazo.", C: "Ven aquí. A veces un abrazo dice más que cualquier truco." },
+            reply: { A: "Kevin te abraza fuerte. Llora un poco. «Gracias.» Luego se levanta y salta.", B: "Kevin te abraza fuerte y llora un poco. «Gracias.» Luego se levanta, se seca la cara y se sube a la patineta.", C: "Kevin te abraza con fuerza y llora un poco. «Gracias.» Se seca la cara con la manga y, de pronto, sube a la patineta con una decisión nueva." },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
+      "corazon-hermano": {
+        who: "kevin", mood: "smitten",
+        line: { A: "Kevin mira el teléfono. «Es su cumpleaños. Si lo grabas, se lo mando ahora. ¿Lo hacemos?»", B: "Kevin mira el teléfono. «Si me grabas, se lo mando ahora mismo. Es su cumpleaños. ¿Lo hacemos juntos?»", C: "Kevin te tiende el teléfono. «Si me grabas, se lo mando ahora mismo, antes de que acabe su cumpleaños. ¿Lo hacemos juntos, tú y yo?»" },
+        options: [
+          {
+            id: "grabar",
+            say: { A: "Sí. Vamos. Tú puedes.", B: "Sí, claro. Vamos. Tú puedes, Kevin.", C: "Por supuesto. Prepárate, que esta toma vale por todas las del año." },
+            reply: { A: "Kevin salta… y cae perfecto. Se gira a la cámara. «¡Feliz cumpleaños, hermano!»", B: "Kevin salta, gira la patineta y cae perfecto. Se gira hacia la cámara. «¡Feliz cumpleaños, hermano!»", C: "Kevin salta, gira la patineta y aterriza limpio. Se gira hacia la cámara, con los ojos brillantes. «Feliz cumpleaños, hermano. Lo conseguí.»" },
+            mood: "love", end: "corazon-video",
+          },
+          {
+            id: "hospital",
+            say: { A: "Vamos al hospital. Se lo enseñamos en persona.", B: "Mejor vamos al hospital. Se lo haces en persona.", C: "Mejor vamos al hospital y se lo haces en persona. Eso no tiene precio." },
+            reply: { A: "Kevin sonríe, con lágrimas. «¿En serio?» Caminan juntos hacia la clínica, con la patineta bajo el brazo.", B: "Kevin sonríe, con lágrimas en los ojos. «¿En serio?» Caminan juntos hacia la clínica, con la patineta bajo el brazo.", C: "Kevin sonríe entre lágrimas. «¿De verdad?» Caminan juntos hacia la clínica, y la patineta va bajo su brazo como un trofeo." },
+            mood: "love", end: "corazon-abrazo",
+          },
+        ],
+      },
     },
     ends: {
       baila: {
@@ -4362,6 +4690,44 @@ const encounters = [
         text: { A: "Te vas. Kevin practica solo en la plaza.", B: "Te vas. Detrás, oyes la patineta de Kevin golpear el suelo una y otra vez.", C: "Te alejas. Detrás, el ruido de la patineta de Kevin marca el ritmo de la plaza." },
         change: "sigue", recap: "No grabaste a Kevin porque tenías prisa.",
       },
+      "cuchillo-patrulla": {
+        text: { A: "Llega un patrullero. Un policía mira el cuchillo y la navaja. Kevin sonríe, nervioso.", B: "Llega un patrullero. Un policía mira el cuchillo y la navaja de Kevin. Los dos explican lo ocurrido.", C: "Llega un patrullero. Un agente mira el cuchillo, mira la navaja de Kevin y suspira. Los dos explican lo ocurrido con una cortesía que no engaña a nadie." },
+        change: "policia", recap: "Tu cuchillo y la navaja de Kevin provocaron la llegada de un patrullero.",
+      },
+      "cuchillo-truco": {
+        text: { A: "Kevin salta y cae perfecto. Tú lo grabas con una mano. «¡Sí!» Los dos se ríen del susto.", B: "Kevin salta y cae perfecto mientras lo grabas. «¡Sí!» Los dos se ríen del susto inicial.", C: "Kevin salta, cae perfecto y se gira hacia la cámara con una sonrisa enorme. «¡Sí!» Los dos terminan riéndose del cuchillo que casi arruina su noche." },
+        change: "baila", recap: "Después del susto del cuchillo, grabaste el truco de Kevin.",
+      },
+      "pistola-patrulla": {
+        text: { A: "Llega un patrullero. Te quitan la pistola. Kevin mira, con la patineta bajo el brazo.", B: "Llega un patrullero. Te quitan la pistola. Kevin mira desde lejos, con la patineta bajo el brazo, sin atreverse a respirar.", C: "Llega un patrullero que te desarma en medio de la plaza. Kevin mira desde lejos, con la patineta bajo el brazo, y decide que mañana practica en un garaje." },
+        change: "policia", recap: "Tu pistola en la plaza terminó con un patrullero.",
+      },
+      "pistola-truco": {
+        text: { A: "Kevin envía el video a su hermano. Le contesta con mil emojis. Kevin te abraza, aunque dude.", B: "Kevin envía el video a su hermano. Él responde con mil emojis. Kevin te da un abrazo, dudando.", C: "Kevin envía el video a su hermano, que responde con una avalancha de emojis. Kevin te abraza con una mezcla de miedo y gratitud, sin soltar la patineta." },
+        change: "abraza", recap: "Grabaste el truco de Kevin para su hermano, pese al susto de la pistola.",
+      },
+      "granada-evacuan": {
+        text: { A: "La policía evacúa la plaza. Un helicóptero vuela sobre ustedes. La granada es de plástico.", B: "La policía evacúa la plaza y un helicóptero sobrevuela. Al final, alguien confirma que la granada es de plástico.", C: "La policía evacúa la plaza, un helicóptero ilumina el suelo y, tras media hora, un artificiero confirma que la granada es de plástico. Kevin, por supuesto, lo ha grabado." },
+        change: "helicoptero", recap: "Tu granada en la plaza provocó una evacuación con helicóptero.",
+      },
+      "granada-video": {
+        text: { A: "Kevin y tú ven el video: sale la granada, la gente huyendo y la policía. Es viral.", B: "Kevin y tú ven el video: la granada, la gente huyendo, la policía. Se hace viral en una hora.", C: "Kevin y tú ven el video: la granada, el pánico, la policía llegando. En una hora tiene un millón de visitas y una citación pendiente." },
+        change: "baila", recap: "Tu granada de plástico acabó en un video viral con Kevin.",
+      },
+      "corazon-video": {
+        text: { A: "Kevin manda el video. Su hermano responde con un corazón. Kevin te abraza, llorando de alegría.", B: "Kevin manda el video a su hermano, que responde con un corazón enorme. Kevin te abraza, llorando de alegría.", C: "Kevin manda el video; su hermano responde en segundos con un corazón enorme y un «Eres un crack». Kevin te abraza, llorando y riendo a la vez." },
+        change: "abraza", recap: "Grabaste el truco de Kevin para el cumpleaños de su hermano.",
+      },
+      "corazon-abrazo": {
+        text: { A: "Kevin te da un abrazo largo. Se sube a la patineta y se va hacia la clínica, sonriendo.", B: "Kevin te da un abrazo largo, se sube a la patineta y se va hacia la clínica, sonriendo por fin.", C: "Kevin te da un abrazo largo, se sube a la patineta y se desliza hacia la clínica con la determinación de quien ha recibido lo que necesitaba." },
+        change: "abraza", recap: "Abrazaste a Kevin y se fue a ver a su hermano al hospital.",
+      },
+    },
+    variants: {
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Qué excusa mala inventaste alguna vez?", B: "¿Cuándo una mentira pequeña empeoró una situación?", C: "¿Qué tiene la torpeza de sacar una excusa en el peor momento posible?" } },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿A quién le mandarías un video para hacerle sonreír?", B: "¿Cómo mantienes la calma cuando alguien te apunta con algo?", C: "¿Qué te dice la reacción de una persona asustada sobre lo que realmente valora?" } },
+      granada: { start: "granada-inicio", fx: "huye", speak: { A: "¿Qué es lo más viral que has visto?", B: "¿Cuál fue la locura más grande que hiciste por un video?", C: "¿Qué precio estamos dispuestos a pagar por un momento memorable que otros verán?" } },
+      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Qué le prometiste a alguien y todavía no cumples?", B: "¿Cómo celebras un cumpleaños cuando no puedes estar con alguien?", C: "¿Qué papel juegan las promesas pequeñas en la forma en que cuidamos a quienes queremos?" } },
     },
     speak: {
       A1: "¿Qué deporte haces?",
