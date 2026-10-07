@@ -6,6 +6,14 @@ import assert from 'node:assert/strict';
 // found exactly once, so drift or a second copy still fails the old hashes.
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
+  {
+    id:230,path:'/the-sound-map',files:/^(?:app\/the-sound-map\/|public\/(?:the-sound-map|audio\/the-sound-map)\/|tests\/sound-map[^/]*\.test\.mjs$|scripts\/generate-sound-map-audio\.py$)/,
+    edits:{
+      'tests/rendered-html.test.mjs':[['assert.match(html,/83(?:<!-- -->|\\s)+resultados/);assert.match(html,/115(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/82(?:<!-- -->|\\s)+resultados/);assert.match(html,/114(?:<!-- -->|\\s)+clases totales/);']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/sound-map.test.mjs','tests/sound-map-ui.test.mjs','tests/sound-map-page-ui.test.mjs','tests/sound-map-audio-ui.test.mjs']);\n",'']],
+      'app/lesson-catalog.ts':[text=>{const lines=text.split('\n');const at=lines.flatMap((line,i)=>line.startsWith('  {"id":230,')&&line.includes('"path":"/the-sound-map"')?[i]:[]);assert.equal(at.length,1,'one sound map entry');lines.splice(at[0],1);return lines.join('\n');},['"Escucha":[130,131,105,28,132,133,134,135,230],','"Escucha":[130,131,105,28,132,133,134,135],']],
+    },
+  },
   // Owner-requested country atlases. Exact inversions preserve every historical byte.
   {
     id:227,path:'/suecia',files:/^(?:app\/(?:country-atlas|suecia|argentina|espana)\/|public\/country-atlas\/|tests\/country-atlas[^/]*\.test\.mjs$)/,

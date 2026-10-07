@@ -1,0 +1,3248 @@
+{
+  "locations": [
+    {
+      "id": "balcony",
+      "title": "Ventanas abiertas",
+      "titleEn": "Open windows",
+      "sound": "Dos voces, un desacuerdo",
+      "icon": "🪴",
+      "color": "#f59c81",
+      "position": [
+        -7,
+        -5
+      ],
+      "context": "Dos vecinos hablan entre balcones.",
+      "contextEn": "Two neighbours talk across their balconies.",
+      "glossary": [
+        [
+          "planta",
+          "plant"
+        ],
+        [
+          "agua",
+          "water"
+        ],
+        [
+          "perdón",
+          "sorry"
+        ],
+        [
+          "balcón",
+          "balcony"
+        ]
+      ]
+    },
+    {
+      "id": "singer",
+      "title": "Una canción a medias",
+      "titleEn": "Half a song",
+      "sound": "Una voz ensaya junto al río",
+      "icon": "🎵",
+      "color": "#b3a1ec",
+      "position": [
+        7,
+        -5
+      ],
+      "context": "Una cantante ensaya una canción original junto al río.",
+      "contextEn": "A singer rehearses an original song by the river.",
+      "glossary": [
+        [
+          "sol",
+          "sun"
+        ],
+        [
+          "luna",
+          "moon"
+        ],
+        [
+          "casa",
+          "home"
+        ],
+        [
+          "volver",
+          "to return"
+        ]
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "La ciudad en la radio",
+      "titleEn": "The city on the radio",
+      "sound": "Una noticia atraviesa el tráfico",
+      "icon": "📻",
+      "color": "#efc76c",
+      "position": [
+        0,
+        0
+      ],
+      "context": "Por la ventana de un taxi se escucha la radio local.",
+      "contextEn": "You hear local radio through a taxi window.",
+      "glossary": [
+        [
+          "radio",
+          "radio"
+        ],
+        [
+          "hoy",
+          "today"
+        ],
+        [
+          "parque",
+          "park"
+        ],
+        [
+          "mañana",
+          "tomorrow"
+        ]
+      ]
+    },
+    {
+      "id": "park",
+      "title": "El banco de siempre",
+      "titleEn": "The usual bench",
+      "sound": "Una conversación entre árboles",
+      "icon": "🌳",
+      "color": "#86bfa1",
+      "position": [
+        -7,
+        5
+      ],
+      "context": "Dos personas conversan en un banco del parque.",
+      "contextEn": "Two people chat on a park bench.",
+      "glossary": [
+        [
+          "amiga",
+          "friend"
+        ],
+        [
+          "aquí",
+          "here"
+        ],
+        [
+          "sentarse",
+          "to sit down"
+        ],
+        [
+          "esperar",
+          "to wait"
+        ]
+      ]
+    },
+    {
+      "id": "vendor",
+      "title": "La última caja",
+      "titleEn": "The last crate",
+      "sound": "Un pregón cambia la calle",
+      "icon": "🍊",
+      "color": "#eda56b",
+      "position": [
+        7,
+        5
+      ],
+      "context": "Un vendedor anuncia fruta en una esquina.",
+      "contextEn": "A street vendor calls out about fruit on a corner.",
+      "glossary": [
+        [
+          "naranja",
+          "orange"
+        ],
+        [
+          "dos",
+          "two"
+        ],
+        [
+          "dulce",
+          "sweet"
+        ],
+        [
+          "caja",
+          "crate"
+        ]
+      ]
+    },
+    {
+      "id": "rooftop",
+      "title": "Luces en la azotea",
+      "titleEn": "Rooftop lights",
+      "sound": "Una fiesta vista desde abajo",
+      "icon": "🏮",
+      "color": "#e698b5",
+      "position": [
+        0,
+        -10
+      ],
+      "context": "Se oyen voces desde una fiesta en una terraza.",
+      "contextEn": "Voices drift down from a rooftop party.",
+      "glossary": [
+        [
+          "fiesta",
+          "party"
+        ],
+        [
+          "música",
+          "music"
+        ],
+        [
+          "gracias",
+          "thank you"
+        ],
+        [
+          "bajar",
+          "to turn down"
+        ]
+      ]
+    }
+  ],
+  "levels": {
+    "A0": {
+      "focus": "Reconoce una palabra. Construye tu primera frase.",
+      "focusEn": "Recognise one word. Build your first sentence.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Agua! ¡Mi planta!"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Oh. Perdón."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué palabra escuchas? / Which word do you hear?",
+              "options": [
+                "🪴 Planta / Plant",
+                "📚 Libro / Book",
+                "👟 Zapato / Shoe"
+              ],
+              "answer": 0,
+              "explanation": "Se escucha «mi planta». / You hear “my plant”."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Cómo termina? / How does it end?",
+              "options": [
+                "Con una disculpa / An apology",
+                "Con una despedida / A goodbye"
+              ],
+              "answer": 0,
+              "explanation": "«Perdón» es una disculpa. / “Perdón” means sorry."
+            }
+          ],
+          "produce": "Di: «Mi planta. Perdón».",
+          "produceEn": "Say: “My plant. Sorry”.",
+          "bank": [
+            "Mi / My",
+            "planta / plant",
+            "Perdón / Sorry"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Sol, sol. Luna, luna. Mi casa, mi casa."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "Escucha y elige. / Listen and choose.",
+              "options": [
+                "🚗 + 🚌",
+                "🐟 + 🐈",
+                "☀️ + 🌙"
+              ],
+              "answer": 2,
+              "explanation": "Escuchas «sol» y «luna». / You hear sun and moon."
+            },
+            {
+              "type": "order",
+              "prompt": "¿Qué escuchas primero? Toca en orden. / Tap in the order you hear.",
+              "items": [
+                "Luna / Moon",
+                "Casa / Home",
+                "Sol / Sun"
+              ],
+              "answer": [
+                2,
+                0,
+                1
+              ],
+              "explanation": "Sol → luna → casa. / Sun → moon → home."
+            }
+          ],
+          "produce": "Completa: «Mi casa».",
+          "produceEn": "Build and say: “My home”.",
+          "bank": [
+            "Mi / My",
+            "casa / home"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Hola. Radio Sol. Hoy: música en el parque."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Dónde hay música? / Where is the music?",
+              "options": [
+                "🚂 Tren / Train",
+                "🌳 Parque / Park",
+                "🏠 Casa / Home"
+              ],
+              "answer": 1,
+              "explanation": "«Música en el parque». / Music in the park."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Cuándo? / When?",
+              "options": [
+                "Mañana / Tomorrow",
+                "Hoy / Today"
+              ],
+              "answer": 1,
+              "explanation": "La voz dice «hoy». / The voice says today."
+            }
+          ],
+          "produce": "Di: «Hoy, música».",
+          "produceEn": "Say: “Today, music”.",
+          "bank": [
+            "Hoy / Today",
+            "música / music",
+            "en el parque / in the park"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Hola, Ana."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Hola, Leo. Aquí."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Cuántas personas hablan? / How many people speak?",
+              "options": [
+                "Una / One",
+                "Dos / Two",
+                "Tres / Three"
+              ],
+              "answer": 1,
+              "explanation": "Hay dos voces que se saludan. / Two voices greet each other."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Qué nombre escuchas? / Which name do you hear?",
+              "options": [
+                "Eva",
+                "Sara",
+                "Ana"
+              ],
+              "answer": 2,
+              "explanation": "La primera voz dice «Ana». / The first voice says Ana."
+            }
+          ],
+          "produce": "Saluda: «Hola, Ana».",
+          "produceEn": "Greet someone: “Hi, Ana”.",
+          "bank": [
+            "Hola / Hi",
+            "Ana",
+            "Aquí / Here"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Naranjas! ¡Dos naranjas! ¡Dulces!"
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué vende? / What is for sale?",
+              "options": [
+                "🌸 Flores / Flowers",
+                "🥖 Pan / Bread",
+                "🍊 Naranjas / Oranges"
+              ],
+              "answer": 2,
+              "explanation": "La palabra repetida es «naranjas». / The repeated word is oranges."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Qué número escuchas? / Which number do you hear?",
+              "options": [
+                "3 · tres / three",
+                "1 · uno / one",
+                "2 · dos / two"
+              ],
+              "answer": 2,
+              "explanation": "Escuchas «dos». / You hear two."
+            }
+          ],
+          "produce": "Pide: «Dos naranjas».",
+          "produceEn": "Ask for: “Two oranges”.",
+          "bank": [
+            "Dos / Two",
+            "naranjas / oranges",
+            "gracias / thank you"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Música!"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "¡Sí! ¡Gracias!"
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué palabra reconoces? / Which word do you recognise?",
+              "options": [
+                "Libro / Book",
+                "Música / Music",
+                "Agua / Water"
+              ],
+              "answer": 1,
+              "explanation": "La primera voz dice «música». / The first voice says music."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿La segunda persona acepta? / Does the second person agree?",
+              "options": [
+                "Sí / Yes",
+                "No / No"
+              ],
+              "answer": 0,
+              "explanation": "Dice «sí» y «gracias». / They say yes and thank you."
+            }
+          ],
+          "produce": "Responde: «Sí, gracias».",
+          "produceEn": "Reply: “Yes, thank you”.",
+          "bank": [
+            "Sí / Yes",
+            "gracias / thank you"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    },
+    "A1": {
+      "focus": "Encuentra quién, qué y dónde.",
+      "focusEn": "Find who, what and where.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Oye, hay agua en mi silla."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Perdón. Estoy regando las plantas."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Mi silla está debajo de tu balcón."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Un momento. Ya no cae agua."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué está mojado?",
+              "options": [
+                "La puerta",
+                "El teléfono",
+                "La silla"
+              ],
+              "answer": 2,
+              "explanation": "La primera vecina dice que hay agua en su silla."
+            },
+            {
+              "type": "order",
+              "prompt": "Ordena lo que ocurre.",
+              "items": [
+                "La otra persona se disculpa.",
+                "Alguien ve agua en su silla.",
+                "El agua deja de caer."
+              ],
+              "answer": [
+                1,
+                0,
+                2
+              ],
+              "explanation": "Primero se señala el problema; después llega la disculpa y se detiene el agua."
+            }
+          ],
+          "produce": "Di qué pasa con «Hay…» y responde con «Perdón».",
+          "produceEn": "",
+          "bank": [
+            "Hay agua en…",
+            "Estoy…",
+            "Perdón."
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Por la mañana sale el sol. Por la noche sale la luna. Yo canto cerca de mi casa. Y mi vecino no canta nunca."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Dónde canta?",
+              "options": [
+                "Dentro del mercado",
+                "Cerca de su casa",
+                "En el taxi"
+              ],
+              "answer": 1,
+              "explanation": "La letra dice «cerca de mi casa»."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Quién no canta?",
+              "options": [
+                "La cantante",
+                "Su vecino",
+                "Todo el barrio"
+              ],
+              "answer": 1,
+              "explanation": "«Mi vecino no canta nunca»."
+            }
+          ],
+          "produce": "Di una frase de la canción y cambia «canto» por otra acción.",
+          "produceEn": "",
+          "bank": [
+            "Por la mañana…",
+            "Yo…",
+            "Mi vecino…"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Son las cinco. Esta tarde hay música en el parque del Río. La entrada es gratis. El concierto empieza a las seis."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿A qué hora empieza el concierto?",
+              "options": [
+                "A las cinco",
+                "A las seis",
+                "A las siete"
+              ],
+              "answer": 1,
+              "explanation": "Las cinco es la hora de la noticia; el concierto empieza a las seis."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Hay que pagar?",
+              "options": [
+                "Sí",
+                "No"
+              ],
+              "answer": 1,
+              "explanation": "«La entrada es gratis»."
+            }
+          ],
+          "produce": "Invita a alguien: dónde, a qué hora y cuánto cuesta.",
+          "produceEn": "",
+          "bank": [
+            "Hay música en…",
+            "A las…",
+            "Es gratis."
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¿Este banco está libre?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Sí. Estoy esperando a mi hermana."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Yo espero a mi amigo. Se llama Luis."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Mi hermana se llama Luz. ¡Qué parecido!"
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿A quién espera la primera persona?",
+              "options": [
+                "A su hermana",
+                "A su madre",
+                "A su amigo"
+              ],
+              "answer": 2,
+              "explanation": "La persona que pregunta por el banco dice después «yo espero a mi amigo»."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Cómo se llama la hermana?",
+              "options": [
+                "Lucía",
+                "Luis",
+                "Luz"
+              ],
+              "answer": 2,
+              "explanation": "Luis es el amigo; Luz es la hermana."
+            }
+          ],
+          "produce": "Explica a quién esperas y cómo se llama.",
+          "produceEn": "",
+          "bank": [
+            "Espero a…",
+            "Se llama…"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Naranjas dulces! Tres por dos monedas."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Quiero tres, por favor. ¿Son de hoy?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Sí, de esta mañana. Aquí tienes."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Gracias."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Cuántas naranjas compra?",
+              "options": [
+                "Cinco",
+                "Dos",
+                "Tres"
+              ],
+              "answer": 2,
+              "explanation": "Pide tres naranjas."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Cuánto paga por tres?",
+              "options": [
+                "Una moneda",
+                "Dos monedas",
+                "Tres monedas"
+              ],
+              "answer": 1,
+              "explanation": "La oferta es «tres por dos monedas»."
+            }
+          ],
+          "produce": "Haz un pregón con un producto, una cantidad y un precio.",
+          "produceEn": "",
+          "bank": [
+            "¡… dulces!",
+            "… por … monedas."
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¿Dónde está Elena?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Junto a la mesa. Hoy es su cumpleaños."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¿Cuántos años cumple?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Treinta. Vamos a cantar."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué celebran?",
+              "options": [
+                "Un cumpleaños",
+                "Un nuevo trabajo",
+                "Un viaje"
+              ],
+              "answer": 0,
+              "explanation": "Es el cumpleaños de Elena."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Dónde está Elena?",
+              "options": [
+                "Junto a la mesa",
+                "En la calle",
+                "Junto a la puerta"
+              ],
+              "answer": 0,
+              "explanation": "La respuesta es «junto a la mesa»."
+            }
+          ],
+          "produce": "Presenta a Elena y di qué se celebra.",
+          "produceEn": "",
+          "bank": [
+            "Esta es…",
+            "Hoy es…",
+            "Cumple…"
+          ],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    },
+    "A2": {
+      "focus": "Sigue lo que cambia y reconstruye el plan.",
+      "focusEn": "Follow changes and reconstruct the plan.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Otra vez está mojada mi ropa! La tendí hace una hora."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Lo siento. Pensé que hoy no había nadie abajo."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No estoy enfadada por el agua. Es la tercera vez esta semana."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Tienes razón. Voy a poner platos debajo de las macetas."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Por qué se queja principalmente?",
+              "options": [
+                "Porque ha perdido la ropa",
+                "Porque el problema se repite",
+                "Porque no le gustan las plantas"
+              ],
+              "answer": 1,
+              "explanation": "Aclara que es la tercera vez esta semana."
+            },
+            {
+              "type": "order",
+              "prompt": "Reconstruye la secuencia.",
+              "items": [
+                "Propone poner platos.",
+                "Cuelga la ropa.",
+                "Encuentra la ropa mojada."
+              ],
+              "answer": [
+                1,
+                2,
+                0
+              ],
+              "explanation": "La ropa ya estaba tendida antes de mojarse; la solución llega al final."
+            }
+          ],
+          "produce": "Explica el problema y la solución con «porque» y «va a».",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Dejé mi paraguas en casa, pensando que iba a hacer sol. Ahora bailo bajo la lluvia, y el cielo cambió mi canción. No tengo prisa esta tarde, no voy a correr otra vez. Si llego mojada a la plaza, mis amigos van a entender."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué esperaba antes de salir?",
+              "options": [
+                "Lluvia",
+                "Sol",
+                "Nieve"
+              ],
+              "answer": 1,
+              "explanation": "Dejó el paraguas porque pensaba que iba a hacer sol."
+            },
+            {
+              "type": "order",
+              "prompt": "Ordena la pequeña historia.",
+              "items": [
+                "Baila bajo la lluvia.",
+                "Deja el paraguas.",
+                "Piensa llegar mojada a la plaza."
+              ],
+              "answer": [
+                1,
+                0,
+                2
+              ],
+              "explanation": "Sale sin paraguas, encuentra lluvia y anticipa su llegada."
+            }
+          ],
+          "produce": "Cuenta un pequeño cambio de planes como el de la canción.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Atención: el concierto del parque cambia de lugar por la lluvia. Será en el centro cultural, frente al puente. La hora sigue igual: las siete. Quienes ya tienen entrada no necesitan otra."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué cambia?",
+              "options": [
+                "La hora",
+                "El precio",
+                "El lugar"
+              ],
+              "answer": 2,
+              "explanation": "Cambia al centro cultural; la hora se mantiene."
+            },
+            {
+              "type": "choice",
+              "prompt": "Tienes una entrada. ¿Qué haces?",
+              "options": [
+                "Esperas mañana en el parque",
+                "Compras otra",
+                "Vas al centro cultural con la misma"
+              ],
+              "answer": 2,
+              "explanation": "La radio aclara que no hace falta otra entrada."
+            }
+          ],
+          "produce": "Deja un mensaje breve para alguien que todavía va hacia el parque.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¿Vienes mañana a caminar?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Quería venir, pero tengo que llevar a mi padre al médico."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Podemos vernos después, a las once."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Mejor a las doce. Así no tengo que correr."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "De acuerdo. Traigo algo para comer."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿A qué hora quedan finalmente?",
+              "options": [
+                "A las doce",
+                "A las diez",
+                "A las once"
+              ],
+              "answer": 0,
+              "explanation": "La segunda persona propone las doce y la primera acepta."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿Por qué cambian el horario?",
+              "options": [
+                "Por una cita médica del padre",
+                "Por el tiempo",
+                "Porque el parque cierra"
+              ],
+              "answer": 0,
+              "explanation": "Tiene que acompañar a su padre al médico."
+            }
+          ],
+          "produce": "Explica la propuesta inicial y el acuerdo final.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Última caja de mangos! Están maduros para comer hoy."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Necesito fruta para el sábado. Hoy es miércoles."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Entonces llévate estos más verdes. Cuestan lo mismo."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Perfecto. Dame cuatro."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué fruta recomienda?",
+              "options": [
+                "Los mangos más maduros",
+                "Los mangos más verdes",
+                "Naranjas"
+              ],
+              "answer": 1,
+              "explanation": "Los verdes aguantarán mejor hasta el sábado."
+            },
+            {
+              "type": "choice",
+              "prompt": "¿La alternativa cuesta más?",
+              "options": [
+                "No",
+                "Sí"
+              ],
+              "answer": 0,
+              "explanation": "El vendedor dice que cuestan lo mismo."
+            }
+          ],
+          "produce": "Recomienda fruta para hoy y para dentro de tres días.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Baja un poco la música, por favor. La vecina tiene un bebé."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Claro. ¿Hasta qué hora podemos estar aquí?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Hasta las diez en la terraza. Después seguimos dentro."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Bien. Voy a avisar a los demás."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Por qué bajan la música?",
+              "options": [
+                "Porque se ha roto el altavoz",
+                "Porque acaba la fiesta",
+                "Por un bebé"
+              ],
+              "answer": 2,
+              "explanation": "La vecina tiene un bebé."
+            },
+            {
+              "type": "order",
+              "prompt": "Ordena el plan.",
+              "items": [
+                "Continuar dentro.",
+                "Bajar la música.",
+                "Quedarse en la terraza hasta las diez."
+              ],
+              "answer": [
+                1,
+                2,
+                0
+              ],
+              "explanation": "Bajan el volumen ahora, siguen fuera hasta las diez y luego entran."
+            }
+          ],
+          "produce": "Explica el acuerdo a un invitado que acaba de llegar.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    },
+    "B1": {
+      "focus": "Reconstruye la situación sin inventar detalles.",
+      "focusEn": "Reconstruct the situation without inventing details.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Te dejé una nota ayer. ¿La viste?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Sí, pero decía que bajara las plantas. Pensé que querías que las pusiera en el suelo."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Quería decir que no colgaran por fuera. Al pasar, mi hijo casi se golpea."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Ahora entiendo. Las muevo hacia dentro esta tarde. Habría sido más fácil si hubiéramos hablado antes."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿De dónde viene el conflicto?",
+              "options": [
+                "De una nota ambigua",
+                "De una planta robada",
+                "De una promesa incumplida"
+              ],
+              "answer": 0,
+              "explanation": "Interpretan «bajar las plantas» de maneras diferentes."
+            },
+            {
+              "type": "open",
+              "prompt": "Reconstruye las dos interpretaciones y la solución.",
+              "model": "Una persona quería apartar las macetas del paso; la otra entendió que debía ponerlas en el suelo. Acuerdan moverlas hacia dentro.",
+              "rubric": [
+                "Explico las dos lecturas de «bajar».",
+                "Menciono el riesgo para el hijo y la solución."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Escribe una nota nueva que no permita ese malentendido.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Guardé tu llave en un cajón, al lado de un billete viejo. Dijiste: vuelvo en un mes; ya cambió de color el invierno. Hoy abrí todas las ventanas, dejé la llave donde estaba. No sé si espero que regreses o que la casa sea otra casa."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué indica que ha pasado más tiempo del previsto?",
+              "options": [
+                "El cajón es nuevo",
+                "La llave ha desaparecido",
+                "La referencia al invierno"
+              ],
+              "answer": 2,
+              "explanation": "El mes prometido contrasta con el cambio de estación."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Qué sabemos y qué no sabemos sobre la persona ausente?",
+              "model": "Sabemos que prometió volver en un mes y que alguien conserva su llave. No sabemos qué relación tienen ni por qué no ha vuelto.",
+              "rubric": [
+                "Separo hechos de suposiciones.",
+                "Cito una frase de la letra."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Cuenta la historia sin inventar la razón de la ausencia.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "La biblioteca abrirá dos noches por semana durante los exámenes. La medida empieza el lunes y se mantendrá un mes. No es una ampliación permanente: se evaluará cuántas personas la utilizan. Los vecinos piden que también haya un autobús al cierre; transporte todavía no ha respondido."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué está confirmado?",
+              "options": [
+                "Un horario nuevo para todo el año",
+                "El autobús nocturno",
+                "La apertura temporal dos noches por semana"
+              ],
+              "answer": 2,
+              "explanation": "La apertura temporal está aprobada; el autobús es una petición pendiente."
+            },
+            {
+              "type": "open",
+              "prompt": "Envía un resumen a una estudiante que quiere ir el lunes.",
+              "model": "La biblioteca abrirá algunas noches durante un mes. Debe comprobar qué noches y cómo volver, porque el autobús aún no está confirmado.",
+              "rubric": [
+                "Distingo lo confirmado de lo solicitado.",
+                "No invento horas ni días concretos no anunciados."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Decide qué dato preguntarías antes de organizar tu visita.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Hace meses que no te veía por aquí."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Desde que cambié de turno, casi no salgo de día."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Pensé que te habías mudado. Tu perro tampoco venía."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Lo pasea mi hermana por las mañanas. Hoy tengo libre y he querido recuperar nuestra vuelta de siempre."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Entonces el barrio no ha perdido a un vecino; solo tenemos que cambiar la hora."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Por qué no se veían?",
+              "options": [
+                "Por una mudanza",
+                "Por un cambio de horario laboral",
+                "Por una discusión"
+              ],
+              "answer": 1,
+              "explanation": "La persona ha cambiado de turno, no de casa."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Qué relación parece haber entre ellos? Da una pista.",
+              "model": "Parecen vecinos que ya compartían paseos: hablan de «nuestra vuelta de siempre» y conocen al perro.",
+              "rubric": [
+                "Uso una pista concreta.",
+                "Presento la relación como inferencia, no como certeza."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Propón una nueva rutina compatible con ambos horarios.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡La última caja a mitad de precio!"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "¿Porque la fruta está mal?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No. Porque mañana no abro y no quiero tirarla. Algunas piezas tienen marcas, pero por dentro están bien. Si quieres, cortamos una."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Me llevo media caja. La otra mitad se la puedo ofrecer a mi vecina."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Cómo intenta generar confianza el vendedor?",
+              "options": [
+                "Promete que nunca tiene marcas",
+                "Evita explicar el descuento",
+                "Ofrece cortar una pieza"
+              ],
+              "answer": 2,
+              "explanation": "Permite comprobar el interior de la fruta."
+            },
+            {
+              "type": "order",
+              "prompt": "Ordena el intercambio.",
+              "items": [
+                "La persona que compra decide compartir la compra.",
+                "La persona que compra pregunta por el estado.",
+                "El vendedor explica el descuento y ofrece una prueba."
+              ],
+              "answer": [
+                1,
+                2,
+                0
+              ],
+              "explanation": "La duda provoca una explicación y termina en una compra compartida."
+            }
+          ],
+          "produce": "Explica si la prueba te convencería y qué comprobarías.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Pensé que era una fiesta de cumpleaños. ¿Por qué hay una maleta junto a la puerta?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Marta se va a trabajar fuera. No quería una despedida triste, así que pidió música y nada de discursos."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Entonces guardo lo que había preparado."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Puedes decírselo a ella después. Que no quiera discursos no significa que no quiera escucharte."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué celebran realmente?",
+              "options": [
+                "El regreso de Marta",
+                "Una despedida",
+                "Un cumpleaños"
+              ],
+              "answer": 1,
+              "explanation": "Marta se marcha a trabajar fuera."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Por qué el segundo hablante sugiere hablar después?",
+              "model": "Para respetar el deseo de Marta de evitar discursos públicos sin impedir una despedida personal.",
+              "rubric": [
+                "Explico la diferencia entre lo público y lo privado.",
+                "Relaciono la propuesta con el deseo de Marta."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Prepara una despedida breve que respete lo que Marta pidió.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    },
+    "B2": {
+      "focus": "Escucha lo que se dice y lo que se sugiere.",
+      "focusEn": "Listen for statements and implications.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Qué bonito te quedó el balcón. Desde abajo parece una selva."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Gracias. Me llevó todo el domingo."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Sí, se nota. Sobre todo cuando cae tierra en mi desayuno."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Podías haber empezado por ahí."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Lo intenté la semana pasada. Tu respuesta fue regalarme una planta."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Creí que te gustaban. Hoy pongo una bandeja y lo hablamos sin regalos."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué función cumple el elogio inicial?",
+              "options": [
+                "Solicita consejos de jardinería",
+                "Agradece el regalo sin reservas",
+                "Introduce indirectamente una queja"
+              ],
+              "answer": 2,
+              "explanation": "La referencia a la tierra convierte el elogio en una entrada indirecta a la queja."
+            },
+            {
+              "type": "open",
+              "prompt": "Compara la intención del regalo y el efecto que produjo.",
+              "model": "Pudo ser un gesto amable, pero la vecina lo interpretó como una respuesta que no atendía su queja. El diálogo no permite demostrar mala intención.",
+              "rubric": [
+                "Distingo intención posible y efecto observable.",
+                "Evito atribuir una intención que el audio no prueba."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Reformula el inicio con franqueza y sin agresividad.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Pusieron luces en la plaza, quitaron bancos del andén. La foto sale más bonita, ya nadie sabe dónde caer. Dicen que vuelve la alegría, lo dice un cartel sin voz. Yo vi a la panadera irse, con las llaves y el reloj. Si esto se llama volver, que alguien me diga a qué lugar. La calle conserva su nombre, pero me cuesta regresar."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué contraste sostiene la letra?",
+              "options": [
+                "Viajar y comprar recuerdos",
+                "Mejora de la imagen y pérdida de vida cotidiana",
+                "Campo y ciudad sin cambios"
+              ],
+              "answer": 1,
+              "explanation": "La plaza luce mejor en las fotos, pero desaparecen bancos y comercios cotidianos."
+            },
+            {
+              "type": "open",
+              "prompt": "¿La voz rechaza cualquier mejora urbana? Justifica una lectura matizada.",
+              "model": "No necesariamente. Cuestiona una mejora definida por su apariencia mientras se pierden usos y personas del barrio.",
+              "rubric": [
+                "Cito dos imágenes que sostienen el contraste.",
+                "Distingo crítica a efectos de rechazo a toda mejora."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Resume la crítica en dos frases sin repetir metáforas.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "El ayuntamiento califica de éxito la prueba de calles peatonales: las visitas aumentaron un veinte por ciento. La asociación vecinal responde que contar visitas no equivale a medir bienestar. Comerciantes celebran las ventas, mientras algunas personas mayores denuncian dificultades para recibir compras. La ampliación se votará el viernes; el informe completo aún no se ha publicado."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué límite tiene el dato del veinte por ciento?",
+              "options": [
+                "Mide visitas, no todos los efectos del cambio",
+                "Demuestra que todos están satisfechos",
+                "Prueba que las ventas bajaron"
+              ],
+              "answer": 0,
+              "explanation": "El dato es de visitas; no mide accesibilidad ni bienestar por sí solo."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Qué información falta para valorar la medida?",
+              "model": "Faltan el informe, la base de comparación, datos de accesibilidad y la distribución de beneficios y molestias.",
+              "rubric": [
+                "Identifico al menos dos vacíos relevantes.",
+                "No presento opiniones como datos comprobados."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Formula una pregunta neutral para cada una de las partes.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¿Ya le dijiste que no vas a aceptar?"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Le dije que la propuesta era interesante."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Eso suena a que todavía lo estás pensando."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Era la idea. Si digo que no ahora, deja de contar conmigo para otros proyectos."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "O sigue reservándote un puesto que otra persona necesita."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Sí. Estoy evitando una conversación y creando otra más difícil."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué hace la expresión «interesante»?",
+              "options": [
+                "Confirma una aceptación",
+                "Aclara una negativa definitiva",
+                "Mantiene abierta una opción que la persona no piensa aceptar"
+              ],
+              "answer": 2,
+              "explanation": "La persona admite que quiere parecer indecisa para conservar opciones."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Qué tensión reconoce al final?",
+              "model": "Quiere proteger futuras oportunidades, pero su ambigüedad puede perjudicar a quien reserva el puesto y retrasar una respuesta necesaria.",
+              "rubric": [
+                "Explico el beneficio buscado.",
+                "Explico el coste para la otra parte."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Redacta una negativa que preserve la relación sin mantener una expectativa falsa.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Fruta imperfecta, precio perfecto!"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Lo de imperfecta suena a estrategia de venta."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "También. Si digo que tiene golpes, nadie se acerca; si digo que es única, me acusan de cobrar la historia. Prefiero enseñarte dónde está la marca."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Entonces el descuento no es un regalo."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No. Tú aceptas elegir con cuidado y yo evito una pérdida. Los dos sabemos qué estamos comprando."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué reconoce el vendedor?",
+              "options": [
+                "Que el descuento es un acto puramente altruista",
+                "Que el lenguaje comercial orienta la percepción",
+                "Que toda la fruta está dañada por dentro"
+              ],
+              "answer": 1,
+              "explanation": "Compara el efecto de decir «golpes», «única» e «imperfecta»."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Hay manipulación o transparencia? Defiende una respuesta con matices.",
+              "model": "Hay persuasión en el eslogan, pero también transparencia al mostrar las marcas y reconocer el interés económico.",
+              "rubric": [
+                "Distingo eslogan de información verificable.",
+                "Reconozco evidencia a favor y en contra de mi lectura."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Crea un anuncio persuasivo que conserve toda la información relevante.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Veo que la reunión pequeña acabó ocupando tres terrazas."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Solo invité a seis. Cada uno entendió que podía traer a alguien."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Y alguien trajo un altavoz que se oye desde el puente."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Ya lo bajé. ¿Quieres que eche a la gente?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Quiero que me preguntes antes de decidir que mi casa es un local."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "De acuerdo. Hoy lo resolvemos juntos y mañana fijamos un límite."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Cuál es la queja central?",
+              "options": [
+                "La falta de consentimiento sobre el uso de la casa",
+                "La calidad de la música",
+                "Que no haya suficientes invitados"
+              ],
+              "answer": 0,
+              "explanation": "La persona pide ser consultada antes de que su casa funcione como un local."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Por qué «¿quieres que eche a la gente?» no responde bien al problema?",
+              "model": "Reduce la conversación a una salida extrema, cuando la queja trata de decidir juntos y respetar límites.",
+              "rubric": [
+                "Distingo el síntoma del desacuerdo central.",
+                "Propongo una respuesta que reconozca la falta de consulta."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Negocia dos límites concretos para la próxima reunión.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    },
+    "C1": {
+      "focus": "Contrasta marcos, intenciones y puntos de vista.",
+      "focusEn": "Compare framing, intentions and perspectives.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No quisiera que esto terminara en una reunión de vecinos."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Pues para no quererlo, ya has puesto en copia al administrador."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Solo para que conste. Hemos hablado varias veces."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Hemos hablado, sí. Lo que no hemos hecho es acordar quién paga el arreglo."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "La filtración sale de tu balcón."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Y el desagüe es comunitario. Si confundimos el origen con la responsabilidad, vamos a discutir hasta que llegue la próxima lluvia."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué distinción reorganiza la discusión?",
+              "options": [
+                "Propiedad privada y gusto estético",
+                "Origen físico y responsabilidad por la reparación",
+                "Amabilidad y volumen de voz"
+              ],
+              "answer": 1,
+              "explanation": "La última intervención separa dónde aparece el agua de quién debe asumir el arreglo."
+            },
+            {
+              "type": "open",
+              "prompt": "Analiza «solo para que conste» como estrategia interpersonal.",
+              "model": "Presenta como registro neutral una acción que también puede ejercer presión al introducir al administrador. Es una lectura plausible, no una prueba de mala fe.",
+              "rubric": [
+                "Identifico el significado literal y una función indirecta.",
+                "Relaciono la frase con la amenaza inicial de escalada.",
+                "Reconozco la incertidumbre sobre la intención."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Media sin decidir una responsabilidad que el audio no permite establecer.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Hicieron de mi acento una postal, de mi ventana un mirador ajeno. Me ofrecen un descuento por volver al mismo bar que ya no reconoce a sus dueños. No digo que antes todo fuera luz; también guardaba sombras la escalera. Pero vender la pena como encanto no vuelve menos cara la frontera. Que nadie ponga mi nostalgia en venta: recordar no es pedir que nada se mueva."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué simplificación rechaza explícitamente la voz?",
+              "options": [
+                "Que recordar implique querer congelar el pasado",
+                "Que existieran problemas antes",
+                "Que el barrio tenga atractivo"
+              ],
+              "answer": 0,
+              "explanation": "«Recordar no es pedir que nada se mueva» rechaza esa equivalencia."
+            },
+            {
+              "type": "open",
+              "prompt": "Relaciona «postal», «mirador ajeno» y «nostalgia en venta».",
+              "model": "Las imágenes convierten identidad, espacio y memoria en productos para otra mirada. La voz critica esa apropiación sin idealizar completamente el pasado.",
+              "rubric": [
+                "Relaciono las tres imágenes con una tesis común.",
+                "Incluyo la concesión sobre las sombras del pasado.",
+                "Evito atribuir datos económicos ausentes."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Reformula la postura como una intervención pública de cuarenta segundos.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "La comisión asegura que no se cerrará ningún espacio cultural. El documento, sin embargo, prevé suspender durante un plazo indefinido la programación de dos centros, que conservarán su condición administrativa. Para la comisión, hablar de cierre sería inexacto; para los colectivos, conservar un nombre sin actividad es una diferencia difícil de celebrar. Ambas partes afirman defender la cultura de proximidad."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué sostiene la aparente contradicción?",
+              "options": [
+                "Dos fechas incompatibles",
+                "Un error confirmado del locutor",
+                "Dos criterios diferentes de qué cuenta como cierre"
+              ],
+              "answer": 2,
+              "explanation": "Un criterio es administrativo; el otro se centra en la actividad efectiva."
+            },
+            {
+              "type": "open",
+              "prompt": "¿La noticia demuestra que alguien miente? Distingue literalidad y efecto.",
+              "model": "No prueba una mentira deliberada. Muestra una definición administrativa que puede producir una impresión engañosa sobre la continuidad real de la actividad.",
+              "rubric": [
+                "Distingo evidencia de intención atribuida.",
+                "Explico cómo puede ser literalmente defendible y pragmáticamente equívoco.",
+                "Identifico la información que aclararía la situación."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Pregunta por plazos, presupuesto y servicios sin adoptar el marco de ninguna parte.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Qué bien que por fin te hayan dejado dirigir el proyecto."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Me han dejado presentar el proyecto. La dirección sigue donde estaba."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Pero ahora eres la cara visible."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Exacto. La cara para explicar las decisiones que otros toman."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Supongo que algo podrás cambiar desde dentro."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Eso me dijeron cuando acepté tomar las actas. A veces una silla en la mesa es solo una forma más elegante de quedarse de pie."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué expresa la metáfora final?",
+              "options": [
+                "Rechazo a cualquier responsabilidad",
+                "Participación aparente sin poder efectivo",
+                "Preferencia por trabajar de pie"
+              ],
+              "answer": 1,
+              "explanation": "Contrasta presencia formal en la mesa con falta de influencia real."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Qué hace la corrección «presentar», no «dirigir», en la conversación?",
+              "model": "Rechaza el marco optimista inicial y obliga a distinguir visibilidad, carga de explicación y capacidad de decisión.",
+              "rubric": [
+                "Analizo la autocorrección del marco.",
+                "Conecto la metáfora final con las tareas mencionadas.",
+                "No confundo frustración con prueba de todos los hechos."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Propón una condición verificable para que la nueva función implique poder real.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Últimas piezas de temporada!"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Eso lo decía el cartel el mes pasado."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "El cartel dice de temporada, no de esta semana."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Y la palabra últimas ocupa medio toldo."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Bien visto. Quedan pocas de esta partida. Lo cambio para que no parezca que desaparecen mañana."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Me interesa más que me digas de dónde vienen."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "De una cooperativa a cuarenta kilómetros. El origen está en la caja; el cartel, ya ves, habla demasiado."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué se cuestiona en «últimas»?",
+              "options": [
+                "La urgencia sugerida sin precisar el conjunto",
+                "La distancia de la cooperativa",
+                "El significado de una fruta madura"
+              ],
+              "answer": 0,
+              "explanation": "No se aclara si son las últimas de una partida, una estación o del mercado."
+            },
+            {
+              "type": "open",
+              "prompt": "Evalúa la reparación del vendedor: ¿qué corrige y qué sigue necesitando evidencia?",
+              "model": "Aclara el alcance de «últimas» y admite el efecto del cartel. El origen pasa a ser una afirmación contrastable en la caja, no algo probado solo por su tono.",
+              "rubric": [
+                "Identifico la ambigüedad reparada.",
+                "Distingo corrección verbal y verificación.",
+                "Valoro la autocrítica sin convertirla en garantía absoluta."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Reescribe el cartel con una promesa comercial precisa.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No sabía que esta noche también presentábamos patrocinadores."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "No los presentamos. Solo agradecemos a quienes hicieron posible el encuentro."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Con su logotipo detrás de cada foto."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Si te incomoda, puedo pedir que no te etiqueten."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No me preocupa aparecer. Me preocupa que parezca que respaldo algo que no conocía."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Entiendo. Debimos decirlo en la invitación, no explicarlo cuando ya estabas aquí."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué diferencia ignora la primera solución ofrecida?",
+              "options": [
+                "Invitación y entrada de pago",
+                "Fotografía y música",
+                "Privacidad personal y respaldo público implícito"
+              ],
+              "answer": 2,
+              "explanation": "No etiquetar resuelve parte de la exposición, pero no el consentimiento a una asociación pública."
+            },
+            {
+              "type": "open",
+              "prompt": "Analiza cómo cambia la respuesta final frente a la anterior.",
+              "model": "Pasa de ofrecer un arreglo individual y técnico a reconocer un fallo de información previo que afectaba al consentimiento.",
+              "rubric": [
+                "Comparo las dos soluciones.",
+                "Explico por qué importa el momento de informar.",
+                "Propongo una reparación concreta sin inventar obligaciones legales."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Formula un acuerdo para las fotos de esta noche y las futuras invitaciones.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    },
+    "C2": {
+      "focus": "Sostén una interpretación y reconoce sus límites.",
+      "focusEn": "Defend an interpretation and recognise its limits.",
+      "scenes": [
+        {
+          "id": "balcony",
+          "context": "Dos vecinos hablan entre balcones.",
+          "contextEn": "Two neighbours talk across their balconies.",
+          "glossary": [
+            [
+              "planta",
+              "plant"
+            ],
+            [
+              "agua",
+              "water"
+            ],
+            [
+              "perdón",
+              "sorry"
+            ],
+            [
+              "balcón",
+              "balcony"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Tranquila: aquí todos tenemos exactamente el mismo derecho a disfrutar del balcón."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Me alegra oírlo. Sobre todo porque tu disfrute lleva tres domingos cayendo sobre el mío."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Estás convirtiendo una gota en un conflicto de convivencia."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Y tú estás convirtiendo tres domingos en una gota. Si vamos a ser precisos, seamos precisos con las dos cosas."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Puedo poner una bandeja; no puedo vivir pendiente de cada gota."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "No te pido vigilancia permanente. Te pido que la solución no dependa de que yo vuelva a protestar."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué operación discursiva denuncia «tres domingos en una gota»?",
+              "options": [
+                "Minimizar la reiteración mediante una unidad pequeña",
+                "Exagerar el volumen con una cifra exacta",
+                "Cambiar una petición por una disculpa"
+              ],
+              "answer": 0,
+              "explanation": "Reutiliza la metáfora del otro para mostrar que la frecuencia importa tanto como la cantidad."
+            },
+            {
+              "type": "open",
+              "prompt": "Compara dos lecturas de «el mismo derecho»: principio compartido y recurso defensivo.",
+              "model": "Puede formular una norma de igualdad y, en ese contexto, desplazar la atención desde el daño repetido hacia una supuesta restricción del derecho propio. Ambas funciones son compatibles.",
+              "rubric": [
+                "Explico ambas lecturas sin tratarlas como excluyentes.",
+                "Cito la réplica que vuelve concreta la igualdad abstracta.",
+                "Distingo solución puntual de compromiso sostenido."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Redacta una mediación que conserve el principio y elimine su uso evasivo.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "singer",
+          "context": "Una cantante ensaya una canción original junto al río.",
+          "contextEn": "A singer rehearses an original song by the river.",
+          "glossary": [
+            [
+              "sol",
+              "sun"
+            ],
+            [
+              "luna",
+              "moon"
+            ],
+            [
+              "casa",
+              "home"
+            ],
+            [
+              "volver",
+              "to return"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "La ciudad me dio las gracias por saber desaparecer: mi silencio era paisaje, mi alquiler, algo que ver. Qué detalle conservarme en la placa del portal; ya no vivo entre estas calles, pero quedo fenomenal. No me canten que he perdido un paraíso sin fisuras: también yo cerré ventanas, también hice mis facturas. Si me nombran, que se escuche lo que el nombre no resuelve: nadie vuelve a una postal, aunque la postal te recuerde."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Dónde se concentra la ironía?",
+              "options": [
+                "En celebrar literalmente la nueva placa",
+                "En afirmar que el pasado era perfecto",
+                "En agradecer una conservación simbólica que coincide con la expulsión material"
+              ],
+              "answer": 2,
+              "explanation": "«Qué detalle conservarme» y «quedo fenomenal» elogian en apariencia lo que el contexto denuncia."
+            },
+            {
+              "type": "open",
+              "prompt": "¿Cómo modifica la autocrítica la posición de la voz?",
+              "model": "Evita una oposición simple entre una víctima pura y una ciudad enteramente ajena: reconoce su participación anterior sin cancelar la crítica a la sustitución de vida por representación.",
+              "rubric": [
+                "Analizo la ironía con evidencia verbal.",
+                "Integro las facturas y las ventanas en la lectura.",
+                "Defiendo una interpretación alternativa de una imagen ambigua."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Compara una lectura política y otra íntima sin reducir la letra a una sola.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "taxi",
+          "context": "Por la ventana de un taxi se escucha la radio local.",
+          "contextEn": "You hear local radio through a taxi window.",
+          "glossary": [
+            [
+              "radio",
+              "radio"
+            ],
+            [
+              "hoy",
+              "today"
+            ],
+            [
+              "parque",
+              "park"
+            ],
+            [
+              "mañana",
+              "tomorrow"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Fuentes próximas a la negociación consideran prácticamente cerrado el acuerdo, siempre que se resuelvan los puntos que una de las partes todavía califica de esenciales. El comunicado no habla de renuncias, sino de una actualización de prioridades. Preguntada por la fecha, la portavoz respondió que la voluntad de avanzar no se mide con calendarios. La firma prevista para hoy, por tanto, no figura por ahora en la agenda."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué puede concluirse con mayor seguridad?",
+              "options": [
+                "Una parte abandonó definitivamente",
+                "La firma de hoy no está en la agenda y quedan cuestiones esenciales abiertas",
+                "El acuerdo está firmado"
+              ],
+              "answer": 1,
+              "explanation": "Es lo explícitamente informado; «prácticamente cerrado» procede de fuentes próximas y queda matizado."
+            },
+            {
+              "type": "open",
+              "prompt": "Reconstruye la escala de compromiso epistémico de la noticia.",
+              "model": "La valoración optimista es atribuida y condicional; el lenguaje del comunicado suaviza posibles costes; la portavoz evita la fecha; la ausencia de firma en agenda es el dato más concreto.",
+              "rubric": [
+                "Distingo fuentes, condiciones y hechos comunicados.",
+                "Explico el efecto del eufemismo sin afirmar qué renuncia oculta.",
+                "No convierto la ausencia de fecha en ruptura probada."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Escribe un titular preciso y uno sesgado; explica la diferencia.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "park",
+          "context": "Dos personas conversan en un banco del parque.",
+          "contextEn": "Two people chat on a park bench.",
+          "glossary": [
+            [
+              "amiga",
+              "friend"
+            ],
+            [
+              "aquí",
+              "here"
+            ],
+            [
+              "sentarse",
+              "to sit down"
+            ],
+            [
+              "esperar",
+              "to wait"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No te preocupes, tu intervención fue muy valiente."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Valiente. La palabra que se usa cuando no se quiere decir acertada."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "O cuando acertada se queda corta para lo que costaba decirlo."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Entonces, ¿estás de acuerdo?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Con que alguien tenía que decirlo, sí. Con que hubiera que decirlo así, no del todo."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Ya. El contenido queda aprobado; la incomodidad se devuelve al remitente."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No. La incomodidad también era necesaria. Lo que cuestiono es a quién dejaste sin posibilidad de responder."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué distinción sostiene la última réplica?",
+              "options": [
+                "Incomodar legítimamente y cerrar el derecho a responder",
+                "Valentía y certeza como sinónimos",
+                "Contenido correcto y tono siempre incorrecto"
+              ],
+              "answer": 0,
+              "explanation": "Acepta incluso la incomodidad; cuestiona la asimetría de la interacción."
+            },
+            {
+              "type": "open",
+              "prompt": "Revisa la primera interpretación de «valiente» a la luz del diálogo completo.",
+              "model": "Al principio puede sonar a elogio sustitutivo o reserva. Después se sostiene una valoración mixta: necesidad de intervenir y objeción concreta a impedir respuesta, no un simple rechazo del tono.",
+              "rubric": [
+                "Muestro cómo las réplicas cambian la inferencia inicial.",
+                "Evito resolver la ambigüedad solo por una palabra.",
+                "Distingo la crítica que se formula de la que el interlocutor le atribuye."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Reabre esa discusión reconociendo la objeción sin retirar necesariamente la tesis.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "vendor",
+          "context": "Un vendedor anuncia fruta en una esquina.",
+          "contextEn": "A street vendor calls out about fruit on a corner.",
+          "glossary": [
+            [
+              "naranja",
+              "orange"
+            ],
+            [
+              "dos",
+              "two"
+            ],
+            [
+              "dulce",
+              "sweet"
+            ],
+            [
+              "caja",
+              "crate"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "¡Llévese lo que no sale en la foto!"
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "¿Ahora vende invisibilidad?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Vendo tomates con una forma poco fotogénica. Lo invisible es el trabajo que los trajo hasta aquí."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Pues acaba de hacer una campaña bastante fotogénica con eso."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Culpable. La diferencia, espero, es que la historia no sustituya al tomate. Pruébelo."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "No está mal. Pero espero tampoco es una garantía."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "No, es una reserva. La garantía que puedo ofrecer es esta pieza; de mi discurso, mejor desconfíe un poco."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué función cumple admitir «culpable»?",
+              "options": [
+                "Confiesa un fraude concreto probado",
+                "Abandona la venta",
+                "Integra la crítica y reajusta el alcance de su argumento"
+              ],
+              "answer": 2,
+              "explanation": "Acepta participar en la retórica que critica, y vuelve a una prueba material limitada."
+            },
+            {
+              "type": "open",
+              "prompt": "¿La autocrítica neutraliza la persuasión o se convierte en parte de ella?",
+              "model": "Puede hacer ambas cosas: limita una promesa y aumenta la credibilidad del vendedor. El efecto persuasivo no convierte por sí solo la reserva en falsa ni la prueba de una pieza en garantía de todo.",
+              "rubric": [
+                "Analizo la coexistencia de sinceridad posible y eficacia comercial.",
+                "Distingo muestra individual de garantía general.",
+                "Explico «espero» como reserva explícita."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Construye dos interpretaciones defendibles y di qué evidencia adicional las discriminaría.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        },
+        {
+          "id": "rooftop",
+          "context": "Se oyen voces desde una fiesta en una terraza.",
+          "contextEn": "Voices drift down from a rooftop party.",
+          "glossary": [
+            [
+              "fiesta",
+              "party"
+            ],
+            [
+              "música",
+              "music"
+            ],
+            [
+              "gracias",
+              "thank you"
+            ],
+            [
+              "bajar",
+              "to turn down"
+            ]
+          ],
+          "segments": [
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Brindemos por una noche en la que, por una vez, nadie tiene que demostrar nada."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Lo has dicho mirando directamente a quien acaba de contar sus tres ascensos."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "He mirado hacia la mesa. Si alguien se reconoce en la dirección de una mirada, no puedo hacerme responsable."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "Qué práctica resulta la ambigüedad cuando el destinatario es bastante preciso."
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "También puede ser práctico atribuir una intención para evitar hablar de lo que se dijo."
+            },
+            {
+              "speaker": "Nico",
+              "voice": "es-MX-JorgeNeural",
+              "text": "De acuerdo: hablemos de la frase. ¿Invita a relajarse o establece quién estaba estropeando la noche?"
+            },
+            {
+              "speaker": "Luna",
+              "voice": "es-MX-DaliaNeural",
+              "text": "Quizá las dos cosas. Y quizá un brindis no era el mejor lugar para resolverlo."
+            }
+          ],
+          "tasks": [
+            {
+              "type": "choice",
+              "prompt": "¿Qué reconoce finalmente quien brinda?",
+              "options": [
+                "Que el ascenso era inventado",
+                "Que su frase puede cumplir dos funciones y que el contexto fue poco adecuado",
+                "Que no miró a nadie"
+              ],
+              "answer": 1,
+              "explanation": "Acepta la doble lectura y cuestiona el momento elegido."
+            },
+            {
+              "type": "open",
+              "prompt": "Evalúa el límite de inferir destinatario e intención a partir de esta escucha.",
+              "model": "Las réplicas sugieren un destinatario, pero no vemos la mirada. Podemos analizar la acusación y la respuesta evasiva sin convertir el gesto relatado ni la intención en hechos observados directamente.",
+              "rubric": [
+                "Distingo lo oído de lo que los personajes afirman haber visto.",
+                "Analizo la negación de responsabilidad y la contraacusación.",
+                "Propongo una lectura alternativa compatible con el cierre."
+              ],
+              "explanation": "Compara tu interpretación con las pistas. Puede haber más de una respuesta defendible."
+            }
+          ],
+          "produce": "Reformula el brindis para invitar a relajarse sin señalar indirectamente a nadie.",
+          "produceEn": "",
+          "bank": [],
+          "teacher": "Primera escucha: impresión global. Segunda: localiza una pista. Abre la transcripción después; acepta paráfrasis y pide evidencia, no una frase idéntica al modelo."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,329 @@
+TAREA ÚNICA: CREAR UNA NUEVA CLASE DE LISTENING PARA SPANISHCUE BASADA EN EL CONCEPTO “THE SOUND MAP”.
+
+Repo:
+agnremote-code/spanishcue-web
+
+Trabajá sobre CURRENT MAIN.
+
+MODELO:
+GPT-6 Astra High / Work mode.
+
+IMPORTANTE:
+NO quiero una clase típica de “hotel / restaurante / aeropuerto / pedir direcciones”.
+NO quiero una actividad escolar genérica.
+NO quiero una página recargada ni confusa.
+NO quiero duplicar componentes si ya existen equivalentes reutilizables.
+QUIERO una clase MUY innovadora, visualmente atractiva, moderna y claramente premium.
+QUIERO que siga el estándar de calidad de SpanishCue.
+QUIERO español neutro general, no rioplatense, salvo que haya una razón pedagógica muy clara.
+QUIERO que funcione con TODOS los niveles:
+A0, A1, A2, B1, B2, C1, C2
+mediante UN ÚNICO SWITCH DE NIVEL.
+
+==================================================
+CONCEPTO CENTRAL
+==================================================
+
+La clase se llama:
+
+THE SOUND MAP
+
+Idea:
+El alumno explora un MAPA 3D de una ciudad ficticia.
+No elige situaciones típicas por categoría.
+Elige SONIDOS distribuidos por la ciudad.
+
+Ejemplos de puntos/escenas sonoras:
+- una discusión en un balcón
+- alguien cantando
+- una radio dentro de un taxi
+- dos personas hablando en un parque
+- un vendedor callejero
+- una fiesta en una terraza
+
+Cada punto del mapa activa una microexperiencia de listening.
+La gracia es que el alumno “navega por sonidos”, no por temas clásicos.
+
+Tiene que sentirse:
+- inmersivo
+- lúdico
+- elegante
+- original
+- moderno
+- altamente interactivo
+
+El alumno debería sentir:
+“Estoy recorriendo una ciudad viva y entendiendo el español a través de escenas reales”.
+
+==================================================
+OBJETIVO PEDAGÓGICO
+==================================================
+
+La clase debe entrenar comprensión auditiva real de forma progresiva, con fuerte apoyo visual y contextual en niveles bajos, y mucha más inferencia, matiz e interpretación en niveles altos.
+
+La misma clase debe adaptarse al nivel elegido, sin romper la experiencia general.
+
+==================================================
+REFERENCIAS INTERNAS QUE TENÉS QUE ANALIZAR PRIMERO
+==================================================
+
+Antes de implementar, localizá y entendé en el código:
+1. cómo están hechas las clases de listening existentes;
+2. cómo funciona el switch de nivel en las mejores clases actuales;
+3. qué componentes visuales/reutilizables ya existen para:
+   - navegación de escenas
+   - audio player
+   - tarjetas/tiles
+   - progreso
+   - feedback
+   - actividades
+   - mapas o selecciones espaciales si existieran
+4. cómo están estructuradas las clases más pulidas del sitio;
+5. qué sistema usa SpanishCue para contenido, layouts, navegación interna y consistencia UI.
+
+NO inventes una arquitectura innecesaria si ya existe una buena base reutilizable.
+
+==================================================
+OBJETIVO DE PRODUCTO
+==================================================
+
+Crear una nueva clase de listening que se sienta claramente distinta a las demás y que pueda convertirse en una de las clases “estrella” del sitio.
+
+Tiene que verse suficientemente buena como para:
+- impresionar a alumnos;
+- impresionar a profesores;
+- mostrar valor premium;
+- ser memorable.
+
+==================================================
+ESTRUCTURA GENERAL DE LA CLASE
+==================================================
+
+Quiero una estructura parecida a esta lógica, adaptada inteligentemente a lo que ya exista en el sitio:
+
+1. HERO / INTRO BREVE
+   - Nombre de la clase
+   - Microcopy clara y atractiva
+   - Explicación breve: “Explora la ciudad y escucha qué está pasando en cada rincón.”
+   - CTA claro para empezar
+
+2. MAPA 3D / CIUDAD INTERACTIVA
+   - La ciudad ficticia debe ser visualmente encantadora, clara y funcional
+   - No hiperrealista pesada; sí estilizada, premium, limpia, con sensación de mini mundo
+   - Debe haber varios puntos de escucha repartidos por la ciudad
+   - Cada punto debe representar una escena sonora distinta
+   - El usuario hace click/tap en un punto y entra a esa escena
+
+3. ESCENAS DE LISTENING
+   Cada escena debe tener:
+   - contexto visual
+   - audio principal
+   - ayudas según nivel
+   - actividades de comprensión
+   - feedback
+
+4. PROGRESIÓN
+   - El alumno puede recorrer varias escenas
+   - Debe quedar claro cuáles ya completó
+   - Debe haber sensación de exploración / progreso
+   - Puede haber un cierre o resumen final de la ruta
+
+==================================================
+ESCENAS SONORAS BASE
+==================================================
+
+Usá como base estas 6 escenas:
+
+1. discusión en un balcón
+2. alguien cantando
+3. radio dentro de un taxi
+4. dos personas hablando en un parque
+5. vendedor callejero
+6. fiesta en una terraza
+
+Podés renombrarlas pedagógica y visualmente mejor, pero la esencia debe mantenerse.
+
+Cada escena debe sentirse distinta:
+- distinto tipo de escucha
+- distinto ritmo
+- distinto contexto
+- distinta función pedagógica
+
+==================================================
+ADAPTACIÓN POR NIVEL
+==================================================
+
+MUY IMPORTANTE:
+La clase debe funcionar de verdad en A0–C2.
+No quiero el típico “mismo contenido con texto más difícil”.
+Quiero adaptación real.
+
+A0:
+- completamente accesible para alguien que no habla casi nada o absolutamente nada de español
+- muchísimo apoyo visual
+- instrucciones muy claras
+- micro audios o fragmentos muy controlados
+- reconocimiento de palabras/sonidos/intonaciones
+- actividades de unir imagen-sonido, elegir quién habla, identificar objetos/acciones muy evidentes
+- si hace falta, apoyo bilingüe estratégico
+- objetivo: que el alumno PUEDA participar y producir algo básico aunque no sepa español
+
+A1:
+- frases simples
+- comprensión de ideas muy concretas
+- vocabulario cotidiano visual
+- respuestas guiadas
+
+A2:
+- comprensión concreta algo más amplia
+- acciones, lugares, intención básica
+- pequeños detalles
+
+B1:
+- ya puede reconstruir situaciones
+- identificar relaciones entre personas
+- entender propósito general
+- extraer información útil
+
+B2:
+- más inferencia
+- tono, matiz, contraste
+- detalles no explícitos pero deducibles
+
+C1:
+- intención, ambigüedad, subtexto
+- lenguaje más natural y menos controlado
+- opiniones, actitud, implicaturas
+
+C2:
+- comprensión muy fina
+- ironía, dobles sentidos, registros, ruido contextual
+- interpretación sofisticada
+- tareas más abiertas y analíticas
+
+==================================================
+TIPOS DE ACTIVIDADES
+==================================================
+
+Quiero variedad, no siempre múltiple choice.
+
+Mezclá, según nivel:
+- tocar el sonido correcto
+- asociar audio con escena/imagen
+- ordenar eventos
+- identificar quién habla
+- elegir qué está pasando
+- completar ideas clave
+- detectar emoción o intención
+- seleccionar detalles verdaderos/falsos
+- reconstruir una mini historia
+- inferir relaciones o contexto
+- responder oralmente o por escrito
+- comparar dos interpretaciones posibles
+- mini recap final
+
+A medida que sube el nivel, menos apoyo y más interpretación.
+
+==================================================
+DISEÑO / UX / UI
+==================================================
+
+Quiero que el diseño sea:
+- MUY limpio
+- visualmente atractivo
+- profesional
+- consistente con SpanishCue
+- moderno
+- con sensación premium
+- no infantil
+- no recargado
+
+El mapa tiene que ser protagonista.
+La experiencia tiene que sentirse “explorable”.
+
+Buscá un balance entre:
+- claridad de uso
+- encanto visual
+- desempeño razonable
+
+No conviertas esto en un videojuego pesado.
+Sí quiero “game feel”, pero dentro de una clase usable.
+
+==================================================
+MICROCOPY
+==================================================
+
+Necesito microcopy excelente.
+Nada genérico ni torpe.
+
+Tiene que sonar:
+- claro
+- cálido
+- moderno
+- directo
+- elegante
+
+Ejemplos de tono deseado:
+- “Haz clic en un lugar y descubre qué está pasando.”
+- “Escucha con atención: la ciudad siempre está contando algo.”
+- “Cada rincón tiene una historia.”
+
+Podés mejorar esto si encontrás algo mejor.
+
+==================================================
+AUDIO / CONTENIDO
+==================================================
+
+Si la clase necesita contenido audio textual o scripts base, crealos.
+Pero hacelo de forma eficiente y ordenada.
+
+Cada escena debe tener contenido coherente con el nivel:
+- niveles bajos: más control y claridad
+- niveles altos: más naturalidad y riqueza
+
+Idealmente:
+- no todo debe ser una conversación frontal
+- también puede haber sonidos ambiente + voz
+- la ciudad debe sentirse viva
+
+==================================================
+REUTILIZACIÓN Y EFICIENCIA
+==================================================
+
+Quiero la mejor calidad posible, PERO:
+- no desperdicies tiempo reconstruyendo todo desde cero si se puede reutilizar
+- no rompas patrones del sitio
+- no generes deuda técnica innecesaria
+- mantené el código claro
+
+==================================================
+ENTREGABLE
+==================================================
+
+Implementá la clase completa en el sitio siguiendo el patrón correcto del proyecto.
+
+Además:
+1. explicá brevemente qué referencias internas reutilizaste;
+2. indicá cómo resolviste el switch A0–C2;
+3. resumí la estructura final de la clase;
+4. listá archivos creados/modificados;
+5. corré los tests o checks pertinentes;
+6. si todo queda bien, dejá listo para merge/deploy siguiendo el flujo normal del proyecto.
+
+==================================================
+CRITERIO DE ÉXITO
+==================================================
+
+La clase final debe lograr todo esto:
+
+- se siente NUEVA y distinta
+- no parece otro “hotel / restaurante”
+- el mapa es el corazón de la experiencia
+- las escenas son memorables
+- el listening es realmente bueno
+- funciona de A0 a C2
+- visualmente está entre lo mejor de SpanishCue
+- pedagógicamente tiene sentido
+- técnicamente está bien resuelta
+
+Empezá inspeccionando las implementaciones existentes y luego construí la mejor versión posible de esta clase.

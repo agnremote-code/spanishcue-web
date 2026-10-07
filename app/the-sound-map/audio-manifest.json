@@ -1,0 +1,1199 @@
+{
+  "producer": "Edge neural es-MX voices; original synthesized ambience; singer PSOLA melody",
+  "generatedAt": "2026-10-07T08:20:12.792935+00:00",
+  "humanListeningQA": false,
+  "clips": [
+    {
+      "id": "A0-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Agua! ¡Mi planta!"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Oh. Perdón."
+        }
+      ],
+      "src": "/audio/the-sound-map/A0-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/A0-balcony-clean.mp3",
+      "durationSeconds": 7.86,
+      "sha256": "2021d4a7940a0a7bbeaefb02313285938946b1042e1fee11af3b42fefb103ccb",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A0-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Sol, sol. Luna, luna. Mi casa, mi casa."
+        }
+      ],
+      "src": "/audio/the-sound-map/A0-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/A0-singer-clean.mp3",
+      "durationSeconds": 8.202,
+      "sha256": "38179de09909f1f7fde6412812558c9483f217399bea8273fd7cebc2e70acaa9",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "A0-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Hola. Radio Sol. Hoy: música en el parque."
+        }
+      ],
+      "src": "/audio/the-sound-map/A0-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/A0-taxi-clean.mp3",
+      "durationSeconds": 7.482,
+      "sha256": "70409695dfff2bec5627f498cb331b7a0b2d2345070f1657e11c8224bcf51af8",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A0-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Hola, Ana."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Hola, Leo. Aquí."
+        }
+      ],
+      "src": "/audio/the-sound-map/A0-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/A0-park-clean.mp3",
+      "durationSeconds": 7.332,
+      "sha256": "b0370a4395ddbaca9a43488e2c65bab528e651a138d02df7086627403b6d8af4",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A0-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Naranjas! ¡Dos naranjas! ¡Dulces!"
+        }
+      ],
+      "src": "/audio/the-sound-map/A0-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/A0-vendor-clean.mp3",
+      "durationSeconds": 7.074,
+      "sha256": "10664379e517ce89ff1b944568517028e2872fe25c69d3b51b86326f1a3c590c",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A0-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Música!"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "¡Sí! ¡Gracias!"
+        }
+      ],
+      "src": "/audio/the-sound-map/A0-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/A0-rooftop-clean.mp3",
+      "durationSeconds": 6.564,
+      "sha256": "1b202d9eb5b653462a51f4fa8affd5016a51fd2bcae9771913346671516aaa4b",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A1-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Oye, hay agua en mi silla."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Perdón. Estoy regando las plantas."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Mi silla está debajo de tu balcón."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Un momento. Ya no cae agua."
+        }
+      ],
+      "src": "/audio/the-sound-map/A1-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/A1-balcony-clean.mp3",
+      "durationSeconds": 16.464,
+      "sha256": "74d1dfb92681f476a1ed9490cfb9dec8be9e5cdba0f966ad6196f5a9f23ddc43",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A1-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Por la mañana sale el sol. Por la noche sale la luna. Yo canto cerca de mi casa. Y mi vecino no canta nunca."
+        }
+      ],
+      "src": "/audio/the-sound-map/A1-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/A1-singer-clean.mp3",
+      "durationSeconds": 11.49,
+      "sha256": "2b1b99c879e73f53fe42ef40e1263ee333924d2c360a740434fcc00ee8698320",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "A1-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Son las cinco. Esta tarde hay música en el parque del Río. La entrada es gratis. El concierto empieza a las seis."
+        }
+      ],
+      "src": "/audio/the-sound-map/A1-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/A1-taxi-clean.mp3",
+      "durationSeconds": 11.898,
+      "sha256": "e42115ffff60d5c32c334d260b8c9db9f3ee2cd5e57a9e865354120cd3fe91e4",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A1-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¿Este banco está libre?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Sí. Estoy esperando a mi hermana."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Yo espero a mi amigo. Se llama Luis."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Mi hermana se llama Luz. ¡Qué parecido!"
+        }
+      ],
+      "src": "/audio/the-sound-map/A1-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/A1-park-clean.mp3",
+      "durationSeconds": 17.832,
+      "sha256": "c8c0c6e4d4a942323ca074bbedd2250c627d85d5bd67032e93a8bb5f48a7e035",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A1-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Naranjas dulces! Tres por dos monedas."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Quiero tres, por favor. ¿Son de hoy?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Sí, de esta mañana. Aquí tienes."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Gracias."
+        }
+      ],
+      "src": "/audio/the-sound-map/A1-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/A1-vendor-clean.mp3",
+      "durationSeconds": 18.672,
+      "sha256": "58cda55c7a45b1fc08a46f3f92d37ad71a4669646c76d68b55b9fe8fdaf7c8c4",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A1-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¿Dónde está Elena?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Junto a la mesa. Hoy es su cumpleaños."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¿Cuántos años cumple?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Treinta. Vamos a cantar."
+        }
+      ],
+      "src": "/audio/the-sound-map/A1-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/A1-rooftop-clean.mp3",
+      "durationSeconds": 14.736,
+      "sha256": "f0bf7fe06c0af90fc79618760643e74a4ca9c3eabd41ec6b0ac2f6612e631257",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A2-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Otra vez está mojada mi ropa! La tendí hace una hora."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Lo siento. Pensé que hoy no había nadie abajo."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No estoy enfadada por el agua. Es la tercera vez esta semana."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Tienes razón. Voy a poner platos debajo de las macetas."
+        }
+      ],
+      "src": "/audio/the-sound-map/A2-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/A2-balcony-clean.mp3",
+      "durationSeconds": 21.416,
+      "sha256": "a7788b295e2a6e0fecb6d2acde7c9959f747221d1e4ee81b5575f3ad1b2ef5df",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A2-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Dejé mi paraguas en casa, pensando que iba a hacer sol. Ahora bailo bajo la lluvia, y el cielo cambió mi canción. No tengo prisa esta tarde, no voy a correr otra vez. Si llego mojada a la plaza, mis amigos van a entender."
+        }
+      ],
+      "src": "/audio/the-sound-map/A2-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/A2-singer-clean.mp3",
+      "durationSeconds": 17.63,
+      "sha256": "a2b144ecfe37cf9c48c44a49be7668a2e78b7277542942f5b53ef3eb7f88be4f",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "A2-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Atención: el concierto del parque cambia de lugar por la lluvia. Será en el centro cultural, frente al puente. La hora sigue igual: las siete. Quienes ya tienen entrada no necesitan otra."
+        }
+      ],
+      "src": "/audio/the-sound-map/A2-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/A2-taxi-clean.mp3",
+      "durationSeconds": 15.014,
+      "sha256": "336817b9097b4170cd7f3fca55f24c669e5b9d0122c225dd2690a63735332e45",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A2-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¿Vienes mañana a caminar?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Quería venir, pero tengo que llevar a mi padre al médico."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Podemos vernos después, a las once."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Mejor a las doce. Así no tengo que correr."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "De acuerdo. Traigo algo para comer."
+        }
+      ],
+      "src": "/audio/the-sound-map/A2-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/A2-park-clean.mp3",
+      "durationSeconds": 19.894,
+      "sha256": "ad9e270a1ba5b1cee06b541c77bd4f4f7a19df5eeb3717da55c694708117c805",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A2-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Última caja de mangos! Están maduros para comer hoy."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Necesito fruta para el sábado. Hoy es miércoles."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Entonces llévate estos más verdes. Cuestan lo mismo."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Perfecto. Dame cuatro."
+        }
+      ],
+      "src": "/audio/the-sound-map/A2-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/A2-vendor-clean.mp3",
+      "durationSeconds": 19.568,
+      "sha256": "767ea3a34e5ab6c1fd5cc06b3cb681678449d87eea1339ee612dc266a4c895ee",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "A2-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Baja un poco la música, por favor. La vecina tiene un bebé."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Claro. ¿Hasta qué hora podemos estar aquí?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Hasta las diez en la terraza. Después seguimos dentro."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Bien. Voy a avisar a los demás."
+        }
+      ],
+      "src": "/audio/the-sound-map/A2-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/A2-rooftop-clean.mp3",
+      "durationSeconds": 19.64,
+      "sha256": "efed1141c28cc9204ff31e52dab738e645cac7ff807d4da836438dfdaeb67685",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B1-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Te dejé una nota ayer. ¿La viste?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Sí, pero decía que bajara las plantas. Pensé que querías que las pusiera en el suelo."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Quería decir que no colgaran por fuera. Al pasar, mi hijo casi se golpea."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Ahora entiendo. Las muevo hacia dentro esta tarde. Habría sido más fácil si hubiéramos hablado antes."
+        }
+      ],
+      "src": "/audio/the-sound-map/B1-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/B1-balcony-clean.mp3",
+      "durationSeconds": 26.24,
+      "sha256": "f0c33a66a315053597ad9ea4985758f209b3900559c50505c49503518227d6ba",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B1-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Guardé tu llave en un cajón, al lado de un billete viejo. Dijiste: vuelvo en un mes; ya cambió de color el invierno. Hoy abrí todas las ventanas, dejé la llave donde estaba. No sé si espero que regreses o que la casa sea otra casa."
+        }
+      ],
+      "src": "/audio/the-sound-map/B1-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/B1-singer-clean.mp3",
+      "durationSeconds": 17.606,
+      "sha256": "d17bee84b00731343b28778ea4c9f27d780e27fdc50488c84fc909cf3099a0b8",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "B1-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "La biblioteca abrirá dos noches por semana durante los exámenes. La medida empieza el lunes y se mantendrá un mes. No es una ampliación permanente: se evaluará cuántas personas la utilizan. Los vecinos piden que también haya un autobús al cierre; transporte todavía no ha respondido."
+        }
+      ],
+      "src": "/audio/the-sound-map/B1-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/B1-taxi-clean.mp3",
+      "durationSeconds": 19.622,
+      "sha256": "2769356fad9fb702685c52bc11c1a229926cc029b7513c3f29126cf9c2b38e1f",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B1-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Hace meses que no te veía por aquí."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Desde que cambié de turno, casi no salgo de día."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Pensé que te habías mudado. Tu perro tampoco venía."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Lo pasea mi hermana por las mañanas. Hoy tengo libre y he querido recuperar nuestra vuelta de siempre."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Entonces el barrio no ha perdido a un vecino; solo tenemos que cambiar la hora."
+        }
+      ],
+      "src": "/audio/the-sound-map/B1-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/B1-park-clean.mp3",
+      "durationSeconds": 25.534,
+      "sha256": "d57dc1cb66d2d68143326b90645e1c2d88f68244b54c10e1834a3d4ce8a6dd3a",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B1-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡La última caja a mitad de precio!"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "¿Porque la fruta está mal?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No. Porque mañana no abro y no quiero tirarla. Algunas piezas tienen marcas, pero por dentro están bien. Si quieres, cortamos una."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Me llevo media caja. La otra mitad se la puedo ofrecer a mi vecina."
+        }
+      ],
+      "src": "/audio/the-sound-map/B1-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/B1-vendor-clean.mp3",
+      "durationSeconds": 22.832,
+      "sha256": "10b4c8824f8b0061c98db6ddd77ea91749cf77000bc6e6a0a93d7a46ee408a0b",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B1-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Pensé que era una fiesta de cumpleaños. ¿Por qué hay una maleta junto a la puerta?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Marta se va a trabajar fuera. No quería una despedida triste, así que pidió música y nada de discursos."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Entonces guardo lo que había preparado."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Puedes decírselo a ella después. Que no quiera discursos no significa que no quiera escucharte."
+        }
+      ],
+      "src": "/audio/the-sound-map/B1-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/B1-rooftop-clean.mp3",
+      "durationSeconds": 25.232,
+      "sha256": "1fc4a9cc4ffee54b4b96750cd4d70aabc677400b67ab2118c85d00867aa6b617",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B2-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Qué bonito te quedó el balcón. Desde abajo parece una selva."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Gracias. Me llevó todo el domingo."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Sí, se nota. Sobre todo cuando cae tierra en mi desayuno."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Podías haber empezado por ahí."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Lo intenté la semana pasada. Tu respuesta fue regalarme una planta."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Creí que te gustaban. Hoy pongo una bandeja y lo hablamos sin regalos."
+        }
+      ],
+      "src": "/audio/the-sound-map/B2-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/B2-balcony-clean.mp3",
+      "durationSeconds": 29.988,
+      "sha256": "3cb7e17a616b8e663980aeb5356dda2815438c7bf4796a731ecf2cb6442b33cd",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B2-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Pusieron luces en la plaza, quitaron bancos del andén. La foto sale más bonita, ya nadie sabe dónde caer. Dicen que vuelve la alegría, lo dice un cartel sin voz. Yo vi a la panadera irse, con las llaves y el reloj. Si esto se llama volver, que alguien me diga a qué lugar. La calle conserva su nombre, pero me cuesta regresar."
+        }
+      ],
+      "src": "/audio/the-sound-map/B2-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/B2-singer-clean.mp3",
+      "durationSeconds": 24.806,
+      "sha256": "e71e77521cb2280614d47d8557e428ad409d20f1ba0577b5c0c73ad962ad799b",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "B2-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "El ayuntamiento califica de éxito la prueba de calles peatonales: las visitas aumentaron un veinte por ciento. La asociación vecinal responde que contar visitas no equivale a medir bienestar. Comerciantes celebran las ventas, mientras algunas personas mayores denuncian dificultades para recibir compras. La ampliación se votará el viernes; el informe completo aún no se ha publicado."
+        }
+      ],
+      "src": "/audio/the-sound-map/B2-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/B2-taxi-clean.mp3",
+      "durationSeconds": 24.686,
+      "sha256": "ad6918304ac49a6222fdb13a05fd418547882b1e24a72a557a010e06b722aa98",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B2-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¿Ya le dijiste que no vas a aceptar?"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Le dije que la propuesta era interesante."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Eso suena a que todavía lo estás pensando."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Era la idea. Si digo que no ahora, deja de contar conmigo para otros proyectos."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "O sigue reservándote un puesto que otra persona necesita."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Sí. Estoy evitando una conversación y creando otra más difícil."
+        }
+      ],
+      "src": "/audio/the-sound-map/B2-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/B2-park-clean.mp3",
+      "durationSeconds": 27.588,
+      "sha256": "a7f31e324c4900b215d790790cf5b7efdd489be0f2b477a664c72195dca8505e",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B2-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Fruta imperfecta, precio perfecto!"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Lo de imperfecta suena a estrategia de venta."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "También. Si digo que tiene golpes, nadie se acerca; si digo que es única, me acusan de cobrar la historia. Prefiero enseñarte dónde está la marca."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Entonces el descuento no es un regalo."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No. Tú aceptas elegir con cuidado y yo evito una pérdida. Los dos sabemos qué estamos comprando."
+        }
+      ],
+      "src": "/audio/the-sound-map/B2-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/B2-vendor-clean.mp3",
+      "durationSeconds": 30.526,
+      "sha256": "dcefdf015e49a0a2dff814e88023a42f8b53a197c9ed2c468c513e046118076c",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "B2-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Veo que la reunión pequeña acabó ocupando tres terrazas."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Solo invité a seis. Cada uno entendió que podía traer a alguien."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Y alguien trajo un altavoz que se oye desde el puente."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Ya lo bajé. ¿Quieres que eche a la gente?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Quiero que me preguntes antes de decidir que mi casa es un local."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "De acuerdo. Hoy lo resolvemos juntos y mañana fijamos un límite."
+        }
+      ],
+      "src": "/audio/the-sound-map/B2-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/B2-rooftop-clean.mp3",
+      "durationSeconds": 28.62,
+      "sha256": "aa275f8d011783d386bc6b2cf62331124f5b18198efaf26331cc6d4066cf7308",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C1-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No quisiera que esto terminara en una reunión de vecinos."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Pues para no quererlo, ya has puesto en copia al administrador."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Solo para que conste. Hemos hablado varias veces."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Hemos hablado, sí. Lo que no hemos hecho es acordar quién paga el arreglo."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "La filtración sale de tu balcón."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Y el desagüe es comunitario. Si confundimos el origen con la responsabilidad, vamos a discutir hasta que llegue la próxima lluvia."
+        }
+      ],
+      "src": "/audio/the-sound-map/C1-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/C1-balcony-clean.mp3",
+      "durationSeconds": 32.796,
+      "sha256": "f30909682dc5dc9ee933a48852083df4251e367a451b34abd2dd1e9bcdd3d736",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C1-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Hicieron de mi acento una postal, de mi ventana un mirador ajeno. Me ofrecen un descuento por volver al mismo bar que ya no reconoce a sus dueños. No digo que antes todo fuera luz; también guardaba sombras la escalera. Pero vender la pena como encanto no vuelve menos cara la frontera. Que nadie ponga mi nostalgia en venta: recordar no es pedir que nada se mueva."
+        }
+      ],
+      "src": "/audio/the-sound-map/C1-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/C1-singer-clean.mp3",
+      "durationSeconds": 24.326,
+      "sha256": "7ff3a60fef63f1ea765497df933b31e4d62cb7e4de627eb5a4deeb77197c61bc",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "C1-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "La comisión asegura que no se cerrará ningún espacio cultural. El documento, sin embargo, prevé suspender durante un plazo indefinido la programación de dos centros, que conservarán su condición administrativa. Para la comisión, hablar de cierre sería inexacto; para los colectivos, conservar un nombre sin actividad es una diferencia difícil de celebrar. Ambas partes afirman defender la cultura de proximidad."
+        }
+      ],
+      "src": "/audio/the-sound-map/C1-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/C1-taxi-clean.mp3",
+      "durationSeconds": 26.558,
+      "sha256": "f4d99a463861d8a514208e5457699fd0a1ba608d9670d40bc4687d07d539676f",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C1-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Qué bien que por fin te hayan dejado dirigir el proyecto."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Me han dejado presentar el proyecto. La dirección sigue donde estaba."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Pero ahora eres la cara visible."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Exacto. La cara para explicar las decisiones que otros toman."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Supongo que algo podrás cambiar desde dentro."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Eso me dijeron cuando acepté tomar las actas. A veces una silla en la mesa es solo una forma más elegante de quedarse de pie."
+        }
+      ],
+      "src": "/audio/the-sound-map/C1-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/C1-park-clean.mp3",
+      "durationSeconds": 31.14,
+      "sha256": "a917579d414704df8c34d93e8a875309b22a0d6cf96f8088cddab29fe52d69e7",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C1-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Últimas piezas de temporada!"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Eso lo decía el cartel el mes pasado."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "El cartel dice de temporada, no de esta semana."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Y la palabra últimas ocupa medio toldo."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Bien visto. Quedan pocas de esta partida. Lo cambio para que no parezca que desaparecen mañana."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Me interesa más que me digas de dónde vienen."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "De una cooperativa a cuarenta kilómetros. El origen está en la caja; el cartel, ya ves, habla demasiado."
+        }
+      ],
+      "src": "/audio/the-sound-map/C1-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/C1-vendor-clean.mp3",
+      "durationSeconds": 34.85,
+      "sha256": "dd763aca3bbf70ec450700125347a6f41328ab1ebdc2e990ed3ab63191c0288e",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C1-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No sabía que esta noche también presentábamos patrocinadores."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "No los presentamos. Solo agradecemos a quienes hicieron posible el encuentro."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Con su logotipo detrás de cada foto."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Si te incomoda, puedo pedir que no te etiqueten."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No me preocupa aparecer. Me preocupa que parezca que respaldo algo que no conocía."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Entiendo. Debimos decirlo en la invitación, no explicarlo cuando ya estabas aquí."
+        }
+      ],
+      "src": "/audio/the-sound-map/C1-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/C1-rooftop-clean.mp3",
+      "durationSeconds": 31.692,
+      "sha256": "3e09c0f03f424be53020a815ef68ac0bbec5c13a6ef58f21eee744d43199352e",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C2-balcony",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Tranquila: aquí todos tenemos exactamente el mismo derecho a disfrutar del balcón."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Me alegra oírlo. Sobre todo porque tu disfrute lleva tres domingos cayendo sobre el mío."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Estás convirtiendo una gota en un conflicto de convivencia."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Y tú estás convirtiendo tres domingos en una gota. Si vamos a ser precisos, seamos precisos con las dos cosas."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Puedo poner una bandeja; no puedo vivir pendiente de cada gota."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "No te pido vigilancia permanente. Te pido que la solución no dependa de que yo vuelva a protestar."
+        }
+      ],
+      "src": "/audio/the-sound-map/C2-balcony.mp3",
+      "cleanSrc": "/audio/the-sound-map/C2-balcony-clean.mp3",
+      "durationSeconds": 38.22,
+      "sha256": "fe087c50a55fea4e00582647fd3d360ae4aca56bfa429be50340f8e221023796",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C2-singer",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "La ciudad me dio las gracias por saber desaparecer: mi silencio era paisaje, mi alquiler, algo que ver. Qué detalle conservarme en la placa del portal; ya no vivo entre estas calles, pero quedo fenomenal. No me canten que he perdido un paraíso sin fisuras: también yo cerré ventanas, también hice mis facturas. Si me nombran, que se escuche lo que el nombre no resuelve: nadie vuelve a una postal, aunque la postal te recuerde."
+        }
+      ],
+      "src": "/audio/the-sound-map/C2-singer.mp3",
+      "cleanSrc": "/audio/the-sound-map/C2-singer-clean.mp3",
+      "durationSeconds": 28.526,
+      "sha256": "14641e5b4284c1df4d0e37da4ed50755aff9cdae64d8a49dc372b433ba6f7263",
+      "synthetic": true,
+      "sung": true
+    },
+    {
+      "id": "C2-taxi",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Fuentes próximas a la negociación consideran prácticamente cerrado el acuerdo, siempre que se resuelvan los puntos que una de las partes todavía califica de esenciales. El comunicado no habla de renuncias, sino de una actualización de prioridades. Preguntada por la fecha, la portavoz respondió que la voluntad de avanzar no se mide con calendarios. La firma prevista para hoy, por tanto, no figura por ahora en la agenda."
+        }
+      ],
+      "src": "/audio/the-sound-map/C2-taxi.mp3",
+      "cleanSrc": "/audio/the-sound-map/C2-taxi-clean.mp3",
+      "durationSeconds": 26.678,
+      "sha256": "55cfca542f1b6585fa7d0cd70518e34cab4033986995a9f4083aa2f01f0230b8",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C2-park",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No te preocupes, tu intervención fue muy valiente."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Valiente. La palabra que se usa cuando no se quiere decir acertada."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "O cuando acertada se queda corta para lo que costaba decirlo."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Entonces, ¿estás de acuerdo?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Con que alguien tenía que decirlo, sí. Con que hubiera que decirlo así, no del todo."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Ya. El contenido queda aprobado; la incomodidad se devuelve al remitente."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No. La incomodidad también era necesaria. Lo que cuestiono es a quién dejaste sin posibilidad de responder."
+        }
+      ],
+      "src": "/audio/the-sound-map/C2-park.mp3",
+      "cleanSrc": "/audio/the-sound-map/C2-park-clean.mp3",
+      "durationSeconds": 39.674,
+      "sha256": "034afd5fa3b87432f3a0496629b3e1dda749169ed466c3680ef7413ff44a6ded",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C2-vendor",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "¡Llévese lo que no sale en la foto!"
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "¿Ahora vende invisibilidad?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Vendo tomates con una forma poco fotogénica. Lo invisible es el trabajo que los trajo hasta aquí."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Pues acaba de hacer una campaña bastante fotogénica con eso."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Culpable. La diferencia, espero, es que la historia no sustituya al tomate. Pruébelo."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "No está mal. Pero espero tampoco es una garantía."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "No, es una reserva. La garantía que puedo ofrecer es esta pieza; de mi discurso, mejor desconfíe un poco."
+        }
+      ],
+      "src": "/audio/the-sound-map/C2-vendor.mp3",
+      "cleanSrc": "/audio/the-sound-map/C2-vendor-clean.mp3",
+      "durationSeconds": 39.458,
+      "sha256": "8a332e5b4087252839ae2bde33b34b65a4888e678d9a8f21d1654ccb7c30e422",
+      "synthetic": true,
+      "sung": false
+    },
+    {
+      "id": "C2-rooftop",
+      "segments": [
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Brindemos por una noche en la que, por una vez, nadie tiene que demostrar nada."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Lo has dicho mirando directamente a quien acaba de contar sus tres ascensos."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "He mirado hacia la mesa. Si alguien se reconoce en la dirección de una mirada, no puedo hacerme responsable."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "Qué práctica resulta la ambigüedad cuando el destinatario es bastante preciso."
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "También puede ser práctico atribuir una intención para evitar hablar de lo que se dijo."
+        },
+        {
+          "speaker": "Nico",
+          "voice": "es-MX-JorgeNeural",
+          "text": "De acuerdo: hablemos de la frase. ¿Invita a relajarse o establece quién estaba estropeando la noche?"
+        },
+        {
+          "speaker": "Luna",
+          "voice": "es-MX-DaliaNeural",
+          "text": "Quizá las dos cosas. Y quizá un brindis no era el mejor lugar para resolverlo."
+        }
+      ],
+      "src": "/audio/the-sound-map/C2-rooftop.mp3",
+      "cleanSrc": "/audio/the-sound-map/C2-rooftop-clean.mp3",
+      "durationSeconds": 43.586,
+      "sha256": "7a1b7d92cd488147947353c4ebbb75763e4a28912ce3d68c925409fd74d90342",
+      "synthetic": true,
+      "sung": false
+    }
+  ]
+}
