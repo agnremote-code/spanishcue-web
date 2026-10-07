@@ -25,8 +25,23 @@ test('saved/linked level works without WebGL; scene close restores keyboard focu
  assert.equal(document.activeElement.id,'sm-scene-title');
  await click(document.querySelector('.sm-panel-head button'));
  assert.equal(document.querySelector('.sm-panel'),null);assert.equal(document.activeElement,trigger);
+ const pin=document.querySelectorAll('.sm-pin')[1];
+ // Pointer dispatch does not implicitly focus the button in every browser.
+ await click(pin);
+ await click(document.querySelector('.sm-panel-head button'));
+ assert.equal(document.activeElement,pin,'closing a map-opened scene returns focus to the same map pin');
  const select=document.querySelector('#sm-level');
  await act(async()=>{select.value='C2';select.dispatchEvent(new dom.window.Event('change',{bubbles:true}));});
  assert.equal(new URL(window.location.href).searchParams.get('campaign'),'test');assert.equal(new URL(window.location.href).searchParams.get('level'),'C2');
+ for(const level of ['A0','A1','A2','B1','B2','C1','C2']){
+  await act(async()=>{select.value=level;select.dispatchEvent(new dom.window.Event('change',{bubbles:true}));});
+  assert.equal(document.querySelector('audio'),null,'level change removes the previous audio');
+  for(const pin of document.querySelectorAll('.sm-pin')){
+   await click(pin);
+   assert.equal(document.querySelectorAll('audio').length,1);
+   assert.equal(document.querySelector('audio').getAttribute('src'),`/audio/the-sound-map/${level}-${pin.dataset.soundLocation}.mp3`);
+   assert.equal(document.querySelector('.sm-transcript'),null);
+  }
+ }
  await act(async()=>root.unmount());dom.window.close();
 });
