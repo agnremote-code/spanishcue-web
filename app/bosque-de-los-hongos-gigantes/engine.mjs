@@ -57,7 +57,10 @@ export const GRAVITY=20, JUMP_SPEED=11, RUN_SPEED=9, WALK_SPEED=4.8;
 const PATH_SPECIES=[['bolete','stump','bolete'],['bolete','puffball','bolete'],['chanterelle','oyster','bolete'],['amanita','violet','amanita'],['glow','spiral','glow'],['parasol','parasol','bolete'],['shelf','shelf','parasol'],['ghost','ghost','ghost'],['sky','sky','sky'],['sky','sky','sky']];
 let seed=7719;const rand=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
 const round=v=>Math.round(v*1000)/1000;
-const stemRadius=p=>p.kind==='shelf'?0:Math.max(.45,p.r*.16);
+// Stem thickness per species, shared by rendering, clearance and collision.
+export const STEM_WIDTH={bolete:.3,chanterelle:.2,oyster:.2,amanita:.2,violet:.2,glow:.2,spiral:.17,parasol:.11,ghost:.12,sky:.1,bouncer:.22};
+export function stemRadiusOf(p){if(p.kind==='shelf')return 0;if(p.species==='stump')return p.r*.98;if(p.species==='puffball')return p.r;if(p.species==='crown')return 2.1;return Math.max(.45,p.r*(STEM_WIDTH[p.species]??.2));}
+const stemRadius=p=>p.species==='puffball'||p.species==='stump'?0:stemRadiusOf(p)*(p.species==='spiral'?2:1);
 /** Caps never overlap and no stem rises through a lower cap. */
 export function clearOf(c,list,except=null){
  return list.every(p=>{
@@ -119,13 +122,71 @@ for(const p of platforms){
  if(!p.trunk){p.kind='mushroom';p.species='parasol';}
 }
 export const PLATFORMS=platforms;
+const ROUTE=platforms.filter(p=>!p.id.startsWith('side'));
+/** Distance from (x,z) to the jump corridor between two consecutive route caps. */
+function segmentDistance(x,z,a,b){const vx=b.x-a.x,vz=b.z-a.z,l=vx*vx+vz*vz||1,t=Math.max(0,Math.min(1,((x-a.x)*vx+(z-a.z)*vz)/l));return Math.hypot(x-(a.x+vx*t),z-(a.z+vz*t));}
+/** True when a volume (x,z,radius,y0..y1) stays out of every jump corridor and landing zone of the route. */
+export function corridorClear(x,z,radius,y0,y1,margin=1.6){
+ if(Math.hypot(x-SPAWN.x,z-SPAWN.z)<radius+5)return false;
+ for(let i=0;i<ROUTE.length;i++){
+  const a=i?ROUTE[i-1]:{...SPAWN,r:1},b=ROUTE[i];
+  const low=Math.min(a.y,b.y)-1,high=Math.max(a.y,b.y)+4.5;
+  if(y1<low||y0>high)continue;
+  if(segmentDistance(x,z,a,b)<radius+margin+1)return false;
+  if(Math.hypot(x-b.x,z-b.z)<b.r+radius+margin&&y1>b.y-2.5&&y0<b.y+4)return false;
+ }
+ return true;
+}
+// Short conversation moments between the big stations: the middle cap of each
+// stretch and the optional detour cap (a lookout). Level content decides what is asked.
+for(let i=1;i<zones.length;i++){
+ const stretch=ROUTE.filter(p=>p.id.startsWith(`path-${i}-`));
+ const middle=stretch[Math.floor((stretch.length-1)/2)];
+ if(middle)middle.micro=`tramo-${i}`;
+ const side=platforms.find(p=>p.id===`side-${i}-0`);
+ if(side)side.micro=`mirador-${i}`;
+}
+export const MICRO_SPOTS=platforms.filter(p=>p.micro).map(p=>({id:p.micro,platform:p.id,x:p.x,y:p.y,z:p.z,r:p.r,stage:p.stage,kind:p.micro.startsWith('mirador')?'mirador':'tramo'}));
+// Each station keeps its arrival and departure clear: the sign and lantern stand
+// on the rim beside the arrival, the story prop on the free side, all of them solid.
+for(const zone of zones){
+ const index=ROUTE.findIndex(p=>p.zone===zone.id),before=ROUTE[index-1]??{...SPAWN},after=ROUTE[index+1];
+ const arrive=Math.atan2(before.x-zone.x,before.z-zone.z),leave=after?Math.atan2(after.x-zone.x,after.z-zone.z):arrive+Math.PI;
+ let free=Math.atan2(-(Math.sin(arrive)+Math.sin(leave)),-(Math.cos(arrive)+Math.cos(leave)));
+ if(!Number.isFinite(free))free=arrive+Math.PI/2;
+ const at=(angle,q)=>({x:round(zone.x+Math.sin(angle)*q*zone.r),z:round(zone.z+Math.cos(angle)*q*zone.r),angle:round(angle)});
+ zone.layout={arrive:round(arrive),leave:round(leave),sign:at(arrive+.62,.9),lamp:at(arrive-.62,.92),prop:at(free,.55)};
+}
+/** Solid things the player walks around: stems and puffballs at ground level, oak trunks, station props. */
+export const OBSTACLES=[];
+for(const p of platforms){
+ if(p.kind==='shelf'&&p.trunk)OBSTACLES.push({id:`${p.id}-trunk`,x:p.trunk.x,z:p.trunk.z,r:p.trunk.r*1.05,y0:-1,y1:Math.min(p.trunk.top,p.y+7)});
+ else if(p.species==='puffball')OBSTACLES.push({id:`${p.id}-ball`,x:p.x,z:p.z,r:p.r*1.02,y0:-1,y1:p.y-.45});
+ else OBSTACLES.push({id:`${p.id}-stem`,x:p.x,z:p.z,r:stemRadius(p)*1.05,y0:-1,y1:p.y-.6});
+}
+for(const zone of zones){
+ const {sign,lamp,prop}=zone.layout;
+ OBSTACLES.push({id:`${zone.id}-sign`,x:sign.x,z:sign.z,r:.8,y0:zone.y-.2,y1:zone.y+2.2},{id:`${zone.id}-lamp`,x:lamp.x,z:lamp.z,r:.25,y0:zone.y-.2,y1:zone.y+2},{id:`${zone.id}-prop`,x:prop.x,z:prop.z,r:zone.id==='suposiciones'?1.1:.75,y0:zone.y-.2,y1:zone.y+2.4});
+}
+export const PLAYER_RADIUS=.35;
+/** Push a position out of any solid it overlaps at its height. */
+export function resolveObstacles(p,obstacles=OBSTACLES){
+ for(const o of obstacles){
+  if(p.y+1.7<o.y0||p.y>o.y1)continue;
+  const dx=p.x-o.x,dz=p.z-o.z,d=Math.hypot(dx,dz),min=o.r+PLAYER_RADIUS;
+  if(d>=min)continue;
+  if(d>1e-6){p.x=o.x+dx/d*min;p.z=o.z+dz/d*min;}else p.x=o.x+min;
+ }
+ return p;
+}
 export function parseLevel(value){return LEVELS.includes(value)?value:'A1';}
 export function spawnPlayer(){return{...SPAWN,vy:0,grounded:true,platform:'ground',checkpoint:{...SPAWN},yaw:0,coyote:.12,respawns:0};}
-export function stepPlayer(player,input,delta,platforms=PLATFORMS){
+export function stepPlayer(player,input,delta,platforms=PLATFORMS,obstacles=OBSTACLES){
  const p={...player,checkpoint:{...player.checkpoint}};const dt=Math.max(0,Math.min(delta,.04));
  const length=Math.hypot(input.x||0,input.z||0)||1;const speed=input.run?RUN_SPEED:WALK_SPEED;
  const dx=(input.x||0)/Math.max(1,length)*speed*dt,dz=(input.z||0)/Math.max(1,length)*speed*dt;
  p.x+=dx;p.z+=dz;if(dx||dz)p.yaw=Math.atan2(dx,dz);
+ resolveObstacles(p,obstacles);
  p.coyote=p.grounded?.12:Math.max(0,(p.coyote||0)-dt);
  if(input.jump&&(p.grounded||p.coyote>0)){p.vy=JUMP_SPEED;p.grounded=false;p.coyote=0;p.platform=null;}
  const before=p.y;p.vy-=GRAVITY*dt;p.y+=p.vy*dt;p.grounded=false;
@@ -136,7 +197,7 @@ export function stepPlayer(player,input,delta,platforms=PLATFORMS){
  if(p.y<Math.max(-10,p.checkpoint.y-12)||!Number.isFinite(p.y)||Math.hypot(p.x,p.z)>90){Object.assign(p,p.checkpoint,{vy:0,grounded:true,coyote:.12,platform:null,respawns:p.respawns+1});}
  return p;
 }
-export function newSession(level='A1',seed=Date.now()%2147483647){return{version:1,level:parseLevel(level),seed,seen:[],discussed:[],visited:[],active:null,complete:false,finalIds:[],finalDone:[],personalized:false};}
+export function newSession(level='A1',seed=Date.now()%2147483647){return{version:1,level:parseLevel(level),seed,seen:[],discussed:[],visited:[],active:null,complete:false,finalIds:[],finalDone:[],personalized:false,micro:[]};}
 export function switchLevel(session,level){return parseLevel(level)===session.level?session:newSession(parseLevel(level),session.seed+1);}
 export function drawPrompt(session,bank){const available=bank.filter(p=>!session.seen.includes(p.id));if(!available.length)return{session:{...session,active:null},prompt:null};let seed=(Math.imul(session.seed,1664525)+1013904223)>>>0;const prompt=available[seed%available.length];return{prompt,session:{...session,seed,seen:[...session.seen,prompt.id],active:prompt.id}};}
 export function discuss(session,prompt){return{...session,discussed:[...new Set([...session.discussed,prompt.id])],visited:[...new Set([...session.visited,prompt.zone])],active:null};}
@@ -153,6 +214,8 @@ export function beginExpeditionFinal(session,bank,station){
  for(let i=0;i<2;i++){const draw=drawPrompt(s,bank.filter(p=>p.zone==='final'&&!p.station));s=draw.session;if(draw.prompt)picked.push(draw.prompt);}
  return{session:{...s,finalIds:picked.map(p=>p.id),finalDone:[],active:null},prompts:picked};
 }
+/** Short moments between stations: remembered per session, never scored. */
+export function markMicro(session,id){return /^(tramo|mirador)-\d+$/.test(id)?{...session,micro:[...new Set([...(session.micro??[]),id])]}:session;}
 export function completeFinalPrompt(session,id){if(!session.finalIds.includes(id))return session;return{...session,finalDone:[...new Set([...session.finalDone,id])]};}
 export function finishSession(session){return session.finalIds.length>=3&&session.finalDone.length===session.finalIds.length?{...session,personalized:true,complete:true}:session;}
-export function restoreSession(raw,banks){try{const s=JSON.parse(raw);if(s?.version!==1||!LEVELS.includes(s.level)||!Number.isFinite(s.seed))return null;for(const key of ['seen','discussed','visited','finalIds','finalDone'])if(!Array.isArray(s[key])||s[key].length>1000||!s[key].every(v=>typeof v==='string'))return null;const bank=banks?.[s.level];if(!Array.isArray(bank))return null;const seen=[...new Set(s.seen.filter(id=>bank.some(p=>p.id===id&&p.level===s.level)))];const discussed=[...new Set(s.discussed.filter(id=>seen.includes(id)))];const finalIds=[...new Set(s.finalIds.filter(id=>seen.includes(id)))];const finalDone=[...new Set(s.finalDone.filter(id=>finalIds.includes(id)))];const personalized=s.personalized===true;return{...newSession(s.level,s.seed),seen,discussed,visited:[...new Set(discussed.map(id=>bank.find(p=>p.id===id).zone))],finalIds,finalDone,personalized,complete:s.complete===true&&personalized&&finalIds.length>=3&&finalDone.length===finalIds.length};}catch{return null;}}
+export function restoreSession(raw,banks){try{const s=JSON.parse(raw);if(s?.version!==1||!LEVELS.includes(s.level)||!Number.isFinite(s.seed))return null;for(const key of ['seen','discussed','visited','finalIds','finalDone'])if(!Array.isArray(s[key])||s[key].length>1000||!s[key].every(v=>typeof v==='string'))return null;const bank=banks?.[s.level];if(!Array.isArray(bank))return null;const seen=[...new Set(s.seen.filter(id=>bank.some(p=>p.id===id&&p.level===s.level)))];const discussed=[...new Set(s.discussed.filter(id=>seen.includes(id)))];const finalIds=[...new Set(s.finalIds.filter(id=>seen.includes(id)))];const finalDone=[...new Set(s.finalDone.filter(id=>finalIds.includes(id)))];const personalized=s.personalized===true;const micro=Array.isArray(s.micro)?[...new Set(s.micro.filter(id=>typeof id==='string'&&/^(tramo|mirador)-\d+$/.test(id)))].slice(0,100):[];return{...newSession(s.level,s.seed),micro,seen,discussed,visited:[...new Set(discussed.map(id=>bank.find(p=>p.id===id).zone))],finalIds,finalDone,personalized,complete:s.complete===true&&personalized&&finalIds.length>=3&&finalDone.length===finalIds.length};}catch{return null;}}

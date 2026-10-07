@@ -2,7 +2,7 @@
 
 import * as THREE from 'three';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { PLATFORMS, ZONES, STAGES, stageAt, spawnPlayer, stepPlayer, RUN_SPEED, type Position, type Player } from './engine.mjs';
+import { PLATFORMS, ZONES, STAGES, OBSTACLES, MICRO_SPOTS, stageAt, spawnPlayer, stepPlayer, RUN_SPEED, type Position, type Player } from './engine.mjs';
 import type { CategoryId } from './content/types';
 import { buildForest, atmosphereAt } from './forest3d';
 import { createForestHero, animateForestHero } from './hero3d';
@@ -17,10 +17,27 @@ export type WorldProps = {
   onZone: (zone: CategoryId) => void;
   onFail: () => void;
   onPosition?: (p: Position) => void;
+  /** Short conversation moments between stations: which ones are done, where the learner stands, and marking one as said. */
+  micro?: string[];
+  onMicroSpot?: (spot: string | null) => void;
+  onMicroDone?: (spot: string) => void;
 };
 const POSITION_KEY = 'spanishcue:bosque:world:v2';
 const TOP = 62;
 export const STAGE_COLORS = ['#7d9a55', '#a9b85d', '#e5a93a', '#c8405a', '#45c4dc', '#c9b27e', '#7fb069', '#dfe8ea', '#9cc7f2', '#f2c25b'];
+// Each new altitude band announces itself: the climb is an expedition with chapters.
+const STAGE_INTROS = [
+  'El bosque empieza aquí. Sube por los hongos bajos.',
+  'Los sombreros crecen. Mira hacia arriba: el camino sigue.',
+  'Setas doradas y cremosas. ¿Cuáles se pueden comer?',
+  'Rojo, violeta, negro. Bonito… y peligroso.',
+  'Aquí los hongos brillan sin sol.',
+  'Sombreros gigantes a la altura de los árboles.',
+  'Hongos de repisa en troncos enormes.',
+  'La niebla tapa el camino. Confía en las luces.',
+  'Has atravesado las nubes. El bosque quedó abajo.',
+  'La cima. Todo el camino está a tus pies.',
+];
 const STAGE_HINTS = [
   'Sigue los hongos bajos hacia la luz. Espacio para saltar.',
   'Los sombreros suben poco a poco. Arrastra para mirar hacia arriba.',
@@ -57,10 +74,10 @@ export default function World3D(props: WorldProps) {
   const live = useRef(props);
   useEffect(() => { live.current = props; });
   const host = useRef<HTMLDivElement>(null), mapCanvas = useRef<HTMLCanvasElement>(null), largeMap = useRef<HTMLCanvasElement>(null), stick = useRef<HTMLSpanElement>(null);
-  const api = useRef<{ clear: () => void; jump: () => void; interact: () => void; view: () => void; joy: { x: number; y: number } } | null>(null);
+  const api = useRef<{ lookAhead: () => void; clear: () => void; jump: () => void; interact: () => void; view: () => void; joy: { x: number; y: number } } | null>(null);
   const joyPointer = useRef<number | null>(null);
   const [mapOpen, setMapOpen] = useState(false), [place, setPlace] = useState('Suelo del bosque'), [stage, setStage] = useState({ name: STAGES[0].name, index: 0, altitude: 0 });
-  const [hint, setHint] = useState(STAGE_HINTS[0]), [activeZone, setActiveZone] = useState<CategoryId | null>(null);
+  const [hint, setHint] = useState(STAGE_HINTS[0]), [activeZone, setActiveZone] = useState<CategoryId | null>(null), [banner, setBanner] = useState<{ index: number; key: number } | null>(null);
   const [destination, setDestination] = useState({ name: ZONES[0].place, short: ZONES[0].short, distance: 15, rise: 0, bearing: 0 }), [view, setView] = useState(1);
   const mapPanel = useRef<HTMLDivElement>(null);
   useEffect(() => { if (!mapOpen) return; const previous = document.activeElement as HTMLElement | null; const panel = mapPanel.current; const gameCanvas = host.current?.querySelector('canvas'); panel?.focus(); const trap = (e: KeyboardEvent) => { if (e.key === 'Tab') { e.preventDefault(); panel?.querySelector<HTMLButtonElement>('button')?.focus(); } }; document.addEventListener('keydown', trap); return () => { document.removeEventListener('keydown', trap); (gameCanvas ?? previous)?.focus({ preventScroll: true }); }; }, [mapOpen]);
@@ -93,7 +110,8 @@ export default function World3D(props: WorldProps) {
     // Start looking along the route toward the first landmark, the climb visible ahead.
     let yaw = Math.atan2(player.x - firstZone.x, player.z - firstZone.z), pitch = .38, distance = CAMERA_PRESETS[1].distance, preset = 1, jumpQueued = false, dragAt = -10;
     hero.heading = yaw + Math.PI;
-    let currentZone: CategoryId | null = null, previousRespawns = player.respawns, toastUntil = 0, lastStage = -1;
+    let currentZone: CategoryId | null = null, currentMicro: string | null = null, previousRespawns = player.respawns, toastUntil = 0, lastStage = -1, highestStage = stageAt(player.y), lookTimer = 0, lookYaw = 0, lookPitch = .35, bannerUntil = 0;
+    const obstacles = [...OBSTACLES, ...forest.obstacles];
     const known = new Set<string>(live.current.visited);
     const held = new Set<string>(), joy = { x: 0, y: 0 };
     const look = new THREE.Vector3(player.x, player.y + 1.5, player.z), pvec = new THREE.Vector3();
@@ -102,12 +120,16 @@ export default function World3D(props: WorldProps) {
     const toast = (message: string) => { setHint(message); toastUntil = elapsed + 5; };
     const interact = () => {
       if (live.current.paused || mapOpenRef.current) return;
-      const zone = ZONES.find(z => z.id === currentZone); if (!zone) { toast('Busca el globo ¿? sobre un hongo grande para conversar.'); return; }
+      const zone = ZONES.find(z => z.id === currentZone);
+      if (!zone && currentMicro) { live.current.onMicroDone?.(currentMicro); toast('¡Bien dicho! Sigue subiendo: el próximo momento te espera más arriba.'); return; }
+      if (!zone) { toast('Busca el globo ¿? (parada) o … (momento rápido) para conversar.'); return; }
       if (zone.id === 'final' && !live.current.unlocked) { toast('El mirador se abre tras conversar sobre 10 preguntas en al menos 3 paradas.'); return; }
       clear(); renderer.domElement.focus({ preventScroll: true }); live.current.onZone(zone.id);
     };
     const setPreset = (next: number) => { preset = (next + CAMERA_PRESETS.length) % CAMERA_PRESETS.length; distance = CAMERA_PRESETS[preset].distance; setView(preset); };
-    api.current = { clear, jump: () => { if (!live.current.paused && !mapOpenRef.current) jumpQueued = true; }, interact, view: () => { setPreset(preset + 1); canvas.focus({ preventScroll: true }); }, joy };
+    // Q: the camera turns to frame the next station for a moment, then gives the view back.
+    const lookAhead = () => { const pending = ZONES.filter(z => !live.current.visited.includes(z.id)), next = pending.find(z => z.y >= player.y - 3) ?? pending[0] ?? ZONES[ZONES.length - 1]; lookYaw = Math.atan2(player.x - next.x, player.z - next.z); lookPitch = next.y - player.y > 4 ? -.05 : .3; lookTimer = 2.4; };
+    api.current = { lookAhead, clear, jump: () => { if (!live.current.paused && !mapOpenRef.current) jumpQueued = true; }, interact, view: () => { setPreset(preset + 1); canvas.focus({ preventScroll: true }); }, joy };
     const usable = (event: KeyboardEvent) => { const t = event.target as HTMLElement | null; return !t?.closest('input,textarea,select,a,[contenteditable="true"],[role="dialog"]'); };
     const keydown = (event: KeyboardEvent) => {
       const code = event.code;
@@ -115,12 +137,13 @@ export default function World3D(props: WorldProps) {
       if (mapOpenRef.current && code === 'Escape') { event.preventDefault(); setMapOpen(false); clear(); return; }
       if (mapOpenRef.current && code === 'KeyM' && usable(event)) { event.preventDefault(); setMapOpen(false); clear(); return; }
       if ((code === 'Space' && event.target instanceof HTMLElement && event.target.closest('button')) || !usable(event) || live.current.paused || mapOpenRef.current) return;
-      if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space', 'ShiftLeft', 'ShiftRight', 'KeyE', 'KeyV', 'KeyM', 'KeyR', 'KeyF', 'Equal', 'Minus', 'NumpadAdd', 'NumpadSubtract'].includes(code)) event.preventDefault();
+      if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space', 'ShiftLeft', 'ShiftRight', 'KeyE', 'KeyV', 'KeyM', 'KeyR', 'KeyF', 'KeyQ', 'Equal', 'Minus', 'NumpadAdd', 'NumpadSubtract'].includes(code)) event.preventDefault();
       if (event.repeat) return;
       held.add(code);
       if (code === 'Space') jumpQueued = true;
       if (code === 'KeyE') interact();
       if (code === 'KeyV') setPreset(preset + 1);
+      if (code === 'KeyQ') lookAhead();
       if (code === 'KeyM') setMapOpen(v => !v);
       if (code === 'Equal' || code === 'NumpadAdd') distance = Math.max(MIN_DISTANCE, distance / 1.2);
       if (code === 'Minus' || code === 'NumpadSubtract') distance = Math.min(MAX_DISTANCE, distance * 1.2);
@@ -192,13 +215,16 @@ export default function World3D(props: WorldProps) {
         const dx = Math.cos(yaw) * ix + Math.sin(yaw) * iz, dz = -Math.sin(yaw) * ix + Math.cos(yaw) * iz;
         // A fixed maximum substep keeps landings stable on slow touch devices.
         let remaining = dt; const beforeX = player.x, beforeZ = player.z;
-        while (remaining > 0) { const step = Math.min(remaining, 1 / 90); player = stepPlayer(player, { x: dx, z: dz, jump: jumpQueued, run: held.has('ShiftLeft') || held.has('ShiftRight') || Math.hypot(joy.x, joy.y) > .85 }, step); jumpQueued = false; remaining -= step; }
+        while (remaining > 0) { const step = Math.min(remaining, 1 / 90); player = stepPlayer(player, { x: dx, z: dz, jump: jumpQueued, run: held.has('ShiftLeft') || held.has('ShiftRight') || Math.hypot(joy.x, joy.y) > .85 }, step, PLATFORMS, obstacles); jumpQueued = false; remaining -= step; }
         speed = Math.hypot(player.x - beforeX, player.z - beforeZ) / dt;
         if (held.has('KeyR')) pitch = Math.max(PITCH_MIN, pitch - dt * 1.4);
         if (held.has('KeyF')) pitch = Math.min(PITCH_MAX, pitch + dt * 1.4);
         // Like La Noche Abierta: the orbit settles behind a hero running away from the camera.
-        if (elapsed - dragAt > 1.4 && !reducedMotion) yaw = followYaw(yaw, player.yaw, speed, dt, RUN_SPEED);
+        if (lookTimer > 0) { lookTimer -= dt; const k = 1 - Math.exp(-dt * 4.5); yaw += Math.atan2(Math.sin(lookYaw - yaw), Math.cos(lookYaw - yaw)) * k; pitch += (lookPitch - pitch) * k; dragAt = elapsed; }
+        else if (elapsed - dragAt > 1.4 && !reducedMotion) yaw = followYaw(yaw, player.yaw, speed, dt, RUN_SPEED);
         const floor = PLATFORMS.find(p => p.id === player.platform); currentZone = player.grounded ? (floor?.zone ?? null) : null;
+        const micro = player.grounded ? (floor?.micro ?? null) : null;
+        if (micro !== currentMicro) { currentMicro = micro; live.current.onMicroSpot?.(micro); }
         // Landing establishes a checkpoint; only E or the visible button opens a conversation.
         if (player.respawns > previousRespawns) { previousRespawns = player.respawns; toast('De vuelta al último hongo seguro. Tu conversación sigue aquí.'); }
       }
@@ -219,6 +245,7 @@ export default function World3D(props: WorldProps) {
       else camera.position.copy(candidate);
       if (camera.position.y < .35 && Math.hypot(camera.position.x, camera.position.z) < 66) camera.position.y = .35;
       camera.lookAt(look);
+      forest.setView(camera.position, head, true);
       // The air changes with altitude.
       atmosphereAt(Math.max(player.y, camera.position.y - 2), air);
       (scene.fog as THREE.FogExp2).color.copy(air.fog); (scene.fog as THREE.FogExp2).density = air.density;
@@ -228,7 +255,7 @@ export default function World3D(props: WorldProps) {
       // Guide forward: the first pending station at or above the learner, else the lowest pending one.
       const pending = ZONES.filter(z => !live.current.visited.includes(z.id));
       const nextZone = pending.find(z => z.y >= player.y - 3) ?? pending[0] ?? null;
-      forest.update(reducedMotion ? 0 : elapsed, pvec, { visited: live.current.visited, next: nextZone?.id ?? null, unlocked: live.current.unlocked });
+      forest.update(reducedMotion ? 0 : elapsed, pvec, { visited: live.current.visited, next: nextZone?.id ?? null, unlocked: live.current.unlocked, micro: live.current.micro ?? [] });
       sun.position.set(player.x - 30, player.y + 62, player.z + 26); sun.target.position.set(player.x, player.y, player.z);
       renderer.render(scene, camera);
       // HUD, saving and the frame-rate monitor run on wall-clock time, so a slow device still sees current guidance.
@@ -241,8 +268,11 @@ export default function World3D(props: WorldProps) {
         setStage({ name: STAGES[stageIndex].name, index: stageIndex, altitude: Math.round(player.y) });
         const next = nextZone ?? ZONES[ZONES.length - 1];
         setDestination({ name: next.place, short: next.short, distance: Math.round(Math.hypot(next.x - player.x, next.z - player.z)), rise: Math.round(next.y - player.y), bearing: destinationBearing(next.x - player.x, next.z - player.z, yaw) });
-        if (stageIndex !== lastStage && player.grounded) { if (lastStage >= 0 && stageIndex > lastStage) toast(`${STAGES[stageIndex].name} · ${STAGE_HINTS[stageIndex]}`); lastStage = stageIndex; }
-        if (elapsed > toastUntil) setHint(currentZone ? 'Punto de regreso guardado. Pulsa E para conversar.' : STAGE_HINTS[stageIndex]);
+        if (stageIndex !== lastStage && player.grounded) { if (lastStage >= 0 && stageIndex > lastStage) toast(STAGE_HINTS[stageIndex]); lastStage = stageIndex; }
+        // A new chapter of the climb: a title card the first time each stage is reached.
+        if (stageIndex > highestStage && player.grounded) { highestStage = stageIndex; setBanner({ index: stageIndex, key: elapsed }); bannerUntil = elapsed + 3.6; }
+        if (bannerUntil && elapsed > bannerUntil) { bannerUntil = 0; setBanner(null); }
+        if (elapsed > toastUntil) setHint(currentZone ? 'Punto de regreso guardado. Pulsa E para conversar.' : currentMicro ? 'Momento rápido: responde en voz alta y pulsa E.' : STAGE_HINTS[stageIndex]);
         live.current.onPosition?.({ x: player.x, y: player.y, z: player.z });
       }
       if (saveTime > 2) { saveTime = 0; save(); }
@@ -255,13 +285,14 @@ export default function World3D(props: WorldProps) {
   const updateJoy = (event: ReactPointerEvent<HTMLDivElement>) => { if (joyPointer.current !== event.pointerId || props.paused || mapOpen) return; const rect = event.currentTarget.getBoundingClientRect(); const x = (event.clientX - rect.left - rect.width / 2) / (rect.width * .33), y = (event.clientY - rect.top - rect.height / 2) / (rect.height * .33), length = Math.max(1, Math.hypot(x, y)); if (api.current) { api.current.joy.x = x / length; api.current.joy.y = y / length; } if (stick.current) stick.current.style.transform = `translate(${x / length * 30}px, ${y / length * 30}px)`; };
   const endJoy = () => { joyPointer.current = null; if (api.current) { api.current.joy.x = 0; api.current.joy.y = 0; } if (stick.current) stick.current.style.transform = 'translate(0, 0)'; };
   const pendingRefuge = activeZone && !props.visited.includes(activeZone);
-  const done = props.visited.filter(z => ZONES.some(zone => zone.id === z)).length;
+  const done = props.visited.filter(z => ZONES.some(zone => zone.id === z)).length, microDone = (props.micro ?? []).filter(id => MICRO_SPOTS.some(m => m.id === id)).length;
   return <div className={`bfg-world${props.paused || mapOpen ? ' bfg-world-paused' : ''}`} style={{ '--stage': STAGE_COLORS[stage.index] } as React.CSSProperties}>
     <div className="bfg-world-canvas" ref={host} />
     <div className="bfg-world-vignette" />
     <div className="bfg-world-location"><span>{place} · <b>{stage.altitude} m</b></span><strong>{!pendingRefuge && <span className="bfg-world-bearing" aria-hidden="true" style={{ transform: `rotate(${destination.bearing}rad)` }}>↑</span>}{pendingRefuge ? 'Parada de conversación' : `Destino: ${destination.name}`}</strong><small>{pendingRefuge ? ZONES.find(z => z.id === activeZone)?.place : `${destination.short} · ${destination.distance} m${destination.rise > 1 ? ` · ↑ ${destination.rise} m más arriba` : ''}`}</small></div>
-    <div className="bfg-world-climb" aria-label={`Ascenso: ${stage.name}, ${stage.altitude} metros, ${done} de ${ZONES.length} paradas`}><span style={{ height: `${Math.min(100, stage.altitude / TOP * 100)}%` }} /><small>{done}/{ZONES.length}</small></div>
-    <div className="bfg-world-tools"><button onClick={() => setMapOpen(v => !v)} aria-label="Abrir mapa del bosque" aria-expanded={mapOpen}>Mapa <kbd>M</kbd></button><button onClick={() => api.current?.view()} aria-label="Cambiar distancia de cámara" aria-pressed={view !== 1}>Cámara · {CAMERA_PRESETS[view].label} <kbd>V</kbd></button></div>
+    <div className="bfg-world-climb" aria-label={`Ascenso: ${stage.name}, ${stage.altitude} metros, ${done} de ${ZONES.length} paradas, ${microDone} de ${MICRO_SPOTS.length} momentos`}><span style={{ height: `${Math.min(100, stage.altitude / TOP * 100)}%` }} />{ZONES.map(z => <i key={z.id} className={props.visited.includes(z.id) ? 'done' : z.y > stage.altitude + 1 ? '' : 'passed'} style={{ bottom: `${z.y / TOP * 100}%` }} />)}<small>{done}/{ZONES.length} paradas<br />{microDone}/{MICRO_SPOTS.length} momentos</small></div>
+    {banner && <div className="bfg-world-banner" key={banner.key} role="status"><span>ETAPA {banner.index + 1} DE {STAGES.length}</span><strong>{STAGES[banner.index].name}</strong><small>{STAGE_INTROS[banner.index]}</small></div>}
+    <div className="bfg-world-tools"><button onClick={() => setMapOpen(v => !v)} aria-label="Abrir mapa del bosque" aria-expanded={mapOpen}>Mapa <kbd>M</kbd></button><button onClick={() => api.current?.lookAhead()} aria-label="Mirar hacia el destino">Ver destino <kbd>Q</kbd></button><button onClick={() => api.current?.view()} aria-label="Cambiar distancia de cámara" aria-pressed={view !== 1}>Cámara · {CAMERA_PRESETS[view].label} <kbd>V</kbd></button></div>
     <button className="bfg-world-minimap" onClick={() => setMapOpen(true)} aria-label="Ampliar mapa: paradas, altura y posición"><canvas width={190} height={160} ref={mapCanvas} /><span>▲ Tú · ● Paradas · ▮ Altura</span></button>
     <div className="bfg-world-interaction">
       {activeZone && <button className="bfg-world-converse" disabled={props.paused || mapOpen || (activeZone === 'final' && !props.unlocked)} onClick={() => api.current?.interact()}><kbd>E</kbd><span>{activeZone === 'final' && !props.unlocked ? 'Mirador cerrado' : props.visited.includes(activeZone) ? 'Volver a conversar' : 'Conversar'}</span></button>}

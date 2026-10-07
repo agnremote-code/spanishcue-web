@@ -20,3 +20,14 @@
 .bh .bh-open-skip{border:0;background:transparent;padding:6px 0;color:#59704f;font-size:12px;text-decoration:underline;text-underline-offset:3px}
 @keyframes bh-open-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @media(max-width:700px){.bh-scene{font-size:14px;padding:12px 14px}.bh-open p{font-size:18px}}
+
+/* Short moments between stations: a light card that never blocks the climb. */
+.bh-micro{position:fixed;z-index:15;right:24px;top:204px;width:min(380px,36vw);padding:14px 16px 12px;border-radius:14px;background:#123b33f2;color:#eef7f1;border:1px solid #8fd3bb66;box-shadow:0 12px 40px #04161366;animation:bh-open-in .3s ease-out}
+.bh-micro-label{margin:0;font:700 9px Arial,sans-serif;letter-spacing:.2em;color:#9fe3c8}.bh-micro-prompt{margin:7px 0 0;font:17px/1.42 Georgia,serif}
+.bh-micro-choices{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.bh .bh-micro-choices button{padding:6px 10px;font-size:12px;border-radius:999px;border-color:#8fd3bb66;background:#ffffff10}.bh .bh-micro-choices button[aria-pressed=true]{background:#bfe8d6;color:#123b33}
+.bh-micro-hint{margin:9px 0 0;font-size:12px;font-style:italic;color:#c6e5d8}.bh-micro-status{margin:10px 0 0;font-size:12px;color:#bfe8d6}
+.bh .bh-micro-said{margin-top:10px;display:inline-flex;gap:8px;align-items:center;padding:8px 12px;font-size:12px;font-weight:700;background:#bfe8d6;color:#123b33;border-color:#bfe8d6}.bh-micro-said kbd{font:700 10px Arial;border:1px solid #123b3366;border-radius:4px;padding:1px 5px}
+.bh-micro-done{opacity:.86}
+@media(max-width:800px),(pointer:coarse){.bh-micro{width:auto;left:12px;right:136px;top:214px;bottom:auto;padding:11px 13px}.bh-micro-prompt{font-size:15px}.bh-micro-said kbd{display:none}}
+@media(max-height:600px) and (pointer:coarse){.bh-micro{bottom:auto;top:70px;width:min(380px,calc(100vw - 220px))}}
+@keyframes bh-micro-in{from{opacity:0}to{opacity:1}}.bh-micro{animation-name:bh-micro-in}
