@@ -8,7 +8,7 @@ import test from 'node:test';
 import { availableLevels, groupLessonsByLevel } from '../app/library-filters.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const publicLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const publicLevels = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const movedLessonIds = [16, 19, 24, 26, 27, 38, 201];
 const lessons = JSON.parse(execFileSync(process.execPath, [
   '--import', 'tsx', '--input-type=module', '--eval',
@@ -16,7 +16,7 @@ const lessons = JSON.parse(execFileSync(process.execPath, [
 ], { cwd: root, encoding: 'utf8' }));
 
 test('all former A0 lessons are A1 without A0 metadata', () => {
-  assert.equal(lessons.length, 118);
+  assert.equal(lessons.length, 121);
   for (const id of movedLessonIds) {
     const lesson = lessons.find((candidate) => candidate.id === id);
     assert.ok(lesson, `missing lesson ${id}`);
@@ -26,18 +26,19 @@ test('all former A0 lessons are A1 without A0 metadata', () => {
   }
   for (const lesson of lessons) {
     assert.ok(publicLevels.includes(lesson.level), `lesson ${lesson.id} has level ${lesson.level}`);
-    assert.ok(!lesson.levels?.includes('A0'), `lesson ${lesson.id} still includes A0`);
+    assert.equal(Boolean(lesson.levels?.includes('A0')), [227,228,229].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
   }
 });
 
-test('public level navigation and shelves begin at A1', () => {
+test('A0 appears in filters only for the newly authored country lessons', () => {
   assert.deepEqual(availableLevels(lessons), publicLevels);
   assert.deepEqual(groupLessonsByLevel(lessons).map(({ level }) => level), publicLevels);
+  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,3);
 });
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 35);
+  assert.equal(a1Lessons.length, 38);
   assert.ok(a1Lessons.some(lesson => lesson.id === 32), 'Reino Unido offers an A1 route');
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);
@@ -51,13 +52,15 @@ test('A1 has the merged total and pedagogical route order', () => {
   }
 });
 
-test('public application surfaces contain no A0 label or styling hook', async () => {
+test('legacy surfaces keep A0 absent outside the shared selector and three authored countries', async () => {
   const entries = await readdir(join(root, 'app'), { recursive: true, withFileTypes: true });
   const files = entries.filter((entry) => entry.isFile() && ['.ts', '.tsx', '.mjs', '.css'].includes(extname(entry.name)))
     .map((entry) => join(entry.parentPath, entry.name));
   for (const file of files) {
     const source = await readFile(file, 'utf8');
-    assert.doesNotMatch(source, /\bA0\b/, `${file} exposes A0`);
+    const relative=file.slice(root.length+1);
+    const authored=relative.startsWith('app/country-atlas/')||['app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);
+    if(!authored) assert.doesNotMatch(source, /\bA0\b/, `${file} exposes unauthored A0`);
     assert.doesNotMatch(source, /(?:a0-entry|level-a0|accent-a0)/, `${file} retains A0 styling`);
   }
 });

@@ -768,7 +768,7 @@ export default function Library({
 }) {
   const { t, locale } = useI18n();
   const routeCount = new Set(lessons.map((lesson) => lesson.category)).size;
-  const levelScale = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  const levelScale = ["A0", "A1", "A2", "B1", "B2", "C1", "C2"];
   const levelsPresent = levelScale.filter((item) => lessons.some((lesson) => `${lesson.level} ${lesson.displayLevel || ""}`.includes(item)));
   const levelRange = levelsPresent.length ? `${levelsPresent[0]}–${levelsPresent[levelsPresent.length - 1]}` : "A1–C2";
   const categoryLabel = (value: Category) => t(categoryMessageKeys[value]);
