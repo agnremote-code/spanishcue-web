@@ -51,6 +51,12 @@ test("all requested funnel and product events use one analytics layer", async ()
     assert.match(analytics, new RegExp(`"${key}"`));
   assert.match(analytics, /window\.dataLayer/);
   assert.match(analytics, /window\.gtag\?\.\("event", event, payload\)/);
+  assert.match(analytics, /NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID/);
+  assert.match(analytics, /NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL/);
+  assert.match(analytics, /send_to/);
+  assert.match(googleAnalytics, /usePathname/);
+  assert.match(googleAnalytics, /"page_view"/);
+  assert.doesNotMatch(googleAnalytics, /removeTag|ga-disable-/);
   assert.doesNotMatch(analytics, /G-[A-Z0-9]+|AW-[0-9]+|fbq\s*\(/);
 });
 
@@ -95,6 +101,8 @@ test("marketing surfaces stay reusable and the free lesson close is global", asy
   assert.match(success, /transaction_id/);
   assert.match(success, /CONSENT_EVENT/);
   assert.match(success, /consentFor\("analytics"\)/);
+  assert.match(success, /consentFor\("marketing"\)/);
+  assert.match(success, /NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID/);
   assert.match(success, /accessConfirmed/);
   assert.match(success, /Retry verification|Reintentar verificación/);
   assert.match(styles, /@media\(max-width:700px\)/);
