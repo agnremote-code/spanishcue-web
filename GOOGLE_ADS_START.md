@@ -1,5 +1,7 @@
 # SPANISHCUE · Google Ads Start
 
+> **Actualización 2026-10-07 (SEO).** Las URLs limpias `/spanish-conversation-activities` y `/spanish-teacher-resources` ahora son hubs orgánicos indexables. Para campañas (Google Ads, Meta, Zeely) usa las variantes de conversión `noindex` bajo `/lp/`: `/lp/spanish-conversation-activities`, `/lp/spanish-teacher-resources`, `/lp/online-spanish-teaching-resources`, `/lp/ele-recursos-profesores`, `/lp/spanish-grammar-lessons`, `/lp/free-spanish-lesson`. Mismo template, mismos eventos; los parámetros UTM no cambian la canonical. Detalle en `docs/seo-strategy.md`.
+
 **Estado de creación:** `PAUSED`. Este documento no autoriza gasto, activación, partners, Display, PMax, Demand Gen ni expansión automática.
 **Fecha:** 19 de septiembre de 2026.
 

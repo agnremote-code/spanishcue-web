@@ -16,6 +16,7 @@ import {
   resourceTitle,
   resourceTypeLabel,
 } from "../../resource-seo";
+import LevelCrossLinks from "../../growth/LevelCrossLinks";
 import styles from "../resources.module.css";
 
 type ResourcePageProps = {
@@ -189,6 +190,8 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
                 </div>
               </section>
             ) : null}
+
+            <LevelCrossLinks level={level} cluster={lesson.category} />
           </div>
 
           <aside className={styles.sideCard}>

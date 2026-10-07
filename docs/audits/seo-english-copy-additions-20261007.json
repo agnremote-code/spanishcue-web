@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "authorization": "Owner brief of 2026-10-07 (project thread \"SEO foundation\"): build the organic-growth foundation in English for Spanish teachers, including improved homepage title/description, footer navigation to the new hubs, and the conversation cluster data (sentence frames, sample questions and their English glosses). Existing English copy remains protected; this manifest only approves the exact new literals listed below.",
+  "additions": [
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Brand kit"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Conversation questions"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Lesson library"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Teaching guides"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "I prefer … because it is …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Me too. / Not me, I …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "First …, then …, after that …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What is your name and where are you from?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Where do you live? Do you like your city?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What do you usually have for breakfast?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What time do you get up on Mondays?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What do you do in your free time?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Do you prefer coffee or tea? Why?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "How many people are there in your family?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which languages do you speak?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Do you work or study? Where?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What is your favourite food?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Is there a park near your home?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which day of the week do you like best?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "How about … on Saturday?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "First …, then … and in the end …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "It is more … than …, but …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What did you do last weekend?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "When was the last time you travelled? Where did you go?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What are you going to do next summer?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Do you prefer living downtown or in the suburbs? Why?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which dish can you cook well?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What was your primary school like?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What do you do when it rains all day?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What matters more in a job: salary or schedule?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Have you ever been to a Spanish-speaking country?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What gift did you give someone recently?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What do you like doing with your friends?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What was your best birthday? What happened?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "For me the most important thing is … because …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "I was … when suddenly …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "If I were you, … / I recommend that you …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What advice would you give someone who wants to learn Spanish?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Tell me about something that happened to you that you still remember in detail."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What would you change about your city if you could decide?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Do you think it is better to travel in a group or alone? Why?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What would you do if you found a wallet full of money in the street?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What is the hardest part of your job or your studies?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What was your life like ten years ago? What has changed?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Do you prefer a secure job or a risky project you feel passionate about?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which tradition from your country would you explain to a foreigner?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Is there a decision you made that you would now make differently?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What do you think about working from home? Are there more pros or cons?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "If you could learn a new skill in a month, which would you choose?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Although it is true that …, in reality …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "I would be willing to … as long as …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "It is certainly … / It is probably … / It may be …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "To what extent do you think social media has changed how we relate to each other?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Should cities limit the number of tourists? Defend both positions."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What would you do if your best friend asked you for advice you do not want to give?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Is it possible to keep a friendship going at a distance for years? What does it depend on?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What role should technology play in children's education?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Do you think professional success and personal life are compatible? Why?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What would change in your country if everyone worked four days a week?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "How would you explain to a client that a project is going to be delayed?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Is there something you were convinced of five years ago that you now see differently?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What is more valuable in a team: someone brilliant and difficult or someone average and reliable?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "How far does individual responsibility go when it comes to climate change?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What would the consequences be if cash disappeared?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "If I have understood you correctly, what you are suggesting is that …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Had I known that, I would have …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "There is no doubt that …; that said, …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "If you had been born in another era, which would you have chosen and why?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which collective decision of your country is hardest to explain to an outsider?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "To what extent does the language we use shape what we think?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which argument against your own opinion seems strongest to you?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "How would you distinguish between a tradition worth keeping and one that is not?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What role should irony play in public debate?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Can you be objective when talking about your own country?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which aspect of your profession do people usually misunderstand?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What would have happened in your life if you had said no at a key moment?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "To what extent should companies take positions on social issues?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which Spanish word or expression seems impossible to translate into your language?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Summarise the position of someone you disagree with without caricaturing it."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "It is something along the lines of …, though not exactly."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Those who maintain that … usually argue that …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "To put it with some irony, …"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which Spanish word seems untranslatable to you and how would you explain it to someone who does not know it?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What is the difference between being polite and being courteous? Give examples."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Seriously defend an opinion you consider wrong."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which kind of humour works in your language but not in Spanish, or the other way round?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Is there a saying or expression whose logic you find questionable?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "How does an argument change when you express it with irony instead of indignation?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which text, song or film taught you more about Hispanic culture than any lesson?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "What nuance does an idea lose when it is simplified for a general audience?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which register do you handle worse in Spanish: very formal or very colloquial? How do you notice?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "To what extent can a language belong to those who learned it as adults?"
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Describe the same event as a lawyer, a poet and a teenager would tell it."
+    },
+    {
+      "path": "app/growth/conversation-levels.ts",
+      "text": "Which social convention of a Spanish-speaking country was hardest for you to understand?"
+    },
+    {
+      "path": "app/seo.ts",
+      "text": "Interactive Spanish Lessons for Teachers (A1–C2) | SPANISHCUE"
+    },
+    {
+      "path": "app/seo.ts",
+      "text": "Interactive Spanish lessons for teachers and online tutors: conversation, grammar, listening and pronunciation from A1 to C2. Choose a lesson, open it, teach."
+    }
+  ]
+}

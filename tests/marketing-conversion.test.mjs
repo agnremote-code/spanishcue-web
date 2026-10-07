@@ -120,12 +120,26 @@ test("search landings, including a dedicated free demo, and crawl controls are i
     source("app/robots.ts"),
     source("app/manifest.ts"),
   ]);
+  // Organic hubs are dedicated CollectionPage templates; the rest still use the
+  // conversion template, which /lp/[slug] reuses as noindex campaign variants.
+  const organicHubs = new Set(["spanish-teacher-resources", "spanish-conversation-activities"]);
   for (const routeName of routeNames) {
     const page = await source(`app/${routeName}/page.tsx`);
-    assert.match(page, /MarketingLanding/);
-    assert.match(page, /generateLandingMetadata/);
-    assert.match(sitemap, new RegExp(routeName));
+    if (organicHubs.has(routeName)) {
+      assert.match(page, /collectionPageSchema/);
+      assert.match(page, /Breadcrumbs/);
+      assert.match(page, /canonicalUrl\(/);
+      assert.doesNotMatch(page, /MarketingLanding/);
+    } else {
+      assert.match(page, /MarketingLanding/);
+      assert.match(page, /generateLandingMetadata/);
+    }
+    // The conversation hub reaches the sitemap through its shared path constant.
+    assert.match(sitemap, routeName === "spanish-conversation-activities" ? /CONVERSATION_HUB_PATH/ : new RegExp(routeName));
   }
+  const campaign = await source("app/lp/[slug]/page.tsx");
+  assert.match(campaign, /MarketingLanding/);
+  assert.match(campaign, /index: false/);
   assert.match(landing, /freeLessonIds\.length/);
   assert.match(landing, /landing-product-float/);
   assert.match(pricing, /FOUNDING TEACHERS/);

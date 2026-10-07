@@ -7,7 +7,6 @@ import { lessons } from "../../lesson-catalog";
 import MoodTenseDisclosure from "../../verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "../../verbal-system/VerbalPosition";
 import GrammarStep from "../../grammar-steps/GrammarStep";
-import { localeFromHeaders } from "../../i18n/messages";
 import PhoneticsLesson from "../../phonetics/PhoneticsLesson";
 import { isPhoneticsLesson } from "../../phonetics/navigation";
 
@@ -21,16 +20,11 @@ export async function generateMetadata({
   if (!lesson || lesson.path || lesson.special) return {};
   const title = `${lesson.title} · ${lesson.level} | SPANISHCUE`;
   const description = lesson.subtitle;
-  const url = `https://spanishcue.com/clase/${lesson.id}`;
-  const locale = localeFromHeaders(await headers());
-  const canonical = locale === "es" ? url : `${url}?lang=en`;
+  const canonical = `https://spanishcue.com/clase/${lesson.id}`;
   return {
     title,
     description,
-    alternates: {
-      canonical,
-      languages: { es: url, en: `${url}?lang=en`, "x-default": url },
-    },
+    alternates: { canonical },
     openGraph: { title, description, url: canonical, images: [lesson.image] },
     robots: isFreeLesson(lesson.id)
       ? { index: true, follow: true }

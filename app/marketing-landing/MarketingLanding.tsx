@@ -9,8 +9,9 @@ import { SpanishCueBrand } from '../SpanishCueBrand';
 import type { LandingConfig } from './config';
 import { campaignCopy, campaignHero } from './campaign-copy';
 import LandingConversion, { LandingLink } from './LandingConversion';
+import { canonicalUrl } from '../seo';
 
-export default async function MarketingLanding({ config }: { config: LandingConfig }) {
+export default async function MarketingLanding({ config, pathname }: { config: LandingConfig; pathname?: string }) {
  const h = await headers();
  const locale = localeFromHeaders(h);
  const pro = fullAccessFromHeaders(h);
@@ -25,7 +26,7 @@ export default async function MarketingLanding({ config }: { config: LandingConf
  const firstFree = selected.find(({lesson}) => isFreeLesson(lesson.id)) ?? lessons.map(lesson => ({lesson,path:localLessonPath(lesson)})).find(item => item.path && isFreeLesson(item.lesson.id));
  const freePath = firstFree?.path || '/el-hotel-de-lo-imposible';
  const shared = { locale, pro, signedIn, slug:config.slug };
- const structuredData = { '@context':'https://schema.org', '@type':'WebPage', name:original.title, description:original.lead, url:`https://spanishcue.com/${config.slug}`, isPartOf:{'@type':'WebSite',name:'SPANISHCUE',url:'https://spanishcue.com'}, audience:{'@type':'EducationalAudience',educationalRole:'teacher'} };
+ const structuredData = { '@context':'https://schema.org', '@type':'WebPage', name:original.title, description:original.lead, url:canonicalUrl(pathname ?? `/${config.slug}`), isPartOf:{'@type':'WebSite',name:'SPANISHCUE',url:'https://spanishcue.com'}, audience:{'@type':'EducationalAudience',educationalRole:'teacher'} };
  return <main className="landing-page campaign-page" id="landing-main">
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structuredData)}} />
   <a className="skip-link" href="#landing-title">{locale === 'es' ? 'Ir al contenido' : 'Skip to content'}</a>

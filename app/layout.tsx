@@ -27,7 +27,7 @@ import { FreeLessonConversionBar } from "./marketing/MarketingSections";
 import FreeLessonRegistrationGate from "./marketing/FreeLessonRegistrationGate";
 import { audienceFromAccess, primaryCtaFor } from "./marketing/cta-state";
 import CookieConsent from "./privacy/CookieConsent";
-import { isSearchPrivatePath, localizedUrl } from "./seo";
+import { canonicalUrl, homeMetaCopy, isSearchPrivatePath, languageAlternates } from "./seo";
 import { socialPreviewImage, socialPreviewUrl } from "./social-preview";
 
 function safePathname(value: string | null): string {
@@ -39,20 +39,16 @@ export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const locale = localeFromHeaders(requestHeaders);
   const pathname = safePathname(requestHeaders.get("x-spanishcue-pathname"));
-  const canonicalBase = localizedUrl(pathname, "es");
-  const canonical = localizedUrl(pathname, locale);
+  // One clean canonical per page; `?lang=` is a UI toggle, never a second URL.
+  // hreflang appears only for real language pairs (see app/seo.ts).
+  const canonical = canonicalUrl(pathname);
+  const languages = languageAlternates(pathname);
+  const home = pathname === "/" ? homeMetaCopy[locale] : null;
   return {
-    title: translate(locale, "meta.title"),
-    description: translate(locale, "meta.description"),
+    title: home ? home.title : translate(locale, "meta.title"),
+    description: home ? home.description : translate(locale, "meta.description"),
     metadataBase: new URL("https://spanishcue.com"),
-    alternates: {
-      canonical,
-      languages: {
-        es: canonicalBase,
-        en: localizedUrl(pathname, "en"),
-        "x-default": canonicalBase,
-      },
-    },
+    alternates: languages ? { canonical, languages } : { canonical },
     openGraph: {
       title: "SPANISHCUE | Teach More. Prep Less.",
       description: "Ready-to-teach Spanish lessons for tutors. Choose. Open. Teach.",
