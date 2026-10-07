@@ -2,9 +2,9 @@
 import {lazy,Suspense,useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import ConversationGlosses from '../conversation-vocabulary/ConversationGlosses';
-import {BANKS,LEVEL_SUPPORT,stationFor,hasExpedition} from './content';
+import {BANKS,LEVEL_SUPPORT,stationFor,hasExpedition,microFor,type MicroPrompt} from './content';
 import type {CategoryId,Level,Prompt} from './content/types';
-import {CATEGORIES,LEVELS,newSession,restoreSession,parseLevel,switchLevel,drawPrompt,discuss,finalUnlocked,beginFinal,beginExpeditionFinal,openStation,completeFinalPrompt,finishSession,type Session} from './engine.mjs';
+import {CATEGORIES,LEVELS,newSession,restoreSession,parseLevel,switchLevel,drawPrompt,discuss,finalUnlocked,beginFinal,beginExpeditionFinal,openStation,markMicro,completeFinalPrompt,finishSession,type Session} from './engine.mjs';
 import './forest.css';
 const World=lazy(()=>import('./World3D'));
 const SAVE='spanishcue-forest-session-v1';
@@ -12,7 +12,7 @@ export default function BosqueHongos(){
  const [session,setSession]=useState<Session>(()=>newSession('A1',1791));
  const [ready,setReady]=useState(false),[started,setStarted]=useState(false),[fallback,setFallback]=useState(false),[reduced,setReduced]=useState(false);
  const [category,setCategory]=useState<CategoryId|null>(null),[finalMode,setFinalMode]=useState(false),[help,setHelp]=useState(false);
- const [notice,setNotice]=useState('');
+ const [notice,setNotice]=useState(''),[microSpot,setMicroSpot]=useState<string|null>(null);
  useEffect(()=>{const media=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>{setReduced(media.matches);if(media.matches)setFallback(true);};let saved:Session|null=null;try{saved=restoreSession(localStorage.getItem(SAVE),BANKS);}catch{/* storage is optional */}const query=new URLSearchParams(location.search).get('level');const next=query!==null?parseLevel(query):saved?.level??'A1';queueMicrotask(()=>{update();setSession(saved&&saved.level===next?saved:newSession(next));setReady(true);});media.addEventListener('change',update);return()=>media.removeEventListener('change',update);},[]);
  useEffect(()=>{if(!help)return;const closeHelp=(e:KeyboardEvent)=>{if(e.key==='Escape')setHelp(false);};document.addEventListener('keydown',closeHelp);return()=>document.removeEventListener('keydown',closeHelp);},[help]);
  useEffect(()=>{if(!ready)return;try{localStorage.setItem(SAVE,JSON.stringify(session));}catch{/* private mode still works */}},[session,ready]);
@@ -33,8 +33,9 @@ export default function BosqueHongos(){
   <div className="bh-intro-copy"><p className="bh-eyebrow">CONVERSACIÓN · A1–C2</p><h1>El bosque de los<br/><em>hongos gigantes</em></h1><p className="bh-hook">Sube. Descubre. Habla.<br/>{hasExpedition(level)?'Del suelo del bosque hasta las nubes: cada hongo gigante esconde una conversación.':'Cada camino abre una conversación.'}</p><div className="bh-facts"><span>45–60 min</span><span>12 paradas</span><span>Del suelo a 56 m</span></div><p className="bh-level-demand">{LEVEL_SUPPORT[level].demand}</p><button className="bh-primary" disabled={!ready} onClick={()=>setStarted(true)}>Entrar en el bosque <span>↗</span></button><button className="bh-text-button" disabled={!ready} onClick={()=>{setFallback(true);setStarted(true);}}>Explorar con el mapa sin movimiento</button>{session.discussed.length>0&&<p>Tu recorrido guardado: {session.discussed.length} conversaciones en {level}.</p>}</div>
   <div className="bh-intro-bottom"><span>WASD · MOVERTE</span><span>ESPACIO · SALTAR</span><span>ARRASTRA · MIRA · RUEDA · ZOOM</span><span>Sin respuestas correctas. Tu voz abre el camino.</span></div>
  </section>:<>
- <div className="bh-session-bar"><div><strong>{session.complete?'Llegaste al cielo':finalUnlocked(session)?'El mirador del cielo está abierto':hasExpedition(level)?'Expedición: del suelo a las nubes':'Tu camino al mirador'}</strong><span>{session.discussed.length} preguntas habladas · {session.visited.filter(z=>z!=='final').length} paradas</span></div></div>
- {fallback?<section className="bh-map-view" aria-label="Mapa del bosque, todas las categorías"><div className="bh-map-heading"><p className="bh-eyebrow">EL BOSQUE A TU RITMO</p><h1>Elige dónde conversar</h1><p>Los mismos caminos, preguntas y progreso. Puedes explorar sin saltar.</p></div>{categories}</section>:<Suspense fallback={<div className="bh-loading" role="status">El bosque se despierta…<button onClick={()=>setFallback(true)}>Usar el mapa</button></div>}><World paused={category!==null||help} visited={session.visited} completed={session.complete} unlocked={finalUnlocked(session)} onZone={openCategory} onFail={()=>{setFallback(true);setNotice('Puedes continuar con el mapa. Conservamos tu nivel y tus conversaciones.');}}/></Suspense>}
+ <div className="bh-session-bar"><div><strong>{session.complete?'Llegaste al cielo':finalUnlocked(session)?'El mirador del cielo está abierto':hasExpedition(level)?'Expedición: del suelo a las nubes':'Tu camino al mirador'}</strong><span>{session.discussed.length} preguntas habladas · {session.visited.filter(z=>z!=='final').length} paradas · {(session.micro??[]).length} momentos rápidos</span></div></div>
+ {fallback?<section className="bh-map-view" aria-label="Mapa del bosque, todas las categorías"><div className="bh-map-heading"><p className="bh-eyebrow">EL BOSQUE A TU RITMO</p><h1>Elige dónde conversar</h1><p>Los mismos caminos, preguntas y progreso. Puedes explorar sin saltar.</p></div>{categories}</section>:<Suspense fallback={<div className="bh-loading" role="status">El bosque se despierta…<button onClick={()=>setFallback(true)}>Usar el mapa</button></div>}><World paused={category!==null||help} visited={session.visited} micro={session.micro??[]} onMicroSpot={setMicroSpot} onMicroDone={id=>setSession(s=>markMicro(s,id))} completed={session.complete} unlocked={finalUnlocked(session)} onZone={openCategory} onFail={()=>{setFallback(true);setNotice('Puedes continuar con el mapa. Conservamos tu nivel y tus conversaciones.');}}/></Suspense>}
+ {started&&!fallback&&microSpot&&!category&&!help&&(()=>{const m=microFor(level,microSpot,deck);return m?<MicroCard key={`${level}-${microSpot}`} moment={m} done={(session.micro??[]).includes(microSpot)} onDone={()=>setSession(s=>markMicro(s,microSpot))}/>:null;})()}
  {session.complete&&<div className="bh-completion" role="status"><strong>Has llegado al mirador del cielo.</strong><span>Mira hacia abajo: todo el bosque que subiste está bajo las nubes. Puedes seguir explorando y conversando.</span></div>}
  </>}
  {notice&&<div className="bh-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="Cerrar aviso">×</button></div>}
@@ -70,4 +71,12 @@ function PromptCard({prompt:p,level,category,finalMode,progress,onSpoken,onAnoth
  <div className="bh-main-actions"><button className="bh-primary" onClick={onSpoken}>Marcar como hablada <span>→</span></button><button onClick={()=>setFollow(n=>n+1)}>Repregunta</button>{!finalMode&&<button onClick={onAnother}>Otra de esta categoría</button>}</div>
  <details className="bh-teacher"><summary>Herramientas del profesor</summary><div>{Object.entries(tools).map(([label,text])=><button key={label} onClick={()=>setTool(text)}>{label}</button>)}{!finalMode&&<><button disabled={idx===0} onClick={()=>onDifficulty(LEVELS[idx-1])}>Más fácil</button><button disabled={idx===5} onClick={()=>onDifficulty(LEVELS[idx+1])}>Más difícil</button><button onClick={onAnother}>Siguiente pregunta</button></>}</div>{p.teacherNote&&<p>{p.teacherNote}</p>}</details>
  </article>;
+}
+function MicroCard({moment:m,done,onDone}:{moment:MicroPrompt;done:boolean;onDone:()=>void}){
+ const [picked,setPicked]=useState('');
+ return <aside className={`bh-micro${done?' bh-micro-done':''}`} aria-label="Momento rápido de conversación"><p className="bh-micro-label">{m.label} · MOMENTO RÁPIDO</p><p className="bh-micro-prompt">{m.prompt}</p>
+ {m.choices&&m.choices.length>0&&<div className="bh-micro-choices">{m.choices.map(c=><button key={c} aria-pressed={picked===c} onClick={()=>setPicked(c)}>{c}</button>)}</div>}
+ {m.hint&&<p className="bh-micro-hint">{m.hint}</p>}
+ {done?<p className="bh-micro-status" role="status">✓ Conversado. Sigue subiendo.</p>:<button className="bh-micro-said" onClick={onDone}>Ya lo dije en voz alta <kbd>E</kbd></button>}
+ </aside>;
 }
