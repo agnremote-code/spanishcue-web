@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { demonstrativeObservatory } from "../grammar-worlds/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "El Observatorio de las Distancias | SPANISHCUE",
-  description: "Clase A1 sobre el tema 4 del PCIC: los demostrativos.",
-};
-
-export default function Page() {
-  return <GrammarWorld data={demonstrativeObservatory} />;
+export const metadata=grammarPageMetadata(43);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={43} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

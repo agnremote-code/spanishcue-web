@@ -1,3 +1,4 @@
+import GrammarPage from "../../grammar-classroom/GrammarPage";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -39,9 +40,10 @@ export async function generateMetadata({
 }
 
 export default async function LessonPage({
-  params,
+  params, searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<Record<string,string|string[]|undefined>>;
 }) {
   const { id } = await params;
   const lesson = lessons.find((item) => String(item.id) === id);
@@ -54,7 +56,7 @@ export default async function LessonPage({
 
   if (isPhoneticsLesson(lesson.id)) return <PhoneticsLesson key={lesson.id} lessonId={lesson.id} />;
 
-  return (
+  const original = (
     <div className="teacher-app">
       <main className="teacher-main" style={{ maxWidth: 960 }}>
         <Link href="/">← Biblioteca</Link>
@@ -182,4 +184,9 @@ export default async function LessonPage({
       </main>
     </div>
   );
+  if (lesson.category === "Gramática") {
+    const query=await searchParams;
+    return <GrammarPage id={lesson.id} reference={query?.reference==="1"}>{original}</GrammarPage>;
+  }
+  return original;
 }

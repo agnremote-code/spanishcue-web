@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { articleGallery } from "../grammar-worlds/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = { title: "La Galería de los Artículos · SPANISHCUE", description: articleGallery.subtitle };
-export default function Page() { return <GrammarWorld data={articleGallery} />; }
+export const metadata=grammarPageMetadata(42);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={42} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
+}

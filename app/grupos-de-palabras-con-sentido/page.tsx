@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { gruposConSentido } from "../phrase-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "El Taller de las Capas · Gramática A1 · SPANISHCUE",
-  description: gruposConSentido.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={gruposConSentido} />;
+export const metadata=grammarPageMetadata(110);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={110} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

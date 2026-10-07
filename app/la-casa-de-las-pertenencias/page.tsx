@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { possessionHouse } from "../grammar-worlds/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "La Casa de las Pertenencias | SPANISHCUE",
-  description: "Clase A1 sobre el tema 5 del PCIC: los posesivos.",
-};
-
-export default function Page() {
-  return <GrammarWorld data={possessionHouse} />;
+export const metadata=grammarPageMetadata(44);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={44} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

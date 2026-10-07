@@ -30,4 +30,5 @@ export type ClassroomLesson = LessonContext & {
   audioSrc: string;
   originalPath: string;
   isNew: boolean;
+  paradigm?: {person:string;hablar:string;comer:string;vivir:string}[];
 };

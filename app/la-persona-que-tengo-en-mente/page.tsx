@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import SyntaxLab from "../syntax-labs/SyntaxLab";
-import { laPersonaQueTengoEnMente } from "../syntax-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "La persona que tengo en mente · Gramática B1 · SPANISHCUE",
-  description: laPersonaQueTengoEnMente.subtitle,
-};
-
-export default function Page() {
-  return <SyntaxLab data={laPersonaQueTengoEnMente} />;
+export const metadata=grammarPageMetadata(218);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={218} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

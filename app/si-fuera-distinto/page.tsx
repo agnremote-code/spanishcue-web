@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import SyntaxLab from "../syntax-labs/SyntaxLab";
-import { siFueraDistinto } from "../syntax-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "Si fuera distinto… · Gramática B2 · SPANISHCUE",
-  description: siFueraDistinto.subtitle,
-};
-
-export default function Page() {
-  return <SyntaxLab data={siFueraDistinto} />;
+export const metadata=grammarPageMetadata(219);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={219} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

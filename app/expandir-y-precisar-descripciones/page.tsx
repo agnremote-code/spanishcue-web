@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { describirConPrecision } from "../phrase-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "El Estudio del Detalle · Gramática A2 · SPANISHCUE",
-  description: describirConPrecision.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={describirConPrecision} />;
+export const metadata=grammarPageMetadata(112);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={112} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

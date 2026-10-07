@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { nounFactory } from "../grammar-worlds/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = { title: "La Fábrica de los Nombres · SPANISHCUE", description: nounFactory.subtitle };
-export default function Page() { return <GrammarWorld data={nounFactory} />; }
+export const metadata=grammarPageMetadata(40);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={40} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
+}

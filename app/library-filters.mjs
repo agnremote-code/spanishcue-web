@@ -25,7 +25,7 @@ export function availableLevels(lessons, category = 'Todas') {
 /** Return the exact lesson collection opened by a category/family action. */
 export function familyLessonsForCategory(
   lessons,
-  { category = 'Todas', conversationMode = 'all', grammarMode = 'general', grammarTopic } = {},
+  { category = 'Todas', conversationMode = 'all', grammarMode = 'general', grammarTopic = '' } = {},
 ) {
   if (category === 'Todas') {
     return lessons.filter(lesson => !lesson.countryCollection);
