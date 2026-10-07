@@ -334,24 +334,30 @@ function heartGeometry() {
 // they read from a distance. Each is one merged geometry placed on a part.
 function cutGeometry() {
   return cached('wound-cut', () => merge([
-    moved(new THREE.BoxGeometry(0.034, 0.006, 0.008), 0, 0, 0, 0, 0, 0.55),
-    moved(new THREE.CapsuleGeometry(0.0034, 0.052, 3, 6), 0.03, -0.034, -0.012, 0.2, 0, -0.1),
-    moved(new THREE.SphereGeometry(0.0045, 6, 5), 0.035, -0.066, -0.014),
+    moved(new THREE.BoxGeometry(0.042, 0.009, 0.01), 0, 0, 0, 0, 0, 0.55),
+    moved(new THREE.SphereGeometry(0.011, 7, 6), 0.004, -0.004, 0, 0, 0, 0, 1.3, 0.8, 0.5),
+    moved(new THREE.CapsuleGeometry(0.0045, 0.06, 3, 6), 0.034, -0.04, -0.014, 0.2, 0, -0.12),
+    moved(new THREE.SphereGeometry(0.006, 6, 5), 0.04, -0.078, -0.018),
   ]));
 }
 function stainGeometry(key: string, sx: number, sy: number) {
   return cached(`wound-stain-${key}`, () => merge([
-    moved(new THREE.SphereGeometry(1, 10, 8), 0, 0, 0, 0, 0, 0, sx, sy, 0.012),
-    moved(new THREE.SphereGeometry(1, 8, 6), sx * 0.55, -sy * 0.75, 0, 0, 0, 0, sx * 0.45, sy * 0.5, 0.01),
-    moved(new THREE.CapsuleGeometry(0.004, sy * 0.9, 3, 6), -sx * 0.25, -sy * 1.1, 0),
+    moved(new THREE.SphereGeometry(1, 10, 8), 0, 0, 0, 0, 0, 0, sx, sy, 0.014),
+    moved(new THREE.SphereGeometry(1, 8, 6), sx * 0.55, -sy * 0.75, 0, 0, 0, 0, sx * 0.45, sy * 0.5, 0.012),
+    moved(new THREE.SphereGeometry(1, 8, 6), -sx * 0.5, sy * 0.4, 0, 0, 0, 0, sx * 0.35, sy * 0.35, 0.011),
+    moved(new THREE.CapsuleGeometry(0.006, sy * 1.2, 3, 6), -sx * 0.25, -sy * 1.3, 0.004),
+    moved(new THREE.CapsuleGeometry(0.004, sy * 0.7, 3, 6), sx * 0.35, -sy * 1.5, 0.004),
   ]));
 }
 // A band of blood on a limb, with a trickle running down it.
 function limbWoundGeometry(key: string, radius: number) {
   return cached(`wound-limb-${key}-${radius.toFixed(3)}`, () => merge([
-    moved(new THREE.TorusGeometry(radius * 1.02, radius * 0.4, 6, 14), 0, 0, 0, Math.PI / 2, 0, 0, 1, 1, 0.5),
-    moved(new THREE.CapsuleGeometry(0.0045, 0.09, 3, 6), 0, -0.07, radius * 0.95),
-    moved(new THREE.SphereGeometry(0.0055, 6, 5), 0, -0.125, radius * 0.9),
+    // A ring just outside the limb, a raised gash on its front, trickles below.
+    moved(new THREE.TorusGeometry(radius * 0.72, radius * 0.4, 6, 14), 0, 0, 0, Math.PI / 2),
+    moved(new THREE.SphereGeometry(1, 10, 7), 0, 0.01, radius * 0.72, 0, 0, 0.4, radius * 0.5, radius * 0.9, radius * 0.5),
+    moved(new THREE.CapsuleGeometry(0.0065, 0.1, 3, 6), 0.004, -0.09, radius * 0.88),
+    moved(new THREE.CapsuleGeometry(0.0045, 0.06, 3, 6), -radius * 0.55, -0.07, radius * 0.7),
+    moved(new THREE.SphereGeometry(0.008, 6, 5), 0.004, -0.15, radius * 0.82),
   ]));
 }
 // The torn edge of a sleeve: a jagged ring where the cloth ends.
@@ -394,7 +400,7 @@ function signTexture(text: string) {
 const signMaterials = new Map<string, THREE.MeshStandardMaterial>();
 // A protest sign: a 60 x 40 cm board on a stick, the slogan picked by seed.
 function signProp(seed: number) {
-  const text = SLOGANS[seed % SLOGANS.length];
+  const text = SLOGANS[Math.floor(rng(seed ^ 0x5106)() * SLOGANS.length) % SLOGANS.length];
   const group = new THREE.Group();
   group.add(new THREE.Mesh(cached('sign-stick', () => moved(new THREE.CylinderGeometry(0.014, 0.014, 0.62, 6), 0, -0.31, 0)), mat('#b48a4e', 0.9)));
   let board = signMaterials.get(text);
@@ -404,7 +410,10 @@ function signProp(seed: number) {
     signMaterials.set(text, board);
   }
   const plank = new THREE.Mesh(cached('sign-board', () => new THREE.BoxGeometry(0.6, 0.4, 0.016)), board);
+  // The stick runs down the hand (-y) and the arms point up, so the board
+  // sits at the far end and is turned over to read upright.
   plank.position.set(0, -0.8, 0);
+  plank.rotation.z = Math.PI;
   group.add(plank);
   group.userData.slogan = text;
   return group;
@@ -417,7 +426,7 @@ function knifeProp() {
   group.add(new THREE.Mesh(cached('knife-blade', () => {
     const outline = new THREE.Shape([new THREE.Vector2(0, -0.016), new THREE.Vector2(0.17, -0.016), new THREE.Vector2(0.22, 0.004), new THREE.Vector2(0.17, 0.016), new THREE.Vector2(0, 0.016)]);
     return moved(new THREE.ExtrudeGeometry(outline, { depth: 0.003, bevelEnabled: false }), 0, 0, 0.01, 0, -Math.PI / 2, 0);
-  }), mat('#b9bcc2', 0.25, 0.85)));
+  }), mat('#d4d8de', 0.3, 0.45)));
   return group;
 }
 
@@ -704,7 +713,7 @@ export function createPerson(look: Look, shadows = true): Person {
   }
   if (L.top === 'apron') mesh(cached('apron', () => new THREE.BoxGeometry(0.27, 0.66, 0.012)), cloth(L.topColor), torso, 0, 0.06, front + 0.01).rotation.x = -0.04;
   if (L.top === 'hoodie') mesh(cached('hood', () => moved(new THREE.SphereGeometry(0.1, 12, 8, 0, Math.PI * 2, 0, Math.PI * 0.6), 0, 0, 0, -0.9, 0, 0, 1.25, 0.8, 0.9)), cloth(L.topColor), torso, 0, 0.44, -front * 0.75);
-  if (L.top === 'uniform') mesh(cached('belt', () => moved(new THREE.TorusGeometry(1, 0.06, 4, 16), 0, 0, 0, Math.PI / 2, 0, 0, 1, 1, 0.75)), mat('#1a1a1c', 0.5), torso, 0, -0.06, 0).scale.set(d.waist * 1.04, d.waist * 1.04, 1);
+  if (L.top === 'uniform') mesh(cached('belt', () => moved(new THREE.TorusGeometry(1, 0.06, 4, 16), 0, 0, 0, Math.PI / 2, 0, 0, 1, 1, 0.75)), mat('#1a1a1c', 0.5), torso, 0, -0.06, 0).scale.set(d.waist * 1.04, d.waist * 1.04, d.waist * 1.04);
 
   // Head: skull, features and hair.
   const head = new THREE.Group();
@@ -790,10 +799,10 @@ export function createPerson(look: Look, shadows = true): Person {
   }
   if (ex.has('bruise')) {
     const bruise = mesh(cached('bruise', () => merge([
-      moved(new THREE.SphereGeometry(1, 10, 8), 0, 0, 0, 0, 0, 0, 0.024, 0.02, 0.009),
-      moved(new THREE.SphereGeometry(1, 8, 6), 0.014, -0.012, 0, 0, 0, 0, 0.012, 0.011, 0.008),
-    ])), mat('#5a2a6a', 0.7), head, 0.064 * wide, HEAD_Y - 0.018, 0.072);
-    bruise.rotation.y = 0.75;
+      moved(new THREE.SphereGeometry(1, 10, 8), 0, 0, 0, 0, 0, 0, 0.036, 0.032, 0.007),
+      moved(new THREE.SphereGeometry(1, 8, 6), 0.016, -0.02, 0, 0, 0, 0, 0.02, 0.017, 0.006),
+    ])), mat('#4e2466', 0.7), head, 0.05 * wide, HEAD_Y - 0.022, 0.078);
+    bruise.rotation.y = 0.6;
   }
   const hatColor = r() < 0.5 ? '#1e2026' : shade(L.topColor, -0.1);
   if (L.hairStyle === 'cap' || L.top === 'uniform') {
@@ -820,7 +829,7 @@ export function createPerson(look: Look, shadows = true): Person {
 
   // A spreading stain on the top, high on the chest.
   if (ex.has('blood-shirt')) {
-    const stain = mesh(stainGeometry('shirt', 0.062, 0.075), blood, torso, 0.03, 0.2, front * 1.02);
+    const stain = mesh(stainGeometry('shirt', 0.075, 0.085), blood, torso, 0.03, 0.2, front * 0.96);
     stain.rotation.set(-0.12, 0.12, 0);
   }
 
@@ -870,12 +879,12 @@ export function createPerson(look: Look, shadows = true): Person {
     h.scale.setScalar(L.body === 'f' ? 0.88 : 1);
     if (ex.has('blood-hands')) {
       const palm = mesh(cached('bloody-palm', () => new THREE.SphereGeometry(1, 9, 7)), blood, hand, -side * 0.011, -0.042, 0.008);
-      palm.scale.set(0.017, 0.044, 0.034);
+      palm.scale.set(0.022, 0.052, 0.042);
       palm.rotation.y = side * 0.5;
     }
     if (side === 1 && ex.has('blood-arm')) {
       if (longSleeves) mesh(tornSleeveGeometry(armR * 0.84), sleeve, fore, 0, -0.07, 0);
-      mesh(limbWoundGeometry('arm', armR * 0.76), blood, fore, 0, -0.14, 0);
+      mesh(limbWoundGeometry('arm', armR * 0.8), blood, fore, 0, -0.13, 0);
     }
     return { arm, fore, hand };
   };
@@ -894,7 +903,7 @@ export function createPerson(look: Look, shadows = true): Person {
     leg.position.set(side * d.hip * 0.47, -HIP_DROP, 0);
     hips.add(leg);
     mesh(thighGeo, thighMat, leg);
-    if (side === -1 && ex.has('blood-leg')) mesh(limbWoundGeometry('leg', legRad * 0.9), blood, leg, 0, -0.2, 0);
+    if (side === -1 && ex.has('blood-leg')) mesh(limbWoundGeometry('leg', legRad * 0.92), blood, leg, 0, -0.2, 0);
     const shin = new THREE.Group();
     shin.position.y = -THIGH;
     leg.add(shin);
@@ -1079,7 +1088,8 @@ const POSE_PROPS: Partial<Record<Pose, { kind: string; hand: 'R' | 'L' | 'torso'
   fish: { kind: 'rod', hand: 'R', at: [0, -0.05, 0.02], rot: [2.3, 0, 0] },
   cook: { kind: 'spatula', hand: 'R', at: [0, -0.05, 0.02], rot: [-0.3, 0, 0] },
   read: { kind: 'book', hand: 'torso', at: [0, 0.2, 0.3], rot: [-0.85, 0, 0] },
-  knife: { kind: 'knife', hand: 'R', at: [0, -0.05, 0.03], rot: [-0.15, 0, 0] },
+  // The fist points down the forearm (-y of the hand), so the blade goes there.
+  knife: { kind: 'knife', hand: 'R', at: [0, -0.045, 0.03], rot: [Math.PI / 2 + 0.2, 0, 0] },
   sign: { kind: 'sign', hand: 'R', at: [0, -0.03, 0.01], rot: [0, 0, 0] },
   'bag-run': { kind: 'handbag', hand: 'torso', at: [0.05, 0.22, 0.3], rot: [0.1, 0, -0.15] },
 };
