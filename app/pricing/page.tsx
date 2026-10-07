@@ -20,8 +20,7 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = localeFromHeaders(await headers());
   const es = locale === "es";
-  const url = "https://spanishcue.com/pricing";
-  const canonical = es ? url : `${url}?lang=en`;
+  const canonical = "https://spanishcue.com/pricing";
   const title = es ? "Precios: Gratis y PRO | SPANISHCUE" : "Pricing: Free and PRO | SPANISHCUE";
   const config = billingConfig(env);
   const checkoutLive = config.paypalEnv === "live" && paypalReady(config) && Boolean(legalOperator(env));
@@ -35,10 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: {
-      canonical,
-      languages: { es: url, en: `${url}?lang=en`, "x-default": url },
-    },
+    alternates: { canonical },
     openGraph: { title, description, url: canonical, images: [socialPreviewImage] },
     twitter: { card: "summary_large_image", title, description, images: [socialPreviewUrl] },
     robots: { index: true, follow: true },

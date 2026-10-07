@@ -25,6 +25,7 @@ import {
   localeFromHeaders,
   normalizeLocale,
 } from "../app/i18n/messages";
+import { robotsHeaderFor } from "../app/seo";
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
@@ -60,6 +61,10 @@ function setSecurityHeaders(headers: Headers, url: URL, locale: string): void {
   // Autoestudio lets learners record themselves; the audio never leaves the browser.
   headers.set('Permissions-Policy',isAutoestudioPath(url.pathname)?'camera=(), microphone=(self), geolocation=()':'camera=(), microphone=(), geolocation=()');
   headers.set('Content-Language',locale);
+  // Account, checkout, admin, API and campaign-only surfaces stay out of search
+  // through this header plus the page's robots metadata (never via robots.txt).
+  const robots = robotsHeaderFor(url.pathname);
+  if (robots) headers.set('X-Robots-Tag',robots);
   if (url.protocol === 'https:') {
     headers.set('Strict-Transport-Security','max-age=31536000; includeSubDomains');
   }
