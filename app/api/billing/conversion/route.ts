@@ -20,5 +20,5 @@ export async function POST(request: Request) {
   if (typeof subscriptionId !== "string" || subscriptionId.length < 1 || subscriptionId.length > 160) return Response.json({ error: "Solicitud no válida." }, { status: 400 });
   const conversion = await claimFirstPaidConversionForUser(env.DB, userId, subscriptionId, config.paypalEnv);
   if (!conversion) return new Response(null, { status: 404, headers: { "cache-control": "private, no-store" } });
-  return Response.json({ transactionId: conversion.transactionId }, { headers: { "cache-control": "private, no-store" } });
+  return Response.json(conversion, { headers: { "cache-control": "private, no-store" } });
 }

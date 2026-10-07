@@ -141,8 +141,15 @@ jobs:
           VARS="${PRODUCTION_VARS_JSON:-}"
           if [ -z "$VARS" ]; then VARS='{}'; fi
           echo "$VARS" | jq -e 'type == "object"' >/dev/null
+          VARS="$(echo "$VARS" | jq -c '
+            .NEXT_PUBLIC_GA4_MEASUREMENT_ID //= "G-6C7DY2C5LN" |
+            .NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID //= "AW-17144698608" |
+            .NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL //= "PnsSCLfHuJQdEPCtne8_" |
+            .ANALYTICS_CONVERSIONS_ENABLED //= "true"
+          ')"
+          printf 'PRODUCTION_VARS_JSON=%s\n' "$VARS" >> "$GITHUB_ENV"
           for key in NEXT_PUBLIC_GA4_MEASUREMENT_ID NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL; do
-            value="$(echo "$VARS" | jq -r --arg key "$key" '.[$key] // ""')"
+            value="$(echo "$VARS" | jq -r --arg key "$key" '.[$key]')"
             printf '%s=%s\n' "$key" "$value" >> "$GITHUB_ENV"
           done
 
