@@ -370,10 +370,10 @@ export async function claimFirstPaidConversionForUser(
        AND subscription.user_id = ? AND subscription.provider_subscription_id = ?
        AND payment.status = 'COMPLETED'
      LIMIT 1`,
-  ).bind(environment, userId, providerSubscriptionId).first<{ id: number; transactionId: string }>();
+  ).bind(environment, userId, providerSubscriptionId).first<{ id: number; transactionId: string; amountCents: number; currency: string }>();
   if (!event) return null;
   const claimed = await db.prepare(
     `UPDATE billing_outbox_events SET delivered_at = ? WHERE id = ? AND delivered_at IS NULL`,
   ).bind(now(), event.id).run();
-  return (claimed.meta.changes ?? 0) === 1 ? { transactionId: event.transactionId } : null;
+  return (claimed.meta.changes ?? 0) === 1\n    ? { transactionId: event.transactionId, value: event.amountCents / 100, currency: event.currency }\n    : null;
 }
