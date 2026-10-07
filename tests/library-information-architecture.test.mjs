@@ -36,7 +36,7 @@ test("family sources match the destination shown after a filter resets level", (
   assert.deepEqual(filters.familyLessonsForCategory(lessons, { category: "Conversación", conversationMode: "all" }), lessons.slice(0, 4));
   assert.deepEqual(filters.familyLessonsForCategory(lessons, { category: "Gramática", grammarMode: "system" }), [lessons[4]]);
   assert.deepEqual(filters.familyLessonsForCategory(lessons, { category: "Gramática", grammarMode: "all" }), lessons.slice(4));
-  assert.deepEqual(filters.familyLessonsForCategory(lessons, { category: "Todas" }), [lessons[0], lessons[1], lessons[2], lessons[5]]);
+  assert.deepEqual(filters.familyLessonsForCategory(lessons, { category: "Todas" }), [lessons[0], lessons[1], lessons[2], lessons[4], lessons[5]]);
 });
 
 test("library shell follows category, family, level, lessons and removes duplicate navigation", async () => {
@@ -66,7 +66,7 @@ test("featured lessons are compact, curated and responsive", async () => {
   ]);
 
   assert.match(sections, /CLASES DESTACADAS/);
-  assert.match(sections, /Probá una clase antes de elegir\./);
+  assert.match(sections, /Prueba una clase antes de elegir\./);
   assert.match(sections, /selectFreeProductSamples\(lessons\)\.slice\(0, 4\)/);
   assert.match(styles, /@media \(max-width: 700px\)/);
   assert.match(styles, /overflow-x:\s*auto/);

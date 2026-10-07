@@ -1,7 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { compareEnglishCopy, filterReviewedChanges } from '../scripts/check-english-copy.mjs';
+import { APPROVAL_MANIFESTS, compareEnglishCopy, relocateEnglishSources, filterReviewedChanges, loadApprovedAdditions } from '../scripts/check-english-copy.mjs';
+import { existsSync, readFileSync } from 'node:fs';
 const compare = (before, after, path = 'app/example.tsx') => compareEnglishCopy(new Map([[path, before]]), new Map([[path, after]]));
+test('exact reference-page relocation preserves English checks for edits, omissions and duplicate copies',()=>{
+  const from='app/past-b1/page.tsx',to='app/past-b1/LegacyLesson.tsx',source='const en={title:"Past habits"};';
+  const before=relocateEnglishSources(new Map([[from,source]]));
+  assert.deepEqual(compareEnglishCopy(before,new Map([[to,source]])),[]);
+  assert.equal(compareEnglishCopy(before,new Map([[to,source.replace('habits','events')]])).length,2);
+  assert.equal(compareEnglishCopy(before,new Map()).length,1);
+  assert.equal(compareEnglishCopy(before,new Map([[from,source],[to,source]])).length,1);
+});
 test('allows Spanish edits while preserving explicit English objects, helpers and ternaries', () => {
   const before = 'const c = {en:{help:"Listen"},es:{help:"Escuchá"}}; t("Probá", "Try"); const es = locale === "es"; const a = es ? "Mirá" : "Look";';
   assert.deepEqual(compare(before, before.replace('Escuchá', 'Escucha').replace('Probá', 'Prueba').replace('Mirá', 'Mira')), []);
@@ -43,4 +52,24 @@ test('reviewed banner change exempts only its exact path, text and occurrence', 
     {path, text:'JUST ADDED', kind:'english-changed-or-deleted', reason:'Owner requested banner redesign'},
     {path, text:'NEW CLASSES!', kind:'english-added', reason:'Owner requested banner redesign'}
   ]), findings.slice(2));
+});
+test('approval manifests are explicit, exact and carry an authorization note', () => {
+  assert.ok(APPROVAL_MANIFESTS.includes('docs/audits/seo-english-copy-additions-20261007.json'));
+  for (const path of APPROVAL_MANIFESTS) {
+    assert.ok(existsSync(path), path);
+    const manifest = JSON.parse(readFileSync(path, 'utf8'));
+    assert.equal(manifest.version, 1, path);
+    assert.ok(typeof manifest.authorization === 'string' && manifest.authorization.length > 20, path);
+  }
+  const additions = loadApprovedAdditions(process.cwd());
+  assert.ok(additions.length > 0);
+  for (const addition of additions) {
+    assert.match(addition.path, /^(?:app|components|lib|content|data|public|server|worker)\//);
+    assert.ok(addition.text.trim().length > 0);
+  }
+});
+test('ignores URL templates, paths and locale codes that only live under English keys', () => {
+  const before = 'const alt = {en: {href: `${url}?lang=en`, code: "en", path: "/resources", label: "Open lesson"}}; const c = locale === "es" ? url : `${url}?lang=en`;';
+  assert.deepEqual(compare(before, 'const alt = {en: {href: url, code: "en-US", label: "Open lesson"}};'), []);
+  assert.equal(compare(before, before.replace('Open lesson', 'Open class')).length, 2);
 });

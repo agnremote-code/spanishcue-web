@@ -54,7 +54,7 @@ test('one paid listening entry is discoverable in every level with a valid route
  const result=await build({stdin:{contents:'export {lessons} from "./app/lesson-catalog"; export {isFreeLesson} from "./app/access-policy";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
  const {lessons,isFreeLesson}=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
  const matches=lessons.filter(l=>l.path==='/the-sound-map');assert.equal(matches.length,1);
- const lesson=matches[0];assert.equal(lesson.id,230);assert.equal(lesson.category,'Escucha');assert.equal(isFreeLesson(230),false);
+ const lesson=matches[0];assert.equal(lesson.id,236);assert.equal(lesson.category,'Escucha');assert.equal(isFreeLesson(236),false);
  assert.deepEqual(lesson.levels,['A0','A1','A2','B1','B2','C1','C2']);assert.ok(lesson.routeSequence>0);
  assert.ok((await readFile(new URL('../public'+lesson.image,import.meta.url))).length>100);
 });

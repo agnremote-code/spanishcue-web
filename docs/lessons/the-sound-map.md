@@ -1,6 +1,6 @@
 # The Sound Map
 
-Route `/the-sound-map`, catalog ID 230, paid Escucha lesson. One city and one level selector cover A0, A1, A2, B1, B2, C1 and C2. Six scenes per level have independently authored scripts, questions and evidence. A0 supports English instructions, vocabulary and a phrase builder; advanced tasks use explicit self-review criteria rather than fabricated automated grading.
+Route `/the-sound-map`, catalog ID 236, paid Escucha lesson. One city and one level selector cover A0, A1, A2, B1, B2, C1 and C2. Six scenes per level have independently authored scripts, questions and evidence. A0 supports English instructions, vocabulary and a phrase builder; advanced tasks use explicit self-review criteria rather than fabricated automated grading.
 
 ## Reused foundations
 
@@ -29,3 +29,5 @@ Browser visual QA was unavailable in this managed session (no supported control-
 ## Integration notes
 
 The only overlapping file with open SEO PR #126 is `tests/rendered-html.test.mjs`: this change updates the exact existing catalog counts; the inspected SEO patch changes later, separate SEO assertions. No SEO implementation or product decisions are changed.
+
+Integrated main `e0d95602105188769caf108d644ae2f6938e0fa8` after SEO, banner and grammar merges. Catalog ID is 236 because newly merged grammar uses 230–235. Existing IDs, routes, previews and all upstream functionality are preserved.

@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { quantityMarket } from "../grammar-worlds/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "El Mercado de las Cantidades | SPANISHCUE",
-  description: "Clase A1 sobre el tema 6 del PCIC: los cuantificadores.",
-};
-
-export default function Page() {
-  return <GrammarWorld data={quantityMarket} />;
+export const metadata=grammarPageMetadata(45);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={45} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

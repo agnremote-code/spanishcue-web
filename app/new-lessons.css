@@ -1,4 +1,6 @@
 .new-lessons{
+  position:relative;
+  overflow:hidden;
   display:grid;
   grid-template-columns:minmax(0,1fr) auto;
   align-items:center;
@@ -67,3 +69,15 @@
   .new-lessons + .library-heading{margin-top:20px}
 }
 @media(prefers-reduced-motion:reduce){.new-lessons strong{transition:none}}
+
+.new-lessons-feature{animation:new-lessons-arrive .38s ease-out both}
+.new-lessons-feature:hover .new-lessons-preview,.new-lessons-feature:focus-visible .new-lessons-preview{box-shadow:0 12px 28px #102a4326;transform:translateY(-2px)}
+.new-lessons-preview{transition:transform .25s ease,box-shadow .25s ease}
+.new-lessons-controls button{transition:background .2s,border-color .2s,transform .2s}
+.new-lessons-controls button:hover{transform:translateY(-2px)}
+.new-lessons-progress{position:absolute;inset:auto 0 0;height:3px;background:#dcecf0;pointer-events:none}
+.new-lessons-progress span{display:block;width:100%;height:100%;background:#bf584d;transform-origin:left;animation:new-lessons-countdown 4s linear both}
+.new-lessons-progress span.is-paused{animation-play-state:paused}
+@keyframes new-lessons-countdown{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes new-lessons-arrive{from{opacity:.55;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.new-lessons-feature,.new-lessons-progress span{animation:none}.new-lessons-preview,.new-lessons-controls button{transition:none}}

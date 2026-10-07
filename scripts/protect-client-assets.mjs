@@ -58,6 +58,9 @@ const publicRoots = new Set([
   "app/Library.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
   "app/resources/ResourceCatalog.tsx",
+  // Public question bank filters: the questions are free teaching content and
+  // already sit in the server HTML; the chunk carries no lesson bodies.
+  "app/spanish-conversation-questions/QuestionBank.tsx",
   "app/PasswordResetButton.tsx",
   "app/acceso/CheckoutButton.tsx",
   "app/acceso/FounderAccessForm.tsx",
@@ -76,6 +79,8 @@ const publicRoots = new Set([
   "app/sistema-verbal/page.tsx",
   "app/verbal-system/SystemHub.tsx",
   "app/grammar-worlds/GrammarWorld.tsx",
+  // Shared renderer only; paid lesson bodies arrive in authorized page props.
+  "app/grammar-classroom/Classroom.tsx",
   "app/conversation-worlds/ConversationWorld.tsx",
   // Autoestudio engines carry no lesson bodies: module data arrives only in
   // the authorized page render (the Worker gates PRO weeks).

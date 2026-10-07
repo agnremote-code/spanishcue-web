@@ -14,6 +14,7 @@ let workerOutput="";
 const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});
 try{
  await run(['--test','tests/sound-map.test.mjs','tests/sound-map-ui.test.mjs','tests/sound-map-page-ui.test.mjs','tests/sound-map-audio-ui.test.mjs']);
+ await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
  await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);
  await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);
  await run(['--test','tests/urban-city.test.mjs','tests/noche-abierta.test.mjs']);
@@ -24,6 +25,7 @@ try{
  server=spawn(process.execPath,[cli,'dev','--config',config,'--port','0','--ip','127.0.0.1','--local','--persist-to',state,'--var',`AUTOESTUDIO_SHARE_SECRET:${shareTestSecret}`],{env:workerEnv,stdio:['ignore','pipe','pipe']});
  for(const stream of [server.stdout,server.stderr])stream.on('data',chunk=>{workerOutput=(workerOutput+chunk.toString().replaceAll(shareTestSecret,'[test-secret]')).slice(-16000)});
  const origin=await new Promise((resolve,reject)=>{let output='';const timer=setTimeout(()=>reject(new Error(`Worker startup timed out: ${output.slice(-2400)}`)),Number(process.env.SPANISHCUE_TEST_WORKER_TIMEOUT_MS)||30000);function read(chunk){output+=chunk.toString();const m=output.match(/Ready on (http:\/\/127\.0\.0\.1:\d+)/);if(m){clearTimeout(timer);resolve(m[1])}}server.stdout.on('data',read);server.stderr.on('data',read);server.once('error',reject);server.once('exit',code=>{clearTimeout(timer);reject(new Error(`Worker exited ${code}: ${output.slice(-1200)}`))})});
+ await run(['--test','tests/grammar-classroom-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/lesson-reports-routes.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/country-flagships.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin});
  await run(['--test','tests/autoestudio-routes.test.mjs','tests/autoestudio-share-worker.test.mjs'],{...process.env,CHESPANISH_TEST_ORIGIN:origin,AUTOESTUDIO_TEST_SHARE_SECRET:shareTestSecret});

@@ -1,0 +1,1618 @@
+{
+  "baseSha": "b5a8cad64bbdfffd2c895884ef355f0be8c6f1bb",
+  "total": 51,
+  "lessons": [
+    {
+      "id": 220,
+      "path": "/aunque-cambie-el-dato",
+      "title": "Aunque cambie el dato…",
+      "level": "B2",
+      "topic": "Indicativo o subjuntivo con aunque según la postura: información afirmada, presupuesta o hipotética",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 3,
+        "timeline": 7,
+        "patterns": 3,
+        "decisions": 10,
+        "questionAnswerCycle": 0,
+        "repairs": 4,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 6
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Presentar información nueva con aunque + indicativo",
+        "Tratar información conocida o presupuesta con subjuntivo",
+        "Conceder una objeción y sostener o revisar una posición"
+      ]
+    },
+    {
+      "id": 219,
+      "path": "/si-fuera-distinto",
+      "title": "Si fuera distinto…",
+      "level": "B2",
+      "topic": "Condiciones hipotéticas presentes o futuras con imperfecto de subjuntivo y condicional simple",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 3,
+        "timeline": 7,
+        "patterns": 3,
+        "decisions": 10,
+        "questionAnswerCycle": 0,
+        "repairs": 4,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 6
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Contrastar condiciones reales e hipotéticas",
+        "Correlacionar imperfecto de subjuntivo y condicional simple",
+        "Negociar consecuencias y variar el orden de las cláusulas"
+      ]
+    },
+    {
+      "id": 140,
+      "path": "/sistema-verbal/presente-de-indicativo",
+      "title": "Presente de indicativo",
+      "level": "A1",
+      "topic": "¿Qué ocurre ahora, habitualmente o en general?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "formationEn": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de presente de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 141,
+      "path": "/sistema-verbal/preterito-perfecto-compuesto-indicativo",
+      "title": "Pretérito perfecto compuesto de indicativo",
+      "level": "A2",
+      "topic": "¿Qué pasado sigue conectado con el presente?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "formationEn": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito perfecto compuesto de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 142,
+      "path": "/sistema-verbal/preterito-perfecto-simple-indicativo",
+      "title": "Pretérito perfecto simple de indicativo",
+      "level": "A2",
+      "topic": "¿Qué ocurrió y quedó cerrado?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "formationEn": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito perfecto simple de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 143,
+      "path": "/sistema-verbal/preterito-imperfecto-indicativo",
+      "title": "Pretérito imperfecto de indicativo",
+      "level": "A2",
+      "topic": "¿Cómo era la escena o qué ocurría habitualmente?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "formationEn": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito imperfecto de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 144,
+      "path": "/sistema-verbal/futuro-simple-indicativo",
+      "title": "Futuro simple de indicativo",
+      "level": "A2",
+      "topic": "¿Qué ocurrirá o qué suponemos que ocurre?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "formationEn": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de futuro simple de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 145,
+      "path": "/sistema-verbal/imperativo",
+      "title": "Imperativo afirmativo y negativo",
+      "level": "A2",
+      "topic": "¿Cómo dirigimos una acción?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "formationEn": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de imperativo afirmativo y negativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 146,
+      "path": "/sistema-verbal/condicional-simple-indicativo",
+      "title": "Condicional simple de indicativo",
+      "level": "B1",
+      "topic": "¿Qué ocurriría bajo una condición o desde una perspectiva pasada?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de condicional simple de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 147,
+      "path": "/sistema-verbal/preterito-pluscuamperfecto-indicativo",
+      "title": "Pretérito pluscuamperfecto de indicativo",
+      "level": "B1",
+      "topic": "¿Qué ya había ocurrido antes de otro momento pasado?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito pluscuamperfecto de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 148,
+      "path": "/sistema-verbal/presente-de-subjuntivo",
+      "title": "Presente de subjuntivo",
+      "level": "B1",
+      "topic": "¿La acción se afirma o aparece filtrada por otra perspectiva?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de presente de subjuntivo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 149,
+      "path": "/sistema-verbal/preterito-perfecto-subjuntivo",
+      "title": "Pretérito perfecto de subjuntivo",
+      "level": "B1",
+      "topic": "¿La acción filtrada ya ocurrió antes de una reacción actual?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito perfecto de subjuntivo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 150,
+      "path": "/sistema-verbal/preterito-imperfecto-subjuntivo",
+      "title": "Pretérito imperfecto de subjuntivo",
+      "level": "B2",
+      "topic": "¿La acción depende de un pasado, una hipótesis o una distancia discursiva?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito imperfecto de subjuntivo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 151,
+      "path": "/sistema-verbal/preterito-pluscuamperfecto-subjuntivo",
+      "title": "Pretérito pluscuamperfecto de subjuntivo",
+      "level": "B2",
+      "topic": "¿Imaginamos o valoramos una acción anterior dentro del pasado?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito pluscuamperfecto de subjuntivo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 152,
+      "path": "/sistema-verbal/condicional-compuesto-indicativo",
+      "title": "Condicional compuesto de indicativo",
+      "level": "B2",
+      "topic": "¿Qué resultado pasado habría ocurrido bajo otras condiciones?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de condicional compuesto de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 153,
+      "path": "/sistema-verbal/futuro-compuesto-indicativo",
+      "title": "Futuro compuesto de indicativo",
+      "level": "B2",
+      "topic": "¿Qué estará terminado antes de un punto futuro?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de futuro compuesto de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 154,
+      "path": "/sistema-verbal/preterito-anterior-indicativo",
+      "title": "Pretérito anterior de indicativo",
+      "level": "C1",
+      "topic": "¿Una acción terminó inmediatamente antes de otra en un relato formal?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 1,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de pretérito anterior de indicativo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 155,
+      "path": "/sistema-verbal/futuro-simple-subjuntivo",
+      "title": "Futuro simple de subjuntivo",
+      "level": "C1",
+      "topic": "¿Estamos ante una condición futura jurídica, solemne o fosilizada?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de futuro simple de subjuntivo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 156,
+      "path": "/sistema-verbal/futuro-perfecto-subjuntivo",
+      "title": "Futuro perfecto de subjuntivo",
+      "level": "C2",
+      "topic": "¿Una condición formal mira una acción ya completada desde el futuro?",
+      "family": "Sistema verbal",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "requires": 2,
+        "formation": 3,
+        "uses": 4,
+        "examples": 6,
+        "contrast": 2,
+        "practice": 5,
+        "transform": 3,
+        "conversation": 8,
+        "regional": 3,
+        "regionalVariants": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la perspectiva de futuro perfecto de subjuntivo",
+        "Construir la forma y contrastarla con alternativas cercanas",
+        "Usarla o reconocerla según su vigencia actual"
+      ]
+    },
+    {
+      "id": 218,
+      "path": "/la-persona-que-tengo-en-mente",
+      "title": "La persona que tengo en mente",
+      "level": "B1",
+      "topic": "Relativas B1 para identificar personas, lugares y cosas, y reparar referencias ambiguas",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 3,
+        "timeline": 7,
+        "patterns": 3,
+        "decisions": 10,
+        "questionAnswerCycle": 0,
+        "repairs": 4,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 6
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Conectar un antecedente expreso con información identificadora",
+        "Usar que productivamente y quien en contextos humanos claros",
+        "Aclarar referentes ambiguos durante una conversación"
+      ]
+    },
+    {
+      "id": 217,
+      "path": "/pero-hay-un-matiz",
+      "title": "Pero hay un matiz",
+      "level": "B1",
+      "topic": "Ni… ni, sin embargo y aunque adversativo para organizar contrastes y contraargumentos B1",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 3,
+        "timeline": 7,
+        "patterns": 3,
+        "decisions": 10,
+        "questionAnswerCycle": 0,
+        "repairs": 4,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 6
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Negar dos alternativas con ni… ni",
+        "Organizar un contrapeso con sin embargo",
+        "Introducir un matiz breve con aunque adversativo"
+      ]
+    },
+    {
+      "id": 214,
+      "path": "/si-pasa-esto",
+      "title": "Si pasa esto…",
+      "level": "A2",
+      "topic": "Condiciones reales y consecuencias prácticas para decidir, resolver y negociar planes cotidianos",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 3,
+        "timeline": 7,
+        "patterns": 3,
+        "decisions": 10,
+        "questionAnswerCycle": 4,
+        "repairs": 4,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 7
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Expresar condiciones reales con si + presente",
+        "Proponer consecuencias prácticas",
+        "Distinguir si condicional de sí afirmativo"
+      ]
+    },
+    {
+      "id": 213,
+      "path": "/antes-despues-cuando",
+      "title": "Antes, después, cuando",
+      "level": "A2",
+      "topic": "Secuencias habituales y factuales con antes de, después de y cuando",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 3,
+        "timeline": 7,
+        "patterns": 3,
+        "decisions": 10,
+        "questionAnswerCycle": 0,
+        "repairs": 4,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 7
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Organizar acciones en una secuencia clara",
+        "Contrastar infinitivo y presente según el enlace",
+        "Narrar rutinas y procesos con fluidez"
+      ]
+    },
+    {
+      "id": 212,
+      "path": "/ideas-dentro-de-ideas",
+      "title": "Ideas dentro de ideas",
+      "level": "A1",
+      "topic": "Actividades, gustos, deseos, opiniones, identificación, razones y objetivos dentro de mensajes A1",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 7,
+        "timeline": 8,
+        "patterns": 7,
+        "decisions": 12,
+        "questionAnswerCycle": 4,
+        "repairs": 5,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 8
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Integrar una actividad u opinión en una idea principal",
+        "Distinguir creer que del relativo que",
+        "Expresar razones con porque y objetivos con para + infinitivo"
+      ]
+    },
+    {
+      "id": 211,
+      "path": "/conecta-la-frase",
+      "title": "Conecta la frase",
+      "level": "A1",
+      "topic": "Y, ni, o, pero y uno… otro para pasar de frases aisladas a mensajes conectados",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "productiveTargets": 5,
+        "timeline": 7,
+        "patterns": 5,
+        "decisions": 10,
+        "questionAnswerCycle": 0,
+        "repairs": 5,
+        "retrieval": 5,
+        "production": 3,
+        "conversation": 8
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Reconocer la relación entre dos ideas",
+        "Elegir el conector por su significado",
+        "Encadenar información personal sin sonar como una lista"
+      ]
+    },
+    {
+      "id": 119,
+      "path": "/la-accion-vista-desde-dentro",
+      "title": "La Cámara de la Acción",
+      "level": "C1",
+      "topic": "Inicio, proceso, logro, acumulación, resultado y aproximación desde la perspectiva del hablante",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 3,
+        "timeline": 5,
+        "chapters": 6,
+        "cases": 4,
+        "orderTasks": 3,
+        "choices": 5,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Elegir desde qué fase presentar una acción",
+        "Contrastar evento, proceso y estado resultante",
+        "Expresar logro, acumulación y aproximación con precisión"
+      ]
+    },
+    {
+      "id": 118,
+      "path": "/cuando-una-frase-puede-significar-dos-cosas",
+      "title": "El Archivo de las Dos Lecturas",
+      "level": "C1",
+      "topic": "Elipsis, dislocación, nominalización y concordancia avanzada para investigar matices y ambigüedades",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 4,
+        "timeline": 5,
+        "chapters": 6,
+        "cases": 4,
+        "orderTasks": 3,
+        "choices": 5,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Proponer y justificar dos interpretaciones",
+        "Controlar roles, alcance y concordancia compleja",
+        "Eliminar o producir deliberadamente una ambigüedad"
+      ]
+    },
+    {
+      "id": 117,
+      "path": "/verbos-que-piden-una-estructura",
+      "title": "El Panel de Conexiones",
+      "level": "B2",
+      "topic": "Régimen preposicional y complemento predicativo: conexiones que completan el verbo y precisan estados",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 4,
+        "timeline": 5,
+        "layers": 6,
+        "principles": 6,
+        "orderTasks": 4,
+        "choices": 7,
+        "transformations": 6,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Elegir la preposición exigida por verbos B2 útiles",
+        "Contrastar nombre, infinitivo y oración con que",
+        "Usar predicativos ligados al sujeto o al objeto"
+      ]
+    },
+    {
+      "id": 116,
+      "path": "/precision-grupo-nominal-adjetival",
+      "title": "La Mesa del Editor",
+      "level": "B2",
+      "topic": "Elipsis contextual, alcance, complementos ambiguos y selección del adjetivo para escribir con precisión",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 4,
+        "timeline": 5,
+        "layers": 4,
+        "principles": 6,
+        "orderTasks": 4,
+        "choices": 6,
+        "transformations": 5,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Interpretar elipsis y modificadores según el contexto",
+        "Resolver ambigüedades de de y del orden de complementos",
+        "Elegir complementos nominales, infinitivos u oraciones"
+      ]
+    },
+    {
+      "id": 115,
+      "path": "/empezar-seguir-repetir-dejar-de-hacer",
+      "title": "La Línea de los Cambios",
+      "level": "B1",
+      "topic": "Soler, volver a, dejar de, ponerse a, estar a punto de y seguir para contar cambios de vida",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 3,
+        "timeline": 5,
+        "layers": 6,
+        "principles": 6,
+        "orderTasks": 4,
+        "choices": 6,
+        "transformations": 6,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Presentar hábito, repetición, interrupción y comienzo",
+        "Expresar inminencia y continuidad",
+        "Relatar cambios personales con una perspectiva temporal clara"
+      ]
+    },
+    {
+      "id": 114,
+      "path": "/decir-mas-sin-repetir",
+      "title": "El Laboratorio de la Segunda Versión",
+      "level": "B1",
+      "topic": "Elipsis, aposición explicativa, restricción e intensidad para decir más sin repetirlo todo",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 4,
+        "timeline": 5,
+        "layers": 4,
+        "principles": 6,
+        "orderTasks": 4,
+        "choices": 6,
+        "transformations": 5,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Eliminar repeticiones recuperables",
+        "Distinguir aclaraciones entre comas de modificadores restrictivos",
+        "Reformular cantidad e intensidad con naturalidad"
+      ]
+    },
+    {
+      "id": 113,
+      "path": "/una-oracion-puede-moverse",
+      "title": "La Sala de las Posiciones",
+      "level": "A2",
+      "topic": "Mover tiempo, lugar y modo; preguntar, exclamar y exhortar sin volver la oración robótica",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 3,
+        "timeline": 6,
+        "layers": 4,
+        "principles": 6,
+        "orderTasks": 4,
+        "choices": 6,
+        "transformations": 6,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Organizar información temporal, espacial y modal",
+        "Mover complementos sin perder claridad",
+        "Transformar una idea en preguntas, exclamaciones y exhortaciones"
+      ]
+    },
+    {
+      "id": 112,
+      "path": "/expandir-y-precisar-descripciones",
+      "title": "El Estudio del Detalle",
+      "level": "A2",
+      "topic": "Participios adjetivales, aposición, colectivos, comparación y reacción para describir con precisión",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 3,
+        "timeline": 5,
+        "layers": 4,
+        "principles": 6,
+        "orderTasks": 3,
+        "choices": 6,
+        "transformations": 5,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Describir con participios usados como adjetivos",
+        "Identificar mediante aposición y controlar colectivos",
+        "Comparar, recomendar y reaccionar con precisión"
+      ]
+    },
+    {
+      "id": 111,
+      "path": "/de-palabras-a-oraciones-completas",
+      "title": "La Mesa de Montaje",
+      "level": "A1",
+      "topic": "Quién, verbo e información: construir, negar, preguntar y mover una oración completa",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 3,
+        "timeline": 6,
+        "layers": 4,
+        "principles": 6,
+        "orderTasks": 4,
+        "choices": 5,
+        "transformations": 5,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Ver la estructura de una oración básica",
+        "Mantener la concordancia sujeto-verbo y sujeto-atributo",
+        "Transformar una afirmación en negación y pregunta"
+      ]
+    },
+    {
+      "id": 110,
+      "path": "/grupos-de-palabras-con-sentido",
+      "title": "El Taller de las Capas",
+      "level": "A1",
+      "topic": "Determinante, sustantivo, adjetivo y complementos para dejar atrás las frases telegráficas",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min",
+      "activities": {
+        "coreFormula": 4,
+        "timeline": 5,
+        "layers": 4,
+        "principles": 6,
+        "orderTasks": 3,
+        "choices": 5,
+        "transformations": 4,
+        "production": 3,
+        "conversation": 10
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Combinar piezas conocidas en grupos nominales completos",
+        "Añadir modificadores con de, con y para",
+        "Describir personas, objetos y lugares con más información"
+      ]
+    },
+    {
+      "id": 107,
+      "path": "/modo-vs-tiempo-verbal",
+      "title": "Modo vs. tiempo verbal",
+      "level": "A1",
+      "topic": "La diferencia esencial para entender indicativo, subjuntivo, imperativo y condicional",
+      "family": "Gramática general",
+      "durationPublished": "20–30 min",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Distinguir modo y tiempo en una forma conjugada",
+        "Reconocer indicativo, subjuntivo e imperativo",
+        "Ubicar el condicional sin confundir tiempo y tipo de oración"
+      ]
+    },
+    {
+      "id": 106,
+      "path": "/la-estacion-de-los-dos-destinos",
+      "title": "La estación de los dos destinos",
+      "level": "A1",
+      "topic": "Objeto directo e indirecto desde cero: pronombres, 8 estaciones, 40 decisiones explicadas y atlas",
+      "family": "Gramática general",
+      "durationPublished": "2 encuentros · a elección",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Distinguir sujeto, objeto directo e indirecto sin depender de la a",
+        "Elegir pronombres por función y referente",
+        "Interpretar me, te y nos y explorar combinaciones en una ampliación guiada"
+      ]
+    },
+    {
+      "id": 46,
+      "path": "/la-central-de-las-identidades",
+      "title": "La Central de las Identidades",
+      "level": "A1",
+      "topic": "Pronombres sujeto, objeto, destinatario, reflexivos e interrogativos en una central 3D",
+      "family": "Gramática general",
+      "durationPublished": "75–90 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Omitir o usar el sujeto con intención",
+        "Reemplazar referentes con pronombres directos e indirectos",
+        "Usar reflexivos, interrogativos y el relativo que"
+      ]
+    },
+    {
+      "id": 47,
+      "path": "/la-torre-de-las-coordenadas",
+      "title": "La Torre de las Coordenadas",
+      "level": "A1",
+      "topic": "Lugar, tiempo, cantidad, modo y conexiones con una escena que puedes mover",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min + banco opcional",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Situar acciones en espacio y tiempo",
+        "Distinguir muy de mucho",
+        "Formar adverbios en -mente y preguntas con precisión"
+      ]
+    },
+    {
+      "id": 48,
+      "path": "/la-ciudad-de-los-motores",
+      "title": "La Ciudad de los Motores",
+      "level": "A1",
+      "topic": "El sistema verbal desde presente, ser/estar/hay y planes hasta las bases del pasado",
+      "family": "Gramática general",
+      "durationPublished": "90–110 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Conjugar el presente y los verbos esenciales",
+        "Elegir ser, estar y hay",
+        "Expresar planes y reconocer las tres perspectivas del pasado"
+      ]
+    },
+    {
+      "id": 43,
+      "path": "/el-observatorio-de-las-distancias",
+      "title": "El Observatorio de las Distancias",
+      "level": "A1",
+      "topic": "Este, ese, aquel, concordancia y formas neutras dentro de un observatorio 3D",
+      "family": "Gramática general",
+      "durationPublished": "65–80 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Elegir demostrativos por distancia, género y número",
+        "Usar esto, eso y aquello sin sustantivo",
+        "Señalar objetos, momentos e ideas con precisión"
+      ]
+    },
+    {
+      "id": 44,
+      "path": "/la-casa-de-las-pertenencias",
+      "title": "La Casa de las Pertenencias",
+      "level": "A1",
+      "topic": "Mi, tu, su, nuestro y la relación entre propietarios y pertenencias en una mansión 3D",
+      "family": "Gramática general",
+      "durationPublished": "65–80 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Usar los posesivos átonos antes del sustantivo",
+        "Hacerlos concordar con la cosa poseída",
+        "Aclarar la ambigüedad de su y reconocer formas tónicas"
+      ]
+    },
+    {
+      "id": 45,
+      "path": "/el-mercado-de-las-cantidades",
+      "title": "El Mercado de las Cantidades",
+      "level": "A1",
+      "topic": "Números, cantidades y comparación en un mercado nocturno con una compra interactiva",
+      "family": "Gramática general",
+      "durationPublished": "≈ 45 min + banco opcional",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Expresar cantidades exactas y aproximadas",
+        "Hacer concordar poco, mucho, todo y demasiado",
+        "Comparar cantidades con más, menos, tan y tanto"
+      ]
+    },
+    {
+      "id": 40,
+      "path": "/la-fabrica-de-los-nombres",
+      "title": "La Fábrica de los Nombres",
+      "level": "A1",
+      "topic": "El primer mundo A1: sustantivos, género y número desde cero en una fábrica 3D",
+      "family": "Gramática general",
+      "durationPublished": "65–80 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Reconocer sustantivos y distinguir nombres comunes y propios",
+        "Identificar patrones de género y excepciones frecuentes",
+        "Formar plurales y hacer concordar el artículo"
+      ]
+    },
+    {
+      "id": 41,
+      "path": "/el-atelier-de-la-concordancia",
+      "title": "El Atelier de la Concordancia",
+      "level": "A1",
+      "topic": "Adjetivos, género, número y posición dentro de un atelier art déco 3D",
+      "family": "Gramática general",
+      "durationPublished": "60–75 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Distinguir sustantivo y adjetivo",
+        "Hacer concordar adjetivos en género y número",
+        "Usar la posición neutra y muy + adjetivo"
+      ]
+    },
+    {
+      "id": 42,
+      "path": "/la-galeria-de-los-articulos",
+      "title": "La Galería de los Artículos",
+      "level": "A1",
+      "topic": "El, la, un, una, ausencia de artículo, al y del en una galería 3D",
+      "family": "Gramática general",
+      "durationPublished": "65–80 min",
+      "activities": {
+        "overview": 3,
+        "stations": 5,
+        "traps": 4,
+        "practice": 8,
+        "speaking": 3
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Elegir artículos por género y número",
+        "Contrastar referente nuevo y referente identificable",
+        "Usar al, del y la ausencia de artículo en contextos básicos"
+      ]
+    },
+    {
+      "id": 37,
+      "path": "/subjuntivo-pais-maravillas",
+      "title": "El País del Subjuntivo",
+      "level": "C1",
+      "topic": "El modo completo: 7 mundos 3D, 6 tiempos, 28 desafíos y un atlas maestro",
+      "family": "Gramática general",
+      "durationPublished": "90+ min",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender cómo presenta una acción el modo subjuntivo",
+        "Elegir y conjugar los tiempos modernos del subjuntivo según intención y concordancia",
+        "Reconocer los futuros históricos y producir mensajes propios con precisión"
+      ]
+    },
+    {
+      "id": 31,
+      "path": "/condicionales-b1",
+      "title": "Condicionales paso a paso",
+      "level": "B1",
+      "topic": "Cero, primero, segundo, tercero y mixtos · una estructura por vez · 100% en español",
+      "family": "Gramática general",
+      "durationPublished": "90+ min",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la relación entre realidad, hipótesis y tiempo",
+        "Construir cada condicional con los tiempos verbales correctos",
+        "Revisar todo el sistema de forma progresiva y sin mezclar estructuras"
+      ]
+    },
+    {
+      "id": 23,
+      "path": "/condicionales",
+      "title": "El Multiverso del ‘Si’",
+      "level": "B2",
+      "topic": "Todos los condicionales, desde la realidad hasta los universos mixtos",
+      "family": "Gramática general",
+      "durationPublished": "90+ min",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Comprender la lógica de cada condicional",
+        "Conjugar los seis tiempos necesarios",
+        "Hablar de posibilidades, hipótesis y pasados alternativos"
+      ]
+    },
+    {
+      "id": 18,
+      "path": "/past-b1",
+      "title": "El Pasado",
+      "level": "B1",
+      "topic": "Indefinido + imperfecto + perfecto compuesto con una comparación visual inolvidable",
+      "family": "Gramática general",
+      "durationPublished": "90 min",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Distinguir película cerrada y foto abierta",
+        "Conjugar los tres pasados",
+        "Conectar una acción reciente con el presente"
+      ]
+    },
+    {
+      "id": 3,
+      "path": "/clase/3",
+      "title": "Presente con vos",
+      "level": "A1",
+      "topic": "Hablás, comés, vivís: el patrón rioplatense",
+      "family": "Gramática general",
+      "durationPublished": "60 min",
+      "activities": {
+        "source": "route-specific component / catalog inline"
+      },
+      "skillsObserved": [
+        "grammar recognition",
+        "speaking prompts"
+      ],
+      "gaps": [
+        "No dedicated recorded listening in grammar renderer",
+        "No shared contextual reading/writing and teacher paste workflow"
+      ],
+      "goals": [
+        "Conjugar verbos regulares",
+        "Usar vos con seguridad",
+        "Hablar de rutinas"
+      ]
+    }
+  ]
+}

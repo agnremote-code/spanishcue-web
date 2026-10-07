@@ -16,7 +16,7 @@ const lessons = JSON.parse(execFileSync(process.execPath, [
 ], { cwd: root, encoding: 'utf8' }));
 
 test('all former A0 lessons are A1 without A0 metadata', () => {
-  assert.equal(lessons.length, 122);
+  assert.equal(lessons.length, 128);
   for (const id of movedLessonIds) {
     const lesson = lessons.find((candidate) => candidate.id === id);
     assert.ok(lesson, `missing lesson ${id}`);
@@ -26,7 +26,7 @@ test('all former A0 lessons are A1 without A0 metadata', () => {
   }
   for (const lesson of lessons) {
     assert.ok(publicLevels.includes(lesson.level), `lesson ${lesson.id} has level ${lesson.level}`);
-    assert.equal(Boolean(lesson.levels?.includes('A0')), [227,228,229,230].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
+    assert.equal(Boolean(lesson.levels?.includes('A0')), [227,228,229,236].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
   }
 });
 

@@ -4,13 +4,17 @@ import { readFileSync, existsSync } from 'node:fs';
 
 const read = (path) => existsSync(path) ? readFileSync(path, 'utf8') : '';
 
-test('homepage publishes a hidden server-rendered kit for root-URL scrapers', () => {
-  assert.match(read('app/page.tsx'), /<ZeelyDiscovery\s*\/>/);
-  const discovery = read('app/zeely/ZeelyDiscovery.tsx');
-  assert.match(discovery, /hidden/);
-  assert.match(discovery, /application\/ld\+json/);
-  assert.match(discovery, /href=.*zeely/);
-  assert.doesNotMatch(discovery, /use client/);
+test('homepage publishes visible Organization data and a visible brand-kit link, never hidden text', () => {
+  assert.match(read('app/page.tsx'), /<SiteSchema\s*\/>/);
+  const schema = read('app/growth/SiteSchema.tsx');
+  assert.match(schema, /application\/ld\+json/);
+  assert.match(schema, /"Organization"/);
+  assert.match(schema, /"WebSite"/);
+  assert.doesNotMatch(schema, /hidden|display:\s*['"]none/);
+  assert.doesNotMatch(schema, /use client/);
+  assert.ok(!existsSync('app/zeely/ZeelyDiscovery.tsx'), 'the hidden brand-kit block must stay removed from the homepage');
+  // Scrapers and people reach the kit through the footer link on every page.
+  assert.match(read('app/SpanishCueBrand.tsx'), /href="\/zeely"/);
 });
 
 test('kit remains crawlable but outside search and sitemap', () => {
@@ -20,7 +24,7 @@ test('kit remains crawlable but outside search and sitemap', () => {
 });
 
 test('marketing assets never depend on private lessons or user data', () => {
-  const files = ['app/zeely/ZeelyDiscovery.tsx', 'app/zeely/page.tsx', 'app/zeely/BrandKit.tsx'];
+  const files = ['app/growth/SiteSchema.tsx', 'app/zeely/page.tsx', 'app/zeely/BrandKit.tsx'];
   for (const path of files) {
     const source = read(path);
     assert.ok(source.length, `${path} exists`);

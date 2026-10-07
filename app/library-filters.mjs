@@ -1,10 +1,11 @@
 /** Combine all facets; changing one selection must never clear the other. */
-export function filterLessons(lessons, { level = 'Todos', category = 'Todas', query = '' } = {}) {
+export function filterLessons(lessons, { level = 'Todos', category = 'Todas', query = '', grammarTopic = 'all' } = {}) {
   const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const search = normalize(query.trim());
   const filtered = lessons.filter(lesson =>
     (level === 'Todos' || lesson.level === level || lesson.levels?.includes(level)) &&
     (category === 'Todas' || lesson.category === category) &&
+    (grammarTopic === 'all' || lesson.category !== 'Gramática' || lesson.grammarTopic === grammarTopic) &&
     normalize(`${lesson.title} ${lesson.subtitle} ${lesson.tag} ${(lesson.searchAliases || []).join(' ')}`).includes(search)
   );
   const categoryOrder = {'Gramática':1,'Conversación':2,'Escucha':3,'Fonética':4,'Vocabulario':5};
@@ -24,12 +25,13 @@ export function availableLevels(lessons, category = 'Todas') {
 /** Return the exact lesson collection opened by a category/family action. */
 export function familyLessonsForCategory(
   lessons,
-  { category = 'Todas', conversationMode = 'all', grammarMode = 'general' } = {},
+  { category = 'Todas', conversationMode = 'all', grammarMode = 'general', grammarTopic = '' } = {},
 ) {
   if (category === 'Todas') {
-    return lessons.filter(lesson => !lesson.countryCollection && !lesson.verbalSystem);
+    return lessons.filter(lesson => !lesson.countryCollection);
   }
   if (category === 'Gramática') {
+    if (grammarTopic) return lessons.filter(lesson => lesson.category === 'Gramática' && (grammarTopic === 'all' || lesson.grammarTopic === grammarTopic));
     if (grammarMode === 'all') {
       return lessons.filter(lesson => lesson.category === 'Gramática');
     }

@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import SyntaxLab from "../syntax-labs/SyntaxLab";
-import { siPasaEsto } from "../syntax-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "Si pasa esto… · Gramática A2 · SPANISHCUE",
-  description: siPasaEsto.subtitle,
-};
-
-export default function Page() {
-  return <SyntaxLab data={siPasaEsto} />;
+export const metadata=grammarPageMetadata(214);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={214} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

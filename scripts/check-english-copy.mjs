@@ -2,15 +2,29 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CONTENT_ROOTS, SOURCE_EXTENSION, extractCopy, sourceFiles } from './neutral-spanish.mjs';
+import { CONTENT_ROOTS, SOURCE_EXTENSION, extractCopy, isMachineValue, sourceFiles } from './neutral-spanish.mjs';
 export const BASE_SHA = '43e4b3eb1dc76031481d2406a62b9210f0dd97e2';
+// Exact server-wrapper relocations. Compare every original English literal at
+// its new path; changes, missing copies and duplicate old copies still fail.
+export function relocateEnglishSources(files) {
+  const relocated=new Map(files);
+  for(const folder of ['condicionales','la-estacion-de-los-dos-destinos','past-b1']) {
+    const from=`app/${folder}/page.tsx`,to=`app/${folder}/LegacyLesson.tsx`;
+    if(!relocated.has(from))continue;
+    if(relocated.has(to))throw new Error(`Duplicate English relocation: ${to}`);
+    relocated.set(to,relocated.get(from));relocated.delete(from);
+  }
+  return relocated;
+}
 /** Multiset per file allows harmless object restructuring but detects removals/edits. */
 export function compareEnglishCopy(beforeFiles, afterFiles) {
   const findings = [];
   for (const path of new Set([...beforeFiles.keys(), ...afterFiles.keys()])) {
     const source = beforeFiles.get(path) || '';
-    const before = extractCopy(source, path).filter(c => c.language === 'en');
-    const after = extractCopy(afterFiles.get(path) || '', path).filter(c => c.language === 'en');
+    // URL templates and locale codes under English keys are plumbing, not copy.
+    const englishCopy = c => c.language === 'en' && !isMachineValue(c.text);
+    const before = extractCopy(source, path).filter(englishCopy);
+    const after = extractCopy(afterFiles.get(path) || '', path).filter(englishCopy);
     const counts = new Map();
     for (const item of after) counts.set(item.text, (counts.get(item.text) || 0) + 1);
     for (const item of before) {
@@ -46,6 +60,27 @@ export function filterReviewedChanges(findings, reviewed) {
     return false;
   });
 }
+/**
+ * Owner-authorized manifests of exact English additions. Each file lists the
+ * authorization and every (path, text) literal it approves; nothing in them can
+ * exempt an edit or deletion of existing English copy.
+ */
+export const APPROVAL_MANIFESTS = [
+  'docs/audits/bosque-vocabulary-additions-20261004.json',
+  'docs/audits/seo-english-copy-additions-20261007.json',
+];
+export function loadApprovedAdditions(root) {
+  return APPROVAL_MANIFESTS.flatMap(path => {
+    const file = resolve(root, path);
+    if (!existsSync(file)) return [];
+    const manifest = JSON.parse(readFileSync(file, 'utf8'));
+    if (manifest.version !== 1 || !Array.isArray(manifest.additions)) throw new Error(`${path}: expected version 1 with an additions array`);
+    for (const addition of manifest.additions) {
+      if (!addition.path || typeof addition.text !== 'string' || !addition.text || /[*?]/.test(addition.path)) throw new Error(`${path}: every addition needs an exact path and exact text`);
+    }
+    return manifest.additions;
+  });
+}
 export function checkEnglishCopy(root, base = BASE_SHA) {
   const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
   // The base inventory deliberately includes files deleted from the working tree.
@@ -61,11 +96,12 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
     const source = readFileSync(resolve(root, path), 'utf8');
     if (extractCopy(source, path).some(c => c.language === 'en')) after.set(path, source);
   }
-  const additionsPath = resolve(root, 'docs/audits/bosque-vocabulary-additions-20261004.json');
-  const additions = existsSync(additionsPath) ? JSON.parse(readFileSync(additionsPath, 'utf8')).additions : [];
+  const additions = loadApprovedAdditions(root);
   const reviewedPath = resolve(root, 'docs/audits/new-classes-copy-20261007.json');
   const reviewed = existsSync(reviewedPath) ? JSON.parse(readFileSync(reviewedPath, 'utf8')).changes : [];
-  return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(before, after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
+  const grammarReviewedPath=resolve(root,'docs/audits/grammar-copy-changes-20261007.json');
+  if(existsSync(grammarReviewedPath))reviewed.push(...JSON.parse(readFileSync(grammarReviewedPath,'utf8')).changes);
+  return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(relocateEnglishSources(before), after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const result = checkEnglishCopy(process.cwd(), process.argv.find(a => a.startsWith('--base='))?.slice(7) || BASE_SHA);

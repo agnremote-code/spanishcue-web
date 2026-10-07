@@ -1,3 +1,4 @@
+import GrammarPage from "../../grammar-classroom/GrammarPage";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -7,7 +8,6 @@ import { lessons } from "../../lesson-catalog";
 import MoodTenseDisclosure from "../../verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "../../verbal-system/VerbalPosition";
 import GrammarStep from "../../grammar-steps/GrammarStep";
-import { localeFromHeaders } from "../../i18n/messages";
 import PhoneticsLesson from "../../phonetics/PhoneticsLesson";
 import { isPhoneticsLesson } from "../../phonetics/navigation";
 
@@ -21,16 +21,11 @@ export async function generateMetadata({
   if (!lesson || lesson.path || lesson.special) return {};
   const title = `${lesson.title} · ${lesson.level} | SPANISHCUE`;
   const description = lesson.subtitle;
-  const url = `https://spanishcue.com/clase/${lesson.id}`;
-  const locale = localeFromHeaders(await headers());
-  const canonical = locale === "es" ? url : `${url}?lang=en`;
+  const canonical = `https://spanishcue.com/clase/${lesson.id}`;
   return {
     title,
     description,
-    alternates: {
-      canonical,
-      languages: { es: url, en: `${url}?lang=en`, "x-default": url },
-    },
+    alternates: { canonical },
     openGraph: { title, description, url: canonical, images: [lesson.image] },
     robots: isFreeLesson(lesson.id)
       ? { index: true, follow: true }
@@ -39,9 +34,10 @@ export async function generateMetadata({
 }
 
 export default async function LessonPage({
-  params,
+  params, searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<Record<string,string|string[]|undefined>>;
 }) {
   const { id } = await params;
   const lesson = lessons.find((item) => String(item.id) === id);
@@ -54,7 +50,7 @@ export default async function LessonPage({
 
   if (isPhoneticsLesson(lesson.id)) return <PhoneticsLesson key={lesson.id} lessonId={lesson.id} />;
 
-  return (
+  const original = (
     <div className="teacher-app">
       <main className="teacher-main" style={{ maxWidth: 960 }}>
         <Link href="/">← Biblioteca</Link>
@@ -182,4 +178,9 @@ export default async function LessonPage({
       </main>
     </div>
   );
+  if (lesson.category === "Gramática") {
+    const query=await searchParams;
+    return <GrammarPage id={lesson.id} reference={query?.reference==="1"}>{original}</GrammarPage>;
+  }
+  return original;
 }

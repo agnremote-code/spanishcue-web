@@ -42,6 +42,8 @@
 - Ruling: implement in isolated task worktree; do not edit another conversation's checkout.
 
 - Review fixes: retryable bilingual audio, keyboard focus return, response gating, varied distractor positions, neutral speaker descriptions, shadow cleanup.
-- Ruling: retain prior Escucha route order, append ID 230; exact historical-test inversions preserve old content/access snapshots.
+- Ruling: retain prior Escucha route order, append ID 236; exact historical-test inversions preserve old content/access snapshots.
 - Ruling: use connected GitHub immutable blob/tree/commit APIs because terminal has no GitHub credentials. Verified exact user-named repo is public and connection has push/admin access after automatic review initially rejected push on unverified-destination grounds.
 - Ruling: no browser visual QA in managed runtime without supported control-browser; DOM interaction tests and artifact checks run, limitation documented.
+
+- Integration: main advanced to e0d9560; ID 236 avoids grammar 230–235. Kept both test groups and new catalog totals. 51 focused/integration tests passed; full suite rerunning after exact binary-preservation helper fix.

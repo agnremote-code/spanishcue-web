@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { verbCity } from "../grammar-worlds/data-next";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = { title:"La Ciudad de los Motores | SPANISHCUE", description:"Clase A1–A2 sobre el tema 9 del PCIC: el verbo." };
-export default function Page(){ return <GrammarWorld data={verbCity} />; }
+export const metadata=grammarPageMetadata(48);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={48} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
+}
