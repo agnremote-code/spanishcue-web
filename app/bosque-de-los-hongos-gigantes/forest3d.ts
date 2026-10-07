@@ -451,10 +451,11 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
     for (let i = 0; i < count; i++) fill(i, mesh); mesh.instanceMatrix.needsUpdate = true; if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true; root.add(mesh); instanced.push(mesh); return mesh;
   };
   const rockCount = low ? 60 : 110;
-  instancedMesh(new THREE.IcosahedronGeometry(1, 0), stoneMat, rockCount, (i, m) => { const a = random() * 6.28, R = 6 + random() * 58; dummy.position.set(Math.cos(a) * R, .1, Math.sin(a) * R); dummy.rotation.set(random(), random() * 6, random()); dummy.scale.set(.3 + random() * 1.1, .25 + random() * .5, .3 + random() * 1); dummy.updateMatrix(); m.setMatrixAt(i, dummy.matrix); });
+  instancedMesh(new THREE.IcosahedronGeometry(1, 0), stoneMat, rockCount, (i, m) => { let a = 0, R = 0; for (let k = 0; k < 8; k++) { a = random() * 6.28; R = 6 + random() * 58; if (corridorClear(Math.cos(a) * R, Math.sin(a) * R, 1, 0, 1, 1)) break; } dummy.position.set(Math.cos(a) * R, .1, Math.sin(a) * R); dummy.rotation.set(random(), random() * 6, random()); dummy.scale.set(.3 + random() * 1.1, .25 + random() * .5, .3 + random() * 1); dummy.updateMatrix(); m.setMatrixAt(i, dummy.matrix); });
   const moundCount = low ? 110 : 220;
   instancedMesh(new THREE.IcosahedronGeometry(1, 1), standard('#ffffff', 1, mossTex), moundCount, (i, m) => {
-    const a = random() * 6.28, R = 3 + random() * 60, x = Math.cos(a) * R, z = Math.sin(a) * R;
+    let a = 0, R = 0; for (let k = 0; k < 8; k++) { a = random() * 6.28; R = 3 + random() * 60; if (corridorClear(Math.cos(a) * R, Math.sin(a) * R, .8, 0, .6, .8)) break; }
+    const x = Math.cos(a) * R, z = Math.sin(a) * R;
     dummy.position.set(x, 0, z); dummy.rotation.set(0, random() * 6, 0); dummy.scale.set(.4 + random() * .9, .25 + random() * .45, .4 + random() * .9); dummy.updateMatrix();
     m.setMatrixAt(i, dummy.matrix); m.setColorAt(i, new THREE.Color(BIOME[biomeAt(x, z)].moss).multiplyScalar(.9 + random() * .3));
   });

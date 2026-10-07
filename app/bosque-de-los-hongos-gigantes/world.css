@@ -49,3 +49,7 @@
 @keyframes bfg-banner{0%{opacity:0;transform:translate(-50%,10px)}12%{opacity:1;transform:translate(-50%,0)}80%{opacity:1}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.bfg-world-banner{animation:none}}
 @media(pointer:coarse),(max-width:800px){.bfg-world-banner{top:30%;width:calc(100% - 40px)}.bfg-world-banner small{font-size:12px}}
+
+/* Phones: the camera tools stack under the minimap so the location card keeps its width. */
+@media(pointer:coarse),(max-width:800px){.bfg-world-tools{top:186px;flex-direction:column;align-items:stretch;width:112px}.bh .bfg-world .bfg-world-tools button{min-height:36px;padding:7px 8px}.bfg-world-location{max-width:calc(100% - 148px)}}
+@media(max-height:600px) and (pointer:coarse){.bfg-world-tools{top:8px;flex-direction:row;width:auto}.bfg-world-location{max-width:calc(100% - 330px)}}
