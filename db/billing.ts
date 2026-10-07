@@ -361,7 +361,8 @@ export async function claimFirstPaidConversionForUser(
   environment: PaypalEnvironment,
 ) {
   const event = await db.prepare(
-    `SELECT outbox.id, payment.provider_payment_id AS transactionId
+    `SELECT outbox.id, payment.provider_payment_id AS transactionId,
+            payment.amount_cents AS amountCents, payment.currency AS currency
      FROM billing_outbox_events outbox
      JOIN billing_subscriptions subscription ON subscription.id = outbox.subscription_id
      JOIN billing_payments payment ON payment.id = outbox.payment_id
@@ -375,5 +376,7 @@ export async function claimFirstPaidConversionForUser(
   const claimed = await db.prepare(
     `UPDATE billing_outbox_events SET delivered_at = ? WHERE id = ? AND delivered_at IS NULL`,
   ).bind(now(), event.id).run();
-  return (claimed.meta.changes ?? 0) === 1\n    ? { transactionId: event.transactionId, value: event.amountCents / 100, currency: event.currency }\n    : null;
+  return (claimed.meta.changes ?? 0) === 1
+    ? { transactionId: event.transactionId, value: event.amountCents / 100, currency: event.currency }
+    : null;
 }
