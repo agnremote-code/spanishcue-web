@@ -335,7 +335,7 @@ const encounters = [
         who: "nadia", mood: "neutral",
         line: {
           A: "Nadia habla desde atrás. «Mira, con el gas en la mano decides tú. ¿Cuidas al gato o nos vamos todos a casa?»",
-          B: "Nadia da un paso al frente. «Bueno, tú tienes el gas, tú decides: ¿cuidas al gato cinco minutos o nos vamos todos a casa y en paz?»", 
+          B: "Nadia da un paso al frente. «Bueno, tú tienes el gas, tú decides: ¿cuidas al gato cinco minutos o nos vamos todos a casa y en paz?»",
           C: "Nadia toma la palabra. «Como tú tienes el gas, tú mandas: ¿cuidas al gato cinco minutos o cerramos la noche y cada uno a su casa?»",
         },
         options: [

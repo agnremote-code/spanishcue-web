@@ -320,7 +320,7 @@ const encounters = [
         who: "rolo", mood: "laugh",
         line: {
           A: "Rolo no puede parar de reír. «Ella pasa en rojo, me choca, ¡y la granada soy yo!» Vanesa, lejos, grita: «¡Ya llamé a la policía!»",
-          B: "Rolo se ríe hasta que le duele. «Ella pasa en rojo, me revienta la bici, ¡y resulta que el peligro es tu granada!» Vanesa, desde lejos: «¡Ya llamé a la policía!»", 
+          B: "Rolo se ríe hasta que le duele. «Ella pasa en rojo, me revienta la bici, ¡y resulta que el peligro es tu granada!» Vanesa, desde lejos: «¡Ya llamé a la policía!»",
           C: "Rolo se ríe con la cabeza entre las manos. «Ella pasa en rojo, me destroza la bici, ¡y la amenaza pública es tu pisapapeles!» Vanesa, a prudente distancia: «¡Ya llamé a la policía!»",
         },
         options: [

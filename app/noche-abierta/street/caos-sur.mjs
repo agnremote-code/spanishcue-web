@@ -102,7 +102,7 @@ const encounters = [
       ]),
       "cuchillo-duelo": node("lidia", "terror", tx(
         "Lidia está pálida. «¡Dos cuchillos! ¡Ya viene la policía!»",
-        "Lidia está pálida como la pared. «¡Dos cuchillos en mi plaza! Ya llamé a la policía, ya vienen.»", 
+        "Lidia está pálida como la pared. «¡Dos cuchillos en mi plaza! Ya llamé a la policía, ya vienen.»",
         "Lidia está lívida. «Dos cuchillos. Dos. Yo solo quería tomar un tren. Ya viene la policía, los dos van a tener que explicarlo.»"),
       [
         fin("guardar", "worried", "cuchillo-policia",
