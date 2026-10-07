@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './grammar-preservation.mjs';
 
 // New lessons approved after the Batch 1 / Wave 1–3 snapshots were taken.
 // Historical hashes stay authoritative: before comparing, remove exactly the
@@ -170,10 +171,11 @@ function withoutPackages(text, packages, root) {
 const sharedFiles = new Set([...[...additions, ...repairs].flatMap(item => Object.keys(item.edits)), 'tests/helpers/catalog-additions.mjs', 'tests/helpers/batch1-preservation.mjs']);
 
 export function isApprovedAdditionPath(path) {
-  return sharedFiles.has(path) || [...additions, ...repairs].some(item => item.files.test(path));
+  return grammarSharedFiles.includes(path) || path==='tests/helpers/grammar-preservation.mjs' || path==='docs/audits/grammar-preservation-20261007.json' || sharedFiles.has(path) || [...additions, ...repairs].some(item => item.files.test(path));
 }
 
 export function withoutApprovedAdditions(path, bytes) {
+  bytes=beforeGrammarBytes(path,bytes);
   const steps = [...additions, ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
@@ -198,7 +200,7 @@ export function withoutApprovedAdditions(path, bytes) {
 }
 
 export function withoutApprovedLessons(lessons) {
-  return lessons.filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
+  return beforeGrammarLessons(lessons).filter(lesson => !additions.some(item => item.id === lesson.id && item.path === lesson.path)).map(lesson => {
     if (lesson.id === 221) {
       assert.deepEqual(lesson.news,{addedAt:'2026-09-29',featured:true});
       const preserved = {...lesson}; delete preserved.news; lesson = preserved;

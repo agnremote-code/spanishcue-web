@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import SyntaxLab from "../syntax-labs/SyntaxLab";
-import { peroHayUnMatiz } from "../syntax-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "Pero hay un matiz · Gramática B1 · SPANISHCUE",
-  description: peroHayUnMatiz.subtitle,
-};
-
-export default function Page() {
-  return <SyntaxLab data={peroHayUnMatiz} />;
+export const metadata=grammarPageMetadata(217);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={217} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

@@ -8,6 +8,7 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {reconciledMain,reconciledMainPaths} from './helpers/wave3-preservation.mjs';
 import {withoutApprovedAdditions} from './helpers/catalog-additions.mjs';
+import {beforeGrammarBytes,beforeGrammarLessons} from './helpers/grammar-preservation.mjs';
 const require=createRequire(import.meta.url),React=require('react'),{renderToString}=require('react-dom/server');
 async function load(path,runtime=React,source){const result=await build({...(source?{stdin:{contents:source,resolveDir:process.cwd()+'/app/syntax-labs',loader:'tsx'}}:{entryPoints:[path]}),bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/*'],loader:{'.css':'empty'}});const m={exports:{}};runInNewContext(`(function(require,module,exports){${result.outputFiles[0].text}\n})`,{console,process})(n=>n==='react'?runtime:require(n),m,m.exports);return m.exports;}
 const banks=await load('app/syntax-labs/data.ts');
@@ -62,12 +63,12 @@ test('lesson reset handler remounts the entire keyed session and all child state
 test('all3 exact routes render target lesson and metadata; catalog and PRO policy unchanged',async()=>{
  const base='2b48f28bc7b25f19c650e52cece8f59eca352936';const {lessons}=await load('app/lesson-catalog.ts');const {isFreeLesson,lessonAtPath}=await load('app/access-policy.ts');
  for(const [i,id] of [213,217,218].entries()){
-  const bank=banks[targets[i]],path=`app/${bank.slug}/page.tsx`;assert.equal(readFileSync(path,'utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
-  const {default:Page,metadata}=await load(path);assert.equal(metadata.title,`${bank.title} · Gramática ${bank.level} · SPANISHCUE`);assert.equal(metadata.description,bank.subtitle);
+  const bank=banks[targets[i]],path=`app/${bank.slug}/page.tsx`,reference=`app/${bank.slug}/LegacyLesson.tsx`;assert.equal(readFileSync(reference,'utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
+  const {default:Page,metadata}=await load(reference);assert.equal(metadata.title,`${bank.title} · Gramática ${bank.level} · SPANISHCUE`);assert.equal(metadata.description,bank.subtitle);
   const html=renderToString(React.createElement(Page));assert.ok(html.includes(bank.title));assert.match(html,/sx-repaired/);
-  const lesson=lessonAtPath('/'+bank.slug,lessons);assert.equal(lesson.id,id);assert.equal(lesson.title,bank.title);assert.equal(lesson.level,bank.level);assert.equal(isFreeLesson(id),false);
+  const lesson=lessonAtPath('/'+bank.slug,beforeGrammarLessons(JSON.parse(JSON.stringify(lessons))));assert.equal(lesson.id,id);assert.equal(lesson.title,bank.title);assert.equal(lesson.level,bank.level);assert.equal(isFreeLesson(id),false);
  }
- const approvedCatalog=JSON.parse(readFileSync(new URL('./fixtures/syntax-neutral-baseline.json',import.meta.url),'utf8')).catalogSource;assert.equal(createHash('sha256').update(readFileSync('app/lesson-catalog.ts')).digest('hex'),approvedCatalog,'reviewed neutral catalog source remains unchanged');const path='app/access-policy.ts';assert.equal(withoutApprovedAdditions(path,readFileSync(path)).toString('utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
+ const approvedCatalog=JSON.parse(readFileSync(new URL('./fixtures/syntax-neutral-baseline.json',import.meta.url),'utf8')).catalogSource;assert.equal(createHash('sha256').update(beforeGrammarBytes('app/lesson-catalog.ts',readFileSync('app/lesson-catalog.ts'))).digest('hex'),approvedCatalog,'reviewed neutral catalog source remains unchanged apart from exact grammar metadata edits');const path='app/access-policy.ts';assert.equal(withoutApprovedAdditions(path,readFileSync(path)).toString('utf8'),execFileSync('git',['show',`${base}:${path}`],{encoding:'utf8'}));
 });
 test('all24 timeline permutations are controllable by real move handlers; only chronological order passes',async()=>{
  function permutations(xs){return xs.length?xs.flatMap((x,i)=>permutations(xs.filter((_,j)=>i!==j)).map(rest=>[x,...rest])):[[]];}

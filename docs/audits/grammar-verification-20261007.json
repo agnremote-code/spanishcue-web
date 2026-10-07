@@ -1,0 +1,68 @@
+{
+  "auditBase": "b5a8cad64bbdfffd2c895884ef355f0be8c6f1bb",
+  "integratedMain": "040d5e172c5a07877f14b76fdf60178ec8d7881d",
+  "verifiedSourceCommit": "e10fa80c41c5efaa8763b7c816dda2282582bc72",
+  "commands": [
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "groups": 21,
+      "testExecutions": 847,
+      "failures": 0
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    {
+      "command": "npx tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run validate:artifact",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node --test tests/grammar-wave1-repair.test.mjs tests/library-information-architecture.test.mjs tests/verbal-help-contract.test.mjs",
+      "exitCode": 0,
+      "tests": 29,
+      "failures": 0
+    }
+  ],
+  "grammar": {
+    "existing": 51,
+    "new": 6,
+    "total": 57,
+    "newIds": [
+      230,
+      231,
+      232,
+      233,
+      234,
+      235
+    ],
+    "unitAndWorkerTests": 17,
+    "recordings": 57,
+    "freeRecordings": 2,
+    "protectedRecordings": 55,
+    "fullEditorialReview": true,
+    "humanListeningQA": false,
+    "studentTimingPilot": false
+  },
+  "historicalSupplement": {
+    "suites": "Archived Wave2/Wave3 checks outside npm test",
+    "tests": 48,
+    "passed": 40,
+    "failed": 8,
+    "sameFailingTestsObservedOnAuditBase": true
+  },
+  "visualQA": {
+    "localBrowser": "Not available through the authorized preview controller",
+    "mobileBrowser": "Not performed; viewport controls unavailable",
+    "productionBrowser": "Pending production integration"
+  }
+}

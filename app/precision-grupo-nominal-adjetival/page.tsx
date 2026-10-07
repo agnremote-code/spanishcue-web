@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { precisionEditorial } from "../phrase-labs/data-advanced";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "La Mesa del Editor · Gramática B2 · SPANISHCUE",
-  description: precisionEditorial.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={precisionEditorial} />;
+export const metadata=grammarPageMetadata(116);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={116} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

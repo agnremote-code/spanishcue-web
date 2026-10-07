@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { perifrasesDeCambio } from "../phrase-labs/data-advanced";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "La Línea de los Cambios · Gramática B1 · SPANISHCUE",
-  description: perifrasesDeCambio.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={perifrasesDeCambio} />;
+export const metadata=grammarPageMetadata(115);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={115} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

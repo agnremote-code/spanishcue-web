@@ -2756,85 +2756,85 @@
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "comí",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "viví",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "dormí · INDEFINIDO",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Viví · INDEFINIDO",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "viví · INDEFINIDO",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Anoche comí pizza.",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Viví en México cinco años.",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Me levanté → desayuné → salí.",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Viví en Londres durante tres años.",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "TÚ y VOS tienen la misma forma aquí: hablaste / comiste / viviste.",
       "category": "regional-pedagogy",
       "reason": "Explicit regional morphology comparison; displayed regional scope preserves the pedagogical distinction and existing English explanation."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "TÚ and VOS use the same form here: hablaste / comiste / viviste.",
       "category": "neutral-context",
       "reason": "Unchanged English translation inside the bilingual Pair prop, explicitly comparing tú/vos preterite forms."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "me dormí",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Trabajaba cuando recibí un mensaje.",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
     },
     {
-      "path": "app/past-b1/page.tsx",
+      "path": "app/past-b1/LegacyLesson.tsx",
       "text": "Llegué. / Comí. / Me fui.",
       "category": "neutral-context",
       "reason": "First-person singular preterite in a past-time example, conjugation row, distractor or learner starter; changing it would corrupt the taught tense."
@@ -3990,6 +3990,408 @@
       "text": "Aprendí a usar… Me ayudó…",
       "category": "neutral-context",
       "reason": "A2 sentence support uses first-person preterite aprendí, not a regional imperative."
+    },
+    {
+      "path": "app/grammar-classroom/catalog.ts",
+      "text": "Presente con vos: hablar de tu rutina en Argentina",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Núcleo regional argentino: vos + presente regular en -ás/-és/-ís para rutinas; contraste receptivo con tú. Irregulares y otros tiempos quedan como referencia. Las consignas usan tú.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "¿Has oído «vos» en una conversación argentina?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Lucía escribe a su compañero de Córdoba. En Argentina usa vos: «Vos trabajás cerca de casa y comés en la oficina. Yo vivo lejos y viajo en autobús. ¿Vos vivís con tu familia? Los sábados estudiás español conmigo. Ahora tenemos un horario nuevo: la clase empieza a las diez». El mensaje habla de sus rutinas habituales.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Distingue yo de vos",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Busca una forma de cada grupo: -ar, -er e -ir con vos. ¿Dónde está el acento?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Trabajás, comés, vivís: el acento está al final.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Compara «yo vivo» y «vos vivís». ¿Cambia el tiempo verbal?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Hola, Lucía. Vos estudiás por la mañana, ¿verdad? Yo trabajo hasta las seis. Después como en casa y preparo la clase. Si vos vivís lejos, podemos estudiar por videollamada. ¿Comés antes de la clase? Yo tengo tiempo a las ocho. El sábado hablamos otra vez y confirmamos el horario.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Tu profesor representa a un compañero argentino. Pregúntale, usando vos regional, por trabajo, comida y lugar donde vive para acordar una clase.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Argentina: ¿Vos trabajás…? ¿Comés…? ¿Vivís…?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Cuenta tu rutina con yo; después describe la del compañero usando vos regional.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Yo estudio…; vos estudiás…",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Compara dos mensajes de invitación, uno con tú y otro con vos argentino. Elige el adecuado para un amigo de Córdoba.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Tú hablas / vos hablás; tú comes / vos comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Escribe un mensaje a un compañero argentino para coordinar una clase. Usa vos regional en dos preguntas sobre su rutina.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Hola, Lucía. Yo trabajo hasta las seis. ¿Vos estudiás por la tarde? ¿Comés antes de la clase? Podemos hablar a las ocho. Vos vivís lejos y yo prefiero una videollamada. El sábado confirmamos el horario.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Usa vos y terminaciones regionales",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Di con vos argentino: tú hablas, comes y vives.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos hablás, comés y vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos regional argentino",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "vos + raíz + -ás/-és/-ís",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "En el presente regular argentino, vos representa al interlocutor singular.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos trabajás en casa.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos vivís cerca del centro.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "El acento de vos",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "hablar → hablás; comer → comés; vivir → vivís",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "¿Vos comés aquí?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos estudiás español los martes.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "yo estudio / tú estudias / vos estudiás",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "La elección de tú o vos cambia la forma de la segunda persona, no el presente ni la acción habitual.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Yo leo y vos leés.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "En España: tú hablas; en Argentina: vos hablás.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Variante argentina: Vos ___ español los lunes.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "estudiás",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos regional argentino usa estudiás, con acento final.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Variante argentina: ¿Vos ___ cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "vivís",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vivir con vos regular termina en -ís.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Variante argentina: Vos ___ en casa al mediodía.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "comés",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Con vos argentino: comés. Coméis corresponde a vosotros.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "¿Qué describe «vos trabajás»?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Presente de vos",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Vos hablás español y comés aquí.",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Usa vos",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Conjuga hablás y comés con tildes",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "¿Vos vivís cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Usa la segunda persona vos",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Emplea vivís",
+      "category": "regional-pedagogy",
+      "reason": "Lección3 explícitamente dedicada al presente con vos argentino; las consignas generales permanecen en tú."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Hola, ayer hice una visita rápida al centro. Salí de la oficina a las cinco y fui a la estación. Compré los billetes para el fin de semana y después tomé un café con Julia. Hablamos casi una hora. Volví a casa a las ocho, preparé la cena y envié un mensaje al grupo. No visité el museo porque llegué tarde. Al final tuve una tarde tranquila, aunque hice varias cosas.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Primero salí…; después…; al final…",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Fui…; pasé…; elegí…",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Salí del trabajo, compré pan y volví a casa.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "El profesor comete un error: corrígelo con una petición cortés.",
+      "category": "neutral-context",
+      "reason": "Comete es presente de cometer: el profesor comete un error; no es un imperativo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Cuando llegué, ya habían…; descubrí que…",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "No elegí ni… ni…; sin embargo,…",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "El mes pasado fui a un curso de fotografía en otra ciudad. El centro estaba cerca del río y las salas tenían mucha luz. Cada mañana caminábamos hasta el mercado para practicar. Un día empezó a llover y el profesor cambió la actividad: entramos en una estación antigua y fotografiamos los detalles del edificio. Yo buscaba una imagen de la entrada cuando una compañera me mostró una ventana interesante. Al final elegí esa foto para mi presentación. Desde que terminó el curso, he practicado más en mi barrio y he preparado una pequeña carpeta de imágenes. Esta semana he enseñado las fotos a dos amigos. El viaje ya quedó cerrado, pero el aprendizaje sigue presente en lo que hago ahora.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "El mes pasado fui a un curso de fotografía. El centro estaba cerca del río y tenía salas luminosas. Cada mañana practicábamos en el mercado. Un día llovió y entramos en una estación antigua. Allí elegí una imagen para mi presentación. Desde entonces he practicado más en mi barrio y esta semana he preparado una carpeta nueva. El curso terminó, pero sigo usando lo que aprendí para mirar los edificios con más atención.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "Pedí que…; quería que…; me gustaría que…",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/legacy-contexts.json",
+      "text": "En la reunión anterior pedí que cada compañero enviara un resumen antes del jueves. Quería que la llamada se centrara en decisiones, pero algunos textos fueron demasiado largos y dos llegaron tarde. No creo que el problema sea falta de interés; quizá el formato y el plazo no estaban claros. Si todos usáramos tres puntos, leeríamos menos y tendríamos más tiempo para conversar. Me gustaría que una persona reuniera las preguntas antes de la llamada. Propongo probar este cambio durante una semana y revisar si facilita la participación del equipo.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/new-lessons.json",
+      "text": "Viví aquí durante dos años y me fui.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/new-lessons.json",
+      "text": "Entendí que… / ¿Confirmó si…?",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/new-lessons.json",
+      "text": "Explicó que… / No dijo que…; yo entendí que…",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/new-lessons.json",
+      "text": "La persona a quien escribí / la persona a la que escribí.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/new-lessons.json",
+      "text": "La persona quien escribí / la persona que escribí.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
+    },
+    {
+      "path": "app/grammar-classroom/content/new-lessons.json",
+      "text": "La persona al quien escribí / la persona al que escribí.",
+      "category": "neutral-context",
+      "reason": "Forma de primera persona del pretérito en un relato/modelo, no una instrucción de voseo."
     },
     {
       "path": "app/country-atlas/data.ts",

@@ -1,0 +1,6 @@
+{
+  "reason": "The requested functional grammar taxonomy replaces the separate verbal-system collection badge. All other existing English remains protected.",
+  "changes": [
+    {"path":"app/Library.tsx","text":"VERB SYSTEM","kind":"english-changed-or-deleted"}
+  ]
+}

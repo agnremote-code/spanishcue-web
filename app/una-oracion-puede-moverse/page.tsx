@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import PhraseLab from "../phrase-labs/PhraseLab";
-import { oracionFlexible } from "../phrase-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "La Sala de las Posiciones · Gramática A2 · SPANISHCUE",
-  description: oracionFlexible.subtitle,
-};
-
-export default function Page() {
-  return <PhraseLab data={oracionFlexible} />;
+export const metadata=grammarPageMetadata(113);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={113} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
-import SyntaxLab from "../syntax-labs/SyntaxLab";
-import { antesDespuesCuando } from "../syntax-labs/data";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = {
-  title: "Antes, después, cuando · Gramática A2 · SPANISHCUE",
-  description: antesDespuesCuando.subtitle,
-};
-
-export default function Page() {
-  return <SyntaxLab data={antesDespuesCuando} />;
+export const metadata=grammarPageMetadata(213);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={213} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
 }

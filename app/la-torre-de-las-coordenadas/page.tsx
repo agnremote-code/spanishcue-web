@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import GrammarWorld from "../grammar-worlds/GrammarWorld";
-import { adverbTower } from "../grammar-worlds/data-next";
+import LegacyLesson from "./LegacyLesson";
+import GrammarPage, {grammarPageMetadata, type GrammarPageProps} from "../grammar-classroom/GrammarPage";
 
-export const metadata: Metadata = { title:"La Torre de las Coordenadas | SPANISHCUE", description:"Clase A1–A2 sobre el tema 8 del PCIC: el adverbio y las locuciones adverbiales." };
-export default function Page(){ return <GrammarWorld data={adverbTower} />; }
+export const metadata=grammarPageMetadata(47);
+export default async function Page({searchParams}:GrammarPageProps){
+  const query=await searchParams;
+  return <GrammarPage id={47} reference={query?.reference==="1"}><LegacyLesson/></GrammarPage>;
+}

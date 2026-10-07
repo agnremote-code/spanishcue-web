@@ -4,6 +4,18 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CONTENT_ROOTS, SOURCE_EXTENSION, extractCopy, isMachineValue, sourceFiles } from './neutral-spanish.mjs';
 export const BASE_SHA = '43e4b3eb1dc76031481d2406a62b9210f0dd97e2';
+// Exact server-wrapper relocations. Compare every original English literal at
+// its new path; changes, missing copies and duplicate old copies still fail.
+export function relocateEnglishSources(files) {
+  const relocated=new Map(files);
+  for(const folder of ['condicionales','la-estacion-de-los-dos-destinos','past-b1']) {
+    const from=`app/${folder}/page.tsx`,to=`app/${folder}/LegacyLesson.tsx`;
+    if(!relocated.has(from))continue;
+    if(relocated.has(to))throw new Error(`Duplicate English relocation: ${to}`);
+    relocated.set(to,relocated.get(from));relocated.delete(from);
+  }
+  return relocated;
+}
 /** Multiset per file allows harmless object restructuring but detects removals/edits. */
 export function compareEnglishCopy(beforeFiles, afterFiles) {
   const findings = [];
@@ -87,7 +99,9 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   const additions = loadApprovedAdditions(root);
   const reviewedPath = resolve(root, 'docs/audits/new-classes-copy-20261007.json');
   const reviewed = existsSync(reviewedPath) ? JSON.parse(readFileSync(reviewedPath, 'utf8')).changes : [];
-  return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(before, after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
+  const grammarReviewedPath=resolve(root,'docs/audits/grammar-copy-changes-20261007.json');
+  if(existsSync(grammarReviewedPath))reviewed.push(...JSON.parse(readFileSync(grammarReviewedPath,'utf8')).changes);
+  return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(relocateEnglishSources(before), after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const result = checkEnglishCopy(process.cwd(), process.argv.find(a => a.startsWith('--base='))?.slice(7) || BASE_SHA);
