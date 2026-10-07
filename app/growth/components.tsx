@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { SpanishCueFooter } from "../SpanishCueBrand";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevels, type ConversationLevel } from "./conversation-levels";
 import type { LessonCardData } from "./lessons";
 import { breadcrumbSchema, serializeJsonLd, type BreadcrumbItem } from "./schema";
@@ -116,6 +117,20 @@ export function Faq({ items }: { items: { question: string; answer: string }[] }
           <p>{item.answer}</p>
         </details>
       ))}
+    </div>
+  );
+}
+
+/**
+ * The shared footer pulls itself to the viewport edges with negative margins
+ * that assume the library's padded main column. Growth pages have no such
+ * column, so this wrapper supplies the same padding and keeps the footer
+ * inside the viewport (no horizontal scroll on desktop).
+ */
+export function GrowthFooter() {
+  return (
+    <div className={styles.footerWrap}>
+      <SpanishCueFooter />
     </div>
   );
 }

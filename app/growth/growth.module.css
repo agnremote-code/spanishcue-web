@@ -136,6 +136,9 @@
 .linkList span { color: var(--g-muted); font-size: 14px; }
 .footnote { font-size: 13px; color: var(--g-muted); margin: 24px 0 36px; }
 
+.footerWrap { padding-inline: clamp(18px, 3.2vw, 54px); }
+@media (max-width: 760px) { .footerWrap { padding-inline: 16px; } }
+
 @media (max-width: 640px) {
   .topbar { padding: 14px 0; }
   .activity { padding: 18px; }

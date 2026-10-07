@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SpanishCueFooter } from "../SpanishCueBrand";
-import { Breadcrumbs, CtaBand, Faq, GrowthTopbar, JsonLd, LessonGrid, Section } from "../growth/components";
+import { Breadcrumbs, CtaBand, Faq, GrowthFooter, GrowthTopbar, JsonLd, LessonGrid, Section } from "../growth/components";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevels } from "../growth/conversation-levels";
 import { conversationQuestions } from "../growth/conversation-questions";
 import { catalogSummary, freeLessonCards } from "../growth/lessons";
@@ -149,7 +148,7 @@ export default function SpanishTeacherResourcesPage() {
           />
         </div>
       </main>
-      <SpanishCueFooter />
+      <GrowthFooter />
     </>
   );
 }

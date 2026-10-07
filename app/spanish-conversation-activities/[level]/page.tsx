@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SpanishCueFooter } from "../../SpanishCueBrand";
-import { Breadcrumbs, CtaBand, Faq, GrowthTopbar, JsonLd, LessonGrid, LevelStrip, Section } from "../../growth/components";
+import { Breadcrumbs, CtaBand, Faq, GrowthFooter, GrowthTopbar, JsonLd, LessonGrid, LevelStrip, Section } from "../../growth/components";
 import {
   CONVERSATION_HUB_PATH,
   CONVERSATION_QUESTIONS_PATH,
@@ -178,7 +177,7 @@ export default async function ConversationLevelPage({ params }: LevelPageProps) 
           />
         </div>
       </main>
-      <SpanishCueFooter />
+      <GrowthFooter />
     </>
   );
 }
