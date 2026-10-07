@@ -553,7 +553,7 @@ export function buildForest({ low, reducedMotion }: { low: boolean; reducedMotio
         }
         const next = ZONES.find(z => z.id === state.next);
         beacon.visible = Boolean(next) && (next!.id !== 'final' || state.unlocked) && (Math.hypot(player.x - next!.x, player.z - next!.z) > next!.r + 1 || Math.abs(player.y - next!.y) > 2);
-        if (next) { beacon.position.set(next.x, next.y + 17, next.z); beacon.material.opacity = .32 + Math.sin(time * 2) * .1 * motion; }
+        if (next) { beacon.position.set(next.x, next.y + 17, next.z); beacon.material.opacity = .5 + Math.sin(time * 2) * .12 * motion; }
       }
       if (pendingBurst) {
         const zone = ZONES.find(z => z.id === pendingBurst); pendingBurst = null;
