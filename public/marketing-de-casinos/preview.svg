@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Marketing de casinos: decisiones que cuestan millones</title>
+  <desc id="desc">Una sala de estrategia en un resort de Las Vegas al anochecer, con datos de fidelización y ocupación sobre una mesa.</desc>
+  <defs>
+    <linearGradient id="night" x2="1" y2="1"><stop stop-color="#07131c"/><stop offset=".55" stop-color="#193740"/><stop offset="1" stop-color="#0b1722"/></linearGradient>
+    <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#4d777a" stop-opacity=".72"/><stop offset="1" stop-color="#10252e" stop-opacity=".95"/></linearGradient>
+    <linearGradient id="table" x2="0" y2="1"><stop stop-color="#2f4a49"/><stop offset="1" stop-color="#09141c"/></linearGradient>
+    <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#f5e0a7"/><stop offset="1" stop-color="#b58c50"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+    <pattern id="windows" width="18" height="26" patternUnits="userSpaceOnUse"><path d="M5 6h6v12H5z" fill="#d7b876" opacity=".35"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#night)"/>
+  <circle cx="970" cy="180" r="220" fill="#a6d8b7" opacity=".13" filter="url(#glow)"/>
+  <path d="M0 355h1200" stroke="#9ac7bb" opacity=".35" stroke-width="3"/>
+  <path d="M0 325l78 0v-97h78v43h56V134h111v165h58V87h142v212h51V195h83v116h70V151h126v176h53V223h89v103h65V183h80v142h60" fill="#0b1c25" stroke="#718f86" stroke-width="2"/>
+  <path d="M0 325l78 0v-97h78v43h56V134h111v165h58V87h142v212h51V195h83v116h70V151h126v176h53V223h89v103h65V183h80v142h60v30H0z" fill="url(#windows)" opacity=".6"/>
+  <path d="M260 355V85M544 355V85M830 355V85" stroke="#a6c3bc" stroke-opacity=".28" stroke-width="8"/>
+  <path d="M0 358h1200v272H0z" fill="#09141b"/>
+  <path d="M115 390h1005l80 240H0z" fill="url(#table)" stroke="#ad9a6e" stroke-width="3"/>
+  <path d="M85 475h1030M32 575h1136" stroke="#bdad7c" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M242 430h360l60 132H195z" fill="#0b222b" stroke="#8cbeb0" stroke-width="3"/>
+  <path d="M264 461h185M264 480h150M264 499h208" stroke="#74afa6" stroke-opacity=".5" stroke-width="7"/>
+  <path d="M275 537l55-22 45 8 41-45 48 12 51-40 65 13" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="515" cy="450" r="7" fill="#efd89c"/>
+  <path d="M736 420h278l38 138H713z" fill="#0e2530" stroke="#c2aa76" stroke-width="3"/>
+  <text x="753" y="452" fill="#9ecac0" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">LOYALTY / CRM</text>
+  <text x="753" y="507" fill="#f2dfad" font-family="Georgia,serif" font-size="42">94%  <tspan fill="#a5dac6">+7%</tspan></text>
+  <text x="754" y="536" fill="#9ecac0" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">OCUPACIÓN     CASINO</text>
+  <path d="M169 370h846" stroke="#cfb279" stroke-opacity=".7" stroke-width="3"/>
+  <rect x="35" y="34" width="370" height="58" rx="4" fill="#07151d" fill-opacity=".85" stroke="#c3aa72"/>
+  <text x="55" y="72" fill="#ead8aa" font-family="Arial,sans-serif" font-size="21" font-weight="bold" letter-spacing="5">SPANISHCUE / B1</text>
+  <path d="M1110 36h48v48h-48z" fill="none" stroke="#d6bf8b" stroke-width="3"/><path d="M1122 59h24m-12-12v24" stroke="#d6bf8b" stroke-width="2"/>
+</svg>

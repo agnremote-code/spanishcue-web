@@ -8,6 +8,19 @@ import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './gram
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   {
+    id:237,path:'/marketing-de-casinos',files:/^(?:app\/marketing-de-casinos\/|public\/marketing-de-casinos\/|tests\/casino-marketing-b1\.test\.mjs$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:237,')&&line.includes('path:"/marketing-de-casinos"')?[i]:[]);
+        assert.equal(at.length,1,'one casino marketing catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',227,228,229,237],',',227,228,229],']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 129);','assert.equal(lessons.length, 128);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/107(?:<!-- -->|\\s)+resultados/);assert.match(html,/122(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/106(?:<!-- -->|\\s)+resultados/);assert.match(html,/121(?:<!-- -->|\\s)+clases totales/);']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/casino-marketing-b1.test.mjs']);\n",'']],
+    },
+  },
+  {
     id:236,path:'/the-sound-map',files:/^(?:app\/the-sound-map\/|public\/(?:the-sound-map|audio\/the-sound-map)\/|tests\/sound-map[^/]*\.test\.mjs$|scripts\/generate-sound-map-audio\.py$)/,
     edits:{
       'tests/rendered-html.test.mjs':[['assert.match(html,/106(?:<!-- -->|\\s)+resultados/);assert.match(html,/121(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/105(?:<!-- -->|\\s)+resultados/);assert.match(html,/120(?:<!-- -->|\\s)+clases totales/);']],
@@ -183,18 +196,19 @@ export function isApprovedAdditionPath(path) {
 }
 
 export function withoutApprovedAdditions(path, bytes) {
-  // Undo this later additive lesson before the grammar snapshot's exact inversions.
-  const latestSteps=additions.find(item=>item.id===236).edits[path]||[];
-  if(latestSteps.length){
-   let latest=bytes.toString('utf8');
-   for(const step of latestSteps){
-    if(typeof step==='function'){latest=step(latest);continue;}
-    const [after,before]=step;assert.equal(latest.split(after).length-1,1,`one sound map edit in ${path}`);latest=latest.replace(after,before);
-  }
-   bytes=Buffer.from(latest);
+  // Undo the latest additive lessons in reverse order before the grammar snapshot.
+  for (const addition of additions.filter(item=>item.id===237||item.id===236)) {
+    const latestSteps=addition.edits[path]||[];
+    if(!latestSteps.length)continue;
+    let latest=bytes.toString('utf8');
+    for(const step of latestSteps){
+      if(typeof step==='function'){latest=step(latest);continue;}
+      const [after,before]=step;assert.equal(latest.split(after).length-1,1,`one ${addition.id} edit in ${path}`);latest=latest.replace(after,before);
+    }
+    bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==236), ...repairs].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==236&&item.id!==237), ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
