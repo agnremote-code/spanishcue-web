@@ -23,7 +23,7 @@ async function mount(at){
  globalThis.requestAnimationFrame=fn=>{frames.set(++frameId,fn);return frameId;};globalThis.cancelAnimationFrame=id=>frames.delete(id);
  globalThis.ResizeObserver=class{observe(){}disconnect(){}};globalThis.IS_REACT_ACT_ENVIRONMENT=true;
  const z=at??ZONES[0],position={x:z.x,y:z.y,z:z.z},safe={x:ZONES[0].x,y:ZONES[0].y,z:ZONES[0].z};localStorage.setItem('spanishcue:bosque:world:v2',JSON.stringify({version:2,position,checkpoint:at?safe:position}));
- const calls=[],positions=[];let props={paused:false,visited:[],completed:false,unlocked:false,micro:[],onMicroSpot:spot=>calls.push(`spot:${spot}`),onMicroDone:spot=>calls.push(`done:${spot}`),onZone:zone=>calls.push(zone),onFail:()=>assert.fail('GPU fixture failed'),onPosition:p=>positions.push(p)};
+ const calls=[],positions=[];let props={paused:false,visited:[],completed:false,unlocked:false,micro:[],onMicroSpot:spot=>calls.push(`spot:${spot}`),onMicroDone:spot=>calls.push(`done:${spot}`),onSummit:()=>calls.push('summit'),onZone:zone=>calls.push(zone),onFail:()=>assert.fail('GPU fixture failed'),onPosition:p=>positions.push(p)};
  const root=createRoot(document.getElementById('root'));
  const render=async more=>{props={...props,...more};await act(()=>root.render(React.createElement(m.exports.default,props)));};
  await render({});
@@ -69,5 +69,19 @@ test('Space in the air gives one second jump; the next cap is marked and the rou
   const top=t.positions.at(-1).y;await key('Space');await key('Space','keyup');await t.advance(12);
   assert.ok(t.positions.at(-1).y>top,'the second jump lifts the hero again');
   await t.advance(160);assert.match(document.querySelector('.bfg-world-hint').textContent,/segundo salto|Punto de regreso|Conversar|E para conversar/);
+ }finally{await t.stop();}
+});
+
+test('a bad fall: the hero keeps falling, says ouch, falls apart and is rebuilt on the cap it left',async()=>{
+ const zone=ZONES[5];const t=await mount(zone);try{
+  await t.advance(5);await key('KeyW');await t.advance(90);await key('KeyW','keyup');
+  await t.advance(130);assert.ok(document.querySelector('.bfg-world-ouch'),'¡Auch! appears on impact');assert.match(document.querySelector('.bfg-world-ouch').textContent,/Auch/);
+  await t.advance(200);const p=t.positions.at(-1);assert.equal(p.y,zone.y,'back on the cap');assert.ok(Math.hypot(p.x-zone.x,p.z-zone.z)<.01);
+  assert.match(document.querySelector('.bfg-world-hint').textContent,/hongo anterior/);
+ }finally{await t.stop();}
+});
+test('reaching the summit celebrates and unlocks the final conversation',async()=>{
+ const top=ZONES.at(-1);const t=await mount(top);try{
+  await t.advance(10);assert.ok(t.calls.includes('summit'));assert.match(document.querySelector('.bfg-world-banner').textContent,/Llegaste a la cima/);
  }finally{await t.stop();}
 });
