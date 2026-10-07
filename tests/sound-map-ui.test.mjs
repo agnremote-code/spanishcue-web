@@ -27,7 +27,15 @@ test('A0 accessible support unlocks tasks; wrong attempts can be retried; comple
  assert.equal(container.querySelectorAll('.sm-task').length,2);
  let tasks=container.querySelectorAll('.sm-task');
  await click(tasks[0].querySelectorAll('.sm-options button')[1]);await click(tasks[0].querySelector('.sm-check'));
- assert.match(tasks[0].textContent,/Listen again/);assert.ok(container.querySelector('.sm-finish').disabled);
+ await act(async()=>{await new Promise(resolve=>setTimeout(resolve,0));});
+ assert.equal(document.activeElement.id,'sm-feedback-0','checking moves focus to the correction');
+ assert.match(tasks[0].textContent,/Incorrect/);assert.ok(container.querySelector('.sm-finish').disabled);
+ assert.match(tasks[0].querySelector('.sm-feedback').textContent,/Se escucha «mi planta»/);
+ assert.match(tasks[0].querySelector('.sm-options .incorrect').textContent,/Tu respuesta/);
+ assert.match(tasks[0].querySelector('.sm-options .correct').textContent,/Respuesta correcta/);
+ assert.ok([...tasks[0].querySelectorAll('.sm-options button')].every(b=>b.disabled));
+ await click(tasks[0].querySelector('.sm-retry'));
+ assert.equal(tasks[0].querySelector('.sm-feedback'),null);
  await click(tasks[0].querySelectorAll('.sm-options button')[0]);await click(tasks[0].querySelector('.sm-check'));
  await click(tasks[1].querySelectorAll('.sm-options button')[data.levels.A0.scenes[0].tasks[1].answer]);await click(tasks[1].querySelector('.sm-check'));
  assert.ok(container.querySelector('.sm-finish').disabled);
@@ -54,7 +62,35 @@ test('ordering can remove and rebuild a sequence before marking complete',async(
  await render('A0','singer');await click(button('.sm-help-row button','Continue'));
  const order=container.querySelectorAll('.sm-task')[1];const options=order.querySelectorAll('.sm-options button');
  await click(options[1]);await click(options[1]);assert.equal(order.querySelectorAll('.selected').length,0);
+ for(const i of [0,1,2])await click(options[i]);await click(order.querySelector('.sm-check'));
+ assert.match(order.querySelector('.sm-feedback').textContent,/Orden correcto/);
+ assert.deepEqual([...order.querySelectorAll('.sm-order-solution li')].map(li=>li.textContent),data.levels.A0.scenes[1].tasks[1].answer.map(i=>data.levels.A0.scenes[1].tasks[1].items[i]));
+ assert.ok(container.querySelector('.sm-finish').disabled);
+ await click(order.querySelector('.sm-retry'));
+ assert.equal(order.querySelectorAll('.selected').length,0);
  for(const i of [2,0,1])await click(options[i]);await click(order.querySelector('.sm-check'));
  assert.match(order.querySelector('.sm-feedback').textContent,/Yes/);
+ await click(order.querySelector('.sm-retry'));
+ assert.match(container.querySelector('.sm-section-label').textContent,/0\/2/,'retry invalidates an earlier completed answer');
+});
+test('every objective activity across A0–C2 reveals its authored evidence and correct answer after a wrong attempt',async()=>{
+ for(const [level,unit] of Object.entries(data.levels))for(const scene of unit.scenes){
+  await render(level,scene.id);await click(button('.sm-help-row button',level==='A0'?'Continue':'apoyo'));
+  const activities=container.querySelectorAll('.sm-task');
+  for(const [index,task] of scene.tasks.entries()){
+   if(task.type==='open')continue;
+   const activity=activities[index],options=activity.querySelectorAll('.sm-options button');
+   const attempt=task.type==='choice'?[(task.answer+1)%task.options.length]:[...task.answer.slice(1),task.answer[0]];
+   for(const i of attempt)await click(options[i]);
+   await click(activity.querySelector('.sm-check'));
+   assert.ok(activity.querySelector('.sm-feedback').textContent.includes(task.explanation),`${level}/${scene.id} explains the evidence`);
+   if(task.type==='choice'){
+    assert.ok(options[task.answer].classList.contains('correct'));
+    assert.ok(activity.querySelector('.sm-feedback').textContent.includes(task.options[task.answer]),'focused correction names the correct answer');
+   }
+   else assert.deepEqual([...activity.querySelectorAll('.sm-order-solution li')].map(li=>li.textContent),task.answer.map(i=>task.items[i]));
+   assert.match(container.querySelector('.sm-section-label').textContent,/0\/2/);
+  }
+ }
  await act(async()=>root.unmount());dom.window.close();
 });

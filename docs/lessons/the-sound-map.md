@@ -49,3 +49,17 @@ The cloud browser reports WebGL disabled. A temporary Three.js SVGRenderer fixtu
 All 84 MP3s decoded successfully with ffmpeg. The full local regression suite and full lint passed; targeted tests additionally select all 42 level/scene combinations and verify a single correct audio element after every change.
 
 Regression tests cover explicit pointer/keyboard map-trigger focus return, responsive camera bounds at orbit limits and collision handling in a narrow viewport, alongside the original content/audio/progress tests.
+
+## Immersion and correction upgrade — 2026-10-07
+
+Continued from main `1d3848a25538267e703672fc5b6d3b2b68da95bc` (including PR #135). The six scenes, 42 scripts, audio manifest and all 84 MP3s are unchanged.
+
+- The existing Three.js city now uses a golden-hour palette, cooler contrasting streets/river, district colours, emissive windows/lanterns, additional facade/rooftop details, café tables, flowers, crates and listeners. Shared materials, capped pixel ratio and a single shadow light remain; there are no new dependencies, models or postprocessing passes.
+- Selection changes the hotspot, local sound ring/equalizer, small camera focus shift, scene-colour arrival strip and “you are here” map status. Ambient water/resident motion respects reduced motion; rendering pauses offscreen and in hidden documents. The GPU scene is retained between selections.
+- The no-WebGL plan is now an isometric layered city with the same places and shared projection for its DOM hotspots. Initial hotspot coordinates also keep controls usable before hydration.
+- Incorrect choice answers show the chosen option in red, the correct option in green, and explicitly name the correct answer beside the existing authored explanation. Ordering compares the submitted sequence with the full correct order and marks positions. Submission focuses the correction; retry clears the answer and returns focus to an option. Retrying and editing open responses invalidate current completion. Open responses retain model/rubric self-review rather than pretend automatic grading.
+- Scene steps, completed map points and route stamps make progress visible. Desktop keeps the city alongside the activities; mobile uses a compact header and stacked corrections.
+
+Browser QA used temporary fixtures importing the real page and assets: desktop, 390px and 320px; six hotspot bounds without overlap; no horizontal mobile overflow; all seven levels; main/clean audio controls; wrong choice/order feedback; keyboard focus; retry and save/return to the map. The browser remains unable to create a WebGL context. A separate temporary SVGRenderer diagnostic exercised the actual Three geometry, orbit/zoom and projected labels, but does not establish final GPU lighting, shadows or frame rate. Neither fixture ships. No new human listening-quality review is claimed.
+
+Sound Map tests cover all objective activities across all 42 scenes, including explanation/correct-answer disclosure after wrong attempts, sequence corrections, explicit retry, focus and completion invalidation, alongside the existing content/audio/navigation checks. Read-only review also checked camera framing across all six active targets and orbit limits.
