@@ -73,7 +73,7 @@ type QuadRig = {
 
 type Spec = { radius: number; length: number; legLen: number; legR: number; head: number; neck: number; tailSegs: number; tailLen: number; tailR: number };
 const SPECS: Record<'cat' | 'dog', Spec> = {
-  cat: { radius: 0.062, length: 0.2, legLen: 0.17, legR: 0.018, head: 0.062, neck: 0.07, tailSegs: 4, tailLen: 0.075, tailR: 0.014 },
+  cat: { radius: 0.068, length: 0.21, legLen: 0.135, legR: 0.019, head: 0.064, neck: 0.07, tailSegs: 4, tailLen: 0.075, tailR: 0.014 },
   dog: { radius: 0.105, length: 0.3, legLen: 0.3, legR: 0.03, head: 0.085, neck: 0.12, tailSegs: 3, tailLen: 0.08, tailR: 0.022 },
 };
 
@@ -178,7 +178,7 @@ function animateQuad(animal: Animal, rig: QuadRig, dt: number, speed: number) {
   const state = moving ? 'walk' : rig.state;
   const L = rig.legLen, R = rig.radius;
   // Targets: body height and pitch, legs (front right, front left, back right, back left), head, tail.
-  const g: Record<string, number> = { y: L + R * 0.35, pitch: 0, l0: 0, l1: 0, l2: 0, l3: 0, hx: 0, hy: 0, tail: species === 'cat' ? 0.9 : 0.7, swish: 0, wag: 0, tongue: 0 };
+  const g: Record<string, number> = { y: L + R * 0.35, pitch: 0, l0: 0, l1: 0, l2: 0, l3: 0, hx: 0, hy: 0, tail: species === 'cat' ? 0.55 : 0.7, swish: 0, wag: 0, tongue: 0 };
   if (state === 'walk') {
     animal.phase += dt * speed * (species === 'cat' ? 26 : 14) / Math.max(0.6, L * 6);
     const p = animal.phase;
@@ -232,7 +232,7 @@ function animateQuad(animal: Animal, rig: QuadRig, dt: number, speed: number) {
   rig.head.rotation.set(n.hx, n.hy, 0);
   rig.ears.rotation.z = Math.sin(t * 0.7) > 0.95 ? Math.sin(t * 40) * 0.08 : 0;
   rig.tail.forEach((seg, i) => {
-    seg.rotation.x = i === 0 ? n.tail : species === 'cat' ? 0.15 + (n.tail > 0.5 ? 0.15 : -0.05) : 0.1;
+    seg.rotation.x = i === 0 ? n.tail : species === 'cat' ? (n.tail > 0.4 ? 0.3 - i * 0.12 : -0.05) : 0.1;
     seg.rotation.y = species === 'cat' ? n.swish * (0.4 + i * 0.3) * Math.sin(t * 1.6 - i * 0.6) * 2 : n.wag * (i ? 0.5 : 1);
   });
   if (rig.tongue) { rig.tongue.visible = n.tongue > 0.5; rig.tongue.scale.z = 1 + Math.sin(t * 9) * 0.15; }
@@ -251,18 +251,18 @@ function pigeon(color: string) {
   const dark = mat(tint(color, -0.14), 0.8);
   const group = new THREE.Group();
   add(group, cached('pigeon-body', () => merge([
-    moved(new THREE.SphereGeometry(0.055, 10, 8), 0, 0.085, 0, 0, 0, 0, 0.95, 0.9, 1.35),
-    moved(new THREE.ConeGeometry(0.035, 0.1, 5), 0, 0.09, -0.1, -Math.PI / 2 - 0.25, 0, 0, 1.2, 1, 0.35),
+    moved(new THREE.SphereGeometry(0.055, 10, 8), 0, 0.072, 0, 0, 0, 0, 0.95, 0.9, 1.35),
+    moved(new THREE.ConeGeometry(0.035, 0.1, 5), 0, 0.077, -0.1, -Math.PI / 2 - 0.25, 0, 0, 1.2, 1, 0.35),
   ])), body);
-  add(group, cached('pigeon-legs', () => merge([-1, 1].map(x => moved(new THREE.CylinderGeometry(0.005, 0.005, 0.04, 4), x * 0.018, 0.02, 0.005)))), mat('#c8606a', 0.6));
-  const head = pivot(group, 0, 0.13, 0.055);
+  add(group, cached('pigeon-legs', () => merge([-1, 1].map(x => moved(new THREE.CylinderGeometry(0.005, 0.005, 0.03, 4), x * 0.018, 0.015, 0.005)))), mat('#c8606a', 0.6));
+  const head = pivot(group, 0, 0.117, 0.055);
   add(head, cached('pigeon-head', () => new THREE.SphereGeometry(0.027, 9, 7)), body);
   add(head, cached('pigeon-neck', () => moved(new THREE.SphereGeometry(0.03, 8, 6), 0, -0.025, -0.008, 0, 0, 0, 1, 1, 1)), mat('#4f7a6a', 0.35, '#1a2a30'));
   add(head, cached('pigeon-beak', () => moved(new THREE.ConeGeometry(0.007, 0.022, 4), 0, -0.004, 0.034, Math.PI / 2)), mat('#3a3436', 0.5));
   for (const x of [-1, 1]) add(head, cached('pigeon-eye', () => new THREE.SphereGeometry(0.0055, 5, 4)), mat('#e07020', 0.3), x * 0.017, 0.007, 0.016);
   const wings: THREE.Group[] = [];
   for (const x of [-1, 1]) {
-    const wing = pivot(group, x * 0.045, 0.11, 0.02);
+    const wing = pivot(group, x * 0.045, 0.097, 0.02);
     add(wing, cached('pigeon-wing', () => moved(new THREE.SphereGeometry(0.045, 8, 6), 0, -0.012, -0.045, 0, 0, 0, 0.22, 0.6, 1.5)), dark);
     wings.push(wing);
   }

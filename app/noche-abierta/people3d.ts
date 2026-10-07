@@ -377,7 +377,7 @@ function dimsFor(body: BodyType, build: Build, r: () => number): Dims {
   const d: Dims = f
     ? { shoulder: 0.162, waist: 0.112, chest: 0.142, hip: 0.172, depth: 0.66, limb: 0.9, neck: 0.036 }
     : { shoulder: 0.19, waist: 0.135, chest: 0.165, hip: 0.152, depth: 0.62, limb: 1, neck: 0.045 };
-  const k = build === 'slim' ? { s: 0.92, w: 0.86, c: 0.9, h: 0.92, l: 0.86 }
+  const k = build === 'slim' ? { s: 0.93, w: 0.88, c: 0.92, h: 0.93, l: 0.9 }
     : build === 'athletic' ? { s: 1.1, w: 0.98, c: 1.1, h: 1, l: 1.08 }
       : build === 'heavy' ? { s: 1.08, w: 1.45, c: 1.2, h: 1.22, l: 1.22 }
         : { s: 1, w: 1, c: 1, h: 1, l: 1 };
@@ -391,32 +391,46 @@ function torsoGeometry(body: BodyType, build: Build, d: Dims) {
   const key = `torso-${body}-${build}-${d.shoulder.toFixed(3)}-${d.waist.toFixed(3)}-${d.chest.toFixed(3)}`;
   return cached(key, () => {
     const belly = build === 'heavy' ? d.waist * 1.08 : d.waist * 1.02;
-    const hem = Math.max(d.hip, d.waist) * 1.0;
-    const g = lathe([
+    const hem = Math.max(d.hip, d.waist) * 1.03;
+    const outline = new THREE.SplineCurve([
       [0, -0.12], [hem * 0.97, -0.115], [hem, -0.07], [lerp(hem, d.waist, 0.7), -0.01], [d.waist, 0.05], [belly, 0.12], [lerp(belly, d.chest, 0.6), 0.2],
       [d.chest, 0.29], [d.chest * 1.01, 0.35], [d.shoulder * 0.93, 0.405], [d.shoulder * 0.62, 0.445], [d.neck * 1.25, 0.468], [0, 0.474],
-    ], 14);
+    ].map(([r, y]) => new THREE.Vector2(r, y))).getPoints(34);
+    // The lathe seam goes at the back, where it does not show.
+    const g = new THREE.LatheGeometry(outline, 18, Math.PI);
     g.scale(1, 1, d.depth * (build === 'heavy' ? 1.08 : 1));
+    // Soft bust and belly pushed out of the surface, so there are no seams.
+    const p = g.attributes.position as THREE.BufferAttribute;
+    for (let i = 0; i < p.count; i++) {
+      const x = p.getX(i), y = p.getY(i), z = p.getZ(i);
+      if (z <= 0) continue;
+      let push = 0;
+      if (body === 'f') push += 0.024 * Math.exp(-(((Math.abs(x) - d.chest * 0.36) / 0.05) ** 2) - ((y - 0.27) / 0.055) ** 2);
+      if (build === 'heavy') push += 0.04 * Math.exp(-((x / 0.12) ** 2) - ((y - 0.1) / 0.1) ** 2);
+      p.setZ(i, z + push * (z / (Math.hypot(x, z) || 1)));
+    }
+    g.computeVertexNormals();
     const parts: THREE.BufferGeometry[] = [g];
-    // A soft bust: one wide shape, not two balls.
-    if (body === 'f') for (const s of [-1, 1]) parts.push(moved(new THREE.SphereGeometry(0.058, 12, 9), s * d.chest * 0.32, 0.27, d.chest * d.depth * 0.5, 0, 0, 0, 1, 0.82, 0.62));
     return merge(parts);
   });
 }
 
 function pelvisGeometry(d: Dims) {
-  return cached(`pelvis-${d.hip.toFixed(3)}-${d.waist.toFixed(3)}`, () => {
-    const g = lathe([[0, -0.13], [d.hip * 0.5, -0.125], [d.hip * 0.86, -0.08], [d.hip * 0.94, -0.02], [lerp(d.hip, d.waist, 0.6), 0.05], [d.waist * 0.98, 0.08], [0, 0.09]], 12);
-    g.scale(1, 1, 0.74);
+  return cached(`pelvis-${d.hip.toFixed(3)}-${d.waist.toFixed(3)}-${d.depth.toFixed(2)}`, () => {
+    const g = lathe([[0, -0.13], [d.hip * 0.5, -0.125], [d.hip * 0.84, -0.08], [d.hip * 0.9, -0.02], [d.waist * 0.82, 0.035], [0, 0.045]], 12);
+    g.scale(1, 1, d.depth * 1.05);
     return g;
   });
 }
 
-// Skirt, dress hem or coat tail hanging from the waist (hips space).
-function skirtGeometry(top: number, length: number, flare: number) {
-  return cached(`skirt-${top.toFixed(3)}-${length}-${flare}`, () => {
-    const g = lathe([[top * flare, -length], [top * lerp(1, flare, 0.7), -length * 0.6], [top * 1.04, -length * 0.15], [top, 0.06]], 16);
-    g.scale(1, 1, 0.82);
+// Skirt, dress hem or coat tail hanging from the waist (hips space): it
+// starts at the waist, rounds over the hips and flares to the hem.
+function skirtGeometry(waist: number, hip: number, length: number, flare: number) {
+  return cached(`skirt-${waist.toFixed(3)}-${hip.toFixed(3)}-${length.toFixed(2)}-${flare}`, () => {
+    const g = lathe([
+      [hip * flare, -length], [hip * lerp(1.04, flare, 0.55), -length * 0.55], [hip * 1.05, -0.06], [lerp(waist, hip, 0.6) * 1.04, 0.03], [waist * 1.03, 0.1],
+    ], 16);
+    g.scale(1, 1, 0.8);
     return g;
   });
 }
@@ -493,7 +507,7 @@ const blankFrame = (): Frame => Object.fromEntries(KEYS.map(k => [k, 0])) as Fra
 const REF = 1.72;
 const THIGH = 0.43, SHIN = 0.4, ANKLE = 0.07, HIP_DROP = 0.05;
 const UPPER_ARM = 0.29, FOREARM = 0.25;
-const SHOULDER_Y = 0.388, NECK_Y = 0.455, HEAD_PIVOT = 0.5;
+const SHOULDER_Y = 0.378, NECK_Y = 0.455, HEAD_PIVOT = 0.5;
 
 function mesh(geometry: THREE.BufferGeometry, material: THREE.Material, parent: THREE.Object3D, x = 0, y = 0, z = 0) {
   const m = new THREE.Mesh(geometry, material);
@@ -549,8 +563,9 @@ export function createPerson(look: Look, shadows = true): Person {
 
   // Clothing details on the torso.
   if (L.top === 'suit' || L.top === 'jacket') {
-    const inner = L.top === 'suit' ? '#efece6' : r() < 0.5 ? '#1d1d22' : '#d8d2c6';
-    mesh(cached('shirt-front', () => moved(new THREE.CylinderGeometry(0.036, 0.008, 0.17, 3), 0, 0, 0, 0, Math.PI, 0, 1, 1, 0.12)), mat(inner, 0.8), torso, 0, 0.355, front - 0.004);
+    const inner = L.top === 'suit' ? '#efece6' : r() < 0.3 ? '#1d1d22' : r() < 0.5 ? '#e8e4dc' : shade(L.topColor, 0.25);
+    const v = mesh(cached('shirt-front', () => new THREE.ShapeGeometry(new THREE.Shape([new THREE.Vector2(-0.05, 0.06), new THREE.Vector2(0.05, 0.06), new THREE.Vector2(0, -0.13)]))), mat(inner, 0.8), torso, 0, 0.34, front * 0.97);
+    v.rotation.x = -0.3;
     if (L.top === 'suit') mesh(cached('tie', () => new THREE.BoxGeometry(0.024, 0.2, 0.008)), mat(r() < 0.5 ? '#5a1824' : '#1a2238', 0.6), torso, 0, 0.32, front + 0.004);
   }
   if (L.top === 'apron') mesh(cached('apron', () => new THREE.BoxGeometry(0.27, 0.66, 0.012)), cloth(L.topColor), torso, 0, 0.06, front + 0.01).rotation.x = -0.04;
@@ -671,7 +686,7 @@ export function createPerson(look: Look, shadows = true): Person {
   // Arms: upper arm, forearm and a hand pivot for props.
   const sleeve = longSleeves ? topMat : skin;
   const upper = L.top === 'dress' ? skin : topMat;
-  const armR = d.limb * (L.body === 'f' ? 0.044 : 0.05);
+  const armR = d.limb * (L.body === 'f' ? 0.047 : 0.051);
   const upperGeo = cached(`upper-${armR.toFixed(3)}`, () => limbGeometry(UPPER_ARM, [armR * 1.05, armR, armR * 0.88, armR * 0.8]));
   const foreGeo = cached(`fore-${armR.toFixed(3)}`, () => limbGeometry(FOREARM, [armR * 0.86, armR * 0.84, armR * 0.66, armR * 0.56]));
   const handGeo = cached('hand', () => merge([
@@ -680,7 +695,9 @@ export function createPerson(look: Look, shadows = true): Person {
   ]));
   const makeArm = (side: 1 | -1) => {
     const arm = new THREE.Group();
-    arm.position.set(side * d.shoulder * 0.93, SHOULDER_Y, -0.005);
+    // Twist about the arm first, then raise it sideways, then forward.
+    arm.rotation.order = 'XZY';
+    arm.position.set(side * d.shoulder * 0.9, SHOULDER_Y, -0.005);
     torso.add(arm);
     mesh(upperGeo, upper, arm);
     if (coatLike) arm.children[0].scale.set(1.12, 1, 1.12);
@@ -725,9 +742,10 @@ export function createPerson(look: Look, shadows = true): Person {
   const legL = makeLeg(1);
 
   // Skirts and tails that hang from the waist.
-  if (L.top === 'coat') mesh(skirtGeometry(Math.max(d.hip, d.waist) * 1.12, 0.52, 1.38), cloth(L.topColor), hips, 0, 0.02, 0);
-  else if (L.top === 'dress') mesh(skirtGeometry(Math.max(d.hip, d.waist) * 1.03, 0.4 + r() * 0.08, 1.5), cloth(L.topColor), hips, 0, 0.03, 0);
-  else if (L.bottom === 'skirt') mesh(skirtGeometry(Math.max(d.hip, d.waist) * 1.03, 0.38 + r() * 0.12, 1.4), cloth(L.bottomColor), hips, 0, 0.04, 0);
+  const hipWidth = Math.max(d.hip, d.waist);
+  if (L.top === 'coat') mesh(skirtGeometry(d.waist * 1.1, hipWidth * 1.1, 0.55, 1.32), cloth(L.topColor), hips, 0, 0.02, 0);
+  else if (L.top === 'dress') mesh(skirtGeometry(d.waist, hipWidth, Math.round((0.4 + r() * 0.1) * 20) / 20, 1.45), cloth(L.topColor), hips, 0, 0.03, 0);
+  else if (L.bottom === 'skirt') mesh(skirtGeometry(d.waist, hipWidth, Math.round((0.36 + r() * 0.14) * 20) / 20, 1.35), cloth(L.bottomColor), hips, 0, 0.02, 0);
   if (L.top === 'apron') mesh(cached('apron-low', () => new THREE.BoxGeometry(0.28, 0.34, 0.012)), cloth(L.topColor), hips, 0, -0.17, d.hip * 0.72 + 0.02).rotation.x = -0.12;
 
   // Things carried in the right hand when the pose leaves it free.
@@ -889,7 +907,7 @@ const POSE_PROPS: Partial<Record<Pose, { kind: string; hand: 'R' | 'L' | 'torso'
   guitar: { kind: 'guitar', hand: 'torso', at: [-0.1, 0.1, 0.2], rot: [0, 0.15, 0.5] },
   sweep: { kind: 'broom', hand: 'R', at: [0, -0.05, 0.02], rot: [0.55, 0, 0] },
   carry: { kind: 'box', hand: 'torso', at: [0, 0.16, 0.31], rot: [0, 0, 0] },
-  fish: { kind: 'rod', hand: 'R', at: [0, -0.05, 0.02], rot: [-0.9, 0, 0] },
+  fish: { kind: 'rod', hand: 'R', at: [0, -0.05, 0.02], rot: [2.3, 0, 0] },
   cook: { kind: 'spatula', hand: 'R', at: [0, -0.05, 0.02], rot: [-0.3, 0, 0] },
   read: { kind: 'book', hand: 'torso', at: [0, 0.2, 0.3], rot: [-0.85, 0, 0] },
 };
@@ -952,7 +970,7 @@ function reach(dy: number, dz: number): [number, number] {
 function relaxed(f: Frame, t: number, rig: Rig) {
   const v = rig.variant;
   if (v === 1) both(f, 0.08, 0.13, -0.15, -0.55); // hands in pockets
-  else if (v === 2) { arms(f, 0, 0.02, 0.07, 0, -0.14); arms(f, 1, 0.1, 0.55, -0.7, -1.7); } // a hand on the hip
+  else if (v === 2) { arms(f, 0, 0.02, 0.07, 0, -0.14); arms(f, 1, 0.1, 0.75, 1.57, -1.65); } // a hand on the hip
   else if (v === 3) both(f, 0.42, 0.1, 0.9, -0.65); // hands behind the back
   else { arms(f, 0, 0.03 + Math.sin(t * 0.7) * 0.02, 0.07, 0.05, -0.16); arms(f, 1, 0.01, 0.07, 0.05, -0.2); }
 }
@@ -1038,7 +1056,7 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
     f.bodyRX = -0.08;
     legs(f, 0, 0.02, 0.03); legs(f, 1, -0.15, 0.32, -0.16);
     f.hipRoll = 0.04;
-    if (rig.variant % 2) { arms(f, 0, -0.42, 0.22, 1.25, -1.5); arms(f, 1, -0.36, 0.22, 1.3, -1.62); }
+    if (rig.variant % 2) { arms(f, 0, -0.88, 0.22, 1.1, -1.55); arms(f, 1, -0.8, 0.22, 1.15, -1.66); }
     else both(f, 0.1, 0.12, -0.15, -0.6);
   } else if (pose === 'dance') {
     const b = t * 4.2;
@@ -1086,7 +1104,7 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
       f.eye = 0.02;
       break;
     case 'arms':
-      arms(f, 0, -0.42, 0.22, 1.25, -1.5); arms(f, 1, -0.36, 0.22, 1.3, -1.62);
+      arms(f, 0, -0.88, 0.22, 1.1, -1.55); arms(f, 1, -0.8, 0.22, 1.15, -1.66);
       break;
     case 'wave':
       arms(f, 0, -0.25, 2.35, 0, -0.55, Math.sin(t * 7) * 0.35);
@@ -1179,7 +1197,7 @@ function target(person: Person, f: Frame, dt: number, speed: number, talk: boole
     }
     case 'angry':
       f.smile = -0.5; f.open = 0.06; f.eye = 0.8; f.brow = -0.35; f.browIn = -0.95; f.headX += 0.1; f.torX += 0.05;
-      if (calm) { if (rig.variant % 2) { arms(f, 0, -0.42, 0.22, 1.25, -1.5); arms(f, 1, -0.36, 0.22, 1.3, -1.62); } else both(f, 0.05, 0.16, 0.1, -0.45); }
+      if (calm) { if (rig.variant % 2) { arms(f, 0, -0.88, 0.22, 1.1, -1.55); arms(f, 1, -0.8, 0.22, 1.15, -1.66); } else both(f, 0.05, 0.16, 0.1, -0.45); }
       break;
     case 'surprised':
       f.smile = 0; f.open = 0.8; f.eye = 1.4; f.brow = 1; f.browIn = 0.1; f.headX -= 0.12; f.torX -= 0.05;
