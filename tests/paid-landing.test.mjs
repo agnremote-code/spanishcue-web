@@ -41,3 +41,14 @@ test('product screenshots used by the paid landing ship in public/lp', () => {
     assert.ok(statSync(file).size < 200_000, `${name} stays light`);
   }
 });
+
+test('landing scroll stability: one shared founder-status request, stable pending layout, no reload loops', () => {
+  const ui = read('app/acceso/CheckoutButton.tsx');
+  assert.match(ui, /founderStatusRequest \?\?= fetch\("\/api\/billing\/founder-status"/);
+  assert.match(ui, /variant === "landing" && founder === undefined\) return landingCheckout\(null\)/);
+  const worker = read('worker/index.ts');
+  assert.match(worker, /routedHeaders\.delete\("x-spanishcue-identity-checked"\)/);
+  assert.match(worker, /pathname\.startsWith\('\/lp\/'\)\|\|Boolean\(lesson\)/);
+  assert.match(read('app/layout.tsx'), /identityChecked=\{requestHeaders\.get\("x-spanishcue-identity-checked"\) === "1"\}/);
+  assert.match(read('app/i18n/LocaleProvider.tsx'), /if \(requested === initialLocale\) \{\n\s+persistLocale\(initialLocale\);\n\s+return;/);
+});

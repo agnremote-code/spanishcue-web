@@ -6,6 +6,8 @@ export type FirebaseSessionUser = {
 
 type SessionSyncOptions = {
   serverSignedIn: boolean;
+  /** False when the server did not resolve the session for this page, so its signed-out render proves nothing. */
+  identityChecked?: boolean;
   initialEvent?: boolean;
   fetcher?: typeof fetch;
   pathname: string;
@@ -36,7 +38,8 @@ export async function syncFirebaseSession(
       await options.signOut();
       return;
     }
-    if (response.ok && !options.serverSignedIn) {
+    // Reloading where the server never reads the session would loop forever.
+    if (response.ok && !options.serverSignedIn && options.identityChecked !== false) {
       // A blocked or rejected cookie must not cause an endless reload loop.
       await confirmSessionCookie(options.fetcher ?? fetch);
       options.reload();
