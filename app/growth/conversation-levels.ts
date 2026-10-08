@@ -158,7 +158,7 @@ export const conversationLevels: ConversationLevel[] = [
       { es: "¿Hay un parque cerca de tu casa?", en: "Is there a park near your home?" },
       { es: "¿Qué día de la semana te gusta más?", en: "Which day of the week do you like best?" },
     ],
-    lessonIds: [121, 120, 27, 26, 24, 19, 15, 207, 226, 223],
+    lessonIds: [121, 120, 27, 24, 19, 15, 207, 226, 223],
     companionLessonIds: [40, 41, 16, 204, 201],
     guideSlugs: ["spanish-conversation-activities-by-level", "teach-beginner-spanish-online", "spanish-lesson-planning-45-minutes"],
     faq: [
