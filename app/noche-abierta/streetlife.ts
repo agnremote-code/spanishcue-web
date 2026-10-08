@@ -898,7 +898,27 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   // Everyone in a scene looks at you when it opens; the room spots come from STREET_ROOMS.
   void STREET_ROOMS;
   const setHooks = (next: Hooks) => Object.assign(hooks, next);
-  return { root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, cars: () => cars, walkers: () => walkers };
+  // QA only: where each shown person's pieces really are.
+  const inspect = () => {
+    const out: { key: string; x: number; z: number; pose: string; far: boolean; head: number; torso: number; feet: number; rootY: number; fh: number }[] = [];
+    for (const body of bodies) {
+      if (!body.group.visible || !body.rig || !body.rig.root.visible) continue;
+      body.group.updateMatrixWorld(true);
+      const at = (o: THREE.Object3D) => new THREE.Vector3().setFromMatrixPosition(o.matrixWorld);
+      const r = body.rig;
+      out.push({ key: body.key, x: body.x, z: body.z, pose: body.override && body.override.until > 0 ? body.override.pose : body.pose, far: false, head: at(r.parts.head).y, torso: at(r.parts.torso).y, feet: at(r.parts.shinL).y, rootY: at(r.root).y, fh: new THREE.Box3().setFromObject(r.root).getSize(new THREE.Vector3()).y });
+    }
+    // And the baked version of every body, shown or not.
+    const baked: { key: string; pose: string; h: number; tris: number; w: number }[] = [];
+    for (const body of bodies) {
+      const far = ensureFar(body);
+      far.geometry.computeBoundingBox();
+      const box = far.geometry.boundingBox!;
+      baked.push({ key: body.key, pose: body.pose, h: box.max.y - box.min.y, w: Math.max(box.max.x - box.min.x, box.max.z - box.min.z), tris: far.geometry.attributes.position.count / 3 });
+    }
+    return { out, baked };
+  };
+  return { inspect, root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, cars: () => cars, walkers: () => walkers };
 }
 
 export type StreetCrowd = ReturnType<typeof createStreetCrowd>;
