@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner brief of 2026-10-08 (project thread \"Rediseño landings de pago\"): complete visual redesign of the paid-traffic landings /lp/spanish-teacher-resources and /lp/online-spanish-teaching-resources for Spanish teachers (hero \"Stop Planning Spanish Lessons From Scratch.\", product feature tiles, two Paddle plan buttons with honest recurring-billing disclosures, PayPal secondary, FAQ). Existing English copy remains protected; this manifest only approves the exact new literals listed below.",
+  "authorization": "Owner brief of 2026-10-08 (project thread \"Rediseño landings de pago\"): complete visual redesign of the paid-traffic landings /lp/spanish-teacher-resources and /lp/online-spanish-teaching-resources for Spanish teachers (hero \"Stop Planning Spanish Lessons From Scratch.\", product feature tiles, two Paddle plan buttons with honest recurring-billing disclosures, PayPal secondary, FAQ). Existing English copy remains protected; this manifest only approves the exact new literals listed below. Extended on 2026-10-08 14:03Z (owner brief \"urgent two-part fix and conversion upgrade\") for the product-led hero \"Stop building slides. Start teaching experiences.\", flow, contrast, moments and mobile CTA literals.",
   "additions": [
     {
       "path": "app/acceso/CheckoutButton.tsx",
@@ -309,6 +309,190 @@
     {
       "path": "app/marketing-landing/paid-copy.ts",
       "text": "Open the library"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "For Spanish teachers, tutors and online instructors"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Stop building slides."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Start teaching experiences."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Open a ready-made interactive Spanish lesson, share your screen and teach a class your students will remember: 3D worlds, maps, stories and speaking decisions, A1 to C2."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Made for Zoom, Meet and Preply-style online classes. Open a ready-made interactive lesson, share your screen and teach a class your students will remember: 3D worlds, maps, stories and speaking decisions, A1 to C2."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Ready in a minute"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A1–C2"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Runs in the browser"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "3D city · walk in, talk, decide"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "3D forest · climb and converse"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Interactive USA map · 50 states"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Real screenshots from SpanishCue lessons."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "From \"what do I teach today?\" to a class that runs itself."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A level and a goal."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Share your screen"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Zoom, Meet, Teams or a projector."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Watch them talk"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Learners explore, decide and speak."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Not another worksheet"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Your students came to take part, not to fill in blanks."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A worksheet"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A SpanishCue lesson"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Every lesson is an experience: a place to explore, a choice to make, a story to listen to and a reason to speak."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Lessons your students will actually want to open."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Learners walk a night-time city, enter places and solve real situations in Spanish. One world, six levels."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Climb a giant mushroom forest"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A 3D expedition from the forest floor to the clouds, with a conversation at every stop."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Interactive maps"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Fifty US states, each one a conversation about real life. Click, choose, speak."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Step-by-step interactive lessons"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Start, read, understand, practise, listen, speak and write, all on one screen."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Listening that feels like a story"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Ten mysterious rooms, real audio, questions and transcripts."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Autoestudio A1–C2: weekly reading, writing, listening and speaking between classes."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "What happens in your class"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A learner picks a door in the hotel and has to explain why."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Two learners disagree on a decision and defend it in Spanish."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "A shy student asks for directions in a 3D street, out loud."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Built for one-to-one tutoring, small groups and full classrooms."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Try it in your next class."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Founder price: US$15.50/month, kept while that same subscription stays active. That is about 52¢ a day."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "3D worlds, maps, listening, conversation and grammar"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Your next Spanish class can be the one they remember."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Start with 1 day for US$2"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Try 1 day · US$2"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "then US$15.50/month"
     }
   ]
 }
