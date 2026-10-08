@@ -42,6 +42,13 @@ export function LocaleProvider({
 
   useEffect(() => {
     document.documentElement.lang = locale;
+    // An explicit ?lang= in the URL is the visitor's current choice (language
+    // switcher, ad links): adopt it instead of navigating away mid-scroll.
+    const requested = normalizeLocale(new URL(window.location.href).searchParams.get("lang"));
+    if (requested === initialLocale) {
+      persistLocale(initialLocale);
+      return;
+    }
     const stored = normalizeLocale(window.localStorage.getItem(LOCALE_STORAGE_KEY));
     if (stored && stored !== initialLocale) {
       persistLocale(stored);

@@ -49,6 +49,17 @@ declare global {
 
 const paddleScriptId = "spanishcue-paddle-js";
 
+// One founder-status request per page view, shared by every checkout on it
+// (the paid landings render two), so both resolve in the same frame.
+let founderStatusRequest: Promise<FounderStatus | null> | null = null;
+function loadFounderStatus() {
+  founderStatusRequest ??= fetch("/api/billing/founder-status", { credentials: "same-origin" })
+    .then((response) => response.ok ? response.json() : null)
+    .then((body: unknown) => body && typeof body === "object" && "remaining" in body && typeof body.remaining === "number" ? body as FounderStatus : null)
+    .catch(() => null);
+  return founderStatusRequest;
+}
+
 function loadPaddle() {
   if (window.Paddle) return Promise.resolve(window.Paddle);
   return new Promise<PaddleApi>((resolve, reject) => {
@@ -80,16 +91,9 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   const [founder, setFounder] = useState<FounderStatus | null | undefined>(undefined);
 
   useEffect(() => {
-    const controller = new AbortController();
-    fetch("/api/billing/founder-status", { credentials: "same-origin", signal: controller.signal })
-      .then((response) => response.ok ? response.json() : null)
-      .then((body: unknown) => {
-        if (body && typeof body === "object" && "remaining" in body && typeof body.remaining === "number") {
-          setFounder(body as FounderStatus);
-        }
-      })
-      .catch(() => setFounder(null));
-    return () => controller.abort();
+    let active = true;
+    loadFounderStatus().then((body) => { if (active) setFounder(body); });
+    return () => { active = false; };
   }, []);
 
   async function emitPaidConversion(subscriptionId: string) {
@@ -212,6 +216,10 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     }
   }
 
+  const busy = status === "paypal" || status === "paddle" || status === "confirming";
+  // The landing variant renders its final layout (disabled) while the status
+  // loads, so the purchase controls never push the rest of the page down.
+  if (variant === "landing" && founder === undefined) return landingCheckout(null);
   if (founder === undefined) return <div className="checkout-action" aria-live="polite"><p>{locale === "es" ? "Comprobando disponibilidad…" : "Checking availability…"}</p></div>;
 
   if (!founder?.checkoutAvailable) return <div className="checkout-action">
@@ -219,8 +227,6 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     <Link className="checkout-free-link" href="/el-hotel-de-lo-imposible">{locale === "es" ? "Abrir una clase gratis" : "Open a free lesson"} →</Link>
     <p>{locale === "es" ? "Este enlace no inicia una suscripción." : "This link does not start a subscription."}</p>
   </div>;
-
-  const busy = status === "paypal" || status === "paddle" || status === "confirming";
 
   if (variant === "landing") return landingCheckout(founder);
 
@@ -265,12 +271,14 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     {status === "error" && <small role="alert">{message}</small>}
   </div>;
 
-  function landingCheckout(offer: FounderStatus) {
+  function landingCheckout(loaded: FounderStatus | null) {
     const es = locale === "es";
     const paddleBusy = status === "paddle" || status === "confirming";
-    return <div className="checkout-action checkout-landing">
+    const pending = loaded === null;
+    const offer = loaded ?? { available: false, mode: "live", paddleCheckoutAvailable: true, trialCheckoutAvailable: true, checkoutLive: true, paypalPriceUsd: undefined } as Pick<FounderStatus, "available" | "mode" | "paddleCheckoutAvailable" | "trialCheckoutAvailable" | "checkoutLive" | "paypalPriceUsd">;
+    return <div className="checkout-action checkout-landing" aria-busy={pending}>
       {offer.mode === "sandbox" && <strong className="checkout-availability closed">{es ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
-      {!offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}
+      {!pending && !offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}
       <div className="checkout-landing-plans">
         {offer.paddleCheckoutAvailable && offer.trialCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-trial">
           <button className="checkout-trial-button" type="button" onClick={() => checkoutPaddle("trial")} disabled={busy || !offer.available}>

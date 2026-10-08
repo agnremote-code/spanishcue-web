@@ -95,7 +95,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <LocaleProvider initialLocale={locale}>
-          <AuthSessionSync serverSignedIn={signedIn} />
+          <AuthSessionSync serverSignedIn={signedIn} identityChecked={requestHeaders.get("x-spanishcue-identity-checked") === "1"} />
           <GoogleAnalytics />
           <MarketingAttribution
             pathname={pathname}

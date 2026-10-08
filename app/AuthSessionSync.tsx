@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { syncFirebaseSession } from "./auth-session-sync";
 import { firebaseAuth } from "./firebase-client";
 
-export default function AuthSessionSync({ serverSignedIn }: { serverSignedIn: boolean }) {
+export default function AuthSessionSync({ serverSignedIn, identityChecked }: { serverSignedIn: boolean; identityChecked: boolean }) {
   useEffect(() => {
     let initialEvent = true;
     return onIdTokenChanged(firebaseAuth, async (user) => {
@@ -13,12 +13,13 @@ export default function AuthSessionSync({ serverSignedIn }: { serverSignedIn: bo
       initialEvent = false;
       await syncFirebaseSession(user, {
         serverSignedIn,
+        identityChecked,
         initialEvent: restoring,
         pathname: window.location.pathname,
         reload: () => window.location.reload(),
         signOut: () => signOut(firebaseAuth),
       });
     });
-  }, [serverSignedIn]);
+  }, [serverSignedIn, identityChecked]);
   return null;
 }

@@ -103,3 +103,22 @@ test("the token listener must not compete with an explicit login attempt", async
   });
   assert.equal(tokenReads, 0, "AuthForm owns this token event");
 });
+
+test("a page whose server never resolved the session refreshes the cookie without reloading", async () => {
+  let posts = 0;
+  await syncFirebaseSession(
+    { getIdToken: async () => "firebase-id-token" },
+    {
+      serverSignedIn: false,
+      identityChecked: false,
+      fetcher: async (url, init = {}) => {
+        if (init.method === "POST") posts += 1;
+        return Response.json({ authenticated: true });
+      },
+      pathname: "/lp/spanish-teacher-resources",
+      reload: () => assert.fail("an unresolved page must not reload, or it loops forever"),
+      signOut: async () => assert.fail("must not sign out"),
+    },
+  );
+  assert.equal(posts, 1);
+});
