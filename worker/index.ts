@@ -187,6 +187,11 @@ const app = {
     }
     if (canonicalRedirect) return Response.redirect(url, 308);
 
+    // Retire the old USA A1 landing before catalog entitlement checks can gate it.
+    if (url.pathname === "/estados-unidos-basico") {
+      return Response.redirect(new URL("/estados-unidos-a2-b1?level=A2", url), 308);
+    }
+
     const requestedLocale = normalizeLocale(url.searchParams.get("lang"));
     const routedHeaders = new Headers(request.headers);
     routedHeaders.set("x-spanishcue-pathname", url.pathname);
