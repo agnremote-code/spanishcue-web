@@ -8,6 +8,7 @@ import "./marketing/marketing.css";
 import "./marketing/free-lesson-gate.css";
 import "./marketing-landing/style.css";
 import "./marketing-landing/overrides.css";
+import "./marketing-landing/paid-landing.css";
 import "./privacy/consent.css";
 import LessonReportRoutes from "./lesson-reports/LessonReportRoutes";
 import { conversationFamilyByLessonId } from "./conversation-families/catalog";

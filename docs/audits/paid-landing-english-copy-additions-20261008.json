@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "authorization": "Owner brief of 2026-10-08 (project thread \"Rediseño landings de pago\"): complete visual redesign of the paid-traffic landings /lp/spanish-teacher-resources and /lp/online-spanish-teaching-resources for Spanish teachers (hero \"Stop Planning Spanish Lessons From Scratch.\", product feature tiles, two Paddle plan buttons with honest recurring-billing disclosures, PayPal secondary, FAQ). Existing English copy remains protected; this manifest only approves the exact new literals listed below.",
+  "additions": [
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "SANDBOX TEST · not a real charge"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Founder offer fully claimed"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Card: US$15.50 now and every month. Final price, taxes included."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Try 1 day for US$2"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Then US$15.50/month. Cancel anytime. Taxes included."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Pay first, then link the purchase to your account for PRO access."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Opening checkout…"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Opening checkout…"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Subscribe · US$15.50/month"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Or pay with PayPal · US$${offer.paypalPriceUsd ?? 15}/month"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Browser"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Skip to content"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Account and language"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Library facts"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Resources, legal and contact"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Resources"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Pricing"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Privacy"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Terms"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Contact"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "For Spanish teachers · A1–C2"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Stop Planning Spanish Lessons From Scratch."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Open a ready-to-teach interactive lesson, share your screen and teach. 3D worlds, listening, conversation and homework, all in one library."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Built for Zoom, Meet and any shared screen. Open an interactive lesson and teach: 3D worlds, listening, conversation and homework in one browser tab."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Prefer to look first? Open a free lesson"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Real screenshot · Noche abierta, a 3D city lesson"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "ready-to-teach lessons"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "every level, one library"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "free lessons to try"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "no downloads, no slides"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "What you can teach tomorrow"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Every part of the class, already built."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Real screenshots from the SpanishCue library."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Immersive 3D worlds"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Learners walk a city, enter places and solve real situations in Spanish. One world, six levels."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Interactive lessons"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Step-by-step classes: start, read, understand, practise, listen, speak and write."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Listening"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Audio stories with questions and transcripts, so learners hear real Spanish before they read it."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Conversation"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Maps, dilemmas and scenarios that get learners talking from the first minute."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Homework and self-study"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Autoestudio A1–C2: weekly reading, writing, listening and speaking practice between classes."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Free to try"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "PRO"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Open it"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "How it works"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Your next class, ready in a minute."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Choose"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Pick a level and a goal."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Open"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "The lesson runs in your browser."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Teach"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Share your screen and start talking."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Works with Zoom, Meet, Teams or a classroom projector."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Your prep time, back."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Full library access"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Choose how to start."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Founder price: US$15.50/month, kept while that same subscription stays active."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Every lesson, A1–C2"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "3D worlds, listening, conversation and grammar"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Autoestudio self-study course"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Cancel online in My account"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Card checkout by Paddle. Access unlocks once the payment is verified."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Questions before you start"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "What happens after the 1-day trial?"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "You pay US$2 today for one day of full access. Unless you cancel before the day ends, the subscription continues at US$15.50/month."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Do I need an account to pay?"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "No. Pay first, then link the purchase to your account to open PRO. You can also create the account before paying."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "How do I cancel?"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Online, in My account. Renewal terms are shown before you pay."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Can I try something first?"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Yes. Several real lessons are free, with no card required."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Your next Spanish class can start here."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "See the plans"
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Your PRO library is ready."
+    },
+    {
+      "path": "app/marketing-landing/paid-copy.ts",
+      "text": "Open the library"
+    }
+  ]
+}

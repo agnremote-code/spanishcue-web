@@ -68,7 +68,12 @@ function loadPaddle() {
   });
 }
 
-export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boolean; returnTo: string }) {
+/**
+ * `variant="landing"` renders the same Paddle/PayPal flows as two plain plan
+ * choices for the paid-traffic landings: the US$2 one-day trial first, the
+ * monthly subscription second and PayPal as a quieter secondary option.
+ */
+export default function CheckoutButton({ signedIn, returnTo, variant = "default" }: { signedIn: boolean; returnTo: string; variant?: "default" | "landing" }) {
   const { locale, t } = useI18n();
   const [status, setStatus] = useState<"idle" | "paypal" | "paddle" | "confirming" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -217,6 +222,8 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
 
   const busy = status === "paypal" || status === "paddle" || status === "confirming";
 
+  if (variant === "landing") return landingCheckout(founder);
+
   return <div className="checkout-action">
     {founder.mode === "sandbox" && <strong className="checkout-availability closed">{locale === "es" ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
     <strong className={`checkout-availability ${founder.available ? "" : "closed"}`}>
@@ -257,4 +264,34 @@ export default function CheckoutButton({ signedIn, returnTo }: { signedIn: boole
       : "Pay first, then link the purchase to your account for PRO access."}</p>
     {status === "error" && <small role="alert">{message}</small>}
   </div>;
+
+  function landingCheckout(offer: FounderStatus) {
+    const es = locale === "es";
+    const paddleBusy = status === "paddle" || status === "confirming";
+    return <div className="checkout-action checkout-landing">
+      {offer.mode === "sandbox" && <strong className="checkout-availability closed">{es ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
+      {!offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}
+      <div className="checkout-landing-plans">
+        {offer.paddleCheckoutAvailable && offer.trialCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-trial">
+          <button className="checkout-trial-button" type="button" onClick={() => checkoutPaddle("trial")} disabled={busy || !offer.available}>
+            {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Prueba 1 día por US$2" : "Try 1 day for US$2")}
+          </button>
+          <span>{es ? "Después, US$15.50/mes. Cancela cuando quieras. Impuestos incluidos." : "Then US$15.50/month. Cancel anytime. Taxes included."}</span>
+        </div>}
+        {offer.paddleCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-monthly">
+          <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !offer.available}>
+            {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Suscríbete · US$15.50/mes" : "Subscribe · US$15.50/month")}
+          </button>
+          <span>{es ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</span>
+        </div>}
+      </div>
+      {offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>
+        {status === "paypal" ? t("checkout.openingPayPal") : (es ? `O paga con PayPal · US$${offer.paypalPriceUsd ?? 15}/mes` : `Or pay with PayPal · US$${offer.paypalPriceUsd ?? 15}/month`)}
+      </button>}
+      <p>{es
+        ? "Paga primero. Después vinculas la compra a tu cuenta para entrar a PRO."
+        : "Pay first, then link the purchase to your account for PRO access."}</p>
+      {status === "error" && <small role="alert" className="checkout-landing-error">{message}</small>}
+    </div>;
+  }
 }

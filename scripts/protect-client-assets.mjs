@@ -71,6 +71,7 @@ const publicRoots = new Set([
   "app/marketing/GoogleAnalytics.tsx",
   "app/marketing/MarketingAttribution.tsx",
   "app/marketing-landing/LandingConversion.tsx",
+  "app/marketing-landing/PaidLandingTracker.tsx",
   "app/privacy/GoogleConsentMode.tsx",
   "app/not-found.tsx",
   "app/pro/claim/ClaimClient.tsx",
