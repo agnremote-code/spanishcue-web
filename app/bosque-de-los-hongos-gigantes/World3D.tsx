@@ -23,6 +23,8 @@ export type WorldProps = {
   onMicroDone?: (spot: string) => void;
   /** The learner landed on the summit: the final conversation opens. */
   onSummit?: () => void;
+  /** Start over: when set, this mount ignores the saved spot, begins at the forest floor and clears the flag. */
+  fresh?: { current: boolean };
 };
 const POSITION_KEY = 'spanishcue:bosque:world:v2';
 const TOP = 62;
@@ -60,8 +62,9 @@ const finitePosition = (p: unknown): p is Position => {
 function surfaceAt(p: Position) {
   return PLATFORMS.find(s => Math.abs(p.y - s.y) < .1 && Math.hypot(p.x - s.x, p.z - s.z) <= s.r + .15);
 }
-function restorePlayer(): Player {
+function restorePlayer(fresh = false): Player {
   const player = spawnPlayer();
+  if (fresh) { try { localStorage.removeItem(POSITION_KEY); } catch { /* Storage is optional. */ } return player; }
   try {
     const stored = JSON.parse(localStorage.getItem(POSITION_KEY) || 'null');
     if (stored?.version !== 2 || !finitePosition(stored.position) || !finitePosition(stored.checkpoint)) return player;
@@ -108,7 +111,9 @@ export default function World3D(props: WorldProps) {
     const sun = new THREE.DirectionalLight('#ffe4b0', air.sun); sun.castShadow = !low; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -24, right: 24, top: 24, bottom: -24, near: 1, far: 150 }); sun.shadow.normalBias = .05; sun.shadow.bias = -.0002; scene.add(sun, sun.target);
     const forest = buildForest({ low, reducedMotion }); scene.add(forest.root);
     const hero = createForestHero(!low); scene.add(hero.root, hero.shadow, hero.puff, hero.blood, hero.splat, hero.debris);
-    let player = restorePlayer(), alive = true, frame = 0, lastTime = 0, elapsed = 0, uiTime = 0, saveTime = 0, frames = 0, slowTime = 0, solidTime = 99;
+    const fresh = live.current.fresh;
+    let player = restorePlayer(fresh?.current), alive = true, frame = 0, lastTime = 0, elapsed = 0, uiTime = 0, saveTime = 0, frames = 0, slowTime = 0, solidTime = 99;
+    if (fresh) fresh.current = false;
     const firstZone = ZONES[0];
     // Start looking along the route toward the first landmark, the climb visible ahead.
     let yaw = Math.atan2(player.x - firstZone.x, player.z - firstZone.z), pitch = .38, distance = CAMERA_PRESETS[1].distance, preset = 1, jumpQueued = false, dragAt = -10;
