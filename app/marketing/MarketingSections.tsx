@@ -56,40 +56,40 @@ const copy = {
     proofAria: "Prueba de producto SPANISHCUE",
     proof: ["clases reales", "rutas de contenido", "progresión completa", "culturas representadas"],
     founderKicker: "FOUNDER PRICE",
-    founderTitle: "Toda la biblioteca por US$15 al mes.",
-    founderCopy: "Precio fundador para las primeras 1.000 suscripciones activadas. US$15 se mantiene mientras esa misma suscripción siga activa.",
-    founderLaunchTitle: "PRO abre próximamente por un precio previsto de US$15 al mes.",
-    founderLaunchCopy: "El checkout todavía no está activo. Puedes reservar el precio fundador sin tarjeta ni pago y recibirás aviso antes de que se habilite cualquier cobro.",
+    founderTitle: "Toda la biblioteca con SPANISHCUE PRO.",
+    founderCopy: "Accede a toda la biblioteca con una suscripción mensual. El precio de cada método se confirma antes del pago.",
+    founderLaunchTitle: "Conoce SPANISHCUE PRO.",
+    founderLaunchCopy: "Consulta la disponibilidad de pagos en Precios. Cuando los pagos no estén habilitados, reservar no produce cargos.",
     founderBenefits: ["Biblioteca completa", "A1–C2", "5 rutas", "Modo Play + Universos"],
     remaining: "{remaining} de {limit} lugares disponibles",
-    founderFallback: "Lanzamiento próximo · sin cobros todavía",
+    founderFallback: "Consultando disponibilidad...",
     founderFull: "La oferta fundadora ya completó sus lugares",
     checkoutNotLive: "El checkout todavía no está habilitado para cobros reales",
     proActive: "Tu acceso PRO ya está activo",
     proCopy: "Toda la biblioteca está lista para que elijas y abras una clase.",
     subscribe: "Suscribirme",
-    payment: "Pago mensual automático con PayPal hasta que canceles.",
+    payment: "Pago mensual automático con el método elegido hasta que canceles.",
     launchPayment: "Reservar no inicia una suscripción ni produce un cobro.",
     reserve: "Reservar sin pago",
     billingFacts: [
-      ["Facturación", "US$15 cada mes"],
+      ["Facturación", "Importe indicado por el método de pago"],
       ["Renovación", "Automática hasta la cancelación"],
       ["Cancelación", "Online desde Mi cuenta"],
       ["Precio fundador", "Vinculado a la misma suscripción activa"],
     ],
     launchBillingFacts: [
       ["Estado", "Lanzamiento próximo"],
-      ["Precio previsto", "US$15 por mes"],
+      ["Precio previsto", "US$15.50/mes con tarjeta"],
       ["Pago hoy", "Ninguno"],
       ["Aviso", "Antes de activar cobros"],
     ],
-    founderPill: "Precio Fundador · US$15.50/mes",
+    founderPill: "SPANISHCUE PRO · Ver precios",
     founderPillAria: "Ir al precio fundador",
     founderPillClose: "Ocultar precio fundador durante esta sesión",
     finalKicker: "CHOOSE. OPEN. TEACH.",
     finalTitle: "La próxima clase no tiene que empezar desde cero.",
     finalCopy: "Crea tu cuenta gratuita, abre una clase real y decide con el producto delante.",
-    finalOffer: "PRO en preparación · precio previsto US$15.50/mes · sin cobros todavía",
+    finalOffer: "SPANISHCUE PRO · Consulta precios y disponibilidad",
     faqKicker: "PREGUNTAS CLARAS",
     faqTitle: "Antes de abrir tu primera clase.",
     faq: [
@@ -100,12 +100,12 @@ const copy = {
       ["¿Qué tipos de clases incluye?", "Gramática, conversación, escucha, fonética y vocabulario, además de recorridos visuales y formatos interactivos."],
       ["¿Necesito descargar algo?", "No. Las clases se abren en el navegador y están diseñadas para compartir en pantalla."],
       ["¿Qué incluye la cuenta gratuita?", "Diez clases reales: dos de cada categoría. No necesitas tarjeta para crear la cuenta."],
-      ["¿Qué desbloqueará PRO?", "Cuando se active, dará acceso ilimitado a toda la biblioteca de gramática, conversación, escucha, fonética y vocabulario."],
-      ["¿Cómo funcionará el Founder Price?", "El lanzamiento prevé US$15 al mes para las primeras 1.000 suscripciones activadas. Reservar ahora no inicia una suscripción ni un cobro."],
-      ["¿La suscripción se renueva automáticamente?", "Todavía no hay suscripciones públicas. Antes de activar pagos se mostrarán claramente la renovación y las condiciones finales."],
-      ["¿Cómo funcionará la cancelación?", "La integración preparada permite cancelarla online desde Mi cuenta. Las condiciones definitivas se publicarán antes de activar pagos."],
+      ["¿Qué incluye PRO?", "Acceso a toda la biblioteca de gramática, conversación, escucha, fonética y vocabulario mientras tu suscripción esté vigente."],
+      ["¿Cómo funciona el Founder Price?", "Es una oferta limitada a las primeras 1.000 suscripciones con pago mensual confirmado. Los importes actuales se muestran en Precios."],
+      ["¿La suscripción se renueva automáticamente?", "Sí. La suscripción mensual se renueva hasta que canceles. La prueba de un día, cuando está disponible, se convierte después al precio mensual indicado."],
+      ["¿Cómo funciona la cancelación?", "Puedes cancelar desde Mi cuenta. Consulta las condiciones del método de pago antes de suscribirte."],
       ["¿Qué pasa con mi precio si cancelo y vuelvo?", "Al cancelar termina la garantía asociada a esa suscripción. Si vuelves, se aplicará la oferta disponible en ese momento."],
-      ["¿Puedo pagar ahora?", "No todavía. PayPal está integrado en modo de pruebas y el checkout público permanece desactivado."],
+      ["¿Puedo pagar ahora?", "Consulta las opciones actuales en Precios."],
       ["¿Puedo compartir mi cuenta?", "No. El acceso es individual para el profesor titular; puedes compartir la pantalla y el contenido durante tus clases."],
     ],
     libraryCta: "¿Encontraste una clase que quieres usar?",
@@ -156,40 +156,40 @@ const copy = {
     proofAria: "SPANISHCUE product proof",
     proof: ["real lessons", "content paths", "full progression", "cultures represented"],
     founderKicker: "FOUNDER PRICE",
-    founderTitle: "The full library for US$15 a month.",
-    founderCopy: "Founder pricing for the first 1,000 activated subscriptions. US$15 stays in place while that same subscription remains active.",
-    founderLaunchTitle: "PRO is launching soon at a planned US$15 monthly price.",
-    founderLaunchCopy: "Checkout is not active yet. You can reserve Founder Price with no card or payment, and you will be notified before any charge is enabled.",
+    founderTitle: "The complete library with SPANISHCUE PRO.",
+    founderCopy: "Access the full library with a monthly subscription. Each method confirms its price before payment.",
+    founderLaunchTitle: "Explore SPANISHCUE PRO.",
+    founderLaunchCopy: "See current payment availability on Pricing. When payments are disabled, reserving does not create a charge.",
     founderBenefits: ["Full library", "A1–C2", "5 content paths", "Play Mode + Worlds"],
     remaining: "{remaining} of {limit} places available",
-    founderFallback: "Launching soon · no charges yet",
+    founderFallback: "Checking availability...",
     founderFull: "All Founder Price places have been claimed",
     checkoutNotLive: "Checkout is not yet enabled for real charges",
     proActive: "Your PRO access is active",
     proCopy: "The full library is ready for you to choose and open a lesson.",
     subscribe: "Subscribe",
-    payment: "Automatic monthly billing through PayPal until you cancel.",
+    payment: "Automatic monthly billing through your chosen payment method until cancellation.",
     launchPayment: "Reserving starts neither a subscription nor a charge.",
     reserve: "Reserve with no payment",
     billingFacts: [
-      ["Billing", "US$15 every month"],
+      ["Billing", "Amount shown by the payment method"],
       ["Renewal", "Automatic until cancellation"],
       ["Cancellation", "Online from My account"],
       ["Founder price", "Tied to the same active subscription"],
     ],
     launchBillingFacts: [
       ["Status", "Launching soon"],
-      ["Planned price", "US$15 per month"],
+      ["Planned price", "US$15.50/month by card"],
       ["Payment today", "None"],
       ["Notice", "Before charges start"],
     ],
-    founderPill: "Founder Price · US$15.50/month",
+    founderPill: "SPANISHCUE PRO · View pricing",
     founderPillAria: "Go to Founder Price",
     founderPillClose: "Hide Founder Price for this session",
     finalKicker: "CHOOSE. OPEN. TEACH.",
     finalTitle: "Your next lesson does not have to start from scratch.",
     finalCopy: "Create your free account, open a real lesson and decide with the product in front of you.",
-    finalOffer: "PRO in preparation · planned US$15.50/month · no charges yet",
+    finalOffer: "SPANISHCUE PRO · See pricing and availability",
     faqKicker: "CLEAR ANSWERS",
     faqTitle: "Before you open your first lesson.",
     faq: [
@@ -200,12 +200,12 @@ const copy = {
       ["Which lesson types are included?", "Grammar, conversation, listening, pronunciation and vocabulary, plus visual paths and interactive formats."],
       ["Do I need to download anything?", "No. Lessons open in the browser and are designed for screen sharing."],
       ["What does the free account include?", "Ten real lessons: two from every category. No card is required to create an account."],
-      ["What will PRO unlock?", "When active, it will provide unlimited access to the full grammar, conversation, listening, pronunciation and vocabulary library."],
-      ["How will Founder Price work?", "The launch plan is US$15 per month for the first 1,000 activated subscriptions. Reserving now starts neither a subscription nor a charge."],
-      ["Does the subscription renew automatically?", "There are no public subscriptions yet. Renewal and final terms will be shown clearly before payments are enabled."],
-      ["How will cancellation work?", "The prepared integration supports online cancellation from My account. Final terms will be published before payments are enabled."],
+      ["What does PRO include?", "Access to the complete grammar, conversation, listening, pronunciation and vocabulary library while your subscription is active."],
+      ["How does Founder Price work?", "The offer is limited to the first 1,000 subscriptions with a confirmed full monthly payment. Current amounts appear on Pricing."],
+      ["Does the subscription renew automatically?", "Yes. Monthly subscriptions renew until cancelled. The one-day trial, when available, converts afterward to the stated monthly price."],
+      ["How does cancellation work?", "You can cancel in My account. Review your chosen payment method terms before subscribing."],
       ["What happens to my price if I cancel and return?", "Cancellation ends the guarantee tied to that subscription. If you return, the offer available at that time applies."],
-      ["Can I pay now?", "Not yet. PayPal is integrated in test mode and public checkout remains disabled."],
+      ["Can I pay now?", "Check current payment options on Pricing."],
       ["Can I share my account?", "No. Access is personal to the account-holding teacher; you may share your screen and lesson content while teaching."],
     ],
     libraryCta: "Found a lesson you want to use?",
@@ -322,7 +322,7 @@ export function SocialProof({ lessonCount, routeCount, levelRange, cultureCount 
   return <section className="mk-proof" aria-label={c.proofAria}>{values.map((value, index) => <div key={value}><b>{value}</b><span>{c.proof[index]}</span></div>)}</section>;
 }
 
-type FounderStatus = { enabled: boolean; limit: number; claimed: number; remaining: number; available: boolean; priceUsd: number; checkoutLive: boolean };
+type FounderStatus = { enabled: boolean; limit: number; claimed: number; remaining: number; available: boolean; priceUsd: number; checkoutLive: boolean; publicCheckoutAvailable?: boolean; paddleCheckoutAvailable?: boolean; paypalPriceUsd?: number; mode?: "sandbox" | "live" };
 
 export function FounderOffer({ audience, primary, primaryLabel }: { audience: MarketingAudience; primary: MarketingCta; primaryLabel: string }) {
   const c = useCopy();
@@ -342,10 +342,13 @@ export function FounderOffer({ audience, primary, primaryLabel }: { audience: Ma
       .catch(() => undefined);
     return () => controller.abort();
   }, [audience]);
-  const checkoutLive = Boolean(status?.available && status.checkoutLive);
+  const checkoutLive = Boolean(status?.available && status.mode === "live" && status.publicCheckoutAvailable);
+  const priceLabel = checkoutLive && !status?.paddleCheckoutAvailable
+    ? `US$${(status?.paypalPriceUsd ?? 15).toFixed(2)}`
+    : "US$15.50";
   const subscriptionCta = subscriptionCtaFor(audience);
   const launchCta: MarketingCta = { href: "/pricing", labelKey: "nav.subscribe", event: "cta_click", intent: "subscribe" };
-  const availability = status && !status.checkoutLive
+  const availability = status && !status.publicCheckoutAvailable
     ? c.checkoutNotLive
     : status
     ? status.available
@@ -357,7 +360,7 @@ export function FounderOffer({ audience, primary, primaryLabel }: { audience: Ma
     <div className="mk-founder-copy"><span>{c.founderKicker}</span><h2 id="mk-founder-title">{audience === "pro" ? c.proActive : checkoutLive ? c.founderTitle : c.founderLaunchTitle}</h2><p>{audience === "pro" ? c.proCopy : checkoutLive ? c.founderCopy : c.founderLaunchCopy}</p>{audience !== "pro" && <><ul>{c.founderBenefits.map((benefit) => <li key={benefit}>✓ {benefit}</li>)}</ul><dl className="mk-billing-facts">{(checkoutLive ? c.billingFacts : c.launchBillingFacts).map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl></>}</div>
     <div className="mk-founder-offer">
       <small className={status && !status.available ? "closed" : ""}><i />{availability}</small>
-      {audience !== "pro" && <div className="mk-founder-price"><b>US$15</b><span>/ {locale === "es" ? "mes" : "month"}</span></div>}
+      {audience !== "pro" && <div className="mk-founder-price"><b>{priceLabel}</b><span>/ {locale === "es" ? "mes" : "month"}</span></div>}
       {audience === "pro" ? <MarketingLink cta={primary} className="mk-founder-cta" placement="home_founder_offer">{primaryLabel}<span>→</span></MarketingLink> : checkoutLive ? <MarketingLink cta={subscriptionCta} className="mk-founder-cta" placement="home_founder_offer">{c.subscribe}<span>→</span></MarketingLink> : <MarketingLink cta={launchCta} className="mk-founder-cta" placement="home_founder_reservation">{c.reserve}<span>→</span></MarketingLink>}
       {audience !== "pro" && <em>{checkoutLive ? c.payment : c.launchPayment}</em>}
     </div>
@@ -387,7 +390,7 @@ export function FounderPricePill({ audience }: { audience: MarketingAudience }) 
     const controller = new AbortController();
     fetch("/api/billing/founder-status", { credentials: "same-origin", signal: controller.signal })
       .then((response) => response.ok ? response.json() : null)
-      .then((body: unknown) => setEligible(Boolean(body && typeof body === "object" && "available" in body && body.available === true && "checkoutLive" in body && body.checkoutLive === true)))
+      .then((body: unknown) => setEligible(Boolean(body && typeof body === "object" && "available" in body && body.available === true && "publicCheckoutAvailable" in body && body.publicCheckoutAvailable === true)))
       .catch(() => setEligible(false));
     return () => { window.clearTimeout(timer); window.removeEventListener("scroll", onScroll); observer?.disconnect(); controller.abort(); };
   }, [audience]);
@@ -407,7 +410,36 @@ export function FounderPricePill({ audience }: { audience: MarketingAudience }) 
 
 export function FAQ() {
   const c = useCopy();
-  return <section className="mk-section mk-faq" aria-labelledby="mk-faq-title"><div className="mk-faq-head"><span>{c.faqKicker}</span><h2 id="mk-faq-title">{c.faqTitle}</h2></div><div>{c.faq.map(([question, answer]) => <details key={question}><summary>{question}<i>+</i></summary><p>{answer}</p></details>)}</div></section>;
+  const { locale } = useI18n();
+  const [billing, setBilling] = useState<"checking" | "card" | "paypal" | "both" | "offline" | "unknown">("checking");
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/api/billing/founder-status", { credentials: "same-origin", signal: controller.signal })
+      .then((response) => response.ok ? response.json() : null)
+      .then((body: unknown) => {
+        const state = body as Partial<FounderStatus> | null;
+        if (!state || typeof state.publicCheckoutAvailable !== "boolean" || typeof state.available !== "boolean") {
+          setBilling("unknown");
+        } else if (state.publicCheckoutAvailable && state.mode === "live" && state.available) {
+          setBilling(state.paddleCheckoutAvailable ? (state.checkoutLive ? "both" : "card") : "paypal");
+        } else {
+          setBilling("offline");
+        }
+      })
+      .catch(() => { if (!controller.signal.aborted) setBilling("unknown"); });
+    return () => controller.abort();
+  }, []);
+  const paymentAnswer = billing === "both"
+    ? (locale === "es" ? "Sí. Puedes pagar con tarjeta US$15.50/mes, probar 1 día por US$2 y después US$15.50/mes, o elegir PayPal. Consulta los importes antes de pagar." : "Yes. Pay US$15.50/month by card, try 1 day for US$2 then US$15.50/month, or choose PayPal. Review amounts before payment.")
+    : billing === "card"
+      ? (locale === "es" ? "Sí. Puedes pagar con tarjeta US$15.50/mes o probar 1 día por US$2 y después US$15.50/mes." : "Yes. Pay US$15.50/month by card or try 1 day for US$2 then US$15.50/month.")
+      : billing === "paypal"
+        ? (locale === "es" ? "Sí. Puedes suscribirte con PayPal. Su precio se muestra antes del pago." : "Yes. You can subscribe with PayPal; its price is shown before payment.")
+        : billing === "offline"
+          ? (locale === "es" ? "El checkout público no está disponible en este momento. Las clases gratuitas siguen disponibles." : "Public checkout is not available right now. Free lessons remain available.")
+          : (locale === "es" ? "Consulta la disponibilidad actual en Precios." : "Check current availability on Pricing.");
+  const paymentQuestion = locale === "es" ? "¿Puedo pagar ahora?" : "Can I pay now?";
+  return <section className="mk-section mk-faq" aria-labelledby="mk-faq-title"><div className="mk-faq-head"><span>{c.faqKicker}</span><h2 id="mk-faq-title">{c.faqTitle}</h2></div><div>{c.faq.map(([question, answer]) => <details key={question}><summary>{question}<i>+</i></summary><p>{question === paymentQuestion ? paymentAnswer : answer}</p></details>)}</div></section>;
 }
 
 export function CTASection({ audience, primary, primaryLabel, secondary, secondaryLabel }: { audience: MarketingAudience; primary: MarketingCta; primaryLabel: string; secondary: MarketingCta; secondaryLabel: string }) {

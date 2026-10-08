@@ -28,6 +28,8 @@ export async function GET(request: Request) {
       trialCheckoutAvailable: paddleCheckoutAvailable,
       checkoutLive,
       checkoutAvailable: checkoutLive || paddleCheckoutAvailable,
+      // This flag excludes Sandbox and supervised-only accounts for public marketing pages.
+      publicCheckoutAvailable: readiness === "live_ready" && config.publicCheckoutEnabled,
       paddleCheckoutAvailable,
       mode: config.paypalEnv,
       readiness,
