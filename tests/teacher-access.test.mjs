@@ -139,7 +139,16 @@ test('offer remains configurable and invalid values are rejected',()=>{
 });
 
 test('all free routes open and all paid routes deny anonymous access without cacheable redirects',async()=>{
- for(const l of p.lessons.filter(l=>route(l))){const path=route(l);const anon=await get(path);await anon.arrayBuffer();assert.equal(anon.status,p.isFreeLesson(l.id)?200:302,`anonymous ${path}`);if(!p.isFreeLesson(l.id))assert.match(anon.headers.get('cache-control')||'',/private, no-store/,path)}
+ for(const l of p.lessons.filter(l=>route(l))){const path=route(l);const anon=await get(path);await anon.arrayBuffer();const retiredUSA=path==='/estados-unidos-basico';assert.equal(anon.status,retiredUSA?308:p.isFreeLesson(l.id)?200:302,`anonymous ${path}`);if(!p.isFreeLesson(l.id)&&!retiredUSA)assert.match(anon.headers.get('cache-control')||'',/private, no-store/,path)}
+});
+
+test('the retired USA A1 landing redirects visitors to the A2-B1 flagship before the paid lesson gate',async()=>{
+ const response=await get('/estados-unidos-basico?level=A1');
+ assert.equal(response.status,308);
+ const destination=new URL(response.headers.get('location'),root);
+ assert.equal(destination.pathname,'/estados-unidos-a2-b1');
+ assert.equal(destination.searchParams.get('level'),'A2');
+ await response.arrayBuffer();
 });
 
 test('standalone board routes deny anonymous access without exposing their content',async()=>{
