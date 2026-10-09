@@ -66,6 +66,7 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/adjective-studio-english-additions-20261009.json',
   'docs/audits/noun-studio-english-additions-20261009.json',
   'docs/audits/observatory-english-additions-20261009.json',
   'docs/audits/bosque-vocabulary-additions-20261004.json',
