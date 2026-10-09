@@ -588,7 +588,9 @@ test('3D world: original procedural assets only, and three.js stays inside appro
   const importers = execFileSync('git', ['grep', '-l', '-E', "from 'three'|from \"three\"|from 'three/", '--', 'app', 'lib', 'components'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   assert.ok(importers.length >= 1);
   const forestModules = new Set(['app/bosque-de-los-hongos-gigantes/camera.ts', 'app/bosque-de-los-hongos-gigantes/World3D.tsx', 'app/bosque-de-los-hongos-gigantes/forest3d.ts', 'app/bosque-de-los-hongos-gigantes/hero3d.ts', 'app/bosque-de-los-hongos-gigantes/mushrooms3d.ts']);
-  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path) || path === 'app/the-sound-map/camera.ts' || path === 'app/immersive/DemoScene.tsx' || path === 'app/grammar-classroom/studio/article-world.ts'), importers.join());
+  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path) || path === 'app/the-sound-map/camera.ts' || path === 'app/immersive/DemoScene.tsx' || path === 'app/grammar-classroom/studio/article-world.ts' || path === 'app/grammar-classroom/duration/world.ts'), importers.join());
+  const duration = readFileSync('app/grammar-classroom/duration/world.ts', 'utf8');
+  assert.doesNotMatch(duration, /https?:\/\//, 'the duration neighbourhood creates its own geometry without external assets');
   const gallery = readFileSync('app/grammar-classroom/studio/article-world.ts', 'utf8');
   assert.doesNotMatch(gallery, /https?:\/\//, 'the grammar gallery creates its own textures and loads no external models');
   const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "authorization": "Owner requested this immersive A2 redesign on 2026-10-09, preserving level-appropriate English support. Four exact new place labels; no existing English changed.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Home"
+    },
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Library"
+    },
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Café"
+    },
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Square"
+    }
+  ]
+}
