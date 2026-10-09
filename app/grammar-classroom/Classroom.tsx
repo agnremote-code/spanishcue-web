@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { ClassroomLesson, Question } from './types';
 import './classroom.css';
 import NounClassroom from './studio/NounClassroom';
+import AdjectiveClassroom from './studio/AdjectiveClassroom';
 
 const stages = [
   {id:'opening',label:'Empezar',minutes:4}, {id:'reading',label:'Leer',minutes:7},
@@ -31,7 +32,7 @@ function ResponseBox({question,response,onEdit,onReview}:{question:Question;resp
 }
 
 export default function Classroom({lesson}:{lesson:ClassroomLesson}) {
-  return lesson.id===40?<NounClassroom lesson={lesson}/>:<StandardClassroom lesson={lesson}/>;
+  return lesson.id===41?<AdjectiveClassroom lesson={lesson}/>:lesson.id===40?<NounClassroom lesson={lesson}/>:<StandardClassroom lesson={lesson}/>;
 }
 
 function StandardClassroom({lesson}:{lesson:ClassroomLesson}) {
