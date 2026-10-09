@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "authorization": "Owner requested near-complete A1 ES/EN support for the Observatory on 2026-10-09. Additive translations only; original audio and Spanish remain unchanged.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What do you have near you?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Can you point to something far from your table?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "The stationery table"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Ana is in an office supplies shop. She has this notebook in her hand. That folder is next to the shop assistant. Those boxes are at the back, near the door. Ana needs two small folders. She also sees an unfamiliar object on the table and asks, “What is this?” The assistant answers, “It is a phone stand.”"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What does Ana want to buy?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Two small folders."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Identify the item and quantity."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What is next to the shop assistant?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "That folder."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Locate the folder near the shop assistant."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Match “esta libreta”, “esa carpeta” and “aquellas cajas” to their positions."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "This one is in her hand; that one is next to the assistant; those are at the back."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Why does Ana use “esto” without a noun?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "She does not know the name of the object; “esto” does not go with a noun."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "A photo of the shop"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Hi. I am sending you a photo of the shop. This table here is small. Those chairs next to you are comfortable, but those chairs at the back are cheaper. Which do you prefer for the office? There is also something new by the entrance. I do not know its name. Do you know what that is?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What does the speaker want to decide?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Which chairs to buy for the office."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Connect the comparison with choosing furniture."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Which chairs are cheaper?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Those at the back."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Identify the distant group."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Place three objects at different distances from your camera and offer one to your teacher. Explain which one you choose."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Your teacher mixes two of them up: point and clarify."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "This one… here; that one… there; that one… over there."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Describe a real photo of a table or shop using three spatial references."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Your teacher changes their viewpoint. Adjust your references."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "From here, this… / From your position, that…"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Compare two visible everyday objects and decide which to take on a short trip."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "There is an object whose name you cannot remember: ask for help identifying it."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "I prefer this one… / What is this?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Write a message choosing supplies in a photo. Make clear where each item you want is."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "I want this notebook here and those two folders next to you. Those boxes at the back are big for my table. What is that next to the door? It looks like a phone stand."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Use at least two distances."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Match the demonstrative to the noun in gender and number."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Use “esto/eso” without a noun."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "How do you ask about an unfamiliar object near you?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What is this?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Twelve forms that fit"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Each distance has four forms. Choose masculine or feminine, singular or plural, to match the noun."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "this phone"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "these keys"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "that café"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "those mountains over there"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Distance depends on the conversation: two people can frame the same space differently."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Near, middle distance and far"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Use “este” for nearby things, “ese” for middle distance or near the listener, and “aquel” for things clearly far away."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "This cup here."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "That bag there."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "That building over there."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Do you prefer this table or that one?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "In everyday speech, “este” and “ese” cover many situations. “Aquel” emphasizes distance or a narrative viewpoint."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "This, that and that over there: without naming the thing"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Neuter forms never go before a noun. Use them for an unfamiliar object, a situation or a whole idea."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "That is a gift."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "I do not understand that."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "This is interesting."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Never say “esto libro”, or use “estos” as the plural of neuter “esto”. With a noun, say “este libro”."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "___ phone I have in my hand"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "It is near the speaker; “móvil” is masculine singular."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "___ mountains over there"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "They are far away; “montañas” is feminine plural."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What is ___? I do not know that object."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "We are not naming the object, so we use the neuter form."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "___ backpack there is yours."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "“Mochila” is feminine singular and at middle distance."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Point to a book near you and some chairs far from both of you."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "This book and those chairs over there."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Distance, gender and number match the situation."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Accept other wording that preserves the meaning and target structure."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Ask about an unfamiliar object next to your teacher."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "What is that?"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Use a neuter form without a named noun."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Choose between “este”, “ese” and “aquel”."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/english.ts",
+      "text": "Understand messages about this situation and respond in speech and a short text."
+    },
+    {
+      "path": "app/grammar-classroom/observatory/Observatory.tsx",
+      "text": "notebook"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/Observatory.tsx",
+      "text": "folder"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/Observatory.tsx",
+      "text": "boxes"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/Observatory.tsx",
+      "text": "book"
+    },
+    {
+      "path": "app/grammar-classroom/observatory/Observatory.tsx",
+      "text": "keys"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn
 try{
  await run(['--test','tests/sound-map.test.mjs','tests/sound-map-ui.test.mjs','tests/sound-map-page-ui.test.mjs','tests/sound-map-audio-ui.test.mjs']);
  await run(['--test','tests/casino-marketing-b1.test.mjs']);
- await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
+ await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/observatory-ui.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
  await run(['--test','tests/phonetics-capture.test.mjs','tests/phonetics-audio-signal.test.mjs','tests/phonetics-speech-analysis.test.mjs','tests/phonetics-speech-provider.test.mjs','tests/phonetics-speech-route.test.mjs']);
  await run(['--test','tests/entonacion.test.mjs','tests/entonacion-ui.test.mjs','tests/hablar-sin-cortar.test.mjs','tests/hablar-sin-cortar-ui.test.mjs','tests/hablar-sin-cortar-assets.test.mjs']);
  await run(['--test','tests/urban-city.test.mjs','tests/noche-abierta.test.mjs']);
