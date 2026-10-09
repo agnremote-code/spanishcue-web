@@ -38,6 +38,9 @@ try{
  for(const [name,width,height] of [['iphone',390,844],['android',412,915],['small',320,700]]){
   await page.setViewportSize({width,height});await page.goto(origin+'/demo/noche-abierta');await page.locator('.im-world[data-ready="true"]').waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${name} overflow`);
+  const before=await page.locator('.im-world').getAttribute('data-position');const stick=await page.locator('.im-stick').boundingBox();
+  await page.mouse.move(stick.x+stick.width/2,stick.y+stick.height/2);await page.mouse.down();await page.mouse.move(stick.x+stick.width/2,stick.y+8);await page.waitForTimeout(400);await page.mouse.up();
+  assert.notEqual(await page.locator('.im-world').getAttribute('data-position'),before,'Touch joystick pointer moves avatar');
   await page.getByRole('button',{name:/City map/}).click();assert.equal(await page.locator('.im-venues button').count(),10);
   await page.locator('.im-venues button').first().click();await page.getByRole('button',{name:/Talk · cafe/}).click();
   assert.equal(await page.locator('.im-options button').count(),3);await page.locator('.im-options button').first().click();await page.getByLabel('Your personal response').fill('Me gusta tomar té.');

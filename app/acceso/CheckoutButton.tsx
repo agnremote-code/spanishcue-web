@@ -85,7 +85,7 @@ function loadPaddle() {
  * choices for the paid-traffic landings: the US$2 one-day trial first, the
  * monthly subscription second and PayPal as a quieter secondary option.
  */
-export default function CheckoutButton({ signedIn, returnTo, variant = "default", onPaddleOverlayChange }: { signedIn: boolean; returnTo: string; variant?: "default" | "landing"; onPaddleOverlayChange?: (open: boolean) => void }) {
+export default function CheckoutButton({ signedIn, returnTo, variant = "default", paddleOnly = false, onPaddleOverlayChange }: { signedIn: boolean; returnTo: string; variant?: "default" | "landing"; onPaddleOverlayChange?: (open: boolean) => void; paddleOnly?: boolean }) {
   const { locale, t } = useI18n();
   const [status, setStatus] = useState<"idle" | "paypal" | "paddle" | "confirming" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -300,7 +300,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
           <span>{es ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</span>
         </div>}
       </div>
-      {offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>
+      {!paddleOnly && offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>
         {status === "paypal" ? t("checkout.openingPayPal") : (es ? `O paga con PayPal · US$${offer.paypalPriceUsd ?? 15}/mes` : `Or pay with PayPal · US$${offer.paypalPriceUsd ?? 15}/month`)}
       </button>}
       <p>{es
