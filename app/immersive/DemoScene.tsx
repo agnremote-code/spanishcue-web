@@ -5,6 +5,7 @@ import {buildCity,placePerson} from '../noche-abierta/build3d';
 import {createHero,animateHero} from '../noche-abierta/hero3d';
 import {CAMERA_PRESETS,SPAWN,TARGETS,colliders,stepPlayer,followCamera,keyAction,inputFrom,canUseKeys,type Target} from '../noche-abierta/world3d.mjs';
 import {DEMO_BOUNDS,DEMO_GATES,nearPremiumGate} from './policy.mjs';
+import {demoArrival} from './travel.mjs';
 export type DemoSceneProps={paused:boolean;travel:{id:string;n:number}|null;es:boolean;onInteract:(id:string)=>void;onGate:(name:string)=>void;onReady:()=>void;onFail:()=>void};
 
 export default function DemoScene(props:DemoSceneProps){
@@ -69,7 +70,7 @@ export default function DemoScene(props:DemoSceneProps){
    if(p.paused!==wasPaused){reset();wasPaused=p.paused;}
    if(p.travel&&p.travel.n!==seenTravel){
     seenTravel=p.travel.n;const target=TARGETS.find(t=>t.location===p.travel!.id);
-    if(target){player={...player,x:target.x,z:target.z+1.5,speed:0};yaw=Math.PI;}
+    if(target){player={...player,...demoArrival(target,boxes),y:0,vy:0,speed:0};reset();yaw=player.heading;}
    }
    if(!p.paused){
     const keys=inputFrom(held);const input=Math.hypot(joy.x,joy.y)>.1?{...keys,x:joy.x,y:joy.y}:keys;

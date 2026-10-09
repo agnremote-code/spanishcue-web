@@ -11,7 +11,7 @@ const checkoutRequests=[];
 const server=createServer(async(req,res)=>{try{
  const url=new URL(req.url,'http://local'),path=url.pathname;
  if(path==='/api/city-demo'){const data=demoContent(url.searchParams.get('level'),url.searchParams.get('district')??'centro');res.setHeader('content-type','application/json');res.statusCode=data?200:403;res.end(JSON.stringify(data??{error:'PRO'}));return;}
- if(path.includes('/api/billing/paddle/checkout')){let body='';for await(const c of req)body+=c;checkoutRequests.push(JSON.parse(body));res.writeHead(503,{'content-type':'application/json'}).end(JSON.stringify({error:'QA: no real payment was created.'}));return;}
+ if(path.includes('/api/billing/paddle/checkout')){let body='';for await(const c of req)body+=c;checkoutRequests.push(JSON.parse(body));res.writeHead(checkoutRequests.length>2?200:503,{'content-type':'application/json'}).end(JSON.stringify(checkoutRequests.length>2?{transactionId:'txn_fixture_only',clientToken:'fixture_only'}:{error:'QA: no real payment was created.'}));return;}
  if(path.startsWith('/api/')){res.setHeader('content-type','application/json');res.end(JSON.stringify({limit:1000,remaining:500,available:true,paddleCheckoutAvailable:true,trialCheckoutAvailable:true,checkoutAvailable:true,checkoutLive:true,mode:'live'}));return;}
  if(path.startsWith('/assets/')||path.startsWith('/brand/')){const file=resolve(path.startsWith('/assets/')?out:resolve(repo,'public'),'.'+path);const ext=file.split('.').pop();res.setHeader('content-type',({js:'text/javascript',css:'text/css',webp:'image/webp',mp4:'video/mp4'})[ext]||'application/octet-stream');res.end(await readFile(file));return;}
  res.setHeader('content-type','text/html');res.end('<!doctype html><html><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0;background:#12121c}</style><link rel="stylesheet" href="/assets/qa.css"><div id="root"></div><script id="data" type="application/json">'+JSON.stringify(demoContent('A1')).replace(/</g,'\\u003c')+'</script><script type="module" src="/assets/qa.js"></script></html>');
@@ -51,7 +51,7 @@ try{
   // Context loss must retain all learning through the interactive map.
   await page.evaluate(()=>document.querySelector('.im-canvas canvas').dispatchEvent(new Event('webglcontextlost',{cancelable:true})));
   await page.getByText(/No-3D mode/).waitFor();assert.equal(await page.locator('.im-venues button').count(),10);
-  for(const level of ['A1','A2','B1','B2','C1','C2']){await page.getByLabel('Your level').selectOption(level);await page.waitForResponse(r=>r.url().includes('api/city-demo'));}
+  for(const level of ['A2','B1','B2','C1','C2','A1']){await Promise.all([page.waitForResponse(r=>r.url().includes('api/city-demo')),page.getByLabel('Your level').selectOption(level)]);}
   evidence.push(`${name}: no horizontal overflow, complete map, choice + personal speaking, contextual paywall, six levels and WebGL-loss fallback.`);
  }
  await page.setViewportSize({width:390,height:844});await page.goto(origin+'/lp/instagram?utm_source=instagram&sc_exp=instagram-city-v1&sc_variant=b');
@@ -61,6 +61,11 @@ try{
  await page.getByRole('button',{name:/Ver todo lo que incluye PRO/}).click();await page.getByRole('button',{name:/Prueba 1 día/}).click();
  await page.getByRole('alert').waitFor();assert.equal(checkoutRequests.at(-1).offer,'trial');
  await page.getByRole('button',{name:/Suscríbete/}).click();await page.getByRole('alert').waitFor();assert.equal(checkoutRequests.at(-1).offer,'monthly');
+ await page.evaluate(()=>{window.Paddle={Initialize:({eventCallback})=>{window.qaPaddleCallback=eventCallback},Update:({eventCallback})=>{window.qaPaddleCallback=eventCallback},Checkout:{open:()=>{const overlay=document.createElement('button');overlay.textContent='Close fixture Paddle';overlay.id='qa-paddle';overlay.onclick=()=>{overlay.remove();window.qaPaddleCallback({name:'checkout.closed'});};document.body.appendChild(overlay);}}};});
+ await page.getByRole('button',{name:/Suscríbete/}).click();await page.locator('#qa-paddle').waitFor();
+ assert.equal(await page.locator('dialog:modal').count(),0,'Native dialog must release the top layer for Paddle');
+ await page.locator('#qa-paddle').click();await page.locator('.im-pass:modal').waitFor();
+ evidence.push('Paddle body overlay is reachable, native dialog released while open and restored after checkout closes.');
  evidence.push('EN/ES landing, UTM/variant CTA propagation, existing Paddle UI submits trial/monthly correctly; network intercepted, no live charges.');
  assert.deepEqual(failures,[]);
  await writeFile(resolve(out,'evidence.json'),JSON.stringify({evidence,failures},null,2));

@@ -2,6 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { build } from 'esbuild';
 import { contentFor } from '../app/noche-abierta/levels.mjs';
+import {TARGETS,colliders,isWalkable,stepPlayer} from '../app/noche-abierta/world3d.mjs';
+import {demoArrival} from '../app/immersive/travel.mjs';
+import * as placements from '../app/noche-abierta/street/placements.mjs';
 const policy = await import('../app/immersive/policy.mjs').catch(() => ({}));
 const data = await import('../app/immersive/demo-content.mjs').catch(() => ({}));
 
@@ -41,6 +44,25 @@ test('public geometry bundle has no premium dialogue content', async () => {
   const text = result.outputFiles[0].text;
   assert.ok(!text.includes('PEDAGOGY_TEACHER_MOVES'));
   assert.ok(!text.includes('Ahora habla de ti'));
+});
+test('public geometry snapshots preserve original placement values without importing paid text', async () => {
+  for (const name of ['norte','centro','sur']) {
+    const original = await import(`../app/noche-abierta/street/caos-${name}.mjs`);
+    assert.deepEqual(placements[`CAOS_${name.toUpperCase()}_PLACES`],original.PLACEMENTS);
+  }
+});
+test('every demo map arrival is walkable, within interaction reach, and can move away', () => {
+  const boxes=colliders();
+  for (const target of TARGETS) {
+    const spot=demoArrival(target,boxes);
+    assert.ok(isWalkable(spot.x,spot.z,boxes,policy.DEMO_BOUNDS),target.location);
+    assert.ok(Math.hypot(spot.x-target.x,spot.z-target.z)<4,target.location);
+    const player={...spot,y:0,vy:0,speed:0,jumpHeld:false,moving:false};
+    assert.ok([[1,0],[-1,0],[0,1],[0,-1]].some(([x,y])=>{
+      const moved=stepPlayer(player,{x,y,yaw:0},.1,boxes,policy.DEMO_BOUNDS);
+      return Math.hypot(moved.x-player.x,moved.z-player.z)>.01;
+    }),target.location);
+  }
 });
 
 import {JSDOM} from 'jsdom';
