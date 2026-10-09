@@ -208,7 +208,7 @@ const app = {
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
     const administrative=(pathname==='/admin'||pathname.startsWith('/admin/'))||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
+    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/demo/noche-abierta'||pathname==='/sistema-verbal'||pathname==='/choose-conversation'||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
     // Pages only learn the visitor's session where it is resolved; elsewhere the
     // layout must not treat "no verified user" as "signed out" (AuthSessionSync).
     if(identityAware)routedHeaders.set("x-spanishcue-identity-checked","1");

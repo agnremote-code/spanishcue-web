@@ -12,9 +12,7 @@
 // axis-aligned box so the collision code stays the same. The renderer
 // (district3d.ts) only draws what this file describes; the tests walk it.
 
-import { PLACEMENTS as CAOS_NORTE_PLACES } from "./street/caos-norte.mjs";
-import { PLACEMENTS as CAOS_CENTRO_PLACES } from "./street/caos-centro.mjs";
-import { PLACEMENTS as CAOS_SUR_PLACES } from "./street/caos-sur.mjs";
+import { CAOS_NORTE_PLACES, CAOS_CENTRO_PLACES, CAOS_SUR_PLACES } from "./street/placements.mjs";
 
 export const CITY_BOUNDS = { minX: -126, maxX: 126, minZ: -122, maxZ: 116 };
 

@@ -6,6 +6,7 @@ import { useI18n } from "../i18n/LocaleProvider";
 import PaymentBrands from "./PaymentBrands";
 import "./payment-options.css";
 import { trackMarketingEvent } from "../marketing/analytics";
+import { consentFor } from "../privacy/consent";
 
 type FounderStatus = {
   limit: number;
@@ -84,7 +85,7 @@ function loadPaddle() {
  * choices for the paid-traffic landings: the US$2 one-day trial first, the
  * monthly subscription second and PayPal as a quieter secondary option.
  */
-export default function CheckoutButton({ signedIn, returnTo, variant = "default" }: { signedIn: boolean; returnTo: string; variant?: "default" | "landing" }) {
+export default function CheckoutButton({ signedIn, returnTo, variant = "default", paddleOnly = false, onPaddleOverlayChange }: { signedIn: boolean; returnTo: string; variant?: "default" | "landing"; onPaddleOverlayChange?: (open: boolean) => void; paddleOnly?: boolean }) {
   const { locale, t } = useI18n();
   const [status, setStatus] = useState<"idle" | "paypal" | "paddle" | "confirming" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -97,6 +98,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   }, []);
 
   async function emitPaidConversion(subscriptionId: string) {
+    if (!consentFor("analytics") && !consentFor("marketing")) return;
     try {
       const response = await fetch("/api/billing/conversion", {
         method: "POST",
@@ -148,6 +150,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
     if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable)) return;
     trackMarketingEvent(offer === "trial" ? "trial_checkout_start" : "checkout_start", { plan: "founder-1000-usd15-monthly", value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
+    if (offer === "trial") trackMarketingEvent("checkout_start", { plan: "paddle-paid-trial", value: 2, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -167,6 +170,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       }
       const paddle = await loadPaddle();
       const callback = (event: PaddleEvent) => {
+        if (event.name === "checkout.closed" || event.name === "checkout.error") onPaddleOverlayChange?.(false);
         if (event.name !== "checkout.completed") return;
         const transactionId = event.data?.transaction_id || body.transactionId as string;
         void confirmPaddle(transactionId);
@@ -177,6 +181,8 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       } else {
         paddle.Update?.({ eventCallback: callback });
       }
+      // Release a host native dialog before Paddle mounts its body-level overlay.
+      onPaddleOverlayChange?.(true);
       paddle.Checkout.open({
         transactionId: body.transactionId,
         settings: {
@@ -188,6 +194,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       });
       setStatus("idle");
     } catch (error) {
+      onPaddleOverlayChange?.(false);
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "No pudimos abrir el pago con tarjeta.");
     }
@@ -293,7 +300,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
           <span>{es ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</span>
         </div>}
       </div>
-      {offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>
+      {!paddleOnly && offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>
         {status === "paypal" ? t("checkout.openingPayPal") : (es ? `O paga con PayPal · US$${offer.paypalPriceUsd ?? 15}/mes` : `Or pay with PayPal · US$${offer.paypalPriceUsd ?? 15}/month`)}
       </button>}
       <p>{es
