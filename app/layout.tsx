@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import "./immersive/immersive.css";
+import ProDiscovery from "./immersive/ProDiscovery";
 import "./special.css";
 import "./spanishcue-brand.css";
 import "./acceso/style.css";
@@ -104,6 +106,7 @@ export default async function RootLayout({
             lessonTitle={currentLesson?.title}
           />
           {children}
+          {!fullAccess && (freeLesson || pathname === "/" || pathname === "/sistema-verbal" || pathname === "/choose-conversation") && <ProDiscovery signedIn={signedIn} />}
           <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (

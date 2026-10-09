@@ -94,6 +94,8 @@ export function saveConsent(input: Pick<ConsentState, ConsentCategory>) {
   };
   if (!input.analytics) {
     window.sessionStorage.removeItem("spanishcue.marketing.events.v1");
+    window.sessionStorage.removeItem("spanishcue.marketing.funnel.v1");
+    document.cookie = "spanishcue-city-variant=; Max-Age=0; Path=/; SameSite=Lax; Secure";
     delete document.documentElement.dataset.lastMarketingEvent;
   }
   if (!input.marketing) {

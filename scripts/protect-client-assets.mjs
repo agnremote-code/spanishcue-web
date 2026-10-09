@@ -56,6 +56,12 @@ const manifest = JSON.parse(
 const publicRoots = new Set([
   "app/AuthSessionSync.tsx",
   "app/Library.tsx",
+  // Public demo imports geometry/physics only; server allowlists every lesson payload.
+  "app/immersive/ImmersiveLanding.tsx",
+  "app/immersive/CityDemo.tsx",
+  "app/immersive/DemoScene.tsx",
+  "app/immersive/ProDiscovery.tsx",
+  "app/immersive/PremiumPanel.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
   "app/resources/ResourceCatalog.tsx",
   // Public question bank filters: the questions are free teaching content and

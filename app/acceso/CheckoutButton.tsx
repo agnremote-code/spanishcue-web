@@ -148,6 +148,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
     if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable)) return;
     trackMarketingEvent(offer === "trial" ? "trial_checkout_start" : "checkout_start", { plan: "founder-1000-usd15-monthly", value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
+    if (offer === "trial") trackMarketingEvent("checkout_start", { plan: "paddle-paid-trial", value: 2, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
