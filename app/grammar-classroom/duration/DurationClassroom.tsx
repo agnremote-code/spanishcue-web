@@ -9,10 +9,10 @@ function support(lesson:ClassroomLesson):Record<string,string>{return {
  'desde + fecha / momento':'since + starting point','presente + desde hace + tiempo / hace + tiempo + que + presente':'for + length of time; the situation is still true','hace + tiempo + verbo en pasado':'ago; a completed event',
  'Señala cuándo empezó algo que continúa.':'It started then and is still true now.', 'Desde hace seis meses, no «desde seis meses».':'for six months',
  [lesson.reading.text]:'horario = schedule · desde entonces = since then · todavía = still · vecina = neighbour · hace dos semanas = two weeks ago',
- [lesson.speaking[0].prompt]:'Say since when you have lived in your home or city. Your teacher asks about a recent change.',[lesson.speaking[0].followUp]:'What did you do before, and what do you do now?',
- [lesson.speaking[1].prompt]:'Your teacher has just arrived in the neighbourhood. Describe two activities you do and how long you have done them.',[lesson.speaking[1].followUp]:'Now correct a date: “No, since…”',
- [lesson.speaking[2].prompt]:'Choose an activity to do together this week. Explain your experience and availability.',[lesson.speaking[2].followUp]:'Your teacher cannot make that day. Suggest another possibility.',
- [lesson.writing.prompt]:'Introduce yourself to a neighbourhood group: when you moved here, an ongoing activity and a recent change. End with a question.',
+ [lesson.speaking[0].prompt]:'desde cuándo · since when | cambio reciente · recent change',[lesson.speaking[0].followUp]:'antes · before | ahora · now',
+ [lesson.speaking[1].prompt]:'barrio · neighbourhood | desde cuándo · since when',[lesson.speaking[1].followUp]:'aclara el dato · correct the information',
+ [lesson.speaking[2].prompt]:'juntos · together | horarios · availability',[lesson.speaking[2].followUp]:'otra posibilidad · another option',
+ [lesson.writing.prompt]:'presentarte · introduce yourself | continúa · is still true | cambio reciente · recent change',
  [lesson.listening.title]:'voice message', [lesson.listening.transcript]:'segundo = second floor · hace tres semanas que = for three weeks · desde septiembre = since September · me hice daño = I hurt myself · encontrarnos = meet',
 };}
 export default function DurationClassroom({lesson}:{lesson:ClassroomLesson}){return <div className="du-immersive"><TeacherStudio immersive lesson={lesson} english={support(lesson)} design={design} scene={<DurationScene/>} grammarVisual={<div className="du-key"><span><b>DESDE</b>inicio · since</span><span><b>DESDE HACE</b>duración · for</span><span><b>HACE</b>hecho pasado · ago</span></div>}/><details className="du-scope"><summary>Alcance de esta clase · A2</summary><p>{lesson.scope}</p></details></div>;}
