@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "authorization": "Owner requested near-complete bilingual A1 support and sequential 3D classrooms on 2026-10-09. Exact additions for lesson 42.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "sculptures"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "sculpture"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "paintings"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "painting"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "The door is open."
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "I see ${plural?'some':'a'} ${nounEn}."
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "some"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "a"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "The ${nounEn} ${plural?'are':'is'} in the gallery."
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "are"
+    },
+    {
+      "path": "app/grammar-classroom/studio/ArticleScene.tsx",
+      "text": "is"
+    }
+  ]
+}
