@@ -35,7 +35,7 @@ test('the free classroom renderer hydrates from a public chunk without paid teac
 });
 test('the premium article gallery and its recording stay outside the public asset graph',async()=>{
  const report=JSON.parse(readFileSync('dist/.openai/client-protection-report.json','utf8'));
- const files=report.protectedFiles.filter(f=>/\/ArticleClassroom-[^/]+\.js$/.test(f));assert.equal(files.length,1);
+ const files=report.protectedFiles.filter(f=>/\/(?:ArticleClassroom|article-world)-[^/]+\.js$/.test(f));assert.equal(files.length,2);
  for(const file of files){assert.equal(report.publicFiles.includes(file),false);const response=await get('/'+file);assert.equal(response.status,403);await response.arrayBuffer();}
  const audio=await get('/audio/grammar-classroom/42.mp3');assert.equal(audio.status,403);await audio.arrayBuffer();
  const page=await get('/la-galeria-de-los-articulos');assert.equal(page.status,302);assert.doesNotMatch(await page.text(),/GALERÍA DE REFERENTES|Cerca de mi trabajo hay/);

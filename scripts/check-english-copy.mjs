@@ -66,6 +66,7 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/article-immersive-english-additions-20261009.json',
   'docs/audits/instagram-funnel-english-additions-20261009.json',
   'docs/audits/article-studio-english-additions-20261009.json',
   'docs/audits/adjective-studio-english-additions-20261009.json',
