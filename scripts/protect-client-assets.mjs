@@ -56,6 +56,12 @@ const manifest = JSON.parse(
 const publicRoots = new Set([
   "app/AuthSessionSync.tsx",
   "app/Library.tsx",
+  // Public demo imports geometry/physics only; server allowlists every lesson payload.
+  "app/immersive/ImmersiveLanding.tsx",
+  "app/immersive/CityDemo.tsx",
+  "app/immersive/DemoScene.tsx",
+  "app/immersive/ProDiscovery.tsx",
+  "app/immersive/PremiumPanel.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
   "app/resources/ResourceCatalog.tsx",
   // Public question bank filters: the questions are free teaching content and
@@ -111,6 +117,21 @@ function visit(key) {
   for (const dependency of item.imports ?? []) visit(dependency);
 }
 for (const key of publicRoots) visit(key);
+
+// Test the actual multi-entry build graph, not only an isolated tree-shaken
+// demo bundle: mixed geometry/content modules can become shared public chunks.
+const paidStreetTitles = [];
+for (const part of ["norte", "centro", "sur"]) {
+  const {default: encounters} = await import(`../app/noche-abierta/street/caos-${part}.mjs`);
+  paidStreetTitles.push(...encounters.map(encounter => encounter.title));
+}
+for (const file of publicFiles) {
+  if (!file.endsWith(".js")) continue;
+  const source = await readFile(resolve("dist/client", file), "utf8");
+  for (const title of paidStreetTitles) {
+    if (source.includes(title)) throw new Error(`Paid Noche encounter exposed in public chunk ${file}: ${title}`);
+  }
+}
 
 const protectedFiles = [
   ...new Set(

@@ -1,7 +1,9 @@
+import { funnelContext } from "../immersive/attribution";
 import { consentFor } from "../privacy/consent";
 
 export const marketingEvents = [
   "landing_view",
+  "demo_start", "first_interaction", "demo_complete", "premium_gate_view", "verified_purchase",
   "cta_click",
   "primary_cta_click",
   "founder_offer_view",
@@ -56,7 +58,7 @@ const allowedPropertyKeys = new Set([
   "level",
   "access", "category", "cta_type", "currency", "filter", "landing", "lesson_id",
   "method", "placement", "plan", "query_length", "signed_in", "value",
-  "transaction_id",
+  "transaction_id", "experiment_id", "variant", "zone", "activity_id",
 ]);
 
 function clean(value: string | null) {
@@ -177,6 +179,10 @@ export function trackMarketingEvent(
   // The requested reporting alias is emitted only with that same transaction.
   if (event === "subscription_first_paid" && properties.transaction_id) {
     trackMarketingEvent("subscription_complete", properties);
+    if (typeof properties.value === "number" && Number.isFinite(properties.value) && properties.value > 0
+        && typeof properties.currency === "string" && /^[A-Z]{3}$/.test(properties.currency)) {
+      trackMarketingEvent("verified_purchase", properties);
+    }
   }
 
   const attribution = captureMarketingAttribution();
@@ -188,6 +194,7 @@ export function trackMarketingEvent(
     ...Object.fromEntries(
       Object.entries(attribution?.latest || {}).map(([key, value]) => [`latest_${key}`, value]),
     ),
+    ...funnelContext(),
     ...safeProperties(properties),
   };
   window.dataLayer = window.dataLayer || [];
