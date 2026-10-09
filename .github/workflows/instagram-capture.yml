@@ -1,0 +1,31 @@
+name: Instagram demo isolated browser QA and capture
+on:
+  push:
+    branches: [codex/instagram-immersive-funnel-20261009]
+    paths:
+      - 'scripts/qa-instagram-browser.mjs'
+      - '.github/workflows/instagram-capture.yml'
+      - 'app/immersive/**'
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - run: npm run install:ci
+      - run: npm install --no-save --package-lock=false playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Exercise real components and capture real gameplay
+        run: node scripts/qa-instagram-browser.mjs
+      - name: Upload capture and QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: instagram-browser-capture
+          path: outputs/instagram-browser
+          retention-days: 7
