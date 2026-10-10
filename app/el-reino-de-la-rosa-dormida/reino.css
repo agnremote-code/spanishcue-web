@@ -22,3 +22,5 @@
 @media(pointer:coarse),(max-width:760px){.rr-game .rrw-joystick,.rr-game .rrw-touch-actions{bottom:94px}.rr-game .rrw-prompt{bottom:232px}.rr-game .rrw-notice{bottom:300px}}
 @media(max-width:760px) and (min-height:521px){.rr-bottom-nav{position:fixed;top:190px;right:16px;bottom:auto!important;left:auto!important;transform:none!important}.rr-spellbar{margin:0 auto}.rr-hud-bottom{bottom:16px}}
 @media(max-height:520px) and (max-width:900px){.rr-game .rrw-joystick,.rr-game .rrw-touch-actions{bottom:16px}.rr-game .rrw-prompt{bottom:112px}.rr-game .rrw-notice{bottom:177px}.rr-compass{display:none}.rr-bottom-nav{position:fixed;top:10px;left:50%!important;right:auto;bottom:auto!important;transform:translateX(-50%)!important}.rr-spellbar{position:fixed;top:70px;right:18px;left:auto;bottom:auto;margin:0;transform:none}.rr-spell{width:37px;height:40px}.rr-spell>span{font-size:26px}.rr-cast-hint{display:none}.rr-hud-bottom .rr-save-status{display:none}}
+@media(max-width:380px){.rr-hud-top{left:12px;right:12px;gap:8px}.rr-brand>span{display:none}.rr-hud-actions{gap:5px;min-width:0}.rr-hud-level{padding:0 6px}}
+@media(pointer:coarse){.rr-controls-brief{display:none}}

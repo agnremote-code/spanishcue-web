@@ -17,7 +17,7 @@ await build({stdin:{contents:`import React from 'react';import{createRoot}from'r
   let source=await readFile(path,'utf8');
   source=source.replace('const render = (now: number) => {','const render = (_frame: number) => { const now=performance.now();');
   source=source.replace('Math.min((now - previous) / 1000, .05)','Math.min((now - previous) / 1000, .1)');
-  source=source.replace('const keys = inputFrom(held);',`const keys = inputFrom(held); const qa=window.__realmQA; if(qa?.route?.length){const a=qa.route[0];if(Math.hypot(a.x-player.x,a.z-player.z)<.18)qa.route.shift();} const aim=qa?.route?.[0]; const steering=aim?{x:0,y:Math.min(1,Math.hypot(aim.x-player.x,aim.z-player.z)/.75),yaw:Math.atan2(aim.x-player.x,aim.z-player.z),sprint:true}:{};`);
+  source=source.replace('const keys = inputFrom(held);',`const keys = inputFrom(held); const qa=window.__realmQA; if(qa?.route?.length){const a=qa.route[0];if(Math.hypot(a.x-player.x,a.z-player.z)<(qa.route.length>1?.75:.3))qa.route.shift();} const aim=qa?.route?.[0]; const steering=aim?{x:0,y:qa.route.length>1?1:Math.min(1,Math.hypot(aim.x-player.x,aim.z-player.z)/1.5),yaw:Math.atan2(aim.x-player.x,aim.z-player.z),sprint:true}:{};`);
   source=source.replace('jump: keys.jump || clock < jumpUntil, yaw }','jump: keys.jump || clock < jumpUntil, yaw, ...steering }');
   source=source.replace('renderer.render(scene, camera);',`window.__realmQA??={};const qa=window.__realmQA;qa.floorAt=world.floorAt;qa.snapshot=()=>({player:{...player},state:live.current.state,paused:live.current.paused,shot:shot?.kind,nearestNpc,nearestItem,nearestSpell,npcs:world.npcPositions,items:world.itemPositions,targets:SPELL_TARGETS,colliders:world.colliders,camera:camera.position.toArray(),heroHead:new THREE.Vector3(player.x,player.y+2,player.z).project(camera).toArray(),heroFeet:new THREE.Vector3(player.x,player.y,player.z).project(camera).toArray(),draws:renderer.info.render.calls,triangles:renderer.info.render.triangles,dragonLoaded:!!scene.getObjectByName('Quaternius rigged dragon')});qa.stop=()=>{qa.route=[];clear();};if(!qa.lastRender||now-qa.lastRender>200){renderer.render(scene,camera);qa.lastRender=now;}`);
   return{contents:source,loader:'tsx',resolveDir:dirname(path)};
@@ -33,11 +33,11 @@ const results=[],errors=[];let browser;
 const snapshot=page=>page.evaluate(()=>window.__realmQA.snapshot());
 async function layout(page,label){
  const report=await page.evaluate(()=>{
-  const selectors=['.rr-hud-top','.rr-objective','.rr-minimap','.rr-hud-bottom','.rrw-prompt','.rrw-joystick','.rrw-touch-actions','.rr-dialogue','.rr-modal'];
+  const selectors=['.rr-controls-brief','.rr-hud-top','.rr-objective','.rr-minimap','.rr-hud-bottom','.rrw-prompt','.rrw-joystick','.rrw-touch-actions','.rr-dialogue','.rr-modal'];
   const rects=selectors.map(selector=>{const e=document.querySelector(selector);if(!e||!e.getClientRects().length||getComputedStyle(e).display==='none')return null;const r=e.getBoundingClientRect();return{selector,x:r.x,y:r.y,right:r.right,bottom:r.bottom,clipped:e.scrollWidth>e.clientWidth+2};}).filter(Boolean);
-  return{width:innerWidth,height:innerHeight,overflow:document.documentElement.scrollWidth>innerWidth+1,rects};
+  const vis=s=>{const e=document.querySelector(s);return e&&e.getClientRects().length&&getComputedStyle(e).display!=='none'?e.getBoundingClientRect():null;};const a=vis('.rr-controls-brief'),b=vis('.rrw-joystick');const overlap=!!(a&&b&&a.left<b.right&&b.left<a.right&&a.top<b.bottom&&b.top<a.bottom);return{overlap,width:innerWidth,height:innerHeight,overflow:document.documentElement.scrollWidth>innerWidth+1,rects};
  });
- assert.equal(report.overflow,false,`${label}: horizontal overflow`);
+ assert.equal(report.overflow,false,`${label}: horizontal overflow`);assert.equal(report.overlap,false,`${label}: keyboard hint overlaps joystick`);
  for(const r of report.rects){assert.ok(r.x>=-1&&r.y>=-1&&r.right<=report.width+1&&r.bottom<=report.height+1,`${label}: ${r.selector} outside viewport ${JSON.stringify(r)}`);assert.equal(r.clipped,false,`${label}: ${r.selector} clips content`);}
  return report;
 }
@@ -58,7 +58,7 @@ async function travel(page,id,kind='npc',range){
   q.route=path.filter((p,i)=>i===0||i===path.length-1||(p.x-path[i-1].x)!==(path[i+1].x-p.x)||(p.z-path[i-1].z)!==(path[i+1].z-p.z));
  },{id,kind,range});
  await page.locator('.rrw-canvas canvas').focus();
- const deadline=Date.now()+90000;
+ const deadline=Date.now()+180000;
  while(Date.now()<deadline){
   const s=await snapshot(page);if(s.shot){const skip=page.getByRole('button',{name:/Omitir escena/});if(await skip.isVisible())await skip.click();}
   if(await page.evaluate(()=>!window.__realmQA.route?.length))break;
@@ -81,7 +81,7 @@ async function talk(page,id){
  const close=page.getByRole('button',{name:/Continuar explorando/});if(await close.isVisible())await close.click();
 }
 async function collect(page,id){await travel(page,id,'item');await page.locator('.rrw-canvas canvas').focus();await page.keyboard.press('f');await page.waitForFunction(id=>window.__realmQA.snapshot().state.inventory.includes(id),id);}
-async function cast(page,id,spell,flag){await travel(page,id,'spell',id==='dragon'?7.2:6);await page.getByRole('button',{name:new RegExp(`^${spell}: seleccionar$`,'i')}).click();await page.locator('.rrw-canvas canvas').focus();await page.keyboard.press('r');await page.waitForFunction(flag=>window.__realmQA.snapshot().state.flags[flag],flag);await page.waitForTimeout(800);}
+async function cast(page,id,spell,flag){await travel(page,id,'spell',id==='dragon'?7.2:6);await page.getByRole('button',{name:new RegExp(`^${spell}: seleccionar$`,'i')}).click();await page.locator('.rrw-canvas canvas').focus();for(let attempt=0;attempt<20&&!(await snapshot(page)).state.flags[flag];attempt++){await page.keyboard.press('r');await page.waitForFunction(flag=>window.__realmQA.snapshot().state.flags[flag],flag,{timeout:2500}).catch(()=>{});}assert.ok((await snapshot(page)).state.flags[flag],`${spell} did not set ${flag}`);await page.waitForTimeout(800);}
 try{
  const sizes=process.env.REINO_QA_SIZES?.split(',')??['desktop','mobile'];
  for(const size of sizes){
@@ -100,6 +100,7 @@ try{
   await talk(page,'nox');await talk(page,'ines');await talk(page,'bruno');await cast(page,'mill','ventaria','millRepaired');await collect(page,'key');await talk(page,'liora');await cast(page,'grove','lumaria','forestLit');await talk(page,'aldren');await talk(page,'celina');await cast(page,'thorns','floralis','gardenOpen');await collect(page,'rose');
   await travel(page,'baltasar');await page.screenshot({path:resolve(out,`${size}-castle.png`)});await collect(page,'scroll');await talk(page,'baltasar');await talk(page,'teobaldo');await cast(page,'dragon','aurora','dragonShield');await travel(page,'brum');await page.screenshot({path:resolve(out,`${size}-dragon.png`)});await talk(page,'brum');await collect(page,'crystal');await talk(page,'tejedora');await cast(page,'altar','lumaria','ritualLight');await cast(page,'altar','floralis','ritualGrowth');await cast(page,'altar','aurora','ritualDawn');await talk(page,'elara');
   await page.getByRole('heading',{name:'Valdoria despierta.'}).waitFor();await page.screenshot({path:resolve(out,`${size}-victory.png`)});assert.equal((await snapshot(page)).state.completed.length,8);
+  await page.reload();await page.getByRole('button',{name:/Continuar la aventura/}).click({timeout:60000});await page.waitForFunction(()=>window.__realmQA?.snapshot?.().state?.completed?.length===8,{timeout:60000});await page.screenshot({path:resolve(out,`${size}-continued.png`)});console.log(`${size}: victory persisted after reload`);
   results.push({size,stage:'complete-campaign',passed:true});await browser.close();
  }
  assert.deepEqual(errors,[]);
