@@ -1,0 +1,10 @@
+export type Position = { x: number; y: number; z: number };
+export type RealmPlayer = Position & { heading: number; speed: number; vy: number; jumpHeld: boolean; moving: boolean };
+export type RealmCollider = { minX: number; maxX: number; minZ: number; maxZ: number; minY?: number; maxY?: number; gate?: string };
+export type RealmInput = { x?: number; y?: number; yaw?: number; sprint?: boolean; jump?: boolean };
+export const REALM_BOUNDS: { minX: number; maxX: number; minZ: number; maxZ: number };
+export const REALM_SPAWN: RealmPlayer;
+export function activeColliders(boxes: RealmCollider[], flags?: Record<string, boolean>, y?: number): RealmCollider[];
+export function stepRealmPlayer(player: RealmPlayer, input: RealmInput, dt: number, boxes: RealmCollider[], floorAt: (x: number, z: number) => number, flags?: Record<string, boolean>, bounds?: typeof REALM_BOUNDS): RealmPlayer;
+export function nearestInReach(player: Position, positions: Record<string, Position>, range?: number): string | null;
+export function safeCheckpoint(position: Position | null | undefined, floorAt: (x: number, z: number) => number, boxes?: RealmCollider[], flags?: Record<string, boolean>): RealmPlayer;

@@ -1,0 +1,1585 @@
+ASTRA ULTRA — MISIÓN URGENTE
+SPANISHCUE: EL REINO DE LA ROSA DORMIDA
+
+CREAR UN VIDEOJUEGO RPG 3D DE FANTASÍA MEDIEVAL
+INSPIRADO EN LA EXPERIENCIA DE HOGWARTS LEGACY
+Y EN EL CUENTO CLÁSICO DE LA BELLA DURMIENTE.
+
+REPOSITORIO:
+agnremote-code/spanishcue-web
+
+SITIO:
+https://spanishcue.com
+
+RUTA PROPUESTA:
+/el-reino-de-la-rosa-dormida
+
+AUTORIZACIÓN:
+Podés inspeccionar, implementar, modificar archivos,
+crear componentes, integrar sistemas, ejecutar pruebas,
+crear PR, mergear y desplegar a producción sin solicitar
+aprobaciones adicionales, respetando los permisos
+y controles del repositorio.
+
+URGENCIA ABSOLUTA:
+Tengo aproximadamente dos horas para aprovechar
+tu máxima capacidad de desarrollo.
+
+NO quiero documentación extensa.
+NO quiero que consumas tiempo elaborando un plan.
+NO quiero un prototipo conceptual.
+NO quiero mockups.
+NO quiero una landing disfrazada de videojuego.
+NO quiero preguntas ni confirmaciones.
+
+QUIERO CÓDIGO, UN VIDEOJUEGO REAL Y RESULTADOS.
+
+Comenzá inmediatamente.
+
+==================================================
+1. VISIÓN CENTRAL: HOGWARTS LEGACY + BELLA DURMIENTE
+==================================================
+
+Quiero crear para SpanishCue una experiencia completamente
+nueva, con la ambición visual y jugable de un RPG moderno
+de fantasía.
+
+REFERENCIAS:
+
+HOGWARTS LEGACY:
+- Exploración 3D en tercera persona.
+- Castillo gigantesco y mágico.
+- Personaje completamente controlable.
+- Bosques encantados.
+- Puentes, montañas, torres y mazmorras.
+- Puertas y habitaciones explorables.
+- Magia y hechizos.
+- Criaturas fantásticas.
+- NPCs interactivos.
+- Misiones.
+- Secretos.
+- Puzles.
+- Animaciones.
+- Cámara libre.
+- Efectos cinematográficos.
+- Música épica.
+- Progresión de aventura.
+
+MIDDLE-EARTH: SHADOW OF WAR:
+- Fortalezas monumentales.
+- Guardianes.
+- Encuentros dinámicos.
+- Enemigos que reaccionan.
+- Objetivos narrativos.
+- Exploración en ambientes medievales.
+
+LA BELLA DURMIENTE:
+- Una princesa encantada.
+- Un príncipe protagonista.
+- Un castillo dormido.
+- Una maldición.
+- Espinas mágicas.
+- Hadas.
+- Una hechicera.
+- Un dragón guardián.
+- Una misión de rescate.
+- Un desenlace mágico.
+
+QUIERO COMBINAR TODO ESTO.
+
+La experiencia debe transmitir la misma sensación de
+libertad, exploración, magia y aventura que Hogwarts
+Legacy, adaptada de manera realista a un navegador.
+
+NO copiar recursos, personajes, interfaces ni diseños
+protegidos de Hogwarts Legacy, Harry Potter, Disney
+o Shadow of War.
+
+Crear un universo original, con un acabado visual
+cinematográfico y mecánicas equivalentes cuando
+sean técnicamente viables.
+
+MUY IMPORTANTE:
+No quiero simplemente un juego que se vea en 3D.
+Quiero SENTIR que estoy controlando a un príncipe
+que explora un verdadero reino de fantasía.
+
+==================================================
+2. NOMBRE E HISTORIA
+==================================================
+
+TÍTULO:
+EL REINO DE LA ROSA DORMIDA
+
+SUBTÍTULO:
+Una aventura mágica para aprender español.
+
+El Reino de Valdoria cayó bajo un hechizo hace cien años.
+
+La princesa Elara quedó dormida en la torre más alta
+del castillo.
+
+Una hechicera conocida como La Tejedora de Espinas
+encerró el reino en un sueño eterno.
+
+Las calles quedaron silenciosas.
+Las puertas del castillo fueron selladas.
+Los jardines quedaron cubiertos de rosas encantadas.
+Un dragón protege la torre de la princesa.
+
+El protagonista es el PRÍNCIPE GAEL.
+
+El jugador controla directamente a Gael.
+
+OBJETIVO:
+Llegar al castillo, descubrir cómo romper el hechizo,
+aprender magia, hablar con personajes, resolver misterios,
+enfrentarse al dragón y rescatar a la princesa.
+
+El alumno avanza mediante:
+- Conversaciones reales en español.
+- Exploración.
+- Misiones.
+- Decisiones.
+- Objetos.
+- Magia.
+- Acertijos.
+- Desafíos de comprensión.
+- Interacción narrativa.
+
+No es un simple recorrido lineal.
+
+Quiero exploración libre dentro de las zonas disponibles,
+pero con una campaña principal estructurada.
+
+==================================================
+3. GRÁFICOS 3D: PRIORIDAD MÁXIMA
+==================================================
+
+La calidad visual es FUNDAMENTAL.
+
+No quiero un mapa hecho con cajas simples.
+No quiero árboles construidos con dos cilindros.
+No quiero personajes formados por bloques.
+No quiero montañas sin texturas.
+No quiero escenarios vacíos.
+
+Construí el mejor mundo 3D posible para WebGL,
+con un estilo propio de fantasía medieval semi-realista.
+
+REQUISITOS VISUALES:
+
+ARQUITECTURA:
+- Castillo gótico monumental.
+- Torres altas.
+- Murallas de piedra.
+- Puentes.
+- Ventanas con vitrales.
+- Arcos.
+- Escaleras.
+- Columnas.
+- Balcones.
+- Puertas de madera.
+- Portones de hierro.
+- Interiores decorados.
+
+NATURALEZA:
+- Bosques.
+- Árboles detallados.
+- Hierba.
+- Flores.
+- Rocas.
+- Montañas.
+- Lagos.
+- Ríos.
+- Caminos.
+- Niebla.
+- Enredaderas.
+- Rosas.
+- Jardines.
+- Hongos mágicos.
+
+ILUMINACIÓN:
+- Luz solar.
+- Iluminación ambiental.
+- Sombras.
+- Antorchas.
+- Velas.
+- Luces mágicas.
+- Reflejos cuando resulten viables.
+- Niebla atmosférica.
+- Gradación cromática.
+
+MATERIALES:
+- Piedra envejecida.
+- Madera.
+- Metal.
+- Cristal.
+- Agua.
+- Tierra.
+- Vegetación.
+- Tejidos.
+- Materiales PBR donde corresponda.
+
+EFECTOS:
+- Partículas mágicas.
+- Hojas moviéndose.
+- Polvo ambiental.
+- Chispas.
+- Destellos.
+- Fuego.
+- Bruma.
+- Ondas de hechizos.
+- Transiciones cinematográficas.
+
+IMPORTANTE:
+Priorizar modelos 3D reales GLB/glTF,
+materiales y escenas optimizadas.
+
+Buscar y reutilizar assets existentes.
+Si se incorporan otros, comprobar su licencia comercial,
+atribuciones, tamaño y estabilidad.
+
+No usar recursos protegidos sin permiso.
+
+El juego debe verse espectacular, pero mantener una
+cantidad de polígonos y draw calls compatible con
+navegadores modernos.
+
+Usar LOD, instancing, culling, compresión y carga por
+zonas cuando ayuden al rendimiento.
+
+==================================================
+4. PERSONAJE PRINCIPAL: EL PRÍNCIPE GAEL
+==================================================
+
+Gael es un príncipe aventurero de aproximadamente
+25-30 años.
+
+APARIENCIA:
+- Cabello oscuro.
+- Rostro atractivo.
+- Atuendo medieval elegante.
+- Capa azul oscura.
+- Botas.
+- Guantes.
+- Cinturón.
+- Espada ceremonial.
+- Amuleto mágico.
+- Vestimenta con detalles dorados.
+
+Quiero controlar SU CUERPO, no una cámara flotante.
+
+CÁMARA EN TERCERA PERSONA:
+Como los RPG modernos de fantasía.
+
+El personaje debe contar con animaciones:
+- Respirar.
+- Estar quieto.
+- Caminar.
+- Correr.
+- Girar.
+- Saltar.
+- Aterrizar.
+- Hablar.
+- Interactuar.
+- Lanzar hechizos.
+- Recoger objetos.
+- Recibir impacto.
+- Celebrar.
+
+Utilizar modelos riggeados y animaciones esqueléticas
+cuando estén disponibles.
+
+Que no camine deslizándose por el suelo.
+
+==================================================
+5. SISTEMA DE CÁMARA Y CONTROLES
+==================================================
+
+Quiero una cámara con comportamiento similar al de
+Hogwarts Legacy.
+
+TERCERA PERSONA:
+- Detrás del príncipe.
+- Movimiento suave.
+- Rotación libre.
+- Cámara con seguimiento.
+- Sin atravesar paredes.
+- Distancia adaptativa.
+- Zoom razonable.
+- Interpolación de movimiento.
+- Ángulo ajustable.
+
+CONTROLES DE ESCRITORIO:
+
+WASD = caminar.
+SHIFT = correr.
+ESPACIO = saltar.
+MOUSE = mover cámara.
+E = conversar/interactuar.
+F = recoger objetos.
+R = lanzar magia.
+1,2,3,4 = elegir hechizo.
+M = mapa.
+J = misiones.
+I = inventario.
+ESC = pausa.
+
+CONTROLES MÓVILES:
+- Joystick virtual.
+- Movimiento táctil de cámara.
+- Botón de saltar.
+- Botón de interactuar.
+- Botón de magia.
+- Botón de hablar.
+- HUD responsive.
+
+FÍSICA:
+- Gravedad.
+- Colisiones.
+- Suelo sólido.
+- Paredes.
+- Escaleras.
+- Obstáculos.
+- Puertas.
+- Puentes.
+
+Prohibido atravesar objetos sólidos.
+Prohibido caer debajo del mapa.
+Prohibido que la cámara se quede atrapada.
+
+Inspeccioná la implementación existente en Noche Abierta
+y reutilizá sus sistemas maduros, corrigiendo limitaciones
+antes de inventar sistemas redundantes.
+
+==================================================
+6. MUNDO 3D: MAPA DEL REINO
+==================================================
+
+Quiero un mapa con sensación de mundo abierto.
+
+Pero priorizá densidad visual y funcionalidad sobre tamaño.
+
+ZONA 1: COLINA DEL AMANECER
+
+Aquí comienza la aventura.
+
+El príncipe aparece sobre una colina verde.
+
+A lo lejos se observa un CASTILLO GIGANTE.
+
+Hay árboles, caminos, flores, rocas y niebla.
+
+La cámara realiza una introducción cinematográfica.
+
+Un cuervo mágico se acerca y dice:
+
+"Por fin has llegado, príncipe Gael.
+El reino te estaba esperando."
+
+El jugador recibe su primera misión:
+
+"Descubre qué ocurrió en Valdoria."
+
+Esta zona enseña a caminar, correr, saltar,
+mover la cámara y conversar.
+
+ZONA 2: ALDEA DE LOS SUSURROS
+
+Una aldea medieval explorable.
+
+Incluir:
+- Casas.
+- Mercado.
+- Posada.
+- Herrería.
+- Establo.
+- Fuente.
+- Calles de piedra.
+- Aldeanos.
+- Animales.
+- Tiendas.
+- Objetos interactivos.
+
+NPCs con conversaciones diferentes.
+Pequeñas misiones opcionales.
+Pistas sobre el castillo.
+
+ZONA 3: BOSQUE ENCANTADO
+
+Bosque misterioso y hermoso.
+
+Árboles enormes.
+Niebla.
+Setas luminosas.
+Luciérnagas.
+Ruinas.
+Puentes de madera.
+Hadas.
+Criaturas mágicas.
+Senderos ocultos.
+
+Una hada debe enseñar el primer hechizo.
+
+ZONA 4: PUENTE DE LAS ESPINAS
+
+Puente monumental que conduce al castillo.
+
+Guardado por una estatua viviente.
+
+El guardián exige respuestas y pruebas.
+
+El jugador debe negociar, conversar o utilizar magia
+para conseguir acceso.
+
+ZONA 5: JARDINES REALES
+
+Laberinto de setos.
+Fuentes.
+Rosas.
+Estatuas.
+Pérgolas.
+Llaves escondidas.
+Puzles ambientales.
+Puertas secretas.
+
+ZONA 6: GRAN CASTILLO DE VALDORIA
+
+LA ZONA MÁS ESPECTACULAR.
+
+Construir un castillo explorable de verdad.
+
+ESPACIOS:
+- Gran entrada.
+- Patio central.
+- Vestíbulo.
+- Gran escalera.
+- Biblioteca mágica.
+- Sala del trono.
+- Cocina.
+- Pasillos.
+- Salón de retratos.
+- Sala de espejos.
+- Mazmorra.
+- Torres.
+- Balcones.
+- Corredores secretos.
+
+Quiero caminar por habitaciones, abrir puertas,
+subir escaleras y mirar por ventanas.
+
+El castillo NO puede ser una fachada decorativa.
+
+Debe tener interiores tridimensionales reales.
+
+ZONA 7: GUARIDA DEL DRAGÓN
+
+Una terraza enorme o caverna mágica.
+
+Dragón tridimensional con:
+- Alas.
+- Cabeza animada.
+- Movimiento del cuello.
+- Cola.
+- Rugidos.
+- Fuego.
+- Animación de vuelo si resulta viable.
+- Animaciones de reposo y ataque.
+
+Debe existir un encuentro interactivo real.
+
+ZONA 8: TORRE DE LA PRINCESA
+
+Habitación encantada.
+
+Rosas flotantes.
+Cortinas.
+Velas.
+Grandes ventanas.
+Cama real.
+Luz dorada.
+
+La princesa Elara duerme sobre una cama.
+
+El príncipe llega hasta ella.
+
+Se produce el clímax de la historia.
+
+El jugador deberá completar un ritual de conversación
+y magia para romper el hechizo.
+
+Una cinemática muestra cómo despierta el reino.
+
+==================================================
+7. EL CASTILLO DEBE SER RECORRIBLE
+==================================================
+
+ESTO ES OBLIGATORIO.
+
+No quiero hacer clic en "Biblioteca" y que aparezca
+una tarjeta con texto.
+
+Quiero caminar físicamente hacia la biblioteca,
+abrir la puerta y entrar.
+
+Quiero poder:
+- Subir escaleras.
+- Explorar salas.
+- Recorrer pasillos.
+- Abrir cofres.
+- Encontrar secretos.
+- Hablar con personajes.
+- Acercarme a vitrales.
+- Descubrir puertas ocultas.
+- Atravesar jardines.
+- Subir torres.
+- Llegar a balcones.
+
+Si la arquitectura necesita zonas cargadas por separado,
+usar transiciones 3D fluidas.
+
+La sensación debe ser la de un espacio real y conectado.
+
+==================================================
+8. NPCs Y PERSONAJES ANIMADOS
+==================================================
+
+PERSONAJES PRINCIPALES:
+
+GAEL:
+Príncipe protagonista.
+
+ELARA:
+Princesa encantada.
+
+NOX:
+Cuervo mágico que guía al jugador.
+
+LIORA:
+Hada del bosque.
+
+ALDREN:
+Guardián del puente.
+
+BRUNO:
+Herrero.
+
+INÉS:
+Posadera.
+
+BALTASAR:
+Bibliotecario mágico.
+
+CELINA:
+Jardinera real.
+
+TEOBALDO:
+Mayordomo del castillo.
+
+BRUM:
+Dragón guardián.
+
+LA TEJEDORA DE ESPINAS:
+Hechicera antagonista.
+
+Cada NPC debe tener:
+- Identidad.
+- Modelo reconocible.
+- Nombre.
+- Función.
+- Diálogos.
+- Objetivos.
+- Animación.
+- Reacciones.
+- Al menos una intervención significativa.
+
+Los NPCs deben mirar al príncipe cuando conversa
+con ellos.
+
+Agregar animaciones de hablar, gestos o expresiones
+cuando existan recursos adecuados.
+
+Algunos personajes deben realizar pequeñas rutinas:
+caminar, trabajar, leer, patrullar o mirar alrededor.
+
+Nada de figuras absolutamente inmóviles si existen
+soluciones de animación viables.
+
+==================================================
+9. SISTEMA DE MAGIA
+==================================================
+
+Quiero un sistema de hechizos con efectos VISUALES,
+animaciones y consecuencias.
+
+HECHIZO 1: LUMARIA
+
+Genera una esfera luminosa.
+Ilumina habitaciones oscuras.
+Revela símbolos ocultos.
+
+HECHIZO 2: VENTARIA
+
+Genera una ráfaga de viento.
+Mueve objetos.
+Limpia hojas.
+Activa mecanismos.
+
+HECHIZO 3: FLORALIS
+
+Controla plantas mágicas.
+Hace crecer puentes vegetales.
+Retira espinas.
+Activa rosas encantadas.
+
+HECHIZO 4: AURORA
+
+Magia protectora.
+Crea un escudo luminoso.
+Protege del fuego.
+Permite superar la prueba del dragón.
+
+Cada hechizo:
+- Debe poder seleccionarse.
+- Debe tener botón real.
+- Debe tener animación.
+- Debe tener partículas.
+- Debe producir efecto en el mundo.
+- Debe tener sonido.
+- Debe servir en al menos una misión.
+
+NO quiero botones de hechizo que solamente muestren
+un mensaje de texto.
+
+Para aprender un hechizo, el jugador deberá comprender
+instrucciones en español y realizar una acción.
+
+==================================================
+10. DRAGÓN: ENCUENTRO CINEMATOGRÁFICO
+==================================================
+
+Brum debe ser uno de los elementos visuales más
+impresionantes del videojuego.
+
+REFERENCIA:
+Dragones y criaturas mágicas de videojuegos RPG modernos.
+
+Quiero un dragón grande, animado y tridimensional.
+
+ENCUENTRO:
+
+El príncipe alcanza la terraza de la torre.
+
+Se escucha un rugido.
+
+La cámara revela al dragón.
+
+El dragón extiende sus alas.
+
+Aparece una misión:
+"Supera la prueba del guardián."
+
+MECÁNICAS:
+- Esquivar zonas de fuego.
+- Utilizar un escudo mágico.
+- Acercarse al dragón.
+- Descubrir su historia.
+- Conversar.
+- Elegir respuestas.
+- Resolver un misterio.
+
+IMPORTANTE:
+No tiene que ser simplemente matar al dragón.
+
+El dragón puede estar protegiendo a la princesa
+por un motivo que el príncipe desconoce.
+
+El alumno puede superar el encuentro mediante
+conversación, comprensión y magia.
+
+Conseguir que el dragón cambie de actitud según
+las decisiones del jugador.
+
+==================================================
+11. SISTEMA DE CONVERSACIÓN ABSOLUTA
+==================================================
+
+ESTE ES EL CORAZÓN PEDAGÓGICO.
+
+Quiero que SpanishCue integre la enseñanza de español
+en un RPG real.
+
+No quiero ejercicios escolares agregados encima.
+
+LA CONVERSACIÓN DEBE SER PARTE DEL JUEGO.
+
+MÉTODOS:
+1. Hablar usando micrófono.
+2. Escribir respuestas libres.
+3. Seleccionar sugerencias opcionales.
+4. Escuchar al NPC.
+5. Repetir frases.
+
+Los personajes deben reconocer diferentes respuestas
+correctas que expresen la misma intención.
+
+EJEMPLO:
+
+GUARDIÁN:
+"¡Alto! ¿Quién eres y por qué quieres entrar?"
+
+JUGADOR:
+"Soy el príncipe Gael y necesito salvar a Elara."
+
+GUARDIÁN:
+"¿Y por qué debería confiar en ti?"
+
+JUGADOR:
+"Porque quiero ayudar a este reino."
+
+GUARDIÁN:
+"Quizás seas digno de cruzar."
+
+El puente se desbloquea.
+
+Las respuestas deben afectar:
+- Misiones.
+- Confianza.
+- Acceso.
+- Objetos.
+- Pistas.
+- Progreso.
+
+No exigir una oración exacta cuando hay otras formas
+válidas de expresarse.
+
+Inspeccioná primero los sistemas existentes de
+conversación, audio y reconocimiento de voz.
+
+Aprovechá lo que funciona.
+
+Implementá reconocimiento de intenciones y variantes
+lingüísticas para permitir respuestas abiertas,
+sin fingir disponer de un modelo de IA.
+
+Si hay infraestructura de IA conversacional disponible,
+integrala de forma segura, conservando los límites,
+permisos y costos establecidos.
+
+Si no hay reconocimiento de voz compatible,
+el modo escrito debe ser totalmente funcional.
+
+Jamás simules que el micrófono comprende una frase
+si realmente no la ha procesado.
+
+Cada conversación principal deberá tener al menos
+3-5 intercambios contextualizados.
+
+El NPC debe reaccionar a las decisiones anteriores.
+
+==================================================
+12. ADAPTACIÓN A0-C2
+==================================================
+
+INCLUIR SELECTOR:
+A0 / A1 / A2 / B1 / B2 / C1 / C2
+
+Mismo videojuego.
+Mismo mundo.
+Misma historia.
+Dificultad lingüística diferente.
+
+A0:
+- Palabras frecuentes.
+- Frases mínimas.
+- Ayuda visual.
+- Respuestas cortas.
+- Instrucciones sencillas.
+
+A1:
+- Presentarse.
+- Preguntar.
+- Pedir.
+- Describir.
+- Expresar necesidades.
+
+A2:
+- Contar acontecimientos.
+- Dar instrucciones.
+- Describir personas.
+- Utilizar pasado.
+- Explicar motivos simples.
+
+B1:
+- Relatar.
+- Opinar.
+- Justificar.
+- Negociar.
+- Expresar posibilidades.
+
+B2:
+- Formular hipótesis.
+- Argumentar.
+- Persuadir.
+- Utilizar el subjuntivo.
+- Expresar emociones y condiciones.
+
+C1:
+- Interpretar pistas complejas.
+- Debatir dilemas morales.
+- Utilizar matices.
+- Formular discursos elaborados.
+
+C2:
+- Interpretar dobles sentidos.
+- Negociar situaciones ambiguas.
+- Usar ironía y registro.
+- Resolver desafíos lingüísticos complejos.
+- Construir narrativas sofisticadas.
+
+EJEMPLO DEL MISMO ENCUENTRO:
+
+A0:
+"¿Quién eres?"
+"Soy Gael."
+
+A1:
+"¿Por qué estás aquí?"
+"Busco a la princesa."
+
+A2:
+"¿Qué ocurrió antes de llegar?"
+"Caminé por el bosque y encontré una llave."
+
+B1:
+"Explícame por qué quieres cruzar."
+"Necesito llegar al castillo porque creo
+que puedo romper el hechizo."
+
+B2:
+"¿Qué harías si tu misión pusiera al reino
+en peligro?"
+
+C1:
+"¿Crees que romper una maldición justifica
+ignorar las advertencias de quienes
+conocen su origen?"
+
+C2:
+"Defiende tu decisión ante un guardián que
+cuestiona la legitimidad ética de despertar
+un reino cuya historia desconoces."
+
+IMPORTANTE:
+No limitarse a cambiar la longitud de las frases.
+Cambiar la complejidad de las tareas conversacionales,
+los objetivos comunicativos y el tipo de respuesta.
+
+==================================================
+13. MISIONES REALES
+==================================================
+
+CREAR UNA CAMPAÑA JUGABLE.
+
+MISIÓN 1:
+EL VIAJERO DESCONOCIDO
+
+Aprender controles.
+Hablar con Nox.
+Descubrir el hechizo.
+
+MISIÓN 2:
+LOS SECRETOS DE LA ALDEA
+
+Hablar con habitantes.
+Encontrar pistas.
+Conseguir una llave.
+
+MISIÓN 3:
+EL HADA DEL BOSQUE
+
+Explorar el bosque.
+Ayudar a Liora.
+Aprender Lumaria.
+
+MISIÓN 4:
+EL PUENTE PROHIBIDO
+
+Enfrentar al guardián.
+Negociar el paso.
+Desbloquear el puente.
+
+MISIÓN 5:
+EL LABERINTO DE ROSAS
+
+Resolver acertijos.
+Utilizar Floralis.
+Encontrar entrada al castillo.
+
+MISIÓN 6:
+LOS SECRETOS DEL CASTILLO
+
+Explorar habitaciones.
+Encontrar pergaminos.
+Reconstruir la historia del hechizo.
+
+MISIÓN 7:
+EL GUARDIÁN DE FUEGO
+
+Llegar a la guarida del dragón.
+Utilizar Aurora.
+Conversar con Brum.
+Superar la prueba.
+
+MISIÓN 8:
+EL DESPERTAR DE ELARA
+
+Llegar a la torre.
+Enfrentar a la hechicera.
+Resolver el ritual final.
+Despertar a la princesa.
+Liberar el reino.
+
+Cada misión necesita:
+- Activador real.
+- Objetivo.
+- Estado.
+- Condiciones.
+- Progreso.
+- Finalización.
+- Recompensa.
+- Actualización de HUD.
+
+No desbloquear una misión solamente por entrar
+a una pantalla si falta completar su condición.
+
+==================================================
+14. MISIONES SECUNDARIAS
+==================================================
+
+Agregar aventuras opcionales cuando el núcleo funcione:
+
+- Encontrar el gato de la posadera.
+- Reparar el molino.
+- Ayudar al herrero.
+- Buscar una rosa azul.
+- Reconstruir una carta.
+- Investigar un retrato encantado.
+- Encontrar la llave del sótano.
+- Liberar un ave mágica.
+- Descubrir un pasadizo secreto.
+- Ayudar a un fantasma a recordar su nombre.
+
+Cada misión debe desarrollar conversación,
+comprensión, vocabulario o narración.
+
+Deben aportar algo al mundo.
+
+==================================================
+15. INVENTARIO Y OBJETOS
+==================================================
+
+Implementar inventario funcional.
+
+OBJETOS:
+- Llave del castillo.
+- Pergamino antiguo.
+- Rosa encantada.
+- Amuleto real.
+- Libro mágico.
+- Cristal del amanecer.
+- Mapa antiguo.
+- Escudo.
+- Poción.
+- Reliquia del bosque.
+
+Al acercarse:
+Mostrar "F — Recoger".
+
+El objeto desaparece de la escena y aparece
+en el inventario.
+
+Los objetos deben servir para algo:
+- Abrir puertas.
+- Activar misiones.
+- Resolver acertijos.
+- Ayudar a NPCs.
+- Completar rituales.
+
+No agregues objetos coleccionables sin función.
+
+==================================================
+16. PUZLES Y SECRETOS
+==================================================
+
+QUIERO EXPLORACIÓN E INVESTIGACIÓN.
+
+Ejemplos:
+
+PUZLE DE VITRALES:
+Colocar símbolos en orden correcto.
+
+PUZLE DE LOS RETRATOS:
+Escuchar historias y descubrir cuál miente.
+
+PUZLE DEL JARDÍN:
+Seguir instrucciones para encontrar una rosa especial.
+
+PUZLE DE LA BIBLIOTECA:
+Encontrar un libro a partir de pistas conversacionales.
+
+PUZLE DE LA TORRE:
+Reconstruir una secuencia narrativa.
+
+PUZLE DEL DRAGÓN:
+Comprender una historia y tomar una decisión.
+
+Agregar pistas progresivas para evitar que el alumno
+quede bloqueado indefinidamente.
+
+==================================================
+17. CINEMÁTICAS Y NARRATIVA
+==================================================
+
+INICIO:
+Vista aérea cinematográfica del bosque y castillo.
+La cámara desciende hacia el príncipe.
+Aparece el título.
+El cuervo habla.
+Comienza la aventura.
+
+ENTRADA AL CASTILLO:
+Las enormes puertas se abren.
+La cámara revela el vestíbulo.
+
+ENCUENTRO DEL DRAGÓN:
+Rugido.
+Movimiento de cámara.
+Dragón aparece sobre la torre.
+
+FINAL:
+El hechizo se rompe.
+Las espinas desaparecen.
+La princesa despierta.
+La luz vuelve al castillo.
+Los habitantes celebran.
+Música épica.
+Pantalla de victoria.
+
+Crear cinemáticas dentro del motor 3D,
+sin depender de videos externos inexistentes.
+
+Permitir omitirlas y volver a jugar.
+
+==================================================
+18. AUDIO INMERSIVO
+==================================================
+
+Agregar, cuando haya assets y medios adecuados:
+- Música de fantasía.
+- Ambiente de bosque.
+- Viento.
+- Pájaros.
+- Agua.
+- Pasos.
+- Puertas.
+- Espadas.
+- Campanas.
+- Chispas mágicas.
+- Rugidos.
+- Fuego.
+- Sonidos de UI.
+
+MÚSICA DINÁMICA:
+- Exploración tranquila.
+- Misterio.
+- Castillo.
+- Encuentro con dragón.
+- Victoria final.
+
+No afirmar que existe narración grabada si no existe.
+
+Respetar las restricciones de reproducción de audio
+en navegadores.
+
+Permitir silenciar música y efectos por separado.
+
+==================================================
+19. INTERFAZ PREMIUM
+==================================================
+
+REFERENCIA:
+HUD de un RPG moderno de fantasía, pero original.
+
+HUD:
+- Nombre de misión actual.
+- Objetivo breve.
+- Icono de hechizo.
+- Acceso a inventario.
+- Acceso a mapa.
+- Menú de pausa.
+- Selector A0-C2.
+- Botón de conversación.
+- Indicador contextual de interacción.
+
+MINIMAPA:
+Representación útil de zonas y objetivos.
+
+DIARIO:
+Misiones activas.
+Misiones completadas.
+Pistas encontradas.
+
+INVENTARIO:
+Objetos con iconos y descripciones.
+
+CONVERSACIÓN:
+Panel elegante y cinematográfico.
+Nombre del personaje.
+Texto.
+Audio si existe.
+Respuesta libre.
+Micrófono cuando funcione.
+Ayudas.
+Feedback.
+
+Diseño medieval elegante:
+- Pergamino.
+- Dorados.
+- Azul oscuro.
+- Marfil.
+- Transparencias discretas.
+- Bordes ornamentales.
+
+EVITAR:
+- Overlays gigantes.
+- Texto diminuto.
+- Cajas blancas genéricas.
+- Interfaces escolares.
+- Popups invasivos.
+- Botones falsos.
+
+==================================================
+20. GUARDADO Y PROGRESIÓN
+==================================================
+
+Guardar:
+- Posición o checkpoint.
+- Nivel de español elegido.
+- Misiones completadas.
+- Inventario.
+- Hechizos desbloqueados.
+- Pistas.
+- Estado narrativo.
+- Conversaciones importantes.
+- Preferencias de audio.
+
+Reutilizar persistencia existente.
+
+Si el proyecto no tiene persistencia de cuenta aplicable,
+utilizar almacenamiento local como fallback.
+
+La partida debe poder continuarse sin comenzar de cero
+cada vez que se recarga la página.
+
+Incluir:
+- Nueva partida.
+- Continuar.
+- Reiniciar con confirmación.
+
+==================================================
+21. REUTILIZACIÓN DE NOCHE ABIERTA
+==================================================
+
+INSPECCIONÁ EL REPOSITORIO PRIMERO.
+
+Especialmente:
+NOCHE ABIERTA 3D.
+BOSQUE DE LOS HONGOS GIGANTES.
+THE SOUND MAP.
+SISTEMAS DE CONVERSACIÓN.
+AUDIO.
+SELECCIÓN A0-C2.
+SHARE PASS.
+
+Identificá:
+- Motor 3D.
+- Dependencias.
+- Cámara.
+- Movimiento.
+- Control táctil.
+- Colisiones.
+- Sistemas de interacción.
+- UI.
+- Diálogos.
+- Audio.
+- Persistencia.
+- Rutas.
+- Pruebas.
+
+No reescribir el motor si puede extenderse.
+
+No modificar la experiencia de Noche Abierta
+hasta el punto de romperla.
+
+No crear una arquitectura alternativa innecesaria.
+
+Si el repositorio ya utiliza React Three Fiber,
+Three.js u otra tecnología apropiada, extendela.
+
+Elegí herramientas compatibles con el stack real.
+
+==================================================
+22. CRITERIO DE CALIDAD REAL
+==================================================
+
+NO QUIERO:
+- Un canvas con primitivas flotantes.
+- Un castillo decorativo sin interiores.
+- Una cámara rota.
+- Un personaje inmóvil.
+- Un dragón sin animación ni interacción.
+- NPCs que sean simples etiquetas.
+- Conversaciones falsas.
+- Misiones que no se puedan completar.
+- Hechizos sin efectos.
+- Un mundo vacío.
+- Assets rotos.
+- Errores de consola.
+- Controles que no respondan.
+- Una colección de tarjetas con fondos 3D.
+
+QUIERO:
+- Exploración física.
+- Personaje controlable.
+- Cámara correcta.
+- Escenarios bonitos.
+- Castillo transitable.
+- NPCs.
+- Conversación.
+- Misiones.
+- Magia funcional.
+- Dragón interactivo.
+- Narrativa.
+- Final.
+- Progreso guardado.
+- Experiencia completa.
+
+Los elementos importantes deben ser FUNCIONALES.
+
+==================================================
+23. ESTRATEGIA DE DESARROLLO URGENTE
+==================================================
+
+NO intentes desarrollar un AAA completo antes
+de publicar algo.
+
+TRABAJÁ EN ENTREGAS FUNCIONALES.
+
+PRIMERA ENTREGA:
+VERTICAL SLICE PREMIUM.
+
+Construir un recorrido terminado y extraordinario:
+
+1. Introducción cinematográfica.
+2. Príncipe animado en tercera persona.
+3. Bosque encantado detallado.
+4. Cuervo interactivo.
+5. Hada con conversación.
+6. Hechizo funcional.
+7. Puente y guardián.
+8. Castillo explorable con interiores.
+9. Encuentro interactivo con dragón.
+10. Torre con princesa.
+11. Resolución narrativa.
+12. Final jugable.
+13. Selector A0-C2.
+14. Guardado de progreso.
+
+Este recorrido debe ser suficientemente bueno
+como para utilizarlo con alumnos de verdad.
+
+PRIORIDAD DE RECURSOS:
+- Máxima calidad del recorrido principal.
+- Completar el bucle de juego.
+- Eliminar bloqueos técnicos.
+- Mejorar gráficos.
+- Expandir áreas.
+- Añadir misiones secundarias.
+
+Si el tiempo no permite tener todas las áreas,
+concentrá el esfuerzo en las zonas más impactantes:
+bosque, castillo, dragón y torre.
+
+No rellenes artificialmente el mapa.
+
+La primera entrega debe tener PRINCIPIO Y FINAL.
+
+==================================================
+24. ORDEN DE EJECUCIÓN
+==================================================
+
+PASO 1:
+Inspeccioná rápidamente el repositorio y localizá
+los motores reutilizables.
+
+PASO 2:
+Creá la ruta y el mundo base.
+
+PASO 3:
+Implementá al príncipe, cámara, controles y físicas.
+
+PASO 4:
+Construí un recorrido 3D visualmente cuidado.
+
+PASO 5:
+Implementá conversaciones y selector A0-C2.
+
+PASO 6:
+Implementá misiones, llaves, puertas y magia.
+
+PASO 7:
+Implementá encuentro con dragón y torre final.
+
+PASO 8:
+Añadí sonido, partículas, animaciones y pulido visual.
+
+PASO 9:
+Probá toda la aventura.
+
+PASO 10:
+Mergeá y desplegá cuando las verificaciones pasen.
+
+PASO 11:
+Si queda capacidad disponible, expandí el reino
+con la aldea, jardines, mazmorras y misiones opcionales.
+
+No pases la mayor parte de la ejecución escribiendo
+explicaciones o planificaciones.
+
+==================================================
+25. QA OBLIGATORIO
+==================================================
+
+Verificar:
+- Compilación.
+- Typecheck.
+- Lint.
+- Tests relevantes.
+- Carga de modelos 3D.
+- Errores de consola.
+- Movimiento.
+- Colisiones.
+- Cámara.
+- Controles móviles.
+- Puertas.
+- Escaleras.
+- NPCs.
+- Diálogos.
+- Hechizos.
+- Dragón.
+- Inventario.
+- Guardado.
+- Misiones.
+- Progreso.
+- Final.
+- Niveles A0-C2.
+
+Validar una partida completa desde la introducción
+hasta el rescate.
+
+Cuando haya herramientas de navegador disponibles,
+realizar un recorrido real con capturas visuales.
+
+Asegurate de no romper:
+- Noche Abierta.
+- Otras clases.
+- Suscripciones.
+- Pagos.
+- Autenticación.
+- SEO.
+- Funcionalidades existentes.
+
+No anunciar funcionalidades terminadas si están
+incompletas.
+
+==================================================
+26. ESTÁNDARES DE PRODUCCIÓN
+==================================================
+
+Requisitos:
+- Carga inicial razonable.
+- Assets optimizados.
+- Responsive.
+- Soporte táctil.
+- Errores controlados.
+- Fallbacks.
+- Sin API keys expuestas.
+- Sin dependencias de licencias incompatibles.
+- Sin modificar pagos.
+- Sin duplicar clases existentes.
+- Sin destruir componentes compartidos.
+- Sin regresiones.
+
+Los cambios deben poder revisarse y mantenerse.
+
+Publicar por partes cuando haya hitos completos,
+sin bloquear lo terminado por expansiones opcionales.
+
+Si una protección del repositorio impide publicar,
+no la eludas: dejá el PR listo e informá el bloqueo.
+
+==================================================
+27. EXPERIENCIA DE USUARIO: EFECTO WOW
+==================================================
+
+IMAGINÁ ESTO:
+
+El alumno entra a SpanishCue.
+
+Hace clic en:
+"EL REINO DE LA ROSA DORMIDA — JUGAR".
+
+Aparece un paisaje tridimensional.
+
+Ve un enorme castillo sobre una montaña.
+
+El viento mueve los árboles.
+
+Un príncipe con capa está parado sobre un camino.
+
+Comienza a caminar usando WASD.
+
+Escucha pájaros, pasos y música de fantasía.
+
+Se acerca a un cuervo.
+
+Aparece:
+"E — Conversar".
+
+El cuervo comienza a hablar en español.
+
+El alumno responde usando su voz o teclado.
+
+El cuervo le explica su misión.
+
+Camina hacia un bosque.
+
+Encuentra un hada.
+
+Aprende magia.
+
+Utiliza el hechizo para abrir un camino.
+
+Cruza un puente.
+
+Llega al castillo.
+
+Abre un portón enorme.
+
+Explora un gran salón iluminado por vitrales.
+
+Sube escaleras.
+
+Encuentra pergaminos.
+
+Resuelve misterios.
+
+Llega a una terraza.
+
+Un dragón aparece ante sus ojos.
+
+Habla con el dragón.
+
+Descubre el secreto del encantamiento.
+
+Consigue superar la prueba.
+
+Sube a la torre.
+
+Encuentra a la princesa.
+
+Completa el ritual final mediante conversación
+y hechizos.
+
+La princesa despierta.
+
+El reino recupera la luz.
+
+El alumno termina su aventura.
+
+Y todo eso ocurrió mientras aprendía y utilizaba
+español real.
+
+ESA ES LA EXPERIENCIA QUE QUIERO CREAR.
+
+NO una imitación superficial.
+NO un escenario con diálogos pegados.
+NO un juego de preguntas.
+
+UN RPG REAL, MÁGICO, ATRACTIVO Y EDUCATIVO.
+
+==================================================
+28. RESULTADO Y ENTREGA
+==================================================
+
+NO me entregues un documento explicativo.
+
+TRABAJÁ DIRECTAMENTE EN EL REPOSITORIO.
+
+Al finalizar cada hito publicable, informá solamente:
+- Qué funciona realmente.
+- URL.
+- PR o commit.
+- Estado de producción.
+- Qué falta.
+
+Si no se pudo publicar, decí exactamente por qué.
+
+NO afirmes que algo está publicado sin verificarlo.
+
+==================================================
+29. INSTRUCCIÓN FINAL — MÁXIMA PRIORIDAD
+==================================================
+
+Esta experiencia debe convertirse en uno de los
+productos estrella de SpanishCue.
+
+Quiero una aventura inolvidable.
+
+Quiero la profundidad de exploración y la sensación
+visual de Hogwarts Legacy.
+
+Quiero la magia de La Bella Durmiente.
+
+Quiero controlar a un príncipe.
+
+Quiero castillos, dragones, bosques, hechizos,
+puertas, pasadizos, personajes, misiones y secretos.
+
+Quiero que la conversación en español sea la clave
+para avanzar y transformar el mundo.
+
+Y quiero que esto sea un VIDEOJUEGO REAL, no una
+página educativa vestida de fantasía.
+
+TENÉS AUTORIZACIÓN PARA TOMAR DECISIONES CREATIVAS,
+TÉCNICAS Y PEDAGÓGICAS SIN CONSULTARME.
+
+Si encontrás una solución mejor que alguna de mis
+propuestas, implementala.
+
+Prioridad absoluta:
+UNA EXPERIENCIA 3D JUGABLE, TERMINADA Y VISUALMENTE
+IMPACTANTE antes de gastar recursos en expansiones.
+
+El alcance AAA es una referencia de calidad e
+interacción, no una excusa para dejar un proyecto
+enorme e incompleto.
+
+ENTREGÁ PRIMERO UN RECORRIDO PREMIUM COMPLETO.
+
+No te quedes en el análisis.
+
+EMPEZÁ A PROGRAMAR AHORA.

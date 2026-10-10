@@ -4578,6 +4578,36 @@
       "text": "Visité el museo, comí con una amiga y volví a las seis.",
       "category": "neutral-context",
       "reason": "Phase 2 teaching example: first-person singular preterite in a past narrative, not a regional imperative."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/content.mjs",
+      "text": "Perdí el camino cuando cayó la niebla. ¿Qué habría ayudado?",
+      "category": "neutral-context",
+      "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/content.mjs",
+      "text": "Aprendí Lumaria y ahora iluminaré el santuario.",
+      "category": "neutral-context",
+      "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/content.mjs",
+      "text": "Antes tenía espinas; después abrí mis pétalos. ¿Qué cambió?",
+      "category": "neutral-context",
+      "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/content.mjs",
+      "text": "Tuve miedo de perderlos. ¿Qué sentí?",
+      "category": "neutral-context",
+      "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/content.mjs",
+      "text": "Pedí un refugio, no una prisión. ¿Qué puedo hacer ahora?",
+      "category": "neutral-context",
+      "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
     }
   ]
 }
