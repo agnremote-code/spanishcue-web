@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKe
 import { LOCATIONS, type Level, type Phase, type WorldOutcome } from './engine.mjs';
 import {
   BUILDINGS, CAMERA_PRESETS, NPCS, PARK_LANE, ROOM_PRESET, SPAWN, STAGES, TARGETS, TRAFFIC_LANE, VEHICLE_SIZE,
-  angleBetween, canUseKeys, colliders, exitSpot, followCamera, followYaw, inputFrom, keyAction, nearestTarget, roomLayout,
+  angleBetween, canUseKeys, colliders, exitSpot, followCamera, followYaw, inputFrom, isWalkable, keyAction, nearestTarget, roomLayout,
   stepPlayer, streetFraming,
   type Box, type Hotspot, type RoomExit, type RoomLayout, type Target,
 } from './world3d.mjs';
@@ -20,6 +20,8 @@ import { buildCity, buildInterior, placePerson, placeVehicle, type City, type In
 import { buildDistricts, buildStreetRoom } from './district3d';
 import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
 import { createStreetEvents } from './events3d';
+import { createDrivables, type Drivable } from './drive3d';
+import { BOARD_RADIUS, OWNER_SHOUT_AFTER, POLICE_AFTER, SPECS, dismountSpot, playerHeading, stepVehicle } from './drive.mjs';
 import { createItemUseFx, disposeItem, heroHand, holdItem } from './items3d';
 import { ItemInventory } from './ItemIcon';
 import { animatePerson } from './people3d';
@@ -51,14 +53,16 @@ export type WorldProps = {
 
 type Mode = 'intro' | 'walk' | 'room' | 'scene' | 'street' | 'event' | 'final' | 'busy';
 type StreetExit = { id: string; x: number; z: number; radius: number; key: 'E'; verb: string; exit: true; streetExit: true; location: string };
-type Spot = Target | Hotspot | RoomExit | StreetSpot | StreetExit;
+type DriveSpot = { id: string; x: number; z: number; radius: number; key: 'E'; verb: string; name: string; drive: string };
+type Spot = Target | Hotspot | RoomExit | StreetSpot | StreetExit | DriveSpot;
 type Prompt = { id: string; key: string; verb: string; name: string };
 
 const names: Record<string, string> = Object.fromEntries(LOCATIONS.map(item => [item.id, item.name]));
 const titles: Record<string, string> = Object.fromEntries(LOCATIONS.flatMap(item => item.activities.map(activity => [`${item.id}/${activity.id}`, activity.title])));
-const HELP_LINES = ['WASD / FLECHAS · CORRER', 'SHIFT · MÁS RÁPIDO', 'ALT · CAMINAR', 'ESPACIO · SALTAR', 'E · INTERACTUAR', 'Q · USAR TU OBJETO', 'ARRASTRAR · GIRAR LA CÁMARA', 'V · CÁMARA', 'M · MAPA', 'ESC · SALIR'];
+const HELP_LINES = ['WASD / FLECHAS · CORRER', 'SHIFT · MÁS RÁPIDO', 'ALT · CAMINAR', 'ESPACIO · SALTAR', 'E · INTERACTUAR · ROBAR AUTO O MOTO', 'Q · USAR TU OBJETO', 'ARRASTRAR · GIRAR LA CÁMARA', 'V · CÁMARA', 'M · MAPA', 'ESC · SALIR'];
 const districtNames: Record<string, string> = Object.fromEntries(DISTRICT_ZONES.map(item => [item.id, item.name]));
 const isStreetSpot = (spot: Spot | null): spot is StreetSpot => Boolean(spot && ('encounter' in spot || 'door' in spot) && !('location' in spot));
+const isDriveSpot = (spot: Spot | null): spot is DriveSpot => Boolean(spot && 'drive' in spot);
 const CARD_WIDTH = 440;
 
 const faceTo = (from: { x: number; z: number }, to: { x: number; z: number }) => Math.atan2(to.x - from.x, to.z - from.z);
@@ -84,7 +88,7 @@ export default function World3D(props: WorldProps) {
   const minimap = useRef<HTMLCanvasElement>(null);
   const knob = useRef<HTMLSpanElement>(null);
   const bubbleEl = useRef<HTMLParagraphElement>(null);
-  const api = useRef<{ interact: (key: 'E' | 'F') => void; cycleCamera: () => void; useItem: () => void; held: Set<string>; joy: { x: number; y: number } } | null>(null);
+  const api = useRef<{ interact: (key: 'E' | 'F') => void; cycleCamera: () => void; useItem: () => void; brake: () => void; held: Set<string>; joy: { x: number; y: number } } | null>(null);
   const [bubble, setBubble] = useState<{ text: string; n: number } | null>(null);
   const [district, setDistrict] = useState<{ name: string; n: number } | null>(null);
   const [journey, setJourney] = useState('');
@@ -92,6 +96,8 @@ export default function World3D(props: WorldProps) {
   const [mapOpen, setMapOpen] = useState(!props.narrow);
   const [help, setHelp] = useState(false);
   const [mode, setMode] = useState<Mode>('intro');
+  const [driving, setDriving] = useState(false);
+  const speedEl = useRef<HTMLElement>(null);
   const mapRef = useRef(mapOpen);
   useEffect(() => { mapRef.current = mapOpen; }, [mapOpen]);
 
@@ -183,6 +189,7 @@ export default function World3D(props: WorldProps) {
     const events = createStreetEvents(scene, city.night, { low, boxes });
     boxes.push(...events.movingBoxes);
     crowd.setHooks({ fly: (x: number, z: number) => events.fly('helicopter', x, z), police: (x: number, z: number) => { events.callPolice(x, z); } });
+    const drivables = createDrivables(scene, city.night, { boxes });
     const streetRooms = new Map<string, ReturnType<typeof buildStreetRoom>>();
     // The object you carry, in your free hand.
     let held: { id: ItemId; holder: THREE.Object3D } | null = null;
@@ -233,6 +240,8 @@ export default function World3D(props: WorldProps) {
       focus: null as Hotspot | null,
       indoor: null as string | null,
       riding: false,
+      // The car or motorbike you are driving, if any.
+      drive: null as null | { item: Drivable; at: number; from: { x: number; z: number }; shouted: boolean; called: boolean; hit: number; brakeUntil: number },
       // A street scene, or a room you walked into from the street.
       street: null as string | null,
       streetRoom: null as string | null,
@@ -309,9 +318,69 @@ export default function World3D(props: WorldProps) {
     const roomSpots = (): Spot[] => (sim.room ? [...sim.room.hotspots, sim.room.exit] : []);
 
     const placePlayer = (x: number, z: number, heading: number, y = 0) => {
+      if (sim.drive) dismount();
       Object.assign(sim.player, { x, z, heading, speed: 0, y: 0, vy: 0, jumpHeld: false, moving: false });
       sim.y = y;
       placePerson(hero, x, z, heading, y);
+    };
+    // Driving: a parked car or motorbike can be taken (E), driven with W/S and
+    // A/D (Space brakes, Shift is a burst), and left again with E.
+    const driveSpots = (): DriveSpot[] => {
+      const out: DriveSpot[] = [];
+      for (const item of drivables.items) {
+        if (item.taken || Math.hypot(item.state.x - sim.player.x, item.state.z - sim.player.z) > BOARD_RADIUS + 1) continue;
+        out.push({ id: item.id, x: item.state.x, z: item.state.z, radius: BOARD_RADIUS, key: 'E', verb: 'ROBAR', name: SPECS[item.kind].label, drive: item.id });
+      }
+      return out;
+    };
+    const board = (id: string) => {
+      const item = drivables.get(id);
+      if (!item || item.taken || sim.drive) return;
+      drivables.take(item);
+      sim.drive = { item, at: sim.clock, from: { x: item.state.x, z: item.state.z }, shouted: false, called: false, hit: 0, brakeUntil: 0 };
+      const moto = SPECS[item.kind].seat === 'moto';
+      item.group.add(hero.root);
+      hero.seated = true;
+      hero.root.scale.setScalar(0.92);
+      hero.root.position.set(moto ? -0.3 : 0.2, moto ? 0.35 : -0.08, moto ? 0 : -0.42);
+      hero.root.rotation.set(0, Math.PI / 2, 0);
+      Object.assign(sim.player, { x: item.state.x, z: item.state.z, heading: playerHeading(item.state.heading), speed: 0, y: 0, vy: 0, jumpHeld: false, moving: false });
+      sim.y = 0;
+      sim.yaw = sim.player.heading;
+      sim.target = null;
+      box.dataset.driving = item.id;
+      setDriving(true);
+    };
+    // The vehicle stays where it stopped; the learner goes back to being on foot.
+    const dismount = () => {
+      const d = sim.drive;
+      if (!d) return;
+      sim.drive = null;
+      hero.seated = false;
+      hero.root.scale.setScalar(1);
+      scene.add(hero.root);
+      drivables.leave(d.item);
+      delete box.dataset.driving;
+      setDriving(false);
+    };
+    const stopDriving = () => {
+      const d = sim.drive;
+      if (!d) return;
+      const state = { ...d.item.state };
+      const spec = SPECS[d.item.kind];
+      dismount();
+      const free = (x: number, z: number) => isWalkable(x, z, boxes);
+      let out = dismountSpot(state, spec, free);
+      if (!free(out.x, out.z)) {
+        for (const reach of [3.6, 4.8, 6]) for (let k = 0; k < 8; k++) {
+          const a = (k / 8) * Math.PI * 2;
+          const x = state.x + Math.cos(a) * reach, z = state.z + Math.sin(a) * reach;
+          if (free(x, z)) { out = { x, z }; break; }
+        }
+      }
+      placePlayer(out.x, out.z, playerHeading(state.heading));
+      sim.yaw = sim.player.heading;
+      followShot(true);
     };
     const setShot = (px: number, py: number, pz: number, lx: number, ly: number, lz: number, snap = false) => {
       sim.shot.pos.set(px, py, pz);
@@ -320,7 +389,9 @@ export default function World3D(props: WorldProps) {
     };
     const followShot = (snap = false) => {
       const roof = Boolean(sim.streetRoom && STREET_ROOMS[sim.streetRoom]?.roof);
-      const f = followCamera(sim.player, sim.room && !roof ? ROOM_PRESET : CAMERA_PRESETS[sim.preset], sim.yaw, sim.room?.bounds ?? null);
+      const base = CAMERA_PRESETS[sim.preset];
+      const chase = sim.drive ? { ...base, distance: base.distance * 1.5 + 2.4 + Math.abs(sim.drive.item.state.speed) * 0.08, height: base.height * 1.2 + 0.8, ahead: base.ahead * 2 + 1 } : base;
+      const f = followCamera(sim.player, sim.room && !roof ? ROOM_PRESET : chase, sim.yaw, sim.room?.bounds ?? null);
       let y = f.y;
       // Under a roof (the station tunnel) the camera stays low.
       const ceiling = CEILINGS.find(c => (sim.player.x > c.x0 && sim.player.x < c.x1 && sim.player.z > c.z0 && sim.player.z < c.z1) || (f.x > c.x0 && f.x < c.x1 && f.z > c.z0 && f.z < c.z1));
@@ -334,6 +405,7 @@ export default function World3D(props: WorldProps) {
       districts.root.visible = !stage;
       crowd.root.visible = !stage || stage === 'sala-lavanderia';
       events.root.visible = crowd.root.visible;
+      drivables.root.visible = crowd.root.visible;
       for (const [id, room] of streetRooms) if (room && !STREET_ROOMS[id].roof) room.group.visible = id === stage;
       const interior = stage ? interiors.get(stage) : null;
       // One lamp from the room, one soft fill from the camera side so faces read.
@@ -437,7 +509,7 @@ export default function World3D(props: WorldProps) {
     const useItem = () => {
       const p = live.current;
       const item = p.street.item;
-      if (!item || sim.mode !== 'walk') return;
+      if (!item || sim.mode !== 'walk' || sim.drive) return;
       const reaction = ambientReaction(item, p.level, Math.floor(sim.clock * 7));
       let fx = useFx.get(item);
       if (!fx) { fx = createItemUseFx(item); useFx.set(item, fx); scene.add(fx.group); }
@@ -702,6 +774,7 @@ export default function World3D(props: WorldProps) {
       if (!target) return;
       const p = live.current;
       if (sim.mode === 'walk' && p.phase === 'ciudad' && key === 'E') {
+        if (isDriveSpot(target)) { if (sim.drive) stopDriving(); else board(target.drive); return; }
         if ('streetExit' in target) { leaveStreetRoom(); return; }
         if (isStreetSpot(target)) {
           if (target.door) enterStreetRoom(target.door);
@@ -710,7 +783,7 @@ export default function World3D(props: WorldProps) {
         }
       }
       if (sim.mode === 'walk' && p.phase === 'ciudad') {
-        if (isStreetSpot(target) || 'streetExit' in target) return;
+        if (isStreetSpot(target) || isDriveSpot(target) || 'streetExit' in target) return;
         const street = target as Target;
         if (key === 'F' && street.key !== 'F') return;
         p.onInteract(street.location, street.activity);
@@ -720,7 +793,8 @@ export default function World3D(props: WorldProps) {
       }
     };
     const cycleCamera = () => { sim.preset = (sim.preset + 1) % CAMERA_PRESETS.length; };
-    api.current = { interact, cycleCamera, useItem, held: sim.held, joy: sim.joy };
+    const brake = () => { if (sim.drive) sim.drive.brakeUntil = sim.clock + 0.7; };
+    api.current = { interact, cycleCamera, useItem, brake, held: sim.held, joy: sim.joy };
 
     // Mouse drag orbits the camera around the avatar.
     const canvas = renderer.domElement;
@@ -798,6 +872,7 @@ export default function World3D(props: WorldProps) {
     };
 
     const promptAnchor = new THREE.Vector3();
+    const hiddenNpcs: THREE.Object3D[] = [];
     const markerTargets = [...city.markers.keys()].map(id => [id, targetById.get(id)!] as const);
     let raf = 0;
     let last = performance.now();
@@ -807,6 +882,8 @@ export default function World3D(props: WorldProps) {
       last = now;
       sim.clock += dt;
       const p = live.current;
+      // The lesson moves on, or a room opens: step out of the vehicle first.
+      if (sim.drive && (sim.mode !== 'walk' || p.phase !== 'ciudad' || sim.indoor)) stopDriving();
 
       // Follow the lesson: places open and close, activities inside rooms
       // open and close, the phase moves on.
@@ -839,6 +916,7 @@ export default function World3D(props: WorldProps) {
         else if (!streetOpen && sim.mode === 'street') closeStreet();
       }
       holdNow(p.street.item);
+      if (held) held.holder.visible = !sim.drive;
       if (p.phase !== sim.seen.phase) {
         sim.seen.phase = p.phase;
         // The lesson moves on: back out of a street room first.
@@ -851,7 +929,40 @@ export default function World3D(props: WorldProps) {
 
       // Movement: camera-relative, in the street or inside a room.
       const walking = sim.mode === 'walk' || sim.mode === 'room';
-      if (walking) {
+      if (walking && sim.drive) {
+        const d = sim.drive;
+        const spec = SPECS[d.item.kind];
+        const input = inputFrom(sim.held);
+        let steer = input.x, throttle = input.y;
+        if (Math.abs(sim.joy.x) > 0.12 || Math.abs(sim.joy.y) > 0.12) { steer = sim.joy.x; throttle = sim.joy.y; }
+        const stop = sim.held.has('jump') || sim.clock < d.brakeUntil;
+        let state = d.item.state;
+        let knock = 0;
+        const steps = Math.max(1, Math.ceil(dt / 0.03));
+        for (let i = 0; i < steps; i++) {
+          const next = stepVehicle(state, { x: steer, y: throttle, brake: stop, boost: input.sprint }, dt / steps, spec, boxes);
+          state = { x: next.x, z: next.z, heading: next.heading, speed: next.speed };
+          knock = Math.max(knock, next.hit);
+        }
+        d.item.state = state;
+        d.hit = knock;
+        drivables.place(d.item);
+        const heading = playerHeading(state.heading);
+        Object.assign(sim.player, { x: state.x, z: state.z, heading, speed: Math.abs(state.speed), y: 0, vy: 0, moving: Math.abs(state.speed) > 0.2 });
+        sim.turn = 0;
+        if (!sim.dragging && sim.clock - sim.dragAt > 1.2 && state.speed > 0.5) sim.yaw = followYaw(sim.yaw, heading, 9, dt);
+        followShot();
+        const driven = sim.clock - d.at;
+        if (!d.shouted && driven > OWNER_SHOUT_AFTER) {
+          d.shouted = true;
+          sim.bubble = { x: d.from.x, y: 1.7, z: d.from.z, until: sim.clock + 3.2 };
+          setBubble(current => ({ text: spec.seat === 'moto' ? '¡Oye! ¡Esa es mi moto!' : '¡Oye! ¡Ese es mi auto!', n: (current?.n ?? 0) + 1 }));
+        }
+        if (!d.called && driven > POLICE_AFTER) { d.called = true; events.callPolice(state.x, state.z); }
+        sim.target = { id: 'drive-exit', x: state.x, z: state.z, radius: 99, key: 'E', verb: 'BAJAR', name: spec.label, drive: d.item.id };
+        if (speedEl.current) speedEl.current.textContent = `${Math.round(Math.abs(state.speed) * 3.6)} km/h`;
+        box.dataset.speed = Math.abs(state.speed).toFixed(1);
+      } else if (walking) {
         const input = inputFrom(sim.held);
         if (Math.abs(sim.joy.x) > 0.12 || Math.abs(sim.joy.y) > 0.12) {
           input.x = sim.joy.x;
@@ -867,7 +978,7 @@ export default function World3D(props: WorldProps) {
         if (!sim.dragging && sim.clock - sim.dragAt > 1.2) sim.yaw = followYaw(sim.yaw, next.heading, next.speed, dt);
         followShot();
         const street = sim.mode === 'walk' && p.phase === 'ciudad';
-        sim.target = nearestTarget(sim.player, sim.streetRoom ? (street ? streetSpots() : []) : sim.room ? roomSpots() : street ? [...liveTargets(), ...streetSpots()] : liveTargets()) as Spot | null;
+        sim.target = nearestTarget(sim.player, sim.streetRoom ? (street ? streetSpots() : []) : sim.room ? roomSpots() : street ? [...liveTargets(), ...streetSpots(), ...driveSpots()] : liveTargets()) as Spot | null;
       } else {
         sim.turn = 0;
         if (sim.mode !== 'busy') sim.target = null;
@@ -878,7 +989,7 @@ export default function World3D(props: WorldProps) {
         box.dataset.target = promptId;
         const t = sim.target;
         const activity = t && 'activity' in t && t.activity && 'location' in t ? titles[`${t.location}/${t.activity}`] : null;
-        setPrompt(t ? { id: t.id, key: t.key, verb: t.verb, name: isStreetSpot(t) ? t.name : 'exit' in t ? 'Volver a la calle' : activity ?? names[t.location] ?? t.location } : null);
+        setPrompt(t ? { id: t.id, key: t.key, verb: t.verb, name: isStreetSpot(t) || isDriveSpot(t) ? t.name : 'exit' in t ? 'Volver a la calle' : activity ?? names[t.location] ?? t.location } : null);
       }
       animateHero(hero, dt, walking || sim.mode === 'busy' ? sim.player.speed : 0, sim.turn, hero.seated ? 'seated' : sim.mode === 'scene' || sim.mode === 'street' ? 'talk' : 'move', reduced());
 
@@ -1019,7 +1130,7 @@ export default function World3D(props: WorldProps) {
         crowd.update(dt, {
           clock: sim.clock, player: { x: sim.player.x, z: sim.player.z, y: sim.y }, street: p.street, eventId: p.event,
           open: sim.street, walking: sim.mode === 'walk', reduced: reduced(), room: sim.streetRoom, level: p.level,
-          blockers: [{ x: taxi.x, z: taxi.z }, ...events.blockers()],
+          blockers: [{ x: taxi.x, z: taxi.z }, ...(sim.drive ? [{ x: sim.drive.item.state.x, z: sim.drive.item.state.z }] : []), ...events.blockers()],
         });
         events.update(dt, { clock: sim.clock, player: { x: sim.player.x, z: sim.player.z, y: sim.y }, walking: sim.mode === 'walk', room: sim.streetRoom, level: p.level, cars: crowd.cars(), reduced: reduced() });
         const shout = events.shout();
@@ -1028,6 +1139,7 @@ export default function World3D(props: WorldProps) {
           setBubble(current => ({ text: shout.text, n: (current?.n ?? 0) + 1 }));
         }
       }
+      drivables.update(sim.player);
       for (const fx of useFx.values()) fx.update(dt);
       // Entering another district: its name, for a moment.
       const here = sim.indoor && !sim.streetRoom ? '' : districtAt(sim.player.x, sim.player.z);
@@ -1054,7 +1166,24 @@ export default function World3D(props: WorldProps) {
         rainGeometry.attributes.position.needsUpdate = true;
       }
 
+      // The follow camera can end up inside someone's body (a walker passing,
+      // a person at a door behind you): from inside, only the arms and a leg
+      // would show. Anyone that close is not drawn this frame.
+      for (const root of [crowd.root, events.root, drivables.root]) {
+        for (const child of root.children) {
+          if (!child.visible) continue;
+          const dx = child.position.x - camera.position.x, dz = child.position.z - camera.position.z;
+          if (dx * dx + dz * dz < 1.44 && camera.position.y < child.position.y + 2.4 && camera.position.y > child.position.y - 0.3) child.visible = false;
+        }
+      }
+      for (const rig of city.npcs.values()) {
+        const at = rig.person.root;
+        const near = at.visible && (at.position.x - camera.position.x) ** 2 + (at.position.z - camera.position.z) ** 2 < 1.44 && camera.position.y < at.position.y + 2.4;
+        if (near) { at.visible = false; hiddenNpcs.push(at); }
+      }
       renderer.render(scene, camera);
+      for (const at of hiddenNpcs) at.visible = true;
+      hiddenNpcs.length = 0;
 
       // The prompt floats over the thing you can use.
       const el = promptEl.current;
@@ -1081,7 +1210,8 @@ export default function World3D(props: WorldProps) {
       if (mapRef.current && minimap.current && now - sim.mapAt > 120 && (!sim.indoor || sim.streetRoom)) {
         sim.mapAt = now;
         const marks = sim.streetRoom ? [] : [...(liveTargets() as Target[]).map(t => ({ x: t.x, z: t.z, kind: p.done.includes(t.location) ? 'done' : 'place', id: t.id, group: t.location })),
-          ...crowd.spots(streetCtx()).filter(spot => spot.kind === 'escena').map(spot => ({ x: spot.x, z: spot.z, kind: 'street', id: spot.id, group: spot.id }))];
+          ...crowd.spots(streetCtx()).filter(spot => spot.kind === 'escena').map(spot => ({ x: spot.x, z: spot.z, kind: 'street', id: spot.id, group: spot.id })),
+          ...drivables.items.filter(item => !item.taken).map(item => ({ x: item.state.x, z: item.state.z, kind: 'drive', id: item.id, group: item.id }))];
         drawMap(minimap.current, sim.player, marks, sim.target?.id ?? null, crowd.cars());
       }
 
@@ -1135,6 +1265,14 @@ export default function World3D(props: WorldProps) {
         if (sim.streetRoom) { sim.streetRoom = null; sim.room = null; showIndoor(null); }
         placePlayer(x, z, heading); sim.yaw = heading; followShot(true);
       };
+      (box as HTMLDivElement & { naBodies?: () => unknown }).naBodies = () => crowd.inspect();
+      (box as HTMLDivElement & { naDrive?: (id: string) => boolean }).naDrive = id => {
+        const item = drivables.get(id);
+        if (!item) return false;
+        placePlayer(item.state.x, item.state.z + 1.6, Math.PI); board(id);
+        return true;
+      };
+      (box as HTMLDivElement & { naTrigger?: (kind: string, x: number, z: number) => void }).naTrigger = (kind, x, z) => { events.trigger(kind as Parameters<typeof events.trigger>[0], x, z); };
     }
 
     return () => {
@@ -1218,8 +1356,9 @@ export default function World3D(props: WorldProps) {
     {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
     {district && mode === 'walk' && <p key={district.n} className="na-district" role="status">{district.name}</p>}
     <p ref={bubbleEl} className="na-bubble" aria-live="polite" style={{ opacity: 0 }}>{bubble?.text}</p>
-    <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
+    <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Con E también puedes robar un auto o una moto estacionados y manejarlos con W y S para acelerar y A y D para girar; la barra espaciadora frena y E te baja. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
     <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Toca ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
+    {walking && driving && <p className="na-drive-hud" role="status"><b ref={speedEl}>0 km/h</b><span>{touch ? 'Palanca: acelerar y girar · FRENO · BAJAR' : 'W S acelerar · A D girar · ESPACIO freno · SHIFT turbo · E bajar'}</span></p>}
     {prompt && walking && <button ref={promptEl} type="button" tabIndex={-1} className="na-prompt3d" onClick={() => api.current?.interact(prompt.key as 'E' | 'F')}>
       <kbd>{prompt.key}</kbd><span>{prompt.verb}</span><small>{prompt.name}</small>
     </button>}
@@ -1229,7 +1368,9 @@ export default function World3D(props: WorldProps) {
     {walking && <div className="na-world-tools">
       {!touch && <button type="button" className="na-chip" aria-pressed={help} onClick={() => setHelp(value => !value)}>Controles</button>}
       {mode === 'walk' && <button type="button" className="na-chip" aria-pressed={mapOpen} onClick={() => setMapOpen(value => !value)}>Mapa</button>}
-      <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.held.add("jump"); }}>Saltar ↑</button>
+      {driving
+        ? <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.brake(); }}>Freno</button>
+        : <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.held.add("jump"); }}>Saltar ↑</button>}
       <button type="button" className="na-chip" onClick={() => api.current?.cycleCamera()}>Cámara</button>
     </div>}
     {mapOpen && mode === 'walk' && <canvas ref={minimap} className="na-minimap" width={176} height={176} aria-label="Mapa del barrio" role="img" />}
@@ -1289,8 +1430,8 @@ function drawMap(el: HTMLCanvasElement, player: { x: number; z: number; heading:
     const [x, z] = at(mark.x, mark.z);
     if (x < -6 || z < -6 || x > size + 6 || z > size + 6) continue;
     ctx.beginPath();
-    ctx.arc(x, z, mark.id === current ? 5 : mark.kind === 'street' ? 2.6 : 3.2, 0, Math.PI * 2);
-    ctx.fillStyle = mark.kind === 'done' ? '#bfe0b0' : mark.kind === 'street' ? '#f4f1ff' : '#f0b45c';
+    ctx.arc(x, z, mark.id === current ? 5 : mark.kind === 'street' ? 2.6 : mark.kind === 'drive' ? 2.2 : 3.2, 0, Math.PI * 2);
+    ctx.fillStyle = mark.kind === 'done' ? '#bfe0b0' : mark.kind === 'street' ? '#f4f1ff' : mark.kind === 'drive' ? '#7fd0ff' : '#f0b45c';
     ctx.fill();
   }
   ctx.translate(size / 2, size / 2);
