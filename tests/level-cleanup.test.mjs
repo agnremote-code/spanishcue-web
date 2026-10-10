@@ -16,7 +16,7 @@ const lessons = JSON.parse(execFileSync(process.execPath, [
 ], { cwd: root, encoding: 'utf8' }));
 
 test('all former A0 lessons are A1 without A0 metadata', () => {
-  assert.equal(lessons.length, 129);
+  assert.equal(lessons.length, 130);
   for (const id of movedLessonIds) {
     const lesson = lessons.find((candidate) => candidate.id === id);
     assert.ok(lesson, `missing lesson ${id}`);
@@ -26,19 +26,19 @@ test('all former A0 lessons are A1 without A0 metadata', () => {
   }
   for (const lesson of lessons) {
     assert.ok(publicLevels.includes(lesson.level), `lesson ${lesson.id} has level ${lesson.level}`);
-    assert.equal(Boolean(lesson.levels?.includes('A0')), [227,228,229,236].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
+    assert.equal(Boolean(lesson.levels?.includes('A0')), [227,228,229,236,238].includes(lesson.id), `lesson ${lesson.id}: A0 only when authored`);
   }
 });
 
 test('A0 appears in filters only for the explicitly authored lessons', () => {
   assert.deepEqual(availableLevels(lessons), publicLevels);
   assert.deepEqual(groupLessonsByLevel(lessons).map(({ level }) => level), publicLevels);
-  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,4);
+  assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,5);
 });
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 39);
+  assert.equal(a1Lessons.length, 40);
   assert.ok(a1Lessons.some(lesson => lesson.id === 32), 'Reino Unido offers an A1 route');
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);
@@ -59,7 +59,7 @@ test('legacy surfaces keep A0 absent outside the shared selector and explicitly 
   for (const file of files) {
     const source = await readFile(file, 'utf8');
     const relative=file.slice(root.length+1);
-    const authored=relative.startsWith('app/the-sound-map/')||relative.startsWith('app/country-atlas/')||['app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);
+    const authored=relative.startsWith('app/the-sound-map/')||relative.startsWith('app/el-reino-de-la-rosa-dormida/')||relative.startsWith('app/country-atlas/')||['app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);
     if(!authored) assert.doesNotMatch(source, /\bA0\b/, `${file} exposes unauthored A0`);
     assert.doesNotMatch(source, /(?:a0-entry|level-a0|accent-a0)/, `${file} retains A0 styling`);
   }

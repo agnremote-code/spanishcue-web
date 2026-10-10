@@ -13,6 +13,7 @@ let server;
 let workerOutput="";
 const run=(args,env=workerEnv)=>new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{env,stdio:'inherit'});child.once('error',reject);child.once('exit',code=>code===0?resolve():reject(new Error(`Test command exited ${code}`)))});
 try{
+ await run(['--test','tests/reino-engine.test.mjs','tests/reino-movement.test.mjs','tests/reino-world.test.mjs','tests/reino-integration.test.mjs']);
  await run(['--test','tests/sound-map.test.mjs','tests/sound-map-ui.test.mjs','tests/sound-map-page-ui.test.mjs','tests/sound-map-audio-ui.test.mjs']);
  await run(['--test','tests/casino-marketing-b1.test.mjs']);
  await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/observatory-ui.test.mjs','tests/noun-studio-ui.test.mjs', 'tests/adjective-studio-ui.test.mjs', 'tests/article-studio-ui.test.mjs','tests/article-world.test.mjs','tests/duration-studio.test.mjs','tests/duration-world.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
