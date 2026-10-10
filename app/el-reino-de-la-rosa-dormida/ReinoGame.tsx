@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { Component, useCallback, useEffect, useRef, useState, type ComponentType, type CSSProperties, type FormEvent, type ReactNode } from 'react';
-import { LEVELS, NPCS, ITEMS, SPELLS, QUESTS } from './content.mjs';
+import { LEVELS, NPCS, ITEMS, SPELLS, QUESTS, LEVEL_FOCUS } from './content.mjs';
 import { SAVE_KEY, createGame, restoreGame, reduceGame, currentQuest, getDialogue, evaluateAnswer, actionFeedback, type GameState } from './engine.mjs';
 import type { WorldProps } from './World3D';
 import { playClips, stopAudio, warmVoices } from '../autoestudio/engine/speech';
 import { RealmAudio } from './audio';
+import { themeFor } from './score.mjs';
 import './reino.css';
 
 const AUDIO_KEY = 'spanishcue:rosa-dormida:audio:v1';
@@ -57,6 +58,27 @@ function Icon({ name }: { name: string }) {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name] ?? paths.help}</svg>;
 }
 
+const DIRECTIONS = ['norte', 'noreste', 'este', 'sureste', 'sur', 'suroeste', 'oeste', 'noroeste'];
+const TARGET_SPELLS: Record<string, string> = { mill: 'ventaria', grove: 'lumaria', thorns: 'floralis', dragon: 'aurora' };
+// Turn the current objective into a concrete next step: where to go and which key to press.
+function questGuide(state: GameState, target: string, position: Position) {
+  const place = MAP_TARGETS[target];
+  if (!place || state.flags.victory) return { route: '', guideText: 'Valdoria es libre. Recorre el reino y conversa con quien quieras.' };
+  const dx = place.x - position.x, dz = place.z - position.z, distance = Math.round(Math.hypot(dx, dz));
+  const direction = DIRECTIONS[(Math.round(Math.atan2(dx, -dz) / (Math.PI / 4)) + 8) % 8];
+  const route = distance <= 4 ? 'Has llegado: busca el aviso en pantalla' : `A ${distance} m hacia el ${direction} · sigue la luz dorada`;
+  const person = NPCS.find(entry => entry.id === target);
+  if (person) {
+    const left = Math.max(0, 3 - (state.dialogue[target] ?? 0));
+    return { route, guideText: `Camina hasta ${person.name}, bajo la columna de luz dorada. Cuando veas «E · Conversar», pulsa E (o «Hablar» en el celular) y responde en español. ${left === 1 ? 'Te falta 1 respuesta' : `Te faltan ${left} respuestas`} con este personaje. ¿Dudas? Pulsa «Necesito una pista».` };
+  }
+  const item = ITEMS.find(entry => entry.id === target);
+  if (item) return { route, guideText: `Ve hasta la luz dorada y pulsa F (o «Recoger») para tomar: ${item.name}.` };
+  const spellId = target === 'altar' ? (!state.flags.ritualLight ? 'lumaria' : !state.flags.ritualGrowth ? 'floralis' : 'aurora') : TARGET_SPELLS[target];
+  const spell = SPELLS.find(entry => entry.id === spellId);
+  return { route, guideText: spell ? `Acércate a la luz dorada, elige ${spell.name} con la tecla ${spell.key} (o tócalo abajo) y pulsa R (o «Magia»).` : 'Acércate a la luz dorada y sigue el aviso en pantalla.' };
+}
+
 function KingdomMap({ position, target, large = false }: { position: Position; target: string; large?: boolean }) {
   const point = (x: number, z: number) => ({ x: 180 + x * 3.1, y: 35 + (z + 140) * 2.25 });
   const player = point(position.x, position.z);
@@ -95,6 +117,7 @@ export default function ReinoGame() {
   const [worldError, setWorldError] = useState(false);
   const [worldKey, setWorldKey] = useState(0);
   const [panel, setPanel] = useState<Panel>(null);
+  const [guide, setGuide] = useState(false);
   const [npc, setNpc] = useState<string | null>(null);
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState<{ text: string; accepted: boolean } | null>(null);
@@ -121,6 +144,7 @@ export default function ReinoGame() {
   const confirmRef = useRef<HTMLElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const quest = currentQuest(state);
+  const { route, guideText } = questGuide(state, quest.target ?? '', position);
   const dialogue = npc ? getDialogue(npc, state.level, state.dialogue[npc] ?? 0, state) : null;
   const ending = Boolean(state.flags.victory) && !victoryDismissed && !endingReady;
   const victory = Boolean(state.flags.victory) && !victoryDismissed && endingReady;
@@ -174,8 +198,8 @@ export default function ReinoGame() {
   }, [state, started]);
 
   useEffect(() => {
-    audio.current?.setMood(state.flags.victory ? 'victory' : position.z < -98 && !state.flags.dragonTrusted ? 'dragon' : position.z < -60 ? 'mystery' : 'explore');
-  }, [position.z, state.flags]);
+    audio.current?.setMood(themeFor(position, state.flags));
+  }, [position, state.flags]);
 
   useEffect(() => {
     if (!ending) return;
@@ -186,6 +210,12 @@ export default function ReinoGame() {
   const stopVoice = useCallback(() => { recognition.current?.abort(); recognition.current = null; setListening(false); stopAudio(); setSpeaking(false); }, []);
   const closeDialogue = useCallback(() => { stopVoice(); setNpc(null); setFeedback(null); setAnswer(''); setHint(false); setVoiceStatus(''); }, [stopVoice]);
   const openPanel = useCallback((next: Panel) => { closeDialogue(); setPanel(current => current === next ? null : next); audio.current?.effect('open'); }, [closeDialogue]);
+  // A new adventure opens the mission briefing as soon as the intro ends.
+  const finishIntro = useCallback(() => {
+    setIntro(false);
+    const current = stateRef.current;
+    if (!current.completed.length && !Object.values(current.dialogue).some(Boolean)) setPanel('help');
+  }, []);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -194,7 +224,7 @@ export default function ReinoGame() {
         event.preventDefault();
         if (confirmReset) setConfirmReset(false);
         else if (npc) closeDialogue();
-        else if (intro) setIntro(false);
+        else if (intro) finishIntro();
         else if (ending) setEndingReady(true);
         else if (started && !victory) setPanel(value => value ? null : 'pause');
         return;
@@ -206,7 +236,7 @@ export default function ReinoGame() {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [started, intro, npc, victory, ending, confirmReset, closeDialogue, openPanel]);
+  }, [started, intro, npc, victory, ending, confirmReset, closeDialogue, openPanel, finishIntro]);
 
   useEffect(() => {
     if (!npc && !panel && !victory && !confirmReset) return;
@@ -319,7 +349,7 @@ export default function ReinoGame() {
 
   return <main className={`rr-game ${started ? 'rr-playing' : 'rr-menu-open'} ${damaged ? 'rr-damaged' : ''}`} aria-label="El Reino de la Rosa Dormida">
     <WorldBoundary key={worldKey}>
-      {World ? <World state={state} paused={!started || Boolean(panel) || Boolean(npc) || victory || confirmReset} intro={intro} spell={spell} onInteract={interact} onCollect={collect} onCast={cast} onCheckpoint={checkpoint} onIntroEnd={() => setIntro(false)} onEndingEnd={() => setEndingReady(true)} onPosition={setPosition} onSelectSpell={selectSpell} onDamage={damage}/> : <div className="rr-loading-world"><div className="rr-loading-glow"/><Rose/><p>{worldError ? 'No se pudo cargar el reino.' : 'Un reino está a punto de despertar…'}</p>{worldError && <button className="rr-primary" onClick={() => window.location.reload()}>Volver a cargar</button>}</div>}
+      {World ? <World state={state} paused={!started || Boolean(panel) || Boolean(npc) || victory || confirmReset} intro={intro} spell={spell} onInteract={interact} onCollect={collect} onCast={cast} onCheckpoint={checkpoint} onIntroEnd={finishIntro} onEndingEnd={() => setEndingReady(true)} onPosition={setPosition} onSelectSpell={selectSpell} onDamage={damage}/> : <div className="rr-loading-world"><div className="rr-loading-glow"/><Rose/><p>{worldError ? 'No se pudo cargar el reino.' : 'Un reino está a punto de despertar…'}</p>{worldError && <button className="rr-primary" onClick={() => window.location.reload()}>Volver a cargar</button>}</div>}
     </WorldBoundary>
     <div className="rr-vignette" aria-hidden="true"/>
 
@@ -334,17 +364,17 @@ export default function ReinoGame() {
         <div className="rr-start-actions">{saved && <button className="rr-primary" disabled={!ready || !World} onClick={() => startGame(true)}>Continuar la aventura <Icon name="arrow"/></button>}<button className={saved ? 'rr-secondary' : 'rr-primary'} disabled={!ready || !World} onClick={() => saved ? setConfirmReset(true) : startGame(false)}>{saved ? 'Nueva partida' : 'Comenzar la aventura'}{!saved && <Icon name="arrow"/>}</button></div>
         <p className="rr-title-note">Explora. Aprende magia. Cambia el destino de Valdoria.</p>
       </section>
-      <footer className="rr-menu-footer"><span>UNA AVENTURA MÁGICA PARA APRENDER ESPAÑOL</span><button onClick={() => openPanel('help')}>Cómo jugar <Icon name="help"/></button></footer>
+      <footer className="rr-menu-footer"><span>UNA AVENTURA MÁGICA PARA APRENDER ESPAÑOL</span><button onClick={() => openPanel('help')}>Tu misión y cómo jugar <Icon name="help"/></button></footer>
     </div>}
 
-    {intro && <div className="rr-intro"><div className="rr-letterbox rr-letterbox-top"/><div className="rr-intro-title"><span>HACE CIEN AÑOS, EL TIEMPO SE DETUVO.</span><h2>Valdoria</h2><p>«Por fin has llegado, príncipe Gael.<br/>El reino te estaba esperando.»</p><small>NOX, GUARDIÁN DE LOS RECUERDOS</small></div><button className="rr-skip" onClick={() => setIntro(false)}>Omitir introducción <kbd>Esc</kbd></button><div className="rr-letterbox rr-letterbox-bottom"/></div>}
+    {intro && <div className="rr-intro"><div className="rr-letterbox rr-letterbox-top"/><div className="rr-intro-title"><span>HACE CIEN AÑOS, EL TIEMPO SE DETUVO.</span><h2>Valdoria</h2><p>«Por fin has llegado, príncipe Gael.<br/>El reino te estaba esperando.»</p><small>NOX, GUARDIÁN DE LOS RECUERDOS</small></div><button className="rr-skip" onClick={finishIntro}>Omitir introducción <kbd>Esc</kbd></button><div className="rr-letterbox rr-letterbox-bottom"/></div>}
 
     {showHud && <>
       <header className="rr-hud-top"><Link href="/" className="rr-brand" aria-label="Volver a SpanishCue"><Rose/><span>SPANISHCUE<small>VALDORIA</small></span></Link><div className="rr-compass" aria-hidden="true"><span>O</span><i/><span>N</span><i/><span>E</span><b>◆</b></div><div className="rr-hud-actions"><label className="rr-hud-level"><span>NIVEL</span><select value={state.level} onChange={event => changeLevel(event.target.value)} aria-label="Nivel de español">{LEVELS.map(level => <option key={level}>{level}</option>)}</select></label><button className={`rr-icon-button ${!music ? 'rr-muted' : ''}`} aria-label={music ? 'Silenciar música' : 'Activar música'} aria-pressed={music} onClick={() => { audio.current?.start(); setMusic(value => !value); }}><Icon name="music"/></button><button className={`rr-icon-button ${!effects ? 'rr-muted' : ''}`} aria-label={effects ? 'Silenciar efectos' : 'Activar efectos'} aria-pressed={effects} onClick={() => { audio.current?.start(); setEffects(value => !value); }}><Icon name="sound"/></button><button className="rr-icon-button" aria-label="Pausa" onClick={() => openPanel('pause')}><Icon name="pause"/></button></div></header>
       {!npc && !panel && <>
-        <button className="rr-objective" onClick={() => openPanel('journal')} aria-label="Abrir diario de misiones"><span className="rr-objective-marker">◇</span><div><span className="rr-eyebrow">{state.flags.victory ? 'EL REINO HA DESPERTADO' : `CAPÍTULO ${String(Math.min(state.completed.length + 1, QUESTS.length)).padStart(2,'0')}`}</span><h2>{quest.title}</h2><p>{quest.objective}</p></div></button>
+        <button className="rr-objective" onClick={() => setGuide(value => !value)} aria-expanded={guide} aria-label="Ver qué hacer ahora"><span className="rr-objective-marker">◇</span><div><span className="rr-eyebrow">{state.flags.victory ? 'EL REINO HA DESPERTADO' : `CAPÍTULO ${String(Math.min(state.completed.length + 1, QUESTS.length)).padStart(2,'0')}`}</span><h2>{quest.title}</h2><p>{quest.objective}</p>{route && <span className="rr-route"><b>✦</b> {route}</span>}{guide ? <span className="rr-guide">{guideText}</span> : <span className="rr-guide-cta">¿Qué hago ahora? Toca aquí</span>}</div></button>
         <button className="rr-minimap" aria-label="Abrir mapa del reino" onClick={() => openPanel('map')}><KingdomMap position={position} target={quest.target ?? ''}/><span>VALDORIA <kbd>M</kbd></span></button>
-        <div className="rr-controls-brief"><span><kbd>W A S D</kbd> Caminar</span><span><kbd>⇧</kbd> Correr</span><span><kbd>Espacio</kbd> Saltar</span><span>Arrastra · Cámara</span><button onClick={() => openPanel('help')} aria-label="Ver todos los controles">?</button></div>
+        <div className="rr-controls-brief"><span><kbd>W A S D</kbd> Caminar</span><span><kbd>⇧</kbd> Correr</span><span><kbd>Q</kbd> Nitro</span><span><kbd>Espacio</kbd> Saltar</span><span>Arrastra · Cámara</span><button onClick={() => openPanel('help')} aria-label="Ver todos los controles">?</button></div>
       </>}
       <footer className="rr-hud-bottom"><nav className="rr-bottom-nav" aria-label="Herramientas de la aventura"><button onClick={() => openPanel('journal')} aria-label="Diario de misiones"><Icon name="book"/><span>Diario</span><kbd>J</kbd></button><button onClick={() => openPanel('inventory')} aria-label="Abrir inventario"><Icon name="bag"/><span>Inventario</span><kbd>I</kbd></button><button onClick={() => openPanel('map')} aria-label="Mapa del reino"><Icon name="map"/><span>Mapa</span><kbd>M</kbd></button></nav><div className="rr-spellbar" role="group" aria-label="Hechizos">{SPELLS.map((item,index) => { const unlocked = state.spells.includes(item.id); return <button key={item.id} className={`rr-spell ${spell === item.id && unlocked ? 'rr-spell-selected' : ''} ${!unlocked ? 'rr-spell-locked' : ''}`} style={{ '--spell-color': item.color } as CSSProperties} aria-label={`${item.name}${unlocked ? ': seleccionar' : ': aún no aprendido'}`} aria-pressed={spell === item.id && unlocked} onClick={() => selectSpell(item.id)}><kbd>{index + 1}</kbd><span>{SPELL_GLYPHS[item.id] ?? '✧'}</span><small>{unlocked ? item.name : 'Por descubrir'}</small></button>; })}<span className="rr-cast-hint"><kbd>R</kbd> Lanzar</span></div><span className={`rr-save-status ${saveFailed ? 'rr-save-warning' : ''}`}><i/>{saveFailed ? 'Guardado no disponible' : 'Guardado automático'}</span></footer>
     </>}
@@ -365,12 +395,22 @@ export default function ReinoGame() {
       {voiceStatus && (dialogue.complete || dialogue.locked) && <p className="rr-voice-status" role="status">{voiceStatus}</p>}
     </div></div>}
 
-    {panel && <div className="rr-modal-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) setPanel(null); }}><div ref={dialogRef} className={`rr-modal rr-modal-${panel}`} role="dialog" aria-modal="true" aria-labelledby="rr-panel-title"><header className="rr-modal-header"><div><span className="rr-eyebrow">EL REINO DE LA ROSA DORMIDA</span><h2 id="rr-panel-title">{{map:'Cartografía de Valdoria',journal:'Diario de la aventura',inventory:'El equipaje de Gael',pause:'Un momento de calma',help:'Tu aventura, tus palabras'}[panel]}</h2></div><button className="rr-icon-button" aria-label="Cerrar panel" onClick={() => setPanel(null)}><Icon name="close"/></button></header>
+    {panel && <div className="rr-modal-backdrop" onMouseDown={event => { if (event.target === event.currentTarget) setPanel(null); }}><div ref={dialogRef} className={`rr-modal rr-modal-${panel}`} role="dialog" aria-modal="true" aria-labelledby="rr-panel-title"><header className="rr-modal-header"><div><span className="rr-eyebrow">EL REINO DE LA ROSA DORMIDA</span><h2 id="rr-panel-title">{{map:'Cartografía de Valdoria',journal:'Diario de la aventura',inventory:'El equipaje de Gael',pause:'Un momento de calma',help:'Despierta Valdoria con tus palabras'}[panel]}</h2></div><button className="rr-icon-button" aria-label="Cerrar panel" onClick={() => setPanel(null)}><Icon name="close"/></button></header>
       {panel === 'map' && <div className="rr-map-panel"><KingdomMap position={position} target={quest.target ?? ''} large/><aside><span className="rr-eyebrow">EL CAMINO CONTINÚA</span><h3>{quest.title}</h3><p>{quest.objective}</p><div className="rr-map-legend"><span><i/> Tu posición</span><span><i/> Destino de la misión</span><span><i/> Caminos de Valdoria</span></div><p className="rr-small-note">Recorre el reino a pie. El mapa te orienta; las puertas y los puentes se abren con tus acciones.</p><button className="rr-secondary" onClick={() => setPanel(null)}>Volver al camino <Icon name="arrow"/></button></aside></div>}
       {panel === 'journal' && <div className="rr-journal"><div className="rr-progress"><span>{state.completed.length} de {QUESTS.length} capítulos completados</span><div><i style={{width:`${state.completed.length / QUESTS.length * 100}%`}}/></div></div><ol>{QUESTS.map((item,index) => { const complete = state.completed.includes(item.id); const active = item.id === quest.id; return <li key={item.id} className={`${complete ? 'rr-quest-complete' : ''} ${active ? 'rr-quest-current' : ''}`}><span className="rr-quest-number">{complete ? '✓' : String(index + 1).padStart(2,'0')}</span><div><span className="rr-eyebrow">{complete ? 'COMPLETADA' : active ? 'MISIÓN ACTUAL' : 'POR DESCUBRIR'}</span><h3>{item.title}</h3><p>{active ? quest.objective : complete ? item.reward : item.description}</p></div>{active && <span className="rr-quest-star">◇</span>}</li>; })}</ol></div>}
       {panel === 'inventory' && <div className="rr-inventory"><p className="rr-panel-intro">Cada hallazgo guarda una parte de la historia. Los objetos se usan cuando cumples su propósito en el reino.</p>{state.inventory.length ? <div className="rr-items">{state.inventory.map(id => { const item = ITEMS.find(candidate => candidate.id === id); return item ? <article key={id}><span className="rr-item-icon">{item.icon}</span><div><h3>{item.name}</h3><p>{item.description}</p></div></article> : null; })}</div> : <div className="rr-empty"><Icon name="bag"/><h3>La historia acaba de comenzar.</h3><p>Acércate a un objeto y pulsa F para recogerlo.</p></div>}<h3 className="rr-inventory-heading">La magia que has aprendido</h3><div className="rr-learned-spells">{SPELLS.filter(item => state.spells.includes(item.id)).map(item => <button key={item.id} style={{'--spell-color':item.color} as CSSProperties} onClick={() => {selectSpell(item.id);setPanel(null);}}><span>{SPELL_GLYPHS[item.id]}</span><div><h4>{item.name}</h4><p>{item.description}</p></div></button>)}{!state.spells.length && <p className="rr-small-note">Encuentra a quienes todavía recuerdan la magia de Valdoria.</p>}</div></div>}
       {panel === 'pause' && <div className="rr-pause-body"><Rose/><p>El reino puede esperar un instante.</p><button className="rr-primary" onClick={() => setPanel(null)}>Continuar la aventura <Icon name="arrow"/></button><div className="rr-settings"><button onClick={() => {audio.current?.start();setMusic(value => !value);}}><Icon name="music"/>Música<span>{music ? 'Activada' : 'Silenciada'}</span></button><button onClick={() => {audio.current?.start();setEffects(value => !value);}}><Icon name="sound"/>Efectos<span>{effects ? 'Activados' : 'Silenciados'}</span></button><button onClick={() => setPanel('help')}><Icon name="help"/>Controles y conversación<Icon name="arrow"/></button></div><div className="rr-pause-links"><button onClick={leaveToMenu}>Menú principal</button><button onClick={() => setConfirmReset(true)}>Reiniciar aventura</button></div><p className="rr-small-note">{saveFailed ? 'El navegador no permite guardar esta partida. Mantén esta pestaña abierta para conservar tu progreso.' : 'Tu progreso se guarda en este navegador.'}</p></div>}
-      {panel === 'help' && <div className="rr-help"><p className="rr-panel-intro">Eres Gael. Explora un reino dormido, escucha a sus habitantes y usa el español para cambiar su destino.</p><div className="rr-help-columns"><section><h3>Explora Valdoria</h3><dl><div><dt>Caminar</dt><dd><kbd>W A S D</kbd> / flechas</dd></div><div><dt>Correr</dt><dd><kbd>Shift</kbd></dd></div><div><dt>Saltar</dt><dd><kbd>Espacio</kbd></dd></div><div><dt>Mirar alrededor</dt><dd>Arrastra la escena</dd></div><div><dt>Conversar / interactuar</dt><dd><kbd>E</kbd></dd></div><div><dt>Recoger objetos</dt><dd><kbd>F</kbd></dd></div><div><dt>Lanzar magia</dt><dd><kbd>R</kbd></dd></div><div><dt>Elegir hechizo</dt><dd><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></dd></div></dl></section><section><h3>Encuentra tu voz</h3><p>Escribe una respuesta libre. Los personajes reconocen intenciones y variantes de expresión: no necesitas memorizar una única frase.</p><p>Las pistas ofrecen ejemplos que puedes adaptar. Cambia tu nivel en cualquier momento para ajustar los desafíos.</p><p>El botón de audio utiliza una voz española del navegador. El micrófono aparece cuando el navegador ofrece dictado; revisa lo que reconoce antes de enviarlo.</p><p className="rr-small-note">En una pantalla táctil, usa el joystick y los botones de la escena. Arrastra el lado derecho para mover la cámara.</p></section></div><button className="rr-primary" onClick={() => setPanel(null)}>Estoy listo <Icon name="arrow"/></button></div>}
+      {panel === 'help' && <div className="rr-help">
+        <section className="rr-mission"><span className="rr-eyebrow">TU MISIÓN</span><p>Eres el príncipe Gael. Hace cien años, la Tejedora de Espinas durmió a todo Valdoria y a la princesa Elara. <strong>Despierta al reino con tus palabras:</strong> conversa en español con sus habitantes, aprende cuatro hechizos y llega a la torre del castillo.</p></section>
+        <ol className="rr-steps">
+          <li><b>1</b><div><h3>Sigue la luz dorada</h3><p>Arriba a la izquierda ves tu objetivo y a cuántos metros está. Una columna de luz dorada marca el lugar exacto en el mundo y el mapa (<kbd>M</kbd>). Toca el objetivo si no sabes qué hacer.</p></div></li>
+          <li><b>2</b><div><h3>Conversa mucho</h3><p>Cuando veas «E · Conversar», pulsa <kbd>E</kbd>. Cada personaje te hace <strong>tres preguntas</strong>: responde con tus propias palabras. Si dudas, pulsa «Necesito una pista» y elige una idea.</p></div></li>
+          <li><b>3</b><div><h3>Usa la magia y los objetos</h3><p>Los personajes te enseñan hechizos. Elígelos con <kbd>1</kbd>–<kbd>4</kbd> y lánzalos con <kbd>R</kbd> junto al lugar indicado. Recoge objetos con <kbd>F</kbd>.</p></div></li>
+          <li><b>4</b><div><h3>Ocho capítulos, un final</h3><p>Del bosque al molino, del puente al castillo, el dragón y el ritual de la rosa. Tu progreso se guarda solo en este navegador.</p></div></li>
+        </ol>
+        <div className="rr-help-columns"><section><h3>Cómo hablar en tu nivel · {state.level}</h3><p className="rr-level-focus">{LEVEL_FOCUS[state.level as keyof typeof LEVEL_FOCUS]}</p><p>No hay una única respuesta correcta: los personajes entienden tu intención. Puedes escribir o dictar con el micrófono, y escuchar a cada personaje con el botón de audio. Cambia de nivel cuando quieras desde el menú superior.</p></section>
+        <section><h3>Controles</h3><dl><div><dt>Caminar</dt><dd><kbd>W A S D</kbd> / flechas</dd></div><div><dt>Correr</dt><dd><kbd>Shift</kbd> + flecha</dd></div><div><dt>Nitro: correr muy rápido</dt><dd><kbd>Q</kbd> + flecha</dd></div><div><dt>Saltar</dt><dd><kbd>Espacio</kbd></dd></div><div><dt>Mirar alrededor</dt><dd>Arrastra la escena</dd></div><div><dt>Conversar</dt><dd><kbd>E</kbd></dd></div><div><dt>Recoger</dt><dd><kbd>F</kbd></dd></div><div><dt>Magia</dt><dd><kbd>1</kbd>–<kbd>4</kbd> y <kbd>R</kbd></dd></div><div><dt>Diario · Inventario</dt><dd><kbd>J</kbd> · <kbd>I</kbd></dd></div></dl><p className="rr-small-note">En el celular: joystick para caminar (empújalo al borde para correr), «Nitro» para correr muy rápido, y los botones Saltar, Hablar y Magia.</p></section></div>
+        <button className="rr-primary" onClick={() => setPanel(null)}>Empezar la misión <Icon name="arrow"/></button></div>}
     </div></div>}
 
     {victory && <div className="rr-victory" ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="rr-victory-title"><div className="rr-victory-rays" aria-hidden="true"/><Rose/><span className="rr-eyebrow">LA ÚLTIMA ESPINA HA CAÍDO</span><h2 id="rr-victory-title">Valdoria despierta.</h2><p>Elara abre los ojos. El silencio se llena de vida.<br/>No fue una espada lo que rompió el hechizo.<br/><em>Fueron tus palabras.</em></p><div className="rr-victory-stats"><span><b>{state.completed.length}</b> capítulos vividos</span><span><b>{state.spells.length}</b> hechizos aprendidos</span><span><b>{state.level}</b> español en acción</span></div><button className="rr-primary" onClick={() => { setVictoryDismissed(true); closeDialogue(); }}>Explorar el reino despierto <Icon name="arrow"/></button><button className="rr-text-button" onClick={() => setConfirmReset(true)}>Vivir otra aventura</button></div>}
