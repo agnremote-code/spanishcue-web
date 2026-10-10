@@ -533,3 +533,9 @@ button.na-inv:active { transform: translateY(1px); }
   .na-pick-card:hover, .na-pick-card.is-focused { transform: none; }
 }
 /* ---- end object choice ---- */
+
+/* Driving a stolen car or motorbike */
+.na-drive-hud { position:absolute; z-index:12; left:50%; bottom:14px; transform:translateX(-50%); display:flex; align-items:baseline; gap:14px; margin:0; padding:8px 16px; border:1px solid #ffffff30; border-radius:12px; background:#0f1620dd; color:#fff7e9; font:500 12px/1.4 system-ui,sans-serif; pointer-events:none; max-width:92%; }
+.na-drive-hud b { font:700 22px/1 system-ui,sans-serif; font-variant-numeric:tabular-nums; min-width:5.4ch; color:#ffd36b; }
+.na-drive-hud span { opacity:.85; }
+.na-world.is-touch .na-drive-hud { bottom:auto; top:64px; }
