@@ -187,9 +187,15 @@ const app = {
     }
     if (canonicalRedirect) return Response.redirect(url, 308);
 
+    // Retire the old USA A1 landing before catalog entitlement checks can gate it.
+    if (url.pathname === "/estados-unidos-basico") {
+      return Response.redirect(new URL("/estados-unidos-a2-b1?level=A2", url), 308);
+    }
+
     const requestedLocale = normalizeLocale(url.searchParams.get("lang"));
     const routedHeaders = new Headers(request.headers);
     routedHeaders.set("x-spanishcue-pathname", url.pathname);
+    routedHeaders.delete("x-spanishcue-identity-checked");
     if (requestedLocale) routedHeaders.set("x-spanishcue-locale", requestedLocale);
     const routedRequest = new Request(request, { headers: routedHeaders });
 
@@ -202,7 +208,10 @@ const app = {
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
     const administrative=(pathname==='/admin'||pathname.startsWith('/admin/'))||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
+    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/demo/noche-abierta'||pathname==='/sistema-verbal'||pathname==='/choose-conversation'||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
+    // Pages only learn the visitor's session where it is resolved; elsewhere the
+    // layout must not treat "no verified user" as "signed out" (AuthSessionSync).
+    if(identityAware)routedHeaders.set("x-spanishcue-identity-checked","1");
     const verifiedUser=identityAware&&firebaseTokenFromHeaders(routedHeaders)
       ? await getFirebaseUserFromHeaders(routedHeaders)
       : null;

@@ -66,8 +66,16 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/duration-english-additions-20261009.json',
+  'docs/audits/article-immersive-english-additions-20261009.json',
+  'docs/audits/instagram-funnel-english-additions-20261009.json',
+  'docs/audits/article-studio-english-additions-20261009.json',
+  'docs/audits/adjective-studio-english-additions-20261009.json',
+  'docs/audits/noun-studio-english-additions-20261009.json',
+  'docs/audits/observatory-english-additions-20261009.json',
   'docs/audits/bosque-vocabulary-additions-20261004.json',
   'docs/audits/seo-english-copy-additions-20261007.json',
+  'docs/audits/paid-landing-english-copy-additions-20261008.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
@@ -101,6 +109,8 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   const reviewed = existsSync(reviewedPath) ? JSON.parse(readFileSync(reviewedPath, 'utf8')).changes : [];
   const grammarReviewedPath=resolve(root,'docs/audits/grammar-copy-changes-20261007.json');
   if(existsSync(grammarReviewedPath))reviewed.push(...JSON.parse(readFileSync(grammarReviewedPath,'utf8')).changes);
+  const checkoutReviewedPath=resolve(root,'docs/audits/checkout-copy-changes-20261008.json');
+  if(existsSync(checkoutReviewedPath))reviewed.push(...JSON.parse(readFileSync(checkoutReviewedPath,'utf8')).changes);
   return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(relocateEnglishSources(before), after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

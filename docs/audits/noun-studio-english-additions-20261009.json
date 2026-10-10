@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "authorization": "Owner requested near-complete bilingual A1 support and sequential redesign of guided grammar classrooms on 2026-10-09. This manifest authorizes exact additive English support for lesson 40 and its shared teaching renderer.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "book"
+    },
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "pencil"
+    },
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "map"
+    },
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "photo"
+    },
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "city"
+    },
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "Sofía"
+    },
+    {
+      "path": "app/grammar-classroom/studio/NounScene.tsx",
+      "text": "patience"
+    }
+  ]
+}

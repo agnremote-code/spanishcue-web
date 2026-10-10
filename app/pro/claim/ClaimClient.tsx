@@ -38,15 +38,17 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
         setState("error");
         return;
       }
-      if (consentFor("analytics") && body.subscriptionId) {
+      if ((consentFor("analytics") || consentFor("marketing")) && body.subscriptionId) {
         try {
           const conversion = await fetch("/api/billing/conversion", {
             method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" },
             body: JSON.stringify({ subscriptionId: body.subscriptionId }),
           });
           if (conversion.ok && conversion.status !== 204) {
-            const event = await conversion.json() as { transactionId?: string };
-            if (event.transactionId) trackMarketingEvent("subscription_first_paid", { transaction_id: event.transactionId });
+            const event = await conversion.json() as { transactionId?: unknown; value?: unknown; currency?: unknown };
+            if (typeof event.transactionId === "string" && typeof event.value === "number" && Number.isFinite(event.value) && event.value > 0 && typeof event.currency === "string" && /^[A-Z]{3}$/.test(event.currency)) {
+              trackMarketingEvent("subscription_first_paid", { transaction_id: event.transactionId, value: event.value, currency: event.currency });
+            }
           }
         } catch { /* Access does not depend on optional analytics. */ }
       }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import "./immersive/immersive.css";
+import ProDiscovery from "./immersive/ProDiscovery";
 import "./special.css";
 import "./spanishcue-brand.css";
 import "./acceso/style.css";
@@ -8,6 +10,7 @@ import "./marketing/marketing.css";
 import "./marketing/free-lesson-gate.css";
 import "./marketing-landing/style.css";
 import "./marketing-landing/overrides.css";
+import "./marketing-landing/paid-landing.css";
 import "./privacy/consent.css";
 import LessonReportRoutes from "./lesson-reports/LessonReportRoutes";
 import { conversationFamilyByLessonId } from "./conversation-families/catalog";
@@ -94,7 +97,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <LocaleProvider initialLocale={locale}>
-          <AuthSessionSync serverSignedIn={signedIn} />
+          <AuthSessionSync serverSignedIn={signedIn} identityChecked={requestHeaders.get("x-spanishcue-identity-checked") === "1"} />
           <GoogleAnalytics />
           <MarketingAttribution
             pathname={pathname}
@@ -103,6 +106,7 @@ export default async function RootLayout({
             lessonTitle={currentLesson?.title}
           />
           {children}
+          {!fullAccess && (freeLesson || pathname === "/" || pathname === "/sistema-verbal" || pathname === "/choose-conversation") && <ProDiscovery signedIn={signedIn} />}
           <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (

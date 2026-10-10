@@ -14,6 +14,38 @@ const get=(path,headers={})=>fetch(root+path,{headers,redirect:'manual'});
 const getWithHost=(path,host)=>new Promise((resolve,reject)=>{const url=new URL(root+path);const request=httpRequest({hostname:url.hostname,port:url.port,path:url.pathname+url.search,method:'GET',headers:{host}},response=>{response.resume();response.once('end',()=>resolve(response))});request.once('error',reject);request.end()});
 const route=l=>p.localLessonPath(l);
 
+test('Instagram demo is anonymous, complete for six levels, and cannot retrieve PRO districts',async()=>{
+ for(const level of ['A1','A2','B1','B2','C1','C2']){
+  const response=await get(`/api/city-demo?level=${level}&district=centro`);
+  assert.equal(response.status,200);
+  assert.match(response.headers.get('cache-control')||'',/private, no-store/);
+  const payload=await response.json();assert.equal(payload.level,level);assert.equal(payload.locations.length,10);
+  assert.deepEqual(Object.keys(payload).sort(),['level','locations','zone']);
+ }
+ for(const district of ['alto','sur','*','centro/../alto']){
+  const response=await get(`/api/city-demo?district=${encodeURIComponent(district)}`,forgedOwner);
+  assert.equal(response.status,403);assert.doesNotMatch(await response.text(),/El bolso de Lidia|El choque de la avenida/);
+ }
+ const demo=await get('/demo/noche-abierta');assert.equal(demo.status,200);
+ assert.doesNotMatch(await demo.text(),/El bolso de Lidia|El choque de la avenida/);
+ const paid=await get('/noche-abierta',forgedOwner);assert.equal(paid.status,302);await paid.arrayBuffer();
+});
+test('Instagram experiment is opt-in and preserves campaign attribution on both variants',async()=>{
+ for(const variant of ['a','b']){
+  const response=await get(`/lp/instagram-test?variant=${variant}&utm_source=instagram&lang=en`);
+  assert.equal(response.status,302);
+  const location=new URL(response.headers.get('location'),root);
+  assert.equal(location.pathname,variant==='a'?'/lp/spanish-teacher-resources':'/lp/instagram');
+  assert.equal(location.searchParams.get('utm_source'),'instagram');assert.equal(location.searchParams.get('sc_variant'),variant);
+  assert.doesNotMatch(response.headers.get('set-cookie')||'',/spanishcue-city-variant|spanishcue\.marketing|_ga=/,'assignment creates no optional tracking cookie before consent; explicit language choice remains functional');
+  await response.arrayBuffer();
+ }
+ const landing=await get('/lp/instagram?lang=en');assert.equal(landing.status,200);
+ const html=await landing.text();assert.match(html,/noindex/);assert.match(html,/noche-demo-poster.webp/);
+ assert.match(html,/ENTER THE 3D CITY/);
+ const previous=await get('/lp/spanish-teacher-resources');assert.equal(previous.status,200);await previous.arrayBuffer();
+});
+
 test('each category has exactly two fixed, matching free lessons',()=>{
  for(const [category,ids] of Object.entries(p.samplesByCategory)){assert.equal(new Set(ids).size,2);for(const id of ids)assert.equal(p.lessons.find(l=>l.id===id)?.category,category)}
  assert.deepEqual(new Set(p.freeLessonIds),new Set(Object.values(p.samplesByCategory).flat()));
@@ -139,7 +171,16 @@ test('offer remains configurable and invalid values are rejected',()=>{
 });
 
 test('all free routes open and all paid routes deny anonymous access without cacheable redirects',async()=>{
- for(const l of p.lessons.filter(l=>route(l))){const path=route(l);const anon=await get(path);await anon.arrayBuffer();assert.equal(anon.status,p.isFreeLesson(l.id)?200:302,`anonymous ${path}`);if(!p.isFreeLesson(l.id))assert.match(anon.headers.get('cache-control')||'',/private, no-store/,path)}
+ for(const l of p.lessons.filter(l=>route(l))){const path=route(l);const anon=await get(path);await anon.arrayBuffer();const retiredUSA=path==='/estados-unidos-basico';assert.equal(anon.status,retiredUSA?308:p.isFreeLesson(l.id)?200:302,`anonymous ${path}`);if(!p.isFreeLesson(l.id)&&!retiredUSA)assert.match(anon.headers.get('cache-control')||'',/private, no-store/,path)}
+});
+
+test('the retired USA A1 landing redirects visitors to the A2-B1 flagship before the paid lesson gate',async()=>{
+ const response=await get('/estados-unidos-basico?level=A1');
+ assert.equal(response.status,308);
+ const destination=new URL(response.headers.get('location'),root);
+ assert.equal(destination.pathname,'/estados-unidos-a2-b1');
+ assert.equal(destination.searchParams.get('level'),'A2');
+ await response.arrayBuffer();
 });
 
 test('standalone board routes deny anonymous access without exposing their content',async()=>{

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "authorization": "Owner explicitly requested near-complete English support for every A1 grammar classroom and sequential 3D redesigns on 2026-10-09. Exact additive support for lesson 41.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "red"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "blue"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "large"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "small"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "tables"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "table"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "benches"
+    },
+    {
+      "path": "app/grammar-classroom/studio/AdjectiveScene.tsx",
+      "text": "bench"
+    }
+  ]
+}

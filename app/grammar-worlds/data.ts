@@ -314,7 +314,7 @@ export const articleGallery: GrammarWorldData = {
     { wrong: "Vengo de el museo.", right: "Vengo del museo.", explanation: "De + el se convierte en del." },
   ],
   practice: [
-    { prompt: "Hay ___ supermercado acá cerca.", options: ["el", "un", "del"], answer: 1, why: "Presentamos un lugar todavía no identificado." },
+    { prompt: "Hay ___ supermercado aquí cerca.", options: ["el", "un", "del"], answer: 1, why: "Presentamos un lugar todavía no identificado." },
     { prompt: "Veo una casa. ___ casa es azul.", options: ["Una", "La", "Un"], answer: 1, why: "Es la segunda mención; ya sabemos qué casa es." },
     { prompt: "Marta es ___ arquitecta.", options: ["una", "la", "—"], answer: 2, why: "Ser + profesión normalmente va sin artículo." },
     { prompt: "Mañana voy ___ aeropuerto.", options: ["a el", "al", "del"], answer: 1, why: "A + el = al." },

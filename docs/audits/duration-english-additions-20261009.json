@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "authorization": "Owner requested this immersive A2 redesign on 2026-10-09, preserving level-appropriate English support. Four exact new place labels; no existing English changed. Owner also supplied the simple explanation and English examples explicitly on 2026-10-09. English support is optional for the A2 reader.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Home"
+    },
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Library"
+    },
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Café"
+    },
+    {
+      "path": "app/grammar-classroom/duration/model.ts",
+      "text": "Square"
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I arrived two hours ago."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I started studying Spanish a year ago."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've been studying Spanish for two years."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've been studying Spanish for two years."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've lived in Argentina since 2020."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've been studying Spanish since January."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've been working since 9 o'clock."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've been living in Argentina for three years."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've been studying Spanish for six months."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I arrived in Argentina three years ago."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've lived in Argentina since 2023."
+    },
+    {
+      "path": "app/grammar-classroom/duration/DurationTheory.tsx",
+      "text": "I've lived in Argentina for three years."
+    }
+  ]
+}

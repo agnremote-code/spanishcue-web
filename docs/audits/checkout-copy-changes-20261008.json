@@ -1,0 +1,414 @@
+{
+  "version": 1,
+  "authorization": "Owner explicitly requested implementation of consistent checkout, price and payment messaging on 2026-10-08, including bilingual marketing and legal disclosures.",
+  "changes": [
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "The conditions shown before payment—plan, currency, price, period, renewal and applicable taxes—form part of the purchase. SPANISHCUE PRO is billed through PayPal and renews automatically each month until cancelled. Any future price change is disclosed before it applies and does not reduce rights already acquired.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Depending on the features you use, we process name, email, Firebase/Google/Apple identifiers, request technical data such as IP and browser, access status, progress, PayPal subscription identifiers and status, support messages and, only with consent, internal events and UTM parameters.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "PayPal keeps complete payment data; SPANISHCUE does not store full card numbers or PayPal credentials.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Before confirmation, checkout shows SPANISHCUE PRO, US$15 per month, monthly billing, automatic renewal until cancellation and PayPal as provider. The start date is PayPal approval; later dates appear in PayPal and My account. Taxes are shown or included as required by the jurisdiction.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "My account → Subscription → Cancel sends the cancellation directly to PayPal. After a second confirmation, renewals stop and the screen shows a reference and, when available, the paid-access end date. You do not need to call or email.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Nothing limits mandatory consumer rights. Unauthorised or duplicate charges and material failure to provide the service are reviewed and refunded when required by law or PayPal. SPANISHCUE does not assume withdrawal rights are waived merely because the service was accessed.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "The conditions shown before payment—plan, currency, price, period, renewal and applicable taxes—form part of the purchase. SPANISHCUE PRO can be purchased by card through Paddle or via PayPal, depending on which methods are available. The monthly plan renews automatically until cancelled. When available, the US$2 one-day trial continues at US$15.50/month unless cancelled. Any future price change is disclosed before it applies and does not reduce rights already acquired.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Depending on the features you use, we process name, email, Firebase/Google/Apple identifiers, request technical data such as IP and browser, access status, progress, PayPal or Paddle subscription identifiers and status, support messages and, only with consent, internal events and UTM parameters.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "PayPal and Paddle process their respective payment details; SPANISHCUE does not store full card numbers or payment credentials.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Card payments, subscriptions, one-day trials and fraud prevention",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Payment provider; independent controller for certain purposes",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Before confirmation, checkout identifies the selected method: card (Paddle) at US$15.50/month, or a US$2 one-day trial followed by US$15.50/month when available; PayPal shows its own amount. Renewal is automatic until cancellation, with the term and applicable taxes disclosed. Access begins after the relevant payment is confirmed.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "My account → Subscription → Cancel requests cancellation from the corresponding payment provider. After a second confirmation, renewals stop and the screen shows a reference and, when available, the paid-access end date. You do not need to call or email.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Nothing limits mandatory consumer rights. Unauthorised or duplicate charges and material failure to provide the service are reviewed and refunded when required by law or the payment provider. SPANISHCUE does not assume withdrawal rights are waived merely because the service was accessed.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/PrelaunchLegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "PayPal is implemented in test mode, but public checkout is not active and SPANISHCUE does not currently collect visitors’ payment data.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/PrelaunchLegalDocument.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "SPANISHCUE provides a digital library of visual lessons for Spanish teachers. The free account provides access to samples marked as free without a card. The planned PRO plan and US$15 monthly Founder Price are displayed to explain the launch, but public checkout is not active; creating an account starts neither a subscription nor a charge.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/PrelaunchLegalDocument.tsx",
+      "kind": "english-added",
+      "text": "Public checkout is not enabled while the legal operator details are missing; SPANISHCUE does not collect visitor payment information in this state.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/legal/PrelaunchLegalDocument.tsx",
+      "kind": "english-added",
+      "text": "SPANISHCUE provides a digital library of visual lessons for Spanish teachers. The free account provides access to samples marked as free without a card. The planned PRO plan and US$15.50 monthly Founder Price are displayed to explain the launch, but public checkout is not active; creating an account starts neither a subscription nor a charge.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "The full library for US$15 a month.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Founder pricing for the first 1,000 activated subscriptions. US$15 stays in place while that same subscription remains active.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "PRO is launching soon at a planned US$15 monthly price.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Checkout is not active yet. You can reserve Founder Price with no card or payment, and you will be notified before any charge is enabled.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Launching soon · no charges yet",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Automatic monthly billing through PayPal until you cancel.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "US$15 every month",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "US$15 per month",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Founder Price · US$15.50/month",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "PRO in preparation · planned US$15.50/month · no charges yet",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "What will PRO unlock?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "When active, it will provide unlimited access to the full grammar, conversation, listening, pronunciation and vocabulary library.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "How will Founder Price work?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "The launch plan is US$15 per month for the first 1,000 activated subscriptions. Reserving now starts neither a subscription nor a charge.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "There are no public subscriptions yet. Renewal and final terms will be shown clearly before payments are enabled.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "How will cancellation work?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "The prepared integration supports online cancellation from My account. Final terms will be published before payments are enabled.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Not yet. PayPal is integrated in test mode and public checkout remains disabled.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "The complete library with SPANISHCUE PRO.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Access the full library with a monthly subscription. Each method confirms its price before payment.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Explore SPANISHCUE PRO.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "See current payment availability on Pricing. When payments are disabled, reserving does not create a charge.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Checking availability...",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Automatic monthly billing through your chosen payment method until cancellation.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Amount shown by the payment method",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "US$15.50/month by card",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "SPANISHCUE PRO · View pricing",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "SPANISHCUE PRO · See pricing and availability",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "What does PRO include?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Access to the complete grammar, conversation, listening, pronunciation and vocabulary library while your subscription is active.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "How does Founder Price work?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "The offer is limited to the first 1,000 subscriptions with a confirmed full monthly payment. Current amounts appear on Pricing.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. Monthly subscriptions renew until cancelled. The one-day trial, when available, converts afterward to the stated monthly price.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "How does cancellation work?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "You can cancel in My account. Review your chosen payment method terms before subscribing.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Can I pay now?",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Check current payment options on Pricing.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. Pay US$15.50/month by card, try 1 day for US$2 then US$15.50/month, or choose PayPal. Review amounts before payment.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. Pay US$15.50/month by card or try 1 day for US$2 then US$15.50/month.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Yes. You can subscribe with PayPal; its price is shown before payment.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Public checkout is not available right now. Free lessons remain available.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "kind": "english-added",
+      "text": "Check current availability on Pricing.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Yes. Pay by card at ${priceLabel} now and monthly, or try 1 day for US$2 then ${priceLabel}/month. PayPal shows its amount on the button.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Not yet. Checkout is disabled, and reserving Founder Price causes no charge.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Final terms will be published before payments start. The prepared integration supports online cancellation from My account.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-added",
+      "text": "Yes. Pay US$15.50/month by card or try 1 day for US$2, then US$15.50/month. PayPal shows its price before confirmation.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-added",
+      "text": "Yes. You can subscribe via PayPal for ${priceLabel}/month; the final amount is shown before confirmation.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-added",
+      "text": "Not yet. Public checkout is disabled; reserving does not create a charge.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-added",
+      "text": "You can cancel online in My account; renewal terms are shown before payment.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    },
+    {
+      "path": "app/pricing/page.tsx",
+      "kind": "english-added",
+      "text": "Once subscriptions are available, you can cancel online in My account.",
+      "reason": "Owner-authorized 2026-10-08 checkout and payment disclosure consistency fix"
+    }
+  ]
+}

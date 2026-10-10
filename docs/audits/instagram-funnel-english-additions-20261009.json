@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "authorization": "Owner requested a bilingual English/Spanish Instagram immersive sales funnel on 2026-10-09. Exact new UI additions; no edits or deletions of existing English approved.",
+  "additions": [
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Could not change level. Please try again."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Library"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Free 3D city"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "The city is waiting."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Getting your first night ready…"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "CENTRE · FREE"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "A city. Your Spanish."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Your level"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Close map"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "City map"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Explore all of SPANISHCUE"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Interactive map"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Choose your next stop"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "No-3D mode: all free activities are still available."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Ten open venues. Eight districts to discover."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "FREE · Enter"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "conversations"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "✓ Your first route complete"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Explore free. No time limit."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Walk to a circle of light. Choose a response, then talk about your own life."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Use map without 3D"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Return to city"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "FREE"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Choose your response"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Now talk about yourself"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Answer out loud. You can prepare your answer here:"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Your personal response"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Your answer stays on this screen. It is not sent or automatically graded."
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "I have answered · Keep exploring"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Help with speaking"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Teacher notes"
+    },
+    {
+      "path": "app/immersive/CityDemo.tsx",
+      "text": "Another situation"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "My account"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "A SPANISH LESSON YOU CAN WALK INTO"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Less explaining."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "More"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "living it."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Take your students into a city where every corner starts a conversation. Step inside and try it for yourself."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "OPEN THE FULL CITY"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "ENTER THE 3D CITY — FREE"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "No card"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "No sign-up"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "One complete district"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "open venues"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "real conversations"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "to step inside"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "REAL GAMEPLAY"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Real Noche Abierta gameplay"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "YOUR FIRST NIGHT"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Pause"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Play video"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "THIS IS A LESSON."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Yes, really."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "FROM SCROLLING TO SPEAKING"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Open a door. Open a conversation."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "01"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Explore at your pace"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Walk through the centre, stop at the café or discover the museum. You choose the route."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "02"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Use your Spanish"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Choose a response to a real situation. Then talk about your own life."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "03"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Bring it to your class"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Try six levels and teacher notes. If it fits your teaching, discover everything in PRO."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "TRY IT FIRST"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Your first night is on us."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "The demo has no time limit. Explore the centre without a card or an account; PRO opens up your city and your lesson library."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Explore for free"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "City centre demo"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "No card. No sign-up."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Full trial"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "1 day"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Then US$15.50/month. Renews automatically."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Subscribe directly"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "month"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Cancel before the next renewal."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "See everything in PRO"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Made for teaching Spanish."
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Privacy"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Terms"
+    },
+    {
+      "path": "app/immersive/ImmersiveLanding.tsx",
+      "text": "Contact"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Close and keep exploring free"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Your next stop starts here."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Unlock all eight districts, the full city and a library of ready-to-teach Spanish lessons."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Interactive worlds and A1–C2 conversation"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Grammar, listening and vocabulary lessons"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Activities to share on screen in class"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Free demo: US$0 · No card needed"
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Full trial: US$2 for one day, then renews at US$15.50/month. Or subscribe directly for US$15.50/month. Cancel before renewal to avoid the next charge."
+    },
+    {
+      "path": "app/immersive/PremiumPanel.tsx",
+      "text": "Keep exploring free"
+    },
+    {
+      "path": "app/immersive/ProDiscovery.tsx",
+      "text": "Discover SpanishCue worlds"
+    },
+    {
+      "path": "app/immersive/ProDiscovery.tsx",
+      "text": "Your next conversation has a whole city waiting."
+    },
+    {
+      "path": "app/immersive/ProDiscovery.tsx",
+      "text": "Explore the centre free, or discover the worlds and lessons in PRO."
+    },
+    {
+      "path": "app/immersive/ProDiscovery.tsx",
+      "text": "Enter free"
+    },
+    {
+      "path": "app/immersive/ProDiscovery.tsx",
+      "text": "Discover PRO"
+    },
+    {
+      "path": "app/immersive/ProDiscovery.tsx",
+      "text": "Lessons and interactive worlds"
+    }
+  ]
+}
