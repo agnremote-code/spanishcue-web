@@ -3,7 +3,7 @@
 import * as THREE from 'three';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction } from '../noche-abierta/world3d.mjs';
-import type { GameState } from './engine.mjs';
+import { currentQuest, type GameState } from './engine.mjs';
 import { buildWorld } from './world';
 import { createPrince } from './characters';
 import { nearestInReach, safeCheckpoint, stepRealmPlayer, type Position } from './movement.mjs';
@@ -33,7 +33,7 @@ const SPELL_TARGETS: Record<string, Position> = {
 };
 const TARGET_NAMES: Record<string, string> = { mill: 'Molino detenido', grove: 'Claro de las luciérnagas', thorns: 'Espinas del jardín', dragon: 'Dragón guardián', altar: 'Altar de la rosa' };
 const TARGET_SPELL: Record<string, string> = { mill: 'ventaria', grove: 'lumaria', thorns: 'floralis', dragon: 'aurora' };
-const ACTION_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyE', 'KeyF', 'KeyR', 'Digit1', 'Digit2', 'Digit3', 'Digit4']);
+const ACTION_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyE', 'KeyF', 'KeyR', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'KeyQ']);
 const positionOf = (p: Position): Position => ({ x: p.x, y: p.y, z: p.z });
 const smooth = (n: number) => n * n * (3 - 2 * n);
 
@@ -141,6 +141,18 @@ export default function World3D(props: WorldProps) {
     scene.add(spellGroup, shield);
     const lamp = new THREE.PointLight('#ffe4a1', 0, 15, 1.2);
     scene.add(lamp);
+    // Quest beacon: a soft golden column over the current objective, visible from afar.
+    const beacon = new THREE.Group();
+    beacon.name = 'Quest beacon';
+    const beamMaterial = new THREE.MeshBasicMaterial({ color: '#ffd77a', transparent: true, opacity: .22, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending });
+    const beam = new THREE.Mesh(new THREE.CylinderGeometry(.32, .55, 16, 18, 1, true), beamMaterial);
+    beam.position.y = 8;
+    const gem = new THREE.Mesh(new THREE.OctahedronGeometry(.42), new THREE.MeshBasicMaterial({ color: '#ffe7a8', transparent: true, opacity: .9, depthWrite: false }));
+    const halo = new THREE.Mesh(new THREE.TorusGeometry(.9, .04, 6, 40), new THREE.MeshBasicMaterial({ color: '#ffd77a', transparent: true, opacity: .55, depthWrite: false, blending: THREE.AdditiveBlending }));
+    halo.rotation.x = Math.PI / 2;
+    halo.position.y = .08;
+    beacon.add(beam, gem, halo);
+    scene.add(beacon);
 
     let player = safeCheckpoint(live.current.state.checkpoint, world.floorAt, world.colliders, live.current.state.flags);
     let lastCheckpoint = positionOf(player);
@@ -214,7 +226,7 @@ export default function World3D(props: WorldProps) {
       if (event.target instanceof HTMLElement && event.target.closest('[role="dialog"]')) return;
       event.preventDefault();
       if (shot || live.current.intro) { if (!event.repeat && event.code === 'Space') endShot(); return; }
-      const actionKey = keyAction(event.code);
+      const actionKey = event.code === 'KeyQ' ? 'nitro' : keyAction(event.code);
       if (actionKey) held.add(actionKey);
       if (event.repeat) return;
       if (event.code === 'KeyE') action('npc');
@@ -222,7 +234,7 @@ export default function World3D(props: WorldProps) {
       if (event.code === 'KeyR') action('spell');
       if (/^Digit[1-4]$/.test(event.code)) live.current.onSelectSpell?.(SPELLS[Number(event.code.slice(-1)) - 1]);
     };
-    const keyup = (event: KeyboardEvent) => { const actionKey = keyAction(event.code); if (actionKey) held.delete(actionKey); };
+    const keyup = (event: KeyboardEvent) => { const actionKey = event.code === 'KeyQ' ? 'nitro' : keyAction(event.code); if (actionKey) held.delete(actionKey); };
     const down = (event: PointerEvent) => {
       if (live.current.paused || shot) return;
       renderer.domElement.focus({ preventScroll: true });
@@ -287,7 +299,7 @@ export default function World3D(props: WorldProps) {
       const canMove = !p.paused && !shot && !p.intro;
       if (canMove) {
         const keys = inputFrom(held);
-        player = stepRealmPlayer(player, { x: keys.x + joy.x, y: keys.y - joy.y, sprint: keys.sprint || Math.hypot(joy.x, joy.y) > .88, jump: keys.jump || clock < jumpUntil, yaw }, dt, world.colliders, world.floorAt, p.state.flags);
+        player = stepRealmPlayer(player, { x: keys.x + joy.x, y: keys.y - joy.y, sprint: keys.sprint || Math.hypot(joy.x, joy.y) > .88, nitro: held.has('nitro'), jump: keys.jump || clock < jumpUntil, yaw }, dt, world.colliders, world.floorAt, p.state.flags);
         if (!drag && clock - lastDrag > 1.8 && !reduced) yaw = followYaw(yaw, player.heading, player.speed, dt * .45);
       } else { player.speed = 0; player.moving = false; }
       avatarPosition.set(player.x, player.y, player.z);
@@ -337,6 +349,17 @@ export default function World3D(props: WorldProps) {
 
       const age = clock - castAt;
       spellGroup.visible = age < 2.4;
+      const questTarget = p.state.flags.victory ? '' : currentQuest(p.state).target ?? '';
+      const goal = world.npcPositions[questTarget] ?? world.itemPositions[questTarget] ?? SPELL_TARGETS[questTarget];
+      beacon.visible = Boolean(goal) && !shot && !p.intro;
+      if (goal) {
+        const near = Math.hypot(goal.x - player.x, goal.z - player.z);
+        beacon.position.set(goal.x, goal.y, goal.z);
+        beamMaterial.opacity = THREE.MathUtils.clamp((near - 2.5) / 10, .04, .24) * (reduced ? 1 : .85 + Math.sin(clock * 2.4) * .15);
+        gem.position.y = 3.3 + (reduced ? 0 : Math.sin(clock * 2) * .18);
+        gem.rotation.y = clock * 1.4;
+        halo.scale.setScalar(1 + (reduced ? 0 : (clock * .8) % 1 * .6));
+      }
       shield.visible = (castSpell === 'aurora' && age < 3.5) || Boolean(p.state.flags.dragonShield && !p.state.flags.dragonTrusted && player.z < -100);
       shield.position.set(player.x, player.y + 1.05, player.z);
       shield.rotation.y = clock * .3;
@@ -468,15 +491,15 @@ export default function World3D(props: WorldProps) {
       {prompt && <button type="button" className="rrw-prompt" onClick={() => api.current?.action(prompt.kind)}><kbd>{prompt.key}</kbd><span><small>{prompt.kind === 'npc' ? 'Conversar' : prompt.kind === 'item' ? 'Recoger' : 'Lanzar magia'}</small>{prompt.name}</span></button>}
       <div className="rrw-mobile-controls">
         <div className="rrw-joystick" role="group" aria-label="Joystick: arrastra para caminar" onPointerDown={event => { joystickPointer.current = event.pointerId; event.currentTarget.setPointerCapture(event.pointerId); moveStick(event); }} onPointerMove={moveStick} onPointerUp={stopStick} onPointerCancel={stopStick}><span ref={knob} /><i>N</i></div>
-        <div className="rrw-touch-actions"><button type="button" aria-label="Saltar" onPointerDown={() => api.current?.jump()}>↑<small>Saltar</small></button><button type="button" className="rrw-touch-talk" onClick={() => api.current?.action('nearest')}>◇<small>{prompt?.kind === 'item' ? 'Recoger' : 'Hablar'}</small></button><button type="button" className="rrw-touch-magic" onClick={() => api.current?.action('spell')}>✧<small>Magia</small></button></div>
+        <div className="rrw-touch-actions"><button type="button" className="rrw-touch-nitro" aria-label="Nitro: mantén pulsado para correr muy rápido" onPointerDown={() => api.current?.held.add('nitro')} onPointerUp={() => api.current?.held.delete('nitro')} onPointerCancel={() => api.current?.held.delete('nitro')} onPointerLeave={() => api.current?.held.delete('nitro')}>»<small>Nitro</small></button><button type="button" aria-label="Saltar" onPointerDown={() => api.current?.jump()}>↑<small>Saltar</small></button><button type="button" className="rrw-touch-talk" onClick={() => api.current?.action('nearest')}>◇<small>{prompt?.kind === 'item' ? 'Recoger' : 'Hablar'}</small></button><button type="button" className="rrw-touch-magic" onClick={() => api.current?.action('spell')}>✧<small>Magia</small></button></div>
       </div>
     </>}
     {!props.paused && notice && <p className="rrw-notice" role="status">{notice}</p>}
     <style>{`
       .rrw-world,.rrw-canvas{position:absolute;inset:0;overflow:hidden}.rrw-world{background:#899dab;color:#fff}.rrw-canvas canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}.rrw-vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 48%,rgba(9,18,26,.2) 100%)}.rrw-world button{font:inherit;color:inherit;cursor:pointer}.rrw-prompt{position:absolute;bottom:112px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:13px;border:1px solid #d5bb7370;background:#14201ff0;backdrop-filter:blur(12px);border-radius:7px;padding:12px 22px 12px 12px;box-shadow:0 8px 35px #0005;text-align:left;max-width:85vw;z-index:12}.rrw-prompt kbd{display:grid;place-items:center;width:34px;height:34px;border:1px solid #d5bb73aa;border-radius:4px;color:#f6daa0;font-size:17px}.rrw-prompt small{display:block;font-size:10px;color:#d9cba7;text-transform:uppercase;letter-spacing:.18em;margin-bottom:3px}.rrw-prompt span{font-family:Georgia,serif;font-size:16px}.rrw-desktop-hint{position:absolute;bottom:20px;left:26px;display:flex;align-items:center;gap:18px;font-size:10px;letter-spacing:.02em;color:#f3efdfab;pointer-events:none}.rrw-desktop-hint kbd{font:inherit;border:1px solid #ffffff30;border-radius:3px;padding:3px 5px;color:#f5ebd4;margin-right:4px}.rrw-notice{position:absolute;bottom:184px;left:50%;transform:translateX(-50%);background:#101e26df;border:1px solid #d0b57765;color:#f6e3ad;padding:12px 20px;border-radius:7px;max-width:min(540px,86vw);font-size:13px;line-height:1.5;text-align:center;z-index:16;pointer-events:none}.rrw-mobile-controls{display:none}.rrw-letterbox{position:absolute;left:0;right:0;height:9%;background:#080d11;z-index:14;pointer-events:none}.rrw-letterbox-top{top:0}.rrw-letterbox-bottom{bottom:0}.rrw-cinematic-caption{position:absolute;left:10%;right:10%;bottom:13%;text-align:center;text-shadow:0 2px 15px #000;z-index:15}.rrw-cinematic-caption>span{font-size:10px;letter-spacing:.32em;color:#e9d6ac}.rrw-cinematic-caption p{font:italic 23px/1.5 Georgia,serif;max-width:660px;margin:16px auto 22px;color:#fff5dd}.rrw-cinematic-caption button{padding:8px 15px;border:1px solid #d4bc7650;border-radius:4px;background:#0e1728a8;font-size:11px}.rrw-cinematic-caption kbd{font:inherit;opacity:.6;margin-left:8px}.rrw-fallback{position:absolute;inset:0;overflow:auto;background:radial-gradient(ellipse at 70% 15%,#35434b,#101c28 65%);padding:120px max(24px,calc((100% - 900px)/2)) 170px}.rrw-fallback h2{font:32px Georgia,serif;color:#ebd099;margin:0 0 12px}.rrw-fallback>p{font-size:13px;line-height:1.6;color:#bac7c8;max-width:620px}.rrw-fallback-section{border-top:1px solid #c9b57f30;padding-top:18px;margin-top:26px}.rrw-fallback-section h3{font:20px Georgia,serif;color:#e2cc99}.rrw-fallback-actions{display:flex;gap:10px;flex-wrap:wrap}.rrw-fallback-actions button,.rrw-fallback-start{padding:13px 17px;border:1px solid #d0b87770;border-radius:5px;background:#243638;color:#fff3d5}.rrw-fallback-actions button:hover{background:#374e4c}.rrw-fallback button:disabled{opacity:.45;cursor:not-allowed}.rrw-fallback-start{margin-top:20px}.rrw-world button:focus-visible{outline:2px solid #f6d689;outline-offset:4px}
       @media(pointer:coarse),(max-width:760px){.rrw-desktop-hint{display:none}.rrw-mobile-controls{position:absolute;inset:0;display:block;pointer-events:none}.rrw-joystick{position:absolute;bottom:35px;left:25px;width:118px;height:118px;border-radius:50%;border:1px solid #e4d6b044;background:#10212350;box-shadow:inset 0 0 22px #c8edff0c;pointer-events:auto;touch-action:none}.rrw-joystick span{position:absolute;left:35px;top:35px;width:48px;height:48px;border-radius:50%;border:1px solid #f2ddad88;background:#e7debc28;box-shadow:0 3px 15px #0003}.rrw-joystick i{position:absolute;top:7px;left:53px;font:9px Georgia,serif;color:#ecdbb480}.rrw-touch-actions{position:absolute;right:18px;bottom:35px;display:flex;gap:11px;align-items:flex-end;pointer-events:auto}.rrw-touch-actions button{width:54px;height:54px;border-radius:50%;border:1px solid #e5d5a45c;background:#102123b0;font-size:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:manipulation;box-shadow:0 4px 18px #0003}.rrw-touch-actions small{font-size:8px;letter-spacing:.04em}.rrw-touch-actions .rrw-touch-magic{width:67px;height:67px;border-color:#e3c88baa;background:#383045c9;color:#f2d6ff;font-size:28px}.rrw-prompt{bottom:184px;max-width:90vw;padding:10px 15px;z-index:10}.rrw-prompt span{font-size:14px}.rrw-prompt kbd{display:none}.rrw-notice{bottom:255px;font-size:12px}.rrw-cinematic-caption p{font-size:18px}.rrw-cinematic-caption{left:6%;right:6%}.rrw-fallback{padding-top:150px}}@media(max-height:500px){.rrw-prompt{bottom:112px}.rrw-joystick,.rrw-touch-actions{bottom:16px}.rrw-notice{bottom:177px}.rrw-cinematic-caption{bottom:11%}.rrw-cinematic-caption p{font-size:17px;margin:8px auto}}
-      @media(pointer:coarse),(max-width:760px){.rrw-touch-actions{display:grid;grid-template-columns:54px 67px;grid-template-rows:54px 54px;gap:10px;align-items:center}.rrw-touch-actions>button:first-child{grid-column:1;grid-row:1}.rrw-touch-talk{grid-column:1;grid-row:2}.rrw-touch-magic{grid-column:2;grid-row:1 / span 2}}
-      @media(max-width:360px){.rrw-joystick{left:16px;width:102px;height:102px}.rrw-joystick span{left:27px;top:27px}.rrw-joystick i{left:45px}.rrw-touch-actions{right:12px;grid-template-columns:45px 56px;grid-template-rows:45px 45px;gap:7px}.rrw-touch-actions button{width:45px;height:45px}.rrw-touch-actions .rrw-touch-magic{width:56px;height:56px}}
+      @media(pointer:coarse),(max-width:760px){.rrw-touch-actions{display:grid;grid-template-columns:54px 67px;grid-template-rows:54px 67px;gap:10px;align-items:center}.rrw-touch-actions>button:nth-child(2){grid-column:1;grid-row:1}.rrw-touch-nitro{grid-column:2;grid-row:1}.rrw-touch-actions .rrw-touch-nitro{justify-self:center;border-color:#9fd8ffaa;color:#c9ecff}.rrw-touch-talk{grid-column:1;grid-row:2}.rrw-touch-magic{grid-column:2;grid-row:2}}
+      @media(max-width:360px){.rrw-joystick{left:16px;width:102px;height:102px}.rrw-joystick span{left:27px;top:27px}.rrw-joystick i{left:45px}.rrw-touch-actions{right:12px;grid-template-columns:45px 56px;grid-template-rows:45px 56px;gap:7px}.rrw-touch-actions button{width:45px;height:45px}.rrw-touch-actions .rrw-touch-magic{width:56px;height:56px}}
     `}</style>
   </div>;
 }

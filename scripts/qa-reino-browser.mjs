@@ -91,7 +91,7 @@ try{
   page.on('pageerror',error=>errors.push(`${size}: ${error.message}`));
   await page.goto(origin+'/?level=A1');await page.waitForFunction(()=>window.__realmQA?.snapshot,{timeout:60000});await page.waitForTimeout(1000);
   await page.screenshot({path:resolve(out,`${size}-title.png`)});
-  await page.getByRole('button',{name:'Comenzar la aventura',exact:true}).click();await page.getByRole('button',{name:/Omitir introducción/}).click();await page.waitForTimeout(1200);
+  await page.getByRole('button',{name:'Comenzar la aventura',exact:true}).click();await page.getByRole('button',{name:/Omitir introducción/}).click();const begin=page.getByRole('button',{name:/Empezar la misión/});await begin.waitFor();await page.screenshot({path:resolve(out,`${size}-mision.png`)});await layout(page,`${size}: mission briefing`);await begin.click();await page.waitForTimeout(1200);await page.locator('.rr-objective').click();await page.locator('.rr-guide').waitFor();await page.screenshot({path:resolve(out,`${size}-guia.png`)});await layout(page,`${size}: guide`);await page.locator('.rr-objective').click();
   await page.screenshot({path:resolve(out,`${size}-entrance.png`)});await layout(page,`${size}: entrance`);console.log(`${size}: entrance rendered`);
   if(process.env.REINO_QA_COVER){const style=await page.addStyleTag({content:'.rr-hud-top,.rr-objective,.rr-minimap,.rr-hud-bottom,.rr-controls-brief,.rrw-prompt,.rr-toast,.rrw-mobile-controls{visibility:hidden!important}'});await page.screenshot({path:resolve(out,`${size}-cover.png`)});await style.evaluate(e=>e.remove());}
   if(process.env.REINO_QA_FAST){results.push({size,stage:'entrance',passed:true});await browser.close();continue;}
