@@ -1,7 +1,7 @@
 export type Position = { x: number; y: number; z: number };
 export type RealmPlayer = Position & { heading: number; speed: number; vy: number; jumpHeld: boolean; moving: boolean };
 export type RealmCollider = { minX: number; maxX: number; minZ: number; maxZ: number; minY?: number; maxY?: number; gate?: string };
-export type RealmInput = { x?: number; y?: number; yaw?: number; sprint?: boolean; nitro?: boolean; jump?: boolean };
+export type RealmInput = { x?: number; y?: number; yaw?: number; sprint?: boolean; nitro?: boolean; walk?: boolean; jump?: boolean };
 export const REALM_BOUNDS: { minX: number; maxX: number; minZ: number; maxZ: number };
 export const REALM_SPAWN: RealmPlayer;
 export const NITRO_FACTOR: number;

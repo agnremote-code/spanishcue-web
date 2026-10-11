@@ -1,5 +1,9 @@
 import { THEMES, chordNotes, degreeNote, midiToFrequency, type Theme, type ThemeId } from './score.mjs';
 
+// The score starts quiet; learners raise it with the volume slider.
+export const DEFAULT_MUSIC_VOLUME = 0.3;
+const MUSIC_MAX = 0.42;
+
 /** Original epic score and spell sounds, synthesized locally after a user gesture. */
 export class RealmAudio {
   private context: AudioContext | null = null;
@@ -10,6 +14,7 @@ export class RealmAudio {
   private noise: AudioBuffer | null = null;
   private timer: ReturnType<typeof setInterval> | null = null;
   private music = true;
+  private volume = DEFAULT_MUSIC_VOLUME;
   private effects = true;
   private mood: ThemeId = 'village';
   private playing: ThemeId | null = null;
@@ -27,7 +32,7 @@ export class RealmAudio {
         compressor.connect(context.destination);
         this.musicBus = context.createGain();
         this.effectsBus = context.createGain();
-        this.musicBus.gain.value = this.music ? 0.42 : 0;
+        this.musicBus.gain.value = this.musicLevel();
         this.effectsBus.gain.value = this.effects ? 0.26 : 0;
         this.musicBus.connect(compressor);
         this.effectsBus.connect(compressor);
@@ -53,16 +58,19 @@ export class RealmAudio {
     } catch { /* Audio is optional; the adventure remains playable. */ }
   }
 
-  setPreferences(music: boolean, effects: boolean) {
+  setPreferences(music: boolean, effects: boolean, volume = this.volume) {
     this.music = music;
     this.effects = effects;
+    this.volume = Math.min(1, Math.max(0, Number.isFinite(volume) ? volume : DEFAULT_MUSIC_VOLUME));
     if (this.context && this.musicBus && this.effectsBus) {
-      this.musicBus.gain.setTargetAtTime(music ? 0.42 : 0, this.context.currentTime, 0.15);
+      this.musicBus.gain.setTargetAtTime(this.musicLevel(), this.context.currentTime, 0.15);
       this.effectsBus.gain.setTargetAtTime(effects ? 0.26 : 0, this.context.currentTime, 0.15);
     }
   }
 
   setMood(mood: ThemeId) { this.mood = mood; }
+
+  private musicLevel() { return this.music ? MUSIC_MAX * this.volume : 0; }
 
   // Crossfade into a new regional theme, starting it from its first bar.
   private enter(mood: ThemeId) {
