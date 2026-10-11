@@ -300,6 +300,9 @@ export default function World3D(props: WorldProps) {
       if (canMove) {
         const keys = inputFrom(held);
         player = stepRealmPlayer(player, { x: keys.x + joy.x, y: keys.y - joy.y, sprint: keys.sprint || Math.hypot(joy.x, joy.y) > .88, nitro: held.has('nitro'), jump: keys.jump || clock < jumpUntil, yaw }, dt, world.colliders, world.floorAt, p.state.flags);
+        // A wider lens sells the nitro dash.
+        const lens = held.has('nitro') && player.speed > 12 && !reduced ? 70 : 56;
+        if (Math.abs(camera.fov - lens) > .05) { camera.fov += (lens - camera.fov) * Math.min(1, dt * 5); camera.updateProjectionMatrix(); }
         if (!drag && clock - lastDrag > 1.8 && !reduced) yaw = followYaw(yaw, player.heading, player.speed, dt * .45);
       } else { player.speed = 0; player.moving = false; }
       avatarPosition.set(player.x, player.y, player.z);

@@ -32,3 +32,5 @@
 .rr-guide{display:block;margin-top:8px;padding:9px 11px;max-width:330px;border:1px solid #d9bd7a66;border-radius:6px;background:#0f1f25e6;font-size:11px;line-height:1.6;color:#efe5cc;text-shadow:none}
 @media(max-width:760px){.rr-steps{grid-template-columns:1fr}.rr-help .rr-steps h3{font-size:15px}.rr-mission p{font-size:13px}.rr-guide{max-width:min(300px,calc(100vw - 150px))}.rr-route,.rr-guide-cta{font-size:10px}}
 .rr-objective[aria-expanded="true"]{z-index:13}.rr-help>.rr-primary{position:sticky;bottom:14px;box-shadow:0 8px 30px #000a}
+.rr-volume{display:flex;align-items:center;gap:10px;color:#d8d2bd;font-size:11px}.rr-volume input{accent-color:#e2c27a;width:110px;cursor:pointer}.rr-hud-volume span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.rr-hud-volume input{width:78px}.rr-settings .rr-volume{grid-column:1/-1;justify-content:space-between;padding:10px 14px;border:1px solid #c0b08030;border-radius:6px}.rr-settings .rr-volume input{flex:1;max-width:220px}
+@media(max-width:1100px),(pointer:coarse),(max-height:520px){.rr-hud-volume{display:none}}

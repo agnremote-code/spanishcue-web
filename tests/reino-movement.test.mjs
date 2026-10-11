@@ -51,15 +51,16 @@ test('a restored checkpoint inside a wall or locked gate returns safely to the h
   assert.equal(safeCheckpoint({x:0,y:0,z:-4},()=>0,[gate]).z,24);
   assert.equal(safeCheckpoint({x:0,y:0,z:-4},()=>0,[gate],{bridgeOpen:true}).z,-4);
 });
-test('three speeds: walk, Shift run and Q nitro; nitro still stops at walls and eases off on release',()=>{
-  const walked=walk(start(),120,()=>0,[],{y:1,yaw:Math.PI});
-  const ran=walk(start(),120,()=>0,[],{y:1,yaw:Math.PI,sprint:true});
+test('three speeds: arrows run, Shift runs faster and Q nitro dashes; nitro still stops at walls and eases off on release',()=>{
+  const ran=walk(start(),120,()=>0,[],{y:1,yaw:Math.PI});
+  const faster=walk(start(),120,()=>0,[],{y:1,yaw:Math.PI,sprint:true});
   const nitro=walk(start(),120,()=>0,[],{y:1,yaw:Math.PI,nitro:true});
-  assert.ok(-ran.z>-walked.z*2,`run ${ran.z} vs walk ${walked.z}`);
-  assert.ok(-nitro.z>-ran.z*1.5,`nitro ${nitro.z} vs run ${ran.z}`);
-  assert.ok(nitro.speed>14&&nitro.speed<17,String(nitro.speed));
+  assert.ok(ran.speed>6&&ran.speed<7,`plain arrows run, not walk: ${ran.speed}`);
+  assert.ok(faster.speed>9&&faster.speed<10,String(faster.speed));
+  assert.ok(nitro.speed>22&&nitro.speed<26,`nitro is a flash dash: ${nitro.speed}`);
+  assert.ok(-nitro.z>-faster.z*2.2,`nitro ${nitro.z} vs sprint ${faster.z}`);
   const wall={minX:-2,maxX:2,minZ:-6,maxZ:-5.6,minY:0,maxY:6};
   assert.ok(walk(start(),240,()=>0,[wall],{y:1,yaw:Math.PI,nitro:true}).z>-5.6);
-  const released=walk(nitro,60,()=>0,[],{y:1,yaw:Math.PI,sprint:true});
-  assert.ok(released.speed<10,String(released.speed));
+  const released=walk(nitro,90,()=>0,[],{y:1,yaw:Math.PI});
+  assert.ok(released.speed<8,String(released.speed));
 });
