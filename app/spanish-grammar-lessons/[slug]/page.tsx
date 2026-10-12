@@ -4,13 +4,13 @@ import { Breadcrumbs, CtaBand, GrowthFooter, GrowthTopbar, JsonLd, LessonGrid, S
 import { GrammarActivities, GrammarHero, GrammarLessonList, GrammarLevelNav, GrammarTopicLinks } from '../../growth/GrammarComponents';
 import GrammarTopicPage from '../../growth/GrammarTopicPage';
 import { grammarLevelBySlug, grammarLevels, grammarLessonsAtLevel, GRAMMAR_HUB_PATH } from '../../growth/grammar';
-import { grammarTopicByPath } from '../../growth/grammar-topics';
+import { grammarTopicByPath, grammarTopicPages } from '../../growth/grammar-topics';
 import { grammarMetadata } from '../../growth/grammar-metadata';
 import { webPageSchema } from '../../growth/schema';
 import styles from '../../growth/growth.module.css';
 import grammar from '../../growth/grammar.module.css';
 type Props = {params:Promise<{slug:string}>};
-export function generateStaticParams() {return [...grammarLevels.map(level=>({slug:level.slug})),{slug:'por-vs-para-activities'}];}
+export function generateStaticParams() {return [...grammarLevels.map(level=>({slug:level.slug})),...grammarTopicPages.filter(topic=>topic.path.startsWith(`${GRAMMAR_HUB_PATH}/`)).map(topic=>({slug:topic.path.slice(GRAMMAR_HUB_PATH.length+1)}))];}
 export async function generateMetadata({params}:Props) {
   const {slug}=await params; const level=grammarLevelBySlug.get(slug); const topic=grammarTopicByPath.get(`${GRAMMAR_HUB_PATH}/${slug}`);
   const page=level ?? topic; return page ? grammarMetadata(page.path,page.title,page.description) : {};

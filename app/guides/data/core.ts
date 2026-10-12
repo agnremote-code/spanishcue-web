@@ -458,6 +458,7 @@ export const coreGuides: TeachingGuide[] = [
   },
   {
     slug: "spanish-imperative-activities",
+    lastReviewed: "2026-10-12",
     pillar: "teach-spanish",
     cluster: "grammar",
     publishedAt: "2026-09-24",
@@ -513,6 +514,7 @@ export const coreGuides: TeachingGuide[] = [
   },
   {
     slug: "spanish-direct-indirect-object-pronouns",
+    lastReviewed: "2026-10-12",
     pillar: "teach-spanish",
     cluster: "grammar",
     publishedAt: "2026-09-24",

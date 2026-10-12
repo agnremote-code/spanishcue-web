@@ -40,7 +40,7 @@ const entries: Omit<GrammarLevel, 'slug' | 'path'>[] = [
     ],
     pitfalls: ['Do not introduce every use of ser and estar at once; keep identity, state and location in context.', 'Teach agreement within a whole phrase, so learners can hear what changes.', 'The Argentine voseo lesson is an explicitly Argentine option; select the general present lesson for tú practice.'],
     crossSkill: 'The free nouns classroom links an office reading, a recorded material order, a spoken shopping list and a short note. Let students listen for quantities before checking the transcript.',
-    topicSlugs: ['ser-estar'],
+    topicSlugs: ['ser-estar','object-pronouns'],
   },
   {
     code: 'A2', title: 'A2 Spanish Grammar Activities for Teachers | SPANISHCUE',
@@ -56,7 +56,7 @@ const entries: Omit<GrammarLevel, 'slug' | 'path'>[] = [
     ],
     pitfalls: ['Words such as ayer are clues, not automatic tense rules.', 'Perfecto and indefinido vary across regions; teach a coherent model while recognizing alternatives.', 'Desde 2022 names a starting point; desde hace cuatro años expresses elapsed duration.'],
     crossSkill: 'Pair the indefinido classroom’s completed visit with the imperfecto classroom’s former library. Each has its own reading, audio, speaking task and writing outcome; combine them only after the separate meanings are secure.',
-    topicSlugs: ['past', 'ser-estar'],
+    topicSlugs: ['past','ser-estar','imperative','conditional'],
   },
   {
     code: 'B1', title: 'B1 Spanish Grammar Activities for Teachers | SPANISHCUE',
@@ -72,7 +72,7 @@ const entries: Omit<GrammarLevel, 'slug' | 'path'>[] = [
     ],
     pitfalls: ['Subjunctive does not mean unreal: me alegra que estés aquí can refer to a fact.', 'Keep B1 present-subjunctive tasks separate from the B2 past perspective.', 'In a narrative, correct the intended time relation before interrupting for every ending.'],
     crossSkill: 'The B1 por/para lesson follows a shared delivery through a reading, a recorded change of plan, negotiation and an actionable message. The past classroom adds a reading, an audio account and a written retelling.',
-    topicSlugs: ['subjunctive', 'past', 'por-para'],
+    topicSlugs: ['subjunctive','past','por-para','conditional','imperative'],
   },
   {
     code: 'B2', title: 'B2 Spanish Grammar Activities for Teachers | SPANISHCUE',
@@ -88,7 +88,7 @@ const entries: Omit<GrammarLevel, 'slug' | 'path'>[] = [
     ],
     pitfalls: ['Aunque can take different moods depending on how the information is presented; do not teach one mandatory answer without context.', 'An impersonal construction and a passive do not always communicate agency in the same way.', 'Keep past counterfactuals distinct from present hypotheses.'],
     crossSkill: 'Use the reported-speech classroom for a changed appointment or the passive/impersonal classroom for public notices. Both pair contextual reading and audio with a spoken decision and a written message.',
-    topicSlugs: ['subjunctive'],
+    topicSlugs: ['subjunctive','conditional'],
   },
   {
     code: 'C1', title: 'C1 Spanish Grammar Activities for Teachers | SPANISHCUE',

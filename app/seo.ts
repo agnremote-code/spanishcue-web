@@ -98,6 +98,32 @@ export function isSearchPrivatePath(pathname: string): boolean {
   );
 }
 
+/**
+ * Public organic pages whose HTML never depends on the visitor: the growth hubs,
+ * the grammar and conversation pages, guides, lesson previews and About. None of
+ * them is identity-aware in the Worker (every identity header is stripped), so
+ * an anonymous request (no cookies, no query string, no client-navigation
+ * headers) can be served from the edge cache. Home, pricing, lessons, account,
+ * checkout, autoestudio, campaign landings and APIs stay `private, no-store`.
+ */
+export function isEdgeCacheablePath(pathname: string): boolean {
+  const path = normalizePathname(pathname);
+  if (isSearchPrivatePath(path)) return false;
+  return (
+    path === "/about" ||
+    path === "/resources" ||
+    path.startsWith("/resources/") ||
+    path === "/guides" ||
+    path.startsWith("/guides/") ||
+    path === "/spanish-teacher-resources" ||
+    path === "/spanish-conversation-activities" ||
+    path.startsWith("/spanish-conversation-activities/") ||
+    path === "/spanish-conversation-questions" ||
+    path === "/spanish-grammar-lessons" ||
+    path.startsWith("/spanish-grammar-lessons/")
+  );
+}
+
 /** Ad-only landing variants (`/lp/*`): noindex, but links may be followed. */
 export function isCampaignPath(pathname: string): boolean {
   const path = normalizePathname(pathname);

@@ -5,7 +5,7 @@ const r=await build({stdin:{contents:'export {default as sitemap} from "./app/si
 const mod=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 test('teachers can discover each supported grammar planning page and topic through the sitemap',()=>{
  const urls=new Set(mod.sitemap().map(x=>x.url));
- for(const path of ['/spanish-grammar-lessons/a1','/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b1','/spanish-grammar-lessons/b2','/spanish-grammar-lessons/c1','/spanish-grammar-lessons/por-vs-para-activities','/about'])assert.ok(urls.has('https://spanishcue.com'+path),path);
+ for(const path of ['/spanish-grammar-lessons/a1','/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b1','/spanish-grammar-lessons/b2','/spanish-grammar-lessons/c1','/spanish-grammar-lessons/por-vs-para-activities','/spanish-grammar-lessons/conditional-tense-activities','/guides/spanish-imperative-activities','/guides/spanish-direct-indirect-object-pronouns','/about'])assert.ok(urls.has('https://spanishcue.com'+path),path);
  assert.ok(!urls.has('https://spanishcue.com/spanish-grammar-lessons/c2'),'C2 must not promise an unsupported full curriculum');
 });
 test('methodology starts in English for the teacher audience',()=>assert.equal(mod.isEnglishDefaultPath('/about'),true));
@@ -22,7 +22,7 @@ test('grammar discovery does not promote old reference ranges into advanced clas
  }
 });
 test('each topic stays on its owned URL and links real relevant grammar classrooms',()=>{
- const owned=['/guides/how-to-teach-ser-vs-estar','/guides/preterite-vs-imperfect-activities','/guides/spanish-subjunctive-lesson-plan','/spanish-grammar-lessons/por-vs-para-activities'];
+ const owned=['/guides/how-to-teach-ser-vs-estar','/guides/preterite-vs-imperfect-activities','/guides/spanish-subjunctive-lesson-plan','/spanish-grammar-lessons/por-vs-para-activities','/spanish-grammar-lessons/conditional-tense-activities','/guides/spanish-imperative-activities','/guides/spanish-direct-indirect-object-pronouns'];
  assert.deepEqual(data.grammarTopicPages.map(x=>x.path),owned);
  for(const page of data.grammarTopicPages){
   for(const id of page.lessonIds)assert.equal(data.lessons.find(l=>l.id===id)?.category,'Gramática',String(id));
@@ -30,6 +30,13 @@ test('each topic stays on its owned URL and links real relevant grammar classroo
   for(const slug of page.levelSlugs)assert.ok(data.grammarLevelBySlug.has(slug));
  }
  assert.ok(data.grammarTopicPages.find(x=>x.slug==='por-para').lessonIds.includes(231));
+ assert.deepEqual(data.grammarTopicPages.find(x=>x.slug==='conditional').lessonIds,[146,31,214,219,23,152]);
+ assert.ok(data.grammarTopicPages.find(x=>x.slug==='imperative').lessonIds.includes(145));
+ assert.ok(data.grammarTopicPages.find(x=>x.slug==='object-pronouns').lessonIds.includes(106));
+ assert.equal(new Set(data.grammarTopicPages.map(x=>x.slug)).size,data.grammarTopicPages.length);
+ assert.equal(new Set(data.grammarTopicPages.map(x=>x.h1)).size,data.grammarTopicPages.length);
+ for(const slug of ['spanish-imperative-activities','spanish-direct-indirect-object-pronouns'])assert.equal(data.teachingGuides.find(g=>g.slug===slug)?.lastReviewed,'2026-10-12',slug);
+ for(const level of data.grammarLevels)for(const slug of level.topicSlugs)assert.ok(data.grammarTopicPages.some(t=>t.slug===slug&&t.levelSlugs.includes(level.slug)),`${level.code} links ${slug}`);
 });
 test('new resources have distinct usable tasks and bounded metadata',()=>{
  const names=[];

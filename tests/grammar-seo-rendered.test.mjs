@@ -2,10 +2,10 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
-const paths=['/spanish-grammar-lessons',...['a1','a2','b1','b2','c1','por-vs-para-activities'].map(s=>'/spanish-grammar-lessons/'+s),'/guides/how-to-teach-ser-vs-estar','/guides/preterite-vs-imperfect-activities','/guides/spanish-subjunctive-lesson-plan','/about'];
+const paths=['/spanish-grammar-lessons',...['a1','a2','b1','b2','c1','por-vs-para-activities','conditional-tense-activities'].map(s=>'/spanish-grammar-lessons/'+s),'/guides/how-to-teach-ser-vs-estar','/guides/preterite-vs-imperfect-activities','/guides/spanish-subjunctive-lesson-plan','/guides/spanish-imperative-activities','/guides/spanish-direct-indirect-object-pronouns','/about'];
 for(const path of paths)test(`grammar resource serves usable indexable HTML: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
- assert.equal(response.headers.get('content-language'),'en');assert.match(response.headers.get('cache-control')||'',/private, no-store/);
+ assert.equal(response.headers.get('content-language'),'en');assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
  const dom=new JSDOM(await response.text());const d=dom.window.document;
  assert.equal(d.querySelectorAll('h1').length,1);assert.ok(d.querySelector('h1').textContent.length>15);
  const canonical=d.querySelectorAll('link[rel="canonical"]');assert.equal(canonical.length,1);assert.equal(canonical[0].href,'https://spanishcue.com'+path);

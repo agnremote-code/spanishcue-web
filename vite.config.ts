@@ -60,6 +60,13 @@ export default defineConfig(async ({ command }) => {
         "firebase-admin/auth": serverRequire.resolve("firebase-admin/auth"),
       },
     },
+    // Public HTML edge-cache keys include the build (worker/index.ts), so a new
+    // deployment can never serve the previous build's HTML.
+    define: {
+      __SPANISHCUE_BUILD_ID__: JSON.stringify(
+        process.env.GITHUB_SHA || process.env.SPANISHCUE_BUILD_ID || `local-${Date.now().toString(36)}`,
+      ),
+    },
     server: {
       host: "0.0.0.0",
       allowedHosts: ["terminal.local"],

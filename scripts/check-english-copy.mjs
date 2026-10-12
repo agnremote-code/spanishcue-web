@@ -76,6 +76,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/bosque-vocabulary-additions-20261004.json',
   'docs/audits/seo-english-copy-additions-20261007.json',
   'docs/audits/paid-landing-english-copy-additions-20261008.json',
+  'docs/audits/seo-grammar-cluster-english-additions-20261012.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

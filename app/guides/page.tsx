@@ -84,6 +84,8 @@ export default function GuidesPage() {
         <nav className={styles.topbar} aria-label="Guide navigation">
           <Link className={styles.brand} href="/">SPANISHCUE</Link>
           <Link className={styles.navLink} href="/resources">Lesson resources</Link>
+          <Link className={styles.navLink} href="/spanish-grammar-lessons">Grammar activities</Link>
+          <Link className={styles.navLink} href="/about">About SpanishCue</Link>
         </nav>
 
         <header className={styles.hero}>
