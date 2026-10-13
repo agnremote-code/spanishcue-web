@@ -101,6 +101,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
   const coach = { pose: mood?.pose ?? step.mascot ?? stage.mascot, line: mood?.line ?? step.coach ?? stage.coach, mood: reaction ? (reaction.ok ? 'ok' : 'retry') : 'idle' };
   const style = { '--gl-level': levelColors[lesson.level] || '#075de7' } as CSSProperties;
   const settings = useMemo(() => ({ english, mode, legend: lesson.legend, optionNotes: lesson.optionNotes ?? {}, go }), [english, mode, lesson.legend, lesson.optionNotes, go]);
+  const hasEnglish = useMemo(() => JSON.stringify(lesson).includes('"en":'), [lesson]);
   const resume = store.resume && (store.resume.stage !== at.stage || store.resume.step !== at.step) ? store.resume : undefined;
 
   const nav = <nav className={`gl-stages ${menu ? 'is-open' : ''}`} id="gl-stages" aria-label="Secciones de la clase">
@@ -130,7 +131,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
           <div className="gl-mode" role="radiogroup" aria-label="Cómo usas la clase">
             {([['teacher', 'Con profesor'], ['self', 'Por mi cuenta']] as const).map(([value, label]) => <button type="button" role="radio" key={value} data-mode-option={value} aria-checked={mode === value} onClick={() => setMode(value)}>{label}</button>)}
           </div>
-          <button type="button" data-tool="english" aria-pressed={english} onClick={() => setEnglish(!english)} title="Mostrar u ocultar la ayuda en inglés">EN</button>
+          {hasEnglish && <button type="button" data-tool="english" aria-pressed={english} onClick={() => setEnglish(!english)} title="Mostrar u ocultar la ayuda en inglés">EN</button>}
           <button type="button" data-tool="large" aria-pressed={large} onClick={() => setLarge(!large)} title="Texto más grande">A+</button>
         </div>
       </header>

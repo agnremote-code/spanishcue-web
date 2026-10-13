@@ -170,6 +170,15 @@
 .gl-right{color:#0b6e51;font-weight:500}
 .gl-wrong i,.gl-right i{font-style:normal;font-weight:600}
 
+/* Reference tables */
+.gl-table-wrap{overflow-x:auto;border:1px solid var(--gl-line);border-radius:16px}
+.gl-table{width:100%;border-collapse:collapse;font-size:.97em}
+.gl-table :is(th,td){padding:10px 14px;text-align:left;border-bottom:1px solid var(--gl-line);vertical-align:top}
+.gl-table tr:last-child :is(th,td){border-bottom:0}
+.gl-table thead th{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gl-muted);background:var(--gl-soft)}
+.gl-table tbody th{font-weight:500;color:var(--gl-muted);white-space:nowrap}
+.gl-card.gl-table>.gl-note,.gl-card .gl-note{margin-top:8px}
+
 /* Interactive timeline */
 .gl-timeline{display:grid;gap:14px}
 .gl-timeline-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}

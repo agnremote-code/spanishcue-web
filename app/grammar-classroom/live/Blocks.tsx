@@ -448,6 +448,7 @@ export function LiveBlock({ block, where }: { block: Block; where: Where }) {
     </article>)}</div></Card>;
     case 'decide': return <Decide block={block} />;
     case 'tip': return <aside className="gl-tip"><span aria-hidden="true">{block.icon}</span><div><h4>{block.title}</h4><p><Rich text={block.text} /></p><English text={block.en} /></div></aside>;
+    case 'table': return <Card kind="ref-table" title={block.title}><div className="gl-table-wrap"><table className="gl-table"><thead><tr>{block.head.map(h => <th key={h} scope="col"><Rich text={h} /></th>)}</tr></thead><tbody>{block.rows.map((row, r) => <tr key={r}>{row.map((cell, c) => c === 0 ? <th key={c} scope="row"><Rich text={cell} /></th> : <td key={c}><Rich text={cell} /></td>)}</tr>)}</tbody></table></div>{block.note && <p className="gl-note"><Rich text={block.note} /></p>}</Card>;
     case 'mistakes': return <Mistakes block={block} />;
     case 'visual': return <LiveVisual visual={block.visual} where={where} />;
     case 'explore': return <Explore block={block} where={where} />;

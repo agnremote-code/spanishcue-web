@@ -19,6 +19,8 @@ export type Block =
   | { kind: 'compare'; title: string; columns: { tone: Tone; label: string; sentence: string; idea: string; en?: string }[] }
   | { kind: 'decide'; title: string; steps: { q: string; yes: string; no: string }[] }
   | { kind: 'tip'; icon: string; title: string; text: string; en?: string }
+  /** A small reference table (conjugations, forms by person, contrasts). Cells accept **bold** and [[marks|tone]]. */
+  | { kind: 'table'; title?: string; head: string[]; rows: string[][]; note?: string }
   | { kind: 'mistakes'; title: string; items: { wrong: string; right: string; why: string }[] }
   | { kind: 'visual'; visual: VisualKey }
   /** A conversation whose marked expressions can be tapped to see why they were used. */
