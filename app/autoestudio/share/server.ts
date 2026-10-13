@@ -8,13 +8,13 @@ export type ShareSession = { passId: string; learnerId: string; level: string; a
 type Pass = { id: string; owner_id: string; learner_id: string; level: string; revision: number; revoked_at: string | null; created_at: string; alias: string | null };
 export const SHARE_COOKIE = '__Host-sc-autoestudio';
 const levels = ['a1','a2','b1','b2','c1','c2'];
-const idPattern = /^[a-f0-9]{48}$/;
+export const idPattern = /^[a-f0-9]{48}$/;
 const encoder = new TextEncoder();
 export class ShareError extends Error { constructor(public status: number, public code: string) { super(code); } }
-function fail(status: number, code: string): never { throw new ShareError(status, code); }
+export function fail(status: number, code: string): never { throw new ShareError(status, code); }
 export function configured(env: ShareEnvironment) { if (!env.DB || !env.AUTOESTUDIO_SHARE_SECRET || env.AUTOESTUDIO_SHARE_SECRET.length < 32) fail(503, 'share_unavailable'); }
 const hex = (bytes: Uint8Array) => Array.from(bytes, b => b.toString(16).padStart(2,'0')).join('');
-const randomId = () => hex(crypto.getRandomValues(new Uint8Array(24)));
+export const randomId = () => hex(crypto.getRandomValues(new Uint8Array(24)));
 async function signature(env: ShareEnvironment, message: string) {
   configured(env);
   const key = await crypto.subtle.importKey('raw', encoder.encode(env.AUTOESTUDIO_SHARE_SECRET), {name:'HMAC',hash:'SHA-256'}, false, ['sign']);
@@ -139,7 +139,17 @@ export async function listPasses(request: Request,env: ShareEnvironment) {
   const rows=await env.DB.prepare('SELECT g.learner_id,g.module_id,g.sections,g.last_section,g.completed_at,g.updated_at,g.started_at FROM autoestudio_progress g JOIN autoestudio_learners l ON l.id=g.learner_id WHERE l.owner_id=?').bind(owner).all<{learner_id:string;module_id:string;sections:string;last_section:SectionKey|null;completed_at:string|null;updated_at:string;started_at:string}>();
   const byLearner=new Map<string,typeof rows.results>();
   for(const row of rows.results){const list=byLearner.get(row.learner_id)??[];list.push(row);byLearner.set(row.learner_id,list);}
-  return response({passes:passes.results.map(p=>({...publicPass(p),summary:p.alias?summarize(p.level,(byLearner.get(p.learner_id)??[]).filter(r=>r.module_id.startsWith(`${p.level}-`))):null})),learners:learners.results});
+  const errors=await errorCounts(env,owner);
+  return response({passes:passes.results.map(p=>({...publicPass(p),summary:p.alias?summarize(p.level,(byLearner.get(p.learner_id)??[]).filter(r=>r.module_id.startsWith(`${p.level}-`))):null,errors:errors.get(p.learner_id)??null})),learners:learners.results});
+}
+/** Per-learner error totals for the list; a missing history table never hides the list itself. */
+async function errorCounts(env:ShareEnvironment,owner:string){
+  const map=new Map<string,{total:number;corrected:number;recurrent:number;top:string|null}>();
+  try{
+    const rows=await env.DB.prepare('SELECT learner_id,category_label,COUNT(*) AS n,SUM(corrected_at IS NOT NULL) AS c,COUNT(DISTINCT module_id||exercise_id) AS a FROM homework_errors WHERE owner_id=? GROUP BY learner_id,category ORDER BY n DESC').bind(owner).all<{learner_id:string;category_label:string;n:number;c:number;a:number}>();
+    for(const row of rows.results){const entry=map.get(row.learner_id)??{total:0,corrected:0,recurrent:0,top:null};entry.total+=row.n;entry.corrected+=row.c;if(row.a>1)entry.recurrent+=row.n;entry.top??=row.category_label;map.set(row.learner_id,entry);}
+  }catch{/* History not released yet: the list keeps working without counts. */}
+  return map;
 }
 function parseSections(raw:string):ModuleProgress['sections']{
   try{const value=JSON.parse(raw);return value&&typeof value==='object'&&!Array.isArray(value)?value:{};}catch{return {};}
