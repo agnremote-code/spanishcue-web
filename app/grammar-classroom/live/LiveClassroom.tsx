@@ -115,7 +115,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
           {p.total > 0 && <small data-progress={`${p.done}/${p.total}`} aria-label={`${p.done} de ${p.total} actividades`}>{p.done}/{p.total}</small>}
         </button>
         {p.total > 0 && <span className="gl-stage-meter" aria-hidden="true"><span style={{ width: `${(p.done / p.total) * 100}%` }} /></span>}
-        {i === at.stage && s.steps.length > 1 && <ol className="gl-substeps">{s.steps.map((st, j) => <li key={st.title}>
+        {i === at.stage && s.steps.length > 1 && <ol className="gl-substeps">{s.steps.map((st, j) => <li key={j}>
           <button type="button" data-step={j} aria-current={j === at.step ? 'true' : undefined} onClick={() => go(i, j)}>{st.title}</button>
         </li>)}</ol>}
       </li>;
@@ -168,7 +168,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
 
           <div className="gl-stage-body">
             {stages.map((s, si) => <section key={s.id} hidden={si !== at.stage} data-stage-panel={s.id}>
-              {s.steps.map((st, i) => <div key={st.title} className="gl-step" hidden={i !== at.step || si !== at.stage} data-step-panel={i}>
+              {s.steps.map((st, i) => <div key={i} className="gl-step" hidden={i !== at.step || si !== at.stage} data-step-panel={i}>
                 {st.blocks.map((block, bi) => <LiveBlock key={bi} block={block} where={{ id: blockId(s, i, bi), stage: si, step: i }} />)}
               </div>)}
             </section>)}
