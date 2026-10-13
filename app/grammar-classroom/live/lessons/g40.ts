@@ -137,6 +137,10 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'Algunas palabras cambian de significado con el artículo: **el capital** (el dinero) y **la capital** (la ciudad principal de un país). No es necesario aprenderlas ahora.', en: 'el capital = money · la capital = capital city' },
         ] },
+        { title: 'Taller: nombrar y contar', mascot: '/brand/mascot/walking.webp', coach: 'Toca un objeto: mira su artículo y su plural.', blocks: [
+          { kind: 'guide', text: { teacher: 'Abran el taller juntos. Elige un objeto, pide al alumno el artículo y el plural antes de mostrarlo.', self: 'Toca cada objeto. Di en voz alta el artículo y el plural antes de mirar la respuesta.' } },
+          { kind: 'visual', visual: 'noun-workbench' },
+        ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
           { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [

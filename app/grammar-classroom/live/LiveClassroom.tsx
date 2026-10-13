@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link';
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { SpanishCueBrand } from '../../SpanishCueBrand';
 import { LiveBlock } from './Blocks';
 import { LiveContext, type Mode } from './Rich';
 import { blockId, LessonStoreProvider, progressOf, useStore, useStored, type Position } from './store';
-import type { LiveLesson } from './types';
+import type { LiveLesson, VisualKey } from './types';
 import './live.css';
 
 /** Poses the mascot uses to react to a checked answer. */
@@ -13,11 +13,11 @@ const cheer = { ok: { pose: '/brand/mascot/kneeling.webp', line: '¡Bien! Eso es
 const levelColors: Record<string, string> = { A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
 
 /** One class for a live lesson and for self-study: same content, the mode only changes guidance. */
-export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
-  return <LessonStoreProvider lessonId={lesson.id}><Classroom lesson={lesson} /></LessonStoreProvider>;
+export default function LiveClassroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
+  return <LessonStoreProvider lessonId={lesson.id}><Classroom lesson={lesson} scenes={scenes} /></LessonStoreProvider>;
 }
 
-function Classroom({ lesson }: { lesson: LiveLesson }) {
+function Classroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
   const store = useStore();
   const [at, setAt] = useState<Position>({ stage: 0, step: 0 });
   const [mode, setMode] = useStored<Mode>('mode', 'teacher');
@@ -100,7 +100,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
   const mood = reaction ? (reaction.ok ? cheer.ok : cheer.retry) : null;
   const coach = { pose: mood?.pose ?? step.mascot ?? stage.mascot, line: mood?.line ?? step.coach ?? stage.coach, mood: reaction ? (reaction.ok ? 'ok' : 'retry') : 'idle' };
   const style = { '--gl-level': levelColors[lesson.level] || '#075de7' } as CSSProperties;
-  const settings = useMemo(() => ({ english, mode, legend: lesson.legend, optionNotes: lesson.optionNotes ?? {}, go }), [english, mode, lesson.legend, lesson.optionNotes, go]);
+  const settings = useMemo(() => ({ english, mode, legend: lesson.legend, optionNotes: lesson.optionNotes ?? {}, go, scenes }), [english, mode, lesson.legend, lesson.optionNotes, go, scenes]);
   const hasEnglish = useMemo(() => JSON.stringify(lesson).includes('"en":'), [lesson]);
   const resume = store.resume && (store.resume.stage !== at.stage || store.resume.step !== at.step) ? store.resume : undefined;
 

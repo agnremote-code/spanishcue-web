@@ -1,10 +1,10 @@
 'use client';
-import { createContext, Fragment, useContext } from 'react';
+import { createContext, Fragment, useContext, type ReactNode } from 'react';
 
-import type { ByMode, Tone } from './types';
+import type { ByMode, Tone, VisualKey } from './types';
 
 export type Mode = 'teacher' | 'self';
-export type LiveSettings = { english: boolean; mode: Mode; legend: { tone: Tone; label: string }[]; optionNotes: Record<string, string>; go: (stage: number, step: number) => void };
+export type LiveSettings = { english: boolean; mode: Mode; legend: { tone: Tone; label: string }[]; optionNotes: Record<string, string>; go: (stage: number, step: number) => void; scenes?: Partial<Record<VisualKey, ReactNode>> };
 export const LiveContext = createContext<LiveSettings>({ english: false, mode: 'teacher', legend: [], optionNotes: {}, go: () => {} });
 export const useLive = () => useContext(LiveContext);
 

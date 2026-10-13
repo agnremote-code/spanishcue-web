@@ -83,6 +83,10 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '⭐', title: 'Con un adjetivo que describe', text: 'Para decir **cómo es** alguien o algo, usa un / una: «Es [[una profesora|blue]] muy creativa», «Es [[un lugar|blue]] tranquilo».', en: 'She is a very creative teacher.' },
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'A veces no hay artículo: «Soy profesora», «Tengo hermanos», «Bebo café». Y «de + el» = **del**, «a + el» = **al**: «la puerta **del** museo», «Voy **al** café». No es necesario aprenderlo ahora.', en: 'del = de + el · al = a + el' },
         ] },
+        { title: 'Taller: la galería', mascot: '/brand/mascot/walking.webp', coach: 'Recorre la galería y elige el artículo.', blocks: [
+          { kind: 'guide', text: { teacher: 'Recorran la galería juntos. En cada obra, pide al alumno que explique por qué elige un artículo determinado o indeterminado.', self: 'Recorre la galería. En cada obra, elige el artículo y explica por qué en voz alta.' } },
+          { kind: 'visual', visual: 'article-gallery' },
+        ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
           { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [

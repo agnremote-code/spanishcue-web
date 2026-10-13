@@ -418,3 +418,6 @@
   .gl-mission-head{flex-direction:column;gap:8px}
   .gl-review-list li{flex-direction:column;align-items:flex-start}
 }
+
+/* Studio scenes kept from the earlier classes (nouns, adjectives, articles). */
+.gl-scene { margin-block: 4px 8px; min-width: 0; }

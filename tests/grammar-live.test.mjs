@@ -21,10 +21,10 @@ const wait=ms=>act(async()=>{await new Promise(r=>setTimeout(r,ms));});
 function page(hash=''){
   return new JSDOM('<div id="root"></div>',{url:`https://spanishcue.test/gramatica/desde-hace-duracion${hash}`});
 }
-async function mount(dom=page()){
+async function mount(dom=page(),id=230){
   Object.assign(globalThis,{window:dom.window,self:dom.window,document:dom.window.document,HTMLElement:dom.window.HTMLElement,IS_REACT_ACT_ENVIRONMENT:true});
   dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.HTMLMediaElement.prototype.pause=function(){};dom.window.HTMLMediaElement.prototype.load=function(){};dom.window.scrollTo=()=>{};
-  const root=createRoot(document.getElementById('root'));await act(async()=>root.render(React.createElement(Page,{id:230})));
+  const root=createRoot(document.getElementById('root'));await act(async()=>root.render(React.createElement(Page,{id})));
   const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
   return {dom,$,$$,click:async s=>{const el=typeof s==='string'?$(s):s;assert.ok(el,String(s));await act(async()=>el.click());},
     type:async(s,value)=>{const el=$(s);assert.ok(el,s);const proto=el.tagName==='TEXTAREA'?dom.window.HTMLTextAreaElement.prototype:dom.window.HTMLInputElement.prototype;await act(async()=>{Object.getOwnPropertyDescriptor(proto,'value').set.call(el,value);el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));});},
@@ -159,6 +159,17 @@ test('the barrio mission works with the cards, without loading 3D',async()=>{
   }finally{await v.close();}
 });
 
+test('the noun, adjective and article studios stay inside their live classes as an Entender workshop',async()=>{
+  for(const [id,scene,studio] of [[40,'noun-workbench','[data-noun-studio]'],[41,'adjective-workbench','[data-adjective-studio]'],[42,'article-gallery','[data-article-studio]']]){
+    const v=await mount(page(),id);try{
+      assert.equal(v.$$('[data-stage]').length,7);
+      const step=getLiveLesson(id).stages[0].steps.findIndex(s=>s.blocks.some(b=>b.kind==='visual'&&b.visual===scene));
+      assert.ok(step>0,`${id} has a workshop step`);
+      await v.click(`[data-step="${step}"]`);
+      assert.ok(v.$(`[data-scene="${scene}"] ${studio}`),`${id} renders its studio`);
+    }finally{await v.close();}
+  }
+});
 test('listening, conversation and writing: locked questions, one card at a time, honest review',async()=>{
   const v=await mount();try{
     await v.click('[data-stage="escuchar"]');

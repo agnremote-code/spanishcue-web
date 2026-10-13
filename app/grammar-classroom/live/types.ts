@@ -47,7 +47,8 @@ export type Block =
 export type TalkCard = { q: string; followUps: string[]; phrases: string[]; hint: string; example: string; next?: string; teacher?: string };
 
 /** Topic visuals live in ./visuals; a lesson names them, it never imports them. */
-export type VisualKey = 'time-compare' | 'barrio-mission';
+/** `*-workbench` and `article-gallery` are premium scenes the server page passes in (see GrammarPage). */
+export type VisualKey = 'time-compare' | 'barrio-mission' | 'noun-workbench' | 'adjective-workbench' | 'article-gallery';
 /** Small illustrations that sit next to a concept (./visuals/art.tsx). */
 export type ArtKey = 'calendar-start' | 'duration-clock' | 'past-trip';
 

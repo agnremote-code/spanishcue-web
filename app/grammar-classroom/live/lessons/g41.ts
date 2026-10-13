@@ -115,6 +115,10 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'A veces el adjetivo va **antes**: «un **buen** libro», «una **gran** ciudad». Y con «**muy**» describes más fuerte: «una sala **muy** tranquila». No es necesario aprenderlo ahora.', en: 'a good book · a great city · very quiet' },
         ] },
+        { title: 'Taller: describir la sala', mascot: '/brand/mascot/walking.webp', coach: 'Cambia el objeto y mira cómo cambia el adjetivo.', blocks: [
+          { kind: 'guide', text: { teacher: 'Abran el taller juntos. Cambia el objeto o la cantidad y pide al alumno la forma del adjetivo antes de mostrarla.', self: 'Cambia el objeto y la cantidad. Di la forma del adjetivo antes de mirar la respuesta.' } },
+          { kind: 'visual', visual: 'adjective-workbench' },
+        ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
           { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
