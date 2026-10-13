@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const origin=process.env.CHESPANISH_TEST_ORIGIN||'http://127.0.0.1:8787';
 const get=path=>fetch(origin+path,{redirect:'manual'});
-test('existing free grammar routes serve the classroom and their reference banks remain reachable',async()=>{
+test('existing free grammar routes serve the live class and their reference banks remain reachable',async()=>{
   for(const [id,path] of [[40,'/la-fabrica-de-los-nombres'],[41,'/el-atelier-de-la-concordancia']]){
     const response=await get(path);assert.equal(response.status,200);const html=await response.text();
-    assert.match(html,new RegExp(`data-grammar-classroom="${id}"`));
+    assert.match(html,new RegExp(`data-live-class="${id}"`));
     assert.match(html,/60 min/);assert.match(html,/Material de consulta y ampliación/);
     assert.doesNotMatch(html,/La cita que cambió dos veces|La biblioteca municipal prepara una reforma/);
     const legacy=await get(path+'?reference=1');assert.equal(legacy.status,200);

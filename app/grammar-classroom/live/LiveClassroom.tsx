@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link';
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { SpanishCueBrand } from '../../SpanishCueBrand';
 import { LiveBlock } from './Blocks';
 import { LiveContext, type Mode } from './Rich';
 import { blockId, LessonStoreProvider, progressOf, useStore, useStored, type Position } from './store';
-import type { LiveLesson } from './types';
+import type { LiveLesson, VisualKey } from './types';
 import './live.css';
 
 /** Poses the mascot uses to react to a checked answer. */
@@ -13,11 +13,11 @@ const cheer = { ok: { pose: '/brand/mascot/kneeling.webp', line: '¡Bien! Eso es
 const levelColors: Record<string, string> = { A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
 
 /** One class for a live lesson and for self-study: same content, the mode only changes guidance. */
-export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
-  return <LessonStoreProvider lessonId={lesson.id}><Classroom lesson={lesson} /></LessonStoreProvider>;
+export default function LiveClassroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
+  return <LessonStoreProvider lessonId={lesson.id}><Classroom lesson={lesson} scenes={scenes} /></LessonStoreProvider>;
 }
 
-function Classroom({ lesson }: { lesson: LiveLesson }) {
+function Classroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
   const store = useStore();
   const [at, setAt] = useState<Position>({ stage: 0, step: 0 });
   const [mode, setMode] = useStored<Mode>('mode', 'teacher');
@@ -100,7 +100,8 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
   const mood = reaction ? (reaction.ok ? cheer.ok : cheer.retry) : null;
   const coach = { pose: mood?.pose ?? step.mascot ?? stage.mascot, line: mood?.line ?? step.coach ?? stage.coach, mood: reaction ? (reaction.ok ? 'ok' : 'retry') : 'idle' };
   const style = { '--gl-level': levelColors[lesson.level] || '#075de7' } as CSSProperties;
-  const settings = useMemo(() => ({ english, mode, legend: lesson.legend, optionNotes: lesson.optionNotes ?? {}, go }), [english, mode, lesson.legend, lesson.optionNotes, go]);
+  const settings = useMemo(() => ({ english, mode, legend: lesson.legend, optionNotes: lesson.optionNotes ?? {}, go, scenes }), [english, mode, lesson.legend, lesson.optionNotes, go, scenes]);
+  const hasEnglish = useMemo(() => JSON.stringify(lesson).includes('"en":'), [lesson]);
   const resume = store.resume && (store.resume.stage !== at.stage || store.resume.step !== at.step) ? store.resume : undefined;
 
   const nav = <nav className={`gl-stages ${menu ? 'is-open' : ''}`} id="gl-stages" aria-label="Secciones de la clase">
@@ -114,7 +115,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
           {p.total > 0 && <small data-progress={`${p.done}/${p.total}`} aria-label={`${p.done} de ${p.total} actividades`}>{p.done}/{p.total}</small>}
         </button>
         {p.total > 0 && <span className="gl-stage-meter" aria-hidden="true"><span style={{ width: `${(p.done / p.total) * 100}%` }} /></span>}
-        {i === at.stage && s.steps.length > 1 && <ol className="gl-substeps">{s.steps.map((st, j) => <li key={st.title}>
+        {i === at.stage && s.steps.length > 1 && <ol className="gl-substeps">{s.steps.map((st, j) => <li key={j}>
           <button type="button" data-step={j} aria-current={j === at.step ? 'true' : undefined} onClick={() => go(i, j)}>{st.title}</button>
         </li>)}</ol>}
       </li>;
@@ -130,7 +131,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
           <div className="gl-mode" role="radiogroup" aria-label="Cómo usas la clase">
             {([['teacher', 'Con profesor'], ['self', 'Por mi cuenta']] as const).map(([value, label]) => <button type="button" role="radio" key={value} data-mode-option={value} aria-checked={mode === value} onClick={() => setMode(value)}>{label}</button>)}
           </div>
-          <button type="button" data-tool="english" aria-pressed={english} onClick={() => setEnglish(!english)} title="Mostrar u ocultar la ayuda en inglés">EN</button>
+          {hasEnglish && <button type="button" data-tool="english" aria-pressed={english} onClick={() => setEnglish(!english)} title="Mostrar u ocultar la ayuda en inglés">EN</button>}
           <button type="button" data-tool="large" aria-pressed={large} onClick={() => setLarge(!large)} title="Texto más grande">A+</button>
         </div>
       </header>
@@ -167,7 +168,7 @@ function Classroom({ lesson }: { lesson: LiveLesson }) {
 
           <div className="gl-stage-body">
             {stages.map((s, si) => <section key={s.id} hidden={si !== at.stage} data-stage-panel={s.id}>
-              {s.steps.map((st, i) => <div key={st.title} className="gl-step" hidden={i !== at.step || si !== at.stage} data-step-panel={i}>
+              {s.steps.map((st, i) => <div key={i} className="gl-step" hidden={i !== at.step || si !== at.stage} data-step-panel={i}>
                 {st.blocks.map((block, bi) => <LiveBlock key={bi} block={block} where={{ id: blockId(s, i, bi), stage: si, step: i }} />)}
               </div>)}
             </section>)}

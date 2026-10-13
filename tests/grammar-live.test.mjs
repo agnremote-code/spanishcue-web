@@ -12,6 +12,8 @@ await build({entryPoints:['app/grammar-classroom/GrammarPage.tsx'],bundle:true,p
 await build({entryPoints:['app/grammar-classroom/live/registry.ts','app/grammar-classroom/live/store.tsx','app/grammar-classroom/live/writing.ts'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','three'],loader:{'.css':'empty'},outdir:'node_modules/.cache/grammar-live',logLevel:'error'});
 const Page=require('../node_modules/.cache/grammar-live-page.cjs').default;
 const {getLiveLesson,liveLessonIds}=require('../node_modules/.cache/grammar-live/registry.js');
+await build({entryPoints:['app/grammar-classroom/lessons.ts'],bundle:true,platform:'node',format:'cjs',external:['react','react-dom','next/*'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-lessons.cjs',logLevel:'error'});
+const {classroomIds}=require('../node_modules/.cache/grammar-live-lessons.cjs');
 const {targets}=require('../node_modules/.cache/grammar-live/store.js');
 const {reviewWriting}=require('../node_modules/.cache/grammar-live/writing.js');
 const wait=ms=>act(async()=>{await new Promise(r=>setTimeout(r,ms));});
@@ -19,10 +21,10 @@ const wait=ms=>act(async()=>{await new Promise(r=>setTimeout(r,ms));});
 function page(hash=''){
   return new JSDOM('<div id="root"></div>',{url:`https://spanishcue.test/gramatica/desde-hace-duracion${hash}`});
 }
-async function mount(dom=page()){
+async function mount(dom=page(),id=230){
   Object.assign(globalThis,{window:dom.window,self:dom.window,document:dom.window.document,HTMLElement:dom.window.HTMLElement,IS_REACT_ACT_ENVIRONMENT:true});
   dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.HTMLMediaElement.prototype.pause=function(){};dom.window.HTMLMediaElement.prototype.load=function(){};dom.window.scrollTo=()=>{};
-  const root=createRoot(document.getElementById('root'));await act(async()=>root.render(React.createElement(Page,{id:230})));
+  const root=createRoot(document.getElementById('root'));await act(async()=>root.render(React.createElement(Page,{id})));
   const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
   return {dom,$,$$,click:async s=>{const el=typeof s==='string'?$(s):s;assert.ok(el,String(s));await act(async()=>el.click());},
     type:async(s,value)=>{const el=$(s);assert.ok(el,s);const proto=el.tagName==='TEXTAREA'?dom.window.HTMLTextAreaElement.prototype:dom.window.HTMLInputElement.prototype;await act(async()=>{Object.getOwnPropertyDescriptor(proto,'value').set.call(el,value);el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));});},
@@ -35,9 +37,12 @@ async function mount(dom=page()){
 }
 const panel=(stage,step=0)=>`[data-stage-panel="${stage}"] [data-step-panel="${step}"]`;
 
-test('lesson 230 is the only live class; seven sections in the fixed order, every activity checkable',()=>{
-  assert.deepEqual(liveLessonIds,[230]);
-  const lesson=getLiveLesson(230);
+test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
+  assert.deepEqual([...liveLessonIds].sort((a,b)=>a-b),[...classroomIds].sort((a,b)=>a-b),'every grammar class id has a live lesson');
+  for(const id of liveLessonIds){
+  const lesson=getLiveLesson(id);
+  assert.equal(lesson.id,id);
+  if(!['A1','A2'].includes(lesson.level))assert.ok(!JSON.stringify(lesson).includes('"en":'),`${id}: English help only in A1–A2`);
   assert.deepEqual(lesson.stages.map(s=>s.id),['entender','explorar','practicar','escuchar','conversar','escribir','cerrar']);
   assert.deepEqual(lesson.stages.map(s=>s.label),['Entender','Explorar','Practicar','Escuchar','Conversar','Escribir','Cerrar']);
   const tones=new Set(lesson.legend.map(l=>l.tone));
@@ -54,8 +59,9 @@ test('lesson 230 is the only live class; seven sections in the fixed order, ever
     }
   }
   const total=lesson.stages.map(s=>s.steps.reduce((n,st)=>n+st.blocks.reduce((m,b)=>m+targets(b),0),0));
-  assert.ok(total.every(n=>n>0),`every section has real activities: ${total}`);
-  const all=JSON.stringify(lesson);
+  assert.ok(total.every(n=>n>0),`${id}: every section has real activities: ${total}`);
+  }
+  const all=JSON.stringify(getLiveLesson(230));
   for(const text of ['Vivo acá desde octubre de 2024.','Me mudé acá hace dos años.','Hace dos años que vivo acá.'])assert.ok(all.includes(text)||all.includes(text.replace(/[.]$/,'')),text);
 });
 
@@ -153,6 +159,17 @@ test('the barrio mission works with the cards, without loading 3D',async()=>{
   }finally{await v.close();}
 });
 
+test('the noun, adjective and article studios stay inside their live classes as an Entender workshop',async()=>{
+  for(const [id,scene,studio] of [[40,'noun-workbench','[data-noun-studio]'],[41,'adjective-workbench','[data-adjective-studio]'],[42,'article-gallery','[data-article-studio]']]){
+    const v=await mount(page(),id);try{
+      assert.equal(v.$$('[data-stage]').length,7);
+      const step=getLiveLesson(id).stages[0].steps.findIndex(s=>s.blocks.some(b=>b.kind==='visual'&&b.visual===scene));
+      assert.ok(step>0,`${id} has a workshop step`);
+      await v.click(`[data-step="${step}"]`);
+      assert.ok(v.$(`[data-scene="${scene}"] ${studio}`),`${id} renders its studio`);
+    }finally{await v.close();}
+  }
+});
 test('listening, conversation and writing: locked questions, one card at a time, honest review',async()=>{
   const v=await mount();try{
     await v.click('[data-stage="escuchar"]');

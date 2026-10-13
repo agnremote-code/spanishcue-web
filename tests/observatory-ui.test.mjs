@@ -5,7 +5,7 @@ import {createRequire} from 'node:module';
 import {JSDOM} from 'jsdom';
 import React,{act} from 'react';
 import {createRoot} from 'react-dom/client';
-await build({entryPoints:['app/grammar-classroom/GrammarPage.tsx'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/link','next/navigation'],loader:{'.css':'empty'},outfile:'node_modules/.cache/observatory-page.cjs'});
+await build({stdin:{contents:"import Observatory from './observatory/Observatory';import {getClassroomLesson} from './lessons';export default function Page({id}){return <Observatory lesson={getClassroomLesson(id)}/>;}",resolveDir:'app/grammar-classroom',loader:'tsx'},bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/link','next/navigation'],loader:{'.css':'empty'},outfile:'node_modules/.cache/observatory-page.cjs'});
 const require=createRequire(import.meta.url);
 const Page=require('../node_modules/.cache/observatory-page.cjs').default;
 async function mount(){const dom=new JSDOM('<div id="root"></div>',{url:'https://spanishcue.test'});Object.assign(globalThis,{window:dom.window,self:dom.window,document:dom.window.document,HTMLElement:dom.window.HTMLElement,IS_REACT_ACT_ENVIRONMENT:true});dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.HTMLMediaElement.prototype.pause=function(){};const root=createRoot(document.getElementById('root'));await act(async()=>root.render(React.createElement(Page,{id:43})));return {click:async s=>{const el=document.querySelector(s);assert.ok(el,s);await act(async()=>el.click());},close:async()=>{await act(async()=>root.unmount());dom.window.close();}};}
