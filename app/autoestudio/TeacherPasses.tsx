@@ -160,7 +160,7 @@ function ProgressDialog({pass,state,onClose,onRetry,view,onView}:{pass:Pass;stat
 
 const statusText={'not-started':'Sin empezar','in-progress':'En curso','completed':'Completada'} as const;
 
-function LevelDetail({level,progress}:{level:string;progress:ProgressState}){
+export function LevelDetail({level,progress}:{level:string;progress:ProgressState}){
   const ids=levelWeekIds(level);const p=levelProgress(progress,ids);
   const rows=ids.map(id=>({id,week:weekNumber(id),m:progress.modules[id] as ModuleProgress|undefined,status:moduleStatus(progress,id)}));
   const touched=rows.filter(r=>r.m);
