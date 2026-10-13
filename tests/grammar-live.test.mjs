@@ -12,6 +12,8 @@ await build({entryPoints:['app/grammar-classroom/GrammarPage.tsx'],bundle:true,p
 await build({entryPoints:['app/grammar-classroom/live/registry.ts','app/grammar-classroom/live/store.tsx','app/grammar-classroom/live/writing.ts'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','three'],loader:{'.css':'empty'},outdir:'node_modules/.cache/grammar-live',logLevel:'error'});
 const Page=require('../node_modules/.cache/grammar-live-page.cjs').default;
 const {getLiveLesson,liveLessonIds}=require('../node_modules/.cache/grammar-live/registry.js');
+await build({entryPoints:['app/grammar-classroom/lessons.ts'],bundle:true,platform:'node',format:'cjs',external:['react','react-dom','next/*'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-lessons.cjs',logLevel:'error'});
+const {classroomIds}=require('../node_modules/.cache/grammar-live-lessons.cjs');
 const {targets}=require('../node_modules/.cache/grammar-live/store.js');
 const {reviewWriting}=require('../node_modules/.cache/grammar-live/writing.js');
 const wait=ms=>act(async()=>{await new Promise(r=>setTimeout(r,ms));});
@@ -35,9 +37,12 @@ async function mount(dom=page()){
 }
 const panel=(stage,step=0)=>`[data-stage-panel="${stage}"] [data-step-panel="${step}"]`;
 
-test('lesson 230 is the only live class; seven sections in the fixed order, every activity checkable',()=>{
-  assert.deepEqual(liveLessonIds,[230]);
-  const lesson=getLiveLesson(230);
+test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
+  assert.deepEqual([...liveLessonIds].sort((a,b)=>a-b),[...classroomIds].sort((a,b)=>a-b),'every grammar class id has a live lesson');
+  for(const id of liveLessonIds){
+  const lesson=getLiveLesson(id);
+  assert.equal(lesson.id,id);
+  if(!['A1','A2'].includes(lesson.level))assert.ok(!JSON.stringify(lesson).includes('"en":'),`${id}: English help only in A1–A2`);
   assert.deepEqual(lesson.stages.map(s=>s.id),['entender','explorar','practicar','escuchar','conversar','escribir','cerrar']);
   assert.deepEqual(lesson.stages.map(s=>s.label),['Entender','Explorar','Practicar','Escuchar','Conversar','Escribir','Cerrar']);
   const tones=new Set(lesson.legend.map(l=>l.tone));
@@ -54,8 +59,9 @@ test('lesson 230 is the only live class; seven sections in the fixed order, ever
     }
   }
   const total=lesson.stages.map(s=>s.steps.reduce((n,st)=>n+st.blocks.reduce((m,b)=>m+targets(b),0),0));
-  assert.ok(total.every(n=>n>0),`every section has real activities: ${total}`);
-  const all=JSON.stringify(lesson);
+  assert.ok(total.every(n=>n>0),`${id}: every section has real activities: ${total}`);
+  }
+  const all=JSON.stringify(getLiveLesson(230));
   for(const text of ['Vivo acá desde octubre de 2024.','Me mudé acá hace dos años.','Hace dos años que vivo acá.'])assert.ok(all.includes(text)||all.includes(text.replace(/[.]$/,'')),text);
 });
 
