@@ -31,6 +31,7 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import { withDeploymentHeaders } from "./deployment-headers";
 import { writeFreezeActive, writeFreezeResponse } from "./write-freeze";
+import { pagePathname, pageSearch } from "./page-path";
 
 interface Env {
   ASSETS: Fetcher;
@@ -194,12 +195,17 @@ const app = {
 
     const requestedLocale = normalizeLocale(url.searchParams.get("lang"));
     const routedHeaders = new Headers(request.headers);
-    routedHeaders.set("x-spanishcue-pathname", url.pathname);
+    // Client-side navigation fetches `<page>.rsc`; every route, identity and
+    // entitlement decision must see the page path, or in-app links render as
+    // signed out (the /cuenta tabs went blank this way).
+    const rscPayload = url.pathname.endsWith(".rsc");
+    const pagePath = pagePathname(url.pathname);
+    routedHeaders.set("x-spanishcue-pathname", pagePath);
     routedHeaders.delete("x-spanishcue-identity-checked");
     if (requestedLocale) routedHeaders.set("x-spanishcue-locale", requestedLocale);
     const routedRequest = new Request(request, { headers: routedHeaders });
 
-    let pathname:string;try{pathname=decodeURIComponent(url.pathname).replace(/\/+$/, '')||'/'}catch{return new Response('Bad request',{status:400})}
+    let pathname:string;try{pathname=decodeURIComponent(pagePath).replace(/\/+$/, '')||'/'}catch{return new Response('Bad request',{status:400})}
     const lesson=lessonAtPath(pathname,lessons);
     const premiumBoard=isPremiumBoardPath(pathname);
     const autoestudio=isAutoestudioPath(pathname);
@@ -241,10 +247,10 @@ const app = {
       }
       if(administrative&&!verifiedUser) return noStoreRedirect(new URL('/ingresar?modo=entrar&returnTo=%2Fadmin',url),verifiedLocale);
       if(administrative) return noStoreRedirect(new URL('/cuenta',url),verifiedLocale);
-      return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(url.pathname+url.search)}`,url),verifiedLocale);
+      return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(pagePath+pageSearch(url))}`,url),verifiedLocale);
     }
     const accountId=accountIdFromHeaders(verifiedHeaders);
-    if (accountId&&lesson&&request.method==='GET'&&!writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
+    if (accountId&&lesson&&!rscPayload&&request.method==='GET'&&!writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
       ctx.waitUntil(saveLessonProgress(env.DB,accountId,lesson.id).catch(()=>undefined));
     }
     if (url.pathname === "/_vinext/image") {
