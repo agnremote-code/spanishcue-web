@@ -1,6 +1,6 @@
 import { getUserSessionFromHeaders } from '../../access-policy';
 import { SECTION_ORDER, type SectionKey } from '../curriculum/types';
-import type { ModuleProgress, ProgressState } from '../progress/model';
+import { levelProgress, levelWeekIds, requiredSectionsDone, type ModuleProgress, type ProgressState } from '../progress/model';
 
 // Imported only by route handlers and the Worker. Never import from a client component.
 export type ShareEnvironment = { DB: D1Database; AUTOESTUDIO_SHARE_SECRET?: string };
@@ -134,9 +134,26 @@ export async function listPasses(request: Request,env: ShareEnvironment) {
   const owner=teacher(request);configured(env);await rateLimit(env,`teacher:${owner}`);
   const passes=await env.DB.prepare('SELECT p.*,l.alias FROM autoestudio_passes p JOIN autoestudio_learners l ON l.id=p.learner_id AND l.owner_id=p.owner_id WHERE p.owner_id=? ORDER BY p.created_at DESC LIMIT 500').bind(owner).all<Pass>();
   const learners=await env.DB.prepare('SELECT id,alias,created_at AS createdAt FROM autoestudio_learners WHERE owner_id=? ORDER BY created_at DESC LIMIT 500').bind(owner).all();
-  const summaries=await env.DB.prepare(`SELECT p.id,COUNT(g.module_id) AS started,SUM(CASE WHEN g.completed_at IS NOT NULL THEN 1 ELSE 0 END) AS completed,MAX(g.updated_at) AS lastActivity,(SELECT recent.module_id FROM autoestudio_progress recent WHERE recent.learner_id=p.learner_id AND recent.module_id LIKE p.level || '-%' ORDER BY recent.updated_at DESC,recent.module_id DESC LIMIT 1) AS lastModule FROM autoestudio_passes p LEFT JOIN autoestudio_progress g ON g.learner_id=p.learner_id AND g.module_id LIKE p.level || '-%' WHERE p.owner_id=? GROUP BY p.id`).bind(owner).all<{id:string;started:number;completed:number;lastActivity:string|null;lastModule:string|null}>();
-  const summaryById=new Map(summaries.results.map(s=>[s.id,s]));
-  return response({passes:passes.results.map(p=>{const s=summaryById.get(p.id);return {...publicPass(p),summary:p.alias?{started:s?.started??0,completed:s?.completed??0,lastActivity:s?.lastActivity??null,lastModule:s?.lastModule??null,percent:Math.round((s?.completed??0)/20*100)}:null};}),learners:learners.results});
+  // One read of every week row this teacher's learners have; summaries are derived with the
+  // same pure model the learner sees, so both sides always agree on what "done" means.
+  const rows=await env.DB.prepare('SELECT g.learner_id,g.module_id,g.sections,g.last_section,g.completed_at,g.updated_at,g.started_at FROM autoestudio_progress g JOIN autoestudio_learners l ON l.id=g.learner_id WHERE l.owner_id=?').bind(owner).all<{learner_id:string;module_id:string;sections:string;last_section:SectionKey|null;completed_at:string|null;updated_at:string;started_at:string}>();
+  const byLearner=new Map<string,typeof rows.results>();
+  for(const row of rows.results){const list=byLearner.get(row.learner_id)??[];list.push(row);byLearner.set(row.learner_id,list);}
+  return response({passes:passes.results.map(p=>({...publicPass(p),summary:p.alias?summarize(p.level,(byLearner.get(p.learner_id)??[]).filter(r=>r.module_id.startsWith(`${p.level}-`))):null})),learners:learners.results});
+}
+function parseSections(raw:string):ModuleProgress['sections']{
+  try{const value=JSON.parse(raw);return value&&typeof value==='object'&&!Array.isArray(value)?value:{};}catch{return {};}
+}
+function summarize(level:string,rows:{module_id:string;sections:string;last_section:SectionKey|null;completed_at:string|null;updated_at:string;started_at:string}[]){
+  const state:ProgressState={version:1,modules:{}};
+  let latest:(typeof rows)[number]|null=null;
+  for(const row of rows){
+    state.modules[row.module_id]={startedAt:row.started_at,sections:parseSections(row.sections),...(row.last_section?{lastSection:row.last_section}:{}),...(row.completed_at?{completedAt:row.completed_at}:{})};
+    if(!latest || row.updated_at>latest.updated_at || (row.updated_at===latest.updated_at && row.module_id>latest.module_id))latest=row;
+  }
+  const p=levelProgress(state,levelWeekIds(level));
+  return {started:p.started,completed:p.completed,inProgress:p.started-p.completed,percent:p.percent,sectionsCompleted:p.sectionsCompleted,sectionsTotal:p.sectionsTotal,coursePercent:p.coursePercent,
+    lastModule:latest?.module_id??null,lastSection:latest?.last_section??null,lastModuleSections:latest?requiredSectionsDone(state.modules[latest.module_id]):0,lastActivity:latest?.updated_at??null};
 }
 export async function createPass(request: Request,env: ShareEnvironment) {
   sameOrigin(request);const owner=teacher(request);configured(env);await rateLimit(env,`mint:${owner}`,20);
@@ -173,7 +190,7 @@ async function progressFor(env: ShareEnvironment, learnerId:string, level?:strin
   const rows=await env.DB.prepare(`SELECT * FROM autoestudio_progress WHERE learner_id=? ${level?'AND module_id LIKE ?':''} ORDER BY updated_at ASC,module_id ASC`).bind(...(level?[learnerId,`${level}-%`]:[learnerId])).all<ProgressRow>();
   const state:ProgressState={version:1,modules:{}};
   for(const row of rows.results){
-    state.modules[row.module_id]={startedAt:row.started_at,sections:JSON.parse(row.sections),...(row.last_section?{lastSection:row.last_section}:{}),...(row.completed_at?{completedAt:row.completed_at}:{}),...(row.quiz_score!==null?{quiz:{score:row.quiz_score,total:row.quiz_total!,best:row.quiz_best!,attempts:row.quiz_attempts!,at:row.quiz_at!}}:{})};
+    state.modules[row.module_id]={startedAt:row.started_at,updatedAt:row.updated_at,sections:parseSections(row.sections),...(row.last_section?{lastSection:row.last_section}:{}),...(row.completed_at?{completedAt:row.completed_at}:{}),...(row.quiz_score!==null?{quiz:{score:row.quiz_score,total:row.quiz_total!,best:row.quiz_best!,attempts:row.quiz_attempts!,at:row.quiz_at!}}:{})};
     state.lastModule=row.module_id;state.updatedAt=row.updated_at;
   }
   return state;
@@ -217,11 +234,12 @@ export async function putProgress(request:Request,env:ShareEnvironment){
   if(typeof data.moduleId!=='string' || !new RegExp(`^${identity.level}-(0[1-9]|1[0-9]|20)$`).test(data.moduleId))fail(403,'outside_level');
   const progress=structuralProgress(data.progress),now=new Date().toISOString(),q=progress.quiz;
   // SQL merges section keys atomically; concurrent devices cannot erase completion.
+  // Existing keys win the patch, so the first time a section was finished is kept.
   // EXISTS also rechecks revision/revocation at the exact write, after async parsing.
   await env.DB.prepare(`INSERT INTO autoestudio_progress(learner_id,module_id,started_at,updated_at,sections,last_section,quiz_score,quiz_total,quiz_best,quiz_attempts,quiz_at)
     SELECT ?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM autoestudio_passes WHERE id=? AND learner_id=? AND revision=? AND revoked_at IS NULL)
     ON CONFLICT(learner_id,module_id) DO UPDATE SET
-    updated_at=excluded.updated_at,sections=json_patch(autoestudio_progress.sections,excluded.sections),last_section=COALESCE(excluded.last_section,autoestudio_progress.last_section),
+    updated_at=excluded.updated_at,sections=json_patch(excluded.sections,autoestudio_progress.sections),last_section=COALESCE(excluded.last_section,autoestudio_progress.last_section),
     quiz_score=COALESCE(excluded.quiz_score,autoestudio_progress.quiz_score),quiz_total=COALESCE(excluded.quiz_total,autoestudio_progress.quiz_total),
     quiz_best=CASE WHEN excluded.quiz_best IS NULL THEN autoestudio_progress.quiz_best WHEN autoestudio_progress.quiz_total=excluded.quiz_total THEN MAX(COALESCE(autoestudio_progress.quiz_best,0),excluded.quiz_best) ELSE excluded.quiz_best END,
     quiz_attempts=CASE WHEN excluded.quiz_attempts IS NULL THEN autoestudio_progress.quiz_attempts ELSE MAX(COALESCE(autoestudio_progress.quiz_attempts,0),excluded.quiz_attempts) END,quiz_at=COALESCE(excluded.quiz_at,autoestudio_progress.quiz_at)
