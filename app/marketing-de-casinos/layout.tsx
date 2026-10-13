@@ -2,10 +2,10 @@ import type {Metadata} from "next";
 import type {ReactNode} from "react";
 
 export const metadata:Metadata={
-  title:"Marketing de casinos: decisiones que cuestan millones · B1 | SPANISHCUE",
-  description:"Clase de conversación B1 de 60 minutos para defender decisiones de CRM, fidelización, promociones y presupuesto en un resort de Las Vegas.",
+  title:"El Gran Meridiano · Casino 3D en Las Vegas · Conversación A1–C2 | SPANISHCUE",
+  description:"Un videojuego de conversación en 3D: Valentina recorre un casino de tres pisos en Las Vegas, con ascensor, veinte escenas, respuestas para elegir y conversación. Seis niveles; el C1 es un recorrido de marketing de casinos.",
   alternates:{canonical:"https://spanishcue.com/marketing-de-casinos"},
-  openGraph:{images:["/marketing-de-casinos/preview.svg"]},
+  openGraph:{images:["/marketing-de-casinos/cover.webp"]},
 };
 
 export default function Layout({children}:{children:ReactNode}){return children;}

@@ -1,0 +1,298 @@
+// El Gran Meridiano · the casino as plain data: three floors, the Strip in
+// front, furniture, colliders, the people at each white circle and the
+// elevator. Units are metres: x grows east, z grows south, y is up. A
+// heading of 0 faces +z (toward the Strip), π faces the back of the casino.
+// The renderer (casino3d.ts, World3D.tsx) only draws what is described here,
+// so the layout and the movement rules can be tested without WebGL.
+
+export const FLOOR_H = 7;
+export const CEILING = 6;
+export const WALL = 0.4;
+
+// The interior of every floor; the ground floor also opens to the plaza.
+export const FLOORS = [
+  { id: 1, name: 'La Planta', sub: 'Recepción · tragamonedas · mesas · bar', y: 0, bounds: { minX: -42, maxX: 42, minZ: -52, maxZ: 50 } },
+  { id: 2, name: 'El Bulevar', sub: 'Apuestas · póker · bufé · teatro · capilla · club', y: FLOOR_H, bounds: { minX: -42, maxX: 42, minZ: -52, maxZ: 20 } },
+  { id: 3, name: 'Piso VIP', sub: 'Bacará · puros · anfitrión · oficina · terraza', y: FLOOR_H * 2, bounds: { minX: -42, maxX: 42, minZ: -52, maxZ: 26 } },
+];
+export const floorById = (id) => FLOORS.find((f) => f.id === id) ?? FLOORS[0];
+
+// Arrival on the Strip, looking at the entrance.
+export const SPAWN = { floor: 1, x: 0, z: 43, heading: Math.PI };
+// The elevator lobby is in the same place on every floor.
+export const ELEVATOR = { x: 31, z: -46.6, radius: 1.5, doors: [28, 34], wallZ: -52 };
+export const ELEVATOR_ARRIVAL = { x: 31, z: -44.2, heading: 0 };
+
+// ------------------------------------------------------------------ walls
+// Wall segments [x0, z0, x1, z1]; openings are simply gaps between segments.
+const outer = (south, doorHalf) => [
+  [-42, -52, 42, -52],
+  [-42, -52, -42, south], [42, -52, 42, south],
+  [-42, south, -doorHalf, south], [doorHalf, south, 42, south],
+];
+export const WALLS = {
+  1: [
+    ...outer(20, 4.5),
+    // Cashier cage and the corridor to the elevators.
+    [-42, -33, -33, -33], [-33, -33, -33, -36], [-33, -44, -33, -52],
+    [24, -52, 24, -48.5], [24, -43, 24, -42], [24, -42, 26, -42], [38, -42, 42, -42],
+  ],
+  2: [
+    ...outer(20, 0),
+    // Sports book, poker salon, theatre, chapel and club have their own walls.
+    [-42, -24, -30, -24], [-24, -24, -16, -24], [-16, -52, -16, -46], [-16, -40, -16, -30],
+    [-16, 8, -16, -2], [-16, -8, -16, -14],
+    [16, -30, 16, -22], [16, -16, 16, 2], [16, 2, 24, 2], [30, 2, 42, 2],
+    [-10, 20, -10, 6], [10, 20, 10, 6], [-10, 6, -3, 6], [3, 6, 10, 6],
+    [24, -52, 24, -48.5], [24, -43, 24, -42], [24, -42, 26, -42], [38, -42, 42, -42],
+  ],
+  3: [
+    [-42, -52, 42, -52], [-42, -52, -42, 0], [42, -52, 42, 0],
+    [-42, 0, -7, 0], [7, 0, 42, 0],
+    // Cigar room, office, baccarat salon and the VIP door.
+    [-42, -26, -32, -26], [-26, -26, -16, -26], [-16, -52, -16, -42], [-16, -36, -16, -26],
+    [-42, -22, -30, -22], [-24, -22, -16, -22], [-16, -22, -16, -14], [-16, -6, -16, 0],
+    [-12, -52, -12, -30], [-12, -30, 14, -30], [14, -52, 14, -48], [14, -40, 14, -30],
+    [24, -52, 24, -48.5], [24, -43, 24, -42], [24, -42, 26, -42], [38, -42, 42, -42],
+    // Glass railing around the terrace.
+    [-30, 0, -30, 26], [30, 0, 30, 26], [-30, 26, 30, 26],
+  ],
+};
+
+// ------------------------------------------------------------------ furniture
+// { type, x, z, w, d, rot } — w along x and d along z before `rot` quarter
+// turns. `solid: false` for things the heroine can walk over or through.
+const slotBank = (x, z0, z1) => ({ type: 'slots', x, z: (z0 + z1) / 2, w: 1.4, d: z1 - z0 });
+export const FURNITURE = {
+  1: [
+    // Lobby and hotel.
+    { type: 'desk', x: -20, z: 10, w: 12, d: 1.6 },
+    { type: 'backwall', x: -20, z: 6.6, w: 14, d: 0.6 },
+    { type: 'chandelier', x: 0, z: 12, w: 1, d: 1, solid: false },
+    { type: 'fountain-in', x: 0, z: 4, w: 6, d: 6 },
+    { type: 'column', x: -9, z: 15, w: 1.2, d: 1.2 }, { type: 'column', x: 9, z: 15, w: 1.2, d: 1.2 },
+    { type: 'column', x: -9, z: -6, w: 1.2, d: 1.2 }, { type: 'column', x: 9, z: -6, w: 1.2, d: 1.2 },
+    { type: 'column', x: -9, z: -30, w: 1.2, d: 1.2 }, { type: 'column', x: 9, z: -30, w: 1.2, d: 1.2 },
+    { type: 'sofa', x: 18, z: 16, w: 4, d: 1.2 }, { type: 'sofa', x: -30, z: 16, w: 4, d: 1.2 },
+    // Slots: four double banks with a cross aisle.
+    slotBank(18, -26, -6), slotBank(18, 0, 12), slotBank(26, -26, -6), slotBank(26, 0, 12),
+    slotBank(34, -26, -6), slotBank(34, 0, 12),
+    { type: 'bigslot', x: 39.6, z: -2, w: 1.6, d: 3 },
+    // Table games.
+    { type: 'roulette', x: -18, z: -8, w: 3.4, d: 1.8 },
+    { type: 'roulette', x: -30, z: -8, w: 3.4, d: 1.8 },
+    { type: 'blackjack', x: -4, z: -14, w: 3, d: 1.7 },
+    { type: 'blackjack', x: -4, z: -22, w: 3, d: 1.7 },
+    { type: 'craps', x: 8, z: -26, w: 4.6, d: 2.2 },
+    { type: 'blackjack', x: -26, z: -20, w: 3, d: 1.7 },
+    // Cashier, bar and piano.
+    { type: 'cage', x: -37.5, z: -40, w: 9, d: 14 },
+    { type: 'bar', x: -6, z: -42, w: 8, d: 5 },
+    { type: 'piano', x: 4, z: -46, w: 2.2, d: 1.6 },
+    { type: 'lounge', x: 10, z: -40, w: 1.8, d: 1.8 }, { type: 'lounge', x: -18, z: -42, w: 1.8, d: 1.8 },
+    { type: 'planter', x: 22, z: 18.6, w: 1.4, d: 1.4 }, { type: 'planter', x: -22, z: 18.6, w: 1.4, d: 1.4 },
+  ],
+  2: [
+    { type: 'screens', x: -41.4, z: -38, w: 0.6, d: 24 },
+    { type: 'betdesk', x: -30, z: -46, w: 8, d: 1.4 },
+    { type: 'betseats', x: -32, z: -36, w: 6, d: 1 }, { type: 'betseats', x: -32, z: -31, w: 6, d: 1 },
+    { type: 'poker', x: -34, z: -12, w: 3.4, d: 2 }, { type: 'poker', x: -25, z: -4, w: 3.4, d: 2 }, { type: 'poker', x: -34, z: 2, w: 3.4, d: 2 },
+    { type: 'buffet', x: 0, z: -47, w: 18, d: 1.6 },
+    { type: 'buffet', x: -6, z: -37, w: 6, d: 1.4 }, { type: 'buffet', x: 6, z: -37, w: 6, d: 1.4 },
+    { type: 'chocolate', x: 0, z: -37, w: 1.4, d: 1.4 },
+    { type: 'stage', x: 33, z: -16, w: 16, d: 16 },
+    { type: 'vanity', x: 19, z: -28, w: 5, d: 1 },
+    { type: 'altar', x: 0, z: 18.2, w: 4, d: 1 },
+    { type: 'pew', x: -4, z: 8.5, w: 4.4, d: 0.8 }, { type: 'pew', x: 4, z: 8.5, w: 4.4, d: 0.8 },
+    { type: 'pew', x: -4, z: 11, w: 4.4, d: 0.8 }, { type: 'pew', x: 4, z: 11, w: 4.4, d: 0.8 },
+    { type: 'pew', x: -4, z: 13.5, w: 4.4, d: 0.8 }, { type: 'pew', x: 4, z: 13.5, w: 4.4, d: 0.8 },
+    { type: 'djbooth', x: 38, z: 11, w: 2.4, d: 5 },
+    { type: 'dancefloor', x: 28, z: 11, w: 10, d: 10, solid: false },
+    { type: 'vipbooth', x: 20, z: 18, w: 5, d: 1.4 },
+    { type: 'column', x: -9, z: -10, w: 1.2, d: 1.2 }, { type: 'column', x: 9, z: -10, w: 1.2, d: 1.2 },
+    { type: 'column', x: -9, z: -24, w: 1.2, d: 1.2 }, { type: 'column', x: 9, z: -24, w: 1.2, d: 1.2 },
+    { type: 'statue', x: 0, z: -14, w: 3, d: 3 },
+    { type: 'chandelier', x: 0, z: -14, w: 1, d: 1, solid: false },
+  ],
+  3: [
+    { type: 'baccarat', x: 0, z: -43, w: 4, d: 2.2 },
+    { type: 'sofa', x: -8, z: -34, w: 3.4, d: 1.2 }, { type: 'sofa', x: 9, z: -34, w: 3.4, d: 1.2 },
+    { type: 'cardtable', x: -30, z: -40, w: 2.4, d: 2.4 },
+    { type: 'armchair', x: -38, z: -48, w: 1.4, d: 1.4 }, { type: 'armchair', x: -22, z: -48, w: 1.4, d: 1.4 },
+    { type: 'armchair', x: -38, z: -31, w: 1.4, d: 1.4 },
+    { type: 'humidor', x: -41, z: -40, w: 1, d: 6 },
+    { type: 'officedesk', x: -32.5, z: -12, w: 1.8, d: 4 },
+    { type: 'safe', x: -40.8, z: -18, w: 1.2, d: 1.4 },
+    { type: 'bookcase', x: -41.4, z: -8, w: 0.8, d: 8 },
+    { type: 'hostdesk', x: 0, z: -17.6, w: 4, d: 1.2 },
+    { type: 'photos', x: 0, z: -21.8, w: 8, d: 0.3, solid: false },
+    { type: 'velvet', x: 20, z: -40, w: 0.3, d: 1.2 }, { type: 'velvet', x: 20, z: -48, w: 0.3, d: 1.2 },
+    { type: 'column', x: 20, z: -10, w: 1.2, d: 1.2 }, { type: 'column', x: -8, z: -4, w: 1.2, d: 1.2 },
+    { type: 'lounge', x: 26, z: -16, w: 1.8, d: 1.8 },
+    { type: 'chandelier', x: 0, z: -42, w: 1, d: 1, solid: false },
+    { type: 'deckchair', x: -20, z: 14, w: 1, d: 2.2 }, { type: 'deckchair', x: -16, z: 14, w: 1, d: 2.2 },
+    { type: 'firepit', x: -18, z: 6, w: 2.4, d: 2.4 },
+    { type: 'planter', x: 16, z: 6, w: 1.4, d: 1.4 },
+  ],
+};
+
+// ------------------------------------------------------------------ scenes
+// The twenty white circles. `npc` is where the main person stands or sits,
+// `spot` the circle, `look` their appearance (people3d Look) and `pose`.
+// `extras` are background people that belong to the scene.
+const blonde = '#e9cf8a';
+export const SCENES = [
+  { id: 'portero', floor: 1, place: 'La entrada', name: 'Rocco', role: 'Portero', spot: { x: 1.4, z: 26.2 }, npc: { x: 3.4, z: 23.4, heading: 0.35 }, pose: 'stand', look: { skin: '#d7a982', age: 'old', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#cfcfcf', top: 'uniform', topColor: '#6e1424', bottom: 'pants', bottomColor: '#1a1414', extras: ['mustache'], seed: 101 } },
+  { id: 'recepcion', floor: 1, place: 'Recepción del hotel', name: 'Marisol', role: 'Recepcionista', spot: { x: -20, z: 12.3 }, npc: { x: -20, z: 8.2, heading: 0 }, pose: 'stand', look: { skin: '#b9825c', age: 'young', body: 'f', hairStyle: 'bun', hairColor: '#2a1a12', top: 'suit', topColor: '#1d2433', bottom: 'skirt', bottomColor: '#1d2433', extras: ['earrings'], seed: 102 } },
+  { id: 'tragamonedas', floor: 1, place: 'Tragamonedas', name: 'Doña Pilar', role: 'Jugadora de toda la vida', spot: { x: 21.8, z: 3.4 }, npc: { x: 24.3, z: 4.2, heading: Math.PI / 2 }, pose: 'sit', smoke: true, look: { skin: '#e8c3a6', age: 'elderly', body: 'f', build: 'heavy', hairStyle: 'curly', hairColor: '#b9a7c9', top: 'sweater', topColor: '#c2477d', bottom: 'pants', bottomColor: '#3a3340', extras: ['glasses', 'earrings'], seed: 103 } },
+  { id: 'ruleta', floor: 1, place: 'Ruleta', name: 'Nico', role: 'Crupier', spot: { x: -19.8, z: -4.6 }, npc: { x: -18, z: -9.6, heading: 0 }, pose: 'stand', look: { skin: '#c48f69', age: 'young', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#1a1210', top: 'suit', topColor: '#1a1a1d', bottom: 'pants', bottomColor: '#141416', seed: 104 },
+    extras: [{ x: -16.2, z: -6.6, heading: Math.PI + 0.3, pose: 'sit', smoke: true, cigar: true, look: { skin: '#e2b896', age: 'old', body: 'm', build: 'heavy', hairStyle: 'bald', hairColor: '#8a8a8a', top: 'suit', topColor: '#e9e4d6', bottom: 'pants', bottomColor: '#e9e4d6', extras: ['mustache'], seed: 141 } },
+      { x: -20.2, z: -6.5, heading: Math.PI - 0.3, pose: 'sit', look: { skin: '#8d5a3c', age: 'adult', body: 'f', hairStyle: 'long', hairColor: '#120d0b', top: 'dress', topColor: '#1f6e5a', extras: ['earrings'], seed: 142 } }] },
+  { id: 'blackjack', floor: 1, place: 'Blackjack', name: 'Sam Ortega', role: 'Jugador de blackjack', spot: { x: -6.6, z: -10.6 }, npc: { x: -3.6, z: -12.7, heading: Math.PI }, pose: 'sit', look: { skin: '#d3a27c', age: 'adult', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#4a3020', top: 'jacket', topColor: '#3d3a52', bottom: 'jeans', bottomColor: '#1f2840', extras: ['glasses'], seed: 105 },
+    extras: [{ x: -4, z: -15.3, heading: 0, pose: 'stand', look: { skin: '#e9c7a8', age: 'young', body: 'f', hairStyle: 'ponytail', hairColor: '#6a2a18', top: 'suit', topColor: '#1a1a1d', bottom: 'pants', bottomColor: '#141416', seed: 151 } },
+      { x: 1.6, z: -9.6, heading: -2.4, pose: 'arms', look: { skin: '#6e4a34', age: 'adult', body: 'm', build: 'athletic', hairStyle: 'buzz', hairColor: '#0e0b0a', top: 'suit', topColor: '#141418', bottom: 'pants', bottomColor: '#141418', extras: ['headphones'], seed: 152 } }] },
+  { id: 'dados', floor: 1, place: 'Mesa de dados', name: 'Kike', role: 'El novio', spot: { x: 11.4, z: -22.6 }, npc: { x: 8.6, z: -24.3, heading: Math.PI }, pose: 'wave', look: { skin: '#e1b48e', age: 'young', body: 'm', build: 'average', hairStyle: 'curly', hairColor: '#3a2416', top: 'shirt', topColor: '#f2f0ea', bottom: 'jeans', bottomColor: '#2a3550', extras: ['hat'], seed: 106 },
+    extras: [{ x: 6.4, z: -24.4, heading: Math.PI, pose: 'dance', look: { skin: '#c99468', age: 'young', body: 'm', hairStyle: 'short', hairColor: '#20140e', top: 'tshirt', topColor: '#d43a3a', bottom: 'jeans', bottomColor: '#24304a', seed: 161 } },
+      { x: 10.6, z: -25, heading: -1.6, pose: 'arms', look: { skin: '#9a6644', age: 'young', body: 'm', build: 'heavy', hairStyle: 'buzz', hairColor: '#120d0b', top: 'tshirt', topColor: '#2a7ad0', bottom: 'shorts', bottomColor: '#cbb48a', seed: 162 } },
+      { x: 6, z: -27.6, heading: 0.3, pose: 'scream', look: { skin: '#e8c0a0', age: 'young', body: 'm', hairStyle: 'cap', hairColor: '#5a3a24', top: 'hoodie', topColor: '#2f2f35', bottom: 'jeans', bottomColor: '#1f2840', seed: 163 } },
+      { x: 8, z: -27.7, heading: 0, pose: 'stand', look: { skin: '#c48f69', age: 'adult', body: 'm', hairStyle: 'short', hairColor: '#1a1210', top: 'suit', topColor: '#1a1a1d', bottom: 'pants', bottomColor: '#141416', seed: 164 } }] },
+  { id: 'caja', floor: 1, place: 'La caja', name: 'Dolores', role: 'Cajera', spot: { x: -30.6, z: -40 }, npc: { x: -34.4, z: -40, heading: Math.PI / 2 }, pose: 'stand', look: { skin: '#e6c2a0', age: 'old', body: 'f', build: 'average', hairStyle: 'bob', hairColor: '#5a5a5a', top: 'shirt', topColor: '#e8e2d4', bottom: 'skirt', bottomColor: '#2a2a30', extras: ['glasses'], seed: 107 } },
+  { id: 'bar', floor: 1, place: 'Bar central', name: 'Leo', role: 'Bartender', spot: { x: -6, z: -37.2 }, npc: { x: -6, z: -40.4, heading: 0 }, pose: 'stand', look: { skin: '#a8724e', age: 'adult', body: 'm', build: 'athletic', hairStyle: 'short', hairColor: '#0e0b0a', top: 'shirt', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['beard'], seed: 108 },
+    extras: [{ x: 4, z: -44.4, heading: Math.PI, pose: 'sit', piano: true, look: { skin: '#5e3c28', age: 'old', body: 'm', hairStyle: 'short', hairColor: '#d8d8d8', top: 'suit', topColor: '#f1ede2', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 181 } },
+      { x: -10.4, z: -38.4, heading: 2.6, pose: 'sit', smoke: true, look: { skin: '#f0d0b4', age: 'adult', body: 'f', hairStyle: 'bob', hairColor: '#111111', top: 'dress', topColor: '#121214', extras: ['earrings'], seed: 182 } }] },
+
+  { id: 'apuestas', floor: 2, place: 'Apuestas deportivas', name: 'Ramiro', role: 'Apostador', spot: { x: -25.2, z: -38.6 }, npc: { x: -27.8, z: -39.6, heading: -Math.PI / 2 }, pose: 'phone', look: { skin: '#d8a57e', age: 'adult', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#3a2a20', top: 'shirt', topColor: '#7d97b8', bottom: 'pants', bottomColor: '#3a3530', seed: 201 },
+    extras: [{ x: -32, z: -35.2, heading: -Math.PI / 2, pose: 'sit', look: { skin: '#c48f69', age: 'adult', body: 'm', hairStyle: 'cap', hairColor: '#1a1210', top: 'tshirt', topColor: '#2c6e3a', bottom: 'jeans', bottomColor: '#24304a', seed: 211 } },
+      { x: -34, z: -30.2, heading: -Math.PI / 2, pose: 'sit', smoke: true, look: { skin: '#e8c0a0', age: 'old', body: 'm', hairStyle: 'bald', hairColor: '#888888', top: 'jacket', topColor: '#5a4632', bottom: 'pants', bottomColor: '#2a2a2a', seed: 212 } }] },
+  { id: 'poker', floor: 2, place: 'Salón Esmeralda', name: 'El Holandés', role: 'Jugador de póker', spot: { x: -22.4, z: -1.4 }, npc: { x: -25, z: -2.6, heading: Math.PI }, pose: 'sit', smoke: true, look: { skin: '#f0d6c0', age: 'old', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#e8e2d0', top: 'suit', topColor: '#2a2e2a', bottom: 'pants', bottomColor: '#1a1c1a', extras: ['glasses', 'beard'], seed: 202 },
+    extras: [{ x: -25, z: -5.4, heading: 0, pose: 'stand', look: { skin: '#c48f69', age: 'young', body: 'f', hairStyle: 'ponytail', hairColor: '#1a1210', top: 'suit', topColor: '#14301e', bottom: 'pants', bottomColor: '#141416', seed: 221 } },
+      { x: -27, z: -4.2, heading: Math.PI / 2, pose: 'sit', look: { skin: '#8d5a3c', age: 'adult', body: 'm', hairStyle: 'cap', hairColor: '#120d0b', top: 'hoodie', topColor: '#3a3a44', bottom: 'jeans', bottomColor: '#24304a', extras: ['headphones'], seed: 222 } },
+      { x: -34, z: -10.4, heading: Math.PI, pose: 'sit', smoke: true, look: { skin: '#e2b896', age: 'adult', body: 'f', hairStyle: 'long', hairColor: '#8a2a18', top: 'dress', topColor: '#5a1030', extras: ['earrings'], seed: 223 } }] },
+  { id: 'bufe', floor: 2, place: 'Bufé', name: 'Tere', role: 'Chef', spot: { x: 3.2, z: -44.4 }, npc: { x: 3.2, z: -49.2, heading: 0 }, pose: 'cook', look: { skin: '#c99468', age: 'adult', body: 'f', build: 'heavy', hairStyle: 'bun', hairColor: '#2a1a12', top: 'apron', topColor: '#f4f2ec', bottom: 'pants', bottomColor: '#232323', seed: 203 },
+    extras: [{ x: -4, z: -40.6, heading: Math.PI, pose: 'carry', look: { skin: '#e8c0a0', age: 'adult', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#6a4a2a', top: 'tshirt', topColor: '#e8c84a', bottom: 'shorts', bottomColor: '#3a5a8a', seed: 231 } }] },
+  { id: 'teatro', floor: 2, place: 'Camerino del teatro', name: 'El Gran Faustino', role: 'Mago', spot: { x: 19.6, z: -24.2 }, npc: { x: 19.4, z: -26.8, heading: 0 }, pose: 'point', look: { skin: '#e2b896', age: 'adult', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#0e0b0a', top: 'suit', topColor: '#3a0e4a', bottom: 'pants', bottomColor: '#121214', extras: ['mustache'], seed: 204 },
+    extras: [{ x: 22, z: -26.6, heading: -0.6, pose: 'dance', look: { skin: '#b9825c', age: 'young', body: 'f', build: 'athletic', hairStyle: 'long', hairColor: '#e0b860', top: 'dress', topColor: '#d4af37', extras: ['earrings'], seed: 241 } }] },
+  { id: 'capilla', floor: 2, place: 'Capilla «Amor Exprés»', name: 'Elvis', role: 'Oficiante', spot: { x: -2.8, z: 16.2 }, npc: { x: 0, z: 19.2, heading: Math.PI }, pose: 'guitar', look: { skin: '#e8c0a0', age: 'adult', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#0a0a0c', top: 'jacket', topColor: '#f6f2ea', bottom: 'pants', bottomColor: '#f6f2ea', extras: ['glasses'], seed: 205 },
+    extras: [{ x: -0.7, z: 16.8, heading: 0, pose: 'hug', look: { skin: '#f0d0b4', age: 'young', body: 'f', hairStyle: 'long', hairColor: '#6a3a1a', top: 'dress', topColor: '#fbf7f0', seed: 251 } },
+      { x: 0.7, z: 16.8, heading: 0, pose: 'hug', look: { skin: '#a8724e', age: 'young', body: 'm', hairStyle: 'short', hairColor: '#1a1210', top: 'suit', topColor: '#2a3a6a', bottom: 'pants', bottomColor: '#2a3a6a', seed: 252 } }] },
+  { id: 'discoteca', floor: 2, place: 'Club nocturno', name: 'Bruno', role: 'Hombre del traje gris', spot: { x: 24.6, z: 14.6 }, npc: { x: 22.4, z: 15.4, heading: Math.PI / 2 }, pose: 'arms', look: { skin: '#c48f69', age: 'adult', body: 'm', build: 'heavy', height: 1.92, hairStyle: 'buzz', hairColor: '#1a1210', top: 'suit', topColor: '#6b6e74', bottom: 'pants', bottomColor: '#6b6e74', seed: 206 },
+    extras: [{ x: 28, z: 9, heading: 0.4, pose: 'dance', look: { skin: '#8d5a3c', age: 'young', body: 'f', hairStyle: 'afro', hairColor: '#120d0b', top: 'dress', topColor: '#e8287a', seed: 261 } },
+      { x: 30, z: 12, heading: 2.2, pose: 'dance', look: { skin: '#e8c0a0', age: 'young', body: 'm', hairStyle: 'short', hairColor: '#e0c070', top: 'shirt', topColor: '#20a0c0', bottom: 'jeans', bottomColor: '#1f2840', seed: 262 } },
+      { x: 26.4, z: 12.6, heading: -1, pose: 'dance', look: { skin: '#f0d0b4', age: 'young', body: 'f', hairStyle: 'ponytail', hairColor: '#2a1a12', top: 'tshirt', topColor: '#9a40e0', bottom: 'skirt', bottomColor: '#121214', seed: 263 } },
+      { x: 40.4, z: 11, heading: -Math.PI / 2, pose: 'dance', look: { skin: '#b9825c', age: 'young', body: 'm', hairStyle: 'cap', hairColor: '#120d0b', top: 'hoodie', topColor: '#121214', bottom: 'jeans', bottomColor: '#121214', extras: ['headphones'], seed: 264 } }] },
+
+  { id: 'vip', floor: 3, place: 'La puerta VIP', name: 'Tano', role: 'Guardaespaldas', spot: { x: 22.6, z: -44.6 }, npc: { x: 20.2, z: -42.8, heading: Math.PI / 2 }, pose: 'arms', look: { skin: '#e2b896', age: 'adult', body: 'm', build: 'heavy', height: 1.9, hairStyle: 'short', hairColor: '#0e0b0a', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 301 },
+    extras: [{ x: 20.2, z: -46.4, heading: Math.PI / 2, pose: 'arms', smoke: true, look: { skin: '#c48f69', age: 'adult', body: 'm', build: 'heavy', height: 1.94, hairStyle: 'buzz', hairColor: '#1a1210', top: 'suit', topColor: '#6b6e74', bottom: 'pants', bottomColor: '#6b6e74', seed: 206 } }] },
+  { id: 'bacara', floor: 3, place: 'Salón privado de bacará', name: 'La Condesa', role: 'Gran apostadora', spot: { x: 2.8, z: -38.8 }, npc: { x: 0.6, z: -41.2, heading: Math.PI }, pose: 'sit', smoke: true, look: { skin: '#f3dcc8', age: 'adult', body: 'f', build: 'slim', height: 1.72, hairStyle: 'bob', hairColor: '#111114', top: 'dress', topColor: '#0d3b2e', extras: ['earrings'], seed: 302 },
+    extras: [{ x: 0, z: -44.8, heading: 0, pose: 'stand', look: { skin: '#c48f69', age: 'adult', body: 'm', hairStyle: 'short', hairColor: '#1a1210', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', seed: 321 } }] },
+  { id: 'puros', floor: 3, place: 'Sala de puros', name: 'Don Carmine', role: 'Jefe de la Familia', spot: { x: -26.6, z: -36.4 }, npc: { x: -29.4, z: -38.4, heading: Math.PI * 0.8 }, pose: 'sit', smoke: true, cigar: true, look: { skin: '#dcae88', age: 'old', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#d0d0d0', top: 'suit', topColor: '#1c1c22', bottom: 'pants', bottomColor: '#1c1c22', extras: ['mustache', 'glasses'], seed: 303 },
+    extras: [{ x: -31.6, z: -40, heading: Math.PI / 2, pose: 'sit', smoke: true, cigar: true, look: { skin: '#e2b896', age: 'adult', body: 'm', build: 'heavy', hairStyle: 'bald', hairColor: '#333333', top: 'suit', topColor: '#3a1418', bottom: 'pants', bottomColor: '#121214', extras: ['beard'], seed: 331 } },
+      { x: -30, z: -41.8, heading: 0, pose: 'sit', smoke: true, look: { skin: '#c48f69', age: 'adult', body: 'm', hairStyle: 'short', hairColor: '#0e0b0a', top: 'suit', topColor: '#24242a', bottom: 'pants', bottomColor: '#24242a', extras: ['hat'], seed: 332 } },
+      { x: -37, z: -33, heading: 0.6, pose: 'arms', look: { skin: '#e8c0a0', age: 'adult', body: 'm', build: 'athletic', hairStyle: 'buzz', hairColor: '#2a1a12', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', seed: 333 } }] },
+  { id: 'anfitrion', floor: 3, place: 'Mesa del anfitrión', name: 'Ignacio', role: 'Anfitrión VIP', spot: { x: 0, z: -15.4 }, npc: { x: 0, z: -19, heading: 0 }, pose: 'stand', look: { skin: '#d7a982', age: 'old', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#9a9a9a', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 304 } },
+  { id: 'terraza', floor: 3, place: 'Terraza sobre el Strip', name: 'Marco Montalbán', role: 'El hijo del dueño', spot: { x: 3.4, z: 20.6 }, npc: { x: 6, z: 23.6, heading: 0.2 }, pose: 'lean', smoke: true, look: { skin: '#e2b896', age: 'young', body: 'm', build: 'athletic', height: 1.84, hairStyle: 'short', hairColor: '#2a1a12', top: 'suit', topColor: '#f1ede2', bottom: 'pants', bottomColor: '#121214', seed: 305 } },
+  { id: 'oficina', floor: 3, place: 'Oficina del dueño', name: 'Don Aurelio', role: 'El dueño del casino', spot: { x: -30.2, z: -12 }, npc: { x: -34.6, z: -12, heading: Math.PI / 2 }, pose: 'sit', smoke: true, cigar: true, look: { skin: '#e6c2a0', age: 'elderly', body: 'm', build: 'average', hairStyle: 'short', hairColor: '#f2f2f2', top: 'suit', topColor: '#2a0e14', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 306 } },
+];
+export const SCENE_IDS = SCENES.map((s) => s.id);
+export const sceneById = (id) => SCENES.find((s) => s.id === id);
+export const SPOT_RADIUS = 1.25;
+
+// The heroine: long blonde hair, a red dress, gold earrings, heels.
+export const HEROINE = { name: 'Valentina', look: { skin: '#f1d4bc', age: 'young', body: 'f', build: 'slim', height: 1.74, hairStyle: 'long', hairColor: blonde, top: 'dress', topColor: '#b3081f', shoes: '#5a0410', extras: ['earrings'], seed: 7 } };
+
+// Background life that is not part of a scene: gamblers at the slots,
+// waiters and smokers. Kept small: every person is about thirty meshes.
+export const CROWD = {
+  1: [
+    { x: 19.3, z: -20, heading: -Math.PI / 2, pose: 'sit', smoke: true },
+    { x: 24.7, z: -12, heading: Math.PI / 2, pose: 'sit' },
+    { x: 32.7, z: 6, heading: -Math.PI / 2, pose: 'sit', smoke: true },
+    { x: 35.3, z: -18, heading: Math.PI / 2, pose: 'sit' },
+    { x: 19.3, z: 8, heading: -Math.PI / 2, pose: 'sit' },
+    { x: -30, z: -6.5, heading: Math.PI, pose: 'sit', smoke: true },
+    { x: -4, z: -20.4, heading: Math.PI, pose: 'sit' },
+    { x: 12, z: 14, heading: 2.6, pose: 'walk', walk: { axis: 'z', from: -20, to: 14, speed: 1.1 } },
+    { x: -12, z: -28, heading: 0, pose: 'walk', walk: { axis: 'x', from: -28, to: 14, speed: 1.2 } },
+    { x: -26, z: 14, heading: 0, pose: 'phone' },
+  ],
+  2: [
+    { x: -36, z: -12, heading: Math.PI / 2, pose: 'sit', smoke: true },
+    { x: -32, z: 2, heading: -Math.PI / 2, pose: 'sit' },
+    { x: 33, z: -15, y: 1.1, heading: -Math.PI / 2, pose: 'dance' },
+    { x: 2, z: -30, heading: Math.PI, pose: 'walk', walk: { axis: 'x', from: -12, to: 12, speed: 1 } },
+    { x: 4, z: 13.3, heading: 0, pose: 'sit' },
+  ],
+  3: [
+    { x: -8, z: -34, heading: 0, pose: 'sit', smoke: true },
+    { x: 9, z: -34, heading: 0, pose: 'sit' },
+    { x: -20, z: 14.8, heading: Math.PI, pose: 'lie' },
+    { x: 26, z: -14, heading: Math.PI, pose: 'sit', smoke: true },
+  ],
+};
+
+// ------------------------------------------------------------------ colliders
+const box = (x0, z0, x1, z1) => ({ x0: Math.min(x0, x1), x1: Math.max(x0, x1), z0: Math.min(z0, z1), z1: Math.max(z0, z1) });
+
+export function footprint(item) {
+  const turned = item.rot === 1 || item.rot === 3;
+  const w = turned ? item.d : item.w, d = turned ? item.w : item.d;
+  return box(item.x - w / 2, item.z - d / 2, item.x + w / 2, item.z + d / 2);
+}
+
+export function wallBox([x0, z0, x1, z1]) {
+  const h = WALL / 2;
+  return x0 === x1 ? box(x0 - h, z0, x1 + h, z1) : box(x0, z0 - h, x1, z1 + h);
+}
+
+// Outside the ground floor: the fountain pools and the road edge.
+const PLAZA_SOLIDS = [box(-42, 27, -9, 38.6), box(9, 27, 42, 38.6), box(-42, 48, 42, 50)];
+
+// Tall things the camera should not pass through.
+const TALL = new Set(['slots', 'bigslot', 'backwall', 'cage', 'stage', 'screens', 'bookcase', 'humidor', 'djbooth', 'column', 'vanity']);
+export function cameraBlockers(floor) {
+  return [...(WALLS[floor] ?? []).map(wallBox), ...(FURNITURE[floor] ?? []).filter((f) => TALL.has(f.type)).map(footprint)];
+}
+
+export function solidsFor(floor) {
+  const walls = (WALLS[floor] ?? []).map(wallBox);
+  const things = (FURNITURE[floor] ?? []).filter((f) => f.solid !== false && f.type !== 'chandelier').map(footprint);
+  const people = SCENES.filter((s) => s.floor === floor).flatMap((s) => [s.npc, ...(s.extras ?? [])])
+    .map((p) => box(p.x - 0.32, p.z - 0.32, p.x + 0.32, p.z + 0.32));
+  const crowd = (CROWD[floor] ?? []).filter((c) => !c.walk).map((p) => box(p.x - 0.3, p.z - 0.3, p.x + 0.3, p.z + 0.3));
+  const elevatorWall = [box(24, -52, 42, -51.4)];
+  return [...walls, ...things, ...people, ...crowd, ...elevatorWall, ...(floor === 1 ? PLAZA_SOLIDS : [])];
+}
+
+// The white circle the heroine is standing in, if any.
+export function spotAt(floor, x, z, radius = SPOT_RADIUS) {
+  let best = null, distance = radius;
+  for (const scene of SCENES) {
+    if (scene.floor !== floor) continue;
+    const d = Math.hypot(scene.spot.x - x, scene.spot.z - z);
+    if (d < distance) { distance = d; best = scene.id; }
+  }
+  return best;
+}
+
+export function atElevator(x, z) {
+  return Math.hypot(ELEVATOR.x - x, ELEVATOR.z - z) < ELEVATOR.radius;
+}
+
+// The closest circle on this floor that has not been played yet: the guide
+// arrow on the map points there.
+export function nextSpot(floor, x, z, done = []) {
+  let best = null, distance = Infinity;
+  for (const scene of SCENES) {
+    if (scene.floor !== floor || done.includes(scene.id)) continue;
+    const d = Math.hypot(scene.spot.x - x, scene.spot.z - z);
+    if (d < distance) { distance = d; best = scene; }
+  }
+  return best;
+}
+
+// Where the heroine stands when a scene opens: in the circle, facing the NPC.
+export function sceneFraming(scene) {
+  const dx = scene.npc.x - scene.spot.x, dz = scene.npc.z - scene.spot.z;
+  const heading = Math.atan2(dx, dz);
+  return { x: scene.spot.x, z: scene.spot.z, heading };
+}

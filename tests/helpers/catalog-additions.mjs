@@ -15,7 +15,7 @@ const additions = [
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:238,')&&line.includes('path:"/el-reino-de-la-rosa-dormida"')?[i]:[]);
         assert.equal(at.length,1,'one Valdoria catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',227,228,229,237,238],',',227,228,229,237],']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 130);','assert.equal(lessons.length, 129);'],['assert.equal(a1Lessons.length, 40);','assert.equal(a1Lessons.length, 39);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 130);','assert.equal(lessons.length, 129);'],['assert.equal(a1Lessons.length, 41);','assert.equal(a1Lessons.length, 40);']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/108(?:<!-- -->|\\s)+resultados/);assert.match(html,/123(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/107(?:<!-- -->|\\s)+resultados/);assert.match(html,/122(?:<!-- -->|\\s)+clases totales/);']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/reino-engine.test.mjs','tests/reino-movement.test.mjs','tests/reino-world.test.mjs','tests/reino-integration.test.mjs']);\n",'']],
     },
@@ -28,7 +28,7 @@ const additions = [
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:237,')&&line.includes('path:"/marketing-de-casinos"')?[i]:[]);
         assert.equal(at.length,1,'one casino marketing catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',227,228,229,237],',',227,228,229],']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 129);','assert.equal(lessons.length, 128);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 129);','assert.equal(lessons.length, 128);'],['assert.equal(a1Lessons.length, 40);','assert.equal(a1Lessons.length, 39);']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/107(?:<!-- -->|\\s)+resultados/);assert.match(html,/122(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/106(?:<!-- -->|\\s)+resultados/);assert.match(html,/121(?:<!-- -->|\\s)+clases totales/);']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/casino-marketing-b1.test.mjs']);\n",'']],
     },
