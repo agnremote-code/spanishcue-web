@@ -399,9 +399,9 @@
   .gl-bubble{max-width:94%}
   .gl-timeline-tabs{grid-template-columns:minmax(0,1fr)}
   .gl-timeline-figure svg{max-height:none}
-  .gl-tl-year{font-size:25px}
-  .gl-tl-span text,.gl-tl-start text,.gl-tl-event text{font-size:28px}
-  .gl-tl-event .gl-tl-caption{font-size:24px}
+  .gl-tl-year{font-size:27px}
+  .gl-tl-span text,.gl-tl-start text,.gl-tl-event text{font-size:34px}
+  .gl-tl-event .gl-tl-caption{font-size:28px}
   .gl-talk-card>small{padding:16px 18px 0}
   .gl-talk-card>.gl-talk-q{padding:8px 18px 20px}
   .gl-talk-card>:not(small):not(.gl-talk-q){margin-left:16px;margin-right:16px}

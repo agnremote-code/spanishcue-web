@@ -17,7 +17,7 @@ const readings: Reading[] = [
   { id: 'event', sentence: 'Me mudé acá [[hace dos años|orange]].', tone: 'orange', info: 'Dice **cuánto tiempo pasó desde un hecho** terminado: la mudanza.', continues: false, en: 'I moved here two years ago.' },
 ];
 
-const X0 = 60, X1 = 620;
+const X0 = 95, X1 = 620;
 const months = (year: number, month: number) => (year - 2023) * 12 + (month - 10);
 const x = (year: number, month = 10) => X0 + (months(year, month) / 36) * (X1 - X0);
 
