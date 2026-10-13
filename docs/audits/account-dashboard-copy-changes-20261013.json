@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "authorization": "Owner Ale approved on 2026-10-13T11:14Z (project decision card \"¿Aprobás los textos nuevos en inglés del panel de cuenta?\" answered \"Apruebo\") the new English copy of the bilingual ES/EN /cuenta teacher dashboard requested in the owner brief of 2026-10-13T09:04Z, replacing the old placeholder /cuenta copy. Only the exact literals listed here are approved; all other English stays protected.",
+  "changes": [
+    {
+      "path": "app/account-types.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "My students",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/account-types.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "No students are stored yet. This module will be enabled after the account and permissions foundation is complete.",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/account-types.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Class history",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/account-types.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "No classes are recorded yet. Opening a lesson to prepare it does not mark it as taught.",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/account-types.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "Favorites",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/account-types.ts",
+      "kind": "english-changed-or-deleted",
+      "text": "No favorites are stored yet. The library does not simulate bookmarks that are not persisted to your account.",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Overview",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "My students",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Class history",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Favorites",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Subscription",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Settings",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Account sections",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "CURRENT STATUS",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Your session is verified on the server. PRO access is determined by your account permissions, not merely by being signed in.",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "NO STORED DATA",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "Sample data is not shown as if it were real.",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    },
+    {
+      "path": "app/cuenta/page.tsx",
+      "kind": "english-changed-or-deleted",
+      "text": "ACCOUNT AND SECURITY",
+      "reason": "Placeholder account copy replaced by the owner-requested /cuenta dashboard redesign (2026-10-13)."
+    }
+  ]
+}
