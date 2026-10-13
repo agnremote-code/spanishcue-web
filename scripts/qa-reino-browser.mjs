@@ -7,6 +7,7 @@ import {mkdir,readFile,writeFile,cp} from 'node:fs/promises';
 import {dirname,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
+import {CAMPAIGN} from '../app/el-reino-de-la-rosa-dormida/engine.mjs';
 const repo=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const out=process.env.REINO_QA_OUTPUT||'/tmp/reino-browser-qa';
 await mkdir(out,{recursive:true});
@@ -42,6 +43,15 @@ async function layout(page,label){
  return report;
 }
 async function travel(page,id,kind='npc',range){
+ for(let attempt=0;attempt<3;attempt++){
+  await travelOnce(page,id,kind,range);
+  const near=await page.evaluate(({id,kind,range})=>{const s=window.__realmQA.snapshot(),t=(kind==='item'?s.items:kind==='spell'?s.targets:s.npcs)[id];return Math.hypot(t.x-s.player.x,t.z-s.player.z)<(range??(kind==='item'?2:kind==='spell'?6.5:3))+.6;},{id,kind,range});
+  if(near)return;
+  console.log(`retrying route to ${id}`);await page.waitForTimeout(1500);
+ }
+ throw Error(`Could not reach ${id}`);
+}
+async function travelOnce(page,id,kind='npc',range){
  await page.evaluate(({id,kind,range})=>{
   const q=window.__realmQA,s=q.snapshot(),target=(kind==='item'?s.items:kind==='spell'?s.targets:s.npcs)[id];if(!target)throw Error('Unknown target '+id);
   const radius=.43,flags=s.state.flags,floor=q.floorAt,key=p=>p.x+','+p.z;
@@ -68,40 +78,138 @@ async function travel(page,id,kind='npc',range){
  await page.evaluate(()=>window.__realmQA.stop());await page.waitForTimeout(220);
  console.log(JSON.stringify({stage:id,player:(await snapshot(page)).player}));
 }
-async function talk(page,id){
- await travel(page,id);
- await page.locator('.rrw-canvas canvas').focus();await page.keyboard.press('e');await page.locator('.rr-dialogue').waitFor();
- for(let turn=0;turn<3;turn++){
-  assert.ok(await page.locator('#rr-answer').isVisible(),`${id} dialogue unexpectedly locked`);
-  await page.getByRole('button',{name:'Necesito una pista',exact:true}).click();
-  await page.locator('.rr-dialogue-hint button').first().click();await page.getByRole('button',{name:'Responder',exact:true}).click();
-  await page.waitForFunction(({id,count})=>window.__realmQA.snapshot().state.dialogue[id]===count,{id,count:turn+1});
+const PROFILES_KEY='spanishcue:reino-rosa:perfiles:v2';
+const CAST_FLAGS={'ventaria:mill':'millRepaired','lumaria:grove':'forestLit','floralis:thorns':'gardenOpen','aurora:dragon':'dragonShield','lumaria:altar':'ritualLight','floralis:altar':'ritualGrowth','aurora:altar':'ritualDawn'};
+const talkKey=s=>JSON.stringify([s.state.dialogue,s.state.places,s.state.deep,s.state.talking]);
+/** Presses «Continuar conversación» and waits for the reducer to move. */
+async function next(page){const before=talkKey(await snapshot(page));await page.locator('.rr-continue').click();await page.waitForFunction(b=>{const s=window.__realmQA.snapshot();return JSON.stringify([s.state.dialogue,s.state.places,s.state.deep,s.state.talking])!==b;},before);}
+/** A full encounter with teacher controls only: no keywords, no typing needed. */
+async function talk(page,id,{teacher=false,label=''}={}){
+ if((await snapshot(page)).state.talking?.id!==id){await travel(page,id);await page.locator('.rrw-canvas canvas').focus();await page.keyboard.press('e');}
+ await page.locator('.rr-dialogue').waitFor();
+ assert.ok(!(await page.locator('.rr-turn-locked').count()),`${id} dialogue unexpectedly locked`);
+ let usedTeacher=!teacher;
+ for(let turn=0;turn<20&&(await snapshot(page)).state.talking?.id===id;turn++){
+  if(!usedTeacher&&await page.locator('#rr-answer').isVisible()){
+   usedTeacher=true;
+   await page.getByRole('button',{name:'Pista',exact:true}).click();await page.locator('.rr-language-hint').waitFor();
+   await page.getByRole('button',{name:'Pista de misión',exact:true}).click();await page.locator('.rr-mission-hint').waitFor();
+   assert.ok((await page.locator('.rr-mission-hint strong').innerText()).length>10,'mission hint names the objective');
+   await page.locator('#rr-answer').fill('Me gusta viajar en tren porque puedo mirar el paisaje.');
+   await page.screenshot({path:resolve(out,`${label}dialogue-teacher.png`)});await layout(page,`${label}dialogue with hints`);
+   await next(page);assert.match(await page.locator('.rr-student-bubble').innerText(),/viajar en tren/);
+   await page.getByRole('button',{name:'Profundizar',exact:true}).click();await page.locator('.rr-turn-deep').waitFor();
+   await page.screenshot({path:resolve(out,`${label}dialogue-deepen.png`)});
+   await next(page);assert.ok(!(await page.locator('.rr-turn-deep').count()),'back to the main conversation');
+   continue;
+  }
+  await next(page);
  }
- if(id==='nox')await page.screenshot({path:resolve(out,'desktop-dialogue-complete.png')});
- const close=page.getByRole('button',{name:/Continuar explorando/});if(await close.isVisible())await close.click();
+ const s=await snapshot(page);assert.equal(s.state.talking,null,`${id} conversation closed`);
+}
+async function playFrom(page,label){
+ for(const step of CAMPAIGN){
+  const s=(await snapshot(page)).state,[kind,id,target]=step;
+  if(kind==='collect'&&s.inventory.includes(id))continue;
+  if(kind==='cast'&&s.flags[CAST_FLAGS[`${id}:${target}`]])continue;
+  if(kind==='talk'){if(s.dialogue[id]>=TALKED[id]&&s.talking?.id!==id)continue;await talk(page,id);}
+  else if(kind==='collect')await collect(page,id);
+  else await cast(page,target,id,CAST_FLAGS[`${id}:${target}`]);
+ }
+ await page.getByRole('heading',{name:'Valdoria despierta.'}).waitFor();
+ await page.screenshot({path:resolve(out,`${label}victory.png`)});
+ assert.equal((await snapshot(page)).state.completed.length,8);
 }
 async function collect(page,id){await travel(page,id,'item');await page.locator('.rrw-canvas canvas').focus();await page.keyboard.press('f');await page.waitForFunction(id=>window.__realmQA.snapshot().state.inventory.includes(id),id);}
 async function cast(page,id,spell,flag){await travel(page,id,'spell',id==='dragon'?7.2:6);await page.getByRole('button',{name:new RegExp(`^${spell}: seleccionar$`,'i')}).click();await page.locator('.rrw-canvas canvas').focus();for(let attempt=0;attempt<20&&!(await snapshot(page)).state.flags[flag];attempt++){await page.keyboard.press('r');await page.waitForFunction(flag=>window.__realmQA.snapshot().state.flags[flag],flag,{timeout:2500}).catch(()=>{});}assert.ok((await snapshot(page)).state.flags[flag],`${spell} did not set ${flag}`);await page.waitForTimeout(800);}
+const store=page=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)||'null'),PROFILES_KEY);
+async function ready(page){await page.waitForFunction(()=>window.__realmQA?.snapshot,{timeout:60000});await page.waitForTimeout(600);}
+async function toTitle(page){await page.reload();await ready(page);}
+async function newStudent(page,name,level){
+ await page.getByRole('button',{name:/^Nueva aventura/}).click();await page.getByPlaceholder('Por ejemplo: Daniel').fill(name);
+ await page.getByRole('group',{name:'Nivel del alumno'}).getByRole('button',{name:level,exact:true}).click();
+ await page.getByRole('button',{name:/Comenzar desde el principio/}).click();
+ await page.getByRole('button',{name:/Omitir introducción/}).click();await page.getByRole('button',{name:'Volver al reino'}).click();await page.waitForTimeout(900);
+}
+async function startAt(page,who,pointId,{name,level}={}){
+ await page.getByRole('button',{name:/Seleccionar capítulo o punto de partida/}).click();
+ const select=page.getByLabel('¿Para quién?');
+ if(who==='new'){await select.selectOption('new');await page.getByPlaceholder('Nombre del alumno').first().fill(name);await page.getByRole('group',{name:'Nivel',exact:true}).getByRole('button',{name:level,exact:true}).click();}
+ else await select.selectOption({label:new RegExp(`^${who} ·`)}).catch(async()=>{const value=await select.locator('option',{hasText:who}).getAttribute('value');await select.selectOption(value);});
+ await page.locator(`[data-point="${pointId}"]`).click();
+ const confirm=page.getByRole('button',{name:'Empezar aquí'});if(await confirm.isVisible().catch(()=>false))await confirm.click();
+ await page.waitForTimeout(900);
+}
+const TALKED={};
 try{
- const sizes=process.env.REINO_QA_SIZES?.split(',')??['desktop','mobile'];
+ const {CONVERSATIONS}=await import('../app/el-reino-de-la-rosa-dormida/conversations.mjs');
+ for(const [id,conv] of Object.entries(CONVERSATIONS))TALKED[id]=conv.flow.indexOf('reveal')+1;
+ const sizes=process.env.REINO_QA_SIZES?.split(',')??['desktop','mobile','small','landscape'];
  for(const size of sizes){
   const [width,height]=size==='mobile'?[390,844]:size==='small'?[320,700]:size==='landscape'?[844,390]:[1440,900];
+  const label=`${size}-`;
   browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE_PATH?{executablePath:process.env.CHROMIUM_EXECUTABLE_PATH}:{}),args:JSON.parse(process.env.CHROMIUM_ARGS||'[]')});
   const context=await browser.newContext({viewport:{width,height},hasTouch:size!=='desktop',isMobile:size!=='desktop'}),page=await context.newPage();page.setDefaultTimeout(45000);
   page.on('pageerror',error=>errors.push(`${size}: ${error.message}`));
-  await page.goto(origin+'/?level=A1');await page.waitForFunction(()=>window.__realmQA?.snapshot,{timeout:60000});await page.waitForTimeout(1000);
-  await page.screenshot({path:resolve(out,`${size}-title.png`)});
-  await page.getByRole('button',{name:'Comenzar la aventura',exact:true}).click();await page.getByRole('button',{name:/Omitir introducción/}).click();const begin=page.getByRole('button',{name:/Empezar la misión/});await begin.waitFor();await page.screenshot({path:resolve(out,`${size}-mision.png`)});await layout(page,`${size}: mission briefing`);await begin.click();await page.waitForTimeout(1200);await page.locator('.rr-objective').click();await page.locator('.rr-guide').waitFor();await page.screenshot({path:resolve(out,`${size}-guia.png`)});await layout(page,`${size}: guide`);await page.locator('.rr-objective').click();
-  await page.screenshot({path:resolve(out,`${size}-entrance.png`)});await layout(page,`${size}: entrance`);console.log(`${size}: entrance rendered`);
-  if(process.env.REINO_QA_COVER){const style=await page.addStyleTag({content:'.rr-hud-top,.rr-objective,.rr-minimap,.rr-hud-bottom,.rr-controls-brief,.rrw-prompt,.rr-toast,.rrw-mobile-controls{visibility:hidden!important}'});await page.screenshot({path:resolve(out,`${size}-cover.png`)});await style.evaluate(e=>e.remove());}
-  if(process.env.REINO_QA_FAST){results.push({size,stage:'entrance',passed:true});await browser.close();continue;}
-  const start=(await snapshot(page)).player;await page.locator('.rrw-canvas canvas').focus();await page.keyboard.down('w');await page.waitForFunction(p=>{const a=window.__realmQA.snapshot().player;return Math.hypot(p.x-a.x,p.z-a.z)>.5;},start);await page.keyboard.up('w');await page.keyboard.down('Space');await page.waitForFunction(()=>window.__realmQA.snapshot().player.y>.15);await page.keyboard.up('Space');await page.waitForFunction(()=>window.__realmQA.snapshot().player.y===0);console.log(`${size}: keyboard movement and jump passed`);
-  for(const name of ['Diario de misiones','Abrir inventario','Mapa del reino']){await page.getByRole('button',{name,exact:true}).click();await layout(page,`${size}: ${name}`);const before=(await snapshot(page)).player;await page.keyboard.down('w');await page.waitForTimeout(160);await page.keyboard.up('w');const after=(await snapshot(page)).player;assert.ok(Math.hypot(after.x-before.x,after.z-before.z)<.01,`${name}: movement pauses`);await page.screenshot({path:resolve(out,`${size}-${name.split(' ')[0].toLowerCase()}.png`)});await page.getByRole('button',{name:'Cerrar panel',exact:true}).click();}
-  await talk(page,'nox');await talk(page,'ines');await talk(page,'bruno');await cast(page,'mill','ventaria','millRepaired');await collect(page,'key');await talk(page,'liora');await cast(page,'grove','lumaria','forestLit');await talk(page,'aldren');await talk(page,'celina');await cast(page,'thorns','floralis','gardenOpen');await collect(page,'rose');
-  await travel(page,'baltasar');await page.screenshot({path:resolve(out,`${size}-castle.png`)});await collect(page,'scroll');await talk(page,'baltasar');await talk(page,'teobaldo');await cast(page,'dragon','aurora','dragonShield');await travel(page,'brum');await page.screenshot({path:resolve(out,`${size}-dragon.png`)});await talk(page,'brum');await collect(page,'crystal');await talk(page,'tejedora');await cast(page,'altar','lumaria','ritualLight');await cast(page,'altar','floralis','ritualGrowth');await cast(page,'altar','aurora','ritualDawn');await talk(page,'elara');
-  await page.getByRole('heading',{name:'Valdoria despierta.'}).waitFor();await page.screenshot({path:resolve(out,`${size}-victory.png`)});assert.equal((await snapshot(page)).state.completed.length,8);
-  await page.reload();await page.getByRole('button',{name:/Continuar la aventura/}).click({timeout:60000});await page.waitForFunction(()=>window.__realmQA?.snapshot?.().state?.completed?.length===8,{timeout:60000});await page.screenshot({path:resolve(out,`${size}-continued.png`)});console.log(`${size}: victory persisted after reload`);
-  results.push({size,stage:'complete-campaign',passed:true});await browser.close();
+  await page.goto(origin+'/');await ready(page);
+  await page.screenshot({path:resolve(out,`${label}title-empty.png`)});
+  // 1. A new student from the beginning.
+  await newStudent(page,'Daniel','A1');await layout(page,`${size}: entrance`);await page.screenshot({path:resolve(out,`${label}entrance.png`)});
+  await page.locator('.rr-objective').click();await page.locator('.rr-guide').waitFor();await page.locator('.rr-objective').click();
+  if(size==='desktop'){
+   const start=(await snapshot(page)).player;await page.locator('.rrw-canvas canvas').focus();await page.keyboard.down('w');await page.waitForFunction(p=>{const a=window.__realmQA.snapshot().player;return Math.hypot(p.x-a.x,p.z-a.z)>.5;},start);await page.keyboard.up('w');await page.keyboard.down('Space');await page.waitForFunction(()=>window.__realmQA.snapshot().player.y>.15);await page.keyboard.up('Space');await page.waitForFunction(()=>window.__realmQA.snapshot().player.y===0);console.log(`${size}: keyboard movement and jump passed`);
+  }
+  for(const name of ['Diario de misiones','Abrir inventario','Mapa del reino']){await page.getByRole('button',{name,exact:true}).click();await layout(page,`${size}: ${name}`);await page.screenshot({path:resolve(out,`${label}${name.split(' ')[0].toLowerCase()}.png`)});await page.getByRole('button',{name:'Cerrar panel',exact:true}).click();}
+  const music=page.getByRole('button',{name:/^(Silenciar|Activar) música$/});if(await music.isVisible()){const before=await music.getAttribute('aria-label');await music.click();assert.notEqual(await music.getAttribute('aria-label'),before,'music toggles');await music.click();}
+  // 2. A conversation with teacher controls, interrupted and resumed after a reload.
+  await travel(page,'nox');await page.locator('.rrw-canvas canvas').focus();await page.keyboard.press('e');await page.locator('.rr-dialogue').waitFor();
+  await next(page);await next(page);await next(page);
+  const mid=(await snapshot(page)).state;assert.equal(mid.talking?.id,'nox');
+  const line=await page.getByTestId('rr-npc-line').innerText();
+  await toTitle(page);await page.screenshot({path:resolve(out,`${label}title-profile.png`)});
+  await page.getByRole('button',{name:/^Continuar aventura/}).click();await page.locator('.rr-dialogue').waitFor();
+  assert.equal(await page.getByTestId('rr-npc-line').innerText(),line,'resumes at the exact question');
+  assert.deepEqual((await snapshot(page)).state.dialogue,mid.dialogue);
+  await page.screenshot({path:resolve(out,`${label}resumed-conversation.png`)});console.log(`${size}: interrupted conversation resumed`);
+  await talk(page,'nox',{teacher:true,label});
+  if(size==='desktop'){
+   // 3. Complete campaign from the beginning, then reload.
+   if(!process.env.REINO_QA_SKIP_FULL){
+   await playFrom(page,`${label}daniel-`);
+   await toTitle(page);await page.getByRole('button',{name:/^Continuar aventura/}).click();await page.waitForFunction(()=>window.__realmQA.snapshot().state.completed.length===8,{timeout:60000});console.log(`${size}: Daniel's victory persisted`);
+    await toTitle(page);assert.ok(!(await page.locator('.rr-victory').count()),'the title screen is not covered by an old victory');
+   }
+   // 4. Start points: chapters 4, 6 and 8 for three more students, reload, finish.
+   for(const [name,level,point] of [['Sofía','B2','c4-puente'],['Kenji','C1','c6-castillo'],['Lucía','A0','c8-tejedora']]){
+    await toTitle(page);await startAt(page,'new',point,{name,level});
+    const s=(await snapshot(page)).state;assert.equal(s.level,level);
+    await page.screenshot({path:resolve(out,`${label}start-${point}.png`)});
+    await toTitle(page);await page.getByRole('button',{name:/^Continuar aventura/}).click();await page.waitForTimeout(900);
+    assert.deepEqual((await snapshot(page)).state.completed,s.completed,`${name} reload keeps ${point}`);
+    await playFrom(page,`${label}${point}-`);console.log(`${size}: ${name} finished from ${point}`);
+   }
+   // 5. Mis alumnos: independent saves, reset and delete only one.
+   await toTitle(page);await page.getByRole('button',{name:/Mis alumnos/}).click();
+   assert.equal(await page.locator('.rr-student-row').count(),4);
+   await page.waitForTimeout(450);await page.screenshot({path:resolve(out,`${label}mis-alumnos.png`)});await layout(page,`${size}: students`);
+   const before=await store(page);
+   await page.locator('[data-profile="Sofía"]').getByRole('button',{name:'Reiniciar'}).click();await page.getByRole('button',{name:'Reiniciar este perfil'}).click();
+   const reset=await store(page);
+   for(const profile of before.profiles){const after=reset.profiles.find(p=>p.id===profile.id);if(profile.name==='Sofía')assert.equal(after.save.completed.length,0);else assert.deepEqual(after.save,profile.save,`${profile.name} untouched by reset`);}
+   await page.locator('[data-profile="Lucía"]').getByRole('button',{name:'Eliminar'}).click();await page.getByRole('button',{name:'Eliminar perfil'}).click();
+   const removed=await store(page);assert.deepEqual(removed.profiles.map(p=>p.name).sort(),['Daniel','Kenji','Sofía']);
+   for(const profile of removed.profiles)assert.deepEqual(profile.save,reset.profiles.find(p=>p.id===profile.id).save);
+   console.log(`${size}: reset and delete isolated`);
+  }else{
+   // Smaller screens: start panel, students table and a start point that opens a conversation.
+   await toTitle(page);await page.getByRole('button',{name:/Seleccionar capítulo o punto de partida/}).click();await page.waitForTimeout(450);await page.screenshot({path:resolve(out,`${label}start-panel.png`)});await layout(page,`${size}: start panel`);await page.getByRole('button',{name:'Cerrar panel',exact:true}).click();
+   await page.getByRole('button',{name:/Mis alumnos/}).click();await page.waitForTimeout(450);await page.screenshot({path:resolve(out,`${label}mis-alumnos.png`)});await layout(page,`${size}: students`);await page.getByRole('button',{name:'Cerrar panel',exact:true}).click();
+   await startAt(page,'new','c8-tejedora',{name:'Ana',level:'A0'});
+   await page.locator('.rr-dialogue').waitFor();await page.screenshot({path:resolve(out,`${label}a0-dialogue.png`)});await layout(page,`${size}: A0 dialogue`);
+   assert.ok(await page.locator('.rr-options button').count()||await page.locator('.rr-english').count(),'A0 support');
+   await playFrom(page,`${label}ana-`);
+  }
+  results.push({size,passed:true});await browser.close();
  }
  assert.deepEqual(errors,[]);
 }finally{await writeFile(resolve(out,'results.json'),JSON.stringify({results,errors},null,2));await browser?.close();server.close();console.log(`Evidence: ${out}`);}

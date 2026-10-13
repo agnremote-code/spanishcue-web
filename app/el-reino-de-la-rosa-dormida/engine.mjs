@@ -1,40 +1,38 @@
-import { LEVELS, NPCS, ITEMS, SPELLS, QUESTS, LEVEL_FOCUS, DIALOGUES, INTENTS } from './content.mjs';
+import { LEVELS, NPCS, ITEMS, SPELLS, QUESTS } from './content.mjs';
+import { BANDS, CONVERSATIONS, PLACES, FRAMES, SAFE_ANSWER, DEFAULT_FUNCTIONS, QUESTION_STEPS } from './conversations.mjs';
 
 export { LEVELS, NPCS, ITEMS, SPELLS, QUESTS } from './content.mjs';
-export const SAVE_KEY = 'spanishcue:reino-rosa:v1';
+/** The single save of version 1. Profiles (profiles.mjs) migrate it without deleting it. */
+export const LEGACY_SAVE_KEY = 'spanishcue:reino-rosa:v1';
+export const SAVE_KEY = LEGACY_SAVE_KEY;
+export const STATE_VERSION = 2;
+export const PLACE_IDS = Object.keys(PLACES);
 const NPC_IDS = new Set(NPCS.map(npc => npc.id));
+const CONVERSATION_IDS = new Set([...NPC_IDS, ...PLACE_IDS]);
 const FLAGS = ['millRepaired', 'forestLit', 'bridgeOpen', 'gardenOpen', 'castleOpen', 'historyKnown', 'dragonShield', 'dragonTrusted', 'ritualReady', 'ritualLight', 'ritualGrowth', 'ritualDawn', 'victory'];
 const START = { x: 0, y: 0, z: 24 };
+const MAX_ANSWER = 1500;
+const MAX_DEEP = 999;
 const has = (state, quest) => state.completed.includes(quest);
-const talked = (state, npc) => state.dialogue[npc] === 3;
 const add = (list, id) => list.includes(id) ? list : [...list, id];
-const normalize = text => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
-const matches = (text, pattern) => new RegExp(`\\b(?:${pattern})\\b`, 'u').test(text);
-// Negation is scoped to the action requested by this exchange. A refusal to
-// attack or to decide for another person must not cancel an offer of dialogue.
-const ACTION_STEMS = {
-  help: ['ayud'], listen: ['escuch'], repair: ['repar', 'arregl', 'ayud'],
-  responsibility: ['cuid', 'respet', 'proteg'], fairy: ['ayud', 'cuid'],
-  purpose: ['ayud', 'salv', 'busc'], respect: ['respet', 'escuch'],
-  care: ['cuid'], memory: ['record'], peace: ['habl', 'dialog', 'escuch'],
-  protect: ['proteg', 'cuid', 'defend'], freedom: ['respet'],
-  release: ['liber'], agency: ['respet', 'escuch'], future: ['cuid'],
-};
-function deniesRequestedAction(text, intent) {
-  const stems = ACTION_STEMS[intent];
-  if (!stems) return false;
-  const verb = stems.map(stem => `${stem}\\w*`).join('|');
-  const denial = `(?:no|nunca|jamas|tampoco) (?:(?:quiero|queremos|pienso|deseo|pretendo|debo|puedo|voy a|vamos a|estoy dispuesto a|estoy dispuesta a) )?(?:${verb})`;
-  return matches(text, denial);
-}
+const flowOf = id => NPC_IDS.has(id) ? CONVERSATIONS[id].flow : ['story', 'q'];
+const revealIndex = id => CONVERSATIONS[id].flow.indexOf('reveal');
 
+/** Number of conversational moments in an encounter (identical at every level). */
+export const conversationLength = id => flowOf(id).length;
+/** The character has shared their revelation/reward (the turn after «reveal» was reached). */
+export const hasTalked = (state, npc) => NPC_IDS.has(npc) && (state.dialogue[npc] ?? 0) > revealIndex(npc);
+const talked = hasTalked;
 
 export function createGame(level = 'A1') {
   return {
-    version: 1, level: LEVELS.includes(level) ? level : 'A1',
+    version: STATE_VERSION, level: LEVELS.includes(level) ? level : 'A1',
     completed: [], inventory: [], spells: [],
     flags: Object.fromEntries(FLAGS.map(flag => [flag, false])),
     dialogue: Object.fromEntries(NPCS.map(npc => [npc.id, 0])),
+    places: Object.fromEntries(PLACE_IDS.map(id => [id, 0])),
+    deep: Object.fromEntries([...CONVERSATION_IDS].map(id => [id, 0])),
+    talking: null,
     checkpoint: { ...START },
   };
 }
@@ -53,9 +51,15 @@ function npcAvailable(state, npc) {
     default: return false;
   }
 }
+function available(state, id) {
+  if (NPC_IDS.has(id)) return npcAvailable(state, id);
+  const place = PLACES[id];
+  return Boolean(place) && (!place.requires || Boolean(state.flags[place.requires]));
+}
+export const conversationAvailable = available;
 
 export function canInteract(state, id) {
-  if (NPC_IDS.has(id)) return npcAvailable(state, id);
+  if (CONVERSATION_IDS.has(id)) return available(state, id);
   if (state.inventory.includes(id)) return false;
   switch (id) {
     case 'key': return has(state, 'q1') && talked(state, 'ines') && talked(state, 'bruno') && state.flags.millRepaired;
@@ -91,7 +95,16 @@ function settle(state) {
   return next;
 }
 
-/** Pure reducer. The renderer checks distance; these rules independently enforce story gates. */
+const progressOf = (state, id) => NPC_IDS.has(id) ? state.dialogue[id] ?? 0 : state.places[id] ?? 0;
+function withProgress(state, id, value) {
+  return NPC_IDS.has(id) ? { ...state, dialogue: { ...state.dialogue, [id]: value } } : { ...state, places: { ...state.places, [id]: value } };
+}
+
+/**
+ * Pure reducer. Conversation actions never evaluate what the learner says: any
+ * answer (typed, dictated, spoken aloud or none at all) moves the conversation
+ * on. Objective actions (spells, items, the ritual order) keep strict rules.
+ */
 export function reduceGame(state, action) {
   if (!state || !action || typeof action !== 'object') return state;
   if (action.type === 'level') return LEVELS.includes(action.level) ? { ...state, level: action.level } : state;
@@ -99,12 +112,30 @@ export function reduceGame(state, action) {
     const pos = validPosition(action.position);
     return pos ? { ...state, checkpoint: pos } : state;
   }
-  if (action.type === 'answer') {
-    const npc = action.npc;
-    if (!NPC_IDS.has(npc) || !npcAvailable(state, npc) || talked(state, npc)) return state;
-    const line = getDialogue(npc, state.level, state.dialogue[npc], state);
-    if (!evaluateAnswer(line, action.text).accepted) return state;
-    return settle({ ...state, dialogue: { ...state.dialogue, [npc]: state.dialogue[npc] + 1 } });
+  if (action.type === 'open') {
+    const id = action.npc ?? action.id;
+    if (!CONVERSATION_IDS.has(id)) return state;
+    return state.talking?.id === id ? state : { ...state, talking: { id, deep: false } };
+  }
+  if (action.type === 'close') return state.talking ? { ...state, talking: null } : state;
+  if (action.type === 'deepen') {
+    const id = action.npc ?? action.id;
+    if (!CONVERSATION_IDS.has(id) || !available(state, id)) return state;
+    return { ...state, deep: { ...state.deep, [id]: Math.min(MAX_DEEP, (state.deep[id] ?? 0) + 1) }, talking: { id, deep: true } };
+  }
+  if (action.type === 'say' || action.type === 'answer') {
+    const id = action.npc ?? action.id;
+    if (!CONVERSATION_IDS.has(id) || !available(state, id)) return state;
+    // Text is optional and never graded; only absurd payloads are ignored.
+    if (action.text !== undefined && (typeof action.text !== 'string' || action.text.length > MAX_ANSWER)) return state;
+    if (state.talking?.id === id && state.talking.deep) return { ...state, talking: { id, deep: false } };
+    const index = progressOf(state, id), total = flowOf(id).length;
+    if (index >= total) return reduceGame(state, { type: 'deepen', id });
+    let next = withProgress(state, id, index + 1);
+    next = { ...next, talking: index + 1 >= total ? null : { id, deep: false } };
+    next = NPC_IDS.has(id) ? settle(next) : next;
+    if (next.flags.victory && !state.flags.victory) next = { ...next, talking: null };
+    return next;
   }
   if (action.type === 'collect') {
     const item = action.item;
@@ -138,32 +169,63 @@ function validPosition(position) {
   return { x, y, z };
 }
 
+/** The campaign's canonical order. Saves and start points replay it through the reducer. */
+export const CAMPAIGN = [
+  ['talk', 'nox'], ['talk', 'ines'], ['talk', 'bruno'], ['cast', 'ventaria', 'mill'], ['collect', 'key'],
+  ['talk', 'liora'], ['cast', 'lumaria', 'grove'], ['talk', 'aldren'], ['talk', 'celina'], ['cast', 'floralis', 'thorns'], ['collect', 'rose'],
+  ['collect', 'scroll'], ['talk', 'baltasar'], ['talk', 'teobaldo'], ['cast', 'aurora', 'dragon'], ['talk', 'brum'], ['collect', 'crystal'],
+  ['talk', 'tejedora'], ['cast', 'lumaria', 'altar'], ['cast', 'floralis', 'altar'], ['cast', 'aurora', 'altar'], ['talk', 'elara'],
+];
+
 /** Replays only recognized, prerequisite-valid facts; saves never grant arbitrary flags. */
 export function restoreGame(raw) {
   let data = raw;
   if (typeof raw === 'string') { try { data = JSON.parse(raw); } catch { return createGame(); } }
-  if (!data || typeof data !== 'object' || Array.isArray(data) || data.version !== 1) return createGame();
+  if (!data || typeof data !== 'object' || Array.isArray(data) || (data.version !== 1 && data.version !== STATE_VERSION)) return createGame();
+  const legacy = data.version === 1;
   let state = createGame(data.level);
   const counts = data.dialogue && typeof data.dialogue === 'object' ? data.dialogue : {};
   const flags = data.flags && typeof data.flags === 'object' ? data.flags : {};
   const inventory = Array.isArray(data.inventory) ? data.inventory : [];
-  const replayTalk = npc => {
+  // Version 1 had three graded exchanges per character. Three means finished;
+  // a partial conversation resumes before the revelation, never after it.
+  const savedTurns = npc => {
     const count = counts[npc];
-    if (!Number.isInteger(count) || count < 0 || count > 3) return;
-    for (let stage = 0; stage < count; stage++) {
-      const line = getDialogue(npc, state.level, stage, state);
-      state = reduceGame(state, { type: 'answer', npc, text: line.suggestions[0] });
-    }
+    if (!Number.isInteger(count) || count < 0) return 0;
+    if (!legacy) return Math.min(count, conversationLength(npc));
+    if (count > 3) return 0;
+    return count === 3 ? conversationLength(npc) : Math.min(count * 2, revealIndex(npc));
   };
-  const replayItem = item => { if (inventory.includes(item)) state = reduceGame(state, { type: 'collect', item }); };
-  const replayCast = (flag, spell, target) => { if (flags[flag] === true) state = reduceGame(state, { type: 'cast', spell, target }); };
-  replayTalk('nox'); replayTalk('ines'); replayTalk('bruno');
-  replayCast('millRepaired', 'ventaria', 'mill'); replayItem('key'); replayTalk('liora');
-  replayCast('forestLit', 'lumaria', 'grove'); replayTalk('aldren'); replayTalk('celina');
-  replayCast('gardenOpen', 'floralis', 'thorns'); replayItem('rose'); replayItem('scroll');
-  replayTalk('baltasar'); replayTalk('teobaldo'); replayCast('dragonShield', 'aurora', 'dragon');
-  replayTalk('brum'); replayItem('crystal'); replayTalk('tejedora');
-  replayCast('ritualLight', 'lumaria', 'altar'); replayCast('ritualGrowth', 'floralis', 'altar'); replayCast('ritualDawn', 'aurora', 'altar'); replayTalk('elara');
+  const replayTalk = npc => {
+    const goal = savedTurns(npc);
+    while ((state.dialogue[npc] ?? 0) < goal) { const before = state; state = reduceGame(state, { type: 'say', npc }); if (before === state) break; }
+    state = { ...state, talking: null };
+  };
+  for (const [kind, id, target] of CAMPAIGN) {
+    if (kind === 'talk') replayTalk(id);
+    else if (kind === 'collect' && inventory.includes(id)) state = reduceGame(state, { type: 'collect', item: id });
+    else if (kind === 'cast') {
+      const flag = { mill: 'millRepaired', grove: 'forestLit', thorns: 'gardenOpen', dragon: 'dragonShield' }[target] ?? { lumaria: 'ritualLight', floralis: 'ritualGrowth', aurora: 'ritualDawn' }[id];
+      if (flags[flag] === true) state = reduceGame(state, { type: 'cast', spell: id, target });
+    }
+  }
+  if (!legacy) {
+    const places = data.places && typeof data.places === 'object' ? data.places : {};
+    for (const id of PLACE_IDS) {
+      const value = places[id];
+      if (Number.isInteger(value) && value > 0 && available(state, id)) state = { ...state, places: { ...state.places, [id]: Math.min(value, flowOf(id).length) } };
+    }
+    const deep = data.deep && typeof data.deep === 'object' ? data.deep : {};
+    for (const id of CONVERSATION_IDS) {
+      const value = deep[id];
+      if (Number.isInteger(value) && value > 0) state = { ...state, deep: { ...state.deep, [id]: Math.min(value, MAX_DEEP) } };
+    }
+    const talking = data.talking;
+    if (talking && typeof talking === 'object' && CONVERSATION_IDS.has(talking.id) && available(state, talking.id) && !state.flags.victory) {
+      const deepOpen = talking.deep === true && (state.deep[talking.id] ?? 0) > 0;
+      if (deepOpen || progressOf(state, talking.id) < flowOf(talking.id).length) state = { ...state, talking: { id: talking.id, deep: deepOpen } };
+    }
+  }
   const position = validPosition(data.checkpoint);
   // A corrupt checkpoint cannot place a fresh player behind a story-locked gate.
   if (position && (position.z >= -44 || state.flags.bridgeOpen) && (position.z >= -63 || state.flags.castleOpen)) state = { ...state, checkpoint: position };
@@ -174,139 +236,130 @@ export function currentQuest(state) {
   const index = Math.min(state.completed.length, 7);
   let objective; let target;
   switch (index) {
-    case 0: objective = 'Acércate a Nox y preséntate.'; target = 'nox'; break;
+    case 0: objective = 'Conversa con Nox, el cuervo del camino, en la Colina del Amanecer.'; target = 'nox'; break;
     case 1:
-      if (!talked(state, 'ines')) { objective = 'Pregunta a Inés por la historia de la aldea.'; target = 'ines'; }
-      else if (!talked(state, 'bruno')) { objective = 'Ofrece tu ayuda a Bruno y aprende Ventaria.'; target = 'bruno'; }
-      else if (!state.flags.millRepaired) { objective = 'Usa Ventaria junto al molino para reparar sus aspas.'; target = 'mill'; }
-      else { objective = 'Recoge la llave que Bruno dejó junto al molino.'; target = 'key'; }
+      if (!talked(state, 'ines')) { objective = 'Busca a Inés en la posada de la aldea y conversa con ella.'; target = 'ines'; }
+      else if (!talked(state, 'bruno')) { objective = 'Conversa con Bruno, el herrero, junto al molino.'; target = 'bruno'; }
+      else if (!state.flags.millRepaired) { objective = 'Repara el molino: elige Ventaria (tecla 2) y pulsa R junto a las aspas.'; target = 'mill'; }
+      else { objective = 'Recoge la llave que Bruno dejó junto al molino (tecla F).'; target = 'key'; }
       break;
     case 2:
-      if (!talked(state, 'liora')) { objective = 'Escucha a Liora y aprende Lumaria.'; target = 'liora'; }
-      else { objective = 'Usa Lumaria en el santuario del bosque.'; target = 'grove'; }
+      if (!talked(state, 'liora')) { objective = 'Entra al bosque y conversa con Liora, el hada.'; target = 'liora'; }
+      else { objective = 'Ilumina el santuario del bosque con Lumaria (tecla 1 y R).'; target = 'grove'; }
       break;
-    case 3: objective = 'Habla con Sir Aldren y gana su confianza.'; target = 'aldren'; break;
+    case 3: objective = 'Sigue el sendero hasta el puente y conversa con Sir Aldren.'; target = 'aldren'; break;
     case 4:
-      if (!talked(state, 'celina')) { objective = 'Resuelve la pista de Celina y aprende Floralis.'; target = 'celina'; }
-      else if (!state.flags.gardenOpen) { objective = 'Usa Floralis junto al muro de espinas.'; target = 'thorns'; }
-      else { objective = 'Recoge la rosa encantada del jardín.'; target = 'rose'; }
+      if (!talked(state, 'celina')) { objective = 'Cruza el puente y conversa con Celina en los jardines reales.'; target = 'celina'; }
+      else if (!state.flags.gardenOpen) { objective = 'Transforma el muro de espinas con Floralis (tecla 3 y R).'; target = 'thorns'; }
+      else { objective = 'Recoge la rosa encantada del jardín (tecla F).'; target = 'rose'; }
       break;
     case 5:
-      if (!state.inventory.includes('scroll')) { objective = 'Encuentra el pergamino antiguo en la biblioteca.'; target = 'scroll'; }
-      else if (!talked(state, 'baltasar')) { objective = 'Muestra el pergamino a Baltasar.'; target = 'baltasar'; }
-      else { objective = 'Reconstruye la historia con Teobaldo y aprende Aurora.'; target = 'teobaldo'; }
+      if (!state.inventory.includes('scroll')) { objective = 'Explora la biblioteca del castillo y recoge el pergamino (tecla F).'; target = 'scroll'; }
+      else if (!talked(state, 'baltasar')) { objective = 'Muestra el pergamino a Baltasar y conversa con él en la biblioteca.'; target = 'baltasar'; }
+      else { objective = 'Conversa con Teobaldo, el cronista, en el gran salón.'; target = 'teobaldo'; }
       break;
     case 6:
-      if (!state.flags.dragonShield) { objective = 'Usa Aurora cerca de Brum para crear un escudo.'; target = 'dragon'; }
-      else if (!talked(state, 'brum')) { objective = 'Acércate a Brum y escucha su historia.'; target = 'brum'; }
-      else { objective = 'Recoge el cristal del amanecer junto a Brum.'; target = 'crystal'; }
+      if (!state.flags.dragonShield) { objective = 'Sube a la terraza y protégete con Aurora (tecla 4 y R) cerca de Brum.'; target = 'dragon'; }
+      else if (!talked(state, 'brum')) { objective = 'Conversa con Brum, el dragón.'; target = 'brum'; }
+      else { objective = 'Recoge el cristal del amanecer junto a Brum (tecla F).'; target = 'crystal'; }
       break;
     default:
-      if (!talked(state, 'tejedora')) { objective = 'Habla con la Tejedora de Espinas en la torre.'; target = 'tejedora'; }
-      else if (!state.flags.ritualLight) { objective = 'Ritual · 1 de 3: usa Lumaria junto al altar.'; target = 'altar'; }
-      else if (!state.flags.ritualGrowth) { objective = 'Ritual · 2 de 3: usa Floralis junto al altar.'; target = 'altar'; }
-      else if (!state.flags.ritualDawn) { objective = 'Ritual · 3 de 3: usa Aurora junto al altar.'; target = 'altar'; }
-      else if (!talked(state, 'elara')) { objective = 'Elara despierta: escúchala y devuelve su voz al reino.'; target = 'elara'; }
-      else { objective = 'Valdoria vuelve a ser libre. Explora el reino al amanecer.'; target = 'elara'; }
+      if (!talked(state, 'tejedora')) { objective = 'Sube a la torre y conversa con la Tejedora de Espinas.'; target = 'tejedora'; }
+      else if (!state.flags.ritualLight) { objective = 'Ritual · 1 de 3: usa Lumaria (tecla 1 y R) junto al altar.'; target = 'altar'; }
+      else if (!state.flags.ritualGrowth) { objective = 'Ritual · 2 de 3: usa Floralis (tecla 3 y R) junto al altar.'; target = 'altar'; }
+      else if (!state.flags.ritualDawn) { objective = 'Ritual · 3 de 3: usa Aurora (tecla 4 y R) junto al altar.'; target = 'altar'; }
+      else if (!talked(state, 'elara')) { objective = 'Elara despierta: conversa con ella.'; target = 'elara'; }
+      else { objective = 'Valdoria vuelve a ser libre. Explora el reino y conversa con quien quieras.'; target = 'elara'; }
   }
   return { ...QUESTS[index], objective, target, total: 8, complete: state.flags.victory };
 }
 
-const RECAPS = {
-  nox: 'Ya conoces el secreto del sueño. Inés y Bruno te esperan en la aldea.',
-  ines: 'Recuerda: escucha al dragón antes de juzgarlo. Bruno guarda la llave.',
-  bruno: 'Ventaria moverá el molino. La llave está junto a las aspas: cuídala.',
-  liora: 'Lumaria revela el sendero. Busca el santuario entre los árboles.',
-  aldren: 'Has ganado mi confianza. El puente está abierto; cumple tu promesa de escuchar.',
-  celina: 'Floralis devuelve flores a las espinas. Lleva una sola rosa al ritual.',
-  baltasar: 'Un refugio debe tener una salida. El pergamino conserva la voz de Elara.',
-  teobaldo: 'La tormenta trajo el refugio; el miedo prolongó el sueño. Aurora te protegerá.',
-  brum: 'Te confío el cristal. Que Elara sea libre de decidir: esa es nuestra promesa.',
-  tejedora: 'Estoy lista para soltar el sueño. En el altar: Lumaria, Floralis y Aurora.',
-  elara: 'El amanecer nos pertenece a todos. Mi historia continúa, y la tuya también.',
-};
-
-export function getDialogue(npc, level = 'A1', stage = 0, state) {
-  const character = NPCS.find(entry => entry.id === npc);
-  if (!character) return { npc, name: 'Valdoria', text: 'El viento cruza el reino.', prompt: '', hint: '', suggestions: [], intent: '', stage: 0, complete: true, locked: true, level: 'A1' };
-  const selectedLevel = LEVELS.includes(level) ? level : 'A1';
-  const selectedStage = Number.isInteger(stage) ? Math.min(3, Math.max(0, stage)) : 0;
-  if (state && !npcAvailable(state, npc)) {
-    const quest = currentQuest(state);
-    return { npc, name: character.name, text: lockedLine(npc, quest.objective), prompt: quest.objective, hint: quest.objective, suggestions: [], intent: '', stage: selectedStage, complete: false, locked: true, level: selectedLevel };
-  }
-  if (selectedStage === 3) return { npc, name: character.name, text: state?.flags.victory ? `${RECAPS[npc]} Valdoria ha despertado.` : RECAPS[npc], prompt: '', hint: '', suggestions: [], intent: '', stage: 3, complete: true, locked: false, level: selectedLevel };
-  const [intent, hint, variants] = DIALOGUES[npc][selectedStage];
-  const [text, example] = variants[LEVELS.indexOf(selectedLevel)];
-  let memory = '';
-  if (state && selectedStage > 0) {
-    const previousIntent = DIALOGUES[npc][selectedStage - 1][0];
-    memory = REACTIONS[previousIntent] || 'Te escucho. ';
-  }
-  return { npc, name: character.name, text: `${memory}${text}`, prompt: LEVEL_FOCUS[selectedLevel], hint, suggestions: [example], intent, stage: selectedStage, complete: false, locked: false, level: selectedLevel };
-}
-const REACTIONS = {
-  identity: 'Gael… recordaré tu nombre. ', sleep: 'Sí, el tiempo sigue fuera del sueño. ',
-  village: 'Gracias por escuchar nuestra versión. ', key: 'Bruno valorará una petición respetuosa. ',
-  repair: 'Entonces te confiaré el viento. ', wind: 'Exacto: fuerza con cuidado. ',
-  fairy: 'El bosque siente tu intención. ', light: 'Has entendido la diferencia. ',
-  purpose: 'Escucharte cambia mi juicio. ', trust: 'Tus actos hablan a tu favor. ',
-  rose: 'Has mirado más allá de las espinas. ', floralis: 'El jardín no tendrá que arder. ',
-  shelter: 'El origen no borra lo ocurrido. ', choice: 'Eso decía Elara en su carta. ',
-  order: 'Así encajan los recuerdos. ', evidence: 'La prueba nos permite corregir la memoria. ',
-  peace: 'Mis llamas bajan. Ahora puedo escucharte. ', protect: 'Has comprendido mi juramento. ',
-  fear: 'Nadie había escuchado mi miedo sin obedecerlo. ', release: 'Empiezo a imaginar otra forma de cuidar. ',
-  agency: 'Gracias por dejarme decidir. ', together: 'Quiero conocer a todos los que ayudaron. ',
-};
-function lockedLine(npc, objective) {
-  const lines = {
-    ines: 'El cuervo del camino sabe por qué has llegado. Escúchalo primero.',
-    bruno: 'Antes de tocar el molino, habla con Nox junto al camino.',
-    liora: 'La aldea aún necesita tu ayuda. Vuelve cuando hayas reparado su molino.',
-    aldren: 'El bosque sigue a oscuras. Devuelve su luz antes de pedirme el paso.',
-    celina: 'Sir Aldren debe abrirte el paso a los jardines.',
-    baltasar: 'Necesitamos una prueba. Busca el pergamino de Elara en esta biblioteca.',
-    teobaldo: 'Mis recuerdos son incompletos. Trae el pergamino para contrastarlos.',
-    brum: 'Mis llamas te impiden acercarte. Aprende Aurora en el castillo y protégete.',
-    tejedora: 'Brum aún guarda la luz necesaria. Escucha su historia y consigue el cristal.',
-    elara: 'Elara sigue dentro del sueño. El altar espera luz, vida y amanecer.',
-  };
-  return `${lines[npc] || 'Todavía falta un paso.'} ${objective}`;
+/** What the journal says the learner has discovered, in story order. */
+export function discoveries(state) {
+  return NPCS.filter(npc => talked(state, npc.id)).map(npc => ({ npc: npc.id, name: npc.name, text: CONVERSATIONS[npc.id].journal }));
 }
 
-export function evaluateAnswer(dialogue, input) {
-  const text = normalize(input);
-  const intent = dialogue?.intent || '';
-  const failure = feedback => ({ accepted: false, feedback, intent });
-  if (!dialogue || dialogue.locked || dialogue.complete) return failure(dialogue?.hint || 'Esta conversación todavía no está disponible.');
-  if (!text) return failure('Escribe o dicta una respuesta. También puedes abrir la ayuda.');
-  if (text.length > 1500) return failure('Prueba con una respuesta de menos de 1500 caracteres.');
-  const rule = INTENTS[intent];
-  if (!rule) return failure('No hay una intención disponible para esta respuesta.');
-  if (deniesRequestedAction(text, intent)) return failure(`Esa respuesta niega la acción que necesitas aquí. ${dialogue.hint}`);
-  const intentionText = intent === 'peace' ? text.replace(/\bno (?:voy a|quiero|vengo a) (?:atacar|herir|matar)\w*/g, '') : text;
-  if (rule.reject?.some(pattern => matches(intentionText, pattern))) return failure(`La intención parece contraria a lo que necesitas aquí. ${dialogue.hint}`);
-  if (!rule.any.some(pattern => matches(text, pattern)) || rule.all?.some(group => !group.some(pattern => matches(text, pattern)))) return failure(`Todavía no reconozco la intención. ${dialogue.hint}`);
-  const level = LEVELS.indexOf(dialogue.level);
-  if (intent === 'identity' && level >= 1 && !/\b(soy|me llamo|mi nombre|me conocen como)\b/.test(text) && !/^gael[.,;!]/.test(text)) return failure('Preséntate con tu nombre: puedes decir «soy», «me llamo» o «mi nombre es».');
-  if (intent === 'key' && level >= 1 && !/\b(necesito|quisiera|quiero|pido|dame|darias|presta\w*|puedes|podrias|ped\w*)\b/.test(text)) return failure('Formula una petición de la llave, por ejemplo con «necesito» o «¿me prestarías…?».');
-  const negativeIntent = { sleep: /\bno (?:esta |estan )?(?:duerm\w*|dormid\w*)\b/, wind: /\bno (?:el )?(?:viento|aire|brisa)\b/, fairy: /\bno (?:quiero |voy a )?(?:ayud\w*|cuid\w*)\b/, trust: /\bno (?:he )?repar\w*\b/, protect: /\bno (?:quiero |voy a )?(?:proteg\w*|cuid\w*)\b/, freedom: /\bno (?:quiero |voy a )?respet\w*\b/ };
-  if (negativeIntent[intent]?.test(text)) return failure(`Esa respuesta expresa una intención contraria. ${dialogue.hint}`);
-  const words = text.match(/[a-z0-9]+/g) || [];
-  const minWords = [1, 1, 3, 5, 6, 8, 9][Math.max(0, level)];
-  if (words.length < minWords) return failure(`La idea está encaminada. ${LEVEL_FOCUS[dialogue.level] || ''} ${dialogue.hint}`);
-  if (level >= 3 && !/\b(porque|para|aunque|si|pero|sin|antes|despues|mientras|y|ya que|por eso|por tanto|de modo|de ese modo|de otro modo|no obstante|aun asi|en lugar|de ahi|sin embargo|ademas|permite|exige|asi|de lo contrario|solo|sino)\b/.test(text)) return failure(`Añade una razón, condición o contraste. ${dialogue.hint}`);
-  if (intent === 'ritual' && level >= 1) {
-    const light = text.search(/\b(luz|lumaria)\b/); const life = text.search(/\b(vida|floralis)\b/); const dawn = text.search(/\b(amanecer|aurora)\b/);
-    if (light < 0 || life < light || dawn < life) return failure('El altar necesita este orden: luz, vida y amanecer. Puedes usar los nombres de los hechizos.');
+const LOCKED = {
+  ines: 'Hola. Primero escucha a Nox, el cuervo del camino: él sabe por qué llegaste hasta aquí.',
+  bruno: 'Antes de hablar del molino, escucha a Nox junto al camino.',
+  liora: 'La aldea todavía necesita tu ayuda. Vuelve cuando el molino gire y tengas la llave.',
+  aldren: 'El bosque sigue a oscuras. Devuélvele la luz antes de pedirme el paso.',
+  celina: 'Sir Aldren tiene que abrirte el paso a los jardines.',
+  baltasar: 'Me encantaría conversar, pero antes busca el pergamino de Elara en esta biblioteca.',
+  teobaldo: 'Mis recuerdos están incompletos. Trae el pergamino de la biblioteca y conversamos.',
+  brum: 'Mis llamas te impiden acercarte. Aprende Aurora en el castillo y protégete.',
+  tejedora: 'Brum todavía guarda la luz que necesitamos. Escucha su historia y trae el cristal.',
+  elara: 'Elara sigue dentro del sueño. El altar espera luz, vida y amanecer.',
+};
+
+const pick = (entry, fallbackFn) => {
+  if (!entry) return null;
+  if (typeof entry === 'string') return { es: entry, fn: fallbackFn };
+  if (Array.isArray(entry)) return { es: entry[0], fn: entry[1] ?? fallbackFn };
+  return { es: entry.es, en: entry.en, options: entry.options, fn: fallbackFn };
+};
+const storyLine = entry => typeof entry === 'string' ? { es: entry } : entry ? { es: entry.es, en: entry.en } : { es: '' };
+
+/** Questions available for «Profundizar»: optional extras first, then the main questions again. */
+export function deepPool(id, level) {
+  const lv = LEVELS.includes(level) ? level : 'A1';
+  if (!NPC_IDS.has(id)) {
+    const own = pick(PLACES[id].levels[lv], 'describe');
+    const others = LEVELS.filter(other => other !== lv && BANDS[other] === BANDS[lv]).map(other => pick(PLACES[id].levels[other], 'describe'));
+    return [own, ...others];
   }
-  if (intent === 'order' && level >= 2) {
-    const storm = text.indexOf('tormenta'); const sleep = text.indexOf('sueno');
-    const refuge = text.indexOf('refugio');
-    if (storm < 0 || sleep < storm || (dialogue.level !== 'B2' && (refuge < storm || refuge > sleep))) return failure('Primero llegó la tormenta; después nació el refugio y se prolongó el sueño.');
-  }
-  return { accepted: true, feedback: 'Intención reconocida. Tu respuesta hace avanzar la conversación.', intent };
+  const set = CONVERSATIONS[id].levels[lv];
+  return [...set.extra.map(entry => pick(entry, DEFAULT_FUNCTIONS.extra)), ...QUESTION_STEPS.map(step => pick(set[step], DEFAULT_FUNCTIONS[step]))];
 }
+
+function helpFor(id, level, fn, options) {
+  const frames = level === 'A0' ? [...(options ?? []), ...FRAMES.A0.all] : FRAMES[level][fn] ?? FRAMES[level].opinion;
+  const words = ['A0', 'A1', 'A2'].includes(level) && NPC_IDS.has(id) ? CONVERSATIONS[id].words : [];
+  return { frames, words, safe: SAFE_ANSWER.es, safeEn: level === 'A0' ? SAFE_ANSWER.en : undefined };
+}
+
+/**
+ * What a character says now. The view only describes the conversation; it never
+ * holds an expected answer.
+ */
+export function conversationView(state, id) {
+  const level = LEVELS.includes(state.level) ? state.level : 'A1';
+  const band = BANDS[level];
+  const npc = NPCS.find(entry => entry.id === id);
+  const place = PLACES[id];
+  const base = { id, kind: npc ? 'npc' : 'place', name: npc?.name ?? place?.name ?? 'Valdoria', role: npc?.role ?? 'Lugar de Valdoria', level, total: conversationLength(id), index: Math.min(progressOf(state, id), conversationLength(id)), topic: npc ? CONVERSATIONS[id].topic : '', revealed: npc ? talked(state, id) : progressOf(state, id) >= 2 };
+  const quest = currentQuest(state);
+  const mission = { objective: quest.objective, title: quest.title, chapter: quest.number, here: quest.target === id };
+  if (!npc && !place) return { ...base, mode: 'locked', step: '', text: 'El viento cruza el reino.', isQuestion: false, mission, canDeepen: false, help: null };
+  if (!available(state, id)) return { ...base, mode: 'locked', step: '', text: `${LOCKED[id] ?? 'Todavía falta un paso.'}`, isQuestion: false, mission, canDeepen: false, help: null };
+  const deepCount = state.deep[id] ?? 0;
+  const finished = base.index >= base.total;
+  if (state.talking?.id === id && state.talking.deep && deepCount > 0) {
+    const pool = deepPool(id, level);
+    const question = pool[(deepCount - 1) % pool.length];
+    return { ...base, mode: 'deep', step: 'deep', text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options) };
+  }
+  if (!npc) {
+    const story = storyLine(place.story[band]);
+    const question = pick(place.levels[level], 'describe');
+    if (base.index === 0) return { ...base, mode: 'main', step: 'story', text: story.es, en: story.en, isQuestion: false, mission, canDeepen: true, help: null };
+    return { ...base, mode: finished ? 'revisit' : 'main', step: 'q', text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options) };
+  }
+  const conversation = CONVERSATIONS[id];
+  if (finished) {
+    const line = storyLine(conversation.story[band].revisit);
+    return { ...base, mode: 'revisit', step: 'revisit', text: state.flags.victory && id !== 'elara' ? `${line.es} Valdoria despertó, y se nota.` : line.es, en: line.en, isQuestion: false, mission, canDeepen: true, help: null };
+  }
+  const step = conversation.flow[base.index];
+  if (QUESTION_STEPS.includes(step)) {
+    const question = pick(conversation.levels[level][step], DEFAULT_FUNCTIONS[step]);
+    return { ...base, mode: 'main', step, text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options) };
+  }
+  const line = storyLine(conversation.story[band][step]);
+  return { ...base, mode: 'main', step, text: line.es, en: line.en, isQuestion: false, mission, canDeepen: true, help: null };
+}
+/** Backwards-compatible name used by the 3D fallback and older tests. */
+export const getDialogue = (npc, level = 'A1', _stage, state) => conversationView(state ?? { ...createGame(level), level }, npc);
 
 export function actionFeedback(previous, action, next) {
   if (next.flags.victory && !previous.flags.victory) return 'Valdoria despierta. Has completado El reino de la rosa dormida.';
@@ -319,7 +372,7 @@ export function actionFeedback(previous, action, next) {
   }
   if (action.type === 'cast') {
     const effect = FLAGS.find(flag => next.flags[flag] && !previous.flags[flag]);
-    const messages = { millRepaired: 'Las aspas vuelven a girar. La llave ya está disponible.', forestLit: 'El santuario se ilumina y el bosque abre su camino.', gardenOpen: 'Las espinas se transforman en flores.', dragonShield: 'Aurora te protege. Acércate a Brum y escucha.', ritualLight: 'El altar recibe la luz. Ahora necesita vida: Floralis.', ritualGrowth: 'La rosa florece. Completa el ritual con Aurora.', ritualDawn: 'El cristal libera el amanecer. Habla con Elara.' };
+    const messages = { millRepaired: 'Las aspas vuelven a girar. Recoge la llave junto al molino.', forestLit: 'El santuario se ilumina y el bosque abre su camino hacia el puente.', gardenOpen: 'Las espinas se transforman en flores. Recoge la rosa encantada.', dragonShield: 'Aurora te protege. Acércate a Brum y conversa con él.', ritualLight: 'El altar recibe la luz. Ahora necesita vida: Floralis.', ritualGrowth: 'La rosa florece. Completa el ritual con Aurora.', ritualDawn: 'El cristal libera el amanecer. Conversa con Elara.' };
     return effect ? messages[effect] || currentQuest(next).objective : `El hechizo no activa este lugar todavía. ${currentQuest(previous).objective}`;
   }
   return currentQuest(next).objective;

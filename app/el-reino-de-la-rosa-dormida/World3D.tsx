@@ -7,6 +7,7 @@ import { currentQuest, type GameState } from './engine.mjs';
 import { buildWorld } from './world';
 import { createPrince } from './characters';
 import { nearestInReach, safeCheckpoint, stepRealmPlayer, type Position } from './movement.mjs';
+import { PLACES } from './conversations.mjs';
 
 export type WorldProps = {
   state: GameState;
@@ -27,6 +28,9 @@ export type WorldProps = {
 const SPELLS = ['lumaria', 'ventaria', 'floralis', 'aurora'];
 const SPELL_COLOR: Record<string, string> = { lumaria: '#ffe99c', ventaria: '#b5eeff', floralis: '#ff9cc7', aurora: '#bcb0ff' };
 const NPC_NAMES: Record<string, string> = { nox: 'Nox, el cuervo', ines: 'Inés, la posadera', bruno: 'Bruno, el herrero', liora: 'Liora, el hada', aldren: 'Aldren, el guardián', celina: 'Celina, la jardinera', baltasar: 'Baltasar, el bibliotecario', teobaldo: 'Teobaldo, el mayordomo', brum: 'Brum, el dragón', tejedora: 'La Tejedora de Espinas', elara: 'La princesa Elara' };
+const PLACE_SPOTS = Object.fromEntries(Object.entries(PLACES).map(([id, place]) => [id, place.spot])) as Record<string, Position>;
+const placeOpen = (id: string, flags: Record<string, boolean>) => { const need = PLACES[id as keyof typeof PLACES]?.requires; return !need || Boolean(flags[need]); };
+for (const [id, place] of Object.entries(PLACES)) NPC_NAMES[id] = place.name;
 const ITEM_NAMES: Record<string, string> = { key: 'Llave antigua', rose: 'Rosa encantada', scroll: 'Pergamino real', crystal: 'Cristal del dragón', amulet: 'Amuleto mágico' };
 const SPELL_TARGETS: Record<string, Position> = {
   mill: { x: 24, y: 0, z: 7 }, grove: { x: -10, y: 0, z: -7 }, thorns: { x: 0, y: 0, z: -49 }, dragon: { x: -10, y: 8, z: -111 }, altar: { x: 10, y: 8, z: -126 },
@@ -153,6 +157,19 @@ export default function World3D(props: WorldProps) {
     halo.position.y = .08;
     beacon.add(beam, gem, halo);
     scene.add(beacon);
+    // Optional conversation spots: a quiet teal circle with a floating rune.
+    const placeRing = new THREE.TorusGeometry(1.05, .035, 6, 48);
+    const placeRune = new THREE.OctahedronGeometry(.2);
+    const placeRingMaterial = new THREE.MeshBasicMaterial({ color: '#9fe3d6', transparent: true, opacity: .55, depthWrite: false, blending: THREE.AdditiveBlending });
+    const placeRuneMaterial = new THREE.MeshBasicMaterial({ color: '#c8fff2', transparent: true, opacity: .85, depthWrite: false });
+    const placeMarkers = Object.entries(PLACE_SPOTS).map(([id, spot]) => {
+      const group = new THREE.Group();
+      group.name = `Conversation spot ${id}`;
+      const ringMesh = new THREE.Mesh(placeRing, placeRingMaterial); ringMesh.rotation.x = Math.PI / 2; ringMesh.position.y = .06;
+      const rune = new THREE.Mesh(placeRune, placeRuneMaterial); rune.position.y = 1.6;
+      group.add(ringMesh, rune); group.position.set(spot.x, spot.y, spot.z); scene.add(group);
+      return { id, group, rune };
+    });
 
     let player = safeCheckpoint(live.current.state.checkpoint, world.floorAt, world.colliders, live.current.state.flags);
     let lastCheckpoint = positionOf(player);
@@ -336,7 +353,18 @@ export default function World3D(props: WorldProps) {
         if (p.state.inventory.includes(id) || (id === 'key' && !p.state.flags.millRepaired) || (id === 'crystal' && !p.state.flags.dragonTrusted)) continue;
         availableItems[id] = pos;
       }
-      nearestNpc = nearestInReach(player, world.npcPositions, 3.9);
+      const talkSpots: Record<string, Position> = { ...world.npcPositions };
+      for (const marker of placeMarkers) {
+        const open = placeOpen(marker.id, p.state.flags);
+        marker.group.visible = open;
+        if (!open) continue;
+        talkSpots[marker.id] = PLACE_SPOTS[marker.id];
+        marker.rune.position.y = 1.6 + (reduced ? 0 : Math.sin(clock * 1.7 + marker.group.position.x) * .12);
+        marker.rune.rotation.y = clock * .9;
+      }
+      // When two characters are close, the one the mission needs answers the prompt.
+      const missionNpc = currentQuest(p.state).target;
+      nearestNpc = missionNpc && talkSpots[missionNpc] && nearestInReach(player, { [missionNpc]: talkSpots[missionNpc] }, 3.9) ? missionNpc : nearestInReach(player, talkSpots, 3.9);
       nearestItem = nearestInReach(player, availableItems, 2.7);
       nearestSpell = nearestInReach(player, SPELL_TARGETS, 8);
       const nextPrompt: Prompt | null = nearestItem ? { kind: 'item', id: nearestItem, name: ITEM_NAMES[nearestItem] ?? nearestItem, key: 'F' }
@@ -508,15 +536,15 @@ export default function World3D(props: WorldProps) {
 }
 
 function AccessibleRealm(props: WorldProps) {
-  const { flags, inventory, spells, dialogue } = props.state;
+  const { flags, inventory, spells } = props.state;
   const areas = [
     { name: 'Colina del amanecer', open: true, npcs: ['nox'], items: [] as string[], targets: [] as string[] },
-    { name: 'Aldea de los Susurros', open: (dialogue.nox ?? 0) >= 3, npcs: ['ines', 'bruno'], items: ['key'], targets: ['mill'] },
-    { name: 'Bosque encantado', open: inventory.includes('key'), npcs: ['liora'], items: [], targets: ['grove'] },
-    { name: 'Puente de las Espinas', open: Boolean(flags.forestLit), npcs: ['aldren'], items: [], targets: [] },
-    { name: 'Jardines reales', open: Boolean(flags.bridgeOpen), npcs: ['celina'], items: ['rose'], targets: ['thorns'] },
-    { name: 'Castillo de Valdoria', open: Boolean(flags.castleOpen), npcs: ['baltasar', 'teobaldo'], items: ['scroll'], targets: [] },
-    { name: 'Guarida del dragón', open: Boolean(flags.historyKnown), npcs: ['brum'], items: ['crystal'], targets: ['dragon'] },
+    { name: 'Aldea de los Susurros', open: props.state.completed.includes('q1'), npcs: ['ines', 'bruno', 'molino'], items: ['key'], targets: ['mill'] },
+    { name: 'Bosque encantado', open: inventory.includes('key'), npcs: ['liora', 'claro'], items: [], targets: ['grove'] },
+    { name: 'Puente de las Espinas', open: Boolean(flags.forestLit), npcs: ['aldren', 'rio'], items: [], targets: [] },
+    { name: 'Jardines reales', open: Boolean(flags.bridgeOpen), npcs: ['celina', 'fuente'], items: ['rose'], targets: ['thorns'] },
+    { name: 'Castillo de Valdoria', open: Boolean(flags.castleOpen), npcs: ['baltasar', 'teobaldo', 'biblioteca', 'salon'], items: ['scroll'], targets: [] },
+    { name: 'Guarida del dragón', open: Boolean(flags.historyKnown), npcs: ['brum', 'mirador'], items: ['crystal'], targets: ['dragon'] },
     { name: 'Torre de la princesa', open: Boolean(flags.dragonTrusted) && inventory.includes('crystal'), npcs: ['tejedora', 'elara'], items: [], targets: ['altar'] },
   ];
   return <div className="rrw-fallback">
@@ -524,7 +552,7 @@ function AccessibleRealm(props: WorldProps) {
     <p>Este navegador no pudo abrir el mundo 3D. Puedes recorrer la historia, conversar y resolver todos los desafíos en este modo accesible.</p>
     {props.intro && <button type="button" className="rrw-fallback-start" onClick={props.onIntroEnd}>Comenzar la aventura</button>}
     {!props.intro && areas.filter(area => area.open).map(area => <section key={area.name} className="rrw-fallback-section"><h3>{area.name}</h3><div className="rrw-fallback-actions">
-      {area.npcs.map(id => <button type="button" key={id} disabled={props.paused} onClick={() => props.onInteract(id)}>Hablar con {NPC_NAMES[id]}</button>)}
+      {area.npcs.map(id => <button type="button" key={id} disabled={props.paused} onClick={() => props.onInteract(id)}>{PLACE_SPOTS[id] ? 'Charlar en' : 'Hablar con'} {NPC_NAMES[id]}</button>)}
       {area.items.filter(id => !inventory.includes(id) && (id !== 'key' || flags.millRepaired) && (id !== 'crystal' || flags.dragonTrusted)).map(id => <button type="button" key={id} disabled={props.paused} onClick={() => props.onCollect(id)}>Recoger {ITEM_NAMES[id]}</button>)}
       {area.targets.map(id => <button type="button" key={id} disabled={props.paused || !spells.includes(props.spell)} onClick={() => props.onCast(id)}>Usar {props.spell || 'magia'} · {TARGET_NAMES[id]}</button>)}
     </div></section>)}
