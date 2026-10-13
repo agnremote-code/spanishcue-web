@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "authorization": "Owner request 2026-10-13 (Ale): rebuild the grammar classes as live classes; A2 explanations in simple Spanish with occasional English translations. Prototype lesson 230 (Desde, desde hace y hace). Redesign request 2026-10-13 11:25Z (Ale): Spanish first, optional English behind a button; translations of the example sentences.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Today you will learn to say since when something happens, for how long, and how long ago something happened."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Since when has your head been hurting?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "How long have you been working in sales?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "And you? How long have you lived here?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "We haven’t seen each other in ages!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Say when something that is still true started."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Say how long it has lasted until now."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Place a finished event in the past."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Ask about time."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "since"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived in Bogotá since 2019."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have been studying Spanish since March."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I haven’t eaten meat since the summer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have been working since eight and haven’t had lunch yet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Spanish uses the present tense here, where English uses “have lived / have been living”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "for"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived in Bogotá for seven years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived in Bogotá for seven years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I haven’t seen my family for a month."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "desde + a point in time · desde hace + an amount of time"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "ago"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I arrived in Bogotá seven years ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I changed jobs two weeks ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I called you a little while ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I arrived seven years ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived there for seven years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "You will often hear “Vivo aquí hace dos años” = I have lived here for two years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "durante = for a finished period"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Since when has it been hurting?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Since Saturday. I have barely slept for four days."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Yes, I moved a week ago and carried a lot of boxes."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have been taking ibuprofen for two days."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I haven’t been to the gym for months."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "horario = schedule · desde entonces = since then · tardes libres = free afternoons · todavía = still"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "since"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "for"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "ago"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Same story, different information: start point, duration, or time since an event."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived here since October 2024."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have been working since eight."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "English says “I have lived”; Spanish uses the present: vivo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived here for two years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I moved here two years ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived in Lima for three years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I started running a month ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I haven’t had a holiday since December."
+    },
+    {
+      "path": "app/grammar-classroom/live/visuals/duration.tsx",
+      "text": "I have lived here since October 2024."
+    },
+    {
+      "path": "app/grammar-classroom/live/visuals/duration.tsx",
+      "text": "I have lived here for two years."
+    },
+    {
+      "path": "app/grammar-classroom/live/visuals/duration.tsx",
+      "text": "I moved here two years ago."
+    }
+  ]
+}
