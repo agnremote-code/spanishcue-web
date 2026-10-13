@@ -39,8 +39,8 @@ export function TimeAxis({ mode }: { mode: 'start' | 'event' }) {
       {mode === 'start' ? <>
         <rect className="gl-fill-teal" x={x(2019)} y="80" width={x(2026) - x(2019)} height="20" rx="10" />
         <circle className="gl-fill-blue" cx={x(2019)} cy="90" r="11" />
-        <text className="gl-axis-label gl-text-blue" x={x(2019)} y="58" textAnchor="middle">desde 2019</text>
-        <text className="gl-axis-label gl-text-teal" x={(x(2019) + x(2026)) / 2} y="40" textAnchor="middle">desde hace siete años → sigue hoy</text>
+        <text className="gl-axis-label gl-text-blue" x={x(2019)} y="64" textAnchor="middle">desde 2019</text>
+        <text className="gl-axis-label gl-text-teal" x={(x(2019) + x(2026)) / 2} y="28" textAnchor="middle">desde hace siete años → sigue hoy</text>
       </> : <>
         <circle className="gl-fill-orange" cx={x(2019)} cy="90" r="11" />
         <text className="gl-axis-label gl-text-orange" x={x(2019) - 18} y="70" textAnchor="end">Llegué</text>

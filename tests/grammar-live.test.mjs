@@ -29,7 +29,7 @@ async function mount(hash=''){
 test('lesson 230 is the live-class prototype; every other grammar class keeps its renderer',()=>{
   assert.deepEqual(liveLessonIds,[230]);
   const lesson=getLiveLesson(230);
-  assert.deepEqual(lesson.stages.map(s=>s.id),['objetivo','explicacion','contexto','practica','situaciones','conversacion','desafio','cierre']);
+  assert.deepEqual(lesson.stages.map(s=>s.id),['entender','contexto','practica','situaciones','conversacion','desafio','cierre']);
   assert.equal(lesson.stages.reduce((n,s)=>n+s.minutes,0),60);
   const tones=new Set(lesson.legend.map(l=>l.tone));
   for(const stage of lesson.stages)for(const step of stage.steps){
@@ -56,29 +56,32 @@ test('the teacher navigates freely: sidebar, steps, arrows and deep links, with 
     assert.equal(v.current(),'practica');
     assert.equal(v.$('[data-step][aria-selected="true"]').dataset.step,'2');
     await v.click('[data-stage="cierre"]');assert.equal(v.current(),'cierre');
-    await v.click('[data-stage="objetivo"]');assert.equal(v.current(),'objetivo');
+    await v.click('[data-stage="situaciones"]');assert.equal(v.current(),'situaciones');
+    await v.key('ArrowRight');assert.equal(v.current(),'conversacion');
     await v.key('ArrowRight');assert.equal(v.$('[data-step][aria-selected="true"]').dataset.step,'1');
-    await v.key('ArrowRight');assert.equal(v.current(),'explicacion');
-    await v.key('ArrowLeft');assert.equal(v.current(),'objetivo');
-    await v.click('[data-show-all]');assert.equal(document.querySelectorAll('[data-stage-panel="objetivo"] [data-step-panel]:not([hidden])').length,2);
-    assert.equal(document.querySelectorAll('[data-stage]').length,8);
+    await v.key('ArrowRight');assert.equal(v.current(),'desafio');
+    await v.key('ArrowLeft');assert.equal(v.current(),'conversacion');
+    await v.click('[data-show-all]');assert.equal(document.querySelectorAll('[data-stage-panel="conversacion"] [data-step-panel]:not([hidden])').length,2);
+    assert.equal(document.querySelectorAll('[data-stage]').length,7);
     assert.equal(window.localStorage.length,0,'nothing about the student is stored');
   }finally{await v.close();}
 });
 
-test('explanation answers four questions with a since/for/ago contrast and the classic mistakes',async()=>{
-  const v=await mount('#explicacion');try{
-    const panel=v.$('[data-stage-panel="explicacion"]').textContent;
+test('theory comes first and answers four questions with a since/for/ago contrast and the classic mistakes',async()=>{
+  const v=await mount();try{
+    assert.equal(v.current(),'entender','the class opens on the theory');
+    assert.equal(document.querySelectorAll('[data-stage-panel="entender"] .gl-art').length,3,'each structure has its illustration');
+    const panel=v.$('[data-stage-panel="entender"]').textContent;
     for(const text of ['¿Desde cuándo?','presente + desde + un momento','presente + desde hace + cantidad de tiempo','hace + cantidad de tiempo + que + presente','verbo en pasado + hace + cantidad de tiempo','Vivo en Bogotá desde 2019.','Llegué a Bogotá hace siete años.','Vivo aquí hace dos años','Llevo','durante'])assert.ok(panel.includes(text),text);
     await v.click('[data-step="5"]');
-    assert.ok(!v.$('[data-stage-panel="explicacion"] [data-step-panel="5"]').textContent.includes('Estudio español desde hace dos años.'),'corrections stay hidden until the teacher reveals them');
-    await v.click('[data-stage-panel="explicacion"] [data-step-panel="5"] [data-reveal-all]');
-    assert.ok(v.$('[data-stage-panel="explicacion"] [data-step-panel="5"]').textContent.includes('Estudio español desde hace dos años.'));
+    assert.ok(!v.$('[data-stage-panel="entender"] [data-step-panel="5"]').textContent.includes('Estudio español desde hace dos años.'),'corrections stay hidden until the teacher reveals them');
+    await v.click('[data-stage-panel="entender"] [data-step-panel="5"] [data-reveal-all]');
+    assert.ok(v.$('[data-stage-panel="entender"] [data-step-panel="5"]').textContent.includes('Estudio español desde hace dos años.'));
   }finally{await v.close();}
 });
 
 test('the time lab hides sentences until revealed and recomputes them from the start',async()=>{
-  const v=await mount('#explicacion-5');try{
+  const v=await mount('#entender-5');try{
     assert.equal(v.$('[data-explorer-sentence]'),null);
     await v.click('[data-situation="familia"]');
     await v.click('[data-explorer-show="duration"]');
@@ -92,10 +95,10 @@ test('the time lab hides sentences until revealed and recomputes them from the s
 });
 
 test('context keeps the original reading and audio; colour marks are a discovery toggle',async()=>{
-  const v=await mount('#contexto-2');try{
-    const panel=v.$('[data-stage-panel="contexto"] [data-step-panel="1"]');
+  const v=await mount('#contexto-3');try{
+    const panel=v.$('[data-stage-panel="contexto"] [data-step-panel="2"]');
     assert.match(panel.textContent,/Hola, soy Elena/);assert.equal(panel.querySelector('mark'),null);
-    await v.click('[data-stage-panel="contexto"] [data-step-panel="1"] [data-marks]');assert.ok(panel.querySelector('mark.gl-tone-teal'));
+    await v.click('[data-stage-panel="contexto"] [data-step-panel="2"] [data-marks]');assert.ok(panel.querySelector('mark.gl-tone-teal'));
     assert.equal(v.$('[data-stage-panel="contexto"] audio').getAttribute('src'),'/audio/grammar-classroom/230.mp3');
     assert.equal(v.$('[data-teacher-note]'),null,'teacher notes are hidden while sharing the screen');
     await v.click('[data-tool="teacher"]');assert.ok(v.$('[data-teacher-note]'));
@@ -107,7 +110,9 @@ test('closed practice checks itself; open practice is revealed by the teacher',a
   const v=await mount('#practica');try{
     const item='[data-stage-panel="practica"] [data-step-panel="0"] .gl-choice-item:nth-child(3)';
     await v.click(`${item} [data-option="0"]`);assert.match(v.$(`${item} .gl-feedback`).textContent,/Revisa/);
+    assert.equal(v.$('.gl-rail').dataset.mood,'retry');
     await v.click(`${item} [data-option="2"]`);assert.match(v.$(`${item} .gl-feedback`).textContent,/Correcto.*hecho terminado/);
+    assert.equal(v.$('.gl-rail').dataset.mood,'ok');assert.match(v.$('.gl-rail-bubble').textContent,/¡Bien!/);
     const order=[...v.$('[data-stage-panel="practica"] [data-step-panel="4"]').querySelectorAll('[data-order-item]')];
     for(const index of [0,1,2,3,4,5])await v.click(`[data-stage-panel="practica"] [data-order-item="${index}"]`);
     assert.equal(order.length,6);assert.match(v.$('[data-stage-panel="practica"] [data-step-panel="4"] .gl-feedback').textContent,/Orden correcto/);

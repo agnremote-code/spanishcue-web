@@ -3,6 +3,12 @@ import { useState, type ReactNode } from 'react';
 import type { Block, ChoiceItem, Discuss } from './types';
 import { English, Rich, useLive } from './Rich';
 import { LiveVisual } from './visuals';
+import { ConceptArt } from './visuals/art';
+
+/** Lets the mascot react to a checked answer. */
+function react(ok: boolean) {
+  window.dispatchEvent(new window.CustomEvent('gl-react', { detail: { ok } }));
+}
 
 function Card({ kind, title, children, actions }: { kind: string; title?: string; children: ReactNode; actions?: ReactNode }) {
   return <section className={`gl-card gl-${kind}`} data-block={kind}>
@@ -51,7 +57,7 @@ function Choice({ title, hint, items }: { title: string; hint?: string; items: C
       return <li key={item.prompt} className="gl-choice-item" data-state={choice === undefined ? 'open' : right ? 'right' : 'wrong'}>
         <p className="gl-prompt">{parts[0]}{parts.length > 1 && <span className="gl-blank">{choice === undefined ? '_____' : item.options[choice]}</span>}{parts.slice(1).join('___')}</p>
         <div className="gl-options" role="group" aria-label={`Opciones ${i + 1}`}>
-          {item.options.map((option, o) => <button type="button" key={option} data-option={o} aria-pressed={choice === o} className={choice === o ? (right ? 'is-right' : 'is-wrong') : ''} onClick={() => { setShown(false); setPicked(prev => ({ ...prev, [i]: o })); }}>{option}</button>)}
+          {item.options.map((option, o) => <button type="button" key={option} data-option={o} aria-pressed={choice === o} className={choice === o ? (right ? 'is-right' : 'is-wrong') : ''} onClick={() => { setShown(false); setPicked(prev => ({ ...prev, [i]: o })); react(o === item.answer); }}>{option}</button>)}
         </div>
         {choice !== undefined && <p className="gl-feedback" aria-live="polite"><b>{right ? '✓ Correcto.' : '✗ Revisa.'}</b> {right ? item.explanation : hint || 'Vuelve a la explicación y prueba otra opción.'}</p>}
       </li>;
@@ -68,7 +74,7 @@ function Classify({ block }: { block: Extract<Block, { kind: 'classify' }> }) {
       const right = choice === item.answer;
       return <li key={item.text} className="gl-classify-item" data-state={choice === undefined ? 'open' : right ? 'right' : 'wrong'}>
         <p className="gl-prompt">{item.text}</p>
-        <div className="gl-options" role="group" aria-label={item.text}>{block.categories.map(category => <button type="button" key={category.id} data-category={category.id} aria-pressed={choice === category.id} className={`gl-tone-${category.tone} ${choice === category.id ? (right ? 'is-right' : 'is-wrong') : ''}`} onClick={() => { setShown(false); setPicked(prev => ({ ...prev, [i]: category.id })); }}>{category.label}</button>)}</div>
+        <div className="gl-options" role="group" aria-label={item.text}>{block.categories.map(category => <button type="button" key={category.id} data-category={category.id} aria-pressed={choice === category.id} className={`gl-tone-${category.tone} ${choice === category.id ? (right ? 'is-right' : 'is-wrong') : ''}`} onClick={() => { setShown(false); setPicked(prev => ({ ...prev, [i]: category.id })); react(category.id === item.answer); }}>{category.label}</button>)}</div>
         {choice !== undefined && <p className="gl-feedback" aria-live="polite"><b>{right ? '✓' : '✗ Revisa.'}</b> {right ? item.explanation : block.hint || ''}</p>}
       </li>;
     })}</ol>
@@ -98,7 +104,7 @@ function Order({ block }: { block: Extract<Block, { kind: 'order' }> }) {
     <div className="gl-order">
       <ol className="gl-order-chosen" aria-label="Tu orden">{chosen.map((item, position) => <li key={item} className={done ? (item === position ? 'is-right' : 'is-wrong') : ''}><span>{position + 1}</span>{block.items[item]}</li>)}
         {!chosen.length && <li className="gl-order-empty">Aquí aparece la historia ordenada.</li>}</ol>
-      {!done && <div className="gl-order-pool" role="group" aria-label="Hechos para ordenar">{pool.map(item => <button type="button" key={item} data-order-item={item} onClick={() => setChosen(prev => [...prev, item])}>{block.items[item]}</button>)}</div>}
+      {!done && <div className="gl-order-pool" role="group" aria-label="Hechos para ordenar">{pool.map(item => <button type="button" key={item} data-order-item={item} onClick={() => { const next = [...chosen, item]; setChosen(next); if (next.length === block.items.length) react(next.every((value, position) => value === position)); }}>{block.items[item]}</button>)}</div>}
     </div>
     <div className="gl-row">
       <button type="button" className="gl-chip-button" disabled={!chosen.length} onClick={() => setChosen(prev => prev.slice(0, -1))}>Deshacer</button>
@@ -220,9 +226,13 @@ export function LiveBlock({ block }: { block: Block }) {
     case 'goals': return <Card kind="goals" title={block.title}><ol>{block.items.map(goal => <li key={goal.text}><span><Rich text={goal.text} /></span><English text={goal.en} /></li>)}</ol></Card>;
     case 'prompts': return <Card kind="prompts" title={block.title}><ol>{block.items.map(item => <li key={item}><Rich text={item} /></li>)}</ol></Card>;
     case 'concept': return <section className={`gl-concept gl-tone-${block.tone}`} data-block="concept">
-      <header><span className="gl-badge">{block.label}</span><h3>{block.question}</h3>{block.en && <em lang="en">{block.en}</em>}</header>
-      <div className="gl-formulas">{block.formula.map(f => <code key={f}>{f}</code>)}</div>
-      <p className="gl-meaning"><Rich text={block.meaning} /></p>
+      <div className="gl-concept-copy">
+        <header><span className="gl-badge">{block.label}</span>{block.en && <em lang="en">{block.en}</em>}</header>
+        <h3>{block.question}</h3>
+        <p className="gl-meaning"><Rich text={block.meaning} /></p>
+        <div className="gl-formulas">{block.formula.map(f => <code key={f}>{f}</code>)}</div>
+      </div>
+      {block.art && <ConceptArt art={block.art} />}
       <ul className="gl-examples">{block.examples.map(example => <li key={example.es}><span><Rich text={example.es} /></span><English text={example.en} /></li>)}</ul>
       {block.note && <p className="gl-note"><Rich text={block.note} /></p>}
     </section>;

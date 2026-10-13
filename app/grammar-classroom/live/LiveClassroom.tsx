@@ -7,6 +7,8 @@ import { LiveContext, Rich } from './Rich';
 import type { LiveLesson } from './types';
 import './live.css';
 
+/** Poses the mascot uses to react to a checked answer. */
+const cheer = { ok: { pose: '/brand/mascot/kneeling.webp', line: '¡Bien! Eso es.' }, retry: { pose: '/autoestudio/mascot/noting.webp', line: 'Casi. Mira la pista y prueba otra vez.' } };
 const levelColors: Record<string, string> = { A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
 type Position = { stage: number; step: number };
 
@@ -18,6 +20,7 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
   const [teacher, setTeacher] = useState(false);
   const [large, setLarge] = useState(false);
   const [all, setAll] = useState(false);
+  const [reaction, setReaction] = useState<{ ok: boolean; at: number } | null>(null);
   const headRef = useRef<HTMLHeadingElement>(null);
   const moved = useRef(false);
   const stages = lesson.stages;
@@ -61,6 +64,19 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
     document.getElementById('gl-stage')?.scrollIntoView?.({ block: 'start', behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }, [at]);
 
+  // The mascot answers a checked exercise for a moment, then goes back to its line.
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const onReact = (event: Event) => {
+      const ok = Boolean((event as CustomEvent<{ ok: boolean }>).detail?.ok);
+      setReaction({ ok, at: Date.now() });
+      clearTimeout(timer);
+      timer = setTimeout(() => setReaction(null), 2600);
+    };
+    window.addEventListener('gl-react', onReact);
+    return () => { window.removeEventListener('gl-react', onReact); clearTimeout(timer); };
+  }, []);
+
   // Arrow keys move through the class, except while typing or using a control.
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -78,6 +94,9 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
   const isLast = at.stage === stages.length - 1 && (all || at.step === stage.steps.length - 1);
   const nextLabel = !all && at.step < stage.steps.length - 1 ? stage.steps[at.step + 1].title : stages[at.stage + 1]?.label;
   const style = { '--gl-level': levelColors[lesson.level] || '#075de7' } as CSSProperties;
+  const step = stage.steps[all ? 0 : at.step];
+  const mood = reaction ? (reaction.ok ? cheer.ok : cheer.retry) : null;
+  const coach = { pose: mood?.pose ?? step.mascot ?? stage.mascot, line: mood?.line ?? step.coach ?? stage.coach, mood: reaction ? (reaction.ok ? 'ok' : 'retry') : 'idle' };
   const settings = useMemo(() => ({ english, teacher, legend: lesson.legend }), [english, teacher, lesson.legend]);
 
   return <LiveContext.Provider value={settings}>
@@ -99,8 +118,7 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
           <p className="gl-hero-sub">{lesson.subtitle}</p>
           {lesson.now && <p className="gl-now-chip"><span aria-hidden="true">📅</span> En esta clase, hoy es <b>{lesson.now}</b>.</p>}
         </div>
-        <img className="gl-hero-art" src="/brand/mascot/standing.webp" alt="" width="900" height="1350" />
-        <div className="gl-road" aria-hidden="true">{stages.map((s, i) => <i key={s.id} className={`${visited.has(i) ? 'seen' : ''} ${i === at.stage ? 'here' : ''}`} style={{ left: `${(i / (stages.length - 1)) * 100}%` }} />)}</div>
+        <div className="gl-road" aria-hidden="true">{stages.map((s, i) => <i key={s.id} className={`${visited.has(i) ? 'seen' : ''} ${i === at.stage ? 'here' : ''}`} />)}</div>
       </section>
 
       <div className="gl-layout">
@@ -112,6 +130,7 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
             </button>
           </li>)}</ol>
           <small className="gl-stages-note">Navegación libre: el profesor decide el orden y el ritmo. Usa ← → del teclado.</small>
+          <figure className="gl-side-mascot" aria-hidden="true"><img src="/autoestudio/mascot/writing.webp" alt="" width="600" height="1350" /></figure>
         </nav>
 
         <main className="gl-stage" id="gl-stage" tabIndex={-1}>
@@ -121,7 +140,7 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
               <small>{String(at.stage + 1).padStart(2, '0')} / {String(stages.length).padStart(2, '0')} · {stage.label} · {stage.minutes} min</small>
               <h2 ref={headRef} tabIndex={-1}>{stage.title}</h2>
             </div>
-            <figure className="gl-coach" aria-hidden="true"><figcaption>{stage.coach}</figcaption><img key={stage.id} src={stage.mascot} alt="" width="600" height="1350" /></figure>
+            <figure className="gl-coach" data-mood={coach.mood} aria-hidden="true"><figcaption>{coach.line}</figcaption><img key={coach.pose} src={coach.pose} alt="" width="600" height="1350" /></figure>
           </header>
 
           {stage.steps.length > 1 && <div className="gl-steps">
@@ -144,6 +163,11 @@ export default function LiveClassroom({ lesson }: { lesson: LiveLesson }) {
             {isLast ? <Link className="gl-primary" href="/">Volver a la biblioteca</Link> : <button type="button" className="gl-primary" data-next onClick={forward}><span className="gl-long">{nextLabel}</span><span className="gl-short">Siguiente</span> →</button>}
           </footer>
         </main>
+
+        <aside className="gl-rail" data-mood={coach.mood} aria-hidden="true">
+          <p className="gl-rail-bubble" key={coach.line}>{coach.line}</p>
+          <img key={coach.pose} src={coach.pose} alt="" width="600" height="1350" />
+        </aside>
       </div>
     </div>
   </LiveContext.Provider>;

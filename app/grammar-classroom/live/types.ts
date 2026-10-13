@@ -14,7 +14,7 @@ export type Block =
   | { kind: 'scenes'; items: { icon: string; place: string; line: string; en?: string; why: string }[] }
   | { kind: 'goals'; title: string; items: { text: string; en?: string }[] }
   | { kind: 'prompts'; title: string; items: string[] }
-  | { kind: 'concept'; tone: Tone; label: string; question: string; en?: string; formula: string[]; meaning: string; examples: Example[]; note?: string }
+  | { kind: 'concept'; tone: Tone; label: string; question: string; en?: string; formula: string[]; meaning: string; examples: Example[]; note?: string; art?: ArtKey }
   | { kind: 'contrast'; title: string; items: { tone: Tone; sentence: string; en?: string; shape: 'point' | 'line'; verdict: string }[] }
   | { kind: 'table'; title: string; head: string[]; rows: string[][]; caption?: string }
   | { kind: 'tip'; icon: string; title: string; text: string; en?: string }
@@ -35,8 +35,11 @@ export type Block =
 
 /** Topic visuals live in ./visuals; a lesson names them, it never imports them. */
 export type VisualKey = 'time-axis-start' | 'time-axis-event' | 'time-explorer' | 'life-line' | 'barrio-3d';
+/** Small illustrations that sit next to a concept (./visuals/art.tsx). */
+export type ArtKey = 'calendar-start' | 'duration-clock' | 'past-trip';
 
-export type LiveStep = { title: string; blocks: Block[] };
+/** A step may change the mascot's pose and line; otherwise the stage's are used. */
+export type LiveStep = { title: string; blocks: Block[]; mascot?: string; coach?: string };
 export type LiveStage = { id: string; label: string; icon: string; minutes: number; title: string; coach: string; mascot: string; steps: LiveStep[] };
 export type LiveLesson = {
   id: number;
