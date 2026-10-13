@@ -49,6 +49,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import "./news.css";
 import "./library-access.css";
 import "./catalog-cards.css";
+import { addAccountFavorites, removeAccountFavorite, syncAccountFavorites } from "./favorites-client";
 import "./top-area.css";
 import "./library-brand.css";
 import "./library-architecture.css";
@@ -794,6 +795,7 @@ export default function Library({
   const [favoriteIds, setFavoriteIds] = useState<number[]>([]);
   const [planIds, setPlanIds] = useState<number[]>([]);
   const [storageReady, setStorageReady] = useState(false);
+  const accountFavoritesLoaded = useRef(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [headerCompact, setHeaderCompact] = useState(false);
   const [levelMenuOpen, setLevelMenuOpen] = useState(false);
@@ -975,10 +977,18 @@ export default function Library({
     if (sidebarOpen) closeSidebar();
     scrollToResults();
   };
-  const toggleFavorite = (id: number) =>
+  // Signed-in teachers keep favorites in their account (also shown in /cuenta);
+  // this browser's list stays as the signed-out cache.
+  const toggleFavorite = (id: number) => {
+    const saved = favoriteIds.includes(id);
     setFavoriteIds((ids) =>
-      ids.includes(id) ? ids.filter((item) => item !== id) : [...ids, id],
+      saved ? ids.filter((item) => item !== id) : [...ids, id],
     );
+    if (!signedIn) return;
+    void (saved ? removeAccountFavorite(id) : addAccountFavorites([id])).then((account) => {
+      if (account) setFavoriteIds(account.map((item) => item.lessonId));
+    });
+  };
   const togglePlan = (id: number) =>
     setPlanIds((ids) =>
       ids.includes(id) ? ids.filter((item) => item !== id) : [...ids, id],
@@ -1000,6 +1010,13 @@ export default function Library({
     }, 0);
     return () => window.clearTimeout(timer);
   }, [lessons]);
+  useEffect(() => {
+    if (!signedIn || !storageReady || accountFavoritesLoaded.current) return;
+    accountFavoritesLoaded.current = true;
+    void syncAccountFavorites(favoriteIds).then((account) => {
+      if (account) setFavoriteIds(account.map((item) => item.lessonId));
+    });
+  }, [signedIn, storageReady, favoriteIds]);
   useEffect(() => {
     const cleanQuery = query.trim();
     if (cleanQuery.length < 2 || cleanQuery === lastTrackedQuery.current) return;

@@ -88,5 +88,11 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
     {paused && <button type="button" className="subscription-cancel" disabled={busyAction !== null} onClick={() => void manage("resume")}>{busyAction === "resume" ? (es ? "Reanudando…" : "Resuming…") : (es ? "Reanudar suscripción" : "Resume subscription")}</button>}
     {active && confirming && <div className="subscription-confirm" role="group" aria-label={es ? "Confirmar cancelación" : "Confirm cancellation"}><p>{es ? `Se detendrán los cobros futuros${date ? ` y conservarás el acceso hasta el ${date}` : ""}. El precio fundador deja de estar garantizado si vuelves.` : `Future charges will stop${date ? ` and access continues until ${date}` : ""}. Founder Price is no longer guaranteed if you return.`}</p><button type="button" disabled={busyAction !== null} onClick={() => void manage("cancel")}>{busyAction === "cancel" ? (es ? "Cancelando…" : "Cancelling…") : (es ? "Sí, cancelar" : "Yes, cancel")}</button><button type="button" disabled={busyAction !== null} onClick={() => setConfirming(false)}>{es ? "Mantener suscripción" : "Keep subscription"}</button></div>}
     {message && <p className="subscription-message" aria-live="polite">{message}</p>}
+    <div className="subscription-billing">
+      <strong>{es ? "Facturación" : "Billing"}</strong>
+      {subscription.provider === "paddle"
+        ? <p>{es ? "Paddle te envía cada recibo por email; desde ese email también puedes actualizar el método de pago." : "Paddle emails every receipt; from that email you can also update your payment method."}</p>
+        : <p>{es ? "Tus pagos y recibos están en tu cuenta de PayPal, en Pagos automáticos." : "Your payments and receipts are in your PayPal account, under Automatic payments."} <a href="https://www.paypal.com/myaccount/autopay/" target="_blank" rel="noopener noreferrer">{es ? "Abrir PayPal" : "Open PayPal"} ↗</a></p>}
+    </div>
   </section>;
 }
