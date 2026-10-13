@@ -10,5 +10,6 @@ const messages: Record<string,string> = {
  pass_revoked:'Este acceso está revocado. Puedes crear uno nuevo conservando el alumno.',
  pass_not_found:'No encontramos este acceso.', learner_not_found:'No encontramos a este alumno.',
  pass_limit:'Llegaste al límite de accesos disponibles.', invalid_level:'Elige uno de los niveles de la lista.',
+ exercise_not_found:'No encontramos esa actividad.', invalid_error:'No pudimos registrar la respuesta.', invalid_event:'No pudimos registrar la actividad.', invalid_note:'Escribe una nota o elige un tema para marcar.', outside_level:'Esa semana no pertenece a tu nivel.',
 };
 export function shareMessage(code: unknown): string { return typeof code==='string' && messages[code] ? messages[code] : 'No pudimos completar la operación. Vuelve a intentarlo.'; }

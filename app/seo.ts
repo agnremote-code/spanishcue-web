@@ -93,6 +93,7 @@ export function isSearchPrivatePath(pathname: string): boolean {
     path === "/s" ||
     path.startsWith("/s/") ||
     path === "/autoestudio/claim" ||
+    path.startsWith("/autoestudio/clase/") ||
     path === "/zeely" ||
     isCampaignPath(path)
   );

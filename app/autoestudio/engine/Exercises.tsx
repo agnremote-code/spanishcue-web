@@ -1,13 +1,33 @@
 "use client";
 
 import { useMemo, useRef, useState, type ReactNode } from "react";
-import type { ChoiceItem, ClassifyItem, ErrorItem, Exercise, GapItem, MatchPair, OpenItem, OrderItem, TransformItem } from "../curriculum/types";
+import type { ChoiceItem, ClassifyItem, ErrorItem, Exercise, GapItem, MatchPair, OpenItem, OrderItem, SectionKey, TransformItem } from "../curriculum/types";
+import type { AnswerEvent } from "../errors/model";
+import { Outcome } from "../errors/Recommendation";
+import type { Suggestion } from "../errors/useErrorLog";
 import type { Copy } from "./copy";
 import { Rich } from "./Rich";
 import { playClips, type AudioMap } from "./speech";
 import { checkAnswer, countWords, normalizeAnswer, seededShuffle, type Verdict } from "./text";
 
-export type EngineContext = { t: Copy; audio?: AudioMap; showEnglish: boolean };
+export type EngineContext = {
+  t: Copy;
+  audio?: AudioMap;
+  showEnglish: boolean;
+  /** Section being rendered; checked answers are reported against it. */
+  section?: SectionKey;
+  /** Records a checked answer and decides whether a class card is shown. */
+  report?: (event: AnswerEvent) => Suggestion | null;
+  onOpenSuggestion?: (suggestion: Suggestion) => void;
+  onDismissSuggestion?: (suggestion: Suggestion) => void;
+};
+
+/** Counts checks per item on this page load, so every retry is a new attempt. */
+function useAttempts() {
+  const attempts = useRef<Record<string, number>>({});
+  return (key: string) => { attempts.current[key] = (attempts.current[key] ?? 0) + 1; return attempts.current[key]; };
+}
+const eventOf = (ctx: EngineContext, exerciseId: string, itemIndex: number, type: string, question: string, given: string, correct: string[], verdict: Verdict, attempt: number, why?: string): AnswerEvent => ({ section: ctx.section ?? "practice", exerciseId, itemIndex, type, question, given, correct, why, verdict, attempt });
 
 export function PlayButton({ text, voice, ctx, label, compact = false }: { text: string; voice?: ChoiceItem["voice"]; ctx: EngineContext; label?: string; compact?: boolean }) {
   const [playing, setPlaying] = useState(false);
@@ -93,8 +113,10 @@ export function mechanicLabel(type: Exercise["type"]): string {
 
 // ---------------------------------------------------------------------------
 
-export function ChoiceQuestion({ item, ctx, id, onAnswer }: { item: ChoiceItem; ctx: EngineContext; id: string; onAnswer?: (correct: boolean) => void }) {
+export function ChoiceQuestion({ item, ctx, id, onAnswer, exerciseId = id, itemIndex = 0, kind = "choice" }: { item: ChoiceItem; ctx: EngineContext; id: string; onAnswer?: (correct: boolean) => void; exerciseId?: string; itemIndex?: number; kind?: string }) {
   const [picked, setPicked] = useState<number | null>(null);
+  const [event, setEvent] = useState<AnswerEvent | null>(null);
+  const attempt = useAttempts();
   // Three or more options are shown in a stable shuffled order, so the right
   // answer never sits in a predictable place. Pairs (tú/usted…) keep theirs.
   const order = useMemo(() => {
@@ -104,6 +126,7 @@ export function ChoiceQuestion({ item, ctx, id, onAnswer }: { item: ChoiceItem; 
   const choose = (index: number) => {
     if (picked !== null) return;
     setPicked(index);
+    setEvent(eventOf(ctx, exerciseId, itemIndex, kind, item.q, item.options[index], [item.options[item.answer]], index === item.answer ? "correct" : "wrong", attempt("choice"), item.why));
     onAnswer?.(index === item.answer);
   };
   return (
@@ -132,6 +155,7 @@ export function ChoiceQuestion({ item, ctx, id, onAnswer }: { item: ChoiceItem; 
         })}
       </div>
       {picked !== null && <Feedback verdict={picked === item.answer ? "correct" : "wrong"} why={item.why} answer={item.options[item.answer]} t={ctx.t} />}
+      <Outcome ctx={ctx} event={event} />
       {picked !== null && picked !== item.answer && (
         <button type="button" className="ae-link" onClick={() => setPicked(null)}>
           {ctx.t.tryAgain}
@@ -147,7 +171,7 @@ function ChoiceExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type:
       <ol className="ae-items">
         {exercise.items.map((item, index) => (
           <li key={index}>
-            <ChoiceQuestion item={item} ctx={ctx} id={`${exercise.id}-${index}`} />
+            <ChoiceQuestion item={item} ctx={ctx} id={`${exercise.id}-${index}`} exerciseId={exercise.id} itemIndex={index} kind={exercise.type} />
           </li>
         ))}
       </ol>
@@ -185,13 +209,23 @@ export function GapLine({ item, values, onChange, verdicts, ctx }: { item: GapIt
 function GapExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "gap" }>; ctx: EngineContext }) {
   const [values, setValues] = useState<string[][]>(() => exercise.items.map((item) => item.answers.map(() => "")));
   const [checked, setChecked] = useState(false);
+  const [events, setEvents] = useState<(AnswerEvent | null)[]>(() => exercise.items.map(() => null));
+  const attempt = useAttempts();
   const verdicts = exercise.items.map((item, itemIndex) => item.answers.map((accepted, gapIndex) => (checked ? checkAnswer(values[itemIndex][gapIndex] ?? "", accepted) : null)));
+  const check = () => {
+    setChecked(true);
+    setEvents(exercise.items.map((item, itemIndex) => {
+      const results = item.answers.map((accepted, gapIndex) => checkAnswer(values[itemIndex][gapIndex] ?? "", accepted));
+      const overall: Verdict = results.every((v) => v === "correct") ? "correct" : results.some((v) => v === "wrong") ? "wrong" : "accent";
+      return eventOf(ctx, exercise.id, itemIndex, "gap", item.q, values[itemIndex].join(" · "), item.answers.map((list) => list[0]), overall, attempt(String(itemIndex)), item.why);
+    }));
+  };
   return (
     <Shell
       exercise={exercise}
       footer={
         <>
-          <button type="button" className="ae-primary" onClick={() => setChecked(true)}>
+          <button type="button" className="ae-primary" onClick={check}>
             {ctx.t.check}
           </button>
           {checked && (
@@ -228,6 +262,7 @@ function GapExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "g
               {item.hint && !checked && <small className="ae-hint">{item.hint}</small>}
               {ctx.showEnglish && item.en && <small className="ae-en">{item.en}</small>}
               <Feedback verdict={overall} why={item.why} answer={item.answers.map((list) => list[0]).join(" · ")} t={ctx.t} />
+              <Outcome ctx={ctx} event={checked ? events[itemIndex] : null} />
             </li>
           );
         })}
@@ -238,15 +273,18 @@ function GapExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: "g
 
 // ---------------------------------------------------------------------------
 
-export function OrderBuilder({ item, seed, ctx, onResult }: { item: OrderItem; seed: string; ctx: EngineContext; onResult?: (correct: boolean) => void }) {
+export function OrderBuilder({ item, seed, ctx, onResult, exerciseId = seed, itemIndex = 0 }: { item: OrderItem; seed: string; ctx: EngineContext; onResult?: (correct: boolean) => void; exerciseId?: string; itemIndex?: number }) {
   const shuffled = useMemo(() => seededShuffle(item.words.map((word, index) => ({ word, index })), seed), [item.words, seed]);
   const [placed, setPlaced] = useState<number[]>([]);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
+  const [event, setEvent] = useState<AnswerEvent | null>(null);
+  const attempt = useAttempts();
   const sentence = placed.map((position) => shuffled[position].word).join(" ");
   const check = () => {
     const accepted = [item.words.join(" "), ...(item.alt ?? [])];
     const result = accepted.some((candidate) => normalizeAnswer(candidate) === normalizeAnswer(sentence)) ? "correct" : "wrong";
     setVerdict(result);
+    setEvent(eventOf(ctx, exerciseId, itemIndex, "order", item.words.join(" / "), sentence, [item.words.join(" ")], result, attempt("order"), item.why));
     onResult?.(result === "correct");
   };
   return (
@@ -276,6 +314,7 @@ export function OrderBuilder({ item, seed, ctx, onResult }: { item: OrderItem; s
       </div>
       {ctx.showEnglish && item.en && <small className="ae-en">{item.en}</small>}
       <Feedback verdict={verdict} why={item.why} answer={item.words.join(" ")} t={ctx.t} />
+      <Outcome ctx={ctx} event={verdict ? event : null} />
     </div>
   );
 }
@@ -286,7 +325,7 @@ function OrderExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: 
       <ol className="ae-items">
         {exercise.items.map((item, index) => (
           <li key={index}>
-            <OrderBuilder item={item} seed={`${exercise.id}-${index}`} ctx={ctx} />
+            <OrderBuilder item={item} seed={`${exercise.id}-${index}`} ctx={ctx} exerciseId={exercise.id} itemIndex={index} />
           </li>
         ))}
       </ol>
@@ -313,12 +352,19 @@ function MatchExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: 
   };
   const allLinked = Object.keys(links).length === exercise.pairs.length;
   const correctCount = Object.entries(links).filter(([left, right]) => Number(left) === right).length;
+  const [event, setEvent] = useState<AnswerEvent | null>(null);
+  const attempt = useAttempts();
+  const check = () => {
+    setChecked(true);
+    const wrongLinks = Object.entries(links).filter(([left, right]) => Number(left) !== right).map(([left, right]) => `${exercise.pairs[Number(left)].left} → ${exercise.pairs[right].right}`);
+    setEvent(eventOf(ctx, exercise.id, 0, "match", exercise.prompt, wrongLinks.join(" · ") || "todo correcto", exercise.pairs.map((p) => `${p.left} → ${p.right}`), wrongLinks.length ? "wrong" : "correct", attempt("match"), exercise.why));
+  };
   return (
     <Shell
       exercise={exercise}
       footer={
         <>
-          <button type="button" className="ae-primary" disabled={!allLinked} onClick={() => setChecked(true)}>
+          <button type="button" className="ae-primary" disabled={!allLinked} onClick={check}>
             {ctx.t.check}
           </button>
           <button type="button" className="ae-link" onClick={() => { setLinks({}); setChecked(false); }}>
@@ -367,6 +413,7 @@ function MatchExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: 
         </div>
       )}
       {checked && correctCount === exercise.pairs.length && <Feedback verdict="correct" why={exercise.why} t={ctx.t} />}
+      <Outcome ctx={ctx} event={checked ? event : null} />
     </Shell>
   );
 }
@@ -379,12 +426,19 @@ function ClassifyExercise({ exercise, ctx }: { exercise: Extract<Exercise, { typ
   const [placed, setPlaced] = useState<Record<number, number>>({});
   const [checked, setChecked] = useState(false);
   const wrong = order.filter((item) => placed[item.index] !== undefined && placed[item.index] !== item.cat);
+  const [events, setEvents] = useState<AnswerEvent[]>([]);
+  const attempt = useAttempts();
+  const check = () => {
+    setChecked(true);
+    const n = attempt("classify");
+    setEvents(exercise.items.map((item, index) => eventOf(ctx, exercise.id, index, "classify", item.text, exercise.categories[placed[index]] ?? "", [exercise.categories[item.cat]], placed[index] === item.cat ? "correct" : "wrong", n, item.why)));
+  };
   return (
     <Shell
       exercise={exercise}
       footer={
         <>
-          <button type="button" className="ae-primary" disabled={Object.keys(placed).length !== exercise.items.length} onClick={() => setChecked(true)}>
+          <button type="button" className="ae-primary" disabled={Object.keys(placed).length !== exercise.items.length} onClick={check}>
             {ctx.t.check}
           </button>
           <button type="button" className="ae-link" onClick={() => { setPlaced({}); setChecked(false); }}>
@@ -451,19 +505,23 @@ function ClassifyExercise({ exercise, ctx }: { exercise: Extract<Exercise, { typ
           </div>
         )
       )}
+      {checked && events.map((event, index) => <Outcome key={index} ctx={ctx} event={event} />)}
     </Shell>
   );
 }
 
 // ---------------------------------------------------------------------------
 
-export function TextAnswer({ accepted, why, ctx, initial = "", label, multiline = false, onResult }: { accepted: string[]; why?: string; ctx: EngineContext; initial?: string; label: string; multiline?: boolean; onResult?: (correct: boolean) => void }) {
+export function TextAnswer({ accepted, why, ctx, initial = "", label, multiline = false, onResult, exerciseId, itemIndex = 0, kind = "transform" }: { accepted: string[]; why?: string; ctx: EngineContext; initial?: string; label: string; multiline?: boolean; onResult?: (correct: boolean) => void; exerciseId?: string; itemIndex?: number; kind?: string }) {
   const [value, setValue] = useState(initial);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [reveal, setReveal] = useState(false);
+  const [event, setEvent] = useState<AnswerEvent | null>(null);
+  const attempt = useAttempts();
   const check = () => {
     const result = checkAnswer(value, accepted);
     setVerdict(result);
+    if (exerciseId) setEvent(eventOf(ctx, exerciseId, itemIndex, kind, label, value, accepted.slice(0, 1), result, attempt("text"), why));
     onResult?.(result !== "wrong");
   };
   return (
@@ -484,6 +542,7 @@ export function TextAnswer({ accepted, why, ctx, initial = "", label, multiline 
         )}
       </div>
       <Feedback verdict={verdict} why={verdict ? why : undefined} answer={verdict === "accent" || reveal ? accepted[0] : undefined} t={ctx.t} />
+      <Outcome ctx={ctx} event={verdict ? event : null} />
     </div>
   );
 }
@@ -498,7 +557,7 @@ function TransformExercise({ exercise, ctx }: { exercise: Extract<Exercise, { ty
               <Rich text={item.source} />
             </p>
             {item.instruction && <small className="ae-hint">{item.instruction}</small>}
-            <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} label={item.source} />
+            <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} label={item.source} exerciseId={exercise.id} itemIndex={index} kind="transform" />
           </li>
         ))}
       </ol>
@@ -515,7 +574,7 @@ function ErrorExercise({ exercise, ctx }: { exercise: Extract<Exercise, { type: 
             <p className="ae-source is-error">
               <Rich text={item.sentence} />
             </p>
-            <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} initial={item.sentence} label={item.sentence} multiline />
+            <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} initial={item.sentence} label={item.sentence} multiline exerciseId={exercise.id} itemIndex={index} kind="error" />
           </li>
         ))}
       </ol>

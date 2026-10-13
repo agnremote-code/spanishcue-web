@@ -7,9 +7,11 @@ import { levelProgress, levelWeekIds, moduleStatus, pendingSections, REQUIRED_SE
 import type { SectionKey } from './curriculum/types';
 import './teacher-passes.css';
 import { sectionLabels } from './engine/copy';
+import TeacherErrors, { type TeacherTab } from './errors/TeacherErrors';
 
 type Summary={started:number;completed:number;inProgress?:number;percent:number;sectionsCompleted?:number;sectionsTotal?:number;coursePercent?:number;lastModule:string|null;lastSection?:SectionKey|null;lastModuleSections?:number;lastActivity:string|null};
-type Pass={id:string;learnerId:string|null;level:string;revision:number;revokedAt:string|null;createdAt:string;alias:string|null;summary?:Summary|null};
+type ErrorTotals={total:number;corrected:number;recurrent:number;top:string|null};
+type Pass={id:string;learnerId:string|null;level:string;revision:number;revokedAt:string|null;createdAt:string;alias:string|null;summary?:Summary|null;errors?:ErrorTotals|null};
 type Learner={id:string;alias:string|null;createdAt:string};
 type Detail={learner:Learner;passes:Pass[];progress:ProgressState};
 type DetailState={status:'loading'}|{status:'error';message:string}|{status:'ready';data:Detail};
@@ -64,7 +66,8 @@ export default function TeacherPasses({enabled}:{enabled:boolean}){
     setDetail({status:'loading'});
     api<Detail>(`learners/${pass.learnerId}`).then(data=>{if(request.current===id)setDetail({status:'ready',data});}).catch(e=>{if(request.current===id)setDetail({status:'error',message:e instanceof Error?e.message:shareMessage(undefined)});});
   },[]);
-  function openProgress(pass:Pass,button:HTMLElement){trigger.current=button;setSelected(pass);fetchDetail(pass);}
+  const [view,setView]=useState<'progreso'|TeacherTab>('progreso');
+  function openProgress(pass:Pass,button:HTMLElement,tab:'progreso'|TeacherTab='progreso'){trigger.current=button;setView(tab);setSelected(pass);fetchDetail(pass);}
   const close=useCallback(()=>{request.current++;setSelected(null);const back=trigger.current;trigger.current=null;window.setTimeout(()=>back?.focus(),0);},[]);
 
   const duplicateAliases=new Set(passes.map(p=>p.alias).filter((alias,i,all)=>alias&&all.indexOf(alias)!==i));
@@ -98,20 +101,24 @@ export default function TeacherPasses({enabled}:{enabled:boolean}){
               {s&&<p className="ae-pass-metrics"><span><b>{s.completed}/{WEEKS_PER_LEVEL}</b> semanas completadas</span><span><b>{pct(s.coursePercent??s.percent)}</b> avance del curso</span>{s.sectionsTotal!==undefined&&<span>{s.sectionsCompleted}/{s.sectionsTotal} secciones obligatorias</span>}</p>}
               {s?.lastModule&&<p>Semana actual: {weekNumber(s.lastModule)}{s.lastModuleSections!==undefined?` · ${s.lastModuleSections}/${REQUIRED} secciones`:''}{s.lastSection?` · en ${labels[s.lastSection]}`:''}</p>}
               {s?.lastActivity&&<small>Última actividad: {date(s.lastActivity)}</small>}
+              {pass.errors&&pass.errors.total>0&&<p className="ae-pass-errors"><b>{pass.errors.total}</b> {pass.errors.total===1?'error registrado':'errores registrados'} · {pass.errors.recurrent} recurrentes · {pass.errors.corrected} corregidos{pass.errors.top?` · tema principal: ${pass.errors.top}`:''}</p>}
             </div>
             <div className="ae-pass-actions">
               {pass.learnerId&&<button type="button" className="ae-view-progress" aria-haspopup="dialog" onClick={e=>openProgress(pass,e.currentTarget)}>Ver progreso</button>}
+              {pass.learnerId&&pass.alias&&<button type="button" className="ae-view-errors" aria-haspopup="dialog" onClick={e=>openProgress(pass,e.currentTarget,'errores')}>Errores y dificultades</button>}
+              {pass.learnerId&&pass.alias&&<button type="button" aria-haspopup="dialog" onClick={e=>openProgress(pass,e.currentTarget,'preparar')}>Preparar próxima clase</button>}
               {!pass.revokedAt&&<><button type="button" disabled={busy} onClick={()=>void action(pass,'copy')}>Copiar link</button><button type="button" disabled={busy} onClick={()=>void action(pass,'rotate')}>Regenerar link</button><button type="button" disabled={busy} onClick={()=>void action(pass,'revoke')}>Revocar</button></>}
               {pass.learnerId&&next&&<button type="button" disabled={busy} onClick={()=>void create(pass.learnerId!,next)}>Dar acceso a {next.toUpperCase()}</button>}
             </div>
           </li>;})}</ul>
       </>}
-      {selected&&<ProgressDialog pass={selected} state={detail} onClose={close} onRetry={()=>fetchDetail(selected)}/>}
+      {selected&&<ProgressDialog pass={selected} state={detail} onClose={close} onRetry={()=>fetchDetail(selected)} view={view} onView={setView}/>}
     </>}
   </section>;
 }
 
-function ProgressDialog({pass,state,onClose,onRetry}:{pass:Pass;state:DetailState;onClose:()=>void;onRetry:()=>void}){
+const views:{id:'progreso'|TeacherTab;label:string}[]=[{id:'progreso',label:'Progreso'},{id:'errores',label:'Errores y dificultades'},{id:'preparar',label:'Preparar próxima clase'},{id:'recomendaciones',label:'Recomendaciones'}];
+function ProgressDialog({pass,state,onClose,onRetry,view,onView}:{pass:Pass;state:DetailState;onClose:()=>void;onRetry:()=>void;view:'progreso'|TeacherTab;onView:(view:'progreso'|TeacherTab)=>void}){
   const closeButton=useRef<HTMLButtonElement>(null);const dialog=useRef<HTMLDivElement>(null);
   useEffect(()=>{
     closeButton.current?.focus();
@@ -138,11 +145,14 @@ function ProgressDialog({pass,state,onClose,onRetry}:{pass:Pass;state:DetailStat
         <div><p className="ae-detail-kicker">Seguimiento del alumno</p><h3 id="ae-progress-title">{name} <span>{ordered.map(id=>id.toUpperCase()).join(' · ')}</span></h3></div>
         <button ref={closeButton} type="button" className="ae-detail-close" onClick={onClose}>Cerrar <span aria-hidden="true">✕</span></button>
       </div>
+      {pass.learnerId&&pass.alias&&<div className="ae-dialog-tabs" role="tablist" aria-label="Seguimiento">{views.map(v=><button key={v.id} type="button" role="tab" aria-selected={view===v.id} className={view===v.id?'is-active':''} onClick={()=>onView(v.id)}>{v.label}</button>)}</div>}
+      {view!=='progreso'&&pass.learnerId?<TeacherErrors learnerId={pass.learnerId} tab={view}/>:<>
       {state.status==='loading'&&<div className="ae-detail-state" role="status"><span className="ae-spinner" aria-hidden="true"/>Cargando el progreso de {name}…</div>}
       {state.status==='error'&&<div className="ae-detail-state is-error" role="alert"><p>{state.message}</p><button type="button" onClick={onRetry}>Reintentar</button></div>}
       {state.status==='ready'&&<>
         {!state.data.learner.alias&&<p className="ae-detail-state">El alumno todavía no abrió el enlace ni eligió apodo.</p>}
         {ordered.map(id=><LevelDetail key={id} level={id} progress={state.data.progress}/>)}
+      </>}
       </>}
     </div>
   </div>,document.body);

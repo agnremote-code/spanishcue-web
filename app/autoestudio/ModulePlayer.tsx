@@ -26,6 +26,8 @@ import { completeSection, isModuleComplete, recordQuiz, saveDraft, startModule, 
 import type { ShareSession } from "./progress/server-adapter";
 import ProgressNotice from "./progress/ProgressNotice";
 import { useStudyProgress } from "./progress/useProgress";
+import type { RecommendationCatalog } from "./errors/catalog";
+import { useErrorLog, type Suggestion } from "./errors/useErrorLog";
 
 export type ModulePlayerProps = {
   module: Module;
@@ -37,11 +39,16 @@ export type ModulePlayerProps = {
   related: { path: string; label: string }[];
   audio?: AudioMap;
   nextLocked: boolean;
+  /** Real classes per error category for this level (server-composed, no bodies). */
+  recommendations?: RecommendationCatalog;
+  /** PRO/owner: never shown a class they can already open. */
+  fullAccess?: boolean;
 };
 
 const hashToSection = Object.fromEntries(Object.entries(sectionHashes).map(([key, hash]) => [hash, key as SectionKey]));
 
-export default function ModulePlayer({ module, level, objectives, previous, next, related, audio, nextLocked, session }: ModulePlayerProps) {
+const emptyCatalog: RecommendationCatalog = {};
+export default function ModulePlayer({ module, level, objectives, previous, next, related, audio, nextLocked, session, recommendations = emptyCatalog, fullAccess = false }: ModulePlayerProps) {
   const { locale } = useI18n();
   const t = copyFor(locale);
   const labels = sectionLabels[locale === "en" ? "en" : "es"];
@@ -91,7 +98,11 @@ export default function ModulePlayer({ module, level, objectives, previous, next
     if (following) go(following);
   };
 
-  const ctx: EngineContext = useMemo(() => ({ t, audio, showEnglish: hasEnglish && showEnglish }), [t, audio, showEnglish, hasEnglish]);
+  const objectiveIds = useMemo(() => module.newObjectives, [module.newObjectives]);
+  const errorLog = useErrorLog(session, module.id, objectiveIds, recommendations, fullAccess);
+  const onOpenSuggestion = useCallback((suggestion: Suggestion) => errorLog.logEvent("opened", suggestion.lesson.id, suggestion.category), [errorLog]);
+  const onDismissSuggestion = useCallback((suggestion: Suggestion) => errorLog.dismiss(suggestion.category), [errorLog]);
+  const ctx: EngineContext = useMemo(() => ({ t, audio, showEnglish: hasEnglish && showEnglish, section, report: errorLog.report, onOpenSuggestion, onDismissSuggestion }), [t, audio, showEnglish, hasEnglish, section, errorLog.report, onOpenSuggestion, onDismissSuggestion]);
   const onQuizFinish = useCallback((score: number, total: number) => update((current) => recordQuiz(current, module.id, score, total)), [module.id, update]);
   const onDraft = useCallback((text: string) => update((current) => saveDraft(current, module.id, text)), [module.id, update]);
 
