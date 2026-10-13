@@ -589,7 +589,8 @@ test('3D world: original procedural assets only, and three.js stays inside appro
   assert.ok(importers.length >= 1);
   const forestModules = new Set(['app/bosque-de-los-hongos-gigantes/camera.ts', 'app/bosque-de-los-hongos-gigantes/World3D.tsx', 'app/bosque-de-los-hongos-gigantes/forest3d.ts', 'app/bosque-de-los-hongos-gigantes/hero3d.ts', 'app/bosque-de-los-hongos-gigantes/mushrooms3d.ts']);
   const reinoModules = new Set(['app/el-reino-de-la-rosa-dormida/World3D.tsx', 'app/el-reino-de-la-rosa-dormida/characters.ts', 'app/el-reino-de-la-rosa-dormida/world.ts']);
-  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path) || path === 'app/the-sound-map/camera.ts' || path === 'app/immersive/DemoScene.tsx' || path === 'app/grammar-classroom/studio/article-world.ts' || path === 'app/grammar-classroom/duration/world.ts' || reinoModules.has(path)), importers.join());
+  const casinoModules = new Set(['app/marketing-de-casinos/World3D.tsx', 'app/marketing-de-casinos/casino3d.ts']);
+  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path) || path === 'app/the-sound-map/camera.ts' || path === 'app/immersive/DemoScene.tsx' || path === 'app/grammar-classroom/studio/article-world.ts' || path === 'app/grammar-classroom/duration/world.ts' || reinoModules.has(path) || casinoModules.has(path)), importers.join());
   const duration = readFileSync('app/grammar-classroom/duration/world.ts', 'utf8');
   assert.doesNotMatch(duration, /https?:\/\//, 'the duration neighbourhood creates its own geometry without external assets');
   const gallery = readFileSync('app/grammar-classroom/studio/article-world.ts', 'utf8');

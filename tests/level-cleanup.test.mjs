@@ -38,7 +38,7 @@ test('A0 appears in filters only for the explicitly authored lessons', () => {
 
 test('A1 has the merged total and pedagogical route order', () => {
   const a1Lessons = lessons.filter((lesson) => lesson.level === 'A1' || lesson.levels?.includes('A1'));
-  assert.equal(a1Lessons.length, 40);
+  assert.equal(a1Lessons.length, 41);
   assert.ok(a1Lessons.some(lesson => lesson.id === 32), 'Reino Unido offers an A1 route');
   const idsFor = (category) => lessons.filter((lesson) => lesson.category === category)
     .sort((a, b) => a.routeSequence - b.routeSequence).map((lesson) => lesson.id);

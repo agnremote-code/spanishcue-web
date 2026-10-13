@@ -1,0 +1,24 @@
+import type { Option } from './levels.mjs';
+export type OpenScene = { id: string; picks: number[] };
+export type GameState = { level: string; floor: number; done: Record<string, string[]>; scene: OpenScene | null };
+export type Beat = { line: string; options: Option[]; pick: number | undefined };
+export type SceneView = {
+  id: string; title: string; place: string; name: string; role: string; floor: number;
+  step: number; beats: Beat[]; ended: boolean; end: string | null; talk: string[]; words: string[];
+};
+export const STORAGE_KEY: string;
+export const DEFAULT_LEVEL: string;
+export function normaliseLevel(value: unknown): string | null;
+export function createState(level?: string): GameState;
+export function doneFor(state: GameState, level?: string): string[];
+export function openScene(state: GameState, id: string): GameState;
+export function closeScene(state: GameState): GameState;
+export function choose(state: GameState, index: number): GameState;
+export function undo(state: GameState): GameState;
+export function setLevel(state: GameState, level: string): GameState;
+export function setFloor(state: GameState, floor: number): GameState;
+export function resetLevel(state: GameState): GameState;
+export function sceneView(state: GameState): SceneView | null;
+export function progress(state: GameState): { done: number; total: number };
+export function serialise(state: GameState): string;
+export function restore(raw: string | null, fallbackLevel?: string): GameState;
