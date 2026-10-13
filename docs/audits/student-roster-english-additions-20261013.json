@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "authorization": "Owner Ale approved on 2026-10-13T17:31Z (project decision card \"¿Apruebas los textos nuevos en inglés de «Mis alumnos»?\" answered \"Apruebo\") the new English copy of the single «Mis alumnos» roster (student profile subsections, Homework, attendance and alerts) requested by the owner on 2026-10-13T16:55Z. Only the exact literals listed here are approved; all other English stays protected.",
+  "additions": [
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Everything about each student in one place: homework, classes, attendance, errors and next step."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Overview"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Classes and attendance"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Errors"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Next class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Recommendations"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Worth your attention"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "All good: nothing pending with this student."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No Homework access yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No Homework for {n} days."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Has Homework access but has not started."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Missed the last class."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Keeps making mistakes in {topic}."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No classes in the last 30 days."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Next step noted: {text}"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Attendance"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "{a} of {b} classes"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No past classes"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework progress"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Last study"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Errors logged"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Next class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Not planned"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Create Homework access"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Access level"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Access created for {name}. Copy the link and share it only with this student."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Copy link"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Regenerate link"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Revoke"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Give {level} access"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Revoke this access? Progress is kept."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Regenerate the link? The old one stops working. Progress is kept."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Link copied."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Copy the link from the field."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Access revoked. Progress is kept."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Private link"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Revoked"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Unused link"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework is included in SpanishCue PRO."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Unused Homework links"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Nobody has opened them yet. Assign them to a student or revoke them."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Assign to…"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework profile"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Move this profile to…"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Attended"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Absent"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Cancelled"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework today"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework {n}d ago"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No Homework"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework not started"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Studying"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Stopped studying"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No access"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "{n} Homework students were added to your list."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "{a}/{b} weeks"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Absent"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Cancelled"
+    },
+    {
+      "path": "app/cuenta/modules/Students.tsx",
+      "text": "20"
+    }
+  ]
+}
