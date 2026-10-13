@@ -1,14 +1,12 @@
 'use client';
+import type { Where } from '../Blocks';
 import type { VisualKey } from '../types';
-import { Barrio3D, LifeLine, TimeAxis, TimeExplorer } from './duration';
+import { BarrioMission, TimeCompare } from './duration';
 
 /** Topic-specific interactive visuals. A new topic adds its file and its keys here. */
-export function LiveVisual({ visual }: { visual: VisualKey }) {
+export function LiveVisual({ visual, where }: { visual: VisualKey; where: Where }) {
   switch (visual) {
-    case 'time-axis-start': return <TimeAxis mode="start" />;
-    case 'time-axis-event': return <TimeAxis mode="event" />;
-    case 'time-explorer': return <TimeExplorer />;
-    case 'life-line': return <LifeLine />;
-    case 'barrio-3d': return <Barrio3D />;
+    case 'time-compare': return <TimeCompare where={where} />;
+    case 'barrio-mission': return <BarrioMission where={where} />;
   }
 }

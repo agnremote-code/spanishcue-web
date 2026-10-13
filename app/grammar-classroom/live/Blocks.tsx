@@ -1,13 +1,30 @@
 'use client';
-import { useState, type ReactNode } from 'react';
-import type { Block, ChoiceItem, Discuss } from './types';
-import { English, Rich, useLive } from './Rich';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import AudioDeck from '../../listening-studio/AudioDeck';
+import type { Block, ChoiceItem, TalkCard } from './types';
+import { English, plain, Rich, useLive, useModeText } from './Rich';
+import { useStore, useStored, type Result } from './store';
 import { LiveVisual } from './visuals';
 import { ConceptArt } from './visuals/art';
+import { reviewWriting } from './writing';
+
+/** Where a block lives, so results can link back to it. */
+export type Where = { id: string; stage: number; step: number };
 
 /** Lets the mascot react to a checked answer. */
 function react(ok: boolean) {
   window.dispatchEvent(new window.CustomEvent('gl-react', { detail: { ok } }));
+}
+
+/** Compares typed or built answers without case, accents, punctuation or extra spaces. */
+export const normalize = (text: string) => text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[¿?¡!.,;:«»"]/g, '').replace(/\s+/g, ' ').trim();
+
+function useRecord(where: Where) {
+  const { record } = useStore();
+  return (item: number | string, ok: boolean, prompt: string, right: string) => {
+    record(`${where.id}:${item}`, { ok, prompt, right, stage: where.stage, step: where.step });
+    react(ok);
+  };
 }
 
 function Card({ kind, title, children, actions }: { kind: string; title?: string; children: ReactNode; actions?: ReactNode }) {
@@ -17,217 +34,407 @@ function Card({ kind, title, children, actions }: { kind: string; title?: string
   </section>;
 }
 
-function RevealAll({ open, onToggle, label = 'respuestas' }: { open: boolean; onToggle: () => void; label?: string }) {
-  return <button type="button" className="gl-chip-button" data-reveal-all aria-pressed={open} onClick={onToggle}>{open ? `Ocultar ${label}` : `Mostrar ${label}`}</button>;
+function Feedback({ ok, children }: { ok: boolean; children: ReactNode }) {
+  return <p className={`gl-feedback ${ok ? 'is-ok' : 'is-no'}`} role="status"><b>{ok ? '✓ Correcto.' : 'Todavía no.'}</b> {children}</p>;
 }
 
-/** Questions for the teacher to ask; each model answer opens on demand. */
-function Questions({ items, title = 'Para comentar' }: { items: Discuss[]; title?: string }) {
-  const [open, setOpen] = useState<Record<number, boolean>>({});
-  const all = items.every((_, i) => open[i]);
-  return <div className="gl-questions">
-    <div className="gl-subhead"><h4>{title}</h4>{items.some(item => item.answer) && <RevealAll open={all} onToggle={() => setOpen(Object.fromEntries(items.map((_, i) => [i, !all])))} />}</div>
-    <ol>{items.map((item, i) => <li key={item.q}>
-      <p><Rich text={item.q} /></p><English text={item.en} />
-      {item.answer && <>
-        <button type="button" className="gl-link" data-answer-toggle aria-expanded={!!open[i]} onClick={() => setOpen(prev => ({ ...prev, [i]: !prev[i] }))}>{open[i] ? 'Ocultar respuesta' : 'Ver respuesta'}</button>
-        {open[i] && <p className="gl-answer"><Rich text={item.answer} /></p>}
-      </>}
-    </li>)}</ol>
-  </div>;
+/** Teacher-only shortcut to show every answer at once. */
+function TeacherReveal({ open, set }: { open: boolean; set: (v: boolean) => void }) {
+  const { mode } = useLive();
+  return mode === 'teacher' ? <button type="button" className="gl-chip-button" data-reveal-all aria-pressed={open} onClick={() => set(!open)}>{open ? 'Ocultar respuestas' : 'Mostrar respuestas'}</button> : null;
 }
 
-function MarksToggle({ on, set }: { on: boolean; set: (v: boolean) => void }) {
-  return <button type="button" className="gl-chip-button" data-marks aria-pressed={on} onClick={() => set(!on)}>{on ? 'Quitar colores' : 'Marcar expresiones de tiempo'}</button>;
+function Guide({ text }: { text: Extract<Block, { kind: 'guide' }>['text'] }) {
+  const { mode } = useLive();
+  const line = useModeText(text);
+  return line ? <p className="gl-guide" data-guide={mode}><span aria-hidden="true">{mode === 'teacher' ? '🧑‍🏫' : '🎯'}</span><Rich text={line} /></p> : null;
 }
 
-export function Legend() {
-  const { legend } = useLive();
-  return <p className="gl-legend" aria-label="Colores">{legend.map(item => <span key={item.tone} className={`gl-tone-${item.tone}`}>{item.label}</span>)}</p>;
-}
-
-function Choice({ title, hint, items }: { title: string; hint?: string; items: ChoiceItem[] }) {
-  const [picked, setPicked] = useState<Record<number, number>>({});
+/** Choose the right option; a wrong one explains itself and can be retried. */
+function ChoiceList({ items, where, title }: { items: ChoiceItem[]; where: Where; title?: string }) {
+  const { optionNotes } = useLive();
+  const [picked, setPicked] = useStored<Record<number, number>>(`${where.id}:picked`, {});
   const [shown, setShown] = useState(false);
-  return <Card kind="choice" title={title} actions={<RevealAll open={shown} onToggle={() => setShown(v => !v)} />}>
+  const save = useRecord(where);
+  return <Card kind="choice" title={title} actions={<TeacherReveal open={shown} set={setShown} />}>
     <ol className="gl-exercise-list">{items.map((item, i) => {
       const choice = shown ? item.answer : picked[i];
       const right = choice === item.answer;
       const parts = item.prompt.split('___');
+      const wrongNote = choice !== undefined && !right ? optionNotes[item.options[choice]] : undefined;
       return <li key={item.prompt} className="gl-choice-item" data-state={choice === undefined ? 'open' : right ? 'right' : 'wrong'}>
-        <p className="gl-prompt">{parts[0]}{parts.length > 1 && <span className="gl-blank">{choice === undefined ? '_____' : item.options[choice]}</span>}{parts.slice(1).join('___')}</p>
+        {item.context && <p className="gl-context">{item.context}</p>}
+        <p className="gl-prompt"><Rich text={parts[0]} />{parts.length > 1 && <span className="gl-blank">{choice === undefined ? '_____' : item.options[choice]}</span>}<Rich text={parts.slice(1).join('___')} /></p>
+        <English text={item.en} />
         <div className="gl-options" role="group" aria-label={`Opciones ${i + 1}`}>
-          {item.options.map((option, o) => <button type="button" key={option} data-option={o} aria-pressed={choice === o} className={choice === o ? (right ? 'is-right' : 'is-wrong') : ''} onClick={() => { setShown(false); setPicked(prev => ({ ...prev, [i]: o })); react(o === item.answer); }}>{option}</button>)}
+          {item.options.map((option, o) => <button type="button" key={option} data-option={o} aria-pressed={choice === o} className={choice === o ? (right ? 'is-right' : 'is-wrong') : ''} onClick={() => {
+            setShown(false); setPicked(prev => ({ ...prev, [i]: o }));
+            save(i, o === item.answer, plain(item.prompt).replace('___', '…'), item.options[item.answer]);
+          }}>{option}</button>)}
         </div>
-        {choice !== undefined && <p className="gl-feedback" aria-live="polite"><b>{right ? '✓ Correcto.' : '✗ Revisa.'}</b> {right ? item.explanation : hint || 'Vuelve a la explicación y prueba otra opción.'}</p>}
+        {choice !== undefined && (right ? <Feedback ok>{item.why}</Feedback> : <Feedback ok={false}>{wrongNote ?? 'Vuelve a leer la frase y prueba otra opción.'}</Feedback>)}
       </li>;
     })}</ol>
   </Card>;
 }
 
-function Classify({ block }: { block: Extract<Block, { kind: 'classify' }> }) {
-  const [picked, setPicked] = useState<Record<number, string>>({});
+function Classify({ block, where }: { block: Extract<Block, { kind: 'classify' }>; where: Where }) {
+  const [picked, setPicked] = useStored<Record<number, string>>(`${where.id}:picked`, {});
   const [shown, setShown] = useState(false);
-  return <Card kind="classify" title={block.title} actions={<RevealAll open={shown} onToggle={() => setShown(v => !v)} />}>
+  const save = useRecord(where);
+  return <Card kind="classify" title={block.title} actions={<TeacherReveal open={shown} set={setShown} />}>
     <ol className="gl-exercise-list">{block.items.map((item, i) => {
       const choice = shown ? item.answer : picked[i];
       const right = choice === item.answer;
       return <li key={item.text} className="gl-classify-item" data-state={choice === undefined ? 'open' : right ? 'right' : 'wrong'}>
-        <p className="gl-prompt">{item.text}</p>
-        <div className="gl-options" role="group" aria-label={item.text}>{block.categories.map(category => <button type="button" key={category.id} data-category={category.id} aria-pressed={choice === category.id} className={`gl-tone-${category.tone} ${choice === category.id ? (right ? 'is-right' : 'is-wrong') : ''}`} onClick={() => { setShown(false); setPicked(prev => ({ ...prev, [i]: category.id })); react(category.id === item.answer); }}>{category.label}</button>)}</div>
-        {choice !== undefined && <p className="gl-feedback" aria-live="polite"><b>{right ? '✓' : '✗ Revisa.'}</b> {right ? item.explanation : block.hint || ''}</p>}
+        <p className="gl-prompt"><Rich text={item.text} /></p>
+        <div className="gl-options" role="group" aria-label={plain(item.text)}>{block.categories.map(category => <button type="button" key={category.id} data-category={category.id} aria-pressed={choice === category.id} className={`gl-tone-${category.tone} ${choice === category.id ? (right ? 'is-right' : 'is-wrong') : ''}`} onClick={() => {
+          setShown(false); setPicked(prev => ({ ...prev, [i]: category.id }));
+          save(i, category.id === item.answer, plain(item.text), block.categories.find(c => c.id === item.answer)?.label ?? '');
+        }}>{category.label}</button>)}</div>
+        {choice !== undefined && <Feedback ok={right}>{right ? item.why : 'Pregúntate: ¿la situación sigue hoy o ya terminó?'}</Feedback>}
       </li>;
     })}</ol>
   </Card>;
 }
 
-function RevealList({ block }: { block: Extract<Block, { kind: 'reveal' }> }) {
-  const [open, setOpen] = useState<Record<number, boolean>>({});
-  const all = block.items.every((_, i) => open[i]);
-  return <Card kind={`reveal gl-${block.style}`} title={block.title} actions={<RevealAll open={all} onToggle={() => setOpen(Object.fromEntries(block.items.map((_, i) => [i, !all])))} />}>
-    <ol className="gl-exercise-list">{block.items.map((item, i) => <li key={item.prompt} className="gl-reveal-item">
-      <p className="gl-prompt">{block.style === 'fix' && <span className="gl-flag" aria-label="Frase con error">✗</span>}<span className={block.style === 'fix' ? 'gl-wrong-text' : ''}>{item.prompt}</span></p>
-      <button type="button" className="gl-link" data-answer-toggle aria-expanded={!!open[i]} onClick={() => setOpen(prev => ({ ...prev, [i]: !prev[i] }))}>{open[i] ? 'Ocultar' : block.style === 'fix' ? 'Ver corrección' : 'Ver una respuesta'}</button>
-      {open[i] && <div className="gl-answer"><p>✓ {item.answer}</p>{item.note && <small>{item.note}</small>}</div>}
-    </li>)}</ol>
+/** First decide if the sentence is right; if it is not, choose the correction. */
+function Fix({ block, where }: { block: Extract<Block, { kind: 'fix' }>; where: Where }) {
+  const [state, setState] = useStored<Record<number, { judge?: boolean; pick?: number }>>(`${where.id}:state`, {});
+  const save = useRecord(where);
+  return <Card kind="fix" title={block.title}>
+    <ol className="gl-exercise-list">{block.items.map((item, i) => {
+      const s = state[i] ?? {};
+      const judged = s.judge !== undefined;
+      const judgedRight = judged && s.judge === item.ok;
+      const needsFix = judgedRight && !item.ok;
+      const fixed = needsFix && s.pick === item.answer;
+      const right = item.options?.[item.answer ?? 0] ?? item.sentence;
+      const finish = (ok: boolean) => save(i, ok, item.sentence, right);
+      return <li key={item.sentence} data-state={judgedRight && (item.ok || fixed) ? 'right' : judged && !judgedRight ? 'wrong' : 'open'}>
+        <p className="gl-prompt">«{item.sentence}»</p>
+        <div className="gl-options" role="group" aria-label={`¿Es correcta la frase ${i + 1}?`}>
+          {([[true, 'Está bien'], [false, 'Tiene un error']] as const).map(([value, label]) => <button type="button" key={label} data-judge={String(value)} aria-pressed={s.judge === value} className={s.judge === value ? (value === item.ok ? 'is-right' : 'is-wrong') : ''} onClick={() => {
+            setState(prev => ({ ...prev, [i]: { judge: value } }));
+            if (value !== item.ok) finish(false); else if (item.ok) finish(true);
+          }}>{label}</button>)}
+        </div>
+        {judged && !judgedRight && <Feedback ok={false}>{item.ok ? 'Esta frase es correcta. Mira el verbo y la expresión de tiempo otra vez.' : 'Hay un error. Mira qué va después de la expresión de tiempo.'}</Feedback>}
+        {judgedRight && item.ok && <Feedback ok>{item.why}</Feedback>}
+        {needsFix && <>
+          <p className="gl-step-label">¿Cómo se corrige?</p>
+          <div className="gl-options gl-options-stack" role="group" aria-label={`Corrección ${i + 1}`}>{item.options?.map((option, o) => <button type="button" key={option} data-fix={o} aria-pressed={s.pick === o} className={s.pick === o ? (o === item.answer ? 'is-right' : 'is-wrong') : ''} onClick={() => { setState(prev => ({ ...prev, [i]: { judge: false, pick: o } })); finish(o === item.answer); }}>{option}</button>)}</div>
+          {s.pick !== undefined && <Feedback ok={fixed}>{fixed ? item.why : 'Esa corrección no resuelve el problema. Prueba otra.'}</Feedback>}
+        </>}
+      </li>;
+    })}</ol>
   </Card>;
 }
 
-/** Tap the events in order. A fixed starting shuffle keeps server and client in sync. */
-function Order({ block }: { block: Extract<Block, { kind: 'order' }> }) {
-  const shuffled = [3, 0, 5, 2, 4, 1, 7, 6].filter(i => i < block.items.length);
-  const [chosen, setChosen] = useState<number[]>([]);
-  const done = chosen.length === block.items.length;
-  const pool = shuffled.filter(i => !chosen.includes(i));
-  return <Card kind="order" title={block.title} actions={<button type="button" className="gl-chip-button" data-order-solution onClick={() => setChosen(block.items.map((_, i) => i))}>Mostrar el orden</button>}>
-    <p className="gl-hint">Toca los hechos en orden. Explica cada elección en voz alta.</p>
-    <div className="gl-order">
-      <ol className="gl-order-chosen" aria-label="Tu orden">{chosen.map((item, position) => <li key={item} className={done ? (item === position ? 'is-right' : 'is-wrong') : ''}><span>{position + 1}</span>{block.items[item]}</li>)}
-        {!chosen.length && <li className="gl-order-empty">Aquí aparece la historia ordenada.</li>}</ol>
-      {!done && <div className="gl-order-pool" role="group" aria-label="Hechos para ordenar">{pool.map(item => <button type="button" key={item} data-order-item={item} onClick={() => { const next = [...chosen, item]; setChosen(next); if (next.length === block.items.length) react(next.every((value, position) => value === position)); }}>{block.items[item]}</button>)}</div>}
-    </div>
-    <div className="gl-row">
-      <button type="button" className="gl-chip-button" disabled={!chosen.length} onClick={() => setChosen(prev => prev.slice(0, -1))}>Deshacer</button>
-      <button type="button" className="gl-chip-button" disabled={!chosen.length} onClick={() => setChosen([])}>Empezar de nuevo</button>
-      {done && <p className="gl-feedback" aria-live="polite"><b>{chosen.every((item, position) => item === position) ? '✓ Orden correcto.' : '✗ Hay elementos fuera de lugar. Revisen juntos los que están en rojo.'}</b></p>}
-    </div>
-    {done && <Questions items={block.after} title="Y ahora, conversen" />}
-  </Card>;
-}
-
-function Roleplays({ block }: { block: Extract<Block, { kind: 'roleplay' }> }) {
-  const [active, setActive] = useState(0);
-  const [teacherRole, setTeacherRole] = useState(false);
-  const [twist, setTwist] = useState(false);
-  const [support, setSupport] = useState(true);
-  const item = block.items[active];
-  const pick = (i: number) => { setActive(i); setTeacherRole(false); setTwist(false); };
-  return <div className="gl-roleplay">
-    <div className="gl-role-tabs" role="tablist" aria-label="Situaciones">{block.items.map((role, i) => <button type="button" role="tab" key={role.title} data-role={i} aria-selected={i === active} onClick={() => pick(i)}><span aria-hidden="true">{role.icon}</span>{role.title}</button>)}</div>
-    <Card kind="role" title={`${item.icon} ${item.title}`}>
-      <div className="gl-role-grid">
-        <article className="gl-role-student"><h4>Tu misión</h4><p>{item.student}</p></article>
-        <article className="gl-role-teacher"><h4>Papel del profesor</h4>{teacherRole ? <p>{item.teacher}</p> : <button type="button" className="gl-link" data-teacher-role onClick={() => setTeacherRole(true)}>Mostrar el papel del profesor</button>}</article>
-      </div>
-      <div className="gl-row">
-        <button type="button" className="gl-chip-button" data-support aria-pressed={support} onClick={() => setSupport(v => !v)}>{support ? 'Ocultar lenguaje útil' : 'Mostrar lenguaje útil'}</button>
-        <button type="button" className="gl-chip-button gl-accent" data-twist aria-pressed={twist} onClick={() => setTwist(v => !v)}>{twist ? 'Quitar complicación' : '＋ Añadir una complicación'}</button>
-      </div>
-      {support && <ul className="gl-phrases" aria-label="Lenguaje útil">{item.language.map(phrase => <li key={phrase}>{phrase}</li>)}</ul>}
-      {twist && <p className="gl-twist" aria-live="polite"><b>Complicación:</b> {item.twist}</p>}
-    </Card>
-  </div>;
-}
-
-function Conversation({ block }: { block: Extract<Block, { kind: 'conversation' }> }) {
-  const [group, setGroup] = useState(0);
-  const [open, setOpen] = useState<Record<string, boolean>>({});
-  const [talked, setTalked] = useState<Record<string, boolean>>({});
-  const current = block.groups[group];
-  return <div className="gl-conversation">
-    <div className="gl-role-tabs" role="tablist" aria-label="Temas">{block.groups.map((g, i) => <button type="button" role="tab" key={g.title} data-topic={i} aria-selected={i === group} onClick={() => setGroup(i)}><span aria-hidden="true">{g.icon}</span>{g.title}</button>)}</div>
-    <div className="gl-talk-grid">{current.questions.map(question => {
-      const key = question.q;
-      return <article className={`gl-talk ${talked[key] ? 'is-talked' : ''}`} key={key}>
-        <p className="gl-talk-q">{question.q}</p>
-        <button type="button" className="gl-link" data-follow-ups aria-expanded={!!open[key]} onClick={() => setOpen(prev => ({ ...prev, [key]: !prev[key] }))}>{open[key] ? 'Ocultar repreguntas' : 'Repreguntar ↓'}</button>
-        {open[key] && <ul className="gl-follow">{question.followUps.map(f => <li key={f}>{f}</li>)}{question.deeper && <li className="gl-deeper"><b>Para profundizar:</b> {question.deeper}</li>}</ul>}
-        <button type="button" className="gl-talked" aria-pressed={!!talked[key]} onClick={() => setTalked(prev => ({ ...prev, [key]: !prev[key] }))}>{talked[key] ? '✓ Conversada' : 'Marcar como conversada'}</button>
-      </article>;
+/** A natural conversation with gaps. */
+function ChatFill({ block, where }: { block: Extract<Block, { kind: 'chat-fill' }>; where: Where }) {
+  const [picked, setPicked] = useStored<Record<number, number>>(`${where.id}:picked`, {});
+  const save = useRecord(where);
+  const speakers = [...new Set(block.lines.map(line => line.who))];
+  return <Card kind="chat-fill" title={block.title}>
+    <div className="gl-chat">{block.lines.map((line, i) => {
+      const choice = picked[i];
+      const right = choice === line.answer;
+      const parts = line.text.split('___');
+      return <div key={i} className={`gl-bubble gl-side-${speakers.indexOf(line.who) % 2}`} data-gap={line.options ? i : undefined}>
+        <b>{line.who}</b>
+        <p>{parts[0]}{line.options && <span className={`gl-blank ${choice === undefined ? '' : right ? 'is-right' : 'is-wrong'}`}>{choice === undefined ? '_____' : line.options[choice]}</span>}{parts.slice(1).join('')}</p>
+        {line.options && <div className="gl-options gl-options-small" role="group" aria-label={`Hueco ${i + 1}`}>{line.options.map((option, o) => <button type="button" key={option} data-option={o} aria-pressed={choice === o} onClick={() => { setPicked(prev => ({ ...prev, [i]: o })); save(i, o === line.answer, line.text.replace('___', '…'), line.options![line.answer ?? 0]); }}>{option}</button>)}</div>}
+        {line.options && choice !== undefined && <Feedback ok={right}>{right ? line.why : 'Lee la respuesta completa: ¿momento, cantidad o hecho terminado?'}</Feedback>}
+      </div>;
     })}</div>
-    <p className="gl-swap"><span aria-hidden="true">⇄</span> {block.swap}</p>
-  </div>;
+  </Card>;
 }
 
-function Task({ block }: { block: Extract<Block, { kind: 'task' }> }) {
-  const [version, setVersion] = useState(0);
-  const [done, setDone] = useState<Record<number, boolean>>({});
-  return <Card kind="task">
-    <p className="gl-purpose"><Rich text={block.purpose} /></p>
-    <ol className="gl-task-steps">{block.steps.map(step => <li key={step}>{step}</li>)}</ol>
-    <div className="gl-versions" role="group" aria-label="Nivel de apoyo">{block.versions.map((v, i) => <button type="button" key={v.label} aria-pressed={i === version} onClick={() => setVersion(i)}><b>{v.label}</b><small>{v.text}</small></button>)}</div>
-    <div className="gl-success"><h4>Lo conseguiste si…</h4><ul>{block.success.map((line, i) => <li key={line}><label><input type="checkbox" checked={!!done[i]} onChange={() => setDone(prev => ({ ...prev, [i]: !prev[i] }))} /> {line}</label></li>)}</ul></div>
+/** Tap the words in order to build the sentence. */
+function Build({ block, where }: { block: Extract<Block, { kind: 'build' }>; where: Where }) {
+  const [chosen, setChosen] = useStored<Record<number, number[]>>(`${where.id}:chosen`, {});
+  const save = useRecord(where);
+  return <Card kind="build" title={block.title}>
+    <ol className="gl-exercise-list">{block.items.map((item, i) => {
+      const order = chosen[i] ?? [];
+      const done = order.length === item.tiles.length;
+      const sentence = order.map(t => item.tiles[t]).join(' ');
+      const right = done && item.accept.some(a => normalize(a) === normalize(sentence));
+      const put = (next: number[]) => {
+        setChosen(prev => ({ ...prev, [i]: next }));
+        if (next.length === item.tiles.length) save(i, item.accept.some(a => normalize(a) === normalize(next.map(t => item.tiles[t]).join(' '))), `Ordena: ${item.tiles.join(' / ')}`, item.accept[0]);
+      };
+      return <li key={item.tiles.join()} data-state={!done ? 'open' : right ? 'right' : 'wrong'}>
+        <p className="gl-built" aria-live="polite">{order.length ? sentence : <span className="gl-muted">Toca las palabras en orden.</span>}</p>
+        <English text={item.en} />
+        <div className="gl-tiles" role="group" aria-label={`Palabras ${i + 1}`}>{item.tiles.map((tile, t) => <button type="button" key={t} data-tile={t} disabled={order.includes(t)} onClick={() => put([...order, t])}>{tile}</button>)}</div>
+        <div className="gl-row">
+          <button type="button" className="gl-chip-button" disabled={!order.length} onClick={() => setChosen(prev => ({ ...prev, [i]: order.slice(0, -1) }))}>Deshacer</button>
+          <button type="button" className="gl-chip-button" disabled={!order.length} onClick={() => setChosen(prev => ({ ...prev, [i]: [] }))}>Empezar de nuevo</button>
+        </div>
+        {done && <Feedback ok={right}>{right ? `${item.accept[0]}` : 'El orden no funciona todavía. Empieza por el verbo o por la expresión de tiempo.'}</Feedback>}
+      </li>;
+    })}</ol>
   </Card>;
+}
+
+/** Type the new sentence. After two tries a model answer is offered. */
+function Rewrite({ block, where }: { block: Extract<Block, { kind: 'rewrite' }>; where: Where }) {
+  const [typed, setTyped] = useStored<Record<number, string>>(`${where.id}:typed`, {});
+  const [checks, setChecks] = useStored<Record<number, { ok: boolean; tries: number }>>(`${where.id}:checks`, {});
+  const [open, setOpen] = useState<Record<number, boolean>>({});
+  const save = useRecord(where);
+  return <Card kind="rewrite" title={block.title}>
+    <ol className="gl-exercise-list">{block.items.map((item, i) => {
+      const check = checks[i];
+      const submit = () => {
+        const ok = item.accept.some(a => normalize(a) === normalize(typed[i] ?? ''));
+        setChecks(prev => ({ ...prev, [i]: { ok, tries: (prev[i]?.tries ?? 0) + 1 } }));
+        save(i, ok, `${item.prompt} → ${item.instruction}`, item.accept[0]);
+      };
+      return <li key={item.prompt} data-state={!check ? 'open' : check.ok ? 'right' : 'wrong'}>
+        <p className="gl-prompt">«{item.prompt}»</p>
+        <p className="gl-context">{item.instruction}</p>
+        <form className="gl-type" onSubmit={event => { event.preventDefault(); submit(); }}>
+          <input aria-label={`Respuesta ${i + 1}`} value={typed[i] ?? ''} onChange={event => setTyped(prev => ({ ...prev, [i]: event.target.value }))} autoComplete="off" spellCheck={false} lang="es" />
+          <button type="submit" className="gl-chip-button" disabled={!(typed[i] ?? '').trim()}>Comprobar</button>
+        </form>
+        {check && <Feedback ok={check.ok}>{check.ok ? 'Bien escrito.' : 'Revisa la expresión de tiempo y el verbo.'}</Feedback>}
+        {check && !check.ok && check.tries >= 2 && (open[i] ? <p className="gl-answer">{item.accept[0]}</p> : <button type="button" className="gl-link" data-answer-toggle onClick={() => setOpen(prev => ({ ...prev, [i]: true }))}>Ver una respuesta posible</button>)}
+      </li>;
+    })}</ol>
+  </Card>;
+}
+
+/** Tap a highlighted expression to see why the speaker used it. */
+function Explore({ block, where }: { block: Extract<Block, { kind: 'explore' }>; where: Where }) {
+  const { legend } = useLive();
+  const { results } = useStore();
+  const [active, setActive] = useState<{ line: number; mark: string }>();
+  const save = useRecord(where);
+  const keys = Object.keys(block.notes);
+  const seen = keys.filter((_, k) => results[`${where.id}:${k}`]?.ok).length;
+  const speakers = [...new Set(block.lines.map(line => line.who))];
+  const tap = (line: number, mark: string) => {
+    setActive(prev => prev?.mark === mark && prev.line === line ? undefined : { line, mark });
+    const k = keys.indexOf(mark);
+    if (k >= 0 && !results[`${where.id}:${k}`]) save(k, true, mark, block.notes[mark]);
+  };
+  return <Card kind="explore" title={block.title} actions={<span className="gl-counter" data-explored={seen}>{seen} de {keys.length} expresiones</span>}>
+    <p className="gl-setting">{block.setting}</p>
+    <div className="gl-chat">{block.lines.map((line, i) => {
+      const tone = active?.line === i ? /\[\[([^\]|]+)\|([a-z]+)\]\]/g : null;
+      const activeTone = tone ? [...line.text.matchAll(tone)].find(m => m[1] === active?.mark)?.[2] : undefined;
+      return <div key={i} className={`gl-bubble gl-side-${speakers.indexOf(line.who) % 2}`}>
+        <b>{line.who}</b>
+        <p><Rich text={line.text} onMark={mark => tap(i, mark)} active={active?.line === i ? active.mark : undefined} /></p>
+        <English text={line.en} />
+        {active?.line === i && <div className={`gl-why gl-tone-${activeTone ?? 'neutral'}`} role="status">
+          <span className="gl-badge">{legend.find(l => l.tone === activeTone)?.label ?? 'Expresión'}</span>
+          <p><Rich text={block.notes[active.mark] ?? ''} /></p>
+        </div>}
+      </div>;
+    })}</div>
+  </Card>;
+}
+
+function Listen({ block, where }: { block: Extract<Block, { kind: 'listen' }>; where: Where }) {
+  const { mode } = useLive();
+  const [heard, setHeard] = useStored(`${where.id}:heard`, false);
+  const [transcript, setTranscript] = useState(false);
+  const [reply, setReply] = useStored(`${where.id}:reply`, '');
+  const replyText = useModeText(block.reply);
+  return <section className="gl-listen" data-block="listen">
+    <div className="gl-listen-before"><small>Antes de escuchar</small><p>{block.before}</p></div>
+    <AudioDeck src={block.src} title={block.title} channel={block.channel} accent="#7fd3ff" allowSlow playingMessage="Escucha sin leer. La transcripción sigue oculta." onComplete={() => setHeard(true)} />
+    {!heard ? <div className="gl-listen-locked">
+      <p>Las preguntas se abren cuando termina el audio.</p>
+      <button type="button" className="gl-link" data-open-questions onClick={() => setHeard(true)}>{mode === 'teacher' ? 'Abrir las preguntas ahora' : 'No puedo escuchar el audio: abrir las preguntas'}</button>
+    </div> : <>
+      <ChoiceList title="Primera escucha: la idea general" items={[block.gist]} where={{ ...where, id: `${where.id}:gist` }} />
+      <ChoiceList title="Segunda escucha: los detalles" items={block.details} where={{ ...where, id: `${where.id}:details` }} />
+      <div className="gl-row"><button type="button" className="gl-chip-button" data-transcript aria-pressed={transcript} onClick={() => setTranscript(v => !v)}>{transcript ? 'Ocultar transcripción' : 'Ver transcripción'}</button></div>
+      {transcript && <p className="gl-transcript"><Rich text={block.transcript} /></p>}
+      {replyText && <div className="gl-listen-reply">
+        <h4>Y ahora tú</h4><p><Rich text={replyText} /></p>
+        {mode === 'self' && <textarea aria-label="Tu respuesta" rows={3} value={reply} onChange={event => setReply(event.target.value)} placeholder="Escribe tu respuesta…" lang="es" />}
+      </div>}
+    </>}
+  </section>;
+}
+
+type Recognition = { lang: string; interimResults: boolean; continuous: boolean; start: () => void; stop: () => void; onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null; onend: (() => void) | null; onerror: (() => void) | null };
+type VoiceWindow = Window & { SpeechRecognition?: new () => Recognition; webkitSpeechRecognition?: new () => Recognition };
+
+/** Browser dictation when the browser really supports it; otherwise the button is not shown. */
+function Dictate({ onText }: { onText: (text: string) => void }) {
+  const [supported, setSupported] = useState(false);
+  const [listening, setListening] = useState(false);
+  const recognition = useRef<Recognition | null>(null);
+  useEffect(() => {
+    const voice = window as VoiceWindow;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSupported(Boolean(voice.SpeechRecognition ?? voice.webkitSpeechRecognition));
+    return () => recognition.current?.stop();
+  }, []);
+  if (!supported) return null;
+  const toggle = () => {
+    if (listening) { recognition.current?.stop(); return; }
+    const voice = window as VoiceWindow;
+    const Engine = voice.SpeechRecognition ?? voice.webkitSpeechRecognition;
+    if (!Engine) return;
+    const engine = new Engine();
+    engine.lang = 'es-MX'; engine.interimResults = false; engine.continuous = false;
+    engine.onresult = event => { const text = Array.from(event.results).map(r => r[0]?.transcript ?? '').join(' ').trim(); if (text) onText(text); };
+    engine.onend = () => setListening(false);
+    engine.onerror = () => setListening(false);
+    recognition.current = engine;
+    setListening(true);
+    try { engine.start(); } catch { setListening(false); }
+  };
+  return <button type="button" className="gl-chip-button" data-dictate aria-pressed={listening} onClick={toggle}>{listening ? '■ Detener' : '🎙 Dictar'}</button>;
+}
+
+/** One conversation card at a time: the question leads, help is there when needed. */
+function Talk({ block, where }: { block: Extract<Block, { kind: 'talk' }>; where: Where }) {
+  const { mode } = useLive();
+  const { results } = useStore();
+  const [index, setIndex] = useStored(`${where.id}:card`, 0);
+  const [answers, setAnswers] = useStored<Record<number, string>>(`${where.id}:answers`, {});
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [follow, setFollow] = useState<Record<number, number>>({});
+  const save = useRecord(where);
+  const card: TalkCard = block.cards[Math.min(index, block.cards.length - 1)];
+  const talked = (i: number) => Boolean(results[`${where.id}:${i}`]?.ok);
+  const toggle = (key: string) => setOpen(prev => ({ ...prev, [`${index}:${key}`]: !prev[`${index}:${key}`] }));
+  const isOpen = (key: string) => Boolean(open[`${index}:${key}`]);
+  const shownFollowUps = mode === 'teacher' ? card.followUps.length : follow[index] ?? 0;
+  const swap = useModeText(block.swap);
+  const last = index === block.cards.length - 1;
+  const done = () => { if (!talked(index)) save(index, true, card.q, ''); if (!last) setIndex(index + 1); };
+  return <section className="gl-talk" data-block="talk">
+    <nav className="gl-talk-dots" aria-label="Preguntas">{block.cards.map((c, i) => <button type="button" key={c.q} data-card={i} aria-current={i === index ? 'step' : undefined} className={talked(i) ? 'is-done' : ''} aria-label={`Pregunta ${i + 1}${talked(i) ? ', conversada' : ''}`} onClick={() => setIndex(i)}>{i + 1}</button>)}</nav>
+    <article className="gl-talk-card" key={index}>
+      <small>Pregunta {index + 1} de {block.cards.length}</small>
+      <h3 className="gl-talk-q">{card.q}</h3>
+      {shownFollowUps > 0 && <ul className="gl-follow" data-follow-list>{card.followUps.slice(0, shownFollowUps).map(f => <li key={f}>{f}</li>)}</ul>}
+      {mode === 'self' && shownFollowUps < card.followUps.length && <button type="button" className="gl-talk-more" data-follow-ups onClick={() => setFollow(prev => ({ ...prev, [index]: (prev[index] ?? 0) + 1 }))}>＋ Otra pregunta sobre esto</button>}
+      <ul className="gl-phrases" aria-label="Expresiones útiles">{card.phrases.map(p => <li key={p}><Rich text={p} /></li>)}</ul>
+      <div className="gl-row">
+        <button type="button" className="gl-chip-button" data-hint aria-pressed={isOpen('hint')} onClick={() => toggle('hint')}>Pista</button>
+        <button type="button" className="gl-chip-button" data-example aria-pressed={isOpen('example')} onClick={() => toggle('example')}>Ejemplo de respuesta</button>
+      </div>
+      {isOpen('hint') && <p className="gl-talk-help"><Rich text={card.hint} /></p>}
+      {isOpen('example') && <p className="gl-talk-help gl-talk-example"><Rich text={card.example} /></p>}
+      {mode === 'self' ? <div className="gl-talk-answer">
+        <label htmlFor={`${where.id}-answer`}>Responde en voz alta y, si quieres, escribe tu respuesta aquí.</label>
+        <textarea id={`${where.id}-answer`} rows={3} value={answers[index] ?? ''} onChange={event => setAnswers(prev => ({ ...prev, [index]: event.target.value }))} placeholder="Yo vivo en… desde…" lang="es" />
+        <Dictate onText={text => setAnswers(prev => ({ ...prev, [index]: `${prev[index] ? `${prev[index]} ` : ''}${text}` }))} />
+      </div> : card.teacher && <aside className="gl-teacher-note" data-teacher-note><b>Para el profesor</b><p>{card.teacher}</p></aside>}
+      <footer className="gl-talk-foot">
+        {card.next && <p className="gl-talk-next">{card.next}</p>}
+        <button type="button" className="gl-primary" data-talked onClick={done}>{last ? (talked(index) ? '✓ Conversada' : 'Terminar la conversación') : 'Siguiente pregunta →'}</button>
+      </footer>
+    </article>
+    {swap && <p className="gl-swap"><span aria-hidden="true">⇄</span> <Rich text={swap} /></p>}
+  </section>;
+}
+
+function Write({ block, where }: { block: Extract<Block, { kind: 'write' }>; where: Where }) {
+  const { mode } = useLive();
+  const [text, setText] = useStored(`${where.id}:text`, '');
+  const [review, setReview] = useStored<ReturnType<typeof reviewWriting> | null>(`${where.id}:review`, null);
+  const [help, setHelp] = useState<'starters' | 'words' | 'model' | null>(null);
+  const save = useRecord(where);
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const box = useRef<HTMLTextAreaElement>(null);
+  const insert = (starter: string) => { setText(prev => `${prev}${prev && !prev.endsWith(' ') ? ' ' : ''}${starter}`); box.current?.focus(); };
+  return <Card kind="write" title={block.title}>
+    <p className="gl-situation"><Rich text={block.situation} /></p>
+    <ul className="gl-task-list">{block.task.map(t => <li key={t}><Rich text={t} /></li>)}</ul>
+    <textarea ref={box} className="gl-write-box" aria-label="Tu texto" rows={7} value={text} onChange={event => setText(event.target.value)} placeholder="Hola a todos: me llamo…" lang="es" />
+    <div className="gl-write-meta"><span data-words={words}>{words} palabras</span><span>{words < block.minWords ? `Mínimo: ${block.minWords}` : 'Buena extensión'}</span></div>
+    <div className="gl-row">
+      {(['starters', 'words', 'model'] as const).map(kind => <button type="button" key={kind} className="gl-chip-button" data-help={kind} aria-pressed={help === kind} onClick={() => setHelp(prev => prev === kind ? null : kind)}>{kind === 'starters' ? 'Comienzos de frase' : kind === 'words' ? 'Palabras útiles' : 'Ver un ejemplo'}</button>)}
+    </div>
+    {help === 'starters' && <div className="gl-tiles gl-tiles-soft">{block.starters.map(s => <button type="button" key={s} onClick={() => insert(s)}>{s}</button>)}</div>}
+    {help === 'words' && <ul className="gl-phrases">{block.words.map(w => <li key={w}>{w}</li>)}</ul>}
+    {help === 'model' && <p className="gl-model"><Rich text={block.model} /></p>}
+    <div className="gl-row gl-write-actions">
+      <button type="button" className="gl-primary" data-review disabled={words < 5} onClick={() => { const result = reviewWriting(text); setReview(result); save(0, words >= block.minWords, block.title, ''); }}>Revisar mi texto</button>
+      {mode === 'teacher' && <span className="gl-hint">Después, léanlo juntos y corrijan lo que la revisión no ve.</span>}
+    </div>
+    {review && <div className="gl-review" data-review-result>
+      <h4>Revisión de las estructuras de la clase</h4>
+      <ul>{review.uses.map(use => <li key={use.label} className={use.found ? 'is-ok' : 'is-missing'}><span aria-hidden="true">{use.found ? '✓' : '○'}</span><div><b>{use.label}</b>{use.found ? <small>«{use.found}»</small> : <small>{use.tip}</small>}</div></li>)}</ul>
+      {review.problems.length > 0 && <><h4>Revisa estas frases</h4><ul>{review.problems.map(p => <li key={p.text} className="is-problem"><span aria-hidden="true">!</span><div><b>«{p.text}»</b><small>{p.why}</small></div></li>)}</ul></>}
+      <p className="gl-hint">Esta revisión busca solo las estructuras de la clase y sus errores típicos. No corrige la ortografía ni el resto del texto.</p>
+    </div>}
+  </Card>;
+}
+
+/** The first-try mistakes of this class, from the real answers. */
+function Review() {
+  const { results } = useStore();
+  const { go } = useLive();
+  const mistakes = Object.entries(results).filter(([, r]) => !r.first && r.right).map(([id, r]) => ({ id, ...r })) as (Result & { id: string })[];
+  if (!mistakes.length) return <Card kind="review" title="Tus errores en esta clase"><p className="gl-hint">{Object.keys(results).length ? 'No hay errores registrados: todas tus respuestas fueron correctas al primer intento.' : 'Todavía no hay respuestas registradas. Cuando hagas los ejercicios, aquí verás los errores para repasarlos.'}</p></Card>;
+  return <Card kind="review" title="Tus errores en esta clase">
+    <ul className="gl-review-list">{mistakes.slice(0, 8).map(m => <li key={m.id}>
+      <div><p>{m.prompt}</p><small>Respuesta: <b>{m.right}</b>{m.ok ? ' · ya la corregiste' : ''}</small></div>
+      <button type="button" className="gl-chip-button" data-review-go onClick={() => go(m.stage, m.step)}>Repasar</button>
+    </li>)}</ul>
+    {mistakes.length > 8 && <p className="gl-hint">Y {mistakes.length - 8} más.</p>}
+  </Card>;
+}
+
+function Restart() {
+  const { clear } = useStore();
+  const { go } = useLive();
+  const [confirm, setConfirm] = useState(false);
+  return <div className="gl-restart">
+    <button type="button" className="gl-chip-button" data-repeat="practicar" onClick={() => { clear('practicar:'); go(2, 0); }}>Repetir la práctica</button>
+    {confirm ? <span className="gl-row"><span className="gl-hint">Se borran tus respuestas de esta clase en este navegador.</span><button type="button" className="gl-chip-button gl-accent" data-restart-confirm onClick={() => { clear(); setConfirm(false); go(0, 0); }}>Sí, empezar de nuevo</button><button type="button" className="gl-link" onClick={() => setConfirm(false)}>Cancelar</button></span>
+      : <button type="button" className="gl-chip-button" data-restart onClick={() => setConfirm(true)}>Empezar la clase de nuevo</button>}
+  </div>;
 }
 
 function Mistakes({ block }: { block: Extract<Block, { kind: 'mistakes' }> }) {
   const [open, setOpen] = useState<Record<number, boolean>>({});
-  const all = block.items.every((_, i) => open[i]);
-  return <Card kind="mistakes" title={block.title} actions={block.reveal ? <RevealAll open={all} label="correcciones" onToggle={() => setOpen(Object.fromEntries(block.items.map((_, i) => [i, !all])))} /> : undefined}>
-    <ul>{block.items.map((item, i) => {
-      const visible = !block.reveal || open[i];
-      return <li key={item.wrong}>
-        <span className="gl-wrong"><i aria-hidden="true">✗</i><s>{item.wrong}</s></span>
-        {visible ? <span className="gl-right"><i aria-hidden="true">✓</i>{item.right}</span> : <button type="button" className="gl-link" data-answer-toggle onClick={() => setOpen(prev => ({ ...prev, [i]: true }))}>¿Cómo se dice?</button>}
-        {visible && <small>{item.why}</small>}
-      </li>;
-    })}</ul>
+  return <Card kind="mistakes" title={block.title}>
+    <ul>{block.items.map((item, i) => <li key={item.wrong}>
+      <span className="gl-wrong"><i aria-hidden="true">✗</i><s>{item.wrong}</s></span>
+      {open[i] ? <><span className="gl-right"><i aria-hidden="true">✓</i>{item.right}</span><small>{item.why}</small></> : <button type="button" className="gl-link" data-answer-toggle onClick={() => setOpen(prev => ({ ...prev, [i]: true }))}>¿Dónde está el error?</button>}
+    </li>)}</ul>
   </Card>;
 }
 
-function Dialogue({ block }: { block: Extract<Block, { kind: 'dialogue' }> }) {
-  const [marks, setMarks] = useState(false);
-  const speakers = [...new Set(block.lines.map(line => line.who))];
-  return <Card kind="dialogue" title={block.title} actions={<MarksToggle on={marks} set={setMarks} />}>
-    <p className="gl-setting">{block.setting}</p>
-    {marks && <Legend />}
-    <div className="gl-chat">{block.lines.map((line, i) => <div key={i} className={`gl-bubble gl-side-${speakers.indexOf(line.who) % 2}`}><b>{line.who}</b><p><Rich text={line.text} marks={marks} /></p><English text={line.en} /></div>)}</div>
-    <Questions items={block.questions} />
+/** Answer two yes/no questions to find the structure. */
+function Decide({ block }: { block: Extract<Block, { kind: 'decide' }> }) {
+  const [path, setPath] = useState<boolean[]>([]);
+  const result = (() => {
+    for (let i = 0; i < path.length; i++) { const answer = path[i] ? block.steps[i].yes : block.steps[i].no; if (answer !== 'next') return answer; }
+    return null;
+  })();
+  const current = result ? -1 : path.length;
+  return <Card kind="decide" title={block.title}>
+    <ol className="gl-decide">{block.steps.slice(0, result ? path.length : path.length + 1).map((step, i) => <li key={step.q}>
+      <p>{step.q}</p>
+      <div className="gl-options">{([[true, 'Sí'], [false, 'No']] as const).map(([value, label]) => <button type="button" key={label} data-decide={`${i}-${value}`} aria-pressed={path[i] === value} disabled={i !== current && path[i] !== value} onClick={() => setPath([...path.slice(0, i), value])}>{label}</button>)}</div>
+    </li>)}</ol>
+    {result && <div className="gl-decide-result" role="status"><Rich text={result} /><button type="button" className="gl-link" onClick={() => setPath([])}>Probar con otra frase</button></div>}
   </Card>;
 }
 
-function Reading({ block }: { block: Extract<Block, { kind: 'reading' }> }) {
-  const [marks, setMarks] = useState(false);
-  return <Card kind="reading" title={block.title} actions={<MarksToggle on={marks} set={setMarks} />}>
-    {marks && <Legend />}
-    <article className="gl-message"><small>{block.from}</small><p><Rich text={block.text} marks={marks} /></p><English text={block.en} /></article>
-    <Questions items={block.questions} />
-  </Card>;
-}
-
-function Audio({ block }: { block: Extract<Block, { kind: 'audio' }> }) {
-  const [error, setError] = useState(false);
-  const [transcript, setTranscript] = useState(false);
-  return <Card kind="audio" title={block.title}>
-    <ol className="gl-plan">{block.plan.map(step => <li key={step}>{step}</li>)}</ol>
-    <audio controls preload="none" src={block.src} onError={() => setError(true)} aria-label={block.title}>Tu navegador no puede reproducir este audio.</audio>
-    {error && <p className="gl-error" role="alert">No se pudo cargar el audio. Abre la transcripción y léela en voz alta con tu profesor.</p>}
-    <button type="button" className="gl-chip-button" data-transcript aria-pressed={transcript} onClick={() => setTranscript(v => !v)}>{transcript ? 'Ocultar transcripción' : 'Transcripción · después de escuchar'}</button>
-    {transcript && <><Legend /><p className="gl-transcript"><Rich text={block.transcript} /></p></>}
-    <Questions items={block.questions} />
-  </Card>;
-}
-
-export function LiveBlock({ block }: { block: Block }) {
-  const { teacher } = useLive();
+export function LiveBlock({ block, where }: { block: Block; where: Where }) {
+  const { mode } = useLive();
   switch (block.kind) {
+    case 'guide': return <Guide text={block.text} />;
     case 'lead': return <div className="gl-lead"><p><Rich text={block.text} /></p><English text={block.en} /></div>;
-    case 'scenes': return <div className="gl-scenes">{block.items.map(scene => <article key={scene.place}><span aria-hidden="true">{scene.icon}</span><small>{scene.place}</small><p>«{scene.line}»</p><English text={scene.en} /><em>{scene.why}</em></article>)}</div>;
-    case 'goals': return <Card kind="goals" title={block.title}><ol>{block.items.map(goal => <li key={goal.text}><span><Rich text={goal.text} /></span><English text={goal.en} /></li>)}</ol></Card>;
-    case 'prompts': return <Card kind="prompts" title={block.title}><ol>{block.items.map(item => <li key={item}><Rich text={item} /></li>)}</ol></Card>;
     case 'concept': return <section className={`gl-concept gl-tone-${block.tone}`} data-block="concept">
       <div className="gl-concept-copy">
-        <header><span className="gl-badge">{block.label}</span>{block.en && <em lang="en">{block.en}</em>}</header>
+        <header><span className="gl-badge">{block.label}</span><English text={block.en} /></header>
         <h3>{block.question}</h3>
         <p className="gl-meaning"><Rich text={block.meaning} /></p>
         <div className="gl-formulas">{block.formula.map(f => <code key={f}>{f}</code>)}</div>
@@ -236,28 +443,26 @@ export function LiveBlock({ block }: { block: Block }) {
       <ul className="gl-examples">{block.examples.map(example => <li key={example.es}><span><Rich text={example.es} /></span><English text={example.en} /></li>)}</ul>
       {block.note && <p className="gl-note"><Rich text={block.note} /></p>}
     </section>;
-    case 'contrast': return <Card kind="contrast" title={block.title}><div className="gl-contrast-grid">{block.items.map(item => <article key={item.sentence} className={`gl-tone-${item.tone}`}>
-      <svg viewBox="0 0 200 40" aria-hidden="true" className="gl-shape">{item.shape === 'point' ? <><line x1="8" y1="20" x2="192" y2="20" /><circle cx="70" cy="20" r="9" /></> : <><line x1="8" y1="20" x2="192" y2="20" /><rect x="70" y="13" width="115" height="14" rx="7" /></>}<text x="186" y="38" textAnchor="end">hoy</text></svg>
-      <p><Rich text={item.sentence} /></p><English text={item.en} /><small>{item.verdict}</small>
+    case 'compare': return <Card kind="compare" title={block.title}><div className="gl-compare-grid">{block.columns.map(col => <article key={col.label} className={`gl-tone-${col.tone}`}>
+      <span className="gl-badge">{col.label}</span><p><Rich text={col.sentence} /></p><small>{col.idea}</small><English text={col.en} />
     </article>)}</div></Card>;
-    case 'table': return <Card kind="table" title={block.title}><div className="gl-grid-table" role="table" aria-label={block.title}>
-      <div role="row" className="gl-table-head">{block.head.map(h => <span role="columnheader" key={h}>{h}</span>)}</div>
-      {block.rows.map(row => <div role="row" key={row.join()}>{row.map((cell, i) => <span role="cell" key={i} data-label={block.head[i]}><Rich text={cell} /></span>)}</div>)}
-    </div>{block.caption && <p className="gl-hint">{block.caption}</p>}</Card>;
+    case 'decide': return <Decide block={block} />;
     case 'tip': return <aside className="gl-tip"><span aria-hidden="true">{block.icon}</span><div><h4>{block.title}</h4><p><Rich text={block.text} /></p><English text={block.en} /></div></aside>;
     case 'mistakes': return <Mistakes block={block} />;
-    case 'visual': return <LiveVisual visual={block.visual} />;
-    case 'dialogue': return <Dialogue block={block} />;
-    case 'reading': return <Reading block={block} />;
-    case 'audio': return <Audio block={block} />;
-    case 'choice': return <Choice title={block.title} hint={block.hint} items={block.items} />;
-    case 'classify': return <Classify block={block} />;
-    case 'reveal': return <RevealList block={block} />;
-    case 'order': return <Order block={block} />;
-    case 'roleplay': return <Roleplays block={block} />;
-    case 'conversation': return <Conversation block={block} />;
-    case 'task': return <Task block={block} />;
-    case 'recap': return <div className="gl-recap">{block.items.map(item => <article key={item.label} className={`gl-tone-${item.tone}`}><span className="gl-badge">{item.label}</span>{item.en && <em lang="en">{item.en}</em>}<code>{item.formula}</code><p>{item.example}</p><small>{item.caption}</small></article>)}</div>;
-    case 'teacher': return teacher ? <aside className="gl-teacher-note" data-teacher-note><b>Nota para el profesor</b><p>{block.text}</p></aside> : null;
+    case 'visual': return <LiveVisual visual={block.visual} where={where} />;
+    case 'explore': return <Explore block={block} where={where} />;
+    case 'choice': return <ChoiceList title={block.title} items={block.items} where={where} />;
+    case 'classify': return <Classify block={block} where={where} />;
+    case 'fix': return <Fix block={block} where={where} />;
+    case 'chat-fill': return <ChatFill block={block} where={where} />;
+    case 'build': return <Build block={block} where={where} />;
+    case 'rewrite': return <Rewrite block={block} where={where} />;
+    case 'listen': return <Listen block={block} where={where} />;
+    case 'talk': return <Talk block={block} where={where} />;
+    case 'write': return <Write block={block} where={where} />;
+    case 'recap': return <div className="gl-recap">{block.items.map(item => <article key={item.label} className={`gl-tone-${item.tone}`}><span className="gl-badge">{item.label}</span><English text={item.en} /><code>{item.formula}</code><p>{item.example}</p><small>{item.caption}</small></article>)}</div>;
+    case 'review': return <Review />;
+    case 'restart': return <Restart />;
+    case 'teacher': return mode === 'teacher' ? <aside className="gl-teacher-note" data-teacher-note><b>Para el profesor</b><p>{block.text}</p></aside> : null;
   }
 }

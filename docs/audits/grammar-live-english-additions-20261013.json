@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner request 2026-10-13 (Ale): rebuild the grammar classes as live classes; A2 explanations in simple Spanish with occasional English translations. Prototype lesson 230 (Desde, desde hace y hace).",
+  "authorization": "Owner request 2026-10-13 (Ale): rebuild the grammar classes as live classes; A2 explanations in simple Spanish with occasional English translations. Prototype lesson 230 (Desde, desde hace y hace). Redesign request 2026-10-13 11:25Z (Ale): Spanish first, optional English behind a button; translations of the example sentences.",
   "additions": [
     {
       "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
@@ -149,6 +149,54 @@
     {
       "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
       "text": "ago"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Same story, different information: start point, duration, or time since an event."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived here since October 2024."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have been working since eight."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "English says “I have lived”; Spanish uses the present: vivo."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived here for two years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I moved here two years ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I have lived in Lima for three years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I started running a month ago."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "I haven’t had a holiday since December."
+    },
+    {
+      "path": "app/grammar-classroom/live/visuals/duration.tsx",
+      "text": "I have lived here since October 2024."
+    },
+    {
+      "path": "app/grammar-classroom/live/visuals/duration.tsx",
+      "text": "I have lived here for two years."
+    },
+    {
+      "path": "app/grammar-classroom/live/visuals/duration.tsx",
+      "text": "I moved here two years ago."
     }
   ]
 }

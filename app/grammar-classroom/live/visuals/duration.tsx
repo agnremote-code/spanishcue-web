@@ -1,151 +1,150 @@
 'use client';
-import { useMemo, useState } from 'react';
-import DurationScene from '../../duration/DurationScene';
+import { useEffect, useRef, useState } from 'react';
+import { places } from '../../duration/model';
+import type { DurationWorldAPI } from '../../duration/world';
+import { English, Rich } from '../Rich';
+import { useStore, useStored } from '../store';
 import '../../duration/duration.css';
+import type { Where } from '../Blocks';
 
-/** Classroom "now" for every computed answer in lesson 230. */
-const NOW = { year: 2026, month: 10 };
-const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-const numbers = ['', 'un', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once'];
-export function amount(n: number, unit: 'year' | 'month') {
-  const word = n < numbers.length ? numbers[n] : String(n);
-  return unit === 'year' ? `${word} ${n === 1 ? 'año' : 'años'}` : `${word} ${n === 1 ? 'mes' : 'meses'}`;
-}
-/** Elapsed time from a start to the classroom now, in the most natural unit. */
-export function elapsed(year: number, month?: number): { n: number; unit: 'year' | 'month' } | null {
-  if (!month) return year <= NOW.year ? { n: NOW.year - year, unit: 'year' } : null;
-  const total = (NOW.year - year) * 12 + (NOW.month - month);
-  if (total < 0) return null;
-  return total < 12 ? { n: total, unit: 'month' } : { n: Math.floor(total / 12), unit: 'year' };
-}
+/* ───────── 01 · One story, three ways to tell it ───────── */
 
-type Situation = { id: string; label: string; unit: 'year' | 'month'; from: number; to: number; initial: number; start: (when: string) => string; duration: (q: string) => string; alt: (q: string) => string; event: (q: string) => string };
-const situations: Situation[] = [
-  { id: 'vivir', label: 'Vivir en Bogotá', unit: 'year', from: 2016, to: 2025, initial: 2019, start: w => `Vivo en Bogotá desde ${w}.`, duration: q => `Vivo en Bogotá desde hace ${q}.`, alt: q => `Hace ${q} que vivo en Bogotá.`, event: q => `Llegué a Bogotá hace ${q}.` },
-  { id: 'trabajar', label: 'Trabajar en el hospital', unit: 'year', from: 2016, to: 2025, initial: 2022, start: w => `Trabajo en el hospital desde ${w}.`, duration: q => `Trabajo en el hospital desde hace ${q}.`, alt: q => `Hace ${q} que trabajo en el hospital.`, event: q => `Empecé a trabajar en el hospital hace ${q}.` },
-  { id: 'estudiar', label: 'Estudiar español', unit: 'month', from: 1, to: 9, initial: 3, start: w => `Estudio español desde ${w}.`, duration: q => `Estudio español desde hace ${q}.`, alt: q => `Hace ${q} que estudio español.`, event: q => `Empecé a estudiar español hace ${q}.` },
-  { id: 'familia', label: 'No ver a mi familia', unit: 'month', from: 1, to: 9, initial: 4, start: w => `No veo a mi familia desde ${w}.`, duration: q => `No veo a mi familia desde hace ${q}.`, alt: q => `Hace ${q} que no veo a mi familia.`, event: q => `Vi a mi familia por última vez hace ${q}.` },
+type Reading = { id: string; sentence: string; tone: 'blue' | 'teal' | 'orange'; info: string; continues: boolean; en: string };
+const readings: Reading[] = [
+  { id: 'start', sentence: 'Vivo acá [[desde octubre de 2024|blue]].', tone: 'blue', info: 'Dice **cuándo empezó** la situación: el punto de inicio.', continues: true, en: 'I have lived here since October 2024.' },
+  { id: 'duration', sentence: 'Vivo acá [[desde hace dos años|teal]].', tone: 'teal', info: 'Dice **cuánto tiempo dura** la situación hasta hoy.', continues: true, en: 'I have lived here for two years.' },
+  { id: 'duration-que', sentence: '[[Hace dos años que|teal]] vivo acá.', tone: 'teal', info: 'La misma idea con otro orden: **hace + tiempo + que + presente**.', continues: true, en: 'I have lived here for two years.' },
+  { id: 'event', sentence: 'Me mudé acá [[hace dos años|orange]].', tone: 'orange', info: 'Dice **cuánto tiempo pasó desde un hecho** terminado: la mudanza.', continues: false, en: 'I moved here two years ago.' },
 ];
-const label = (s: Situation, value: number) => s.unit === 'year' ? String(value) : months[value - 1];
 
-/** Static explanation drawing: a start point and its duration, or a finished event. */
-export function TimeAxis({ mode }: { mode: 'start' | 'event' }) {
-  const years = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
-  const x = (year: number) => 40 + (year - 2017) * 64;
-  return <figure className="gl-axis" data-axis={mode}>
-    <svg viewBox="0 0 680 150" role="img" aria-label={mode === 'start' ? 'Línea del tiempo: desde 2019 hasta hoy, siete años.' : 'Línea del tiempo: un hecho en 2019, hace siete años.'}>
-      <line className="gl-axis-line" x1="20" y1="90" x2="660" y2="90" />
-      {years.map(year => <g key={year}><line className="gl-axis-tick" x1={x(year)} y1="84" x2={x(year)} y2="96" /><text className="gl-axis-year" x={x(year)} y="118" textAnchor="middle">{year === 2026 ? 'HOY' : year}</text></g>)}
-      {mode === 'start' ? <>
-        <rect className="gl-fill-teal" x={x(2019)} y="80" width={x(2026) - x(2019)} height="20" rx="10" />
-        <circle className="gl-fill-blue" cx={x(2019)} cy="90" r="11" />
-        <text className="gl-axis-label gl-text-blue" x={x(2019)} y="64" textAnchor="middle">desde 2019</text>
-        <text className="gl-axis-label gl-text-teal" x={(x(2019) + x(2026)) / 2} y="28" textAnchor="middle">desde hace siete años → sigue hoy</text>
-      </> : <>
-        <circle className="gl-fill-orange" cx={x(2019)} cy="90" r="11" />
-        <text className="gl-axis-label gl-text-orange" x={x(2019) - 18} y="70" textAnchor="end">Llegué</text>
-        <path className="gl-stroke-orange" d={`M${x(2026)} 40 H${x(2019) + 14}`} />
-        <path className="gl-fill-orange" d={`M${x(2019) + 2} 40 l14 -8 v16z`} />
-        <path className="gl-stroke-orange" d={`M${x(2019)} 50 V74`} strokeDasharray="4 4" />
-        <text className="gl-axis-label gl-text-orange" x={(x(2019) + x(2026)) / 2} y="30" textAnchor="middle">hace siete años ←</text>
-      </>}
-      <circle className="gl-now" cx={x(2026)} cy="90" r="7" />
-    </svg>
-    <figcaption>{mode === 'start' ? 'Desde marca el punto azul. Desde hace mide la barra verde hasta hoy.' : 'Hace + pasado cuenta hacia atrás, desde hoy hasta un hecho terminado.'} <small>En el ejemplo, hoy es 2026.</small></figcaption>
-  </figure>;
-}
+const X0 = 60, X1 = 620;
+const months = (year: number, month: number) => (year - 2023) * 12 + (month - 10);
+const x = (year: number, month = 10) => X0 + (months(year, month) / 36) * (X1 - X0);
 
-/** Move the start and say the sentence before revealing it. */
-export function TimeExplorer() {
-  const [index, setIndex] = useState(0);
-  const situation = situations[index];
-  const [value, setValue] = useState(situation.initial);
-  const [shown, setShown] = useState<Record<string, boolean>>({});
-  const n = situation.unit === 'year' ? NOW.year - value : NOW.month - value;
-  const q = amount(n, situation.unit);
-  const when = label(situation, value);
-  const rows = [
-    { id: 'start', tone: 'blue', head: 'DESDE', question: '¿Desde cuándo?', text: situation.start(when) },
-    { id: 'duration', tone: 'teal', head: 'DESDE HACE', question: '¿Hace cuánto?', text: `${situation.duration(q)} · ${situation.alt(q)}` },
-    { id: 'event', tone: 'orange', head: 'HACE + PASADO', question: '¿Cuándo pasó?', text: situation.event(q) },
-  ];
-  const all = rows.every(row => shown[row.id]);
-  const span = situation.to - situation.from + 1;
-  const pos = (v: number) => ((v - situation.from) / span) * 100;
-  const choose = (i: number) => { setIndex(i); setValue(situations[i].initial); setShown({}); };
-  return <section className="gl-card gl-explorer" data-time-explorer>
-    <header className="gl-card-head"><h3>Laboratorio: una historia, tres frases</h3><button type="button" className="gl-chip-button" data-explorer-reveal aria-pressed={all} onClick={() => setShown(all ? {} : Object.fromEntries(rows.map(row => [row.id, true])))}>{all ? 'Ocultar frases' : 'Mostrar las tres frases'}</button></header>
-    <div className="gl-role-tabs" role="tablist" aria-label="Situación">{situations.map((s, i) => <button type="button" role="tab" key={s.id} data-situation={s.id} aria-selected={i === index} onClick={() => choose(i)}>{s.label}</button>)}</div>
-    <div className="gl-explorer-line">
-      <div className="gl-explorer-track" aria-hidden="true">
-        <span className="gl-explorer-bar" style={{ left: `${pos(value)}%`, right: '0%' }} />
-        <span className="gl-explorer-start" style={{ left: `${pos(value)}%` }}>{when}</span>
-        <span className="gl-explorer-now">HOY · {situation.unit === 'year' ? '2026' : 'octubre'}</span>
-      </div>
-      <label className="gl-explorer-range">Empezó en <b>{when}</b>
-        <input type="range" min={situation.from} max={situation.to} value={value} aria-valuetext={when} onChange={event => { setValue(Number(event.target.value)); setShown({}); }} />
-      </label>
-      <p className="gl-hint">Duración hasta hoy: <b>{q}</b>.</p>
+/** The three sentences on one timeline: a point, a line that reaches today, and a jump back from today. */
+function TimeCompare({ where }: { where: Where }) {
+  const [active, setActive] = useState('start');
+  const reading = readings.find(r => r.id === active)!;
+  const kind = active === 'event' ? 'event' : active === 'start' ? 'start' : 'duration';
+  const start = x(2024), now = x(2026);
+  return <section className="gl-timeline" data-time-compare={kind} id={`${where.id}-timeline`}>
+    <div className="gl-timeline-tabs" role="tablist" aria-label="Tres frases">
+      {readings.map((r, i) => <button type="button" role="tab" key={r.id} data-reading={r.id} aria-selected={r.id === active} className={`gl-tone-${r.tone}`} onClick={() => setActive(r.id)}>
+        <i>{i === 2 ? '=' : i < 2 ? i + 1 : 3}</i><span><Rich text={r.sentence} /></span>
+      </button>)}
     </div>
-    <ol className="gl-explorer-rows">{rows.map(row => <li key={row.id} className={`gl-tone-${row.tone}`}>
-      <span className="gl-badge">{row.head}</span><small>{row.question}</small>
-      {shown[row.id] ? <p data-explorer-sentence={row.id}>{row.text}</p> : <button type="button" className="gl-link" data-explorer-show={row.id} onClick={() => setShown(prev => ({ ...prev, [row.id]: true }))}>Primero dilo; después, mostrar</button>}
-    </li>)}</ol>
+    <figure className="gl-timeline-figure">
+      <svg viewBox="0 0 680 190" role="img" aria-label={`${reading.sentence.replace(/\[\[([^\]|]+)\|[a-z]+\]\]/g, '$1')} ${reading.continues ? 'La situación sigue hoy.' : 'Es un hecho terminado.'}`}>
+        <line x1="30" y1="120" x2="650" y2="120" className="gl-tl-axis" />
+        {[2023, 2024, 2025, 2026].map(year => <g key={year}>
+          <line x1={x(year)} y1="112" x2={x(year)} y2="128" className="gl-tl-tick" />
+          <text x={x(year)} y="152" textAnchor="middle" className="gl-tl-year">{year === 2026 ? 'hoy' : `oct. ${year}`}</text>
+        </g>)}
+        {/* the situation that continues */}
+        <rect x={start} y="111" width={now - start} height="18" rx="9" className={`gl-tl-bar ${kind === 'duration' ? 'is-on' : kind === 'start' ? 'is-soft' : 'is-off'}`} />
+        {kind === 'duration' && <g className="gl-tl-span">
+          <path d={`M${start} 92v-8h${now - start}v8`} />
+          <text x={(start + now) / 2} y="74" textAnchor="middle">dos años · y sigue</text>
+        </g>}
+        {/* the starting point */}
+        {kind === 'start' && <g className="gl-tl-start">
+          <circle cx={start} cy="120" r="12" />
+          <path d={`M${start} 108V58`} /><path d={`M${start} 58l22 8-22 8z`} className="gl-tl-flag" />
+          <text x={start + 30} y="70">punto de inicio</text>
+        </g>}
+        {/* the finished event and the jump back from today */}
+        {kind === 'event' && <g className="gl-tl-event">
+          <path d={`M${now} 104C${now - 40} 46 ${start + 40} 46 ${start + 8} 102`} className="gl-tl-arc" />
+          <path d={`M${start + 2} 92l6 12 9-10`} className="gl-tl-arc" />
+          <text x={(start + now) / 2} y="44" textAnchor="middle">hace dos años</text>
+          <circle cx={start} cy="120" r="12" />
+          <text x={start} y="178" textAnchor="middle" className="gl-tl-caption">la mudanza</text>
+        </g>}
+        <circle cx={now} cy="120" r="9" className="gl-tl-now" />
+      </svg>
+      <figcaption>
+        <p><Rich text={reading.info} /></p>
+        <span className={`gl-tl-status ${reading.continues ? 'is-on' : 'is-off'}`}>{reading.continues ? '● La situación sigue hoy' : '■ Es un hecho terminado'}</span>
+        <English text={reading.en} />
+      </figcaption>
+    </figure>
   </section>;
 }
 
-type Moment = { text: string; year: string; month: string; kind: 'hecho' | 'sigue' };
-const blank = (kind: Moment['kind']): Moment => ({ text: '', year: '', month: '', kind });
+/* ───────── 03 · Mission in the 3D neighbourhood ───────── */
 
-/** The student's own timeline for the final challenge. Nothing leaves the page. */
-export function LifeLine() {
-  const [moments, setMoments] = useState<Moment[]>([blank('hecho'), blank('hecho'), blank('hecho'), blank('sigue'), blank('sigue')]);
-  const [help, setHelp] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const years = useMemo(() => Array.from({ length: 77 }, (_, i) => NOW.year - i), []);
-  const edit = (i: number, patch: Partial<Moment>) => setMoments(prev => prev.map((m, j) => j === i ? { ...m, ...patch } : m));
-  const dated = moments.map((m, i) => ({ ...m, i, y: Number(m.year), mo: Number(m.month) || 0 })).filter(m => m.y).sort((a, b) => a.y - b.y || a.mo - b.mo);
-  const first = dated.length ? Math.min(dated[0].y, NOW.year - 1) : NOW.year - 10;
-  const at = (y: number, mo: number) => ((y + (mo ? (mo - 1) / 12 : 0) - first) / (NOW.year + (NOW.month - 1) / 12 - first)) * 100;
-  const model = (m: Moment) => {
-    const y = Number(m.year), mo = Number(m.month) || undefined;
-    const time = y ? elapsed(y, mo) : null;
-    if (!time) return y ? 'Esa fecha está después de hoy (octubre de 2026).' : 'Elige una fecha.';
-    if (time.n === 0) return m.kind === 'sigue' ? `desde ${mo ? months[mo - 1] : y} · hace muy poco` : 'hace muy poco';
-    const q = amount(time.n, time.unit);
-    return m.kind === 'sigue' ? `desde ${mo ? `${months[mo - 1]} de ${y}` : y} · desde hace ${q}` : `hace ${q}`;
-  };
-  return <section className="gl-card gl-lifeline" data-life-line>
-    <header className="gl-card-head"><h3>Mi línea del tiempo</h3><div className="gl-row">
-      <button type="button" className="gl-chip-button" data-life-help aria-pressed={help} onClick={() => setHelp(v => !v)}>{help ? 'Ocultar ayuda' : 'Mostrar ayuda'}</button>
-      <button type="button" className="gl-chip-button" data-life-hide aria-pressed={hidden} onClick={() => setHidden(v => !v)}>{hidden ? 'Mostrar la línea' : 'Ocultar la línea (sin apoyo)'}</button>
-    </div></header>
-    {!hidden && <>
-      <div className="gl-life-track" aria-label="Línea del tiempo del alumno">
-        {dated.map(m => <span key={m.i} className={`gl-life-${m.kind}`} style={m.kind === 'sigue' ? { left: `${at(m.y, m.mo)}%`, right: 0 } : { left: `${at(m.y, m.mo)}%` }} title={m.text}><i>{m.i + 1}</i></span>)}
-        <b>HOY</b><small>{first}</small>
-      </div>
-      <ol className="gl-life-rows">{moments.map((m, i) => <li key={i}>
-        <span className="gl-life-number">{i + 1}</span>
-        <input aria-label={`Momento ${i + 1}`} placeholder={m.kind === 'hecho' ? 'Un hecho: llegué a…, empecé…, conocí…' : 'Algo que sigue: vivo en…, trabajo en…'} value={m.text} onChange={event => edit(i, { text: event.target.value })} />
-        <select aria-label={`Mes del momento ${i + 1}`} value={m.month} onChange={event => edit(i, { month: event.target.value })}><option value="">Mes</option>{months.map((name, mi) => <option key={name} value={mi + 1}>{name}</option>)}</select>
-        <select aria-label={`Año del momento ${i + 1}`} value={m.year} onChange={event => edit(i, { year: event.target.value })}><option value="">Año</option>{years.map(y => <option key={y} value={y}>{y}</option>)}</select>
-        <div className="gl-life-kind" role="group" aria-label={`Tipo del momento ${i + 1}`}>
-          <button type="button" aria-pressed={m.kind === 'hecho'} onClick={() => edit(i, { kind: 'hecho' })}>● Hecho</button>
-          <button type="button" aria-pressed={m.kind === 'sigue'} onClick={() => edit(i, { kind: 'sigue' })}>━ Sigue</button>
-        </div>
-        {help && <p className="gl-life-help" data-life-model={i}>{model(m)}</p>}
-      </li>)}</ol>
-      <div className="gl-row"><button type="button" className="gl-chip-button" disabled={moments.length >= 8} onClick={() => setMoments(prev => [...prev, blank('hecho')])}>＋ Añadir un momento</button><p className="gl-hint">Lo que escribes aquí no se guarda ni se envía: desaparece al cerrar la página.</p></div>
-    </>}
-  </section>;
-}
+type Task = { place: number; who: string; card: string; asks: string; mode: 'start' | 'duration' | 'event'; options: string[]; answer: number; why: string };
+/** Facts follow the neighbourhood's calendar (model.ts): it is October in the scene. */
+const tasks: Task[] = [
+  { place: 0, who: 'Marta, en la casa azul', card: 'Llegó en marzo. Todavía vive allí.', asks: '¿Desde cuándo vive allí?', mode: 'start', options: ['Marta vive aquí desde marzo.', 'Marta vive aquí desde hace marzo.', 'Marta vivió aquí hace marzo.'], answer: 0, why: 'Marzo es un momento y Marta sigue allí: desde + momento.' },
+  { place: 1, who: 'Elena, en la biblioteca', card: 'Empezó a trabajar en abril. Sigue trabajando allí.', asks: '¿Cuánto tiempo hace que trabaja allí?', mode: 'duration', options: ['Elena trabaja en la biblioteca desde seis meses.', 'Elena trabaja en la biblioteca desde hace seis meses.', 'Elena trabajó en la biblioteca hace seis meses.'], answer: 1, why: 'De abril a octubre hay seis meses y Elena sigue: desde hace + cantidad.' },
+  { place: 2, who: 'Pablo, en el café', card: 'Empezó a estudiar en el café en septiembre.', asks: '¿Cuándo empezó? Cuéntalo como un hecho.', mode: 'event', options: ['Pablo empezó a estudiar en el café desde hace un mes.', 'Pablo empieza a estudiar en el café desde septiembre hace.', 'Pablo empezó a estudiar en el café hace un mes.'], answer: 2, why: 'Empezar es un hecho terminado: verbo en pasado + hace un mes.' },
+  { place: 3, who: 'El grupo de paseos, en la plaza', card: 'Pasea por la plaza desde agosto.', asks: '¿Cuánto tiempo hace? Usa «hace… que».', mode: 'duration', options: ['Desde dos meses el grupo pasea por la plaza.', 'Hace dos meses que el grupo pasea por la plaza.', 'El grupo paseó por la plaza desde hace dos meses.'], answer: 1, why: 'Hace + cantidad + que + presente: el grupo sigue paseando.' },
+];
 
-/** The earlier 3D neighbourhood stays available as an optional extra. */
-export function Barrio3D() {
+function BarrioMission({ where }: { where: Where }) {
+  const { results, record } = useStore();
+  const [current, setCurrent] = useStored(`${where.id}:current`, 0);
+  const [picked, setPicked] = useStored<Record<number, number>>(`${where.id}:picked`, {});
   const [open, setOpen] = useState(false);
-  return <section className="gl-card gl-barrio" data-barrio>
-    <header className="gl-card-head"><h3>Extra: el barrio 3D</h3><button type="button" className="gl-chip-button" data-open-scene aria-pressed={open} onClick={() => setOpen(v => !v)}>{open ? 'Cerrar el barrio' : 'Abrir el barrio 3D'}</button></header>
-    {open ? <div className="du-immersive"><DurationScene /></div> : <p className="gl-hint">Cuatro lugares de un barrio y un calendario para crear más ejemplos. Es opcional: úsalo si quieren practicar un poco más.</p>}
+  const [status, setStatus] = useState<'idle' | 'loading' | 'ready' | 'fallback'>('idle');
+  const host = useRef<HTMLDivElement>(null);
+  const api = useRef<DurationWorldAPI | null>(null);
+  const task = tasks[current];
+  const solved = (i: number) => Boolean(results[`${where.id}:${i}`]?.ok);
+  const count = tasks.filter((_, i) => solved(i)).length;
+
+  useEffect(() => {
+    if (!open) return;
+    let disposed = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setStatus('loading');
+    void import('../../duration/world').then(({ mountDurationWorld }) => {
+      if (disposed || !host.current) return;
+      if (typeof ResizeObserver === 'undefined') { setStatus('fallback'); return; }
+      try {
+        api.current = mountDurationWorld(host.current, place => { const i = tasks.findIndex(t => t.place === place); if (i >= 0) setCurrent(i); }, () => setStatus('ready'), () => setStatus('fallback'));
+      } catch { setStatus('fallback'); }
+    }).catch(() => { if (!disposed) setStatus('fallback'); });
+    return () => { disposed = true; api.current?.dispose(); api.current = null; };
+  }, [open]);
+
+  useEffect(() => {
+    const p = places[task.place];
+    api.current?.update({ place: task.place, start: p.start, mode: task.mode, equivalent: current === 3 });
+    if (status === 'ready') api.current?.view('focus');
+  }, [task, current, status]);
+
+  const choose = (o: number) => {
+    setPicked(prev => ({ ...prev, [current]: o }));
+    const ok = o === task.answer;
+    record(`${where.id}:${current}`, { ok, prompt: `${task.who}: ${task.asks}`, right: task.options[task.answer], stage: where.stage, step: where.step });
+    window.dispatchEvent(new window.CustomEvent('gl-react', { detail: { ok } }));
+  };
+  const choice = picked[current];
+
+  return <section className="gl-mission" data-mission data-solved={count}>
+    <header className="gl-mission-head">
+      <div><small>Misión en el barrio · hoy es octubre</small><h3>El periódico del barrio necesita cuatro frases</h3>
+        <p>Visita a cada vecino, lee su ficha y elige la frase correcta para el periódico. Sin la estructura correcta, la noticia no se publica.</p></div>
+      <span className="gl-mission-count" aria-label={`${count} de ${tasks.length} frases publicadas`}>{count}/{tasks.length}</span>
+    </header>
+    {open ? <div className="du-viewport gl-mission-world" ref={host} data-world-status={status} role="group" aria-label="Barrio 3D. Toca un edificio para visitar a su vecino.">
+      {status !== 'ready' && <div className="du-load">{status === 'fallback' ? 'Tu navegador no muestra el barrio en 3D. Puedes hacer la misión con las fichas.' : 'Entrando en el barrio…'}</div>}
+    </div> : <button type="button" className="gl-mission-enter" data-open-scene onClick={() => setOpen(true)}><span aria-hidden="true">🏘</span> Entrar al barrio en 3D <small>Opcional: la misión también funciona con las fichas.</small></button>}
+    <div className="gl-mission-places" role="tablist" aria-label="Vecinos">{tasks.map((t, i) => <button type="button" role="tab" key={t.who} data-neighbor={i} aria-selected={i === current} className={solved(i) ? 'is-done' : ''} onClick={() => setCurrent(i)}>
+      <span>{solved(i) ? '✓' : i + 1}</span>{places[t.place].label}
+    </button>)}</div>
+    <article className="gl-mission-card" key={current}>
+      <p className="gl-mission-who">{task.who}</p>
+      <p className="gl-mission-fact">📋 {task.card}</p>
+      <p className="gl-mission-asks">{task.asks}</p>
+      <div className="gl-options gl-options-stack" role="group" aria-label="Frases para el periódico">{task.options.map((option, o) => <button type="button" key={option} data-mission-option={o} aria-pressed={choice === o} className={choice === o ? (o === task.answer ? 'is-right' : 'is-wrong') : ''} onClick={() => choose(o)}>{option}</button>)}</div>
+      {choice !== undefined && <p className={`gl-feedback ${choice === task.answer ? 'is-ok' : 'is-no'}`} role="status"><b>{choice === task.answer ? '✓ Publicada.' : 'Todavía no.'}</b> {choice === task.answer ? task.why : '¿Es un momento, una cantidad o un hecho terminado? Mira la ficha.'}</p>}
+      {choice === task.answer && current < tasks.length - 1 && <button type="button" className="gl-link" data-next-neighbor onClick={() => setCurrent(current + 1)}>Visitar al siguiente vecino →</button>}
+      {count === tasks.length && <p className="gl-mission-done">📰 ¡Misión cumplida! Las cuatro frases están en el periódico.</p>}
+    </article>
   </section>;
 }
+
+export { BarrioMission, TimeCompare };

@@ -4611,19 +4611,25 @@
     },
     {
       "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
-      "text": "El verbo va en **presente** porque la situación sigue hoy: «Viv**o** en Bogotá desde 2019», no «Viví».",
+      "text": "«Durante» mide un período que ya terminó: «Viví en Lima **durante** dos años». Para algo que sigue: «Vivo en Bogotá **desde hace** dos años».",
       "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
       "category": "neutral-context"
     },
     {
       "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
-      "text": "Viví aquí desde 2020 (y sigo aquí).",
+      "text": "Viví acá desde 2024 (y sigo acá).",
       "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
       "category": "neutral-context"
     },
     {
       "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
-      "text": "«Durante» mide un período **cerrado**, que ya terminó: «Viví en Lima **durante** dos años y después me mudé». Para algo que sigue hoy: «Vivo en Bogotá **desde hace** dos años».",
+      "text": "Viví en… durante… años.",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Sí, viví en Guadalajara durante cinco años. Me mudé hace tres años. Extraño la comida de mi abuela. Hace dos años que no vuelvo.",
       "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
       "category": "neutral-context"
     }
