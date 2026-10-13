@@ -165,6 +165,19 @@ test('account return paths stay same-origin and account sections expose honest s
  }
 });
 
+test('client-navigation payloads (.rsc) get the same route, identity and entitlement checks as the page',async()=>{
+ const paid=p.lessons.find(l=>route(l)&&!p.isFreeLesson(l.id)&&route(l)!=='/estados-unidos-basico');
+ const free=p.lessons.find(l=>route(l)&&p.isFreeLesson(l.id));
+ const paidRsc=await get(route(paid)+'.rsc',{rsc:'1'});await paidRsc.arrayBuffer();
+ assert.equal(paidRsc.status,302,'a PRO lesson payload must not render for an anonymous visitor');
+ const location=new URL(paidRsc.headers.get('location'),root);
+ assert.equal(location.pathname,'/acceso');assert.equal(location.searchParams.get('returnTo'),route(paid),'returnTo names the page, not its payload URL');
+ const freeRsc=await get(route(free)+'.rsc',{rsc:'1'});await freeRsc.arrayBuffer();
+ assert.equal(freeRsc.status,200);
+ const forged=await get('/cuenta.rsc?tab=alumnos',{...forgedOwner,rsc:'1'});
+ assert.doesNotMatch(await forged.text(),/agnremote@gmail\.com/,'forged identity headers are still discarded on payload requests');
+});
+
 test('offer remains configurable and invalid values are rejected',()=>{
  assert.equal(p.discountedCents(p.DEFAULT_OFFER),1500);assert.equal(p.DEFAULT_OFFER.months,0);assert.equal(p.DEFAULT_OFFER.maxTeachers,1000);
  for(const change of [{baseCents:0},{discountPercent:101},{months:-1},{maxTeachers:1.5},{revision:-1}])assert.equal(p.validateOffer({...p.DEFAULT_OFFER,...change}),false);
