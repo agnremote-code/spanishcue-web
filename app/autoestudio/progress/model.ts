@@ -14,6 +14,8 @@ export type ModuleProgress = {
   completedAt?: string;
   quiz?: QuizResult;
   writingDraft?: string;
+  /** Server-side last write for this week (teacher view only). */
+  updatedAt?: string;
 };
 
 export type ProgressState = {
@@ -88,6 +90,30 @@ export function isModuleComplete(progress: ModuleProgress | undefined): boolean 
   return SECTION_ORDER.filter((key) => key !== "complete").every((key) => Boolean(progress.sections[key]));
 }
 
+/** The 12 sections a learner must finish to complete a week (the closing summary is not one). */
+export const REQUIRED_SECTIONS: readonly SectionKey[] = SECTION_ORDER.filter((key) => key !== "complete");
+export const WEEKS_PER_LEVEL = 20;
+
+/** Required sections actually finished (a visit alone never counts). */
+export function requiredSectionsDone(progress: ModuleProgress | undefined): number {
+  if (!progress) return 0;
+  return REQUIRED_SECTIONS.filter((key) => Boolean(progress.sections[key])).length;
+}
+
+export function pendingSections(progress: ModuleProgress | undefined): SectionKey[] {
+  return REQUIRED_SECTIONS.filter((key) => !progress?.sections[key]);
+}
+
+/** Percentage with one decimal, never rounded up to 100 or down to 0 when partial. */
+export function preciseShare(done: number, total: number): number {
+  if (!total || done <= 0) return 0;
+  if (done >= total) return 100;
+  const value = Math.floor((done / total) * 1000) / 10;
+  return value > 0 ? value : 0.1;
+}
+
+export const levelWeekIds = (level: string): string[] => Array.from({ length: WEEKS_PER_LEVEL }, (_, i) => `${level}-${String(i + 1).padStart(2, "0")}`);
+
 export function sectionsDone(progress: ModuleProgress | undefined): number {
   if (!progress) return 0;
   return SECTION_ORDER.filter((key) => Boolean(progress.sections[key])).length;
@@ -105,7 +131,13 @@ export type LevelProgress = {
   total: number;
   completed: number;
   started: number;
+  /** Completed weeks over total weeks (academic criterion), whole number. */
   percent: number;
+  /** Required sections finished over all required sections of the level. */
+  sectionsCompleted: number;
+  sectionsTotal: number;
+  /** Real course advance: sectionsCompleted / sectionsTotal, one decimal. */
+  coursePercent: number;
   /** The module to open next: the first in progress, else the first not completed. */
   nextModuleId: string | null;
   hasStarted: boolean;
@@ -118,11 +150,16 @@ export function levelProgress(state: ProgressState, moduleIds: readonly string[]
   const inProgressIndex = statuses.findIndex((status) => status === "in-progress");
   const firstOpenIndex = statuses.findIndex((status) => status !== "completed");
   const nextIndex = inProgressIndex >= 0 ? inProgressIndex : firstOpenIndex;
+  const sectionsTotal = moduleIds.length * REQUIRED_SECTIONS.length;
+  const sectionsCompleted = moduleIds.reduce((sum, id, index) => sum + (statuses[index] === "completed" ? REQUIRED_SECTIONS.length : requiredSectionsDone(state.modules[id])), 0);
   return {
     total: moduleIds.length,
     completed,
     started,
     percent: moduleIds.length ? Math.round((completed / moduleIds.length) * 100) : 0,
+    sectionsCompleted,
+    sectionsTotal,
+    coursePercent: preciseShare(sectionsCompleted, sectionsTotal),
     nextModuleId: nextIndex >= 0 ? moduleIds[nextIndex] : null,
     hasStarted: started > 0,
   };

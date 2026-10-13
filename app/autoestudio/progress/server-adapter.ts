@@ -48,6 +48,14 @@ export function createServerProgressAdapter(
   const persistPending = () => {
     try { storage?.setItem(pendingKey, JSON.stringify({version:1,modules:Object.fromEntries(dirty().map(([id,value])=>[id,structural(value)])),lastModule:state.lastModule})); } catch { /* In-memory retry remains available. */ }
   };
+  // A failed read or write retries by itself (5s, 10s, 20s… up to 60s): progress made during a
+  // network blip reaches the server without waiting for the next click or for the tab to close.
+  let retryDelay = 5000;
+  const retryLater = () => {
+    if (disposed || sessionChanged() || timer) return;
+    timer = setTimeout(() => { timer = undefined; void flush(); }, retryDelay);
+    retryDelay = Math.min(retryDelay * 2, 60000);
+  };
   const flush = async () => {
     if (timer) { clearTimeout(timer); timer = undefined; }
     if (running) return running;
@@ -60,7 +68,7 @@ export function createServerProgressAdapter(
         }
         while (!disposed) {
           const next = dirty()[0];
-          if (!next) { setStatus('saved'); break; }
+          if (!next) { setStatus('saved'); retryDelay = 5000; break; }
           const [moduleId, value] = next;
           const sent = structural(value);
           setStatus('syncing');
@@ -73,7 +81,7 @@ export function createServerProgressAdapter(
           acknowledged = { ...acknowledged, modules: { ...acknowledged.modules, [moduleId]: sent } };
           persistPending();
         }
-      } catch { if (!sessionChanged()) setStatus('offline'); }
+      } catch { if (!sessionChanged()) { setStatus('offline'); retryLater(); } }
       finally { running = null; }
     })();
     return running;
@@ -104,13 +112,17 @@ export function createServerProgressAdapter(
       } catch (error) {
         if (status === 'session-changed') throw error;
         state = cached; setStatus('offline');
-        // No write is allowed until the session identity has been verified by a successful GET.
+        // No write is allowed until the session identity has been verified by a successful GET;
+        // flush() performs that GET first, then uploads whatever is still pending.
+        retryLater();
         return state;
       }
     },
     save(next) {
       state = next; cache(); persistPending();
-      if (!hydrated || disposed || status === 'session-changed' || !dirty().length) return;
+      if (disposed || status === 'session-changed') return;
+      if (!hydrated) { retryLater(); return; }
+      if (!dirty().length) return;
       setStatus('syncing');
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => { void flush(); }, 450);

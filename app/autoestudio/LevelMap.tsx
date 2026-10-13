@@ -43,8 +43,8 @@ export default function LevelMap({ level, fullAccess, nextLevel, session }: { se
           </p>
           <h1>{en ? level.outcomeEn : level.outcome}</h1>
           {session?.level === level.id && <p className="ae-pass-badge">✓ {session.alias} · Acceso de tu profe</p>}
-          <div className="ae-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.percent} aria-label={`${progress.completed}/${progress.total}`}>
-            <span style={{ width: `${progress.percent}%` }} />
+          <div className="ae-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.coursePercent} aria-label={`${progress.completed}/${progress.total}`}>
+            <span style={{ width: `${progress.coursePercent}%` }} />
           </div>
           <p className="ae-level-meta">
             {ready ? `${progress.completed}/${progress.total} ${en ? "weeks completed" : "semanas completadas"}` : `${progress.total} ${en ? "weeks" : "semanas"}`}

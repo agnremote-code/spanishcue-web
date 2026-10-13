@@ -130,8 +130,8 @@ export default function AutoestudioLanding({ levels, fullAccess, session }: { se
                   <p className="ae-level-meta">
                     {level.modules.length} {en ? "weeks" : "semanas"} · {checkpoints} {en ? "checkpoints" : "checkpoints"}
                   </p>
-                  <div className="ae-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.percent} aria-label={`${level.code}: ${progress.completed}/${progress.total}`}>
-                    <span style={{ width: `${progress.percent}%` }} />
+                  <div className="ae-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.coursePercent} aria-label={`${level.code}: ${progress.completed}/${progress.total}`}>
+                    <span style={{ width: `${progress.coursePercent}%` }} />
                   </div>
                   <small>
                     {ready ? `${progress.completed}/${progress.total} ${en ? "weeks completed" : "semanas completadas"}` : " "}
