@@ -19,41 +19,11 @@ export const desdeHace: LiveLesson = {
   ],
   stages: [
     {
-      id: 'objetivo', label: 'Objetivo', icon: '◎', minutes: 4, mascot: '/brand/mascot/walking.webp',
-      title: 'Hablar del tiempo en tu propia historia', coach: 'Primero, ¿para qué sirve?',
+      id: 'entender', label: 'Entender', icon: '✎', minutes: 11, mascot: '/brand/mascot/pointing.webp',
+      title: 'Un momento, una duración, un hecho', coach: 'Primero entendemos. Un concepto por vez.',
       steps: [
-        { title: 'Para qué sirve', blocks: [
-          { kind: 'lead', text: 'Hoy vas a aprender a decir **desde cuándo** pasa algo, **cuánto tiempo** lleva pasando y **hace cuánto** ocurrió algo.', en: 'Today you will learn to say since when something happens, for how long, and how long ago something happened.' },
-          { kind: 'scenes', items: [
-            { icon: '🩺', place: 'En el médico', line: '¿Desde cuándo le duele la cabeza?', en: 'Since when has your head been hurting?', why: 'El médico necesita saber cuándo empezó el problema.' },
-            { icon: '💼', place: 'En una entrevista de trabajo', line: '¿Hace cuánto que trabaja en ventas?', en: 'How long have you been working in sales?', why: 'Tu experiencia se cuenta en años y meses.' },
-            { icon: '🏠', place: 'Con un vecino nuevo', line: '¿Y tú? ¿Hace cuánto que vives aquí?', en: 'And you? How long have you lived here?', why: 'Para conocer a alguien, contamos nuestra historia.' },
-            { icon: '☕', place: 'Con una amiga que no ves', line: '¡Hace siglos que no nos vemos!', en: 'We haven’t seen each other in ages!', why: 'Para ponerse al día después de mucho tiempo.' },
-          ] },
-          { kind: 'goals', title: 'Al terminar la clase vas a poder…', items: [
-            { text: 'Decir **cuándo empezó** algo que continúa: «Vivo aquí [[desde marzo|blue]]».', en: 'Say when something that is still true started.' },
-            { text: 'Decir **cuánto tiempo** lleva hasta hoy: «Vivo aquí [[desde hace seis meses|teal]]».', en: 'Say how long it has lasted until now.' },
-            { text: 'Situar un **hecho terminado**: «Llegué [[hace seis meses|orange]]».', en: 'Place a finished event in the past.' },
-            { text: 'Preguntar: **¿Desde cuándo…? ¿Hace cuánto…?**', en: 'Ask about time.' },
-          ] },
-        ] },
-        { title: 'Para empezar a hablar', blocks: [
-          { kind: 'prompts', title: 'Antes de la explicación, conversen', items: [
-            '¿Dónde vives? ¿Desde cuándo vives allí?',
-            '¿Hace cuánto que estudias español?',
-            '¿Qué cosa nueva empezaste a hacer este año?',
-            '¿Qué hiciste por primera vez hace poco?',
-          ] },
-          { kind: 'teacher', text: 'No corrijas todavía. Anota dos o tres frases del alumno con «desde» o «hace»: vas a volver a ellas en la explicación para que descubra la diferencia con sus propios ejemplos.' },
-        ] },
-      ],
-    },
-    {
-      id: 'explicacion', label: 'Explicación', icon: '✎', minutes: 11, mascot: '/brand/mascot/pointing.webp',
-      title: 'Un momento, una duración, un hecho', coach: 'Un concepto por vez.',
-      steps: [
-        { title: 'Desde: el momento de inicio', blocks: [
-          { kind: 'concept', tone: 'blue', label: 'DESDE', question: '¿Desde cuándo?', en: 'since', formula: ['presente + desde + un momento'],
+        { title: 'Desde: el momento de inicio', coach: 'Desde + un momento: una fecha, un mes, un año.', blocks: [
+          { kind: 'concept', art: 'calendar-start', tone: 'blue', label: 'DESDE', question: '¿Desde cuándo?', en: 'since', formula: ['presente + desde + un momento'],
             meaning: 'Marca **el momento en que empezó** algo que **todavía continúa**. Después de «desde» va una fecha, un año, un mes, un día o una hora.',
             examples: [
               { es: 'Vivo en Bogotá [[desde 2019|blue]].', en: 'I have lived in Bogotá since 2019.' },
@@ -65,8 +35,8 @@ export const desdeHace: LiveLesson = {
           { kind: 'visual', visual: 'time-axis-start' },
           { kind: 'tip', icon: '!', title: 'Mira el verbo', text: 'El verbo va en **presente** porque la situación sigue hoy: «Viv**o** en Bogotá desde 2019», no «Viví».', en: 'Spanish uses the present tense here, where English uses “have lived / have been living”.' },
         ] },
-        { title: 'Desde hace: la duración hasta hoy', blocks: [
-          { kind: 'concept', tone: 'teal', label: 'DESDE HACE', question: '¿Cuánto tiempo hace? ¿Hace cuánto?', en: 'for', formula: ['presente + desde hace + cantidad de tiempo', 'hace + cantidad de tiempo + que + presente'],
+        { title: 'Desde hace: la duración hasta hoy', mascot: '/brand/mascot/studying.webp', coach: 'Si puedes contarlo, es una cantidad.', blocks: [
+          { kind: 'concept', art: 'duration-clock', tone: 'teal', label: 'DESDE HACE', question: '¿Cuánto tiempo hace? ¿Hace cuánto?', en: 'for', formula: ['presente + desde hace + cantidad de tiempo', 'hace + cantidad de tiempo + que + presente'],
             meaning: 'Mide **cuánto tiempo pasó desde el inicio hasta hoy**. La situación **continúa**. Las dos fórmulas significan lo mismo.',
             examples: [
               { es: 'Vivo en Bogotá [[desde hace siete años|teal]].', en: 'I have lived in Bogotá for seven years.' },
@@ -80,8 +50,8 @@ export const desdeHace: LiveLesson = {
             ['¿Cuánto tiempo hace que vive allí?', '[[Hace siete años que|teal]] vive allí.', 'La duración hasta hoy'],
           ] },
         ] },
-        { title: 'Hace + pasado: un hecho terminado', blocks: [
-          { kind: 'concept', tone: 'orange', label: 'HACE + PASADO', question: '¿Cuándo pasó?', en: 'ago', formula: ['verbo en pasado + hace + cantidad de tiempo'],
+        { title: 'Hace + pasado: un hecho terminado', mascot: '/brand/mascot/speaking.webp', coach: 'Un hecho que pasó y terminó.', blocks: [
+          { kind: 'concept', art: 'past-trip', tone: 'orange', label: 'HACE + PASADO', question: '¿Cuándo pasó?', en: 'ago', formula: ['verbo en pasado + hace + cantidad de tiempo'],
             meaning: 'Sitúa **un hecho que ocurrió y terminó**. Cuenta el tiempo hacia atrás, desde hoy hasta ese momento.',
             examples: [
               { es: 'Llegué a Bogotá [[hace siete años|orange]].', en: 'I arrived in Bogotá seven years ago.' },
@@ -94,7 +64,7 @@ export const desdeHace: LiveLesson = {
             { tone: 'teal', shape: 'line', sentence: 'Vivo en Bogotá [[desde hace siete años|teal]].', en: 'I have lived there for seven years.', verdict: 'Una situación: mi vida en Bogotá. Empezó y sigue hoy.' },
           ] },
         ] },
-        { title: 'El verbo decide', blocks: [
+        { title: 'El verbo decide', mascot: '/autoestudio/mascot/noting.webp', coach: '¿Presente o pasado? Mira el verbo.', blocks: [
           { kind: 'lead', text: 'Con **hace … que**, mira el verbo: en **presente**, la situación sigue; en **pasado**, el hecho terminó.' },
           { kind: 'table', title: 'La misma estructura, dos significados', head: ['Frase', 'Verbo', 'Significado'], rows: [
             ['[[Hace dos años que|teal]] **vivo** aquí.', 'presente', 'Sigo aquí: duración hasta hoy (for)'],
@@ -104,14 +74,14 @@ export const desdeHace: LiveLesson = {
           ] },
           { kind: 'tip', icon: '🌎', title: 'Así lo vas a escuchar en América Latina', text: 'Muchas personas dicen «Vivo aquí [[hace dos años|teal]]», sin «desde» y sin «que». Es correcto y significa lo mismo que «desde hace dos años». Para empezar, usa «desde hace»: es la forma más clara.', en: 'You will often hear “Vivo aquí hace dos años” = I have lived here for two years.' },
           { kind: 'tip', icon: '👂', title: 'Vas a escuchar también', text: '«**Llevo** dos años en Bogotá» = «Vivo en Bogotá desde hace dos años». Por ahora, solo reconócela: la vas a practicar en otra clase.' },
-          { kind: 'teacher', text: 'Vuelve ahora a las frases que anotaste en el Objetivo. Pregunta: «¿Esto sigue o terminó?» y deja que el alumno elija la estructura y se corrija solo.' },
+          { kind: 'teacher', text: 'Pide al alumno dos frases sobre su vida con «desde» o «hace» y pregunta: «¿Esto sigue o terminó?» y deja que el alumno elija la estructura y se corrija solo.' },
         ] },
-        { title: 'Explora la línea del tiempo', blocks: [
+        { title: 'Explora la línea del tiempo', mascot: '/brand/mascot/seated.webp', coach: 'Mueve la fecha y di la frase.', blocks: [
           { kind: 'visual', visual: 'time-explorer' },
           { kind: 'visual', visual: 'barrio-3d' },
           { kind: 'teacher', text: 'Pide la frase antes de mostrarla. Cada vez que mueves la fecha hay una pregunta nueva: «¿Desde cuándo…?», «¿Hace cuánto…?», «¿Cuándo llegó?».' },
         ] },
-        { title: 'No lo confundas', blocks: [
+        { title: 'No lo confundas', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
           { kind: 'mistakes', title: 'Errores frecuentes', reveal: true, items: [
             { wrong: 'Vivo aquí por dos años.', right: 'Vivo aquí desde hace dos años.', why: 'Es una traducción de «for». Para algo que sigue, usa «desde hace» o «hace… que».' },
             { wrong: 'Estudio español desde dos años.', right: 'Estudio español desde hace dos años.', why: '«Dos años» es una cantidad: necesita «desde hace».' },
@@ -124,9 +94,17 @@ export const desdeHace: LiveLesson = {
       ],
     },
     {
-      id: 'contexto', label: 'En contexto', icon: '☰', minutes: 8, mascot: '/brand/mascot/seated.webp',
+      id: 'contexto', label: 'En contexto', icon: '☰', minutes: 10, mascot: '/brand/mascot/seated.webp',
       title: 'La gramática en conversaciones reales', coach: '¿Quién habla y qué necesita?',
       steps: [
+        { title: 'Dónde lo vas a usar', mascot: '/brand/mascot/walking.webp', coach: 'Estas preguntas aparecen todos los días.', blocks: [
+          { kind: 'scenes', items: [
+            { icon: '🩺', place: 'En el médico', line: '¿Desde cuándo le duele la cabeza?', en: 'Since when has your head been hurting?', why: 'El médico necesita saber cuándo empezó el problema.' },
+            { icon: '💼', place: 'En una entrevista de trabajo', line: '¿Hace cuánto que trabaja en ventas?', en: 'How long have you been working in sales?', why: 'Tu experiencia se cuenta en años y meses.' },
+            { icon: '🏠', place: 'Con un vecino nuevo', line: '¿Y tú? ¿Hace cuánto que vives aquí?', en: 'And you? How long have you lived here?', why: 'Para conocer a alguien, contamos nuestra historia.' },
+            { icon: '☕', place: 'Con una amiga que no ves', line: '¡Hace siglos que no nos vemos!', en: 'We haven’t seen each other in ages!', why: 'Para ponerse al día después de mucho tiempo.' },
+          ] },
+        ] },
         { title: 'En la consulta', blocks: [
           { kind: 'dialogue', title: 'Me duele la espalda', setting: 'Hoy es miércoles. Martín va al médico.', lines: [
             { who: 'Doctora Ruiz', text: 'Buenos días, Martín. ¿Qué le pasa?' },
@@ -170,7 +148,7 @@ export const desdeHace: LiveLesson = {
       ],
     },
     {
-      id: 'practica', label: 'Practiquemos', icon: '✦', minutes: 10, mascot: '/brand/mascot/kneeling.webp',
+      id: 'practica', label: 'Practiquemos', icon: '✦', minutes: 10, mascot: '/brand/mascot/studying.webp',
       title: 'Practiquemos juntos', coach: 'Primero en voz alta, después comprueba.',
       steps: [
         { title: 'Elige la estructura', blocks: [
@@ -251,9 +229,17 @@ export const desdeHace: LiveLesson = {
       ],
     },
     {
-      id: 'conversacion', label: 'Conversación', icon: '☊', minutes: 10, mascot: '/brand/mascot/speaking.webp',
+      id: 'conversacion', label: 'Conversación', icon: '☊', minutes: 12, mascot: '/brand/mascot/speaking.webp',
       title: 'Hablemos de tu vida', coach: 'Elige las preguntas que más interesan.',
       steps: [
+        { title: 'Para empezar', blocks: [
+          { kind: 'prompts', title: 'Preguntas rápidas', items: [
+            '¿Dónde vives? ¿Desde cuándo vives allí?',
+            '¿Hace cuánto que estudias español?',
+            '¿Qué cosa nueva empezaste a hacer este año?',
+            '¿Qué hiciste por primera vez hace poco?',
+          ] },
+        ] },
         { title: 'Preguntas para conversar', blocks: [
           { kind: 'conversation', swap: 'Ahora el alumno pregunta al profesor: usa «¿Desde cuándo…?» y «¿Hace cuánto que…?» y compara sus respuestas.', groups: [
             { title: 'Tu vida ahora', icon: '🏠', questions: [
@@ -305,6 +291,12 @@ export const desdeHace: LiveLesson = {
       title: 'Lo esencial en un vistazo', coach: '¿Qué te llevas hoy?',
       steps: [
         { title: 'Repaso', blocks: [
+          { kind: 'goals', title: 'Ahora ya puedes…', items: [
+            { text: 'Decir **cuándo empezó** algo que continúa: «Vivo aquí [[desde marzo|blue]]».', en: 'Say when something that is still true started.' },
+            { text: 'Decir **cuánto tiempo** lleva hasta hoy: «Vivo aquí [[desde hace seis meses|teal]]».', en: 'Say how long it has lasted until now.' },
+            { text: 'Situar un **hecho terminado**: «Llegué [[hace seis meses|orange]]».', en: 'Place a finished event in the past.' },
+            { text: 'Preguntar: **¿Desde cuándo…? ¿Hace cuánto…?**', en: 'Ask about time.' },
+          ] },
           { kind: 'recap', items: [
             { tone: 'blue', label: 'DESDE', formula: 'presente + desde + momento', example: 'Vivo aquí desde marzo.', caption: 'El momento de inicio', en: 'since' },
             { tone: 'teal', label: 'DESDE HACE · HACE… QUE', formula: 'presente + desde hace + cantidad', example: 'Vivo aquí desde hace seis meses.', caption: 'La duración hasta hoy', en: 'for' },
