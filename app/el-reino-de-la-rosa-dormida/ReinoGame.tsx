@@ -167,8 +167,8 @@ export default function ReinoGame() {
   const talkingId = started ? state.talking?.id ?? null : null;
   const view = talkingId ? conversationView(state, talkingId) : null;
   const profile = activeProfile(store);
-  const ending = Boolean(state.flags.victory) && !victoryDismissed && !endingReady;
-  const victory = Boolean(state.flags.victory) && !victoryDismissed && endingReady;
+  const ending = started && Boolean(state.flags.victory) && !victoryDismissed && !endingReady;
+  const victory = started && Boolean(state.flags.victory) && !victoryDismissed && endingReady;
 
   const notify = useCallback((message: string) => {
     setToast(message);

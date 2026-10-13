@@ -43,6 +43,15 @@ async function layout(page,label){
  return report;
 }
 async function travel(page,id,kind='npc',range){
+ for(let attempt=0;attempt<3;attempt++){
+  await travelOnce(page,id,kind,range);
+  const near=await page.evaluate(({id,kind,range})=>{const s=window.__realmQA.snapshot(),t=(kind==='item'?s.items:kind==='spell'?s.targets:s.npcs)[id];return Math.hypot(t.x-s.player.x,t.z-s.player.z)<(range??(kind==='item'?2:kind==='spell'?6.5:3))+.6;},{id,kind,range});
+  if(near)return;
+  console.log(`retrying route to ${id}`);await page.waitForTimeout(1500);
+ }
+ throw Error(`Could not reach ${id}`);
+}
+async function travelOnce(page,id,kind='npc',range){
  await page.evaluate(({id,kind,range})=>{
   const q=window.__realmQA,s=q.snapshot(),target=(kind==='item'?s.items:kind==='spell'?s.targets:s.npcs)[id];if(!target)throw Error('Unknown target '+id);
   const radius=.43,flags=s.state.flags,floor=q.floorAt,key=p=>p.x+','+p.z;
@@ -165,8 +174,11 @@ try{
   await talk(page,'nox',{teacher:true,label});
   if(size==='desktop'){
    // 3. Complete campaign from the beginning, then reload.
+   if(!process.env.REINO_QA_SKIP_FULL){
    await playFrom(page,`${label}daniel-`);
    await toTitle(page);await page.getByRole('button',{name:/^Continuar aventura/}).click();await page.waitForFunction(()=>window.__realmQA.snapshot().state.completed.length===8,{timeout:60000});console.log(`${size}: Daniel's victory persisted`);
+    await toTitle(page);assert.ok(!(await page.locator('.rr-victory').count()),'the title screen is not covered by an old victory');
+   }
    // 4. Start points: chapters 4, 6 and 8 for three more students, reload, finish.
    for(const [name,level,point] of [['Sofía','B2','c4-puente'],['Kenji','C1','c6-castillo'],['Lucía','A0','c8-tejedora']]){
     await toTitle(page);await startAt(page,'new',point,{name,level});

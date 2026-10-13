@@ -362,7 +362,9 @@ export default function World3D(props: WorldProps) {
         marker.rune.position.y = 1.6 + (reduced ? 0 : Math.sin(clock * 1.7 + marker.group.position.x) * .12);
         marker.rune.rotation.y = clock * .9;
       }
-      nearestNpc = nearestInReach(player, talkSpots, 3.9);
+      // When two characters are close, the one the mission needs answers the prompt.
+      const missionNpc = currentQuest(p.state).target;
+      nearestNpc = missionNpc && talkSpots[missionNpc] && nearestInReach(player, { [missionNpc]: talkSpots[missionNpc] }, 3.9) ? missionNpc : nearestInReach(player, talkSpots, 3.9);
       nearestItem = nearestInReach(player, availableItems, 2.7);
       nearestSpell = nearestInReach(player, SPELL_TARGETS, 8);
       const nextPrompt: Prompt | null = nearestItem ? { kind: 'item', id: nearestItem, name: ITEM_NAMES[nearestItem] ?? nearestItem, key: 'F' }
