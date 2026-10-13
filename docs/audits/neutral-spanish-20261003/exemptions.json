@@ -4608,6 +4608,24 @@
       "text": "Pedí un refugio, no una prisión. ¿Qué puedo hacer ahora?",
       "category": "neutral-context",
       "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "El verbo va en **presente** porque la situación sigue hoy: «Viv**o** en Bogotá desde 2019», no «Viví».",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Viví aquí desde 2020 (y sigo aquí).",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "«Durante» mide un período **cerrado**, que ya terminó: «Viví en Lima **durante** dos años y después me mudé». Para algo que sigue hoy: «Vivo en Bogotá **desde hace** dos años».",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
     }
   ]
 }
