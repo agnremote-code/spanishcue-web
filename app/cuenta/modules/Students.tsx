@@ -114,7 +114,7 @@ export default function Students({ lessons, startNew }: { lessons: DashLesson[];
             <div className="cx-row">
               <Link className="cx-btn is-primary" href={`/cuenta?tab=historial&nuevo=1&alumno=${encodeURIComponent(current.id)}`}>✎ {t("students.recordClass")}</Link>
               <button type="button" className="cx-btn" onClick={() => edit(current)}>{t("common.edit")}</button>
-              <button type="button" className="cx-btn" disabled={busy} onClick={() => void toggleArchive(current)}>{current.status === "active" ? t("students.archive") : t("students.activate")}</button>
+              <button type="button" className="cx-btn" disabled={busy} onClick={() => void toggleArchive(current)}>{current.status === "active" ? t("students.archive") : t("students.reactivate")}</button>
               <button type="button" className="cx-btn is-danger" disabled={busy} onClick={() => remove(current)}>{t("common.delete")}</button>
             </div>
             <h3>{t("students.classes")} ({currentRecords.length})</h3>
