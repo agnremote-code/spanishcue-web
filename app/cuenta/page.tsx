@@ -19,12 +19,11 @@ import { SectionBoundary } from "./ui";
 import Overview, { type PlanSummary } from "./modules/Overview";
 import Students from "./modules/Students";
 import History from "./modules/History";
-import Homework from "./modules/Homework";
 import Favorites from "./modules/Favorites";
 
 export const dynamic = "force-dynamic";
 
-const icons: Record<DashboardTab, string> = { inicio: "⌂", alumnos: "☺", historial: "≡", autoestudio: "✎", favoritos: "★", suscripcion: "◆", ajustes: "⚙" };
+const icons: Record<DashboardTab, string> = { inicio: "⌂", alumnos: "☺", historial: "≡", favoritos: "★", suscripcion: "◆", ajustes: "⚙" };
 
 /** Every lesson id the dashboard may show (records, progress, favorites), with the library's public title and route. */
 function dashboardLessons(): DashLesson[] {
@@ -113,9 +112,8 @@ export default async function Account({
 
           <SectionBoundary>
             {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled={fullAccess} plan={plan} />}
-            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} />}
+            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled={fullAccess} />}
             {tab === "historial" && <History lessons={dashLessons} startNew={params.nuevo === "1"} studentId={params.alumno ?? null} view={params.vista === "abiertas" ? "abiertas" : "registradas"} />}
-            {tab === "autoestudio" && <Homework enabled={fullAccess} />}
             {tab === "favoritos" && <Favorites lessons={dashLessons} fullAccess={fullAccess} />}
             {tab === "suscripcion" && <div className="cx-stack">
               <section className={`cx-panel cx-plan is-${plan.tone}`} aria-labelledby="plan-title">

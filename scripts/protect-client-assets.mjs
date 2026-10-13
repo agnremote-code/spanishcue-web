@@ -104,7 +104,6 @@ const publicRoots = new Set([
   "app/cuenta/modules/Overview.tsx",
   "app/cuenta/modules/Students.tsx",
   "app/cuenta/modules/History.tsx",
-  "app/cuenta/modules/Homework.tsx",
   "app/cuenta/modules/Favorites.tsx",
   "app/LogoutButton.tsx",
   "app/i18n/LanguageSwitcher.tsx",

@@ -2,7 +2,7 @@
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import type { ClassRecord, Student, StudentLevel } from './contracts';
+import type { ClassRecord, ClassStatus, Student, StudentLevel } from './contracts';
 import { draftStorageKey } from './drafts';
 import { isoToZonedLocal, zonedLocalToIso } from './time';
 
@@ -10,7 +10,7 @@ type LessonOption = { id: number; title: string };
 type StudentDraft = { alias: string; lastName: string; email: string; level: StudentLevel; goal: string };
 type ClassDraft = {
   studentId: string; lessonId: string; freeTitle: string; localDate: string; timezone: string;
-  durationMinutes: string; status: 'planned' | 'taught'; pedagogicalNote: string; nextStep: string; requestKey: string;
+  durationMinutes: string; status: ClassStatus; pedagogicalNote: string; nextStep: string; requestKey: string;
 };
 
 const emptyStudent = (): StudentDraft => ({ alias: '', lastName: '', email: '', level: 'A1', goal: '' });

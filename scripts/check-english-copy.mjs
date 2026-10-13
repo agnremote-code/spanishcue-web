@@ -79,6 +79,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/paid-landing-english-copy-additions-20261008.json',
   'docs/audits/reino-conversation-english-additions-20261013.json',
   'docs/audits/account-dashboard-english-additions-20261013.json',
+  'docs/audits/student-roster-english-additions-20261013.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
