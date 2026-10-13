@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import type { ClassRecord, Student } from "../../student-tracker/contracts";
+import type { ClassRecord, ClassStatus, Student } from "../../student-tracker/contracts";
 import { isoToZonedLocal, zonedLocalToIso } from "../../student-tracker/time";
-import { dateLabel, type DashLesson } from "../copy";
+import { dateLabel, type DashKey, type DashLesson } from "../copy";
 import { dashApi, Empty, LoadState, useDash, useLoad } from "../ui";
 import type { OpenedLesson } from "./Overview";
 
-type Draft = { studentId: string; lessonId: string; freeTitle: string; localDate: string; timezone: string; durationMinutes: string; status: "planned" | "taught"; pedagogicalNote: string; nextStep: string; requestKey: string };
+type Draft = { studentId: string; lessonId: string; freeTitle: string; localDate: string; timezone: string; durationMinutes: string; status: ClassStatus; pedagogicalNote: string; nextStep: string; requestKey: string };
 const newKey = () => (typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`);
 const localNow = () => { const d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 60_000).toISOString().slice(0, 16); };
 const DRAFT_KEY = "spanishcue:cuenta:class-draft";
@@ -106,7 +106,7 @@ export default function History({ lessons, startNew, studentId, view: initialVie
       <div className="cx-toolbar">
         <label className="cx-search"><span className="cx-sr">{t("common.search")}</span><input type="search" placeholder={t("history.searchPlaceholder")} value={query} onChange={(e) => setQuery(e.target.value)} /></label>
         <label><span className="cx-sr">{t("history.student")}</span><select value={student} onChange={(e) => setStudent(e.target.value)}><option value="">{t("history.student")}: {t("common.all")}</option>{people.map((p) => <option key={p.id} value={p.id}>{p.alias}</option>)}</select></label>
-        <label><span className="cx-sr">{t("history.state")}</span><select value={status} onChange={(e) => setStatus(e.target.value)}><option value="">{t("history.state")}: {t("common.all")}</option><option value="taught">{t("history.taught")}</option><option value="planned">{t("history.planned")}</option></select></label>
+        <label><span className="cx-sr">{t("history.state")}</span><select value={status} onChange={(e) => setStatus(e.target.value)}><option value="">{t("history.state")}: {t("common.all")}</option><option value="taught">{t("history.taught")}</option><option value="planned">{t("history.planned")}</option><option value="absent">{t("history.absent")}</option><option value="cancelled">{t("history.cancelled")}</option></select></label>
         <span className="cx-spacer" />
         <button type="button" className="cx-btn is-primary" onClick={openNew}>✎ {t("history.new")}</button>
       </div>
@@ -118,7 +118,7 @@ export default function History({ lessons, startNew, studentId, view: initialVie
         {students.status === "ready" && people.length === 0 ? <p className="cx-muted">{t("history.needStudent")} <Link href="/cuenta?tab=alumnos&nuevo=1">{t("students.add")} →</Link></p> : <>
           <div className="cx-form-row">
             <label>{t("history.student")}<select required value={form.draft.studentId} onChange={(e) => setDraft({ studentId: e.target.value })}><option value="">—</option>{people.filter((p) => p.status === "active" || p.id === form.draft.studentId).map((p) => <option key={p.id} value={p.id}>{p.alias}</option>)}</select></label>
-            <label>{t("history.state")}<select value={form.draft.status} onChange={(e) => setDraft({ status: e.target.value as Draft["status"] })}><option value="taught">{t("history.taught")}</option><option value="planned">{t("history.planned")}</option></select></label>
+            <label>{t("history.state")}<select value={form.draft.status} onChange={(e) => setDraft({ status: e.target.value as Draft["status"] })}><option value="taught">{t("history.taught")}</option><option value="planned">{t("history.planned")}</option><option value="absent">{t("history.absent")}</option><option value="cancelled">{t("history.cancelled")}</option></select></label>
           </div>
           <div className="cx-form-row">
             <label>{t("history.lesson")}<select value={form.draft.lessonId} onChange={(e) => setDraft({ lessonId: e.target.value, freeTitle: e.target.value ? "" : form.draft.freeTitle })}><option value="">{t("history.freeTitle")}</option>{lessons.map((lesson) => <option key={lesson.id} value={lesson.id}>{lesson.title} · {lesson.level}</option>)}</select></label>
@@ -144,7 +144,7 @@ export default function History({ lessons, startNew, studentId, view: initialVie
           return <li key={record.id} className="cx-panel">
             <time>{dateLabel(locale, record.startsAt, true)}</time>
             <div>
-              <strong>{titleOf(record)}</strong> <em className={`cx-tag is-${record.status}`}>{record.status === "taught" ? t("history.taught") : t("history.planned")}</em>
+              <strong>{titleOf(record)}</strong> <em className={`cx-tag is-${record.status}`}>{t(`history.${record.status}` as DashKey)}</em>
               <span className="cx-muted">{name(record.studentId)}{record.durationMinutes ? ` · ${record.durationMinutes} min` : ""}</span>
               {record.pedagogicalNote && <p><b>{t("history.note")}:</b> {record.pedagogicalNote}</p>}
               {record.nextStep && <p><b>{t("history.next")}:</b> {record.nextStep}</p>}

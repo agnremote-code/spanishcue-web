@@ -25,7 +25,6 @@ export const ACCOUNT_TAB_KEYS = [
   "inicio",
   "alumnos",
   "historial",
-  "autoestudio",
   "favoritos",
   "suscripcion",
   "ajustes",
@@ -34,5 +33,7 @@ export const ACCOUNT_TAB_KEYS = [
 export type AccountTabKey = (typeof ACCOUNT_TAB_KEYS)[number];
 
 export function accountTabFromValue(value: string | null | undefined): AccountTabKey {
+  // Homework lives inside «Mis alumnos» now; old links keep working.
+  if (value === "autoestudio") return "alumnos";
   return ACCOUNT_TAB_KEYS.includes(value as AccountTabKey) ? (value as AccountTabKey) : "inicio";
 }

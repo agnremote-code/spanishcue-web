@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ClassRecord, Student } from "../../student-tracker/contracts";
-import { dateLabel, type DashLesson } from "../copy";
+import { dateLabel, type DashKey, type DashLesson } from "../copy";
 import { LoadState, useDash, useLoad } from "../ui";
 
 export type HomeworkPass = {
@@ -42,7 +42,7 @@ export default function Overview({ lessons, homeworkEnabled, plan }: { lessons: 
     <nav className="cx-quick" aria-label={t("home.quick")}>
       <Link href="/cuenta?tab=historial&nuevo=1"><i aria-hidden="true">✎</i>{t("home.qRecord")}</Link>
       <Link href="/cuenta?tab=alumnos&nuevo=1"><i aria-hidden="true">＋</i>{t("home.qStudent")}</Link>
-      <Link href="/cuenta?tab=autoestudio"><i aria-hidden="true">⌁</i>{t("home.qHomework")}</Link>
+      <Link href="/cuenta?tab=alumnos"><i aria-hidden="true">⌁</i>{t("home.qHomework")}</Link>
       <Link href="/"><i aria-hidden="true">▦</i>{t("home.qLibrary")}</Link>
     </nav>
 
@@ -53,13 +53,13 @@ export default function Overview({ lessons, homeworkEnabled, plan }: { lessons: 
           const recent = [...data.records].sort((a, b) => b.startsAt.localeCompare(a.startsAt)).slice(0, 5);
           return recent.length ? <ul className="cx-list">{recent.map((record) => {
             const lesson = record.lessonId ? byId.get(record.lessonId) : null;
-            return <li key={record.id}><div><strong>{lesson?.title ?? record.freeTitle ?? t("history.freeLesson")}</strong><span>{studentName(record.studentId)} · {dateLabel(locale, record.startsAt, true)}</span></div><em className={`cx-tag is-${record.status}`}>{record.status === "taught" ? t("history.taught") : t("history.planned")}</em></li>;
+            return <li key={record.id}><div><strong>{lesson?.title ?? record.freeTitle ?? t("history.freeLesson")}</strong><span>{studentName(record.studentId)} · {dateLabel(locale, record.startsAt, true)}</span></div><em className={`cx-tag is-${record.status}`}>{t(`history.${record.status}` as DashKey)}</em></li>;
           })}</ul> : <p className="cx-muted">{t("home.noClasses")}</p>;
         }}</LoadState>
       </section>
 
       <section className="cx-panel" aria-labelledby="home-homework">
-        <header><h2 id="home-homework">{t("home.homework")}</h2>{homeworkEnabled && <Link href="/cuenta?tab=autoestudio">{t("common.seeAll")} →</Link>}</header>
+        <header><h2 id="home-homework">{t("home.homework")}</h2>{homeworkEnabled && <Link href="/cuenta?tab=alumnos">{t("common.seeAll")} →</Link>}</header>
         {!homeworkEnabled ? <p className="cx-muted">{t("home.homeworkLocked")} <Link href="/pricing">{t("sub.upgrade")} →</Link></p> :
           <LoadState state={passes} onRetry={reloadPasses}>{(data) => {
             const active = data.passes.filter((p) => !p.revokedAt && p.alias).sort((a, b) => (b.summary?.lastActivity ?? "").localeCompare(a.summary?.lastActivity ?? "")).slice(0, 5);

@@ -249,3 +249,24 @@
 }
 .subscription-manager{margin-top:22px;padding:25px;border:1px solid #cfddea;border-radius:18px;background:#fff;color:#0a294f}.subscription-manager>span{color:#0877e8;font-size:12px;font-weight:950;letter-spacing:1.4px}.subscription-manager h2{margin:7px 0 18px;font-size:25px}.subscription-manager>p{color:#61758a}.subscription-manager dl{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0}.subscription-manager dl div{padding:13px;border:1px solid #d8e4ef;border-radius:11px;background:#f6faff}.subscription-manager dt{color:#5b7186;font-size:12px;font-weight:850;text-transform:uppercase}.subscription-manager dd{margin:5px 0 0;font-size:14px;font-weight:850}.subscription-cancel{min-height:44px;margin-top:18px;padding:0;border:0;background:none;color:#a62b3b;font-size:14px;font-weight:850;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.subscription-confirm{margin-top:18px;padding:16px;border:1px solid #efd0d3;border-radius:12px;background:#fff8f8}.subscription-confirm p{margin:0 0 13px;color:#713f45;font-size:14px;line-height:1.5}.subscription-confirm button{min-height:44px;margin-right:7px;padding:0 14px;border:1px solid #b92e40;border-radius:9px;background:#b92e40;color:#fff;font-size:14px;font-weight:850;cursor:pointer}.subscription-confirm button+button{border-color:#c5d5e3;background:#fff;color:#244766}.subscription-message{margin:15px 0 0!important;padding:12px;border-radius:10px;background:#eaf8f3;color:#146548!important;font-size:14px}.subscription-manager button:focus-visible{outline:3px solid #55bfff;outline-offset:3px}@media(max-width:760px){.subscription-manager dl{grid-template-columns:repeat(2,1fr)}}@media(max-width:430px){.subscription-manager dl{grid-template-columns:1fr}.subscription-confirm button{width:100%;margin:5px 0}}
 .cx-grid > .cx-plan { grid-column: 1 / -1; }
+/* «Mis alumnos»: one profile per student with Homework, classes, attendance and errors. */
+.cx-tag.is-absent { background: #fde8ea; color: #a12233; }
+.cx-tag.is-cancelled { background: #f1f1f1; color: #5b5b5b; }
+.cx-people small.cx-hw { font-weight: 800; }
+.cx-hw.is-studying { color: #11653a; }
+.cx-hw.is-idle { color: #9a5b00; }
+.cx-hw.is-none { color: var(--cx-muted); }
+.cx-student-tabs { display: flex; max-width: 100%; overflow-x: auto; scrollbar-width: thin; }
+.cx-student-tabs button { white-space: nowrap; flex: none; }
+.cx-student-tabs button:disabled { opacity: .45; cursor: not-allowed; }
+.cx-student-facts { margin: 0; }
+.cx-alerts { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.cx-alerts li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border-radius: 10px; background: #fff7e8; border: 1px solid #f3dfb8; font-weight: 700; }
+.cx-alerts button { border: 0; background: none; font-size: 18px; cursor: pointer; }
+.cx-pass { align-items: flex-start; flex-wrap: wrap; }
+.cx-attendance { margin: 6px 0; }
+.cx-attendance .cx-btn[aria-pressed="true"] { background: var(--cx-navy); color: #fff; border-color: var(--cx-navy); }
+.cx-copy, .cx-move { display: grid; gap: 4px; font-weight: 800; font-size: 13px; color: var(--cx-muted); }
+.cx-copy input, .cx-move select { min-height: 38px; padding: 6px 10px; border: 1px solid #cfdcec; border-radius: 9px; background: #fff; color: var(--cx-navy); }
+.cx-unclaimed .cx-list li { flex-wrap: wrap; }
+.cx-hw-detail .ae-level-detail { margin-top: 10px; }
