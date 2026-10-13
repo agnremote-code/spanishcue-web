@@ -173,7 +173,11 @@ export default function World3D(props: WorldProps) {
 
     let player = safeCheckpoint(live.current.state.checkpoint, world.floorAt, world.colliders, live.current.state.flags);
     let lastCheckpoint = positionOf(player);
-    let observedCheckpoint = `${player.x}:${player.y}:${player.z}`;
+    const keyOf = (cp: Position) => `${cp.x}:${cp.y}:${cp.z}`;
+    // Last checkpoint seen in props, and the one this world reported itself.
+    // Props lag a render behind a report: that stale value must never pull the
+    // hero back (it used to, every autosave, shaking the screen while running).
+    let observedCheckpoint = keyOf(live.current.state.checkpoint), reportedCheckpoint = '';
     const held = new Set<string>();
     const joy = { x: 0, y: 0 };
     let yaw = Math.PI, pitch = .3, zoom = low ? 5.8 : 7.2;
@@ -193,6 +197,8 @@ export default function World3D(props: WorldProps) {
     const avatarPosition = new THREE.Vector3();
     const castOrigin = new THREE.Vector3();
     const cameraNow = new THREE.Vector3();
+    const followed = new THREE.Vector3(player.x, player.y + 1.35, player.z);
+    const carried = new THREE.Vector3();
     camera.position.set(player.x + 1, player.y + 3.4, player.z + zoom);
 
     function announce(message: string) { setNotice(message); messageUntil = clock + 4.2; }
@@ -304,11 +310,11 @@ export default function World3D(props: WorldProps) {
       if (p.state.flags.victory && !victorySeen) { victorySeen = true; beginShot('ending', 9); }
       if (!p.state.flags.victory) victorySeen = false;
       // An explicit reset/new save from the parent replaces the local position.
-      const cpKey = `${p.state.checkpoint.x}:${p.state.checkpoint.y}:${p.state.checkpoint.z}`;
+      const cpKey = keyOf(p.state.checkpoint);
       if (cpKey !== observedCheckpoint) {
         observedCheckpoint = cpKey;
         const cp = p.state.checkpoint;
-        if (Math.hypot(cp.x - lastCheckpoint.x, cp.z - lastCheckpoint.z) > 2 || Math.abs(cp.y - lastCheckpoint.y) > .6) {
+        if (cpKey !== reportedCheckpoint && (Math.hypot(cp.x - lastCheckpoint.x, cp.z - lastCheckpoint.z) > 2 || Math.abs(cp.y - lastCheckpoint.y) > .6)) {
           player = safeCheckpoint(cp, world.floorAt, world.colliders, p.state.flags);
           lastCheckpoint = positionOf(player);
         }
@@ -375,7 +381,7 @@ export default function World3D(props: WorldProps) {
       if (messageUntil > 0 && clock > messageUntil) { setNotice(''); messageUntil = 0; }
       if (clock - lastPosition > .2) { lastPosition = clock; p.onPosition?.(positionOf(player)); }
       if (canMove && clock - lastSave > 5 && Math.abs(player.y - world.floorAt(player.x, player.z)) < .04) {
-        lastSave = clock; lastCheckpoint = positionOf(player); observedCheckpoint = `${player.x}:${player.y}:${player.z}`; p.onCheckpoint(lastCheckpoint);
+        lastSave = clock; lastCheckpoint = positionOf(player); reportedCheckpoint = keyOf(lastCheckpoint); p.onCheckpoint(lastCheckpoint);
       }
 
       const age = clock - castAt;
@@ -429,6 +435,11 @@ export default function World3D(props: WorldProps) {
         }
         if (t >= 1) endShot();
       } else {
+        // The camera travels with the hero; easing only smooths orbit and zoom.
+        // Trailing behind a running hero made the inward snap below fire every
+        // few frames, which shook the whole screen.
+        carried.copy(targetLook).sub(followed);
+        if (carried.lengthSq() < 25) { camera.position.add(carried); look.add(carried); }
         const indoor = player.z < -65 && player.z > -102;
         const distance = Math.min(zoom, indoor ? 5.4 : 10.5);
         desiredCamera.set(player.x - Math.sin(yaw) * Math.cos(pitch) * distance, player.y + 1.4 + Math.sin(pitch) * distance, player.z - Math.cos(yaw) * Math.cos(pitch) * distance);
@@ -440,10 +451,11 @@ export default function World3D(props: WorldProps) {
         ray.far = maxDistance + .25;
         const visibleMeshes = world.cameraMeshes.filter(mesh => mesh.visible && mesh.parent?.visible !== false);
         const hit = ray.intersectObjects(visibleMeshes, false)[0];
-        if (hit && hit.distance < maxDistance + .2) desiredCamera.copy(targetLook).addScaledVector(direction, Math.max(.65, hit.distance - .38));
+        const blocked = Boolean(hit && hit.distance < maxDistance + .2);
+        if (hit && blocked) desiredCamera.copy(targetLook).addScaledVector(direction, Math.max(.65, hit.distance - .38));
         desiredCamera.y = Math.max(desiredCamera.y, world.floorAt(desiredCamera.x, desiredCamera.z) + .35);
         // Pull inward immediately, ease outward: collision never lags behind.
-        if (camera.position.distanceTo(targetLook) > desiredCamera.distanceTo(targetLook) + .35) camera.position.copy(desiredCamera);
+        if (blocked && camera.position.distanceTo(targetLook) > desiredCamera.distanceTo(targetLook) + .35) camera.position.copy(desiredCamera);
       }
       const ease = reduced ? 1 : 1 - Math.exp(-dt * (shot ? 6 : 10));
       cameraNow.copy(camera.position).lerp(desiredCamera, ease);
@@ -458,6 +470,7 @@ export default function World3D(props: WorldProps) {
         }
       }
       camera.position.copy(cameraNow);
+      followed.copy(targetLook);
       look.lerp(targetLook, ease);
       camera.lookAt(look);
       renderer.render(scene, camera);
