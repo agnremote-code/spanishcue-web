@@ -37,7 +37,8 @@ const mapping: Partial<Record<CategoryId, { topics: string[]; prefer: number[] }
   "estilo-indirecto": { topics: ["discurso"], prefer: [233] },
 };
 
-const levelIndex = (level: string) => ["A0", "A1", "A2", "B1", "B2", "C1", "C2"].indexOf(level.toUpperCase());
+// Levels below A1 (the beginner entry worlds) count as A1 for distance purposes.
+const levelIndex = (level: string) => Math.max(0, ["A1", "A2", "B1", "B2", "C1", "C2"].indexOf(level.toUpperCase()));
 
 function card(lesson: Lesson): RecommendedClass | null {
   const path = lesson.path;
