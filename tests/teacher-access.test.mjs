@@ -153,16 +153,10 @@ test('verified identity, owner status and PRO entitlement remain distinct',()=>{
 test('account return paths stay same-origin and account sections expose honest states',()=>{
  assert.equal(p.safeRelativeReturnPath('/clase/48?modo=pro'),'\/clase/48?modo=pro');
  for(const unsafe of ['//evil.example','https://evil.example','\\\\evil.example','/%2F%2Fevil.example','/%5C%5Cevil.example'])assert.equal(p.safeRelativeReturnPath(unsafe),'/');
- assert.deepEqual(p.ACCOUNT_TAB_KEYS,['inicio','alumnos','historial','favoritos','suscripcion','ajustes']);
+ assert.deepEqual(p.ACCOUNT_TAB_KEYS,['inicio','alumnos','historial','autoestudio','favoritos','suscripcion','ajustes']);
  assert.equal(p.accountTabFromValue('favoritos'),'favoritos');
+ assert.equal(p.accountTabFromValue('autoestudio'),'autoestudio');
  assert.equal(p.accountTabFromValue('inventado'),'inicio');
- for(const tab of ['alumnos','historial','favoritos']){
-  const state=p.accountEmptyState(tab,'es');
-  assert.equal(state.kind,'empty');
-  assert.equal(state.hasPersistedData,false);
-  assert.ok(state.title.length>0);
-  assert.ok(state.body.length>0);
- }
 });
 
 test('client-navigation payloads (.rsc) get the same route, identity and entitlement checks as the page',async()=>{

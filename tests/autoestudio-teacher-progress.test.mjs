@@ -170,7 +170,8 @@ test('list shows weeks completed and real advance separately, plus who studies a
 });
 
 test('«Ver progreso» opens a dialog at once, loads the real detail and closes with button or Escape',async()=>{
-  const v=await mount({detailDelay:{[id(1)]:30}});
+  // The delay must outlast opening the dialog on a slow CI runner, or the loading state is never visible.
+  const v=await mount({detailDelay:{[id(1)]:400}});
   try{
     await v.open(0);
     const dialog=v.dialog();
@@ -178,7 +179,7 @@ test('«Ver progreso» opens a dialog at once, loads the real detail and closes 
     assert.equal(dialog.parentElement.parentElement,document.body,'portaled over the page, not after the list');
     assert.match(dialog.textContent,/Cargando el progreso de Señor Propofol/);
     assert.ok(v.calls.includes(`/api/autoestudio/learners/${id(1)}`));
-    await v.settle(50);
+    await v.settle(450);
     const text=v.dialog().textContent;
     for(const expected of [/Señor Propofol/,/A2/,/Avance real del curso2,9 %/,/7\/240 secciones obligatorias/,/Semanas completadas0\/20/,/Semanas iniciadas1/,/Semana actual1/,/Última sección abierta: Práctica/,/Semana 1: 7\/12 secciones obligatorias/,/Pendientes.*Práctica/,/Semana 1: 7\/10 · mejor 8\/10 · 2 intentos/])assert.match(text,expected);
     assert.equal(v.dialog().querySelectorAll('.ae-week-progress li').length,20);

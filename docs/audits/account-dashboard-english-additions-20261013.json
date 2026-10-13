@@ -1,0 +1,714 @@
+{
+  "version": 1,
+  "authorization": "Owner Ale approved on 2026-10-13T11:14Z (project decision card \"¿Aprobás los textos nuevos en inglés del panel de cuenta?\" answered \"Apruebo\") the new English copy of the bilingual ES/EN /cuenta teacher dashboard requested in the owner brief of 2026-10-13T09:04Z, replacing the old placeholder /cuenta copy. Only the exact literals listed here are approved; all other English stays protected.",
+  "additions": [
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Billing"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Paddle emails every receipt; from that email you can also update your payment method."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Your payments and receipts are in your PayPal account, under Automatic payments."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Open PayPal"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Account sections"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Home"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "My students"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Class history"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework · Self-study"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Favorites"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Subscription"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Settings"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Administration"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Teachers and offer"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Lesson reports"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Open the library"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "My account"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Owner"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "PRO"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Free"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Your teaching desk"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "What happened with your students and lessons, at a glance."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "My students"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Profiles, level, goals and each student's journey."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Class history"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "The classes you recorded and the lessons you opened in the library."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework · Self-study"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Private A1–C2 links for your students and their real progress."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Favorites"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Your saved lessons, synced with the library."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Subscription"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Your plan, its status and how to manage it."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Settings"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Profile, language, security and session."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Loading…"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Try again"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Open"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Remove"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Cancel"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Save"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Saving…"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Edit"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Delete"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "All"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Search"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "See all"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Never"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "We could not load this information."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "This section ran into a problem"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "The rest of your dashboard still works. Try again or go back home."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Go home"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Hi"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Active students"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Classes recorded · 30 days"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Studied Homework · 7 days"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Favorites"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Quick actions"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Record a class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Add a student"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Create a Homework link"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Open the library"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Recent classes"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You have not recorded any classes yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Opened in the library"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You have not opened lessons from this account yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Your students' Homework"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You have not created Homework links yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You created {n} links; no student has opened theirs yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework links are included in SpanishCue PRO."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Recent favorites"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Mark lessons with ☆ in the library and they show up here."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Your plan"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Week"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Last activity"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "of the course"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Add student"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Search by name, email or goal"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Level"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Status"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Active"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Archived"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Active"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Archived"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Export CSV"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You have not added students yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Create the first profile to record classes and follow their progress."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No student matches your search."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Choose a student to see their profile."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Name or alias"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Last name (optional)"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Email (optional)"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Goal"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No goal written yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Last class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No classes recorded"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Recorded classes"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Record class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Archive"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Reactivate"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Delete {name} and their whole class history? This cannot be undone."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Profile saved."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "New student"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Edit profile"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Skip to content"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Homework progress is in the Homework · Self-study section."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Student since"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Recorded classes"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Opened in the library"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Record class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Search by lesson, note or next step"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Student"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Status"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Planned"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Taught"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No classes recorded."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Opening a lesson to prepare it does not create a record: save it here once you teach it."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You have not opened lessons from this account yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Every lesson you open from the library is logged here automatically."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Note"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Next step"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Open lesson"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Deleted student"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Custom class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Delete this class record?"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "First opened"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Last opened"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "SpanishCue lesson"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Custom title"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Date and time"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Time zone"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Duration (min)"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Add a student in My students first."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Class recorded."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "This class looks like it is already recorded."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Save anyway"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Cancel editing"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Record a class"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Edit record"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "You have not saved favorites yet."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "In the library, tap ☆ on any lesson and it shows up here, on all your devices."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Go to the library"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Saved on"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "PRO"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Removed from favorites."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Plan"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Access"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Access source"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "SpanishCue owner"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Full access and administration. No subscription needed."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "SpanishCue PRO"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Free account"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Includes two free lessons per category. PRO unlocks the whole library, Homework for your students and every tool."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "See PRO plans"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Paid subscription"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Access granted by SpanishCue"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Owner"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Valid until"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "No end date"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Profile"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Login email"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Account type"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Platform language"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Switch the SpanishCue interface between Spanish and English."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Security"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "We never show your password. We email you a secure link to change it."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Session"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Sign out on this device."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Your data"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Download your student profiles and their history as CSV."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Administration"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Internal SpanishCue tools, for the owner only."
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Open administration"
+    },
+    {
+      "path": "app/cuenta/copy.ts",
+      "text": "Errors and difficulties"
+    },
+    {
+      "path": "app/cuenta/error.tsx",
+      "text": "We could not open your account"
+    },
+    {
+      "path": "app/cuenta/error.tsx",
+      "text": "Your data is safe. Try again or open the library."
+    },
+    {
+      "path": "app/cuenta/error.tsx",
+      "text": "Try again"
+    },
+    {
+      "path": "app/cuenta/error.tsx",
+      "text": "Go to the library"
+    }
+  ]
+}

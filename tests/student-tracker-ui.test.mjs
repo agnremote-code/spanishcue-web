@@ -2,11 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-test('account reuses its existing panel and mounts the real tracker in both relevant tabs', async () => {
-  const source = await readFile('app/cuenta/page.tsx', 'utf8');
-  assert.match(source, /<StudentTracker/);
-  assert.doesNotMatch(source, /MÓDULO EN PREPARACIÓN/);
-  assert.doesNotMatch(source, /no la registra automáticamente como\s+dictada[\s\S]*MÓDULO EN PREPARACIÓN/);
+test('account dashboard mounts the real tracker APIs in its students and history sections', async () => {
+  const page = await readFile('app/cuenta/page.tsx', 'utf8');
+  assert.match(page, /<Students /);
+  assert.match(page, /<History /);
+  assert.doesNotMatch(page, /MÓDULO EN PREPARACIÓN/);
+  const students = await readFile('app/cuenta/modules/Students.tsx', 'utf8');
+  assert.match(students, /\/api\/students/);
+  assert.match(students, /window\.confirm/);
+  const history = await readFile('app/cuenta/modules/History.tsx', 'utf8');
+  for (const contract of [/\/api\/class-records/, /sessionStorage/, /zonedLocalToIso/, /isoToZonedLocal/, /allowDuplicate/, /probable_duplicate/, /disabled=\{busy/]) assert.match(history, contract);
 });
 
 test('client preserves drafts, blocks double submit, recovers from network errors and supports intentional repeats', async () => {

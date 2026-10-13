@@ -77,6 +77,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/seo-english-copy-additions-20261007.json',
   'docs/audits/paid-landing-english-copy-additions-20261008.json',
   'docs/audits/reino-conversation-english-additions-20261013.json',
+  'docs/audits/account-dashboard-english-additions-20261013.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
@@ -112,6 +113,8 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   if(existsSync(grammarReviewedPath))reviewed.push(...JSON.parse(readFileSync(grammarReviewedPath,'utf8')).changes);
   const checkoutReviewedPath=resolve(root,'docs/audits/checkout-copy-changes-20261008.json');
   if(existsSync(checkoutReviewedPath))reviewed.push(...JSON.parse(readFileSync(checkoutReviewedPath,'utf8')).changes);
+  const accountReviewedPath=resolve(root,'docs/audits/account-dashboard-copy-changes-20261013.json');
+  if(existsSync(accountReviewedPath))reviewed.push(...JSON.parse(readFileSync(accountReviewedPath,'utf8')).changes);
   return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(relocateEnglishSources(before), after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

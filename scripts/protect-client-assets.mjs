@@ -96,6 +96,18 @@ const publicRoots = new Set([
   "app/autoestudio/ModulePlayer.tsx",
   "app/autoestudio/claim/ClaimClient.tsx",
   "app/autoestudio/TeacherPasses.tsx",
+  // /cuenta dashboard: free accounts use it too. It renders account data from
+  // authorized APIs and public catalog titles only, never lesson bodies.
+  "app/cuenta/error.tsx",
+  "app/cuenta/ui.tsx",
+  "app/cuenta/SubscriptionManager.tsx",
+  "app/cuenta/modules/Overview.tsx",
+  "app/cuenta/modules/Students.tsx",
+  "app/cuenta/modules/History.tsx",
+  "app/cuenta/modules/Homework.tsx",
+  "app/cuenta/modules/Favorites.tsx",
+  "app/LogoutButton.tsx",
+  "app/i18n/LanguageSwitcher.tsx",
   "virtual:vinext-app-browser-entry",
   ...Object.keys(manifest).filter((key) => /(^|\/)node_modules\//.test(key)),
 ]);
