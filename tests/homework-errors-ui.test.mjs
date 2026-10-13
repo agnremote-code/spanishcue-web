@@ -31,6 +31,10 @@ const built = await build({
     export { LocaleProvider } from './app/i18n/LocaleProvider';
     export { summarizeCategories, summarizeWeeks, summarizeActivities, evolution } from './app/autoestudio/errors/model';
     export { buildClassPlan } from './app/autoestudio/errors/plan';
+    export { default as StudentUpsell } from './app/autoestudio/errors/StudentUpsell';
+    export { upsellFor, sectionTopic } from './app/autoestudio/errors/upsell';
+    export const findModuleA1 = (slug: string) => findModule('a1', slug)!;
+    export const recommendationCatalogA1 = recommendationCatalog('a1');
     const mod = findModule('a1', 'semana-1')!;
     export const exercise = sectionExercises(mod, 'grammar').find(e => e.id === 'g1')!;
     export function Learner({ fullAccess = false }: { fullAccess?: boolean }) {
@@ -161,4 +165,26 @@ test('the demo shows the real opening stages, locks the rest server-side, opens 
     assert.equal(document.querySelector('[role="dialog"]'), null, 'modal closes and the demo stays');
     assert.match(text(), /Demostración gratuita/);
   } finally { await unmount(); }
+});
+
+test('every section ends with the SpanishCue-for-students invitation pointed at a real class; full access hides it', async () => {
+  const { StudentUpsell, upsellFor, sectionTopic, findModuleA1, recommendationCatalogA1 } = compiled.exports;
+  const mod = findModuleA1('semana-1');
+  const catalog = recommendationCatalogA1;
+  assert.equal(sectionTopic(mod, 'grammar'), 'ser-estar', 'week 1 grammar (soy/eres/es) maps to ser/estar');
+  for (const section of ['goal', 'theory', 'grammar', 'vocabulary', 'pronunciation', 'listening', 'reading', 'practice', 'writing', 'speaking', 'useInClass', 'quiz', 'complete']) {
+    const u = upsellFor(mod, section, catalog);
+    assert.ok(u, `${section} gets an invitation`);
+    assert.ok(catalog[u.category].some(c => c.id === u.lesson.id), `${section}: class comes from the real catalog`);
+    assert.match(u.href, /^\/(autoestudio\/clase\/\d+\?de=a1-01&tema=[a-z-]+|[a-z-]+)$/);
+  }
+  await mount(React.createElement(StudentUpsell, { module: mod, section: 'grammar', catalog, fullAccess: false }));
+  try {
+    const card = document.querySelector('.ae-upsell');
+    assert.ok(card); assert.match(card.textContent, /SpanishCue para alumnos/); assert.match(card.textContent, /Ser, estar y hay/);
+    assert.equal(card.querySelector('a.ae-primary').getAttribute('href'), '/autoestudio/clase/48?de=a1-01&tema=ser-estar');
+    assert.equal(card.querySelector('a.ae-link').getAttribute('href'), '/acceso?returnTo=%2Fla-ciudad-de-los-motores');
+  } finally { await unmount(); }
+  await mount(React.createElement(StudentUpsell, { module: mod, section: 'grammar', catalog, fullAccess: true }));
+  try { assert.equal(document.querySelector('.ae-upsell'), null, 'nothing to sell to a PRO learner'); } finally { await unmount(); }
 });

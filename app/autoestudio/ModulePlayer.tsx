@@ -8,6 +8,7 @@ import { SECTION_ORDER, type LevelMeta, type Module, type ModuleSummary, type Se
 import { copyFor, sectionHashes, sectionCoach, sectionIcons, sectionLabels, sectionMascots } from "./engine/copy";
 import type { EngineContext } from "./engine/Exercises";
 import { Rich } from "./engine/Rich";
+import StudentUpsell from "./errors/StudentUpsell";
 import {
   GoalSection,
   ListeningSection,
@@ -291,6 +292,7 @@ export default function ModulePlayer({ module, level, objectives, previous, next
                 )}
               </div>
             )}
+            <StudentUpsell module={module} section={section} catalog={recommendations} fullAccess={fullAccess} onOpen={(upsell) => errorLog.logEvent("opened", upsell.lesson.id, upsell.category)} />
           </div>
 
           <footer className="ae-stage-foot">
