@@ -1,0 +1,546 @@
+{
+  "version": 1,
+  "authorization": "Owner brief of 2026-10-13 07:37Z (project thread on the Valdoria RPG): redesign the Valdoria RPG (/el-reino-de-la-rosa-dormida, lesson 238) as a level-differentiated conversation experience; A0 must offer English support and answer options for every line and question. Existing English copy remains protected; this manifest only approves the exact new A0 support literals listed below.",
+  "additions": [
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! I am Nox, a raven. I live on this road."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Look at the castle. Everyone is asleep. They have been asleep for one hundred years."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "A spell keeps the kingdom asleep. Go to the village. Look for Inés."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "The village is near, to the east. Follow the golden light. Bye!"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hello again! Shall we talk a little more?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like traveling?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Beach or mountains?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Where are you from?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you travel by plane, by train or by bus?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like big cities?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What do you carry in your backpack?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! I am Inés. This is my inn. Are you hungry?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "On the night of the spell, the kingdom fell asleep. I did not. I saw the thorns."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Bruno is the blacksmith. He has the castle key. Talk to Bruno."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Bruno is near the mill. See you later!"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "You came back! Tea and another chat?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like soup?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What do you eat for breakfast?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you cook at home?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What is your favorite food?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Tea or coffee?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi. I am Bruno, the blacksmith. I work with fire and metal."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "The mill does not turn. There is no wind."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "I will teach you a spell: Ventaria. It is wind. Use it at the mill. Then pick up the key."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Press 2 for Ventaria and R near the mill. Good luck!"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hello again. Shall we talk a little?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you work or study?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like your job?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you work with your hands or with the computer?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you cook, paint or play music?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you work during the day or at night?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you speak other languages?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! I am Liora, the forest fairy."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "The forest is dark. The lights are asleep."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "I give you a spell: Lumaria. It is light. Use it at the forest shrine."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Press 1 for Lumaria and R at the shrine. Then go to the bridge."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! The forest says hello."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like trees?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you live in a city or in the countryside?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you have a pet?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like the sun or the rain?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you walk a lot?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What color do you like?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Stop. I am Sir Aldren. I guard the bridge."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Many people want to cross. Few tell the truth."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "All right. I trust you. The bridge is open."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Cross the bridge. Celina is in the gardens."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hello. The bridge is still open for you."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you have many friends?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What is the name of your best friend?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Are you shy or outgoing?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you talk with your friends every day?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like parties?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Is your friend funny or serious?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! I am Celina. I like flowers."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Look at the wall. It has thorns. The rose is inside."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "I will teach you Floralis. With Floralis, the thorns become flowers."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Press 3 and R at the thorn wall. Then pick up the rose."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! Do you like my flowers?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like flowers?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What is your favorite flower?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like drawing?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What makes you happy: coffee, music or the sun?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Is your house big or small?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! I am Baltasar. I like books."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "You have the scroll! It belongs to Princess Elara."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "The scroll says: \"A shelter must have an exit.\" The spell was a shelter."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Look for Teobaldo in the great hall. He remembers the story."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! Shall we read a little?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like reading?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you read books or on your phone?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you study Spanish at home?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like math, history or art?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you use the computer a lot?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like movies in Spanish?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Good afternoon. I am Teobaldo. I write the history of the kingdom."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "First, a storm. Then, a shelter. In the end, the sleep."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "I give you Aurora. It is the light of dawn. It protects you from fire."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Go up the stairs. Brum, the dragon, is up there. Use Aurora: key 4 and R."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Good afternoon again. More memories?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you have grandparents?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Is your family big or small?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you have photos from your childhood?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like history?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like old music?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "GRRR! I am Brum, the dragon. Are you scared?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "I am not bad. I protect Princess Elara."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Elara is in the tower. I give you the dawn crystal."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Pick up the crystal with F. Then go to the tower. The Weaver is waiting for you."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hello. No more fire."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Are you afraid of dragons?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Are you afraid of spiders?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like the night?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Are you brave?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like horror movies?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like flying?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hello. I am the Thorn Weaver."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "I made the spell. I wanted to protect Elara."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "The ritual: first Lumaria, then Floralis, last Aurora."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Go to the altar. Use 1, 3 and 4 with R. In that order."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hello. The altar is waiting for you."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like having a plan?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you use a planner?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Is your room tidy?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like surprises?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you arrive early or late?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you cook with a recipe?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Mmm… Where am I? Is it daytime?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Thank you. The kingdom is waking up with you."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Valdoria wakes up. Thank you for your words! Your story continues."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Hi! The kingdom is happy."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What do you want to do tomorrow?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "And on the weekend?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "What do you want to learn?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Are you happy today?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like the sunrise?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Where do you want to travel?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "It is the mill. It makes flour for bread."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you eat bread every day?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "It is the forest clearing. There are flowers and birds."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like birds?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "It is the river. The water is cold."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like swimming?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "It is a fountain. The water sings."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like the garden?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "It is the library. There are many books."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you read in Spanish?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "It is the great hall of the castle. There are parties here."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like parties?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "From here, you can see the whole kingdom."
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "Do you like high places?"
+    },
+    {
+      "path": "app/el-reino-de-la-rosa-dormida/conversations.mjs",
+      "text": "You can also answer with your opinion, an invented example or someone else’s experience."
+    }
+  ]
+}

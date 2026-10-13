@@ -6,7 +6,9 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import { REALM_SPAWN, activeColliders, stepRealmPlayer, nearestInReach } from '../app/el-reino-de-la-rosa-dormida/movement.mjs';
-import {createGame,reduceGame,getDialogue} from '../app/el-reino-de-la-rosa-dormida/engine.mjs';
+import {createGame,reduceGame,hasTalked,conversationLength,CAMPAIGN} from '../app/el-reino-de-la-rosa-dormida/engine.mjs';
+import {START_POINTS,stateForStartPoint} from '../app/el-reino-de-la-rosa-dormida/checkpoints.mjs';
+import {PLACES} from '../app/el-reino-de-la-rosa-dormida/conversations.mjs';
 
 // Build the actual scene to inspect its collision/floor contract. Only browser
 // painting and resident visuals are stubbed: neither contributes colliders.
@@ -65,12 +67,35 @@ test('a complete campaign reaches every interaction through the actual world and
   assert.ok(Math.abs(player.y-target.y)<2.4,`${id}: on the correct floor`);
   assert.equal(nearestInReach(player,{[id]:target},range+.2),id);
  }
- function talk(id){go(id);for(let stage=0;stage<3;stage++){const line=getDialogue(id,state.level,stage,state);assert.equal(line.locked,false,`${id} unlocked`);state=reduceGame(state,{type:'answer',npc:id,text:line.suggestions[0]});}assert.equal(state.dialogue[id],3);}
+ function talk(id){go(id);for(let turn=0;turn<conversationLength(id);turn++)state=reduceGame(state,{type:'say',npc:id});assert.ok(hasTalked(state,id),`${id} talked`);}
  function collect(item){go(item,'item');state=reduceGame(state,{type:'collect',item});assert.ok(state.inventory.includes(item));}
  function cast(target,spell,flag){go(target,'spell');state=reduceGame(state,{type:'cast',spell,target});assert.ok(state.flags[flag]);}
  talk('nox');talk('ines');talk('bruno');cast('mill','ventaria','millRepaired');collect('key');talk('liora');cast('grove','lumaria','forestLit');talk('aldren');talk('celina');cast('thorns','floralis','gardenOpen');collect('rose');collect('scroll');talk('baltasar');talk('teobaldo');cast('dragon','aurora','dragonShield');talk('brum');collect('crystal');talk('tejedora');cast('altar','lumaria','ritualLight');cast('altar','floralis','ritualGrowth');cast('altar','aurora','ritualDawn');talk('elara');
  assert.equal(state.flags.victory,true);
  assert.equal(player.y,8,'the final chamber is reached by climbing the staircase');
+});
+
+const TARGETS={mill:{x:24,y:0,z:7},grove:{x:-10,y:0,z:-7},thorns:{x:0,y:0,z:-49},dragon:{x:-10,y:8,z:-111},altar:{x:10,y:8,z:-126}};
+test('every start point stands on clear ground and can walk to its next step with only its own open gates',()=>{
+ for(const point of START_POINTS){
+  const state=stateForStartPoint(point.id,'B1');const p=point.position;
+  assert.ok(clear(p.x,p.z,state.flags),`${point.id} is not inside a collider`);
+  assert.ok(Math.abs(world.floorAt(p.x,p.z)-p.y)<.3,`${point.id} stands on its floor`);
+  const step=point.open?['talk',point.open]:CAMPAIGN[point.done];if(!step)continue;
+  const target=world.npcPositions[step[1]]??world.itemPositions[step[1]]??TARGETS[step[2]];
+  assert.ok(target,`${point.id} next target`);
+  route({...p},target,step[0]==='cast'?7:3.1,state.flags);
+ }
+});
+
+test('every point of interest is on reachable ground and away from other interactions',()=>{
+ const others=[...Object.values(world.npcPositions),...Object.values(world.itemPositions)];
+ for(const [id,place] of Object.entries(PLACES)){
+  const s=place.spot;
+  assert.ok(Math.abs(world.floorAt(s.x,s.z)-s.y)<.3,`${id} floor`);
+  assert.ok(others.every(o=>Math.hypot(o.x-s.x,o.z-s.z)>=5.5||Math.abs(o.y-s.y)>2),`${id} does not overlap another prompt`);
+  route({x:0,y:0,z:24},s,3,flags);
+ }
 });
 
 test('the actual portcullis and castle doors block before their quest flags',()=>{

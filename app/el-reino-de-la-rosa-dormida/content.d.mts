@@ -8,6 +8,3 @@ export const NPCS: Character[];
 export const ITEMS: Item[];
 export const SPELLS: Spell[];
 export const QUESTS: Quest[];
-export const LEVEL_FOCUS: Record<SpanishLevel, string>;
-export const DIALOGUES: Record<string, [string, string, [string, string][]][]>;
-export const INTENTS: Record<string, { any: string[]; all?: string[][]; reject?: string[] }>;
