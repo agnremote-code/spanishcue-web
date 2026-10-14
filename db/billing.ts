@@ -132,7 +132,11 @@ export async function currentSubscriptionForUser(db: D1Database, userId: string,
     `SELECT id, provider, environment, provider_subscription_id AS providerSubscriptionId,
             status, offer_code AS offerCode, next_billing_time AS nextBillingTime,
             activated_at AS activatedAt, first_payment_at AS firstPaymentAt,
-            paid_through AS paidThrough, cancelled_at AS cancelledAt
+            paid_through AS paidThrough, cancelled_at AS cancelledAt,
+            provider_subscriber_id AS providerSubscriberId,
+            last_payment_at AS lastPaymentAt, last_failure_at AS lastFailureAt,
+            (SELECT amount_cents FROM billing_payments p WHERE p.subscription_id = billing_subscriptions.id AND p.status = 'COMPLETED'
+             ORDER BY p.occurred_at DESC, p.id DESC LIMIT 1) AS lastAmountCents
      FROM billing_subscriptions WHERE user_id = ? AND environment = ?
      ORDER BY CASE status WHEN 'ACTIVE' THEN 0 WHEN 'APPROVED' THEN 1 WHEN 'APPROVAL_PENDING' THEN 2 ELSE 3 END, updated_at DESC
      LIMIT 1`,
@@ -140,6 +144,7 @@ export async function currentSubscriptionForUser(db: D1Database, userId: string,
     id: number; provider: string; environment: PaypalEnvironment; providerSubscriptionId: string;
     status: SubscriptionStatus; offerCode: string | null; nextBillingTime: number | null;
     activatedAt: number | null; firstPaymentAt: number | null; paidThrough: number | null; cancelledAt: number | null;
+    providerSubscriberId: string | null; lastPaymentAt: number | null; lastFailureAt: number | null; lastAmountCents: number | null;
   }>();
 }
 
