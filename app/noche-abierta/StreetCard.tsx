@@ -22,8 +22,8 @@ export default function StreetCard({ street, level, teacher, onChoose, onBack, o
   useEffect(() => { focusRef.current?.focus({ preventScroll: true }); }, [stepKey]);
   // The people speak on their own: the answer to what you said, then their
   // next line; at the end, how the scene closes. Never the learner's question.
-  const spoken = view ? (view.ended ? [view.end?.text] : [view.said?.reply, view.line]) : [];
-  const spokenKey = spoken.join('|');
+  const spoken = view ? (view.ended ? [{ text: view.end?.text, body: null }] : [{ text: view.said?.reply, body: view.said?.body ?? null }, { text: view.line, body: view.whoBody ?? null }]) : [];
+  const spokenKey = spoken.map(line => line.text).join('|');
   const body = view?.whoBody ?? null;
   useEffect(() => { if (spokenKey) speakLines(spoken, { body, level }); return () => stopSpeaking(); }, [spokenKey]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!view) return null;

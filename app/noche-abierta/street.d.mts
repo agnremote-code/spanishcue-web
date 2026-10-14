@@ -30,7 +30,7 @@ export type StreetState = {
 export type StreetChoice = { key: string; item: ItemId | null; act: string; say: string };
 export type StreetView = {
   id: string; title: string; district: string; districtName: string; goal: string; kind: 'escena' | 'rincon'; step: number;
-  said: { act: string; say: string; reply: string; item: ItemId | null } | null; mood: Mood;
+  said: { act: string; say: string; reply: string; item: ItemId | null; body?: string | null } | null; mood: Mood;
   ended: boolean; who?: string; whoBody?: string | null; line?: string; choices?: StreetChoice[]; words?: string[];
   end?: { id: string; text: string; change: Change; recap: string }; speak?: string;
   variant: ItemId | null; fx: OpeningFx | null;

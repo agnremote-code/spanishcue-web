@@ -10,6 +10,7 @@ import { BI_BREAK } from './bilingual.mjs';
 
 export const VOICE_KEY = 'spanishcue:noche-abierta:voces';
 export type Speaker = { body?: string | null; level?: string };
+export type Line = string | { text: string | null | undefined; body?: string | null };
 
 const synthOf = () => (typeof window !== 'undefined' && 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined' ? window.speechSynthesis : null);
 
@@ -60,16 +61,21 @@ export function segmentsOf(text: string): { text: string; quoted: boolean }[] {
 const rateFor = (level?: string) => (level === 'A0' ? 0.78 : level === 'A1' ? 0.84 : level === 'A2' ? 0.9 : 0.97);
 
 /** Reads one or more lines, in order, stopping whatever was being read. */
-export function speakLines(lines: (string | null | undefined)[], speaker: Speaker = {}) {
+export function speakLines(lines: (Line | null | undefined)[], speaker: Speaker = {}) {
   const synth = synthOf();
   if (!synth || !voicesOn()) return false;
-  const gender = speaker.body === 'f' ? 'f' : speaker.body === 'm' ? 'm' : null;
-  const segments = lines.filter((line): line is string => Boolean(line)).flatMap(segmentsOf);
+  const genderOf = (body: string | null | undefined) => (body === 'f' ? 'f' : body === 'm' ? 'm' : null);
+  const segments = lines.flatMap(line => {
+    const text = typeof line === 'string' ? line : line?.text;
+    const gender = genderOf(typeof line === 'string' || !line || line.body === undefined ? speaker.body : line.body);
+    return text ? segmentsOf(text).map(segment => ({ ...segment, gender })) : [];
+  });
   if (!segments.length) return false;
   synth.cancel();
   if (synth.paused) synth.resume();
   const rate = rateFor(speaker.level);
   for (const segment of segments) {
+    const { gender } = segment;
     const utterance = new SpeechSynthesisUtterance(segment.text);
     const voice = spanishVoice(segment.quoted ? gender : null);
     if (voice) { utterance.voice = voice; utterance.lang = voice.lang; } else utterance.lang = 'es-ES';

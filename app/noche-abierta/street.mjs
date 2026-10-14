@@ -216,8 +216,10 @@ export function streetView(street, level) {
   const read = (value) => (a0 ? bi(value) : text(value, band));
   const lastStep = open.trail[open.trail.length - 1] ?? null;
   const lastChoice = lastStep ? choicesFor(encounter, lastStep.node, street.item, open.a0).find((item) => item.key === lastStep.choice) : null;
-  const said = lastChoice ? { act: a0 ? "" : text(lastChoice.act, band), say: read(lastChoice.say), reply: read(lastChoice.reply), item: lastChoice.item } : null;
   const castOf = (id) => encounter.cast.find((person) => person.id === id) ?? null;
+  // The reply belongs to whoever spoke the moment that was answered.
+  const saidBody = lastStep ? castOf(graphOf(encounter, open).nodes[lastStep.node]?.who)?.body ?? null : null;
+  const said = lastChoice ? { act: a0 ? "" : text(lastChoice.act, band), say: read(lastChoice.say), reply: read(lastChoice.reply), item: lastChoice.item, body: saidBody } : null;
   const castName = (id) => castOf(id)?.name ?? "";
   const variant = a0 ? null : variantOf(encounter, street.item);
   const base = {
