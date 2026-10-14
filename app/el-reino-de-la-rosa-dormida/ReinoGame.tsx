@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Component, useCallback, useEffect, useRef, useState, type ChangeEvent, type ComponentType, type CSSProperties, type FormEvent, type ReactNode } from 'react';
 import { LEVELS, NPCS, ITEMS, SPELLS, QUESTS } from './content.mjs';
+import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
 import { PLACES, TEACHER_NOTES } from './conversations.mjs';
 import { createGame, restoreGame, reduceGame, currentQuest, conversationView, discoveries, actionFeedback, conversationLength, type GameState, type GameAction } from './engine.mjs';
 import { CHAPTERS, START_POINTS, stateForStartPoint } from './checkpoints.mjs';
@@ -121,11 +122,15 @@ export default function ReinoGame() {
   const [store, setStore] = useState<ProfileStore>(emptyStore);
   const storeRef = useRef(store);
   const [state, setState] = useState<GameState>(() => createGame('A1'));
+  const [heard, markHeard] = useListeningDone('reino', state.level);
   const stateRef = useRef(state);
   const [ready, setReady] = useState(false);
   const [started, setStarted] = useState(false);
   const [intro, setIntro] = useState(false);
   const [World, setWorld] = useState<ComponentType<WorldProps> | null>(null);
+  // Comprensión auditiva: characters and places open a listening (undefined = closed, null = the list).
+  const [mode, setMode] = useListeningMode('reino');
+  const [listenAt, setListenAt] = useState<string | null | undefined>(undefined);
   const [worldError, setWorldError] = useState(false);
   const [worldKey, setWorldKey] = useState(0);
   const [panel, setPanel] = useState<Panel>(null);
@@ -398,10 +403,11 @@ export default function ReinoGame() {
 
   const interact = useCallback((id: string) => {
     if (!NPCS.some(person => person.id === id) && !PLACES[id]) return;
+    if (mode === 'escucha') { stopVoice(); setListenAt(id); return; }
     stopVoice(); resetDialogueUi(); setLastAnswer(null);
     apply({ type: 'open', npc: id });
     audio.current?.effect('open');
-  }, [stopVoice, resetDialogueUi, apply]);
+  }, [stopVoice, resetDialogueUi, apply, mode]);
 
   const collect = useCallback((id: string) => {
     const { before, next } = apply({ type: 'collect', item: id });
@@ -493,7 +499,7 @@ export default function ReinoGame() {
 
   return <main className={`rr-game ${started ? 'rr-playing' : 'rr-menu-open'} ${damaged ? 'rr-damaged' : ''}`} aria-label="El Reino de la Rosa Dormida">
     <WorldBoundary key={worldKey}>
-      {World ? <World state={state} paused={!started || Boolean(panel) || Boolean(talkingId) || victory || Boolean(confirm)} intro={intro} spell={spell} onInteract={interact} onCollect={collect} onCast={cast} onCheckpoint={checkpoint} onIntroEnd={finishIntro} onEndingEnd={() => setEndingReady(true)} onPosition={setPosition} onSelectSpell={selectSpell} onDamage={damage}/> : <div className="rr-loading-world"><div className="rr-loading-glow"/><Rose/><p>{worldError ? 'No se pudo cargar el reino.' : 'Un reino está a punto de despertar…'}</p>{worldError && <button className="rr-primary" onClick={() => window.location.reload()}>Volver a cargar</button>}</div>}
+      {World ? <World state={state} paused={!started || Boolean(panel) || Boolean(talkingId) || victory || Boolean(confirm) || listenAt !== undefined} intro={intro} spell={spell} onInteract={interact} onCollect={collect} onCast={cast} onCheckpoint={checkpoint} onIntroEnd={finishIntro} onEndingEnd={() => setEndingReady(true)} onPosition={setPosition} onSelectSpell={selectSpell} onDamage={damage}/> : <div className="rr-loading-world"><div className="rr-loading-glow"/><Rose/><p>{worldError ? 'No se pudo cargar el reino.' : 'Un reino está a punto de despertar…'}</p>{worldError && <button className="rr-primary" onClick={() => window.location.reload()}>Volver a cargar</button>}</div>}
     </WorldBoundary>
     <div className="rr-vignette" aria-hidden="true"/>
 
@@ -506,6 +512,7 @@ export default function ReinoGame() {
         <p className="rr-title-tagline">El reino duerme.<br/>Cada conversación lo despierta.</p>
         {profile && <div className="rr-profile-chip"><Icon name="users"/><div><span className="rr-eyebrow">ALUMNO ACTIVO</span><strong>{profile.name}</strong><small>{profile.level} · {profileSummary(profile).chapter}</small></div><button type="button" onClick={() => openPanel('students')}>Cambiar</button></div>}
         <div className="rr-menu-level"><label htmlFor="rr-start-level">{profile ? `NIVEL DE ${profile.name.toUpperCase()}` : 'NIVEL DE ESPAÑOL'}</label><div className="rr-level-options" role="group" aria-label="Nivel de español">{LEVELS.map(level => <button key={level} aria-pressed={(profile?.level ?? newLevel) === level} onClick={() => changeLevel(level)}>{level}</button>)}</div><span>{LEVEL_LABELS[profile?.level ?? newLevel]}</span></div>
+        <ModeSwitch mode={mode} onChange={setMode} className="rr-mode" />
         <div className="rr-start-actions rr-menu-actions">
           {profile?.started && <button className="rr-primary" disabled={!ready || !World} onClick={() => continueProfile(profile.id)}>Continuar aventura <Icon name="arrow"/></button>}
           <button className={profile?.started ? 'rr-secondary' : 'rr-primary'} disabled={!ready || !World} onClick={() => { setNewLevel(profile?.level ?? newLevel); openPanel('new'); }}>Nueva aventura{!profile?.started && <Icon name="arrow"/>}</button>
@@ -517,16 +524,18 @@ export default function ReinoGame() {
       <footer className="rr-menu-footer"><span>CONVERSACIÓN EN ESPAÑOL · A0–C2</span><button onClick={() => openPanel('help')}>Cómo funciona <Icon name="help"/></button></footer>
     </div>}
 
+    {listenAt !== undefined && <ListeningCard game="reino" level={state.level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} />}
     {intro && <div className="rr-intro"><div className="rr-letterbox rr-letterbox-top"/><div className="rr-intro-title"><span>HACE CIEN AÑOS, EL TIEMPO SE DETUVO.</span><h2>Valdoria</h2><p>«Por fin llega alguien al camino.<br/>El reino te estaba esperando.»</p><small>NOX, EL CUERVO DEL CAMINO</small></div><button className="rr-skip" onClick={finishIntro}>Omitir introducción <kbd>Esc</kbd></button><div className="rr-letterbox rr-letterbox-bottom"/></div>}
 
     {showHud && <>
       <header className="rr-hud-top"><Link href="/" className="rr-brand" aria-label="Volver a SpanishCue"><Rose/><span>SPANISHCUE<small>{profile ? profile.name.toUpperCase() : 'VALDORIA'}</small></span></Link><div className="rr-compass" aria-hidden="true"><span>O</span><i/><span>N</span><i/><span>E</span><b>◆</b></div><div className="rr-hud-actions"><label className="rr-hud-level"><span>NIVEL</span><select value={state.level} onChange={event => changeLevel(event.target.value)} aria-label="Nivel de español">{LEVELS.map(level => <option key={level}>{level}</option>)}</select></label><button className={`rr-icon-button ${!music ? 'rr-muted' : ''}`} aria-label={music ? 'Silenciar música' : 'Activar música'} aria-pressed={music} onClick={() => { audio.current?.start(); setMusic(value => !value); }}><Icon name="music"/></button><label className="rr-volume rr-hud-volume"><span>Volumen de la música</span><input type="range" min="0" max="100" step="5" value={Math.round(volume * 100)} onChange={event => { audio.current?.start(); const next = Number(event.target.value) / 100; setVolume(next); if (next > 0) setMusic(true); }} aria-label="Volumen de la música"/></label><button className={`rr-icon-button ${!effects ? 'rr-muted' : ''}`} aria-label={effects ? 'Silenciar efectos' : 'Activar efectos'} aria-pressed={effects} onClick={() => { audio.current?.start(); setEffects(value => !value); }}><Icon name="sound"/></button><button className="rr-icon-button" aria-label="Pausa" onClick={() => openPanel('pause')}><Icon name="pause"/></button></div></header>
+      {mode === 'escucha' && !talkingId && !panel && listenAt === undefined && <ListeningBadge game="reino" done={heard} onList={() => setListenAt(null)} />}
       {!talkingId && !panel && <>
         <button className="rr-objective" onClick={() => setGuide(value => !value)} aria-expanded={guide} aria-label="Ver qué hacer ahora"><span className="rr-objective-marker">◇</span><div><span className="rr-eyebrow">{state.flags.victory ? 'EL REINO HA DESPERTADO' : `CAPÍTULO ${String(Math.min(state.completed.length + 1, QUESTS.length)).padStart(2,'0')} · PRÓXIMO OBJETIVO`}</span><h2>{quest.title}</h2><p>{quest.objective}</p>{route && <span className="rr-route"><b>✦</b> {route}</span>}{guide ? <span className="rr-guide">{guideText}</span> : <span className="rr-guide-cta">¿Qué hago ahora? Toca aquí</span>}</div></button>
         <button className="rr-minimap" aria-label="Abrir mapa del reino" onClick={() => openPanel('map')}><KingdomMap position={position} target={quest.target ?? ''}/><span>VALDORIA <kbd>M</kbd></span></button>
         <div className="rr-controls-brief"><span><kbd>W A S D</kbd> Correr</span><span><kbd>⇧</kbd> Más rápido</span><span><kbd>N</kbd> Nitro</span><span><kbd>Espacio</kbd> Saltar</span><span>Arrastra · Cámara</span><button onClick={() => openPanel('help')} aria-label="Ver todos los controles">?</button></div>
       </>}
-      <footer className="rr-hud-bottom"><nav className="rr-bottom-nav" aria-label="Herramientas de la aventura"><button onClick={() => openPanel('journal')} aria-label="Diario de misiones"><Icon name="book"/><span>Diario</span><kbd>J</kbd></button><button onClick={() => openPanel('inventory')} aria-label="Abrir inventario"><Icon name="bag"/><span>Inventario</span><kbd>I</kbd></button><button onClick={() => openPanel('map')} aria-label="Mapa del reino"><Icon name="map"/><span>Mapa</span><kbd>M</kbd></button></nav><div className="rr-spellbar" role="group" aria-label="Hechizos">{SPELLS.map((item,index) => { const unlocked = state.spells.includes(item.id); return <button key={item.id} className={`rr-spell ${spell === item.id && unlocked ? 'rr-spell-selected' : ''} ${!unlocked ? 'rr-spell-locked' : ''}`} style={{ '--spell-color': item.color } as CSSProperties} aria-label={`${item.name}${unlocked ? ': seleccionar' : ': aún no aprendido'}`} aria-pressed={spell === item.id && unlocked} onClick={() => selectSpell(item.id)}><kbd>{index + 1}</kbd><span>{SPELL_GLYPHS[item.id] ?? '✧'}</span><small>{unlocked ? item.name : 'Por descubrir'}</small></button>; })}<span className="rr-cast-hint"><kbd>R</kbd> Lanzar</span></div><span className={`rr-save-status ${saveFailed ? 'rr-save-warning' : ''}`}><i/>{saveFailed ? 'Guardado no disponible' : profile ? `Guardado · ${profile.name}` : 'Guardado automático'}</span></footer>
+      <footer className="rr-hud-bottom"><nav className="rr-bottom-nav" aria-label="Herramientas de la aventura"><button onClick={() => setMode(mode === 'escucha' ? 'conversacion' : 'escucha')} aria-pressed={mode === 'escucha'} aria-label="Comprensión auditiva"><Icon name="book"/><span>{mode === 'escucha' ? 'Escucha: sí' : 'Escucha'}</span></button><button onClick={() => openPanel('journal')} aria-label="Diario de misiones"><Icon name="book"/><span>Diario</span><kbd>J</kbd></button><button onClick={() => openPanel('inventory')} aria-label="Abrir inventario"><Icon name="bag"/><span>Inventario</span><kbd>I</kbd></button><button onClick={() => openPanel('map')} aria-label="Mapa del reino"><Icon name="map"/><span>Mapa</span><kbd>M</kbd></button></nav><div className="rr-spellbar" role="group" aria-label="Hechizos">{SPELLS.map((item,index) => { const unlocked = state.spells.includes(item.id); return <button key={item.id} className={`rr-spell ${spell === item.id && unlocked ? 'rr-spell-selected' : ''} ${!unlocked ? 'rr-spell-locked' : ''}`} style={{ '--spell-color': item.color } as CSSProperties} aria-label={`${item.name}${unlocked ? ': seleccionar' : ': aún no aprendido'}`} aria-pressed={spell === item.id && unlocked} onClick={() => selectSpell(item.id)}><kbd>{index + 1}</kbd><span>{SPELL_GLYPHS[item.id] ?? '✧'}</span><small>{unlocked ? item.name : 'Por descubrir'}</small></button>; })}<span className="rr-cast-hint"><kbd>R</kbd> Lanzar</span></div><span className={`rr-save-status ${saveFailed ? 'rr-save-warning' : ''}`}><i/>{saveFailed ? 'Guardado no disponible' : profile ? `Guardado · ${profile.name}` : 'Guardado automático'}</span></footer>
     </>}
 
     {toast && started && !intro && !ending && !victory && <div className="rr-toast" role="status"><span>✧</span>{toast}</div>}

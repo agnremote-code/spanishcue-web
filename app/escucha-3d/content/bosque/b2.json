@@ -1,0 +1,304 @@
+{
+  "game": "bosque",
+  "level": "B2",
+  "items": [
+    {
+      "id": "sobre-ti",
+      "title": "Diario de sendero: el primer episodio",
+      "place": "Claro de la entrada",
+      "context": "Al pie de la subida, dos presentadores graban el primer episodio de su pódcast sentados en un tocón gigante.",
+      "speakers": [
+        { "name": "Lucía", "country": "España", "voice": "es-ES-ElviraNeural" },
+        { "name": "Andrés", "country": "Colombia", "voice": "es-CO-GonzaloNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bueno, ya estamos grabando. Hola a todos, esto es «Diario de sendero», y hoy grabamos desde el claro de la entrada del bosque, sentados en un tocón enorme." },
+        { "s": 1, "text": "Que, por cierto, está húmedo. Pero bueno, empecemos por lo básico: ¿quiénes somos? Yo soy Andrés, soy de Medellín y hasta hace dos años trabajaba en un banco." },
+        { "s": 0, "text": "Y yo soy Lucía. Yo era abogada en Madrid. Y la gente siempre nos pregunta lo mismo: ¿por qué lo dejaron todo para venir a hablar de hongos?" },
+        { "s": 1, "text": "La respuesta corta es que nos aburríamos. La larga es más interesante." },
+        { "s": 0, "text": "A ver, en mi caso todo empezó con una excursión. Un guía nos explicó que lo que vemos de un hongo es solo una parte pequeña, que debajo de la tierra hay una red enorme que conecta los árboles. Y pensé: si yo hubiera sabido esto con quince años, habría estudiado biología." },
+        { "s": 1, "text": "Ya, pero no te cambiaste de carrera." },
+        { "s": 0, "text": "No, porque me daba miedo empezar de cero. Por eso hacemos este pódcast: para que nadie espere tanto como yo." },
+        { "s": 1, "text": "Bueno, y para que nos inviten a bosques gratis, no nos engañemos." },
+        { "s": 0, "text": "Eso también, no te voy a mentir." }
+      ],
+      "choice": [
+        { "q": "¿Qué escuchamos en este audio?", "options": ["El comienzo de un pódcast sobre hongos", "Un anuncio de una excursión guiada", "Una entrevista de trabajo en un banco"], "answer": 0 },
+        { "q": "¿A qué se dedicaban antes Lucía y Andrés?", "options": ["Ella era guía y él, biólogo", "Ella era abogada y él trabajaba en un banco", "Los dos eran profesores en Madrid"], "answer": 1 },
+        { "q": "¿Qué descubrió Lucía en aquella excursión?", "options": ["Que algunos hongos son peligrosos para los árboles", "Que los guías del bosque ganan muy poco", "Que bajo tierra hay una red que conecta los árboles"], "answer": 2 },
+        { "q": "¿Qué se entiende del final de la conversación?", "options": ["Que también hacen el pódcast por los viajes gratis", "Que Lucía se enfada con el comentario de Andrés", "Que el pódcast ya no les interesa"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Dejarías tu trabajo o tus estudios para dedicarte a algo que te apasiona? ¿Por qué?", "model": "Si tuviera algo de dinero ahorrado, probablemente lo haría, pero primero lo probaría como afición durante un año." },
+        { "q": "¿Hay algo que, si lo hubieras sabido antes, habría cambiado tu vida?", "model": "Si hubiera sabido lo mucho que me gusta enseñar, habría estudiado para ser profesora mucho antes." },
+        { "q": "¿Qué tema elegirías para tu propio pódcast y dónde lo grabarías?", "model": "Haría un pódcast sobre cocina de mi abuela y lo grabaría en su cocina, con ella hablando también." }
+      ],
+      "gaps": "Y pensé: si yo hubiera [sabido] esto con [quince años], habría [estudiado] [biología].",
+      "glossary": [
+        { "word": "tocón", "meaning": "la parte del tronco que queda en el suelo cuando se corta un árbol" },
+        { "word": "dejaron todo", "meaning": "abandonaron su vida anterior: trabajo, ciudad, costumbres" },
+        { "word": "empezar de cero", "meaning": "comenzar algo nuevo sin experiencia previa" },
+        { "word": "no nos engañemos", "meaning": "seamos sinceros, digamos la verdad" }
+      ]
+    },
+    {
+      "id": "vida-real",
+      "title": "Cuatro kilos en una cesta abandonada",
+      "place": "La cesta olvidada",
+      "context": "Entre las setas bajas, un guardabosques encuentra una cesta llena y llama por teléfono a su compañera de la oficina.",
+      "speakers": [
+        { "name": "Rodrigo", "country": "Chile", "voice": "es-CL-LorenzoNeural" },
+        { "name": "Paula", "country": "México", "voice": "es-MX-DaliaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Paula, ¿me escuchas? Estoy en la parada de la cesta, junto a las setas bajas." },
+        { "s": 1, "text": "Te escucho regular. ¿Qué pasa?" },
+        { "s": 0, "text": "Que hay una cesta abandonada, llena hasta arriba. Calculo que tiene unos cuatro kilos de setas." },
+        { "s": 1, "text": "¿Cuatro? Si el límite es de dos kilos por persona y por día. ¿Tiene nombre, algo?" },
+        { "s": 0, "text": "Tiene una etiqueta de un hotel rural del pueblo. Y aquí está lo complicado: si la dejo, alguien se la lleva; si me la llevo, a lo mejor el dueño vuelve y piensa que se la robaron." },
+        { "s": 1, "text": "Mira, lo más probable es que la hayan escondido al verte llegar. Pasa mucho." },
+        { "s": 0, "text": "Puede ser. Pero no quiero multar a nadie sin pruebas. A lo mejor eran varias personas y entonces no superaban el límite." },
+        { "s": 1, "text": "Bueno, haz una cosa: saca fotos, deja una nota con el teléfono de la oficina y llévate la cesta. Que venga el dueño a buscarla y que nos lo explique." },
+        { "s": 0, "text": "¿Y las setas? Si esperamos hasta mañana, se estropean." },
+        { "s": 1, "text": "Pues las pesamos hoy y mañana las devolvemos al bosque. No es lo ideal, pero es lo justo." },
+        { "s": 0, "text": "Vale. Aunque, entre tú y yo, el del hotel me va a odiar." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el problema principal de la llamada?", "options": ["Rodrigo se ha perdido entre las setas bajas", "Qué hacer con una cesta con demasiadas setas", "Un cliente del hotel se ha intoxicado"], "answer": 1 },
+        { "q": "¿Qué pista hay sobre el dueño de la cesta?", "options": ["Una nota con un número de teléfono", "Un nombre escrito en el asa", "Una etiqueta de un hotel rural"], "answer": 2 },
+        { "q": "¿Por qué Rodrigo no quiere poner una multa todavía?", "options": ["Porque quizá la cesta era de varias personas", "Porque el dueño es amigo suyo", "Porque las setas no son de una especie protegida"], "answer": 0 },
+        { "q": "¿Qué deciden hacer con las setas?", "options": ["Venderlas al hotel del pueblo", "Pesarlas y devolverlas al bosque", "Dejarlas en la cesta hasta que vuelva el dueño"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Si fueras Rodrigo, ¿multarías al dueño de la cesta? ¿Por qué?", "model": "Yo no lo multaría la primera vez, pero le explicaría las normas y lo apuntaría por si vuelve a pasar." },
+        { "q": "¿Crees que deberían existir límites para recoger cosas en la naturaleza, como setas o flores?", "model": "Sí, porque si cada persona se lleva lo que quiere, en unos años no quedaría nada para nadie." },
+        { "q": "¿Alguna vez has tenido que decidir algo sin tener toda la información?", "model": "Sí, una vez tuve que aceptar un trabajo sin saber el sueldo exacto, y al final salió bien, aunque fue un riesgo." }
+      ],
+      "gaps": "Y aquí está lo complicado: si la [dejo], alguien se la lleva; si me la [llevo], a lo mejor el [dueño] vuelve y piensa que se la [robaron].",
+      "glossary": [
+        { "word": "hasta arriba", "meaning": "completamente lleno" },
+        { "word": "multar", "meaning": "obligar a alguien a pagar dinero por no cumplir una norma" },
+        { "word": "se estropean", "meaning": "se ponen malas y ya no sirven" },
+        { "word": "entre tú y yo", "meaning": "en confianza, sin que lo sepan otros" }
+      ]
+    },
+    {
+      "id": "elige",
+      "title": "La pasarela o el sendero viejo",
+      "place": "Setas doradas",
+      "context": "Una guía deja un mensaje de voz a una pareja de turistas: tienen que elegir por dónde subirán mañana hasta las setas doradas.",
+      "speakers": [
+        { "name": "Camila", "country": "Perú", "voice": "es-PE-CamilaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Martín y Sara, soy Camila, la guía de mañana. Les dejo este audio porque necesito que elijan ruta antes de las ocho de la noche, que tengo que confirmar los permisos." },
+        { "s": 0, "text": "Opción uno: la pasarela de madera. Es cómoda, llega directamente a las setas doradas y no hace falta experiencia. El problema es que los fines de semana pasan por ahí más de trescientas personas, así que no esperen silencio." },
+        { "s": 0, "text": "Opción dos: el sendero viejo. Solo dejan entrar a doce personas al día, va por debajo de los sombreros y hay que trepar un poco. Es más lento, pero ahí ven las setas como crecen de verdad, sin barandillas. Eso sí, es un poco más caro, porque el parque cobra un permiso especial, y ese dinero se usa para recuperar el suelo." },
+        { "s": 0, "text": "Yo, sinceramente, si les gusta caminar, les recomendaría el sendero. Pero si Sara todavía tiene molestias en la rodilla, como me contaron, mejor la pasarela; no quiero que el paseo se convierta en un sufrimiento." },
+        { "s": 0, "text": "Respóndanme con un uno o un dos y listo. ¡Hasta mañana!" }
+      ],
+      "choice": [
+        { "q": "¿Para qué deja Camila este mensaje?", "options": ["Para cancelar la excursión de mañana", "Para cambiar la hora de salida", "Para que la pareja elija una ruta"], "answer": 2 },
+        { "q": "¿Cuál es el inconveniente de la pasarela?", "options": ["Que pasa mucha gente y hay ruido", "Que es peligrosa para principiantes", "Que no llega hasta las setas doradas"], "answer": 0 },
+        { "q": "¿Por qué el sendero viejo cuesta más?", "options": ["Porque incluye comida y transporte", "Porque se paga un permiso que sirve para recuperar el suelo", "Porque la guía cobra más por trepar"], "answer": 1 },
+        { "q": "¿En qué caso recomienda Camila la pasarela?", "options": ["Si la pareja quiere hacer fotos", "Si llueve durante la noche", "Si a Sara todavía le duele la rodilla"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Qué ruta elegirías tú y por qué?", "model": "Yo elegiría el sendero viejo, aunque sea más caro, porque prefiero la naturaleza sin tanta gente." },
+        { "q": "¿Te parece bien que algunos lugares naturales limiten el número de visitantes?", "model": "Me parece bien, siempre que el precio no sea tan alto que solo puedan ir las personas con dinero." },
+        { "q": "¿Pagarías más por una actividad si supieras que el dinero ayuda a proteger el lugar?", "model": "Sí, pagaría un poco más, pero me gustaría ver en qué se gasta exactamente ese dinero." }
+      ],
+      "gaps": "Solo dejan entrar a [doce personas] al día, va por debajo de los [sombreros] y hay que [trepar] un poco. Es más [lento], pero ahí ven las setas como crecen de verdad, sin barandillas.",
+      "glossary": [
+        { "word": "pasarela", "meaning": "camino estrecho de madera o metal construido para caminar sobre algo" },
+        { "word": "trepar", "meaning": "subir usando también las manos" },
+        { "word": "barandillas", "meaning": "barras a los lados de un camino o escalera para no caerse" },
+        { "word": "molestias", "meaning": "un dolor suave o incómodo" }
+      ]
+    },
+    {
+      "id": "opinion",
+      "title": "Radio Bosque debate sobre las gemelas",
+      "place": "Las setas gemelas",
+      "context": "La radio del bosque emite en directo desde las setas gemelas, donde hubo dos intoxicaciones la semana pasada.",
+      "speakers": [
+        { "name": "Valentina", "country": "Uruguay", "voice": "es-UY-ValentinaNeural" },
+        { "name": "Ernesto", "country": "Cuba", "voice": "es-CU-ManuelNeural" },
+        { "name": "Rosa", "country": "Costa Rica", "voice": "es-CR-MariaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas tardes, esto es Radio Bosque y hoy estamos en la parada de las setas gemelas, donde la semana pasada dos excursionistas acabaron en el hospital. Ernesto, usted es micólogo. ¿Hay que prohibir la recolección aquí?" },
+        { "s": 1, "text": "Yo no hablaría de prohibir, pero sí de cerrar esta zona durante la temporada. Las dos especies son casi idénticas. La única diferencia es un anillo debajo del sombrero que, con lluvia, prácticamente desaparece." },
+        { "s": 2, "text": "Con todo el respeto, eso es castigar a todo el pueblo por dos turistas imprudentes. Mi abuela recogía aquí y nunca se intoxicó nadie en mi familia." },
+        { "s": 1, "text": "Me alegro, pero que su familia haya tenido suerte no significa que sea seguro." },
+        { "s": 2, "text": "No es suerte, es conocimiento. Lo que hace falta es que la gente aprenda, no que le pongan una valla." },
+        { "s": 0, "text": "¿Y si se exigiera un curso para poder recoger?" },
+        { "s": 1, "text": "Me parecería razonable, siempre que lo den especialistas." },
+        { "s": 2, "text": "Y siempre que no sea otra excusa para cobrarnos, a mí también me parece bien." },
+        { "s": 0, "text": "Bueno, parece que, por una vez, hay un pequeño acuerdo." }
+      ],
+      "choice": [
+        { "q": "¿Sobre qué tema debaten?", "options": ["Si se debe limitar la recolección de setas en esa zona", "Cómo cocinar las setas gemelas", "Cuántos turistas pueden visitar el hospital"], "answer": 0 },
+        { "q": "Según Ernesto, ¿por qué es difícil distinguir las dos especies?", "options": ["Porque cambian de color con el sol", "Porque la diferencia, un anillo, casi desaparece con la lluvia", "Porque una crece solo de noche"], "answer": 1 },
+        { "q": "¿Qué argumento usa Rosa contra el cierre?", "options": ["Que las setas son muy caras en el mercado", "Que los micólogos no conocen el bosque", "Que el conocimiento local es más útil que una valla"], "answer": 2 },
+        { "q": "¿Qué condición pone Rosa para aceptar el curso?", "options": ["Que lo den personas del pueblo", "Que no sirva solo para cobrar dinero a los vecinos", "Que sea voluntario"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Estás más de acuerdo con Ernesto o con Rosa? ¿Por qué?", "model": "Estoy más de acuerdo con Rosa, aunque entiendo a Ernesto: creo que es mejor enseñar que prohibir." },
+        { "q": "¿Confías más en el conocimiento tradicional o en el de los expertos? Da un ejemplo.", "model": "Depende. Para la cocina confío en mi abuela, pero para la salud prefiero lo que dicen los médicos." },
+        { "q": "¿Qué actividad crees que debería exigir un curso obligatorio?", "model": "Creo que tener un perro debería exigir un curso, porque mucha gente no sabe cuidarlo." }
+      ],
+      "gaps": "No es [suerte], es [conocimiento]. Lo que hace falta es que la gente [aprenda], no que le pongan una [valla].",
+      "glossary": [
+        { "word": "micólogo", "meaning": "científico que estudia los hongos" },
+        { "word": "temporada", "meaning": "la época del año en que pasa algo, por ejemplo cuando salen las setas" },
+        { "word": "imprudentes", "meaning": "personas que no tienen cuidado y se ponen en peligro" },
+        { "word": "valla", "meaning": "barrera que impide pasar a un lugar" }
+      ]
+    },
+    {
+      "id": "recuerdos",
+      "title": "El ermitaño que se encadenó a un hongo",
+      "place": "El sombrero gigante",
+      "context": "Un equipo de documental entrevista al ermitaño que vive desde hace décadas sobre el sombrero gigante.",
+      "speakers": [
+        { "name": "Sofía", "country": "Argentina", "voice": "es-AR-ElenaNeural" },
+        { "name": "Don Aurelio", "country": "Paraguay", "voice": "es-PY-MarioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Don Aurelio, gracias por recibirnos aquí arriba. ¿Cuántos años lleva viviendo en el bosque?" },
+        { "s": 1, "text": "Cuarenta y tres. Llegué cuando nadie subía hasta el sombrero gigante. Había que trepar con cuerdas, no había ni un cartel." },
+        { "s": 0, "text": "¿Y cómo era el bosque entonces?" },
+        { "s": 1, "text": "Más oscuro, más callado. Recuerdo que por las noches se oían crecer los hongos. Bueno, eso decía la gente; yo creo que eran ratones." },
+        { "s": 0, "text": "¿Echa de menos aquella época?" },
+        { "s": 1, "text": "A veces. Cuando construyeron las escaleras me enfadé muchísimo. Mandé cartas al ayuntamiento, hasta me encadené a un hongo un fin de semana entero. Pero después vino una niña en silla de ruedas con su padre, y la vi llorar al ver el bosque desde aquí. Y pensé que quizás yo había sido un poco egoísta." },
+        { "s": 0, "text": "Entonces, ¿ya no está en contra del turismo?" },
+        { "s": 1, "text": "Estoy en contra de los que gritan y dejan basura. De los que miran en silencio, no." }
+      ],
+      "choice": [
+        { "q": "¿De qué habla principalmente Don Aurelio?", "options": ["De cómo ha cambiado el bosque y su opinión sobre los visitantes", "De su familia y su infancia en la ciudad", "De los mejores hongos para comer"], "answer": 0 },
+        { "q": "¿Cómo se subía al sombrero gigante cuando él llegó?", "options": ["Por unas escaleras de madera", "Con cuerdas, trepando", "En un ascensor del parque"], "answer": 1 },
+        { "q": "¿Qué explicación da él a los ruidos de la noche?", "options": ["Que eran los hongos al crecer", "Que era el viento entre los árboles", "Que probablemente eran ratones"], "answer": 2 },
+        { "q": "¿Qué le hizo cambiar de opinión sobre las escaleras?", "options": ["Ver la emoción de una niña en silla de ruedas", "Una carta del ayuntamiento", "El dinero que dejan los turistas"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez cambiaste de opinión al ver algo con tus propios ojos?", "model": "Sí, yo pensaba que los videojuegos eran una pérdida de tiempo, pero vi a mi sobrino aprender inglés jugando." },
+        { "q": "¿Crees que todos los lugares naturales deberían ser accesibles para personas con discapacidad?", "model": "Creo que sí, siempre que se haga con cuidado y sin destruir lo que hace especial el lugar." },
+        { "q": "¿Qué lugar de tu infancia ha cambiado mucho? ¿Lo echas de menos como era?", "model": "La playa de mi pueblo ahora tiene muchos hoteles. Echo de menos la tranquilidad, pero hay más trabajo." }
+      ],
+      "gaps": "Pero después vino una [niña] en [silla de ruedas] con su padre, y la vi [llorar] al ver el bosque desde aquí. Y pensé que quizás yo había sido un poco [egoísta].",
+      "glossary": [
+        { "word": "callado", "meaning": "silencioso, sin ruido" },
+        { "word": "echa de menos", "meaning": "siente tristeza porque algo ya no está" },
+        { "word": "me encadené", "meaning": "me até con cadenas para protestar e impedir algo" },
+        { "word": "egoísta", "meaning": "que piensa solo en sí mismo" }
+      ]
+    },
+    {
+      "id": "futuro",
+      "title": "El roble que bebe de las nubes",
+      "place": "La copa del roble",
+      "context": "En lo alto del gran roble, una ecóloga explica a un grupo de visitantes qué puede pasarle a este bosque en las próximas décadas.",
+      "speakers": [
+        { "name": "Karla", "country": "Honduras", "voice": "es-HN-KarlaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bueno, acérquense un poco, que aquí en la copa sopla el viento. Este roble tiene unos cuatrocientos años, y los hongos de repisa que ven en el tronco no lo están matando, aunque mucha gente lo piense. En realidad, se alimentan de la madera muerta y ayudan a reciclarla." },
+        { "s": 0, "text": "El problema es otro. Según nuestras mediciones, si las temperaturas siguen subiendo al ritmo actual, dentro de treinta años esta zona tendrá la mitad de niebla que ahora. Y la niebla es el agua de este bosque: aquí casi no llueve, los árboles beben de las nubes." },
+        { "s": 0, "text": "Hay quien propone regar con sistemas artificiales. Yo no lo tengo tan claro: sería carísimo y, además, no sabemos cómo reaccionaría el suelo. Lo que sí funciona es plantar especies jóvenes más abajo, para que el bosque pueda ir desplazándose poco a poco." },
+        { "s": 0, "text": "Así que, cuando lean en el cartel que una parte de su billete sirve para plantar árboles, no piensen que es publicidad: es, literalmente, el futuro de esta copa." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el tema principal de la explicación?", "options": ["La historia del roble y de quién lo plantó", "Cómo el cambio de temperatura puede afectar al bosque", "Por qué los hongos de repisa son peligrosos"], "answer": 1 },
+        { "q": "¿Qué dice Karla de los hongos de repisa?", "options": ["Que no matan al roble, sino que reciclan madera muerta", "Que hay que quitarlos cuanto antes", "Que solo crecen en árboles jóvenes"], "answer": 0 },
+        { "q": "¿Qué podría pasar dentro de treinta años?", "options": ["Que llueva el doble que ahora", "Que se cierre el bosque a los turistas", "Que haya la mitad de niebla"], "answer": 2 },
+        { "q": "¿Qué opina Karla del riego artificial?", "options": ["Que es la mejor solución", "Que tiene dudas porque es caro y arriesgado", "Que ya se usa con éxito en el parque"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué cambios has notado en el clima de tu ciudad en los últimos años?", "model": "Los veranos son mucho más largos y calurosos, y casi ya no nieva en invierno como cuando era niño." },
+        { "q": "Si pudieras proteger un solo lugar natural del mundo, ¿cuál sería y por qué?", "model": "Protegería la selva amazónica, porque de ella depende el clima de medio planeta." },
+        { "q": "¿Te parece bien que una parte del precio de las entradas se use para proteger el lugar?", "model": "Me parece muy bien, siempre que se explique con claridad cuánto dinero se usa y para qué." }
+      ],
+      "gaps": "Y la [niebla] es el agua de este bosque: aquí casi no [llueve], los árboles [beben] de las [nubes].",
+      "glossary": [
+        { "word": "copa", "meaning": "la parte más alta de un árbol, con las ramas y las hojas" },
+        { "word": "mediciones", "meaning": "datos que se obtienen al medir algo" },
+        { "word": "regar", "meaning": "dar agua a las plantas" },
+        { "word": "desplazándose", "meaning": "moviéndose de un lugar a otro" }
+      ]
+    },
+    {
+      "id": "compara",
+      "title": "La aplicación contra la visita nocturna",
+      "place": "La gruta luminosa",
+      "context": "A la entrada de la gruta luminosa, una pareja de viajeros compara dos maneras de visitarla.",
+      "speakers": [
+        { "name": "Daniela", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Mauricio", "country": "Ecuador", "voice": "es-EC-LuisNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Entonces, ¿qué hacemos? ¿La visita nocturna con guía o vamos solos con la aplicación?" },
+        { "s": 1, "text": "Hombre, la aplicación cuesta cinco y la visita veinticinco. Para mí no hay mucho que pensar." },
+        { "s": 0, "text": "Ya, pero lee las condiciones: con la aplicación solo se puede entrar de día, y de día los hongos casi no brillan." },
+        { "s": 1, "text": "¿En serio? Entonces, ¿para qué la venden?" },
+        { "s": 0, "text": "Supongo que para quien solo quiere hacerse la foto en la entrada. Y otra cosa: en la visita no se permite usar el flash, porque dicen que la luz fuerte afecta a los hongos." },
+        { "s": 1, "text": "Bueno, eso lo podríamos respetar nosotros también." },
+        { "s": 0, "text": "Nosotros sí, pero la mitad de la gente que entra sola no. Por eso hay menos hongos brillantes que hace cinco años; lo pone en el folleto." },
+        { "s": 1, "text": "Vale, me has convencido a medias. Si la visita fuera más corta, no lo dudaría, pero dos horas a oscuras..." },
+        { "s": 0, "text": "Te prometo que se pasan volando. Y si te aburres, te invito a cenar." },
+        { "s": 1, "text": "Trato hecho. Pero el restaurante lo escojo yo." }
+      ],
+      "choice": [
+        { "q": "¿Qué están decidiendo Daniela y Mauricio?", "options": ["Dónde cenar después de la visita", "Si comprar un folleto o no", "Cómo visitar la gruta luminosa"], "answer": 2 },
+        { "q": "¿Por qué Mauricio prefiere al principio la aplicación?", "options": ["Porque es mucho más barata", "Porque no le gustan los guías", "Porque se puede usar de noche"], "answer": 0 },
+        { "q": "¿Qué problema tiene la aplicación, según Daniela?", "options": ["No funciona dentro de la gruta", "Solo permite entrar de día, cuando los hongos casi no brillan", "Está en otro idioma"], "answer": 1 },
+        { "q": "¿Qué duda le queda a Mauricio al final?", "options": ["Que la visita es demasiado cara", "Que no va a poder hacer fotos", "Que dos horas a oscuras se le hagan largas"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "Cuando visitas un museo o un lugar turístico, ¿prefieres ir con guía o por tu cuenta? ¿Por qué?", "model": "Prefiero ir con guía la primera vez, porque te cuentan detalles que tú solo nunca descubrirías." },
+        { "q": "¿Crees que hacer fotos en lugares naturales puede ser un problema?", "model": "A veces sí, porque la gente se sale del camino o molesta a los animales solo por una buena foto." },
+        { "q": "¿Pagarías cinco veces más por una experiencia mejor? Pon un ejemplo.", "model": "Sí, pagaría más por un concierto en primera fila, porque es algo que recuerdas toda la vida." }
+      ],
+      "gaps": "Ya, pero lee las [condiciones]: con la aplicación solo se puede entrar [de día], y de día los [hongos] casi no [brillan].",
+      "glossary": [
+        { "word": "folleto", "meaning": "papel pequeño con información sobre un lugar o un producto" },
+        { "word": "a medias", "meaning": "no del todo, solo en parte" },
+        { "word": "se pasan volando", "meaning": "pasan muy rápido" },
+        { "word": "trato hecho", "meaning": "de acuerdo, acepto lo que propones" }
+      ]
+    },
+    {
+      "id": "cambia",
+      "title": "Ya no quiero cerrar la escalera",
+      "place": "La escalera de niebla",
+      "context": "Una científica del parque manda un mensaje de voz a su compañero desde la escalera de niebla, antes de una reunión importante.",
+      "speakers": [
+        { "name": "Teresa", "country": "Guinea Ecuatorial", "voice": "es-GQ-TeresaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Joaquín, soy Teresa. Te mando este audio desde la escalera de niebla, porque no quería esperar a la reunión del lunes. ¿Te acuerdas de que en marzo yo defendía cerrar la escalera completamente? Pues he cambiado de opinión, y te explico por qué." },
+        { "s": 0, "text": "Esta mañana he contado los escalones dañados: son solo cuatro de ciento veinte, mucho menos de lo que pensaba. Lo que de verdad estropea los hongos fantasma no es la gente que sube, sino la que se sale del camino para hacerse fotos." },
+        { "s": 0, "text": "Así que, en lugar de cerrar, propongo dos cosas: limitar el acceso a cincuenta personas por hora y poner una cuerda a los dos lados. Si cerráramos del todo, la gente acabaría subiendo por otros sitios, sin control, y sería peor." },
+        { "s": 0, "text": "Ya sé que te vas a reír, porque me he pasado meses diciendo lo contrario. Pero prefiero reconocer que me equivoqué antes que defender una idea que no funciona. Llámame cuando puedas." }
+      ],
+      "choice": [
+        { "q": "¿Por qué manda Teresa este mensaje?", "options": ["Para anunciar que ha cambiado de opinión sobre la escalera", "Para cancelar la reunión del lunes", "Para pedir ayuda porque se ha perdido en la niebla"], "answer": 0 },
+        { "q": "¿Qué descubrió Teresa esta mañana?", "options": ["Que la mitad de los escalones estaban rotos", "Que solo había cuatro escalones dañados", "Que nadie había subido en toda la semana"], "answer": 1 },
+        { "q": "Según ella, ¿qué daña de verdad los hongos fantasma?", "options": ["La humedad de la niebla", "El peso de los grupos grandes", "La gente que se sale del camino para hacer fotos"], "answer": 2 },
+        { "q": "¿Por qué cree que cerrar del todo sería peor?", "options": ["Porque el parque perdería mucho dinero", "Porque la gente subiría por otros sitios sin control", "Porque Joaquín no estaría de acuerdo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te cuesta reconocer que te has equivocado? Cuenta un ejemplo.", "model": "Me cuesta bastante. Una vez tuve una discusión con mi hermana por una dirección y al final ella tenía razón; tardé dos días en decírselo." },
+        { "q": "¿Qué es mejor para proteger un lugar: prohibir la entrada o controlarla?", "model": "Creo que controlarla, porque si prohíbes algo totalmente, siempre hay gente que busca la manera de entrar." },
+        { "q": "¿Has cambiado de opinión sobre algo importante en los últimos años?", "model": "Sí, antes pensaba que vivir en el campo era aburrido, pero después de la pandemia lo veo de otra manera." }
+      ],
+      "gaps": "Así que, en lugar de cerrar, propongo dos cosas: limitar el acceso a [cincuenta personas] por [hora] y poner una [cuerda] a los dos [lados].",
+      "glossary": [
+        { "word": "escalones", "meaning": "cada una de las partes de una escalera donde se pone el pie" },
+        { "word": "dañados", "meaning": "rotos o en mal estado" },
+        { "word": "acceso", "meaning": "la posibilidad de entrar en un lugar" },
+        { "word": "me equivoqué", "meaning": "no tenía razón, cometí un error" }
+      ]
+    }
+  ]
+}

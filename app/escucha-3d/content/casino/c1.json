@@ -1,0 +1,973 @@
+{
+  "game": "casino",
+  "level": "C1",
+  "items": [
+    {
+      "id": "portero",
+      "title": "Dieciocho minutos en la acera",
+      "place": "La entrada",
+      "context": "Primera noche de Valentina como directora de marketing del Gran Meridiano. Rocco, el portero, la aborda junto a la puerta giratoria.",
+      "speakers": [
+        {
+          "name": "Rocco",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Directora, ¿tiene un minuto? Bueno, dieciocho, que es lo que tarda el aparcacoches un viernes. Perdone la ironía, pero es que ya no sé cómo decirlo."
+        },
+        {
+          "s": 1,
+          "text": "Dímelo con datos, Rocco, que es lo único que me sirve delante del comité."
+        },
+        {
+          "s": 0,
+          "text": "Con datos: en la última encuesta, la llegada es la queja número uno, por delante incluso del precio de las copas. Y lo que más duele no es la espera, es que nadie salude por su nombre a los que vienen ocho veces al año."
+        },
+        {
+          "s": 1,
+          "text": "O sea, que los que esperan en la acera son precisamente nuestros mejores clientes."
+        },
+        {
+          "s": 0,
+          "text": "La mitad, por lo menos. Y esos, cuando se enfadan, no se quejan: se cruzan la calle y juegan en el resort de enfrente."
+        },
+        {
+          "s": 1,
+          "text": "Entonces no es un problema de aparcamiento, es un problema comercial. Si el sistema te avisara en cuanto un cliente de nivel alto entra en el estacionamiento, ¿podrías recibirlo tú?"
+        },
+        {
+          "s": 0,
+          "text": "Hace treinta años lo hacía de memoria, a base de propinas. Si ahora me lo susurra una tableta, mejor. Eso sí, no me pida que le sonría a una pantalla."
+        },
+        {
+          "s": 1,
+          "text": "Tranquilo. La pantalla es para ti; la sonrisa, para ellos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué problema plantea Rocco?",
+          "options": [
+            "La espera y el trato impersonal a la llegada",
+            "El precio de las copas en el bar",
+            "La falta de crupieres los viernes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según la encuesta, ¿qué queja queda por detrás de la llegada?",
+          "options": [
+            "La limpieza de las habitaciones",
+            "El precio de las copas",
+            "El ruido de las tragamonedas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacen los mejores clientes cuando se enfadan, según Rocco?",
+          "options": [
+            "Escriben una reseña negativa",
+            "Piden hablar con la directora",
+            "Se van a jugar al resort de enfrente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Valentina con su última frase?",
+          "options": [
+            "Que la tecnología debe ayudar a Rocco, no sustituir el trato humano",
+            "Que Rocco tiene que aprender a usar la tableta",
+            "Que van a instalar pantallas en la entrada"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué primera impresión te hace volver a un hotel, un restaurante o una tienda?",
+          "model": "Que me reconozcan. En mi cafetería de siempre me preparan el café antes de que lo pida, y por eso no me cambio aunque haya otras más baratas."
+        },
+        {
+          "q": "¿Crees que la tecnología mejora o empobrece la atención al cliente? Matiza tu respuesta.",
+          "model": "Depende de para qué se use: si libera al personal para que pueda atender mejor, la mejora; si lo sustituye, la empobrece, por eficiente que parezca."
+        },
+        {
+          "q": "¿Te parece justo que los mejores clientes reciban un trato preferente?",
+          "model": "En parte sí, porque es lógico premiar la fidelidad, pero me molestaría que al resto se nos tratara como clientes de segunda."
+        }
+      ],
+      "gaps": "Entonces no es un problema de [aparcamiento], es un problema [comercial]. Si el sistema te [avisara] en cuanto un cliente de [nivel alto] entra en el estacionamiento, ¿podrías recibirlo tú?",
+      "glossary": [
+        {
+          "word": "aparcacoches",
+          "meaning": "empleado que estaciona los coches de los clientes"
+        },
+        {
+          "word": "comité",
+          "meaning": "grupo de directivos que toma decisiones"
+        },
+        {
+          "word": "a base de",
+          "meaning": "usando principalmente, gracias a"
+        },
+        {
+          "word": "susurra",
+          "meaning": "dice algo en voz muy baja"
+        }
+      ]
+    },
+    {
+      "id": "ruleta",
+      "title": "El audio de Inés antes de la reunión",
+      "place": "Ruleta",
+      "context": "Mientras observa tres mesas de ruleta vacías un martes, Valentina escucha un mensaje de voz de Inés, la analista de Finanzas.",
+      "speakers": [
+        {
+          "name": "Inés",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Valentina, hola, soy Inés, de Finanzas. Te dejo un audio porque mañana a las nueve tienes la reunión con Operaciones y no quiero que te agarren desprevenida. Ellos van a pedir bajar el mínimo de la ruleta de los martes de veinticinco a diez dólares. Suena razonable, ¿no? Tres mesas vacías dan pena."
+        },
+        {
+          "s": 0,
+          "text": "Pero mira los números: el sábado, el cuarenta por ciento de los jugadores de ruleta son locales que también vienen entre semana. Si el martes les cobras diez, lo más probable es que dejen de venir el sábado a jugar a veinticinco. O sea, no ganamos clientes nuevos, solo abaratamos a los que ya tenemos."
+        },
+        {
+          "s": 0,
+          "text": "Lo que sí podría funcionar es una mesa a diez dólares solo para quien no haya jugado en los últimos noventa días, con la tarjeta del programa. Así medimos si de verdad atrae gente nueva o si es pura canibalización."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y una cosa más: Operaciones va a decir que lo de la tarjeta es complicarse la vida. Tú asiente, sonríe y pregúntales cuánto costaron las tres mesas vacías del mes pasado. Verás qué silencio. Un beso, hablamos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué deja Inés este audio?",
+          "options": [
+            "Para pedirle un aumento de sueldo",
+            "Para preparar a Valentina antes de una reunión",
+            "Para quejarse de los crupieres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué riesgo ve Inés en bajar el mínimo de los martes?",
+          "options": [
+            "Que los turistas se quejen del cambio",
+            "Que falten crupieres entre semana",
+            "Que los clientes locales del sábado pasen a jugar más barato el martes"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone Inés?",
+          "options": [
+            "Una mesa a diez dólares solo para quien lleve noventa días sin jugar",
+            "Cerrar las mesas de ruleta los martes",
+            "Subir el mínimo de los sábados"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué insinúa Inés con «Verás qué silencio»?",
+          "options": [
+            "Que la reunión va a ser aburrida",
+            "Que Operaciones no habrá calculado ese costo",
+            "Que Valentina no debería decir nada"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez una oferta te ha hecho cambiar de hábitos de compra? Explica cómo.",
+          "model": "Sí: empecé a hacer la compra los miércoles porque había descuentos, y el sábado ya no iba. Al supermercado no le hice ganar nada, simplemente me cambié de día."
+        },
+        {
+          "q": "¿Qué te parece la estrategia de Inés de asentir y luego hacer una pregunta incómoda?",
+          "model": "Me parece muy hábil, aunque algo manipuladora. Evitas el enfrentamiento directo y dejas que los números hablen por ti."
+        },
+        {
+          "q": "¿Prefieres decidir con datos o con intuición? ¿En qué situaciones?",
+          "model": "En el trabajo, con datos, porque tengo que justificarlo todo. En la vida personal me fío más de la intuición, aunque a veces me equivoque."
+        }
+      ],
+      "gaps": "O sea, no [ganamos] clientes [nuevos], solo [abaratamos] a los que [ya tenemos].",
+      "glossary": [
+        {
+          "word": "desprevenida",
+          "meaning": "sin estar preparada para algo"
+        },
+        {
+          "word": "abaratamos",
+          "meaning": "hacemos más barato"
+        },
+        {
+          "word": "canibalización",
+          "meaning": "cuando una oferta propia le quita clientes a otra oferta de la misma empresa"
+        },
+        {
+          "word": "complicarse la vida",
+          "meaning": "hacer algo más difícil de lo necesario"
+        },
+        {
+          "word": "asiente",
+          "meaning": "di que sí con la cabeza"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Martinis en proporción",
+      "place": "Bar central",
+      "context": "En la barra del bar central, Valentina defiende ante Don Aurelio su plan para las bebidas gratis, con Leo como testigo de excepción.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Don Aurelio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Otro martini por cuenta de la casa, directora. Aunque, si he entendido bien su correo, a lo mejor es de los últimos."
+        },
+        {
+          "s": 2,
+          "text": "No exageres, Leo. Lo que dice el correo es que el año pasado las bebidas gratis costaron dos coma un millones de dólares, y que la mitad se la llevó gente que apuesta cinco dólares por mano."
+        },
+        {
+          "s": 1,
+          "text": "Querida, con todo respeto, este casino lleva cuarenta años invitando a copas. Quita las bebidas y en una semana esto parece una biblioteca."
+        },
+        {
+          "s": 2,
+          "text": "No pretendo quitarlas, Don Aurelio. Pretendo que dejen de ser un regalo a ciegas. Que la tarjeta del programa diga quién juega y cuánto, y que las copas vayan en proporción."
+        },
+        {
+          "s": 1,
+          "text": "En proporción... Qué palabra tan elegante para decir «tacaña»."
+        },
+        {
+          "s": 0,
+          "text": "Si me permiten, desde este lado de la barra se ve otra cosa: el que apuesta cinco dólares y se toma seis gin-tonics no vuelve el sábado por nosotros, vuelve por la barra libre."
+        },
+        {
+          "s": 2,
+          "text": "Exacto. Y el que apuesta quinientos ni se entera de que lo invitamos, porque nadie se lo hace notar."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. Hágalo. Pero si en tres meses el bar está vacío, el martini se lo paga usted."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué se discute en el bar?",
+          "options": [
+            "Si hay que subir los precios del bar",
+            "Si conviene contratar a otro barman",
+            "Cómo repartir las bebidas gratis según lo que juega cada cliente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuánto costaron las bebidas gratis el año pasado?",
+          "options": [
+            "Dos coma un millones de dólares",
+            "Quinientos mil dólares",
+            "Doce millones de dólares"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo interpreta Don Aurelio la palabra «proporción»?",
+          "options": [
+            "Como un término financiero sin importancia",
+            "Como una forma elegante de llamarla tacaña",
+            "Como una idea brillante"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué implica la última frase de Don Aurelio?",
+          "options": [
+            "Que la invita a una copa para celebrarlo",
+            "Que rechaza la propuesta definitivamente",
+            "Que acepta el plan, pero la hace responsable si fracasa"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece bien que un negocio trate mejor a quien más gasta? ¿Dónde está el límite?",
+          "model": "Me parece razonable siempre que no se humille al cliente pequeño. El límite estaría en que te hagan sentir que sobras."
+        },
+        {
+          "q": "¿Cómo responderías a alguien que, como Don Aurelio, te contesta con condescendencia en una reunión?",
+          "model": "Intentaría no entrar al trapo: le daría las gracias por su experiencia y volvería a los datos, que son más difíciles de discutir."
+        },
+        {
+          "q": "¿Qué regalo o detalle de una empresa te ha hecho sentir realmente valorado?",
+          "model": "Una vez mi banco me llamó para avisarme de un cargo raro antes de que yo me diera cuenta. Ese detalle vale más que cualquier regalo."
+        }
+      ],
+      "gaps": "No pretendo [quitarlas], Don Aurelio. [Pretendo] que [dejen de ser] un regalo [a ciegas].",
+      "glossary": [
+        {
+          "word": "por cuenta de la casa",
+          "meaning": "gratis, lo paga el establecimiento"
+        },
+        {
+          "word": "a ciegas",
+          "meaning": "sin mirar, sin saber a quién"
+        },
+        {
+          "word": "tacaña",
+          "meaning": "persona que no quiere gastar ni compartir"
+        },
+        {
+          "word": "barra libre",
+          "meaning": "bebidas sin límite y sin pagar"
+        },
+        {
+          "word": "ni se entera",
+          "meaning": "no se da cuenta en absoluto"
+        }
+      ]
+    },
+    {
+      "id": "poker",
+      "title": "Ni con guantes",
+      "place": "Salón Esmeralda",
+      "context": "Detrás de un espejo del Salón Esmeralda, Valentina sigue un grupo de discusión con jugadores del torneo que pierde dinero.",
+      "speakers": [
+        {
+          "name": "Gabriela",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Joaquín",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        },
+        {
+          "name": "Tatiana",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Gracias por venir. Esto es un grupo de discusión, no hay respuestas correctas. Primera pregunta: ¿por qué vienen al torneo del Meridiano y no al de otro casino?"
+        },
+        {
+          "s": 1,
+          "text": "Mire, le voy a ser sincero: porque el premio garantizado es de cien mil y casi nunca se llena. Para nosotros, eso es dinero regalado."
+        },
+        {
+          "s": 0,
+          "text": "Interesante. ¿Y fuera del salón? ¿Juegan a otra cosa mientras están en el hotel?"
+        },
+        {
+          "s": 2,
+          "text": "¿A las tragamonedas? Ni con guantes, como diría mi abuela. Pero eso no significa que no gaste. Yo vengo con tres amigas, dormimos aquí dos noches, cenamos en el asador y el domingo nos damos el spa."
+        },
+        {
+          "s": 1,
+          "text": "Yo igual. Y mi mujer, que odia el póker, se pasa el sábado en las tiendas del hotel."
+        },
+        {
+          "s": 0,
+          "text": "O sea, que si el torneo desapareciera..."
+        },
+        {
+          "s": 2,
+          "text": "Nos iríamos al de enfrente sin pensarlo. Y las habitaciones, las cenas y el spa se los llevaría otro."
+        },
+        {
+          "s": 0,
+          "text": "Última pregunta, y sean francos: ¿les molestaría que el premio garantizado bajara?"
+        },
+        {
+          "s": 1,
+          "text": "Molestarnos, no. Pero entonces sí que tendríamos que pensarnos si nos compensa el viaje."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué revela el grupo de discusión?",
+          "options": [
+            "Que los jugadores de póker gastan mucho fuera de la mesa",
+            "Que los jugadores prefieren las tragamonedas",
+            "Que el torneo tiene demasiados participantes"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué eligen este torneo, según Joaquín?",
+          "options": [
+            "Por la comida del asador",
+            "Porque el premio garantizado casi nunca se llena",
+            "Porque el casino está cerca de su casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿En qué gasta Tatiana su dinero en el hotel?",
+          "options": [
+            "En las tragamonedas y el bar",
+            "En la ruleta y las tiendas",
+            "En habitaciones, cenas y spa con sus amigas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué conclusión puede sacar Valentina?",
+          "options": [
+            "El torneo pierde en la mesa, pero atrae gasto al resto del hotel",
+            "El torneo debería cancelarse cuanto antes",
+            "Hay que subir el premio garantizado"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has participado alguna vez en una encuesta o un grupo de discusión? ¿Dijiste lo que pensabas de verdad?",
+          "model": "Una vez, sobre un yogur. Confieso que fui más amable de lo que pensaba, porque me daba apuro criticar delante de la persona que lo había creado."
+        },
+        {
+          "q": "¿Gastas más por un detalle que te atrae a un lugar, aunque luego ese detalle no sea lo más caro?",
+          "model": "Sí: voy a un bar por los cacahuetes gratis y acabo pidiendo tres cervezas. El gancho sale barato, lo que se gana es lo demás."
+        },
+        {
+          "q": "¿Crees que tiene sentido mantener un producto que pierde dinero? ¿Cuándo?",
+          "model": "Solo si arrastra otras ventas que compensan con creces. Si no, es mantener un capricho por nostalgia."
+        }
+      ],
+      "gaps": "Nos [iríamos] al de enfrente [sin pensarlo]. Y las habitaciones, [las cenas] y el spa [se los llevaría] otro.",
+      "glossary": [
+        {
+          "word": "grupo de discusión",
+          "meaning": "reunión de clientes para conocer sus opiniones"
+        },
+        {
+          "word": "dinero regalado",
+          "meaning": "ganancia muy fácil, casi gratis"
+        },
+        {
+          "word": "Ni con guantes",
+          "meaning": "de ninguna manera, ni aunque me obliguen"
+        },
+        {
+          "word": "francos",
+          "meaning": "sinceros, directos"
+        },
+        {
+          "word": "nos compensa",
+          "meaning": "vale la pena, es rentable para nosotros"
+        }
+      ]
+    },
+    {
+      "id": "teatro",
+      "title": "Ojo por ojo, estrella por estrella",
+      "place": "Camerino del teatro",
+      "context": "En el camerino, Faustino y Estrella discuten cómo responder a la cantante famosa que ha contratado el resort de enfrente.",
+      "speakers": [
+        {
+          "name": "Faustino",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Estrella",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Estrella, ya lo tengo. Si el resort de enfrente trae a una cantante famosa, nosotros traemos a otra más famosa. Ojo por ojo, estrella por estrella."
+        },
+        {
+          "s": 1,
+          "text": "Ajá. ¿Y con qué presupuesto, maestro? ¿Con el de tus plumas?"
+        },
+        {
+          "s": 0,
+          "text": "La directora lo encontrará. Para eso es directora."
+        },
+        {
+          "s": 1,
+          "text": "La directora lo que va a hacer es preguntarte por los datos. Y los datos dicen que nuestros clientes no vienen por famosos. El sesenta por ciento del público repite, y en la encuesta lo que más valoran es poder hablar contigo después del espectáculo, sacarse una foto, tocarte la capa."
+        },
+        {
+          "s": 0,
+          "text": "Mi capa es intocable."
+        },
+        {
+          "s": 1,
+          "text": "Pues ese es tu problema. Mira, el de enfrente vende entradas solo a los socios de su programa. Bien. Nosotros podemos hacer algo que ellos no pueden: una cena en el camerino para los clientes fieles, con truco privado incluido. Cuesta poco y no se puede copiar con dinero."
+        },
+        {
+          "s": 0,
+          "text": "¿Cenar entre bambalinas, con este olor a laca?"
+        },
+        {
+          "s": 1,
+          "text": "La gente paga por eso, Faustino. Por sentirse dentro. Una estrella de fuera la ves desde la fila veinte; a ti te pueden ver de cerca. Esa es nuestra ventaja."
+        },
+        {
+          "s": 0,
+          "text": "Está bien, pero que conste que la idea fue mía."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué discuten Faustino y Estrella?",
+          "options": [
+            "De quién se queda con la capa",
+            "De cómo responder a la estrella que ha contratado el rival",
+            "De subir el precio de las entradas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué porcentaje del público repite?",
+          "options": [
+            "El veinte por ciento",
+            "El cuarenta por ciento",
+            "El sesenta por ciento"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone Estrella?",
+          "options": [
+            "Una cena en el camerino para los clientes fieles",
+            "Contratar a una cantante más famosa",
+            "Vender entradas solo a los socios"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué revela la última frase de Faustino?",
+          "options": [
+            "Que rechaza la propuesta de Estrella",
+            "Que acepta la idea, pero quiere apuntarse el mérito",
+            "Que piensa dejar el teatro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres un gran concierto multitudinario o un espectáculo pequeño y cercano? ¿Por qué?",
+          "model": "Me quedo con lo pequeño. En un estadio veo al artista en una pantalla gigante; en una sala pequeña, en cambio, siento que el concierto es para mí."
+        },
+        {
+          "q": "¿Conoces a alguien que, como Faustino, se apunta los méritos de los demás? ¿Cómo lo llevas?",
+          "model": "Tuve un jefe así. Al final tomé la costumbre de mandar las ideas por correo con copia a todo el equipo, para que quedara constancia."
+        },
+        {
+          "q": "¿Qué experiencia exclusiva te haría ser fiel a una marca?",
+          "model": "Que me dejaran ver cómo se hace el producto por dentro, por ejemplo una visita a la cocina de un restaurante con el chef."
+        }
+      ],
+      "gaps": "Una estrella [de fuera] la ves desde [la fila veinte]; a ti te pueden ver [de cerca]. Esa es nuestra [ventaja].",
+      "glossary": [
+        {
+          "word": "Ojo por ojo",
+          "meaning": "responder a algo con lo mismo"
+        },
+        {
+          "word": "presupuesto",
+          "meaning": "dinero previsto para un gasto"
+        },
+        {
+          "word": "entre bambalinas",
+          "meaning": "detrás del escenario, donde el público no ve"
+        },
+        {
+          "word": "que conste",
+          "meaning": "quiero que quede claro y registrado"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Renovación de votos con descuento",
+      "place": "Capilla «Amor Exprés»",
+      "context": "Entre dos bodas, Yaritza, la community manager del casino, le presenta a Elvis los datos de redes sociales de la capilla.",
+      "speakers": [
+        {
+          "name": "Elvis",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        },
+        {
+          "name": "Yaritza",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Elvis, ¿tienes un minuto entre boda y boda? Traigo los datos de redes del trimestre."
+        },
+        {
+          "s": 0,
+          "text": "Para ti tengo hasta un estribillo entero, nena. Dispara."
+        },
+        {
+          "s": 1,
+          "text": "Trescientas bodas, más de cuatro millones de visualizaciones con nuestro logo en el fondo. Y ahora la mala noticia: de esas parejas, ni una ha vuelto al hotel. Ni una."
+        },
+        {
+          "s": 0,
+          "text": "Normal. La mitad no recuerda ni cómo se llamaba el otro al día siguiente."
+        },
+        {
+          "s": 1,
+          "text": "Ya, pero la otra mitad sí. Y son justo las que publican fotos en el aniversario. Mi propuesta es sencilla: a los once meses les mandamos una invitación para celebrar el primer aniversario aquí, con la renovación de votos gratis si se alojan dos noches."
+        },
+        {
+          "s": 0,
+          "text": "¿Renovar votos al año? Hija, eso es tener fe."
+        },
+        {
+          "s": 1,
+          "text": "Es tener datos. Las parejas que siguen juntas al año son las que más comparten. Si vuelven, el contenido lo hacen ellas y nosotros solo ponemos el neón."
+        },
+        {
+          "s": 0,
+          "text": "¿Y las que se divorciaron?"
+        },
+        {
+          "s": 1,
+          "text": "A esas, ni las nombramos. Bueno... aunque una promoción de «segunda oportunidad» tampoco estaría mal."
+        },
+        {
+          "s": 0,
+          "text": "Ahora sí que hablas mi idioma, nena."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué problema presenta Yaritza?",
+          "options": [
+            "Que la capilla celebra muy pocas bodas",
+            "Que Elvis canta demasiado en las ceremonias",
+            "Que las bodas dan mucha visibilidad, pero ninguna pareja vuelve"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas visualizaciones tuvieron en el trimestre?",
+          "options": [
+            "Más de cuatro millones",
+            "Trescientas mil",
+            "Cuatrocientas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué incluye la propuesta de Yaritza?",
+          "options": [
+            "Una boda gratis para los solteros",
+            "Renovación de votos gratis si se alojan dos noches",
+            "Un descuento en el bufé del hotel"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tono tiene el final de la conversación?",
+          "options": [
+            "Triste: la capilla va a cerrar",
+            "Serio: Elvis rechaza la idea",
+            "Irónico: hasta los divorcios pueden convertirse en negocio"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece ético que una marca use las fotos que publican sus clientes como publicidad gratuita?",
+          "model": "Si el cliente las publica voluntariamente, no veo problema; otra cosa sería que la marca las usara sin pedir permiso."
+        },
+        {
+          "q": "¿Celebrarías un aniversario en el mismo lugar donde te casaste o donde conociste a tu pareja? ¿Por qué?",
+          "model": "Sí, siempre que no fuera una capilla con neones. Volver al lugar del principio te recuerda por qué empezaste."
+        },
+        {
+          "q": "¿Qué opinas de las campañas de «segunda oportunidad» dirigidas a personas divorciadas?",
+          "model": "Me parecen ingeniosas, pero rozan el mal gusto. Todo depende del tono: con humor pueden funcionar; con solemnidad serían ridículas."
+        }
+      ],
+      "gaps": "Si [vuelven], el contenido lo [hacen ellas] y nosotros solo [ponemos] el [neón].",
+      "glossary": [
+        {
+          "word": "trimestre",
+          "meaning": "periodo de tres meses"
+        },
+        {
+          "word": "Dispara",
+          "meaning": "habla, dime lo que tienes que decir"
+        },
+        {
+          "word": "visualizaciones",
+          "meaning": "veces que se ve un contenido en internet"
+        },
+        {
+          "word": "renovación de votos",
+          "meaning": "ceremonia en la que una pareja casada repite sus promesas"
+        },
+        {
+          "word": "hablas mi idioma",
+          "meaning": "piensas como yo, me convences"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Un rombo en lugar de una pirámide",
+      "place": "La puerta VIP",
+      "context": "En la sala de juntas del piso VIP, Lucía, responsable del programa de fidelización, presenta su diagnóstico ante el comité de dirección.",
+      "speakers": [
+        {
+          "name": "Lucía",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas tardes. Voy a ser breve, que sé que después de mí viene el café. Esta es la pirámide de nuestro programa de fidelización. Bueno, decir pirámide es generoso: parece más bien un rombo. El cuarenta por ciento de los miembros activos está en el nivel máximo, el Diamante."
+        },
+        {
+          "s": 0,
+          "text": "Cuando lo lanzamos, la idea era que fuera un club exclusivo; hoy es, básicamente, la sala de espera del piso VIP. Tano, que custodia la puerta, me lo resumió mejor que cualquier informe: «Cuando todos son especiales, nadie lo es»."
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo hemos llegado aquí? Muy fácil: durante años hemos subido de nivel a la gente para que no se fuera a la competencia, y nunca hemos bajado a nadie. Mi propuesta tiene dos partes. Primero, recalcular los niveles cada año según el gasto real, no según la antigüedad. Segundo, crear un nivel por encima, solo por invitación, con no más de doscientas personas."
+        },
+        {
+          "s": 0,
+          "text": "Ya sé lo que van a decir: que bajar de nivel a un cliente es un riesgo. Lo es. Pero mantener un Diamante que vale lo mismo que un vale de cafetería también lo es, solo que tarda más en notarse. ¿Preguntas?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el tema de la presentación?",
+          "options": [
+            "La inflación de niveles en el programa de fidelización",
+            "La seguridad de la puerta VIP",
+            "El precio del café en el hotel"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué porcentaje de miembros activos está en el nivel máximo?",
+          "options": [
+            "El catorce por ciento",
+            "El cuarenta por ciento",
+            "El cuatro por ciento"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué se ha llegado a esa situación?",
+          "options": [
+            "Porque el programa era demasiado caro",
+            "Porque Tano dejaba pasar a cualquiera",
+            "Porque se subía de nivel a la gente y nunca se bajaba a nadie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Lucía con lo del «vale de cafetería»?",
+          "options": [
+            "Que un nivel sin valor también es un riesgo, aunque más lento",
+            "Que habría que regalar cafés a los socios",
+            "Que el programa debería eliminarse"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Perteneces a algún programa de puntos o de fidelización? ¿Te hace sentir especial o es pura rutina?",
+          "model": "Tengo la tarjeta de una aerolínea, pero como todo el mundo la tiene, no siento que me traten distinto. Para mí es pura rutina."
+        },
+        {
+          "q": "¿Cómo reaccionarías si una empresa te bajara de nivel en su programa?",
+          "model": "Me molestaría, desde luego, pero si me lo explicaran con transparencia y me dijeran cómo recuperarlo, lo aceptaría a regañadientes."
+        },
+        {
+          "q": "¿Estás de acuerdo con la frase «Cuando todos son especiales, nadie lo es»? Pon un ejemplo de otro ámbito.",
+          "model": "Totalmente. Pasa con las notas en algunos colegios: si todo el mundo saca sobresaliente, el sobresaliente deja de significar nada."
+        }
+      ],
+      "gaps": "Primero, [recalcular] los niveles [cada año] según el [gasto real], no según la [antigüedad].",
+      "glossary": [
+        {
+          "word": "fidelización",
+          "meaning": "estrategia para que los clientes sigan volviendo"
+        },
+        {
+          "word": "rombo",
+          "meaning": "figura con cuatro lados iguales, más ancha en el centro"
+        },
+        {
+          "word": "custodia",
+          "meaning": "vigila y protege"
+        },
+        {
+          "word": "antigüedad",
+          "meaning": "tiempo que alguien lleva en un lugar"
+        },
+        {
+          "word": "vale",
+          "meaning": "papel que se cambia por un producto o un descuento"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "La ética dura lo que tarda el rival",
+      "place": "Terraza sobre el Strip",
+      "context": "Desde la terraza, Valentina escucha en su teléfono la sección de negocios de una radio local que habla de un error de su propio equipo.",
+      "speakers": [
+        {
+          "name": "Ramiro",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Y pasamos a la sección de negocios, que esta semana viene con escándalo incluido. El Gran Meridiano, ese clásico del Strip que lleva un año intentando rejuvenecer su imagen, ha metido la pata hasta el fondo. Según ha confirmado el propio casino, una promoción de habitaciones llegó a veinte mil contactos que debían estar excluidos, entre ellos personas inscritas en el programa de autoexclusión, es decir, gente que pidió expresamente que no se le ofreciera juego. Trescientas cuarenta ya han canjeado la oferta."
+        },
+        {
+          "s": 0,
+          "text": "Lo curioso es la reacción. En vez de esconderse detrás de un comunicado de abogados, la nueva directora de marketing, Valentina Duarte, ha pedido disculpas en persona, ha anulado los canjes de las personas autoexcluidas y ha anunciado una auditoría externa de sus listas. Hay quien dice que es valentía y hay quien dice que es la mejor campaña de imagen que podía hacer, y gratis. Yo, que soy un desconfiado profesional, me quedo con las dos: una cosa no quita la otra."
+        },
+        {
+          "s": 0,
+          "text": "Mientras tanto, el resort de enfrente ha aprovechado para ofrecer habitaciones a mitad de precio a los antiguos clientes del Meridiano. Porque en Las Vegas, señoras y señores, la ética dura exactamente lo que tarda el rival en sacar una promoción."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué trata la noticia?",
+          "options": [
+            "De la apertura de un nuevo hotel en el Strip",
+            "De un error del Meridiano al enviar una promoción a personas excluidas",
+            "De una subida general de precios en Las Vegas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quiénes estaban entre los contactos excluidos?",
+          "options": [
+            "Empleados del propio casino",
+            "Periodistas especializados en juego",
+            "Personas inscritas en el programa de autoexclusión"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo la directora de marketing?",
+          "options": [
+            "Pidió disculpas, anuló canjes y anunció una auditoría",
+            "Culpó a una agencia externa",
+            "Publicó un comunicado redactado por abogados"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué opina el locutor de la reacción de la directora?",
+          "options": [
+            "Que fue un error sin importancia",
+            "Que puede ser valentía y estrategia a la vez",
+            "Que la directora debería dimitir"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los casinos deberían poder hacer publicidad? ¿Con qué límites?",
+          "model": "Creo que sí, pero con límites muy estrictos: nada de mensajes que prometan dinero fácil y, por supuesto, nada dirigido a quien ha pedido no recibirlo."
+        },
+        {
+          "q": "Cuando una empresa pide perdón públicamente, ¿te lo crees o sospechas que es marketing?",
+          "model": "Suelo sospechar, la verdad. Me lo creo solo si va acompañado de hechos concretos, como devolver dinero o cambiar algo de verdad."
+        },
+        {
+          "q": "¿Qué harías tú si fueras Valentina después de esta noticia?",
+          "model": "Aprovecharía la auditoría para revisar todas las campañas, no solo esa, y publicaría los resultados aunque no nos dejaran en buen lugar."
+        }
+      ],
+      "gaps": "Hay quien dice que es [valentía] y hay quien dice que es la mejor [campaña de imagen] que podía [hacer], y [gratis].",
+      "glossary": [
+        {
+          "word": "metido la pata",
+          "meaning": "cometido un error grave"
+        },
+        {
+          "word": "autoexclusión",
+          "meaning": "programa en el que una persona pide que no la dejen jugar ni le ofrezcan juego"
+        },
+        {
+          "word": "canjeado",
+          "meaning": "cambiado un cupón o una oferta por el producto"
+        },
+        {
+          "word": "desconfiado",
+          "meaning": "que no se fía fácilmente"
+        },
+        {
+          "word": "una cosa no quita la otra",
+          "meaning": "las dos cosas pueden ser verdad a la vez"
+        }
+      ]
+    }
+  ]
+}

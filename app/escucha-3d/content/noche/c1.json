@@ -1,0 +1,996 @@
+{
+  "game": "noche",
+  "level": "C1",
+  "items": [
+    {
+      "id": "cafe",
+      "title": "Chisme sobre la billetera fantasma",
+      "place": "Café Martina",
+      "context": "En la mesa del fondo, dos amigas toman algo antes de la fiesta y hablan de uno de los invitados.",
+      "speakers": [
+        {
+          "name": "Paula",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Carla",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Y sabes quién viene esta noche? El famoso Martín."
+        },
+        {
+          "s": 1,
+          "text": "¿El de la billetera fantasma? Ay, no. La última vez se pidió tres gin tonics y, cuando llegó la cuenta, descubrió con muchísima sorpresa que se la había dejado en casa. Qué casualidad, ¿no?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno, mujer, a cualquiera le puede pasar."
+        },
+        {
+          "s": 1,
+          "text": "A cualquiera, una vez. A Martín le pasa con una regularidad casi científica. Yo ya ni me enojo, fíjate, me parece admirable. Hay que tener un talento especial para olvidarse siempre de lo mismo y nunca del celular."
+        },
+        {
+          "s": 0,
+          "text": "Pues a mí me cae bien. Es generoso a su manera: te da conversación, te da cariño..."
+        },
+        {
+          "s": 1,
+          "text": "Te da todo menos plata, sí. Oye, ¿y tú por qué lo defiendes tanto? ¿No será que...?"
+        },
+        {
+          "s": 0,
+          "text": "No, no, no. Nada de eso."
+        },
+        {
+          "s": 1,
+          "text": "Ya. Por eso te has puesto colorada."
+        },
+        {
+          "s": 0,
+          "text": "Me he puesto colorada porque el café está hirviendo. Y además, por si te interesa, Martín es mi hermano."
+        },
+        {
+          "s": 1,
+          "text": "Ah. Bueno. Pues... que tiene una memoria buenísima para otras cosas, ¿eh? Para los cumpleaños, por ejemplo. Nunca se olvida de uno."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan principalmente las dos amigas?",
+          "options": [
+            "De un amigo que siempre se olvida de pagar",
+            "De un camarero que se equivocó con la cuenta",
+            "Del regalo que le van a hacer a Vale"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere decir Carla con «me parece admirable»?",
+          "options": [
+            "Que de verdad admira a Martín",
+            "Que lo dice con ironía, para criticarlo",
+            "Que le da igual lo que haga Martín"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué insinúa Carla sobre Paula?",
+          "options": [
+            "Que le debe dinero a Martín",
+            "Que está celosa de Vale",
+            "Que Martín le gusta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo reacciona Carla cuando descubre el parentesco?",
+          "options": [
+            "Sigue criticando a Martín sin problema",
+            "Intenta arreglarlo con un elogio forzado",
+            "Pide perdón y se va del café"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces a alguien que nunca pague su parte? ¿Cómo lo manejas?",
+          "model": "Sí, un compañero de trabajo. Al principio lo dejaba pasar, pero ahora pagamos cada uno lo suyo desde el principio, sin dramas."
+        },
+        {
+          "q": "¿Alguna vez criticaste a alguien sin saber que su familiar te escuchaba?",
+          "model": "Por suerte no, pero desde que vi algo parecido, me lo pienso dos veces antes de hablar de alguien en público."
+        },
+        {
+          "q": "¿Te parece que la ironía es una forma elegante de criticar o una forma cobarde?",
+          "model": "Depende del tono: puede ser elegante, pero si la usas para no decir las cosas a la cara, resulta un poco cobarde."
+        }
+      ],
+      "gaps": "Yo ya ni me [enojo], fíjate, me parece [admirable]. Hay que tener un [talento especial] para olvidarse siempre de lo mismo y nunca del [celular].",
+      "glossary": [
+        {
+          "word": "billetera",
+          "meaning": "cartera pequeña para llevar el dinero"
+        },
+        {
+          "word": "regularidad casi científica",
+          "meaning": "de forma tan repetida que parece una ley"
+        },
+        {
+          "word": "plata",
+          "meaning": "dinero (uso coloquial en América)"
+        },
+        {
+          "word": "colorada",
+          "meaning": "con la cara roja por vergüenza"
+        }
+      ]
+    },
+    {
+      "id": "departamento",
+      "title": "La vecina del cuarto B llama a Vale",
+      "place": "Departamento de Vale",
+      "context": "Una hora antes de la previa suena el teléfono fijo del departamento. Es la vecina de abajo.",
+      "speakers": [
+        {
+          "name": "Mercedes",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        },
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Valeria? Buenas noches, le habla Mercedes, la del cuarto B. Disculpe que la moleste en un día tan señalado."
+        },
+        {
+          "s": 1,
+          "text": "Ay, señora Mercedes, buenas noches. No, para nada. ¿Pasó algo?"
+        },
+        {
+          "s": 0,
+          "text": "No, no, todavía nada. Solamente quería comentarle que he visto subir a bastante gente con bolsas que tintinean. Y como el reglamento del edificio es tan claro con el tema del ruido..."
+        },
+        {
+          "s": 1,
+          "text": "Lo tengo clarísimo, señora. De hecho, usted me lo recordó con mucho cariño en el papelito del ascensor. Y en el de la puerta. Y en el del buzón."
+        },
+        {
+          "s": 0,
+          "text": "Una es previsora. Mire, yo no tengo nada en contra de las fiestas. En mis tiempos, en La Habana, las fiestas eran otra cosa: se bailaba de verdad, no ese ruidito que ponen ustedes ahora."
+        },
+        {
+          "s": 1,
+          "text": "Ah, ¿sí? ¿Y usted bailaba?"
+        },
+        {
+          "s": 0,
+          "text": "Hija, yo bailaba como nadie. Pero bueno, eso ya pasó. Ahora me quedo aquí sola, oyendo la música de los demás a través de la pared."
+        },
+        {
+          "s": 1,
+          "text": "Mire, señora Mercedes, se me ocurre una cosa. ¿Por qué no sube un rato? Así controla el volumen desde adentro, y de paso nos enseña cómo se baila de verdad."
+        },
+        {
+          "s": 0,
+          "text": "Ay, no, qué vergüenza, cómo voy a subir yo, a mi edad, con tanta gente joven... ¿A qué hora me dijo?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué llama la vecina, aparentemente?",
+          "options": [
+            "Para felicitar a Vale por su cumpleaños",
+            "Para pedirle que baje la música ya",
+            "Para advertirle sobre el ruido antes de la fiesta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Con qué intención menciona Vale los papelitos?",
+          "options": [
+            "Para agradecerle de verdad su ayuda",
+            "Para mostrar con ironía que la vecina ya se quejó muchas veces",
+            "Para preguntarle quién los escribió"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué deja ver la vecina sin decirlo directamente?",
+          "options": [
+            "Que se siente sola y echa de menos bailar",
+            "Que piensa mudarse pronto",
+            "Que va a llamar a la policía"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo termina realmente la conversación?",
+          "options": [
+            "La vecina rechaza la invitación con firmeza",
+            "La vecina cuelga enojada",
+            "La vecina finge dudar, pero en el fondo acepta"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo reaccionarías si un vecino te llamara antes de una fiesta como hace Mercedes?",
+          "model": "Le contestaría con amabilidad, pero dejaría claro que la fiesta no va a molestar más de lo razonable."
+        },
+        {
+          "q": "¿Crees que muchas quejas esconden en realidad otra necesidad? Pon un ejemplo.",
+          "model": "Sí, a veces quien se queja de todo solo quiere que le presten atención, como la vecina, que en el fondo quería compañía."
+        },
+        {
+          "q": "¿Invitarías a un vecino mayor a una fiesta de gente joven? ¿Qué podría pasar?",
+          "model": "Lo invitaría, y probablemente sería la persona que más bailara de toda la noche."
+        }
+      ],
+      "gaps": "Lo tengo [clarísimo], señora. De hecho, usted me lo recordó con mucho [cariño] en el papelito del [ascensor]. Y en el de la puerta. Y en el del [buzón].",
+      "glossary": [
+        {
+          "word": "un día tan señalado",
+          "meaning": "un día especial e importante"
+        },
+        {
+          "word": "tintinean",
+          "meaning": "hacen un sonido agudo, como de botellas o vasos que chocan"
+        },
+        {
+          "word": "reglamento",
+          "meaning": "conjunto de normas de un lugar"
+        },
+        {
+          "word": "previsora",
+          "meaning": "que se prepara antes de que pasen las cosas"
+        },
+        {
+          "word": "buzón",
+          "meaning": "caja donde se recibe el correo"
+        }
+      ]
+    },
+    {
+      "id": "restaurante",
+      "title": "Una cita que se enfría en El Toldo",
+      "place": "Restaurante El Toldo",
+      "context": "Inés cena con un chico que conoció por una aplicación. Sus amigas la esperan en la fiesta de Vale.",
+      "speakers": [
+        {
+          "name": "Ricardo",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        },
+        {
+          "name": "Inés",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Ramón",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Y entonces le dije a mi jefe: mira, o me subes el sueldo o me voy a la competencia. Y me lo subió, claro. Porque yo soy así, muy directo."
+        },
+        {
+          "s": 1,
+          "text": "Qué interesante. Muy directo, sí."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, pero cuéntame tú. Ah, no, espera, que todavía no te he contado lo del maratón."
+        },
+        {
+          "s": 1,
+          "text": "No, todavía no. Me muero de ganas."
+        },
+        {
+          "s": 2,
+          "text": "Perdonen la interrupción. Señorita, la llaman por teléfono en la barra. Dicen que es urgente, algo de una tal Vale."
+        },
+        {
+          "s": 1,
+          "text": "¿Urgente? Uy, qué raro. Bueno, si es urgente..."
+        },
+        {
+          "s": 0,
+          "text": "¿Pero no tenías el celular en el bolso?"
+        },
+        {
+          "s": 1,
+          "text": "Se me quedó sin batería, fíjate qué mala suerte. Ahora vuelvo."
+        },
+        {
+          "s": 2,
+          "text": "Tranquila, señorita, en la barra no hay ningún teléfono. Sus amigas me pidieron que la rescatara si le veía cara de aburrimiento."
+        },
+        {
+          "s": 1,
+          "text": "¿Y tanto se me nota?"
+        },
+        {
+          "s": 2,
+          "text": "Llevo veinte años de mesero, señorita, y he visto de todo: aniversarios, rupturas, propuestas de matrimonio. Se le nota desde que llegó el pan."
+        },
+        {
+          "s": 1,
+          "text": "Ay, qué pena con usted. Oiga, ¿y la cuenta?"
+        },
+        {
+          "s": 2,
+          "text": "No se preocupe. El caballero ya dijo que invita él. Directo, como es él."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ocurre en esta escena?",
+          "options": [
+            "Una pareja celebra su aniversario",
+            "Una mujer se escapa de una cita aburrida con ayuda del mesero",
+            "Un mesero se equivoca de mesa con una llamada"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo hay que entender «me muero de ganas» en boca de Inés?",
+          "options": [
+            "Como una frase irónica: no le interesa nada",
+            "Como entusiasmo sincero",
+            "Como una forma de decir que tiene hambre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué es en realidad la «llamada urgente»?",
+          "options": [
+            "Una llamada de Vale por un problema en la fiesta",
+            "Un error del mesero",
+            "Una excusa que organizaron las amigas de Inés"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué ironía tiene la última frase del mesero?",
+          "options": [
+            "Se burla de Inés por irse sin pagar",
+            "Retoma la palabra con la que Ricardo presumía",
+            "Insinúa que quiere una buena propina"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has tenido alguna vez una cita o una reunión de la que quisieras escapar? ¿Qué hiciste?",
+          "model": "Sí, una vez fingí que mi hermana me necesitaba urgentemente; todavía me da un poco de vergüenza."
+        },
+        {
+          "q": "¿Te parece ético inventar una excusa para irse de una cita? ¿Por qué?",
+          "model": "No del todo, pero a veces es más amable que decirle a alguien que te aburre profundamente."
+        },
+        {
+          "q": "¿Qué cosas no se deberían hacer nunca en una primera cita?",
+          "model": "Hablar solo de uno mismo, como Ricardo, y no hacer ni una pregunta a la otra persona."
+        }
+      ],
+      "gaps": "Tranquila, señorita, en la barra no hay ningún [teléfono]. Sus [amigas] me pidieron que la [rescatara] si le veía cara de [aburrimiento].",
+      "glossary": [
+        {
+          "word": "la competencia",
+          "meaning": "la empresa rival"
+        },
+        {
+          "word": "me muero de ganas",
+          "meaning": "tengo muchísimas ganas (aquí, dicho con ironía)"
+        },
+        {
+          "word": "rescatara",
+          "meaning": "del verbo rescatar: sacar a alguien de una situación difícil"
+        },
+        {
+          "word": "qué pena con usted",
+          "meaning": "expresión colombiana para pedir disculpas, qué vergüenza"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Crónica en directo desde la fuente seca",
+      "place": "Plaza de la Fuente",
+      "context": "Un programa de radio local conecta con su reportera, que está en la plaza.",
+      "speakers": [
+        {
+          "name": "Tito",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        },
+        {
+          "name": "Remedios",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Y nos vamos ahora a la Plaza de la Fuente, donde está nuestra compañera Remedios. Remedios, ¿cómo está el ambiente esta noche?"
+        },
+        {
+          "s": 1,
+          "text": "Pues buenas noches, Tito. Aquí estoy, frente a la flamante fuente renovada, la que la alcaldía inauguró hace exactamente un mes con banda, discurso y cinta roja."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué tal se ve?"
+        },
+        {
+          "s": 1,
+          "text": "Espléndida. Seca, pero espléndida. Llevamos tres semanas sin una gota de agua, lo cual tiene sus ventajas: los niños la usan de pista de patinaje y las palomas por fin pueden sentarse sin mojarse."
+        },
+        {
+          "s": 0,
+          "text": "Ahora bien, el concejal dijo esta semana que se trata de un problema técnico menor."
+        },
+        {
+          "s": 1,
+          "text": "Sí, sí, menor. Tan menor que nadie sabe dónde está la llave de paso. He hablado con los vecinos y uno me ha dicho, con mucha sabiduría, que esta fuente es como la política del barrio: muy bonita en la foto y, después, nada."
+        },
+        {
+          "s": 0,
+          "text": "Remedios, ¿no estás siendo un poquito dura?"
+        },
+        {
+          "s": 1,
+          "text": "¿Dura yo? Para nada, Tito. Yo solo describo. Además, esta noche hay un grupo de chicos celebrando un cumpleaños alrededor de la fuente y han llenado la pila con globos azules. Así que, por primera vez en un mes, algo aquí se parece al agua."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué trata la crónica?",
+          "options": [
+            "De un concierto organizado por la alcaldía",
+            "De una fuente recién renovada que no funciona",
+            "De una fiesta de cumpleaños en la plaza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tono usa Remedios al describir la fuente?",
+          "options": [
+            "Irónico",
+            "Entusiasta y sincero",
+            "Triste y nostálgico"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué critica el vecino que cita Remedios?",
+          "options": [
+            "Que los niños rompieron la fuente",
+            "Que la fuente es peligrosa para las palomas",
+            "Que a las autoridades les importa más la imagen que el resultado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué esa noche «algo se parece al agua»?",
+          "options": [
+            "Porque llovió un poco",
+            "Porque arreglaron la fuente por fin",
+            "Porque la llenaron de globos azules"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay en tu ciudad alguna obra pública que se inauguró con mucha fiesta y luego no funcionó?",
+          "model": "Sí, un carril bici que inauguraron con mucha publicidad y que termina, literalmente, en una pared."
+        },
+        {
+          "q": "¿Crees que el humor y la ironía son buenas herramientas para criticar a los políticos?",
+          "model": "Creo que sí, porque llegan a más gente que un discurso serio, aunque a veces se quedan en la superficie."
+        },
+        {
+          "q": "¿Qué lugar de tu barrio usa la gente de una forma distinta a la prevista?",
+          "model": "Hay unas escaleras que los adolescentes usan como gradas para ver a los patinadores."
+        }
+      ],
+      "gaps": "Llevamos tres semanas sin una [gota] de agua, lo cual tiene sus [ventajas]: los niños la usan de pista de [patinaje] y las [palomas] por fin pueden sentarse sin mojarse.",
+      "glossary": [
+        {
+          "word": "flamante",
+          "meaning": "nuevo y brillante"
+        },
+        {
+          "word": "concejal",
+          "meaning": "miembro del gobierno de una ciudad"
+        },
+        {
+          "word": "llave de paso",
+          "meaning": "llave que abre o cierra la entrada del agua"
+        },
+        {
+          "word": "pila",
+          "meaning": "parte de la fuente donde cae y se acumula el agua"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Sergio, de traje y encerrado en el baño",
+      "place": "Bar La Persiana",
+      "context": "Sergio llegó al bar vestido para una cena formal. Desde el baño, manda un audio al grupo de amigos.",
+      "speakers": [
+        {
+          "name": "Sergio",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, grupo. Les mando este audio desde el baño de La Persiana, que es el único lugar donde nadie me mira. Para los que todavía no se enteraron: sí, vine de traje. Con corbata. Y con un regalo envuelto en papel dorado, por si no fuera suficiente."
+        },
+        {
+          "s": 0,
+          "text": "En mi defensa, el mensaje de Vale decía, cito textualmente: «Algo tranquilo, vengan arreglados». Ahora entiendo que «arreglados» quería decir «con zapatillas limpias». Error mío, claro, por interpretar las palabras según el diccionario."
+        },
+        {
+          "s": 0,
+          "text": "Lo más gracioso es que el portero me preguntó si venía por la despedida de soltero del piso de arriba, y durante un segundo, lo pensé. Allá por lo menos alguien habría apreciado la corbata."
+        },
+        {
+          "s": 0,
+          "text": "En fin. Voy a salir, voy a sonreír y voy a decir que es un homenaje irónico a los años noventa. Si alguien me contradice, que sepa que tengo pruebas de sus peores fotos, y no me tiembla el pulso. Ah, y Martín: ni se te ocurra subir nada a redes. Te conozco, y sé exactamente dónde guardas tus secretos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué graba Sergio este audio?",
+          "options": [
+            "Para pedir que alguien le traiga ropa",
+            "Para avisar de que se va a casa",
+            "Para contar con humor que vino demasiado elegante"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo había entendido Sergio la palabra «arreglados»?",
+          "options": [
+            "Como ropa cómoda y limpia",
+            "De forma literal: con ropa elegante",
+            "Como un disfraz de los noventa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué da a entender con el comentario sobre la despedida de soltero?",
+          "options": [
+            "Que allí habría encajado mejor",
+            "Que la despedida es de un amigo suyo",
+            "Que va a cambiarse de fiesta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué estrategia piensa usar Sergio?",
+          "options": [
+            "Quedarse escondido en el baño",
+            "Presentar su ropa como una broma intencionada",
+            "Quitarse la corbata y el saco"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te ha pasado alguna vez ir demasiado elegante o demasiado informal a un evento? ¿Cómo lo resolviste?",
+          "model": "Sí, fui en vaqueros a una boda porque leí mal la invitación; pasé la noche diciendo que era un estilo muy pensado."
+        },
+        {
+          "q": "¿Qué crees que significa «ir arreglado» en tu cultura?",
+          "model": "Depende del contexto, pero normalmente significa ir cuidado, aunque no necesariamente formal."
+        },
+        {
+          "q": "¿Te parece que reírse de uno mismo es una buena estrategia en situaciones incómodas?",
+          "model": "Sí, porque si te adelantas a la broma, los demás ya no pueden usarla contra ti."
+        }
+      ],
+      "gaps": "Voy a salir, voy a [sonreír] y voy a decir que es un [homenaje irónico] a los años noventa. Si alguien me [contradice], que sepa que tengo [pruebas] de sus peores fotos, y no me tiembla el pulso.",
+      "glossary": [
+        {
+          "word": "cito textualmente",
+          "meaning": "repito las palabras exactas"
+        },
+        {
+          "word": "arreglados",
+          "meaning": "bien vestidos y peinados para salir"
+        },
+        {
+          "word": "despedida de soltero",
+          "meaning": "fiesta que se hace antes de una boda"
+        },
+        {
+          "word": "ni se te ocurra",
+          "meaning": "no lo hagas de ninguna manera"
+        }
+      ]
+    },
+    {
+      "id": "museo",
+      "title": "La carta que recibieron once novias",
+      "place": "Museo del Pasado",
+      "context": "Es la noche de los museos. El guía presenta su vitrina favorita a un grupo que viene de la entrada con una copa de vino.",
+      "speakers": [
+        {
+          "name": "Esteban",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, ya que es la noche de los museos y el vino de la entrada empieza a hacer efecto, les voy a contar la historia de esta vitrina, que es mi favorita."
+        },
+        {
+          "s": 0,
+          "text": "Esta carta de amor la escribió en mil novecientos cincuenta y dos un tal Arturo Ledesma. Fíjense en la caligrafía: impecable. Y en el contenido: promete amor eterno, una casa con jardín y un viaje a París. Precioso, ¿verdad?"
+        },
+        {
+          "s": 0,
+          "text": "El pequeño detalle es que Arturo mandó esta misma carta, palabra por palabra, a once mujeres distintas. Once. Y a cada una le pidió un préstamo «para preparar la boda». Cuando la policía lo encontró, vivía muy cómodo en una pensión del puerto con la mujer número doce, que, por cierto, nunca recibió carta."
+        },
+        {
+          "s": 0,
+          "text": "Ahora, lo curioso es que una de las once, la señora que donó esta carta, la guardó toda la vida. Su nieta nos contó que ella decía que había sido la carta más bonita que le habían escrito nunca, y que el dinero estaba bien pagado."
+        },
+        {
+          "s": 0,
+          "text": "Yo no sé ustedes, pero a mí esa frase me parece bastante más interesante que el estafador."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene de especial la carta?",
+          "options": [
+            "Su autor la usó para engañar a muchas mujeres",
+            "La escribió un poeta famoso",
+            "Nunca llegó a enviarse"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pedía Arturo a cada mujer?",
+          "options": [
+            "Que se casara con él en París",
+            "Que guardara el secreto",
+            "Dinero prestado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué ironía encierra la mujer número doce?",
+          "options": [
+            "Fue ella quien lo denunció a la policía",
+            "Fue la única que no recibió la carta y la que se quedó con él",
+            "También era estafadora"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué le interesa más al guía la donante que el estafador?",
+          "options": [
+            "Porque consiguió recuperar su dinero",
+            "Porque valoró la experiencia a pesar del engaño",
+            "Porque terminó casándose con Arturo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Entiendes a la mujer que decía que el dinero estaba bien pagado? ¿Por qué?",
+          "model": "En parte sí: quizá aquella carta le dio una ilusión que valía más que el dinero, aunque fuera falsa."
+        },
+        {
+          "q": "¿Crees que hoy las estafas amorosas son más fáciles o más difíciles que antes?",
+          "model": "Creo que más fáciles, porque por internet uno puede escribir el mismo mensaje a cien personas sin esfuerzo."
+        },
+        {
+          "q": "¿Qué objeto de tu familia podría estar en un museo por la historia que cuenta?",
+          "model": "Una maleta de mi abuelo que viajó con él cuando emigró, con etiquetas de tres países."
+        }
+      ],
+      "gaps": "El pequeño detalle es que Arturo mandó esta misma carta, palabra por [palabra], a once [mujeres] distintas. Once. Y a cada una le pidió un [préstamo] «para preparar la [boda]».",
+      "glossary": [
+        {
+          "word": "caligrafía",
+          "meaning": "forma de escribir a mano"
+        },
+        {
+          "word": "préstamo",
+          "meaning": "dinero que se da con la obligación de devolverlo"
+        },
+        {
+          "word": "pensión",
+          "meaning": "alojamiento barato donde se vive o se pasa la noche"
+        },
+        {
+          "word": "estafador",
+          "meaning": "persona que engaña a otras para quitarles dinero"
+        },
+        {
+          "word": "bien pagado",
+          "meaning": "que valió lo que costó"
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "«Siga a ese taxi», un sábado con tráfico",
+      "place": "Taxi en la avenida",
+      "context": "Florencia sube corriendo a un taxi y le da a la conductora una orden de película.",
+      "speakers": [
+        {
+          "name": "Florencia",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        },
+        {
+          "name": "Doña Lupe",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Siga a ese taxi, por favor! El blanco, el que acaba de doblar."
+        },
+        {
+          "s": 1,
+          "text": "Híjole, señorita, toda la vida esperando que alguien me dijera eso y me toca un sábado con tráfico."
+        },
+        {
+          "s": 0,
+          "text": "No se ría. Ahí va mi novio. Me dijo que esta noche se quedaba en casa porque le dolía la cabeza."
+        },
+        {
+          "s": 1,
+          "text": "Ah, caray. Y usted, claro, pasaba por la avenida de pura casualidad."
+        },
+        {
+          "s": 0,
+          "text": "Yo iba a un cumpleaños, que conste. Lo vi subir al taxi peinado y con camisa nueva. Él no se peina ni para las bodas."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, eso sí que es sospechoso. Oiga, ¿y qué va a hacer si lo alcanzamos? Porque yo manejo, pero los dramas no van incluidos en la tarifa."
+        },
+        {
+          "s": 0,
+          "text": "No sé. Ver adónde va. Nada más."
+        },
+        {
+          "s": 1,
+          "text": "Pues ya se detuvo. La terraza de las luces. ¿No era ahí su cumpleaños?"
+        },
+        {
+          "s": 0,
+          "text": "Sí... ¿Qué hace él en la fiesta de Vale?"
+        },
+        {
+          "s": 1,
+          "text": "Mire, señorita, con todo respeto: o la engaña con muy poca imaginación, o alguien le está preparando algo a usted. Peinado, con camisa nueva y a la misma fiesta que usted... Yo apostaría por lo segundo."
+        },
+        {
+          "s": 0,
+          "text": "Ay, no. ¿Y ahora qué hago?"
+        },
+        {
+          "s": 1,
+          "text": "Pues bájese dos cuadras antes y vaya ensayando cara de sorpresa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pide Florencia a la taxista?",
+          "options": [
+            "Que la lleve al aeropuerto",
+            "Que siga a otro taxi",
+            "Que la lleve de vuelta a casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué da a entender la taxista con «de pura casualidad»?",
+          "options": [
+            "Que duda, con ironía, de esa casualidad",
+            "Que le cree completamente",
+            "Que no conoce bien la avenida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué sospecha Florencia de su novio?",
+          "options": [
+            "Porque no le contestó el teléfono",
+            "Porque llegó tarde a la cena",
+            "Porque iba peinado y con ropa nueva"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué interpreta la taxista al final?",
+          "options": [
+            "Que el novio la está engañando",
+            "Que el novio trabaja en la terraza",
+            "Que el novio le prepara una sorpresa a ella"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué harías tú en el lugar de Florencia: seguir al taxi o preguntar directamente?",
+          "model": "Seguramente lo llamaría, aunque reconozco que la tentación de seguirlo sería enorme."
+        },
+        {
+          "q": "¿Te parece aceptable revisar o seguir a tu pareja si sospechas algo?",
+          "model": "No, creo que si llegas a ese punto, el problema ya no es la sospecha sino la falta de confianza."
+        },
+        {
+          "q": "¿Alguna vez una sospecha tuya resultó ser una sorpresa?",
+          "model": "Sí, pensé que mis amigos me ignoraban y en realidad estaban organizando mi despedida."
+        }
+      ],
+      "gaps": "Mire, señorita, con todo [respeto]: o la [engaña] con muy poca [imaginación], o alguien le está preparando [algo] a usted.",
+      "glossary": [
+        {
+          "word": "doblar",
+          "meaning": "girar en una esquina"
+        },
+        {
+          "word": "híjole",
+          "meaning": "expresión mexicana de sorpresa"
+        },
+        {
+          "word": "que conste",
+          "meaning": "quiero que quede claro"
+        },
+        {
+          "word": "ensayando",
+          "meaning": "del verbo ensayar: practicar algo antes de hacerlo de verdad"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "El brindis de Leo esconde una noticia",
+      "place": "La terraza de las luces",
+      "context": "Pasada la medianoche, Leo pide silencio y levanta la copa delante de todos.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "A ver, a ver, un segundito, que si no hablo ahora no hablo nunca. Ya sé, ya sé, tengo examen a las ocho, esto va a ser breve."
+        },
+        {
+          "s": 0,
+          "text": "Vale, hace siete años que vivimos juntos. Siete. Hay matrimonios que duran menos y comparten bastante menos ropa. En siete años me robaste el champú, la mitad de mis tazas y, sobre todo, cualquier posibilidad de estar triste más de un día seguido, porque no me dejas."
+        },
+        {
+          "s": 0,
+          "text": "Me acuerdo del primer día: me dijiste que te quedabas en el departamento «solo hasta encontrar algo mejor». Yo sigo esperando que encuentres algo mejor, eh."
+        },
+        {
+          "s": 0,
+          "text": "Bueno. Lo que les quería decir, y lo digo aquí porque si lo digo a solas me pongo a llorar, es que en marzo me voy. Me salió la beca en Montreal. Y no sabía cómo contártelo sin arruinarte el cumpleaños, así que me pareció mejor arruinártelo en público, que es más elegante."
+        },
+        {
+          "s": 0,
+          "text": "Así que levanten las copas: por Vale, que cumple treinta, y por el departamento, que va a quedar muchísimo más ordenado y muchísimo más aburrido. ¡Salud!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué es, en el fondo, este brindis?",
+          "options": [
+            "Una queja por la convivencia con Vale",
+            "Un discurso divertido que esconde una noticia importante",
+            "Una declaración de amor a Vale"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere decir Leo al compararse con los matrimonios?",
+          "options": [
+            "Que quiere casarse con Vale",
+            "Que su convivencia ha sido larga e íntima",
+            "Que los matrimonios no funcionan"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es la noticia?",
+          "options": [
+            "Que se va a vivir al extranjero",
+            "Que ha suspendido el examen",
+            "Que tiene pareja nueva"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué sentimiento hay detrás del humor de Leo?",
+          "options": [
+            "Alivio por dejar el desorden",
+            "Enfado porque Vale no se va",
+            "Tristeza por separarse de Vale"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Por qué crees que Leo eligió dar la noticia en público y con humor?",
+          "model": "Porque el humor le protege de emocionarse demasiado, y en público es más difícil que Vale le haga un drama."
+        },
+        {
+          "q": "¿Has compartido piso con alguien? ¿Qué es lo que más echarías de menos?",
+          "model": "Sí, con una amiga; echaría de menos las cenas improvisadas a medianoche, no tanto el desorden."
+        },
+        {
+          "q": "¿Te parece adecuado dar una mala noticia en el cumpleaños de alguien?",
+          "model": "No mucho, aunque si se hace con tanto cariño como Leo, quizá sea un buen regalo, a su manera."
+        }
+      ],
+      "gaps": "Hay matrimonios que duran [menos] y comparten bastante menos [ropa]. En siete años me robaste el [champú], la mitad de mis [tazas] y, sobre todo, cualquier posibilidad de estar triste más de un día seguido, porque no me dejas.",
+      "glossary": [
+        {
+          "word": "si no hablo ahora no hablo nunca",
+          "meaning": "es mi última oportunidad para decirlo"
+        },
+        {
+          "word": "a solas",
+          "meaning": "sin más gente, en privado"
+        },
+        {
+          "word": "beca",
+          "meaning": "ayuda económica para estudiar o investigar"
+        },
+        {
+          "word": "¡Salud!",
+          "meaning": "lo que se dice al brindar"
+        }
+      ]
+    }
+  ]
+}

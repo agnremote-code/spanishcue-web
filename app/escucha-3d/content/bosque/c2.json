@@ -1,0 +1,338 @@
+{
+  "game": "bosque",
+  "level": "C2",
+  "items": [
+    {
+      "id": "sobre-ti",
+      "title": "Ronda de presentaciones con un recién llegado",
+      "place": "Claro de la entrada",
+      "context": "En el claro de la entrada, un campamento de voluntarios hace la ronda de presentaciones. Hay un recién llegado que despierta sospechas.",
+      "speakers": [
+        { "name": "Amparo", "country": "España", "voice": "es-ES-XimenaNeural" },
+        { "name": "Joaquín", "country": "Uruguay", "voice": "es-UY-MateoNeural" },
+        { "name": "Yaneth", "country": "Honduras", "voice": "es-HN-KarlaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bueno, antes de que se nos eche encima la lluvia, ronda de presentaciones. Nombre, de dónde viene cada uno y qué le trae por aquí. A Yaneth ya la conocemos todos, así que empieza tú, el nuevo." },
+        { "s": 1, "text": "Joaquín, de Montevideo. Me trae por aquí el amor a la naturaleza, básicamente." },
+        { "s": 2, "text": "Básicamente. Qué bonito. ¿Y a qué te dedicas cuando no estás amando la naturaleza?" },
+        { "s": 1, "text": "Hago estudios de terreno. Mediciones, análisis de suelos, cosas bastante aburridas, la verdad." },
+        { "s": 0, "text": "Mira tú qué casualidad. Justo la semana pasada vino un señor muy simpático a hacer mediciones en este claro. Para una empresa que quiere poner aquí un aparcamiento, dicen las malas lenguas." },
+        { "s": 1, "text": "Ah, no, no, yo vengo a título personal. Me tomé unos días libres." },
+        { "s": 2, "text": "Y te los tomaste para venir a cavar zanjas gratis justo en el sitio donde tu gremio quiere echar asfalto. Eso es vocación." },
+        { "s": 1, "text": "Visto así, suena raro, lo admito. Pero también se puede ver al revés: quizá quiero conocer de primera mano lo que se perdería." },
+        { "s": 0, "text": "O quizá quieres saber cuántos somos y cuánto aguantamos. No te ofendas, ¿eh? Aquí estamos escarmentados." },
+        { "s": 1, "text": "No me ofendo. Es más, les propongo un trato: denme una semana y, si al final no me creen, me voy sin rechistar. Y si me creen, a lo mejor les cuento alguna cosita que les interesa saber." },
+        { "s": 2, "text": "Ojo, que el chico viene con regalo." },
+        { "s": 0, "text": "O con caballo de Troya. Venga, pala en mano, y ya veremos de qué pie cojea." }
+      ],
+      "choice": [
+        { "q": "¿Qué tensión recorre esta presentación?", "options": ["Las voluntarias sospechan que Joaquín trabaja para quien quiere construir en el claro", "Joaquín no quiere trabajar porque está lloviendo", "Amparo y Yaneth compiten por coordinar el grupo"], "answer": 0 },
+        { "q": "¿Con qué intención repite Yaneth «Básicamente»?", "options": ["Para mostrar que está de acuerdo con él", "Para poner en duda, con sorna, la explicación de Joaquín", "Para pedirle que hable más despacio"], "answer": 1 },
+        { "q": "¿Qué sugiere Amparo con que están «escarmentados»?", "options": ["Que el trabajo de voluntario es muy duro", "Que nunca han tenido problemas con nadie", "Que ya han sufrido antes infiltraciones o engaños"], "answer": 2 },
+        { "q": "¿Qué ambigüedad deja la propuesta de Joaquín?", "options": ["No se sabe si habla de la lluvia o del aparcamiento", "Podría ser un aliado con información interna o alguien que intenta ganarse su confianza", "No queda claro si se quedará una semana o un mes"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Hasta qué punto es legítimo desconfiar de alguien por su profesión?", "model": "Es comprensible como reflejo, pero injusto como norma: la profesión dice qué sabe alguien, no necesariamente de qué lado está." },
+        { "q": "¿Alguna vez te has presentado ocultando parte de la verdad? ¿Por qué lo hiciste?", "model": "En una cena de vecinos me hice pasar por profesor a secas, sin decir que era inspector de obras; no quería pasarme la noche atendiendo quejas." },
+        { "q": "¿Cómo convencerías a un grupo que desconfía de ti de que tus intenciones son buenas?", "model": "Con hechos más que con palabras: dejaría que me observaran trabajar y no pediría nada a cambio hasta haberme ganado su confianza." }
+      ],
+      "gaps": "Y te los tomaste para venir a cavar [zanjas] gratis justo en el sitio donde tu [gremio] quiere echar [asfalto]. Eso es [vocación].",
+      "glossary": [
+        { "word": "malas lenguas", "meaning": "la gente que cuenta rumores, normalmente negativos" },
+        { "word": "a título personal", "meaning": "por cuenta propia, sin representar a ninguna empresa" },
+        { "word": "escarmentados", "meaning": "que han aprendido de una mala experiencia y ya no se fían" },
+        { "word": "caballo de Troya", "meaning": "algo que parece un regalo pero esconde un engaño" },
+        { "word": "de qué pie cojea", "meaning": "cuáles son sus defectos o sus verdaderas intenciones" }
+      ]
+    },
+    {
+      "id": "vida-real",
+      "title": "El cotilleo de la cesta de mimbre",
+      "place": "La cesta olvidada",
+      "context": "Dos vecinos mayores del pueblo se encuentran junto a la famosa cesta olvidada y cotillean sobre su dueño.",
+      "speakers": [
+        { "name": "Clotilde", "country": "Cuba", "voice": "es-CU-BelkysNeural" },
+        { "name": "Efraín", "country": "Guatemala", "voice": "es-GT-AndresNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Efraín, ¿tú has visto la cesta esa que lleva tres días ahí tirada, junto a las setas bajas?" },
+        { "s": 1, "text": "¿Que si la he visto? Si medio pueblo ha pasado a echarle un vistazo. Eso es de la Fermina, te lo digo yo." },
+        { "s": 0, "text": "¿De la Fermina? Anda ya. La Fermina no recoge una seta ni aunque se la pongan en bandeja; ella las compra en el mercado y luego presume." },
+        { "s": 1, "text": "Por eso mismo. La cesta es nueva, de esas de mimbre que venden a los turistas. Se la compró para hacerse la entendida delante del cuñado, el del ayuntamiento." },
+        { "s": 0, "text": "Mira, no me tires de la lengua, que tú y yo sabemos que el cuñado ese tiene más cara que espalda. Pero de ahí a dejar cinco kilos de setas tirados..." },
+        { "s": 1, "text": "Si no los dejó tirados. Los escondió, que no es lo mismo. Vio venir al guarda y salió por patas." },
+        { "s": 0, "text": "¿Y tú cómo sabes que vio al guarda?" },
+        { "s": 1, "text": "Hombre, porque me lo han contado." },
+        { "s": 0, "text": "Ya. ¿Y quién te lo ha contado?" },
+        { "s": 1, "text": "Gente. Gente de fiar." },
+        { "s": 0, "text": "Efraín, que nos conocemos desde la escuela. Esa camisa que llevas tiene esporas hasta en el cuello." },
+        { "s": 1, "text": "Las esporas vuelan, Clotilde. Son muy suyas." },
+        { "s": 0, "text": "Mira, yo no he visto nada y no sé nada. Pero si esta tarde la cesta desaparece, no pienso preguntarte dónde has estado." },
+        { "s": 1, "text": "Ni yo pienso contestarte." }
+      ],
+      "choice": [
+        { "q": "¿Qué se descubre, sin decirse abiertamente, en esta conversación?", "options": ["Que la cesta es de la Fermina", "Que el cuñado del ayuntamiento escondió la cesta", "Que probablemente la cesta es de Efraín"], "answer": 2 },
+        { "q": "¿Qué opinión tiene Clotilde de la Fermina?", "options": ["Que presume de recoger setas, pero en realidad las compra", "Que es la mejor recolectora del pueblo", "Que trabaja en el mercado vendiendo setas"], "answer": 0 },
+        { "q": "¿Qué delata a Efraín?", "options": ["Que lleva la cesta en la mano", "Que sabe demasiados detalles y tiene esporas en la camisa", "Que el guarda lo ha nombrado"], "answer": 1 },
+        { "q": "¿Qué pacto implícito cierran al final?", "options": ["Denunciar juntos a la Fermina ante el guarda", "Repartirse las setas de la cesta", "Que ella callará y él no tendrá que dar explicaciones"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Por qué crees que la gente a veces culpa a otros justo de lo que ha hecho ella misma?", "model": "Supongo que es una forma de desviar la atención: si el foco está en otro, nadie mira hacia uno mismo, aunque a la larga suele delatarte." },
+        { "q": "¿Qué papel tiene el cotilleo en un pueblo o en un grupo pequeño? ¿Es siempre negativo?", "model": "No siempre; también funciona como un control social informal, aunque a menudo resulta cruel con quien no puede defenderse." },
+        { "q": "¿Guardarías el secreto de un amigo aunque hubiera incumplido una norma?", "model": "Depende de la gravedad: por unas setas de más, me haría el despistado; si alguien saliera perjudicado, no podría callarme." }
+      ],
+      "gaps": "Mira, no me tires de la [lengua], que tú y yo sabemos que el [cuñado] ese tiene más [cara] que [espalda].",
+      "glossary": [
+        { "word": "ni aunque se la pongan en bandeja", "meaning": "ni siquiera si se lo dan todo hecho y muy fácil" },
+        { "word": "hacerse la entendida", "meaning": "fingir que sabe mucho de algo" },
+        { "word": "tires de la lengua", "meaning": "provoques que cuente algo que no debería" },
+        { "word": "tiene más cara que espalda", "meaning": "es un descarado, no tiene vergüenza" },
+        { "word": "salió por patas", "meaning": "huyó corriendo" }
+      ]
+    },
+    {
+      "id": "elige",
+      "title": "Una financiación con letra pequeña",
+      "place": "Setas doradas",
+      "context": "Desde la estación de las setas doradas, una micóloga joven llama de noche a su antiguo director de tesis antes de responder a una oferta.",
+      "speakers": [
+        { "name": "Abril", "country": "Ecuador", "voice": "es-EC-AndreaNeural" },
+        { "name": "Anselmo", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Anselmo, perdona que te llame a estas horas, pero tengo que contestar mañana y no quiero meter la pata." },
+        { "s": 1, "text": "Tú dirás. Aunque, por el tono, intuyo que ya lo tienes decidido y buscas que alguien te dé la razón." },
+        { "s": 0, "text": "Puede ser. Mira, una empresa de suplementos se ofrece a financiar tres años de estudio sobre las setas doradas. Equipo, laboratorio, todo." },
+        { "s": 1, "text": "¿Y a cambio?" },
+        { "s": 0, "text": "A cambio, nada. Bueno, derecho preferente a explotar comercialmente lo que encontremos. Y revisar los resultados antes de publicarlos, solo por cuestiones de patentes." },
+        { "s": 1, "text": "Solo por cuestiones de patentes. Ya. ¿Te acuerdas de Rebolledo y el estudio del café?" },
+        { "s": 0, "text": "No me lo recuerdes. Pero esto es distinto: sin ese dinero, el proyecto no existe. Y si no lo hago yo, lo hará otro con menos escrúpulos." },
+        { "s": 1, "text": "Ese argumento lo han usado todos los que han acabado arrepentidos. No te digo que no. Te digo que no firmes nada sin una cláusula que te garantice publicar, salgan los resultados como salgan." },
+        { "s": 0, "text": "¿Y si no aceptan la cláusula?" },
+        { "s": 1, "text": "Entonces ya sabrás para qué querían de verdad revisar tus resultados. Y te habrás ahorrado tres años de pedir perdón." },
+        { "s": 0, "text": "Visto así, la elección parece fácil." },
+        { "s": 1, "text": "Las elecciones importantes casi siempre lo parecen desde fuera. El problema es que tú no estás fuera: tú pagas un alquiler." },
+        { "s": 0, "text": "Gracias por el consuelo." },
+        { "s": 1, "text": "No era consuelo, era contexto. Llámame cuando hayas hablado con ellos." }
+      ],
+      "choice": [
+        { "q": "¿Qué dilema plantea Abril?", "options": ["Si cambiar de director de tesis", "Si aceptar una financiación privada con condiciones dudosas", "Si dejar la investigación para trabajar en una empresa"], "answer": 1 },
+        { "q": "¿Qué da a entender Anselmo al mencionar a Rebolledo y el estudio del café?", "options": ["Que hubo un caso anterior en que la empresa manipuló o frenó resultados", "Que Rebolledo es un buen contacto para Abril", "Que el café y las setas tienen propiedades parecidas"], "answer": 0 },
+        { "q": "¿Qué aconseja concretamente Anselmo?", "options": ["Rechazar la oferta sin negociar", "Aceptar la oferta tal como está", "Exigir una cláusula que garantice la publicación de los resultados"], "answer": 2 },
+        { "q": "¿Qué matiz introduce Anselmo con «tú pagas un alquiler»?", "options": ["Que Abril debería mudarse a un piso más barato", "Que la decisión no es fácil porque ella necesita el dinero", "Que la empresa le pagará también la vivienda"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Es posible una investigación independiente cuando la financia quien tiene intereses en el resultado?", "model": "Es posible, pero exige blindarse: cláusulas claras, datos abiertos y una revisión externa; sin eso, la sospecha es inevitable." },
+        { "q": "¿Te convence el argumento de «si no lo hago yo, lo hará otro»? ¿Por qué?", "model": "Me parece una coartada cómoda: puede ser cierto, pero no te exime de responsabilidad sobre lo que haces tú." },
+        { "q": "¿A quién llamas cuando necesitas que alguien te diga lo que no quieres oír?", "model": "A una antigua jefa que nunca me ha dorado la píldora; me molesta escucharla, pero casi siempre acaba teniendo razón." }
+      ],
+      "gaps": "Te digo que no firmes nada sin una [cláusula] que te [garantice] publicar, salgan los [resultados] como [salgan].",
+      "glossary": [
+        { "word": "meter la pata", "meaning": "equivocarse, cometer un error" },
+        { "word": "derecho preferente", "meaning": "prioridad sobre los demás para usar o comprar algo" },
+        { "word": "escrúpulos", "meaning": "dudas morales que impiden hacer algo poco ético" },
+        { "word": "cláusula", "meaning": "cada una de las condiciones de un contrato" }
+      ]
+    },
+    {
+      "id": "opinion",
+      "title": "Línea abierta: la luna y las gemelas",
+      "place": "Las setas gemelas",
+      "context": "La radio del bosque emite desde las setas gemelas. Una oyente veterana llama al programa y un micólogo la escucha en el estudio.",
+      "speakers": [
+        { "name": "Leonor", "country": "Costa Rica", "voice": "es-CR-MariaNeural" },
+        { "name": "Doña Remedios", "country": "Bolivia", "voice": "es-BO-SofiaNeural" },
+        { "name": "Ulises", "country": "Perú", "voice": "es-PE-AlexNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Seguimos en «Línea abierta» desde la parada de las setas gemelas. Tenemos en línea a doña Remedios, que lleva cincuenta años recogiendo en esta zona. Adelante, doña Remedios." },
+        { "s": 1, "text": "Buenas tardes, mi hija. Yo quería decir que todo esto de los carteles y los cursos está muy bien, pero las gemelas se distinguen como se ha hecho siempre: la buena sale con luna creciente y la mala, con menguante." },
+        { "s": 0, "text": "Interesante. Tenemos aquí al micólogo Ulises Paredes, que seguramente tiene algo que añadir. Y digo «seguramente» por la cara que está poniendo." },
+        { "s": 2, "text": "Con todo el cariño, doña Remedios, las dos especies salen exactamente con la misma luna. Lo hemos comprobado durante seis temporadas." },
+        { "s": 1, "text": "Ustedes lo comprobarán con sus aparatos. Yo lo compruebo con cincuenta años y ningún muerto en la familia." },
+        { "s": 2, "text": "Y me alegro sinceramente. Pero puede que lo que funcione no sea la luna, sino que usted recoge solo en un rincón donde la mala casi no crece." },
+        { "s": 1, "text": "Eso puede ser. Ese rincón lo encontró mi madre, y su madre antes que ella." },
+        { "s": 0, "text": "O sea, que el secreto no está en el cielo, sino en el mapa." },
+        { "s": 1, "text": "El secreto está en no contarle a la radio dónde está el rincón, mi hija." },
+        { "s": 2, "text": "Pues mire, en eso coincidimos plenamente: si lo cuenta, mañana lo arrasan." },
+        { "s": 0, "text": "Fíjense: la ciencia y la tradición de acuerdo por primera vez en este programa, y ha sido para no decir nada. Seguimos después de la pausa." }
+      ],
+      "choice": [
+        { "q": "¿Qué enfrenta, en principio, a doña Remedios y al micólogo?", "options": ["La creencia de que la luna permite distinguir las setas gemelas", "El precio de los cursos de recolección", "La ubicación de los nuevos carteles"], "answer": 0 },
+        { "q": "¿Qué insinúa la locutora al decir «por la cara que está poniendo»?", "options": ["Que el micólogo está aburrido", "Que el micólogo no está nada de acuerdo con la oyente", "Que el micólogo se ha quedado dormido"], "answer": 1 },
+        { "q": "¿Qué hipótesis ofrece Ulises para explicar el éxito de doña Remedios?", "options": ["Que ella tiene un olfato excepcional", "Que su familia ha tenido mucha suerte", "Que recoge en un lugar donde casi no crece la especie peligrosa"], "answer": 2 },
+        { "q": "¿Por qué el acuerdo final resulta irónico?", "options": ["Porque coinciden solo en guardar un secreto, no en el fondo del debate", "Porque la locutora no está de acuerdo con ninguno", "Porque al final el micólogo acepta lo de la luna"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Puede una creencia equivocada producir buenos resultados? Pon un ejemplo.", "model": "Sí: mi abuela no dejaba bañarse después de comer por miedo a un «corte de digestión»; la causa era dudosa, pero nos obligaba a descansar." },
+        { "q": "¿Debería compartirse el conocimiento local sobre la naturaleza o es mejor guardarlo?", "model": "Lo ideal sería documentarlo sin revelar ubicaciones exactas: se conserva el saber sin entregar el lugar a quien lo vaya a esquilmar." },
+        { "q": "¿Cómo discutirías con alguien mayor que defiende una tradición que te parece falsa?", "model": "Empezaría por reconocer lo que su experiencia acierta y solo después matizaría la explicación; atacar de frente no convence a nadie." }
+      ],
+      "gaps": "Pero puede que lo que [funcione] no sea la [luna], sino que usted recoge solo en un [rincón] donde la mala casi no [crece].",
+      "glossary": [
+        { "word": "luna creciente", "meaning": "fase en la que la parte iluminada de la luna aumenta" },
+        { "word": "menguante", "meaning": "fase en la que la parte iluminada de la luna disminuye" },
+        { "word": "arrasan", "meaning": "destruyen o se llevan todo" },
+        { "word": "mi hija", "meaning": "forma cariñosa de dirigirse a una mujer más joven" }
+      ]
+    },
+    {
+      "id": "recuerdos",
+      "title": "Discurso del treinta aniversario de la reserva",
+      "place": "El sombrero gigante",
+      "context": "Sobre el sombrero gigante se celebra el aniversario de la reserva. Una de las fundadoras da un discurso ante vecinos y autoridades.",
+      "speakers": [
+        { "name": "Doña Consuelo", "country": "El Salvador", "voice": "es-SV-LorenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas tardes, autoridades, vecinos, y también los que han subido hasta el sombrero gigante solo por el refrigerio, que no los culpo. Me han pedido que recuerde cómo nació la reserva, hace treinta años, y lo voy a hacer, aunque algunos de los presentes preferirían que mi memoria flaqueara un poquito." },
+        { "s": 0, "text": "Corría el noventa y seis. Media ladera estaba marcada para talar, y las máquinas ya estaban en el camino. Un grupo de mujeres del pueblo nos plantamos delante, con termos de café y muy poca idea de lo que hacíamos. Hubo quien nos llamó locas, y no voy a decir quién, porque hoy está sentado en primera fila y ha tenido el detalle de pagar estas empanadas." },
+        { "s": 0, "text": "El caso es que, contra todo pronóstico, aguantamos once días. Y el día doce llegó una carta del ministerio protegiendo el bosque. Desde entonces, curiosamente, todo el mundo estuvo siempre a favor de la reserva. Es asombroso lo bien que envejecen ciertas opiniones." },
+        { "s": 0, "text": "No lo digo con rencor, ¿eh? Al contrario: hacen falta los que se oponen para que los demás sepamos lo que valemos. Así que gracias, señor alcalde, por las empanadas, y por haber cambiado de bando a tiempo. Y gracias, sobre todo, a este bosque, que nos ha aguantado a todos sin quejarse, que no es poco." }
+      ],
+      "choice": [
+        { "q": "¿Qué tono predomina en el discurso?", "options": ["Solemne y completamente agradecido", "Conmemorativo, pero cargado de ironía", "Triste y lleno de reproches abiertos"], "answer": 1 },
+        { "q": "¿A quién se refiere cuando dice que alguien las llamó «locas»?", "options": ["A un periodista que estaba presente", "A una de las mujeres del grupo", "Al actual alcalde, sentado en primera fila"], "answer": 2 },
+        { "q": "¿Qué quiere decir con «Es asombroso lo bien que envejecen ciertas opiniones»?", "options": ["Que muchos que se oponían ahora dicen que siempre la apoyaron", "Que las personas mayores tienen opiniones más sabias", "Que la reserva ha mejorado mucho con los años"], "answer": 0 },
+        { "q": "¿Qué ambigüedad hay en el agradecimiento final al alcalde?", "options": ["Que no se sabe si va a volver a presentarse", "Que no queda claro si las empanadas le gustaron", "Que es a la vez un agradecimiento cortés y un reproche por su oportunismo"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Conoces a alguien que haya «cambiado de bando a tiempo»? ¿Cómo lo juzgas?", "model": "En mi barrio, un concejal que se opuso al carril bici ahora se hace fotos en él; me molesta su oportunismo, pero prefiero eso a que siguiera en contra." },
+        { "q": "¿Es útil la ironía en un acto público o es una falta de respeto?", "model": "Bien dosificada, permite decir verdades incómodas sin romper la convivencia; el problema es cuando se convierte en una forma elegante de humillar." },
+        { "q": "¿Qué causa colectiva de tu entorno crees que dentro de treinta años se recordará con orgullo?", "model": "Seguramente la lucha de los vecinos por salvar el mercado del barrio; hoy los tachan de nostálgicos, pero dentro de unas décadas se verá como algo visionario." }
+      ],
+      "gaps": "Así que gracias, señor [alcalde], por las [empanadas], y por haber cambiado de [bando] a [tiempo].",
+      "glossary": [
+        { "word": "refrigerio", "meaning": "comida ligera que se ofrece en un acto" },
+        { "word": "flaqueara", "meaning": "perdiera fuerza o fallara" },
+        { "word": "talar", "meaning": "cortar árboles por la base" },
+        { "word": "contra todo pronóstico", "meaning": "aunque nadie lo esperaba" },
+        { "word": "cambiado de bando", "meaning": "pasado a apoyar al grupo contrario" }
+      ]
+    },
+    {
+      "id": "futuro",
+      "title": "La frase vetada sobre el futuro del roble",
+      "place": "La copa del roble",
+      "context": "En la copa del roble, una narradora graba la voz de un documental. El director la interrumpe: el patrocinador ha puesto pegas al texto.",
+      "speakers": [
+        { "name": "Gaspar", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Celia", "country": "Argentina", "voice": "es-AR-ElenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Corta. Celia, la voz perfecta, pero el texto otra vez. Lo de «dentro de cincuenta años, este roble podría no ser más que un recuerdo» lo ha vetado el patrocinador." },
+        { "s": 1, "text": "¿Vetado? Si es lo que dicen los propios científicos." },
+        { "s": 0, "text": "Ya, pero la aseguradora que nos financia prefiere un tono, ¿cómo lo dijeron?, «esperanzador y orientado a soluciones»." },
+        { "s": 1, "text": "Ah, claro. Entonces lo leo así: «dentro de cincuenta años, gracias al compromiso de todos, este roble seguirá siendo un recuerdo, pero en vivo»." },
+        { "s": 0, "text": "Celia, no me lo pongas más difícil." },
+        { "s": 1, "text": "No, si te lo estoy poniendo facilísimo. Les doy lo que piden y que cada uno lo entienda como pueda." },
+        { "s": 0, "text": "Mira, la semana pasada la productora casi nos cancela. Si cedemos aquí, salvamos el resto: lo de la niebla, lo de los hongos de repisa, todo." },
+        { "s": 1, "text": "¿Y cuánto vale exactamente una frase? Porque esa es la que la gente iba a recordar." },
+        { "s": 0, "text": "Vale menos que noventa minutos que nadie ve porque no se terminaron." },
+        { "s": 1, "text": "Ese argumento es muy bueno y lo odio." },
+        { "s": 0, "text": "Hagamos una cosa: en el texto, pones su versión. Y en la última imagen, la copa del roble sin una palabra. Treinta segundos de silencio." },
+        { "s": 1, "text": "Treinta segundos de silencio en un documental financiado por una aseguradora. Eso sí que es subversivo." },
+        { "s": 0, "text": "El silencio no se puede vetar, Celia." },
+        { "s": 1, "text": "No los subestimes. Pero vale, graba. Desde el principio." }
+      ],
+      "choice": [
+        { "q": "¿Qué conflicto se plantea en la grabación?", "options": ["La narradora no sabe pronunciar algunas palabras", "El patrocinador quiere suavizar un mensaje pesimista sobre el futuro del roble", "El director quiere cambiar de narradora"], "answer": 1 },
+        { "q": "¿Qué hace Celia con su versión «esperanzadora» del texto?", "options": ["La parodia para mostrar lo absurdo de la petición", "La acepta con entusiasmo", "Propone una frase con datos científicos"], "answer": 0 },
+        { "q": "¿Por qué Gaspar está dispuesto a ceder?", "options": ["Porque cree que la frase era exagerada", "Porque la aseguradora le ha ofrecido más dinero", "Porque teme que, si no cede, el documental no se termine"], "answer": 2 },
+        { "q": "¿Qué sugiere Celia con «No los subestimes»?", "options": ["Que el público entenderá el mensaje sin palabras", "Que los patrocinadores son capaces de censurar hasta el silencio", "Que los científicos tienen más poder que la aseguradora"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Es aceptable ceder en un detalle para salvar un proyecto entero? ¿Dónde pondrías el límite?", "model": "Lo aceptaría si el detalle no desvirtúa el mensaje central; si lo que me piden es justamente callar lo esencial, prefiero que el proyecto no salga." },
+        { "q": "¿Cómo influyen los patrocinadores en lo que vemos en los medios sobre el medio ambiente?", "model": "Influyen más por omisión que por mentira: rara vez te dicen algo falso, pero deciden con mucho cuidado de qué no se habla." },
+        { "q": "¿Puede el silencio o lo no dicho comunicar más que las palabras? Da un ejemplo.", "model": "Sí: en un funeral, el minuto de silencio dice más que cualquier discurso, porque cada uno lo llena con lo que siente." }
+      ],
+      "gaps": "Hagamos una cosa: en el texto, pones su [versión]. Y en la última [imagen], la copa del roble sin una [palabra]. Treinta segundos de [silencio].",
+      "glossary": [
+        { "word": "vetado", "meaning": "prohibido por alguien con poder para decidir" },
+        { "word": "aseguradora", "meaning": "empresa de seguros" },
+        { "word": "cedemos", "meaning": "aceptamos algo contra nuestra voluntad para evitar un conflicto" },
+        { "word": "subversivo", "meaning": "que va en contra del orden o del poder establecido" },
+        { "word": "subestimes", "meaning": "pienses que alguien es menos capaz de lo que es" }
+      ]
+    },
+    {
+      "id": "compara",
+      "title": "Ensayo en voz alta desde la gruta",
+      "place": "La gruta luminosa",
+      "context": "Un ensayista graba un episodio de su pódcast desde la gruta luminosa. Compara dos maneras de mirar los hongos que brillan.",
+      "speakers": [
+        { "name": "Rodolfo", "country": "Nicaragua", "voice": "es-NI-FedericoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hoy grabo desde la gruta luminosa, a veinticinco metros sobre el suelo del bosque, y quiero comparar dos maneras de mirar lo mismo." },
+        { "s": 0, "text": "La primera me la enseñó una bióloga. Ella entra, apaga la linterna y empieza a recitar: luciferina, luciferasa, oxígeno; el brillo es una reacción química, probablemente para atraer insectos que dispersen las esporas. Lo explica con tal precisión que, al terminar, uno siente que la gruta le cabe en el bolsillo." },
+        { "s": 0, "text": "La segunda me la enseñó un viejo del pueblo, que se niega a entrar con linterna. Dice que los hongos brillan para que los muertos encuentren el camino de vuelta, y lo dice sin pestañear, con la misma seguridad que la bióloga." },
+        { "s": 0, "text": "Lo fácil sería decir que una tiene razón y el otro no. Pero me pasó algo curioso: después de escuchar a la bióloga, dejé de ver la gruta; veía fórmulas. Y después de escuchar al viejo, dejé de ver la gruta; veía fantasmas. Ninguno de los dos, en el fondo, me dejó mirar." },
+        { "s": 0, "text": "Así que la tercera vez entré solo, sin explicaciones, y me quedé un buen rato a oscuras. No saqué ninguna conclusión. Quizá la luz no necesitaba que yo la entendiera, ni que la creyera. Quizá solo necesitaba que me callara un rato. Que es, por cierto, lo que voy a hacer ahora mismo." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es la idea central del episodio?", "options": ["Que la explicación científica es superior a la tradicional", "Que tanto la ciencia como la leyenda pueden impedir mirar de verdad", "Que el viejo del pueblo tiene razón sobre los muertos"], "answer": 1 },
+        { "q": "¿Qué quiere decir con que «la gruta le cabe en el bolsillo»?", "options": ["Que la explicación la reduce a algo pequeño y controlado", "Que la gruta es mucho más pequeña de lo que parece", "Que se puede llevar un hongo luminoso a casa"], "answer": 0 },
+        { "q": "¿Qué tienen en común la bióloga y el viejo, según el narrador?", "options": ["Los dos usan linterna", "Los dos trabajan en el parque", "Los dos hablan con la misma seguridad"], "answer": 2 },
+        { "q": "¿Cómo termina el ensayo?", "options": ["Con una conclusión científica sobre la luciferina", "Con la decisión de no volver a la gruta", "Con un gesto coherente con su idea: callarse"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Crees que conocer la explicación científica de algo le quita parte de su magia?", "model": "A mí me pasa lo contrario: saber cómo funciona un arcoíris no me lo estropea; me añade una capa más de asombro." },
+        { "q": "¿Recuerdas algún lugar o momento que preferiste vivir sin explicaciones?", "model": "Un concierto en una lengua que no entendía; sin poder seguir la letra, escuché la música de otra manera, casi con el cuerpo." },
+        { "q": "¿Qué leyenda de tu país explica un fenómeno natural? ¿Te parece valiosa aunque no sea cierta?", "model": "En mi región se dice que las tormentas de verano son peleas entre dos montañas; es falso, pero dice mucho de cómo la gente miraba su paisaje." }
+      ],
+      "gaps": "Pero me pasó algo curioso: después de escuchar a la [bióloga], dejé de ver la gruta; veía [fórmulas]. Y después de escuchar al [viejo], dejé de ver la gruta; veía [fantasmas].",
+      "glossary": [
+        { "word": "recitar", "meaning": "decir algo de memoria, en voz alta" },
+        { "word": "dispersen", "meaning": "repartan, lleven en distintas direcciones" },
+        { "word": "sin pestañear", "meaning": "con total tranquilidad y seguridad, sin dudar" },
+        { "word": "a oscuras", "meaning": "sin ninguna luz" }
+      ]
+    },
+    {
+      "id": "cambia",
+      "title": "El alpinista que se lo pensó dos veces",
+      "place": "La escalera de niebla",
+      "context": "Al pie de la escalera de niebla, un alpinista famoso intenta convencer a la guarda de turno para subir de noche y grabarlo para sus patrocinadores.",
+      "speakers": [
+        { "name": "Rodrigo Saldaña", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Teresa", "country": "Guinea Ecuatorial", "voice": "es-GQ-TeresaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Teresa, mujer, que tengo a tres patrocinadores esperando y una cámara en el casco. Subo la escalera de niebla de noche, la grabo, y en dos horas estoy abajo." },
+        { "s": 1, "text": "Señor Saldaña, aquí no se sube de noche. Ni usted, ni el presidente, ni mi abuela con un dron." },
+        { "s": 0, "text": "Yo he subido cumbres de seis mil metros. Con todo respeto, esto es una escalera de hongos." },
+        { "s": 1, "text": "Exacto. Y las cumbres de seis mil metros no se doblan cuando se apoya en ellas un señor con mochila. Estos escalones, sí. Con la humedad de la noche, son como esponjas." },
+        { "s": 0, "text": "Bueno, pues firmo lo que haga falta. Bajo mi responsabilidad." },
+        { "s": 1, "text": "Su responsabilidad no vuelve a poner en pie un hongo fantasma de doscientos años. Ni me quita a mí la de bajarlo a usted en camilla." },
+        { "s": 0, "text": "Vale, vale. Entendido. Dejémoslo. Ya lo grabaré otro día, de día, como un turista más." },
+        { "s": 1, "text": "Se lo agradezco de corazón." },
+        { "s": 0, "text": "Por cierto, ¿a qué hora hacen ustedes el cambio de turno?" },
+        { "s": 1, "text": "A las once. ¿Por qué?" },
+        { "s": 0, "text": "Por nada, curiosidad profesional. Uno se fija en esas cosas." },
+        { "s": 1, "text": "Ya. Pues fíjese también en esto: a las once entra mi hermano, y él es bastante menos simpático que yo. No tiene abuela con dron, pero tiene perro." },
+        { "s": 0, "text": "Entonces, mejor de día, sin duda. Me lo ha dejado clarísimo." },
+        { "s": 1, "text": "Eso espero, señor Saldaña. Eso espero." }
+      ],
+      "choice": [
+        { "q": "¿Qué pretende el alpinista?", "options": ["Que la guarda lo acompañe a la cumbre", "Subir de noche la escalera para grabarla para sus patrocinadores", "Denunciar el mal estado de los escalones"], "answer": 1 },
+        { "q": "¿Qué argumento usa Teresa para negarse?", "options": ["Que de noche los escalones húmedos se dañan con el peso", "Que el alpinista no tiene experiencia", "Que el parque no permite cámaras"], "answer": 0 },
+        { "q": "¿Qué revela la pregunta sobre el cambio de turno?", "options": ["Que quiere invitar a Teresa a cenar", "Que piensa volver otro día con un permiso", "Que su renuncia era fingida y busca un momento para colarse"], "answer": 2 },
+        { "q": "¿Cómo interpreta el final?", "options": ["Teresa está convencida de que él ha cambiado de idea de verdad", "Él ha entendido la advertencia, pero Teresa no está del todo segura", "Teresa le da permiso para subir con su hermano"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Crees que la fama o el dinero hacen que algunas personas se crean por encima de las normas?", "model": "Sin duda; cuanto más acostumbrado estás a que te digan que sí, más te parece un error administrativo que alguien te diga que no." },
+        { "q": "¿Qué haces cuando sospechas que alguien finge haber cambiado de opinión?", "model": "Intento no acusarle directamente, pero dejo claras las consecuencias, como hace la guarda; así le doy una salida sin perder la autoridad." },
+        { "q": "¿Es más importante proteger un lugar frágil o permitir que se dé a conocer al mundo?", "model": "Proteger primero; un lugar destruido no se da a conocer, se recuerda. La difusión tiene sentido solo si no pone en juego lo que se difunde." }
+      ],
+      "gaps": "Y las cumbres de seis mil metros no se [doblan] cuando se apoya en ellas un señor con [mochila]. Estos [escalones], sí. Con la humedad de la noche, son como [esponjas].",
+      "glossary": [
+        { "word": "patrocinadores", "meaning": "empresas que pagan a alguien a cambio de publicidad" },
+        { "word": "camilla", "meaning": "cama portátil para llevar a heridos o enfermos" },
+        { "word": "cambio de turno", "meaning": "momento en que un trabajador termina y empieza otro" },
+        { "word": "se lo agradezco de corazón", "meaning": "le doy las gracias sinceramente" }
+      ]
+    }
+  ]
+}

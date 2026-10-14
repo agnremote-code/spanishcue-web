@@ -1,0 +1,298 @@
+{
+  "game": "casino",
+  "level": "A2",
+  "items": [
+    {
+      "id": "portero",
+      "title": "La última noche de Ernesto",
+      "place": "La entrada",
+      "context": "Rocco, el portero, recuerda con Valentina la noche en que su padre desapareció.",
+      "speakers": [
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" },
+        { "name": "Rocco", "country": "Argentina", "voice": "es-AR-TomasNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Rocco, ¿tú conociste bien a mi padre?" },
+        { "s": 1, "text": "Claro. Trabajó aquí doce años, en la ruleta. Era el crupier más simpático del casino." },
+        { "s": 0, "text": "¿Y por qué se fue?" },
+        { "s": 1, "text": "Bueno... nadie lo sabe. La última noche llegó tarde, muy nervioso. Habló con Don Aurelio en el tercer piso. Luego bajó, me dio la mano y me dijo: «Rocco, cuida la puerta». Eran las tres de la mañana." },
+        { "s": 0, "text": "¿Y después?" },
+        { "s": 1, "text": "Después tomó un taxi y nunca volvió. Yo guardé su gorra durante años. Mira, todavía la tengo aquí." },
+        { "s": 0, "text": "Ay, Rocco... Gracias." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Rocco y Valentina?", "options": ["De la última noche de Ernesto en el casino", "Del primer día de Rocco en el trabajo", "De un taxi que llegó tarde"], "answer": 0 },
+        { "q": "¿Cuántos años trabajó Ernesto en el casino?", "options": ["Tres años", "Doce años", "Dos años"], "answer": 1 },
+        { "q": "¿Con quién habló Ernesto la última noche?", "options": ["Con Rocco, en la ruleta", "Con un taxista", "Con Don Aurelio, en el tercer piso"], "answer": 2 },
+        { "q": "¿Qué guardó Rocco?", "options": ["La gorra de Ernesto", "Una carta de Ernesto", "Una ficha de Ernesto"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Guardas algún objeto de una persona importante para ti? ¿Cuál?", "model": "Sí, guardo el reloj de mi abuelo. Me lo dio antes de morir." },
+        { "q": "¿Alguna vez una persona se fue de tu vida sin explicar por qué?", "model": "Sí, un amigo del colegio. Un día se mudó y nunca más me llamó." },
+        { "q": "¿Quién era la persona más simpática de tu primer trabajo?", "model": "Era la cocinera. Siempre me guardaba un café y me contaba chistes." }
+      ],
+      "gaps": "Luego [bajó], me dio la [mano] y me dijo: «Rocco, cuida la [puerta]». Eran las [tres] de la mañana.",
+      "glossary": [
+        { "word": "crupier", "meaning": "persona que trabaja en una mesa de juego del casino" },
+        { "word": "nervioso", "meaning": "que no está tranquilo, que tiene miedo o estrés" },
+        { "word": "gorra", "meaning": "sombrero pequeño, como el de un uniforme" },
+        { "word": "cuida", "meaning": "del verbo cuidar: proteger, mirar que todo esté bien" }
+      ]
+    },
+    {
+      "id": "ruleta",
+      "title": "Andrés y la última vuelta",
+      "place": "Ruleta",
+      "context": "Al lado de la ruleta, un hombre sentado en el suelo le cuenta a Valentina su noche.",
+      "speakers": [
+        { "name": "Andrés", "country": "El Salvador", "voice": "es-SV-RodrigoNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Sabes qué? Ayer llegué con quinientos dólares. Solo quería jugar un rato." },
+        { "s": 1, "text": "¿Y qué pasó?" },
+        { "s": 0, "text": "Al principio gané. ¡Dos mil dólares en una hora! Estaba feliz, invité a todo el mundo a champán." },
+        { "s": 1, "text": "¿Y por qué no te fuiste a dormir?" },
+        { "s": 0, "text": "Porque pensé: «Una vuelta más y me voy». Y luego otra, y otra... A las cinco de la mañana no tenía nada. Ni el dinero del hotel." },
+        { "s": 1, "text": "Ay, no... ¿Y ahora qué vas a hacer?" },
+        { "s": 0, "text": "Voy a llamar a mi hermana. Ella siempre me ayuda. Pero esta vez me da mucha vergüenza." }
+      ],
+      "choice": [
+        { "q": "¿Qué cuenta Andrés?", "options": ["Cómo ganó un viaje", "Cómo se quedó sin dinero", "Cómo conoció a su hermana"], "answer": 1 },
+        { "q": "¿Con cuánto dinero llegó Andrés?", "options": ["Con dos mil dólares", "Con cinco mil dólares", "Con quinientos dólares"], "answer": 2 },
+        { "q": "¿Qué hizo Andrés cuando estaba ganando?", "options": ["Invitó a todos a champán", "Se fue al hotel", "Llamó a su hermana"], "answer": 0 },
+        { "q": "¿Cómo se siente Andrés al final?", "options": ["Contento", "Avergonzado", "Aburrido"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez dijiste «solo un poco más» y no pudiste parar? ¿Qué pasó?", "model": "Sí, con una serie. Dije «un capítulo más» y vi toda la temporada." },
+        { "q": "¿A quién llamas cuando tienes un problema de dinero?", "model": "Llamo a mi hermano mayor. Él siempre me presta dinero." },
+        { "q": "¿Qué harías con dos mil dólares extra?", "model": "Me gustaría viajar a Cuba con mi novia." }
+      ],
+      "gaps": "Porque pensé: «Una [vuelta más] y me voy». Y luego otra, y otra... A las [cinco] de la mañana no tenía [nada]. Ni el dinero del [hotel].",
+      "glossary": [
+        { "word": "un rato", "meaning": "poco tiempo" },
+        { "word": "vuelta", "meaning": "cada vez que gira la ruleta" },
+        { "word": "vergüenza", "meaning": "sentimiento malo cuando hiciste algo que no está bien" },
+        { "word": "todo el mundo", "meaning": "todas las personas" }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Un audio de mamá",
+      "place": "Bar central",
+      "context": "Sentada en el bar, Valentina escucha un mensaje de voz de su madre.",
+      "speakers": [
+        { "name": "Gloria", "country": "Puerto Rico", "voice": "es-PR-KarinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hija, soy mamá. Vi tu mensaje y no me gustó nada. ¿Las Vegas? ¿En serio?" },
+        { "s": 0, "text": "Tu papá también empezó así: un viaje, una noche, una ficha... y después no volvió más." },
+        { "s": 0, "text": "Mira, Valentina, yo no te conté todo. Él no se fue por otra mujer. Se fue por una deuda. Una deuda muy grande, con gente peligrosa." },
+        { "s": 0, "text": "Por favor, no subas al tercer piso. Toma algo en el bar, duerme un poco y mañana vuelve a casa. Te quiero mucho. Llámame, ¿sí?" }
+      ],
+      "choice": [
+        { "q": "¿Qué quiere la madre de Valentina?", "options": ["Que Valentina vuelva a casa", "Que Valentina busque a su padre", "Que Valentina le compre algo"], "answer": 0 },
+        { "q": "¿Cómo se siente la madre con el viaje a Las Vegas?", "options": ["Contenta", "Tranquila", "Preocupada"], "answer": 2 },
+        { "q": "Según la madre, ¿por qué se fue el padre?", "options": ["Por otra mujer", "Por una deuda", "Por un trabajo nuevo"], "answer": 1 },
+        { "q": "¿Adónde no debe ir Valentina?", "options": ["Al bar", "Al tercer piso", "A la ruleta"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tu familia te cuenta todo o hay secretos?", "model": "Creo que hay algunos secretos. Mi abuela nunca habla de su primer marido." },
+        { "q": "¿Qué te dice tu madre o tu padre cuando haces un viaje?", "model": "Siempre me dice: «Ten cuidado y llámame cuando llegues»." },
+        { "q": "¿Alguna vez hiciste algo que tu familia no quería? ¿Qué pasó?", "model": "Sí, me fui a vivir a otra ciudad. Al principio mis padres se enfadaron, pero después lo entendieron." }
+      ],
+      "gaps": "Él no se fue por otra [mujer]. Se fue por una [deuda]. Una deuda muy [grande], con gente [peligrosa].",
+      "glossary": [
+        { "word": "¿En serio?", "meaning": "expresión de sorpresa: ¿es verdad?" },
+        { "word": "deuda", "meaning": "dinero que tienes que devolver a otra persona" },
+        { "word": "peligrosa", "meaning": "que puede hacer daño" }
+      ]
+    },
+    {
+      "id": "poker",
+      "title": "La regla de los cien dólares",
+      "place": "Salón Esmeralda",
+      "context": "En el salón de póker, el Holandés invita a Valentina a su mesa y le cuenta su regla.",
+      "speakers": [
+        { "name": "El Holandés", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Quieres jugar, señorita? Hay una silla libre." },
+        { "s": 1, "text": "No sé jugar muy bien. Oye, ¿tú juegas todas las noches?" },
+        { "s": 0, "text": "Sí, desde hace treinta años. Pero tengo una regla: nunca juego con más de cien dólares." },
+        { "s": 1, "text": "¿Por qué?" },
+        { "s": 0, "text": "Porque en mil novecientos noventa y ocho, en esta misma mesa, aposté mi casa. Yo tenía una escalera de color. Él tenía una escalera real." },
+        { "s": 1, "text": "¡Uf! ¿Y qué hiciste?" },
+        { "s": 0, "text": "Esa noche no tenía dónde dormir. Mi mujer se fue con los niños a casa de su madre. Ahora juego poco, gano poco y duermo tranquilo." }
+      ],
+      "choice": [
+        { "q": "¿De qué habla el Holandés?", "options": ["De su regla para jugar", "De su viaje a Holanda", "De sus hijos"], "answer": 0 },
+        { "q": "¿Cuánto dinero juega como máximo?", "options": ["Mil dólares", "Treinta dólares", "Cien dólares"], "answer": 2 },
+        { "q": "¿Qué apostó en mil novecientos noventa y ocho?", "options": ["Su coche", "Su casa", "Su reloj"], "answer": 1 },
+        { "q": "¿Cómo es su vida ahora?", "options": ["Gana mucho y no duerme", "Juega poco y vive tranquilo", "No juega nunca"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes una regla personal con el dinero? ¿Cuál?", "model": "Sí. Nunca compro ropa el mismo día que la veo. Espero una semana." },
+        { "q": "¿Qué es lo más arriesgado que hiciste en tu vida?", "model": "Dejé mi trabajo y me fui a vivir a España sin conocer a nadie." },
+        { "q": "¿Qué te ayuda a dormir tranquilo?", "model": "No tener deudas y hablar con mi pareja antes de dormir." }
+      ],
+      "gaps": "Ahora [juego poco], [gano poco] y [duermo] [tranquilo].",
+      "glossary": [
+        { "word": "regla", "meaning": "norma, algo que haces siempre" },
+        { "word": "aposté", "meaning": "del verbo apostar: jugar dinero o cosas para intentar ganar más" },
+        { "word": "escalera real", "meaning": "la mejor combinación de cartas en el póker" },
+        { "word": "silla libre", "meaning": "un sitio donde no hay nadie sentado" }
+      ]
+    },
+    {
+      "id": "teatro",
+      "title": "Pancho se escapó del camerino",
+      "place": "Camerino del teatro",
+      "context": "Daniela, la asistente del mago, llega al camerino con una mala noticia.",
+      "speakers": [
+        { "name": "Daniela", "country": "Guatemala", "voice": "es-GT-MartaNeural" },
+        { "name": "Faustino", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Faustino, tengo una mala noticia. Pancho no está." },
+        { "s": 1, "text": "¿Cómo que no está? Ayer estaba en su caja." },
+        { "s": 0, "text": "Sí, pero anoche dejé la caja abierta. Lo siento mucho. Lo busqué por todo el piso: en el bufé, en el club, en el teatro..." },
+        { "s": 1, "text": "¿Y?" },
+        { "s": 0, "text": "Al final, una señora lo vio en la capilla. Estaba debajo del altar, comiendo las flores de una novia." },
+        { "s": 1, "text": "¡No me digas! ¿Y la novia qué hizo?" },
+        { "s": 0, "text": "Bueno, al principio gritó, pero después le gustó. Ahora quiere a Pancho en las fotos de la boda." },
+        { "s": 1, "text": "Ja, ja. Pues vamos a buscarlo, que el show empieza en veinte minutos." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el problema?", "options": ["La novia no quiere casarse", "El conejo del mago se escapó", "El show empieza tarde"], "answer": 1 },
+        { "q": "¿Por qué se escapó Pancho?", "options": ["Porque Daniela dejó la caja abierta", "Porque Faustino lo llevó a la capilla", "Porque tenía mucha hambre"], "answer": 0 },
+        { "q": "¿Dónde estaba Pancho?", "options": ["En el bufé", "En el club", "En la capilla"], "answer": 2 },
+        { "q": "¿Qué quiere ahora la novia?", "options": ["Dinero por las flores", "Fotos de la boda con Pancho", "Ver el show de magia"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez perdiste un animal o una cosa importante? ¿La encontraste?", "model": "Sí, mi perro se escapó una vez. Lo encontré dos días después en el parque." },
+        { "q": "¿Cómo reaccionas cuando algo sale mal antes de un evento importante?", "model": "Me pongo muy nerviosa, pero después busco una solución." },
+        { "q": "¿Qué cosa rara o divertida pasó en una boda que recuerdas?", "model": "En la boda de mi prima, el novio se cayó en la piscina." }
+      ],
+      "gaps": "Al final, una señora lo vio en la [capilla]. Estaba debajo del [altar], comiendo las [flores] de una [novia].",
+      "glossary": [
+        { "word": "anoche", "meaning": "ayer por la noche" },
+        { "word": "altar", "meaning": "mesa especial en una iglesia o capilla" },
+        { "word": "¡No me digas!", "meaning": "expresión de sorpresa" },
+        { "word": "gritó", "meaning": "del verbo gritar: hablar muy fuerte" }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "El marido de la camisa de flores",
+      "place": "Capilla «Amor Exprés»",
+      "context": "Una recién casada entra corriendo en la capilla y busca a Elvis.",
+      "speakers": [
+        { "name": "Marta", "country": "España", "voice": "es-ES-XimenaNeural" },
+        { "name": "Elvis", "country": "Puerto Rico", "voice": "es-PR-VictorNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Elvis! ¿Has visto a mi marido? Alto, con una camisa de flores." },
+        { "s": 1, "text": "¿Tu marido? Pero si se casaron hace una hora..." },
+        { "s": 0, "text": "¡Exacto! Después de la boda me dijo: «Voy al baño, mi amor». Y no volvió." },
+        { "s": 1, "text": "Tranquila, a lo mejor está en el bar." },
+        { "s": 0, "text": "No. Lo llamé y tiene el móvil apagado. Y lo peor: tiene mi tarjeta de crédito. Hace diez minutos el banco me mandó un mensaje: dos mil dólares en la ruleta." },
+        { "s": 1, "text": "Ay, mi amor, lo siento mucho. Aquí las bodas son muy rápidas... pero los divorcios también." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tiene Marta?", "options": ["No encuentra la capilla", "Su marido desapareció", "No tiene dinero para la boda"], "answer": 1 },
+        { "q": "¿Cuándo se casaron?", "options": ["Hace una hora", "Ayer", "Hace diez minutos"], "answer": 0 },
+        { "q": "¿Qué dijo el marido antes de irse?", "options": ["Que iba al bar", "Que iba a la ruleta", "Que iba al baño"], "answer": 2 },
+        { "q": "¿Qué hizo el marido con la tarjeta de Marta?", "options": ["Pagó la boda", "Compró una camisa", "Jugó dos mil dólares"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Crees que es buena idea casarse muy rápido? ¿Por qué?", "model": "No. Creo que necesitas conocer bien a la otra persona primero." },
+        { "q": "¿Compartes tu tarjeta o tus contraseñas con tu pareja?", "model": "No, nunca. Cada uno tiene su dinero." },
+        { "q": "¿Qué harías en la situación de Marta?", "model": "Primero llamaría al banco y después iría a la ruleta a buscarlo." }
+      ],
+      "gaps": "Lo llamé y tiene el [móvil apagado]. Y lo peor: tiene mi [tarjeta] de [crédito]. Hace diez minutos el [banco] me mandó un mensaje: dos mil dólares en la ruleta.",
+      "glossary": [
+        { "word": "marido", "meaning": "el hombre con quien estás casada" },
+        { "word": "a lo mejor", "meaning": "quizás, es posible" },
+        { "word": "apagado", "meaning": "que no está funcionando" },
+        { "word": "divorcios", "meaning": "cuando un matrimonio termina de forma oficial" }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Tano llama al jefe",
+      "place": "La puerta VIP",
+      "context": "Cerca de la puerta VIP, Valentina escucha a Tano, el guardaespaldas, hablando por teléfono con Don Aurelio.",
+      "speakers": [
+        { "name": "Tano", "country": "Colombia", "voice": "es-CO-GonzaloNeural" },
+        { "name": "Don Aurelio", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Jefe, soy Tano. La chica llegó. La del vestido rojo." },
+        { "s": 1, "text": "¿Tiene la ficha?" },
+        { "s": 0, "text": "Sí, la ficha dorada. La vi con mis propios ojos. Vino a la puerta hace una hora, pero no sabía la contraseña." },
+        { "s": 1, "text": "Bien. ¿Y qué le dijiste?" },
+        { "s": 0, "text": "Le dije: «Vuelve a medianoche». ¿Hice bien?" },
+        { "s": 1, "text": "Sí. Escucha, Tano: cuando vuelva, déjala pasar. Con contraseña o sin contraseña." },
+        { "s": 0, "text": "¿Sin contraseña? Pero, jefe, usted siempre dice que..." },
+        { "s": 1, "text": "Ya sé lo que digo. Esa chica es la hija de Ernesto. Su padre me debe algo. O yo le debo algo a él. Todavía no lo sé." }
+      ],
+      "choice": [
+        { "q": "¿De quién hablan Tano y Don Aurelio?", "options": ["De Valentina", "De Ernesto", "De otro guardaespaldas"], "answer": 0 },
+        { "q": "¿Qué tiene la chica?", "options": ["Una llave", "Una ficha dorada", "Una invitación"], "answer": 1 },
+        { "q": "¿Qué le dice Don Aurelio a Tano?", "options": ["Que no la deje pasar", "Que le pida la contraseña", "Que la deje pasar"], "answer": 2 },
+        { "q": "¿Qué no sabe Don Aurelio?", "options": ["Quién es el padre de la chica", "Quién le debe algo a quién", "Dónde está la chica"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez alguien te dejó entrar a un lugar sin las reglas normales?", "model": "Sí, en un concierto. Mi amigo conocía al portero y entramos gratis." },
+        { "q": "¿Es fácil para ti decir «no» a tu jefe?", "model": "No, es difícil. Normalmente digo que sí y después me arrepiento." },
+        { "q": "¿Le debes un favor a alguien? ¿A quién?", "model": "Sí, a mi vecina. Cuidó a mi gato todo el verano." }
+      ],
+      "gaps": "Sí. Escucha, Tano: cuando [vuelva], [déjala] [pasar]. Con contraseña o sin [contraseña].",
+      "glossary": [
+        { "word": "jefe", "meaning": "la persona que manda en un trabajo" },
+        { "word": "con mis propios ojos", "meaning": "yo mismo lo vi, es seguro" },
+        { "word": "debe", "meaning": "del verbo deber: tener que devolver algo a alguien" }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Marco quería ser músico",
+      "place": "Terraza sobre el Strip",
+      "context": "En la terraza, Valentina conoce a Marco Montalbán, el hijo del dueño del casino.",
+      "speakers": [
+        { "name": "Marco", "country": "Venezuela", "voice": "es-VE-SebastianNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Tú también subes aquí a fumar?" },
+        { "s": 1, "text": "No, no fumo. Vengo por la vista. Es increíble." },
+        { "s": 0, "text": "Sí... De niño subía aquí todas las noches. Miraba las luces del Strip y soñaba con ser músico." },
+        { "s": 1, "text": "¿Y qué pasó?" },
+        { "s": 0, "text": "Pasó mi padre. A los dieciocho años me mandó a Nueva York a estudiar administración. Ahora llevo las cuentas del casino." },
+        { "s": 1, "text": "¿Y la música?" },
+        { "s": 0, "text": "Todavía toco la guitarra, pero solo aquí, en la terraza, cuando todos duermen." },
+        { "s": 1, "text": "Pues a mí me gustaría escucharte un día." },
+        { "s": 0, "text": "¿De verdad? Oye... ¿y quién eres tú? Nunca te he visto por aquí." }
+      ],
+      "choice": [
+        { "q": "¿De qué habla Marco?", "options": ["De su sueño de niño", "De su novia", "De un concierto en el Strip"], "answer": 0 },
+        { "q": "¿Por qué está Valentina en la terraza?", "options": ["Para fumar", "Para ver la vista", "Para buscar a Marco"], "answer": 1 },
+        { "q": "¿Qué estudió Marco?", "options": ["Música", "Turismo", "Administración"], "answer": 2 },
+        { "q": "¿Cuándo toca Marco la guitarra?", "options": ["En el teatro, los sábados", "Cuando todos duermen", "Nunca"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué querías ser de niño o de niña?", "model": "Quería ser bombero, pero ahora soy contable." },
+        { "q": "¿Tus padres decidieron cosas importantes por ti?", "model": "Sí, mi madre eligió mi universidad. Yo quería estudiar arte." },
+        { "q": "¿Tienes un lugar especial adonde vas para pensar?", "model": "Sí, una playa pequeña cerca de mi casa. Voy al atardecer." }
+      ],
+      "gaps": "De niño [subía] aquí todas las noches. [Miraba] las [luces] del Strip y soñaba con ser [músico].",
+      "glossary": [
+        { "word": "la vista", "meaning": "lo que ves desde un lugar alto" },
+        { "word": "soñaba con", "meaning": "del verbo soñar: deseaba mucho algo" },
+        { "word": "llevo las cuentas", "meaning": "controlo el dinero que entra y sale" }
+      ]
+    }
+  ]
+}

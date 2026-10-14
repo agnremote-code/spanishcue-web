@@ -1,0 +1,309 @@
+{
+  "game": "reino",
+  "level": "A2",
+  "items": [
+    {
+      "id": "ines",
+      "title": "El viajero de la pluma dorada",
+      "place": "La posada de la aldea",
+      "context": "Por la mañana, Marcelo, un vecino, pasa por la posada. Quiere saber quién era el hombre raro de anoche.",
+      "speakers": [
+        { "name": "Inés", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Marcelo", "country": "Bolivia", "voice": "es-BO-MarceloNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Inés, ¿quién era el hombre raro de anoche? El del sombrero verde." },
+        { "s": 0, "text": "¡Ay, Marcelo! No sé. Llegó a las once, muy tarde, y estaba empapado." },
+        { "s": 1, "text": "¿Y qué pidió?" },
+        { "s": 0, "text": "Tres sopas. ¡Tres! Y después durmió dos horas en la silla, al lado del fuego." },
+        { "s": 1, "text": "¿Y pagó?" },
+        { "s": 0, "text": "Bueno... no exactamente. No tenía monedas. Me dio una pluma dorada y me dijo: «Guárdala, un día la vas a necesitar»." },
+        { "s": 1, "text": "¿Una pluma? Qué tacaño." },
+        { "s": 0, "text": "Eso pensé yo. Pero esta mañana la pluma estaba brillando. Y el molino giró un minuto." },
+        { "s": 1, "text": "¿En serio? ¿Y el hombre?" },
+        { "s": 0, "text": "Se fue antes del amanecer. Por la ventana." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Inés y Marcelo?", "options": ["De un viajero raro que llegó anoche", "De la fiesta de la aldea", "De un robo en la posada"], "answer": 0 },
+        { "q": "¿Cuántas sopas pidió el viajero?", "options": ["Una", "Dos", "Tres"], "answer": 2 },
+        { "q": "¿Cómo pagó el viajero?", "options": ["Con monedas de oro", "Con una pluma dorada", "Con una canción"], "answer": 1 },
+        { "q": "¿Qué pasó esta mañana?", "options": ["La pluma brillaba y el molino giró un minuto", "El viajero volvió a la posada", "Marcelo encontró el sombrero verde"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez hablaste con una persona muy rara? ¿Cómo era?", "model": "Sí, en un tren hablé con un señor que viajaba con un loro en el hombro." },
+        { "q": "¿Qué haces cuando un amigo no puede pagar?", "model": "Pago yo y él me invita la próxima vez." },
+        { "q": "¿Tienes un objeto especial que guardas desde hace años?", "model": "Sí, guardo una piedra de una playa de mi infancia." }
+      ],
+      "gaps": "Pero esta mañana la [pluma] estaba [brillando]. Y el [molino] giró un [minuto].",
+      "glossary": [
+        { "word": "anoche", "meaning": "la noche de ayer" },
+        { "word": "empapado", "meaning": "muy mojado" },
+        { "word": "tacaño", "meaning": "persona que no quiere pagar ni gastar" },
+        { "word": "amanecer", "meaning": "el momento en que sale el sol" }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "La llave escondida en el pan",
+      "place": "La herrería junto al molino",
+      "context": "Bruno está muy preocupado. Lucía, su ayudante, llega con un pan de la posada.",
+      "speakers": [
+        { "name": "Bruno", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Lucía", "country": "Costa Rica", "voice": "es-CR-MariaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Bruno, ¿qué te pasa? Tienes cara de preocupado." },
+        { "s": 0, "text": "Ay, Lucía. La llave del castillo desapareció. La busqué toda la mañana: en la herrería, en el molino, debajo de la cama..." },
+        { "s": 1, "text": "¿Y fuiste a la posada? Ayer estuviste allí con Inés." },
+        { "s": 0, "text": "Sí, fui a desayunar. Pero no la vi." },
+        { "s": 1, "text": "Mira, Inés me dio este pan esta mañana. Pesa mucho, ¿no?" },
+        { "s": 0, "text": "Es verdad... A ver... ¡Aquí está! ¡La llave estaba dentro del pan!" },
+        { "s": 1, "text": "¿Cómo llegó ahí?" },
+        { "s": 0, "text": "Creo que se cayó en la masa cuando Inés estaba cocinando. ¡Qué suerte!" },
+        { "s": 1, "text": "Bueno, Bruno, desde hoy la llevas en el cuello." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tiene Bruno?", "options": ["Se rompió su martillo", "No encuentra la llave del castillo", "El molino no gira"], "answer": 1 },
+        { "q": "¿Dónde buscó Bruno la llave?", "options": ["En la herrería, en el molino y debajo de la cama", "En el bosque y en el puente", "En la torre y en el jardín"], "answer": 0 },
+        { "q": "¿Dónde estaba la llave?", "options": ["En la cama", "En la mesa de la posada", "Dentro del pan"], "answer": 2 },
+        { "q": "¿Qué le recomienda Lucía a Bruno?", "options": ["Hacer otra llave", "Llevar la llave en el cuello", "Darle la llave a Inés"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez perdiste algo importante? ¿Dónde lo encontraste?", "model": "Sí, una vez no encontraba mis llaves y estaban en el refrigerador." },
+        { "q": "¿Dónde guardas tus llaves?", "model": "Las guardo en una caja al lado de la puerta." },
+        { "q": "¿Eres una persona ordenada o desordenada?", "model": "Soy un poco desordenado, pero mi cuarto está limpio." }
+      ],
+      "gaps": "La busqué toda la [mañana]: en la [herrería], en el [molino], debajo de la [cama]...",
+      "glossary": [
+        { "word": "preocupado", "meaning": "nervioso por un problema" },
+        { "word": "masa", "meaning": "mezcla de harina y agua para hacer pan" },
+        { "word": "qué suerte", "meaning": "expresión para algo bueno que pasa por casualidad" },
+        { "word": "cuello", "meaning": "parte del cuerpo entre la cabeza y los hombros" }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "Radio Bosque: las noticias de la semana",
+      "place": "El claro del bosque",
+      "context": "Liora tiene un pequeño programa de radio para los animales y los vecinos del bosque.",
+      "speakers": [
+        { "name": "Liora", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Buenas noches! Aquí Radio Bosque, con Liora. Estas son las noticias de la semana." },
+        { "s": 0, "text": "El lunes, las luciérnagas volvieron a brillar... solo un minuto, pero todos lo vimos." },
+        { "s": 0, "text": "El martes, el oso Gregorio perdió su sombrero en el río. Dos ardillas lo encontraron y ahora lo usan como barco." },
+        { "s": 0, "text": "El miércoles llovió mucho y el camino al puente desapareció otra vez. Por eso, si van al puente esta semana, lleven una linterna y caminen despacio." },
+        { "s": 0, "text": "Y una noticia triste: el búho del sauce ya no da consejos gratis. Ahora cobra una nuez." }
+      ],
+      "choice": [
+        { "q": "¿Qué tipo de audio es?", "options": ["Una conversación entre amigas", "Una clase de magia", "Las noticias de la radio del bosque"], "answer": 2 },
+        { "q": "¿Qué pasó el lunes?", "options": ["El oso perdió su sombrero", "Las luciérnagas brillaron un minuto", "Llovió mucho"], "answer": 1 },
+        { "q": "¿Qué hacen las ardillas con el sombrero?", "options": ["Lo usan como barco", "Lo llevan en la cabeza", "Se lo devuelven al oso"], "answer": 0 },
+        { "q": "¿Qué cambió con el búho?", "options": ["Ya no habla", "Se fue del bosque", "Ahora cobra por sus consejos"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Qué noticia buena pasó en tu semana?", "model": "El viernes encontré un trabajo nuevo." },
+        { "q": "¿Escuchas la radio? ¿Cuándo?", "model": "Sí, la escucho en el auto por la mañana." },
+        { "q": "¿A quién le pides consejos?", "model": "Le pido consejos a mi madre." }
+      ],
+      "gaps": "El martes, el oso [Gregorio] perdió su [sombrero] en el [río]. Dos [ardillas] lo encontraron y ahora lo usan como barco.",
+      "glossary": [
+        { "word": "ardillas", "meaning": "animales pequeños del bosque con una cola grande" },
+        { "word": "despacio", "meaning": "lento, sin prisa" },
+        { "word": "sauce", "meaning": "árbol que crece cerca del agua" },
+        { "word": "consejos", "meaning": "ideas para ayudar a otra persona" },
+        { "word": "cobra", "meaning": "pide dinero o algo a cambio" }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "Por qué Sir Aldren pregunta tanto",
+      "place": "El puente de Sir Aldren",
+      "context": "Lorenzo, un joven viajero, quiere cruzar. Antes, le pregunta a Sir Aldren por qué es tan desconfiado.",
+      "speakers": [
+        { "name": "Sir Aldren", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Lorenzo", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Sir Aldren, ¿por qué hace tantas preguntas a los viajeros?" },
+        { "s": 0, "text": "Por una historia vieja, muchacho. Hace cien años, una noche de tormenta, llegó una mujer con una capa gris." },
+        { "s": 1, "text": "¿Y qué quería?" },
+        { "s": 0, "text": "Quería pasar al castillo. Me dijo que era una amiga de la princesa y que traía un regalo." },
+        { "s": 1, "text": "¿Y usted la dejó pasar?" },
+        { "s": 0, "text": "Sí. Estaba mojada, temblaba de frío... Me dio pena. Bajé el puente. Una hora después, las espinas cubrieron el castillo." },
+        { "s": 1, "text": "Entonces era la Tejedora." },
+        { "s": 0, "text": "Exacto. Por eso ahora pregunto, y pregunto, y vuelvo a preguntar." },
+        { "s": 1, "text": "Bueno... ¿puedo pasar yo?" },
+        { "s": 0, "text": "Primero dime: ¿qué llevas en esa mochila?" }
+      ],
+      "choice": [
+        { "q": "¿Qué explica Sir Aldren?", "options": ["Por qué ahora hace muchas preguntas", "Cómo construyó el puente", "Por qué no le gustan las tormentas"], "answer": 0 },
+        { "q": "¿Cómo era la mujer?", "options": ["Llevaba una corona de oro", "Era una niña pequeña", "Llevaba una capa gris"], "answer": 2 },
+        { "q": "¿Por qué la dejó pasar?", "options": ["Porque ella pagó mucho", "Porque le dio pena", "Porque era la reina"], "answer": 1 },
+        { "q": "¿Qué pasó una hora después?", "options": ["Las espinas cubrieron el castillo", "La mujer volvió al puente", "Empezó la tormenta"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Confías rápido en las personas?", "model": "No, primero hablo mucho con ellas." },
+        { "q": "¿Alguna vez ayudaste a una persona desconocida? ¿Qué pasó?", "model": "Sí, ayudé a una señora con sus maletas en el metro y después tomamos un café." },
+        { "q": "¿Qué llevas normalmente en tu mochila?", "model": "Llevo mi computadora, agua y un libro." }
+      ],
+      "gaps": "Hace cien años, una noche de [tormenta], llegó una [mujer] con una [capa] [gris].",
+      "glossary": [
+        { "word": "muchacho", "meaning": "chico joven" },
+        { "word": "capa", "meaning": "ropa larga sin mangas que se lleva encima de todo" },
+        { "word": "temblaba", "meaning": "se movía sin control por el frío o el miedo" },
+        { "word": "me dio pena", "meaning": "me puso triste verla así" }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "El misterio de las rosas comidas",
+      "place": "Los jardines reales",
+      "context": "Celina manda un mensaje de voz urgente a Baltasar, el mago de la biblioteca.",
+      "speakers": [
+        { "name": "Celina", "country": "Perú", "voice": "es-PE-CamilaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Baltasar, soy Celina. Necesito tu ayuda, es urgente." },
+        { "s": 0, "text": "Anoche alguien entró en el jardín y se comió... sí, se comió diez rosas blancas." },
+        { "s": 0, "text": "Esta mañana encontré huellas pequeñas, con dos dedos, al lado del muro. Primero pensé en un monstruo. Después busqué en tus libros y no encontré nada." },
+        { "s": 0, "text": "Pero hace un rato escuché un ruido detrás de la fuente: era una cabra. Una cabra blanca, gordita y muy contenta." },
+        { "s": 0, "text": "Así que no necesito un hechizo. Necesito una cuerda. ¿Tienes una?" }
+      ],
+      "choice": [
+        { "q": "¿Por qué manda Celina el mensaje?", "options": ["Para invitar a Baltasar al jardín", "Porque alguien se comió sus rosas", "Porque perdió un libro"], "answer": 1 },
+        { "q": "¿Qué rosas faltan?", "options": ["Diez rosas blancas", "Dos rosas rojas", "Diez rosas rojas"], "answer": 0 },
+        { "q": "¿Dónde escuchó Celina el ruido?", "options": ["Al lado del muro", "En la biblioteca", "Detrás de la fuente"], "answer": 2 },
+        { "q": "¿Qué necesita Celina ahora?", "options": ["Un hechizo", "Una cuerda", "Un libro de monstruos"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes jardín o plantas? ¿Quién las cuida?", "model": "Tengo tres plantas en el balcón y las cuido yo." },
+        { "q": "¿Alguna vez un animal hizo algo malo en tu casa?", "model": "Sí, mi perro se comió mi zapato nuevo." },
+        { "q": "¿Prefieres mandar mensajes de voz o escribir?", "model": "Prefiero los mensajes de voz porque es más rápido." }
+      ],
+      "gaps": "Esta mañana encontré [huellas] pequeñas, con dos [dedos], al lado del [muro]. Primero pensé en un [monstruo].",
+      "glossary": [
+        { "word": "urgente", "meaning": "muy importante, para ahora mismo" },
+        { "word": "huellas", "meaning": "marcas de los pies en el suelo" },
+        { "word": "cabra", "meaning": "animal de granja con cuernos que come de todo" },
+        { "word": "cuerda", "meaning": "objeto largo y fino para atar cosas o animales" }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "¿Quién se llevó el libro de los dragones?",
+      "place": "La biblioteca del castillo",
+      "context": "Falta un libro en la biblioteca. Baltasar le pregunta a Nox, el cuervo, quién vino esta semana.",
+      "speakers": [
+        { "name": "Baltasar", "country": "Cuba", "voice": "es-CU-ManuelNeural" },
+        { "name": "Nox", "country": "Venezuela", "voice": "es-VE-SebastianNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Nox, falta un libro. El libro de los dragones. ¿Lo viste?" },
+        { "s": 1, "text": "¿Yo? No, no. Bueno... el martes vino Teobaldo y estuvo mucho tiempo en esa mesa." },
+        { "s": 0, "text": "Teobaldo siempre devuelve los libros. Siempre." },
+        { "s": 1, "text": "Es verdad. Ah, y el miércoles vino Celina, pero buscaba un libro de plantas." },
+        { "s": 0, "text": "Mmm. ¿Y ayer?" },
+        { "s": 1, "text": "Ayer no vino nadie. Bueno, nadie... vino Brum. Entró por la ventana, porque no cabe por la puerta." },
+        { "s": 0, "text": "¿Brum? ¿El dragón? ¿Y qué hizo?" },
+        { "s": 1, "text": "Leyó un rato, se puso un poco triste y se fue volando. Con algo debajo del ala." },
+        { "s": 0, "text": "Ay, pobre Brum. Seguro quería saber si hay otros dragones como él." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema hay en la biblioteca?", "options": ["Hay un dragón dentro", "Nox está enfermo", "Falta un libro"], "answer": 2 },
+        { "q": "¿Qué buscaba Celina el miércoles?", "options": ["Un libro de dragones", "Un libro de plantas", "Un libro de cocina"], "answer": 1 },
+        { "q": "¿Por dónde entró Brum?", "options": ["Por la ventana", "Por la puerta", "Por la torre"], "answer": 0 },
+        { "q": "¿Qué piensa Baltasar al final?", "options": ["Que Brum es un ladrón", "Que Teobaldo tiene el libro", "Que Brum quería saber si hay otros dragones"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Vas a la biblioteca? ¿Qué libros te gustan?", "model": "Sí, voy los sábados. Me gustan las novelas de misterio." },
+        { "q": "¿Devuelves siempre las cosas que te prestan?", "model": "Casi siempre, pero una vez tuve el libro de un amigo dos años." },
+        { "q": "¿Alguna vez te sentiste diferente de los demás? ¿Cuándo?", "model": "Sí, el primer día en una escuela nueva, porque no conocía a nadie." }
+      ],
+      "gaps": "Leyó un [rato], se puso un poco [triste] y se fue [volando]. Con algo debajo del [ala].",
+      "glossary": [
+        { "word": "falta", "meaning": "no está, no hay" },
+        { "word": "devuelve", "meaning": "trae otra vez algo que le prestaron" },
+        { "word": "cabe", "meaning": "puede entrar en un espacio" },
+        { "word": "ala", "meaning": "parte del cuerpo de un pájaro o un dragón para volar" }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "Teobaldo, el chico de los recados",
+      "place": "La galería del castillo",
+      "context": "Tania, una niña de la aldea, le pregunta a Teobaldo cómo era su vida de niño en el castillo.",
+      "speakers": [
+        { "name": "Teobaldo", "country": "Uruguay", "voice": "es-UY-MateoNeural" },
+        { "name": "Tania", "country": "Paraguay", "voice": "es-PY-TaniaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Teobaldo, ¿cómo era el castillo cuando eras niño?" },
+        { "s": 0, "text": "Uf, era muy diferente. Había música todos los días y las cocinas olían a canela." },
+        { "s": 1, "text": "¿Y tú qué hacías?" },
+        { "s": 0, "text": "Yo era el chico de los recados. Llevaba cartas de una torre a otra. Subía doscientas escaleras al día." },
+        { "s": 1, "text": "¡Doscientas! ¿Y te gustaba?" },
+        { "s": 0, "text": "Me encantaba, porque leía todas las cartas por el camino." },
+        { "s": 1, "text": "¡Teobaldo! Eso no se hace." },
+        { "s": 0, "text": "Ya lo sé. Un día el rey me descubrió. Pero no se enojó: me dio un cuaderno y me dijo: «Si te gustan tanto las historias, escríbelas». Así empezó mi trabajo de cronista." }
+      ],
+      "choice": [
+        { "q": "¿De qué habla Teobaldo?", "options": ["De su infancia en el castillo", "De sus vacaciones", "De la noche de la tormenta"], "answer": 0 },
+        { "q": "¿Qué trabajo tenía de niño?", "options": ["Cocinero", "Jardinero", "Chico de los recados"], "answer": 2 },
+        { "q": "¿Por qué le gustaba su trabajo?", "options": ["Porque ganaba mucho dinero", "Porque leía las cartas", "Porque le gustaba subir escaleras"], "answer": 1 },
+        { "q": "¿Qué hizo el rey?", "options": ["Le dio un cuaderno", "Lo castigó en la torre", "Le quitó el trabajo"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cómo era tu casa cuando eras niño o niña?", "model": "Era pequeña, con un patio y muchos gatos." },
+        { "q": "¿Qué hacías después de la escuela?", "model": "Jugaba al fútbol con mis primos en la calle." },
+        { "q": "¿Qué trabajo querías tener de pequeño?", "model": "Quería ser astronauta, pero ahora soy profesora." }
+      ],
+      "gaps": "Llevaba [cartas] de una [torre] a otra. Subía [doscientas] [escaleras] al día.",
+      "glossary": [
+        { "word": "canela", "meaning": "especia marrón con olor dulce" },
+        { "word": "recados", "meaning": "mensajes o cosas que llevas a otra persona" },
+        { "word": "se enojó", "meaning": "se puso enfadado" },
+        { "word": "cuaderno", "meaning": "libro con hojas blancas para escribir" }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "El sueño largo de la princesa",
+      "place": "La torre de la princesa",
+      "context": "Elara ya está despierta. Brum, el dragón, quiere saber qué soñó durante tantos años.",
+      "speakers": [
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" },
+        { "name": "Brum", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Princesa, ¿qué soñaste en todos estos años?" },
+        { "s": 0, "text": "Fue un sueño muy largo y muy raro, Brum. Al principio estaba en un barco en medio del mar." },
+        { "s": 1, "text": "¿Sola?" },
+        { "s": 0, "text": "No, con un gato que hablaba francés. Después el barco se convirtió en una biblioteca enorme y yo buscaba un libro con mi nombre." },
+        { "s": 1, "text": "¿Y lo encontraste?" },
+        { "s": 0, "text": "No. Pero en la última parte del sueño escuché una voz que me hacía preguntas. Preguntas sobre mi vida, mis gustos... Y cada vez que yo contestaba, entraba un poco de luz." },
+        { "s": 1, "text": "Esa voz era la persona que vino a ayudarte." },
+        { "s": 0, "text": "Lo sé. Y quiero darle las gracias." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Elara y Brum?", "options": ["De la fiesta del reino", "Del sueño de Elara", "Del fuego de Brum"], "answer": 1 },
+        { "q": "¿Dónde estaba Elara al principio del sueño?", "options": ["En un barco", "En una biblioteca", "En el jardín"], "answer": 0 },
+        { "q": "¿Qué hacía el gato?", "options": ["Cantaba", "Volaba", "Hablaba francés"], "answer": 2 },
+        { "q": "¿Qué pasaba cuando Elara contestaba las preguntas?", "options": ["El gato desaparecía", "Entraba un poco de luz", "Encontraba el libro"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Recuerdas un sueño raro? ¿Qué pasaba?", "model": "Sí, una vez soñé que mi perro era profesor de matemáticas." },
+        { "q": "¿Duermes bien normalmente?", "model": "Sí, duermo ocho horas, pero los domingos duermo mal." },
+        { "q": "¿A quién quieres dar las gracias esta semana? ¿Por qué?", "model": "A mi amiga Carla, porque me ayudó con la mudanza." }
+      ],
+      "gaps": "Preguntas sobre mi [vida], mis [gustos]... Y cada vez que yo [contestaba], entraba un poco de [luz].",
+      "glossary": [
+        { "word": "al principio", "meaning": "en la primera parte" },
+        { "word": "se convirtió", "meaning": "cambió y fue otra cosa" },
+        { "word": "enorme", "meaning": "muy grande" },
+        { "word": "contestaba", "meaning": "respondía" }
+      ]
+    }
+  ]
+}

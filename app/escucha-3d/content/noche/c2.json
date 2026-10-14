@@ -1,0 +1,329 @@
+{
+  "game": "noche",
+  "level": "C2",
+  "items": [
+    {
+      "id": "cafe",
+      "title": "Un cortado con segundas intenciones",
+      "place": "Café Martina",
+      "context": "Lorena, directora creativa, se encuentra por casualidad con Gustavo, un antiguo compañero de agencia.",
+      "speakers": [
+        { "name": "Gustavo", "country": "Venezuela", "voice": "es-VE-SebastianNeural" },
+        { "name": "Lorena", "country": "El Salvador", "voice": "es-SV-LorenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Lorena! No me lo puedo creer. ¿Cuánto tiempo? ¿Tres años?" },
+        { "s": 1, "text": "Cuatro, desde que cerraron la agencia. Te veo estupendo, Gustavo. Muy... descansado." },
+        { "s": 0, "text": "Bueno, ya sabes, uno se reinventa. Ahora soy freelance, que es una forma elegante de decir que trabajo cuando me llaman. ¿Y tú? Me contaron que ahora eres directora creativa." },
+        { "s": 1, "text": "Uy, las noticias vuelan. Sí, desde enero. Mucho título y poca vida, no te creas." },
+        { "s": 0, "text": "Me imagino. Oye, y ya que estamos... ¿no estarán buscando gente, por casualidad? No lo digo por mí, ¿eh? Es por un amigo." },
+        { "s": 1, "text": "Ah, claro, por un amigo. ¿Y ese amigo sigue entregando los proyectos con dos semanas de retraso y una excusa poética?" },
+        { "s": 0, "text": "Ese amigo ha madurado muchísimo. Ahora las excusas son en prosa." },
+        { "s": 1, "text": "Mira, no te voy a vender humo. Hay una vacante, pero quien decide no soy yo, es mi socio. Y mi socio es Álvaro." },
+        { "s": 0, "text": "¿Álvaro? ¿El mismo Álvaro al que le dije en la cena de Navidad que tenía el gusto de un aeropuerto?" },
+        { "s": 1, "text": "El mismo. Y tiene memoria de elefante. Pero bueno, mándame el portafolio y yo se lo paso. Lo que pase después ya no está en mis manos." },
+        { "s": 0, "text": "Eso suena a «ni lo sueñes» dicho con cariño." },
+        { "s": 1, "text": "Eso suena a que me toca pagar a mí los cortados, como siempre. Hay cosas que no cambian." }
+      ],
+      "choice": [
+        { "q": "¿Qué busca realmente Gustavo en esta conversación?", "options": ["Recuperar la amistad con Lorena", "Conseguir trabajo en la empresa de Lorena", "Pedirle dinero prestado"], "answer": 1 },
+        { "q": "¿Qué insinúa Lorena con «Muy... descansado»?", "options": ["Que sospecha que tiene poco trabajo", "Que lo ve más joven que antes", "Que parece haber dormido bien"], "answer": 0 },
+        { "q": "¿Por qué Álvaro complica las cosas?", "options": ["Porque la empresa no tiene presupuesto", "Porque él también quiere el puesto", "Porque Gustavo lo ofendió en el pasado"], "answer": 2 },
+        { "q": "¿Cómo interpreta Gustavo la última respuesta de Lorena sobre el portafolio?", "options": ["Como una promesa firme", "Como una broma sin importancia", "Como un rechazo amable"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez has usado la fórmula «es para un amigo» para pedir algo para ti? ¿Por qué se hace?", "model": "Más de una vez, sí. Es una manera de pedir sin exponerse del todo: si te dicen que no, el rechazo se lo lleva el amigo imaginario." },
+        { "q": "¿Recomendarías a un excompañero poco fiable si te lo pidiera? ¿Hasta dónde llegarías?", "model": "Le pasaría el currículum, como Lorena, pero sin poner la mano en el fuego por él; mi reputación también está en juego." },
+        { "q": "¿Crees que un comentario desafortunado puede cerrarte puertas años después?", "model": "Sin duda. La gente olvida los favores con una facilidad pasmosa, pero los desplantes los guarda con memoria de elefante." }
+      ],
+      "gaps": "Mira, no te voy a vender [humo]. Hay una [vacante], pero quien [decide] no soy yo, es mi [socio].",
+      "glossary": [
+        { "word": "las noticias vuelan", "meaning": "la información se difunde muy rápido" },
+        { "word": "vender humo", "meaning": "prometer cosas que no son reales" },
+        { "word": "memoria de elefante", "meaning": "memoria excelente, sobre todo para las ofensas" },
+        { "word": "no está en mis manos", "meaning": "no depende de mí" },
+        { "word": "ni lo sueñes", "meaning": "es imposible, no va a pasar" }
+      ]
+    },
+    {
+      "id": "departamento",
+      "title": "El audio de la madre de Vale",
+      "place": "Departamento de Vale",
+      "context": "Mientras llegan los primeros invitados, Vale escucha en la cocina un audio de su madre.",
+      "speakers": [
+        { "name": "Gladys", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, mi amor. No, no me llames, que ya sé que estás ocupadísima con tu fiestecita. Solo te quería decir feliz cumpleaños. Treinta años, quién lo diría. Yo a los treinta ya tenía dos hijas y una hipoteca, pero bueno, cada una a su ritmo, ¿no? Eso dice tu tía, que es muy moderna y que, por cierto, tampoco se ha casado nunca." },
+        { "s": 0, "text": "Oye, y no te preocupes porque no me invitaste, de verdad, yo entiendo perfectamente que es una cosa de jóvenes. Además, yo con esta rodilla ya no estoy para trotes. Aunque el médico dice que estoy como una rosa, pero los médicos qué van a saber." },
+        { "s": 0, "text": "Ah, y te mandé un regalito por correo. Es una tontería, una cajita. Es el anillo de tu abuela. No es para que lo uses ahora, es para cuando sientes cabeza, si es que algún día lo haces, que yo no presiono, ¿eh? Tu prima Marcela ya se casó, por cierto, pero eso no tiene nada que ver, te lo cuento solo porque me acordé." },
+        { "s": 0, "text": "Bueno, ya. Pásala bien, cuídate, no tomes demasiado y, si a las doce te acuerdas de tu madre, aquí estoy, despierta, como siempre. Que no es un reproche, ¿eh? Es información. Un beso." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es la intención declarada del audio?", "options": ["Avisar de que va a ir a la fiesta", "Felicitar a Vale por su cumpleaños", "Pedirle a Vale que la llame enseguida"], "answer": 1 },
+        { "q": "¿Qué esconde el comentario sobre lo que ella tenía a los treinta?", "options": ["Una comparación que juzga la vida de Vale", "Admiración sincera por su hija", "Una crítica a la tía de Vale"], "answer": 0 },
+        { "q": "¿Qué contradicción aparece cuando habla de la rodilla?", "options": ["Dice que se operó, pero sigue cojeando", "Dice que irá a la fiesta, pero no puede caminar", "Se presenta como limitada, aunque el médico dice que está perfectamente"], "answer": 2 },
+        { "q": "¿Qué efecto tiene la frase «no es un reproche, es información»?", "options": ["Aclara que solo informa de la hora a la que se acuesta", "Niega el reproche justo mientras lo hace", "Indica que se va a dormir temprano"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Reconoces este tipo de mensajes con doble fondo en tu familia? Pon un ejemplo.", "model": "Mi abuela es especialista: «No, no vengas, que yo me apaño sola» significa exactamente lo contrario, y todos lo sabemos." },
+        { "q": "¿Cómo responderías tú a este audio si fueras Vale?", "model": "Le contestaría con humor, siguiéndole el juego, y la llamaría a las doce, aunque solo fuera para desarmarla." },
+        { "q": "¿Por qué crees que algunas personas prefieren insinuar en lugar de pedir directamente?", "model": "Porque pedir abiertamente las deja expuestas; si insinúan, pueden hacerse las ofendidas sin haber arriesgado nada." }
+      ],
+      "gaps": "No es para que lo uses ahora, es para cuando [sientes cabeza], si es que algún [día] lo [haces], que yo no [presiono], ¿eh?",
+      "glossary": [
+        { "word": "no estoy para trotes", "meaning": "ya no tengo energía para esfuerzos o actividades intensas" },
+        { "word": "como una rosa", "meaning": "en muy buen estado de salud" },
+        { "word": "sientes cabeza", "meaning": "de sentar cabeza: llevar una vida estable y formal" },
+        { "word": "reproche", "meaning": "crítica que se hace a alguien por lo que hizo o no hizo" }
+      ]
+    },
+    {
+      "id": "restaurante",
+      "title": "El crítico de la mesa seis",
+      "place": "Restaurante El Toldo",
+      "context": "En la cocina de El Toldo, la dueña y el cocinero descubren quién acaba de sentarse en la sala.",
+      "speakers": [
+        { "name": "Pilar", "country": "Perú", "voice": "es-PE-CamilaNeural" },
+        { "name": "Moisés", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Moisés, ven un segundo. No mires, pero el de la mesa seis, el de la bufanda... es Fermín Ochoa." },
+        { "s": 1, "text": "¿El crítico? ¿El que dijo que nuestro risotto era «un engrudo con pretensiones»?" },
+        { "s": 0, "text": "Ese mismo. Y acaba de pedir el pescado del día." },
+        { "s": 1, "text": "Pues estamos fritos, porque el pescado del día es de ayer. Lo sabes tú, lo sé yo y lo sabe el pescado." },
+        { "s": 0, "text": "Bueno, no nos pongamos dramáticos. Está perfecto, lo guardamos bien. Técnicamente, no le estaríamos mintiendo." },
+        { "s": 1, "text": "Técnicamente. Pilar, te conozco hace quince años. Cuando dices «técnicamente», es que ya sabes que no está bien." },
+        { "s": 0, "text": "Lo que sé es que, si le digo que se acabó, escribe que somos un restaurante que se queda sin lo básico a las nueve y media. Y si le sirvo el de ayer y se da cuenta, nos hunde. Estoy entre la espada y la pared." },
+        { "s": 1, "text": "Hay una tercera vía. Le digo que el pescado hoy no me convence y que, si se deja, le preparo algo fuera de carta. El guiso de mi abuela." },
+        { "s": 0, "text": "¿Le vas a servir a un crítico un guiso de abuela? ¿Te volviste loco?" },
+        { "s": 1, "text": "Mira, a ese hombre le han servido de todo. Lo único que no le han servido nunca es honestidad. A lo mejor eso lo agarra desprevenido." },
+        { "s": 0, "text": "O a lo mejor nos hace pedazos con muchísima elegancia. Bueno, venga. Pero si sale mal, el guiso lo firmas tú." }
+      ],
+      "choice": [
+        { "q": "¿Qué dilema plantea la escena?", "options": ["Si deben echar al crítico del restaurante", "Si deben servirle a un crítico un pescado del día anterior", "Si deben subir los precios esa noche"], "answer": 1 },
+        { "q": "¿Qué revela Moisés sobre la palabra «técnicamente»?", "options": ["Que Pilar la usa cuando sabe que algo no es correcto", "Que es un término profesional de cocina", "Que el crítico la usa mucho en sus reseñas"], "answer": 0 },
+        { "q": "¿En qué se basa la propuesta de Moisés?", "options": ["En mentir mejor sobre el pescado", "En cerrar la cocina antes de tiempo", "En sorprender al crítico con algo sincero y fuera de carta"], "answer": 2 },
+        { "q": "¿Qué actitud muestra Pilar al final?", "options": ["Rechaza la idea por completo", "Acepta con escepticismo y se cubre las espaldas", "Se entusiasma sin reservas"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Dónde pondrías tú el límite entre una pequeña omisión y un engaño al cliente?", "model": "Para mí, el límite está en si el cliente decidiría otra cosa de haberlo sabido; si es así, callarlo ya es engañar." },
+        { "q": "¿Te parece que la honestidad puede ser también una estrategia? ¿Pierde valor por eso?", "model": "Puede serlo, y no creo que pierda valor del todo: lo que importa es que lo que se ofrece sea verdad, aunque se ofrezca con cálculo." },
+        { "q": "¿Cuánto influyen en ti las críticas y reseñas a la hora de elegir un restaurante?", "model": "Bastante menos que antes; desconfío de las reseñas demasiado entusiastas y me fío más del boca a boca." }
+      ],
+      "gaps": "Y si le sirvo el de ayer y se da [cuenta], nos [hunde]. Estoy entre la [espada] y la [pared].",
+      "glossary": [
+        { "word": "engrudo", "meaning": "masa pegajosa; aquí, comida espesa y sin gracia" },
+        { "word": "estamos fritos", "meaning": "estamos en un problema grave" },
+        { "word": "entre la espada y la pared", "meaning": "sin buena salida, ante dos opciones malas" },
+        { "word": "fuera de carta", "meaning": "plato que no aparece en el menú" },
+        { "word": "hace pedazos", "meaning": "destrozar, criticar con mucha dureza" }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Cuarenta y un sábados en el mismo banco",
+      "place": "Plaza de la Fuente",
+      "context": "Una joven graba un pódcast sobre personajes del barrio y entrevista a un señor sentado junto a la fuente.",
+      "speakers": [
+        { "name": "Sofía", "country": "Uruguay", "voice": "es-UY-ValentinaNeural" },
+        { "name": "Don Aurelio", "country": "Panamá", "voice": "es-PA-RobertoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Estamos grabando para el pódcast del barrio. Don Aurelio, los vecinos dicen que usted se sienta en este banco todos los sábados desde hace cuarenta años. ¿Es verdad?" },
+        { "s": 1, "text": "Cuarenta y uno, pero quién lleva la cuenta. Yo, evidentemente." },
+        { "s": 0, "text": "¿Y se puede saber por qué?" },
+        { "s": 1, "text": "Se puede saber. Otra cosa es que yo lo cuente. Digamos que un sábado de mil novecientos ochenta y cinco quedé aquí con alguien a las nueve." },
+        { "s": 0, "text": "¿Y no vino?" },
+        { "s": 1, "text": "Eso dice la gente. Yo prefiero decir que todavía no ha llegado. Hay una diferencia." },
+        { "s": 0, "text": "Perdone, pero cuarenta y un años es mucho retraso." },
+        { "s": 1, "text": "Mire, señorita, el que espera no siempre espera a alguien. A veces espera para no tener que admitir que ya no hay nada que esperar. Y eso, a mi edad, se convierte en una costumbre, como el café o las quejas." },
+        { "s": 0, "text": "¿Y nunca pensó en ir a buscarla?" },
+        { "s": 1, "text": "¿Y quién le ha dicho a usted que era una mujer?" },
+        { "s": 0, "text": "Ah... perdone, yo di por sentado que..." },
+        { "s": 1, "text": "Todo el mundo da por sentadas muchas cosas. Por eso me siento aquí: desde este banco se ve muy bien cómo la gente se equivoca. Ahora, si me disculpa, son casi las nueve. Por si acaso." }
+      ],
+      "choice": [
+        { "q": "¿De qué trata la entrevista?", "options": ["De la historia de la fuente del barrio", "De un hombre que espera en el mismo banco desde hace décadas", "De las costumbres de los vecinos los sábados"], "answer": 1 },
+        { "q": "¿Qué matiz introduce don Aurelio con «todavía no ha llegado»?", "options": ["Que no acepta del todo que la cita fracasara", "Que la persona llegará esa misma noche", "Que se equivocó de hora en mil novecientos ochenta y cinco"], "answer": 0 },
+        { "q": "¿En qué se equivoca la entrevistadora?", "options": ["Confunde el año de la cita", "Lo llama por un nombre equivocado", "Da por sentado que esperaba a una mujer"], "answer": 2 },
+        { "q": "¿Qué deja entrever el final, «por si acaso»?", "options": ["Que tiene prisa por volver a casa", "Que teme que empiece a llover", "Que, a pesar de todo, conserva un resto de esperanza"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Crees, como don Aurelio, que a veces se espera para no tener que admitir algo? Pon un ejemplo.", "model": "Sí: hay quien sigue «esperando el momento» de cambiar de trabajo porque reconocer que nunca lo hará le resultaría insoportable." },
+        { "q": "¿Qué cosas das por sentadas sobre la gente que ves en la calle?", "model": "Muchas más de las que me gustaría admitir: la edad, la profesión, hasta el estado de ánimo, solo por cómo van vestidos." },
+        { "q": "¿Qué historia del barrio te gustaría contar en un pódcast?", "model": "La de una librería que lleva setenta años abierta sin cartel, a la que todo el mundo llega de boca en boca." }
+      ],
+      "gaps": "Mire, señorita, el que espera no siempre espera a [alguien]. A veces espera para no tener que [admitir] que ya no hay nada que [esperar]. Y eso, a mi edad, se convierte en una [costumbre], como el café o las quejas.",
+      "glossary": [
+        { "word": "quién lleva la cuenta", "meaning": "expresión para quitar importancia a un número, aquí con ironía" },
+        { "word": "quedé", "meaning": "del verbo quedar: hice una cita con alguien" },
+        { "word": "di por sentado", "meaning": "supuse algo sin comprobarlo" },
+        { "word": "por si acaso", "meaning": "para estar preparado si algo ocurre" }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Inspección a medianoche en La Persiana",
+      "place": "Bar La Persiana",
+      "context": "El bar está lleno hasta la puerta. Un inspector municipal pregunta por la encargada.",
+      "speakers": [
+        { "name": "Licenciado Pérez", "country": "Guatemala", "voice": "es-GT-AndresNeural" },
+        { "name": "Mónica", "country": "Ecuador", "voice": "es-EC-AndreaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas noches. Inspección municipal. ¿Usted es la encargada?" },
+        { "s": 1, "text": "La encargada, la dueña y, si me apura, la que limpia los baños. ¿En qué le puedo ayudar, licenciado?" },
+        { "s": 0, "text": "Recibimos una denuncia por exceso de aforo. Tiene ochenta personas autorizadas y, a ojo, aquí hay más de ciento veinte." },
+        { "s": 1, "text": "Ay, es que la gente se mueve mucho, cuesta contarla. Además, la mitad está en el baño, y el baño no cuenta, ¿no?" },
+        { "s": 0, "text": "El baño cuenta, señora. Todo cuenta." },
+        { "s": 1, "text": "Claro, claro. Oiga, y usted, ¿no es el hermano de Ramiro, el del taller? Qué chiquito es el mundo. Ramiro viene todos los jueves, le guardamos siempre la mesa del rincón." },
+        { "s": 0, "text": "No sé qué tiene que ver mi hermano con el aforo." },
+        { "s": 1, "text": "Nada, nada, Dios me libre. Solo digo que aquí cuidamos a la gente del barrio. ¿Le sirvo algo mientras redacta? Invita la casa." },
+        { "s": 0, "text": "Estoy de servicio." },
+        { "s": 1, "text": "Un agüita, entonces. El agua no es soborno, es hidratación." },
+        { "s": 0, "text": "Mire, voy a hacer como que no he oído esa palabra. Le doy veinte minutos para que salgan cuarenta personas. Si cuando vuelva esto sigue así, le pongo la multa, y no hay hermano que valga." },
+        { "s": 1, "text": "Veinte minutos. Perfecto. ¿Y si salen treinta y cinco?" },
+        { "s": 0, "text": "Señora, no me tire de la lengua." }
+      ],
+      "choice": [
+        { "q": "¿Por qué ha venido el inspector?", "options": ["Por exceso de ruido", "Por una denuncia de que hay demasiada gente", "Por servir alcohol a menores"], "answer": 1 },
+        { "q": "¿Con qué intención menciona Mónica al hermano del inspector?", "options": ["Para crear complicidad y ablandarlo", "Para saber si Ramiro está en el bar", "Para ofrecerle trabajo a Ramiro"], "answer": 0 },
+        { "q": "¿Qué hace Mónica con la frase «el agua no es soborno, es hidratación»?", "options": ["Acusa al inspector de pedir dinero", "Ofrece agua porque hace mucho calor", "Juega con la idea del soborno sin admitirla"], "answer": 2 },
+        { "q": "¿Cómo queda la situación al final?", "options": ["El inspector cierra el bar de inmediato", "Mónica paga la multa sin discutir", "El inspector da un plazo y deja abierta una pequeña tolerancia"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Dónde está, para ti, la frontera entre un gesto amable y un intento de soborno?", "model": "Creo que está en la intención y en el momento: un vaso de agua no compra nada, pero ofrecerlo justo mientras te multan ya huele raro." },
+        { "q": "¿Te parece que el inspector actúa con justicia o con demasiada flexibilidad?", "model": "Me parece pragmático: cumple la norma sin hundir el negocio, aunque esa flexibilidad abre la puerta a favoritismos." },
+        { "q": "¿Conoces situaciones en las que los contactos personales pesen más que las normas?", "model": "Por desgracia, sí; en mi ciudad, conocer a alguien en el ayuntamiento acelera cualquier trámite de forma escandalosa." }
+      ],
+      "gaps": "Le doy veinte minutos para que salgan cuarenta [personas]. Si cuando vuelva esto sigue así, le pongo la [multa], y no hay [hermano] que [valga].",
+      "glossary": [
+        { "word": "si me apura", "meaning": "si hay que decirlo todo, incluso" },
+        { "word": "aforo", "meaning": "número máximo de personas permitido en un local" },
+        { "word": "a ojo", "meaning": "calculado sin medir, de forma aproximada" },
+        { "word": "soborno", "meaning": "regalo o dinero para conseguir un favor ilegal" },
+        { "word": "no me tire de la lengua", "meaning": "no me haga decir lo que no debo decir" }
+      ]
+    },
+    {
+      "id": "museo",
+      "title": "El retrato que nadie se atreve a descolgar",
+      "place": "Museo del Pasado",
+      "context": "Al final de la visita nocturna, la guía se detiene ante el cuadro más famoso del museo.",
+      "speakers": [
+        { "name": "Begoña", "country": "España", "voice": "es-ES-ElviraNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Esta es la pieza que más quebraderos de cabeza nos ha dado. Retrato de una dama con abanico, atribuido durante un siglo a un pintor de la corte. Atribuido, ojo, que en mi oficio esa palabra lo es todo." },
+        { "s": 0, "text": "Hace seis años, un análisis de los pigmentos reveló que el azul del vestido no existía antes de mil ochocientos setenta. Es decir: o el pintor era adivino, o esto es una falsificación." },
+        { "s": 0, "text": "La dirección del museo se vio entonces en un aprieto. Descolgarlo suponía admitir que nos la habían colado durante cien años y, además, era con diferencia el cuadro favorito del público. Así que se optó por una solución salomónica: dejarlo donde está y cambiar la cartela." },
+        { "s": 0, "text": "Si se acercan, verán que ahora pone: «Retrato de una dama con abanico. Autor desconocido, con mucho talento». Hay colegas que lo consideran una vergüenza. Yo, qué quieren que les diga, pienso que el falsificador se ha ganado su sitio aquí." },
+        { "s": 0, "text": "Al fin y al cabo, consiguió exactamente lo que buscaba cualquier pintor de la corte: que la gente se parara delante y no pudiera irse. Lo único que nos diferencia de él es que nosotros, ahora, lo decimos en voz alta." }
+      ],
+      "choice": [
+        { "q": "¿Qué se descubrió sobre el retrato?", "options": ["Que había sido robado de un palacio", "Que tenía otra pintura debajo", "Que era una falsificación"], "answer": 2 },
+        { "q": "¿Qué significa «nos la habían colado»?", "options": ["Que los habían engañado", "Que se lo habían vendido muy caro", "Que lo habían escondido"], "answer": 0 },
+        { "q": "¿Qué decidió hacer el museo?", "options": ["Retirarlo y guardarlo en el almacén", "Mantenerlo expuesto pero cambiar la información", "Venderlo a un coleccionista"], "answer": 1 },
+        { "q": "¿Cuál es la postura de la guía?", "options": ["Cree que el cuadro debería destruirse", "Reconoce el mérito del falsificador", "Le da igual lo que pase con el cuadro"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te parece honesta la solución del museo o es una manera elegante de no perder público?", "model": "Un poco de ambas cosas: cambiar la cartela es honesto, pero mantenerlo en el mejor sitio tiene bastante de cálculo." },
+        { "q": "¿Una obra pierde valor cuando descubrimos que es falsa, aunque siga siendo igual de bella?", "model": "Para el mercado, sin duda; para mí, no tanto. Lo que me emociona está en el cuadro, no en la firma." },
+        { "q": "¿Qué otras «falsificaciones» aceptamos en la vida cotidiana sin escandalizarnos?", "model": "Las fotos retocadas en redes, por ejemplo: todos sabemos que no son del todo verdad y, aun así, las miramos encantados." }
+      ],
+      "gaps": "Descolgarlo suponía admitir que nos la habían [colado] durante cien años y, además, era con diferencia el cuadro [favorito] del público. Así que se optó por una solución [salomónica]: dejarlo donde está y cambiar la [cartela].",
+      "glossary": [
+        { "word": "quebraderos de cabeza", "meaning": "problemas y preocupaciones" },
+        { "word": "en un aprieto", "meaning": "en una situación difícil" },
+        { "word": "nos la habían colado", "meaning": "nos habían engañado" },
+        { "word": "salomónica", "meaning": "que intenta contentar a las dos partes" },
+        { "word": "cartela", "meaning": "cartel pequeño con la información de una obra" }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "El anillo olvidado en el asiento de atrás",
+      "place": "Taxi en la avenida",
+      "context": "En un programa nocturno de radio, un taxista llama en directo desde su coche, parado en la avenida.",
+      "speakers": [
+        { "name": "Maribel", "country": "Puerto Rico", "voice": "es-PR-KarinaNeural" },
+        { "name": "Bienvenido", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Seguimos en Noche al Aire. Tenemos a un oyente en línea. Adelante, buenas noches." },
+        { "s": 1, "text": "Buenas noches, Maribel. Mire, soy taxista, me llamo Bienvenido, y la llamo porque hace una hora se me bajaron dos muchachos en la avenida y en el asiento de atrás se quedó una cajita. Con un anillo. De compromiso, diría yo, porque eso no es bisutería ni de broma." },
+        { "s": 0, "text": "¡Ay, qué historia! ¿Y usted qué piensa hacer?" },
+        { "s": 1, "text": "Pues devolverlo, claro. Lo que pasa es que no tengo ni idea de quiénes eran. Uno decía que iba a la terraza de las luces y el otro le contestaba que ya estaba harto de esperar el momento perfecto." },
+        { "s": 0, "text": "O sea, que alguien esta noche iba a pedir matrimonio y ahora no tiene con qué." },
+        { "s": 1, "text": "Eso, o se lo pensó mejor y lo dejó a propósito. Porque, entre usted y yo, el que lo llevaba no paraba de decir que no estaba seguro, que a lo mejor era muy pronto." },
+        { "s": 0, "text": "Bienvenido, me está poniendo los pelos de punta. ¿Y si no lo olvidó?" },
+        { "s": 1, "text": "Por eso la llamo, Maribel. Si lo olvidó, que me escuche y me llame. Y si no lo olvidó, que me llame igual: el anillo se lo devuelvo, pero el consejo se lo doy gratis. El momento perfecto no existe; existe el momento, y punto." },
+        { "s": 0, "text": "Pues ahí queda dicho. A quien corresponda: un anillo, un taxista y una terraza esperando. Vamos con música." }
+      ],
+      "choice": [
+        { "q": "¿Por qué llama el taxista a la radio?", "options": ["Para encontrar al dueño de un anillo olvidado", "Para quejarse de unos pasajeros", "Para dedicar una canción"], "answer": 0 },
+        { "q": "¿Qué detalle sugiere que el anillo quizá no se olvidó por accidente?", "options": ["Que la cajita estaba vacía", "Que el pasajero dudaba de si era el momento", "Que pagaron con tarjeta"], "answer": 1 },
+        { "q": "¿Qué expresión muestra que la locutora está impresionada?", "options": ["«Vamos con música»", "«Adelante, buenas noches»", "«Me está poniendo los pelos de punta»"], "answer": 2 },
+        { "q": "¿Qué consejo quiere dar Bienvenido?", "options": ["Esperar con calma el momento ideal", "No casarse demasiado joven", "Dejar de buscar el momento perfecto y actuar"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Crees que el pasajero olvidó el anillo o lo dejó a propósito? Argumenta.", "model": "Me inclino por un olvido freudiano: no lo dejó conscientemente, pero una parte de él estaba deseando perderlo." },
+        { "q": "¿Estás de acuerdo con que «el momento perfecto no existe»?", "model": "En gran parte sí; esperar el momento perfecto suele ser una forma educada de no atreverse." },
+        { "q": "¿Qué harías si encontraras algo muy valioso en un transporte público?", "model": "Lo entregaría en objetos perdidos, aunque reconozco que la idea de buscar al dueño por la radio es mucho más romántica." }
+      ],
+      "gaps": "Eso, o se lo pensó [mejor] y lo dejó a [propósito]. Porque, entre usted y yo, el que lo llevaba no paraba de decir que no estaba [seguro], que a lo mejor era muy [pronto].",
+      "glossary": [
+        { "word": "bisutería", "meaning": "joyas de imitación, de poco valor" },
+        { "word": "pedir matrimonio", "meaning": "proponer a alguien casarse" },
+        { "word": "a propósito", "meaning": "de forma voluntaria, no por accidente" },
+        { "word": "los pelos de punta", "meaning": "sensación fuerte de emoción o miedo" },
+        { "word": "a quien corresponda", "meaning": "para la persona a la que se dirige el mensaje" }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Las cuatro de la mañana en la terraza",
+      "place": "La terraza de las luces",
+      "context": "La fiesta se ha vaciado. Solo quedan Vale y Nico, amigos desde la infancia, entre vasos y guirnaldas.",
+      "speakers": [
+        { "name": "Nico", "country": "Argentina", "voice": "es-AR-TomasNeural" },
+        { "name": "Vale", "country": "Argentina", "voice": "es-AR-ElenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Todavía aquí? Pensé que te habías ido con los últimos." },
+        { "s": 1, "text": "Es mi cumpleaños, Nico. La que se va última soy yo, por contrato. ¿Y tú? ¿No tenías que madrugar?" },
+        { "s": 0, "text": "Tenía. Ya no. Hay planes que se caen solos." },
+        { "s": 1, "text": "Muy enigmático te veo. Oye, gracias por lo de la torta. Lu me contó que la estuviste cuidando toda la tarde como si fuera un recién nacido." },
+        { "s": 0, "text": "Lu habla demasiado. Fue una torta, nada más." },
+        { "s": 1, "text": "Ya. Igual que el audio que me mandaste a las nueve y luego borraste fue un audio, nada más." },
+        { "s": 0, "text": "¿Lo escuchaste?" },
+        { "s": 1, "text": "Me llegó la notificación: «Nico eliminó un mensaje». Y como soy una persona madura, llevo seis horas sin pensar en otra cosa." },
+        { "s": 0, "text": "No era nada importante. Era... bueno, era una tontería de esas que se dicen en persona o no se dicen." },
+        { "s": 1, "text": "Pues estamos en persona. Y son las cuatro. Y no hay nadie." },
+        { "s": 0, "text": "Ya. Y también estamos a veintitantos años de amistad, si cuentas desde el jardín de infancia. Hay cosas que, si salen mal, no tienen vuelta atrás." },
+        { "s": 1, "text": "Y hay cosas que, si no salen, tampoco. Mira, haz lo que quieras. Yo me voy a terminar esta copa. Despacito." },
+        { "s": 0, "text": "¿Cuánto de despacito?" },
+        { "s": 1, "text": "Lo que te haga falta. Pero no te pases, que el vino se calienta." }
+      ],
+      "choice": [
+        { "q": "¿Qué está ocurriendo en esta escena?", "options": ["Dos amigos discuten por un mensaje ofensivo", "Dos amigos organizan la limpieza de la terraza", "Dos amigos rozan una confesión amorosa"], "answer": 2 },
+        { "q": "¿Qué ironía hay en «como soy una persona madura»?", "options": ["Vale admite que el mensaje borrado la tiene obsesionada", "Vale critica a Nico por inmaduro", "Vale dice que el mensaje no le importó"], "answer": 0 },
+        { "q": "¿Por qué duda Nico en hablar?", "options": ["Porque tiene que madrugar", "Porque teme perder la amistad si sale mal", "Porque Lu podría enterarse"], "answer": 1 },
+        { "q": "¿Qué le comunica Vale con la copa «despacito»?", "options": ["Que está cansada y quiere irse", "Que no quiere saber nada del tema", "Que está dispuesta a esperar a que él se decida"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Arriesgarías una amistad larga por una posible relación? ¿Por qué?", "model": "Depende de las señales: si hubiera indicios tan claros como los de Vale, creo que el riesgo de callar sería mayor que el de hablar." },
+        { "q": "¿Qué te parece borrar un mensaje después de enviarlo? ¿Lo has hecho alguna vez?", "model": "Lo he hecho, y es peor el remedio que la enfermedad: el aviso de «mensaje eliminado» despierta más curiosidad que el mensaje." },
+        { "q": "Imagina cómo continúa la escena. ¿Qué dice Nico?", "model": "Nico respira hondo, le quita la copa y le dice que el audio era una canción que llevaba años sin atreverse a cantarle." }
+      ],
+      "gaps": "Y también estamos a veintitantos años de [amistad], si cuentas desde el [jardín de infancia]. Hay cosas que, si salen [mal], no tienen [vuelta atrás].",
+      "glossary": [
+        { "word": "madrugar", "meaning": "levantarse muy temprano" },
+        { "word": "enigmático", "meaning": "misterioso, difícil de entender" },
+        { "word": "no tienen vuelta atrás", "meaning": "no se pueden deshacer" },
+        { "word": "no te pases", "meaning": "no exageres, no tardes demasiado" }
+      ]
+    }
+  ]
+}

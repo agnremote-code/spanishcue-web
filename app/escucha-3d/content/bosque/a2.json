@@ -1,0 +1,293 @@
+{
+  "game": "bosque",
+  "level": "A2",
+  "items": [
+    {
+      "id": "sobre-ti",
+      "title": "Dos desconocidos en el claro",
+      "place": "Claro de la entrada",
+      "context": "Antes de empezar la subida, dos excursionistas esperan al guía sentados en el tocón del claro y empiezan a hablar.",
+      "speakers": [
+        { "name": "Karina", "country": "Puerto Rico", "voice": "es-PR-KarinaNeural" },
+        { "name": "Carlos", "country": "Honduras", "voice": "es-HN-CarlosNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Perdona, ¿tú también esperas al guía de las diez?" },
+        { "s": 1, "text": "Sí, sí. Soy Carlos, mucho gusto. ¿Es tu primera vez aquí?" },
+        { "s": 0, "text": "Sí. Yo soy Karina. La verdad es que conocí este bosque por un vídeo en internet el mes pasado y compré la entrada esa misma noche." },
+        { "s": 1, "text": "¡Ja! Pues yo vine por mi abuelo. Él trabajó aquí de guardabosques muchos años y siempre me hablaba del mirador sobre las nubes." },
+        { "s": 0, "text": "¡Qué bonito! ¿Y nunca subiste con él?" },
+        { "s": 1, "text": "No, cuando yo era pequeño vivíamos lejos. Por eso hoy quiero llegar arriba y mandarle una foto." },
+        { "s": 0, "text": "Entonces tenemos que llegar, ¿eh? Yo te hago la foto." }
+      ],
+      "choice": [
+        { "q": "¿Qué pasa en esta conversación?", "options": ["Dos personas se conocen antes de la excursión", "Un guía explica la ruta", "Dos amigos recuerdan un viaje"], "answer": 0 },
+        { "q": "¿Cómo conoció Karina el bosque?", "options": ["Por su abuelo", "Por un vídeo en internet", "Por un libro de viajes"], "answer": 1 },
+        { "q": "¿Qué trabajo tuvo el abuelo de Carlos?", "options": ["Fue cocinero", "Fue guía de montaña", "Fue guardabosques"], "answer": 2 },
+        { "q": "¿Qué quiere hacer Carlos hoy?", "options": ["Mandarle una foto del mirador a su abuelo", "Grabar un vídeo para internet", "Buscar la casa de su abuelo"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cómo conociste tú un lugar que te gusta mucho?", "model": "Conocí la playa de Tulum por una amiga. Me mandó unas fotos y fui el verano pasado." },
+        { "q": "¿Alguien de tu familia te contaba historias de un lugar especial?", "model": "Sí, mi abuela siempre me hablaba de su pueblo en Galicia." },
+        { "q": "¿Hablas fácilmente con personas desconocidas en un viaje?", "model": "Sí, me gusta. En mi último viaje hablé con una pareja de Chile en el tren." }
+      ],
+      "gaps": "Él trabajó aquí de [guardabosques] muchos [años] y siempre me hablaba del [mirador] sobre las [nubes].",
+      "glossary": [
+        { "word": "mucho gusto", "meaning": "lo que dices cuando conoces a una persona" },
+        { "word": "la entrada", "meaning": "el billete para entrar en un lugar" },
+        { "word": "mirador", "meaning": "lugar alto desde donde se ve un paisaje" },
+        { "word": "mandarle", "meaning": "enviarle algo a una persona" }
+      ]
+    },
+    {
+      "id": "vida-real",
+      "title": "Aviso: cesta encontrada",
+      "place": "La cesta olvidada",
+      "context": "Por los altavoces de la zona de setas bajas suena un aviso del guardabosques.",
+      "speakers": [
+        { "name": "Álvaro", "country": "España", "voice": "es-ES-AlvaroNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Atención, por favor, un aviso para los visitantes del bosque." },
+        { "s": 0, "text": "Ayer por la tarde, a eso de las seis, una niña encontró una cesta de mimbre al lado del camino, junto a las setas bajas." },
+        { "s": 0, "text": "Dentro había un pañuelo rojo, un cuchillo pequeño, unas gafas de sol y muchas setas recién cortadas." },
+        { "s": 0, "text": "Bueno, las setas ya no están, porque no aguantan mucho, lo siento." },
+        { "s": 0, "text": "Si la cesta es suya, puede recogerla en la cabaña de los guardabosques, de nueve a dos. Solo tiene que decirnos de qué color son las gafas. Gracias." }
+      ],
+      "choice": [
+        { "q": "¿Para qué es este aviso?", "options": ["Para avisar de una tormenta", "Para buscar al dueño de una cesta", "Para prohibir cortar setas"], "answer": 1 },
+        { "q": "¿Quién encontró la cesta?", "options": ["Un guardabosques", "Un cocinero", "Una niña"], "answer": 2 },
+        { "q": "¿Qué cosa ya no está en la cesta?", "options": ["Las setas", "El pañuelo", "El cuchillo"], "answer": 0 },
+        { "q": "¿Qué tiene que decir el dueño para recuperar la cesta?", "options": ["Su nombre completo", "El color de las gafas", "La hora en que la perdió"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez perdiste algo importante? ¿Lo recuperaste?", "model": "Sí, una vez dejé la cartera en el autobús. Una señora la llevó a la policía y la recuperé." },
+        { "q": "¿Qué llevas normalmente cuando vas al campo o a la montaña?", "model": "Normalmente llevo agua, una gorra y algo de comer." },
+        { "q": "¿Qué haces cuando encuentras algo en la calle?", "model": "Si es algo importante, lo llevo a una tienda cercana o a la policía." }
+      ],
+      "gaps": "Dentro había un [pañuelo rojo], un cuchillo [pequeño], unas [gafas de sol] y muchas setas recién [cortadas].",
+      "glossary": [
+        { "word": "aviso", "meaning": "información importante que se da al público" },
+        { "word": "mimbre", "meaning": "material natural para hacer cestas" },
+        { "word": "aguantan", "meaning": "duran sin estropearse" },
+        { "word": "recogerla", "meaning": "ir a buscarla al lugar donde está" }
+      ]
+    },
+    {
+      "id": "elige",
+      "title": "Frescas o secas, decide el cocinero",
+      "place": "Setas doradas",
+      "context": "Al lado de las setas doradas, un cocinero del bosque habla por teléfono con la mujer que le vende las setas.",
+      "speakers": [
+        { "name": "Yolanda", "country": "Nicaragua", "voice": "es-NI-YolandaNeural" },
+        { "name": "Marcelo", "country": "Bolivia", "voice": "es-BO-MarceloNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Marcelo? Soy Yolanda. Oye, para tu cena de esta noche, ¿quieres las setas doradas frescas o secas?" },
+        { "s": 1, "text": "Mmm, buena pregunta. La semana pasada usé secas y el arroz quedó muy rico, pero un poco oscuro." },
+        { "s": 0, "text": "Las frescas son más bonitas, eso sí. Pero hoy son más caras: las recogimos esta mañana con lluvia." },
+        { "s": 1, "text": "¿Cuánto más caras?" },
+        { "s": 0, "text": "El doble. Veinte el kilo." },
+        { "s": 1, "text": "Uf... Bueno, mira, la cena es para una boda, tiene que ser especial. Dame dos kilos de frescas." },
+        { "s": 0, "text": "Perfecto. Te las llevo a las cinco." }
+      ],
+      "choice": [
+        { "q": "¿Qué tiene que decidir Marcelo?", "options": ["Qué setas comprar", "A qué hora es la boda", "Dónde cocinar la cena"], "answer": 0 },
+        { "q": "¿Qué problema tuvo el arroz de la semana pasada?", "options": ["Quedó muy salado", "Quedó un poco oscuro", "Quedó frío"], "answer": 1 },
+        { "q": "¿Por qué las setas frescas son más caras hoy?", "options": ["Porque hay pocas", "Porque son de otro país", "Porque las recogieron con lluvia"], "answer": 2 },
+        { "q": "¿Por qué Marcelo elige las frescas?", "options": ["Porque son más baratas", "Porque la cena es para una boda", "Porque no le gustan las secas"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué prefieres, la comida fresca o la congelada? ¿Por qué?", "model": "Prefiero la fresca porque tiene más sabor, pero a veces compro verduras congeladas." },
+        { "q": "¿Alguna vez pagaste más por algo porque era para una ocasión especial?", "model": "Sí, para el cumpleaños de mi madre compré un pastel muy caro." },
+        { "q": "¿Qué plato cocinas tú para una cena importante?", "model": "Normalmente cocino pasta con verduras, porque me sale muy bien." }
+      ],
+      "gaps": "La semana pasada usé [secas] y el [arroz] quedó muy [rico], pero un poco [oscuro].",
+      "glossary": [
+        { "word": "frescas", "meaning": "recién recogidas, no secas ni congeladas" },
+        { "word": "secas", "meaning": "sin agua; se guardan mucho tiempo" },
+        { "word": "el doble", "meaning": "dos veces la cantidad" },
+        { "word": "boda", "meaning": "fiesta cuando dos personas se casan" }
+      ]
+    },
+    {
+      "id": "opinion",
+      "title": "Chismes junto a las gemelas",
+      "place": "Las setas gemelas",
+      "context": "Dos campistas descansan junto a las setas gemelas. Hablan de lo que le pasó a un chico del campamento el verano pasado.",
+      "speakers": [
+        { "name": "Lorena", "country": "El Salvador", "voice": "es-SV-LorenaNeural" },
+        { "name": "Juan", "country": "Costa Rica", "voice": "es-CR-JuanNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Sabes qué le pasó a Rodrigo aquí el verano pasado?" },
+        { "s": 1, "text": "No, ¿qué le pasó?" },
+        { "s": 0, "text": "Pues cogió una de estas setas, pensó que era la buena y se la comió en la cena. Pasó toda la noche con dolor de estómago." },
+        { "s": 1, "text": "¡No me digas! Pero bueno, yo creo que Rodrigo exageró un poco. Siempre exagera." },
+        { "s": 0, "text": "Puede ser, pero me parece que tuvo suerte. La guía dice que la mala es muy peligrosa." },
+        { "s": 1, "text": "Sí, en eso tienes razón. Yo pienso que no hay que comer nada sin preguntar a un experto." },
+        { "s": 0, "text": "Exacto. Yo, por si acaso, solo como setas del supermercado." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Lorena y Juan?", "options": ["De un chico que comió una seta mala", "De una guía muy simpática", "De la cena del campamento de hoy"], "answer": 0 },
+        { "q": "¿Qué le pasó a Rodrigo?", "options": ["Se perdió en el bosque", "Tuvo dolor de estómago", "Se cayó de una seta"], "answer": 1 },
+        { "q": "¿Qué opina Juan de Rodrigo al principio?", "options": ["Que tuvo mala suerte", "Que es un experto", "Que exageró un poco"], "answer": 2 },
+        { "q": "¿En qué están de acuerdo al final?", "options": ["En que la seta mala no es peligrosa", "En que no hay que comer setas sin preguntar", "En que Rodrigo es muy valiente"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Conoces a alguien que siempre exagera? ¿Qué cuenta?", "model": "Sí, mi primo. Una vez dijo que vio un oso en el parque, pero era un perro grande." },
+        { "q": "¿Comes setas? ¿Dónde las compras?", "model": "Sí, me encantan. Las compro en el mercado los sábados." },
+        { "q": "¿Te parece bien buscar setas en el bosque sin un experto?", "model": "No, me parece peligroso. Creo que es mejor ir con alguien que sabe." }
+      ],
+      "gaps": "Sí, en eso tienes [razón]. Yo pienso que no hay que [comer] nada sin [preguntar] a un [experto].",
+      "glossary": [
+        { "word": "¡No me digas!", "meaning": "expresión de sorpresa" },
+        { "word": "exageró", "meaning": "contó algo más grande o más grave de lo que fue" },
+        { "word": "tuvo suerte", "meaning": "le pasó algo bueno por casualidad" },
+        { "word": "por si acaso", "meaning": "para estar seguro, para evitar un problema" }
+      ]
+    },
+    {
+      "id": "recuerdos",
+      "title": "Mensaje de la abuela Catalina",
+      "place": "El sombrero gigante",
+      "context": "Inés llega al sombrero gigante, a la altura de los árboles, y escucha un mensaje de voz de su abuela.",
+      "speakers": [
+        { "name": "Abuela Catalina", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Inés, mi amor, ¿ya llegaste al sombrero gigante? Mira, te cuento una cosa." },
+        { "s": 0, "text": "Cuando yo tenía veinte años, tu abuelo y yo subíamos ahí todos los domingos. Llevábamos pan, queso y un termo de café." },
+        { "s": 0, "text": "Un día empezó a llover muchísimo y nos quedamos tres horas debajo del sombrero, sin poder bajar." },
+        { "s": 0, "text": "Y ese día, con la lluvia, tu abuelo me pidió que me casara con él." },
+        { "s": 0, "text": "Por eso ese hongo es tan especial para mí. Hazle una foto, ¿sí? Un beso grande." }
+      ],
+      "choice": [
+        { "q": "¿Qué recuerda la abuela?", "options": ["Su primer trabajo en el bosque", "Los domingos con el abuelo en el sombrero gigante", "Un viaje con Inés"], "answer": 1 },
+        { "q": "¿Qué llevaban para comer?", "options": ["Pan, queso y café", "Fruta y agua", "Sopa de setas"], "answer": 0 },
+        { "q": "¿Cuánto tiempo se quedaron debajo del sombrero?", "options": ["Toda la noche", "Una hora", "Tres horas"], "answer": 2 },
+        { "q": "¿Qué pasó ese día de lluvia?", "options": ["El abuelo se perdió", "El abuelo le pidió matrimonio", "La abuela se puso enferma"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué hacías los domingos cuando eras pequeño o pequeña?", "model": "Los domingos comíamos en casa de mis abuelos y después íbamos al parque." },
+        { "q": "¿Hay un lugar especial para tu familia? ¿Qué pasó allí?", "model": "Sí, un restaurante en la playa. Allí mis padres celebraron su boda." },
+        { "q": "¿Te gusta escuchar historias de tus abuelos? ¿Cuál recuerdas?", "model": "Sí, mi abuelo me contaba que trabajaba en un barco cuando era joven." }
+      ],
+      "gaps": "Cuando yo tenía [veinte años], tu abuelo y yo subíamos ahí todos los [domingos]. Llevábamos [pan], queso y un termo de [café].",
+      "glossary": [
+        { "word": "termo", "meaning": "botella que mantiene el café o el té caliente" },
+        { "word": "muchísimo", "meaning": "mucho, mucho" },
+        { "word": "me casara", "meaning": "forma de casarse: unirse en matrimonio" },
+        { "word": "Un beso grande", "meaning": "forma cariñosa de despedirse" }
+      ]
+    },
+    {
+      "id": "futuro",
+      "title": "Mañana subimos a las nubes",
+      "place": "La copa del roble",
+      "context": "En la copa del gran roble, un profesor explica a su grupo el plan del último día de excursión. Una alumna tiene preguntas.",
+      "speakers": [
+        { "name": "Profe Jorge", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Paloma", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "A ver, chicos, escuchen. Mañana es el último día y vamos a subir hasta el mirador." },
+        { "s": 1, "text": "¿A qué hora vamos a salir, profe?" },
+        { "s": 0, "text": "Muy temprano, a las seis. Queremos ver el amanecer encima de las nubes." },
+        { "s": 1, "text": "¿A las seis? ¡Uf! ¿Y el desayuno?" },
+        { "s": 0, "text": "Vamos a desayunar arriba. La cocinera nos va a preparar chocolate caliente y pan dulce." },
+        { "s": 1, "text": "Bueno, así sí. ¿Y qué tenemos que llevar?" },
+        { "s": 0, "text": "Una chaqueta, porque arriba va a hacer frío, y la linterna. Ah, y nada de teléfonos durante la subida, ¿eh?" }
+      ],
+      "choice": [
+        { "q": "¿De qué habla el profesor?", "options": ["Del plan de mañana", "De lo que hicieron ayer", "De las reglas del campamento"], "answer": 0 },
+        { "q": "¿Por qué van a salir a las seis?", "options": ["Porque va a llover más tarde", "Para ver el amanecer", "Porque el autobús sale temprano"], "answer": 1 },
+        { "q": "¿Dónde van a desayunar?", "options": ["En la cabaña", "En el roble", "Arriba, en el mirador"], "answer": 2 },
+        { "q": "¿Qué no pueden usar durante la subida?", "options": ["La linterna", "La chaqueta", "Los teléfonos"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Te gusta levantarte temprano para ver algo especial?", "model": "Sí, una vez me levanté a las cinco para ver el amanecer en la playa." },
+        { "q": "¿Qué vas a hacer el próximo fin de semana?", "model": "Voy a visitar a mis padres y vamos a comer juntos." },
+        { "q": "¿Qué piensas de no usar el teléfono en una excursión?", "model": "Me parece buena idea. Así miras más el paisaje." }
+      ],
+      "gaps": "Vamos a desayunar [arriba]. La [cocinera] nos va a preparar [chocolate caliente] y [pan dulce].",
+      "glossary": [
+        { "word": "amanecer", "meaning": "el momento en que sale el sol" },
+        { "word": "linterna", "meaning": "luz pequeña que llevas en la mano" },
+        { "word": "chaqueta", "meaning": "ropa para el frío que se pone encima" },
+        { "word": "la subida", "meaning": "el camino hacia arriba" }
+      ]
+    },
+    {
+      "id": "compara",
+      "title": "El guía de las dos luces",
+      "place": "La gruta luminosa",
+      "context": "Dentro de la gruta luminosa, un micólogo explica a un grupo la diferencia entre dos hongos que brillan.",
+      "speakers": [
+        { "name": "Javier", "country": "Guinea Ecuatorial", "voice": "es-GQ-JavierNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bueno, aquí estamos, en la gruta luminosa. Miren a la izquierda: ese hongo azul se llama farolillo." },
+        { "s": 0, "text": "Es más pequeño que una mano, pero brilla más que todos los otros. Se ve desde lejos." },
+        { "s": 0, "text": "Ahora miren a la derecha. Ese hongo verde es la vela del bosque. Es mucho más grande, casi como una silla, pero su luz es más suave." },
+        { "s": 0, "text": "Y aquí viene lo interesante: el farolillo brilla toda la noche, pero la vela solo brilla cuando llueve." },
+        { "s": 0, "text": "Ayer llovió, por eso hoy pueden ver los dos. ¡Tienen suerte!" }
+      ],
+      "choice": [
+        { "q": "¿Qué hace el micólogo?", "options": ["Compara dos hongos que brillan", "Explica cómo cocinar hongos", "Busca a una persona perdida"], "answer": 0 },
+        { "q": "¿Cómo es el farolillo?", "options": ["Grande y verde", "Pequeño y azul", "Pequeño y verde"], "answer": 1 },
+        { "q": "¿Qué tamaño tiene la vela del bosque?", "options": ["Como una mano", "Como un árbol", "Casi como una silla"], "answer": 2 },
+        { "q": "¿Por qué el grupo puede ver los dos hongos hoy?", "options": ["Porque es de noche", "Porque ayer llovió", "Porque tienen linternas"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué lugar natural interesante visitaste? ¿Cómo era?", "model": "Visité una cueva en México. Era muy oscura y tenía un lago dentro." },
+        { "q": "Compara dos lugares de tu ciudad. ¿Cuál te gusta más?", "model": "El parque grande es más bonito que la plaza, pero la plaza es más tranquila." },
+        { "q": "¿Te gustan las visitas con guía o prefieres ir solo?", "model": "Me gustan con guía porque aprendo más cosas." }
+      ],
+      "gaps": "Es más [pequeño] que una [mano], pero [brilla] más que todos los otros. Se ve desde [lejos].",
+      "glossary": [
+        { "word": "gruta", "meaning": "cueva" },
+        { "word": "brilla", "meaning": "da luz" },
+        { "word": "suave", "meaning": "no muy fuerte" },
+        { "word": "farolillo", "meaning": "lámpara pequeña; aquí, el nombre de un hongo" }
+      ]
+    },
+    {
+      "id": "cambia",
+      "title": "De la oficina a la niebla",
+      "place": "La escalera de niebla",
+      "context": "En la escalera blanca, entre la niebla, un excursionista charla con la guardabosques que vigila esta parte del camino.",
+      "speakers": [
+        { "name": "Elena", "country": "Argentina", "voice": "es-AR-ElenaNeural" },
+        { "name": "Sebastián", "country": "Venezuela", "voice": "es-VE-SebastianNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "¿Y tú trabajas aquí todos los días? ¿Con esta niebla?" },
+        { "s": 0, "text": "Sí, desde hace dos años. Antes trabajaba en una oficina en Buenos Aires, en un banco." },
+        { "s": 1, "text": "¿En serio? ¿Y por qué cambiaste?" },
+        { "s": 0, "text": "Mira, trabajaba diez horas al día, dormía mal y nunca veía el sol. Un verano vine aquí de vacaciones y me enamoré del bosque." },
+        { "s": 1, "text": "¿Y no extrañas la ciudad?" },
+        { "s": 0, "text": "A veces extraño a mis amigas y los cafés. Pero ahora duermo como un niño. Y la niebla me encanta: cada mañana el bosque es diferente." },
+        { "s": 1, "text": "¡Qué valiente!" }
+      ],
+      "choice": [
+        { "q": "¿De qué habla Elena?", "options": ["De su vida en el banco", "De un cambio importante en su vida", "De un problema con la niebla"], "answer": 1 },
+        { "q": "¿Dónde trabajaba Elena antes?", "options": ["En un banco", "En un café", "En un hotel"], "answer": 0 },
+        { "q": "¿Cómo era su vida antes?", "options": ["Tranquila y feliz", "Con muchas vacaciones", "Trabajaba mucho y dormía mal"], "answer": 2 },
+        { "q": "¿Qué extraña Elena a veces?", "options": ["El sol de la ciudad", "A sus amigas y los cafés", "Su sueldo del banco"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Hiciste un cambio grande en tu vida? ¿Cómo fue?", "model": "Sí, hace tres años me fui a vivir a otra ciudad por mi trabajo. Al principio fue difícil." },
+        { "q": "¿Qué extrañas de un lugar donde vivías antes?", "model": "Extraño el mar y la comida de mi pueblo." },
+        { "q": "¿Prefieres trabajar en una oficina o en la naturaleza? ¿Por qué?", "model": "Prefiero la oficina porque no me gusta el frío." }
+      ],
+      "gaps": "Mira, trabajaba [diez horas] al día, [dormía mal] y nunca veía el [sol]. Un verano vine aquí de [vacaciones] y me enamoré del bosque.",
+      "glossary": [
+        { "word": "desde hace", "meaning": "indica cuánto tiempo pasó desde que algo empezó" },
+        { "word": "me enamoré", "meaning": "empecé a querer mucho algo o a alguien" },
+        { "word": "extrañas", "meaning": "sientes tristeza porque algo o alguien no está contigo" },
+        { "word": "valiente", "meaning": "que no tiene miedo de hacer cosas difíciles" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,972 @@
+{
+  "game": "noche",
+  "level": "A2",
+  "items": [
+    {
+      "id": "cafe",
+      "title": "Lu vio a su ex en el café",
+      "place": "Café Martina",
+      "context": "Lu y Martín toman algo en el café antes de la previa. Lu tiene un chisme que no puede guardar.",
+      "speakers": [
+        {
+          "name": "Lu",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Martín",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Martín, no te lo vas a creer. Ayer estuve aquí, en esta misma mesa, y adivina quién entró."
+        },
+        {
+          "s": 1,
+          "text": "¿Quién? ¿Tu jefe?"
+        },
+        {
+          "s": 0,
+          "text": "Peor. Bruno, mi ex. Y no vino solo: entró con Carla, la prima de Vale. De la mano."
+        },
+        {
+          "s": 1,
+          "text": "¿En serio? ¿Con Carla?"
+        },
+        {
+          "s": 0,
+          "text": "Con Carla. Me vieron, me saludaron súper simpáticos y se sentaron en la mesa de al lado."
+        },
+        {
+          "s": 1,
+          "text": "Qué incómodo. ¿Y tú qué hiciste?"
+        },
+        {
+          "s": 0,
+          "text": "Nada. Terminé el café en dos minutos y me fui. Pero lo peor no es eso."
+        },
+        {
+          "s": 1,
+          "text": "A ver..."
+        },
+        {
+          "s": 0,
+          "text": "Vale invitó a Carla a la fiesta de hoy. Y Carla ya le preguntó si puede traer a alguien."
+        },
+        {
+          "s": 1,
+          "text": "Uy, no. Esta noche va a ser larga."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Lu?",
+          "options": [
+            "De su nuevo trabajo",
+            "De un encuentro incómodo con su ex",
+            "De un regalo para Vale"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con quién entró Bruno al café?",
+          "options": [
+            "Con la prima de Vale",
+            "Con el jefe de Lu",
+            "Con Martín"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo Lu después?",
+          "options": [
+            "Se sentó con ellos",
+            "Le gritó a Bruno",
+            "Terminó rápido su café y se fue"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Lu está preocupada por la fiesta?",
+          "options": [
+            "Porque Bruno no la invitó",
+            "Porque Carla quiere ir con alguien, probablemente con Bruno",
+            "Porque no tiene ropa para la fiesta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces si ves a tu ex en un café?",
+          "model": "Lo saludo, pero no me siento con él. Me voy tranquila."
+        },
+        {
+          "q": "¿Te gusta escuchar chismes de tus amigos?",
+          "model": "Sí, un poco. Pero no les cuento los chismes a otras personas."
+        },
+        {
+          "q": "¿Alguna vez viste a alguien en un lugar inesperado? ¿Qué pasó?",
+          "model": "Sí, el año pasado vi a mi profesora en la playa. Fue muy raro."
+        }
+      ],
+      "gaps": "Terminé el [café] en [dos minutos] y me [fui]. Pero lo [peor] no es eso.",
+      "glossary": [
+        {
+          "word": "adivina",
+          "meaning": "di quién es, sin saberlo"
+        },
+        {
+          "word": "de la mano",
+          "meaning": "con las manos juntas, como una pareja"
+        },
+        {
+          "word": "incómodo",
+          "meaning": "que te hace sentir mal o nervioso"
+        },
+        {
+          "word": "va a ser larga",
+          "meaning": "va a tener problemas y tensión"
+        }
+      ]
+    },
+    {
+      "id": "departamento",
+      "title": "El gato y la torta del balcón",
+      "place": "Departamento de Vale",
+      "context": "Vale salió a comprar hielo. Leo, su compañero de departamento, le deja un mensaje de voz.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Vale, soy Leo. No te asustes, ¿eh? Todo está bien... más o menos."
+        },
+        {
+          "s": 0,
+          "text": "Mira, cuando te fuiste a buscar hielo, puse la torta en el balcón, porque en la heladera no había lugar."
+        },
+        {
+          "s": 0,
+          "text": "Después sonó el timbre. Era el vecino de abajo y estuve diez minutos con él, hablando del ruido de esta noche."
+        },
+        {
+          "s": 0,
+          "text": "Cuando volví, el gato de la vecina estaba encima de la torta. Se comió un pedazo bastante grande, justo donde decía «Vale»."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, ya lo arreglé: corté esa parte y ahora dice «Feliz cumple». Nadie se va a dar cuenta."
+        },
+        {
+          "s": 0,
+          "text": "Ah, ¿puedes traer más velas? Las otras también se las llevó el gato."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué Leo le manda el mensaje a Vale?",
+          "options": [
+            "Para contarle un problema con la torta",
+            "Para decirle que no va a la fiesta",
+            "Para pedirle dinero para el hielo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Leo puso la torta en el balcón?",
+          "options": [
+            "Porque hacía mucho calor",
+            "Porque no había lugar en la heladera",
+            "Porque Vale se lo pidió"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con quién habló Leo diez minutos?",
+          "options": [
+            "Con la vecina del gato",
+            "Con Vale",
+            "Con el vecino de abajo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué necesita Leo ahora?",
+          "options": [
+            "Otra torta",
+            "Más velas",
+            "Más hielo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes o tuviste una mascota? ¿Hizo alguna vez algo terrible?",
+          "model": "Sí, mi perro se comió un zapato nuevo de mi hermana."
+        },
+        {
+          "q": "¿Alguna vez tuviste un problema antes de una fiesta? ¿Cómo lo resolviste?",
+          "model": "Sí, se rompió el horno y compramos pizza en una tienda."
+        },
+        {
+          "q": "¿Te gusta vivir con otras personas o prefieres vivir solo?",
+          "model": "Prefiero vivir solo, pero cuando era estudiante tenía dos compañeros de casa y fue divertido."
+        }
+      ],
+      "gaps": "Cuando volví, el [gato] de la vecina estaba [encima] de la torta. Se comió un [pedazo] bastante grande, justo donde decía «[Vale]».",
+      "glossary": [
+        {
+          "word": "no te asustes",
+          "meaning": "no tengas miedo, tranquila"
+        },
+        {
+          "word": "heladera",
+          "meaning": "aparato frío de la cocina para guardar comida"
+        },
+        {
+          "word": "pedazo",
+          "meaning": "una parte de algo"
+        },
+        {
+          "word": "se va a dar cuenta",
+          "meaning": "va a ver o notar algo"
+        }
+      ]
+    },
+    {
+      "id": "restaurante",
+      "title": "La reserva a nombre de Valle",
+      "place": "Restaurante El Toldo",
+      "context": "Martín llega al restaurante con los amigos para la cena del cumpleaños. Habla con la recepcionista.",
+      "speakers": [
+        {
+          "name": "Martín",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Ramona",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. Tenemos una reserva para ocho, a nombre de Vale."
+        },
+        {
+          "s": 1,
+          "text": "A ver... Vale, Vale... No, no tengo nada. Tengo una mesa para ocho a nombre de Valle, con dos eles, pero ya está ocupada."
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo que ocupada? Esa es nuestra reserva. Llamé el martes."
+        },
+        {
+          "s": 1,
+          "text": "Uy, lo siento mucho. A las nueve llegó un grupo, dijeron «somos los de Valle» y les di la mesa."
+        },
+        {
+          "s": 0,
+          "text": "¿Y no les preguntaste nada más?"
+        },
+        {
+          "s": 1,
+          "text": "Bueno, eran ocho... Mira, puedo juntar dos mesas al lado de la cocina. Hace un poco de calor, pero el postre es gratis."
+        },
+        {
+          "s": 0,
+          "text": "¿Postre gratis para todos?"
+        },
+        {
+          "s": 1,
+          "text": "Para los ocho."
+        },
+        {
+          "s": 0,
+          "text": "Trato hecho."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el problema?",
+          "options": [
+            "El restaurante está cerrado",
+            "Otro grupo tiene la mesa de Martín",
+            "Martín no hizo la reserva"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo llamó Martín para reservar?",
+          "options": [
+            "El martes",
+            "Esa misma tarde",
+            "El sábado pasado"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué la recepcionista le dio la mesa al otro grupo?",
+          "options": [
+            "Porque llegaron primero",
+            "Porque eran amigos de ella",
+            "Porque dijeron un nombre parecido y eran ocho"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué les ofrece la recepcionista al final?",
+          "options": [
+            "Una mesa en la terraza",
+            "Dos mesas juntas y el postre gratis",
+            "Una cena gratis para todos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tuviste alguna vez un problema en un restaurante? ¿Qué pasó?",
+          "model": "Sí, una vez el camarero me trajo otro plato y tuve que esperar media hora."
+        },
+        {
+          "q": "¿Aceptas la solución de la recepcionista o te vas a otro restaurante?",
+          "model": "La acepto. El postre gratis es una buena idea."
+        },
+        {
+          "q": "¿Reservas mesa cuando sales a cenar con amigos?",
+          "model": "Sí, los fines de semana siempre reservo, porque hay mucha gente."
+        }
+      ],
+      "gaps": "Mira, puedo [juntar] dos mesas al lado de la [cocina]. Hace un poco de [calor], pero el postre es [gratis].",
+      "glossary": [
+        {
+          "word": "reserva",
+          "meaning": "mesa que pides antes por teléfono o por internet"
+        },
+        {
+          "word": "ocupada",
+          "meaning": "que otras personas ya la están usando"
+        },
+        {
+          "word": "juntar",
+          "meaning": "poner dos cosas una al lado de la otra"
+        },
+        {
+          "word": "trato hecho",
+          "meaning": "de acuerdo, acepto"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "La guitarra que volvió sola",
+      "place": "Plaza de la Fuente",
+      "context": "Nico pasa por la plaza y se queda a escuchar a un músico. Entre canción y canción, hablan.",
+      "speakers": [
+        {
+          "name": "Nico",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Yoel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Qué bien tocas! ¿Hace mucho que tocas aquí, en la plaza?"
+        },
+        {
+          "s": 1,
+          "text": "Tres años ya. Todos los sábados, al lado de la fuente."
+        },
+        {
+          "s": 0,
+          "text": "Linda guitarra, ¿eh? Se ve vieja."
+        },
+        {
+          "s": 1,
+          "text": "Uf, esta guitarra tiene una historia... El verano pasado me la robaron. Fui al baño del bar un minuto y, cuando volví, no estaba."
+        },
+        {
+          "s": 0,
+          "text": "¡No! ¿Y cómo la recuperaste?"
+        },
+        {
+          "s": 1,
+          "text": "Dos semanas después, un lunes, la encontré aquí, en la fuente. Tenía una nota que decía «Perdón, la necesitaba para una serenata». Y veinte dólares."
+        },
+        {
+          "s": 0,
+          "text": "¿En serio? ¿Y la serenata funcionó?"
+        },
+        {
+          "s": 1,
+          "text": "No sé. Pero ahora siempre toco una canción para él."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cuenta el músico?",
+          "options": [
+            "Cómo aprendió a tocar",
+            "La historia de su guitarra robada",
+            "Por qué no le gusta tocar en la plaza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuándo toca el músico en la plaza?",
+          "options": [
+            "Todos los sábados",
+            "Todos los días",
+            "Solo en verano"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde estaba el músico cuando le robaron la guitarra?",
+          "options": [
+            "En su casa",
+            "En la fuente",
+            "En el baño del bar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué se llevó la guitarra el ladrón?",
+          "options": [
+            "Para venderla",
+            "Para cantarle a alguien",
+            "Para aprender a tocar"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te robaron algo alguna vez? ¿Lo recuperaste?",
+          "model": "Sí, me robaron la bicicleta hace dos años. Nunca la recuperé."
+        },
+        {
+          "q": "¿Te gusta escuchar música en la calle? ¿Das dinero a los músicos?",
+          "model": "Sí, me encanta. Si la música es buena, les doy dinero."
+        },
+        {
+          "q": "¿Qué piensas del ladrón de la guitarra?",
+          "model": "Creo que es un ladrón un poco romántico, pero hizo algo mal."
+        }
+      ],
+      "gaps": "Dos semanas después, un [lunes], la encontré aquí, en la [fuente]. Tenía una [nota] que decía «Perdón, la necesitaba para una [serenata]».",
+      "glossary": [
+        {
+          "word": "me la robaron",
+          "meaning": "alguien se llevó mi guitarra sin permiso"
+        },
+        {
+          "word": "recuperaste",
+          "meaning": "volviste a tener algo que perdiste"
+        },
+        {
+          "word": "nota",
+          "meaning": "papel con un mensaje corto"
+        },
+        {
+          "word": "serenata",
+          "meaning": "canción romántica que cantas para una persona, de noche"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "La cita de Sergio era su dentista",
+      "place": "Bar La Persiana",
+      "context": "Sergio y Nico esperan sus bebidas en la barra. Sergio cuenta lo que le pasó el sábado pasado en ese mismo bar.",
+      "speakers": [
+        {
+          "name": "Sergio",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Nico",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Oye, ¿te conté lo de mi cita del sábado pasado? Fue aquí, en esta barra."
+        },
+        {
+          "s": 1,
+          "text": "No. ¿La chica de la aplicación?"
+        },
+        {
+          "s": 0,
+          "text": "Esa. En las fotos llevaba lentes de sol, ¿no? Bueno, llegó, se quitó los lentes y... era mi dentista."
+        },
+        {
+          "s": 1,
+          "text": "¡No te creo!"
+        },
+        {
+          "s": 0,
+          "text": "Te lo juro. Y lo peor: lo primero que me dijo fue «Sergio, no viniste a tu cita de marzo»."
+        },
+        {
+          "s": 1,
+          "text": "Jajaja. ¿Y qué hicieron?"
+        },
+        {
+          "s": 0,
+          "text": "Pues tomamos algo, hablamos tres horas y la pasamos muy bien. Pero dice que no sale otra vez conmigo si no voy primero a su consultorio."
+        },
+        {
+          "s": 1,
+          "text": "Entonces ya tienes dos citas: una romántica y otra con el dentista."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le cuenta Sergio a Nico?",
+          "options": [
+            "Una cita sorprendente",
+            "Un problema con su trabajo",
+            "Un dolor de muelas muy fuerte"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Sergio no la reconoció en las fotos?",
+          "options": [
+            "Porque las fotos eran muy viejas",
+            "Porque tenía el pelo de otro color",
+            "Porque llevaba lentes de sol"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le dijo ella primero?",
+          "options": [
+            "Que él era muy guapo",
+            "Que él no fue a su cita de marzo",
+            "Que tenía otra cita después"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué tiene que hacer Sergio para salir otra vez con ella?",
+          "options": [
+            "Invitarla a cenar",
+            "Ir a su consultorio",
+            "Llamarla el lunes"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué piensas de las aplicaciones para conocer gente?",
+          "model": "Creo que son útiles, pero las fotos a veces no son reales."
+        },
+        {
+          "q": "¿Te encontraste alguna vez con una persona de tu trabajo o de tu médico fuera de su lugar normal?",
+          "model": "Sí, vi a mi médico en un concierto. Bailaba mucho."
+        },
+        {
+          "q": "¿Cómo fue tu primera cita más divertida o más rara?",
+          "model": "Fuimos al cine, pero la película era de terror y yo me quedé dormido."
+        }
+      ],
+      "gaps": "Pues [tomamos algo], hablamos [tres horas] y la pasamos [muy bien]. Pero dice que no sale otra vez conmigo si no voy primero a su [consultorio].",
+      "glossary": [
+        {
+          "word": "cita",
+          "meaning": "encuentro con una persona que te gusta, o una hora con el médico"
+        },
+        {
+          "word": "lentes de sol",
+          "meaning": "gafas oscuras para el sol"
+        },
+        {
+          "word": "te lo juro",
+          "meaning": "es verdad, de verdad"
+        },
+        {
+          "word": "consultorio",
+          "meaning": "lugar donde trabaja un médico o un dentista"
+        }
+      ]
+    },
+    {
+      "id": "museo",
+      "title": "La cabina del número equivocado",
+      "place": "Museo del Pasado",
+      "context": "En la noche abierta del museo, una guía muestra una vieja cabina de teléfono. Un visitante hace preguntas.",
+      "speakers": [
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Carlos",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Esta cabina de teléfono estuvo cuarenta años en la Plaza de la Fuente. Tiene una historia muy bonita."
+        },
+        {
+          "s": 1,
+          "text": "¿Ah, sí? ¿Qué pasó?"
+        },
+        {
+          "s": 0,
+          "text": "En mil novecientos setenta y ocho, una chica, Elena, llamó desde aquí a su hermana. Pero marcó mal un número."
+        },
+        {
+          "s": 1,
+          "text": "¿Y quién contestó?"
+        },
+        {
+          "s": 0,
+          "text": "Un chico que se llamaba Rubén. Hablaron una hora. Al día siguiente, él vino a la plaza a conocerla, con una flor."
+        },
+        {
+          "s": 1,
+          "text": "Qué romántico. ¿Y se casaron?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, se casaron un año después. Bueno, se separaron en los noventa... Pero Elena todavía viene cada año a dejar una flor aquí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla la guía?",
+          "options": [
+            "De la historia de una cabina de teléfono",
+            "De cómo funcionan los teléfonos viejos",
+            "De la historia de la plaza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿A quién quería llamar Elena?",
+          "options": [
+            "A un chico",
+            "A su madre",
+            "A su hermana"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo Rubén al día siguiente?",
+          "options": [
+            "La llamó otra vez",
+            "Fue a la plaza con una flor",
+            "Le escribió una carta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hace Elena ahora?",
+          "options": [
+            "Trabaja en el museo",
+            "Vive otra vez con Rubén",
+            "Deja una flor en la cabina cada año"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo conociste a tu pareja o a tu mejor amigo?",
+          "model": "Conocí a mi mejor amiga en la universidad. Nos sentamos juntas el primer día."
+        },
+        {
+          "q": "¿Te parece romántica o triste esta historia? ¿Por qué?",
+          "model": "Me parece un poco triste, porque se separaron, pero ella todavía recuerda."
+        },
+        {
+          "q": "¿Llamaste alguna vez a un número equivocado? ¿Qué pasó?",
+          "model": "Sí, llamé a un restaurante y contestó una señora muy enojada."
+        }
+      ],
+      "gaps": "Hablaron una [hora]. Al día [siguiente], él vino a la [plaza] a conocerla, con una [flor].",
+      "glossary": [
+        {
+          "word": "cabina de teléfono",
+          "meaning": "pequeña casa en la calle con un teléfono público"
+        },
+        {
+          "word": "marcó mal",
+          "meaning": "puso un número equivocado en el teléfono"
+        },
+        {
+          "word": "contestó",
+          "meaning": "respondió al teléfono"
+        },
+        {
+          "word": "se separaron",
+          "meaning": "terminaron su relación, ya no vivieron juntos"
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "El novio que se escapó en taxi",
+      "place": "Taxi en la avenida",
+      "context": "Vale va en taxi hacia la terraza. El taxista es muy hablador y le cuenta su viaje más raro.",
+      "speakers": [
+        {
+          "name": "Sebastián",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Así que hoy cumples treinta? ¡Felicidades! Oye, ¿quieres escuchar la historia más loca de mi taxi?"
+        },
+        {
+          "s": 1,
+          "text": "¡Claro! Cuéntame."
+        },
+        {
+          "s": 0,
+          "text": "El sábado pasado subió un señor con traje y flor en la chaqueta. Me dijo: «Rápido, al aeropuerto». Era el novio. Se escapó de su propia boda."
+        },
+        {
+          "s": 1,
+          "text": "¡No! ¿En serio?"
+        },
+        {
+          "s": 0,
+          "text": "En serio. Pero a mitad de camino se tocó el bolsillo y se puso blanco. Tenía los anillos."
+        },
+        {
+          "s": 1,
+          "text": "¿Y entonces?"
+        },
+        {
+          "s": 0,
+          "text": "Me pidió volver a la iglesia. Me dijo: «Puedo dejarla, pero no sin anillos»."
+        },
+        {
+          "s": 1,
+          "text": "¿Y al final se casó?"
+        },
+        {
+          "s": 0,
+          "text": "Eso no lo sé. Me pagó y entró corriendo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cuenta el taxista?",
+          "options": [
+            "Un viaje muy raro con un novio",
+            "Cómo conoció a su esposa",
+            "Un accidente en la avenida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Adónde quería ir el novio primero?",
+          "options": [
+            "A la iglesia",
+            "Al aeropuerto",
+            "A su casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué el novio quiso volver?",
+          "options": [
+            "Porque se olvidó el pasaporte",
+            "Porque la novia lo llamó",
+            "Porque tenía los anillos en el bolsillo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sabe el taxista del final de la historia?",
+          "options": [
+            "Que el novio se casó",
+            "Que el novio se fue de viaje",
+            "Nada, solo que el novio entró corriendo"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hablas con los taxistas o prefieres ir en silencio?",
+          "model": "Depende. Si estoy cansado, prefiero ir en silencio."
+        },
+        {
+          "q": "¿Qué piensas del novio de la historia?",
+          "model": "Creo que fue un poco cobarde, pero también honesto con los anillos."
+        },
+        {
+          "q": "¿Fuiste alguna vez a una boda con problemas? ¿Qué pasó?",
+          "model": "Sí, en la boda de mi primo se cortó la luz y bailamos sin música."
+        }
+      ],
+      "gaps": "Pero a mitad de [camino] se tocó el [bolsillo] y se puso [blanco]. Tenía los [anillos].",
+      "glossary": [
+        {
+          "word": "se escapó",
+          "meaning": "se fue rápido y sin avisar"
+        },
+        {
+          "word": "boda",
+          "meaning": "fiesta donde dos personas se casan"
+        },
+        {
+          "word": "a mitad de camino",
+          "meaning": "en el medio del viaje"
+        },
+        {
+          "word": "se puso blanco",
+          "meaning": "se asustó mucho y perdió el color de la cara"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "El brindis de Leo",
+      "place": "La terraza de las luces",
+      "context": "En la terraza, Leo levanta su copa y pide silencio. Quiere decir unas palabras para Vale.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "A ver, un momento, por favor, ¡silencio! Gracias."
+        },
+        {
+          "s": 0,
+          "text": "Conocí a Vale hace cinco años. Yo buscaba una habitación y ella tenía un anuncio en internet. Decía: «Busco compañero tranquilo»."
+        },
+        {
+          "s": 0,
+          "text": "El primer día, ella hizo una cena para mí y... se quemó toda la cocina. Vinieron los bomberos. Yo casi me fui esa misma noche."
+        },
+        {
+          "s": 0,
+          "text": "Pero me quedé. Y fue la mejor decisión de mi vida."
+        },
+        {
+          "s": 0,
+          "text": "Vale, eres mi mejor amiga. Solo te pido una cosa para los treinta: no cocines nunca más. ¡Salud!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Leo?",
+          "options": [
+            "Un brindis por Vale",
+            "Una queja sobre la fiesta",
+            "Un anuncio sobre la comida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se conocieron Leo y Vale?",
+          "options": [
+            "En el trabajo",
+            "Por un anuncio de una habitación",
+            "En una fiesta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasó el primer día?",
+          "options": [
+            "Leo perdió las llaves",
+            "Vale se olvidó de Leo",
+            "Se quemó la cocina"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Leo a Vale para los treinta?",
+          "options": [
+            "Que no cocine nunca más",
+            "Que busque otro compañero",
+            "Que haga una fiesta cada año"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo conociste a tu mejor amigo o amiga?",
+          "model": "Lo conocí en el colegio. Teníamos seis años y peleamos por un lápiz."
+        },
+        {
+          "q": "¿Hiciste alguna vez un brindis o un discurso? ¿Estabas nervioso?",
+          "model": "Sí, en la boda de mi hermana. Estaba muy nerviosa, pero salió bien."
+        },
+        {
+          "q": "¿Cocinas bien o tienes una historia de desastre en la cocina?",
+          "model": "Cocino bastante mal. Una vez quemé el arroz y toda la casa olía a humo."
+        }
+      ],
+      "gaps": "El [primer día], ella hizo una [cena] para mí y... se quemó toda la [cocina]. Vinieron los [bomberos].",
+      "glossary": [
+        {
+          "word": "habitación",
+          "meaning": "cuarto de una casa para dormir"
+        },
+        {
+          "word": "anuncio",
+          "meaning": "texto para buscar u ofrecer algo"
+        },
+        {
+          "word": "bomberos",
+          "meaning": "personas que apagan el fuego"
+        },
+        {
+          "word": "salud",
+          "meaning": "lo que dices cuando levantas la copa para brindar"
+        }
+      ]
+    }
+  ]
+}

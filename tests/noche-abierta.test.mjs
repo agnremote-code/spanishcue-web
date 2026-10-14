@@ -701,7 +701,8 @@ test('the title screen and the HUD carry the level picker; the library lists one
   assert.match(title, /class="na-title-screen/);
   assert.match(title, /Empezar la noche/);
   assert.match(title, /\/brand\/mascot\/kneeling\.webp/, 'the official mascot is the hero');
-  assert.equal((title.match(/role="radio"/g) ?? []).length, 6);
+  assert.equal((title.match(/role="radio" data-level=/g) ?? []).length, 6);
+  assert.match(title, /Comprensión auditiva/, "the listening mode sits next to the levels");
   assert.match(title, /data-level="B1" aria-checked="true"/, 'B1 by default');
   assert.doesNotMatch(title, /<select/, 'no plain select');
   assert.ok(existsSync('public/noche-abierta/mascot-wink.webp'));

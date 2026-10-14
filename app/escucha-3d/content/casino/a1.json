@@ -1,0 +1,302 @@
+{
+  "game": "casino",
+  "level": "A1",
+  "items": [
+    {
+      "id": "portero",
+      "title": "Rocco pide el pasaporte",
+      "place": "La entrada",
+      "context": "Valentina llega a la puerta del casino. El portero, Rocco, habla con ella.",
+      "speakers": [
+        { "name": "Rocco", "country": "Argentina", "voice": "es-AR-TomasNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas noches, señorita. ¿Tienes tu pasaporte?" },
+        { "s": 1, "text": "Sí, claro. Aquí está. Me llamo Valentina." },
+        { "s": 0, "text": "A ver... ¿Cuántos años tienes?" },
+        { "s": 1, "text": "Tengo veinticinco años." },
+        { "s": 0, "text": "Muy bien. ¿Es tu primera vez en Las Vegas?" },
+        { "s": 1, "text": "Sí. Vivo en Miami. Busco a un amigo de mi padre." },
+        { "s": 0, "text": "¿Y cómo se llama tu padre?" },
+        { "s": 1, "text": "Ernesto." },
+        { "s": 0, "text": "¿Ernesto? Ah... Bueno, pasa, pasa. Pero cuidado, ¿eh? La noche aquí es muy larga." }
+      ],
+      "choice": [
+        { "q": "¿Qué pasa en el audio?", "options": ["El portero habla con Valentina en la puerta", "Valentina compra una entrada para un show", "Valentina pide una bebida en el bar"], "answer": 0 },
+        { "q": "¿Qué pide el portero?", "options": ["Dinero", "El pasaporte", "Una invitación"], "answer": 1 },
+        { "q": "¿Dónde vive Valentina?", "options": ["En Las Vegas", "En México", "En Miami"], "answer": 2 },
+        { "q": "¿A quién busca Valentina?", "options": ["A un amigo de su padre", "A su hermano", "A su novio"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cuántos años tienes y dónde vives?", "model": "Tengo treinta años y vivo en Lima." },
+        { "q": "¿Te gusta salir de noche? ¿Adónde vas?", "model": "Sí, me gusta. Voy a bares con mis amigos." },
+        { "q": "¿Conoces a los amigos de tu padre o de tu madre?", "model": "Sí, conozco a dos amigos de mi padre. Son muy simpáticos." }
+      ],
+      "gaps": "Sí. [Vivo] en [Miami]. Busco a un [amigo] de mi [padre].",
+      "glossary": [
+        { "word": "pasaporte", "meaning": "documento para viajar a otro país" },
+        { "word": "señorita", "meaning": "forma educada de llamar a una mujer joven" },
+        { "word": "cuidado", "meaning": "atención, porque hay un peligro" }
+      ]
+    },
+    {
+      "id": "ruleta",
+      "title": "Rojo para el cumpleaños",
+      "place": "Ruleta",
+      "context": "En la mesa de la ruleta, una turista juega con el crupier Nico.",
+      "speakers": [
+        { "name": "Nico", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Lucía", "country": "Perú", "voice": "es-PE-CamilaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hagan sus apuestas. ¿Rojo o negro, señora?" },
+        { "s": 1, "text": "Mmm... rojo. Es mi color favorito." },
+        { "s": 0, "text": "¿Cuánto?" },
+        { "s": 1, "text": "Diez dólares. Solo diez, ¿eh? Es mi primera vez." },
+        { "s": 0, "text": "Muy bien... Diecisiete, negro. Lo siento." },
+        { "s": 1, "text": "¡Ay, no! Bueno, otra vez. Ahora negro, veinte dólares." },
+        { "s": 0, "text": "¿Veinte? ¿Segura?" },
+        { "s": 1, "text": "Sí, sí. Hoy es mi cumpleaños. Hoy gano." },
+        { "s": 0, "text": "Treinta y dos, rojo. Lo siento mucho, señora." },
+        { "s": 1, "text": "¡No puede ser! Ya está. Me voy al bar." }
+      ],
+      "choice": [
+        { "q": "¿Qué pasa en la ruleta?", "options": ["Lucía gana mucho dinero", "Lucía pierde dos veces", "Lucía no quiere jugar"], "answer": 1 },
+        { "q": "¿Cuál es el color favorito de Lucía?", "options": ["El negro", "El verde", "El rojo"], "answer": 2 },
+        { "q": "¿Cuánto dinero apuesta la segunda vez?", "options": ["Veinte dólares", "Diez dólares", "Treinta dólares"], "answer": 0 },
+        { "q": "¿Por qué Lucía piensa que va a ganar?", "options": ["Porque es su primera vez", "Porque es su cumpleaños", "Porque Nico es su amigo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Cuál es tu color favorito?", "model": "Mi color favorito es el azul." },
+        { "q": "¿Qué haces el día de tu cumpleaños?", "model": "Como en un restaurante con mi familia." },
+        { "q": "¿Te gusta jugar por dinero? ¿Por qué?", "model": "No, no me gusta. Pierdo siempre." }
+      ],
+      "gaps": "¡Ay, no! Bueno, [otra vez]. Ahora [negro], [veinte] [dólares].",
+      "glossary": [
+        { "word": "apuestas", "meaning": "el dinero que pones en un juego para ganar más" },
+        { "word": "Lo siento", "meaning": "frase para decir que algo malo te da pena" },
+        { "word": "¿Segura?", "meaning": "pregunta para saber si una persona no tiene dudas" }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "El cóctel Medianoche",
+      "place": "Bar central",
+      "context": "Valentina se sienta en el bar central. Leo, el bartender, le habla.",
+      "speakers": [
+        { "name": "Leo", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, guapa. ¿Qué quieres tomar?" },
+        { "s": 1, "text": "Hola. Mmm... no sé. ¿Qué me recomiendas?" },
+        { "s": 0, "text": "Hoy hay un cóctel especial. Se llama Medianoche. Tiene ron, limón y un poco de café." },
+        { "s": 1, "text": "¿Medianoche? Qué curioso. ¿Cuánto cuesta?" },
+        { "s": 0, "text": "Quince dólares." },
+        { "s": 1, "text": "Uf, es caro. Un agua con gas, por favor." },
+        { "s": 0, "text": "Mira, para ti el cóctel es gratis." },
+        { "s": 1, "text": "¿Gratis? ¿Por qué?" },
+        { "s": 0, "text": "Porque tienes los ojos de Ernesto. Él siempre toma un Medianoche aquí, en esta silla." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Leo y Valentina?", "options": ["De una bebida", "De un viaje", "De un trabajo"], "answer": 0 },
+        { "q": "¿Qué tiene el cóctel Medianoche?", "options": ["Tequila, naranja y azúcar", "Vino, limón y agua", "Ron, limón y café"], "answer": 2 },
+        { "q": "¿Qué pide Valentina primero?", "options": ["Un café", "Un agua con gas", "Una cerveza"], "answer": 1 },
+        { "q": "¿Por qué el cóctel es gratis para Valentina?", "options": ["Porque es su cumpleaños", "Porque tiene los ojos de Ernesto", "Porque Leo es su novio"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué bebida pides en un bar?", "model": "Pido una cerveza o un agua con gas." },
+        { "q": "¿Te gustan los cócteles? ¿Cuál es tu favorito?", "model": "Sí. Mi favorito es el mojito." },
+        { "q": "¿A quién de tu familia te pareces?", "model": "Me parezco a mi madre. Tengo sus ojos." }
+      ],
+      "gaps": "Se llama [Medianoche]. Tiene [ron], [limón] y un poco de [café].",
+      "glossary": [
+        { "word": "guapa", "meaning": "bonita; también es una forma simpática de hablar a una mujer" },
+        { "word": "gratis", "meaning": "que no cuesta dinero" },
+        { "word": "caro", "meaning": "que cuesta mucho dinero" },
+        { "word": "agua con gas", "meaning": "agua con burbujas" }
+      ]
+    },
+    {
+      "id": "poker",
+      "title": "El Holandés no es holandés",
+      "place": "Salón Esmeralda",
+      "context": "En el salón de póker del segundo piso, dos amigas hablan de un jugador famoso. Valentina las escucha.",
+      "speakers": [
+        { "name": "Rosa", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Inés", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Oye, ¿ves a ese señor? El de gafas y barba blanca." },
+        { "s": 1, "text": "Sí. ¿Quién es?" },
+        { "s": 0, "text": "Todos lo llaman el Holandés. Juega aquí todas las noches." },
+        { "s": 1, "text": "¿Es de Holanda?" },
+        { "s": 0, "text": "¡No! Es de Madrid. Pero siempre lleva zapatos naranjas." },
+        { "s": 1, "text": "Ja, ja. ¿Y juega bien?" },
+        { "s": 0, "text": "Muy bien. No habla, no sonríe y siempre gana." },
+        { "s": 1, "text": "Pues hoy no gana. Mira, está muy serio." },
+        { "s": 0, "text": "Ese hombre siempre está serio, mujer." }
+      ],
+      "choice": [
+        { "q": "¿De quién hablan Rosa e Inés?", "options": ["De un jugador de póker", "De un camarero", "De un cantante"], "answer": 0 },
+        { "q": "¿Cómo es el señor?", "options": ["Joven y rubio", "Alto y sin pelo", "Con gafas y barba blanca"], "answer": 2 },
+        { "q": "¿De dónde es el Holandés?", "options": ["De Holanda", "De Madrid", "De Chile"], "answer": 1 },
+        { "q": "¿Por qué lo llaman el Holandés?", "options": ["Por sus zapatos naranjas", "Porque habla holandés", "Porque vive en Holanda"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Tienes un apodo? ¿Por qué te llaman así?", "model": "Sí, me llaman Flaco porque soy muy delgado." },
+        { "q": "¿Qué ropa llevas siempre?", "model": "Siempre llevo vaqueros y zapatillas blancas." },
+        { "q": "¿Juegas a las cartas? ¿Con quién?", "model": "Sí, juego con mis abuelos los domingos." }
+      ],
+      "gaps": "Todos lo [llaman] el [Holandés]. [Juega] aquí [todas las noches].",
+      "glossary": [
+        { "word": "gafas", "meaning": "lentes para ver bien" },
+        { "word": "barba", "meaning": "pelo en la cara de un hombre" },
+        { "word": "serio", "meaning": "que no sonríe" }
+      ]
+    },
+    {
+      "id": "teatro",
+      "title": "El conejo Pancho tiene hambre",
+      "place": "Camerino del teatro",
+      "context": "En su camerino, el mago El Gran Faustino deja un mensaje de voz a su asistente.",
+      "speakers": [
+        { "name": "Faustino", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Daniela. Soy Faustino. Escucha, hay un cambio: el show es a las nueve, no a las ocho." },
+        { "s": 0, "text": "Necesito tres cosas: el sombrero negro, la caja grande y el conejo." },
+        { "s": 0, "text": "Ah, y el conejo, Pancho, tiene hambre. Por favor, una zanahoria para él. Una, no dos." },
+        { "s": 0, "text": "Y otra cosa. Para el último truco necesito a una persona del público. Hay una chica con un vestido rojo en la primera fila. Ella es perfecta. Bueno, hasta luego." }
+      ],
+      "choice": [
+        { "q": "¿Qué es el audio?", "options": ["Una conversación en el teatro", "Un mensaje de voz del mago", "Un anuncio del casino"], "answer": 1 },
+        { "q": "¿A qué hora es el show?", "options": ["A las ocho", "A las diez", "A las nueve"], "answer": 2 },
+        { "q": "¿Qué necesita Faustino?", "options": ["Un sombrero, una caja y un conejo", "Una mesa, una silla y un vestido", "Cartas, monedas y una caja"], "answer": 0 },
+        { "q": "¿Quién es perfecta para el último truco?", "options": ["Daniela", "Una chica con vestido rojo", "Una señora de la última fila"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te gustan los shows de magia?", "model": "Sí, me gustan mucho. Son divertidos." },
+        { "q": "¿Tienes un animal en casa? ¿Cómo se llama?", "model": "Sí, tengo un gato. Se llama Tito." },
+        { "q": "¿Te gusta subir al escenario con un artista? ¿Por qué?", "model": "No, no me gusta. Soy muy tímida." }
+      ],
+      "gaps": "Necesito [tres] cosas: el [sombrero negro], la [caja grande] y el [conejo].",
+      "glossary": [
+        { "word": "zanahoria", "meaning": "verdura larga y naranja; a los conejos les gusta mucho" },
+        { "word": "truco", "meaning": "acción de magia" },
+        { "word": "público", "meaning": "las personas que miran el show" },
+        { "word": "fila", "meaning": "línea de sillas en un teatro" }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Boda con canción de Elvis",
+      "place": "Capilla «Amor Exprés»",
+      "context": "En la capilla de bodas del segundo piso, una pareja habla con Elvis, el oficiante.",
+      "speakers": [
+        { "name": "Elvis", "country": "Puerto Rico", "voice": "es-PR-VictorNeural" },
+        { "name": "Karla", "country": "Honduras", "voice": "es-HN-KarlaNeural" },
+        { "name": "Pedro", "country": "Guatemala", "voice": "es-GT-AndresNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Bienvenidos a Amor Exprés! ¿Cómo se llaman?" },
+        { "s": 1, "text": "Yo soy Karla y él es Pedro." },
+        { "s": 0, "text": "¡Qué bonito! ¿Y desde cuándo están juntos?" },
+        { "s": 2, "text": "Desde ayer." },
+        { "s": 0, "text": "¿Desde ayer? Bueno, bueno... El paquete normal cuesta noventa y nueve dólares. Con canción de Elvis, ciento cincuenta." },
+        { "s": 1, "text": "¡Con canción, con canción!" },
+        { "s": 2, "text": "Eh... Karla, mi amor, no tengo dinero. Todo está en la ruleta." },
+        { "s": 1, "text": "Ay, Pedro... Está bien. Pago yo." }
+      ],
+      "choice": [
+        { "q": "¿Qué quieren hacer Karla y Pedro?", "options": ["Jugar a la ruleta", "Casarse", "Ver un show"], "answer": 1 },
+        { "q": "¿Desde cuándo están juntos?", "options": ["Desde ayer", "Desde hace un año", "Desde hoy"], "answer": 0 },
+        { "q": "¿Cuánto cuesta la boda con canción?", "options": ["Noventa y nueve dólares", "Cien dólares", "Ciento cincuenta dólares"], "answer": 2 },
+        { "q": "¿Quién paga la boda?", "options": ["Pedro", "Elvis", "Karla"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Te gustan las bodas grandes o pequeñas?", "model": "Me gustan las bodas pequeñas, con la familia." },
+        { "q": "¿Quién paga en tu casa cuando sales a cenar?", "model": "Normalmente paga mi pareja, pero a veces pago yo." },
+        { "q": "¿Qué canción quieres en tu boda?", "model": "Quiero una canción de Juan Luis Guerra." }
+      ],
+      "gaps": "El [paquete] normal cuesta [noventa y nueve] dólares. Con [canción] de Elvis, [ciento cincuenta].",
+      "glossary": [
+        { "word": "juntos", "meaning": "uno con el otro, como pareja" },
+        { "word": "paquete", "meaning": "un grupo de servicios con un precio" },
+        { "word": "mi amor", "meaning": "forma cariñosa de hablar a tu pareja" }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Sin contraseña no entras",
+      "place": "La puerta VIP",
+      "context": "En el tercer piso, Valentina quiere pasar por la puerta VIP. Tano, el guardaespaldas, no la deja.",
+      "speakers": [
+        { "name": "Tano", "country": "Colombia", "voice": "es-CO-GonzaloNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Alto. Esta puerta es privada. ¿Tienes invitación?" },
+        { "s": 1, "text": "Tengo esto. Una ficha dorada. Dice «Piso tres, medianoche»." },
+        { "s": 0, "text": "Mmm. Una ficha dorada... Muy bien. ¿Y la contraseña?" },
+        { "s": 1, "text": "¿Contraseña? No sé nada de una contraseña." },
+        { "s": 0, "text": "Sin contraseña, no entras. Don Aurelio no recibe a nadie." },
+        { "s": 1, "text": "Por favor. Es muy importante. Es sobre mi padre." },
+        { "s": 0, "text": "Lo siento. Son las once. Vuelve a medianoche, con la contraseña." }
+      ],
+      "choice": [
+        { "q": "¿Qué quiere Valentina?", "options": ["Entrar por la puerta VIP", "Comprar una ficha", "Hablar con su padre por teléfono"], "answer": 0 },
+        { "q": "¿Qué tiene Valentina?", "options": ["Una invitación", "Una ficha dorada", "Una llave"], "answer": 1 },
+        { "q": "¿Qué no sabe Valentina?", "options": ["El número del piso", "El nombre de Don Aurelio", "La contraseña"], "answer": 2 },
+        { "q": "¿Qué hora es?", "options": ["Las doce", "Las once", "Las diez"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes muchas contraseñas? ¿Las recuerdas?", "model": "Sí, tengo muchas. No las recuerdo todas." },
+        { "q": "¿A qué hora vuelves a casa los sábados?", "model": "Vuelvo a casa a las dos de la mañana." },
+        { "q": "¿Te gustan los lugares VIP? ¿Por qué?", "model": "No mucho. Prefiero los lugares normales." }
+      ],
+      "gaps": "Lo [siento]. Son las [once]. Vuelve a [medianoche], con la [contraseña].",
+      "glossary": [
+        { "word": "Alto", "meaning": "palabra para decir a una persona que no camine más" },
+        { "word": "contraseña", "meaning": "palabra secreta para entrar" },
+        { "word": "ficha", "meaning": "pieza redonda que se usa como dinero en el casino" },
+        { "word": "medianoche", "meaning": "las doce de la noche" }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Fuegos artificiales a las doce",
+      "place": "Terraza sobre el Strip",
+      "context": "En la terraza del tercer piso, una voz da un anuncio por los altavoces del casino.",
+      "speakers": [
+        { "name": "Voz del casino", "country": "España", "voice": "es-ES-ElviraNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas noches, señoras y señores. Bienvenidos a la terraza del Gran Meridiano." },
+        { "s": 0, "text": "Hoy es una noche especial. A las doce en punto hay fuegos artificiales sobre el Strip." },
+        { "s": 0, "text": "Las bebidas en la terraza son gratis hasta las doce y media." },
+        { "s": 0, "text": "Hace calor: treinta grados. Hay agua fría al lado de la puerta." },
+        { "s": 0, "text": "Por favor, no fumen cerca de las flores. Gracias, y feliz noche." }
+      ],
+      "choice": [
+        { "q": "¿Qué es el audio?", "options": ["Una llamada de teléfono", "Una conversación entre amigos", "Un anuncio del casino"], "answer": 2 },
+        { "q": "¿Qué pasa a las doce en punto?", "options": ["Hay fuegos artificiales", "Cierra la terraza", "Empieza un concierto"], "answer": 0 },
+        { "q": "¿Hasta qué hora son gratis las bebidas?", "options": ["Hasta las doce", "Hasta las doce y media", "Hasta la una"], "answer": 1 },
+        { "q": "¿Dónde está el agua fría?", "options": ["En el bar", "Al lado de las flores", "Al lado de la puerta"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Te gustan los fuegos artificiales? ¿Cuándo los ves?", "model": "Sí, me gustan. Los veo en Año Nuevo." },
+        { "q": "¿Qué haces cuando hace mucho calor?", "model": "Tomo agua fría y voy a la playa." },
+        { "q": "¿Qué haces a medianoche normalmente?", "model": "Normalmente duermo. Me levanto muy temprano." }
+      ],
+      "gaps": "Hace [calor]: [treinta grados]. Hay [agua fría] al lado de la [puerta].",
+      "glossary": [
+        { "word": "fuegos artificiales", "meaning": "luces de colores en el cielo, con mucho ruido" },
+        { "word": "en punto", "meaning": "a la hora exacta" },
+        { "word": "terraza", "meaning": "lugar abierto en un edificio, sin techo" },
+        { "word": "fumen", "meaning": "verbo fumar: usar cigarrillos" }
+      ]
+    }
+  ]
+}

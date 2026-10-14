@@ -1,0 +1,44 @@
+name: Escucha 3D audio
+
+on:
+  push:
+    branches: ["claude/escucha-3d-*"]
+    paths: ["app/escucha-3d/content/*/*.json", "scripts/generate-escucha-3d-audio.py", ".github/workflows/escucha-3d-audio.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: escucha-3d-audio-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 30
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install synthesis tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
+          pip install -U edge-tts
+      - name: Synthesize
+        run: |
+          set -o pipefail
+          python scripts/generate-escucha-3d-audio.py 2>&1 | tee /tmp/audio-log.txt || { cp /tmp/audio-log.txt app/escucha-3d/audio-log.txt; exit 1; }
+      - name: Commit audio
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          for p in public/audio/escucha-3d app/escucha-3d/audio-manifest.json app/escucha-3d/audio-log.txt; do [ -e "$p" ] && git add -A "$p"; done; true
+          if git diff --cached --quiet; then echo "No audio changes"; exit 0; fi
+          git commit -m "Generate Escucha 3D audio"
+          git pull --rebase origin ${GITHUB_REF_NAME}
+          git push origin HEAD:${GITHUB_REF_NAME}
