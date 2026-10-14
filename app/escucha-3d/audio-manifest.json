@@ -121,6 +121,126 @@
    "seconds": 58.71,
    "src": "/audio/escucha-3d/bosque/b1-vida-real.mp3"
   },
+  "bosque/b2-cambia": {
+   "hash": "ee2542a6c6322c9d57f9",
+   "seconds": 56.46,
+   "src": "/audio/escucha-3d/bosque/b2-cambia.mp3"
+  },
+  "bosque/b2-compara": {
+   "hash": "ac9816360b91c775d4d1",
+   "seconds": 79.82,
+   "src": "/audio/escucha-3d/bosque/b2-compara.mp3"
+  },
+  "bosque/b2-elige": {
+   "hash": "34571a5c34d56c9a7fc3",
+   "seconds": 64.6,
+   "src": "/audio/escucha-3d/bosque/b2-elige.mp3"
+  },
+  "bosque/b2-futuro": {
+   "hash": "826d8c04a27b81147e8e",
+   "seconds": 67.26,
+   "src": "/audio/escucha-3d/bosque/b2-futuro.mp3"
+  },
+  "bosque/b2-opinion": {
+   "hash": "4b2449198e4bbd761db6",
+   "seconds": 78.36,
+   "src": "/audio/escucha-3d/bosque/b2-opinion.mp3"
+  },
+  "bosque/b2-recuerdos": {
+   "hash": "ef414667804f2fde0cc0",
+   "seconds": 61.33,
+   "src": "/audio/escucha-3d/bosque/b2-recuerdos.mp3"
+  },
+  "bosque/b2-sobre-ti": {
+   "hash": "2e94ab8311cddd0d7120",
+   "seconds": 77.93,
+   "src": "/audio/escucha-3d/bosque/b2-sobre-ti.mp3"
+  },
+  "bosque/b2-vida-real": {
+   "hash": "42540ae19a7526e618fe",
+   "seconds": 81.64,
+   "src": "/audio/escucha-3d/bosque/b2-vida-real.mp3"
+  },
+  "bosque/c1-cambia": {
+   "hash": "7387c2c88f9a05b37157",
+   "seconds": 94.37,
+   "src": "/audio/escucha-3d/bosque/c1-cambia.mp3"
+  },
+  "bosque/c1-compara": {
+   "hash": "ef1cd3a0470fbfd2bdee",
+   "seconds": 65.08,
+   "src": "/audio/escucha-3d/bosque/c1-compara.mp3"
+  },
+  "bosque/c1-elige": {
+   "hash": "938a215ff535fbf63588",
+   "seconds": 78.62,
+   "src": "/audio/escucha-3d/bosque/c1-elige.mp3"
+  },
+  "bosque/c1-futuro": {
+   "hash": "db3765d9ebfa06857cff",
+   "seconds": 83.41,
+   "src": "/audio/escucha-3d/bosque/c1-futuro.mp3"
+  },
+  "bosque/c1-opinion": {
+   "hash": "199f70458ddb7c3bc886",
+   "seconds": 86.81,
+   "src": "/audio/escucha-3d/bosque/c1-opinion.mp3"
+  },
+  "bosque/c1-recuerdos": {
+   "hash": "dd9ec30cc0b96504db55",
+   "seconds": 68.27,
+   "src": "/audio/escucha-3d/bosque/c1-recuerdos.mp3"
+  },
+  "bosque/c1-sobre-ti": {
+   "hash": "36e11ac56b179cc690da",
+   "seconds": 91.91,
+   "src": "/audio/escucha-3d/bosque/c1-sobre-ti.mp3"
+  },
+  "bosque/c1-vida-real": {
+   "hash": "4939722ecf8aeb56960d",
+   "seconds": 80.85,
+   "src": "/audio/escucha-3d/bosque/c1-vida-real.mp3"
+  },
+  "bosque/c2-cambia": {
+   "hash": "cd2166b6949f76bb6332",
+   "seconds": 100.37,
+   "src": "/audio/escucha-3d/bosque/c2-cambia.mp3"
+  },
+  "bosque/c2-compara": {
+   "hash": "f8d1bd6b7ecc80e6203d",
+   "seconds": 79.34,
+   "src": "/audio/escucha-3d/bosque/c2-compara.mp3"
+  },
+  "bosque/c2-elige": {
+   "hash": "0611894c7a9a44e8fd95",
+   "seconds": 99.0,
+   "src": "/audio/escucha-3d/bosque/c2-elige.mp3"
+  },
+  "bosque/c2-futuro": {
+   "hash": "610a1468736c6001a5b4",
+   "seconds": 103.01,
+   "src": "/audio/escucha-3d/bosque/c2-futuro.mp3"
+  },
+  "bosque/c2-opinion": {
+   "hash": "6edc594c14bd2c7cc82f",
+   "seconds": 99.88,
+   "src": "/audio/escucha-3d/bosque/c2-opinion.mp3"
+  },
+  "bosque/c2-recuerdos": {
+   "hash": "ae431bffb2ddd24eaebd",
+   "seconds": 73.12,
+   "src": "/audio/escucha-3d/bosque/c2-recuerdos.mp3"
+  },
+  "bosque/c2-sobre-ti": {
+   "hash": "b211c18dfd3623786f11",
+   "seconds": 104.46,
+   "src": "/audio/escucha-3d/bosque/c2-sobre-ti.mp3"
+  },
+  "bosque/c2-vida-real": {
+   "hash": "c157dd702a0400344c8d",
+   "seconds": 88.44,
+   "src": "/audio/escucha-3d/bosque/c2-vida-real.mp3"
+  },
   "casino/a1-bar": {
    "hash": "710674519aa8d7d64908",
    "seconds": 58.67,
