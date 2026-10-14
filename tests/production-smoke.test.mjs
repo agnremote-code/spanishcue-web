@@ -28,6 +28,12 @@ function fixture(overrides = {}) {
 test('valid 307 and 302 protection plus bounded invalid-token checks pass', async () => {
   assert.ok((await runSmoke('https://spanishcue.com', fixture())).length >= 9);
 });
+test('a protected (403) script chunk on the Google landing fails smoke', async () => {
+  const normal = fixture({ '/lp/google-teachers': () => new Response('<html>SPANISHCUE<script type="module" src="/assets/GoogleTeachersLanding-abc.js"></script></html>') });
+  await assert.rejects(() => runSmoke('https://spanishcue.com', (url, options) =>
+    new URL(url).pathname === '/assets/GoogleTeachersLanding-abc.js' ? new Response('Forbidden', { status: 403 }) : normal(url, options)), /GoogleTeachersLanding-abc\.js: expected 200, got 403/);
+  assert.ok((await runSmoke('https://spanishcue.com', normal)).some(r => r.path === '/assets/GoogleTeachersLanding-abc.js'));
+});
 test('the three reviewed Noche level URLs fail smoke if any deployed route breaks', async () => {
   for (const level of ['A1', 'B2', 'C1']) {
     const normal = fixture();

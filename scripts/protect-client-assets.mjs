@@ -62,6 +62,11 @@ const publicRoots = new Set([
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
   "app/immersive/PremiumPanel.tsx",
+  // Google Search landing: the client chunk carries only the guided-tour
+  // script and checkout UI; the free demo scene and catalog titles arrive
+  // as authorized page props from the server.
+  "app/immersive/GoogleTeachersLanding.tsx",
+  "app/immersive/GuidedTour.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
   "app/resources/ResourceCatalog.tsx",
   // Public question bank filters: the questions are free teaching content and
