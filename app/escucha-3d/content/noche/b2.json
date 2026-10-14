@@ -1,0 +1,939 @@
+{
+  "game": "noche",
+  "level": "B2",
+  "items": [
+    {
+      "id": "cafe",
+      "title": "La torta escondida detrás de los cruasanes",
+      "place": "Café Martina",
+      "context": "Nico entra al café con una caja enorme y habla con la camarera en la barra.",
+      "speakers": [
+        {
+          "name": "Nico",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Rocío",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, perdona que te moleste. ¿Me podrías guardar esta torta en la heladera un par de horas? Es para una amiga que cumple treinta y, si la llevo ahora, se arruina la sorpresa."
+        },
+        {
+          "s": 1,
+          "text": "Mmm, a ver... En principio no guardamos cosas de clientes, pero bueno, siempre que vuelvas antes de las diez, te la guardo. A las diez cerramos y aquí no queda nadie."
+        },
+        {
+          "s": 0,
+          "text": "¡Antes de las diez, seguro! Bueno, salvo que el grupo cambie de plan otra vez, que con ellos nunca se sabe."
+        },
+        {
+          "s": 1,
+          "text": "Ay, no me digas eso. Mira, te propongo algo: déjame tu número y, si a las nueve y media no has aparecido, te llamo. Y si no contestas, la torta se queda aquí y mañana nos la comemos nosotros."
+        },
+        {
+          "s": 0,
+          "text": "Me parece justo. Aunque, la verdad, me extrañaría que no contestara. Ah, una cosa más: que no la vea nadie de pelo rizado que se llame Vale."
+        },
+        {
+          "s": 1,
+          "text": "Tranquilo, la pongo detrás de los cruasanes. Ahí no mira nadie, te lo aseguro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pide Nico a la camarera?",
+          "options": [
+            "Que le guarde una torta unas horas",
+            "Que le venda una torta de cumpleaños",
+            "Que le prepare un café para llevar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Con qué condición acepta Rocío?",
+          "options": [
+            "Que Nico pague un poco más",
+            "Que Nico vuelva antes de las diez",
+            "Que Nico la llame antes de venir"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasará si Nico no contesta el teléfono?",
+          "options": [
+            "Rocío llevará la torta a la fiesta",
+            "Rocío tirará la torta a la basura",
+            "Los del café se comerán la torta al día siguiente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué menciona Nico a una chica de pelo rizado?",
+          "options": [
+            "Porque trabaja en el café",
+            "Porque es la cumpleañera y no debe ver la torta",
+            "Porque va a pasar a recoger la torta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez escondiste un regalo o una sorpresa para alguien? ¿Dónde?",
+          "model": "Sí, una vez escondí un regalo en casa de mi vecina para que mi pareja no lo encontrara."
+        },
+        {
+          "q": "¿Te parece bien que un café guarde cosas de los clientes? ¿Por qué?",
+          "model": "Depende: si es un favor puntual, me parece bien, siempre que el cliente vuelva a tiempo."
+        },
+        {
+          "q": "Si tus amigos cambiaran de plan a último momento, ¿qué harías?",
+          "model": "Me adaptaría, aunque me molestaría un poco que no avisaran con tiempo."
+        }
+      ],
+      "gaps": "En principio no guardamos cosas de [clientes], pero bueno, siempre que [vuelvas] antes de las [diez], te la [guardo].",
+      "glossary": [
+        {
+          "word": "torta",
+          "meaning": "pastel, tarta de cumpleaños"
+        },
+        {
+          "word": "se arruina",
+          "meaning": "se estropea, se echa a perder"
+        },
+        {
+          "word": "salvo que",
+          "meaning": "excepto si"
+        },
+        {
+          "word": "rizado",
+          "meaning": "con rizos, no liso"
+        }
+      ]
+    },
+    {
+      "id": "departamento",
+      "title": "Las tres reglas de Leo para la previa",
+      "place": "Departamento de Vale",
+      "context": "Leo, el compañero de piso de Vale, le deja un audio antes de salir a estudiar a casa de un amigo.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Vale, soy yo. Te mando audio porque, si te escribo, no lo lees. Mira, me parece bien que hagas la previa aquí, de verdad, pero te pido tres cosas."
+        },
+        {
+          "s": 0,
+          "text": "Primero: que la música esté baja después de las doce, porque la señora del tercero ya dejó otro papelito en el ascensor y no creo que nos perdone una tercera vez."
+        },
+        {
+          "s": 0,
+          "text": "Segundo: que nadie entre en mi pieza. No es que desconfíe de tus amigos... bueno, un poco sí, sobre todo de Martín, que la última vez se durmió en mi cama con los zapatos puestos."
+        },
+        {
+          "s": 0,
+          "text": "Y tercero: si a la una todavía queda gente, que se vayan directamente a la terraza, ¿sí? Yo mañana rindo a las ocho y, aunque me encantaría celebrar contigo, si no duermo por lo menos seis horas, me va a ir fatal."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y te dejé el regalo en el sillón. No lo abras hasta que yo vuelva. Te quiero, cumpleañera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué manda Leo el audio?",
+          "options": [
+            "Para cancelar la previa",
+            "Para pedirle a Vale algunas condiciones",
+            "Para invitar a la vecina"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hizo la vecina del tercero?",
+          "options": [
+            "Dejó notas quejándose",
+            "Llamó a la policía",
+            "Pidió que la invitaran"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué no quiere Leo que entren en su habitación?",
+          "options": [
+            "Porque allí tiene los apuntes del examen",
+            "Porque allí escondió el regalo",
+            "Porque Martín ya durmió allí con los zapatos puestos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se deduce sobre Leo?",
+          "options": [
+            "Que va a quedarse en la fiesta hasta el final",
+            "Que para él dormir es más importante que celebrar",
+            "Que está enfadado con Vale"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "Si vivieras con alguien, ¿qué reglas pondrías para las fiestas en casa?",
+          "model": "Pediría que la música estuviera baja después de medianoche y que nadie entrara en mi cuarto."
+        },
+        {
+          "q": "¿Has tenido problemas con algún vecino? ¿Cómo los resolviste?",
+          "model": "Sí, una vecina se quejaba del ruido, así que hablé con ella y le avisé antes de cada fiesta."
+        },
+        {
+          "q": "¿Prefieres mandar audios o escribir mensajes? ¿Por qué?",
+          "model": "Prefiero escribir, aunque los audios son útiles cuando el mensaje es largo."
+        }
+      ],
+      "gaps": "Primero: que la música esté [baja] después de las [doce], porque la señora del [tercero] ya dejó otro [papelito] en el ascensor y no creo que nos perdone una tercera vez.",
+      "glossary": [
+        {
+          "word": "previa",
+          "meaning": "reunión con amigos antes de ir a una fiesta"
+        },
+        {
+          "word": "pieza",
+          "meaning": "habitación, dormitorio (en Chile y otros países)"
+        },
+        {
+          "word": "rindo",
+          "meaning": "del verbo rendir: hago un examen"
+        },
+        {
+          "word": "papelito",
+          "meaning": "nota pequeña escrita en papel"
+        },
+        {
+          "word": "cumpleañera",
+          "meaning": "la persona que cumple años"
+        }
+      ]
+    },
+    {
+      "id": "restaurante",
+      "title": "Seis en una mesa para cuatro",
+      "place": "Restaurante El Toldo",
+      "context": "Martín llega al restaurante con el grupo y habla con la encargada de sala.",
+      "speakers": [
+        {
+          "name": "Carmen",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Martín",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, bienvenidos a El Toldo. ¿Tienen reserva?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, a nombre de Martín Sosa. Para cuatro... aunque, bueno, al final somos seis. Se sumaron dos amigos a última hora."
+        },
+        {
+          "s": 0,
+          "text": "Uy, a ver... Es que los sábados estamos completos. La mesa de cuatro está junto a la ventana y, aunque juntáramos dos sillas más, estarían bastante apretados."
+        },
+        {
+          "s": 1,
+          "text": "No importa, de verdad, nos apretamos. Es el cumpleaños de una amiga y no queremos que nadie se quede afuera."
+        },
+        {
+          "s": 0,
+          "text": "Mira, lo que puedo hacer es esto: si esperan quince minutos en la barra, la mesa grande del fondo seguramente queda libre. Los de ahora ya han pedido el postre. Pero no te lo prometo, ¿eh? Depende de si piden café o no."
+        },
+        {
+          "s": 1,
+          "text": "Ojalá no pidan nada. ¿Y mientras tanto nos podrían traer algo?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Les invito a una ronda de vermut por las molestias. Eso sí, que la cumpleañera no se entere de que esperó por culpa tuya."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el problema al llegar?",
+          "options": [
+            "El restaurante perdió la reserva",
+            "Reservaron para cuatro, pero son seis",
+            "El restaurante está a punto de cerrar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Carmen no recomienda añadir sillas a la mesa de cuatro?",
+          "options": [
+            "Porque estarían muy incómodos",
+            "Porque es más caro",
+            "Porque está prohibido"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De qué depende que la mesa grande quede libre?",
+          "options": [
+            "De que llegue el cocinero",
+            "De que paguen por adelantado",
+            "De que los otros clientes pidan café o no"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué insinúa Carmen al final?",
+          "options": [
+            "Que Vale ya sabe la sorpresa",
+            "Que la culpa del retraso es de Martín",
+            "Que el vermut no es gratis"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué harías si llegaras a un restaurante y no hubiera sitio para todos?",
+          "model": "Esperaría un poco en la barra, salvo que tuviera mucha hambre; entonces buscaría otro sitio."
+        },
+        {
+          "q": "¿Te parece bien sumar amigos a un plan sin avisar? ¿Por qué?",
+          "model": "No mucho, porque complica la reserva, aunque entiendo que a veces pasa."
+        },
+        {
+          "q": "¿Cómo debería compensar un restaurante a los clientes que esperan?",
+          "model": "Creo que una bebida gratis es un buen detalle, como hace Carmen."
+        }
+      ],
+      "gaps": "Es que los sábados estamos [completos]. La mesa de cuatro está junto a la [ventana] y, aunque [juntáramos] dos sillas más, estarían bastante [apretados].",
+      "glossary": [
+        {
+          "word": "a nombre de",
+          "meaning": "registrado con el nombre de una persona"
+        },
+        {
+          "word": "a última hora",
+          "meaning": "en el último momento"
+        },
+        {
+          "word": "apretados",
+          "meaning": "con muy poco espacio"
+        },
+        {
+          "word": "vermut",
+          "meaning": "bebida alcohólica que se toma como aperitivo"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Una foto con el ex de Vale",
+      "place": "Plaza de la Fuente",
+      "context": "Lu pide a un desconocido que le saque una foto junto a la fuente. La conversación toma un giro inesperado.",
+      "speakers": [
+        {
+          "name": "Lu",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Julián",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Disculpa, ¿me sacas una foto con la fuente? Es que la luz está perfecta."
+        },
+        {
+          "s": 1,
+          "text": "Claro. A ver... sonríe. Listo. Oye, ese regalo que llevas, ¿no será para Vale Ríos?"
+        },
+        {
+          "s": 0,
+          "text": "¡Sí! ¿Cómo sabes?"
+        },
+        {
+          "s": 1,
+          "text": "Porque en el papel pone «Feliz treinta, Vale». Yo también voy a la fiesta. Bueno, en realidad, no sé si voy."
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo que no sabes?"
+        },
+        {
+          "s": 1,
+          "text": "Es que soy Julián. El ex. Me invitó ella, pero no sé si lo hizo por cortesía o porque de verdad quiere que vaya."
+        },
+        {
+          "s": 0,
+          "text": "Ah... tú eres Julián. Mira, yo en tu lugar iría, pero un rato nada más. Si ella no te quisiera allí, no te habría escrito. Te lo digo porque la conozco desde hace años: Vale no hace nada por cortesía, créeme."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si está con alguien?"
+        },
+        {
+          "s": 0,
+          "text": "Pues saludas, brindas y te vas con dignidad. Vamos juntos, así no llegas solo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué descubren Lu y Julián?",
+          "options": [
+            "Que se conocían del colegio",
+            "Que la fuente está apagada",
+            "Que los dos van a la fiesta de Vale"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo sabe Julián adónde va Lu?",
+          "options": [
+            "Porque ella se lo dijo",
+            "Por lo que está escrito en el regalo",
+            "Porque la vio antes en el café"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué duda Julián en ir?",
+          "options": [
+            "Porque no sabe si la invitación era sincera",
+            "Porque no tiene regalo",
+            "Porque no sabe la dirección"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le aconseja Lu?",
+          "options": [
+            "Que no vaya",
+            "Que vaya y se quede hasta el final",
+            "Que vaya, pero solo un rato"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Irías a la fiesta de cumpleaños de tu ex si te invitara? ¿Por qué?",
+          "model": "Iría solo si nos lleváramos bien, y me quedaría poco tiempo."
+        },
+        {
+          "q": "¿Crees que se puede ser amigo de una expareja?",
+          "model": "Creo que sí, siempre que haya pasado bastante tiempo y los dos lo quieran."
+        },
+        {
+          "q": "¿Le pedirías una foto a un desconocido? ¿Qué te ha pasado alguna vez?",
+          "model": "Sí, muchas veces. Una vez el chico que me sacó la foto resultó ser amigo de un amigo."
+        }
+      ],
+      "gaps": "Mira, yo en tu lugar [iría], pero un rato [nada más]. Si ella no te [quisiera] allí, no te habría [escrito].",
+      "glossary": [
+        {
+          "word": "ex",
+          "meaning": "expareja, persona con la que alguien tuvo una relación"
+        },
+        {
+          "word": "por cortesía",
+          "meaning": "por educación, no porque se desee de verdad"
+        },
+        {
+          "word": "brindas",
+          "meaning": "del verbo brindar: levantas la copa para celebrar"
+        },
+        {
+          "word": "con dignidad",
+          "meaning": "con respeto por uno mismo, sin hacer el ridículo"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Avisos por el micrófono de La Persiana",
+      "place": "Bar La Persiana",
+      "context": "El camarero toma el micrófono antes de que empiece el karaoke.",
+      "speakers": [
+        {
+          "name": "Wilson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas, buenas, gente linda de La Persiana. Un par de avisos antes de que empiece el karaoke."
+        },
+        {
+          "s": 0,
+          "text": "Primero: la hora feliz termina a las once en punto, así que, si quieren otra ronda a mitad de precio, este es el momento."
+        },
+        {
+          "s": 0,
+          "text": "Segundo: para cantar, hay que anotarse en la pizarra de la barra. Y no, no vale anotar a un amigo sin que se entere, que la semana pasada hubo un drama."
+        },
+        {
+          "s": 0,
+          "text": "Tercero, y esto es serio: a las dos bajamos la persiana. Si a esa hora siguen adentro, se pueden quedar un rato, pero ya no les podemos servir nada, aunque nos lo pidan llorando."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y hay un cumpleaños en la mesa del rincón. ¡Vale, feliz treinta! Tus amigos pagaron una canción sorpresa, así que prepárate, porque te va a tocar cantar delante de todo el bar, quieras o no. ¡Arrancamos!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace el camarero?",
+          "options": [
+            "Presenta a un cantante famoso",
+            "Da avisos antes del karaoke",
+            "Anuncia que el bar cierra ya"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Hasta qué hora dura la hora feliz?",
+          "options": [
+            "Hasta las once",
+            "Hasta las diez",
+            "Hasta las dos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasó la semana pasada?",
+          "options": [
+            "Se rompió el micrófono",
+            "Cerraron antes de las dos",
+            "Anotaron a alguien a cantar sin que lo supiera"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le espera a Vale?",
+          "options": [
+            "Una bebida gratis",
+            "Tener que irse a las dos",
+            "Cantar aunque no quiera"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te animarías a cantar en un karaoke? ¿Qué canción elegirías?",
+          "model": "Solo si mis amigos cantaran conmigo; elegiría una canción muy conocida."
+        },
+        {
+          "q": "¿Qué te parecería que tus amigos te obligaran a cantar en tu cumpleaños?",
+          "model": "Me daría vergüenza, pero si fuera con cariño, lo aceptaría."
+        },
+        {
+          "q": "¿Qué reglas te parecen importantes en un bar?",
+          "model": "Me parece importante que respeten el horario y que nadie moleste a los demás."
+        }
+      ],
+      "gaps": "Segundo: para cantar, hay que [anotarse] en la [pizarra] de la barra. Y no, no vale anotar a un amigo sin que se [entere], que la semana pasada hubo un [drama].",
+      "glossary": [
+        {
+          "word": "hora feliz",
+          "meaning": "horario en que las bebidas son más baratas"
+        },
+        {
+          "word": "anotarse",
+          "meaning": "escribir su nombre en una lista"
+        },
+        {
+          "word": "persiana",
+          "meaning": "cierre de metal o madera de una ventana o un local"
+        },
+        {
+          "word": "quieras o no",
+          "meaning": "aunque no lo desees"
+        }
+      ]
+    },
+    {
+      "id": "museo",
+      "title": "El contestador que nadie escuchó",
+      "place": "Museo del Pasado",
+      "context": "En la visita nocturna, la guía se detiene ante una vitrina pequeña.",
+      "speakers": [
+        {
+          "name": "Daniela",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Y ahora, si se acercan un poquito... Esto que ven aquí es un contestador automático de mil novecientos ochenta y siete. Lo donó una señora del barrio el año pasado, con una condición bastante curiosa: que la cinta no se escuchara nunca."
+        },
+        {
+          "s": 0,
+          "text": "Adentro hay un solo mensaje. Ella nos contó que era de un hombre que la llamó la noche antes de irse a vivir a otro país, y que ella, por miedo o por orgullo, nunca lo quiso oír."
+        },
+        {
+          "s": 0,
+          "text": "Ahora bien, ustedes se preguntarán por qué lo donó en vez de tirarlo. Yo creo que quería que alguien lo cuidara sin tener que escucharlo ella. Es como si el mensaje estuviera a salvo, pero lejos."
+        },
+        {
+          "s": 0,
+          "text": "Mucha gente nos pide que lo pongamos, sobre todo en estas visitas nocturnas. Y no, no lo vamos a hacer. Aunque, les confieso, a veces, cuando cierro, me quedo mirándolo un ratito."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla la guía?",
+          "options": [
+            "De un teléfono público del barrio",
+            "De una radio antigua",
+            "De un contestador con un mensaje que nadie escuchó"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué condición puso la donante?",
+          "options": [
+            "Que nunca se escuchara la cinta",
+            "Que el aparato estuviera en la entrada",
+            "Que se lo devolvieran algún día"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién dejó el mensaje?",
+          "options": [
+            "Un vecino que trabajaba en el museo",
+            "Un hombre que se iba a vivir a otro país",
+            "El marido de la señora"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué sugiere la guía al final?",
+          "options": [
+            "Que ya escuchó la cinta",
+            "Que quiere devolver el contestador",
+            "Que también siente curiosidad por el mensaje"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "Si tú fueras la señora, ¿escucharías el mensaje? ¿Por qué?",
+          "model": "Creo que lo escucharía, aunque me diera miedo, porque la duda sería peor."
+        },
+        {
+          "q": "¿Guardas algún objeto que no quieres usar pero tampoco tirar?",
+          "model": "Sí, guardo unas cartas antiguas que no leo, pero que no podría tirar."
+        },
+        {
+          "q": "¿Te parece bien que el museo respete la condición de la donante?",
+          "model": "Sí, porque si no la respetara, nadie confiaría en el museo."
+        }
+      ],
+      "gaps": "Ella nos contó que era de un hombre que la llamó la noche antes de irse a vivir a otro [país], y que ella, por [miedo] o por [orgullo], nunca lo quiso [oír].",
+      "glossary": [
+        {
+          "word": "contestador",
+          "meaning": "aparato que graba los mensajes de teléfono"
+        },
+        {
+          "word": "cinta",
+          "meaning": "tira donde se grababa el sonido"
+        },
+        {
+          "word": "orgullo",
+          "meaning": "sentimiento que impide reconocer lo que uno siente o necesita"
+        },
+        {
+          "word": "a salvo",
+          "meaning": "protegido, seguro"
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "La taxista que no cobra el desvío",
+      "place": "Taxi en la avenida",
+      "context": "Sergio va en taxi a la terraza con una caja en las rodillas. La avenida está cortada.",
+      "speakers": [
+        {
+          "name": "Liz",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        },
+        {
+          "name": "Sergio",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Joven, le aviso: la avenida está cortada por un recital. Puedo ir por el puerto, pero son unos diez minutos más."
+        },
+        {
+          "s": 1,
+          "text": "¿Diez minutos? Uf. Es que ya voy tarde. ¿No hay otra forma?"
+        },
+        {
+          "s": 0,
+          "text": "Hay una, pero no le va a gustar. Lo dejo en la esquina del recital y usted cruza caminando. Son cuatro cuadras, pero con esa caja que lleva..."
+        },
+        {
+          "s": 1,
+          "text": "Son copas de cristal, para un cumpleaños. Si se me caen, me matan."
+        },
+        {
+          "s": 0,
+          "text": "Entonces por el puerto. Y no se preocupe por el taxímetro: si tardamos más de lo que le dije, le cobro lo que marcaba antes del desvío."
+        },
+        {
+          "s": 1,
+          "text": "¿En serio? Eso no lo hace nadie."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, yo tampoco lo hacía, hasta que una noche un pasajero se bajó furioso y se olvidó el celular. Me costó una semana devolvérselo. Desde entonces prefiero que la gente se baje contenta. Además, si llega tarde pero con las copas sanas, seguro que lo perdonan."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué problema hay en el trayecto?",
+          "options": [
+            "El taxi se quedó sin gasolina",
+            "La avenida está cortada",
+            "Sergio no sabe la dirección"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Sergio no quiere caminar?",
+          "options": [
+            "Porque lleva copas que se pueden romper",
+            "Porque está muy cansado",
+            "Porque está lloviendo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le promete la taxista?",
+          "options": [
+            "Llevarlo gratis",
+            "Llegar antes que nadie",
+            "No cobrarle de más si tardan"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué cambió la taxista su manera de trabajar?",
+          "options": [
+            "Porque se lo exigió su jefe",
+            "Por una mala experiencia con un pasajero",
+            "Porque así gana más dinero"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué preferirías: llegar tarde en taxi o caminar cuatro cuadras con algo frágil?",
+          "model": "Caminaría, salvo que llevara algo muy frágil, como Sergio."
+        },
+        {
+          "q": "¿Te ha pasado algo curioso en un taxi?",
+          "model": "Sí, una vez el conductor me contó toda su vida en quince minutos."
+        },
+        {
+          "q": "¿Qué harías si un pasajero se olvidara el celular en tu coche?",
+          "model": "Intentaría llamar a algún contacto para devolvérselo cuanto antes."
+        }
+      ],
+      "gaps": "Y no se preocupe por el [taxímetro]: si [tardamos] más de lo que le dije, le [cobro] lo que marcaba antes del [desvío].",
+      "glossary": [
+        {
+          "word": "cortada",
+          "meaning": "cerrada al tráfico"
+        },
+        {
+          "word": "cuadras",
+          "meaning": "manzanas, distancia entre dos esquinas de una calle"
+        },
+        {
+          "word": "taxímetro",
+          "meaning": "aparato que calcula el precio del viaje en taxi"
+        },
+        {
+          "word": "desvío",
+          "meaning": "cambio de ruta"
+        },
+        {
+          "word": "sanas",
+          "meaning": "enteras, sin romper"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "La pantalla tapada con una sábana",
+      "place": "La terraza de las luces",
+      "context": "Vale llega temprano a la terraza y encuentra a Lu terminando de preparar algo.",
+      "speakers": [
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Lu",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lu, dime la verdad. ¿Por qué hay una pantalla tapada con una sábana?"
+        },
+        {
+          "s": 1,
+          "text": "¿Qué pantalla? Ah, eso. Es del dueño de la terraza. Creo que mañana tiene una reunión."
+        },
+        {
+          "s": 0,
+          "text": "¿Un domingo? ¿En una terraza? Ay, Lu, mientes fatal."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, aunque fuera algo para ti, no te lo diría. Así que deja de preguntar."
+        },
+        {
+          "s": 0,
+          "text": "Es que no me gustan las sorpresas. Siempre tengo miedo de que alguien haga un video con fotos mías de los quince años."
+        },
+        {
+          "s": 1,
+          "text": "Mmm... ¿y si alguien hubiera hecho exactamente eso?"
+        },
+        {
+          "s": 0,
+          "text": "¡Lu! Te juro que si aparece la foto del vestido rosado, me voy."
+        },
+        {
+          "s": 1,
+          "text": "No te vas a ir. Mira, te prometo una cosa: si en algún momento te sientes mal, me haces una seña y yo desenchufo todo. Pero dales una oportunidad, porque hay gente que grabó mensajes desde muy lejos."
+        },
+        {
+          "s": 0,
+          "text": "¿Desde lejos? ¿Mi abuela?"
+        },
+        {
+          "s": 1,
+          "text": "Yo no dije nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Vale y Lu?",
+          "options": [
+            "De una reunión del dueño de la terraza",
+            "De una sorpresa preparada para Vale",
+            "De los invitados que no vienen"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Vale de la explicación de Lu?",
+          "options": [
+            "Que es una mentira evidente",
+            "Que es bastante creíble",
+            "Que es muy divertida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué teme Vale?",
+          "options": [
+            "Que llueva durante la fiesta",
+            "Que nadie venga a la fiesta",
+            "Que muestren fotos suyas de adolescente"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se deduce al final?",
+          "options": [
+            "Que Lu va a cancelar el video",
+            "Que Vale se va a ir de la fiesta",
+            "Que la abuela de Vale grabó un mensaje"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gustan las sorpresas o prefieres saberlo todo? ¿Por qué?",
+          "model": "Prefiero saberlo, porque si me sorprendieran delante de mucha gente, me pondría nerviosa."
+        },
+        {
+          "q": "¿Qué foto tuya no te gustaría que mostraran en una fiesta?",
+          "model": "Una de cuando tenía catorce años, con un peinado horrible."
+        },
+        {
+          "q": "Si prepararas un video para un amigo, ¿quién grabaría un mensaje?",
+          "model": "Le pediría un mensaje a su familia y a sus amigos que viven lejos."
+        }
+      ],
+      "gaps": "Mira, te prometo una cosa: si en algún momento te [sientes mal], me haces una [seña] y yo [desenchufo] todo. Pero dales una [oportunidad], porque hay gente que grabó mensajes desde muy lejos.",
+      "glossary": [
+        {
+          "word": "sábana",
+          "meaning": "tela grande que se pone en la cama"
+        },
+        {
+          "word": "mientes fatal",
+          "meaning": "mientes muy mal, se nota mucho"
+        },
+        {
+          "word": "seña",
+          "meaning": "gesto para comunicar algo sin hablar"
+        },
+        {
+          "word": "desenchufo",
+          "meaning": "del verbo desenchufar: quito el cable de la electricidad"
+        }
+      ]
+    }
+  ]
+}

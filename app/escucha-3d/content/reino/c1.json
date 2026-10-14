@@ -1,0 +1,324 @@
+{
+  "game": "reino",
+  "level": "C1",
+  "items": [
+    {
+      "id": "ines",
+      "title": "Las mantas grises de la posada",
+      "place": "La posada de Inés",
+      "context": "Una semana después del despertar. En la posada, dos vecinos comentan el rumor del día mientras Inés sirve sidra.",
+      "speakers": [
+        { "name": "Inés", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Carlos", "country": "Honduras", "voice": "es-HN-CarlosNeural" },
+        { "name": "Margarita", "country": "Panamá", "voice": "es-PA-MargaritaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "¿Y tú te crees lo que dicen en el mercado? Que la Tejedora anda suelta por la aldea, como si nada." },
+        { "s": 2, "text": "Hombre, suelta, suelta... Dicen que el Consejo la busca y no la encuentra. Que se esfumó la misma mañana del despertar." },
+        { "s": 1, "text": "Pues yo la colgaría del puente, con todo el respeto a la princesa." },
+        { "s": 2, "text": "Baja la voz, Carlos, que aquí las paredes oyen." },
+        { "s": 0, "text": "Las paredes no, Margarita; la posadera sí. ¿Más sidra, Carlos? Para que se te pase la sed de justicia." },
+        { "s": 1, "text": "Inés, tú que estabas despierta, dinos la verdad. ¿Dónde está esa bruja?" },
+        { "s": 0, "text": "Ay, Carlos, qué pregunta. Si yo supiera dónde se esconde una tejedora, ¿no crees que tendría la posada llena de mantas nuevas? Fíjate qué casualidad: estas de aquí las estrenamos el martes. Lana gris, punto apretado, un trabajo finísimo." },
+        { "s": 2, "text": "¿Gris? ¿Como la capa que llevaba aquella noche?" },
+        { "s": 0, "text": "Bueno, el gris es un color muy de moda en invierno. Y ahora, si me disculpan, tengo que subirle la sopa a la huésped del cuarto del fondo. Lleva una semana sin bajar, pobrecita. Dice que el ruido de la gente le recuerda a las tormentas." },
+        { "s": 1, "text": "Inés..." },
+        { "s": 0, "text": "¿Sí, Carlos?" },
+        { "s": 1, "text": "Nada, nada. Que la sopa huele muy bien." }
+      ],
+      "choice": [
+        { "q": "¿De qué rumor se habla en la posada?", "options": ["De que la Tejedora sigue escondida cerca", "De que Inés quiere vender la posada", "De que la princesa se casa pronto"], "answer": 0 },
+        { "q": "¿Qué quiere decir Margarita con «aquí las paredes oyen»?", "options": ["Que la posada es muy vieja", "Que alguien puede estar escuchando", "Que en la posada hay fantasmas"], "answer": 1 },
+        { "q": "¿Qué da a entender Inés sin decirlo abiertamente?", "options": ["Que no sabe nada de la Tejedora", "Que el Consejo le paga por informar", "Que la Tejedora está alojada en su posada"], "answer": 2 },
+        { "q": "¿Por qué cambia Carlos de tema al final?", "options": ["Porque tiene hambre de verdad", "Porque capta la insinuación y prefiere callarse", "Porque Inés lo amenaza con echarlo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Cómo reaccionas cuando oyes un rumor sobre alguien que conoces? ¿Lo compartes, lo compruebas o lo ignoras?", "model": "Procuro no repetirlo hasta haberlo comprobado, aunque reconozco que a veces la curiosidad me puede." },
+        { "q": "Inés protege a alguien a quien muchos culpan. ¿Crees que hizo bien? ¿Dónde pondrías tú el límite?", "model": "Creo que hizo bien si está convencida de que no hubo maldad, pero yo no encubriría a alguien que siguiera siendo un peligro." },
+        { "q": "¿Conoces a alguien que diga las cosas importantes sin decirlas? Cuenta un ejemplo.", "model": "Mi abuela. Cuando no le gustaba un novio mío, no lo criticaba: simplemente le servía la sopa fría." }
+      ],
+      "gaps": "Si yo [supiera] dónde [se esconde] una tejedora, ¿no crees que [tendría] la posada llena de [mantas nuevas]?",
+      "glossary": [
+        { "word": "se esfumó", "meaning": "desapareció de repente, sin dejar rastro" },
+        { "word": "sed de justicia", "meaning": "ganas fuertes de que alguien reciba un castigo" },
+        { "word": "estrenamos", "meaning": "usamos algo por primera vez" },
+        { "word": "punto apretado", "meaning": "tejido muy cerrado, hecho con cuidado" },
+        { "word": "huésped", "meaning": "persona que se aloja en una posada o en casa ajena" }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "Un saludo cordial del Consejo",
+      "place": "El molino",
+      "context": "Pocos días después del despertar, un secretario del Consejo del Reino visita a Bruno en el molino, que por fin vuelve a girar.",
+      "speakers": [
+        { "name": "Bruno", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Luis", "country": "Ecuador", "voice": "es-EC-LuisNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Maese Bruno, le traigo un saludo cordial del Consejo del Reino y, de paso, una pequeña solicitud." },
+        { "s": 0, "text": "Cuando alguien me trae un saludo cordial, ya sé que la solicitud no es pequeña." },
+        { "s": 1, "text": "Nada del otro mundo. El Consejo considera que la llave del castillo, siendo un bien de la Corona, debería custodiarse en palacio. Por razones de seguridad, se entiende." },
+        { "s": 0, "text": "Se entiende. Lo que no entiendo es la prisa. Esa llave estuvo cien años colgada en mi fragua y al Consejo no se le ocurrió venir a buscarla." },
+        { "s": 1, "text": "El Consejo estaba dormido, maese." },
+        { "s": 0, "text": "Justamente." },
+        { "s": 1, "text": "Hay también un asunto menor: el molino. Se ha propuesto que pase a administración real, para garantizar un reparto justo de la harina." },
+        { "s": 0, "text": "Ah, mire qué bien. El molino, que lleva cien años parado, de pronto es de la Corona, justo ahora que gira." },
+        { "s": 1, "text": "Yo me limito a transmitir la propuesta." },
+        { "s": 0, "text": "Pues transmítale esto al Consejo: la llave se la entregaré a la princesa en persona, cuando ella me la pida. Y el molino es de la aldea. Si alguien piensa lo contrario, que venga con un papel firmado por Elara, y con buena letra, que yo leo despacio." },
+        { "s": 1, "text": "Lo haré constar en el informe." },
+        { "s": 0, "text": "Haga constar también que el pan de Inés sale de esta harina. Por si algún consejero tiene hambre." }
+      ],
+      "choice": [
+        { "q": "¿Qué viene a pedir el secretario?", "options": ["La llave del castillo y el control del molino", "Que Bruno trabaje como herrero de palacio", "Un impuesto sobre la harina de la aldea"], "answer": 0 },
+        { "q": "¿Qué insinúa Bruno con la palabra «Justamente»?", "options": ["Que él también estuvo dormido", "Que el Consejo no hizo nada en cien años y ahora exige", "Que la llave ya no sirve para nada"], "answer": 1 },
+        { "q": "¿Por qué le parece sospechoso a Bruno el interés por el molino?", "options": ["Porque el molino está roto", "Porque el molino es demasiado viejo", "Porque solo lo quieren ahora que vuelve a funcionar"], "answer": 2 },
+        { "q": "¿Con qué condición entregaría Bruno la llave?", "options": ["Si la princesa se la pide en persona", "Si el Consejo le paga en oro", "Si el secretario firma un informe"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Te ha pasado que una institución se interese por algo solo cuando empieza a funcionar o a dar dinero? Cuéntalo.", "model": "Sí: el huerto de mi barrio. Nadie lo apoyó durante años, y en cuanto salió en la prensa el ayuntamiento quiso ponerle su logotipo." },
+        { "q": "Bruno responde con ironía en lugar de enfadarse. ¿Te parece una estrategia eficaz? ¿Por qué?", "model": "Me parece eficaz porque deja en evidencia al otro sin darle motivos para quejarse de mala educación." },
+        { "q": "¿Qué recursos deberían ser de una comunidad y no del Estado o de una empresa? Justifica tu opinión.", "model": "Yo diría que las fuentes de agua de los pueblos, porque si se privatizan, quien más las necesita es quien menos decide." }
+      ],
+      "gaps": "Pues [transmítale] esto al Consejo: la llave se la [entregaré] a la princesa [en persona], cuando ella [me la pida].",
+      "glossary": [
+        { "word": "maese", "meaning": "tratamiento antiguo y respetuoso para un maestro de oficio" },
+        { "word": "nada del otro mundo", "meaning": "algo sin importancia, normal" },
+        { "word": "custodiarse", "meaning": "guardarse y vigilarse con cuidado" },
+        { "word": "reparto", "meaning": "la forma de dividir algo entre varias personas" },
+        { "word": "constar", "meaning": "quedar escrito o registrado de forma oficial" }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "El trato del leñador",
+      "place": "El bosque de Liora",
+      "context": "Tras el despertar, la aldea necesita reparar sus tejados. Un leñador entra en el bosque con un hacha y se encuentra con Liora.",
+      "speakers": [
+        { "name": "Liora", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Gonzalo", "country": "Colombia", "voice": "es-CO-GonzaloNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Buenos días... ¿Señora hada? Me manda el alcalde. Necesitamos madera para los tejados. Con cien años de abandono, media aldea tiene goteras." },
+        { "s": 0, "text": "Qué amable el alcalde, que te manda a ti con un hacha y se queda él en casa con su paraguas." },
+        { "s": 1, "text": "Yo solo quiero hacer las cosas bien. Por eso vine a preguntar antes de cortar." },
+        { "s": 0, "text": "Eso ya te distingue de casi todos los que han venido con hacha. Mira, te propongo un trato. Los árboles que están en pie, no se tocan. Pero el hechizo tumbó muchos: los encontrarás junto al arroyo, secos, perfectos para tejados." },
+        { "s": 1, "text": "¿Secos? Esos están medio podridos, señora." },
+        { "s": 0, "text": "Podridos por fuera. Por dentro son roble de cien años. Pruébalo y luego me cuentas." },
+        { "s": 1, "text": "¿Y si el alcalde insiste en los vivos?" },
+        { "s": 0, "text": "Dile que puede venir a pedírmelo él mismo. Mi puerta, como ves, está siempre abierta. Lo que no te garantizo es que encuentre el camino de vuelta." },
+        { "s": 1, "text": "Eso suena a amenaza." },
+        { "s": 0, "text": "¿Amenaza? No, hombre. Es un pronóstico. El bosque tiene muy buena memoria y muy poco sentido del humor." },
+        { "s": 1, "text": "Entendido. Madera del arroyo." },
+        { "s": 0, "text": "¿Ves? Al final todos nos entendemos. Solo que algunos tardan más que otros." }
+      ],
+      "choice": [
+        { "q": "¿Qué negocian Liora y el leñador?", "options": ["Qué madera puede llevarse para la aldea", "El precio de reparar los tejados", "Un camino nuevo hacia el puente"], "answer": 0 },
+        { "q": "¿Qué opina Liora del alcalde, de forma implícita?", "options": ["Que es un hombre valiente", "Que manda a otros a hacer el trabajo incómodo", "Que es un buen amigo del bosque"], "answer": 1 },
+        { "q": "¿Qué madera le ofrece Liora?", "options": ["Los árboles vivos del claro", "Los robles que rodean el puente", "Los árboles caídos junto al arroyo"], "answer": 2 },
+        { "q": "¿Qué quiere decir Liora con «es un pronóstico»?", "options": ["Que pronto va a llover sobre la aldea", "Que el bosque podría hacer que el alcalde se pierda", "Que ella ya no recuerda el camino"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Liora propone un trato en lugar de prohibir. ¿Cuándo es mejor negociar que decir que no rotundamente?", "model": "Cuando la otra persona tiene una necesidad real. Si solo prohíbes, lo hará igualmente, pero a escondidas." },
+        { "q": "¿Cómo se equilibran en tu región las necesidades de la gente y la protección de la naturaleza?", "model": "Regular. Se habla mucho de sostenibilidad, pero cuando hay que elegir entre un parque y un aparcamiento, suele ganar el aparcamiento." },
+        { "q": "¿Te ha tocado alguna vez hacer el trabajo incómodo que otra persona no quería hacer? ¿Cómo lo viviste?", "model": "Sí, tuve que comunicar unos despidos que había decidido mi jefe. Me quedé con la sensación de que me habían utilizado." }
+      ],
+      "gaps": "Los árboles que están [en pie], no se tocan. Pero el hechizo [tumbó] muchos: los encontrarás junto al [arroyo], secos, perfectos para [tejados].",
+      "glossary": [
+        { "word": "goteras", "meaning": "agujeros en el techo por donde entra el agua de la lluvia" },
+        { "word": "tumbó", "meaning": "hizo caer al suelo" },
+        { "word": "podridos", "meaning": "estropeados por la humedad y el tiempo" },
+        { "word": "pronóstico", "meaning": "lo que se anuncia que va a pasar" }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "Cortesías envenenadas en el puente",
+      "place": "El puente",
+      "context": "Ya despierto el reino, Sir Rodrigo, un caballero de la corte, visita a Sir Aldren en el puente. Su amabilidad esconde otra intención.",
+      "speakers": [
+        { "name": "Sir Aldren", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Sir Rodrigo", "country": "El Salvador", "voice": "es-SV-RodrigoNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Sir Aldren, qué alegría encontrarlo todavía en su puesto. Después de lo de aquella noche, más de uno habría pedido el retiro." },
+        { "s": 0, "text": "Sir Rodrigo. Usted siempre tan atento a los asuntos ajenos. Supongo que habrá descansado bien. Cien años de siesta dan para mucho." },
+        { "s": 1, "text": "Me quedé dormido como todo el reino, por voluntad de la princesa. No todos podemos decir que cumplimos con nuestro deber esa noche." },
+        { "s": 0, "text": "Desde luego. Hay quien no lo cumplió porque estaba despierto, y hay quien no lo cumplió porque estaba en la taberna. Usted me corregirá si me equivoco." },
+        { "s": 1, "text": "Lo que se comenta en la corte, querido amigo, es que usted dejó pasar a la Tejedora. Y que el Consejo está pensando en un relevo." },
+        { "s": 0, "text": "Lo que se comenta en la corte cambia cada vez que sopla el viento. Pero se lo aclaro, ya que tanto le interesa: esa mujer cruzó el puente con un salvoconducto firmado por la princesa. Lo encontró Teobaldo la semana pasada, entre los papeles del archivo." },
+        { "s": 1, "text": "Vaya. Eso no lo sabía." },
+        { "s": 0, "text": "Lo sé. Por eso se lo cuento. Y dígale al Consejo, ya que tiene tan buena relación con ellos, que si quieren mi puesto, me lo pidan de frente. Llevo cien años sin dormir; una conversación incómoda más no me quita el sueño." }
+      ],
+      "choice": [
+        { "q": "¿Qué tono domina la conversación?", "options": ["Cortesía aparente con ataques indirectos", "Amistad sincera entre dos compañeros", "Enfado abierto, con gritos e insultos"], "answer": 0 },
+        { "q": "¿Qué insinúa Aldren sobre Rodrigo?", "options": ["Que trabaja en secreto para la Tejedora", "Que quiere casarse con la princesa", "Que la noche del hechizo estaba en la taberna"], "answer": 2 },
+        { "q": "¿Qué descubrió Teobaldo en el archivo?", "options": ["Que Rodrigo había mentido al Consejo", "Que la Tejedora cruzó con un permiso firmado por la princesa", "Que el Consejo ya había nombrado un relevo"], "answer": 1 },
+        { "q": "¿Qué efecto tiene la frase «no me quita el sueño» en boca de Aldren?", "options": ["Dice que no le preocupa y juega con que lleva un siglo sin dormir", "Confiesa que sufre de insomnio desde aquella noche", "Anuncia que piensa pedir un descanso largo"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Qué te molesta más: una crítica directa o una indirecta disfrazada de amabilidad? ¿Por qué?", "model": "La indirecta, sin duda. Con una crítica directa al menos sabes a qué atenerte; la otra te deja dándole vueltas toda la noche." },
+        { "q": "Aldren desmonta el rumor con un documento. ¿Cómo se combaten hoy los rumores en el trabajo o en las redes?", "model": "En teoría, con datos; en la práctica, el rumor corre más que la desmentida, así que conviene actuar rápido." },
+        { "q": "¿Has tenido que defender tu puesto o tu reputación ante alguien que quería ocupar tu lugar? ¿Cómo lo hiciste?", "model": "Sí, en mi primer trabajo. Opté por no entrar en el juego y dejar que los resultados hablaran por mí." }
+      ],
+      "gaps": "Pero se lo aclaro, ya que tanto le interesa: esa mujer [cruzó] el puente con un [salvoconducto] [firmado] por la [princesa].",
+      "glossary": [
+        { "word": "ajenos", "meaning": "que son de otras personas" },
+        { "word": "relevo", "meaning": "sustitución de una persona por otra en un cargo" },
+        { "word": "salvoconducto", "meaning": "documento que permite pasar por un lugar sin problemas" },
+        { "word": "de frente", "meaning": "directamente, sin esconderse" }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "Visita guiada para manos largas",
+      "place": "Los jardines reales",
+      "context": "Los jardines reales reabren tras el despertar. Celina guía a un grupo de nobles que parecen más interesados en las flores de lo que conviene.",
+      "speakers": [
+        { "name": "Celina", "country": "Perú", "voice": "es-PE-CamilaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bienvenidos a los jardines reales, damas y caballeros. Antes de empezar, una pequeña norma que, a personas tan educadas como ustedes, seguro que les parecerá innecesaria: las rosas no se cortan. Ni una. Ni siquiera la que, casualmente, combina con el vestido de la duquesa. Gracias, señora, puede soltarla." },
+        { "s": 0, "text": "Les explico por qué. Cada rosa de este jardín guarda un recuerdo del reino. Durante el hechizo se cerraron y se volvieron espinas; ahora que han vuelto a abrirse, los recuerdos están, digamos, frágiles. Si uno arranca una rosa, el recuerdo no desaparece, pero se va con quien la arranca. Y créanme, hay recuerdos que nadie quiere llevarse a casa." },
+        { "s": 0, "text": "Hace ciento un años, un barón se llevó una rosa del banquete de la reina madre. Dicen que todavía hoy, en su castillo, se oye a la reina madre quejándose de la sopa." },
+        { "s": 0, "text": "A la izquierda verán el muro que transformó Floralis. Sí, pueden tocarlo, ya no pincha. A la derecha, la rosa encantada, que no se toca, no se huele y, si me apuran, ni se mira demasiado. Síganme, por favor, y mantengan las manos donde yo pueda verlas." }
+      ],
+      "choice": [
+        { "q": "¿Qué tipo de texto es?", "options": ["Una visita guiada por los jardines", "Una clase de botánica en la universidad", "Una queja formal ante el Consejo"], "answer": 0 },
+        { "q": "¿Por qué menciona Celina a la duquesa?", "options": ["Porque es la invitada de honor", "Porque la duquesa estaba a punto de llevarse una rosa", "Porque la duquesa ha perdido su vestido"], "answer": 1 },
+        { "q": "¿Qué pasa, según Celina, si alguien arranca una rosa?", "options": ["El recuerdo desaparece para siempre", "La rosa vuelve a convertirse en espina", "El recuerdo se va con quien la arranca"], "answer": 2 },
+        { "q": "¿Con qué intención cuenta Celina la historia del barón?", "options": ["Para advertir a los visitantes con humor", "Para contar un suceso triste del reino", "Para elogiar la cocina de la reina madre"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "Celina impone una norma con ironía en lugar de con prohibiciones. ¿Funciona mejor el humor para que la gente respete las reglas?", "model": "En muchos casos sí, porque la gente no se pone a la defensiva. Aunque con algunos turistas no basta ni el humor ni los carteles." },
+        { "q": "¿Has hecho alguna visita guiada memorable? ¿Qué hacía especial al guía?", "model": "Sí, en unas ruinas romanas. La guía contaba chismes de los emperadores como si fueran vecinos suyos, y no me aburrí ni un minuto." },
+        { "q": "Si un objeto pudiera guardar un recuerdo tuyo, ¿qué recuerdo no querrías que nadie se llevara a casa?", "model": "Probablemente mi primera entrevista de trabajo; fue tan desastrosa que prefiero que se quede bien guardada." }
+      ],
+      "gaps": "Si uno [arranca] una rosa, el [recuerdo] no [desaparece], pero [se va] con quien la arranca.",
+      "glossary": [
+        { "word": "frágiles", "meaning": "que se rompen o se dañan con facilidad" },
+        { "word": "banquete", "meaning": "comida grande y elegante con muchos invitados" },
+        { "word": "pincha", "meaning": "hace daño con una punta, como una espina" },
+        { "word": "si me apuran", "meaning": "si hay que ser exagerado o muy estricto" }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "Exceso de celo ante el Consejo",
+      "place": "La biblioteca del castillo",
+      "context": "El Consejo se reúne en la biblioteca para decidir qué hacer con la Tejedora. Baltasar se presenta sin haber sido invitado.",
+      "speakers": [
+        { "name": "Baltasar", "country": "Cuba", "voice": "es-CU-ManuelNeural" },
+        { "name": "Consejera Ximena", "country": "España", "voice": "es-ES-XimenaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Maestro Baltasar, el Consejo agradece su presencia, aunque nadie la haya solicitado. Sea breve, se lo ruego." },
+        { "s": 0, "text": "Seré tan breve como lo permita la verdad, señora consejera, que suele ser bastante más larga que las sentencias." },
+        { "s": 1, "text": "La cuestión es sencilla. La Tejedora durmió a todo un reino durante un siglo. Eso tiene un nombre, y no es «favor»." },
+        { "s": 0, "text": "Tiene varios nombres, de hecho. Ustedes eligen «crimen». Yo, después de leer el pergamino de la princesa, me inclino por «exceso de celo»." },
+        { "s": 1, "text": "Qué forma tan elegante de llamar a cien años de encierro." },
+        { "s": 0, "text": "La elegancia no quita la exactitud. Aquella noche venía una tormenta que habría arrasado Valdoria. La princesa pidió protección y puso una condición: que el refugio tuviera salida. La Tejedora cumplió la mitad del encargo. ¿Condenamos la mitad que salvó al reino o solo la que lo encerró?" },
+        { "s": 1, "text": "¿Insinúa que deberíamos agradecérselo?" },
+        { "s": 0, "text": "Insinúo que, si la juzgamos por el miedo que tuvo a deshacer su hechizo, este Consejo debería revisar cuántas decisiones ha tomado por miedo. Empezando, si me permite, por la de esta mañana sobre cerrar las fronteras." },
+        { "s": 1, "text": "Eso no figura en el orden del día, maestro." },
+        { "s": 0, "text": "Lo sé. Por eso lo menciono." }
+      ],
+      "choice": [
+        { "q": "¿Qué se discute en esta escena?", "options": ["El presupuesto de la biblioteca", "Cómo juzgar a la Tejedora", "Quién será el nuevo mago de la corte"], "answer": 1 },
+        { "q": "¿Qué expresión prefiere Baltasar para describir lo que hizo la Tejedora?", "options": ["Crimen", "Favor", "Exceso de celo"], "answer": 2 },
+        { "q": "Según Baltasar, ¿qué parte del encargo cumplió la Tejedora?", "options": ["Protegió del peligro, pero no dejó salida", "Dejó una salida, pero no protegió", "No cumplió ninguna parte"], "answer": 0 },
+        { "q": "¿Qué pretende Baltasar con su último comentario?", "options": ["Disculparse por haber hablado demasiado", "Señalar que el Consejo también decide por miedo", "Apoyar el cierre de las fronteras"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Se debe juzgar a alguien por sus intenciones o por las consecuencias de sus actos? Argumenta tu postura.", "model": "Por ambas cosas, pero con pesos distintos: la intención explica, las consecuencias obligan a reparar. Las buenas intenciones no borran el daño." },
+        { "q": "Baltasar saca un tema que no está «en el orden del día». ¿Te parece legítimo hacerlo en una reunión? ¿Lo has hecho alguna vez?", "model": "A veces es la única forma de que se hable de lo importante. Yo lo hice una vez y, aunque incomodó, al final se trató el asunto." },
+        { "q": "¿Conoces algún ejemplo real en el que una medida de protección se haya convertido en un encierro?", "model": "Pienso en algunos padres sobreprotectores: quieren evitar cualquier riesgo y acaban impidiendo que sus hijos se hagan autónomos." }
+      ],
+      "gaps": "La princesa pidió [protección] y puso una [condición]: que el [refugio] [tuviera salida].",
+      "glossary": [
+        { "word": "sentencias", "meaning": "decisiones de un juez o de un tribunal" },
+        { "word": "exceso de celo", "meaning": "querer hacer algo tan bien o con tanto cuidado que se cae en un error" },
+        { "word": "encargo", "meaning": "trabajo que alguien le pide a otra persona" },
+        { "word": "orden del día", "meaning": "lista de temas que se van a tratar en una reunión" }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "La crónica de los matices",
+      "place": "El gran salón",
+      "context": "Teobaldo dicta la crónica oficial del hechizo a su escribano. Hay una frase que lleva toda la mañana sin poder terminar.",
+      "speakers": [
+        { "name": "Teobaldo", "country": "Uruguay", "voice": "es-UY-MateoNeural" },
+        { "name": "Mario", "country": "Paraguay", "voice": "es-PY-MarioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Escriba, Mario: «Y en la noche de la gran tormenta, la Tejedora de Espinas...». ¿Cómo seguimos?" },
+        { "s": 1, "text": "¿«...condenó al reino a un sueño de cien años»?" },
+        { "s": 0, "text": "Demasiado severo. El Consejo lo aplaudiría, pero la princesa se pondría furiosa." },
+        { "s": 1, "text": "¿«...salvó al reino con un refugio de espinas»?" },
+        { "s": 0, "text": "Demasiado generoso. A la princesa le encantaría, pero el Consejo me retiraría la pluma." },
+        { "s": 1, "text": "Pues algo tendremos que poner, maestro. La tinta se seca." },
+        { "s": 0, "text": "Paciencia, que la historia no se escribe con prisa. A ver: «...tejió un refugio cuyas consecuencias superaron sus intenciones»." },
+        { "s": 1, "text": "Eso no dice nada." },
+        { "s": 0, "text": "Dice exactamente lo necesario, Mario. Quien quiera leer una culpable, la leerá. Quien quiera leer una salvadora, también. Y el cronista podrá seguir cenando en palacio." },
+        { "s": 1, "text": "¿Y eso no es un poco... cobarde?" },
+        { "s": 0, "text": "Es prudente. Cobarde sería no escribir nada. Aunque, entre usted y yo, en mi diario personal la versión es otra." },
+        { "s": 1, "text": "¿Y cuál es?" },
+        { "s": 0, "text": "Que todos tuvimos miedo aquella noche, y que ella fue la única que hizo algo con el suyo. Pero eso, querido Mario, no se lo dicte a nadie." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tiene Teobaldo?", "options": ["Que se le ha acabado la tinta", "Que no recuerda bien la noche de la tormenta", "Encontrar una frase que no moleste ni al Consejo ni a la princesa"], "answer": 2 },
+        { "q": "¿Por qué rechaza Teobaldo la primera propuesta de Mario?", "options": ["Porque enfadaría a la princesa", "Porque es demasiado larga", "Porque el Consejo la odiaría"], "answer": 0 },
+        { "q": "¿Qué ventaja tiene la frase final, según Teobaldo?", "options": ["Que es muy poética", "Que cada lector puede entender lo que quiera", "Que cuenta toda la verdad"], "answer": 1 },
+        { "q": "¿Qué piensa Teobaldo, en privado, de la Tejedora?", "options": ["Que es una criminal sin perdón", "Que fue la única que actuó frente al miedo", "Que debería volver a vivir en palacio"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Es legítimo que la historia oficial use frases ambiguas para no molestar al poder? ¿Dónde está el límite entre prudencia y cobardía?", "model": "Entiendo la prudencia, pero cuando la ambigüedad sirve para proteger al que manda, deja de ser prudencia y se convierte en complicidad." },
+        { "q": "¿Te ha pasado que tu versión pública de algo no coincide con lo que piensas en privado? ¿Por qué?", "model": "Sí, en el trabajo. Defiendo decisiones de la empresa que, a solas, no tomaría ni loca, porque forma parte de mi puesto." },
+        { "q": "¿Qué hecho histórico de tu país se cuenta de maneras muy distintas según quién lo cuente?", "model": "En mi país, la independencia: según los libros escolares fue una gesta heroica; según algunos historiadores, un acuerdo entre élites." }
+      ],
+      "gaps": "Quien quiera leer una [culpable], la [leerá]. Quien quiera leer una [salvadora], [también].",
+      "glossary": [
+        { "word": "severo", "meaning": "muy duro, sin compasión" },
+        { "word": "retiraría la pluma", "meaning": "le quitaría el trabajo de escribir" },
+        { "word": "cronista", "meaning": "persona que escribe la historia de los hechos de su tiempo" },
+        { "word": "prudente", "meaning": "que actúa con cuidado para evitar problemas" },
+        { "word": "dicte", "meaning": "de dictar: decir algo en voz alta para que otro lo escriba" }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "Tres anuncios desde el balcón",
+      "place": "El balcón de la torre",
+      "context": "Una semana después del despertar, la princesa Elara habla por primera vez al pueblo desde el balcón de la torre.",
+      "speakers": [
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Pueblo de Valdoria: buenos días. Creo que es la primera vez en cien años que alguien puede decirlo sin mentir. Me han preparado un discurso muy largo, con muchos adjetivos, y le prometo a Teobaldo que lo leeré algún día. Hoy prefiero decirles tres cosas." },
+        { "s": 0, "text": "La primera: el puente queda abierto. Sir Aldren me ha asegurado que eso no le provocará ningún infarto, y yo le creo a medias." },
+        { "s": 0, "text": "La segunda: habrá un Consejo nuevo, y en él se sentarán también la posadera, el herrero y la jardinera. Sé que a algunos señores eso les parecerá poco elegante. A mí me parece poco elegante haber dormido un siglo sin preguntar a nadie." },
+        { "s": 0, "text": "La tercera, y la que más rumores ha provocado: la Tejedora no será castigada con la horca ni con el exilio. Tejerá. Tejerá mantas para cada casa de esta aldea antes del invierno, y luego decidirá ella misma si se queda. Hay quien llama a eso debilidad. Yo lo llamo empezar a deshacer el nudo. Y ahora, si me disculpan, llevo cien años sin desayunar." }
+      ],
+      "choice": [
+        { "q": "¿Qué tipo de texto es?", "options": ["Una carta privada a Teobaldo", "Un discurso público de la princesa", "Una discusión dentro del Consejo"], "answer": 1 },
+        { "q": "¿Qué insinúa Elara sobre Sir Aldren?", "options": ["Que está enfermo de verdad", "Que quiere entrar en el Consejo", "Que abrir el puente no le hace ninguna gracia"], "answer": 2 },
+        { "q": "¿Quiénes formarán parte del nuevo Consejo?", "options": ["También la posadera, el herrero y la jardinera", "Solo los nobles de siempre", "Únicamente el cronista y el mago"], "answer": 0 },
+        { "q": "¿Qué castigo recibe la Tejedora?", "options": ["El exilio fuera del reino", "Tejer mantas para la aldea antes del invierno", "La horca en la plaza"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Elara cambia el discurso largo por tres ideas claras. ¿Qué valoras tú en un líder cuando habla en público?", "model": "Que sea concreto y que no se esconda detrás de frases hechas. Si además tiene sentido del humor, ya me ha ganado." },
+        { "q": "¿Te parece justo el castigo de la Tejedora? ¿Qué alternativa propondrías tú?", "model": "Me parece inteligente: repara el daño en lugar de añadir más. Yo quizá le pediría también que explicara públicamente lo que hizo." },
+        { "q": "Si tuvieras que dar tres anuncios a tu comunidad, tu clase o tu familia, ¿cuáles serían?", "model": "Primero, que los domingos se apagan los móviles; segundo, que cocinamos por turnos; y tercero, que las vacaciones las elige quien pierda menos discusiones." }
+      ],
+      "gaps": "Tejerá [mantas] para cada casa de esta [aldea] antes del [invierno], y luego [decidirá] ella misma si se queda.",
+      "glossary": [
+        { "word": "infarto", "meaning": "ataque al corazón; aquí, un susto muy grande" },
+        { "word": "a medias", "meaning": "solo en parte, no del todo" },
+        { "word": "horca", "meaning": "castigo antiguo en el que se colgaba a una persona" },
+        { "word": "exilio", "meaning": "obligación de vivir fuera del propio país" },
+        { "word": "nudo", "meaning": "lazo apretado; aquí, un problema difícil de resolver" }
+      ]
+    }
+  ]
+}

@@ -9,5 +9,7 @@ export const metadata:Metadata={title:'Play Noche Abierta free · SPANISHCUE',de
 export default async function Page({searchParams}:{searchParams:Promise<Record<string,string|string[]|undefined>>}){
  const h=await headers();const params=await searchParams;
  if(fullAccessFromHeaders(h))redirect('/noche-abierta');
- return <CityDemo initial={demoContent(params.level)!} signedIn={signedInFromHeaders(h)} />;
+ // Only allowlisted campaign landings can be the demo's way back.
+ const home=params.from==='google-teachers'?'/lp/google-teachers':undefined;
+ return <CityDemo initial={demoContent(params.level)!} signedIn={signedInFromHeaders(h)} home={home} />;
 }

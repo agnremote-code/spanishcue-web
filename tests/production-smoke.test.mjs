@@ -66,3 +66,15 @@ test('billing smoke fails when Live Paddle checkout or its webhook is not ready'
     ['/demo/noche-abierta', () => new Response('Worker error', { status: 500 })],
   ]) await assert.rejects(() => runSmoke('https://spanishcue.com', fixture({ [path]: response })));
 });
+test('staging (Sandbox, no Paddle) passes the billing smoke without Live checks', async () => {
+  const staging = 'https://spanishcue-staging.agnremote.workers.dev';
+  const normal = fixture();
+  const results = await runSmoke(staging, (url, options) => {
+    const path = new URL(url).pathname;
+    if (path === '/api/billing/founder-status') return Response.json({ mode: 'sandbox', paddleCheckoutAvailable: false, trialCheckoutAvailable: false, priceUsd: 15.5, trialPriceUsd: 2 });
+    if (path === '/api/billing/paddle/webhook') return new Response('billing unavailable', { status: 503 });
+    if (path.startsWith('/api/billing/') && options.headers?.origin === staging) return Response.json({ error: 'invalid' }, { status: 400 });
+    return normal(url, options);
+  });
+  assert.ok(!results.some(r => r.path === '/api/billing/paddle/webhook'));
+});

@@ -1,0 +1,967 @@
+{
+  "game": "casino",
+  "level": "B2",
+  "items": [
+    {
+      "id": "portero",
+      "title": "La ficha que Rocco mandó esconder",
+      "place": "La entrada",
+      "context": "Valentina llega al Gran Meridiano y le enseña al portero la ficha dorada de su padre.",
+      "speakers": [
+        {
+          "name": "Rocco",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, señorita. Bienvenida al Gran Meridiano. ¿Viene a cenar o a probar suerte?"
+        },
+        {
+          "s": 1,
+          "text": "Ni una cosa ni la otra, la verdad. Me dijeron que preguntara por el piso tres. Tengo esto."
+        },
+        {
+          "s": 0,
+          "text": "A ver... Uy. Guárdela, por favor, antes de que alguien la vea. Hacía diez años que no veía una ficha dorada como esa."
+        },
+        {
+          "s": 1,
+          "text": "¿La reconoce? Era de mi padre, Ernesto. La encontré entre sus cosas, con una nota que decía «medianoche»."
+        },
+        {
+          "s": 0,
+          "text": "Mire, yo no sé nada, y si alguien le pregunta, tampoco la he visto. Pero si yo fuera usted, no subiría directamente. Primero hablaría con Leo, el del bar central. Él conocía a su padre mejor que nadie."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué no puedo subir ya? Son solo las diez."
+        },
+        {
+          "s": 0,
+          "text": "Porque arriba no basta con tener la ficha. Hace falta que alguien la espere. Y dudo mucho que a esta hora la estén esperando con flores. Ande, entre, y procure que no se le note tanto el nerviosismo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Rocco cuando ve la ficha?",
+          "options": [
+            "Le pide que la esconda y le da un consejo",
+            "Le exige que la entregue a seguridad",
+            "Le dice que la ficha es falsa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto tiempo hacía que Rocco no veía una ficha así?",
+          "options": [
+            "Veinticinco años",
+            "Diez años",
+            "Desde la noche anterior"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le recomienda Rocco antes de subir?",
+          "options": [
+            "Cenar en el restaurante del hotel",
+            "Esperar en la entrada hasta medianoche",
+            "Hablar con Leo, el barman del bar central"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué da a entender Rocco con lo de las flores?",
+          "options": [
+            "Que arriba quizá no la reciban bien",
+            "Que en el piso tres hay una boda",
+            "Que debería llevar un regalo"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "Si un desconocido te diera un consejo misterioso, ¿le harías caso? ¿Por qué?",
+          "model": "Depende de cómo me lo dijera. Si notara que tiene miedo, seguramente le haría caso, aunque no lo conociera."
+        },
+        {
+          "q": "¿Qué objeto de tu familia te gustaría que alguien te explicara?",
+          "model": "Me encantaría que alguien me explicara un reloj antiguo de mi abuelo, porque nadie sabe de dónde salió."
+        },
+        {
+          "q": "¿Te parece bien que Rocco no quiera contar lo que sabe? ¿Qué harías en su lugar?",
+          "model": "Lo entiendo, porque es posible que tenga miedo de perder el trabajo. Yo en su lugar quizá le daría alguna pista más."
+        }
+      ],
+      "gaps": "Pero si yo [fuera] usted, no [subiría] directamente. Primero [hablaría] con Leo, el del [bar central].",
+      "glossary": [
+        {
+          "word": "probar suerte",
+          "meaning": "intentar ganar algo en un juego de azar"
+        },
+        {
+          "word": "Ande",
+          "meaning": "palabra para animar a alguien a moverse o a hacer algo"
+        },
+        {
+          "word": "procure",
+          "meaning": "intente, haga lo posible"
+        },
+        {
+          "word": "nerviosismo",
+          "meaning": "estado de quien está nervioso"
+        }
+      ]
+    },
+    {
+      "id": "ruleta",
+      "title": "El loco del diecisiete negro",
+      "place": "Ruleta",
+      "context": "Dos clientes habituales cuchichean junto a la ruleta mientras observan a la mujer del vestido rojo.",
+      "speakers": [
+        {
+          "name": "Lupita",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Osvaldo",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Viste a la del vestido rojo? Lleva media hora mirando la ruleta sin apostar ni un dólar."
+        },
+        {
+          "s": 1,
+          "text": "Sí, y fíjate en cómo mira el diecisiete. Igualito que Ernesto, el crupier que tuvimos aquí doce años, ¿te acuerdas? El que decía que el diecisiete negro era su número de la suerte."
+        },
+        {
+          "s": 0,
+          "text": "¡Claro que me acuerdo! Dicen que una noche, en su día libre, apostó al diecisiete y ganó tanto que Don Aurelio en persona bajó a felicitarlo."
+        },
+        {
+          "s": 1,
+          "text": "Felicitarlo, dice... Yo oí que lo invitó al piso tres y que esa misma noche se jugó todo lo que tenía a las cartas. Al día siguiente ya no estaba, y de eso hace diez años."
+        },
+        {
+          "s": 0,
+          "text": "Ay, no exageres. La gente inventa cualquier cosa. Lo más probable es que se fuera con una novia a Acapulco."
+        },
+        {
+          "s": 1,
+          "text": "Puede ser. Pero si fuera tan sencillo, ¿por qué nadie volvió a decir su nombre aquí dentro? Mira, mira: está apostando. ¡Al diecisiete negro!"
+        },
+        {
+          "s": 0,
+          "text": "No me lo puedo creer. Como no sea su hija, yo ya no entiendo nada."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Lupita y Osvaldo?",
+          "options": [
+            "De cómo ganar a la ruleta",
+            "De un antiguo crupier que desapareció",
+            "De una camarera nueva del casino"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál era el número de la suerte de Ernesto?",
+          "options": [
+            "El siete rojo",
+            "El diecinueve negro",
+            "El diecisiete negro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Osvaldo, ¿qué pasó cuando Don Aurelio invitó a Ernesto al piso tres?",
+          "options": [
+            "Que Ernesto se jugó todo lo que tenía a las cartas",
+            "Que Ernesto ganó un coche",
+            "Que Ernesto se casó en la capilla"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué sospecha Lupita al final?",
+          "options": [
+            "Que la mujer de rojo trabaja para Don Aurelio",
+            "Que la mujer de rojo podría ser la hija de Ernesto",
+            "Que Osvaldo se ha inventado toda la historia"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los chismes suelen tener algo de verdad? Da un ejemplo.",
+          "model": "Creo que casi siempre tienen algo de verdad, aunque se exagere. En mi oficina dijeron que el jefe se iba, y al final se fue, pero no a la competencia."
+        },
+        {
+          "q": "Si fueras al casino, ¿apostarías siempre al mismo número? ¿Por qué?",
+          "model": "Seguramente sí, porque me daría pena cambiar justo antes de que saliera. Aunque sé que no tiene lógica."
+        },
+        {
+          "q": "¿Qué harías si descubrieras que tu familia tiene un secreto?",
+          "model": "Intentaría hablar con la persona mayor de la familia antes de que fuera demasiado tarde."
+        }
+      ],
+      "gaps": "Pero si fuera tan [sencillo], ¿por qué nadie [volvió a] decir su [nombre] [aquí dentro]?",
+      "glossary": [
+        {
+          "word": "Igualito",
+          "meaning": "exactamente igual, muy parecido"
+        },
+        {
+          "word": "en persona",
+          "meaning": "él mismo, no otra persona en su lugar"
+        },
+        {
+          "word": "exageres",
+          "meaning": "digas que algo es más grande o más grave de lo que es"
+        },
+        {
+          "word": "Como no sea",
+          "meaning": "a menos que sea, si no es"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Una dedicatoria en una servilleta",
+      "place": "Bar central",
+      "context": "En el bar central suena Radio Meridiano, la emisora del casino. Valentina escucha al locutor mientras pide algo.",
+      "speakers": [
+        {
+          "name": "Wilfredo",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, querida gente del Gran Meridiano. Les habla Wilfredo Peña desde Radio Meridiano, la emisora que suena en el bar central y en los ascensores, aunque nadie la escuche. Son las diez y media, afuera hace treinta y dos grados y adentro, como siempre, la suerte está repartida de forma muy desigual."
+        },
+        {
+          "s": 0,
+          "text": "Vamos con los avisos. El espectáculo del Gran Faustino empieza a las once en punto, así que, si quieren buen asiento, les recomiendo que no se entretengan en las tragamonedas. La capilla «Amor Exprés» sigue abierta toda la noche, por si a alguien le da el amor de repente. Y el piso tres, como saben, cierra sus puertas a medianoche: quien no haya llegado, que no insista."
+        },
+        {
+          "s": 0,
+          "text": "Ahora, una dedicatoria un poco rara. Me la han dejado escrita en una servilleta, sin firma: «Para la chica del vestido rojo. No subas sola, y no te creas todo lo que te cuenten esta noche». Bueno, no sé quién eres, chica de rojo, pero yo que tú le haría caso. Y ahora, música."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tipo de texto es?",
+          "options": [
+            "Una llamada de un cliente al bar",
+            "Un anuncio publicitario de la capilla",
+            "Un programa de radio con avisos y una dedicatoria"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿A qué hora empieza el espectáculo del Gran Faustino?",
+          "options": [
+            "A las once en punto",
+            "A las diez y media",
+            "A medianoche"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo llegó la dedicatoria a la radio?",
+          "options": [
+            "En un mensaje de voz de un cliente",
+            "Escrita en una servilleta, sin firma",
+            "Por teléfono, desde el piso tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le aconseja la dedicatoria a la chica de rojo?",
+          "options": [
+            "Que se vaya del casino antes de medianoche",
+            "Que apueste en la ruleta",
+            "Que no suba sola y desconfíe de lo que le cuenten"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez has recibido un mensaje anónimo? ¿Cómo reaccionaste?",
+          "model": "Una vez me dejaron una nota en el coche. Al principio me asusté, pero era un vecino que quería que moviera el coche."
+        },
+        {
+          "q": "¿Escuchas la radio? ¿Qué tipo de programas te gustan?",
+          "model": "La escucho en el coche. Me gustan los programas en los que la gente llama y cuenta sus problemas, aunque a veces sean un poco exagerados."
+        },
+        {
+          "q": "Si fueras la chica de rojo, ¿harías caso a la dedicatoria? ¿Por qué?",
+          "model": "Sí, porque es mejor que sobre una precaución a que falte. Buscaría a alguien de confianza antes de subir."
+        }
+      ],
+      "gaps": "No subas [sola], y no te [creas] todo lo que te [cuenten] esta [noche]",
+      "glossary": [
+        {
+          "word": "emisora",
+          "meaning": "estación de radio"
+        },
+        {
+          "word": "dedicatoria",
+          "meaning": "mensaje que alguien dedica a otra persona, por ejemplo en la radio"
+        },
+        {
+          "word": "servilleta",
+          "meaning": "papel para limpiarse la boca en la mesa"
+        },
+        {
+          "word": "insista",
+          "meaning": "pida algo otra vez con fuerza"
+        }
+      ]
+    },
+    {
+      "id": "poker",
+      "title": "La mano que Ernesto nunca enseñó",
+      "place": "Salón Esmeralda",
+      "context": "En una mesa apartada del Salón Esmeralda, El Holandés invita a Valentina a sentarse.",
+      "speakers": [
+        {
+          "name": "El Holandés",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Siéntate. No, no toques las fichas todavía. Primero quiero que me digas qué sabes de tu padre."
+        },
+        {
+          "s": 1,
+          "text": "Poca cosa. Que se fue cuando yo tenía dieciocho años y que dejó esta ficha con la palabra medianoche. Y que usted jugaba con él."
+        },
+        {
+          "s": 0,
+          "text": "Jugaba contra él, que no es lo mismo. Aquella noche, en el piso tres, tu padre apostó su parte del casino contra Don Aurelio. Juraba que tenía la mejor mano posible."
+        },
+        {
+          "s": 1,
+          "text": "¿Y no la tenía?"
+        },
+        {
+          "s": 0,
+          "text": "Nunca lo supimos. Antes de enseñar las cartas, se levantó, dijo «escalera real» y se fue. Aurelio se quedó con todo, pero desde entonces esas dos palabras abren la puerta del piso tres."
+        },
+        {
+          "s": 1,
+          "text": "¿Me está diciendo que la contraseña es...?"
+        },
+        {
+          "s": 0,
+          "text": "No te estoy diciendo nada. Y si alguien te pregunta, nunca te sentaste en mi mesa. Ahora juega una mano, que nos están mirando, y pierde con elegancia, por favor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le cuenta El Holandés a Valentina?",
+          "options": [
+            "Cómo su padre perdió su parte del casino y de dónde viene la contraseña",
+            "Cómo se gana un torneo de póker",
+            "Por qué su padre nunca jugaba a las cartas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos años tenía Valentina cuando su padre se fue?",
+          "options": [
+            "Ocho",
+            "Dieciocho",
+            "Veintiocho"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hizo Ernesto antes de enseñar las cartas?",
+          "options": [
+            "Pidió otra copa",
+            "Llamó a su mujer por teléfono",
+            "Dijo «escalera real» y se fue"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué le pide que juegue una mano y pierda?",
+          "options": [
+            "Para que nadie sospeche de su conversación",
+            "Porque él necesita ganar dinero",
+            "Para enseñarle a jugar"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has apostado alguna vez algo importante por orgullo? ¿Qué pasó?",
+          "model": "Una vez aposté con mi hermano que llegaría antes que él a la cima de una montaña. Él llegó primero y tuve que lavarle el coche durante un mes."
+        },
+        {
+          "q": "¿Te parece que El Holandés es un aliado de Valentina? ¿Por qué?",
+          "model": "Puede que sí, porque le da la contraseña, pero no me fío del todo: es posible que tenga sus propios intereses."
+        },
+        {
+          "q": "¿Qué juego de cartas o de mesa conoces bien? Explica una regla.",
+          "model": "Conozco bien el dominó. Si no tienes una ficha que encaje, tienes que pasar o robar del montón."
+        }
+      ],
+      "gaps": "Antes de [enseñar] las cartas, [se levantó], dijo «[escalera real]» y [se fue].",
+      "glossary": [
+        {
+          "word": "mano",
+          "meaning": "conjunto de cartas que tiene un jugador en una partida"
+        },
+        {
+          "word": "Juraba",
+          "meaning": "aseguraba con mucha fuerza que algo era verdad"
+        },
+        {
+          "word": "se quedó con todo",
+          "meaning": "ganó y se llevó todo lo que había en juego"
+        },
+        {
+          "word": "con elegancia",
+          "meaning": "con buenos modales, sin hacer escándalo"
+        }
+      ]
+    },
+    {
+      "id": "teatro",
+      "title": "Una voluntaria hasta las doce y cuarto",
+      "place": "Camerino del teatro",
+      "context": "Detrás del espejo del camerino, Valentina oye sin querer a Faustino y a Estrella preparar la función.",
+      "speakers": [
+        {
+          "name": "Faustino",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Estrella",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Estrella, querida, esta noche necesito una voluntaria para el número de la caja misteriosa."
+        },
+        {
+          "s": 1,
+          "text": "Como siempre. Ya tengo a la señora de Texas del collar de perlas en la segunda fila."
+        },
+        {
+          "s": 0,
+          "text": "No, esta noche no. Don Aurelio ha pedido que suba al escenario la chica del vestido rojo. Y que no baje antes de las doce y cuarto."
+        },
+        {
+          "s": 1,
+          "text": "¿Las doce y cuarto? Faustino, el número dura veinte minutos. ¿Qué piensas hacer con ella, adivinarle la vida entera?"
+        },
+        {
+          "s": 0,
+          "text": "Lo que haga falta. Me ha pagado el doble, así que si tengo que cortarla por la mitad dos veces, la corto."
+        },
+        {
+          "s": 1,
+          "text": "No me gusta nada. Si Don Aurelio quiere que esa chica no esté en el piso tres a medianoche, por algo será."
+        },
+        {
+          "s": 0,
+          "text": "Por algo será, sí, pero a mí no me pagan por pensar, me pagan por brillar. Pásame la capa."
+        },
+        {
+          "s": 1,
+          "text": "Tú brilla todo lo que quieras. Yo, por si acaso, voy a buscar a esa chica antes de que empiece la función."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué plan descubre Valentina?",
+          "options": [
+            "Robar el collar de una señora de Texas",
+            "Retenerla en el escenario hasta después de medianoche",
+            "Cancelar la función de esta noche"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto dura normalmente el número de la caja?",
+          "options": [
+            "Doce minutos",
+            "Una hora",
+            "Veinte minutos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué acepta Faustino el encargo?",
+          "options": [
+            "Porque Don Aurelio le ha pagado el doble",
+            "Porque admira a la chica de rojo",
+            "Porque Estrella se lo ha pedido"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué va a hacer Estrella?",
+          "options": [
+            "Contarle todo a Don Aurelio",
+            "Buscar a la chica antes de la función",
+            "Hacer ella misma de voluntaria"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has hecho alguna vez algo que no te parecía bien solo porque te pagaban? Cuéntalo.",
+          "model": "Una vez trabajé en una tienda donde tenía que decir que todo estaba de oferta, aunque no fuera verdad. No me sentía cómoda y lo dejé."
+        },
+        {
+          "q": "¿Te gustaría subir al escenario como voluntario en un espectáculo de magia? ¿Por qué?",
+          "model": "No, me daría mucha vergüenza. Prefiero que suban otros y reírme desde la butaca."
+        },
+        {
+          "q": "¿Quién te parece más simpático, Faustino o Estrella? ¿Por qué?",
+          "model": "Estrella, sin duda, porque aunque trabaje para el casino, no quiere que le pase nada malo a la chica."
+        }
+      ],
+      "gaps": "Si Don Aurelio [quiere] que esa chica [no esté] en el piso tres [a medianoche], [por algo será].",
+      "glossary": [
+        {
+          "word": "voluntaria",
+          "meaning": "persona del público que se ofrece para participar"
+        },
+        {
+          "word": "Lo que haga falta",
+          "meaning": "todo lo necesario"
+        },
+        {
+          "word": "por algo será",
+          "meaning": "seguro que hay una razón, aunque no la sepamos"
+        },
+        {
+          "word": "por si acaso",
+          "meaning": "como precaución"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Los novios que repiten",
+      "place": "Capilla «Amor Exprés»",
+      "context": "Valentina se refugia unos minutos en la capilla «Amor Exprés», donde Elvis atiende a una pareja con una historia curiosa.",
+      "speakers": [
+        {
+          "name": "Elvis",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        },
+        {
+          "name": "Marisol",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Rodrigo",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bienvenidos a «Amor Exprés», muchachos. ¿Nombres de los novios?"
+        },
+        {
+          "s": 1,
+          "text": "Marisol Reyes y Rodrigo Funes. Y antes de que pregunte: sí, estamos seguros. Bueno, más o menos."
+        },
+        {
+          "s": 0,
+          "text": "Un momento... ¿Reyes y Funes? Yo a ustedes los casé hace diez años. Ella llevaba un velo de tul y él lloraba más que la novia."
+        },
+        {
+          "s": 2,
+          "text": "Pues sí, el que lloraba era yo. Y nos divorciamos a los dos años, por si le interesa."
+        },
+        {
+          "s": 0,
+          "text": "Me interesa, claro. ¿Y qué ha cambiado para que vuelvan?"
+        },
+        {
+          "s": 1,
+          "text": "Que nos hemos dado cuenta de que con nadie discutimos tan a gusto. Aunque él sigue sin saber cocinar."
+        },
+        {
+          "s": 2,
+          "text": "Y ella sigue sin saber perder al póker. Pero si no nos hubiéramos separado, no sabríamos lo mucho que nos echamos de menos."
+        },
+        {
+          "s": 0,
+          "text": "Eso es lo más bonito que he oído esta semana. Bueno, como ya conocen el procedimiento, les hago precio de clientes fieles: la segunda boda, a mitad de precio. Y si hay una tercera, se la regalo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué tiene de especial esta pareja?",
+          "options": [
+            "Se conocieron hace tres horas",
+            "Son los dueños de la capilla",
+            "Ya se casaron en esta capilla hace diez años"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuándo se divorciaron?",
+          "options": [
+            "A los dos años de casarse",
+            "A los diez años de casarse",
+            "La semana pasada"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué vuelven a casarse, según Marisol?",
+          "options": [
+            "Porque él aprendió a cocinar",
+            "Porque con nadie discuten tan a gusto",
+            "Porque ganaron dinero al póker"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué oferta les hace Elvis?",
+          "options": [
+            "Una cena gratis en el bar",
+            "La primera noche de hotel gratis",
+            "La segunda boda a mitad de precio"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que una pareja divorciada puede volver a funcionar? ¿Por qué?",
+          "model": "Creo que sí, siempre que los dos hayan cambiado algo. Si no, repetirán los mismos errores."
+        },
+        {
+          "q": "¿Qué opinas de las bodas rápidas de Las Vegas?",
+          "model": "Me parecen divertidas, pero no me casaría así. Me gustaría que estuviera mi familia."
+        },
+        {
+          "q": "Si no te hubieras separado de alguien importante, ¿qué habría sido diferente en tu vida?",
+          "model": "Si no me hubiera separado de mi mejor amiga del colegio, quizá ahora viviría en mi ciudad natal."
+        }
+      ],
+      "gaps": "Pero si no nos hubiéramos [separado], no [sabríamos] [lo mucho] que nos [echamos de menos].",
+      "glossary": [
+        {
+          "word": "velo",
+          "meaning": "tela fina que algunas novias llevan sobre la cabeza"
+        },
+        {
+          "word": "a gusto",
+          "meaning": "con placer, cómodamente"
+        },
+        {
+          "word": "echamos de menos",
+          "meaning": "sentimos la falta de alguien"
+        },
+        {
+          "word": "clientes fieles",
+          "meaning": "clientes que vuelven una y otra vez"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Antes de lo que pensábamos",
+      "place": "La puerta VIP",
+      "context": "En el pasillo del piso tres, dos guardaespaldas vigilan la puerta negra. No saben que Valentina ya sale del ascensor.",
+      "speakers": [
+        {
+          "name": "Tano",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Tano, ¿es verdad que esta noche no puede entrar nadie sin contraseña? ¿Ni siquiera los clientes de siempre?"
+        },
+        {
+          "s": 0,
+          "text": "Ni siquiera ellos. Órdenes de Don Aurelio. Dice que es posible que venga alguien que no esperamos."
+        },
+        {
+          "s": 1,
+          "text": "¿La del vestido rojo? La vi abajo, en el ascensor. Si no sabe la contraseña, la mandamos abajo y listo."
+        },
+        {
+          "s": 0,
+          "text": "Ojalá fuera tan fácil. Si la sabe, significa que alguien ha hablado. Y entonces el problema ya no es ella, es quién se la dijo."
+        },
+        {
+          "s": 1,
+          "text": "Callado, que viene."
+        },
+        {
+          "s": 2,
+          "text": "Buenas noches. Creo que me están esperando."
+        },
+        {
+          "s": 0,
+          "text": "Aquí no la espera nadie, señorita. A no ser que tenga algo que decirme."
+        },
+        {
+          "s": 2,
+          "text": "Escalera real."
+        },
+        {
+          "s": 0,
+          "text": "Vaya, vaya. Bruno, abre la puerta. Y avisa a Don Aurelio de que la hija de Ernesto ya ha llegado. Bastante antes de lo que pensábamos, por cierto. Alguien en este casino tiene la lengua muy suelta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ocurre en esta escena?",
+          "options": [
+            "Valentina dice la contraseña y la dejan pasar",
+            "Los guardaespaldas echan a Valentina",
+            "Don Aurelio sale a recibir a Valentina"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué esta noche piden la contraseña a todos?",
+          "options": [
+            "Porque hay una fiesta de cumpleaños",
+            "Porque Don Aurelio cree que puede venir alguien inesperado",
+            "Porque se perdieron las llaves"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Para Tano, si la chica sabe la contraseña, ¿cuál es el verdadero problema?",
+          "options": [
+            "Cuánto dinero trae",
+            "Qué va a hacer dentro",
+            "Quién se la dijo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sugieren las últimas frases de Tano?",
+          "options": [
+            "Que la esperaban, pero más tarde, y que alguien habló",
+            "Que nadie sabía quién era Valentina",
+            "Que Don Aurelio ya se ha ido a casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez has necesitado una contraseña o un código para entrar en un sitio? ¿Dónde?",
+          "model": "Sí, en el edificio de mi oficina hay que marcar un código. Si lo olvidas, tienes que esperar a que alguien te abra."
+        },
+        {
+          "q": "Si fueras Tano, ¿dejarías pasar a Valentina? ¿Por qué?",
+          "model": "Sí, porque las órdenes son claras, aunque avisaría a mi jefe enseguida para que no me culpara."
+        },
+        {
+          "q": "¿Qué harías si descubrieras que alguien ha contado un secreto tuyo?",
+          "model": "Hablaría con esa persona directamente. Ojalá pudiera perdonarla, pero no volvería a contarle nada."
+        }
+      ],
+      "gaps": "Si la sabe, [significa] que alguien [ha hablado]. Y entonces el problema [ya no es] ella, es quién [se la dijo].",
+      "glossary": [
+        {
+          "word": "y listo",
+          "meaning": "y ya está, se acabó el problema"
+        },
+        {
+          "word": "Ojalá fuera tan fácil",
+          "meaning": "me gustaría que fuera tan simple, pero no lo es"
+        },
+        {
+          "word": "A no ser que",
+          "meaning": "excepto si"
+        },
+        {
+          "word": "lengua muy suelta",
+          "meaning": "costumbre de hablar demasiado y contar secretos"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Dos millones por una ficha",
+      "place": "Terraza sobre el Strip",
+      "context": "En la terraza, con el Strip iluminado a sus pies, Marco Montalbán espera a Valentina con una propuesta.",
+      "speakers": [
+        {
+          "name": "Marco",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Por fin nos conocemos. Soy Marco Montalbán. Mi padre me ha hablado mucho del tuyo, aunque nunca bien, todo hay que decirlo."
+        },
+        {
+          "s": 1,
+          "text": "Me lo imagino. ¿Me has hecho subir hasta aquí para insultar a mi familia?"
+        },
+        {
+          "s": 0,
+          "text": "No, para hacerte una oferta. Esa ficha dorada que llevas vale el diez por ciento de este casino. O eso dice un papel que firmaron nuestros padres hace más de diez años."
+        },
+        {
+          "s": 1,
+          "text": "¿El diez por ciento? ¿Y por qué no lo reclamó él?"
+        },
+        {
+          "s": 0,
+          "text": "Porque desapareció antes de poder hacerlo. Mira, te propongo algo sencillo: me das la ficha, te doy dos millones de dólares y mañana vuelves a tu vida."
+        },
+        {
+          "s": 1,
+          "text": "Qué generoso. Si la ficha valiera tan poco, no estarías tan nervioso."
+        },
+        {
+          "s": 0,
+          "text": "No estoy nervioso. Estoy siendo práctico. Si mi padre se entera de que estás aquí antes de que firmemos, nadie te va a ofrecer nada."
+        },
+        {
+          "s": 1,
+          "text": "Entonces tendré que hablar con tu padre. Prefiero que me lo diga a la cara."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere Marco?",
+          "options": [
+            "Invitarla a cenar",
+            "Comprarle la ficha a Valentina",
+            "Contratarla en el casino"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué representa la ficha, según Marco?",
+          "options": [
+            "Una deuda de su padre",
+            "Una noche gratis en el hotel",
+            "El diez por ciento del casino"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuánto le ofrece Marco?",
+          "options": [
+            "Dos millones de dólares",
+            "Diez millones de dólares",
+            "Veinticinco mil dólares"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué piensa Valentina de la oferta?",
+          "options": [
+            "Que es una oferta justa",
+            "Que si Marco está nervioso, la ficha vale más",
+            "Que Marco es amigo de su padre"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Aceptarías dos millones por algo que podría valer mucho más? ¿Por qué?",
+          "model": "Probablemente no, a menos que necesitara el dinero urgentemente. Primero querría saber cuánto vale de verdad."
+        },
+        {
+          "q": "¿Prefieres que te digan las cosas a la cara o con delicadeza?",
+          "model": "Prefiero que me las digan a la cara, aunque duela, porque así sé dónde estoy."
+        },
+        {
+          "q": "¿Qué harías tú si fueras Valentina en este momento?",
+          "model": "Me iría de la terraza sin firmar nada y buscaría un abogado antes de medianoche."
+        }
+      ],
+      "gaps": "Si la ficha [valiera] [tan poco], no [estarías] tan [nervioso].",
+      "glossary": [
+        {
+          "word": "todo hay que decirlo",
+          "meaning": "hay que reconocerlo, para ser sinceros"
+        },
+        {
+          "word": "reclamó",
+          "meaning": "pidió algo que era suyo"
+        },
+        {
+          "word": "se entera",
+          "meaning": "descubre, llega a saber"
+        },
+        {
+          "word": "a la cara",
+          "meaning": "directamente, delante de la persona"
+        }
+      ]
+    }
+  ]
+}

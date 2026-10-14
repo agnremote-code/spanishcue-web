@@ -13,6 +13,7 @@ import {
 import type { Beat, Media } from './activities.mjs';
 import { ARRIVAL_SPOT, PLACES, VIEWBOX, iso } from './scene.mjs';
 import { WALKABLE_STAGES } from './world3d.mjs';
+import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode, type Mode } from '../escucha-3d/Escucha';
 import { LEVEL_INFO } from './levels.mjs';
 import {
   chooseItem, chooseLine, closeEncounter, emptyStreet, isValidStreet, itemById, openEncounter, restartEncounter, stepBack, streetSummary,
@@ -107,6 +108,9 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const [goTo, setGoTo] = useState<{ id: string; n: number } | null>(null);
   const [street, setStreet] = useState<StreetState>(emptyStreet);
   const [picking, setPicking] = useState(false);
+  // Comprensión auditiva: the places and street circles open a listening (undefined = closed, null = the list).
+  const [mode, setMode] = useListeningMode('noche');
+  const [listenAt, setListenAt] = useState<string | null | undefined>(undefined);
 
   useEffect(() => {
     if (restored.current) return;
@@ -164,6 +168,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     }
   }, []);
   const in3d = view === '3d' && Boolean(World);
+  const [heard, markHeard] = useListeningDone('noche', level);
+  const listening = mode === 'escucha';
 
   const done = completedIds(state);
   const card = currentView(state);
@@ -179,7 +185,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   const showCard = Boolean(card && (card.activity || !in3d || !walkingInside && !card.location.hub));
   const hubInStreet = in3d && card?.location.hub && !walkingInside;
 
-  const open = useCallback((id: string, activity?: string) => { setPlacesOpen(false); setState(current => openLocation(current, id, activity ?? null)); }, []);
+  const open = useCallback((id: string, activity?: string) => { setPlacesOpen(false); if (listening) { setListenAt(id); return; } setState(current => openLocation(current, id, activity ?? null)); }, [listening]);
   // In 3D the list walks you to the place; you still press E to go in.
   const walkTo = useCallback((id: string) => {
     setPlacesOpen(false);
@@ -226,7 +232,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
   // Street scenes: opened from the 3D street, closed with Esc or the card.
   const eventId = state.event?.id ?? null;
-  const openStreet = useCallback((id: string) => setStreet(current => openEncounter(current, id, eventId)), [eventId]);
+  const openStreet = useCallback((id: string) => { if (listening) { setListenAt(id); return; } setStreet(current => openEncounter(current, id, eventId)); }, [eventId, listening]);
   const closeStreet = useCallback(() => { setStreet(current => closeEncounter(current)); focusWorld(); }, []);
   const pick = (id: ItemId) => { setStreet(current => chooseItem(current, id)); setPicking(false); if (in3d) focusWorld(); };
   const streetOpen = in3d && Boolean(street.open) && state.phase === 'ciudad';
@@ -282,6 +288,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
       <nav className="na-tools" aria-label="Herramientas de la clase">
         {canUse3d && <button type="button" className="na-tool" onClick={switchView} aria-label={view === 'map' ? 'Ver el barrio en 3D' : 'Ver el mapa en 2D'}>{view === 'map' ? '3D' : '2D'}</button>}
         {state.phase !== 'llegada' && state.phase !== 'cierre' && <button type="button" className="na-tool" aria-expanded={placesOpen} aria-controls="na-places" onClick={() => setPlacesOpen(value => !value)}>Lugares</button>}
+        {state.phase !== 'llegada' && <button type="button" className="na-tool" aria-pressed={listening} onClick={() => setMode(listening ? 'conversacion' : 'escucha')} title="Comprensión auditiva">Escucha</button>}
         <button type="button" className="na-tool" aria-pressed={teacher} onClick={() => setTeacher(value => !value)}>Profe</button>
       </nav>
     </header>
@@ -289,7 +296,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
     <div className="na-stage">
       {in3d && World ? <World key={worldKey} phase={state.phase} outcome={outcome} onTransition={setTravelling} active={state.phase === 'encuentro' ? state.position : null} activity={state.activity} last={state.position} done={done}
         played={state.position ? Object.keys(state.encounters[state.position]?.acts ?? {}).filter(id => state.encounters[state.position!].acts[id].done) : []}
-        event={state.event?.id ?? null} goTo={goTo} narrow={narrow} reducedMotion={reducedMotion} panel={(showCard && !travelling) || streetOpen} onInteract={open}
+        event={state.event?.id ?? null} goTo={goTo} narrow={narrow} reducedMotion={reducedMotion} panel={(showCard && !travelling) || streetOpen || listenAt !== undefined} onInteract={open}
         street={street} level={level} onStreet={openStreet}
         onOpenActivity={id => setState(current => openActivity(current, id))} onLeave={leave} onFail={fail3d} />
         : <div className="na-scroll" ref={scroller}>
@@ -302,9 +309,12 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
       {placesOpen && state.phase !== 'cierre' && <PlacesList state={state} done={done} onOpen={in3d ? walkTo : id => open(id)} onClose={() => setPlacesOpen(false)} disabled={!exploring} walk={in3d} />}
 
-      {state.phase === 'llegada' && <Arrival arrival={content.ARRIVAL} level={level} onLevel={changeLevel} teacher={teacher} onStart={() => { setState(current => startExploring(current)); if (!street.item) setPicking(true); else if (in3d) focusWorld(); }} />}
+      {state.phase === 'llegada' && <Arrival arrival={content.ARRIVAL} level={level} onLevel={changeLevel} mode={mode} onMode={setMode} teacher={teacher} onStart={() => { setState(current => startExploring(current)); if (!street.item && !listening) setPicking(true); else if (in3d) focusWorld(); }} />}
 
-      {picking && state.phase !== 'llegada' && <ItemPicker initial={street.item} onChoose={pick} onClose={street.item ? () => setPicking(false) : undefined} />}
+      {listening && state.phase !== 'llegada' && listenAt === undefined && <ListeningBadge game="noche" done={heard} onList={() => setListenAt(null)} />}
+      {listenAt !== undefined && <ListeningCard game="noche" level={level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => { setListenAt(undefined); if (in3d) focusWorld(); }} />}
+
+      {picking && !listening && state.phase !== 'llegada' && <ItemPicker initial={street.item} onChoose={pick} onClose={street.item ? () => setPicking(false) : undefined} />}
 
       {streetOpen && <StreetCard key={`${level}-${street.open!.id}`} street={street} level={level} teacher={teacher}
         onChoose={key => setStreet(current => chooseLine(current, key))} onBack={() => setStreet(current => stepBack(current))}
@@ -357,8 +367,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 // The title screen: the city in the back, the mascot at the side, a compact
 // game menu. Starting the night fades the menu and the mascot out and hands
 // the camera to the walk.
-function Arrival({ arrival, level, onLevel, teacher, onStart }: {
-  arrival: ReturnType<typeof contentFor>['ARRIVAL']; level: Level; onLevel: (level: Level) => void; teacher: boolean; onStart: () => void;
+function Arrival({ arrival, level, onLevel, mode, onMode, teacher, onStart }: {
+  arrival: ReturnType<typeof contentFor>['ARRIVAL']; level: Level; onLevel: (level: Level) => void; mode: Mode; onMode: (mode: Mode) => void; teacher: boolean; onStart: () => void;
 }) {
   const [question, setQuestion] = useState(0);
   const [leaving, setLeaving] = useState(false);
@@ -383,6 +393,7 @@ function Arrival({ arrival, level, onLevel, teacher, onStart }: {
         <LevelPicker level={level} onChange={onLevel} />
         <p><b>{LEVEL_INFO[level].name}</b> · {LEVEL_INFO[level].demand}</p>
       </div>
+      <ModeSwitch mode={mode} onChange={onMode} />
       <button type="button" className="na-primary na-ts-start" onClick={start}>Empezar la noche</button>
       <p className="na-ts-warmup"><span>Para romper el hielo</span>{arrival.warmup[question % arrival.warmup.length]}
         <button type="button" className="na-link" onClick={() => setQuestion(value => value + 1)}>Otra</button></p>
