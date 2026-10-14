@@ -42,13 +42,17 @@ export async function runSmoke(origin, fetcher = fetch) {
   await check("/demo/noche-abierta", 200);
   assert.match(await (await check("/acceso", 200)).text(), /SPANISHCUE/i);
   const founder = await (await check("/api/billing/founder-status", 200)).json();
-  assert.equal(founder.mode, "live", "billing must run in Live mode");
-  assert.equal(founder.paddleCheckoutAvailable, true, "Paddle monthly checkout must be available");
-  assert.equal(founder.trialCheckoutAvailable, true, "Paddle US$2 trial checkout must be available");
   assert.equal(founder.priceUsd, 15.5);
   assert.equal(founder.trialPriceUsd, 2);
-  // A ready Live Paddle webhook rejects a forged signature (503 = not configured).
-  await check("/api/billing/paddle/webhook", 401, { method: "POST", headers: { "content-type": "application/json", "paddle-signature": "ts=1;h1=release-smoke" }, body: "{}" });
+  // Only spanishcue.com runs Live billing; staging and inert workers.dev
+  // deploys use PayPal Sandbox and have no Paddle.
+  if (origin === "https://spanishcue.com") {
+    assert.equal(founder.mode, "live", "billing must run in Live mode");
+    assert.equal(founder.paddleCheckoutAvailable, true, "Paddle monthly checkout must be available");
+    assert.equal(founder.trialCheckoutAvailable, true, "Paddle US$2 trial checkout must be available");
+    // A ready Live Paddle webhook rejects a forged signature (503 = not configured).
+    await check("/api/billing/paddle/webhook", 401, { method: "POST", headers: { "content-type": "application/json", "paddle-signature": "ts=1;h1=release-smoke" }, body: "{}" });
+  }
   // Checkout, payment confirmation and conversions refuse cross-site calls.
   for (const path of ["/api/billing/paddle/checkout", "/api/billing/paddle/confirm", "/api/billing/checkout", "/api/billing/conversion"]) {
     await check(path, 403, { method: "POST", headers: { origin: "https://release-smoke.invalid", "content-type": "application/json" }, body: "{}" });
