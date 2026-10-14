@@ -6,7 +6,10 @@ import {createHero,animateHero} from '../noche-abierta/hero3d';
 import {CAMERA_PRESETS,SPAWN,TARGETS,colliders,stepPlayer,followCamera,keyAction,inputFrom,canUseKeys,type Target} from '../noche-abierta/world3d.mjs';
 import {DEMO_BOUNDS,DEMO_GATES,nearPremiumGate} from './policy.mjs';
 import {demoArrival} from './travel.mjs';
-export type DemoSceneProps={paused:boolean;travel:{id:string;n:number}|null;es:boolean;onInteract:(id:string)=>void;onGate:(name:string)=>void;onReady:()=>void;onFail:()=>void};
+export type DemoSceneProps={paused:boolean;travel:{id:string;n:number}|null;es:boolean;onInteract:(id:string)=>void;onGate:(name:string)=>void;onReady:()=>void;onFail:()=>void;
+ /** Guided tour: the avatar walks the waypoints by itself, user input is ignored and the controls stay hidden. */
+ autopilot?:{path:{x:number;z:number}[];location:string;n:number}|null;onArrive?:(location:string)=>void;guided?:boolean};
+const turn=(from:number,to:number,k:number)=>{let d=to-from;while(d>Math.PI)d-=2*Math.PI;while(d<-Math.PI)d+=2*Math.PI;return from+d*k;};
 
 export default function DemoScene(props:DemoSceneProps){
  const host=useRef<HTMLDivElement>(null);const world=useRef<HTMLDivElement>(null);const live=useRef(props);
@@ -44,35 +47,49 @@ export default function DemoScene(props:DemoSceneProps){
   }
   const boxes=colliders();let player={...SPAWN,y:0,vy:0,speed:0,jumpHeld:false,moving:false};let yaw=Math.PI;
   const held=new Set<string>();const joy={x:0,y:0};let nearest:Target|null=null;let lastNear='';let gateLatch:string|null=null;let seenTravel=0;
-  let wasPaused=false;let hidden=document.hidden;let drag:number|null=null;let dragX=0;
+  let wasPaused=false;let hidden=document.hidden;let drag:number|null=null;let dragX=0;let seenPilot=0;let pilotStep=-1;
   const reset=()=>{held.clear();joy.x=joy.y=0;drag=null;player.speed=0;if(stick.current)stick.current.style.transform='translate(0,0)';};
   const interact=()=>{if(nearest&&!live.current.paused)live.current.onInteract(nearest.location);};
   api.current={held,joy,interact,reset};
   const resize=()=>{const rect=mount.getBoundingClientRect();renderer.setSize(rect.width,rect.height,false);camera.aspect=rect.width/Math.max(1,rect.height);camera.updateProjectionMatrix();};
   const observer=new ResizeObserver(resize);observer.observe(mount);resize();
   const keydown=(e:KeyboardEvent)=>{
-   if(live.current.paused||!canUseKeys(e.target))return;const action=keyAction(e.code);
+   if(live.current.paused||live.current.guided||!canUseKeys(e.target))return;const action=keyAction(e.code);
    if(action){e.preventDefault();if(action==='interact'){if(!e.repeat)interact();}else held.add(action);}
   };
   const keyup=(e:KeyboardEvent)=>{const action=keyAction(e.code);if(action)held.delete(action);};
   const root=world.current!;root.addEventListener('keydown',keydown);window.addEventListener('keyup',keyup);
   window.addEventListener('blur',reset);
   const visibility=()=>{hidden=document.hidden;reset();};document.addEventListener('visibilitychange',visibility);
-  const pointerdown=(e:PointerEvent)=>{if(live.current.paused)return;root.focus({preventScroll:true});drag=e.pointerId;dragX=e.clientX;renderer.domElement.setPointerCapture(e.pointerId);};
+  const pointerdown=(e:PointerEvent)=>{if(live.current.paused||live.current.guided)return;root.focus({preventScroll:true});drag=e.pointerId;dragX=e.clientX;renderer.domElement.setPointerCapture(e.pointerId);};
   const pointermove=(e:PointerEvent)=>{if(drag===e.pointerId){yaw-=(e.clientX-dragX)*.006;dragX=e.clientX;}};
   const pointerup=()=>{drag=null;};
   renderer.domElement.addEventListener('pointerdown',pointerdown);renderer.domElement.addEventListener('pointermove',pointermove);renderer.domElement.addEventListener('pointerup',pointerup);renderer.domElement.addEventListener('pointercancel',pointerup);
   const lost=(e:Event)=>{e.preventDefault();reset();live.current.onFail();};renderer.domElement.addEventListener('webglcontextlost',lost);
   let raf=0;let last=performance.now();let clock=0;let firstFrame=true;
   function frame(now:number){
-   raf=requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.045);last=now;if(hidden)return;clock+=dt;
+   raf=requestAnimationFrame(frame);const raw=Math.min((now-last)/1000,.25);const dt=Math.min(raw,.045);last=now;if(hidden)return;clock+=dt;
    const p=live.current;
    if(p.paused!==wasPaused){reset();wasPaused=p.paused;}
    if(p.travel&&p.travel.n!==seenTravel){
     seenTravel=p.travel.n;const target=TARGETS.find(t=>t.location===p.travel!.id);
     if(target){player={...player,...demoArrival(target,boxes),y:0,vy:0,speed:0};reset();yaw=player.heading;}
+    else if(p.travel.id==='__spawn'){player={...player,...SPAWN,y:0,vy:0,speed:0};reset();yaw=player.heading;}
    }
-   if(!p.paused){
+   if(p.autopilot&&p.autopilot.n!==seenPilot){seenPilot=p.autopilot.n;pilotStep=0;reset();}
+   if(!p.autopilot)pilotStep=-1;
+   if(!p.paused&&p.autopilot&&pilotStep>=0){
+    // Guided walk: head for the next waypoint at running pace; the camera eases round each corner.
+    const path=p.autopilot.path;const goal=path[Math.min(pilotStep,path.length-1)];
+    const dx=goal.x-player.x,dz=goal.z-player.z,left=Math.hypot(dx,dz);
+    if(left<.7&&pilotStep<path.length-1)pilotStep++;
+    else if(left<.7){pilotStep=-1;player={...player,speed:0};const location=p.autopilot.location;p.onArrive?.(location);}
+    else{
+     const want=Math.atan2(dx,dz);yaw=turn(yaw,want,1-Math.exp(-raw*5));
+     // Wall-clock pacing: on a slow device the walk still takes the same seconds, in several physics sub-steps.
+     for(let remaining=raw;remaining>0;remaining-=.045)player=stepPlayer(player,{x:0,y:1,yaw:want},Math.min(remaining,.045),boxes,DEMO_BOUNDS);
+    }
+   }else if(!p.paused&&!p.guided){
     const keys=inputFrom(held);const input=Math.hypot(joy.x,joy.y)>.1?{...keys,x:joy.x,y:joy.y}:keys;
     player=stepPlayer(player,{...input,yaw},dt,boxes,DEMO_BOUNDS);
     const gate=nearPremiumGate(player,false);
@@ -103,8 +120,8 @@ export default function DemoScene(props:DemoSceneProps){
  },[]);
  return <div ref={world} className="im-world" tabIndex={0} aria-label={props.es?'Camina con WASD o flechas, arrastra para girar, E para hablar':'Move with WASD or arrows, drag to look, E to talk'}>
   <div ref={host} className="im-canvas" />
-  {hint&&<button className="im-controls-help" onClick={()=>{setHint(false);world.current?.focus();}}>{props.es?'Muévete con la palanca o WASD. Arrastra para mirar.':'Move with the stick or WASD. Drag to look around.'}<span>{props.es?'Entendido':'Got it'} ×</span></button>}
-  <div className="im-touch" hidden={props.paused}>
+  {hint&&!props.guided&&<button className="im-controls-help" onClick={()=>{setHint(false);world.current?.focus();}}>{props.es?'Muévete con la palanca o WASD. Arrastra para mirar.':'Move with the stick or WASD. Drag to look around.'}<span>{props.es?'Entendido':'Got it'} ×</span></button>}
+  <div className="im-touch" hidden={props.paused||props.guided}>
    <div className="im-stick" role="group" aria-label={props.es?'Palanca de movimiento':'Movement joystick'} onPointerDown={e=>{e.currentTarget.setPointerCapture(e.pointerId);world.current?.focus();}} onPointerMove={e=>{if(!e.currentTarget.hasPointerCapture(e.pointerId)||!api.current)return;const r=e.currentTarget.getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)/40,dy=(e.clientY-r.top-r.height/2)/40;const length=Math.max(1,Math.hypot(dx,dy));api.current.joy.x=dx/length;api.current.joy.y=-dy/length;if(stick.current)stick.current.style.transform=`translate(${dx/length*33}px,${dy/length*33}px)`;}} onPointerUp={()=>api.current?.reset()} onPointerCancel={()=>api.current?.reset()} onLostPointerCapture={()=>api.current?.reset()}><span ref={stick}/></div>
    <div className="im-touch-buttons"><button className="im-jump" onPointerDown={e=>{e.currentTarget.setPointerCapture(e.pointerId);api.current?.held.add('jump');}} onPointerUp={()=>api.current?.held.delete('jump')} onPointerCancel={()=>api.current?.held.delete('jump')} onLostPointerCapture={()=>api.current?.held.delete('jump')}>{props.es?'Saltar':'Jump'} ↑</button><button className="im-talk" disabled={!near} onClick={()=>api.current?.interact()}>{near?`${props.es?'Hablar':'Talk'} · ${near.location}`:(props.es?'Busca un círculo de luz':'Find a circle of light')} {near?'→':''}</button></div>
   </div>
