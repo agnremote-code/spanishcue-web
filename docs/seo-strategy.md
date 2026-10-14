@@ -314,4 +314,3 @@ Google's AI optimization guide (2026-05-15, updated 2026-07-10): no llms.txt, no
 3. Publish one “bookmarkable” teacher page where no strong owner exists, built from real lessons: Spanish sub plans (a free, printable 45-minute plan per level pointing at the free classrooms) or first-day activities; one URL, dated, with an author line.
 4. Add printable/projectable companions (PDF or slides) to the three best free classrooms and the kits; it is the format every winning competitor offers and the one SpanishCue lacks.
 5. Record three short lesson demos for YouTube and link them from the hubs (VideoObject schema only if the video is on the page): the single most cited source type in AI answers for education queries.
-
