@@ -1,0 +1,336 @@
+{
+  "game": "reino",
+  "level": "C2",
+  "items": [
+    {
+      "id": "ines",
+      "title": "La posada que no estaba en venta",
+      "place": "La posada de Inés",
+      "context": "Un año después del despertar, Valdoria se ha puesto de moda. Una comerciante de la capital visita la posada con una propuesta de negocio.",
+      "speakers": [
+        { "name": "Inés", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Doña Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Doña Inés, vengo con una propuesta que le va a cambiar la vida. Y no exagero." },
+        { "s": 0, "text": "Cuando alguien me dice que no exagera, yo ya me pongo a contar las cucharas." },
+        { "s": 1, "text": "Ay, qué graciosa. Mire, esta posada es una mina de oro. «La posada que resistió al hechizo». Vendría gente de todas partes a dormir en la cama donde usted no se durmió. Yo pongo el capital, usted pone la historia, y repartimos." },
+        { "s": 0, "text": "¿Repartimos a medias?" },
+        { "s": 1, "text": "Bueno, a medias, a medias... Usted se quedaría con un porcentaje muy digno. Y no tendría que madrugar nunca más para hacer pan." },
+        { "s": 0, "text": "Fíjese qué detalle. Cien años madrugando, y ahora viene usted a liberarme de la esclavitud de la masa." },
+        { "s": 1, "text": "Yo lo digo por su bien." },
+        { "s": 0, "text": "Claro, como el lobo a Caperucita. Mire, doña Paola, no le voy a decir que no, que es de mala educación. Le voy a decir otra cosa: tráigame el contrato el lunes y lo leemos juntas, con Bruno delante, que él lee despacio pero no se le escapa ni una coma." },
+        { "s": 1, "text": "¿Bruno? ¿El herrero? ¿Y qué pinta aquí el herrero?" },
+        { "s": 0, "text": "Nada, nada. Que tiene un martillo muy grande y mucha paciencia con los papeles. Y además, me debe un favor." },
+        { "s": 1, "text": "Me da la impresión de que usted me está tomando el pelo." },
+        { "s": 0, "text": "¿Yo? Por Dios. Aquí todos somos gente sencilla. Lo único que pasa es que, después de cien años despierta, una aprende a distinguir entre quien viene a cenar y quien viene a llevarse la cocina." },
+        { "s": 1, "text": "Bueno... lo pensaré." },
+        { "s": 0, "text": "Piénselo, piénselo. Y mientras lo piensa, la sopa son dos monedas. Esa sí se la cobro entera." }
+      ],
+      "choice": [
+        { "q": "¿Qué pretende doña Paola?", "options": ["Trabajar como cocinera en la posada", "Explotar la fama de la posada como negocio", "Denunciar a Inés ante el Consejo"], "answer": 1 },
+        { "q": "¿Qué revela Inés con «me pongo a contar las cucharas»?", "options": ["Que va a poner la mesa para la visita", "Que en la posada faltan cubiertos", "Que desconfía de la visitante desde el principio"], "answer": 2 },
+        { "q": "¿Con qué intención menciona Inés a Bruno y su martillo?", "options": ["Para intimidar sutilmente a la comerciante", "Porque Bruno es el verdadero dueño", "Para invitarlo a participar en el negocio"], "answer": 0 },
+        { "q": "¿Qué se desprende de la última intervención de Inés?", "options": ["Que acepta el trato a cambio de la sopa", "Que no piensa vender y trata a Paola como a una clienta más", "Que va a subir el precio de la posada"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué opinas de que un lugar con historia se convierta en reclamo turístico? ¿Dónde está la línea entre poner en valor y vender el alma?", "model": "Depende de quién se quede con los beneficios. Si el barrio vive de ello sin perder a sus vecinos, bien; si acaba siendo un decorado para turistas, se ha vendido el alma." },
+        { "q": "Inés dice que no sin decir que no. ¿Qué estrategias usas tú para rechazar una propuesta sin cerrarte puertas?", "model": "Suelo ganar tiempo: pido los detalles por escrito y una semana para pensarlo. A menudo la otra parte pierde el interés antes de que yo tenga que negarme." },
+        { "q": "«Hay quien viene a cenar y quien viene a llevarse la cocina». ¿Te has cruzado con alguien así? ¿Cómo lo calaste?", "model": "Sí, un socio que en cada reunión pedía un poco más. Lo calé cuando noté que nunca preguntaba por el proyecto, solo por las cuentas." }
+      ],
+      "gaps": "Lo único que pasa es que, después de cien años despierta, una aprende a [distinguir] entre quien viene a [cenar] y quien viene a [llevarse] la [cocina].",
+      "glossary": [
+        { "word": "contar las cucharas", "meaning": "vigilar por si alguien roba; desconfiar" },
+        { "word": "mina de oro", "meaning": "negocio que da mucho dinero" },
+        { "word": "qué pinta", "meaning": "qué tiene que ver, qué papel tiene" },
+        { "word": "tomando el pelo", "meaning": "burlándose de alguien, engañándolo en broma" }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "Bisagras nuevas para la puerta de Inés",
+      "place": "La fragua junto al molino",
+      "context": "Bruno, hombre de pocas palabras, le dicta a Nox un mensaje de voz para Inés. El cuervo lo repetirá palabra por palabra al llegar a la posada.",
+      "speakers": [
+        { "name": "Bruno", "country": "México", "voice": "es-MX-JorgeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Inés. Soy Bruno. Nox dice que hable claro y despacio, porque si no, se le olvida la mitad por el camino. Así que... claro y despacio. A ver." },
+        { "s": 0, "text": "Lo de las bisagras de tu puerta: ya están. Las hice de hierro bueno, del que no chirría. Te las llevo el domingo. Bueno, eso no es lo que te quería decir. O sí, también, pero no solo." },
+        { "s": 0, "text": "Llevo días dándole vueltas, y ya sabes que yo doy vueltas como el molino: despacio y sin parar. Hace cien años que tú haces el pan y yo muelo la harina. Hace cien años que cenamos a la misma hora, cada uno en su casa, mirando la misma lluvia. Y he estado pensando que, ahora que el reino se despertó, a lo mejor nos toca a nosotros despertar también." },
+        { "s": 0, "text": "No sé si me explico. Seguramente no. Para eso tú tienes las palabras y yo el martillo. Lo que quiero decir es que tu puerta, con bisagras nuevas, se abre mucho mejor. Y que, si te parece, el domingo no te las dejo en la puerta: me quedo a ponerlas. Y a cenar, si hay sopa. Y si no hay sopa, también." },
+        { "s": 0, "text": "Bueno. Eso. Nox, ya puedes irte. No, no te doy otra nuez hasta que vuelvas con la respuesta." }
+      ],
+      "choice": [
+        { "q": "¿Qué intenta decir Bruno en realidad?", "options": ["Que necesita que Inés le pague las bisagras", "Que quiere iniciar una relación sentimental con Inés", "Que piensa cerrar la fragua y mudarse"], "answer": 1 },
+        { "q": "¿Con qué compara Bruno su forma de pensar?", "options": ["Con el molino: despacio y sin parar", "Con el martillo: rápido y fuerte", "Con la lluvia: constante y triste"], "answer": 0 },
+        { "q": "¿Qué sugiere la imagen de cenar «cada uno en su casa, mirando la misma lluvia»?", "options": ["Que los dos odian el mal tiempo", "Que nunca se han visto en cien años", "Una cercanía que nunca se han atrevido a compartir"], "answer": 2 },
+        { "q": "¿Qué doble sentido tiene la frase sobre la puerta?", "options": ["Habla de las bisagras, pero también de que Inés se abra a él", "Se queja de que la puerta de Inés hace ruido", "Insinúa que alguien ha intentado robar en la posada"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "Bruno se declara hablando de bisagras. ¿Por qué crees que a muchas personas les cuesta expresar los sentimientos directamente?", "model": "Por miedo al rechazo, supongo. Si hablas de bisagras y la otra persona no te corresponde, siempre puedes fingir que solo hablabas de bisagras." },
+        { "q": "¿Conoces a alguien que demuestre el cariño con hechos más que con palabras? Descríbelo.", "model": "Mi padre. Jamás dice «te quiero», pero cada vez que voy a verlo me ha revisado los neumáticos del coche sin que se lo pida." },
+        { "q": "¿Prefieres que te digan las cosas importantes cara a cara, por mensaje o de forma indirecta? ¿Por qué?", "model": "Cara a cara, sin duda, aunque reconozco que yo, cuando me toca a mí, me escudo en los mensajes de voz con una facilidad pasmosa." }
+      ],
+      "gaps": "Hace cien años que [cenamos] a la misma [hora], cada uno en su [casa], mirando la misma [lluvia].",
+      "glossary": [
+        { "word": "bisagras", "meaning": "piezas de metal que permiten que una puerta se abra y se cierre" },
+        { "word": "chirría", "meaning": "hace un ruido agudo y desagradable al moverse" },
+        { "word": "dándole vueltas", "meaning": "pensando mucho en algo" },
+        { "word": "muelo", "meaning": "de moler: convertir el grano en harina" }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "El mapa que da un rodeo",
+      "place": "El claro del santuario",
+      "context": "El Consejo quiere abrir un camino real a través del bosque. Una cartógrafa de la Corona llega al claro con una orden firmada.",
+      "speakers": [
+        { "name": "Liora", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Teresa", "country": "Guinea Ecuatorial", "voice": "es-GQ-TeresaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Usted debe de ser Liora. Soy Teresa, cartógrafa de la Corona. Traigo una orden del Consejo: trazar un camino real que atraviese el bosque, del puente a la aldea, en línea recta." },
+        { "s": 0, "text": "En línea recta. Qué idea tan... geométrica." },
+        { "s": 1, "text": "Es la más eficiente. Les ahorraría medio día de viaje a los comerciantes." },
+        { "s": 0, "text": "Y por el medio quedaría el claro del santuario, claro. Que, casualmente, es lo único que el bosque no está dispuesto a ceder." },
+        { "s": 1, "text": "Con todo respeto, el bosque no firma las órdenes del Consejo." },
+        { "s": 0, "text": "No, pero las lee. Y tiene una forma muy particular de responder. Mire, no le voy a poner trabas. Al contrario. Le he dibujado yo misma un mapa. Aquí lo tiene." },
+        { "s": 1, "text": "Esto... esto da una vuelta enorme por el este." },
+        { "s": 0, "text": "Da un rodeo, sí. Pero llega. El camino recto, en cambio, tiene la mala costumbre de no llegar nunca. Pregúntele a la última expedición. Bueno, cuando la encuentren." },
+        { "s": 1, "text": "¿Me está amenazando?" },
+        { "s": 0, "text": "Le estoy ahorrando un disgusto, que no es lo mismo. Usted dibuje en su mapa la línea recta, para que el Consejo quede contento, y luego camine por el mío, para llegar a casa. Así cumplimos todos: el papel con el Consejo y los pies con el bosque." },
+        { "s": 1, "text": "O sea, que quiere que le mienta al Consejo." },
+        { "s": 0, "text": "Quiero que le diga la verdad a quien la necesita. El Consejo necesita un mapa bonito. Usted necesita volver. No veo la contradicción." },
+        { "s": 1, "text": "Me lo pensaré." },
+        { "s": 0, "text": "Piénselo caminando. Por el este, a ser posible." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el conflicto de fondo?", "options": ["Teresa no sabe dibujar mapas", "El camino recto del Consejo atravesaría el claro sagrado", "Los comerciantes se niegan a pasar por el bosque"], "answer": 1 },
+        { "q": "¿Qué insinúa Liora sobre la última expedición?", "options": ["Que se perdió y todavía no la han encontrado", "Que llegó antes que nadie a la aldea", "Que se negó a cumplir la orden del Consejo"], "answer": 0 },
+        { "q": "¿Qué le propone Liora a Teresa?", "options": ["Que rompa la orden delante del Consejo", "Que espere a que el bosque cambie de opinión", "Que entregue un mapa recto y viaje por el rodeo"], "answer": 2 },
+        { "q": "¿Cómo justifica Liora su propuesta?", "options": ["Dice que mentir al Consejo es una tradición", "Redefine la verdad según lo que necesita cada uno", "Reconoce que su mapa también es falso"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Liora propone cumplir «sobre el papel» y hacer otra cosa en la práctica. ¿Te parece pragmatismo o hipocresía? Argumenta.", "model": "Pragmatismo, siempre que nadie salga perjudicado. Ahora bien, si el Consejo invierte dinero en una carretera imposible, el engaño acaba saliendo caro." },
+        { "q": "¿Conoces algún caso real en el que una obra pública haya chocado con un lugar con valor natural o sagrado? ¿Cómo se resolvió?", "model": "Sí, una autopista que iba a cruzar un humedal. Hubo protestas durante años y al final se desvió, aunque costó el doble." },
+        { "q": "«El camino recto no siempre llega». ¿Te ha pasado en la vida que el rodeo resultara ser el buen camino?", "model": "Totalmente. Empecé una carrera que no era la mía, la dejé a medias y, de rebote, me di cuenta de que lo que me gustaba era enseñar." }
+      ],
+      "gaps": "Usted dibuje en su mapa la [línea recta], para que el Consejo quede [contento], y luego [camine] por el mío, para llegar a [casa].",
+      "glossary": [
+        { "word": "cartógrafa", "meaning": "persona que dibuja mapas" },
+        { "word": "trabas", "meaning": "obstáculos o dificultades que se ponen a alguien" },
+        { "word": "rodeo", "meaning": "camino más largo que evita pasar por un sitio" },
+        { "word": "disgusto", "meaning": "problema o mal momento que causa pena o enfado" }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "Doce barriles sin sello",
+      "place": "La caseta de guardia del puente",
+      "context": "Una inspectora del Consejo interroga a Sir Aldren porque anoche cruzó el puente un cargamento de vino sin sello real.",
+      "speakers": [
+        { "name": "Sir Aldren", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Inspectora Belkys", "country": "Cuba", "voice": "es-CU-BelkysNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Sir Aldren, seré directa. Anoche pasaron por su puente doce barriles de vino sin sello real. Usted estaba de guardia. Y, según varios testigos, saludó al carretero con mucha cordialidad." },
+        { "s": 0, "text": "Soy un hombre cordial, señora. Me lo reprochan a menudo." },
+        { "s": 1, "text": "No me venga con ironías. Hace un año usted no dejaba pasar ni a una mosca sin interrogarla. ¿Y ahora, de repente, doce barriles?" },
+        { "s": 0, "text": "Las personas cambian. La princesa nos pidió que confiáramos más." },
+        { "s": 1, "text": "Confiar no es hacer la vista gorda. Se lo pregunto sin rodeos: ¿cobró usted algo?" },
+        { "s": 0, "text": "Cobré, sí. Un nombre." },
+        { "s": 1, "text": "¿Cómo dice?" },
+        { "s": 0, "text": "El carretero me juró que el vino era para el banquete del aniversario. Mentía fatal, el pobre: le temblaba hasta el bigote. Así que le deseé buen viaje y mandé a un guardia a seguirlo de lejos. Los barriles acabaron en una bodega de la calle de los Tintoreros. Y el dueño de esa bodega, qué casualidad, es primo de un consejero." },
+        { "s": 1, "text": "¿De qué consejero?" },
+        { "s": 0, "text": "Eso pensaba preguntárselo a usted, que conoce mejor que yo los árboles genealógicos de la corte." },
+        { "s": 1, "text": "¿Insinúa que alguien del Consejo...?" },
+        { "s": 0, "text": "Yo no insinúo nada. Yo dejo pasar barriles y apunto direcciones. Las insinuaciones se las dejo a la corte, que tiene más práctica. Aquí tiene el informe, con nombres y fechas. Y una sugerencia: antes de interrogar al guardia, averigüe a quién beneficia el vino." },
+        { "s": 1, "text": "Lo leeré con atención." },
+        { "s": 0, "text": "No lo dudo. Y, por favor, léalo usted. No se lo pase al primo." }
+      ],
+      "choice": [
+        { "q": "¿Qué ocurre realmente en esta escena?", "options": ["Aldren confiesa que aceptó un soborno", "La inspectora acusa a Aldren, pero él destapa una red de contrabando", "Aldren pide permiso para dejar pasar más vino"], "answer": 1 },
+        { "q": "¿Qué quiere decir Aldren con «Cobré, sí. Un nombre»?", "options": ["Que a cambio de dejar pasar el vino obtuvo información", "Que el carretero le dio una propina", "Que le pidió su nombre por cortesía"], "answer": 0 },
+        { "q": "¿Cómo supo Aldren que el carretero mentía?", "options": ["Porque el vino no tenía sello", "Porque ya lo conocía de antes", "Por lo nervioso que se puso"], "answer": 2 },
+        { "q": "¿Qué sugiere la última frase de Aldren?", "options": ["Que la inspectora es prima del carretero", "Que sospecha que el Consejo podría encubrir al implicado", "Que el informe tiene errores"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Aldren deja pasar un delito para descubrir uno mayor. ¿Justifica el fin los medios en un caso así? ¿Dónde pondrías el límite?", "model": "En este caso me parece razonable, porque el daño es pequeño y controlado. Pero si en vez de vino hubieran sido armas, ya no lo tendría tan claro." },
+        { "q": "¿Cómo reaccionas cuando alguien te acusa injustamente? ¿Contraatacas, te justificas o esperas?", "model": "Mi primer impulso es justificarme, pero he aprendido que funciona mejor hacer preguntas, como Aldren: a veces la acusación se desmonta sola." },
+        { "q": "¿Crees que el enchufismo y los favores familiares son inevitables en cualquier institución? Pon ejemplos.", "model": "Inevitables no, pero sí persistentes. Donde no hay controles transparentes, el primo del consejero siempre acaba teniendo una bodega." }
+      ],
+      "gaps": "Así que le deseé buen viaje y mandé a un guardia a [seguirlo] de lejos. Los [barriles] acabaron en una [bodega] de la calle de los [Tintoreros].",
+      "glossary": [
+        { "word": "carretero", "meaning": "persona que conduce un carro con mercancías" },
+        { "word": "hacer la vista gorda", "meaning": "fingir que no se ve algo que está mal" },
+        { "word": "árboles genealógicos", "meaning": "esquemas de las relaciones familiares de una persona" },
+        { "word": "bodega", "meaning": "lugar donde se guarda y se vende vino" }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "Rosas amarillas para la princesa",
+      "place": "El invernadero de los jardines",
+      "context": "Un príncipe extranjero ha enviado un gran ramo a la princesa Elara. En el invernadero, Celina y su ayudante comentan el regalo.",
+      "speakers": [
+        { "name": "Celina", "country": "Perú", "voice": "es-PE-CamilaNeural" },
+        { "name": "Karina", "country": "Puerto Rico", "voice": "es-PR-KarinaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Celina, ¿viste el ramo que mandó el príncipe de Ostria para la princesa? Rosas amarillas. Docenas. El pasillo entero huele a perfume caro." },
+        { "s": 0, "text": "Lo vi, lo vi. Y lo olí desde aquí. Amarillas... qué curioso." },
+        { "s": 1, "text": "¿Curioso por qué? A mí me parecen preciosas." },
+        { "s": 0, "text": "Preciosas son. Pero en el lenguaje de las flores, el amarillo significa celos. O desdén. O infidelidad, según el manual que consultes." },
+        { "s": 1, "text": "¡No me digas! ¿Y tú crees que lo hizo a propósito?" },
+        { "s": 0, "text": "Ahí está la gracia. Si lo hizo a propósito, es un mensaje bastante grosero. Si lo hizo sin saberlo, es un príncipe que no se informa antes de cortejar a una princesa. No sé qué es peor." },
+        { "s": 1, "text": "A lo mejor simplemente le gustaba el color." },
+        { "s": 0, "text": "A lo mejor. Y a lo mejor los dragones son vegetarianos. Mira, en esta corte nadie hace nada solo porque le guste el color." },
+        { "s": 1, "text": "¿Y qué va a hacer la princesa?" },
+        { "s": 0, "text": "Ah, eso es lo bueno. Me ha pedido que le prepare un ramo de respuesta." },
+        { "s": 1, "text": "¿Y qué le vas a mandar? ¿Espinas?" },
+        { "s": 0, "text": "No, qué va, eso sería demasiado evidente. Le voy a mandar lavanda." },
+        { "s": 1, "text": "¿Lavanda? ¿Y eso qué significa?" },
+        { "s": 0, "text": "Depende. Para unos, desconfianza. Para otros, gratitud. Que se quede él con la duda, como nos ha dejado a nosotras." },
+        { "s": 1, "text": "Eres terrible." },
+        { "s": 0, "text": "Soy jardinera. Llevo cien años hablando con flores; algo se aprende." }
+      ],
+      "choice": [
+        { "q": "¿De qué conversan Celina y Karina?", "options": ["Del significado oculto de un regalo a la princesa", "De cómo cuidar las rosas en invierno", "De la boda ya anunciada de la princesa"], "answer": 0 },
+        { "q": "Según Celina, ¿qué puede significar el amarillo en el lenguaje de las flores?", "options": ["Alegría y amistad", "Celos, desdén o infidelidad", "Riqueza y poder"], "answer": 1 },
+        { "q": "¿Qué quiere decir Celina con «y a lo mejor los dragones son vegetarianos»?", "options": ["Que los dragones del reino han cambiado de dieta", "Que Karina tiene toda la razón", "Que la explicación de Karina le parece muy poco creíble"], "answer": 2 },
+        { "q": "¿Por qué elige Celina la lavanda?", "options": ["Porque es la flor favorita de la princesa", "Porque su significado ambiguo le devuelve la duda al príncipe", "Porque huele mejor que las rosas"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez un regalo te dejó con la duda de qué quería decir realmente quien te lo hizo? Cuéntalo.", "model": "Una vez una compañera me regaló un libro sobre cómo gestionar el tiempo. Todavía no sé si fue un detalle o una indirecta por mis retrasos." },
+        { "q": "Celina responde a la ambigüedad con más ambigüedad. ¿Te parece una buena estrategia en política o en las relaciones personales?", "model": "En diplomacia puede ser útil, porque deja margen para recular. En pareja, en cambio, me parece una receta segura para el desastre." },
+        { "q": "¿Qué gestos o detalles tienen un significado especial en tu cultura que un extranjero podría malinterpretar?", "model": "En mi país regalar crisantemos a alguien sano es de mal gusto, porque son la flor de los cementerios. Más de un turista ha metido la pata así." }
+      ],
+      "gaps": "Si lo hizo a propósito, es un mensaje bastante [grosero]. Si lo hizo sin saberlo, es un príncipe que no se [informa] antes de [cortejar] a una [princesa].",
+      "glossary": [
+        { "word": "desdén", "meaning": "desprecio, falta de interés hacia alguien" },
+        { "word": "a propósito", "meaning": "con intención, sabiendo lo que se hace" },
+        { "word": "grosero", "meaning": "maleducado, ofensivo" },
+        { "word": "cortejar", "meaning": "intentar conquistar a alguien para tener una relación amorosa" }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "Lección sobre refugios sin salida",
+      "place": "La biblioteca del castillo",
+      "context": "Baltasar da clase a sus aprendices en la biblioteca. Hoy la lección empieza con una frase de la princesa y termina en otro lugar.",
+      "speakers": [
+        { "name": "Baltasar", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bueno, bueno, silencio, que esto no es una taberna, aunque a juzgar por el olor alguno viene de una. Hoy no vamos a estudiar hechizos de fuego, para alegría de las cortinas. Hoy vamos a hablar de una frase: «Un refugio debe tener una salida». La escribió la princesa la noche de la tormenta, y nadie le hizo caso, lo cual, en este reino, es casi una tradición." },
+        { "s": 0, "text": "¿Por qué les cuento esto? Porque ayer el Consejo me hizo una petición muy amable. Quieren que estudie el hechizo de la Tejedora. Para comprenderlo, dicen. Y para tenerlo a mano, añaden en voz baja, por si algún reino vecino se pone nervioso. Es decir: quieren un refugio. Sin salida, se entiende, que las salidas son caras." },
+        { "s": 0, "text": "Les he contestado que estudiaré el asunto con toda la diligencia que merece. Algunos de ustedes ya me conocen y saben exactamente cuánta diligencia es esa. Para los nuevos: más o menos la misma que pongo en ordenar la sección de astrología. Que, como ven, sigue en el suelo desde hace un siglo." },
+        { "s": 0, "text": "La lección de hoy, por tanto, es doble. Primera: un hechizo no es bueno ni malo; lo es la mano que lo sostiene y el miedo que la mueve. Segunda: a veces la forma más prudente de decirles que no a los poderosos es decirles que sí, muy despacio. Apunten eso. Bueno, mejor no lo apunten. Recuérdenlo." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el tema central de la lección?", "options": ["Cómo lanzar hechizos de fuego sin peligro", "La historia de la astrología en Valdoria", "El peligro de usar el hechizo de la Tejedora como arma"], "answer": 2 },
+        { "q": "¿Para qué quiere realmente el Consejo el hechizo, según Baltasar?", "options": ["Para tenerlo listo por si un reino vecino amenaza", "Para despertar a otro reino dormido", "Para proteger la biblioteca de incendios"], "answer": 0 },
+        { "q": "¿Qué significa en realidad «con toda la diligencia que merece»?", "options": ["Que trabajará día y noche en el encargo", "Que pedirá ayuda a sus mejores aprendices", "Que piensa retrasarlo indefinidamente"], "answer": 2 },
+        { "q": "¿Por qué pide al final que no lo apunten, sino que lo recuerden?", "options": ["Porque los aprendices escriben muy despacio", "Porque dejar por escrito esa idea podría ser comprometedor", "Porque no le gusta que tomen apuntes"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "«Un hechizo no es bueno ni malo; lo es la mano que lo sostiene». ¿Puedes aplicar esta idea a una tecnología actual?", "model": "La inteligencia artificial, sin ir más lejos: la misma herramienta que ayuda a diagnosticar enfermedades sirve para fabricar bulos a escala industrial." },
+        { "q": "Baltasar dice que sí «muy despacio» para no decir que no. ¿Te parece una forma legítima de resistencia o una cobardía elegante?", "model": "Depende de quién tenga el poder. Frente a una orden injusta y con pocas opciones, el sí lento puede ser la única resistencia posible." },
+        { "q": "¿Recuerdas a algún profesor que enseñara más con ironía que con explicaciones? ¿Qué aprendiste de él o de ella?", "model": "Tuve una profesora de filosofía que nunca respondía directamente; te devolvía la pregunta con una sonrisa. Me enseñó a desconfiar de las respuestas fáciles." }
+      ],
+      "gaps": "Primera: un hechizo no es [bueno ni malo]; lo es la [mano] que lo sostiene y el [miedo] que la [mueve].",
+      "glossary": [
+        { "word": "a juzgar por", "meaning": "según lo que se puede deducir de algo" },
+        { "word": "tenerlo a mano", "meaning": "tenerlo cerca, listo para usarlo" },
+        { "word": "diligencia", "meaning": "rapidez y cuidado al hacer un trabajo" },
+        { "word": "poderosos", "meaning": "personas que tienen mucho poder o influencia" }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "La balada del dragón malvado",
+      "place": "El gran salón",
+      "context": "Una canción sobre el hechizo se ha hecho muy popular en la plaza. Teobaldo cita a la juglaresa que la compuso en el gran salón.",
+      "speakers": [
+        { "name": "Teobaldo", "country": "Uruguay", "voice": "es-UY-MateoNeural" },
+        { "name": "Paloma", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Señorita Paloma, he oído su balada en la plaza. Tres veces, de hecho. Es imposible no oírla: la canta todo el mundo, hasta los niños." },
+        { "s": 1, "text": "¡Qué honor! Viniendo del cronista del reino, eso es todo un halago." },
+        { "s": 0, "text": "No lo era. Su balada cuenta que un dragón malvado secuestró a la princesa y que un caballero lo venció. Eso no ocurrió. Brum protegió a Elara durante cien años, y ningún caballero venció a nadie." },
+        { "s": 1, "text": "Ya, pero así no rima. «Brum, dragón sensato y leal»... no vende ni una copla." },
+        { "s": 0, "text": "La historia no está para vender coplas." },
+        { "s": 1, "text": "La historia no, pero yo sí. Mire, maestro, usted escribe para los archivos y yo canto para la plaza. Su versión la leen cuatro sabios. La mía la cantan cuatro mil." },
+        { "s": 0, "text": "Precisamente por eso me preocupa. Dentro de cien años nadie recordará mi crónica, y todos recordarán su dragón malvado. Brum ya no se atreve a bajar al mercado; los niños le tiran piedras." },
+        { "s": 1, "text": "Eso no lo sabía." },
+        { "s": 0, "text": "Le propongo un trato. Usted conserva la melodía, que es pegadiza, se lo reconozco. Yo le doy los hechos, que son mejores de lo que cree: un dragón que da miedo pero que está asustado, una princesa que eligió dormir para salvar a otros, un guardián que no se perdona. Eso también rima, si se trabaja." },
+        { "s": 1, "text": "¿Y yo qué gano?" },
+        { "s": 0, "text": "Que su balada sea la verdadera. Y que, cuando yo me muera, la gente la cite en lugar de mi crónica. Créame: es el mayor halago que un cronista puede hacerle a una juglaresa." },
+        { "s": 1, "text": "Mmm. Me lo está vendiendo muy bien, para no querer vender coplas." },
+        { "s": 0, "text": "Cien años en la corte, señorita. Algo se pega." }
+      ],
+      "choice": [
+        { "q": "¿Qué busca Teobaldo en esta conversación?", "options": ["Prohibir que se cante la balada", "Que la juglaresa cambie la historia de su canción por la verdadera", "Comprarle los derechos de la balada"], "answer": 1 },
+        { "q": "¿Qué consecuencia real ha tenido la balada?", "options": ["Los niños tiran piedras a Brum", "La princesa se ha enfadado con Teobaldo", "El caballero de la canción se ha hecho famoso"], "answer": 0 },
+        { "q": "¿Qué argumento usa Paloma para defender su versión?", "options": ["Que es la que cuenta la princesa", "Que los hechos verdaderos no se conocen", "Que su versión llega a mucha más gente"], "answer": 2 },
+        { "q": "¿Qué juego de palabras cierra la conversación?", "options": ["«Pegadiza» y «se pega»: Teobaldo ha aprendido a persuadir en la corte", "«Copla» y «crónica»: los dos géneros son iguales", "«Halago» y «trato»: Teobaldo rechaza el acuerdo"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Quién tiene más poder para fijar la memoria colectiva hoy: los historiadores o la cultura popular (canciones, series, redes)? Pon un ejemplo.", "model": "La cultura popular, sin duda. Mucha gente conoce ciertos episodios históricos solo por una serie, aunque la serie se tome licencias enormes." },
+        { "q": "¿Te parece aceptable que el arte deforme hechos reales para resultar más atractivo? ¿Dónde pondrías el límite?", "model": "Es aceptable mientras no se convierta en un perjuicio para personas reales. Cuando un dragón inocente acaba recibiendo pedradas, se ha cruzado la raya." },
+        { "q": "Teobaldo persuade apelando al orgullo de Paloma. ¿Qué técnicas de persuasión te funcionan a ti, o contigo?", "model": "Conmigo funciona que me pidan consejo; me siento importante y bajo la guardia. Lo sé, y aun así caigo cada vez." }
+      ],
+      "gaps": "Usted conserva la [melodía], que es [pegadiza], se lo reconozco. Yo le doy los [hechos], que son mejores de lo que [cree]",
+      "glossary": [
+        { "word": "halago", "meaning": "algo que se dice para alabar a alguien" },
+        { "word": "copla", "meaning": "canción popular corta" },
+        { "word": "pegadiza", "meaning": "que se recuerda con facilidad y no se va de la cabeza" },
+        { "word": "juglaresa", "meaning": "mujer que, en la Edad Media, cantaba y contaba historias por los pueblos" }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "Sí al comercio, no a la prisa",
+      "place": "La sala de audiencias de la torre",
+      "context": "En el primer aniversario del despertar, un embajador del reino de Ostria trae a la princesa Elara una propuesta de alianza.",
+      "speakers": [
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" },
+        { "name": "Embajador Javier", "country": "Guinea Ecuatorial", "voice": "es-GQ-JavierNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Alteza, el rey de Ostria le envía sus saludos más afectuosos y una propuesta que, me atrevo a decir, beneficiaría enormemente a Ostria y a Valdoria." },
+        { "s": 0, "text": "Embajador, cuando un rey manda saludos afectuosos con un embajador, suele ser porque quiere algo que no se atreve a pedir por carta. Adelante." },
+        { "s": 1, "text": "El rey propone una alianza. Y, para sellarla, el matrimonio de su alteza con su hijo, el príncipe Aurelio." },
+        { "s": 0, "text": "El de las rosas amarillas." },
+        { "s": 1, "text": "El mismo. Un joven de grandes cualidades." },
+        { "s": 0, "text": "No lo dudo. Pero entienda mi situación, embajador. Llevo un año despierta después de un siglo dormida. Todavía estoy aprendiendo a usar los tenedores modernos. Comprometerme ahora sería como casarme con un desconocido después de una siesta muy larga." },
+        { "s": 1, "text": "Alteza, con todo respeto, los matrimonios reales rara vez se basan en conocerse." },
+        { "s": 0, "text": "Por eso mismo salen como salen. Le hago una contrapropuesta. Ostria necesita harina; nosotros tenemos el mejor molino del continente. Nosotros necesitamos lana; ustedes tienen ovejas de sobra. Empecemos por ahí: un tratado de comercio. Si dentro de unos años nuestros pueblos se entienden, ya hablaremos de lo demás. O no." },
+        { "s": 1, "text": "El rey esperaba una respuesta más... definitiva." },
+        { "s": 0, "text": "Y la tiene. Le estoy diciendo que sí al comercio, que no a la prisa y que quizá a todo lo demás. Es bastante definitivo, para ser yo." },
+        { "s": 1, "text": "¿Y qué le digo al príncipe?" },
+        { "s": 0, "text": "Dígale que las rosas eran preciosas. Y que en Valdoria tenemos una jardinera excelente que le puede explicar qué significan." }
+      ],
+      "choice": [
+        { "q": "¿Cómo responde Elara a la propuesta de matrimonio?", "options": ["La acepta con entusiasmo", "La aplaza y ofrece a cambio un acuerdo comercial", "La rechaza y rompe relaciones con Ostria"], "answer": 1 },
+        { "q": "¿Qué da a entender Elara con su comentario sobre los saludos afectuosos?", "options": ["Que detrás de tanta cortesía hay una petición incómoda", "Que agradece de verdad el cariño del rey", "Que prefiere recibir cartas"], "answer": 0 },
+        { "q": "¿Qué ofrece cada reino en el tratado de comercio?", "options": ["Valdoria da lana y Ostria da harina", "Ostria y Valdoria intercambian rosas", "Valdoria da harina y Ostria da lana"], "answer": 2 },
+        { "q": "¿Qué mensaje esconde la respuesta final para el príncipe?", "options": ["Que a Elara le encantaron sus flores", "Que ha entendido el posible significado ofensivo de las rosas amarillas", "Que quiere contratarlo como jardinero"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Elara dice «sí, no y quizá» a la vez. ¿Cuándo es útil una respuesta ambigua y cuándo resulta injusta para quien la recibe?", "model": "Es útil cuando necesitas tiempo y la otra parte también gana con esperar. Se vuelve injusta cuando la usas para mantener a alguien enganchado sin intención de comprometerte." },
+        { "q": "¿Qué opinas de las alianzas por interés, ya sea entre países, empresas o personas? ¿Pueden convertirse en algo más?", "model": "Muchas amistades empiezan por interés y acaban siendo genuinas. Lo importante es que nadie se engañe sobre el punto de partida." },
+        { "q": "Si tuvieras que negociar con alguien más poderoso que tú, ¿qué estrategia de Elara copiarías?", "model": "La contrapropuesta: en lugar de rechazar, cambiar el terreno de juego a uno en el que yo tenga algo valioso que ofrecer." }
+      ],
+      "gaps": "Le estoy diciendo que sí al [comercio], que no a la [prisa] y que [quizá] a todo lo [demás].",
+      "glossary": [
+        { "word": "sellarla", "meaning": "confirmarla de forma oficial y definitiva" },
+        { "word": "comprometerme", "meaning": "prometer casarme con alguien" },
+        { "word": "contrapropuesta", "meaning": "propuesta que se hace como respuesta a otra" },
+        { "word": "de sobra", "meaning": "más de lo necesario" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "game": "reino",
+  "level": "B2",
+  "items": [
+    {
+      "id": "ines",
+      "title": "Pan para los que duermen",
+      "place": "La posada de Inés",
+      "context": "Antes del amanecer, durante los años del hechizo, Rosaura entra en la cocina de la posada mientras Inés amasa el pan.",
+      "speakers": [
+        {
+          "name": "Inés",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Rosaura",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Inés, ¿otra vez amasando? Son las cinco de la mañana y en esta aldea no queda nadie despierto para comérselo."
+        },
+        {
+          "s": 0,
+          "text": "Quedamos seis, Rosaura. Y Nox, que se come las migas. Además, el pan no es solo para comer."
+        },
+        {
+          "s": 1,
+          "text": "Ay, ya empiezas con tus filosofías. Mira, te lo digo en serio: me voy. Mi primo vive al otro lado de las montañas, y allí el sol sale como siempre."
+        },
+        {
+          "s": 0,
+          "text": "¿Te vas? ¿Y si la gente se despierta mañana y no encuentra a nadie?"
+        },
+        {
+          "s": 1,
+          "text": "Si se despertaran mañana, me alegraría muchísimo. Pero llevamos cien años esperando. No creo que pase."
+        },
+        {
+          "s": 0,
+          "text": "No te pido que te quedes. Solo te pido que no te vayas sin despedirte de Bruno. Se pondría triste, aunque nunca lo diga."
+        },
+        {
+          "s": 1,
+          "text": "Bruno no se pone triste; se pone a martillear."
+        },
+        {
+          "s": 0,
+          "text": "Es lo mismo, mujer. Cada uno tiene su manera. Yo hago pan, él martillea y tú... tú te quejas."
+        },
+        {
+          "s": 1,
+          "text": "¡Oye! Bueno, vale, puede que me quede hasta la primavera. Pero que conste que es por el pan."
+        },
+        {
+          "s": 0,
+          "text": "Claro, claro. Por el pan."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan principalmente Inés y Rosaura?",
+          "options": [
+            "De que Rosaura quiere irse de la aldea",
+            "De que Inés quiere vender la posada",
+            "De que las dos buscan a Bruno"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántas personas siguen despiertas en la aldea, según Inés?",
+          "options": [
+            "Cinco, contando a Nox",
+            "Seis, sin contar a Nox",
+            "Siete, con el primo de Rosaura"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Rosaura, ¿qué hace Bruno cuando está triste?",
+          "options": [
+            "Se encierra en el molino",
+            "Se va a las montañas",
+            "Se pone a martillear"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se puede deducir del final?",
+          "options": [
+            "Que Rosaura se marcha esa misma noche",
+            "Que Rosaura se queda, aunque no admite el motivo real",
+            "Que Inés va a dejar de hacer pan"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "Inés hace pan aunque casi nadie lo come. ¿Qué rutina mantienes tú aunque nadie te la pida? ¿Por qué?",
+          "model": "Hago la cama todas las mañanas, aunque viva sola. Si no la hiciera, sentiría que el día empieza mal."
+        },
+        {
+          "q": "¿Te irías a otro lugar si en tu ciudad las cosas no cambiaran durante mucho tiempo? ¿Qué te haría quedarte?",
+          "model": "Probablemente me iría, a menos que mis amigos me necesitaran. Creo que la gente es lo único que me haría quedarme."
+        },
+        {
+          "q": "Rosaura dice que se queda «por el pan». ¿Alguna vez diste una excusa para no decir el motivo real?",
+          "model": "Sí, una vez dije que me quedaba en una fiesta por la comida, pero en realidad quería hablar con alguien."
+        }
+      ],
+      "gaps": "Si se [despertaran] mañana, me [alegraría] [muchísimo]. Pero llevamos cien años [esperando].",
+      "glossary": [
+        {
+          "word": "amasando",
+          "meaning": "trabajando la masa del pan con las manos"
+        },
+        {
+          "word": "migas",
+          "meaning": "trocitos pequeños que caen del pan"
+        },
+        {
+          "word": "martillear",
+          "meaning": "golpear algo muchas veces con un martillo"
+        },
+        {
+          "word": "que conste",
+          "meaning": "quiero que quede claro"
+        }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "La llave que no abre nada",
+      "place": "El molino",
+      "context": "Lautaro, el aprendiz de Bruno, ha revisado otra vez el molino parado y le hace una pregunta que todos en la aldea se hacen.",
+      "speakers": [
+        {
+          "name": "Bruno",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Lautaro",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Maestro, ya revisé las aspas tres veces. La madera está perfecta, los engranajes también. No entiendo por qué el molino no gira."
+        },
+        {
+          "s": 0,
+          "text": "Porque no hay viento, Lautaro. Desde la noche del hechizo no sopla ni una brisa sobre la aldea."
+        },
+        {
+          "s": 1,
+          "text": "Entonces, ¿para qué arreglamos cosas que no están rotas?"
+        },
+        {
+          "s": 0,
+          "text": "Para no oxidarnos. Ni el molino ni nosotros."
+        },
+        {
+          "s": 1,
+          "text": "Oiga, y otra cosa... Todo el mundo sabe que usted tiene la llave del castillo. ¿Por qué no va y abre el portón de una vez?"
+        },
+        {
+          "s": 0,
+          "text": "¿Y tú crees que no lo he pensado? Aunque abriera el portón, las espinas no me dejarían pasar del jardín. Esa llave sola no sirve de nada."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si fuéramos con hachas? Entre los dos..."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo intentaron otros. Las espinas vuelven a crecer cada noche, más fuertes. No, muchacho. Hace falta algo que no sale de una fragua."
+        },
+        {
+          "s": 1,
+          "text": "¿Magia?"
+        },
+        {
+          "s": 0,
+          "text": "Llámalo como quieras. Yo solo sé que, el día que alguien llegue preguntando por esta llave, se la voy a dar sin dudar. Y ojalá sea pronto, porque ya estoy viejo para esperar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el problema principal del molino?",
+          "options": [
+            "Que las aspas están rotas",
+            "Que no hay viento desde el hechizo",
+            "Que Lautaro perdió los engranajes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué siguen arreglando el molino, según Bruno?",
+          "options": [
+            "Para no oxidarse, ni el molino ni ellos",
+            "Porque el rey se lo ordenó antes del hechizo",
+            "Para poder vender harina en otra aldea"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Bruno no usa la llave del castillo?",
+          "options": [
+            "Porque la perdió hace años",
+            "Porque le da miedo la princesa",
+            "Porque las espinas del jardín no lo dejarían pasar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa hacer Bruno con la llave?",
+          "options": [
+            "Fundirla en la fragua",
+            "Dársela a quien llegue preguntando por ella",
+            "Guardarla para cuando Lautaro sea maestro"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "Bruno arregla cosas que no están rotas «para no oxidarse». ¿Qué haces tú para no perder una habilidad?",
+          "model": "Leo en español todas las noches. Si dejara de hacerlo, olvidaría muchas palabras."
+        },
+        {
+          "q": "¿Conoces un problema que no se puede resolver con fuerza, sino con otra cosa? Explica cuál.",
+          "model": "Una pelea entre amigos. Aunque grites más, no se arregla; hace falta paciencia y escuchar."
+        },
+        {
+          "q": "Si tuvieras una llave importante, ¿a quién se la darías y con qué condición?",
+          "model": "Se la daría a mi hermana, siempre que me prometiera no perderla."
+        }
+      ],
+      "gaps": "Aunque [abriera] el [portón], las espinas no me [dejarían] pasar del [jardín].",
+      "glossary": [
+        {
+          "word": "aspas",
+          "meaning": "los brazos grandes del molino que mueve el viento"
+        },
+        {
+          "word": "engranajes",
+          "meaning": "ruedas con dientes que mueven una máquina"
+        },
+        {
+          "word": "oxidarnos",
+          "meaning": "estropearnos como el hierro viejo; aquí, perder práctica"
+        },
+        {
+          "word": "fragua",
+          "meaning": "el fuego donde el herrero trabaja el metal"
+        },
+        {
+          "word": "portón",
+          "meaning": "puerta grande, como la de un castillo"
+        }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "Las luces que mienten",
+      "place": "El bosque oscuro",
+      "context": "Liora acompaña a un viajero hasta la entrada del bosque y, antes de dejarlo solo, le da unas instrucciones muy precisas.",
+      "speakers": [
+        {
+          "name": "Liora",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, escúchame bien, porque solo lo voy a decir una vez. Este bosque no es peligroso, pero sí es tramposo. Desde el hechizo, las luciérnagas duermen, y en su lugar aparecen otras luces, unas lucecitas azules que se mueven. Parecen amables. No lo son."
+        },
+        {
+          "s": 0,
+          "text": "Si las sigues, vas a caminar en círculos hasta el amanecer, y aquí el amanecer tarda bastante. ¿Que cómo vas a orientarte sin luz? Fácil: toca los troncos. El musgo crece del lado norte, y el puente queda al norte."
+        },
+        {
+          "s": 0,
+          "text": "Otra cosa: si oyes que alguien dice tu nombre, no contestes. No es nadie, es el eco del bosque, que se aburre. Y si de repente te da mucho sueño, siéntate en una piedra, nunca en el suelo. Las raíces abrazan a los que se duermen, y luego no los sueltan con facilidad."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y no me mires así. Ya sé que parece un cuento para asustar niños. Pero yo llevo cien años sacando viajeros de este bosque, y te aseguro que los cuentos, aquí, son instrucciones."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Liora en este audio?",
+          "options": [
+            "Da consejos a un viajero para cruzar el bosque",
+            "Cuenta un cuento a unos niños antes de dormir",
+            "Pide ayuda para encender las luciérnagas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasa si sigues las luces azules?",
+          "options": [
+            "Llegas antes al puente",
+            "Caminas en círculos hasta el amanecer",
+            "Encuentras a las luciérnagas dormidas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo puedes orientarte sin luz?",
+          "options": [
+            "Siguiendo el eco del bosque",
+            "Mirando las estrellas",
+            "Tocando el musgo de los troncos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Liora con la última frase?",
+          "options": [
+            "Que los cuentos del bosque son mentira",
+            "Que hay que tomarse en serio lo que parece un cuento",
+            "Que los niños no deben entrar en el bosque"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez te perdiste en un lugar desconocido? ¿Cómo te orientaste?",
+          "model": "Sí, en una ciudad grande. Como no tenía batería, le pregunté a una señora y me explicó el camino."
+        },
+        {
+          "q": "¿Qué consejo le darías a un turista que visita tu ciudad por primera vez?",
+          "model": "Le diría que no tome taxis en la calle por la noche y que pruebe el mercado del centro."
+        },
+        {
+          "q": "¿Crees que los cuentos tradicionales enseñan algo útil? Da un ejemplo.",
+          "model": "Sí, creo que Caperucita enseña a no confiar en desconocidos, aunque parezcan amables."
+        }
+      ],
+      "gaps": "Si las [sigues], vas a caminar en [círculos] hasta el [amanecer], y aquí el amanecer [tarda] bastante.",
+      "glossary": [
+        {
+          "word": "tramposo",
+          "meaning": "que engaña o pone trampas"
+        },
+        {
+          "word": "luciérnagas",
+          "meaning": "insectos pequeños que dan luz de noche"
+        },
+        {
+          "word": "musgo",
+          "meaning": "planta verde y suave que crece en piedras y troncos"
+        },
+        {
+          "word": "raíces",
+          "meaning": "la parte de los árboles que está bajo la tierra"
+        }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "La mujer de la capa gris",
+      "place": "El puente prohibido",
+      "context": "Al final del turno, Marcelo, un guardia joven, se atreve a preguntarle a Sir Aldren por qué el puente sigue cerrado.",
+      "speakers": [
+        {
+          "name": "Sir Aldren",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Marcelo",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Sir Aldren, perdone que se lo pregunte, pero ¿por qué no deja pasar a nadie? Ayer vino una familia con dos niños y usted los mandó de vuelta."
+        },
+        {
+          "s": 0,
+          "text": "Porque no los conocía."
+        },
+        {
+          "s": 1,
+          "text": "Tampoco me conocía a mí, y aquí estoy."
+        },
+        {
+          "s": 0,
+          "text": "A ti te tuve tres meses limpiando establos antes de darte una lanza, Marcelo. No es lo mismo."
+        },
+        {
+          "s": 1,
+          "text": "Ya, pero... Dicen en la aldea que es por algo que pasó la noche del hechizo."
+        },
+        {
+          "s": 0,
+          "text": "En la aldea dicen muchas cosas. Pero sí, esta vez tienen razón. Esa noche dejé pasar a una mujer. Llevaba una capa gris y me habló con tanta calma que no le pregunté nada. Una hora después, las espinas subían por los muros."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cree que fue ella?"
+        },
+        {
+          "s": 0,
+          "text": "No lo sé. Ojalá lo supiera. Si fue ella, la culpa es mía. Y si no fue ella, he pasado cien años desconfiando de todo el mundo por nada."
+        },
+        {
+          "s": 1,
+          "text": "Quizá no sea culpa de nadie, señor."
+        },
+        {
+          "s": 0,
+          "text": "Quizá. Pero mientras no lo sepa, este puente se queda cerrado."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué trata principalmente la conversación?",
+          "options": [
+            "De por qué Aldren no deja pasar a nadie",
+            "De cómo se entrena a un guardia nuevo",
+            "De una familia que se perdió en el bosque"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo Marcelo antes de recibir una lanza?",
+          "options": [
+            "Vigilar el puente de noche",
+            "Limpiar establos durante tres meses",
+            "Trabajar con su familia en la aldea"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué recuerda Aldren de la mujer que dejó pasar?",
+          "options": [
+            "Que parecía muy nerviosa",
+            "Que llevaba una espada",
+            "Que le habló con mucha calma"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se siente Aldren?",
+          "options": [
+            "Seguro de que la mujer es culpable",
+            "Lleno de dudas y con miedo de ser el culpable",
+            "Enfadado porque Marcelo le miente"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te resulta fácil confiar en personas que no conoces? ¿Por qué?",
+          "model": "Depende. En el trabajo confío rápido, pero con mi casa o mi dinero soy más prudente."
+        },
+        {
+          "q": "¿Alguna vez te sentiste culpable por algo sin estar seguro de que fuera culpa tuya?",
+          "model": "Sí, cuando se rompió un jarrón en casa de mi abuela. Nadie sabía quién había sido, pero yo me sentía mal."
+        },
+        {
+          "q": "Si fueras Marcelo, ¿qué le dirías a Sir Aldren para que abriera el puente?",
+          "model": "Le diría que, aunque se equivocara una vez, no puede castigar a todo el mundo por ese error."
+        }
+      ],
+      "gaps": "Si fue ella, la [culpa] es [mía]. Y si no fue ella, he pasado [cien años] desconfiando de todo el mundo [por nada].",
+      "glossary": [
+        {
+          "word": "establos",
+          "meaning": "lugares donde viven los caballos"
+        },
+        {
+          "word": "lanza",
+          "meaning": "arma larga con punta que usan los guardias"
+        },
+        {
+          "word": "capa",
+          "meaning": "ropa larga, sin mangas, que cubre los hombros"
+        },
+        {
+          "word": "desconfiando",
+          "meaning": "sin confiar en los demás"
+        }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "Esquejes que no se venden",
+      "place": "Los jardines reales",
+      "context": "Un comerciante extranjero ha conseguido llegar a los jardines y quiere hacer negocio con Celina.",
+      "speakers": [
+        {
+          "name": "Celina",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Andrés",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Buenas tardes, señora jardinera. Vengo de muy lejos. Me han dicho que aquí crecen las rosas más extrañas del mundo."
+        },
+        {
+          "s": 0,
+          "text": "Le han dicho bien. Y también le habrán dicho que no se venden."
+        },
+        {
+          "s": 1,
+          "text": "Algo me comentaron, sí. Pero yo no quiero rosas, solo unos esquejes. Le pagaría en oro, lo que usted me pida."
+        },
+        {
+          "s": 0,
+          "text": "Mire, no es cuestión de precio. Cada rosa de este jardín guarda un recuerdo del reino. Esta de aquí, por ejemplo, guarda la boda de los abuelos de la princesa."
+        },
+        {
+          "s": 1,
+          "text": "Con todo respeto, eso suena a leyenda."
+        },
+        {
+          "s": 0,
+          "text": "Puede ser. Pero imagínese que tiene razón usted y es una simple flor. Entonces, ¿para qué la quiere?"
+        },
+        {
+          "s": 1,
+          "text": "Bueno... para venderla, claro. Y si fuera mágica, la vendería todavía más cara."
+        },
+        {
+          "s": 0,
+          "text": "Ahí está. O es una flor normal y no vale su viaje, o es un recuerdo y no está en venta. En cualquiera de los dos casos, se va usted sin esquejes."
+        },
+        {
+          "s": 1,
+          "text": "Es usted una negociante terrible."
+        },
+        {
+          "s": 0,
+          "text": "No, señor. Soy una jardinera excelente. Que tenga buen viaje."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué quiere el visitante?",
+          "options": [
+            "Trabajar en los jardines",
+            "Comprar esquejes de las rosas",
+            "Conocer a la princesa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Celina, ¿qué guarda cada rosa del jardín?",
+          "options": [
+            "Un recuerdo del reino",
+            "Una semilla de oro",
+            "Un hechizo de protección"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué recuerdo guarda la rosa que enseña Celina?",
+          "options": [
+            "El nacimiento de la princesa",
+            "La noche de la tormenta",
+            "La boda de los abuelos de la princesa"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué argumento usa Celina para decir que no?",
+          "options": [
+            "Que las rosas están enfermas",
+            "Que en ninguno de los dos casos tiene sentido vendérselas",
+            "Que la princesa lo ha prohibido"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes algún objeto que no venderías por ningún dinero? ¿Por qué?",
+          "model": "El reloj de mi abuelo. No vale mucho, pero me recuerda a él cada vez que lo miro."
+        },
+        {
+          "q": "¿Qué piensas de convertir lugares o recuerdos históricos en negocio?",
+          "model": "Me parece bien siempre que se respete el lugar, pero no me gusta cuando todo se convierte en tienda de recuerdos."
+        },
+        {
+          "q": "Celina gana la discusión con lógica. ¿Cómo convences tú a alguien cuando no está de acuerdo contigo?",
+          "model": "Suelo hacerle preguntas para que él mismo vea el problema, como hace Celina."
+        }
+      ],
+      "gaps": "O es una [flor normal] y no vale su [viaje], o es un [recuerdo] y no está [en venta].",
+      "glossary": [
+        {
+          "word": "esquejes",
+          "meaning": "trozos de una planta que se usan para plantar otra igual"
+        },
+        {
+          "word": "con todo respeto",
+          "meaning": "expresión educada antes de decir algo que puede molestar"
+        },
+        {
+          "word": "leyenda",
+          "meaning": "historia antigua que mezcla realidad y fantasía"
+        },
+        {
+          "word": "negociante",
+          "meaning": "persona que compra y vende"
+        }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "Un pétalo para la memoria",
+      "place": "La biblioteca del castillo",
+      "context": "Baltasar le manda un mensaje de voz a Celina. Lo lleva Nox, el cuervo, que repite las palabras al llegar a los jardines.",
+      "speakers": [
+        {
+          "name": "Baltasar",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Celina, querida, soy Baltasar. Te mando este mensaje con Nox, así que si llega con alguna palabra de menos, échale la culpa a él, que es cuervo y se distrae con cualquier cosa brillante."
+        },
+        {
+          "s": 0,
+          "text": "Te hablo porque tengo una idea. Llevo semanas leyendo sobre memoria vegetal. Sí, ya sé, suena aburrido, pero escucha. Si tus rosas guardan recuerdos, como tú dices, es posible que alguna guarde la noche del hechizo. Y si consiguiéramos leer ese recuerdo, sabríamos por fin qué pasó en la torre."
+        },
+        {
+          "s": 0,
+          "text": "Necesitaría solo un pétalo, uno pequeño, de la rosa más cercana al muro. Te prometo que no le haré daño; lo pondré entre dos páginas de un libro antiguo, nada más. Si no te parece bien, lo entiendo perfectamente. Pero piénsalo, por favor."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y otra cosa: no le des nada de comer a Nox cuando llegue. Ya le pagué con tres nueces y siempre intenta cobrar dos veces."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le pide Baltasar a Celina?",
+          "options": [
+            "Un pétalo de una de sus rosas",
+            "Un libro antiguo de jardinería",
+            "Que vaya a verlo a la biblioteca"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué cree Baltasar que las rosas pueden ayudar?",
+          "options": [
+            "Porque curan el sueño del reino",
+            "Porque alguna podría guardar el recuerdo de la noche del hechizo",
+            "Porque abren el muro de espinas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hará Baltasar con el pétalo?",
+          "options": [
+            "Lo usará en una poción",
+            "Lo quemará en la chimenea",
+            "Lo pondrá entre dos páginas de un libro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué advierte Baltasar sobre Nox?",
+          "options": [
+            "Que siempre pierde los mensajes",
+            "Que intenta cobrar dos veces",
+            "Que no le gustan las nueces"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que los objetos o los lugares pueden «guardar» recuerdos? Da un ejemplo de tu vida.",
+          "model": "Sí, la casa de mis abuelos. Si entrara ahora, me acordaría de todos los veranos de mi infancia."
+        },
+        {
+          "q": "¿Prefieres mandar mensajes de voz o escribir? ¿Por qué?",
+          "model": "Prefiero escribir, porque así puedo pensar antes. Los audios largos me parecen un poco pesados."
+        },
+        {
+          "q": "Si pudieras ver un momento del pasado, ¿cuál elegirías y qué esperarías descubrir?",
+          "model": "Me gustaría ver el día en que mis padres se conocieron, para saber si la historia que cuentan es verdad."
+        }
+      ],
+      "gaps": "Y si [consiguiéramos] leer ese [recuerdo], [sabríamos] por fin qué pasó en la [torre].",
+      "glossary": [
+        {
+          "word": "échale la culpa",
+          "meaning": "di que él es el responsable del problema"
+        },
+        {
+          "word": "memoria vegetal",
+          "meaning": "la idea de que las plantas pueden recordar"
+        },
+        {
+          "word": "pétalo",
+          "meaning": "cada una de las hojas de color de una flor"
+        },
+        {
+          "word": "cobrar",
+          "meaning": "recibir dinero o un pago por algo"
+        }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "El discurso de cuarenta minutos",
+      "place": "El gran salón",
+      "context": "En el gran salón vacío, Teobaldo ensaya el discurso que piensa dar el día que el reino despierte. Lorena, la criada que limpia el salón, lo escucha.",
+      "speakers": [
+        {
+          "name": "Teobaldo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Escuche esto, Lorena: «Nobles damas, ilustres caballeros, honorables habitantes de esta noble y nunca suficientemente alabada Valdoria...»"
+        },
+        {
+          "s": 1,
+          "text": "Don Teobaldo, perdone, ¿cuántas veces va a decir «noble»?"
+        },
+        {
+          "s": 0,
+          "text": "Las que hagan falta. Es un discurso histórico. Cuando el reino despierte, alguien tendrá que explicar lo que pasó."
+        },
+        {
+          "s": 1,
+          "text": "Ya, pero si la gente lleva cien años dormida, lo primero que va a querer es desayunar, no escuchar un discurso de una hora."
+        },
+        {
+          "s": 0,
+          "text": "No dura una hora. Dura cuarenta minutos."
+        },
+        {
+          "s": 1,
+          "text": "Peor me lo pone. Mire, yo en su lugar diría algo corto: «Buenos días. Han dormido cien años. Hay pan en la posada de Inés.» Y ya está."
+        },
+        {
+          "s": 0,
+          "text": "Eso no es un discurso, es un aviso de panadería."
+        },
+        {
+          "s": 1,
+          "text": "Pero lo entendería todo el mundo."
+        },
+        {
+          "s": 0,
+          "text": "Bueno... Quizá podría quitar algún adjetivo. Pero la parte de la tormenta se queda. Llevo cien años corrigiéndola."
+        },
+        {
+          "s": 1,
+          "text": "¿Y no le parece sospechoso que en cien años no haya conseguido terminarla?"
+        },
+        {
+          "s": 0,
+          "text": "Me parece que la historia todavía no ha terminado, Lorena. Por eso no tiene final."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué está haciendo Teobaldo?",
+          "options": [
+            "Ensayar un discurso para cuando el reino despierte",
+            "Escribir una carta a la princesa",
+            "Preparar el desayuno del castillo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le critica Lorena al discurso?",
+          "options": [
+            "Que es demasiado triste",
+            "Que repite «noble» y es muy largo",
+            "Que no habla de la tormenta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto dura el discurso, según Teobaldo?",
+          "options": [
+            "Una hora",
+            "Diez minutos",
+            "Cuarenta minutos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué, según Teobaldo, la parte de la tormenta no tiene final?",
+          "options": [
+            "Porque Lorena rompió la última página",
+            "Porque la historia del reino todavía no ha terminado",
+            "Porque no recuerda bien aquella noche"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Prefieres los discursos largos y elegantes o cortos y directos? Pon un ejemplo.",
+          "model": "Prefiero los cortos. En la boda de mi prima, el discurso del padrino duró veinte minutos y la gente dejó de escuchar."
+        },
+        {
+          "q": "Si tuvieras que dar un mensaje a gente que despierta después de cien años, ¿qué les dirías primero?",
+          "model": "Les diría que no se asustaran y que primero comieran algo; las explicaciones podrían esperar."
+        },
+        {
+          "q": "¿Alguna vez trabajaste mucho tiempo en algo que nunca terminaste? ¿Por qué?",
+          "model": "Sí, una novela. Siempre quería corregir el principio, así que nunca llegaba al final."
+        }
+      ],
+      "gaps": "Han [dormido] cien años. Hay [pan] en la [posada] de [Inés].",
+      "glossary": [
+        {
+          "word": "ilustres",
+          "meaning": "importantes y famosos"
+        },
+        {
+          "word": "alabada",
+          "meaning": "de la que se dicen cosas muy buenas"
+        },
+        {
+          "word": "peor me lo pone",
+          "meaning": "eso empeora la situación"
+        },
+        {
+          "word": "sospechoso",
+          "meaning": "que hace pensar que algo no está bien"
+        },
+        {
+          "word": "aviso",
+          "meaning": "mensaje corto para informar de algo"
+        }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "La condición de la princesa",
+      "place": "La torre",
+      "context": "Hace cien años, la noche de la tormenta. En la torre, la Tejedora de Espinas le propone a la princesa Elara un hechizo para salvar el reino.",
+      "speakers": [
+        {
+          "name": "Elara",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "La Tejedora",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Alteza, no hay tiempo. La tormenta llegará antes de medianoche y arrasará todo: la aldea, el bosque, el castillo."
+        },
+        {
+          "s": 0,
+          "text": "¿Y estás segura de que tu hechizo nos protegería?"
+        },
+        {
+          "s": 1,
+          "text": "Tejería un refugio de espinas alrededor del reino. Nada entraría. Ni el viento, ni el agua, ni el rayo."
+        },
+        {
+          "s": 0,
+          "text": "Ni el viento... ¿Y el molino? ¿Y la gente que tenga que salir? ¿Cuánto tiempo duraría?"
+        },
+        {
+          "s": 1,
+          "text": "Lo necesario. Hasta que pase el peligro."
+        },
+        {
+          "s": 0,
+          "text": "«Lo necesario» no es una respuesta. Mira, acepto, pero con una condición. Quiero que haya una salida. Que, si alguien quiere salir o entrar, pueda hacerlo."
+        },
+        {
+          "s": 1,
+          "text": "Un refugio con puertas no es un refugio, alteza."
+        },
+        {
+          "s": 0,
+          "text": "Un refugio sin puertas es una cárcel. Voy a escribirlo para que nadie lo olvide: «Un refugio debe tener una salida»."
+        },
+        {
+          "s": 1,
+          "text": "Como quiera. Pero si mañana viene otra tormenta..."
+        },
+        {
+          "s": 0,
+          "text": "Si mañana viene otra tormenta, lo hablaremos mañana. Ahora teje, antes de que me arrepienta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué deciden en esta conversación?",
+          "options": [
+            "Huir del reino antes de la tormenta",
+            "Proteger el reino con un hechizo, pero con una condición",
+            "Cerrar el molino para que no entre el viento"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le preocupa a la princesa del hechizo?",
+          "options": [
+            "Que no tenga salida ni límite de tiempo",
+            "Que la Tejedora pida demasiado oro",
+            "Que las espinas hagan daño a las rosas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según la Tejedora, ¿qué es un refugio con puertas?",
+          "options": [
+            "Una cárcel",
+            "Un castillo seguro",
+            "Algo que ya no es un refugio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se puede deducir de las últimas palabras de la Tejedora?",
+          "options": [
+            "Que ya teme otra tormenta y le costará deshacer el hechizo",
+            "Que no piensa hacer el hechizo",
+            "Que la tormenta ya ha pasado"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "La princesa acepta ayuda, pero pone una condición. ¿Cuándo pones tú condiciones antes de aceptar algo?",
+          "model": "Cuando alguien me ofrece un trabajo extra. Acepto siempre que no tenga que trabajar los domingos."
+        },
+        {
+          "q": "¿Crees que a veces proteger demasiado a alguien le hace daño? Da un ejemplo.",
+          "model": "Sí. Si unos padres no dejan salir nunca a su hijo, el niño no aprende a cuidarse solo."
+        },
+        {
+          "q": "Si tuvieras que escribir una frase para que nadie la olvidara, ¿cuál sería?",
+          "model": "Escribiría «pide ayuda antes de que sea tarde», porque a mí me cuesta mucho hacerlo."
+        }
+      ],
+      "gaps": "Un refugio [sin puertas] es una [cárcel]. Voy a [escribirlo] para que nadie lo [olvide]",
+      "glossary": [
+        {
+          "word": "alteza",
+          "meaning": "forma de hablar con respeto a una princesa o un príncipe"
+        },
+        {
+          "word": "arrasará",
+          "meaning": "destruirá todo por completo"
+        },
+        {
+          "word": "rayo",
+          "meaning": "la luz fuerte que cae del cielo en una tormenta"
+        },
+        {
+          "word": "arrepienta",
+          "meaning": "de arrepentirse: cambiar de opinión y sentir que algo fue un error"
+        }
+      ]
+    }
+  ]
+}
