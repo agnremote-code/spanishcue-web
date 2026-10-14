@@ -6,7 +6,7 @@ import { English, plain, Rich, useLive, useModeText } from './Rich';
 import { useStore, useStored, type Result } from './store';
 import { LiveVisual } from './visuals';
 import { ConceptArt } from './visuals/art';
-import { reviewWriting } from './writing';
+import { reviewWithRules, reviewWriting } from './writing';
 
 /** Where a block lives, so results can link back to it. */
 export type Where = { id: string; stage: number; step: number };
@@ -362,7 +362,7 @@ function Write({ block, where }: { block: Extract<Block, { kind: 'write' }>; whe
     {help === 'words' && <ul className="gl-phrases">{block.words.map((w, k) => <li key={k}>{w}</li>)}</ul>}
     {help === 'model' && <p className="gl-model"><Rich text={block.model} /></p>}
     <div className="gl-row gl-write-actions">
-      <button type="button" className="gl-primary" data-review disabled={words < 5} onClick={() => { const result = reviewWriting(text); setReview(result); save(0, words >= block.minWords, block.title, ''); }}>Revisar mi texto</button>
+      <button type="button" className="gl-primary" data-review disabled={words < 5} onClick={() => { const result = block.checks ? reviewWithRules(text, block.checks, block.warnings) : reviewWriting(text); setReview(result); save(0, words >= block.minWords, block.title, ''); }}>Revisar mi texto</button>
       {mode === 'teacher' && <span className="gl-hint">Después, léanlo juntos y corrijan lo que la revisión no ve.</span>}
     </div>
     {review && <div className="gl-review" data-review-result>
@@ -464,6 +464,7 @@ export function LiveBlock({ block, where }: { block: Block; where: Where }) {
     case 'recap': return <div className="gl-recap">{block.items.map((item, r) => <article key={r} className={`gl-tone-${item.tone}`}><span className="gl-badge">{item.label}</span><English text={item.en} /><code>{item.formula}</code><p>{item.example}</p><small>{item.caption}</small></article>)}</div>;
     case 'review': return <Review />;
     case 'restart': return <Restart />;
+    case 'link': return <section className="gl-next" data-block="link"><h3>{block.title}</h3><p><Rich text={block.text} /></p><English text={block.en} /><a className="gl-primary" href={block.href} data-next-link>{block.label} →</a></section>;
     case 'teacher': return mode === 'teacher' ? <aside className="gl-teacher-note" data-teacher-note><b>Para el profesor</b><p>{block.text}</p></aside> : null;
   }
 }

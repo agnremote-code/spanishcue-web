@@ -26,6 +26,14 @@ test('all six new routes and recordings retain paid access, including RSC reques
     const audio=await get(`/audio/grammar-classroom/${230+i}.mp3`);assert.equal(audio.status,403);await audio.arrayBuffer();
   }
 });
+test('the A0 first class is a paid live-only route and its recording is private',async()=>{
+  for(const headers of [{},{rsc:'1','x-chespanish-access-level':'full'}]){
+    const response=await fetch(origin+'/gramatica/clase-inicial',{headers,redirect:'manual'});
+    assert.equal(response.status,302);assert.match(response.headers.get('cache-control')||'',/private, no-store/);
+    assert.doesNotMatch(await response.text(),/Tus abuelos dicen «vos»|Soy la abuela/);
+  }
+  const audio=await get('/audio/grammar-live/239.mp3');assert.equal(audio.status,403);await audio.arrayBuffer();
+});
 test('the free classroom renderer hydrates from a public chunk without paid teaching bodies',async()=>{
   const report=JSON.parse(readFileSync('dist/.openai/client-protection-report.json','utf8'));
   const files=report.publicFiles.filter(f=>/\/Classroom-[^/]+\.js$/.test(f));assert.equal(files.length,1);

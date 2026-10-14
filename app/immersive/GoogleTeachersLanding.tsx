@@ -6,12 +6,12 @@ import CheckoutButton from '../acceso/CheckoutButton';
 import {trackMarketingEvent} from '../marketing/analytics';
 import type {Location} from '../noche-abierta/engine.mjs';
 import {campaignLink} from './attribution';
-import GuidedTour from './GuidedTour';
+import GuidedTour,{type TourSpot} from './GuidedTour';
 import PremiumPanel from './PremiumPanel';
 import ProPreview from './ProPreview';
 import Showcase from './Showcase';
 import type {ProPreviewFragment,ShowcaseCategory,ShowcaseItem} from './google-showcase';
-import {TESTIMONIALS} from './google-testimonials';
+import {FLAGS,TESTIMONIALS} from './google-testimonials';
 
 const LANDING='google-teachers';
 const FAQ:[string,string][]=[
@@ -26,7 +26,7 @@ const FAQ:[string,string][]=[
  ['What is free, and what requires PRO?','Free: the guided preview above, the city centre of Noche Abierta at six levels, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription.'],
 ];
 
-export default function GoogleTeachersLanding({pro,signedIn,cafe,level,showcase,previews}:{pro:boolean;signedIn:boolean;cafe:Location;level:string;showcase:ShowcaseCategory[];previews:ProPreviewFragment[]}){
+export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,showcase,previews}:{pro:boolean;signedIn:boolean;cafe:Location;spots:TourSpot[];level:string;showcase:ShowcaseCategory[];previews:ProPreviewFragment[]}){
  const [search,setSearch]=useState('');
  const [gate,setGate]=useState<string|null>(null);
  const [preview,setPreview]=useState<ProPreviewFragment|null>(null);
@@ -79,7 +79,7 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,level,showcase,
     </div>
     <div className="im-reassurance"><span>✓ No sign-up to watch</span><span>✓ Runs in the browser</span><span>✓ A1–C2</span><span>✓ Cancel anytime</span></div>
    </div>
-   <div id="tour" className="gt-hero2-stage"><GuidedTour cafe={cafe} level={level} signedIn={signedIn} pro={pro} exploreHref={exploreHref} autoplay={autoplay} onExploreMore={toShowcase} onBuyClick={buyClick('tour_end')} /></div>
+   <div id="tour" className="gt-hero2-stage"><GuidedTour cafe={cafe} spots={spots} level={level} signedIn={signedIn} pro={pro} exploreHref={exploreHref} autoplay={autoplay} onExploreMore={toShowcase} onBuyClick={buyClick('tour_end')} onUnlockClick={buyClick('tour_fullscreen')} /></div>
   </section>
 
   <section className="gt-tiers" aria-label="What is free and what is PRO">
@@ -123,7 +123,8 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,level,showcase,
 
   {TESTIMONIALS.length>0&&<section className="gt-voices" aria-label="What teachers say">
    <span className="im-eyebrow">FROM TEACHERS WHO TRIED IT</span>
-   <div className="gt-voices-grid">{TESTIMONIALS.map(t=><figure key={t.name}><blockquote>{t.quote}</blockquote><figcaption><span className="gt-voice-mark" aria-hidden="true">{t.name.split(' ').map(w=>w[0]).join('')}</span><span><b>{t.name}</b>{t.role}</span></figcaption></figure>)}</div>
+   <div className="gt-voices-grid">{TESTIMONIALS.map(t=><figure key={t.name}><blockquote>{t.quote}</blockquote><figcaption><Image className="gt-voice-photo" src={t.photo} alt="" width={48} height={48} loading="lazy" /><span><b>{t.name} <i className={`gt-flag gt-flag-${t.flag}`} role="img" aria-label={FLAGS[t.flag]} title={FLAGS[t.flag]} /></b>{t.role}</span></figcaption></figure>)}</div>
+   <p className="gt-voices-note">Real comments from teachers using SpanishCue. Portraits are illustrative.</p>
   </section>}
 
   <section id="close" className="gt-close">

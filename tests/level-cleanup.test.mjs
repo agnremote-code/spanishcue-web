@@ -16,7 +16,7 @@ const lessons = JSON.parse(execFileSync(process.execPath, [
 ], { cwd: root, encoding: 'utf8' }));
 
 test('all former A0 lessons are A1 without A0 metadata', () => {
-  assert.equal(lessons.length, 130);
+  assert.equal(lessons.length, 131);
   for (const id of movedLessonIds) {
     const lesson = lessons.find((candidate) => candidate.id === id);
     assert.ok(lesson, `missing lesson ${id}`);
@@ -59,7 +59,7 @@ test('legacy surfaces keep A0 absent outside the shared selector and explicitly 
   for (const file of files) {
     const source = await readFile(file, 'utf8');
     const relative=file.slice(root.length+1);
-    const authored=relative.startsWith('app/the-sound-map/')||relative.startsWith('app/escucha-3d/')||relative.startsWith('app/el-reino-de-la-rosa-dormida/')||relative.startsWith('app/noche-abierta/')||relative.startsWith('app/country-atlas/')||['app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);
+    const authored=relative.startsWith('app/the-sound-map/')||relative.startsWith('app/escucha-3d/')||relative.startsWith('app/el-reino-de-la-rosa-dormida/')||relative.startsWith('app/noche-abierta/')||relative.startsWith('app/country-atlas/')||['app/grammar-classroom/catalog.ts','app/grammar-classroom/live/LiveClassroom.tsx','app/grammar-classroom/live/lessons/g239.ts','app/argentina/layout.tsx','app/suecia/layout.tsx','app/espana/layout.tsx','app/Library.tsx','app/library-filters.mjs','app/conversation-families/types.ts','app/lesson-catalog.ts'].includes(relative);
     if(!authored) assert.doesNotMatch(source, /\bA0\b/, `${file} exposes unauthored A0`);
     assert.doesNotMatch(source, /(?:a0-entry|level-a0|accent-a0)/, `${file} retains A0 styling`);
   }
