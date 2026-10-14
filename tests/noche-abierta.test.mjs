@@ -551,17 +551,22 @@ test('3D world: traffic keeps moving, stops for the learner and loops', () => {
 test('3D world: keys map to the documented controls and never fire while typing', () => {
   const { keyAction, inputFrom, canUseKeys } = world;
   const expected = { KeyW: 'forward', ArrowUp: 'forward', KeyS: 'back', ArrowDown: 'back', KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right',
-    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map', Space: 'jump' };
+    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map', Space: 'jump', KeyN: 'nitro' };
   for (const [code, action] of Object.entries(expected)) assert.equal(keyAction(code), action, code);
   assert.equal(keyAction('KeyQ'), null);
-  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false, jump: false });
-  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false, jump: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false, jump: false, nitro: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false, jump: false, nitro: false });
+  assert.equal(inputFrom(new Set(['forward', 'nitro'])).nitro, true);
+  const run = world.stepPlayer({ x: 0, z: 0, heading: 0, speed: 0 }, { x: 0, y: 1, yaw: 0 }, 0.1, [], { minX: -99, maxX: 99, minZ: -99, maxZ: 99 });
+  let fast = { x: 0, z: 0, heading: 0, speed: 0 }, slow = fast;
+  for (let i = 0; i < 40; i++) { fast = world.stepPlayer(fast, { x: 0, y: 1, yaw: 0, nitro: true }, 0.1, [], { minX: -999, maxX: 999, minZ: -999, maxZ: 999 }); slow = world.stepPlayer(slow, { x: 0, y: 1, yaw: 0, sprint: true }, 0.1, [], { minX: -999, maxX: 999, minZ: -999, maxZ: 999 }); }
+  assert.ok(run.speed > 0 && fast.speed > slow.speed * 1.5, 'N (nitro) runs far faster than Shift');
   assert.equal(canUseKeys({ tagName: 'INPUT' }), false);
   assert.equal(canUseKeys({ tagName: 'TEXTAREA' }), false);
   assert.equal(canUseKeys({ tagName: 'DIV', isContentEditable: true }), false);
   assert.equal(canUseKeys({ tagName: 'DIV' }), true);
   const help = readFileSync('app/noche-abierta/World3D.tsx', 'utf8');
-  for (const line of ['WASD / FLECHAS · CORRER', 'E · INTERACTUAR', 'SHIFT · MÁS RÁPIDO', 'ESC · SALIR']) assert.ok(help.includes(line), line);
+  for (const line of ['WASD / FLECHAS · CORRER', 'E · INTERACTUAR', 'SHIFT · MÁS RÁPIDO', 'N · NITRO', 'ESC · SALIR']) assert.ok(help.includes(line), line);
 });
 
 test('3D world: the hero is the SpanishCue mascot with his pen and a small flag', () => {
@@ -589,7 +594,8 @@ test('3D world: original procedural assets only, and three.js stays inside appro
   assert.ok(importers.length >= 1);
   const forestModules = new Set(['app/bosque-de-los-hongos-gigantes/camera.ts', 'app/bosque-de-los-hongos-gigantes/World3D.tsx', 'app/bosque-de-los-hongos-gigantes/forest3d.ts', 'app/bosque-de-los-hongos-gigantes/hero3d.ts', 'app/bosque-de-los-hongos-gigantes/mushrooms3d.ts']);
   const reinoModules = new Set(['app/el-reino-de-la-rosa-dormida/World3D.tsx', 'app/el-reino-de-la-rosa-dormida/characters.ts', 'app/el-reino-de-la-rosa-dormida/world.ts']);
-  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path) || path === 'app/the-sound-map/camera.ts' || path === 'app/immersive/DemoScene.tsx' || path === 'app/grammar-classroom/studio/article-world.ts' || path === 'app/grammar-classroom/duration/world.ts' || reinoModules.has(path)), importers.join());
+  const casinoModules = new Set(['app/marketing-de-casinos/World3D.tsx', 'app/marketing-de-casinos/casino3d.ts']);
+  assert.ok(importers.every(path => path.startsWith('app/noche-abierta/') || forestModules.has(path) || path === 'app/the-sound-map/camera.ts' || path === 'app/immersive/DemoScene.tsx' || path === 'app/grammar-classroom/studio/article-world.ts' || path === 'app/grammar-classroom/duration/world.ts' || reinoModules.has(path) || casinoModules.has(path)), importers.join());
   const duration = readFileSync('app/grammar-classroom/duration/world.ts', 'utf8');
   assert.doesNotMatch(duration, /https?:\/\//, 'the duration neighbourhood creates its own geometry without external assets');
   const gallery = readFileSync('app/grammar-classroom/studio/article-world.ts', 'utf8');
@@ -695,7 +701,8 @@ test('the title screen and the HUD carry the level picker; the library lists one
   assert.match(title, /class="na-title-screen/);
   assert.match(title, /Empezar la noche/);
   assert.match(title, /\/brand\/mascot\/kneeling\.webp/, 'the official mascot is the hero');
-  assert.equal((title.match(/role="radio"/g) ?? []).length, 6);
+  assert.equal((title.match(/role="radio" data-level=/g) ?? []).length, 6);
+  assert.match(title, /Comprensión auditiva/, "the listening mode sits next to the levels");
   assert.match(title, /data-level="B1" aria-checked="true"/, 'B1 by default');
   assert.doesNotMatch(title, /<select/, 'no plain select');
   assert.ok(existsSync('public/noche-abierta/mascot-wink.webp'));

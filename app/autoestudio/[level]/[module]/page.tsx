@@ -11,6 +11,7 @@ import { objectiveById } from "../../curriculum/objectives";
 import { shareSessionFromHeaders } from "../../session-display";
 import ModulePlayer from "../../ModulePlayer";
 import audioManifest from "../../audio-manifest.json";
+import { recommendationCatalog } from "../../errors/catalog";
 
 export async function generateMetadata({ params }: { params: Promise<{ level: string; module: string }> }): Promise<Metadata> {
   const { level, module: slug } = await params;
@@ -65,6 +66,8 @@ export default async function Page({ params }: { params: Promise<{ level: string
       related={related}
       audio={clips}
       nextLocked={nextLocked}
+      recommendations={recommendationCatalog(mod.level)}
+      fullAccess={fullAccess}
     />
   );
 }

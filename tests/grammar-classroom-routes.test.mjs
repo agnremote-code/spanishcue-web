@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const origin=process.env.CHESPANISH_TEST_ORIGIN||'http://127.0.0.1:8787';
 const get=path=>fetch(origin+path,{redirect:'manual'});
-test('existing free grammar routes serve the classroom and their reference banks remain reachable',async()=>{
+test('existing free grammar routes serve the live class and their reference banks remain reachable',async()=>{
   for(const [id,path] of [[40,'/la-fabrica-de-los-nombres'],[41,'/el-atelier-de-la-concordancia']]){
     const response=await get(path);assert.equal(response.status,200);const html=await response.text();
-    assert.match(html,new RegExp(`data-grammar-classroom="${id}"`));
+    assert.match(html,new RegExp(`data-live-class="${id}"`));
     assert.match(html,/60 min/);assert.match(html,/Material de consulta y ampliación/);
     assert.doesNotMatch(html,/La cita que cambió dos veces|La biblioteca municipal prepara una reforma/);
     const legacy=await get(path+'?reference=1');assert.equal(legacy.status,200);
@@ -25,6 +25,14 @@ test('all six new routes and recordings retain paid access, including RSC reques
     }
     const audio=await get(`/audio/grammar-classroom/${230+i}.mp3`);assert.equal(audio.status,403);await audio.arrayBuffer();
   }
+});
+test('the A0 first class is a paid live-only route and its recording is private',async()=>{
+  for(const headers of [{},{rsc:'1','x-chespanish-access-level':'full'}]){
+    const response=await fetch(origin+'/gramatica/clase-inicial',{headers,redirect:'manual'});
+    assert.equal(response.status,302);assert.match(response.headers.get('cache-control')||'',/private, no-store/);
+    assert.doesNotMatch(await response.text(),/Tus abuelos dicen «vos»|Soy la abuela/);
+  }
+  const audio=await get('/audio/grammar-live/239.mp3');assert.equal(audio.status,403);await audio.arrayBuffer();
 });
 test('the free classroom renderer hydrates from a public chunk without paid teaching bodies',async()=>{
   const report=JSON.parse(readFileSync('dist/.openai/client-protection-report.json','utf8'));

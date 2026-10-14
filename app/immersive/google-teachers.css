@@ -1,0 +1,149 @@
+/* Google Search teacher landing: Noche abierta identity, built to sell lessons first and show a guided one. */
+.gt{--gt-panel:#1c1e2a;--gt-line:#ffffff25}
+.gt .im-nav{position:sticky;top:0;z-index:5;background:#12121ce6;backdrop-filter:blur(12px);gap:18px}
+.gt-nav-links{display:flex;gap:22px;margin-left:auto;font-size:12px;color:#c6c5cc}.gt-nav-links a:hover{color:#fff}
+.gt-nav-cta{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:8px;background:#d7f582;color:#171c11!important;font-size:12px;font-weight:800;letter-spacing:.6px}.gt-nav-cta:hover{background:#e4ff9c}
+.gt h2{font-size:clamp(30px,3.4vw,46px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin:18px 0 20px;max-width:680px}
+.gt-secondary{display:inline-flex;align-items:center;gap:10px;color:#d7f582;font-size:12px;font-weight:800;letter-spacing:1px;min-height:44px;text-decoration:none}.gt-secondary:hover{text-decoration:underline}
+.gt-quiet{color:#c6c5cc;font-size:12px;min-height:40px;display:inline-flex;align-items:center}.gt-quiet:hover{color:#fff}
+.gt-badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:800;letter-spacing:1.4px;padding:5px 8px;border-radius:5px;background:#12121ccc;color:#fff;border:1px solid #ffffff40}.gt-badge.free{background:#d7f582;color:#171c11;border-color:#d7f582}
+
+/* Hero: product and purchase on the left, the guided lesson on the right. */
+.gt-hero2{max-width:1440px;margin:auto;padding:30px 5% 40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:4%;align-items:center}
+.gt-hero2 h1{font-size:clamp(40px,4.2vw,64px);line-height:1;font-weight:800;letter-spacing:-2.6px;margin:18px 0 14px}.gt-hero2 h1 em{font-style:normal;color:#d7f582}
+.gt-hero2-copy>p{color:#c6c5cc;font-size:17px;line-height:1.6;max-width:480px;margin:0 0 22px}
+.gt-buy{display:flex;flex-direction:column;gap:10px;max-width:480px}
+.gt-buy .checkout-landing{display:flex;flex-direction:column;gap:10px}.gt-buy .checkout-landing-plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gt-buy .checkout-landing-plan{display:flex;flex-direction:column;gap:8px;min-width:0}
+.gt-buy .checkout-trial-button,.gt-buy .checkout-card-button{width:100%;min-height:54px;border-radius:8px;font-size:13px;font-weight:800;letter-spacing:.3px;cursor:pointer;background-image:none;box-shadow:none;transform:none}
+.gt-buy .checkout-trial-button{background:#d7f582;color:#171c11;border:0}.gt-buy .checkout-trial-button:hover:not(:disabled){background:#e4ff9c}
+.gt-buy .checkout-card-button{background:transparent;color:#fff;border:1px solid #ffffff70}.gt-buy .checkout-card-button:hover:not(:disabled){border-color:#fff}
+.gt-buy .checkout-landing-plan>span{font-size:11px;line-height:1.5;color:#aeadbb}
+.gt-buy .checkout-landing>p{font-size:11px;color:#8f8fa0;margin:0}.gt-buy .checkout-availability{font-size:11px;color:#ffb9a9}.gt-buy .checkout-landing-error{color:#ffb9a9}
+.gt-watch{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;border:1px solid #d7f58266;border-radius:8px;background:#d7f58214;color:#d7f582;font-size:12px;font-weight:800;letter-spacing:.8px}.gt-watch:hover{background:#d7f58226}
+.gt-hero2 .im-reassurance{margin-top:16px}
+
+/* Guided tour stage */
+.gt-hero2-stage{min-width:0}
+.gt-tour{position:relative;border:1px solid #ffffff30;border-radius:16px;overflow:hidden;background:#272137;box-shadow:0 35px 90px #0008;aspect-ratio:16/10;min-height:420px;max-height:640px;isolation:isolate}
+.gt-tour .im-world{position:absolute;inset:0;outline:none}.gt-tour .im-canvas{position:absolute;inset:0}.gt-tour .im-canvas canvas{width:100%;height:100%;display:block}
+.gt-tour-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gt-tour-poster{position:absolute;inset:0;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;z-index:2}.gt-tour-poster::before{content:'';position:absolute;inset:0;background:#12121c80}.gt-tour-poster>*{position:relative}
+.gt-tour-replay{background:#12121cb0}
+.gt-tour-loading{display:flex;align-items:center;gap:12px;color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;background:#15151cd9;padding:14px 18px;border-radius:10px;border:1px solid #ffffff30}.gt-tour-loading i{width:14px;height:14px;border:2px solid #d7f582;border-right-color:transparent;border-radius:50%;animation:gt-spin .9s linear infinite}@keyframes gt-spin{to{transform:rotate(360deg)}}
+.gt-tour-tag{position:absolute;top:14px;left:14px;z-index:3;display:flex;gap:8px;align-items:center;pointer-events:none}.gt-tour-tag span,.gt-tour-tag b{font-size:9px;letter-spacing:1.6px;font-weight:800;padding:7px 10px;border-radius:6px;background:#15151cd9;border:1px solid #ffffff24;color:#d7f582;backdrop-filter:blur(10px)}.gt-tour-tag b{color:#fff}
+.gt-tour-card{position:absolute;left:14px;bottom:62px;z-index:3;background:#15151c8c;border:1px solid #ffffff2a;border-left:3px solid #d7f582;border-radius:10px;padding:12px 16px;backdrop-filter:blur(12px);animation:gt-rise .35s ease-out;max-width:330px;box-shadow:0 10px 30px #0006}
+.gt-tour-card h3{font-size:clamp(20px,2vw,26px);letter-spacing:-.8px;line-height:1.05;margin:0 0 6px}.gt-tour-card p{margin:4px 0 0;font-size:13px;line-height:1.45;color:#e4e3ec}.gt-tour-card small{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:11px;color:#d7f582;letter-spacing:.6px}.gt-tour-card small i{width:8px;height:8px;border-radius:50%;background:#d7f582;box-shadow:0 0 0 0 #d7f58288;animation:gt-pulse 1.4s ease-out infinite}@keyframes gt-pulse{to{box-shadow:0 0 0 9px #d7f58200}}
+.gt-tour-quote{font-size:17px!important;font-weight:700;color:#fff!important;margin:6px 0 2px!important;letter-spacing:-.2px}
+.gt-tour-activity{position:absolute;top:52px;right:14px;bottom:62px;width:min(380px,44%);z-index:3;background:#15151cb8;border:1px solid #ffffff30;border-radius:14px;padding:16px 18px;overflow:auto;backdrop-filter:blur(16px);animation:gt-rise .35s ease-out}
+.gt-tour-venue{font-size:12px;color:#c6c5cc;margin:8px 0 10px;letter-spacing:.4px}
+.gt-tour-situation{font-size:15px;line-height:1.5;margin:0 0 8px;color:#f5f4ec}.gt-tour-prompt{font-size:18px;font-weight:700;margin:0 0 10px;line-height:1.3}
+.gt-tour-options{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}.gt-tour-options li{position:relative;background:#2a2e3ecc;border:1px solid #ffffff30;border-radius:9px;padding:11px 13px;font-size:15px;line-height:1.4;display:flex;gap:12px;transition:border-color .3s,background .3s}.gt-tour-options li span{color:#d7f582;font-weight:800}.gt-tour-options li.picked{border-color:#d7f582;background:#d7f58222}.gt-tour-options li b{margin-left:auto;color:#d7f582}
+.gt-tour-activity>small{display:block;margin-top:12px;font-size:11px;color:#aeadbb}
+.gt-tour-chosen{font-size:15px;color:#c6c5cc;margin:8px 0 12px;padding:10px 14px;border-left:2px solid #d7f58288;background:#d7f58210}
+.gt-tour-close{font-size:clamp(17px,1.6vw,21px);font-weight:700;line-height:1.3;margin:0 0 12px;padding:14px 16px;border-left:3px solid #d7f582;background:#d7f58218}
+.gt-tour-note{font-size:14px;color:#e4e3ec;margin:0 0 14px}
+.gt-tour-teacher{border-top:1px solid var(--gt-line);padding-top:12px}.gt-tour-teacher span{font-size:10px;letter-spacing:1.5px;color:#d7f582;font-weight:800}.gt-tour-teacher ul{margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.55;color:#c6c5cc}
+.gt-tour-end{position:absolute;inset:0;z-index:3;background:#12121cf2;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;animation:gt-rise .35s ease-out;overflow:auto}
+.gt-tour-end h3{font-size:clamp(28px,3vw,40px);letter-spacing:-1.4px;margin:8px 0 6px}.gt-tour-end>p{color:#c6c5cc;font-size:14px;margin:0 0 16px}
+.gt-tour-checkout .checkout-landing{display:flex;flex-direction:column;gap:8px;max-width:460px}.gt-tour-checkout .checkout-landing-plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gt-tour-checkout .checkout-landing-plan{display:flex;flex-direction:column;gap:6px}
+.gt-tour-checkout .checkout-trial-button,.gt-tour-checkout .checkout-card-button{width:100%;min-height:50px;border-radius:8px;font-size:13px;font-weight:800;background-image:none;box-shadow:none;transform:none;cursor:pointer}
+.gt-tour-checkout .checkout-trial-button{background:#d7f582;color:#171c11;border:0}.gt-tour-checkout .checkout-card-button{background:transparent;color:#fff;border:1px solid #ffffff70}
+.gt-tour-checkout .checkout-landing-plan>span,.gt-tour-checkout .checkout-landing>p{font-size:11px;color:#aeadbb;line-height:1.5;margin:0}
+.gt-tour-end-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:8px}
+.gt-tour-bar{position:absolute;left:0;right:0;bottom:0;z-index:4;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 12px;background:#12121ce6;border-top:1px solid var(--gt-line)}
+.gt-tour-steps{display:flex;gap:5px}.gt-tour-steps i{width:18px;height:3px;border-radius:2px;background:#ffffff40}.gt-tour-steps i.on{background:#d7f582}
+.gt-tour-bar>div{display:flex;gap:4px}.gt-tour-bar button{background:transparent;border:1px solid #ffffff30;border-radius:6px;color:#fff;font-size:11px;min-height:36px;padding:0 10px}.gt-tour-bar button:hover{border-color:#d7f582}
+@keyframes gt-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Tiers */
+.gt-tiers{max-width:1440px;margin:auto;padding:0 5% 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gt-tiers>div{border:1px solid var(--gt-line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:#c6c5cc}.gt-tiers b{color:#d7f582;font-size:11px;letter-spacing:1.5px}.gt-tiers a{color:#fff;font-weight:700;margin-top:auto;padding-top:8px;font-size:12px}
+
+/* Sections */
+.gt-showcase,.gt-how,.gt-pro,.gt-faq,.gt-voices,.gt-close{max-width:1440px;margin:auto;padding:64px 5%;border-top:1px solid var(--gt-line)}
+.gt-item-level{font-size:10px;letter-spacing:1.5px;color:#d7f582;font-weight:800}
+.gt-item-cta{padding-top:6px;align-self:flex-start;background:transparent;border:0;color:#d7f582;font-size:12px;font-weight:800;letter-spacing:.5px;min-height:40px;display:inline-flex;align-items:center;cursor:pointer}.gt-item-cta:hover{text-decoration:underline}
+.gt-pro{display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:start}.gt-compare{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column}.gt-compare li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--gt-line);font-size:14px;line-height:1.6;color:#c2c2ce}.gt-compare b{color:#d7f582;font-size:12px;letter-spacing:1.4px;padding-top:3px}.gt-terms{color:#b9b8c6;font-size:13px;line-height:1.65;max-width:520px}
+.gt-checkout{background:#fff;color:#162036;border-radius:18px;padding:28px;box-shadow:0 30px 90px #0006}.gt-checkout .checkout-landing-plans{display:grid;grid-template-columns:1fr;gap:12px}.gt-checkout .checkout-landing-plan{background:#f4f4ef;border:1px solid #d9d9d2;border-radius:10px;padding:14px}.gt-checkout .checkout-trial-button,.gt-checkout .checkout-card-button{width:100%}.gt-checkout .checkout-landing-plan>span{font-size:11px;line-height:1.5;display:block;margin-top:10px;color:#45495a}.gt-checkout .checkout-landing>p{font-size:11px;color:#45495a}.gt-checkout-pro{display:flex;flex-direction:column;gap:14px;align-items:flex-start}.gt-checkout-pro p{margin:0;font-weight:700}
+.gt-faq dl{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin:0}.gt-faq dt{font-size:17px;font-weight:700;letter-spacing:-.3px;margin-bottom:10px}.gt-faq dd{margin:0;color:#b9b8c6;font-size:14px;line-height:1.65}
+
+/* Mobile sticky bar: compact, never over the stage (it only shows after the hero has scrolled away). */
+.gt-sticky{position:fixed;left:0;right:0;bottom:0;z-index:6;padding:8px 4% calc(8px + env(safe-area-inset-bottom));background:#12121cf0;border-top:1px solid var(--gt-line);transform:translateY(110%);transition:transform .25s;display:none;gap:8px}.gt-sticky .im-primary{flex:1;min-height:46px;font-size:12px;padding:0 14px}.gt-sticky button{flex:0 0 auto;min-height:46px;padding:0 14px;border:1px solid #ffffff50;border-radius:8px;background:transparent;color:#fff;font-size:12px;font-weight:700}.gt-sticky.show{transform:none}
+
+@media(max-width:1100px){.gt-hero2{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.gt-nav-links{display:none}.gt-hero2{grid-template-columns:1fr;gap:26px;padding-top:18px}.gt-hero2-copy>p{max-width:none}.gt-buy{max-width:none}.gt-tour{aspect-ratio:auto;height:min(78vh,640px);min-height:480px}.gt-tiers{grid-template-columns:1fr}.gt-pro{grid-template-columns:1fr;gap:30px}.gt-faq dl{grid-template-columns:1fr;gap:22px}}
+@media(max-width:640px){.gt .im-nav{padding:12px 4%;gap:10px}.gt-nav-cta{font-size:11px;padding:0 12px;min-height:36px}.gt-hero2 h1{font-size:38px;letter-spacing:-2px}.gt-hero2-copy>p{font-size:15px;margin-bottom:16px}.gt h2{font-size:30px}.gt-buy .checkout-landing-plans,.gt-tour-checkout .checkout-landing-plans{grid-template-columns:1fr}.gt-hero2 .im-reassurance{display:none}.gt-tour{height:min(82vh,620px);min-height:500px;border-radius:12px}.gt-tour-card{left:10px;right:10px;bottom:56px;padding:14px 16px}.gt-tour-activity{inset:46px 10px 56px;padding:16px}.gt-tour-prompt{font-size:18px}.gt-tour-options li{font-size:15px;padding:11px 13px}.gt-tour-end{padding:18px}.gt-tour-bar button{padding:0 8px;font-size:10px}.gt-grammar,.gt-library,.gt-pro,.gt-faq{padding:44px 5%}.gt-compare li{grid-template-columns:1fr;gap:6px}.gt-checkout{padding:18px}.gt-sticky{display:flex}.gt .im-footer{padding-bottom:90px}}
+@media(prefers-reduced-motion:reduce){.gt-sticky{transition:none}.gt-tour-card,.gt-tour-activity,.gt-tour-end{animation:none}.gt-tour-loading i{animation:none}}
+
+/* Header checkout: the official trial button only, one action. */
+.gt-nav-buy{margin-left:auto}.gt-nav-links+.gt-nav-buy{margin-left:0}.gt-nav-account{font-size:12px;color:#c6c5cc;white-space:nowrap}
+.gt-buy-one .checkout-landing{display:block}.gt-buy-one .checkout-landing-plans{display:block}.gt-buy-one .checkout-landing-monthly,.gt-buy-one .checkout-landing-plan>span,.gt-buy-one .checkout-landing>p,.gt-buy-one .checkout-availability{display:none}
+.gt-buy-one .checkout-trial-button{width:auto;min-height:40px;padding:0 16px;border-radius:8px;background:#d7f582;color:#171c11;border:0;font-size:12px;font-weight:800;letter-spacing:.5px;cursor:pointer;background-image:none;box-shadow:none;transform:none;white-space:nowrap}.gt-buy-one .checkout-trial-button:hover:not(:disabled){background:#e4ff9c}
+.gt-buy-one .checkout-landing-error{display:block;font-size:11px;color:#ffb9a9}
+.gt-buy-one .checkout-availability.closed{display:block;font-size:10px;color:#ffb9a9}
+/* Hero: the trial is the primary action, the monthly plan its alternative. */
+.gt-lead{font-size:20px!important;color:#f5f4ec!important;font-weight:600;letter-spacing:-.3px;margin-bottom:10px!important}
+.gt-buy-hero .checkout-landing-plans{grid-template-columns:1.25fr 1fr}
+.gt-buy-row .checkout-landing-plans{grid-template-columns:1fr 1fr;max-width:560px}.gt-buy-row .checkout-trial-button,.gt-buy-row .checkout-card-button{min-height:50px}
+.gt-buy-stack .checkout-landing-plans{grid-template-columns:1fr}
+.gt-tour-end-links button.gt-secondary{background:transparent;border:0;cursor:pointer;padding:0}
+
+/* Showcase: tabs, one real recording, the featured lesson and the next samples. */
+.gt-tabs{display:flex;gap:6px;margin:0 0 22px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.gt-tabs::-webkit-scrollbar{display:none}
+.gt-tabs button{flex:0 0 auto;min-height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--gt-line);background:transparent;color:#c6c5cc;font-size:11px;font-weight:800;letter-spacing:1.3px;cursor:pointer}.gt-tabs button[aria-selected="true"]{background:#d7f582;color:#171c11;border-color:#d7f582}.gt-tabs button:hover{color:#fff}.gt-tabs button[aria-selected="true"]:hover{color:#171c11}
+.gt-panel{display:grid;grid-template-columns:1.25fr 1fr;gap:4%;align-items:start}
+.gt-panel-video{position:relative;border-radius:16px;overflow:hidden;border:1px solid #ffffff30;background:#262433;box-shadow:0 30px 90px #0006;aspect-ratio:16/10}.gt-panel-video video,.gt-panel-video img{display:block;width:100%;height:100%;object-fit:cover}
+.gt-panel-stamp{position:absolute;right:10px;top:10px;font-size:9px;letter-spacing:1.5px;font-weight:800;padding:6px 8px;border-radius:5px;background:#12121ccc;color:#fff;border:1px solid #ffffff30}
+.gt-panel-caption{font-size:12px;color:#aeadbb;margin:12px 0 0;line-height:1.5}
+.gt-panel-copy h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.8px;line-height:1.1;margin:4px 0 12px}.gt-panel-copy>p{margin:0 0 8px;font-size:14px;line-height:1.55;color:#c6c5cc}.gt-panel-copy>p b{color:#f5f4ec}
+.gt-samples{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 0;border-top:1px solid var(--gt-line);padding-top:18px}
+.gt-sample{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:start}.gt-sample-shot{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:16/10;background:#262433}.gt-sample-shot img{display:block;width:100%;height:100%;object-fit:cover}.gt-sample-shot .gt-badge{top:6px;left:6px;padding:3px 6px;font-size:9px}
+.gt-sample h4{font-size:16px;letter-spacing:-.3px;margin:2px 0 4px;line-height:1.25}.gt-sample p{margin:0;font-size:12px;line-height:1.5;color:#aeadbb}
+.gt-panel-buy{margin-top:22px;padding-top:18px;border-top:1px solid var(--gt-line)}
+
+/* PRO preview dialog */
+.gt-preview{border:1px solid #ffffff30;border-radius:18px;background:#15151c;color:#f5f4ec;padding:0;width:min(680px,94vw);max-height:92vh;overflow:auto;box-shadow:0 40px 120px #000a}.gt-preview::backdrop{background:#05050add;backdrop-filter:blur(6px)}
+.gt-preview-body{padding:22px 26px 26px;display:flex;flex-direction:column;gap:16px}
+.gt-preview-head{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}.gt-preview-head .gt-badge{position:static}.gt-preview-level{font-size:10px;letter-spacing:1.5px;color:#d7f582;font-weight:800}.gt-preview-head h3{font-size:clamp(20px,2.2vw,26px);letter-spacing:-.6px;margin:4px 0 0;line-height:1.15}
+.gt-preview-x{background:transparent;border:1px solid #ffffff30;color:#fff;border-radius:8px;width:40px;height:40px;font-size:22px;cursor:pointer}
+.gt-preview-note{margin:0;font-size:12px;color:#aeadbb}
+.gt-preview-stage{border:1px solid var(--gt-line);border-radius:12px;padding:16px 18px;background:#1c1e2a}.gt-preview-stage h4{font-size:20px;letter-spacing:-.4px;margin:8px 0 6px}.gt-preview-form{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#d7f582;margin:0 0 8px}.gt-preview-stage p{margin:0 0 8px;font-size:14px;line-height:1.55;color:#e4e3ec}.gt-preview-stage ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;color:#c6c5cc}
+.gt-preview-prompt{font-size:18px!important;font-weight:700;color:#fff!important;margin:8px 0 12px!important}
+.gt-preview-options{display:flex;gap:8px;flex-wrap:wrap}.gt-preview-options button{min-height:44px;padding:0 18px;border-radius:9px;border:1px solid #ffffff40;background:#2a2e3e;color:#fff;font-size:16px;cursor:pointer}.gt-preview-options button:hover:not(:disabled){border-color:#d7f582}.gt-preview-options button.right{background:#d7f582;color:#171c11;border-color:#d7f582}.gt-preview-options button.wrong{border-color:#ff8a70;color:#ffb9a9}
+.gt-preview-feedback{margin:12px 0 0!important;padding:12px 14px;border-radius:9px;background:#d7f58214;border-left:3px solid #d7f582}.gt-preview-feedback.wrong{background:#ff8a7014;border-left-color:#ff8a70}.gt-preview-feedback b{color:#fff}
+.gt-preview-locked{display:flex;gap:8px;flex-wrap:wrap}.gt-preview-locked span{display:inline-flex;gap:8px;align-items:center;border:1px dashed #ffffff30;border-radius:999px;padding:7px 12px;font-size:12px;color:#aeadbb}.gt-preview-locked i{font-style:normal;color:#d7f582;font-weight:800;font-size:10px}
+.gt-preview-next{display:flex}.gt-preview-next .im-primary{min-height:48px}
+.gt-preview-gate{border-top:1px solid var(--gt-line);padding-top:18px;display:flex;flex-direction:column;gap:10px;animation:gt-rise .3s ease-out}.gt-preview-gate h4{font-size:clamp(22px,2.4vw,28px);letter-spacing:-.8px;margin:0}.gt-preview-gate>p{margin:0;font-size:14px;color:#c6c5cc}.gt-preview-gate .gt-quiet{background:transparent;border:0;cursor:pointer;padding:0;align-self:flex-start}
+
+/* How teachers use it */
+.gt-how-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:how}.gt-how-steps li{background:var(--gt-panel);border:1px solid var(--gt-line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.gt-how-steps img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.gt-how-steps b{font-size:10px;letter-spacing:1.6px;color:#d7f582;padding:16px 18px 0}.gt-how-steps h3{font-size:20px;letter-spacing:-.5px;margin:6px 0 0;padding:0 18px;line-height:1.2}.gt-how-steps p{margin:0;padding:8px 18px 18px;font-size:14px;line-height:1.55;color:#c6c5cc}
+.gt-how-note{margin:16px 0 0;font-size:11px;color:#8f8fa0}
+
+/* Testimonials and close */
+.gt-voices-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}.gt-voices figure{margin:0;border:1px solid var(--gt-line);border-radius:14px;padding:24px;background:var(--gt-panel)}.gt-voices blockquote{margin:0 0 14px;font-size:18px;line-height:1.5;letter-spacing:-.2px;color:#f5f4ec}.gt-voices blockquote::before{content:'“';color:#d7f582;font-size:34px;line-height:0;vertical-align:-14px;margin-right:4px}.gt-voices figcaption{display:flex;gap:12px;align-items:center;font-size:12px;color:#aeadbb}.gt-voices figcaption b{display:block;color:#f5f4ec;font-size:14px;letter-spacing:-.2px}.gt-voice-mark{width:40px;height:40px;border-radius:50%;background:#d7f58222;border:1px solid #d7f58266;color:#d7f582;font-weight:800;font-size:13px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+.gt-close{text-align:center;display:flex;flex-direction:column;align-items:center}.gt-close h2{max-width:720px}.gt-close>p{color:#c6c5cc;font-size:17px;margin:0 0 22px}.gt-close .gt-buy{width:100%;max-width:560px;text-align:left}
+.gt-sticky .gt-buy-one{flex:1}.gt-sticky .gt-buy-one .checkout-trial-button{width:100%;min-height:46px}
+
+@media(max-width:1100px){.gt-panel{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.gt-panel{grid-template-columns:1fr;gap:24px}.gt-how-steps{grid-template-columns:1fr}.gt-buy-hero .checkout-landing-plans{grid-template-columns:1fr}.gt-nav-account{display:none}.gt-faq dl{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.gt-nav-buy{margin-left:auto}.gt-buy-row .checkout-landing-plans{grid-template-columns:1fr}.gt-sample{grid-template-columns:96px 1fr}.gt-preview-body{padding:18px 16px 22px}.gt-faq dl{grid-template-columns:1fr}}
+
+/* Driving mode, PRO doors, full screen */
+.gt-tour-pick li{padding:0}.gt-tour-pick li button{all:unset;display:flex;gap:12px;width:100%;box-sizing:border-box;padding:11px 13px;cursor:pointer;color:#fff;font:inherit}.gt-tour-pick li button span{color:#d7f582;font-weight:800}.gt-tour-pick li:hover{border-color:#d7f582}
+.gt-tour-live .im-primary{margin-top:12px;min-height:44px;font-size:13px}
+.gt-tour-x{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;border:1px solid #ffffff30;background:#15151c;color:#fff;font-size:18px;line-height:1;cursor:pointer}
+.gt-tour-drive p b{color:#d7f582}
+.gt-tour-door{max-width:380px}.gt-tour-door p{margin-bottom:10px}.gt-tour-door .gt-quiet,.gt-tour-unlock .gt-quiet{background:none;border:0;color:#aeadbb;font-size:12px;cursor:pointer;padding:0;margin-top:10px;text-decoration:underline}
+.gt-tour-checkout-one .checkout-landing-plans{grid-template-columns:1fr}.gt-tour-checkout-one .checkout-landing-plan:nth-child(2),.gt-tour-checkout-one .checkout-landing>p{display:none}
+.gt-tour-unlock{position:absolute;inset:0;z-index:5;background:#12121cf2;display:flex;flex-direction:column;justify-content:center;padding:28px 32px;animation:gt-rise .35s ease-out;overflow:auto}.gt-tour-unlock h3{font-size:clamp(26px,2.8vw,36px);letter-spacing:-1.2px;margin:8px 0 6px}.gt-tour-unlock>p{color:#c6c5cc;font-size:14px;margin:0 0 16px;max-width:460px}
+.gt-tour-fs.locked{color:#d7f582;border-color:#d7f58266}
+.gt-tour-full,.gt-tour:fullscreen{aspect-ratio:auto;max-height:none;height:100%;border-radius:0;border:0}
+.gt-tour .im-controls-help{display:none}.gt-tour-free .im-touch{inset:auto 14px 62px;z-index:3}.gt-tour-drive{bottom:auto;top:52px;max-width:330px}
+/* Testimonial portraits and flags */
+.gt-voice-photo{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid #ffffff30;flex:0 0 auto}
+.gt-flag{display:inline-block;width:18px;height:12px;border-radius:2px;vertical-align:-1px;margin-left:6px;border:1px solid #ffffff2a}
+.gt-flag-co{background:linear-gradient(#fcd116 0 50%,#003893 50% 75%,#ce1126 75%)}.gt-flag-es{background:linear-gradient(#aa151b 0 25%,#f1bf00 25% 75%,#aa151b 75%)}.gt-flag-ar{background:linear-gradient(#74acdf 0 33%,#fff 33% 66%,#74acdf 66%)}
+.gt-voices-note{margin:18px 0 0;font-size:12px;color:#aeadbb}
+@media(max-width:640px){.gt-tour-card{left:10px;right:10px;max-width:none}.gt-tour-free .im-touch{bottom:60px}.gt-tour-drive{top:46px}.gt-tour-activity{top:auto;right:10px;left:10px;bottom:56px;width:auto;max-height:62%}.gt-tour-bar>div{flex-wrap:wrap;justify-content:flex-end}.gt-tour-unlock{padding:18px}}

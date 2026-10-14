@@ -45,9 +45,9 @@ export default function ClaimClient({ initialProvider, signedIn, locale }: {
             body: JSON.stringify({ subscriptionId: body.subscriptionId }),
           });
           if (conversion.ok && conversion.status !== 204) {
-            const event = await conversion.json() as { transactionId?: unknown; value?: unknown; currency?: unknown };
+            const event = await conversion.json() as { transactionId?: unknown; value?: unknown; currency?: unknown; plan?: unknown };
             if (typeof event.transactionId === "string" && typeof event.value === "number" && Number.isFinite(event.value) && event.value > 0 && typeof event.currency === "string" && /^[A-Z]{3}$/.test(event.currency)) {
-              trackMarketingEvent("subscription_first_paid", { transaction_id: event.transactionId, value: event.value, currency: event.currency });
+              trackMarketingEvent("subscription_first_paid", { transaction_id: event.transactionId, value: event.value, currency: event.currency, plan: event.plan === "trial" ? "trial" : "monthly" });
             }
           }
         } catch { /* Access does not depend on optional analytics. */ }

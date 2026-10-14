@@ -1,0 +1,1036 @@
+{
+  "game": "casino",
+  "level": "C2",
+  "items": [
+    {
+      "id": "portero",
+      "title": "Un favor que no prescribe",
+      "place": "La entrada",
+      "context": "Valentina cruza la puerta giratoria y Rocco, el portero, la reconoce antes de que diga una palabra.",
+      "speakers": [
+        {
+          "name": "Rocco",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone que la mire así, señorita, pero hay caras que uno no olvida aunque se lo hayan pedido de rodillas. Tiene usted los ojos de Ernesto Duarte."
+        },
+        {
+          "s": 1,
+          "text": "Eso me dicen siempre los que le debían dinero. ¿Es usted uno de ellos?"
+        },
+        {
+          "s": 0,
+          "text": "Yo no le debía dinero; le debía un favor, que es peor, porque no prescribe. La noche que se fue, me pidió una sola cosa: que si algún día aparecía una muchacha con una ficha dorada, le abriera la puerta y cerrara la boca."
+        },
+        {
+          "s": 1,
+          "text": "Pues va a tener que hacer una excepción con lo segundo."
+        },
+        {
+          "s": 0,
+          "text": "Mire, aquí las paredes oyen, y las puertas giratorias, encima, dan vueltas. Le cuento lo que puedo, que no es mucho: Don Aurelio sabe que usted viene. Lo sabe desde que su avión aterrizó. Y Marco, el hijo, la va a invitar a la terraza con cara de buen chico."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué hago? ¿Le digo que no?"
+        },
+        {
+          "s": 0,
+          "text": "Al contrario: dígale que sí. Pero no se tome lo que le sirvan y no firme nada que no haya leído dos veces. A su padre lo perdió la sed, y no precisamente la de whisky."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué sed, entonces?"
+        },
+        {
+          "s": 0,
+          "text": "La de tener razón. Ande, pase, que ya me está mirando el jefe de sala. Y no me dé las gracias: usted a mí no me ha visto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Rocco en esta conversación?",
+          "options": [
+            "Advierte a Valentina, con medias palabras, de lo que la espera",
+            "Le niega la entrada al casino",
+            "Le reclama un dinero que le debía su padre"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le prometió Rocco a Ernesto?",
+          "options": [
+            "Guardarle la ficha dorada",
+            "Abrirle la puerta a su hija y no hablar",
+            "Llevar a su hija a la terraza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Desde cuándo sabe Don Aurelio que Valentina viene?",
+          "options": [
+            "Desde que cruzó la puerta",
+            "Desde hace diez años",
+            "Desde que su avión aterrizó"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir Rocco con «a su padre lo perdió la sed»?",
+          "options": [
+            "Que a Ernesto lo arruinó el orgullo de querer tener razón",
+            "Que Ernesto bebía demasiado whisky",
+            "Que Ernesto pasó sed en el desierto"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algún favor que sientas que todavía debes? ¿Cómo piensas devolverlo?",
+          "model": "Le debo a una antigua profesora mi primer trabajo. No hay forma de saldarlo del todo, así que intento hacer lo mismo con mis alumnos: es la única moneda que ella aceptaría."
+        },
+        {
+          "q": "Rocco dice que a Ernesto lo perdió «la sed de tener razón». ¿Conoces a alguien así? ¿Qué le ha costado?",
+          "model": "Un tío mío se pasó media vida pleiteando con su hermano por una tierra que no valía nada. Ganó el juicio, sí, pero se quedó sin hermano y sin cenas de Navidad."
+        },
+        {
+          "q": "¿Te fías de los consejos que te dan con medias palabras, o prefieres que te lo digan todo claro?",
+          "model": "Me fío más, curiosamente: quien se arriesga a insinuar algo suele tener un buen motivo para no decirlo en voz alta."
+        }
+      ],
+      "gaps": "Pero no se [tome] lo que le [sirvan] y no [firme] nada que no haya leído [dos veces].",
+      "glossary": [
+        {
+          "word": "no prescribe",
+          "meaning": "no caduca, no deja de valer con el tiempo"
+        },
+        {
+          "word": "las paredes oyen",
+          "meaning": "hay que tener cuidado, alguien puede estar escuchando"
+        },
+        {
+          "word": "de rodillas",
+          "meaning": "suplicando, rogando con insistencia"
+        },
+        {
+          "word": "jefe de sala",
+          "meaning": "persona que supervisa a los empleados en el salón de juego"
+        }
+      ]
+    },
+    {
+      "id": "ruleta",
+      "title": "Consejos con buenos modales",
+      "place": "Ruleta",
+      "context": "Junto a la ruleta, Don Aurelio, con su traje de lino y su puro, se dirige a Valentina mientras Nico, el crupier, canta las apuestas.",
+      "speakers": [
+        {
+          "name": "Nico",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Don Aurelio",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hagan juego, señores. Y señoras que parecen saber lo que hacen."
+        },
+        {
+          "s": 1,
+          "text": "La señorita no juega, Nico. Mira. Como su padre, que pasó doce años en tu sitio viendo apostar a los demás, hasta que una noche apostó él y se llevó la mesa por delante."
+        },
+        {
+          "s": 2,
+          "text": "No sabía que conocía usted tan bien las costumbres de mi padre."
+        },
+        {
+          "s": 1,
+          "text": "Querida, en esta casa conocemos las costumbres de todo el mundo. Es lo que tiene ser el dueño: uno acaba de confesor de los demás, aunque no le apetezca."
+        },
+        {
+          "s": 0,
+          "text": "Se aceptan apuestas hasta el último segundo, como en la vida. Luego, no va más, y aquí no hay quejas que valgan."
+        },
+        {
+          "s": 2,
+          "text": "Póngame todo al diecisiete negro."
+        },
+        {
+          "s": 1,
+          "text": "¿Todo? Qué poco original. Su padre hizo lo mismo la noche en que se le acabó la suerte. Aunque, claro, él no tenía a nadie que le aconsejara."
+        },
+        {
+          "s": 2,
+          "text": "¿Y usted me está aconsejando, Don Aurelio, o me está amenazando con buenos modales?"
+        },
+        {
+          "s": 1,
+          "text": "Entre caballeros, esa diferencia no existe. Entre damas, no sabría decirle; nunca he tenido el gusto de ser una."
+        },
+        {
+          "s": 0,
+          "text": "No va más. Diecisiete negro. La casa paga, aunque a la casa no le haga ninguna gracia."
+        },
+        {
+          "s": 1,
+          "text": "Enhorabuena. Disfrútelo mientras dure. Las rachas, como los hombres de su familia, rara vez llegan a medianoche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ocurre en esta escena?",
+          "options": [
+            "Valentina pierde todo su dinero en la ruleta",
+            "Valentina apuesta todo al diecisiete y gana mientras Aurelio la provoca",
+            "Don Aurelio invita a Valentina a cenar en el piso tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Aurelio, ¿qué hacía Ernesto durante doce años?",
+          "options": [
+            "Apostaba en cada ronda sin parar",
+            "Llevaba la contabilidad del casino",
+            "Trabajaba de crupier viendo apostar a los demás"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo responde Aurelio cuando Valentina le pregunta si la está amenazando?",
+          "options": [
+            "Dice que entre caballeros no hay diferencia entre consejo y amenaza",
+            "Lo niega y le pide disculpas",
+            "Llama a seguridad para que la acompañen fuera"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué insinúa Aurelio en su última frase?",
+          "options": [
+            "Que Valentina debería irse a dormir temprano",
+            "Que la suerte de Valentina, como la de su padre, puede acabarse antes de medianoche",
+            "Que la ruleta está trucada a favor de la casa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuándo un consejo se convierte en una amenaza? Pon un ejemplo de tu vida o de una película.",
+          "model": "Cuando lleva implícito un «o si no». En «El Padrino» nadie levanta la voz y, sin embargo, cada favor ofrecido es una amenaza envuelta en papel de regalo."
+        },
+        {
+          "q": "¿Te atreverías a apostarlo todo a una sola carta, aunque fuera de forma figurada? ¿En qué situación?",
+          "model": "Lo hice al dejar un trabajo fijo para montar mi propio negocio. Salió bien, pero no lo recomendaría a nadie sin un colchón económico detrás."
+        },
+        {
+          "q": "¿Qué opinas de la gente que se escuda en los buenos modales para decir cosas crueles?",
+          "model": "Me parecen más peligrosos que los groseros: con el maleducado sabes a qué atenerte, con el cortés nunca sabes cuándo te va a clavar el puñal."
+        }
+      ],
+      "gaps": "Su padre [hizo lo mismo] [la noche] en que [se le acabó] [la suerte].",
+      "glossary": [
+        {
+          "word": "se llevó la mesa por delante",
+          "meaning": "ganó todo, arrasó"
+        },
+        {
+          "word": "confesor",
+          "meaning": "persona a la que otros cuentan sus secretos y culpas"
+        },
+        {
+          "word": "no hay quejas que valgan",
+          "meaning": "no se aceptan protestas"
+        },
+        {
+          "word": "no va más",
+          "meaning": "frase del crupier: ya no se puede apostar"
+        },
+        {
+          "word": "rachas",
+          "meaning": "periodos seguidos de buena o mala suerte"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Un hielo de más para Ernesto",
+      "place": "Bar central",
+      "context": "Leo, el barman, saca un teléfono viejo de debajo de la barra y le pone a Valentina un mensaje que lleva diez años guardando.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Ernesto",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Tu padre me dejó esto en el contestador del bar la noche que se fue. Diez años guardando un teléfono que ya no sirve para nada más, imagínate. Me lo sé de memoria, pero prefiero que lo oigas de él."
+        },
+        {
+          "s": 1,
+          "text": "Leo, soy Ernesto. No me cortes, que tengo poco tiempo y menos saldo. Si estás oyendo esto, es que no he vuelto a por mi chaqueta, así que quédatela, que a ti te sienta mejor. Y escucha bien, porque esto no se lo puedes contar a nadie más que a una persona."
+        },
+        {
+          "s": 1,
+          "text": "Si algún día aparece mi hija, y aparecerá, porque es más terca que yo, dile que no venga a cobrar deudas. Que el diez por ciento de este casino no vale lo que cuesta. Que yo me jugué lo que no era mío por demostrarle a Aurelio que podía ganarle, y que lo único que gané fue perderla a ella."
+        },
+        {
+          "s": 1,
+          "text": "Dile también que la ficha no abre una puerta: abre una conversación. Y que, de todas las manos que he tenido en mi vida, la única que de verdad valió algo fue la suya, de chiquita, agarrándome el dedo. Bueno, ya me están llamando. Ponle un hielo de más a mi último whisky y no se lo cobres a nadie."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué escucha Valentina en el bar?",
+          "options": [
+            "Una canción que el pianista dedicó a su padre",
+            "Una llamada reciente de Don Aurelio",
+            "Un mensaje que su padre dejó en el contestador la noche que se fue"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pide Ernesto a Leo que le diga a su hija?",
+          "options": [
+            "Que no venga a cobrar deudas",
+            "Que reclame el diez por ciento cuanto antes",
+            "Que le venda la ficha a Marco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Ernesto, ¿qué abre la ficha?",
+          "options": [
+            "La puerta de la terraza",
+            "Una caja fuerte del piso tres",
+            "Una conversación"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué reconoce Ernesto en el mensaje?",
+          "options": [
+            "Que Aurelio le hizo trampa en la partida",
+            "Que pensaba volver al día siguiente a por su chaqueta",
+            "Que, por orgullo, apostó lo que no era suyo y perdió a su hija"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "Si pudieras dejar un mensaje de voz para alguien dentro de diez años, ¿qué le dirías?",
+          "model": "Le diría a mi sobrina que no se tome tan en serio lo que opinen los demás, y que me perdone si para entonces sigo dando consejos que nadie me ha pedido."
+        },
+        {
+          "q": "Ernesto dice que el diez por ciento «no vale lo que cuesta». ¿Qué cosas crees que no valen lo que cuestan?",
+          "model": "Ciertos ascensos: te suben el sueldo, pero te cobran en horas, en sueño y en cenas con la familia que no llegan a celebrarse."
+        },
+        {
+          "q": "¿Crees que Leo hizo bien guardando el mensaje tanto tiempo, o habría sido mejor buscarla antes?",
+          "model": "Hizo bien en guardarlo, aunque quizá peque de fiel: si la hubiera buscado, ella se habría ahorrado diez años de preguntas sin respuesta."
+        }
+      ],
+      "gaps": "Que yo me jugué lo que [no era mío] por [demostrarle] a Aurelio que [podía ganarle], y que lo único que gané fue [perderla a ella].",
+      "glossary": [
+        {
+          "word": "contestador",
+          "meaning": "aparato que graba los mensajes cuando nadie contesta el teléfono"
+        },
+        {
+          "word": "saldo",
+          "meaning": "dinero que queda en una tarjeta o un teléfono para llamar"
+        },
+        {
+          "word": "terca",
+          "meaning": "que no cambia de idea aunque le den razones"
+        },
+        {
+          "word": "te sienta mejor",
+          "meaning": "te queda mejor, te favorece más"
+        },
+        {
+          "word": "chiquita",
+          "meaning": "pequeña, niña"
+        }
+      ]
+    },
+    {
+      "id": "poker",
+      "title": "Un farol de leyenda",
+      "place": "Salón Esmeralda",
+      "context": "En el Salón Esmeralda, El Holandés baraja sin mirar y le cuenta a Valentina la última partida de su padre.",
+      "speakers": [
+        {
+          "name": "El Holandés",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Siéntese, señorita Duarte. La estaba esperando desde hace diez años; llega usted un poco tarde, pero en esta mesa la puntualidad nunca ha sido una virtud."
+        },
+        {
+          "s": 1,
+          "text": "Me han dicho que usted estuvo en la última partida de mi padre."
+        },
+        {
+          "s": 0,
+          "text": "Estuve, sí. Repartía yo. Y antes de que me lo pregunte: no, no hice trampa. Ni falta que hacía. Su padre se bastaba solo para meterse en líos."
+        },
+        {
+          "s": 1,
+          "text": "Qué manera tan elegante de decir que lo dejó caer."
+        },
+        {
+          "s": 0,
+          "text": "Llámelo como quiera. Aquella noche, su padre puso sobre la mesa el papel de su diez por ciento, el que Aurelio le había firmado tras doce años de lealtad y algún que otro silencio. Aurelio igualó. Entonces su padre se levantó, dijo «escalera real», tiró las cartas boca abajo y se marchó."
+        },
+        {
+          "s": 1,
+          "text": "¿Sin enseñarlas?"
+        },
+        {
+          "s": 0,
+          "text": "Sin enseñarlas. Aurelio se quedó con el bote, claro. Pero yo recogí las cartas: una pareja de sietes. Una mano de nada. Un farol de leyenda, o una rendición con estilo; con Ernesto nunca se sabía. Aurelio tampoco lo sabe, y eso no se lo perdona. Por eso escogió esas dos palabras como contraseña: para recordarse cada noche que hay preguntas que el dinero no contesta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y usted por qué me lo cuenta?"
+        },
+        {
+          "s": 0,
+          "text": "Digamos que a mi edad uno ya no apuesta por dinero, sino por curiosidad. Quiero ver qué hace la hija con el farol del padre. ¿Va a ir, o va a pasar?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué revela El Holandés?",
+          "options": [
+            "Lo que pasó de verdad en la última partida de Ernesto",
+            "Un método para hacer trampa al póker",
+            "Dónde vive Ernesto en la actualidad"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué cartas tenía Ernesto en realidad?",
+          "options": [
+            "Una escalera real",
+            "Una pareja de sietes",
+            "Un trío de ases"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué escogió Aurelio «escalera real» como contraseña?",
+          "options": [
+            "Porque se lo sugirió El Holandés",
+            "Para recordar que hay preguntas que el dinero no contesta",
+            "Porque era su jugada favorita"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué significa la pregunta final «¿Va a ir, o va a pasar?»?",
+          "options": [
+            "Si Valentina se atreve a seguir el juego que dejó su padre",
+            "Si Valentina quiere repartir las cartas",
+            "Si Valentina prefiere irse a otra mesa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez te has marcado un farol, en el juego o en la vida? ¿Te salió bien?",
+          "model": "En una entrevista de trabajo dije que hablaba francés con soltura. Me contrataron, y me pasé tres meses estudiando por las noches para que no me descubrieran la mentira."
+        },
+        {
+          "q": "¿Qué crees que fue el gesto de Ernesto: un farol, una rendición o una venganza? Argumenta.",
+          "model": "Yo diría que una venganza disfrazada de farol: perdió el papel, pero le dejó a Aurelio una duda que le iba a escocer más que cualquier derrota."
+        },
+        {
+          "q": "¿Te parece creíble que alguien, como El Holandés, ayude a otro solo por curiosidad?",
+          "model": "Me cuesta creerlo. Nadie da algo a cambio de nada en un sitio así; probablemente tiene una cuenta pendiente con Aurelio y prefiere que otro la cobre por él."
+        }
+      ],
+      "gaps": "Entonces su padre [se levantó], dijo «[escalera real]», tiró las cartas [boca abajo] y [se marchó].",
+      "glossary": [
+        {
+          "word": "Ni falta que hacía",
+          "meaning": "no era necesario"
+        },
+        {
+          "word": "se bastaba solo",
+          "meaning": "no necesitaba ayuda de nadie"
+        },
+        {
+          "word": "lo dejó caer",
+          "meaning": "no lo ayudó cuando lo necesitaba"
+        },
+        {
+          "word": "bote",
+          "meaning": "dinero acumulado de las apuestas de una mano"
+        },
+        {
+          "word": "farol",
+          "meaning": "apuesta fuerte con malas cartas para engañar al rival"
+        }
+      ]
+    },
+    {
+      "id": "teatro",
+      "title": "El mentalista cambia de bando",
+      "place": "Camerino del teatro",
+      "context": "Valentina se cuela en el camerino para preguntar por qué la han elegido como voluntaria del número de las once y media.",
+      "speakers": [
+        {
+          "name": "Faustino",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Estrella",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Una espectadora entre bastidores! Siéntese, querida, que le voy a leer el alma. Lo adivino todo, salvo los impuestos."
+        },
+        {
+          "s": 2,
+          "text": "No he venido a que me adivinen nada. Quiero saber por qué me han elegido para su número de las once y media."
+        },
+        {
+          "s": 1,
+          "text": "Ay, mi amor, porque alguien ha pagado para que estés en el escenario hasta las doce y pico. Faustino lo sabe, pero le da vergüenza decirlo con la capa puesta."
+        },
+        {
+          "s": 0,
+          "text": "¡Estrella! Un artista no traiciona a su mecenas... salvo que el mecenas pague tarde, y Don Aurelio paga tardísimo."
+        },
+        {
+          "s": 2,
+          "text": "O sea, que Aurelio quiere tenerme entretenida mientras arriba pasa algo."
+        },
+        {
+          "s": 0,
+          "text": "Yo no he dicho eso. Yo solo digo que mi caja de los espejos tiene un doble fondo, que el doble fondo da a un montacargas y que el montacargas, por pura casualidad arquitectónica, para en el piso tres."
+        },
+        {
+          "s": 1,
+          "text": "Traducido: te metemos en la caja, desapareces delante de trescientas personas y sales arriba antes que nadie. Todo el mundo aplaudiendo y Aurelio creyéndose que sigues aquí abajo."
+        },
+        {
+          "s": 2,
+          "text": "¿Y ustedes qué ganan con esto?"
+        },
+        {
+          "s": 0,
+          "text": "El placer de ver a un tirano engañado con su propio dinero. Y un pequeño porcentaje de lo que usted recupere, que la magia no vive del aire."
+        },
+        {
+          "s": 1,
+          "text": "Él, por lo menos, no vive del aire. Yo con un buen aplauso me conformo. Y con que alguien, por una vez, le gane la partida a la casa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le proponen Faustino y Estrella a Valentina?",
+          "options": [
+            "Que actúe como bailarina en el número",
+            "Usar un truco del espectáculo para que suba al piso tres sin que la vean",
+            "Que avise a Don Aurelio de que ya ha llegado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué está dispuesto Faustino a traicionar a Aurelio, según él mismo?",
+          "options": [
+            "Porque era amigo íntimo de Ernesto",
+            "Porque Estrella lo obliga",
+            "Porque Aurelio paga tardísimo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Adónde lleva el montacargas?",
+          "options": [
+            "A la terraza",
+            "Al piso tres",
+            "Al aparcamiento"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué contraste hay entre Faustino y Estrella?",
+          "options": [
+            "Los dos quieren exactamente lo mismo",
+            "Faustino quiere un porcentaje; Estrella dice conformarse con un aplauso",
+            "Estrella exige más dinero que Faustino"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te fiarías de un aliado que te ayuda a cambio de un porcentaje? ¿Por qué?",
+          "model": "Paradójicamente, sí: el que cobra tiene un motivo claro. Me fío menos del que dice ayudarme por pura bondad, porque no sé qué espera en realidad."
+        },
+        {
+          "q": "¿Has visto algún truco de magia que todavía no sepas explicar? Descríbelo.",
+          "model": "Vi a un mago adivinar la carta que había elegido mi padre sin tocar la baraja. Mi padre jura que no estaba compinchado, pero yo sigo teniendo mis dudas."
+        },
+        {
+          "q": "Faustino dice que «la magia no vive del aire». ¿Crees que el arte debe estar por encima del dinero?",
+          "model": "Sería precioso, pero es ingenuo: los artistas también pagan el alquiler. Lo que no debería pasar es que el dinero decida qué se puede contar."
+        }
+      ],
+      "gaps": "Traducido: te metemos en [la caja], [desapareces] delante de [trescientas personas] y sales arriba [antes que nadie].",
+      "glossary": [
+        {
+          "word": "entre bastidores",
+          "meaning": "detrás del escenario"
+        },
+        {
+          "word": "mecenas",
+          "meaning": "persona que paga y protege a un artista"
+        },
+        {
+          "word": "doble fondo",
+          "meaning": "compartimento secreto debajo del fondo visible de una caja"
+        },
+        {
+          "word": "montacargas",
+          "meaning": "ascensor para subir cosas pesadas"
+        },
+        {
+          "word": "no vive del aire",
+          "meaning": "necesita dinero para sobrevivir"
+        }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "El sermón de Elvis para la del vestido rojo",
+      "place": "Capilla «Amor Exprés»",
+      "context": "Valentina entra en la capilla por la puerta de atrás en plena boda. Elvis la ve y cambia el sermón sobre la marcha.",
+      "speakers": [
+        {
+          "name": "Elvis",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Queridos hermanos, amados novios, y tú, nena del vestido rojo, que has entrado por la puerta de atrás, como entran los testigos y las verdades. Hoy unimos a Brandon y a Yesenia, que se conocieron hace tres horas, lo cual, en esta capilla, es casi un noviazgo largo."
+        },
+        {
+          "s": 0,
+          "text": "Hace treinta años, en este mismo altar, con este mismo tupé, aunque con menos laca y más pelo, casé a un crupier recién llegado que juraba que el diecisiete negro le traería suerte, y a una mujer que no se creía ni una palabra. Él le prometió amor eterno y ella le contestó, delante de mí, que con un año le bastaba, que lo eterno se lo dejaba a los santos. Duraron cinco, que en Las Vegas es una eternidad. Y tuvieron una niña con los ojos del padre y la cabeza dura de la madre."
+        },
+        {
+          "s": 0,
+          "text": "¿Por qué cuento esto en una boda ajena? Porque a veces el amor no se acaba, sino que se apuesta mal. Porque hay hombres que se juegan a la familia creyendo que se juegan una ficha. Y porque esa niña, si algún día viniera, merecería saber que su padre, antes de perderse, la nombró aquí, en esta capilla, como el único premio que no pensaba arriesgar."
+        },
+        {
+          "s": 0,
+          "text": "Brandon, Yesenia: no hagan como él. Y tú, nena, no me mires así, que se me corre el rímel. ¿Los anillos?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Elvis durante la boda?",
+          "options": [
+            "Se niega a casar a la pareja",
+            "Canta una canción sobre el diecisiete negro",
+            "Cuenta, de forma indirecta, la historia de los padres de Valentina"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuánto tiempo duró el matrimonio que recuerda Elvis?",
+          "options": [
+            "Un año",
+            "Cinco años",
+            "Treinta años"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué heredó la niña de cada uno de sus padres?",
+          "options": [
+            "El pelo del padre y los ojos de la madre",
+            "La suerte del padre y la belleza de la madre",
+            "Los ojos del padre y la cabeza dura de la madre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Elvis, ¿qué falló en aquel matrimonio?",
+          "options": [
+            "Que la madre se enamoró de otro hombre",
+            "Que se casaron sin conocerse lo suficiente",
+            "Que el amor no se acabó: el padre lo apostó mal"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué opinas de quien aprovecha un acto público, como una boda, para lanzar un mensaje privado?",
+          "model": "Me parece de una valentía rayana en la desfachatez. Si sale bien, es memorable; si sale mal, arruinas el día de otros por tu protagonismo."
+        },
+        {
+          "q": "Elvis dice que «a veces el amor no se acaba, sino que se apuesta mal». ¿Estás de acuerdo? Da un ejemplo.",
+          "model": "En parte sí. Conozco parejas que se querían de verdad, pero uno de los dos lo sacrificó todo por el trabajo, convencido de que la familia podía esperar. Y no esperó."
+        },
+        {
+          "q": "¿Te gustaría descubrir algo de la historia de tus padres por boca de un desconocido? ¿Por qué?",
+          "model": "Me dolería, pero lo preferiría a no saberlo nunca. A veces un desconocido cuenta las cosas con menos miedo que la propia familia."
+        }
+      ],
+      "gaps": "Porque [a veces] el amor [no se acaba], sino que [se apuesta] [mal].",
+      "glossary": [
+        {
+          "word": "tupé",
+          "meaning": "pelo levantado sobre la frente, como el de Elvis"
+        },
+        {
+          "word": "noviazgo",
+          "meaning": "tiempo en que una pareja sale junta antes de casarse"
+        },
+        {
+          "word": "cabeza dura",
+          "meaning": "carácter terco, que no cambia de opinión"
+        },
+        {
+          "word": "ajena",
+          "meaning": "de otras personas, no propia"
+        },
+        {
+          "word": "se me corre el rímel",
+          "meaning": "se me estropea el maquillaje de los ojos al llorar"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Puertas que se abren, trampas que se cierran",
+      "place": "La puerta VIP",
+      "context": "El ascensor se abre en el pasillo del piso tres. Tano, con un palillo entre los dientes, y Bruno custodian la puerta negra.",
+      "speakers": [
+        {
+          "name": "Tano",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Bruno",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Salón privado. Contraseña, o media vuelta, princesa."
+        },
+        {
+          "s": 2,
+          "text": "Escalera real."
+        },
+        {
+          "s": 1,
+          "text": "Tano... esa la sabían cuatro gatos. ¿La dejamos pasar o llamamos arriba?"
+        },
+        {
+          "s": 0,
+          "text": "Calma, Bruno. Las órdenes son claras: quien diga las palabras, entra. Lo que no dicen las órdenes es cómo sale."
+        },
+        {
+          "s": 2,
+          "text": "Qué hospitalario. ¿Así reciben a todos los socios?"
+        },
+        {
+          "s": 0,
+          "text": "A los socios les abrimos con una sonrisa. A usted le abro por obligación, que es más sincero. Y ya que estamos siendo sinceros, un consejo gratis: ahí dentro, el que más sonríe es el que más tiene que esconder. Y el señor Aurelio, fíjese usted, lleva toda la noche sonriendo como si le hubiera tocado la lotería."
+        },
+        {
+          "s": 1,
+          "text": "Tano, no te enrolles, hermano, que nos están grabando las cámaras y mañana el que da explicaciones soy yo."
+        },
+        {
+          "s": 0,
+          "text": "Las cámaras graban imágenes, no intenciones. Mire, señorita: yo conocí a su padre. Me consiguió mi primer trabajo aquí, cuando nadie apostaba un centavo por mí. A Aurelio no le debo nada, aparte del sueldo. Así que si dentro las cosas se ponen feas, toque dos veces la campana del bar. Bruno y yo estaremos pendientes."
+        },
+        {
+          "s": 1,
+          "text": "¿Bruno y yo? Primera noticia."
+        },
+        {
+          "s": 0,
+          "text": "Ahora ya lo sabes. Adelante, princesa. Y recuerde: a veces la puerta que se abre es la trampa, y la que se cierra, la salida."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ocurre en esta escena?",
+          "options": [
+            "Tano deja entrar a Valentina y se ofrece a ayudarla en secreto",
+            "Bruno le impide la entrada a Valentina",
+            "Valentina se niega a decir la contraseña"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué insinúa Tano con «lo que no dicen las órdenes es cómo sale»?",
+          "options": [
+            "Que la salida está al fondo del pasillo",
+            "Que salir puede ser peligroso",
+            "Que el salón no tiene hora de cierre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué está dispuesto Tano a ayudar a Valentina?",
+          "options": [
+            "Porque Aurelio no le paga el sueldo",
+            "Porque se ha enamorado de ella",
+            "Porque Ernesto le consiguió su primer trabajo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué revela la reacción de Bruno, «Primera noticia»?",
+          "options": [
+            "Que Tano lo ha comprometido sin consultarle",
+            "Que Bruno ya conocía el plan de antemano",
+            "Que Bruno trabaja en secreto para Marco"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo con que «el que más sonríe es el que más tiene que esconder»? Matiza.",
+          "model": "Como norma general, no: hay gente sencillamente simpática. Pero en contextos de poder, una sonrisa permanente suele ser más estrategia que alegría."
+        },
+        {
+          "q": "¿Arriesgarías tu trabajo por devolverle un favor a alguien que ya no está? ¿Por qué?",
+          "model": "Depende del favor y del riesgo. Si esa persona me cambió la vida, creo que sí; hay deudas que pesan más que una nómina."
+        },
+        {
+          "q": "¿Recuerdas alguna situación en que una puerta cerrada resultara ser, al final, una salida?",
+          "model": "Cuando me rechazaron en la universidad que quería, me quedé hundido. Acabé en otra ciudad, donde conocí a mi pareja y encontré mi profesión. Bendito rechazo."
+        }
+      ],
+      "gaps": "Así que si dentro las cosas [se ponen feas], [toque] [dos veces] la [campana] del bar.",
+      "glossary": [
+        {
+          "word": "cuatro gatos",
+          "meaning": "muy pocas personas"
+        },
+        {
+          "word": "hospitalario",
+          "meaning": "que recibe bien a los visitantes"
+        },
+        {
+          "word": "no te enrolles",
+          "meaning": "no hables tanto, ve al grano"
+        },
+        {
+          "word": "estaremos pendientes",
+          "meaning": "estaremos atentos, vigilando"
+        },
+        {
+          "word": "Primera noticia",
+          "meaning": "expresión para decir que uno no sabía nada de algo"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Brindis por las herencias complicadas",
+      "place": "Terraza sobre el Strip",
+      "context": "En la terraza, Marco Montalbán termina una llamada de teléfono justo cuando llega Valentina.",
+      "speakers": [
+        {
+          "name": "Marco",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Valentina",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Sí, papá, ya está aquí. No, no ha firmado nada todavía. Déjamelo a mí, ¿quieres? Por una vez. Te llamo luego. Perdona, Valentina. Brindemos: por los padres que nos dejan herencias complicadas."
+        },
+        {
+          "s": 1,
+          "text": "Brindo, pero no bebo. Me lo han desaconsejado varias personas en menos de una hora. Tu familia tiene muy buena prensa entre los empleados."
+        },
+        {
+          "s": 0,
+          "text": "Mi familia tiene empleados que hablan demasiado, que es distinto. Te voy a ser franco, aunque no esté de moda en esta terraza. Mi padre quiere tu ficha, y yo también, pero por razones opuestas."
+        },
+        {
+          "s": 1,
+          "text": "A ver si lo adivino: él, para enterrar el pasado, y tú, para heredar el presente."
+        },
+        {
+          "s": 0,
+          "text": "Casi. Él quiere quemar ese papel del diez por ciento. Yo quiero usarlo. Con tu diez y mi parte, tendríamos voz en el consejo y podríamos apartarlo. Lleva treinta años dirigiendo esto como si fuera su finca, y el negocio se hunde."
+        },
+        {
+          "s": 1,
+          "text": "Así que me ofreces una alianza contra tu padre. Conmovedor. ¿Y qué me garantiza que, cuando él caiga, no me empujes a mí detrás?"
+        },
+        {
+          "s": 0,
+          "text": "Nada. Absolutamente nada. Pero yo, al menos, te lo digo a la cara. Él te lo diría con una sonrisa."
+        },
+        {
+          "s": 1,
+          "text": "Es lo más honesto que he oído esta noche, y no sé si me tranquiliza o me asusta."
+        },
+        {
+          "s": 0,
+          "text": "Las dos cosas. Bienvenida a la familia, Valentina. Medianoche, piso tres. Y esta vez, que la escalera real sea de verdad."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué propone Marco?",
+          "options": [
+            "Comprarle la ficha para quemarla",
+            "Una alianza para apartar a su padre del control del casino",
+            "Casarse con Valentina"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con quién habla Marco por teléfono al principio?",
+          "options": [
+            "Con su padre",
+            "Con un abogado",
+            "Con Tano"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere hacer Don Aurelio con el papel, según Marco?",
+          "options": [
+            "Venderlo",
+            "Enmarcarlo",
+            "Quemarlo"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo se siente Valentina ante la franqueza de Marco?",
+          "options": [
+            "Completamente convencida",
+            "Tranquila y asustada a la vez",
+            "Ofendida y furiosa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Harías una alianza con alguien que reconoce abiertamente que podría traicionarte?",
+          "model": "Curiosamente, quizá sí. Su franqueza me daría ventaja: sabría desde el principio que tengo que protegerme, cosa que con un aliado zalamero no siempre ocurre."
+        },
+        {
+          "q": "Marco dice que su padre dirige el casino «como si fuera su finca». ¿Conoces negocios familiares así? ¿Qué problemas tienen?",
+          "model": "Conozco una panadería en la que el abuelo no deja que nadie toque la receta ni las cuentas. Los nietos se han ido marchando uno a uno, y el negocio envejece con él."
+        },
+        {
+          "q": "¿Qué crees que hará Valentina a medianoche? Justifica tu hipótesis.",
+          "model": "Creo que irá, pero no con Marco: usará su oferta como baza para negociar directamente con Aurelio. Ha aprendido de su padre que el farol funciona mejor cuando nadie sabe qué cartas tienes."
+        }
+      ],
+      "gaps": "Con tu diez y [mi parte], tendríamos [voz] en [el consejo] y podríamos [apartarlo].",
+      "glossary": [
+        {
+          "word": "buena prensa",
+          "meaning": "buena fama, buena reputación"
+        },
+        {
+          "word": "franco",
+          "meaning": "sincero, directo"
+        },
+        {
+          "word": "apartarlo",
+          "meaning": "quitarlo de su puesto"
+        },
+        {
+          "word": "Conmovedor",
+          "meaning": "que emociona; aquí dicho con ironía"
+        },
+        {
+          "word": "a la cara",
+          "meaning": "directamente, delante de la persona"
+        }
+      ]
+    }
+  ]
+}

@@ -132,7 +132,11 @@ export async function currentSubscriptionForUser(db: D1Database, userId: string,
     `SELECT id, provider, environment, provider_subscription_id AS providerSubscriptionId,
             status, offer_code AS offerCode, next_billing_time AS nextBillingTime,
             activated_at AS activatedAt, first_payment_at AS firstPaymentAt,
-            paid_through AS paidThrough, cancelled_at AS cancelledAt
+            paid_through AS paidThrough, cancelled_at AS cancelledAt,
+            provider_subscriber_id AS providerSubscriberId,
+            last_payment_at AS lastPaymentAt, last_failure_at AS lastFailureAt,
+            (SELECT amount_cents FROM billing_payments p WHERE p.subscription_id = billing_subscriptions.id AND p.status = 'COMPLETED'
+             ORDER BY p.occurred_at DESC, p.id DESC LIMIT 1) AS lastAmountCents
      FROM billing_subscriptions WHERE user_id = ? AND environment = ?
      ORDER BY CASE status WHEN 'ACTIVE' THEN 0 WHEN 'APPROVED' THEN 1 WHEN 'APPROVAL_PENDING' THEN 2 ELSE 3 END, updated_at DESC
      LIMIT 1`,
@@ -140,6 +144,7 @@ export async function currentSubscriptionForUser(db: D1Database, userId: string,
     id: number; provider: string; environment: PaypalEnvironment; providerSubscriptionId: string;
     status: SubscriptionStatus; offerCode: string | null; nextBillingTime: number | null;
     activatedAt: number | null; firstPaymentAt: number | null; paidThrough: number | null; cancelledAt: number | null;
+    providerSubscriberId: string | null; lastPaymentAt: number | null; lastFailureAt: number | null; lastAmountCents: number | null;
   }>();
 }
 
@@ -354,6 +359,12 @@ export async function recordPaypalPayment(
  * Claims the one acquisition conversion produced by the payment transaction.
  * The outbox row is created with the confirmed payment, never by the callback.
  */
+/**
+ * The customer's first verified paid transaction is the Google Ads purchase
+ * conversion: the US$2 trial when they started with one, otherwise the first
+ * US$15.50 month. A later first full month after a trial is never returned
+ * here, so the browser cannot report one customer twice.
+ */
 export async function claimFirstPaidConversionForUser(
   db: D1Database,
   userId: string,
@@ -361,22 +372,29 @@ export async function claimFirstPaidConversionForUser(
   environment: PaypalEnvironment,
 ) {
   const event = await db.prepare(
-    `SELECT outbox.id, payment.provider_payment_id AS transactionId,
+    `SELECT outbox.id, outbox.event_name AS eventName, outbox.delivered_at AS deliveredAt,
+            payment.provider_payment_id AS transactionId,
             payment.amount_cents AS amountCents, payment.currency AS currency
      FROM billing_outbox_events outbox
      JOIN billing_subscriptions subscription ON subscription.id = outbox.subscription_id
      JOIN billing_payments payment ON payment.id = outbox.payment_id
      WHERE outbox.provider = subscription.provider AND outbox.environment = ?
-       AND outbox.event_name = 'first_subscription_paid' AND outbox.delivered_at IS NULL
+       AND outbox.event_name IN ('trial_paid', 'first_subscription_paid')
        AND subscription.user_id = ? AND subscription.provider_subscription_id = ?
        AND payment.status = 'COMPLETED'
+     ORDER BY payment.occurred_at, payment.id
      LIMIT 1`,
-  ).bind(environment, userId, providerSubscriptionId).first<{ id: number; transactionId: string; amountCents: number; currency: string }>();
-  if (!event) return null;
+  ).bind(environment, userId, providerSubscriptionId).first<{ id: number; eventName: string; deliveredAt: number | null; transactionId: string; amountCents: number; currency: string }>();
+  if (!event || event.deliveredAt !== null) return null;
   const claimed = await db.prepare(
     `UPDATE billing_outbox_events SET delivered_at = ? WHERE id = ? AND delivered_at IS NULL`,
   ).bind(now(), event.id).run();
   return (claimed.meta.changes ?? 0) === 1
-    ? { transactionId: event.transactionId, value: event.amountCents / 100, currency: event.currency }
+    ? {
+      transactionId: event.transactionId,
+      value: event.amountCents / 100,
+      currency: event.currency,
+      plan: event.eventName === "trial_paid" ? "trial" as const : "monthly" as const,
+    }
     : null;
 }

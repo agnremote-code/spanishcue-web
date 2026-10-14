@@ -1,0 +1,306 @@
+{
+  "game": "reino",
+  "level": "B1",
+  "items": [
+    {
+      "id": "ines",
+      "title": "¿Reabrir la posada ya o esperar un poco?",
+      "place": "La posada de la aldea",
+      "context": "El reino acaba de despertar. Inés quiere volver a abrir la posada y lo habla con Ramona, una vecina del mercado.",
+      "speakers": [
+        { "name": "Inés", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Ramona", "country": "República Dominicana", "voice": "es-DO-RamonaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Ramona, ya lo tengo decidido: el sábado abro la posada otra vez. Con una gran cena para todo el reino." },
+        { "s": 1, "text": "¿El sábado? Inés, me parece un poco pronto. La gente acaba de despertarse después de cien años. Ayer el panadero me preguntó en qué año estábamos." },
+        { "s": 0, "text": "Justamente por eso. Creo que la gente necesita algo normal: una mesa, una sopa, conversación." },
+        { "s": 1, "text": "Puede ser, pero ¿con qué ingredientes? Bruno me dijo que el molino funciona, pero que la harina no va a estar lista hasta el jueves." },
+        { "s": 0, "text": "Bueno, entonces menos pan y más sopa." },
+        { "s": 1, "text": "Yo propondría otra cosa: empezar con un desayuno pequeño, solo para los vecinos. Si sale bien, después hacemos la cena grande." },
+        { "s": 0, "text": "Mmm... No es mala idea. Un desayuno este sábado y la cena el sábado siguiente. ¿Me ayudas con las mesas?" },
+        { "s": 1, "text": "Claro. Pero yo no cocino, ¿eh? Yo pongo la música." }
+      ],
+      "choice": [
+        { "q": "¿Qué discuten Inés y Ramona?", "options": ["Quién va a cocinar la cena", "Cuándo y cómo volver a abrir la posada", "Qué música poner en la fiesta"], "answer": 1 },
+        { "q": "¿Qué le preguntó el panadero a Ramona?", "options": ["Dónde estaba la posada", "A qué hora abría el molino", "En qué año estaban"], "answer": 2 },
+        { "q": "Según Bruno, ¿cuándo va a estar lista la harina?", "options": ["El jueves", "El sábado", "Mañana"], "answer": 0 },
+        { "q": "¿Qué deciden al final?", "options": ["Hacer la cena grande este sábado", "Empezar con un desayuno para los vecinos", "No abrir la posada este mes"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Crees que es mejor empezar un proyecto en grande o en pequeño? ¿Por qué?", "model": "Creo que es mejor empezar en pequeño, porque así puedes aprender de los errores." },
+        { "q": "¿Qué haces para sentirte normal después de un cambio grande en tu vida?", "model": "Intento mantener mi rutina: cocino, camino y llamo a mi familia." },
+        { "q": "¿Te gusta organizar fiestas o prefieres ir como invitado?", "model": "Prefiero ir como invitada, porque organizar me pone nerviosa." }
+      ],
+      "gaps": "Yo propondría otra cosa: empezar con un [desayuno] pequeño, solo para los [vecinos]. Si sale [bien], después hacemos la [cena] grande.",
+      "glossary": [
+        { "word": "justamente", "meaning": "precisamente, exactamente por esa razón" },
+        { "word": "ingredientes", "meaning": "las cosas que usas para cocinar un plato" },
+        { "word": "vecinos", "meaning": "personas que viven cerca" },
+        { "word": "si sale bien", "meaning": "si el resultado es bueno" }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "El abuelo molino y las seis aspas",
+      "place": "El molino de la aldea",
+      "context": "Lucía, la ayudante de Bruno, trae unos dibujos para un molino nuevo. Bruno no está muy convencido.",
+      "speakers": [
+        { "name": "Bruno", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Lucía", "country": "Costa Rica", "voice": "es-CR-MariaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Bruno, he hecho unos dibujos. Mira: un molino nuevo, con seis aspas en vez de cuatro." },
+        { "s": 0, "text": "Seis aspas... Lucía, el molino viejo funcionó doscientos años. No hay que tirar algo solo porque es viejo." },
+        { "s": 1, "text": "Ya, pero no funciona desde la noche del hechizo. Y Liora me contó que ahora el viento sopla más suave, desde el norte. Con cuatro aspas no es suficiente." },
+        { "s": 0, "text": "¿Liora dijo eso? Mmm. Bueno, ella conoce el viento mejor que nadie." },
+        { "s": 1, "text": "Además, si construimos uno nuevo, puedo aprender a hacerlo desde el principio." },
+        { "s": 0, "text": "Te propongo una cosa: arreglamos el viejo, pero le ponemos tus dos aspas extra. Así aprendes, y el abuelo molino no se pone celoso." },
+        { "s": 1, "text": "¿El abuelo molino? Bruno, hablas de él como si fuera una persona." },
+        { "s": 0, "text": "Es que es de la familia. Mi padre lo construyó. Empezamos mañana a las seis, ¿de acuerdo?" },
+        { "s": 1, "text": "¿A las seis? ¡Qué temprano! Bueno, de acuerdo." }
+      ],
+      "choice": [
+        { "q": "¿En qué no están de acuerdo al principio?", "options": ["En si arreglar el molino viejo o construir uno nuevo", "En quién va a guardar la llave", "En el precio de la harina"], "answer": 0 },
+        { "q": "¿Qué le contó Liora a Lucía?", "options": ["Que el molino está roto para siempre", "Que el viento ahora sopla más suave desde el norte", "Que hay que usar un hechizo nuevo"], "answer": 1 },
+        { "q": "¿Por qué Bruno quiere tanto al molino viejo?", "options": ["Porque es muy bonito", "Porque le costó poco dinero", "Porque lo construyó su padre"], "answer": 2 },
+        { "q": "¿Qué se puede decir de la solución final?", "options": ["Une las ideas de los dos", "Es la idea de Lucía sin cambios", "Es la idea de Bruno sin cambios"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Prefieres arreglar las cosas viejas o comprar nuevas? ¿Por qué?", "model": "Prefiero arreglarlas, porque muchas cosas viejas tienen historia y además es más barato." },
+        { "q": "¿Tienes un objeto que es casi parte de la familia? ¿Cuál?", "model": "Sí, la mesa de mi abuela. Ahora está en mi cocina y comemos ahí todos los días." },
+        { "q": "¿Qué haces cuando no estás de acuerdo con un compañero?", "model": "Escucho su idea y después intento buscar una solución con las dos ideas." }
+      ],
+      "gaps": "Te propongo una cosa: arreglamos el [viejo], pero le ponemos tus dos [aspas] extra. Así [aprendes], y el abuelo molino no se pone [celoso].",
+      "glossary": [
+        { "word": "aspas", "meaning": "las partes del molino que giran con el viento" },
+        { "word": "tirar", "meaning": "poner algo en la basura" },
+        { "word": "celoso", "meaning": "que tiene miedo de perder el cariño de alguien" },
+        { "word": "de acuerdo", "meaning": "expresión para aceptar una propuesta" }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "Paseo guiado por el bosque despierto",
+      "place": "La entrada del bosque",
+      "context": "Ahora llegan visitantes de la ciudad. Liora es su guía y explica las normas antes de empezar el paseo.",
+      "speakers": [
+        { "name": "Liora", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bienvenidos al bosque de Valdoria. Me llamo Liora y hoy voy a ser su guía. Antes de empezar, tres cosas." },
+        { "s": 0, "text": "Primero: no hace falta correr. Sé que muchos de ustedes vienen de la ciudad y están acostumbrados a ir rápido, pero aquí lo interesante pasa despacio." },
+        { "s": 0, "text": "Segundo: por favor, no toquen las luciérnagas. Ayer un señor intentó llevarse una en un frasco y la pobre estuvo toda la tarde de mal humor." },
+        { "s": 0, "text": "Y tercero: si alguien se pierde, que se quede quieto y cante. Los árboles me avisan." },
+        { "s": 0, "text": "En mi opinión, la ciudad tiene cosas buenas, como las panaderías, pero el silencio de este bosque no se compra en ningún lado." },
+        { "s": 0, "text": "Vamos a caminar unas dos horas y vamos a terminar en el santuario de piedra, justo cuando se encienden las luces. ¿Listos?" }
+      ],
+      "choice": [
+        { "q": "¿Quién habla y a quién?", "options": ["Una vecina a sus hijos", "Un hada a un dragón", "Una guía a un grupo de visitantes"], "answer": 2 },
+        { "q": "¿Qué hizo ayer un señor?", "options": ["Intentó llevarse una luciérnaga en un frasco", "Se perdió en el bosque", "Corrió hasta el santuario"], "answer": 0 },
+        { "q": "¿Qué tiene que hacer una persona perdida?", "options": ["Correr hasta el río", "Quedarse quieta y cantar", "Llamar a los otros visitantes"], "answer": 1 },
+        { "q": "¿Qué opina Liora de la ciudad?", "options": ["Que es horrible y ruidosa", "Que es mejor que el bosque", "Que tiene cosas buenas, pero no el silencio del bosque"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Prefieres la ciudad o la naturaleza? ¿Por qué?", "model": "Prefiero la naturaleza, porque en la ciudad siempre estoy un poco estresada." },
+        { "q": "¿Qué haces cuando necesitas silencio?", "model": "Me pongo los auriculares sin música o camino por un parque cerca de mi casa." },
+        { "q": "¿Te gustan las visitas guiadas o prefieres explorar solo? ¿Por qué?", "model": "Prefiero explorar sola, pero en un museo me gusta tener guía porque aprendo más." }
+      ],
+      "gaps": "Segundo: por favor, no toquen las [luciérnagas]. Ayer un [señor] intentó llevarse una en un [frasco] y la pobre estuvo toda la tarde de [mal humor].",
+      "glossary": [
+        { "word": "no hace falta", "meaning": "no es necesario" },
+        { "word": "acostumbrados", "meaning": "que hacen algo siempre y les parece normal" },
+        { "word": "frasco", "meaning": "recipiente pequeño de vidrio" },
+        { "word": "de mal humor", "meaning": "enfadada, no contenta" },
+        { "word": "avisan", "meaning": "dan una información importante" }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "El mercader de las botas limpias",
+      "place": "El puente de Sir Aldren",
+      "context": "Javier, el guardia nuevo, viene a contarle a Sir Aldren lo que dice un mercader que quiere cruzar.",
+      "speakers": [
+        { "name": "Sir Aldren", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Javier", "country": "Guinea Ecuatorial", "voice": "es-GQ-JavierNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Sir Aldren, hay un mercader en la entrada del puente. Dice que quiere vender telas en el castillo." },
+        { "s": 0, "text": "¿Y qué más te dijo?" },
+        { "s": 1, "text": "Me dijo que viene del sur, que viajó tres días y que la princesa Elara lo invitó personalmente." },
+        { "s": 0, "text": "Interesante. La princesa despertó hace una semana y no ha salido de la torre. ¿Cómo lo invitó?" },
+        { "s": 1, "text": "Eso mismo le pregunté. Me contestó que fue por carta." },
+        { "s": 0, "text": "¿Y tú le crees?" },
+        { "s": 1, "text": "Sinceramente, no sé. Parece simpático, y sus telas son preciosas. Pero sus botas están muy limpias para alguien que caminó tres días." },
+        { "s": 0, "text": "Bien visto, Javier. Mi opinión es que no debemos cerrarle la puerta, pero tampoco abrirla sin más. Vamos a hacer esto: le pides la carta, y si la tiene, la llevamos a Baltasar. Él conoce la letra de Elara." },
+        { "s": 1, "text": "¿Y si no la tiene?" },
+        { "s": 0, "text": "Entonces lo invitamos a un café... y le hacemos muchas, muchas preguntas." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tienen Sir Aldren y Javier?", "options": ["Un mercader les robó unas telas", "No saben si creer a un mercader", "El puente está roto"], "answer": 1 },
+        { "q": "¿Qué dijo el mercader sobre Elara?", "options": ["Que es su prima", "Que ella le compró telas", "Que ella lo invitó personalmente"], "answer": 2 },
+        { "q": "¿Por qué Javier no está seguro?", "options": ["Porque sus botas están demasiado limpias", "Porque el mercader no es simpático", "Porque sus telas son feas"], "answer": 0 },
+        { "q": "¿Qué quiere hacer Sir Aldren con la carta?", "options": ["Quemarla", "Llevarla a Baltasar para ver la letra", "Dársela a Elara"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿En qué te fijas para saber si una persona dice la verdad?", "model": "Me fijo en los detalles y en si la historia tiene sentido." },
+        { "q": "¿Alguna vez alguien te mintió para venderte algo? ¿Qué pasó?", "model": "Sí, un vendedor me dijo que el teléfono era nuevo, pero era usado. Al final lo devolví." },
+        { "q": "¿Te pareces más a Sir Aldren o a Javier? ¿Por qué?", "model": "Me parezco más a Javier: al principio confío, pero después observo con atención." }
+      ],
+      "gaps": "Parece [simpático], y sus [telas] son preciosas. Pero sus [botas] están muy [limpias] para alguien que caminó tres días.",
+      "glossary": [
+        { "word": "mercader", "meaning": "persona que compra y vende cosas" },
+        { "word": "telas", "meaning": "material para hacer ropa" },
+        { "word": "bien visto", "meaning": "buena observación" },
+        { "word": "sin más", "meaning": "sin pensar ni preguntar" },
+        { "word": "letra", "meaning": "la forma de escribir a mano de una persona" }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "Celina en la radio: el primer concurso de rosas",
+      "place": "Los jardines reales",
+      "context": "Radio Valdoria entrevista a Celina, la jardinera real, antes del concurso de rosas del domingo.",
+      "speakers": [
+        { "name": "Celina", "country": "Perú", "voice": "es-PE-CamilaNeural" },
+        { "name": "Alonso", "country": "Estados Unidos", "voice": "es-US-AlonsoNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Buenas tardes, queridos oyentes. Hoy tenemos en el estudio a Celina, la jardinera real. Celina, el domingo es el primer concurso de rosas en cien años. ¿Cómo te sientes?" },
+        { "s": 0, "text": "Nerviosa, la verdad. Pero también muy feliz. Hace un mes el jardín era un muro de espinas, y ahora hay flores por todas partes." },
+        { "s": 1, "text": "Algunos vecinos dicen que la rosa más bonita siempre es la tuya. ¿Vas a participar?" },
+        { "s": 0, "text": "No, este año no. Me parece más justo ayudar a los niños, que van a presentar sus primeras rosas." },
+        { "s": 1, "text": "¿Y qué buscas en una rosa ganadora?" },
+        { "s": 0, "text": "Mucha gente piensa que es el color o el tamaño. Para mí lo importante es el olor y la historia. Una rosa pequeña cuidada con cariño vale más que una enorme sin alma." },
+        { "s": 1, "text": "Precioso. ¿Algún consejo para los oyentes?" },
+        { "s": 0, "text": "Sí: hablen con sus plantas. No contestan, pero escuchan." }
+      ],
+      "choice": [
+        { "q": "¿Por qué está Celina en la radio?", "options": ["Para hablar del concurso de rosas", "Para vender semillas", "Para contar la historia del hechizo"], "answer": 0 },
+        { "q": "¿Cómo estaba el jardín hace un mes?", "options": ["Lleno de niños", "Era un muro de espinas", "Estaba bajo la nieve"], "answer": 1 },
+        { "q": "¿Por qué Celina no participa en el concurso?", "options": ["Porque no tiene rosas este año", "Porque está enferma", "Porque le parece más justo ayudar a los niños"], "answer": 2 },
+        { "q": "Para Celina, ¿qué es lo más importante en una rosa?", "options": ["El olor y la historia", "El color y el tamaño", "El precio"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Tienes plantas? ¿Les hablas?", "model": "Sí, tengo cuatro plantas y a veces les hablo por la mañana, cuando las riego." },
+        { "q": "¿Participaste alguna vez en un concurso? ¿Cómo fue?", "model": "Sí, una vez participé en un concurso de cocina en mi escuela y gané el segundo premio." },
+        { "q": "En un regalo, ¿qué es más importante para ti: el precio o la historia?", "model": "Para mí es la historia, porque un regalo simple puede ser muy especial." }
+      ],
+      "gaps": "Una rosa [pequeña] cuidada con [cariño] vale más que una [enorme] sin [alma].",
+      "glossary": [
+        { "word": "oyentes", "meaning": "personas que escuchan la radio" },
+        { "word": "concurso", "meaning": "competición con un premio" },
+        { "word": "justo", "meaning": "correcto, igual para todos" },
+        { "word": "ganadora", "meaning": "la que gana" },
+        { "word": "sin alma", "meaning": "sin vida, sin sentimiento" }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "Nuevas normas para la pizarra parlante",
+      "place": "La biblioteca del castillo",
+      "context": "En la biblioteca hay una pizarra mágica que contesta preguntas. Baltasar hace un anuncio para todos los lectores.",
+      "speakers": [
+        { "name": "Baltasar", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Queridos lectores, un momento de atención, por favor. Como saben, desde esta semana tenemos en la biblioteca una pizarra parlante. Le haces una pregunta y te contesta en segundos." },
+        { "s": 0, "text": "Es una maravilla, no lo voy a negar. Pero quiero compartir una preocupación." },
+        { "s": 0, "text": "Ayer una niña me dijo que ya no necesita leer, porque la pizarra lo sabe todo. Y un señor me contó, muy serio, que la pizarra le aseguró que los dragones comen zanahorias. Brum se ofendió muchísimo." },
+        { "s": 0, "text": "Mi opinión es esta: la pizarra es una herramienta, no un sabio. Por eso, a partir de mañana, hay una regla nueva: pueden usarla, pero después tienen que comprobar la respuesta en un libro." },
+        { "s": 0, "text": "Y si encuentran un error, me lo traen. El mejor detective del mes gana un pastel de Inés." }
+      ],
+      "choice": [
+        { "q": "¿De qué habla Baltasar?", "options": ["De un libro perdido", "De la visita de Brum", "De la pizarra parlante y de una regla nueva"], "answer": 2 },
+        { "q": "¿Qué le dijo la niña a Baltasar?", "options": ["Que ya no necesita leer", "Que la pizarra está rota", "Que quiere ser maga"], "answer": 0 },
+        { "q": "¿Por qué se ofendió Brum?", "options": ["Porque no lo dejaron entrar", "Porque la pizarra dijo que los dragones comen zanahorias", "Porque no ganó el pastel"], "answer": 1 },
+        { "q": "¿Qué tienen que hacer los lectores desde mañana?", "options": ["No usar la pizarra", "Pagar por usar la pizarra", "Comprobar las respuestas en un libro"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Usas internet o la inteligencia artificial para buscar respuestas? ¿Compruebas la información?", "model": "Sí, la uso mucho, pero compruebo los datos importantes en otras páginas." },
+        { "q": "¿Crees que los niños necesitan leer libros si tienen tecnología? ¿Por qué?", "model": "Creo que sí, porque leer ayuda a pensar despacio y a imaginar." },
+        { "q": "¿Recuerdas una información falsa que creíste durante mucho tiempo?", "model": "Sí, durante años pensé que los toros odian el color rojo, pero no es verdad." }
+      ],
+      "gaps": "Mi opinión es esta: la pizarra es una [herramienta], no un [sabio]. Por eso, a partir de [mañana], hay una [regla] nueva",
+      "glossary": [
+        { "word": "parlante", "meaning": "que habla" },
+        { "word": "negar", "meaning": "decir que algo no es verdad" },
+        { "word": "se ofendió", "meaning": "se sintió mal por algo que dijeron de él" },
+        { "word": "sabio", "meaning": "persona que sabe muchísimo" },
+        { "word": "comprobar", "meaning": "mirar si algo es verdad" }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "Dos versiones de la noche de la tormenta",
+      "place": "El archivo del castillo",
+      "context": "Teobaldo escribe la crónica oficial del hechizo. Le lee el principio a la princesa Elara.",
+      "speakers": [
+        { "name": "Teobaldo", "country": "Uruguay", "voice": "es-UY-MateoNeural" },
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Princesa, ya casi termino la crónica. Escuche el principio: «La noche de la tormenta, una bruja malvada atacó el castillo»." },
+        { "s": 1, "text": "No, Teobaldo. Eso no es justo. La Tejedora no atacó a nadie. Quería protegernos." },
+        { "s": 0, "text": "Lo sé, lo sé. Pero en la aldea todos dicen que fue una bruja. Ayer Inés me dijo que sus clientes no quieren otra versión." },
+        { "s": 1, "text": "Pues entonces la crónica tiene que ser valiente. Si escribimos lo que la gente quiere oír, dentro de cien años nadie va a saber la verdad." },
+        { "s": 0, "text": "Tiene razón. ¿Y qué propone?" },
+        { "s": 1, "text": "Escriba las dos cosas: que hubo miedo y que hubo un error. Pero también que la Tejedora me salvó de la tormenta." },
+        { "s": 0, "text": "Entonces voy a empezar así: «La noche de la tormenta, alguien tuvo miedo por los demás»." },
+        { "s": 1, "text": "Me gusta. Y, por favor, quite lo de «bruja malvada». Ella va a leerlo." }
+      ],
+      "choice": [
+        { "q": "¿Sobre qué hablan Teobaldo y Elara?", "options": ["Sobre una fiesta en el castillo", "Sobre cómo contar la historia de la tormenta", "Sobre un libro de magia"], "answer": 1 },
+        { "q": "Según Inés, ¿qué quieren sus clientes?", "options": ["Una historia más corta", "Que Teobaldo escriba más rápido", "No escuchar otra versión"], "answer": 2 },
+        { "q": "¿Qué piensa Elara de la Tejedora?", "options": ["Que quería protegerlos", "Que era una bruja malvada", "Que nunca existió"], "answer": 0 },
+        { "q": "¿Por qué quiere Elara quitar «bruja malvada»?", "options": ["Porque la frase es muy larga", "Porque la Tejedora va a leer la crónica", "Porque Inés se lo pidió"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Conoces una historia que la gente cuenta de una forma, pero que en realidad fue diferente?", "model": "Sí, en mi familia dicen que mi abuelo fue un héroe en la guerra, pero mi abuela cuenta otra cosa." },
+        { "q": "¿Crees que es importante decir la verdad cuando a la gente no le gusta? ¿Por qué?", "model": "Sí, creo que es importante, aunque a veces es difícil y la gente se enfada." },
+        { "q": "¿Qué historia de tu familia te gustaría escribir?", "model": "Me gustaría escribir cómo mis padres llegaron a esta ciudad sin conocer a nadie." }
+      ],
+      "gaps": "Pues entonces la crónica tiene que ser [valiente]. Si escribimos lo que la [gente] quiere [oír], dentro de [cien años] nadie va a saber la verdad.",
+      "glossary": [
+        { "word": "crónica", "meaning": "texto que cuenta la historia en orden" },
+        { "word": "malvada", "meaning": "muy mala" },
+        { "word": "versión", "meaning": "una forma de contar lo que pasó" },
+        { "word": "valiente", "meaning": "que no tiene miedo de hacer algo difícil" }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "El primer discurso de la princesa Elara",
+      "place": "La plaza del castillo",
+      "context": "Dos semanas después de despertar, Elara habla por primera vez a todo el pueblo de Valdoria.",
+      "speakers": [
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Pueblo de Valdoria, buenas tardes. Hace dos semanas me desperté, y lo primero que vi fue una luz entrando por la ventana." },
+        { "s": 0, "text": "Desde ese día he escuchado muchas opiniones. Bruno me dijo que lo urgente es el molino. Celina piensa que necesitamos fiestas, porque la gente tiene que volver a reírse. Y Sir Aldren me pidió, muy serio, más guardias en el puente." },
+        { "s": 0, "text": "Todos tienen algo de razón. Pero yo creo que lo primero es otra cosa: escuchar. Por eso, a partir de este domingo, voy a estar en la plaza todas las mañanas de domingo. Cualquiera puede venir y contarme un problema o una idea." },
+        { "s": 0, "text": "Y no, Brum, no vale venir solo a pedir que el sol salga más tarde." },
+        { "s": 0, "text": "Este reino durmió cien años porque alguien decidió por todos. No quiero repetir ese error." }
+      ],
+      "choice": [
+        { "q": "¿Qué tipo de audio es?", "options": ["Un discurso de Elara al pueblo", "Una conversación privada con Brum", "Una noticia de la radio"], "answer": 0 },
+        { "q": "¿Qué le pidió Sir Aldren a Elara?", "options": ["Más fiestas", "Más guardias en el puente", "Arreglar el molino"], "answer": 1 },
+        { "q": "¿Qué va a hacer Elara los domingos?", "options": ["Visitar el molino", "Organizar una fiesta", "Escuchar a la gente en la plaza"], "answer": 2 },
+        { "q": "¿Qué error no quiere repetir Elara?", "options": ["Decidir por todos sin escuchar", "Dormir demasiado", "Cerrar el puente"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "Si fueras la persona responsable de tu ciudad, ¿qué harías primero?", "model": "Primero escucharía a los vecinos y después arreglaría los parques." },
+        { "q": "¿Crees que los políticos escuchan a la gente? ¿Por qué?", "model": "Creo que algunos sí, pero muchos solo escuchan antes de las elecciones." },
+        { "q": "¿Quién te pide consejos o ideas en tu vida?", "model": "Mis compañeros de trabajo me piden ideas para las presentaciones." }
+      ],
+      "gaps": "Celina piensa que necesitamos [fiestas], porque la gente tiene que volver a [reírse]. Y Sir Aldren me pidió, muy serio, más [guardias] en el [puente].",
+      "glossary": [
+        { "word": "urgente", "meaning": "muy importante, para ahora mismo" },
+        { "word": "algo de razón", "meaning": "una parte de razón; lo que dicen es en parte correcto" },
+        { "word": "cualquiera", "meaning": "cualquier persona" },
+        { "word": "no vale", "meaning": "no está permitido" }
+      ]
+    }
+  ]
+}

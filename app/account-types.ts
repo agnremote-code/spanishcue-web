@@ -20,6 +20,7 @@ export type TeacherAccount = AccountAccess & {
   lastSignInAt: number;
 };
 
+/** /cuenta sections, in sidebar order (`/cuenta?tab=<key>`). */
 export const ACCOUNT_TAB_KEYS = [
   "inicio",
   "alumnos",
@@ -32,47 +33,7 @@ export const ACCOUNT_TAB_KEYS = [
 export type AccountTabKey = (typeof ACCOUNT_TAB_KEYS)[number];
 
 export function accountTabFromValue(value: string | null | undefined): AccountTabKey {
+  // Homework lives inside «Mis alumnos» now; old links keep working.
+  if (value === "autoestudio") return "alumnos";
   return ACCOUNT_TAB_KEYS.includes(value as AccountTabKey) ? (value as AccountTabKey) : "inicio";
-}
-
-type AccountLocale = "es" | "en";
-
-const emptyAccountStates = {
-  alumnos: {
-    es: {
-      title: "Mis alumnos",
-      body: "Todavía no hay alumnos guardados. Este módulo se habilitará después de completar la base de cuentas y permisos.",
-    },
-    en: {
-      title: "My students",
-      body: "No students are stored yet. This module will be enabled after the account and permissions foundation is complete.",
-    },
-  },
-  historial: {
-    es: {
-      title: "Historial de clases",
-      body: "Todavía no hay clases registradas. Abrir una lección para prepararla no la marca como dictada.",
-    },
-    en: {
-      title: "Class history",
-      body: "No classes are recorded yet. Opening a lesson to prepare it does not mark it as taught.",
-    },
-  },
-  favoritos: {
-    es: {
-      title: "Favoritos",
-      body: "Todavía no hay favoritos guardados. La biblioteca no simula marcadores que aún no persisten en tu cuenta.",
-    },
-    en: {
-      title: "Favorites",
-      body: "No favorites are stored yet. The library does not simulate bookmarks that are not persisted to your account.",
-    },
-  },
-} as const;
-
-export function accountEmptyState(
-  tab: "alumnos" | "historial" | "favoritos",
-  locale: AccountLocale,
-) {
-  return { kind: "empty" as const, hasPersistedData: false, ...emptyAccountStates[tab][locale] };
 }

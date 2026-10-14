@@ -1,6 +1,6 @@
 export const STUDENT_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Sin definir'] as const;
 export const STUDENT_STATUSES = ['active', 'archived'] as const;
-export const CLASS_STATUSES = ['planned', 'taught'] as const;
+export const CLASS_STATUSES = ['planned', 'taught', 'absent', 'cancelled'] as const;
 
 export type StudentLevel = (typeof STUDENT_LEVELS)[number];
 export type StudentStatus = (typeof STUDENT_STATUSES)[number];

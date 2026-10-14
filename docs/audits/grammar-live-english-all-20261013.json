@@ -1,0 +1,2886 @@
+{
+  "version": 1,
+  "authorization": "Owner request 2026-10-13 16:52Z (Ale): «seguí así con TODAS las clases de gramática», applying the approved 230 prototype rules (2026-10-13 11:25Z: Spanish first, optional English behind the EN button). English appears only as optional translations of key examples and concepts in A1–A2 grammar classes.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "Pronouns replace a noun we already know."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "She puts it in her bag. She greets her."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "Pronoun + verb: lo tengo = I have it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "it · him · her · them"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I have the map: I have it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I have the photo: I have it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I look for my books: I look for them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I see Elena: I see her."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "to him · to her · to them"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I give Elena a book: I give her a book."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I send Pablo a message."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I give the folders to my colleagues."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "me · you · us"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "Can you see me? I’m at the door."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I’ll send you a photo of the entrance."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "Elena gives us a coffee."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I see her."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I give her a book."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I’ll take them tomorrow."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I have them in my bag."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I give him/her a book."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I send them a photo in the afternoon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g106.ts",
+      "text": "I see her at the office."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "One verb form tells you who does the action."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "to study → I study"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I study Spanish."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "We work in the morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Ana reads the message."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "You write a lot."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "who"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I read the message."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "You prepare the book at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "We study at six."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Luis and Marta work a lot."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Spanish often drops the subject pronoun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "when"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Right now I’m working at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I work at home on Mondays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Today we study at six."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I read the newspaper every morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I’m reading the message now."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I read messages every day."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "leo = I read / I’m reading"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "mood: inform · ask · wish"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Open the book, please."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "I hope the class is interesting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "informs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "asks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "wishes"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "We prepare the presentation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "Today we study Spanish at six."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "They read the newspaper every day."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "person"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "tense"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g107.ts",
+      "text": "mood"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "A noun phrase: one main noun and extra details."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "noun phrase"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "the book"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a practical class"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "today’s class"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "two comfortable chairs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "agreement"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a new book → some new books"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a round table → two round tables"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "the white house → the white houses"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "Only determiner, noun and adjective agree."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "of · with · for"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a Spanish book · today’s class"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a house with a garden · a lamp with white light"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a table for two · a folder for documents"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a document folder"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a folder with photos"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a folder for the meeting"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "de + el = del"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "word order"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a very big house with a garden"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "my black leather bag"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "two comfortable chairs for the living room"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "a big table → una mesa grande"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "A small table for four."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "A very big house with a garden."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "Two blue, comfortable chairs."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g110.ts",
+      "text": "The red document folder."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "A sentence needs a conjugated verb."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "subject + verb + information"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Ana works in Madrid."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "My friends live nearby."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "I study Spanish on Tuesdays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "agreement"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "My brother cooks."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "My brothers cook."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Ana and Leo prepare the meeting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Leo and I prepare the meeting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "not"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Ana doesn’t work on Saturdays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Leo doesn’t prepare documents in the morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "I don’t have time today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Leo works today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Leo doesn’t work today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "No, I don’t work."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "yes/no question"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Does Ana work today?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Do you have time this afternoon?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "wh- question"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Where does Ana work?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "When does the meeting start?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "What is Leo preparing?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Who has the documents?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Where does Luis study?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "Leo and I prepare the documents."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "subject + verb"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g111.ts",
+      "text": "questions"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "State with participles, groups with singular agreement, and comparisons."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "past participle as adjective"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "a well-known film"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "some closed doors"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "a recommended restaurant"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The chairs are tidy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "collective nouns"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "People are very friendly here."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "My family is big."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The team is ready."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The group prefers the room on the first floor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "People are tired."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The people are tired."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "people are → la gente es"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "more / less … than"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The second room is bigger than the first."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "This neighbourhood is less noisy than the centre."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The new chairs are more comfortable than the old ones."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "as … as"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "This room is as quiet as the library."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The second book is as interesting as the first."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "Both rooms are equally quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The first room is quieter than the second."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The chairs are as comfortable as the armchairs."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "The tables are tidy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "participle as adjective"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "collective noun"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g112.ts",
+      "text": "comparison"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "One sentence can say when, how and where something happens."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "when, where, how"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I study in the morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I study at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I study calmly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I study calmly at home in the morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "the usual order"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I work calmly at home in the morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "We walk slowly in the park on Sundays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I read a book on the train every day."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Keep the subject and the verb together."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "start with the frame"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "On Tuesday afternoon we work together in the library."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "We work together in the library on Tuesday afternoon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "At home I work better."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I work better at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "The day comes first."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "The activity comes first."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "A long frame at the start often takes a comma."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "either… or…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Do you prefer tea or coffee?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Do you work at home or in an office?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Shall we meet before or after lunch?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Shall we go on Tuesday or on Wednesday?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "The voice rises on the first option and falls on the second."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Don’t put every piece at the start."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I’m free on Tuesday afternoon."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "I work at home in the morning."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Do you prefer Tuesday or Wednesday?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "Tomorrow we meet at the library."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "when · where · how"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "same fact, different start"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g113.ts",
+      "text": "A or B?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "We use the present tense for routines."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "habits and routines"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Nora opens the shop at nine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "I have lunch with a colleague at one."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "On Saturdays I visit my family."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "You usually study at night."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "stem + ending"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "speak → I speak"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "eat → you eat"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "live → we live"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "-er and -ir verbs share most endings."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "No before the verb; questions with ¿? and rising intonation."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "right now"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Nora is writing a message to a customer now."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Where are you? —I’m at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "This month I’m working afternoons."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "general facts"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Water boils at a hundred degrees."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "In Chile they speak Spanish."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Bookshops sell books and magazines."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "habit"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Some very common verbs are irregular in the “yo” form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Stem-changing verbs come later."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "The ending shows the person, so “yo” is optional."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Do you sell books in English?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "I visit my family on Saturdays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "We don’t work on Sundays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "Nora is writing a message now."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "habits"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "now"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g140.ts",
+      "text": "facts"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "Something already happened, but we tell it from the present."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "Only haber changes; the participle stays the same."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "a time period that includes now"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "I spoke to the teacher today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "This week we have checked all the photos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "This month I started a design course."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "Have you eaten yet?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "life experience"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "Have you ever travelled alone?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "I have never tried sushi."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "I have visited Mexico three times."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "I have already chosen the photos, but I haven’t finished the project yet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "already"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "not yet"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "a past action with a present result"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "Marta has lost the folder, so she can’t send her part."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "The printer has broken!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "You look tired. What has happened?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "I have never been to Japan."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "We have worked a lot this week."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "I haven’t written the introduction yet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "today, this week"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "ever, never, already, not yet"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g141.ts",
+      "text": "present result"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "We use the preterite for finished actions in a finished time."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "a finished action"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "Last night I had dinner with Laura."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "Yesterday I worked eight hours."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "On Saturday we went to the museum."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "In 2024 we travelled to Chile."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "hablo = I speak · habló = he/she spoke"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "Context tells you if “hablamos” is present or past."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "Common irregular verbs have a new stem and no written accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "a sequence of events"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "He came in, said hello and sat down."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "First we bought a map and then we visited the market."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "In the end we came back on the last bus."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "a finished period"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "We spent two hours at the museum."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "I worked in a hotel for three years."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "The trip lasted just one day."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "Last Saturday we went to the museum."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "We spent two hours at the market."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "finished action"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "sequence"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "finished period"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "We use the imperfect to describe the past."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "describing the past"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "The library was small and had big windows."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "The street was empty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "In winter it was cold, but there was good light."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "It was ten o’clock and I was twelve."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "hablábamos, éramos, íbamos"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "past habits (used to)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "As a child I used to play football in the street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "Every summer we used to travel to the coast."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "I didn’t use to drink coffee."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "Every Friday we all used to eat together."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "I used to go"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "now I study"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "an action in progress"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "I was cooking when you called."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "While I was looking for a book, I found a note."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "I was reading and my classmate was working at the next table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "I was looking"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "I found"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "Every Sunday I used to go to the park."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "The room had big windows."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "was, had, there was"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "used to"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g143.ts",
+      "text": "was doing"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "We use the simple future for predictions."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "predictions"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "Tomorrow it will rain all over the country."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "I think meetings will be shorter."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "In the future we will work fewer hours."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "There will probably be some questions."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "All forms have an accent except “nosotros”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "Some verbs change the stem but keep the same endings."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "promises"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "I’ll call you tonight."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "I’ll send the address on Friday."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "I promise I won’t be late."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "expected results"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "With practice, you’ll improve."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "If we leave at eight, we’ll arrive on time."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "If we share information, we’ll work better."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "Present after “si”, future in the result."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "There will be a room for calls in the new office."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "If you practise every day, you’ll improve."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "prediction"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "promise"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g144.ts",
+      "text": "expected result"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "We use the imperative to give instructions and make requests."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "affirmative commands (tú)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Open the blue door."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Check the sound before calling."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Write a message to the group."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Turn on the computer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "negative commands (tú)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Don’t close the program window."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Don’t use the big room."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Don’t open the door."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Don’t eat in the room, please."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "polite requests"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Save your notes, please."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Can you close the window?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Don’t use the big room, because there’s a meeting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Close the door."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Can you close the door, please?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "Pronouns attach to affirmative commands and go before negative ones."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "habla / no hables · come / no comas"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "do it"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "don’t do it"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g145.ts",
+      "text": "politeness"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Four small words to connect ideas: and, or, but, nor."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "and"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I work from home and study Spanish."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Pablo buys vegetables and Julia sets the table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "The class is practical and fun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I have a brother and a sister."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "y becomes e before an «i» sound."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "or"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Shall we cook at your place or go to a café?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Do you want coffee or tea?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "We can watch a film or go for a walk."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I arrive at seven or eight."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Use «o» to offer choices."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "both"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "one of the two"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "but"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "The café is comfortable, but it is far away."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Julia has pasta, but she has no vegetables."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "The apartment is small, but it is comfortable."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "The restaurant is expensive, but the food is excellent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "nor / neither… nor"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I eat neither meat nor fish."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I neither run nor swim."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Julia has no tomatoes or onions."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I drink neither coffee nor tea."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "Shall we eat together?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "We cook or we go to a café."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "The hotel is expensive, but it is nice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "I buy the bread and you set the table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g211.ts",
+      "text": "neither… nor"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "An opinion, a reason and a goal."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I think (that)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I think the library is a good place."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I think this neighbourhood is quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I think Spanish is easy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "Leo thinks the café is better."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "«que» is never dropped."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "because"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I study at the library because my house is noisy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I study Spanish because I travel a lot."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I don’t go to the café because there are lots of people."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I like this neighbourhood because it is quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "why?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "to / in order to"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I go early to prepare my questions."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I go to the market to buy fruit."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I take my notebook to write down new words."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "Leo comes to practise Spanish with me."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "porque + conjugated verb; para + infinitive."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "in order to"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I think the neighbourhood is quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I study at the library because it is quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g212.ts",
+      "text": "I think"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "Before, after and when: three ways to order a routine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "before + -ing"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "Before opening my email, I check my to-do list."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "Before leaving, I have breakfast."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "I brush my teeth before going to sleep."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "Before lunch, I check what I have finished."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "before leaving = antes de salir"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "after + -ing"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "After making a coffee, I start with the urgent document."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "After lunch, I go for a short walk."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "I answer messages after lunch."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "After work, I go to the gym."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "before"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "after"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "when / whenever"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "When she gets a question, Silvia saves it in a folder."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "When I get home, I check my email."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "When I have lots of tasks, I take a short break."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "I call my mum when I have time."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "Before opening my email, I check the list."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "After lunch, I walk a little."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g213.ts",
+      "text": "When I get home, I have a shower."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "A plan with options: if this happens, we do that."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "if + present"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "If it rains, we take the bus."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "If the weather is good, we walk from the station."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "If the train is late, I’ll let you know."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "If I have time, I’ll call you later."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "if it rains = si llueve (never «si lloverá»)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "the order can change"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "We take the bus if it rains."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "We eat at a café if we find a free table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "Ana takes a bag if she buys big books."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "comma"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "no comma"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "if / yes"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "Yes, I’ll go if I have time."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "Yes, we leave at nine if you finish at eight."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "Yes, I’ll help you if you wait for me a moment."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "if (maybe)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "when (always)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g214.ts",
+      "text": "I’ll call you if I leave early."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "In Argentina and Uruguay, people say “vos” instead of “tú”. Same meaning, different verb form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Do you speak Spanish?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "With vos, the stress moves to the end of the verb."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos + -ar verbs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You work at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Do you study Spanish on Tuesdays?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You have breakfast very early."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Do you travel by bus?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos + -er verbs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You eat at the office."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Do you read the newspaper in the morning?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You learn very fast."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos + -ir verbs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Do you live near the centre?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You write a lot of messages."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Do you open the shop at nine?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Infinitive minus -r, plus -s, with an accent."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos uses te and tu, like tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Common forms to recognise: sos, tenés, querés, podés."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Don’t mix tú with vos verb forms."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hi! You’re the new student, right?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "And where do you live?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "And do you teach here, at the university?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You live in the centre."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You eat at home on Sundays."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "You work a lot and study."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "you speak"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "you eat"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "you live"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Nouns name people, places, things and ideas."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "noun"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "a person"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "a place"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "a thing"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "an idea"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "If it can take el/la/un/una, it is probably a noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Every noun is masculine or feminine, even objects."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "masculine"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "the book · a notebook"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "the phone · a glass"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Laura’s desk"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "feminine"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "the house · a table"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "the song · a meeting"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "the city · a university"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Learn every noun with its article."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "common exceptions"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "The day starts with a meeting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "The map is on the wall."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "I have a problem with the computer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "The photo is in Laura’s hand."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Many words ending in -ma are masculine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "plural"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "houses · coffees"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "hotels · cities"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "lights · pencils"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "canción → canciones: the accent mark disappears."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Words that go with the noun change too."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "el capital = money · la capital = capital city"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Laura, what is in the box?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "There are two books, three pencils and some photos."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "There are three pencils in the box."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "The photos are on the desk."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g40.ts",
+      "text": "Tomorrow there are two meetings."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "Adjectives describe nouns."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "noun + adjective"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "an interesting book"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a quiet street"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a difficult day"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a kind person"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "The room is small. The chairs are comfortable."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "adjectives in -o: four forms"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "the new neighbourhood · the new house"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "the new neighbourhoods · the new houses"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "The walls are white."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "Mixed group → masculine plural."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "same form for masculine and feminine"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a big hotel · a big house"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "two interesting books"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "an easy task · easy tasks"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "some blue streets"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "nationalities"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a Spanish boy · a Spanish girl"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a French student (m · f)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "Ana and Leo are Argentinian."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "Clara is Colombian."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "francés → francesa"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "four forms"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "two forms"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "a good book · a great city · very quiet"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "Look, Clara: this is the small room."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "How nice! It’s very quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "The small room is quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "I have a round table."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "The blue chairs are comfortable."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "My colleagues are very nice."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g41.ts",
+      "text": "The adjective copies the noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Articles go before the noun and agree with it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Learn every noun with its article."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "a / an / some"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "There is a café nearby."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "I need a pharmacy (any pharmacy)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "I have a question."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "I see some friends on the terrace."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "hay + un/una, never hay + el/la"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "the"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "I see a café. The café is full."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Can you close the door? (the door of this room)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "The sun is very strong today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Where is the bathroom? (in this place)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "a café"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "the café"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "She is a very creative teacher."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "del = de + el · al = a + el"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Sergio, where do we have the meeting?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Near the office there is a new café."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "There is a free table on the terrace."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "The café has a blue door."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "I have the documents for the meeting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "a / some"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g42.ts",
+      "text": "Does the listener know which one?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "Spanish has three distances: near me, near you, far from both."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this / these"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this phone · this cup"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "these books · these keys"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "that / those (near you)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "that coffee · that backpack"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "those shoes · those chairs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "that / those (over there)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "that building · that house (over there)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "those trees · those mountains"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this / that (thing, idea)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "What is this?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "That is a present for you."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "This is very interesting."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "What is that over there?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this book"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this (thing)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "esto never goes with a noun"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "este and ese are the most common."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this week · this year · in those days"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "Good morning. How much is this notebook?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "I also need two small folders. And that folder?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "I want this notebook here."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "Those boxes over there are big."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "What is that?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "That coffee is for you."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "that"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "that over there"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "this / that thing"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g43.ts",
+      "text": "Where is it? Do you know what it is?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "Possessives say who something belongs to."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "my · your · his / her / their"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "my passport · my documents"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "your room · your keys"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "his/her/their phone · his/her/their suitcases"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "mis = many things, not many owners"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "our"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "our neighbourhood"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "our family"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "our plans"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "our photos"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "vuestro = your (plural), used in Spain"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "his / her / your / their"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "It’s his/her book. (Whose?)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "It’s Ana’s book."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "It’s their house."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "Is it your turn, madam?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "ambiguous"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "clear"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "mine · yours · a friend of mine"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "Elena, do you see my keys? I can’t find them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "No. Are they in your backpack?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "My keys are in my bag."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "Our room is near the entrance."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "It’s Marta’s folder."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "Where is your phone?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "Marta’s folder"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g44.ts",
+      "text": "The owner picks the word; the thing picks the form."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "Exact quantities: numbers and containers."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "exact quantities"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "two coffees · six people"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "a kilo of tomatoes"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "a bottle of water"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "a bag of bread · a pack of napkins"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "uno alone · un / una + noun"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "a little · a lot · enough"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "I have lots of cups, but few plates."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "There is a lot of fruit at the market."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "I have little time today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "There is enough coffee and enough chairs."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "With verbs: always mucho / poco."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "all · every"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "all the bread"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "all week"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "every day"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "all the napkins"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "todos los días = every day"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "four plates"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "few plates"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "all the plates"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "too much · another · more… than"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "Luis, how many people are coming tomorrow?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "Six people, including you."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "I have many cups but few plates."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "I buy two bottles of water."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "All the shops close at six."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "There is enough coffee in the kitchen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "exact"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "approximate"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g45.ts",
+      "text": "Quantity words agree with the noun."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Subject pronouns say who does the action."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "tú = informal · usted = formal"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "subject pronouns are often dropped"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I work at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I cook; you wash the dishes. (contrast)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Do you live here? (polite, clear)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "She gets up at seven and he at eight."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I live in Bogotá."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I live in Bogotá, and you in Lima."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Don’t repeat «yo» in every sentence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "reflexive verbs"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I get up at seven."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "What’s your name?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Lucía gets ready for work."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "We go to bed late."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "get up · shower · wash · comb · get dressed · get ready · sit down · go to bed · stay"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Diego goes to bed at twelve."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Lucía and Diego go to bed at eleven."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Other pronouns come in other lessons."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Diego, tomorrow I get up at seven."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "So early?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I work at home and she works at the office."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "We go to bed at eleven."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I, you, he, she…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "I get up"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g46.ts",
+      "text": "Drop «yo», keep «me»."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Here, there (near you), over there (far from both of us)."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "here · there · over there"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "I am here, in the library."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Your backpack is there, next to your chair."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "The Spanish books are over there, at the back."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "My house is very far. The library is close."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "acá ≈ aquí · allá ≈ allí"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "when"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Today I work at the library."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Tomorrow I work at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "First I read my messages and then I study."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "I can’t right now, I’m in class."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "después = afterwards · después de = after"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "very"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "The room is very quiet."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "My house is very far."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Marta speaks very well."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "a lot · much / many"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Diego works a lot."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "There is a lot of noise in the street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "There are a lot of people in the library today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "I have a lot of books at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "very interesting"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "I study a lot"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "how"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Marta cooks well."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Today I sleep badly: there is a lot of noise."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Speak slowly, please."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Diego writes very fast."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "very + quality · a lot of + quantity"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "Are you working here today?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "here"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "The library is very far."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "First I read and then I write."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "I’m not working much today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "The books are over there, at the back."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "today · tomorrow · first → then"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g47.ts",
+      "text": "very · a lot"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "Ser: what is it? Estar: where is it / how is it now? Hay: what is there?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "The office is small."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "The office is on a quiet street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There are two tables in the office."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "to be (identity, description)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "I am Julia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "My colleague is a designer."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "My neighbours are from Peru."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "The office is small and modern."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "She is a designer → Es diseñadora."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "to be (location, state)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "My desk is next to the window."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "Today the office is very tidy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "The blue door is open."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "I am tired: I work a lot."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "Location → estar"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "there is · there are"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There is a bakery on the corner."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There are two cafés in front of the building."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There are a lot of free chairs in the room."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "Is there water in the fridge?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There is a table…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "The table is…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "es = what it is like · está = how it is now"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There is a table next to the door."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "The office is in the city centre."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "There are two cafés on my street."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "identity, description"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "location, state"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g48.ts",
+      "text": "there is / there are"
+    }
+  ]
+}

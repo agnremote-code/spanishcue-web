@@ -1,171 +1,143 @@
+import { env } from "cloudflare:workers";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { getUserSessionFromHeaders, signedInFromHeaders } from "../access-policy";
-import {
-  ACCOUNT_TAB_KEYS,
-  accountEmptyState,
-  accountTabFromValue,
-  type AccountTabKey,
-} from "../account-types";
+import { getUserSessionFromHeaders, isFreeLesson, localLessonPath, signedInFromHeaders } from "../access-policy";
+import type { AccountAccess } from "../account-types";
+import { SpanishCueBrand } from "../SpanishCueBrand";
 import LogoutButton from "../LogoutButton";
 import PasswordResetButton from "../PasswordResetButton";
 import LanguageSwitcher from "../i18n/LanguageSwitcher";
-import { localeFromHeaders, translate, type MessageKey } from "../i18n/messages";
-import "../teachers.css";
+import { localeFromHeaders } from "../i18n/messages";
+import { lessons } from "../lesson-catalog";
+import { catalogLessons } from "../conversation-families/catalog";
+import { resolveFirebaseAccount } from "../../db/accounts";
 import "./style.css";
 import SubscriptionManager from "./SubscriptionManager";
-import { lessons } from "../lesson-catalog";
-import TeacherPasses from "../autoestudio/TeacherPasses";
-import { StudentTracker } from "../student-tracker/StudentTracker";
+import { DASHBOARD_TABS, dashboardTabFromValue, dashT, dateLabel, type DashKey, type DashLesson, type DashboardTab } from "./copy";
+import { SectionBoundary } from "./ui";
+import Overview, { type PlanSummary } from "./modules/Overview";
+import Students from "./modules/Students";
+import History from "./modules/History";
+import Favorites from "./modules/Favorites";
 
 export const dynamic = "force-dynamic";
 
-const tabLabels: Record<"es" | "en", Record<AccountTabKey, string>> = {
-  es: {
-    inicio: "Inicio",
-    alumnos: "Mis alumnos",
-    historial: "Historial de clases",
-    favoritos: "Favoritos",
-    suscripcion: "Suscripción",
-    ajustes: "Ajustes",
-  },
-  en: {
-    inicio: "Overview",
-    alumnos: "My students",
-    historial: "Class history",
-    favoritos: "Favorites",
-    suscripcion: "Subscription",
-    ajustes: "Settings",
-  },
-};
+const icons: Record<DashboardTab, string> = { inicio: "⌂", alumnos: "☺", historial: "≡", favoritos: "★", suscripcion: "◆", ajustes: "⚙" };
+
+/** Every lesson id the dashboard may show (records, progress, favorites), with the library's public title and route. */
+function dashboardLessons(): DashLesson[] {
+  const family = new Map(catalogLessons.map((lesson) => [lesson.id, lesson]));
+  return lessons.map((lesson) => {
+    const card = family.get(lesson.id) ?? lesson;
+    const href = localLessonPath(card) ?? null;
+    return { id: lesson.id, title: card.title, level: card.displayLevel || card.level, category: lesson.category, href, image: card.image, free: isFreeLesson(lesson.id) };
+  });
+}
 
 export default async function Account({
   searchParams,
 }: {
-  searchParams: Promise<{ tab?: string }>;
+  searchParams: Promise<{ tab?: string; nuevo?: string; alumno?: string; vista?: string }>;
 }) {
   const [requestHeaders, params] = await Promise.all([headers(), searchParams]);
+  const tab = dashboardTabFromValue(params.tab);
   if (!signedInFromHeaders(requestHeaders)) {
-    redirect("/ingresar?modo=entrar&returnTo=%2Fcuenta");
+    const back = tab === "inicio" ? "/cuenta" : `/cuenta?tab=${tab}`;
+    redirect(`/ingresar?modo=entrar&returnTo=${encodeURIComponent(back)}`);
   }
 
   const session = getUserSessionFromHeaders(requestHeaders);
-  const activeTab = accountTabFromValue(params.tab);
   const locale = localeFromHeaders(requestHeaders);
-  const labels = tabLabels[locale];
-  const t = (key: MessageKey) => translate(locale, key);
-  const status = session.isOwner
-    ? t("account.ownerStatus")
-    : session.isPro
-      ? t("account.fullStatus")
-      : t("account.freeStatus");
+  const t = (key: DashKey) => dashT(locale, key);
+  const fullAccess = session.isPro || session.isOwner;
+  let access: AccountAccess | null = null;
+  try {
+    if (session.userId) access = await resolveFirebaseAccount(env.DB, { uid: session.userId, email: session.email ?? "", emailVerified: true, displayName: null });
+  } catch { access = null; }
+
+  const roleLabel = session.isOwner ? t("role.owner") : fullAccess ? t("role.pro") : t("role.free");
+  const roleTone = session.isOwner ? "owner" : fullAccess ? "pro" : "free";
+  const sourceLabel = access?.accessSource === "billing" ? t("sub.sourceBilling") : access?.accessSource === "owner" ? t("sub.sourceOwner") : access?.accessSource ? t("sub.sourceManual") : null;
+  const plan: PlanSummary = session.isOwner
+    ? { label: t("sub.ownerPlan"), detail: t("sub.ownerCopy"), tone: "owner" }
+    : fullAccess
+      ? { label: t("sub.proPlan"), detail: [sourceLabel, access?.accessExpiresAt ? `${t("sub.until")} ${dateLabel(locale, access.accessExpiresAt)}` : null].filter(Boolean).join(" · "), tone: "pro" }
+      : { label: t("sub.freePlan"), detail: t("sub.freeCopy"), tone: "free" };
+  const dashLessons = dashboardLessons();
+  const name = session.email?.split("@")[0] ?? "";
 
   return (
-    <div className="teacher-app">
-      <main className="teacher-main account-page">
-        <div className="account-topline">
-          <Link href="/">← {t("common.library")}</Link>
-          <LanguageSwitcher className="page-language" />
-        </div>
+    <div className="cx-shell">
+      <a className="cx-skip" href="#cx-main">{t("skip")}</a>
+      <header className="cx-topbar">
+        <Link href="/" className="cx-brand" aria-label="SPANISHCUE"><SpanishCueBrand variant="compact" context={t("nav.account")} /></Link>
+        <nav className="cx-crumbs" aria-label="Breadcrumb"><Link href="/cuenta">{t("nav.account")}</Link><span aria-hidden="true">/</span><b>{t(`nav.${tab}` as DashKey)}</b></nav>
+        <LanguageSwitcher className="cx-lang" />
+        <span className={`cx-role is-${roleTone}`}>{roleLabel}</span>
+        <Link className="cx-btn is-primary cx-library" href="/">{t("nav.library")} →</Link>
+      </header>
 
-        <section className="teacher-intro account-intro">
-          <div>
-            <p>{t("account.kicker")}</p>
-            <h1>{session.isOwner ? t("account.ownerTitle") : t("account.teacherTitle")}</h1>
-            <div>{session.email}</div>
+      <div className="cx-layout">
+        <aside className="cx-side">
+          <nav aria-label={t("nav.label")}>
+            <ol>
+              {DASHBOARD_TABS.map((item, index) => (
+                <li key={item}>
+                  <Link href={item === "inicio" ? "/cuenta" : `/cuenta?tab=${item}`} aria-current={tab === item ? "page" : undefined}>
+                    <i aria-hidden="true">{String(index + 1).padStart(2, "0")}</i>
+                    <span><em aria-hidden="true">{icons[item]}</em>{t(`nav.${item}` as DashKey)}</span>
+                  </Link>
+                </li>
+              ))}
+            </ol>
+            {session.isOwner && <div className="cx-side-group">
+              <p>{t("nav.admin")}</p>
+              <Link href="/admin"><i aria-hidden="true">A</i><span>{t("nav.adminTeachers")}</span></Link>
+              <Link href="/admin/reportes"><i aria-hidden="true">R</i><span>{t("nav.adminReports")}</span></Link>
+            </div>}
+          </nav>
+          <div className="cx-side-user">
+            <strong title={session.email ?? ""}>{session.email}</strong>
+            <LogoutButton className="cx-link" />
           </div>
-          <strong className={`account-access-badge ${session.role}`}>{status}</strong>
-        </section>
+        </aside>
 
-        <nav className="account-tabs" aria-label={locale === "es" ? "Secciones de la cuenta" : "Account sections"}>
-          {ACCOUNT_TAB_KEYS.map((tab) => (
-            <Link
-              key={tab}
-              href={`/cuenta?tab=${tab}`}
-              className={activeTab === tab ? "active" : undefined}
-              aria-current={activeTab === tab ? "page" : undefined}
-            >
-              {labels[tab]}
-            </Link>
-          ))}
-        </nav>
+        <main className="cx-main" id="cx-main" tabIndex={-1}>
+          <header className="cx-head">
+            <p className="cx-kicker">{tab === "inicio" ? `${t("home.hello")}, ${name}` : t("nav.account")}</p>
+            <h1>{t(`head.${tab}` as DashKey)}</h1>
+            <p>{t(`head.${tab}Copy` as DashKey)}</p>
+          </header>
 
-        {activeTab === "inicio" && (
-          <section className="account-panel" aria-labelledby="account-overview-title">
-            <span>{locale === "es" ? "ESTADO ACTUAL" : "CURRENT STATUS"}</span>
-            <h2 id="account-overview-title">{status}</h2>
-            <p>
-              {locale === "es"
-                ? "Tu sesión está verificada en el servidor. El acceso PRO se decide por los permisos de tu cuenta, no solamente por haber iniciado sesión."
-                : "Your session is verified on the server. PRO access is determined by your account permissions, not merely by being signed in."}
-            </p>
-            <dl className="account-summary">
-              <div><dt>{t("account.email")}</dt><dd>{session.email}</dd></div>
-              <div><dt>{t("account.plan")}</dt><dd>{session.isPro ? t("account.completeAccess") : t("account.freeAccount")}</dd></div>
-            </dl>
-            <Link className="dialog-primary account-library-link" href="/">{t("common.library")} →</Link>
-          </section>
-        )}
-
-        {activeTab === "alumnos" && (
-          <>
-            <TeacherPasses enabled={session.isPro || session.isOwner} />
-            <StudentTracker draftScope={session.userId || "unknown"} lessons={lessons.map(({ id, title }) => ({ id, title }))} />
-          </>
-        )}
-
-        {activeTab === "historial" && (
-          <StudentTracker historyOnly draftScope={session.userId || "unknown"} lessons={lessons.map(({ id, title }) => ({ id, title }))} />
-        )}
-
-        {activeTab === "favoritos" && (() => {
-          const empty = accountEmptyState(activeTab, locale);
-          return (
-            <section className="account-panel account-empty" aria-labelledby={`account-${activeTab}-title`}>
-              <span>{locale === "es" ? "SIN DATOS GUARDADOS" : "NO STORED DATA"}</span>
-              <h2 id={`account-${activeTab}-title`}>{empty.title}</h2>
-              <p>{empty.body}</p>
-              <small>{locale === "es" ? "No se muestran datos de ejemplo como si fueran reales." : "Sample data is not shown as if it were real."}</small>
-            </section>
-          );
-        })()}
-
-        {activeTab === "suscripcion" && (
-          <section aria-label={labels.suscripcion}>
-            <SubscriptionManager fullAccess={session.isPro} />
-          </section>
-        )}
-
-        {activeTab === "ajustes" && (
-          <section className="account-panel" aria-labelledby="account-settings-title">
-            <span>{locale === "es" ? "CUENTA Y SEGURIDAD" : "ACCOUNT AND SECURITY"}</span>
-            <h2 id="account-settings-title">{labels.ajustes}</h2>
-            <div className="account-settings">
-              <article>
-                <span>{t("account.email")}</span>
-                <strong>{session.email}</strong>
-                <small>{t("account.emailCopy")}</small>
-              </article>
-              <article>
-                <span>{t("account.password")}</span>
-                <strong>{t("account.protected")}</strong>
-                <small>{t("account.passwordCopy")}</small>
-                {session.email && <PasswordResetButton email={session.email} />}
-              </article>
-              <article>
-                <span>{t("account.plan")}</span>
-                <strong>{session.isPro ? t("account.completeAccess") : t("account.freeAccount")}</strong>
-                <small>{session.isPro ? t("account.completeCopy") : t("account.freePlanCopy")}</small>
-              </article>
-            </div>
-            <div className="access-actions">
-              {session.isOwner && <Link className="dialog-primary" href="/admin">{t("account.openPanel")}</Link>}
-              <LogoutButton className="account-link logout-button" />
-            </div>
-          </section>
-        )}
-      </main>
+          <SectionBoundary>
+            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled={fullAccess} plan={plan} />}
+            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled={fullAccess} />}
+            {tab === "historial" && <History lessons={dashLessons} startNew={params.nuevo === "1"} studentId={params.alumno ?? null} view={params.vista === "abiertas" ? "abiertas" : "registradas"} />}
+            {tab === "favoritos" && <Favorites lessons={dashLessons} fullAccess={fullAccess} />}
+            {tab === "suscripcion" && <div className="cx-stack">
+              <section className={`cx-panel cx-plan is-${plan.tone}`} aria-labelledby="plan-title">
+                <header><h2 id="plan-title">{t("sub.plan")}</h2><span className={`cx-role is-${roleTone}`}>{roleLabel}</span></header>
+                <strong>{plan.label}</strong>
+                {plan.detail && <p>{plan.detail}</p>}
+                {fullAccess && !session.isOwner && <dl className="cx-facts"><div><dt>{t("sub.source")}</dt><dd>{sourceLabel ?? "—"}</dd></div><div><dt>{t("sub.until")}</dt><dd>{access?.accessExpiresAt ? dateLabel(locale, access.accessExpiresAt) : t("sub.noEnd")}</dd></div></dl>}
+                {!fullAccess && <Link className="cx-btn is-primary" href="/pricing">{t("sub.upgrade")}</Link>}
+              </section>
+              {!session.isOwner && <SubscriptionManager fullAccess={fullAccess} />}
+            </div>}
+            {tab === "ajustes" && <div className="cx-settings">
+              <section className="cx-panel"><header><h2>{t("set.profile")}</h2></header>
+                <dl className="cx-facts"><div><dt>{t("set.email")}</dt><dd>{session.email}</dd></div><div><dt>{t("set.role")}</dt><dd>{roleLabel} · {plan.label}</dd></div></dl>
+              </section>
+              <section className="cx-panel"><header><h2>{t("set.language")}</h2></header><p className="cx-muted">{t("set.languageCopy")}</p><LanguageSwitcher className="cx-lang is-large" /></section>
+              <section className="cx-panel"><header><h2>{t("set.security")}</h2></header><p className="cx-muted">{t("set.securityCopy")}</p>{session.email && <PasswordResetButton email={session.email} />}</section>
+              <section className="cx-panel"><header><h2>{t("set.session")}</h2></header><p className="cx-muted">{t("set.sessionCopy")}</p><LogoutButton className="cx-btn" /></section>
+              <section className="cx-panel"><header><h2>{t("set.data")}</h2></header><p className="cx-muted">{t("set.dataCopy")}</p><a className="cx-btn" href="/api/students/export" download>{t("students.export")}</a></section>
+              {session.isOwner && <section className="cx-panel"><header><h2>{t("set.admin")}</h2></header><p className="cx-muted">{t("set.adminCopy")}</p><Link className="cx-btn is-primary" href="/admin">{t("set.openAdmin")}</Link></section>}
+            </div>}
+          </SectionBoundary>
+        </main>
+      </div>
     </div>
   );
 }

@@ -8,6 +8,16 @@ import {beforeGrammarBytes,beforeGrammarLessons,grammarSharedFiles} from './gram
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   {
+    id:239,path:'/gramatica/clase-inicial',files:/^(?:app\/grammar-classroom\/live\/lessons\/g239\.ts$|app\/grammar-classroom\/live\/audio\/|public\/audio\/grammar-live\/|public\/grammar-classroom\/previews\/clase-inicial\.webp$|scripts\/generate-grammar-live-audio\.py$|\.github\/workflows\/grammar-live-audio\.yml$|docs\/audits\/grammar-live-a0-english-additions-20261014\.json$)/,
+    edits:{
+      'app/grammar-classroom/catalog.ts':[["  [239, 'A0', 'ser-estar', 'clase-inicial', 'Clase inicial: tu primer «hola» en español', 'El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.', 50, []],\n] as const;\n/** When each addition reached the library (the «Nuevo» badge). */\nconst addedAt: Record<number, string> = { 239: '2026-10-14' };","] as const;"],["news:{addedAt:addedAt[id] ?? '2026-10-07',featured:true}","news:{addedAt:'2026-10-07',featured:true}"]],
+      'tests/grammar-classroom.test.mjs':[[' assert.equal(grammar.length,58);\n for(const id of [230,231,232,233,234,235,239]){',' assert.equal(grammar.length,57);\n for(const id of [230,231,232,233,234,235]){'],[' assert.equal(new Set(grammar.map(l=>l.id)).size,58);',' assert.equal(new Set(grammar.map(l=>l.id)).size,57);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 131);','assert.equal(lessons.length, 130);'],["['app/grammar-classroom/catalog.ts','app/grammar-classroom/live/LiveClassroom.tsx','app/grammar-classroom/live/lessons/g239.ts','app/argentina/layout.tsx'","['app/argentina/layout.tsx'"]],
+      'tests/teacher-access.test.mjs':[[' assert.equal(grammar.length,58);',' assert.equal(grammar.length,57);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/58 clases/);','assert.match(html,/57 clases/);'],['assert.match(html,/109(?:<!-- -->|\\s)+resultados/);assert.match(html,/124(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/108(?:<!-- -->|\\s)+resultados/);assert.match(html,/123(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     id:238,path:'/el-reino-de-la-rosa-dormida',files:/^(?:app\/el-reino-de-la-rosa-dormida\/|public\/reino\/|tests\/reino-[^/]*\.test\.mjs$|scripts\/qa-reino-browser\.mjs$)/,
     edits:{
       'app/lesson-catalog.ts':[text=>{
@@ -15,7 +25,7 @@ const additions = [
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:238,')&&line.includes('path:"/el-reino-de-la-rosa-dormida"')?[i]:[]);
         assert.equal(at.length,1,'one Valdoria catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',227,228,229,237,238],',',227,228,229,237],']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 130);','assert.equal(lessons.length, 129);'],['assert.equal(a1Lessons.length, 40);','assert.equal(a1Lessons.length, 39);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 130);','assert.equal(lessons.length, 129);'],['assert.equal(a1Lessons.length, 41);','assert.equal(a1Lessons.length, 40);']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/108(?:<!-- -->|\\s)+resultados/);assert.match(html,/123(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/107(?:<!-- -->|\\s)+resultados/);assert.match(html,/122(?:<!-- -->|\\s)+clases totales/);']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/reino-engine.test.mjs','tests/reino-movement.test.mjs','tests/reino-world.test.mjs','tests/reino-integration.test.mjs']);\n",'']],
     },
@@ -28,7 +38,7 @@ const additions = [
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:237,')&&line.includes('path:"/marketing-de-casinos"')?[i]:[]);
         assert.equal(at.length,1,'one casino marketing catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',227,228,229,237],',',227,228,229],']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 129);','assert.equal(lessons.length, 128);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 129);','assert.equal(lessons.length, 128);'],['assert.equal(a1Lessons.length, 40);','assert.equal(a1Lessons.length, 39);']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/107(?:<!-- -->|\\s)+resultados/);assert.match(html,/122(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/106(?:<!-- -->|\\s)+resultados/);assert.match(html,/121(?:<!-- -->|\\s)+clases totales/);']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/casino-marketing-b1.test.mjs']);\n",'']],
     },
@@ -210,7 +220,7 @@ export function isApprovedAdditionPath(path) {
 
 export function withoutApprovedAdditions(path, bytes) {
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -221,7 +231,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==236&&item.id!==237&&item.id!==238), ...repairs].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239), ...repairs].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

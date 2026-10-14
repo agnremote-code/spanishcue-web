@@ -1,0 +1,960 @@
+{
+  "game": "noche",
+  "level": "B1",
+  "items": [
+    {
+      "id": "cafe",
+      "title": "Mamá quiere venir a la fiesta",
+      "place": "Café Martina",
+      "context": "Vale toma un café sola antes de la previa. Suena el teléfono: es su madre.",
+      "speakers": [
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Graciela",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¡Feliz cumpleaños, hija! ¿Dónde estás? Se escucha mucho ruido."
+        },
+        {
+          "s": 0,
+          "text": "Gracias, mamá. Estoy en un café, tomando algo antes de la previa."
+        },
+        {
+          "s": 1,
+          "text": "Mira, te llamo porque hablé con tu tía Marta y me dijo que los treinta hay que festejarlos en familia. Y tu padre dice que nunca conoció a tus amigos."
+        },
+        {
+          "s": 0,
+          "text": "Mamá... ¿me estás diciendo que quieren venir a la fiesta?"
+        },
+        {
+          "s": 1,
+          "text": "Solo un ratito. Tu padre ya se planchó la camisa."
+        },
+        {
+          "s": 0,
+          "text": "Ay, no. Mamá, es en una terraza, va a terminar a las cinco de la mañana y va a estar llena de gente que no conocen."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, como quieras. Pero tu tía ya hizo una torta."
+        },
+        {
+          "s": 0,
+          "text": "Hagamos una cosa: mañana almorzamos todos juntos en casa, con la torta de la tía. Yo llevo a Leo, que siempre pregunta por ti."
+        },
+        {
+          "s": 1,
+          "text": "Me parece bien. Pero que conste que tu padre se va a desilusionar con lo de la camisa."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué llama la madre de Vale?",
+          "options": [
+            "Para pedirle dinero",
+            "Para decirle que no puede ir al almuerzo",
+            "Para saludarla y proponer ir a la fiesta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según la madre, ¿qué dijo la tía Marta?",
+          "options": [
+            "Que los treinta se festejan en familia",
+            "Que la fiesta va a terminar muy tarde",
+            "Que no le gustan los amigos de Vale"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué argumento usa Vale para que no vengan?",
+          "options": [
+            "Que la terraza es muy pequeña",
+            "Que la fiesta termina tarde y hay mucha gente desconocida",
+            "Que sus amigos no quieren conocerlos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo termina la conversación?",
+          "options": [
+            "Los padres van a la fiesta un ratito",
+            "La madre se enoja y corta",
+            "Quedan en almorzar juntos al día siguiente"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tus padres conocen a tus amigos? ¿Te parece importante?",
+          "model": "Conocen a algunos. Me parece bien, pero no los invitaría a todas mis fiestas."
+        },
+        {
+          "q": "¿Cómo te gustaría festejar tus próximos años: con la familia o con amigos?",
+          "model": "Me gustaría hacer las dos cosas: un almuerzo con mi familia y una cena con mis amigos."
+        },
+        {
+          "q": "Cuenta una vez que tuviste que decirle que no a alguien de tu familia. ¿Cómo lo dijiste?",
+          "model": "Mi hermano quería venir de vacaciones conmigo. Le dije que esa vez prefería viajar sola, pero que el próximo viaje lo hacíamos juntos."
+        }
+      ],
+      "gaps": "Hagamos una cosa: mañana [almorzamos] todos juntos en casa, con la [torta] de la tía. Yo llevo a [Leo], que siempre [pregunta] por ti.",
+      "glossary": [
+        {
+          "word": "festejar",
+          "meaning": "celebrar"
+        },
+        {
+          "word": "un ratito",
+          "meaning": "poco tiempo"
+        },
+        {
+          "word": "que conste",
+          "meaning": "quiero que lo sepas y lo recuerdes"
+        },
+        {
+          "word": "desilusionar",
+          "meaning": "sentirse triste porque algo no pasa como esperabas"
+        }
+      ]
+    },
+    {
+      "id": "departamento",
+      "title": "El vecino de abajo sube a quejarse",
+      "place": "Departamento de Vale",
+      "context": "La previa acaba de empezar. Leo abre la puerta y encuentra al vecino de abajo, que no parece contento.",
+      "speakers": [
+        {
+          "name": "Don Hugo",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Leo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, joven. Soy Hugo, el del segundo. Vengo por el ruido."
+        },
+        {
+          "s": 1,
+          "text": "Ah, sí, perdón. Es que hoy Vale cumple treinta. Pero en una hora nos vamos todos a otra fiesta, se lo prometo."
+        },
+        {
+          "s": 0,
+          "text": "Eso me dijeron la última vez, y a las cuatro de la mañana todavía estaban cantando. El dueño me dijo que si hay otra queja, les va a cobrar una multa."
+        },
+        {
+          "s": 1,
+          "text": "Tiene razón, lo de la otra vez fue un desastre. Mire, ¿por qué no pasa y toma algo con nosotros? Así nos conoce un poco."
+        },
+        {
+          "s": 0,
+          "text": "Mmm... ¿Qué música están poniendo? ¿Eso es salsa?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, es la lista de Vale. ¿Le gusta?"
+        },
+        {
+          "s": 0,
+          "text": "Hace cuarenta años yo tocaba la trompeta en una orquesta de salsa. Espérenme, que bajo a buscarla."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, pero... ¿y el ruido?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué sube el vecino?",
+          "options": [
+            "Para pedir una trompeta",
+            "Para quejarse del ruido",
+            "Para felicitar a Vale"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según el vecino, ¿qué dijo el dueño del edificio?",
+          "options": [
+            "Que van a pagar una multa si hay otra queja",
+            "Que tienen que dejar el departamento",
+            "Que pueden hacer ruido hasta las cuatro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le propone Leo al vecino?",
+          "options": [
+            "Bajar la música a la medianoche",
+            "Llamar al dueño juntos",
+            "Entrar a tomar algo con ellos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué podemos deducir del final?",
+          "options": [
+            "El vecino va a llamar a la policía",
+            "Va a haber todavía más ruido",
+            "La fiesta se termina temprano"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te quejaste alguna vez de un vecino? ¿Cómo lo hiciste?",
+          "model": "Sí, una vez le dejé una nota a un vecino porque ponía música muy alta a las dos de la mañana. Al día siguiente me pidió perdón."
+        },
+        {
+          "q": "¿Qué opinas de la solución de Leo? ¿Tú qué habrías hecho?",
+          "model": "Me parece inteligente, porque es difícil quejarse de una fiesta si estás dentro."
+        },
+        {
+          "q": "¿Cuál es la hora razonable para terminar una fiesta en casa?",
+          "model": "Para mí, la una de la mañana. Después, mejor ir a un bar."
+        }
+      ],
+      "gaps": "Hace cuarenta años yo tocaba la [trompeta] en una [orquesta] de salsa. [Espérenme], que bajo a [buscarla].",
+      "glossary": [
+        {
+          "word": "queja",
+          "meaning": "lo que dices cuando algo te molesta y quieres que cambie"
+        },
+        {
+          "word": "dueño",
+          "meaning": "persona a la que pertenece el departamento"
+        },
+        {
+          "word": "multa",
+          "meaning": "dinero que pagas como castigo"
+        },
+        {
+          "word": "orquesta",
+          "meaning": "grupo grande de músicos"
+        }
+      ]
+    },
+    {
+      "id": "restaurante",
+      "title": "El anillo en el postre equivocado",
+      "place": "Restaurante El Toldo",
+      "context": "En la cocina del restaurante, dos camareros hablan en voz baja. Algo salió muy mal en la mesa cuatro.",
+      "speakers": [
+        {
+          "name": "Karla",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Roberto",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Roberto, ¿dónde está el flan de la mesa cuatro? El chico me dijo que le va a pedir matrimonio a su novia y que el anillo está dentro del flan."
+        },
+        {
+          "s": 1,
+          "text": "¿Cómo que dentro del flan? Yo llevé dos flanes hace cinco minutos: uno a la cuatro y otro a la nueve."
+        },
+        {
+          "s": 0,
+          "text": "¿Y estás seguro de que el del anillo fue a la cuatro?"
+        },
+        {
+          "s": 1,
+          "text": "Bueno... seguro, seguro, no. Eran iguales. Mira, en la nueve hay un grupo que festeja un cumpleaños... la del pelo rizado está comiendo flan muy despacio."
+        },
+        {
+          "s": 0,
+          "text": "Ay, no. Esa chica es Vale, la que cumple treinta. Si encuentra un anillo, va a pensar que alguien de su mesa le está pidiendo matrimonio."
+        },
+        {
+          "s": 1,
+          "text": "Yo creo que lo mejor es ir ya y decir la verdad."
+        },
+        {
+          "s": 0,
+          "text": "Está bien, pero vas tú. Yo me quedo aquí, calmando los nervios del chico de la cuatro."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el problema en el restaurante?",
+          "options": [
+            "La cocina se quedó sin flan",
+            "Un anillo de compromiso puede estar en la mesa equivocada",
+            "Un cliente no quiere pagar la cuenta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Karla, ¿qué le dijo el chico de la mesa cuatro?",
+          "options": [
+            "Que quiere pedirle matrimonio a su novia",
+            "Que el flan está muy dulce",
+            "Que perdió un anillo en el baño"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Roberto no está seguro de dónde está el anillo?",
+          "options": [
+            "Porque no fue él quien llevó los postres",
+            "Porque se olvidó de la mesa nueve",
+            "Porque los dos flanes eran iguales"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué deciden hacer al final?",
+          "options": [
+            "Roberto va a explicar la situación",
+            "Karla va a la mesa nueve",
+            "Esperar a ver qué pasa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te parece pedir matrimonio en un restaurante, delante de todos?",
+          "model": "No me gusta mucho. Prefiero algo más privado, porque si la respuesta es no, es muy incómodo."
+        },
+        {
+          "q": "Si fueras Vale y encontraras el anillo, ¿qué harías?",
+          "model": "Primero me reiría y después preguntaría al camarero de quién es."
+        },
+        {
+          "q": "Cuenta un error en un trabajo que tuviste o que viste. ¿Cómo se resolvió?",
+          "model": "En mi primer trabajo mandé un correo a todos los clientes con el precio equivocado. Tuve que escribir otro correo para pedir disculpas."
+        }
+      ],
+      "gaps": "Ay, no. Esa chica es Vale, la que cumple [treinta]. Si encuentra un [anillo], va a pensar que alguien de su [mesa] le está pidiendo [matrimonio].",
+      "glossary": [
+        {
+          "word": "pedir matrimonio",
+          "meaning": "preguntarle a tu pareja si quiere casarse contigo"
+        },
+        {
+          "word": "anillo",
+          "meaning": "joya redonda que se pone en el dedo"
+        },
+        {
+          "word": "pelo rizado",
+          "meaning": "pelo con muchas curvas, no liso"
+        },
+        {
+          "word": "despacio",
+          "meaning": "sin prisa, con calma"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "Radio Fuente en vivo desde la plaza",
+      "place": "Plaza de la Fuente",
+      "context": "Una radio del barrio hace un programa en vivo desde la plaza. La presentadora entrevista a un vecino que organizó algo esta noche.",
+      "speakers": [
+        {
+          "name": "María José",
+          "country": "Costa Rica",
+          "voice": "es-CR-MariaNeural"
+        },
+        {
+          "name": "Luis",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches, oyentes de Radio Fuente. Estamos en la plaza con Luis, que organizó esta feria nocturna. Luis, ¿por qué una feria a las once de la noche?"
+        },
+        {
+          "s": 1,
+          "text": "Bueno, porque la fuente lleva un año sin agua. El ayuntamiento nos dijo que arreglarla cuesta mucho dinero, así que decidimos juntarlo nosotros."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué se puede comprar aquí?"
+        },
+        {
+          "s": 1,
+          "text": "De todo: ropa usada, empanadas, plantas, discos viejos... Y todo el dinero va para la fuente."
+        },
+        {
+          "s": 0,
+          "text": "Algunos vecinos opinan que eso le toca al ayuntamiento, no a la gente. ¿Qué les dirías?"
+        },
+        {
+          "s": 1,
+          "text": "Que tienen razón, pero yo prefiero hacer algo que esperar otro año. Además, mira la plaza: hacía mucho que no estaba tan llena."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cuál es el plan si consiguen el dinero?"
+        },
+        {
+          "s": 1,
+          "text": "Hacer una fiesta enorme el día que vuelva el agua. Y todos invitados."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué trata la entrevista?",
+          "options": [
+            "De una fiesta de cumpleaños",
+            "De una feria para reunir dinero para la fuente",
+            "De un problema de ruido en la plaza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Luis, ¿qué les dijo el ayuntamiento?",
+          "options": [
+            "Que arreglar la fuente es muy caro",
+            "Que van a arreglar la fuente el mes que viene",
+            "Que la feria está prohibida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué opinan algunos vecinos?",
+          "options": [
+            "Que la feria es demasiado tarde",
+            "Que la fuente no es importante",
+            "Que pagar el arreglo es responsabilidad del ayuntamiento"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Luis de esa crítica?",
+          "options": [
+            "Que los vecinos están equivocados",
+            "Que tienen razón, pero prefiere actuar ya",
+            "Que es mejor esperar al ayuntamiento"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo con Luis o con los vecinos que critican la feria? ¿Por qué?",
+          "model": "Estoy de acuerdo con Luis. A veces, si esperas al gobierno, no pasa nada."
+        },
+        {
+          "q": "¿Hay algo en tu barrio que necesita un arreglo? ¿Qué harías tú?",
+          "model": "En mi barrio el parque está muy sucio. Yo organizaría un día de limpieza con los vecinos."
+        },
+        {
+          "q": "¿Fuiste alguna vez a una feria de barrio? ¿Qué compraste?",
+          "model": "Sí, el año pasado fui a una feria y compré unos discos viejos de mi padre."
+        }
+      ],
+      "gaps": "Bueno, porque la fuente lleva un [año] sin [agua]. El ayuntamiento nos dijo que arreglarla cuesta mucho [dinero], así que decidimos [juntarlo] nosotros.",
+      "glossary": [
+        {
+          "word": "oyentes",
+          "meaning": "personas que escuchan la radio"
+        },
+        {
+          "word": "feria nocturna",
+          "meaning": "mercado en la calle que se hace de noche"
+        },
+        {
+          "word": "ayuntamiento",
+          "meaning": "gobierno de la ciudad"
+        },
+        {
+          "word": "le toca",
+          "meaning": "es su responsabilidad, es su trabajo"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Sergio no tenía fiebre",
+      "place": "Bar La Persiana",
+      "context": "Nico está en el bar y le manda un mensaje de voz a Lu. Habla bajo y muy rápido.",
+      "speakers": [
+        {
+          "name": "Nico",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lu, escucha esto, porque no lo vas a creer. ¿Te acuerdas de que Sergio nos escribió a las siete que no venía porque tenía fiebre?"
+        },
+        {
+          "s": 0,
+          "text": "Bueno, estoy en La Persiana, esperando a Martín, y Sergio está aquí. En el fondo, junto a la máquina de música. Muy sano. Y muy acompañado."
+        },
+        {
+          "s": 0,
+          "text": "El camarero me contó que llegaron juntos a las nueve y que ella le dijo que hoy era su primera cita."
+        },
+        {
+          "s": 0,
+          "text": "Mi opinión: que haga lo que quiera, pero que no nos mienta. Y Vale va a estar muy dolida si se entera por otra persona."
+        },
+        {
+          "s": 0,
+          "text": "Así que mi plan es este: no le decimos nada a Vale esta noche, y mañana hablo yo con Sergio. ¿Qué te parece? Contéstame rápido, que creo que me vio."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué le escribe Nico a Lu?",
+          "options": [
+            "Para contarle que descubrió una mentira de Sergio",
+            "Para decirle que Martín no llega",
+            "Para invitarla al bar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué excusa les dio Sergio a sus amigos?",
+          "options": [
+            "Que tenía que trabajar",
+            "Que estaba enfermo",
+            "Que tenía una cita"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según el camarero, ¿qué le dijo la chica?",
+          "options": [
+            "Que Sergio era su novio",
+            "Que no conocía a Sergio",
+            "Que era su primera cita"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué propone Nico?",
+          "options": [
+            "Contárselo a Vale esa misma noche",
+            "No decirle nada a Vale y hablar con Sergio al día siguiente",
+            "Ir a saludar a Sergio y a la chica"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo con el plan de Nico? ¿Qué harías tú?",
+          "model": "No del todo. Yo hablaría con Sergio esa misma noche, porque si no, voy a estar incómodo toda la fiesta."
+        },
+        {
+          "q": "¿Alguna vez inventaste una excusa para no ir a un plan? ¿Te descubrieron?",
+          "model": "Sí, una vez dije que estaba enferma, pero puse una foto en las redes sin pensar. Fue muy vergonzoso."
+        },
+        {
+          "q": "¿Qué es peor para ti: que un amigo cancele o que te mienta?",
+          "model": "Que me mienta. Si me dice la verdad, aunque cancele, lo entiendo."
+        }
+      ],
+      "gaps": "El camarero me contó que llegaron [juntos] a las [nueve] y que ella le dijo que hoy era su [primera] [cita].",
+      "glossary": [
+        {
+          "word": "fiebre",
+          "meaning": "temperatura alta del cuerpo cuando estás enfermo"
+        },
+        {
+          "word": "en el fondo",
+          "meaning": "en la parte de atrás del lugar"
+        },
+        {
+          "word": "acompañado",
+          "meaning": "con otra persona"
+        },
+        {
+          "word": "dolida",
+          "meaning": "triste y ofendida"
+        },
+        {
+          "word": "se entera",
+          "meaning": "descubre una información"
+        }
+      ]
+    },
+    {
+      "id": "museo",
+      "title": "Las cartas que nunca llegaron",
+      "place": "Museo del Pasado",
+      "context": "En la última sala del museo, la guía presenta una vitrina con cartas antiguas. Hoy el museo abre hasta tarde.",
+      "speakers": [
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, llegamos a mi sala favorita. Estas cartas aparecieron hace tres años, cuando arreglaron el edificio de la antigua oficina de correos. Estaban detrás de una pared."
+        },
+        {
+          "s": 0,
+          "text": "Son más de doscientas y ninguna llegó a su destino."
+        },
+        {
+          "s": 0,
+          "text": "Esta, por ejemplo, es de mil novecientos sesenta y dos. Un chico, Andrés, le escribe a una tal Pilar. Le dice que la espera el sábado en la Plaza de la Fuente, a las ocho, y que si ella no viene, entiende que la respuesta es no y se va del país."
+        },
+        {
+          "s": 0,
+          "text": "Pilar nunca recibió la carta."
+        },
+        {
+          "s": 0,
+          "text": "Muchos visitantes me preguntan si está bien leer cartas privadas. Yo creo que sí, porque los protagonistas ya no están, pero entiendo a la gente que piensa lo contrario."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué presenta la guía?",
+          "options": [
+            "Fotos antiguas de la plaza",
+            "Una colección de cartas que nunca llegaron",
+            "La historia del edificio del museo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde encontraron las cartas?",
+          "options": [
+            "Detrás de una pared de la antigua oficina de correos",
+            "En la casa de Pilar",
+            "En una caja en la plaza"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué decía Andrés en su carta?",
+          "options": [
+            "Que se iba a casar con otra",
+            "Que volvía al país el sábado",
+            "Que la esperaba en la plaza y que, si no venía, se iba del país"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué opina la guía sobre leer las cartas?",
+          "options": [
+            "Que no está bien",
+            "Que está bien, aunque entiende otras opiniones",
+            "Que solo deberían leerlas las familias"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te parece bien leer cartas privadas en un museo? ¿Por qué?",
+          "model": "Creo que depende de cuántos años tengan. Si son muy antiguas, me parece bien, porque nos enseñan historia."
+        },
+        {
+          "q": "¿Escribiste o recibiste alguna vez una carta en papel? ¿Qué decía?",
+          "model": "Sí, mi abuela me escribía cartas cuando yo vivía en otra ciudad. Me contaba cosas del pueblo."
+        },
+        {
+          "q": "¿Qué crees que pasó con Andrés y Pilar?",
+          "model": "Creo que Andrés se fue del país pensando que ella no lo quería. Es muy triste."
+        }
+      ],
+      "gaps": "Le dice que la espera el [sábado] en la Plaza de la Fuente, a las [ocho], y que si ella no viene, entiende que la [respuesta] es no y se va del [país].",
+      "glossary": [
+        {
+          "word": "oficina de correos",
+          "meaning": "lugar donde se mandan y se reciben cartas"
+        },
+        {
+          "word": "destino",
+          "meaning": "lugar o persona a donde tiene que llegar algo"
+        },
+        {
+          "word": "una tal",
+          "meaning": "una persona que no conocemos bien, solo por el nombre"
+        },
+        {
+          "word": "protagonistas",
+          "meaning": "las personas principales de una historia"
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "El taxista que se acordaba de Sergio",
+      "place": "Taxi en la avenida",
+      "context": "Ya de madrugada, Sergio toma un taxi hacia la terraza. El conductor lo mira por el espejo varias veces.",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Sergio",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdone, pero yo a usted lo conozco. El año pasado lo llevé al aeropuerto, ¿no? Iba con dos maletas y llorando."
+        },
+        {
+          "s": 1,
+          "text": "¡No puede ser! Sí, era yo. Me iba a vivir a Madrid porque había terminado con mi novia."
+        },
+        {
+          "s": 0,
+          "text": "Eso. Y yo le dije que no tomara decisiones grandes con el corazón roto. ¿Y qué pasó?"
+        },
+        {
+          "s": 1,
+          "text": "Pues usted tenía razón. A los tres meses volví. Allá no conocía a nadie y trabajaba doce horas al día."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la novia?"
+        },
+        {
+          "s": 1,
+          "text": "Me dijo que ya era tarde, que había empezado a salir con otro. Bueno, ahora es mi amiga, la verdad. Esta noche vamos a la misma fiesta."
+        },
+        {
+          "s": 0,
+          "text": "¿Y usted cómo se siente con eso?"
+        },
+        {
+          "s": 1,
+          "text": "Bien, creo. Además, hoy yo también tengo a alguien. Aunque mis amigos todavía no lo saben."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué el taxista recuerda a Sergio?",
+          "options": [
+            "Porque es su vecino",
+            "Porque lo llevó al aeropuerto el año pasado",
+            "Porque Sergio olvidó algo en el taxi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué consejo le dio el taxista a Sergio?",
+          "options": [
+            "Que no tomara decisiones grandes estando triste",
+            "Que hablara con su novia antes de irse",
+            "Que buscara trabajo en Madrid"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué volvió Sergio?",
+          "options": [
+            "Porque su novia se lo pidió",
+            "Porque perdió el trabajo",
+            "Porque se sentía solo y trabajaba demasiado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué podemos deducir del final?",
+          "options": [
+            "Sergio todavía quiere volver con su ex",
+            "Sergio tiene una relación nueva y secreta",
+            "Sergio no va a ir a la fiesta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Estás de acuerdo con el consejo del taxista? ¿Por qué?",
+          "model": "Sí, porque cuando estás triste ves todo peor y puedes arrepentirte."
+        },
+        {
+          "q": "¿Te mudarías a otro país por un problema personal?",
+          "model": "No creo. Primero intentaría resolver el problema aquí, con mi familia cerca."
+        },
+        {
+          "q": "¿Puedes ser amigo o amiga de una ex pareja? Cuenta tu experiencia o tu opinión.",
+          "model": "Creo que sí, pero necesitas tiempo. Yo soy amiga de un ex, pero pasaron dos años sin hablar."
+        }
+      ],
+      "gaps": "Pues usted tenía razón. A los tres [meses] volví. Allá no conocía a [nadie] y trabajaba [doce horas] al [día].",
+      "glossary": [
+        {
+          "word": "maletas",
+          "meaning": "bolsas grandes para la ropa cuando viajas"
+        },
+        {
+          "word": "terminado con",
+          "meaning": "dejado una relación de pareja"
+        },
+        {
+          "word": "corazón roto",
+          "meaning": "mucha tristeza por amor"
+        },
+        {
+          "word": "ya era tarde",
+          "meaning": "ya no había oportunidad"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Treinta años y un plan nuevo",
+      "place": "La terraza de las luces",
+      "context": "Casi amanece. En un rincón de la terraza, Vale y Lu miran la ciudad y hablan del futuro.",
+      "speakers": [
+        {
+          "name": "Lu",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿En qué piensas? Llevas diez minutos callada."
+        },
+        {
+          "s": 1,
+          "text": "En que tengo treinta y hace seis años que hago el mismo trabajo. Y no me gusta."
+        },
+        {
+          "s": 0,
+          "text": "Siempre dices lo mismo. ¿Y qué vas a hacer?"
+        },
+        {
+          "s": 1,
+          "text": "Esta vez es en serio. En enero voy a dejar la oficina y voy a abrir un café pequeño, con libros. Ya hablé con el banco y me dijeron que me pueden dar un préstamo."
+        },
+        {
+          "s": 0,
+          "text": "¡Vale! Me parece una idea buenísima, pero... ¿no te da miedo?"
+        },
+        {
+          "s": 1,
+          "text": "Muchísimo. Pero me da más miedo cumplir cuarenta y seguir en la misma silla."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, entonces yo voy a ser tu primera clienta. Y si necesitas ayuda los fines de semana, cuenta conmigo."
+        },
+        {
+          "s": 1,
+          "text": "¿De verdad? Te pago en café."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Vale y Lu?",
+          "options": [
+            "Del regalo de cumpleaños de Vale",
+            "De un cambio importante en la vida de Vale",
+            "De un problema con el banco"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué piensa Lu al principio?",
+          "options": [
+            "Que Vale siempre dice lo mismo y no hace nada",
+            "Que Vale está enferma",
+            "Que Vale quiere irse de la fiesta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Vale, ¿qué le dijeron en el banco?",
+          "options": [
+            "Que no le pueden dar dinero",
+            "Que tiene que esperar a los cuarenta",
+            "Que le pueden dar un préstamo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le ofrece Lu a Vale?",
+          "options": [
+            "Dinero para el café",
+            "Ayudarla los fines de semana",
+            "Trabajar juntas en la oficina"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué te parece el plan de Vale? ¿Es valiente o un poco loco?",
+          "model": "Me parece valiente. Es arriesgado, pero si tiene un buen plan, puede funcionar."
+        },
+        {
+          "q": "¿Qué te gustaría cambiar en tu vida en los próximos años?",
+          "model": "Me gustaría trabajar menos horas y tener más tiempo para viajar."
+        },
+        {
+          "q": "¿Qué te da más miedo: cambiar o quedarte igual?",
+          "model": "A mí me da más miedo cambiar, pero sé que a veces es necesario."
+        }
+      ],
+      "gaps": "En enero voy a dejar la [oficina] y voy a abrir un [café] pequeño, con [libros]. Ya hablé con el banco y me dijeron que me pueden dar un [préstamo].",
+      "glossary": [
+        {
+          "word": "callada",
+          "meaning": "sin hablar"
+        },
+        {
+          "word": "préstamo",
+          "meaning": "dinero que te da el banco y después devuelves"
+        },
+        {
+          "word": "en la misma silla",
+          "meaning": "en el mismo trabajo, sin cambiar nada"
+        },
+        {
+          "word": "cuenta conmigo",
+          "meaning": "puedes pedirme ayuda"
+        }
+      ]
+    }
+  ]
+}

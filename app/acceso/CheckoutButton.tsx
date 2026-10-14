@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useI18n } from "../i18n/LocaleProvider";
 import PaymentBrands from "./PaymentBrands";
 import "./payment-options.css";
-import { trackMarketingEvent } from "../marketing/analytics";
+import { checkoutAttribution, trackMarketingEvent } from "../marketing/analytics";
 import { consentFor } from "../privacy/consent";
 
 type FounderStatus = {
@@ -90,6 +90,9 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   const [status, setStatus] = useState<"idle" | "paypal" | "paddle" | "confirming" | "error">("idle");
   const [message, setMessage] = useState("");
   const [founder, setFounder] = useState<FounderStatus | null | undefined>(undefined);
+  // A synchronous guard: a double click lands before React re-renders the
+  // disabled button, and must not open two checkouts.
+  const starting = useRef(false);
 
   useEffect(() => {
     let active = true;
@@ -107,7 +110,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
         body: JSON.stringify({ subscriptionId }),
       });
       if (!response.ok || response.status === 204) return;
-      const body = await response.json() as { transactionId?: unknown; value?: unknown; currency?: unknown };
+      const body = await response.json() as { transactionId?: unknown; value?: unknown; currency?: unknown; plan?: unknown };
       if (typeof body.transactionId === "string"
           && typeof body.value === "number" && Number.isFinite(body.value) && body.value > 0
           && typeof body.currency === "string" && /^[A-Z]{3}$/.test(body.currency)) {
@@ -115,6 +118,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
           transaction_id: body.transactionId,
           value: body.value,
           currency: body.currency,
+          plan: body.plan === "trial" ? "trial" : "monthly",
         });
       }
     } catch {}
@@ -147,10 +151,13 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   }
 
   async function checkoutPaddle(offer: "monthly" | "trial" = "monthly") {
+    if (starting.current) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
     if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable)) return;
-    trackMarketingEvent(offer === "trial" ? "trial_checkout_start" : "checkout_start", { plan: "founder-1000-usd15-monthly", value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
-    if (offer === "trial") trackMarketingEvent("checkout_start", { plan: "paddle-paid-trial", value: 2, currency: "USD", method: "paddle" });
+    starting.current = true;
+    // One checkout_start per opened checkout; `plan` tells the trial apart and
+    // `value` is the first real charge. Starting a checkout is not a purchase.
+    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : 15.5, currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -158,7 +165,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
         method: "POST",
         credentials: "same-origin",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ returnTo, offer }),
+        body: JSON.stringify({ returnTo, offer, attribution: checkoutAttribution() }),
       });
       const body = await response.json() as { transactionId?: unknown; clientToken?: unknown; claimUrl?: unknown; error?: unknown };
       if (response.ok && body.claimUrl === "/pro/claim?provider=paddle") {
@@ -197,13 +204,17 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       onPaddleOverlayChange?.(false);
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "No pudimos abrir el pago con tarjeta.");
+    } finally {
+      starting.current = false;
     }
   }
 
   async function checkoutPayPal() {
+    if (starting.current) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_paypal", signed_in: signedIn });
     if (!founder?.available || !founder.checkoutLive) return;
-    trackMarketingEvent("checkout_start", { plan: "founder-1000-usd15-monthly", value: 15, currency: "USD", method: "paypal" });
+    starting.current = true;
+    trackMarketingEvent("checkout_start", { plan: "paypal", value: founder.paypalPriceUsd ?? 15, currency: "USD", method: "paypal" });
     setStatus("paypal"); setMessage("");
     try {
       const response = await fetch("/api/billing/checkout", {
@@ -219,6 +230,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
       }
       window.location.assign(body.approvalUrl);
     } catch (error) {
+      starting.current = false;
       setStatus("error"); setMessage(error instanceof Error ? error.message : t("checkout.error"));
     }
   }

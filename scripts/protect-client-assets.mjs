@@ -62,6 +62,11 @@ const publicRoots = new Set([
   "app/immersive/DemoScene.tsx",
   "app/immersive/ProDiscovery.tsx",
   "app/immersive/PremiumPanel.tsx",
+  // Google Search landing: the client chunk carries only the guided-tour
+  // script and checkout UI; the free demo scene and catalog titles arrive
+  // as authorized page props from the server.
+  "app/immersive/GoogleTeachersLanding.tsx",
+  "app/immersive/GuidedTour.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
   "app/resources/ResourceCatalog.tsx",
   // Public question bank filters: the questions are free teaching content and
@@ -86,8 +91,11 @@ const publicRoots = new Set([
   "app/sistema-verbal/page.tsx",
   "app/verbal-system/SystemHub.tsx",
   "app/grammar-worlds/GrammarWorld.tsx",
-  // Shared renderer only; paid lesson bodies arrive in authorized page props.
+  // Shared renderers only; paid lesson bodies arrive in authorized page props.
   "app/grammar-classroom/Classroom.tsx",
+  "app/grammar-classroom/live/LiveClassroom.tsx",
+  // Loaded on demand by the live visuals; geometry only.
+  "app/grammar-classroom/duration/world.ts",
   "app/conversation-worlds/ConversationWorld.tsx",
   // Autoestudio engines carry no lesson bodies: module data arrives only in
   // the authorized page render (the Worker gates PRO weeks).
@@ -96,6 +104,17 @@ const publicRoots = new Set([
   "app/autoestudio/ModulePlayer.tsx",
   "app/autoestudio/claim/ClaimClient.tsx",
   "app/autoestudio/TeacherPasses.tsx",
+  // /cuenta dashboard: free accounts use it too. It renders account data from
+  // authorized APIs and public catalog titles only, never lesson bodies.
+  "app/cuenta/error.tsx",
+  "app/cuenta/ui.tsx",
+  "app/cuenta/SubscriptionManager.tsx",
+  "app/cuenta/modules/Overview.tsx",
+  "app/cuenta/modules/Students.tsx",
+  "app/cuenta/modules/History.tsx",
+  "app/cuenta/modules/Favorites.tsx",
+  "app/LogoutButton.tsx",
+  "app/i18n/LanguageSwitcher.tsx",
   "virtual:vinext-app-browser-entry",
   ...Object.keys(manifest).filter((key) => /(^|\/)node_modules\//.test(key)),
 ]);

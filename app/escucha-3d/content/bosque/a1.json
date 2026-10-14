@@ -1,0 +1,279 @@
+{
+  "game": "bosque",
+  "level": "A1",
+  "items": [
+    {
+      "id": "sobre-ti",
+      "title": "La guía del claro",
+      "place": "Claro de la entrada",
+      "context": "En el claro de la entrada, junto a un tocón enorme, la guía saluda a un excursionista que llega solo.",
+      "speakers": [
+        { "name": "Lucía", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Facundo", "country": "Argentina", "voice": "es-AR-TomasNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Hola! Bienvenido al bosque. Yo soy Lucía, la guía. ¿Cómo te llamas?" },
+        { "s": 1, "text": "Hola, Lucía. Me llamo Facundo. Soy de Argentina, de Córdoba." },
+        { "s": 0, "text": "¡Qué bien! ¿Y qué haces en Córdoba, Facundo?" },
+        { "s": 1, "text": "Soy profesor de música. Pero me gusta mucho caminar por la montaña." },
+        { "s": 0, "text": "Perfecto. Hoy subimos hasta arriba, cincuenta y seis metros. ¿Tienes agua?" },
+        { "s": 1, "text": "Sí, tengo dos botellas. Y una cámara." },
+        { "s": 0, "text": "Muy bien. ¡Vamos!" }
+      ],
+      "choice": [
+        { "q": "¿Quiénes hablan?", "options": ["Una guía y un excursionista", "Una cocinera y un niño", "Dos amigos de Córdoba"], "answer": 0 },
+        { "q": "¿De dónde es Facundo?", "options": ["De Colombia", "De Argentina", "De México"], "answer": 1 },
+        { "q": "¿Cuál es el trabajo de Facundo?", "options": ["Es guía", "Es médico", "Es profesor de música"], "answer": 2 },
+        { "q": "¿Qué tiene Facundo en la mochila?", "options": ["Una botella y un mapa", "Dos botellas y una cámara", "Dos cámaras y comida"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Cómo te llamas y de dónde eres?", "model": "Me llamo Ana. Soy de Lyon, en Francia." },
+        { "q": "¿Te gusta caminar por la montaña o por el bosque?", "model": "Sí, me gusta mucho. Camino con mi perro los domingos." },
+        { "q": "¿Qué llevas tú en la mochila cuando vas de excursión?", "model": "Llevo agua, fruta y mi teléfono." }
+      ],
+      "gaps": "Soy [profesor] de [música]. Pero me gusta mucho [caminar] por la [montaña].",
+      "glossary": [
+        { "word": "bienvenido", "meaning": "palabra para recibir a una persona que llega" },
+        { "word": "guía", "meaning": "persona que enseña el camino a un grupo" },
+        { "word": "botellas", "meaning": "recipientes para llevar agua u otras bebidas" }
+      ]
+    },
+    {
+      "id": "vida-real",
+      "title": "La cesta del cocinero",
+      "place": "La cesta olvidada",
+      "context": "Entre las setas bajas hay una cesta sola. En el teléfono de Pablo suena un mensaje de voz de su padre.",
+      "speakers": [
+        { "name": "Don Ernesto", "country": "México", "voice": "es-MX-JorgeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Pablo, hola, soy papá. Oye, tengo un problema. Mi cesta de setas no está aquí, en el restaurante." },
+        { "s": 0, "text": "Creo que está en el bosque, al lado de la seta grande y marrón, cerca del camino." },
+        { "s": 0, "text": "Es una cesta pequeña, de color verde. Tiene setas para la sopa de esta noche." },
+        { "s": 0, "text": "¿Puedes ir tú? Por favor, es urgente. La cena es a las ocho. ¡Gracias, hijo!" }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tiene el padre de Pablo?", "options": ["No tiene su cesta", "No tiene dinero", "No encuentra a Pablo"], "answer": 0 },
+        { "q": "¿Dónde está la cesta, probablemente?", "options": ["En el restaurante", "En casa de Pablo", "Al lado de una seta grande"], "answer": 2 },
+        { "q": "¿Cómo es la cesta?", "options": ["Grande y marrón", "Pequeña y verde", "Pequeña y roja"], "answer": 1 },
+        { "q": "¿A qué hora es la cena?", "options": ["A las ocho", "A las siete", "A las nueve"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Mandas mensajes de voz a tu familia? ¿Para qué?", "model": "Sí, mando mensajes a mi madre para decir dónde estoy." },
+        { "q": "¿Te gusta la sopa de setas?", "model": "No mucho. Prefiero la sopa de verduras." },
+        { "q": "¿Pierdes cosas a veces? ¿Qué cosas?", "model": "Sí, a veces no encuentro mis llaves." }
+      ],
+      "gaps": "Es una cesta [pequeña], de color [verde]. Tiene [setas] para la sopa de esta [noche].",
+      "glossary": [
+        { "word": "cesta", "meaning": "objeto con asa para llevar cosas, por ejemplo fruta o setas" },
+        { "word": "setas", "meaning": "hongos que crecen en el bosque; algunas se comen" },
+        { "word": "urgente", "meaning": "que se necesita hacer muy rápido" }
+      ]
+    },
+    {
+      "id": "elige",
+      "title": "¿Sopa o bocadillo?",
+      "place": "Setas doradas",
+      "context": "Una excursión de colegio para a comer junto a las setas doradas. La profesora pregunta a un alumno qué quiere.",
+      "speakers": [
+        { "name": "Profesora Rosa", "country": "Perú", "voice": "es-PE-CamilaNeural" },
+        { "name": "Benjamín", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Benjamín, ¿qué quieres para comer? Hay sopa de setas doradas o un bocadillo de queso." },
+        { "s": 1, "text": "Mmm... ¿La sopa está caliente?" },
+        { "s": 0, "text": "Sí, muy caliente. Y es de aquí, de estas setas amarillas." },
+        { "s": 1, "text": "¿Y el bocadillo es grande?" },
+        { "s": 0, "text": "Normal. Pero tiene queso y jamón." },
+        { "s": 1, "text": "Bueno... Tengo frío. Quiero la sopa, por favor. ¡Y pan!" },
+        { "s": 0, "text": "Muy bien. Una sopa y pan para Benjamín." }
+      ],
+      "choice": [
+        { "q": "¿Qué tiene que elegir Benjamín?", "options": ["Un camino", "Su comida", "Un amigo"], "answer": 1 },
+        { "q": "¿De qué color son las setas de la sopa?", "options": ["Rojas", "Blancas", "Amarillas"], "answer": 2 },
+        { "q": "¿Qué tiene el bocadillo?", "options": ["Queso y jamón", "Queso y lechuga", "Setas y pan"], "answer": 0 },
+        { "q": "¿Por qué Benjamín quiere la sopa?", "options": ["Porque tiene mucha hambre", "Porque tiene frío", "Porque no le gusta el queso"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué prefieres tú, la sopa o el bocadillo? ¿Por qué?", "model": "Prefiero el bocadillo. No me gustan las setas." },
+        { "q": "¿Qué comes cuando tienes frío?", "model": "Cuando tengo frío, como sopa o bebo té." },
+        { "q": "¿Qué llevas para comer en una excursión?", "model": "Llevo un bocadillo, una manzana y agua." }
+      ],
+      "gaps": "Bueno... Tengo [frío]. [Quiero] la [sopa], por favor. ¡Y [pan]!",
+      "glossary": [
+        { "word": "bocadillo", "meaning": "pan con algo dentro, por ejemplo queso" },
+        { "word": "caliente", "meaning": "con temperatura alta; lo contrario de frío" },
+        { "word": "doradas", "meaning": "de color amarillo brillante, como el oro" }
+      ]
+    },
+    {
+      "id": "opinion",
+      "title": "Las gemelas no me gustan",
+      "place": "Las setas gemelas",
+      "context": "Dos excursionistas miran dos setas casi iguales que crecen juntas y dicen qué les parecen.",
+      "speakers": [
+        { "name": "Carmen", "country": "España", "voice": "es-ES-ElviraNeural" },
+        { "name": "Yoel", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Mira, Yoel, dos setas iguales. ¡Son gemelas! Me gustan mucho. Son muy bonitas." },
+        { "s": 1, "text": "¿Bonitas? A mí no me gustan nada. Son feas y un poco raras." },
+        { "s": 0, "text": "¿Feas? ¡Qué dices! Mira el color, es marrón claro, como el café con leche." },
+        { "s": 1, "text": "Sí, el color es bonito. Pero una seta es buena y la otra es mala. Es peligroso." },
+        { "s": 0, "text": "Ah, sí, es verdad. Entonces no tocamos, solo hacemos una foto." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Carmen y Yoel?", "options": ["De dos setas iguales", "De dos hermanas gemelas", "De un café con leche"], "answer": 0 },
+        { "q": "¿Qué opina Yoel de las setas?", "options": ["Que son muy bonitas", "Que son feas y raras", "Que son buenas para comer"], "answer": 1 },
+        { "q": "¿De qué color son las setas?", "options": ["Blanco", "Rojo oscuro", "Marrón claro"], "answer": 2 },
+        { "q": "¿Qué hacen al final?", "options": ["Una foto", "Una sopa", "Un dibujo"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Qué cosas de la naturaleza te parecen bonitas?", "model": "Me parecen bonitas las flores y el mar." },
+        { "q": "¿Te gusta hacer fotos cuando vas de excursión?", "model": "Sí, hago muchas fotos de los árboles." },
+        { "q": "¿Tienes hermanos? ¿Son iguales o diferentes?", "model": "Tengo una hermana. Somos muy diferentes." }
+      ],
+      "gaps": "Sí, el color es [bonito]. Pero una seta es [buena] y la otra es [mala]. Es [peligroso].",
+      "glossary": [
+        { "word": "gemelas", "meaning": "dos cosas o personas que nacen juntas y son iguales" },
+        { "word": "raras", "meaning": "diferentes de lo normal; extrañas" },
+        { "word": "peligroso", "meaning": "que puede hacer daño" }
+      ]
+    },
+    {
+      "id": "recuerdos",
+      "title": "La foto del guardabosques",
+      "place": "El sombrero gigante",
+      "context": "Sobre el sombrero gigante, a la altura de los árboles, un guardabosques enseña una foto vieja a una visitante.",
+      "speakers": [
+        { "name": "Ramón", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" },
+        { "name": "Julia", "country": "Costa Rica", "voice": "es-CR-MariaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Mira esta foto. Es muy vieja, del año mil novecientos ochenta." },
+        { "s": 1, "text": "¡Qué bonita! ¿Quién es el hombre del sombrero?" },
+        { "s": 0, "text": "Es mi padre. Él también es guardabosques. Y el niño pequeño soy yo." },
+        { "s": 1, "text": "¿Tú? ¡Qué gracioso! ¿Y dónde están?" },
+        { "s": 0, "text": "Aquí, en este hongo gigante. Pero en la foto el hongo es pequeño." },
+        { "s": 1, "text": "¡Increíble! Ahora es enorme." }
+      ],
+      "choice": [
+        { "q": "¿Qué mira Julia?", "options": ["Un mapa del bosque", "Un libro de hongos", "Una foto vieja"], "answer": 2 },
+        { "q": "¿Quién es el hombre del sombrero?", "options": ["El abuelo de Ramón", "El padre de Ramón", "Un turista"], "answer": 1 },
+        { "q": "¿Quién es el niño de la foto?", "options": ["Ramón", "El hijo de Ramón", "Un amigo de Julia"], "answer": 0 },
+        { "q": "¿Cómo es el hongo en la foto?", "options": ["Enorme", "Pequeño", "Rojo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes una foto vieja favorita? ¿Quién está en la foto?", "model": "Sí, en mi foto favorita están mis abuelos en la playa." },
+        { "q": "¿Tu familia tiene un trabajo tradicional?", "model": "Sí, mi padre y mi abuelo son médicos." },
+        { "q": "¿Hay un lugar especial para tu familia?", "model": "Sí, la casa de mi abuela en el campo." }
+      ],
+      "gaps": "Es mi [padre]. Él también es [guardabosques]. Y el [niño pequeño] soy [yo].",
+      "glossary": [
+        { "word": "guardabosques", "meaning": "persona que trabaja cuidando el bosque" },
+        { "word": "gracioso", "meaning": "que da risa" },
+        { "word": "enorme", "meaning": "muy, muy grande" }
+      ]
+    },
+    {
+      "id": "futuro",
+      "title": "Radio Roble: el plan de mañana",
+      "place": "La copa del roble",
+      "context": "En la copa del gran roble hay un altavoz. Suena la radio del bosque con los planes para mañana.",
+      "speakers": [
+        { "name": "Daniela", "country": "Venezuela", "voice": "es-VE-PaolaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Buenas tardes, amigos del bosque! Esto es Radio Roble. Y ahora, el plan de mañana, sábado." },
+        { "s": 0, "text": "Por la mañana va a hacer sol. A las nueve, los guías van a subir con grupos hasta las nubes." },
+        { "s": 0, "text": "A la una vamos a comer todos juntos aquí, en el roble. Hay arroz con setas." },
+        { "s": 0, "text": "Por la tarde va a llover, entonces vamos a ver una película en la cabaña. ¡Hasta mañana!" }
+      ],
+      "choice": [
+        { "q": "¿De qué habla la radio?", "options": ["De los planes de mañana", "De un problema en el bosque", "De una fiesta de cumpleaños"], "answer": 0 },
+        { "q": "¿Qué día es mañana?", "options": ["Viernes", "Domingo", "Sábado"], "answer": 2 },
+        { "q": "¿A qué hora suben los grupos?", "options": ["A la una", "A las nueve", "A las diez"], "answer": 1 },
+        { "q": "¿Qué van a hacer por la tarde?", "options": ["Subir a las nubes", "Comer arroz", "Ver una película"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Qué vas a hacer tú mañana?", "model": "Mañana voy a trabajar y por la tarde voy a nadar." },
+        { "q": "¿Qué haces cuando llueve el fin de semana?", "model": "Veo películas en casa o leo un libro." },
+        { "q": "¿Escuchas la radio? ¿Cuándo?", "model": "Sí, escucho la radio en el coche por la mañana." }
+      ],
+      "gaps": "Por la tarde va a [llover], entonces vamos a ver una [película] en la [cabaña]. ¡Hasta [mañana]!",
+      "glossary": [
+        { "word": "roble", "meaning": "árbol muy grande y fuerte" },
+        { "word": "llover", "meaning": "caer agua del cielo" },
+        { "word": "cabaña", "meaning": "casa pequeña de madera en el bosque o la montaña" }
+      ]
+    },
+    {
+      "id": "compara",
+      "title": "Azul contra verde",
+      "place": "La gruta luminosa",
+      "context": "Dos niños de excursión con el colegio entran en la gruta luminosa y comparan los hongos que brillan.",
+      "speakers": [
+        { "name": "Mateo", "country": "Ecuador", "voice": "es-EC-LuisNeural" },
+        { "name": "Ixchel", "country": "Guatemala", "voice": "es-GT-MartaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Ixchel, mira! Este hongo azul brilla mucho. Es más bonito que el verde." },
+        { "s": 1, "text": "No, no. El verde es más grande. Y brilla más." },
+        { "s": 0, "text": "Pero el azul es más alto. Es tan alto como mi papá, casi dos metros." },
+        { "s": 1, "text": "Bueno, sí. Pero el verde tiene muchos puntos blancos. Es mi favorito." },
+        { "s": 0, "text": "Vale. Entonces tú haces una foto del verde y yo hago una del azul." }
+      ],
+      "choice": [
+        { "q": "¿Qué hacen los niños?", "options": ["Comparan dos hongos", "Buscan a su profesora", "Comen setas"], "answer": 0 },
+        { "q": "¿Qué dice Ixchel del hongo verde?", "options": ["Que es más pequeño", "Que es más alto", "Que es más grande"], "answer": 2 },
+        { "q": "¿Cómo es el hongo azul?", "options": ["Tan alto como el papá de Mateo", "Más bajo que el verde", "Tan grande como la gruta"], "answer": 0 },
+        { "q": "¿Qué tiene el hongo verde?", "options": ["Puntos rojos", "Puntos blancos", "Muchas hojas"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Cuál es tu color favorito? ¿Por qué?", "model": "Mi color favorito es el azul, como el mar." },
+        { "q": "¿Eres más alto o más bajo que tu mejor amigo?", "model": "Soy más bajo que mi mejor amigo." },
+        { "q": "¿Qué prefieres, el día o la noche?", "model": "Prefiero la noche. Es más tranquila." }
+      ],
+      "gaps": "Pero el [azul] es más [alto]. Es tan alto como mi [papá], casi [dos metros].",
+      "glossary": [
+        { "word": "brilla", "meaning": "da luz" },
+        { "word": "favorito", "meaning": "el que más te gusta" },
+        { "word": "puntos", "meaning": "manchas muy pequeñas y redondas" }
+      ]
+    },
+    {
+      "id": "cambia",
+      "title": "Niebla en la escalera",
+      "place": "La escalera de niebla",
+      "context": "En la escalera blanca hay mucha niebla. Una campista llama por teléfono a su amigo, que espera más arriba.",
+      "speakers": [
+        { "name": "Valentina", "country": "Uruguay", "voice": "es-UY-ValentinaNeural" },
+        { "name": "Diego", "country": "Paraguay", "voice": "es-PY-MarioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Diego? Soy Valentina. Estoy en la escalera, pero hay mucha niebla. No veo nada." },
+        { "s": 1, "text": "¡Uy! ¿Estás bien?" },
+        { "s": 0, "text": "Sí, estoy bien, pero tengo un poco de miedo. Cambio de plan: no subo ahora." },
+        { "s": 1, "text": "Vale, no pasa nada. Yo bajo y subimos juntos en una hora." },
+        { "s": 0, "text": "Perfecto. Te espero aquí, al lado del hongo blanco. ¡Gracias!" }
+      ],
+      "choice": [
+        { "q": "¿Por qué llama Valentina?", "options": ["Porque hay mucha niebla", "Porque tiene hambre", "Porque no tiene agua"], "answer": 0 },
+        { "q": "¿Cómo está Valentina?", "options": ["Está enferma", "Está bien, pero con un poco de miedo", "Está muy contenta"], "answer": 1 },
+        { "q": "¿Qué va a hacer Diego?", "options": ["Esperar arriba", "Llamar a un guía", "Bajar para estar con ella"], "answer": 2 },
+        { "q": "¿Dónde espera Valentina?", "options": ["Al lado del hongo blanco", "En la cabaña", "Arriba de la escalera"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cambias tus planes cuando hace mal tiempo?", "model": "Sí, si llueve no voy al parque. Me quedo en casa." },
+        { "q": "¿A quién llamas cuando tienes un problema?", "model": "Llamo a mi hermano. Siempre me ayuda." },
+        { "q": "¿Tienes miedo de algo en la naturaleza?", "model": "Sí, tengo miedo de las arañas." }
+      ],
+      "gaps": "Sí, estoy [bien], pero tengo un poco de [miedo]. [Cambio] de plan: no subo [ahora].",
+      "glossary": [
+        { "word": "niebla", "meaning": "nube muy baja que no deja ver bien" },
+        { "word": "miedo", "meaning": "lo que sientes cuando algo te parece peligroso" },
+        { "word": "no pasa nada", "meaning": "expresión para decir que no hay problema" }
+      ]
+    }
+  ]
+}

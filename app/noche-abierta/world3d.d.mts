@@ -35,7 +35,7 @@ export type Stage = {
 };
 export type Player = { x: number; z: number; heading: number; speed?: number; y?: number; vy?: number; jumpHeld?: boolean };
 export type Step = { x: number; z: number; heading: number; speed: number; y: number; vy: number; jumpHeld: boolean; moving: boolean };
-export type Input = { x: number; y: number; jump?: boolean; sprint?: boolean; walk?: boolean; yaw?: number };
+export type Input = { x: number; y: number; jump?: boolean; sprint?: boolean; nitro?: boolean; walk?: boolean; yaw?: number };
 export type Preset = { id: string; distance: number; height: number; ahead: number };
 export type Shot = { camera: { x: number; y: number; z: number }; look: { x: number; y: number; z: number } };
 
@@ -83,7 +83,7 @@ export function nearestTarget<T extends { x: number; z: number; radius?: number 
 export function followCamera(player: Player, preset: Preset, yaw?: number, room?: Bounds | null): { x: number; y: number; z: number; look: { x: number; y: number; z: number } };
 export function exitSpot(target: Target): Player;
 export function toMinimap(x: number, z: number): { u: number; v: number };
-export type Action = 'forward' | 'back' | 'left' | 'right' | 'sprint' | 'walk' | 'interact' | 'vehicle' | 'camera' | 'map' | 'jump';
+export type Action = 'forward' | 'back' | 'left' | 'right' | 'sprint' | 'walk' | 'interact' | 'vehicle' | 'camera' | 'map' | 'jump' | 'nitro';
 export function keyAction(code: string): Action | null;
 export function inputFrom(held: Set<string>): Input;
 export function canUseKeys(target: EventTarget | null): boolean;

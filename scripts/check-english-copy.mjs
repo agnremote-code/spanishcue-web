@@ -67,6 +67,9 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/duration-english-additions-20261009.json',
+  'docs/audits/grammar-live-english-additions-20261013.json',
+  'docs/audits/grammar-live-english-all-20261013.json',
+  'docs/audits/grammar-live-a0-english-additions-20261014.json',
   'docs/audits/article-immersive-english-additions-20261009.json',
   'docs/audits/instagram-funnel-english-additions-20261009.json',
   'docs/audits/article-studio-english-additions-20261009.json',
@@ -76,6 +79,10 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/bosque-vocabulary-additions-20261004.json',
   'docs/audits/seo-english-copy-additions-20261007.json',
   'docs/audits/paid-landing-english-copy-additions-20261008.json',
+  'docs/audits/reino-conversation-english-additions-20261013.json',
+  'docs/audits/account-dashboard-english-additions-20261013.json',
+  'docs/audits/student-roster-english-additions-20261013.json',
+  'docs/audits/subscription-panel-english-additions-20261014.json',
   'docs/audits/seo-grammar-cluster-english-additions-20261012.json',
 ];
 export function loadApprovedAdditions(root) {
@@ -112,6 +119,8 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   if(existsSync(grammarReviewedPath))reviewed.push(...JSON.parse(readFileSync(grammarReviewedPath,'utf8')).changes);
   const checkoutReviewedPath=resolve(root,'docs/audits/checkout-copy-changes-20261008.json');
   if(existsSync(checkoutReviewedPath))reviewed.push(...JSON.parse(readFileSync(checkoutReviewedPath,'utf8')).changes);
+  const accountReviewedPath=resolve(root,'docs/audits/account-dashboard-copy-changes-20261013.json');
+  if(existsSync(accountReviewedPath))reviewed.push(...JSON.parse(readFileSync(accountReviewedPath,'utf8')).changes);
   return { findings: filterReviewedChanges(filterApprovedAdditions(compareEnglishCopy(relocateEnglishSources(before), after), additions), reviewed), files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

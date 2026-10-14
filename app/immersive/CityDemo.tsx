@@ -13,7 +13,7 @@ import {CONSENT_EVENT,consentFor} from '../privacy/consent';
 import PremiumPanel from './PremiumPanel';
 
 type Encounter={location:Location;activity:Activity;progress:Progress};
-export default function CityDemo({initial,signedIn}:{initial:DemoPayload;signedIn:boolean}){
+export default function CityDemo({initial,signedIn,home='/lp/instagram'}:{initial:DemoPayload;signedIn:boolean;home?:string}){
  const {locale}=useI18n();const es=locale==='es';
  const [payload,setPayload]=useState(initial);
  const [Scene,setScene]=useState<ComponentType<DemoSceneProps>|null>(null);
@@ -74,7 +74,7 @@ export default function CityDemo({initial,signedIn}:{initial:DemoPayload;signedI
  }
  const busy=Boolean(encounter||gate||map||loading);
  return <main className="im-demo">
-  <header className="im-demo-nav"><Link className="im-wordmark" href="/lp/instagram">SPANISHCUE<span> / NOCHE ABIERTA</span></Link><LanguageSwitcher /><Link href="/">{es?'Biblioteca':'Library'} ↗</Link></header>
+  <header className="im-demo-nav"><Link className="im-wordmark" href={home}>SPANISHCUE<span> / NOCHE ABIERTA</span></Link><LanguageSwitcher /><Link href="/">{es?'Biblioteca':'Library'} ↗</Link></header>
   <section ref={stage} className="im-stage" aria-label={es?'Ciudad 3D gratuita':'Free 3D city'}>
    {!fallback&&Scene&&<Scene paused={busy} travel={travel} onInteract={openLocation} onGate={setGate} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={es} />}
    {(!Scene&&!fallback)&&<div className="im-loading" role="status"><span className="im-orbit"/><h1>{es?'La ciudad te espera.':'The city is waiting.'}</h1><p>{es?'Preparando tu primera noche…':'Getting your first night ready…'}</p></div>}

@@ -90,7 +90,7 @@ test('home product samples are unique, routable and free by central access metad
 
 test('every grammar lesson has one valid global curriculum position and earlier prerequisites',()=>{
  const grammar=p.lessons.filter(l=>l.category==='Gramática').sort((a,b)=>a.curriculumSequence-b.curriculumSequence);
- assert.equal(grammar.length,57);
+ assert.equal(grammar.length,58);
  assert.deepEqual(grammar.map(l=>l.curriculumSequence),Array.from({length:grammar.length},(_,i)=>i+1));
  assert.equal(new Set(grammar.map(l=>l.curriculumOrder)).size,grammar.length);
  const sequenceById=new Map(grammar.map(l=>[l.id,l.curriculumSequence]));
@@ -155,14 +155,21 @@ test('account return paths stay same-origin and account sections expose honest s
  for(const unsafe of ['//evil.example','https://evil.example','\\\\evil.example','/%2F%2Fevil.example','/%5C%5Cevil.example'])assert.equal(p.safeRelativeReturnPath(unsafe),'/');
  assert.deepEqual(p.ACCOUNT_TAB_KEYS,['inicio','alumnos','historial','favoritos','suscripcion','ajustes']);
  assert.equal(p.accountTabFromValue('favoritos'),'favoritos');
+ assert.equal(p.accountTabFromValue('autoestudio'),'alumnos','old Homework links open «Mis alumnos»');
  assert.equal(p.accountTabFromValue('inventado'),'inicio');
- for(const tab of ['alumnos','historial','favoritos']){
-  const state=p.accountEmptyState(tab,'es');
-  assert.equal(state.kind,'empty');
-  assert.equal(state.hasPersistedData,false);
-  assert.ok(state.title.length>0);
-  assert.ok(state.body.length>0);
- }
+});
+
+test('client-navigation payloads (.rsc) get the same route, identity and entitlement checks as the page',async()=>{
+ const paid=p.lessons.find(l=>route(l)&&!p.isFreeLesson(l.id)&&route(l)!=='/estados-unidos-basico');
+ const free=p.lessons.find(l=>route(l)&&p.isFreeLesson(l.id));
+ const paidRsc=await get(route(paid)+'.rsc',{rsc:'1'});await paidRsc.arrayBuffer();
+ assert.equal(paidRsc.status,302,'a PRO lesson payload must not render for an anonymous visitor');
+ const location=new URL(paidRsc.headers.get('location'),root);
+ assert.equal(location.pathname,'/acceso');assert.equal(location.searchParams.get('returnTo'),route(paid),'returnTo names the page, not its payload URL');
+ const freeRsc=await get(route(free)+'.rsc',{rsc:'1'});await freeRsc.arrayBuffer();
+ assert.equal(freeRsc.status,200);
+ const forged=await get('/cuenta.rsc?tab=alumnos',{...forgedOwner,rsc:'1'});
+ assert.doesNotMatch(await forged.text(),/agnremote@gmail\.com/,'forged identity headers are still discarded on payload requests');
 });
 
 test('offer remains configurable and invalid values are rejected',()=>{

@@ -59,7 +59,7 @@ type Prompt = { id: string; key: string; verb: string; name: string };
 
 const names: Record<string, string> = Object.fromEntries(LOCATIONS.map(item => [item.id, item.name]));
 const titles: Record<string, string> = Object.fromEntries(LOCATIONS.flatMap(item => item.activities.map(activity => [`${item.id}/${activity.id}`, activity.title])));
-const HELP_LINES = ['WASD / FLECHAS · CORRER', 'SHIFT · MÁS RÁPIDO', 'ALT · CAMINAR', 'ESPACIO · SALTAR', 'E · INTERACTUAR · ROBAR AUTO O MOTO', 'Q · USAR TU OBJETO', 'ARRASTRAR · GIRAR LA CÁMARA', 'V · CÁMARA', 'M · MAPA', 'ESC · SALIR'];
+const HELP_LINES = ['WASD / FLECHAS · CORRER', 'SHIFT · MÁS RÁPIDO', 'N · NITRO', 'ALT · CAMINAR', 'ESPACIO · SALTAR', 'E · INTERACTUAR · ROBAR AUTO O MOTO', 'Q · USAR TU OBJETO', 'ARRASTRAR · GIRAR LA CÁMARA', 'V · CÁMARA', 'M · MAPA', 'ESC · SALIR'];
 const districtNames: Record<string, string> = Object.fromEntries(DISTRICT_ZONES.map(item => [item.id, item.name]));
 const isStreetSpot = (spot: Spot | null): spot is StreetSpot => Boolean(spot && ('encounter' in spot || 'door' in spot) && !('location' in spot));
 const isDriveSpot = (spot: Spot | null): spot is DriveSpot => Boolean(spot && 'drive' in spot);
@@ -940,7 +940,7 @@ export default function World3D(props: WorldProps) {
         let knock = 0;
         const steps = Math.max(1, Math.ceil(dt / 0.03));
         for (let i = 0; i < steps; i++) {
-          const next = stepVehicle(state, { x: steer, y: throttle, brake: stop, boost: input.sprint }, dt / steps, spec, boxes);
+          const next = stepVehicle(state, { x: steer, y: throttle, brake: stop, boost: input.sprint || input.nitro }, dt / steps, spec, boxes);
           state = { x: next.x, z: next.z, heading: next.heading, speed: next.speed };
           knock = Math.max(knock, next.hit);
         }
@@ -1356,7 +1356,7 @@ export default function World3D(props: WorldProps) {
     {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
     {district && mode === 'walk' && <p key={district.n} className="na-district" role="status">{district.name}</p>}
     <p ref={bubbleEl} className="na-bubble" aria-live="polite" style={{ opacity: 0 }}>{bubble?.text}</p>
-    <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Con E también puedes robar un auto o una moto estacionados y manejarlos con W y S para acelerar y A y D para girar; la barra espaciadora frena y E te baja. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
+    <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, N es el nitro, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Con E también puedes robar un auto o una moto estacionados y manejarlos con W y S para acelerar y A y D para girar; la barra espaciadora frena y E te baja. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
     <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Toca ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
     {walking && driving && <p className="na-drive-hud" role="status"><b ref={speedEl}>0 km/h</b><span>{touch ? 'Palanca: acelerar y girar · FRENO · BAJAR' : 'W S acelerar · A D girar · ESPACIO freno · SHIFT turbo · E bajar'}</span></p>}
     {prompt && walking && <button ref={promptEl} type="button" tabIndex={-1} className="na-prompt3d" onClick={() => api.current?.interact(prompt.key as 'E' | 'F')}>
@@ -1371,6 +1371,7 @@ export default function World3D(props: WorldProps) {
       {driving
         ? <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.brake(); }}>Freno</button>
         : <button type="button" className="na-chip" onClick={() => { container.current?.focus({ preventScroll: true }); api.current?.held.add("jump"); }}>Saltar ↑</button>}
+      {!driving && <button type="button" className="na-chip" aria-label="Nitro: mantén pulsado para correr muy rápido" onPointerDown={() => api.current?.held.add("nitro")} onPointerUp={() => api.current?.held.delete("nitro")} onPointerCancel={() => api.current?.held.delete("nitro")} onPointerLeave={() => api.current?.held.delete("nitro")}>Nitro »</button>}
       <button type="button" className="na-chip" onClick={() => api.current?.cycleCamera()}>Cámara</button>
     </div>}
     {mapOpen && mode === 'walk' && <canvas ref={minimap} className="na-minimap" width={176} height={176} aria-label="Mapa del barrio" role="img" />}

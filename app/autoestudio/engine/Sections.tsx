@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { Example, Listening, Module, Pronunciation, QuizItem, Reading, Speaking, Table, Theory, UseInClass, Vocabulary, Writing } from "../curriculum/types";
 import { ChoiceQuestion, ExerciseView, GapLine, OpenTask, OrderBuilder, PlayButton, TextAnswer, type EngineContext } from "./Exercises";
+import type { AnswerEvent } from "../errors/model";
+import { Outcome } from "../errors/Recommendation";
 import { Recorder, SpeakTimer } from "./Recorder";
 import { Rich } from "./Rich";
 import { audioKey } from "../curriculum/audio-key";
@@ -608,9 +610,10 @@ export function UseInClassSection({ use, ctx, title }: { use: UseInClass; ctx: E
 }
 
 // 12 ---------------------------------------------------------------------------
-function QuizGap({ item, ctx, onResult }: { item: Extract<QuizItem, { type: "gap" }>; ctx: EngineContext; onResult: (correct: boolean) => void }) {
+function QuizGap({ item, ctx, onResult, exerciseId }: { item: Extract<QuizItem, { type: "gap" }>; ctx: EngineContext; onResult: (correct: boolean) => void; exerciseId: string }) {
   const [values, setValues] = useState<string[]>(item.answers.map(() => ""));
   const [verdicts, setVerdicts] = useState<(ReturnType<typeof checkAnswer> | null)[]>(item.answers.map(() => null));
+  const [event, setEvent] = useState<AnswerEvent | null>(null);
   const checked = verdicts.some(Boolean);
   return (
     <div>
@@ -622,6 +625,7 @@ function QuizGap({ item, ctx, onResult }: { item: Extract<QuizItem, { type: "gap
         onClick={() => {
           const next = item.answers.map((accepted, index) => checkAnswer(values[index], accepted));
           setVerdicts(next);
+          setEvent({ section: "quiz", exerciseId, itemIndex: 0, type: "gap", question: item.q, given: values.join(" · "), correct: item.answers.map((list) => list[0]), why: item.why, verdict: next.every((v) => v === "correct") ? "correct" : next.some((v) => v === "wrong") ? "wrong" : "accent", attempt: 1 });
           onResult(next.every((verdict) => verdict !== "wrong"));
         }}
       >
@@ -635,6 +639,7 @@ function QuizGap({ item, ctx, onResult }: { item: Extract<QuizItem, { type: "gap
           {item.why && <small><Rich text={item.why} /></small>}
         </div>
       )}
+      <Outcome ctx={ctx} event={checked ? event : null} />
     </div>
   );
 }
@@ -684,16 +689,16 @@ export function QuizSection({ items, ctx, onFinish, previous }: { items: QuizIte
             <span className="ae-mechanic">
               {String(index + 1).padStart(2, "0")} · {labels[item.type]}
             </span>
-            {(item.type === "choice" || item.type === "listen") && <ChoiceQuestion item={item} ctx={ctx} id={`quiz-${round}-${index}`} onAnswer={record(index)} />}
-            {item.type === "gap" && <QuizGap item={item} ctx={ctx} onResult={record(index)} />}
-            {item.type === "order" && <OrderBuilder item={item} seed={`quiz-${index}`} ctx={ctx} onResult={record(index)} />}
+            {(item.type === "choice" || item.type === "listen") && <ChoiceQuestion item={item} ctx={ctx} id={`quiz-${round}-${index}`} onAnswer={record(index)} exerciseId={`quiz:${index}`} kind={item.type} />}
+            {item.type === "gap" && <QuizGap item={item} ctx={ctx} onResult={record(index)} exerciseId={`quiz:${index}`} />}
+            {item.type === "order" && <OrderBuilder item={item} seed={`quiz-${index}`} ctx={ctx} onResult={record(index)} exerciseId={`quiz:${index}`} />}
             {item.type === "transform" && (
               <>
                 <p className="ae-source">
                   <Rich text={item.source} />
                 </p>
                 {item.instruction && <small className="ae-hint">{item.instruction}</small>}
-                <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} label={item.source} onResult={record(index)} />
+                <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} label={item.source} onResult={record(index)} exerciseId={`quiz:${index}`} kind="transform" />
               </>
             )}
             {item.type === "error" && (
@@ -701,7 +706,7 @@ export function QuizSection({ items, ctx, onFinish, previous }: { items: QuizIte
                 <p className="ae-source is-error">
                   <Rich text={item.sentence} />
                 </p>
-                <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} initial={item.sentence} label={item.sentence} multiline onResult={record(index)} />
+                <TextAnswer accepted={item.answers} why={item.why} ctx={ctx} initial={item.sentence} label={item.sentence} multiline onResult={record(index)} exerciseId={`quiz:${index}`} kind="error" />
               </>
             )}
             {item.type === "open" && <QuizOpen item={item} ctx={ctx} onResult={record(index)} />}

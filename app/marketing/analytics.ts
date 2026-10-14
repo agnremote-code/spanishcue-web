@@ -19,6 +19,9 @@ export const marketingEvents = [
   "checkout_start",
   "trial_checkout_start",
   "subscription_first_paid",
+  "trial_purchase",
+  "first_subscription_payment",
+  "subscription_renewal",
   "search_used",
   "filter_used",
   "free_lesson_completed",
@@ -38,14 +41,23 @@ const utmKeys = [
   "utm_term",
 ] as const;
 
+const clickIdKeys = ["gclid", "gbraid", "wbraid"] as const;
+
 type UtmKey = (typeof utmKeys)[number];
 type UtmValues = Partial<Record<UtmKey, string>>;
+type ClickIdKey = (typeof clickIdKeys)[number];
+type ClickIds = Partial<Record<ClickIdKey, string>>;
 type Attribution = {
   first: UtmValues;
   latest: UtmValues;
   landingPath: string;
   capturedAt: string;
+  /** Latest Google Ads click identifiers, kept only with marketing consent. */
+  click?: ClickIds & { at?: string };
 };
+
+/** Google Ads accepts click conversions up to 90 days after the click. */
+const clickIdMaxAgeMs = 90 * 24 * 60 * 60 * 1000;
 
 declare global {
   interface Window {
@@ -97,6 +109,15 @@ function sendGoogleAdsPurchase(properties: Record<string, string | number | bool
   });
 }
 
+function clickIdsFromUrl(url: URL): ClickIds {
+  return Object.fromEntries(
+    clickIdKeys.flatMap((key) => {
+      const value = url.searchParams.get(key)?.trim();
+      return value && /^[A-Za-z0-9_-]{1,200}$/.test(value) ? [[key, value]] : [];
+    }),
+  );
+}
+
 export function readMarketingAttribution(): Attribution | null {
   if (typeof window === "undefined") return null;
   try {
@@ -110,10 +131,13 @@ export function readMarketingAttribution(): Attribution | null {
 export function captureMarketingAttribution() {
   if (typeof window === "undefined") return null;
   if (!consentFor("marketing")) return null;
-  const incoming = valuesFromUrl(new URL(window.location.href));
+  const url = new URL(window.location.href);
+  const incoming = valuesFromUrl(url);
+  const incomingClick = clickIdsFromUrl(url);
   const existing = readMarketingAttribution();
   const hasIncoming = Object.keys(incoming).length > 0;
-  if (!hasIncoming && existing) {
+  const hasClick = Object.keys(incomingClick).length > 0;
+  if (!hasIncoming && !hasClick && existing) {
     document.documentElement.dataset.marketingAttribution = "ready";
     if (existing.first.utm_source) document.documentElement.dataset.utmSource = existing.first.utm_source;
     return existing;
@@ -126,6 +150,7 @@ export function captureMarketingAttribution() {
     latest: hasIncoming ? incoming : existing?.latest || {},
     landingPath: existing?.landingPath || `${window.location.pathname}${window.location.search}`,
     capturedAt: existing?.capturedAt || new Date().toISOString(),
+    click: hasClick ? { ...incomingClick, at: new Date().toISOString() } : existing?.click,
   };
   try {
     window.localStorage.setItem(attributionKey, JSON.stringify(attribution));
@@ -133,6 +158,33 @@ export function captureMarketingAttribution() {
     if (attribution.first.utm_source) document.documentElement.dataset.utmSource = attribution.first.utm_source;
   } catch {}
   return attribution;
+}
+
+export type CheckoutAttribution = Partial<Record<ClickIdKey | "utm_source" | "utm_medium" | "utm_campaign" | "ga_client_id", string>>;
+
+/**
+ * Identifiers sent with a checkout so the server can attribute the verified
+ * payment later. Click IDs and UTMs need marketing consent; the GA client ID
+ * needs analytics consent. Nothing here is proof of payment.
+ */
+export function checkoutAttribution(): CheckoutAttribution {
+  if (typeof window === "undefined") return {};
+  const result: CheckoutAttribution = {};
+  if (consentFor("marketing")) {
+    const attribution = captureMarketingAttribution();
+    const clickAt = Date.parse(attribution?.click?.at || "");
+    if (attribution?.click && Number.isFinite(clickAt) && Date.now() - clickAt <= clickIdMaxAgeMs) {
+      for (const key of clickIdKeys) if (attribution.click[key]) result[key] = attribution.click[key];
+    }
+    const utm = { ...attribution?.first, ...attribution?.latest };
+    for (const key of ["utm_source", "utm_medium", "utm_campaign"] as const) if (utm[key]) result[key] = utm[key];
+  }
+  if (consentFor("analytics")) {
+    const ga = document.cookie.split("; ").find((item) => item.startsWith("_ga="))?.slice(4);
+    const match = ga?.match(/^GA\d\.\d\.(\d+\.\d+)$/);
+    if (match) result.ga_client_id = match[1];
+  }
+  return result;
 }
 
 function queueEvent(payload: Record<string, unknown>) {
@@ -166,24 +218,25 @@ export function trackMarketingEvent(
     try { window.sessionStorage.setItem("spanishcue.founder-modal.converted", "1"); } catch {}
   }
 
-  // Google Ads purchase measurement follows marketing consent independently
-  // from optional product analytics. The server-deduplicated transaction ID is
-  // still the only event allowed to reach the paid conversion destination.
-  if (event === "subscription_first_paid" && properties.transaction_id) {
+  // `subscription_first_paid` is the entry point for the customer's first
+  // server-verified paid transaction (the US$2 trial or the first US$15.50
+  // month). It is the only event allowed to reach the Google Ads purchase
+  // conversion, which follows marketing consent independently from analytics.
+  if (event === "subscription_first_paid") {
+    if (!properties.transaction_id) return;
     sendGoogleAdsPurchase(properties);
-  }
-
-  if (!consentFor("analytics")) return;
-
-  // Keep the existing confirmed, server-deduplicated payment event as the authority.
-  // The requested reporting alias is emitted only with that same transaction.
-  if (event === "subscription_first_paid" && properties.transaction_id) {
-    trackMarketingEvent("subscription_complete", properties);
+    if (!consentFor("analytics")) return;
+    // GA4 gets one specific event for the transaction (never the generic
+    // name as well), plus the documented revenue alias used by funnel reports.
+    trackMarketingEvent(properties.plan === "trial" ? "trial_purchase" : "first_subscription_payment", properties);
     if (typeof properties.value === "number" && Number.isFinite(properties.value) && properties.value > 0
         && typeof properties.currency === "string" && /^[A-Z]{3}$/.test(properties.currency)) {
       trackMarketingEvent("verified_purchase", properties);
     }
+    return;
   }
+
+  if (!consentFor("analytics")) return;
 
   const attribution = captureMarketingAttribution();
   const payload: Record<string, unknown> = {

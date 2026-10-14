@@ -4608,6 +4608,2022 @@
       "text": "Pedí un refugio, no una prisión. ¿Qué puedo hacer ahora?",
       "category": "neutral-context",
       "reason": "Original Valdoria dialogue uses the standard first-person singular preterite to recount a past event or feeling; it is not a regional imperative."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "«Durante» mide un período que ya terminó: «Viví en Lima **durante** dos años». Para algo que sigue: «Vivo en Bogotá **desde hace** dos años».",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Viví acá desde 2024 (y sigo acá).",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Viví en… durante… años.",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/desde-hace.ts",
+      "text": "Sí, viví en Guadalajara durante cinco años. Me mudé hace tres años. Extraño la comida de mi abuela. Hace dos años que no vuelvo.",
+      "reason": "First-person preterite used to contrast a finished event with a present situation (desde/hace lesson); changing the accent would change tense.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g142.ts",
+      "text": "Hola, [[ayer hice|blue]] una visita rápida al centro. [[Salí|teal]] de la oficina a las cinco y [[fui|teal]] a la estación. [[Compré|teal]] los billetes para el fin de semana y [[después tomé|teal]] un café con Julia. [[Hablamos casi una hora|orange]]. [[Volví|teal]] a casa a las ocho, [[preparé|teal]] la cena y [[envié|teal]] un mensaje al grupo. No [[visité|blue]] el museo porque [[llegué|blue]] tarde. [[Al final tuve|teal]] una tarde tranquila, aunque [[hice|blue]] varias cosas.",
+      "category": "authentic-transcript",
+      "reason": "Exact transcript of the recorded lesson audio; «Salí» is a first-person preterite (yo salí), not a regional imperative."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Presente con vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Entender y usar «vos» en presente para hablar de la rutina con personas de Argentina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos + verbo en -ar · -ás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos + verbo en -er · -és",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos + verbo en -ir · -ís",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Estudias» es la forma de **tú**. Con vos, el acento va al final: estudiás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Trabajas» es la forma de **tú**. Con vos: trabajás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Hablas» es la forma de **tú**. Con vos: hablás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Comes» es la forma de **tú**. Con vos: comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Vives» es la forma de **tú**. Con vos: vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Lees» es la forma de **tú**. Con vos: leés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Estudiáis» es la forma de **vosotros** (España, plural). No es vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Coméis» es la forma de **vosotros** (España, plural). Con vos: comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Habláis» es la forma de **vosotros** (España, plural). Con vos: hablás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Trabaja» es para él, ella o usted, no para vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Estudia» es para él, ella o usted, no para vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer termina en -er: con vos es **comés**, no «comís».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir termina en -ir: con vos es **vivís**, no «vivés».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "El presente con vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Tú o vos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "En Argentina y en Uruguay, para hablar con un amigo o un compañero, se usa **vos** en lugar de **tú**. El significado es el mismo: la persona con quien hablas. Cambia la forma del verbo.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Lean las dos frases en voz alta. Pregunta: «¿Qué cambia? ¿Cambia la acción?». Exagera un poco el acento final de «hablás».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "VOS · Argentina",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿[[Vos hablás|blue]] español?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Tú **ha**blas»: la fuerza está en la primera sílaba. «Vos habl**ás**»: la fuerza está al final, y por eso lleva tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Vos hablás» y «tú hablas»: ¿significan lo mismo?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "No, «vos» es plural.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "No, «vos hablás» es pasado.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos y tú son la misma persona: «you» singular. Solo cambia la forma del verbo.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Dónde está la fuerza en «vos hablás»?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con vos, el acento va al final y se escribe con tilde: hablás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "VOS + -ÁS",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos + raíz + -ás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "hablar → vos hablás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con los verbos en **-ar**, la forma de vos termina en **-ás**, con tilde. Es el **presente**: habla de la rutina y de lo que pasa en general.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos [[trabajás|blue]] en casa.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos [[estudiás|blue]] español los martes?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos [[desayunás|blue]] muy temprano.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Como con tú, el pronombre no es obligatorio: «¿[[Viajás|blue]] en autobús?» ya dice que hablas con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ en una oficina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "trabajás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Trabajar termina en -ar: con vos, trabajás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos ___ con tu hermana?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "hablás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hablar → vos hablás, con tilde al final.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "VOS + -ÉS",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos + raíz + -és",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "comer → vos comés",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con los verbos en **-er**, la forma de vos termina en **-és**, con tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos [[comés|teal]] en la oficina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿[[Leés|teal]] el diario por la mañana?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos [[aprendés|teal]] muy rápido.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "VOS + -ÍS",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos + raíz + -ís",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vivir → vos vivís",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con los verbos en **-ir**, la forma de vos termina en **-ís**, con tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos [[vivís|violet]] cerca del centro?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos [[escribís|violet]] muchos mensajes.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿[[Abrís|violet]] la tienda a las nueve?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ en un departamento pequeño.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vivís",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir termina en -ir: vivi(r) → vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos ___ carne?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "comés",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer termina en -er: come(r) → comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos ___ libros en español?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "leés",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Leer termina en -er: lee(r) → leés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "**vos**",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "[[hablás|blue]]",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "[[comés|teal]]",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "[[vivís|violet]]",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos usa «te» y «tu»",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con vos, los pronombres y los posesivos son los mismos que con tú: «¿Vos vivís con **tu** familia?» · «¿Vos **te** levantás temprano?».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vas a escuchar también estas formas: «vos **sos**» (ser), «vos **tenés**» (tener), «vos **querés**» (querer), «vos **podés**» (poder). Con vos, el verbo no cambia la vocal de la raíz: tú qu**ie**res → vos qu**e**rés. Hoy solo las reconocemos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Qué forma es de **vos**?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivís termina en -ís: es la forma de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Yo como en casa. ¿Y vos? ¿Dónde ___?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "La pregunta usa vos: comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Puedes usar **vos**: «¿Vos [[trabajás|blue]] cerca?». Si prefieres tú, también te entienden.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Vos» va con la forma de vos y «tú» con la forma de tú. «Tú hablás» o «vos hablas» suenan mal. Elige una forma y úsala en toda la conversación.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudias español.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudiás español.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con vos, la forma termina en -ás y lleva tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos coméis en casa.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos comés en casa.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Coméis» es de vosotros, en España. Con vos: comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos vivés lejos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos vivís lejos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir es un verbo en -ir: la forma de vos termina en -ís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tú trabajás mucho.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos trabajás mucho. / Tú trabajas mucho.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "No mezcles: vos con trabajás, tú con trabajas.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos vivís con vuestra familia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos vivís con tu familia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos usa los mismos posesivos que tú: tu familia.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos viven cerca.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vivís cerca.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Viven» es plural. Vos es una sola persona.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pide al alumno tres frases sobre su rutina con «yo» y después pídele que te pregunte lo mismo con «vos»: «Yo trabajo en casa. ¿Y vos? ¿Vos trabajás en casa?».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos en conversaciones reales",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¡Hola! [[Vos sos|blue]] el estudiante nuevo, ¿no?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Yo soy Lucía. ¿Y dónde [[vivís|violet]]?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Sí, vivo lejos. Viajo una hora en autobús. ¿Vos [[trabajás|blue]]?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¡Qué bien! ¿Y [[comés|teal]] ahí?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¡Qué interesante! ¿Y vos [[enseñás|blue]] aquí, en la universidad?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¡Sí! ¡Ya [[hablás|blue]] como un cordobés!",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Sos» es la forma de **ser** con vos. Es irregular: hoy solo la reconocemos. Con tú sería «tú eres».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Lucía es argentina y usa vos. Vivir es un verbo en -ir: **vivís**, con tilde al final.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Diego es de México y usa **tú**. Dice lo mismo que «vos vivís» con la forma general.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Trabajar, en -ar: con vos, **trabajás**. Lucía no repite «vos» en todas las frases, pero aquí lo usa para cambiar de tema.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer, en -er: con vos, **comés**. No hace falta el pronombre: la forma ya dice quién.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¡Diego cambia a **vos**! Enseñar, en -ar: enseñás. Habla como Lucía para acercarse a ella.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hablar, en -ar: **hablás**. Lucía nota que Diego ya usa vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "En México se usa tú. Al final, Diego prueba con vos: «¿Y vos enseñás…?».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tenemos un horario nuevo: la clase empieza a las diez. Vos [[trabajás|blue]] cerca de casa, ¿no?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Yo vivo lejos y viajo en autobús. ¿Vos [[vivís|violet]] con tu familia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Porque los sábados [[comés|teal]] con ellos, ¿no? La clase termina a las doce.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Perfecto. ¿Y [[leés|teal]] el texto antes de la clase?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Lucía habla de la rutina de Martín: **trabajás**, presente de vos con un verbo en -ar.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Una pregunta con vos y un verbo en -ir: **vivís**. Fíjate: «con **tu** familia», como con tú.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer, en -er: **comés**. Es un hábito de todos los sábados.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Leer, en -er: lee(r) → **leés**. Martín responde con yo: «leo».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pregunta: «¿Qué responde Martín cada vez?». El alumno ve que a una pregunta con vos (vivís) se responde con yo (vivo).",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos, tú o yo?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Termina en -ás con tilde: vos trabajás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Termina en -és con tilde: vos leés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Termina en -ís con tilde: vos vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Elige la forma de vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ español los lunes.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "estudiás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Estudiar, en -ar: vos estudiás, con tilde.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos ___ cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir, en -ir: vos vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ en casa al mediodía.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer, en -er: vos comés. «Coméis» es de vosotros.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ mucho, ¿no?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Leer, en -er: vos leés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos ___ los fines de semana?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Trabajar, en -ar: vos trabajás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ muy rápido.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "escribís",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escribir, en -ir: vos escribís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Qué describe «vos trabajás»?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "El presente de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Trabajás es presente; la persona es vos (una persona).",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Tú comes aquí» y «Vos comés aquí». ¿Qué cambia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Las dos son presente y hablan de la misma acción; cambia solo tú / vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Qué mensaje es para un amigo de Córdoba, con vos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Venís a la clase? ¿Estudiás conmigo?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Venís y estudiás son formas de vos. La primera es con tú; la tercera es plural.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Yo vivo lejos y vos vivís cerca.» ¿Quién vive cerca?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos = la persona con quien hablas. Yo = la persona que habla.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudias en la biblioteca.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudiás en la biblioteca.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudiáis en la biblioteca.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudia en la biblioteca.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con vos: estudiás, con tilde al final.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos comés carne?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Correcta: comer → vos comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vivés con tu hermano.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vives con tu hermano.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vivís con tu hermano.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos viven con tu hermano.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir es -ir: vos vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tú trabajás en un hotel.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Con tú, la forma es trabajas. No mezcles tú con la forma de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos leés con tus hijos por la noche?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Correcta: leer → vos leés, y «tus hijos», como con tú.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos habláis muy bien.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos hablás muy bien.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos hablan muy bien.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos habla muy bien.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Habláis» es de vosotros. Con vos: hablás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hola, Lucía. ¿Vos ___ por la mañana?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Martín usa vos: estudiás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Yo trabajo hasta las seis. ¿Y vos? ¿Dónde ___ al mediodía?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos + comer: comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pregunta a Lucía con vos: vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Perfecto. Vos ___ el enlace y yo preparo los ejercicios.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "mandás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Mandar, en -ar, con vos: mandás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vivís en el centro",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos comés en casa los domingos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Los domingos vos comés en casa",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos trabajás mucho y estudiás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudiás y trabajás mucho",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pásalo a vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escribe la frase con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos hablás español y comés aquí",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hablás español y comés aquí",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pregunta a tu compañero argentino si él también vive cerca. Usa vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos vivís cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vivís cerca de la oficina",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos también vivís cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos también vivís cerca de la oficina",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vivís cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿También vivís cerca de la oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos leés y escribís en español",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Leés y escribís en español",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escribe la pregunta con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos trabajás los sábados?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Trabajás los sábados?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos (cocinar)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Cocinar → vos cocinás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos (beber)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Beber → vos bebés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos (abrir)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Abrir → vos abrís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos (correr)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Correr → vos corrés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos (escuchar)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escuchar → vos escuchás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vos (subir)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Subir → vos subís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Primera escucha con la idea general. En la segunda, el alumno anota las horas y levanta la mano cada vez que oye una forma de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escucha una vez para la idea general y otra vez para los detalles. Cuenta cuántas formas de vos escuchas.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Si vos vivís lejos, podemos estudiar por videollamada».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Qué forma de vos escuchas en la pregunta sobre la comida?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Comés…?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«¿Comés antes de la clase?»: comer → vos comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hola, Lucía. Vos [[estudiás|blue]] por la mañana, ¿verdad? Yo trabajo hasta las seis. Después como en casa y preparo la clase. Si vos [[vivís|violet]] lejos, podemos estudiar por videollamada. ¿[[Comés|teal]] antes de la clase? Yo tengo tiempo a las ocho. El sábado hablamos otra vez y confirmamos el horario.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "El profesor es el compañero argentino. El alumno responde como Lucía: dice a qué hora estudia, dónde vive y si come antes de la clase. Después le hace una pregunta con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Responde como Lucía, en voz alta: ¿a qué hora estudias?, ¿vives lejos?, ¿comes antes de la clase? Termina con una pregunta con vos: «¿Y vos…?».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Responde con yo y pregunta con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tú haces de compañero argentino y preguntas con vos. El alumno responde con yo y después te pregunta lo mismo con vos. Sigue lo que el alumno quiere contar.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Imagina que tu compañero es de Córdoba. Lee su pregunta, responde en voz alta con yo y después hazle la misma pregunta con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tu compañero de Córdoba te pregunta: «¿Vos trabajás o estudiás?»",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Dónde trabajás o estudiás?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Trabajás en casa o en una oficina?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Y vos? ¿Vos [[trabajás|blue]]…?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Responde con yo (trabajo, estudio) y pregunta con vos (trabajás, estudiás).",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Yo trabajo en un hospital y estudio español por la noche. ¿Y vos? ¿Vos trabajás?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Tomás café o té?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Y vos? ¿A qué hora [[desayunás|blue]]?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Desayunar y tomar son verbos en -ar: vos desayunás, vos tomás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Desayuno a las siete. Tomo café y como pan con queso. ¿Y vos? ¿A qué hora desayunás?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tu compañero pregunta: «¿Vivís cerca o lejos de tu trabajo?»",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vivís solo o con tu familia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos [[vivís|violet]] con tu familia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir es -ir: yo vivo, vos vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivo lejos. Viajo cuarenta minutos en metro. Vivo con mi pareja. ¿Y vos? ¿Vivís cerca?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tu compañero pregunta: «¿Comés en casa o en el trabajo?»",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿A qué hora comés?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Cocinás vos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Qué comés los domingos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Y vos? ¿Dónde [[comés|teal]]?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer es -er: yo como, vos comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Durante la semana como en la oficina. Los domingos cocino en casa con mi familia. ¿Y vos? ¿Dónde comés?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tu compañero pregunta: «¿Qué hacés los sábados?»",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Leés o mirás series?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Escribís a tu familia?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Salís con amigos?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Y vos? ¿Qué [[hacés|teal]] los sábados?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "«Hacés» es la forma de vos de hacer. Responde con yo: «Los sábados limpio la casa».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Los sábados limpio la casa y por la tarde camino en el parque. A veces leo. ¿Y vos? ¿Qué hacés los sábados?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos [[estudiás|blue]] por la mañana?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pregunta con vos por el horario del compañero y propón un día con «podemos».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Yo tengo tiempo el martes a las ocho. ¿Vos estudiás por la noche? Podemos hacer una videollamada.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pide al alumno que compare: «Yo trabajo hasta las cinco y vos trabajás hasta las seis».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Al final, cambien los papeles: el alumno es el compañero argentino y te hace tres preguntas con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escribe tres preguntas con vos (-ás, -és, -ís) para un compañero argentino y léelas en voz alta.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Habla de ti con yo y pregunta con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Escribe tu mensaje y toca «Revisar mi texto». Mira bien las tildes de las formas de vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Haz **dos preguntas con vos** sobre su rutina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos estudiás…?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vivís…?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Hola, Lucía. Yo trabajo hasta las seis. ¿Vos [[estudiás|blue]] por la tarde? ¿[[Comés|teal]] antes de la clase? Podemos hablar a las ocho. Vos [[vivís|violet]] lejos y yo prefiero una videollamada. El sábado confirmamos el horario.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos hablás español.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "hablar → hablás",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "comer → comés",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos vivís lejos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "vivir → vivís",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Infinitivo sin **-r** + **-s**, con tilde: hablá**s**, comé**s**, viví**s**. Vos y tú significan lo mismo: no los mezcles en una frase.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ en un banco.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Trabajar → vos trabajás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "¿Vos ___ con tus padres?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vivir → vos vivís.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos ___ pescado los viernes.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Comer → vos comés.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Tú estudiás mucho.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudiás mucho.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos estudias mucho.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Vos con la forma de vos: estudiás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g3.ts",
+      "text": "Pregunta de cierre: «Di con vos: tú hablas, comes y vives». Respuesta: «Vos hablás, comés y vivís». Recuerda al alumno que puede seguir usando tú: con vos, lo importante hoy es entender y responder.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "**Argentina** y Uruguay. Tus abuelos dicen vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Alex habla con el abuelo usando **tú**: eres deportista. El abuelo diría «sos».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Buena noticia: con **tú** y con **vos**, «estás» es igual. «¿Cómo estás?» funciona en todo el mundo.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "En Argentina, para hablar con alguien de confianza, se dice **vos** en lugar de **tú**. Significa lo mismo: «you». Tú puedes usar «tú»: tus abuelos te entienden perfecto.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Eres (you are), con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hablas con él (tú / vos): estás, no está.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hola, mi amor. [[Soy|blue]] la abuela. [[Estoy|teal]] en casa, en Buenos Aires. [[Estoy|teal]] muy bien. Hoy hay sol. Tu abuelo [[está|teal]] en el patio, con el mate. ¿Y [[vos|orange]]? ¿Cómo [[estás|orange]]? ¿[[Estás|orange]] en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hoy usas **soy** y reconoces **eres / sos**, **es** y **son**: «Mis abuelos **son** de Argentina».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "La abuela habla con vos: sos (eres).",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "La abuela pregunta cómo está Alex: **estás** (you are). Con tú y con vos es igual.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "La persona con quien hablas: tú, o vos en Argentina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Para hablar, primero decimos **quién**: yo, tú, él, ella… Son los **pronombres**. Hoy necesitas tres: **yo** (I), **tú / vos** (you) y los demás solo para reconocerlos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Responde como la abuela, con vos si quieres: «Estoy re bien, mi amor. ¿Y vos?». Después, cambien los papeles.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Sos = eres. Es la forma de vos, la de tus abuelos.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tu abuela dice «vos». ¿Qué significa?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tus abuelos dicen «vos»",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tus abuelos también: «[[Soy|blue]] la abuela. [[Soy|blue]] de Buenos Aires». Para preguntar: «¿Eres de Sídney?» o, con vos, «¿**Sos** de Sídney?».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "TÚ · VOS · la persona con quien hablas (you)",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "TÚ · VOS · you",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tú eres la abuela o el abuelo y preguntas con tú (o con vos, si quieres que el alumno lo oiga). El alumno responde con yo, en frases cortas. Repite su frase bien pronunciada y sigue.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tú y vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tú y vos son la **misma persona**: «you». Con vos, el verbo cambia un poco: tú **eres** → vos **sos**. Hoy solo lo reconoces cuando tus abuelos lo dicen.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Un lugar, para tú / vos: estás.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Vos = tú = you. Es la forma de Argentina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Vos = you, en Argentina.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Yo, tú y vos · The people",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "[[tú|orange]] · [[vos|orange]]",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "[[vos|orange]]",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "[[vos|violet]] · you",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "eres · **sos**",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "sos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "vos",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "¡Claro! Vos ___ de la familia.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "¡Claro! [[Sos|orange]] de la familia.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "«Estás» es «you are» (tú / vos). Aquí hablas de ti: «estoy».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "«Sos de la familia»: ¿qué significa «sos»?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "«Sos» es «eres» con **vos**. La abuela es argentina. Significa: you are.",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "«Sos» es «you are» con vos. Aquí la persona habla de ella misma: «soy».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "«Vos» y «bos» suenan…",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "«¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio?».",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "¿Y TÚ? ¿Y VOS?",
+      "category": "regional-pedagogy",
+      "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
+    },
+    {
+      "path": "app/grammar-classroom/catalog.ts",
+      "text": "El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.",
+      "category": "regional-pedagogy",
+      "reason": "Catalog subtitle of lesson 239: the class teaches tú and recognises vos, the form of the learner's Argentine grandparents."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, mi amor. Soy la abuela. Estoy en casa, en Buenos Aires. Estoy muy bien. Hoy hay sol. Tu abuelo está en el patio, con el mate. ¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.",
+      "category": "authentic-transcript",
+      "reason": "Recorded voice note of the Argentine grandmother in lesson 239; the audio is generated from this exact text."
     }
   ]
 }

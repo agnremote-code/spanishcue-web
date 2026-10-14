@@ -38,6 +38,33 @@ export async function runSmoke(origin, fetcher = fetch) {
   const sessionStatus = await check("/api/auth/session", 200, { method: "GET" });
   assert.deepEqual(await sessionStatus.json(), { authenticated: false });
   assert.match(sessionStatus.headers.get("cache-control") || "", /private, no-store/i);
+  // Paid-traffic purchase path: anonymous demo, checkout page and live offers.
+  await check("/demo/noche-abierta", 200);
+  // Public pages must load every script chunk they reference, never a protected one:
+  // the campaign landing and the FREE sample lessons that anonymous visitors open.
+  for (const path of ["/lp/google-teachers", "/la-fabrica-de-los-nombres", "/el-hotel-de-lo-imposible"]) {
+    const html = await (await check(path, 200)).text();
+    for (const [, src] of html.matchAll(/<script[^>]+src="(\/assets\/[^"]+\.js)"/g)) await check(src, 200);
+  }
+  assert.match(await (await check("/acceso", 200)).text(), /SPANISHCUE/i);
+  const founder = await (await check("/api/billing/founder-status", 200)).json();
+  assert.equal(founder.priceUsd, 15.5);
+  assert.equal(founder.trialPriceUsd, 2);
+  // Only spanishcue.com runs Live billing; staging and inert workers.dev
+  // deploys use PayPal Sandbox and have no Paddle.
+  if (origin === "https://spanishcue.com") {
+    assert.equal(founder.mode, "live", "billing must run in Live mode");
+    assert.equal(founder.paddleCheckoutAvailable, true, "Paddle monthly checkout must be available");
+    assert.equal(founder.trialCheckoutAvailable, true, "Paddle US$2 trial checkout must be available");
+    // A ready Live Paddle webhook rejects a forged signature (503 = not configured).
+    await check("/api/billing/paddle/webhook", 401, { method: "POST", headers: { "content-type": "application/json", "paddle-signature": "ts=1;h1=release-smoke" }, body: "{}" });
+  }
+  // Checkout, payment confirmation and conversions refuse cross-site calls.
+  for (const path of ["/api/billing/paddle/checkout", "/api/billing/paddle/confirm", "/api/billing/checkout", "/api/billing/conversion"]) {
+    await check(path, 403, { method: "POST", headers: { origin: "https://release-smoke.invalid", "content-type": "application/json" }, body: "{}" });
+  }
+  // A browser cannot confirm a made-up payment.
+  await check("/api/billing/paddle/confirm", 400, { method: "POST", headers, body: '{"transactionId":"not-a-transaction"}' });
   return results;
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

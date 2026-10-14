@@ -90,7 +90,9 @@ async function paddleJson<T>(config: PaddleRuntimeConfig, path: string, init: Re
 
 export async function createPaddleCheckoutTransaction(
   config: PaddleRuntimeConfig,
-  input: { userId: string; claimId?: never; offerCode: string; offer?: PaddleOffer } | { claimId: string; userId?: never; offerCode: string; offer?: PaddleOffer },
+  input: ({ userId: string; claimId?: never } | { claimId: string; userId?: never }) & {
+    offerCode: string; offer?: PaddleOffer; attribution?: PaddleAttribution;
+  },
 ) {
   const data = await paddleJson<PaddleTransaction>(config, "/transactions", {
     method: "POST",
@@ -102,6 +104,7 @@ export async function createPaddleCheckoutTransaction(
         ...(input.claimId ? { spanishcue_claim_id: input.claimId } : { spanishcue_user_id: input.userId }),
         spanishcue_offer_code: input.offerCode,
         spanishcue_checkout_offer: input.offer || "monthly",
+        ...paddleAttributionData(input.attribution),
       },
     }),
   });
@@ -109,8 +112,40 @@ export async function createPaddleCheckoutTransaction(
   return data.id;
 }
 
+export type PaddleAttribution = Partial<Record<(typeof attributionKeys)[number], string>>;
+const attributionKeys = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "ga_client_id"] as const;
+
+/** Only allow-listed ad identifiers with safe characters reach Paddle custom_data. */
+export function sanitizePaddleAttribution(value: unknown): PaddleAttribution {
+  if (!value || typeof value !== "object") return {};
+  const input = value as Record<string, unknown>;
+  const result: PaddleAttribution = {};
+  for (const key of attributionKeys) {
+    const item = input[key];
+    if (typeof item === "string" && /^[A-Za-z0-9._~+-]{1,200}$/.test(item)) result[key] = item;
+  }
+  return result;
+}
+
+function paddleAttributionData(attribution?: PaddleAttribution) {
+  return Object.fromEntries(Object.entries(sanitizePaddleAttribution(attribution)).map(([key, item]) => [`spanishcue_${key}`, item]));
+}
+
+/** Attribution stored on the Paddle subscription at checkout (renewals inherit it). */
+export function paddleAttributionFrom(entity: { custom_data?: unknown }): PaddleAttribution {
+  const custom = entity.custom_data && typeof entity.custom_data === "object" ? entity.custom_data as Record<string, unknown> : {};
+  return sanitizePaddleAttribution(Object.fromEntries(attributionKeys.map((key) => [key, custom[`spanishcue_${key}`]])));
+}
+
 export async function getPaddleTransaction(config: PaddleRuntimeConfig, transactionId: string) {
   return paddleJson<PaddleTransaction>(config, `/transactions/${encodeURIComponent(transactionId)}?include=customer`);
+}
+
+/** Latest completed charges of one subscription (trial, first month, renewals). */
+export async function listPaddleSubscriptionTransactions(config: PaddleRuntimeConfig, subscriptionId: string) {
+  const query = new URLSearchParams({ subscription_id: subscriptionId, status: "completed", per_page: "12", order_by: "billed_at[DESC]", include: "customer" });
+  const data = await paddleJson<PaddleTransaction[]>(config, `/transactions?${query}`);
+  return Array.isArray(data) ? data : [];
 }
 
 export async function getPaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {
@@ -199,6 +234,18 @@ export function paddleCompletedPayment(transaction: PaddleTransaction, subscript
       || !["active", "trialing", "canceled", "paused", "past_due"].includes(String(subscription.status))) return null;
   return { amountCents, currency: "USD", isTrial, paidThrough: end, paidAt: start,
     priceId: String(transaction.items![0].price!.id) };
+}
+
+/** One-time link to Paddle's customer portal (card, invoices, declined payments). */
+export async function createPaddlePortalSession(config: PaddleRuntimeConfig, customerId: string, subscriptionId: string) {
+  if (!/^ctm_[a-z0-9]{26}$/.test(customerId)) throw new Error("paddle_customer_invalid");
+  const data = await paddleJson<{ urls?: { general?: { overview?: unknown }; subscriptions?: Array<{ id?: unknown; update_subscription_payment_method?: unknown }> } }>(
+    config, `/customers/${encodeURIComponent(customerId)}/portal-sessions`,
+    { method: "POST", body: JSON.stringify({ subscription_ids: [subscriptionId] }) },
+  );
+  const url = data.urls?.general?.overview;
+  if (typeof url !== "string" || !url.startsWith("https://")) throw new Error("paddle_portal_invalid");
+  return url;
 }
 
 export async function pausePaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {

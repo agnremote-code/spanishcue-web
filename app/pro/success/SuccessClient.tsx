@@ -52,7 +52,7 @@ export default function SuccessClient({ subscriptionId, returnTo }: { subscripti
           body: JSON.stringify({ subscriptionId }),
         });
         if (response.ok && response.status !== 204) {
-          const body = await response.json() as { transactionId?: unknown; value?: unknown; currency?: unknown };
+          const body = await response.json() as { transactionId?: unknown; value?: unknown; currency?: unknown; plan?: unknown };
           if (typeof body.transactionId === "string"
               && typeof body.value === "number" && Number.isFinite(body.value) && body.value > 0
               && typeof body.currency === "string" && /^[A-Z]{3}$/.test(body.currency)
@@ -61,6 +61,7 @@ export default function SuccessClient({ subscriptionId, returnTo }: { subscripti
               transaction_id: body.transactionId,
               value: body.value,
               currency: body.currency,
+              plan: body.plan === "trial" ? "trial" : "monthly",
             });
             conversionChecked.current = true;
           }
