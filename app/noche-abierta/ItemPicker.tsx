@@ -7,15 +7,19 @@
 import { Suspense, lazy, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import ItemIcon, { ITEM_META, ITEM_ORDER, isItemId, type ItemId } from './ItemIcon';
 import { ITEMS } from './street.mjs';
+import Bi from './Bi';
 
 const ItemStage = lazy(() => import('./ItemStage'));
 
 const NOTES: Record<string, string> = Object.fromEntries(ITEMS.map(item => [item.id, item.note]));
+const NOTES_A0: Record<string, string> = Object.fromEntries(ITEMS.map(item => [item.id, item.en ? `${item.note}\n${item.en}` : item.note]));
 
 export type ItemPickerProps = {
   initial?: ItemId | null;
   onChoose: (id: ItemId) => void;
   onClose?: () => void;
+  /** At A0 the picker reads in Spanish and English. */
+  bilingual?: boolean;
 };
 
 function webglAvailable() {
@@ -25,7 +29,7 @@ function webglAvailable() {
   } catch { return false; }
 }
 
-export default function ItemPicker({ initial = null, onChoose, onClose }: ItemPickerProps) {
+export default function ItemPicker({ initial = null, onChoose, onClose, bilingual = false }: ItemPickerProps) {
   const [selected, setSelected] = useState<ItemId | null>(initial);
   const [focused, setFocused] = useState<ItemId | null>(initial);
   const [use3d, setUse3d] = useState(false);
@@ -81,8 +85,8 @@ export default function ItemPicker({ initial = null, onChoose, onClose }: ItemPi
     <div className="na-pick-sky" aria-hidden="true" />
     <header className="na-pick-head">
       <p className="na-kicker">Antes de salir</p>
-      <h2 id="na-pick-title">¿QUÉ LLEVAS ESTA NOCHE?</h2>
-      <p className="na-pick-lede" id="na-pick-lede">Elige una sola cosa. La vas a llevar toda la noche y cambia lo que puedes hacer.</p>
+      <h2 id="na-pick-title">¿QUÉ LLEVAS ESTA NOCHE?{bilingual && <small className="na-en" lang="en">What are you carrying tonight?</small>}</h2>
+      <p className="na-pick-lede" id="na-pick-lede"><Bi text={bilingual ? 'Elige una sola cosa. La vas a llevar toda la noche.\nChoose one thing. You carry it all night.' : 'Elige una sola cosa. La vas a llevar toda la noche y cambia lo que puedes hacer.'} /></p>
       {onClose && <button type="button" className="na-close na-pick-close" onClick={onClose} aria-label="Cerrar sin elegir">×</button>}
     </header>
 
@@ -111,7 +115,7 @@ export default function ItemPicker({ initial = null, onChoose, onClose }: ItemPi
         >
           <span className="na-pick-art"><ItemIcon id={id} size={use3d ? 30 : 64} /></span>
           <span className="na-pick-name"><span aria-hidden="true">{meta.emoji}</span> {meta.label}</span>
-          <span className="na-pick-note">{NOTES[id]}</span>
+          <span className="na-pick-note"><Bi text={bilingual ? NOTES_A0[id] : NOTES[id]} /></span>
           {meta.power && <span className="na-pick-tag is-power">Poder</span>}
           <kbd className="na-pick-key" aria-hidden="true">{i + 1}</kbd>
         </button>;

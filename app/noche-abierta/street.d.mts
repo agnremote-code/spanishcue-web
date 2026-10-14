@@ -1,7 +1,7 @@
 import type { Level } from './engine.mjs';
 
 export type ItemId = 'lapiz' | 'libro' | 'gas' | 'granada' | 'pistola' | 'cuchillo' | 'corazon';
-export type Item = { id: ItemId; name: string; short: string; note: string };
+export type Item = { id: ItemId; name: string; short: string; note: string; en?: string };
 export type Mood = 'neutral' | 'smile' | 'love' | 'sad' | 'scared' | 'angry' | 'surprised' | 'worried' | 'pain' | 'tipsy' | 'sleepy' | 'smitten' | 'laugh' | 'terror' | 'furious';
 export type Change = 'sonrie' | 'se-va' | 'corre' | 'ambulancia' | 'policia' | 'baila' | 'sigue' | 'llama' | 'triste' | 'enojado' | 'luz' | 'abraza' | 'se-sienta' | 'duerme' | 'beso' | 'huye' | 'cae' | 'pelea' | 'helicoptero' | 'manos-arriba';
 export type OpeningFx = 'retrocede' | 'manos-arriba' | 'grita' | 'huye' | 'evacuacion' | 'duelo-cuchillo' | 'policia' | 'helicoptero' | 'defensa' | 'risa' | 'curioso' | 'corazon' | 'beso' | 'abrazo' | 'calma';
@@ -23,7 +23,7 @@ export type Encounter = {
 };
 export type StreetState = {
   item: ItemId | null;
-  open: { id: string; node: string; trail: { node: string; choice: string }[]; end: string | null } | null;
+  open: { id: string; node: string; trail: { node: string; choice: string }[]; end: string | null; a0?: boolean } | null;
   done: Record<string, string>;
   flags: string[];
 };
@@ -31,7 +31,7 @@ export type StreetChoice = { key: string; item: ItemId | null; act: string; say:
 export type StreetView = {
   id: string; title: string; district: string; districtName: string; goal: string; kind: 'escena' | 'rincon'; step: number;
   said: { act: string; say: string; reply: string; item: ItemId | null } | null; mood: Mood;
-  ended: boolean; who?: string; line?: string; choices?: StreetChoice[];
+  ended: boolean; who?: string; whoBody?: string | null; line?: string; choices?: StreetChoice[]; words?: string[];
   end?: { id: string; text: string; change: Change; recap: string }; speak?: string;
   variant: ItemId | null; fx: OpeningFx | null;
 };
@@ -47,14 +47,16 @@ export function bandFor(level: Level): 'A' | 'B' | 'C';
 export function emptyStreet(): StreetState;
 export function isValidStreet(value: unknown): value is StreetState;
 export function chooseItem(street: StreetState, item: ItemId): StreetState;
-export function isAvailable(street: StreetState, encounter: Encounter | null, eventId?: string | null): boolean;
-export function availableEncounters(street: StreetState, eventId?: string | null): Encounter[];
+export function isAvailable(street: StreetState, encounter: Encounter | null, eventId?: string | null, level?: Level | string | null): boolean;
+export function availableEncounters(street: StreetState, eventId?: string | null, level?: Level | string | null): Encounter[];
+export function hasA0(id: string): boolean;
+export const A0_IDS: readonly string[];
 export const OPENING_FX: readonly OpeningFx[];
 export function variantOf(encounter: Encounter | null, item: ItemId | null): Variant | null;
 export function startFor(encounter: Encounter, item: ItemId | null): string;
 export function openingFx(street: StreetState, id?: string): OpeningFx | null;
-export function openEncounter(street: StreetState, id: string, eventId?: string | null): StreetState;
-export function choicesFor(encounter: Encounter | null, nodeId: string, item: ItemId | null): (Choice & { key: string; item: ItemId | null })[];
+export function openEncounter(street: StreetState, id: string, eventId?: string | null, level?: Level | string | null): StreetState;
+export function choicesFor(encounter: Encounter | null, nodeId: string, item: ItemId | null, a0?: boolean): (Choice & { key: string; item: ItemId | null })[];
 export function chooseLine(street: StreetState, choiceId: string): StreetState;
 export function stepBack(street: StreetState): StreetState;
 export function restartEncounter(street: StreetState): StreetState;

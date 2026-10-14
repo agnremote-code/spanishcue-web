@@ -24,16 +24,18 @@ import VIEJO from "./street/viejo.mjs";
 import CAOS_NORTE from "./street/caos-norte.mjs";
 import CAOS_CENTRO from "./street/caos-centro.mjs";
 import CAOS_SUR from "./street/caos-sur.mjs";
+import { A0_SCENES } from "./street/a0.mjs";
+import { bi } from "./bilingual.mjs";
 
 // What the learner can carry. The heart is not an object but a power.
 export const ITEMS = [
-  { id: "lapiz", name: "Lápiz", short: "Lápiz", note: "Escribir, dibujar, dejar una nota." },
-  { id: "libro", name: "Libro", short: "Libro", note: "Buscar, enseñar, regalar." },
-  { id: "gas", name: "Gas pimienta", short: "Gas", note: "Por si te sientes en peligro." },
-  { id: "granada", name: "Granada", short: "Granada", note: "Nadie sabe si es de verdad. Nadie quiere averiguarlo." },
-  { id: "pistola", name: "Pistola", short: "Pistola", note: "Todo el mundo la ve antes de verte a ti." },
-  { id: "cuchillo", name: "Cuchillo", short: "Cuchillo", note: "Cortar, abrir… o que alguien saque el suyo." },
-  { id: "corazon", name: "Corazón", short: "Corazón", note: "Un poder: cambia la actitud de quien lo recibe." },
+  { id: "lapiz", name: "Lápiz", short: "Lápiz", note: "Escribir, dibujar, dejar una nota.", en: "Pencil. Write, draw, leave a note." },
+  { id: "libro", name: "Libro", short: "Libro", note: "Buscar, enseñar, regalar.", en: "Book. Look things up, show, give." },
+  { id: "gas", name: "Gas pimienta", short: "Gas", note: "Por si te sientes en peligro.", en: "Pepper spray. In case you feel in danger." },
+  { id: "granada", name: "Granada", short: "Granada", note: "Nadie sabe si es de verdad. Nadie quiere averiguarlo.", en: "Grenade. Nobody knows if it is real. Nobody wants to find out." },
+  { id: "pistola", name: "Pistola", short: "Pistola", note: "Todo el mundo la ve antes de verte a ti.", en: "Gun. Everyone sees it before they see you." },
+  { id: "cuchillo", name: "Cuchillo", short: "Cuchillo", note: "Cortar, abrir… o que alguien saque el suyo.", en: "Knife. Cut, open… or someone pulls out theirs." },
+  { id: "corazon", name: "Corazón", short: "Corazón", note: "Un poder: cambia la actitud de quien lo recibe.", en: "Heart. A power: it changes the mood of whoever receives it." },
 ];
 export const ITEM_IDS = ITEMS.map((item) => item.id);
 export const isItem = (value) => ITEM_IDS.includes(value);
@@ -55,11 +57,17 @@ export const ENCOUNTERS = Object.freeze([...VIEJO, ...ALTO, ...CLINICA, ...MERCA
 const byId = new Map(ENCOUNTERS.map((encounter) => [encounter.id, encounter]));
 export const encounterById = (id) => byId.get(id) ?? null;
 
-// A1–A2 read band A, B1–B2 band B, C1–C2 band C.
+// A1–A2 read band A, B1–B2 band B, C1–C2 band C. A0 has its own short
+// bilingual scenes (street/a0.mjs) and reads band A where it has none.
 export function bandFor(level) {
-  return level === "A1" || level === "A2" ? "A" : level === "C1" || level === "C2" ? "C" : "B";
+  return level === "A0" || level === "A1" || level === "A2" ? "A" : level === "C1" || level === "C2" ? "C" : "B";
 }
 const text = (value, band) => (value ? value[band] ?? value.B ?? value.A ?? "" : "");
+export const a0SceneOf = (id) => A0_SCENES[id] ?? null;
+export const hasA0 = (id) => Boolean(A0_SCENES[id]);
+export const A0_IDS = Object.freeze(Object.keys(A0_SCENES));
+// The graph a scene plays on: its A0 version while it was opened at A0.
+const graphOf = (encounter, open) => (open?.a0 ? A0_SCENES[encounter.id] : encounter);
 
 export function emptyStreet() {
   return { item: null, open: null, done: {}, flags: [] };
@@ -74,7 +82,8 @@ export function isValidStreet(value) {
   const encounter = encounterById(value.open?.id);
   if (!encounter || !Array.isArray(value.open.trail)) return false;
   if (value.open.end) return Boolean(encounter.ends[value.open.end]);
-  return Boolean(encounter.nodes[value.open.node]);
+  if (value.open.a0 && !A0_SCENES[encounter.id]) return false;
+  return Boolean(graphOf(encounter, value.open).nodes[value.open.node]);
 }
 
 export function chooseItem(street, item) {
@@ -83,15 +92,17 @@ export function chooseItem(street, item) {
 }
 
 // Encounters that exist right now: the ones that need a flag only once it is
-// set, the ones tied to a city event only after that event.
-export function isAvailable(street, encounter, eventId = null) {
+// set, the ones tied to a city event only after that event; at A0, only the
+// scenes with an A0 version.
+export function isAvailable(street, encounter, eventId = null, level = null) {
   if (!encounter) return false;
   if (encounter.requires && !street.flags.includes(encounter.requires)) return false;
   if (encounter.event && encounter.event !== eventId) return false;
+  if (level === "A0" && !A0_SCENES[encounter.id]) return false;
   return true;
 }
-export function availableEncounters(street, eventId = null) {
-  return ENCOUNTERS.filter((encounter) => isAvailable(street, encounter, eventId));
+export function availableEncounters(street, eventId = null, level = null) {
+  return ENCOUNTERS.filter((encounter) => isAvailable(street, encounter, eventId, level));
 }
 
 // The object in hand decides where a scene opens: its own first moment when
@@ -113,19 +124,21 @@ export function openingFx(street, id = street.open?.id) {
   return variant?.fx ?? (street.item === "corazon" ? "corazon" : null);
 }
 
-export function openEncounter(street, id, eventId = null) {
+export function openEncounter(street, id, eventId = null, level = null) {
   const encounter = encounterById(id);
-  if (!encounter || street.open || street.done[id] || !isAvailable(street, encounter, eventId)) return street;
+  if (!encounter || street.open || street.done[id] || !isAvailable(street, encounter, eventId, level)) return street;
+  const a0 = level === "A0" ? A0_SCENES[id] : null;
+  if (a0) return { ...street, open: { id, node: a0.start, trail: [], end: null, a0: true } };
   return { ...street, open: { id, node: startFor(encounter, street.item), trail: [], end: null } };
 }
 
 // The choices on screen: the three ways to answer, then the learner's
 // object when this moment has something for it.
-export function choicesFor(encounter, nodeId, item) {
-  const node = encounter?.nodes[nodeId];
+export function choicesFor(encounter, nodeId, item, a0 = false) {
+  const node = (a0 ? A0_SCENES[encounter?.id] : encounter)?.nodes[nodeId];
   if (!node) return [];
   const list = node.options.map((option) => ({ ...option, key: option.id, item: null }));
-  const special = item ? node.items?.[item] : null;
+  const special = item && !a0 ? node.items?.[item] : null;
   if (special) list.push({ ...special, id: `item:${item}`, key: `item:${item}`, item });
   return list;
 }
@@ -134,7 +147,7 @@ export function chooseLine(street, choiceId) {
   const open = street.open;
   const encounter = encounterById(open?.id);
   if (!encounter || open.end) return street;
-  const choice = choicesFor(encounter, open.node, street.item).find((item) => item.key === choiceId);
+  const choice = choicesFor(encounter, open.node, street.item, open.a0).find((item) => item.key === choiceId);
   if (!choice) return street;
   const trail = [...open.trail, { node: open.node, choice: choice.key }];
   if (choice.end) return { ...street, open: { ...open, trail, end: choice.end } };
@@ -153,6 +166,7 @@ export function stepBack(street) {
 export function restartEncounter(street) {
   const encounter = encounterById(street.open?.id);
   if (!encounter) return street;
+  if (street.open.a0) return { ...street, open: { id: encounter.id, node: A0_SCENES[encounter.id].start, trail: [], end: null, a0: true } };
   return { ...street, open: { id: encounter.id, node: startFor(encounter, street.item), trail: [], end: null } };
 }
 
@@ -177,10 +191,10 @@ export function moodOf(street, id) {
   if (open) {
     const last = open.trail[open.trail.length - 1];
     if (last) {
-      const choice = choicesFor(encounter, last.node, street.item).find((item) => item.key === last.choice);
+      const choice = choicesFor(encounter, last.node, street.item, open.a0).find((item) => item.key === last.choice);
       if (choice) return choice.mood;
     }
-    return encounter.nodes[open.node]?.mood ?? "neutral";
+    return graphOf(encounter, open).nodes[open.node]?.mood ?? "neutral";
   }
   const end = street.done[id];
   if (!end) return encounter.nodes[startFor(encounter, street.item)].mood;
@@ -197,27 +211,33 @@ export function streetView(street, level) {
   const encounter = encounterById(open?.id);
   if (!encounter) return null;
   const band = bandFor(level);
+  const a0 = open.a0 ? A0_SCENES[encounter.id] : null;
+  // At A0 every text is a { es, en } pair; the other bands pick their string.
+  const read = (value) => (a0 ? bi(value) : text(value, band));
   const lastStep = open.trail[open.trail.length - 1] ?? null;
-  const lastChoice = lastStep ? choicesFor(encounter, lastStep.node, street.item).find((item) => item.key === lastStep.choice) : null;
-  const said = lastChoice ? { act: text(lastChoice.act, band), say: text(lastChoice.say, band), reply: text(lastChoice.reply, band), item: lastChoice.item } : null;
-  const castName = (id) => encounter.cast.find((person) => person.id === id)?.name ?? "";
-  const variant = variantOf(encounter, street.item);
+  const lastChoice = lastStep ? choicesFor(encounter, lastStep.node, street.item, open.a0).find((item) => item.key === lastStep.choice) : null;
+  const said = lastChoice ? { act: a0 ? "" : text(lastChoice.act, band), say: read(lastChoice.say), reply: read(lastChoice.reply), item: lastChoice.item } : null;
+  const castOf = (id) => encounter.cast.find((person) => person.id === id) ?? null;
+  const castName = (id) => castOf(id)?.name ?? "";
+  const variant = a0 ? null : variantOf(encounter, street.item);
   const base = {
     id: encounter.id, title: encounter.title, district: encounter.district, districtName: DISTRICTS[encounter.district] ?? "",
     goal: encounter.goal, kind: encounter.kind, step: open.trail.length, said, mood: moodOf(street, encounter.id),
-    variant: variant ? street.item : null, fx: openingFx(street, encounter.id),
+    variant: variant ? street.item : null, fx: a0 ? null : openingFx(street, encounter.id),
+    ...(a0 ? { words: a0.words.map(bi) } : {}),
   };
   if (open.end) {
     const end = encounter.ends[open.end];
     // The closing question follows the object when the scene wrote one for it.
-    const speak = text(variant?.speak, band) || encounter.speak[level] || encounter.speak.B1;
-    return { ...base, ended: true, end: { id: open.end, text: text(end.text, band), change: end.change, recap: end.recap }, speak };
+    const speak = a0 ? bi(a0.speak) : text(variant?.speak, band) || encounter.speak[level] || encounter.speak.B1;
+    const endText = a0?.ends?.[open.end] ? bi(a0.ends[open.end]) : text(end.text, band);
+    return { ...base, ended: true, end: { id: open.end, text: endText, change: end.change, recap: end.recap }, speak };
   }
-  const node = encounter.nodes[open.node];
+  const node = graphOf(encounter, open).nodes[open.node];
   return {
-    ...base, ended: false, who: castName(node.who), line: text(node.line, band),
-    choices: choicesFor(encounter, open.node, street.item).map((choice) => ({
-      key: choice.key, item: choice.item, act: text(choice.act, band), say: text(choice.say, band),
+    ...base, ended: false, who: castName(node.who), whoBody: castOf(node.who)?.body ?? null, line: read(node.line),
+    choices: choicesFor(encounter, open.node, street.item, open.a0).map((choice) => ({
+      key: choice.key, item: choice.item, act: a0 ? "" : text(choice.act, band), say: read(choice.say),
     })),
   };
 }
@@ -248,9 +268,18 @@ const AMBIENT = {
   cuchillo: { mood: "scared", flee: true, A: ["¡Cuidado con eso!", "¿Un cuchillo? ¡Me voy!", "¡Uy! ¡No, gracias!"], B: ["¿Estás cocinando o qué? ¡Guárdalo!", "Mejor guarda eso, que asustas a la gente.", "Me voy por el otro lado, por si acaso."], C: ["Si es para cortar algo, que no sea la conversación. Hasta luego.", "Con eso en la mano, cualquier cosa que digas suena a amenaza.", "No sé qué pretendes, pero yo me retiro con elegancia."] },
   corazon: { mood: "love", hearts: true, A: ["¡Ay, qué lindo! ¡Gracias!", "¡Qué simpático! Buenas noches.", "¡Me encanta! Eres muy amable."], B: ["¡Me alegraste la noche, de verdad!", "¿Y esto? Hacía mucho que nadie me sonreía así.", "Gracias. Ahora me voy a casa con una sonrisa."], C: ["No sé quién eres, pero acabas de arreglarme una noche bastante torcida.", "Esto no se ve todos los días: alguien que regala cariño gratis.", "Me lo guardo. Mañana se lo devuelvo a otra persona."] },
 };
+const AMBIENT_A0 = {
+  lapiz: [["¿Un lápiz? ¿Para qué?", "A pencil? What for?"], ["¡Qué bien! ¿Me dibujas?", "Nice! Will you draw me?"], ["No tengo papel.", "I don’t have paper."]],
+  libro: [["¡Me gusta ese libro!", "I like that book!"], ["¿Es bueno?", "Is it good?"], ["Yo leo en el autobús.", "I read on the bus."]],
+  gas: [["¡Eh! ¡Calma! Me voy.", "Hey! Calm down! I’m leaving."], ["¡No, no! ¡Perdón!", "No, no! Sorry!"], ["¡Uy! Adiós.", "Oops! Bye."]],
+  granada: [["¡¿Qué es eso?! ¡Me voy!", "What is that?! I’m leaving!"], ["¡Ay, no! ¡Socorro!", "Oh no! Help!"], ["¿Es de verdad? ¡Adiós!", "Is it real? Bye!"]],
+  pistola: [["¡No! ¡Calma, por favor!", "No! Calm down, please!"], ["¡No, no!", "No, no!"], ["¡Me voy, me voy!", "I’m leaving, I’m leaving!"]],
+  cuchillo: [["¡Cuidado con eso!", "Careful with that!"], ["¿Un cuchillo? ¡Me voy!", "A knife? I’m leaving!"], ["¡Uy! ¡No, gracias!", "Oops! No, thanks!"]],
+  corazon: [["¡Qué lindo! ¡Gracias!", "How lovely! Thank you!"], ["¡Qué simpático! Buenas noches.", "How nice! Good night."], ["¡Me encanta! Eres muy amable.", "I love it! You are very kind."]],
+};
 export function ambientReaction(item, level, seed = 0) {
   const data = AMBIENT[item];
   if (!data) return null;
-  const lines = data[bandFor(level)];
+  const lines = level === "A0" ? AMBIENT_A0[item].map(([es, en]) => bi({ es, en })) : data[bandFor(level)];
   return { mood: data.mood, text: lines[Math.abs(seed) % lines.length], flee: Boolean(data.flee), hearts: Boolean(data.hearts) };
 }

@@ -4,6 +4,8 @@
 // answer (plus the learner's object when it fits), what happens next, and at
 // the end one question about the learner's own life to answer aloud.
 import { useEffect, useRef, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import Bi from './Bi';
+import { speakLines, stopSpeaking } from './voice';
 import type { Level } from './engine.mjs';
 import { encounterById, itemById, streetView, type StreetState } from './street.mjs';
 import ItemIcon from './ItemIcon';
@@ -18,9 +20,16 @@ export default function StreetCard({ street, level, teacher, onChoose, onBack, o
   const focusRef = useRef<HTMLDivElement>(null);
   const stepKey = view ? `${view.id}-${view.step}-${view.ended ? 'fin' : 'sigue'}` : '';
   useEffect(() => { focusRef.current?.focus({ preventScroll: true }); }, [stepKey]);
+  // The people speak on their own: the answer to what you said, then their
+  // next line; at the end, how the scene closes. Never the learner's question.
+  const spoken = view ? (view.ended ? [view.end?.text] : [view.said?.reply, view.line]) : [];
+  const spokenKey = spoken.join('|');
+  const body = view?.whoBody ?? null;
+  useEffect(() => { if (spokenKey) speakLines(spoken, { body, level }); return () => stopSpeaking(); }, [spokenKey]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!view) return null;
   const encounter = encounterById(view.id)!;
   const item = itemById(street.item);
+  const a0 = level === 'A0';
 
   const onKey = (event: ReactKeyboardEvent<HTMLElement>) => {
     const target = event.target as HTMLElement;
@@ -44,28 +53,29 @@ export default function StreetCard({ street, level, teacher, onChoose, onBack, o
       <div className="na-beat" key={stepKey}>
         {view.said && <div className="na-street-said">
           {view.said.act && <p className="na-street-act">{view.said.item && <ItemIcon id={view.said.item} size={18} />}{view.said.act}</p>}
-          <p className="na-chosen"><span>Dijiste</span>{view.said.say}</p>
-          <div className="na-outcome"><p>{view.said.reply}</p></div>
+          <p className="na-chosen"><span>{a0 ? 'Dijiste · You said' : 'Dijiste'}</span><Bi text={view.said.say} /></p>
+          <div className="na-outcome"><p><Bi text={view.said.reply} /></p></div>
         </div>}
         {!view.ended && view.choices && <>
-          <div className="na-context na-street-line"><p>{view.who && <b>{view.who}</b>}{view.line}</p></div>
-          <p className="na-ask">¿Qué haces? Elige y dilo en voz alta.</p>
+          <div className="na-context na-street-line"><p>{view.who && <b>{view.who}</b>}<Bi text={view.line} /></p></div>
+          <p className="na-ask">{a0 ? <Bi text={'¿Qué dices? Elige y dilo en voz alta.\nWhat do you say? Choose and say it out loud.'} /> : '¿Qué haces? Elige y dilo en voz alta.'}</p>
           <ol className="na-options na-street-options">{view.choices.map((choice, i) => <li key={choice.key}>
             <button type="button" className={choice.item ? 'is-item' : undefined} onClick={() => onChoose(choice.key)}>
               <kbd>{LETTERS[i]}</kbd>
               <span>
                 {choice.item && <small className="na-street-use"><ItemIcon id={choice.item} size={16} />{choice.act || `Usas ${item?.name.toLowerCase() ?? 'tu objeto'}`}</small>}
                 {!choice.item && choice.act && <small className="na-street-use">{choice.act}</small>}
-                «{choice.say}»
+                «<Bi text={choice.say} />»
               </span>
             </button>
           </li>)}</ol>
         </>}
         {view.ended && view.end && <>
-          <div className="na-outcome is-end"><p className="na-outcome-label">Así termina</p><p>{view.end.text}</p></div>
-          <p className="na-kicker">Ahora habla de ti</p>
-          <p className="na-ask">{view.speak}</p>
+          <div className="na-outcome is-end"><p className="na-outcome-label">{a0 ? 'Así termina · The end' : 'Así termina'}</p><p><Bi text={view.end.text} /></p></div>
+          <p className="na-kicker">{a0 ? 'Ahora habla de ti · Now talk about yourself' : 'Ahora habla de ti'}</p>
+          <p className="na-ask"><Bi text={view.speak} /></p>
         </>}
+        {view.words && <div className="na-words"><h3>Palabras · Words</h3><ul className="na-chips is-quiet">{view.words.map(word => <li key={word}><Bi text={word} /></li>)}</ul></div>}
       </div>
     </div>
     <footer className="na-card-foot">

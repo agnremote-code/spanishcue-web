@@ -14,7 +14,7 @@ import {
   castSpots, districtAt, emergencyRoute, groupMembers, makeWalkers, pathLength, placementOf, pointOnPath, stepCityTraffic, stepWalkers, trafficCar,
   type MovingVehicle, type Walker,
 } from './city.mjs';
-import { ENCOUNTERS, heartsUsed, isAvailable, moodOf, type CastMember, type Change, type Encounter, type ItemId, type Mood, type OpeningFx, type StreetState } from './street.mjs';
+import { ENCOUNTERS, hasA0, heartsUsed, isAvailable, moodOf, type CastMember, type Change, type Encounter, type ItemId, type Mood, type OpeningFx, type StreetState } from './street.mjs';
 import { TRAFFIC, insideBuilding, type Box } from './world3d.mjs';
 import { addBlobShadow, animatePerson, createPerson, lookFromCast, randomLook, setMood, setPose, type Person } from './people3d';
 import { animateAnimal, createAnimal, type Animal } from './animals3d';
@@ -806,12 +806,14 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
   };
 
   // The circles you can walk into right now.
-  function spots(ctx: Pick<Ctx, 'street' | 'eventId' | 'room'>): StreetSpot[] {
+  function spots(ctx: Pick<Ctx, 'street' | 'eventId' | 'room'> & { level?: string }): StreetSpot[] {
     const out: StreetSpot[] = [];
     for (const [id, rig] of encounterRigs) {
       const encounter = rig.encounter;
       const place = PLACEMENTS[id];
       if (!visible(encounter, ctx.street, ctx.eventId) || ctx.street.done[id]) continue;
+      // A0 plays only the scenes written for it; the other people stay as the life of the street.
+      if (ctx.level === 'A0' && !hasA0(id)) continue;
       if (place.room ? ctx.room !== place.room : Boolean(ctx.room)) continue;
       const spot = spotFor(rig);
       out.push({ id: `calle:${id}`, x: spot.x, z: spot.z, radius: encounter.kind === 'escena' ? 1.5 : 1.3, key: 'E', verb: encounter.verb, name: encounter.title, encounter: id, kind: encounter.kind });

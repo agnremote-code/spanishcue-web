@@ -15,6 +15,8 @@ import { ARRIVAL_SPOT, PLACES, VIEWBOX, iso } from './scene.mjs';
 import { WALKABLE_STAGES } from './world3d.mjs';
 import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode, type Mode } from '../escucha-3d/Escucha';
 import { LEVEL_INFO } from './levels.mjs';
+import Bi from './Bi';
+import { speakLines, stopSpeaking, setVoicesOn, voicesOn } from './voice';
 import {
   chooseItem, chooseLine, closeEncounter, emptyStreet, isValidStreet, itemById, openEncounter, restartEncounter, stepBack, streetSummary,
   type ItemId, type StreetState,
@@ -169,7 +171,12 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   }, []);
   const in3d = view === '3d' && Boolean(World);
   const [heard, markHeard] = useListeningDone('noche', level);
-  const listening = mode === 'escucha';
+  // A0 has no listening set yet: the night stays in conversation mode there.
+  const listening = mode === 'escucha' && level !== 'A0';
+  const [voices, setVoices] = useState(true);
+  // The saved switch is read after hydration, like the level (external store sync).
+  useEffect(() => { const saved = voicesOn(); if (!saved) setVoices(false); }, []); // eslint-disable-line react-hooks/set-state-in-effect
+  const toggleVoices = () => { const next = !voices; setVoices(next); setVoicesOn(next); };
 
   const done = completedIds(state);
   const card = currentView(state);
@@ -232,7 +239,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
 
   // Street scenes: opened from the 3D street, closed with Esc or the card.
   const eventId = state.event?.id ?? null;
-  const openStreet = useCallback((id: string) => { if (listening) { setListenAt(id); return; } setStreet(current => openEncounter(current, id, eventId)); }, [eventId, listening]);
+  const openStreet = useCallback((id: string) => { if (listening) { setListenAt(id); return; } setStreet(current => openEncounter(current, id, eventId, level)); }, [eventId, listening, level]);
   const closeStreet = useCallback(() => { setStreet(current => closeEncounter(current)); focusWorld(); }, []);
   const pick = (id: ItemId) => { setStreet(current => chooseItem(current, id)); setPicking(false); if (in3d) focusWorld(); };
   const streetOpen = in3d && Boolean(street.open) && state.phase === 'ciudad';
@@ -288,7 +295,8 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
       <nav className="na-tools" aria-label="Herramientas de la clase">
         {canUse3d && <button type="button" className="na-tool" onClick={switchView} aria-label={view === 'map' ? 'Ver el barrio en 3D' : 'Ver el mapa en 2D'}>{view === 'map' ? '3D' : '2D'}</button>}
         {state.phase !== 'llegada' && state.phase !== 'cierre' && <button type="button" className="na-tool" aria-expanded={placesOpen} aria-controls="na-places" onClick={() => setPlacesOpen(value => !value)}>Lugares</button>}
-        {state.phase !== 'llegada' && <button type="button" className="na-tool" aria-pressed={listening} onClick={() => setMode(listening ? 'conversacion' : 'escucha')} title="Comprensión auditiva">Escucha</button>}
+        {state.phase !== 'llegada' && level !== 'A0' && <button type="button" className="na-tool" aria-pressed={listening} onClick={() => setMode(listening ? 'conversacion' : 'escucha')} title="Comprensión auditiva">Escucha</button>}
+        <button type="button" className="na-tool" aria-pressed={voices} onClick={toggleVoices} title={voices ? 'Los personajes hablan en voz alta. Toca para silenciarlos.' : 'Voces apagadas. Toca para que los personajes hablen.'}>Voces</button>
         <button type="button" className="na-tool" aria-pressed={teacher} onClick={() => setTeacher(value => !value)}>Profe</button>
       </nav>
     </header>
@@ -314,7 +322,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
       {listening && state.phase !== 'llegada' && listenAt === undefined && <ListeningBadge game="noche" done={heard} onList={() => setListenAt(null)} />}
       {listenAt !== undefined && <ListeningCard game="noche" level={level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => { setListenAt(undefined); if (in3d) focusWorld(); }} />}
 
-      {picking && !listening && state.phase !== 'llegada' && <ItemPicker initial={street.item} onChoose={pick} onClose={street.item ? () => setPicking(false) : undefined} />}
+      {picking && !listening && state.phase !== 'llegada' && <ItemPicker initial={street.item} bilingual={level === 'A0'} onChoose={pick} onClose={street.item ? () => setPicking(false) : undefined} />}
 
       {streetOpen && <StreetCard key={`${level}-${street.open!.id}`} street={street} level={level} teacher={teacher}
         onChoose={key => setStreet(current => chooseLine(current, key))} onBack={() => setStreet(current => stepBack(current))}
@@ -324,7 +332,7 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
         {finalAvailable(state)
           ? <><p>La noche ya cambió. Puedes seguir caminando o cerrar la noche.</p><button type="button" className="na-primary" onClick={() => setState(current => openFinal(current))}>Cerrar la noche</button></>
           : <p>{in3d
-            ? (state.visitOrder.length ? 'Sigue explorando. Acércate a algo que brille y toca E.' : 'Camina por el barrio. Acércate a un lugar y toca E.')
+            ? (state.visitOrder.length ? 'Sigue explorando. Acércate a algo que brille y toca E.' : <Bi text={level === 'A0' ? 'Camina por el barrio. Acércate a un lugar y toca E.\nWalk around the neighbourhood. Go up to a place and press E.' : 'Camina por el barrio. Acércate a un lugar y toca E.'} />)
             : (state.visitOrder.length ? 'Elige adónde seguir.' : 'Elige adónde ir. No hace falta visitar todo.')}</p>}
       </div>}
       {walkingInside && !state.activity && <div className="na-hint is-world" role="status">
@@ -387,22 +395,22 @@ function Arrival({ arrival, level, onLevel, mode, onMode, teacher, onStart }: {
     <div className="na-ts-menu">
       <p className="na-kicker">{arrival.kicker}<span>Modo Play · 3D</span></p>
       <h1 id="na-arrival-title">{arrival.title}</h1>
-      <p className="na-ts-lede">Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.</p>
+      <p className="na-ts-lede">{level === 'A0' ? <Bi text={arrival.premise} /> : 'Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.'}</p>
       <ul className="na-ts-verbs"><li>Camina.</li><li>Entra donde quieras.</li><li>Resuelve lo que pase.</li></ul>
       <div className="na-ts-level">
         <LevelPicker level={level} onChange={onLevel} />
-        <p><b>{LEVEL_INFO[level].name}</b> · {LEVEL_INFO[level].demand}</p>
+        <p><b>{LEVEL_INFO[level].name}</b> · <Bi text={LEVEL_INFO[level].demand} /></p>
       </div>
-      <ModeSwitch mode={mode} onChange={onMode} />
+      {level !== 'A0' && <ModeSwitch mode={mode} onChange={onMode} />}
       <button type="button" className="na-primary na-ts-start" onClick={start}>Empezar la noche</button>
-      <p className="na-ts-warmup"><span>Para romper el hielo</span>{arrival.warmup[question % arrival.warmup.length]}
+      <p className="na-ts-warmup"><span>Para romper el hielo</span><Bi text={arrival.warmup[question % arrival.warmup.length]} />
         <button type="button" className="na-link" onClick={() => setQuestion(value => value + 1)}>Otra</button></p>
       {teacher && <p className="na-teacher-note">{arrival.teacher}</p>}
     </div>
   </section>;
 }
 
-// Six levels in one control. Arrow keys move between them, like any radio group.
+// Seven levels in one control. Arrow keys move between them, like any radio group.
 function LevelPicker({ level, onChange, compact = false }: { level: Level; onChange: (level: Level) => void; compact?: boolean }) {
   const [open, setOpen] = useState(false);
   const onKey = (event: ReactKeyboardEvent<HTMLDivElement>) => {
@@ -449,9 +457,9 @@ function PlacesList({ state, done, onOpen, onClose, disabled, walk = false }: { 
 function HelpPanel({ help, grammar }: { help: Help; grammar?: Grammar }) {
   return <div className="na-help-body" id="na-help">
     {grammar && <div className="na-grammar"><h3>{grammar.title}</h3><dl>{grammar.rows.map(row => <div key={row.form}><dt>{row.form}</dt><dd>{row.example}</dd></div>)}</dl></div>}
-    <div><h3>Para empezar</h3><ul className="na-chips">{help.starters.map(item => <li key={item}>{item}</li>)}</ul></div>
-    <div><h3>Expresiones útiles</h3><ul className="na-chips">{help.chunks.map(item => <li key={item}>{item}</li>)}</ul></div>
-    {help.vocab && <div><h3>Palabras</h3><ul className="na-chips is-quiet">{help.vocab.map(item => <li key={item}>{item}</li>)}</ul></div>}
+    <div><h3>Para empezar</h3><ul className="na-chips">{help.starters.map(item => <li key={item}><Bi text={item} /></li>)}</ul></div>
+    <div><h3>Expresiones útiles</h3><ul className="na-chips">{help.chunks.map(item => <li key={item}><Bi text={item} /></li>)}</ul></div>
+    {help.vocab && <div><h3>Palabras{help.vocab.some(item => item.includes('\n')) ? ' · Words' : ''}</h3><ul className="na-chips is-quiet">{help.vocab.map(item => <li key={item}><Bi text={item} /></li>)}</ul></div>}
   </div>;
 }
 
@@ -490,14 +498,14 @@ function BeatView({ beat, onChoose, onInspect }: { beat: Beat; onChoose: (id: st
     {beat.chosen && <p className="na-chosen"><span>Elegiste</span>{beat.chosen}</p>}
     {(beat.context || (shaded && beat.label)) && <div className={shaded ? 'na-outcome' : 'na-context'}>
       {shaded && beat.label && <p className="na-outcome-label">{beat.label}</p>}
-      {beat.context && <p>{beat.context}</p>}
+      {beat.context && <p><Bi text={beat.context} /></p>}
     </div>}
     {beat.media && <MediaBlock media={beat.media} onInspect={onInspect} />}
-    {beat.prompt && <p className="na-ask">{beat.prompt}</p>}
+    {beat.prompt && <p className="na-ask"><Bi text={beat.prompt} /></p>}
     {beat.options && <ol className="na-options">{beat.options.map((option, i) => <li key={option.id}>
       <button type="button" onClick={() => onChoose(option.id)}>
         <kbd>{LETTERS[i]}</kbd>
-        <span>{option.label}{option.facts && <small>{option.facts.map(fact => <i key={fact}>{fact}</i>)}</small>}</span>
+        <span><Bi text={option.label} />{option.facts && <small>{option.facts.map(fact => <i key={fact}>{fact}</i>)}</small>}</span>
       </button>
     </li>)}</ol>}
   </>;
@@ -514,6 +522,12 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
   const focusRef = useRef<HTMLDivElement>(null);
   const stepKey = view.activity ? `${view.activity.id}-${view.index}` : 'hub';
   useEffect(() => { focusRef.current?.focus({ preventScroll: true }); }, [stepKey]);
+  // The situation (with whoever speaks in it) is read aloud when it opens; the
+  // question to the learner and the personal question are not.
+  const situation = view.activity && view.beat.kind === 'choose' ? view.beat.context : null;
+  useEffect(() => { if (situation) speakLines([situation], { level: state.level }); return () => stopSpeaking(); }, [situation, state.level]);
+  const a0 = state.level === 'A0';
+  const kicker = (label: string | undefined) => (a0 && label ? `${label}\n${label.startsWith('1.') ? '1. Choose your answer' : '2. Now talk about yourself'}` : label);
   const taxi = location.id === 'taxi' && (!worldOutcome(state) || worldOutcome(state)?.location === 'taxi');
   const exitLabel = taxi ? 'Bajar del taxi' : inside && view.activity ? 'Seguir recorriendo' : view.activity && location.hub && !world ? 'Volver' : 'Volver a la calle';
   const exitKey = taxi ? 'F' : 'Esc';
@@ -542,7 +556,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
 
     {!view.activity ? <div className="na-card-body" ref={focusRef} tabIndex={-1}>
       <h2 id="na-card-title">{location.name}</h2>
-      <p className="na-context">{location.hubPrompt}</p>
+      <p className="na-context"><Bi text={location.hubPrompt} /></p>
       <ul className="na-hub">{location.activities.map(activity => {
         const played = encounter?.acts[activity.id]?.done;
         return <li key={activity.id}><button type="button" onClick={() => onPick(activity.id)}>
@@ -555,8 +569,9 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
         {view.total > 1 && <ol className="na-steps" aria-label={`Paso ${view.index + 1} de ${view.total}`}>{view.beats.map((_, i) => <li key={i} className={i < view.index ? 'is-past' : i === view.index ? 'is-now' : ''} />)}</ol>}
       </div>
       <div className="na-beat" key={stepKey}>
-        <p className="na-kicker">{view.beat.label}</p>
+        <p className="na-kicker"><Bi text={kicker(view.beat.label)} /></p>
         <BeatView beat={view.beat} onChoose={onChoose} onInspect={onInspect} />
+        {view.activity.words && <div className="na-words"><h3>Palabras · Words</h3><ul className="na-chips is-quiet">{view.activity.words.map(word => <li key={word}><Bi text={word} /></li>)}</ul></div>}
       </div>
     </div>}
 
@@ -602,14 +617,15 @@ function EventCard({ state, eventId, teacher, onContinue }: { state: NightState;
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, []);
   const night = nightSummary(state);
   const lastPrompt = prompt >= event.prompts.length - 1;
+  useEffect(() => { speakLines([event.text], { level: state.level }); return () => stopSpeaking(); }, [event.text, state.level]);
   return <section className="na-event" aria-labelledby="na-event-title">
     <p className="na-kicker">{nightClock(state)} · Algo cambia</p>
     <h2 id="na-event-title" ref={heading} tabIndex={-1}>{event.title}</h2>
-    <p className="na-situation">{event.text}</p>
+    <p className="na-situation"><Bi text={event.text} /></p>
     <ol className="na-trail" aria-label="Tu noche hasta ahora">{night.map(item => <li key={item.id} className={event.affects.includes(item.id) ? 'is-affected' : ''}>
       <b>{item.name}</b>{item.choices[0] ? <span>{item.choices[0]}</span> : item.situations[0] && <span>{item.situations[0]}</span>}{event.affects.includes(item.id) && <small>Esto cambia</small>}
     </li>)}</ol>
-    <p className="na-ask" key={prompt}>{event.prompts[prompt]}</p>
+    <p className="na-ask" key={prompt}><Bi text={event.prompts[prompt]} /></p>
     {teacher && <p className="na-teacher-note">{event.teacher}</p>}
     <div className="na-row">
       <button type="button" className="na-secondary" disabled={prompt === 0} aria-label="Pregunta anterior" onClick={() => setPrompt(value => value - 1)}>←</button>
@@ -637,7 +653,7 @@ function FinalRecap({ state, street, teacher, onToggle, onReset }: { state: Nigh
       {event && <li className="is-affected"><b>{event.title}</b></li>}
       {streetSummary(street).map(item => <li key={item.id} className="is-street"><b>{item.title}</b><span>{item.district}</span><small>{item.recap}</small></li>)}
     </ol>
-    <p className={isHypothetical ? 'na-ask is-hypothetical' : 'na-ask'} key={prompt}>{questions[prompt]}</p>
+    <p className={isHypothetical ? 'na-ask is-hypothetical' : 'na-ask'} key={prompt}><Bi text={questions[prompt]} /></p>
     <div className="na-row">
       {prompt > 0 && <button type="button" className="na-secondary" onClick={() => setPrompt(value => value - 1)}>← Anterior</button>}
       {!isHypothetical && <button type="button" className="na-primary" onClick={() => setPrompt(value => value + 1)}>Siguiente →</button>}
@@ -667,7 +683,7 @@ function TeacherDesk({ state, street, onTrigger, onReset, onItem }: { state: Nig
   return <aside className="na-desk" aria-label="Plan del profe">
     <div className="na-desk-level">
       <p className="na-teacher-title">Nivel activo · {level}</p>
-      <p><b>{LEVEL_INFO[level].name}.</b> {LEVEL_INFO[level].demand}</p>
+      <p><b>{LEVEL_INFO[level].name}.</b> <Bi text={LEVEL_INFO[level].demand} /></p>
     </div>
     <div>
       <p className="na-teacher-title">Plan de la clase</p>

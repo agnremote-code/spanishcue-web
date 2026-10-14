@@ -314,7 +314,7 @@ test('every scene is a real mini-scene: reachable moments, real choices, differe
       assert.ok(encounter.nodes[encounter.start].items?.corazon || variants.corazon, `${w}: the heart always does something`);
     }
     for (const end of Object.values(encounter.ends)) assert.ok(CHANGES.has(end.change), `${w}: ${end.change}`);
-    for (const level of levels.LEVELS) {
+    for (const level of levels.LEVELS.filter(item => item !== 'A0')) {
       const question = encounter.speak[level];
       assert.match(question, /^¿[^?]+\?$/, `${w}: one open question for ${level}`);
       assert.ok(!speakAll.has(question), `${w}: ${level} question repeated`);
@@ -381,6 +381,7 @@ test('the language of every scene: three bands, the level of the URL, neutral Sp
   assert.equal(street.streetView(state, 'B1').line, one.nodes[one.start].line.B);
   assert.equal(street.streetView(state, 'C2').line, one.nodes[one.start].line.C);
   assert.equal(street.bandFor('A1'), 'A');
+  assert.equal(street.bandFor('A0'), 'A');
   assert.equal(street.bandFor('B2'), 'B');
   state = street.chooseLine(state, one.nodes[one.start].options[0].id);
   assert.equal(street.streetView(state, 'A2').said.reply, one.nodes[one.start].options[0].reply.A);

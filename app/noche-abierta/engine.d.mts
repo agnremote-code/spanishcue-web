@@ -6,7 +6,7 @@ export type Message = { from: string; time: string; text: string };
 export type Option = { id: string; label: string; result?: string; ask?: string; facts?: string[] };
 export type Activity = {
   id: string; title: string; lessonLevel?: Level; role?: string; teacher?: string[];
-  situation?: string; prompt?: string; options?: Option[]; close?: string;
+  situation?: string; prompt?: string; options?: Option[]; close?: string; words?: string[];
   who?: string; says?: string; ask?: string; followUps?: string[];
   conditions?: { text: string; ask: string }[];
   object?: string; year?: string; plaque?: string; detail?: string; ask2?: string;
@@ -25,7 +25,7 @@ export type Mechanic = { mechanic: string; more: string };
 export type CityEvent = { id: string; title: string; text: string; affects: string[]; prompts: string[]; teacher: string };
 export type Encounter = { done: boolean; acts: Record<string, Progress> };
 export type Phase = 'llegada' | 'ciudad' | 'encuentro' | 'evento' | 'cierre';
-export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+export type Level = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 export type NightState = {
   level?: Level; phase: Phase; position: string | null; activity: string | null; visitOrder: string[]; encounters: Record<string, Encounter>;
   event: { id: string; resolved: boolean } | null; final: { criteria: Record<string, boolean> };

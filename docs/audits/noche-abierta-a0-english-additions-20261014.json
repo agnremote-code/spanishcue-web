@@ -1,0 +1,3066 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-14 16:23Z (project thread «Noche abierta: nivel A0 y voces», from the «Clase inicial A0» thread): add an A0 level to Noche abierta that is literally A0 and fully bilingual, with bilingual new words at A0–A2. This manifest approves only the exact English support literals of that A0 level listed below (the English half of each { es, en } pair in the A0 content files); existing English copy stays protected. Owner approval line («apruebo») recorded in the same thread.",
+  "additions": [
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "It is Saturday. It is night. Today is Vale’s birthday. There is a party. Walk and go in wherever you want."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "What is your name?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Do you like parties? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "What day is it today?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "It is raining. The square and the rooftop are empty. There are no taxis."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Which place is good in the rain: the café, the bar or the square?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Where are you going now? Say one place."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Do you have an umbrella? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "There is no metro. There is no bus. Lu wants to go home."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Does Lu go by taxi or on foot?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Are you going home now? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Who goes with Lu?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Nico doesn’t have his phone. Where is it?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Where are you tonight? Say one place."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Is the phone at the bar, in the taxi or in the square?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Do you look for the phone? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Where did you go? Say one place."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Which place do you like?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "What is there in that place?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Who is a person from tonight? Say their name."
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Do you like the night? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "Tomorrow, where are you going?"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "I went to…"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "I like…"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "There is…"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "It is…"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "the café"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "the square"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "the party"
+    },
+    {
+      "path": "app/noche-abierta/levels/a0.mjs",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are at the café. The waitress asks: “Here or to go?”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You want the coffee to go. What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "To go, please."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Here, thanks."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A table, please."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you drink: coffee, tea or water?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the coffee"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to go"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "here"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "please"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You order a tea. The waitress brings a coffee."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Sorry, a tea."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Thanks, it’s fine."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How much is it?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Tea or coffee? With milk or without milk?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the tea"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the milk"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "sorry"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "thanks"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You walk into the café with two friends. You are three people."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A table for three."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A table for two."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A coffee to go."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Who do you have coffee with?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the table"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "three"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "two"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the friends"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are at Vale’s home. You are thirsty."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can I have some water?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Are you coming to my house?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is your coat?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What is your home like: big or small?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the water"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the house"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m thirsty"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "can I…?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are at Vale’s door. You ring the bell. Vale asks: “Who is it?”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Hi, I’m Alex. I’m at the door."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Hi, I’m inside your house."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Hi, see you tomorrow."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Who comes to your house?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the door"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the doorbell"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "who is it?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I am…"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You eat with friends. The bill comes. You want to pay only for your food."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Everyone pays their own."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "We all pay the same."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "It’s on me."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you eat at a restaurant?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the bill"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the food"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "it’s on me"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You want a soup without meat."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Does it have meat?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Is it hot?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How much is the bread?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you eat meat? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the soup"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the meat"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "without"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "hot"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "It is very noisy. You want another table."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can we change tables?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can we order more?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can we pay by card?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you like noise? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "another table"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to change"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the card"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Pablo says: “Hi. What’s your name?”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you answer?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "My name is Alex. And you?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "See you tomorrow, Pablo."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Yes, the square is near."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What is your name? Where are you from?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "my name is…"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "and you?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "hi"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m from…"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Inés says: “I’m new in the neighbourhood.”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Welcome! My name is Alex."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Have a good trip!"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "The bill, please."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where do you live? Is it nice?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the neighbourhood"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "new"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "welcome"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I live in…"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Ana and Diego say: “Let’s go dancing!” You are hungry."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we eat first?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we dance without dinner?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we go home?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you like dancing? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to dance"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to eat"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m hungry"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "first"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Ramiro asks: “Where is the station?” The station is on the right."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "On the right."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "On the left."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "It’s closed."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How do you go to work: by bus, by car or on foot?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the station"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "on the right"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "on the left"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the bus"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Marta says: “Today is my birthday!”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Happy birthday!"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Have a good trip!"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Get well soon!"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "When is your birthday?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the birthday"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "happy"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "today"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "my"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Kenji says: “I don’t understand. Can you repeat?”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you do?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I repeat slowly."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I speak faster."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I change the subject."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Which Spanish word do you like?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I don’t understand"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to repeat"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "slowly"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "fast"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Sofía says: “Shall we go listen to music?” You want to go."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Yes, thanks. Let’s go."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "No, thanks. Not today."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Another day."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the music"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to listen"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "yes"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "no"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "The music is very loud. You can’t hear your friend."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we go to a quiet table?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we sit next to the speaker?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Louder, please?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Loud or soft music?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "loud"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "soft"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "quiet"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to hear"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are at the bar. You are sleepy."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m going home. I’m sleepy."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’ll stay one more hour."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Another drink, please."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What time do you go to sleep?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m sleepy"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m leaving"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’m staying"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "one hour"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You have no cash. You have a card."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can I pay by card?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can I book?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can I change tables?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you pay by card or with cash?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the money"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the card"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "can I…?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You wait at the bar. Someone asks: “Are you in the line?”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you answer?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Yes, I’m waiting my turn."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "No, I already ordered."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "No, I’m looking for the exit."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you wait a lot in your city? Where?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the line"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "my turn"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the exit"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Your friends want to go to another bar. It is very expensive."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we go somewhere cheaper?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we order the most expensive thing?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’ll pay for everything."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Expensive or cheap? Which do you prefer?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "expensive"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "cheap"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "another place"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Nico writes: “I can’t today.” You want to see him tomorrow."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you write?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "See you tomorrow?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I’ll wait for you here today."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Next week?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What are you doing tomorrow?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "today"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I can’t"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "see you"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Sergio arrives at the bar. There is a free chair next to you."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Hi, sit here."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Bye, see you tomorrow."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "The table is full."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say when a friend arrives?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the chair"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "free"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "sit down"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "bye"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "The car won’t start. You need to go to the airport."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A taxi to the airport."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A table at the restaurant."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A ticket for the museum."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you travel by plane? Where to?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the car"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the taxi"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the airport"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I need"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "The car needs petrol. A neighbour walks by."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is there a petrol station?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is there bread?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is the museum?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you have a car? What colour?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the petrol"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the petrol station"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "where is there…?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the neighbour"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You look at an old photo. You want to know the year."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What year is it from?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How much is the ticket?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is the exit?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you take photos? Of what?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the photo"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "old"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the year"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see an old telephone. How does it work?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How does it work?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is my phone?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How much is a coffee?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Who do you talk to on the phone?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the telephone"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "it works"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to talk"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "how?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see an old train ticket."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where does this train go?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Who painted this?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where is the café?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where do you want to travel?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the train"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "where to?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to travel"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see an old letter. The writing is very small."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Is there a bigger copy?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can I take the letter?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can I write on the letter?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you write letters or messages?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "small"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "big"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to write"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see an old suitcase. What is it made of?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Is it leather or fabric?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Is it big or small?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Is it new or old?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you carry in your suitcase? Say three things."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the leather"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the fabric"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to carry"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see an old TV. Does it work?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Does it work?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Does it have sound?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Is it from the sixties?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you watch TV? What do you watch?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the TV"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to watch"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the sound"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "old"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see a postman’s bicycle. You don’t know the word “cartero”."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What does “cartero” mean?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "How much is it?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where do I buy a stamp?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you have a bicycle? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the bicycle"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the postman"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "what does… mean?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "red"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see an old room. There is a strange object."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What is it for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What time does the tour start?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Where do I buy water?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What is in your room?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the room"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the bed"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the table"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "there is"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You see a music box. It is closed."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can we listen to the music?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can we turn off the light?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Can we buy tickets?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What is your favourite song?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the light"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the song"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are in a taxi. The street is closed."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you do?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I walk to the square."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I go by taxi to the rooftop."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I wait in the taxi."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Do you take taxis? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the street"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "closed"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to walk"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "The taxi is going to the square. The driver asks: “Do I keep going?”"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Go on to the square."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Let’s go back to the taxi stand."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "I get off here."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What is near your house?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the driver"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the square"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to get off"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to go back"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are at the shop. Your charger doesn’t fit the socket."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "An adapter, please."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A phone case."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Some headphones."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you use your phone for?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the shop"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the charger"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the socket"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the adapter"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You buy ice. You want to take it home cold."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you choose?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A cooler bag."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A paper bag."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A box without a lid."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you buy at the shop?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the ice"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "cold"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the bag"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to buy"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are looking for a gift for a friend. She likes tea."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you choose?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A cup."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A car charger."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A map."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What gift do you like?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the gift"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the cup"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "she likes"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to look for"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You are on the rooftop with friends. You want to stay here."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you say?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we stay a bit longer?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we go home?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we go dancing?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you do at night?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the rooftop"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the night"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "to stay"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "a bit longer"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "You want a photo with your friends."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "What do you ask?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "A photo?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "More food?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Shall we go down the stairs?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "Who do you take photos with?"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the photo"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the friends"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "more"
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "the stairs"
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Pencil. Write, draw, leave a note."
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Book. Look things up, show, give."
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Pepper spray. In case you feel in danger."
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Grenade. Nobody knows if it is real. Nobody wants to find out."
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Gun. Everyone sees it before they see you."
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Knife. Cut, open… or someone pulls out theirs."
+    },
+    {
+      "path": "app/noche-abierta/street.mjs",
+      "text": "Heart. A power: it changes the mood of whoever receives it."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You come back with the pharmacist. Don Teodoro is awake. Ofelia hugs you."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The ambulance arrives. Don Teodoro gets in. Ofelia waves goodbye."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Teodoro is sitting up and drinks water. Ofelia hugs him."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the ground"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the ambulance"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "help"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "he breathes"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you call an ambulance in your country? What number is it?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "An old man is on the ground. His daughter shouts: “Help! My dad!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I call an ambulance."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ofelia says: “Yes, thank you! Quick!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Is he breathing?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ofelia looks. “Yes. He is breathing.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I’m going to the pharmacy."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ofelia says: “Yes! It’s there, on the corner.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The man opens his eyes. “What… what’s happening?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Easy. The ambulance is coming."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Teodoro says: “Thank you, son.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you want water?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Teodoro sits up. “Yes, please.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have a newspaper. Don Amadeo smiles."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You close the newsstand together. “See you tomorrow.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the newspaper"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the news"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "today"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to close"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you read the news? Where?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A man is closing his newsstand. “Good evening! Do you want a newspaper?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes, thank you."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Amadeo gives you a newspaper. “It’s free. It’s the last one.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Can I help you?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Amadeo smiles. “Yes! This box, please.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have a ticket for Saturday. Abril is happy."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Abril writes down your idea and leaves happy."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the film"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the poster"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the octopus"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "strange"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Which film do you like?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A girl looks at a film poster. There is an octopus on a bus. “Hi. Do you like it?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes. It’s very strange."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Abril laughs. “Yes! It’s my film.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No. It’s ugly."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Abril says: “Oh! It’s my film…”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "“On Saturday there is a screening. Are you coming?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes, I’m coming."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Abril gives you a ticket. “Great!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I can’t. But the octopus is the driver."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Abril writes in her notebook. “Good idea!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The ambulance arrives. Rolo leaves. Vanesa stays with her car."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The police arrive. Vanesa cries. Rolo explains everything."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Rolo has the paper with the details. Vanesa drives away slowly."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Vanesa pushes you again. A neighbour stops her. It’s chaos."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the car"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the bicycle"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the blood"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the fault"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you ride a bicycle? Yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A car and a bicycle. The boy has blood on his head. The woman shouts: “It’s not my fault!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I call an ambulance."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Rolo says: “Thanks… my head hurts.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Calm down. The boy first."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Vanesa breathes. “Yes… yes. Sorry.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I call the police."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Vanesa shouts: “No! It’s not my fault!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Rolo says: “I need her name and her phone number.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Madam, your name and phone number, please."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Vanesa writes on a piece of paper. “Here.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "It’s your fault!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Vanesa pushes you. “Shut up!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You leave. Kevin practises alone."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin dances. He watches the video many times."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin is on the ground, but he laughs. “Tomorrow!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the skateboard"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the phone"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to record"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the trick"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you do sports? Which one?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A boy with a skateboard says: “Hi! Can you film me with my phone?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes, of course."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin gives you the phone. “Thanks! Watch.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No, sorry. I’m in a hurry."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin says: “Okay. Bye.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin jumps with the skateboard. Oops!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Very good!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin dances. “Yes! Thanks!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Again?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Kevin falls and laughs. “Tomorrow!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ulises closes the door. He is a bit angry."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ulises turns on a light. The yellow dot shines."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the painting"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "black"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "yellow"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the light"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Which colour do you like?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A black painting with a yellow dot. A man asks: “What do you see?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A yellow dot."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ulises says: “Hmm. Just that.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A light in the night."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Ulises smiles. “Yes! It’s a window.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You leave. The music goes on. Elena is angry."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The music goes down. Elena goes back home."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Elena joins the party and dances. Everyone sings “Happy birthday”."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The police arrive. The party ends. Gonzalo is sad."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the music"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "loud"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the neighbour"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you listen to loud music at home?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "There is very loud music. A neighbour in pyjamas shouts: “It’s very late! I want to sleep!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Let’s talk to them."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Elena says: “Yes. Thank you.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "It’s Saturday. It’s normal."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Elena says: “It’s not normal!” and leaves."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A guy opens the door. “Hi! It’s my birthday! Is there a problem?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The music, lower, please."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Gonzalo says: “Oh, sorry. Yes, yes.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Happy birthday! Shall we come in?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Gonzalo laughs. “Come in!” Elena comes in too."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I call the police."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Gonzalo says: “What? No!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You see a huge lamp and red carpets."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Sebastián winks at you and opens the door for a guest."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Sebastián looks at the street. Serious again."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the hotel"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the doorman"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "elegant"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to go in"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What clothes are you wearing today?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A doorman in a red uniform. “Good evening. Are you a hotel guest?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No. Can I see the hotel?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Sebastián opens the door. “One moment. Just a look.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No. Your uniform is very elegant."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Sebastián smiles. “Thanks. There are famous people inside…”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No. Good night."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Sebastián says: “Good night.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio calls his grandson. You wait with him."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You leave. Don Emilio keeps searching."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio opens his car and drives away slowly."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio gets into the taxi. “Bye!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the car"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the colour"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to look for"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the grandson"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What colour is your car or your family’s car?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "An old man searches among the cars. “Sorry… I can’t find my car.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What colour is it?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio says: “Red. It’s small.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Shall we call your family?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio says: “Yes… my grandson.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I’m sorry. Bye."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio keeps searching."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "There is a small red car over there. “Is it that one?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes! It’s there."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Emilio opens the car. “Thanks!” He gives you a sweet."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No. Better a taxi."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A taxi arrives. Don Emilio says goodbye."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You drink the grape juice. It’s very tasty."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have a card with the name of a wine."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Renata goes back into the wine shop. You keep walking."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the wine"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to try"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "tasty"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What do you drink at dinner?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A woman at the door of a wine shop. “Hi! Do you want to try? There is wine and there is grape juice, alcohol-free.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Grape juice, please."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Renata gives you a glass. “It’s tasty!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Which wine is good?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Renata writes a name on a card. “This one.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No, thank you."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Renata says: “Good night!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The police arrive. Carolina talks to them. Mateo sits down."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The ambulance takes Mateo away. Carolina goes with him."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nobody shouts. That’s enough for today."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the phone"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to shout"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the arm"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "calm"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you shout when you are angry?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A woman shouts: “My phone!” A man has blood on his arm. She says to you: “You! Help!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Calm down, both of you."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Carolina breathes. Mateo sits down."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I call the police."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Mateo says: “No!” Carolina says: “Yes!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Mateo says: “My arm hurts. A lot.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I call an ambulance."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Mateo says: “Thanks.” Carolina goes with him."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Enough for today. Go home."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Carolina sits down. Mateo looks at the ground. Silence."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The keys are in the mailbox. Don Manolo closes the balcony door."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Manolo has his keys. He turns on the light and waves."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The basket goes up with the keys. Don Manolo laughs and claps."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the keys"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the balcony"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to throw"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the door"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Where do you put your keys at home?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A man on a balcony. “Sorry! My keys are there, on the ground.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Here they are! Shall I throw them?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Manolo says: “Yes! Slowly.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I’ll leave them in the mailbox."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Manolo says: “Okay…” and closes the balcony door."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You throw the keys. Up! Don Manolo catches them."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nice!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Manolo says: “Thanks!” and turns on the light."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you have a basket?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Don Manolo laughs. “Yes! A basket. What an idea!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nilda leaves with her cart. The inspector writes down your description."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nilda sells tonight. Tomorrow, the permit. You have two tamales."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nilda puts away the fine. She leaves slowly with her cart."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the cart"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the tamales"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the permit"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the fine"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What street food is there in your city?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A woman runs with a tamale cart. An inspector shouts: “Stop! You have no permit!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Go ahead, madam."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nilda runs. The inspector says: “Hey!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What’s going on?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The inspector says: “No permit, a fine.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nilda says: “It’s my job. Tomorrow I’ll ask for the permit.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No fine today. Tomorrow, permit. Yes?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The inspector says: “…All right. Tomorrow at eight.” Nilda gives you two tamales."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I’m sorry. It’s not my problem."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The inspector writes the fine. Nilda walks away slowly."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have dinner with Nieves’s family. They talk a lot and laugh."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nieves says goodbye. The window is still lit."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the window"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the family"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to have dinner"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the hunger"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Who do you have dinner with?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A lit window. A family is having dinner. A grandmother says: “Hi! Are you hungry? Come in!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes, thank you. Just a moment."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have dinner with the family. Everyone talks and laughs."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No, thank you. Enjoy your meal!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Nieves waves goodbye."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Henrik goes to the station. He is happy."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You go with Henrik to the market. He talks about his grandmother."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Henrik goes to the market. He is very hungry."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the map"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the station"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "straight ahead"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the market"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What is near your house?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A guy with a map. “Sorry… Where is the station?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Straight ahead and to the left."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Henrik says: “Straight… left. Thanks!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Let’s see the map."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Henrik shows you the map. “Here. And the market?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "“I’m hungry. Is the market near?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes. Let’s go together."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Henrik says: “Great!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes. It’s there, on the right."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Henrik says: “Thanks! Bye!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You go with Leire, Óscar and Mavi to La Fábrica. Everyone laughs."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "The three leave singing. Leire waves goodbye with the flowers."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Óscar dances in the square. Leire and Mavi dance. And you!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the party"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the flowers"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the wedding"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to dance"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you like dancing? What music?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Three friends leave a hotel. A girl with flowers says: “Hi! Are you coming to a party?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes! Where is it?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Leire says: “At La Fábrica. Let’s go!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "No, thanks. Not today."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Leire says: “Bye!” The three of them sing."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Is it a wedding?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Óscar says: “Yes! And now, let’s dance!” And he dances in the square."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have a very pretty bouquet. “Good luck,” says Doña Mirta."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have a flower. You are happy."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the flowers"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the bouquet"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the mother"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "for me"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Which flowers do you like?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A woman with flowers. “Good evening. Flowers? For whom?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "For my mother."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Doña Mirta makes a bouquet. “Here. Good luck!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "For me."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Doña Mirta gives you a flower. “This one is free.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You have a paper with numbers. It is your future."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Madame Zulema tells you about her life. You laugh a lot."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the future"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the cards"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the year"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to believe"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "What do you want to do next year?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A woman with cards at a table. “Come. Do you want to know your future?”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Yes. What do you see?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Madame Zulema looks at the cards. “A trip. And a number: seven.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "I don’t believe in that."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Madame Zulema laughs. “Me neither. I’m a maths teacher.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Iker and Canelo say goodbye. Canelo doesn’t bark anymore."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Canelo sleeps. Iker turns off the light."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the dog"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to bark"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "cute"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the neighbours"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you have a pet? Which one?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A dog barks on a balcony. A man says: “Sorry! Canelo, quiet!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "It’s fine. He’s cute!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Iker smiles. Canelo wags his tail."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "He barks a lot. The neighbours are sleeping."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Iker says: “Yes, sorry.” Canelo falls asleep."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "You leave. Joaquín tells the news to someone else."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín smiles. He is calmer."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín records a message for his family. He talks and laughs."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín opens his arms. Very happy. You too."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "happy"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the scholarship"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "to study"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "the country"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Which country do you want to visit?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A guy jumps and shouts: “I got a scholarship! I’m going to study in Japan!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Congratulations!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín says: “Thanks!” and dances."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Great! Bye."
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín says: “Bye!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "“But… Japan is far away. I’m scared.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "That’s normal. You can do it!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín smiles. “Yes. I can.”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Do you call your family?"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín records a message: “Mum! Japan!”"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "A hug!"
+    },
+    {
+      "path": "app/noche-abierta/street/a0.mjs",
+      "text": "Joaquín opens his arms. Very happy."
+    }
+  ]
+}

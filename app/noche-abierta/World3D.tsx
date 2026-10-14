@@ -16,6 +16,8 @@ import {
 } from './world3d.mjs';
 import { CANAL, CEILINGS, CITY_BUILDINGS, DISTRICT_ZONES, ROADS, STREET_ROOMS, districtAt, streetRoomLayout, type MovingVehicle } from './city.mjs';
 import { ambientReaction, openingFx, type ItemId, type StreetState } from './street.mjs';
+import Bi from './Bi';
+import { speakLines } from './voice';
 import { buildCity, buildInterior, placePerson, placeVehicle, type City, type Interior } from './build3d';
 import { buildDistricts, buildStreetRoom } from './district3d';
 import { CAST_SIZES, createStreetCrowd, type StreetSpot } from './streetlife';
@@ -309,7 +311,7 @@ export default function World3D(props: WorldProps) {
       return { ...base, x: taxi.x, z: taxi.z < 0 ? -4.6 : 4.6 };
     };
     const liveTargets = (): Spot[] => TARGETS.map(item => (item.id === 'taxi' ? targetFor('taxi')! : item));
-    const streetCtx = () => ({ street: live.current.street, eventId: live.current.event, room: sim.streetRoom });
+    const streetCtx = () => ({ street: live.current.street, eventId: live.current.event, room: sim.streetRoom, level: live.current.level });
     const streetSpots = (): Spot[] => {
       const spots: Spot[] = crowd.spots(streetCtx());
       if (sim.streetRoom && sim.room) spots.push({ ...sim.room.exit, streetExit: true, location: 'calle' } as StreetExit);
@@ -525,6 +527,7 @@ export default function World3D(props: WorldProps) {
       if (item !== 'corazon') fx.play(new THREE.Vector3(who.x, who.y - 2.1, who.z));
       sim.bubble = { x: who.x, y: who.y, z: who.z, until: sim.clock + 3.6 };
       setBubble(current => ({ text: reaction.text, n: (current?.n ?? 0) + 1 }));
+      speakLines([reaction.text], { level: p.level });
     };
 
     // Run to a place: used by the places list; the learner still presses E.
@@ -1355,7 +1358,7 @@ export default function World3D(props: WorldProps) {
     <div className="na-fade" ref={fader} aria-hidden="true" />
     {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
     {district && mode === 'walk' && <p key={district.n} className="na-district" role="status">{district.name}</p>}
-    <p ref={bubbleEl} className="na-bubble" aria-live="polite" style={{ opacity: 0 }}>{bubble?.text}</p>
+    <p ref={bubbleEl} className="na-bubble" aria-live="polite" style={{ opacity: 0 }}><Bi text={bubble?.text} /></p>
     <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, N es el nitro, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Con E también puedes robar un auto o una moto estacionados y manejarlos con W y S para acelerar y A y D para girar; la barra espaciadora frena y E te baja. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
     <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Toca ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
     {walking && driving && <p className="na-drive-hud" role="status"><b ref={speedEl}>0 km/h</b><span>{touch ? 'Palanca: acelerar y girar · FRENO · BAJAR' : 'W S acelerar · A D girar · ESPACIO freno · SHIFT turbo · E bajar'}</span></p>}
