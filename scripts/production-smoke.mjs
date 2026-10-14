@@ -40,6 +40,10 @@ export async function runSmoke(origin, fetcher = fetch) {
   assert.match(sessionStatus.headers.get("cache-control") || "", /private, no-store/i);
   // Paid-traffic purchase path: anonymous demo, checkout page and live offers.
   await check("/demo/noche-abierta", 200);
+  // Campaign landings are public: every script chunk they load must be served, never protected.
+  const landing = await (await check("/lp/google-teachers", 200)).text();
+  assert.match(landing, /SPANISHCUE/i);
+  for (const [, src] of landing.matchAll(/<script[^>]+src="(\/assets\/[^"]+\.js)"/g)) await check(src, 200);
   assert.match(await (await check("/acceso", 200)).text(), /SPANISHCUE/i);
   const founder = await (await check("/api/billing/founder-status", 200)).json();
   assert.equal(founder.priceUsd, 15.5);
