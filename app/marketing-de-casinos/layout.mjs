@@ -344,3 +344,16 @@ export function sceneFraming(scene) {
   const heading = Math.atan2(dx, dz);
   return { x: scene.spot.x, z: scene.spot.z, heading };
 }
+
+// One frame of the white circles. A circle opens its scene once Valentina has
+// stood still in it for a moment; after that it stays spent until she walks
+// out, so closing a conversation never reopens it under her feet.
+export function circleStep(circle, here, opened, speed, dt) {
+  let { inside, still, spent } = circle;
+  if (opened) return { inside: null, still: 0, spent: opened, open: null };
+  if (here !== inside) { inside = here; still = 0; if (!here) spent = null; }
+  still = inside && speed < 0.3 ? still + dt : 0;
+  const open = inside && spent !== inside && still > 0.45 ? inside : null;
+  if (open) spent = open;
+  return { inside, still, spent, open };
+}

@@ -6,7 +6,7 @@ import React, {act} from 'react';
 import {createRoot} from 'react-dom/client';
 import {JSDOM} from 'jsdom';
 import {readFileSync} from 'node:fs';
-import {FLOORS, SCENES, SCENE_IDS, SPAWN, ELEVATOR, ELEVATOR_ARRIVAL, solidsFor, spotAt, atElevator} from '../app/marketing-de-casinos/layout.mjs';
+import {FLOORS, SCENES, SCENE_IDS, SPAWN, ELEVATOR, ELEVATOR_ARRIVAL, solidsFor, spotAt, atElevator, circleStep} from '../app/marketing-de-casinos/layout.mjs';
 import {LEVELS, CONTENT} from '../app/marketing-de-casinos/levels.mjs';
 import {MONEY, createState, openScene, choose, undo, closeScene, sceneView, progress, setLevel, setMoney, resetLevel, serialise, restore, doneFor} from '../app/marketing-de-casinos/engine.mjs';
 
@@ -76,6 +76,23 @@ test('every white circle and the elevator are free and reachable on foot',()=>{
     assert.ok(reach(ELEVATOR.x,ELEVATOR.z),`floor ${f.id} elevator is reachable`);
     assert.ok(atElevator(ELEVATOR.x,ELEVATOR.z));
   }
+});
+
+test('closing a conversation does not reopen it while Valentina stands in the circle',()=>{
+  let c={inside:null,still:0,spent:null},opened=[];
+  const frame=(here,scene,speed=0)=>{c=circleStep(c,here,scene,speed,0.1);if(c.open)opened.push(c.open);};
+  for(let i=0;i<6;i++)frame('blackjack',null);
+  assert.deepEqual(opened,['blackjack']);
+  for(let i=0;i<20;i++)frame('blackjack','blackjack');
+  for(let i=0;i<30;i++)frame('blackjack',null);
+  assert.deepEqual(opened,['blackjack'],'standing still after closing keeps it closed');
+  frame(null,null,4);
+  for(let i=0;i<6;i++)frame('blackjack',null);
+  assert.deepEqual(opened,['blackjack','blackjack'],'walking out and back in opens it again');
+  // A scene opened from the list puts her in its circle: closing it is just as calm.
+  for(let i=0;i<3;i++)frame('dados','dados');
+  for(let i=0;i<30;i++)frame('dados',null);
+  assert.deepEqual(opened,['blackjack','blackjack']);
 });
 
 test('a scene asks one choice, then another, then opens the conversation',()=>{

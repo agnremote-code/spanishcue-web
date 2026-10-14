@@ -34,3 +34,5 @@ export function atElevator(x: number, z: number): boolean;
 export function nextSpot(floor: number, x: number, z: number, done?: string[]): Scene | null;
 export function sceneFraming(scene: Scene): Placed;
 export function cameraBlockers(floor: number): Box[];
+export type Circle = { inside: string | null; still: number; spent: string | null };
+export function circleStep(circle: Circle, here: string | null, opened: string | null, speed: number, dt: number): Circle & { open: string | null };

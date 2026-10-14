@@ -11,7 +11,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
-import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, SPAWN, atElevator, cameraBlockers, floorById, sceneById, sceneFraming, solidsFor, spotAt } from './layout.mjs';
+import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, SPAWN, atElevator, cameraBlockers, floorById, circleStep, sceneById, sceneFraming, solidsFor, spotAt } from './layout.mjs';
 import { buildCasino, talking as talkingNow, type Casino } from './casino3d';
 import { animatePerson } from '../noche-abierta/people3d';
 
@@ -280,10 +280,10 @@ export default function World3D(props: WorldProps) {
       place();
 
       // Circles and the elevator.
-      const here = sceneId || ride ? null : spotAt(floor, player.x, player.z);
-      if (here !== inside) { inside = here; still = 0; if (!here) consumed = null; }
-      if (inside && player.speed < 0.3) still += dt; else still = 0;
-      if (inside && consumed !== inside && still > 0.45 && !p.paused && !p.intro) { consumed = inside; p.onSpot(inside); }
+      const here = ride ? null : spotAt(floor, player.x, player.z);
+      const circle = circleStep({ inside, still, spent: consumed }, here, sceneId, p.paused || p.intro ? 1 : player.speed, dt);
+      inside = circle.inside; still = circle.still; consumed = circle.spent;
+      if (circle.open) p.onSpot(circle.open);
       const lift = !sceneId && !ride && atElevator(player.x, player.z);
       if (lift !== atLift) { atLift = lift; if (!lift) liftConsumed = false; }
       if (atLift && !liftConsumed && player.speed < 0.3 && !p.paused && !p.intro) { liftConsumed = true; p.onElevator(); }
