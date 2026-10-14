@@ -3,6 +3,7 @@ import {headers} from 'next/headers';
 import {fullAccessFromHeaders,signedInFromHeaders} from '../../access-policy';
 import {demoContent} from '../../immersive/demo-content.mjs';
 import GoogleTeachersLanding from '../../immersive/GoogleTeachersLanding';
+import type {TourSpot} from '../../immersive/GuidedTour';
 import {proPreviews,showcase} from '../../immersive/google-showcase';
 import '../../immersive/immersive.css';
 import '../../immersive/google-teachers.css';
@@ -21,6 +22,9 @@ const PREVIEW_IDS=[48,230];
 
 export default async function Page(){
  const h=await headers();
- const cafe=demoContent(TOUR_LEVEL)!.locations.find(l=>l.id==='cafe')!;
- return <GoogleTeachersLanding pro={fullAccessFromHeaders(h)} signedIn={signedInFromHeaders(h)} cafe={cafe} level={TOUR_LEVEL} showcase={showcase()} previews={proPreviews(PREVIEW_IDS)} />;
+ const content=demoContent(TOUR_LEVEL)!;
+ const cafe=content.locations.find(l=>l.id==='cafe')!;
+ // Driving mode: one activity per free place, trimmed to the fields the stage shows.
+ const spots:TourSpot[]=content.locations.map(l=>{const a=l.activities.find(x=>x.options?.length&&x.close)??l.activities[0];return {id:l.id,name:l.name,activity:{id:a.id,title:a.title,situation:a.situation,prompt:a.prompt,options:a.options,close:a.close,teacher:a.teacher,says:a.says,ask:a.ask}};});
+ return <GoogleTeachersLanding pro={fullAccessFromHeaders(h)} signedIn={signedInFromHeaders(h)} cafe={cafe} spots={spots} level={TOUR_LEVEL} showcase={showcase()} previews={proPreviews(PREVIEW_IDS)} />;
 }
