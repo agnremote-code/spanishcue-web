@@ -292,7 +292,15 @@ export async function recordPaddleCompletedPayment(
     stamp,
   ).run();
 
-  return { kind: existing ? "duplicate" as const : isFirst ? "first" as const : "renewal" as const, paymentId: payment.id };
+  const trialBefore = isFirst ? await db.prepare(
+    `SELECT 1 AS found FROM billing_payments WHERE subscription_id = ? AND amount_cents = 200 AND status = 'COMPLETED' LIMIT 1`,
+  ).bind(subscription.id).first<{ found: number }>() : null;
+  return {
+    kind: existing ? "duplicate" as const : input.isTrial ? "trial" as const : isFirst ? "first" as const : "renewal" as const,
+    paymentId: payment.id,
+    afterTrial: Boolean(trialBefore),
+    eventKey: `${eventName}:${input.transactionId}`,
+  };
 }
 
 export async function markPaddleWebhookReceived(
@@ -337,4 +345,12 @@ export async function finishPaddleWebhook(
      SET processing_status = ?, processed_at = ?, error_code = ?
      WHERE provider = 'paddle' AND environment = ? AND event_id = ?`,
   ).bind(status, now(), errorCode, ENVIRONMENT, eventId).run();
+}
+
+/** Marks a server-delivered outbox event; consumers mark only after their own success. */
+export async function markPaddleOutboxDelivered(db: D1Database, eventKey: string) {
+  await db.prepare(
+    `UPDATE billing_outbox_events SET delivered_at = ?
+     WHERE provider = 'paddle' AND environment = ? AND event_key = ? AND delivered_at IS NULL`,
+  ).bind(now(), ENVIRONMENT, eventKey).run();
 }

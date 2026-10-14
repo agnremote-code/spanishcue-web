@@ -119,3 +119,43 @@ test('legacy unclaimed paid purchase renews and concurrent trial claim replay st
 });
 
 test('misconfigured runtime cannot authorize an arbitrary price',()=>{const [tx]=pair(true);tx.items[0].price.id='pri_arbitrary';assert.equal(p.paddleOffer(tx,{...cfg,trialPriceId:'pri_arbitrary'}),null);const [direct]=pair(false);direct.items[0].price.id='pri_arbitrary';assert.equal(p.paddleOffer(direct,{...cfg,priceId:'pri_arbitrary'}),null)});
+const convBuilt = await build({stdin:{contents:'export * from "./db/paddle-billing"; export { claimFirstPaidConversionForUser } from "./db/billing"; export * from "./app/billing-config"; export * from "./app/server-conversions";',resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});
+const conv=await import(`data:text/javascript;base64,${Buffer.from(convBuilt.outputFiles[0].text).toString('base64')}`);
+test('Google Ads purchase = first verified paid transaction (US$2 trial), never the later first month; server reports post-trial month and renewals once',async()=>{
+ const sqlite=new DatabaseSync(':memory:');
+ for(const n of (await readdir('drizzle')).filter(n=>n.endsWith('.sql')).sort())sqlite.exec((await readFile(`drizzle/${n}`,'utf8')).replaceAll('--> statement-breakpoint',''));
+ const stmt=(sql,args=[])=>({bind:(...v)=>stmt(sql,v),run:async()=>({meta:{changes:Number(sqlite.prepare(sql).run(...args).changes)}}),first:async()=>sqlite.prepare(sql).get(...args)??null});const db={prepare:s=>stmt(s)};
+ sqlite.exec("INSERT INTO users(id,email,normalized_email,role,status,created_at,updated_at,last_sign_in_at) VALUES ('owner','owner@example.test','owner@example.test','teacher','active',1,1,1)");
+ const config=conv.billingConfig({PAYPAL_ENV:'live'}),now=Math.floor(Date.now()/1000);
+ await conv.upsertPaddleSubscription(db,{userId:'owner',subscriptionId:'sub_trial',priceId:trial,offerCode:config.founderOffer.code,status:'ACTIVE'});
+ const initial={userId:'owner',subscriptionId:'sub_trial',transactionId:'txn_trial',amountCents:200,currency:'USD',isTrial:true,occurredAt:now,paidThrough:now+86400};
+ const first=await conv.recordPaddleCompletedPayment(db,initial,config);
+ assert.equal(first.kind,'trial');
+ assert.deepEqual(await conv.claimFirstPaidConversionForUser(db,'owner','sub_trial','live'),{transactionId:'txn_trial',value:2,currency:'USD',plan:'trial'});
+ assert.equal(await conv.claimFirstPaidConversionForUser(db,'owner','sub_trial','live'),null);
+ const month=await conv.recordPaddleCompletedPayment(db,{...initial,transactionId:'txn_month',amountCents:1550,isTrial:false,occurredAt:now+86400,paidThrough:now+31*86400},config);
+ assert.equal(month.kind,'first');assert.equal(month.afterTrial,true);
+ assert.equal(await conv.claimFirstPaidConversionForUser(db,'owner','sub_trial','live'),null,'a returning buyer cannot fire a second purchase conversion');
+ const old=globalThis.fetch;const sent=[];globalThis.fetch=async(url,init)=>{sent.push({url:String(url),body:JSON.parse(init.body)});return new Response(null,{status:204})};
+ try{
+  const details={transactionId:'txn_month',amountCents:1550,currency:'USD',attribution:{ga_client_id:'123.456',gclid:'abc'}};
+  assert.equal(await conv.deliverPaddleServerConversion({ANALYTICS_CONVERSIONS_ENABLED:'true',NEXT_PUBLIC_GA4_MEASUREMENT_ID:'G-TEST'},db,month,details),false,'no API secret: stays in the outbox');
+  assert.equal(await conv.deliverPaddleServerConversion({ANALYTICS_CONVERSIONS_ENABLED:'true',NEXT_PUBLIC_GA4_MEASUREMENT_ID:'G-TEST',GA4_API_SECRET:'s'},db,month,{...details,attribution:{}}),false,'no consented client id');
+  assert.equal(await conv.deliverPaddleServerConversion({ANALYTICS_CONVERSIONS_ENABLED:'true',NEXT_PUBLIC_GA4_MEASUREMENT_ID:'G-TEST',GA4_API_SECRET:'s'},db,first,details),false,'the browser reports the first paid transaction');
+  assert.equal(await conv.deliverPaddleServerConversion({ANALYTICS_CONVERSIONS_ENABLED:'true',NEXT_PUBLIC_GA4_MEASUREMENT_ID:'G-TEST',GA4_API_SECRET:'s'},db,month,details),true);
+  assert.equal(sent.length,1);assert.equal(sent[0].body.events[0].name,'first_subscription_payment');assert.equal(sent[0].body.events[0].params.value,15.5);assert.equal(sent[0].body.client_id,'123.456');
+  assert.ok(sqlite.prepare("SELECT delivered_at FROM billing_outbox_events WHERE event_key='first_subscription_paid:txn_month'").get().delivered_at);
+  const renewal=await conv.recordPaddleCompletedPayment(db,{...initial,transactionId:'txn_r2',amountCents:1550,isTrial:false,occurredAt:now+31*86400,paidThrough:now+61*86400},config);
+  assert.equal(renewal.kind,'renewal');
+  await conv.deliverPaddleServerConversion({ANALYTICS_CONVERSIONS_ENABLED:'true',NEXT_PUBLIC_GA4_MEASUREMENT_ID:'G-TEST',GA4_API_SECRET:'s'},db,renewal,{...details,transactionId:'txn_r2'});
+  assert.equal(sent.at(-1).body.events[0].name,'subscription_renewal');
+ }finally{globalThis.fetch=old;sqlite.close();}
+});
+test('checkout carries only allow-listed ad identifiers into Paddle custom_data',async()=>{
+ assert.deepEqual(p.sanitizePaddleAttribution({gclid:'Cj0K_abc-1',gbraid:'0AA',utm_source:'google',ga_client_id:'1.2',email:'x@y.z',utm_term:'bad value'}),{gclid:'Cj0K_abc-1',gbraid:'0AA',utm_source:'google',ga_client_id:'1.2'});
+ assert.deepEqual(p.sanitizePaddleAttribution({gclid:'<script>'}),{});
+ const old=globalThis.fetch;let body;globalThis.fetch=async(_u,init)=>{body=JSON.parse(init.body);return Response.json({data:{id:'txn_x'}})};
+ try{await p.createPaddleCheckoutTransaction(cfg,{claimId:'c1',offerCode:'founder',offer:'trial',attribution:{gclid:'abc',evil:'x'}});}finally{globalThis.fetch=old}
+ assert.equal(body.custom_data.spanishcue_gclid,'abc');assert.equal(body.custom_data.spanishcue_claim_id,'c1');assert.equal(body.custom_data.spanishcue_evil,undefined);
+ assert.deepEqual(p.paddleAttributionFrom({custom_data:body.custom_data}),{gclid:'abc'});
+});

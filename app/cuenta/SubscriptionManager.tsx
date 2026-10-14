@@ -24,12 +24,20 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch("/api/billing/subscription", { credentials: "same-origin", signal: controller.signal })
+    const load = () => fetch("/api/billing/subscription", { credentials: "same-origin", signal: controller.signal })
       .then(async (response) => response.ok ? response.json() : null)
-      .then((body: unknown) => {
-        if (body && typeof body === "object" && "subscription" in body) setSubscription(body.subscription as Subscription | null);
-        else setSubscription(null);
+      .then((body: unknown) => body && typeof body === "object" && "subscription" in body ? body.subscription as Subscription | null : null);
+    load()
+      .then(async (current) => {
+        // A Paddle renewal whose webhook never arrived: re-read it from Paddle
+        // (server-verified) before showing the subscription as lapsed.
+        if (current?.provider === "paddle" && !current.accessConfirmed && (current.status === "ACTIVE" || current.status === "SUSPENDED")) {
+          await fetch("/api/billing/refresh", { method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: "{}", signal: controller.signal }).catch(() => null);
+          return load();
+        }
+        return current;
       })
+      .then((current) => setSubscription(current))
       .catch(() => setSubscription(null));
     return () => controller.abort();
   }, []);

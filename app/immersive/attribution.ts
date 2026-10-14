@@ -21,7 +21,7 @@ export function funnelContext():Record<string,string> {
 export function campaignLink(path:string,search:string):string{
   const target=new URL(path,'https://spanishcue.com');
   const source=new URLSearchParams(search);
-  for(const name of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','lang','sc_exp','sc_variant']){
+  for(const name of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','gbraid','wbraid','lang','sc_exp','sc_variant']){
     const value=source.get(name);if(value)target.searchParams.set(name,value.slice(0,180));
   }
   return target.pathname+target.search+target.hash;

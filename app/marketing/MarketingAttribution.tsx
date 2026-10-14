@@ -46,6 +46,8 @@ export default function MarketingAttribution({
   useEffect(() => {
     const run = () => {
       const consent = readConsent();
+      // Ad click IDs and UTMs follow marketing consent even without analytics.
+      if (consent?.marketing) captureMarketingAttribution();
       if (!consent?.analytics || tracked.current) return;
       tracked.current = true;
       captureMarketingAttribution();
