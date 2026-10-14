@@ -1,0 +1,300 @@
+{
+  "game": "casino",
+  "level": "B1",
+  "items": [
+    {
+      "id": "portero",
+      "title": "Tres consejos para Rafa",
+      "place": "La entrada",
+      "context": "Rafa empieza a trabajar en la puerta del casino. Rocco, el portero veterano, le da consejos.",
+      "speakers": [
+        { "name": "Rocco", "country": "Argentina", "voice": "es-AR-TomasNeural" },
+        { "name": "Rafa", "country": "Panamá", "voice": "es-PA-RobertoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Rafa, ven un momento. Es tu primera noche en esta puerta y quiero darte tres consejos." },
+        { "s": 1, "text": "Claro, Rocco. Te escucho." },
+        { "s": 0, "text": "Primero: mira siempre los zapatos. La ropa se puede alquilar, pero los zapatos dicen la verdad. Segundo: nunca discutas con un borracho. Sonríe y llama a seguridad." },
+        { "s": 1, "text": "¿Y el tercero?" },
+        { "s": 0, "text": "El tercero es solo para esta noche. Don Aurelio me ha dicho que va a venir una chica con un vestido rojo y una ficha dorada. Dice que es una invitada muy especial y que nadie le puede pedir dinero." },
+        { "s": 1, "text": "¿Una chica de rojo? Creo que ya ha entrado, hace diez minutos. Le he preguntado si quería una mesa y me ha dicho que no, que solo busca a una persona." },
+        { "s": 0, "text": "Mmm. Para mí, esa chica no ha venido a jugar. Ha venido a buscar respuestas. Vamos a vigilarla, pero de lejos." }
+      ],
+      "choice": [
+        { "q": "¿De qué trata principalmente la conversación?", "options": ["Rocco le da consejos a un portero nuevo", "Rafa quiere dejar su trabajo", "Rocco y Rafa discuten con un borracho"], "answer": 0 },
+        { "q": "Según Rocco, ¿por qué hay que mirar los zapatos?", "options": ["Porque muestran si alguien está borracho", "Porque la ropa se puede alquilar, pero los zapatos no mienten", "Porque Don Aurelio lo pide"], "answer": 1 },
+        { "q": "¿Qué ha dicho Don Aurelio sobre la chica de rojo?", "options": ["Que no la dejen entrar", "Que le pidan el pasaporte", "Que nadie le puede pedir dinero"], "answer": 2 },
+        { "q": "¿Qué piensa Rocco de la chica?", "options": ["Que ha venido a buscar respuestas", "Que es una jugadora profesional", "Que es peligrosa"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Qué consejo le darías a una persona en su primer día en tu trabajo?", "model": "Le diría que pregunte todo y que no tenga miedo de equivocarse." },
+        { "q": "¿En qué te fijas primero cuando conoces a alguien? ¿Por qué?", "model": "Me fijo en los ojos, porque creo que dicen si una persona es sincera." },
+        { "q": "¿Recuerdas un buen consejo que te dio alguien mayor?", "model": "Mi abuela me dijo que nunca debo tomar decisiones importantes cuando estoy enfadado." }
+      ],
+      "gaps": "Primero: mira siempre los [zapatos]. La ropa se puede [alquilar], pero los zapatos dicen la [verdad]. Segundo: nunca discutas con un [borracho].",
+      "glossary": [
+        { "word": "alquilar", "meaning": "pagar por usar algo durante un tiempo" },
+        { "word": "borracho", "meaning": "persona que ha bebido demasiado alcohol" },
+        { "word": "vigilarla", "meaning": "observarla con atención, sin perderla de vista" },
+        { "word": "de lejos", "meaning": "a distancia, sin acercarse" }
+      ]
+    },
+    {
+      "id": "ruleta",
+      "title": "Radio Meridiano: la ruleta no tiene memoria",
+      "place": "Ruleta",
+      "context": "La radio interna del casino entrevista a Nico, el crupier de la ruleta, sobre las supersticiones de los jugadores.",
+      "speakers": [
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Nico", "country": "México", "voice": "es-MX-JorgeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenas noches, estás escuchando Radio Meridiano. Hoy estoy en la ruleta con Nico, crupier desde hace ocho años. Nico, ¿los jugadores son supersticiosos?" },
+        { "s": 1, "text": "Muchísimo. Hay una señora que siempre apuesta al catorce porque dice que es el día de su boda. Y un señor no juega si alguien en la mesa lleva algo amarillo." },
+        { "s": 0, "text": "¿Y funciona?" },
+        { "s": 1, "text": "Para mí, no. La ruleta no tiene memoria. Si sale rojo cinco veces, la próxima vez el rojo tiene las mismas posibilidades. Pero la gente no lo cree." },
+        { "s": 0, "text": "¿Y tú no tienes ninguna superstición?" },
+        { "s": 1, "text": "Bueno... sí, una. El primer día, un compañero, Ernesto, me dijo que nunca debía contar el dinero de un cliente en voz alta, que trae mala suerte. Y hasta hoy no lo hago." },
+        { "s": 0, "text": "¡Qué bonito! Bueno, amigos, volvemos después de la publicidad." }
+      ],
+      "choice": [
+        { "q": "¿Qué tipo de audio es?", "options": ["Una entrevista en la radio del casino", "Un anuncio de un nuevo juego", "Una conversación entre dos jugadores"], "answer": 0 },
+        { "q": "¿Por qué la señora apuesta siempre al catorce?", "options": ["Porque es su número de la suerte desde niña", "Porque es el día de su boda", "Porque un crupier se lo recomendó"], "answer": 1 },
+        { "q": "¿Qué opina Nico de las supersticiones?", "options": ["Que a veces funcionan", "Que el rojo sale más veces", "Que no funcionan porque la ruleta no tiene memoria"], "answer": 2 },
+        { "q": "¿Qué podemos deducir sobre Ernesto?", "options": ["Fue compañero de Nico y le dejó una costumbre", "Era un jugador muy supersticioso", "Es el jefe actual de Nico"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Tienes alguna superstición o un número de la suerte? Cuéntala.", "model": "Sí, no me gusta empezar un examen sin mi bolígrafo verde. Me parece que me da suerte." },
+        { "q": "¿Crees que la suerte existe o todo depende de nosotros?", "model": "Creo que la suerte existe, pero solo ayuda a las personas que trabajan." },
+        { "q": "¿Qué costumbre te enseñó un compañero o una compañera y todavía tienes?", "model": "Una compañera me enseñó a escribir una lista cada mañana. Todavía lo hago." }
+      ],
+      "gaps": "Para mí, no. La ruleta no tiene [memoria]. Si sale [rojo] cinco veces, la próxima vez el rojo tiene las mismas [posibilidades]. Pero la gente no lo [cree].",
+      "glossary": [
+        { "word": "supersticiosos", "meaning": "personas que creen que ciertas cosas traen buena o mala suerte" },
+        { "word": "en voz alta", "meaning": "hablando de forma que los demás lo oyen" },
+        { "word": "publicidad", "meaning": "anuncios comerciales" }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Dos versiones de Ernesto",
+      "place": "Bar central",
+      "context": "Dos camareras chismean al lado de la barra. Valentina las oye sin que ellas se den cuenta.",
+      "speakers": [
+        { "name": "Yolanda", "country": "Nicaragua", "voice": "es-NI-YolandaNeural" },
+        { "name": "Belkys", "country": "Cuba", "voice": "es-CU-BelkysNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¿Viste a la chica del vestido rojo en la barra? Leo dice que es la hija de Ernesto." },
+        { "s": 1, "text": "¿De Ernesto el crupier? ¡No me digas! Yo pensaba que no tenía familia." },
+        { "s": 0, "text": "Pues sí. Leo me contó que tiene sus mismos ojos. Y que trae una ficha dorada." },
+        { "s": 1, "text": "Uy, eso no me gusta nada. Mi tía trabajaba aquí cuando él desapareció. Ella decía que Ernesto le había ganado una partida enorme a Don Aurelio y que Don Aurelio nunca le quiso pagar." },
+        { "s": 0, "text": "Pues yo oí otra historia. Dicen que era al revés: que Ernesto le debía dinero a Don Aurelio y que por eso se escapó." },
+        { "s": 1, "text": "¿Y cuál es la verdad?" },
+        { "s": 0, "text": "Ni idea. Pero creo que esta noche lo vamos a saber. Ay, mira, nos está mirando. Sonríe y sigue trabajando." }
+      ],
+      "choice": [
+        { "q": "¿Sobre qué chismean las camareras?", "options": ["Sobre el sueldo de los camareros", "Sobre la historia de Ernesto", "Sobre una fiesta en el bar"], "answer": 1 },
+        { "q": "¿Quién les ha contado que la chica es la hija de Ernesto?", "options": ["Rocco", "La tía de Belkys", "Leo"], "answer": 2 },
+        { "q": "Según la tía de Belkys, ¿qué pasó?", "options": ["Don Aurelio no le pagó a Ernesto lo que ganó", "Ernesto le robó dinero al casino", "Ernesto se fue con otra mujer"], "answer": 0 },
+        { "q": "¿Por qué Yolanda dice «sonríe y sigue trabajando» al final?", "options": ["Porque llega el jefe", "Porque la chica de rojo las está mirando", "Porque un cliente quiere pedir"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Crees que los chismes en el trabajo son peligrosos o divertidos? ¿Por qué?", "model": "Me parecen divertidos al principio, pero creo que pueden hacer mucho daño." },
+        { "q": "¿Alguna vez escuchaste dos versiones muy diferentes de la misma historia? ¿A quién creíste?", "model": "Sí, con dos amigos que se pelearon. Al final no creí a ninguno, porque los dos exageraban." },
+        { "q": "Si una persona habla de tu familia a tus espaldas, ¿qué haces?", "model": "Creo que hablaría con ella directamente y le preguntaría qué sabe." }
+      ],
+      "gaps": "Pues yo oí otra [historia]. Dicen que era [al revés]: que Ernesto le [debía dinero] a Don Aurelio y que por eso se [escapó].",
+      "glossary": [
+        { "word": "barra", "meaning": "mostrador largo del bar donde se sirven las bebidas" },
+        { "word": "partida", "meaning": "cada juego completo de cartas o de mesa" },
+        { "word": "al revés", "meaning": "de la forma contraria" },
+        { "word": "Ni idea", "meaning": "no lo sé en absoluto" }
+      ]
+    },
+    {
+      "id": "poker",
+      "title": "Una mano por la contraseña",
+      "place": "Salón Esmeralda",
+      "context": "Valentina le pide al Holandés la contraseña de la puerta VIP. Él le propone un trato.",
+      "speakers": [
+        { "name": "El Holandés", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Así que buscas la contraseña de la puerta VIP. Yo la sé." },
+        { "s": 1, "text": "¿En serio? ¿Me la puedes decir?" },
+        { "s": 0, "text": "Te propongo un trato. Jugamos una mano. Si ganas tú, te la digo. Si gano yo, mañana tomas el primer avión a Miami y te olvidas de este casino." },
+        { "s": 1, "text": "No me parece justo. Tú juegas aquí desde hace treinta años y yo casi no conozco las reglas." },
+        { "s": 0, "text": "Exacto. Arriba la gente juega mucho más fuerte que yo." },
+        { "s": 1, "text": "Mira, yo pienso que el juego no es solo suerte. Mi padre siempre decía que lo más importante es saber cuándo levantarse de la mesa." },
+        { "s": 0, "text": "¿Tu padre decía eso? Yo le enseñé esa frase. Bueno, chica, no hace falta jugar. La contraseña es «Escalera real». Como la mano que me quitó la casa hace muchos años." }
+      ],
+      "choice": [
+        { "q": "¿Qué quiere conseguir Valentina?", "options": ["Aprender a jugar al póker", "La contraseña de la puerta VIP", "Un billete de avión a Miami"], "answer": 1 },
+        { "q": "¿Qué pasa si gana el Holandés?", "options": ["Valentina se va de Las Vegas", "Valentina le paga cien dólares", "Valentina juega en el tercer piso"], "answer": 0 },
+        { "q": "¿Por qué Valentina piensa que el trato no es justo?", "options": ["Porque no tiene dinero", "Porque el Holandés hace trampas", "Porque él tiene mucha más experiencia"], "answer": 2 },
+        { "q": "¿Por qué el Holandés le da la contraseña sin jugar?", "options": ["Porque tiene miedo de perder", "Porque Valentina repite una frase que él le enseñó a su padre", "Porque Don Aurelio se lo ha ordenado"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te parece que en la vida es más importante la suerte o saber cuándo parar? ¿Por qué?", "model": "Saber cuándo parar, porque la suerte cambia, pero tus decisiones dependen de ti." },
+        { "q": "¿Qué frase de tus padres o abuelos repites tú ahora?", "model": "Mi padre decía que lo barato sale caro, y ahora yo se lo digo a mis hijos." },
+        { "q": "¿Aceptarías un trato como el del Holandés? Explica tu opinión.", "model": "No, no lo aceptaría. Si pierdo, tengo que abandonar algo muy importante para mí." }
+      ],
+      "gaps": "Si ganas tú, te la [digo]. Si gano yo, mañana tomas el [primer avión] a [Miami] y te olvidas de este [casino].",
+      "glossary": [
+        { "word": "trato", "meaning": "acuerdo entre dos personas" },
+        { "word": "mano", "meaning": "en las cartas, cada partida corta o las cartas que tiene un jugador" },
+        { "word": "no hace falta", "meaning": "no es necesario" },
+        { "word": "juega mucho más fuerte", "meaning": "apuesta más dinero y con más riesgo" }
+      ]
+    },
+    {
+      "id": "teatro",
+      "title": "Faustino y la mano equivocada",
+      "place": "Camerino del teatro",
+      "context": "Después del show, Valentina entra en el camerino del mago El Gran Faustino.",
+      "speakers": [
+        { "name": "Faustino", "country": "Chile", "voice": "es-CL-LorenzoNeural" },
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Pasa, pasa. Tú eres la chica de la primera fila, ¿no? La que no aplaudió." },
+        { "s": 1, "text": "Sí, perdona. Es que vi dónde escondiste la carta." },
+        { "s": 0, "text": "Ja, ja. Eres la primera en diez años. El secreto de la magia es hacer que la gente mire la mano equivocada. Y este casino funciona igual: luces, música, bebidas gratis... para que nadie mire el reloj." },
+        { "s": 1, "text": "¿Por eso no hay ventanas?" },
+        { "s": 0, "text": "Exacto. Oye, Rocco me ha dicho que buscas a Don Aurelio. Te voy a ayudar. A medianoche voy a hacer un truco en el pasillo del tercer piso, con humo y palomas. Los guardias van a mirarme a mí y tú vas a tener dos minutos." },
+        { "s": 1, "text": "¿Y por qué me ayudas?" },
+        { "s": 0, "text": "Porque tu padre me ayudó a mí cuando no tenía ni para comer." }
+      ],
+      "choice": [
+        { "q": "¿Qué propone Faustino?", "options": ["Enseñarle a Valentina un truco de cartas", "Ayudar a Valentina a llegar a Don Aurelio", "Contratar a Valentina como asistente"], "answer": 1 },
+        { "q": "¿Por qué Valentina no aplaudió?", "options": ["Porque vio el secreto del truco", "Porque el show era aburrido", "Porque llegó tarde"], "answer": 0 },
+        { "q": "Según Faustino, ¿qué tienen en común la magia y el casino?", "options": ["Los dos necesitan mucho dinero", "Los dos usan palomas", "Los dos hacen que la gente mire otra cosa"], "answer": 2 },
+        { "q": "¿Por qué Faustino quiere ayudarla?", "options": ["Porque Don Aurelio se lo pidió", "Porque le debe un favor a su padre", "Porque quiere salir en las noticias"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Crees que los casinos, las tiendas o las apps nos hacen «mirar la mano equivocada»? Da un ejemplo.", "model": "Sí. Las apps de compras ponen ofertas con un reloj para que compres rápido y no pienses." },
+        { "q": "¿Alguna vez descubriste el truco de algo y no te gustó? ¿Qué pasó?", "model": "Sí, me di cuenta de que una tienda subía los precios antes de las rebajas. Ya no compro allí." },
+        { "q": "¿Hay alguien a quien le debes un gran favor? ¿Cómo te gustaría devolvérselo?", "model": "A mi profesor de música. Me gustaría invitarlo a mi primer concierto." }
+      ],
+      "gaps": "Y este casino funciona igual: [luces], [música], [bebidas gratis]... para que nadie mire el [reloj].",
+      "glossary": [
+        { "word": "aplaudió", "meaning": "del verbo aplaudir: chocar las manos para mostrar que algo te gusta" },
+        { "word": "escondiste", "meaning": "del verbo esconder: poner algo donde nadie lo ve" },
+        { "word": "pasillo", "meaning": "parte larga y estrecha de un edificio que une habitaciones" },
+        { "word": "no tenía ni para comer", "meaning": "era muy pobre, no tenía nada de dinero" }
+      ]
+    },
+    {
+      "id": "capilla",
+      "title": "Cincuenta años y una apuesta",
+      "place": "Capilla «Amor Exprés»",
+      "context": "Una pareja mayor renueva sus votos en la capilla. Elvis les hace preguntas antes de la ceremonia.",
+      "speakers": [
+        { "name": "Elvis", "country": "Puerto Rico", "voice": "es-PR-VictorNeural" },
+        { "name": "Amparo", "country": "Ecuador", "voice": "es-EC-AndreaNeural" },
+        { "name": "Teodoro", "country": "Bolivia", "voice": "es-BO-MarceloNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Amigos, hoy Amparo y Teodoro renuevan sus votos después de cincuenta años. ¿Cómo se conocieron?" },
+        { "s": 1, "text": "Aquí mismo, en el Gran Meridiano. Yo era camarera y él dejaba todo su sueldo en las tragamonedas." },
+        { "s": 2, "text": "¡No todo! Solo la mitad. La otra mitad la gastaba en flores para ella." },
+        { "s": 0, "text": "¿Y cuál es el secreto de un matrimonio tan largo?" },
+        { "s": 1, "text": "Para mí, hablar claro, sobre todo de dinero. Al principio discutíamos mucho. Un día le dije: «O el casino o yo». Y se quedó conmigo." },
+        { "s": 2, "text": "Bueno, pero seguimos viniendo una vez al año, para el aniversario. Apostamos veinte dólares al diecinueve, el día de nuestra boda." },
+        { "s": 0, "text": "¿Y después de la ceremonia, qué planes tienen?" },
+        { "s": 2, "text": "Vamos a cenar y luego, si ella quiere, a bailar." },
+        { "s": 1, "text": "Él ya no baila. Se sienta y me mira bailar. Y eso también es amor." }
+      ],
+      "choice": [
+        { "q": "¿Qué celebran Amparo y Teodoro?", "options": ["Su primera cita", "Cincuenta años de matrimonio", "Un premio en la ruleta"], "answer": 1 },
+        { "q": "¿Qué hacía Teodoro con su sueldo cuando era joven?", "options": ["Lo gastaba en las tragamonedas y en flores", "Lo ahorraba para la boda", "Se lo daba a su madre"], "answer": 0 },
+        { "q": "Según Amparo, ¿cuál es el secreto de su matrimonio?", "options": ["No discutir nunca", "Bailar juntos", "Hablar claro sobre el dinero"], "answer": 2 },
+        { "q": "¿Qué podemos deducir de la última frase de Amparo?", "options": ["Que está enfadada porque él no baila", "Que para ella el amor está en los gestos pequeños", "Que prefiere bailar con otra persona"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Crees que es importante hablar de dinero con tu pareja? ¿Por qué?", "model": "Sí, porque muchas parejas se separan por problemas de dinero que nunca hablaron." },
+        { "q": "¿Qué es para ti un gesto pequeño de amor?", "model": "Para mí es cuando alguien te prepara un café sin que se lo pidas." },
+        { "q": "¿Conoces a una pareja que lleva muchos años junta? ¿Cuál crees que es su secreto?", "model": "Mis abuelos llevan sesenta años juntos. Creo que su secreto es el humor." }
+      ],
+      "gaps": "Para mí, hablar [claro], sobre todo de [dinero]. Al principio [discutíamos] mucho. Un día le dije: «O el [casino] o yo».",
+      "glossary": [
+        { "word": "renuevan sus votos", "meaning": "repiten las promesas de su boda" },
+        { "word": "sueldo", "meaning": "dinero que recibes por tu trabajo" },
+        { "word": "tragamonedas", "meaning": "máquinas de juego donde metes monedas" },
+        { "word": "aniversario", "meaning": "el día en que se cumplen años de algo importante" }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Escalera real en el interfono",
+      "place": "La puerta VIP",
+      "context": "Valentina dice la contraseña en la puerta VIP. Don Aurelio le habla por el interfono antes de abrir.",
+      "speakers": [
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" },
+        { "name": "Don Aurelio", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Escalera real." },
+        { "s": 1, "text": "Correcto. Bienvenida, Valentina. Antes de abrir, quiero decirte algo. Supongo que tu madre te ha dicho que yo soy un monstruo." },
+        { "s": 0, "text": "Me ha dicho que mi padre tenía una deuda con gente peligrosa." },
+        { "s": 1, "text": "Tu madre no conoce toda la historia. Hace diez años, tu padre me dijo que quería dejar el casino y abrir un restaurante en Miami. Le presté el dinero. Al día siguiente desapareció." },
+        { "s": 0, "text": "Eso no es posible. Mi padre nunca abrió ningún restaurante." },
+        { "s": 1, "text": "Lo sé. Por eso te he mandado la ficha. Creo que alguien se quedó con ese dinero, y no fue Ernesto. Te propongo una cosa: tú me ayudas a encontrar la verdad y yo te ayudo a encontrar a tu padre." },
+        { "s": 0, "text": "¿Y si no acepto?" },
+        { "s": 1, "text": "La puerta se abre igual. Pero la decisión es tuya." }
+      ],
+      "choice": [
+        { "q": "¿Qué le propone Don Aurelio a Valentina?", "options": ["Un trabajo en el casino", "Buscar juntos la verdad sobre su padre", "Pagar la deuda de su padre"], "answer": 1 },
+        { "q": "Según Don Aurelio, ¿para qué le prestó dinero a Ernesto?", "options": ["Para abrir un restaurante", "Para pagar una deuda", "Para comprar una casa"], "answer": 0 },
+        { "q": "¿Qué cree Don Aurelio sobre el dinero?", "options": ["Que Ernesto lo perdió en la ruleta", "Que la madre de Valentina lo tiene", "Que otra persona se quedó con él"], "answer": 2 },
+        { "q": "¿Qué pasa si Valentina no acepta?", "options": ["No puede entrar", "Tiene que irse del casino", "Puede entrar de todos modos"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Le prestarías una cantidad grande de dinero a un amigo? ¿Con qué condiciones?", "model": "Solo si tenemos un papel firmado. La amistad es importante, pero el dinero también." },
+        { "q": "¿Alguna vez cambiaste tu opinión sobre una persona después de escuchar su versión?", "model": "Sí, con una compañera de trabajo. Pensaba que era antipática, pero tenía problemas en casa." },
+        { "q": "¿Qué harías tú en el lugar de Valentina: aceptarías el trato o no?", "model": "Creo que lo aceptaría, pero con cuidado. Necesito saber la verdad." }
+      ],
+      "gaps": "Hace diez años, tu padre me dijo que quería dejar el [casino] y abrir un [restaurante] en [Miami]. Le presté el [dinero].",
+      "glossary": [
+        { "word": "Supongo", "meaning": "del verbo suponer: creo que es así, pero no estoy seguro" },
+        { "word": "monstruo", "meaning": "persona muy mala o cruel" },
+        { "word": "presté", "meaning": "del verbo prestar: dar algo que luego te tienen que devolver" },
+        { "word": "se quedó con", "meaning": "tomó algo para sí y no lo devolvió" }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Audio de Valentina a las dos de la mañana",
+      "place": "Terraza sobre el Strip",
+      "context": "Desde la terraza, Valentina le deja un mensaje de voz a su madre.",
+      "speakers": [
+        { "name": "Valentina", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Mamá, soy yo. Son casi las dos de la mañana y estoy en la terraza del casino. No te preocupes, estoy bien." },
+        { "s": 0, "text": "Esta noche he hablado con mucha gente. Rocco, el portero, me ha dicho que papá era el crupier más simpático del Strip. Y Don Aurelio me ha contado una historia muy diferente a la tuya: dice que papá no le debía nada, que él le prestó dinero para abrir un restaurante." },
+        { "s": 0, "text": "No sé a quién creer. Pero tengo un plan: mañana voy a ir al banco con Marco, el hijo de Don Aurelio, para ver los papeles de hace diez años." },
+        { "s": 0, "text": "Mamá, si sabes algo más, por favor, dímelo. Ya no soy una niña. Te quiero." }
+      ],
+      "choice": [
+        { "q": "¿Para qué le deja Valentina este mensaje a su madre?", "options": ["Para decirle que vuelve a casa mañana", "Para contarle lo que ha descubierto y pedirle la verdad", "Para pedirle dinero"], "answer": 1 },
+        { "q": "Según Rocco, ¿cómo era el padre de Valentina?", "options": ["Muy simpático", "Muy serio", "Muy nervioso"], "answer": 0 },
+        { "q": "¿Qué va a hacer Valentina mañana?", "options": ["Tomar un avión a Miami", "Hablar con Rocco otra vez", "Ir al banco con Marco"], "answer": 2 },
+        { "q": "¿Qué quiere decir Valentina con «Ya no soy una niña»?", "options": ["Que quiere vivir sola", "Que su madre puede contarle toda la verdad", "Que está enfadada por su edad"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué haces cuando dos personas te cuentan versiones diferentes de una historia?", "model": "Intento buscar pruebas o hablar con una tercera persona que no tenga interés." },
+        { "q": "¿Crees que los padres deben contar todos los secretos familiares a sus hijos adultos?", "model": "Creo que sí, porque los hijos adultos tienen derecho a conocer su historia." },
+        { "q": "¿Qué planes tienes para mañana o para este fin de semana?", "model": "El sábado voy a visitar a mi hermana y el domingo voy a descansar." }
+      ],
+      "gaps": "No sé a quién [creer]. Pero tengo un [plan]: mañana voy a ir al [banco] con Marco, el hijo de Don Aurelio, para ver los [papeles] de hace diez años.",
+      "glossary": [
+        { "word": "No te preocupes", "meaning": "tranquila, no tengas miedo" },
+        { "word": "papeles", "meaning": "documentos" },
+        { "word": "dímelo", "meaning": "cuéntamelo" }
+      ]
+    }
+  ]
+}

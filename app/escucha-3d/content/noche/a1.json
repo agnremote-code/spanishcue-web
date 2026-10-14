@@ -1,0 +1,928 @@
+{
+  "game": "noche",
+  "level": "A1",
+  "items": [
+    {
+      "id": "cafe",
+      "title": "Una torta de limón para Vale",
+      "place": "Café Martina",
+      "context": "Nico entra al café antes de la previa. Quiere comprar algo para el cumpleaños de Vale.",
+      "speakers": [
+        {
+          "name": "Rosa",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        },
+        {
+          "name": "Nico",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, buenas noches. ¿Qué quieres?"
+        },
+        {
+          "s": 1,
+          "text": "Hola. Un café con leche, por favor. Y una torta de chocolate."
+        },
+        {
+          "s": 0,
+          "text": "Uy, perdón, hoy no hay chocolate. Hay torta de limón."
+        },
+        {
+          "s": 1,
+          "text": "Mmm... Es para mi amiga Vale. Hoy cumple treinta años."
+        },
+        {
+          "s": 0,
+          "text": "¡Qué bien! La torta de limón es muy rica. Y es grande."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, sí, una de limón. ¿Tienes velas también?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, aquí tienes: un tres y un cero. Son gratis."
+        },
+        {
+          "s": 1,
+          "text": "¡Genial! Muchas gracias."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué compra Nico?",
+          "options": [
+            "Un café y una torta de limón",
+            "Un té y una torta de chocolate",
+            "Solo un café con leche"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Nico no compra torta de chocolate?",
+          "options": [
+            "Porque no le gusta",
+            "Porque es muy cara",
+            "Porque hoy no hay"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántos años cumple Vale?",
+          "options": [
+            "Trece",
+            "Treinta",
+            "Tres"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto cuestan las velas?",
+          "options": [
+            "Tres",
+            "Treinta",
+            "Nada, son gratis"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué torta te gusta para un cumpleaños?",
+          "model": "Me gusta la torta de chocolate. Es mi favorita."
+        },
+        {
+          "q": "¿Qué pides normalmente en un café?",
+          "model": "Normalmente pido un café con leche y una galleta."
+        },
+        {
+          "q": "¿Qué regalo compras para una amiga?",
+          "model": "Compro flores o un libro."
+        }
+      ],
+      "gaps": "Un [café con leche], por [favor]. Y una [torta] de [chocolate].",
+      "glossary": [
+        {
+          "word": "torta",
+          "meaning": "dulce grande para una fiesta o un cumpleaños"
+        },
+        {
+          "word": "velas",
+          "meaning": "cosas pequeñas que se encienden encima de la torta"
+        },
+        {
+          "word": "gratis",
+          "meaning": "que no cuesta dinero"
+        }
+      ]
+    },
+    {
+      "id": "departamento",
+      "title": "El audio de Vale con la dirección",
+      "place": "Departamento de Vale",
+      "context": "Vale manda un mensaje de voz al grupo de amigos. Explica cómo llegar a la previa en su casa.",
+      "speakers": [
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, chicos, soy Vale. La previa es en mi casa, a las nueve."
+        },
+        {
+          "s": 0,
+          "text": "Mi dirección es calle Olmo, número catorce. Es el tercer piso, departamento B."
+        },
+        {
+          "s": 0,
+          "text": "Ojo: el timbre no funciona. Cuando llegan, me llaman por teléfono, ¿sí?"
+        },
+        {
+          "s": 0,
+          "text": "Por favor, traigan hielo. Hay bebidas, pero no hay hielo."
+        },
+        {
+          "s": 0,
+          "text": "Ah, y una cosa más: mi vecino es muy serio. Después de las doce, silencio total. ¡Los quiero! Nos vemos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué es el mensaje de Vale?",
+          "options": [
+            "Para cancelar la previa",
+            "Para explicar dónde y cuándo es la previa",
+            "Para pedir dinero a sus amigos"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿En qué piso vive Vale?",
+          "options": [
+            "En el tercer piso",
+            "En el primer piso",
+            "En el piso catorce"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacen los amigos cuando llegan?",
+          "options": [
+            "Tocan el timbre",
+            "Gritan desde la calle",
+            "Llaman a Vale por teléfono"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tienen que llevar los amigos?",
+          "options": [
+            "Hielo",
+            "Bebidas",
+            "Música"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Dónde vives tú? ¿En una casa o en un departamento?",
+          "model": "Vivo en un departamento pequeño, en el segundo piso."
+        },
+        {
+          "q": "¿Qué llevas tú a una fiesta en casa de un amigo?",
+          "model": "Llevo algo para beber y unas papas fritas."
+        },
+        {
+          "q": "¿Cómo son tus vecinos?",
+          "model": "Mis vecinos son simpáticos, pero un poco ruidosos."
+        }
+      ],
+      "gaps": "Mi dirección es calle [Olmo], número [catorce]. Es el [tercer piso], departamento [B].",
+      "glossary": [
+        {
+          "word": "previa",
+          "meaning": "reunión con amigos antes de ir a una fiesta"
+        },
+        {
+          "word": "timbre",
+          "meaning": "botón de la puerta que hace un ruido para avisar"
+        },
+        {
+          "word": "hielo",
+          "meaning": "agua muy fría y dura, para las bebidas"
+        },
+        {
+          "word": "vecino",
+          "meaning": "persona que vive cerca de tu casa"
+        }
+      ]
+    },
+    {
+      "id": "restaurante",
+      "title": "Lu no come carne",
+      "place": "Restaurante El Toldo",
+      "context": "Lu cena con unos amigos antes de la fiesta. El camarero llega a la mesa.",
+      "speakers": [
+        {
+          "name": "Andrés",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        },
+        {
+          "name": "Lu",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. ¿Ya sabes qué quieres comer?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, pero yo no como carne. ¿Qué hay sin carne?"
+        },
+        {
+          "s": 0,
+          "text": "A ver... Hay pasta con verduras, hay ensalada y hay sopa de calabaza."
+        },
+        {
+          "s": 1,
+          "text": "¿La pasta tiene queso?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, un poco de queso."
+        },
+        {
+          "s": 1,
+          "text": "Perfecto, la pasta. Y para beber, agua sin gas."
+        },
+        {
+          "s": 0,
+          "text": "Muy bien. ¿Y de postre? Hoy tenemos un flan muy bueno."
+        },
+        {
+          "s": 1,
+          "text": "No, gracias. El postre es en la fiesta. ¡Hay torta!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pasa en la conversación?",
+          "options": [
+            "Lu pide la comida",
+            "Lu paga la cuenta",
+            "Lu busca una mesa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué no come Lu?",
+          "options": [
+            "Queso",
+            "Carne",
+            "Verduras"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué bebe Lu?",
+          "options": [
+            "Agua con gas",
+            "Un refresco",
+            "Agua sin gas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Lu no pide postre?",
+          "options": [
+            "Porque no le gusta el flan",
+            "Porque está muy llena",
+            "Porque en la fiesta hay torta"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Comes carne? ¿Cuál es tu comida favorita?",
+          "model": "Sí, como carne, pero mi comida favorita es la pasta."
+        },
+        {
+          "q": "¿Qué bebes normalmente con la cena?",
+          "model": "Normalmente bebo agua. Los sábados, un poco de vino."
+        },
+        {
+          "q": "¿Pides postre en un restaurante?",
+          "model": "Sí, siempre. Me encanta el flan."
+        }
+      ],
+      "gaps": "A ver... Hay [pasta] con [verduras], hay [ensalada] y hay sopa de [calabaza].",
+      "glossary": [
+        {
+          "word": "sin carne",
+          "meaning": "sin pollo, sin res, sin cerdo"
+        },
+        {
+          "word": "calabaza",
+          "meaning": "verdura grande y naranja"
+        },
+        {
+          "word": "postre",
+          "meaning": "algo dulce al final de la comida"
+        },
+        {
+          "word": "flan",
+          "meaning": "postre suave de huevo, leche y azúcar"
+        }
+      ]
+    },
+    {
+      "id": "plaza",
+      "title": "¿Dónde está La Persiana?",
+      "place": "Plaza de la Fuente",
+      "context": "Una chica no conoce el barrio. Le pregunta a un señor que está sentado junto a la fuente.",
+      "speakers": [
+        {
+          "name": "Jenny",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Don Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdón, señor. ¿Dónde está el bar La Persiana?"
+        },
+        {
+          "s": 1,
+          "text": "¿La Persiana? Está muy cerca, a cinco minutos."
+        },
+        {
+          "s": 1,
+          "text": "Mira, pasas la fuente y giras a la derecha. Es la calle Sol."
+        },
+        {
+          "s": 1,
+          "text": "El bar está al lado de una farmacia. Tiene una puerta verde."
+        },
+        {
+          "s": 0,
+          "text": "¿Una puerta verde? Perfecto. ¿Y está abierto ahora?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, abre a las diez y cierra muy tarde. Pero hay mucha gente los sábados."
+        },
+        {
+          "s": 0,
+          "text": "No pasa nada. ¡Muchas gracias!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca la chica?",
+          "options": [
+            "Una farmacia",
+            "Un bar",
+            "La parada del autobús"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está el bar?",
+          "options": [
+            "En la calle Sol",
+            "En la plaza",
+            "Detrás de la fuente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hay al lado del bar?",
+          "options": [
+            "Un restaurante",
+            "Una farmacia",
+            "Un museo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora abre el bar?",
+          "options": [
+            "A las doce",
+            "A las cinco",
+            "A las diez"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay una plaza bonita en tu barrio? ¿Cómo es?",
+          "model": "Sí, hay una plaza con árboles y una fuente pequeña."
+        },
+        {
+          "q": "¿Qué hay cerca de tu casa?",
+          "model": "Cerca de mi casa hay un supermercado y un café."
+        },
+        {
+          "q": "¿Preguntas a la gente en la calle o usas el celular?",
+          "model": "Uso el celular, pero a veces pregunto."
+        }
+      ],
+      "gaps": "Mira, pasas la [fuente] y [giras] a la [derecha]. Es la calle [Sol].",
+      "glossary": [
+        {
+          "word": "fuente",
+          "meaning": "construcción en una plaza con agua que sale y cae"
+        },
+        {
+          "word": "giras",
+          "meaning": "cambias de dirección"
+        },
+        {
+          "word": "al lado de",
+          "meaning": "muy cerca, junto a"
+        },
+        {
+          "word": "abierto",
+          "meaning": "que funciona y la gente puede entrar"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "title": "Noche de karaoke en La Persiana",
+      "place": "Bar La Persiana",
+      "context": "El camarero del bar toma el micrófono y habla a todos los clientes.",
+      "speakers": [
+        {
+          "name": "Víctor",
+          "country": "Puerto Rico",
+          "voice": "es-PR-VictorNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Hola, hola! ¡Buenas noches, La Persiana!"
+        },
+        {
+          "s": 0,
+          "text": "Hoy es sábado y hay karaoke. Empieza a las once."
+        },
+        {
+          "s": 0,
+          "text": "Para cantar, escribes tu nombre en un papel y lo das en la barra."
+        },
+        {
+          "s": 0,
+          "text": "Hasta las doce, las bebidas son dos por uno."
+        },
+        {
+          "s": 0,
+          "text": "Y una cosa más: hoy una chica, Vale, cumple treinta años. ¡Un aplauso para Vale! Vale, la primera canción es para ti."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué anuncia el camarero?",
+          "options": [
+            "Que el bar cierra temprano",
+            "Que hay karaoke",
+            "Que hay un concierto de rock"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿A qué hora empieza el karaoke?",
+          "options": [
+            "A las once",
+            "A las doce",
+            "A las diez"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué haces si quieres cantar?",
+          "options": [
+            "Hablas con el camarero en la puerta",
+            "Pagas una bebida",
+            "Escribes tu nombre en un papel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién canta la primera canción?",
+          "options": [
+            "El camarero",
+            "Una chica del público",
+            "Vale"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta cantar? ¿Dónde cantas?",
+          "model": "Sí, me gusta. Canto en la ducha y en el coche."
+        },
+        {
+          "q": "¿Qué canción cantas en un karaoke?",
+          "model": "Canto una canción de Shakira."
+        },
+        {
+          "q": "¿Qué haces los sábados por la noche?",
+          "model": "Los sábados salgo con mis amigos a un bar."
+        }
+      ],
+      "gaps": "Para cantar, escribes tu [nombre] en un [papel] y lo das en la [barra]. Hasta las doce, las bebidas son [dos por uno].",
+      "glossary": [
+        {
+          "word": "karaoke",
+          "meaning": "juego de cantar canciones con un micrófono"
+        },
+        {
+          "word": "barra",
+          "meaning": "mesa larga del bar donde piden las bebidas"
+        },
+        {
+          "word": "dos por uno",
+          "meaning": "pagas una bebida y recibes dos"
+        },
+        {
+          "word": "aplauso",
+          "meaning": "ruido con las manos para decir «¡bravo!»"
+        }
+      ]
+    },
+    {
+      "id": "museo",
+      "title": "La sala de los teléfonos viejos",
+      "place": "Museo del Pasado",
+      "context": "Hoy el museo está abierto de noche. Una guía recibe a un grupo de visitantes.",
+      "speakers": [
+        {
+          "name": "Teresa",
+          "country": "Guinea Ecuatorial",
+          "voice": "es-GQ-TeresaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bienvenidos al Museo del Pasado. Hoy el museo abre de noche, hasta las doce, y la entrada es gratis."
+        },
+        {
+          "s": 0,
+          "text": "Estamos en la sala uno. Aquí hay teléfonos viejos."
+        },
+        {
+          "s": 0,
+          "text": "Miren este teléfono. Es negro y muy pesado. Es de mil novecientos cincuenta."
+        },
+        {
+          "s": 0,
+          "text": "Para llamar, giras este círculo con el dedo. Pueden tocarlo, pero con cuidado."
+        },
+        {
+          "s": 0,
+          "text": "Después vamos a la sala dos. Allí hay fotos del barrio."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hay en la sala uno?",
+          "options": [
+            "Fotos del barrio",
+            "Teléfonos viejos",
+            "Ropa antigua"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto cuesta la entrada hoy?",
+          "options": [
+            "Nada",
+            "Doce",
+            "Cincuenta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo es el teléfono negro?",
+          "options": [
+            "Pequeño y nuevo",
+            "Blanco y ligero",
+            "Viejo y muy pesado"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pueden hacer los visitantes con el teléfono?",
+          "options": [
+            "Llevarlo a casa",
+            "Tocarlo con cuidado",
+            "Hacer una llamada a otro país"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gustan los museos? ¿Cuál es tu favorito?",
+          "model": "Sí, me gustan. Mi favorito es un museo de arte de mi ciudad."
+        },
+        {
+          "q": "¿Tienes en casa una cosa muy vieja?",
+          "model": "Sí, tengo una radio vieja de mi abuelo."
+        },
+        {
+          "q": "¿Cuántas horas al día usas el teléfono?",
+          "model": "Uso el teléfono cuatro o cinco horas al día."
+        }
+      ],
+      "gaps": "Para llamar, [giras] este [círculo] con el [dedo]. Pueden [tocarlo], pero con cuidado.",
+      "glossary": [
+        {
+          "word": "entrada",
+          "meaning": "el billete para entrar al museo"
+        },
+        {
+          "word": "sala",
+          "meaning": "habitación grande de un museo"
+        },
+        {
+          "word": "pesado",
+          "meaning": "que pesa mucho, difícil de levantar"
+        },
+        {
+          "word": "con cuidado",
+          "meaning": "despacio, sin romper nada"
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "Sergio paga en efectivo",
+      "place": "Taxi en la avenida",
+      "context": "Sergio sube a un taxi en la avenida. Va a la fiesta de Vale en la terraza.",
+      "speakers": [
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        },
+        {
+          "name": "Sergio",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas noches. ¿Adónde vamos?"
+        },
+        {
+          "s": 1,
+          "text": "A la calle Mar, número veinte, por favor. Es una terraza."
+        },
+        {
+          "s": 0,
+          "text": "Calle Mar... Está un poco lejos. Son unos veinte minutos."
+        },
+        {
+          "s": 1,
+          "text": "Uf, voy tarde. ¿Puedo pagar con tarjeta?"
+        },
+        {
+          "s": 0,
+          "text": "No, lo siento, solo en efectivo. Pero hay un cajero aquí, en la avenida."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, ¿paramos en el cajero, por favor?"
+        },
+        {
+          "s": 0,
+          "text": "Claro, sin problema."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Adónde va Sergio?",
+          "options": [
+            "A un cajero en la calle Sol",
+            "A una terraza en la calle Mar",
+            "A su casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuánto tiempo dura el viaje?",
+          "options": [
+            "Unos veinte minutos",
+            "Unos cinco minutos",
+            "Una hora"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo puede pagar Sergio?",
+          "options": [
+            "Con tarjeta",
+            "Con el celular",
+            "Solo en efectivo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hacen antes de ir a la fiesta?",
+          "options": [
+            "Compran un regalo",
+            "Paran en un cajero",
+            "Buscan a un amigo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Usas taxi? ¿Cuándo?",
+          "model": "Uso taxi por la noche, cuando vuelvo tarde a casa."
+        },
+        {
+          "q": "¿Pagas con tarjeta o en efectivo?",
+          "model": "Normalmente pago con tarjeta. Casi nunca tengo efectivo."
+        },
+        {
+          "q": "¿Llegas tarde a las fiestas?",
+          "model": "Sí, siempre llego un poco tarde."
+        }
+      ],
+      "gaps": "No, lo [siento], solo en [efectivo]. Pero hay un [cajero] aquí, en la [avenida].",
+      "glossary": [
+        {
+          "word": "tarjeta",
+          "meaning": "tarjeta del banco para pagar"
+        },
+        {
+          "word": "efectivo",
+          "meaning": "dinero en billetes y monedas"
+        },
+        {
+          "word": "cajero",
+          "meaning": "máquina en la calle para sacar dinero"
+        },
+        {
+          "word": "voy tarde",
+          "meaning": "no llego a la hora"
+        }
+      ]
+    },
+    {
+      "id": "terraza",
+      "title": "Las velas y el viento",
+      "place": "La terraza de las luces",
+      "context": "Es medianoche en la terraza. Leo trae la torta, pero hay un pequeño problema.",
+      "speakers": [
+        {
+          "name": "Leo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Vale",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Lu",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¡Vale, ven aquí! Es la hora de la torta."
+        },
+        {
+          "s": 1,
+          "text": "¿Ahora? Pero Nico no está."
+        },
+        {
+          "s": 0,
+          "text": "Nico llega tarde, como siempre."
+        },
+        {
+          "s": 1,
+          "text": "Bueno... ¿Y las velas?"
+        },
+        {
+          "s": 0,
+          "text": "Aquí están, un tres y un cero. Ay, no, hay mucho viento. No se encienden."
+        },
+        {
+          "s": 2,
+          "text": "Tengo una idea. Todos alrededor de la torta, así, muy juntos. ¡Ya está! ¡Feliz cumpleaños, Vale!"
+        },
+        {
+          "s": 1,
+          "text": "¡Gracias, chicos! Mi deseo es secreto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué momento de la fiesta es?",
+          "options": [
+            "La hora de la torta",
+            "La hora de bailar",
+            "El final de la fiesta"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién no está en la terraza?",
+          "options": [
+            "Leo",
+            "Lu",
+            "Nico"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuál es el problema con las velas?",
+          "options": [
+            "No hay velas",
+            "Hay mucho viento",
+            "Son de otro número"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacen todos para encender las velas?",
+          "options": [
+            "Entran a la cocina",
+            "Esperan a Nico",
+            "Se ponen alrededor de la torta"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo celebras tu cumpleaños?",
+          "model": "Hago una cena en casa con mi familia."
+        },
+        {
+          "q": "¿Tienes un amigo que siempre llega tarde?",
+          "model": "Sí, mi amigo Pablo siempre llega tarde. Es normal."
+        },
+        {
+          "q": "¿Te gustan las fiestas en una terraza?",
+          "model": "Sí, me gustan mucho, pero en verano."
+        }
+      ],
+      "gaps": "Aquí están, un [tres] y un [cero]. Ay, no, hay mucho [viento]. No se [encienden].",
+      "glossary": [
+        {
+          "word": "viento",
+          "meaning": "aire que se mueve con fuerza"
+        },
+        {
+          "word": "se encienden",
+          "meaning": "empiezan a tener fuego"
+        },
+        {
+          "word": "alrededor",
+          "meaning": "en círculo, por todos los lados"
+        },
+        {
+          "word": "deseo",
+          "meaning": "algo que quieres que pase"
+        }
+      ]
+    }
+  ]
+}

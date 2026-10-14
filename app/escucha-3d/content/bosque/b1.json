@@ -1,0 +1,941 @@
+{
+  "game": "bosque",
+  "level": "B1",
+  "items": [
+    {
+      "id": "sobre-ti",
+      "title": "Radio Hongo entrevista a la voluntaria nueva",
+      "place": "Claro de la entrada",
+      "context": "La radio del bosque emite en directo desde el claro de la entrada. El locutor entrevista a una voluntaria que acaba de llegar.",
+      "speakers": [
+        {
+          "name": "Yunior",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        },
+        {
+          "name": "Marta",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días, oyentes de Radio Hongo. Hoy tenemos con nosotros a Marta, la nueva voluntaria. Marta, cuéntanos un poco de ti."
+        },
+        {
+          "s": 1,
+          "text": "Hola a todos. Pues soy de Quetzaltenango, en Guatemala, y soy bióloga, aunque los últimos tres años trabajé en una farmacia."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cómo terminaste aquí, entre hongos gigantes?"
+        },
+        {
+          "s": 1,
+          "text": "Bueno, la verdad es que siempre me interesaron los hongos, desde niña. Mi abuela me llevaba al mercado y me explicaba cuáles se podían comer. Cuando vi el anuncio del programa de voluntarios, pensé que era ahora o nunca."
+        },
+        {
+          "s": 0,
+          "text": "¿Y qué es lo que más te ha sorprendido hasta ahora?"
+        },
+        {
+          "s": 1,
+          "text": "El silencio. Por la noche no se oye nada, solo el agua. Al principio me daba un poco de miedo, pero ahora duermo mejor que nunca."
+        },
+        {
+          "s": 0,
+          "text": "¡Bienvenida, Marta!"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es el objetivo de la entrevista?",
+          "options": [
+            "Presentar a una voluntaria nueva",
+            "Explicar las normas del bosque",
+            "Hablar de una farmacia de Guatemala"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía Marta antes de venir al bosque?",
+          "options": [
+            "Daba clases de biología",
+            "Trabajaba en una farmacia",
+            "Vendía hongos en el mercado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿De dónde viene su interés por los hongos?",
+          "options": [
+            "De un curso en la universidad",
+            "De un programa de radio",
+            "De las visitas al mercado con su abuela"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué podemos deducir sobre el silencio del bosque?",
+          "options": [
+            "Que ahora le resulta agradable",
+            "Que todavía no la deja dormir",
+            "Que es el motivo por el que quiere irse"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez hiciste algo pensando «es ahora o nunca»? Cuéntalo.",
+          "model": "Sí, hace dos años dejé un trabajo estable para estudiar diseño. Pensé que si no lo hacía entonces, no lo iba a hacer nunca."
+        },
+        {
+          "q": "¿Qué interés tienes desde la infancia? ¿Quién te lo transmitió?",
+          "model": "Me interesa la cocina desde pequeño porque mi padre cocinaba los domingos y yo lo ayudaba."
+        },
+        {
+          "q": "¿Te gustaría trabajar como voluntario en un parque natural? ¿Por qué?",
+          "model": "Creo que sí, pero solo unos meses, porque echaría de menos la ciudad."
+        }
+      ],
+      "gaps": "El [silencio]. Por la noche no se oye nada, solo el [agua]. Al principio me daba un poco de [miedo], pero ahora duermo [mejor que nunca].",
+      "glossary": [
+        {
+          "word": "oyentes",
+          "meaning": "personas que escuchan la radio"
+        },
+        {
+          "word": "voluntaria",
+          "meaning": "persona que trabaja sin cobrar porque quiere ayudar"
+        },
+        {
+          "word": "ahora o nunca",
+          "meaning": "es el momento justo; después ya no será posible"
+        },
+        {
+          "word": "anuncio",
+          "meaning": "texto público que informa de algo, por ejemplo de una oferta"
+        }
+      ]
+    },
+    {
+      "id": "vida-real",
+      "title": "¿De quién es esta cesta?",
+      "place": "La cesta olvidada",
+      "context": "Dos campistas encuentran una cesta llena de setas al lado del camino. Discuten qué hacer hasta que aparece alguien.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Álex",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Álex, mira, una cesta llena de setas y no hay nadie. ¿La llevamos a la cabaña de los guardas?"
+        },
+        {
+          "s": 1,
+          "text": "Yo no la tocaría. El guarda nos dijo ayer que la gente deja sus cosas en el camino mientras busca más setas."
+        },
+        {
+          "s": 0,
+          "text": "Ya, pero si se hace de noche, el dueño no la va a encontrar."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, podemos esperar diez minutos y, si no viene nadie, la llevamos."
+        },
+        {
+          "s": 2,
+          "text": "¡Eh, hola! Perdonad, esa cesta es mía. Estaba ahí abajo, sacando unas fotos."
+        },
+        {
+          "s": 0,
+          "text": "¡Ah, menos mal! Estábamos pensando en llevarla a la cabaña."
+        },
+        {
+          "s": 2,
+          "text": "Os lo agradezco mucho. Soy micóloga y estas setas son para un estudio. Si las pierdo, pierdo un mes de trabajo."
+        },
+        {
+          "s": 1,
+          "text": "¿Ves? Te dije que no había que tocarla."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Cuál es la situación?",
+          "options": [
+            "Dos campistas dudan qué hacer con una cesta",
+            "Una micóloga busca a dos campistas perdidos",
+            "Un guarda prohíbe recoger setas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según Álex, ¿qué les dijo el guarda?",
+          "options": [
+            "Que hay que llevar las cosas perdidas a la cabaña",
+            "Que la gente deja sus cosas mientras busca setas",
+            "Que está prohibido dejar cestas en el camino"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué son tan importantes las setas para la dueña?",
+          "options": [
+            "Porque las va a vender",
+            "Porque son para la cena",
+            "Porque son para un estudio"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo se siente Álex al final?",
+          "options": [
+            "Satisfecho, porque tenía razón",
+            "Avergonzado por no ayudar",
+            "Enfadado con la micóloga"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué habrías hecho tú con la cesta? ¿Por qué?",
+          "model": "Yo habría esperado un rato, como Álex, porque creo que el dueño normalmente vuelve."
+        },
+        {
+          "q": "¿Alguna vez alguien te devolvió algo que perdiste? ¿Qué pasó?",
+          "model": "Sí, una vez me dejé el móvil en un taxi y el taxista me llamó para devolvérmelo."
+        },
+        {
+          "q": "¿Crees que en tu ciudad la gente devuelve las cosas que encuentra?",
+          "model": "Creo que depende. Si es una cartera, muchas personas la llevan a la policía."
+        }
+      ],
+      "gaps": "Yo no la [tocaría]. El guarda nos dijo [ayer] que la gente deja sus [cosas] en el camino mientras busca [más setas].",
+      "glossary": [
+        {
+          "word": "menos mal",
+          "meaning": "expresión de alivio cuando algo malo no pasa"
+        },
+        {
+          "word": "micóloga",
+          "meaning": "científica que estudia los hongos"
+        },
+        {
+          "word": "se hace de noche",
+          "meaning": "empieza la noche"
+        },
+        {
+          "word": "Os lo agradezco",
+          "meaning": "os doy las gracias por eso"
+        }
+      ]
+    },
+    {
+      "id": "elige",
+      "title": "Con guía o por libre",
+      "place": "Setas doradas",
+      "context": "Junto a las setas doradas, Mateo graba un mensaje de voz para su amiga Agustina. Tiene que elegir cómo seguir la subida.",
+      "speakers": [
+        {
+          "name": "Mateo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Agus, hola, necesito tu consejo, rápido. Estoy en las setas doradas, más o menos a nueve metros, y tengo que decidir algo antes de las doce."
+        },
+        {
+          "s": 0,
+          "text": "Hay dos opciones. La primera es seguir con el grupo de la guía. Cuesta quince dólares, vamos lentos, pero ella explica todo y conoce los atajos seguros."
+        },
+        {
+          "s": 0,
+          "text": "La segunda es subir solo, por libre. Es gratis y voy a mi ritmo, pero el guarda me dijo que más arriba hay niebla y que es fácil perderse."
+        },
+        {
+          "s": 0,
+          "text": "Yo, sinceramente, prefiero ir solo, ya sabes que los grupos me ponen nervioso. Pero mi madre me pidió que no hiciera locuras."
+        },
+        {
+          "s": 0,
+          "text": "¿Tú qué harías? Mándame un audio, porfa. Un abrazo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué le escribe Mateo a Agustina?",
+          "options": [
+            "Para pedirle consejo sobre una decisión",
+            "Para invitarla a subir con él",
+            "Para contarle que se perdió"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué ventaja tiene subir con la guía?",
+          "options": [
+            "Es gratis",
+            "Conoce los atajos seguros",
+            "Se sube más rápido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le advirtió el guarda a Mateo?",
+          "options": [
+            "Que el grupo ya estaba completo",
+            "Que no se podía subir solo",
+            "Que más arriba hay niebla"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué podemos deducir de Mateo?",
+          "options": [
+            "Que le gusta mucho estar en grupo",
+            "Que duda entre lo que quiere y lo que le pidió su madre",
+            "Que no tiene dinero para la guía"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué le aconsejarías tú a Mateo? ¿Por qué?",
+          "model": "Le diría que vaya con la guía, porque con niebla es mejor no arriesgarse."
+        },
+        {
+          "q": "Cuando viajas, ¿prefieres las visitas guiadas o ir por libre?",
+          "model": "Prefiero ir por libre, aunque en los museos me gusta tener una audioguía."
+        },
+        {
+          "q": "¿A quién le pides consejo cuando tienes que tomar una decisión?",
+          "model": "Normalmente se lo pido a mi hermana, porque es muy sincera conmigo."
+        }
+      ],
+      "gaps": "La segunda es subir solo, por [libre]. Es [gratis] y voy a mi [ritmo], pero el guarda me dijo que más arriba hay [niebla] y que es fácil perderse.",
+      "glossary": [
+        {
+          "word": "consejo",
+          "meaning": "opinión que das a alguien para ayudarle a decidir"
+        },
+        {
+          "word": "atajos",
+          "meaning": "caminos más cortos"
+        },
+        {
+          "word": "por libre",
+          "meaning": "sin grupo ni guía, de forma independiente"
+        },
+        {
+          "word": "hiciera locuras",
+          "meaning": "hacer cosas peligrosas o poco prudentes"
+        }
+      ]
+    },
+    {
+      "id": "opinion",
+      "title": "Debate en la radio: ¿prohibir la recogida?",
+      "place": "Las setas gemelas",
+      "context": "Desde las setas gemelas, Radio Hongo emite un pequeño debate: ¿hay que prohibir recoger setas en el bosque?",
+      "speakers": [
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        },
+        {
+          "name": "Margarita",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mire, yo soy guardabosques y lo tengo claro: hay que prohibir la recogida de setas, por lo menos en esta zona. Aquí crecen las gemelas, y una de ellas es tóxica. El mes pasado atendimos a tres personas intoxicadas."
+        },
+        {
+          "s": 1,
+          "text": "Entiendo su preocupación, pero no estoy de acuerdo. Mi familia recoge setas aquí desde hace cuatro generaciones. Para nosotros es una tradición, y también un ingreso."
+        },
+        {
+          "s": 0,
+          "text": "Ya, pero la gente de fuera no sabe distinguirlas."
+        },
+        {
+          "s": 1,
+          "text": "Precisamente por eso. En lugar de prohibir, yo propondría talleres obligatorios. Si alguien quiere recoger, primero aprende con un experto."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, no me parece mala idea, pero ¿quién va a pagar esos talleres?"
+        },
+        {
+          "s": 1,
+          "text": "Eso lo podemos hablar."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Sobre qué debaten?",
+          "options": [
+            "Sobre prohibir recoger setas",
+            "Sobre el precio de las setas",
+            "Sobre cómo cocinar las gemelas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué argumento usa el guardabosques?",
+          "options": [
+            "Que hay pocas setas",
+            "Que hubo personas intoxicadas",
+            "Que la recogida molesta a los animales"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué propone Margarita?",
+          "options": [
+            "Cerrar solo la zona de las gemelas",
+            "Prohibir la entrada a la gente de fuera",
+            "Hacer talleres obligatorios"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo reacciona Gonzalo a la propuesta?",
+          "options": [
+            "La rechaza totalmente",
+            "Le parece aceptable pero duda del dinero",
+            "La acepta sin preguntas"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Con quién estás más de acuerdo, con Gonzalo o con Margarita? ¿Por qué?",
+          "model": "Estoy más de acuerdo con Margarita, porque prohibir no enseña nada a la gente."
+        },
+        {
+          "q": "¿Hay alguna tradición en tu país que algunas personas quieren prohibir?",
+          "model": "Sí, en mi país hay debate sobre los fuegos artificiales, porque asustan a los animales."
+        },
+        {
+          "q": "¿Crees que los talleres obligatorios son una buena solución en general?",
+          "model": "Creo que sí, pero solo si son baratos y fáciles de hacer."
+        }
+      ],
+      "gaps": "Precisamente por eso. En lugar de [prohibir], yo [propondría] talleres [obligatorios]. Si alguien quiere recoger, primero aprende con un [experto].",
+      "glossary": [
+        {
+          "word": "tóxica",
+          "meaning": "que tiene veneno y puede hacer daño"
+        },
+        {
+          "word": "intoxicadas",
+          "meaning": "enfermas por comer o tomar algo tóxico"
+        },
+        {
+          "word": "ingreso",
+          "meaning": "dinero que se gana"
+        },
+        {
+          "word": "talleres",
+          "meaning": "clases prácticas donde se aprende haciendo"
+        }
+      ]
+    },
+    {
+      "id": "recuerdos",
+      "title": "La noche de la tormenta",
+      "place": "El sombrero gigante",
+      "context": "Sobre el sombrero gigante, el guía más veterano del parque cuenta a su grupo un recuerdo de hace muchos años.",
+      "speakers": [
+        {
+          "name": "Don Rodrigo",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Ven este sombrero? Pues aquí pasé la noche más larga de mi vida. Fue hace unos treinta años, yo tenía más o menos su edad."
+        },
+        {
+          "s": 0,
+          "text": "Era octubre y estaba bajando con dos niños de un campamento que se habían separado de su grupo. De repente empezó una tormenta tremenda, con rayos y todo."
+        },
+        {
+          "s": 0,
+          "text": "No podíamos seguir bajando, así que nos metimos aquí debajo. Los niños lloraban, y yo, para calmarlos, les contaba historias de hongos que hablaban."
+        },
+        {
+          "s": 0,
+          "text": "Al amanecer nos encontraron los otros guardas. Los niños estaban perfectamente."
+        },
+        {
+          "s": 0,
+          "text": "Y lo más curioso: uno de esos niños ahora es el director del parque. Todavía me dice que le debo el final de una historia."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cuenta el guía?",
+          "options": [
+            "Una noche difícil en el bosque",
+            "Cómo se construyó el parque",
+            "Por qué le gustan las tormentas"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué estaba el guía con los dos niños?",
+          "options": [
+            "Eran sus hijos",
+            "Se habían separado de su grupo",
+            "Eran alumnos de su clase"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacía el guía para calmar a los niños?",
+          "options": [
+            "Cantaba canciones",
+            "Les daba chocolate",
+            "Les contaba historias"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué podemos deducir del final?",
+          "options": [
+            "Que el guía nunca terminó una de sus historias",
+            "Que el director no recuerda aquella noche",
+            "Que el guía y el director no se hablan"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Recuerdas una noche especial o difícil de tu vida? ¿Qué pasó?",
+          "model": "Recuerdo una noche en la que se fue la luz en todo el barrio. Al final cenamos con velas en la calle con los vecinos."
+        },
+        {
+          "q": "¿Qué hacías de niño cuando tenías miedo?",
+          "model": "Cuando tenía miedo, iba a la habitación de mis padres o encendía la luz."
+        },
+        {
+          "q": "¿Alguna vez una persona te ayudó en un momento difícil?",
+          "model": "Sí, una profesora me ayudó mucho cuando mis padres se separaron."
+        }
+      ],
+      "gaps": "Era [octubre] y estaba bajando con [dos niños] de un campamento que se habían separado de su grupo. De repente empezó una [tormenta] tremenda, con [rayos] y todo.",
+      "glossary": [
+        {
+          "word": "de repente",
+          "meaning": "de forma rápida y sin esperarlo"
+        },
+        {
+          "word": "tremenda",
+          "meaning": "muy fuerte, muy grande"
+        },
+        {
+          "word": "calmarlos",
+          "meaning": "hacer que estén tranquilos"
+        },
+        {
+          "word": "le debo",
+          "meaning": "tengo que darle algo que es suyo"
+        }
+      ]
+    },
+    {
+      "id": "futuro",
+      "title": "Llamada desde la copa del roble",
+      "place": "La copa del roble",
+      "context": "En la copa del gran roble, una guía joven llama a su padre para contarle sus planes para el año que viene.",
+      "speakers": [
+        {
+          "name": "Karla",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Emilio",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Papá? ¿Me oyes? Aquí arriba la cobertura es malísima."
+        },
+        {
+          "s": 1,
+          "text": "Te oigo, mi niña. ¿Qué pasó?"
+        },
+        {
+          "s": 0,
+          "text": "Nada malo, tranquilo. Es que la directora me ha ofrecido quedarme todo el año que viene como guía fija."
+        },
+        {
+          "s": 1,
+          "text": "¿Todo el año? ¿Y la universidad? Tú me dijiste que en septiembre ibas a empezar el máster."
+        },
+        {
+          "s": 0,
+          "text": "Ya lo sé. Pero he pensado hacer el máster a distancia. Por las mañanas trabajaré en el bosque y por las noches estudiaré."
+        },
+        {
+          "s": 1,
+          "text": "Mmm, eso va a ser mucho trabajo. ¿Estás segura?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, papá. Aquí estoy aprendiendo más que en cualquier clase. Y en verano iré a verte, te lo prometo."
+        },
+        {
+          "s": 1,
+          "text": "Bueno... Si es lo que quieres, cuenta conmigo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Karla a su padre?",
+          "options": [
+            "Para contarle un plan para el próximo año",
+            "Para pedirle dinero",
+            "Porque tiene un problema en el bosque"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "Según el padre, ¿qué le había dicho Karla antes?",
+          "options": [
+            "Que iba a dejar de estudiar",
+            "Que quería ser directora",
+            "Que iba a empezar un máster en septiembre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo piensa organizarse Karla?",
+          "options": [
+            "Estudiar por la mañana y trabajar por la noche",
+            "Trabajar por la mañana y estudiar por la noche",
+            "Trabajar solo los fines de semana"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es la actitud del padre al final?",
+          "options": [
+            "Sigue completamente en contra",
+            "Acepta y la apoya",
+            "Le pide que vuelva a casa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué planes tienes para el año que viene?",
+          "model": "El año que viene voy a cambiar de trabajo y me gustaría hacer un curso de fotografía."
+        },
+        {
+          "q": "¿Te parece buena idea trabajar y estudiar a la vez? ¿Por qué?",
+          "model": "Creo que es posible, pero hay que ser muy organizado y dormir bien."
+        },
+        {
+          "q": "¿Cómo reaccionó tu familia ante una decisión importante tuya?",
+          "model": "Cuando les dije que me iba a vivir al extranjero, mi madre se preocupó, pero después me apoyó."
+        }
+      ],
+      "gaps": "Ya lo sé. Pero he pensado hacer el máster a [distancia]. Por las mañanas [trabajaré] en el bosque y por las [noches] [estudiaré].",
+      "glossary": [
+        {
+          "word": "cobertura",
+          "meaning": "señal para usar el teléfono"
+        },
+        {
+          "word": "fija",
+          "meaning": "permanente, no temporal"
+        },
+        {
+          "word": "a distancia",
+          "meaning": "sin ir a clase, desde casa o por internet"
+        },
+        {
+          "word": "cuenta conmigo",
+          "meaning": "puedes confiar en mi ayuda"
+        }
+      ]
+    },
+    {
+      "id": "compara",
+      "title": "La gruta de noche o de día",
+      "place": "La gruta luminosa",
+      "context": "A la salida de la gruta luminosa, dos fotógrafos aficionados comparan sus visitas: uno vino de día y la otra de noche.",
+      "speakers": [
+        {
+          "name": "Catalina",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        },
+        {
+          "name": "Jorge",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "¿Y tú cuándo entraste, Cata? ¿Por la mañana, como yo?"
+        },
+        {
+          "s": 0,
+          "text": "No, anoche, en la visita nocturna. Y te digo una cosa: no tiene nada que ver."
+        },
+        {
+          "s": 1,
+          "text": "¿En serio? A mí de día me pareció preciosa. Se ven los colores de las rocas, el agua, todo."
+        },
+        {
+          "s": 0,
+          "text": "Sí, de día se ve más, pero de noche los hongos brillan muchísimo más. Es como estar dentro de un cielo lleno de estrellas azules."
+        },
+        {
+          "s": 1,
+          "text": "Ya, pero para hacer fotos, ¿no es mejor con luz?"
+        },
+        {
+          "s": 0,
+          "text": "Depende. Las mías de noche salieron un poco movidas, porque no se puede usar trípode. Las tuyas seguramente son más nítidas."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, entonces lo ideal es hacer las dos visitas."
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Pero si solo puedes elegir una, ve de noche."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué comparan Catalina y Jorge?",
+          "options": [
+            "Dos cámaras de fotos",
+            "La visita de día y la de noche",
+            "Dos grutas diferentes"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le gustó a Jorge de la visita de día?",
+          "options": [
+            "Que los hongos brillaban más",
+            "Que había menos gente",
+            "Que se veían los colores de las rocas y el agua"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué las fotos de Catalina salieron movidas?",
+          "options": [
+            "Porque no se puede usar trípode",
+            "Porque había demasiada luz",
+            "Porque su cámara es vieja"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué recomienda Catalina al final?",
+          "options": [
+            "Ir solo de día",
+            "Ir de noche si solo se puede hacer una visita",
+            "No hacer fotos dentro de la gruta"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces un lugar que cambia mucho de día a de noche? ¿Cómo es?",
+          "model": "Sí, el centro de mi ciudad. De día es muy ruidoso, pero de noche es tranquilo y tiene luces bonitas."
+        },
+        {
+          "q": "¿Qué prefieres en un viaje: hacer fotos o solo mirar? ¿Por qué?",
+          "model": "Prefiero mirar, porque si hago muchas fotos, después no recuerdo bien el lugar."
+        },
+        {
+          "q": "Compara dos formas de visitar una ciudad: a pie o en autobús turístico.",
+          "model": "A pie se descubren más detalles, pero en autobús ves más lugares en menos tiempo."
+        }
+      ],
+      "gaps": "Sí, de día se ve más, pero de noche los [hongos] brillan [muchísimo más]. Es como estar dentro de un [cielo] lleno de [estrellas azules].",
+      "glossary": [
+        {
+          "word": "nocturna",
+          "meaning": "que se hace por la noche"
+        },
+        {
+          "word": "no tiene nada que ver",
+          "meaning": "es totalmente diferente"
+        },
+        {
+          "word": "trípode",
+          "meaning": "soporte de tres patas para la cámara"
+        },
+        {
+          "word": "nítidas",
+          "meaning": "claras, bien definidas, no movidas"
+        }
+      ]
+    },
+    {
+      "id": "cambia",
+      "title": "Cambio de ruta en la escalera",
+      "place": "La escalera de niebla",
+      "context": "En la escalera blanca, la niebla no deja ver nada. El guía para al grupo y anuncia un cambio. Una excursionista no está contenta.",
+      "speakers": [
+        {
+          "name": "Pedro",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Paola",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "A ver, grupo, un momento, por favor. Acaban de llamarme de la base: la niebla va a seguir subiendo durante las próximas dos horas. Así que vamos a cambiar de plan."
+        },
+        {
+          "s": 1,
+          "text": "¿Cómo que cambiar? Yo he venido desde Caracas para ver el mirador."
+        },
+        {
+          "s": 0,
+          "text": "Lo entiendo perfectamente. No vamos a cancelar la excursión. Lo que vamos a hacer es esperar en el refugio de la escalera, tomar algo caliente, y subir cuando la niebla baje."
+        },
+        {
+          "s": 1,
+          "text": "¿Y si no baja?"
+        },
+        {
+          "s": 0,
+          "text": "Si a las cuatro sigue igual, os devolvemos el dinero o podéis venir mañana gratis. Prefiero llegar tarde que llegar con alguien herido."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, visto así... Vale, esperamos. Pero que el chocolate sea doble."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué anuncia el guía?",
+          "options": [
+            "Un cambio de plan por la niebla",
+            "El final de la excursión",
+            "Una nueva ruta más rápida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué Paola se queja al principio?",
+          "options": [
+            "Porque tiene frío",
+            "Porque ha venido de lejos para ver el mirador",
+            "Porque el refugio está cerrado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasa si a las cuatro la niebla sigue igual?",
+          "options": [
+            "Suben de todas formas",
+            "Duermen en el refugio",
+            "Les devuelven el dinero o vuelven mañana gratis"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo termina la conversación?",
+          "options": [
+            "Paola acepta esperar, con humor",
+            "Paola decide subir sola",
+            "El guía cancela la excursión"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez tuviste que cambiar un plan de viaje por el tiempo? ¿Qué hiciste?",
+          "model": "Sí, en Escocia llovía tanto que no pudimos ir a la isla. Al final visitamos un museo y estuvo muy bien."
+        },
+        {
+          "q": "¿Estás de acuerdo con la frase «prefiero llegar tarde que llegar con alguien herido»?",
+          "model": "Totalmente. La seguridad es lo más importante, aunque a veces es frustrante."
+        },
+        {
+          "q": "¿Cómo reaccionas tú cuando un plan cambia en el último momento?",
+          "model": "Al principio me enfado un poco, pero después intento ver el lado positivo."
+        }
+      ],
+      "gaps": "Si a las [cuatro] sigue igual, os devolvemos el [dinero] o podéis venir [mañana gratis]. Prefiero llegar [tarde] que llegar con alguien herido.",
+      "glossary": [
+        {
+          "word": "la base",
+          "meaning": "el centro desde donde se organiza el trabajo"
+        },
+        {
+          "word": "refugio",
+          "meaning": "pequeña casa en la montaña para protegerse"
+        },
+        {
+          "word": "herido",
+          "meaning": "que tiene una lesión o un daño en el cuerpo"
+        },
+        {
+          "word": "visto así",
+          "meaning": "si lo pienso de esta manera"
+        }
+      ]
+    }
+  ]
+}
