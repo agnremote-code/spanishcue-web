@@ -1,0 +1,311 @@
+{
+  "game": "bosque",
+  "level": "C1",
+  "items": [
+    {
+      "id": "sobre-ti",
+      "title": "Toma tres en el claro de la entrada",
+      "place": "Claro de la entrada",
+      "context": "Un equipo de documental graba la presentación de una guía al pie de la subida. Ya van por la tercera toma.",
+      "speakers": [
+        { "name": "Bruno", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Itzel", "country": "México", "voice": "es-MX-DaliaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Vale, toma tres. Itzel, solo preséntate: quién eres y qué haces aquí. Natural, como si hablaras con una amiga." },
+        { "s": 1, "text": "Hola, me llamo Itzel, soy guía en el bosque de los hongos gigantes desde hace nueve años y me pagan bastante menos de lo que sugiere el tamaño de los hongos." },
+        { "s": 0, "text": "Corta, corta. Itzel, por favor. Es un documental, no un monólogo de humor." },
+        { "s": 1, "text": "Perdona, es que me pones nerviosa con eso de «natural». Nadie es natural con una cámara delante." },
+        { "s": 0, "text": "Ya, pero la productora quiere a alguien entusiasta, cercano. Una cara amable del bosque, ¿me entiendes?" },
+        { "s": 1, "text": "O sea, que no quieren a alguien que hable de los recortes del parque." },
+        { "s": 0, "text": "Yo no he dicho eso." },
+        { "s": 1, "text": "No hacía falta." },
+        { "s": 0, "text": "Mira, hagamos una cosa. Olvídate de la cámara y cuéntame por qué sigues aquí, si tan mal pagado está." },
+        { "s": 1, "text": "Porque una vez un niño me preguntó si los hongos se hablaban entre ellos. Le dije que, en cierto modo, sí, a través de las raíces, y se quedó mudo de asombro. Cosas así no las paga nadie." },
+        { "s": 0, "text": "¿Ves? Eso. Eso exactamente. ¿Lo podrías repetir para la cámara?" },
+        { "s": 1, "text": "Lo podría repetir, claro. Pero ya no sería natural, ¿no?" }
+      ],
+      "choice": [
+        { "q": "¿Qué ocurre en esta escena?", "options": ["Un director intenta que una guía se presente como él quiere", "Una guía entrevista a un director de cine", "Dos guías discuten sobre su sueldo"], "answer": 0 },
+        { "q": "¿Por qué interrumpe Bruno la primera presentación?", "options": ["Porque Itzel se equivoca de nombre", "Porque Itzel hace un comentario irónico sobre su sueldo", "Porque hay demasiado ruido en el claro"], "answer": 1 },
+        { "q": "¿Qué da a entender Itzel con «No hacía falta»?", "options": ["Que no quiere seguir grabando", "Que Bruno debería haberlo dicho más claro", "Que la intención de la productora era evidente sin decirla"], "answer": 2 },
+        { "q": "¿Qué ironía hay en el final?", "options": ["Que lo espontáneo deja de serlo cuando se repite para la cámara", "Que Itzel no recuerda lo que acaba de decir", "Que Bruno decide no usar la historia del niño"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Te resulta fácil ser «natural» cuando te graban o te observan? ¿Por qué crees que pasa eso?", "model": "Me cuesta muchísimo; en cuanto sé que me graban, empiezo a medir cada palabra y acabo sonando como un anuncio." },
+        { "q": "¿Hasta qué punto es legítimo que un documental muestre solo la cara amable de un lugar?", "model": "Me parece comprensible si es promocional, pero entonces no debería llamarse documental, sino publicidad bien hecha." },
+        { "q": "¿Qué momento de tu trabajo o tus estudios «no lo paga nadie»?", "model": "Cuando un alumno que no se atrevía a hablar se lanza por fin a contar algo; eso compensa muchas horas de corrección." }
+      ],
+      "gaps": "Le dije que, en cierto modo, sí, a través de las [raíces], y se quedó [mudo] de [asombro]. Cosas así no las [paga] nadie.",
+      "glossary": [
+        { "word": "toma", "meaning": "cada vez que se graba una misma escena" },
+        { "word": "recortes", "meaning": "reducción del dinero que se dedica a algo" },
+        { "word": "mudo de asombro", "meaning": "tan sorprendido que no puede hablar" },
+        { "word": "productora", "meaning": "empresa que financia y organiza una película o un programa" }
+      ]
+    },
+    {
+      "id": "vida-real",
+      "title": "Objetos perdidos: la cesta del alcalde",
+      "place": "La cesta olvidada",
+      "context": "El locutor de la radio del bosque presenta su sección de objetos perdidos. Esta semana, la protagonista es una cesta.",
+      "speakers": [
+        { "name": "Ramón", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Y volvemos a nuestra sección favorita, «Objetos perdidos del bosque», que esta semana viene cargadita. Resulta que en la parada de la cesta olvidada, junto a las setas bajas, apareció el martes una cesta de mimbre con casi cinco kilos de setas. Cinco kilos, señoras y señores, cuando el límite legal es de dos. Hasta aquí, nada nuevo: alguien se emocionó." },
+        { "s": 0, "text": "Lo curioso es lo que pasó después. Nos han llegado catorce mensajes de oyentes que juran saber de quién es la cesta, y en doce de ellos aparece el mismo nombre. No lo voy a decir, faltaría más, pero digamos que es alguien que sale mucho en las fotos de la plaza y que inauguró la nueva pasarela con unas tijeras gigantes." },
+        { "s": 0, "text": "Hemos llamado a su oficina, y su portavoz nos ha respondido, cito textualmente, que «el señor alcalde no ha recogido setas en su vida y, además, es alérgico». Lo cual sería muy convincente si no fuera porque, el año pasado, ganó el concurso de cocina micológica del pueblo." },
+        { "s": 0, "text": "En fin, la cesta sigue en la oficina de los guardas, esperando a su dueño. Y nosotros, esperando también." }
+      ],
+      "choice": [
+        { "q": "¿De qué trata esta sección de radio?", "options": ["De una receta con setas del bosque", "De una cesta con demasiadas setas y de quién podría ser", "De las nuevas normas para recoger setas"], "answer": 1 },
+        { "q": "¿Cómo deja claro el locutor quién es el sospechoso sin nombrarlo?", "options": ["Leyendo un mensaje de un oyente", "Diciendo que es un guarda del parque", "Describiéndolo con detalles que todo el pueblo reconoce"], "answer": 2 },
+        { "q": "¿Qué contradicción señala el locutor en la respuesta del portavoz?", "options": ["Que el alcalde ganó un concurso de cocina con setas", "Que el alcalde estaba en el bosque ese martes", "Que el portavoz es pariente del alcalde"], "answer": 0 },
+        { "q": "¿Qué sugiere la última frase, «Y nosotros, esperando también»?", "options": ["Que la radio quiere quedarse con las setas", "Que esperan que el dueño, es decir, el alcalde, dé la cara", "Que la sección se repetirá la semana que viene"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te parece justo que un medio insinúe la culpa de alguien sin decir su nombre?", "model": "Es una zona gris: protege legalmente al medio, pero el efecto sobre la reputación de la persona es casi el mismo." },
+        { "q": "¿Crees que las personas con un cargo público deberían cumplir las normas con más rigor que los demás?", "model": "Sin duda, porque su ejemplo pesa más; si el alcalde se salta el límite, ¿con qué autoridad multa a los vecinos?" },
+        { "q": "¿Qué ejemplo de ironía has oído recientemente en la radio, la televisión o las redes?", "model": "Un humorista agradeció a la compañía eléctrica «lo mucho que nos ayuda a ahorrar», justo después de la última subida de precios." }
+      ],
+      "gaps": "Lo cual sería muy [convincente] si no fuera porque, el año pasado, ganó el [concurso] de [cocina micológica] del [pueblo].",
+      "glossary": [
+        { "word": "cargadita", "meaning": "con mucho contenido; en tono simpático" },
+        { "word": "faltaría más", "meaning": "por supuesto, cómo iba a hacerlo; aquí con ironía" },
+        { "word": "portavoz", "meaning": "persona que habla oficialmente en nombre de otra o de una institución" },
+        { "word": "mimbre", "meaning": "rama flexible con la que se hacen cestas y muebles" }
+      ]
+    },
+    {
+      "id": "elige",
+      "title": "Las setas doradas en el menú degustación",
+      "place": "Setas doradas",
+      "context": "Junto a las setas doradas, un chef famoso y una micóloga del parque negocian si esas setas pueden entrar en su menú.",
+      "speakers": [
+        { "name": "Federico", "country": "Argentina", "voice": "es-AR-TomasNeural" },
+        { "name": "Javiera", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Mira, Javiera, te lo digo sin rodeos: necesito las setas doradas en el menú degustación. Los clientes vienen desde la capital preguntando por ellas." },
+        { "s": 1, "text": "Ya. Y yo te digo, también sin rodeos, que esta temporada ha habido la mitad que el año pasado." },
+        { "s": 0, "text": "Por eso mismo. Lo escaso vende. Si las sirvo solo los sábados, se convierten en una experiencia exclusiva." },
+        { "s": 1, "text": "Qué bonito suena eso de «experiencia exclusiva» cuando lo que quieres decir es «agotarlas antes que nadie»." },
+        { "s": 0, "text": "No seas injusta. Yo pago a los recolectores el doble que cualquier intermediario." },
+        { "s": 1, "text": "Precisamente. Si pagas el doble, recogerán el doble, incluidas las pequeñas, que son las que tienen que soltar las esporas." },
+        { "s": 0, "text": "Entonces, ¿qué propones? ¿Que ponga una foto de la seta en el plato y que la gente se la imagine?" },
+        { "s": 1, "text": "Propongo que elijas: o un plato estrella dos meses al año, con setas grandes y recolección certificada, o un plato mediocre todo el año y ningún bosque dentro de cinco." },
+        { "s": 0, "text": "Dicho así, parece que no tengo opción." },
+        { "s": 1, "text": "Es que no la tienes. Pero quería que la eligieras tú." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es el conflicto entre Federico y Javiera?", "options": ["Él quiere servir las setas doradas y ella teme que se agoten", "Ella quiere abrir un restaurante en el bosque", "Él no quiere pagar a los recolectores"], "answer": 0 },
+        { "q": "¿Qué critica Javiera con su comentario sobre la «experiencia exclusiva»?", "options": ["Que el menú es demasiado caro", "Que la expresión disfraza una explotación del recurso", "Que los sábados el restaurante está lleno"], "answer": 1 },
+        { "q": "¿Por qué pagar el doble a los recolectores es, para ella, un problema?", "options": ["Porque así los intermediarios se enfadan", "Porque el restaurante acabará arruinado", "Porque incentiva recoger también las setas pequeñas que deben soltar esporas"], "answer": 2 },
+        { "q": "¿Qué revela la última frase de Javiera?", "options": ["Que ella todavía no ha tomado una decisión", "Que la elección era aparente, pero quería que él la asumiera como propia", "Que Federico puede elegir libremente cualquier opción"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Pagarías más por comer un producto escaso si supieras que su recolección perjudica el entorno?", "model": "Probablemente no; me costaría disfrutar de un plato sabiendo que contribuye a que desaparezca justo lo que lo hace especial." },
+        { "q": "¿Te parece una buena estrategia ofrecer a alguien una «elección» cuya respuesta ya está decidida?", "model": "Puede funcionar, porque la gente defiende mejor lo que cree haber decidido, aunque roza la manipulación." },
+        { "q": "¿Qué expresiones del mundo del marketing te parecen eufemismos? Pon un ejemplo.", "model": "«Ajuste de precios» casi siempre significa que algo sube; nunca lo he visto usado para una bajada." }
+      ],
+      "gaps": "Propongo que elijas: o un [plato estrella] dos meses al año, con setas grandes y recolección [certificada], o un plato [mediocre] todo el año y ningún [bosque] dentro de cinco.",
+      "glossary": [
+        { "word": "sin rodeos", "meaning": "de forma directa, sin evitar el tema" },
+        { "word": "lo escaso vende", "meaning": "lo que hay en poca cantidad atrae más compradores" },
+        { "word": "intermediario", "meaning": "persona que compra a un productor para vender a otro, ganando dinero en medio" },
+        { "word": "esporas", "meaning": "células con las que se reproducen los hongos" }
+      ]
+    },
+    {
+      "id": "opinion",
+      "title": "Con todo respeto, mi querida colega",
+      "place": "Las setas gemelas",
+      "context": "En un seminario de campo junto a las setas gemelas, dos científicos debaten si una aplicación puede distinguirlas. La cortesía es solo de fachada.",
+      "speakers": [
+        { "name": "Esteban Ruiz", "country": "Puerto Rico", "voice": "es-PR-VictorNeural" },
+        { "name": "Beatriz Ochoa", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Agradezco mucho la intervención de la doctora Ochoa, cuyo entusiasmo por las aplicaciones de reconocimiento es, como siempre, admirable." },
+        { "s": 1, "text": "Muchas gracias, doctor Ruiz. Viniendo de alguien que todavía identifica las setas por el olor, lo tomo como un gran elogio." },
+        { "s": 0, "text": "El olor, querida colega, no se queda sin batería a mitad del bosque. Pero vayamos al grano: aquí, en las setas gemelas, su aplicación confunde las dos especies en uno de cada cinco casos." },
+        { "s": 1, "text": "En uno de cada cinco casos cuando la foto la hace un turista con prisa y con mala luz. Con buenas fotos, el error baja al dos por ciento." },
+        { "s": 0, "text": "Lo cual, si uno es ese dos por ciento, es un consuelo relativo." },
+        { "s": 1, "text": "Tan relativo como que su nariz se equivocara. Mire, nadie dice que haya que sustituir a los expertos. Lo que digo es que hay miles de excursionistas y solo tres expertos en toda la comarca. Y uno de ellos, con perdón, ya no sube escaleras." },
+        { "s": 0, "text": "Si se refiere a mí, subo perfectamente; lo que no hago es subirlas corriendo detrás de la cobertura del móvil." },
+        { "s": 1, "text": "Pues entonces estamos de acuerdo en algo: hacen falta más expertos jóvenes." },
+        { "s": 0, "text": "En eso, por desgracia, tiene usted toda la razón." }
+      ],
+      "choice": [
+        { "q": "¿Qué tono domina en este debate?", "options": ["Una cortesía formal que esconde ataques personales", "Una conversación relajada entre amigos", "Un enfrentamiento abierto con insultos"], "answer": 0 },
+        { "q": "¿Qué quiere decir Beatriz con que lo toma «como un gran elogio»?", "options": ["Que el cumplido de alguien tan anticuado no vale mucho", "Que de verdad se siente halagada", "Que admira el método del olor"], "answer": 0 },
+        { "q": "¿Cómo matiza Beatriz el dato del error de la aplicación?", "options": ["Dice que el estudio está mal hecho", "Reconoce que la aplicación falla siempre con la lluvia", "Explica que el error depende de la calidad de las fotos"], "answer": 2 },
+        { "q": "¿Por qué el acuerdo final tiene un toque irónico?", "options": ["Porque los dos deciden dejar de investigar", "Porque coinciden en algo que, en el fondo, es una pulla a la edad de él", "Porque ninguno de los dos cree en los expertos"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿En qué situaciones confías más en una aplicación que en una persona experta, y al revés?", "model": "Para orientarme en una ciudad me fío del móvil, pero para algo que afecta a mi salud quiero a alguien que pueda razonar conmigo." },
+        { "q": "¿Te parece más eficaz discutir con cortesía irónica o decir las cosas directamente?", "model": "La ironía queda elegante, pero a menudo el mensaje se pierde; en un conflicto real prefiero la claridad, aunque incomode." },
+        { "q": "¿Qué conocimiento tradicional de tu familia te parecería una pena que se perdiera?", "model": "Mi abuelo sabía predecir la lluvia mirando las hormigas; no sé si funciona, pero me daría pena que nadie lo recordara." }
+      ],
+      "gaps": "Lo que digo es que hay miles de [excursionistas] y solo tres [expertos] en toda la [comarca]. Y uno de ellos, con perdón, ya no sube [escaleras].",
+      "glossary": [
+        { "word": "elogio", "meaning": "palabras con las que se alaba a alguien" },
+        { "word": "vayamos al grano", "meaning": "hablemos de lo importante, sin perder tiempo" },
+        { "word": "consuelo relativo", "meaning": "algo que alivia poco" },
+        { "word": "comarca", "meaning": "zona de un territorio con varios pueblos" }
+      ]
+    },
+    {
+      "id": "recuerdos",
+      "title": "Memorias de un ermitaño con mala memoria",
+      "place": "El sombrero gigante",
+      "context": "Para un pódcast de senderismo, el viejo ermitaño del sombrero gigante cuenta cómo era el bosque antes de los turistas.",
+      "speakers": [
+        { "name": "Don Evaristo", "country": "Nicaragua", "voice": "es-NI-FedericoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Me piden que hable de cómo era esto antes, y la gente espera que diga que era un paraíso. Bueno, lo era, en cierto sentido: no había escaleras, ni carteles, ni ese quiosco de abajo que vende llaveros con forma de seta." },
+        { "s": 0, "text": "Yo llegué aquí en el ochenta y dos, huyendo de la ciudad y, para qué negarlo, de una exmujer con muy buena memoria. Me instalé debajo de este sombrero gigante y durante años no hablé con nadie más que con los pájaros." },
+        { "s": 0, "text": "Luego, un verano, aparecieron dos chicos perdidos. Les di de comer, les enseñé el camino y, ya puestos, les conté alguna historia del bosque, algunas verdaderas y otras bastante mejoradas. Volvieron al año siguiente con sus amigos. Y al otro, con una revista. Y así, poco a poco, se fue llenando todo de gente." },
+        { "s": 0, "text": "Ahora los jóvenes me preguntan, muy indignados, quién fue el primero que trajo turistas a este bosque. Y yo les digo que no lo sé, que eso fue hace mucho, que la memoria a mi edad ya no es lo que era. Curiosamente, la de mi exmujer sigue perfecta." }
+      ],
+      "choice": [
+        { "q": "¿Qué cuenta, en esencia, Don Evaristo?", "options": ["Cómo llegó al bosque y cómo, sin quererlo, empezó a llegar el turismo", "Por qué odia a los periodistas de revistas", "Cómo construyó las escaleras del bosque"], "answer": 0 },
+        { "q": "¿Qué insinúa cuando habla de su exmujer «con muy buena memoria»?", "options": ["Que ella le ayudó a mudarse al bosque", "Que ella le recordaba sus errores y por eso huyó también de ella", "Que ella escribía libros de historia"], "answer": 1 },
+        { "q": "¿Qué papel tuvieron sus historias «bastante mejoradas»?", "options": ["Asustaron a los chicos y no volvieron", "Sirvieron para que el parque pusiera carteles", "Contribuyeron a que el bosque se hiciera famoso"], "answer": 2 },
+        { "q": "¿Qué se deduce del final?", "options": ["Que de verdad ha perdido la memoria", "Que su exmujer fue la primera turista", "Que él fue quien trajo a los primeros turistas y prefiere no admitirlo"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez has contribuido sin querer a algo que luego criticaste?", "model": "Recomendé tanto un bar pequeño de mi barrio que se puso de moda; ahora siempre está lleno y ya no puedo ir tranquilo." },
+        { "q": "¿Crees que la nostalgia embellece el pasado? ¿Por qué?", "model": "Creo que sí, porque recordamos las emociones más que las incomodidades; nadie echa de menos el calor sin aire acondicionado." },
+        { "q": "¿Qué lugar que conocías se ha transformado por el turismo, para bien o para mal?", "model": "El casco antiguo de mi ciudad está más cuidado que nunca, pero casi no vive nadie allí; es más bonito y menos vivo." }
+      ],
+      "gaps": "Les di de [comer], les enseñé el [camino] y, ya puestos, les conté alguna [historia] del bosque, algunas verdaderas y otras bastante [mejoradas].",
+      "glossary": [
+        { "word": "para qué negarlo", "meaning": "lo admito, es verdad" },
+        { "word": "ya puestos", "meaning": "aprovechando la situación" },
+        { "word": "indignados", "meaning": "enfadados por algo que les parece injusto" },
+        { "word": "huyendo", "meaning": "escapando de algo o de alguien" }
+      ]
+    },
+    {
+      "id": "futuro",
+      "title": "Doce suites en la copa del roble",
+      "place": "La copa del roble",
+      "context": "Una responsable de turismo presenta a un guarda forestal el proyecto de un hotel de lujo en lo alto del gran roble.",
+      "speakers": [
+        { "name": "Mariana", "country": "Panamá", "voice": "es-PA-MargaritaNeural" },
+        { "name": "Óscar", "country": "El Salvador", "voice": "es-SV-RodrigoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Imagínate, Óscar: dentro de cinco años, aquí mismo, en la copa del roble, doce suites suspendidas, totalmente integradas en el entorno. Un concepto de lujo sostenible." },
+        { "s": 1, "text": "Integradas en el entorno. ¿Como los hongos de repisa?" },
+        { "s": 0, "text": "Exacto, esa es la idea: que el visitante sienta que forma parte del ecosistema." },
+        { "s": 1, "text": "Los hongos de repisa forman parte del ecosistema porque se comen la madera del roble. No sé si es la comparación que buscas." },
+        { "s": 0, "text": "Bueno, era una metáfora. El caso es que el proyecto genera cuarenta empleos y tiene un impacto mínimo, según el estudio." },
+        { "s": 1, "text": "¿El estudio que pagó la empresa del hotel?" },
+        { "s": 0, "text": "Un estudio independiente, financiado, eso sí, por los promotores. Como todos." },
+        { "s": 1, "text": "Ya. Oye, y el agua de las suites, ¿de dónde sale? Porque aquí arriba el árbol vive de la niebla." },
+        { "s": 0, "text": "Eso es un detalle técnico que se resolverá en la siguiente fase." },
+        { "s": 1, "text": "Claro. Como el peso de doce suites sobre un roble de cuatrocientos años, supongo." },
+        { "s": 0, "text": "Óscar, te noto un poco negativo." },
+        { "s": 1, "text": "Para nada. Solo intento imaginar el futuro, como me has pedido. Lo que pasa es que en mi versión el roble no sale." }
+      ],
+      "choice": [
+        { "q": "¿Cuál es la actitud de Óscar ante el proyecto?", "options": ["Entusiasta, aunque con algunas dudas", "Escéptica, y la expresa con ironía", "Indiferente, porque no le afecta"], "answer": 1 },
+        { "q": "¿Por qué la comparación con los hongos de repisa no favorece a Mariana?", "options": ["Porque esos hongos se alimentan del roble", "Porque esos hongos son venenosos", "Porque esos hongos solo crecen en invierno"], "answer": 0 },
+        { "q": "¿Qué insinúa Óscar sobre el estudio de impacto?", "options": ["Que se hizo demasiado rápido", "Que nadie lo ha leído", "Que no es fiable porque lo pagaron los interesados"], "answer": 2 },
+        { "q": "¿Qué significa «en mi versión el roble no sale»?", "options": ["Que el roble no aparecerá en las fotos del hotel", "Que, si se construye el hotel, el roble no sobrevivirá", "Que él no quiere trabajar en el hotel"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Crees que el «lujo sostenible» es posible o es una contradicción?", "model": "Creo que en muchos casos es una contradicción con buen marketing, aunque hay proyectos pequeños que lo consiguen de verdad." },
+        { "q": "¿Aceptarías un proyecto que crea empleo en tu región aunque dañe el medio ambiente?", "model": "Dependería del daño: si es reversible, lo negociaría; si destruye algo único, ningún número de empleos lo compensa." },
+        { "q": "¿Cómo reaccionas cuando alguien te llama «negativo» por hacer preguntas incómodas?", "model": "Suelo responder que hacer preguntas no es estar en contra, sino querer que el proyecto salga bien." }
+      ],
+      "gaps": "Oye, y el [agua] de las [suites], ¿de dónde sale? Porque aquí arriba el [árbol] vive de la [niebla].",
+      "glossary": [
+        { "word": "suites", "meaning": "habitaciones de hotel grandes y lujosas" },
+        { "word": "promotores", "meaning": "personas o empresas que impulsan y pagan un proyecto" },
+        { "word": "sostenible", "meaning": "que se puede mantener sin dañar el medio ambiente" },
+        { "word": "te noto", "meaning": "me parece que estás" }
+      ]
+    },
+    {
+      "id": "compara",
+      "title": "Nota de voz para la editora de viajes",
+      "place": "La gruta luminosa",
+      "context": "A la salida de la gruta luminosa, una periodista de viajes manda una nota de voz a su editora, que le ha encargado una comparación.",
+      "speakers": [
+        { "name": "Gabriela", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Inés, soy Gabriela. Te mando esto desde la salida de la gruta luminosa porque me pediste, y cito, «una comparación con chispa» entre esta gruta y las famosas cuevas de luciérnagas de Nueva Zelanda. Pues mira, voy a ser sincera, aunque luego tú lo suavices." },
+        { "s": 0, "text": "Las cuevas de allá son más grandes, están mejor organizadas y tienen una tienda de regalos donde podrías amueblar una casa. Esta gruta, en cambio, es pequeña, húmeda, y el guía llega tarde. Dicho esto, aquí ocurre algo que allá no: te dejan a oscuras, en silencio, sin barcas ni música ambiental, y los hongos van apareciendo poco a poco, como si se fueran atreviendo." },
+        { "s": 0, "text": "Allá te venden una experiencia inmersiva; aquí simplemente te sumerges, que no es exactamente lo mismo. Sé que el titular que quieres es algo como «la pequeña rival de Nueva Zelanda», y te entiendo, vende. Pero si lo publicamos así, el año que viene esto tendrá barcas y música ambiental, y entonces sí que podremos compararlas en igualdad de condiciones. Tú decides." }
+      ],
+      "choice": [
+        { "q": "¿Qué propósito tiene la nota de voz?", "options": ["Quejarse del guía de la gruta", "Pedir más dinero por el artículo", "Dar su comparación sincera y cuestionar el enfoque del artículo"], "answer": 2 },
+        { "q": "¿Qué quiere decir con que en la tienda de regalos «podrías amueblar una casa»?", "options": ["Que es exageradamente grande y comercial", "Que venden muebles de madera local", "Que los precios son muy bajos"], "answer": 0 },
+        { "q": "¿Qué diferencia establece entre «una experiencia inmersiva» y «te sumerges»?", "options": ["Que una es más cara que la otra", "Que una es un producto vendido y la otra una vivencia auténtica", "Que en una hay agua y en la otra no"], "answer": 1 },
+        { "q": "¿Qué teme Gabriela si se publica el titular que quiere Inés?", "options": ["Que los lectores no la crean", "Que la gruta pierda visitantes", "Que la fama convierta la gruta en un producto turístico como el otro"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez un lugar te ha decepcionado por estar demasiado «organizado» para el turismo?", "model": "Sí, una cascada preciosa que ahora tiene altavoces y un camino de cemento; las fotos son iguales, pero la sensación no tiene nada que ver." },
+        { "q": "¿Tienen los periodistas de viajes responsabilidad sobre lo que les pasa a los lugares que promocionan?", "model": "Creo que sí, al menos en parte: si saben que un sitio es frágil, deberían pensar en cómo y cuánto lo exponen." },
+        { "q": "¿Guardarías en secreto un lugar especial para que no se masifique?", "model": "Lo compartiría solo con amigos de confianza; me parece egoísta, pero también es la única manera de protegerlo." }
+      ],
+      "gaps": "Esta gruta, en cambio, es [pequeña], [húmeda], y el [guía] llega [tarde].",
+      "glossary": [
+        { "word": "con chispa", "meaning": "con gracia, ingenio o humor" },
+        { "word": "suavices", "meaning": "hagas el texto menos duro o directo" },
+        { "word": "luciérnagas", "meaning": "insectos que producen luz" },
+        { "word": "en igualdad de condiciones", "meaning": "con las mismas características, de forma justa" }
+      ]
+    },
+    {
+      "id": "cambia",
+      "title": "Media vuelta en la escalera de niebla",
+      "place": "La escalera de niebla",
+      "context": "Un padre y su hija adolescente suben la escalera de niebla. No se ve casi nada y ella no quiere seguir.",
+      "speakers": [
+        { "name": "Renata", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Hugo", "country": "Venezuela", "voice": "es-VE-SebastianNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Papá, no se ve nada. Literalmente, no veo ni el siguiente hongo." },
+        { "s": 1, "text": "Ahí está, a dos metros. El guía dijo que la escalera es segura." },
+        { "s": 0, "text": "El guía dijo que es segura «con buena visibilidad». Lo dijo tres veces, por cierto." },
+        { "s": 1, "text": "Renata, llevamos tres horas subiendo. No vamos a darnos la vuelta a quince metros del mirador." },
+        { "s": 0, "text": "Vale. Tú mandas. Como en la playa de Chichiriviche, que también mandabas tú." },
+        { "s": 1, "text": "Eso fue diferente. Allí nadie podía saber que iba a subir la marea." },
+        { "s": 0, "text": "Estaba en un cartel enorme, papá. Amarillo." },
+        { "s": 1, "text": "Bueno, ya está. Subimos con cuidado, despacito, y arriba te invito a un chocolate caliente." },
+        { "s": 0, "text": "Perfecto. Ya le explico yo a mamá que al final no bajamos porque te apetecía un chocolate." },
+        { "s": 1, "text": "¿Y eso qué tiene que ver con tu madre?" },
+        { "s": 0, "text": "Nada, nada. Que me pidió que le mandara una foto desde arriba. Y otra cuando volviéramos. Sanos." },
+        { "s": 1, "text": "Oye, ¿sabes qué? Mirándolo bien, el chocolate de la cafetería de abajo es mucho mejor." },
+        { "s": 0, "text": "¿Ah, sí? Qué casualidad." },
+        { "s": 1, "text": "Y ni una palabra a tu madre de la marea, ¿eh?" }
+      ],
+      "choice": [
+        { "q": "¿Qué pasa en esta conversación?", "options": ["La hija convence al padre de bajar sin decírselo directamente", "El padre convence a la hija de llegar al mirador", "Los dos se pierden en la niebla"], "answer": 0 },
+        { "q": "¿Por qué menciona Renata la playa de Chichiriviche?", "options": ["Para proponer un viaje a la playa", "Para recordar que su padre ya se equivocó al no hacer caso de un aviso", "Para decir que allí también había niebla"], "answer": 1 },
+        { "q": "¿Qué efecto tiene la mención de la madre?", "options": ["El padre se pone a llamarla por teléfono", "Renata se arrepiente de haberla mencionado", "Hace que el padre cambie de idea por miedo a su reacción"], "answer": 2 },
+        { "q": "¿Qué quiere decir Renata con «Qué casualidad»?", "options": ["Que de verdad cree que el chocolate de abajo es mejor", "Que ha entendido que su padre busca una excusa para bajar", "Que no sabía que había una cafetería abajo"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez has convencido a alguien de algo sin decírselo directamente? ¿Cómo lo hiciste?", "model": "A mi compañero de piso no le dije que limpiara: simplemente comenté que venían mis padres y la cocina apareció reluciente." },
+        { "q": "¿Te cuesta renunciar a un objetivo cuando ya estás muy cerca de conseguirlo?", "model": "Muchísimo; justamente cuando falta poco es cuando más difícil me resulta aceptar que lo sensato es parar." },
+        { "q": "¿Por qué crees que a la gente le cuesta reconocer que ha cambiado de opinión?", "model": "Porque lo vivimos como una derrota, cuando en realidad cambiar de opinión ante nueva información es lo más inteligente." }
+      ],
+      "gaps": "Nada, nada. Que me pidió que le mandara una [foto] desde [arriba]. Y otra cuando [volviéramos]. [Sanos].",
+      "glossary": [
+        { "word": "visibilidad", "meaning": "lo lejos que se puede ver en un momento determinado" },
+        { "word": "darnos la vuelta", "meaning": "volver hacia atrás, renunciar a seguir" },
+        { "word": "marea", "meaning": "subida y bajada del nivel del mar" },
+        { "word": "mirándolo bien", "meaning": "pensándolo mejor" }
+      ]
+    }
+  ]
+}
