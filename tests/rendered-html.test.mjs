@@ -66,9 +66,9 @@ test('lesson cards expose real links and explain view results versus the complet
 });
 
 test('English UI is server-rendered, persists by cookie and leaves lesson content in Spanish',async()=>{
- const response=await fetch(root+'/?lang=en');assert.equal(response.status,200);const html=await response.text();
+ const legacy=await fetch(root+'/?lang=en',{redirect:'manual'});assert.equal(legacy.status,301,'the legacy ?lang= toggle redirects to the clean URL');assert.equal(new URL(legacy.headers.get('location')).pathname+new URL(legacy.headers.get('location')).search,'/');assert.match(legacy.headers.get('set-cookie')||'',/spanishcue_locale=en/);await legacy.arrayBuffer();
+ const response=await fetch(root+'/',{headers:{cookie:'spanishcue_locale=en'}});assert.equal(response.status,200);const html=await response.text();
  assert.equal(response.headers.get('content-language'),'en');
- assert.match(response.headers.get('set-cookie')||'',/spanishcue_locale=en/);
  assert.match(html,/<html[^>]*lang="en"/);assert.match(html,/Stop building every lesson/);
  assert.match(html,/Try it free/);assert.match(html,/Lesson 01/);
  assert.match(html,/Sustantivos: nombrar personas, lugares y cosas/);assert.doesNotMatch(html,/The Noun Factory/);
@@ -166,8 +166,8 @@ test('the teacher-resources hub, homepage and pricing page expose clean canonica
  const home=await fetch(root);const homeHtml=await home.text();
  assert.match(homeHtml,/"@type":"Organization"/);assert.match(homeHtml,/"@type":"WebSite"/);assert.doesNotMatch(homeHtml,/id="spanishcue-marketing-assets"/);assert.match(homeHtml,/href="\/zeely"/);
  assert.match(homeHtml,/<title>Clases de español listas para enseñar \(A1–C2\) \| SPANISHCUE<\/title>/);
- const englishHome=await fetch(root+'/?lang=en');assert.match(await englishHome.text(),/<title>Interactive Spanish Lessons for Teachers \(A1–C2\) \| SPANISHCUE<\/title>/);
- const pricing=await fetch(root+'/pricing?lang=en');const pricingHtml=await pricing.text();
+ const englishHome=await fetch(root,{headers:{cookie:'spanishcue_locale=en'}});assert.match(await englishHome.text(),/<title>Interactive Spanish Lessons for Teachers \(A1–C2\) \| SPANISHCUE<\/title>/);
+ const pricing=await fetch(root+'/pricing',{headers:{cookie:'spanishcue_locale=en'}});const pricingHtml=await pricing.text();
  assert.match(pricingHtml,/rel="canonical" href="https:\/\/spanishcue\.com\/pricing"/i);assert.doesNotMatch(pricingHtml,/hreflang=/i);
  const resource=await fetch(root+'/resources/spanish-conversation-activity-b1-mexico');assert.equal(resource.status,200);
  assert.match(await resource.text(),/href="\/spanish-conversation-activities\/b1"/);

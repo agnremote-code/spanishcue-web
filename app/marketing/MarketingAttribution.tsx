@@ -14,6 +14,8 @@ const acquisitionLandings = new Set([
   "/guides/how-to-teach-ser-vs-estar",
   "/guides/preterite-vs-imperfect-activities",
   "/guides/spanish-subjunctive-lesson-plan",
+  "/guides/spanish-imperative-activities",
+  "/guides/spanish-direct-indirect-object-pronouns",
   "/ele-recursos-profesores",
   "/online-spanish-teaching-resources",
   "/free-spanish-lesson",

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "authorization": "Owner brief of 2026-10-07 11:24Z (project thread \"SEO y crecimiento orgánico\", SEO Phase 2): build the teacher-facing grammar cluster, connect it through internal links (teaching guides index, marketing landings) and keep the About page discoverable. This manifest approves only the exact new English literals below: navigation labels to the grammar hub and About, and the truthful review dates on the two guides upgraded into grammar activity kits. Existing English copy remains protected.",
+  "additions": [
+    { "path": "app/guides/data/core.ts", "text": "2026-10-12" },
+    { "path": "app/guides/page.tsx", "text": "Grammar activities" },
+    { "path": "app/guides/page.tsx", "text": "About SpanishCue" },
+    { "path": "app/marketing-landing/MarketingLanding.tsx", "text": "About SpanishCue" }
+  ]
+}

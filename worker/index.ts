@@ -25,7 +25,7 @@ import {
   localeFromHeaders,
   normalizeLocale,
 } from "../app/i18n/messages";
-import { robotsHeaderFor } from "../app/seo";
+import { redirectsLanguageQuery, isEdgeCacheablePath, robotsHeaderFor } from "../app/seo";
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
@@ -69,6 +69,37 @@ function setSecurityHeaders(headers: Headers, url: URL, locale: string): void {
   if (url.protocol === 'https:') {
     headers.set('Strict-Transport-Security','max-age=31536000; includeSubDomains');
   }
+}
+
+declare const __SPANISHCUE_BUILD_ID__: string | undefined;
+// Edge cache for anonymous organic HTML (see isEdgeCacheablePath). The browser
+// always revalidates; only Cloudflare's edge keeps the page, for a bounded time
+// and under a key that includes the build, so a deployment never serves the
+// previous build's HTML. Any visitor state (cookie, `?lang=`, client navigation
+// headers) bypasses the cache in both directions.
+const EDGE_HTML_TTL_SECONDS = 600;
+const PUBLIC_HTML_CACHE_CONTROL = 'public, max-age=0, must-revalidate';
+const BUILD_ID = typeof __SPANISHCUE_BUILD_ID__ === 'string' && __SPANISHCUE_BUILD_ID__ ? __SPANISHCUE_BUILD_ID__ : 'unversioned';
+const VISITOR_STATE_HEADERS = ['cookie', 'authorization', 'rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url'];
+
+function edgeCache(): Cache | null {
+  const store = (globalThis as unknown as { caches?: { default?: Cache } }).caches;
+  return store?.default ?? null;
+}
+
+function edgeCacheKey(request: Request, url: URL, pathname: string, deployment: string | undefined): Request | null {
+  if (request.method !== 'GET' || url.search !== '' || !isEdgeCacheablePath(pathname)) return null;
+  for (const header of VISITOR_STATE_HEADERS) if (request.headers.has(header)) return null;
+  const variant = encodeURIComponent(`${deployment ?? 'production'}:${BUILD_ID}`);
+  return new Request(`${url.origin}${url.pathname}?__spanishcue_build=${variant}`, { method: 'GET' });
+}
+
+/** Permanent redirect from a legacy `?lang=` URL to its clean URL; the cookie keeps the language. */
+function languageRedirect(target: URL, locale: string): Response {
+  const headers = new Headers({ Location: target.toString(), 'Cache-Control': 'private, no-store' });
+  headers.append('Set-Cookie', `${LOCALE_COOKIE}=${locale}; Max-Age=31536000; Path=/; SameSite=Lax`);
+  setSecurityHeaders(headers, target, locale);
+  return new Response(null, { status: 301, headers });
 }
 
 function noStoreRedirect(target: URL, locale: string, status = 302): Response {
@@ -206,6 +237,11 @@ const app = {
     const routedRequest = new Request(request, { headers: routedHeaders });
 
     let pathname:string;try{pathname=decodeURIComponent(pagePath).replace(/\/+$/, '')||'/'}catch{return new Response('Bad request',{status:400})}
+    if (requestedLocale && (request.method === 'GET' || request.method === 'HEAD') && !rscPayload && redirectsLanguageQuery(pathname)) {
+      const clean = new URL(url);
+      clean.searchParams.delete('lang');
+      return languageRedirect(clean, requestedLocale);
+    }
     const lesson=lessonAtPath(pathname,lessons);
     const premiumBoard=isPremiumBoardPath(pathname);
     const autoestudio=isAutoestudioPath(pathname);
@@ -234,6 +270,20 @@ const app = {
     const owner=ownerFromHeaders(verifiedHeaders);
     const fullAccess=fullAccessFromHeaders(verifiedHeaders);
     const verifiedLocale=localeFromHeaders(verifiedHeaders);
+    const edgeKey = !identityAware && !lesson && !premiumBoard && !premiumAutoestudio && !autoestudio && !administrative && !shareApi && !premiumAudio && !rscPayload
+      ? edgeCacheKey(request, url, pathname, env.SPANISHCUE_DEPLOYMENT)
+      : null;
+    if (edgeKey) {
+      const store = edgeCache();
+      const cached = store ? await store.match(edgeKey).catch(() => undefined) : undefined;
+      if (cached) {
+        const hit = new Response(cached.body, cached);
+        hit.headers.set('Cache-Control', PUBLIC_HTML_CACHE_CONTROL);
+        hit.headers.set('X-SpanishCue-Cache', 'HIT');
+        setSecurityHeaders(hit.headers, url, verifiedLocale);
+        return hit;
+      }
+    }
     if (premiumAudio && !fullAccess) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
@@ -272,6 +322,10 @@ const app = {
     const response = immutableAsset || publicMedia
       ? await env.ASSETS.fetch(verifiedRequest)
       : await handler.fetch(verifiedRequest, env, ctx);
+    const edgeStorable = Boolean(edgeKey) && !immutableAsset && !publicMedia && response.status === 200
+      && !response.headers.has('Set-Cookie')
+      && /^text\/html/i.test(response.headers.get('Content-Type') || '');
+    const edgeCopy = edgeStorable ? response.clone() : null;
     const safeResponse=publicMedia
       ? assetResponse(response,url.pathname)
       : new Response(response.body,response);
@@ -285,8 +339,17 @@ const app = {
         ? 'public, max-age=31536000, immutable'
         : publicCacheAllowed && publicMedia
           ? 'public, max-age=86400, stale-while-revalidate=604800'
-          : 'private, no-store',
+          : edgeCopy
+            ? PUBLIC_HTML_CACHE_CONTROL
+            : 'private, no-store',
     );
+    if (edgeKey && edgeCopy) {
+      safeResponse.headers.set('X-SpanishCue-Cache', 'MISS');
+      const stored = new Response(edgeCopy.body, edgeCopy);
+      stored.headers.set('Cache-Control', `public, s-maxage=${EDGE_HTML_TTL_SECONDS}`);
+      const store = edgeCache();
+      if (store) ctx.waitUntil(store.put(edgeKey, stored).catch(() => undefined));
+    }
     setSecurityHeaders(safeResponse.headers,url,verifiedLocale);
     if (requestedLocale) {
       safeResponse.headers.append(
