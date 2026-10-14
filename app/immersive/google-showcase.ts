@@ -34,4 +34,3 @@ export function showcase():ShowcaseGroup[]{
   return {...item,...base,free,preview:item.preview??(free?base.path:undefined)};
  })}));
 }
-
