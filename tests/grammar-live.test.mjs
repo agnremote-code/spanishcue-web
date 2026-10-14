@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 import {createRequire} from 'node:module';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {JSDOM} from 'jsdom';
 import React,{act} from 'react';
 const bootstrap=new JSDOM('<!doctype html><html><body></body></html>');
@@ -243,6 +245,14 @@ test('the A0 first class: bilingual by default, the grandparents story, the real
   for(const text of ['abuela','abuelo','vos','Soy Alex','Estoy en Sídney','/audio/grammar-live/239.mp3','/noche-abierta?level=A0'])assert.ok(all.includes(text),text);
   const listen=lesson.stages[3].steps[0].blocks.find(b=>b.kind==='listen');
   assert.ok(listen.gist&&listen.details.length>=4&&listen.transcript&&listen.reply.teacher&&listen.reply.self,'listen twice, choose, answer, transcript');
+  // The grandmother's recording is built from the exact transcript the class shows (see live/audio).
+  const spoken=listen.transcript.replace(/\[\[([^\]|]+)\|[a-z]+\]\]/g,'$1');
+  const clip=JSON.parse(readFileSync('app/grammar-classroom/live/audio/clips.json','utf8')).clips.find(c=>c.id===239);
+  assert.equal(clip.text,spoken);assert.match(clip.voice,/^es-AR-/,'an Argentine voice for the abuela');
+  const recorded=JSON.parse(readFileSync('app/grammar-classroom/live/audio/manifest.json','utf8')).clips.find(c=>c.id===239);
+  assert.equal(recorded.transcriptSha256,createHash('sha256').update(clip.text).digest('hex'),'the audio matches the current transcript');
+  assert.equal(recorded.sha256,createHash('sha256').update(readFileSync('public'+listen.src)).digest('hex'),'the asset matches the manifest');
+  assert.ok(recorded.durationSeconds>10&&recorded.durationSeconds<90);
   const write=lesson.stages[5].steps[0].blocks.find(b=>b.kind==='write');
   assert.ok(write.checks.length>=3,'the writing review looks for soy / estoy, not desde / hace');
   const review=reviewWithRules('Hola, abuela. Soy Alex. Estoy en casa. Soy feliz. ¿Y tú? ¿Cómo estás?',write.checks,write.warnings);

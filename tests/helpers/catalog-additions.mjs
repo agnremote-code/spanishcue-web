@@ -13,7 +13,8 @@ const additions = [
       'app/grammar-classroom/catalog.ts':[["  [239, 'A0', 'ser-estar', 'clase-inicial', 'Clase inicial: tu primer «hola» en español', 'El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.', 50, []],\n] as const;\n/** When each addition reached the library (the «Nuevo» badge). */\nconst addedAt: Record<number, string> = { 239: '2026-10-14' };","] as const;"],["news:{addedAt:addedAt[id] ?? '2026-10-07',featured:true}","news:{addedAt:'2026-10-07',featured:true}"]],
       'tests/grammar-classroom.test.mjs':[[' assert.equal(grammar.length,58);\n for(const id of [230,231,232,233,234,235,239]){',' assert.equal(grammar.length,57);\n for(const id of [230,231,232,233,234,235]){'],[' assert.equal(new Set(grammar.map(l=>l.id)).size,58);',' assert.equal(new Set(grammar.map(l=>l.id)).size,57);']],
       'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 131);','assert.equal(lessons.length, 130);'],["['app/grammar-classroom/catalog.ts','app/grammar-classroom/live/LiveClassroom.tsx','app/grammar-classroom/live/lessons/g239.ts','app/argentina/layout.tsx'","['app/argentina/layout.tsx'"]],
-      'tests/rendered-html.test.mjs':[['assert.match(html,/109(?:<!-- -->|\\s)+resultados/);assert.match(html,/124(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/108(?:<!-- -->|\\s)+resultados/);assert.match(html,/123(?:<!-- -->|\\s)+clases totales/);']],
+      'tests/teacher-access.test.mjs':[[' assert.equal(grammar.length,58);',' assert.equal(grammar.length,57);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/58 clases/);','assert.match(html,/57 clases/);'],['assert.match(html,/109(?:<!-- -->|\\s)+resultados/);assert.match(html,/124(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/108(?:<!-- -->|\\s)+resultados/);assert.match(html,/123(?:<!-- -->|\\s)+clases totales/);']],
     },
   },
   {
