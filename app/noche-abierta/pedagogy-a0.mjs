@@ -135,7 +135,7 @@ export const A0_ROWS = {
   fila: {
     situation: t("Esperas en la barra. Una persona pregunta: «¿Estás en la fila?».", "You wait at the bar. Someone asks: “Are you in the line?”"),
     prompt: t("¿Qué respondes?", "What do you answer?"),
-    options: [t("Sí, espero mi turno.", "Yes, I’m waiting my turn."), t("No, ya pedí.", "No, I already ordered."), t("No, busco la salida.", "No, I’m looking for the exit.")],
+    options: [t("Sí, espero mi turno.", "Yes, I’m waiting my turn."), t("No, ya tengo lo mío.", "No, I already have mine."), t("No, busco la salida.", "No, I’m looking for the exit.")],
     personal: t("¿Esperas mucho en tu ciudad? ¿Dónde?", "Do you wait a lot in your city? Where?"),
     words: [t("la fila", "the line"), t("esperar", "to wait"), t("mi turno", "my turn"), t("la salida", "the exit")],
   },

@@ -860,10 +860,6 @@
     },
     {
       "path": "app/noche-abierta/pedagogy-a0.mjs",
-      "text": "No, I already ordered."
-    },
-    {
-      "path": "app/noche-abierta/pedagogy-a0.mjs",
       "text": "No, I’m looking for the exit."
     },
     {
@@ -3061,6 +3057,10 @@
     {
       "path": "app/noche-abierta/street/a0.mjs",
       "text": "Joaquín opens his arms. Very happy."
+    },
+    {
+      "path": "app/noche-abierta/pedagogy-a0.mjs",
+      "text": "No, I already have mine."
     }
   ]
 }

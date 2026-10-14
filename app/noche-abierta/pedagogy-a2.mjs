@@ -9,7 +9,7 @@ export const A2_ROWS = {
     "Una mesa cerca de la ventana, por favor.",
   ]],
   "cafe-equivocado": ["Pediste un té con leche y te trajeron un café. Todavía no lo probaste.", "¿Cómo lo dices?", [
-    "Perdona, yo pedí un té con leche, no un café.",
+    "Perdona, lo mío era un té con leche, no un café.",
     "No importa, me quedo con el café.",
     "¿El café cuesta lo mismo que el té?",
   ]],
@@ -29,7 +29,7 @@ export const A2_ROWS = {
     "Hola, mejor nos vemos mañana en el café.",
   ]],
   "resto-cuenta": ["Cenaste con amigos. Tú pediste solo una ensalada; los demás pidieron carne y vino. Llega la cuenta.", "¿Qué propones?", [
-    "Yo pago lo mío, porque solo comí una ensalada.",
+    "Yo pago lo mío: solo una ensalada.",
     "Dividimos todo en partes iguales, es más fácil.",
     "Esta noche invito yo, no se preocupen.",
   ]],
@@ -68,7 +68,7 @@ export const A2_ROWS = {
     "¡Buen viaje! ¿Cuándo vuelves?",
     "¡Que te mejores pronto!",
   ]],
-  kenji: ["Kenji te preguntó por un restaurante. Le contestaste rápido y te dice: «Perdona, no entendí nada».", "¿Qué haces?", [
+  kenji: ["Kenji te preguntó por un restaurante. Le contestaste rápido y te dice: «Perdona, no entiendo nada».", "¿Qué haces?", [
     "Se lo repito más despacio y con palabras más simples.",
     "Se lo repito igual, pero más rápido.",
     "Cambio de tema y le pregunto de dónde es.",
@@ -95,7 +95,7 @@ export const A2_ROWS = {
   ]],
   fila: ["Llevas cinco minutos esperando en la barra. Alguien llega y pregunta: «¿Tú estás en la fila?».", "¿Qué le contestas?", [
     "Sí, estoy esperando desde hace cinco minutos.",
-    "No, yo ya pedí, pasa tú.",
+    "No, yo ya tengo lo mío, pasa tú.",
     "No, estoy buscando la salida.",
   ]],
   caro: ["Tus amigos quieren ir a un bar nuevo donde una bebida cuesta el doble. Tú ya gastaste bastante.", "¿Qué propones?", [

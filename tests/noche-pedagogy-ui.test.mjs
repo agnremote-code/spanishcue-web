@@ -69,7 +69,7 @@ test('tablet header uses the compact level picker and keeps all levels selectabl
     const picker = document.querySelector('.na-top .na-levels-compact button');
     assert.ok(picker, 'compact header leaves room for the lesson title');
     await act(() => picker.click());
-    assert.equal(document.querySelectorAll('.na-levels-pop [role="radio"]').length, 6);
+    assert.equal(document.querySelectorAll('.na-levels-pop [role="radio"]').length, 7);
     await act(() => document.querySelector('.na-levels-pop [data-level="C1"]').click());
     assert.equal(document.querySelector('.na-levels-compact button').textContent, 'C1');
   } finally { await act(() => root.unmount()); window.matchMedia = matchMedia; }
