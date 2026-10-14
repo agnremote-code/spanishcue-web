@@ -41,7 +41,6 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
         if (!body || typeof body !== "object" || !("subscription" in body)) throw new Error("subscription_unavailable");
         return body.subscription as Subscription | null;
       });
-    setLoadFailed(false);
     load()
       .then(async (current) => {
         // A Paddle renewal whose webhook never arrived: re-read it from Paddle
@@ -57,7 +56,7 @@ export default function SubscriptionManager({ fullAccess }: { fullAccess: boolea
     return () => controller.abort();
   }, [reload]);
 
-  if (loadFailed) return <section className="subscription-manager" role="alert"><p>{es ? "No pudimos cargar tu suscripción." : "We could not load your subscription."}</p><button type="button" onClick={() => setReload((value) => value + 1)}>{es ? "Reintentar" : "Try again"}</button></section>;
+  if (loadFailed) return <section className="subscription-manager" role="alert"><p>{es ? "No pudimos cargar tu suscripción." : "We could not load your subscription."}</p><button type="button" onClick={() => { setLoadFailed(false); setReload((value) => value + 1); }}>{es ? "Reintentar" : "Try again"}</button></section>;
   if (subscription === undefined) return <section className="subscription-manager" aria-live="polite"><p>{es ? "Cargando suscripción…" : "Loading subscription…"}</p></section>;
   if (!subscription) return fullAccess ? <section className="subscription-manager"><span>{es ? "ACCESO" : "ACCESS"}</span><h2>{es ? "Acceso administrado" : "Managed access"}</h2><p>{es ? "Esta cuenta tiene acceso completo sin una suscripción de pago asociada." : "This account has full access without an associated paid subscription."}</p></section> : null;
 
