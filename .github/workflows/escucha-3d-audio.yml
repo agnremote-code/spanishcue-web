@@ -25,7 +25,7 @@ jobs:
       - name: Install synthesis tools
         run: |
           sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
-          pip install edge-tts==7.2.8
+          pip install -U edge-tts
       - name: Synthesize
         run: |
           mkdir -p app/escucha-3d
