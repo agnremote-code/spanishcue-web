@@ -2,29 +2,23 @@ import type {Metadata} from 'next';
 import {headers} from 'next/headers';
 import {fullAccessFromHeaders,signedInFromHeaders} from '../../access-policy';
 import {demoContent} from '../../immersive/demo-content.mjs';
-import {DEMO_LEVELS} from '../../immersive/policy.mjs';
-import GoogleTeachersLanding,{type SampleActivity} from '../../immersive/GoogleTeachersLanding';
+import GoogleTeachersLanding from '../../immersive/GoogleTeachersLanding';
+import {showcase} from '../../immersive/google-showcase';
 import '../../immersive/immersive.css';
 import '../../immersive/google-teachers.css';
 
 /** Google Search campaign landing for teachers. Campaign-only: noindex, follow, like every /lp page. */
 export const metadata:Metadata={
- title:'Interactive Spanish Teaching Resources for Online Teachers | SPANISHCUE',
- description:'Ready-to-teach Spanish lessons, conversation activities and 3D worlds for online teachers, A1–C2. Explore the 3D city free. No card or sign-up.',
+ title:'Interactive Spanish Lessons for Online Teachers. Ready to Teach. | SPANISHCUE',
+ description:'3D conversation worlds, interactive grammar, listening and ready-to-use Spanish lessons for online teachers, A1–C2. Watch a real lesson free, then try PRO for US$2.',
  robots:{index:false,follow:true},
  alternates:{canonical:'https://spanishcue.com/lp/google-teachers'},
 };
 
-// The same free café scene the demo opens, at every level, so the page shows real lesson content.
-function samples():SampleActivity[]{
- return DEMO_LEVELS.map(level=>{
-  const cafe=demoContent(level)!.locations.find(l=>l.id==='cafe')!;
-  const a=cafe.activities[0];
-  return {level,venue:cafe.name,title:a.title,situation:a.situation??'',prompt:a.prompt??'',options:(a.options??[]).map(o=>o.label),close:a.close??'',teacher:a.teacher??[]};
- });
-}
+const TOUR_LEVEL='A2';
 
 export default async function Page(){
  const h=await headers();
- return <GoogleTeachersLanding pro={fullAccessFromHeaders(h)} signedIn={signedInFromHeaders(h)} samples={samples()} />;
+ const cafe=demoContent(TOUR_LEVEL)!.locations.find(l=>l.id==='cafe')!;
+ return <GoogleTeachersLanding pro={fullAccessFromHeaders(h)} signedIn={signedInFromHeaders(h)} cafe={cafe} level={TOUR_LEVEL} showcase={showcase()} />;
 }
