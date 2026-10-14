@@ -5,6 +5,7 @@
 // the end one question about the learner's own life to answer aloud.
 import { useEffect, useRef, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import Bi from './Bi';
+import { enOf, esOf } from './bilingual.mjs';
 import { speakLines, stopSpeaking } from './voice';
 import type { Level } from './engine.mjs';
 import { encounterById, itemById, streetView, type StreetState } from './street.mjs';
@@ -65,7 +66,7 @@ export default function StreetCard({ street, level, teacher, onChoose, onBack, o
               <span>
                 {choice.item && <small className="na-street-use"><ItemIcon id={choice.item} size={16} />{choice.act || `Usas ${item?.name.toLowerCase() ?? 'tu objeto'}`}</small>}
                 {!choice.item && choice.act && <small className="na-street-use">{choice.act}</small>}
-                «<Bi text={choice.say} />»
+                «{esOf(choice.say)}»{enOf(choice.say) && <span className="na-en" lang="en">{enOf(choice.say)}</span>}
               </span>
             </button>
           </li>)}</ol>
