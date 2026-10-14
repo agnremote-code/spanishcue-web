@@ -13,7 +13,7 @@ export type TourScene='idle'|'welcome'|'walk'|'choice'|'talk'|'end';
 const DURATION:Partial<Record<TourScene,number>>={welcome:4200,choice:6500,talk:9000};
 const WALK_LIMIT=16000;
 
-export default function GuidedTour({cafe,level,signedIn,pro,grammarHref,exploreHref,autoplay}:{cafe:Location;level:string;signedIn:boolean;pro:boolean;grammarHref:string;exploreHref:string;autoplay:boolean}){
+export default function GuidedTour({cafe,level,signedIn,pro,exploreHref,autoplay,onExploreMore,onBuyClick}:{cafe:Location;level:string;signedIn:boolean;pro:boolean;exploreHref:string;autoplay:boolean;onExploreMore:()=>void;onBuyClick:()=>void}){
  const [Scene,setScene]=useState<ComponentType<DemoSceneProps>|null>(null);
  const [scene,setSceneState]=useState<TourScene>('idle');
  const [ready,setReady]=useState(false);const [fallback,setFallback]=useState(false);
@@ -80,7 +80,7 @@ export default function GuidedTour({cafe,level,signedIn,pro,grammarHref,exploreH
  const label=scene==='welcome'?'Welcome':scene==='walk'?'01 · Mission':scene==='choice'?'02 · Choice':scene==='talk'?'03 · Conversation':scene==='end'?'Next step':'';
  return <div ref={host} className={`gt-tour gt-tour-${scene}${fallback?' gt-tour-fallback':''}`} data-scene={scene} aria-label="Guided teacher preview of Noche Abierta">
   <div className="gt-tour-stage">
-   {!fallback&&Scene&&<Scene paused={paused||scene==='idle'&&!wanted} travel={travel} autopilot={pilot} guided onArrive={()=>arrive()} onInteract={()=>{}} onGate={()=>{}} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={false} />}
+   {!fallback&&Scene&&<Scene paused={paused||scene==='end'||scene==='idle'&&!wanted} travel={travel} autopilot={pilot} guided onArrive={()=>arrive()} onInteract={()=>{}} onGate={()=>{}} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={false} />}
    {fallback&&<video ref={video} className="gt-tour-video" muted playsInline loop preload="none" poster="/brand/campaign/noche-demo-poster.webp" aria-label="Real Noche Abierta gameplay" />}
    {(!ready&&!fallback)&&<div className="gt-tour-poster" style={{backgroundImage:'url(/brand/campaign/noche-demo-poster.webp)'}}>
     {wanted?<span className="gt-tour-loading" role="status"><i/>Loading the city…</span>:<button type="button" className="im-primary" onClick={()=>host.current?.dispatchEvent(new Event('tour-start'))}>Watch a real lesson ▶</button>}
@@ -105,11 +105,11 @@ export default function GuidedTour({cafe,level,signedIn,pro,grammarHref,exploreH
     </>}
    </div>}
    {scene==='end'&&<div className="gt-tour-end">
-    <span className="im-eyebrow">THAT WAS ONE SCENE OF ONE LESSON</span>
-    <h3>Teach it today.</h3>
-    <p>Full city, interactive grammar, listening and homework for A1–C2.</p>
-    {!pro?<div className="gt-tour-checkout"><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>:<Link className="im-primary" href="/noche-abierta">Open the full city ↗</Link>}
-    <div className="gt-tour-end-links"><a className="gt-secondary" href={grammarHref}>EXPLORE AN INTERACTIVE GRAMMAR LESSON ↓</a><Link className="gt-quiet" href={exploreHref}>Explore the free city yourself ↗</Link></div>
+    <span className="im-eyebrow">THAT&apos;S ONE ACTIVITY</span>
+    <h3>Imagine your whole teaching week.</h3>
+    <p>Full city, interactive grammar, listening and homework for A1–C2, ready to open in your next class.</p>
+    {!pro?<div className="gt-tour-checkout" onClickCapture={onBuyClick}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>:<Link className="im-primary" href="/noche-abierta">Open the full city ↗</Link>}
+    <div className="gt-tour-end-links"><button type="button" className="gt-secondary" onClick={onExploreMore}>EXPLORE ANOTHER LESSON ↓</button><Link className="gt-quiet" href={exploreHref}>Explore the free city yourself ↗</Link></div>
    </div>}
   </div>
   {scene!=='idle'&&<div className="gt-tour-bar">
