@@ -11,6 +11,8 @@ import './world.css';
 
 export type WorldProps = {
   paused: boolean;
+  /** Comprensión auditiva: stations open a listening. */
+  listening?: boolean;
   visited: CategoryId[];
   completed: boolean;
   unlocked: boolean;
@@ -322,7 +324,7 @@ export default function World3D(props: WorldProps) {
         // A new chapter of the climb: a title card the first time each stage is reached.
         if (stageIndex > highestStage && player.grounded) { highestStage = stageIndex; if (!summitReached) { setBanner({ index: stageIndex, key: elapsed }); bannerUntil = elapsed + 3.6; } }
         if (bannerUntil && elapsed > bannerUntil) { bannerUntil = 0; setBanner(null); }
-        if (elapsed > toastUntil) setHint(currentZone ? 'Punto de regreso guardado. Pulsa E para conversar.' : currentMicro ? 'Momento rápido: responde en voz alta y pulsa E.' : STAGE_HINTS[stageIndex]);
+        if (elapsed > toastUntil) setHint(currentZone ? (live.current.listening ? 'Punto de regreso guardado. Pulsa E para escuchar.' : 'Punto de regreso guardado. Pulsa E para conversar.') : currentMicro ? 'Momento rápido: responde en voz alta y pulsa E.' : STAGE_HINTS[stageIndex]);
         live.current.onPosition?.({ x: player.x, y: player.y, z: player.z });
       }
       if (saveTime > 2) { saveTime = 0; save(); }
@@ -348,7 +350,7 @@ export default function World3D(props: WorldProps) {
     <div className="bfg-world-tools"><button onClick={() => setMapOpen(v => !v)} aria-label="Abrir mapa del bosque" aria-expanded={mapOpen}>Mapa <kbd>M</kbd></button><button onClick={() => api.current?.lookAhead()} aria-label="Mirar hacia el destino">Ver destino <kbd>Q</kbd></button><button onClick={() => api.current?.view()} aria-label="Cambiar distancia de cámara" aria-pressed={view !== 1}>Cámara · {CAMERA_PRESETS[view].label} <kbd>V</kbd></button></div>
     <button className="bfg-world-minimap" onClick={() => setMapOpen(true)} aria-label="Ampliar mapa: paradas, altura y posición"><canvas width={190} height={160} ref={mapCanvas} /><span>▲ Tú · ● Paradas · ▮ Altura</span></button>
     <div className="bfg-world-interaction">
-      {activeZone && <button className="bfg-world-converse" disabled={props.paused || mapOpen || (activeZone === 'final' && !props.unlocked)} onClick={() => api.current?.interact()}><kbd>E</kbd><span>{activeZone === 'final' && !props.unlocked ? 'Mirador cerrado' : props.visited.includes(activeZone) ? 'Volver a conversar' : 'Conversar'}</span></button>}
+      {activeZone && <button className="bfg-world-converse" disabled={props.paused || mapOpen || (activeZone === 'final' && !props.unlocked)} onClick={() => api.current?.interact()}><kbd>E</kbd><span>{activeZone === 'final' && !props.unlocked ? 'Mirador cerrado' : props.listening ? (props.visited.includes(activeZone) ? 'Volver a escuchar' : 'Escuchar') : props.visited.includes(activeZone) ? 'Volver a conversar' : 'Conversar'}</span></button>}
       <p className="bfg-world-hint" role="status">{activeZone === 'final' && !props.unlocked ? 'Sube hasta la cima (o habla sobre 10 preguntas en 3 paradas) para abrir el mirador.' : hint}</p>
     </div>
     {mapOpen && <div className="bfg-world-map" ref={mapPanel} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Mapa del bosque"><div className="bfg-world-map-heading"><div><span>TU ASCENSO</span><strong>Del suelo del bosque a las nubes</strong></div><button onClick={() => setMapOpen(false)} aria-label="Cerrar mapa">✕</button></div><canvas ref={largeMap} width={640} height={520} /><p>▲ Tú · □ Regreso · ● Pendiente · <span>●</span> Conversada · ◯ Siguiente</p><small>Vista desde arriba: las vueltas interiores están más altas. La barra muestra tu altura real.</small></div>}

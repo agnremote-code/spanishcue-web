@@ -1,0 +1,115 @@
+/* Comprensión auditiva in the 3D games: one look shared by every world. */
+.e3-backdrop{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(6,9,18,.58);backdrop-filter:blur(3px);font-family:inherit}
+.e3-card{position:relative;width:min(760px,100%);max-height:min(92vh,980px);display:flex;flex-direction:column;background:#fbfaf7;color:#1c2130;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.45);overflow:hidden}
+.e3-close{position:absolute;top:12px;right:14px;z-index:2;width:38px;height:38px;border:0;border-radius:50%;background:#eef0f5;color:#1c2130;font-size:24px;line-height:1;cursor:pointer}
+.e3-close:hover{background:#e1e5ee}
+.e3-empty{padding:48px 28px;text-align:center;color:#5a6275}
+.e3-kicker{margin:0 0 4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6a5bd6;font-weight:700}
+.e3-head{padding:22px 64px 12px 26px;border-bottom:1px solid #eceae4}
+.e3-head h2,.e3-list h2{margin:0;font-size:clamp(22px,3vw,28px);line-height:1.15;font-weight:700}
+.e3-voices{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 12px;font-size:13px;color:#5a6275}
+.e3-voices b{color:#1c2130;font-weight:600}
+.e3-steps{display:flex;gap:6px;margin:0;padding:0;list-style:none;overflow-x:auto}
+.e3-steps button{display:flex;align-items:center;gap:6px;white-space:nowrap;border:1px solid #e3e1da;background:#fff;color:#5a6275;border-radius:999px;padding:5px 11px 5px 5px;font:inherit;font-size:13px;cursor:pointer}
+.e3-steps button span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#eef0f5;font-size:12px;font-weight:700}
+.e3-steps .is-now button{border-color:#6a5bd6;color:#1c2130;font-weight:600}
+.e3-steps .is-now button span{background:#6a5bd6;color:#fff}
+.e3-steps .is-past button span{background:#d9f2e4;color:#17804a}
+.e3-body{flex:1;overflow-y:auto;padding:16px 26px 24px}
+.e3-player{position:sticky;top:-16px;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:-16px -26px 14px;padding:12px 26px;background:#fbfaf7ee;border-bottom:1px solid #eceae4}
+.e3-player.is-big{position:static;margin:0 0 16px;padding:18px;border:1px solid #e6e3f7;border-radius:16px;background:linear-gradient(135deg,#f3f1ff,#fff)}
+.e3-play{width:48px;height:48px;border:0;border-radius:50%;background:#6a5bd6;color:#fff;font-size:17px;cursor:pointer;flex:none}
+.e3-player.is-big .e3-play{width:60px;height:60px;font-size:20px}
+.e3-play:disabled{opacity:.5}
+.e3-back5{border:1px solid #dcd9ee;background:#fff;color:#4a4f60;border-radius:999px;padding:7px 10px;font:inherit;font-size:13px;cursor:pointer}
+.e3-track{flex:1;min-width:160px;display:flex;align-items:center;gap:10px}
+.e3-track input{flex:1;accent-color:#6a5bd6}
+.e3-track span{font-variant-numeric:tabular-nums;font-size:13px;color:#5a6275;white-space:nowrap}
+.e3-error{width:100%;margin:0;font-size:13px;color:#b42318}
+.e3-error button{border:0;background:none;color:#6a5bd6;text-decoration:underline;font:inherit;cursor:pointer}
+.e3-step h3{margin:4px 0 12px;font-size:19px}
+.e3-context{margin:0 0 14px;font-size:16px;line-height:1.5}
+.e3-listens{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.e3-listens>div{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid #eceae4;border-radius:14px;background:#fff}
+.e3-listens span{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:#eef0f5;font-weight:700;font-size:13px}
+.e3-listens p{margin:0;display:grid;gap:2px}
+.e3-listens small{color:#5a6275;font-size:13px;line-height:1.35}
+.e3-listens .is-now{border-color:#6a5bd6}
+.e3-listens .is-now span{background:#6a5bd6;color:#fff}
+.e3-listens .is-done span{background:#d9f2e4;color:#17804a}
+.e3-tip{margin:0 0 12px;font-size:14px;color:#5a6275}
+.e3-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.e3-primary,.e3-secondary{border-radius:999px;padding:11px 18px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.e3-primary{border:0;background:#6a5bd6;color:#fff}
+.e3-primary:disabled{background:#c9c4ee;cursor:default}
+.e3-secondary{border:1px solid #d8d5e8;background:#fff;color:#1c2130}
+.e3-link{border:0;background:none;padding:6px 2px;color:#6a5bd6;font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
+.e3-mc{display:grid;gap:16px;margin:0;padding:0;list-style:none;counter-reset:q}
+.e3-mc>li>p{margin:0 0 8px;font-weight:600;line-height:1.4}
+.e3-mc>li>div{display:grid;gap:6px}
+.e3-option{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid #e3e1da;background:#fff;color:#1c2130;border-radius:12px;padding:9px 12px;font:inherit;font-size:15px;line-height:1.35;cursor:pointer}
+.e3-option kbd{display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:8px;background:#eef0f5;font:inherit;font-size:13px;font-weight:700}
+.e3-option:not(:disabled):hover{border-color:#6a5bd6}
+.e3-option:disabled{cursor:default}
+.e3-option.is-right{border-color:#2f9e64;background:#e9f7ef}
+.e3-option.is-right kbd{background:#2f9e64;color:#fff}
+.e3-option.is-wrong{border-color:#d9534f;background:#fdeeee}
+.e3-option.is-wrong kbd{background:#d9534f;color:#fff}
+.e3-option.is-off{opacity:.6}
+.e3-score{margin:14px 0 0;font-weight:600}
+.e3-open{display:grid;gap:8px}
+.e3-open button{display:flex;gap:10px;align-items:flex-start;text-align:left;border:1px solid #e3e1da;background:#fff;color:#1c2130;border-radius:14px;padding:12px 14px;font:inherit;font-size:16px;line-height:1.4;cursor:pointer}
+.e3-open button span{display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;background:#eef0f5;font-size:13px;font-weight:700}
+.e3-open button[aria-pressed=true]{border-color:#6a5bd6;background:#f3f1ff}
+.e3-open button[aria-pressed=true] span{background:#6a5bd6;color:#fff}
+.e3-answer{margin-top:14px;padding:14px;border-radius:14px;background:#f6f5f1}
+.e3-say{margin:0 0 6px;font-weight:600}
+.e3-model{margin:6px 0 0;line-height:1.5}
+.e3-model small{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#6a5bd6;font-weight:700}
+.e3-gaps{font-size:18px;line-height:2.2;margin:0}
+.e3-gaps input{margin:0 4px;padding:2px 8px;border:0;border-bottom:2px solid #6a5bd6;border-radius:6px 6px 0 0;background:#f3f1ff;color:#1c2130;font:inherit;font-size:17px;min-width:4ch;max-width:100%}
+.e3-gaps input:focus{outline:2px solid #6a5bd6;outline-offset:1px}
+.e3-gaps input.is-right{border-color:#2f9e64;background:#e9f7ef}
+.e3-gaps input.is-wrong{border-color:#d9534f;background:#fdeeee}
+.e3-transcript{display:grid;gap:10px;padding:16px;border-radius:14px;background:#fff;border:1px solid #eceae4}
+.e3-transcript p{margin:0;line-height:1.6;font-size:16px}
+.e3-transcript b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6a5bd6}
+.e3-gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:14px 0 0}
+.e3-gloss div{padding:10px 12px;border-radius:12px;background:#f6f5f1}
+.e3-gloss dt{font-weight:700}
+.e3-gloss dd{margin:2px 0 0;font-size:14px;color:#4a4f60}
+.e3-list{padding:24px 26px}
+.e3-lede{margin:6px 0 14px;color:#5a6275}
+.e3-list ol{display:grid;gap:8px;margin:0;padding:0;list-style:none;max-height:62vh;overflow-y:auto}
+.e3-list button{width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid #e3e1da;background:#fff;color:#1c2130;border-radius:14px;padding:10px 14px;font:inherit;cursor:pointer}
+.e3-list button:hover{border-color:#6a5bd6}
+.e3-list button>span:nth-child(2){display:grid;gap:2px;flex:1}
+.e3-list small{color:#5a6275;font-size:13px}
+.e3-num{font-weight:700;color:#6a5bd6;font-variant-numeric:tabular-nums}
+.e3-list i{font-style:normal;color:#17804a;font-weight:700}
+.e3-list .is-done{background:#f4fbf7}
+/* The switch next to each game's level picker. */
+.e3-mode{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:10px 0}
+.e3-mode button{display:grid;gap:2px;text-align:left;padding:9px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:inherit;font:inherit;cursor:pointer}
+.e3-mode button b{font-size:15px}
+.e3-mode button small{font-size:12px;opacity:.75}
+.e3-mode button[aria-checked=true]{background:#fff;color:#1c2130;border-color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.e3-mode button[aria-checked=true] b::before{content:'● ';color:#6a5bd6}
+.e3-badge{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:10px;max-width:calc(100% - 32px);padding:8px 10px 8px 14px;border-radius:999px;background:rgba(18,20,34,.86);color:#fff;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.e3-badge>span:nth-child(2){display:grid;line-height:1.2}
+.e3-badge small{opacity:.75;font-size:12px}
+.e3-badge-dot{width:10px;height:10px;border-radius:50%;background:#9d8cff;box-shadow:0 0 0 4px rgba(157,140,255,.25);flex:none}
+.e3-badge button{border:0;border-radius:999px;padding:6px 12px;background:#fff;color:#1c2130;font:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+@media (max-width:640px){
+  .e3-backdrop{padding:0;place-items:end stretch}
+  .e3-card{width:100%;max-height:94vh;border-radius:20px 20px 0 0}
+  .e3-head{padding:18px 56px 10px 16px}
+  .e3-body{padding:14px 16px 22px}
+  .e3-player{margin:-14px -16px 12px;padding:10px 16px;top:-14px}
+  .e3-player.is-big{margin:0 0 14px;padding:14px}
+  .e3-listens{grid-template-columns:1fr}
+  .e3-list{padding:20px 16px}
+  .e3-gaps{font-size:16px}
+  .e3-badge{bottom:auto;top:64px}
+}
+.e3-card:focus{outline:none}

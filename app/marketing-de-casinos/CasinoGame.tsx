@@ -9,6 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent a
 import { FLOORS, SCENES, sceneById } from './layout.mjs';
 import { LEVELS } from './levels.mjs';
 import { MONEY, STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, setMoney, undo } from './engine.mjs';
+import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
 import './casino.css';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="gm-loading">Abriendo las puertas del casino…</div> });
@@ -44,6 +45,9 @@ export default function CasinoGame() {
   const [teacher, setTeacher] = useState(true);
   const [talkAt, setTalkAt] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
+  // Comprensión auditiva: the circles open a listening (undefined = closed, null = the list).
+  const [mode, setMode] = useListeningMode('casino');
+  const [listenAt, setListenAt] = useState<string | null | undefined>(undefined);
 
   useEffect(() => {
     const t = window.setTimeout(() => { setState(initialState()); setHas3d(webglAvailable()); setReady(true); }, 0);
@@ -58,10 +62,11 @@ export default function CasinoGame() {
   const done = doneFor(state);
   const count = progress(state);
   const level = LEVELS.find(l => l.id === state.level)!;
+  const [heard, markHeard] = useListeningDone('casino', state.level);
   const floorInfo = FLOORS.find(f => f.id === state.floor)!;
   const money = MONEY.find(m => m.id === state.money) ?? MONEY[2];
 
-  const open = useCallback((id: string) => { setTalkAt(0); setElevator(false); setList(false); setState(s => openScene({ ...s, floor: sceneById(id)?.floor ?? s.floor }, id)); }, []);
+  const open = useCallback((id: string) => { if (mode === 'escucha') { setElevator(false); setList(false); setListenAt(id); return; } setTalkAt(0); setElevator(false); setList(false); setState(s => openScene({ ...s, floor: sceneById(id)?.floor ?? s.floor }, id)); }, [mode]);
   const close = useCallback(() => setState(s => closeScene(s)), []);
   const goFloor = (floor: number) => {
     setElevator(false);
@@ -95,7 +100,7 @@ export default function CasinoGame() {
   const nearScene = near?.kind === 'scene' ? sceneById(near.id) : null;
 
   return <main className="gm" data-level={state.level} data-floor={state.floor}>
-    {ready && has3d && <World3D floor={state.floor} sceneId={state.scene?.id ?? null} done={done} paused={!entered || elevator || list} intro={!entered}
+    {ready && has3d && <World3D floor={state.floor} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} done={mode === 'escucha' ? heard : done} paused={!entered || elevator || list || listenAt !== undefined} intro={!entered}
       onSpot={open} onElevator={() => setElevator(true)} onNear={setNear} onFloorShown={() => undefined} onFail={() => setHas3d(false)} />}
     {ready && !has3d && <div className="gm-flat" aria-hidden="true" />}
 
@@ -111,6 +116,8 @@ export default function CasinoGame() {
             <b>{l.label}</b><small>{l.hint}</small>
           </button>)}
         </div>
+        <ModeSwitch mode={mode} onChange={setMode} />
+        {mode === 'escucha' && <p className="gm-note">Comprensión auditiva: en cada círculo blanco escuchas una escena con voces de distintos países. Dos escuchas, preguntas, completar y leer.</p>}
         {state.level === 'C1' && <p className="gm-note">C1 es otra historia: Valentina es la nueva directora de marketing y cada escena es una decisión con datos.</p>}
         <p className="gm-label">¿Con cuánto dinero entra?</p>
         <div className="gm-levels gm-money" role="radiogroup" aria-label="Dinero">
@@ -128,16 +135,18 @@ export default function CasinoGame() {
       <div className="gm-floor"><span>Piso {floorInfo.id} · {money.label}</span><b>{floorInfo.name}</b></div>
       <div className="gm-hud-right">
         <span className="gm-progress">{count.done} de {count.total} escenas · {level.label}</span>
-        <button type="button" onClick={() => setList(true)}>Escenas</button>
+        <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Escenas'}</button>
         <button type="button" onClick={() => setEntered(false)}>Nivel y dinero</button>
       </div>
     </header>}
 
-    {entered && !state.scene && !elevator && !list && near && <div className="gm-prompt" role="status">
-      {nearScene ? <button type="button" onClick={() => open(nearScene.id)}><kbd>E</kbd>Hablar con {nearScene.name}</button>
+    {entered && mode === 'escucha' && listenAt === undefined && !state.scene && !elevator && <ListeningBadge game="casino" done={heard} onList={() => setListenAt(null)} />}
+    {listenAt !== undefined && <ListeningCard game="casino" level={state.level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} />}
+    {entered && !state.scene && listenAt === undefined && !elevator && !list && near && <div className="gm-prompt" role="status">
+      {nearScene ? <button type="button" onClick={() => open(nearScene.id)}><kbd>E</kbd>{mode === 'escucha' ? `Escuchar · ${nearScene.place}` : `Hablar con ${nearScene.name}`}</button>
         : <button type="button" onClick={() => setElevator(true)}><kbd>E</kbd>Llamar al ascensor</button>}
     </div>}
-    {entered && !state.scene && !near && !elevator && !list && <p className="gm-hint">Los círculos blancos son las escenas. El ascensor dorado lleva a los otros pisos.</p>}
+    {entered && mode !== 'escucha' && !state.scene && !near && !elevator && !list && <p className="gm-hint">Los círculos blancos son las escenas. El ascensor dorado lleva a los otros pisos.</p>}
 
     {/* ------------------------------------------------ elevator */}
     {elevator && <section className="gm-panel gm-elevator" aria-labelledby="gm-lift-h">
@@ -152,7 +161,7 @@ export default function CasinoGame() {
     {riding !== null && <div className="gm-ride" aria-live="polite"><span>{riding}</span><b>{FLOORS[riding - 1].name}</b></div>}
 
     {/* ------------------------------------------------ scene list */}
-    {(list || (ready && !has3d && entered && !state.scene)) && <section className="gm-panel gm-list" aria-labelledby="gm-list-h">
+    {(list || (ready && !has3d && entered && !state.scene && listenAt === undefined)) && <section className="gm-panel gm-list" aria-labelledby="gm-list-h">
       <h2 id="gm-list-h">Escenas · {level.story}</h2>
       {FLOORS.map(f => <div key={f.id} className="gm-list-floor">
         <h3>Piso {f.id} · {f.name}</h3>
