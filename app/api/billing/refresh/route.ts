@@ -7,6 +7,8 @@ import {
   validatePaypalPayment,
 } from "../../../paypal-server";
 import { validatePaypalOwnedSubscription } from "../../../guest-purchase-verification";
+import { paddleConfig, paddleReady } from "../../../paddle-config";
+import { reconcilePaddleSubscription } from "../../../paddle-reconcile";
 import {
   applyPaypalSubscriptionLifecycle,
   currentSubscriptionForUser,
@@ -39,10 +41,30 @@ export async function POST(request: Request) {
   const userId = accountIdFromHeaders(request.headers);
   if (!userId) return Response.json({ error: "Inicia sesión para continuar." }, { status: 401 });
   const raw = await request.text();
-  let subscriptionId = "";
-  try { subscriptionId = (JSON.parse(raw) as { subscriptionId?: unknown }).subscriptionId as string; } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
-  if (typeof subscriptionId !== "string" || !subscriptionId || subscriptionId.length > 160) return Response.json({ error: "Solicitud no válida." }, { status: 400 });
+  let subscriptionId: unknown = "";
+  try { subscriptionId = (JSON.parse(raw || "{}") as { subscriptionId?: unknown }).subscriptionId; } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
   const config = billingConfig(env);
+  // No ID means "the subscription shown in my account" (the account panel).
+  if (subscriptionId === undefined) {
+    const current = await currentSubscriptionForUser(env.DB, userId, config.paypalEnv);
+    if (!current) return Response.json({ error: "No encontramos una suscripción." }, { status: 404 });
+    subscriptionId = current.providerSubscriptionId;
+  }
+  if (typeof subscriptionId !== "string" || !subscriptionId || subscriptionId.length > 160) return Response.json({ error: "Solicitud no válida." }, { status: 400 });
+  if (/^sub_[a-z0-9]{26}$/.test(subscriptionId)) {
+    const paddle = paddleConfig(env);
+    if (!paddleReady(paddle) || config.paypalEnv !== "live") return Response.json({ accessConfirmed: false, pending: true }, { status: 202 });
+    try {
+      const updated = await reconcilePaddleSubscription(env.DB, paddle, config, userId, subscriptionId);
+      if (!updated) return Response.json({ error: "No encontramos esa suscripción." }, { status: 404 });
+      const accessConfirmed = Boolean(updated.paidThrough && updated.paidThrough > Math.floor(Date.now() / 1000));
+      return Response.json({ status: updated.status, accessConfirmed, pending: !accessConfirmed }, {
+        status: accessConfirmed ? 200 : 202, headers: { "cache-control": "no-store" },
+      });
+    } catch {
+      return Response.json({ accessConfirmed: false, pending: true }, { status: 202 });
+    }
+  }
   const local = await subscriptionForUser(env.DB, userId, subscriptionId, config.paypalEnv);
   if (!local) return Response.json({ error: "No encontramos esa suscripción." }, { status: 404 });
   if (!paypalReady(config)) return Response.json({ status: local.status, accessConfirmed: false, pending: true }, { status: 202 });

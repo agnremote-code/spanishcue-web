@@ -6,6 +6,7 @@ import {
   validatePaddleTransaction,
   getPaddleSubscription,
   getPaddleTransaction,
+  paddleAttributionFrom,
   validatePaddleClaimSubscription,
   validatePaddleClaimTransaction,
   validatePaddleSubscription,
@@ -24,6 +25,7 @@ import {
 import type { SubscriptionStatus } from "../../../../../db/billing";
 import { getPurchaseClaim, markPurchaseCheckout, updatePurchaseLifecycle } from "../../../../../db/purchase-claims";
 import { verifyGuestPaddlePayment } from "../../../../guest-purchase-verification";
+import { deliverPaddleServerConversion } from "../../../../server-conversions";
 
 export const dynamic = "force-dynamic";
 
@@ -130,10 +132,13 @@ export async function POST(request: Request) {
             userId: claim.claimedUserId, subscriptionId, customerId, priceId: payment.priceId,
             offerCode: claim.offerCode, status: subscriptionStatus(subscription.status), nextBillingTime: subscription.next_billed_at, occurredAt,
           });
-          await recordPaddleCompletedPayment(env.DB, {
+          const recorded = await recordPaddleCompletedPayment(env.DB, {
             userId: claim.claimedUserId, subscriptionId, transactionId, eventId,
             ...payment, occurredAt,
           }, billing);
+          await deliverPaddleServerConversion(env, env.DB, recorded, {
+            transactionId, amountCents: payment.amountCents, currency: payment.currency, attribution: paddleAttributionFrom(subscription),
+          });
         } else if (!(await verifyGuestPaddlePayment(env.DB, paddle, claim, transactionId, eventId))) {
           throw new Error("paddle_claim_payment_pending");
         }
@@ -159,7 +164,7 @@ export async function POST(request: Request) {
         nextBillingTime: subscription.next_billed_at,
         occurredAt,
       });
-      await recordPaddleCompletedPayment(env.DB, {
+      const recorded = await recordPaddleCompletedPayment(env.DB, {
         userId,
         subscriptionId,
         transactionId,
@@ -167,6 +172,9 @@ export async function POST(request: Request) {
         ...payment,
         occurredAt,
       }, billing);
+      await deliverPaddleServerConversion(env, env.DB, recorded, {
+        transactionId, amountCents: payment.amountCents, currency: payment.currency, attribution: paddleAttributionFrom(subscription),
+      });
       await finishPaddleWebhook(env.DB, eventId, "processed");
       return Response.json({ ok: true });
     }

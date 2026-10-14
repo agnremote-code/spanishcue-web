@@ -3,7 +3,7 @@ import { accountIdFromHeaders, fullAccessFromHeaders, safeRelativeReturnPath } f
 import { billingConfig, billingReadiness } from "../../../../billing-config";
 import { legalOperator } from "../../../../legal/operator";
 import { paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
-import { createPaddleCheckoutTransaction, getPaddleTransaction, paddleOffer } from "../../../../paddle-server";
+import { createPaddleCheckoutTransaction, getPaddleTransaction, paddleOffer, sanitizePaddleAttribution, type PaddleAttribution } from "../../../../paddle-server";
 import { getFounderOfferStatus } from "../../../../../db/billing";
 import { authorizePurchaseClaim, getOrCreatePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { lockPurchaseCheckout, markPurchaseCheckout, releasePurchaseCheckout } from "../../../../../db/purchase-claims";
@@ -41,10 +41,12 @@ export async function POST(request: Request) {
 
   let returnTo = "/";
   let offer: PaddleOffer = "monthly";
+  let attribution: PaddleAttribution = {};
   try {
     const raw = await request.text();
-    if (raw.length > 1000) throw new Error("invalid_request");
-    const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown };
+    if (raw.length > 3000) throw new Error("invalid_request");
+    const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown; attribution?: unknown };
+    attribution = sanitizePaddleAttribution(requested.attribution);
     if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial")) throw new Error("invalid_offer");
     offer = requested.offer === "trial" ? "trial" : "monthly";
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
@@ -70,7 +72,7 @@ export async function POST(request: Request) {
       if (!locked) return Response.json({ error: "Estamos preparando tu pago. Vuelve a intentarlo en unos segundos." }, { status: 409, headers });
       try {
         const transactionId = await createPaddleCheckoutTransaction(paddle, {
-          claimId: claim.claimId, offerCode: billing.founderOffer.code, offer,
+          claimId: claim.claimId, offerCode: billing.founderOffer.code, offer, attribution,
         });
         await markPurchaseCheckout(env.DB, claim.claimId, "paddle", { paymentId: transactionId });
         return Response.json({ transactionId, clientToken: paddle.clientToken }, { headers });
@@ -83,6 +85,7 @@ export async function POST(request: Request) {
       userId,
       offer,
       offerCode: billing.founderOffer.code,
+      attribution,
     });
     return Response.json(
       { transactionId, clientToken: paddle.clientToken },
