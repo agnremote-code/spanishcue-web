@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "authorization": "Owner Ale approved on 2026-10-14T11:10Z (project decision card \"¿Aprobás estos 11 textos nuevos en inglés del panel de Suscripción?\" answered \"Apruebo\") the new English copy of the /cuenta subscription panel (load error, trial, declined payment, Paddle payment portal, resubscribe). Only the exact literals listed here are approved; all other English stays protected.",
+  "additions": [
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "We could not load your subscription."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Try again"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "We could not open payment management. Please try again."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Payment declined"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "1-day trial"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Payment pending"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Expired"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "First US$15.50 charge"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Paddle could not charge the renewal. Update your card to keep your access."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Manage payment and invoices"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Subscribe again"
+    }
+  ]
+}
