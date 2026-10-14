@@ -1,6 +1,6 @@
 import type { Option } from './levels.mjs';
 export type OpenScene = { id: string; picks: number[] };
-export type GameState = { level: string; floor: number; done: Record<string, string[]>; scene: OpenScene | null };
+export type GameState = { level: string; money: string; floor: number; done: Record<string, string[]>; scene: OpenScene | null };
 export type Beat = { line: string; options: Option[]; pick: number | undefined };
 export type SceneView = {
   id: string; title: string; place: string; name: string; role: string; floor: number;
@@ -8,6 +8,10 @@ export type SceneView = {
 };
 export const STORAGE_KEY: string;
 export const DEFAULT_LEVEL: string;
+export const MONEY: { id: string; label: string; hint: string }[];
+export const DEFAULT_MONEY: string;
+export function normaliseMoney(value: unknown): string | null;
+export function setMoney(state: GameState, money: string): GameState;
 export function normaliseLevel(value: unknown): string | null;
 export function createState(level?: string): GameState;
 export function doneFor(state: GameState, level?: string): string[];

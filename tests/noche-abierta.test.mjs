@@ -551,17 +551,22 @@ test('3D world: traffic keeps moving, stops for the learner and loops', () => {
 test('3D world: keys map to the documented controls and never fire while typing', () => {
   const { keyAction, inputFrom, canUseKeys } = world;
   const expected = { KeyW: 'forward', ArrowUp: 'forward', KeyS: 'back', ArrowDown: 'back', KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right',
-    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map', Space: 'jump' };
+    ShiftLeft: 'sprint', ShiftRight: 'sprint', AltLeft: 'walk', KeyE: 'interact', Enter: 'interact', KeyF: 'vehicle', KeyV: 'camera', KeyM: 'map', Space: 'jump', KeyN: 'nitro' };
   for (const [code, action] of Object.entries(expected)) assert.equal(keyAction(code), action, code);
   assert.equal(keyAction('KeyQ'), null);
-  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false, jump: false });
-  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false, jump: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'left', 'sprint'])), { x: -1, y: 1, sprint: true, walk: false, jump: false, nitro: false });
+  assert.deepEqual(inputFrom(new Set(['forward', 'back', 'right'])), { x: 1, y: 0, sprint: false, walk: false, jump: false, nitro: false });
+  assert.equal(inputFrom(new Set(['forward', 'nitro'])).nitro, true);
+  const run = world.stepPlayer({ x: 0, z: 0, heading: 0, speed: 0 }, { x: 0, y: 1, yaw: 0 }, 0.1, [], { minX: -99, maxX: 99, minZ: -99, maxZ: 99 });
+  let fast = { x: 0, z: 0, heading: 0, speed: 0 }, slow = fast;
+  for (let i = 0; i < 40; i++) { fast = world.stepPlayer(fast, { x: 0, y: 1, yaw: 0, nitro: true }, 0.1, [], { minX: -999, maxX: 999, minZ: -999, maxZ: 999 }); slow = world.stepPlayer(slow, { x: 0, y: 1, yaw: 0, sprint: true }, 0.1, [], { minX: -999, maxX: 999, minZ: -999, maxZ: 999 }); }
+  assert.ok(run.speed > 0 && fast.speed > slow.speed * 1.5, 'N (nitro) runs far faster than Shift');
   assert.equal(canUseKeys({ tagName: 'INPUT' }), false);
   assert.equal(canUseKeys({ tagName: 'TEXTAREA' }), false);
   assert.equal(canUseKeys({ tagName: 'DIV', isContentEditable: true }), false);
   assert.equal(canUseKeys({ tagName: 'DIV' }), true);
   const help = readFileSync('app/noche-abierta/World3D.tsx', 'utf8');
-  for (const line of ['WASD / FLECHAS · CORRER', 'E · INTERACTUAR', 'SHIFT · MÁS RÁPIDO', 'ESC · SALIR']) assert.ok(help.includes(line), line);
+  for (const line of ['WASD / FLECHAS · CORRER', 'E · INTERACTUAR', 'SHIFT · MÁS RÁPIDO', 'N · NITRO', 'ESC · SALIR']) assert.ok(help.includes(line), line);
 });
 
 test('3D world: the hero is the SpanishCue mascot with his pen and a small flag', () => {

@@ -25,6 +25,8 @@ export const PLAYER_RADIUS = 0.35;
 export const WALK_SPEED = 2.6;
 export const RUN_SPEED = 6.6;
 export const SPRINT_SPEED = 9.2;
+// N (nitro): a short burst far faster than sprinting.
+export const NITRO_SPEED = 16;
 export const ACCELERATION = 30;
 export const DECELERATION = 26;
 export const TURN_RATE = 14;
@@ -306,7 +308,7 @@ export function stepPlayer(player, input, dt, boxes = SOLIDS, bounds = WORLD_BOU
   if (want) {
     const diff = angleBetween(heading, want.heading);
     heading = wrap(heading + diff * (1 - Math.exp(-TURN_RATE * step)));
-    const top = input.walk ? WALK_SPEED : input.sprint ? SPRINT_SPEED : RUN_SPEED;
+    const top = input.walk ? WALK_SPEED : input.nitro ? NITRO_SPEED : input.sprint ? SPRINT_SPEED : RUN_SPEED;
     // Facing away from where you want to go: turn first, then run.
     const facing = Math.max(0.12, Math.min(1, (Math.cos(diff) + 0.35) / 1.35));
     goal = top * want.amount * facing;
@@ -419,7 +421,7 @@ export function toMinimap(x, z) {
 }
 
 // Keyboard map: WASD and arrows move, Shift sprints, Alt walks, E acts,
-// F gets in or out, V changes the camera, M toggles the minimap.
+// Space jumps, N is the nitro, F gets in or out, V changes the camera, M toggles the minimap.
 export function keyAction(code) {
   switch (code) {
     case "KeyW": case "ArrowUp": return "forward";
@@ -429,6 +431,7 @@ export function keyAction(code) {
     case "ShiftLeft": case "ShiftRight": return "sprint";
     case "AltLeft": case "AltRight": return "walk";
     case "Space": return "jump";
+    case "KeyN": return "nitro";
     case "KeyE": case "Enter": return "interact";
     case "KeyF": return "vehicle";
     case "KeyV": return "camera";
@@ -445,6 +448,7 @@ export function inputFrom(held) {
     sprint: held.has("sprint"),
     walk: held.has("walk"),
     jump: held.has("jump"),
+    nitro: held.has("nitro"),
   };
 }
 

@@ -5,9 +5,10 @@ import {build} from 'esbuild';
 import React, {act} from 'react';
 import {createRoot} from 'react-dom/client';
 import {JSDOM} from 'jsdom';
+import {readFileSync} from 'node:fs';
 import {FLOORS, SCENES, SCENE_IDS, SPAWN, ELEVATOR, ELEVATOR_ARRIVAL, solidsFor, spotAt, atElevator} from '../app/marketing-de-casinos/layout.mjs';
 import {LEVELS, CONTENT} from '../app/marketing-de-casinos/levels.mjs';
-import {createState, openScene, choose, undo, closeScene, sceneView, progress, setLevel, resetLevel, serialise, restore, doneFor} from '../app/marketing-de-casinos/engine.mjs';
+import {MONEY, createState, openScene, choose, undo, closeScene, sceneView, progress, setLevel, setMoney, resetLevel, serialise, restore, doneFor} from '../app/marketing-de-casinos/engine.mjs';
 
 // El Gran Meridiano (ID 237): a 3D casino in Las Vegas, A1–C2, whose C1 level
 // keeps the original casino-marketing lesson.
@@ -27,10 +28,12 @@ test('one A1–C2 Modo Play lesson keeps ID 237 and its route',async()=>{
   assert.equal(isFreeLesson(237),false);
 });
 
-test('three floors, twenty scenes, and every level writes every scene',()=>{
+test('three floors, thirty scenes, and every level writes every scene for every purse',()=>{
   assert.deepEqual(FLOORS.map(f=>f.id),[1,2,3]);
-  assert.equal(SCENES.length,20);
-  assert.equal(new Set(SCENE_IDS).size,20);
+  assert.equal(SCENES.length,30);
+  assert.equal(new Set(SCENE_IDS).size,30);
+  for(const id of ['borracho','jackpot','tramposo','perdedor','despedida','pelea','gritona','habano','yate','senador'])assert.ok(SCENE_IDS.includes(id),id);
+  assert.deepEqual(MONEY.map(m=>m.id),['nada','100','500','1000','10000','100000','1000000']);
   for(const f of FLOORS)assert.ok(SCENES.filter(s=>s.floor===f.id).length>=6,`floor ${f.id} has at least six scenes`);
   assert.deepEqual(LEVELS.map(l=>l.id),['A1','A2','B1','B2','C1','C2']);
   assert.match(LEVELS.find(l=>l.id==='C1').label,/Marketing/);
@@ -40,6 +43,8 @@ test('three floors, twenty scenes, and every level writes every scene',()=>{
     for(const id of SCENE_IDS){
       const s=content[id];
       for(const key of ['title','line','line2','end'])assert.ok(s[key]?.trim(),`${level.id}/${id}.${key}`);
+      for(const m of MONEY)assert.ok(s.money?.[m.id]?.trim(),`${level.id}/${id} opens with ${m.id}`);
+      assert.equal(new Set(MONEY.map(m=>s.money[m.id])).size,MONEY.length,`${level.id}/${id} has seven different openings`);
       for(const options of [s.options,s.options2]){
         assert.equal(options.length,3,`${level.id}/${id} has three options`);
         for(const o of options)assert.ok(o.say.trim()&&o.reply.trim());
@@ -90,7 +95,7 @@ test('a scene asks one choice, then another, then opens the conversation',()=>{
   assert.equal(view.end,CONTENT.A2.ruleta.end);
   assert.equal(view.talk.length,5);
   assert.deepEqual(doneFor(state),['ruleta']);
-  assert.deepEqual(progress(state),{done:1,total:20});
+  assert.deepEqual(progress(state),{done:1,total:30});
   state=closeScene(state);
   assert.equal(sceneView(state),null);
   // Progress is kept per level and survives a reload.
@@ -99,6 +104,27 @@ test('a scene asks one choice, then another, then opens the conversation',()=>{
   assert.deepEqual(doneFor(restore(serialise(state))),['ruleta']);
   assert.deepEqual(doneFor(resetLevel(state)),[]);
   assert.equal(restore('not json').level,'B1');
+});
+
+test('the money Valentina carries changes how each scene opens, and is kept',()=>{
+  let state=openScene(createState('B1'),'dados');
+  assert.equal(state.money,'500');
+  assert.equal(sceneView(state).beats[0].line,CONTENT.B1.dados.money['500']);
+  state=setMoney(state,'1000000');
+  assert.equal(sceneView(state).beats[0].line,CONTENT.B1.dados.money['1000000']);
+  assert.equal(setMoney(state,'7').money,'1000000');
+  assert.equal(restore(serialise(setMoney(state,'nada'))).money,'nada');
+  assert.equal(restore(JSON.stringify({money:'lots'})).money,'500');
+});
+
+test('every 3D game jumps with Space and has a nitro on N',()=>{
+  const casino=readFileSync('app/marketing-de-casinos/World3D.tsx','utf8');
+  assert.match(casino,/input\.nitro/);
+  assert.match(casino,/vy = 7\.2/);
+  assert.match(casino,/Saltar/);
+  assert.match(readFileSync('app/el-reino-de-la-rosa-dormida/World3D.tsx','utf8'),/'KeyN'/);
+  assert.match(readFileSync('app/el-reino-de-la-rosa-dormida/ReinoGame.tsx','utf8'),/<kbd>N<\/kbd> Nitro/);
+  assert.match(readFileSync('app/noche-abierta/World3D.tsx','utf8'),/'N · NITRO'/);
 });
 
 test('without WebGL the same scenes open from a list',async()=>{
@@ -128,7 +154,7 @@ test('without WebGL the same scenes open from a list',async()=>{
     assert.equal(doc.querySelector('.gm-levels [aria-checked="true"] b').textContent,'A1');
     click(doc.querySelector('.gm-enter'));
     const scenes=doc.querySelectorAll('.gm-list-floor li button');
-    assert.equal(scenes.length,20);
+    assert.equal(scenes.length,30);
     click(scenes[0]);
     assert.equal(doc.querySelector('.gm-card').dataset.scene,'portero');
     assert.equal(doc.querySelectorAll('.gm-options button').length,3);
