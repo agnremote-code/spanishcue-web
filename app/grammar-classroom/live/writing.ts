@@ -19,6 +19,8 @@ const haceQue = re(`\\bhace\\s+${quantity}\\s+que\\b`);
 const haceBare = re(`(?<!desde\\s)\\bhace\\s+${quantity}(?!\\s+que\\b)`);
 const porQuantity = re(`\\bpor\\s+${quantity}`);
 
+import type { WritingCheck, WritingWarning } from './types';
+
 export type WritingReview = { uses: { label: string; found?: string; tip: string }[]; problems: { text: string; why: string }[] };
 
 export function reviewWriting(text: string): WritingReview {
@@ -44,5 +46,15 @@ export function reviewWriting(text: string): WritingReview {
       { label: 'Hace + un hecho terminado', found: event, tip: 'Cuenta algo que pasó: «Llegué hace seis meses».' },
     ],
     problems,
+  };
+}
+
+/** The same review shape driven by a lesson's own patterns (see the `write` block). */
+export function reviewWithRules(text: string, checks: WritingCheck[], warnings: WritingWarning[] = []): WritingReview {
+  const sentences = text.split(/(?<=[.!?¡¿\n])\s*/).map(s => s.trim()).filter(Boolean);
+  const find = (pattern: string) => { const regex = new RegExp(pattern, 'iu'); return sentences.find(sentence => regex.test(sentence)); };
+  return {
+    uses: checks.map(check => ({ label: check.label, found: find(check.pattern), tip: check.tip })),
+    problems: warnings.flatMap(warning => { const regex = new RegExp(warning.pattern, 'iu'); return sentences.filter(sentence => regex.test(sentence)).map(sentence => ({ text: sentence, why: warning.why })); }),
   };
 }

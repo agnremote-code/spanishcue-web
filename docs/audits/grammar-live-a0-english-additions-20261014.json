@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale) typed in the project thread «Clase inicial A0» on 2026-10-14 16:55Z («apruebo todo»): English support lines for the A0 first class «Clase inicial» (lesson 239), bilingual Spanish + English so a zero-level learner follows everything.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "This is your first Spanish class. By the end you can say who you are, how you are and where you are: your first message to your grandparents."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, grandma. I am Alex."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am very happy. I am in Sydney."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "And you? How are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "In Argentina people say “vos” instead of “tú”. Same meaning: “you”. You can keep saying “tú”: your grandparents will understand you perfectly."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "“Soy Alex” means…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "“Estoy en Sídney” means…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Your grandma says “vos”. What does it mean?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Spanish has 27 letters. Good news: it almost always sounds the way it is written. If you can see the word, you can say it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "The five vowels always sound the same: a (ah), e (eh), i (ee), o (oh), u (oo). Short and clear. That is why “abuela” is easy: a-bue-la."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Your grandparents will ask how your name is spelt. Spell it with the letter names: “Alex: a, ele, e, equis”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "How does the “h” in “hola” sound?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "How many vowels does “abuela” have?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "What is the letter “ñ” called?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "“Vos” and “bos” sound…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "hello"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "mate (the drink)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "grandma"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "To speak, we first say who: I, you, he, she… These are the pronouns. Today you need three: yo (I), tú / vos (you), and the rest only to recognise them."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "“Soy Alex” and “Yo soy Alex” are the same. The verb already says who is speaking. At the start, say the pronoun if it helps you."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tú and vos are the same person: “you”. With vos the verb changes a little: tú eres → vos sos. Today you only need to recognise it when your grandparents say it."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Your grandma talks about herself. Which pronoun does she use?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "You are talking to your grandpa. In Argentina, he is…"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandpa and I: which pronoun?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandparents, both of them: which pronoun?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am (who I am)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am Alex."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am from Sydney, Australia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am a Spanish student."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am a fan of movies and football."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am sporty: gym three days a week."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, I am Alex."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandparents are from Argentina."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Your grandma: “I am Marta”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am a tennis fan."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am (how / where I am)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am fine."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am very happy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am tired. (she / he)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am in Sydney. I am at the gym."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am Alex. I am from Australia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am happy. I am in Sydney."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am very happy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am from Australia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Grandma, how are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am at the gym."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandpa is tired."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, my love! How are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, grandma! I am fine. I am very happy!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Me too, my love. Are you at home?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Yes, I am at home, in Sydney. And you, grandma, where are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "In the kitchen, with the mate. Your grandpa is on the sofa, with the football."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Ha ha! I am a football fan too."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Of course! You are family."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Grandma, now I am a Spanish student."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "How lovely, my love! A big kiss."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "A kiss, grandma. Bye!"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Where is Alex?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Where is grandpa?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "“Sos de la familia”: what does “sos” mean?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi. It’s grandpa. How are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, grandpa. I am fine, thanks. And you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am tired. Today, two hours of cycling."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Wow! Grandpa, you are sporty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Ha. I am old, but strong. Video call tomorrow?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Yes. Tomorrow I am at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Perfect. A hug."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, grandma. I am Alex."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am very happy."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am in Sydney, at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am from Australia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandparents are from Argentina."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandma is in the kitchen."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandpa is sporty."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Grandpa, how are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am from Australia."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am at home."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Hi, grandma, I am Alex."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am very happy today."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "My grandparents are from Argentina."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Who is speaking?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Where is grandma?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "How is grandma?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Where is grandpa?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "What does grandma ask?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "When is the video call?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am (who I am)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "I am (how / where I am)"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "And you? How are you?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Your name, where you are from, your people and your likes: soy. How you feel today and where you are now: estoy. And the h is silent: “hola” sounds “ola”."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "You can now say who you are and how you are. Next, the 3D neighbourhood: in Noche abierta, level A0, you walk through an Argentine city at night, listen to people and choose what to say. All bilingual, with the same sentences as today."
+    }
+  ]
+}

@@ -421,3 +421,9 @@
 
 /* Studio scenes kept from the earlier classes (nouns, adjectives, articles). */
 .gl-scene { margin-block: 4px 8px; min-width: 0; }
+
+/* Next step outside the class (a game, another lesson). */
+.gl-next{margin:18px 0;padding:18px 20px;border-radius:16px;background:color-mix(in srgb,var(--gl-level) 9%,#fff);display:grid;gap:8px}
+.gl-next h3{margin:0;font-size:19px;font-weight:600}
+.gl-next p{margin:0}
+.gl-next .gl-primary{justify-self:start;margin-top:4px}

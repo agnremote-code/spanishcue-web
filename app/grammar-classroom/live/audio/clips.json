@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "note": "Recordings for live-only grammar classes (no legacy classroom context). Built by .github/workflows/grammar-live-audio.yml with scripts/generate-grammar-live-audio.py into public/audio/grammar-live/<id>.mp3 (premium prefix).",
+  "clips": [
+    {
+      "id": 239,
+      "voice": "es-AR-ElenaNeural",
+      "rate": "-12%",
+      "text": "Hola, mi amor. Soy la abuela. Estoy en casa, en Buenos Aires. Estoy muy bien. Hoy hay sol. Tu abuelo está en el patio, con el mate. ¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau."
+    }
+  ]
+}
