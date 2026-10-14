@@ -30,7 +30,7 @@ export function stepRealmPlayer(player, input, dt, boxes, floorAt, flags = {}, b
     if (i === 0 && jumpEdge && grounded) p.vy = JUMP_SPEED;
     const solids = activeColliders(boxes, flags, p.y).map(b => ({ x0: b.minX, x1: b.maxX, z0: b.minZ, z1: b.maxZ }));
     const nitro = input.nitro ? NITRO_FACTOR : 1;
-    const horizontal = stepPlayer({ ...p, y: 0, vy: 0, jumpHeld: false, speed: (p.speed || 0) / nitro }, { ...input, jump: false, sprint: Boolean(input.sprint || input.nitro), walk: Boolean(input.walk && !input.sprint && !input.nitro) }, step * nitro, solids, bounds);
+    const horizontal = stepPlayer({ ...p, y: 0, vy: 0, jumpHeld: false, speed: (p.speed || 0) / nitro }, { ...input, jump: false, nitro: false, sprint: Boolean(input.sprint || input.nitro), walk: Boolean(input.walk && !input.sprint && !input.nitro) }, step * nitro, solids, bounds);
     let x = horizontal.x, z = horizontal.z;
     // A raised floor cannot teleport Gael up a terrace's vertical edge.
     const accessible = (px, pz) => floorAt(px, pz) <= p.y + STEP_HEIGHT;

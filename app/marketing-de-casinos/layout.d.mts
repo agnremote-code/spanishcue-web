@@ -3,10 +3,10 @@ export type Bounds = { minX: number; maxX: number; minZ: number; maxZ: number };
 export type Box = { x0: number; x1: number; z0: number; z1: number };
 export type Floor = { id: number; name: string; sub: string; y: number; bounds: Bounds };
 export type Placed = { x: number; z: number; heading: number };
-export type Extra = Placed & { pose: string; look: Look; smoke?: boolean; cigar?: boolean; piano?: boolean };
+export type Extra = Placed & { pose: string; mood?: string; look: Look; smoke?: boolean; cigar?: boolean; piano?: boolean };
 export type Scene = {
   id: string; floor: number; place: string; name: string; role: string;
-  spot: { x: number; z: number }; npc: Placed; pose: string; look: Look; smoke?: boolean; cigar?: boolean; extras?: Extra[];
+  spot: { x: number; z: number }; npc: Placed; pose: string; mood?: string; look: Look; smoke?: boolean; cigar?: boolean; extras?: Extra[];
 };
 export type Furniture = { type: string; x: number; z: number; w: number; d: number; rot?: number; solid?: boolean };
 export type CrowdMember = Placed & { pose: string; y?: number; smoke?: boolean; walk?: { axis: 'x' | 'z'; from: number; to: number; speed: number } };

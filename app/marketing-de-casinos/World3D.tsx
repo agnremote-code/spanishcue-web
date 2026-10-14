@@ -28,7 +28,7 @@ export type WorldProps = {
   onFail: () => void;
 };
 
-type Api = { joy: { x: number; y: number }; held: Set<string>; clear: () => void; interact: () => void };
+type Api = { joy: { x: number; y: number }; held: Set<string>; clear: () => void; interact: () => void; jump: () => void; nitro: { on: boolean } };
 const SITTING = new Set(['sit', 'lean', 'cook', 'guitar', 'lie']);
 
 export default function World3D(props: WorldProps) {
@@ -106,6 +106,8 @@ export default function World3D(props: WorldProps) {
     let yaw = player.heading, pitch = 0.26, zoom = low ? 4.6 : 4.9;
     const held = new Set<string>();
     const joy = { x: 0, y: 0 };
+    const touchNitro = { on: false };
+    let jumpUntil = -1;
     let drag: { id: number; x: number; y: number } | null = null;
     let lastDrag = -10, clock = 0, previous = 0, frame = 0, disposed = false;
     let inside: string | null = null, still = 0, consumed: string | null = null, nearKey = '';
@@ -146,7 +148,8 @@ export default function World3D(props: WorldProps) {
       if (inside) { consumed = inside; p.onSpot(inside); return; }
       if (atLift) { liftConsumed = true; p.onElevator(); }
     }
-    api.current = { joy, held, clear, interact };
+    const jump = () => { jumpUntil = clock + 0.15; };
+    api.current = { joy, held, clear, interact, jump, nitro: touchNitro };
 
     // ------------------------------------------------------------ input
     const onKeyDown = (event: KeyboardEvent) => {
@@ -181,12 +184,14 @@ export default function World3D(props: WorldProps) {
     canvasEl.addEventListener('pointercancel', onUp);
     canvasEl.addEventListener('wheel', onWheel, { passive: false });
 
+    let baseFov = 55;
     const resize = () => {
       const w = host.clientWidth || 1, h = host.clientHeight || 1;
       renderer.setSize(w, h, false);
       composer?.setSize(w, h);
       camera.aspect = w / h;
-      camera.fov = w / h < 0.8 ? 66 : 55;
+      baseFov = w / h < 0.8 ? 66 : 55;
+      camera.fov = baseFov;
       camera.updateProjectionMatrix();
     };
     const observer = new ResizeObserver(resize);
@@ -256,11 +261,22 @@ export default function World3D(props: WorldProps) {
       if (moving) {
         const input = inputFrom(held);
         const ix = input.x + joy.x, iy = input.y + joy.y;
-        const factor = input.sprint ? 1 : 0.72;
-        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: false, walk: false }, dt * factor, solids, floorById(floor).bounds);
+        // A stroll by default, Shift runs, N is the nitro. Only the steps are
+        // slowed; the jump keeps real time.
+        const nitro = input.nitro || touchNitro.on;
+        const factor = input.sprint || nitro ? 1 : 0.72;
+        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false }, dt * factor, solids, floorById(floor).bounds);
         player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor };
+        const jump = input.jump || clock < jumpUntil;
+        if (jump && !player.jumpHeld && player.y <= 0) player.vy = 7.2;
+        player.jumpHeld = jump;
+        player.y = Math.max(0, player.y + player.vy * dt - 9 * dt * dt);
+        player.vy = player.y > 0 ? player.vy - 18 * dt : 0;
+        // A wider lens sells the nitro.
+        const wantFov = baseFov + (nitro && player.speed > 10 ? 12 : 0);
+        if (Math.abs(wantFov - camera.fov) > 0.05) { camera.fov += (wantFov - camera.fov) * Math.min(1, dt * 6); camera.updateProjectionMatrix(); }
         if (clock - lastDrag > 1.2) yaw = followYaw(yaw, player.heading, player.speed, dt);
-      } else if (!ride) player.speed = 0;
+      } else if (!ride) { player.speed = 0; player.y = 0; player.vy = 0; }
       place();
 
       // Circles and the elevator.
@@ -311,6 +327,8 @@ export default function World3D(props: WorldProps) {
         if (clearArm(mid.x, mid.z, cx, cz) < 0.8) { cx = mid.x - Math.sin(side) * dist; cz = mid.z - Math.cos(side) * dist; }
         const k = clearArm(mid.x, mid.z, cx, cz);
         desired.set(mid.x + (cx - mid.x) * k, Math.min(y + CEILING - 0.6, y + 2.1), mid.z + (cz - mid.z) * k);
+        // A scene opened from the list can be across the floor: cut, do not fly through walls.
+        if (camera.position.distanceTo(desired) > 12) { camera.position.copy(desired); look.copy(mid); }
         camera.position.lerp(desired, 1 - Math.exp(-dt * 3));
         look.lerp(mid, 1 - Math.exp(-dt * 4));
         camera.lookAt(look);
@@ -376,6 +394,10 @@ export default function World3D(props: WorldProps) {
   return <div className="gm-world">
     <div className="gm-canvas" ref={mount} />
     {touch && !props.sceneId && !props.intro && <div className="gm-joy" onPointerDown={joyDown} onPointerMove={joyMove} onPointerUp={joyUp} onPointerCancel={joyUp} aria-hidden="true"><span ref={knob} /></div>}
+    {touch && !props.sceneId && !props.intro && <div className="gm-touch-actions">
+      <button type="button" aria-label="Saltar" onPointerDown={() => api.current?.jump()}>↑<small>Saltar</small></button>
+      <button type="button" aria-label="Nitro: mantén pulsado para correr muy rápido" onPointerDown={() => { if (api.current) api.current.nitro.on = true; }} onPointerUp={() => { if (api.current) api.current.nitro.on = false; }} onPointerCancel={() => { if (api.current) api.current.nitro.on = false; }} onPointerLeave={() => { if (api.current) api.current.nitro.on = false; }}>»<small>Nitro</small></button>
+    </div>}
   </div>;
 }
 

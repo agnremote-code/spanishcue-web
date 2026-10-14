@@ -4,7 +4,7 @@
 // material so a floor costs a few hundred draw calls, not thousands.
 import * as THREE from 'three';
 import { addPalm, batchStatic, canvas, makeCar, placeVehicle, random } from '../noche-abierta/build3d';
-import { addBlobShadow, animatePerson, createPerson, setPose, type Look, type Person } from '../noche-abierta/people3d';
+import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import { CEILING, CROWD, ELEVATOR, FLOOR_H, FLOORS, FURNITURE, HEROINE, SCENES, WALL, WALLS, footprint } from './layout.mjs';
 
 type Item = { type: string; x: number; z: number; w: number; d: number; rot?: number; solid?: boolean };
@@ -1141,9 +1141,10 @@ export function createHeroine(shadows: boolean) {
   return person;
 }
 
-function npcFor(look: Look, pose: string, x: number, z: number, y: number, heading: number, floor: number, opts: { smoke?: boolean; cigar?: boolean; scene?: string; main?: boolean; walk?: Npc['walk']; seat?: boolean } = {}): Npc {
+function npcFor(look: Look, pose: string, x: number, z: number, y: number, heading: number, floor: number, opts: { smoke?: boolean; cigar?: boolean; scene?: string; main?: boolean; walk?: Npc['walk']; seat?: boolean; mood?: string } = {}): Npc {
   const person = createPerson(look, false);
   setPose(person, pose, pose === 'sit');
+  if (opts.mood) setMood(person, opts.mood);
   person.root.position.set(x, y, z);
   person.root.rotation.y = heading;
   addBlobShadow(person, 0.9);
@@ -1164,10 +1165,10 @@ const CROWD_LOOKS: Look[] = [
 function buildPeople(low: boolean) {
   const npcs: Npc[] = [];
   for (const scene of SCENES) {
-    const main = npcFor(scene.look as Look, scene.pose, scene.npc.x, scene.npc.z, FLOORS[scene.floor - 1].y, scene.npc.heading, scene.floor, { smoke: scene.smoke, cigar: scene.cigar, scene: scene.id, main: true });
+    const main = npcFor(scene.look as Look, scene.pose, scene.npc.x, scene.npc.z, FLOORS[scene.floor - 1].y, scene.npc.heading, scene.floor, { smoke: scene.smoke, cigar: scene.cigar, scene: scene.id, main: true, mood: scene.mood });
     npcs.push(main);
     for (const extra of scene.extras ?? []) {
-      npcs.push(npcFor(extra.look as Look, extra.pose, extra.x, extra.z, FLOORS[scene.floor - 1].y, extra.heading, scene.floor, { smoke: extra.smoke, cigar: extra.cigar, scene: scene.id }));
+      npcs.push(npcFor(extra.look as Look, extra.pose, extra.x, extra.z, FLOORS[scene.floor - 1].y, extra.heading, scene.floor, { smoke: extra.smoke, cigar: extra.cigar, scene: scene.id, mood: extra.mood }));
     }
   }
   for (const [floorId, list] of Object.entries(CROWD)) {

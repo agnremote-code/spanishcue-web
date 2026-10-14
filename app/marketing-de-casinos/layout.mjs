@@ -132,6 +132,7 @@ export const FURNITURE = {
     { type: 'chandelier', x: 0, z: -42, w: 1, d: 1, solid: false },
     { type: 'deckchair', x: -20, z: 14, w: 1, d: 2.2 }, { type: 'deckchair', x: -16, z: 14, w: 1, d: 2.2 },
     { type: 'firepit', x: -18, z: 6, w: 2.4, d: 2.4 },
+    { type: 'cardtable', x: 10, z: -20, w: 2.4, d: 2.4 },
     { type: 'planter', x: 16, z: 6, w: 1.4, d: 1.4 },
   ],
 };
@@ -141,6 +142,8 @@ export const FURNITURE = {
 // `spot` the circle, `look` their appearance (people3d Look) and `pose`.
 // `extras` are background people that belong to the scene.
 const blonde = '#e9cf8a';
+// Casino security: black suit, earpiece, no neck.
+const GUARD = (seed) => ({ skin: seed % 2 ? '#c48f69' : '#e2b896', age: 'adult', body: 'm', build: 'heavy', height: 1.9, hairStyle: 'buzz', hairColor: '#1a1210', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['headphones'], seed });
 export const SCENES = [
   { id: 'portero', floor: 1, place: 'La entrada', name: 'Rocco', role: 'Portero', spot: { x: 1.4, z: 26.2 }, npc: { x: 3.4, z: 23.4, heading: 0.35 }, pose: 'stand', look: { skin: '#d7a982', age: 'old', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#cfcfcf', top: 'uniform', topColor: '#6e1424', bottom: 'pants', bottomColor: '#1a1414', extras: ['mustache'], seed: 101 } },
   { id: 'recepcion', floor: 1, place: 'Recepción del hotel', name: 'Marisol', role: 'Recepcionista', spot: { x: -20, z: 12.3 }, npc: { x: -20, z: 8.2, heading: 0 }, pose: 'stand', look: { skin: '#b9825c', age: 'young', body: 'f', hairStyle: 'bun', hairColor: '#2a1a12', top: 'suit', topColor: '#1d2433', bottom: 'skirt', bottomColor: '#1d2433', extras: ['earrings'], seed: 102 } },
@@ -192,7 +195,52 @@ export const SCENES = [
   { id: 'anfitrion', floor: 3, place: 'Mesa del anfitrión', name: 'Ignacio', role: 'Anfitrión VIP', spot: { x: 0, z: -15.4 }, npc: { x: 0, z: -19, heading: 0 }, pose: 'stand', look: { skin: '#d7a982', age: 'old', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#9a9a9a', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 304 } },
   { id: 'terraza', floor: 3, place: 'Terraza sobre el Strip', name: 'Marco Montalbán', role: 'El hijo del dueño', spot: { x: 3.4, z: 20.6 }, npc: { x: 6, z: 23.6, heading: 0.2 }, pose: 'lean', smoke: true, look: { skin: '#e2b896', age: 'young', body: 'm', build: 'athletic', height: 1.84, hairStyle: 'short', hairColor: '#2a1a12', top: 'suit', topColor: '#f1ede2', bottom: 'pants', bottomColor: '#121214', seed: 305 } },
   { id: 'oficina', floor: 3, place: 'Oficina del dueño', name: 'Don Aurelio', role: 'El dueño del casino', spot: { x: -30.2, z: -12 }, npc: { x: -34.6, z: -12, heading: Math.PI / 2 }, pose: 'sit', smoke: true, cigar: true, look: { skin: '#e6c2a0', age: 'elderly', body: 'm', build: 'average', hairStyle: 'short', hairColor: '#f2f2f2', top: 'suit', topColor: '#2a0e14', bottom: 'pants', bottomColor: '#121214', extras: ['glasses'], seed: 306 } },
-];
+  // Ten wild side scenes (owner request, 2026-10-14): chaos around the games.
+  { id: 'borracho', floor: 1, place: 'Junto a la mesa de dados', name: 'Billy', role: 'Turista de Texas', spot: { x: 2, z: -31.4 }, npc: { x: 3.6, z: -33.6, heading: -0.6 }, pose: 'wave', mood: 'tipsy', look: { skin: '#f0c8a8', age: 'adult', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#c89a5a', top: 'shirt', topColor: '#d8c09a', bottom: 'jeans', bottomColor: '#2a3a5a', extras: ['hat', 'mustache'], seed: 401 },
+    extras: [{ x: 2.2, z: -34.6, heading: 0.4, pose: 'arms', mood: 'angry', look: GUARD(402) }, { x: 5.2, z: -34.4, heading: -0.5, pose: 'arms', look: GUARD(403) }] },
+  { id: 'jackpot', floor: 1, place: 'El gran tragamonedas', name: 'Yolanda', role: 'Ganadora del jackpot', spot: { x: 36.8, z: -3.6 }, npc: { x: 36.4, z: -0.9, heading: Math.PI }, pose: 'dance', mood: 'laugh', look: { skin: '#f0d0b4', age: 'elderly', body: 'f', build: 'heavy', hairStyle: 'curly', hairColor: '#e0d8e8', top: 'hoodie', topColor: '#d0408a', bottom: 'pants', bottomColor: '#d0408a', extras: ['glasses'], seed: 411 },
+    extras: [{ x: 39, z: -6.6, heading: -0.5, pose: 'hands-up', mood: 'surprised', look: { skin: '#8d5a3c', age: 'adult', body: 'm', hairStyle: 'buzz', hairColor: '#120d0b', top: 'tshirt', topColor: '#f0c040', bottom: 'jeans', bottomColor: '#24304a', seed: 412 } },
+      { x: 35.6, z: 1.8, heading: 2.4, pose: 'wave', mood: 'smile', look: { skin: '#e8c0a0', age: 'young', body: 'f', hairStyle: 'ponytail', hairColor: '#2a1a12', top: 'uniform', topColor: '#8a0a1e', bottom: 'skirt', bottomColor: '#121214', seed: 413 } }] },
+  { id: 'tramposo', floor: 1, place: 'Detrás del blackjack', name: 'Gus', role: 'Contador de cartas', spot: { x: -21.8, z: -16.4 }, npc: { x: -23.6, z: -17.8, heading: 0.9 }, pose: 'cuffed', mood: 'worried', look: { skin: '#e2b896', age: 'adult', body: 'm', build: 'slim', hairStyle: 'afro', hairColor: '#b04a1a', top: 'jacket', topColor: '#6a5a8a', bottom: 'pants', bottomColor: '#2a2a2a', extras: ['glasses', 'mustache'], seed: 421 },
+    extras: [{ x: -24.8, z: -16.4, heading: 1.2, pose: 'arms', look: GUARD(422) }, { x: -22.4, z: -19.4, heading: 0.2, pose: 'point', mood: 'angry', look: { skin: '#c48f69', age: 'adult', body: 'f', hairStyle: 'bun', hairColor: '#1a1210', top: 'suit', topColor: '#141418', bottom: 'pants', bottomColor: '#141418', seed: 423 } }] },
+  { id: 'perdedor', floor: 1, place: 'Al lado de la ruleta', name: 'Andrés', role: 'El que lo perdió todo', spot: { x: -36.2, z: -1.6 }, npc: { x: -36.4, z: -4.2, heading: 0.1 }, pose: 'ground', mood: 'sad', look: { skin: '#d7a982', age: 'adult', body: 'm', build: 'average', hairStyle: 'short', hairColor: '#3a2a20', top: 'suit', topColor: '#2a2a3a', bottom: 'pants', bottomColor: '#2a2a3a', seed: 431 } },
+
+  { id: 'despedida', floor: 2, place: 'Entrada del club', name: 'Cinthia', role: 'La novia de la despedida', spot: { x: 19.4, z: 6.2 }, npc: { x: 21.4, z: 7.8, heading: -2.2 }, pose: 'dance', mood: 'tipsy', look: { skin: '#e9c7a8', age: 'young', body: 'f', build: 'average', hairStyle: 'long', hairColor: '#7a3a1a', top: 'dress', topColor: '#ff7ab8', extras: ['earrings'], seed: 441 },
+    extras: [{ x: 23.6, z: 7.4, heading: -1.6, pose: 'dance', mood: 'laugh', look: { skin: '#b9825c', age: 'young', body: 'f', hairStyle: 'bob', hairColor: '#120d0b', top: 'dress', topColor: '#121214', seed: 442 } },
+      { x: 22.6, z: 9.6, heading: 3, pose: 'hands-up', mood: 'laugh', look: { skin: '#f0d0b4', age: 'young', body: 'f', hairStyle: 'long', hairColor: '#e0b860', top: 'dress', topColor: '#ff7ab8', seed: 443 } }] },
+  { id: 'pelea', floor: 2, place: 'Pasillo de las apuestas', name: 'Toño', role: 'Aficionado furioso', spot: { x: -21.6, z: -31.6 }, npc: { x: -22.2, z: -28.8, heading: Math.PI }, pose: 'fight', mood: 'furious', look: { skin: '#c99468', age: 'adult', body: 'm', build: 'heavy', hairStyle: 'buzz', hairColor: '#1a1210', top: 'tshirt', topColor: '#d43a3a', bottom: 'jeans', bottomColor: '#24304a', seed: 451 },
+    extras: [{ x: -20, z: -28.4, heading: -1.9, pose: 'fight', mood: 'furious', look: { skin: '#e8c0a0', age: 'adult', body: 'm', build: 'athletic', hairStyle: 'cap', hairColor: '#3a2a20', top: 'tshirt', topColor: '#2a7ad0', bottom: 'shorts', bottomColor: '#cbb48a', seed: 452 } }] },
+  { id: 'gritona', floor: 2, place: 'Puerta de la capilla', name: 'Marta', role: 'Recién casada', spot: { x: -4.6, z: 1.4 }, npc: { x: -2.6, z: 3, heading: -2.3 }, pose: 'scream', mood: 'furious', look: { skin: '#f0d0b4', age: 'young', body: 'f', hairStyle: 'bun', hairColor: '#2a1a12', top: 'dress', topColor: '#fbf7f0', extras: ['earrings'], seed: 461 },
+    extras: [{ x: -7.4, z: 3.4, heading: Math.PI / 2, pose: 'sleep', mood: 'sleepy', look: { skin: '#a8724e', age: 'young', body: 'm', hairStyle: 'short', hairColor: '#1a1210', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', seed: 462 } }] },
+
+  { id: 'habano', floor: 3, place: 'El salón de los sofás', name: 'Sergio Valdés', role: 'Multimillonario', spot: { x: 22.4, z: -21.6 }, npc: { x: 25.6, z: -22.6, heading: -1.3 }, pose: 'sit', smoke: true, cigar: true, mood: 'smile', look: { skin: '#e2b896', age: 'old', body: 'm', build: 'heavy', hairStyle: 'bald', hairColor: '#cccccc', top: 'suit', topColor: '#f1ede2', bottom: 'pants', bottomColor: '#f1ede2', extras: ['glasses'], seed: 471 },
+    extras: [{ x: 27, z: -24.2, heading: -2.4, pose: 'stand', mood: 'smile', look: { skin: '#8d5a3c', age: 'young', body: 'f', build: 'slim', height: 1.8, hairStyle: 'long', hairColor: '#120d0b', top: 'dress', topColor: '#d4af37', extras: ['earrings'], seed: 472 } },
+      { x: 27.2, z: -21, heading: -1.2, pose: 'stand', look: { skin: '#f0d0b4', age: 'young', body: 'f', build: 'slim', height: 1.78, hairStyle: 'long', hairColor: '#f0e0b0', top: 'dress', topColor: '#121214', extras: ['earrings'], seed: 473 } },
+      { x: 28.6, z: -25.6, heading: -2.6, pose: 'arms', look: GUARD(474) }] },
+  { id: 'yate', floor: 3, place: 'La mesa del heredero', name: 'Julián', role: 'Heredero de un yate', spot: { x: 6.8, z: -20 }, npc: { x: 10, z: -21.8, heading: 0 }, pose: 'sit', mood: 'worried', look: { skin: '#f0d6c0', age: 'young', body: 'm', build: 'slim', hairStyle: 'short', hairColor: '#e0c070', top: 'jacket', topColor: '#2a4a8a', bottom: 'pants', bottomColor: '#e9e4d6', seed: 481 },
+    extras: [{ x: 10, z: -18.2, heading: Math.PI, pose: 'sit', smoke: true, mood: 'smile', look: { skin: '#c48f69', age: 'old', body: 'm', build: 'heavy', hairStyle: 'short', hairColor: '#888888', top: 'suit', topColor: '#121214', bottom: 'pants', bottomColor: '#121214', extras: ['mustache'], seed: 482 } },
+      { x: 12.8, z: -20, heading: -1.6, pose: 'stand', look: { skin: '#e8c0a0', age: 'young', body: 'f', hairStyle: 'ponytail', hairColor: '#2a1a12', top: 'suit', topColor: '#14301e', bottom: 'pants', bottomColor: '#141416', seed: 483 } }] },
+  { id: 'senador', floor: 3, place: 'Rincón de la terraza', name: 'El senador Robles', role: 'Político pillado', spot: { x: -11.6, z: 9.4 }, npc: { x: -13.8, z: 11, heading: 2.2 }, pose: 'hands-up', mood: 'scared', look: { skin: '#e6c2a0', age: 'old', body: 'm', build: 'average', hairStyle: 'short', hairColor: '#d8d8d8', top: 'suit', topColor: '#1a2238', bottom: 'pants', bottomColor: '#1a2238', seed: 491 },
+    extras: [{ x: -15.2, z: 9.8, heading: 2.4, pose: 'stand', mood: 'smile', look: { skin: '#b9825c', age: 'young', body: 'f', hairStyle: 'long', hairColor: '#120d0b', top: 'dress', topColor: '#b3081f', extras: ['earrings'], seed: 492 } },
+      { x: -9.2, z: 13.4, heading: -2.6, pose: 'hands-up', mood: 'scared', look: { skin: '#e8c0a0', age: 'adult', body: 'm', hairStyle: 'cap', hairColor: '#3a2a20', top: 'jacket', topColor: '#5a5a5a', bottom: 'jeans', bottomColor: '#24304a', seed: 493 } },
+      { x: -8.4, z: 11.8, heading: -2, pose: 'arms', mood: 'angry', look: GUARD(494) }] },
+];// Life at the tables around the original scenes: people win, lose, shout.
+const WILD = (skin, body, hairStyle, hairColor, top, topColor, seed, extra = {}) => ({ skin, age: 'adult', body, hairStyle, hairColor, top, topColor, bottom: body === 'f' ? 'skirt' : 'pants', bottomColor: '#1a1a20', seed, ...extra });
+const AROUND = {
+  tragamonedas: [{ x: 22.2, z: 9.6, heading: Math.PI / 2, pose: 'scream', mood: 'furious', look: WILD('#e8c0a0', 'm', 'cap', '#3a2a20', 'hoodie', '#3a6a3a', 501) }],
+  ruleta: [{ x: -15, z: -8.2, heading: -Math.PI / 2, pose: 'hands-up', mood: 'laugh', look: WILD('#8d5a3c', 'f', 'afro', '#120d0b', 'dress', '#e8287a', 502) },
+    { x: -21.6, z: -9.4, heading: Math.PI / 2, pose: 'cry', mood: 'sad', look: WILD('#dcae88', 'm', 'short', '#6a4a2a', 'shirt', '#9ab0d0', 503) }],
+  blackjack: [{ x: -5.2, z: -12.7, heading: Math.PI, pose: 'sit', mood: 'laugh', look: WILD('#f0d0b4', 'f', 'long', '#e0b860', 'dress', '#1f6e5a', 504) },
+    { x: -1.2, z: -12.2, heading: -2.4, pose: 'hands-up', mood: 'surprised', look: WILD('#c48f69', 'm', 'buzz', '#1a1210', 'shirt', '#f0f0f0', 505) }],
+  dados: [{ x: 11, z: -28.2, heading: -0.6, pose: 'hands-up', mood: 'laugh', look: WILD('#f0c8a8', 'm', 'short', '#c89a5a', 'tshirt', '#d43a3a', 506, { bottom: 'shorts', bottomColor: '#cbb48a' }) }],
+  bar: [{ x: -1.2, z: -38.4, heading: -Math.PI / 2, pose: 'lean', mood: 'tipsy', look: WILD('#e2b896', 'm', 'bald', '#888888', 'suit', '#5a1830', 507) }],
+  apuestas: [{ x: -28, z: -33.4, heading: -Math.PI / 2, pose: 'hands-up', mood: 'laugh', look: WILD('#a8724e', 'm', 'cap', '#120d0b', 'tshirt', '#f0c040', 508) },
+    { x: -36.4, z: -33.6, heading: -Math.PI / 2, pose: 'cry', mood: 'sad', look: WILD('#f0d6c0', 'm', 'short', '#2a1a12', 'jacket', '#4a4a50', 509) }],
+  poker: [{ x: -22.6, z: -6.8, heading: -0.8, pose: 'arms', look: WILD('#e6c2a0', 'f', 'bob', '#111111', 'dress', '#121214', 510) }],
+  discoteca: [{ x: 32.4, z: 14.6, heading: -2.4, pose: 'dance', mood: 'laugh', look: WILD('#c99468', 'f', 'long', '#2a1a12', 'dress', '#20c0a0', 511) }],
+  bacara: [{ x: -2.6, z: -41, heading: 2, pose: 'hands-up', mood: 'surprised', look: WILD('#f3dcc8', 'f', 'bun', '#e0c070', 'dress', '#d4af37', 512) }],
+};
+for (const scene of SCENES) if (AROUND[scene.id]) scene.extras = [...(scene.extras ?? []), ...AROUND[scene.id]];
 export const SCENE_IDS = SCENES.map((s) => s.id);
 export const sceneById = (id) => SCENES.find((s) => s.id === id);
 export const SPOT_RADIUS = 1.25;

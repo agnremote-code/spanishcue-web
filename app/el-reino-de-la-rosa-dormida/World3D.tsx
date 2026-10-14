@@ -37,7 +37,7 @@ const SPELL_TARGETS: Record<string, Position> = {
 };
 const TARGET_NAMES: Record<string, string> = { mill: 'Molino detenido', grove: 'Claro de las luciérnagas', thorns: 'Espinas del jardín', dragon: 'Dragón guardián', altar: 'Altar de la rosa' };
 const TARGET_SPELL: Record<string, string> = { mill: 'ventaria', grove: 'lumaria', thorns: 'floralis', dragon: 'aurora' };
-const ACTION_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyE', 'KeyF', 'KeyR', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'KeyQ']);
+const ACTION_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyE', 'KeyF', 'KeyR', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'KeyQ', 'KeyN']);
 const positionOf = (p: Position): Position => ({ x: p.x, y: p.y, z: p.z });
 const smooth = (n: number) => n * n * (3 - 2 * n);
 

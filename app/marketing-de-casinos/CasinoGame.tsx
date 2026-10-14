@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { FLOORS, SCENES, sceneById } from './layout.mjs';
 import { LEVELS } from './levels.mjs';
-import { STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, undo } from './engine.mjs';
+import { MONEY, STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, setMoney, undo } from './engine.mjs';
 import './casino.css';
 
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="gm-loading">Abriendo las puertas del casino…</div> });
@@ -59,6 +59,7 @@ export default function CasinoGame() {
   const count = progress(state);
   const level = LEVELS.find(l => l.id === state.level)!;
   const floorInfo = FLOORS.find(f => f.id === state.floor)!;
+  const money = MONEY.find(m => m.id === state.money) ?? MONEY[2];
 
   const open = useCallback((id: string) => { setTalkAt(0); setElevator(false); setList(false); setState(s => openScene({ ...s, floor: sceneById(id)?.floor ?? s.floor }, id)); }, []);
   const close = useCallback(() => setState(s => closeScene(s)), []);
@@ -103,7 +104,7 @@ export default function CasinoGame() {
       <div className="gm-title-card">
         <p className="gm-kicker">Las Vegas · Casino · Hotel</p>
         <h1 id="gm-title-h">El Gran Meridiano</h1>
-        <p className="gm-lede">Valentina llega al Strip con una ficha dorada en el bolso: «Piso 3 · Medianoche». Tres pisos, veinte escenas y una noche para descubrir quién la espera arriba.</p>
+        <p className="gm-lede">Valentina llega al Strip con una ficha dorada en el bolso: «Piso 3 · Medianoche». Tres pisos, treinta escenas y una noche para descubrir quién la espera arriba.</p>
         <p className="gm-label">Elige el nivel</p>
         <div className="gm-levels" role="radiogroup" aria-label="Nivel">
           {LEVELS.map(l => <button key={l.id} type="button" role="radio" aria-checked={state.level === l.id} className={state.level === l.id ? 'is-on' : undefined} onClick={() => setState(s => setLevel(s, l.id))}>
@@ -111,18 +112,24 @@ export default function CasinoGame() {
           </button>)}
         </div>
         {state.level === 'C1' && <p className="gm-note">C1 es otra historia: Valentina es la nueva directora de marketing y cada escena es una decisión con datos.</p>}
+        <p className="gm-label">¿Con cuánto dinero entra?</p>
+        <div className="gm-levels gm-money" role="radiogroup" aria-label="Dinero">
+          {MONEY.map(m => <button key={m.id} type="button" role="radio" aria-checked={state.money === m.id} className={state.money === m.id ? 'is-on' : undefined} onClick={() => setState(s => setMoney(s, m.id))}>
+            <b>{m.label}</b><small>{m.hint}</small>
+          </button>)}
+        </div>
         <button type="button" className="gm-enter" onClick={() => setEntered(true)}>Entrar al casino</button>
-        <p className="gm-help">Camina con las flechas o WASD, arrastra para mirar, Shift para ir más rápido. Párate en los círculos blancos para hablar.</p>
+        <p className="gm-help">Camina con las flechas o WASD. Espacio para saltar, Shift para correr, N para el nitro. Arrastra para mirar y párate en los círculos blancos para hablar.</p>
       </div>
     </section>}
 
     {/* ------------------------------------------------ HUD */}
     {entered && <header className="gm-hud">
-      <div className="gm-floor"><span>Piso {floorInfo.id}</span><b>{floorInfo.name}</b></div>
+      <div className="gm-floor"><span>Piso {floorInfo.id} · {money.label}</span><b>{floorInfo.name}</b></div>
       <div className="gm-hud-right">
         <span className="gm-progress">{count.done} de {count.total} escenas · {level.label}</span>
         <button type="button" onClick={() => setList(true)}>Escenas</button>
-        <button type="button" onClick={() => setEntered(false)}>Nivel</button>
+        <button type="button" onClick={() => setEntered(false)}>Nivel y dinero</button>
       </div>
     </header>}
 
