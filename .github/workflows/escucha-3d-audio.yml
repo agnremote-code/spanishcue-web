@@ -27,12 +27,16 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
           pip install edge-tts==7.2.8
       - name: Synthesize
-        run: python scripts/generate-escucha-3d-audio.py
+        run: |
+          mkdir -p app/escucha-3d
+          set -o pipefail
+          python scripts/generate-escucha-3d-audio.py 2>&1 | tee app/escucha-3d/audio-log.txt
       - name: Commit audio
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add public/audio/escucha-3d app/escucha-3d/audio-manifest.json
+          git add -A public/audio/escucha-3d app/escucha-3d/audio-manifest.json app/escucha-3d/audio-log.txt || true
           if git diff --cached --quiet; then echo "No audio changes"; exit 0; fi
           git commit -m "Generate Escucha 3D audio"
           git push origin HEAD:${GITHUB_REF_NAME}
