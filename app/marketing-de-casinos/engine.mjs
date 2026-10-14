@@ -33,6 +33,11 @@ export function doneFor(state, level = state.level) {
   return state.done[level] ?? [];
 }
 
+// Story scenes ask two choices; the Marketing section asks one.
+function choicesIn(level, id) {
+  return CONTENT[level]?.[id]?.options2 ? 2 : 1;
+}
+
 // One open scene: `picks` holds the option chosen at each step.
 export function openScene(state, id) {
   if (!sceneById(id)) return state;
@@ -45,10 +50,11 @@ export function closeScene(state) {
 
 export function choose(state, index) {
   const scene = state.scene;
-  if (!scene || scene.picks.length >= 2 || index < 0 || index > 2) return state;
+  const steps = choicesIn(state.level, scene?.id);
+  if (!scene || scene.picks.length >= steps || index < 0 || index > 2) return state;
   const picks = [...scene.picks, index];
   let done = state.done;
-  if (picks.length === 2) {
+  if (picks.length === steps) {
     const list = doneFor(state);
     if (!list.includes(scene.id)) done = { ...done, [state.level]: [...list, scene.id] };
   }
@@ -91,8 +97,8 @@ export function sceneView(state) {
   if (!place || !text) return null;
   const [first, second] = open.picks;
   const beats = [{ line: text.money?.[state.money] || text.line, options: text.options, pick: first }];
-  if (first !== undefined) beats.push({ line: text.line2, options: text.options2, pick: second });
-  const ended = second !== undefined;
+  if (first !== undefined && text.options2) beats.push({ line: text.line2, options: text.options2, pick: second });
+  const ended = open.picks.length >= choicesIn(state.level, open.id);
   return {
     id: open.id, title: text.title, place: place.place, name: place.name, role: place.role, floor: place.floor,
     step: open.picks.length, beats, ended, end: ended ? text.end : null, talk: text.talk, words: text.words,

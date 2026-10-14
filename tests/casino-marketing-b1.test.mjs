@@ -35,21 +35,28 @@ test('three floors, thirty scenes, and every level writes every scene for every 
   for(const id of ['borracho','jackpot','tramposo','perdedor','despedida','pelea','gritona','habano','yate','senador'])assert.ok(SCENE_IDS.includes(id),id);
   assert.deepEqual(MONEY.map(m=>m.id),['nada','100','500','1000','10000','100000','1000000']);
   for(const f of FLOORS)assert.ok(SCENES.filter(s=>s.floor===f.id).length>=6,`floor ${f.id} has at least six scenes`);
-  assert.deepEqual(LEVELS.map(l=>l.id),['A1','A2','B1','B2','C1','C2']);
-  assert.match(LEVELS.find(l=>l.id==='C1').label,/Marketing/);
+  assert.deepEqual(LEVELS.map(l=>l.id),['A1','A2','B1','B2','C1','C2','MARKETING']);
+  assert.equal(LEVELS.find(l=>l.id==='C1').story,'La ficha dorada');
+  assert.equal(LEVELS.find(l=>l.id==='MARKETING').label,'Marketing');
   for(const level of LEVELS){
     const content=CONTENT[level.id];
     assert.deepEqual(Object.keys(content).sort(),[...SCENE_IDS].sort(),`${level.id} covers all scenes`);
     for(const id of SCENE_IDS){
       const s=content[id];
-      for(const key of ['title','line','line2','end'])assert.ok(s[key]?.trim(),`${level.id}/${id}.${key}`);
-      for(const m of MONEY)assert.ok(s.money?.[m.id]?.trim(),`${level.id}/${id} opens with ${m.id}`);
-      assert.equal(new Set(MONEY.map(m=>s.money[m.id])).size,MONEY.length,`${level.id}/${id} has seven different openings`);
-      for(const options of [s.options,s.options2]){
+      for(const key of ['title','line','end'])assert.ok(s[key]?.trim(),`${level.id}/${id}.${key}`);
+      if(level.track){
+        assert.equal(s.options2,undefined,`${level.id}/${id} asks one choice`);
+      }else{
+        assert.ok(s.line2?.trim(),`${level.id}/${id}.line2`);
+        for(const m of MONEY)assert.ok(s.money?.[m.id]?.trim(),`${level.id}/${id} opens with ${m.id}`);
+        assert.equal(new Set(MONEY.map(m=>s.money[m.id])).size,MONEY.length,`${level.id}/${id} has seven different openings`);
+      }
+      for(const options of level.track?[s.options]:[s.options,s.options2]){
         assert.equal(options.length,3,`${level.id}/${id} has three options`);
         for(const o of options)assert.ok(o.say.trim()&&o.reply.trim());
       }
       assert.equal(s.talk.length,5,`${level.id}/${id} has five conversation questions`);
+      for(const q of s.talk)assert.match(q.trim(),/\?$/,`${level.id}/${id} talk is a question`);
       assert.equal(s.words.length,4);
     }
   }
@@ -121,6 +128,23 @@ test('a scene asks one choice, then another, then opens the conversation',()=>{
   assert.deepEqual(doneFor(restore(serialise(state))),['ruleta']);
   assert.deepEqual(doneFor(resetLevel(state)),[]);
   assert.equal(restore('not json').level,'B1');
+});
+
+test('Marketing is its own section: one choice, then the conversation',()=>{
+  let state=openScene(createState('marketing'),'ruleta');
+  assert.equal(state.level,'MARKETING');
+  assert.equal(sceneView(state).beats.length,1);
+  state=choose(state,2);
+  const view=sceneView(state);
+  assert.equal(view.beats.length,1);
+  assert.equal(view.ended,true);
+  assert.equal(view.end,CONTENT.MARKETING.ruleta.end);
+  assert.equal(choose(state,0),state,'no second choice');
+  assert.deepEqual(doneFor(state),['ruleta']);
+  assert.deepEqual(doneFor(state,'C1'),[]);
+  // C1 is back in the story, with two choices like the other levels.
+  state=openScene(setLevel(state,'C1'),'ruleta');
+  assert.equal(sceneView(choose(state,0)).ended,false);
 });
 
 test('the money Valentina carries changes how each scene opens, and is kept',()=>{

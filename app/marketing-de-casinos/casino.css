@@ -21,6 +21,7 @@
 .gm-levels button small { color: var(--muted); font-size: .74rem; line-height: 1.3; }
 .gm-levels button:hover { border-color: var(--line); }
 .gm-levels .is-on { background: rgba(216,178,90,.16); border-color: var(--gold); }
+.gm-levels .gm-track { grid-column: 1 / -1; border-style: dashed; }
 .gm-note { margin: .8rem 0 0; color: var(--gold-2); font-size: .88rem; }
 .gm-enter { margin-top: 1.4rem; padding: .95rem 2.2rem; border: 0; border-radius: 999px; background: linear-gradient(180deg, #f2d9a0, #c9a24a); color: #1a1008 !important; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .9rem; box-shadow: 0 10px 30px rgba(216,178,90,.25); }
 .gm-help { margin: .9rem 0 0; color: var(--muted); font-size: .82rem; }

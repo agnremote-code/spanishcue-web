@@ -1,994 +1,1685 @@
-// El Gran Meridiano · C1 · Marketing en el Gran Meridiano: argumentar con datos, concesivas, condicionales y registro profesional
+// El Gran Meridiano · C1 · La ficha dorada: concesivas, subjuntivo en todos los tiempos, condicionales del pasado y registro coloquial rico
 const scenes = {
   portero: {
-    title: "La primera impresión",
-    line: "Es tu primera noche como Directora de Marketing. Afuera, las fuentes del Strip lanzan agua contra el neón y una fila de autos espera frente a la puerta giratoria. Rocco, treinta años de uniforme burdeos, se ajusta los botones dorados. «Directora, te lo digo sin rodeos: los viernes el aparcacoches tarda dieciocho minutos y los grandes jugadores entran sin que nadie diga su nombre. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
-    money: {
-      nada: "Llegas a pie y con los bolsillos vacíos: el taxi se llevó tus últimos veinte dólares y la tarjeta de empresa no se activa hasta el lunes. Rocco te mira los zapatos antes que la cara. «Perdona, directora, te confundí con una de esas que entran a pedir para el autobús. Ya ves: aquí juzgamos por la pinta, y nos equivocamos. Los viernes el aparcacoches tarda dieciocho minutos y los grandes jugadores entran sin que nadie diga su nombre. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
-      "100": "Bajas del autobús del aeropuerto con cien dólares doblados en el bolso. Rocco te reconoce por la foto del boletín interno y te sonríe con una lástima cariñosa. «Directora, con cien dólares en esta casa eres invisible: ni el aparcacoches te mira. Y ese es justo el problema: los viernes el aparcacoches tarda dieciocho minutos, y ni siquiera los grandes jugadores oyen su nombre al entrar. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
-      "500": "Bajas de un taxi con quinientos dólares para una noche normal: cena, un par de manos y una copa. Rocco te abre la puerta con una reverencia de manual. «Directora, a la gente que viene a divertirse sin tirar la casa por la ventana la tratamos como a todos: con dieciocho minutos de espera en el aparcacoches los viernes. Y a los grandes jugadores, nadie les dice su nombre al entrar. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
-      "1000": "Llevas mil dólares en efectivo y se nota: el bolso abultado, el paso firme. Rocco silba bajito. «Directora, con mil dólares ya te miran los crupieres, pero en la puerta todavía nadie. Esa es mi pena: los viernes el aparcacoches tarda dieciocho minutos y los grandes jugadores entran sin que nadie diga su nombre. En las encuestas, la llegada es la primera queja, por delante del precio de las copas. ¿Por dónde empiezas?»",
-      "10000": "Un sobre con diez mil dólares asoma de tu bolso y el aparcacoches, de repente, corre hacia ti. Rocco se ríe con la boca torcida. «¿Ves, directora? Huelen el dinero y aparecen todos. Sin ese sobre, un viernes habrías esperado dieciocho minutos como cualquiera, y nadie te habría llamado por tu nombre: ni siquiera se lo decimos a los grandes jugadores. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
-      "100000": "Llegas en un auto negro con un maletín de cien mil dólares y, antes de que pises la acera, tres empleados se pelean por abrirte la puerta. Rocco los aparta con un gesto. «Directora, con cien mil eres una ballena y aquí todo el mundo se pone las pilas. Pero eso es teatro: un viernes normal el aparcacoches tarda dieciocho minutos y los grandes jugadores entran sin que nadie diga su nombre. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
-      "1000000": "Bajas de una limusina con dos maletines: un millón de dólares en efectivo. Un gerente sale corriendo sin chaqueta y dos tipos de la acera te miran demasiado. Rocco se planta a tu lado, serio. «Directora, con un millón el casino se vuelve loco, y los buitres también. Esta noche te saludan todos; un viernes cualquiera, el aparcacoches tarda dieciocho minutos y los grandes jugadores entran sin que nadie diga su nombre. En las encuestas, la llegada es la primera queja. ¿Por dónde empiezas?»",
+    "title": "El portero que no olvida",
+    "line": "Las fuentes del Strip todavía rugen a tu espalda cuando cruzas la puerta giratoria. Rocco, el portero de uniforme burdeos y botones dorados, lleva treinta años aquí, y la sonrisa se le borra de golpe al verte. «Por muchos años que hayan pasado, esa mirada la reconocería en cualquier parte. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+    "money": {
+      "100": "Llegas en el autobús turístico con cien dólares y la idea de estirarlos hasta el amanecer. Rocco, por pura rutina, te indica dónde están las tragamonedas de un centavo, aunque a mitad de frase se le traba la lengua. «Las baratas, al fondo a la derecha… Perdone que me quede mirando. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+      "500": "Bajas de un taxi con quinientos dólares y muchas ganas de que la noche dé de sí. Rocco te dedica la sonrisa profesional que reserva a los turistas con un fin de semana por delante, pero se le borra antes de terminar el saludo. «Bienvenida al Gran Meridiano, señorita… Vaya. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+      "1000": "Con mil dólares en el bolso caminas como si la noche te debiera algo, y Rocco, que lleva treinta años leyendo carteras por la forma de andar, ya te ha calado. Se lleva la mano a la gorra, pero el gesto se le congela al verte la cara. «Disculpe, es que me ha recordado a alguien. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+      "10000": "Diez mil dólares en efectivo y un chófer que no ha parado de llamarte «señora». Rocco ya está avisando por radio al jefe de sala de que entra una jugadora seria, aunque corta la comunicación en cuanto te tiene delante. «Perdone, señorita, aquí hay caras que pesan más que el dinero. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+      "100000": "Llegas en una limusina que te ha mandado un anfitrión del casino, porque con cien mil dólares no se entra en Las Vegas: se desembarca. Dos botones se pelean por tu maleta y Rocco los aparta para abrirte él mismo, aunque al verte de cerca se queda clavado en el sitio. «Bienvenida… Dios mío. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+      "1000000": "Ya se ha corrido la voz: una mujer de rojo con un millón de dólares. En la entrada te esperan dos gerentes con flores, un fotógrafo y un par de tipos trajeados que fingen fumar sin prisa. Rocco se abre paso entre todos, te besa la mano y tarda en soltarla. «Con millón o sin él, la habría reconocido igual. Usted es la hija de Ernesto Duarte, ¿a que sí?»",
+      "nada": "Te cuelas detrás de una pareja de recién casados, sin un peso en el bolso y con los tacones destrozados de tanto andar por el Strip. Rocco ya iba a pararte —a las que llegan así las detecta a un kilómetro— cuando te mira bien y se queda mudo. «Iba a decirle que aquí no se entra a mendigar, pero… Usted es la hija de Ernesto Duarte, ¿a que sí?»"
     },
-    options: [
-      { say: "Antes de invertir, quiero cruzar las quejas de llegada con la frecuencia de visita. Si quienes esperan son clientes de alto valor, el problema deja de ser operativo y pasa a ser comercial.", reply: "Rocco asiente despacio, como quien ha visto pasar a muchos directores. «Eso me gusta. La mitad de los que se quejan los viernes son de los que vienen ocho veces al año. Y cuando uno de esos se va enfadado, no vuelve el mes siguiente: vuelve al de enfrente, y encima nos pone verdes con sus amigos.»" },
-      { say: "Propongo que el CRM avise a la puerta cuando llegue un cliente de alto valor. Aunque formar al equipo cueste, que alguien lo salude por su nombre vale más que cualquier cortesía.", reply: "Rocco sonríe por primera vez. «Hace treinta años eso lo hacíamos con memoria y propinas. Si tu sistema me susurra el nombre antes de que baje del auto, te prometo que ese cliente se siente en casa antes de tocar una ficha.»" },
-      { say: "Por molesta que sea la espera, no gastaría un dólar hasta saber cuántas visitas perdemos por ella. Sin esa cifra, cualquier inversión sería una corazonada.", reply: "Rocco se encoge de hombros y mira la fila. «Prudente. Pero mientras tú cuentas, ellos esperan. Hay pérdidas que no salen en tus tablas: el señor que da media vuelta y ni siquiera llega a registrarse.»" },
+    "options": [
+      {
+        "say": "Depende de quién lo pregunte y de cuánto esté dispuesto a contarme a cambio.",
+        "reply": "Rocco se ríe por lo bajo, aunque la risa no le llega a los ojos. «Igualita que él: no regala nada, ni siquiera un sí»."
+      },
+      {
+        "say": "Lo soy. Y si me ha reconocido tan rápido, supongo que se imagina a qué he venido.",
+        "reply": "«Me lo temía desde que la vi bajar del taxi», murmura, mirando de reojo hacia las cámaras. «Aquí nadie viene por casualidad, y mucho menos un Duarte»."
+      },
+      {
+        "say": "Pues sí, aunque confiaba en que el vestido rojo despistara un poco.",
+        "reply": "«Ni con peluca y bigote, señorita», dice Rocco. «Su padre tampoco pasaba desapercibido, por mucho que se empeñara»."
+      }
     ],
-    line2: "Un taxi frena con un chirrido. Rocco baja la voz. «Otra cosa: el resort de enfrente anunció estacionamiento gratis para los miembros de su programa. Los clientes locales ya lo comentan en la fila. ¿Lo copiamos o no?»",
-    options2: [
-      { say: "Solo lo ofrecería a los niveles altos del programa y entre semana. Así protegemos a quien más aporta sin regalar el sábado, que ya está lleno.", reply: "«Gratis para los que valen, pagado para los demás», resume Rocco. «Habrá quien proteste, pero los de arriba lo van a notar. Y el sábado, de todos modos, no cabe ni un auto más.»" },
-      { say: "No lo copiaría. En lugar de competir por un estacionamiento, competiría por el reconocimiento: nadie cruza la calle por un aparcamiento si aquí lo tratan como a un rey.", reply: "Rocco suelta una carcajada ronca. «Eso decía el viejo Montalbán en sus buenos tiempos. Ojalá tengas razón, directora, porque los locales cuentan cada dólar.»" },
-      { say: "Depende del cliente local. Si sus veintidós visitas al año dependen del auto, el estacionamiento no es un regalo: es el costo de no perderlo. Pediré los datos esta misma noche.", reply: "«El cliente local es el que llena esto un martes de lluvia», dice Rocco. «Si se va por un estacionamiento, nos sale carísimo. Pregúntale a Marisol en recepción: ella sabe quién llega en auto y quién en limusina.»" },
+    "line2": "Sacas del bolso la ficha dorada con el grabado «Piso 3 · Medianoche». A Rocco se le va el color de la cara como si hubiera visto un fantasma. «Guárdela ahora mismo. Ojalá no me la hubiera enseñado aquí, delante de todo el mundo».",
+    "options2": [
+      {
+        "say": "¿Quién quiere que yo esté aquí esta noche? No me diga que no lo sabe.",
+        "reply": "«Lo que yo sepa o deje de saber me lo llevaré a la tumba», contesta. «Pregunte en recepción: allí todo se apunta, aunque no siempre con nombre»."
+      },
+      {
+        "say": "Tranquilo, Rocco. No pienso meterlo en ningún lío.",
+        "reply": "«Eso mismo me prometió su padre hace veinticinco años», suspira. «Y mírenos: él desaparecido y yo sin pegar ojo desde entonces»."
+      },
+      {
+        "say": "Para ser una simple ficha, le ha cambiado la cara bastante, ¿no cree?",
+        "reply": "«Simple, dice», resopla Rocco. «Con fichas como esa se han comprado silencios, señorita, y se han pagado entierros»."
+      }
     ],
-    end: "Rocco empuja la puerta giratoria y el aire frío del casino te recibe con olor a perfume caro y a tabaco. «Bienvenida al Meridiano, directora. La recepción está a la derecha.»",
-    talk: [
-      "Rocco confundió a la directora con alguien sin dinero: ¿cuánto crees que influye la apariencia en cómo te tratan en un hotel, en una tienda o en el trabajo?",
-      "¿Alguna vez te han juzgado por tu aspecto y luego se han dado cuenta de su error? ¿Cómo te sentiste y qué hiciste?",
-      "¿Qué dice de una persona que trata muy bien al jefe y mal al portero o al camarero?",
-      "Cuando empiezas un trabajo nuevo, ¿prefieres escuchar a todo el mundo antes de actuar o cambiar cosas desde el primer día? ¿Por qué?",
-      "Si pudieras rediseñar la primera impresión que da tu empresa, o tu casa a un invitado, ¿qué cambiarías aunque costara dinero?",
+    "end": "Rocco te abre la puerta interior con una inclinación demasiado solemne, casi de despedida. Dentro, la recepción de mármol reluce bajo una lámpara de cristal enorme.",
+    "talk": [
+      "¿Por qué crees que a Rocco le cambia la cara al ver la ficha: miedo, culpa o algo que no se atreve a contar?",
+      "¿Alguna vez alguien te ha reconocido por tu parecido con tus padres? ¿Te gustó o te incomodó?",
+      "¿Qué rasgo de tu familia preferirías no haber heredado, por mucho que intentes disimularlo?",
+      "Si te hubieras quedado treinta años en el mismo trabajo, ¿en qué persona crees que te habrías convertido?",
+      "¿Hasta qué punto juzgamos a la gente por su aspecto nada más verla? ¿Te ha pasado a ti en ambos sentidos?"
     ],
-    words: ["experiencia de llegada", "cliente de alto valor", "por molesta que sea", "frecuencia de visita"],
+    "words": [
+      "¿a que sí?",
+      "pasar desapercibido",
+      "llevarse algo a la tumba",
+      "no pegar ojo"
+    ]
   },
   recepcion: {
-    title: "Suites que no se venden",
-    line: "Bajo la lámpara de cristal, Marisol teclea a toda velocidad sobre el mostrador de mármol. «Directora, justo a tiempo. Este sábado estamos al noventa y cuatro por ciento de ocupación y Marketing comprometió doce suites como cortesía: seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una. Tengo reservas pagadas en lista de espera. ¿Mantengo las cortesías?»",
-    money: {
-      nada: "Llegas al mostrador sin un peso y con la tarjeta de empresa bloqueada. Marisol te mira de arriba abajo antes de reconocerte. «Ay, directora, perdona: a quien no tiene tarjeta le pedimos doscientos dólares de depósito, y tú no los tienes. Qué ironía, porque este sábado estamos al noventa y cuatro por ciento de ocupación y Marketing comprometió doce suites de cortesía: seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una. Hay reservas pagadas esperando. ¿Mantengo las cortesías?»",
-      "100": "Pagas un café del vestíbulo con tu billete de cien y Marisol sonríe al verte contar el cambio. «Directora, con cien dólares no te alcanzaría ni para la tasa de resort, que aquí cuesta cuarenta y cinco por noche. Pero el lío es otro: este sábado estamos al noventa y cuatro por ciento y Marketing comprometió doce suites de cortesía, seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una. Tengo reservas pagadas en espera. ¿Mantengo las cortesías?»",
-      "500": "Dejas quinientos dólares de garantía como cualquier huésped y Marisol los cuenta con una ceja levantada. «Directora, pagar como una clienta normal te va a enseñar mucho de esta casa. Por ejemplo, que este sábado estamos al noventa y cuatro por ciento de ocupación y Marketing comprometió doce suites como cortesía: seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una. Mientras tanto, hay reservas pagadas en lista de espera. ¿Mantengo las cortesías?»",
-      "1000": "Pones mil dólares sobre el mármol para la garantía y Marisol, de golpe, te ofrece una habitación mejor. «Ya ves, directora: mil dólares y el sistema te sube de categoría solo. Así funciona esto, a ojo. Este sábado estamos al noventa y cuatro por ciento y Marketing comprometió doce suites de cortesía, seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una, y tengo reservas pagadas esperando. ¿Mantengo las cortesías?»",
-      "10000": "Con diez mil dólares en el bolso, Marisol ya ha llamado a un anfitrión antes de que termines de saludar. «Directora, con esa cifra cualquier cliente recibe aquí una suite gratis sin que nadie mire si juega o no. Ese es el problema: este sábado estamos al noventa y cuatro por ciento y Marketing comprometió doce suites como cortesía, seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una. Tengo reservas pagadas en lista de espera. ¿Mantengo las cortesías?»",
-      "100000": "Dejas ver el maletín con cien mil dólares y Marisol baja la voz como si estuviera en misa. «Directora, a una ballena como tú le daríamos el ático, champán y mayordomo, y nadie se atrevería a cobrarle ni el minibar. Pero el ático está ocupado: este sábado estamos al noventa y cuatro por ciento y Marketing comprometió doce suites de cortesía, seiscientos dólares de habitación y doscientos cincuenta de restaurante cada una. Tengo reservas pagadas esperando. ¿Mantengo las cortesías?»",
-      "1000000": "Dos botones arrastran tus maletines con un millón de dólares y medio vestíbulo se gira a mirarte. Marisol cuelga tres llamadas seguidas. «Directora, ya han llamado el gerente, el jefe de seguridad y un señor que no quiso dar su nombre. Con un millón te inventamos una suite si hace falta. Pero el problema es real: este sábado estamos al noventa y cuatro por ciento y Marketing comprometió doce suites de cortesía, seiscientos de habitación y doscientos cincuenta de restaurante cada una. Hay reservas pagadas en espera. ¿Mantengo las cortesías?»",
+    "title": "Una suite sin remitente",
+    "line": "En la recepción todo es mármol, flores frescas y una lámpara de cristal que debe de pesar como un coche. Marisol teclea tu nombre, frunce el ceño y vuelve a teclearlo, por si acaso. «Qué raro. Usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+    "money": {
+      "100": "Con cien dólares en el bolso preguntas por la habitación más barata, la de la torre vieja junto a la máquina de hielo. Marisol empieza a recitar las tarifas económicas, pero al buscar tu apellido se queda a media frase. «Olvídese de la torre vieja. Usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+      "500": "Traes quinientos dólares y una reserva barata que hiciste por internet a última hora. Marisol te pide el pasaporte, comprueba la reserva y arruga la frente como si el ordenador le estuviera gastando una broma. «Su habitación doble ha desaparecido del sistema. En su lugar, usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+      "1000": "Con mil dólares encima, lo primero que te ofrecen es la tarjeta del club de jugadores, porque aquí te registran antes de alojarte. Marisol empieza a rellenar el formulario y se para en seco. «Pues mire, ni siquiera le hace falta. Usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+      "10000": "El jefe de sala ya ha avisado de que llega una jugadora con diez mil dólares, y en Las Vegas eso se traduce en una mejora de habitación sin pedirla. Marisol te recibe con una sonrisa de manual y una sorpresa que no viene en ningún manual. «Iba a ofrecerle una habitación con vistas, pero alguien se me ha adelantado. Usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+      "100000": "Con cien mil dólares no haces cola: un anfitrión te lleva del brazo hasta un mostrador privado con champán y bombones. Marisol, sin embargo, parece desconcertada al mirar la pantalla. «Lo normal sería que la invitara la casa, pero esta vez no ha sido la casa. Usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+      "1000000": "Toda la recepción se pone firme cuando entras: la noticia del millón ha corrido más deprisa que tú. Un casino rival ya te ha mandado un ramo de rosas y el gerente suda como si le fuera la vida en ello. Marisol aparta las rosas con un gesto seco. «No se moleste en mirar ofertas. Usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»",
+      "nada": "Te acercas al mostrador sin un dólar y con la esperanza de que, al menos, te dejen usar el baño. Marisol te mira con esa educación helada que se reserva a quien no va a gastar nada, pero teclea tu nombre por cumplir y se le cae el bolígrafo. «Vaya… usted tiene una suite reservada a su nombre desde hace semanas, y ya está pagada. ¿No sabía nada?»"
     },
-    options: [
-      { say: "Antes de decidir, necesito saber cuántos de esos doce habrían venido sin la oferta. Si vienen de todos modos, estamos desplazando una reserva pagada para regalar algo que ya teníamos.", reply: "Marisol deja de teclear y gira la pantalla hacia ti. «Siete de los doce vienen todos los meses, con o sin suite. Nadie lo había preguntado así. Si les cambiamos la fecha, recupero siete reservas pagadas.»" },
-      { say: "Las mantendría para los jugadores premium. Aunque el costo de oportunidad sea alto, perder a un cliente de alto valor por una habitación sería mucho más caro.", reply: "Marisol arquea una ceja. «Entendido. Pero uno de ellos no juega desde hace cuatro meses y sigue recibiendo suite. ¿Eso también es un cliente de alto valor o es una costumbre que nadie se atrevió a cortar?»" },
-      { say: "Propongo ofrecerles otra fecha con un incentivo atractivo, por ejemplo un martes con cena privada. Si aceptan, liberamos el sábado y llenamos un día flojo.", reply: "Marisol sonríe con picardía. «Mover a un premium del sábado al martes... Algunos se ofenderán. Otros lo agradecerán: el martes los camareros los conocen por su nombre y no hay ruido. Me gusta.»" },
+    "options": [
+      {
+        "say": "Ni idea, aunque no seré yo quien se queje de que me mimen.",
+        "reply": "Marisol sonríe a medias. «Haría bien en quejarse un poco, señorita. En esta casa, quien mima suele pasar la factura después»."
+      },
+      {
+        "say": "No he reservado nada. Necesito saber quién la ha pagado, y cuanto antes.",
+        "reply": "Marisol mira a ambos lados antes de contestar. «Tranquila, que no muerdo. Pero baje la voz: aquí hasta las flores tienen orejas»."
+      },
+      {
+        "say": "¿Una suite? Con tal de que tenga jacuzzi y buenas vistas, no hago preguntas.",
+        "reply": "«Jacuzzi, vistas a las fuentes y un mayordomo que tampoco las hace», recita Marisol. «Lo único que no tiene es remitente»."
+      }
     ],
-    line2: "Marisol baja la voz y señala una carpeta roja. «Y hay otra cosa. Entre semana estamos al sesenta y cinco por ciento. Los viajeros de resort vienen tres veces al año, gastan mucho en restaurantes y espectáculos, pero nunca juegan de lunes a jueves. Don Aurelio quiere regalar habitaciones para llenar el hotel. ¿Qué le digo?»",
-    options2: [
-      { say: "Dile que llenar el hotel no basta: si regalamos habitaciones a quien no juega ni gasta, solo movemos el costo de un lado a otro. Prefiero un paquete con cena y espectáculo que genere venta cruzada.", reply: "Marisol toma nota con letra impecable. «Un paquete que pague solo, no una habitación que se regala. Se lo diré así, aunque el jefe odia que le hablen de márgenes después de cenar.»" },
-      { say: "Probaría una oferta limitada a dos martes con un grupo de control. Si los viajeros de resort cambian su viaje gracias a ella, la ampliamos; si no, la cortamos sin drama.", reply: "«Un experimento», murmura Marisol. «En este hotel siempre hemos hecho todo a ojo. Si lo presentas con fechas y un límite de costo, hasta Finanzas te va a aplaudir.»" },
-      { say: "Por mucho que insista Don Aurelio, no regalaría habitaciones. Subiría la tarifa promedio de los fines de semana y usaría ese margen para financiar experiencias entre semana.", reply: "Marisol te mira con respeto y un poco de miedo. «Contradecir al jefe la primera noche... Valiente. Si funciona, eres una leyenda; si no, mañana te busco un taxi. Tú sí que vas a por todas.»" },
+    "line2": "Marisol gira un poco la pantalla para que la veas. En la casilla del pagador solo aparece: «Cargo interno · Piso 3». «Por mucho que busque, no va a encontrar un nombre. Cuando arriba no quieren que se sepa quién paga, sencillamente no se sabe».",
+    "options2": [
+      {
+        "say": "¿Y a usted nunca le ha picado la curiosidad de averiguarlo?",
+        "reply": "«Una vez hice una pregunta de más», dice Marisol, bajando la vista. «Me pasaron al turno de noche durante dos años. Desde entonces, curiosidad, la justa»."
+      },
+      {
+        "say": "Deme la llave. Ya me enteraré yo de quién me invita.",
+        "reply": "Marisol te tiende una tarjeta dorada. «Me parece bien. Eso sí, si alguien llama a su puerta de madrugada, no abra sin preguntar antes»."
+      },
+      {
+        "say": "Qué detalle tan siniestro. Me habría bastado con una nota.",
+        "reply": "«Las notas se le pueden enseñar a la policía, señorita», susurra Marisol. «Una suite pagada, en cambio, solo se puede disfrutar»."
+      }
     ],
-    end: "Marisol te entrega una tarjeta magnética con tu nombre. «Tu oficina está en el piso tres, pero esta noche te conviene caminar el casino. Empieza por las tragamonedas: ahí está la verdad de esta casa.»",
-    talk: [
-      "¿Te ha tocado alguna vez decirle que no a un jefe en tu primera semana? ¿Qué pasó, o qué habría pasado si te hubieras atrevido?",
-      "En tu vida, ¿hay costumbres o privilegios que mantienes solo porque nadie se atreve a cortarlos?",
-      "¿Qué te molesta más: que te den algo gratis que no necesitas o que no te den lo que mereces? ¿Por qué?",
-      "Marisol trata distinto a quien deja un depósito de mil dólares: ¿crees que el dinero compra respeto o solo atención?",
-      "Si tuvieras que regalar algo valioso a tus diez mejores clientes, o a tus diez mejores amigos, ¿cómo decidirías quién lo merece?",
+    "end": "Te guardas la tarjeta de la suite como si quemara. Desde el pasillo de las tragamonedas llega un tintineo incesante de monedas y luces.",
+    "talk": [
+      "¿Por qué crees que quien ha pagado la suite no quiere dar la cara?",
+      "¿Qué sientes cuando alguien te hace un regalo caro sin motivo aparente: ilusión o desconfianza?",
+      "¿Has aceptado alguna vez un favor que luego te salió caro? ¿Qué aprendiste de aquello?",
+      "¿Te inquietaría que alguien supiera muchas cosas de ti sin que tú supieras nada de esa persona? ¿Por qué?",
+      "Si pudieras darte un capricho de lujo una sola noche, sin que nadie se enterara, ¿en qué te lo gastarías?"
     ],
-    words: ["costo de oportunidad", "ocupación hotelera", "habitación de cortesía", "tarifa promedio"],
+    "words": [
+      "dar la cara",
+      "pasar la factura",
+      "picarle a uno la curiosidad",
+      "con tal de que"
+    ]
   },
   tragamonedas: {
-    title: "Doña Pilar y sus amigas",
-    line: "El pasillo de tragamonedas suena como una feria eterna: campanas, luces, monedas que caen. Doña Pilar, setenta años, cigarro en una mano y vaso de fichas en la otra, no aparta la vista de su máquina. «Así que tú eres la nueva. Mira, niña: vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco. Ahora dicen que van a quitar esta fila de máquinas viejas. ¿Me vas a echar?»",
-    money: {
-      nada: "Te sientas un momento en un taburete vacío, sin una moneda en el bolso. Doña Pilar te ofrece una ficha de su vaso, como quien da limosna. «Toma, niña, que sin un peso aquí te miran como a una ladrona. A mí también me miraban así al principio. Ahora vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco. Y dicen que van a quitar esta fila de máquinas viejas. Así que tú eres la nueva. ¿Me vas a echar?»",
-      "100": "Metes un billete de veinte en una máquina y lo pierdes en tres jugadas. Doña Pilar suelta una carcajada entre el humo. «Con cien dólares, niña, se juega en las de un centavo y despacio, como yo. Vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco, pero nunca falto. Ahora dicen que van a quitar esta fila de máquinas viejas para poner las nuevas, las caras. Así que tú eres la nueva. ¿Me vas a echar?»",
-      "500": "Juegas tranquila con un vale de cincuenta dólares; te quedan cuatrocientos cincuenta para el resto de la noche. Doña Pilar te mira de reojo, aprobando. «Bien, niña: sin prisa y sin locuras, así se juega. Yo vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco, pero aquí estamos todas las semanas. Ahora dicen que van a quitar esta fila de máquinas viejas. Tú eres la nueva, ¿verdad? ¿Me vas a echar?»",
-      "1000": "Metes cien dólares de golpe en la máquina de al lado y Doña Pilar casi se atraganta con el cigarro. «¡Uy, la señorita viene forrada! Mil dólares en el bolso y ya juegas como los de arriba. Yo no: vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco, pero soy de la casa. Y ahora dicen que van a quitar esta fila de máquinas viejas. Así que tú eres la nueva. ¿Me vas a echar?»",
-      "10000": "Un empleado te trae una silla mejor y una copa porque alguien ha visto tus diez mil dólares. Doña Pilar lo observa con sorna. «¿Ves, niña? A ti te traen la copa a la primera; a mí, después de treinta años, me la traen si me quejo. Vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco. Y ahora dicen que van a quitar esta fila de máquinas viejas. Tú eres la nueva. ¿Me vas a echar?»",
-      "100000": "Te sigue un anfitrión que no para de ofrecerte cosas: suite, cena, chófer. Tú llevas cien mil dólares; Doña Pilar, un vaso de fichas. «Mira cómo te persiguen, niña, como moscas a la miel. A las que gastamos poco no nos persigue nadie, y eso que vengo veintidós veces al año y traigo a mis cinco amigas. Ahora dicen que van a quitar esta fila de máquinas viejas para hacer sitio a ballenas como tú. ¿Me vas a echar?»",
-      "1000000": "El rumor ha volado: la nueva directora lleva un millón de dólares encima. Medio pasillo te mira y una señora te pide que le toques la máquina para la suerte. Doña Pilar ni se inmuta. «Un millón, dicen. Con eso yo compraría este pasillo para que no lo tocara nadie. Vengo veintidós veces al año, traigo a mis cinco amigas y gasto poco, pero soy fiel. Y ahora quieren quitar esta fila de máquinas viejas. Así que tú eres la nueva. ¿Me vas a echar?»",
+    "title": "El número de la suerte",
+    "line": "En el pasillo de las tragamonedas, las luces parpadean y las máquinas cantan sin descanso. Doña Pilar, setenta años, un cigarrillo en los labios y un vaso de fichas en el regazo, te mira por encima de las gafas. «Ven aquí, guapa, que te vea bien. Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+    "money": {
+      "100": "Cien dólares en las máquinas de un centavo dan para una hora de lucecitas y un par de cervezas aguadas. Doña Pilar ve cómo dudas ante los botones y menea la cabeza. «Ese no, que se come el dinero como un perro hambriento. Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+      "500": "Metes un billete de cien en la máquina y te prometes que los otros cuatro van a durar toda la noche. Doña Pilar se ríe por lo bajo, como quien ha oído esa promesa mil veces. «Eso decimos todas, guapa. Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+      "1000": "Te sientas en las máquinas de cinco dólares por tirada y enseguida aparece una camarera con tu segunda copa gratis. Doña Pilar te mira el bolso con ojo experto. «Mil dólares aquí no duran ni lo que un beso en un portal. Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+      "10000": "En la zona de alto límite, donde cada tirada cuesta cien dólares, un encargado te ha guardado sitio y te ha traído un cenicero de cristal. Doña Pilar, fiel a su pasillo de siempre, ni se inmuta cuando pasas. «Con diez mil te hacen la pelota hasta que se te acaban, hija. Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+      "100000": "El casino te ha preparado una sala privada de máquinas con camarero propio, pero tú prefieres el pasillo ruidoso de siempre. Doña Pilar te ve llegar escoltada y no se impresiona lo más mínimo. «Por mucho dinero que traigas, la máquina no sabe quién eres. Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+      "1000000": "Desde que se ha sabido lo del millón, te sigue medio pasillo: jubiladas que quieren que les toques la máquina, un vidente de la suerte y un tipo que jura ser tu primo. Doña Pilar los espanta con el bastón y te hace sitio a su lado. «¡Largo de aquí, buitres! Tú eres la hija de Ernesto, ¿no? Tu padre no perdía nunca. ¿Has venido a probar suerte tú también?»",
+      "nada": "Te sientas en un taburete sin una sola ficha, y una camarera pasa de largo porque aquí las copas gratis son solo para quien juega. Doña Pilar te observa entre el humo y se le escapa una sonrisa. «Sin un peso y con esa cara… Tú eres la hija de Ernesto. Él también llegó sin nada, y aun así no perdía nunca. ¿Has venido a probar suerte tú también?»"
     },
-    options: [
-      { say: "Nadie te va a echar, Doña Pilar. Gastas poco por visita, pero traes a cinco personas cada vez. Si sumo lo que generan tus amigas, tu valor real es mucho mayor del que dice la tabla.", reply: "Doña Pilar suelta el humo despacio y por fin te mira. «¡Qué pasada, por fin alguien que sabe sumar! Las chicas y yo cenamos aquí, jugamos aquí y nos quejamos aquí. Si me voy, se van todas detrás.»" },
-      { say: "Te seré sincera: esta fila rinde un cuarenta por ciento menos que el promedio de la planta. Aunque te tengo cariño, necesito que las máquinas paguen su espacio.", reply: "Doña Pilar se ríe con una tos de fumadora. «Sincera, al menos. Pero tus números no saben que el sábado pasado traje a doce personas a un cumpleaños. Cámbiame la máquina si quieres, pero no me cambies el rincón.»" },
-      { say: "¿Qué te haría venir un martes en lugar de un sábado? Si tú me lo dices, quizá podamos diseñar algo para todo el grupo.", reply: "Doña Pilar se acomoda en el taburete, encantada de ser consultada. «Un martes con café gratis, una ruleta de premios para las amigas y que nadie nos meta prisa. No pedimos suites, querida. Pedimos que nos traten como si importáramos.»" },
+    "options": [
+      {
+        "say": "A probar suerte y a que usted me cuente todo lo que sepa de él.",
+        "reply": "Pilar suelta el humo despacio. «Todo, todo, no te lo cuento ni aunque me lo pidas de rodillas. Pero algo, quizá sí, si me haces compañía un rato»."
+      },
+      {
+        "say": "No vengo a jugar. ¿Qué pasó la noche en que desapareció?",
+        "reply": "«Pasó que ganó más de lo que el dueño estaba dispuesto a perder», dice Pilar sin apartar la vista de la pantalla. «Lo demás son cuentos de borrachos»."
+      },
+      {
+        "say": "¿Que no perdía nunca? Entonces está claro que no he salido a él.",
+        "reply": "Pilar se ríe con una tos ronca. «Eso dicen todos hasta que les toca. Y a los Duarte, tarde o temprano, siempre les toca»."
+      }
     ],
-    line2: "Tu teléfono vibra: un mensaje de Don Aurelio. «Prefiero llenar el casino y analizar después. Puntos dobles para todos los locales este fin de semana, como hace la competencia.» Doña Pilar lo lee por encima de tu hombro sin disimulo. «¿Y bien? ¿Qué le contestas al jefe?»",
-    options2: [
-      { say: "Le contestaré que los puntos dobles para todos premian a quien ya iba a venir. Prefiero dárselos solo a los locales que traen grupos y medir si aumentan sus visitas entre semana.", reply: "Doña Pilar aplaude con dos dedos. «Puntos dobles para las que traemos gente. Me parece justo. El jefe gruñirá, pero el jefe siempre gruñe.»" },
-      { say: "Le diré que sí, pero solo de domingo a jueves. Llenar el sábado no tiene mérito; llenar un martes sí, y el costo es mucho menor.", reply: "«Domingo a jueves», repite Doña Pilar, ya calculando. «Las chicas y yo podemos cambiar de día sin problema. Los sábados aquí hay demasiado borracho de despedida, de todos modos.»" },
-      { say: "Le pediré una semana. Por mucha prisa que tenga, si regalamos puntos sin medir, dentro de un mes nadie sabrá si vinieron por la oferta o por costumbre.", reply: "Doña Pilar te da una palmadita en la mano. «Una semana es mucho para Aurelio, niña. Pero si le hablas con datos y sin miedo, a lo mejor te escucha. A Ernesto Duarte lo escuchaba... aunque esa es otra historia.»" },
+    "line2": "Pilar da unos golpecitos con la uña en una máquina con el número 17 pintado en dorado. «Este era su número. Decía que, aunque a todo el mundo le pareciera un número cualquiera, a él le traía suerte. Si te soy sincera, nunca he llegado a entender por qué».",
+    "options2": [
+      {
+        "say": "Pues hoy apuesto al 17. Si me sale mal, por lo menos sabré a quién echarle la culpa.",
+        "reply": "«Así me gusta, con dos narices», dice Pilar, y te pone una ficha en la mano. «Pero no aquí. Ese número se juega en la ruleta»."
+      },
+      {
+        "say": "Quizá mi padre se fiaba demasiado de los números y demasiado poco de la gente.",
+        "reply": "Pilar se queda pensativa. «O al revés, cariño. Se fiaba de una sola persona, y esa persona no se merecía tanta confianza»."
+      },
+      {
+        "say": "¿Y usted, Pilar? ¿Nunca le han entrado ganas de dejarlo?",
+        "reply": "«Cada noche», contesta tirando de la palanca. «Y cada noche vuelvo. Será que aquí, por lo menos, las máquinas no me mienten a la cara»."
+      }
     ],
-    end: "Doña Pilar vuelve a su máquina, que se ilumina con un pequeño premio. «¿Ves? Esta máquina me quiere. Ve a la ruleta, querida: allí hay un señor que fuma puros y recibe más ofertas que yo cumpleaños.»",
-    talk: [
-      "Doña Pilar dice que pide que la traten como si importara: ¿en qué lugar de tu vida te sientes importante y en cuál invisible?",
-      "¿Qué valoras más en una persona: lo que gasta o lo que aporta sin que se note? ¿Qué ejemplo real te viene a la cabeza?",
-      "¿Conoces a alguien que tenga un ritual o una «máquina de la suerte»? ¿Por qué crees que la gente necesita esos rituales?",
-      "¿Dónde está la línea entre una afición y una adicción? ¿Quién debería decidirlo: la persona, la familia o la empresa que gana dinero con ella?",
-      "Si tuvieras que quitarle algo a un cliente o a un amigo fiel por motivos económicos, ¿cómo se lo dirías sin romper la relación?",
+    "end": "Doña Pilar vuelve a sus máquinas como quien reza un rosario. A lo lejos, la bola de la ruleta repiquetea y parece pronunciar tu nombre.",
+    "talk": [
+      "¿Qué crees que sabe Pilar de aquella noche que no se atreve a decir en voz alta?",
+      "¿Tienes algún número, objeto o ritual de la suerte? ¿Te lo tomas en serio o medio en broma?",
+      "¿Qué costumbre tuya sabes que no te conviene y, aun así, no consigues dejar?",
+      "¿Crees que la suerte se hereda, se busca o simplemente aparece cuando le da la gana? ¿Por qué?",
+      "¿Qué te parece más triste: alguien que juega sola cada noche o alguien que nunca se arriesga a nada?"
     ],
-    words: ["rendimiento de la planta", "cliente local", "puntos de fidelidad", "aunque te tengo cariño"],
+    "words": [
+      "con dos narices",
+      "salir a alguien",
+      "tarde o temprano",
+      "probar suerte"
+    ]
   },
   ruleta: {
-    title: "Mesas vacías un martes",
-    line: "La bola gira y salta entre los números. Nico, el crupier, anuncia «no va más» ante una mesa casi vacía. A su lado, un hombre de traje oscuro fuma un puro y apila fichas de mil dólares. Nico se inclina hacia ti. «Directora, los martes el mínimo es de veinticinco dólares y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-    money: {
-      nada: "No tienes ni para una ficha. Te quedas mirando la mesa y el hombre del puro, que apila fichas de mil dólares, te echa una mirada de desprecio. Nico te reconoce y se inclina hacia ti. «Directora, ¿ves cómo miran aquí a quien no juega? Así nos miran a nosotros los martes: el mínimo es de veinticinco dólares y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-      "100": "Pones veinticinco dólares al rojo, el mínimo, y la bola cae en negro. Con setenta y cinco en el bolso empiezas a entender a los turistas. Nico recoge tu ficha con cara de disculpa. «Así se van los de cien dólares, directora: en cuatro tiradas y para no volver. Los martes el mínimo es de veinticinco y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-      "500": "Cambias doscientos dólares en fichas y juegas a las docenas, sin prisa. A tu lado, el hombre del puro apila fichas de mil. Nico baja la voz. «Directora, la gente que viene con quinientos es justo la que llenaría los martes si no la asustáramos. Ahora el mínimo es de veinticinco dólares y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-      "1000": "Pones cien dólares al diecisiete y el jefe de mesa ya apunta tu juego en una libreta. Nico sonríe. «Con mil dólares ya te calificamos, directora: cuánto apuestas y cuánto tiempo, para calcular tus cortesías. Al cliente de los martes ni lo miramos: el mínimo es de veinticinco dólares y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-      "10000": "Pones mil dólares al rojo y el hombre del puro, por primera vez, te saluda con la cabeza. El jefe de mesa aparece de la nada con una copa. Nico te guiña un ojo. «Diez mil dólares y ya eres de la familia, directora. Qué rápido cambia el trato. Pero los martes no hay familia que valga: el mínimo es de veinticinco dólares y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-      "100000": "Pides subir el máximo de la mesa para tus cien mil dólares y el jefe de sala llama a alguien por teléfono. El hombre del puro te mira como a una rival. Nico se ríe por lo bajo. «Para una ballena subimos el límite en dos minutos, directora. Para un martes vacío, nadie mueve un dedo: el mínimo es de veinticinco dólares y tengo tres mesas muertas. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
-      "1000000": "Te ofrecen cerrar la mesa solo para ti y tu millón de dólares; detrás, dos guardias y un desconocido que no aparta los ojos de tus maletines. El hombre del puro apaga el habano, nervioso. Nico susurra. «Directora, por un millón cerramos una mesa un sábado. Lo absurdo es que los martes tengo tres muertas con un mínimo de veinticinco dólares. Operaciones quiere bajarlo a diez. Finanzas dice que eso canibaliza el fin de semana. ¿Tú qué opinas?»",
+    "title": "Todo al diecisiete",
+    "line": "Nico, el crupier, reparte las fichas con una elegancia casi aburrida. A su lado, un hombre de traje claro con un puro entre los dedos no te quita los ojos de encima. «Hagan sus apuestas», anuncia Nico, y luego se dirige a ti con media sonrisa: «¿Dónde quiere jugar la señorita?»",
+    "money": {
+      "100": "En la mesa de mínimo bajo no cabe un alfiler: turistas con gorra, parejas de luna de miel y tus cien dólares convertidos en un puñado de fichas. El hombre del traje claro, tan fuera de lugar como un esmoquin en la playa, te observa entre el humo de su puro. «Hagan sus apuestas», canta Nico. «¿Dónde quiere jugar la señorita?»",
+      "500": "Cambias quinientos dólares por una torre de fichas rojas, suficiente para sentirte jugadora sin jugarte el alquiler. Nico te hace un hueco junto a un hombre de traje claro que fuma un puro y no te quita los ojos de encima. «Hagan sus apuestas», anuncia el crupier. «¿Dónde quiere jugar la señorita?»",
+      "1000": "Pones mil dólares en la mesa y, como por arte de magia, el jefe de mesa aparece a tu lado ofreciéndote una tarjeta de jugadora y una copa. El hombre del traje claro suelta el humo con cierto desdén: «Mil. Qué entrañable». Nico ni pestañea. «Hagan sus apuestas. ¿Dónde quiere jugar la señorita?»",
+      "10000": "Diez mil dólares en fichas y la mesa cambia de ambiente: suben el mínimo, desaparecen los curiosos y llega un champán que nadie ha pedido. El hombre del traje claro deja el puro en el cenicero, de pronto muy interesado. «Ahora sí que empezamos a entendernos», murmura. Nico extiende la mano sobre el tapete. «Hagan sus apuestas. ¿Dónde quiere jugar la señorita?»",
+      "100000": "Con cien mil dólares te han reservado la mesa entera tras un cordón de terciopelo. El jefe de sala en persona te aparta la silla, y el único al que no han echado es el hombre del traje claro, que te ofrece fuego con un mechero de oro. Nico hace girar la rueda. «Hagan sus apuestas. ¿Dónde quiere jugar la señorita?»",
+      "1000000": "Un millón en placas doradas sobre el tapete y medio casino se ha parado a mirar: camareras, guardias, incluso dos señores de la Familia que fingen no conocerse. El hombre del traje claro es el único que parece tranquilo, como si llevara años esperándote. Nico, pálido, traga saliva. «Hagan sus apuestas. ¿Dónde quiere jugar la señorita?»",
+      "nada": "No te queda ni una ficha, pero te quedas mirando la ruleta como quien mira a un antiguo amante. Nico está a punto de pedirte que dejes sitio a los que juegan cuando el hombre del traje claro, puro en mano, te lanza una ficha por encima del tapete. «Esta corre de mi cuenta». Nico se encoge de hombros. «Hagan sus apuestas. ¿Dónde quiere jugar la señorita?»"
     },
-    options: [
-      { say: "Bajaría el mínimo a diez solo en dos mesas y durante cuatro martes. Si el gasto total sube y el del sábado no baja, habremos demostrado que no hay canibalización.", reply: "Nico gira la rueda con una sonrisa. «Un experimento con fecha de caducidad. Me gusta. Los locales piden mesas baratas desde hace años; nadie se atrevió a probarlo sin abrir todas.»" },
-      { say: "No lo bajaría. Si el martes cuesta diez, el cliente se acostumbra a jugar barato y dejará de venir el sábado a veinticinco. El precio también comunica posicionamiento.", reply: "El hombre del puro asiente sin mirarte. Nico parece menos convencido. «Puede ser. Pero una mesa vacía también comunica algo, directora: que aquí no pasa nada. Y nadie entra en un casino donde no pasa nada.»" },
-      { say: "Más que bajar el mínimo, llenaría la mesa con un torneo de ruleta para locales. La mesa con gente atrae gente, y el mínimo se queda intacto.", reply: "Nico suelta una risa breve. «Un torneo de ruleta un martes... Es tan raro que podría funcionar. Doña Pilar sería la primera en apuntarse, y detrás vendrían sus amigas.»" },
+    "options": [
+      {
+        "say": "Todo al 17. Si he de perder, que sea a lo grande.",
+        "reply": "El hombre del puro arquea una ceja. «Valiente», murmura. Nico coloca la torre de fichas sobre el número sin decir nada, aunque le tiembla un poco la mano."
+      },
+      {
+        "say": "Solo una ficha al 17. El resto me lo guardo, por si las moscas.",
+        "reply": "«Sensata», comenta el del puro, soltando el humo. «Aunque me da que, en el fondo, se muere de ganas de jugárselo todo»."
+      },
+      {
+        "say": "¿Usted qué haría en mi lugar, caballero? Tiene pinta de entender de esto.",
+        "reply": "El hombre sonríe con unos dientes demasiado blancos. «Yo, en su lugar, no le pediría consejo a un desconocido. Pero, ya que se empeña, el 17 nunca me ha traído nada bueno»."
+      }
     ],
-    line2: "El hombre del puro deja caer la ceniza y te habla por fin, con voz grave. «Segmento A, me llaman en sus informes, ¿verdad? Ocho visitas al año, juego alto. Este mes me llegaron tres ofertas suyas y ninguna me importó. ¿Por qué debería volver la próxima vez?»",
-    options2: [
-      { say: "Porque no voy a mandarte una cuarta oferta. Te ofreceré algo que no está en ningún correo: acceso a la mesa privada cuando quieras y un anfitrión que te conozca de verdad.", reply: "El hombre sonríe apenas, entre el humo. «Por fin alguien que entiende que no necesito descuentos. Necesito que no me traten como a un número. Tu anfitrión, Ignacio, lo sabía hacer. Que vuelva a hacerlo.»" },
-      { say: "Dime tú qué te haría volver. Si tres ofertas no funcionaron, el problema no es tu lealtad, es nuestra puntería.", reply: "El hombre se queda pensando, sorprendido. «Una cena con el chef, sin prisa, y que nadie me interrumpa para hablar de puntos. Tan sencillo como eso. Llevo años diciéndolo y nadie lo apunta.»" },
-      { say: "Si te soy franca, quizá volverías de todos modos. Por eso prefiero invertir en clientes cuya visita depende de nosotros, aunque a ti te seguiremos cuidando.", reply: "El hombre te observa largamente y luego se ríe. «Qué cara tienes, directora. Y tienes razón: vendría igual, la ruleta es mi vicio. Pero ojo, directora: un cliente que se siente ignorado también aprende a cruzar la calle.»" },
+    "line2": "La bola da vueltas, rebota, parece decidirse y cae en el 17 negro. La mesa estalla. El hombre del puro aplaude despacio. «Si yo hubiera tenido esa suerte hace veinticinco años, otro gallo me habría cantado. Aunque, claro, el último que ganó así en esta casa acabó esfumándose».",
+    "options2": [
+      {
+        "say": "¿Eso ha sido una advertencia o es que le gusta asustar a las desconocidas?",
+        "reply": "«Las dos cosas, querida», responde, y apaga el puro con calma. «En Las Vegas, asustar a tiempo es una forma de cortesía»."
+      },
+      {
+        "say": "Mi padre no se esfumó por voluntad propia. Alguien lo empujó, y usted lo sabe.",
+        "reply": "El hombre deja de sonreír por un segundo. «Cuidado con lo que afirma en voz alta. En esta casa, hasta las paredes cobran comisión»."
+      },
+      {
+        "say": "Ya que he ganado, invito yo. Así me cuenta su versión con calma.",
+        "reply": "«Acepto la copa», dice, poniéndose en pie, «pero mi versión no se vende tan barata. Quizá otra noche, si para entonces sigue usted entera»."
+      }
     ],
-    end: "Nico lanza la bola, que cae en el diecisiete negro. El hombre del puro recoge sus fichas sin emoción. «En el blackjack hay un hombre que cuenta cartas y una regla nueva que nadie quiere», te susurra Nico. «Ve a verlo.»",
-    talk: [
-      "¿Por qué crees que a la gente le atrae un lugar lleno y le espanta uno vacío, aunque el vacío sea más cómodo?",
-      "El hombre del puro dice que no necesita descuentos, sino que no lo traten como un número: ¿cuándo te has sentido tú un número?",
-      "¿Te has hecho alguna vez «el interesante» para que alguien te valorara más? ¿Funciona en el amor igual que en los negocios?",
-      "¿Qué harías si te dieran diez mil dólares para jugar a la ruleta esta noche sin consecuencias? ¿Y si fueran tuyos?",
-      "¿Has sido alguna vez tan franca o tan franco con alguien poderoso como Valentina? ¿Qué ganaste y qué perdiste?",
+    "end": "Nico empuja hacia ti una montaña de fichas que de repente te parece demasiado pesada. Cuando levantas la vista, el hombre del puro ya se ha perdido entre la gente.",
+    "talk": [
+      "¿Quién crees que es el hombre del puro y qué relación pudo tener con el padre de Valentina?",
+      "¿Cuál es la decisión más arriesgada que has tomado? Si hubieras sabido cómo iba a acabar, ¿la habrías tomado igual?",
+      "¿Eres de las personas que van a por todas o de las que siempre se guardan algo? ¿De dónde crees que te viene?",
+      "¿Crees que ganar mucho dinero de golpe cambia a la gente o solo saca a la luz lo que ya llevaba dentro?",
+      "¿Qué sientes cuando alguien te mira demasiado en público: halago, incomodidad o curiosidad?"
     ],
-    words: ["canibalización", "mínimo de mesa", "posicionamiento", "por más que insista"],
+    "words": [
+      "otro gallo me habría cantado",
+      "por si las moscas",
+      "no quitarle los ojos de encima a alguien",
+      "esfumarse"
+    ]
   },
   blackjack: {
-    title: "La regla del seis a cinco",
-    line: "En la mesa de blackjack, Sam Ortega juega con calma excesiva mientras dos hombres de seguridad lo observan desde una columna. Cuando te sientas a su lado, murmura sin mover los labios. «Directora, Finanzas quiere cambiar el pago del blackjack de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-    money: {
-      nada: "Te sientas a la mesa de blackjack sin fichas, solo para mirar, y el crupier te pide con educación que dejes el sitio a quien juega. Sam Ortega te hace un hueco a su lado y murmura sin mover los labios. «Aquí sin fichas no eres nadie, directora, ni siquiera siendo la jefa. Escucha: Finanzas quiere cambiar el pago del blackjack de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-      "100": "Te sientas en la mesa de diez dólares, la única que permiten tus cien, y descubres que ahí ya pagan seis a cinco. Sam Ortega, a tu lado, murmura sin mover los labios. «Bienvenida a la mesa de los pobres, directora: aquí ya nos sacan el dinero con la regla mala. Finanzas quiere ponerla en todas: pasar de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-      "500": "Juegas manos de veinticinco dólares con tus quinientos y vas ganando un poco. Sam Ortega, vigilado por dos guardias, murmura sin mover los labios. «Disfrútalo mientras pagan tres a dos, directora. Finanzas quiere cambiarlo a seis a cinco: tu blackjack de veinticinco pagaría treinta en lugar de treinta y siete con cincuenta. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-      "1000": "Apuestas cien dólares por mano y el jefe de mesa empieza a mirarte con la misma atención que a Sam Ortega. Él murmura sin mover los labios. «Ojo, directora: con mil dólares ya te vigilan para ver si cuentas. Pero el problema es otro. Finanzas quiere cambiar el pago del blackjack de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-      "10000": "Pones quinientos dólares por mano, el jefe de sala te trae una copa y te pregunta si quieres tarjeta de fidelidad. Sam Ortega sonríe de lado. «Diez mil dólares y te tratan como a una reina; a mí me tratan como a un ladrón por usar la cabeza. Hablando de robos: Finanzas quiere cambiar el pago del blackjack de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-      "100000": "Te abren una mesa privada para tus cien mil dólares, con tres a dos garantizado y el crupier que tú elijas. Sam Ortega se cuela a tu lado con todo el morro y murmura. «A las ballenas les dejan la regla buena, directora; a los demás nos la quieren quitar. Finanzas quiere cambiar el pago del blackjack de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. Los jugadores como yo lo notamos el primer día. ¿Lo vas a permitir?»",
-      "1000000": "Con un millón de dólares sobre la mesa, el casino te ofrece cualquier regla que pidas: rendirte tarde, doblar después de dividir, lo que quieras. Seguridad vigila a Sam Ortega y, ahora, también a ti. Él murmura sin mover los labios. «Directora, el que tiene un millón negocia las reglas; el que tiene cien se las come. Finanzas quiere cambiar el pago del blackjack de tres a dos a seis a cinco. Le sube la ventaja a la casa casi un punto y medio. ¿Lo vas a permitir?»",
+    "title": "El contador de cartas",
+    "line": "En la mesa de blackjack, Sam Ortega juega con cara de no haber roto un plato en su vida, aunque lleva la cuenta de cada carta que sale. Cuando te sientas a su lado, habla sin mover los labios. «No te des la vuelta. Un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+    "money": {
+      "100": "Te sientas en la mesa de diez dólares con tus cien, lo justo para diez manos si la suerte no te da la espalda. Sam Ortega, con cara de contable aburrido, juega a tu lado y apenas te mira. «Pide carta, no te plantes con doce. Y no te des la vuelta: un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+      "500": "Con quinientos dólares te permites la mesa de veinticinco, donde los jugadores ya no se ríen tanto. Sam Ortega, que lleva la cuenta de cada carta con cara de despistado, te susurra sin girar la cabeza. «Buena entrada. Ahora escucha: un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+      "1000": "Mil dólares en la mesa de cincuenta y el jefe de mesa ya ha apuntado tu nombre en su libreta. Sam Ortega, sentado a tu izquierda, no levanta la vista del mazo. «Te han fichado, igual que a mí. Pero no son los únicos: un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+      "10000": "Con diez mil dólares te ofrecen una mesa privada, pero tú eliges sentarte junto al hombre al que media seguridad no deja de mirar. Sam Ortega pide carta y habla bajo, casi sin aire. «Mala elección de vecino, guapa. Y te diré otra cosa: un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+      "100000": "Te han cerrado una mesa de alto límite solo para ti, con crupier y camarera propios, y aun así haces que dejen sentarse a Sam Ortega. Él lo agradece con un gesto mínimo y vigila de reojo los espejos del techo. «Con cien mil, todo el mundo te mira. Pero uno te mira demasiado: un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+      "1000000": "Con un millón en juego, el casino ha puesto a tres guardias detrás de tu silla y un gerente que te pregunta cada dos minutos si estás cómoda. Sam Ortega, que se ha colado en la mesa con todo el descaro del mundo, te habla sin mover los labios. «Tienes más escolta que un presidente, y ninguno se ha dado cuenta: un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»",
+      "nada": "Te sientas a mirar la partida sin un dólar, y el crupier ya te lanza esa mirada que reserva a los mirones. Sam Ortega, el contador de cartas, te deja una ficha al lado como si fuera una propina y te habla sin mover los labios. «Haz como que juegas. Un tipo de traje gris te viene siguiendo desde la ruleta. ¿Tienes idea de por qué?»"
     },
-    options: [
-      { say: "Los datos muestran que el cambio aumentaría los ingresos por mano, pero no sabemos cuántos jugadores frecuentes perderíamos. Lo probaría solo en mesas de mínimos bajos antes de decidir.", reply: "Sam pide carta y gana con un veinte. «Los turistas del mínimo bajo ni se enteran, eso es verdad. Los que vienen ocho veces al año sí. Si lo pones en las mesas buenas, se van al de enfrente esa misma noche.»" },
-      { say: "No. Aunque los números de corto plazo sean tentadores, el blackjack de tres a dos es una promesa de marca. Romperla sería ahorrar centavos y perder reputación.", reply: "Sam te mira por primera vez con interés genuino. «Una directora que habla de promesas. Raro en esta ciudad. Los jugadores serios hablan entre ellos, ¿sabes? Si el Meridiano mantiene el tres a dos, lo sabrá todo el Strip en una semana.»" },
-      { say: "Lo permitiría con una condición: que lo compensemos con algo visible, como más puntos de fidelidad en esas mesas. Si la percepción es de equilibrio, el cliente acepta la regla.", reply: "Sam sonríe de lado. «Quitar con una mano y dar con la otra. Muy de casino. Funciona con el cliente que no calcula. Con el que calcula, solo funciona si los puntos valen más que lo que pierde.»" },
+    "options": [
+      {
+        "say": "Será que el rojo me sienta de maravilla. ¿Tú también te has fijado?",
+        "reply": "Sam pide carta con un toque de nudillos. «Me fijo en todo, guapa. Y te aseguro que ese no te mira el vestido; te mira el bolso»."
+      },
+      {
+        "say": "Ni idea. ¿Sabes para quién trabaja?",
+        "reply": "«Para alguien que nunca pisa la planta», responde Sam. «Y en este casino, quien no baja es quien manda»."
+      },
+      {
+        "say": "¿Y a ti quién te vigila? Porque media seguridad no te quita ojo.",
+        "reply": "Sam esboza una sonrisa torcida. «A mí me tienen fichado desde hace años. Que me vigilen ya es casi un cumplido»."
+      }
     ],
-    line2: "Uno de los guardias se acerca a la mesa. Sam baja la voz. «Me van a echar por contar cartas, aunque no es ilegal. Y yo traigo a veinte jugadores cada mes. ¿Qué vale más para tu casino: el dinero que gano yo o el que pierden ellos?»",
-    options2: [
-      { say: "Antes de decidirlo, quiero ver el valor de los veinte jugadores que traes. Si su theo supera lo que tú ganas, me conviene que te quedes, aunque sea con un límite de apuesta.", reply: "Sam alza las cejas. «Una directora que negocia con un contador de cartas. Acepto el límite, siempre y cuando nadie me humille delante de mis amigos. La reputación también cuenta en mi lado de la mesa.»" },
-      { say: "Te seré directa: la casa no puede premiar a quien le gana sistemáticamente. Pero tus jugadores sí me interesan, y les haré una oferta directa a ellos.", reply: "Sam suelta una risa seca. «Robarme a los amigos. ¡Qué morro! Pero elegante. Ten cuidado: vienen por mí, no por el casino. Si me echas mal, vendrán a verme jugar a otro lado.»" },
-      { say: "Prefiero que seguridad hable contigo con respeto y que el anfitrión gestione tu caso. Echar a alguien delante de todos es mala publicidad, por mucho que tengamos razón.", reply: "El guardia se detiene al ver tu gesto. Sam termina su mano tranquilo. «Gracias, directora. Es la primera vez en años que alguien aquí entiende que el espectáculo también es parte del negocio.»" },
+    "line2": "Sam se inclina un poco hacia ti. «Hagamos un trato. Tú entretienes dos minutos al calvo de seguridad y yo te cuento lo que vi aquí hace veinticinco años. Si aquella noche no me hubieran echado del casino, sabría mucho más, pero algo sé».",
+    "options2": [
+      {
+        "say": "Trato hecho. Entretener a un hombre aburrido se me da de maravilla.",
+        "reply": "«No lo dudo», ríe Sam. «Es el de la corbata azul. Y, por lo que más quieras, no le hables de cartas»."
+      },
+      {
+        "say": "Primero un adelanto. No me fío de nadie que se gane la vida contando.",
+        "reply": "Sam suspira. «Está bien. Aquella noche, antes de la partida grande, tu padre se dejó ganar adrede un par de veces. Quería que el dueño se creyera invencible. ¿Te vale?»"
+      },
+      {
+        "say": "Si me pillan, diré que me obligaste tú, que conste.",
+        "reply": "«Me parece justo», dice Sam, «aunque nadie se lo va a creer: tienes cara de llevar la voz cantante hasta cuando duermes»."
+      }
     ],
-    end: "Sam recoge sus fichas y se marcha por su cuenta, sin escándalo. Desde la mesa de dados llegan gritos y aplausos. «Una despedida de soltero», dice el crupier. «Llevan tres horas así.»",
-    talk: [
-      "Sam no hace nada ilegal, pero lo echan por ser listo: ¿te parece justo que castiguen a quien entiende mejor las reglas?",
-      "¿Alguna vez has dejado un lugar, una marca o una relación por un cambio pequeño que te pareció una falta de respeto?",
-      "¿Qué es peor para ti: que te engañen con una regla injusta o que te humillen delante de otros? ¿Por qué?",
-      "¿Has tenido que defender a alguien incómodo porque, aunque molestara, tenía razón? ¿Qué pasó?",
-      "Si pudieras cambiar una regla injusta de tu trabajo o de tu país sin pedir permiso, ¿cuál sería y por qué?",
+    "end": "Te levantas de la mesa con la sensación de haber firmado algo sin leer la letra pequeña. Desde la mesa de dados llegan los gritos de una despedida de soltero.",
+    "talk": [
+      "¿Por qué crees que Sam quiere ayudar a Valentina: por simpatía, por interés o por venganza?",
+      "¿Contar cartas te parece hacer trampa o simplemente ser más listo que el casino? ¿Dónde pones tú el límite?",
+      "¿Alguna vez has cerrado un trato del que te arrepentiste nada más aceptarlo? ¿Qué pasó?",
+      "¿Cómo reaccionas cuando sientes que alguien te controla, ya sea en el trabajo o en una relación?",
+      "¿En quién confías más: en quien reconoce sus trampas o en quien parece no tener ninguna?"
     ],
-    words: ["ventaja de la casa", "percepción", "promesa de marca", "siempre y cuando"],
+    "words": [
+      "no haber roto un plato",
+      "tener fichado a alguien",
+      "adrede",
+      "llevar la voz cantante"
+    ]
   },
   dados: {
-    title: "La despedida de Kike",
-    line: "La mesa de dados es un estadio. Doce hombres con camisetas iguales gritan cada tirada, y en el centro Kike, el novio, lleva una corona de plástico. «¡La nueva directora! Mis amigos y yo nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-    money: {
-      nada: "Te acercas a la mesa de dados sin un dólar y Kike, con su corona de plástico, te pone una cerveza en la mano. «¡La nueva directora! ¿Sin fichas? Aquí nadie se queda seca. Mira, mis amigos y yo nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-      "100": "Apuestas cinco dólares a la línea de pase, lo mínimo, y doce hombres con camisetas iguales te aplauden como si fuera la final del Mundial. Kike, el novio, se ajusta la corona. «¡Así se juega, directora, con poco y con alma! Nosotros nos hemos dejado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-      "500": "Pones cincuenta dólares en la mesa y Kike te abraza como si te conociera de toda la vida. «¡La directora juega con nosotros! Escucha: somos doce, nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, y en los dados apostamos poco porque somos malísimos. Pero lo pasamos de miedo. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-      "1000": "Pones doscientos dólares en la línea y la despedida entera se calla para verte tirar. Kike, con su corona de plástico, se arrodilla. «¡Una mujer que apuesta en serio! Nosotros no: nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco. El crupier ya nos odia. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-      "10000": "El jefe de mesa te hace sitio en el mejor lado para tus diez mil dólares y Kike lo nota al instante. «¡Mira, chicos, a ella le traen silla y a nosotros nos mandan callar! Directora, nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco y aquí solo cuenta lo que pasa en la mesa. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-      "100000": "Pones una ficha de cinco mil en la mesa y doce hombres en camiseta se quedan mudos. Kike se quita la corona y te la pone a ti. «¡Ballena a bordo! Directora, nosotros somos los pobres de la fiesta: nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco y nadie nos regala nada. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
-      "1000000": "Alguien grita que la directora lleva un millón encima y la mesa de dados se convierte en un manicomio: gente subida a las sillas, móviles grabando, un guardia nervioso. Kike te besa la mano. «¡La reina del Strip! Directora, nosotros nos hemos gastado una fortuna en el bar, en la discoteca y en el bufé, pero en los dados apostamos poco. ¿Nos vas a dar algo por venir en grupo?» Detrás de ti, un jugador premium mira la escena con evidente fastidio.",
+    "title": "Un siete para el novio",
+    "line": "La mesa de dados es un manicomio: gritos, chupitos y una despedida de soltero que perdió la vergüenza hace horas. Kike, el novio, con una corona de cartón y la camisa empapada, te pone los dados en la mano. «¡Rubia, tú tienes pinta de traer suerte! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»",
+    "money": {
+      "100": "Te unes a la mesa de dados con cien dólares y la intención de apostar de cinco en cinco, como una señora prudente. Kike, el novio, con su corona de cartón, te descubre y te arrastra hasta el centro. «¡Nada de cinco en cinco! ¡Hoy se apuesta como si no hubiera un mañana! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»",
+      "500": "Llegas con quinientos dólares justo cuando la despedida de soltero está perdiendo hasta la camisa. Kike, el novio, ve las fichas en tu mano y se le ilumina la cara. «¡Por fin alguien con dinero de verdad! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»",
+      "1000": "Pones mil dólares en la línea de pase y, de pronto, todos los amigos del novio quieren ser tus amigos. Kike, con la corona torcida y los ojos brillantes, te ofrece su vaso, aunque no sabes muy bien qué lleva. «¡Tú vas en serio, rubia! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»",
+      "10000": "Cuando ven tus diez mil dólares en fichas, el crupier sube el mínimo y la despedida de soltero se queda muda medio segundo. Luego Kike, el novio, se arrodilla delante de ti como si fueras una aparición. «¡Tú eres la señal que estaba esperando! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»",
+      "100000": "Con cien mil dólares, el jefe de sala te ha ofrecido una mesa de dados privada, pero a ti te apetece el jaleo. La despedida te recibe como a una estrella de rock, y Kike, el novio, te besa la mano con un respeto muy borracho. «¡Cásate conmigo en lugar de con Vanesa! Y si no, por lo menos, ¿me tiras los dados, que mañana me caso y necesito un milagro?»",
+      "1000000": "La noticia del millón ha llegado hasta la mesa de dados, y la despedida de soltero ha decidido que eres su diosa. Te reciben con una ola, el padrino llora y alguien propone hacerte un altar con vasos de plástico. Kike, el novio, te pone los dados en la mano con veneración. «¡Con un millón no hace falta suerte, pero a mí sí! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»",
+      "nada": "Te acercas a la mesa de dados sin un dólar, solo porque el jaleo se oye desde la otra punta del casino. Kike, el novio, te ve con las manos vacías y te pone en ellas los dados y un chupito. «¡Tú no tienes ni para una ficha, pero tienes cara de suerte, rubia! ¿Me tiras los dados, que mañana me caso y necesito un milagro?»"
     },
-    options: [
-      { say: "Los grupos como el tuyo generan el dieciocho por ciento de los ingresos de bebidas, aunque solo el tres por ciento del juego. Les haré una oferta, pero ligada a cenas y a la discoteca, no a fichas.", reply: "Kike levanta su copa. «¡Ella sí sabe! Dinos un precio cerrado para la próxima despedida: cena, mesa en la discoteca y una ronda de dados con crupier propio. Te traigo tres despedidas más este año.»" },
-      { say: "Me interesa más su próxima visita que esta. Si me das los correos del grupo, los invito a un fin de semana de aniversario cuando te cases.", reply: "Kike se ríe a carcajadas. «¡Una directora romántica! Está bien, te los doy. Aunque dentro de un año la mitad de estos estará casado, divorciado o en la cárcel, porque esta noche la vamos a liar.» Sus amigos brindan por las tres opciones." },
-      { say: "Les daría algo, sí, pero en una zona propia. Aunque son buenos clientes, si molestan al jugador premium de al lado perdemos más de lo que ganamos esta noche.", reply: "Kike mira al señor serio que se aleja y baja el volumen, solo un poco. «Una sala para nosotros solos... Eso suena incluso mejor. Así podemos gritar sin que nadie nos mire como si fuéramos bárbaros.»" },
+    "options": [
+      {
+        "say": "Te los tiro, pero si ganas, la mitad es para mí. En esta vida nada sale gratis.",
+        "reply": "Kike se lleva las manos a la cabeza. «¡Qué morro! ¡Ni mi futura suegra negocia así! Venga, vale, trato hecho»."
+      },
+      {
+        "say": "¿Un milagro para ganar o para no casarte? Aclárate, hombre.",
+        "reply": "Sus amigos se parten de risa. Kike se queda serio un segundo. «Para las dos cosas, si puede ser. Pero empieza por los dados»."
+      },
+      {
+        "say": "Vale, pero luego no me eches la culpa si sale mal.",
+        "reply": "«¡Si sale mal, la culpa es del padrino, que eligió la mesa!», grita Kike, y el padrino levanta el vaso como quien acepta su destino."
+      }
     ],
-    line2: "Kike te pone los dados en la mano. «Antes de hablar de negocios, tira tú, para la suerte. Y dime una cosa: si tuvieras que vender despedidas de soltero a todo el país, ¿cómo lo harías?»",
-    options2: [
-      { say: "Con alianzas: agencias de viajes de grupos, organizadores de bodas y creadores de contenido. Nosotros ponemos la experiencia, ellos ponen la audiencia, y medimos cada reserva por su origen.", reply: "Lanzas los dados: siete. La mesa estalla. «¡Siete! Hasta los dados te dan la razón», grita Kike. «Mi prima organiza bodas en tres ciudades. Te la presento mañana, si sobrevivo a esta noche.»" },
-      { say: "No lo vendería a todo el país. Me centraría en las ciudades a menos de cinco horas en auto, porque el costo de adquisición es menor y repiten más.", reply: "Lanzas los dados: un ocho. Los amigos aplauden igual. «¡Precisa y práctica!», dice Kike. «Nosotros venimos de Los Ángeles en cuatro horas. Si fuera más lejos, ni lo habríamos intentado.»" },
-      { say: "Con un paquete cerrado y un precio por persona fácil de entender. Si el organizador lo vende en un solo mensaje al grupo, la decisión se toma en una noche.", reply: "Lanzas los dados: once. Gritos, abrazos, una copa derramada. «¡Eso!», ruge Kike. «Yo tardé tres semanas en convencer a estos. Con un precio claro, lo habría cerrado en una tarde.»" },
+    "line2": "Soplas los dados, los lanzas y sale un siete. La mesa revienta en aplausos, alguien te levanta en brazos y otro llora de alegría. En medio del jaleo, un invitado muy sobrio te mete en la mano una caja de cerillas: «Salón Esmeralda». «Por si le interesa saber algo más de su padre», te dice al oído antes de desaparecer.",
+    "options2": [
+      {
+        "say": "¡Oye, espera! ¿Quién eres tú?",
+        "reply": "Kike te abraza sin dejarte avanzar. «¡Déjalo, que ese no es de los nuestros! Bueno, creo. Iba con nosotros desde el aeropuerto y nadie sabe cómo se llama»."
+      },
+      {
+        "say": "Kike, ¿ese hombre venía con ustedes o se ha colado?",
+        "reply": "Kike entorna los ojos, haciendo un esfuerzo enorme. «Ahora que lo preguntas… pensaba que era el primo de alguien. O el conductor de la limusina. Ni idea»."
+      },
+      {
+        "say": "Unas cerillas con un nombre. Esto huele más a cita que a regalo.",
+        "reply": "Kike te guiña un ojo, tambaleándose. «En Las Vegas todo huele a cita, rubia. Hasta las cerillas»."
+      }
     ],
-    end: "Kike te da las gracias con un abrazo que huele a tequila. Uno de sus amigos te pasa una caja de cerillas con el logo del Salón Esmeralda. «Para la directora: dicen que allí está el verdadero dinero.»",
-    talk: [
-      "¿Cuál ha sido la despedida, el cumpleaños o la fiesta más loca a la que has ido? ¿Qué se te fue de las manos?",
-      "¿Por qué crees que en grupo la gente hace cosas que nunca haría sola? ¿Te ha pasado?",
-      "Kike dice que en un año sus amigos estarán casados, divorciados o en la cárcel: ¿cómo han cambiado tus amigos de hace diez años?",
-      "¿Te molesta la gente ruidosa que se divierte cuando tú quieres tranquilidad? ¿Quién tiene más derecho al espacio?",
-      "¿Crees que celebrar a lo grande antes de casarse tiene sentido o es una manera de despedirse de algo que da miedo perder?",
+    "end": "Te escabulles entre abrazos y chupitos con las cerillas apretadas en el puño. Al fondo, tras unos barrotes dorados, la caja del casino espera en silencio.",
+    "talk": [
+      "¿Qué crees que buscaba el invitado misterioso al darle las cerillas a Valentina?",
+      "¿Para qué sirven, en tu opinión, las despedidas de soltero: para despedirse de algo o para liarla una última vez?",
+      "¿Cuál ha sido la noche más loca de tu vida? ¿Qué parte contarías y qué parte preferirías que nadie supiera?",
+      "¿Dejarías que un desconocido decidiera algo importante por ti, aunque solo fuera tirar unos dados? ¿Por qué?",
+      "¿Te casarías, o te habrías casado, sin estar del todo seguro? ¿Qué crees que pesa más: el miedo o la ilusión?"
     ],
-    words: ["venta cruzada", "alianza", "costo de adquisición", "precio cerrado"],
+    "words": [
+      "¡qué morro!",
+      "partirse de risa",
+      "tener pinta de",
+      "aclararse"
+    ]
   },
   caja: {
-    title: "El juego invisible",
-    line: "Detrás de los barrotes y el cristal blindado, Dolores cuenta billetes con precisión de reloj. No sonríe. «Directora. Te doy un dato que nadie quiere oír: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta de fidelidad. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-    money: {
-      nada: "Te acercas a la caja sin nada que cambiar y Dolores no levanta la vista de los billetes. «Directora. Sin fichas ni efectivo eres la única persona honesta en esta fila. Te doy un dato que nadie quiere oír: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta de fidelidad. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-      "100": "Cambias tu billete de cien por cuatro fichas verdes y Dolores te las desliza bajo el cristal sin una sonrisa. «Directora. Con cien dólares nadie te pide la tarjeta de fidelidad. Con diez mil, tampoco. Ese es el problema: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-      "500": "Cambias quinientos dólares en fichas y Dolores, mientras cuenta, te pregunta si tienes tarjeta. Tú no la tienes. Ella asiente, como si lo esperara. «¿Ves, directora? Ni tú. El treinta y cinco por ciento del juego en mesas se hace sin tarjeta de fidelidad. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-      "1000": "Pides cambiar mil dólares y Dolores los cuenta dos veces, con dedos de relojera. «Directora. A partir de cierta cifra, aquí la gente se pone nerviosa y no quiere dejar rastro. Te doy un dato que nadie quiere oír: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta de fidelidad. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-      "10000": "Pones diez mil dólares bajo el cristal y Dolores, sin inmutarse, saca el formulario que la ley exige a partir de esa cifra. «Directora. A este papel nadie se escapa, pero a la tarjeta de fidelidad sí. Fíjate: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-      "100000": "Un guardia te escolta hasta la ventanilla con tus cien mil dólares y Dolores abre una caja aparte, sin cola. «Directora. A ti te trato como a una ballena porque te veo. A muchas otras no las veo: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta de fidelidad. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
-      "1000000": "Dos guardias, un supervisor de Cumplimiento y un señor de traje que nadie te ha presentado rodean la caja mientras Dolores cuenta tu millón de dólares. Ella no pierde la calma. «Directora. Tu dinero lo vamos a documentar hasta el último billete. El de otros, no: el treinta y cinco por ciento del juego en mesas se hace sin tarjeta de fidelidad. Gente que cambia diez mil dólares aquí y para el sistema no existe. No sabemos quiénes son, cuánto valen ni cómo traerlos otra vez.»",
+    "title": "La ficha que no se cambia",
+    "line": "Tras un cristal blindado y unos barrotes dorados, Dolores cuenta billetes sin levantar la cabeza, como si el dinero la aburriera. Deslizas la ficha dorada por la bandeja. Ella la mira, pero no la toca. «Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+    "money": {
+      "100": "Vienes a cambiar tus últimas fichas de cinco dólares, que apenas suman cien, y aprovechas para dejar también la ficha dorada en la bandeja. Dolores cuenta las pequeñas con desgana y aparta la dorada como si fuera una moneda falsa. «Las de cinco, sí. Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+      "500": "Dejas en la bandeja una torre de fichas rojas por valor de quinientos dólares y, encima de todo, la ficha dorada. Dolores se pone las gafas, separa la dorada con la punta del bolígrafo y te devuelve el resto en billetes nuevos. «Lo suyo está aquí. Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+      "1000": "Con mil dólares que cambiar, Dolores te pide la tarjeta de jugadora antes de abrir el cajón, porque aquí hasta el último billete deja rastro. Cuando ve la ficha dorada mezclada con las demás, se le endurece la cara. «Las demás, sin problema. Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+      "10000": "Diez mil dólares en efectivo exigen papeles: Dolores te pide el pasaporte y te recuerda, con voz de funeral, que a partir de cierta cantidad hay que informar al fisco. Luego ve la ficha dorada y se olvida de los papeles. «Lo del fisco puede esperar. Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+      "100000": "Con cien mil dólares te han abierto una ventanilla privada, y un gerente te ofrece una línea de crédito con una sonrisa de vendedor de coches usados. Dolores, en cambio, sigue igual de seria cuando ve aparecer la ficha dorada. «Su crédito se lo arregla el gerente. Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+      "1000000": "Para cambiar un millón de dólares han cerrado la caja al público y han traído a dos guardias armados. Dolores cuenta los fajos sin inmutarse, hasta que entre ellos aparece la ficha dorada y, por primera vez en toda la noche, le tiembla el pulso. «Un millón lo cambio con los ojos cerrados. Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»",
+      "nada": "Te acercas a la caja sin nada que cambiar, solo con la ficha dorada, y Dolores ni siquiera levanta la vista de sus billetes. Cuando la deslizas por la bandeja, se le escapa un suspiro. «Ni un dólar en el bolso y viene con esto… Esta ficha no se cambia aquí. Solo arriba. ¿Desea cambiar alguna otra cosa?»"
     },
-    options: [
-      { say: "Entonces ese es mi primer problema, no el último. Si no capturamos los datos, cualquier campaña de CRM trabaja con la mitad del mapa.", reply: "Dolores deja de contar por un segundo, lo cual en ella es casi un abrazo. «Por fin. Llevo dos años mandando ese informe y lo usan para calzar una mesa. Si quieres los datos, dime qué necesitas y te lo preparo esta noche.»" },
-      { say: "Pondría un incentivo inmediato en la caja: quien cambie fichas con la tarjeta recibe un crédito de restaurante en el acto. La gente se registra cuando gana algo al momento.", reply: "Dolores frunce los labios, calculando. «Un crédito en el acto... Funciona con los turistas. Los que juegan diez mil en efectivo, en cambio, no quieren dejar rastro. A esos no los compras con una cena.»" },
-      { say: "Por mucho que necesitemos los datos, no presionaría a quien prefiere la discreción. Formaría a los crupieres para invitar con naturalidad y respetaríamos un no.", reply: "Dolores asiente despacio. «Discreción. En esta caja eso vale oro. Hay clientes que vienen aquí precisamente porque nadie les pregunta el nombre. Si los presionas, desaparecen. Y no vuelven ni de broma.»" },
+    "options": [
+      {
+        "say": "¿Y no podría hacer una excepción conmigo? Le prometo portarme bien.",
+        "reply": "Dolores levanta por fin la vista. «Señorita, aquí las excepciones se pagan caras, y portarse bien no ha salvado nunca a nadie»."
+      },
+      {
+        "say": "Nada más, gracias. Pero ¿qué quiere decir exactamente «arriba»?",
+        "reply": "«Arriba es arriba», contesta Dolores, impasible. «Y quien tenga que explicárselo no trabaja en una ventanilla»."
+      },
+      {
+        "say": "No, nada más. Pero usted ya había visto esta ficha antes, ¿verdad?",
+        "reply": "Dolores esconde las manos bajo el mostrador. «Una vez, cuando yo era joven y todavía me temblaban las manos», admite. «Y la traía alguien con su misma manera de sonreír»."
+      }
     ],
-    line2: "Un hombre empuja un maletín bajo el cristal. Dolores lo ignora un instante y te mira. «Y luego está el control: Finanzas quiere saber cuánto cuesta el programa de fidelidad. Si regalamos puntos a todos, ¿qué devuelve el programa a la casa? Responde como si yo fuera el jefe.»",
-    options2: [
-      { say: "Lo que devuelve es información y frecuencia. Sin el programa no sabríamos quién vuelve; con él, podemos medir el valor de cada cliente y reinvertir donde hay retorno.", reply: "Dolores contesta con su tono más seco. «Bien dicho. Pero el jefe te va a preguntar cuánto, no qué. Llévale una cifra: costo por punto canjeado y visitas adicionales por miembro activo.»" },
-      { say: "Si soy honesta, hoy no lo sabemos con precisión. Propongo medir a los miembros frente a un grupo comparable de no miembros durante tres meses antes de pedir más presupuesto.", reply: "Dolores casi sonríe. «Admitir que no sabes algo delante del jefe... Pocos lo hacen. Si vienes con un plan para saberlo, te creerá más que a los que inventan números.»" },
-      { say: "Regalar puntos a todos no devuelve nada. Por eso cambiaría el programa: menos puntos por gasto bajo y beneficios de experiencia para los niveles altos.", reply: "Dolores vuelve a sus billetes. «Los locales se van a quejar. Doña Pilar, la primera. Pero si el cambio es claro y justo, se quejarán una semana y luego seguirán viniendo.»" },
+    "line2": "Dolores te devuelve la ficha empujándola con un bolígrafo, como si le diera asco o miedo. «Se lo digo porque me cae bien, y eso no me pasa a menudo: esa ficha no vale dinero. Puede que sea una invitación… o puede que sea una factura».",
+    "options2": [
+      {
+        "say": "¿Y cómo voy a saber cuál de las dos es?",
+        "reply": "«Fíjese en cómo la reciban allí arriba», dice Dolores. «Si le ofrecen una copa, es invitación. Si le ofrecen una silla y cierran la puerta, es factura»."
+      },
+      {
+        "say": "¿Usted cree que mi padre debería haberse ido antes?",
+        "reply": "Dolores tarda en contestar. «Su padre se fue justo a tiempo, señorita. Otros que se quedaron no han vuelto a ver la luz del día»."
+      },
+      {
+        "say": "Con esa voz, Dolores, debería leer las noticias en la radio.",
+        "reply": "«Lo intenté», responde sin sonreír. «Me dijeron que daba demasiado miedo, incluso leyendo el parte del tiempo»."
+      }
     ],
-    end: "Dolores desliza un sobre bajo el cristal: el informe del juego no registrado, con tu nombre escrito a mano. «Léelo con una copa. El bar está ahí mismo. Leo prepara el mejor martini del Strip.»",
-    talk: [
-      "Dolores dice que hay clientes que vienen precisamente porque nadie les pregunta el nombre: ¿qué parte de tu vida prefieres que no sepa nadie?",
-      "¿Te inquieta que las empresas sepan tanto de ti? ¿Qué información no darías nunca, ni a cambio de un regalo?",
-      "¿Qué te da más confianza en una persona: que admita que no sabe algo o que siempre tenga una respuesta?",
-      "¿Has guardado alguna vez dinero en efectivo «por si acaso» o escondido de alguien? ¿Qué dice eso de tu relación con el dinero?",
-      "¿Has trabajado alguna vez con alguien serio y seco como Dolores que, al final, resultó ser la persona más leal del equipo?",
+    "end": "Guardas la ficha en el fondo del bolso, que ahora parece pesar el doble. A unos pasos, el piano del bar central suena como una invitación mucho más amable.",
+    "talk": [
+      "¿Qué secretos crees que ha visto pasar Dolores por esa ventanilla en tantos años?",
+      "¿Has visto alguna vez a alguien perder algo que no podía permitirse perder? ¿Cómo te sentiste?",
+      "¿Por qué crees que hablar de dinero con la familia o con la pareja resulta tan incómodo?",
+      "¿Qué piensas de la gente que nunca sonríe en el trabajo: es profesionalidad o se está protegiendo?",
+      "Si tuvieras que empeñar algo para salir de un apuro, ¿qué venderías primero y qué no venderías jamás?"
     ],
-    words: ["juego no registrado", "captura de datos", "programa de fidelidad", "admitir que no sabes"],
+    "words": [
+      "portarse bien",
+      "caer bien",
+      "salir de un apuro",
+      "empeñar"
+    ]
   },
   bar: {
-    title: "Bebidas por cuenta de la casa",
-    line: "En el bar central, Chet toca un piano lento entre volutas de humo. Leo, el barman, sirve un martini y lo empuja hacia ti. «Invita la casa, como siempre. El problema es que la casa invita demasiado: el año pasado las bebidas gratis costaron dos coma un millones de dólares. La mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-    money: {
-      nada: "Te sientas en el bar sin un dólar y pides solo agua. Leo te mira, duda y te sirve un martini. «Invita la casa, aunque en teoría solo invitamos a quien juega. Y aquí está el problema: el año pasado las bebidas gratis costaron dos coma un millones de dólares. La mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-      "100": "Pides un martini, ves que cuesta veintidós dólares y haces cuentas con tus cien. Leo se ríe y te lo regala con un guiño. «Directora, si te sientas en una máquina de un centavo, te lo traen gratis. Así de absurdo es esto: el año pasado las bebidas gratis costaron dos coma un millones de dólares, y la mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-      "500": "Pagas tu martini como cualquier clienta y dejas una buena propina. Leo levanta las cejas, sorprendido. «Una directora que paga la copa. Eso no lo veía desde hace años. Aquí invita la casa, y demasiado: el año pasado las bebidas gratis costaron dos coma un millones de dólares. La mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-      "1000": "Dejas mil dólares en fichas sobre la barra y Leo te sirve un martini y un plato de aceitunas que no pediste. «Invita la casa, como siempre. Al que se le ve dinero, más todavía. El año pasado las bebidas gratis costaron dos coma un millones de dólares, y la mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-      "10000": "Antes de que te sientes, Leo ya te ha preparado un martini con un whisky de reserva al lado, por si acaso: alguien le ha dicho que llevas diez mil dólares. «Invita la casa, directora. Aunque la casa invita demasiado: el año pasado las bebidas gratis costaron dos coma un millones de dólares. La mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-      "100000": "Leo te abre una botella de champán de ochocientos dólares, «cortesía de la casa para la ballena», y Chet cambia de canción en tu honor. «Directora, esta botella la pagan, en teoría, tus cien mil. Las otras, no tanto: el año pasado las bebidas gratis costaron dos coma un millones de dólares. La mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
-      "1000000": "Medio bar te invita a una copa y un desconocido con anillos de oro insiste en pagarte la cena. Leo los espanta con un trapo y te sirve un martini. «Con un millón en el bolso, directora, aquí todo el mundo te quiere invitar, y casi siempre a cambio de algo. La casa también invita, y demasiado: el año pasado las bebidas gratis costaron dos coma un millones de dólares. La mitad fue a gente que apostaba cinco dólares por mano. Don Aurelio dice que sin bebidas gratis esto se vacía. ¿Tú qué crees?»",
+    "title": "El bolero de Ernesto",
+    "line": "En el bar central, Leo agita la coctelera con un ritmo que parece de tango, mientras Chet, al piano, toca algo suave con un cigarrillo apagado en la boca. Leo te pone una servilleta delante. «Buenas noches, preciosa. Aquí cada cóctel cuenta una historia. ¿Qué te apetece tomar?»",
+    "money": {
+      "100": "Con cien dólares sabes que cada cóctel de veinte es un lujo, así que miras la carta como quien mira el menú de un restaurante carísimo. Leo, sin dejar de agitar la coctelera, te lee el pensamiento. «Tranquila, que si juegas en la máquina de la barra, la copa te sale gratis. ¿Qué te apetece tomar?»",
+      "500": "Llegas a la barra con quinientos dólares y ganas de una copa que esté a la altura de la noche. Leo te pone una servilleta delante con una floritura y Chet, al piano, te dedica dos notas de bienvenida. «Una dama con pinta de celebrar algo. ¿Qué te apetece tomar?»",
+      "1000": "Con mil dólares en fichas a la vista, la camarera ya te ha preguntado dos veces si necesitas algo y el pianista ha empezado a mirarte. Leo aparta a un cliente pesado para atenderte primero. «Las que juegan fuerte no hacen cola en mi barra. ¿Qué te apetece tomar?»",
+      "10000": "Un anfitrión del casino te acompaña hasta la barra y le dice a Leo que todo lo tuyo va a cuenta de la casa: con diez mil dólares en juego, hasta el whisky más caro sale gratis. Leo baja de la estantería alta una botella que no enseña a cualquiera. «Para ti, lo bueno. ¿Qué te apetece tomar?»",
+      "100000": "Con cien mil dólares, el casino ha reservado la esquina del bar solo para ti, y Chet ha recibido una propina generosa para tocar lo que pidas. Leo te sirve agua con gas en una copa de cristal tallado, por si acaso. «Aquí todo es gratis para ti, incluso mis consejos. ¿Qué te apetece tomar?»",
+      "1000000": "Desde que se sabe lo del millón, el bar entero está pendiente de ti: un jeque te ha mandado champán, una estrella de la tele quiere fotos y el gerente vigila que nadie te moleste. Leo aparta las botellas regaladas y te mira con calma. «Tienes medio bar a tus pies, pero la copa la eliges tú. ¿Qué te apetece tomar?»",
+      "nada": "Te sientas en la barra sin un dólar, esperando que alguien te invite o, al menos, que nadie te eche. Leo te pone delante un vaso de agua con hielo y limón, como hace con los que están sin blanca, y luego te sonríe de verdad. «La primera corre de mi cuenta, por esa cara de pena. ¿Qué te apetece tomar?»"
     },
-    options: [
-      { say: "Ligaría las bebidas al juego registrado: gratis para quien juega con tarjeta y por encima de un mínimo. Así la cortesía premia el comportamiento que queremos.", reply: "Leo se apoya en la barra. «Eso lo hacen ya en dos casinos del Strip. Al principio la gente se queja; a los dos meses, todos tienen tarjeta. Y de paso, Dolores tendrá sus datos.»" },
-      { say: "No las recortaría a ciegas. Aunque cuesten mucho, son parte de la experiencia que hace venir a la gente. Primero quiero saber qué parte de esos dos millones genera visitas.", reply: "Leo se encoge de hombros, agitando la coctelera. «Lo que tú digas. Pero te digo algo gratis, como las copas: el que viene por una cerveza gratis no es el que te paga el sueldo. A ese le importa un pepino tu casino.»" },
-      { say: "Convertiría parte del gasto en venta cruzada: en lugar de una copa más, una invitación a una cena o al espectáculo. Al cliente le cuesta lo mismo y a nosotros nos abre otra puerta.", reply: "Leo se queda pensando con la coctelera en el aire. «Una copa se olvida en diez minutos. Una cena en el restaurante italiano se recuerda y, encima, se paga el vino. No es mala idea, directora.»" },
+    "options": [
+      {
+        "say": "Algo fuerte que me haga olvidar, aunque sea solo un rato.",
+        "reply": "Leo mezcla tequila, café y un toque de canela. «Olvidar no te lo garantizo, cariño. Pero con esto, por lo menos, dejarás de pensar tan alto»."
+      },
+      {
+        "say": "Lo mismo que tomaba Ernesto Duarte, si es que te acuerdas.",
+        "reply": "Leo se queda quieto con la coctelera en el aire. «Ron añejo con hielo y una piel de limón que mordía al final», dice por fin. «Llevaba veinticinco años sin prepararlo»."
+      },
+      {
+        "say": "Prepárame lo que quieras. Esta noche me dejo llevar.",
+        "reply": "«Frase peligrosa en Las Vegas», sonríe Leo, y te sirve algo rosa con champán. «Se llama La Segunda Oportunidad. Pocos la piden; casi nadie se la merece»."
+      }
     ],
-    line2: "Chet deja de tocar y gira en el taburete. «Directora, si me permites. Los jueves esto es un desierto. Yo podría tocar con una cantante: jazz, velas, cócteles de autor. ¿Valdría la pena o es un capricho de músico viejo?»",
-    options2: [
-      { say: "Valdría la pena si se mide bien. Haría cuatro jueves con un menú de cócteles y compararía el gasto del bar y el de las mesas cercanas con los jueves anteriores.", reply: "Chet sonríe y toca tres notas alegres. «Datos y jazz. Nunca pensé que se pudieran mezclar. Si los números salen bien, te dedico una canción.»" },
-      { say: "Me encanta, pero lo convertiría en una experiencia para el viajero de resort: concierto, cena y suite en un solo paquete de entre semana. Un capricho, sí, pero rentable.", reply: "Chet asiente lentamente. «Las parejas que vienen tres veces al año... Esos sí escuchan música. Los jugadores de mesa, en cambio, solo escuchan las fichas.»" },
-      { say: "Por bonita que sea la idea, antes quiero saber quién está en el casino un jueves. Si son locales que vienen por las máquinas, el jazz no los va a mover.", reply: "Chet se ríe con suavidad. «Tienes razón. Los jueves vienen Doña Pilar y sus amigas. Aunque a ella, te lo aseguro, le encanta Sinatra.»" },
+    "line2": "Sin que nadie se lo pida, Chet cambia de canción y empieza un bolero antiguo. Leo deja de agitar. «Esa era la canción de tu padre», dice Chet sin dejar de tocar. «La tocaba siempre antes de la última mano. Me pidió que, si algún día no volvía, se la tocara a quien viniera preguntando por él».",
+    "options2": [
+      {
+        "say": "O sea, que sabía que a lo mejor no volvía… y aun así subió.",
+        "reply": "Chet asiente despacio. «Por muy listo que fuera, tu padre era incapaz de dejar una partida a medias. Unos lo llaman valor; yo lo llamo terquedad»."
+      },
+      {
+        "say": "¿Qué pasó exactamente en esa última mano, Chet?",
+        "reply": "«Eso pregúntaselo al Holandés, en el Salón Esmeralda», contesta Chet. «Él estaba en la mesa. Yo solo ponía la música»."
+      },
+      {
+        "say": "Tócala otra vez, por favor. Me hace más falta que la copa.",
+        "reply": "Chet vuelve al principio con una sonrisa triste. «Tu padre decía exactamente lo mismo. Parece que en tu familia las canciones se heredan»."
+      }
     ],
-    end: "Chet empieza un bolero antiguo y Leo te sirve un segundo martini que no pediste. «Arriba, en el Bulevar, están las apuestas deportivas», dice. «Ramiro lleva toda la noche mirando una pantalla como si le fuera la vida.»",
-    talk: [
-      "¿Crees que la gente gasta más cuando bebe? ¿Te has arrepentido alguna vez de una decisión tomada con dos copas de más?",
-      "Leo dice que quien viene por una cerveza gratis no es quien te paga el sueldo: ¿hay gente en tu vida que solo aparece cuando hay algo gratis?",
-      "¿Qué canción te transporta a una época concreta de tu vida y qué recuerdo te despierta?",
-      "¿Te parece ético que un casino invite a copas para que la gente juegue más? ¿Dónde pondrías el límite?",
-      "Chet tiene miedo de que su idea sea «un capricho de músico viejo»: ¿qué proyecto personal has dejado de lado por miedo a que pareciera ridículo?",
+    "end": "Terminas la copa a sorbos lentos, con la melodía todavía en la piel. Desde el segundo piso llega el rugido de las pantallas de las apuestas deportivas.",
+    "talk": [
+      "¿Por qué crees que Ernesto quería que esa canción sonara para quien viniera a buscarlo?",
+      "¿Hay alguna canción que te traiga un recuerdo tan fuerte que prefieras no escucharla? ¿Qué historia hay detrás?",
+      "¿Por qué crees que a veces nos sinceramos más con un camarero o un desconocido que con nuestra propia familia?",
+      "¿Cómo te cambia el alcohol en las noches importantes: te da valor, te hace hablar de más o te pone melancólico?",
+      "Si supieras que mañana vas a desaparecer, ¿a quién le dejarías una canción y por qué esa?"
     ],
-    words: ["bebidas gratis", "cortesía", "por bonita que sea", "cócteles de autor"],
+    "words": [
+      "dejarse llevar",
+      "dejar a medias",
+      "a sorbos",
+      "sincerarse"
+    ]
   },
   apuestas: {
-    title: "El costo de un clic",
-    line: "Pantallas gigantes muestran carreras de caballos, fútbol y boxeo. Ramiro, sudoroso, aprieta un boleto arrugado. «Directora, yo llegué por un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-    money: {
-      nada: "Entras en la sala de apuestas sin un peso y Ramiro, sudoroso, te pide prestados veinte dólares antes de saber quién eres. «Ay, perdón, directora. Es que yo llegué por un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-      "100": "Apuestas veinte dólares a un caballo que se llama Último Recurso y Ramiro te mira con ternura. «Con cien dólares se empieza, directora. Yo empecé con un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-      "500": "Apuestas cien dólares al empate en un partido aburrido y Ramiro, sudoroso, aprieta un boleto arrugado. «Buena apuesta, directora. Yo llegué por un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces, y no me arrepiento… casi.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-      "1000": "Pones quinientos dólares a un boxeador y el jefe de sala te ofrece un asiento de cuero frente a la pantalla grande. Ramiro, en una silla de plástico, se ríe con amargura. «A mí no me dieron sillón, directora. Yo llegué por un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-      "10000": "Pides apostar cinco mil dólares a la final y el jefe de apuestas tiene que pedir autorización para aceptar la cifra. Ramiro te mira como a una diosa. «Directora, yo soy de los pequeños: llegué por un anuncio en el teléfono, bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-      "100000": "Te reservan un palco privado con pantalla propia para tus cien mil dólares y Ramiro se cuela detrás de ti con su boleto. «Directora, a ti te ponen palco; a mí me pusieron un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
-      "1000000": "Corre la voz de que quieres apostar un millón a un solo partido y la sala se vuelve loca: el jefe de apuestas llama a Las Vegas entera, un tipo te pide información privilegiada. Ramiro tiembla. «Directora, yo llegué por un anuncio en el teléfono: bono de bienvenida de doscientos dólares. Me he gastado tres mil desde entonces.» Detrás, el jefe de apuestas digitales te pasa una tableta: cada nuevo cliente con depósito cuesta cuatrocientos cincuenta dólares en publicidad y solo el veintidós por ciento sigue activo al mes.",
+    "title": "Ramiro lo apuesta todo",
+    "line": "En la sala de apuestas deportivas, las pantallas gigantes muestran carreras de caballos, partidos de fútbol y caras desencajadas. Ramiro, con la corbata deshecha, se come las uñas delante del partido del Tijuana. «Lo he apostado todo, señorita: el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+    "money": {
+      "100": "Apuestas veinte dólares a un caballo con nombre bonito y guardas el resto de tus cien para la cena. Ramiro, a tu lado, mira tu boleto con ternura y el suyo con pánico. «Veinte dólares… qué envidia de prudencia. Yo lo he apostado todo: el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+      "500": "Con quinientos dólares te animas a apostar al fútbol y te sientas junto a Ramiro, que suda frente al partido del Tijuana. Él ve tu boleto y suelta una risa nerviosa. «Usted juega para divertirse. Yo no: lo he apostado todo, el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+      "1000": "Mil dólares a un partido y el encargado de la sala ya te ofrece un sillón de cuero y un perrito caliente gratis. Ramiro, desde el sillón de al lado, te mira como a una compañera de sufrimiento. «Mil, ¿eh? Pues yo lo he apostado todo: el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+      "10000": "Diez mil dólares a un solo resultado y el jefe de la sala te pone una pantalla privada con el partido que elijas. Ramiro, que lo ve todo desde su silla de plástico, se acerca a ti como a una señal del cielo. «Usted puede permitirse perder. Yo no: lo he apostado todo, el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+      "100000": "Con cien mil dólares, la sala de apuestas te reserva un palco con camarero, y los corredores te llaman por tu nombre. Ramiro se cuela en el palco con la excusa de pedirte fuego. «Perdone, es que necesito hablar con alguien antes de que me dé algo. Lo he apostado todo: el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+      "1000000": "Se ha corrido la voz de que la mujer del millón está en la sala, y los apostadores te siguen como si supieras los resultados de antemano. Ramiro se arrodilla delante de ti, medio en broma y medio en serio. «Dígame a quién le apuesta usted y la sigo. Yo ya lo he apostado todo: el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»",
+      "nada": "Te sientas en la sala de apuestas solo para ver los partidos, porque no tienes ni para un boleto. Ramiro, al verte sin dinero, te ofrece la mitad de su bocadillo como quien comparte una trinchera. «Al menos usted no tiene nada que perder. Yo lo he apostado todo: el coche, los ahorros y el reloj de mi abuelo. ¿Usted cree que estoy loco?»"
     },
-    options: [
-      { say: "Con un veintidós por ciento de retención, estamos pagando cuatrocientos cincuenta dólares por clientes que se van en semanas. Antes de invertir más en adquisición, arreglaría lo que pasa después del primer depósito.", reply: "El jefe de apuestas resopla. «Pero si dejamos de anunciar, la competencia nos come.» Ramiro levanta la vista del boleto. «A mí nadie me escribió después del bono. Si alguien me hubiera llamado, quizá apostaría aquí y no en la aplicación de enfrente.»" },
-      { say: "Aunque el costo de adquisición sea alto, el cliente digital vale si lo traemos al casino físico. Mediría cuántos de ellos visitan el Meridiano y cuánto gastan en hotel y restaurantes.", reply: "Ramiro se anima de golpe. «¡Yo vine por eso! Primero aposté desde casa, luego quise ver el partido en esta pantalla gigante. Y ya cené aquí dos veces.» El jefe de apuestas toma nota con interés." },
-      { say: "Recortaría el bono de bienvenida y lo cambiaría por uno escalonado: un poco al principio y más en la segunda y tercera semana. Pagamos por quien se queda, no por quien llega.", reply: "El jefe de apuestas frunce el ceño. «El bono grande es el que atrae.» Ramiro se rasca la cabeza. «A mí me habría dado igual recibirlo en tres partes. Lo que importa es sentir que alguien te espera la semana siguiente.»" },
+    "options": [
+      {
+        "say": "Un poco, pero me encantan los hombres que se la juegan.",
+        "reply": "Ramiro se pone colorado hasta las orejas. «Pues si gana el Tijuana, la invito a cenar. Y si pierde… me invita usted a mí, por caridad»."
+      },
+      {
+        "say": "Loco no, Ramiro: se ha pasado de la raya. Eso ya no es apostar.",
+        "reply": "«Lo sé», suspira, «pero cuando uno empieza a perder, parar se vuelve imposible. Es como querer frenar cuesta abajo y sin frenos»."
+      },
+      {
+        "say": "Depende. ¿Quién se queda con el reloj si pierde?",
+        "reply": "Ramiro traga saliva. «Un señor del piso 3. En este casino, todo lo que se pierde acaba allí arriba, tarde o temprano»."
+      }
     ],
-    line2: "Ramiro te agarra del brazo, nervioso. «Directora, perdóname, pero ¿tú sabes quién apuesta de verdad en este casino? Todos. Hasta Don Aurelio apuesta por cosas que no ve. Dime: ¿tú en qué apuestas esta noche, en traer gente nueva o en no perder a la que ya tienes?»",
-    options2: [
-      { say: "En no perder a la que ya tenemos. Retener a un cliente cuesta una fracción de lo que cuesta adquirir uno nuevo, sobre todo cuando la adquisición sale a cuatrocientos cincuenta dólares.", reply: "Ramiro asiente con fervor. «¡Exacto! Yo ya estoy aquí. Cuídame un poco y te dejo el sueldo cada mes.» El jefe de apuestas tose, incómodo, pero no contradice la cifra." },
-      { say: "En las dos, pero con reglas distintas. A la adquisición le pondría un tope de costo por cliente; a la retención, un objetivo de visitas al segundo mes. Sin tope, la adquisición se come el presupuesto.", reply: "Ramiro te mira como si hablaras de caballos. «Un tope y un objetivo. Parece un sistema de apuestas, directora.» Se ríe solo. «Y los sistemas, si son buenos, ganan.»" },
-      { say: "En la gente nueva, aunque suene arriesgado. Si no renovamos la base, dentro de cinco años el casino será un museo. La clave es elegir bien a quién traemos.", reply: "Ramiro aplaude como si su caballo hubiera ganado. «¡Valiente! Yo soy de los nuevos, aunque ya me siento de la casa.» Una carrera termina en la pantalla y él grita: ha perdido otra vez y se queda hecho polvo." },
+    "line2": "En la pantalla, el Tijuana falla un penalti en el último minuto. Ramiro se tapa la cara, pero al rato te mira con una calma extraña. «¿Sabe qué? Aquí todo el mundo apuesta algo. Incluso el dueño. Dicen que hace años se jugó el casino entero… y que no supo perder».",
+    "options2": [
+      {
+        "say": "Quien apuesta lo que no quiere perder suele acabar haciendo trampas.",
+        "reply": "Ramiro te señala con el dedo. «¡Ahí le ha dado! El viejo Montalbán firma lo que haga falta… pero pagar ya es otra historia»."
+      },
+      {
+        "say": "¿Y quién le ganó al dueño? Cuéntemelo antes de que empiece otro partido.",
+        "reply": "«Un crupier con más valor que cabeza», susurra Ramiro. «Y ahora que la miro bien, tenía sus mismos ojos»."
+      },
+      {
+        "say": "Venga, Ramiro, déjelo por hoy y lo invito a una copa.",
+        "reply": "Ramiro duda y vuelve a mirar la pantalla. «Se lo agradezco de corazón. Pero ahora empieza uno de la liga japonesa, y esta vez lo tengo clarísimo»."
+      }
     ],
-    end: "Ramiro rompe el boleto en pedazos y los lanza al aire como confeti. «En el Salón Esmeralda empieza el torneo de póker», dice. «El Holandés está allí. Dicen que ese viejo nunca pierde una mano importante.»",
-    talk: [
-      "Ramiro llegó por un bono y ya ha perdido tres mil dólares: ¿quién es más responsable, él o la empresa que lo atrajo?",
-      "¿Has entrado alguna vez en algo por una oferta irresistible y has acabado gastando mucho más de lo previsto?",
-      "¿Por qué crees que nos cuesta tanto retirarnos cuando vamos perdiendo, en el juego, en el trabajo o en una relación?",
-      "¿Conoces a alguien que no podía dejar de apostar, comprar o jugar? ¿Cómo lo vivió su entorno?",
-      "Si te ofrecieran el doble de sueldo por vender un producto que hace daño a algunos clientes, ¿lo aceptarías? ¿Con qué condiciones?",
+    "end": "Dejas a Ramiro rezándole a la pantalla. Al fondo del pasillo, una puerta verde con letras discretas anuncia: «Salón Esmeralda».",
+    "talk": [
+      "¿Qué te parece que el propio dueño del casino se jugara una vez todo lo que tenía?",
+      "¿Conoces a alguien enganchado al juego, al trabajo o a una relación? ¿Cuándo te diste cuenta de que ya no era normal?",
+      "¿Qué has arriesgado tú en la vida que no fuera dinero: una relación, un trabajo, tu orgullo?",
+      "¿Por qué crees que hay personas que solo se sienten vivas cuando están a punto de perderlo todo?",
+      "¿Qué te cuesta más: decirle a un amigo que tiene un problema o reconocer que el problema lo tienes tú?"
     ],
-    words: ["apuestas digitales", "costo de adquisición", "retención", "bono de bienvenida"],
+    "words": [
+      "jugársela",
+      "pasarse de la raya",
+      "ponerse colorado",
+      "tenerlo clarísimo"
+    ]
   },
   poker: {
-    title: "El torneo que pierde dinero",
-    line: "En el Salón Esmeralda, cuatrocientos jugadores llenan cuarenta mesas bajo lámparas verdes. El Holandés, gafas oscuras y voz de lija, te invita a sentarte con un gesto. «Directora, este torneo garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-    money: {
-      nada: "No tienes para la inscripción del torneo y el encargado te impide pasar del cordón. El Holandés, gafas oscuras y voz de lija, le hace una seña para que te deje entrar y te invita a sentarte. «Directora, aquí sin dinero solo se mira. Escucha: este torneo garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-      "100": "Te enteras de que la inscripción cuesta doscientos dólares y tus cien no alcanzan. El Holandés, gafas oscuras y voz de lija, se ríe y te invita a sentarte a su lado. «Para los de cien hay un torneo satélite a las tres de la madrugada, directora. Este garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-      "500": "Pagas los doscientos dólares de inscripción y te dan una silla en la mesa treinta y nueve, junto al baño. El Holandés, gafas oscuras y voz de lija, te hace un gesto desde la mesa uno. «Bienvenida al ejército, directora. Este torneo garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-      "1000": "Te inscribes y te sobra para una partida de efectivo. El Holandés, gafas oscuras y voz de lija, te invita a sentarte con un gesto. «Con mil dólares eres una aficionada con ambición, directora. La peor clase: la que vuelve. Escucha: este torneo garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-      "10000": "El encargado te ofrece una plaza en la mesa de los profesionales para tus diez mil dólares. El Holandés, gafas oscuras y voz de lija, te mira como a carne fresca. «Con diez mil, aquí te echan el ojo los tiburones, directora. Pero el tiburón de verdad es la cuenta: este torneo garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-      "100000": "Te proponen una partida privada de apuestas altas con tus cien mil dólares, lejos del torneo. El Holandés, gafas oscuras y voz de lija, se ríe. «Las ballenas no juegan torneos, directora: juegan en cuartos cerrados. Los torneos son para el pueblo. Y este pierde dinero: garantiza un premio de cien mil dólares y solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
-      "1000000": "Cuatrocientos jugadores dejan de mirar sus cartas cuando entras: la mujer del millón de dólares. Uno te ofrece la mitad de su premio por un préstamo. El Holandés, gafas oscuras y voz de lija, aparta a los moscones. «Directora, con un millón podrías pagar tú la garantía y te sobraría. Este torneo garantiza un premio de cien mil dólares. Solo se recaudaron ochenta y dos mil. La casa pone dieciocho mil de su bolsillo. Y los jugadores de póker no tocan una tragamonedas ni con guantes. ¿Para qué sirve esto?»",
+    "title": "La mano que lo cambió todo",
+    "line": "El Salón Esmeralda huele a tapete verde, a whisky caro y a derrotas que nadie confiesa. El Holandés, con gafas oscuras aunque esté bajo techo y sea de noche, baraja sin mirar las cartas. «Señorita Duarte. Llevo años esperando que alguien de su familia se sentara en esa silla. ¿Va a jugar o solo ha venido a hacer preguntas?»",
+    "money": {
+      "100": "Con cien dólares no llegas ni a la mitad de la inscripción del torneo, así que te quedas mirando desde la barandilla. El Holandés levanta la cabeza, como si te hubiera olido, y señala la silla vacía a su lado. «Para usted no hay inscripción, señorita Duarte. ¿Va a jugar o solo ha venido a hacer preguntas?»",
+      "500": "Pagas quinientos dólares de inscripción y te sientas en la mesa del torneo con una pila de fichas modesta y el corazón a mil. El Holandés, frente a ti, baraja tras unas gafas oscuras que no dejan adivinar nada. «Buena entrada, señorita Duarte. ¿Va a jugar o solo ha venido a hacer preguntas?»",
+      "1000": "Mil dólares te dan una buena silla en la mesa de efectivo, entre un dentista de Texas y un chico con capucha que no abre la boca. El Holandés, en la cabecera, deja de barajar en cuanto oye tu apellido. «Duarte. Hacía tiempo que nadie se sentaba aquí con ese nombre. ¿Va a jugar o solo ha venido a hacer preguntas?»",
+      "10000": "Con diez mil dólares te invitan a la mesa de alto límite, donde las fichas son negras y nadie sonríe. El Holandés te observa en silencio mientras el resto de jugadores empieza a ponerse nervioso. «Ya no se juega a lo pequeño, ¿eh, señorita Duarte? ¿Va a jugar o solo ha venido a hacer preguntas?»",
+      "100000": "Con cien mil dólares han vaciado la mesa principal para ti, y dos jugadores profesionales esperan, educadísimos, a que te sientes. El Holandés es el único que no se ha puesto de pie. «A su padre también le hacían reverencias, y no le sirvieron de nada. ¿Va a jugar o solo ha venido a hacer preguntas?»",
+      "1000000": "Un millón de dólares sobre el tapete verde y el Salón Esmeralda se llena de curiosos, de gerentes y de un par de hombres de la Familia que no se pierden detalle. El Holandés aparta las fichas de un empujón, como si le estorbaran. «Con eso se compra media sala, señorita Duarte, pero no lo que yo sé. ¿Va a jugar o solo ha venido a hacer preguntas?»",
+      "nada": "Entras en el Salón Esmeralda sin una ficha y el encargado ya se acerca para acompañarte a la salida. El Holandés lo detiene con un dedo, sin dejar de barajar. «Déjela. Esa silla la pagó su padre hace mucho tiempo. Siéntese, señorita Duarte. ¿Va a jugar o solo ha venido a hacer preguntas?»"
     },
-    options: [
-      { say: "Sirve si lo medimos como gancho, no como negocio. Si los cuatrocientos jugadores duermen en el hotel, cenan aquí y vuelven, los dieciocho mil son un costo de adquisición barato.", reply: "El Holandés esboza una media sonrisa. «La mitad duerme en el hotel, sí. Comen mal y rápido, pero comen aquí. Y algunos vuelven cada mes. Nadie te lo había contado así, ¿verdad?»" },
-      { say: "Si el torneo pierde dinero y no genera venta cruzada, bajaría la garantía. Por mucho prestigio que dé, no podemos financiar el premio de quien no gasta nada más.", reply: "El Holandés se quita las gafas despacio; tiene unos ojos azules muy pálidos. «Baja la garantía y vendrán doscientos en vez de cuatrocientos. El prestigio es lo único que este salón vende. Piénsalo bien antes de jugar esa carta.»" },
-      { say: "Me interesa más saber quién acompaña a los jugadores. Las parejas y los amigos que esperan durante horas sí pueden jugar, cenar o ir al espectáculo.", reply: "El Holandés se ríe, una risa breve y seca. «Las esposas aburridas, los amigos que vienen a mirar... Los he visto durante cuarenta años. Algunos gastan más que el jugador. Eres la primera que se fija en ellos.»" },
+    "options": [
+      {
+        "say": "Las dos cosas. Una no está reñida con la otra.",
+        "reply": "El Holandés sonríe sin enseñar los dientes. «Su padre pensaba igual. Por eso ganaba: hablaba mientras los demás solo miraban sus cartas»."
+      },
+      {
+        "say": "Solo a hacer preguntas. Quiero saber qué vio aquella noche.",
+        "reply": "«Aquí nadie habla sin una mano delante», dice él, y te reparte dos cartas boca abajo. «No hace falta que las mire. Es pura educación»."
+      },
+      {
+        "say": "Antes dígame por qué lleva gafas de sol en un sitio donde no entra el sol.",
+        "reply": "El Holandés se las baja un poco: tiene un ojo azul y el otro casi blanco. «Porque hay cosas que prefiero no ver, señorita. Y otras que prefiero que nadie vea»."
+      }
     ],
-    line2: "El Holandés reparte dos cartas imaginarias sobre el tapete. «Te cuento un secreto de jugador: en el póker no gana quien tiene las mejores cartas, sino quien sabe cuándo retirarse. En marketing, directora, ¿cuándo te retiras de una promoción que no funciona?»",
-    options2: [
-      { say: "Cuando el grupo de control muestra que la promoción no cambia el comportamiento. Si los clientes con oferta y sin oferta vienen igual, retirarse es la única jugada inteligente.", reply: "El Holandés asiente con aprobación. «Comparar contra los que no apostaron. Eso es pensar como jugador. La mayoría de los directores siguen apostando por orgullo.»" },
-      { say: "Antes de empezar fijo una pérdida máxima y una fecha. Si llegamos a cualquiera de las dos sin resultados, me retiro, aunque duela.", reply: "El Holandés golpea la mesa con un dedo. «Disciplina. La virtud más rara de esta ciudad. Ernesto Duarte, el famoso crupier, decía lo mismo... y una noche no la tuvo. Pero esa es otra historia.»" },
-      { say: "Nunca me retiro del todo: ajusto. Cambio la audiencia, el mensaje o el incentivo, porque a veces el problema no es la promoción, sino a quién se la mandamos.", reply: "El Holandés sonríe con cierto escepticismo. «Ajustar, ajustar... Así es como los jugadores pierden la casa, mano a mano. Ten cuidado de no confundir paciencia con terquedad.»" },
+    "line2": "El Holandés deja el mazo sobre la mesa. «Aquella noche yo estaba sentado aquí mismo. Don Aurelio se jugó el casino convencido de que su full era imbatible. Su padre enseñó una escalera real de corazones y se quedó con el Gran Meridiano en una sola mano. Al día siguiente, nadie volvió a verlo».",
+    "options2": [
+      {
+        "say": "Entonces, si Aurelio hubiera cumplido su palabra, este casino sería de mi padre.",
+        "reply": "«Lo sería, sí», asiente él. «Pero en este mundo no manda quien gana la partida, sino quien guarda los papeles en la caja fuerte»."
+      },
+      {
+        "say": "¿Una escalera real justo esa noche? Suena demasiado bonito para ser verdad.",
+        "reply": "«Eso pensamos todos», reconoce el Holandés. «Pero las cartas las repartí yo, y le juro que estaban limpias. Su padre no necesitaba hacer trampas»."
+      },
+      {
+        "say": "¿Y por qué se ha callado usted durante tanto tiempo?",
+        "reply": "«Porque quería seguir respirando», contesta sin dramatismo. «Y porque alguien tenía que estar aquí cuando usted llegara»."
+      }
     ],
-    end: "Suena una campana: empieza el nivel siguiente. El Holandés vuelve a ponerse las gafas. «Ve al bufé. Tere sabe todo lo que pasa en esta casa, y lo que no sabe, lo cocina.»",
-    talk: [
-      "El Holandés dice que no gana quien tiene las mejores cartas, sino quien sabe retirarse: ¿de qué te has retirado a tiempo y de qué no?",
-      "¿Eres más de farolear o de jugar con las cartas boca arriba en la vida? ¿Qué ejemplo reciente se te ocurre?",
-      "¿Qué diferencia hay, según tu experiencia, entre la paciencia y la terquedad en una relación o en un trabajo?",
-      "¿Has seguido apostando por algo solo por orgullo, aunque sabías que no iba a funcionar?",
-      "Si pudieras jugar una partida contra una persona de tu pasado, ¿a quién elegirías y qué te apostarías?",
+    "end": "El Holandés recoge las cartas sin dejarte ver las tuyas. «Esa escalera real abre más puertas de las que se imagina», te dice. Desde el bufé llega un olor a marisco y a cotilleo.",
+    "talk": [
+      "¿Por qué crees que el Holandés ha estado esperando a la hija de Ernesto durante tanto tiempo?",
+      "¿Se te da bien disimular lo que sientes? ¿En qué situaciones de tu vida has tenido que ir de farol?",
+      "¿Has guardado alguna vez un secreto durante años por miedo? ¿Qué habría pasado si lo hubieras contado antes?",
+      "¿Qué vale más en la vida: tener buenas cartas o tener sangre fría? ¿Qué te ha tocado a ti?",
+      "¿Crees que quien gana demasiado provoca más envidia que admiración? ¿Por qué?"
     ],
-    words: ["gancho", "garantía del premio", "grupo de control", "retirarse a tiempo"],
+    "words": [
+      "ir de farol",
+      "no estar reñido con",
+      "escalera real",
+      "sangre fría"
+    ]
   },
   bufe: {
-    title: "Langostas que cuestan caro",
-    line: "Torres de mariscos, una fuente de chocolate y colas de cientos de personas. Tere, la chef, se limpia las manos en el delantal y te arrastra a un rincón. «Ay, directora, qué alegría. Escucha: el bufé pierde nueve dólares por comensal. El sesenta por ciento de las comidas son cortesías del casino, y la mitad van a clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-    money: {
-      nada: "No tienes ni para los treinta y nueve dólares del bufé y te quedas mirando la torre de mariscos como una niña en un escaparate. Tere, la chef, te arrastra dentro por la manga. «Ay, directora, tú comes gratis, como el sesenta por ciento de esta cola. Ese es el drama: el bufé pierde nueve dólares por comensal, y la mitad de las cortesías van a clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-      "100": "Pagas los treinta y nueve dólares del bufé y te quedan sesenta para el resto de la noche. Tere, la chef, te ve llenar el plato de langosta y se ríe. «¡Eso, directora, amortízalo! Todos hacen lo mismo. Por eso el bufé pierde nueve dólares por comensal. Y el sesenta por ciento de las comidas son cortesías, la mitad para clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-      "500": "Pagas el bufé con tu tarjeta y pides una copa de vino aparte. Tere, la chef, se limpia las manos en el delantal y te lleva a un rincón. «¡Una clienta que paga y encima pide vino! Ojalá hubiera mil como tú. Escucha: el bufé pierde nueve dólares por comensal. El sesenta por ciento de las comidas son cortesías del casino, y la mitad van a clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-      "1000": "Un camarero te ofrece pasar sin hacer cola: alguien te ha visto jugar fuerte en las mesas con tus mil dólares. Tere, la chef, se acerca con un plato de ostras. «Ya te han calificado, directora: con lo que has jugado, comes gratis. Así se nos va el dinero: el bufé pierde nueve dólares por comensal y el sesenta por ciento de las comidas son cortesías, la mitad para clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-      "10000": "Con tus diez mil dólares, el gerente te ofrece una mesa privada con un caviar que no está en el bufé. Tere, la chef, pone los ojos en blanco. «Para los que juegan fuerte saco el caviar escondido, directora. Para los demás, langosta congelada y pérdidas: el bufé pierde nueve dólares por comensal. El sesenta por ciento de las comidas son cortesías, y la mitad van a clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-      "100000": "Las ballenas no comen en el bufé, te explica un anfitrión mientras te ofrece el restaurante de estrella Michelin. Pero tú entras igual y Tere, la chef, casi se desmaya. «¡Una ballena en mi bufé! Esto no pasaba desde los ochenta. Ya que estás aquí, escucha: el bufé pierde nueve dólares por comensal. El sesenta por ciento de las comidas son cortesías, y la mitad van a clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
-      "1000000": "Entras con tu millón de dólares y dos guardaespaldas, y una señora en la cola te pide un autógrafo creyendo que eres actriz. Tere, la chef, te esconde en la cocina entre ollas humeantes. «¡Directora, aquí no te molesta nadie! Te cuento rápido: el bufé pierde nueve dólares por comensal. El sesenta por ciento de las comidas son cortesías del casino, y la mitad van a clientes que apuestan casi nada. Dicen por ahí que Don Aurelio lo quiere cerrar. ¿Es verdad?»",
+    "title": "Gambas, tartas y rumores",
+    "line": "El bufé es un festival de excesos: torres de marisco, montañas de pasteles y una fuente de chocolate que no para de correr. Tere, la chef, se limpia las manos en el delantal y te guiña un ojo. «Tú no has venido por las gambas, cariño, se te nota en la cara. ¿Qué quieres saber?»",
+    "money": {
+      "100": "Pagas la entrada del bufé con parte de tus cien dólares, decidida a comer como si no hubiera un mañana para amortizarla. Tere se ríe al verte con tres platos a la vez. «¡Así se hace, que aquí cobramos caro! Pero tú no has venido solo por las gambas. ¿Qué quieres saber?»",
+      "500": "Con quinientos dólares en el bolso te permites el bufé con champán, el que tiene ostras y un camarero que te rellena la copa. Tere, que lo ve todo desde la cocina, sale a saludarte con el cuchillo en la mano. «Tú no has venido por las ostras, cariño, se te nota en la cara. ¿Qué quieres saber?»",
+      "1000": "Con mil dólares de juego, el bufé te sale gratis gracias a tu tarjeta de jugadora, y la camarera te sienta en la mejor mesa. Tere sale de la cocina limpiándose las manos en el delantal. «Gratis, ¿eh? Aquí nada es gratis, mi vida: lo pagas con lo que pierdes en las mesas. ¿Qué quieres saber?»",
+      "10000": "Con diez mil dólares en juego, el gerente del bufé te ha preparado una mesa aparte con mantel de lino y una langosta que no está en la carta. Tere te la sirve en persona, encantada de tener público. «A las jugadoras como tú las cuido yo, que luego se enteran de cosas. ¿Qué quieres saber?»",
+      "100000": "Con cien mil dólares, el casino te ofrece una cena privada con chef, pero tú prefieres el barullo del bufé. Tere se planta delante de ti con los brazos en jarras. «Mira que eres rara: con todo ese dinero y vienes a comer con el populacho. Me caes bien. ¿Qué quieres saber?»",
+      "1000000": "Medio bufé deja de comer cuando entras: la mujer del millón, en persona, entre las gambas y la fuente de chocolate. Tere aparta a dos gerentes a codazos y te lleva a la cocina, donde no llegan las miradas. «Aquí dentro no se cobra por mirar, pero sí por escuchar. ¿Qué quieres saber?»",
+      "nada": "Te cuelas en el bufé sin pagar la entrada y te sirves un plato pequeño, por si alguien te pide el tique. Tere, la chef, te pilla con una gamba en la mano y, en vez de echarte, te llena el plato hasta arriba. «Come, que se te ve sin un peso y con hambre de algo más que comida. ¿Qué quieres saber?»"
     },
-    options: [
-      { say: "No lo sé, pero no cerraría el bufé sin saber qué visitas genera. Si atrae a los locales entre semana, quizá esos nueve dólares sean el costo más barato de la casa.", reply: "Tere se lleva la mano al pecho. «¡Gracias! Doña Pilar y sus amigas vienen los martes solo por el ceviche. Si cierro, se van con el ceviche al de enfrente, y con ellas sus fichas.»" },
-      { say: "Lo que hay que arreglar no es el bufé, sino las cortesías. Si el sistema regala comidas a quien no juega, el problema es la regla del CRM, no tu cocina.", reply: "Tere asiente con energía. «¡Eso le digo a todo el mundo! Viene gente con tres cortesías en la misma semana y apostó diez dólares. La langosta no la pago yo, la paga el casino.»" },
-      { say: "Lo transformaría: menos platos, más calidad y un precio más alto los fines de semana. Un bufé que se convierte en experiencia puede vender, aunque reduzcamos las cortesías.", reply: "Tere abre mucho los ojos. «¿Menos platos? ¡Me encanta! Llevo años sirviendo cuarenta bandejas que nadie toca. Con quince buenas, te hago el mejor bufé del Strip.»" },
+    "options": [
+      {
+        "say": "Primero, el chocolate. Las preguntas, para el postre.",
+        "reply": "Tere se ríe a carcajadas y te pasa un pincho de fresas. «¡Así me gusta! Moja sin miedo, que lo que se come aquí no engorda; lo que engorda es lo que se oye»."
+      },
+      {
+        "say": "Dicen que usted se entera de todo antes que nadie.",
+        "reply": "«Antes que el dueño, antes que el cura y antes que la policía», presume Tere. «En una cocina se cuentan más secretos que en un confesionario»."
+      },
+      {
+        "say": "¿Qué rumores corren por aquí sobre el piso 3?",
+        "reply": "Tere baja la voz y deja el cuchillo. «Corren muchos, mi vida, pero uno pesa más que todos: hay un testamento a medio escribir y un hijo con muy mal genio»."
+      }
     ],
-    line2: "Tere baja la voz y mira a los lados. «Ahora el chisme de verdad: Marco, el hijo del jefe, quiere entregar el bufé a una cadena de restaurantes famosa. Su padre dice que es vender el alma. Tú, que eres nueva y no debes favores, ¿de qué lado estás?»",
-    options2: [
-      { say: "Del lado de los números. Si la cadena atrae clientes nuevos y nos deja captar sus datos, puede ser una alianza excelente; si solo se queda con el margen, no.", reply: "Tere suspira, decepcionada y admirada a la vez. «Fría como un congelador, directora. Me dejas flipando. Pero tienes razón: lo que importa es quién se queda con los clientes. Marco eso no lo ha pensado.»" },
-      { say: "Del lado de la marca. Aunque la cadena sea famosa, un bufé propio cuenta la historia del Meridiano. Lo que vende aquí no es la comida, sino la leyenda de esta casa.", reply: "Tere te abraza sin pedir permiso. «¡Eso diría el jefe! Las señoras vienen aquí desde hace cuarenta años. Si ven otro logo en la puerta, sentirán que les han vendido la casa.»" },
-      { say: "No me pondré de ningún lado sin una prueba. Propongo abrir una sección de la cadena dentro del bufé durante tres meses y comparar gasto, visitas y satisfacción.", reply: "Tere se ríe a carcajadas. «¡Diplomática! Así no te ganas enemigos la primera semana. Aunque te aviso: en esta casa, el que no elige lado acaba en el medio del fuego.»" },
+    "line2": "Tere se acerca tanto que hueles la vainilla de su delantal. «Don Aurelio está viejo y muy enfermo», susurra. «Quiere arreglar cuentas antes de morirse. Y su hijo, Marco, está que echa chispas. Dicen que rompió un cuadro carísimo nada más enterarse».",
+    "options2": [
+      {
+        "say": "¿Arreglar cuentas con quién, Tere? No me deje a medias.",
+        "reply": "Tere te mira de arriba abajo. «Con alguien que se apellida como tú, preciosa. Y no lo digo por decir: me han encargado una tarta con tu nombre para esta noche»."
+      },
+      {
+        "say": "Pobre cuadro. Siempre pagan los platos rotos los que no tienen la culpa.",
+        "reply": "Tere suelta una carcajada que hace temblar las gelatinas. «¡Qué arte tienes! Pero ojo con Marco: tiene cara de príncipe y genio de perro rabioso»."
+      },
+      {
+        "say": "Si yo fuera Marco, quizá también estaría furiosa.",
+        "reply": "«Ahí está la cosa», dice Tere, señalándote con un cucharón. «Que a lo mejor la herencia no va a parar a quien todos creen»."
+      }
     ],
-    end: "Tere te da un pastelito de chocolate envuelto en una servilleta. «Para el camino. En el teatro, Faustino está histérico: dicen que el de enfrente trajo una celebridad para este sábado.»",
-    talk: [
-      "¿Qué dice de una persona su manera de comportarse en un bufé libre?",
-      "Tere sabe todo lo que pasa en el casino: ¿te gustan los chismes de la oficina o los evitas? ¿Te ha hecho daño alguno?",
-      "Cuando hay una pelea entre dos jefes, como entre Don Aurelio y Marco, ¿tú eliges un bando o intentas quedarte en el medio? ¿Qué te ha funcionado?",
-      "¿Has tenido que defender algo que querías (un proyecto, un lugar, una tradición) frente a alguien que solo veía números?",
-      "¿Qué tradición familiar o de tu ciudad no venderías nunca, aunque te ofrecieran mucho dinero por ella?",
+    "end": "Tere te despide con un beso que te deja harina en la mejilla. Desde el teatro llegan aplausos, música de fanfarria y un olor a humo de escenario.",
+    "talk": [
+      "¿Qué parte de lo que cuenta Tere te parece cierta y qué parte puro cotilleo?",
+      "¿Por qué crees que nos encantan los chismes aunque digamos que no nos interesan?",
+      "¿Alguna vez te ha hecho daño un rumor? ¿Cómo reaccionaste entonces y cómo reaccionarías ahora?",
+      "¿Hay alguna cuenta pendiente en tu vida que te gustaría arreglar antes de que sea tarde? ¿Qué te lo impide?",
+      "¿Por qué crees que las herencias destrozan tantas familias: por el dinero o por lo que el dinero representa?"
     ],
-    words: ["rentabilidad", "comensal", "alianza", "vender el alma"],
+    "words": [
+      "estar que echa chispas",
+      "pagar los platos rotos",
+      "arreglar cuentas",
+      "ir a parar"
+    ]
   },
   teatro: {
-    title: "El rival tiene una estrella",
-    line: "En el camerino, entre plumas, espejos con bombillas y olor a laca, El Gran Faustino da vueltas con su capa. Estrella, la bailarina, se ajusta las pestañas. «¡Directora, una catástrofe!», exclama Faustino. «El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-    money: {
-      nada: "Te cuelas en el camerino por la puerta de servicio porque no tienes ni para una entrada. El Gran Faustino da vueltas con su capa y Estrella, la bailarina, te presta un taburete. «¡Directora, una catástrofe!», exclama Faustino. «El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-      "100": "Te sobran veinte dólares después de pagar la entrada más barata, la de la última fila. Estrella te ve llegar al camerino y se ríe. «¡Desde la fila del gallinero no se ve nada!» El Gran Faustino da vueltas con su capa. «¡Directora, una catástrofe! El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-      "500": "Has pagado una buena butaca y vienes al camerino con una rosa para Estrella, que se emociona. El Gran Faustino, celoso, da vueltas con su capa. «¡Directora, una catástrofe! El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan, y los de quinientos dólares como tú se van a ir con ella. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-      "1000": "Te han dado un palco por lo que jugaste en las mesas, y Faustino te recibe en el camerino entre plumas y espejos con bombillas. Estrella se ajusta las pestañas. «¡Directora, una catástrofe!», exclama Faustino. «El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-      "10000": "Un anfitrión te acompaña al camerino con champán porque llevas diez mil dólares y «a los buenos clientes les encanta conocer a los artistas». Estrella te guiña un ojo; Faustino se arrodilla teatralmente. «¡Directora, una catástrofe! El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-      "100000": "Con tus cien mil dólares, Faustino te ofrece hacer un número privado solo para ti, con tigre incluido. Estrella pone los ojos en blanco. El mago se recompone. «Pero primero, directora, una catástrofe: el resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
-      "1000000": "La noticia de tu millón de dólares ha llegado al camerino antes que tú: Faustino quiere que le financies un espectáculo propio y Estrella, que la saques de aquí. Entre plumas y laca, el mago se lleva la mano a la frente. «¡Directora, una catástrofe! El resort de enfrente trae a una cantante famosísima este sábado. Aforo limitado, entradas solo para miembros de su programa. Nuestros clientes ya preguntan. ¿Qué hacemos? ¿Contratamos a otra estrella?»",
+    "title": "La contraseña escondida",
+    "line": "En el camerino del teatro hay plumas por todas partes, espejos con bombillas y olor a laca. El Gran Faustino, todavía con la capa puesta, hace una reverencia exagerada, mientras Estrella, la bailarina, se retoca las pestañas sin prestarte atención. «¡Una visita entre bastidores! Déjeme adivinar: trae algo que quiere que examine, ¿verdad?»",
+    "money": {
+      "100": "Has gastado parte de tus cien dólares en una entrada de la última fila, y aun así has conseguido colarte en el camerino al final del show. El Gran Faustino, sudando bajo la capa, te recibe como a una admiradora entregada. «¡Desde la última fila se ve el truco mejor que desde la primera! Déjeme adivinar: trae algo que quiere que examine, ¿verdad?»",
+      "500": "Con quinientos dólares te has permitido una butaca en la tercera fila, y Faustino te ha sacado al escenario para serrarte por la mitad. Ahora, en el camerino, te recibe con la capa todavía puesta. «¡Mi ayudante favorita de la noche! Déjeme adivinar: trae algo que quiere que examine, ¿verdad?»",
+      "1000": "Con mil dólares has conseguido un pase al camerino con copa de champán incluida, de esos que venden a los fans más entregados. Faustino te besa la mano con una reverencia exagerada y Estrella pone los ojos en blanco. «¡Una mecenas del arte! Déjeme adivinar: trae algo que quiere que examine, ¿verdad?»",
+      "10000": "Con diez mil dólares, el casino te ha invitado al palco del teatro y luego te ha acompañado al camerino como a una autoridad. Faustino se peina deprisa delante del espejo antes de recibirte. «¡Qué honor! Normalmente me visitan los acreedores, no las jugadoras. Déjeme adivinar: trae algo que quiere que examine, ¿verdad?»",
+      "100000": "Con cien mil dólares, la dirección le ha ordenado a Faustino que te haga un número privado en el camerino, con Estrella bailando solo para ti. Él se quita el sombrero de copa y te mira con astucia. «Podría sacar palomas de su bolso, señorita, pero me da que ahí dentro hay algo más interesante. Trae algo que quiere que examine, ¿verdad?»",
+      "1000000": "Con un millón de dólares, el director del teatro te ha ofrecido incluso tu propio espectáculo, y Faustino teme que lo sustituyas por un número de magia con billetes. Te recibe con una mezcla de envidia y admiración. «Usted hace desaparecer más dinero que yo palomas. Pero déjeme adivinar: trae algo que quiere que examine, ¿verdad?»",
+      "nada": "Te cuelas entre bastidores por la puerta de servicio, sin entrada ni un dólar para pagarla. Un tramoyista está a punto de echarte cuando El Gran Faustino lo detiene con un gesto teatral. «¡Quieto! Quien entra sin pagar es porque trae algo mejor que dinero. Déjeme adivinar: trae algo que quiere que examine, ¿verdad?»"
     },
-    options: [
-      { say: "Una estrella cuesta unos cuatrocientos mil dólares. Antes de gastar eso, quiero saber cuántos de nuestros clientes de alto valor se van realmente ese sábado. Por un evento no se pierde a un cliente para siempre.", reply: "Faustino se detiene con dramatismo. «¡Cuatrocientos mil! Con eso me compro un tigre.» Estrella se ríe. «Tiene razón, Faustino. La gente va a ver a la cantante una noche y luego vuelve a donde la tratan bien.»" },
-      { say: "No competiría con otra estrella, sino con algo que ellos no pueden copiar: una noche íntima con Faustino solo para nuestros mejores clientes, con cena y acceso al camerino.", reply: "Faustino se lleva las manos al corazón. «¡Por fin alguien reconoce mi talento! Esta noche tiro la casa por la ventana.» Estrella guiña un ojo. «Una noche exclusiva, con champán y magia... A los clientes premium les encanta sentirse dentro del secreto.»" },
-      { say: "Si traemos una celebridad, que sea con objetivos claros: llenar el hotel entre semana, captar clientes nuevos y medir cuántos vuelven después. Si no, es un fuego artificial carísimo.", reply: "Estrella asiente, sorprendida. «Nunca nadie habló de lo que pasa después del show.» Faustino agita la capa. «¡Medir la magia! Qué horror. Pero tiene sentido, lo reconozco.»" },
+    "options": [
+      {
+        "say": "Puede ser. Pero las mujeres como yo no enseñamos nada a la primera.",
+        "reply": "Estrella suelta una carcajada sin dejar de pintarse. «Ay, Faustino, esta te ha robado la función»."
+      },
+      {
+        "say": "Sí. Le enseño una ficha si me dice qué tiene de especial.",
+        "reply": "Faustino junta las yemas de los dedos. «Un mago nunca promete nada, señorita. Pero, ya que insiste, lo intentaré»."
+      },
+      {
+        "say": "Antes de enseñársela, prométame que no la va a hacer desaparecer.",
+        "reply": "Faustino se pone serio de golpe. «No se preocupe. Las desapariciones de verdad no las hago yo, señorita. Esas se hacen arriba»."
+      }
     ],
-    line2: "Estrella se gira hacia ti. «Te digo algo desde el escenario: el público de los espectáculos no es el mismo que el del casino. Son parejas, turistas, gente que cena y se va a dormir. ¿Cómo convertirías a esa gente en clientes del casino sin que se sientan cazados?»",
-    options2: [
-      { say: "No intentaría convertirlos a todos. Les ofrecería una experiencia ligera, como una clase de blackjack con un crupier después del show. Si les gusta, vuelven; si no, siguen siendo buenos clientes del hotel.", reply: "Estrella sonríe. «Una clase de blackjack con copa de cava. Elegante y sin presión. A las parejas les encantaría, sobre todo si el crupier es guapo.»" },
-      { say: "Les pediría sus datos al comprar la entrada y les enviaría una oferta de restaurante y espectáculo, no de juego. Primero ganamos su confianza; el casino viene después.", reply: "Faustino asiente, inusualmente serio. «Primero el aplauso, luego la apuesta. Así funciona la seducción en el escenario y, al parecer, en el marketing.»" },
-      { say: "Por mucho que quiera el casino, respetaría ese segmento tal como es. Si gastan en hotel, restaurantes y espectáculos, su valor ya es alto, aunque no toquen una ficha.", reply: "Estrella te mira con complicidad. «Por fin alguien que no nos trata como el pariente pobre del casino. El teatro llena el hotel los martes. Eso también es dinero.»" },
+    "line2": "Le das la ficha. Faustino la hace girar entre los dedos, la acerca a una bombilla y, con un chasquido, la abre en dos como si fuera una almeja. Dentro, en letras diminutas, se lee: «Escalera real». «¡Tachán!», exclama, orgulloso. «Una contraseña. Y yo que creía que nadie se acordaba ya de este mecanismo».",
+    "options2": [
+      {
+        "say": "¿Cómo sabía usted que se abría? Me da que es usted cómplice.",
+        "reply": "Faustino se lleva la mano al pecho. «Cómplice y autor, señorita. Ese mecanismo lo fabriqué yo, por encargo de su padre, hace veinticinco años»."
+      },
+      {
+        "say": "Ojalá me lo hubiera dicho alguien antes. Me habría ahorrado media noche.",
+        "reply": "«Pero se habría perdido el espectáculo», protesta Faustino. «Un secreto sin un poco de teatro no tiene ninguna gracia»."
+      },
+      {
+        "say": "Estrella, ¿tú sabías que esto estaba aquí?",
+        "reply": "Estrella se encoge de hombros y las lentejuelas brillan. «Yo solo sé que arriba, en el piso VIP, no te dejan pasar sin contraseña», dice. «Y que los que suben con ella vuelven con otra cara»."
+      }
     ],
-    end: "Faustino hace aparecer una rosa roja de la nada y te la entrega con una reverencia. «Para la directora que mide la magia. En la capilla, Elvis te está buscando: necesita una testigo... y una estrategia.»",
-    talk: [
-      "Faustino necesita que reconozcan su talento: ¿cuánto necesitas tú el aplauso de los demás para sentirte bien con tu trabajo?",
-      "¿Te ha dado envidia alguna vez el éxito de un rival o de un colega? ¿Cómo lo gestionaste?",
-      "¿Qué es más seductor para ti: lo exclusivo y difícil de conseguir o lo cercano y sencillo? ¿Por qué?",
-      "¿Cuál es el mejor espectáculo que has visto en tu vida y qué sentiste durante y después?",
-      "Si pudieras dedicarte a algo artístico durante un año sin preocuparte por el dinero, ¿qué harías?",
+    "end": "Faustino cierra la ficha con un clic y te la devuelve con un guiño. Estrella te susurra al oído: «Justo al lado está la capilla. Esta noche se casa una pareja que se conoció en la cena».",
+    "talk": [
+      "¿Por qué crees que Ernesto escondió la contraseña dentro de una ficha en lugar de contársela a alguien?",
+      "¿Qué cara tuya enseñas en público que no se parece a la que tienes en casa? ¿Quién conoce las dos?",
+      "¿Prefieres una mentira bonita o una verdad sin gracia? ¿Cambia tu respuesta cuando se trata del amor?",
+      "¿Qué te parece la gente que necesita aplausos todo el rato? ¿Conoces a alguien así o te ves un poco reflejado?",
+      "¿Has descubierto alguna vez que alguien a quien admirabas no era lo que parecía? ¿Cómo te sentó?"
     ],
-    words: ["evento con celebridad", "aforo limitado", "exclusividad", "fuego artificial"],
+    "words": [
+      "entre bastidores",
+      "ponerse serio",
+      "me da que",
+      "no tener ninguna gracia"
+    ]
   },
   capilla: {
-    title: "Amor exprés en redes",
-    line: "La capilla «Amor Exprés» brilla con flores de plástico y luces rosadas. Un Elvis con patillas y gafas doradas oficia ante una pareja que se conoció hace tres horas. Entre dos canciones, te habla al oído. «Nena, celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-    money: {
-      nada: "Entras en la capilla «Amor Exprés» sin un dólar y Elvis, con patillas y gafas doradas, te mira con picardía. «Nena, aquí se casa gente con menos que tú: una pareja pagó con un reloj de su abuelo.» Ante el altar, una pareja que se conoció hace tres horas espera. «Celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-      "100": "Te enteras de que la boda más barata cuesta noventa y nueve dólares, «con Elvis y una canción». Elvis se baja las gafas doradas. «Nena, con tus cien dólares te casas y te sobra un dólar para el chicle.» Ante el altar, una pareja que se conoció hace tres horas se ríe. «Celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-      "500": "Con tus quinientos dólares podrías permitirte el paquete «Rey del Rock», con limusina rosa incluida. Elvis te lo recita entre dos canciones mientras una pareja que se conoció hace tres horas se besa ante el altar. «Nena, celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-      "1000": "Elvis te ofrece el paquete de lujo de mil dólares, con fotos profesionales y un pastel en forma de guitarra, «por si encuentras novio esta noche». Ante el altar, una pareja que se conoció hace tres horas espera su turno. «Nena, celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-      "10000": "Con diez mil dólares en el bolso, Elvis te propone cerrar la capilla una hora para una «boda privada de verdad». Detrás, la pareja que se conoció hace tres horas se impacienta. Elvis te habla al oído entre dos canciones. «Nena, celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-      "100000": "Elvis, al saber que llevas cien mil dólares, te ofrece casarte con quien quieras, «hasta con un Elvis de verdad, nena». La pareja que se conoció hace tres horas te pide que seas su madrina por si les cae un regalo. Elvis se recompone. «Celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
-      "1000000": "La capilla se llena de curiosos que han oído lo del millón: dos hombres te piden matrimonio en la puerta, uno de rodillas y otro borracho. Elvis los echa con un movimiento de cadera. «Nena, aquí la gente se casa por amor, por apuesta o por dinero, y tú hoy pareces las tres. Celebramos mil doscientas bodas al año. Cada pareja publica fotos con nuestro logo, millones de personas las ven. Pero ninguna vuelve. ¿Eso es marketing o es solo diversión?»",
+    "title": "Boda en tres horas",
+    "line": "En la capilla «Amor Exprés» todo es rosa: las flores de plástico, la alfombra y hasta el traje del Elvis que oficia las bodas. Delante del altar, una pareja que se conoció hace tres horas se mira como si llevara media vida junta. «¡Nena!», te llama Elvis con voz grave. «Nos falta un testigo. ¿Te animas a firmar?»",
+    "money": {
+      "100": "Con cien dólares te alcanzaría para casarte tú misma en el paquete más barato de la capilla, con Elvis incluido y fotos aparte. Elvis te ve curioseando el folleto de precios y se le ilumina la cara. «¡Nena, ahórrate la boda y hazte testigo, que sale gratis! Nos falta un testigo. ¿Te animas a firmar?»",
+      "500": "Entras en la capilla con quinientos dólares, dispuesta a comprar un recuerdo absurdo, y te encuentras una boda a punto de empezar. Elvis, con el tupé impecable, se acerca contoneándose. «¡Nena, llegas justo a tiempo! El recuerdo te lo regalo yo: nos falta un testigo. ¿Te animas a firmar?»",
+      "1000": "Con mil dólares podrías pagarle a la pareja el paquete de luna de miel en limusina, y la novia lo sabe, porque no le quita ojo a tu bolso. Elvis interrumpe la escena con un golpe de cadera. «¡Primero los papeles, luego los regalos! Nos falta un testigo. ¿Te animas a firmar?»",
+      "10000": "Con diez mil dólares, el casino te ha mandado una botella de champán a la capilla para que brindes con los novios, que no se lo pueden creer. Elvis descorcha la botella con un gesto de rey y te hace una reverencia. «¡Nena, ya tenemos champán, pero nos falta lo más importante! Nos falta un testigo. ¿Te animas a firmar?»",
+      "100000": "Con cien mil dólares, la capilla entera se ha rendido a tus pies: el fotógrafo te enfoca a ti y no a la novia, y el organista toca lo que tú le pidas. Elvis te recibe con los brazos abiertos. «¡Nena, eres la invitada de honor de una boda a la que nadie te ha invitado! Nos falta un testigo. ¿Te animas a firmar?»",
+      "1000000": "La noticia del millón ha llegado hasta la capilla y los novios ya te ven como su hada madrina. La novia te pide que pagues la boda, el novio que le prestes para el anillo y Elvis los manda callar a los dos. «¡Un poco de dignidad, que esto es un sacramento! Nena, nos falta un testigo. ¿Te animas a firmar?»",
+      "nada": "Entras en la capilla «Amor Exprés» solo para descansar los pies en un banco, porque fuera no tienes ni para un café. Elvis, con su traje de lentejuelas, te ve sentada y te señala como si fueras un milagro. «¡Nena, el cielo te manda! A los testigos no les cobramos; al contrario, los invitamos a la tarta. Nos falta un testigo. ¿Te animas a firmar?»"
     },
-    options: [
-      { say: "Es marketing si lo convertimos en relación. Las fotos dan visibilidad, pero el valor está en el aniversario: una oferta para volver un año después, con suite y cena.", reply: "Elvis se baja las gafas. «¡Un aniversario en el Meridiano! Nena, eso es genial. Y si se han divorciado, les ofrecemos una fiesta de divorcio. Aquí nada se desperdicia.» La pareja se ríe sin entender." },
-      { say: "Las publicaciones en redes generan alcance, pero el alcance no es ingreso. Antes de invertir en la capilla, mediría cuántas reservas llegan después de ver esas fotos.", reply: "Elvis se rasca la patilla. «Medir el amor, qué frío, nena. Me dejas de piedra. Aunque te diré algo: la mitad de las parejas que vienen dicen que vieron la capilla en las redes de unos amigos.»" },
-      { say: "Ahora mismo es diversión, y eso no es malo. Pero el setenta por ciento viene de otros estados: si no capturamos sus datos al casarse, perdemos la mejor ocasión de que vuelvan.", reply: "Elvis da una vuelta de baile. «Una ficha de registro con el certificado de matrimonio. Te lo hago encantado. Aunque te aviso: a las tres de la madrugada, pocos novios leen la letra pequeña.»" },
+    "options": [
+      {
+        "say": "Me encanta. Una boda improvisada es justo lo que le faltaba a mi noche.",
+        "reply": "Elvis se ajusta las gafas doradas. «Eso decimos todos, nena, hasta que nos toca ser los novios»."
+      },
+      {
+        "say": "¿Tres horas? Hay gente que tarda más en elegir un sofá.",
+        "reply": "La novia suelta una risita nerviosa. «¡Por eso mismo! Si llegamos a pensarlo mucho, a lo mejor nos echábamos atrás»."
+      },
+      {
+        "say": "Firmo, pero si dentro de un mes se divorcian, no quiero que me echen la culpa.",
+        "reply": "El novio levanta la mano como en un juicio. «Lo juramos. Si esto sale mal, la culpa será del tequila, no de la testigo»."
+      }
     ],
-    line2: "La pareja te mira con ilusión. «¿Quieres ser nuestra testigo?», pregunta la novia. Elvis se acerca con el libro de firmas. «Y mientras firmas, nena, dime: si tuvieras que vender un paquete de boda completo, con hotel, cena y casino, ¿a quién se lo venderías?»",
-    options2: [
-      { say: "A grupos que viajan en auto desde ciudades cercanas. Una boda trae a veinte invitados que duermen, cenan y juegan. El novio es el gancho; los invitados, el negocio.", reply: "Firmas como testigo y los novios se besan entre aplausos. Elvis canta un verso triunfal. «¡Los invitados! Eso nadie lo había pensado así. El año que viene, paquete de boda con cuarenta habitaciones.»" },
-      { say: "A parejas que buscan una experiencia distinta, no barata. Con un paquete exclusivo, de precio alto y plazas limitadas, la capilla deja de ser un chiste y se vuelve un lujo.", reply: "Firmas y la novia te abraza llorando de emoción. Elvis sonríe. «Una capilla de lujo... El jefe se reiría, pero yo sé que hay gente que pagaría por casarse con el auténtico Elvis.»" },
-      { say: "A nadie todavía. Primero probaría tres paquetes distintos con pocos clientes y vería cuál genera más visitas posteriores. Después, invertiría en el ganador.", reply: "Firmas el libro mientras Elvis te mira con cariño. «Prudente, nena. El amor es impulsivo, pero el negocio no tiene por qué serlo. Los novios, por cierto, ya se han ido a celebrar al casino.»" },
+    "line2": "Elvis carraspea y se pone solemne. «Antes del sí, quiero, la testigo tiene que contestar una pregunta, que así lo manda la tradición de esta capilla: ¿crees en el amor a primera vista?»",
+    "options2": [
+      {
+        "say": "Creo en el amor a primera vista y en el arrepentimiento al día siguiente.",
+        "reply": "Elvis se ríe tan fuerte que se le mueve el tupé. «¡Gracias, muchas gracias! Esa frase te la robo para el próximo show»."
+      },
+      {
+        "say": "Creo que hace falta una segunda mirada. La primera solo ve lo que quiere ver.",
+        "reply": "La novia te coge las manos, emocionada. «Pues yo ya le he echado tres miradas y cada vez me gusta más»."
+      },
+      {
+        "say": "Si mis padres no hubieran creído en él, yo no estaría aquí. Así que sí.",
+        "reply": "Elvis se quita las gafas, conmovido. «Nena, eso es lo más bonito que he oído en esta capilla, y aquí se oye de todo»."
+      }
     ],
-    end: "Elvis te da un pañuelo de seda con el logo de la capilla. «Para la testigo. En la discoteca hay un hombre grande de traje gris que pregunta por ti. Ten cuidado, nena: ese no viene a bailar.»",
-    talk: [
-      "¿Te casarías con alguien a quien conociste hace tres horas en Las Vegas? ¿Qué tendría que pasar para que dijeras que sí?",
-      "¿Qué decisión impulsiva de tu vida salió mejor de lo esperado y cuál salió fatal?",
-      "¿Crees que publicamos nuestra felicidad en las redes para vivirla o para que la vean los demás?",
-      "¿Qué hace que una relación dure: el amor, la costumbre, el miedo a estar solo o algo más?",
-      "Si fueras testigo de una boda exprés y vieras que es un error, ¿dirías algo o te callarías? ¿Por qué?",
+    "end": "Los novios se besan bajo una lluvia de confeti y tú firmas como testigo sin que te tiemble el pulso. Desde abajo, el bajo de la discoteca hace vibrar el suelo.",
+    "talk": [
+      "Si estuvieras en el lugar de Valentina, ¿firmarías como testigo o intentarías convencerlos de que esperaran?",
+      "¿Qué es lo más impulsivo que has hecho por amor? Visto con perspectiva, ¿te arrepientes o lo repetirías?",
+      "¿Cuánto tiempo crees que hace falta para conocer de verdad a alguien? ¿Basta con una vida entera?",
+      "¿Qué dice de una persona que se enamora muy rápido: que es valiente, ingenua o que tiene miedo a estar sola?",
+      "¿Te ha tocado callarte ante una pareja de amigos que, en tu opinión, era un error? ¿Crees que hiciste bien?"
     ],
-    words: ["alcance", "redes sociales", "paquete de boda", "letra pequeña"],
+    "words": [
+      "a primera vista",
+      "echarse atrás",
+      "echar la culpa",
+      "sin que tiemble el pulso"
+    ]
   },
   discoteca: {
-    title: "Jóvenes que no juegan",
-    line: "Luces violetas, un DJ en una cabina de cristal y cuerpos que se mueven al ritmo del bajo. Junto a la mesa VIP, Bruno, un hombre enorme de traje gris, te bloquea el paso con amabilidad inquietante. «Directora. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-    money: {
-      nada: "En la fila del club, un promotor te dice que sin cien dólares de entrada no pasas. Antes de que contestes, Bruno, un hombre enorme de traje gris, te hace pasar con amabilidad inquietante. «Directora. Fíjate en lo que acabas de ver: a la puerta le importa el dinero de esta noche, no quién eres. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-      "100": "Pagas los cien dólares de entrada y te quedas sin nada para una copa. Bruno, un hombre enorme de traje gris, te encuentra junto a la mesa VIP y te bloquea el paso con amabilidad inquietante. «Directora. Acabas de vivir lo que viven cada sábado trescientos chicos: pagan la entrada y ya no les queda para jugar. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-      "500": "Te gastas cien dólares en dos cócteles fosforescentes y la noche apenas empieza. Junto a la mesa VIP, Bruno, un hombre enorme de traje gris, te bloquea el paso con amabilidad inquietante. «Directora. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-      "1000": "Un promotor con gafas de sol te ofrece una mesa por mil dólares con botella incluida, y justo en ese momento Bruno, un hombre enorme de traje gris, lo aparta de un empujón suave. «Directora. Ese chico cobra por cada persona que mete aquí, no por lo que gasta después. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-      "10000": "Con diez mil dólares te ofrecen la mesa junto a la cabina del DJ, bengalas incluidas. Bruno, un hombre enorme de traje gris, apaga las bengalas con dos dedos. «Directora, esto es para los que quieren que los vean. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-      "100000": "El DJ dice tu nombre por el micrófono, «¡bienvenida a la reina de la noche!», y cien teléfonos te graban. Bruno, un hombre enorme de traje gris, te saca de la luz con amabilidad inquietante. «Directora, con cien mil todo el club quiere ser tu amigo. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
-      "1000000": "Un rapero famoso quiere sentarse contigo, dos chicas te piden trabajo y un tipo intenta abrir tu maletín con el millón de dólares. Bruno, un hombre enorme de traje gris, lo levanta del suelo con una mano y lo deja en la barra. «Directora. Eso es lo que atrae el dinero aquí. Los informes dicen que la adquisición de jóvenes subió un veintiuno por ciento. Pero esos chicos beben, bailan y se van sin tocar una mesa. El jefe quiere saber si vale la pena seguir pagando promotores.»",
+    "title": "El hombre del traje gris",
+    "line": "En la discoteca, las luces cortan la oscuridad y el bajo retumba en el pecho. Bailas un buen rato sin pensar en nada, hasta que notas una mano enorme y educada en el hombro: es el hombre del traje gris. «Perdone que la interrumpa, señorita. Me llamo Bruno. ¿Me concede un minuto?»",
+    "money": {
+      "100": "Con cien dólares pagaste la entrada y te queda justo para una copa aguada, que haces durar como si fuera oro. Bailas en un rincón de la pista cuando una mano grande y educada se te posa en el hombro. «Perdone que le estropee la canción, señorita. Me llamo Bruno. ¿Me concede un minuto?»",
+      "500": "Con quinientos dólares te has permitido una entrada con barra libre durante dos horas, y piensas exprimirla. En plena canción, el hombre del traje gris aparece a tu lado, tan fuera de lugar en la pista como un armario en la playa. «Perdone la interrupción, señorita. Me llamo Bruno. ¿Me concede un minuto?»",
+      "1000": "Con mil dólares has conseguido una mesa pequeña cerca de la pista, con una botella y unas bengalas que te ha traído una camarera con mucho ritmo. Cuando vuelves de bailar, el hombre del traje gris está sentado en tu mesa, muy tieso. «Le he guardado el sitio. Me llamo Bruno. ¿Me concede un minuto?»",
+      "10000": "Con diez mil dólares te han dado una de las mesas VIP junto al DJ, con champán y un camarero que no se separa de ti. Al volver de la pista, encuentras al camarero muy nervioso y al hombre del traje gris ocupando su lugar. «Le he dado la noche libre. Me llamo Bruno. ¿Me concede un minuto?»",
+      "100000": "Con cien mil dólares, la discoteca te ha cedido la mesa principal, y el DJ ya ha dicho tu nombre dos veces por el micrófono. Media pista intenta acercarse, pero se lo impide un muro gris: el hombre del traje gris, que aparta a todos con una sola mano. «Perdone, no me presenté antes. Me llamo Bruno. ¿Me concede un minuto?»",
+      "1000000": "Con un millón de dólares, la discoteca ha parado la música para recibirte y ha llenado la pista de confeti dorado. Entre la multitud que te rodea, una figura enorme se abre paso con calma: el hombre del traje gris, el único que no te pide nada. «Usted tiene medio club a sus pies, pero yo solo necesito una cosa. Me llamo Bruno. ¿Me concede un minuto?»",
+      "nada": "Te has colado en la discoteca detrás de un grupo de modelos, sin entrada y sin un dólar para la primera copa. Bailas como si el local fuera tuyo, hasta que una mano enorme se apoya en tu hombro: el hombre del traje gris. «Tranquila, no soy de seguridad, aunque lo parezca. Me llamo Bruno. ¿Me concede un minuto?»"
     },
-    options: [
-      { say: "Vale la pena si los vemos como clientes del futuro, no de hoy. Mediría cuántos vuelven en un año y si su gasto se desplaza poco a poco hacia el restaurante y el casino.", reply: "Bruno cruza los brazos, impasible. «El jefe no piensa en el futuro. El jefe piensa en el mes que viene.» Luego, casi en un susurro: «Aunque su hijo Marco sí piensa así. Por eso discuten tanto.»" },
-      { say: "Si los promotores cobran por cada joven que entra, pagamos por cantidad, no por valor. Cambiaría el acuerdo: que cobren por los clientes que regresan o gastan más de un mínimo.", reply: "Bruno levanta una ceja. «Los promotores no te van a querer.» Señala a un joven con gafas de sol que te observa desde la barra. «Ese, por ejemplo, trae a trescientas personas cada sábado, la mitad borrachas como una cuba. Y cobra por cabeza.»" },
-      { say: "Por mucho que no jueguen, llenan la discoteca y dan vida a la marca. Un casino lleno de gente joven atrae a todos; un casino de gente mayor envejece con sus clientes.", reply: "Bruno sonríe por primera vez, mostrando un diente de oro. «Lo mismo dice el DJ. Pero cuidado: a los grandes jugadores no les gusta cruzarse con chicos borrachos en el ascensor.»" },
+    "options": [
+      {
+        "say": "¿Me has seguido toda la noche solo para presentarte? Qué poco romántico.",
+        "reply": "Bruno ni se inmuta. «Lo romántico no entra en mi contrato, señorita. Lo de seguirla, sí»."
+      },
+      {
+        "say": "Un minuto, ni uno más. ¿Para quién trabajas?",
+        "reply": "«Para Don Aurelio Montalbán», contesta sin rodeos. «Desde que yo tenía pelo. Y nunca me había mandado detrás de una mujer»."
+      },
+      {
+        "say": "Te concedo el minuto si me demuestras que sabes bailar.",
+        "reply": "Bruno te da una vuelta sorprendentemente ágil para alguien de su tamaño. «Mi madre me obligó a dar clases de salsa. Nunca pensé que me servirían para trabajar»."
+      }
     ],
-    line2: "Bruno se inclina y su voz se vuelve grave. «Te diré lo que me dijeron que te dijera: te esperan arriba. Pero antes, el jefe quiere una respuesta corta. Si mañana tuvieras que elegir entre la discoteca y el salón privado de los grandes jugadores, ¿a cuál le darías el presupuesto?»",
-    options2: [
-      { say: "Al salón privado, porque ahí está el margen. Pero no cerraría la discoteca: la financiaría con alianzas de marcas de bebidas y promotores que cobren por resultado.", reply: "Bruno asiente lentamente. «Respuesta de directora. El jefe la va a entender.» Te da una tarjeta negra con un número dorado. «Para el ascensor. Piso tres.»" },
-      { say: "A ninguno por completo. Lo repartiría según el retorno incremental de cada uno, y lo revisaría cada mes. Elegir a ciegas sería apostar, y yo no apuesto con el dinero de la casa.", reply: "Bruno suelta una risa grave que hace temblar la mesa. «No apuestas en un casino. Me gusta.» Te entrega una tarjeta negra. «Arriba les vas a caer bien. O muy mal.»" },
-      { say: "A la discoteca, aunque suene arriesgado. Los grandes jugadores van a envejecer; si no construimos la próxima generación de clientes, en diez años no habrá salón privado que llenar.", reply: "Bruno te mira largamente, como si te midiera. «Valiente. Marco diría lo mismo. Su padre no.» Te pone en la mano una tarjeta negra. «Arriba. Y elige bien tus palabras.»" },
+    "line2": "Bruno se acerca para que lo oigas por encima de la música. «La esperan arriba. Don Aurelio quiere verla. No se lo tome como una amenaza, aunque entiendo que lo parezca. Si alguien hubiera querido hacerle daño, ya habría tenido mil ocasiones».",
+    "options2": [
+      {
+        "say": "Qué dulce. Es lo más tierno que me han dicho en toda la noche.",
+        "reply": "Bruno se ríe por primera vez, una risa grave y corta. «No se acostumbre. Es lo más tierno que sé decir»."
+      },
+      {
+        "say": "Dile a tu jefe que las damas nos hacemos esperar.",
+        "reply": "«Se lo diré», asiente Bruno, «aunque le advierto que, a su edad, cada minuto de espera es un minuto que se le escapa»."
+      },
+      {
+        "say": "¿Y si no subo? ¿Qué les pasa a los que dicen que no?",
+        "reply": "«Pues que se pierden el mejor whisky del edificio», responde Bruno. «Y que Don Aurelio acaba bajando a buscarlos. Créame, no le gusta nada usar el ascensor»."
+      }
     ],
-    end: "La música sube, el DJ lanza confeti dorado y Bruno te acompaña hasta el ascensor privado. La puerta se cierra con un susurro. Piso tres: el Piso VIP.",
-    talk: [
-      "¿Qué te atraía de la noche cuando tenías veinte años y qué te atrae ahora? ¿Qué dice ese cambio de ti?",
-      "¿Has sentido alguna vez que la gente te trataba bien solo por el dinero o por la posición que tenías?",
-      "¿Te gusta ser el centro de atención en una fiesta o prefieres observar desde un rincón?",
-      "Bruno dice que hay que elegir bien las palabras antes de subir: ¿cuál ha sido la conversación más tensa de tu vida profesional?",
-      "¿Cuál es la noche que mejor recuerdas y la que preferirías olvidar? ¿Qué tenían en común?",
+    "end": "Bruno desaparece entre el humo de colores sin mirar atrás. Al fondo, las puertas doradas del ascensor al piso VIP brillan como una promesa peligrosa.",
+    "talk": [
+      "¿Te parece Bruno alguien de quien fiarse o un peligro con buenos modales?",
+      "¿Cómo eres cuando bailas: te sueltas, te da corte o te conviertes en otra persona?",
+      "¿Cuál es la fiesta que peor ha terminado en tu vida? ¿Aprendiste algo o la repetirías tal cual?",
+      "¿Por qué crees que a algunas personas les atraen precisamente quienes dan un poco de miedo?",
+      "Si un desconocido te dijera en una fiesta que alguien importante quiere verte, ¿irías? ¿Qué tendría que pasar para que dijeras que sí?"
     ],
-    words: ["promotor", "pago por resultado", "retorno incremental", "la próxima generación"],
+    "words": [
+      "sin rodeos",
+      "hacerse esperar",
+      "darle corte a alguien",
+      "no inmutarse"
+    ]
   },
   vip: {
-    title: "La puerta del Piso VIP",
-    line: "El pasillo del Piso VIP es silencioso, alfombrado de terciopelo. Ante una puerta de madera negra, Tano y otro guardaespaldas te cortan el paso. Tano habla con calma. «Directora, aquí solo entran los niveles más altos del programa. El problema es que ya hay demasiados: el cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-    money: {
-      nada: "Sales del ascensor al Piso VIP sin un dólar en el bolso y Tano, el guardaespaldas, te mira las manos vacías antes que la cara. «Directora, si no fuera por tu tarjeta, aquí no llegabas ni al felpudo. Escucha: aquí solo entran los niveles más altos del programa. El problema es que ya hay demasiados: el cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-      "100": "Te das cuenta de que tus cien dólares no pagarían ni la propina de un camarero de este piso. Tano y otro guardaespaldas te cortan el paso ante la puerta de madera negra. «Directora, con cien dólares aquí arriba eres una turista perdida. Pero el problema es al revés: ya entra demasiada gente. El cuarenta por ciento de los miembros activos está en el nivel máximo del programa. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-      "500": "Tano te ve llegar con tu bolso de quinientos dólares y casi se ríe. «Directora, con eso aquí dentro duras una mano de bacará.» Luego se pone serio. «Aquí solo entran los niveles más altos del programa. El problema es que ya hay demasiados: el cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-      "1000": "Con tus mil dólares, Tano te mira como a una clienta de nivel plata que se ha equivocado de piso. «Directora, los de mil abajo son reyes; aquí arriba son el cambio. Escucha: aquí solo entran los niveles más altos del programa. El problema es que ya hay demasiados: el cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-      "10000": "Con diez mil dólares, Tano te saluda con educación, pero no se aparta de la puerta. «Directora, diez mil aquí arriba es lo que algunos dejan de propina. Aunque eso es parte del problema: aquí solo entran los niveles más altos del programa y ya hay demasiados. El cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-      "100000": "Con tus cien mil dólares, el segundo guardaespaldas ya iba a abrirte, pero Tano lo detiene con una mano. «Directora, una ballena entra siempre. El que me preocupa es el resto: aquí solo entran los niveles más altos del programa y ya hay demasiados. El cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
-      "1000000": "Tano ha recibido tres llamadas sobre ti antes de que salgas del ascensor: una del jefe, otra de la Familia y otra de un número oculto. Mira tus maletines con el millón y no sonríe. «Directora, esta noche eres la persona más especial del edificio, y eso te pone en peligro. Aquí solo entran los niveles más altos del programa y ya hay demasiados: el cuarenta por ciento de los miembros activos está en el nivel máximo. Cuando todos son especiales, nadie lo es. ¿Qué harías?»",
+    "title": "La puerta negra",
+    "line": "Las puertas del ascensor se abren a un pasillo enmoquetado en rojo oscuro que huele a colonia cara y a tabaco rubio. Al fondo, una puerta negra sin pomo y dos moles trajeadas: Bruno, al que ya conoces, y Tano, que mastica chicle como si le debiera dinero. Tano te corta el paso con una mano del tamaño de una bandeja. «Por aquí no se pasa porque sí, guapa. ¿Me dices la contraseña o te das la vuelta?»",
+    "money": {
+      "100": "Con cien dólares en el bolso, el piso VIP te parece un decorado de cine que no te corresponde. Tano lo nota enseguida: te hace abrir el bolso, cuenta los billetes con la mirada y suelta un silbido burlón. «Con esto, aquí dentro te alcanza para un cubito de hielo, y sin whisky. Pero yo no cobro entrada, guapa. ¿Me dices la contraseña o te das la vuelta?»",
+      "500": "Llevas quinientos dólares, que abajo eran una buena noche y aquí arriba no dan ni para la propina del ascensorista. Bruno te saluda con un gesto casi amable; Tano, en cambio, mastica chicle con cara de aburrimiento infinito. «Quinientos, ¿eh? Por lo menos no vienes a pedir, que ya es algo. ¿Me dices la contraseña o te das la vuelta?»",
+      "1000": "Has jugado mil dólares en la planta baja y te sientes con derecho a todo, pero Tano opina distinto. Te mira de arriba abajo, sin prisa, como quien tasa un coche de segunda mano. «Mil dólares los pierde aquí un cliente mientras se ata los zapatos, guapa. No me impresionas, aunque reconozco que tienes estilo. ¿Me dices la contraseña o te das la vuelta?»",
+      "10000": "Tu tarjeta de jugadora de nivel platino te ha subido hasta aquí con un anfitrión pegado a los talones, convencido de que diez mil dólares abren cualquier puerta. Tano ni la mira. «Platino, oro, diamante… a mí me da igual el color del plástico. Esta puerta tiene sus propias reglas, por mucho que le pese al señor». El anfitrión enmudece. «¿Me dices la contraseña o te das la vuelta?»",
+      "100000": "Cien mil dólares de crédito y el casino entero te trata como a una reina, salvo Tano. Tu anfitrión le susurra algo al oído y le desliza un sobre en el bolsillo; Tano se lo devuelve sin abrirlo, con una sonrisa de hielo. «Ni aunque me ofreciera el doble, jefe. Con la señora hablo yo». Se vuelve hacia ti. «¿Me dices la contraseña o te das la vuelta?»",
+      "1000000": "Un millón de dólares sube contigo en el ascensor, y con él dos gerentes nerviosos, un abogado de la casa y un rumor que ya ha recorrido el piso entero. Tano no se aparta ni un centímetro. «Señores, por mí como si traen el Banco Central. Si no hay contraseña, no hay puerta, que para eso me pagan». Te clava los ojos. «¿Me dices la contraseña o te das la vuelta?»",
+      "nada": "Subes al tercer piso sin un dólar, colada en el ascensor detrás de un camarero con una bandeja de ostras. Tano te calcula el saldo de un vistazo y deja de masticar el chicle. «A ver si lo adivino: ni ficha, ni tarjeta, ni reserva. Aquí arriba, quien no tiene dinero tiene que tener otra cosa, guapa. ¿Me dices la contraseña o te das la vuelta?»"
     },
-    options: [
-      { say: "Rediseñaría los niveles con criterios más exigentes y una transición suave. A quien pierda categoría le daría seis meses para recuperarla, para que no se sienta castigado.", reply: "Tano asiente. «Seis meses de gracia. Inteligente. La última vez que alguien bajó a un cliente de nivel sin aviso, el cliente se pasó de la raya y rompió una botella de whisky en esta misma puerta.»" },
-      { say: "Crearía un nivel nuevo, por invitación, por encima de todos. No quitaría nada a nadie: añadiría algo que solo unos pocos pueden alcanzar. La exclusividad se construye, no se recorta.", reply: "Tano sonríe apenas. «Un nivel secreto. A los grandes jugadores les encanta lo que no se puede comprar.» Su compañero murmura: «Como esta puerta.»" },
-      { say: "Antes de tocar los niveles, quiero saber qué hace volver a cada nivel. Si el nivel máximo no cambia el comportamiento, el problema no es cuántos hay, sino qué les damos.", reply: "Tano se queda pensando. «Lo que les damos... Aquí arriba les damos lo mismo desde hace diez años: whisky, silencio y un anfitrión. Algunos ya ni lo valoran.»" },
+    "options": [
+      {
+        "say": "Te la digo, pero acércate, que es un secreto y no quiero que lo oiga todo el pasillo.",
+        "reply": "Tano se inclina sin pensarlo y Bruno le da un codazo en las costillas. «¿No ves que te está toreando, hombre?» Tano se endereza, colorado hasta las orejas."
+      },
+      {
+        "say": "Escalera real.",
+        "reply": "El chicle se le queda a Tano a medio masticar. Bruno y él cruzan una mirada larga. «Hacía media vida que no oía esas dos palabras», murmura Bruno, y se le quiebra la voz."
+      },
+      {
+        "say": "¿Y si te digo que soy Valentina Duarte? ¿Eso no cuenta como contraseña?",
+        "reply": "Tano deja de masticar. «Duarte», repite, como quien prueba un vino peligroso. «Ese apellido, aquí arriba, vale más que una contraseña… o cuesta la vida, según a quién se lo digas»."
+      }
     ],
-    line2: "Tano extiende la mano hacia la puerta, pero no la abre. «Y ahora la contraseña. Aquí arriba no basta con una tarjeta. Dime una frase que convenza a esta puerta de que mereces entrar.»",
-    options2: [
-      { say: "Escalera real. Y si no es la contraseña correcta, te ofrezco algo mejor: un plan que haga que esta sala vuelva a estar llena de gente que de verdad vale la pena.", reply: "Tano y su compañero intercambian una mirada. «Escalera real», repite Tano. «Hacía años que nadie la decía.» La puerta se abre con un clic pesado y sale una nube de humo." },
-      { say: "La exclusividad no es una contraseña: es una promesa que se cumple. Si me dejas pasar, me aseguraré de que esta puerta vuelva a significar algo.", reply: "Tano te mira un largo segundo y luego sonríe. «Bonito discurso. Aquí arriba se valoran las buenas palabras casi tanto como las buenas fichas.» Empuja la puerta y te deja pasar." },
-      { say: "No sé la contraseña, pero sé que el treinta por ciento del margen del casino está detrás de esta puerta. Si no entro, nadie lo va a proteger.", reply: "Tano suelta una carcajada breve. «Treinta por ciento. Hablas como el viejo Montalbán.» Hace una seña a su compañero y la puerta se abre lentamente. «Pasa. Pero ahí dentro las cifras se dicen en voz baja.»" },
+    "line2": "Aun así, Tano no se aparta del todo. «Una última pregunta, que se la hago a todo el que entra. Ahí dentro no se perdona a los que dudan. ¿Vienes a ganar, a cobrar una deuda o a que te consuelen?»",
+    "options2": [
+      {
+        "say": "Ojalá fueran excluyentes. Vengo a las tres cosas, aunque no necesariamente en ese orden.",
+        "reply": "Bruno suelta una carcajada y empuja la puerta. «Pase, señorita. Me habría decepcionado cualquier otra respuesta»."
+      },
+      {
+        "say": "A cobrar. Lo que se le debía a mi padre, con los intereses de veinticinco años.",
+        "reply": "Tano se aparta muy despacio. «Pues cobre con cuidado. Aquí las deudas viejas tienen dientes, y algunas todavía muerden»."
+      },
+      {
+        "say": "¿Consolarme? Si hubiera venido a llorar, me habría quedado en el bufé con una tarta entera.",
+        "reply": "Tano se ríe por primera vez, una risa ronca, casi tierna. «Esta tiene carácter, Bruno. Con un poco de suerte, sale de aquí con vida y todo»."
+      }
     ],
-    end: "La puerta se cierra detrás de ti. Al fondo, en un salón de luz dorada, una mujer de vestido negro juega al bacará con montañas de fichas. Tano te señala con la barbilla. «La Condesa. Te estaba esperando.»",
-    talk: [
-      "«Cuando todos son especiales, nadie lo es»: ¿estás de acuerdo? ¿Pasa también con los premios, los títulos o los elogios?",
-      "¿Te han quitado alguna vez un privilegio que dabas por hecho? ¿Cómo reaccionaste?",
-      "¿Por qué nos atrae tanto lo que está prohibido o reservado para unos pocos?",
-      "¿Has entrado alguna vez en un lugar donde sentías que no pertenecías? ¿Qué hiciste para disimularlo?",
-      "Si tuvieras que convencer a alguien de que mereces una oportunidad con una sola frase, ¿cuál dirías?",
+    "end": "La puerta negra se abre sin un chirrido. Al otro lado, el aire es más denso, las alfombras más blandas y las sonrisas más caras. Al fondo, bajo una lámpara de cristal, alguien baraja cartas de bacará.",
+    "talk": [
+      "¿Qué te ha parecido la táctica de Valentina con Tano, y cuál habrías usado tú en su lugar?",
+      "¿Recuerdas algún sitio en el que te hicieran sentir que no pintabas nada? ¿Cómo reaccionaste?",
+      "¿Por qué crees que lo exclusivo nos atrae tanto, aunque sepamos que muchas veces es puro decorado?",
+      "¿Te has hecho pasar alguna vez por quien no eras para conseguir algo? ¿Te salió bien la jugada?",
+      "Si te ofrecieran entrar en un club al que solo pertenece el uno por ciento, ¿aceptarías sin hacer preguntas?"
     ],
-    words: ["niveles del programa", "exclusividad", "período de gracia", "cuando todos son especiales"],
+    "words": [
+      "no pintar nada",
+      "por mucho que le pese",
+      "pegado a los talones",
+      "salirle bien la jugada"
+    ]
   },
   bacara: {
-    title: "La Condesa pide crédito",
-    line: "El salón de bacará huele a perfume francés y a dinero viejo. La Condesa, guantes negros y diamantes discretos, coloca medio millón en la banca sin pestañear. «Siéntate, querida. Tengo una propuesta. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-    money: {
-      nada: "Te sientas en el salón de bacará sin una ficha y el crupier duda si servirte. La Condesa, guantes negros y diamantes discretos, coloca medio millón en la banca y te sonríe con desdén. «Qué refrescante, querida: alguien que no viene a pedirme nada. Yo, en cambio, sí. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-      "100": "Sacas tus cien dólares y descubres que la apuesta mínima del salón es de mil. La Condesa, guantes negros y diamantes discretos, se ríe sin maldad. «Guárdalo para el taxi, querida. Aquí se habla de otras cifras. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-      "500": "Con tus quinientos dólares no llegas al mínimo de la mesa, así que la Condesa te deja apostar a su lado, en su mano, como quien adopta a un gatito. «Siéntate, querida. Ahora hablemos de dinero de verdad. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-      "1000": "Pones tus mil dólares en el jugador: una sola apuesta, el mínimo de la mesa. La Condesa coloca medio millón en la banca sin pestañear. «Valiente, querida: todo o nada en la primera mano. Me caes bien. Ahora mi propuesta. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-      "10000": "Apuestas dos mil dólares por mano y el jefe de sala te trae champán. La Condesa, guantes negros y diamantes discretos, te mira como a una alumna aplicada. «Diez mil es lo que yo dejo de propina, querida, pero se agradece el gesto. Siéntate. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-      "100000": "Pones veinte mil en la banca y la Condesa, por fin, se quita un guante. «Una ballena joven. Hacía tiempo que no veía una con tan buen gusto en los zapatos.» Coloca medio millón a tu lado. «Siéntate, querida. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
-      "1000000": "Cuando abres el maletín con el millón, la Condesa deja de jugar por primera vez en la noche. Se hace un silencio de iglesia. «Vaya. Ahora entiendo por qué medio Las Vegas habla de ti, querida. Entre ricas nos entendemos, así que voy al grano. Quiero una línea de crédito de dos millones y un veinte por ciento de devolución sobre mis pérdidas. Mi theo por viaje ronda los ciento ochenta mil dólares. En el casino de enfrente me lo dan sin preguntar. ¿Y tú?»",
+    "title": "La prueba de la Condesa",
+    "line": "El salón de bacará es una caja de terciopelo verde donde el silencio cuesta más que el champán. La Condesa, sola ante la banca, con un collar de esmeraldas y una boquilla larguísima, mueve fichas como quien reparte limosnas. Al verte, levanta una ceja dibujada con precisión de cirujana. «Vaya, vaya. La hija de Ernesto Duarte, en carne y hueso. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+    "money": {
+      "100": "Aquí la apuesta mínima es de mil dólares, así que tus cien no llegan ni a la décima parte de una mano. Lo sabes tú, lo saben los crupieres y, sobre todo, lo sabe la Condesa, que sonríe detrás de su boquilla entre la lástima y la diversión. «Por algo se empieza, querida. Yo llegué aquí con un vestido prestado y una mentira bien contada. La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+      "500": "Quinientos dólares en un salón donde se apuesta con fichas que parecen joyas: te sientes como quien entra en una joyería a preguntar la hora. La Condesa, sola contra la banca, ni siquiera disimula que te estaba esperando. «No se agobie por el dinero, querida; aquí lo que se juega de verdad es otra cosa. La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+      "1000": "Mil dólares: exactamente una mano en esta mesa, y ni una más. Los crupieres ya han decidido que eres una suicida encantadora. La Condesa, en cambio, te observa con el interés de una coleccionista ante una pieza rara. «Una sola bala en el revólver. Así jugaba él, ¿sabe? La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+      "10000": "Con diez mil dólares puedes aguantar unas cuantas manos sin que nadie te mire con pena, aunque para la Condesa sigan siendo migajas: ella acaba de jugarse esa cantidad en lo que tarda en dar una calada. «Diez mil. Lo justo para divertirse sin hacerse daño. Qué prudente». Te señala la silla de enfrente. «La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+      "100000": "Cien mil dólares de crédito y, por fin, una silla en la mesa de la Condesa como una igual. A ella le divierte: te hace servir un champán que cuesta lo que un coche y ordena que te repartan con una baraja nueva. «Bienvenida al club de los que pueden permitirse perder con elegancia. La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+      "1000000": "Un millón de dólares en placas doradas y el salón entero contiene la respiración: hasta el jefe de sala se ha ajustado la corbata. La Condesa, que llevaba veinte años siendo la reina indiscutible de este terciopelo, deja la boquilla y te aplaude despacio, sin ironía. «Me ha destronado sin abrir la boca. Eso no lo había conseguido nadie desde su padre. La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»",
+      "nada": "Entras en el salón de bacará con los bolsillos vacíos y la barbilla bien alta, que es lo único que no se puede embargar. Un crupier ya hace ademán de acompañarte a la salida, pero la Condesa lo detiene con un leve movimiento de la boquilla. «Déjela, Anselmo. He visto a gente sin un centavo jugar mejor que muchos marqueses». Te mira. «La hija de Ernesto. Siéntese y demuéstreme que no ha heredado solo la cara. ¿O prefiere mirar desde la puerta, como las turistas?»"
     },
-    options: [
-      { say: "Con un theo de ciento ochenta mil, un veinte por ciento de devolución se come buena parte del margen. Puedo ofrecerte la línea de crédito, pero con un diez por ciento y beneficios en experiencias.", reply: "La Condesa gira una ficha entre los dedos enguantados. «Diez por ciento y experiencias... ¿Qué experiencias, querida? ¿Un paseo en helicóptero? Ya tengo tres.» Sonríe. «Pero me gusta que negocies. Los que dicen que sí a todo me aburren.»" },
-      { say: "Antes de hablar de crédito, necesito revisar tu historial de pagos. Por mucho que valore tu juego, una línea de dos millones es un riesgo que tiene que aprobar Finanzas.", reply: "La Condesa se ríe con frialdad. «Una directora prudente. No me voy a ofender, aunque me dan ganas. Mi historial es impecable, querida. Pero respeto que lo compruebes: el que presta sin mirar acaba en el desierto con una pala.»" },
-      { say: "Si el casino de enfrente te lo da sin preguntar, quizá allí no te conozcan como nosotros. Prefiero ofrecerte algo que ellos no pueden: una mesa privada, tu crupier favorito y discreción absoluta.", reply: "La Condesa te observa en silencio y luego deja una ficha de mil dólares delante de ti. «Por la respuesta. El dinero lo encuentro en cualquier lado. La discreción, no. Ahora hablemos de verdad.»" },
+    "options": [
+      {
+        "say": "Me siento, pero le aviso: de mi padre heredé la cara, el pulso y una manía muy fea de no perder.",
+        "reply": "La Condesa suelta una risa de cristal fino. «Entonces repartiré yo, por si acaso. A las manías ajenas les tengo mucho respeto»."
+      },
+      {
+        "say": "No he venido a lucirme, Condesa. He venido a escuchar lo que usted sepa de él.",
+        "reply": "«Qué decepción tan honrada», suspira ella. «Su padre tampoco presumía nunca. Se limitaba a ganar, que es una forma de presumir mucho más elegante»."
+      },
+      {
+        "say": "Desde la puerta se ve mejor la jugada. Pero, ya que insiste, ¿qué nos apostamos?",
+        "reply": "La Condesa entorna los ojos, encantada. «Una mujer que negocia antes de sentarse. Ernesto habría estado orgulloso… y un poco asustado»."
+      }
     ],
-    line2: "La Condesa gana la mano y empuja las fichas hacia el centro. «Una pregunta más, y quiero la verdad. Si yo pierdo un millón esta noche, ¿cuánto de ese dinero me devolverías para que vuelva? Dime tu cifra de reinversión.»",
-    options2: [
-      { say: "Entre un veinte y un treinta por ciento de lo que esperamos ganar contigo, no de lo que pierda una noche. Reinvertimos sobre el valor teórico, no sobre la suerte.", reply: "La Condesa aplaude con un solo dedo sobre la palma. «Sobre el theo, no sobre la suerte. Eso solo lo dicen los que saben. Ernesto Duarte lo explicaba así hace veinticinco años.»" },
-      { say: "Depende de tu frecuencia. Si vienes ocho veces al año, mi reinversión es mayor; si vienes una vez, la ajusto. El cliente fiel merece más que el cliente afortunado.", reply: "La Condesa entrecierra los ojos con picardía. «Me pides que venga más para darme más. Seductor. Aunque no me gusta que me cuenten las visitas, querida.»" },
-      { say: "Ninguna devolución directa. Te ofrecería algo con más valor percibido y menos costo: un viaje privado, acceso a eventos únicos, atención personal. El dinero se olvida; la experiencia, no.", reply: "La Condesa se ríe, sincera por primera vez. «Muy atrevida. Me pides que cambie dinero por recuerdos. Puede que lo acepte... si los recuerdos son buenos.»" },
+    "line2": "La Condesa empuja una torre de fichas al centro con un solo dedo enguantado. «Una mano. Si gana usted, le cuento cómo conocí a Ernesto y por qué se fue. Si gano yo, me quedo la ficha dorada que lleva en el bolso. ¿Acepta, o prefiere vivir muchos años sin saber nada?»",
+    "options2": [
+      {
+        "say": "Acepto. Aunque perdiera, al menos sabría que no me quedé con las ganas.",
+        "reply": "Las cartas se giran: ocho contra seis. Ganas tú. La Condesa aplaude con los guantes puestos. «Su padre era de los que sabían retirarse a tiempo. Usted, me temo, es de las que se quedan hasta el final»."
+      },
+      {
+        "say": "No. Esa ficha no es mía para jugármela, por mucho que me tiente.",
+        "reply": "La Condesa te observa largo rato, con un respeto que no esperaba sentir. «Lo mismo me dijo él la última noche. Sabía retirarse a tiempo, y sabía qué cosas no le pertenecían»."
+      },
+      {
+        "say": "Si me importara vivir muchos años, no habría subido al tercer piso. Reparta.",
+        "reply": "La Condesa reparte y pierde por un punto, con una sonrisa casi agradecida. «Hacía siglos que no perdía a gusto. Ernesto sabía retirarse a tiempo, querida. Ojalá usted aprenda de él antes de que sea tarde»."
+      }
     ],
-    end: "La Condesa te ofrece una copa de champán y señala con la cabeza una puerta de la que sale humo espeso. «En la sala de puros está Don Carmine. Cuidado con él: no cree en los datos, solo en las personas. Y no siempre en las personas.»",
-    talk: [
-      "La Condesa dice que el dinero se encuentra en cualquier lado, pero la discreción no: ¿qué vale más para ti que el dinero?",
-      "¿Prestarías una cantidad grande a un amigo con un historial impecable? ¿Y a un familiar que nunca devuelve nada?",
-      "¿Qué te parece más atractivo en una persona: el riesgo o la prudencia? ¿Ha cambiado tu respuesta con la edad?",
-      "¿Has negociado alguna vez con alguien mucho más poderoso que tú? ¿Qué aprendiste sobre ti misma o sobre ti mismo?",
-      "¿Cambiarías dinero por recuerdos, como propone Valentina? ¿Qué experiencia te ha valido más que cualquier cantidad?",
+    "end": "La Condesa recoge sus fichas sin mirarlas, como quien recoge las migas de un mantel. Detrás de una cortina de terciopelo se oyen voces graves, el tintineo de los vasos de whisky y una tos de fumador empedernido.",
+    "talk": [
+      "¿Te parece un elogio o una crítica que digan de alguien que «sabía retirarse a tiempo»?",
+      "¿Hay algo de lo que te alegras de haberte retirado a tiempo, y algo de lo que no supiste salir?",
+      "¿Qué crees que has heredado de verdad de tu familia, más allá del físico?",
+      "Cuando alguien te pone a prueba delante de otros, ¿sacas lo mejor de ti o te bloqueas?",
+      "¿Arriesgarías algo con valor sentimental a cambio de una información que deseas muchísimo?"
     ],
-    words: ["riesgo de crédito", "reinversión", "valor teórico", "devolución sobre pérdidas"],
+    "words": [
+      "en carne y hueso",
+      "quedarse con las ganas",
+      "retirarse a tiempo",
+      "por mucho que me tiente"
+    ]
   },
   puros: {
-    title: "La vieja guardia",
-    line: "La sala de puros es una niebla densa de tabaco cubano y whisky de malta. Alrededor de una mesa de cartas, cinco hombres mayores de «la Familia» juegan en silencio. Don Carmine, anillo de oro y voz de grava, te mira sin levantarse. «Así que tú eres la de los datos. Mira, muchacha: yo llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-    money: {
-      nada: "Entras en la sala de puros sin dinero ni para un habano, y uno de los hombres de «la Familia» te ofrece el suyo, ya mordido. Don Carmine, anillo de oro y voz de grava, te mira sin levantarse. «Sin un peso y con cara de jefa. Eso tiene mérito. Mira, muchacha: yo llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-      "100": "Pides el puro más barato de la carta, cuarenta dólares, y te quedan sesenta. Don Carmine, anillo de oro y voz de grava, se ríe con los otros cuatro hombres de «la Familia». «Un puro de turista. Mira, muchacha: yo llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-      "500": "Pagas un buen habano cubano y lo enciendes como te enseñaron, despacio. Don Carmine, anillo de oro y voz de grava, levanta una ceja. «Al menos sabes fumar. Mira, muchacha: yo llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-      "1000": "Pones mil dólares sobre la mesa para sentarte a la partida de cartas y los hombres de «la Familia» se miran entre ellos. Don Carmine, anillo de oro y voz de grava, empuja el dinero de vuelta hacia ti. «Aquí no se juega con desconocidos, muchacha. Yo llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-      "10000": "Pagas una ronda de whisky de treinta años para toda la mesa y Don Carmine acepta el vaso sin dar las gracias. «Diez mil dólares y ya compras amigos. Así lo hacía yo a tu edad, muchacha. Pero escucha: llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-      "100000": "Te ofrecen la mejor silla y el humidificador privado, pero Don Carmine, anillo de oro y voz de grava, no se mueve de la suya. «Con cien mil dólares todos se levantan por ti, muchacha. Yo no. Llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos, no por su cartera. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
-      "1000000": "Al oír lo del millón, dos hombres de «la Familia» dejan las cartas y se colocan junto a la puerta. Don Carmine, anillo de oro y voz de grava, te mira despacio. «Una mujer con un millón en el bolso en mi sala. O eres muy valiente o muy tonta, muchacha. Yo llevo cuarenta años en este negocio y conozco a mis clientes por su apretón de manos. Tus números no saben si un hombre está triste o si su mujer lo dejó. ¿Para qué te necesito?»",
+    "title": "Humo y silencio",
+    "line": "La sala de puros es una cueva de cuero y humo azul donde el aire se podría cortar con un cuchillo de mantequilla. Cinco hombres de la Familia juegan a las cartas sin decir palabra; las botellas de whisky hablan por ellos. Don Carmine, gemelos de oro y voz de grava, aparta una silla con el pie. «Siéntate, niña. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+    "money": {
+      "100": "Con cien dólares no te alcanza ni para la punta de uno de estos habanos, y los hombres de la Familia lo saben: uno se ríe por lo bajo, otro te ofrece su encendedor con aire de caridad. Don Carmine los manda callar con una sola mirada. «El que no tiene nada tampoco tiene nada que esconder. Esa es la gente que más me interesa». Te señala la silla. «Siéntate, niña. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+      "500": "Quinientos dólares en el bolso y la sensación de haber entrado por error en el rodaje de una película de gánsteres. Nadie te mira, aunque todos te han visto. Don Carmine, sin dejar de barajar, aparta una silla con el pie. «Tranquila, aquí el dinero de los demás no nos interesa. El nuestro, muchísimo». Se ríe con voz de grava. «Siéntate, niña. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+      "1000": "Mil dólares te dan para un habano decente y un whisky que no raspa, y los pides con un aplomo que sorprende a la mesa. Don Carmine te ve encender el puro con torpeza de principiante y se le escapa una sonrisa. «No lo chupes como un caramelo, niña. A un buen puro se le trata como a un enemigo: con paciencia». Te señala la silla. «Siéntate. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+      "10000": "Con diez mil dólares, un empleado te abre el humidor de la casa como si fuera la cámara acorazada de un banco, y la partida privada acepta tus fichas sin pestañear. Los hombres de la Familia hacen cuentas mentalmente sin levantar la vista de las cartas. Don Carmine te aparta una silla con el pie. «El dinero siempre es bienvenido. Las preguntas, menos. Siéntate, niña. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+      "100000": "Cien mil dólares y los hombres de la Familia se ponen de pie al verte entrar, una cortesía que en esta sala equivale a desenfundar. Uno te ofrece un habano de veinte años; otro, un préstamo «entre amigos»; un tercero, su número de teléfono. Don Carmine los manda sentarse con un chasquido de dedos. «Cuando llega una ballena, niña, salen los tiburones. Siéntate a mi lado. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+      "1000000": "La noticia del millón ha llegado a la sala de puros antes que tú: las cartas se quedan quietas, alguien hace una llamada en voz baja y otro se desabrocha la chaqueta sin motivo aparente. Don Carmine se levanta, con una lentitud que da miedo, y te aparta él mismo la silla. «Con tanto dinero encima, o tienes muy buenos amigos o muy malos enemigos. Siéntate, niña. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»",
+      "nada": "Llegas a la sala de puros sin un dólar, con el vestido arrugado de toda una noche, y un hombre de la Familia te pide hielo creyendo que eres camarera. Don Carmine le da un manotazo en la nuca que se oye en toda la sala. «Es la hija de Ernesto Duarte, animal. Pídele perdón». Luego te aparta una silla con el pie. «Siéntate, niña. Aquí se juega, se bebe y, sobre todo, se calla. ¿Sabes tú guardar un secreto?»"
     },
-    options: [
-      { say: "Para que tu intuición llegue más lejos. Tú conoces a doscientos clientes; los datos me permiten conocer a doscientos mil. No vengo a reemplazarte, sino a multiplicarte.", reply: "Don Carmine sopla el humo despacio. «Multiplicarme... Eso suena bien hasta que tu máquina le manda a un viudo una oferta para parejas.» Los otros hombres se ríen bajo. «Pero sigue hablando.»" },
-      { say: "Tienes razón en algo: los datos no ven la tristeza. Por eso propongo que tus anfitriones añadan sus notas al CRM. Tu experiencia más nuestros números valen más que cada cosa por separado.", reply: "Don Carmine se queda inmóvil un momento, luego asiente. «Notas en tu sistema. Mi gente escribiendo en una computadora...» Mira a los otros. «A lo mejor así, cuando nos muramos, alguien se acordará de quién bebía qué.»" },
-      { say: "Con todo respeto, Don Carmine, los números dicen que tres de tus clientes favoritos no vienen desde hace seis meses. A veces la intuición también se equivoca.", reply: "El silencio en la sala se vuelve pesado. Uno de los hombres deja las cartas. Don Carmine te mira largamente y, por fin, se ríe. «Tienes agallas, muchacha, y bastante cara. ¿Cuáles tres? Dímelo luego, en voz baja.»" },
+    "options": [
+      {
+        "say": "Los guardo tan bien que a veces ni yo misma me acuerdo de dónde los he puesto.",
+        "reply": "Don Carmine se ríe con una carcajada que parece un motor viejo arrancando. «Esa es la mejor caja fuerte que existe: la memoria selectiva»."
+      },
+      {
+        "say": "Depende del secreto, Don Carmine. Y de quién salga perjudicado si me lo callo.",
+        "reply": "Los hombres dejan las cartas sobre la mesa. Don Carmine se acaricia el bigote. «Una mujer con condiciones. Tu padre también las ponía, y ya ves dónde acabó… o dónde no acabó»."
+      },
+      {
+        "say": "Sé guardar secretos y también sé venderlos caros. ¿Le interesa alguno?",
+        "reply": "Don Carmine levanta una ceja, entre ofendido y admirado. «Cuidado, niña. En esta sala, quien vende secretos suele acabar en el desierto. Pero me gusta tu descaro»."
+      }
     ],
-    line2: "Don Carmine te sirve un whisky sin preguntar. «Ahora te pregunto yo algo. Si tus datos dicen que un cliente ya no vale la pena, pero ha sido fiel a esta casa durante treinta años, ¿lo tiras a la basura como un número?»",
-    options2: [
-      { say: "No. Le cambiaría el tipo de atención, no el respeto. Quizá ya no reciba la suite, pero sí una llamada personal y una mesa en el restaurante. La lealtad también tiene valor de marca.", reply: "Don Carmine levanta su vaso. «Eso es lo que separa a una casa de un negocio cualquiera. Brindo por eso, muchacha.» Los otros cuatro levantan también sus vasos." },
-      { say: "Lo trataría con honestidad. Por mucho que lo apreciemos, no podemos reinvertir en él como si jugara igual que hace diez años. Pero nadie le va a quitar su nombre en la puerta.", reply: "Don Carmine asiente lentamente, serio. «Honestidad. No es lo más cómodo, pero es lo que más se agradece con la edad.» Deja una carta sobre la mesa: un as." },
-      { say: "Te preguntaría a ti. Si conoces a ese cliente, sabes mejor que nadie qué lo haría feliz sin que cueste una fortuna. Los datos me dicen el qué; tú me dices el cómo.", reply: "Don Carmine sonríe con aprobación. «Al fin una joven que pide consejo. Eso nunca lo hizo Marco, el hijo del jefe.» Bebe un sorbo. «A ese viejo cliente le basta con que alguien le pregunte por sus nietos.»" },
+    "line2": "Don Carmine echa una bocanada de humo hacia el techo. «Dicen que tu padre se largó con algo que no le pertenecía. Yo no lo afirmo, ¿eh? Pero en la Familia, lo que se repite mil veces acaba siendo verdad, a no ser que alguien demuestre lo contrario».",
+    "options2": [
+      {
+        "say": "¿Y si fue al revés? ¿Y si quien se quedó con lo ajeno fue otro, y mi padre solo pagó el pato?",
+        "reply": "Don Carmine se queda inmóvil, con el puro a medio camino. «Si eso fuera así, habría que echar cuentas de nuevo. Y a mí echar cuentas viejas me da una pereza horrible»."
+      },
+      {
+        "say": "Pues demuéstrelo usted o deje de repetirlo. Que yo sepa, quien acusa es quien tiene que probar.",
+        "reply": "Se hace un silencio de iglesia. Don Carmine asiente muy despacio. «Hablas como un abogado y miras como tu padre. Mala combinación para quien te lleve la contraria»."
+      },
+      {
+        "say": "Por mucho que lo repitan, si mi padre hubiera robado algo, yo no estaría aquí tan tranquila.",
+        "reply": "«Tan tranquila no estás», dice Don Carmine con suavidad. «Se te está cayendo la ceniza en el vestido. Pero disimulas de maravilla, eso te lo reconozco»."
+      }
     ],
-    end: "Don Carmine se pone de pie por primera vez y te tiende la mano. El apretón es firme, como una prueba. «Ve a ver a Ignacio, el anfitrión. Tiene en la pared las fotos de todos los que importaron en esta casa.»",
-    talk: [
-      "Don Carmine dice que los números no saben si un hombre está triste: ¿confías más en tu intuición o en los datos cuando juzgas a alguien?",
-      "¿Has tenido que decirle a alguien mayor o con más experiencia que estaba equivocado? ¿Cómo lo hiciste?",
-      "¿Qué le debes tú a la «vieja guardia» de tu vida: padres, profesores, primeros jefes?",
-      "¿Qué harías con un amigo o un cliente fiel durante años que ya no te aporta nada? ¿La lealtad tiene fecha de caducidad?",
-      "¿Te da miedo que un día una máquina o un sistema haga tu trabajo mejor que tú?",
+    "end": "Don Carmine te despide con un gesto lento del anillo, como quien deja una puerta entornada y una cuenta pendiente. En el pasillo, Ignacio, el anfitrión, te espera con las manos cruzadas a la espalda.",
+    "talk": [
+      "¿Crees que Ernesto se llevó algo que no era suyo, o es solo un rumor que le conviene a alguien?",
+      "¿Te ha pasado que un rumor sobre ti o sobre alguien cercano se convirtiera en «verdad» a fuerza de repetirse?",
+      "¿Qué secreto ajeno te ha costado más guardar? ¿Has acabado contándolo?",
+      "¿Dónde termina la lealtad a la familia y dónde empieza la complicidad con algo que está mal?",
+      "¿Por qué crees que el cine ha convertido a los mafiosos en personajes tan atractivos?"
     ],
-    words: ["vieja guardia", "intuición", "valor de marca", "con todo respeto"],
+    "words": [
+      "pagar el pato",
+      "a fuerza de",
+      "llevar la contraria",
+      "echar cuentas"
+    ]
   },
   anfitrion: {
-    title: "¿Funcionó la campaña?",
-    line: "En la mesa del anfitrión, bajo fotos en blanco y negro de jugadores legendarios, Ignacio, impecable con su chaleco, abre una carpeta de cuero. «Directora, la última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-    money: {
-      nada: "Llegas a la mesa del anfitrión sin un dólar y Ignacio, impecable con su chaleco, te ofrece un café como a una invitada de honor. «Directora, mi trabajo es tratar igual de bien a quien lleva un millón y a quien no lleva nada; lo segundo lo practico poco.» Abre una carpeta de cuero. «La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-      "100": "Ignacio, impecable con su chaleco, te recibe con la misma reverencia que a una ballena, aunque sabe que llevas cien dólares. «Un buen anfitrión no mira la cartera, directora; mira la próxima visita.» Abre una carpeta de cuero. «La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-      "500": "Ignacio, impecable con su chaleco, te ofrece asiento bajo las fotos de jugadores legendarios. «Con quinientos dólares eres el cliente que nadie cuida, directora, y el que más abunda.» Abre una carpeta de cuero. «La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-      "1000": "Ignacio, impecable con su chaleco, ya tiene tu juego de esta noche en la pantalla. «Has jugado mil dólares, directora; según la regla, te correspondería una cena. Así de automático es todo.» Abre una carpeta de cuero. «La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-      "10000": "Ignacio, impecable con su chaleco, te ofrece una línea directa a su teléfono «por si necesitas algo a cualquier hora»: es lo que reciben los clientes de diez mil dólares. Luego abre una carpeta de cuero. «Y ahora, al trabajo. La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-      "100000": "Ignacio ya ha reservado para ti una suite, una mesa en el restaurante del chef y un chófer, porque llevas cien mil dólares. «Es lo que haría con cualquier ballena, directora, aunque sea mi jefa.» Abre una carpeta de cuero. «La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
-      "1000000": "Ignacio cierra la puerta con llave en cuanto entras: con un millón de dólares, dice, hay que tener cuidado hasta con los camareros. Saca una carpeta de cuero con manos tranquilas. «Directora, he atendido a tres personas con un millón en efectivo en treinta años. Dos acabaron mal. Pero vamos a lo nuestro. La última campaña de CRM: cincuenta mil contactados, ocho mil abrieron, novecientos canjearon y seiscientos veinte nos visitaron. Ingreso estimado: ciento noventa y dos mil dólares. Costo: ciento cuarenta mil. Don Aurelio dice que fue un éxito. ¿Tú también?»",
+    "title": "La foto del revés",
+    "line": "La mesa del anfitrión es un escritorio de caoba bajo un muro de fotografías en blanco y negro: cantantes de otra época, boxeadores con la nariz rota, un par de presidentes con la copa en alto. Ignacio, el anfitrión, canoso e impecable, te sirve un café sin que se lo pidas. «Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. Creo que ese alguien es usted. ¿Me permite que se la enseñe?»",
+    "money": {
+      "100": "Te acercas a la mesa del anfitrión para preguntar, con cierto apuro, si con cien dólares te puede conseguir algún descuento en el bufé. Ignacio te escucha con una seriedad de notario, te entrega dos vales de cortesía sin pestañear y te sirve un café. «Eso, en realidad, era lo de menos». Baja la voz. «Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»",
+      "500": "Quinientos dólares y ninguna intención de convertirte en clienta habitual: se lo dices a Ignacio antes de que abra la boca. Él sonríe, cierra la carpeta de ofertas y te sirve un café de todos modos. «No le voy a vender nada, se lo prometo. Hoy no trabajo para la casa». Señala la pared de fotos. «Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»",
+      "1000": "En la pantalla de Ignacio ya aparece tu historial de la noche: mil dólares jugados, apuesta media, tiempo en cada mesa. Por pura costumbre te ofrece una cena de cortesía y una habitación mejor para la próxima visita, como haría con cualquiera. Luego apaga el monitor, como quien se quita el uniforme. «Olvidemos el protocolo. Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»",
+      "10000": "Con diez mil dólares jugados, a Ignacio le tocaría venderte el paquete completo: vuelo pagado, suite con piscina, cena con el chef y un fin de semana en Macao. Abre la carpeta, la mira un segundo y la cierra con un suspiro. «Si su padre me viera ofreciéndole un descuento, se reiría de mí hasta mañana». Te sirve un café. «Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»",
+      "100000": "Cien mil dólares te convierten en la prioridad absoluta de Ignacio: tiene órdenes de concederte cualquier capricho, desde un avión privado hasta una botella de un vino del siglo pasado. Te sirve un café, te escucha con paciencia y, por primera vez en cuarenta años de oficio, decide desobedecer. «Hay cosas que la casa no puede regalar, porque no son suyas. Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»",
+      "1000000": "Desde que se corrió la voz del millón, el teléfono de Ignacio no ha dejado de sonar: el director, dos casinos rivales, un señor de la Familia que pregunta, medio en broma, cuánto vale usted. Ignacio desenchufa el aparato con una calma de monje y te sirve un café. «Esta noche no estoy para nadie más. Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»",
+      "nada": "La mesa del anfitrión está reservada para quienes se dejan fortunas, y tú llegas sin un dólar, con los zapatos en la mano. Un ayudante joven se interpone con una sonrisa congelada, pero Ignacio lo aparta con suavidad y te sirve un café en la mejor taza. «Aquí se atiende a las personas por su apellido, no por su saldo, Germán. Apréndetelo». Te mira. «Señorita Duarte, llevo un cuarto de siglo con una foto colgada del revés, esperando a que alguien viniera a buscarla. ¿Me permite que se la enseñe?»"
     },
-    options: [
-      { say: "Todavía no. Los ingresos no prueban rentabilidad: falta el margen y saber cuántos de esos seiscientos veinte habrían venido sin la oferta. Sin grupo de control, no hablo de éxito.", reply: "Ignacio pasa una página con delicadeza. «Me alegra que lo preguntes. Finanzas lo calculó ayer: el cuarenta por ciento habría venido de todos modos. Así que solo unas trescientas setenta y dos visitas fueron incrementales. El éxito se encoge bastante.»" },
-      { say: "Fue un éxito parcial. Generamos visitas, pero lo que me preocupa son las doscientas ochenta personas que canjearon y no vinieron. Ahí hay un problema de proceso o de oferta.", reply: "Ignacio asiente con gravedad. «Canjearon y no vinieron. Algunos porque la fecha no les venía bien, otros porque la oferta solo servía en sábado y estábamos llenos. Nadie lo había investigado.»" },
-      { say: "Para Don Aurelio puede serlo, pero yo lo llamaría un punto de partida. La próxima vez enviaría menos mensajes, mejor segmentados, y mediría la incrementalidad desde el primer día.", reply: "Ignacio sonríe con discreción. «Menos y mejor. Así trabajábamos antes, con llamadas personales. Yo telefoneaba a cuarenta clientes y venían treinta.» Señala una foto. «Ese era el método de la vieja escuela.»" },
+    "options": [
+      {
+        "say": "Me encantan los hombres que saben esperar. Adelante, Ignacio, que yo también llevo años esperando.",
+        "reply": "Ignacio inclina la cabeza con una elegancia de otra época. «La paciencia es lo único que este casino no ha conseguido comprarme, señorita. Y mire que lo ha intentado»."
+      },
+      {
+        "say": "Antes dígame una cosa: ¿cuánto le han pagado durante todos estos años para que no hablara?",
+        "reply": "«Ni un centavo», responde, sin alterarse. «Me pagaban por recordar los gustos de los clientes. Lo demás lo he recordado gratis, que es mucho más peligroso»."
+      },
+      {
+        "say": "¿Es siempre así de teatral, o solo con las hijas de los que desaparecieron?",
+        "reply": "Ignacio sonríe de verdad, quizá por primera vez en años. «Solo con las que tienen sentido del humor. Su padre lo tenía, incluso cuando las cosas se pusieron feas de verdad»."
+      }
     ],
-    line2: "Ignacio te entrega un teléfono: es Don Aurelio. «Directora, segmentar tarda demasiado. Quiero enviar nuestra mejor oferta a todos los miembros de la base esta misma semana. Si la oferta es buena, vendrá más gente. ¿Sí o no?»",
-    options2: [
-      { say: "Entiendo la lógica, pero no todos los clientes tienen el mismo valor. Puedo definir hoy mismo un segmento: jugadores premium que han dejado de venir. Lo enviamos el lunes y medimos contra un grupo de control.", reply: "Hay un silencio al otro lado de la línea. «Un segmento hoy y resultados en dos semanas. Está bien. Pero si en dos semanas no veo números, lo hago a mi manera.» Ignacio te guiña un ojo." },
-      { say: "No, porque enviaríamos nuestra mejor oferta a gente que vendría igual y perderíamos margen. Pero le propongo algo rápido: las llamadas personales de Ignacio a los cien clientes más valiosos.", reply: "Don Aurelio gruñe. «Llamadas, como en los viejos tiempos... Ponte las pilas, Ignacio.» Ignacio sonríe, orgulloso. «Está bien», dice el jefe. «Que llame Ignacio. Pero quiero saber cuántos vienen, uno por uno.»" },
-      { say: "Sí, con una condición: que el diez por ciento de la base no reciba nada. Así, por primera vez, sabremos cuánto genera realmente nuestra mejor oferta.", reply: "Don Aurelio se queda callado y luego ríe. «Me pides que no le dé nada a un diez por ciento para probar que tengo razón. Astuta.» Cuelga sin despedirse. Ignacio levanta las cejas: eso, en él, es un sí." },
+    "line2": "Da la vuelta a la foto. Dos jóvenes en esmoquin, abrazados y riendo delante de esta misma mesa: Ernesto y Aurelio. Del marco cae un papel amarillento, doblado en cuatro: el compromiso de la apuesta, con las dos firmas. «Eran uña y carne. Hasta que una escalera real los convirtió en algo que todavía no sé nombrar».",
+    "options2": [
+      {
+        "say": "Si aquella mano no se hubiera jugado nunca, ¿cree que habrían seguido siendo amigos?",
+        "reply": "Ignacio contempla la foto largo rato. «Quizá. Aunque los hombres como ellos nunca dejan una partida a medias. Ni una amistad sin ponerla a prueba hasta romperla»."
+      },
+      {
+        "say": "Este papel lo cambia todo. Si es auténtico, el casino tendría que haber sido de mi padre.",
+        "reply": "«Tendría», asiente Ignacio. «Por eso lo he guardado yo, y no un abogado. A los abogados se les compra; a los viejos anfitriones, como mucho, se les cansa»."
+      },
+      {
+        "say": "Qué guapo estaba. Nunca había visto a mi padre tan feliz en una foto.",
+        "reply": "Ignacio baja la voz hasta convertirla en un susurro. «Esa noche fue el hombre más feliz de Las Vegas. Durante una hora, más o menos. Luego subió al despacho»."
+      }
     ],
-    end: "Ignacio señala una foto antigua: dos jóvenes sonrientes junto a una mesa de póker, uno de ellos con el rostro de Don Aurelio. «La terraza está al final del pasillo», dice. «Marco te espera allí. Y no viene de buen humor.»",
-    talk: [
-      "Ignacio llamaba a cuarenta clientes y venían treinta: ¿qué te convence más, un mensaje masivo o una llamada personal? ¿Por qué?",
-      "¿Has celebrado algún éxito que, mirado con calma, no era tan éxito? ¿Por qué nos cuesta ver la verdad cuando nos conviene?",
-      "¿Cómo reaccionas cuando un jefe dice que algo salió bien y tú sabes que no es así?",
-      "¿Guardas fotos antiguas de personas que ya no están en tu vida? ¿Qué sientes al verlas?",
-      "En la foto de Ignacio, Don Aurelio aparece joven junto a otro hombre: ¿quién crees que es y qué relación tenían?",
+    "end": "Ignacio envuelve la foto y el papel en un pañuelo de seda y te los entrega como quien pasa un testigo. «La terraza», murmura. «El joven Marco la está esperando. Hágame un favor: no le dé nunca la espalda».",
+    "talk": [
+      "¿Por qué crees que Ignacio prefirió guardar la foto y el papel tantos años en lugar de entregárselos a alguien?",
+      "¿Has perdido alguna amistad por dinero, por orgullo o por una rivalidad que se fue de las manos?",
+      "¿Hay alguna foto antigua tuya que te cueste mirar? ¿Qué le dirías a la persona que aparece en ella?",
+      "¿Crees que una amistad de verdad sobrevive a la competencia, o tarde o temprano uno de los dos sale perdiendo?",
+      "¿Qué guardas desde hace años —cartas, mensajes, objetos— aunque sepas que te haría bien deshacerte de ello?"
     ],
-    words: ["incrementalidad", "grupo de control", "canje", "visitas incrementales"],
+    "words": [
+      "ser uña y carne",
+      "pasar el testigo",
+      "dejar a medias",
+      "irse de las manos"
+    ]
   },
   terraza: {
-    title: "El competidor movió primero",
-    line: "Desde la terraza, el Strip parece un río de oro. Un helicóptero pasa sobre las fuentes. Marco Montalbán, el hijo del dueño, apoya los codos en la baranda con un vaso de whisky. «Directora, dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-    money: {
-      nada: "Sales a la terraza sin un dólar, solo a respirar. Marco Montalbán, el hijo del dueño, apoya los codos en la baranda con un vaso de whisky y te mira el bolso vacío. «Ni para una copa, directora. Al menos nadie te va a intentar sacar nada esta noche. Yo sí: dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-      "100": "Pides una copa en la terraza y te cobran treinta y cinco dólares por las vistas. Marco Montalbán, el hijo del dueño, se ríe desde la baranda. «Bienvenida al precio del Strip, directora. Ahora, dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-      "500": "Marco Montalbán, el hijo del dueño, te ve pagar tu copa y no se ofrece a invitarte. Apoya los codos en la baranda con su whisky. «Directora, aquí arriba los de quinientos dólares pagan, y los de cien mil, no. Así funciona mi familia. Dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-      "1000": "Marco Montalbán, el hijo del dueño, te ofrece un whisky y te pregunta cuánto has ganado esta noche. «¿Solo mil en el bolso? Mi padre perdía más antes del desayuno.» Bebe un sorbo. «Dos noticias, directora. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-      "10000": "Marco Montalbán, el hijo del dueño, te sirve personalmente un whisky caro: alguien le ha dicho que llevas diez mil dólares y que juegas bien. Un helicóptero pasa sobre las fuentes. «Directora, a la gente con dinero se la seduce rápido. Dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-      "100000": "Marco Montalbán, el hijo del dueño, te ofrece dar una vuelta en el helicóptero que sobrevuela las fuentes: «para una ballena, lo que haga falta». Luego se apoya en la baranda, serio. «Pero antes, directora, dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
-      "1000000": "Marco Montalbán, el hijo del dueño, mira tus maletines con el millón como quien mira una amenaza. «¿De dónde sale tanto dinero, directora? En esta ciudad, un millón en efectivo nunca es solo dinero.» Gira el vaso de whisky. «Pero hablemos de negocios. Dos noticias. La primera: el resort de enfrente lanzó una oferta a nuestros exclientes, habitaciones a mitad de precio. La segunda: tu equipo envió una promoción a veinte mil contactos que debían quedar excluidos. Ya hay trescientos cuarenta canjes. ¿Por cuál empiezas?»",
+    "title": "Champán y helicóptero",
+    "line": "La terraza cuelga sobre el Strip como un palco de ópera: abajo, las fuentes bailan una canción antigua y los neones prometen cosas que nunca cumplen. Un helicóptero espera en su plataforma con las hélices quietas. Marco Montalbán, traje blanco, bronceado de yate y ojeras mal disimuladas, te tiende una copa de champán. «Valentina, por fin. Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+    "money": {
+      "100": "Marco ha hecho que alguien investigue tu cuenta corriente y te lo suelta con una sonrisa: cien dólares, un alquiler atrasado y una tarjeta de crédito al límite. «No te lo tomes a mal; en esta familia lo averiguamos todo antes de negociar». Detrás de él, las fuentes del Strip se encienden a la vez. Te tiende una copa. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+      "500": "Llegas a la terraza con quinientos dólares, una ficha que pesa como una losa y muy pocas ganas de celebrar nada. Marco Montalbán te espera apoyado en la barandilla, con dos copas en la mano y la corbata deshecha. «Pareces agotada. Normal: esta ciudad te exprime si no has nacido en ella». Te tiende una copa. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+      "1000": "Marco te recibe con un dato, como quien enseña una carta: has jugado mil dólares esta noche y has salido ganando. «Mi padre jugaba así de joven: poco, pero con hambre de lobo». Detrás de él, el piloto del helicóptero mira el reloj por tercera vez. Te tiende una copa de champán. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+      "10000": "Con diez mil dólares jugados ya formas parte de las hojas de cálculo de Marco: sabe lo que apuestas de media, qué bebes y cuánto aguantas en cada mesa. Te lo enumera con orgullo de contable mientras las fuentes saltan a su espalda. «Información, Valentina: la única moneda que nunca se devalúa». Te tiende una copa. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+      "100000": "Para recibir a una ballena de cien mil, Marco ha tirado la casa por la ventana: caviar sobre hielo, un cuarteto de cuerda tocando a Sinatra y tus iniciales bordadas en las servilletas. Sabe de sobra que no te vas a dejar deslumbrar, pero no conoce otra forma de hablar con la gente. Te tiende una copa y se le nota el pulso inquieto. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+      "1000000": "Tu millón contra el casino de su padre: Marco te observa como un jugador de ajedrez que acaba de perder la reina. Ha despejado la terraza; solo quedan dos guardaespaldas haciéndose los distraídos y un helicóptero con el motor en marcha, por si hay que salir corriendo. Levanta su copa antes que tú, con una cortesía que suena a amenaza. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»",
+      "nada": "Llegas a la terraza sin un dólar, con la ficha dorada como único patrimonio y los pies destrozados. Marco Montalbán, traje blanco y bronceado de yate, te mira de arriba abajo con desdén de niño bien. «Así que esta es la heredera que tiene a mi padre sin dormir. No tienes ni para un taxi, ¿verdad?». Aun así, te tiende una copa de champán. «Tú y yo somos hijos de hombres que se jugaron lo que no tenían. ¿Brindas conmigo, aunque sea por educación?»"
     },
-    options: [
-      { say: "Por el error, porque es nuestro y es urgente. Pausamos nuevos envíos, guardamos el registro exacto de los veinte mil contactos y reunimos a CRM, Finanzas y Legal antes de tocar los canjes.", reply: "Marco te observa con una mezcla de sorpresa y fastidio. «Pensé que ibas a culpar al sistema.» Bebe un sorbo. «Legal ya llamó. Dicen que si cancelamos los canjes, tendremos quejas públicas mañana mismo.»" },
-      { say: "Respetaría los trescientos cuarenta canjes. Aunque sea un error caro, cancelarlos ahora sería peor para la marca. Y paralelamente investigamos por qué falló el filtro.", reply: "Marco suelta una risa amarga. «Muy generosa con el dinero de mi padre. Así cualquiera tira la casa por la ventana.» Luego, más bajo: «Aunque tienes razón: un cliente enfadado en las redes cuesta más que una suite.»" },
-      { say: "Por las dos a la vez, pero con equipos distintos. Atención al Cliente gestiona los canjes; yo me ocupo del competidor. Y dentro de una hora le doy a tu padre un informe con hechos y riesgos.", reply: "Marco levanta las cejas. «Una directora que no se esconde.» Mira el horizonte. «Mi padre odia las malas noticias, pero odia más a quien se las oculta. Haces bien en ir directa.»" },
+    "options": [
+      {
+        "say": "Brindo, aunque de mi padre solo heredé preguntas y una ficha que nadie quiere cambiarme.",
+        "reply": "Marco choca su copa con la tuya, con demasiada fuerza. «Las preguntas salen carísimas en esta ciudad. Yo, en cambio, vendo respuestas al contado y sin letra pequeña»."
+      },
+      {
+        "say": "Yo no brindo con quien quiere echarme de la ciudad. Ve al grano, Marco, que se me hace tarde.",
+        "reply": "Marco deja la copa en la barandilla, casi aliviado. «Al grano, entonces. Prefiero a la gente práctica: con ella se negocia sin tanto teatro»."
+      },
+      {
+        "say": "¿Siempre ligas así, con helicóptero y amenazas veladas? Te ha quedado un poco de telenovela.",
+        "reply": "Marco se ríe, pero la risa le sale torcida. «No es una amenaza, es una invitación. Cuando amenazo, créeme, no pongo champán»."
+      }
     ],
-    line2: "Marco se acerca, demasiado. Su voz se vuelve seductora y peligrosa. «Te propongo algo. Igualemos la oferta del competidor: mitad de precio para todos los exclientes. Llenamos el hotel, mi padre ve números verdes y tú quedas como una heroína. ¿Te apuntas?»",
-    options2: [
-      { say: "No. Una guerra de descuentos no la gana nadie. Prefiero contactar a los exclientes con algo que ellos no tienen: reconocimiento, un anfitrión y una razón concreta para volver.", reply: "Marco se aparta un paso, sorprendido por la firmeza. «No te dejas tentar fácilmente.» Sonríe con desafío. «Veremos quién tiene razón cuando lleguen las cifras del mes.»" },
-      { say: "Solo para los exclientes de alto valor y entre semana. Si igualamos para todos, regalamos margen; si lo hacemos con precisión, recuperamos a quien importa sin entrar en una guerra.", reply: "Marco asiente despacio. «Con precisión... Mi padre diría que eres demasiado cauta. Yo diría que eres peligrosa.» Levanta su vaso hacia ti." },
-      { say: "Me apunto a responder, no a copiar. Antes de decidir, quiero saber cuántos de nuestros exclientes aceptaron su oferta. Si son pocos, la mejor respuesta es no hacer nada.", reply: "Marco se ríe con incredulidad. «¿No hacer nada? Esa es la respuesta más audaz que he oído esta noche.» Gira el vaso entre los dedos. «Mi padre te va a odiar... o te va a ascender.»" },
+    "line2": "Saca del bolsillo interior un sobre abultado. «Un millón de dólares, en efectivo. El helicóptero te deja en el aeropuerto en veinte minutos. A cambio, te olvidas de la ficha, del papel y de mi padre. Si hubieras tardado un año más en venir, ya no quedaría nada que reclamar».",
+    "options2": [
+      {
+        "say": "¿Un millón por un casino entero? O me tomas por tonta o estás desesperado.",
+        "reply": "A Marco se le tensa la mandíbula. «Las dos cosas pueden ser verdad a la vez. Pero no olvides que en el desierto nadie cobra cheques»."
+      },
+      {
+        "say": "Guárdatelo. Si mi padre rechazó algo parecido, no voy a ser yo quien lo acepte.",
+        "reply": "Marco palidece bajo el bronceado. «Y ya ves cómo acabó él», susurra. Luego, casi para sí: «Yo no soy mi padre. Aún no sé si eso es una suerte o una desgracia»."
+      },
+      {
+        "say": "Por mucho dinero que me ofrezcas, se nota que lo que te asusta no es perder el casino.",
+        "reply": "Marco te mira como si le hubieras arrancado la careta. «No», admite. «Lo que me asusta es que mi padre te quiera más a ti, que acabas de llegar, que a mí, que llevo treinta años aquí»."
+      }
     ],
-    end: "Marco deja el vaso en la baranda y señala una puerta de madera al fondo del pasillo. «Mi padre te espera en su oficina. Comité de inversión, a medianoche. Y te aviso: viene con las tijeras.»",
-    talk: [
-      "¿Cuál ha sido el peor error que has cometido en el trabajo y cómo lo contaste a tus superiores?",
-      "¿Eres de las personas que se esconden después de un error o de las que dan la cara enseguida? ¿Siempre ha sido así?",
-      "Marco intenta seducir a Valentina para que haga lo que él quiere: ¿te han manipulado alguna vez con encanto? ¿Cómo te diste cuenta?",
-      "¿Qué tentación profesional has rechazado y de cuál te arrepientes de no haber aprovechado?",
-      "¿Crees que los hijos de los dueños deberían heredar el poder en una empresa o ganárselo como cualquiera?",
+    "end": "El helicóptero despega sin ti y se pierde entre los neones. Marco se queda solo junto a la barandilla, con el sobre en la mano, como un niño al que nadie quiere aceptarle el regalo. Al final del pasillo, la puerta de madera del despacho del dueño está entreabierta.",
+    "talk": [
+      "¿Qué ves en Marco: un villano, un hijo herido o un poco de cada cosa?",
+      "¿Existe una cifra por la que renunciarías a conocer una verdad importante sobre tu familia?",
+      "¿Has sentido alguna vez celos de un hermano, un primo o un compañero porque parecía el favorito?",
+      "¿Qué pesa más en una herencia: el dinero, las deudas o las expectativas de los demás?",
+      "¿Por qué crees que algunas personas intentan comprar justo aquello que más miedo les da?"
     ],
-    words: ["guerra de descuentos", "exclientes", "alcance del error", "números verdes"],
+    "words": [
+      "tirar la casa por la ventana",
+      "ir al grano",
+      "al contado",
+      "arrancar la careta"
+    ]
   },
   oficina: {
-    title: "Comité de inversión",
-    line: "La oficina del dueño huele a madera antigua y a whisky de cuarenta años. Detrás de un escritorio enorme, junto a una caja fuerte de hierro, Don Aurelio Montalbán te mira por encima de sus gafas. «Siéntate, directora. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-    money: {
-      nada: "Entras en la oficina del dueño con los bolsillos vacíos. Don Aurelio Montalbán te mira por encima de sus gafas. «Sin un peso. Bien: así sabes lo que es tener que pedir. Siéntate, directora. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-      "100": "Don Aurelio Montalbán, detrás de un escritorio enorme, ve tu billete de cien y se ríe hasta toser. «Cien dólares. Con eso empecé yo en este desierto, hace cincuenta años.» Se pone serio. «Siéntate, directora. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-      "500": "Don Aurelio Montalbán te mira por encima de sus gafas mientras dejas el bolso sobre la silla. «Me han dicho que esta noche has pagado tus copas con tu dinero. Raro, pero me gusta.» Junta las manos. «Siéntate, directora. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-      "1000": "Don Aurelio Montalbán tiene en la mesa un informe de tu juego de esta noche: mil dólares, sin locuras. «Prudente con tu dinero. Espero que también con el mío.» Te mira por encima de sus gafas. «Siéntate, directora. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-      "10000": "Don Aurelio Montalbán sirve dos whiskies de cuarenta años sin preguntar: le han dicho que llevas diez mil dólares y que no los has tocado. «Quien no se gasta el dinero en mi casa o es muy lista o no se divierte.» Te mira por encima de sus gafas. «El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-      "100000": "Don Aurelio Montalbán mira tu maletín de cien mil dólares y luego a ti. «Mi directora de marketing llega con el bolsillo de una ballena. ¿Me vas a pedir crédito o me lo vas a dar?» Se ríe, ronco, y se pone serio. «Siéntate. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
-      "1000000": "Don Aurelio Montalbán mira los maletines con el millón de dólares junto a la caja fuerte de hierro y se queda pálido. «Hace veinticinco años alguien entró aquí con una fortuna y salió con otra. No me gustan las coincidencias, directora.» Respira hondo. «Siéntate. El próximo trimestre recorto un quince por ciento del presupuesto de marketing. Las visitas premium bajaron un ocho por ciento; la adquisición de jóvenes subió un veintiuno; el juego está estancado; el hotel crece; la fidelidad cae, y los competidores hacen más promociones que nunca. Tienes sesenta segundos. Dame tres prioridades.»",
+    "title": "La cuenta pendiente",
+    "line": "El despacho del dueño huele a madera encerada, a whisky viejo y a jarabe para la tos. Don Aurelio Montalbán, consumido dentro de un traje que le queda grande, espera en su silla de ruedas junto a una caja fuerte de hierro forjado. Al verte, se le humedecen los ojos. «Entras sin llamar, igual que él. Y miras como él, como si todo fuera negociable. Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+    "money": {
+      "100": "A Don Aurelio le hace gracia que traigas cien dólares y no lo disimula. «El día que empecé aquí llevaba treinta y una corbata que me habían prestado», recuerda desde su silla de ruedas, entre toses. «Tu padre llevaba todavía menos, y aun así se comió la ciudad». Señala la silla frente a él. «Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+      "500": "Traes quinientos dólares, la ficha dorada y un cansancio que no es solo de esta noche, sino de veinticinco años de preguntas. Don Aurelio, hundido en su silla de ruedas, te observa en silencio un buen rato, como si necesitara comprobar que eres real. «Tienes sus mismas manos», dice al fin. «Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+      "1000": "Sobre la mesa de Don Aurelio está tu historial de la noche: mil dólares jugados, un pleno al diecisiete y ni una copa de más. «Mis empleados me lo cuentan todo; a mi edad, es el único entretenimiento que me queda», bromea, aunque la tos le corta la risa. Luego aparta los papeles con el dorso de la mano. «Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+      "10000": "Diez mil dólares jugados esta noche y Don Aurelio conoce cada uno de ellos. «Arriesgas como él, aguantas como él y te levantas de la mesa como él: sin dar explicaciones a nadie», dice mientras se sirve un dedo de whisky con mano temblorosa. Detrás de él, la caja fuerte espera con la puerta cerrada. «Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+      "100000": "Don Aurelio ha dado orden de que te traten como a una reina: suite, chófer, crédito ilimitado. Ahora te mira desde su silla de ruedas con una mezcla incómoda de orgullo y de culpa. «Cien mil dólares. Hace veinticinco años, eso era lo que tu padre dejaba de propina en una buena noche. Luego llegó la noche mala… para mí. Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+      "1000000": "Un millón de dólares y medio Las Vegas pisándote los talones: la Familia, los casinos rivales, los periodistas. Don Aurelio se ríe hasta que la tos lo obliga a parar. «Ni tu padre, en sus mejores tiempos, consiguió poner tan nerviosa a esta ciudad. O estás muy segura de ti o estás muy loca». Sobre la mesa, una botella de whisky de treinta años espera intacta. «Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»",
+      "nada": "Entras en el despacho sin un dólar, con los zapatos en la mano y la ficha dorada apretada en el puño, como si fuera lo único que te queda. Don Aurelio, en su silla de ruedas junto a la caja fuerte, sonríe con una ternura que no esperabas. «Él también llegó así a esta ciudad: sin nada en los bolsillos y con todo en la mirada. Siéntate, Valentina: ya es medianoche y tenemos una cuenta pendiente. ¿Por dónde quieres que empiece?»"
     },
-    options: [
-      { say: "Primero, recuperar a los jugadores premium con contacto personal, no con más ofertas. Segundo, venta cruzada entre hotel y ocio, porque es lo que crece. Tercero, medir la incrementalidad de cada campaña.", reply: "Don Aurelio golpea el escritorio con un dedo, sin sonreír. «Premium, hotel y medir. Clásico, sólido.» Se inclina hacia ti. «Pero ¿qué dejas de hacer? Con un quince por ciento menos, algo tiene que morir.»" },
-      { say: "Primero, reactivar el programa de fidelidad, porque sin él no hay datos ni frecuencia. Segundo, promociones entre semana con grupo de control. Tercero, recuperar a los premium con el anfitrión.", reply: "Don Aurelio se quita las gafas y se frota los ojos. «La fidelidad, ¿eh? Tu predecesor quería eliminarla.» Te observa con atención. «Explícame por qué esto y no la adquisición de jóvenes, que es lo único que sube.»" },
-      { say: "Primero, proteger a los premium, que son el margen. Segundo, convertir a los jóvenes en clientes del hotel y del restaurante. Tercero, dejar de copiar al competidor. Lo que no se mide, se recorta.", reply: "Don Aurelio se ríe, una risa ronca que termina en tos. «Dejar de copiar al de enfrente... Mi hijo opina lo contrario.» Sirve dos vasos de whisky. «¿Y si te equivocas, directora? ¿Qué pasa si estás equivocada?»" },
+    "options": [
+      {
+        "say": "Llevo veinticinco años esperando esta conversación, así que empiece por servirme ese whisky.",
+        "reply": "Don Aurelio llena dos vasos con un pulso que tiembla más que su voz. «Tu padre tampoco tenía prisa con lo importante. Solo con las cartas»."
+      },
+      {
+        "say": "Por el final, Don Aurelio. ¿Qué le hizo usted a mi padre?",
+        "reply": "El viejo cierra los ojos un largo instante. «Lo peor que se le puede hacer a un amigo: no pagarle lo que era suyo. Y después dejar que todo el mundo creyera que el ladrón había sido él»."
+      },
+      {
+        "say": "Empiece por explicarme cómo se tiene un despacho tan bonito después de haber perdido tanto.",
+        "reply": "Don Aurelio sonríe con amargura. «Qué cruel eres, y qué razón tienes. Conservé este despacho a costa de perder lo único que no se recupera: un amigo y la conciencia tranquila»."
+      }
     ],
-    line2: "Don Aurelio empuja un vaso hacia ti y abre una carpeta con la mano temblorosa. «Te escucho. Pero ahora contéstame lo que me importa de verdad: ¿qué segmento estamos sobrevalorando y dónde estamos regalando demasiado valor?»",
-    options2: [
-      { say: "Sobrevaloramos al jugador premium que vendría de todos modos: le mandamos tres ofertas al mes y no cambian nada. Y regalamos demasiado en cortesías de bufé y bebidas a quien apenas juega. De ahí sale el quince por ciento.", reply: "Don Aurelio cierra la carpeta despacio. «De ahí sale el quince por ciento», repite. «Hace veinticinco años, un hombre se sentó en esa misma silla y me dijo algo parecido. Era Ernesto Duarte.» Te mira largamente. «Aprobado. Revisamos en noventa días.»" },
-      { say: "Sobrevaloramos al cliente de primera visita: pagamos cuatrocientos cincuenta dólares por traerlo y solo uno de cada cinco vuelve. Antes de gastar en adquisición, hay que aprender a retener.", reply: "Don Aurelio asiente, serio. «La publicidad digital... Mi hijo la adora.» Se sirve más whisky. «Tienes razón, aunque me duela. Te doy el presupuesto, pero en noventa días quiero ver a cuántos de esos jóvenes conseguiste retener.»" },
-      { say: "No sobrevaloramos un segmento: sobrevaloramos las ofertas iguales para todos. El problema no es a quién servimos, sino que tratamos igual a Doña Pilar, a la Condesa y a un turista de paso.", reply: "Don Aurelio se queda en silencio, mirando la caja fuerte. Luego sonríe por primera vez en toda la noche. «Doña Pilar y la Condesa en la misma frase. Eso es conocer esta casa.» Levanta su vaso. «Bienvenida al Meridiano, directora.»" },
+    "line2": "Gira la rueda de la caja fuerte. Dentro hay un contrato amarillento y una dirección escrita a mano. «Ernesto ganó este casino aquella noche. Yo no le pagué. Él se marchó para que ni a tu madre ni a ti les pasara nada. La ficha era suya; te la envié yo. Ahora te toca elegir: la mitad del Gran Meridiano o la verdad completa sobre dónde está tu padre».",
+    "options2": [
+      {
+        "say": "Quiero la verdad. Por muy tentadora que sea la otra mitad, el dinero ya ha roto demasiadas cosas esta noche.",
+        "reply": "Don Aurelio asiente, con los ojos brillantes. «Sabía que dirías eso. Es lo que habría dicho él. Con esta dirección empiezo a saldar lo que le debo»."
+      },
+      {
+        "say": "Me quedo con la mitad del casino. La verdad, si existe, ya la encontraré por mi cuenta.",
+        "reply": "El viejo se ríe y la risa termina en un ataque de tos. «Eres más Montalbán de lo que crees y más Duarte de lo que me temía. Bienvenida a la casa, socia»."
+      },
+      {
+        "say": "¿Y si me niego a elegir? Si de verdad quisiera reparar el daño, me daría las dos cosas.",
+        "reply": "Don Aurelio te sostiene la mirada un largo rato. «Tienes razón. Te obligo a elegir porque es lo único que todavía puedo controlar. Y porque a tu padre también lo obligaron»."
+      }
     ],
-    end: "Don Aurelio guarda la carpeta en la caja fuerte y la cierra con un golpe metálico. Afuera, el Strip sigue brillando como si nada hubiera cambiado. Pero en el Gran Meridiano, algo acaba de empezar: tu primera noche ha terminado y tu verdadero trabajo comienza mañana.",
-    talk: [
-      "Si tuvieras sesenta segundos para convencer a alguien que puede cambiar tu vida, ¿qué dirías?",
-      "¿Cómo reaccionas cuando te recortan recursos y te piden los mismos resultados? ¿Te motiva o te quema?",
-      "¿Qué tres prioridades tienes ahora en tu vida y qué estás dispuesto o dispuesta a dejar de hacer por ellas?",
-      "¿Hay alguna persona mayor en tu vida que quiera «arreglar cuentas» contigo o tú con ella antes de que sea tarde?",
-      "Después de toda esta noche, ¿qué decisión de Valentina te pareció la más difícil y qué habrías hecho tú en su lugar?",
+    "end": "Don Aurelio empuja el contrato y la dirección hacia ti y deja la decisión sobre la mesa, como quien abandona su última carta sin mirarla. Por la ventana, el Strip sigue parpadeando, ajeno a todo, como si esta noche no hubiera cambiado nada.",
+    "talk": [
+      "¿Qué habrías elegido tú: la mitad del casino o la verdad sobre Ernesto? ¿Por qué?",
+      "¿Crees que se puede perdonar a alguien que te destrozó la vida, aunque te lo pida en el último momento?",
+      "¿Hay alguna verdad familiar que preferirías no haber descubierto nunca?",
+      "Si esta fuera tu última noche, ¿de qué te arrepentirías? ¿Qué te impide arreglarlo mañana?",
+      "¿Qué dice de una persona que tarde veinticinco años en reconocer un error?"
     ],
-    words: ["comité de inversión", "recorte presupuestario", "prioridad", "regalar demasiado valor"],
+    "words": [
+      "cuenta pendiente",
+      "a costa de",
+      "saldar una deuda",
+      "por mi cuenta"
+    ]
   },
   borracho: {
-    title: "El vaquero que no quiere irse",
-    line: "Junto a la mesa de dados, dos guardias de seguridad arrastran hacia la salida a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero y la camisa abierta. Al pasar a tu lado, se agarra a tu brazo con fuerza. «¡Preciosa, sálvame! Diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí.» Uno de los guardias te mira, sin saber si soltarlo. «Directora, ¿lo conoces?» Billy aprieta más. «¡Por favor, diles que eres mi esposa!»",
-    money: {
-      nada: "Junto a la mesa de dados, dos guardias arrastran hacia la salida a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Como tú tampoco llevas un dólar ni tarjeta, uno de los guardias te mira con sospecha, como si fueras su cómplice. Billy se agarra a tu brazo. «¡Tú tampoco tienes un peso, preciosa! ¡Somos iguales! Diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí. ¡Por favor, diles que eres mi esposa!»",
-      "100": "Junto a la mesa de dados, mientras cuentas tus últimos billetes de cien, dos guardias arrastran hacia la salida a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Billy te ve contar el dinero y se agarra a tu brazo. «¡Una mujer prudente! Mi esposa ideal. Escucha, preciosa: diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí.» Uno de los guardias duda. Billy aprieta más. «¡Por favor, diles que eres mi esposa!»",
-      "500": "Junto a la mesa de dados, acabas de ganar cien dólares cuando dos guardias pasan arrastrando a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Billy se agarra a tu brazo y a tus fichas. «¡Preciosa, tienes suerte! Comparte un poco conmigo. Diles que eres mi esposa: si me echan, mi mujer de verdad se entera de que estoy aquí.» Uno de los guardias te mira, sin saber si soltarlo. Billy suplica. «¡Por favor, diles que eres mi esposa!»",
-      "1000": "Junto a la mesa de dados, dos guardias arrastran hacia la salida a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Ha perdido mil dólares en una hora, lo mismo que llevas tú en el bolso, y lo grita a los cuatro vientos. Se agarra a tu brazo. «¡Preciosa, sálvame! Diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí.» Uno de los guardias duda. Billy aprieta más. «¡Por favor, diles que eres mi esposa!»",
-      "10000": "Junto a la mesa de dados, el jefe de mesa te está ofreciendo una copa por tus diez mil dólares cuando dos guardias pasan arrastrando a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Billy se suelta un segundo y se agarra a tu brazo. «¡Preciosa, a ti te traen copas y a mí me echan por bebérmelas! Diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí. ¡Por favor, diles que eres mi esposa!»",
-      "100000": "Junto a la mesa de dados, dos guardias arrastran a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Al verte con tu anfitrión y tu maletín de cien mil dólares, los guardias se paran en seco: nadie quiere un escándalo delante de una ballena. Billy aprovecha y se agarra a tu brazo. «¡Preciosa, tú mandas aquí! Diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí. ¡Por favor, diles que eres mi esposa!»",
-      "1000000": "Junto a la mesa de dados, dos guardias arrastran a Billy, un turista de Texas borracho como una cuba, con sombrero de vaquero. Ha oído lo de tu millón de dólares y, de rodillas en la moqueta, te pide matrimonio de verdad mientras los guardias tiran de él. Medio casino graba la escena. «¡Preciosa, cásate conmigo! O al menos diles que eres mi esposa. Si me echan, mi mujer de verdad se entera de que estoy aquí. ¡Por favor, diles que eres mi esposa!»",
+    "title": "Marido por cinco minutos",
+    "line": "A dos pasos de la mesa de dados, dos guardias de seguridad remolcan hacia la salida a Billy, un tejano de bigote rubio, sombrero de vaquero y botas de avestruz, que va borracho como una cuba y canta a pleno pulmón. Al pasar junto a ti, se suelta de un tirón y se te cuelga del brazo como un koala de un eucalipto. «¡Mi vida, por fin! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+    "money": {
+      "100": "Acabas de dejarte veinte de tus cien dólares en los dados cuando dos guardias pasan remolcando a Billy, un tejano con sombrero de vaquero que apesta a whisky barato. Billy se suelta un brazo, te mete en el bolso un billete arrugado de cinco y te guiña un ojo. «¡Para que me salgas barata, cariño! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+      "500": "Con tus quinientos dólares casi enteros, observas la mesa de dados cuando pasan dos guardias llevando a rastras a Billy, un tejano de bigote rubio que canta una canción country sin acertar ni una nota. Al verte, se suelta de un tirón y se te cuelga del brazo. «¡Mi vida, por fin te encuentro! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+      "1000": "Acabas de ganar mil dólares en los dados y la mesa entera te vitorea cuando dos guardias pasan arrastrando a Billy, que ha intentado subirse al tapete para bailar con las botas puestas. Billy ve tu montón de fichas, se le ilumina la cara y se te agarra del brazo. «¡Esa es mi mujer, la que trae la suerte! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+      "10000": "El jefe de sala te escolta en persona hacia la mesa de alto límite, con diez mil dólares en fichas, cuando dos guardias se cruzan en su camino arrastrando a Billy, un tejano con la camisa empapada de cerveza. El jefe de sala se pone blanco: Billy se ha soltado y se te ha pegado al brazo como una garrapata. «¡Cariño, diles quién soy yo! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+      "100000": "Vas con tu anfitrión camino de los dados, con cien mil dólares de crédito y un camarero detrás cargando tu copa, cuando aparece Billy, arrastrado por dos guardias, gritando que tiene tres ranchos y doce pozos de petróleo. Los guardias dudan: si de verdad es tu marido, el borracho pasa a ser cliente preferente. Billy lo intuye y se te pega como una lapa. «¡Mi reina! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+      "1000000": "Con el rumor del millón, a tu alrededor se han juntado curiosos, dos guardias de escolta y un fotógrafo de una revista local. Entonces irrumpe Billy, arrastrado por otros dos guardias, berreando que él también es millonario y que lo discriminan por tejano. Se suelta, cae de rodillas delante de ti y te besa los zapatos. «¡Amor mío, sálvame! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»",
+      "nada": "Estás junto a los dados sin un dólar, viendo cómo otros se juegan la hipoteca, cuando dos guardias pasan remolcando a Billy, un tejano con sombrero de vaquero y una borrachera épica. Billy te echa un vistazo, deduce que estás tan pelada como él y le brillan los ojos. «¡Los pobres tenemos que ayudarnos entre nosotros, preciosa! ¡Diles a estos señores que soy tu marido, por lo que más quieras!»"
     },
-    options: [
-      { say: "No soy tu esposa, Billy, pero soy la directora. Que nadie lo saque a rastras delante de los clientes: llévenlo a una sala tranquila, denle agua y pídanle un taxi por cuenta de la casa.", reply: "Los guardias aflojan las manos. Billy se echa a llorar de gratitud. «¡Un ángel de Las Vegas!» El guardia más joven asiente. «Sí, directora. La última vez que sacamos a uno así, lo grabaron diez teléfonos y salió hasta en las noticias de su pueblo.»" },
-      { say: "Antes de nada, quiero saber quién le sirvió tantas copas. Si el bar siguió sirviéndole a alguien en este estado, el problema no es solo suyo: es nuestro, y legalmente también.", reply: "El guardia baja la voz. «Le sirvieron en la mesa de dados, directora. Seis whiskies en una hora, todos gratis porque estaba jugando.» Billy levanta el sombrero, orgulloso. «¡Y no pagué ni uno! ¡Este casino es el mejor del mundo!»" },
-      { say: "Cariño, ¿otra vez? Te dije que el whisky y los dados no se mezclan. Vamos, que te acompaño a la puerta y luego hablamos tú y yo.", reply: "Billy te mira con los ojos húmedos, convencido. «¡Mi mujercita! Sabía que no me fallarías.» Se deja llevar como un corderito. El guardia te susurra, divertido: «Si quiere trabajo en Seguridad, directora, la contratamos mañana.»" },
+    "options": [
+      {
+        "say": "Sí, es mi marido, por desgracia. Ni se imaginan la paciencia que hay que tenerle.",
+        "reply": "Los guardias se miran, desconcertados, y aflojan las manos. Billy se recoloca el sombrero con dignidad de sheriff. «¿Lo ven? Ella sí me entiende. Es la única mujer en el mundo que me entiende»."
+      },
+      {
+        "say": "No lo había visto en mi vida, y si de mí dependiera, no lo volvería a ver.",
+        "reply": "Billy se lleva la mano al pecho como si le hubieran disparado. «¡Traidora! ¡En mi pueblo te habrían colgado por menos!», brama, mientras los guardias lo arrastran otro metro."
+      },
+      {
+        "say": "Depende. ¿Cuánto pagas por una esposa de alquiler durante cinco minutos?",
+        "reply": "Billy se ríe tanto que se le cae el sombrero. «¡Esta sí sabe hacer negocios! ¡Cincuenta dólares y mis botas! No, las botas no, que son de avestruz auténtico»."
+      }
     ],
-    line2: "Mientras Billy se sienta en un banco con su vaso de agua, el jefe de seguridad se acerca con el teléfono en la mano. «Directora, alguien lo ha grabado y ya está en las redes: “Casino del Strip echa a un vaquero borracho”. Lleva treinta mil visitas en veinte minutos. ¿Qué hacemos con el vídeo y con él?»",
-    options2: [
-      { say: "Con el vídeo, nada por ahora: si respondemos, lo hacemos más grande. Con Billy, mucho: mañana, ya sobrio, le llamamos, le preguntamos cómo lo tratamos y le invitamos a desayunar.", reply: "El jefe de seguridad sonríe a medias. «Si mañana el propio Billy publica que lo trataron bien, el vídeo cambia de sentido.» Billy, desde el banco, levanta el sombrero: «¡Yo hablo bien de ustedes en todo Texas!»" },
-      { say: "Respondemos hoy, con un mensaje breve y humano: el cliente está bien, lo cuidamos y volvió a su hotel en taxi. El silencio, en redes, se lee como culpa.", reply: "El jefe de seguridad toma nota. «Breve y humano. Nada de comunicados de abogados.» Diez minutos después, el comentario más votado bajo el vídeo dice: «Al menos le pagaron el taxi. En mi casino, te tiran a la acera.»" },
-      { say: "Lo importante no es el vídeo, sino que no vuelva a pasar. Quiero revisar mañana la regla de bebidas gratis en las mesas: nadie debería recibir seis whiskies en una hora.", reply: "El jefe de seguridad asiente con alivio. «Llevamos años pidiendo eso. Los camareros sirven a quien juega, y a los borrachos no les falta nunca la copa.» Billy, al fondo, pide otro whisky al aire. Nadie se lo trae." },
+    "line2": "Uno de los guardias, un gigante con ojeras de no haber dormido desde el año pasado, se cruza de brazos. «Señorita, este caballero ha vomitado en la mesa de dados, ha llamado ladrón al crupier y le ha pedido matrimonio a una tragamonedas. ¿Seguro que quiere responsabilizarse de él?»",
+    "options2": [
+      {
+        "say": "Qué remedio. Lo prometí ante el altar: en la salud y en la borrachera.",
+        "reply": "El guardia resopla y suelta a Billy. «Usted sabrá. Pero como vuelva a acercarse a una mesa, se van los dos a la calle». Billy intenta guiñarte un ojo y se le cierran los dos."
+      },
+      {
+        "say": "Llévenselo, pero con delicadeza, que mañana va a tener una resaca de época.",
+        "reply": "El guardia casi sonríe. «Con delicadeza, señorita. Lo meteremos en un taxi con el sombrero puesto». Mientras se lo llevan, Billy te lanza un beso torpe: «¡Te espero en Texas, mi vida!»"
+      },
+      {
+        "say": "¿A una tragamonedas? Hombre, por lo menos tiene ambición.",
+        "reply": "El gigante se ríe a su pesar. «La máquina lo rechazó, señorita. Por eso se puso a vomitar». Billy asiente, ofendidísimo: «Fue muy cruel conmigo, muy cruel»."
+      }
     ],
-    end: "Un taxi se lleva a Billy, que te saluda con el sombrero por la ventanilla. «¡Te quiero, esposa!», grita. Desde los tragamonedas llega un estruendo de sirenas y luces: alguien acaba de ganar algo gordo.",
-    talk: [
-      "¿Cuál es la noche en la que más te has pasado bebiendo? ¿Qué hiciste que hoy te da vergüenza o risa?",
-      "¿Mentirías para ayudar a un desconocido en apuros, como Billy? ¿Dónde está tu límite?",
-      "¿Quién crees que es responsable cuando alguien se emborracha en un bar: el cliente, el camarero o la empresa que regala las copas?",
-      "¿Te han grabado alguna vez en un mal momento o has grabado tú a alguien? ¿Qué piensas de esa costumbre?",
-      "En tu trabajo, ¿cómo se trata a un cliente que se pasa de la raya? ¿Te parece justo o habría que hacerlo de otra manera?",
+    "end": "Billy se pierde entre uniformes y humo, cantando una ranchera desafinada. A ti te queda olor a whisky en la manga y la sospecha de que, en esta ciudad, los matrimonios más largos duran lo que dura una canción.",
+    "talk": [
+      "¿Te ha tocado alguna vez cuidar de alguien borracho en una noche que prometía ser divertida? ¿Cómo acabó?",
+      "¿Mentirías por un desconocido para sacarlo de un apuro? ¿Dónde pondrías el límite?",
+      "¿Por qué crees que el alcohol vuelve a unas personas agresivas y a otras, cariñosísimas?",
+      "¿Qué es lo más vergonzoso que has hecho, o has visto hacer, con unas copas de más?",
+      "¿No te parece contradictorio que la sociedad se burle de los borrachos y a la vez celebre tanto la bebida?"
     ],
-    words: ["borracho como una cuba", "servicio responsable de alcohol", "responsabilidad legal", "pasarse de la raya"],
+    "words": [
+      "borracho como una cuba",
+      "pegarse como una lapa",
+      "qué remedio",
+      "resaca de época"
+    ]
   },
   jackpot: {
-    title: "La abuela del jackpot",
-    line: "En el pasillo de tragamonedas estallan las sirenas y las luces giran como en una ambulancia de fiesta. Yolanda, una abuela de Ohio en chándal morado, salta sobre el taburete: acaba de ganar un jackpot de ochocientos cuarenta y siete mil dólares. Medio pasillo aplaude, un empleado de Comunicación ya trae un cheque gigante y ella te agarra de las manos. «¡Abrázame, cariño, que me da algo! Llevo cuarenta años jugando… Pero dime una cosa, tú que pareces lista: ¿se lo cuento a mis hijos?»",
-    money: {
-      nada: "En el pasillo de tragamonedas estallan las sirenas: Yolanda, una abuela de Ohio en chándal morado, acaba de ganar un jackpot de ochocientos cuarenta y siete mil dólares. Tú no tienes ni una moneda, y ella lo ve. «¡Ay, cariño, con esa cara de no tener nada! Yo hace cuarenta años estaba igual.» Te mete un billete de cien en el bolsillo y te agarra de las manos. «¡Abrázame, que me da algo! Pero dime una cosa, tú que pareces lista: ¿se lo cuento a mis hijos?»",
-      "100": "Estás jugando tus últimos veinte dólares en la máquina de al lado cuando estallan las sirenas: Yolanda, una abuela de Ohio en chándal morado, acaba de ganar un jackpot de ochocientos cuarenta y siete mil dólares. «¡Vecina, vecina! ¡La tuya pagaba poco, la mía, todo!» Te agarra de las manos, llorando de risa. «¡Abrázame, cariño, que me da algo! Llevo cuarenta años jugando… Pero dime una cosa, tú que pareces lista: ¿se lo cuento a mis hijos?»",
-      "500": "Estás disfrutando de una noche tranquila con tus quinientos dólares cuando estallan las sirenas: Yolanda, una abuela de Ohio en chándal morado, ha ganado un jackpot de ochocientos cuarenta y siete mil dólares. Un empleado de Comunicación ya trae un cheque gigante. Yolanda te agarra de las manos. «¡Abrázame, cariño, que me da algo! Llevo cuarenta años jugando… Pero dime una cosa, tú que pareces lista: ¿se lo cuento a mis hijos?»",
-      "1000": "Acabas de perder doscientos de tus mil dólares en una máquina cuando la de al lado estalla en sirenas: Yolanda, una abuela de Ohio en chándal morado, ha ganado un jackpot de ochocientos cuarenta y siete mil dólares. «¡Te robé la suerte, cariño! ¡Perdóname!» Te agarra de las manos, entre risas y lágrimas. «¡Abrázame, que me da algo! Llevo cuarenta años jugando… Pero dime una cosa, tú que pareces lista: ¿se lo cuento a mis hijos?»",
-      "10000": "Las sirenas estallan justo cuando un anfitrión te ofrecía una cena por tus diez mil dólares: Yolanda, una abuela de Ohio en chándal morado, acaba de ganar un jackpot de ochocientos cuarenta y siete mil. El anfitrión te deja plantada y corre hacia ella. Yolanda lo esquiva y te agarra de las manos a ti. «¡Abrázame, cariño, que me da algo! Ahora todos me quieren… Pero dime una cosa, tú que pareces lista: ¿se lo cuento a mis hijos?»",
-      "100000": "Las sirenas estallan: Yolanda, una abuela de Ohio en chándal morado, ha ganado un jackpot de ochocientos cuarenta y siete mil dólares. Al verte con tu maletín de cien mil y tu anfitrión, se te acerca muy seria. «Tú tienes pinta de saber qué hacer con mucho dinero, cariño.» Luego se le escapa la risa y te agarra de las manos. «¡Abrázame, que me da algo! Llevo cuarenta años jugando… Pero dime una cosa: ¿se lo cuento a mis hijos?»",
-      "1000000": "Las sirenas estallan y medio pasillo grita: Yolanda, una abuela de Ohio en chándal morado, ha ganado ochocientos cuarenta y siete mil dólares. Cuando se entera de que tú llevas un millón en efectivo, se ríe hasta toser. «¡Y yo que me sentía rica! Tú eres más rica que yo, cariño, pero yo estoy más contenta.» Te agarra de las manos. «¡Abrázame, que me da algo! Pero dime una cosa, tú que sabes de dinero: ¿se lo cuento a mis hijos?»",
+    "title": "Novecientos mil y un chándal",
+    "line": "De pronto, el pasillo de las tragamonedas se vuelve loco: sirenas, luces giratorias, una música de feria a todo volumen. La máquina de al lado acaba de soltar el jackpot. Yolanda, una abuela de Ohio en chándal rosa chicle, salta, chilla y menea las caderas como si tuviera veinte años. Te agarra por los hombros y te planta dos besos sonoros. «¡Novecientos mil dólares, cielo! ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+    "money": {
+      "100": "Llevas una hora viendo cómo tus cien dólares desaparecen de veinticinco en veinticinco centavos cuando, a tu lado, estalla la fiesta: Yolanda, abuela de Ohio en chándal rosa, ha ganado el jackpot apostando dos dólares. Te sujeta la cara con las dos manos. «¡Dos dólares, cielo, dos! ¡Novecientos mil! ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+      "500": "A mitad de tu noche de quinientos dólares, sin ganar ni perder demasiado, la máquina de al lado se pone a aullar: luces, sirenas, una lluvia de confeti en la pantalla. Yolanda, una abuela de Ohio en chándal rosa chicle, baila como si estuviera en la boda de su nieta. «¡Novecientos mil dólares, hija mía! ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+      "1000": "Acabas de dejarte mil dólares en la ruleta y vagas entre las tragamonedas con cara de funeral cuando el jackpot estalla a tu lado. Yolanda, una abuela de Ohio en chándal rosa, ve tu expresión y se parte de risa. «¡Quita esa cara de entierro, que la suerte se contagia! ¡Novecientos mil! ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+      "10000": "Un encargado te acompaña a las máquinas de alto límite con tus diez mil dólares cuando todo el pasillo se ilumina: Yolanda, abuela de Ohio en chándal rosa, ha ganado el jackpot en una máquina de un dólar. El encargado te deja plantada para correr hacia ella con los formularios de impuestos. Yolanda lo esquiva con un quiebro de futbolista y viene directa a ti. «¡Novecientos mil! ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+      "100000": "Tu anfitrión te está explicando las ventajas de tu nuevo nivel en el programa de fidelización cuando las sirenas lo dejan con la palabra en la boca: Yolanda, una abuela de Ohio en chándal rosa, ha ganado el jackpot. Ve tus joyas, tu séquito y tu cara de aburrimiento. «¡Tú, la de las joyas! ¿Sabes lo que es ganar algo de verdad? ¡Novecientos mil! ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+      "1000000": "Todo el casino hablaba de tu millón hasta que la máquina de al lado te roba el protagonismo: sirenas, luces, campanas. Yolanda, una abuela de Ohio en chándal rosa, acaba de llevarse el jackpot y, de repente, la reina de la noche es ella. Te ve y suelta una carcajada. «¡Ya somos dos millonarias, cielo! Bueno, casi. ¡Ven aquí, abrázame y dime que no estoy soñando!»",
+      "nada": "Te has sentado ante una tragamonedas sin dinero, solo para que descansen los pies, cuando la máquina de al lado revienta en sirenas y luces. Yolanda, una abuela de Ohio en chándal rosa chicle, acaba de llevarse el jackpot y te mira como si fueras una aparición. «¡Tú no tienes ni para un café, se te nota a la legua! ¡Pues esta noche pago yo! ¡Ven aquí, abrázame y dime que no estoy soñando!»"
     },
-    options: [
-      { say: "¡Enhorabuena, Yolanda! Pero escucha: ni una palabra a nadie hasta que hables con un asesor. Primero los impuestos y el banco; los hijos, después. El dinero cambia a la gente muy rápido.", reply: "Yolanda deja de saltar y te mira con unos ojos muy despiertos. «Mi hermana ganó la lotería y en un año no le quedaba ni un sobrino que la llamara por su cumpleaños.» Te abraza fuerte. «Tienes razón. Esta noche, la boca cerrada.»" },
-      { say: "Cuéntaselo, pero tú decides cuánto. No hace falta decir la cifra exacta: di que has ganado «un buen premio» y observa quién se alegra por ti y quién empieza a hacer cuentas.", reply: "Yolanda se ríe a carcajadas. «¡Un buen premio! Mi hijo mayor me pedirá un auto antes de colgar. La pequeña me preguntará si estoy bien.» Se seca una lágrima. «Ya sé a quién le voy a dejar la casa.»" },
-      { say: "Primero celebramos: champán para todo el pasillo y un baile contigo. Mañana, con resaca y café, decides lo de tus hijos. Esta noche es solo tuya.", reply: "Yolanda grita de alegría y te arrastra a bailar entre las máquinas. «¡Eso, cariño! Cuarenta años cuidando a todo el mundo y por fin una noche para mí.» Las señoras de las máquinas cercanas se unen al baile, flipando." },
+    "options": [
+      {
+        "say": "¡No está soñando, campeona! Esto hay que celebrarlo a lo grande, y hasta que amanezca.",
+        "reply": "Yolanda te abraza tan fuerte que te cruje la espalda. «¡Champán para todo el pasillo!», le grita a una camarera. «¡Invita la abuela!»"
+      },
+      {
+        "say": "¡Qué pasada! Pero, antes de celebrarlo, guarde bien el comprobante, que aquí hay mucho listo.",
+        "reply": "Yolanda se mete el papel en el sujetador con una agilidad sorprendente. «Ahí no ha metido nadie la mano desde que enviudé, cielo. Está más seguro que en un banco suizo»."
+      },
+      {
+        "say": "¿Y en qué se lo va a gastar? Dígame que en algo muy loco, por favor.",
+        "reply": "Yolanda se pone seria un instante. «En un crucero por el Caribe con un bailarín cubano. O en unos dientes nuevos. Aún no lo tengo claro»."
+      }
     ],
-    line2: "Damián, el joven de Comunicación, se acerca con el cheque gigante y el teléfono preparado. «Directora, esto es oro: “Abuela de Ohio gana casi un millón en el Meridiano”. Si publicamos su cara, su nombre y la cifra esta noche, mañana tenemos la fila llena. ¿Publicamos?»",
-    options2: [
-      { say: "Solo si ella firma su consentimiento y entiende lo que significa. Si dice que sí, foto con el cheque; si dice que no, contamos la historia sin cara ni nombre.", reply: "Yolanda mira el cheque gigante y luego a ti. «¿Mi cara en internet? Mis vecinas se morirían de envidia.» Sonríe, pícara. «Pero sin el nombre, que mi cuñado me encuentra.» Damián asiente, algo decepcionado." },
-      { say: "Publicamos el momento, pero sin la cifra. La cifra exacta atrae justo a quien no debería venir: el que juega para recuperar lo que ha perdido. La emoción vende igual.", reply: "Damián frunce el ceño. «Sin la cifra pierde fuerza…» Yolanda le quita el teléfono con una sonrisa. «Hijo, publica que una abuela bailó en tu casino hasta las tres. Eso sí que no lo ha visto nadie.»" },
-      { say: "Esta noche no publicamos nada. Ella acaba de ganar casi un millón y está en estado de shock; si mañana quiere salir en la foto, la hacemos con calma y con su familia.", reply: "Damián baja el teléfono, contrariado. «Mañana ya no es noticia, directora.» Yolanda te aprieta la mano. «Pero mañana yo estaré peinada, cariño. Y mi nieta, que es la que sabe de redes, me dirá qué pongo.»" },
+    "line2": "De repente, Yolanda deja de bailar y se le empañan las gafas. «Tengo tres hijos. No me llaman ni por mi cumpleaños. Si se enteran de esto, van a venir corriendo con sus deudas, sus parejas y sus besos de pega. ¿Se lo cuento, cielo? ¿Tú qué harías en mi lugar?»",
+    "options2": [
+      {
+        "say": "Yo no les diría ni una palabra. Que la visiten por usted, no por el jackpot.",
+        "reply": "Yolanda asiente despacio. «Tienes razón. Si vienen sin saberlo, sabré quién me quiere. Y si no viene ninguno, me lo gasto todo en el crucero y en el cubano»."
+      },
+      {
+        "say": "Cuénteselo, pero que se lo ganen: una visita, una comida, una disculpa sincera.",
+        "reply": "Yolanda se ríe con picardía. «¡Una disculpa por cada cien mil! Me encanta. El mayor me debe por lo menos tres»."
+      },
+      {
+        "say": "Cuénteselo todo. Puede que el dinero no compre cariño, pero quizá les refresque la memoria.",
+        "reply": "Yolanda suelta una carcajada amarga. «Qué mala eres, y qué razón tienes. Bueno, los llamo. Pero el cubano me lo quedo de todas formas»."
+      }
     ],
-    end: "Un supervisor llega con los formularios de impuestos y Yolanda firma con la mano temblorosa. Antes de irse, te regala una ficha de su vaso «para la suerte». Al fondo, junto al blackjack, se oye un forcejeo: seguridad acaba de esposar a alguien.",
-    talk: [
-      "Si ganaras casi un millón de dólares esta noche, ¿a quién se lo contarías primero y a quién no se lo dirías nunca?",
-      "¿Crees que el dinero cambia a las personas o solo muestra cómo eran de verdad? ¿Conoces algún caso?",
-      "¿Has sentido alguna vez envidia de la suerte de otra persona? ¿Cómo la gestionaste?",
-      "¿Qué le dirías a una persona de setenta años que quiere gastarse todo en ella misma en lugar de dejárselo a sus hijos?",
-      "En tu trabajo, ¿hasta dónde está bien usar la historia de un cliente para hacer publicidad? ¿Dónde empieza a ser aprovecharse?",
+    "end": "Yolanda se aleja entre empleados con formularios y curiosos con el móvil en alto, bailando con su chándal rosa. Te deja una marca de pintalabios en la mejilla y la impresión de haber visto algo rarísimo en Las Vegas: alguien que le gana a la casa y no piensa devolvérselo.",
+    "talk": [
+      "Si mañana ganaras una fortuna, ¿a quién se lo contarías primero y a quién no se lo dirías jamás?",
+      "¿Crees que el dinero cambia a las personas o simplemente saca a la luz lo que ya eran?",
+      "¿Has tenido la sensación de que alguien te quería por interés? ¿Cómo te diste cuenta?",
+      "Si te tocara una fortuna, ¿cumplirías un sueño disparatado, ayudarías a tu familia o desaparecerías del mapa?",
+      "¿Qué dice de una familia que solo se reúna cuando hay herencias o entierros de por medio?"
     ],
-    words: ["jackpot", "consentimiento", "privacidad", "retención de impuestos"],
+    "words": [
+      "¡qué pasada!",
+      "a la legua",
+      "dejar con la palabra en la boca",
+      "por interés"
+    ]
   },
   tramposo: {
-    title: "La peluca de Gus",
-    line: "Junto al blackjack, dos guardias acaban de esposar a Gus, un hombre flaco con una peluca rubia torcida y unas gafas con una diminuta cámara escondida en la montura. No contaba cartas: grababa las manos del crupier. Mientras lo llevan, pasa a tu lado y te susurra rápido. «Directora, te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-    money: {
-      nada: "Junto al blackjack, dos guardias esposan a Gus, un hombre flaco con una peluca rubia torcida y unas gafas con una cámara diminuta en la montura. Al verte sin bolso ni fichas, te confunde con una compañera de oficio. «¿Tú también te has quedado sin nada? Escucha, directora, te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-      "100": "Estás jugando una mano de diez dólares cuando dos guardias esposan a Gus, el hombre de al lado, con su peluca rubia torcida y unas gafas con una cámara diminuta en la montura. No contaba cartas: grababa al crupier. Mientras lo levantan, te susurra rápido. «Directora, te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-      "500": "Acabas de ganar dos manos seguidas con tus quinientos dólares cuando dos guardias esposan a Gus, un hombre flaco con una peluca rubia torcida y unas gafas con una cámara escondida. Uno de los guardias te mira de reojo por tu buena racha. Gus, mientras lo llevan, te susurra rápido. «Directora, te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-      "1000": "Juegas cien dólares por mano y el jefe de sala te vigila de cerca. De pronto, dos guardias esposan a Gus, tu vecino de mesa, con su peluca rubia torcida y unas gafas con una cámara diminuta en la montura. «Mira qué rápido pasan de vigilarte a esposarte, directora», susurra mientras lo levantan. «Te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-      "10000": "Con tus diez mil dólares te han cambiado a una mesa con crupier propio, justo al lado de donde dos guardias esposan a Gus, un hombre flaco con una peluca rubia torcida y unas gafas con una cámara escondida. Al pasar, te susurra rápido. «Directora, a ti te ponen alfombra y a mí esposas, y jugamos al mismo juego. Te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-      "100000": "Con tus cien mil dólares, el jefe de sala te ha prometido que nadie te molestará esta noche. Pero dos guardias esposan delante de ti a Gus, un hombre flaco con una peluca rubia torcida y gafas con una cámara diminuta. El jefe de sala se pone pálido. Gus aprovecha y te susurra rápido. «Directora, te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
-      "1000000": "Desde que corrió lo de tu millón de dólares, Seguridad te sigue a dos metros. Esos mismos guardias esposan ahora a Gus, un hombre flaco con una peluca rubia torcida y unas gafas con una cámara escondida, que llevaba media hora mirando tu maletín. Mientras lo llevan, te susurra rápido. «No iba a por ti, directora, lo juro. Te reconozco de la foto del periódico. He dejado una ficha de cinco mil dólares pegada debajo de la mesa siete. Es para la operación de mi hija. Llévasela, por favor. ¿Me haces ese favor?»",
+    "title": "La cisterna del último cubículo",
+    "line": "Detrás de las mesas de blackjack, dos guardias acaban de ponerle las esposas a Gus, un contador de cartas con una peluca pelirroja que se le ha resbalado hasta la oreja. Mientras lo empujan hacia la puerta de seguridad, se las arregla para rozarte el hombro y hablarte sin mover los labios, como un ventrílocuo. «Rubia, no me mires y escucha. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+    "money": {
+      "100": "Acabas de perder la mitad de tus cien dólares en una mesa de mínimo bajo cuando seguridad esposa a Gus, el de la peluca pelirroja, que jugaba a tu lado. Mientras se lo llevan, te susurra: «Nunca pidas carta con doce si el crupier enseña un seis, rubia; ese consejo te lo regalo. Y ahora, lo importante. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+      "500": "Llevas quinientos dólares y una racha más que decente en el blackjack, en parte gracias a los consejos que te soltaba en voz baja Gus, el de la peluca pelirroja. Ahora dos guardias lo esposan delante de ti. Al pasar, te habla sin mover los labios. «Bien jugado, rubia, pero ahora viene lo difícil. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+      "1000": "Has ganado mil dólares siguiendo las señas discretas de Gus, el de la peluca pelirroja, y ahora dos guardias lo esposan delante de ti. El jefe de mesa te mira de reojo: ¿cómplice o simplemente afortunada? Gus te dedica una sonrisa de una desfachatez admirable. «Tú no sabes nada de nada, ¿verdad, rubia? Mejor. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+      "10000": "Diez mil dólares en la mesa de alto límite y, a tu lado, Gus, el de la peluca pelirroja, contando cartas con la precisión de un reloj atómico. Hasta que dos guardias lo esposan sin miramientos. El jefe de sala se deshace en disculpas contigo mientras Gus, al pasar, te susurra: «Ni me mires, que te graban. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+      "100000": "Gus, el de la peluca pelirroja, se había pasado toda la noche en tu mesa privada de cien mil, contando cartas a la sombra de una ballena. Ahora dos guardias lo esposan y tu anfitrión jura por su madre que no volverá a pasar. Gus finge un tropiezo para acercarse a tu oído. «A una ballena nadie la registra, rubia. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+      "1000000": "Con tu millón sobre la mesa, la seguridad del casino está tan paranoica que esposa a cualquiera que respire raro, y le toca a Gus, el de la peluca pelirroja, que, para ser justos, sí contaba cartas. Mientras lo sacan entre flashes y curiosos, te guiña un ojo. «Con todo el mundo pendiente de ti, nadie se fija en mí. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»",
+      "nada": "Estás junto al blackjack sin un dólar, mirando cómo juegan los demás, cuando dos guardias esposan a Gus, el de la peluca pelirroja ladeada. Al pasar, te calibra de un vistazo y sonríe. «Tú estás más tiesa que yo, rubia. Perfecto: tú necesitas dinero y yo necesito unas manos limpias. He escondido una cosa en el baño de señoras, en la cisterna del último cubículo. ¿Me harías un favor?»"
     },
-    options: [
-      { say: "No voy a tocar esa ficha, Gus. Si está debajo de la mesa, es una prueba, y se lo diré a seguridad. Lo que sí haré es asegurarme de que alguien llame a tu hija esta noche.", reply: "Gus cierra los ojos un segundo. «Al menos eres honesta. Los demás me habrían dicho que sí y se habrían quedado la ficha.» Un guardia ya se agacha bajo la mesa siete. «Directora», dice, «aquí hay tres fichas, no una.»" },
-      { say: "Te propongo un trato: cuéntale a seguridad cómo funcionan esas gafas y quién más las usa. Si nos ayudas a proteger las mesas, hablaré bien de ti y preguntaré por la ficha.", reply: "Gus sonríe con los labios partidos. «Una directora que negocia con un tramposo. Me caes bien.» Mira al guardia. «Hay cuatro más como yo en el Strip esta noche. Dos de ellos aquí.» El guardia saca la radio, de repente muy interesado." },
-      { say: "¿Con esa peluca querías pasar desapercibido, Gus? Lo de la ficha lo veremos, pero primero dime una cosa: ¿lo de tu hija es verdad o es otro truco?", reply: "Gus se ríe a pesar de las esposas. «La peluca era de mi exmujer, ¡qué quieres!» Luego se pone serio. «Lo de mi hija es verdad. Por eso me arriesgué.» Los guardias se miran entre ellos: ya no tiran de él tan fuerte." },
+    "options": [
+      {
+        "say": "Depende del favor y de lo que me toque a mí, guapo. Yo no trabajo gratis.",
+        "reply": "Gus sonríe a pesar de las esposas. «Un veinticinco por ciento y mi gratitud eterna, que no vale mucho pero no caduca»."
+      },
+      {
+        "say": "Ni loca. Yo no me meto en los líos de un hombre con peluca.",
+        "reply": "«Ya estás metida, rubia», susurra Gus. «Las cámaras te han visto hablar conmigo. Así que, o me ayudas a mí, o te ayudas a ti misma»."
+      },
+      {
+        "say": "¿Qué hay en esa cisterna? ¿Dinero, fichas o algo que me va a quitar el sueño?",
+        "reply": "Gus se ríe por la nariz. «Un cuaderno con los números de teléfono y las deudas de media planta VIP. Si cae en malas manos, rueda más de una cabeza»."
+      }
     ],
-    line2: "Hilda, la jefa de sala, se acerca mientras se llevan a Gus. «Directora, después de esto Seguridad quiere más cámaras, barajadoras automáticas en todas las mesas y vigilar a cualquiera que gane cinco manos seguidas. Pero los buenos clientes ya se quejan de sentirse sospechosos. ¿Hasta dónde llegamos?»",
-    options2: [
-      { say: "Hasta donde dicte el riesgo real. Quiero saber cuánto perdimos por trampas este año y cuánto podríamos perder en clientes que se sienten vigilados. Con esas dos cifras, decidimos.", reply: "Hilda asiente despacio. «Por trampas, unos trescientos mil. Por clientes molestos… nadie lo ha medido.» Se cruza de brazos. «Si lo medimos, quizás descubramos que la paranoia nos cuesta más que los tramposos.»" },
-      { say: "Más tecnología, sí, pero invisible. Que el cliente honesto no note nada: cámaras discretas y crupieres formados, no guardias encima de quien gana. Ganar no puede parecer un delito.", reply: "Hilda sonríe por primera vez. «Ganar no es un delito. Eso lo voy a poner en la sala de descanso.» Mira la mesa siete. «Aunque te aviso: los tramposos también saben que la tecnología es invisible.»" },
-      { say: "Lo que no haría es vigilar a quien gana cinco manos seguidas. Eso es justo lo que espanta a los jugadores buenos. Prefiero centrarme en dispositivos y en conductas, no en la suerte.", reply: "Hilda tamborilea los dedos sobre la mesa. «Seguridad va a protestar.» Luego se encoge de hombros. «Pero tienes razón: la semana pasada echamos a un dentista de Phoenix por tener una buena racha. Nunca volvió, y gastaba cincuenta mil al año.»" },
+    "line2": "Los guardias se detienen un momento ante la puerta de seguridad para pasar la tarjeta. Gus aprovecha para soltarlo todo de golpe: «Escucha: lo sacas de ahí y se lo das a mi hermana, la que sirve copas en el bar central. Ella sabrá qué hacer. Ojalá no tuviera que pedírselo a una desconocida, pero no me queda nadie más. ¿Me lo prometes o me dejas tirado como todos?»",
+    "options2": [
+      {
+        "say": "Te lo prometo. Pero si me pillan, diré que la idea fue tuya y que me amenazaste con la peluca.",
+        "reply": "Gus suelta una carcajada mientras lo empujan. «¡Hecho! Y quédatela si quieres, rubia; a ti te sentará mejor que a mí»."
+      },
+      {
+        "say": "No te lo prometo. Le diré a tu hermana dónde está, y que decida ella si se la juega.",
+        "reply": "Gus hace una mueca, pero asiente. «Me parece justo. Ella siempre decía que yo acabaría así. Dile que tenía razón; le va a hacer una ilusión tremenda»."
+      },
+      {
+        "say": "Primero dime una cosa: ¿en ese cuaderno aparece el apellido Duarte?",
+        "reply": "Gus se pone serio de golpe. «Aparece, sí. Subrayado dos veces. Pero esa información te la cobro aparte, rubia». La puerta de seguridad se cierra tras él antes de que puedas preguntar nada más."
+      }
     ],
-    end: "Se llevan a Gus por una puerta lateral y, antes de desaparecer, te guiña un ojo. Junto a la ruleta, un hombre de traje caro está sentado en el suelo, con la cabeza entre las manos.",
-    talk: [
-      "¿Te parece peor hacer trampa por ambición o por necesidad, como dice Gus? ¿Cambia algo el motivo?",
-      "¿Has hecho alguna vez trampa en un examen, en un juego o en el trabajo? ¿Te pillaron?",
-      "¿Te has sentido alguna vez tratado o tratada como sospechoso sin haber hecho nada? ¿Cómo reaccionaste?",
-      "Si un desconocido te pidiera un favor arriesgado por su hija enferma, ¿qué harías? ¿Le creerías?",
-      "En tu empresa, ¿cómo se equilibra el control y la confianza con los clientes o con los empleados?",
+    "end": "La puerta de seguridad se cierra con un golpe metálico. En la moqueta queda un mechón de peluca pelirroja, como un animalillo atropellado. El baño de señoras está a veinte pasos, y la decisión es solo tuya.",
+    "talk": [
+      "¿Harías un favor arriesgado a un desconocido? ¿Qué tendría que pasar para que dijeras que sí?",
+      "¿Hay alguna trampa que te parezca aceptable, en el juego, en los impuestos o en el amor?",
+      "¿Te han pillado alguna vez haciendo algo que no debías? ¿Qué sentiste: vergüenza, rabia o alivio?",
+      "¿Por qué crees que en el cine los tramposos simpáticos nos caen mejor que los honrados aburridos?",
+      "¿Recuerdas alguna ocasión en la que miraste hacia otro lado cuando alguien necesitaba ayuda? ¿Cómo lo ves hoy?"
     ],
-    words: ["protección del juego", "barajadora automática", "experiencia del cliente", "pillar a alguien"],
+    "words": [
+      "dejar tirado a alguien",
+      "estar tieso",
+      "sin miramientos",
+      "ni loca"
+    ]
   },
   perdedor: {
-    title: "El hombre del reloj",
-    line: "Al lado de la ruleta, sentado en la moqueta con la espalda contra una columna, Andrés llora en silencio. Traje caro, corbata deshecha, ni una ficha. Esta noche lo ha perdido todo, incluido el dinero de la boda de su hija. Cuando pasas, se quita el reloj y te lo tiende con la mano temblorosa. «Señorita, por favor. Es un reloj suizo, vale veinte mil dólares. Te lo dejo por doscientos. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-    money: {
-      nada: "Al lado de la ruleta, sentado en la moqueta, Andrés llora en silencio. Traje caro, corbata deshecha, ni una ficha: lo ha perdido todo, incluido el dinero de la boda de su hija. Te sientas a su lado porque tú tampoco tienes un peso esta noche. Él se ríe, amargo. «Dos arruinados en el suelo del casino más bonito del Strip.» Se quita el reloj. «Es suizo, vale veinte mil. Si consigues doscientos, te lo dejo por eso. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-      "100": "Al lado de la ruleta, sentado en la moqueta, Andrés llora en silencio, con el traje caro arrugado: lo ha perdido todo esta noche, incluido el dinero de la boda de su hija. Te ve sacar tu billete de cien para una ficha y se levanta de golpe. «Señorita, por favor. Es un reloj suizo, vale veinte mil dólares. Te lo dejo por doscientos… o por cien, por lo que tengas. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-      "500": "Al lado de la ruleta, Andrés, sentado en la moqueta, llora en silencio: traje caro, corbata deshecha, ni una ficha. Lo ha perdido todo, incluido el dinero de la boda de su hija. Te ha visto jugar tranquila con tus quinientos dólares y se acerca a gatas. «Tú sabes parar, se te nota. Yo no.» Te tiende el reloj. «Es suizo, vale veinte mil dólares. Te lo dejo por doscientos. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-      "1000": "Al lado de la ruleta, Andrés llora en silencio, sentado en la moqueta: traje caro, ni una ficha. Esta noche lo ha perdido todo, incluido el dinero de la boda de su hija. Empezó, te cuenta, con mil dólares, como tú. «Mil dólares, directora. Luego fueron diez mil, luego ochenta.» Se quita el reloj. «Es suizo, vale veinte mil dólares. Te lo dejo por doscientos. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-      "10000": "Al lado de la ruleta, Andrés llora sentado en la moqueta. Hace tres horas era como tú: le traían copas, el jefe de mesa lo llamaba por su nombre. Ahora, sin una ficha y sin el dinero de la boda de su hija, nadie lo mira. Ve tus diez mil dólares y se le iluminan los ojos. «Es un reloj suizo, vale veinte mil dólares. Te lo dejo por doscientos, aunque podrías darme más. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-      "100000": "Al lado de la ruleta, sentado en la moqueta, Andrés llora en silencio: lo ha perdido todo, incluido el dinero de la boda de su hija. Nadie se acerca a él; en cambio, tres empleados rodean a la ballena de cien mil dólares, que eres tú. Andrés se arrastra hasta tus pies con el reloj en la mano. «A ti te besan los pies; a mí, hace una hora, también. Es suizo, vale veinte mil dólares. Te lo dejo por doscientos. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
-      "1000000": "Al lado de la ruleta, Andrés, sentado en la moqueta, llora en silencio: lo ha perdido todo, incluido el dinero de la boda de su hija. Cuando oye que tú llevas un millón de dólares, se levanta tambaleándose y te bloquea el paso; un guardia da un paso al frente. «Por favor, solo un minuto.» Te tiende el reloj. «Es suizo, vale veinte mil dólares. Para ti son doscientos, una propina. Solo necesito una tirada más para recuperarme. ¿Me lo compras?»",
+    "title": "Un reloj por doscientos",
+    "line": "Junto a la ruleta, sentado en la moqueta con un traje italiano arrugado y la corbata colgando como una bandera rendida, Andrés llora sin el menor pudor. Esta noche lo ha perdido todo, incluido el dinero de la boda de su hija. Se desabrocha un reloj de oro y te lo ofrece con dedos temblorosos. «Es suizo, señorita, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+    "money": {
+      "100": "Con tus cien dólares acabas de ganar lo justo para sentirte afortunada cuando descubres a Andrés sentado en la moqueta junto a la ruleta: traje caro, ojos hinchados, la ruina escrita en la cara. Ha perdido hasta el dinero de la boda de su hija. Te tiende un reloj de oro. «La he visto ganar; usted trae suerte. Es suizo, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+      "500": "Junto a la ruleta, con tus quinientos dólares en el bolso, casi tropiezas con Andrés: traje italiano, sentado en la moqueta, llorando sin disimulo. Lo ha perdido todo, incluido el dinero de la boda de su hija. Una camarera pasa a su lado sin mirarlo, como quien esquiva un charco. Él se desabrocha un reloj de oro. «Es suizo, señorita, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+      "1000": "Los empleados ya te llaman por tu nombre por los mil dólares que has movido esta noche, y Andrés lo ha oído desde la moqueta, junto a la ruleta, donde llora con su traje de diseño hecho un acordeón. Ha perdido hasta el dinero de la boda de su hija. Se acerca a ti a gatas, con un reloj de oro en la mano. «Usted es de las que ganan. Es suizo, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+      "10000": "Con diez mil dólares en fichas, todo el mundo te sonríe; Andrés, sentado en la moqueta junto a la ruleta, está en el lado oscuro de la misma noche. Lo ha perdido todo, hasta el dinero de la boda de su hija, y ya nadie le ofrece ni un vaso de agua. Te tiende un reloj de oro. «Hace tres horas yo era como usted. Es suizo, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+      "100000": "Andrés, sentado en la moqueta junto a la ruleta, guarda en el bolsillo la misma tarjeta negra de cliente que tú, solo que la suya ya no sirve para nada: esta noche ha perdido su línea de crédito, su dignidad y el dinero de la boda de su hija. Al ver tu séquito, suelta una risa amarga y te tiende un reloj de oro. «Así empecé yo, rodeado de gente muy amable. Es suizo, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+      "1000000": "El casino entero aplaude tu millón y, en medio del alboroto, Andrés sigue sentado en la moqueta junto a la ruleta, con la corbata colgando y los ojos rojos. Lo ha perdido todo, incluido el dinero de la boda de su hija, y tu suerte le duele como una bofetada. Aun así, se arrastra hasta ti con un reloj de oro. «Usted no lo necesita, ya lo sé, pero yo sí. Es suizo, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»",
+      "nada": "Te sientas en la moqueta junto a la ruleta, sin un dólar, porque los tacones te están matando. A tu lado, un hombre con traje italiano llora como un crío: Andrés, que lo ha perdido todo, hasta el dinero de la boda de su hija. No se da cuenta de que estás tan arruinada como él; solo ve un vestido rojo y una última esperanza. Se desabrocha un reloj de oro. «Es suizo, vale una fortuna. Se lo vendo por doscientos dólares. ¿Lo quiere?»"
     },
-    options: [
-      { say: "No te voy a comprar el reloj, Andrés. Te voy a sentar en un sitio tranquilo, con un café, y te voy a poner en contacto con alguien que sabe ayudar a gente en tu situación.", reply: "Andrés baja la mano con el reloj, avergonzado. «No soy un adicto, señorita. Solo he tenido una mala noche.» Luego se le quiebra la voz. «Una mala noche… y un mal año.» Se deja ayudar a levantarse." },
-      { say: "Andrés, mírame: si te doy doscientos dólares, los pierdes en la ruleta en dos minutos, y lo sabes. Esta noche no se recupera nada. Esta noche solo se puede dejar de perder.", reply: "Andrés te mira como si le hubieras dado una bofetada. Luego se ríe, una risa rota. «Mi mujer me dijo exactamente eso esta mañana. Con las mismas palabras.» Se guarda el reloj en el bolsillo. «No le hice caso.»" },
-      { say: "Guárdate el reloj, que te va a hacer falta para llegar puntual a la boda de tu hija. Cuéntame cuánto falta para la boda y vemos qué se puede salvar.", reply: "Andrés se seca la cara con la manga. «Tres semanas. Ella no sabe nada.» Te mira con un hilo de esperanza. «¿De verdad se puede salvar algo?» Por primera vez en toda la noche, deja de mirar la ruleta." },
+    "options": [
+      {
+        "say": "Quédese el reloj y levántese del suelo. Lo que necesita ahora es un taxi, no doscientos dólares.",
+        "reply": "Andrés parpadea, desconcertado. «Es lo primero sensato que oigo desde que llegué. Los demás solo me ofrecían otra ronda gratis y otro crédito»."
+      },
+      {
+        "say": "Un reloj suizo por doscientos dólares es demasiado bonito para ser verdad. ¿Dónde está la trampa?",
+        "reply": "Andrés se ríe entre lágrimas. «La trampa soy yo, señorita. Me lo regaló mi hija cuando llegué a los cincuenta, y aquí estoy, malvendiéndolo»."
+      },
+      {
+        "say": "¿Y qué haría con los doscientos? Sea sincero: volver a la ruleta, ¿a que sí?",
+        "reply": "Andrés baja la mirada, pillado. «Al diecisiete. Una última vez. Si sale, recupero la boda; si no… total, ya estoy en el suelo»."
+      }
     ],
-    line2: "Paco, el gerente de la planta, se acerca con una tableta. «Directora, este señor tiene tarjeta de nivel oro. Ha perdido ochenta mil dólares en tres horas. Mañana el sistema le enviará automáticamente una oferta de recuperación: quinientos dólares en juego gratis para que vuelva. ¿La dejamos salir?»",
-    options2: [
-      { say: "No. Cancelamos la oferta, y quiero revisar la regla para todos: si alguien pierde de golpe muchísimo más de lo habitual, el sistema no puede tentarlo. Tiene que avisar a una persona.", reply: "Paco se rasca la nuca. «Esa regla nos va a costar ingresos, directora.» Mira a Andrés, que bebe el café con las manos temblorosas. «Aunque un cliente arruinado no vuelve nunca. Y a veces sale en las noticias.»" },
-      { say: "Cancelamos la oferta y le ofrecemos, en privado, el programa de autoexclusión. No lo decide la casa, lo decide él; pero tiene que saber que existe.", reply: "Andrés escucha la conversación. «¿Autoexclusión? ¿Que no me dejen entrar?» Se queda callado un buen rato. «Firmo. Antes de que me arrepienta.» Paco, sorprendido, le busca el formulario." },
-      { say: "Ni oferta de juego ni silencio. Le enviamos mañana una invitación a cenar con su hija, sin fichas. Si vuelve, que sea para algo que no le haga daño.", reply: "Paco frunce el ceño. «Una cena gratis para alguien que acaba de perder ochenta mil…» Andrés levanta la vista, con los ojos rojos. «Si me invitas con mi hija, tendré que contárselo todo.» Respira hondo. «Puede que sea lo mejor.»" },
+    "line2": "Andrés se seca la cara con la manga de seda. «La boda es dentro de tres semanas. Mi hija no sabe nada; mi mujer cree que estoy en un congreso en Denver. Si me hubiera levantado de la mesa a medianoche, aún me quedaría algo. ¿Se lo confieso todo o me invento una historia que me dé tiempo?»",
+    "options2": [
+      {
+        "say": "Contarlo todo, y cuanto antes. Las mentiras, igual que las deudas, engordan con el tiempo.",
+        "reply": "Andrés asiente, derrotado. «Mi mujer me va a matar». Luego, casi sonriendo: «Pero al menos me matará por lo que hice, y no por lo que escondí»."
+      },
+      {
+        "say": "Inventarse algo, no. Pero tampoco hace falta soltarlo todo de golpe en el desayuno.",
+        "reply": "Andrés te mira con un brillo de esperanza. «Poco a poco, ¿no? Primero la boda, después lo demás». Se pone de pie por primera vez en una hora."
+      },
+      {
+        "say": "Yo empezaría por su hija. Es a quien más le afecta, y quien merece saberlo primero.",
+        "reply": "Andrés se echa a llorar otra vez, pero de otra manera. «Ella me va a perdonar enseguida. Y eso es justo lo que más vergüenza me da»."
+      }
     ],
-    end: "Un empleado acompaña a Andrés hacia la salida. Antes de irse, te deja el reloj sobre una mesa vacía: «Para que me lo devuelvas cuando vuelva sin deudas». Desde el Bulevar llegan gritos de mujeres y música de despedida.",
-    talk: [
-      "¿Has perdido alguna vez algo importante por querer recuperar una pérdida pequeña? ¿Qué aprendiste?",
-      "¿Por qué crees que nos cuesta tanto pedir ayuda cuando lo estamos pasando mal?",
-      "¿Le contarías a tu familia que lo has perdido todo o intentarías arreglarlo solo? ¿Por qué?",
-      "¿Qué responsabilidad tiene una empresa que gana dinero con los clientes que pierden el control?",
-      "¿Has visto alguna vez a alguien tocar fondo? ¿Qué le ayudó a levantarse, si se levantó?",
+    "end": "Andrés se levanta, se ajusta la corbata y se guarda el reloj en el bolsillo. Mientras se aleja hacia la salida, la bola sigue saltando en la ruleta a su espalda, como si aquello nunca hubiera ido con él.",
+    "talk": [
+      "¿Has visto a alguien perderlo todo, por el juego, por el alcohol o por amor? ¿Qué sentiste al verlo?",
+      "¿Qué te resulta más difícil: confesar algo grave o cargar con una mentira durante mucho tiempo?",
+      "¿Comprarías algo valioso aprovechando la desesperación de otra persona? ¿Dónde está la línea entre negocio y abuso?",
+      "¿A quién te daría más vergüenza decepcionar: a tus padres, a tus hijos o a tu pareja?",
+      "¿Por qué crees que a algunas personas les cuesta tanto levantarse de la mesa cuando van perdiendo?"
     ],
-    words: ["juego responsable", "autoexclusión", "oferta de recuperación", "tocar fondo"],
+    "words": [
+      "demasiado bonito para ser verdad",
+      "malvender",
+      "de golpe",
+      "sin el menor pudor"
+    ]
   },
   despedida: {
-    title: "La novia que pide una señal",
-    line: "Frente al club, una despedida de soltera ocupa media alfombra roja: diez amigas bailando, globos con forma de corazón y una botella de champán que pasa de mano en mano. Cinthia, la novia, con velo y una banda rosa que dice «Última noche libre», se tambalea hasta ti y te agarra de los hombros. Está muy borracha y muy seria. «Escúchame, tú que tienes cara de saber cosas. No estoy segura de casarme. El sábado es la boda y no estoy segura. Necesito una señal. Dame una señal: ¿me caso o no me caso?»",
-    money: {
-      nada: "Frente al club, una despedida de soltera ocupa media alfombra roja. El portero no te deja pasar porque no tienes ni para la entrada, y las amigas de la novia te adoptan al instante: «¡Ven con nosotras, guapa, que nosotras pagamos!» Cinthia, la novia, con velo y una banda rosa que dice «Última noche libre», muy borracha y muy seria, te agarra de los hombros. «Escúchame. No estoy segura de casarme. El sábado es la boda. Necesito una señal. Dame una señal: ¿me caso o no me caso?»",
-      "100": "Frente al club, pagas los cien dólares de la entrada y te quedas sin nada, justo cuando una despedida de soltera te rodea bailando. Cinthia, la novia, con velo y una banda rosa que dice «Última noche libre», te ofrece champán de su botella. «¡Tú también te has gastado todo en la entrada! Mujer, eres de las mías.» Luego te agarra de los hombros, muy seria. «No estoy segura de casarme. El sábado es la boda. Necesito una señal. Dame una señal: ¿me caso o no me caso?»",
-      "500": "Frente al club, una despedida de soltera ocupa media alfombra roja, con diez amigas bailando y una botella de champán que pasa de mano en mano. Pagas una ronda para todas con parte de tus quinientos dólares y te ganas un aplauso. Cinthia, la novia, con velo y una banda rosa, se tambalea hasta ti. «¡Tú eres buena gente! Escucha: no estoy segura de casarme. El sábado es la boda. Necesito una señal. Dame una señal: ¿me caso o no me caso?»",
-      "1000": "Frente al club, una despedida de soltera baila sobre la alfombra roja. Un promotor te ofrece unirte a su mesa por mil dólares, botella incluida, y las amigas de la novia te arrastran dentro gritando. Cinthia, con velo y una banda rosa que dice «Última noche libre», muy borracha y muy seria, te agarra de los hombros. «Tú que tienes cara de saber cosas: no estoy segura de casarme. El sábado es la boda. Necesito una señal. ¿Me caso o no me caso?»",
-      "10000": "Frente al club, el portero te hace pasar delante de la fila porque llevas diez mil dólares, y una despedida de soltera que lleva una hora esperando te abuchea. Cinthia, la novia, con velo y banda rosa, se suelta de sus amigas y te agarra de los hombros. «¡A ti te dejan pasar y a mí no, y es mi última noche libre!» Se le quiebra la voz. «Aunque no sé si es la última. No estoy segura de casarme. Necesito una señal. Dame una señal: ¿me caso o no me caso?»",
-      "100000": "Frente al club, el DJ ha anunciado que la ballena de cien mil dólares invita a la mesa VIP, y una despedida de soltera entera se te sube encima. Cinthia, la novia, con velo y una banda rosa que dice «Última noche libre», te mira con los ojos brillantes de champán. «Con tu dinero yo no me casaría con nadie, me iría a Bali.» Te agarra de los hombros, seria. «No estoy segura de casarme. El sábado es la boda. Necesito una señal. ¿Me caso o no me caso?»",
-      "1000000": "Frente al club, alguien grita que la mujer del millón de dólares está aquí, y la despedida de soltera se vuelve loca: una amiga te pide que pagues la boda, otra, que pagues el divorcio. Cinthia, la novia, con velo y banda rosa, aparta a todas y te agarra de los hombros, muy borracha y muy seria. «Nadie aquí sabe lo que quiero, ni yo. No estoy segura de casarme. El sábado es la boda. Necesito una señal. Dame una señal: ¿me caso o no me caso?»",
+    "title": "La novia que duda",
+    "line": "A la entrada del club, una despedida de soltera ha invadido la acera: velos de tul, bandas rosas con purpurina, globos con formas que harían santiguarse a una monja. La novia, Cinthia, en equilibrio precario sobre unos tacones de vértigo, te agarra de las dos manos mientras sus amigas bailan reguetón sin enterarse de nada. «Tú tienes pinta de saber cosas de la vida. Me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+    "money": {
+      "100": "Te has quedado en la puerta del club haciendo cálculos: ¿te alcanzan tus cien dólares para la entrada y una copa, o solo para la entrada? Una despedida de soltera te rodea entre chillidos y alguien te pone una diadema con lucecitas. La novia, Cinthia, te mira fijamente y se echa a llorar sin previo aviso. «Me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+      "500": "Con quinientos dólares y la noche por delante, te cruzas frente al club con una despedida de soltera en pleno apogeo: velos, purpurina y una amiga subida a una papelera cantando a gritos. La novia, Cinthia, se tambalea hacia ti sobre unos tacones de vértigo y te agarra de las manos. «Tienes cara de saber cosas. Me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+      "1000": "Con tus mil dólares has conseguido una mesa en el club, y una despedida de soltera la ha ocupado entera mientras ibas al baño, convencidas de que la habían pagado ellas. La novia, Cinthia, con el velo torcido, te ofrece tu propio champán con una sonrisa radiante. «¡Brinda con nosotras, guapa, que invita la casa! Oye, entre tú y yo: me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+      "10000": "Diez mil dólares te han conseguido el mejor reservado del club, y desde allí arriba ves a una despedida de soltera suplicándole al portero que la deje entrar. Con un gesto, les abres la puerta y entran en tromba. La novia, Cinthia, sube a tu reservado, te da un abrazo de oso y, de pronto, se pone muy seria. «Me has salvado la noche, así que ahora te toca salvarme la vida. Me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+      "100000": "Con cien mil dólares, el club te ha regalado una botella de champán de dos metros, y una despedida de soltera se ha pegado a ti como un enjambre. Las amigas se hacen fotos con la botella; la novia, Cinthia, se queda a tu lado, de repente sobria. «Con tanto dinero, seguro que tú sí sabes lo que quieres. Yo me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+      "1000000": "Con un millón de dólares, media ciudad ya conoce tu cara, y la despedida de soltera de Cinthia te recibe en la puerta del club como a una estrella de cine, con gritos y flashes. Una amiga te pide un autógrafo en el brazo; otra, el teléfono de tu asesor financiero. La novia las manda callar y te habla al oído, con aliento de tequila. «Tú tienes la suerte de cara esta noche: préstame un poco. Me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»",
+      "nada": "Estás frente al club sin un dólar, sin pulsera de acceso y sin plan, cuando una despedida de soltera te engulle en su remolino de tul, purpurina y globos indecentes. La novia, Cinthia, borracha como una cuba, te agarra de las manos. «¿No llevas dinero? ¡Mejor! Quien no tiene nada no tiene por qué mentir. Me caso el sábado y no sé si quiero. ¡Dame una señal, la que sea, porque yo ya no sé qué hacer!»"
     },
-    options: [
-      { say: "No te puedo dar esa señal, Cinthia, porque la respuesta ya la tienes tú. Pero si te lo preguntas en tu propia despedida, por lo menos escúchate antes del sábado.", reply: "Cinthia se queda callada, con el velo torcido. «Escucharme… Nadie me ha dicho eso en tres meses. Todos me preguntan por las flores.» Una de sus amigas grita su nombre desde la pista y ella no se gira." },
-      { say: "La señal es esta: esta noche bailas hasta que te duelan los pies. Mañana, con resaca y un café, decides. Las decisiones grandes no se toman con champán.", reply: "Cinthia suelta una carcajada y casi pierde el velo. «¡Me encantas! Mi madre dice que todas las novias dudan.» Te da un beso en la mejilla. «Pero mi madre nunca bebió champán con una desconocida en Las Vegas.»" },
-      { say: "Mira a tus amigas: en toda la noche, ninguna ha dicho el nombre del novio. Tú tampoco. A lo mejor eso ya es una señal.", reply: "Cinthia mira a sus amigas, luego a ti, y se tapa la boca. «Se llama Rodrigo. Y es verdad, nadie lo ha nombrado.» Se ríe y llora a la vez. «Ay, Dios. Necesito otra copa. O un abogado. O las dos cosas.»" },
+    "options": [
+      {
+        "say": "Te doy una pista gratis: cuando una está segura, no va por ahí pidiendo señales a desconocidas.",
+        "reply": "Cinthia se queda con la boca abierta. Luego le entra hipo. «Eso es profundísimo… o yo estoy muy borracha. Probablemente las dos cosas»."
+      },
+      {
+        "say": "Vamos a dejarlo en manos del destino: si el próximo que sale del club lleva corbata, te casas.",
+        "reply": "Las amigas se giran a la vez hacia la puerta. Sale un hombre sin camisa, con una corbata atada en la frente. Cinthia se lleva las manos a la cabeza. «¿Y eso qué es, un sí o un no?»"
+      },
+      {
+        "say": "Antes de buscar señales, cuéntame qué te pasa. No me vas a volver a ver, así que puedes ser sincera.",
+        "reply": "Cinthia se sienta en el bordillo y suelta un suspiro que huele a tequila y a verdad. «Es que es buenísimo. Demasiado. Y a mí los buenos me aburren, ¿me entiendes?»"
+      }
     ],
-    line2: "Vane, la dama de honor y organizadora, se acerca con el teléfono en la mano y cara de pocos amigos. «Ya que eres la directora: pagamos el paquete de despedida del casino, dos mil dólares por persona, y ha sido un desastre. La limusina llegó una hora tarde, el bufé estaba cerrado y en el club nos querían echar por la banda de la novia. ¿Qué nos vas a dar?»",
-    options2: [
-      { say: "Primero, una disculpa sin excusas. Segundo, esta noche la mesa del club corre por cuenta de la casa. Y mañana quiero que me cuentes cada fallo, porque así no se vende otro paquete.", reply: "Vane baja el teléfono, desarmada. «Pensé que me ibas a ofrecer un descuento para la próxima.» Sonríe a medias. «Una mesa esta noche y alguien que escuche. Vale. Te mando la lista mañana… si me acuerdo de algo.»" },
-      { say: "Les devolvemos la parte de la limusina y el bufé. Pero quiero algo a cambio: que me digan qué esperaban del paquete. Diseñarlo sin preguntar a las novias ha sido un error nuestro.", reply: "Vane te mira con interés. «¿Una encuesta? En serio, nadie nos preguntó nada. Si me escuchas, te diseño el paquete perfecto: fotógrafo, menos limusina y más piscina.» Cinthia aplaude desde la pista sin saber por qué." },
-      { say: "Te propongo algo mejor que una compensación: diez amigas, diez futuras despedidas. Si me ayudas a rehacer el paquete, cada una de ustedes tendrá un precio especial cuando le toque.", reply: "Vane se ríe a carcajadas. «¡Qué morro! Nos compensas vendiéndonos otra despedida.» Lo piensa. «Aunque… tres de estas se casan el año que viene. Vale, trato hecho, pero que el club nos deje la banda.»" },
+    "line2": "Una amiga le pone un chupito en la mano y Cinthia se lo bebe de un trago. Luego se pone todo lo seria que puede ponerse alguien con un velo torcido. «Hay otro. Mi ex. Está aquí, en Las Vegas, esta misma noche, y me acaba de escribir. Si voy a verlo, la lío. Si no voy, me lo voy a preguntar el resto de mi vida. ¿Qué hago?»",
+    "options2": [
+      {
+        "say": "No vayas. Una duda de una noche no merece una vida entera de remordimientos.",
+        "reply": "Cinthia asiente con el rímel corrido. «Vale. Vale. Pero le contesto con un mensaje bien seco, para que sufra un poquito»."
+      },
+      {
+        "say": "Ve, míralo a la cara y vuelve antes de que salga el sol. Si vuelves, te casarás sin dudas.",
+        "reply": "Cinthia te da un beso en la frente. «O eres muy sabia o estás muy loca. Vente conmigo, por si me paso de la raya»."
+      },
+      {
+        "say": "Llama a tu novio y cuéntaselo ahora mismo. Si aguanta esa llamada, aguanta lo que sea.",
+        "reply": "Cinthia palidece y sus amigas dejan de bailar en seco. «¿Ahora? ¿Así?». Saca el móvil, lo mira un buen rato y, contra todo pronóstico, marca."
+      }
     ],
-    end: "Cinthia se quita la banda rosa y te la pone a ti. «Por si acaso eres tú la que necesita la señal.» Dentro de la sala de apuestas deportivas se oyen golpes y gritos: alguien se está peleando por un partido.",
-    talk: [
-      "¿Has dudado alguna vez antes de una decisión enorme (casarte, mudarte, cambiar de trabajo)? ¿Hiciste caso a la duda?",
-      "¿Crees que las dudas antes de una boda son normales o son una señal que hay que escuchar?",
-      "¿Le contarías a una amiga que no crees que deba casarse con su pareja? ¿Lo has hecho alguna vez?",
-      "¿Qué opinas de las despedidas de soltero o de soltera? ¿Celebración, ritual absurdo o despedida de verdad?",
-      "En tu trabajo, cuando un cliente se queja de un servicio que ya pagó, ¿qué funciona mejor: el dinero, la disculpa o escucharlo?",
+    "end": "Las amigas se llevan a Cinthia hacia la pista entre gritos y confeti. Al cruzar la puerta, se gira una última vez y te levanta el pulgar, o quizá te pide auxilio: con tantas luces, no lo distingues bien.",
+    "talk": [
+      "¿Has dudado alguna vez antes de una decisión enorme? ¿Hiciste caso a esas dudas o las callaste?",
+      "¿Crees que se puede tener una cuenta pendiente con un ex durante años? ¿Es buena idea volver a verlo?",
+      "¿Qué es más peligroso en una pareja: el aburrimiento o una pasión sin control?",
+      "¿Por qué a veces es más fácil abrirse con un desconocido que con alguien cercano?",
+      "¿Te has pasado de la raya alguna vez en una fiesta y has tenido que dar explicaciones al día siguiente?"
     ],
-    words: ["despedida de soltera", "paquete de grupo", "dama de honor", "compensación"],
+    "words": [
+      "liarla",
+      "pasarse de la raya",
+      "sin previo aviso",
+      "en pleno apogeo"
+    ]
   },
   pelea: {
-    title: "Gol anulado, puños arriba",
-    line: "En la sala de apuestas deportivas, bajo una pantalla gigante, Toño y otro aficionado con la camiseta del equipo rival se gritan a un palmo de la cara. Ha habido empujones, una cerveza en el suelo y un boleto roto. Toño apostó quinientos dólares a que habría más de dos goles; el tercero lo anularon en el último minuto. El otro dice que la apuesta está perdida; Toño, que el gol existió. Al verte, Toño te señala. «¡Tú, la de rojo! Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-    money: {
-      nada: "En la sala de apuestas deportivas, Toño y otro aficionado con la camiseta rival se gritan a un palmo de la cara: empujones, una cerveza en el suelo, un boleto roto. Toño apostó quinientos dólares a que habría más de dos goles; el tercero lo anularon. Como no llevas ni un dólar y no apuestas, Toño decide que eres la única persona neutral de la sala. «¡Tú, la de rojo, que no tienes ni un boleto! Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-      "100": "En la sala de apuestas deportivas, acabas de apostar veinte dólares cuando Toño y otro aficionado con la camiseta rival empiezan a empujarse bajo la pantalla gigante. Toño apostó quinientos dólares a que habría más de dos goles; el tercero lo anularon en el último minuto. El otro dice que la apuesta está perdida. Toño te ve con tu boleto pequeño y te señala. «¡Tú, la de veinte dólares, que no te juegas nada! Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-      "500": "En la sala de apuestas deportivas, Toño y otro aficionado con la camiseta rival se gritan a un palmo de la cara. Toño apostó quinientos dólares, lo mismo que llevas tú en el bolso, a que habría más de dos goles; el tercero lo anularon en el último minuto. El otro dice que la apuesta está perdida. «¡Quinientos dólares, señora! ¡Mi sueldo de una semana!» Te señala. «Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-      "1000": "En la sala de apuestas deportivas, acabas de apostar trescientos dólares al mismo partido cuando Toño y otro aficionado empiezan a empujarse. Toño apostó quinientos a que habría más de dos goles; el tercero lo anularon en el último minuto. El otro dice que la apuesta está perdida. Toño ve tu boleto. «¡Tú también apostaste a goles! Estás de mi lado.» El otro protesta. Toño insiste. «Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-      "10000": "En la sala de apuestas deportivas te han dado un sillón de cuero por tus diez mil dólares, y justo delante Toño y otro aficionado se empujan y tiran una cerveza que te salpica los zapatos. Toño apostó quinientos dólares a que habría más de dos goles; el tercero lo anularon. «¡Perdón, perdón, señora rica!» Luego te señala. «Ya que te hemos mojado, tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-      "100000": "En la sala de apuestas deportivas, tu palco privado de ballena da justo encima de la pelea: Toño y otro aficionado se empujan, gritan y tiran cervezas. Toño apostó quinientos dólares a que habría más de dos goles; el tercero lo anularon en el último minuto. Al verte asomada, Toño trepa hasta la barandilla del palco. «¡Señora del palco! ¡Tú, que estás por encima de todos! Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
-      "1000000": "En la sala de apuestas deportivas todo el mundo sabe ya que llevas un millón de dólares. Cuando Toño y otro aficionado empiezan a empujarse por un gol anulado, la sala entera te mira, como si fueras la dueña. Toño apostó quinientos dólares a que habría más de dos goles; el tercero no contó. «¡La millonaria! Para ti quinientos dólares son calderilla, así que eres imparcial.» Te señala. «Tú eres la jueza. Dilo delante de todos: ¿quién tiene razón?»",
+    "title": "El penalti de la discordia",
+    "line": "En la sala de apuestas deportivas, bajo una pantalla gigante que repite a cámara lenta una jugada polémica, Toño, con la camiseta roja de su equipo, y un aficionado rival con bigote de morsa se dan empujones y se dedican insultos que no se oyen ni en un estadio. Toño te ve, te coge del codo y te coloca entre los dos como si fueras el árbitro. «¡Señora, usted lo ha visto! ¡Eso era penalti como una casa! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+    "money": {
+      "100": "Has apostado veinte dólares al empate, por pura prudencia, cuando a tu lado estalla la pelea: Toño, con su camiseta roja, y un aficionado rival con bigote de morsa se gritan por un penalti que la pantalla repite sin compasión. Un guardia se acerca, sin ninguna prisa. Toño te pone delante como un escudo humano. «¡Usted lo ha visto, señora! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+      "500": "Bajo un muro de pantallas, Toño y un aficionado rival pasan de los gritos a los empujones; vuela una cerveza y alguien aplaude como si formara parte del espectáculo. Tú, con quinientos dólares y cero interés en el fútbol, intentas escabullirte por un lado. Toño te corta el paso. «¡Usted, que tiene cara de lista! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+      "1000": "Acabas de apostar mil dólares a ese mismo partido y Toño lo ha visto, así que para él ya eres una experta en fútbol. Cuando el rival del bigote de morsa le da un empujón, Toño te señala delante de toda la sala. «¡Ella entiende de esto, que se ha jugado mil! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+      "10000": "Ves el partido desde el palco privado, con diez mil dólares jugados y una tabla de quesos que nadie ha tocado, cuando abajo se arma la gorda. Un guardia sube a avisarte de que «hay un pequeño incidente», y detrás de él aparece Toño, sudando, con la camiseta medio arrancada. «¡Desde aquí arriba se ve todo mejor que en el videoarbitraje! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+      "100000": "Con cien mil dólares en apuestas, tienes un mayordomo que te trae las estadísticas del partido en bandeja de plata. Te las está leyendo cuando la pelea de Toño y el aficionado rival rueda literalmente hasta tus pies, entre patatas fritas y vasos de plástico. El mayordomo carraspea, horrorizado. Toño se pone de pie, se arregla el pelo y te hace una reverencia. «¡Usted parece una mujer justa! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+      "1000000": "Tienes un millón apostado en el partido, y la sala entera te mira cada vez que pasa algo en el campo. Cuando pitan un penalti dudoso, Toño y el aficionado rival dejan de pelearse entre ellos y vienen hacia ti, convencidos de que tu palabra vale más que la del árbitro. «¡Con lo que usted se ha jugado, sabrá de fútbol más que nadie! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»",
+      "nada": "Estás en la sala de apuestas sin un dólar, aprovechando que ver el partido es gratis, cuando estalla la bronca: Toño y un aficionado rival se empujan por una jugada polémica. Toño te agarra del codo. «¡Usted no se ha jugado nada, así que es neutral! ¡La jueza perfecta! ¡Diga usted quién tiene razón, que este sinvergüenza me debe doscientos dólares!»"
     },
-    options: [
-      { say: "Ninguno de los dos: decide el reglamento de la casa, y está pegado en esa pared. Un gol anulado no cuenta. Lo siento, Toño, pero aquí las reglas no cambian según quién grite más.", reply: "El otro aficionado levanta los brazos, triunfal. Toño se pone rojo, pero lee el cartel y se desinfla. «Pues vaya reglamento de pacotilla.» Luego, más bajo: «Ya lo sabía. Solo quería que alguien me diera la razón un rato.»" },
-      { say: "Quien empuja, pierde, aunque tenga razón. Antes de hablar de goles, los dos se sientan, se calman y el supervisor revisa la apuesta con el reglamento delante.", reply: "Toño y el otro se miran, todavía con los puños cerrados. Al final, Toño se sienta de golpe. «Vale, vale. Pero que conste que empezó él.» El otro resopla. «Empezaste tú, que me tiraste la cerveza.» Al menos ya no se tocan." },
-      { say: "Les propongo un trato: los dos se sientan, les invito a un refresco y el siguiente partido lo ven juntos. El que vuelva a empujar, se va a la calle y pierde la apuesta.", reply: "El otro aficionado suelta una carcajada. «¿Ver el partido con este? Antes muerto.» Toño, sin embargo, ya se está sentando. «Si invita la jueza, me siento con quien sea.» Al rato, los dos discuten de fútbol como viejos amigos." },
+    "options": [
+      {
+        "say": "Era penalti, sin duda. Y usted, el del bigote, pague lo que debe y no sea tan tacaño.",
+        "reply": "El aficionado rival te fulmina con la mirada y saca un billete arrugado. «Pago, pero que quede claro: el árbitro está comprado, y usted también»."
+      },
+      {
+        "say": "No era penalti, Toño. Se tiró como un actor de cine mudo, y tú lo sabes.",
+        "reply": "Toño se tapa la cara con la camiseta. «¡Lo sabía! ¡Usted es de los suyos! ¡Esto es una conspiración internacional!»"
+      },
+      {
+        "say": "Yo no he visto nada. Pero si siguen así, quien va a pitar el final es el de seguridad.",
+        "reply": "Los dos se callan de golpe al ver acercarse a dos guardias del tamaño de un armario ropero. Toño carraspea: «Bueno, a lo mejor era medio penalti. Un cuarto, como mucho»."
+      }
     ],
-    line2: "Germán, el supervisor de la sala, llega sudando y con la radio en la mano. «Directora, perdona el espectáculo. Los sábados de fútbol tengo dos personas para trescientos aficionados con cerveza barata. Es la tercera pelea del mes, y la semana pasada un cliente premium se fue diciendo que esto parece un bar de carretera. ¿Contrato más seguridad o cierro antes la barra?»",
-    options2: [
-      { say: "Ni una cosa ni otra todavía. Primero quiero los datos: a qué hora y en qué partidos estallan las peleas. Si son siempre los mismos clásicos, reforzamos solo esos días.", reply: "Germán se rasca la cabeza. «Siempre los clásicos y siempre en el último cuarto de hora. Nunca lo habíamos mirado así.» Toño, desde su silla, grita: «¡Y siempre hay alguien de los blancos!»" },
-      { say: "Más personal, pero no solo guardias: anfitriones de sala que conozcan a los aficionados, sepan calmarlos y cuiden también al cliente premium. La seguridad empieza antes de la pelea.", reply: "Germán asiente, aliviado. «Gente que sepa de fútbol y de personas. Eso sí lo podría vender a Finanzas.» Toño levanta la mano. «¡Yo me apunto de voluntario, que sé calmar a la gente!» Nadie le contesta." },
-      { say: "Separaría los espacios: una zona tranquila para quien apuesta fuerte y otra de grada, más barata y ruidosa, con su propia barra. No se pueden mezclar dos públicos tan distintos.", reply: "Germán sonríe por primera vez. «Una grada para los locos y un salón para los serios. Así ni los locos molestan ni los serios se quejan.» Señala a Toño. «Aunque ese irá a la grada toda la vida.»" },
+    "line2": "El partido se reanuda, pero ya nadie mira la pantalla. Toño se deja caer en la silla de al lado, sudando y con la camiseta rota. «Mi mujer dice que el fútbol me va a matar. Que le dedico más tiempo al equipo que a ella y a los niños. ¿Usted cree que uno puede querer más a un equipo que a su propia familia?»",
+    "options2": [
+      {
+        "say": "Claro que sí. El equipo nunca le pide que saque la basura.",
+        "reply": "Toño se ríe, pero la risa se le apaga enseguida. «Ni me pregunta qué tal el día. A lo mejor es eso lo que me gusta: que no me pide nada»."
+      },
+      {
+        "say": "No lo creo. Pero si su mujer lo dice, quizá debería preocuparle más ella que el marcador.",
+        "reply": "Toño se queda callado un buen rato, mirando la pantalla sin verla. «Eso me ha dolido más que el penalti», murmura. «Esta noche la llamo. Bueno, en el descanso»."
+      },
+      {
+        "say": "Depende. ¿Cuántos títulos le ha dado su mujer esta temporada?",
+        "reply": "Toño suelta una carcajada que se oye en toda la sala. «¡Ninguno! Pero tampoco me ha hecho llorar en una final, que ya es más de lo que puedo decir del equipo»."
+      }
     ],
-    end: "Toño te ofrece la mitad de su boleto roto como recuerdo. «Para la jueza más guapa del Strip.» Desde la puerta de la capilla, un piso más abajo, llegan unos gritos de mujer que se oyen por encima del partido.",
-    talk: [
-      "¿Por qué crees que el deporte despierta emociones tan fuertes en personas que normalmente son tranquilas?",
-      "¿Has perdido alguna vez los nervios por algo que, visto después, no tenía ninguna importancia? ¿Qué pasó?",
-      "¿Te cuesta aceptar que no tienes razón? ¿Qué haces cuando te das cuenta en mitad de una discusión?",
-      "¿Te han pedido alguna vez que hicieras de árbitro entre dos amigos o dos compañeros? ¿Cómo saliste de esa?",
-      "En tu trabajo, ¿cómo se gestiona a los clientes que se ponen agresivos? ¿Crees que el personal está preparado?",
+    "end": "Toño vuelve a su sitio con la camiseta rota y el orgullo vendado. Diez minutos después, su equipo encaja un gol en el último suspiro y el aficionado rival, sin decir nada, lo invita a una cerveza. Cosas del fútbol.",
+    "talk": [
+      "¿Qué es lo que te hace perder los nervios hasta el punto de gritarle a un desconocido?",
+      "¿Crees que las pasiones como el fútbol unen a la gente o sacan lo peor de ella?",
+      "¿Te han puesto alguna vez de árbitro entre dos amigos o dos familiares? ¿Cómo saliste del apuro?",
+      "¿Qué pasión tuya le parece exagerada a tu pareja o a tu familia? ¿Tienen razón?",
+      "¿Has estado alguna vez a punto de llegar a las manos con alguien? ¿Qué te frenó?"
     ],
-    words: ["apuestas deportivas", "reglamento de la casa", "incidente", "perder los nervios"],
+    "words": [
+      "penalti como una casa",
+      "armarse la gorda",
+      "perder los nervios",
+      "llegar a las manos"
+    ]
   },
   gritona: {
-    title: "Casados hace veinte minutos",
-    line: "En la puerta de la capilla «Amor Exprés», Marta, con un vestido blanco corto y el ramo deshecho, grita como una loca a su marido, que lleva veinte minutos casado y está dormido en un banco, roncando, con la corbata de lazo en la frente. «¡Despierta, desgraciado! ¡Me prometiste que no bebías!» Los turistas graban. Marta se gira hacia ti, con el rímel corrido. «¡Tú tienes pinta de mandar aquí! Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-    money: {
-      nada: "En la puerta de la capilla «Amor Exprés», Marta, con un vestido blanco corto y el ramo deshecho, grita a su marido, casado hace veinte minutos y dormido en un banco con la corbata en la frente. «¡Me prometiste que no bebías!» Te ve sin bolso, sin nada, y se le ocurre algo. «Tú tampoco tienes un peso, ¿verdad? Este desgraciado se gastó en whisky el dinero de la luna de miel.» Te agarra del brazo. «Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-      "100": "En la puerta de la capilla «Amor Exprés», Marta, vestida de novia con el ramo deshecho, grita a su marido, casado hace veinte minutos y dormido en un banco. «¡Noventa y nueve dólares, la boda más barata de Las Vegas, y aun así me sale cara!» Te ve llegar y te agarra del brazo, con el rímel corrido. «¡Tú tienes pinta de mandar aquí! Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-      "500": "En la puerta de la capilla «Amor Exprés», Marta, vestida de novia y con el ramo deshecho, grita como una loca a su marido, casado hace veinte minutos y dormido en un banco con la corbata en la frente. Los turistas graban. «¡Quinientos dólares del paquete “Rey del Rock” para esto!» Se gira hacia ti, con el rímel corrido. «¡Tú tienes pinta de mandar aquí! Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-      "1000": "En la puerta de la capilla «Amor Exprés», Marta, vestida de novia, grita a su marido, casado hace veinte minutos y dormido en un banco. «¡Paquete de lujo, mil dólares, fotos profesionales, y el novio sale roncando en todas!» Te ve con tu bolso de buena marca y se te echa encima. «¡Tú tienes pinta de mandar aquí! Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-      "10000": "En la puerta de la capilla «Amor Exprés», Marta, vestida de novia y con el ramo deshecho, grita a su marido, casado hace veinte minutos y dormido en un banco. Un empleado, al verte con tus diez mil dólares, intenta llevarte por otro pasillo «para que no te molesten». Marta lo ve y se planta delante. «¡Eh! ¡Tú, la importante! A ti te protegen y a mí me casan con un borracho.» Te agarra del brazo. «Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-      "100000": "En la puerta de la capilla «Amor Exprés», Marta, vestida de novia, grita a su marido dormido en un banco tras veinte minutos de matrimonio. Elvis, que sabe que llevas cien mil dólares, te ofrece la capilla entera para ti sola si te la llevas de aquí. Marta lo oye. «¡Ah, claro, para la rica, la capilla entera! ¡Para mí, un borracho!» Te agarra del brazo, con el rímel corrido. «Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
-      "1000000": "En la puerta de la capilla «Amor Exprés», Marta, vestida de novia, grita a su marido dormido en un banco tras veinte minutos de matrimonio. Cuando se entera de que llevas un millón de dólares, cambia de táctica y se arrodilla. «¡Señora millonaria! Tú puedes pagar el mejor abogado de Nevada.» Se levanta y te agarra del brazo, con el rímel corrido. «Quiero anular esta boda ya. ¿Me ayudas a anularla?»",
+    "title": "Veinte minutos casada",
+    "line": "En la puerta de la capilla «Amor Exprés», Marta, con un vestido blanco alquilado y un ramo de rosas convertido en escoba de tanto sacudirlo, le grita como una posesa a su marido, que duerme la mona en un banco, con la pajarita de lado y una botella vacía entre los brazos. Se casaron hace veinte minutos. Al verte, Marta se lanza hacia ti como un torpedo. «¡Tú, la del vestido rojo, tienes cara de ser la única persona sensata de Las Vegas! ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+    "money": {
+      "100": "Estás leyendo el cartel de precios de la capilla —boda básica, boda con Elvis, boda con Elvis y paloma— para reírte un rato con tus cien dólares, cuando sale Marta chillando: vestido alquilado, ramo hecho trizas y un marido de veinte minutos roncando en un banco. «¡Yo había pedido la de la paloma y la paloma se escapó! ¡Era una señal!», grita. Te ve. «¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+      "500": "Tú solo querías hacerte una foto graciosa con el Elvis de la entrada, con tus quinientos dólares todavía en el bolso, y has acabado en primera fila del drama: Marta, con vestido blanco de alquiler, le grita como una posesa a su marido de hace veinte minutos, que duerme la mona en un banco. Marta se lanza hacia ti. «¡Tú tienes cara de persona sensata! ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+      "1000": "Llevas mil dólares en fichas y una copa de cava de cortesía cuando Marta sale de la capilla dando zancadas, con el velo arrancado y el ramo convertido en un arma. Detrás de ella, su marido de veinte minutos ronca en un banco con la boca abierta. Marta te quita la copa, se la bebe de un trago y te la devuelve vacía. «Perdona, era una emergencia. ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+      "10000": "Con diez mil dólares, tu anfitrión te ha conseguido un pase a la recepción VIP de la capilla, con tarta de seis pisos incluida. Pero en la puerta te intercepta Marta, recién casada y fuera de sí, mientras su marido duerme la mona en un banco, abrazado al cojín de los anillos. «Tú tienes pinta de conocer abogados caros. ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+      "100000": "Con cien mil dólares en juego, el casino te ha mandado una limusina hasta la capilla para que asistas a una boda de famosos, pero la única famosa de esta noche es Marta, que grita tan fuerte que la gente la graba con el móvil. Su marido de veinte minutos ronca en un banco con la pajarita en la frente. Marta te ve bajar de la limusina y se te echa encima. «¡Tú seguro que tienes un abogado en marcación rápida! ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+      "1000000": "La noticia del millón ha llegado hasta la capilla, donde el Elvis de guardia ya te ofrece una boda de oro macizo con descuento. Marta lo aparta de un empujón, con el vestido de alquiler y el rímel hasta la barbilla, mientras su marido de hace veinte minutos ronca en un banco como una moto vieja. «Olvídate de bodas, que yo tengo una de segunda mano y te la regalo. Y ahora, dime. ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»",
+      "nada": "Estás sentada en la escalera de la capilla, sin un dólar, dándoles un respiro a tus pies, cuando sale Marta echando chispas: vestido de alquiler, ramo destrozado y un marido de veinte minutos durmiendo la mona en un banco. Te ve tan pelada como ella y se sienta a tu lado. «Me he gastado mis últimos dólares en esta boda, y mira el premio que me ha tocado. ¿Cómo se deshace una boda en esta ciudad? ¡Ayúdame, por favor!»"
     },
-    options: [
-      { say: "Te ayudo, pero no esta noche. En Nevada se puede anular, pero se hace con un abogado y con la cabeza fría. Esta noche, una habitación para ti sola y que él duerma la mona en el banco.", reply: "Marta se queda con la boca abierta. «¿Una habitación para mí sola? ¿Y él aquí tirado?» Mira a su marido, que ronca más fuerte. Se le escapa una risa nerviosa. «Me parece justo. Que se despierte solo y casado.»" },
-      { say: "Antes de anular nada, respira. Dime una cosa: ¿te arrepientes de él o te arrepientes de esta noche? Porque no es lo mismo.", reply: "Marta se sienta en el escalón y se queda mirando el ramo. «Lo conozco desde hace cuatro años… Pero hoy ha bebido como una cuba en su propia boda.» Suspira. «Supongo que me arrepiento de esta noche. De él, todavía no lo sé.»" },
-      { say: "Mira el lado bueno: tienes la historia de boda más divertida del Strip. Dentro de diez años, o te ríes con él o te ríes de él. Pero vas a reírte.", reply: "Marta te mira con furia un segundo y luego se le escapa una carcajada entre lágrimas. «¡Eres terrible!» Se seca el rímel con el velo. «Mi madre va a flipar. Me dijo que no me casara en Las Vegas.»" },
+    "options": [
+      {
+        "say": "Tranquila. En esta ciudad hay más abogados de divorcio exprés que capillas. Mañana a primera hora lo arreglamos.",
+        "reply": "Marta se agarra a tu brazo como a un salvavidas. «¿De verdad? ¿Y se puede hacer sin que se despierte? Porque, si se despierta, me convence otra vez»."
+      },
+      {
+        "say": "¿Seguro que quieres deshacerla? Míralo: dormido parece hasta buena persona.",
+        "reply": "Marta lo observa con los brazos en jarras. Él suelta un ronquido y se rasca la barriga. «Buena persona sí es. El problema es que también es idiota, y eso no se arregla durmiendo»."
+      },
+      {
+        "say": "¿Qué ha podido pasar en veinte minutos para que estés así?",
+        "reply": "Marta agita el ramo destrozado como prueba del delito. «¡Cuando Elvis preguntó si alguien se oponía, él levantó la mano! ¡Él, el novio! Y ahora dice que era una broma»."
+      }
     ],
-    line2: "Elvis sale de la capilla con el teléfono en la mano y las patillas caídas. «Directora, nena, tenemos un problema. Esta señora ya ha escrito una reseña de una estrella: “Elvis me casó con un borracho y no hizo nada”. Tiene diez mil seguidores y la reseña ya tiene doscientos me gusta. ¿Qué hacemos?»",
-    options2: [
-      { say: "Respondemos en público, con calma y sin excusas: lamentamos su noche y queremos hablar con ella. Y luego, en privado, le devolvemos el dinero de la ceremonia. Las reseñas se ganan en privado.", reply: "Elvis se rasca la patilla. «Devolver la boda… nunca lo hemos hecho.» Marta, que lo ha oído, deja de llorar. «¿Me devuelven el dinero? Entonces quizá cambio la estrella por dos. O por tres, si él no se despierta.»" },
-      { say: "No contestamos todavía. Primero hablo con ella aquí, en persona. Una reseña escrita con rabia a medianoche a veces se borra sola por la mañana, si alguien la ha escuchado antes.", reply: "Elvis asiente, sorprendido. «Hablar antes que escribir. Nena, eso también vale para las bodas.» Marta te mira, todavía enfadada, pero guarda el teléfono en el bolso. «Te escucho. Pero que conste que la reseña sigue ahí.»" },
-      { say: "La reseña tiene parte de razón: no deberíamos casar a nadie que no se tiene en pie. Desde mañana, si un novio está así de borracho, la boda se aplaza. Y lo diremos en la respuesta.", reply: "Elvis se queda serio, por una vez sin cantar. «Perderemos alguna boda de madrugada, nena.» Mira al marido, que se cae del banco sin despertarse. «Pero ganaremos muchas reseñas. Y menos gritos en mi puerta.»" },
+    "line2": "El marido abre un ojo, te ve, sonríe como un niño pequeño y vuelve a roncar. Marta se deja caer a tu lado en el escalón. «Lo peor es que estoy loca por él, ¿sabes? Desde hace exactamente cuatro horas, pero loca perdida. ¿Tú crees que se puede adorar a alguien y querer estrangularlo al mismo tiempo?»",
+    "options2": [
+      {
+        "say": "Claro. Es lo que me pasa a mí con los zapatos de tacón: los adoro y me están matando.",
+        "reply": "Marta suelta una carcajada tan fuerte que el marido se da la vuelta en el banco. «¡Exacto! Él es mis tacones: precioso, carísimo e imposible de aguantar más de dos horas»."
+      },
+      {
+        "say": "Se puede, pero no decidas nada esta noche. Mañana, con la cabeza fría y sin alcohol, lo verás más claro.",
+        "reply": "Marta suspira. «Con la cabeza fría. Eso me decía mi madre, y mírame: casada con un desconocido en una capilla con luces de neón. Pero vale, mañana»."
+      },
+      {
+        "say": "¿Adorarlo? Si apenas lo conoces. Lo que adoras es la idea de haber hecho una locura.",
+        "reply": "Marta se queda callada, con el ramo a medio levantar. «Uf. Eso ha sido peor que una bofetada», murmura. «Y lo peor es que me suena a verdad»."
+      }
     ],
-    end: "El marido se despierta en el suelo, mira a Marta y dice «¿ya nos hemos casado?». Ella lo persigue con el ramo por el pasillo. Arriba, en el Piso VIP, alguien enciende un habano con un billete de cien dólares.",
-    talk: [
-      "¿Cuál es la peor boda, fiesta o celebración a la que has ido? ¿Qué salió mal?",
-      "¿Crees que alguien puede arrepentirse de una decisión importante en veinte minutos? ¿Te ha pasado algo parecido?",
-      "¿Qué te parece imperdonable en una pareja: mentir sobre la bebida, el dinero, el pasado…?",
-      "¿Escribes reseñas cuando estás enfadado o enfadada? ¿Te has arrepentido de alguna?",
-      "En tu trabajo, ¿cómo se responde a una mala reseña pública? ¿Qué funciona y qué empeora las cosas?",
+    "end": "Cuando te alejas, Marta le ha quitado la botella al marido y le ha echado su chaqueta por encima para que no pase frío. Sigue insultándolo, eso sí, pero ahora en voz baja y casi con cariño.",
+    "talk": [
+      "¿Se puede querer y odiar a la vez a la misma persona? ¿Te ha pasado alguna vez?",
+      "¿Cuál es la decisión más impulsiva que has tomado? ¿La desharías si pudieras?",
+      "¿Qué cosa imperdonable podría hacer alguien en la primera cita o el primer día de una relación?",
+      "¿Crees que las bodas se celebran más para los novios o para impresionar a los demás?",
+      "¿Te has enamorado alguna vez más de una idea que de la persona real? ¿Cómo te diste cuenta?"
     ],
-    words: ["paquete de boda", "reseña", "anular", "dormir la mona"],
+    "words": [
+      "dormir la mona",
+      "echar chispas",
+      "con la cabeza fría",
+      "estar loca perdida"
+    ]
   },
   habano: {
-    title: "Un habano de cien dólares",
-    line: "En un reservado del Piso VIP, Sergio Valdés, un multimillonario de dientes perfectos y camisa de seda abierta, enciende un habano con un billete de cien dólares mientras seis modelos aplauden y dos guardaespaldas miran al techo. Al verte, sopla el humo hacia ti y saca una moneda de oro. «Por fin alguien interesante. Te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-    money: {
-      nada: "En un reservado del Piso VIP, Sergio Valdés, un multimillonario con camisa de seda, enciende un habano con un billete de cien dólares mientras seis modelos aplauden. Te ve sin bolso ni joyas y se ríe. «Una mujer sin un peso en mi piso. Debes de ser muy lista o estar muy perdida.» Saca una moneda de oro. «Te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-      "100": "En un reservado del Piso VIP, Sergio Valdés, un multimillonario con camisa de seda, enciende un habano con un billete de cien dólares. Tú llevas exactamente uno igual en el bolso. Sergio lo ve y sonríe. «¿Ese es todo tu dinero? Mira lo que hago yo con eso.» El billete arde. Luego saca una moneda de oro. «Te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-      "500": "En un reservado del Piso VIP, Sergio Valdés, un multimillonario con camisa de seda, enciende un habano con un billete de cien dólares mientras seis modelos aplauden. «Quinientos dólares en tu bolso, me dicen mis chicos. Eso me lo fumo en cinco habanos.» Sopla el humo hacia ti y saca una moneda de oro. «Te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-      "1000": "En un reservado del Piso VIP, Sergio Valdés enciende un habano con un billete de cien dólares mientras sus guardaespaldas miran al techo. «Mil dólares. Lo que yo doy de propina al aparcacoches.» Te examina de arriba abajo con descaro. «Pero tú no pareces de las que se venden por propinas.» Saca una moneda de oro. «Te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-      "10000": "En un reservado del Piso VIP, Sergio Valdés enciende un habano con un billete de cien dólares y te ofrece otro para que hagas lo mismo. «Con diez mil en el bolso ya puedes permitirte un capricho, ¿no?» Las modelos se ríen. Al ver que no lo coges, saca una moneda de oro. «Entonces te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-      "100000": "En un reservado del Piso VIP, Sergio Valdés enciende un habano con un billete de cien dólares y, al ver tu maletín de cien mil, deja de sonreír. «Otra ballena en mi territorio.» Echa a dos modelos del sofá para que te sientes. «Entre ricos, las apuestas tienen que ser absurdas, si no, no tiene gracia.» Saca una moneda de oro. «Lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
-      "1000000": "En un reservado del Piso VIP, Sergio Valdés estaba encendiendo un habano con un billete de cien cuando le dicen que llevas un millón de dólares en efectivo. Apaga el billete con dos dedos. «Por fin, alguien que me hace sombra.» Sus guardaespaldas miran a los tuyos. Sergio saca una moneda de oro y la hace girar sobre la mesa. «Te propongo un trato: lanzo esta moneda. Si sale cara, te doy cien mil dólares. Si sale cruz, te quedas conmigo toda la noche, solo a cenar y a hablar. ¿Aceptas?»",
+    "title": "Cara o cruz con un millonario",
+    "line": "En el reservado más ostentoso del piso VIP, entre sofás de piel blanca y una lámpara que parece una lluvia de diamantes, Sergio Valdés, multimillonario de sonrisa blanqueada y reloj del tamaño de un plato, prende un habano con un billete de cien dólares. A su alrededor, cuatro modelos bostezan con el móvil en la mano y tres guardaespaldas vigilan hasta a las moscas. Te ve pasar y sopla la llama del billete. «Tú, la de rojo, ven. Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+    "money": {
+      "100": "Has subido al piso VIP con tus cien dólares solo a fisgar, como quien se asoma al escaparate de una joyería sin intención de entrar. Sergio Valdés, multimillonario con un reloj del tamaño de un plato, prende un habano con un billete de cien —exactamente lo que llevas tú— y disfruta viendo tu cara. «Tu noche entera, convertida en humo. Qué poético, ¿no? Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+      "500": "En el reservado más ostentoso del piso VIP, Sergio Valdés prende un habano con un billete de cien dólares mientras las modelos que lo rodean ni siquiera levantan la vista. Tú, con quinientos dólares en el bolso, te sientes como una figurante que se ha equivocado de rodaje. Sergio te hace una seña con el habano. «Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+      "1000": "Mil dólares en el bolso y Sergio Valdés quemando uno de cien como si fuera un pañuelo de papel. Ves cómo se consume y se te encoge el estómago; él lo nota y le encanta. «Para mí es una cerilla cara; para ti, un fin de semana. Ahí está la gracia. Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+      "10000": "Con diez mil dólares, el piso VIP te recibe con respeto, aunque Sergio Valdés te hace saber enseguida que en su reservado eso es calderilla: hace un rato ha apostado esa cifra a que una de sus modelos no aguantaba diez minutos sin mirar el móvil, y ha ganado. Prende otro habano con otro billete. «Las apuestas pequeñas me aburren, preciosa. Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+      "100000": "Cien mil dólares en tu cuenta y Sergio Valdés ya ha mandado a uno de sus guardaespaldas a averiguar de dónde salen. Mientras tanto, te invita a sentarte en el sofá blanco, te ofrece un habano encendido con un billete de cien y lanza una moneda de oro al aire, una y otra vez, sin dejar de mirarte. «Una mujer con dinero propio. Qué rareza. Te propongo un juego: si sale cara, cien mil dólares más para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+      "1000000": "La noticia de tu millón le ha amargado la noche a Sergio Valdés: por primera vez en años, en este piso hay alguien que da más que hablar que él. Para dejar las cosas claras, prende el habano con un antiguo billete de mil dólares, de los que ya no se fabrican, y despide a sus modelos con un gesto. «Ya que somos dos, juguemos como iguales. Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»",
+      "nada": "Te has colado en el piso VIP sin un dólar, detrás de un carrito de champán. Sergio Valdés, multimillonario de sonrisa blanqueada, prende un habano con un billete de cien dólares entre modelos y guardaespaldas, y te pilla mirando las cenizas del billete como quien mira un plato de comida. Se le escapa una risa. «Por fin alguien que sabe lo que vale esto. Te propongo un juego: lanzo esta moneda. Si sale cara, cien mil dólares para ti; si sale cruz, te quedas conmigo hasta el amanecer. ¿Hay trato?»"
     },
-    options: [
-      { say: "Mi compañía no está en la mesa, Sergio. Ni por cien mil ni por un millón. Pero si quieres apostar, la casa acepta tu dinero con mucho gusto, y la directora te invita a una copa.", reply: "Sergio se ríe con ganas y apaga el billete en el cenicero. «La directora. Claro.» Guarda la moneda. «Me gusta que me digan que no; pasa poco.» Las modelos se miran entre ellas, sorprendidas de que alguien rechace a Sergio." },
-      { say: "Te propongo otro trato: si sale cara, me das los cien mil; si sale cruz, cenas conmigo y con tu anfitrión y me cuentas qué te haría volver al Meridiano cada mes.", reply: "Sergio lanza la moneda al aire, la atrapa y la tapa con la mano. Te mira un buen rato. «Cruz», dice, sin enseñarla. «Cena de negocios con la directora. Qué aburrido… y qué tentador.» Llama a su anfitrión con un chasquido de dedos." },
-      { say: "A las mujeres como yo no se nos gana lanzando monedas. Quema otro billete, a ver si así me impresionas.", reply: "Sergio se queda quieto con el mechero en la mano. Luego suelta una carcajada que hace temblar las copas. «¡Tocado y hundido!» Guarda el mechero. «Nadie me había hecho sentir ridículo en diez años. Siéntate, por favor. Sin monedas.»" },
+    "options": [
+      {
+        "say": "Hay trato, pero con una condición: la moneda la elijo yo, de mi propio bolso.",
+        "reply": "Sergio arquea las cejas, divertido. «Desconfiada. Me gusta». Sacas una moneda de veinticinco centavos y él la mira como si fuera una reliquia. «Hacía veinte años que no tocaba algo tan barato»."
+      },
+      {
+        "say": "No, gracias. Mi compañía no se gana en una apuesta; se gana con modales.",
+        "reply": "Una de las modelos se ríe por lo bajo y otra, por primera vez en toda la noche, deja el móvil sobre la mesa. Sergio se queda con el habano a medio camino de la boca. «¿Modales? Eso no lo vendían en la tienda donde compré todo lo demás»."
+      },
+      {
+        "say": "Doble o nada: si sale cruz, el que se queda conmigo hasta el amanecer es usted, y me lleva a desayunar churros.",
+        "reply": "Sergio se echa a reír de verdad, sin poses. «¿Churros? ¿Yo? Hace treinta años que no desayuno nada que no lleve caviar». Se queda pensativo. «Acepto. Necesito saber a qué saben»."
+      }
     ],
-    line2: "Sergio se recuesta en el sofá de terciopelo. «Te voy a ser sincero. Aquí hago lo que quiero: quemo dinero, fumo donde me da la gana, mis amigas no pagan nada y mis guardaespaldas entran armados. Pierdo dos millones al año en este casino. Si tu casa me pone límites, me voy al de enfrente. ¿Me los vas a poner?»",
-    options2: [
-      { say: "Sí, pocos y claros: nadie le falta el respeto al personal y las armas se quedan en la puerta. Todo lo demás lo hablamos. Esos dos límites no se negocian, ni por dos millones.", reply: "Sergio te mira largamente. Luego hace un gesto y uno de los guardaespaldas se quita la pistola y se la entrega a un guardia del casino. «Dos reglas. Me caben en la cabeza.» Sonríe. «En el de enfrente no tienen ninguna, y por eso me aburro allí.»" },
-      { say: "Antes de responderte, quiero hacer las cuentas: cuánto ganamos contigo y cuánto nos cuestan tus caprichos, tus amigas y las quejas de otros clientes. Si sale a cuenta, hablamos de límites.", reply: "Sergio aplaude despacio. «Una mujer que me calcula. Me siento como una acción en bolsa.» Se encoge de hombros. «Haz tus cuentas, directora. Te ahorro trabajo: mis amigas comen poco, pero beben muchísimo.»" },
-      { say: "Vete al de enfrente si quieres. Pero allí serás uno más con dinero; aquí eres alguien a quien conocemos. Lo que te retiene no son los caprichos, sino que te traten como a una persona.", reply: "Sergio se queda en silencio, el habano apagado entre los dedos. «Una persona…» Mira a las modelos, que han vuelto a sus teléfonos. «Hace mucho que nadie me trata como a una persona. Me tratan como a un cajero automático.»" },
+    "line2": "Sergio da una calada larga y deja que el humo le esconda la cara. Por un instante parece menos rico y más solo. «¿Quieres saber lo peor de tenerlo todo? Que todo el mundo me da la razón. Ya no sé si soy gracioso o si me ríen los chistes porque pago yo. Dime algo sincero sobre mí, aunque escueza. ¿Te atreves?»",
+    "options2": [
+      {
+        "say": "Me atrevo: tus chistes no tienen ninguna gracia. Te lo digo gratis, que eso no lo puedes comprar.",
+        "reply": "Las modelos contienen la respiración. Sergio se queda serio… y luego se ríe a carcajadas, como un niño. «¡Lo sabía! ¡Veinte años contando el mismo chiste del loro y nadie me había avisado!»"
+      },
+      {
+        "say": "Que alguien que necesita público para encender un puro no está tan contento como aparenta.",
+        "reply": "Sergio apaga el habano despacio, aplastándolo hasta que no queda ni una chispa. «Mi psicólogo cobra quinientos dólares la hora y nunca se ha atrevido a decirme eso», murmura. «Debería contratarte a ti»."
+      },
+      {
+        "say": "Que todo esto parece una fiesta, pero tus guardaespaldas son los únicos que no se aburren.",
+        "reply": "Sergio mira a su alrededor como si viera el reservado por primera vez: modelos medio dormidas, champán sin tocar, música que nadie escucha. «Tienes razón», dice. «Muchachos, ¿alguien conoce un sitio donde pongan churros a estas horas?»"
+      }
     ],
-    end: "Sergio te regala la moneda de oro «para cuando quieras apostar de verdad». Al fondo del pasillo, un hombre joven y pálido grita que va a jugarse su yate en una sola mano.",
-    talk: [
-      "¿Qué te provoca ver a alguien quemar dinero para presumir: risa, rabia, envidia o pena?",
-      "¿Aceptarías pasar una noche con un desconocido muy rico solo para cenar y hablar por cien mil dólares? ¿Por qué?",
-      "¿Crees que las personas muy ricas pueden tener amigos de verdad? ¿Y relaciones de pareja sinceras?",
-      "¿Has tenido que poner límites a alguien poderoso, un jefe, un cliente o un familiar? ¿Cómo lo hiciste?",
-      "En tu trabajo, ¿se tolera más a un cliente que deja mucho dinero? ¿Dónde pondrías tú el límite?",
+    "end": "Sergio deja la moneda sobre la mesa, sin lanzarla, y se queda mirándola un buen rato. Sus guardaespaldas se relajan por primera vez en toda la noche. Por un momento, el hombre más rico del piso parece solo un cliente más esperando a que alguien le diga que ya puede irse a casa.",
+    "talk": [
+      "¿Qué crees que busca alguien que quema dinero delante de los demás: poder, atención o llenar un vacío?",
+      "¿Aceptarías una apuesta absurda si el premio fuera enorme? ¿Qué cosas no te jugarías nunca?",
+      "¿Piensas que la gente muy rica acaba más sola que los demás? ¿Por qué?",
+      "¿Prefieres que te digan una verdad que duele o una mentira que te halaga? ¿Y en el trabajo?",
+      "Si hubieras nacido con una fortuna enorme, ¿en qué tipo de persona crees que te habrías convertido?"
     ],
-    words: ["ballena", "límites", "capricho", "quemar dinero"],
+    "words": [
+      "ser calderilla",
+      "dar la razón",
+      "escocer",
+      "doble o nada"
+    ]
   },
   yate: {
-    title: "El heredero y su yate",
-    line: "En una mesa privada de cartas, Julián, un heredero de treinta años con el pelo engominado y los ojos rojos, ha perdido todo su crédito de la noche. Ahora quiere jugarse su yate, el «Fortuna III», en una sola mano: la jefa de crédito del casino está dispuesta a darle tres millones con el yate como garantía. «Mi padre dice que soy un inútil que solo sabe gastar. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo delante de ti. «Elige tú la carta. ¿La izquierda o la derecha?»",
-    money: {
-      nada: "En una mesa privada de cartas, Julián, un heredero de treinta años con los ojos rojos, quiere jugarse su yate, el «Fortuna III», en una sola mano: la jefa de crédito le ofrece tres millones con el barco como garantía. Al verte sin un peso, se ríe con amargura. «Tú no tienes nada y pareces feliz. Yo lo tengo todo y mi padre dice que soy un inútil. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo. «Elige tú la carta. ¿La izquierda o la derecha?»",
-      "100": "En una mesa privada de cartas, Julián, un heredero de treinta años con el pelo engominado, quiere jugarse su yate, el «Fortuna III», en una sola mano. Ve tu billete de cien en la mano y te lo quita para usarlo de marcapáginas en su libreta de deudas. «Esto es lo que vale mi palabra para mi padre: cien dólares. Si gano esta mano, tendrá que respetarme.» Te devuelve el billete y pone dos cartas boca abajo. «Elige tú la carta. ¿La izquierda o la derecha?»",
-      "500": "En una mesa privada de cartas, Julián, un heredero de treinta años con los ojos rojos, ha perdido todo su crédito y ahora quiere jugarse su yate, el «Fortuna III», en una sola mano: la jefa de crédito le ofrece tres millones con el barco como garantía. «Mi padre dice que soy un inútil que solo sabe gastar. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo delante de ti. «Elige tú la carta. ¿La izquierda o la derecha?»",
-      "1000": "En una mesa privada de cartas, Julián, un heredero de treinta años, ve que llevas mil dólares y te ofrece cien mil «si me traes suerte». La jefa de crédito está a punto de darle tres millones con su yate, el «Fortuna III», como garantía. «Mi padre dice que soy un inútil que solo sabe gastar. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo delante de ti. «Elige tú la carta. ¿La izquierda o la derecha?»",
-      "10000": "En una mesa privada de cartas, Julián, un heredero de treinta años con los ojos rojos, ve tus diez mil dólares y te pide que los pongas junto a su yate, el «Fortuna III», «para que la apuesta sea de los dos». La jefa de crédito está lista para darle tres millones con el barco como garantía. «Mi padre dice que soy un inútil. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo. «Elige tú la carta. ¿La izquierda o la derecha?»",
-      "100000": "En una mesa privada de cartas, Julián, un heredero de treinta años, ve tu maletín de cien mil dólares y se le iluminan los ojos. «Si pierdo el yate, ¿me prestas eso para recuperarlo?» La jefa de crédito está a punto de darle tres millones con su yate, el «Fortuna III», como garantía. «Mi padre dice que soy un inútil. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo delante de ti. «Elige tú la carta. ¿La izquierda o la derecha?»",
-      "1000000": "En una mesa privada de cartas, Julián, un heredero de treinta años, se pone de pie cuando entras con tu millón de dólares. «¡Tú! Cómprame el yate ahora mismo y así no tengo que jugármelo.» Pero la jefa de crédito ya tiene preparados tres millones con el «Fortuna III» como garantía, y Julián vuelve a sentarse. «No. Mi padre dice que soy un inútil. Si gano esta mano, tendrá que respetarme.» Pone dos cartas boca abajo. «Elige tú la carta. ¿La izquierda o la derecha?»",
+    "title": "El barco y la baraja",
+    "line": "En una mesa privada del piso VIP, Julián, un heredero de treinta años con la camisa desabrochada y ojeras de tres noches sin dormir, ha dejado sobre el tapete las llaves de un yate de cuarenta metros. Una sola mano contra la banca: carta más alta gana. Los crupieres sudan; el jefe de sala reza en silencio. Julián te ve y te acerca la baraja, extendida en abanico. «Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+    "money": {
+      "100": "Con tus cien dólares has subido a curiosear y te encuentras a Julián, heredero de treinta años, con las llaves de un yate de cuarenta metros sobre la mesa. Te pregunta cuánto llevas encima y, al oírlo, aplaude encantado. «¡Cien! Lo mismo que vale mi opinión en las reuniones de la empresa familiar. Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+      "500": "Tú, con tus quinientos dólares, y Julián, con un yate: así de desigual es la mesa privada donde te ha invitado a sentarte. El heredero, camisa desabrochada y mirada vidriosa, ha puesto las llaves sobre el tapete y espera una sola carta. Te acerca la baraja en abanico. «Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+      "1000": "Llevas mil dólares jugados y una racha que ya comentan los crupieres; Julián, heredero de treinta años, lo ha oído y te manda llamar con un camarero. Sobre el tapete, las llaves de su yate esperan una sola carta. «Dicen que esta noche tienes una suerte que da miedo. Préstamela un minuto. Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+      "10000": "Con diez mil dólares jugados, un camarero te trae, de parte de Julián, una copa y una nota: «¿Me ayudas a perder un barco?». En la mesa privada, el heredero de treinta años ha dejado las llaves de su yate sobre el tapete y espera una sola carta, con la camisa desabrochada y las manos inquietas. «Gracias por venir. Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+      "100000": "Julián te ha visto llegar con tu séquito de ballena de cien mil y ha decidido que eres la única persona del piso que no le va a pedir nada. Te sienta a su lado, aparta a su asesor financiero, que intenta detenerlo con el móvil en la mano, y empuja hacia el centro las llaves de un yate de cuarenta metros. «Tú sabes lo que es que te traten bien por dinero. Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+      "1000000": "Tu millón ha hecho que Julián se sienta, por primera vez en su vida, el segundo hombre más rico de la sala, y no lo lleva bien. Para recuperar el protagonismo, ha puesto sobre el tapete las llaves de su yate y la escritura de una casa en Malibú, delante de medio piso VIP. «Esta noche, o soy una leyenda o soy un chiste. Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»",
+      "nada": "Te has colado en el piso VIP sin un dólar y lo primero que ves es una locura: Julián, un heredero de treinta años, ha dejado las llaves de su yate sobre el tapete. Una sola mano, carta más alta gana. Te ve descalza, con los zapatos en la mano, y se ríe sin alegría. «Tú no tienes nada que perder y yo tengo demasiado; hacemos buena pareja. Según mi padre, no he acertado una decisión en mi vida. Que esta la tome otra persona. ¿Te atreves a elegir la carta?»"
     },
-    options: [
-      { say: "No voy a elegir tu carta, Julián. Y como directora, tampoco voy a dejar que se apruebe un crédito de tres millones a alguien que juega por rabia contra su padre.", reply: "Julián golpea la mesa. «¿Quién te crees que eres?» Luego se le quiebra la voz. «Eso es justo lo que diría mi padre.» La jefa de crédito te mira con alivio y cierra la carpeta despacio." },
-      { say: "Elijo la izquierda… pero solo después de que me cuentes qué te dijo exactamente tu padre la última vez que hablaron.", reply: "Julián se queda inmóvil con la mano sobre la carta. «Me dijo que el yate era lo único mío que valía algo.» Se le escapa una risa amarga. «Y aquí estoy, a punto de perderlo para demostrarle que se equivoca.» Aparta la mano de las cartas." },
-      { say: "Si quieres que tu padre te respete, no apuestes el yate: invítalo a navegar y gánale en otra cosa. Perder tres millones en una mano solo le daría la razón.", reply: "Julián te mira como si nadie le hubiera hablado así en su vida. «¿Invitarlo a navegar? Hace cinco años que no subimos juntos al barco.» Se pasa las manos por el pelo. «A lo mejor por eso me odia. O por eso lo odio yo.»" },
+    "options": [
+      {
+        "say": "Me atrevo. La del medio: ni la primera, que es de cobardes, ni la última, que es de desesperados.",
+        "reply": "Julián se queda mirando la carta con los ojos muy abiertos. «Nadie me había explicado nunca una decisión», susurra. «Mi padre solo me dice cuáles están mal». El crupier la separa del mazo sin darle la vuelta."
+      },
+      {
+        "say": "No pienso elegir. Si lo pierdes, quiero que sea por culpa tuya, no mía.",
+        "reply": "Julián encaja el golpe en silencio. «Es lo más justo que me han dicho en años», murmura. Retira la mano de la baraja, pero deja las llaves donde estaban."
+      },
+      {
+        "say": "Antes dime una cosa: ¿te gusta navegar, o el yate es solo otro regalo que nunca pediste?",
+        "reply": "Julián suelta una risa rota. «Me mareo en el mar. Mi padre me lo regaló para que sus socios me vieran con algo grande. Nunca he salido del puerto»."
+      }
     ],
-    line2: "La señora Benítez, jefa de crédito, se acerca y te habla al oído. «Directora, el padre de Julián es uno de nuestros cinco mejores clientes y en teoría avala sus deudas. Si le negamos el crédito al hijo, el padre puede ofenderse; si se lo damos y pierde, quizá no pague y perdemos a los dos. ¿Qué decides?»",
-    options2: [
-      { say: "Llamamos al padre ahora mismo. Si avala las deudas, tiene derecho a saber que su hijo quiere jugarse tres millones esta noche. Es una conversación incómoda, pero es lo correcto.", reply: "Benítez duda, con el teléfono en la mano. «A las tres de la madrugada…» Marca el número. Al otro lado se oye una voz grave y cansada. Julián, al reconocerla, se tapa la cara con las manos. «Papá, yo…»" },
-      { say: "Ni un dólar más esta noche. El crédito se decide con la cabeza fría, por la mañana y con los papeles delante, no a las tres de la madrugada con un cliente borracho de rabia.", reply: "Benítez cierra la carpeta con un golpe seco. «Es lo que dice el reglamento, aunque nadie lo aplica con los hijos de los grandes clientes.» Julián protesta, pero ya sin fuerza. «Mañana, entonces.» Las dos saben que mañana no volverá." },
-      { say: "Le damos una cantidad simbólica, cincuenta mil, sin tocar el yate. Así no lo humillamos delante de todos, pero tampoco ponemos en riesgo la relación con su padre.", reply: "Benítez levanta una ceja. «Una salida elegante.» Julián mira las fichas, menos de las que esperaba. «Cincuenta mil… Me tratan como a un niño.» Pero las acepta, y en el fondo parece aliviado de no tener que jugarse el barco." },
+    "line2": "Julián se sirve otro whisky que no llega a beberse. «¿Sabes qué es lo peor de ser hijo de alguien importante? Que, si sale bien, es mérito suyo, y si sale mal, es culpa tuya. Si pierdo el yate, al menos será algo mío de verdad, aunque sea un desastre. ¿Lo entiendes, o te parece un capricho de niño mimado?»",
+    "options2": [
+      {
+        "say": "Lo entiendo. Aunque perder a lo grande para llamar su atención sigue siendo pedirle permiso, solo que más caro.",
+        "reply": "Julián se queda inmóvil un buen rato. Luego recoge las llaves del tapete y se las guarda en el bolsillo. «Me has desmontado en una frase», dice. «Por hoy, el barco se queda en el puerto. Como siempre»."
+      },
+      {
+        "say": "Me parece un capricho de niño mimado, sí. Pero eso no quita que te duela de verdad.",
+        "reply": "Julián sonríe por primera vez en toda la noche. «Gracias. Eres la primera persona que me trata como a un adulto y como a un niño a la vez. Y las dos tienen razón»."
+      },
+      {
+        "say": "Lo entiendo tan bien que, si tuviera un yate y un padre como el tuyo, ya lo habría apostado dos veces.",
+        "reply": "Julián te mira con complicidad, de igual a igual. «Lo sabía. A ti también te pesa un padre, ¿verdad? Se te nota en cómo miras las cartas»."
+      }
     ],
-    end: "Julián gira las dos cartas: una reina y un dos. Nunca sabrá cuál habría elegido. Se guarda la llave del «Fortuna III» en el bolsillo. Desde el pasillo se oye un flash, un grito y unos guardaespaldas corriendo.",
-    talk: [
-      "¿Qué has hecho, o qué has visto hacer a alguien, solo para que un padre o una madre se sintiera orgulloso?",
-      "¿Crees que los hijos de padres muy exitosos lo tienen más fácil o más difícil en la vida? ¿Por qué?",
-      "¿Has tomado alguna vez una decisión arriesgada por rabia o por orgullo? ¿Cómo terminó?",
-      "Si tuvieras un yate, ¿qué harías con él? ¿Lo apostarías por algo en algún caso?",
-      "En tu trabajo, ¿cómo se dice que no a un cliente importante sin perderlo? ¿Te ha tocado hacerlo?",
+    "end": "Al final, nadie gira la carta. El crupier la devuelve al mazo con un suspiro de alivio y el jefe de sala se santigua discretamente. Julián se levanta, te besa la mano con una cortesía antigua y se aparta para llamar a alguien; por cómo le tiembla la voz, sospechas que es su madre.",
+    "talk": [
+      "¿Has hecho alguna vez algo arriesgado solo para que tu familia o tu jefe te tomaran en serio?",
+      "¿Qué hace más daño: un padre que exige demasiado o uno que no espera nada de ti?",
+      "¿Crees que los hijos de familias ricas lo tienen más fácil o simplemente distinto?",
+      "¿Por qué hay personas que necesitan público para hacer sus mayores locuras?",
+      "Si pudieras decirle una sola frase a tu padre o a tu madre sin miedo a su reacción, ¿cuál sería?"
     ],
-    words: ["línea de crédito", "garantía", "aval", "jugarse algo a una carta"],
+    "words": [
+      "en abanico",
+      "encajar el golpe",
+      "de igual a igual",
+      "llamar la atención"
+    ]
   },
   senador: {
-    title: "El senador y la foto",
-    line: "En el pasillo del Piso VIP salta un flash. Un fotógrafo acaba de pillar al senador Robles saliendo de una suite con una mujer joven que no es su esposa. Antes de que el fotógrafo pueda correr, dos guardaespaldas lo empotran contra la pared y le quitan la cámara. La mujer desaparece por la escalera. El senador, con la corbata torcida y el pelo blanco revuelto, te ve y se acerca muy rápido, sonriendo como en campaña. «Señorita, tú me vas a salvar. Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-    money: {
-      nada: "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles saliendo de una suite con una mujer joven que no es su esposa. Dos guardaespaldas le quitan la cámara. El senador te ve sin bolso, sin joyas, y se acerca rápido, sonriendo como en campaña. «Señorita, tú pareces alguien a quien le vendría bien un dinero. Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-      "100": "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles saliendo de una suite con una mujer que no es su esposa. Los guardaespaldas le quitan la cámara. El senador te ve contar tus cien dólares junto al ascensor y se acerca con su mejor sonrisa de campaña. «Señorita, eso son cien dólares; yo te ofrezco diez mil. Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-      "500": "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles con una mujer joven que no es su esposa. Dos guardaespaldas empotran al fotógrafo contra la pared y le quitan la cámara. El senador, con la corbata torcida, te ve y se acerca muy rápido, sonriendo como en campaña. «Señorita, tú me vas a salvar. Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-      "1000": "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles saliendo de una suite con una mujer que no es su esposa. Los guardaespaldas le quitan la cámara a empujones. El senador se fija en tu vestido rojo y en tu bolso. «Tienes pinta de clienta seria, y eso me sirve.» Se acerca con su sonrisa de campaña. «Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-      "10000": "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles con una mujer que no es su esposa. Dos guardaespaldas le arrancan la cámara. El senador te reconoce: el anfitrión le ha hablado de la clienta de diez mil dólares de esta noche. «Una mujer con dinero no necesita mi dinero, pero quizá sí un amigo en el Senado.» Te sonríe como en campaña. «Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-      "100000": "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles con una mujer que no es su esposa. Los guardaespaldas le quitan la cámara. El senador sabe que eres la ballena de cien mil dólares y cambia el tono: ya no ofrece dinero, ofrece favores. «Licencias, permisos, una llamada al gobernador… lo que quieras.» Se acerca con su sonrisa de campaña. «Di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
-      "1000000": "En el pasillo del Piso VIP salta un flash: un fotógrafo acaba de pillar al senador Robles con una mujer que no es su esposa. Los guardaespaldas le quitan la cámara. El senador ha oído lo de tu millón en efectivo y se le ocurre una idea peor. «Una mujer con un millón en efectivo en Las Vegas también tiene cosas que esconder, ¿no?» Sonríe como en campaña. «Hagamos un pacto: di que estabas conmigo, que era una reunión de trabajo. Te lo pagaré bien. ¿Lo dirás?»",
+    "title": "Política exterior",
+    "line": "Un flash estalla en el rincón de la terraza: un fotógrafo acaba de pillar al senador Robles saliendo de un cenador con una pelirroja que, desde luego, no es su esposa. Dos guardaespaldas se abalanzan sobre el fotógrafo y le arrancan la cámara. El senador, con la camisa mal abrochada y una marca de carmín junto a la oreja, se planta delante de ti con su mejor sonrisa de cartel electoral. «Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+    "money": {
+      "100": "Has salido a la terraza a contar tus cien dólares lejos de la tentación cuando un flash revienta en el rincón: el senador Robles, pillado con una mujer que no es su esposa. Mientras sus guardaespaldas forcejean con el fotógrafo, el senador te mete un billete doblado en el bolsillo del vestido sin preguntar. «Una pequeña contribución a su causa, querida. Ahora escúcheme: usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+      "500": "Con tus quinientos dólares, has salido a la terraza a ver las fuentes del Strip cuando un flash revienta a tu derecha. Un fotógrafo ha pillado al senador Robles con una pelirroja que no es su esposa; dos guardaespaldas le arrancan la cámara y lo aplastan contra la barandilla. El senador, con la corbata en la mano, viene directo hacia ti. «Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+      "1000": "Has ganado mil dólares y has salido a la terraza a celebrarlo con una copa, y la noche te regala un escándalo: un fotógrafo acaba de pillar al senador Robles con una mujer que no es su esposa. Mientras sus guardaespaldas le quitan la cámara, el senador te repasa de arriba abajo, calculando si das el tipo de coartada. «Elegante, discreta, con cara de leer la prensa. Perfecta. Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+      "10000": "Tu anfitrión te estaba proponiendo un fin de semana de golf cuando el flash revienta en el rincón de la terraza: el senador Robles, pillado con una pelirroja que no es su esposa. El anfitrión mira el reloj, recuerda una «reunión urgente» y desaparece. Los guardaespaldas acorralan al fotógrafo. El senador te tiende una tarjeta de visita con su escudo dorado. «Estas tarjetas abren muchas puertas en Washington, y le puedo dar una a cambio de un pequeño favor. Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+      "100000": "Con cien mil dólares en juego, la dirección te ha reservado la mejor mesa de la terraza, y el senador Robles lo sabe, porque su asesora se lo ha chivado hace una hora. Cuando el flash lo pilla con una pelirroja que no es su esposa, no corre hacia el ascensor: corre hacia ti, mientras sus guardaespaldas pisotean la cámara. «Su palabra vale aquí más que la de diez fotógrafos, y usted lo sabe. Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+      "1000000": "Con un millón de dólares, eres la noticia de la noche, y en la terraza hay más periodistas buscándote a ti que a nadie. Por eso el senador Robles, recién pillado con una pelirroja que no es su esposa, ve en ti la salvación perfecta: si los titulares hablan de la millonaria misteriosa, nadie hablará de él. Te ofrece el brazo, como en un baile de gala. «Dos titulares se tapan mejor que uno. Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»",
+      "nada": "Has subido a la terraza sin un dólar, solo a tomar el aire, cuando un flash estalla en el rincón: el senador Robles, pillado con una pelirroja que no es su esposa. Sus guardaespaldas le arrancan la cámara al fotógrafo. El senador te ve con los zapatos en la mano, saca la cartera y empieza a contar billetes. «Usted necesita dinero y yo una testigo; así funciona el mercado. Señorita, usted y yo llevamos toda la noche aquí, hablando de política exterior. ¿Me echa una mano?»"
     },
-    options: [
-      { say: "No voy a mentir por ti, senador. Pero tampoco voy a permitir que tus guardaespaldas le quiten la cámara a nadie en mi casino. Que se la devuelvan ahora mismo.", reply: "El senador pierde la sonrisa de golpe. «¿Sabes con quién estás hablando?» Sus guardaespaldas dudan. Tú no apartas la mirada. Al final, uno de ellos devuelve la cámara, sin la tarjeta de memoria. El fotógrafo grita: «¡Esto es un robo!»" },
-      { say: "Lo que pasa en este piso es privado; eso sí te lo garantizo a ti y a cualquier cliente. Pero mi nombre no entra en tu coartada, ni gratis ni pagado.", reply: "El senador se pasa la mano por el pelo y suspira. «Discreción sin complicidad. Muy de abogada.» Se arregla la corbata. «Está bien. Pero si sale esa foto, el Meridiano también saldrá en todos los periódicos.»" },
-      { say: "¿Contigo, senador? Con esa corbata y a estas horas, nadie se lo creería. Busca una excusa mejor, o mejor aún, ve a casa y cuéntale la verdad a tu mujer.", reply: "El senador se queda boquiabierto y luego suelta una risa nerviosa. «Tienes un sentido del humor muy peligroso.» Mira al fotógrafo, luego a ti. «La verdad… Hace treinta años que no le cuento la verdad a nadie.»" },
+    "options": [
+      {
+        "say": "Claro que sí. Y de paso me explica su programa fiscal, que me interesa mucho saber quién va a pagar esto.",
+        "reply": "El senador suelta una risa nerviosa y se abrocha mal otro botón. «Entendido, entendido. Ya hablaremos de impuestos… y de su generosa aportación a mi tranquilidad»."
+      },
+      {
+        "say": "No pienso mentir por un hombre que lleva el pintalabios de otra en la oreja.",
+        "reply": "El senador se frota la oreja con el pañuelo y solo consigue extender la mancha. «Es una alergia», balbucea. «Al marisco». Uno de sus guardaespaldas tose para no reírse."
+      },
+      {
+        "say": "¿Política exterior? Si yo fuera la pelirroja, me ofendería que me llamara así.",
+        "reply": "El senador se pone colorado hasta el cuello. Desde las sombras, la pelirroja suelta una carcajada. «Me ha llamado cosas peores, cariño. Pero esa es nueva»."
+      }
     ],
-    line2: "Tu teléfono suena: es Lucía, jefa de Comunicación. «Directora, el fotógrafo dice que va a denunciar al casino por el robo de la cámara, y un periodista de un diario nacional ya ha llamado preguntando si el senador Robles estaba aquí esta noche. ¿Qué respondemos?»",
-    options2: [
-      { say: "Respondemos que, por política, no confirmamos ni negamos la presencia de ningún cliente. Y en paralelo, investigamos lo de la cámara: si alguien la robó en nuestra casa, lo diremos.", reply: "Lucía toma nota a toda velocidad. «Privacidad para todos los clientes, sin excepción. Es la línea más segura.» Hace una pausa. «Y lo de la cámara, transparencia. Me gusta: no protegemos al senador, protegemos la regla.»" },
-      { say: "Al periodista, nada por ahora. Al fotógrafo, sí: le pedimos disculpas, le ofrecemos ver las grabaciones de seguridad y que la policía decida. No quiero que el casino parezca el cómplice.", reply: "Lucía duda. «Si le enseñamos las grabaciones, verá también al senador.» Silencio en la línea. «Aunque, si no se las enseñamos, mañana el titular será que el Meridiano encubre robos. Prefiero el otro titular.»" },
-      { say: "Preparamos ya un comunicado breve, por si la foto sale mañana: el casino respeta la privacidad de sus clientes y no tolera la violencia contra nadie. Mejor tenerlo escrito antes de necesitarlo.", reply: "Lucía respira aliviada. «Un comunicado de reserva. Por fin alguien que piensa antes de la crisis.» Se oye cómo teclea. «Lo tendrás en diez minutos. Y te aviso: el senador ya ha llamado tres veces a Don Aurelio.»" },
+    "line2": "El fotógrafo, sangrando por la nariz, grita desde el suelo que tiene otra tarjeta de memoria escondida en el calcetín. El senador se pasa la mano por el pelo engominado y baja la voz. «Escúcheme bien. Las elecciones son dentro de dos semanas. Si esto sale en la prensa, se acabó mi carrera, mi matrimonio y mi casa en la playa. Póngale precio. ¿Cuánto cuesta que usted no haya visto nada?»",
+    "options2": [
+      {
+        "say": "Nada. Prefiero que me deba un favor. Los favores de un senador valen más que su dinero.",
+        "reply": "El senador traga saliva y te entrega su tarjeta personal, con el número privado escrito a mano. «Es lo más inteligente y lo más aterrador que me han dicho en toda la campaña»."
+      },
+      {
+        "say": "Lo que cueste curarle la nariz al fotógrafo, multiplicado por diez. Y le pide perdón delante de mí.",
+        "reply": "El senador mira al fotógrafo ensangrentado y, por primera vez, parece avergonzado de verdad. «Muchachos, que lo atiendan, que le pongan hielo y una copa», ordena. Luego, entre dientes: «Perdón, caballero»."
+      },
+      {
+        "say": "No tiene precio. Yo no compro ni vendo silencios: si me preguntan, diré lo que he visto.",
+        "reply": "El senador palidece y retrocede un paso. «Entonces es usted más peligrosa que el fotógrafo», murmura. Sus guardaespaldas te miran por primera vez con algo parecido al respeto."
+      }
     ],
-    end: "El senador se aleja por el pasillo arreglándose la corbata y llamando a su abogado. El fotógrafo te da su tarjeta. «Si algún día quieres contar lo que pasa en este piso, llámame.» Detrás de ti, el pasillo vuelve a quedarse en silencio.",
-    talk: [
-      "¿Mentirías por alguien poderoso a cambio de dinero o de un favor? ¿Qué tendría que pasar para que dijeras que sí?",
-      "¿Crees que la vida privada de un político debería importarnos? ¿Dónde está el límite?",
-      "¿Has guardado alguna vez un secreto de otra persona que te pesaba demasiado? ¿Cómo lo llevaste?",
-      "¿Qué opinas de los fotógrafos que persiguen a famosos y políticos: hacen un servicio público o se aprovechan?",
-      "En tu trabajo, ¿qué harías si un cliente muy importante te pidiera algo poco ético? ¿Quién te respaldaría?",
+    "end": "El senador desaparece en el ascensor, rodeado de sus guardaespaldas y frotándose la oreja con el pañuelo. La pelirroja enciende un cigarrillo, te ofrece otro y te dice, como si nada: «Mañana él saldrá en todos los periódicos. Yo, como siempre, seré “una acompañante sin identificar”».",
+    "talk": [
+      "¿Mentirías para proteger a alguien que ha sido infiel? ¿Y si fuera tu mejor amigo o un familiar?",
+      "¿Por qué crees que tantas personas poderosas arriesgan su carrera por una aventura?",
+      "¿Debería importarnos la vida privada de un político a la hora de votar? ¿Hasta qué punto?",
+      "¿Te has enterado alguna vez de una infidelidad ajena? ¿Lo contaste o preferiste callar?",
+      "¿Hay algún secreto que guardarías aunque te pareciera injusto? ¿Por qué?"
     ],
-    words: ["discreción", "comunicación de crisis", "coartada", "no confirmar ni negar"],
+    "words": [
+      "echar una mano",
+      "dar el tipo",
+      "coartada",
+      "ponerse colorado"
+    ]
   },
 };
+
 export default scenes;

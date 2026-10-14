@@ -62,7 +62,9 @@ export default function CasinoGame() {
   const done = doneFor(state);
   const count = progress(state);
   const level = LEVELS.find(l => l.id === state.level)!;
-  const [heard, markHeard] = useListeningDone('casino', state.level);
+  // The Marketing section is A2: its listenings are the A2 ones.
+  const listenLevel = level.track ? 'A2' : state.level;
+  const [heard, markHeard] = useListeningDone('casino', listenLevel);
   const floorInfo = FLOORS.find(f => f.id === state.floor)!;
   const money = MONEY.find(m => m.id === state.money) ?? MONEY[2];
 
@@ -112,19 +114,21 @@ export default function CasinoGame() {
         <p className="gm-lede">Valentina llega al Strip con una ficha dorada en el bolso: «Piso 3 · Medianoche». Tres pisos, treinta escenas y una noche para descubrir quién la espera arriba.</p>
         <p className="gm-label">Elige el nivel</p>
         <div className="gm-levels" role="radiogroup" aria-label="Nivel">
-          {LEVELS.map(l => <button key={l.id} type="button" role="radio" aria-checked={state.level === l.id} className={state.level === l.id ? 'is-on' : undefined} onClick={() => setState(s => setLevel(s, l.id))}>
+          {LEVELS.map(l => <button key={l.id} type="button" role="radio" aria-checked={state.level === l.id} className={[state.level === l.id ? 'is-on' : '', l.track ? 'gm-track' : ''].join(' ').trim() || undefined} onClick={() => setState(s => setLevel(s, l.id))}>
             <b>{l.label}</b><small>{l.hint}</small>
           </button>)}
         </div>
         <ModeSwitch mode={mode} onChange={setMode} />
         {mode === 'escucha' && <p className="gm-note">Comprensión auditiva: en cada círculo blanco escuchas una escena con voces de distintos países. Dos escuchas, preguntas, completar y leer.</p>}
-        {state.level === 'C1' && <p className="gm-note">C1 es otra historia: Valentina es la nueva directora de marketing y cada escena es una decisión con datos.</p>}
-        <p className="gm-label">¿Con cuánto dinero entra?</p>
-        <div className="gm-levels gm-money" role="radiogroup" aria-label="Dinero">
-          {MONEY.map(m => <button key={m.id} type="button" role="radio" aria-checked={state.money === m.id} className={state.money === m.id ? 'is-on' : undefined} onClick={() => setState(s => setMoney(s, m.id))}>
-            <b>{m.label}</b><small>{m.hint}</small>
-          </button>)}
-        </div>
+        {level.track && <p className="gm-note">Marketing es una sección aparte: Valentina es la nueva directora de marketing del casino. Nivel A2 con términos técnicos, una decisión por escena y después la conversación.</p>}
+        {!level.track && <>
+          <p className="gm-label">¿Con cuánto dinero entra?</p>
+          <div className="gm-levels gm-money" role="radiogroup" aria-label="Dinero">
+            {MONEY.map(m => <button key={m.id} type="button" role="radio" aria-checked={state.money === m.id} className={state.money === m.id ? 'is-on' : undefined} onClick={() => setState(s => setMoney(s, m.id))}>
+              <b>{m.label}</b><small>{m.hint}</small>
+            </button>)}
+          </div>
+        </>}
         <button type="button" className="gm-enter" onClick={() => setEntered(true)}>Entrar al casino</button>
         <p className="gm-help">Camina con las flechas o WASD. Espacio para saltar, Shift para correr, N para el nitro. Arrastra para mirar y párate en los círculos blancos para hablar.</p>
       </div>
@@ -132,7 +136,7 @@ export default function CasinoGame() {
 
     {/* ------------------------------------------------ HUD */}
     {entered && <header className="gm-hud">
-      <div className="gm-floor"><span>Piso {floorInfo.id} · {money.label}</span><b>{floorInfo.name}</b></div>
+      <div className="gm-floor"><span>Piso {floorInfo.id}{level.track ? '' : ` · ${money.label}`}</span><b>{floorInfo.name}</b></div>
       <div className="gm-hud-right">
         <span className="gm-progress">{count.done} de {count.total} escenas · {level.label}</span>
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Escenas'}</button>
@@ -141,7 +145,7 @@ export default function CasinoGame() {
     </header>}
 
     {entered && mode === 'escucha' && listenAt === undefined && !state.scene && !elevator && <ListeningBadge game="casino" done={heard} onList={() => setListenAt(null)} />}
-    {listenAt !== undefined && <ListeningCard game="casino" level={state.level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} />}
+    {listenAt !== undefined && <ListeningCard game="casino" level={listenLevel} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} />}
     {entered && !state.scene && listenAt === undefined && !elevator && !list && near && <div className="gm-prompt" role="status">
       {nearScene ? <button type="button" onClick={() => open(nearScene.id)}><kbd>E</kbd>{mode === 'escucha' ? `Escuchar · ${nearScene.place}` : `Hablar con ${nearScene.name}`}</button>
         : <button type="button" onClick={() => setElevator(true)}><kbd>E</kbd>Llamar al ascensor</button>}
