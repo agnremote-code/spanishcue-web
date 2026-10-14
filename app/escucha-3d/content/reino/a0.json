@@ -1,0 +1,292 @@
+{
+  "game": "reino",
+  "level": "A0",
+  "items": [
+    {
+      "id": "ines",
+      "title": "Una sopa en la posada de Inés",
+      "place": "La posada de la aldea",
+      "context": "Es de noche. Un viajero entra en la posada de Inés. Tiene hambre y pocas monedas.",
+      "speakers": [
+        { "name": "Inés", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Víctor", "country": "Puerto Rico", "voice": "es-PR-VictorNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Hola! Buenas noches. Soy Inés. Esta es mi posada." },
+        { "s": 1, "text": "Hola, Inés. Me llamo Víctor. Tengo hambre." },
+        { "s": 0, "text": "Hay sopa de pollo, pan y agua." },
+        { "s": 1, "text": "¿Cuánto es?" },
+        { "s": 0, "text": "Tres monedas." },
+        { "s": 1, "text": "Uy, tengo dos." },
+        { "s": 0, "text": "Bueno... dos monedas y una canción." }
+      ],
+      "choice": [
+        { "q": "¿Dónde está Víctor?", "options": ["En la posada", "En el puente", "En el bosque"], "answer": 0 },
+        { "q": "¿Qué sopa hay?", "options": ["Sopa de pescado", "Sopa de pollo", "Sopa de verduras"], "answer": 1 },
+        { "q": "¿Cuánto es la comida?", "options": ["Dos monedas", "Cinco monedas", "Tres monedas"], "answer": 2 },
+        { "q": "¿Qué paga Víctor al final?", "options": ["Dos monedas y una canción", "Tres monedas y un pan", "Una canción y nada más"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Qué comes cuando tienes hambre?", "model": "Como pan y fruta." },
+        { "q": "¿Te gusta la sopa?", "model": "Sí, me gusta la sopa de pollo." },
+        { "q": "¿Cantas bien?", "model": "No, canto mal, pero canto mucho." }
+      ],
+      "gaps": "Hay [sopa] de [pollo], [pan] y [agua].",
+      "glossary": [
+        { "word": "posada", "meaning": "casa donde los viajeros comen y duermen" },
+        { "word": "monedas", "meaning": "dinero de metal" },
+        { "word": "hambre", "meaning": "ganas de comer" },
+        { "word": "canción", "meaning": "música con palabras" }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "Cuatro herraduras para el caballo del rey",
+      "place": "La herrería junto al molino",
+      "context": "Marisol, una niña de la aldea, visita a Bruno en la herrería. Hay cosas de metal en la mesa.",
+      "speakers": [
+        { "name": "Bruno", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Marisol", "country": "El Salvador", "voice": "es-SV-LorenaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Hola, Bruno. ¿Qué es esto?" },
+        { "s": 0, "text": "Hola, Marisol. Es una herradura. Es para un caballo." },
+        { "s": 1, "text": "¿Cuántas herraduras hay?" },
+        { "s": 0, "text": "Mira: una, dos, tres, cuatro. Cuatro herraduras." },
+        { "s": 1, "text": "¿Para qué caballo?" },
+        { "s": 0, "text": "Para el caballo blanco del rey. Es grande y muy dormilón." },
+        { "s": 1, "text": "¡Ja, ja! Como tú." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Bruno y Marisol?", "options": ["De un perro", "De herraduras", "De una sopa"], "answer": 1 },
+        { "q": "¿Cuántas herraduras hay?", "options": ["Dos", "Tres", "Cuatro"], "answer": 2 },
+        { "q": "¿De qué color es el caballo del rey?", "options": ["Blanco", "Negro", "Marrón"], "answer": 0 },
+        { "q": "¿Cómo es el caballo?", "options": ["Pequeño y rápido", "Grande y dormilón", "Viejo y triste"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te gustan los caballos?", "model": "Sí, me gustan los caballos blancos." },
+        { "q": "¿Eres dormilón o dormilona?", "model": "Sí, soy muy dormilona." },
+        { "q": "¿Tienes un animal en casa?", "model": "Sí, tengo un gato negro." }
+      ],
+      "gaps": "Para el caballo [blanco] del [rey]. Es [grande] y muy [dormilón].",
+      "glossary": [
+        { "word": "herradura", "meaning": "pieza de metal para el pie del caballo" },
+        { "word": "caballo", "meaning": "animal grande; las personas van encima" },
+        { "word": "rey", "meaning": "el hombre que manda en el reino" },
+        { "word": "dormilón", "meaning": "persona o animal que duerme mucho" }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "Las luces de colores del bosque",
+      "place": "El bosque de las luciérnagas",
+      "context": "Liora, el hada del bosque, enseña las luces del bosque a los visitantes.",
+      "speakers": [
+        { "name": "Liora", "country": "Chile", "voice": "es-CL-CatalinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, hola. Soy Liora. Soy el hada del bosque." },
+        { "s": 0, "text": "Mira. Aquí hay luces. Hay luces verdes, luces azules y luces blancas." },
+        { "s": 0, "text": "Una luz es amarilla. Es una luciérnaga." },
+        { "s": 0, "text": "¿Y esa luz roja? ¡Ah! Es un zorro. El zorro tiene una linterna." },
+        { "s": 0, "text": "¡Hola, zorro! ¿Buscas tu casa?" }
+      ],
+      "choice": [
+        { "q": "¿Quién habla?", "options": ["Una princesa", "Un zorro", "Un hada"], "answer": 2 },
+        { "q": "¿De qué color son las primeras luces?", "options": ["Verdes, azules y blancas", "Rojas, negras y grises", "Amarillas y rosas"], "answer": 0 },
+        { "q": "¿Qué es la luz amarilla?", "options": ["Un zorro", "Una luciérnaga", "Una estrella"], "answer": 1 },
+        { "q": "¿Qué tiene el zorro?", "options": ["Un libro", "Un sombrero", "Una linterna"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Cuál es tu color favorito?", "model": "Mi color favorito es el azul." },
+        { "q": "¿Te gusta el bosque?", "model": "Sí, me gusta mucho el bosque." },
+        { "q": "¿Qué animal te gusta?", "model": "Me gusta el zorro." }
+      ],
+      "gaps": "Aquí hay [luces]. Hay luces [verdes], luces [azules] y luces [blancas].",
+      "glossary": [
+        { "word": "hada", "meaning": "mujer pequeña y mágica" },
+        { "word": "luciérnaga", "meaning": "insecto pequeño con luz" },
+        { "word": "zorro", "meaning": "animal del bosque, rojo, con una cola grande" },
+        { "word": "linterna", "meaning": "luz pequeña que llevas en la mano" }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "Pan y queso para cruzar el puente",
+      "place": "El puente de Sir Aldren",
+      "context": "Karla quiere cruzar el puente. Sir Aldren, el guardián, hace preguntas.",
+      "speakers": [
+        { "name": "Sir Aldren", "country": "España", "voice": "es-ES-AlvaroNeural" },
+        { "name": "Karla", "country": "Honduras", "voice": "es-HN-KarlaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Alto! Este es mi puente. ¿Cómo te llamas?" },
+        { "s": 1, "text": "Me llamo Karla. Buenos días, señor." },
+        { "s": 0, "text": "Soy Sir Aldren. ¿De dónde eres?" },
+        { "s": 1, "text": "Soy de la aldea. Vivo al lado del molino." },
+        { "s": 0, "text": "¿Y qué llevas en la cesta?" },
+        { "s": 1, "text": "Pan, queso y una manzana. ¿Quiere un poco?" },
+        { "s": 0, "text": "Mmm... Sí. Puedes pasar." }
+      ],
+      "choice": [
+        { "q": "¿Dónde están Karla y Sir Aldren?", "options": ["En el puente", "En la posada", "En el jardín"], "answer": 0 },
+        { "q": "¿De dónde es Karla?", "options": ["Del castillo", "De la aldea", "Del bosque"], "answer": 1 },
+        { "q": "¿Qué lleva Karla en la cesta?", "options": ["Flores, fruta y agua", "Libros, velas y una llave", "Pan, queso y una manzana"], "answer": 2 },
+        { "q": "¿Pasa Karla el puente?", "options": ["Sí, puede pasar", "No, no puede pasar", "Solo mañana"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cómo te llamas y de dónde eres?", "model": "Me llamo Ana. Soy de Lima." },
+        { "q": "¿Qué llevas en tu bolsa hoy?", "model": "Llevo agua, un libro y mi teléfono." },
+        { "q": "¿Te gusta el queso?", "model": "Sí, me gusta mucho el queso." }
+      ],
+      "gaps": "¿Y qué llevas en la [cesta]? [Pan], [queso] y una [manzana].",
+      "glossary": [
+        { "word": "alto", "meaning": "¡para!, no camines más" },
+        { "word": "puente", "meaning": "camino sobre un río" },
+        { "word": "aldea", "meaning": "pueblo pequeño" },
+        { "word": "cesta", "meaning": "bolsa de mimbre para llevar cosas" }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "Diez rosas rojas y una rosa azul",
+      "place": "Los jardines reales",
+      "context": "Celina, la jardinera, recibe a los visitantes en el jardín de rosas.",
+      "speakers": [
+        { "name": "Celina", "country": "Perú", "voice": "es-PE-CamilaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bienvenidos al jardín. Me llamo Celina. Soy jardinera." },
+        { "s": 0, "text": "Aquí hay muchas rosas. Hay diez rosas rojas y cinco rosas blancas." },
+        { "s": 0, "text": "Y aquí... una rosa azul. Solo una." },
+        { "s": 0, "text": "La rosa azul es especial. ¡Habla! Pero habla poco. Dice: buenos días." }
+      ],
+      "choice": [
+        { "q": "¿Quién es Celina?", "options": ["Una princesa", "Una jardinera", "Una posadera"], "answer": 1 },
+        { "q": "¿Cuántas rosas rojas hay?", "options": ["Cinco", "Una", "Diez"], "answer": 2 },
+        { "q": "¿Cuántas rosas azules hay?", "options": ["Una", "Dos", "Diez"], "answer": 0 },
+        { "q": "¿Qué hace la rosa azul?", "options": ["Canta", "Habla", "Baila"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes flores en casa?", "model": "Sí, tengo flores rojas." },
+        { "q": "¿Qué flor te gusta?", "model": "Me gustan las rosas blancas." },
+        { "q": "¿Qué dices por la mañana?", "model": "Digo: buenos días." }
+      ],
+      "gaps": "Hay [diez] rosas [rojas] y [cinco] rosas [blancas].",
+      "glossary": [
+        { "word": "bienvenidos", "meaning": "palabra para recibir a las personas" },
+        { "word": "jardín", "meaning": "lugar con flores y plantas" },
+        { "word": "jardinera", "meaning": "persona que cuida las plantas" },
+        { "word": "especial", "meaning": "diferente, único" }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "¿Dónde está el libro rojo?",
+      "place": "La biblioteca del castillo",
+      "context": "Baltasar, el mago, busca un libro. Nox, el cuervo, lo ayuda.",
+      "speakers": [
+        { "name": "Baltasar", "country": "Cuba", "voice": "es-CU-ManuelNeural" },
+        { "name": "Nox", "country": "Venezuela", "voice": "es-VE-SebastianNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Nox, ¿dónde está mi libro rojo?" },
+        { "s": 1, "text": "¿El libro rojo? Está en la mesa." },
+        { "s": 0, "text": "No, en la mesa hay un gato." },
+        { "s": 1, "text": "Entonces está en la silla." },
+        { "s": 0, "text": "No, en la silla hay otro gato." },
+        { "s": 1, "text": "Mmm... ¿Y debajo del gato?" },
+        { "s": 0, "text": "¡Sí! Aquí está. Gracias, Nox." }
+      ],
+      "choice": [
+        { "q": "¿Qué busca Baltasar?", "options": ["Un gato", "Una silla", "Un libro"], "answer": 2 },
+        { "q": "¿Qué hay en la mesa?", "options": ["Un gato", "Un libro", "Una vela"], "answer": 0 },
+        { "q": "¿Qué hay en la silla?", "options": ["Nada", "Otro gato", "Un cuervo"], "answer": 1 },
+        { "q": "¿Dónde está el libro al final?", "options": ["En la mesa", "En la silla", "Debajo del gato"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Dónde está tu libro favorito?", "model": "Está en mi mesa." },
+        { "q": "¿Tienes gatos?", "model": "No, tengo un perro." },
+        { "q": "¿De qué color es tu mochila?", "model": "Mi mochila es azul." }
+      ],
+      "gaps": "No, en la [silla] hay [otro] gato. Mmm... ¿Y [debajo] del [gato]?",
+      "glossary": [
+        { "word": "mesa", "meaning": "mueble para comer, leer o escribir" },
+        { "word": "silla", "meaning": "mueble para sentarse" },
+        { "word": "debajo", "meaning": "en la parte de abajo" },
+        { "word": "entonces", "meaning": "palabra para decir: si es así..." }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "El cuadro de la familia real",
+      "place": "La galería del castillo",
+      "context": "Teobaldo, el cronista, enseña un cuadro muy viejo de la familia real.",
+      "speakers": [
+        { "name": "Teobaldo", "country": "Uruguay", "voice": "es-UY-MateoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola. Soy Teobaldo. Mira este cuadro." },
+        { "s": 0, "text": "Este señor es el rey. Tiene barba blanca y una corona." },
+        { "s": 0, "text": "Esta señora es la reina. Tiene un vestido verde." },
+        { "s": 0, "text": "Y esta chica es la princesa Elara. Tiene dieciséis años." },
+        { "s": 0, "text": "¿Y este perro? Es Pipo. Pipo duerme. Pipo siempre duerme." }
+      ],
+      "choice": [
+        { "q": "¿Qué mira Teobaldo?", "options": ["Un cuadro de la familia real", "Un mapa del reino", "Un libro de magia"], "answer": 0 },
+        { "q": "¿Cómo es el rey?", "options": ["Tiene un vestido verde", "Tiene barba blanca", "Tiene dieciséis años"], "answer": 1 },
+        { "q": "¿Cuántos años tiene Elara?", "options": ["Seis", "Diez", "Dieciséis"], "answer": 2 },
+        { "q": "¿Qué hace Pipo?", "options": ["Duerme", "Come", "Canta"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Cuántas personas hay en tu familia?", "model": "En mi familia hay cuatro personas." },
+        { "q": "¿Tienes perro? ¿Cómo se llama?", "model": "Sí, mi perro se llama Toby." },
+        { "q": "¿Cuántos años tienes?", "model": "Tengo veinte años." }
+      ],
+      "gaps": "Este señor es el [rey]. Tiene [barba] [blanca] y una [corona].",
+      "glossary": [
+        { "word": "cuadro", "meaning": "pintura en la pared" },
+        { "word": "barba", "meaning": "pelo en la cara de un hombre" },
+        { "word": "corona", "meaning": "objeto de oro en la cabeza del rey" },
+        { "word": "vestido", "meaning": "ropa larga de mujer" }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "Elara despierta con hambre",
+      "place": "La torre de la princesa",
+      "context": "Elara abre los ojos. Brum, el dragón, está al lado de la cama.",
+      "speakers": [
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" },
+        { "name": "Brum", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Buenos días, princesa." },
+        { "s": 0, "text": "Hola, Brum. ¿Dónde estoy?" },
+        { "s": 1, "text": "En la torre. Estás en tu cama." },
+        { "s": 0, "text": "¿Qué hora es?" },
+        { "s": 1, "text": "Son las siete de la mañana." },
+        { "s": 0, "text": "Tengo hambre. ¿Hay pan?" },
+        { "s": 1, "text": "Hay pan, leche y... una torta de cumpleaños. ¡Cien velas!" }
+      ],
+      "choice": [
+        { "q": "¿Dónde está Elara?", "options": ["En el jardín", "En la torre", "En la posada"], "answer": 1 },
+        { "q": "¿Qué hora es?", "options": ["Las seis", "Las ocho", "Las siete"], "answer": 2 },
+        { "q": "¿Qué quiere Elara?", "options": ["Comer", "Dormir", "Cantar"], "answer": 0 },
+        { "q": "¿Cuántas velas tiene la torta?", "options": ["Diez", "Cien", "Siete"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿A qué hora te levantas?", "model": "Me levanto a las siete." },
+        { "q": "¿Qué comes por la mañana?", "model": "Como pan y bebo leche." },
+        { "q": "¿Cuándo es tu cumpleaños?", "model": "Mi cumpleaños es en mayo." }
+      ],
+      "gaps": "Hay [pan], [leche] y... una [torta] de cumpleaños. ¡Cien [velas]!",
+      "glossary": [
+        { "word": "princesa", "meaning": "la hija del rey y de la reina" },
+        { "word": "torre", "meaning": "parte alta y estrecha de un castillo" },
+        { "word": "torta", "meaning": "comida dulce para una fiesta" },
+        { "word": "velas", "meaning": "luces pequeñas de cera; hay velas en la torta de cumpleaños" }
+      ]
+    }
+  ]
+}

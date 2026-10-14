@@ -1,0 +1,296 @@
+{
+  "game": "reino",
+  "level": "A1",
+  "items": [
+    {
+      "id": "ines",
+      "title": "El mensaje de Inés: harina para la fiesta",
+      "place": "La posada de la aldea",
+      "context": "Inés no tiene harina para la fiesta. Nox, el cuervo, lleva su mensaje a Bruno.",
+      "speakers": [
+        { "name": "Inés", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Bruno. Soy Inés. Nox lleva este mensaje." },
+        { "s": 0, "text": "Mañana es la fiesta de la aldea y tengo un problema: no tengo harina." },
+        { "s": 0, "text": "Sin harina no hay pan, y sin pan no hay fiesta. Necesito dos sacos, por favor." },
+        { "s": 0, "text": "Ya sé, el molino no gira. Pero tú tienes harina en la herrería, ¿verdad? Debajo de la mesa." },
+        { "s": 0, "text": "Te espero en la posada a las cinco. ¡Gracias!" }
+      ],
+      "choice": [
+        { "q": "¿Para qué es el mensaje?", "options": ["Para invitar a Bruno a cenar", "Para pedir harina", "Para hablar del viento"], "answer": 1 },
+        { "q": "¿Cuándo es la fiesta?", "options": ["Mañana", "Hoy", "El domingo"], "answer": 0 },
+        { "q": "¿Cuántos sacos necesita Inés?", "options": ["Cinco", "Uno", "Dos"], "answer": 2 },
+        { "q": "¿Dónde está la harina, según Inés?", "options": ["En el molino", "Debajo de la mesa de la herrería", "En la posada"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué comes en una fiesta?", "model": "En una fiesta como pan, queso y torta." },
+        { "q": "¿Mandas mensajes de voz? ¿A quién?", "model": "Sí, mando mensajes a mi hermana todos los días." },
+        { "q": "¿Qué cosa necesitas siempre en casa?", "model": "Siempre necesito café y pan." }
+      ],
+      "gaps": "Sin [harina] no hay [pan], y sin pan no hay [fiesta]. Necesito dos [sacos], por favor.",
+      "glossary": [
+        { "word": "harina", "meaning": "polvo blanco para hacer pan" },
+        { "word": "sacos", "meaning": "bolsas grandes" },
+        { "word": "herrería", "meaning": "el lugar de trabajo del herrero" },
+        { "word": "fiesta", "meaning": "reunión alegre con comida y música" }
+      ]
+    },
+    {
+      "id": "bruno",
+      "title": "Primer día de Lucía en la herrería",
+      "place": "La herrería junto al molino",
+      "context": "Lucía empieza hoy como ayudante de Bruno, el herrero.",
+      "speakers": [
+        { "name": "Bruno", "country": "México", "voice": "es-MX-JorgeNeural" },
+        { "name": "Lucía", "country": "Costa Rica", "voice": "es-CR-MariaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Buenos días, Bruno. Soy Lucía, tu nueva ayudante." },
+        { "s": 0, "text": "¡Bienvenida, Lucía! Mira, esta es la herrería. Aquí hago llaves, herraduras y espadas." },
+        { "s": 1, "text": "¿Y este martillo? Es enorme." },
+        { "s": 0, "text": "Sí, pesa diez kilos. Tú usas el martillo pequeño." },
+        { "s": 1, "text": "Bueno. ¿Toco el hierro?" },
+        { "s": 0, "text": "¡No! El hierro está muy caliente. Primero usas los guantes. Siempre." },
+        { "s": 1, "text": "Perdón. ¿Y qué hacemos hoy?" },
+        { "s": 0, "text": "Hoy hacemos una llave. Una llave muy importante: la llave del castillo." }
+      ],
+      "choice": [
+        { "q": "¿Quién es Lucía?", "options": ["La hija de Bruno", "Una clienta", "La nueva ayudante de Bruno"], "answer": 2 },
+        { "q": "¿Cuánto pesa el martillo grande?", "options": ["Dos kilos", "Diez kilos", "Cien kilos"], "answer": 1 },
+        { "q": "¿Qué usa Lucía primero?", "options": ["Los guantes", "El martillo grande", "Una llave"], "answer": 0 },
+        { "q": "¿Qué hacen hoy?", "options": ["Una espada", "Una herradura", "La llave del castillo"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Qué haces en tu primer día en un trabajo nuevo?", "model": "Escucho mucho y hago preguntas." },
+        { "q": "¿Usas herramientas en casa?", "model": "Sí, a veces uso un martillo." },
+        { "q": "¿Te gusta trabajar con las manos?", "model": "Sí, me gusta cocinar y pintar." }
+      ],
+      "gaps": "Mira, esta es la [herrería]. Aquí hago [llaves], [herraduras] y [espadas].",
+      "glossary": [
+        { "word": "ayudante", "meaning": "persona que ayuda en un trabajo" },
+        { "word": "martillo", "meaning": "herramienta para golpear el metal" },
+        { "word": "hierro", "meaning": "metal duro y gris" },
+        { "word": "guantes", "meaning": "ropa para las manos" }
+      ]
+    },
+    {
+      "id": "liora",
+      "title": "Andrés, perdido en el bosque oscuro",
+      "place": "El bosque de las luciérnagas",
+      "context": "Es de noche. Un niño camina solo por el bosque y encuentra a Liora, el hada.",
+      "speakers": [
+        { "name": "Liora", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Andrés", "country": "Guatemala", "voice": "es-GT-AndresNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "¿Hola? ¿Hay alguien aquí? Tengo miedo." },
+        { "s": 0, "text": "Hola, pequeño. Soy Liora, el hada del bosque. ¿Cómo te llamas?" },
+        { "s": 1, "text": "Andrés. Busco el camino a la aldea. Mi mamá me espera." },
+        { "s": 0, "text": "Tranquilo, Andrés. Es fácil. Sigues el río. Después, en la piedra grande, giras a la derecha." },
+        { "s": 1, "text": "¿A la derecha? ¿Y después?" },
+        { "s": 0, "text": "Después ves una luz amarilla. Es la posada de Inés. Tu mamá está allí." },
+        { "s": 1, "text": "¡Gracias, Liora!" },
+        { "s": 0, "text": "De nada. Y toma esta luciérnaga. Es tu linterna." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tiene Andrés?", "options": ["Está perdido", "Está enfermo", "No tiene comida"], "answer": 0 },
+        { "q": "¿Qué sigue Andrés primero?", "options": ["La luz amarilla", "El camino de piedras", "El río"], "answer": 2 },
+        { "q": "¿Dónde gira a la derecha?", "options": ["En el puente", "En la piedra grande", "En el árbol viejo"], "answer": 1 },
+        { "q": "¿Qué le da Liora a Andrés?", "options": ["Una luciérnaga", "Un mapa", "Una manzana"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Tienes miedo de la oscuridad?", "model": "Un poco. Siempre tengo una luz en mi cuarto." },
+        { "q": "¿Cómo vas de tu casa al trabajo o a la escuela?", "model": "Camino diez minutos y después tomo el autobús." },
+        { "q": "¿Te gustan los bosques? ¿Por qué?", "model": "Sí, me gustan los bosques porque son tranquilos." }
+      ],
+      "gaps": "Después ves una [luz] [amarilla]. Es la [posada] de [Inés].",
+      "glossary": [
+        { "word": "miedo", "meaning": "lo que sientes cuando algo te asusta" },
+        { "word": "tranquilo", "meaning": "con calma, sin nervios" },
+        { "word": "giras", "meaning": "cambias de dirección" },
+        { "word": "luciérnaga", "meaning": "insecto pequeño con luz" }
+      ]
+    },
+    {
+      "id": "aldren",
+      "title": "Las reglas del puente de Sir Aldren",
+      "place": "El puente de Sir Aldren",
+      "context": "Muchos viajeros esperan delante del puente. Sir Aldren hace un anuncio.",
+      "speakers": [
+        { "name": "Sir Aldren", "country": "España", "voice": "es-ES-AlvaroNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Atención, viajeros! Habla Sir Aldren, el guardián del puente. Estas son las reglas." },
+        { "s": 0, "text": "El puente abre a las ocho de la mañana y cierra a las seis de la tarde." },
+        { "s": 0, "text": "Pasa una persona y después otra, nunca dos juntas." },
+        { "s": 0, "text": "Los caballos no pasan los domingos. Las vacas tampoco." },
+        { "s": 0, "text": "Los gatos pasan gratis, porque son muy elegantes." },
+        { "s": 0, "text": "Y una cosa más: yo hago preguntas, ustedes dicen la verdad. Gracias." }
+      ],
+      "choice": [
+        { "q": "¿Qué es el audio?", "options": ["Una canción", "Las reglas del puente", "Una historia de amor"], "answer": 1 },
+        { "q": "¿A qué hora abre el puente?", "options": ["A las ocho", "A las seis", "A las diez"], "answer": 0 },
+        { "q": "¿Quién no pasa los domingos?", "options": ["Los gatos", "Las personas", "Los caballos y las vacas"], "answer": 2 },
+        { "q": "¿Por qué los gatos pasan gratis?", "options": ["Porque son pequeños", "Porque son elegantes", "Porque son amigos del rey"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿A qué hora empiezas a trabajar o a estudiar?", "model": "Empiezo a las nueve de la mañana." },
+        { "q": "¿Qué reglas hay en tu casa?", "model": "En mi casa no comemos en el sofá." },
+        { "q": "¿Tienes gato? ¿Cómo es?", "model": "Sí, mi gato es negro y muy elegante." }
+      ],
+      "gaps": "El puente abre a las [ocho] de la [mañana] y cierra a las [seis] de la [tarde].",
+      "glossary": [
+        { "word": "guardián", "meaning": "persona que cuida un lugar" },
+        { "word": "reglas", "meaning": "lo que se puede y no se puede hacer" },
+        { "word": "juntas", "meaning": "una con otra, al mismo tiempo" },
+        { "word": "gratis", "meaning": "sin pagar" }
+      ]
+    },
+    {
+      "id": "celina",
+      "title": "Semillas mágicas en el mercado",
+      "place": "El mercado junto a los jardines reales",
+      "context": "Celina, la jardinera, compra semillas a Ramona, una vendedora del mercado.",
+      "speakers": [
+        { "name": "Celina", "country": "Perú", "voice": "es-PE-CamilaNeural" },
+        { "name": "Ramona", "country": "República Dominicana", "voice": "es-DO-RamonaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "¡Semillas, semillas mágicas! ¡Buenos días, señora!" },
+        { "s": 0, "text": "Buenos días. Busco semillas de rosa. ¿Tiene?" },
+        { "s": 1, "text": "Claro. Tengo rosas rojas, amarillas y moradas. Las moradas cantan por la noche." },
+        { "s": 0, "text": "Uy, no. Yo duermo por la noche. ¿Cuánto cuestan las amarillas?" },
+        { "s": 1, "text": "Cuatro monedas la bolsa." },
+        { "s": 0, "text": "Es caro. ¿Tres monedas?" },
+        { "s": 1, "text": "Bueno, tres. Y una semilla de regalo." },
+        { "s": 0, "text": "Gracias. ¿Qué semilla es?" },
+        { "s": 1, "text": "Es una sorpresa." }
+      ],
+      "choice": [
+        { "q": "¿Qué compra Celina?", "options": ["Flores", "Una bolsa nueva", "Semillas de rosa"], "answer": 2 },
+        { "q": "¿Qué hacen las rosas moradas?", "options": ["Bailan", "Cantan por la noche", "Hablan por la mañana"], "answer": 1 },
+        { "q": "¿Cuánto paga Celina?", "options": ["Tres monedas", "Cuatro monedas", "Dos monedas"], "answer": 0 },
+        { "q": "¿Qué recibe de regalo?", "options": ["Una rosa amarilla", "Una bolsa", "Una semilla sorpresa"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Compras en el mercado? ¿Qué compras?", "model": "Sí, compro fruta y verduras los sábados." },
+        { "q": "¿Pides un precio más bajo cuando algo es caro?", "model": "A veces. En el mercado, sí." },
+        { "q": "¿Te gustan las sorpresas?", "model": "Sí, me gustan mucho las sorpresas." }
+      ],
+      "gaps": "Tengo rosas [rojas], [amarillas] y [moradas]. Las moradas [cantan] por la noche.",
+      "glossary": [
+        { "word": "semillas", "meaning": "cosas pequeñas; de ellas nacen las plantas" },
+        { "word": "caro", "meaning": "que cuesta mucho dinero" },
+        { "word": "regalo", "meaning": "algo que das a otra persona sin pedir dinero" },
+        { "word": "sorpresa", "meaning": "algo que no sabes antes" }
+      ]
+    },
+    {
+      "id": "baltasar",
+      "title": "Un día normal del mago Baltasar",
+      "place": "La biblioteca del castillo",
+      "context": "Paola, una niña, hace preguntas a Baltasar para un trabajo de la escuela.",
+      "speakers": [
+        { "name": "Baltasar", "country": "Cuba", "voice": "es-CU-ManuelNeural" },
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Señor Baltasar, ¿puedo hacer unas preguntas para la escuela?" },
+        { "s": 0, "text": "Claro, Paola. Pregunta." },
+        { "s": 1, "text": "¿A qué hora se levanta?" },
+        { "s": 0, "text": "A las cinco. Los magos nos levantamos muy temprano." },
+        { "s": 1, "text": "¿Y qué desayuna?" },
+        { "s": 0, "text": "Café con leche y pan. Nada mágico." },
+        { "s": 1, "text": "¿Qué hace por la tarde?" },
+        { "s": 0, "text": "Leo libros viejos y ordeno la biblioteca. Hay tres mil libros." },
+        { "s": 1, "text": "¿Y por la noche?" },
+        { "s": 0, "text": "Miro las estrellas con mi búho. Se llama Profesor." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Paola y Baltasar?", "options": ["Del día normal de Baltasar", "De un libro perdido", "De la escuela de Paola"], "answer": 0 },
+        { "q": "¿A qué hora se levanta Baltasar?", "options": ["A las siete", "A las nueve", "A las cinco"], "answer": 2 },
+        { "q": "¿Cuántos libros hay en la biblioteca?", "options": ["Trescientos", "Tres mil", "Treinta"], "answer": 1 },
+        { "q": "¿Qué hace Baltasar por la noche?", "options": ["Mira las estrellas", "Lee libros", "Desayuna"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿A qué hora te levantas?", "model": "Me levanto a las siete." },
+        { "q": "¿Qué desayunas?", "model": "Desayuno café y fruta." },
+        { "q": "¿Qué haces por la noche?", "model": "Por la noche veo series y leo un poco." }
+      ],
+      "gaps": "Leo libros [viejos] y [ordeno] la [biblioteca]. Hay [tres mil] libros.",
+      "glossary": [
+        { "word": "temprano", "meaning": "muy pronto por la mañana" },
+        { "word": "desayuna", "meaning": "come por la mañana" },
+        { "word": "ordeno", "meaning": "pongo cada cosa en su lugar" },
+        { "word": "búho", "meaning": "pájaro de la noche con ojos grandes" }
+      ]
+    },
+    {
+      "id": "teobaldo",
+      "title": "El mapa viejo con una mancha de café",
+      "place": "El archivo del castillo",
+      "context": "Teobaldo, el cronista, explica un mapa muy viejo de Valdoria a unos visitantes.",
+      "speakers": [
+        { "name": "Teobaldo", "country": "Uruguay", "voice": "es-UY-MateoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, amigos. Soy Teobaldo, el cronista del reino. Miren este mapa. Es muy viejo." },
+        { "s": 0, "text": "Arriba, en el norte, está el castillo. Abajo, en el sur, está la aldea, con la posada y el molino." },
+        { "s": 0, "text": "En el centro hay un bosque grande y un río. El río pasa por debajo del puente." },
+        { "s": 0, "text": "¿Y esta mancha marrón? No es una montaña. Es café. Perdón, el café es mi problema." }
+      ],
+      "choice": [
+        { "q": "¿Qué explica Teobaldo?", "options": ["Una receta", "Un mapa del reino", "Una canción"], "answer": 1 },
+        { "q": "¿Qué hay en el norte?", "options": ["El castillo", "La aldea", "El bosque"], "answer": 0 },
+        { "q": "¿Qué hay en el centro?", "options": ["La posada y el molino", "El castillo y la torre", "Un bosque y un río"], "answer": 2 },
+        { "q": "¿Qué es la mancha marrón?", "options": ["Una montaña", "Café", "Chocolate"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Qué hay en el centro de tu ciudad?", "model": "En el centro hay una plaza y una iglesia." },
+        { "q": "¿Usas mapas de papel o en el teléfono?", "model": "Uso el mapa del teléfono." },
+        { "q": "¿Bebes mucho café?", "model": "Sí, bebo tres cafés al día." }
+      ],
+      "gaps": "Abajo, en el [sur], está la [aldea], con la [posada] y el [molino].",
+      "glossary": [
+        { "word": "cronista", "meaning": "persona que escribe la historia" },
+        { "word": "norte", "meaning": "la parte de arriba en un mapa" },
+        { "word": "debajo", "meaning": "en la parte de abajo" },
+        { "word": "mancha", "meaning": "marca sucia en el papel o en la ropa" }
+      ]
+    },
+    {
+      "id": "elara",
+      "title": "Elara invita a la gran fiesta del jardín",
+      "place": "La torre de la princesa",
+      "context": "Elara está despierta. Desde la torre, manda un mensaje de voz a Celina.",
+      "speakers": [
+        { "name": "Elara", "country": "Argentina", "voice": "es-AR-ElenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Celina, soy Elara. Estoy en la torre y tengo una idea: el sábado vamos a hacer una gran fiesta en el jardín." },
+        { "s": 0, "text": "Todo el reino está invitado: Inés, Bruno, Sir Aldren... y Brum también." },
+        { "s": 0, "text": "Tú vas a llevar flores, muchas flores. Bruno va a llevar música." },
+        { "s": 0, "text": "Y yo... yo voy a hacer una torta. Bueno, voy a intentar. Hace cien años que no cocino. ¡Besos!" }
+      ],
+      "choice": [
+        { "q": "¿Qué es el audio?", "options": ["Una clase de cocina", "Una carta del rey", "Un mensaje de Elara a Celina"], "answer": 2 },
+        { "q": "¿Cuándo es la fiesta?", "options": ["El domingo", "El sábado", "Mañana"], "answer": 1 },
+        { "q": "¿Qué lleva Celina?", "options": ["Flores", "Música", "Una torta"], "answer": 0 },
+        { "q": "¿Por qué dice Elara «voy a intentar»?", "options": ["Porque no tiene harina", "Porque no le gustan las tortas", "Porque hace cien años que no cocina"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Qué llevas a una fiesta?", "model": "Llevo bebidas y música." },
+        { "q": "¿Cocinas bien?", "model": "Más o menos. Cocino pasta y arroz." },
+        { "q": "¿Qué vas a hacer el sábado?", "model": "El sábado voy a visitar a mi abuela." }
+      ],
+      "gaps": "Estoy en la [torre] y tengo una idea: el [sábado] vamos a hacer una gran [fiesta] en el [jardín].",
+      "glossary": [
+        { "word": "invitado", "meaning": "que puede venir a la fiesta" },
+        { "word": "torta", "meaning": "comida dulce para una fiesta" },
+        { "word": "intentar", "meaning": "probar a hacer algo" },
+        { "word": "cocino", "meaning": "hago comida" }
+      ]
+    }
+  ]
+}
