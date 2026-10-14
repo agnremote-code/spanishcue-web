@@ -125,6 +125,17 @@ export function isEdgeCacheablePath(pathname: string): boolean {
   );
 }
 
+/**
+ * Legacy `?lang=` URLs (the old UI language toggle) are redirected to the clean
+ * URL while the locale cookie keeps the choice, so search engines stop seeing
+ * two URLs per page (Search Console listed `/clase/201?lang=en` next to
+ * `/clase/201`). Private and campaign surfaces keep the parameter: auth mail
+ * links and ad landings depend on it, and they are noindex anyway.
+ */
+export function redirectsLanguageQuery(pathname: string): boolean {
+  return !isSearchPrivatePath(pathname);
+}
+
 /** Ad-only landing variants (`/lp/*`): noindex, but links may be followed. */
 export function isCampaignPath(pathname: string): boolean {
   const path = normalizePathname(pathname);

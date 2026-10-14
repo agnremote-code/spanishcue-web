@@ -25,7 +25,7 @@ import {
   localeFromHeaders,
   normalizeLocale,
 } from "../app/i18n/messages";
-import { isEdgeCacheablePath, robotsHeaderFor } from "../app/seo";
+import { redirectsLanguageQuery, isEdgeCacheablePath, robotsHeaderFor } from "../app/seo";
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
@@ -92,6 +92,14 @@ function edgeCacheKey(request: Request, url: URL, pathname: string, deployment: 
   for (const header of VISITOR_STATE_HEADERS) if (request.headers.has(header)) return null;
   const variant = encodeURIComponent(`${deployment ?? 'production'}:${BUILD_ID}`);
   return new Request(`${url.origin}${url.pathname}?__spanishcue_build=${variant}`, { method: 'GET' });
+}
+
+/** Permanent redirect from a legacy `?lang=` URL to its clean URL; the cookie keeps the language. */
+function languageRedirect(target: URL, locale: string): Response {
+  const headers = new Headers({ Location: target.toString(), 'Cache-Control': 'private, no-store' });
+  headers.append('Set-Cookie', `${LOCALE_COOKIE}=${locale}; Max-Age=31536000; Path=/; SameSite=Lax`);
+  setSecurityHeaders(headers, target, locale);
+  return new Response(null, { status: 301, headers });
 }
 
 function noStoreRedirect(target: URL, locale: string, status = 302): Response {
@@ -229,6 +237,11 @@ const app = {
     const routedRequest = new Request(request, { headers: routedHeaders });
 
     let pathname:string;try{pathname=decodeURIComponent(pagePath).replace(/\/+$/, '')||'/'}catch{return new Response('Bad request',{status:400})}
+    if (requestedLocale && (request.method === 'GET' || request.method === 'HEAD') && !rscPayload && redirectsLanguageQuery(pathname)) {
+      const clean = new URL(url);
+      clean.searchParams.delete('lang');
+      return languageRedirect(clean, requestedLocale);
+    }
     const lesson=lessonAtPath(pathname,lessons);
     const premiumBoard=isPremiumBoardPath(pathname);
     const autoestudio=isAutoestudioPath(pathname);

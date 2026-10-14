@@ -25,7 +25,9 @@ test('any visitor state bypasses the public cache in both directions',async()=>{
  assert.match(await localized.text(),/<html lang="es"/);
  const anonymous=await fetchHit(path);assert.equal(anonymous.headers.get('cache-control'),PUBLIC);
  assert.match(await anonymous.text(),/<html lang="en"/,'a localized render must never be stored under the anonymous key');
- const toggled=await fetch(origin+path+'?lang=es');assert.equal(toggled.headers.get('cache-control'),'private, no-store');assert.match(toggled.headers.get('set-cookie')||'',/spanishcue_locale=es/);await toggled.arrayBuffer();
+ const toggled=await fetch(origin+path+'?lang=es',{redirect:'manual'});assert.equal(toggled.status,301,'a legacy ?lang= URL redirects to the clean URL');assert.equal(toggled.headers.get('location'),origin+path);assert.equal(toggled.headers.get('cache-control'),'private, no-store');assert.match(toggled.headers.get('set-cookie')||'',/spanishcue_locale=es/);await toggled.arrayBuffer();
+ const toggledWithAds=await fetch(origin+path+'?lang=en&utm_source=qa',{redirect:'manual'});assert.equal(toggledWithAds.status,301);assert.equal(toggledWithAds.headers.get('location'),origin+path+'?utm_source=qa','only the lang parameter is dropped');await toggledWithAds.arrayBuffer();
+ const campaign=await fetch(origin+'/lp/spanish-grammar-lessons?lang=es',{redirect:'manual'});assert.equal(campaign.status,200,'campaign landings keep ?lang= (noindex anyway)');assert.match(campaign.headers.get('set-cookie')||'',/spanishcue_locale=es/);assert.equal(campaign.headers.get('cache-control'),'private, no-store');await campaign.arrayBuffer();
  const attributed=await fetch(origin+path+'?utm_source=qa&gclid=qa');assert.equal(attributed.headers.get('cache-control'),'private, no-store');await attributed.arrayBuffer();
  const navigation=await fetch(origin+path,{headers:{rsc:'1'}});assert.equal(navigation.headers.get('cache-control'),'private, no-store');await navigation.arrayBuffer();
  const session=await fetch(origin+path,{headers:{authorization:'Bearer qa'}});assert.equal(session.headers.get('cache-control'),'private, no-store');await session.arrayBuffer();
