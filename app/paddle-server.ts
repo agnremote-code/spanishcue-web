@@ -236,6 +236,18 @@ export function paddleCompletedPayment(transaction: PaddleTransaction, subscript
     priceId: String(transaction.items![0].price!.id) };
 }
 
+/** One-time link to Paddle's customer portal (card, invoices, declined payments). */
+export async function createPaddlePortalSession(config: PaddleRuntimeConfig, customerId: string, subscriptionId: string) {
+  if (!/^ctm_[a-z0-9]{26}$/.test(customerId)) throw new Error("paddle_customer_invalid");
+  const data = await paddleJson<{ urls?: { general?: { overview?: unknown }; subscriptions?: Array<{ id?: unknown; update_subscription_payment_method?: unknown }> } }>(
+    config, `/customers/${encodeURIComponent(customerId)}/portal-sessions`,
+    { method: "POST", body: JSON.stringify({ subscription_ids: [subscriptionId] }) },
+  );
+  const url = data.urls?.general?.overview;
+  if (typeof url !== "string" || !url.startsWith("https://")) throw new Error("paddle_portal_invalid");
+  return url;
+}
+
 export async function pausePaddleSubscription(config: PaddleRuntimeConfig, subscriptionId: string) {
   return paddleJson<PaddleSubscription>(config, `/subscriptions/${encodeURIComponent(subscriptionId)}/pause`, {
     method: "POST",

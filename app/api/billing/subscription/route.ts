@@ -19,6 +19,12 @@ function safe(subscription: Awaited<ReturnType<typeof currentSubscriptionForUser
     paidThrough: subscription.paidThrough,
     accessConfirmed: Boolean(subscription.paidThrough && subscription.paidThrough > Math.floor(Date.now() / 1000)),
     cancelledAt: subscription.cancelledAt,
+    // The paid US$2 day: the first US$15.50 charge is due when it ends.
+    trial: subscription.provider === "paddle" && subscription.lastAmountCents === 200,
+    amountCents: subscription.lastAmountCents,
+    // A declined renewal newer than the last completed payment.
+    paymentFailed: Boolean(subscription.lastFailureAt && subscription.lastFailureAt > (subscription.lastPaymentAt ?? 0)),
+    paymentPortal: subscription.provider === "paddle" && Boolean(subscription.providerSubscriberId),
     cancellationReference: subscription.cancelledAt
       ? `SC-CANCEL-${subscription.id}-${subscription.cancelledAt}`
       : null,
@@ -58,7 +64,7 @@ export async function POST(request: Request) {
   if ((action === "pause" || action === "cancel") && subscription.status !== "ACTIVE") {
     return Response.json({ error: "La suscripción no está activa.", subscription: safe(subscription) }, { status: 409 });
   }
-  if (action === "resume" && subscription.status !== "SUSPENDED") {
+  if (action === "resume" && (subscription.status !== "SUSPENDED" || (subscription.lastFailureAt && subscription.lastFailureAt > (subscription.lastPaymentAt ?? 0)))) {
     return Response.json({ error: "La suscripción no está pausada.", subscription: safe(subscription) }, { status: 409 });
   }
 
