@@ -14,18 +14,20 @@
 
 import { pedagogyFor, pedagogySupportFor, PEDAGOGY_MECHANICS, PEDAGOGY_TEACHER_MOVES } from "./pedagogy.mjs";
 import * as BASE from "./content.mjs";
+import A0 from "./levels/a0.mjs";
 import A1 from "./levels/a1.mjs";
 import A2 from "./levels/a2.mjs";
 import B2 from "./levels/b2.mjs";
 import C1 from "./levels/c1.mjs";
 import C2 from "./levels/c2.mjs";
 
-export const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+export const LEVELS = ["A0", "A1", "A2", "B1", "B2", "C1", "C2"];
 export const DEFAULT_LEVEL = "B1";
-export const PATCHES = { A1, A2, B1: {}, B2, C1, C2 };
+export const PATCHES = { A0, A1, A2, B1: {}, B2, C1, C2 };
 
 // What each level asks of the learner, shown on the selector and to the teacher.
 export const LEVEL_INFO = {
+  A0: { name: "Desde cero", demand: "Palabras y frases mínimas, con el inglés debajo de cada línea.\nWords and minimal sentences, with the English under each line." },
   A1: { name: "Primeros pasos", demand: "Frases cortas en presente: pedir, elegir, decir qué hay y qué quieres." },
   A2: { name: "Situaciones de todos los días", demand: "Contar lo que pasó, hacer planes y dar razones simples." },
   B1: { name: "Resolver y explicar", demand: "Narrar, justificar, comparar opciones y negociar." },
