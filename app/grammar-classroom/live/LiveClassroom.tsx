@@ -10,7 +10,7 @@ import './live.css';
 
 /** Poses the mascot uses to react to a checked answer. */
 const cheer = { ok: { pose: '/brand/mascot/kneeling.webp', line: '¡Bien! Eso es.' }, retry: { pose: '/autoestudio/mascot/noting.webp', line: 'Casi. Lee la pista y prueba otra vez.' } };
-const levelColors: Record<string, string> = { A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
+const levelColors: Record<string, string> = { A0: '#2e9ed9', A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
 
 /** One class for a live lesson and for self-study: same content, the mode only changes guidance. */
 export default function LiveClassroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
@@ -21,7 +21,8 @@ function Classroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Re
   const store = useStore();
   const [at, setAt] = useState<Position>({ stage: 0, step: 0 });
   const [mode, setMode] = useStored<Mode>('mode', 'teacher');
-  const [english, setEnglish] = useStored('english', false);
+  // At A0 the English help opens by default: the learner starts from zero.
+  const [english, setEnglish] = useStored('english', lesson.level === 'A0');
   const [large, setLarge] = useStored('large', false);
   const [menu, setMenu] = useState(false);
   const [reaction, setReaction] = useState<{ ok: boolean } | null>(null);

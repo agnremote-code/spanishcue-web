@@ -15,7 +15,7 @@ const {getLiveLesson,liveLessonIds}=require('../node_modules/.cache/grammar-live
 await build({entryPoints:['app/grammar-classroom/lessons.ts'],bundle:true,platform:'node',format:'cjs',external:['react','react-dom','next/*'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-lessons.cjs',logLevel:'error'});
 const {classroomIds}=require('../node_modules/.cache/grammar-live-lessons.cjs');
 const {targets}=require('../node_modules/.cache/grammar-live/store.js');
-const {reviewWriting}=require('../node_modules/.cache/grammar-live/writing.js');
+const {reviewWriting,reviewWithRules}=require('../node_modules/.cache/grammar-live/writing.js');
 const wait=ms=>act(async()=>{await new Promise(r=>setTimeout(r,ms));});
 
 function page(hash=''){
@@ -38,11 +38,12 @@ async function mount(dom=page(),id=230){
 const panel=(stage,step=0)=>`[data-stage-panel="${stage}"] [data-step-panel="${step}"]`;
 
 test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
-  assert.deepEqual([...liveLessonIds].sort((a,b)=>a-b),[...classroomIds].sort((a,b)=>a-b),'every grammar class id has a live lesson');
+  for(const id of classroomIds)assert.ok(liveLessonIds.includes(id),`${id}: every grammar class id has a live lesson`);
+  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239],'live-only classes carry everything in their live lesson');
   for(const id of liveLessonIds){
   const lesson=getLiveLesson(id);
   assert.equal(lesson.id,id);
-  if(!['A1','A2'].includes(lesson.level))assert.ok(!JSON.stringify(lesson).includes('"en":'),`${id}: English help only in A1–A2`);
+  if(!['A0','A1','A2'].includes(lesson.level))assert.ok(!JSON.stringify(lesson).includes('"en":'),`${id}: English help only in A0–A2`);
   assert.deepEqual(lesson.stages.map(s=>s.id),['entender','explorar','practicar','escuchar','conversar','escribir','cerrar']);
   assert.deepEqual(lesson.stages.map(s=>s.label),['Entender','Explorar','Practicar','Escuchar','Conversar','Escribir','Cerrar']);
   const tones=new Set(lesson.legend.map(l=>l.tone));
@@ -232,5 +233,27 @@ test('checked answers make the mascot react',async()=>{
     const first=getLiveLesson(230).stages[0].steps[0].blocks.find(b=>b.kind==='choice').items[0];
     await v.click(`${item} [data-option="${first.answer}"]`);
     assert.equal(v.$('.gl-rail').dataset.mood,'ok');assert.match(v.$('.gl-rail-bubble').textContent,/Bien/);
+  }finally{await v.close();}
+});
+
+test('the A0 first class: bilingual by default, the grandparents story, the real listening pattern and the link to Noche abierta',async()=>{
+  const lesson=getLiveLesson(239);
+  assert.equal(lesson.level,'A0');
+  const all=JSON.stringify(lesson);
+  for(const text of ['abuela','abuelo','vos','Soy Alex','Estoy en Sídney','/audio/grammar-live/239.mp3','/noche-abierta?level=A0'])assert.ok(all.includes(text),text);
+  const listen=lesson.stages[3].steps[0].blocks.find(b=>b.kind==='listen');
+  assert.ok(listen.gist&&listen.details.length>=4&&listen.transcript&&listen.reply.teacher&&listen.reply.self,'listen twice, choose, answer, transcript');
+  const write=lesson.stages[5].steps[0].blocks.find(b=>b.kind==='write');
+  assert.ok(write.checks.length>=3,'the writing review looks for soy / estoy, not desde / hace');
+  const review=reviewWithRules('Hola, abuela. Soy Alex. Estoy en casa. Soy feliz. ¿Y tú? ¿Cómo estás?',write.checks,write.warnings);
+  assert.ok(review.uses.every(u=>u.found));
+  assert.deepEqual(review.problems.map(p=>p.text),['Soy feliz.']);
+  const dom=new JSDOM('<div id="root"></div>',{url:'https://spanishcue.test/gramatica/clase-inicial'});
+  const v=await mount(dom,239);try{
+    assert.equal(v.$('[data-tool="english"]').getAttribute('aria-pressed'),'true','English help opens by default at A0');
+    assert.ok(v.$('.gl-en'),'English lines are visible');
+    assert.equal(v.$$('[data-stage]').length,7);
+    await v.click('[data-stage="cerrar"]');await v.click('[data-step="2"]');
+    const link=v.$('[data-next-link]');assert.equal(link.getAttribute('href'),'/noche-abierta?level=A0');
   }finally{await v.close();}
 });

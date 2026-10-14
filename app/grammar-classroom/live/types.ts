@@ -37,13 +37,18 @@ export type Block =
   | { kind: 'rewrite'; title?: string; items: { prompt: string; instruction: string; accept: string[] }[] }
   | { kind: 'listen'; title: string; channel: string; src: string; before: string; gist: ChoiceItem; details: ChoiceItem[]; transcript: string; reply: ByMode }
   | { kind: 'talk'; cards: TalkCard[]; swap: ByMode }
-  | { kind: 'write'; title: string; situation: string; task: string[]; starters: string[]; words: string[]; model: string; minWords: number }
+  /** `checks` and `warnings` are regex sources (flags iu) the review looks for; without them the desde/hace review of lesson 230 runs. */
+  | { kind: 'write'; title: string; situation: string; task: string[]; starters: string[]; words: string[]; model: string; minWords: number; checks?: WritingCheck[]; warnings?: WritingWarning[] }
+  /** A plain link to the next step outside this class (another lesson, a game). */
+  | { kind: 'link'; title: string; text: string; en?: string; href: string; label: string }
   | { kind: 'recap'; items: { tone: Tone; label: string; formula: string; example: string; caption: string; en?: string }[] }
   /** The learner's real mistakes in this class, with links back to the step. */
   | { kind: 'review' }
   | { kind: 'restart' }
   | { kind: 'teacher'; text: string };
 
+export type WritingCheck = { label: string; pattern: string; tip: string };
+export type WritingWarning = { pattern: string; why: string };
 export type TalkCard = { q: string; followUps: string[]; phrases: string[]; hint: string; example: string; next?: string; teacher?: string };
 
 /** Topic visuals live in ./visuals; a lesson names them, it never imports them. */
