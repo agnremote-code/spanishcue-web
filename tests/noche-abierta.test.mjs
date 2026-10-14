@@ -625,7 +625,7 @@ const textsOf = bundle => {
 };
 
 test('one world, six levels: same places, mechanics and ids, different language work', () => {
-  assert.deepEqual(levels.LEVELS, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+  assert.deepEqual(levels.LEVELS, ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
   assert.equal(levels.DEFAULT_LEVEL, 'B1');
   const base = levels.contentFor('B1');
   assert.equal(base.LOCATIONS, engine.LOCATIONS, 'B1 is the base content');
@@ -659,8 +659,11 @@ test('every level asks its own questions, in neutral tú, without mixing levels'
   }
   // The restaurant bill, scaled: the same scene asks for more as the level goes up.
   const restaurant = level => JSON.stringify(levels.contentFor(level).LOCATIONS.find(item => item.id === 'restaurante'));
-  const lengths = levels.LEVELS.map(level => restaurant(level).length);
-  assert.ok(lengths[0] < lengths[2] && lengths[2] < lengths[5], `the restaurant grows with the level: ${lengths}`);
+  const lengths = ['A1', 'B1', 'C2'].map(level => restaurant(level).length);
+  assert.ok(lengths[0] < lengths[1] && lengths[1] < lengths[2], `the restaurant grows with the level: ${lengths}`);
+  // A1 and A2 are no longer the same card: each activity has its own A2 situation and answers.
+  const sameCard = leveledActivities(levels.contentFor('A1')).filter(({ activity }, i) => activity.situation === leveledActivities(levels.contentFor('A2'))[i].activity.situation);
+  assert.equal(sameCard.length, 0, `A2 repeats A1 situations: ${sameCard.map(({ activity }) => activity.id).join(', ')}`);
 });
 
 test('switching level keeps the walk and resets only the open activity', () => {
@@ -695,13 +698,13 @@ test('switching level keeps the walk and resets only the open activity', () => {
   assert.equal(engine.isValidState({ ...switched, level: 'D1' }), false);
 });
 
-test('the title screen and the HUD carry the level picker; the library lists one A1–C2 card', async () => {
+test('the title screen and the HUD carry the level picker; the library lists one A0–C2 card', async () => {
   const NocheAbierta = await component('app/noche-abierta/NocheAbierta.tsx');
   const title = renderToString(React.createElement(NocheAbierta));
   assert.match(title, /class="na-title-screen/);
   assert.match(title, /Empezar la noche/);
   assert.match(title, /\/brand\/mascot\/kneeling\.webp/, 'the official mascot is the hero');
-  assert.equal((title.match(/role="radio" data-level=/g) ?? []).length, 6);
+  assert.equal((title.match(/role="radio" data-level=/g) ?? []).length, 7);
   assert.match(title, /Comprensión auditiva/, "the listening mode sits next to the levels");
   assert.match(title, /data-level="B1" aria-checked="true"/, 'B1 by default');
   assert.doesNotMatch(title, /<select/, 'no plain select');
@@ -711,7 +714,7 @@ test('the title screen and the HUD carry the level picker; the library lists one
   assert.equal(cards.length, 1, 'one card');
   const [card] = cards;
   assert.deepEqual(card.levels, levels.LEVELS);
-  assert.equal(card.displayLevel, 'A1–C2');
+  assert.equal(card.displayLevel, 'A0–C2');
   assert.equal(card.category, 'Conversación');
   assert.equal(card.conversationMode, 'play');
   const { filterLessons } = await import('../app/library-filters.mjs');
@@ -730,4 +733,101 @@ test('taxi arrival keeps its consequence but presents the destination in the fal
     assert.ok(!html.includes('Bajar del taxi'), 'already out of the taxi at this destination');
     assert.ok(engine.isValidState(engine.leaveLocation(state)));
   }
+});
+
+// ------------------------------------------------------------ A0: bilingual, literal zero
+
+const bilingual = await import('../app/noche-abierta/bilingual.mjs');
+const street = await import('../app/noche-abierta/street.mjs');
+const ENGLISH = /\b(the|you|is|are|what|do)\b/i;
+
+test('A0 reads every line twice: Spanish first, its English under it, in every place, event and the closing', () => {
+  const bundle = levels.contentFor('A0');
+  assert.equal(bundle.level, 'A0');
+  const pairs = [];
+  for (const { activity, location } of leveledActivities(bundle)) {
+    for (const text of [activity.situation, activity.prompt, activity.close, ...activity.options.map(option => option.label), ...(activity.words ?? [])]) pairs.push([`${location.id}/${activity.id}`, text]);
+    assert.ok(activity.words?.length >= 4, `${activity.id}: new words with their English`);
+    assert.ok(activity.options.every(option => option.label.split(bilingual.BI_BREAK)[0].split(' ').length <= 9), `${activity.id}: A0 answers are a few words`);
+    for (const text of [...location.help.starters, ...location.help.vocab]) pairs.push([location.id, text]);
+  }
+  for (const event of bundle.CITY_EVENTS) for (const text of [event.text, ...event.prompts]) pairs.push([event.id, text]);
+  for (const text of [...bundle.FINAL.prompts, bundle.FINAL.hypothetical, bundle.ARRIVAL.premise, ...bundle.ARRIVAL.warmup, levels.LEVEL_INFO.A0.demand]) pairs.push(['final', text]);
+  assert.ok(pairs.length > 300, `${pairs.length} bilingual lines`);
+  for (const [where, text] of pairs) {
+    assert.ok(bilingual.isBilingual(text), `${where}: bilingual: ${text}`);
+    const [es, en] = text.split(bilingual.BI_BREAK);
+    assert.ok(es.trim() && en.trim(), `${where}: both halves: ${text}`);
+    assert.doesNotMatch(es, ENGLISH, `${where}: Spanish first: ${es}`);
+    assert.equal(bilingual.esOf(text), es);
+    assert.equal(bilingual.enOf(text), en);
+  }
+  // A1 and A2 keep their new words (with English); B1 and up do not list them.
+  assert.ok(levels.contentFor('A1').LOCATIONS[0].help.vocab?.some(bilingual.isBilingual));
+  assert.ok(levels.contentFor('A2').LOCATIONS[0].help.vocab?.some(bilingual.isBilingual));
+  assert.equal(levels.contentFor('B1').LOCATIONS[0].help.vocab, undefined);
+  assert.equal(engine.initialState('A0').level, 'A0');
+  assert.ok(engine.isValidState(engine.startExploring(engine.initialState('A0'))));
+});
+
+test('A0 in the street: its own short bilingual scenes, the same endings, nothing else opens', () => {
+  assert.ok(street.A0_IDS.length >= 18, `${street.A0_IDS.length} A0 scenes`);
+  const empty = street.emptyStreet();
+  assert.deepEqual(street.availableEncounters(empty, null, 'A0').map(item => item.id).sort(), [...street.A0_IDS].sort());
+  assert.equal(street.openEncounter(empty, 'viejo-herido', null, 'A0').open, null, 'a scene without A0 does not open at A0');
+  for (const id of street.A0_IDS) {
+    const encounter = street.encounterById(id);
+    assert.ok(encounter, id);
+    let state = street.openEncounter(street.chooseItem(empty, 'granada'), id, null, 'A0');
+    assert.equal(state.open?.a0, true, `${id} opens its A0 version`);
+    const seen = new Set();
+    // Walk every option from every reachable moment: each ends in one of the scene's endings.
+    const walk = (node) => {
+      if (seen.has(node)) return;
+      seen.add(node);
+      const choices = street.choicesFor(encounter, node, 'granada', true);
+      assert.ok(choices.length >= 2 && choices.length <= 3, `${id}/${node}: two or three answers`);
+      assert.ok(choices.every(choice => !choice.item), `${id}/${node}: the object stays out of A0`);
+      for (const choice of choices) {
+        if (choice.end) assert.ok(encounter.ends[choice.end], `${id}/${node}/${choice.id}: ending ${choice.end} exists`);
+        else walk(choice.next);
+      }
+    };
+    walk(state.open.node);
+    const view = street.streetView(state, 'A0');
+    assert.ok(bilingual.isBilingual(view.line), `${id}: bilingual line`);
+    assert.ok(view.choices.every(choice => bilingual.isBilingual(choice.say)), `${id}: bilingual answers`);
+    assert.ok(view.words?.length >= 4 && view.words.every(bilingual.isBilingual), `${id}: words`);
+    assert.ok(['m', 'f'].includes(view.whoBody), `${id}: who speaks has a voice`);
+    // Play through the first option until the end and close it.
+    while (!state.open.end) state = street.chooseLine(state, street.choicesFor(encounter, state.open.node, 'granada', true)[0].key);
+    const ended = street.streetView(state, 'A0');
+    assert.ok(ended.ended && bilingual.isBilingual(ended.end.text) && bilingual.isBilingual(ended.speak), `${id}: bilingual ending and question`);
+    assert.ok(street.isValidStreet(JSON.parse(JSON.stringify(state))), `${id}: survives a reload`);
+    assert.ok(street.isValidStreet(JSON.parse(JSON.stringify(street.stepBack(state)))));
+    state = street.closeEncounter(state);
+    assert.ok(state.done[id], `${id}: remembered`);
+  }
+  assert.ok(bilingual.isBilingual(street.ambientReaction('corazon', 'A0').text));
+  assert.ok(!bilingual.isBilingual(street.ambientReaction('corazon', 'A1').text));
+  assert.ok(!street.isValidStreet({ item: null, open: { id: 'viejo-herido', node: 'inicio', trail: [], end: null, a0: true }, done: {}, flags: [] }), 'no A0 state for a scene without A0');
+});
+
+test('the people speak their lines, not the questions to the learner; the Spanish half only', async () => {
+  const voice = readFileSync('app/noche-abierta/voice.ts', 'utf8');
+  assert.match(voice, /speechSynthesis/);
+  assert.match(voice, /SpeechSynthesisUtterance/);
+  assert.ok(voice.includes('/^es([-_]|$)/i'), 'Spanish voices only');
+  const streetCard = readFileSync('app/noche-abierta/StreetCard.tsx', 'utf8');
+  assert.match(streetCard, /speakLines\(spoken/, 'the street card reads the reply and the next line');
+  assert.doesNotMatch(streetCard, /speakLines\([^)]*speak\b/, 'the closing question is not read');
+  const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
+  assert.match(lesson, /speakLines\(\[situation\]/, 'the situation of a place is read');
+  assert.match(lesson, /speakLines\(\[event\.text\]/, 'the city event is read');
+  assert.doesNotMatch(lesson, /speakLines\(\[[^\]]*(prompt|close)\b/, 'no question to the learner is read');
+  assert.match(lesson, /aria-pressed=\{voices\}[^>]*>Voces</, 'a switch to turn the voices off');
+  const title = renderToString(React.createElement(await component('app/noche-abierta/NocheAbierta.tsx'), { initial: engine.initialState('A0') }));
+  assert.match(title, /data-level="A0" aria-checked="true"/);
+  assert.doesNotMatch(title, /Comprensión auditiva/, 'A0 has no listening set, so the switch stays hidden');
+  assert.match(title, /lang="en"/, 'the title screen already reads bilingual at A0');
 });

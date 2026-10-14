@@ -1,3 +1,7 @@
+import { bi } from './bilingual.mjs';
+import { A0_ROWS } from './pedagogy-a0.mjs';
+import { A2_ROWS } from './pedagogy-a2.mjs';
+
 // Authoritative two-moment curriculum. Three choice difficulty bands and six
 // independently authored personal prompts per interaction; no fictional continuations.
 const rows = {
@@ -1604,24 +1608,33 @@ const rows = {
   }
 };
 
-const levelIndex = { A1: 0, A2: 1, B1: 2, B2: 3, C1: 4, C2: 5 };
+// A0 is its own band, bilingual (pedagogy-a0.mjs); A2 has its own situations
+// (pedagogy-a2.mjs) so A1 and A2 no longer show the same card; B1/B2 and
+// C1/C2 share their situation and differ in the personal question.
+const levelIndex = { A0: -1, A1: 0, A2: 1, B1: 2, B2: 3, C1: 4, C2: 5 };
 export function pedagogyFor(activity, level) {
   const row = rows[activity.id];
   const index = levelIndex[level];
   if (!row || index === undefined) throw new Error(`Missing pedagogy: ${activity.id}/${level}`);
-  const [situation, prompt, labels] = row.choices[Math.floor(index / 2)];
+  const a0 = level === 'A0' ? A0_ROWS[activity.id] : null;
+  if (level === 'A0' && !a0) throw new Error(`Missing A0 pedagogy: ${activity.id}`);
+  const [situation, prompt, labels] = a0 ? [bi(a0.situation), bi(a0.prompt), a0.options.map(bi)]
+    : level === 'A2' && A2_ROWS[activity.id] ? A2_ROWS[activity.id] : row.choices[Math.floor(index / 2)];
   const options = labels.map((label, i) => ({ id: row.ids?.[i] ?? `option-${i + 1}`, label }));
   // Rotate display positions, retaining stable ids (especially taxi outcomes).
-  const offset = [...activity.id].reduce((sum, char) => sum + char.charCodeAt(0), index) % options.length;
+  const offset = [...activity.id].reduce((sum, char) => sum + char.charCodeAt(0), Math.max(index, 0)) % options.length;
   return {
     id: activity.id, title: row.title ?? activity.title,
     ...(activity.who ? { who: activity.who } : {}),
     ...(activity.object ? { object: activity.object, year: activity.year } : {}),
     lessonLevel: level, situation, prompt,
     options: [...options.slice(offset), ...options.slice(0, offset)],
-    close: row.personal[index],
+    close: a0 ? bi(a0.personal) : row.personal[index],
+    ...(a0 ? { words: a0.words.map(bi) } : {}),
     role: 'Escucha la elección del estudiante. Después, escucha su respuesta personal.',
-    teacher: ['Primero pide que elija una opción adecuada al objetivo de la situación.', 'En la segunda pregunta, conversa sobre su vida real. No continúes la historia ni pidas que invente experiencias.'],
+    teacher: a0
+      ? ['Lee la situación en voz alta y señala el inglés solo si hace falta. Pide que elija una opción y que la repita.', 'En la pregunta personal, acepta una palabra o una frase mínima. Amplía tú y vuelve a preguntar.']
+      : ['Primero pide que elija una opción adecuada al objetivo de la situación.', 'En la segunda pregunta, conversa sobre su vida real. No continúes la historia ni pidas que invente experiencias.'],
   };
 }
 export const PEDAGOGY_IDS = Object.freeze(Object.keys(rows));
@@ -1638,7 +1651,22 @@ const support = {
   tienda: ['Compras, necesidades y regalos', ['comparar productos', 'comprobar que funciona', 'dentro del presupuesto', 'elegir un regalo']],
   terraza: ['Ocio, encuentros y privacidad', ['compartir una foto', 'pedir permiso', 'seguir conversando', 'hacer planes distintos']],
 };
+// New words of each place, with their English, shown at A0, A1 and A2.
+const words = {
+  cafe: [['el café', 'the coffee'], ['el té', 'the tea'], ['la mesa', 'the table'], ['para llevar', 'to go'], ['la camarera', 'the waitress'], ['pedir', 'to order']],
+  departamento: [['la casa', 'the house'], ['la puerta', 'the door'], ['el agua', 'the water'], ['la visita', 'the visit'], ['el abrigo', 'the coat'], ['pasar', 'to come in']],
+  restaurante: [['la cuenta', 'the bill'], ['la sopa', 'the soup'], ['la carne', 'the meat'], ['el ruido', 'the noise'], ['pagar', 'to pay'], ['la tarjeta', 'the card']],
+  plaza: [['la plaza', 'the square'], ['el barrio', 'the neighbourhood'], ['el cumpleaños', 'the birthday'], ['la estación', 'the station'], ['a la derecha', 'on the right'], ['despacio', 'slowly']],
+  bar: [['la música', 'the music'], ['alta', 'loud'], ['la silla', 'the chair'], ['la fila', 'the line'], ['caro', 'expensive'], ['tengo sueño', 'I’m sleepy']],
+  auto: [['el auto', 'the car'], ['la gasolina', 'the petrol'], ['el taxi', 'the taxi'], ['el aeropuerto', 'the airport'], ['arrancar', 'to start'], ['cerca', 'near']],
+  museo: [['la foto', 'the photo'], ['antiguo', 'old'], ['el año', 'the year'], ['la carta', 'the letter'], ['la maleta', 'the suitcase'], ['funciona', 'it works']],
+  taxi: [['la calle', 'the street'], ['cerrada', 'closed'], ['el conductor', 'the driver'], ['seguir', 'to go on'], ['bajar', 'to get off'], ['volver', 'to go back']],
+  tienda: [['la tienda', 'the shop'], ['el regalo', 'the gift'], ['el cargador', 'the charger'], ['el hielo', 'the ice'], ['la bolsa', 'the bag'], ['comprar', 'to buy']],
+  terraza: [['la terraza', 'the rooftop'], ['la foto', 'the photo'], ['la noche', 'the night'], ['quedarse', 'to stay'], ['bailar', 'to dance'], ['un poco más', 'a bit longer']],
+};
+const WORD_LEVELS = new Set(['A0', 'A1', 'A2']);
 const starters = {
+  A0: ['Me gusta…\nI like…', 'Quiero…\nI want…', 'Sí. / No.\nYes. / No.'],
   A1: ['Me gusta…', 'Normalmente voy…', 'Prefiero…'],
   A2: ['Suelo…', 'Me gusta porque…', 'La última vez…'],
   B1: ['Una vez me pasó que…', 'Lo prefiero porque…', 'En mi experiencia…'],
@@ -1649,10 +1677,12 @@ const starters = {
 export function pedagogySupportFor(location, level) {
   const [focus, chunks] = support[location.id];
   return {
-    focus, help: { starters: starters[level], chunks },
-    ...(location.hub ? { hubPrompt: location.id === 'museo'
-      ? 'Elige un objeto. Primero elige una respuesta; después habla de tu vida.'
-      : 'Elige una persona. Primero elige una respuesta; después habla de tu vida.' } : {}),
+    focus, help: { starters: starters[level], chunks, ...(WORD_LEVELS.has(level) ? { vocab: words[location.id].map(([es, en]) => bi({ es, en })) } : {}) },
+    ...(location.hub ? { hubPrompt: level === 'A0'
+      ? (location.id === 'museo' ? 'Elige un objeto.\nChoose an object.' : 'Elige una persona.\nChoose a person.')
+      : location.id === 'museo'
+        ? 'Elige un objeto. Primero elige una respuesta; después habla de tu vida.'
+        : 'Elige una persona. Primero elige una respuesta; después habla de tu vida.' } : {}),
   };
 }
 export const PEDAGOGY_MECHANICS = Object.fromEntries(
