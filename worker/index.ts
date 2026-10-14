@@ -257,7 +257,7 @@ const app = {
     const owner=ownerFromHeaders(verifiedHeaders);
     const fullAccess=fullAccessFromHeaders(verifiedHeaders);
     const verifiedLocale=localeFromHeaders(verifiedHeaders);
-    const edgeKey = !identityAware && !lesson && !premiumBoard && !premiumAutoestudio && !autoestudio && !administrative && !shareApi && !premiumAudio
+    const edgeKey = !identityAware && !lesson && !premiumBoard && !premiumAutoestudio && !autoestudio && !administrative && !shareApi && !premiumAudio && !rscPayload
       ? edgeCacheKey(request, url, pathname, env.SPANISHCUE_DEPLOYMENT)
       : null;
     if (edgeKey) {
