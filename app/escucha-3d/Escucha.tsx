@@ -5,6 +5,7 @@
 // reviewed listening classes: listen twice, multiple choice, choose a
 // question and answer it aloud, fill in the gaps, read the transcript.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { GAMES, audioSrc, listeningFor, parseGaps, sameWord } from './games.mjs';
 import { loadListenings } from './loaders';
 import type { GameId, Listening } from './types';
@@ -73,11 +74,11 @@ export function ModeSwitch({ mode, onChange, className }: { mode: Mode; onChange
 export function ListeningBadge({ game, done, onList }: { game: GameId; done: string[]; onList?: () => void }) {
   const total = GAMES[game].spots.length;
   const count = GAMES[game].spots.filter(id => done.includes(id)).length;
-  return <div className="e3-badge" role="status">
+  return createPortal(<div className="e3-badge" role="status">
     <span className="e3-badge-dot" aria-hidden="true" />
     <span><b>Comprensión auditiva</b><small>{count} de {total} escuchas · acércate a un círculo blanco</small></span>
     {onList && <button type="button" onClick={onList}>Ver todas</button>}
-  </div>;
+  </div>, document.body);
 }
 
 type Props = { game: GameId; level: string; spot: string | null; done: string[]; onDone: (id: string) => void; onClose: () => void };
@@ -119,7 +120,8 @@ export function ListeningCard({ game, level, spot, done, onDone, onClose }: Prop
   // Keys typed in the card never move the character behind it.
   const stopKeys = (event: React.KeyboardEvent) => { if (event.key !== 'Escape') event.stopPropagation(); };
 
-  return <div className="e3-backdrop" onKeyDown={stopKeys} onKeyUp={stopKeys}>
+  // On document.body, away from each game's own button styles.
+  return createPortal(<div className="e3-backdrop" onKeyDown={stopKeys} onKeyUp={stopKeys}>
     <section ref={card} tabIndex={-1} className="e3-card" role="dialog" aria-modal="true" aria-labelledby="e3-title">
       <button type="button" className="e3-close" onClick={onClose} aria-label="Cerrar y volver al juego">×</button>
       {failed && <p className="e3-empty">No se pudieron cargar las escuchas. Revisa la conexión y vuelve a abrir el círculo.</p>}
@@ -129,7 +131,7 @@ export function ListeningCard({ game, level, spot, done, onDone, onClose }: Prop
         onDone={() => onDone(item.id)} onClose={onClose} onList={() => { setPicked(null); setBrowsing(true); }}
         onOther={items.length > 1 ? () => { const next = items.find(i => i.id !== item.id && !done.includes(i.id)) ?? items[(items.indexOf(item) + 1) % items.length]; setPicked(next.id); } : undefined} />}
     </section>
-  </div>;
+  </div>, document.body);
 }
 
 function ListeningList({ game, level, items, done, onPick }: { game: GameId; level: string; items: Listening[]; done: string[]; onPick: (id: string) => void }) {
