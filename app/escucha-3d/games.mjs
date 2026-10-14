@@ -30,7 +30,7 @@ export const WORDS = { A0: [20, 50], A1: [40, 80], A2: [70, 120], B1: [100, 160]
 // Slower voices for the first levels.
 export const RATE = { A0: '-22%', A1: '-14%', A2: '-7%', B1: '-3%', B2: '+0%', C1: '+0%', C2: '+4%' };
 
-export const audioSrc = (game, level, id) => `/audio/escucha-3d/${game}/${level.toLowerCase()}-${id}.mp3`;
+export const audioSrc = (game, level, id) => `/audio/escucha-3d/${game}-${level.toLowerCase()}-${id}.mp3`;
 
 /** The listening for a circle: its own one, else the first unfinished one. */
 export function listeningFor(items, spot, done = []) {
