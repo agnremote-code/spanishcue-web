@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner request of 2026-10-14 16:23Z (project thread «Noche abierta: nivel A0 y voces», from the «Clase inicial A0» thread): add an A0 level to Noche abierta that is literally A0 and fully bilingual, with bilingual new words at A0–A2. This manifest approves only the exact English support literals of that A0 level listed below (the English half of each { es, en } pair in the A0 content files); existing English copy stays protected. Owner approval line («apruebo») recorded in the same thread.",
+  "authorization": "Owner request of 2026-10-14 16:23Z (project thread «Noche abierta: nivel A0 y voces», from the «Clase inicial A0» thread): add an A0 level to Noche abierta that is literally A0 and fully bilingual, with bilingual new words at A0–A2. This manifest approves only the exact English support literals of that A0 level listed below (the English half of each { es, en } pair in the A0 content files); existing English copy stays protected. Owner approval: Ale wrote «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe), answering the English-copy approval request for this A0 work.",
   "additions": [
     {
       "path": "app/noche-abierta/levels/a0.mjs",
