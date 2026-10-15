@@ -42,10 +42,10 @@ test('gaps keep the text and accept answers without accents or capitals', () => 
   assert.ok(!sameWord('casa', 'caza'));
 });
 
-test('the four games offer the Comprensión auditiva mode', () => {
-  for (const path of ['app/noche-abierta/NocheAbierta.tsx', 'app/marketing-de-casinos/CasinoGame.tsx', 'app/bosque-de-los-hongos-gigantes/BosqueHongos.tsx', 'app/el-reino-de-la-rosa-dormida/ReinoGame.tsx']) {
+test('the 3D games offer the Comprensión auditiva mode', () => {
+  for (const path of ['app/noche-abierta/NocheAbierta.tsx', 'app/marketing-de-casinos/CasinoGame.tsx', 'app/bosque-de-los-hongos-gigantes/BosqueHongos.tsx', 'app/el-reino-de-la-rosa-dormida/ReinoGame.tsx', 'app/hospital-san-casi-vivo/HospitalGame.tsx']) {
     const source = readFileSync(path, 'utf8');
     assert.match(source, /<ModeSwitch /, `${path} shows the mode switch`);
-    assert.match(source, /<ListeningCard game="(noche|casino|bosque|reino)"/, `${path} opens the listening card`);
+    assert.match(source, /<ListeningCard game="(noche|casino|bosque|reino|hospital)"/, `${path} opens the listening card`);
   }
 });
