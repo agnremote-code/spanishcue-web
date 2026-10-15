@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { createHero, animateHero, type Hero } from '../noche-abierta/hero3d';
-import { PLATFORMS, type Player } from './engine.mjs';
+import { PLATFORMS, OBSTACLES, type Player } from './engine.mjs';
 
 // The forest uses the same procedural SpanishCue mascot as La Noche Abierta:
 // a real 3D figure with a distance-driven run cycle. The forest adds what a
@@ -53,6 +53,7 @@ export function createForestHero(shadows = true): ForestHero {
 export function surfaceBelow(x: number, y: number, z: number) {
   let top = Math.hypot(x, z) < 65 ? 0 : -Infinity;
   for (const p of PLATFORMS) if (p.y <= y + .05 && p.y > top && Math.hypot(x - p.x, z - p.z) <= p.r + .24) top = p.y;
+  for (const o of OBSTACLES) if (o.top != null && o.top <= y + .05 && o.top > top && Math.hypot(x - o.x, z - o.z) <= o.r + .1) top = o.top;
   return top;
 }
 

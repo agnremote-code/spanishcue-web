@@ -129,3 +129,26 @@ test('staged falls and the summit: the world drives the fall, reaching the top o
   s = e.reachSummit(s); assert.equal(e.finalUnlocked(s), true);
   assert.equal(e.restoreSession(JSON.stringify(s), { B1: [] }).summit, true);
 });
+
+test('low station props can be jumped onto, stood on and walked off; tall ones stay plain solids', async () => {
+  const { OBSTACLES, PROP_TOPS, JUMP_SPEED, GRAVITY, stepPlayer, spawnPlayer } = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
+  const apex = JUMP_SPEED ** 2 / (2 * GRAVITY);
+  for (const h of Object.values(PROP_TOPS)) assert.ok(h > .3 && h < apex - .5, `prop top ${h} below the ${apex.toFixed(1)} m apex`);
+  for (const id of ['sign', 'lamp']) for (const o of OBSTACLES.filter(o => o.id.endsWith(`-${id}`))) assert.equal(o.top, undefined, `${o.id} is not a step`);
+  for (const zone of ZONES) {
+    const prop = OBSTACLES.find(o => o.id === `${zone.id}-prop`);
+    if (!PROP_TOPS[zone.id]) { assert.equal(prop.top, undefined); continue; }
+    let p = { ...spawnPlayer(), x: zone.x, y: zone.y, z: zone.z, platform: `zone-${zone.id}`, checkpoint: { x: zone.x, y: zone.y, z: zone.z } };
+    const toward = () => { const dx = prop.x - p.x, dz = prop.z - p.z, d = Math.hypot(dx, dz) || 1; return d < .05 ? { x: 0, z: 0 } : { x: dx / d, z: dz / d }; };
+    for (let k = 0; k < 90; k++) p = stepPlayer(p, toward(), 1 / 60);
+    p = stepPlayer(p, { ...toward(), jump: true }, 1 / 60);
+    for (let k = 0; k < 120; k++) p = stepPlayer(p, toward(), 1 / 60);
+    assert.ok(Math.abs(p.y - prop.top) < 1e-6 && p.grounded, `${prop.id}: lands on top (y ${p.y.toFixed(2)} vs ${prop.top})`);
+    assert.equal(p.platform, `zone-${zone.id}`, 'standing on a prop still counts as the station');
+    assert.deepEqual(p.checkpoint, { x: zone.x, y: zone.y, z: zone.z }, 'a prop is never a checkpoint');
+    // Walk off the far side: back down on the cap.
+    const dx = prop.x - zone.x, dz = prop.z - zone.z, d = Math.hypot(dx, dz);
+    for (let k = 0; k < 60; k++) p = stepPlayer(p, { x: -dx / d, z: -dz / d }, 1 / 60);
+    assert.ok(Math.abs(p.y - zone.y) < 1e-6 && p.grounded, `${prop.id}: walking off drops back onto the cap`);
+  }
+});
