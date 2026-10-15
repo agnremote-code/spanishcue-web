@@ -50,7 +50,8 @@ export const SECTORS = [
   S(1, 'bahia', 'Bahía de ambulancias', 40, 6, 58, 32, 'street'),
   S(2, 'laboratorio', 'Laboratorio', -40, -40, -8, -14, 'lab', '#f2f8ff'),
   S(2, 'descanso', 'Sala de descanso de médicos', 8, -40, 40, -14, 'rest', '#ffeeda'),
-  S(2, 'radiologia', 'Radiología', -40, -8, -10, 32, 'lab', '#dfe8ff'),
+  S(2, 'radiologia', 'Rayos X', -40, -8, -10, 12, 'lab', '#dfe8ff'),
+  S(2, 'tomografia', 'Tomografía', -40, 12, -10, 32, 'lab', '#d8e4ff'),
   S(2, 'galeria', 'Galería del área quirúrgica', -10, -8, 40, 4, 'corridor'),
   S(2, 'recuperacion', 'Recuperación posquirúrgica', -10, 4, 0, 32, 'ward'),
   S(2, 'quirofanos', 'Quirófanos', 0, 4, 40, 32, 'surgery', '#e6fff8'),
@@ -58,7 +59,8 @@ export const SECTORS = [
   S(2, 'pasillo', 'Pasillo del primer piso', -40, -14, 40, -8, 'corridor'),
   S(3, 'habitaciones', 'Habitaciones 401 y 402', -40, -40, -8, -14, 'room', '#fff4e6'),
   S(3, 'habitaciones-este', 'Habitaciones 403 y 404', 8, -40, 40, -14, 'room', '#fff4e6'),
-  S(3, 'habitaciones-sur', 'Habitaciones 405 y 406', -40, -8, -12, 32, 'room', '#fff4e6'),
+  S(3, 'habitaciones-sur', 'Habitaciones 405 y 406', -40, -8, -12, 12, 'room', '#fff4e6'),
+  S(3, 'partos', 'Sala de partos', -40, 12, -12, 32, 'birth', '#fff0f4'),
   S(3, 'enfermeria', 'Estación de enfermería', -12, -8, 4, 32, 'nurses'),
   S(3, 'uci', 'Unidad de Cuidados Intensivos', 4, -8, 40, 32, 'icu', '#dfeaff'),
   S(3, 'nucleo', 'Ascensores y escaleras', -8, -40, 8, -14, 'lobby'),
@@ -104,6 +106,8 @@ export const WALLS = {
     // Radiology, the surgical gallery with glass, recovery and the theatres.
     [-40, -8, -30, -8], [-24, -8, -10, -8], [-10, -8, -10, 32], [-10, -8, -4, -8],
     [0, 4, 40, 4, 'glass'], [0, 4, 0, 32],
+    // Tomography behind X-ray.
+    [-40, 12, -29.5, 12], [-24.5, 12, -10, 12],
   ],
   3: [
     ...shell(32), [-40, 32, 40, 32],
@@ -135,6 +139,7 @@ export const DOORS = {
     { x: -24, z: -14, w: 6, axis: 'x', kind: 'swing', label: 'LABORATORIO' },
     { x: 24, z: -14, w: 6, axis: 'x', kind: 'swing', label: 'DESCANSO MÉDICOS' },
     { x: -27, z: -8, w: 6, axis: 'x', kind: 'swing', label: 'RAYOS X' },
+    { x: -27, z: 12, w: 5, axis: 'x', kind: 'swing', label: 'TOMOGRAFÍA' },
   ],
   3: [
     { x: -33, z: -14, w: 4, axis: 'x', kind: 'swing', label: '401' },
@@ -207,10 +212,16 @@ export const FURNITURE = {
     { type: 'posts', x: 24, z: -32, w: 12, d: 0.2, solid: false },
     // Core.
     { type: 'bench', x: -6.2, z: -24, w: 0.6, d: 3 }, { type: 'plant', x: 6.5, z: -16, w: 1, d: 1 },
+    { type: 'wetfloor', x: -12, z: -10.2, w: 0.6, d: 0.4 }, { type: 'wetfloor', x: 18, z: 13.4, w: 0.6, d: 0.4 },
+    { type: 'bin', x: -13, z: 31, w: 0.5, d: 0.5 }, { type: 'bin', x: 39, z: -9, w: 0.5, d: 0.5 }, { type: 'bin', x: 23, z: 13, w: 0.5, d: 0.5 },
     // Street.
     { type: 'bench', x: -14, z: 36, w: 3, d: 0.6 }, { type: 'bench', x: 14, z: 36, w: 3, d: 0.6 },
     { type: 'bollard', x: -6, z: 34, w: 0.4, d: 0.4 }, { type: 'bollard', x: 6, z: 34, w: 0.4, d: 0.4 },
     { type: 'ambulance', x: 50, z: 26, w: 2.4, d: 6 },
+    // Outside: palms, street lights and the bins along the sidewalk.
+    ...[-36, -27, -18, -9, 9, 18, 27, 36].map((x) => ({ type: 'palm', x, z: 43.8, w: 0.5, d: 0.5 })),
+    { type: 'palm', x: 56, z: 40, w: 0.5, d: 0.5 }, { type: 'palm', x: 56, z: 12, w: 0.5, d: 0.5 },
+    ...[-31.5, -13.5, 13.5, 31.5].map((x) => ({ type: 'lamppost', x, z: 44.8, w: 0.3, d: 0.3 })),
   ],
   2: [
     { type: 'labbench', x: -30, z: -31, w: 12, d: 1.4 }, { type: 'labbench', x: -18, z: -24, w: 10, d: 1.4 },
@@ -220,8 +231,8 @@ export const FURNITURE = {
     { type: 'table', x: 18, z: -26, w: 2.4, d: 1.4 }, { type: 'lockers', x: 39.4, z: -26, w: 0.7, d: 10 },
     { type: 'tv', x: 30, z: -14.3, w: 3, d: 0.2, solid: false },
     { type: 'xray', x: -30, z: 8, w: 1.2, d: 2.6 }, { type: 'lightbox', x: -32, z: -7.4, w: 4, d: 0.3 },
-    { type: 'leadglass', x: -22, z: 22, w: 0.3, d: 12 }, { type: 'desk', x: -16, z: 22, w: 1.2, d: 3, rot: 0 },
-    chairs(-30, 26, 8),
+    { type: 'ct', x: -31, z: 22, w: 2.6, d: 4.6 }, { type: 'leadglass', x: -21, z: 22, w: 0.3, d: 12 }, { type: 'desk', x: -15, z: 22, w: 1.2, d: 3, rot: 0 },
+    chairs(-17, 4.6, 6), { type: 'wetfloor', x: -20, z: 9, w: 0.6, d: 0.4 },
     ...beds([-5], 10, 0), ...beds([-5], 18, 0), ...beds([-5], 26, 0),
     { type: 'ortable', x: 14, z: 18, w: 1, d: 2.4 }, { type: 'ortable', x: 31, z: 18, w: 1, d: 2.4 },
     { type: 'surglight', x: 14, z: 18, w: 1, d: 1, solid: false }, { type: 'surglight', x: 31, z: 18, w: 1, d: 1, solid: false },
@@ -232,7 +243,10 @@ export const FURNITURE = {
   3: [
     ...beds([-37.6], -34, 1), ...beds([-26.4], -34, 3), ...beds([-21.6], -36, 1), ...beds([-10.4], -36, 3),
     ...beds([10.4], -34, 1), ...beds([21.6], -34, 3), ...beds([26.4], -34, 1), ...beds([37.6], -34, 3),
-    ...beds([-37.6], -2, 1), ...beds([-37.6], 4, 1), ...beds([-37.6], 18, 1), ...beds([-37.6], 26, 1),
+    ...beds([-37.6], -2, 1), ...beds([-37.6], 4, 1),
+    // Delivery room.
+    { type: 'delivery', x: -30, z: 22, w: 1.3, d: 2.2, rot: 1 }, { type: 'warmer', x: -24, z: 15, w: 1, d: 0.8 }, { type: 'monitor', x: -31.8, z: 19.8, w: 0.5, d: 0.5 },
+    { type: 'wetfloor', x: -16, z: 22, w: 0.6, d: 0.4 },
     { type: 'nursedesk', x: -4, z: 4, w: 7, d: 2.4 }, { type: 'medcart', x: -9, z: 14, w: 0.9, d: 0.6 }, { type: 'medcart', x: 1.6, z: 16, w: 0.9, d: 0.6 },
     { type: 'callpanel', x: -4, z: -1.2, w: 3, d: 0.2, solid: false },
     ...beds([10, 20, 30], 2, 0, 'icubed'), ...beds([10, 20, 30], 22, 2, 'icubed'),
@@ -333,18 +347,27 @@ export const WALKERS = {
     { look: N('#a8724e', 'm', 'short', '#120d0b', '#6a3a8a'), path: [[-12, -24], [-30, -24], [-30, -32], [-12, -32]], speed: 1, pause: 4, carry: 'tray' },
     { look: L('#f0d0b4', 'adult', 'f', 'long', '#6a3a1a', 'coat', '#3a2a4a', 'pants', '#1a1a20', [], { seed: 919 }), path: [[10, -30], [38, -30], [38, -18], [10, -18]], speed: 0.9, pause: 5 },
     { look: L('#8d5a3c', 'young', 'm', 'curly', '#120d0b', 'tshirt', '#d43a3a', 'jeans', '#24304a', [], { seed: 920 }), path: [[-36, 30], [-36, 14]], speed: 1.6, pause: 1, injury: ['arm'] },
+    // Chaos: a patient escaping in a gown, two nurses after him, a stretcher at full speed.
+    { look: GOWN('#e2b896', 'adult', 'm', 'short', '#3a2a20'), path: [[-34, -10.6], [34, -10.6]], speed: 4.2, run: true, scream: true, injury: ['blood', 'iv'], delay: 0 },
+    { look: N('#c99468', 'f', 'bun', '#2a1a12', '#2f6fb0'), path: [[-34, -10.6], [34, -10.6]], speed: 4.2, run: true, scream: true, delay: 1.4 },
+    { look: N('#a8724e', 'm', 'buzz', '#120d0b', '#2f6fb0'), path: [[-34, -10.6], [34, -10.6]], speed: 4.2, run: true, delay: 2.3 },
+    { look: N('#e8c0a0', 'f', 'ponytail', '#6a3a1a', '#c8401e'), path: [[30, -11.6], [-4, -11.6], [-4, -11.6]], speed: 3.4, run: true, pause: 3, carry: 'stretcher', patient: { injury: ['blood', 'head', 'leg'], mood: 'terror' } },
+    { look: L('#f0d0b4', 'young', 'f', 'long', '#3a2416', 'dress', '#e8e0d0', null, null, [], { seed: 924 }), path: [[-38, 13.6], [-14, 13.6]], speed: 3.6, run: true, scream: true, injury: ['blood'] },
   ],
   2: [
     { look: N('#e2b896', 'f', 'bob', '#1a1210', '#2e7d6e'), path: [[-4, -11], [34, -11], [34, -3], [-4, -3]], speed: 1.4, pause: 2 },
     { look: COAT('#c48f69', 'adult', 'm', 'short', '#1a1210'), path: [[-36, -11], [-6, -11]], speed: 1.2, pause: 3 },
     { look: N('#8d5a3c', 'm', 'buzz', '#120d0b', '#3f8f98'), path: [[-6, 6], [-6, 30], [-2, 30], [-2, 6]], speed: 0.9, pause: 3, carry: 'iv' },
     { look: SCRUBS('#f0d6c0', 'm', 'short', '#2a1a12', '#2e7d6e'), path: [[24, 10], [36, 10], [36, 28], [24, 28]], speed: 1, pause: 2, surgeon: true },
+    { look: N('#c48f69', 'm', 'short', '#1a1210', '#2e7d6e'), path: [[-4, -11.4], [36, -11.4], [36, -4], [-4, -4]], speed: 3.2, run: true, pause: 2, carry: 'stretcher', patient: { injury: ['blood', 'tube'], mood: 'pain' } },
   ],
   3: [
     { look: N('#c99468', 'f', 'ponytail', '#2a1a12', '#1f4f8f'), path: [[-36, -11], [36, -11], [36, -10], [-36, -10]], speed: 1.5, pause: 2, carry: 'cart' },
     { look: GOWN('#e8c0a0', 'old', 'f', 'curly', '#cccccc'), path: [[-30, -11], [-14, -11]], speed: 0.35, pause: 4, carry: 'iv' },
     { look: N('#a8724e', 'm', 'short', '#120d0b', '#1f4f8f'), path: [[8, 12], [36, 12], [36, 14], [8, 14]], speed: 1, pause: 3 },
     { look: L('#dcae88', 'adult', 'm', 'short', '#3a2a20', 'jacket', '#4a5a3a', 'jeans', '#24304a', [], { seed: 934 }), path: [[-6, -11], [-17, -11], [-17, -18], [-17, -11]], speed: 1, pause: 6, carry: 'flowers' },
+    { look: GOWN('#a8724e', 'old', 'm', 'bald', '#cccccc', ['mustache']), path: [[36, -10.4], [-36, -10.4]], speed: 3.6, run: true, scream: true, carry: 'iv' },
+    { look: L('#c48f69', 'young', 'm', 'short', '#1a1210', 'shirt', '#5a7aa0', 'jeans', '#24304a', [], { seed: 936 }), path: [[-13, 22], [-13, 22], [-20, 22], [-20, 14], [-13, 14]], speed: 3, run: true, pause: 2, scream: true },
   ],
 };
 
@@ -371,10 +394,15 @@ export const CROWD = {
     { x: 16, z: -25.6, heading: Math.PI, pose: 'sleep', seat: true }, { x: 32, z: -25.6, heading: Math.PI, pose: 'sit' },
     { x: 18, z: 36.6, heading: 0, pose: 'smoke-free', smoke: true, injury: ['gown', 'iv'] },
     { x: -14, z: 36.6, heading: 0, pose: 'phone', seat: true },
+    { x: -10.6, z: -11.2, heading: 0.4, pose: 'fallen', mood: 'pain', injury: ['leg'] },
+    { x: 20.6, z: 9.6, heading: Math.PI, pose: 'injured', mood: 'pain', injury: ['blood', 'head'] },
+    { x: 26.4, z: 18, heading: -1.6, pose: 'scream', mood: 'terror', injury: ['arm'] },
+    { x: 44, z: 24.6, heading: 0.4, pose: 'smoke-free', smoke: true, look: 'paramedic' },
   ],
   2: [
     { x: -30, z: 8, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown'] },
-    { x: -32, z: 26.6, heading: Math.PI, pose: 'sit', injury: ['arm'] }, { x: -28, z: 26.6, heading: Math.PI, pose: 'phone', seat: true },
+    { x: -31, z: 22.6, heading: 0, pose: 'lie', lying: true, injury: ['gown'], mood: 'scared' }, { x: -16, z: 21, heading: -Math.PI / 2, pose: 'read', seat: true, look: 'scrubs' },
+    { x: -18.4, z: 4.6, heading: Math.PI, pose: 'sit', injury: ['leg'] }, { x: -15.6, z: 4.6, heading: Math.PI, pose: 'phone', seat: true },
     { x: -5, z: 18, heading: Math.PI, pose: 'lie', lying: true, injury: ['gown', 'iv'] },
     { x: 31, z: 18, heading: Math.PI, pose: 'lie', lying: true, injury: ['gown'] },
     { x: 29.4, z: 18.8, heading: 1.5, pose: 'stand', look: 'surgeon' }, { x: 32.6, z: 17.4, heading: -1.5, pose: 'stand', look: 'surgeon' },
@@ -385,8 +413,10 @@ export const CROWD = {
   3: [
     { x: -37.6, z: -34, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown'] }, { x: 10.4, z: -34, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown', 'iv'] },
     { x: 37.6, z: -34, heading: -Math.PI / 2, pose: 'lie', lying: true, injury: ['gown'] }, { x: 26.4, z: -34, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown', 'head'] },
-    { x: -37.6, z: 4, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown'] }, { x: -37.6, z: 26, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown', 'arm'] },
-    { x: -34.8, z: 26, heading: -Math.PI / 2, pose: 'sit', seat: true },
+    { x: -37.6, z: 4, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown'] },
+    { x: -30, z: 22, heading: Math.PI / 2, pose: 'lie', lying: true, injury: ['gown', 'iv'], mood: 'terror' },
+    { x: -27.6, z: 23.6, heading: -2.2, pose: 'point', look: 'scrubs' }, { x: -25.4, z: 27, heading: 0.6, pose: 'fallen', mood: 'sleepy' },
+    { x: -36.4, z: 29, heading: 2.6, pose: 'cry', seat: true },
     { x: 10, z: 2, heading: Math.PI, pose: 'lie', lying: true, injury: ['gown', 'tube'] }, { x: 30, z: 2, heading: Math.PI, pose: 'lie', lying: true, injury: ['gown', 'tube'] },
     { x: 20, z: 22, heading: 0, pose: 'lie', lying: true, injury: ['gown', 'tube'] }, { x: 30, z: 22, heading: 0, pose: 'lie', lying: true, injury: ['gown', 'iv'] },
     { x: 32.4, z: 21, heading: -1.6, pose: 'stand', look: 'scrubs' },
@@ -436,13 +466,18 @@ export function wallBox([x0, z0, x1, z1]) {
 const OUTSIDE = [box(40, -40, 58, 6), box(-40, 45.5, 58, 46)];
 const NOT_SOLID = new Set(['curtain', 'curtains', 'tv', 'surglight', 'posts', 'pipes', 'balloons', 'callpanel']);
 const TALL = new Set(['vending', 'lockers', 'shelves', 'washer', 'drawers', 'fridge', 'windows', 'kitchen', 'ambulance', 'leadglass', 'boiler', 'cabinet']);
+// How high you stand after jumping onto a piece of furniture (Space). Things
+// taller than a jump (lockers, shelves, the boiler) have no top.
+const TOPS = { bed: 0.72, trauma: 0.72, icubed: 0.72, gurney: 0.9, ortable: 1, autopsy: 0.92, counter: 1.1, nursedesk: 1.1, ticket: 1.3, chairs: 0.8, sofa: 0.75, desk: 0.8, examchair: 0.95, crashcart: 1, medcart: 1, trolley: 1, foodcounter: 1.1, table: 0.78, bench: 0.5, bollard: 0.9, labbench: 0.95, centrifuge: 1.4, xray: 1, anesthesia: 1.3, linencart: 1.2, watercooler: 1.45, plant: 1.4, monitor: 1.6, ct: 1.2, delivery: 1, warmer: 1, wetfloor: 0.62, bin: 0.85, washer: 1.3, vending: 1.9, ambulance: 2.7 };
+export function topOf(item) { return TOPS[item.type] ?? null; }
+
 export function cameraBlockers(floor) {
   return [...(WALLS[floor] ?? []).map(wallBox), ...(FURNITURE[floor] ?? []).filter((f) => TALL.has(f.type)).map(footprint)];
 }
 
 export function solidsFor(floor) {
   const walls = (WALLS[floor] ?? []).map(wallBox);
-  const things = (FURNITURE[floor] ?? []).filter((f) => f.solid !== false && !NOT_SOLID.has(f.type)).map(footprint);
+  const things = (FURNITURE[floor] ?? []).filter((f) => f.solid !== false && !NOT_SOLID.has(f.type)).map((f) => ({ ...footprint(f), ...(topOf(f) ? { top: topOf(f) } : {}) }));
   const people = SCENES.filter((s) => s.floor === floor).flatMap((s) => [s.npc, ...(s.extras ?? [])])
     .filter((p) => !p.lying && !p.surgeon)
     .map((p) => box(p.x - 0.3, p.z - 0.3, p.x + 0.3, p.z + 0.3));

@@ -7,11 +7,13 @@
 import * as THREE from 'three';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
+import type { Voice } from '../escucha-3d/bump.mjs';
 import { CEILING, CHATTER, CROWD, DOORS, ELEVATOR, FLOORS, FURNITURE, SCENES, SECTORS, STAIRS, WALKERS, WALL, WALLS, walkerAt, type Walker } from './layout.mjs';
 
 type Item = { type: string; x: number; z: number; w: number; d: number; rot?: number; solid?: boolean };
-export type Npc = { person: Person; floor: number; scene?: string; main?: boolean; x: number; z: number; heading: number; baseMood: string; lying?: boolean; smoker?: { tip: THREE.Object3D; puffs: THREE.Sprite[]; phase: number } };
-export type Mover = { walker: Walker; person: Person; floor: number; offset: number; carry?: THREE.Object3D; rider?: Person; x: number; z: number };
+export type Npc = { person: Person; floor: number; scene?: string; main?: boolean; x: number; z: number; heading: number; baseMood: string; lying?: boolean; seated?: boolean; talk?: string; body?: string; seed: number; angryUntil?: number; smoker?: { tip: THREE.Object3D; puffs: THREE.Sprite[]; phase: number } };
+export type Mover = { walker: Walker; person: Person; floor: number; offset: number; carry?: THREE.Object3D; rider?: Person; x: number; z: number; moving?: boolean; body?: string; seed: number; angryUntil?: number; heading?: number };
+export type Cry = Voice;
 export type DoorRig = { floor: number; x: number; z: number; leaves: { mesh: THREE.Object3D; open: (k: number) => void }[]; k: number };
 export type Spot = { id: string; floor: number; group: THREE.Group; ring: THREE.Mesh; gem: THREE.Mesh; material: THREE.MeshBasicMaterial };
 export type Hospital = {
@@ -26,6 +28,8 @@ export type Hospital = {
   setSceneMood: (id: string | null, mood: string | null) => void;
   /** Starts the ambulance arrival (also runs by itself every minute or so). */
   ambulance: () => void;
+  /** A speech bubble over someone: plain talk or a red yell. */
+  say: (who: Npc | Mover, text: string, seconds?: number, yell?: boolean) => void;
 };
 
 // People currently speaking in an open scene.
@@ -145,6 +149,56 @@ function puff() {
     const g = ctx.createRadialGradient(32, 32, 2, 32, 32, 30); g.addColorStop(0, 'rgba(230,230,230,.9)'); g.addColorStop(1, 'rgba(230,230,230,0)');
     ctx.fillStyle = g; ctx.fillRect(0, 0, 64, 64);
   });
+}
+
+function cautionTexture() {
+  return canvas(128, 256, ctx => {
+    ctx.fillStyle = '#f2c81e'; ctx.fillRect(0, 0, 128, 256);
+    ctx.fillStyle = '#1a1a1a'; ctx.beginPath(); ctx.moveTo(64, 30); ctx.lineTo(108, 110); ctx.lineTo(20, 110); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#f2c81e'; ctx.font = 'bold 60px Arial'; ctx.textAlign = 'center'; ctx.fillText('!', 64, 100);
+    ctx.fillStyle = '#1a1a1a'; ctx.font = 'bold 22px Arial'; ctx.fillText('CUIDADO', 64, 150); ctx.fillText('PISO', 64, 180); ctx.fillText('MOJADO', 64, 208);
+  });
+}
+// A palm tree: a leaning ringed trunk and drooping fronds.
+const FROND = (() => {
+  if (typeof document === 'undefined') return null;
+  return new THREE.MeshStandardMaterial({ color: '#2f6a2a', roughness: 0.8, side: THREE.DoubleSide });
+})();
+function palm(g: THREE.Object3D, x: number, z: number, h: number) {
+  const lean = 0.08 + (Math.abs(x) % 5) * 0.03, dir = (x * 1.7) % (Math.PI * 2);
+  const seg = 7, bark = std('#7a6248', 0.95), ring = std('#5a4632', 0.95);
+  let px = x, pz = z;
+  for (let i = 0; i < seg; i++) {
+    const y = (i + 0.5) * h / seg;
+    px = x + Math.sin(dir) * lean * y * y / h; pz = z + Math.cos(dir) * lean * y * y / h;
+    add(g, C(0.15 - i * 0.008, 0.18 - i * 0.008, h / seg, 8), bark, px, y, pz);
+    add(g, C(0.19 - i * 0.008, 0.19 - i * 0.008, 0.06, 8), ring, px, y + h / seg / 2 - 0.03, pz);
+  }
+  if (!FROND) return;
+  for (let k = 0; k < 9; k++) {
+    const holder = new THREE.Group(); holder.position.set(px, h, pz); holder.rotation.y = k * (Math.PI * 2 / 9) + x; g.add(holder);
+    const leaf = add(holder, new THREE.PlaneGeometry(0.7, 3.4, 1, 4), FROND, 0, 0, 1.6);
+    leaf.rotation.x = -Math.PI / 2 + 0.45 + (k % 3) * 0.12;
+    const pos = leaf.geometry.attributes.position;
+    for (let v = 0; v < pos.count; v++) { const t = (pos.getY(v) + 1.7) / 3.4; pos.setZ(v, -t * t * 1.1); if (Math.abs(pos.getX(v)) > 0.1) pos.setX(v, pos.getX(v) * (1 - t * 0.7)); }
+    leaf.geometry.computeVertexNormals();
+  }
+  add(g, new THREE.SphereGeometry(0.28, 8, 6), std('#5a3a1a', 0.9), px, h - 0.15, pz);
+}
+function carMesh(x: number, z: number, heading: number, color: string, hearse = false) {
+  const group = new THREE.Group(); group.position.set(x, 0, z); group.rotation.y = heading;
+  const paint = std(color, 0.3, 0.5), glass = std('#1a2430', 0.08, 0.6);
+  const len = hearse ? 5.6 : 4.2;
+  add(group, B(1.8, 0.7, len), paint, 0, 0.65, 0);
+  add(group, B(1.6, 0.6, hearse ? 3.6 : 2.1), hearse ? paint : glass, 0, 1.28, hearse ? -0.6 : -0.2);
+  if (hearse) {
+    for (const sx of [-1, 1]) add(group, B(0.02, 0.4, 2.6), glass, sx * 0.81, 1.3, -0.9);
+    add(group, B(0.02, 0.3, 1.8), std('#c8a040', 0.4, 0.8), 0.82, 1.3, -0.9);
+    add(group, B(0.5, 0.4, 2), std('#6a3a1a', 0.5), 0, 1.2, -1.2);
+  }
+  for (const sx of [-1, 1]) for (const sz of [-1, 1]) add(group, C(0.34, 0.34, 0.25, 12), DARK(), sx * 0.88, 0.34, sz * (len / 2 - 0.8)).rotation.z = Math.PI / 2;
+  for (const sx of [-1, 1]) add(group, B(0.3, 0.12, 0.05), std('#fff6d8', 0.3, 0, '#fff0c0', 1.4), sx * 0.6, 0.72, len / 2 + 0.01);
+  return group;
 }
 
 // ---------------------------------------------------------------- furniture
@@ -377,6 +431,60 @@ function buildItem(g: THREE.Group, item: Item, floor: number, glowMats: THREE.Me
     case 'autopsy': add(g, C(0.1, 0.18, 0.85, 10), STEEL(), item.x, 0.42, item.z); add(g, B(0.9, 0.06, 2.3), std('#c8d0d4', 0.15, 0.85), item.x, 0.88, item.z); break;
     case 'pipes': for (let i = 0; i < 3; i++) add(g, C(0.08 + i * 0.03, 0.08 + i * 0.03, item.w, 10), std(['#8a6a3a', '#5a6a5a', '#9aa0a0'][i], 0.5, 0.4), item.x, CEILING - 0.25 - i * 0.05, item.z - 0.4 + i * 0.4).rotation.z = Math.PI / 2; break;
     case 'boiler': add(g, C(1.1, 1.1, 2.8, 18), std('#7a5a3a', 0.5, 0.5), item.x, 1.4, item.z); break;
+    case 'ct': {
+      // The CT scanner: a gantry ring with its dark tunnel and the sliding table.
+      const holder = new THREE.Group(); holder.position.set(item.x, 0, item.z); holder.rotation.y = (item.rot ?? 0) * Math.PI / 2; g.add(holder);
+      add(holder, new THREE.TorusGeometry(0.95, 0.32, 14, 32), std('#eef0f2', 0.35), 0, 1.27, -1.3);
+      add(holder, B(2.6, 0.5, 0.75), std('#e4e8ea', 0.4), 0, 0.25, -1.3);
+      add(holder, C(0.63, 0.63, 0.7, 28), DARK(), 0, 1.27, -1.3).rotation.x = Math.PI / 2;
+      add(holder, B(0.5, 0.06, 0.05), bright('#3dc8ff'), 0, 2.3, -1.12);
+      add(holder, B(0.6, 0.72, 2.4), std('#d8dde0', 0.45), 0, 0.36, 0.6);
+      add(holder, B(0.55, 0.08, 3.2), std('#2a3a4a', 0.5), 0, 0.76, 0.2);
+      add(holder, B(0.5, 0.01, 0.5), BLOOD(), 0.1, 0.81, 0.9);
+      break;
+    }
+    case 'delivery': {
+      // The delivery bed: raised back, stirrups, and what a birth leaves on the floor.
+      const holder = bedFrame(g, item, 'bed');
+      add(holder, B(0.9, 0.55, 0.08), std('#c8d4dc', 0.5), 0, 0.95, -0.7).rotation.x = -0.5;
+      for (const sx of [-1, 1]) {
+        add(holder, C(0.02, 0.02, 0.7, 6), STEEL(), sx * 0.36, 0.95, 1.05).rotation.x = 0.7;
+        add(holder, B(0.14, 0.06, 0.26), std('#2a3a4a', 0.5), sx * 0.36, 1.22, 1.3);
+      }
+      const puddle = add(g, new THREE.CircleGeometry(0.75, 14), BLOOD(), item.x + 0.6, 0.012, item.z + 0.3); puddle.rotation.x = -Math.PI / 2; puddle.scale.set(1.3, 1, 1);
+      add(g, C(0.2, 0.18, 0.3, 12), STEEL(), item.x + 1.1, 0.15, item.z - 0.4);
+      break;
+    }
+    case 'warmer': {
+      add(g, B(0.8, 0.9, 0.6), WHITE(), item.x, 0.45, item.z);
+      add(g, B(0.75, 0.12, 0.55), std('#f4c8d0', 0.7), item.x, 0.98, item.z);
+      add(g, C(0.02, 0.02, 1.1, 6), STEEL(), item.x - 0.35, 1.5, item.z);
+      add(g, B(0.6, 0.08, 0.4), std('#ff6a3a', 0.4, 0, '#ff3a1a', 1.6), item.x, 2.05, item.z);
+      add(g, new THREE.CapsuleGeometry(0.08, 0.18, 4, 8), std('#f8f0f4', 0.9), item.x, 1.1, item.z).rotation.z = Math.PI / 2;
+      break;
+    }
+    case 'wetfloor': {
+      const mat = new THREE.MeshStandardMaterial({ map: cautionTexture(), roughness: 0.5 });
+      for (const sz of [-1, 1]) { const leaf = add(g, B(0.34, 0.64, 0.02), mat, item.x, 0.31, item.z + sz * 0.09); leaf.rotation.x = sz * 0.28; }
+      const smear = add(g, new THREE.CircleGeometry(0.5, 10), BLOOD(), item.x + 0.5, 0.011, item.z + 0.2); smear.rotation.x = -Math.PI / 2; smear.scale.set(2.2, 0.5, 1);
+      break;
+    }
+    case 'bin': {
+      add(g, C(0.26, 0.22, 0.72, 12), std('#c81e1e', 0.6), item.x, 0.36, item.z);
+      add(g, C(0.28, 0.28, 0.05, 12), std('#a01414', 0.6), item.x + 0.1, 0.76, item.z).rotation.z = 0.5;
+      for (let k = 0; k < 4; k++) add(g, new THREE.SphereGeometry(0.09, 7, 5), k % 2 ? SHEET() : std('#c89a9a', 0.9), item.x + Math.sin(k * 2) * 0.12, 0.76 + (k % 2) * 0.06, item.z + Math.cos(k * 2) * 0.12);
+      add(g, B(0.18, 0.18, 0.005), bright('#ffd23f'), item.x, 0.45, item.z + 0.24);
+      break;
+    }
+    case 'palm': palm(g, item.x, item.z, 7 + (Math.abs(item.x * 13 + item.z * 7) % 3)); break;
+    case 'lamppost': {
+      add(g, C(0.08, 0.11, 6, 8), DARK(), item.x, 3, item.z);
+      add(g, B(0.08, 0.08, 1.4), DARK(), item.x, 5.95, item.z - 0.65);
+      add(g, B(0.4, 0.1, 0.25), std('#ffffff', 0.4, 0, '#ffc870', 2.2), item.x, 5.88, item.z - 1.3);
+      break;
+    }
+    case 'car': g.add(carMesh(item.x, item.z, (item.rot ?? 0) * Math.PI / 2, ['#8a1c1c', '#2a4a7a', '#d8d8d0', '#1c1c20', '#5a6a3a'][Math.abs(Math.round(item.x + item.z)) % 5])); break;
+    case 'hearse': g.add(carMesh(item.x, item.z, (item.rot ?? 0) * Math.PI / 2, '#0c0c0e', true)); break;
     default: add(g, B(item.w, 0.8, item.d), std('#c8c8c8', 0.6), item.x, 0.4, item.z, r);
   }
   void floor; void low;
@@ -464,6 +572,7 @@ const STAFF: Record<string, Look> = {
   scrubs: { skin: '#c99468', age: 'adult', body: 'f', hairStyle: 'bun', hairColor: '#2a1a12', top: 'scrubs', topColor: '#2f6fb0', bottom: 'pants', bottomColor: '#2f6fb0' },
   coat: { skin: '#e2b896', age: 'adult', body: 'm', hairStyle: 'short', hairColor: '#3a2a20', top: 'coat', topColor: '#f4f6f6', bottom: 'pants', bottomColor: '#2c3a4a', extras: ['glasses'] },
   surgeon: { skin: '#e8c0a0', age: 'adult', body: 'm', hairStyle: 'short', hairColor: '#1a1210', top: 'scrubs', topColor: '#2e7d6e', bottom: 'pants', bottomColor: '#2e7d6e' },
+  paramedic: { skin: '#b9825c', age: 'adult', body: 'm', hairStyle: 'buzz', hairColor: '#1a1210', top: 'jacket', topColor: '#e8601e', bottom: 'pants', bottomColor: '#1e2a3a' },
 };
 const GOWN_LOOK: Look = { skin: '#d7a982', age: 'old', body: 'm', hairStyle: 'short', hairColor: '#bbbbbb', top: 'shirt', topColor: '#b9d2e2', bottom: 'pants', bottomColor: '#b9d2e2' };
 
@@ -471,7 +580,7 @@ const GOWN_LOOK: Look = { skin: '#d7a982', age: 'old', body: 'm', hairStyle: 'sh
 function bedFor(floor: number, x: number, z: number) {
   let best: Item | null = null, d = 1.8;
   for (const item of (FURNITURE[floor] ?? []) as Item[]) {
-    if (!['bed', 'trauma', 'icubed', 'gurney', 'ortable', 'autopsy'].includes(item.type)) continue;
+    if (!['bed', 'trauma', 'icubed', 'gurney', 'ortable', 'autopsy', 'ct', 'delivery'].includes(item.type)) continue;
     const k = Math.hypot(item.x - x, item.z - z);
     if (k < d) { d = k; best = item; }
   }
@@ -483,7 +592,7 @@ function laydown(person: Person, floor: number, x: number, z: number, heading: n
   const along = (bed.rot ?? 0) % 2 === 0 ? 0 : Math.PI / 2;
   // Keep the head on the pillow side (the pillow is at -len/2 in bed space).
   const dir = along + (bed.rot === 2 || bed.rot === 3 ? Math.PI : 0) + Math.PI;
-  const h = bed.type === 'gurney' ? 0.88 : bed.type === 'ortable' ? 0.98 : bed.type === 'autopsy' ? 0.92 : 0.7;
+  const h = bed.type === 'gurney' ? 0.88 : bed.type === 'ortable' ? 0.98 : bed.type === 'autopsy' ? 0.92 : bed.type === 'ct' ? 0.9 : 0.7;
   const bx = bed.x - Math.sin(dir) * 0.85, bz = bed.z - Math.cos(dir) * 0.85;
   person.root.position.set(bx, h - 0.1, bz);
   person.root.rotation.y = dir;
@@ -520,7 +629,7 @@ const PALETTE: Record<number, { band: string; paint: string; rail: string; floor
   2: { band: '#3a6aa0', paint: '#eef1f4', rail: '#f0f0f0', floor: ['#cdd2da', '#4a5a7a'] },
   3: { band: '#a0784a', paint: '#f3efe6', rail: '#f4f0e6', floor: ['#d6cfc2', '#7a6a50'] },
 };
-function buildFloor(id: number, low: boolean, glowMats: THREE.MeshStandardMaterial[], doors: DoorRig[], lift: Hospital['lift']) {
+function buildFloor(id: number, low: boolean, glowMats: THREE.MeshStandardMaterial[], doors: DoorRig[], lift: Hospital['lift'], flicks: { floor: number; x: number; z: number; mat: THREE.MeshStandardMaterial }[]) {
   const group = new THREE.Group();
   const info = FLOORS.find(f => f.id === id)!;
   group.position.y = info.y;
@@ -543,7 +652,21 @@ function buildFloor(id: number, low: boolean, glowMats: THREE.MeshStandardMateri
     const lamp = std('#ffffff', 0.4, 0, sector.light, sector.sound === 'morgue' ? 1.1 : 1.5);
     if (sector.sound === 'morgue' || sector.sound === 'basement') glowMats.push(lamp);
     for (let x = sector.x0 + 2.5; x < sector.x1 - 1; x += 4.5) for (let z = sector.z0 + 2.5; z < sector.z1 - 1; z += 4.5) {
-      add(group, B(1.2, 0.04, 0.6), lamp, x, CEILING - 0.03, z);
+      // One panel in six is dying: it flickers, and some hang from a cable.
+      const k = Math.abs(Math.round(x * 7 + z * 13 + id * 5));
+      if (k % 6 === 0) {
+        const mat = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.4, emissive: sector.light, emissiveIntensity: 1.5 });
+        mat.userData.flick = k % 97;
+        glowMats.push(mat);
+        const hang = k % 4 === 0;
+        const panel = add(group, B(1.2, 0.04, 0.6), mat, x, CEILING - (hang ? 0.28 : 0.03), z);
+        if (hang) { panel.rotation.z = 0.35; add(group, C(0.006, 0.006, 0.3, 4), DARK(), x + 0.55, CEILING - 0.12, z); }
+        flicks.push({ floor: id, x, z, mat });
+      } else if (k % 23 === 1) {
+        // A missing ceiling tile and the wires behind it.
+        add(group, B(1.2, 0.01, 1.2), std('#0a0a0a', 0.95), x, CEILING - 0.01, z);
+        for (let w = 0; w < 3; w++) add(group, C(0.008, 0.008, 0.7 + w * 0.2, 4), std(['#c81e1e', '#2a2a2a', '#2a6ac8'][w], 0.6), x - 0.3 + w * 0.3, CEILING - 0.4 - w * 0.1, z).rotation.z = 0.2 * (w - 1);
+      } else add(group, B(1.2, 0.04, 0.6), lamp, x, CEILING - 0.03, z);
     }
   }
   // Walls: a coloured band, the handrail and paint, or glass.
@@ -632,6 +755,17 @@ function buildFloor(id: number, low: boolean, glowMats: THREE.MeshStandardMateri
   if (id === 1) trail([[38, 20], [36.4, 19.4], [34.8, 18.4], [33.6, 16.6], [32.6, 14.4], [32.2, 12], [32, 9.4], [31.6, 6.8]]);
   if (id === 0) trail([[-24, -9.6], [-25.4, -9.8], [-26.8, -10.4], [-28.6, -10.6], [-30.4, -10.2], [-32.2, -10.6], [-34, -11]], 0.22);
   // Furniture.
+  if (id === 1) {
+    trail([[30, -11.4], [26, -11.8], [22, -11.2], [18, -11.6], [14, -11.3], [10, -11.7], [6, -11.4], [2, -11.6], [-2, -11.2]], 0.15);
+    trail([[-10.6, -11.2], [-11.2, -10.6], [-10.2, -10.9]], 0.4);
+    trail([[20.6, 9.6], [21.4, 10.4], [22.6, 11.6], [23.4, 12.8]], 0.25);
+  }
+  if (id === 2) trail([[14, 2], [16, 1.6], [18, 2.2], [20, 1.8], [22, 2.3], [-24, 14], [-27, 16], [-30, 19]], 0.18);
+  if (id === 3) trail([[-28, 20], [-26.6, 18.6], [-24.4, 17.2], [-22, 15.4], [-19, 13.6], [-16, 12.2], [12, 6], [14, 6.6]], 0.2);
+  // Grime: dark stains on the floor that no mop gets out.
+  const stain = new THREE.MeshStandardMaterial({ color: '#2e2a22', transparent: true, opacity: 0.28, depthWrite: false, roughness: 1 });
+  const rand = random(900 + id);
+  for (let i = 0; i < 26; i++) { const st = add(group, new THREE.CircleGeometry(0.5 + rand() * 1.4, 10), stain, inside.minX + 2 + rand() * (w - 4), 0.008, inside.minZ + 2 + rand() * (d - 4)); st.rotation.x = -Math.PI / 2; st.scale.set(1, 0.5 + rand(), 1); }
   for (const item of (FURNITURE[id] ?? []) as Item[]) buildItem(group, item, id, glowMats, low);
   return group;
 }
@@ -653,12 +787,42 @@ function buildExterior() {
   add(g, B(0.5, 27.7, 72), facade, 40.3, 13.85 - 3.7 / 2 + 1.85, -4);
   const winMat = new THREE.MeshStandardMaterial({ map: windowTexture(77), emissive: '#ffffff', emissiveMap: windowTexture(78), emissiveIntensity: 0.4 });
   for (let row = 1; row < 4; row++) for (let x = -34; x <= 34; x += 8) add(g, new THREE.PlaneGeometry(2.6, 1.8), winMat, x, row * 7 + 2.2, 32.56);
-  const name = canvas(1024, 160, ctx => {
-    ctx.fillStyle = '#f4f2ea'; ctx.fillRect(0, 0, 1024, 160);
-    ctx.fillStyle = '#c81e1e'; ctx.fillRect(30, 40, 26, 80); ctx.fillRect(3, 67, 80, 26);
-    ctx.fillStyle = '#18324a'; ctx.font = 'bold 74px Georgia, serif'; ctx.textBaseline = 'middle'; ctx.fillText('HOSPITAL SAN CASI VIVO', 110, 84);
+  // The name: the whole of it fits on the board, «VIVO» is crossed out in red
+  // spray with «MUERTO» painted over it, and the motto under it is the truth.
+  const name = canvas(2048, 512, ctx => {
+    ctx.fillStyle = '#ece6d6'; ctx.fillRect(0, 0, 2048, 512);
+    const rand = random(41);
+    for (let i = 0; i < 70; i++) { ctx.fillStyle = `rgba(70,50,30,${0.04 + rand() * 0.1})`; ctx.beginPath(); ctx.ellipse(rand() * 2048, rand() * 512, 20 + rand() * 120, 8 + rand() * 40, 0, 0, Math.PI * 2); ctx.fill(); }
+    for (let i = 0; i < 9; i++) { const x = rand() * 2048; const gr = ctx.createLinearGradient(0, 0, 0, 512); gr.addColorStop(0, 'rgba(60,40,20,.35)'); gr.addColorStop(1, 'rgba(60,40,20,0)'); ctx.fillStyle = gr; ctx.fillRect(x, 0, 6 + rand() * 10, 512); }
+    ctx.fillStyle = '#c81e1e'; ctx.fillRect(70, 150, 52, 170); ctx.fillRect(11, 209, 170, 52);
+    ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    ctx.font = 'bold 150px Georgia, serif';
+    const main = 'HOSPITAL SAN CASI ';
+    let size = 150;
+    while (ctx.measureText(main + 'VIVO').width > 1780 && size > 60) { size -= 4; ctx.font = `bold ${size}px Georgia, serif`; }
+    const x0 = 220, y = 250;
+    ctx.fillStyle = '#18324a'; ctx.fillText(main, x0, y);
+    const vx = x0 + ctx.measureText(main).width, vw = ctx.measureText('VIVO').width;
+    ctx.fillStyle = '#5a6a7a'; ctx.fillText('VIVO', vx, y);
+    // The spray: two crossing strokes, drips and the new word above.
+    ctx.strokeStyle = '#b00d0d'; ctx.lineCap = 'round'; ctx.lineWidth = 22;
+    ctx.beginPath(); ctx.moveTo(vx - 20, y - 40); ctx.lineTo(vx + vw + 20, y + 30); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(vx - 20, y + 30); ctx.lineTo(vx + vw + 20, y - 46); ctx.stroke();
+    ctx.fillStyle = '#b00d0d';
+    for (let i = 0; i < 9; i++) { const dx = vx + rand() * vw; ctx.fillRect(dx, y + 20, 7, 40 + rand() * 120); ctx.beginPath(); ctx.arc(dx + 3.5, y + 60 + rand() * 120, 7, 0, Math.PI * 2); ctx.fill(); }
+    ctx.font = 'bold italic 120px "Arial Black", Impact, sans-serif'; ctx.save(); ctx.translate(vx + vw / 2, 70); ctx.rotate(-0.06); ctx.textAlign = 'center'; ctx.fillText('MUERTO', 0, 0); ctx.restore();
+    for (let i = 0; i < 6; i++) { const dx = vx + vw / 2 - 180 + rand() * 360; ctx.fillRect(dx, 110, 6, 20 + rand() * 60); }
+    ctx.textAlign = 'center'; ctx.fillStyle = '#18324a'; ctx.font = 'bold 54px Georgia, serif';
+    ctx.fillText('ENTRADA DE PACIENTES  ·  SALIDA POR LA MORGUE', 1024, 430);
   });
-  add(g, new THREE.PlaneGeometry(16, 2.5), new THREE.MeshStandardMaterial({ map: name, emissive: '#ffffff', emissiveMap: name, emissiveIntensity: 0.7 }), 0, 5.4, 32.58);
+  add(g, new THREE.PlaneGeometry(26, 6.5), new THREE.MeshStandardMaterial({ map: name, emissive: '#ffffff', emissiveMap: name, emissiveIntensity: 0.16 }), -2, 7.4, 32.58);
+  // An LED board that has never moved off zero.
+  const led = canvas(1024, 160, ctx => {
+    ctx.fillStyle = '#060606'; ctx.fillRect(0, 0, 1024, 160);
+    ctx.fillStyle = '#ff2a1a'; ctx.font = 'bold 56px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText('DÍAS SIN PERDER UN PACIENTE: 0', 512, 82);
+  });
+  add(g, new THREE.PlaneGeometry(7.6, 1.2), new THREE.MeshBasicMaterial({ map: led, toneMapped: false }), 14.5, 4.4, 32.6);
   const urg = textTexture('URGENCIAS', '#c81e1e', '#ffffff', 512, 128);
   add(g, new THREE.PlaneGeometry(5, 1.25), new THREE.MeshStandardMaterial({ map: urg, emissive: '#ffffff', emissiveMap: urg, emissiveIntensity: 0.9 }), 40.58, 4.4, 20, Math.PI / 2);
   add(g, B(8, 0.25, 6), std('#c8c8c0', 0.6), 44, 3.9, 20);
@@ -668,18 +832,23 @@ function buildExterior() {
     const tex = windowTexture(100 + i);
     add(g, B(11, h, 10), new THREE.MeshStandardMaterial({ map: tex, emissive: '#ffffff', emissiveMap: tex, emissiveIntensity: 0.35 }), x, h / 2, 86);
   }
-  for (let i = 0; i < 6; i++) add(g, C(0.08, 0.1, 5, 8), DARK(), -30 + i * 14, 2.5, 44.6);
+  // Parked along the curb: a hearse waiting with the engine running, and cars.
+  g.add(carMesh(8, 49, Math.PI / 2, '#0c0c0e', true));
+  for (const [x, color] of [[-34, '#8a1c1c'], [-26, '#2a4a7a'], [-17, '#d8d8d0'], [21, '#5a6a3a'], [29, '#1c1c20']] as const) g.add(carMesh(x, 49, -Math.PI / 2, color));
+  const hearse = textTexture('FUNERARIA EL ÚLTIMO SUSPIRO · 24 H', '#0c0c0e', '#c8a040', 1024, 96, 'bold 44px Georgia, serif');
+  add(g, new THREE.PlaneGeometry(4.2, 0.4), new THREE.MeshBasicMaterial({ map: hearse, toneMapped: false }), 8, 1.05, 48.08, Math.PI);
   return g;
 }
 
 // ---------------------------------------------------------------- the whole hospital
-export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows: boolean }): Hospital {
+export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; cries?: Cry[]; onCry?: (cry: Cry | null, volume: number) => void }): Hospital {
   const floors: Record<number, THREE.Group> = {};
   const doors: DoorRig[] = [];
   const glowMats: THREE.MeshStandardMaterial[] = [];
   const lift: Hospital['lift'] = {};
+  const flicks: { floor: number; x: number; z: number; mat: THREE.MeshStandardMaterial }[] = [];
   for (const f of FLOORS) {
-    const group = buildFloor(f.id, opts.low, glowMats, doors, lift);
+    const group = buildFloor(f.id, opts.low, glowMats, doors, lift, flicks);
     const moving = [...doors.filter(d => d.floor === f.id).flatMap(d => d.leaves.map(l => l.mesh)), lift[f.id].left, lift[f.id].right];
     batchStatic(group, moving);
     floors[f.id] = group;
@@ -701,6 +870,15 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
     light.position.set(x, CEILING - 0.6, z);
     floors[f.id].add(light);
     if (speed) pulses.push({ light, base: intensity * 14, speed });
+  }
+  const flickLights: { light: THREE.PointLight; mat: THREE.MeshStandardMaterial }[] = [];
+  for (const f of FLOORS) {
+    const first = flicks.find(k => k.floor === f.id && Math.abs(k.x) < 30);
+    if (!first) continue;
+    const light = new THREE.PointLight('#e8f0ff', 3, 10, 2);
+    light.position.set(first.x, CEILING - 0.5, first.z);
+    floors[f.id].add(light);
+    flickLights.push({ light, mat: first.mat });
   }
 
   // People at the circles.
@@ -731,7 +909,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
         add(group, B(0.5, 0.06, 0.46), std('#2d6aa0', 0.55), p.x + back.x, 0.45, p.z + back.z);
       }
       group.add(person.root);
-      const npc: Npc = { person, floor: s.floor, scene: s.id, main: p.main, x: at.x, z: at.z, heading: at.heading, baseMood: p.mood ?? 'neutral', lying: anyP.lying };
+      const npc: Npc = { person, floor: s.floor, scene: s.id, main: p.main, x: at.x, z: at.z, heading: at.heading, baseMood: p.mood ?? 'neutral', lying: anyP.lying || p.pose === 'lie', seated: anyP.seat || p.pose === 'sit', body: (p.look as Look).body, seed: npcs.length * 31 + 7 };
       if (anyP.smoke) {
         const rig = person.rig as unknown as { handR: THREE.Object3D };
         const tip = add(rig.handR, new THREE.SphereGeometry(0.008, 6, 4), bright('#ff5a1a'), 0.02, -0.075, 0.09);
@@ -748,7 +926,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
     list.forEach((c, i) => {
       if (opts.low && i % 3 === 2 && !c.lying) return;
       if (c.sheet) { sheetOver(floors[floor], floor, c.x, c.z); return; }
-      const look = c.look === 'scrubs' || c.look === 'coat' || c.look === 'surgeon' ? { ...STAFF[c.look], seed: floor * 100 + i }
+      const look = c.look && STAFF[c.look] ? { ...STAFF[c.look], seed: floor * 100 + i }
         : c.lying || c.injury?.includes('gown') ? { ...GOWN_LOOK, seed: floor * 100 + i, body: i % 2 ? 'f' : 'm', hairStyle: i % 2 ? 'curly' : 'short', skin: CROWD_LOOKS[i % CROWD_LOOKS.length].skin }
           : { ...CROWD_LOOKS[(i + floor) % CROWD_LOOKS.length], seed: floor * 100 + i * 7 };
       const person = makePerson(look as Look, c.pose, { seat: c.seat, lying: c.lying, mood: c.mood, injury: c.injury });
@@ -756,7 +934,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
       if (c.lying) at = laydown(person, floor, c.x, c.z, c.heading); else { person.root.position.set(c.x, 0, c.z); person.root.rotation.y = c.heading; }
       if (c.injury?.includes('iv')) ivPole(floors[floor], at.x + 0.6, at.z + 0.3);
       floors[floor].add(person.root);
-      npcs.push({ person, floor, x: at.x, z: at.z, heading: at.heading, baseMood: c.mood ?? 'neutral', lying: c.lying });
+      npcs.push({ person, floor, x: at.x, z: at.z, heading: at.heading, baseMood: c.mood ?? 'neutral', lying: c.lying, seated: c.seat || c.pose === 'sit', talk: `${floor}-${i}`, body: (look as Look).body, seed: floor * 100 + i });
     });
   }
   // People who walk, run and push things.
@@ -767,7 +945,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
       if (opts.low && i % 3 === 2) return;
       const person = makePerson(walker.look as Look, walker.carry === 'tray' ? 'carry' : walker.carry === 'mop' ? 'sweep' : 'stand', { injury: walker.injury });
       floors[floor].add(person.root);
-      const mover: Mover = { walker, person, floor, offset: i * 13.7, x: 0, z: 0 };
+      const mover: Mover = { walker, person, floor, offset: walker.delay ?? i * 13.7, x: 0, z: 0, body: (walker.look as Look).body, seed: floor * 50 + i * 3 };
       if (walker.carry === 'stretcher') {
         const holder = new THREE.Group();
         bedFrame(holder, { type: 'gurney', x: 0, z: 0, w: 0.66, d: 2, rot: 0 }, 'gurney');
@@ -817,18 +995,28 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
   // Speech bubbles for chatter near the player.
   const bubbles: { sprite: THREE.Sprite; until: number; npc: Npc | Mover }[] = [];
   let nextBubble = 3;
-  function bubble(text: string) {
+  function bubble(text: string, yell = false) {
     const tex = canvas(512, 128, ctx => {
-      ctx.fillStyle = 'rgba(255,255,255,.94)';
+      ctx.fillStyle = yell ? 'rgba(200,20,20,.96)' : 'rgba(255,255,255,.94)';
       ctx.beginPath(); ctx.roundRect(8, 8, 496, 92, 26); ctx.fill();
       ctx.beginPath(); ctx.moveTo(230, 98); ctx.lineTo(256, 124); ctx.lineTo(270, 98); ctx.fill();
-      ctx.fillStyle = '#1a2230'; ctx.font = '600 30px Arial, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(text.length > 34 ? text.slice(0, 33) + '…' : text, 256, 54);
+      ctx.fillStyle = yell ? '#ffffff' : '#1a2230'; ctx.font = `${yell ? 800 : 600} ${text.length > 30 ? 24 : 30}px Arial, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(text.length > 44 ? text.slice(0, 43) + '…' : text, 256, 54);
     });
     const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthTest: true, toneMapped: false }));
     sprite.scale.set(2.2, 0.55, 1);
     return sprite;
   }
+
+  function say(who: Npc | Mover, text: string, seconds = 3.6, yell = false) {
+    const old = bubbles.findIndex(b => b.npc === who);
+    if (old >= 0) { const b = bubbles[old]; b.sprite.removeFromParent(); (b.sprite.material as THREE.SpriteMaterial).map?.dispose(); b.sprite.material.dispose(); bubbles.splice(old, 1); }
+    const sprite = bubble(text, yell);
+    floors[who.floor].add(sprite);
+    bubbles.push({ sprite, until: clockNow + seconds, npc: who });
+  }
+  let clockNow = 0, nextCry = 6;
+  const SCREAMS = ['¡AAAAAH!', '¡AAAY!', '¡SOCORRO!', '¡NOOO!', '¡AYUDA!'];
 
   const wp = new THREE.Vector3();
   let sceneMood: { id: string; mood: string } | null = null;
@@ -838,9 +1026,19 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
   }
 
   function animate(t: number, dt: number, floor: number, px: number, pz: number) {
+    clockNow = t;
     drawEcg(t);
     for (const p of pulses) p.light.intensity = p.base * (0.55 + 0.45 * Math.abs(Math.sin(t * p.speed)));
-    glowMats.forEach((m, i) => { if (Math.random() < 0.004) m.emissiveIntensity = 0.2; else m.emissiveIntensity += (1.1 + (i % 2) * 0.3 - m.emissiveIntensity) * 0.2; });
+    glowMats.forEach((m, i) => {
+      const phase = m.userData.flick as number | undefined;
+      if (phase != null) {
+        // Dying tubes: long buzzing stretches, sudden stutters, dark gaps.
+        const slow = Math.sin(t * 0.7 + phase) + Math.sin(t * 0.31 + phase * 2);
+        const fast = Math.sin(t * 31 + phase * 5) * Math.sin(t * 13.7 + phase);
+        m.emissiveIntensity = slow < -1.1 ? 0.03 : slow < -0.4 ? (fast > 0 ? 1.2 : 0.05) : fast > 0.85 ? 0.15 : 1.1;
+      } else if (Math.random() < 0.004) m.emissiveIntensity = 0.2; else m.emissiveIntensity += (1.1 + (i % 2) * 0.3 - m.emissiveIntensity) * 0.2;
+    });
+    for (const f of flickLights) f.light.intensity = f.mat.emissiveIntensity * 2.5;
     for (const spot of spots) {
       if (spot.floor !== floor) continue;
       spot.gem.position.y = 2.3 + Math.sin(t * 2 + spot.group.position.x) * 0.12;
@@ -852,7 +1050,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
     for (const m of movers) {
       if (m.floor !== floor) continue;
       const at = walkerAt(m.walker, t + m.offset);
-      m.x = at.x; m.z = at.z;
+      m.x = at.x; m.z = at.z; m.moving = at.moving; m.heading = at.heading;
       const run = m.walker.run;
       if (m.person.pose !== (run ? 'run' : m.walker.carry === 'tray' ? 'carry' : m.walker.carry === 'mop' ? 'sweep' : 'stand')) setPose(m.person, run ? 'run' : m.walker.carry === 'tray' ? 'carry' : m.walker.carry === 'mop' ? 'sweep' : 'stand', false);
       m.person.root.position.set(at.x, 0, at.z);
@@ -866,6 +1064,22 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
         if (m.rider) animatePerson(m.rider, dt, 0, false);
       }
       nearDoor.push({ x: at.x + Math.sin(at.heading) * 1.4, z: at.z + Math.cos(at.heading) * 1.4 });
+    }
+    // Somebody screams now and then: a runner who yells as they pass, or
+    // someone in a bed or a chair who loses it. Near ones are heard in full.
+    if (t > nextCry) {
+      nextCry = t + (floor === 0 ? 18 : 7) + Math.random() * 9;
+      const near = (n: { x: number; z: number }) => Math.hypot(n.x - px, n.z - pz);
+      const runners = movers.filter(m => m.floor === floor && m.walker.scream && near(m) < 22);
+      const scared = npcs.filter(n => n.floor === floor && !n.main && ['terror', 'pain', 'scared', 'furious'].includes(n.baseMood) && near(n) < 22);
+      const pool: (Npc | Mover)[] = [...runners, ...runners, ...scared];
+      if (pool.length) {
+        const who = pool[Math.floor(Math.random() * pool.length)];
+        const cries = opts.cries ?? [];
+        const cry = cries.length && Math.random() < 0.6 ? cries[Math.floor(Math.random() * cries.length)] : null;
+        say(who, cry ? cry.text : SCREAMS[Math.floor(Math.random() * SCREAMS.length)], 2.6, true);
+        opts.onCry?.(cry, Math.max(0.15, 1 - near(who) / 24));
+      }
     }
     // Doors open for anyone close.
     for (const door of doors) {
@@ -922,12 +1136,10 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
         .filter(n => { const d = Math.hypot(n.x - px, n.z - pz); return d > 1.5 && d < 11; });
       if (lines.length && pool.length && bubbles.length < 2) {
         const npc = pool[Math.floor(Math.random() * pool.length)];
-        const sprite = bubble(lines[Math.floor(Math.random() * lines.length)]);
-        floors[floor].add(sprite);
-        bubbles.push({ sprite, until: t + 3.6, npc });
+        if (!bubbles.some(b => b.npc === npc)) say(npc, lines[Math.floor(Math.random() * lines.length)]);
       }
     }
   }
 
-  return { floors, exterior, npcs, movers, spots, doors, lift, animate, setSceneMood, ambulance: () => { ambulanceAt = -1000; } };
+  return { floors, exterior, npcs, movers, spots, doors, lift, animate, setSceneMood, ambulance: () => { ambulanceAt = -1000; }, say };
 }

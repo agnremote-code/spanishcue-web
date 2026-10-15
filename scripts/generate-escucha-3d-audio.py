@@ -22,11 +22,11 @@ def pcm_of(mp3: bytes) -> bytes:
                           input=mp3, capture_output=True, check=True).stdout
 
 
-async def speak(text, voice, rate):
+async def speak(text, voice, rate, pitch='+0Hz'):
     for attempt in range(5):
         try:
             chunks = []
-            async for message in edge_tts.Communicate(text, voice, rate=rate).stream():
+            async for message in edge_tts.Communicate(text, voice, rate=rate, pitch=pitch).stream():
                 if message['type'] == 'audio':
                     chunks.append(message['data'])
             data = b''.join(chunks)
@@ -62,6 +62,24 @@ async def clip(game, level, item, key, digest):
         return key, {'hash': digest, 'seconds': seconds, 'src': f"/audio/escucha-3d/{game}-{level.lower()}-{item['id']}.mp3"}
 
 
+VOCES = ROOT / 'app/escucha-3d/voces.json'
+
+
+async def shout(line, key, digest):
+    # Shouted lines (a bumped passer-by, a cry in the hospital): faster, higher
+    # and louder than the listenings.
+    async with sem:
+        pcm = pcm_of(await speak(line['text'], line['voice'], '+12%', '+8Hz')) + b'\0\0' * int(SR * 0.15)
+        dest = OUT / f"voces-{line['id']}.mp3"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 's16le', '-ar', str(SR), '-ac', '1', '-i', 'pipe:0',
+                        '-af', 'loudnorm=I=-13:TP=-1:LRA=7', '-ar', str(SR), '-codec:a', 'libmp3lame', '-b:a', '48k', str(dest)],
+                       input=pcm, check=True)
+        seconds = round(len(pcm) / 2 / SR, 2)
+        print(f'{key} {seconds}s', flush=True)
+        return key, {'hash': digest, 'seconds': seconds, 'src': f"/audio/escucha-3d/voces-{line['id']}.mp3"}
+
+
 async def main():
     manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {'clips': {}}
     old = manifest.get('clips', {})
@@ -77,6 +95,14 @@ async def main():
                 keep[key] = old[key]
             else:
                 jobs.append(clip(game, level, item, key, digest))
+    for line in json.loads(VOCES.read_text())['lines']:
+        key = f"voces/{line['id']}"
+        digest = hashlib.sha256(json.dumps([VERSION, 'shout', line['voice'], line['text']], ensure_ascii=False).encode()).hexdigest()[:20]
+        dest = OUT / f"voces-{line['id']}.mp3"
+        if old.get(key, {}).get('hash') == digest and dest.exists():
+            keep[key] = old[key]
+        else:
+            jobs.append(shout(line, key, digest))
     print(f'{len(jobs)} clips to build, {len(keep)} unchanged', flush=True)
     results = await asyncio.gather(*jobs)
     clips = {**keep, **dict(results)}

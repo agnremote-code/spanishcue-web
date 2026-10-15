@@ -1,7 +1,7 @@
 import type { Look } from '../noche-abierta/people3d';
 import type { StoryScene } from './story.d.mts';
 export type Bounds = { minX: number; maxX: number; minZ: number; maxZ: number };
-export type Box = { x0: number; x1: number; z0: number; z1: number };
+export type Box = { x0: number; x1: number; z0: number; z1: number; top?: number };
 export type Floor = { id: number; name: string; sub: string; y: number; bounds: Bounds };
 export type Placed = { x: number; z: number; heading: number };
 export type Person = Placed & { pose: string; mood?: string; look: Look; injury?: string[]; seat?: boolean; lying?: boolean; smoke?: boolean; mop?: boolean; gurney?: boolean; surgeon?: boolean; sheet?: boolean; carryBox?: boolean };
@@ -9,8 +9,8 @@ export type Scene = StoryScene & { spot: { x: number; z: number }; npc: Placed &
 export type Sector = { floor: number; id: string; name: string; x0: number; z0: number; x1: number; z1: number; sound: string; light: string };
 export type Door = { x: number; z: number; w: number; axis: 'x' | 'z'; kind: 'slide' | 'swing'; label?: string };
 export type Furniture = { type: string; x: number; z: number; w: number; d: number; rot?: number; solid?: boolean };
-export type Walker = { look: Look; path: [number, number][]; speed: number; pause?: number; carry?: string; run?: boolean; injury?: string[]; sheet?: boolean; surgeon?: boolean; patient?: { injury?: string[]; mood?: string } };
-export type CrowdMember = Placed & { pose: string; mood?: string; injury?: string[]; seat?: boolean; lying?: boolean; smoke?: boolean; sheet?: boolean; look?: string };
+export type Walker = { look: Look; path: [number, number][]; speed: number; pause?: number; carry?: string; run?: boolean; injury?: string[]; sheet?: boolean; surgeon?: boolean; patient?: { injury?: string[]; mood?: string }; scream?: boolean; delay?: number };
+export type CrowdMember = Placed & { pose: string; mood?: string; injury?: string[]; seat?: boolean; lying?: boolean; smoke?: boolean; sheet?: boolean; look?: string; talk?: string };
 export const FLOOR_H: number;
 export const CEILING: number;
 export const WALL: number;
@@ -39,6 +39,7 @@ export function footprint(item: Furniture): Box;
 export function wallBox(segment: (number | string)[]): Box;
 export function cameraBlockers(floor: number): Box[];
 export function solidsFor(floor: number): Box[];
+export function topOf(item: Furniture): number | null;
 export function spotAt(floor: number, x: number, z: number, radius?: number): string | null;
 export function atElevator(x: number, z: number): boolean;
 export function atStairs(x: number, z: number): boolean;

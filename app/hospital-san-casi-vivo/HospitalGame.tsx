@@ -16,6 +16,8 @@ import { CAST } from './story.mjs';
 import { STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, undo } from './engine.mjs';
 import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
 import { createAmbience, type Ambience } from './ambience';
+import { PATIENTS } from './patients.mjs';
+import { setShoutMuted } from '../escucha-3d/shout';
 import type { Pose } from './World3D';
 import './hospital.css';
 
@@ -72,7 +74,8 @@ export default function HospitalGame() {
   const [via, setVia] = useState<'lift' | 'stairs'>('lift');
   const [list, setList] = useState(false);
   const [map, setMap] = useState(false);
-  const [near, setNear] = useState<{ kind: 'scene' | 'lift' | 'stairs'; id: string } | null>(null);
+  const [near, setNear] = useState<{ kind: 'scene' | 'lift' | 'stairs' | 'person'; id: string } | null>(null);
+  const [personId, setPersonId] = useState<string | null>(null);
   const [pose, setPose] = useState<Pose | null>(null);
   const [riding, setRiding] = useState<number | null>(null);
   const [vocab, setVocab] = useState(true);
@@ -105,7 +108,7 @@ export default function HospitalGame() {
   // Ambient sound: per sector, ducked while a card or a listening is open.
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setKind(sector?.sound ?? null); }, [sector?.sound]);
-  useEffect(() => { ambience.current?.setMuted(!sound); }, [sound]);
+  useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
   const [voice, setVoice] = useState(false);
   useEffect(() => { ambience.current?.duck(voice ? 0.05 : state.scene || listenAt !== undefined ? 0.3 : 1); }, [state.scene, listenAt, voice]);
   const onAudio = useCallback((playing: boolean) => setVoice(playing), []);
@@ -148,13 +151,14 @@ export default function HospitalGame() {
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return;
       if (state.scene) { close(); return; }
+      if (personId) { setPersonId(null); return; }
       if (panel) setPanel(null);
       if (list) setList(false);
       if (map) setMap(false);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [state.scene, panel, list, map, close]);
+  }, [state.scene, panel, list, map, close, personId]);
 
   useEffect(() => { cardRef.current?.focus({ preventScroll: true }); }, [view?.id, view?.pick]);
 
@@ -168,13 +172,17 @@ export default function HospitalGame() {
 
   const nearScene = near?.kind === 'scene' ? sceneById(near.id) : null;
   const nearWho = nearScene ? CAST[nearScene.cast[0]] : null;
-  const busy = Boolean(state.scene) || listenAt !== undefined;
+  const busy = Boolean(state.scene) || listenAt !== undefined || Boolean(personId);
+  const nearPatient = near?.kind === 'person' ? PATIENTS[near.id] : null;
+  const patient = personId ? PATIENTS[personId] : null;
+  const band = ['A0', 'A1', 'A2'].includes(state.level) ? 'basic' : ['B1', 'B2'].includes(state.level) ? 'mid' : 'high';
   const heardHere = mode === 'escucha' ? heard : done;
 
   return <main className="hs" data-level={state.level} data-floor={state.floor} data-mode={mode}>
     {ready && has3d && <World3D floor={state.floor} via={via} sceneId={state.scene?.id ?? (listenAt && sceneById(listenAt) ? listenAt : null)} mood={view?.mood ?? null}
       done={heardHere} paused={!entered || Boolean(panel) || list || map || listenAt !== undefined} intro={!entered}
-      onSpot={open} onLift={(how) => setPanel(how)} onNear={setNear} onPose={setPose} onFail={() => setHas3d(false)} />}
+      onSpot={open} onLift={(how) => setPanel(how)} onNear={setNear} onPose={setPose} onFail={() => setHas3d(false)}
+      personId={personId} onPerson={setPersonId} onCry={(volume) => ambience.current?.scream(volume)} />}
     {ready && !has3d && <div className="hs-flat" aria-hidden="true" />}
 
     {/* ------------------------------------------------ title */}
@@ -222,9 +230,27 @@ export default function HospitalGame() {
     {listenAt !== undefined && <ListeningCard game="hospital" level={state.level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} onAudio={onAudio} />}
     {entered && !busy && !panel && !list && !map && near && <div className="hs-prompt" role="status">
       {nearScene ? <button type="button" onClick={() => open(nearScene.id)}><kbd>E</kbd>{mode === 'escucha' ? `Escuchar · ${nearScene.sector}` : `Hablar con ${nearWho?.name ?? ''}`}</button>
+        : nearPatient ? <button type="button" onClick={() => setPersonId(near.id)}><kbd>E</kbd>{`Hablar con ${nearPatient.name}`}</button>
         : <button type="button" onClick={() => setPanel(near.kind === 'stairs' ? 'stairs' : 'lift')}><kbd>E</kbd>{near.kind === 'stairs' ? 'Subir o bajar por la escalera' : 'Llamar al ascensor'}</button>}
     </div>}
     {entered && mode !== 'escucha' && !busy && !near && !panel && !list && !map && <p className="hs-hint">Los círculos blancos son las escenas. El ascensor y las escaleras están al fondo del pasillo central.</p>}
+
+    {/* ------------------------------------------------ anyone in the hospital */}
+    {patient && <section className="hs-panel hs-person" aria-labelledby="hs-person-h">
+      <p className="hs-kicker">{patient.who.es}{state.level === 'A0' && <small lang="en"> · {patient.who.en}</small>}</p>
+      <h2 id="hs-person-h">{patient.name}</h2>
+      {band === 'basic' ? <>
+        <p className="hs-person-say">«{patient.basic.es}»</p>
+        {state.level === 'A0' && <p className="hs-person-en" lang="en">{patient.basic.en}</p>}
+        <p className="hs-person-ask"><b>{patient.name}:</b> {patient.basicAsk.es}</p>
+        {state.level === 'A0' && <p className="hs-person-en" lang="en">{patient.basicAsk.en}</p>}
+      </> : <>
+        <p className="hs-person-say">«{band === 'mid' ? patient.mid : patient.high}»</p>
+        <p className="hs-person-ask"><b>{patient.name}:</b> {band === 'mid' ? patient.midAsk : patient.highAsk}</p>
+      </>}
+      <p className="hs-person-tip">Respóndele en voz alta.</p>
+      <button type="button" className="hs-secondary" onClick={() => setPersonId(null)}>Seguir caminando <kbd>Esc</kbd></button>
+    </section>}
 
     {/* ------------------------------------------------ elevator and stairs */}
     {panel && <section className="hs-panel hs-lift" aria-labelledby="hs-lift-h">

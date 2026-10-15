@@ -1,0 +1,27 @@
+{
+  "note": "Short shouted lines for every 3D world: what a person yells when the mascot crashes into them (bump) and the cries heard in the hospital (cry). Each line is spoken by a voice from the country whose Spanish it uses. Audio: /audio/escucha-3d/voces-<id>.mp3, built by scripts/generate-escucha-3d-audio.py.",
+  "lines": [
+    { "id": "ar-m", "kind": "bump", "body": "m", "voice": "es-AR-TomasNeural", "text": "¡Correte, mierda! ¿No ves que estoy acá?" },
+    { "id": "ar-f", "kind": "bump", "body": "f", "voice": "es-AR-ElenaNeural", "text": "¡Correte, pelotudo! ¡Mirá por dónde caminás!" },
+    { "id": "es-m", "kind": "bump", "body": "m", "voice": "es-ES-AlvaroNeural", "text": "¡Quítate de en medio, joder! ¡Gilipollas!" },
+    { "id": "es-f", "kind": "bump", "body": "f", "voice": "es-ES-ElviraNeural", "text": "¡Pero mira por dónde vas, imbécil!" },
+    { "id": "mx-m", "kind": "bump", "body": "m", "voice": "es-MX-JorgeNeural", "text": "¡Hazte a un lado, pendejo! ¡Casi me tiras!" },
+    { "id": "mx-f", "kind": "bump", "body": "f", "voice": "es-MX-DaliaNeural", "text": "¡Fíjate, menso! ¡Qué te pasa!" },
+    { "id": "co-m", "kind": "bump", "body": "m", "voice": "es-CO-GonzaloNeural", "text": "¡Quítese, pues, güevón! ¡Qué animal!" },
+    { "id": "co-f", "kind": "bump", "body": "f", "voice": "es-CO-SalomeNeural", "text": "¡Ay, qué bruto! ¡Mire por dónde camina!" },
+    { "id": "cl-m", "kind": "bump", "body": "m", "voice": "es-CL-LorenzoNeural", "text": "¡Sale de ahí, weón! ¡Fíjate!" },
+    { "id": "cl-f", "kind": "bump", "body": "f", "voice": "es-CL-CatalinaNeural", "text": "¡Oye, idiota! ¡Me pisaste!" },
+    { "id": "cu-m", "kind": "bump", "body": "m", "voice": "es-CU-ManuelNeural", "text": "¡Asere, quítate del medio, coño!" },
+    { "id": "cu-f", "kind": "bump", "body": "f", "voice": "es-CU-BelkysNeural", "text": "¡Muchacho, qué bruto eres! ¡Mira bien!" },
+    { "id": "ve-m", "kind": "bump", "body": "m", "voice": "es-VE-SebastianNeural", "text": "¡Epa, chamo! ¡Quítate, coño!" },
+    { "id": "ve-f", "kind": "bump", "body": "f", "voice": "es-VE-PaolaNeural", "text": "¡Pendiente, pues, animal!" },
+    { "id": "pe-m", "kind": "bump", "body": "m", "voice": "es-PE-AlexNeural", "text": "¡Oe, muévete, pe! ¡Qué te pasa!" },
+    { "id": "pe-f", "kind": "bump", "body": "f", "voice": "es-PE-CamilaNeural", "text": "¡Ay, fíjate, oye, sonso!" },
+    { "id": "grito-1", "kind": "cry", "body": "f", "voice": "es-UY-ValentinaNeural", "text": "¡Socorro! ¡Que alguien me ayude!" },
+    { "id": "grito-2", "kind": "cry", "body": "m", "voice": "es-DO-EmilioNeural", "text": "¡Doctor! ¡Doctor! ¡Se está muriendo!" },
+    { "id": "grito-3", "kind": "cry", "body": "f", "voice": "es-PR-KarinaNeural", "text": "¡Ay, mi pierna! ¡Ay, Dios mío!" },
+    { "id": "grito-4", "kind": "cry", "body": "m", "voice": "es-BO-MarceloNeural", "text": "¡Se escapó el de la cama doce! ¡Agárrenlo!" },
+    { "id": "grito-5", "kind": "cry", "body": "f", "voice": "es-EC-AndreaNeural", "text": "¡Ya viene! ¡El bebé ya viene!" },
+    { "id": "grito-6", "kind": "cry", "body": "m", "voice": "es-PY-MarioNeural", "text": "¡Paso, paso! ¡Abran paso, que se nos va!" }
+  ]
+}

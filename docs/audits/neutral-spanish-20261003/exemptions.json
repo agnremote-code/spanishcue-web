@@ -6636,6 +6636,234 @@
       "text": "Entrás por una consulta. Salís con una historia: un hospital público 3D con humor negro, veintiún escenas para conversar y una escucha en cada una.",
       "category": "regional-pedagogy",
       "reason": "Owner-given class tagline, quoted verbatim from Ale's request of 2026-10-15 16:10Z (Hospital San Casi Vivo thread): «Entrás por una consulta. Salís con una historia.» Deliberate rioplatense voice for the title; the class content itself uses tú."
+    },
+    {
+      "path": "app/escucha-3d/voces.json",
+      "text": "¡Correte, mierda! ¿No ves que estoy acá?",
+      "category": "regional-pedagogy",
+      "reason": "Shouted line in a deliberate Argentine voice, spoken by the Argentine Edge voice es-AR-*; every bump line in voces.json uses the Spanish of its own speaker's country (Ale, 2026-10-15 18:04Z: «correte mierda!»)."
+    },
+    {
+      "path": "app/escucha-3d/voces.json",
+      "text": "¡Correte, pelotudo! ¡Mirá por dónde caminás!",
+      "category": "regional-pedagogy",
+      "reason": "Shouted line in a deliberate Argentine voice, spoken by the Argentine Edge voice es-AR-*; every bump line in voces.json uses the Spanish of its own speaker's country (Ale, 2026-10-15 18:04Z: «correte mierda!»)."
+    },
+    {
+      "path": "app/escucha-3d/voces.json",
+      "text": "¡Ya viene! ¡El bebé ya viene!",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Me despertaste justo cuando soñaba que por fin me atendían. No estoy enfermo, ¿sabes? Hace tres meses me echaron de mi departamento y descubrí que esta sala está abierta día y noche, con calefacción y gente que grita como despertador. Si alguien me pregunta, digo que tengo un dolor raro que va y viene, y nadie se molesta en comprobarlo.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mi esposo se tragó el control remoto porque no quería que yo viera mi telenovela durante el partido. Lo trajeron en ambulancia y, cada vez que tose, se enciende la tele de la sala. Los médicos dicen que se recuperará, pero yo lloro porque me perdí el capítulo final. No sé si quiero que lo operen o que simplemente se ponga en el canal correcto.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Cada mes traigo a mi suegra a su revisión y cada mes el médico dice que tiene el corazón de una muchacha de veinte. Mientras tanto, a mí me subió la presión, perdí el pelo y me diagnosticaron una úlcera de tanto esperarla. La última vez el doctor me revisó a mí por error y me recomendó que hiciera mi testamento. Ella se rio tanto que casi se atraganta, pero ni así.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Estaba picando cebolla a toda velocidad para impresionar a un cliente y me corté el dedo índice. Mi ayudante lo metió en la nevera portátil con hielo, pero también con el chorizo del almuerzo. Ahora no estoy seguro de qué me van a coser, porque se parecen bastante. Le pedí al cirujano que, si se equivoca, al menos me deje un dedo bien condimentado.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Vine por una simple gripe y la recepcionista me dijo que no podía atenderme porque, según el sistema, fallecí el jueves pasado. Le pedí que me tomara el pulso y me contestó que eso no es su departamento. Llamé a mis hijos y ya se habían repartido la vajilla. ¡No pienso irme de aquí hasta que me devuelvan la vida por escrito!",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Llevo una hora delante del mostrador y la recepcionista no me mira, porque dice que primero atiende las llamadas. Así que decidí llamarla desde aquí, y ahora la veo contestar y decir «un momento, por favor». Me puso en espera y se fue a tomar un café. Si esto no funciona, voy a mandarle una carta certificada.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Iba a cien por hora cuando un perro se cruzó, frené y salí volando por encima de un taxi. Tengo la pierna abierta y estoy perdiendo bastante sangre, pero lo único que pregunto es por mi moto. Me la regaló mi padre antes de morir y si le pasó algo, no me lo perdono. Que me cosan rápido, porque quiero ir a buscarla al depósito.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "No me juzgues, que a mi edad uno ya se ha ganado el derecho a pequeñas trampas inofensivas. Llevo años simulando desmayos con una maestría que ya quisieran muchos actores, todo por la gelatina roja de este hospital, que tiembla como mi pulso pero sabe a gloria. El único susto fue cuando un residente entusiasta casi me hace una colonoscopia; ahí comprendí que toda dulzura tiene su precio. Desde entonces me limito a dolencias que se curan con una cucharita y mucho cariño.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mi cara es muy grande. Comí la sopa del hospital. Soy alérgica a la sopa.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Subí al techo a arreglar la antena porque la señal se cortó justo antes de la final. Estaba moviéndola cuando mi equipo marcó un gol, grité de alegría y me resbalé. Caí sobre el auto del vecino y me abrí la cabeza. Lo peor es que, mientras me traían en la ambulancia, el otro equipo empató y luego ganó en los penales.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "¡Ay, ay! Perdona que no me levante, pero tengo la cabeza abierta como una sandía y el corazón todavía más roto. Por culpa de una antena caprichosa me perdí la final de mi vida, y para colmo celebré el único gol de mi equipo con un vuelo sin paracaídas hasta el capó del vecino. Mientras me cosían el cráneo, la radio de la ambulancia narraba cómo perdíamos en los penales: ni el peor torturador lo habría planeado mejor. Si me muero hoy, que pongan en mi lápida «murió de pasión, y de gravedad».",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Las enfermeras no vienen nunca, así que aprendí a regular el suero yo misma. Por la mañana lo pongo lento, como un café, y por la tarde lo pongo más rápido, como una margarita. Ayer me pasé un poco y estuve cantando boleros hasta las tres de la mañana. El médico dice que no lo haga, pero él tampoco viene.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Aquí, si una espera a que vengan a atenderla, se le seca la vena y se le arruga el alma, así que decidí tomar las riendas de mi tratamiento. Con esta ruedita manejo el goteo con la precisión de una barman veterana: suave para la siesta, alegre para la telenovela y, los viernes, a toda máquina. El médico jura que podría provocarme una sobrecarga, pero lleva tres días sin asomarse, de modo que su autoridad está, digamos, en observación. Si me muero, al menos que conste que fue durante una hora feliz autogestionada.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Tomás",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Esta mañana tosí dos veces seguidas y comprendí que mi fin estaba cerca. Desde entonces estoy llamando a funerarias para comparar precios, porque no quiero que mi familia gaste demasiado. Ya elegí un ataúd con cojín ortopédico, por si acaso. El médico me dijo que solo es un resfriado, pero sospecho que me lo oculta para no asustarme.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mi hermano necesita un riñón y yo decidí darle uno de los míos. Pensé que lo difícil sería la operación, pero administración me pidió una fotocopia del riñón, firmada por el propio riñón. Ya me hicieron tres ecografías para imprimir, y siempre falta un sello. Mi hermano dice que no me preocupe, que él puede esperar, pero se está poniendo amarillo.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Me sangraba la nariz y mi vecina llamó a una ambulancia, aunque yo le pedí que no exagerara. El chofer manejaba como si estuviera en una carrera y frenó de golpe en la puerta. Salí volando de la camilla y caí sobre el brazo. Y ahora un médico dijo la palabra «amputar» y nadie me quiere explicar si hablaba de mí.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "La última vez que me hicieron una tomografía, la máquina se apagó conmigo adentro. El técnico se había ido a almorzar y estuve dos horas atrapada, escuchando un ruido de lavadora. Cuando volvió, me preguntó si me había quedado quieta. Hoy le pedí que no se fuera a ningún lado hasta que yo saliera.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "El martes me caí de la escalera y me mandaron a rayos X, pero el ascensor no funcionaba. Subí dos pisos sentada, escalón por escalón. Desde entonces me llaman a todos menos a mí, aunque yo haya llegado primero. Ya me hice amiga de la señora de la limpieza, que me trae café para que no me desmaye.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Llevo aquí tanto tiempo que la pierna ya se me soldó sola, torcida pero soldada, así que la radiografía va a ser más bien un documento histórico. Subí las escaleras a fuerza de nalgas, porque el ascensor está fuera de servicio desde que lo inauguraron. Si me hubieran atendido el martes, hoy estaría bailando cumbia; en cambio, conozco de memoria los nombres de todos los empleados y sus problemas matrimoniales. Cuando me llamen, voy a pedir que me jubilen aquí.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Antes de la operación, escribí «Esta no» con marcador en la pierna sana, para que no se equivocaran. Cuando desperté, las dos piernas tenían vendas. El cirujano me explicó que operó la buena por si acaso, para que no tuviera envidia. Todavía estoy esperando que alguien me diga cuál quedó mejor.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Uno toma sus precauciones: escribí «ESTA NO» en mayúsculas sobre la pierna sana, con flechas y todo, como quien señaliza un campo minado. Al despertar, sin embargo, descubrí que ambas piernas lucen vendajes idénticos, y nadie se digna a aclararme cuál de las dos era el problema. La anestesia aún me tiene flotando, así que por ahora me lo tomo con filosofía. Pero en cuanto pueda caminar, si es que puedo, exigiré que me devuelvan la que sobraba.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Empecé el turno el jueves a las siete y todavía no me han mandado a casa. Lo único que funcionaba en todo el hospital era la máquina de café, y anoche alguien se la llevó con ruedas y todo. Ahora llamo a mis hijos por video para que me cuenten chistes y no me duerma. Les pedí que no le dijeran a nadie que mamá habla sola.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Cada mañana busco en las necrológicas los nombres de mis antiguos pacientes. Si no aparece ninguno, me pongo un diez. Esta semana encontré a uno, pero tenía ciento tres años, así que decidí que no contaba. Mi esposa me pidió que leyera los deportes como la gente normal.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Me internaron por la presión, pero decidí aprovechar el tiempo. Ya repartí tarjetas de mi funeraria a todos los pacientes del piso y hasta a dos médicos. A los de la terapia intensiva les ofrecí un descuento especial, aunque las enfermeras me pidieron que no volviera a entrar. Es que un buen negocio no descansa ni cuando uno está enfermo.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "¡Ay! ¡Mi bebé llega ya! Tengo mucho dolor. Mi esposo está en el piso.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Pedí la epidural hace tres horas, pero el anestesista estaba dormido en el quirófano. Mi esposo me prometió que iba a ser fuerte y se desmayó en cuanto vio la primera gota de sangre. La partera me dijo que empujara, aunque yo le pidiera que esperara a mi mamá. ¡Que alguien despierte a ese hombre para que vea a su hijo!",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "¿Cuál es tu nombre favorito para un bebé?",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "He traído al mundo a más de cuatro mil bebés, y nunca he visto un padre que no se desmaye. Este se cayó antes de que empezara lo interesante. Le pedí a la abuela que lo abanicara, pero ella está ocupada llorando. Si vuelve a desmayarse, lo voy a usar de almohada para la mamá.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "¿Dónde estoy? Estoy en el piso. Mi esposa tiene un bebé y yo tengo sueño.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Voy a ser abuela. Estoy muy feliz y muy triste. El bebé no va a tener mi nombre.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "¿Crees que la familia debería opinar sobre el nombre de un bebé?",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "(Escribe en la pizarra, con mala letra) Me pusieron este tubo el lunes, y desde entonces me comunico con esta pizarrita. Ayer escribí «tengo sed» y la enfermera leyó «tengo red», así que me trajo el cargador del celular. Le pedí a mi hijo que me trajera más marcadores, porque este ya casi no escribe. Si se termina la tinta, voy a tener que hablar con las cejas.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "(Garabatea con furia) Toda la vida fui orador de sobremesa, el alma de las fiestas, y ahora el destino me condena a la economía del lenguaje. Con este tubo en la garganta he descubierto que la mitad de lo que decía sobraba; la otra mitad, la mala letra la vuelve indescifrable. Ayer pedí agua y me trajeron un sacerdote, lo cual, en este piso, no deja de ser una pista inquietante. Si salgo de esta, prometo hablar menos y escribir más claro.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "El mes pasado me declararon muerta porque el monitor se desconectó. Desperté en la morgue con una etiqueta en el pie y le pedí al encargado que me trajera una manta. La semana siguiente pasó otra vez, aunque esa vez solo me dormí muy profundo. Ahora el señor de la morgue viene todos los días a ver si ya es la definitiva.",
+      "category": "neutral-context",
+      "reason": "False positive: «bebé» is the noun and «pedí / decidí / escribí / dormí» are first-person preterites in neutral tú-form Spanish; no voseo."
     }
   ]
 }

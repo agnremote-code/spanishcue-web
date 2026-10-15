@@ -147,3 +147,13 @@
   .hs-announce { top: 140px; font-size: .82rem; }
 }
 @media (pointer: coarse) { .hs-card-foot kbd, .hs-lift kbd { display: none; } }
+
+/* Anyone in the hospital: what they tell you when you walk up and press E. */
+.hs-person { top: auto; bottom: 16px; transform: translate(-50%, 0); }
+@media (min-width: 900px) { .hs-person { left: auto; right: 16px; transform: none; width: min(460px, 40%); } }
+.hs-person .hs-kicker { margin: 0 0 .2rem; text-transform: none; letter-spacing: .02em; font-size: .8rem; }
+.hs-person h2 { margin-bottom: .6rem; }
+.hs-person-say { margin: 0 0 .6rem; font-size: 1.08rem; line-height: 1.5; }
+.hs-person-ask { margin: .2rem 0 .3rem; font-size: 1.02rem; }
+.hs-person-en { margin: 0 0 .5rem; color: var(--muted); font-size: .92rem; }
+.hs-person-tip { margin: .6rem 0 .8rem; color: var(--muted); font-size: .85rem; }
