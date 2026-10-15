@@ -1,5 +1,5 @@
 // Noche abierta · calle · Barrio Viejo: preguntas de conversación general.
-export default {
+const TALK = {
   "viejo-herido": {
     topics: ["ayuda", "personalidad"],
     A1: ["¿Pides ayuda fácilmente?", "¿Vas al médico cuando te duele algo?", "¿Quién te ayuda cuando tienes un problema?", "¿Trabajas cuando estás enfermo?", "¿Ayudas a personas que no conoces?"],
@@ -109,3 +109,5 @@ export default {
     C2: ["¿Es la soledad prolongada algo a lo que uno se acostumbra, o algo que se disfraza de costumbre?", "¿Qué miedos que te parecían monstruos resultaron ser, al mirarlos de cerca, algo frágil que necesitaba cuidado?", "¿Qué revela una sociedad sobre sí misma en la manera en que trata a quienes trabajan mientras los demás duermen?", "¿Por qué cuidar de algo más vulnerable que nosotros suele devolvernos una parte que creíamos perdida?", "¿Hasta qué punto la ternura inesperada es capaz de desactivar un miedo que ningún argumento consigue calmar?"],
   },
 };
+
+export default TALK;

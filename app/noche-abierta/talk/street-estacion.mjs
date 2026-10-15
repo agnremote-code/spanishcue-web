@@ -1,5 +1,5 @@
 // Noche abierta · calle · La Estación: preguntas de conversación general.
-export default {
+const TALK = {
   "estacion-taxi": {
     topics: ["personalidad", "viajes"],
     A1: [
@@ -406,3 +406,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

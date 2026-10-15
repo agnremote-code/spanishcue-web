@@ -25,7 +25,7 @@ export const WORD_LIMITS = Object.freeze({
 // Naming a weapon turns a life question back into the object.
 export const WEAPON_WORDS = /\b(armas?|armad[oa]s?|pistolas?|rev[oó]lver\w*|cuchillos?|navajas?|c[uú]ter|granadas?|gas pimienta|dispar\w*|balas?|balazos?|bombas?|explosiv\w*|apuñal\w*|tiroteo\w*)\b/iu;
 // Safety, crime and emergency vocabulary: at most one question of a set.
-export const RISK_WORDS = /\b(seguridad|insegur\w*|peligr\w*|polic[ií]a\w*|comisar[ií]a\w*|amenaz\w*|violen\w*|rob(o|os|ar|aron|aste|ó|an|ado|ada)\b|ladr[oó]n\w*|ladrones|asalt\w*|defender\w*|defensa|ambulancia\w*|emergencia\w*|denunci\w*|crimen\w*|criminal\w*|delincu\w*|agresi[oó]n\w*|atac\w*)/iu;
+export const RISK_WORDS = /\b(seguridad|inseguridad|peligr\w*|polic[ií]a\w*|comisar[ií]a\w*|amenaz\w*|violen\w*|rob(o|os|ar|aron|aste|ó|an|ado|ada)\b|ladr[oó]n\w*|ladrones|asalt\w*|defender\w*|defensa|ambulancia\w*|emergencia\w*|denunci\w*|crimen\w*|criminal\w*|delincu\w*|agresi[oó]n\w*|atac\w*)/iu;
 // Procedures and instructions are not conversation.
 export const PROCEDURE_WORDS = /(c[oó]mo (debemos|debes|deber[ií]as|hay que|se debe) (actuar|reaccionar)|qu[eé] (debemos|debes|hay que|se debe) hacer|procedimiento|primeros auxilios|seguro m[eé]dico|protocolo|n[uú]mero de emergencias)/iu;
 

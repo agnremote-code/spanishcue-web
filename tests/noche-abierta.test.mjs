@@ -372,7 +372,8 @@ test('the rendered lesson: one question at a time, compact options, help folded,
   const result = render(state);
   assert.doesNotMatch(result, /class="na-outcome"/);
   assert.match(result, /Ahora habla de ti/);
-  assert.equal((result.match(/class="na-ask"/g) || []).length, 1);
+  assert.match(result, /data-general-questions="5"/, 'five questions to talk about');
+  assert.equal((result.match(/class="gq-q na-ask"/g) || []).length, 1, 'one question asked at a time');
   assert.match(result, /aria-label="Pregunta siguiente"/);
 
   const hub = render(engine.openLocation(engine.startExploring(engine.initialState()), 'plaza'));

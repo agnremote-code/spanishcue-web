@@ -1,5 +1,5 @@
 // Noche abierta · calle · escenas fuertes (norte): preguntas de conversación general.
-export default {
+const TALK = {
   "viejo-esquina": {
     topics: ["confianza", "familia"],
     A1: [
@@ -271,3 +271,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

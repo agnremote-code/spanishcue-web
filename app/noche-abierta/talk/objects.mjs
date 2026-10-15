@@ -4,7 +4,7 @@
 // (power, misunderstandings, first impressions, distrust, affection,
 // curiosity, creativity), not about the object, danger or safety. Each level
 // has its own pool; consecutive scenes take consecutive questions.
-export default {
+const TALK = {
   pistola: {
     topics: ["poder", "confianza"],
     A1: [
@@ -41,7 +41,7 @@ export default {
     ],
     C1: [
       "¿Hasta qué punto el miedo a perder algo nos hace obedecer a quien no respetamos?",
-      "¿Qué rasgos te hacen sospechar que alguien compensa con poder una inseguridad profunda?",
+      "¿Qué rasgos te hacen sospechar que alguien compensa con poder una fragilidad profunda?",
       "¿Es posible ejercer el mando sin que la relación con los demás se vuelva desigual?",
       "¿En qué momentos de tu vida confundiste el respeto con el temor, propio o ajeno?",
       "¿Qué te parece más difícil: ganarte la confianza de un desconocido o recuperar la de alguien a quien fallaste?",
@@ -110,7 +110,7 @@ export default {
   granada: {
     topics: ["absurdo", "conflictos"],
     A1: [
-      "¿Te pones nervioso fácilmente?",
+      "¿Pierdes la calma fácilmente?",
       "¿Eres una persona tranquila o nerviosa?",
       "¿Quién es la persona más dramática que conoces?",
       "¿Gritas cuando estás enojado?",
@@ -152,7 +152,7 @@ export default {
     C2: [
       "¿La tendencia a dramatizar es una forma de pedir atención o una manera torpe de procesar la incertidumbre?",
       "¿Qué malentendido de tu vida, visto con distancia, resultó más revelador que cualquier conversación sincera?",
-      "¿Hasta qué punto vivimos pendientes de amenazas imaginarias mientras ignoramos los problemas que sí tenemos delante?",
+      "¿Hasta qué punto vivimos pendientes de desastres imaginarios mientras ignoramos los problemas que sí tenemos delante?",
       "¿Puede el absurdo de una situación extrema unir más a desconocidos que años de convivencia tranquila?",
       "¿Qué te dice sobre una persona su manera de reaccionar cuando cree, aunque sea por error, que todo se acaba?",
       "¿Existe una ética de la exageración, o exagerar siempre implica faltar un poco a la verdad?",
@@ -161,7 +161,7 @@ export default {
   gas: {
     topics: ["confianza", "relaciones"],
     A1: [
-      "¿Hablas con tus vecinos?",
+      "¿Cenas con tus vecinos a veces?",
       "¿Abres la puerta a personas que no conoces?",
       "¿Te gusta estar solo a veces?",
       "¿Saludas a las personas en la calle?",
@@ -172,7 +172,7 @@ export default {
       "¿Te cuesta decir que no?",
       "¿Qué haces cuando un desconocido te habla en la calle?",
       "¿Desconfías de la gente que es demasiado amable?",
-      "¿Cuándo fue la última vez que ayudaste a un desconocido?",
+      "¿Ayudas a desconocidos en la calle?",
       "¿Qué te molesta de las personas que no respetan tu espacio?",
       "¿En tu país la gente se saluda con besos o con la mano?",
     ],
@@ -217,7 +217,7 @@ export default {
       "¿Te gustan las películas románticas?",
       "¿Cómo dices «te quiero» en tu idioma?",
       "¿Quién te hace sonreír?",
-      "¿Te gustan las sorpresas?",
+      "¿Dices «te quiero» a menudo?",
     ],
     A2: [
       "¿Cuándo fue la última vez que alguien fue muy amable contigo?",
@@ -363,3 +363,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

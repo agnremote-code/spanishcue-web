@@ -2,7 +2,7 @@
 // scripts/check-noche-talk.mjs and the tests). Every scene and place has five
 // questions per level, specific to that level, about real life, without
 // weapons, procedures or a safety course, and without repeating themselves.
-import { auditCorpus, auditLevels, auditSet, auditTopics, TOPICS } from "../../conversacion-general/audit.mjs";
+import { auditCorpus, auditLevels, auditSet, auditTopics, normalize, TOPICS } from "../../conversacion-general/audit.mjs";
 import { esOf } from "../bilingual.mjs";
 import { ENCOUNTERS, A0_IDS, encounterById, ITEM_IDS } from "../street.mjs";
 import { PEDAGOGY_IDS, pedagogyFor } from "../pedagogy.mjs";
@@ -71,6 +71,13 @@ export function auditNocheTalk() {
       for (let i = 0; i + 5 <= list.length; i += 5) problems.push(...prefix(`${item}[${i}]`, auditSet(list.slice(i, i + 5), level).filter((p) => !/exactly/.test(p))));
       for (const q of list.slice(Math.floor(list.length / 5) * 5)) problems.push(...prefix(item, auditSet([q, "¿Uno?", "¿Dos?", "¿Tres?", "¿Cuatro?"], level).filter((p) => p.includes("#1"))));
     }
+  }
+  // The object's questions never repeat a scene's: one card would ask it twice.
+  const sceneQuestions = new Map();
+  for (const [id, entry] of Object.entries(Object.assign({}, ...Object.values(STREET_FILES)))) for (const level of TALK_LEVELS) for (const q of entry[level] ?? []) sceneQuestions.set(`${level}|${normalize(q)}`, id);
+  for (const item of ITEM_IDS) for (const level of TALK_LEVELS) for (const q of OBJECT_TALK[item]?.[level] ?? []) {
+    const id = sceneQuestions.get(`${level}|${normalize(q)}`);
+    if (id) problems.push(`${id}/${level}: same question as the ${item} pool: ${q}`);
   }
   return problems;
 }

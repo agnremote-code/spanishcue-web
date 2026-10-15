@@ -1,5 +1,5 @@
 // Noche abierta · calle · Hospital y comisaría: preguntas de conversación general.
-export default {
+const TALK = {
   "clinica-ambulancia": {
     topics: ["emociones", "familia"],
     A1: [
@@ -451,3 +451,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

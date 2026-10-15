@@ -1,5 +1,5 @@
 // Noche abierta · calle · Barrio Alto: preguntas de conversación general.
-export default {
+const TALK = {
   "alto-reconoce": {
     topics: ["amistad", "recuerdos"],
     A1: [
@@ -451,3 +451,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

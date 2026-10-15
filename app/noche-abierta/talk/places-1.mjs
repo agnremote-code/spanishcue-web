@@ -1,5 +1,5 @@
 // Noche abierta · lugares (1–20): cuatro preguntas más por nivel, después de la pregunta personal.
-export default {
+const TALK = {
   "cafe-alla": {
     topics: ["costumbres", "incomodidad"],
     A1: ["¿Tomas el café rápido o despacio?", "¿Comes o bebes algo caminando por la calle?", "¿Siempre tienes prisa por la mañana?", "¿Es fácil para ti decir «no, gracias»?"],
@@ -181,3 +181,5 @@ export default {
     C2: ["¿Es la vergüenza de no poder pagar algo un sentimiento personal o una construcción social que conviene a quienes sí pueden?", "¿Qué relación existe, en tu experiencia, entre el precio de una noche y el recuerdo que deja?", "¿Por qué tantas personas prefieren inventar una excusa antes que decir con naturalidad que algo excede su presupuesto?", "Si el dinero dejara de existir mañana, ¿qué criterios usarías para elegir con quién y dónde pasar tus noches?"],
   },
 };
+
+export default TALK;
