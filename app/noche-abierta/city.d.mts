@@ -71,6 +71,8 @@ export function castSpots(id: string, count: number): Spot[];
 export function groupMembers(group: Group): Spot[];
 export function standingPeople(castSizes?: Record<string, number>): Standing[];
 export function canalWater(): (Rect & { water: true })[];
+export const CLIMB_TOPS: Record<string, number>;
+export function climbTop(prop: CityProp): number | undefined;
 export function cityColliders(castSizes?: Record<string, number>): Box[];
 export function trafficCar(entry: CityTraffic): MovingVehicle;
 export const CROSSINGS: Rect[];
