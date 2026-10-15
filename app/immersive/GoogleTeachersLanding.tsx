@@ -3,6 +3,8 @@ import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CheckoutButton from '../acceso/CheckoutButton';
+import LanguageSwitcher from '../i18n/LanguageSwitcher';
+import {useI18n} from '../i18n/LocaleProvider';
 import {trackMarketingEvent} from '../marketing/analytics';
 import type {Location} from '../noche-abierta/engine.mjs';
 import {campaignLink} from './attribution';
@@ -10,23 +12,14 @@ import GuidedTour,{type TourSpot} from './GuidedTour';
 import PremiumPanel from './PremiumPanel';
 import ProPreview from './ProPreview';
 import Showcase from './Showcase';
+import {gtCopy} from './google-copy';
 import type {ProPreviewFragment,ShowcaseCategory,ShowcaseItem} from './google-showcase';
 import {FLAGS,TESTIMONIALS} from './google-testimonials';
 
 const LANDING='google-teachers';
-const FAQ:[string,string][]=[
- ['What exactly am I paying for?','Full access to the whole SpanishCue library: every 3D conversation world, every interactive grammar class, the listening lessons, Autoestudio homework for A1–C2 and the teacher panel.'],
- ['Can I use this with my own students?','Yes. You open the lesson, share your screen on Zoom, Meet, Preply or any call, and teach. Each lesson is built for live online classes.'],
- ['Do students need a subscription?','No. One PRO subscription is yours as the teacher. Students need nothing installed and no account to join your class.'],
- ['Can I teach directly from my browser?','Yes. Everything runs in Chrome, Safari, Edge and Firefox on desktop; lessons also open on phones and tablets.'],
- ['Are there lessons for beginners and advanced learners?','Yes, from A1 to C2. Conversation worlds have a version written for each level; grammar and listening are organised by level.'],
- ['Is homework included?','Yes. Autoestudio has weekly units for A1–C2 with reading, writing, listening and speaking, plus a panel where you follow each student.'],
- ['Can I cancel?','Yes, at any time from your account, before the next renewal. No calls, no forms.'],
- ['What happens after the US$2 trial?','You get one day of full access. Unless you cancel before the day ends, the subscription continues at US$15.50/month, final price with taxes.'],
- ['What is free, and what requires PRO?','Free: the guided preview above, the city centre of Noche Abierta at six levels, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription.'],
-];
 
 export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,showcase,previews}:{pro:boolean;signedIn:boolean;cafe:Location;spots:TourSpot[];level:string;showcase:ShowcaseCategory[];previews:ProPreviewFragment[]}){
+ const {locale}=useI18n();const es=locale==='es';const c=gtCopy(es);
  const [search,setSearch]=useState('');
  const [gate,setGate]=useState<string|null>(null);
  const [preview,setPreview]=useState<ProPreviewFragment|null>(null);
@@ -62,79 +55,72 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,sho
  }
  /** The official checkout, scoped so only the trial shows: one button, one action. */
  const trial=(placement:string,returnTo='/noche-abierta')=>pro?null:<div className="gt-buy gt-buy-one" onClickCapture={buyClick(placement)}><CheckoutButton signedIn={signedIn} returnTo={returnTo} variant="landing" paddleOnly /></div>;
- const both=(placement:string,extra='')=>pro?<Link className="im-primary" href="/noche-abierta">Open the full city ↗</Link>:<div className={`gt-buy ${extra}`} onClickCapture={buyClick(placement)}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>;
+ const both=(placement:string,extra='')=>pro?<Link className="im-primary" href="/noche-abierta">{c.plans.openFull}</Link>:<div className={`gt-buy ${extra}`} onClickCapture={buyClick(placement)}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>;
 
  return <main className="im-landing gt">
-  <header className="im-nav"><Link className="im-wordmark" href="/">SPANISHCUE<span> CHOOSE. OPEN. TEACH.</span></Link><nav className="gt-nav-links"><a href="#tour">Watch a lesson</a><a href="#showcase">Demos</a><a href="#pro">Pricing</a></nav><div className="gt-nav-buy">{pro?<Link className="gt-nav-cta" href="/noche-abierta">OPEN THE CITY ↗</Link>:trial('nav')}</div><Link className="gt-nav-account" href={signedIn?'/cuenta':'/ingresar'}>{signedIn?'My account':'Sign in'} ↗</Link></header>
+  <header className="im-nav"><Link className="im-wordmark" href="/">SPANISHCUE<span> CHOOSE. OPEN. TEACH.</span></Link><nav className="gt-nav-links"><a href="#tour">{c.nav.watch}</a><a href="#showcase">{c.nav.demos}</a><a href="#pro">{c.nav.pricing}</a></nav><div className="gt-nav-buy">{pro?<Link className="gt-nav-cta" href="/noche-abierta">{c.nav.openCity}</Link>:trial('nav')}</div><LanguageSwitcher /><Link className="gt-nav-account" href={signedIn?'/cuenta':'/ingresar'}>{signedIn?c.nav.account:c.nav.signIn} ↗</Link></header>
 
   <section className="gt-hero2">
    <div className="gt-hero2-copy">
-    <span className="im-eyebrow"><i/> FOR ONLINE SPANISH TEACHERS</span>
-    <h1>Interactive Spanish Lessons. <em>Ready to Teach.</em></h1>
-    <p className="gt-lead">Stop preparing Spanish lessons from scratch. Start teaching with them.</p>
-    <p>3D conversation worlds, interactive grammar, listening and homework for A1–C2. Open a lesson, share your screen, guide your student.</p>
+    <span className="im-eyebrow"><i/> {c.hero.eyebrow}</span>
+    <h1>{c.hero.h1a}<em>{c.hero.h1b}</em></h1>
+    <p className="gt-lead">{c.hero.lead}</p>
+    <p>{c.hero.p}</p>
     <div ref={heroBuy} id="buy" className="gt-buy gt-buy-hero" onClickCapture={buyClick('hero')}>
-     {!pro?<CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly />:<Link className="im-primary" href="/noche-abierta">OPEN THE FULL CITY ↗</Link>}
-     <button type="button" className="gt-watch" onClick={()=>{cta('hero')();watchTour();}}>WATCH A REAL LESSON — FREE ▶</button>
+     {!pro?<CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly />:<Link className="im-primary" href="/noche-abierta">{c.hero.openFull}</Link>}
+     <button type="button" className="gt-watch" onClick={()=>{cta('hero')();watchTour();}}>{c.hero.watch}</button>
     </div>
-    <div className="im-reassurance"><span>✓ No sign-up to watch</span><span>✓ Runs in the browser</span><span>✓ A1–C2</span><span>✓ Cancel anytime</span></div>
+    <div className="im-reassurance">{c.hero.reassure.map(r=><span key={r}>✓ {r}</span>)}</div>
    </div>
    <div id="tour" className="gt-hero2-stage"><GuidedTour cafe={cafe} spots={spots} level={level} signedIn={signedIn} pro={pro} exploreHref={exploreHref} autoplay={autoplay} onExploreMore={toShowcase} onBuyClick={buyClick('tour_end')} onUnlockClick={buyClick('tour_fullscreen')} /></div>
   </section>
 
-  <section className="gt-tiers" aria-label="What is free and what is PRO">
-   <div><b>FREE GUIDED PREVIEW</b><span>The 30-second lesson above. No input needed.</span></div>
-   <div><b>FREE EXPLORATION</b><span>Walk the city centre yourself: ten venues, six levels.</span><Link href={exploreHref} onClick={cta('tiers')}>Explore free ↗</Link></div>
-   <div><b>SPANISHCUE PRO</b><span>Every world, every grammar class, listening, homework and the teacher panel.</span><a href="#pro" onClick={cta('tiers','plans')}>See what is included ↓</a></div>
+  <section className="gt-tiers" aria-label={c.tiers.aria}>
+   <div><b>{c.tiers.a[0]}</b><span>{c.tiers.a[1]}</span></div>
+   <div><b>{c.tiers.b[0]}</b><span>{c.tiers.b[1]}</span><Link href={exploreHref} onClick={cta('tiers')}>{c.tiers.b[2]}</Link></div>
+   <div><b>{c.tiers.c[0]}</b><span>{c.tiers.c[1]}</span><a href="#pro" onClick={cta('tiers','plans')}>{c.tiers.c[2]}</a></div>
   </section>
 
   <Showcase categories={showcase} pro={pro} onPreview={openPreview} buy={both('showcase','gt-buy-row')} />
 
-  <section className="gt-how" aria-label="How teachers use SpanishCue">
-   <span className="im-eyebrow">HOW TEACHERS USE SPANISHCUE</span>
-   <h2>Before, during and after your next class.</h2>
+  <section className="gt-how" aria-label={c.how.eyebrow}>
+   <span className="im-eyebrow">{c.how.eyebrow}</span>
+   <h2>{c.how.h2}</h2>
    <ol className="gt-how-steps">
-    <li><Image src="/lp/fabrica.webp" alt="A grammar class open in the SpanishCue library" width={1280} height={800} loading="lazy" sizes="(max-width: 900px) 100vw, 420px" /><b>Before class</b><h3>Choose a ready-to-teach lesson.</h3><p>Pick by level and skill. The route, the activities and the teacher notes are already there.</p></li>
-    <li><Image src="/lp/noche-3d.webp" alt="Noche Abierta on a shared screen" width={1280} height={800} loading="lazy" sizes="(max-width: 900px) 100vw, 420px" /><b>During class</b><h3>Share your screen and guide the activities.</h3><p>On Zoom, Google Meet, Preply or any call. Your student taps, chooses and talks; you lead the conversation.</p></li>
-    <li><Image src="/lp/autoestudio.webp" alt="Autoestudio homework weeks" width={1280} height={800} loading="lazy" sizes="(max-width: 900px) 100vw, 420px" /><b>After class</b><h3>Assign homework and review the work.</h3><p>Send an Autoestudio week. Your students panel shows classes, errors and what to prepare next.</p></li>
+    {c.how.steps.map((s,i)=><li key={s.b}><Image src={['/lp/fabrica.webp','/lp/noche-3d.webp','/lp/autoestudio.webp'][i]} alt={s.alt} width={1280} height={800} loading="lazy" sizes="(max-width: 900px) 100vw, 420px" /><b>{s.b}</b><h3>{s.h3}</h3><p>{s.p}</p></li>)}
    </ol>
-   <p className="gt-how-note">Zoom, Google Meet and Preply are independent platforms; SpanishCue runs in your browser next to any of them.</p>
+   <p className="gt-how-note">{c.how.note}</p>
   </section>
 
   <section id="pro" className="gt-pro">
    <div>
-    <span className="im-eyebrow">PLANS</span>
-    <h2>Try PRO for a day. Keep it for your classes.</h2>
-    <ul className="gt-compare">
-     <li><b>TRY PRO</b><span>US$2 for one day of full access. Renews automatically at US$15.50/month unless you cancel before the day ends.</span></li>
-     <li><b>SUBSCRIBE</b><span>US$15.50/month, final price with taxes. Cancel anytime before the next renewal.</span></li>
-     <li><b>INCLUDED</b><span>The full Noche Abierta city, every 3D world, all interactive grammar classes, listening, Autoestudio homework A1–C2 and the teacher panel.</span></li>
-     <li><b>FREE</b><span>The guided preview, the city centre at six levels, the lessons marked FREE above and Autoestudio A1 weeks 1–2. No card needed.</span></li>
-    </ul>
-    <p className="gt-terms">Prices in USD; cards through Paddle, taxes handled at checkout; PayPal at US$15/month. Pay first, then link the purchase to your account. Access is granted only after the payment is confirmed.</p>
+    <span className="im-eyebrow">{c.plans.eyebrow}</span>
+    <h2>{c.plans.h2}</h2>
+    <ul className="gt-compare">{c.plans.rows.map(([b,s])=><li key={b}><b>{b}</b><span>{s}</span></li>)}</ul>
+    <p className="gt-terms">{c.plans.terms}</p>
    </div>
-   {!pro?<div className="gt-checkout" onClickCapture={buyClick('plans')}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" /></div>:<div className="gt-checkout gt-checkout-pro"><p>You already have PRO.</p><Link className="im-primary" href="/noche-abierta">Open the full city ↗</Link></div>}
+   {!pro?<div className="gt-checkout" onClickCapture={buyClick('plans')}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" /></div>:<div className="gt-checkout gt-checkout-pro"><p>{c.plans.havePro}</p><Link className="im-primary" href="/noche-abierta">{c.plans.openFull}</Link></div>}
   </section>
 
   <section className="gt-faq">
-   <h2>Questions teachers ask before paying</h2>
-   <dl>{FAQ.map(([q,a])=><div key={q}><dt>{q}</dt><dd>{a}</dd></div>)}</dl>
+   <h2>{c.faq.h2}</h2>
+   <dl>{c.faq.items.map(([q,a])=><div key={q}><dt>{q}</dt><dd>{a}</dd></div>)}</dl>
   </section>
 
-  {TESTIMONIALS.length>0&&<section className="gt-voices" aria-label="What teachers say">
-   <span className="im-eyebrow">FROM TEACHERS WHO TRIED IT</span>
-   <div className="gt-voices-grid">{TESTIMONIALS.map(t=><figure key={t.name}><blockquote>{t.quote}</blockquote><figcaption><Image className="gt-voice-photo" src={t.photo} alt="" width={48} height={48} loading="lazy" /><span><b>{t.name} <i className={`gt-flag gt-flag-${t.flag}`} role="img" aria-label={FLAGS[t.flag]} title={FLAGS[t.flag]} /></b>{t.role}</span></figcaption></figure>)}</div>
-   <p className="gt-voices-note">Real comments from teachers using SpanishCue. Portraits are illustrative.</p>
+  {TESTIMONIALS.length>0&&<section className="gt-voices" aria-label={c.voices.aria}>
+   <span className="im-eyebrow">{c.voices.eyebrow}</span>
+   <div className="gt-voices-grid">{TESTIMONIALS.map(t=><figure key={t.name}><blockquote lang={es?'es':'en'}>{es?t.quoteEs:t.quote}</blockquote><figcaption><Image className="gt-voice-photo" src={t.photo} alt="" width={48} height={48} loading="lazy" /><span><b>{t.name} <i className={`gt-flag gt-flag-${t.flag}`} role="img" aria-label={FLAGS[t.flag]} title={FLAGS[t.flag]} /></b>{es?t.roleEs:t.role}</span></figcaption></figure>)}</div>
+   <p className="gt-voices-note">{c.voices.note}</p>
   </section>}
 
   <section id="close" className="gt-close">
-   <h2>Your next Spanish lesson is already waiting.</h2>
-   <p>Stop preparing everything from scratch. Start teaching with SpanishCue.</p>
+   <h2>{c.close.h2}</h2>
+   <p>{c.close.p}</p>
    {both('close','gt-buy-row')}
   </section>
 
-  <footer className="im-footer"><span>SPANISHCUE · Made for teaching Spanish.</span><nav><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/contact">Contact</Link></nav></footer>
-  <div className={`gt-sticky${sticky?' show':''}`} aria-hidden={!sticky} inert={!sticky}>{trial('sticky')}<button type="button" onClick={()=>{cta('sticky')();watchTour();}}>Watch lesson ▶</button></div>
+  <footer className="im-footer"><span>{c.footer.tag}</span><nav><Link href="/privacy">{c.footer.privacy}</Link><Link href="/terms">{c.footer.terms}</Link><Link href="/contact">{c.footer.contact}</Link></nav></footer>
+  <div className={`gt-sticky${sticky?' show':''}`} aria-hidden={!sticky} inert={!sticky}>{trial('sticky')}<button type="button" onClick={()=>{cta('sticky')();watchTour();}}>{c.sticky}</button></div>
   {gate&&!pro&&<PremiumPanel area={gate} signedIn={signedIn} onClose={()=>setGate(null)}/>}
   {preview&&!pro&&<ProPreview fragment={preview} signedIn={signedIn} onClose={()=>setPreview(null)} onBuyClick={buyClick('pro_preview')} />}
  </main>;

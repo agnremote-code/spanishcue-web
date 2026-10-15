@@ -65,7 +65,7 @@ test("English is the default UI language on the English organic and campaign sur
   for (const path of ["/resources", "/resources/x", "/guides", "/guides/x", "/spanish-teacher-resources", "/spanish-conversation-activities/c1", "/spanish-conversation-questions", "/online-spanish-teaching-resources", "/free-spanish-lesson", "/lp/spanish-grammar-lessons"]) {
     assert.equal(mod.isEnglishDefaultPath(path), true, path);
   }
-  for (const path of ["/", "/pricing", "/ele-recursos-profesores", "/lp/ele-recursos-profesores", "/autoestudio", "/mexico", "/sistema-verbal"]) {
+  for (const path of ["/", "/pricing", "/ele-recursos-profesores", "/lp/ele-recursos-profesores", "/lp/google-teachers", "/autoestudio", "/mexico", "/sistema-verbal"]) {
     assert.equal(mod.isEnglishDefaultPath(path), false, path);
   }
 });
