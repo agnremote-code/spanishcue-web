@@ -9,6 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent a
 import { FLOORS, SCENES, sceneById } from './layout.mjs';
 import { LEVELS } from './levels.mjs';
 import { MONEY, STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, setMoney, undo } from './engine.mjs';
+import { setShoutMuted } from '../escucha-3d/shout';
 import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
 import './casino.css';
 
@@ -44,6 +45,9 @@ export default function CasinoGame() {
   const [riding, setRiding] = useState<number | null>(null);
   const [teacher, setTeacher] = useState(true);
   const [talkAt, setTalkAt] = useState(0);
+  // The people Valentina crashes into yell out loud; the teacher can mute them.
+  const [sound, setSound] = useState(true);
+  useEffect(() => { setShoutMuted(!sound); }, [sound]);
   const cardRef = useRef<HTMLDivElement>(null);
   // Comprensión auditiva: the circles open a listening (undefined = closed, null = the list).
   const [mode, setMode] = useListeningMode('casino');
@@ -140,6 +144,7 @@ export default function CasinoGame() {
       <div className="gm-hud-right">
         <span className="gm-progress">{count.done} de {count.total} escenas · {level.label}</span>
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Escenas'}</button>
+        <button type="button" aria-pressed={!sound} onClick={() => setSound(v => !v)}>{sound ? 'Sonido: sí' : 'Sonido: no'}</button>
         <button type="button" onClick={() => setEntered(false)}>Nivel y dinero</button>
       </div>
     </header>}

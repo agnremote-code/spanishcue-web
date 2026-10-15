@@ -12,6 +12,7 @@ export type Smoker = { person: Person; puffs: THREE.Sprite[]; tip: THREE.Object3
 export type Npc = {
   person: Person; floor: number; scene?: string; x: number; z: number; y: number; heading: number;
   walk?: { axis: 'x' | 'z'; from: number; to: number; speed: number }; dir: number; smoker?: Smoker; main?: boolean;
+  body?: string; seed: number; mood: string; angryUntil?: number;
 };
 export type Spot = { id: string; floor: number; group: THREE.Group; ring: THREE.Mesh; gem: THREE.Mesh; material: THREE.MeshBasicMaterial };
 export type Doors = { floor: number; panels: { left: THREE.Mesh; right: THREE.Mesh; x: number }[]; open: number };
@@ -24,6 +25,7 @@ export type Casino = {
   doors: Doors[];
   heroine: Person;
   animate: (t: number, dt: number, floor: number) => void;
+  say: (npc: Npc, text: string, seconds?: number) => void;
 };
 
 // People currently speaking in an open scene.
@@ -1148,7 +1150,7 @@ function npcFor(look: Look, pose: string, x: number, z: number, y: number, headi
   person.root.position.set(x, y, z);
   person.root.rotation.y = heading;
   addBlobShadow(person, 0.9);
-  const npc: Npc = { person, floor, scene: opts.scene, x, z, y, heading, walk: opts.walk, dir: 1, main: opts.main };
+  const npc: Npc = { person, floor, scene: opts.scene, x, z, y, heading, walk: opts.walk, dir: 1, main: opts.main, body: look.body, seed: look.seed ?? Math.round(Math.abs(x * 31 + z * 17)), mood: opts.mood ?? 'neutral' };
   if (opts.smoke) npc.smoker = smokerFor(person, Boolean(opts.cigar));
   return npc;
 }
@@ -1267,10 +1269,36 @@ export function buildCasino(scene: THREE.Scene, opts: { low: boolean; shadows: b
   const heroine = createHeroine(opts.shadows);
   scene.add(heroine.root);
 
+  // Red bubbles over whoever Valentina just ran into.
+  const bubbles: { sprite: THREE.Sprite; until: number; npc: Npc }[] = [];
+  let clockNow = 0;
+  const drop = (i: number) => { const b = bubbles[i]; b.sprite.removeFromParent(); (b.sprite.material as THREE.SpriteMaterial).map?.dispose(); b.sprite.material.dispose(); bubbles.splice(i, 1); };
+  function say(npc: Npc, text: string, seconds = 3) {
+    const old = bubbles.findIndex(b => b.npc === npc);
+    if (old >= 0) drop(old);
+    const tex = canvas(512, 128, ctx => {
+      ctx.fillStyle = 'rgba(200,20,20,.96)';
+      ctx.beginPath(); ctx.roundRect(8, 8, 496, 92, 26); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(230, 98); ctx.lineTo(256, 124); ctx.lineTo(270, 98); ctx.fill();
+      ctx.fillStyle = '#ffffff'; ctx.font = `800 ${text.length > 30 ? 24 : 30}px Arial, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(text.length > 44 ? text.slice(0, 43) + '…' : text, 256, 54);
+    });
+    const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, toneMapped: false }));
+    sprite.scale.set(2.2, 0.55, 1);
+    floors[npc.floor].add(sprite);
+    bubbles.push({ sprite, until: clockNow + seconds, npc });
+  }
+
   const v = new THREE.Vector3();
   const marqueeLines = ['ESTA NOCHE · EL GRAN FAUSTINO', 'BUFÉ IMPERIAL · TODA LA NOCHE', 'PÓKER · SALÓN ESMERALDA', 'BODAS EXPRÉS · CAPILLA', 'JACKPOT 1.000.000 $'];
   let marqueeAt = -1;
   function animate(t: number, dt: number, floor: number) {
+    clockNow = t;
+    for (let i = bubbles.length - 1; i >= 0; i--) {
+      const b = bubbles[i];
+      if (t > b.until || b.npc.floor !== floor) { drop(i); continue; }
+      b.sprite.position.set(b.npc.x, b.npc.y - FLOORS[b.npc.floor - 1].y + (b.npc.person.seated ? 1.9 : 2.4), b.npc.z);
+    }
     for (const disc of anim.roulette) disc.rotation.y += dt * 3.4;
     for (const s of anim.spin) s.object.rotation[s.axis] += dt * s.speed;
     anim.slotMaterials.forEach((m, i) => { m.emissiveIntensity = 0.75 + 0.35 * Math.max(0, Math.sin(t * 3 + i * 1.7)); });
@@ -1363,7 +1391,7 @@ export function buildCasino(scene: THREE.Scene, opts: { low: boolean; shadows: b
     }
   }
 
-  return { floors, exterior, npcs, spots, elevatorMarkers, doors, heroine, animate };
+  return { floors, exterior, npcs, spots, elevatorMarkers, doors, heroine, animate, say };
 }
 
 void footprint;

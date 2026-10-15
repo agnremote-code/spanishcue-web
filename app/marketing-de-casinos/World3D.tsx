@@ -12,8 +12,10 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
 import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, SPAWN, atElevator, cameraBlockers, floorById, circleStep, sceneById, sceneFraming, solidsFor, spotAt } from './layout.mjs';
-import { buildCasino, talking as talkingNow, type Casino } from './casino3d';
-import { animatePerson } from '../noche-abierta/people3d';
+import { buildCasino, talking as talkingNow, type Casino, type Npc } from './casino3d';
+import { animatePerson, setMood } from '../noche-abierta/people3d';
+import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
+import { insultFor, shout } from '../escucha-3d/shout';
 
 export type WorldProps = {
   floor: number;
@@ -115,6 +117,8 @@ export default function World3D(props: WorldProps) {
     let openScene: string | null = null;
     let ride: { from: number; to: number; start: number } | null = null;
     let introAt = 0;
+    const mayYell = createBumpClock();
+    const angry: Npc[] = [];
     const look = new THREE.Vector3();
     const desired = new THREE.Vector3();
     const temp = new THREE.Vector3();
@@ -265,19 +269,41 @@ export default function World3D(props: WorldProps) {
         // slowed; the jump keeps real time.
         const nitro = input.nitro || touchNitro.on;
         const factor = input.sprint || nitro ? 1 : 0.72;
-        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false }, dt * factor, solids, floorById(floor).bounds);
-        player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor };
+        // Space jumps (about 1.6 m) onto tables, desks, sofas and the stage.
         const jump = input.jump || clock < jumpUntil;
-        if (jump && !player.jumpHeld && player.y <= 0) player.vy = 7.2;
-        player.jumpHeld = jump;
-        player.y = Math.max(0, player.y + player.vy * dt - 9 * dt * dt);
-        player.vy = player.y > 0 ? player.vy - 18 * dt : 0;
+        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false, jump, jumpSpeed: 7.6 }, dt * factor, solids, floorById(floor).bounds);
+        player = { x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor, y: next.y, vy: next.vy, jumpHeld: next.jumpHeld };
+        // People are solid, and nobody likes being run into: whoever you crash
+        // into (or who walks into you) turns, glares and yells at you.
+        const fy = floorById(floor).y;
+        const bodies = casino.npcs.filter(n => n.floor === floor && Math.abs(player.y - (n.y - fy)) < 1.2);
+        const bounds = floorById(floor).bounds;
+        const free = (x: number, z: number) => x > bounds.minX + 0.4 && x < bounds.maxX - 0.4 && z > bounds.minZ + 0.4 && z < bounds.maxZ - 0.4
+          && !solids.some(b => (b.top == null || player.y < b.top) && x > b.x0 - 0.35 && x < b.x1 + 0.35 && z > b.z0 - 0.35 && z < b.z1 + 0.35);
+        const out = pushOut(player.x, player.z, bodies, free);
+        player.x = out.x; player.z = out.z;
+        const who = out.hit >= 0 ? bodies[out.hit] : null;
+        if (who && (player.speed > 1.2 || who.walk) && mayYell(who, clock)) {
+          const line = insultFor(who.body, who.seed);
+          casino.say(who, line.text, 3);
+          shout(line, 1);
+          setMood(who.person, 'furious');
+          who.angryUntil = clock + 3.5;
+          if (!angry.includes(who)) angry.push(who);
+          if (!who.walk && !who.person.seated && !SITTING.has(who.person.pose)) { who.heading = Math.atan2(player.x - who.x, player.z - who.z); who.person.root.rotation.y = who.heading; }
+          player.speed *= 0.3;
+        }
         // A wider lens sells the nitro.
         const wantFov = baseFov + (nitro && player.speed > 10 ? 12 : 0);
         if (Math.abs(wantFov - camera.fov) > 0.05) { camera.fov += (wantFov - camera.fov) * Math.min(1, dt * 6); camera.updateProjectionMatrix(); }
         if (clock - lastDrag > 1.2) yaw = followYaw(yaw, player.heading, player.speed, dt);
       } else if (!ride) { player.speed = 0; player.y = 0; player.vy = 0; }
       place();
+      for (let i = angry.length - 1; i >= 0; i--) {
+        if (clock < (angry[i].angryUntil ?? 0)) continue;
+        setMood(angry[i].person, angry[i].mood);
+        angry.splice(i, 1);
+      }
 
       // Circles and the elevator.
       const here = ride ? null : spotAt(floor, player.x, player.z);
