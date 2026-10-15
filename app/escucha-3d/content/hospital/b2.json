@@ -1,0 +1,2782 @@
+{
+  "game": "hospital",
+  "level": "B2",
+  "items": [
+    {
+      "id": "recepcion",
+      "title": "El primo del director y los sietes agotados",
+      "place": "Entrada y recepción",
+      "context": "En su descanso para comer, Norma llama por teléfono a su hermana Susana para contarle las excusas más raras del día.",
+      "speakers": [
+        {
+          "name": "Norma",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Susana",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Susi, tengo veinte minutos para comer y necesito contárselo a alguien antes de explotar."
+        },
+        {
+          "s": 1,
+          "text": "A ver, ¿qué pasó ahora? ¿Otra vez la máquina de números?"
+        },
+        {
+          "s": 0,
+          "text": "No, la máquina sigue muerta, eso ya es parte del paisaje. Lo de hoy son las excusas. Un señor me juró que tenía prioridad porque su horóscopo decía que hoy era su día."
+        },
+        {
+          "s": 1,
+          "text": "¡No! ¿Y qué le dijiste?"
+        },
+        {
+          "s": 0,
+          "text": "Que si los astros quisieran que lo atendieran primero, le habrían arreglado la máquina. Y el mejor de todos: uno que aseguró que era primo del director. Le pregunté cómo se llamaba el director y me contestó, muy serio, «el primo»."
+        },
+        {
+          "s": 1,
+          "text": "Ay, Norma, me muero. Pero en serio, ¿nunca te dan ganas de saltarte tu propia regla?"
+        },
+        {
+          "s": 0,
+          "text": "Todos los días. Pero si empezara a hacer excepciones, mañana tendría doscientos primos del director en la puerta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el pobre de la bolsa de guisantes que me contaste?"
+        },
+        {
+          "s": 0,
+          "text": "Sigue ahí, esperando, sin quejarse. Es el único que no me ha pedido nada… Mira, cuando vuelva le escribo un número a mano, aunque sea el siete. Ah, no, que no me quedan sietes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Norma con su hermana?",
+          "options": [
+            "De las excusas absurdas que oyó para no hacer la fila",
+            "De cómo arreglar la máquina de números",
+            "De un problema con su comida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le respondió Norma al hombre del horóscopo?",
+          "options": [
+            "Que volviera otro día con mejor suerte",
+            "Que los astros, si quisieran ayudarlo, habrían arreglado la máquina",
+            "Que ella también creía en el horóscopo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Norma no se salta su propia regla?",
+          "options": [
+            "Porque el director se lo prohibió",
+            "Porque no tiene tiempo durante la comida",
+            "Porque teme que todos empiecen a inventar excusas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se deduce del final?",
+          "options": [
+            "Que el sistema de Norma también tiene fallos absurdos",
+            "Que el hombre de los guisantes ya se fue",
+            "Que Norma va a castigar al hombre de los guisantes"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez inventaste una excusa para no esperar en una fila? ¿Funcionó?",
+          "model": "Una vez dije que tenía un avión en una hora para pasar primero en una tienda. Funcionó, aunque luego me quedó un poco de culpa."
+        },
+        {
+          "q": "Si pudieras saltarte una sola fila en tu vida, ¿cuál elegirías y por qué?",
+          "model": "Si pudiera, me saltaría la fila del banco a fin de mes, porque es la más larga y la más deprimente."
+        },
+        {
+          "q": "¿Crees que es justo que algunas personas pasen antes que otras? ¿En qué casos?",
+          "model": "Me parece justo que pasen antes las personas mayores, pero no que pase alguien solo porque conoce a alguien importante."
+        }
+      ],
+      "gaps": "Pero si empezara a hacer [excepciones], mañana [tendría] doscientos [primos del director] en la [puerta].",
+      "glossary": [
+        {
+          "word": "parte del paisaje",
+          "meaning": "algo tan habitual que ya nadie lo nota"
+        },
+        {
+          "word": "los astros",
+          "meaning": "las estrellas y los planetas, según el horóscopo"
+        },
+        {
+          "word": "saltarte",
+          "meaning": "no respetar algo, pasar por encima de una regla o un turno"
+        },
+        {
+          "word": "me muero",
+          "meaning": "expresión exagerada para decir que algo da mucha risa"
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "title": "Tres reglas y una silla con chicle de Semana Santa",
+      "place": "Sala de espera",
+      "context": "Don Anselmo le explica a Andrés, el recién llegado, las reglas no escritas de la sala de espera y quién es quién.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Andrés",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mire, joven, siéntese aquí, que esa silla cojea y la otra tiene chicle desde la Semana Santa pasada. Primera regla: nunca pregunte cuánto falta. Da mala suerte."
+        },
+        {
+          "s": 1,
+          "text": "¿En serio? Yo solo quería saber si…"
+        },
+        {
+          "s": 0,
+          "text": "Segunda regla: cuando llaman a alguien, se aplaude. Discretamente, pero se aplaude. La señora del pañuelo verde lleva once horas; cuando la llamen, va a haber lágrimas."
+        },
+        {
+          "s": 1,
+          "text": "¿Y usted cuánto lleva?"
+        },
+        {
+          "s": 0,
+          "text": "Ocho, pero no cuente, que eso también da mala suerte. El muchacho de los auriculares finge que duerme para que nadie le pida el enchufe. Y ese señor de traje no está enfermo: viene a ver si su exmujer trabaja hoy en triaje."
+        },
+        {
+          "s": 1,
+          "text": "Usted lo sabe todo. ¿No preferiría estar en su casa, tranquilo, con un té?"
+        },
+        {
+          "s": 0,
+          "text": "Uy, en casa… En casa hay demasiada tranquilidad, ¿sabe? Desde que murió mi mujer, la tele es la única que me habla. Aquí por lo menos alguien me contesta."
+        },
+        {
+          "s": 1,
+          "text": "Perdone, no quería meterme donde no…"
+        },
+        {
+          "s": 0,
+          "text": "No, no, tranquilo. Tercera regla: el nuevo invita el café. ¿Cuánto apuesta a que llaman a la del pañuelo antes que a mí?"
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Anselmo en esta conversación?",
+          "options": [
+            "Se queja de lo mal que funciona el hospital",
+            "Le enseña a Andrés cómo funciona la sala por dentro",
+            "Le pide a Andrés que le guarde el sitio"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasa, según Anselmo, cuando llaman a alguien?",
+          "options": [
+            "Todos se levantan para despedirlo",
+            "Nadie dice nada",
+            "La gente aplaude con discreción"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué está allí el señor de traje?",
+          "options": [
+            "Para ver a su exmujer",
+            "Porque le duele la garganta",
+            "Porque es el director del hospital"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué se puede deducir de la respuesta de Anselmo sobre su casa?",
+          "options": [
+            "Que su casa está muy lejos del hospital",
+            "Que se siente solo y la sala le da compañía",
+            "Que no le gusta ver la televisión"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces normalmente cuando tienes que esperar mucho tiempo en algún sitio?",
+          "model": "Normalmente miro a la gente e invento historias sobre ellos, aunque a veces termino hablando con alguien."
+        },
+        {
+          "q": "¿Te resulta fácil hablar con desconocidos? ¿Dónde lo haces más?",
+          "model": "Me cuesta un poco, pero en los viajes largos en tren suelo hablar con quien tenga al lado."
+        },
+        {
+          "q": "Si vivieras solo durante meses, ¿qué harías para no sentirte aislado?",
+          "model": "Si viviera solo, probablemente me apuntaría a un club o iría a un café donde todos se conocen."
+        }
+      ],
+      "gaps": "Desde que murió mi [mujer], la [tele] es la única que me [habla]. Aquí por lo menos alguien me [contesta].",
+      "glossary": [
+        {
+          "word": "cojea",
+          "meaning": "no está estable porque tiene una pata más corta"
+        },
+        {
+          "word": "discretamente",
+          "meaning": "sin llamar la atención"
+        },
+        {
+          "word": "finge",
+          "meaning": "hace como si algo fuera verdad, pero no lo es"
+        },
+        {
+          "word": "meterme",
+          "meaning": "participar en algo que no es asunto mío"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "La cena con el director que llevaba bandeja",
+      "place": "Sala de espera, zona de sillas buenas",
+      "context": "Doña Pilar habla por teléfono con su hija Ximena sobre la famosa cena con el director. El hombre de la rebeca, a su lado, escucha.",
+      "speakers": [
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        },
+        {
+          "name": "Alonso",
+          "country": "Estados Unidos",
+          "voice": "es-US-AlonsoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ximena, hija, es intolerable. Una astilla, una herida abierta, prácticamente, y me tienen aquí como a cualquiera. Si el director supiera que estoy esperando, se moriría de vergüenza."
+        },
+        {
+          "s": 1,
+          "text": "Mamá… ¿qué director?"
+        },
+        {
+          "s": 0,
+          "text": "¿Cómo que qué director? El de la cena de la fundación. Me sirvió el vino él mismo, un encanto."
+        },
+        {
+          "s": 1,
+          "text": "Ya, mamá. Te sirvió el vino porque era el camarero. Te lo dije esa misma noche. Llevaba bandeja y pajarita."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, bueno, uno puede ser director y ser atento. No veo la contradicción."
+        },
+        {
+          "s": 1,
+          "text": "Te dio la cuenta, mamá. Los directores no suelen dar la cuenta."
+        },
+        {
+          "s": 0,
+          "text": "Pues ojalá todos fueran tan amables. Te dejo, que el señor de la rebeca me está mirando."
+        },
+        {
+          "s": 2,
+          "text": "Perdone, señora, no he podido evitar oírla. ¿Y cómo era ese director, si me permite?"
+        },
+        {
+          "s": 0,
+          "text": "Alto, elegante, muy discreto. Nada que ver con usted, no se ofenda."
+        },
+        {
+          "s": 2,
+          "text": "En absoluto. Me alegra que alguien tenga tan buena opinión de él. Aunque, entre nosotros, yo diría que el verdadero director estaría aquí sentado, esperando como todos."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué descubre el oyente en esta llamada?",
+          "options": [
+            "Que Pilar nunca fue a esa cena",
+            "Que el supuesto director de la cena era el camarero",
+            "Que Ximena trabaja en el hospital"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo reacciona Pilar cuando su hija le dice la verdad?",
+          "options": [
+            "Busca excusas para no admitirlo",
+            "Se ríe y lo reconoce",
+            "Se enfada con el camarero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué prueba usa Ximena para convencer a su madre?",
+          "options": [
+            "Que el hombre llevaba uniforme de médico",
+            "Que tiene una foto de la cena",
+            "Que el hombre le trajo la cuenta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué insinúa el hombre de la rebeca al final?",
+          "options": [
+            "Que él es el verdadero director",
+            "Que el director nunca viene al hospital",
+            "Que Pilar debería quejarse por escrito"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces a alguien que presuma de tener contactos importantes? ¿Cómo es?",
+          "model": "Sí, un compañero de trabajo que siempre dice que conoce a algún famoso, aunque nunca enseña ninguna foto."
+        },
+        {
+          "q": "¿Alguna vez te equivocaste sobre quién era una persona? ¿Qué pasó?",
+          "model": "En una boda pensé que un señor era el padre de la novia y resulta que era el fotógrafo. Fue muy incómodo."
+        },
+        {
+          "q": "Si fueras el jefe de un lugar, ¿te gustaría visitarlo de incógnito? ¿Qué esperarías descubrir?",
+          "model": "Me encantaría, aunque me daría miedo descubrir lo que los empleados piensan de mí de verdad."
+        }
+      ],
+      "gaps": "Perdone, señora, no he podido evitar [oírla]. ¿Y cómo era ese [director], si me [permite]? Alto, [elegante], muy discreto.",
+      "glossary": [
+        {
+          "word": "astilla",
+          "meaning": "trozo muy pequeño y puntiagudo de madera que se clava en la piel"
+        },
+        {
+          "word": "pajarita",
+          "meaning": "lazo que se lleva en el cuello de la camisa con traje"
+        },
+        {
+          "word": "rebeca",
+          "meaning": "jersey abierto por delante, con botones"
+        },
+        {
+          "word": "no se ofenda",
+          "meaning": "expresión para suavizar algo que puede molestar"
+        }
+      ]
+    },
+    {
+      "id": "triage",
+      "title": "Testamento en servilleta: el gato, las telenovelas y la guitarra del ex",
+      "place": "Triaje",
+      "context": "Gladys, convencida de que el hipo la va a matar, le dicta su testamento al enfermero Wilson.",
+      "speakers": [
+        {
+          "name": "Gladys",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Wilson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilson, anote, que no me queda mucho. Punto uno: mi gato, Bigotes, se lo dejo a mi hermana… ¡hip!… aunque ella sea alérgica."
+        },
+        {
+          "s": 1,
+          "text": "Doña Gladys, si su hermana es alérgica, quizás sería mejor dejárselo a alguien que pueda respirar cerca de él."
+        },
+        {
+          "s": 0,
+          "text": "Que estornude. Así se acordará de mí. Punto dos: mi colección de telenovelas, ciento doce, todas originales, para mi vecina. Con la condición de que no me cuente los finales."
+        },
+        {
+          "s": 1,
+          "text": "Pero si usted ya no está, ¿a quién le va a contar los finales?"
+        },
+        {
+          "s": 0,
+          "text": "Ay, no sé, Wilson, no me complique la muerte. Punto tres: la guitarra de mi ex. No es mía, pero la tengo yo. Que se la devuelvan… rota."
+        },
+        {
+          "s": 1,
+          "text": "Eso ya no es un testamento, eso es una venganza con notario."
+        },
+        {
+          "s": 0,
+          "text": "Llámelo como quiera. ¿Y ahora me pone la pulsera roja?"
+        },
+        {
+          "s": 1,
+          "text": "Mire, le propongo un trato: si dentro de una hora sigue con hipo, lo hablamos. Mientras tanto, guarde la servilleta. Aunque, sinceramente, ojalá la necesite dentro de cuarenta años."
+        },
+        {
+          "s": 0,
+          "text": "¿Cuarenta? ¡Hip! Bueno… pero que conste que me trató con frialdad."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué está haciendo Gladys?",
+          "options": [
+            "Pidiendo un certificado médico",
+            "Dictando un testamento lleno de herencias absurdas",
+            "Escribiendo una queja contra Wilson"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué problema ve Wilson en dejarle el gato a la hermana?",
+          "options": [
+            "Que vive muy lejos",
+            "Que no le gustan los animales",
+            "Que es alérgica a los gatos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué condición pone Gladys a su vecina?",
+          "options": [
+            "Que no le cuente los finales de las telenovelas",
+            "Que cuide también al gato",
+            "Que devuelva la guitarra"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué piensa realmente Wilson sobre el estado de Gladys?",
+          "options": [
+            "Que está muy grave",
+            "Que no corre peligro y vivirá muchos años",
+            "Que necesita una operación"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "Si tuvieras que hacer hoy una lista de cosas para dejar a otros, ¿qué objeto tuyo darías y a quién?",
+          "model": "Le dejaría mis libros a mi sobrina, porque es la única de la familia que los leería de verdad."
+        },
+        {
+          "q": "¿Tienes la costumbre de exagerar cuando algo te preocupa? Cuenta un ejemplo.",
+          "model": "Sí, cuando un amigo no me contesta un mensaje enseguida, pienso que está enfadado conmigo."
+        },
+        {
+          "q": "¿Qué opinas de buscar en internet las respuestas a todo? ¿Te ha pasado algo gracioso por eso?",
+          "model": "Creo que es útil, aunque una vez busqué por qué me dolía un dedo y terminé leyendo cosas terribles."
+        }
+      ],
+      "gaps": "Mire, le propongo un [trato]: si dentro de una [hora] sigue con [hipo], lo [hablamos].",
+      "glossary": [
+        {
+          "word": "testamento",
+          "meaning": "documento en el que una persona dice qué deja a cada uno cuando muera"
+        },
+        {
+          "word": "estornude",
+          "meaning": "expulse aire de golpe por la nariz, como cuando uno tiene alergia"
+        },
+        {
+          "word": "notario",
+          "meaning": "persona que da validez legal a documentos"
+        },
+        {
+          "word": "que conste",
+          "meaning": "quiero que quede claro y registrado"
+        }
+      ]
+    },
+    {
+      "id": "guardia",
+      "title": "Hora veintinueve: el paciente al que llamaron Calcetín",
+      "place": "Guardia de emergencias",
+      "context": "En el pasillo, el doctor Íñigo le cuenta a la doctora Catalina cómo han sido sus treinta horas de guardia.",
+      "speakers": [
+        {
+          "name": "Íñigo",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Catalina",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Íñigo, en serio, tienes cara de fotocopia. Vete a casa."
+        },
+        {
+          "s": 0,
+          "text": "Espera, espera, que te cuento. Hora uno: todo bien, fresco, simpático. Hora diez: un señor con un tenedor en la mano. No preguntes. Hora dieciocho: el café de la máquina empieza a saberme a gloria, que ya es mala señal."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la hora veintinueve?"
+        },
+        {
+          "s": 0,
+          "text": "Ahí viene lo bueno. Entro en el box tres y le digo al paciente: «Venga, Calcetín, levanta la camiseta»."
+        },
+        {
+          "s": 1,
+          "text": "¿Calcetín? ¿Ese no es tu gato?"
+        },
+        {
+          "s": 0,
+          "text": "Exacto. Y lo peor es que el hombre la levantó sin rechistar. Si me hubiera llamado Michi, lo habría entendido."
+        },
+        {
+          "s": 1,
+          "text": "Íñigo, no tiene gracia. Bueno, un poco sí. Pero si sigues así, vas a acabar recetando cosas a la planta del pasillo."
+        },
+        {
+          "s": 0,
+          "text": "Ya me he recetado yo un café doble. Cada cuatro horas, por vía oral."
+        },
+        {
+          "s": 1,
+          "text": "Mira, yo te cubro. Pero vete antes de que le pongas nombre de mascota a alguien que se lo tome mal."
+        },
+        {
+          "s": 0,
+          "text": "Vale… Aunque, si me fuera ahora, ¿quién cuidaría de Calcetín? El del box tres, digo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le cuenta Íñigo a Catalina?",
+          "options": [
+            "Cómo ha cambiado él a lo largo de su larga guardia",
+            "Por qué quiere cambiar de hospital",
+            "Cómo se curó su gato"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pasó en la hora veintinueve?",
+          "options": [
+            "Se quedó dormido en el box tres",
+            "Llamó a un paciente con el nombre de su gato",
+            "Se le cayó el café encima de un paciente"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué se ha recetado Íñigo a sí mismo?",
+          "options": [
+            "Dormir media hora",
+            "Una pastilla para el dolor de cabeza",
+            "Un café doble cada cuatro horas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué muestra la última frase de Íñigo?",
+          "options": [
+            "Que ya se ha encariñado con ese paciente y le cuesta irse",
+            "Que quiere llevarse el gato al hospital",
+            "Que no confía en Catalina"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez trabajaste o estudiaste tantas horas seguidas que hiciste algo ridículo? ¿Qué fue?",
+          "model": "Una vez estudié toda la noche y por la mañana puse el móvil en la nevera en lugar de la leche."
+        },
+        {
+          "q": "¿Crees que hay trabajos en los que es imposible desconectar? ¿Cuáles?",
+          "model": "Creo que los de cocinero o los de periodista, porque siempre pasa algo que no puede esperar."
+        },
+        {
+          "q": "Si un compañero estuviera agotado y no quisiera irse, ¿qué le dirías para convencerlo?",
+          "model": "Le diría que yo me quedaría con su trabajo y que, si no descansara, al día siguiente sería peor para todos."
+        }
+      ],
+      "gaps": "Mira, yo te [cubro]. Pero [vete] antes de que le pongas nombre de [mascota] a alguien que se lo tome [mal].",
+      "glossary": [
+        {
+          "word": "cara de fotocopia",
+          "meaning": "aspecto muy cansado, sin color, como una copia gastada"
+        },
+        {
+          "word": "saberme a gloria",
+          "meaning": "tener un sabor buenísimo"
+        },
+        {
+          "word": "sin rechistar",
+          "meaning": "sin protestar, obedeciendo"
+        },
+        {
+          "word": "te cubro",
+          "meaning": "hago tu trabajo para que no tengas problemas"
+        }
+      ]
+    },
+    {
+      "id": "ambulancias",
+      "title": "Bolero contra noticias entre aviso y aviso",
+      "place": "Pasillo de ambulancias",
+      "context": "Entre dos llamadas, Yamilé y Manuel repasan en la ambulancia los avisos más raros del día y discuten por la radio.",
+      "speakers": [
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        },
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Manuel, quita ese bolero, por favor, que me deprime. Pon las noticias."
+        },
+        {
+          "s": 1,
+          "text": "¿Las noticias? ¿Después del día que llevamos? Si pusiera las noticias, saldríamos nosotros en ellas."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, eso es verdad. A ver, ranking del día. Número tres: la señora que llamó porque su loro decía «me muero»."
+        },
+        {
+          "s": 1,
+          "text": "Y resulta que el loro lo había aprendido del marido, que lo dice cada vez que juega su equipo."
+        },
+        {
+          "s": 0,
+          "text": "Número dos: el muchacho que se quedó con la cabeza atrapada en la reja del parque intentando recuperar una pelota."
+        },
+        {
+          "s": 1,
+          "text": "Y número uno, sin discusión, el de la patineta eléctrica. Kevin. Sangrando y diciendo «saluden a mis seguidores, que ya somos tres mil»."
+        },
+        {
+          "s": 0,
+          "text": "Lo que más me impresiona es que llegó a los diez mil. Si yo tuviera tantos seguidores, por lo menos les pediría que vinieran a empujar la ambulancia cuando se para."
+        },
+        {
+          "s": 1,
+          "text": "Oye, que mi ambulancia no se para."
+        },
+        {
+          "s": 0,
+          "text": "Se paró el martes, Manuel. Delante de una funeraria. Ni a propósito."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, ya, otra llamada. Y el bolero se queda, que da suerte."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Yamilé y Manuel?",
+          "options": [
+            "De los avisos más extraños que han atendido hoy",
+            "De sus problemas de pareja",
+            "De un accidente grave en la autopista"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué el loro decía «me muero»?",
+          "options": [
+            "Porque estaba enfermo",
+            "Porque lo oía del marido cuando jugaba su equipo",
+            "Porque lo había aprendido en la tele"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Manuel no quiere poner las noticias?",
+          "options": [
+            "Porque la radio está rota",
+            "Porque prefiere el silencio",
+            "Porque cree que ellos mismos podrían aparecer en ellas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hay de irónico en la avería del martes?",
+          "options": [
+            "Que la ambulancia se paró justo delante de una funeraria",
+            "Que pasó durante un bolero",
+            "Que Kevin la estaba grabando"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué música pones cuando necesitas animarte o concentrarte?",
+          "model": "Cuando necesito concentrarme, pongo música instrumental; si quiero animarme, salsa a todo volumen."
+        },
+        {
+          "q": "¿Qué es lo más raro que has visto hacer a alguien para conseguir atención en redes sociales?",
+          "model": "Vi a un chico grabarse comiendo sopa con un tenedor durante una hora. Tenía miles de visitas."
+        },
+        {
+          "q": "Si tuvieras diez mil seguidores mañana, ¿qué les pedirías o qué les enseñarías?",
+          "model": "Si los tuviera, les enseñaría a cocinar platos de mi país, aunque seguramente me saldrían mal."
+        }
+      ],
+      "gaps": "Si yo tuviera tantos [seguidores], por lo menos les [pediría] que vinieran a [empujar] la [ambulancia] cuando se para.",
+      "glossary": [
+        {
+          "word": "ranking",
+          "meaning": "lista ordenada de los mejores o peores"
+        },
+        {
+          "word": "reja",
+          "meaning": "estructura de barras de metal que cierra un espacio"
+        },
+        {
+          "word": "funeraria",
+          "meaning": "empresa que organiza los entierros"
+        },
+        {
+          "word": "ni a propósito",
+          "meaning": "parece hecho a posta, aunque no lo fue"
+        }
+      ]
+    },
+    {
+      "id": "trauma",
+      "title": "Tres caídas, un yeso y un gato cómplice",
+      "place": "Sala de traumatología",
+      "context": "Ezequiel, con el brazo enyesado, se queda a solas con su vecina Paola, que trae al gato en una caja.",
+      "speakers": [
+        {
+          "name": "Ezequiel",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        },
+        {
+          "name": "Paola",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Ezequiel, tengo que confesarte algo, y prefiero hacerlo ahora que no puedes huir con ese yeso."
+        },
+        {
+          "s": 0,
+          "text": "¿Huir? Si apenas puedo rascarme la nariz. A ver, dime."
+        },
+        {
+          "s": 1,
+          "text": "Misu nunca se queda atrapado. Nunca. Sube al árbol, al tejado, a la antena… y baja solito en cuanto tú te vas."
+        },
+        {
+          "s": 0,
+          "text": "Espera. ¿Entonces las tres veces que me trepé a la escalera…?"
+        },
+        {
+          "s": 1,
+          "text": "Las tres. Y bueno… puede que yo lo dejara salir justo cuando sabía que tú estabas en el patio."
+        },
+        {
+          "s": 0,
+          "text": "¿Me estás diciendo que me rompí el brazo por una estrategia?"
+        },
+        {
+          "s": 1,
+          "text": "No quería que te cayeras, te lo juro. Quería que llamaras a mi puerta. Si hubieras tocado el timbre alguna vez sin excusa, no habría necesitado al gato."
+        },
+        {
+          "s": 0,
+          "text": "Y yo pensando que el gato me odiaba… Oye, Paola, si te invitara a cenar cuando me quiten esto, ¿vendrías con Misu o sin él?"
+        },
+        {
+          "s": 1,
+          "text": "Sin él. Ya ha trabajado bastante."
+        },
+        {
+          "s": 0,
+          "text": "Pues que conste en acta: es el gato más caro de la historia. Me debe un brazo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué confiesa Paola?",
+          "options": [
+            "Que el gato no es suyo",
+            "Que provocaba las subidas del gato para ver a Ezequiel",
+            "Que llamó a la ambulancia demasiado tarde"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántas veces subió Ezequiel la escalera por el gato?",
+          "options": [
+            "Tres",
+            "Una",
+            "Cinco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué esperaba Paola de Ezequiel?",
+          "options": [
+            "Que le comprara un gato nuevo",
+            "Que se mudara de edificio",
+            "Que llamara a su puerta sin necesidad de excusas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo reacciona Ezequiel a la confesión?",
+          "options": [
+            "Se enfada y le pide que se vaya",
+            "Le pide que pague el hospital",
+            "Aprovecha para invitarla a cenar"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hiciste alguna locura para impresionar a alguien? ¿Salió bien?",
+          "model": "Una vez me apunté a clases de tango dos semanas antes de una boda. Bailé fatal, pero la persona se rio conmigo."
+        },
+        {
+          "q": "¿Qué relación tienes con tus vecinos? ¿Hay alguno con el que tengas una historia curiosa?",
+          "model": "Me llevo bien con todos, sobre todo con una señora que me deja paquetes en la puerta cuando no estoy."
+        },
+        {
+          "q": "Si alguien usara una estrategia así para conocerte, ¿te parecería romántico o manipulador?",
+          "model": "Me parecería romántico, siempre que nadie terminara en el hospital, claro."
+        }
+      ],
+      "gaps": "Si hubieras tocado el [timbre] alguna vez sin [excusa], no habría [necesitado] al [gato].",
+      "glossary": [
+        {
+          "word": "yeso",
+          "meaning": "material duro que se pone alrededor de un hueso roto para inmovilizarlo"
+        },
+        {
+          "word": "rascarme",
+          "meaning": "frotarme la piel con las uñas"
+        },
+        {
+          "word": "estrategia",
+          "meaning": "plan pensado para conseguir algo"
+        },
+        {
+          "word": "que conste en acta",
+          "meaning": "expresión para decir que algo debe quedar registrado"
+        }
+      ]
+    },
+    {
+      "id": "observacion",
+      "title": "Lo que Benigno pensó antes de pedir perdón",
+      "place": "Observación",
+      "context": "Horas después del susto, Don Benigno, ya estable, habla con su nieta Camila sobre lo que pensó en ese momento.",
+      "speakers": [
+        {
+          "name": "Benigno",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        },
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Abuelo, la próxima vez que te estés muriendo, aunque sea un poquito, grita. Por favor. No me importa si molestas."
+        },
+        {
+          "s": 0,
+          "text": "Es que había tanta gente gritando, hijita, que me pareció de mala educación sumarme."
+        },
+        {
+          "s": 1,
+          "text": "Abuelo… ¿Y qué pensaste? Cuando estabas tan pálido, digo."
+        },
+        {
+          "s": 0,
+          "text": "Pues mira, lo primero que pensé fue que no te había dicho lo orgullosa que me tienes. Bueno, orgulloso. Ya me entiendes, todavía estoy un poco mareado."
+        },
+        {
+          "s": 1,
+          "text": "Ay, no digas eso, que me vas a hacer llorar otra vez."
+        },
+        {
+          "s": 0,
+          "text": "Y lo segundo fue en mi papá. ¿Te conté que durante el terremoto del cuarenta y tantos salió a la calle en pijama y fue a pedirle disculpas al vecino por el ruido?"
+        },
+        {
+          "s": 1,
+          "text": "¿Por el ruido del terremoto?"
+        },
+        {
+          "s": 0,
+          "text": "Decía que nuestra casa había temblado más fuerte. De ahí viene la manía de la familia. Si no hubiera sido por ti, me habría ido pidiendo perdón al cardiólogo."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, pues prométeme que la próxima vez interrumpes a quien haga falta."
+        },
+        {
+          "s": 0,
+          "text": "Lo prometo. Aunque luego le pediré perdón, eso sí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan principalmente abuelo y nieta?",
+          "options": [
+            "De lo que Benigno pensó durante el momento de peligro",
+            "De la factura del hospital",
+            "De un viaje que quieren hacer"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué no gritó Benigno cuando se sentía mal?",
+          "options": [
+            "Porque no podía hablar",
+            "Porque no quería asustar a Camila",
+            "Porque le pareció de mala educación entre tanto ruido"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hizo el padre de Benigno durante el terremoto?",
+          "options": [
+            "Ayudó a los vecinos a salir",
+            "Le pidió disculpas al vecino por el ruido",
+            "Se quedó dormido"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué quiere decir Benigno con «la manía de la familia»?",
+          "options": [
+            "La costumbre de pedir perdón por todo",
+            "El miedo a los terremotos",
+            "La tradición de estudiar medicina"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay algo importante que te gustaría decirle a alguien de tu familia y que todavía no le has dicho?",
+          "model": "Me gustaría decirle a mi hermano que admiro lo valiente que fue cuando se fue a vivir a otro país."
+        },
+        {
+          "q": "¿Te cuesta pedir ayuda o interrumpir a los demás? ¿Por qué crees que te pasa?",
+          "model": "Sí, me cuesta bastante. Creo que es porque en mi casa siempre nos enseñaron a no molestar."
+        },
+        {
+          "q": "¿Qué historia de tus abuelos o bisabuelos se cuenta siempre en tu familia?",
+          "model": "En mi familia siempre se cuenta que mi bisabuela cruzó un río a caballo para llegar a su propia boda."
+        }
+      ],
+      "gaps": "Si no hubiera sido por [ti], me habría [ido] [pidiendo perdón] al [cardiólogo].",
+      "glossary": [
+        {
+          "word": "sumarme",
+          "meaning": "unirme a lo que hacen otros"
+        },
+        {
+          "word": "mareado",
+          "meaning": "con la sensación de que todo da vueltas"
+        },
+        {
+          "word": "terremoto",
+          "meaning": "movimiento fuerte de la tierra"
+        },
+        {
+          "word": "manía",
+          "meaning": "costumbre rara que alguien repite siempre"
+        }
+      ]
+    },
+    {
+      "id": "curaciones",
+      "title": "Un anzuelo, un niño de ocho años y un tiburón de agua dulce",
+      "place": "Sala de curaciones",
+      "context": "Mientras Marta prepara todo para sacarle el anzuelo de la ceja, Rufino cuenta su versión heroica del accidente.",
+      "speakers": [
+        {
+          "name": "Rufino",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Marta",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Lo que pasó fue que había un pez enorme, enfermera, enorme, y mi hijo no podía con él. Así que me puse delante para protegerlo."
+        },
+        {
+          "s": 1,
+          "text": "Ajá. ¿Y el pez le lanzó el anzuelo a la ceja?"
+        },
+        {
+          "s": 0,
+          "text": "No, no, el pez dio un tirón tan fuerte que el anzuelo salió volando hacia mí. Un animal de por lo menos diez kilos."
+        },
+        {
+          "s": 1,
+          "text": "Qué curioso. Hace un rato su hijo me dijo que en la laguna solo había renacuajos y una bota vieja."
+        },
+        {
+          "s": 0,
+          "text": "Bueno, los niños exageran… al revés. Minimizan."
+        },
+        {
+          "s": 1,
+          "text": "Y también me dijo que era su primera vez lanzando la caña y que usted le decía «más fuerte, más fuerte, hacia atrás»."
+        },
+        {
+          "s": 0,
+          "text": "Eh… Puede que hubiera algo de técnica de por medio."
+        },
+        {
+          "s": 1,
+          "text": "Mire, don Rufino, le propongo algo: yo le saco esto rapidito y usted, en casa, cuenta lo del pez de diez kilos. Pero aquí, entre nosotros, admita que lo pescó su hijo."
+        },
+        {
+          "s": 0,
+          "text": "Si lo admitiera, ¿me dolería menos?"
+        },
+        {
+          "s": 1,
+          "text": "No. Pero se reiría más. Y su hijo, cuando sea mayor, tendrá la mejor anécdota del mundo. Quieto ahora."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Marta mientras Rufino cuenta su historia?",
+          "options": [
+            "Le cree todo y lo felicita",
+            "Descubre las contradicciones de su versión",
+            "Llama a su hijo para que confirme"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Según Rufino, ¿cómo llegó el anzuelo a su ceja?",
+          "options": [
+            "Por el tirón de un pez enorme",
+            "Porque se cayó al agua",
+            "Porque él mismo se lo clavó por accidente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué había en la laguna, según el hijo?",
+          "options": [
+            "Un pez de diez kilos",
+            "Varios peces medianos",
+            "Renacuajos y una bota vieja"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se deduce sobre lo que pasó de verdad?",
+          "options": [
+            "Que el hijo lanzó la caña hacia atrás y enganchó a su padre",
+            "Que un pez atacó a Rufino",
+            "Que Marta se equivocó de paciente"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes alguna anécdota que cuentas siempre un poco más heroica de lo que fue?",
+          "model": "Sí, cuando me desorienté en la montaña. Digo que fueron dos días, pero la verdad es que fueron cuatro horas."
+        },
+        {
+          "q": "¿Qué cosa aprendiste de niño con alguien de tu familia? ¿Cómo fue la experiencia?",
+          "model": "Mi madre me enseñó a montar en bicicleta y terminamos las dos en un arbusto, muertas de risa."
+        },
+        {
+          "q": "Si pudieras volver a vivir un accidente ridículo que tuviste, ¿lo cambiarías o te gusta tenerlo como historia?",
+          "model": "No lo cambiaría, porque es la historia que más risa le da a mis amigos."
+        }
+      ],
+      "gaps": "Si lo [admitiera], ¿me [dolería] menos? No. Pero se [reiría] [más].",
+      "glossary": [
+        {
+          "word": "anzuelo",
+          "meaning": "gancho pequeño de metal para pescar"
+        },
+        {
+          "word": "tirón",
+          "meaning": "movimiento brusco y fuerte"
+        },
+        {
+          "word": "renacuajos",
+          "meaning": "crías de rana, pequeñas, que viven en el agua"
+        },
+        {
+          "word": "caña",
+          "meaning": "palo largo que se usa para pescar"
+        }
+      ]
+    },
+    {
+      "id": "cafeteria",
+      "title": "Dos cafés sin azúcar y la misma semana de vacaciones",
+      "place": "Cafetería del hospital",
+      "context": "Doña Ramona y Federico, de radiología, comentan en la barra un posible romance secreto en el hospital.",
+      "speakers": [
+        {
+          "name": "Ramona",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Federico",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Federico, acércate, que esto no lo puede oír ni la cafetera. ¿Tú no has notado nada raro con los del quirófano?"
+        },
+        {
+          "s": 1,
+          "text": "¿Con quiénes? ¿Con Undurraga y la doctora Ibarra? Si se pasan el día peleándose."
+        },
+        {
+          "s": 0,
+          "text": "Por eso mismo, mi amor. Los que se pelean tanto, o se odian o se quieren. Y fíjate: desde hace un mes, los dos piden café sin azúcar. Antes ella le echaba tres."
+        },
+        {
+          "s": 1,
+          "text": "Hombre, Ramona, puede que esté a dieta."
+        },
+        {
+          "s": 0,
+          "text": "¿A dieta? ¿Con mi menú? No me hagas reír. Y otra cosa: los dos pidieron vacaciones la misma semana. Eso dicen que es lo que discuten, ¿no? Pues yo creo que lo discuten en voz alta para que nadie sospeche."
+        },
+        {
+          "s": 1,
+          "text": "Eh… Ahora que lo dices, el otro día él vino a radiología tarareando reguetón. Y él odia el reguetón."
+        },
+        {
+          "s": 0,
+          "text": "¡Ahí está! Si fuera solo compañerismo, no se le pegarían las canciones."
+        },
+        {
+          "s": 1,
+          "text": "Ramona, deberías trabajar en la policía."
+        },
+        {
+          "s": 0,
+          "text": "Para qué, si aquí me entero de todo sin placa. Tómate el caldo, que se enfría."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Ramona y Federico?",
+          "options": [
+            "De un posible romance secreto entre dos cirujanos",
+            "De los precios de la cafetería",
+            "De un robo en el hospital"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué cambio ha notado Ramona en la doctora Ibarra?",
+          "options": [
+            "Ya no come el menú del día",
+            "Ahora toma el café sin azúcar",
+            "Llega más temprano"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué discutirían en voz alta, según Ramona?",
+          "options": [
+            "Porque de verdad se odian",
+            "Porque nadie los escucha en el quirófano",
+            "Para que nadie sospeche de su relación"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pista aporta Federico?",
+          "options": [
+            "Que Undurraga tarareaba una canción del estilo que odia",
+            "Que los vio juntos en el aparcamiento",
+            "Que Ibarra le contó un secreto"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay mucho cotilleo en tu trabajo o en tu clase? ¿Participas o te mantienes al margen?",
+          "model": "Hay bastante. Yo intento no participar, aunque reconozco que escucho con mucha atención."
+        },
+        {
+          "q": "¿Qué comida te reconforta cuando tienes un mal día?",
+          "model": "Cuando tengo un mal día, me preparo una sopa de mi abuela, aunque no me salga igual que la suya."
+        },
+        {
+          "q": "¿Crees que es buena idea tener una relación con alguien del trabajo? ¿Por qué?",
+          "model": "Puede salir bien, pero si la relación terminara, sería muy incómodo verse todos los días."
+        }
+      ],
+      "gaps": "Los que se pelean tanto, o se [odian] o se [quieren]. Y fíjate: desde hace un [mes], los dos piden café sin [azúcar].",
+      "glossary": [
+        {
+          "word": "tarareando",
+          "meaning": "cantando una melodía sin decir la letra"
+        },
+        {
+          "word": "se le pegarían",
+          "meaning": "se le quedarían en la cabeza sin querer"
+        },
+        {
+          "word": "placa",
+          "meaning": "insignia de metal que identifica a un policía"
+        },
+        {
+          "word": "sospeche",
+          "meaning": "imagine que algo malo o secreto está pasando"
+        }
+      ]
+    },
+    {
+      "id": "facturacion",
+      "title": "Cargo extra por música de espera con violines",
+      "place": "Administración y facturación",
+      "context": "Unos días después, Jorge Treviño llama por teléfono a Gonzalo para reclamar su factura.",
+      "speakers": [
+        {
+          "name": "Jorge",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenas, ¿Gonzalo? Soy Jorge Treviño, el de la factura del oxígeno ambiental. Llamo para reclamar."
+        },
+        {
+          "s": 1,
+          "text": "Don Jorge, qué alegría oírlo. Claro, dígame. Le aviso, eso sí, de que la llamada genera un pequeño cargo por atención telefónica personalizada."
+        },
+        {
+          "s": 0,
+          "text": "¿Me está cobrando por quejarme?"
+        },
+        {
+          "s": 1,
+          "text": "No por quejarse, por ser atendido. Quejarse es gratis, lo que pasa es que nadie lo escucharía."
+        },
+        {
+          "s": 0,
+          "text": "Mire, me cobraron «sonrisa de enfermería». La enfermera no sonrió ni una vez."
+        },
+        {
+          "s": 1,
+          "text": "Tiene toda la razón. Se lo descuento. Aunque entonces tendría que aplicarle el cargo por «trato serio y profesional», que es un poco más caro."
+        },
+        {
+          "s": 0,
+          "text": "¡Esto es increíble! Y además me tuvieron diez minutos en espera escuchando violines."
+        },
+        {
+          "s": 1,
+          "text": "Ah, sí, la música de espera. Es de un cuarteto en directo, por eso se factura aparte."
+        },
+        {
+          "s": 0,
+          "text": "Gonzalo, si yo no pagara nada de esto, ¿qué pasaría?"
+        },
+        {
+          "s": 1,
+          "text": "Pues, sinceramente, nada grave. Le mandaríamos cartas muy educadas hasta el final de los tiempos. Y cada carta, claro, con su sello."
+        },
+        {
+          "s": 0,
+          "text": "Que, supongo, también me cobran."
+        },
+        {
+          "s": 1,
+          "text": "Veo que ya va conociendo el sistema, don Jorge."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Para qué llama Jorge?",
+          "options": [
+            "Para pagar la factura",
+            "Para reclamar los cargos absurdos de su factura",
+            "Para pedir una cita médica"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasa cuando Jorge reclama la «sonrisa de enfermería»?",
+          "options": [
+            "Gonzalo la elimina sin más",
+            "Gonzalo le dice que la enfermera sí sonrió",
+            "Gonzalo propone otro cargo todavía más caro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué cobran la música de espera aparte?",
+          "options": [
+            "Porque supuestamente es un cuarteto en directo",
+            "Porque la eligió Jorge",
+            "Porque duró más de una hora"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué tono usa Gonzalo durante toda la llamada?",
+          "options": [
+            "Agresivo y amenazante",
+            "Muy amable, aunque lo que dice es absurdo",
+            "Aburrido y sin interés"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Alguna vez te cobraron algo que te pareció injusto o ridículo? ¿Reclamaste?",
+          "model": "Sí, en un hotel me cobraron por usar la piscina, aunque estaba cerrada. Reclamé y me lo devolvieron."
+        },
+        {
+          "q": "¿Eres de los que reclaman o de los que pagan para no complicarse la vida?",
+          "model": "Normalmente pago para no complicarme, aunque luego me arrepiento y se lo cuento a todo el mundo."
+        },
+        {
+          "q": "Si pudieras inventar un cargo absurdo para cobrar a tus amigos o a tu familia, ¿cuál sería?",
+          "model": "Les cobraría por escuchar sus problemas a medianoche. Me haría rico en un mes."
+        }
+      ],
+      "gaps": "Le [mandaríamos] cartas muy [educadas] hasta el [final] de los tiempos. Y cada carta, claro, con su [sello].",
+      "glossary": [
+        {
+          "word": "reclamar",
+          "meaning": "protestar formalmente porque algo no está bien"
+        },
+        {
+          "word": "personalizada",
+          "meaning": "hecha especialmente para una persona"
+        },
+        {
+          "word": "se lo descuento",
+          "meaning": "le resto esa cantidad del total"
+        },
+        {
+          "word": "se factura aparte",
+          "meaning": "se cobra por separado"
+        }
+      ]
+    },
+    {
+      "id": "laboratorio",
+      "title": "La semana O negativo y la centrífuga que se calló",
+      "place": "Laboratorio",
+      "context": "Andrea, muy seria, le lee a su compañero Luis el horóscopo de su grupo sanguíneo para esta semana.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Luis",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Luis, siéntate, que te leo tu semana. Eres O negativo, ¿verdad?"
+        },
+        {
+          "s": 1,
+          "text": "Andrea, por favor. La sangre no tiene horóscopo. Tiene glóbulos y plaquetas."
+        },
+        {
+          "s": 0,
+          "text": "Escucha y luego opinas, que los escépticos siempre son los primeros en caer. «O negativo: esta semana, un objeto que siempre hace ruido guardará silencio.»"
+        },
+        {
+          "s": 1,
+          "text": "Ajá. Muy científico."
+        },
+        {
+          "s": 0,
+          "text": "«Alguien del pasado te llamará por un asunto sin importancia.» Y: «Evita los tonos amarillos»."
+        },
+        {
+          "s": 1,
+          "text": "Mira, aunque todo eso pasara, no demostraría nada. Serían coincidencias."
+        },
+        {
+          "s": 0,
+          "text": "Claro, claro. Oye… ¿no notas algo?"
+        },
+        {
+          "s": 1,
+          "text": "¿Qué?"
+        },
+        {
+          "s": 0,
+          "text": "La centrífuga. No hace ruido. Lleva tres años sonando como una lavadora con piedras y de repente…"
+        },
+        {
+          "s": 1,
+          "text": "Bueno, la habrán arreglado. ¡Ay, perdón, me suena el móvil! Es… mi exnovia. Quiere saber si me quedé con su paraguas."
+        },
+        {
+          "s": 0,
+          "text": "Un asunto sin importancia. Qué cosas."
+        },
+        {
+          "s": 1,
+          "text": "No digas nada. No digas absolutamente nada. Y quítame de delante ese tubo de tapa amarilla, por si acaso."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué ocurre en esta escena?",
+          "options": [
+            "Luis se burla del horóscopo y luego empiezan a pasar coincidencias",
+            "Andrea pierde unos análisis",
+            "Luis le pide a Andrea que le lea el futuro"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasa de repente a la centrífuga?",
+          "options": [
+            "Se rompe del todo",
+            "Deja de hacer ruido",
+            "Empieza a sonar más fuerte"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué llama la exnovia de Luis?",
+          "options": [
+            "Para volver con él",
+            "Para invitarlo a una fiesta",
+            "Para preguntar por un paraguas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué revela la última frase de Luis?",
+          "options": [
+            "Que empieza a tomarse en serio el horóscopo, aunque no lo admita",
+            "Que es alérgico al color amarillo",
+            "Que ya no quiere trabajar con Andrea"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Lees el horóscopo o conoces a alguien que lo siga con mucha seriedad?",
+          "model": "No lo leo, pero mi tía lo sigue tanto que no firma nada importante si su signo no lo aconseja."
+        },
+        {
+          "q": "¿Tienes alguna superstición o pequeño ritual de buena suerte, aunque no creas en ella del todo?",
+          "model": "Siempre llevo el mismo bolígrafo a los exámenes. No creo que funcione, pero por si acaso."
+        },
+        {
+          "q": "Si una predicción absurda se cumpliera tres veces seguidas, ¿empezarías a creer? ¿Por qué?",
+          "model": "Probablemente sí, aunque diría en voz alta que es casualidad para no parecer ridículo."
+        }
+      ],
+      "gaps": "Mira, aunque todo eso [pasara], no [demostraría] [nada]. Serían [coincidencias].",
+      "glossary": [
+        {
+          "word": "glóbulos",
+          "meaning": "células que forman parte de la sangre"
+        },
+        {
+          "word": "centrífuga",
+          "meaning": "máquina que gira muy rápido para separar sustancias"
+        },
+        {
+          "word": "coincidencias",
+          "meaning": "cosas que pasan a la vez por casualidad"
+        },
+        {
+          "word": "por si acaso",
+          "meaning": "como precaución, por si pasa algo"
+        }
+      ]
+    },
+    {
+      "id": "radiologia",
+      "title": "El anillo de la abuela que él quería para la nueva",
+      "place": "Radiología",
+      "context": "En la sala de espera de radiología, Karla le cuenta a su amiga Yolanda toda la historia de la ruptura.",
+      "speakers": [
+        {
+          "name": "Karla",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        },
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Karla, ya estamos aquí, ya te vieron por dentro. Ahora cuéntamelo todo, desde el principio."
+        },
+        {
+          "s": 0,
+          "text": "Vale. Hace dos semanas, Esteban… perdón, mi ex, me dice que necesita «espacio». Bueno, pensé, se lo doy. Y ayer me escribe: «Necesito el anillo»."
+        },
+        {
+          "s": 1,
+          "text": "¿Por mensaje? ¿Ni siquiera llamó?"
+        },
+        {
+          "s": 0,
+          "text": "Por mensaje, con un emoji de carita triste. Y yo, todavía tonta, le pregunto por qué. Y me dice que es de su abuela… y que se lo va a dar a otra."
+        },
+        {
+          "s": 1,
+          "text": "¿A otra? ¿Ya?"
+        },
+        {
+          "s": 0,
+          "text": "Ya. Así que pensé: si tanto lo quiere, que venga a buscarlo. Y me lo tragué."
+        },
+        {
+          "s": 1,
+          "text": "Karla, por Dios. ¿No habría sido más fácil tirarlo al río?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, pero entonces no habría sido tan personal. Lo peor no es el anillo, Yoli. Lo peor es que yo de verdad me veía con él de viejita."
+        },
+        {
+          "s": 1,
+          "text": "Ay, amiga… Ven aquí. Oye, ¿y la llave y la moneda que salieron en la radiografía?"
+        },
+        {
+          "s": 0,
+          "text": "La llave es de su casa. La moneda… ni idea. Esa ya venía de antes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cuenta Karla a Yolanda?",
+          "options": [
+            "Cómo y por qué terminó tragándose el anillo",
+            "Cómo conoció a su ex",
+            "Por qué quiere casarse pronto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo le pidió el ex que le devolviera el anillo?",
+          "options": [
+            "En persona, en un restaurante",
+            "Por mensaje, con un emoji",
+            "A través de su abuela"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Karla no tiró el anillo al río, según ella?",
+          "options": [
+            "Porque el río estaba lejos",
+            "Porque quería venderlo",
+            "Porque tragárselo era más personal"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sentimiento hay detrás de la broma de Karla?",
+          "options": [
+            "Tristeza, porque imaginaba un futuro con él",
+            "Alegría, porque por fin es libre",
+            "Miedo a la operación"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Crees que hay que devolver los regalos cuando una relación termina? ¿Depende del regalo?",
+          "model": "Creo que depende. Si es algo familiar, como un anillo de la abuela, lo devolvería, aunque me costara."
+        },
+        {
+          "q": "¿Guardas algún objeto que te recuerde a una persona que ya no está en tu vida?",
+          "model": "Guardo una carta de una amiga de la infancia. No hablamos desde hace años, pero no soy capaz de tirarla."
+        },
+        {
+          "q": "¿Qué te parece terminar una relación por mensaje? ¿En qué casos lo aceptarías?",
+          "model": "Me parece cobarde, salvo que la relación hubiera durado solo dos semanas."
+        }
+      ],
+      "gaps": "Sí, pero entonces no habría sido tan [personal]. Lo peor no es el [anillo], Yoli. [Lo peor] es que yo de verdad me veía con él de [viejita].",
+      "glossary": [
+        {
+          "word": "espacio",
+          "meaning": "aquí, tiempo y distancia en una relación de pareja"
+        },
+        {
+          "word": "me lo tragué",
+          "meaning": "lo pasé por la garganta hasta el estómago"
+        },
+        {
+          "word": "radiografía",
+          "meaning": "imagen del interior del cuerpo hecha con rayos X"
+        },
+        {
+          "word": "viejita",
+          "meaning": "forma cariñosa de decir mujer mayor"
+        }
+      ]
+    },
+    {
+      "id": "quirofano",
+      "title": "Vestuario, reguetón y un cumplido a medias",
+      "place": "Área quirúrgica",
+      "context": "Después de la operación, en el vestuario, el doctor Undurraga y la doctora Ibarra vuelven a discutir… más o menos.",
+      "speakers": [
+        {
+          "name": "Lorenzo",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Mercedes",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Que conste, Mercedes, que el reguetón casi me hace cortar donde no era."
+        },
+        {
+          "s": 1,
+          "text": "Ay, por favor, Lorenzo. Con tu ópera, la paciente casi se despierta para pedir que la mataran."
+        },
+        {
+          "s": 0,
+          "text": "Eso es cultura. Lo tuyo es ruido con ritmo."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, y lo de la semana de vacaciones, ¿qué? Yo la solicité primero."
+        },
+        {
+          "s": 0,
+          "text": "La pediste el mismo día que yo, con diez minutos de diferencia. Si hubieras sido realmente la primera, no estaríamos discutiendo."
+        },
+        {
+          "s": 1,
+          "text": "Pues entonces nos la repartimos, o que decida una moneda."
+        },
+        {
+          "s": 0,
+          "text": "Mmm. Oye… cuando sonó la alarma, ¿cómo supiste que iba a necesitar la pinza antes de pedírtela?"
+        },
+        {
+          "s": 1,
+          "text": "Porque llevas doce años poniendo la misma cara antes de pedirla. Te conozco más de lo que me gustaría."
+        },
+        {
+          "s": 0,
+          "text": "Ya. Pues… estuviste muy bien. Muy rápida. No te acostumbres a que te lo diga."
+        },
+        {
+          "s": 1,
+          "text": "¿Eso fue un cumplido? ¿Del gran Undurraga? Voy a necesitar sentarme."
+        },
+        {
+          "s": 0,
+          "text": "No lo repitas fuera de aquí. Y mañana ponemos ópera."
+        },
+        {
+          "s": 1,
+          "text": "Mañana ponemos reguetón. Pero, si quieres, uno lento."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hacen Lorenzo y Mercedes en el vestuario?",
+          "options": [
+            "Discuten, pero también reconocen lo bien que trabajan juntos",
+            "Planean un viaje juntos",
+            "Se quejan de la residente Tania"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué discuten sobre las vacaciones?",
+          "options": [
+            "Porque ninguno quiere vacaciones",
+            "Porque los dos pidieron la misma semana casi a la vez",
+            "Porque el hospital las canceló"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo supo Mercedes qué instrumento necesitaba Lorenzo?",
+          "options": [
+            "Porque él se lo pidió a gritos",
+            "Porque lo había leído en el informe",
+            "Porque conoce la cara que pone antes de pedirlo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sugiere el final de la conversación?",
+          "options": [
+            "Que hay más complicidad entre ellos de lo que parece",
+            "Que van a dejar de operar juntos",
+            "Que Mercedes renunciará al reguetón"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Has trabajado o estudiado con alguien que no te caía bien pero con quien funcionabas perfectamente?",
+          "model": "Sí, en la universidad tenía una compañera insoportable, pero hacíamos los mejores trabajos de la clase."
+        },
+        {
+          "q": "¿Qué música te ayuda a concentrarte y cuál te lo impide por completo?",
+          "model": "Me concentro con música clásica, pero con canciones en mi idioma me pongo a cantar y no hago nada."
+        },
+        {
+          "q": "¿Te cuesta hacer cumplidos? ¿Por qué crees que a algunas personas les cuesta tanto?",
+          "model": "A mí no me cuesta, pero creo que a otras personas les da miedo parecer débiles si admiran a alguien."
+        }
+      ],
+      "gaps": "Si hubieras sido [realmente] la [primera], no [estaríamos] [discutiendo].",
+      "glossary": [
+        {
+          "word": "que conste",
+          "meaning": "quiero que quede claro"
+        },
+        {
+          "word": "pinza",
+          "meaning": "instrumento que sirve para agarrar cosas pequeñas"
+        },
+        {
+          "word": "cumplido",
+          "meaning": "frase amable para elogiar a alguien"
+        },
+        {
+          "word": "nos la repartimos",
+          "meaning": "cada uno se queda con una parte"
+        }
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "El método Funes de los noventa segundos",
+      "place": "Sala de descanso de médicos",
+      "context": "Desde debajo de la manta, el doctor Rodrigo Funes le explica a Tania sus trucos «científicos» para dormir.",
+      "speakers": [
+        {
+          "name": "Rodrigo",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Tania",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Doctor Funes, perdone, es que lo buscan otra vez."
+        },
+        {
+          "s": 0,
+          "text": "Tania, Tania. Siéntate. Antes de que me despiertes, déjame enseñarte algo que no te van a enseñar en la carrera. El método Funes."
+        },
+        {
+          "s": 1,
+          "text": "Doctor, el busca está sonando."
+        },
+        {
+          "s": 0,
+          "text": "Paso uno: te tapas hasta las cejas, porque si el mundo no te ve, no existes. Paso dos: piensas en algo aburrido, por ejemplo, el reglamento del hospital. En noventa segundos, dormido."
+        },
+        {
+          "s": 1,
+          "text": "¿Y le funciona?"
+        },
+        {
+          "s": 0,
+          "text": "Siempre. Bueno, salvo cuando alguien calienta pescado en el microondas. Eso despierta hasta a los de la morgue."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuál fue su peor desastre durmiendo?"
+        },
+        {
+          "s": 0,
+          "text": "Uf. Una vez me quedé dormido en un ascensor, de pie. Estuve subiendo y bajando durante una hora. Cuando me desperté, la gente me saludaba como si fuera parte del ascensor."
+        },
+        {
+          "s": 1,
+          "text": "¿En serio?"
+        },
+        {
+          "s": 0,
+          "text": "Totalmente. Si me hubieran dejado una hora más, me habrían puesto un cartel de «fuera de servicio»."
+        },
+        {
+          "s": 1,
+          "text": "Pues ahora el que está fuera de servicio es usted, y lo necesitan en el quirófano dos."
+        },
+        {
+          "s": 0,
+          "text": "Está bien, está bien. Pero no le digas a nadie dónde está mi manta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le explica Rodrigo a Tania?",
+          "options": [
+            "Sus trucos para quedarse dormido",
+            "Cómo anestesiar a un paciente",
+            "Cómo organizar las guardias"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿En qué consiste el paso dos del método?",
+          "options": [
+            "Contar ovejas",
+            "Pensar en algo aburrido, como el reglamento",
+            "Tomar un café"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde tuvo Rodrigo su peor desastre durmiendo?",
+          "options": [
+            "En el quirófano",
+            "En la cafetería",
+            "En un ascensor"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué intención tiene Tania con su última frase?",
+          "options": [
+            "Usar el humor de Rodrigo para que por fin se levante",
+            "Burlarse de él delante de todos",
+            "Quedarse ella con el sofá"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes algún truco para dormirte rápido? ¿Funciona de verdad?",
+          "model": "Intento imaginar que estoy en una playa, aunque casi siempre termino pensando en el trabajo."
+        },
+        {
+          "q": "¿Cuál es el lugar más raro en el que te has quedado dormido?",
+          "model": "Me quedé dormido en un concierto de rock, justo al lado de los altavoces."
+        },
+        {
+          "q": "¿Crees que la siesta debería ser obligatoria en el trabajo? ¿Cómo la organizarías?",
+          "model": "Me parecería genial. Pondría una sala con sofás y una regla: nada de pescado en el microondas."
+        }
+      ],
+      "gaps": "Si me hubieran dejado una [hora] más, me habrían puesto un [cartel] de «[fuera de servicio]». Pues ahora el que está fuera de servicio es usted, y lo necesitan en el [quirófano] dos.",
+      "glossary": [
+        {
+          "word": "busca",
+          "meaning": "aparato pequeño que avisa a los médicos cuando los necesitan"
+        },
+        {
+          "word": "la carrera",
+          "meaning": "los estudios universitarios"
+        },
+        {
+          "word": "reglamento",
+          "meaning": "conjunto de reglas oficiales"
+        },
+        {
+          "word": "fuera de servicio",
+          "meaning": "que no funciona en este momento"
+        }
+      ]
+    },
+    {
+      "id": "enfermeria",
+      "title": "Relevo de noche: la 404, la 405 y lo que de verdad importa",
+      "place": "Estación de enfermería",
+      "context": "En el cambio de turno, Margarita le explica a Roberto, habitación por habitación, lo que piden los pacientes y lo que realmente importa.",
+      "speakers": [
+        {
+          "name": "Margarita",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Roberto",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bueno, Roberto, apunta. La 404 llama cada veinte minutos porque no encuentra el control de la tele. Lo tiene debajo de la almohada. Siempre."
+        },
+        {
+          "s": 1,
+          "text": "¿Y no se lo dices?"
+        },
+        {
+          "s": 0,
+          "text": "Se lo digo, y se le olvida. Creo que le gusta que alguien vaya a verlo. Ve, aunque no haga falta."
+        },
+        {
+          "s": 1,
+          "text": "Entendido. ¿La 405?"
+        },
+        {
+          "s": 0,
+          "text": "La 405 le pidió matrimonio a la enfermera de la tarde. Si te lo pide a ti, dile que lo pensarás. Le hace ilusión."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la 406 qué quiere?"
+        },
+        {
+          "s": 0,
+          "text": "La contraseña del wifi. Se la di tres veces. Si vuelve a llamar, dile que el wifi está en huelga."
+        },
+        {
+          "s": 1,
+          "text": "¿Y lo importante, Margarita? Porque con tanto timbre…"
+        },
+        {
+          "s": 0,
+          "text": "Lo importante es la 409. La señora no llama nunca, y eso es lo que me preocupa. Pásate cada hora aunque esté callada. Los que no piden nada son los que más nos necesitan."
+        },
+        {
+          "s": 1,
+          "text": "Vale. ¿Algo más?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. No dejes que nadie sepa que estás tranquilo. Si lo notan, te traen más trabajo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué está haciendo Margarita?",
+          "options": [
+            "Explicando a Roberto la situación de cada habitación antes de irse",
+            "Quejándose de su jefe",
+            "Pidiéndole a Roberto que cambie de turno"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasa al paciente de la 404?",
+          "options": [
+            "Quiere casarse",
+            "Siempre pierde el control de la tele bajo la almohada",
+            "No tiene wifi"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué le preocupa la paciente de la 409?",
+          "options": [
+            "Porque toca el timbre sin parar",
+            "Porque se quiere ir a casa",
+            "Porque no llama nunca"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué sugiere Margarita sobre el paciente de la 404?",
+          "options": [
+            "Que en realidad busca compañía",
+            "Que está perdiendo la memoria por completo",
+            "Que quiere cambiar de habitación"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo organizas tu día cuando todo el mundo te pide cosas a la vez?",
+          "model": "Hago una lista y empiezo por lo que me da más miedo, aunque no siempre lo consigo."
+        },
+        {
+          "q": "¿Conoces a alguien que nunca pide ayuda aunque la necesite? ¿Cómo te das cuenta?",
+          "model": "Mi padre. Me doy cuenta porque se pone a arreglar cosas que no están rotas."
+        },
+        {
+          "q": "Si fueras jefe de un equipo, ¿qué consejo le darías a la persona que te reemplaza en tu turno?",
+          "model": "Le diría que escuchara más a los que hablan poco, porque suelen tener las mejores ideas."
+        }
+      ],
+      "gaps": "Pásate cada [hora] aunque esté [callada]. Los que no piden [nada] son los que más nos [necesitan].",
+      "glossary": [
+        {
+          "word": "apunta",
+          "meaning": "escribe para no olvidar"
+        },
+        {
+          "word": "le hace ilusión",
+          "meaning": "le hace feliz, le emociona"
+        },
+        {
+          "word": "en huelga",
+          "meaning": "sin trabajar como forma de protesta"
+        },
+        {
+          "word": "pásate",
+          "meaning": "ve un momento a un lugar"
+        }
+      ]
+    },
+    {
+      "id": "internacion",
+      "title": "Un cigarro con suero en el rellano del tercer piso",
+      "place": "Pasillos de internación",
+      "context": "Don Mario, con su pie de suero y la bata abierta, se encuentra en la escalera con Doña Lorena, de limpieza.",
+      "speakers": [
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Don Mario, la bata. Que se le ve todo el pasado."
+        },
+        {
+          "s": 0,
+          "text": "Lorena, a mi edad, el pasado ya no escandaliza a nadie. ¿No me va a delatar, verdad?"
+        },
+        {
+          "s": 1,
+          "text": "Ya lo he visto cien veces. Usted y otros veinte. Este rellano es el bar clandestino del hospital."
+        },
+        {
+          "s": 0,
+          "text": "Mire, yo empecé a fumar a los quince, detrás de la iglesia. El cura me pilló y, en vez de regañarme, me pidió uno."
+        },
+        {
+          "s": 1,
+          "text": "¿El cura?"
+        },
+        {
+          "s": 0,
+          "text": "El cura. Desde entonces creo que fumar es casi un sacramento. Si mi mujer me viera ahora, eso sí, me arrancaría el suero."
+        },
+        {
+          "s": 1,
+          "text": "Pues yo he visto cosas peores en estos pasillos. Un señor que se escapaba para comprar lotería. Una señora que traía al perro escondido en el bolso."
+        },
+        {
+          "s": 0,
+          "text": "¿Y usted no tiene ningún vicio, Lorena?"
+        },
+        {
+          "s": 1,
+          "text": "Las telenovelas de la tarde. Y escuchar conversaciones ajenas mientras friego. Pero eso no me quita años de vida."
+        },
+        {
+          "s": 0,
+          "text": "Le propongo un trato: este es el último. Si no lo fuera, usted me quita el encendedor."
+        },
+        {
+          "s": 1,
+          "text": "Trato hecho. Aunque lo mismo me dijo el martes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde y de qué hablan Mario y Lorena?",
+          "options": [
+            "En la escalera, sobre vicios y recuerdos",
+            "En la habitación, sobre su operación",
+            "En la cafetería, sobre el menú"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hizo el cura cuando pilló a Mario fumando de joven?",
+          "options": [
+            "Se lo contó a sus padres",
+            "Le pidió un cigarro",
+            "Lo castigó sin misa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es el vicio de Lorena?",
+          "options": [
+            "La lotería",
+            "El café",
+            "Las telenovelas y escuchar conversaciones ajenas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué da a entender Lorena con su última frase?",
+          "options": [
+            "Que no cree que sea de verdad el último cigarro",
+            "Que ella también fuma los martes",
+            "Que va a contárselo al médico"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes algún pequeño vicio o placer culpable que no estés dispuesto a dejar?",
+          "model": "El chocolate a medianoche. Sé que no es buena idea, pero es mi momento favorito del día."
+        },
+        {
+          "q": "¿Alguna vez intentaste dejar un hábito? ¿Qué pasó?",
+          "model": "Intenté dejar el café durante un mes y aguanté exactamente cuatro días."
+        },
+        {
+          "q": "¿Qué travesura de tu adolescencia contarías hoy con una sonrisa?",
+          "model": "Una vez me escapé de clase para ir a un concierto y me encontré allí a mi profesor de historia."
+        }
+      ],
+      "gaps": "Le propongo un [trato]: este es el [último]. Si no lo [fuera], usted me quita el [encendedor].",
+      "glossary": [
+        {
+          "word": "delatar",
+          "meaning": "contar a alguien lo que otra persona hizo mal"
+        },
+        {
+          "word": "rellano",
+          "meaning": "espacio plano entre dos tramos de escalera"
+        },
+        {
+          "word": "clandestino",
+          "meaning": "secreto, escondido, fuera de las reglas"
+        },
+        {
+          "word": "me pilló",
+          "meaning": "me descubrió haciendo algo"
+        }
+      ]
+    },
+    {
+      "id": "habitacion",
+      "title": "Restos de pastel y confesiones a la mañana siguiente",
+      "place": "Habitación 402",
+      "context": "La mañana después de la fiesta, Doña Karina y Juan, su compañero de habitación, conversan entre restos de pastel.",
+      "speakers": [
+        {
+          "name": "Karina",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Juan",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días, vecino. ¿Sobrevivió a la fiesta? Le guardé un trozo de pastel. Bueno, lo que dejaron mis nietos."
+        },
+        {
+          "s": 1,
+          "text": "Buenos días, doña Karina. Sobreviví, sí. Aunque si me hubieran cantado el cumpleaños feliz una vez más, me habría abierto los puntos."
+        },
+        {
+          "s": 0,
+          "text": "Ay, perdóneme. Es que ochenta años no se cumplen todos los días."
+        },
+        {
+          "s": 1,
+          "text": "No, ya. Oiga, ¿y qué hacía usted a mi edad?"
+        },
+        {
+          "s": 0,
+          "text": "¿A los cuarenta? Bailaba. Tenía un grupo de baile con mis amigas y nos íbamos de gira por los pueblos. Mi marido decía que era la única mujer que volvía a casa con más energía de la que tenía al salir."
+        },
+        {
+          "s": 1,
+          "text": "Qué maravilla. Yo a los veinte quería ser cantante. Tocaba en bares a cambio de cerveza y aplausos."
+        },
+        {
+          "s": 0,
+          "text": "¡Mira tú! ¿Y por qué lo dejó?"
+        },
+        {
+          "s": 1,
+          "text": "Por miedo, supongo. Me pareció más prudente ser contable."
+        },
+        {
+          "s": 0,
+          "text": "Pues el año que viene, para mi cumpleaños ochenta y uno, canta usted. Y nada de quejarse del ruido."
+        },
+        {
+          "s": 1,
+          "text": "Trato hecho. Pero en otra habitación, por favor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué pasa entre Karina y Juan esta mañana?",
+          "options": [
+            "Se conocen mejor y empiezan a ser amigos",
+            "Discuten otra vez por el ruido",
+            "Piden cambiarse de habitación"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le pasaría a Juan si le hubieran cantado una vez más?",
+          "options": [
+            "Se habría puesto a llorar",
+            "Se le habrían abierto los puntos",
+            "Se habría ido del hospital"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué hacía Karina a los cuarenta años?",
+          "options": [
+            "Trabajaba de contable",
+            "Cantaba en bares",
+            "Bailaba con sus amigas en un grupo que iba de gira"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué se deduce sobre Juan?",
+          "options": [
+            "Que se arrepiente un poco de haber dejado la música",
+            "Que odia los cumpleaños",
+            "Que no tiene familia"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo te gusta celebrar tu cumpleaños: con mucha gente o de forma tranquila?",
+          "model": "Prefiero algo tranquilo, con tres o cuatro amigos y una buena cena, nada de sorpresas."
+        },
+        {
+          "q": "¿Qué sueño de juventud dejaste de lado? ¿Te arrepientes?",
+          "model": "Quería ser actor, pero estudié economía. A veces me arrepiento, sobre todo cuando veo una buena película."
+        },
+        {
+          "q": "Si tuvieras que compartir habitación con alguien muy distinto a ti, ¿qué regla pondrías primero?",
+          "model": "Pondría una regla de silencio después de medianoche, aunque yo sería el primero en romperla."
+        }
+      ],
+      "gaps": "Aunque si me hubieran cantado el [cumpleaños feliz] una vez [más], me habría [abierto] los [puntos].",
+      "glossary": [
+        {
+          "word": "sobrevivió",
+          "meaning": "siguió vivo después de algo difícil"
+        },
+        {
+          "word": "puntos",
+          "meaning": "hilos con los que se cierra una herida o una operación"
+        },
+        {
+          "word": "de gira",
+          "meaning": "viajando de un lugar a otro para actuar"
+        },
+        {
+          "word": "prudente",
+          "meaning": "que evita riesgos"
+        }
+      ]
+    },
+    {
+      "id": "uci",
+      "title": "Conversación en voz baja junto a la cama del padre de Paloma",
+      "place": "Unidad de Cuidados Intensivos",
+      "context": "De noche, en la UCI, Paloma habla con el doctor Carlos Zelaya sobre su padre y sobre por qué él eligió este trabajo.",
+      "speakers": [
+        {
+          "name": "Paloma",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Carlos",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Doctor, ¿le puedo hacer una pregunta? ¿Por qué alguien elige trabajar aquí? Con todo esto…"
+        },
+        {
+          "s": 1,
+          "text": "Mire, cuando yo tenía catorce años, mi madre estuvo en una unidad como esta. Y había un médico que, cada noche, me explicaba los números de la pantalla como si yo fuera un adulto. No sé si la salvó él, pero a mí me salvó del miedo."
+        },
+        {
+          "s": 0,
+          "text": "¿Y ella…?"
+        },
+        {
+          "s": 1,
+          "text": "Vivió veinte años más. Y se quejó de mi corte de pelo durante los veinte."
+        },
+        {
+          "s": 0,
+          "text": "Ja… Mi padre también se queja de todo. Por eso le leo los resultados de fútbol del equipo que odia. A ver si se despierta para protestar."
+        },
+        {
+          "s": 1,
+          "text": "No es mala estrategia. ¿Cómo era él antes de todo esto?"
+        },
+        {
+          "s": 0,
+          "text": "Cabezota. Gracioso. Me enseñó a conducir gritando, y yo nunca le dije que aprobé el examen gracias a él. Ojalá pudiera decírselo ahora y que me oyera."
+        },
+        {
+          "s": 1,
+          "text": "No le prometo nada, Paloma. Pero si yo fuera usted, se lo diría igual. Esta noche. Por si acaso, que hablarle no le hace ningún daño."
+        },
+        {
+          "s": 0,
+          "text": "Entonces me quedo un rato más. Y después le cuento que su equipo perdió."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Sobre qué hablan Paloma y el doctor?",
+          "options": [
+            "Sobre por qué él trabaja en la UCI y sobre el padre de ella",
+            "Sobre el traslado del padre a otro hospital",
+            "Sobre los horarios de visita"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué hacía el médico que conoció Zelaya de adolescente?",
+          "options": [
+            "Le regalaba caramelos",
+            "Le explicaba los números de la pantalla",
+            "Le prohibía entrar"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Paloma le lee a su padre los resultados del equipo que odia?",
+          "options": [
+            "Porque es el único periódico que hay",
+            "Porque el médico se lo recomendó",
+            "Porque espera que la rabia lo haga reaccionar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere decir el doctor cuando dice «no le prometo nada»?",
+          "options": [
+            "Que no sabe si el padre la oirá, pero merece la pena hablarle",
+            "Que el padre está a punto de despertarse",
+            "Que ella debe irse a casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Hay alguna persona que te ayudó en un momento difícil y que nunca olvidaste?",
+          "model": "Una profesora que, cuando murió mi abuelo, me dejó entregar los trabajos más tarde sin hacer preguntas."
+        },
+        {
+          "q": "¿Hay algo que te habría gustado decirle a alguien y no le dijiste a tiempo?",
+          "model": "Me habría gustado darle las gracias a un amigo que se mudó lejos. Ahora le escribo de vez en cuando."
+        },
+        {
+          "q": "¿Por qué crees que algunas personas eligen trabajos tan duros emocionalmente?",
+          "model": "Creo que muchas veces es por algo que vivieron de jóvenes y que quieren devolver de alguna manera."
+        }
+      ],
+      "gaps": "Pero si yo [fuera] usted, se lo [diría] igual. Esta [noche]. Por si acaso, que hablarle no le hace ningún [daño].",
+      "glossary": [
+        {
+          "word": "me salvó del miedo",
+          "meaning": "hizo que dejara de tener tanto miedo"
+        },
+        {
+          "word": "cabezota",
+          "meaning": "persona que no cambia de opinión fácilmente"
+        },
+        {
+          "word": "estrategia",
+          "meaning": "plan para conseguir algo"
+        },
+        {
+          "word": "por si acaso",
+          "meaning": "como precaución, por si sirve de algo"
+        }
+      ]
+    },
+    {
+      "id": "morgue",
+      "title": "Reglas de la casa: boleros sí, sustos no",
+      "place": "Morgue",
+      "context": "Don Marcelo le explica a Sofía, la practicante nueva, las «reglas de la casa» de la morgue.",
+      "speakers": [
+        {
+          "name": "Marcelo",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Sofía",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Pasa, pasa, Sofía, que aquí nadie muerde. Literalmente. Regla número uno: se saluda al entrar. Ellos no contestan, pero es cuestión de educación."
+        },
+        {
+          "s": 1,
+          "text": "Buenos… buenos días a todos."
+        },
+        {
+          "s": 0,
+          "text": "Muy bien. Regla número dos: la radio no se toca. Los boleros los calman. Bueno, me calman a mí, pero ellos no se han quejado nunca."
+        },
+        {
+          "s": 1,
+          "text": "Don Marcelo, ¿y no le da miedo estar aquí solo?"
+        },
+        {
+          "s": 0,
+          "text": "Miedo me dan los de arriba, que gritan y empujan. Aquí abajo son todos muy tranquilos. Regla tres: las etiquetas se revisan dos veces. Hoy, sin ir más lejos, teníamos aquí la etiqueta de un señor que está en el segundo piso viendo la tele."
+        },
+        {
+          "s": 1,
+          "text": "¿Vivo?"
+        },
+        {
+          "s": 0,
+          "text": "Vivísimo. Y pidió gelatina de fresa. Si no lo hubiéramos revisado, le habríamos arruinado la tarde."
+        },
+        {
+          "s": 1,
+          "text": "Ay, Dios mío… ¿Y la regla cuatro?"
+        },
+        {
+          "s": 0,
+          "text": "La regla cuatro es que aquí se almuerza tranquilo. ¿Quieres un poco de arroz? Mi mujer siempre me pone de más, por si traigo visita."
+        },
+        {
+          "s": 1,
+          "text": "Bueno… Si no le importa, me siento aquí. Lejos de la nevera grande."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le enseña Marcelo a Sofía?",
+          "options": [
+            "Cómo hacer una autopsia",
+            "Cómo pedir un traslado",
+            "Las normas de convivencia de la morgue"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Según Marcelo, ¿por qué no se toca la radio?",
+          "options": [
+            "Porque los boleros lo calman a él",
+            "Porque está rota",
+            "Porque es del director"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué error se descubrió hoy con una etiqueta?",
+          "options": [
+            "Que estaba en blanco",
+            "Que pertenecía a un paciente vivo del segundo piso",
+            "Que tenía el nombre de Sofía"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cómo se siente Sofía al final?",
+          "options": [
+            "Completamente tranquila y con hambre",
+            "Enfadada con Marcelo",
+            "Algo más cómoda, aunque todavía nerviosa"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajo poco común te despierta curiosidad? ¿Lo harías tú?",
+          "model": "Me da curiosidad el trabajo de los catadores de comida para animales, aunque no sé si lo haría."
+        },
+        {
+          "q": "¿Cómo se habla de la muerte en tu familia o en tu cultura: con humor, con silencio o con tradiciones?",
+          "model": "En mi familia se habla con bastante humor. En los funerales siempre alguien cuenta una anécdota divertida."
+        },
+        {
+          "q": "Si empezaras un trabajo nuevo, ¿qué «regla de la casa» te gustaría que te explicaran el primer día?",
+          "model": "Me gustaría saber quién se enfada si le quitas su taza, porque eso evita muchos problemas."
+        }
+      ],
+      "gaps": "Si no lo [hubiéramos] revisado, le [habríamos] arruinado la [tarde]. Ay, Dios mío… ¿Y la regla [cuatro]?",
+      "glossary": [
+        {
+          "word": "es cuestión de educación",
+          "meaning": "se hace por cortesía, por buenos modales"
+        },
+        {
+          "word": "sin ir más lejos",
+          "meaning": "por ejemplo, en algo muy cercano"
+        },
+        {
+          "word": "etiquetas",
+          "meaning": "pequeños papeles con el nombre o los datos de algo o alguien"
+        },
+        {
+          "word": "de más",
+          "meaning": "más cantidad de la necesaria"
+        }
+      ]
+    },
+    {
+      "id": "limpieza",
+      "title": "El ascensor tres y otros secretos del subsuelo",
+      "place": "Pasillos de servicio",
+      "context": "Mientras friega el pasillo, Doña Lorena le da a Sofía un «mapa de secretos» del hospital.",
+      "speakers": [
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        },
+        {
+          "name": "Sofía",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Disculpe, señora, ¿el archivo? Llevo media hora dando vueltas y todos los pasillos son iguales."
+        },
+        {
+          "s": 0,
+          "text": "Ay, mija, eso nos pasó a todas. Mira, apunta, que te voy a dar el mapa de verdad, no el de la pared. Primero: el ascensor tres no viene. Nunca. Hay gente que lo espera desde hace años."
+        },
+        {
+          "s": 1,
+          "text": "¿Y por qué no lo arreglan?"
+        },
+        {
+          "s": 0,
+          "text": "Porque el que tiene que firmar la reparación está esperando el ascensor tres. Segundo: si buscas al doctor Funes, está debajo de una manta en el sofá del primer piso. No lo despiertes si no hay sangre."
+        },
+        {
+          "s": 1,
+          "text": "Ya veo… ¿Y el archivo?"
+        },
+        {
+          "s": 0,
+          "text": "Al fondo, a la izquierda, después de la puerta que dice «no pasar». Esa no se cumple. Ah, y en la escalera del tercero siempre hay alguien fumando con el suero. No digas nada, que ya me encargo yo."
+        },
+        {
+          "s": 1,
+          "text": "¿Cómo sabe todo eso, doña Lorena?"
+        },
+        {
+          "s": 0,
+          "text": "Porque nadie mira a la que limpia. Si me miraran, sabrían que lo veo todo. Y es mejor así, créeme."
+        },
+        {
+          "s": 1,
+          "text": "Entonces, si alguna vez me pierdo otra vez…"
+        },
+        {
+          "s": 0,
+          "text": "Sigue el olor a lejía. Siempre te trae hasta mí."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué le ofrece Lorena a Sofía?",
+          "options": [
+            "Un mapa oficial del hospital",
+            "Un recorrido con los secretos reales del hospital",
+            "Un trabajo en limpieza"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué no arreglan el ascensor tres, según Lorena?",
+          "options": [
+            "Porque el responsable de firmar está esperándolo",
+            "Porque no hay dinero",
+            "Porque nadie lo usa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dice Lorena sobre la puerta que dice «no pasar»?",
+          "options": [
+            "Que da a la morgue",
+            "Que está cerrada con llave",
+            "Que nadie respeta ese cartel"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué sabe Lorena tantas cosas?",
+          "options": [
+            "Porque trabaja en el hospital desde niña",
+            "Porque la gente no se fija en ella y habla delante de ella",
+            "Porque lee los informes de los médicos"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajos crees que son invisibles pero imprescindibles en tu ciudad o en tu trabajo?",
+          "model": "Creo que los de las personas que limpian las calles de noche. Si un día no vinieran, nos daríamos cuenta enseguida."
+        },
+        {
+          "q": "¿Te has perdido alguna vez en un edificio enorme? ¿Cómo encontraste la salida?",
+          "model": "Una vez me desorienté en un aeropuerto y terminé en una zona de carga. Un señor muy amable me acompañó."
+        },
+        {
+          "q": "Si pudieras ser invisible un día en tu trabajo o en tu casa, ¿qué te gustaría descubrir?",
+          "model": "Me gustaría saber qué dicen mis compañeros en las reuniones a las que no voy."
+        }
+      ],
+      "gaps": "Porque nadie mira a la que [limpia]. Si me [miraran], [sabrían] que lo veo [todo].",
+      "glossary": [
+        {
+          "word": "mija",
+          "meaning": "forma cariñosa de decir «mi hija» a una persona joven"
+        },
+        {
+          "word": "apunta",
+          "meaning": "escribe para no olvidar"
+        },
+        {
+          "word": "me encargo",
+          "meaning": "me ocupo de algo"
+        },
+        {
+          "word": "lejía",
+          "meaning": "producto de limpieza muy fuerte que desinfecta"
+        }
+      ]
+    }
+  ]
+}

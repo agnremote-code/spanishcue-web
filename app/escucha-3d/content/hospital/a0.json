@@ -1,0 +1,791 @@
+{
+  "game": "hospital",
+  "level": "A0",
+  "items": [
+    {
+      "id": "recepcion",
+      "title": "Norma, Susana y el primo del médico",
+      "place": "La recepción, en la hora de comer",
+      "context": "Norma come en la cocina del hospital. Habla por teléfono con su hermana Susana.",
+      "contextEn": "Norma is eating in the hospital kitchen. She is talking on the phone with her sister Susana.",
+      "speakers": [
+        { "name": "Norma", "country": "Argentina", "voice": "es-AR-ElenaNeural" },
+        { "name": "Susana", "country": "Uruguay", "voice": "es-UY-ValentinaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "¡Hola, Susana! Como un sándwich.", "en": "Hi, Susana! I'm eating a sandwich." },
+        { "s": 1, "text": "¿Y el trabajo? ¿Mucha gente?", "en": "And work? Lots of people?" },
+        { "s": 0, "text": "¡Ay, sí! Un señor dice: «Soy el primo del médico».", "en": "Oh, yes! A man says: \"I'm the doctor's cousin.\"" },
+        { "s": 1, "text": "¿Y es el primo?", "en": "And is he the cousin?" },
+        { "s": 0, "text": "No. Y una señora dice: «Hoy es mi cumpleaños».", "en": "No. And a woman says: \"Today is my birthday.\"" },
+        { "s": 1, "text": "¡Ja! ¿Y tiene número?", "en": "Ha! And does she have a number?" },
+        { "s": 0, "text": "No. No hay máquina, no hay papel… y no tengo sietes.", "en": "No. There is no machine, there is no paper… and I have no sevens." }
+      ],
+      "choice": [
+        { "q": "¿Con quién habla Norma?", "qEn": "Who is Norma talking to?", "options": ["Con su hermana", "Con un médico", "Con el director"], "answer": 0 },
+        { "q": "¿Qué come Norma?", "qEn": "What is Norma eating?", "options": ["Una sopa", "Un sándwich", "Una fruta"], "answer": 1 },
+        { "q": "¿Qué dice el señor?", "qEn": "What does the man say?", "options": ["Que tiene número", "Que es su cumpleaños", "Que es el primo del médico"], "answer": 2 },
+        { "q": "¿Qué número no tiene Norma?", "qEn": "Which number does Norma not have?", "options": ["El siete", "El tres", "El uno"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Tienes primos?", "qEn": "Do you have cousins?", "model": "Sí, tengo cinco primos." },
+        { "q": "¿Esperas en las filas con paciencia?", "qEn": "Do you wait in lines patiently?", "model": "No, no tengo paciencia." },
+        { "q": "¿Qué comes en el trabajo?", "qEn": "What do you eat at work?", "model": "Como un sándwich y una fruta." }
+      ],
+      "gaps": "¡Ja! ¿Y tiene [número]? No. No hay [máquina], no hay [papel]… y no tengo [sietes].",
+      "glossary": [
+        { "word": "primo", "meaning": "el hijo de tu tío", "en": "cousin" },
+        { "word": "cumpleaños", "meaning": "el día de tu fiesta de años", "en": "birthday" },
+        { "word": "máquina", "meaning": "aparato que hace un trabajo", "en": "machine" },
+        { "word": "sietes", "meaning": "el número 7, muchas veces", "en": "sevens" }
+      ]
+    },
+    {
+      "id": "espera",
+      "title": "Las tres reglas de Anselmo y la silla verde",
+      "place": "La sala de espera",
+      "context": "Andrés llega a la sala de espera. Anselmo, un señor muy simpático, explica las reglas.",
+      "contextEn": "Andrés arrives at the waiting room. Anselmo, a very friendly man, explains the rules.",
+      "speakers": [
+        { "name": "Anselmo", "country": "Uruguay", "voice": "es-UY-MateoNeural" },
+        { "name": "Andrés", "country": "Guatemala", "voice": "es-GT-AndresNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, soy Anselmo. Hace ocho horas que estoy aquí.", "en": "Hi, I'm Anselmo. I've been here for eight hours." },
+        { "s": 1, "text": "¡Ocho horas! Yo soy Andrés.", "en": "Eight hours! I'm Andrés." },
+        { "s": 0, "text": "Bueno, Andrés, hay tres reglas. Uno: la silla verde es mía.", "en": "Well, Andrés, there are three rules. One: the green chair is mine." },
+        { "s": 0, "text": "Dos: el café es para todos. Tres: aquí hablamos mucho.", "en": "Two: the coffee is for everyone. Three: here we talk a lot." },
+        { "s": 1, "text": "¿Y el señor de la toalla?", "en": "And the man with the towel?" },
+        { "s": 0, "text": "Es mi amigo. Y es el próximo, seguro.", "en": "He's my friend. And he's next, for sure." }
+      ],
+      "choice": [
+        { "q": "¿Qué explica Anselmo?", "qEn": "What does Anselmo explain?", "options": ["Las reglas de la sala de espera", "El menú de la cafetería", "El camino al baño"], "answer": 0 },
+        { "q": "¿Cuántas horas espera Anselmo?", "qEn": "How many hours has Anselmo been waiting?", "options": ["Tres", "Ocho", "Doce"], "answer": 1 },
+        { "q": "¿De quién es la silla verde?", "qEn": "Whose is the green chair?", "options": ["De Andrés", "Del señor de la toalla", "De Anselmo"], "answer": 2 },
+        { "q": "¿Para quién es el café?", "qEn": "Who is the coffee for?", "options": ["Para todos", "Para Anselmo", "Para los médicos"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Hablas con personas que no conoces?", "qEn": "Do you talk to people you don't know?", "model": "Sí, hablo mucho con todos." },
+        { "q": "¿Tienes una silla favorita en casa?", "qEn": "Do you have a favorite chair at home?", "model": "Sí, mi silla favorita es azul." },
+        { "q": "¿Qué haces cuando esperas?", "qEn": "What do you do when you wait?", "model": "Miro el teléfono o leo un libro." }
+      ],
+      "gaps": "Uno: la silla [verde] es mía. Dos: el [café] es para [todos]. Tres: aquí hablamos [mucho].",
+      "glossary": [
+        { "word": "reglas", "meaning": "lo que todos tienen que hacer", "en": "rules" },
+        { "word": "silla", "meaning": "mueble para sentarse", "en": "chair" },
+        { "word": "toalla", "meaning": "tela para secarse después de la ducha", "en": "towel" },
+        { "word": "próximo", "meaning": "el que va después", "en": "next" }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Pilar, la astilla y el camarero elegante",
+      "place": "La sala de espera, zona de sillas buenas",
+      "context": "Doña Pilar tiene una astilla en el dedo. Llama por teléfono a su hija Ximena.",
+      "contextEn": "Doña Pilar has a splinter in her finger. She calls her daughter Ximena on the phone.",
+      "speakers": [
+        { "name": "Pilar", "country": "España", "voice": "es-ES-ElviraNeural" },
+        { "name": "Ximena", "country": "España", "voice": "es-ES-XimenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Ximena, hija, estoy en el hospital. Tengo una astilla en el dedo.", "en": "Ximena, darling, I'm at the hospital. I have a splinter in my finger." },
+        { "s": 1, "text": "¿Una astilla? ¡Mamá!", "en": "A splinter? Mom!" },
+        { "s": 0, "text": "Y no hay silla VIP. ¡Soy amiga del director!", "en": "And there's no VIP chair. I'm a friend of the director!" },
+        { "s": 1, "text": "Mamá… tu amigo no es el director. Es el camarero.", "en": "Mom… your friend isn't the director. He's the waiter." },
+        { "s": 0, "text": "¿El camarero? Pero es muy elegante…", "en": "The waiter? But he's very elegant…" },
+        { "s": 1, "text": "Sí. Y te trae el postre.", "en": "Yes. And he brings you dessert." }
+      ],
+      "choice": [
+        { "q": "¿Con quién habla Pilar?", "qEn": "Who is Pilar talking to?", "options": ["Con su hija", "Con el director", "Con un médico"], "answer": 0 },
+        { "q": "¿Qué tiene Pilar en el dedo?", "qEn": "What does Pilar have in her finger?", "options": ["Un anillo", "Una astilla", "Un anzuelo"], "answer": 1 },
+        { "q": "¿Qué no hay en la sala?", "qEn": "What is there not in the room?", "options": ["Café", "Médicos", "Silla VIP"], "answer": 2 },
+        { "q": "¿Quién es el amigo de Pilar?", "qEn": "Who is Pilar's friend?", "options": ["El director", "El camarero", "Un enfermero"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes amigos importantes?", "qEn": "Do you have important friends?", "model": "No, mis amigos son normales." },
+        { "q": "¿Te gusta la ropa elegante?", "qEn": "Do you like elegant clothes?", "model": "Sí, me gusta mucho." },
+        { "q": "¿Cuál es tu postre favorito?", "qEn": "What is your favorite dessert?", "model": "Mi postre favorito es el helado." }
+      ],
+      "gaps": "Ximena, [hija], estoy en el [hospital]. Tengo una [astilla] en el [dedo].",
+      "glossary": [
+        { "word": "astilla", "meaning": "trozo muy pequeño de madera", "en": "splinter" },
+        { "word": "dedo", "meaning": "parte de la mano; hay cinco", "en": "finger" },
+        { "word": "camarero", "meaning": "persona que sirve la comida en un restaurante", "en": "waiter" },
+        { "word": "postre", "meaning": "comida dulce al final", "en": "dessert" }
+      ]
+    },
+    {
+      "id": "triage",
+      "title": "El gato, la guitarra y el hipo de Gladys",
+      "place": "Triaje de urgencias",
+      "context": "Gladys tiene hipo y cree que se muere. Wilson, el enfermero, escribe su testamento.",
+      "contextEn": "Gladys has hiccups and thinks she is dying. Wilson, the nurse, writes down her will.",
+      "speakers": [
+        { "name": "Gladys", "country": "México", "voice": "es-MX-DaliaNeural" },
+        { "name": "Wilson", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Wilson, escribe, por favor. Es mi testamento.", "en": "Wilson, write, please. It's my will." },
+        { "s": 1, "text": "Gladys, tienes hipo. Nada más.", "en": "Gladys, you have hiccups. Nothing else." },
+        { "s": 0, "text": "Mi gato es para mi hermana. Mis telenovelas son para mi mamá. ¡Hip!", "en": "My cat is for my sister. My soap operas are for my mom. Hic!" },
+        { "s": 1, "text": "¿Y la guitarra?", "en": "And the guitar?" },
+        { "s": 0, "text": "La guitarra de mi ex… ¡para la basura!", "en": "My ex's guitar… in the trash!" },
+        { "s": 1, "text": "¿La basura? Mejor para mí.", "en": "The trash? Better for me." },
+        { "s": 0, "text": "Bueno. ¿Y mi pulsera roja?", "en": "Okay. And my red bracelet?" },
+        { "s": 1, "text": "No. Verde.", "en": "No. Green." }
+      ],
+      "choice": [
+        { "q": "¿Qué tiene Gladys?", "qEn": "What does Gladys have?", "options": ["Hipo", "Fiebre", "Una herida"], "answer": 0 },
+        { "q": "¿Para quién es el gato?", "qEn": "Who is the cat for?", "options": ["Para Wilson", "Para su hermana", "Para su mamá"], "answer": 1 },
+        { "q": "¿Qué quiere Wilson?", "qEn": "What does Wilson want?", "options": ["El gato", "Las telenovelas", "La guitarra"], "answer": 2 },
+        { "q": "¿De qué color es la pulsera de Gladys al final?", "qEn": "What color is Gladys's bracelet in the end?", "options": ["Roja", "Azul", "Verde"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Tienes un gato o un perro?", "qEn": "Do you have a cat or a dog?", "model": "Tengo un perro pequeño." },
+        { "q": "¿Te gustan las telenovelas?", "qEn": "Do you like soap operas?", "model": "No, me gustan las películas." },
+        { "q": "¿Tocas la guitarra?", "qEn": "Do you play the guitar?", "model": "Sí, toco un poco." }
+      ],
+      "gaps": "Mi [gato] es para mi [hermana]. Mis [telenovelas] son para mi [mamá].",
+      "glossary": [
+        { "word": "testamento", "meaning": "papel: qué cosas son para quién después de morir", "en": "will" },
+        { "word": "hipo", "meaning": "ruido pequeño y repetido en la garganta: ¡hip!", "en": "hiccups" },
+        { "word": "telenovelas", "meaning": "series de amor en la televisión", "en": "soap operas" },
+        { "word": "pulsera", "meaning": "cinta en la mano, en el brazo", "en": "bracelet" }
+      ]
+    },
+    {
+      "id": "guardia",
+      "title": "Treinta horas y nueve cafés de Íñigo",
+      "place": "El pasillo de la guardia",
+      "context": "El doctor Íñigo está en el hospital desde hace mucho. Catalina habla con él en el pasillo.",
+      "contextEn": "Doctor Íñigo has been at the hospital for a long time. Catalina talks to him in the corridor.",
+      "speakers": [
+        { "name": "Catalina", "country": "Chile", "voice": "es-CL-CatalinaNeural" },
+        { "name": "Íñigo", "country": "España", "voice": "es-ES-AlvaroNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Íñigo, ¿estás bien? Tienes los ojos rojos.", "en": "Íñigo, are you okay? Your eyes are red." },
+        { "s": 1, "text": "Estoy perfecto. Treinta horas aquí. Nueve cafés.", "en": "I'm perfect. Thirty hours here. Nine coffees." },
+        { "s": 0, "text": "¿Nueve?", "en": "Nine?" },
+        { "s": 1, "text": "Sí. Y llamo Michi a un paciente.", "en": "Yes. And I call a patient Michi." },
+        { "s": 0, "text": "Íñigo, Michi es tu gato.", "en": "Íñigo, Michi is your cat." },
+        { "s": 1, "text": "Ah… ¿sí? Bueno, el paciente es muy simpático.", "en": "Oh… really? Well, the patient is very nice." },
+        { "s": 0, "text": "A casa. Ahora.", "en": "Home. Now." },
+        { "s": 1, "text": "Un café más y me voy.", "en": "One more coffee and I'm leaving." }
+      ],
+      "choice": [
+        { "q": "¿Cómo está Íñigo?", "qEn": "How is Íñigo?", "options": ["Muy cansado", "Muy feliz", "Con gripe"], "answer": 0 },
+        { "q": "¿Cuántas horas está en el hospital?", "qEn": "How many hours has he been at the hospital?", "options": ["Trece", "Veinte", "Treinta"], "answer": 2 },
+        { "q": "¿Quién es Michi?", "qEn": "Who is Michi?", "options": ["Un paciente", "El gato de Íñigo", "Un médico"], "answer": 1 },
+        { "q": "¿Qué quiere Íñigo al final?", "qEn": "What does Íñigo want at the end?", "options": ["Dormir", "Un café más", "Comer"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Cuántos cafés tomas al día?", "qEn": "How many coffees do you drink a day?", "model": "Tomo dos cafés al día." },
+        { "q": "¿Trabajas muchas horas?", "qEn": "Do you work many hours?", "model": "Sí, trabajo diez horas." },
+        { "q": "¿Tu animal tiene un nombre gracioso?", "qEn": "Does your pet have a funny name?", "model": "Sí, mi perro se llama Pizza." }
+      ],
+      "gaps": "Estoy [perfecto]. [Treinta] horas aquí. [Nueve] [cafés].",
+      "glossary": [
+        { "word": "ojos", "meaning": "parte de la cara para ver", "en": "eyes" },
+        { "word": "rojos", "meaning": "de color rojo", "en": "red" },
+        { "word": "paciente", "meaning": "persona enferma en el hospital", "en": "patient" },
+        { "word": "me voy", "meaning": "salgo de este lugar", "en": "I'm leaving" }
+      ]
+    },
+    {
+      "id": "ambulancias",
+      "title": "La salsa de Manuel y el señor del loro",
+      "place": "La ambulancia, entre dos llamadas",
+      "context": "Yamilé y Manuel descansan en la ambulancia. Hablan de las llamadas raras del día.",
+      "contextEn": "Yamilé and Manuel are resting in the ambulance. They talk about the day's strange calls.",
+      "speakers": [
+        { "name": "Yamilé", "country": "Cuba", "voice": "es-CU-BelkysNeural" },
+        { "name": "Manuel", "country": "Cuba", "voice": "es-CU-ManuelNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Manuel, apaga la radio, por favor.", "en": "Manuel, turn off the radio, please." },
+        { "s": 1, "text": "¡No! Es salsa. Es mi música.", "en": "No! It's salsa. It's my music." },
+        { "s": 0, "text": "Hoy hay tres llamadas raras. Uno: un señor con un loro en la cabeza.", "en": "Today there are three strange calls. One: a man with a parrot on his head." },
+        { "s": 1, "text": "Dos: una señora con la mano en un frasco.", "en": "Two: a woman with her hand in a jar." },
+        { "s": 0, "text": "Tres: Kevin y su teléfono.", "en": "Three: Kevin and his phone." },
+        { "s": 1, "text": "¡Ay, Kevin! Mucho teléfono y poca pierna.", "en": "Oh, Kevin! Lots of phone and not much leg." }
+      ],
+      "choice": [
+        { "q": "¿Qué quiere Yamilé al principio?", "qEn": "What does Yamilé want at the beginning?", "options": ["Apagar la radio", "Comer algo", "Llamar a Kevin"], "answer": 0 },
+        { "q": "¿Qué música escucha Manuel?", "qEn": "What music does Manuel listen to?", "options": ["Ópera", "Salsa", "Reggaetón"], "answer": 1 },
+        { "q": "¿Dónde está el loro?", "qEn": "Where is the parrot?", "options": ["En la ambulancia", "En la mano de una señora", "En la cabeza de un señor"], "answer": 2 },
+        { "q": "¿Dónde tiene la mano la señora?", "qEn": "Where does the woman have her hand?", "options": ["En un frasco", "En una puerta", "En un teléfono"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Escuchas música en el coche?", "qEn": "Do you listen to music in the car?", "model": "Sí, escucho rock en el coche." },
+        { "q": "¿Te gusta la salsa?", "qEn": "Do you like salsa?", "model": "Sí, pero bailo muy mal." },
+        { "q": "¿Usas mucho el teléfono?", "qEn": "Do you use your phone a lot?", "model": "Sí, uso el teléfono todo el día." }
+      ],
+      "gaps": "Manuel, [apaga] la [radio], por favor. ¡No! Es [salsa]. Es mi [música].",
+      "glossary": [
+        { "word": "llamadas", "meaning": "cuando alguien habla por teléfono", "en": "calls" },
+        { "word": "loro", "meaning": "pájaro de colores que habla", "en": "parrot" },
+        { "word": "frasco", "meaning": "recipiente de vidrio, por ejemplo para mermelada", "en": "jar" },
+        { "word": "pierna", "meaning": "parte del cuerpo para caminar", "en": "leg" }
+      ]
+    },
+    {
+      "id": "trauma",
+      "title": "Ezequiel, el brazo roto y el secreto del gato",
+      "place": "Sala de traumatología",
+      "context": "Ezequiel tiene el brazo roto. Paola, su vecina, está con él. Paola tiene un secreto.",
+      "contextEn": "Ezequiel has a broken arm. Paola, his neighbor, is with him. Paola has a secret.",
+      "speakers": [
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Ezequiel", "country": "Argentina", "voice": "es-AR-TomasNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Ezequiel, ¿te duele el brazo?", "en": "Ezequiel, does your arm hurt?" },
+        { "s": 1, "text": "Un poco. Pero tu gato está bien.", "en": "A little. But your cat is fine." },
+        { "s": 0, "text": "Ezequiel, tengo un secreto.", "en": "Ezequiel, I have a secret." },
+        { "s": 0, "text": "El gato no sube solo. Yo lo subo. Así tú vienes a mi casa.", "en": "The cat doesn't climb up alone. I put him up there. That way you come to my house." },
+        { "s": 1, "text": "¿En serio? ¿Para verme?", "en": "Really? To see me?" },
+        { "s": 0, "text": "Sí. Tres veces este mes.", "en": "Yes. Three times this month." },
+        { "s": 1, "text": "¡Ay! Mi brazo roto… y estoy feliz.", "en": "Oh! My broken arm… and I'm happy." }
+      ],
+      "choice": [
+        { "q": "¿Qué le duele a Ezequiel?", "qEn": "What hurts for Ezequiel?", "options": ["El brazo", "La pierna", "La cabeza"], "answer": 0 },
+        { "q": "¿Quién sube el gato al árbol?", "qEn": "Who puts the cat up the tree?", "options": ["Ezequiel", "Paola", "Catalina"], "answer": 1 },
+        { "q": "¿Por qué lo hace?", "qEn": "Why does she do it?", "options": ["Porque el gato está enfermo", "Porque quiere ver a Ezequiel", "Porque no tiene casa"], "answer": 1 },
+        { "q": "¿Cuántas veces este mes?", "qEn": "How many times this month?", "options": ["Dos", "Cinco", "Tres"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Conoces a tus vecinos?", "qEn": "Do you know your neighbors?", "model": "Sí, mi vecina es muy simpática." },
+        { "q": "¿Tienes un secreto pequeño?", "qEn": "Do you have a small secret?", "model": "Sí, como chocolate en la cama." },
+        { "q": "¿Qué haces por amor?", "qEn": "What do you do for love?", "model": "Cocino para mi pareja." }
+      ],
+      "gaps": "El gato no sube [solo]. Yo lo [subo]. Así tú [vienes] a mi [casa].",
+      "glossary": [
+        { "word": "brazo", "meaning": "parte del cuerpo entre el hombro y la mano", "en": "arm" },
+        { "word": "secreto", "meaning": "algo que otras personas no saben", "en": "secret" },
+        { "word": "sube", "meaning": "va arriba", "en": "climbs up" },
+        { "word": "roto", "meaning": "que no está bien, en dos partes", "en": "broken" }
+      ]
+    },
+    {
+      "id": "observacion",
+      "title": "Benigno y el consejo de la abuela: habla fuerte",
+      "place": "Observación, más tarde",
+      "context": "Don Benigno está mejor. Su nieta Camila está con él. Hablan de la abuela.",
+      "contextEn": "Don Benigno is better. His granddaughter Camila is with him. They talk about grandma.",
+      "speakers": [
+        { "name": "Camila", "country": "Perú", "voice": "es-PE-CamilaNeural" },
+        { "name": "Benigno", "country": "Perú", "voice": "es-PE-AlexNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Abuelo, ¿cómo estás?", "en": "Grandpa, how are you?" },
+        { "s": 1, "text": "Bien, gracias. Perdón por el susto, Camila.", "en": "Fine, thank you. Sorry for the scare, Camila." },
+        { "s": 1, "text": "¿Sabes? Pienso en tu abuela. Ella siempre dice: «Benigno, habla más fuerte».", "en": "You know? I think about your grandma. She always says: \"Benigno, speak louder.\"" },
+        { "s": 0, "text": "¡Es verdad! Tú hablas muy bajito.", "en": "That's true! You speak very softly." },
+        { "s": 1, "text": "Sí. Desde hoy hablo fuerte. ¡Hola, enfermera! ¡Muchas gracias!", "en": "Yes. From today I speak loudly. Hello, nurse! Thank you very much!" },
+        { "s": 0, "text": "¡Abuelo! ¡Ahora es mucho!", "en": "Grandpa! Now it's too much!" }
+      ],
+      "choice": [
+        { "q": "¿Cómo está Benigno ahora?", "qEn": "How is Benigno now?", "options": ["Bien", "Muy mal", "Dormido"], "answer": 0 },
+        { "q": "¿En quién piensa Benigno?", "qEn": "Who does Benigno think about?", "options": ["En su hija", "En la abuela de Camila", "En el médico"], "answer": 1 },
+        { "q": "¿Qué dice siempre la abuela?", "qEn": "What does grandma always say?", "options": ["«Come más»", "«Duerme más»", "«Habla más fuerte»"], "answer": 2 },
+        { "q": "¿Cómo habla Benigno normalmente?", "qEn": "How does Benigno usually speak?", "options": ["Muy fuerte", "Muy bajito", "Muy rápido"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Hablas fuerte o bajito?", "qEn": "Do you speak loudly or softly?", "model": "Hablo muy fuerte." },
+        { "q": "¿Cómo se llama tu abuela?", "qEn": "What is your grandmother's name?", "model": "Mi abuela se llama Rosa." },
+        { "q": "¿Pides perdón mucho?", "qEn": "Do you say sorry a lot?", "model": "Sí, pido perdón todo el tiempo." }
+      ],
+      "gaps": "Pienso en tu [abuela]. Ella [siempre] dice: «Benigno, [habla] más [fuerte]».",
+      "glossary": [
+        { "word": "abuelo", "meaning": "el papá de tu papá o de tu mamá", "en": "grandfather" },
+        { "word": "susto", "meaning": "miedo de un momento", "en": "scare" },
+        { "word": "fuerte", "meaning": "con mucho volumen", "en": "loud" },
+        { "word": "bajito", "meaning": "con poco volumen", "en": "softly" }
+      ]
+    },
+    {
+      "id": "curaciones",
+      "title": "Rufino y el pez de dos metros",
+      "place": "Sala de curaciones",
+      "context": "Rufino tiene un anzuelo en la ceja. Cuenta su historia a Marta, la enfermera.",
+      "contextEn": "Rufino has a fishing hook in his eyebrow. He tells his story to Marta, the nurse.",
+      "speakers": [
+        { "name": "Rufino", "country": "Venezuela", "voice": "es-VE-SebastianNeural" },
+        { "name": "Marta", "country": "Guatemala", "voice": "es-GT-MartaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Marta, es una historia heroica. Hay un pez enorme. De dos metros.", "en": "Marta, it's a heroic story. There's a huge fish. Two meters long." },
+        { "s": 1, "text": "¿Dos metros? ¿Y el anzuelo en tu ceja?", "en": "Two meters? And the hook in your eyebrow?" },
+        { "s": 0, "text": "El pez es muy fuerte. Tira, tira…", "en": "The fish is very strong. It pulls, pulls…" },
+        { "s": 1, "text": "Rufino, tu hijo dice otra cosa.", "en": "Rufino, your son says something else." },
+        { "s": 0, "text": "¿Mi hijo? ¿Qué dice?", "en": "My son? What does he say?" },
+        { "s": 1, "text": "Dice: «Papá es mi primer pez».", "en": "He says: \"Dad is my first fish.\"" }
+      ],
+      "choice": [
+        { "q": "¿Quién cuenta la historia del pez?", "qEn": "Who tells the fish story?", "options": ["Rufino", "Marta", "El hijo"], "answer": 0 },
+        { "q": "¿Cómo es el pez de Rufino?", "qEn": "What is Rufino's fish like?", "options": ["Pequeño", "De dos metros", "Rojo"], "answer": 1 },
+        { "q": "¿Dónde está el anzuelo?", "qEn": "Where is the hook?", "options": ["En la mano", "En la boca", "En la ceja"], "answer": 2 },
+        { "q": "Para el hijo, ¿quién es su primer pez?", "qEn": "For the son, who is his first fish?", "options": ["Su papá", "Marta", "Un pez grande"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Te gusta pescar?", "qEn": "Do you like fishing?", "model": "No, prefiero comer pescado." },
+        { "q": "¿Cuentas historias un poco falsas?", "qEn": "Do you tell slightly false stories?", "model": "Sí, a veces mis historias son más grandes." },
+        { "q": "¿Qué haces con tu familia los domingos?", "qEn": "What do you do with your family on Sundays?", "model": "Comemos juntos en casa." }
+      ],
+      "gaps": "Hay un [pez] [enorme]. De [dos] [metros].",
+      "glossary": [
+        { "word": "pez", "meaning": "animal que vive en el agua", "en": "fish" },
+        { "word": "anzuelo", "meaning": "metal pequeño para pescar", "en": "fishing hook" },
+        { "word": "ceja", "meaning": "pelo arriba del ojo", "en": "eyebrow" },
+        { "word": "tira", "meaning": "lleva algo hacia él con fuerza", "en": "pulls" }
+      ]
+    },
+    {
+      "id": "cafeteria",
+      "title": "Ramona y el postre con dos cucharas",
+      "place": "La cafetería del hospital",
+      "context": "Federico toma un café. Doña Ramona tiene noticias: dos personas del hospital son novios.",
+      "contextEn": "Federico is having a coffee. Doña Ramona has news: two people at the hospital are a couple.",
+      "speakers": [
+        { "name": "Federico", "country": "Nicaragua", "voice": "es-NI-FedericoNeural" },
+        { "name": "Ramona", "country": "República Dominicana", "voice": "es-DO-RamonaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Ramona, ¿hay noticias?", "en": "Ramona, any news?" },
+        { "s": 1, "text": "¡Ay, Federico! Un médico y una médica… son novios.", "en": "Oh, Federico! A doctor and a doctor… they're a couple." },
+        { "s": 0, "text": "¿Quiénes?", "en": "Who?" },
+        { "s": 1, "text": "Pistas: los dos son cirujanos. Él es de Chile. Ella es de Colombia.", "en": "Clues: they're both surgeons. He's from Chile. She's from Colombia." },
+        { "s": 0, "text": "¿El doctor Undurraga y la doctora Ibarra? ¡Pero siempre discuten!", "en": "Doctor Undurraga and Doctor Ibarra? But they always argue!" },
+        { "s": 1, "text": "Sí… y siempre comen juntos. Dos cafés, un postre, dos cucharas.", "en": "Yes… and they always eat together. Two coffees, one dessert, two spoons." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Ramona y Federico?", "qEn": "What are Ramona and Federico talking about?", "options": ["De un romance en el hospital", "Del menú del día", "Del dinero"], "answer": 0 },
+        { "q": "¿Qué trabajo tienen los novios?", "qEn": "What job does the couple have?", "options": ["Enfermeros", "Cirujanos", "Cocineros"], "answer": 1 },
+        { "q": "¿De dónde es él?", "qEn": "Where is he from?", "options": ["De Colombia", "De México", "De Chile"], "answer": 2 },
+        { "q": "¿Qué comen juntos?", "qEn": "What do they eat together?", "options": ["Una sopa", "Un postre", "Pan con queso"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te gustan los chismes?", "qEn": "Do you like gossip?", "model": "Sí, me gustan un poco." },
+        { "q": "¿Con quién comes normalmente?", "qEn": "Who do you usually eat with?", "model": "Como con mi familia." },
+        { "q": "¿Compartes el postre?", "qEn": "Do you share dessert?", "model": "No, ¡mi postre es mío!" }
+      ],
+      "gaps": "Pistas: los [dos] son [cirujanos]. Él es de [Chile]. Ella es de [Colombia].",
+      "glossary": [
+        { "word": "noticias", "meaning": "información nueva", "en": "news" },
+        { "word": "novios", "meaning": "dos personas en una relación de amor", "en": "a couple" },
+        { "word": "pistas", "meaning": "información pequeña para adivinar", "en": "clues" },
+        { "word": "cucharas", "meaning": "cosas para comer sopa o postre", "en": "spoons" }
+      ]
+    },
+    {
+      "id": "facturacion",
+      "title": "Jorge llama y paga quince pesos más",
+      "place": "Facturación, por teléfono",
+      "context": "Unos días después, Jorge llama por teléfono a Gonzalo. No quiere pagar la cuenta.",
+      "contextEn": "A few days later, Jorge calls Gonzalo on the phone. He doesn't want to pay the bill.",
+      "speakers": [
+        { "name": "Gonzalo", "country": "Colombia", "voice": "es-CO-GonzaloNeural" },
+        { "name": "Jorge", "country": "México", "voice": "es-MX-JorgeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenos días, facturación. Soy Gonzalo.", "en": "Good morning, billing. I'm Gonzalo." },
+        { "s": 1, "text": "Hola, Gonzalo. Soy Jorge Treviño. ¡La cuenta es un robo!", "en": "Hi, Gonzalo. I'm Jorge Treviño. The bill is a rip-off!" },
+        { "s": 0, "text": "Tranquilo, Jorge. Hay un cargo nuevo.", "en": "Calm down, Jorge. There's a new charge." },
+        { "s": 1, "text": "¿Otro? ¿Qué es?", "en": "Another one? What is it?" },
+        { "s": 0, "text": "Llamada a facturación: diez pesos por minuto, más cinco pesos por «hola».", "en": "Call to billing: ten pesos per minute, plus five pesos for \"hello\"." },
+        { "s": 1, "text": "¿Por minuto? ¡Ay, no! ¡Adiós!", "en": "Per minute? Oh, no! Goodbye!" },
+        { "s": 0, "text": "Gracias, Jorge. Son quince pesos.", "en": "Thank you, Jorge. That's fifteen pesos." }
+      ],
+      "choice": [
+        { "q": "¿Quién llama por teléfono?", "qEn": "Who is calling?", "options": ["Gonzalo", "Jorge", "Norma"], "answer": 1 },
+        { "q": "¿Qué es la cuenta para Jorge?", "qEn": "What is the bill for Jorge?", "options": ["Un robo", "Barata", "Normal"], "answer": 0 },
+        { "q": "¿Cuánto cuesta un minuto?", "qEn": "How much does one minute cost?", "options": ["Veinte pesos", "Cinco pesos", "Diez pesos"], "answer": 2 },
+        { "q": "¿Cuánto paga Jorge por la llamada?", "qEn": "How much does Jorge pay for the call?", "options": ["Diez pesos", "Quince pesos", "Nada"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Pagas muchas cuentas cada mes?", "qEn": "Do you pay many bills every month?", "model": "Sí, pago la luz, el agua e internet." },
+        { "q": "¿Llamas por teléfono o escribes mensajes?", "qEn": "Do you call or write messages?", "model": "Escribo mensajes. No me gusta llamar." },
+        { "q": "¿Qué cosa es muy cara en tu ciudad?", "qEn": "What is very expensive in your city?", "model": "La casa es muy cara." }
+      ],
+      "gaps": "Llamada a [facturación]: [diez] pesos por [minuto], más [cinco] pesos por «hola».",
+      "glossary": [
+        { "word": "cuenta", "meaning": "papel con el dinero que tienes que pagar", "en": "bill" },
+        { "word": "robo", "meaning": "cuando alguien toma tu dinero mal", "en": "rip-off, robbery" },
+        { "word": "cargo", "meaning": "dinero extra en la cuenta", "en": "charge" },
+        { "word": "pesos", "meaning": "dinero de México y de otros países", "en": "pesos (money)" }
+      ]
+    },
+    {
+      "id": "laboratorio",
+      "title": "El horóscopo cero positivo de Luis",
+      "place": "El laboratorio",
+      "context": "Andrea lee el horóscopo de la sangre de Luis. Luis no cree en el horóscopo.",
+      "contextEn": "Andrea reads Luis's blood-type horoscope. Luis doesn't believe in horoscopes.",
+      "speakers": [
+        { "name": "Andrea", "country": "Ecuador", "voice": "es-EC-AndreaNeural" },
+        { "name": "Luis", "country": "Ecuador", "voice": "es-EC-LuisNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Luis, tu sangre es cero positivo. Tu horóscopo: un tubo se rompe.", "en": "Luis, your blood is O positive. Your horoscope: a tube breaks." },
+        { "s": 1, "text": "Andrea, por favor. Eso no es ciencia.", "en": "Andrea, please. That's not science." },
+        { "s": 0, "text": "Y una persona de tu familia te llama.", "en": "And a person from your family calls you." },
+        { "s": 1, "text": "Hola… sí, mamá.", "en": "Hello… yes, Mom." },
+        { "s": 0, "text": "¿Ves? Y tu número de la suerte es el siete.", "en": "See? And your lucky number is seven." },
+        { "s": 1, "text": "¡Ay! El tubo número siete… está roto.", "en": "Oh! Tube number seven… is broken." }
+      ],
+      "choice": [
+        { "q": "¿Qué lee Andrea?", "qEn": "What does Andrea read?", "options": ["Un libro", "Una carta", "El horóscopo de Luis"], "answer": 2 },
+        { "q": "¿Qué sangre tiene Luis?", "qEn": "What blood type does Luis have?", "options": ["A positivo", "Cero positivo", "B negativo"], "answer": 1 },
+        { "q": "¿Quién llama a Luis?", "qEn": "Who calls Luis?", "options": ["Su mamá", "Su hermano", "Andrea"], "answer": 0 },
+        { "q": "¿Qué tubo está roto?", "qEn": "Which tube is broken?", "options": ["El tres", "El siete", "El uno"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Lees tu horóscopo?", "qEn": "Do you read your horoscope?", "model": "No, no creo en el horóscopo." },
+        { "q": "¿Tienes un número de la suerte?", "qEn": "Do you have a lucky number?", "model": "Sí, mi número es el ocho." },
+        { "q": "¿Tu mamá te llama mucho?", "qEn": "Does your mom call you a lot?", "model": "Sí, me llama todos los días." }
+      ],
+      "gaps": "Luis, tu [sangre] es [cero] [positivo]. Tu [horóscopo]: un tubo se rompe.",
+      "glossary": [
+        { "word": "sangre", "meaning": "líquido rojo del cuerpo", "en": "blood" },
+        { "word": "tubo", "meaning": "recipiente largo y pequeño de vidrio", "en": "tube" },
+        { "word": "ciencia", "meaning": "conocimiento con pruebas", "en": "science" },
+        { "word": "suerte", "meaning": "cosas buenas por casualidad", "en": "luck" }
+      ]
+    },
+    {
+      "id": "radiologia",
+      "title": "Karla, el anillo y las cinco canciones del karaoke",
+      "place": "Sala de espera de radiología",
+      "context": "Karla tiene un anillo en el estómago. Su amiga Yolanda pregunta por qué.",
+      "contextEn": "Karla has a ring in her stomach. Her friend Yolanda asks why.",
+      "speakers": [
+        { "name": "Yolanda", "country": "Nicaragua", "voice": "es-NI-YolandaNeural" },
+        { "name": "Karla", "country": "Honduras", "voice": "es-HN-KarlaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Karla, ¿por qué? ¿Por qué el anillo?", "en": "Karla, why? Why the ring?" },
+        { "s": 1, "text": "Mi novio canta en el karaoke… con otra chica. ¡Cinco canciones!", "en": "My boyfriend sings at karaoke… with another girl. Five songs!" },
+        { "s": 0, "text": "¿Cinco? ¡Ay, no!", "en": "Five? Oh, no!" },
+        { "s": 1, "text": "Sí. Y ahora quiere el anillo. Es de su abuela.", "en": "Yes. And now he wants the ring. It's his grandmother's." },
+        { "s": 0, "text": "¿Y tú qué dices?", "en": "And what do you say?" },
+        { "s": 1, "text": "Digo: «El anillo está en un lugar muy seguro».", "en": "I say: \"The ring is in a very safe place.\"" }
+      ],
+      "choice": [
+        { "q": "¿De qué habla Karla?", "qEn": "What is Karla talking about?", "options": ["De su trabajo", "De su novio", "De su gato"], "answer": 1 },
+        { "q": "¿Dónde canta el novio?", "qEn": "Where does the boyfriend sing?", "options": ["En el karaoke", "En la iglesia", "En la ducha"], "answer": 0 },
+        { "q": "¿Cuántas canciones canta con la chica?", "qEn": "How many songs does he sing with the girl?", "options": ["Dos", "Tres", "Cinco"], "answer": 2 },
+        { "q": "¿De quién es el anillo?", "qEn": "Whose ring is it?", "options": ["De Yolanda", "De la mamá de Karla", "De la abuela del novio"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Cantas en el karaoke?", "qEn": "Do you sing at karaoke?", "model": "Sí, canto mal pero con mucha energía." },
+        { "q": "¿Tienes un anillo especial?", "qEn": "Do you have a special ring?", "model": "Sí, es de mi abuela." },
+        { "q": "¿Tienes una amiga como Yolanda?", "qEn": "Do you have a friend like Yolanda?", "model": "Sí, mi mejor amiga escucha todo." }
+      ],
+      "gaps": "Mi [novio] canta en el [karaoke]… con otra [chica]. ¡[Cinco] canciones!",
+      "glossary": [
+        { "word": "anillo", "meaning": "joya redonda para el dedo", "en": "ring" },
+        { "word": "novio", "meaning": "el chico de una relación de amor", "en": "boyfriend" },
+        { "word": "canciones", "meaning": "música con palabras", "en": "songs" },
+        { "word": "seguro", "meaning": "sin peligro", "en": "safe" }
+      ]
+    },
+    {
+      "id": "quirofano",
+      "title": "Ópera contra reggaetón en el vestuario",
+      "place": "El vestuario del área quirúrgica",
+      "context": "Después de la operación, Lorenzo y Mercedes están en el vestuario. Discuten otra vez.",
+      "contextEn": "After the surgery, Lorenzo and Mercedes are in the changing room. They argue again.",
+      "speakers": [
+        { "name": "Mercedes", "country": "Colombia", "voice": "es-CO-SalomeNeural" },
+        { "name": "Lorenzo", "country": "Chile", "voice": "es-CL-LorenzoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Lorenzo, tu ópera es muy triste.", "en": "Lorenzo, your opera is very sad." },
+        { "s": 1, "text": "Y tu reggaetón es muy ruidoso, Mercedes.", "en": "And your reggaeton is very noisy, Mercedes." },
+        { "s": 0, "text": "Bueno… pero tus manos son muy buenas.", "en": "Well… but your hands are very good." },
+        { "s": 1, "text": "¿Sí? Gracias. Tus manos también.", "en": "Really? Thanks. Your hands too." },
+        { "s": 0, "text": "Gracias.", "en": "Thanks." },
+        { "s": 1, "text": "Pero la semana de vacaciones es mía.", "en": "But the vacation week is mine." },
+        { "s": 0, "text": "¡No! ¡Es mía!", "en": "No! It's mine!" }
+      ],
+      "choice": [
+        { "q": "¿Qué hacen Lorenzo y Mercedes?", "qEn": "What are Lorenzo and Mercedes doing?", "options": ["Duermen", "Comen", "Discuten"], "answer": 2 },
+        { "q": "¿Cómo es la ópera para Mercedes?", "qEn": "What is opera like for Mercedes?", "options": ["Alegre", "Triste", "Ruidosa"], "answer": 1 },
+        { "q": "¿Qué es muy bueno de los dos?", "qEn": "What is very good about both of them?", "options": ["Las manos", "La música", "La comida"], "answer": 0 },
+        { "q": "¿De qué discuten al final?", "qEn": "What do they argue about at the end?", "options": ["De la música", "De la semana de vacaciones", "Del dinero"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Te gusta la ópera o el reggaetón?", "qEn": "Do you like opera or reggaeton?", "model": "Me gusta el reggaetón para bailar." },
+        { "q": "¿Discutes con tus compañeros?", "qEn": "Do you argue with your coworkers?", "model": "Sí, a veces, por la música." },
+        { "q": "¿Cuántas semanas de vacaciones tienes?", "qEn": "How many weeks of vacation do you have?", "model": "Tengo tres semanas." }
+      ],
+      "gaps": "Bueno… pero tus [manos] son muy [buenas]. ¿Sí? [Gracias]. Tus manos [también].",
+      "glossary": [
+        { "word": "triste", "meaning": "lo contrario de alegre", "en": "sad" },
+        { "word": "ruidoso", "meaning": "con mucho ruido", "en": "noisy" },
+        { "word": "manos", "meaning": "partes del cuerpo al final de los brazos", "en": "hands" },
+        { "word": "vacaciones", "meaning": "días sin trabajo", "en": "vacation" }
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "Rodrigo, los calcetines y seis horas en el ascensor",
+      "place": "Sala de descanso de médicos",
+      "context": "El doctor Rodrigo explica a Tania sus trucos para dormir en el hospital.",
+      "contextEn": "Doctor Rodrigo explains to Tania his tricks for sleeping at the hospital.",
+      "speakers": [
+        { "name": "Rodrigo", "country": "El Salvador", "voice": "es-SV-RodrigoNeural" },
+        { "name": "Tania", "country": "Paraguay", "voice": "es-PY-TaniaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Tania, mi truco número uno: duermo con calcetines.", "en": "Tania, my trick number one: I sleep with socks on." },
+        { "s": 1, "text": "¿Con calcetines? ¿Por qué?", "en": "With socks? Why?" },
+        { "s": 0, "text": "Es ciencia. Truco número dos: duermo cinco minutos en cada sofá.", "en": "It's science. Trick number two: I sleep five minutes on every sofa." },
+        { "s": 1, "text": "¿Y tu peor día?", "en": "And your worst day?" },
+        { "s": 0, "text": "Mi peor día: duermo en el ascensor. Seis horas. Arriba, abajo, arriba…", "en": "My worst day: I sleep in the elevator. Six hours. Up, down, up…" },
+        { "s": 1, "text": "¡Ay, Rodrigo!", "en": "Oh, Rodrigo!" }
+      ],
+      "choice": [
+        { "q": "¿De qué habla Rodrigo?", "qEn": "What does Rodrigo talk about?", "options": ["De su familia", "De sus trucos para dormir", "De la comida"], "answer": 1 },
+        { "q": "¿Con qué duerme Rodrigo?", "qEn": "What does Rodrigo sleep with?", "options": ["Con calcetines", "Con un perro", "Con música"], "answer": 0 },
+        { "q": "¿Cuántos minutos duerme en cada sofá?", "qEn": "How many minutes does he sleep on each sofa?", "options": ["Diez", "Quince", "Cinco"], "answer": 2 },
+        { "q": "¿Dónde duerme en su peor día?", "qEn": "Where does he sleep on his worst day?", "options": ["En la cafetería", "En el quirófano", "En el ascensor"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Duermes con calcetines?", "qEn": "Do you sleep with socks on?", "model": "No, duermo sin calcetines." },
+        { "q": "¿Duermes la siesta?", "qEn": "Do you take naps?", "model": "Sí, duermo veinte minutos." },
+        { "q": "¿Cuántas horas duermes?", "qEn": "How many hours do you sleep?", "model": "Duermo siete horas." }
+      ],
+      "gaps": "Mi peor [día]: duermo en el [ascensor]. [Seis] [horas].",
+      "glossary": [
+        { "word": "truco", "meaning": "forma fácil y especial de hacer algo", "en": "trick" },
+        { "word": "calcetines", "meaning": "ropa para los pies", "en": "socks" },
+        { "word": "sofá", "meaning": "asiento grande y cómodo", "en": "sofa" },
+        { "word": "ascensor", "meaning": "máquina para subir y bajar en un edificio", "en": "elevator" }
+      ]
+    },
+    {
+      "id": "enfermeria",
+      "title": "Catorce timbres y una boda en la cuatrocientos cinco",
+      "place": "Estación de enfermería, cambio de turno",
+      "context": "Margarita termina su turno. Roberto empieza. Margarita explica las habitaciones.",
+      "contextEn": "Margarita is finishing her shift. Roberto is starting. Margarita explains the rooms.",
+      "speakers": [
+        { "name": "Margarita", "country": "Panamá", "voice": "es-PA-MargaritaNeural" },
+        { "name": "Roberto", "country": "Panamá", "voice": "es-PA-RobertoNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Roberto, hay catorce timbres. Habitación cuatrocientos cuatro: quiere el control de la tele.", "en": "Roberto, there are fourteen call bells. Room four hundred four: wants the TV remote." },
+        { "s": 1, "text": "Fácil.", "en": "Easy." },
+        { "s": 0, "text": "Cuatrocientos cinco: un señor quiere casarse con el enfermero.", "en": "Four hundred five: a man wants to marry the nurse." },
+        { "s": 1, "text": "¿Con quién?", "en": "With whom?" },
+        { "s": 0, "text": "Contigo, Roberto.", "en": "With you, Roberto." },
+        { "s": 1, "text": "¡Ay! ¿Y lo importante?", "en": "Oh! And what's important?" },
+        { "s": 0, "text": "Cuatrocientos siete. La señora tiene fiebre. Primero ella.", "en": "Four hundred seven. The lady has a fever. Her first." }
+      ],
+      "choice": [
+        { "q": "¿Qué explica Margarita?", "qEn": "What does Margarita explain?", "options": ["Una receta", "Las habitaciones", "El camino a la morgue"], "answer": 1 },
+        { "q": "¿Cuántos timbres hay?", "qEn": "How many call bells are there?", "options": ["Catorce", "Cuatro", "Cuarenta"], "answer": 0 },
+        { "q": "¿Qué quiere el señor de la cuatrocientos cinco?", "qEn": "What does the man in four hundred five want?", "options": ["El control de la tele", "Agua", "Casarse con Roberto"], "answer": 2 },
+        { "q": "¿Qué es lo importante?", "qEn": "What is the important thing?", "options": ["La tele", "La señora con fiebre", "La boda"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Haces muchas cosas a la vez?", "qEn": "Do you do many things at once?", "model": "Sí, cocino y hablo por teléfono." },
+        { "q": "¿Ves mucho la tele?", "qEn": "Do you watch TV a lot?", "model": "No, veo series en el teléfono." },
+        { "q": "¿Trabajas de día o de noche?", "qEn": "Do you work during the day or at night?", "model": "Trabajo de día." }
+      ],
+      "gaps": "Cuatrocientos siete. La [señora] tiene [fiebre]. [Primero] [ella].",
+      "glossary": [
+        { "word": "timbres", "meaning": "botones para llamar a la enfermera", "en": "call bells" },
+        { "word": "control", "meaning": "aparato pequeño para cambiar el canal", "en": "remote control" },
+        { "word": "casarse", "meaning": "hacer una boda", "en": "to get married" },
+        { "word": "fiebre", "meaning": "el cuerpo está muy caliente", "en": "fever" }
+      ]
+    },
+    {
+      "id": "internacion",
+      "title": "Mario, Lorena y el cigarro número tres",
+      "place": "La escalera de internación",
+      "context": "Don Mario fuma en la escalera con su suero. Lorena, de limpieza, lo encuentra otra vez.",
+      "contextEn": "Don Mario is smoking on the stairs with his IV. Lorena, from cleaning, finds him again.",
+      "speakers": [
+        { "name": "Lorena", "country": "El Salvador", "voice": "es-SV-LorenaNeural" },
+        { "name": "Mario", "country": "Paraguay", "voice": "es-PY-MarioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Don Mario, otra vez aquí. Con el suero y la bata abierta.", "en": "Don Mario, here again. With your IV and your gown open." },
+        { "s": 1, "text": "Lorena, es mi cigarro número tres. Hoy es el último.", "en": "Lorena, it's my cigarette number three. Today is the last one." },
+        { "s": 0, "text": "Eso dices todos los días.", "en": "You say that every day." },
+        { "s": 1, "text": "¿Y tú? ¿No tienes un vicio?", "en": "And you? Don't you have a vice?" },
+        { "s": 0, "text": "Sí. El chocolate. Y las historias de los pasillos.", "en": "Yes. Chocolate. And the stories of the corridors." },
+        { "s": 1, "text": "¿Historias? ¡Cuéntame!", "en": "Stories? Tell me!" }
+      ],
+      "choice": [
+        { "q": "¿Qué hace Mario en la escalera?", "qEn": "What is Mario doing on the stairs?", "options": ["Duerme", "Fuma", "Come chocolate"], "answer": 1 },
+        { "q": "¿Qué número es el cigarro?", "qEn": "Which number is the cigarette?", "options": ["El tres", "El uno", "El cinco"], "answer": 0 },
+        { "q": "¿Cuál es el vicio de Lorena?", "qEn": "What is Lorena's vice?", "options": ["El café", "El tabaco", "El chocolate"], "answer": 2 },
+        { "q": "¿Qué más le gusta a Lorena?", "qEn": "What else does Lorena like?", "options": ["La música", "Las historias de los pasillos", "El fútbol"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Tienes un vicio pequeño?", "qEn": "Do you have a small vice?", "model": "Sí, el café." },
+        { "q": "¿Te gusta el chocolate?", "qEn": "Do you like chocolate?", "model": "Sí, como chocolate todos los días." },
+        { "q": "¿Te gustan las historias de otras personas?", "qEn": "Do you like other people's stories?", "model": "Sí, me gustan mucho." }
+      ],
+      "gaps": "Lorena, es mi [cigarro] número [tres]. Hoy es el [último]. Eso dices todos los [días].",
+      "glossary": [
+        { "word": "suero", "meaning": "líquido que entra en el brazo con un tubo", "en": "IV drip" },
+        { "word": "bata", "meaning": "ropa del paciente en el hospital", "en": "hospital gown" },
+        { "word": "cigarro", "meaning": "tabaco para fumar", "en": "cigarette" },
+        { "word": "vicio", "meaning": "costumbre mala que te gusta", "en": "vice" }
+      ]
+    },
+    {
+      "id": "habitacion",
+      "title": "La mañana después: nueve nietos y un pastel",
+      "place": "Habitación 402, por la mañana",
+      "context": "Es la mañana después de la fiesta de Doña Karina. Juan, su compañero de habitación, está despierto.",
+      "contextEn": "It's the morning after Doña Karina's party. Juan, her roommate, is awake.",
+      "speakers": [
+        { "name": "Karina", "country": "Puerto Rico", "voice": "es-PR-KarinaNeural" },
+        { "name": "Juan", "country": "Costa Rica", "voice": "es-CR-JuanNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenos días, Juan. Perdón por la fiesta.", "en": "Good morning, Juan. Sorry about the party." },
+        { "s": 1, "text": "Buenos días, Karina. Bueno… el pastel es muy rico.", "en": "Good morning, Karina. Well… the cake is very good." },
+        { "s": 0, "text": "¿Tienes nietos?", "en": "Do you have grandchildren?" },
+        { "s": 1, "text": "Sí, tengo cuatro. ¿Y tú?", "en": "Yes, I have four. And you?" },
+        { "s": 0, "text": "Yo tengo nueve nietos. ¡Y todos bailan mal!", "en": "I have nine grandchildren. And they all dance badly!" },
+        { "s": 1, "text": "¡Ja! Yo bailo muy bien. Mi esposa dice que no.", "en": "Ha! I dance very well. My wife says no." },
+        { "s": 0, "text": "Entonces el próximo año bailas conmigo.", "en": "Then next year you dance with me." }
+      ],
+      "choice": [
+        { "q": "¿Cómo es la conversación?", "qEn": "What is the conversation like?", "options": ["Muy enfadada", "Triste", "Simpática"], "answer": 2 },
+        { "q": "¿Qué es muy rico?", "qEn": "What is very good (tasty)?", "options": ["El café", "El pastel", "La sopa"], "answer": 1 },
+        { "q": "¿Cuántos nietos tiene Karina?", "qEn": "How many grandchildren does Karina have?", "options": ["Nueve", "Cuatro", "Ocho"], "answer": 0 },
+        { "q": "¿Qué dice la esposa de Juan?", "qEn": "What does Juan's wife say?", "options": ["Que Juan canta bien", "Que Juan come mucho", "Que Juan no baila bien"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Te gustan las fiestas de cumpleaños?", "qEn": "Do you like birthday parties?", "model": "Sí, me gustan las fiestas pequeñas." },
+        { "q": "¿Bailas bien?", "qEn": "Do you dance well?", "model": "No, bailo muy mal." },
+        { "q": "¿Tu familia es grande?", "qEn": "Is your family big?", "model": "Sí, tengo muchos tíos y primos." }
+      ],
+      "gaps": "Yo tengo [nueve] [nietos]. ¡Y todos [bailan] [mal]!",
+      "glossary": [
+        { "word": "fiesta", "meaning": "celebración con música y comida", "en": "party" },
+        { "word": "pastel", "meaning": "comida dulce de cumpleaños", "en": "cake" },
+        { "word": "nietos", "meaning": "los hijos de tus hijos", "en": "grandchildren" },
+        { "word": "esposa", "meaning": "la mujer de un matrimonio", "en": "wife" }
+      ]
+    },
+    {
+      "id": "uci",
+      "title": "La mamá enfermera del doctor Carlos",
+      "place": "La UCI, de noche",
+      "context": "Es de noche en la UCI. Paloma está con su papá. Habla con el doctor Carlos Zelaya.",
+      "contextEn": "It's night in the ICU. Paloma is with her dad. She talks with Doctor Carlos Zelaya.",
+      "speakers": [
+        { "name": "Paloma", "country": "Estados Unidos", "voice": "es-US-PalomaNeural" },
+        { "name": "Carlos", "country": "Honduras", "voice": "es-HN-CarlosNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Carlos, ¿por qué trabajas aquí?", "en": "Carlos, why do you work here?" },
+        { "s": 1, "text": "Mi mamá es enfermera. Ella dice: «Aquí está la vida, Carlos».", "en": "My mom is a nurse. She says: \"Life is here, Carlos.\"" },
+        { "s": 0, "text": "Qué bonito. Mi papá es muy terco.", "en": "How nice. My dad is very stubborn." },
+        { "s": 1, "text": "Bueno… pero su corazón está fuerte hoy.", "en": "Well… but his heart is strong today." },
+        { "s": 0, "text": "¿Sí? ¡Ay, gracias! Papá, ¿escuchas? Tu corazón también es terco.", "en": "Really? Oh, thank you! Dad, do you hear? Your heart is stubborn too." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Paloma y Carlos?", "qEn": "What do Paloma and Carlos talk about?", "options": ["De fútbol", "De comida", "Del trabajo de Carlos y del papá de Paloma"], "answer": 2 },
+        { "q": "¿Qué es la mamá de Carlos?", "qEn": "What is Carlos's mom?", "options": ["Médica", "Enfermera", "Cocinera"], "answer": 1 },
+        { "q": "¿Cómo es el papá de Paloma?", "qEn": "What is Paloma's dad like?", "options": ["Terco", "Tímido", "Alegre"], "answer": 0 },
+        { "q": "¿Cómo está el corazón del papá hoy?", "qEn": "How is the dad's heart today?", "options": ["Débil", "Fuerte", "Muy mal"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Eres terco o terca?", "qEn": "Are you stubborn?", "model": "Sí, soy muy terca." },
+        { "q": "¿Qué trabajo tiene tu mamá?", "qEn": "What job does your mom have?", "model": "Mi mamá es profesora." },
+        { "q": "¿Hablas mucho con tu papá?", "qEn": "Do you talk a lot with your dad?", "model": "Sí, hablamos los domingos." }
+      ],
+      "gaps": "Mi [mamá] es [enfermera]. Ella dice: «Aquí está la [vida], [Carlos]».",
+      "glossary": [
+        { "word": "enfermera", "meaning": "mujer que cuida a los pacientes", "en": "nurse" },
+        { "word": "vida", "meaning": "lo contrario de la muerte", "en": "life" },
+        { "word": "terco", "meaning": "persona que no cambia de idea", "en": "stubborn" },
+        { "word": "corazón", "meaning": "parte del cuerpo que mueve la sangre", "en": "heart" }
+      ]
+    },
+    {
+      "id": "morgue",
+      "title": "La nevera azul y las reglas de Don Marcelo",
+      "place": "La morgue, en el subsuelo",
+      "context": "Sofía es nueva. Don Marcelo le explica las reglas de la casa.",
+      "contextEn": "Sofía is new. Don Marcelo explains the house rules to her.",
+      "speakers": [
+        { "name": "Marcelo", "country": "Bolivia", "voice": "es-BO-MarceloNeural" },
+        { "name": "Sofía", "country": "Bolivia", "voice": "es-BO-SofiaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Sofía, aquí hay tres reglas. Regla uno: siempre dices «buenos días» a los clientes.", "en": "Sofía, there are three rules here. Rule one: you always say \"good morning\" to the clients." },
+        { "s": 1, "text": "Pero… ¡no contestan!", "en": "But… they don't answer!" },
+        { "s": 0, "text": "Son tímidos. Regla dos: mi almuerzo está en la nevera azul. No en la nevera gris.", "en": "They're shy. Rule two: my lunch is in the blue fridge. Not in the gray fridge." },
+        { "s": 1, "text": "¡Ay, Dios!", "en": "Oh, God!" },
+        { "s": 0, "text": "Regla tres: la radio con boleros. Siempre.", "en": "Rule three: the radio with boleros. Always." }
+      ],
+      "choice": [
+        { "q": "¿Qué explica Marcelo?", "qEn": "What does Marcelo explain?", "options": ["Una receta", "Las reglas de la morgue", "El camino a la salida"], "answer": 1 },
+        { "q": "¿Qué dices a los clientes?", "qEn": "What do you say to the clients?", "options": ["Buenos días", "Adiós", "Gracias"], "answer": 0 },
+        { "q": "¿Dónde está el almuerzo de Marcelo?", "qEn": "Where is Marcelo's lunch?", "options": ["En la nevera gris", "En la mesa", "En la nevera azul"], "answer": 2 },
+        { "q": "¿Qué música hay en la radio?", "qEn": "What music is on the radio?", "options": ["Salsa", "Ópera", "Boleros"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Qué comes en el almuerzo?", "qEn": "What do you eat for lunch?", "model": "Como arroz con pollo." },
+        { "q": "¿Tienes miedo de la oscuridad?", "qEn": "Are you afraid of the dark?", "model": "Un poco, sí." },
+        { "q": "¿Escuchas música vieja?", "qEn": "Do you listen to old music?", "model": "Sí, escucho boleros con mi abuela." }
+      ],
+      "gaps": "Regla dos: mi [almuerzo] está en la [nevera] [azul]. No en la nevera [gris].",
+      "glossary": [
+        { "word": "reglas", "meaning": "lo que todos tienen que hacer", "en": "rules" },
+        { "word": "tímidos", "meaning": "personas que no hablan mucho", "en": "shy" },
+        { "word": "almuerzo", "meaning": "la comida del mediodía", "en": "lunch" },
+        { "word": "nevera", "meaning": "aparato frío para la comida", "en": "fridge" }
+      ]
+    },
+    {
+      "id": "limpieza",
+      "title": "Lorena, el armario de Rodrigo y el ascensor tres",
+      "place": "Pasillos de servicio, en el subsuelo",
+      "context": "Sofía busca la farmacia. Doña Lorena limpia el pasillo y tiene un mapa especial.",
+      "contextEn": "Sofía is looking for the pharmacy. Doña Lorena is cleaning the corridor and has a special map.",
+      "speakers": [
+        { "name": "Sofía", "country": "Bolivia", "voice": "es-BO-SofiaNeural" },
+        { "name": "Lorena", "country": "El Salvador", "voice": "es-SV-LorenaNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Doña Lorena, ¿dónde está la farmacia?", "en": "Doña Lorena, where is the pharmacy?" },
+        { "s": 1, "text": "Mira, mi amor. Este es mi mapa. Aquí, en el armario, duerme el doctor Rodrigo.", "en": "Look, sweetheart. This is my map. Here, in the closet, Doctor Rodrigo sleeps." },
+        { "s": 0, "text": "¿En el armario?", "en": "In the closet?" },
+        { "s": 1, "text": "Sí. El ascensor tres nunca viene. Y en la escalera fuma Don Mario.", "en": "Yes. Elevator three never comes. And Don Mario smokes on the stairs." },
+        { "s": 0, "text": "¿Y la farmacia?", "en": "And the pharmacy?" },
+        { "s": 1, "text": "¡Ah! La farmacia… está cerrada. Siempre.", "en": "Ah! The pharmacy… is closed. Always." }
+      ],
+      "choice": [
+        { "q": "¿Qué busca Sofía?", "qEn": "What is Sofía looking for?", "options": ["El ascensor", "La farmacia", "A Rodrigo"], "answer": 1 },
+        { "q": "¿Dónde duerme el doctor Rodrigo?", "qEn": "Where does Doctor Rodrigo sleep?", "options": ["En el armario", "En el sofá", "En la escalera"], "answer": 0 },
+        { "q": "¿Qué ascensor nunca viene?", "qEn": "Which elevator never comes?", "options": ["El uno", "El dos", "El tres"], "answer": 2 },
+        { "q": "¿Cómo está la farmacia?", "qEn": "How is the pharmacy?", "options": ["Abierta", "Cerrada", "Llena"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Conoces bien tu ciudad?", "qEn": "Do you know your city well?", "model": "Sí, conozco todas las calles." },
+        { "q": "¿Usas el ascensor o la escalera?", "qEn": "Do you use the elevator or the stairs?", "model": "Uso la escalera." },
+        { "q": "¿Tienes un lugar secreto?", "qEn": "Do you have a secret place?", "model": "Sí, un café pequeño cerca de mi casa." }
+      ],
+      "gaps": "El [ascensor] [tres] nunca [viene]. Y en la [escalera] fuma Don Mario.",
+      "glossary": [
+        { "word": "farmacia", "meaning": "lugar donde compras medicinas", "en": "pharmacy" },
+        { "word": "mapa", "meaning": "dibujo de un lugar con los caminos", "en": "map" },
+        { "word": "armario", "meaning": "mueble para guardar ropa o cosas", "en": "closet" },
+        { "word": "cerrada", "meaning": "lo contrario de abierta", "en": "closed" }
+      ]
+    }
+  ]
+}

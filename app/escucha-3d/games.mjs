@@ -22,6 +22,16 @@ export const GAMES = {
     levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
     spots: ['ines', 'bruno', 'liora', 'aldren', 'celina', 'baltasar', 'teobaldo', 'elara'],
   },
+  // Every circle of the hospital has its own listening, at every level, and
+  // each character keeps one voice (app/hospital-san-casi-vivo/story.mjs).
+  hospital: {
+    title: 'Hospital San Casi Vivo',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['recepcion', 'espera', 'vip', 'triage', 'guardia', 'ambulancias', 'trauma', 'observacion', 'curaciones', 'cafeteria', 'facturacion',
+      'laboratorio', 'radiologia', 'quirofano', 'descanso', 'enfermeria', 'internacion', 'habitacion', 'uci', 'morgue', 'limpieza'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
@@ -32,9 +42,12 @@ export const RATE = { A0: '-22%', A1: '-14%', A2: '-7%', B1: '-3%', B2: '+0%', C
 
 export const audioSrc = (game, level, id) => `/audio/escucha-3d/${game}-${level.toLowerCase()}-${id}.mp3`;
 
-/** The listening for a circle: its own one, else the first unfinished one. */
-export function listeningFor(items, spot, done = []) {
-  return items.find(item => item.id === spot) ?? items.find(item => !done.includes(item.id)) ?? items[0] ?? null;
+/** The listening for a circle: its own one, else the first unfinished one
+ * (never in a strict game, where every circle owns its listening). */
+export function listeningFor(items, spot, done = [], strict = false) {
+  const own = items.find(item => item.id === spot);
+  if (own || (strict && spot)) return own ?? null;
+  return items.find(item => !done.includes(item.id)) ?? items[0] ?? null;
 }
 
 /** "Llegaron a las [nueve] de la noche" → text parts and the hidden answers. */

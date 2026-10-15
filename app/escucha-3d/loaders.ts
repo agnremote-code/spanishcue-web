@@ -36,6 +36,15 @@ export const LOADERS: Record<string, Record<string, Loader>> = {
     C1: () => import('./content/reino/c1.json'),
     C2: () => import('./content/reino/c2.json'),
   },
+  hospital: {
+    A0: () => import('./content/hospital/a0.json'),
+    A1: () => import('./content/hospital/a1.json'),
+    A2: () => import('./content/hospital/a2.json'),
+    B1: () => import('./content/hospital/b1.json'),
+    B2: () => import('./content/hospital/b2.json'),
+    C1: () => import('./content/hospital/c1.json'),
+    C2: () => import('./content/hospital/c2.json'),
+  },
 };
 
 export async function loadListenings(game: string, level: string): Promise<ListeningFile | null> {

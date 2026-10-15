@@ -84,3 +84,12 @@ Never commit secret values, and never ask the owner to paste them into a chat, i
 ## Spanish language consistency
 
 Follow `docs/LANGUAGE_POLICY.md`: international neutral Spanish and tú for default instructions; full paradigms include vosotros/vosotras and ustedes. Preserve explicitly taught regional examples, English copy and audio/transcript synchronization. Run the linguistic guard and English-copy protection when changing content; use exact justified exemptions rather than blanket file exclusions.
+
+## New Conversation and Listening classes are 3D worlds (permanent rule, owner 2026-10-15)
+
+Every NEW class in the Conversation or Listening collections is an immersive 3D world with both modes in the same world: **Conversación** and **Comprensión auditiva**. The student switches mode with the shared `ModeSwitch` without leaving the world or losing position; each white circle opens its conversation scene or its own listening. Older classes are not redone.
+
+- Reuse, do not copy: the listening engine is `app/escucha-3d` (`ListeningCard`, `ModeSwitch`, `ListeningBadge`, `useListeningMode`, `useListeningDone`, loaders and `content/<game>/<level>.json`); people, the mascot and movement come from `app/noche-abierta` (`people3d`, `hero3d`, `world3d.mjs`). Register the game in `app/escucha-3d/games.mjs` (use `ownListening: true` so every circle has its own listening).
+- Listening audio is pre-generated neural TTS with one distinct regional voice per character (`scripts/generate-escucha-3d-audio.py` via GitHub Actions), never browser `speechSynthesis`. Report the real audio state; never claim an accent the engine does not produce.
+- Same controls as the other 3D games (WASD/arrows, Space jump, Shift run, N nitro, touch joystick and buttons), a list for teacher navigation and a no-WebGL fallback.
+- Reference implementation: `app/hospital-san-casi-vivo` (checker `scripts/check-hospital.mjs`, test `tests/hospital-san-casi-vivo.test.mjs`).

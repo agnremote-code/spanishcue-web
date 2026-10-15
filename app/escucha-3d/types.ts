@@ -4,12 +4,13 @@ export type Listening = {
   title: string;
   place: string;
   context: string;
+  contextEn?: string;
   speakers: Speaker[];
-  lines: { s: number; text: string }[];
-  choice: { q: string; options: string[]; answer: number }[];
-  open: { q: string; model: string }[];
+  lines: { s: number; text: string; en?: string }[];
+  choice: { q: string; options: string[]; answer: number; qEn?: string }[];
+  open: { q: string; model: string; qEn?: string }[];
   gaps: string;
-  glossary: { word: string; meaning: string }[];
+  glossary: { word: string; meaning: string; en?: string }[];
 };
 export type ListeningFile = { game: string; level: string; items: Listening[] };
-export type GameId = 'noche' | 'casino' | 'bosque' | 'reino';
+export type GameId = 'noche' | 'casino' | 'bosque' | 'reino' | 'hospital';

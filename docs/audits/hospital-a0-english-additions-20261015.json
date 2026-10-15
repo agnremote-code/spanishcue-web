@@ -1,0 +1,3694 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-15 16:10Z (project thread «Hospital San Casi Vivo 3D», root message cmsg_01Gr5R4j3t2Yet65UcmhcVhA1vbh2Q2FKVUTE41BZnmqe4): a new 3D class whose A0 level must be fully bilingual, in conversation and in listening. This manifest approves only the exact English support literals of the hospital A0 level listed below (the English half of each { es, en } pair in app/hospital-san-casi-vivo/levels/a0.mjs and the contextEn / en / qEn fields of app/escucha-3d/content/hospital/a0.json), plus the A0 English line support switch in the shared listening card; existing English copy stays protected. Owner approval: Ale wrote «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe), a standing approval for English copy in A0 work.",
+  "additions": [
+    {
+      "path": "app/escucha-3d/Escucha.tsx",
+      "text": "A0"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Norma is eating in the hospital kitchen. She is talking on the phone with her sister Susana."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Hi, Susana! I'm eating a sandwich."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And work? Lots of people?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh, yes! A man says: \"I'm the doctor's cousin.\""
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And is he the cousin?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "No. And a woman says: \"Today is my birthday.\""
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ha! And does she have a number?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "No. There is no machine, there is no paper… and I have no sevens."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is Norma talking to?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Norma eating?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does the man say?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Which number does Norma not have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have cousins?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you wait in lines patiently?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do you eat at work?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "cousin"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "birthday"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "machine"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "sevens"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Andrés arrives at the waiting room. Anselmo, a very friendly man, explains the rules."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Hi, I'm Anselmo. I've been here for eight hours."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Eight hours! I'm Andrés."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Well, Andrés, there are three rules. One: the green chair is mine."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Two: the coffee is for everyone. Three: here we talk a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And the man with the towel?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "He's my friend. And he's next, for sure."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Anselmo explain?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many hours has Anselmo been waiting?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Whose is the green chair?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is the coffee for?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you talk to people you don't know?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a favorite chair at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do you do when you wait?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "rules"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "chair"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "towel"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "next"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Doña Pilar has a splinter in her finger. She calls her daughter Ximena on the phone."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ximena, darling, I'm at the hospital. I have a splinter in my finger."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "A splinter? Mom!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And there's no VIP chair. I'm a friend of the director!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Mom… your friend isn't the director. He's the waiter."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "The waiter? But he's very elegant…"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. And he brings you dessert."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is Pilar talking to?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Pilar have in her finger?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is there not in the room?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is Pilar's friend?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have important friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like elegant clothes?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is your favorite dessert?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "splinter"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "finger"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "waiter"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "dessert"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Gladys has hiccups and thinks she is dying. Wilson, the nurse, writes down her will."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Wilson, write, please. It's my will."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Gladys, you have hiccups. Nothing else."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "My cat is for my sister. My soap operas are for my mom. Hic!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And the guitar?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "My ex's guitar… in the trash!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "The trash? Better for me."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Okay. And my red bracelet?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "No. Green."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Gladys have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is the cat for?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Wilson want?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What color is Gladys's bracelet in the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a cat or a dog?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like soap operas?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you play the guitar?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "will"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "hiccups"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "soap operas"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "bracelet"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Doctor Íñigo has been at the hospital for a long time. Catalina talks to him in the corridor."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Íñigo, are you okay? Your eyes are red."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "I'm perfect. Thirty hours here. Nine coffees."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Nine?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. And I call a patient Michi."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Íñigo, Michi is your cat."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh… really? Well, the patient is very nice."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Home. Now."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "One more coffee and I'm leaving."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How is Íñigo?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many hours has he been at the hospital?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is Michi?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Íñigo want at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many coffees do you drink a day?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you work many hours?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Does your pet have a funny name?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "eyes"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "red"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "patient"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "I'm leaving"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yamilé and Manuel are resting in the ambulance. They talk about the day's strange calls."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Manuel, turn off the radio, please."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "No! It's salsa. It's my music."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Today there are three strange calls. One: a man with a parrot on his head."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Two: a woman with her hand in a jar."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Three: Kevin and his phone."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh, Kevin! Lots of phone and not much leg."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Yamilé want at the beginning?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What music does Manuel listen to?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where is the parrot?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where does the woman have her hand?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you listen to music in the car?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like salsa?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you use your phone a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "calls"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "parrot"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "jar"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "leg"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ezequiel has a broken arm. Paola, his neighbor, is with him. Paola has a secret."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ezequiel, does your arm hurt?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "A little. But your cat is fine."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ezequiel, I have a secret."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "The cat doesn't climb up alone. I put him up there. That way you come to my house."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Really? To see me?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. Three times this month."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh! My broken arm… and I'm happy."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What hurts for Ezequiel?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who puts the cat up the tree?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Why does she do it?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many times this month?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you know your neighbors?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a small secret?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do you do for love?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "arm"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "secret"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "climbs up"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "broken"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Don Benigno is better. His granddaughter Camila is with him. They talk about grandma."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Grandpa, how are you?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Fine, thank you. Sorry for the scare, Camila."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "You know? I think about your grandma. She always says: \"Benigno, speak louder.\""
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "That's true! You speak very softly."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. From today I speak loudly. Hello, nurse! Thank you very much!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Grandpa! Now it's too much!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How is Benigno now?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who does Benigno think about?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does grandma always say?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How does Benigno usually speak?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you speak loudly or softly?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is your grandmother's name?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you say sorry a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "grandfather"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "scare"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "loud"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "softly"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Rufino has a fishing hook in his eyebrow. He tells his story to Marta, the nurse."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Marta, it's a heroic story. There's a huge fish. Two meters long."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Two meters? And the hook in your eyebrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "The fish is very strong. It pulls, pulls…"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Rufino, your son says something else."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "My son? What does he say?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "He says: \"Dad is my first fish.\""
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who tells the fish story?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Rufino's fish like?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where is the hook?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "For the son, who is his first fish?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like fishing?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you tell slightly false stories?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do you do with your family on Sundays?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "fish"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "fishing hook"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "eyebrow"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "pulls"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Federico is having a coffee. Doña Ramona has news: two people at the hospital are a couple."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ramona, any news?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh, Federico! A doctor and a doctor… they're a couple."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Clues: they're both surgeons. He's from Chile. She's from Colombia."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Doctor Undurraga and Doctor Ibarra? But they always argue!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes… and they always eat together. Two coffees, one dessert, two spoons."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What are Ramona and Federico talking about?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What job does the couple have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where is he from?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do they eat together?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like gossip?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who do you usually eat with?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you share dessert?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "news"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "a couple"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "clues"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "spoons"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "A few days later, Jorge calls Gonzalo on the phone. He doesn't want to pay the bill."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Good morning, billing. I'm Gonzalo."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Hi, Gonzalo. I'm Jorge Treviño. The bill is a rip-off!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Calm down, Jorge. There's a new charge."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Another one? What is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Call to billing: ten pesos per minute, plus five pesos for \"hello\"."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Per minute? Oh, no! Goodbye!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Thank you, Jorge. That's fifteen pesos."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who is calling?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is the bill for Jorge?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How much does one minute cost?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How much does Jorge pay for the call?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you pay many bills every month?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you call or write messages?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is very expensive in your city?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "bill"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "rip-off, robbery"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "charge"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "pesos (money)"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Andrea reads Luis's blood-type horoscope. Luis doesn't believe in horoscopes."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Luis, your blood is O positive. Your horoscope: a tube breaks."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Andrea, please. That's not science."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And a person from your family calls you."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Hello… yes, Mom."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "See? And your lucky number is seven."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh! Tube number seven… is broken."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Andrea read?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What blood type does Luis have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Who calls Luis?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Which tube is broken?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you read your horoscope?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a lucky number?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Does your mom call you a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "blood"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "tube"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "science"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "luck"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Karla has a ring in her stomach. Her friend Yolanda asks why."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Karla, why? Why the ring?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "My boyfriend sings at karaoke… with another girl. Five songs!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Five? Oh, no!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. And now he wants the ring. It's his grandmother's."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And what do you say?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "I say: \"The ring is in a very safe place.\""
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Karla talking about?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where does the boyfriend sing?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many songs does he sing with the girl?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Whose ring is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you sing at karaoke?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a special ring?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a friend like Yolanda?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "ring"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "boyfriend"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "songs"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "safe"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "After the surgery, Lorenzo and Mercedes are in the changing room. They argue again."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Lorenzo, your opera is very sad."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And your reggaeton is very noisy, Mercedes."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Well… but your hands are very good."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Really? Thanks. Your hands too."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Thanks."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "But the vacation week is mine."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "No! It's mine!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What are Lorenzo and Mercedes doing?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is opera like for Mercedes?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is very good about both of them?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do they argue about at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like opera or reggaeton?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you argue with your coworkers?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many weeks of vacation do you have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "sad"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "noisy"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "hands"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "vacation"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Doctor Rodrigo explains to Tania his tricks for sleeping at the hospital."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Tania, my trick number one: I sleep with socks on."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "With socks? Why?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "It's science. Trick number two: I sleep five minutes on every sofa."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And your worst day?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "My worst day: I sleep in the elevator. Six hours. Up, down, up…"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh, Rodrigo!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Rodrigo talk about?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Rodrigo sleep with?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many minutes does he sleep on each sofa?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where does he sleep on his worst day?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you sleep with socks on?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you take naps?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many hours do you sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "trick"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "socks"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "sofa"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "elevator"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Margarita is finishing her shift. Roberto is starting. Margarita explains the rooms."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Roberto, there are fourteen call bells. Room four hundred four: wants the TV remote."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Easy."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Four hundred five: a man wants to marry the nurse."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "With whom?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "With you, Roberto."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh! And what's important?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Four hundred seven. The lady has a fever. Her first."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Margarita explain?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many call bells are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does the man in four hundred five want?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is the important thing?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you do many things at once?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you watch TV a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you work during the day or at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "call bells"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "remote control"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "to get married"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "fever"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Don Mario is smoking on the stairs with his IV. Lorena, from cleaning, finds him again."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Don Mario, here again. With your IV and your gown open."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Lorena, it's my cigarette number three. Today is the last one."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "You say that every day."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And you? Don't you have a vice?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. Chocolate. And the stories of the corridors."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Stories? Tell me!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Mario doing on the stairs?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Which number is the cigarette?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Lorena's vice?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What else does Lorena like?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a small vice?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like chocolate?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like other people's stories?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "IV drip"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "hospital gown"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "cigarette"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "vice"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "It's the morning after Doña Karina's party. Juan, her roommate, is awake."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Good morning, Juan. Sorry about the party."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Good morning, Karina. Well… the cake is very good."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have grandchildren?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes, I have four. And you?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "I have nine grandchildren. And they all dance badly!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ha! I dance very well. My wife says no."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Then next year you dance with me."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is the conversation like?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is very good (tasty)?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How many grandchildren does Karina have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Juan's wife say?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you like birthday parties?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you dance well?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Is your family big?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "party"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "cake"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "grandchildren"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "wife"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "It's night in the ICU. Paloma is with her dad. She talks with Doctor Carlos Zelaya."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Carlos, why do you work here?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "My mom is a nurse. She says: \"Life is here, Carlos.\""
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How nice. My dad is very stubborn."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Well… but his heart is strong today."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Really? Oh, thank you! Dad, do you hear? Your heart is stubborn too."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do Paloma and Carlos talk about?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Carlos's mom?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Paloma's dad like?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How is the dad's heart today?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Are you stubborn?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What job does your mom have?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you talk a lot with your dad?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "nurse"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "life"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "stubborn"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "heart"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Sofía is new. Don Marcelo explains the house rules to her."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Sofía, there are three rules here. Rule one: you always say \"good morning\" to the clients."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "But… they don't answer!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "They're shy. Rule two: my lunch is in the blue fridge. Not in the gray fridge."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Oh, God!"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Rule three: the radio with boleros. Always."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What does Marcelo explain?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do you say to the clients?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where is Marcelo's lunch?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What music is on the radio?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What do you eat for lunch?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Are you afraid of the dark?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you listen to old music?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "shy"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "lunch"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "fridge"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Sofía is looking for the pharmacy. Doña Lorena is cleaning the corridor and has a special map."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Doña Lorena, where is the pharmacy?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Look, sweetheart. This is my map. Here, in the closet, Doctor Rodrigo sleeps."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "In the closet?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Yes. Elevator three never comes. And Don Mario smokes on the stairs."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "And the pharmacy?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Ah! The pharmacy… is closed. Always."
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "What is Sofía looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Where does Doctor Rodrigo sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Which elevator never comes?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "How is the pharmacy?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you know your city well?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you use the elevator or the stairs?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "Do you have a secret place?"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "pharmacy"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "map"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "closet"
+    },
+    {
+      "path": "app/escucha-3d/content/hospital/a0.json",
+      "text": "closed"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The number machine"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You walk into the hospital. There are a lot of people. The number machine is broken."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hi. My eye is blue. What number am I?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No number, no doctor. That’s the rule."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I write the numbers myself. But I’m out of sevens."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Norma looks at you: “Do you have a number?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes, I have number seven."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "A seven! It’s a miracle!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Norma hugs you. The man with the peas cries."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No. But the man is in pain."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Everybody is in pain. It’s a hospital."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The man waits. The peas aren’t cold anymore."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What about a kick to the machine?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ha, ha. It has ten years of kicks."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You kick it. A number comes out: zero."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like waiting?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you patient?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are there a lot of queues in your city?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your favourite number?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you always follow the rules?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the machine"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the number"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the rule"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the eye"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the peas"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "King of the waiting room"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the waiting room. Don Anselmo has a sore throat. He has been here for eight hours."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hi, new guy. Coffee? It’s free. Well, it’s my coffee."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Thanks. Are you a doctor?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No. I’m the king of the room. A bet? Who goes in next?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Anselmo looks at you: “Are you in?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. Five pesos on the lady with the dog."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Good choice! She coughs a lot."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The lady goes in. You win ten pesos and a cold coffee."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Why don’t you go home, Don Anselmo?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "There’s nobody at home. Here there are friends."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Anselmo looks at a photo of his wife. Andrés holds his hand."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No, thanks. And you, go home!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Home? But tomorrow it’s my turn!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Anselmo doesn’t go home. Now there’s a bet on you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you do when you wait?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you talk to people you don’t know?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you live alone or with other people?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like betting?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your favourite drink?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the waiting room"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the throat"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the bet"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "free"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "alone"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "A VIP splinter"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "In the good chairs sits Doña Pilar. She has a tiny splinter in her finger. Next to her, a tired man in a grey cardigan. He is the director, but nobody knows."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’m a friend of the director! I want a doctor now!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Madam, it’s a splinter."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s a VIP splinter!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hello. I’m nobody. I’m just waiting."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Pilar looks at you: “Do you know who I am?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes, madam. You are very important."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "At last! An intelligent person."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Pilar gives you her card. It’s a restaurant’s card."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you know the man in the cardigan?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "That one? No. He’s a normal man."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Alonso smiles and writes “Pilar” in his notebook."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Sir, what do you think?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Him? He knows nothing!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Alonso says: “I think the hospital needs chairs.” Pilar turns red."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you know a famous person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like being important?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you pay more to be first?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What are you wearing today?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you a calm person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the splinter"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the finger"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the director"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "important"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the cardigan, the sweater"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The green bracelet"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Gladys has hiccups. On the internet she reads: “hiccups, death.” She has a will on a napkin."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’m dying! I want the red bracelet!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You have hiccups, madam. Green bracelet."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hic! Green? Green is hope, not death!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Exactly."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Gladys looks at you: “Will you help me with my will?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Calm down, hiccups aren’t serious."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No? Then why am I scared? Hic!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Wilson gives you a green bracelet too."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. Who gets the cat?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The cat is for you! And the guitar too."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Now you have a cat, a guitar and a napkin."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s your last day. What do you do?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I dance, I eat cake and I call my ex! Hic!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Gladys dances in the corridor. The hiccups are gone."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you look everything up on the internet?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Which colour do you like most?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have a cat or a dog?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you do on a day off?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you a nervous person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the hiccups"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the bracelet"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "red / green"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the will"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the napkin"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Thirty hours"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the emergency ward. Doctor Íñigo has been working for thirty hours. His eyes are red."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Good morning… or good night? Mr Michi, open your mouth."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’m Pedro. Michi is your cat."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Íñigo, go home. Now."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No. My prescription: one coffee. Two coffees. Three."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Íñigo looks at you: “Do you have coffee?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes, a big coffee for you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I love you! And what’s your name, cat?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Íñigo works two more hours. Catalina is not happy."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No. You need to sleep."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Sleep? What is sleep?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Íñigo falls asleep on a chair. Catalina puts a blanket on him."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "One more patient, please?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Sure. Hello, Mr Michi."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Catalina phones Íñigo’s mum."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "How many hours do you work?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you drink a lot of coffee?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like your job?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What are you like when you are sleepy?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What time do you get up?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the emergency ward"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the coffee"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the mouth"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ten thousand people"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "An ambulance arrives. Yamilé and Manuel bring Kevin. Kevin has blood on his leg and his phone in his hand."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hi, friends! I’m in the hospital! A thousand people watching!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Kevin, your leg, please."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No! Ten thousand first!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "There’s more blood than people."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yamilé looks at you: “Do you have an idea?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’ll hold the phone, Kevin."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Perfect. Now, the leg."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Kevin shouts: “More light!” Now you are his camera."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No more phone. Give me that."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Thank you! At last."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Kevin cries. A thousand people say “bye”. The leg is happy."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hello to all the followers!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Seriously? You too?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Now there are ten thousand people. They all look at your face, not the leg."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you use your phone a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have many followers?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like taking photos?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your favourite social network?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have a bike or a motorbike?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the leg"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the blood"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the phone"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "a thousand / ten thousand"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the followers"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paola’s cat"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ezequiel has a broken arm and blood on his forehead. Doctor Catalina puts on the cast."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The cat is up there. I go up. The ladder doesn’t."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And the cat?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The cat comes down by itself. Very calm."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ezequiel! My hero! Tigre is fine."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ezequiel looks at you, red-faced: “Paola is very pretty, isn’t she?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. Tell her: “I like you.”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Me? Well… Paola, I like you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paola smiles. The cat gets out of the box and leaves."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paola, the cat isn’t in any trouble."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Shhh! Quiet, please!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paola says: “I know.” Ezequiel doesn’t understand a thing."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What’s the weather like today?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s sunny… and Paola is the sun."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Catalina rolls her eyes and finishes the cast."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have nice neighbours?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you do for love?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your home like?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you romantic?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you afraid of heights?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the arm"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the forehead"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the ladder"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the cast"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "pretty"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Sorry to bother you"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "In observation there is a lot of noise. Don Benigno is very pale. His granddaughter Camila is at the cafeteria."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Excuse me. Sorry to bother you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "My drip! My drip!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I think I’m dying a little bit. But it’s not urgent."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Benigno looks at you: “Do you have a minute?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Help! A doctor, please!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Oh, thank you… and sorry about the noise."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Five people run over. Benigno is OK. He says sorry to everyone."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. Take my hand. I’ll call Camila."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Your hand is warm. Thank you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Camila comes running with two coffees. Benigno smiles."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you want to tell your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "That I love them. And that the dog eats my socks."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You write it all down. A doctor arrives in time. The dog is in trouble."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you talk a lot or a little?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you say “I love you” to your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have grandparents?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you say sorry a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Who listens to you when you feel bad?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the granddaughter"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "sorry"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the hand"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "white, pale"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The first fish"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rufino has a fishing hook in his eyebrow. There is a little blood. Nurse Marta gets the tweezers ready."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "My son goes fishing for the first time. His first fish… is Dad."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And the fish?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The fish is fine. Very fine."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "One, two…"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rufino looks at you: “Now or in three minutes?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Now! Quick!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "OW! Ow, ow, ow!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Marta has the hook. Rufino wants it for his house."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rufino, what’s your son’s name?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Leo. He’s seven and he’s… OW!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The hook is out. Rufino says: “It doesn’t hurt.” It hurts a little."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "One moment. A photo first!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes! It’s my best photo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rufino posts the photo online. It gets a hundred likes."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like fishing?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have children or nephews and nieces?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you do at weekends?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you prefer the countryside or the beach?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have a ridiculous photo?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the fishing hook"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the eyebrow"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the fish"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the son"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "fast"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Soup of the day"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the cafeteria. The menu has been the same for twenty years. A surgeon eats standing up, with blood on his clothes."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Today there’s soup. Soup of the day."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What soup is it?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s a secret."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And yesterday? Secret soup too."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ramona looks at you: “And for you, sweetheart?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "A mystery soup, please."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Very good! You’re brave."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The soup is green. It’s tasty. You don’t know what it is."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The machine has my money."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Oh, yes. The machine is my bank."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ramona gives you free bread. The machine eats another coin."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What’s your secret, Doña Ramona?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Love, lots of salt… and something else."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Federico whispers: “The something else is yesterday’s soup.”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you eat when you’re sad?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you eat standing up or sitting down?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you a good cook?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Is there a gossip at your work?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your favourite food?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the soup"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the set menu of the day"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the coin"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "tasty"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The bill for the air"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Gonzalo works in billing. He is very polite. Jorge has his bill and he is not happy."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Chair: six hours, a hundred pesos. Air: fifty pesos."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Air? I pay for the air?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And a nurse’s smile: twenty pesos."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "But she doesn’t smile!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Gonzalo looks at you: “And you? How are you paying?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The air? I don’t breathe much."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ah, then… forty pesos."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Jorge doesn’t breathe much either. He pays thirty."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’ll pay it all. I want to go home."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Very good! And ten pesos for paying."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You leave with no money, but with a very pretty receipt."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Is there a complaints form?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. The form costs five pesos."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Jorge writes a three-page complaint: fifteen pesos."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like spending money?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is very expensive in your country?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you complain a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you pay by card or in cash?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you save money?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the bill"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "to pay"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the air"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "a hundred, fifty, twenty"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the complaint"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The blood horoscope"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the lab. Andrea labels the tubes. Luis is tired. A machine makes a lot of noise."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "This blood is A positive. Today is a good day for love."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Andrea, that’s not science."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Luis is O negative. Always negative."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Andrea looks at you: “What’s your blood type?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I don’t know. What does my horoscope say?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Hmm… today, no fish."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The cafeteria only has fish. Today you don’t eat."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "That’s ridiculous, Andrea."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "That’s what a B negative would say, of course."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Luis shakes your hand. Now you two are a team."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have lottery numbers?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes: seven, fourteen and zero."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You buy a lottery ticket. You win… a plastic tube."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you read your horoscope?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your star sign?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you a lucky person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you play the lottery?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you a positive or a negative person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the lab"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the tube"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the horoscope"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "luck"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "positive / negative"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The ring in the picture"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karla is in radiology. She doesn’t want to give the ring back to her ex. So the ring is in her stomach."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Here is the ring. And a key. And a very old coin."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The key… it’s my house key!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And the coin?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I don’t know. It’s from before."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karla looks at you: “So what do I do now?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Give the ring back."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Give it back? How? Which way out?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karla and Yolanda laugh a lot. The ex doesn’t want the ring."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s your ring. It’s fine there."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes! It’s very safe here."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karla pats her belly lovingly. Her stomach isn’t so happy."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Call your ex now."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What? No! Oh, the ring!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karla calls. The ex says: “And my key?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have a special gift from someone?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you talk to your exes?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you keep old things?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is in your pockets today?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you wear rings?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the ring"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the stomach"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "old"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the ex"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Opera or reggaeton"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are upstairs, behind a glass window, with Tania. Below, two surgeons operate and argue."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Opera, please!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No! Reggaeton!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Beep, beep, beep!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Look. Now they don’t talk. They work perfectly."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Done. And the holiday week is mine!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Tania looks at you: “What music would you put on?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Salsa, for both of them."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Salsa? Good idea!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The surgeons dance a little. The patient is fine."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I speak into the microphone: “Quiet!”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No! It’s my first year!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Lorenzo and Mercedes look up. Tania is under the chair."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ten pesos: Mercedes wins."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Twenty pesos: the patient wins."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Mercedes wins. Tania pays with a sweet."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What music do you like?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you listen to music when you work?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you argue with your colleagues?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like dancing?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "When is your holiday?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the music"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the glass"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "upstairs / downstairs"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "to argue"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the holidays"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The talking blanket"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the staff room. Doctor Rodrigo is on the sofa, under a blanket. His pager beeps. Someone is heating up fish."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’m not here. Rodrigo isn’t here."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Doctor, the blanket is talking."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s a dream. You are a dream."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Tania looks at you: “What do I do with him?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’ll say: “Rodrigo isn’t here.”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Thank you. You’re my friend."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rodrigo sleeps for two hours. Tania does the work of two."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rodrigo! Up you get!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Ah! Who? What? Where?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Rodrigo goes to the operating room with the blanket on his head."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Well… I’ll lie down on the sofa too."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s my sofa!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Now the sofa has two people and one blanket."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you take naps?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Where do you sleep best?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you do to relax?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you lazy?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like fish?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the sofa"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the dream, sleepiness"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the nap"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the fish (food)"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Fourteen call bells"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are at the nurses’ station. There are fourteen call bells. Margarita is very calm. Roberto arrives for the night shift."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Four-oh-four: the TV remote. Four-oh-five: a wedding. Four-oh-six: the wifi password."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "A wedding?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. He’s ninety. She’s eighty-nine. It’s urgent."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Margarita looks at you: “Will you help me?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes. I’ll take care of the wifi."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Perfect. The password is “patience”."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Room four-oh-six is happy. The others aren’t."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "How are you so calm?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Tea, deep breaths and lots of silence."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Bell number fifteen rings. Margarita’s face doesn’t change."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What about a robot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The robot is in four-oh-seven."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Roberto opens the door: the robot asks for a glass of water."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you do many things at once?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you an organised person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you find it easy to say “no”?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you write lists?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What’s your wifi password? Just kidding: do you like technology?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the call bell"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the wedding"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the password"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "calm"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "four hundred"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "One cigarette, just one"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "In the corridor, Don Mario walks with his drip and a gown open at the back. He’s going to the stairs. He wants to smoke."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Shhh. One cigarette. Just one."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Don Mario, again. And everything is showing, you know?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "At my age, it doesn’t matter."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Mario looks at you: “Got a light?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No. Back to your room, Don Mario."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Oh, you’re worse than my wife."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Mario goes back to bed. The cigarette is under the pillow."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I don’t smoke, but I’ll keep you company."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You’re a friend! Sit here."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You talk about his youth. Lorena brings three coffees."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "One cigarette today, and zero tomorrow."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Deal. Tomorrow is another day."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The next day, Mario says: “Today is another day.”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you have a bad habit?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is hard for you to give up?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like rules?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What small pleasure do you have every day?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are there smokers in your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "to smoke"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the cigarette"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the hospital gown"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the stairs"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "again"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Eighty years old in 402"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Room four-oh-two. Doña Karina turns eighty today. There is cake, balloons, music and twelve cousins."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Happy birthday to me!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Madam, please. My operation was yesterday."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Juan! Cake?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I can’t eat. Or sleep. Or escape."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karina looks at you: “Will you dance with me?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes! Happy birthday, Doña Karina!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Oh, how lovely! More music!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You dance with Karina. Juan puts the pillow over his head."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Juan needs quiet, madam."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Quiet? There’s quiet in the cemetery."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Karina turns the music down… a little. Juan says “thank you”."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "One more song and then, quiet."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "OK… a very long song."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The song lasts twenty minutes. Juan learns the lyrics."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "How do you celebrate your birthday?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are your neighbours noisy?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you share a room with someone?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your favourite cake?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the birthday"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the cake"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the balloons"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the cousins"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "eighty"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "News for Dad"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the ICU. It is very quiet. Paloma’s dad is asleep. He has a lot of machines."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Dad, your sister has a new boyfriend. He’s ugly."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And your team is losing. Three-nil. I’m sorry… no, I’m not sorry."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "He can hear. Keep talking, keep talking."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paloma looks at you: “Is it silly to talk to him?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I don’t say anything. I just listen."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Thank you. It’s good not to be alone."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paloma holds her dad’s hand. The machines go “beep”."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s not silly. Talk some more."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "OK. Dad, the dog is eating your shoes."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "The number on the monitor goes up a little. Doctor Carlos smiles."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your dad like?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "He’s grumpy, funny… and my best friend."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Paloma talks about her dad for an hour. She laughs and cries."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Who do you talk to a lot in your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like football?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Is there a team you really don’t like?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What words do you like to hear?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you call your parents a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "dad"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the sister"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the boyfriend"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the team"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the silence"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Marcelo’s clients"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You are in the morgue. It is cold. Don Marcelo eats his lunch and listens to boleros. Sofía, the new intern, is scared."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Good morning, gentlemen. All well? Very quiet, as always."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Who is he talking to?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "With my clients. But this tag belongs to a living man. He’s on the second floor."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Marcelo looks at you: “Are you hungry?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Yes, thanks. What is there?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Cold chicken. Everything here is cold."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You eat with Marcelo. Sofía watches, white as a sheet."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "No, thanks. Bye!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Already? Usually nobody leaves here."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You run down the corridor. Sofía runs behind you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is your strangest day?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Today. A living client. It’s a problem."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You go up to the second floor. The living man reads his tag and screams."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Are you afraid of the dark?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you know a very strange job?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What do you eat for lunch?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like horror films?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you talk to plants or animals?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the cold"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "lunch"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "alive"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the floor"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "It’s Tuesday"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "In the service corridor, Doña Lorena mops blood off the floor. A stretcher goes by. A doctor runs. She is calm."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Excuse me, where is the lift?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Lift three never comes. Use number one."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "And in room twelve there is a secret."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Lorena looks at you: “And what do you want, sweetheart?”"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "I’ll clean with you."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Oh! Someone is helping me. It’s a miracle."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "You clean together. Lorena tells you three secrets."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is in room twelve?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "A doctor, a nurse and a pizza."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Sofía opens the door. Everyone is eating pizza. Nobody is working."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Thirty years here, sweetheart. Everything is normal."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "A goat walks down the corridor. Lorena keeps mopping."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you clean your home?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you like Tuesdays?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Do you know many secrets?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Who in your life works hard and nobody notices?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "What is the hardest day of your week?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "to clean"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the lift"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "Tuesday"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/levels/a0.mjs",
+      "text": "the corridor"
+    }
+  ]
+}

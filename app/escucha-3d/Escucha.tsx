@@ -81,10 +81,10 @@ export function ListeningBadge({ game, done, onList }: { game: GameId; done: str
   </div>, document.body);
 }
 
-type Props = { game: GameId; level: string; spot: string | null; done: string[]; onDone: (id: string) => void; onClose: () => void };
+type Props = { game: GameId; level: string; spot: string | null; done: string[]; onDone: (id: string) => void; onClose: () => void; onAudio?: (playing: boolean) => void };
 
 /** The listening that opens at a circle; with spot = null it starts with the list. */
-export function ListeningCard({ game, level, spot, done, onDone, onClose }: Props) {
+export function ListeningCard({ game, level, spot, done, onDone, onClose, onAudio }: Props) {
   const [items, setItems] = useState<Listening[] | null>(null);
   const [failed, setFailed] = useState(false);
   const [picked, setPicked] = useState<string | null>(null);
@@ -94,8 +94,8 @@ export function ListeningCard({ game, level, spot, done, onDone, onClose }: Prop
   const item = useMemo(() => {
     if (!items) return null;
     if (picked) return items.find(i => i.id === picked) ?? null;
-    return browsing ? null : listeningFor(items, spot, doneAtOpen);
-  }, [items, picked, browsing, spot, doneAtOpen]);
+    return browsing ? null : listeningFor(items, spot, doneAtOpen, GAMES[game].ownListening);
+  }, [items, picked, browsing, spot, doneAtOpen, game]);
 
   useEffect(() => {
     let live = true;
@@ -127,7 +127,7 @@ export function ListeningCard({ game, level, spot, done, onDone, onClose }: Prop
       {failed && <p className="e3-empty">No se pudieron cargar las escuchas. Revisa la conexión y vuelve a abrir el círculo.</p>}
       {!failed && !items && <p className="e3-empty" role="status">Preparando la escucha…</p>}
       {items && !item && <ListeningList game={game} level={level} items={items} done={done} onPick={setPicked} />}
-      {items && item && <Exercise key={`${level}-${item.id}`} game={game} level={level} item={item} done={done.includes(item.id)}
+      {items && item && <Exercise key={`${level}-${item.id}`} game={game} level={level} item={item} done={done.includes(item.id)} onAudio={onAudio}
         onDone={() => onDone(item.id)} onClose={onClose} onList={() => { setPicked(null); setBrowsing(true); }}
         onOther={items.length > 1 ? () => { const next = items.find(i => i.id !== item.id && !done.includes(i.id)) ?? items[(items.indexOf(item) + 1) % items.length]; setPicked(next.id); } : undefined} />}
     </section>
@@ -149,8 +149,8 @@ function ListeningList({ game, level, items, done, onPick }: { game: GameId; lev
   </div>;
 }
 
-function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }: {
-  game: GameId; level: string; item: Listening; done: boolean; onDone: () => void; onClose: () => void; onList: () => void; onOther?: () => void;
+function Exercise({ game, level, item, done, onDone, onClose, onList, onOther, onAudio }: {
+  game: GameId; level: string; item: Listening; done: boolean; onDone: () => void; onClose: () => void; onList: () => void; onOther?: () => void; onAudio?: (playing: boolean) => void;
 }) {
   const [step, setStep] = useState(0);
   const [listens, setListens] = useState(0);
@@ -167,6 +167,14 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
   const [solved, setSolved] = useState(false);
   const audio = useRef<HTMLAudioElement>(null);
   const body = useRef<HTMLDivElement>(null);
+  const [rate, setRate] = useState(1);
+  const [volume, setVolume] = useState(1);
+  // A0 in a bilingual game shows the English support under the Spanish.
+  const en = Boolean(GAMES[game].bilingualA0 && level === 'A0');
+  useEffect(() => { if (audio.current) audio.current.playbackRate = rate; }, [rate]);
+  useEffect(() => { if (audio.current) audio.current.volume = volume; }, [volume]);
+  useEffect(() => { onAudio?.(playing); }, [playing, onAudio]);
+  useEffect(() => () => onAudio?.(false), [onAudio]);
 
   useEffect(() => { body.current?.scrollTo({ top: 0 }); }, [step]);
   useEffect(() => () => audio.current?.pause(), []);
@@ -189,7 +197,7 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
 
   const player = <div className={`e3-player${step === 0 ? ' is-big' : ''}`}>
     <audio ref={audio} src={audioSrc(game, level, item.id)} preload="auto"
-      onLoadedMetadata={e => { setLength(e.currentTarget.duration || 0); setAudioError(false); }}
+      onLoadedMetadata={e => { setLength(e.currentTarget.duration || 0); setAudioError(false); e.currentTarget.playbackRate = rate; e.currentTarget.volume = volume; }}
       onTimeUpdate={e => setTime(e.currentTarget.currentTime)}
       onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
       onEnded={() => { setPlaying(false); setListens(n => n + 1); }}
@@ -199,6 +207,10 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
     <div className="e3-track">
       <input type="range" min={0} max={length || 1} step={0.1} value={Math.min(time, length || 1)} onChange={e => seek(Number(e.target.value))} aria-label="Posición del audio" />
       <span>{fmt(time)} / {length ? fmt(length) : '–:––'}</span>
+    </div>
+    <div className="e3-tune">
+      <label>Velocidad <select value={rate} onChange={e => setRate(Number(e.target.value))}>{[0.75, 0.9, 1, 1.15].map(r => <option key={r} value={r}>{r === 1 ? 'normal' : `${r}×`}</option>)}</select></label>
+      <label>Volumen <input type="range" min={0} max={1} step={0.05} value={volume} onChange={e => setVolume(Number(e.target.value))} aria-label="Volumen" /></label>
     </div>
     {audioError && <p className="e3-error">El audio no cargó. <button type="button" onClick={() => { setAudioError(false); audio.current?.load(); }}>Reintentar</button></p>}
   </div>;
@@ -216,7 +228,7 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
       {player}
 
       {step === 0 && <div className="e3-step">
-        <p className="e3-context">{item.context}</p>
+        <p className="e3-context">{item.context}{en && item.contextEn && <small className="e3-en" lang="en">{item.contextEn}</small>}</p>
         <div className="e3-listens" aria-live="polite">
           {[0, 1].map(i => <div key={i} className={listens > i ? 'is-done' : listens === i ? 'is-now' : undefined}>
             <span>{listens > i ? '✓' : i + 1}</span><p><b>Escucha {i + 1}</b><small>{i === 0 ? 'La idea general: ¿quién habla, dónde, qué pasa?' : 'Los detalles: nombres, números, decisiones.'}</small></p>
@@ -232,7 +244,7 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
       {step === 1 && <div className="e3-step">
         <h3>Elige la respuesta correcta.</h3>
         <ol className="e3-mc">{item.choice.map((q, qi) => <li key={q.q}>
-          <p>{q.q}</p>
+          <p>{q.q}{en && q.qEn && <small className="e3-en" lang="en">{q.qEn}</small>}</p>
           <div>{q.options.map((option, oi) => {
             const pick = picks[qi];
             const state = pick === null ? '' : oi === q.answer ? ' is-right' : oi === pick ? ' is-wrong' : ' is-off';
@@ -250,7 +262,7 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
       {step === 2 && <div className="e3-step">
         <h3>Elige una pregunta y respóndela en voz alta.</h3>
         <div className="e3-open">{item.open.map((q, i) => <button key={q.q} type="button" aria-pressed={question === i} onClick={() => { setQuestion(i); setModel(false); }}>
-          <span>{i + 1}</span>{q.q}
+          <span>{i + 1}</span>{q.q}{en && q.qEn && <small className="e3-en" lang="en">{q.qEn}</small>}
         </button>)}</div>
         {question !== null && <div className="e3-answer" role="status">
           <p className="e3-say">Ahora tú: responde con dos o tres frases. Usa algo que escuchaste.</p>
@@ -281,8 +293,8 @@ function Exercise({ game, level, item, done, onDone, onClose, onList, onOther }:
       {step === 4 && <div className="e3-step">
         <h3>Lee la transcripción.</h3>
         <p className="e3-tip">Primero en silencio. Después en voz alta, imitando el ritmo de cada voz.</p>
-        <div className="e3-transcript">{item.lines.map((line, i) => <p key={i}><b>{item.speakers[line.s].name}</b>{line.text}</p>)}</div>
-        <dl className="e3-gloss">{item.glossary.map(g => <div key={g.word}><dt>{g.word}</dt><dd>{g.meaning}</dd></div>)}</dl>
+        <div className="e3-transcript">{item.lines.map((line, i) => <p key={i}><b>{item.speakers[line.s].name}</b>{line.text}{en && line.en && <small className="e3-en" lang="en">{line.en}</small>}</p>)}</div>
+        <dl className="e3-gloss">{item.glossary.map(g => <div key={g.word}><dt>{g.word}</dt><dd>{g.meaning}{en && g.en && <small className="e3-en" lang="en">{g.en}</small>}</dd></div>)}</dl>
         <div className="e3-actions">
           {!done && <button type="button" className="e3-primary" onClick={() => { onDone(); onClose(); }}>Terminar y seguir explorando</button>}
           {done && <button type="button" className="e3-primary" onClick={onClose}>Seguir explorando</button>}

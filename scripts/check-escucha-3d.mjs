@@ -4,6 +4,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { GAMES, WORDS, parseGaps, transcriptOf, wordCount } from '../app/escucha-3d/games.mjs';
 import { scanSource } from './neutral-spanish.mjs';
+import { CAST } from '../app/hospital-san-casi-vivo/story.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -34,6 +35,19 @@ export function checkFile(game, level, data, path) {
       countries.add(voice.country); genders.add(voice.gender);
     }
     if (new Set(speakers.map(s => s.voice)).size !== speakers.length) bad(at, 'two speakers share a voice');
+    // The hospital cast keeps one voice per character across every level.
+    if (game === 'hospital') for (const speaker of speakers) {
+      const member = Object.values(CAST).find(c => c.name === speaker.name);
+      if (!member) bad(at, `${speaker.name} is not in the hospital cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
+    if (spec.bilingualA0 && level === 'A0') {
+      if (!text(item.contextEn)) bad(at, 'A0 needs contextEn');
+      if (!(item.lines ?? []).every(line => text(line.en))) bad(at, 'A0: every line needs its English translation in en');
+      if (!(item.choice ?? []).every(q => text(q.qEn))) bad(at, 'A0: every choice needs qEn');
+      if (!(item.open ?? []).every(q => text(q.qEn))) bad(at, 'A0: every open question needs qEn');
+      if (!(item.glossary ?? []).every(g => text(g.en))) bad(at, 'A0: every glossary word needs en');
+    }
     if (speakers.length > 1) dialogues += 1;
     const lines = Array.isArray(item.lines) ? item.lines : [];
     if (lines.length < 2) bad(at, 'needs at least 2 lines');

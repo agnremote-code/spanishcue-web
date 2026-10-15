@@ -183,6 +183,8 @@ Verbal-system content:
 
 Major content collections include GRAMÁTICA, CONVERSACIÓN, ESCUCHA and country-themed conversation content. Do not collapse separate pedagogical collections merely because they share visuals.
 
+Permanent rule (owner, 2026-10-15): every NEW Conversation or Listening class is an immersive 3D world with both modes (Conversación and Comprensión auditiva) in the same world, switchable without leaving it, sharing `app/escucha-3d` instead of copying it. Details and reference implementation in `AGENTS.md` ("New Conversation and Listening classes are 3D worlds").
+
 ## 8. Conversation-family architecture
 
 Follow `docs/conversation-family-authoring.md` and `docs/conversation-family-migration.md`.
