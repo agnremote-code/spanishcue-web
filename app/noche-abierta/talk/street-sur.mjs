@@ -1,5 +1,5 @@
 // Noche abierta · calle · Barrio Sur y Los Galpones: preguntas de conversación general.
-export default {
+const TALK = {
   "sur-balcon": {
     topics: ["ayuda", "relaciones"],
     A1: [
@@ -451,3 +451,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

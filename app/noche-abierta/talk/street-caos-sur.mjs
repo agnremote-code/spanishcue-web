@@ -1,5 +1,5 @@
 // Noche abierta · calle · escenas fuertes (sur): preguntas de conversación general.
-export default {
+const TALK = {
   "estacion-carterista": {
     topics: ["viajes", "mala-suerte"],
     A1: [
@@ -271,3 +271,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

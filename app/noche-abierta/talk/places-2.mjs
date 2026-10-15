@@ -1,5 +1,5 @@
 // Noche abierta · lugares (21–40): cuatro preguntas más por nivel, después de la pregunta personal.
-export default {
+const TALK = {
   "cancelo": {
     topics: ["amistad", "confianza"],
     A1: ["¿Llegas puntual a tus citas?", "¿Te molesta esperar a otras personas?", "¿Prefieres organizar todo o improvisar?", "¿Quién es tu amigo más fiel?"],
@@ -181,3 +181,5 @@ export default {
     C2: ["¿El derecho a la propia imagen es compatible con una cultura donde cualquiera puede fotografiar y difundir cualquier momento?", "¿Es la autoestima de una generación entera rehén de unas métricas que nadie eligió, o exageramos su influencia?", "¿Has tenido que renegociar la confianza con alguien cercano por una imagen o un mensaje compartido sin tu permiso? ¿Qué aprendiste?", "Si pudieras borrar de internet todo rastro de tu pasado, ¿lo harías, o crees que esa huella también forma parte de quien eres?"],
   },
 };
+
+export default TALK;

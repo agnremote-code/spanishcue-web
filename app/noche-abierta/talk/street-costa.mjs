@@ -1,5 +1,5 @@
 // Noche abierta · calle · La Costanera: preguntas de conversación general.
-export default {
+const TALK = {
   "costa-llorando": {
     topics: ["emociones", "suenos"],
     A1: [
@@ -406,3 +406,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

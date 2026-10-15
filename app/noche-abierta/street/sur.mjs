@@ -18,13 +18,13 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Tienes miedo de la gente con cuchillos?", B: "¿Cómo reaccionas cuando alguien te asusta sin querer?", C: "¿Qué te hace desconfiar de un desconocido antes de que diga una palabra?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces cuando tienes mucho miedo?", B: "¿Alguna vez obedeciste a alguien solo por miedo?", C: "¿Hasta dónde llega la obediencia cuando hay un arma de por medio?" } },
-      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Hay alarma de incendio en tu edificio?", B: "¿Qué fue lo más absurdo que pasó en tu edificio o en tu calle?", C: "¿Por qué el pánico colectivo se contagia tan rápido entre vecinos?" } },
-      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Tu barrio es seguro de noche?", B: "¿Qué haces para sentirte seguro cuando caminas de noche?", C: "¿Dónde está la frontera entre la prudencia y la paranoia en una ciudad?" } },
-      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Escribes notas para tus vecinos?", B: "¿Cuándo fue la última vez que dejaste una nota escrita a alguien?", C: "¿Qué comunica una nota a mano que no comunica un mensaje de celular?" } },
-      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Lees antes de dormir?", B: "¿Qué libro le regalarías a una persona mayor que vive sola?", C: "¿Qué libro cambiaría la noche de alguien que no puede dormir?" } },
-      corazon: { start: "corazon-inicio", fx: "corazon", speak: { A: "¿Quién te ayuda cuando estás solo?", B: "¿Cómo consuelas a alguien que ha perdido a una persona querida?", C: "¿Qué gesto pequeño te ha conmovido más de un desconocido?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "evacuacion" },
+      gas: { start: "gas-inicio", fx: "defensa" },
+      lapiz: { start: "lapiz-inicio", fx: "curioso" },
+      libro: { start: "libro-inicio", fx: "risa" },
+      corazon: { start: "corazon-inicio", fx: "corazon" },
     },
     nodes: {
       inicio: {
@@ -621,14 +621,6 @@ const encounters = [
       "corazon-abrazo": { text: { A: "Don Manolo te abraza en el portal. Tiene sus llaves.", B: "Don Manolo te abraza en el portal, con las llaves en la mano.", C: "Don Manolo te abraza en el portal, con las llaves apretadas en la mano y los ojos húmedos." }, change: "abraza", recap: "Don Manolo te abrazó al recibir sus llaves." },
       "corazon-ventana": { text: { A: "Hablas con Don Manolo hasta tarde. La luz de su casa sigue encendida.", B: "Hablas con Don Manolo hasta muy tarde. Su luz se queda encendida, pero esta noche no es por tristeza.", C: "Hablas con Don Manolo hasta que la calle se vacía. Su luz sigue encendida, y por una vez no es insomnio." }, change: "luz", recap: "Hablaste de Rosario con Don Manolo bajo el balcón." },
     },
-    speak: {
-      A1: "¿Dónde pones tus llaves cuando llegas a casa?",
-      A2: "¿Qué perdiste la última vez y cómo lo encontraste?",
-      B1: "¿Qué haces cuando un vecino te pide ayuda?",
-      B2: "¿Qué harías si te quedaras fuera de casa a medianoche?",
-      C1: "¿Qué diferencia hay entre confiar en un vecino y depender de él?",
-      C2: "¿Qué dice de una comunidad la manera en que cuida a sus mayores?",
-    },
   },
   {
     id: "sur-vecino",
@@ -655,13 +647,13 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Qué haces si ves una pelea en tu calle?", B: "¿Alguna vez viste una pelea de verdad y cómo reaccionaste?", C: "¿Qué convierte una discusión de vecinos en una amenaza real?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces si alguien tiene un arma en tu edificio?", B: "¿Cómo reaccionarías si un vecino llevara un arma a una fiesta?", C: "¿Qué pierde una comunidad cuando el miedo entra por la escalera?" } },
-      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Qué llevas si tienes que salir de casa corriendo?", B: "¿Qué fue lo más caótico que pasó en una fiesta a la que fuiste?", C: "¿Por qué el caos y la risa suelen aparecer juntos cuando hay pánico?" } },
-      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Confías en tus vecinos?", B: "¿Qué haces para sentirte seguro en tu propio edificio?", C: "¿Cuándo la desconfianza hacia los vecinos deja de ser prudencia?" } },
-      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Escribes acuerdos en papel?", B: "¿Firmarías un acuerdo escrito con un vecino ruidoso?", C: "¿Por qué un papel firmado cambia la forma en que cumplimos una promesa?" } },
-      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Lees en voz alta a alguien?", B: "¿Qué libro leerías en voz alta para calmar una fiesta?", C: "¿Qué poder tiene una lectura en voz alta sobre un grupo de gente?" } },
-      corazon: { start: "corazon-inicio", fx: "calma", speak: { A: "¿Cómo celebras tu cumpleaños?", B: "¿Cómo consuelas a alguien que tiene un cumpleaños triste?", C: "¿Qué nos reconcilia con un vecino que nos ha molestado?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "evacuacion" },
+      gas: { start: "gas-inicio", fx: "defensa" },
+      lapiz: { start: "lapiz-inicio", fx: "curioso" },
+      libro: { start: "libro-inicio", fx: "risa" },
+      corazon: { start: "corazon-inicio", fx: "calma" },
     },
     nodes: {
       inicio: {
@@ -1285,14 +1277,6 @@ const encounters = [
       "corazon-beso": { text: { A: "Elena sopla la vela. Gonzalo le da un beso en la mejilla. Todos aplauden.", B: "Elena sopla la vela y Gonzalo le da un beso en la mejilla. La fiesta entera aplaude.", C: "Elena sopla la vela y Gonzalo le planta un beso en la mejilla. La fiesta aplaude en el rellano." }, change: "beso", recap: "Elena recibió un beso de cumpleaños de Gonzalo." },
       "corazon-abrazo": { text: { A: "Elena y Gonzalo se abrazan. La música baja. Dos cumpleaños, una paz.", B: "Elena y Gonzalo se abrazan en el rellano. La música baja. Dos cumpleaños y una paz vecinal.", C: "Elena y Gonzalo se abrazan en el rellano. La música baja. Dos cumpleaños, una pared en común y una paz firmada sin papel." }, change: "abraza", recap: "Elena y Gonzalo terminaron abrazados en el rellano." },
     },
-    speak: {
-      A1: "¿Escuchas música fuerte en casa?",
-      A2: "¿Cuándo fue tu última fiesta y qué hiciste?",
-      B1: "¿Cómo reaccionas cuando un vecino hace mucho ruido?",
-      B2: "¿Qué harías si un vecino se quejara de tu fiesta?",
-      C1: "¿Cómo se puede pedir algo con firmeza sin parecer agresivo?",
-      C2: "¿Qué revela un conflicto vecinal sobre nuestra idea del espacio compartido?",
-    },
   },
   {
     id: "sur-estacionamiento",
@@ -1312,13 +1296,13 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Tienes miedo en los estacionamientos de noche?", B: "¿Qué harías si alguien te asustara en un estacionamiento vacío?", C: "¿Qué hace que un lugar vacío de noche nos parezca una amenaza?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces si alguien quiere robar tu auto?", B: "¿Entregarías tus llaves si alguien te amenazara con un arma?", C: "¿Qué revela sobre una persona lo que entrega primero cuando tiene miedo?" } },
-      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Qué alarma suena en tu barrio de noche?", B: "¿Qué fue lo más ruidoso y absurdo que viviste en un estacionamiento?", C: "¿Por qué una situación de pánico puede volverse cómica al contarla?" } },
-      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Llevas algo para defenderte?", B: "¿Qué le darías a una persona mayor para que se sienta segura de noche?", C: "¿Hasta qué punto los objetos de defensa nos tranquilizan o nos inquietan?" } },
-      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Apuntas dónde dejas el auto?", B: "¿Qué sistema usas para no olvidar dónde estacionaste?", C: "¿Qué dice de nosotros la cantidad de cosas que apuntamos para no olvidarlas?" } },
-      libro: { start: "libro-inicio", fx: "curioso", speak: { A: "¿Lees en el auto o en el autobús?", B: "¿Qué libro le leerías a alguien que está perdido y cansado?", C: "¿Qué libro te acompañó en un momento de pérdida?" } },
-      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Qué canción te gusta cantar en el auto?", B: "¿Qué canción te recuerda a una persona querida?", C: "¿Qué canción te devuelve a alguien que ya no está?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "grita" },
+      gas: { start: "gas-inicio", fx: "defensa" },
+      lapiz: { start: "lapiz-inicio", fx: "curioso" },
+      libro: { start: "libro-inicio", fx: "curioso" },
+      corazon: { start: "corazon-inicio", fx: "abrazo" },
     },
     nodes: {
       inicio: {
@@ -1916,14 +1900,6 @@ const encounters = [
       "corazon-abrazo": { text: { A: "Don Emilio te abraza junto a su auto. «Gracias, hijo.»", B: "Don Emilio te abraza junto a su auto verde. «Gracias, hijo. Hoy no fue un día triste.»", C: "Don Emilio te abraza junto a su auto verde. «Gracias, hijo. Hoy el aniversario no dolió.»" }, change: "abraza", recap: "Don Emilio te abrazó en el aniversario de su boda." },
       "corazon-boleros": { text: { A: "Bailan un bolero entre los autos. Don Emilio canta fatal. Es perfecto.", B: "Bailan un bolero entre los autos. Don Emilio canta desafinando y es perfecto.", C: "Bailan un bolero entre las columnas. Don Emilio canta desafinando y la noche es perfecta." }, change: "baila", recap: "Bailaste un bolero con Don Emilio en el estacionamiento." },
     },
-    speak: {
-      A1: "¿De qué color es tu coche o el coche de tu familia?",
-      A2: "¿Qué hiciste la última vez que te perdiste?",
-      B1: "¿Cómo te orientas en un lugar que no conoces?",
-      B2: "¿Cómo ayudarías a una persona mayor que está confundida?",
-      C1: "¿Qué distingue la paciencia de la condescendencia cuando ayudas a alguien?",
-      C2: "¿Qué papel juegan los objetos en nuestra manera de recordar a las personas?",
-    },
   },
   {
     id: "galpones-fabrica",
@@ -1965,13 +1941,13 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Hay seguridad en las fiestas de tu ciudad?", B: "¿Qué harías si alguien sacara un cuchillo en la puerta de una fiesta?", C: "¿Qué distingue el respeto ganado por miedo del respeto ganado por calma?" } },
-      pistola: { start: "pistola-inicio", fx: "policia", speak: { A: "¿Qué haces si ves a la policía en una fiesta?", B: "¿Alguna vez te revisaron en la entrada de un lugar y cómo te sentiste?", C: "¿Qué consecuencias merece llevar un arma a un lugar lleno de gente?" } },
-      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Qué haces si hay una alarma en una fiesta?", B: "¿Qué fue lo más caótico que viviste en una discoteca o un concierto?", C: "¿Por qué una multitud en pánico se comporta como un solo animal?" } },
-      gas: { start: "gas-inicio", fx: "risa", speak: { A: "¿Llevas algo para protegerte cuando sales?", B: "¿Qué precauciones tomas cuando sales de fiesta de noche?", C: "¿Cuándo la prudencia nocturna se convierte en paranoia?" } },
-      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Dibujas a tus amigos?", B: "¿Alguna vez un dibujo o una nota te abrió una puerta?", C: "¿Qué puede conseguir un retrato que no consigue un argumento?" } },
-      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Llevas un libro cuando sales de noche?", B: "¿Qué libro llevarías a una fiesta y por qué?", C: "¿Qué dice de alguien que lleve un libro a una fiesta?" } },
-      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Bailas salsa?", B: "¿Cuándo fue la última vez que alguien te sorprendió con un beso o un abrazo?", C: "¿Qué hace que una persona con un papel duro muestre de pronto su lado tierno?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo" },
+      pistola: { start: "pistola-inicio", fx: "policia" },
+      granada: { start: "granada-inicio", fx: "evacuacion" },
+      gas: { start: "gas-inicio", fx: "risa" },
+      lapiz: { start: "lapiz-inicio", fx: "curioso" },
+      libro: { start: "libro-inicio", fx: "risa" },
+      corazon: { start: "corazon-inicio", fx: "beso" },
     },
     nodes: {
       inicio: {
@@ -2596,14 +2572,6 @@ const encounters = [
       "corazon-beso": { text: { A: "Yolanda te besa otra vez. Entras en La Fábrica con los ojos brillando.", B: "Yolanda te besa una vez más y abre la cuerda. Entras en La Fábrica flotando.", C: "Yolanda te besa de nuevo y levanta la cuerda. Entras en La Fábrica sin tocar el suelo." }, change: "beso", recap: "Yolanda te besó en la puerta de La Fábrica." },
       "corazon-baile": { text: { A: "Bailan salsa en la puerta. Yolanda se ríe. Entran todos juntos.", B: "Bailan salsa en la puerta hasta que termina la canción. Yolanda se ríe y entran todos juntos.", C: "Bailan salsa en la puerta hasta el último compás. Yolanda, riendo, abandona su puesto y entra con todos." }, change: "baila", recap: "Bailaste salsa con Yolanda en la puerta de La Fábrica." },
     },
-    speak: {
-      A1: "¿Qué te gusta hacer en una fiesta?",
-      A2: "¿Adónde fuiste la última vez que saliste a bailar?",
-      B1: "¿Cómo convences a alguien cuando te dice que no?",
-      B2: "¿Qué harías si no te dejaran entrar a un lugar con tus amigos?",
-      C1: "¿Dónde está el límite entre insistir con encanto y presionar a alguien?",
-      C2: "¿Por qué nos importa tanto estar dentro de los lugares de los que otros quedan fuera?",
-    },
   },
   {
     id: "galpones-secreto",
@@ -2630,13 +2598,13 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Te asustas fácil de noche?", B: "¿Alguna vez un malentendido te hizo sacar lo peor de ti?", C: "¿Qué distingue defenderse de atacar cuando el miedo manda?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces si alguien tiene miedo de ti?", B: "¿Cómo reaccionarías si alguien te ofreciera todo lo que tiene por miedo?", C: "¿Qué se rompe en una persona cuando le apuntan con un arma, aunque nadie dispare?" } },
-      granada: { start: "granada-inicio", fx: "huye", speak: { A: "¿Te gustan los globos en las fiestas?", B: "¿Qué fue lo más absurdo que arruinó una sorpresa que preparaste?", C: "¿Por qué una celebración y una catástrofe a veces se parecen tanto desde fuera?" } },
-      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Desconfías de la gente que habla en voz baja?", B: "¿Cuándo fue la última vez que desconfiaste de alguien sin razón?", C: "¿Qué le hace la desconfianza a una amistad que apenas empieza?" } },
-      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Escribes bien sin faltas?", B: "¿Alguna vez ayudaste a alguien a escribir algo importante?", C: "¿Qué importancia tiene la ortografía en una declaración de amor?" } },
-      libro: { start: "libro-inicio", fx: "curioso", speak: { A: "¿Tienes un poema favorito?", B: "¿Qué poema o canción leerías en una pedida de mano?", C: "¿Qué libro regalarías a una pareja que empieza?" } },
-      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Ayudas a tus amigos con sus sorpresas?", B: "¿Cuándo fuiste cómplice de una sorpresa para alguien?", C: "¿Qué revela una pedida de mano sobre los amigos que la preparan?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "huye" },
+      gas: { start: "gas-inicio", fx: "defensa" },
+      lapiz: { start: "lapiz-inicio", fx: "curioso" },
+      libro: { start: "libro-inicio", fx: "curioso" },
+      corazon: { start: "corazon-inicio", fx: "abrazo" },
     },
     nodes: {
       inicio: {
@@ -3262,14 +3230,6 @@ const encounters = [
       "corazon-abrazo": { text: { A: "A medianoche, Iván pide matrimonio. Dicen que sí. Te abrazan como a un amigo.", B: "A medianoche, Iván se arrodilla y su novio dice que sí. Ximena y Tadeo te abrazan como a un amigo de siempre.", C: "A medianoche, Iván se arrodilla y recibe el sí. Ximena y Tadeo te abrazan como si llevaran años conociéndote." }, change: "abraza", recap: "Fuiste cómplice de una pedida de mano y terminaste abrazado." },
       "corazon-beso": { text: { A: "Ximena y Tadeo se besan. Luego Iván pide matrimonio. Dos amores en una noche.", B: "Ximena y Tadeo se besan entre globos. Luego Iván se arrodilla. Dos amores en una sola noche.", C: "Ximena y Tadeo se besan entre globos y, minutos después, Iván se arrodilla. Dos historias de amor en un callejón." }, change: "beso", recap: "Ximena y Tadeo se besaron gracias a ti." },
     },
-    speak: {
-      A1: "¿Qué sorpresa te gusta recibir?",
-      A2: "¿Qué sorpresa preparaste para alguien?",
-      B1: "¿Qué haces cuando escuchas algo que no debías escuchar?",
-      B2: "¿Cómo reaccionarías si descubrieras un secreto de un amigo?",
-      C1: "¿Cuándo está justificado contar algo que oíste por casualidad?",
-      C2: "¿Qué nos lleva a pensar lo peor de los demás antes de conocer el contexto?",
-    },
   },
   {
     id: "galpones-obra",
@@ -3289,13 +3249,13 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Tienes miedo de los lugares oscuros?", B: "¿Qué harías si alguien con un cuchillo te pidiera ayuda de noche?", C: "¿Cómo se gana la confianza de alguien que acaba de asustarse de ti?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Te gustan las películas de policías?", B: "¿Alguna vez alguien te confundió con otra persona y qué pasó?", C: "¿Qué diferencia hay entre proteger a alguien y asustarlo con la excusa de protegerlo?" } },
-      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Qué cosas son peligrosas en una obra?", B: "¿Cuál fue la situación más absurda y peligrosa que viviste?", C: "¿Por qué nos reímos después de un peligro que acaba de pasar?" } },
-      gas: { start: "gas-inicio", fx: "defensa", speak: { A: "¿Qué haces cuando oyes un ruido raro de noche?", B: "¿Alguna vez te defendiste de algo que no era una amenaza?", C: "¿Qué nos enseña el miedo cuando resulta no tener motivo?" } },
-      lapiz: { start: "lapiz-inicio", fx: "curioso", speak: { A: "¿Escribes informes en tu trabajo?", B: "¿Alguna vez ayudaste a alguien a escribir algo que no sabía escribir?", C: "¿Qué dice un informe oficial sobre lo que de verdad pasó?" } },
-      libro: { start: "libro-inicio", fx: "risa", speak: { A: "¿Lees libros de misterio?", B: "¿Qué libro leerías en un turno de noche?", C: "¿Qué tienen en común el miedo de una novela y el miedo real?" } },
-      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Tienes miedo de estar solo de noche?", B: "¿Cómo animas a un amigo que tiene miedo?", C: "¿Qué valor tiene admitir el miedo delante de un desconocido?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "grita" },
+      gas: { start: "gas-inicio", fx: "defensa" },
+      lapiz: { start: "lapiz-inicio", fx: "curioso" },
+      libro: { start: "libro-inicio", fx: "risa" },
+      corazon: { start: "corazon-inicio", fx: "abrazo" },
     },
     nodes: {
       inicio: {
@@ -3892,14 +3852,6 @@ const encounters = [
       "corazon-abrazo": { text: { A: "Benigno te abraza bajo la grúa. Perla come pan.", B: "Benigno te abraza bajo la grúa mientras Perla come pan.", C: "Benigno te abraza bajo la grúa, con Perla comiendo pan a los pies de los dos." }, change: "abraza", recap: "Benigno te abrazó en la obra, con Perla de testigo." },
       "corazon-cafe": { text: { A: "Café del termo bajo la grúa. Benigno, Perla y tú. Sin miedo.", B: "Café del termo bajo la grúa, con Benigno y Perla. El miedo se quedó fuera.", C: "Café del termo bajo la grúa, con Benigno y Perla. El miedo se quedó al otro lado de la valla." }, change: "se-sienta", recap: "Tomaste café con Benigno y Perla en la obra." },
     },
-    speak: {
-      A1: "¿Qué animales hay en tu ciudad?",
-      A2: "¿Qué ruido raro oíste alguna vez de noche?",
-      B1: "¿Qué te da miedo de noche y por qué?",
-      B2: "¿Cómo reaccionarías si un desconocido te pidiera acompañarlo a un lugar oscuro?",
-      C1: "¿Qué distingue la prudencia de la cobardía en situaciones así?",
-      C2: "¿Qué papel tiene la imaginación en lo que sentimos cuando estamos solos de noche?",
-    },
   },
   {
     id: "sur-hamacas",
@@ -3926,10 +3878,10 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Qué haces cuando una pareja discute delante de ti?", B: "¿Cómo reaccionarías si alguien sacara un cuchillo en un parque tranquilo?", C: "¿Qué nos asusta más: el arma o la persona que la sostiene?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces si ves un arma en un parque?", B: "¿Cómo te gustaría que reaccionara la gente si te vieran con un arma por error?", C: "¿Qué consecuencias merece un susto así en un lugar de juego?" } },
-      granada: { start: "granada-inicio", fx: "huye", speak: { A: "¿Qué haces cuando algo te da mucho miedo?", B: "¿Cuál es la broma más pesada que te hicieron?", C: "¿Por qué reímos de lo que nos ha dado pánico, cuando ya pasó?" } },
-      corazon: { start: "corazon-inicio", fx: "corazon", speak: { A: "¿Qué es lo más bonito que alguien hizo por ti?", B: "¿Cómo sabes que alguien te quiere de verdad?", C: "¿Qué se arriesga cuando se elige quedarse junto a alguien?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "huye" },
+      corazon: { start: "corazon-inicio", fx: "corazon" },
     },
     nodes: {
       inicio: {
@@ -4189,14 +4141,6 @@ const encounters = [
       "granada-helicoptero": { text: { A: "Un helicóptero ilumina el parque vacío. Aitana y Joel se esconden tras un árbol.", B: "Un helicóptero ilumina el parque vacío. Aitana y Joel miran desde detrás de un árbol, abrazados.", C: "Un helicóptero barre el parque vacío con su foco. Aitana y Joel miran desde detrás de un árbol, abrazados y sin habla." }, change: "helicoptero", recap: "Una granada en el parque trajo un helicóptero." },
       "corazon-abrazo": { text: { A: "Aitana y Joel te abrazan. Los tres se ríen en los columpios.", B: "Aitana y Joel te abrazan. Los tres acaban riendo y llorando en los columpios, a la vez.", C: "Aitana y Joel te abrazan y los tres acaban riendo y llorando a partes iguales, sentados en los columpios." }, change: "abraza", recap: "Te abrazaron Aitana y Joel en los columpios." },
     },
-    speak: {
-      A1: "¿Dónde quieres vivir en el futuro?",
-      A2: "¿Qué vas a hacer el año que viene?",
-      B1: "¿Qué cambio importante hiciste en tu vida y por qué?",
-      B2: "¿Qué te haría mudarte a otro país: el amor o el trabajo?",
-      C1: "¿Cómo se equilibran los sueños propios con los de la pareja?",
-      C2: "¿Qué parte de nuestras decisiones importantes se basa en el miedo a perder algo?",
-    },
   },
   {
     id: "sur-ventana",
@@ -4216,10 +4160,10 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Con quién cenas cuando estás nervioso?", B: "¿Cómo reaccionas cuando alguien te sorprende con algo peligroso?", C: "¿Qué hace que un gesto amable se convierta en amenaza por un solo objeto?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué harías si un desconocido con un arma llamara a tu puerta?", B: "¿Cómo te comportas cuando tienes miedo pero tienes que parecer tranquilo?", C: "¿Qué valor tiene la hospitalidad ante alguien armado?" } },
-      granada: { start: "granada-inicio", fx: "evacuacion", speak: { A: "¿Qué cuatro cosas salvarías si tuvieras que salir corriendo de tu casa?", B: "¿Qué harías si en una cena familiar alguien gritara «¡granada!»?", C: "¿Por qué un susto compartido une más a una familia que una cena tranquila?" } },
-      corazon: { start: "corazon-inicio", fx: "abrazo", speak: { A: "¿Cuál es el plato de tu abuela que más recuerdas?", B: "¿Quién te hace sentir en casa sin conocerte?", C: "¿Qué rituales de mesa te recuerdan a quien ya no está?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "evacuacion" },
+      corazon: { start: "corazon-inicio", fx: "abrazo" },
     },
     nodes: {
       inicio: {
@@ -4449,14 +4393,6 @@ const encounters = [
       "granada-helicoptero": { text: { A: "Un helicóptero ilumina la calle. La familia espera en la acera con la cena fría.", B: "Un helicóptero ilumina la calle. La familia espera en la acera, con la cena fría y el pan salvado.", C: "Un helicóptero barre la calle con su foco. La familia espera en la acera con la cena fría, el pan salvado y una anécdota para toda la vida." }, change: "helicoptero", recap: "Una granada bajo la ventana de la abuela Nieves trajo un helicóptero." },
       "corazon-beso": { text: { A: "La abuela Nieves te besa en la mejilla. Te vas con una sonrisa y una mandarina.", B: "La abuela Nieves te besa en la mejilla. Te vas con una sonrisa y una mandarina en el bolsillo.", C: "La abuela Nieves te besa en la mejilla y te despide desde la ventana. Te vas con una mandarina y la sensación de tener otra familia." }, change: "beso", recap: "La abuela Nieves te dio un beso desde la ventana." },
     },
-    speak: {
-      A1: "¿Con quién cenas normalmente?",
-      A2: "¿Qué comiste en la última cena familiar?",
-      B1: "¿Cómo son las cenas en tu familia?",
-      B2: "¿Qué diferencias hay entre una cena familiar de antes y una de ahora?",
-      C1: "¿Qué hace que un lugar ajeno se sienta como tu casa?",
-      C2: "¿Qué rituales cotidianos crees que sostienen a una familia?",
-    },
   },
   {
     id: "galpones-foodtruck",
@@ -4476,10 +4412,10 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo", speak: { A: "¿Quién cocina en tu casa?", B: "¿Cómo reaccionas ante alguien que maneja un cuchillo con mucha seguridad?", C: "¿Cuándo un cuchillo es una herramienta y cuándo es un mensaje?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué haces cuando tienes hambre y algo te asusta?", B: "¿Cómo reaccionarías si alguien armado te pidiera comida?", C: "¿Qué se negocia mejor con el estómago vacío o con miedo?" } },
-      granada: { start: "granada-inicio", fx: "huye", speak: { A: "¿Qué plato te da más miedo probar?", B: "¿Cuál fue la comida más extrema que probaste?", C: "¿Por qué huimos de lo que no entendemos y luego lo contamos como anécdota?" } },
-      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Quién cocina con cariño para ti?", B: "¿Qué plato te hace pensar en alguien especial?", C: "¿Qué se pone en la comida cuando se cocina pensando en alguien?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "duelo-cuchillo" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "huye" },
+      corazon: { start: "corazon-inicio", fx: "beso" },
     },
     nodes: {
       inicio: {
@@ -4745,14 +4681,6 @@ const encounters = [
       "granada-helicoptero": { text: { A: "Un helicóptero ilumina Los Galpones. Wen sale de su escondite con la espátula. «¿Qué es esto?»", B: "Un helicóptero ilumina Los Galpones. Wen sale de su escondite con la espátula en alto. «¿Y esto qué es?»", C: "Un helicóptero barre Los Galpones con su foco. Wen sale de su escondite, espátula en alto, hecho un dios de la cocina ofendido." }, change: "helicoptero", recap: "Una granada en el food truck trajo un helicóptero." },
       "corazon-beso": { text: { A: "Wen te sirve el postre y un beso en la mejilla. El bajo de La Fábrica marca el ritmo.", B: "Wen te sirve el postre y te da un beso en la mejilla. El bajo de La Fábrica marca el ritmo del momento.", C: "Wen te sirve el postre, te da un beso en la mejilla y el bajo de La Fábrica pone banda sonora al momento." }, change: "beso", recap: "Chef Wen te dio un beso y un postre." },
     },
-    speak: {
-      A1: "¿Qué comida te gusta más?",
-      A2: "¿Qué comiste ayer por la noche?",
-      B1: "¿Qué plato de tu familia te trae buenos recuerdos y por qué?",
-      B2: "¿Qué prefieres cuando cocinas para alguien: una opinión sincera o una amable?",
-      C1: "¿Cómo se critica el trabajo de alguien sin herirlo?",
-      C2: "¿En qué sentido la cocina puede ser una forma de memoria?",
-    },
   },
   {
     id: "sur-perro",
@@ -4778,10 +4706,10 @@ const encounters = [
     ],
     start: "inicio",
     variants: {
-      cuchillo: { start: "cuchillo-inicio", fx: "retrocede", speak: { A: "¿Tus vecinos se quejan de ruido?", B: "¿Cómo reaccionas cuando un perro ladra mucho a un desconocido?", C: "¿Qué le pasa a un animal protector cuando ve un objeto amenazante?" } },
-      pistola: { start: "pistola-inicio", fx: "manos-arriba", speak: { A: "¿Qué harías para proteger a tu mascota?", B: "¿Cómo te comportas cuando alguien tiene miedo de ti?", C: "¿Qué se pierde en la convivencia cuando la desconfianza se instala?" } },
-      granada: { start: "granada-inicio", fx: "grita", speak: { A: "¿Qué ruido te despierta de noche?", B: "¿Qué fue lo más ruidoso que pasó en tu calle?", C: "¿Por qué un susto colectivo despierta a todo un edificio, pero no a todos de la misma manera?" } },
-      corazon: { start: "corazon-inicio", fx: "beso", speak: { A: "¿Quién te recibe con alegría cuando llegas a casa?", B: "¿Cómo trata un animal a quien le cae bien?", C: "¿Qué dice de una persona que un perro se le tumbe encima en cuanto la conoce?" } },
+      cuchillo: { start: "cuchillo-inicio", fx: "retrocede" },
+      pistola: { start: "pistola-inicio", fx: "manos-arriba" },
+      granada: { start: "granada-inicio", fx: "grita" },
+      corazon: { start: "corazon-inicio", fx: "beso" },
     },
     nodes: {
       inicio: {
@@ -5040,14 +4968,6 @@ const encounters = [
       "pistola-policia": { text: { A: "La policía llega. Te llevan. Iker abraza a Canelo en el balcón.", B: "La policía llega y te lleva. Iker abraza a Canelo en el balcón, con las manos todavía temblando.", C: "La policía llega y te lleva. Iker abraza a Canelo en el balcón, temblando los dos, uno de miedo y el otro de indignación." }, change: "policia", recap: "Una pistola bajo el balcón de Canelo acabó con la policía." },
       "granada-helicoptero": { text: { A: "Un helicóptero ilumina la calle. Canelo ladra al cielo. Iker lo abraza.", B: "Un helicóptero ilumina la calle. Canelo le ladra al cielo y Iker lo abraza, resignado.", C: "Un helicóptero barre la calle con su foco. Canelo le ladra, valiente, y Iker lo abraza con la resignación de un vecino nocturno." }, change: "helicoptero", recap: "Una granada bajo el balcón de Canelo trajo un helicóptero." },
       "corazon-beso": { text: { A: "Canelo te lame la cara. Iker te da las gracias. Hay besos para todos.", B: "Canelo te lame la cara y Iker te da las gracias entre risas. Hay besos para todos.", C: "Canelo te cubre la cara de lametones y Iker, entre risas, te da las gracias. Aquella noche hubo besos para todo el mundo." }, change: "beso", recap: "Canelo te besó y Iker te dio las gracias." },
-    },
-    speak: {
-      A1: "¿Qué mascota tienes o quieres tener?",
-      A2: "¿Qué animal tuviste de pequeño?",
-      B1: "¿Cómo son los vecinos de tu edificio o de tu calle?",
-      B2: "¿Qué normas crees que deberían tener los dueños de perros en la ciudad?",
-      C1: "¿Qué nos aportan los animales que no siempre nos dan las personas?",
-      C2: "¿Qué dice de nuestra época que tanta gente busque compañía en una mascota?",
     },
   },
 ];

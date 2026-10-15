@@ -1,5 +1,5 @@
 // Noche abierta · calle · Mercado nocturno: preguntas de conversación general.
-export default {
+const TALK = {
   "mercado-perro": {
     topics: ["emociones", "ayuda"],
     A1: [
@@ -496,3 +496,5 @@ export default {
     ],
   },
 };
+
+export default TALK;

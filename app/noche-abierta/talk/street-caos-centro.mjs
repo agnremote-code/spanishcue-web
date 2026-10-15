@@ -1,5 +1,5 @@
 // Noche abierta · calle · escenas fuertes (centro): preguntas de conversación general.
-export default {
+const TALK = {
   "centro-choque": {
     topics: ["conflictos", "mala-suerte"],
     A1: [
@@ -271,3 +271,5 @@ export default {
     ],
   },
 };
+
+export default TALK;
