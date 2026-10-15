@@ -7,11 +7,14 @@ import * as L from '../app/hospital-san-casi-vivo/layout.mjs';
 import { choose, closeScene, createState, doneFor, openScene, progress, restore, sceneView, serialise, setFloor, setLevel, undo } from '../app/hospital-san-casi-vivo/engine.mjs';
 import { GAMES, listeningFor } from '../app/escucha-3d/games.mjs';
 import { checkLevel } from '../scripts/check-hospital.mjs';
+import { PATIENTS } from '../app/hospital-san-casi-vivo/patients.mjs';
+import { createBumpClock, bumpLine, pushOut } from '../app/escucha-3d/bump.mjs';
+import { stepPlayer } from '../app/noche-abierta/world3d.mjs';
 
 const listening = (level) => JSON.parse(readFileSync(`app/escucha-3d/content/hospital/${level.toLowerCase()}.json`, 'utf8'));
 
-test('twenty sectors and 21 circles, every circle in a real sector', () => {
-  const required = ['recepcion', 'espera', 'triage', 'guardia', 'ambulancias', 'trauma', 'observacion', 'curaciones', 'laboratorio', 'radiologia', 'internacion', 'habitaciones', 'uci', 'quirofanos', 'enfermeria', 'nucleo', 'cafeteria', 'descanso', 'facturacion', 'morgue'];
+test('twenty-two sectors (with X-ray, CT and delivery rooms) and 21 circles, every circle in a real sector', () => {
+  const required = ['recepcion', 'espera', 'triage', 'guardia', 'ambulancias', 'trauma', 'observacion', 'curaciones', 'laboratorio', 'radiologia', 'internacion', 'habitaciones', 'uci', 'quirofanos', 'enfermeria', 'nucleo', 'cafeteria', 'descanso', 'facturacion', 'morgue', 'tomografia', 'partos'];
   const ids = new Set(L.SECTORS.map(s => s.id));
   for (const id of required) assert.ok(ids.has(id), `sector ${id}`);
   assert.equal(STORY.length, 21);
@@ -25,7 +28,9 @@ test('twenty sectors and 21 circles, every circle in a real sector', () => {
 test('every circle, the elevator and the stairs can be reached on foot', () => {
   const R = 0.35, step = 0.5;
   for (const f of L.FLOORS) {
-    const solids = L.solidsFor(f.id), b = f.bounds;
+    // Standing people are solid too: nobody may block the way to a circle.
+    const people = (L.CROWD[f.id] ?? []).filter(c => !c.lying && !c.sheet).map(c => ({ x0: c.x - 0.27, x1: c.x + 0.27, z0: c.z - 0.27, z1: c.z + 0.27 }));
+    const solids = [...L.solidsFor(f.id), ...people], b = f.bounds;
     const free = (x, z) => x > b.minX + R && x < b.maxX - R && z > b.minZ + R && z < b.maxZ - R && !solids.some(s => x > s.x0 - R && x < s.x1 + R && z > s.z0 - R && z < s.z1 + R);
     const start = f.id === 1 ? L.SPAWN : L.ELEVATOR_ARRIVAL;
     assert.ok(free(start.x, start.z), `floor ${f.id} start is free`);
@@ -58,6 +63,34 @@ test('people move: walkers follow loops and doors exist on every floor', () => {
     }
   }
   assert.ok(L.ANNOUNCEMENTS.length >= 6);
+});
+
+test('everyone you can see has a story at three levels', () => {
+  for (const [floor, list] of Object.entries(L.CROWD)) list.forEach((c, i) => {
+    if (c.sheet) return;
+    const p = PATIENTS[`${floor}-${i}`];
+    assert.ok(p, `${floor}-${i} has a story`);
+    for (const k of ['basic', 'basicAsk', 'who']) assert.ok(p[k].es && p[k].en, `${floor}-${i} ${k} is bilingual for A0`);
+    for (const k of ['mid', 'midAsk', 'high', 'highAsk']) assert.ok(typeof p[k] === 'string' && p[k].length > 10, `${floor}-${i} ${k}`);
+    assert.match(p.basicAsk.es + p.midAsk + p.highAsk, /\?/);
+  });
+  const stories = Object.values(PATIENTS).map(p => p.mid);
+  assert.equal(new Set(stories).size, stories.length, 'no two people tell the same story');
+});
+
+test('you can jump onto furniture, people push back and yell when you crash into them', () => {
+  const bed = [{ x0: -1, x1: 1, z0: -1, z1: 1, top: 0.72 }];
+  let p = { x: 0, z: -1.6, heading: 0, speed: 0, y: 0, vy: 0, jumpHeld: false };
+  for (let i = 0; i < 90; i++) p = stepPlayer(p, { x: 0, y: i < 16 ? 1 : 0, yaw: 0, jump: i === 0, jumpSpeed: 7.6 }, 1 / 60, bed, { minX: -9, maxX: 9, minZ: -9, maxZ: 9 });
+  assert.ok(p.z > -1 && Math.abs(p.y - 0.72) < 1e-6, 'standing on the bed');
+  const out = pushOut(0.1, 0, [{ x: 0, z: 0 }]);
+  assert.equal(out.hit, 0); assert.ok(Math.hypot(out.x, out.z) >= 0.6, 'pushed out of the person');
+  const may = createBumpClock(4, 1);
+  assert.ok(may('a', 0)); assert.ok(!may('a', 2)); assert.ok(!may('b', 0.5)); assert.ok(may('b', 2)); assert.ok(may('a', 5));
+  const voces = JSON.parse(readFileSync('app/escucha-3d/voces.json', 'utf8')).lines;
+  assert.equal(bumpLine(voces, 'f', 3).body, 'f');
+  assert.equal(bumpLine(voces, 'm', 3).id, bumpLine(voces, 'm', 3).id, 'same person, same voice');
+  for (const v of voces) assert.match(v.voice, /^es-[A-Z]{2}-[A-Za-z]+Neural$/);
 });
 
 test('the cast: 43 characters, one distinct regional neural voice each', () => {

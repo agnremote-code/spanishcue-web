@@ -35,7 +35,7 @@ export type Stage = {
 };
 export type Player = { x: number; z: number; heading: number; speed?: number; y?: number; vy?: number; jumpHeld?: boolean };
 export type Step = { x: number; z: number; heading: number; speed: number; y: number; vy: number; jumpHeld: boolean; moving: boolean };
-export type Input = { x: number; y: number; jump?: boolean; sprint?: boolean; nitro?: boolean; walk?: boolean; yaw?: number };
+export type Input = { x: number; y: number; jump?: boolean; jumpSpeed?: number; sprint?: boolean; nitro?: boolean; walk?: boolean; yaw?: number };
 export type Preset = { id: string; distance: number; height: number; ahead: number };
 export type Shot = { camera: { x: number; y: number; z: number }; look: { x: number; y: number; z: number } };
 

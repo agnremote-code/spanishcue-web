@@ -14,7 +14,10 @@ import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } f
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, SPAWN, STAIRS_ARRIVAL, atElevator, atStairs, cameraBlockers, circleStep, floorById, sceneById, sceneFraming, sectorAt, solidsFor, spotAt } from './layout.mjs';
-import { buildHospital, talking as talkingNow, type Hospital } from './hospital3d';
+import { buildHospital, talking as talkingNow, type Hospital, type Npc, type Mover } from './hospital3d';
+import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
+import { CRIES, insultFor, shout } from '../escucha-3d/shout';
+import { setMood } from '../noche-abierta/people3d';
 
 export type Pose = { floor: number; x: number; z: number; heading: number; sector: string | null };
 export type WorldProps = {
@@ -28,7 +31,13 @@ export type WorldProps = {
   intro: boolean;
   onSpot: (id: string) => void;
   onLift: (via: 'lift' | 'stairs') => void;
-  onNear: (near: { kind: 'scene' | 'lift' | 'stairs'; id: string } | null) => void;
+  onNear: (near: { kind: 'scene' | 'lift' | 'stairs' | 'person'; id: string } | null) => void;
+  /** Someone the player walked up to and pressed E on (a key of PATIENTS). */
+  onPerson: (id: string) => void;
+  /** The person whose card is open: they turn to the mascot and talk. */
+  personId: string | null;
+  /** A scream somewhere near: the line (if a voice says it) and how loud. */
+  onCry: (volume: number) => void;
   onPose: (pose: Pose) => void;
   onFail: () => void;
 };
@@ -59,7 +68,7 @@ export default function World3D(props: WorldProps) {
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.2 : 1.75));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.0;
+    renderer.toneMappingExposure = 0.94;
     renderer.shadowMap.enabled = !low;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.domElement.tabIndex = 0;
@@ -72,7 +81,7 @@ export default function World3D(props: WorldProps) {
     const camera = new THREE.PerspectiveCamera(58, 1, 0.08, 900);
     let hospital: Hospital;
     let hero: ReturnType<typeof createHero>;
-    try { hospital = buildHospital(scene, { low, shadows: !low }); hero = createHero(!low); }
+    try { hospital = buildHospital(scene, { low, shadows: !low, cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); } }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
       renderer.dispose(); renderer.domElement.remove();
@@ -85,7 +94,7 @@ export default function World3D(props: WorldProps) {
     const envMap = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     scene.environment = envMap;
     scene.environmentIntensity = 0.3;
-    const hemi = new THREE.HemisphereLight('#e8f2ff', '#30343a', 1.05);
+    const hemi = new THREE.HemisphereLight('#e2ecf6', '#2a2c30', 0.82);
     scene.add(hemi);
     // One fluorescent key light follows the mascot so he and the people near
     // him cast real shadows.
@@ -122,6 +131,9 @@ export default function World3D(props: WorldProps) {
     let inside: string | null = null, still = 0, consumed: string | null = null, nearKey = '';
     let atLift: 'lift' | 'stairs' | null = null, liftConsumed = false;
     let openScene: string | null = null;
+    let nearPerson: Npc | null = null;
+    const mayYell = createBumpClock();
+    const angry: (Npc | Mover)[] = [];
     let ride: { from: number; to: number; start: number; via: 'lift' | 'stairs' } | null = null;
     let introAt = 0;
     let doneKey = '';
@@ -153,7 +165,8 @@ export default function World3D(props: WorldProps) {
       const p = live.current;
       if (p.paused || p.sceneId || ride || p.intro) return;
       if (inside) { consumed = inside; p.onSpot(inside); return; }
-      if (atLift) { liftConsumed = true; p.onLift(atLift); }
+      if (atLift) { liftConsumed = true; p.onLift(atLift); return; }
+      if (nearPerson?.talk && !p.personId) p.onPerson(nearPerson.talk);
     }
     const jump = () => { jumpUntil = clock + 0.15; };
     api.current = { joy, held, clear, interact, jump, nitro: touchNitro };
@@ -296,7 +309,7 @@ export default function World3D(props: WorldProps) {
       }
 
       // Move.
-      const moving = !p.paused && !sceneId && !ride && !p.intro;
+      const moving = !p.paused && !sceneId && !ride && !p.intro && !p.personId;
       const before = player.heading;
       if (moving) {
         const input = inputFrom(held);
@@ -304,19 +317,47 @@ export default function World3D(props: WorldProps) {
         // Corridors ask for a calmer stroll; Shift runs and N is the nitro.
         const nitro = input.nitro || touchNitro.on;
         const factor = input.sprint || nitro ? 1 : 0.7;
-        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false }, dt * factor, solids, floorById(floor).bounds);
-        player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor };
+        // Space jumps; beds, counters, chairs and carts can be climbed on.
         const jumping = input.jump || clock < jumpUntil;
-        if (jumping && !player.jumpHeld && player.y <= 0) player.vy = 6.4;
-        player.jumpHeld = jumping;
-        player.y = Math.max(0, player.y + player.vy * dt - 9 * dt * dt);
-        player.vy = player.y > 0 ? player.vy - 18 * dt : 0;
+        const next = stepPlayer({ ...player, speed: player.speed / factor }, { x: ix, y: iy, yaw, sprint: input.sprint, nitro, walk: false, jump: jumping, jumpSpeed: 7.6 }, dt * factor, solids, floorById(floor).bounds);
+        player = { ...player, x: next.x, z: next.z, heading: next.heading, speed: next.speed * factor, y: next.y, vy: next.vy, jumpHeld: next.jumpHeld };
+        // People are solid, and nobody likes being run into: whoever you crash
+        // into (or who crashes into you) turns, glares and yells at you.
+        if (player.y < 1.2) {
+          const bodies: (Npc | Mover)[] = [...hospital.npcs.filter(n => n.floor === floor && !n.lying), ...hospital.movers.filter(m => m.floor === floor)];
+          const bounds = floorById(floor).bounds;
+          const free = (x: number, z: number) => x > bounds.minX + 0.4 && x < bounds.maxX - 0.4 && z > bounds.minZ + 0.4 && z < bounds.maxZ - 0.4
+            && !solids.some(b => (b.top == null || player.y < b.top) && x > b.x0 - 0.35 && x < b.x1 + 0.35 && z > b.z0 - 0.35 && z < b.z1 + 0.35);
+          const out = pushOut(player.x, player.z, bodies, free);
+          player.x = out.x; player.z = out.z;
+          const who = out.hit >= 0 ? bodies[out.hit] : null;
+          if (who && (next.speed > 1.2 || ('moving' in who && who.moving)) && mayYell(who, clock)) {
+            const line = insultFor(who.body, who.seed);
+            hospital.say(who, line.text, 3.2, true);
+            shout(line, 1);
+            setMood(who.person, 'furious');
+            who.angryUntil = clock + 3.5;
+            if (!angry.includes(who)) angry.push(who);
+            if ('scene' in who || 'talk' in who) {
+              const n = who as Npc;
+              if (!n.seated && !n.lying) { n.heading = Math.atan2(player.x - n.x, player.z - n.z); n.person.root.rotation.y = n.heading; }
+            }
+            player.speed *= 0.3;
+          }
+        }
         const wantFov = baseFov + (nitro && player.speed > 10 ? 10 : 0);
         if (Math.abs(wantFov - camera.fov) > 0.05) { camera.fov += (wantFov - camera.fov) * Math.min(1, dt * 6); camera.updateProjectionMatrix(); }
         if (clock - lastDrag > 1.2) yaw = followYaw(yaw, player.heading, player.speed, dt);
       } else if (!ride) { player.speed = 0; player.y = 0; player.vy = 0; }
       turn = dt > 0 ? angleBetween(before, player.heading) / dt : 0;
       place();
+
+      for (let i = angry.length - 1; i >= 0; i--) {
+        const who = angry[i];
+        if (clock < (who.angryUntil ?? 0)) continue;
+        setMood(who.person, 'baseMood' in who ? who.baseMood : 'neutral');
+        angry.splice(i, 1);
+      }
 
       // Circles, the elevator and the stairs.
       const here = ride ? null : spotAt(floor, player.x, player.z);
@@ -326,8 +367,18 @@ export default function World3D(props: WorldProps) {
       const lift = !sceneId && !ride ? (atElevator(player.x, player.z) ? 'lift' : atStairs(player.x, player.z) ? 'stairs' : null) : null;
       if (lift !== atLift) { atLift = lift; if (!lift) liftConsumed = false; }
       if (atLift && !liftConsumed && player.speed < 0.3 && !p.paused && !p.intro) { liftConsumed = true; p.onLift(atLift); }
-      const near = inside ? `scene:${inside}` : atLift ? `${atLift}:${atLift}` : '';
-      if (near !== nearKey) { nearKey = near; p.onNear(inside ? { kind: 'scene', id: inside } : atLift ? { kind: atLift, id: atLift } : null); }
+      // Anyone with a story within reach can be talked to (E).
+      nearPerson = null;
+      if (!inside && !atLift && !sceneId && !ride) {
+        let best = 1.9;
+        for (const n of hospital.npcs) {
+          if (n.floor !== floor || !n.talk) continue;
+          const d = Math.hypot(n.x - player.x, n.z - player.z);
+          if (d < best) { best = d; nearPerson = n; }
+        }
+      }
+      const near = inside ? `scene:${inside}` : atLift ? `${atLift}:${atLift}` : nearPerson ? `person:${nearPerson.talk}` : '';
+      if (near !== nearKey) { nearKey = near; p.onNear(inside ? { kind: 'scene', id: inside } : atLift ? { kind: atLift, id: atLift } : nearPerson ? { kind: 'person', id: nearPerson.talk! } : null); }
       if (clock - poseAt > 0.2) {
         poseAt = clock;
         p.onPose({ floor, x: player.x, z: player.z, heading: player.heading, sector: sectorAt(floor, player.x, player.z)?.id ?? null });
@@ -336,7 +387,7 @@ export default function World3D(props: WorldProps) {
       // People: they glance at the mascot; the one he talks to turns and talks.
       for (const npc of hospital.npcs) {
         if (npc.floor !== floor) continue;
-        const isTalking = Boolean(sceneId && npc.scene === sceneId && npc.main);
+        const isTalking = Boolean(sceneId && npc.scene === sceneId && npc.main) || Boolean(p.personId && npc.talk === p.personId);
         if (isTalking) talkingNow.add(npc.person); else talkingNow.delete(npc.person);
         const dx = player.x - npc.x, dz = player.z - npc.z;
         const d = Math.hypot(dx, dz);
@@ -356,8 +407,10 @@ export default function World3D(props: WorldProps) {
       if (p.intro) {
         introAt += dt;
         const a = introAt * (reduced ? 0.02 : 0.07);
-        camera.position.set(Math.sin(a) * 16, 3.2 + Math.sin(introAt * 0.25) * 0.8, 52 + Math.cos(a) * 4);
-        camera.lookAt(0, 4.2, 32);
+        // The whole sign in frame, a little to the right of the title card.
+        const wide = camera.aspect > 1.2;
+        camera.position.set((wide ? -17 : -2) + Math.sin(a) * 2, 3.4 + Math.sin(introAt * 0.25) * 0.4, (wide ? 68 : 72) + Math.cos(a) * 1.5);
+        camera.lookAt(wide ? -17 : -2, 7, 32);
       } else if (sceneId) {
         const s = sceneById(sceneId)!;
         const mid = temp.set((player.x + s.npc.x) / 2, y + 1.35, (player.z + s.npc.z) / 2);

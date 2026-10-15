@@ -1,0 +1,834 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-15 17:59Z in the «Hospital San Casi Vivo 3D» thread (root cmsg_01Gr5R4j3t2Yet65UcmhcVhA1vbh2Q2FKVUTE41BZnmqe4): «que pueda interactuar con todos los pacientes que ve, más historias». Every person in the hospital now tells their story; at A0 the class is bilingual, so this manifest approves only the exact English support literals (who / basic / basicAsk .en) of app/hospital-san-casi-vivo/patients.mjs. Owner approval: Ale wrote «apruebo todo no preguntes más, apruebo todo» on 2026-10-14 16:55Z (project message cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe), a standing approval for English copy in A0 work.",
+  "additions": [
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Laundress with a museum of lost objects"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I wash the hospital sheets. There is everything in the sheets: teeth, rings and a glass eye. I have a box with a hundred things."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you lose a lot of things?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Grandad who has been waiting for years"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am here for my knee. I have been waiting since 2019. Now my knee is fine, but the other one is bad."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you wait a long time for the doctor?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Influencer livestreaming her appendicitis"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Hi, I am live. My tummy hurts a lot. I have ten thousand people watching my pain."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you use your phone a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man who sleeps here without being ill"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "What? Who are you? I was asleep. I am not ill, I sleep here because it is free."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you sleep well at night?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man hit by the welcome sign"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Look at my head. A sign fell on me. The sign says «Welcome»."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Does your head hurt sometimes?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Reader of magazines from 1998"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am reading a magazine. It is very old, from 1998. All the magazines here are old."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you read magazines or books?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Wife of the man who swallowed the remote"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am sad. My husband ate the TV remote. Now I can't change the channel."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you watch a lot of TV?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Young man who lost to his grandmother"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I have a broken arm. I arm-wrestled my grandmother. My grandmother is ninety and she won."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you strong?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Son-in-law with his eternal mother-in-law"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am here with my mother-in-law. She is ninety-eight. She is very well. I am very unwell."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have grandparents?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Grandma who sells her queue number"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Oh! Why are you waking me up? I have number 14. I will sell you my number for ten pesos."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you want to buy my number?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man on hold with his insurance"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am talking to my health insurance. I have been on hold for four hours. The music is very bad."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "What music do you listen to?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Cook with a finger in the cool box"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am a cook. I cut my finger with a knife. My finger is here, in the cool box, with the chorizo."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Can you cook?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Lady declared dead by mistake"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am alive! Look at me! The computer says I am dead. But I talk and I shout!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you think I am alive?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Lawyer who wanted to sue the hospital"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am a lawyer. I am very angry. I want to sue the hospital, but the hospital is suing me."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you get angry easily?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Woman who cannot sit down"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I won't sit down, thanks. I have a problem in my bottom. I have been standing since six."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you tired today?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Pizza delivery man with no customer"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am bringing a pizza for room 304. But nobody pays. The patient is not here any more."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you like pizza?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Woman phoning reception from reception"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "The receptionist is there, three metres away. But she doesn't talk to people. She only answers the phone. That is why I am calling her."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you prefer talking on the phone or in person?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Builder with a nail in his head"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I have a nail in my head. It doesn't hurt. Now I speak like a poet. I am very happy."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you write poems?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man living on a stretcher"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I have been on this stretcher for three days. My gown is open at the back. Everybody sees my bottom."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you cold?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Bleeding biker worried about her bike"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I had an accident on my motorbike. I have blood on my leg. Is my bike OK?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have a motorbike or a car?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Old man faking it for the jelly"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Shh. I'm not ill. I come for the jelly. Here the jelly is free and it's red."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "What is your favourite dessert?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Allergic to the hospital food"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "My face is very big. I ate the hospital soup. I am allergic to the soup."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have any allergies?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Football fan who fell off the roof"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Ouch, it hurts a lot! I fell off my roof. I have blood on my head. And I didn't see the final."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you watch football?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Nurse who has been awake 36 hours"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am a nurse. I have been working since yesterday. I don't sleep. I drink coffee from a urine cup. It is clean."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "How many hours do you sleep?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient who adjusts her own drip"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I have a drip in my arm. I change the speed. Fast, slow... It's like a cocktail!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you drink a lot of water?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient forgotten in observation"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am in observation. But nobody observes me. I observe the doctors."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you watch people?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Nurse who fears the cafeteria"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am a nurse. I am on my break. I don't eat the soup. The soup is dangerous."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you eat in the cafeteria?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Godson waiting for the inheritance"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "My godfather is very ill. He is rich. I am here every day. I am a good godson, right?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you visit your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Junior doctor who operates from tutorials"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I am a doctor. I am twenty-six. Today I did my first operation. I watched a video online."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you learn things from videos?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Hypochondriac planning his own funeral"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm talking to the funeral home. I'm planning my funeral. I'm fine, but I have a bit of a cough."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you go to the doctor a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Woman with an absurd bill"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I have the hospital bill. It is very expensive. They charge for the air I breathe!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you pay a lot of bills?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Son looking for his lost father"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm looking for my dad. He's in the hospital, but nobody knows where. I talk to lots of people."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you get lost in big places?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man waiting for a rubber stamp"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Eh? Is it my turn yet? I need a stamp on this paper. I have been waiting two months."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you patient?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Kidney donor with absurd paperwork"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I want to give a kidney to my brother. But the form asks for a photocopy of the kidney."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient smoking thin air outside"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm outside with my drip. I don't smoke any more. Now I smoke air. My lungs are very bad."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you smoke?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man phoning the hospital from outside"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm in the street, ten metres from the door. I'm phoning the hospital. I've been on hold with music for three hours."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you wait on the phone a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man who tripped over a sign"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm on the floor. My leg hurts a lot. There's a yellow sign: «Wet floor»."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you read the yellow signs?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient hit by the ceiling"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I've got blood on my head. I came for a toothache. Here a piece of ceiling falls on me."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you look at the ceiling when you go into a building?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Woman who came in with a nosebleed"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Ouch, my arm! I came by ambulance for a nosebleed. The ambulance brakes and I fly."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you afraid of ambulances?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Paramedic trying to quit smoking"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a paramedic. I've got a cigarette, but it isn't lit. Today is my fortieth day without smoking."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have a bad habit?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Man who swallowed his house key"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm in X-ray. I've got a key in my stomach. My wife is outside and can't get into the house."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Where do you keep your house keys?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Claustrophobic patient in the CT scanner"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm very scared. The machine is small and noisy. I don't like being in here."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you afraid of small spaces?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Technician reading the manual"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a CT technician. I'm reading the machine's manual. It's my first week."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you read manuals?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Woman who has been waiting since Tuesday"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "My leg is broken. I've been waiting here since Tuesday. Today is Saturday."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Are you patient when you wait, or do you get angry?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Young man livestreaming"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Hi, I'm live on my phone. My friend has a broken arm. I've got twelve followers."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you want to be in my video?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Freshly operated man checking his legs"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "They operated on me today. I've got a drip in my arm. On one leg there's a message: «Not this one»."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you sleep well after a hard day?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient lying awake on the table"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm on the operating table. I'm awake. The anaesthetist isn't here."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Can you count from one to ten in Spanish?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Surgeon with a head torch"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a surgeon. There's no light in the operating theatre. I use a camping torch."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have a torch at home?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Eighty-one-year-old surgeon"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm eighty-one. I've been a surgeon for fifty years. My hands shake, but only a little."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "How old is the oldest person in your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Half-asleep anaesthetist"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm an anaesthetist. I'm very sleepy. I'm sitting because I can't stand up."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "How many hours do you sleep at night?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Nurse forty hours into her shift"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a nurse. I've been working since yesterday. My coffee is gone: someone stole the machine."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you drink coffee every day?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Doctor reading the obituaries"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a doctor. I read the newspaper every morning. I read the page about the dead."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Which part of the newspaper do you read first?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Medical student in the viewing gallery"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a medical student. I'm watching the operation through the window. Today is my first day."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Can you look at blood without a problem?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Ninety-four-year-old patient"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm ninety-four. I've lived in this room for two years. It's my home."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you live alone or with your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Hypochondriac who is finally ill"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I always say I'm ill. Now I'm really ill. Nobody believes me."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you go to the doctor a lot?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient «under observation» for weeks"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm under observation. I've been here for three weeks. I don't know what's wrong with me."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you ask the doctor a lot of questions?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Patient trapped by his own bed"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "My head is bandaged. My bed is electric, but it's crazy. It folds up by itself."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you sleep in a big bed or a small one?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Funeral home owner, now a patient"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I own a funeral home. Now I'm ill in hospital. I've got discount cards."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "It's free. Do you want a card?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mother in the middle of labour"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Ouch! My baby is coming now! I'm in a lot of pain. My husband is on the floor."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you have brothers or sisters?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Midwife with four thousand births"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm a midwife. I help babies to be born. Get that man up off the floor!"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you know where you were born?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Father who fainted at the birth"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Where am I? I'm on the floor. My wife is having a baby and I'm sleepy."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you faint when you see blood?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Grandmother crying in the delivery room"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm going to be a grandmother. I'm very happy and very sad. The baby isn't going to have my name."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you know why you have your name?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Intubated patient with a whiteboard"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "(Writes on a whiteboard) I can't talk. I've got a tube in my mouth. I'm fine, thanks."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "(Writes) Do you have nice handwriting?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Intubated patient who mumbles"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mmm… Hi. I don't speak well. I've got a tube. I blink: once is «yes», twice is «no»."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mmm… Do you understand me?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Hospital director, now a patient"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mmm… I'm the hospital director. Now I'm a patient. The bed is very bad."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Mmm… What do you think of the hospital?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Woman who has «died» twice"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm alive. But the hospital says I've died twice. The man from the morgue visits me every day."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you believe in ghosts?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Nurse who talks to the machines"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm an intensive care nurse. The machines have names. This one is called Lupita."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you give names to your things?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Daughter who flew fourteen hours"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm Doña Pilar's daughter. I live far away, in another country. My mum is fine and I'm very tired."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you live near your family?"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Son who visits every day"
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "I'm Doña Pilar's son. I come here every day. I'm hugging my sister, but I'm nervous."
+    },
+    {
+      "path": "app/hospital-san-casi-vivo/patients.mjs",
+      "text": "Do you hug your family a lot?"
+    }
+  ]
+}

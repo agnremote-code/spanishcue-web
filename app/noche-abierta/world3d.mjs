@@ -321,13 +321,14 @@ export function stepPlayer(player, input, dt, boxes = SOLIDS, bounds = WORLD_BOU
   let { x, z } = player;
   const oldY = player.y || 0;
   const contains = (b, px, pz) => px > b.x0 - PLAYER_RADIUS && px < b.x1 + PLAYER_RADIUS && pz > b.z0 - PLAYER_RADIUS && pz < b.z1 + PLAYER_RADIUS;
-  const support = boxes.reduce((h, b) => b.vehicle && contains(b, x, z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h, b.top ?? 1.6) : h, 0);
+  // Any box with a `top` (a car, a bed, a counter) can be jumped onto and stood on.
+  const support = boxes.reduce((h, b) => b.top != null && contains(b, x, z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h, b.top ?? 1.6) : h, 0);
   let vy = player.vy || 0;
-  if (input.jump && !player.jumpHeld && oldY <= support + 0.001) vy = 10.5;
+  if (input.jump && !player.jumpHeld && oldY <= support + 0.001) vy = input.jumpSpeed ?? 10.5;
   let y = oldY + vy * step - 9 * step * step;
   vy -= 18 * step;
   if (y <= support) { y = support; vy = 0; }
-  const activeBoxes = boxes.filter(b => !b.vehicle || y < (b.top ?? 1.6) - 0.001);
+  const activeBoxes = boxes.filter(b => b.top == null || y < b.top - 0.001);
   // A moving car can enter the avatar's footprint. Resolve that overlap
   // toward the nearest clear side instead of rejecting every escape step.
   for (const b of activeBoxes) {
@@ -341,7 +342,7 @@ export function stepPlayer(player, input, dt, boxes = SOLIDS, bounds = WORLD_BOU
   }
   if (!blocked(x + dx, z, activeBoxes, PLAYER_RADIUS, bounds)) x += dx;
   if (!blocked(x, z + dz, activeBoxes, PLAYER_RADIUS, bounds)) z += dz;
-  const floor = boxes.reduce((h,b) => b.vehicle && contains(b,x,z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h,b.top ?? 1.6) : h, 0);
+  const floor = boxes.reduce((h,b) => b.top != null && contains(b,x,z) && oldY >= (b.top ?? 1.6) - 0.001 ? Math.max(h,b.top ?? 1.6) : h, 0);
   if (y <= floor) { y = floor; vy = 0; }
   const moved = Math.hypot(x - player.x, z - player.z);
   // Against a wall the legs stop too: speed is what actually moved.

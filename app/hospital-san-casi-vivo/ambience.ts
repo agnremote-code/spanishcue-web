@@ -4,20 +4,21 @@
 // mix; the mix glides when you walk into another sector. While a listening
 // plays the whole bed ducks so the voices stay clear.
 
-type Mix = { hum: number; murmur: number; rumble: number; drone: number; beep: number; phone: number; clink: number; wheels: number };
-const SILENT: Mix = { hum: 0, murmur: 0, rumble: 0, drone: 0, beep: 0, phone: 0, clink: 0, wheels: 0 };
+type Mix = { hum: number; murmur: number; rumble: number; drone: number; beep: number; phone: number; clink: number; wheels: number; scream: number };
+const SILENT: Mix = { hum: 0, murmur: 0, rumble: 0, drone: 0, beep: 0, phone: 0, clink: 0, wheels: 0, scream: 0 };
 const m = (part: Partial<Mix>): Mix => ({ ...SILENT, ...part });
 
-// Levels are gains (0–1); beep, phone, clink and wheels are events per minute.
+// Levels are gains (0–1); beep, phone, clink, wheels and scream (a distant
+// cry somewhere down the corridor) are events per minute.
 export const MIXES: Record<string, Mix> = {
-  lobby: m({ hum: 0.25, murmur: 0.45, phone: 3, wheels: 2 }),
-  crowd: m({ hum: 0.2, murmur: 0.8, phone: 1, wheels: 1 }),
-  ward: m({ hum: 0.3, murmur: 0.3, beep: 50, wheels: 3 }),
-  bay: m({ hum: 0.1, murmur: 0.2, rumble: 0.5, wheels: 5 }),
-  trauma: m({ hum: 0.35, murmur: 0.35, beep: 110, wheels: 4 }),
+  lobby: m({ hum: 0.25, murmur: 0.45, phone: 3, wheels: 2, scream: 1.5 }),
+  crowd: m({ hum: 0.2, murmur: 0.8, phone: 1, wheels: 1, scream: 2 }),
+  ward: m({ hum: 0.3, murmur: 0.3, beep: 50, wheels: 3, scream: 1 }),
+  bay: m({ hum: 0.1, murmur: 0.2, rumble: 0.5, wheels: 5, scream: 2 }),
+  trauma: m({ hum: 0.35, murmur: 0.35, beep: 110, wheels: 4, scream: 4 }),
   cafe: m({ hum: 0.15, murmur: 0.6, clink: 18 }),
   office: m({ hum: 0.35, murmur: 0.2, phone: 6 }),
-  corridor: m({ hum: 0.35, murmur: 0.15, wheels: 4 }),
+  corridor: m({ hum: 0.35, murmur: 0.15, wheels: 4, scream: 1.5 }),
   street: m({ rumble: 0.7, murmur: 0.15 }),
   lab: m({ hum: 0.45, beep: 12, rumble: 0.15 }),
   rest: m({ hum: 0.2, murmur: 0.1, clink: 4 }),
@@ -28,6 +29,7 @@ export const MIXES: Record<string, Mix> = {
   laundry: m({ hum: 0.2, rumble: 0.6 }),
   morgue: m({ hum: 0.15, drone: 0.6 }),
   basement: m({ hum: 0.3, drone: 0.2, rumble: 0.2 }),
+  birth: m({ hum: 0.25, murmur: 0.3, beep: 40, scream: 6 }),
 };
 
 export type Ambience = {
@@ -37,6 +39,8 @@ export type Ambience = {
   duck: (level: number) => void;
   setMuted: (muted: boolean) => void;
   chime: () => void;
+  /** A human-sounding scream: near (volume 1) or far down the corridor. */
+  scream: (volume?: number) => void;
   dispose: () => void;
 };
 
@@ -132,6 +136,37 @@ export function createAmbience(): Ambience {
     if (chance(mix.phone)) for (let i = 0; i < 4; i++) { tone(820, 0.08, 0.035, 'square', i * 0.1); tone(640, 0.08, 0.03, 'square', i * 0.1 + 0.05); }
     if (chance(mix.clink)) burst(3800 + Math.random() * 1500, 0.12, 0.25);
     if (chance(mix.wheels)) { const len = 1.4 + Math.random(); burst(1800, len, 0.05); burst(240, len, 0.08); }
+    if (chance(mix.scream)) scream(0.18 + Math.random() * 0.2);
+  }
+
+  // A scream: a voice-like sawtooth that jumps up, wavers and falls, through
+  // vowel formants ("aaah"), with breath noise on top.
+  function scream(volume = 1) {
+    if (!ctx || muted) return;
+    const c = ctx, t = c.currentTime;
+    const len = 0.9 + Math.random() * 0.9;
+    const base = 330 + Math.random() * 280;
+    const o = c.createOscillator(); o.type = 'sawtooth';
+    o.frequency.setValueAtTime(base * 0.7, t);
+    o.frequency.exponentialRampToValueAtTime(base * 1.25, t + 0.12);
+    o.frequency.exponentialRampToValueAtTime(base, t + len * 0.6);
+    o.frequency.exponentialRampToValueAtTime(base * 0.55, t + len);
+    const vib = c.createOscillator(); vib.frequency.value = 6 + Math.random() * 3;
+    const vibGain = c.createGain(); vibGain.gain.value = base * 0.04;
+    vib.connect(vibGain).connect(o.frequency);
+    const g = c.createGain();
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.16 * volume, t + 0.06);
+    g.gain.setValueAtTime(0.16 * volume, t + len * 0.7); g.gain.exponentialRampToValueAtTime(0.0001, t + len);
+    for (const [f, q, v] of [[850, 7, 1], [1250, 8, 0.7], [2900, 9, 0.35]] as const) {
+      const bp = c.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = f; bp.Q.value = q;
+      const fg = c.createGain(); fg.gain.value = v;
+      o.connect(bp).connect(fg).connect(g);
+    }
+    // Far screams lose their highs.
+    const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 900 + 5000 * volume;
+    g.connect(lp).connect(ducker);
+    o.start(t); vib.start(t); o.stop(t + len + 0.05); vib.stop(t + len + 0.05);
+    burst(1600, len * 0.8, 0.04 * volume);
   }
 
   function chime() {
@@ -145,6 +180,7 @@ export function createAmbience(): Ambience {
     duck: (level) => { if (ctx) ducker.gain.setTargetAtTime(level, ctx.currentTime, 0.25); },
     setMuted: (on) => { muted = on; if (ctx) master.gain.setTargetAtTime(on ? 0 : 0.5, ctx.currentTime, 0.2); },
     chime,
+    scream,
     dispose: () => { window.clearInterval(timer); void ctx?.close(); ctx = null; },
   };
 }
