@@ -5,7 +5,7 @@
 // can go back; what was already asked stays marked while the class goes on,
 // even if the scene is closed and opened again. Shared by the 3D classes:
 // each class styles `.gq` inside its own card and passes how to render a
-// question (bilingual at A0, for example).
+// question (with its translation underneath, for example).
 import { useState, type ReactNode } from 'react';
 
 type Progress = { at: number; seen: number[] };
