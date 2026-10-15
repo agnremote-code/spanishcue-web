@@ -19,7 +19,7 @@ export const QUESTIONS_PER_SET = 5;
 // Spanish words per question, by level: short and spoken at A0–A1, longer
 // and more nuanced at C1–C2.
 export const WORD_LIMITS = Object.freeze({
-  A0: [2, 10], A1: [2, 12], A2: [3, 16], B1: [4, 22], B2: [5, 28], C1: [6, 34], C2: [6, 40],
+  A0: [2, 12], A1: [2, 12], A2: [3, 16], B1: [4, 22], B2: [5, 28], C1: [6, 34], C2: [6, 40],
 });
 
 // Naming a weapon turns a life question back into the object.
@@ -44,7 +44,9 @@ export function similarity(a, b) {
 // Two questions this close read as the same question.
 export const NEAR_DUPLICATE = 0.6;
 
-const isQuestion = (text) => /¿[^¿?]+\?/.test(text) && /\?["»”)]?$/.test(text.trim()) && (text.match(/¿/g) || []).length <= 2;
+// One open question (two short ones at most), optionally followed by a short
+// spoken prompt: «¿Tienes una cafetería favorita? Cuenta cómo la conociste.»
+const isQuestion = (text) => /¿[^¿?]+\?/.test(text) && /\?["»”)]?(\s+[A-ZÁÉÍÓÚÑ][^¿?]{2,90}\.)?$/u.test(text.trim()) && (text.match(/¿/g) || []).length <= 2;
 
 /**
  * Checks one set of questions for one level. `es` reads the Spanish half of a

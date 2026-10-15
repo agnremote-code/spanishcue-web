@@ -322,7 +322,7 @@ export default {
       "¿Trabajas de día o de noche?",
       "¿Duermes bien?",
       "¿Hablas con las personas de las tiendas?",
-      "¿Qué compras siempre en la misma tienda?",
+      "¿Tienes una tienda favorita en tu barrio?",
     ],
     A2: [
       "¿Qué compraste la última vez en un quiosco?",
