@@ -1735,6 +1735,116 @@
    "hash": "4f318839e51889ca4613",
    "seconds": 111.68,
    "src": "/audio/escucha-3d/reino-c2-teobaldo.mp3"
+  },
+  "voces/ar-f": {
+   "hash": "b879b6de8791e5357092",
+   "seconds": 4.49,
+   "src": "/audio/escucha-3d/voces-ar-f.mp3"
+  },
+  "voces/ar-m": {
+   "hash": "02d8a0e4e9b1e7ac98cc",
+   "seconds": 3.85,
+   "src": "/audio/escucha-3d/voces-ar-m.mp3"
+  },
+  "voces/cl-f": {
+   "hash": "015a5352506707102a6b",
+   "seconds": 3.49,
+   "src": "/audio/escucha-3d/voces-cl-f.mp3"
+  },
+  "voces/cl-m": {
+   "hash": "570fe2072df1fba8999a",
+   "seconds": 3.41,
+   "src": "/audio/escucha-3d/voces-cl-m.mp3"
+  },
+  "voces/co-f": {
+   "hash": "5a619870f07c08f83b29",
+   "seconds": 4.04,
+   "src": "/audio/escucha-3d/voces-co-f.mp3"
+  },
+  "voces/co-m": {
+   "hash": "82150d33134d028eabd8",
+   "seconds": 3.97,
+   "src": "/audio/escucha-3d/voces-co-m.mp3"
+  },
+  "voces/cu-f": {
+   "hash": "b57b384578814ab2a24f",
+   "seconds": 3.75,
+   "src": "/audio/escucha-3d/voces-cu-f.mp3"
+  },
+  "voces/cu-m": {
+   "hash": "4024aa44d845268aaf39",
+   "seconds": 3.65,
+   "src": "/audio/escucha-3d/voces-cu-m.mp3"
+  },
+  "voces/es-f": {
+   "hash": "5a4e54087c6dfa24ad65",
+   "seconds": 2.72,
+   "src": "/audio/escucha-3d/voces-es-f.mp3"
+  },
+  "voces/es-m": {
+   "hash": "1be9271260451b833d82",
+   "seconds": 4.28,
+   "src": "/audio/escucha-3d/voces-es-m.mp3"
+  },
+  "voces/grito-1": {
+   "hash": "7f9dd4acf6cffcac3004",
+   "seconds": 3.37,
+   "src": "/audio/escucha-3d/voces-grito-1.mp3"
+  },
+  "voces/grito-2": {
+   "hash": "309eec84ced799118ec3",
+   "seconds": 5.0,
+   "src": "/audio/escucha-3d/voces-grito-2.mp3"
+  },
+  "voces/grito-3": {
+   "hash": "378e4ca197877207ba6a",
+   "seconds": 4.33,
+   "src": "/audio/escucha-3d/voces-grito-3.mp3"
+  },
+  "voces/grito-4": {
+   "hash": "595fcba42f6314650f9c",
+   "seconds": 3.77,
+   "src": "/audio/escucha-3d/voces-grito-4.mp3"
+  },
+  "voces/grito-5": {
+   "hash": "fdbb366507d6046b8fad",
+   "seconds": 3.17,
+   "src": "/audio/escucha-3d/voces-grito-5.mp3"
+  },
+  "voces/grito-6": {
+   "hash": "fe6935fb511f6cac7eb1",
+   "seconds": 3.92,
+   "src": "/audio/escucha-3d/voces-grito-6.mp3"
+  },
+  "voces/mx-f": {
+   "hash": "5daa9ead555ab22e68d8",
+   "seconds": 3.68,
+   "src": "/audio/escucha-3d/voces-mx-f.mp3"
+  },
+  "voces/mx-m": {
+   "hash": "18a7018835e52538eccd",
+   "seconds": 4.18,
+   "src": "/audio/escucha-3d/voces-mx-m.mp3"
+  },
+  "voces/pe-f": {
+   "hash": "7962fc2c026a475cc30a",
+   "seconds": 2.98,
+   "src": "/audio/escucha-3d/voces-pe-f.mp3"
+  },
+  "voces/pe-m": {
+   "hash": "b6658554029b8140b480",
+   "seconds": 4.37,
+   "src": "/audio/escucha-3d/voces-pe-m.mp3"
+  },
+  "voces/ve-f": {
+   "hash": "9ec818dcf736a2824b79",
+   "seconds": 3.05,
+   "src": "/audio/escucha-3d/voces-ve-f.mp3"
+  },
+  "voces/ve-m": {
+   "hash": "976d2c3587acddcdfea8",
+   "seconds": 3.63,
+   "src": "/audio/escucha-3d/voces-ve-m.mp3"
   }
  }
 }
