@@ -11,7 +11,7 @@ export type Media =
   | { type: 'people'; people: { name: string; wants: string; reason: string }[] };
 export type Beat = {
   kind: 'choose' | 'result' | 'talk' | 'change' | 'inspect' | 'task';
-  label?: string; context?: string; media?: Media; prompt?: string; chosen?: string | null;
+  label?: string; context?: string; media?: Media; prompt?: string; talk?: string[]; chosen?: string | null;
   options?: { id: string; label: string; facts?: string[] }[];
 };
 

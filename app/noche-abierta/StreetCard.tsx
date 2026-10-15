@@ -2,7 +2,8 @@
 
 // The card of a street scene: who is there and what they say, three ways to
 // answer (plus the learner's object when it fits), what happens next, and at
-// the end one question about the learner's own life to answer aloud.
+// the end a general conversation: five open questions about the learner's own
+// life that the teacher can go through, pick from and go back to.
 import { useEffect, useRef, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import Bi from './Bi';
 import { enOf, esOf } from './bilingual.mjs';
@@ -10,6 +11,7 @@ import { speakLines, stopSpeaking } from './voice';
 import type { Level } from './engine.mjs';
 import { encounterById, itemById, streetView, type StreetState } from './street.mjs';
 import ItemIcon from './ItemIcon';
+import GeneralQuestions from '../conversacion-general/GeneralQuestions';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 
@@ -73,8 +75,8 @@ export default function StreetCard({ street, level, teacher, onChoose, onBack, o
         </>}
         {view.ended && view.end && <>
           <div className="na-outcome is-end"><p className="na-outcome-label">{a0 ? 'Así termina · The end' : 'Así termina'}</p><p><Bi text={view.end.text} /></p></div>
-          <p className="na-kicker">{a0 ? 'Ahora habla de ti · Now talk about yourself' : 'Ahora habla de ti'}</p>
-          <p className="na-ask"><Bi text={view.speak} /></p>
+          {view.talk && <GeneralQuestions id={`calle:${view.id}:${level}`} questions={view.talk} askClassName="na-ask" render={question => <Bi text={question} />}
+            title={<span className="na-kicker">{a0 ? 'Ahora habla de ti · Now talk about yourself' : 'Ahora habla de ti'}</span>} />}
         </>}
         {view.words && <div className="na-words"><h3>Palabras · Words</h3><ul className="na-chips is-quiet">{view.words.map(word => <li key={word}><Bi text={word} /></li>)}</ul></div>}
       </div>
