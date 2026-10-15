@@ -570,5 +570,3 @@ button.na-inv:active { transform: translateY(1px); }
 .na-card .gq-nav button { min-height: 38px; padding: 0 12px; border-radius: 10px; border: 1px solid #f3e7d340; background: transparent; color: var(--na-text); font-size: 13px; font-weight: 700; }
 .na-card .gq-nav button:disabled { opacity: .35; }
 @media (max-width: 640px) { .na-card .gq-q.na-ask { font-size: 17px; } }
-/* Someone you crashed into, yelling at you. */
-.na-bubble.is-angry { background: #c81e1e; color: #fff; box-shadow: 0 10px 26px #0009, 0 0 0 2px #ffd2c8 inset; }

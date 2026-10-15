@@ -920,15 +920,7 @@ export function createStreetCrowd(scene: THREE.Scene, night: Night, options: { l
     }
     return { out, baked };
   };
-  // People on the ground near a spot (walkers too): you can crash into them.
-  const bumpable = (x: number, z: number, r = 2.5) => bodies.filter(b => !b.hidden && !b.seated && b.y < 0.5 && b.group.visible
-    && Math.abs(b.x - x) < r && Math.abs(b.z - z) < r).map(b => ({ key: b.key, x: b.x, z: b.z, moving: b.speed > 0.1, body: b.rig?.rig.full.body ?? b.look.body, seed: hash(b.key), body3d: b }));
-  // A furious glare until `until` (their usual face comes back by itself); someone standing turns to you.
-  const glare = (b: Body, until: number, face?: number) => {
-    b.react = { mood: 'furious', until, flee: false };
-    if (face != null && b.speed < 0.1) b.heading = face;
-  };
-  return { inspect, root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, bumpable, glare, cars: () => cars, walkers: () => walkers };
+  return { inspect, root, update, spots, framing, useItem, stats, movingBoxes, playHearts, leadOf, playFx, setHooks, cars: () => cars, walkers: () => walkers };
 }
 
 export type StreetCrowd = ReturnType<typeof createStreetCrowd>;

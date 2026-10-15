@@ -368,10 +368,10 @@ export const STREET_ROOMS = {
     spawn: { x: 0, z: 2.6, heading: Math.PI },
     exit: { x: 0, z: 3.6, radius: 1.1 },
     solids: [
-      { x0: -6, x1: -4.8, z0: -4.5, z1: 2, top: 0.95 },
-      { x0: 4.8, x1: 6, z0: -4.5, z1: 2, top: 0.95 },
-      { x0: -4, x1: 4, z0: -4.5, z1: -3.6, top: 1.94 },
-      { x0: -1, x1: 1, z0: -0.6, z1: 0.4, top: 0.9 },
+      { x0: -6, x1: -4.8, z0: -4.5, z1: 2 },
+      { x0: 4.8, x1: 6, z0: -4.5, z1: 2 },
+      { x0: -4, x1: 4, z0: -4.5, z1: -3.6 },
+      { x0: -1, x1: 1, z0: -0.6, z1: 0.4 },
     ],
   },
   "azotea-viejo": {
@@ -412,7 +412,7 @@ export function streetRoomLayout(stage) {
     bounds: { minX: ox - half.w + 0.15, maxX: ox + half.w - 0.15, minZ: oz - half.d + 0.15, maxZ: oz + half.d - 0.15 },
     spawn: { ...room.spawn, x: room.spawn.x + ox, z: room.spawn.z + oz },
     exit: { ...room.exit, x: room.exit.x + ox, z: room.exit.z + oz, id: `${stage}-salida`, key: "E", verb: "SALIR", exit: true },
-    solids: room.solids.map((b) => ({ ...b, x0: b.x0 + ox, x1: b.x1 + ox, z0: b.z0 + oz, z1: b.z1 + oz })),
+    solids: room.solids.map((b) => ({ x0: b.x0 + ox, x1: b.x1 + ox, z0: b.z0 + oz, z1: b.z1 + oz })),
   };
 }
 
@@ -732,25 +732,9 @@ export function canalWater() {
 
 // Everything in the city beyond the centre that blocks walking. `castSizes`
 // says how many people stand in each scene (default one).
-// How high you stand on a prop you jump onto (Space). Fences, gates, the
-// scaffold, tall walls and anything else missing here block at any height.
-export const CLIMB_TOPS = {
-  bench: 0.5, table: 0.8, bin: 0.9, bags: 0.6, planter: 0.6, stage: 0.4, cart: 1, newsrack: 1.1, grill: 1.1, dumpster: 1.4,
-  fountain: 0.6, patrol: 1.6, vending: 2, ambulance: 2.4, booth: 2.6, "kiosk-closed": 2.6, container: 2.6, foodtruck: 2.8,
-};
-export const climbTop = (prop) => (prop.kind === "wall" ? (prop.h <= 1.6 ? prop.h : undefined) : CLIMB_TOPS[prop.kind]);
-
 export function cityColliders(castSizes = {}) {
   const boxes = CITY_BUILDINGS.map((b) => ({ x0: b.x0, x1: b.x1, z0: b.z0, z1: b.z1, building: b.id }));
-  for (const prop of CITY_PROPS) {
-    const top = climbTop(prop);
-    boxes.push({ x0: prop.x0, x1: prop.x1, z0: prop.z0, z1: prop.z1, prop: prop.id, ...(top ? { top } : {}) });
-    // A fountain's column and bowl stand higher than its rim.
-    if (prop.kind === "fountain") {
-      const cx = (prop.x0 + prop.x1) / 2, cz = (prop.z0 + prop.z1) / 2;
-      boxes.push({ x0: cx - 0.9, x1: cx + 0.9, z0: cz - 0.9, z1: cz + 0.9, prop: `${prop.id}-taza`, top: 1.2 });
-    }
-  }
+  for (const prop of CITY_PROPS) boxes.push({ x0: prop.x0, x1: prop.x1, z0: prop.z0, z1: prop.z1, prop: prop.id });
   for (const v of CITY_PARKED) boxes.push(vehicleBox(v, v.id));
   boxes.push(...canalWater());
   for (const [id, place] of Object.entries(PLACEMENTS)) {

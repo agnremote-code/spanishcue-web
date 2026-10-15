@@ -293,8 +293,6 @@ function makeHelicopter() {
 type Actor = {
   id: string; group: THREE.Group; look: Look; pose: string; mood: string; rig: Person | null; far: THREE.Mesh | null; farPose: string;
   x: number; z: number; y: number; heading: number; speed: number; used: boolean; hidden: boolean; shout: string | null; talk: boolean;
-  // Run into them and they glare at you until then, whatever the scene says.
-  glareUntil?: number;
 };
 
 type Run = {
@@ -1016,7 +1014,7 @@ export function createStreetEvents(scene: THREE.Scene, night: Night, deps: Stree
         const rig = ensureRig(actor);
         rig.root.visible = true;
         if (actor.far) actor.far.visible = false;
-        setMood(rig, ctx.clock < (actor.glareUntil ?? 0) ? 'furious' : moodOr(actor.mood, 'neutral'));
+        setMood(rig, moodOr(actor.mood, 'neutral'));
         setPose(rig, actor.pose);
         rig.look = actor.speed < 0.1 && d < 7 && !actor.talk ? Math.max(-1.1, Math.min(1.1, radians(faceTo(actor, player) - actor.heading))) : null;
         animatePerson(rig, dt, actor.speed, actor.talk);
@@ -1076,18 +1074,12 @@ export function createStreetEvents(scene: THREE.Scene, night: Night, deps: Stree
     for (const b of movingBoxes) clearBox(b);
   }
 
-  // People on their feet near a spot: you can crash into them.
-  const bumpable = (x: number, z: number, r = 2.5) => actors.filter(a => a.used && !a.hidden && a.group.visible && a.y < 0.5
-    && !['lie', 'fallen', 'sit', 'cuffed'].includes(a.pose) && Math.abs(a.x - x) < r && Math.abs(a.z - z) < r)
-    .map(a => ({ key: a.id, x: a.x, z: a.z, moving: a.speed > 0.1, body: a.rig?.rig.full.body ?? a.look.body, seed: hash(a.id), actor: a }));
-  const glare = (a: Actor, until: number) => { a.glareUntil = until; };
-
   let playerRef = { x: 0, z: 0 }, clockRef = 0;
   return {
     root, movingBoxes,
     update(dt: number, ctx: EventCtx) { playerRef = ctx.player; clockRef = ctx.clock; update(dt, ctx); },
     shout: () => shoutNear(playerRef, lastLevel, clockRef),
-    stats, fly, callPolice, trigger, blockers, dispose, bumpable, glare,
+    stats, fly, callPolice, trigger, blockers, dispose,
     active: () => scenes.map(s => ({ kind: s.kind, x: s.x, z: s.z, t: s.t })),
   };
 }

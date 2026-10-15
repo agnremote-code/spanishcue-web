@@ -5,12 +5,7 @@ export type RealmInput = { x?: number; y?: number; yaw?: number; sprint?: boolea
 export const REALM_BOUNDS: { minX: number; maxX: number; minZ: number; maxZ: number };
 export const REALM_SPAWN: RealmPlayer;
 export const NITRO_FACTOR: number;
-export const CLIMB_HEIGHT: number;
-export function groundAt(x: number, z: number, y: number, boxes: RealmCollider[], floorAt: (x: number, z: number) => number, flags?: Record<string, boolean>): number;
 export function activeColliders(boxes: RealmCollider[], flags?: Record<string, boolean>, y?: number): RealmCollider[];
 export function stepRealmPlayer(player: RealmPlayer, input: RealmInput, dt: number, boxes: RealmCollider[], floorAt: (x: number, z: number) => number, flags?: Record<string, boolean>, bounds?: typeof REALM_BOUNDS): RealmPlayer;
 export function nearestInReach(player: Position, positions: Record<string, Position>, range?: number): string | null;
 export function safeCheckpoint(position: Position | null | undefined, floorAt: (x: number, z: number) => number, boxes?: RealmCollider[], flags?: Record<string, boolean>): RealmPlayer;
-export type RealmPerson = Position & { id: string; body: 'm' | 'f'; seed: number; radius?: number };
-export function standable(x: number, z: number, y: number, boxes: RealmCollider[], floorAt: (x: number, z: number) => number, flags?: Record<string, boolean>, bounds?: typeof REALM_BOUNDS): boolean;
-export function shovePeople<P extends Position>(player: P, people: RealmPerson[], boxes: RealmCollider[], floorAt: (x: number, z: number) => number, flags?: Record<string, boolean>): { player: P; hit: RealmPerson | null };

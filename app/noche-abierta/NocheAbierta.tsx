@@ -17,7 +17,6 @@ import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeni
 import { LEVEL_INFO } from './levels.mjs';
 import Bi from './Bi';
 import { speakLines, stopSpeaking, setVoicesOn, voicesOn } from './voice';
-import { setShoutMuted } from '../escucha-3d/shout';
 import {
   chooseItem, chooseLine, closeEncounter, emptyStreet, isValidStreet, itemById, openEncounter, restartEncounter, stepBack, streetSummary,
   type ItemId, type StreetState,
@@ -179,8 +178,6 @@ export default function NocheAbierta({ initial }: { initial?: NightState }) {
   // The saved switch is read after hydration, like the level (external store sync).
   useEffect(() => { const saved = voicesOn(); if (!saved) setVoices(false); }, []); // eslint-disable-line react-hooks/set-state-in-effect
   const toggleVoices = () => { const next = !voices; setVoices(next); setVoicesOn(next); };
-  // The same switch silences what people yell when you crash into them.
-  useEffect(() => { setShoutMuted(!voices); }, [voices]);
 
   const done = completedIds(state);
   const card = currentView(state);

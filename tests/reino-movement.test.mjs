@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { REALM_SPAWN, activeColliders, stepRealmPlayer, safeCheckpoint, nearestInReach, shovePeople, groundAt } from '../app/el-reino-de-la-rosa-dormida/movement.mjs';
+import { REALM_SPAWN, activeColliders, stepRealmPlayer, safeCheckpoint, nearestInReach } from '../app/el-reino-de-la-rosa-dormida/movement.mjs';
 const start = (x=0,z=0,y=0) => ({...REALM_SPAWN,x,z,y,heading:Math.PI});
 function walk(player, frames, floor=()=>0, boxes=[], input={y:1,yaw:Math.PI,sprint:true}, flags={}) {
   for(let i=0;i<frames;i++) player=stepRealmPlayer(player,input,1/60,boxes,floor,flags);
@@ -63,28 +63,4 @@ test('three speeds: arrows run, Shift runs faster and Q nitro dashes; nitro stil
   assert.ok(walk(start(),240,()=>0,[wall],{y:1,yaw:Math.PI,nitro:true}).z>-5.6);
   const released=walk(nitro,90,()=>0,[],{y:1,yaw:Math.PI});
   assert.ok(released.speed<8,String(released.speed));
-});
-test('a running jump lands on a table, walks on it and falls off its far edge; a tall cabinet still blocks',()=>{
-  const table={minX:-2,maxX:2,minZ:-5,maxZ:-3,minY:0,maxY:1.4};
-  let p=walk(start(),20,()=>0,[table]);
-  p=walk(p,1,()=>0,[table],{y:1,yaw:Math.PI,sprint:true,jump:true});
-  let top=0;for(let i=0;i<40;i++){p=walk(p,1,()=>0,[table],{y:1,yaw:Math.PI,sprint:true,jump:true});if(p.y===1.4)top++;}
-  assert.ok(top>0,'stood on the table');
-  p=walk(p,60,()=>0,[table]);
-  assert.ok(p.z<-5.4&&p.y===0,`fell off the far edge: ${JSON.stringify(p)}`);
-  assert.equal(groundAt(0,-4,1.5,[table],()=>0),1.4);
-  assert.equal(groundAt(0,-4,1,[table],()=>0),0,'below the top it is not ground');
-  const cabinet={...table,maxY:2.6};
-  const q=walk(start(),150,()=>0,[cabinet],{y:1,yaw:Math.PI,sprint:true,jump:true});
-  assert.ok(q.z>-3,'too tall to climb');
-});
-test('people push the player aside, never into a wall, and only on their own floor',()=>{
-  const people=[{id:'a',x:0,y:0,z:-1,body:'m',seed:1}];
-  const hit=shovePeople(start(0,-1.3),people,[],()=>0);
-  assert.equal(hit.hit?.id,'a');
-  assert.ok(Math.hypot(hit.player.x,hit.player.z+1)>=.6);
-  const wall={minX:-3,maxX:3,minZ:-2.2,maxZ:-1.75,minY:0,maxY:6};
-  const pinned=shovePeople(start(0,-1.3),people,[wall],()=>0);
-  assert.equal(pinned.player.z,-1.3,'the push that would end inside the wall is refused');
-  assert.equal(shovePeople(start(0,-1.3,8),people,[],()=>8).hit,null);
 });

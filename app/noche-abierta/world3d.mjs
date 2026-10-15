@@ -86,10 +86,9 @@ export const TRAFFIC_SPAN = 124;
 
 // Street furniture that blocks walking: the bus shelter, the restaurant's
 // outdoor table (with the friends sitting at it) and the overpass pillars.
-// A `top` (m) means Space can land you on it.
 export const SOLID_PROPS = [
   { id: "refugio", x0: 6.8, x1: 7.3, z0: 25, z1: 29 },
-  { id: "mesa-afuera", x0: 10.8, x1: 16, z0: -7.4, z1: -5.1, top: 0.8 },
+  { id: "mesa-afuera", x0: 10.8, x1: 16, z0: -7.4, z1: -5.1 },
   { id: "pilar-oeste", x0: -6.2, x1: -5.2, z0: 34.2, z1: 35.8 },
   { id: "pilar-este", x0: 5.2, x1: 6.2, z0: 34.2, z1: 35.8 },
   { id: "carrito", x0: 15.2, x1: 16.8, z0: 14.8, z1: 15.6 },
@@ -189,11 +188,11 @@ export const ROOMS = {
       { activity: "invitacion", x: -2.5, z: 3.65, at: { x: -2.5, z: 4.7 }, verb: "HABLAR" },
     ],
     solids: [
-      { x0: -6.4, x1: 2.6, z0: -3.8, z1: -2.85, top: 1.12 },
+      { x0: -6.4, x1: 2.6, z0: -3.8, z1: -2.85 },
       { x0: 4.6, x1: 5.8, z0: -3.8, z1: -2.6 },
       { x0: -3, x1: -2, z0: 1.1, z1: 2.1 },
-      { x0: 3.4, x1: 5.8, z0: 1.2, z1: 2.4, top: 0.8 },
-      { x0: 6.1, x1: 7, z0: 4.1, z1: 5.5, top: 1.5 },
+      { x0: 3.4, x1: 5.8, z0: 1.2, z1: 2.4 },
+      { x0: 6.1, x1: 7, z0: 4.1, z1: 5.5 },
     ],
   },
 };
@@ -212,7 +211,7 @@ export function roomLayout(stage) {
     hotspots: room.hotspots.map((spot) => ({
       ...shift(spot), id: `${stage}-${spot.activity}`, key: "E", location: room.location, radius: spot.radius ?? 1.4, at: shift(spot.at),
     })),
-    solids: room.solids.map((b) => ({ ...b, x0: b.x0 + ox, x1: b.x1 + ox, z0: b.z0 + oz, z1: b.z1 + oz })),
+    solids: room.solids.map((b) => ({ x0: b.x0 + ox, x1: b.x1 + ox, z0: b.z0 + oz, z1: b.z1 + oz })),
   };
 }
 export const WALKABLE_STAGES = new Set(Object.values(ROOMS).map((room) => room.location));
@@ -257,10 +256,8 @@ export function colliders(castSizes = {}) {
     boxes.push({ x0: v.x - hx, x1: v.x + hx, z0: v.z - hz, z1: v.z + hz, vehicle: v.id, top: 1.6 });
   }
   const f = PLAZA.fountain;
-  // The fountain's rim is 0.6 m; its column and bowl, 2.2 m.
-  boxes.push({ x0: f.x - f.r, x1: f.x + f.r, z0: f.z - f.r, z1: f.z + f.r, top: 0.6 });
-  boxes.push({ x0: f.x - 0.9, x1: f.x + 0.9, z0: f.z - 0.9, z1: f.z + 0.9, top: 2.2 });
-  for (const prop of SOLID_PROPS) boxes.push({ x0: prop.x0, x1: prop.x1, z0: prop.z0, z1: prop.z1, ...(prop.top ? { top: prop.top } : {}) });
+  boxes.push({ x0: f.x - f.r, x1: f.x + f.r, z0: f.z - f.r, z1: f.z + f.r });
+  for (const prop of SOLID_PROPS) boxes.push({ x0: prop.x0, x1: prop.x1, z0: prop.z0, z1: prop.z1 });
   // People standing still are small obstacles; walkers and seated people are not.
   for (const npc of NPCS) {
     if (npc.walk || npc.seated) continue;

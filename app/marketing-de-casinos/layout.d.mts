@@ -1,6 +1,6 @@
 import type { Look } from '../noche-abierta/people3d';
 export type Bounds = { minX: number; maxX: number; minZ: number; maxZ: number };
-export type Box = { x0: number; x1: number; z0: number; z1: number; top?: number };
+export type Box = { x0: number; x1: number; z0: number; z1: number };
 export type Floor = { id: number; name: string; sub: string; y: number; bounds: Bounds };
 export type Placed = { x: number; z: number; heading: number };
 export type Extra = Placed & { pose: string; mood?: string; look: Look; smoke?: boolean; cigar?: boolean; piano?: boolean };
@@ -28,9 +28,7 @@ export const HEROINE: { name: string; look: Look };
 export const CROWD: Record<number, CrowdMember[]>;
 export function footprint(item: Furniture): Box;
 export function wallBox(segment: number[]): Box;
-export const TOPS: Record<string, number>;
 export function solidsFor(floor: number): Box[];
-export function peopleAt(floor: number): { x: number; z: number; y: number }[];
 export function spotAt(floor: number, x: number, z: number, radius?: number): string | null;
 export function atElevator(x: number, z: number): boolean;
 export function nextSpot(floor: number, x: number, z: number, done?: string[]): Scene | null;

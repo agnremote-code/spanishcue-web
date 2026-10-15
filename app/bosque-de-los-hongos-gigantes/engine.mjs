@@ -166,18 +166,15 @@ for(const p of platforms){
  else if(p.species==='puffball')OBSTACLES.push({id:`${p.id}-ball`,x:p.x,z:p.z,r:p.r*1.02,y0:-1,y1:p.y-.45});
  else OBSTACLES.push({id:`${p.id}-stem`,x:p.x,z:p.z,r:stemRadius(p)*1.05,y0:-1,y1:p.y-.6});
 }
-// Low story props can be jumped onto and stood on (`top`, below the 3 m jump apex);
-// signs, lanterns, posts, the tent and the telescope stay plain solids.
-export const PROP_TOPS={'sobre-ti':.7,'vida-real':.5,elige:.8,opinion:1.5,suposiciones:2.1,compara:1.1,recuerdos:.55,cambia:1.1};
 for(const zone of zones){
- const {sign,lamp,prop}=zone.layout,h=PROP_TOPS[zone.id];
- OBSTACLES.push({id:`${zone.id}-sign`,x:sign.x,z:sign.z,r:.8,y0:zone.y-.2,y1:zone.y+2.2},{id:`${zone.id}-lamp`,x:lamp.x,z:lamp.z,r:.25,y0:zone.y-.2,y1:zone.y+2},{id:`${zone.id}-prop`,x:prop.x,z:prop.z,r:zone.id==='suposiciones'?1.1:.75,y0:zone.y-.2,y1:zone.y+(h??2.4),...(h?{top:round(zone.y+h),on:`zone-${zone.id}`}:{})});
+ const {sign,lamp,prop}=zone.layout;
+ OBSTACLES.push({id:`${zone.id}-sign`,x:sign.x,z:sign.z,r:.8,y0:zone.y-.2,y1:zone.y+2.2},{id:`${zone.id}-lamp`,x:lamp.x,z:lamp.z,r:.25,y0:zone.y-.2,y1:zone.y+2},{id:`${zone.id}-prop`,x:prop.x,z:prop.z,r:zone.id==='suposiciones'?1.1:.75,y0:zone.y-.2,y1:zone.y+2.4});
 }
 export const PLAYER_RADIUS=.35;
 /** Push a position out of any solid it overlaps at its height. */
 export function resolveObstacles(p,obstacles=OBSTACLES){
  for(const o of obstacles){
-  if(p.y+1.7<o.y0||p.y>o.y1||(o.top!=null&&p.y>=o.top-.05))continue;
+  if(p.y+1.7<o.y0||p.y>o.y1)continue;
   const dx=p.x-o.x,dz=p.z-o.z,d=Math.hypot(dx,dz),min=o.r+PLAYER_RADIUS;
   if(d>=min)continue;
   if(d>1e-6){p.x=o.x+dx/d*min;p.z=o.z+dz/d*min;}else p.x=o.x+min;
@@ -196,13 +193,11 @@ export function stepPlayer(player,input,delta,platforms=PLATFORMS,obstacles=OBST
  if(input.jump&&(p.grounded||p.coyote>0)){p.vy=JUMP_SPEED;p.grounded=false;p.coyote=0;p.platform=null;}
  else if(input.jump&&(p.airJumps??1)>0){p.vy=DOUBLE_JUMP_SPEED;p.airJumps=0;p.doubleJumps=(p.doubleJumps||0)+1;p.platform=null;}
  const before=p.y;p.vy-=GRAVITY*dt;p.y+=p.vy*dt;p.grounded=false;
- // Props with a `top` are surfaces too; standing on one still counts as the cap it sits on.
- const tops=obstacles.filter(o=>o.top!=null).map(o=>({id:o.on??o.id,x:o.x,z:o.z,y:o.top,r:o.r-.14,prop:true}));
- const surfaces=[...platforms,...tops].filter(s=>Math.hypot(p.x-s.x,p.z-s.z)<=s.r+.24&&before>=s.y-.08&&p.y<=s.y&&p.vy<=0).sort((a,b)=>b.y-a.y);
+ const surfaces=platforms.filter(s=>Math.hypot(p.x-s.x,p.z-s.z)<=s.r+.24&&before>=s.y-.08&&p.y<=s.y&&p.vy<=0).sort((a,b)=>b.y-a.y);
  const floor=surfaces[0]??(Math.hypot(p.x,p.z)<65&&p.y<=0&&before>=-.08?{id:'ground',y:0,checkpoint:false}:null);
  if(floor){p.y=floor.y;p.vy=0;p.grounded=true;p.platform=floor.id;p.coyote=.12;p.airJumps=1;
   // Every cap of the climb is a safe point: a fall costs one hop, never the whole ascent.
-  if(floor.id!=='ground'&&!floor.bounce&&!floor.prop)p.checkpoint={x:floor.x,y:floor.y,z:floor.z};
+  if(floor.id!=='ground'&&!floor.bounce)p.checkpoint={x:floor.x,y:floor.y,z:floor.z};
   if(floor.bounce){p.vy=15;p.grounded=false;p.coyote=0;}}
  if(!p.grounded)p.platform=null;
  // Falling to the forest floor once the climb has begun returns you to the last cap, not among the stems.

@@ -2,7 +2,7 @@ import type {Level,CategoryId,Prompt} from './content/types';
 export type Position={x:number;y:number;z:number};
 export type Platform=Position&{id:string;r:number;kind:string;species:string;stage:number;bounce:boolean;zone:CategoryId|null;checkpoint:boolean;micro?:string;trunk?:{x:number;z:number;r:number;top:number}};
 export type Anchor={x:number;z:number;angle:number};
-export type Obstacle={id:string;x:number;z:number;r:number;y0:number;y1:number;top?:number;on?:string};
+export type Obstacle={id:string;x:number;z:number;r:number;y0:number;y1:number};
 export type MicroSpot={id:string;platform:string;x:number;y:number;z:number;r:number;stage:number;kind:'tramo'|'mirador'};
 export type Stage={id:string;name:string;from:number};
 export type Zone=Position&{id:CategoryId;name:string;short:string;color:string;ecology:string;r:number;species:string;place:string;stage:number;theta:number;layout:{arrive:number;leave:number;sign:Anchor;lamp:Anchor;prop:Anchor}};
@@ -10,7 +10,7 @@ export type Player=Position&{vy:number;grounded:boolean;platform:string|null;che
 export type Session={version:number;level:Level;seed:number;seen:string[];discussed:string[];visited:CategoryId[];active:string|null;complete:boolean;finalIds:string[];finalDone:string[];personalized:boolean;micro:string[];summit?:boolean};
 export const LEVELS:Level[];export const CATEGORIES:Omit<Zone,'x'|'y'|'z'>[];export const ZONES:Zone[];export const PLATFORMS:Platform[];export const SPAWN:Position;export const STAGES:Stage[];
 export function stageAt(y:number):number;
-export const STEM_WIDTH:Record<string,number>;export const PROP_TOPS:Record<string,number>;export const OBSTACLES:Obstacle[];export const MICRO_SPOTS:MicroSpot[];export const PLAYER_RADIUS:number;
+export const STEM_WIDTH:Record<string,number>;export const OBSTACLES:Obstacle[];export const MICRO_SPOTS:MicroSpot[];export const PLAYER_RADIUS:number;
 export function stemRadiusOf(p:Platform):number;
 export function corridorClear(x:number,z:number,radius:number,y0:number,y1:number,margin?:number):boolean;
 export function resolveObstacles<T extends {x:number;y:number;z:number}>(p:T,obstacles?:Obstacle[]):T;
