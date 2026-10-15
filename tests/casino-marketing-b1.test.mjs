@@ -6,7 +6,9 @@ import React, {act} from 'react';
 import {createRoot} from 'react-dom/client';
 import {JSDOM} from 'jsdom';
 import {readFileSync} from 'node:fs';
-import {FLOORS, SCENES, SCENE_IDS, SPAWN, ELEVATOR, ELEVATOR_ARRIVAL, solidsFor, spotAt, atElevator, circleStep} from '../app/marketing-de-casinos/layout.mjs';
+import {FLOORS, SCENES, SCENE_IDS, SPAWN, ELEVATOR, ELEVATOR_ARRIVAL, solidsFor, peopleAt, spotAt, atElevator, circleStep} from '../app/marketing-de-casinos/layout.mjs';
+import {stepPlayer} from '../app/noche-abierta/world3d.mjs';
+import {PERSON_RADIUS} from '../app/escucha-3d/bump.mjs';
 import {LEVELS, CONTENT} from '../app/marketing-de-casinos/levels.mjs';
 import {MONEY, createState, openScene, choose, undo, closeScene, sceneView, progress, setLevel, setMoney, resetLevel, serialise, restore, doneFor} from '../app/marketing-de-casinos/engine.mjs';
 
@@ -65,11 +67,11 @@ test('three floors, thirty scenes, and every level writes every scene for every 
   assert.equal(new Set(firstLines).size,LEVELS.length);
 });
 
-test('every white circle and the elevator are free and reachable on foot',()=>{
+test('every white circle and the elevator are free and reachable on foot, with everyone standing where they stand',()=>{
   const R=0.35,S=0.25;
   for(const f of FLOORS){
-    const boxes=solidsFor(f.id),b=f.bounds;
-    const free=(x,z)=>x>b.minX+R&&x<b.maxX-R&&z>b.minZ+R&&z<b.maxZ-R&&!boxes.some(o=>x>o.x0-R&&x<o.x1+R&&z>o.z0-R&&z<o.z1+R);
+    const boxes=solidsFor(f.id),b=f.bounds,people=peopleAt(f.id).filter(p=>p.y<0.5);
+    const free=(x,z)=>x>b.minX+R&&x<b.maxX-R&&z>b.minZ+R&&z<b.maxZ-R&&!boxes.some(o=>x>o.x0-R&&x<o.x1+R&&z>o.z0-R&&z<o.z1+R)&&!people.some(p=>Math.hypot(x-p.x,z-p.z)<PERSON_RADIUS);
     const start=f.id===1?SPAWN:ELEVATOR_ARRIVAL;
     assert.ok(free(start.x,start.z),`floor ${f.id} start is free`);
     const key=(i,j)=>`${i},${j}`,seen=new Set([key(Math.round(start.x/S),Math.round(start.z/S))]),queue=[[Math.round(start.x/S),Math.round(start.z/S)]];
@@ -161,7 +163,7 @@ test('the money Valentina carries changes how each scene opens, and is kept',()=
 test('every 3D game jumps with Space and has a nitro on N',()=>{
   const casino=readFileSync('app/marketing-de-casinos/World3D.tsx','utf8');
   assert.match(casino,/input\.nitro/);
-  assert.match(casino,/vy = 7\.2/);
+  assert.match(casino,/jumpSpeed: 7\.6/);
   assert.match(casino,/Saltar/);
   assert.match(readFileSync('app/el-reino-de-la-rosa-dormida/World3D.tsx','utf8'),/'KeyN'/);
   assert.match(readFileSync('app/el-reino-de-la-rosa-dormida/ReinoGame.tsx','utf8'),/<kbd>N<\/kbd> Nitro/);
@@ -210,4 +212,28 @@ test('without WebGL the same scenes open from a list',async()=>{
     Object.defineProperty(globalThis,'navigator',{value:previous.navigator,configurable:true});
     delete globalThis.IS_REACT_ACT_ENVIRONMENT;
   }
+});
+
+test('Valentina jumps onto low furniture, walks on it and falls off; tall things and walls stay walls',()=>{
+  const boxes=solidsFor(1),table=boxes.find(b=>b.top===0.92&&b.x0<-18&&b.x1>-18),slots=boxes.filter(b=>b.top==null);
+  assert.ok(table,'the roulette table has a top');
+  assert.ok(slots.length>10,'walls and slot banks have no top');
+  for(const b of [1,2,3].flatMap(solidsFor)) if(b.top!=null) assert.ok(b.top<=1.25,'nothing climbable is taller than the jump');
+  const bounds=FLOORS[0].bounds;
+  let p={x:-18,z:-5.4,heading:Math.PI,speed:0,y:0,vy:0,jumpHeld:false};
+  for(let i=0;i<20;i++) p=stepPlayer(p,{x:0,y:1,yaw:Math.PI},0.016,boxes,bounds);
+  assert.ok(p.z>-9.3&&p.y===0,`the table blocks a walk (${p.z})`);
+  let stood=0;
+  for(let i=0;i<80;i++){p=stepPlayer(p,{x:0,y:p.z>-7.9?1:0,yaw:Math.PI,jump:i<3,jumpSpeed:7.6},0.016,boxes,bounds);if(p.y===0.92&&p.vy===0)stood++;}
+  assert.ok(stood>3,`landed and walked on the table (${stood} frames)`);
+  for(let i=0;i<120;i++) p=stepPlayer(p,{x:0,y:1,yaw:Math.PI},0.016,boxes,bounds);
+  assert.equal(p.y,0,'walked off the far edge and fell');
+});
+
+test('people are solid and yell when Valentina crashes into them, and the mute button silences them',()=>{
+  const world=readFileSync('app/marketing-de-casinos/World3D.tsx','utf8'),game=readFileSync('app/marketing-de-casinos/CasinoGame.tsx','utf8'),build=readFileSync('app/marketing-de-casinos/casino3d.ts','utf8');
+  for(const re of [/pushOut\(player\.x, player\.z, bodies, free\)/,/createBumpClock\(\)/,/insultFor\(who\.body, who\.seed\)/,/shout\(line/,/setMood\(who\.person, 'furious'\)/,/casino\.say\(who/,/player\.speed \*= 0\.3/]) assert.match(world,re);
+  assert.match(game,/setShoutMuted\(!sound\)/);
+  assert.match(build,/rgba\(200,20,20/);
+  for(const f of FLOORS) for(const p of peopleAt(f.id)) for(const s of SCENES.filter(s=>s.floor===f.id)) assert.ok(Math.hypot(p.x-s.spot.x,p.z-s.spot.z)>=PERSON_RADIUS+0.3,`nobody stands in the ${s.id} circle`);
 });

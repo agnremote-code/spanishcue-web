@@ -9,6 +9,7 @@ export type Collider = { minX: number; maxX: number; minZ: number; maxZ: number;
 type Position = { x: number; y: number; z: number };
 type VisualState = { flags?: Record<string, boolean>; inventory?: string[] | Record<string, unknown>; collected?: string[] };
 const TAU = Math.PI * 2;
+const NPC_BODY: Record<string, 'm' | 'f'> = { nox: 'm', liora: 'f', ines: 'f', bruno: 'm', aldren: 'm', celina: 'f', baltasar: 'm', teobaldo: 'm', brum: 'm', tejedora: 'f' };
 
 function seeded(seed: number) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }; }
 
@@ -139,7 +140,7 @@ export function buildWorld(scene: THREE.Scene) {
   grass.count = blades; grass.instanceMatrix.needsUpdate = true; root.add(grass);
   const flowers = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(.09, 0), rose, 650);
   for (let i = 0; i < 650; i++) { const x = (random() < .5 ? -1 : 1) * (4 + random() * 9), z = -18 + random() * 48; dummy.position.set(x, .2 + random() * .4, z); dummy.scale.set(1, .65, 1); dummy.updateMatrix(); flowers.setMatrixAt(i, dummy.matrix); flowers.setColorAt(i, new THREE.Color(i % 3 ? '#dbc495' : '#b8708a')); } root.add(flowers);
-  for (let i = 0; i < 64; i++) { const x = (random() < .5 ? -1 : 1) * (8 + random() * 33), z = -21 + random() * 55, s = .3 + random() * 1.4; if (x > 5 && x < 35 && z > -10 && z < 25) continue; add(sphereGeo, i % 3 ? shadowStone : moss, x, s * .3, z, s, s * .75, s * 1.2, random(), random(), random()); if (s > 1) coll(x, z, s * 1.2, s * 1.2, 0, s); }
+  for (let i = 0; i < 64; i++) { const x = (random() < .5 ? -1 : 1) * (8 + random() * 33), z = -21 + random() * 55, s = .3 + random() * 1.4; if (x > 5 && x < 35 && z > -10 && z < 25) continue; add(sphereGeo, i % 3 ? shadowStone : moss, x, s * .3, z, s, s * .75, s * 1.2, random(), random(), random()); if (s > 1) coll(x, z, s * 1.2, s * 1.2, 0, s * 1.05); }
   // Liora's clearing: carved standing stones, ancient ring and luminous mushrooms.
   for (let i = 0; i < 8; i++) { const a = i / 8 * TAU, x = -10 + Math.cos(a) * 4.2, z = -5 + Math.sin(a) * 4.2; add(sphereGeo, stone, x, 1.3, z, .45, 1.8, .6, .1, a, .1); coll(x, z, .7, .7, 0, 3); add(new THREE.TorusGeometry(.25, .035, 5, 16), aqua, x, 1.8, z + .54, 1, 1, 1, 0, a); }
   const groveRing = new THREE.Mesh(new THREE.TorusGeometry(3.2, .04, 6, 80).rotateX(Math.PI / 2), aqua); groveRing.position.set(-10, .08, -5); root.add(groveRing);
@@ -172,10 +173,10 @@ export function buildWorld(scene: THREE.Scene) {
   for (const x of [9, 17]) {
     const z = 12; for (const dx of [-1.6, 1.6]) for (const dz of [-.9, .9]) cylinder(timber, x + dx, 1.3, z + dz, .07, 2.6);
     const canopy = new THREE.PlaneGeometry(3.7, 2.7, 12, 1); const cp = canopy.attributes.position as THREE.BufferAttribute; for (let i = 0; i < cp.count; i++) cp.setZ(i, Math.cos(cp.getX(i) / 3.7 * Math.PI) * .5); add(canopy, cloth, x, 2.55, z, 1, 1, 1, -Math.PI / 2, 0, 0, false); canopy.dispose();
-    box(timber, x, 1, z, 3.2, .15, 1.6); for (let i = 0; i < 10; i++) orb(i % 2 ? rose : lightLeaf, x + (random() - .5) * 2.7, 1.17, z + (random() - .5) * 1.1, .13); coll(x, z, 3.1, 1.6, 0, 1.2);
+    box(timber, x, 1, z, 3.2, .15, 1.6); for (let i = 0; i < 10; i++) orb(i % 2 ? rose : lightLeaf, x + (random() - .5) * 2.7, 1.17, z + (random() - .5) * 1.1, .13); coll(x, z, 3.1, 1.6, 0, 1.08);
   }
   for (let i = 0; i < 12; i++) { const x = 23 + random() * 8, z = 13 + random() * 2; cylinder(timber, x, .55, z, .43, 1.1); for (const y of [.2, .88]) add(new THREE.TorusGeometry(.44, .03, 5, 14).rotateX(Math.PI / 2), iron, x, y, z); }
-  box(iron, 22, .85, -.5, 1.5, .55, .7); cylinder(iron, 22, .4, -.5, .4, .8); add(coneGeo, iron, 22.9, .92, -.5, .3, .8, .3, 0, 0, -Math.PI / 2); coll(22, -.5, 2, 1, 0, 1.3);
+  box(iron, 22, .85, -.5, 1.5, .55, .7); cylinder(iron, 22, .4, -.5, .4, .8); add(coneGeo, iron, 22.9, .92, -.5, .3, .8, .3, 0, 0, -Math.PI / 2); coll(22, -.5, 2, 1, 0, 1.13);
   cylinder(stone, 13, .35, 2, 1.75, .7); cylinder(waterMat, 13, .73, 2, 1.52, .08); cylinder(trim, 13, 1.1, 2, .45, 1.2); add(new THREE.TorusGeometry(1.68, .16, 8, 32).rotateX(Math.PI / 2), trim, 13, .72, 2); orb(aqua, 13, 1.95, 2, .23); coll(13, 2, 3.6, 3.6, 0, 2.1);
   // Four visible cloth sails turn when Ventaria repairs the ancient mill.
   const millFallback = new THREE.Group(); root.add(millFallback);
@@ -248,7 +249,7 @@ export function buildWorld(scene: THREE.Scene) {
   }
   bookshelf(-20.8, -83, Math.PI / 2); bookshelf(-20.8, -91, Math.PI / 2); bookshelf(-16, -97, 0);
   sign('ARCHIVO DE VALDORIA', -15, 5.4, -96.8, 5.6);
-  const table = (x: number, z: number, w: number, d: number) => { box(timber, x, 1.3, z, w, .2, d); for (const xx of [-1, 1]) for (const zz of [-1, 1]) box(darkWood, x + xx * (w / 2 - .3), .6, z + zz * (d / 2 - .3), .17, 1.2, .17); coll(x, z, w, d, 0, 1.5); };
+  const table = (x: number, z: number, w: number, d: number) => { box(timber, x, 1.3, z, w, .2, d); for (const xx of [-1, 1]) for (const zz of [-1, 1]) box(darkWood, x + xx * (w / 2 - .3), .6, z + zz * (d / 2 - .3), .17, 1.2, .17); coll(x, z, w, d, 0, 1.4); };
   table(-14, -90, 4.5, 2); table(15.5, -73, 5, 2.4); table(-14, -73, 5, 2.4);
   for (const x of [-15.5, -13, 14, 16.5]) { const z = -73; add(new THREE.CylinderGeometry(.26, .26, .035, 18), white, x, 1.43, z); cylinder(gold, x + .35, 1.6, z, .08, .25); }
   // Kitchen hearth set into the east aisle, animated embers below the hood.
@@ -299,9 +300,17 @@ export function buildWorld(scene: THREE.Scene) {
   for (const g of [boxGeo, sphereGeo, orbGeo, cylinderGeo, coneGeo]) g.dispose();
 
   const npcPositions: Record<string, Position> = {
-    nox: { x: 0, y: 0, z: 18 }, liora: { x: -10, y: 0, z: 0 }, ines: { x: 14, y: 0, z: 10 }, bruno: { x: 20, y: 0, z: 0 }, aldren: { x: 0, y: 0, z: -43 }, celina: { x: -3, y: 0, z: -47 }, baltasar: { x: -14, y: 0, z: -86 }, teobaldo: { x: 10, y: 0, z: -78 }, brum: { x: -10, y: 8, z: -111 }, tejedora: { x: 10, y: 8, z: -119 }, elara: { x: 10, y: 9.3, z: -132.4 },
+    nox: { x: 0, y: 0, z: 18 }, liora: { x: -10, y: 0, z: 0 }, ines: { x: 14, y: 0, z: 10 }, bruno: { x: 20, y: 0, z: 0 }, aldren: { x: -3, y: 0, z: -42.5 }, celina: { x: -3, y: 0, z: -47 }, baltasar: { x: -14, y: 0, z: -86 }, teobaldo: { x: 10, y: 0, z: -78 }, brum: { x: -10, y: 8, z: -111 }, tejedora: { x: 7.2, y: 8, z: -121.5 }, elara: { x: 10, y: 9.3, z: -132.4 },
   };
-  const residents = Object.entries(npcPositions).map(([id, p]) => { const character = createResident(id); character.root.position.set(p.x, p.y, p.z); root.add(character.root); return { id, p, character }; });
+  const residents = Object.entries(npcPositions).map(([id, p]) => { const character = createResident(id); character.root.position.set(p.x, p.y, p.z); root.add(character.root); return { id, p, character, angryUntil: 0 }; });
+  // Everyone standing is solid (the sleeping princess lies on her bed's own
+  // collider); crash into them and they turn, glare and yell.
+  const people = Object.entries(npcPositions).filter(([id]) => id !== 'elara').map(([id, p], i) => ({ id, x: p.x, y: p.y, z: p.z, body: NPC_BODY[id] ?? 'm', seed: i * 7 + 3, ...(id === 'brum' ? { radius: 1.6 } : {}) }));
+  function glare(id: string, until: number, toward?: { x: number; z: number }) {
+    const r = residents.find(item => item.id === id); if (!r) return;
+    r.angryUntil = until; r.character.setAngry?.(true);
+    if (toward && id !== 'brum') r.character.root.rotation.y = Math.atan2(toward.x - r.p.x, toward.z - r.p.z);
+  }
   const itemPositions: Record<string, Position> = { key: { x: 24, y: 0, z: 7 }, rose: { x: -8, y: 0, z: -59 }, scroll: { x: -14, y: 0, z: -89 }, crystal: { x: -4, y: 8, z: -113 } };
   const itemVisuals = Object.entries(itemPositions).map(([id, p]) => {
     const g = new THREE.Group(); g.position.set(p.x, p.y + .85, p.z); root.add(g);
@@ -348,7 +357,7 @@ export function buildWorld(scene: THREE.Scene) {
     for (const [x, z, h] of [[-11, 27, 12], [-18, 16, 15], [9, 29, 13], [-25, -7, 17], [37, 16, 14], [-31, -19, 18]]) { const tree = gltf.scene.clone(true); const scale = h / height; tree.scale.setScalar(scale); tree.position.set(x, -bounds.min.y * scale, z); tree.rotation.y = random() * TAU; tree.traverse(o => { if (o instanceof THREE.Mesh) { o.castShadow = true; o.receiveShadow = true; } }); root.add(tree); }
   }, undefined, () => { /* The original mixed forest is already in the scene. */ });
   return {
-    root, colliders, cameraMeshes, floorAt, npcPositions, itemPositions,
+    root, colliders, cameraMeshes, floorAt, npcPositions, itemPositions, people, glare,
     update(dt: number, time: number, state: VisualState, player: THREE.Vector3) {
       const flags = state.flags ?? {};
       gateLift += ((flags.bridgeOpen ? 8 : 0) - gateLift) * Math.min(1, dt * 1.3); portcullis.position.y = gateLift;
@@ -358,6 +367,7 @@ export function buildWorld(scene: THREE.Scene) {
       if (flags.millRepaired) { mill.rotation.z += dt * .6; if (importedMillSails) importedMillSails.rotation.z += dt * .6; }
       roofGroup.visible = !(Math.abs(player.x) < 25 && player.z < -62 && player.z > -106); towerRoof.visible = !(player.x > 3 && player.x < 17 && player.z < -119);
       for (let i = 0; i < flames.length; i++) flames[i].scale.y = 1.7 + Math.sin(time * 8 + i * 2) * .35;
+      for (const r of residents) if (r.angryUntil && time > r.angryUntil) { r.angryUntil = 0; r.character.setAngry?.(false); }
       for (const { id, p, character } of residents) { const distance = Math.hypot(player.x - p.x, player.z - p.z); character.root.userData.calm = id === 'brum' && !!flags.dragonTrusted; character.root.userData.awake = id === 'elara' && !!flags.victory; character.update(dt, time, distance < 6); if (id !== 'elara' && id !== 'brum' && distance < 9) { const target = Math.atan2(player.x - p.x, player.z - p.z); character.root.rotation.y += Math.atan2(Math.sin(target - character.root.rotation.y), Math.cos(target - character.root.rotation.y)) * Math.min(1, dt * 2); } }
       const has = (id: string) => Array.isArray(state.inventory) ? state.inventory.includes(id) : !!state.inventory?.[id];
       for (const item of itemVisuals) { item.g.visible = !has(item.id) && !(state.collected?.includes(item.id)); item.g.position.y = item.p.y + (item.id === 'scroll' ? 1.8 : .95) + Math.sin(time * 2 + item.p.x) * .12; item.g.rotation.y = time * .55; if (item.id === 'key') item.g.visible &&= !!flags.millRepaired; if (item.id === 'crystal') item.g.visible &&= !!flags.dragonTrusted; }

@@ -295,20 +295,44 @@ export function wallBox([x0, z0, x1, z1]) {
 // Outside the ground floor: the fountain pools and the road edge.
 const PLAZA_SOLIDS = [box(-42, 27, -9, 38.6), box(9, 27, 42, 38.6), box(-42, 48, 42, 50)];
 
+// The stage's curtains stand on it: walls once you are up there.
+const curtains = (floor) => (FURNITURE[floor] ?? []).filter((f) => f.type === 'stage').flatMap(({ x, z, w, d }) => [
+  box(x + w / 2 - 0.55, z - d / 2, x + w / 2 - 0.25, z + d / 2),
+  ...[-1, 1].map((s) => box(x + w / 2 - w * 0.6, z + s * (d / 2 - 0.2) - 0.15, x + w / 2, z + s * (d / 2 - 0.2) + 0.15)),
+]);
+
 // Tall things the camera should not pass through.
-const TALL = new Set(['slots', 'bigslot', 'backwall', 'cage', 'stage', 'screens', 'bookcase', 'humidor', 'djbooth', 'column', 'vanity']);
+const TALL = new Set(['slots', 'bigslot', 'backwall', 'cage', 'screens', 'bookcase', 'humidor', 'djbooth', 'column', 'vanity']);
 export function cameraBlockers(floor) {
-  return [...(WALLS[floor] ?? []).map(wallBox), ...(FURNITURE[floor] ?? []).filter((f) => TALL.has(f.type)).map(footprint)];
+  return [...(WALLS[floor] ?? []).map(wallBox), ...(FURNITURE[floor] ?? []).filter((f) => TALL.has(f.type)).map(footprint), ...curtains(floor)];
 }
 
+// Low furniture Valentina can jump onto (Space) and walk on: the height of
+// its top in metres, as built in casino3d.ts. Anything with screens, glass,
+// bottles, a palm, flames or a spinning die on top stays a plain obstacle.
+export const TOPS = {
+  desk: 1.21, hostdesk: 1.15, betdesk: 1.1, stage: 1.1, craps: 1.03, altar: 1,
+  roulette: 0.92, blackjack: 0.92, poker: 0.92, baccarat: 0.92, cardtable: 0.84, officedesk: 0.84, betseats: 0.75,
+  sofa: 0.45, vipbooth: 0.45, lounge: 0.45, armchair: 0.45, pew: 0.45, deckchair: 0.45,
+};
+
+// Walls and furniture. People are not boxes: they are round and solid
+// (pushOut in escucha-3d/bump.mjs), see peopleAt.
 export function solidsFor(floor) {
   const walls = (WALLS[floor] ?? []).map(wallBox);
-  const things = (FURNITURE[floor] ?? []).filter((f) => f.solid !== false && f.type !== 'chandelier').map(footprint);
-  const people = SCENES.filter((s) => s.floor === floor).flatMap((s) => [s.npc, ...(s.extras ?? [])])
-    .map((p) => box(p.x - 0.32, p.z - 0.32, p.x + 0.32, p.z + 0.32));
-  const crowd = (CROWD[floor] ?? []).filter((c) => !c.walk).map((p) => box(p.x - 0.3, p.z - 0.3, p.x + 0.3, p.z + 0.3));
+  const things = (FURNITURE[floor] ?? []).filter((f) => f.solid !== false && f.type !== 'chandelier')
+    .map((f) => TOPS[f.type] != null ? { ...footprint(f), top: TOPS[f.type] } : footprint(f));
   const elevatorWall = [box(24, -52, 42, -51.4)];
-  return [...walls, ...things, ...people, ...crowd, ...elevatorWall, ...(floor === 1 ? PLAZA_SOLIDS : [])];
+  return [...walls, ...things, ...curtains(floor), ...elevatorWall, ...(floor === 1 ? PLAZA_SOLIDS : [])];
+}
+
+// Everyone who stays put on a floor (scene people and the crowd that does
+// not walk), with how high they stand (the dancer is on the stage).
+export function peopleAt(floor) {
+  return [
+    ...SCENES.filter((s) => s.floor === floor).flatMap((s) => [s.npc, ...(s.extras ?? [])]),
+    ...(CROWD[floor] ?? []).filter((c) => !c.walk),
+  ].map((p) => ({ x: p.x, z: p.z, y: p.y ?? 0 }));
 }
 
 // The white circle the heroine is standing in, if any.

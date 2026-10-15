@@ -12,6 +12,7 @@ import type { WorldProps } from './World3D';
 import { playClips, stopAudio, warmVoices } from '../autoestudio/engine/speech';
 import { RealmAudio, DEFAULT_MUSIC_VOLUME } from './audio';
 import { themeFor } from './score.mjs';
+import { setShoutMuted } from '../escucha-3d/shout';
 import './reino.css';
 
 const AUDIO_KEY = 'spanishcue:rosa-dormida:audio:v1';
@@ -217,6 +218,8 @@ export default function ReinoGame() {
     return () => { live = false; audio.current?.dispose(); recognition.current?.abort(); stopAudio(); if (toastTimer.current) clearTimeout(toastTimer.current); if (damageTimer.current) clearTimeout(damageTimer.current); };
   }, []);
 
+  // The sound-effects toggle also silences the residents' shouted insults.
+  useEffect(() => { setShoutMuted(!effects); }, [effects]);
   useEffect(() => {
     if (!ready) return;
     audio.current?.setPreferences(music, effects, volume);

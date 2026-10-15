@@ -26,7 +26,9 @@ import { createDrivables, type Drivable } from './drive3d';
 import { BOARD_RADIUS, OWNER_SHOUT_AFTER, POLICE_AFTER, SPECS, dismountSpot, playerHeading, stepVehicle } from './drive.mjs';
 import { createItemUseFx, disposeItem, heroHand, holdItem } from './items3d';
 import { ItemInventory } from './ItemIcon';
-import { animatePerson } from './people3d';
+import { animatePerson, setMood, type Person } from './people3d';
+import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
+import { insultFor, shout } from '../escucha-3d/shout';
 import { animateHero, createHero } from './hero3d';
 
 export type WorldProps = {
@@ -91,7 +93,7 @@ export default function World3D(props: WorldProps) {
   const knob = useRef<HTMLSpanElement>(null);
   const bubbleEl = useRef<HTMLParagraphElement>(null);
   const api = useRef<{ interact: (key: 'E' | 'F') => void; cycleCamera: () => void; useItem: () => void; brake: () => void; held: Set<string>; joy: { x: number; y: number } } | null>(null);
-  const [bubble, setBubble] = useState<{ text: string; n: number } | null>(null);
+  const [bubble, setBubble] = useState<{ text: string; n: number; angry?: boolean } | null>(null);
   const [district, setDistrict] = useState<{ name: string; n: number } | null>(null);
   const [journey, setJourney] = useState('');
   const [prompt, setPrompt] = useState<Prompt | null>(null);
@@ -192,6 +194,74 @@ export default function World3D(props: WorldProps) {
     boxes.push(...events.movingBoxes);
     crowd.setHooks({ fly: (x: number, z: number) => events.fly('helicopter', x, z), police: (x: number, z: number) => { events.callPolice(x, z); } });
     const drivables = createDrivables(scene, city.night, { boxes });
+    // You walk against everything but people: they are round bodies (pushOut),
+    // so running into one is a crash and not a wall.
+    let walkBoxes: Box[] = [], boxCount = -1;
+    const solidsNow = () => {
+      if (sim.room) return sim.room.solids;
+      if (boxes.length !== boxCount) { boxCount = boxes.length; walkBoxes = boxes.filter(b => !b.npc); }
+      return walkBoxes;
+    };
+    // Everyone on their feet around you; `glare` makes them furious (and turn
+    // to you if they stand) and returns how to put them back as they were.
+    type Bumpable = { key: string; x: number; z: number; moving: boolean; body?: string; seed: number; glare: (until: number, face: number) => () => void };
+    const seedOf = (key: string) => [...key].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7);
+    const spot = new THREE.Vector3();
+    const bumpable = (): Bumpable[] => {
+      const { x, z } = sim.player;
+      const near = (px: number, pz: number) => Math.abs(px - x) < 2.5 && Math.abs(pz - z) < 2.5;
+      const glarePerson = (person: Person, turn: boolean) => (until: number, face: number) => {
+        const mood = person.mood, heading = person.root.rotation.y;
+        setMood(person, 'furious');
+        if (turn) person.root.rotation.y = face;
+        return () => { setMood(person, mood); if (turn) person.root.rotation.y = heading; };
+      };
+      if (sim.room && !sim.streetRoom) {
+        const people = interiors.get(sim.room.stage)?.people ?? [];
+        return people.filter(person => !person.seated).map((person, i) => {
+          person.root.getWorldPosition(spot);
+          return { key: `${sim.room!.stage}-${i}`, x: spot.x, z: spot.z, moving: false, body: person.rig.full.body, seed: seedOf(`${sim.room!.stage}-${i}`), glare: glarePerson(person, true) };
+        }).filter(p => near(p.x, p.z));
+      }
+      const out: Bumpable[] = [];
+      if (!sim.indoor) for (const rig of city.npcs.values()) {
+        if (rig.data.seated || !near(rig.x, rig.z)) continue;
+        const walk = Boolean(rig.data.walk);
+        out.push({ key: rig.data.id, x: rig.x, z: rig.z, moving: walk, body: rig.person.rig.full.body, seed: seedOf(rig.data.id), glare: (until, face) => {
+          const mood = rig.person.mood, heading = rig.heading;
+          setMood(rig.person, 'furious');
+          if (!walk) { rig.heading = face; rig.person.root.rotation.y = face; }
+          return () => { setMood(rig.person, mood); if (!walk) { rig.heading = heading; rig.person.root.rotation.y = heading; } };
+        } });
+      }
+      for (const b of crowd.bumpable(x, z)) out.push({ ...b, glare: (until, face) => {
+        const heading = b.body3d.heading;
+        crowd.glare(b.body3d, until, b.moving ? undefined : face);
+        return () => { if (!b.moving) b.body3d.heading = heading; };
+      } });
+      for (const a of events.bumpable(x, z)) out.push({ ...a, glare: until => { events.glare(a.actor, until); return () => {}; } });
+      return out;
+    };
+    const mayYell = createBumpClock();
+    const angry: { until: number; restore: () => void }[] = [];
+    // People are solid, and nobody likes being run into: whoever you crash
+    // into (or who walks into you) glares, turns to you and yells something rude.
+    const bumpPeople = (speed: number) => {
+      const people = bumpable();
+      if (!people.length) return;
+      const solids = solidsNow(), bounds = sim.room?.bounds;
+      const out = pushOut(sim.player.x, sim.player.z, people, (x, z) => isWalkable(x, z, solids, bounds));
+      sim.player.x = out.x; sim.player.z = out.z;
+      const who = out.hit >= 0 ? people[out.hit] : null;
+      if (!who || !(speed > 1.2 || who.moving) || !mayYell(who.key, sim.clock)) return;
+      const line = insultFor(who.body, who.seed);
+      shout(line);
+      const until = sim.clock + 3.5;
+      angry.push({ until, restore: who.glare(until, faceTo(who, sim.player)) });
+      sim.bubble = { x: who.x, y: sim.y + 1.9, z: who.z, until: sim.clock + 3 };
+      setBubble(current => ({ text: line.text, n: (current?.n ?? 0) + 1, angry: true }));
+      sim.player.speed *= 0.3;
+    };
     const streetRooms = new Map<string, ReturnType<typeof buildStreetRoom>>();
     // The object you carry, in your free hand.
     let held: { id: ItemId; holder: THREE.Object3D } | null = null;
@@ -930,6 +1000,9 @@ export default function World3D(props: WorldProps) {
         });
       }
 
+      // Angry faces go back to normal after a while.
+      for (let i = angry.length - 1; i >= 0; i--) if (sim.clock >= angry[i].until) { angry[i].restore(); angry.splice(i, 1); }
+
       // Movement: camera-relative, in the street or inside a room.
       const walking = sim.mode === 'walk' || sim.mode === 'room';
       if (walking && sim.drive) {
@@ -973,11 +1046,13 @@ export default function World3D(props: WorldProps) {
           input.sprint = Math.hypot(sim.joy.x, sim.joy.y) > 0.98;
         }
         const before = sim.player.heading;
-        const next = stepPlayer(sim.player, { ...input, yaw: sim.yaw }, dt, sim.room ? sim.room.solids : boxes, sim.room?.bounds);
+        const next = stepPlayer(sim.player, { ...input, yaw: sim.yaw }, dt, solidsNow(), sim.room?.bounds);
         sim.held.delete("jump");
         Object.assign(sim.player, next);
+        // Up on a bench or a car you are above everyone's head.
+        if (next.y < 1.2) bumpPeople(next.speed);
         sim.turn = dt > 0 ? angleBetween(before, next.heading) / dt : 0;
-        placePerson(hero, next.x, next.z, next.heading, sim.y + next.y);
+        placePerson(hero, sim.player.x, sim.player.z, next.heading, sim.y + next.y);
         if (!sim.dragging && sim.clock - sim.dragAt > 1.2) sim.yaw = followYaw(sim.yaw, next.heading, next.speed, dt);
         followShot();
         const street = sim.mode === 'walk' && p.phase === 'ciudad';
@@ -1358,7 +1433,7 @@ export default function World3D(props: WorldProps) {
     <div className="na-fade" ref={fader} aria-hidden="true" />
     {journey && <p className="na-journey" role="status" aria-live="polite">{journey}</p>}
     {district && mode === 'walk' && <p key={district.n} className="na-district" role="status">{district.name}</p>}
-    <p ref={bubbleEl} className="na-bubble" aria-live="polite" style={{ opacity: 0 }}><Bi text={bubble?.text} /></p>
+    <p ref={bubbleEl} className={bubble?.angry ? 'na-bubble is-angry' : 'na-bubble'} aria-live="polite" style={{ opacity: 0 }}><Bi text={bubble?.text} /></p>
     <p id="na-world-help" className="na-sr">Barrio en 3D. Corre con W, A, S y D o con las flechas; Shift va más rápido, N es el nitro, Alt camina y la barra espaciadora salta. Acércate a un lugar o a una persona y toca E para interactuar, F para subir o bajar del taxi. Con E también puedes robar un auto o una moto estacionados y manejarlos con W y S para acelerar y A y D para girar; la barra espaciadora frena y E te baja. Arrastra con el mouse para girar la cámara. V cambia la cámara, M muestra el mapa y Escape sale. La lista de Lugares te lleva a cada sitio.</p>
     <p className="na-sr" aria-live="polite">{prompt && walking ? `Cerca de ${prompt.name}. Toca ${prompt.key} para ${prompt.verb.toLowerCase()}.` : ''}</p>
     {walking && driving && <p className="na-drive-hud" role="status"><b ref={speedEl}>0 km/h</b><span>{touch ? 'Palanca: acelerar y girar · FRENO · BAJAR' : 'W S acelerar · A D girar · ESPACIO freno · SHIFT turbo · E bajar'}</span></p>}

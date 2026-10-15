@@ -5,7 +5,7 @@ import {mkdtemp,writeFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {pathToFileURL} from 'node:url';
-import { REALM_SPAWN, activeColliders, stepRealmPlayer, nearestInReach } from '../app/el-reino-de-la-rosa-dormida/movement.mjs';
+import { REALM_SPAWN, activeColliders, stepRealmPlayer, nearestInReach, shovePeople, standable } from '../app/el-reino-de-la-rosa-dormida/movement.mjs';
 import {createGame,reduceGame,hasTalked,conversationLength,CAMPAIGN} from '../app/el-reino-de-la-rosa-dormida/engine.mjs';
 import {START_POINTS,stateForStartPoint} from '../app/el-reino-de-la-rosa-dormida/checkpoints.mjs';
 import {PLACES} from '../app/el-reino-de-la-rosa-dormida/conversations.mjs';
@@ -27,12 +27,14 @@ const world=buildWorld(new Scene());
 delete globalThis.document;
 const flags={bridgeOpen:true,gardenOpen:true,castleOpen:true,dragonTrusted:true};
 const radius=.43;
-function clear(x,z,state=flags){const y=world.floorAt(x,z);return !activeColliders(world.colliders,state,y).some(b=>x>b.minX-radius&&x<b.maxX+radius&&z>b.minZ-radius&&z<b.maxZ+radius);}
+// Residents are solid obstacles too: every route must go around them.
+function clear(x,z,state=flags){const y=world.floorAt(x,z);return !activeColliders(world.colliders,state,y).some(b=>x>b.minX-radius&&x<b.maxX+radius&&z>b.minZ-radius&&z<b.maxZ+radius)&&world.people.every(p=>Math.abs(p.y-y)>=1.6||Math.hypot(p.x-x,p.z-z)>=(p.radius??.62)+.3);}
 function walk(player,target,state=flags){
  for(let frame=0;frame<600;frame++){
   const dx=target.x-player.x,dz=target.z-player.z,d=Math.hypot(dx,dz);
   if(d<.13)return player;
   player=stepRealmPlayer(player,{y:Math.min(1,d/.8),yaw:Math.atan2(dx,dz),sprint:true},1/60,world.colliders,world.floorAt,state);
+  player=shovePeople(player,world.people,world.colliders,world.floorAt,state).player;
  }
  throw Error(`Cannot walk from ${JSON.stringify(player)} to ${JSON.stringify(target)}`);
 }
@@ -96,6 +98,22 @@ test('every point of interest is on reachable ground and away from other interac
   assert.ok(others.every(o=>Math.hypot(o.x-s.x,o.z-s.z)>=5.5||Math.abs(o.y-s.y)>2),`${id} does not overlap another prompt`);
   route({x:0,y:0,z:24},s,3,flags);
  }
+});
+
+test('residents are solid but nobody blocks a doorway, corridor or the way to a prompt',()=>{
+ assert.ok(world.people.length>=9&&!world.people.some(p=>p.id==='elara'),'every standing resident is solid');
+ for(const p of world.people)assert.ok(p.body==='m'||p.body==='f');
+ // Gate passages, the castle door and the tower corridor keep a clear lane.
+ for(const [z,x0,x1] of [[-45.6,-5,5],[-49,-5.2,5.2],[-64,-5.2,5.2],[-118,5.1,14.9]]){
+  let lane=0;for(let x=x0;x<=x1;x+=.1)if(world.people.every(p=>Math.hypot(p.x-x,p.z-z)>=(p.radius??.62)+.6||Math.abs(p.y-world.floorAt(x,z))>=1.6))lane+=.1;
+  assert.ok(lane>=2.5,`a clear lane through z=${z}: ${lane.toFixed(1)} m`);
+ }
+ // Running straight into someone leaves you beside them, never inside a wall.
+ const aldren=world.people.find(p=>p.id==='aldren');
+ let p={...REALM_SPAWN,x:aldren.x,z:aldren.z+3};
+ for(let i=0;i<90;i++){p=stepRealmPlayer(p,{y:1,yaw:Math.PI,sprint:true},1/60,world.colliders,world.floorAt,flags);p=shovePeople(p,world.people,world.colliders,world.floorAt,flags).player;}
+ assert.ok(Math.hypot(p.x-aldren.x,p.z-aldren.z)>=.6,'you never run through Aldren');
+ assert.ok(standable(p.x,p.z,p.y,world.colliders,world.floorAt,flags),'and are not pushed into a wall');
 });
 
 test('the actual portcullis and castle doors block before their quest flags',()=>{
