@@ -59,7 +59,7 @@ async function writeExport(tables, overrides = {}) {
 test("import order inserts parents first and founder_offer_state after founder_assignments", async () => {
   const { db } = await schemaDatabase();
   const order = importOrder(schemaModel(db));
-  assert.equal(order.length, 27);
+  assert.equal(order.length, 28);
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_passes"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("homework_errors"));
   assert.ok(order.indexOf("autoestudio_learners") < order.indexOf("autoestudio_progress"));
