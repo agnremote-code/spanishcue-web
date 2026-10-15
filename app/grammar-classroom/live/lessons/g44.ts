@@ -33,7 +33,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Mi, tu, su', blocks: [
           { kind: 'lead', text: 'Pablo y Elena preparan una reunión. Hay llaves, teléfonos y carpetas en la mesa. ¿**De quién** es cada cosa? Para decirlo, usamos los **posesivos**.', en: 'Possessives say who something belongs to.' },
-          { kind: 'guide', text: { teacher: 'Toma un objeto tuyo y uno del alumno. Di «mi libro», «tu libro». Pide al alumno que haga lo mismo.', self: 'Toma un objeto tuyo y di en voz alta: «mi teléfono», «mis llaves». Después lee la explicación.' } },
+          { kind: 'guide', text: { teacher: 'Toma un objeto tuyo y uno del alumno. Di «mi libro», «tu libro». Tu alumno hace lo mismo.', self: 'Toma un objeto tuyo y di en voz alta: «mi teléfono», «mis llaves». Después lee la explicación.' } },
           { kind: 'concept', tone: 'blue', label: 'MI · TU · SU', question: '¿De quién es?', en: 'my · your · his / her / their', formula: ['mi / tu / su + una cosa', 'mis / tus / sus + varias cosas'],
             meaning: '**Mi, tu** y **su** van **antes** del sustantivo. Solo cambian por **número**: una cosa o varias cosas. No cambian por masculino o femenino.',
             examples: [
@@ -104,7 +104,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'Hay otras formas que van **después** del sustantivo o solas: «Este libro es **mío**», «¿Es **tuyo**?», «un amigo **mío**». No es necesario aprenderlas ahora.', en: 'mine · yours · a friend of mine' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno encuentra el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Mis hermana vive en Lima.', right: 'Mi hermana vive en Lima.', why: 'Una hermana: mi. «Mis» es para varias cosas o personas.' },
             { wrong: 'Pablo y Elena buscan su llaves.', right: 'Pablo y Elena buscan sus llaves.', why: 'Varias llaves: sus. La forma depende de las cosas, no de las personas.' },

@@ -33,7 +33,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La condición irreal pasada', blocks: [
           { kind: 'lead', text: 'El equipo de Julia eligió un programa para organizar fotos **sin probarlo**. En la exposición, dos compañeros no pudieron abrir los archivos. Ahora revisan la decisión: ¿qué habría pasado si la hubieran tomado de otra manera?' },
-          { kind: 'guide', text: { teacher: 'Lean la tabla y pide al alumno que forme una condición sobre algo que no hizo la semana pasada.', self: 'Lee la tabla. Después piensa en algo que no hiciste la semana pasada y empieza una frase con «Si hubiera…».' } },
+          { kind: 'guide', text: { teacher: 'Lean la tabla. Después tu alumno forma una condición sobre algo que no hizo la semana pasada.', self: 'Lee la tabla. Después piensa en algo que no hiciste la semana pasada y empieza una frase con «Si hubiera…».' } },
           { kind: 'table', title: 'Las dos piezas de la frase', head: ['Persona', 'Condición: hubiera / hubiese + participio', 'Resultado: habría + participio'], rows: [
             ['yo', 'si **hubiera** (hubiese) probado', '**habría** detectado'],
             ['tú', 'si **hubieras** (hubieses) probado', '**habrías** detectado'],
@@ -97,7 +97,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📌', title: 'Como referencia', text: 'Existe también la combinación inversa: una condición **presente** con un resultado **pasado**: «Si **fuera** más organizado, no **habría olvidado** la reunión» (soy desorganizado, y por eso la olvidé). Hoy nos centramos en la condición pasada.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes en B2.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que corrija en voz alta y que diga si el resultado debería ser pasado o presente.', self: 'Lee cada frase, encuentra el error y di la versión correcta antes de tocar.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno corrige en voz alta y dice si el resultado debería ser pasado o presente.', self: 'Lee cada frase, encuentra el error y di la versión correcta antes de tocar.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Si habríamos probado el programa, habríamos detectado el error.', right: 'Si hubiéramos probado el programa, habríamos detectado el error.', why: 'Después de «si» nunca va el condicional.' },
             { wrong: 'Si hubiera estudiado medicina, hoy habría sido médica.', right: 'Si hubiera estudiado medicina, hoy sería médica.', why: 'Con «hoy», el resultado es una situación actual: condicional simple.' },

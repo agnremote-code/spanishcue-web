@@ -42,7 +42,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Para qué sirve', blocks: [
           { kind: 'lead', text: 'Inés usa una sala nueva para una videollamada. Marta le escribe: «**Abre** la puerta azul y **entra** en la sala pequeña». Con el **imperativo** damos instrucciones, pedimos cosas y avisamos.', en: 'We use the imperative to give instructions and make requests.' },
-          { kind: 'guide', text: { teacher: 'Lean los ejemplos y pregunta: «¿Quién debe hacer la acción?». Pide al alumno una instrucción para entrar en su casa.', self: 'Lee los ejemplos. Fíjate: siempre hay una persona (tú) que debe hacer algo.' } },
+          { kind: 'guide', text: { teacher: 'Lean los ejemplos y pregunta: «¿Quién debe hacer la acción?». Tu alumno da una instrucción para entrar en su casa.', self: 'Lee los ejemplos. Fíjate: siempre hay una persona (tú) que debe hacer algo.' } },
           { kind: 'concept', tone: 'blue', label: 'AFIRMATIVO REGULAR', question: '¿Qué hago?', en: 'affirmative commands (tú)', formula: ['presente de tú − s', 'hablas → habla · comes → come · abres → abre'],
             meaning: 'Para la mayoría de los verbos, el imperativo afirmativo de tú es **la forma de tú del presente sin la -s**.',
             examples: [
@@ -126,7 +126,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🔑', title: 'El truco', text: 'Afirmativo de -ar termina en **-a**; negativo, en **-es**. Afirmativo de -er / -ir termina en **-e**; negativo, en **-as**. ¡Las vocales se cruzan!', en: 'habla / no hables · come / no comas' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Mira la vocal del final.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'No cierra la ventana.', right: 'No cierres la ventana.', why: 'En negativo, -ar cambia a -es: no cierres.' },
             { wrong: 'No abres la puerta.', right: 'No abras la puerta.', why: '«No abres» es presente. Para prohibir: no abras.' },

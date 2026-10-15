@@ -97,7 +97,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Si lloverá, tomamos el autobús.', right: 'Si llueve, tomamos el autobús.', why: 'Después de «si» no va futuro: presente.' },
             { wrong: 'Sí llueve, tomamos el autobús.', right: 'Si llueve, tomamos el autobús.', why: 'Es una condición: «si», sin tilde.' },
@@ -241,7 +241,7 @@ export const lesson: LiveLesson = {
       title: 'Planes con alternativas', coach: 'Siempre hay un plan B.',
       steps: [
         { title: 'Planes con alternativas', blocks: [
-          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que el alumno quiere contar y cambia las condiciones para obligarlo a adaptar el plan.', self: 'Responde cada pregunta en voz alta, con frases completas. Si quieres, escribe tu respuesta.' } },
+          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que tu alumno quiere contar y cambia las condiciones; tu alumno adapta el plan cada vez.', self: 'Responde cada pregunta en voz alta, con frases completas. Si quieres, escribe tu respuesta.' } },
           { kind: 'talk', cards: [
             { q: '¿Qué haces normalmente si llueve el fin de semana?', followUps: ['¿Y si hace mucho calor?', '¿Prefieres quedarte en casa o salir igual?'], phrases: ['[[Si llueve|blue]], [[me quedo|teal]] en casa.', '[[Veo|teal]] una película [[si hace frío|blue]].', 'Normalmente…'], hint: 'Una condición con «si» y lo que haces, los dos en presente.', example: 'Si llueve, me quedo en casa y leo. Si hace mucho calor, voy a la piscina con mis hijos.', next: 'Ahora hablemos de imprevistos.', teacher: 'Cambia la condición: «¿Y si llueve toda la semana?».' },
             { q: '¿Qué haces si llegas tarde a una cita o a una clase?', followUps: ['¿Avisas siempre?', '¿Qué haces si otra persona llega tarde?'], phrases: ['[[Si llego tarde|blue]], [[aviso|teal]] por mensaje.', '[[Si la otra persona no llega|blue]], [[espero|teal]]…'], hint: 'Piensa en lo que haces de verdad, no en lo ideal.', example: 'Si llego tarde, aviso por mensaje. Si la otra persona no llega, espero quince minutos y después la llamo.', next: 'Hablemos de comida.' },

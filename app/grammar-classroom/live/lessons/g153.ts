@@ -32,7 +32,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La forma: habré + participio', blocks: [
           { kind: 'lead', text: 'El viernes se abre una exposición en el centro cultural. Paula, la coordinadora, se imagina el **jueves por la tarde** y mira hacia atrás: ¿qué estará ya hecho? Para eso usa el **futuro compuesto**.' },
-          { kind: 'guide', text: { teacher: 'Lean la tabla por filas y pide al alumno que forme una frase con cada persona sobre la próxima semana.', self: 'Lee la tabla y fíjate en qué parte cambia con la persona. Después di una frase con «yo» y otra con «nosotros».' } },
+          { kind: 'guide', text: { teacher: 'Lean la tabla por filas; tu alumno forma una frase con cada persona sobre la próxima semana.', self: 'Lee la tabla y fíjate en qué parte cambia con la persona. Después di una frase con «yo» y otra con «nosotros».' } },
           { kind: 'table', title: 'Futuro de «haber» + participio', head: ['Persona', 'hablar', 'comer', 'vivir'], rows: [
             ['yo', '**habré** hablado', '**habré** comido', '**habré** vivido'],
             ['tú', '**habrás** hablado', '**habrás** comido', '**habrás** vivido'],
@@ -115,7 +115,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🔭', title: 'Como extensión', text: 'En textos más complejos se combinan varios puntos: «Cuando ustedes lean este informe, el equipo ya **habrá cerrado** el presupuesto y **habrá empezado** la segunda fase». Basta con encontrar cada punto de referencia.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Errores típicos con el futuro compuesto.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que corrija cada frase en voz alta y que diga qué regla se rompió.', self: 'Lee cada frase, encuentra el error y di la versión correcta antes de tocar.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno corrige cada frase en voz alta y dice qué regla se rompió.', self: 'Lee cada frase, encuentra el error y di la versión correcta antes de tocar.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Cuando habrás llegado, ya habremos cenado.', right: 'Cuando llegues, ya habremos cenado.', why: 'Después de «cuando» con valor futuro va el presente de subjuntivo.' },
             { wrong: 'Para el viernes haberé terminado.', right: 'Para el viernes habré terminado.', why: '«Haber» tiene raíz irregular en futuro: habr-.' },

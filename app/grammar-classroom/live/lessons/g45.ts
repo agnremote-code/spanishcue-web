@@ -110,7 +110,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'Más adelante vas a aprender: «**demasiado** café» (más de lo necesario), «**otro** plato» (uno más) y «**más** platos **que** vasos». No es necesario aprenderlo ahora.', en: 'too much · another · more… than' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno encuentra el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Necesito uno kilo de tomates.', right: 'Necesito un kilo de tomates.', why: 'Delante de un sustantivo masculino: un.' },
             { wrong: 'Hay mucho personas en la tienda.', right: 'Hay muchas personas en la tienda.', why: '«Personas» es femenino plural: muchas.' },

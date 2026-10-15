@@ -126,7 +126,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '⏳', title: 'Una historia completa', text: 'Las cuatro estructuras cuentan juntas una historia: «Antes [[solía correr|blue]]. En 2023 [[dejé de correr|violet]] por una lesión. Este año [[he vuelto a correr|orange]] y [[sigo corriendo|teal]] tres veces por semana».' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección. Pregunta siempre: «¿Qué conexión pide este verbo: a, de, nada o gerundio?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección. Pregunta siempre: «¿Qué conexión pide este verbo: a, de, nada o gerundio?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Sigo estudiar español.', right: 'Sigo estudiando español.', why: '«Seguir» va con gerundio, no con infinitivo.' },
             { wrong: 'Volví nadar este verano.', right: 'Volví a nadar este verano.', why: '«Volver» necesita «a» antes del infinitivo.' },

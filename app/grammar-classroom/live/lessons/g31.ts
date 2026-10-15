@@ -121,7 +121,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección y que explique qué tipo de frase es: condición, regla o consejo.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno encuentra el error antes de que muestres la corrección y explica qué tipo de frase es: condición, regla o consejo.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Si Marta confirmará hoy, reservaremos la sala.', right: 'Si Marta confirma hoy, reservaremos la sala.', why: 'Después de «si», presente, aunque hablemos del futuro.' },
             { wrong: 'Si tendría tiempo, te ayudo.', right: 'Si tengo tiempo, te ayudo.', why: 'Condición real: nunca condicional después de «si».' },
@@ -271,7 +271,7 @@ export const lesson: LiveLesson = {
       title: 'Problemas y soluciones', coach: 'Planea con alternativas y aconseja.',
       steps: [
         { title: 'Problemas y soluciones', blocks: [
-          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que el alumno quiere contar. Cuando dé una orden («Haz…»), pídele la misma idea como consejo («Yo haría…»).', self: 'Responde cada pregunta en voz alta, con frases completas. Si quieres, escribe tu respuesta.' } },
+          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que el alumno quiere contar. Cuando dé una orden («Haz…»), tu alumno la reformula como consejo («Yo haría…»).', self: 'Responde cada pregunta en voz alta, con frases completas. Si quieres, escribe tu respuesta.' } },
           { kind: 'talk', cards: [
             { q: '¿Qué haces si un plan con amigos o compañeros se retrasa?', followUps: ['¿Esperas o te vas?', '¿Tienes alguna regla personal?'], phrases: ['[[Si alguien llega tarde|blue]], [[espero|teal]]…', '[[Si el plan se retrasa mucho|blue]], [[me voy|teal]]…'], hint: 'Describe tu regla personal: presente en las dos partes.', example: 'Si alguien llega tarde, espero veinte minutos. Si el plan se retrasa mucho, propongo otro día.', next: 'Ahora, una reunión real.', teacher: 'Si el alumno usa futuro después de «si», repite su frase con presente sin explicar.' },
             { q: 'Piensa en una reunión, una fiesta o un viaje que tienes pronto. ¿Qué harás si algo cambia?', followUps: ['¿Y si alguien no puede venir?', '¿Y si hace mal tiempo?'], phrases: ['[[Si hace mal tiempo|blue]], [[haremos|teal]]…', '[[Si mi hermana no viene|blue]], [[cambiaremos|teal]]…'], hint: 'Plantea dos condiciones reales y su consecuencia en futuro.', example: 'El mes que viene voy a la playa con amigos. Si hace mal tiempo, visitaremos los pueblos cercanos. Si alguien no puede venir, alquilaremos un coche más pequeño.', next: 'Ahora te toca aconsejar.' },

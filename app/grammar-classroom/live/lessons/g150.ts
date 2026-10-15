@@ -40,7 +40,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Cuando la perspectiva está en el pasado', blocks: [
           { kind: 'lead', text: 'En la última reunión, Elena propuso un cambio a su equipo. Si hoy contamos **lo que pidió** o **lo que quería**, el verbo que depende de esa petición pasa del presente al **imperfecto de subjuntivo**.' },
-          { kind: 'guide', text: { teacher: 'Lean las dos columnas y pide al alumno que identifique qué verbo cambia y por qué cambia el otro.', self: 'Lee las dos columnas. ¿Qué verbo cambia primero? ¿Y cuál cambia como consecuencia?' } },
+          { kind: 'guide', text: { teacher: 'Lean las dos columnas; tu alumno identifica qué verbo cambia y por qué cambia el otro.', self: 'Lee las dos columnas. ¿Qué verbo cambia primero? ¿Y cuál cambia como consecuencia?' } },
           { kind: 'compare', title: 'Hoy y en la reunión pasada', columns: [
             { tone: 'neutral', label: 'PERSPECTIVA PRESENTE', sentence: 'Elena **pide** que el equipo **pruebe** otra forma de organizarse.', idea: 'Petición actual → presente de subjuntivo.' },
             { tone: 'blue', label: 'PERSPECTIVA PASADA', sentence: 'Elena [[pidió que|blue]] el equipo [[probara|blue]] otra forma de organizarse.', idea: 'Petición en pasado → imperfecto de subjuntivo. La acción pedida se mira desde ese momento.' },
@@ -146,7 +146,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes en B2.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error y que justifique la corrección con el verbo principal o con «si / ojalá».', self: 'Lee cada frase, busca el error y localiza el verbo que lo decide. Después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error y justifica la corrección con el verbo principal o con «si / ojalá».', self: 'Lee cada frase, busca el error y localiza el verbo que lo decide. Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Si tendría dinero, viajaría por Asia.', right: 'Si tuviera dinero, viajaría por Asia.', why: 'Después de «si» hipotético no va el condicional.' },
             { wrong: 'Mi jefe me pidió que llegue temprano ayer.', right: 'Mi jefe me pidió que llegara temprano ayer.', why: 'Petición en pasado sobre una acción ya pasada: imperfecto de subjuntivo.' },

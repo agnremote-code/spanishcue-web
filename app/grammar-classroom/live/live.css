@@ -112,7 +112,7 @@
 .gl-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .gl-hint{margin:0;color:var(--gl-muted);font-size:15px;line-height:1.55}
 .gl-muted{color:var(--gl-muted);font-weight:400}
-.gl-en{display:block;color:#62758e;font-style:italic;font-size:.86em;line-height:1.45}
+.gl-en{display:block;margin-top:8px;padding-top:6px;border-top:1px dashed rgba(98,117,142,.28);color:#62758e;font-style:italic;font-size:.86em;line-height:1.45}
 .gl-answer{margin:6px 0 0;padding:8px 0 0 14px;border-left:3px solid var(--gl-ok);color:#0b4f3c}
 .gl-badge{display:inline-block;border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600;line-height:1.2;letter-spacing:.05em;color:var(--gl-tone,var(--gl-navy));background:var(--gl-tone-soft,var(--gl-soft))}
 .gl-tone-blue{--gl-tone:var(--gl-blue);--gl-tone-soft:var(--gl-blue-soft)}

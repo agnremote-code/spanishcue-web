@@ -43,7 +43,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La rutina de Nora', blocks: [
           { kind: 'lead', text: 'Nora trabaja en una librería. **Todos los días** abre la tienda a las nueve. Para hablar de lo que hacemos normalmente, usamos el **presente**.', en: 'We use the present tense for routines.' },
-          { kind: 'guide', text: { teacher: 'Lean los ejemplos y pregunta: «¿Esto pasa una vez o muchas veces?». Pide un ejemplo de la rutina del alumno.', self: 'Lee los ejemplos. Fíjate en las palabras que dicen «muchas veces»: todos los días, los lunes, normalmente.' } },
+          { kind: 'guide', text: { teacher: 'Lean los ejemplos y pregunta: «¿Esto pasa una vez o muchas veces?». Tu alumno da un ejemplo de su rutina.', self: 'Lee los ejemplos. Fíjate en las palabras que dicen «muchas veces»: todos los días, los lunes, normalmente.' } },
           { kind: 'concept', tone: 'blue', label: 'RUTINA', question: '¿Qué haces normalmente?', en: 'habits and routines', formula: ['verbo en presente + todos los días / los lunes / normalmente / siempre'],
             meaning: 'El presente cuenta **lo que hacemos normalmente**: hábitos, horarios y costumbres.',
             examples: [
@@ -130,7 +130,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '✋', title: 'Sin pronombre', text: 'En español el pronombre no es obligatorio: la terminación ya dice la persona. «**Trabajo** en una tienda» = «Yo trabajo en una tienda».', en: 'The ending shows the person, so “yo” is optional.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Mira la terminación.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Yo trabaja en una oficina.', right: 'Yo trabajo en una oficina.', why: 'Con yo, la terminación es -o.' },
             { wrong: 'Nosotros vivemos en el centro.', right: 'Nosotros vivimos en el centro.', why: 'Vivir es -ir: con nosotros, -imos.' },

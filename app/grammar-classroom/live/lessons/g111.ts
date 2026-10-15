@@ -34,7 +34,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Quién + verbo + información', blocks: [
           { kind: 'lead', text: '«Ana. Oficina. Lunes.» Son palabras, pero no es una oración. Falta **el verbo**: «Ana **trabaja** en una oficina los lunes».', en: 'A sentence needs a conjugated verb.' },
-          { kind: 'guide', text: { teacher: 'Escribe tres palabras sueltas (Leo, casa, cocinar). Pide al alumno una oración completa antes de mostrar la explicación.', self: 'Antes de leer, intenta formar una oración con «Leo», «casa» y «cocinar».' } },
+          { kind: 'guide', text: { teacher: 'Escribe tres palabras sueltas (Leo, casa, cocinar). Tu alumno forma una oración completa antes de que muestres la explicación.', self: 'Antes de leer, intenta formar una oración con «Leo», «casa» y «cocinar».' } },
           { kind: 'concept', tone: 'teal', label: 'LA ORACIÓN BÁSICA', question: '¿Quién hace qué?', en: 'subject + verb + information', formula: ['sujeto + verbo + información'],
             meaning: 'El **verbo** es el centro de la oración. El **sujeto** dice quién hace la acción o de quién hablamos. Después va la **información**: dónde, cuándo, qué.',
             examples: [
@@ -126,7 +126,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '✔', title: 'Revisa siempre el verbo', text: 'En las tres oraciones, el verbo tiene que concordar con el sujeto: «Ana trabaj**a**», «Ana y Leo no trabaj**an**», «¿Dónde trabaj**an** Ana y Leo?».' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección. Pregunta: «¿Dónde está el verbo? ¿Quién es el sujeto?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección. Pregunta: «¿Dónde está el verbo? ¿Quién es el sujeto?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Mis amigas trabaja en casa.', right: 'Mis amigas trabajan en casa.', why: 'Sujeto plural, verbo plural.' },
             { wrong: 'Ana trabaja no los sábados.', right: 'Ana no trabaja los sábados.', why: '«No» va delante del verbo.' },
@@ -298,7 +298,7 @@ export const lesson: LiveLesson = {
       title: 'Tu semana y tu gente', coach: 'Una pregunta por vez. Afirma, niega y pregunta.',
       steps: [
         { title: 'Tu semana y tu gente', blocks: [
-          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Pide respuestas completas, con verbo, y anima al alumno a hacerte preguntas también.', self: 'Responde cada pregunta en voz alta con oraciones completas. Usa «no» al menos una vez en cada respuesta.' } },
+          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Tu alumno responde con frases completas, con verbo, y también te hace preguntas a ti.', self: 'Responde cada pregunta en voz alta con oraciones completas. Usa «no» al menos una vez en cada respuesta.' } },
           { kind: 'talk', cards: [
             { q: '¿Qué días trabajas o estudias? ¿Qué días no?', followUps: ['¿Trabajas los sábados?', '¿A qué hora empiezas?', '¿Dónde trabajas?'], phrases: ['[[Trabajo|teal]] de lunes a viernes.', 'Los sábados [[no|orange]] trabajo.', 'Empiezo a las…'], hint: 'Para negar: no + verbo. «No trabajo los domingos».', example: 'Trabajo de lunes a jueves en una oficina. Los viernes no trabajo: estudio español. Empiezo a las nueve.', next: 'Ahora, las personas de tu vida.' },
             { q: 'Presenta a dos personas importantes para ti. ¿Qué hacen?', followUps: ['¿Dónde viven?', '¿Qué hacen juntos?', '¿Qué no hacen nunca?'], phrases: ['[[Mi hermana|blue]] [[trabaja|teal]]…', '[[Mis padres|blue]] [[viven|teal]]…', '[[Mi hermana y yo|blue]] [[cocinamos|teal]]…'], hint: 'Una persona: verbo singular. Dos personas: plural. «Ella y yo»: nosotros.', example: 'Mi hermana trabaja en un hospital. Mis padres viven en el campo. Mi hermana y yo cocinamos juntas los domingos.', next: 'Ahora haz tú las preguntas.', teacher: 'Pregunta qué actividad no hacen: «¿Tus padres viajan mucho?».' },

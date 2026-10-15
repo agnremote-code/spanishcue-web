@@ -35,7 +35,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La forma: habría + participio', blocks: [
           { kind: 'lead', text: 'El equipo de Julia entregó un catálogo **dos días tarde**. En la reunión de revisión nadie puede cambiar lo que pasó, pero todos hablan de lo que **habría ocurrido** con otras decisiones. Para eso usan el **condicional compuesto**.' },
-          { kind: 'guide', text: { teacher: 'Lean la tabla en voz alta por columnas. Pide al alumno que diga qué parte cambia (haber) y qué parte no cambia (el participio).', self: 'Lee la tabla y fíjate en qué parte cambia con la persona y qué parte se queda igual.' } },
+          { kind: 'guide', text: { teacher: 'Lean la tabla en voz alta por columnas. Tu alumno dice qué parte cambia (haber) y qué parte no cambia (el participio).', self: 'Lee la tabla y fíjate en qué parte cambia con la persona y qué parte se queda igual.' } },
           { kind: 'table', title: 'Condicional de «haber» + participio', head: ['Persona', 'hablar', 'comer', 'vivir'], rows: [
             ['yo', '**habría** hablado', '**habría** comido', '**habría** vivido'],
             ['tú', '**habrías** hablado', '**habrías** comido', '**habrías** vivido'],
@@ -125,7 +125,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '⚖', title: 'No lo confundas con el pluscuamperfecto', text: '«**Había** enviado el correo» cuenta un hecho real. «**Habría** enviado el correo» imagina, prevé o critica: el hecho no se confirma.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Errores típicos incluso en B2.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que diga en voz alta la versión correcta antes de mostrarla y que explique la regla con sus palabras.', self: 'Lee cada frase, encuentra el error y di la versión correcta antes de tocar.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno dice en voz alta la versión correcta antes de que la muestres y explica la regla con sus palabras.', self: 'Lee cada frase, encuentra el error y di la versión correcta antes de tocar.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Si habría sabido la verdad, te habría llamado.', right: 'Si hubiera sabido la verdad, te habría llamado.', why: 'Después de «si» va «hubiera + participio», nunca el condicional.' },
             { wrong: 'Habría ido si podría.', right: 'Habría ido si hubiera podido.', why: 'Las dos partes se desplazan al pasado: la condición también.' },

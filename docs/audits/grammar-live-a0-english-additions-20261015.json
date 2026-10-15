@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale), typed in the project thread «Clase inicial A0»: blanket «apruebo todo, no preguntes más» for this class on 2026-10-14 16:55Z, and on 2026-10-15 02:14Z Ale asked for the listening to be the grandfather instead of the grandmother; these two English helper lines follow from that change (lesson 239).",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "How is grandpa?"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "What does grandpa ask?"
+    }
+  ]
+}

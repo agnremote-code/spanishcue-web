@@ -121,7 +121,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📊', title: 'Un informe sin trampas', text: 'Combina perspectivas sin confundirlas: «**Llevo revisadas** cincuenta fotos, pero solo treinta **están clasificadas** definitivamente». Cada perífrasis responde a una pregunta distinta del lector.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Concordancia y perspectiva: aquí fallan hasta los nativos.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que identifique si el problema es de concordancia, de auxiliar o de perspectiva antes de mostrar la corrección.', self: 'Lee cada frase y decide: ¿falla la concordancia, el auxiliar o la perspectiva? Después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno identifica si el problema es de concordancia, de auxiliar o de perspectiva antes de que muestres la corrección.', self: 'Lee cada frase y decide: ¿falla la concordancia, el auxiliar o la perspectiva? Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Llevo revisado cincuenta fotos.', right: 'Llevo revisadas cincuenta fotos.', why: 'Con «llevar», el participio concuerda con el objeto.' },
             { wrong: 'He revisadas todas las carpetas.', right: 'He revisado todas las carpetas.', why: 'Con «haber», el participio es invariable.' },

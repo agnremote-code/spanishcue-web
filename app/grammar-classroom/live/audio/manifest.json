@@ -1,22 +1,22 @@
 {
   "producer": "Microsoft Edge online speech via edge-tts",
   "synthetic": true,
-  "generatedAt": "2026-10-14T16:42:09.603599+00:00",
+  "generatedAt": "2026-10-15T02:19:29.844494+00:00",
   "humanListeningQA": false,
   "clips": [
     {
       "id": 239,
-      "voice": "es-AR-ElenaNeural",
-      "rate": "-12%",
+      "voice": "es-AR-TomasNeural",
+      "rate": "-14%",
       "src": "/audio/grammar-live/239.mp3",
-      "transcriptSha256": "53a22ec5968ee8dd03b69bb748d9856c47869011e1c105a3e49f8a3c43a11a98",
-      "sha256": "e2e19965ac9266fca18627d2616c77567b9d771ad1db387688ea98c1206c760a",
-      "durationSeconds": 30.86,
+      "transcriptSha256": "81cd09da06be600e9a44da40fbff6cd7a899b028c0e77405daf206e58922bbc8",
+      "sha256": "cd3de3fd0cdc98e1e8570d57601957b11e60d29ceea339d883f2b625c475fb54",
+      "durationSeconds": 29.3,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 22643,
-      "rmsPCM": 2453.59
+      "peakPCM": 21594,
+      "rmsPCM": 2543.67
     }
   ]
 }

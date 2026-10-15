@@ -6207,7 +6207,7 @@
     },
     {
       "path": "app/grammar-classroom/live/lessons/g3.ts",
-      "text": "Pide al alumno que compare: «Yo trabajo hasta las cinco y vos trabajás hasta las seis».",
+      "text": "Tu alumno compara: «Yo trabajo hasta las cinco y vos trabajás hasta las seis».",
       "category": "regional-pedagogy",
       "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
     },
@@ -6405,7 +6405,7 @@
     },
     {
       "path": "app/grammar-classroom/live/lessons/g239.ts",
-      "text": "Hola, mi amor. [[Soy|blue]] la abuela. [[Estoy|teal]] en casa, en Buenos Aires. [[Estoy|teal]] muy bien. Hoy hay sol. Tu abuelo [[está|teal]] en el patio, con el mate. ¿Y [[vos|orange]]? ¿Cómo [[estás|orange]]? ¿[[Estás|orange]] en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.",
+      "text": "Hola, mi amor. [[Soy|blue]] el abuelo. [[Estoy|teal]] en casa, en Buenos Aires. [[Estoy|teal]] muy bien. Hoy hay sol. Tu abuela [[está|teal]] en el patio, con el mate. ¿Y [[vos|orange]]? ¿Cómo [[estás|orange]]? ¿[[Estás|orange]] en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.",
       "category": "regional-pedagogy",
       "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
     },
@@ -6483,7 +6483,7 @@
     },
     {
       "path": "app/grammar-classroom/live/lessons/g239.ts",
-      "text": "Tú eres la abuela o el abuelo y preguntas con tú (o con vos, si quieres que el alumno lo oiga). El alumno responde con yo, en frases cortas. Repite su frase bien pronunciada y sigue.",
+      "text": "Tú eres la abuela o el abuelo y preguntas con tú (o con vos, para que tu alumno lo oiga). Tu alumno responde con yo, en frases cortas. Tú repites su frase bien pronunciada y sigues.",
       "category": "regional-pedagogy",
       "reason": "Lesson 239 (A0 first class) is set with Argentine grandparents: vos / sos appear as the grandparents' own words and as recognised forms, with tú kept for every instruction."
     },
@@ -6621,7 +6621,7 @@
     },
     {
       "path": "app/grammar-classroom/live/audio/clips.json",
-      "text": "Hola, mi amor. Soy la abuela. Estoy en casa, en Buenos Aires. Estoy muy bien. Hoy hay sol. Tu abuelo está en el patio, con el mate. ¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.",
+      "text": "Hola, mi amor. Soy el abuelo. Estoy en casa, en Buenos Aires. Estoy muy bien. Hoy hay sol. Tu abuela está en el patio, con el mate. ¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.",
       "category": "authentic-transcript",
       "reason": "Recorded voice note of the Argentine grandmother in lesson 239; the audio is generated from this exact text."
     }

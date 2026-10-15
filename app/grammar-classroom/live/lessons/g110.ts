@@ -115,7 +115,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '✔', title: 'Revisa al final', text: 'Cuando el grupo está completo, mira el **núcleo**: ¿es masculino o femenino? ¿Uno o varios? El determinante y el adjetivo tienen que ir igual.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección. Pregunta: «¿Cuál es el núcleo?».', self: 'Lee cada grupo, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección. Pregunta: «¿Cuál es el núcleo?».', self: 'Lee cada grupo, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'unas sillas cómodos', right: 'unas sillas cómodas', why: '«Sillas» es femenino: cómodas.' },
             { wrong: 'una grande mesa', right: 'una mesa grande', why: 'El adjetivo va normalmente después del nombre.' },
@@ -291,7 +291,7 @@ export const lesson: LiveLesson = {
       title: 'Tus cosas, con detalles', coach: 'Una pregunta por vez. Da detalles.',
       steps: [
         { title: 'Tus cosas, con detalles', blocks: [
-          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Cuando el alumno dice un nombre solo («una mesa»), pide un detalle: «¿Cómo es? ¿Para qué es?».', self: 'Responde cada pregunta en voz alta. Para cada cosa, añade al menos un detalle: un adjetivo o «de, con, para».' } },
+          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Cuando tu alumno dice un nombre solo («una mesa»), tú preguntas por un detalle: «¿Cómo es? ¿Para qué es?».', self: 'Responde cada pregunta en voz alta. Para cada cosa, añade al menos un detalle: un adjetivo o «de, con, para».' } },
           { kind: 'talk', cards: [
             { q: '¿Qué hay en tu mesa ahora? Describe dos cosas.', followUps: ['¿De qué color es?', '¿Para qué sirve?', '¿Es nuevo o viejo?'], phrases: ['Hay un [[cuaderno|blue]] [[azul|teal]] [[de español|orange]].', 'Tengo una [[taza|blue]] [[con flores|orange]].', 'Es [[para|orange]]…'], hint: 'Nombre + adjetivo + de, con o para.', example: 'En mi mesa hay un cuaderno azul de español y una taza blanca con flores. También hay una lámpara pequeña para leer.', next: 'Ahora, tu casa.' },
             { q: '¿Cómo es tu casa o tu apartamento?', followUps: ['¿Tiene balcón o jardín?', '¿Cuántas habitaciones tiene?', '¿Cuál es tu habitación favorita?'], phrases: ['Es un [[apartamento|blue]] [[pequeño|teal]] [[con balcón|orange]].', 'Tengo una [[cocina|blue]] [[grande|teal]].', 'Mi habitación [[favorita|teal]] es…'], hint: 'Con una parte de la casa usa «con»: con balcón, con jardín.', example: 'Vivo en un apartamento pequeño con balcón. Tiene dos habitaciones y una cocina muy luminosa. Mi habitación favorita es la sala.', next: 'Hablemos de tu bolso o mochila.' },

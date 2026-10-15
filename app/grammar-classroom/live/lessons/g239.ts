@@ -41,7 +41,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Hola · Hello', blocks: [
           { kind: 'lead', text: 'Esta es tu primera clase de español. Al final de la clase puedes decir **quién eres**, **cómo estás** y **dónde estás**: tu primer mensaje para tus abuelos.', en: 'This is your first Spanish class. By the end you can say who you are, how you are and where you are: your first message to your grandparents.' },
-          { kind: 'guide', text: { teacher: 'Lee las tres frases en voz alta y pide al alumno que las repita. Todavía no explicas nada: solo escuchar y repetir.', self: 'Lee las tres frases en voz alta. No busques la regla todavía: solo escucha cómo suenan.' } },
+          { kind: 'guide', text: { teacher: 'Tú lees las tres frases en voz alta y tu alumno las repite. Todavía no explicas nada: solo escuchar y repetir.', self: 'Lee las tres frases en voz alta. No busques la regla todavía: solo escucha cómo suenan.' } },
           { kind: 'compare', title: 'Tu objetivo de hoy · Your goal today', columns: [
             { tone: 'blue', label: 'SOY · who I am', sentence: 'Hola, abuela. [[Soy|blue]] Alex.', idea: 'Tu nombre, de dónde eres.', en: 'Hi, grandma. I am Alex.' },
             { tone: 'teal', label: 'ESTOY · how / where I am', sentence: '[[Estoy|teal]] muy feliz. [[Estoy|teal]] en Sídney.', idea: 'Cómo estás y dónde estás.', en: 'I am very happy. I am in Sydney.' },
@@ -56,7 +56,7 @@ export const lesson: LiveLesson = {
         ] },
         { title: 'El abecedario · The ABC', mascot: '/brand/mascot/studying.webp', coach: 'Veintisiete letras, cinco vocales.', blocks: [
           { kind: 'lead', text: 'El español tiene **27 letras**. La buena noticia: casi siempre se lee como se escribe. Si ves la palabra, puedes decirla.', en: 'Spanish has 27 letters. Good news: it almost always sounds the way it is written. If you can see the word, you can say it.' },
-          { kind: 'guide', text: { teacher: 'Lee la tabla con el alumno, letra por letra, y pídele que repita el nombre y el ejemplo. Después, que deletree su nombre.', self: 'Lee cada letra en voz alta con su ejemplo. Después, deletrea tu nombre: letra por letra.' } },
+          { kind: 'guide', text: { teacher: 'Tú lees la tabla letra por letra y tu alumno repite el nombre y el ejemplo. Después, tu alumno deletrea su nombre.', self: 'Lee cada letra en voz alta con su ejemplo. Después, deletrea tu nombre: letra por letra.' } },
           { kind: 'table', title: 'Las 27 letras · The 27 letters', head: ['Letra', 'Nombre', 'Suena como… (sounds like)', 'Ejemplo'], rows: [
             ['A a', 'a', '“ah”', '[[abuela|violet]] · grandma'],
             ['B b', 'be', '“b”', '[[bien|violet]] · well'],
@@ -182,7 +182,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Mira bien: ¿quién soy o cómo estoy?', blocks: [
-          { kind: 'guide', text: { teacher: 'Lee la frase con el error y pregunta: «¿Quién soy o cómo estoy?». Después muestra la corrección.', self: 'Lee cada frase, busca el error y toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tú lees la frase con el error y preguntas: «¿Quién soy o cómo estoy?». Tu alumno responde y después aparece la corrección.', self: 'Lee cada frase, busca el error y toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error? · Where is the mistake?', items: [
             { wrong: 'Estoy Alex.', right: 'Soy Alex.', why: 'Tu nombre es identidad: soy. (Your name: soy.)' },
             { wrong: 'Soy en Sídney.', right: 'Estoy en Sídney.', why: 'Un lugar va con estoy en. (A place: estoy en.)' },
@@ -200,7 +200,7 @@ export const lesson: LiveLesson = {
       title: 'La primera videollamada', coach: 'Toca las palabras marcadas. Tap the marked words.',
       steps: [
         { title: 'La videollamada · The video call', blocks: [
-          { kind: 'guide', text: { teacher: 'Lean el diálogo con papeles: tú eres la abuela. Después, el alumno toca cada palabra marcada y dice «soy» o «estoy» y por qué.', self: 'Lee el diálogo en voz alta. Después toca cada palabra marcada para ver por qué se usa.' } },
+          { kind: 'guide', text: { teacher: 'Leen el diálogo con papeles: tú eres la abuela. Después, tu alumno toca cada palabra marcada y dice «soy» o «estoy» y por qué.', self: 'Lee el diálogo en voz alta. Después toca cada palabra marcada para ver por qué se usa.' } },
           { kind: 'explore', title: 'Hola, abuela', setting: 'Sábado por la mañana en Sídney, sábado por la noche en Argentina. Alex llama a su abuela por videollamada por primera vez en español. (Alex video-calls grandma for the first time in Spanish.)', lines: [
             { who: 'Abuela', text: '¡Hola, mi amor! ¿Cómo [[estás|orange]]?', en: 'Hi, my love! How are you?' },
             { who: 'Alex', text: '¡Hola, abuela! [[Estoy|teal]] bien. ¡Estoy muy feliz!', en: 'Hi, grandma! I am fine. I am very happy!' },
@@ -337,22 +337,22 @@ export const lesson: LiveLesson = {
     },
     {
       id: 'escuchar', label: 'Escuchar', icon: '🎧', mascot: '/brand/mascot/seated.webp',
-      title: 'Un mensaje de voz de la abuela', coach: 'Primero escucha sin leer. Listen first, read later.',
+      title: 'Un mensaje de voz del abuelo', coach: 'Primero escucha sin leer. Listen first, read later.',
       steps: [
         { title: 'La abuela te deja un mensaje · Grandma leaves you a message', blocks: [
-          { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿quién habla?). Segunda escucha: el alumno levanta la mano cada vez que oye «estoy», «está» o «estás». Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta cuántas veces oyes «estoy», «está» o «estás». (Listen once for the gist, once for the details.)' } },
-          { kind: 'listen', title: 'Un mensaje de voz de la abuela', channel: 'MENSAJE DE VOZ · DE LA ABUELA, DESDE ARGENTINA', src: '/audio/grammar-live/239.mp3',
-            before: 'Tu abuela te manda un mensaje de voz desde Argentina. ¿Qué crees que dice? (Your grandma sends you a voice message from Argentina. What do you think she says?)',
-            gist: { prompt: '¿Quién habla? · Who is speaking?', options: ['La abuela.', 'El abuelo.', 'Alex.'], answer: 0, why: '«Hola, mi amor. Soy la abuela».', en: 'Who is speaking?' },
+          { kind: 'guide', text: { teacher: 'Primera escucha: solo la idea general (¿quién habla?). Segunda escucha: tu alumno levanta la mano cada vez que oye «estoy», «está» o «estás». Después, las preguntas.', self: 'Escucha una vez para la idea general y otra vez para los detalles. Cuenta cuántas veces oyes «estoy», «está» o «estás». (Listen once for the gist, once for the details.)' } },
+          { kind: 'listen', title: 'Un mensaje de voz del abuelo', channel: 'MENSAJE DE VOZ · DEL ABUELO, DESDE ARGENTINA', src: '/audio/grammar-live/239.mp3',
+            before: 'Tu abuelo te manda un mensaje de voz desde Argentina. ¿Qué crees que dice? (Your grandpa sends you a voice message from Argentina. What do you think he says?)',
+            gist: { prompt: '¿Quién habla? · Who is speaking?', options: ['La abuela.', 'El abuelo.', 'Alex.'], answer: 1, why: '«Hola, mi amor. Soy el abuelo».', en: 'Who is speaking?' },
             details: [
-              { prompt: '¿Dónde está la abuela? · Where is grandma?', options: ['En casa, en Buenos Aires.', 'En el gimnasio.', 'En Sídney.'], answer: 0, why: '«Estoy en casa, en Buenos Aires».', en: 'Where is grandma?' },
-              { prompt: '¿Cómo está la abuela? · How is grandma?', options: ['Muy bien.', 'Cansada.', 'Triste.'], answer: 0, why: '«Estoy muy bien».', en: 'How is grandma?' },
-              { prompt: '¿Dónde está el abuelo? · Where is grandpa?', options: ['En el patio, con el mate.', 'En el sofá.', 'En el trabajo.'], answer: 0, why: '«Tu abuelo está en el patio, con el mate».', en: 'Where is grandpa?' },
-              { prompt: '¿Qué pregunta la abuela? · What does grandma ask?', options: ['¿Cómo estás? ¿Estás en casa o en el gimnasio?', '¿Cómo te llamas?', '¿De dónde eres?'], answer: 0, why: '«¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio?».', en: 'What does grandma ask?' },
+              { prompt: '¿Dónde está el abuelo? · Where is grandpa?', options: ['En casa, en Buenos Aires.', 'En el gimnasio.', 'En Sídney.'], answer: 0, why: '«Estoy en casa, en Buenos Aires».', en: 'Where is grandpa?' },
+              { prompt: '¿Cómo está el abuelo? · How is grandpa?', options: ['Muy bien.', 'Cansado.', 'Triste.'], answer: 0, why: '«Estoy muy bien».', en: 'How is grandpa?' },
+              { prompt: '¿Dónde está la abuela? · Where is grandma?', options: ['En el patio, con el mate.', 'En el sofá.', 'En el trabajo.'], answer: 0, why: '«Tu abuela está en el patio, con el mate».', en: 'Where is grandma?' },
+              { prompt: '¿Qué pregunta el abuelo? · What does grandpa ask?', options: ['¿Cómo estás? ¿Estás en casa o en el gimnasio?', '¿Cómo te llamas?', '¿De dónde eres?'], answer: 0, why: '«¿Y vos? ¿Cómo estás? ¿Estás en casa o en el gimnasio?».', en: 'What does grandpa ask?' },
               { prompt: '¿Cuándo es la videollamada? · When is the video call?', options: ['Mañana, a las ocho.', 'Hoy.', 'El domingo.'], answer: 0, why: '«Mañana, videollamada a las ocho».', en: 'When is the video call?' },
             ],
-            transcript: 'Hola, mi amor. [[Soy|blue]] la abuela. [[Estoy|teal]] en casa, en Buenos Aires. [[Estoy|teal]] muy bien. Hoy hay sol. Tu abuelo [[está|teal]] en el patio, con el mate. ¿Y [[vos|orange]]? ¿Cómo [[estás|orange]]? ¿[[Estás|orange]] en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.',
-            reply: { teacher: 'El profesor es la abuela. El alumno responde al mensaje con tres frases: cómo está, dónde está y un saludo. Después pregunta: «¿Y tú, abuela? ¿Cómo estás?».', self: 'Responde a la abuela en voz alta: «Hola, abuela. Estoy… Estoy en…». Termina con una pregunta: «¿Y tú? ¿Cómo estás?». (Answer grandma aloud: how you are, where you are, and ask her back.)' } },
+            transcript: 'Hola, mi amor. [[Soy|blue]] el abuelo. [[Estoy|teal]] en casa, en Buenos Aires. [[Estoy|teal]] muy bien. Hoy hay sol. Tu abuela [[está|teal]] en el patio, con el mate. ¿Y [[vos|orange]]? ¿Cómo [[estás|orange]]? ¿[[Estás|orange]] en casa o en el gimnasio? Mañana, videollamada a las ocho. Un beso grande. Chau, chau.',
+            reply: { teacher: 'Tú eres el abuelo. Tu alumno responde al mensaje con tres frases: cómo está, dónde está y un saludo, y termina con una pregunta: «¿Y tú, abuelo? ¿Cómo estás?».', self: 'Responde al abuelo en voz alta: «Hola, abuelo. Estoy… Estoy en…». Termina con una pregunta: «¿Y tú? ¿Cómo estás?». (Answer grandpa aloud: how you are, where you are, and ask him back.)' } },
         ] },
       ],
     },
@@ -361,7 +361,7 @@ export const lesson: LiveLesson = {
       title: 'Tu primera charla', coach: 'Responde con yo. Answer with “yo”.',
       steps: [
         { title: 'Tu primera charla · Your first chat', blocks: [
-          { kind: 'guide', text: { teacher: 'Tú eres la abuela o el abuelo y preguntas con tú (o con vos, si quieres que el alumno lo oiga). El alumno responde con yo, en frases cortas. Repite su frase bien pronunciada y sigue.', self: 'Imagina que tu abuela te pregunta. Lee la pregunta, responde en voz alta con yo y, si quieres, escribe tu respuesta. (Read the question, answer aloud with “yo”.)' } },
+          { kind: 'guide', text: { teacher: 'Tú eres la abuela o el abuelo y preguntas con tú (o con vos, para que tu alumno lo oiga). Tu alumno responde con yo, en frases cortas. Tú repites su frase bien pronunciada y sigues.', self: 'Imagina que tu abuela te pregunta. Lee la pregunta, responde en voz alta con yo y, si quieres, escribe tu respuesta. (Read the question, answer aloud with “yo”.)' } },
           { kind: 'talk', cards: [
             { q: '¿Cómo te llamas? · What is your name?', followUps: ['¿Cómo se escribe? Deletrea. (Spell it.)', '¿Tienes otro nombre en casa? (A nickname?)'], phrases: ['[[Soy|blue]] …', 'Me llamo …', 'Se escribe: a, ele, e, equis.'], hint: '«Soy» + tu nombre. Para deletrear, usa los nombres de las letras del abecedario.', example: 'Soy Alex. Se escribe a, ele, e, equis. En casa, Al.', next: 'Ahora, de dónde eres.', teacher: 'Responde tú también con información real y simple: «Yo soy Marta». Así el alumno oye «soy» otra vez.' },
             { q: '¿De dónde eres? · Where are you from?', followUps: ['¿De qué ciudad? (Which city?)', '¿Y tus abuelos, de dónde son? (And your grandparents?)'], phrases: ['[[Soy|blue]] de Australia.', '[[Soy|blue]] de Sídney.', 'Mis abuelos son de Argentina.'], hint: '«Soy de» + país o ciudad. Para ellos: «son de».', example: 'Soy de Australia, de Sídney. Mis abuelos son de Argentina, de Buenos Aires.', next: 'Ahora, cómo estás hoy.' },
@@ -369,7 +369,7 @@ export const lesson: LiveLesson = {
             { q: '¿Dónde estás ahora? · Where are you now?', followUps: ['¿En casa o en el trabajo? (At home or at work?)', '¿Y tus abuelos, dónde están? (Where are your grandparents?)'], phrases: ['[[Estoy|teal]] en casa.', '[[Estoy|teal]] en Sídney.', 'Mis abuelos están en Argentina.'], hint: '«Estoy en» + lugar. Para ellos: «están en».', example: 'Estoy en casa, en Sídney. Mis abuelos están en Argentina.', next: 'Ahora, tus gustos.' },
             { q: '¿De qué eres fan? · What are you a fan of?', followUps: ['¿Películas o series? (Movies or series?)', '¿Fútbol, tenis, natación? (Football, tennis, swimming?)', '¿Viajar? (Travelling?)'], phrases: ['[[Soy|blue]] fan de las películas.', '[[Soy|blue]] fan del fútbol / del tenis.', '[[Soy|blue]] fan de viajar.'], hint: '«Soy fan de» + lo que te gusta. Películas, series, fútbol, gimnasio, viajar…', example: 'Soy fan de las películas y del fútbol. Y soy fan de viajar: Argentina pronto.', next: 'Para terminar, la llamada completa.' },
             { q: 'Ahora llama a tu abuela: saluda, di cómo estás, dónde estás y pregunta. · Now call grandma: greet her, say how and where you are, and ask her.', followUps: ['¿Y tú, abuela? (And you, grandma?)', '¿Está el abuelo? (Is grandpa there?)'], phrases: ['Hola, abuela. [[Soy|blue]] …', '[[Estoy|teal]] … [[Estoy|teal]] en …', '¿Y tú? ¿Cómo [[estás|orange]]?'], hint: 'Cuatro frases: hola + soy, estoy (cómo), estoy en (dónde), ¿y tú?', example: 'Hola, abuela. Soy Alex. Estoy muy feliz. Estoy en casa, en Sídney. ¿Y tú? ¿Cómo estás?', teacher: 'Responde como la abuela, con vos si quieres: «Estoy re bien, mi amor. ¿Y vos?». Después, cambien los papeles.' },
-          ], swap: { teacher: 'Al final, cambien los papeles: el alumno es la abuela y te hace las preguntas con «¿cómo estás?», «¿dónde estás?».', self: 'Ahora tú eres la abuela: haz las preguntas en voz alta («¿cómo estás?», «¿dónde estás?») y responde como ella. (Now you are grandma: ask the questions and answer as her.)' } },
+          ], swap: { teacher: 'Al final, cambian los papeles: tu alumno es la abuela y te hace las preguntas con «¿cómo estás?», «¿dónde estás?».', self: 'Ahora tú eres la abuela: haz las preguntas en voz alta («¿cómo estás?», «¿dónde estás?») y responde como ella. (Now you are grandma: ask the questions and answer as her.)' } },
         ] },
       ],
     },
@@ -378,7 +378,7 @@ export const lesson: LiveLesson = {
       title: 'Tu primer mensaje', coach: 'Corto y claro. Short and clear.',
       steps: [
         { title: 'Tu primer mensaje · Your first message', blocks: [
-          { kind: 'guide', text: { teacher: 'Puede escribir en clase o como tarea. Revisen juntos soy / estoy y la -o / -a de cansado. Después, que lea el mensaje en voz alta.', self: 'Escribe tu mensaje y toca «Revisar mi texto». Mira bien soy / estoy. (Write your message and tap “Revisar mi texto”.)' } },
+          { kind: 'guide', text: { teacher: 'Se puede escribir en clase o como tarea. Revisan juntos soy / estoy y la -o / -a de cansado. Después, tu alumno lee su mensaje en voz alta.', self: 'Escribe tu mensaje y toca «Revisar mi texto». Mira bien soy / estoy. (Write your message and tap “Revisar mi texto”.)' } },
           { kind: 'write', title: 'Un mensaje para tus abuelos · A message for your grandparents', situation: 'Escribe tu primer mensaje de texto en español para tus abuelos. Corto: cuatro o cinco frases. (Write your first text message in Spanish to your grandparents. Short: four or five sentences.)', task: [
             'Saluda: «Hola, abuela», «Hola, abuelo». (Say hello.)',
             'Di quién eres con **soy**: tu nombre, de dónde eres, de qué eres fan. (Who you are.)',

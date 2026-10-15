@@ -30,7 +30,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'La elipsis con varios candidatos', blocks: [
           { kind: 'lead', text: 'Carmen, editora de una revista cultural, recibe la reseña de una exposición fotográfica: «**La crítica de la directora** fue decisiva. **El breve y el de ayer** coinciden en la conclusión. **El deseo de volver** explica la elección de las imágenes». Tres frases correctas. Tres dudas: ¿quién critica a quién?, ¿qué documentos se comparan?, ¿quién desea volver?' },
-          { kind: 'guide', text: { teacher: 'Antes de la teoría, pide al alumno que formule las dos lecturas posibles de cada frase y que diga qué información le falta para elegir.', self: 'Antes de seguir, intenta formular las dos lecturas posibles de cada frase. ¿Qué información te falta para elegir?' } },
+          { kind: 'guide', text: { teacher: 'Antes de la teoría, tu alumno formula las dos lecturas posibles de cada frase y dice qué información le falta para elegir.', self: 'Antes de seguir, intenta formular las dos lecturas posibles de cada frase. ¿Qué información te falta para elegir?' } },
           { kind: 'concept', tone: 'blue', label: 'ELIPSIS Y CANDIDATOS', question: '¿Cuántos núcleos compiten?',
             formula: ['determinante + Ø + modificador', 'pregunta clave: ¿cuántos candidatos deja el discurso?'],
             meaning: 'En C1, la pregunta no es si se puede omitir un sustantivo, sino **cuántos candidatos** deja el contexto. El género y el número filtran; la proximidad orienta; pero si **dos núcleos compatibles** siguen disponibles, la elipsis deja de ser elegante y empieza a ser ambigua.',
@@ -111,7 +111,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📏', title: 'Tres comprobaciones', text: 'Antes de ampliar una expresión: 1) ¿cuántos **candidatos** tiene el núcleo?, 2) ¿qué **papeles** pueden tener los participantes?, 3) ¿el **contexto inmediato** favorece una sola lectura? Si la respuesta a la tercera es sí, déjala breve.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Ambigüedades que pasan desapercibidas al escribir.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que formule las dos lecturas antes de mostrar la corrección, y que diga cuál era la intención probable.', self: 'Lee cada frase, formula las dos lecturas posibles y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno formula las dos lecturas antes de que muestres la corrección y dice cuál era la intención probable.', self: 'Lee cada frase, formula las dos lecturas posibles y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está la ambigüedad?', items: [
             { wrong: 'Mencionamos un informe y un resumen. El breve y el de ayer coinciden.', right: 'Mencionamos un informe y un resumen. El informe breve y el informe de ayer coinciden.', why: 'Dos núcleos masculinos singulares compiten: hay que repetir el nombre.' },
             { wrong: 'La crítica de la directora fue injusta. (Quería decir: la criticaron.)', right: 'Las críticas a la directora fueron injustas.', why: '«A» marca a la directora como quien recibe la crítica.' },
