@@ -4,7 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, 
 import { SpanishCueBrand } from '../../SpanishCueBrand';
 import { LiveBlock } from './Blocks';
 import { LiveContext, type Mode } from './Rich';
-import { blockId, LessonStoreProvider, progressOf, useStore, useStored, type Position } from './store';
+import { blockId, LessonStoreProvider, progressOf, usePreference, useStore, useStored, type Position } from './store';
+import { StudentBar } from './StudentBar';
 import type { LiveLesson, VisualKey } from './types';
 import './live.css';
 
@@ -14,13 +15,20 @@ const levelColors: Record<string, string> = { A0: '#2e9ed9', A1: '#30bda2', A2: 
 
 /** One class for a live lesson and for self-study: same content, the mode only changes guidance. */
 export default function LiveClassroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
-  return <LessonStoreProvider lessonId={lesson.id}><Classroom lesson={lesson} scenes={scenes} /></LessonStoreProvider>;
+  // The mode and the chosen student are this browser's preferences, outside any student's saved class.
+  const [mode, setMode] = usePreference<Mode>('mode', 'teacher');
+  const [student, setStudent] = usePreference<string>(`student:${lesson.id}`, '');
+  const studentId = mode === 'teacher' && student ? student : null;
+  return <LessonStoreProvider lessonId={lesson.id} studentId={studentId}>
+    <Classroom lesson={lesson} scenes={scenes} mode={mode} setMode={setMode} studentId={studentId} setStudent={setStudent} />
+  </LessonStoreProvider>;
 }
 
-function Classroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>> }) {
+type ClassroomProps = { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>>; mode: Mode; setMode: (mode: Mode) => void; studentId: string | null; setStudent: (id: string) => void };
+
+function Classroom({ lesson, scenes, mode, setMode, studentId, setStudent }: ClassroomProps) {
   const store = useStore();
   const [at, setAt] = useState<Position>({ stage: 0, step: 0 });
-  const [mode, setMode] = useStored<Mode>('mode', 'teacher');
   // At A0 the English help opens by default: the learner starts from zero.
   const [english, setEnglish] = useStored('english', lesson.level === 'A0');
   const [large, setLarge] = useStored('large', false);
@@ -103,7 +111,32 @@ function Classroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Re
   const style = { '--gl-level': levelColors[lesson.level] || '#075de7' } as CSSProperties;
   const settings = useMemo(() => ({ english, mode, legend: lesson.legend, optionNotes: lesson.optionNotes ?? {}, go, scenes }), [english, mode, lesson.legend, lesson.optionNotes, go, scenes]);
   const hasEnglish = useMemo(() => JSON.stringify(lesson).includes('"en":'), [lesson]);
-  const resume = store.resume && (store.resume.stage !== at.stage || store.resume.step !== at.step) ? store.resume : undefined;
+  // Self-study offers to continue; a teacher's class opens for that student where they left off.
+  const resume = mode === 'self' && store.resume && (store.resume.stage !== at.stage || store.resume.step !== at.step) ? store.resume : undefined;
+  const [where, setWhere] = useState<string>();
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setWhere(undefined);
+    if (!studentId) return;
+    moved.current = false;
+    setAt({ stage: 0, step: 0 });
+  }, [studentId]);
+  useEffect(() => {
+    if (!studentId || !store.loaded || !store.resume) return;
+    const target = store.resume;
+    if (!stages[target.stage]) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setWhere(`${stages[target.stage].label}${stages[target.stage].steps.length > 1 ? ` · ${stages[target.stage].steps[target.step]?.title ?? ''}` : ''}`);
+    go(target.stage, target.step);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [studentId, store.loaded]);
+  const restart = useCallback(() => {
+    void store.reset();
+    moved.current = false;
+    setWhere(undefined);
+    setAt({ stage: 0, step: 0 });
+    window.scrollTo(0, 0);
+  }, [store]);
 
   const nav = <nav className={`gl-stages ${menu ? 'is-open' : ''}`} id="gl-stages" aria-label="Secciones de la clase">
     <ol>{stages.map((s, i) => {
@@ -154,6 +187,7 @@ function Classroom({ lesson, scenes }: { lesson: LiveLesson; scenes?: Partial<Re
         </div>
 
         <main className="gl-stage" id="gl-stage" ref={stageRef} tabIndex={-1}>
+          {mode === 'teacher' && <StudentBar lessonId={lesson.id} level={lesson.level} studentId={studentId} onSelect={id => setStudent(id ?? '')} onReset={restart} sync={store.sync} where={where} />}
           {resume && <div className="gl-resume" role="status">
             <span>Ya empezaste esta clase. ¿Quieres continuar en <b>{stages[resume.stage].label}</b>{stages[resume.stage].steps.length > 1 ? ` · ${stages[resume.stage].steps[resume.step]?.title}` : ''}?</span>
             <button type="button" className="gl-chip-button" data-resume onClick={() => go(resume.stage, resume.step)}>Continuar donde quedé</button>

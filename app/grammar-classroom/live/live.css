@@ -427,3 +427,17 @@
 .gl-next h3{margin:0;font-size:19px;font-weight:600}
 .gl-next p{margin:0}
 .gl-next .gl-primary{justify-self:start;margin-top:4px}
+/* Teacher mode: which student the class is for; their saved class lives in the account. */
+.gl-student{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:16px clamp(18px,3vw,36px) 0;padding:8px 14px;border-radius:14px;border:1px solid var(--gl-line);background:#fff;font-size:13.5px;color:var(--gl-muted)}
+.gl-student-pick{display:flex;align-items:center;gap:8px;color:var(--gl-navy)}
+.gl-student-pick select{min-height:34px;max-width:min(60vw,280px);padding:5px 10px;border-radius:999px;border:1px solid var(--gl-line);background:var(--gl-soft);color:var(--gl-navy);font:inherit;font-weight:600}
+.gl-student-add{border:0;background:transparent;color:var(--gl-cobalt);font:inherit;font-weight:600;padding:6px 4px;min-height:34px;cursor:pointer}
+.gl-student-add:hover{text-decoration:underline}
+.gl-student-form{display:flex;align-items:center;gap:8px}
+.gl-student-form input{min-height:34px;padding:5px 12px;border-radius:999px;border:1px solid var(--gl-line);font:inherit;min-width:180px}
+.gl-student-state{margin-left:auto;color:var(--gl-muted)}
+.gl-student-state b{color:var(--gl-navy);font-weight:600}
+.gl-student[data-sync="error"] .gl-student-state{color:#a24f0d}
+.gl-student-error{color:#a24f0d}
+.gl-student-confirm{display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--gl-navy)}
+@media (max-width:720px){.gl-student-state{margin-left:0;flex-basis:100%}}

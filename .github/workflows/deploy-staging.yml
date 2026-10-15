@@ -130,6 +130,13 @@ jobs:
           npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(student_homework_links)" --json > student-links-schema.json
           node scripts/verify-student-links-schema.mjs student-links-schema.json
 
+      - name: Prepare live class sessions table
+        if: github.event_name == 'push' || inputs.action == 'deploy'
+        run: |
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0015_live_class_sessions.sql --yes
+          npx wrangler d1 execute DB --remote --config dist/server/wrangler.json --command "PRAGMA table_info(live_class_sessions)" --json > live-class-schema.json
+          node scripts/verify-live-class-schema.mjs live-class-schema.json
+
       - name: Record current staging version
         if: github.event_name == 'push' || inputs.action == 'deploy'
         id: previous
