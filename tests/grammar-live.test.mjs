@@ -248,7 +248,7 @@ test('the A0 first class: bilingual by default, the grandparents story, the real
   // The grandmother's recording is built from the exact transcript the class shows (see live/audio).
   const spoken=listen.transcript.replace(/\[\[([^\]|]+)\|[a-z]+\]\]/g,'$1');
   const clip=JSON.parse(readFileSync('app/grammar-classroom/live/audio/clips.json','utf8')).clips.find(c=>c.id===239);
-  assert.equal(clip.text,spoken);assert.match(clip.voice,/^es-AR-/,'an Argentine voice for the abuela');
+  assert.equal(clip.text,spoken);assert.match(clip.voice,/^es-AR-/,'an Argentine voice for the abuelo');
   const recorded=JSON.parse(readFileSync('app/grammar-classroom/live/audio/manifest.json','utf8')).clips.find(c=>c.id===239);
   assert.equal(recorded.transcriptSha256,createHash('sha256').update(clip.text).digest('hex'),'the audio matches the current transcript');
   assert.equal(recorded.sha256,createHash('sha256').update(readFileSync('public'+listen.src)).digest('hex'),'the asset matches the manifest');
