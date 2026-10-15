@@ -48,3 +48,11 @@ test('the premium article gallery and its recording stay outside the public asse
  const audio=await get('/audio/grammar-classroom/42.mp3');assert.equal(audio.status,403);await audio.arrayBuffer();
  const page=await get('/la-galeria-de-los-articulos');assert.equal(page.status,302);assert.doesNotMatch(await page.text(),/GALERÍA DE REFERENTES|Cerca de mi trabajo hay/);
 });
+test('per-student live class sessions are an account API: anonymous visitors get nothing, no cache, no cross-origin writes',async()=>{
+  const list=await get('/api/live-class?lessonId=239');assert.equal(list.status,401);
+  assert.equal(list.headers.get('cache-control'),'private, no-store');
+  const one=await get('/api/live-class?lessonId=239&studentId=abc');assert.equal(one.status,401);
+  const put=await fetch(origin+'/api/live-class',{method:'PUT',headers:{'content-type':'application/json','origin':'https://evil.example'},body:JSON.stringify({lessonId:239,studentId:'abc',saved:{values:{},results:{}}})});
+  assert.equal(put.status,401);
+  const del=await fetch(origin+'/api/live-class?lessonId=239&studentId=abc',{method:'DELETE'});assert.equal(del.status,401);
+});

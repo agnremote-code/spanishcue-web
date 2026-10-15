@@ -219,6 +219,8 @@ test('answers and progress survive a reload; the class still opens on Entender a
     await wait(10);
     assert.equal(v.current(),'entender');assert.deepEqual(v.progress(),before);
     assert.equal(v.$(item).dataset.state,'right','the answer is still there');
+    assert.equal(v.$('[data-resume]'),null,'a teacher’s class never asks the student whether to continue');
+    await v.click('[data-mode-option="self"]');
     await v.click('[data-resume]');assert.equal(v.current(),'practicar');assert.equal(v.step(),'2');
     await v.click('[data-stage="cerrar"]');await v.click('[data-step="2"]');
     assert.equal(v.$$('[data-review-go]').length,1,'the real first-try mistake is listed');
