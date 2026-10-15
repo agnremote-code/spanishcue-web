@@ -86,6 +86,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/student-roster-english-additions-20261013.json',
   'docs/audits/subscription-panel-english-additions-20261014.json',
   'docs/audits/noche-abierta-a0-english-additions-20261014.json',
+  'docs/audits/noche-abierta-talk-english-additions-20261015.json',
   'docs/audits/seo-grammar-cluster-english-additions-20261012.json',
   'docs/audits/google-teachers-english-additions-20261015.json',
 ];
