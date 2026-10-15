@@ -1,0 +1,2637 @@
+{
+  "game": "hospital",
+  "level": "A1",
+  "items": [
+    {
+      "id": "recepcion",
+      "title": "Norma y el señor del pez en el coche",
+      "place": "Recepción, hora de comer",
+      "context": "Norma come en su descanso y llama por teléfono a su hermana Susana.",
+      "speakers": [
+        {
+          "name": "Norma",
+          "country": "Argentina",
+          "voice": "es-AR-ElenaNeural"
+        },
+        {
+          "name": "Susana",
+          "country": "Uruguay",
+          "voice": "es-UY-ValentinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Hola, Susana. Estoy en mi descanso. Tengo diez minutos para comer."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué tal el día?"
+        },
+        {
+          "s": 0,
+          "text": "Uf, horrible. Un señor dice que tiene prisa porque tiene un pez en el coche."
+        },
+        {
+          "s": 1,
+          "text": "¿Un pez? ¿Vivo?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, en una bolsa con agua. Y una señora dice que es la mamá del doctor."
+        },
+        {
+          "s": 1,
+          "text": "¿Y es verdad?"
+        },
+        {
+          "s": 0,
+          "text": "No. El doctor tiene sesenta años y ella tiene cuarenta."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué haces tú?"
+        },
+        {
+          "s": 0,
+          "text": "Les doy un número. Bueno, no tengo sietes."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Norma con Susana?",
+          "options": [
+            "De sus vacaciones",
+            "De las excusas de la gente",
+            "De su nuevo trabajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos minutos tiene Norma para comer?",
+          "options": [
+            "Diez",
+            "Cinco",
+            "Veinte"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde tiene el pez el señor?",
+          "options": [
+            "En el bolsillo",
+            "En la recepción",
+            "En el coche"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué es mentira lo de la señora?",
+          "options": [
+            "Porque el doctor tiene sesenta años",
+            "Porque el doctor no tiene madre",
+            "Porque ella no habla español"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántos minutos tienes para comer en tu trabajo o en tus clases?",
+          "model": "Tengo una hora, pero normalmente como en veinte minutos."
+        },
+        {
+          "q": "¿Haces muchas filas en tu ciudad? ¿Dónde?",
+          "model": "Sí, hago fila en el banco y en el supermercado."
+        },
+        {
+          "q": "¿Hablas por teléfono con tu familia todos los días?",
+          "model": "Hablo con mi madre todos los días, pero con mi hermano no."
+        }
+      ],
+      "gaps": "Un [señor] dice que tiene [prisa] porque tiene un [pez] en el [coche].",
+      "glossary": [
+        {
+          "word": "descanso",
+          "meaning": "tiempo libre en el trabajo para comer o relajarse"
+        },
+        {
+          "word": "prisa",
+          "meaning": "necesidad de hacer algo muy rápido"
+        },
+        {
+          "word": "bolsa",
+          "meaning": "objeto de plástico o tela para llevar cosas"
+        }
+      ]
+    },
+    {
+      "id": "espera",
+      "title": "Anselmo y la silla azul de la señora del perro",
+      "place": "Sala de espera",
+      "context": "Andrés llega a la sala de espera. Don Anselmo, que espera desde hace ocho horas, le explica las reglas.",
+      "speakers": [
+        {
+          "name": "Anselmo",
+          "country": "Uruguay",
+          "voice": "es-UY-MateoNeural"
+        },
+        {
+          "name": "Andrés",
+          "country": "Guatemala",
+          "voice": "es-GT-AndresNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bienvenido, joven. ¿Primera vez aquí?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. ¿Por qué? ¿Hay reglas?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Regla uno: la silla azul es de la señora del perro. Regla dos: no comes delante de los otros. Es cruel."
+        },
+        {
+          "s": 1,
+          "text": "Ah, vale. ¿Y tú cuánto tiempo llevas aquí?"
+        },
+        {
+          "s": 0,
+          "text": "Ocho horas. Conozco a todos. Ese señor de la toalla es dentista."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué es esa lista?"
+        },
+        {
+          "s": 0,
+          "text": "La apuesta. Cinco pesos. ¿Quién sale primero? Yo digo: nadie."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué explica Anselmo a Andrés?",
+          "options": [
+            "Las reglas de la sala de espera",
+            "El camino a la cafetería",
+            "Su enfermedad"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De quién es la silla azul?",
+          "options": [
+            "De Anselmo",
+            "Del dentista",
+            "De la señora del perro"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuántas horas lleva Anselmo en la sala?",
+          "options": [
+            "Ocho",
+            "Cinco",
+            "Dos"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué dice Anselmo en la apuesta?",
+          "options": [
+            "Que sale Andrés primero",
+            "Que no sale nadie",
+            "Que sale el dentista"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué haces tú cuando esperas mucho tiempo?",
+          "model": "Miro el teléfono o escucho música."
+        },
+        {
+          "q": "¿Hablas con personas que no conoces? ¿Dónde?",
+          "model": "Sí, a veces hablo con personas en el autobús."
+        },
+        {
+          "q": "¿Tienes una silla favorita en tu casa? ¿Cómo es?",
+          "model": "Sí, es un sillón verde, muy viejo y muy cómodo."
+        }
+      ],
+      "gaps": "Regla uno: la [silla azul] es de la señora del [perro]. Regla dos: no [comes] delante de los [otros].",
+      "glossary": [
+        {
+          "word": "regla",
+          "meaning": "algo que todos tienen que hacer o no hacer"
+        },
+        {
+          "word": "cruel",
+          "meaning": "muy malo con otra persona"
+        },
+        {
+          "word": "apuesta",
+          "meaning": "juego: das dinero y ganas si aciertas"
+        },
+        {
+          "word": "toalla",
+          "meaning": "tela para secar el cuerpo"
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "title": "Pilar, la astilla y el «director» con bandeja",
+      "place": "Sala de espera, zona de sillas buenas",
+      "context": "Doña Pilar habla por teléfono con su hija Ximena. Al lado, un señor cansado escucha todo.",
+      "speakers": [
+        {
+          "name": "Pilar",
+          "country": "España",
+          "voice": "es-ES-ElviraNeural"
+        },
+        {
+          "name": "Ximena",
+          "country": "España",
+          "voice": "es-ES-XimenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Ximena, hija, estoy en el hospital. Tengo una astilla en el dedo. Es grave."
+        },
+        {
+          "s": 1,
+          "text": "Mamá, es una astilla."
+        },
+        {
+          "s": 0,
+          "text": "Pero yo conozco al director. Es mi amigo de la boda de tu prima."
+        },
+        {
+          "s": 1,
+          "text": "Mamá... ese señor es el camarero."
+        },
+        {
+          "s": 0,
+          "text": "¿Qué dices? No. Lleva traje negro."
+        },
+        {
+          "s": 1,
+          "text": "Sí, traje de camarero. Te sirve vino toda la noche."
+        },
+        {
+          "s": 0,
+          "text": "Ay. Bueno, aquí a mi lado hay un señor con un jersey feo. Pobre, nadie lo conoce."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Pilar a su hija?",
+          "options": [
+            "Para contar que está en el hospital",
+            "Para invitarla a una boda",
+            "Para pedir dinero"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué problema tiene Pilar?",
+          "options": [
+            "Le duele la cabeza",
+            "Tiene una astilla en el dedo",
+            "Tiene fiebre"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién es el «director», según Ximena?",
+          "options": [
+            "Un primo",
+            "Un médico",
+            "El camarero de la boda"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo es la ropa del señor de al lado?",
+          "options": [
+            "Un traje negro",
+            "Un jersey feo",
+            "Una bata blanca"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces a una persona famosa o importante?",
+          "model": "No, pero mi vecino conoce a un futbolista."
+        },
+        {
+          "q": "¿Qué ropa llevas en una boda?",
+          "model": "Llevo un vestido azul y zapatos cómodos."
+        },
+        {
+          "q": "¿Qué te gusta hacer en las fiestas de familia?",
+          "model": "Me gusta comer y hablar con mis primos."
+        }
+      ],
+      "gaps": "Pero yo conozco al [director]. Es mi [amigo] de la [boda] de tu [prima].",
+      "glossary": [
+        {
+          "word": "astilla",
+          "meaning": "trozo muy pequeño de madera en la piel"
+        },
+        {
+          "word": "camarero",
+          "meaning": "persona que sirve comida y bebida"
+        },
+        {
+          "word": "jersey",
+          "meaning": "ropa de lana para el frío"
+        },
+        {
+          "word": "traje",
+          "meaning": "ropa elegante: chaqueta y pantalón"
+        }
+      ]
+    },
+    {
+      "id": "triage",
+      "title": "Gladys deja su gato Pancho y una guitarra rota",
+      "place": "Triaje",
+      "context": "Gladys tiene hipo y cree que se muere. Dicta su testamento al enfermero Wilson.",
+      "speakers": [
+        {
+          "name": "Gladys",
+          "country": "México",
+          "voice": "es-MX-DaliaNeural"
+        },
+        {
+          "name": "Wilson",
+          "country": "República Dominicana",
+          "voice": "es-DO-EmilioNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Wilson, escribe, por favor. Es mi testamento."
+        },
+        {
+          "s": 1,
+          "text": "Señora, tiene hipo. Nada más."
+        },
+        {
+          "s": 0,
+          "text": "Escribe. Mi gato, Pancho, es para mi hermana."
+        },
+        {
+          "s": 1,
+          "text": "Bien. Pancho, para la hermana."
+        },
+        {
+          "s": 0,
+          "text": "Mis telenovelas, doscientas, son para ti."
+        },
+        {
+          "s": 1,
+          "text": "No, gracias. No tengo tiempo. Trabajo aquí."
+        },
+        {
+          "s": 0,
+          "text": "Y la guitarra de mi ex es para el hospital."
+        },
+        {
+          "s": 1,
+          "text": "¿Para el hospital? ¿Por qué?"
+        },
+        {
+          "s": 0,
+          "text": "Porque está rota. Como el hospital."
+        },
+        {
+          "s": 1,
+          "text": "Mire, eso sí lo acepto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué escribe Wilson?",
+          "options": [
+            "Una receta",
+            "El testamento de Gladys",
+            "Una carta de amor"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué problema tiene Gladys, según Wilson?",
+          "options": [
+            "Hipo",
+            "Fiebre",
+            "Un brazo roto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Para quién es el gato Pancho?",
+          "options": [
+            "Para Wilson",
+            "Para el hospital",
+            "Para la hermana de Gladys"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Wilson no quiere las telenovelas?",
+          "options": [
+            "Porque no le gustan",
+            "Porque no tiene tiempo",
+            "Porque no tiene televisión"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un objeto muy especial? ¿Para quién es en el futuro?",
+          "model": "Tengo un reloj de mi abuelo. Es para mi hijo."
+        },
+        {
+          "q": "¿Ves telenovelas o series? ¿Cuál te gusta?",
+          "model": "Sí, me gustan las series de policías."
+        },
+        {
+          "q": "¿Tienes cosas de una ex pareja en tu casa?",
+          "model": "Sí, tengo una taza. La uso todos los días."
+        }
+      ],
+      "gaps": "Mis [telenovelas], [doscientas], son para [ti]. No, gracias. No tengo [tiempo].",
+      "glossary": [
+        {
+          "word": "testamento",
+          "meaning": "papel con las cosas que das a otros después de morir"
+        },
+        {
+          "word": "hipo",
+          "meaning": "ruido pequeño y repetido en la garganta"
+        },
+        {
+          "word": "telenovelas",
+          "meaning": "series románticas de televisión"
+        },
+        {
+          "word": "rota",
+          "meaning": "que no funciona"
+        }
+      ]
+    },
+    {
+      "id": "guardia",
+      "title": "Íñigo, los siete cafés y el paciente Michi",
+      "place": "Pasillo de la guardia",
+      "context": "El doctor Íñigo lleva treinta horas de guardia. En el pasillo, le cuenta su día a Catalina.",
+      "speakers": [
+        {
+          "name": "Íñigo",
+          "country": "España",
+          "voice": "es-ES-AlvaroNeural"
+        },
+        {
+          "name": "Catalina",
+          "country": "Chile",
+          "voice": "es-CL-CatalinaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Catalina, hola. ¿Qué hora es? No, no me digas."
+        },
+        {
+          "s": 1,
+          "text": "Íñigo, llevas treinta horas aquí. Vete a casa."
+        },
+        {
+          "s": 0,
+          "text": "Un momento. Escucha mi día: siete cafés y un señor con un tenedor en la mano."
+        },
+        {
+          "s": 1,
+          "text": "¿Y el señor está bien?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. El tenedor también."
+        },
+        {
+          "s": 1,
+          "text": "¿Y tú comes algo?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, galletas de la máquina. Y hablo con un paciente muy simpático. Lo llamo Michi."
+        },
+        {
+          "s": 1,
+          "text": "Íñigo, Michi es tu gato."
+        },
+        {
+          "s": 0,
+          "text": "Ya. Pero el paciente no protesta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Íñigo?",
+          "options": [
+            "De sus vacaciones",
+            "De su día de trabajo",
+            "De su familia"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos cafés toma Íñigo?",
+          "options": [
+            "Siete",
+            "Tres",
+            "Diez"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué come Íñigo?",
+          "options": [
+            "Un sándwich",
+            "Sopa",
+            "Galletas de la máquina"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién es Michi?",
+          "options": [
+            "Un enfermero",
+            "El gato de Íñigo",
+            "Un doctor nuevo"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántos cafés tomas al día?",
+          "model": "Tomo dos cafés: uno por la mañana y otro después de comer."
+        },
+        {
+          "q": "¿Cuántas horas trabajas o estudias al día?",
+          "model": "Trabajo ocho horas, pero a veces trabajo diez."
+        },
+        {
+          "q": "¿Tienes un animal en casa? ¿Cómo se llama?",
+          "model": "Sí, tengo una perra. Se llama Luna."
+        }
+      ],
+      "gaps": "Escucha mi día: siete [cafés] y un [señor] con un [tenedor] en la [mano].",
+      "glossary": [
+        {
+          "word": "simpático",
+          "meaning": "agradable, amable"
+        },
+        {
+          "word": "tenedor",
+          "meaning": "cubierto para comer, con puntas"
+        },
+        {
+          "word": "galletas",
+          "meaning": "dulces pequeños y secos"
+        },
+        {
+          "word": "protesta",
+          "meaning": "dice que no está contento"
+        }
+      ]
+    },
+    {
+      "id": "ambulancias",
+      "title": "Yamilé, Manuel y la gallina que no come",
+      "place": "Dentro de la ambulancia",
+      "context": "Entre dos llamadas, Yamilé y Manuel hablan de su día en la ambulancia.",
+      "speakers": [
+        {
+          "name": "Yamilé",
+          "country": "Cuba",
+          "voice": "es-CU-BelkysNeural"
+        },
+        {
+          "name": "Manuel",
+          "country": "Cuba",
+          "voice": "es-CU-ManuelNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Manuel, apaga esa radio, por favor."
+        },
+        {
+          "s": 1,
+          "text": "No, es salsa. La salsa es medicina."
+        },
+        {
+          "s": 0,
+          "text": "Ay, qué día. Un chico en patinete con su teléfono..."
+        },
+        {
+          "s": 1,
+          "text": "Kevin, el famoso. Y una señora con la cabeza dentro de una olla."
+        },
+        {
+          "s": 0,
+          "text": "Y un señor que llama porque su gallina no come."
+        },
+        {
+          "s": 1,
+          "text": "Pero eso no es una emergencia."
+        },
+        {
+          "s": 0,
+          "text": "Para la gallina, sí."
+        },
+        {
+          "s": 1,
+          "text": "Bueno, ¿salsa o bolero?"
+        },
+        {
+          "s": 0,
+          "text": "Silencio, Manuel. Silencio, por favor."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Yamilé y Manuel?",
+          "options": [
+            "De las llamadas raras del día",
+            "De sus vacaciones",
+            "De un concierto"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué música escucha Manuel?",
+          "options": [
+            "Ópera",
+            "Salsa",
+            "Reguetón"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde tiene la cabeza la señora?",
+          "options": [
+            "En una bolsa",
+            "En una caja",
+            "Dentro de una olla"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quiere Yamilé al final?",
+          "options": [
+            "Bolero",
+            "Salsa",
+            "Silencio"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué música escuchas en el coche o en el autobús?",
+          "model": "Escucho música pop o la radio."
+        },
+        {
+          "q": "¿Te gusta trabajar con música o en silencio?",
+          "model": "Me gusta trabajar en silencio. Con música no puedo pensar."
+        },
+        {
+          "q": "¿Qué animal te gusta? ¿Por qué?",
+          "model": "Me gustan los gatos porque son independientes."
+        }
+      ],
+      "gaps": "Y un [señor] que [llama] porque su [gallina] no [come].",
+      "glossary": [
+        {
+          "word": "apaga",
+          "meaning": "para la música o la luz"
+        },
+        {
+          "word": "patinete",
+          "meaning": "vehículo pequeño de dos ruedas"
+        },
+        {
+          "word": "olla",
+          "meaning": "recipiente grande para cocinar"
+        },
+        {
+          "word": "gallina",
+          "meaning": "ave que pone huevos"
+        }
+      ]
+    },
+    {
+      "id": "trauma",
+      "title": "Paola y el jamón en el techo",
+      "place": "Sala de traumatología",
+      "context": "Ezequiel tiene el brazo roto. Paola, su vecina, está sola con él en la sala.",
+      "speakers": [
+        {
+          "name": "Paola",
+          "country": "Venezuela",
+          "voice": "es-VE-PaolaNeural"
+        },
+        {
+          "name": "Ezequiel",
+          "country": "Argentina",
+          "voice": "es-AR-TomasNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "¿Te duele mucho el brazo?"
+        },
+        {
+          "s": 1,
+          "text": "No, no. Bueno, un poco. Pero tu gato está bien, ¿no?"
+        },
+        {
+          "s": 0,
+          "text": "Sí, está perfecto. Ezequiel, tengo un secreto."
+        },
+        {
+          "s": 1,
+          "text": "¿Un secreto? ¿Qué secreto?"
+        },
+        {
+          "s": 0,
+          "text": "Mi gato sube al techo porque yo pongo jamón allí."
+        },
+        {
+          "s": 1,
+          "text": "¿Qué? ¿Por qué?"
+        },
+        {
+          "s": 0,
+          "text": "Porque así tú vienes a mi casa con la escalera."
+        },
+        {
+          "s": 1,
+          "text": "Ah... Entonces, ¿mañana el gato sube otra vez?"
+        },
+        {
+          "s": 0,
+          "text": "No. Mañana te invito a cenar. Sin escalera y sin gato."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué cuenta Paola?",
+          "options": [
+            "Un secreto sobre su gato",
+            "Una noticia de su trabajo",
+            "Un problema con su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué le duele a Ezequiel?",
+          "options": [
+            "La cabeza",
+            "La pierna",
+            "El brazo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué pone Paola en el techo?",
+          "options": [
+            "Leche",
+            "Jamón",
+            "Pescado"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué plan tiene Paola para mañana?",
+          "options": [
+            "Invitar a Ezequiel a cenar",
+            "Comprar otro gato",
+            "Ir al hospital"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces a tus vecinos? ¿Cómo son?",
+          "model": "Sí, mi vecina es muy simpática. Tiene tres perros."
+        },
+        {
+          "q": "¿Qué comida preparas para una cena especial?",
+          "model": "Preparo pasta con queso y una ensalada."
+        },
+        {
+          "q": "¿Tienes un secreto pequeño y divertido?",
+          "model": "Sí, a veces como chocolate en el baño."
+        }
+      ],
+      "gaps": "No. [Mañana] te invito a [cenar]. Sin [escalera] y sin [gato].",
+      "glossary": [
+        {
+          "word": "techo",
+          "meaning": "parte de arriba de una casa"
+        },
+        {
+          "word": "jamón",
+          "meaning": "carne de cerdo, en lonchas"
+        },
+        {
+          "word": "escalera",
+          "meaning": "objeto para subir"
+        },
+        {
+          "word": "secreto",
+          "meaning": "algo que no sabe nadie"
+        }
+      ]
+    },
+    {
+      "id": "observacion",
+      "title": "Benigno, la sopa en el fuego y la novia una hora tarde",
+      "place": "Observación, más tarde",
+      "context": "Don Benigno ya está estable. Su nieta Camila vuelve con un café y hablan.",
+      "speakers": [
+        {
+          "name": "Camila",
+          "country": "Perú",
+          "voice": "es-PE-CamilaNeural"
+        },
+        {
+          "name": "Benigno",
+          "country": "Perú",
+          "voice": "es-PE-AlexNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Abuelo, ¿cómo estás?"
+        },
+        {
+          "s": 1,
+          "text": "Bien, hija. Perdón por el susto."
+        },
+        {
+          "s": 0,
+          "text": "No tienes que pedir perdón. ¿Qué piensas en ese momento?"
+        },
+        {
+          "s": 1,
+          "text": "Pienso en tu abuela. Y en la sopa. La sopa está en el fuego, en casa."
+        },
+        {
+          "s": 0,
+          "text": "¡Abuelo! La sopa está bien. Yo la apago."
+        },
+        {
+          "s": 1,
+          "text": "Gracias. ¿Sabes? Tu abuela es muy educada también. En nuestra boda, llega una hora tarde y pide perdón al cura."
+        },
+        {
+          "s": 0,
+          "text": "¿Una hora? ¿Y el cura espera?"
+        },
+        {
+          "s": 1,
+          "text": "Sí. Por amor o por miedo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Quiénes hablan?",
+          "options": [
+            "Benigno y su nieta",
+            "Benigno y un médico",
+            "Benigno y su hermana"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿En qué piensa Benigno?",
+          "options": [
+            "En el fútbol",
+            "En su abuela y en la sopa",
+            "En su trabajo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Quién apaga la sopa?",
+          "options": [
+            "La vecina",
+            "Benigno",
+            "Camila"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuánto tiempo tarde llega la abuela a la boda?",
+          "options": [
+            "Una hora",
+            "Diez minutos",
+            "Dos horas"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Pides perdón muchas veces al día?",
+          "model": "Sí, digo «perdón» en el metro, en la calle, en todos lados."
+        },
+        {
+          "q": "¿Llegas tarde o temprano normalmente?",
+          "model": "Normalmente llego temprano. No me gusta esperar."
+        },
+        {
+          "q": "¿Qué comida te recuerda a tu familia?",
+          "model": "La sopa de pollo de mi abuela."
+        }
+      ],
+      "gaps": "Pienso en tu [abuela]. Y en la [sopa]. La sopa está en el [fuego], en [casa].",
+      "glossary": [
+        {
+          "word": "susto",
+          "meaning": "miedo repentino"
+        },
+        {
+          "word": "educada",
+          "meaning": "que habla y actúa con respeto"
+        },
+        {
+          "word": "cura",
+          "meaning": "sacerdote de la iglesia"
+        },
+        {
+          "word": "apago",
+          "meaning": "paro el fuego o la luz"
+        }
+      ]
+    },
+    {
+      "id": "curaciones",
+      "title": "Rufino y el pez imaginario de veinte kilos",
+      "place": "Sala de curaciones",
+      "context": "Rufino tiene un anzuelo en la ceja. Le cuenta a Marta su versión heroica.",
+      "speakers": [
+        {
+          "name": "Rufino",
+          "country": "Venezuela",
+          "voice": "es-VE-SebastianNeural"
+        },
+        {
+          "name": "Marta",
+          "country": "Guatemala",
+          "voice": "es-GT-MartaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Es una historia de pesca, Marta. Un pez enorme, de veinte kilos."
+        },
+        {
+          "s": 1,
+          "text": "Ajá. ¿Y el anzuelo en la ceja?"
+        },
+        {
+          "s": 0,
+          "text": "El pez es muy fuerte. Tira y... ¡zas!"
+        },
+        {
+          "s": 1,
+          "text": "Pero tu hijo dice otra cosa."
+        },
+        {
+          "s": 0,
+          "text": "¿Mi hijo? Tiene ocho años. No sabe nada."
+        },
+        {
+          "s": 1,
+          "text": "Dice que no hay pez. Dice que pesca a papá."
+        },
+        {
+          "s": 0,
+          "text": "Bueno... el pez es pequeño."
+        },
+        {
+          "s": 1,
+          "text": "No hay pez, Rufino."
+        },
+        {
+          "s": 0,
+          "text": "Vale. Mi hijo pesca muy bien. Eso es verdad."
+        },
+        {
+          "s": 1,
+          "text": "Eso sí. Ahora, quieto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué historia cuenta Rufino?",
+          "options": [
+            "Una historia de pesca",
+            "Una historia de fútbol",
+            "Una historia de amor"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos kilos tiene el pez, según Rufino?",
+          "options": [
+            "Dos",
+            "Veinte",
+            "Ocho"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuántos años tiene el hijo?",
+          "options": [
+            "Ocho",
+            "Diez",
+            "Cinco"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué pesca el hijo, en realidad?",
+          "options": [
+            "Un pez pequeño",
+            "Nada",
+            "A su papá"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Te gusta pescar o prefieres otra actividad al aire libre?",
+          "model": "No me gusta pescar. Prefiero caminar en la montaña."
+        },
+        {
+          "q": "¿Qué te enseña tu familia de niño?",
+          "model": "Mi padre me enseña a nadar y a cocinar."
+        },
+        {
+          "q": "¿Cambias un poco las historias para hacerlas más interesantes?",
+          "model": "Sí, un poquito. El pescado siempre es más grande."
+        }
+      ],
+      "gaps": "[Dice] que no hay [pez]. Dice que [pesca] a [papá].",
+      "glossary": [
+        {
+          "word": "anzuelo",
+          "meaning": "gancho de metal para pescar"
+        },
+        {
+          "word": "ceja",
+          "meaning": "pelo encima del ojo"
+        },
+        {
+          "word": "pesca",
+          "meaning": "actividad de sacar peces del agua"
+        },
+        {
+          "word": "quieto",
+          "meaning": "sin moverse"
+        }
+      ]
+    },
+    {
+      "id": "cafeteria",
+      "title": "Ramona y el café con un poquito de azúcar",
+      "place": "Cafetería del hospital",
+      "context": "Doña Ramona sirve el menú del día y le cuenta un chisme a Federico, de radiología.",
+      "speakers": [
+        {
+          "name": "Ramona",
+          "country": "República Dominicana",
+          "voice": "es-DO-RamonaNeural"
+        },
+        {
+          "name": "Federico",
+          "country": "Nicaragua",
+          "voice": "es-NI-FedericoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Federico, ¿quieres un secreto con tu arroz?"
+        },
+        {
+          "s": 1,
+          "text": "Claro, Ramona. Siempre."
+        },
+        {
+          "s": 0,
+          "text": "Hay una pareja nueva en el hospital. Una cirujana y un cirujano."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cómo lo sabes?"
+        },
+        {
+          "s": 0,
+          "text": "Ella toma café sin azúcar y él con mucho azúcar. Ahora los dos toman café con un poquito."
+        },
+        {
+          "s": 1,
+          "text": "¡Ah! ¿Y qué más?"
+        },
+        {
+          "s": 0,
+          "text": "Discuten todo el día por la música, pero comen juntos en la mesa del fondo."
+        },
+        {
+          "s": 1,
+          "text": "¡Lorenzo y Mercedes!"
+        },
+        {
+          "s": 0,
+          "text": "Yo no digo nombres."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Ramona y Federico?",
+          "options": [
+            "Del menú de mañana",
+            "De una pareja secreta",
+            "De un paciente nuevo"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué come Federico?",
+          "options": [
+            "Arroz",
+            "Pescado",
+            "Sopa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo toman ahora el café los dos?",
+          "options": [
+            "Sin azúcar",
+            "Con mucho azúcar",
+            "Con un poquito de azúcar"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Dónde comen juntos?",
+          "options": [
+            "En el quirófano",
+            "En la mesa del fondo",
+            "En la calle"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo tomas el café o el té?",
+          "model": "Tomo el café con leche y sin azúcar."
+        },
+        {
+          "q": "¿Dónde comes normalmente cuando trabajas o estudias?",
+          "model": "Como en mi mesa, delante del ordenador."
+        },
+        {
+          "q": "¿Te gustan los chismes? ¿Por qué?",
+          "model": "Sí, un poco. Son divertidos."
+        }
+      ],
+      "gaps": "Discuten todo el [día] por la [música], pero comen [juntos] en la mesa del [fondo].",
+      "glossary": [
+        {
+          "word": "pareja",
+          "meaning": "dos personas que son novios"
+        },
+        {
+          "word": "cirujana",
+          "meaning": "doctora que opera"
+        },
+        {
+          "word": "discuten",
+          "meaning": "hablan fuerte porque no están de acuerdo"
+        },
+        {
+          "word": "fondo",
+          "meaning": "la parte de atrás de un lugar"
+        }
+      ]
+    },
+    {
+      "id": "facturacion",
+      "title": "Jorge y el silencio de espera a siete pesos",
+      "place": "Llamada a facturación",
+      "context": "Unos días después, Jorge Treviño llama por teléfono a Gonzalo por su factura.",
+      "speakers": [
+        {
+          "name": "Jorge",
+          "country": "México",
+          "voice": "es-MX-JorgeNeural"
+        },
+        {
+          "name": "Gonzalo",
+          "country": "Colombia",
+          "voice": "es-CO-GonzaloNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Buenos días. Soy Jorge Treviño. Llamo por la factura."
+        },
+        {
+          "s": 1,
+          "text": "Señor Treviño, qué alegría. ¿Cómo estás?"
+        },
+        {
+          "s": 0,
+          "text": "Mal. Tengo una factura nueva. Dice: llamada al hospital."
+        },
+        {
+          "s": 1,
+          "text": "Sí, es correcto. Cuesta diez pesos."
+        },
+        {
+          "s": 0,
+          "text": "¿Y esta llamada?"
+        },
+        {
+          "s": 1,
+          "text": "También. Y la música de espera son cinco pesos."
+        },
+        {
+          "s": 0,
+          "text": "¡Pero yo no escucho música!"
+        },
+        {
+          "s": 1,
+          "text": "Ah, entonces es silencio de espera: siete pesos. Es más caro."
+        },
+        {
+          "s": 0,
+          "text": "Adiós, Gonzalo."
+        },
+        {
+          "s": 1,
+          "text": "La despedida es gratis. Por hoy."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Por qué llama Jorge?",
+          "options": [
+            "Por su factura",
+            "Por un resultado",
+            "Por una cita"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuánto cuesta la llamada al hospital?",
+          "options": [
+            "Cinco pesos",
+            "Siete pesos",
+            "Diez pesos"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Jorge sobre la música?",
+          "options": [
+            "Que no escucha música",
+            "Que la música es bonita",
+            "Que quiere otra canción"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué es gratis, según Gonzalo?",
+          "options": [
+            "La llamada",
+            "La despedida",
+            "La música"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué cosa pagas cada mes y no te gusta pagar?",
+          "model": "Pago el teléfono y es muy caro."
+        },
+        {
+          "q": "¿Te gusta hablar por teléfono o prefieres escribir mensajes?",
+          "model": "Prefiero escribir mensajes. Es más fácil."
+        },
+        {
+          "q": "¿Qué cosa gratis te gusta mucho?",
+          "model": "Me gusta caminar por el parque. Es gratis."
+        }
+      ],
+      "gaps": "Ah, entonces es [silencio] de [espera]: [siete pesos]. Es más [caro].",
+      "glossary": [
+        {
+          "word": "factura",
+          "meaning": "papel con el precio que tienes que pagar"
+        },
+        {
+          "word": "cuesta",
+          "meaning": "tiene un precio"
+        },
+        {
+          "word": "gratis",
+          "meaning": "no tienes que pagar"
+        },
+        {
+          "word": "despedida",
+          "meaning": "cuando dices adiós"
+        }
+      ]
+    },
+    {
+      "id": "laboratorio",
+      "title": "Andrea, Luis y el suéter rojo de la jefa",
+      "place": "Laboratorio",
+      "context": "Andrea lee el horóscopo de la sangre de Luis para esta semana. Luis no cree nada.",
+      "speakers": [
+        {
+          "name": "Andrea",
+          "country": "Ecuador",
+          "voice": "es-EC-AndreaNeural"
+        },
+        {
+          "name": "Luis",
+          "country": "Ecuador",
+          "voice": "es-EC-LuisNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Luis, tu grupo es cero positivo. Esta semana: cuidado con las cosas que giran."
+        },
+        {
+          "s": 1,
+          "text": "Andrea, por favor. Esto es un laboratorio, no un circo."
+        },
+        {
+          "s": 0,
+          "text": "También dice: un café cae."
+        },
+        {
+          "s": 1,
+          "text": "¡Ay, mi café! Bueno, es una coincidencia."
+        },
+        {
+          "s": 0,
+          "text": "Y dice: una persona de rojo trae una noticia."
+        },
+        {
+          "s": 1,
+          "text": "Aquí todos llevamos blanco."
+        },
+        {
+          "s": 0,
+          "text": "Mira, la jefa. Con suéter rojo."
+        },
+        {
+          "s": 1,
+          "text": "¿Y qué noticia trae?"
+        },
+        {
+          "s": 0,
+          "text": "Trabajas el domingo."
+        },
+        {
+          "s": 1,
+          "text": "Y la centrífuga gira... Vale, ahora tengo miedo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué lee Andrea?",
+          "options": [
+            "Una receta",
+            "El horóscopo de Luis",
+            "Un periódico"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué grupo de sangre tiene Luis?",
+          "options": [
+            "A positivo",
+            "B negativo",
+            "Cero positivo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué le pasa al café de Luis?",
+          "options": [
+            "Se cae",
+            "Está frío",
+            "No tiene azúcar"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué noticia trae la jefa?",
+          "options": [
+            "Luis tiene vacaciones",
+            "Luis trabaja el domingo",
+            "Andrea es la nueva jefa"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Lees el horóscopo? ¿Qué signo eres?",
+          "model": "No lo leo mucho, pero soy Leo."
+        },
+        {
+          "q": "¿Qué color de ropa llevas mucho?",
+          "model": "Llevo mucho negro y azul."
+        },
+        {
+          "q": "¿Trabajas o estudias los domingos?",
+          "model": "No, el domingo descanso y veo a mi familia."
+        }
+      ],
+      "gaps": "Luis, tu [grupo] es cero [positivo]. Esta semana: cuidado con las [cosas] que [giran].",
+      "glossary": [
+        {
+          "word": "giran",
+          "meaning": "dan vueltas"
+        },
+        {
+          "word": "coincidencia",
+          "meaning": "dos cosas pasan juntas por casualidad"
+        },
+        {
+          "word": "noticia",
+          "meaning": "información nueva"
+        },
+        {
+          "word": "jefa",
+          "meaning": "la persona que manda en el trabajo"
+        }
+      ]
+    },
+    {
+      "id": "radiologia",
+      "title": "Karla, el anillo de la abuela y la llave misteriosa",
+      "place": "Sala de espera de radiología",
+      "context": "Karla espera con su amiga Yolanda y le cuenta su ruptura.",
+      "speakers": [
+        {
+          "name": "Yolanda",
+          "country": "Nicaragua",
+          "voice": "es-NI-YolandaNeural"
+        },
+        {
+          "name": "Karla",
+          "country": "Honduras",
+          "voice": "es-HN-KarlaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Karla, en serio, ¿por qué te comes un anillo?"
+        },
+        {
+          "s": 1,
+          "text": "Porque él quiere el anillo. Es de su abuela."
+        },
+        {
+          "s": 0,
+          "text": "¿Y por qué terminan?"
+        },
+        {
+          "s": 1,
+          "text": "Él dice que necesita espacio. Mucho espacio. Ahora vive con su madre."
+        },
+        {
+          "s": 0,
+          "text": "¿Con su madre? Qué espacio, ¿no?"
+        },
+        {
+          "s": 1,
+          "text": "Y mira la radiografía: el anillo, una llave y una moneda muy vieja."
+        },
+        {
+          "s": 0,
+          "text": "¿Una llave? ¿De dónde es?"
+        },
+        {
+          "s": 1,
+          "text": "No sé. Pero no la devuelvo."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Karla?",
+          "options": [
+            "De su ruptura",
+            "De su trabajo",
+            "De su viaje"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿De quién es el anillo?",
+          "options": [
+            "De Karla",
+            "De la abuela de él",
+            "De Yolanda"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Con quién vive ahora el ex?",
+          "options": [
+            "Solo",
+            "Con una amiga",
+            "Con su madre"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué hay en la radiografía, además del anillo?",
+          "options": [
+            "Una llave y una moneda",
+            "Un botón",
+            "Dos monedas"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un regalo especial de otra persona?",
+          "model": "Sí, tengo un collar de mi madre."
+        },
+        {
+          "q": "¿Guardas las cosas viejas o las tiras?",
+          "model": "Guardo todo. Tengo una caja con fotos y monedas."
+        },
+        {
+          "q": "¿Hablas con tus amigos de tus problemas?",
+          "model": "Sí, hablo mucho con mi mejor amiga."
+        }
+      ],
+      "gaps": "Y mira la [radiografía]: el [anillo], una [llave] y una [moneda] muy vieja.",
+      "glossary": [
+        {
+          "word": "anillo",
+          "meaning": "joya redonda para el dedo"
+        },
+        {
+          "word": "espacio",
+          "meaning": "tiempo y lugar para estar solo"
+        },
+        {
+          "word": "radiografía",
+          "meaning": "foto de dentro del cuerpo"
+        },
+        {
+          "word": "moneda",
+          "meaning": "dinero de metal"
+        }
+      ]
+    },
+    {
+      "id": "quirofano",
+      "title": "Lorenzo y Mercedes: ópera, reguetón y unas manos rápidas",
+      "place": "Vestuario del área quirúrgica",
+      "context": "Después de la operación, los doctores Lorenzo y Mercedes discuten otra vez en el vestuario.",
+      "speakers": [
+        {
+          "name": "Lorenzo",
+          "country": "Chile",
+          "voice": "es-CL-LorenzoNeural"
+        },
+        {
+          "name": "Mercedes",
+          "country": "Colombia",
+          "voice": "es-CO-SalomeNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Mercedes, tu música es horrible. Reguetón en una operación..."
+        },
+        {
+          "s": 1,
+          "text": "Y tu ópera es para dormir, Lorenzo."
+        },
+        {
+          "s": 0,
+          "text": "El paciente tiene anestesia. Duerme igual."
+        },
+        {
+          "s": 1,
+          "text": "Bueno. Pero hoy tus manos son muy rápidas. Muy bien."
+        },
+        {
+          "s": 0,
+          "text": "Gracias. Tus manos también son... más o menos."
+        },
+        {
+          "s": 1,
+          "text": "¿Más o menos?"
+        },
+        {
+          "s": 0,
+          "text": "Vale, muy bien. Ya está. No lo repito."
+        },
+        {
+          "s": 1,
+          "text": "Ah, y la semana de vacaciones es mía."
+        },
+        {
+          "s": 0,
+          "text": "Nunca."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hacen Lorenzo y Mercedes?",
+          "options": [
+            "Discuten después de operar",
+            "Comen en la cafetería",
+            "Hablan con un paciente"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué música le gusta a Mercedes?",
+          "options": [
+            "Ópera",
+            "Reguetón",
+            "Bolero"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué dice Mercedes de las manos de Lorenzo?",
+          "options": [
+            "Que son lentas",
+            "Que son feas",
+            "Que son muy rápidas"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué quieren los dos?",
+          "options": [
+            "La misma semana de vacaciones",
+            "El mismo paciente",
+            "La misma música"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué música escuchas cuando trabajas o estudias?",
+          "model": "Escucho música clásica o nada."
+        },
+        {
+          "q": "¿Dices cosas bonitas a tus compañeros?",
+          "model": "Sí, pero no mucho. Me da vergüenza."
+        },
+        {
+          "q": "¿Cuándo son tus vacaciones favoritas? ¿En verano o en invierno?",
+          "model": "En verano, porque me gusta la playa."
+        }
+      ],
+      "gaps": "Bueno. Pero [hoy] tus [manos] son muy [rápidas]. Muy [bien].",
+      "glossary": [
+        {
+          "word": "anestesia",
+          "meaning": "medicina para no sentir nada en una operación"
+        },
+        {
+          "word": "vacaciones",
+          "meaning": "días libres sin trabajo"
+        },
+        {
+          "word": "horrible",
+          "meaning": "muy feo, muy malo"
+        },
+        {
+          "word": "repito",
+          "meaning": "digo otra vez"
+        }
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "Rodrigo duerme con zapatos y termina en rayos X",
+      "place": "Sala de descanso de médicos",
+      "context": "Tania tiene que despertar a Rodrigo, el anestesista. Él le explica sus trucos para dormir.",
+      "speakers": [
+        {
+          "name": "Rodrigo",
+          "country": "El Salvador",
+          "voice": "es-SV-RodrigoNeural"
+        },
+        {
+          "name": "Tania",
+          "country": "Paraguay",
+          "voice": "es-PY-TaniaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Tania, escucha, es ciencia. Siempre duermo con los zapatos. Así salgo rápido."
+        },
+        {
+          "s": 1,
+          "text": "¿Y la manta en la cabeza?"
+        },
+        {
+          "s": 0,
+          "text": "Es para la luz. Y para no ver al jefe."
+        },
+        {
+          "s": 1,
+          "text": "¿Y cuál es tu peor día?"
+        },
+        {
+          "s": 0,
+          "text": "Duermo en una camilla vacía... y una enfermera me lleva a rayos X."
+        },
+        {
+          "s": 1,
+          "text": "¡No!"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Y Federico dice: este paciente está muy sano y ronca mucho."
+        },
+        {
+          "s": 1,
+          "text": "Rodrigo, tu busca suena otra vez."
+        },
+        {
+          "s": 0,
+          "text": "No es mi busca. Es un sueño."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué habla Rodrigo?",
+          "options": [
+            "De sus trucos para dormir",
+            "De una operación",
+            "De su familia"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué duerme con zapatos?",
+          "options": [
+            "Porque tiene frío",
+            "Para salir rápido",
+            "Porque no tiene cama"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde termina Rodrigo en su peor día?",
+          "options": [
+            "En la cafetería",
+            "En casa",
+            "En rayos X"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué dice Federico del «paciente»?",
+          "options": [
+            "Que está muy enfermo",
+            "Que ronca mucho",
+            "Que tiene hambre"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuántas horas duermes normalmente?",
+          "model": "Duermo siete horas, pero el fin de semana duermo diez."
+        },
+        {
+          "q": "¿Duermes la siesta? ¿Dónde?",
+          "model": "Sí, en el sofá, después de comer."
+        },
+        {
+          "q": "¿Qué necesitas para dormir bien?",
+          "model": "Necesito silencio, oscuridad y mi almohada."
+        }
+      ],
+      "gaps": "[Duermo] en una [camilla] vacía... y una [enfermera] me lleva a [rayos X].",
+      "glossary": [
+        {
+          "word": "manta",
+          "meaning": "tela grande para no tener frío"
+        },
+        {
+          "word": "camilla",
+          "meaning": "cama pequeña con ruedas del hospital"
+        },
+        {
+          "word": "ronca",
+          "meaning": "hace ruido al dormir"
+        },
+        {
+          "word": "busca",
+          "meaning": "aparato pequeño que suena para llamar al médico"
+        }
+      ]
+    },
+    {
+      "id": "enfermeria",
+      "title": "Margarita entrega la noche: el wifi se llama «Paciencia»",
+      "place": "Estación de enfermería",
+      "context": "Cambio de turno. Margarita, la jefa de enfermería, le explica a Roberto las habitaciones.",
+      "speakers": [
+        {
+          "name": "Margarita",
+          "country": "Panamá",
+          "voice": "es-PA-MargaritaNeural"
+        },
+        {
+          "name": "Roberto",
+          "country": "Panamá",
+          "voice": "es-PA-RobertoNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Roberto, buenas noches. Empiezo. Cuatrocientos cuatro: el señor quiere otro control de la tele."
+        },
+        {
+          "s": 1,
+          "text": "¿Otra vez?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Cuatrocientos cinco: un señor quiere casarse con la enfermera. Con todas. Tranquilo."
+        },
+        {
+          "s": 1,
+          "text": "Vale."
+        },
+        {
+          "s": 0,
+          "text": "Cuatrocientos seis: quieren la contraseña del wifi. Es «Paciencia», con mayúscula."
+        },
+        {
+          "s": 1,
+          "text": "Muy bien. ¿Y algo importante?"
+        },
+        {
+          "s": 0,
+          "text": "Sí. Cuatrocientos ocho, don Benigno. Es muy educado y no llama nunca. Tú vas cada hora."
+        },
+        {
+          "s": 1,
+          "text": "Entendido."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué hace Margarita?",
+          "options": [
+            "Explica las habitaciones a Roberto",
+            "Llama a un médico",
+            "Cena en la cafetería"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Qué quiere el señor de la cuatrocientos cinco?",
+          "options": [
+            "Otro control",
+            "Casarse con la enfermera",
+            "Una manta"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál es la contraseña del wifi?",
+          "options": [
+            "Benigno",
+            "Hospital",
+            "Paciencia"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Por qué Roberto tiene que ir a ver a don Benigno?",
+          "options": [
+            "Porque grita mucho",
+            "Porque no llama nunca",
+            "Porque quiere el wifi"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuál es tu contraseña favorita? Es broma: ¿qué palabra te gusta mucho?",
+          "model": "Me gusta la palabra «tranquilo»."
+        },
+        {
+          "q": "¿Haces muchas cosas a la vez? ¿Cuáles?",
+          "model": "Sí, cocino, hablo por teléfono y escucho música."
+        },
+        {
+          "q": "¿Te gusta trabajar de noche o de día?",
+          "model": "De día. De noche quiero dormir."
+        }
+      ],
+      "gaps": "Cuatrocientos seis: quieren la [contraseña] del [wifi]. Es «[Paciencia]», con [mayúscula].",
+      "glossary": [
+        {
+          "word": "contraseña",
+          "meaning": "palabra secreta para entrar"
+        },
+        {
+          "word": "casarse",
+          "meaning": "hacerse marido y mujer"
+        },
+        {
+          "word": "mayúscula",
+          "meaning": "letra grande, como la A"
+        },
+        {
+          "word": "educado",
+          "meaning": "que habla con respeto"
+        }
+      ]
+    },
+    {
+      "id": "internacion",
+      "title": "Mario, Lorena y el cura que fuma en la escalera",
+      "place": "Escalera del segundo piso",
+      "context": "Don Mario se escapa a fumar con su suero. Lorena, de limpieza, se sienta con él.",
+      "speakers": [
+        {
+          "name": "Mario",
+          "country": "Paraguay",
+          "voice": "es-PY-MarioNeural"
+        },
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 1,
+          "text": "Don Mario, otra vez aquí. Con el suero y la bata abierta."
+        },
+        {
+          "s": 0,
+          "text": "Es mi momento de libertad, Lorena. ¿Un cigarro? Es broma, es broma."
+        },
+        {
+          "s": 1,
+          "text": "¿Por qué fumas todavía?"
+        },
+        {
+          "s": 0,
+          "text": "Mira, tengo ochenta años. Fumo, como pan con mantequilla y juego al dominó. Son mis tres amores."
+        },
+        {
+          "s": 1,
+          "text": "Yo veo de todo en estos pasillos. Un señor con su gallina, una novia con vestido, un cura que fuma más que tú."
+        },
+        {
+          "s": 0,
+          "text": "¿Un cura?"
+        },
+        {
+          "s": 1,
+          "text": "Sí, en esta misma escalera."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Dónde hablan Mario y Lorena?",
+          "options": [
+            "En la escalera",
+            "En la habitación",
+            "En la cafetería"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cuántos años tiene Mario?",
+          "options": [
+            "Sesenta",
+            "Setenta",
+            "Ochenta"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cuáles son los tres amores de Mario?",
+          "options": [
+            "Fumar, el pan con mantequilla y el dominó",
+            "El café, la música y el fútbol",
+            "Su esposa, su perro y su casa"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Quién fuma más que Mario?",
+          "options": [
+            "Lorena",
+            "Un cura",
+            "Una novia"
+          ],
+          "answer": 1
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cuáles son tus tres pequeños placeres?",
+          "model": "El café, un buen libro y dormir la siesta."
+        },
+        {
+          "q": "¿Juegas a algún juego de mesa? ¿Cuál?",
+          "model": "Juego a las cartas con mis amigos."
+        },
+        {
+          "q": "¿Tienes un lugar secreto para estar tranquilo?",
+          "model": "Sí, el balcón de mi casa."
+        }
+      ],
+      "gaps": "Fumo, como [pan] con [mantequilla] y juego al [dominó]. Son mis tres [amores].",
+      "glossary": [
+        {
+          "word": "suero",
+          "meaning": "líquido que entra en el cuerpo con un tubo"
+        },
+        {
+          "word": "bata",
+          "meaning": "ropa de hospital"
+        },
+        {
+          "word": "libertad",
+          "meaning": "hacer lo que quieres"
+        },
+        {
+          "word": "cigarro",
+          "meaning": "tabaco para fumar"
+        }
+      ]
+    },
+    {
+      "id": "habitacion",
+      "title": "Karina y Juan: fotos de los veinte años y una fiesta sin trompeta",
+      "place": "Habitación 402, a la mañana siguiente",
+      "context": "Después de la fiesta de cumpleaños, doña Karina y Juan hablan con fotos viejas.",
+      "speakers": [
+        {
+          "name": "Karina",
+          "country": "Puerto Rico",
+          "voice": "es-PR-KarinaNeural"
+        },
+        {
+          "name": "Juan",
+          "country": "Costa Rica",
+          "voice": "es-CR-JuanNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Juan, mira esta foto. Aquí tengo veinte años. Bailo en un club en San Juan."
+        },
+        {
+          "s": 1,
+          "text": "¡Qué guapa! Y mira, aquí tengo dieciocho. Toco la guitarra en una banda."
+        },
+        {
+          "s": 0,
+          "text": "¿Y cantas?"
+        },
+        {
+          "s": 1,
+          "text": "No, canto muy mal. Por eso toco."
+        },
+        {
+          "s": 0,
+          "text": "Perdón por la fiesta, Juan."
+        },
+        {
+          "s": 1,
+          "text": "Bueno... el pastel está rico. Y los globos todavía están aquí."
+        },
+        {
+          "s": 0,
+          "text": "¿Hoy hacemos otra fiesta? Pequeña."
+        },
+        {
+          "s": 1,
+          "text": "Muy pequeña. Y sin trompeta."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué miran Karina y Juan?",
+          "options": [
+            "Fotos de cuando son jóvenes",
+            "Una película",
+            "El menú"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde baila Karina en la foto?",
+          "options": [
+            "En una boda",
+            "En un club en San Juan",
+            "En la playa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Por qué Juan toca y no canta?",
+          "options": [
+            "Porque es tímido",
+            "Porque no le gusta cantar",
+            "Porque canta muy mal"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Cómo quiere Juan la fiesta de hoy?",
+          "options": [
+            "Muy pequeña y sin trompeta",
+            "Grande y con música",
+            "Con más globos"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Cómo celebras tu cumpleaños?",
+          "model": "Ceno con mis amigos en un restaurante."
+        },
+        {
+          "q": "¿Tocas un instrumento o te gustaría tocar uno?",
+          "model": "No toco nada, pero me gustaría tocar el piano."
+        },
+        {
+          "q": "¿Te gusta mirar fotos viejas? ¿Con quién?",
+          "model": "Sí, con mi madre. Nos reímos mucho."
+        }
+      ],
+      "gaps": "Aquí tengo [veinte] años. [Bailo] en un [club] en [San Juan].",
+      "glossary": [
+        {
+          "word": "globos",
+          "meaning": "bolas de colores con aire para las fiestas"
+        },
+        {
+          "word": "pastel",
+          "meaning": "dulce grande para celebrar"
+        },
+        {
+          "word": "banda",
+          "meaning": "grupo de música"
+        },
+        {
+          "word": "trompeta",
+          "meaning": "instrumento de metal, muy fuerte"
+        }
+      ]
+    },
+    {
+      "id": "uci",
+      "title": "Paloma lee el fútbol para despertar a su papá",
+      "place": "UCI, de noche",
+      "context": "De noche, Paloma está con su padre en la UCI. Habla con el doctor Carlos Zelaya.",
+      "speakers": [
+        {
+          "name": "Paloma",
+          "country": "Estados Unidos",
+          "voice": "es-US-PalomaNeural"
+        },
+        {
+          "name": "Carlos",
+          "country": "Honduras",
+          "voice": "es-HN-CarlosNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Carlos, ¿puedo preguntar algo? ¿Por qué trabajas en la UCI?"
+        },
+        {
+          "s": 1,
+          "text": "Porque aquí todo es importante. Cada minuto."
+        },
+        {
+          "s": 0,
+          "text": "¿Y no es triste?"
+        },
+        {
+          "s": 1,
+          "text": "A veces, sí. Pero también veo cosas bonitas. Como tú, con tu papá. Hablas con él toda la noche."
+        },
+        {
+          "s": 0,
+          "text": "Es que mi papá habla mucho. Ahora yo hablo por los dos."
+        },
+        {
+          "s": 1,
+          "text": "Y le lees el fútbol."
+        },
+        {
+          "s": 0,
+          "text": "Sí, los resultados del equipo que odia. A lo mejor se despierta para protestar."
+        },
+        {
+          "s": 1,
+          "text": "Me gusta ese plan."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿De qué hablan Paloma y Carlos?",
+          "options": [
+            "De su trabajo y del padre de Paloma",
+            "De vacaciones",
+            "De comida"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Por qué trabaja Carlos en la UCI?",
+          "options": [
+            "Por el dinero",
+            "Porque todo es importante",
+            "Porque es cerca de su casa"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué le lee Paloma a su padre?",
+          "options": [
+            "Un libro",
+            "Las noticias",
+            "Los resultados del fútbol"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué piensa Carlos del plan?",
+          "options": [
+            "Que le gusta",
+            "Que es malo",
+            "Que es peligroso"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Tienes un equipo favorito? ¿Y un equipo que odias?",
+          "model": "Me gusta el Barcelona. No me gusta el Madrid."
+        },
+        {
+          "q": "¿Quién habla más en tu familia?",
+          "model": "Mi tía. Habla todo el día."
+        },
+        {
+          "q": "¿Qué te gusta escuchar de tu familia?",
+          "model": "Me gusta escuchar historias de cuando mis padres son jóvenes."
+        }
+      ],
+      "gaps": "Es que mi [papá] habla [mucho]. Ahora yo [hablo] por los [dos].",
+      "glossary": [
+        {
+          "word": "minuto",
+          "meaning": "sesenta segundos"
+        },
+        {
+          "word": "triste",
+          "meaning": "que no está contento"
+        },
+        {
+          "word": "equipo",
+          "meaning": "grupo de jugadores"
+        },
+        {
+          "word": "odia",
+          "meaning": "no le gusta nada"
+        }
+      ]
+    },
+    {
+      "id": "morgue",
+      "title": "Las tres reglas de Marcelo y el señor de la gelatina",
+      "place": "Morgue",
+      "context": "Sofía empieza hoy sus prácticas. Don Marcelo le explica las reglas de la casa.",
+      "speakers": [
+        {
+          "name": "Marcelo",
+          "country": "Bolivia",
+          "voice": "es-BO-MarceloNeural"
+        },
+        {
+          "name": "Sofía",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Bienvenida, Sofía. Aquí hay tres reglas."
+        },
+        {
+          "s": 1,
+          "text": "Vale... Tengo un poco de miedo."
+        },
+        {
+          "s": 0,
+          "text": "Normal. Regla uno: siempre saludas. «Buenos días, señores.»"
+        },
+        {
+          "s": 1,
+          "text": "¿Y ellos contestan?"
+        },
+        {
+          "s": 0,
+          "text": "No. Por eso son buenos compañeros. Regla dos: no tocas mi sándwich."
+        },
+        {
+          "s": 1,
+          "text": "¿Comes aquí?"
+        },
+        {
+          "s": 0,
+          "text": "Claro. Hay silencio y está fresco. Regla tres: lees bien las etiquetas. Un señor de esta etiqueta está vivo, en el segundo piso."
+        },
+        {
+          "s": 1,
+          "text": "¿Vivo?"
+        },
+        {
+          "s": 0,
+          "text": "Vivo y come gelatina."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué explica Marcelo?",
+          "options": [
+            "Las reglas de la morgue",
+            "El camino a la salida",
+            "Su vida personal"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Cómo está Sofía?",
+          "options": [
+            "Muy contenta",
+            "Un poco cansada",
+            "Con un poco de miedo"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué no puede tocar Sofía?",
+          "options": [
+            "La radio",
+            "El sándwich de Marcelo",
+            "Las etiquetas"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Dónde está el señor de la etiqueta?",
+          "options": [
+            "En el segundo piso",
+            "En la cafetería",
+            "En su casa"
+          ],
+          "answer": 0
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Qué trabajo raro conoces?",
+          "model": "Conozco a una mujer que prueba camas en un hotel."
+        },
+        {
+          "q": "¿Dónde comes cuando quieres silencio?",
+          "model": "Como en el parque, solo."
+        },
+        {
+          "q": "¿Qué cosas te dan miedo?",
+          "model": "Me dan miedo las arañas y los aviones."
+        }
+      ],
+      "gaps": "Regla tres: lees bien las [etiquetas]. Un señor de esta etiqueta está [vivo], en el [segundo] [piso].",
+      "glossary": [
+        {
+          "word": "saludas",
+          "meaning": "dices hola"
+        },
+        {
+          "word": "etiquetas",
+          "meaning": "papeles pequeños con un nombre"
+        },
+        {
+          "word": "fresco",
+          "meaning": "un poco frío"
+        },
+        {
+          "word": "gelatina",
+          "meaning": "postre blando de colores"
+        }
+      ]
+    },
+    {
+      "id": "limpieza",
+      "title": "Lorena, el ascensor dos y la farmacia que nadie encuentra",
+      "place": "Pasillos de servicio",
+      "context": "Sofía busca la farmacia. Doña Lorena le da el mapa secreto del hospital.",
+      "speakers": [
+        {
+          "name": "Sofía",
+          "country": "Bolivia",
+          "voice": "es-BO-SofiaNeural"
+        },
+        {
+          "name": "Lorena",
+          "country": "El Salvador",
+          "voice": "es-SV-LorenaNeural"
+        }
+      ],
+      "lines": [
+        {
+          "s": 0,
+          "text": "Perdón, señora, ¿dónde está la farmacia?"
+        },
+        {
+          "s": 1,
+          "text": "Ay, mija, ven. Te doy el mapa de verdad. El ascensor dos no viene nunca. Usas la escalera."
+        },
+        {
+          "s": 0,
+          "text": "Vale."
+        },
+        {
+          "s": 1,
+          "text": "En el primer piso, el armario de las toallas: ahí duerme el doctor Funes."
+        },
+        {
+          "s": 0,
+          "text": "¿El anestesista?"
+        },
+        {
+          "s": 1,
+          "text": "Ese. Y en la escalera B fuma don Mario, con su suero."
+        },
+        {
+          "s": 0,
+          "text": "¿Y la farmacia?"
+        },
+        {
+          "s": 1,
+          "text": "Ah, la farmacia... nadie sabe. Es el gran secreto."
+        }
+      ],
+      "choice": [
+        {
+          "q": "¿Qué busca Sofía?",
+          "options": [
+            "El ascensor",
+            "La farmacia",
+            "La cafetería"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué pasa con el ascensor dos?",
+          "options": [
+            "Es muy rápido",
+            "Es solo para médicos",
+            "No viene nunca"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Quién duerme en el armario de las toallas?",
+          "options": [
+            "El doctor Funes",
+            "Don Mario",
+            "Lorena"
+          ],
+          "answer": 0
+        },
+        {
+          "q": "¿Dónde está la farmacia, según Lorena?",
+          "options": [
+            "En el primer piso",
+            "Al lado de la escalera B",
+            "Nadie sabe"
+          ],
+          "answer": 2
+        }
+      ],
+      "open": [
+        {
+          "q": "¿Conoces un lugar secreto en tu ciudad?",
+          "model": "Sí, un café pequeño detrás de una librería."
+        },
+        {
+          "q": "¿Prefieres el ascensor o la escalera?",
+          "model": "Prefiero la escalera. Es buen ejercicio."
+        },
+        {
+          "q": "¿Te pierdes mucho en edificios grandes?",
+          "model": "Sí, siempre. En los aeropuertos, mucho."
+        }
+      ],
+      "gaps": "El [ascensor] dos no viene [nunca]. [Usas] la [escalera].",
+      "glossary": [
+        {
+          "word": "mija",
+          "meaning": "forma cariñosa de decir «mi hija»"
+        },
+        {
+          "word": "ascensor",
+          "meaning": "máquina para subir y bajar pisos"
+        },
+        {
+          "word": "armario",
+          "meaning": "mueble para guardar cosas"
+        },
+        {
+          "word": "secreto",
+          "meaning": "algo que nadie sabe"
+        }
+      ]
+    }
+  ]
+}

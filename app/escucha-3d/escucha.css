@@ -114,3 +114,9 @@
 .e3-badge.e3-badge{bottom:auto;top:64px}
 }
 .e3-backdrop .e3-card:focus{outline:none}
+
+.e3-backdrop .e3-tune{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;font-size:13px;opacity:.85;margin-top:8px}
+.e3-backdrop .e3-tune label{display:flex;align-items:center;gap:6px}
+.e3-backdrop .e3-tune select{font:inherit;padding:2px 4px;border-radius:6px}
+.e3-backdrop .e3-tune input[type=range]{width:110px}
+.e3-backdrop .e3-en{display:block;font-size:.86em;opacity:.7;font-style:italic;margin-top:2px}
