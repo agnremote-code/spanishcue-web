@@ -1,6 +1,7 @@
 import { bi } from './bilingual.mjs';
 import { A0_ROWS } from './pedagogy-a0.mjs';
 import { A2_ROWS } from './pedagogy-a2.mjs';
+import { placeTalk } from './talk/index.mjs';
 
 // Authoritative two-moment curriculum. Three choice difficulty bands and six
 // independently authored personal prompts per interaction; no fictional continuations.
@@ -1630,6 +1631,7 @@ export function pedagogyFor(activity, level) {
     lessonLevel: level, situation, prompt,
     options: [...options.slice(offset), ...options.slice(0, offset)],
     close: a0 ? bi(a0.personal) : row.personal[index],
+    talk: placeTalk(activity.id, level, a0 ? bi(a0.personal) : row.personal[index]),
     ...(a0 ? { words: a0.words.map(bi) } : {}),
     role: 'Escucha la elección del estudiante. Después, escucha su respuesta personal.',
     teacher: a0

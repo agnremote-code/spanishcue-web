@@ -1,10 +1,12 @@
 // Every interaction has exactly two pedagogical moments. Location types remain
-// stable for the world, but cannot append fiction, role play or extra questions.
+// stable for the world, but cannot append fiction or role play. The second
+// moment is a general conversation: the personal question first, then four
+// more open questions (talk/) for the teacher to pick from.
 export const ACTIVITY_TYPES = Object.fromEntries(
   ['decisiones', 'comparar', 'conversacion', 'condiciones', 'museo', 'social', 'mensajes', 'observar', 'describir', 'acuerdo']
     .map(type => [type, { beats: activity => [
       { kind: "choose", label: "1. Elige tu respuesta", context: activity.situation, prompt: activity.prompt, options: activity.options },
-      { kind: "talk", label: "2. Ahora habla de ti", prompt: activity.close },
+      { kind: "talk", label: "2. Ahora habla de ti", prompt: activity.close, talk: activity.talk },
     ] }]),
 );
 export const INSPECT_BEFORE_GUESSING = 2;

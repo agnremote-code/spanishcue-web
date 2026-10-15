@@ -6,7 +6,7 @@ export type Message = { from: string; time: string; text: string };
 export type Option = { id: string; label: string; result?: string; ask?: string; facts?: string[] };
 export type Activity = {
   id: string; title: string; lessonLevel?: Level; role?: string; teacher?: string[];
-  situation?: string; prompt?: string; options?: Option[]; close?: string; words?: string[];
+  situation?: string; prompt?: string; options?: Option[]; close?: string; talk?: string[]; words?: string[];
   who?: string; says?: string; ask?: string; followUps?: string[];
   conditions?: { text: string; ask: string }[];
   object?: string; year?: string; plaque?: string; detail?: string; ask2?: string;

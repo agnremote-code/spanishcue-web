@@ -258,7 +258,6 @@ test('about seventy scenes in eight districts, each placed in the city', () => {
 });
 
 test('every scene is a real mini-scene: reachable moments, real choices, different endings', () => {
-  const speakAll = new Set();
   for (const encounter of street.ENCOUNTERS) {
     const w = encounter.id;
     assert.ok(encounter.nodes[encounter.start], `${w} start`);
@@ -283,7 +282,7 @@ test('every scene is a real mini-scene: reachable moments, real choices, differe
     };
     reach(encounter.start);
     // With an object in hand the scene opens elsewhere: its own first moment,
-    // its own reactions and endings, its own closing question.
+    // its own reactions and endings. It only carries the story: no question.
     const variants = encounter.variants ?? {};
     const starts = new Set([encounter.start]);
     for (const [item, variant] of Object.entries(variants)) {
@@ -294,7 +293,7 @@ test('every scene is a real mini-scene: reachable moments, real choices, differe
       if (variant.fx) assert.ok(street.OPENING_FX.includes(variant.fx), `${w}/${item}: fx ${variant.fx}`);
       const seen = reach(variant.start);
       assert.ok(seen.nodes.size >= 2 && seen.ends.size >= 2, `${w}/${item}: two moments and two endings at least`);
-      if (variant.speak) for (const band of ['A', 'B', 'C']) assert.match(variant.speak[band] ?? '', /^¿[^?]+\?$/, `${w}/${item}: question ${band}`);
+      assert.deepEqual(Object.keys(variant).filter(key => !['start', 'fx'].includes(key)), [], `${w}/${item}: a variant changes the story, not the conversation`);
     }
     assert.deepEqual([...nodes].sort(), Object.keys(encounter.nodes).sort(), `${w}: every moment can happen`);
     assert.deepEqual([...ends].sort(), Object.keys(encounter.ends).sort(), `${w}: every ending can happen`);
@@ -314,21 +313,7 @@ test('every scene is a real mini-scene: reachable moments, real choices, differe
       assert.ok(encounter.nodes[encounter.start].items?.corazon || variants.corazon, `${w}: the heart always does something`);
     }
     for (const end of Object.values(encounter.ends)) assert.ok(CHANGES.has(end.change), `${w}: ${end.change}`);
-    for (const level of levels.LEVELS.filter(item => item !== 'A0')) {
-      const question = encounter.speak[level];
-      assert.match(question, /^¿[^?]+\?$/, `${w}: one open question for ${level}`);
-      assert.ok(!speakAll.has(question), `${w}: ${level} question repeated`);
-      speakAll.add(question);
-    }
-    // The closing questions of one scene differ by object.
-    const asked = new Set();
-    for (const [item, variant] of Object.entries(variants)) {
-      if (!variant.speak) continue;
-      for (const band of ['A', 'B', 'C']) {
-        assert.ok(!asked.has(variant.speak[band]), `${w}/${item}: question ${band} repeats another object's`);
-        asked.add(variant.speak[band]);
-      }
-    }
+    assert.equal(encounter.speak, undefined, `${w}: the conversation lives in talk/, not in the story`);
   }
 });
 
@@ -337,8 +322,8 @@ test('the object changes the whole scene, not one line: every escena opens diffe
   let full = 0;
   for (const encounter of escenas) {
     const variants = encounter.variants ?? {};
-    if (ITEMS.every(item => variants[item]?.speak)) full++;
-    const lines = new Set(), questions = new Set();
+    if (ITEMS.every(item => variants[item])) full++;
+    const lines = new Set();
     for (const item of ITEMS) {
       if (!variants[item]) continue;
       let state = street.chooseItem(street.emptyStreet(), item);
@@ -348,14 +333,9 @@ test('the object changes the whole scene, not one line: every escena opens diffe
       assert.equal(view.variant, item);
       assert.ok(!lines.has(view.line), `${encounter.id}/${item}: its own opening line`);
       lines.add(view.line);
-      // Walk the first option to an end and read the closing question.
-      let cursor = state;
-      for (let i = 0; i < 6 && !cursor.open.end; i++) cursor = street.chooseLine(cursor, street.choicesFor(encounter, cursor.open.node, item)[0].key);
-      const ended = street.streetView(cursor, 'A2');
-      if (variants[item].speak) { assert.ok(!questions.has(ended.speak), `${encounter.id}/${item}: its own question`); questions.add(ended.speak); }
     }
   }
-  assert.ok(full >= escenas.length * 0.9, `${full} of ${escenas.length} escenas react to all seven objects with their own question`);
+  assert.ok(full >= escenas.length * 0.9, `${full} of ${escenas.length} escenas react to all seven objects`);
 });
 
 test('scenes unlock each other: every flag a scene needs is set by another one', () => {
@@ -369,7 +349,7 @@ test('scenes unlock each other: every flag a scene needs is set by another one',
 
 test('the language of every scene: three bands, the level of the URL, neutral Spanish with tú', () => {
   for (const encounter of street.ENCOUNTERS) {
-    for (const text of textsOf([encounter.nodes, encounter.ends, encounter.speak, encounter.title])) {
+    for (const text of textsOf([encounter.nodes, encounter.ends, encounter.title])) {
       assert.doesNotMatch(text, VOSEO, `${encounter.id}: ${text}`);
     }
     for (const node of Object.values(encounter.nodes)) for (const band of ['A', 'B', 'C']) assert.ok(node.line[band]?.trim(), `${encounter.id}: band ${band}`);
