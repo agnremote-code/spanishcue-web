@@ -1,0 +1,475 @@
+/* Audience landings (/para-profesores, /aprender-espanol). They reuse the
+   library header and the teacher hero; this file only adds the sections. */
+.aud-page {
+  min-height: 100vh;
+  background: #f6f9fd;
+  color: #061a3d;
+}
+
+.topbar.aud-topbar { min-height: 72px; }
+@media (max-width: 760px) {
+  .topbar.aud-topbar { min-height: 0; padding-bottom: 0; }
+}
+
+/* /para-profesores keeps the home hero; its kicker sits inside the H1. */
+.sc-hero h1 .sc-hero-kicker {
+  margin: 0 0 15px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.3;
+  text-shadow: none;
+}
+
+/* Student hero: same proportions as the teacher hero, its own world. */
+.aud-hero {
+  position: relative;
+  min-height: clamp(505px, 39vw, 585px);
+  margin: 0 clamp(-54px, -3.2vw, -18px) 30px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 0 0 clamp(28px, 3vw, 42px) clamp(28px, 3vw, 42px);
+  background: #04142f;
+  color: #fff;
+  box-shadow: 0 38px 90px rgba(6, 26, 61, .29), inset 0 1px rgba(255, 255, 255, .28);
+}
+
+.aud-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #020d25 0%, rgba(3, 18, 48, .97) 34%, rgba(3, 18, 48, .45) 50%, transparent 66%),
+    linear-gradient(0deg, rgba(2, 13, 37, .9) 0%, transparent 34%);
+  pointer-events: none;
+}
+
+.aud-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 6%;
+  bottom: -16%;
+  width: 46%;
+  height: 32%;
+  border-radius: 50%;
+  background: rgba(255, 181, 71, .26);
+  filter: blur(72px);
+  pointer-events: none;
+}
+
+.aud-hero-art,
+.aud-hero-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aud-hero-art { left: 30%; width: 70%; }
+.aud-hero-art img { object-fit: cover; object-position: 50% 60%; }
+
+.aud-hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(720px, 58%);
+  padding: clamp(40px, 4.4vw, 68px) clamp(28px, 4.4vw, 68px) 42px;
+}
+
+.aud-hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 15px;
+  color: #ffd27f;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+
+.aud-hero-kicker::before {
+  content: "";
+  width: 27px;
+  height: 2px;
+  border-radius: 99px;
+  background: #ffc35a;
+  box-shadow: 0 0 13px #ffb547;
+}
+
+.aud-hero h1 {
+  max-width: 700px;
+  margin: 0;
+  font-family: Arial Black, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(42px, 4.5vw, 66px);
+  font-weight: 950;
+  line-height: .93;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.aud-hero h1 em {
+  color: #ffc35a;
+  font-style: normal;
+  text-shadow: 0 0 35px rgba(255, 181, 71, .4);
+}
+
+.aud-hero-pair {
+  margin: 14px 0 0;
+  color: #9fd8ff;
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.aud-hero-lead {
+  max-width: 590px;
+  margin: 14px 0 0;
+  color: #d8e8f8;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.52;
+}
+
+.aud-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  margin-top: 26px;
+}
+
+.aud-hero-secondary {
+  color: #d8e8f8;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.aud-hero-reassurance {
+  margin: 12px 0 0;
+  color: #a9c7df;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.aud-primary,
+.aud-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 26px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 950;
+  letter-spacing: .4px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.aud-primary {
+  border: 1px solid #0968e7;
+  background: linear-gradient(115deg, #075de7, #169cff);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(7, 93, 231, .32), inset 0 1px rgba(255, 255, 255, .34);
+}
+
+.aud-primary-student,
+.topbar-primary-cta.aud-student-cta {
+  border-color: #f0a630;
+  background: linear-gradient(115deg, #ffb547, #ffd27f);
+  color: #061a3d;
+  box-shadow: 0 14px 30px rgba(240, 166, 48, .3), inset 0 1px rgba(255, 255, 255, .5);
+}
+
+.aud-secondary {
+  border: 1px solid #c8d8e9;
+  background: #fff;
+  color: #061a3d;
+}
+
+.aud-primary:hover,
+.aud-primary:focus-visible,
+.aud-secondary:hover,
+.aud-secondary:focus-visible {
+  transform: translateY(-1px);
+}
+
+.aud-primary:focus-visible,
+.aud-secondary:focus-visible,
+.aud-hero-secondary:focus-visible,
+.aud-card:focus-visible,
+.aud-text-link:focus-visible,
+.aud-crosslink a:focus-visible {
+  outline: 3px solid #168cff;
+  outline-offset: 3px;
+}
+
+/* Sections */
+.aud-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(34px, 5vw, 64px) 0;
+}
+
+.aud-eyebrow {
+  margin: 0 0 8px;
+  color: #168cff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.aud-student .aud-eyebrow { color: #c97a00; }
+
+.aud-section h2,
+.aud-close h2 {
+  margin: 0;
+  color: #061a3d;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+}
+
+.aud-section-head p:last-child:not(.aud-eyebrow) {
+  max-width: 620px;
+  margin: 10px 0 0;
+  color: #48627f;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.aud-benefit-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aud-benefit-list li {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 20px 18px;
+  border: 1px solid #d7e4f1;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(6, 26, 61, .06);
+}
+
+.aud-benefit-number {
+  color: #168cff;
+  font-family: Arial Black, Inter, sans-serif;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.aud-student .aud-benefit-number { color: #e39a1f; }
+
+.aud-benefit-list h3 {
+  margin: 0;
+  color: #061a3d;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.aud-benefit-list p {
+  margin: 6px 0 0;
+  color: #48627f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.aud-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.aud-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+  padding: 0 0 18px;
+  border: 1px solid #d7e4f1;
+  border-radius: 18px;
+  background: #061a3d;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 16px 34px rgba(6, 26, 61, .14);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.aud-card:hover { transform: translateY(-2px); box-shadow: 0 22px 44px rgba(6, 26, 61, .2); }
+
+.aud-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.aud-card > span,
+.aud-card > b { padding: 0 16px; }
+
+.aud-card-meta {
+  color: #8ee2ff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.aud-student .aud-card-meta { color: #ffd27f; }
+
+.aud-card b { font-size: 18px; font-weight: 900; line-height: 1.2; }
+
+.aud-card-copy { color: #c9dbee; font-size: 13px; line-height: 1.45; }
+
+.aud-card-action {
+  margin-top: auto;
+  padding-top: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.aud-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 9px !important;
+  border-radius: 99px;
+  background: rgba(2, 13, 37, .82);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  backdrop-filter: blur(6px);
+}
+
+.aud-card-badge.open { background: #ffc35a; color: #061a3d; }
+
+.aud-note {
+  margin: 16px 0 0;
+  color: #5d7590;
+  font-size: 13px;
+}
+
+.aud-steps ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aud-steps li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 16px;
+  background: #e9f3fd;
+}
+
+.aud-student .aud-steps li { background: #fff3df; }
+
+.aud-steps li span {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #061a3d;
+  color: #fff;
+  font-weight: 950;
+}
+
+.aud-steps li b { font-size: 17px; font-weight: 900; }
+.aud-steps li em { color: #48627f; font-size: 14px; font-style: normal; }
+
+.aud-close {
+  max-width: 1180px;
+  margin: clamp(20px, 3vw, 40px) auto 0;
+  padding: clamp(34px, 5vw, 56px);
+  border-radius: 28px;
+  background: linear-gradient(120deg, #04142f, #0b2f66);
+  color: #fff;
+  text-align: center;
+}
+
+.aud-close h2 { color: #fff; }
+.aud-close > p { margin: 10px 0 0; color: #c9dbee; font-size: 16px; }
+
+.aud-close-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.aud-text-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #9fd8ff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.aud-crosslink {
+  max-width: 1180px;
+  margin: 26px auto 34px;
+  text-align: center;
+}
+
+.aud-crosslink a {
+  color: #405a77;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .aud-benefit-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .aud-benefit-list li:last-child { grid-column: 1 / -1; }
+  .aud-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .aud-hero {
+    min-height: 640px;
+    margin: 0 -16px 26px;
+    border-radius: 0 0 26px 26px;
+  }
+  .aud-hero::before {
+    background:
+      linear-gradient(180deg, rgba(2, 14, 39, .97) 0%, rgba(3, 20, 49, .9) 52%, rgba(3, 18, 47, .55) 74%, rgba(2, 13, 37, .85) 100%);
+  }
+  .aud-hero-art { left: 0; top: auto; width: 100%; height: 46%; }
+  .aud-hero-art img { object-position: 50% 70%; }
+  .aud-hero-copy { width: 100%; padding: 30px 22px 200px; }
+  .aud-hero h1 { font-size: clamp(30px, 8.4vw, 46px); letter-spacing: -1.6px; }
+  .aud-primary { width: 100%; }
+  .aud-benefit-list,
+  .aud-card-grid,
+  .aud-steps ol { grid-template-columns: 1fr; }
+  .aud-close { padding: 30px 20px; border-radius: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aud-primary, .aud-secondary, .aud-card { transition: none; }
+}

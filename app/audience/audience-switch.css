@@ -1,0 +1,88 @@
+/* Teach / Learn selector: one quiet segmented control inside the header. */
+.audience-switch {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid #c8d8e9;
+  border-radius: 12px;
+  background: #f3f8fd;
+}
+
+.audience-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 9px;
+  color: #405a77;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .1px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+.audience-switch a:hover {
+  background: #e3f0fc;
+  color: #075de7;
+}
+
+.audience-switch a:focus-visible {
+  outline: 2px solid #168cff;
+  outline-offset: 2px;
+}
+
+.audience-switch a.active {
+  background: #061a3d;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(6, 26, 61, .2);
+}
+
+.audience-switch-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #9fb4ca;
+}
+
+.audience-switch a.active .audience-switch-dot.teacher { background: #72d7ff; box-shadow: 0 0 8px #3cc7ff; }
+.audience-switch a.active .audience-switch-dot.student { background: #ffc35a; box-shadow: 0 0 8px #ffb547; }
+
+/* The library header makes room for the selector: the promise line and the
+   anchor links (also in the side menu) step aside before anything overlaps. */
+@media (max-width: 1640px) {
+  .topbar-brand-promise { display: none; }
+}
+
+@media (max-width: 1500px) {
+  .topbar-navigation { display: none; }
+}
+
+@media (max-width: 1100px) {
+  .audience-switch a { padding: 0 9px; }
+  .topbar:not(.aud-topbar) .topbar-account { display: none; }
+}
+
+@media (max-width: 760px) {
+  .topbar-primary { flex-wrap: wrap; row-gap: 0; }
+  .topbar-primary > .audience-switch {
+    order: 3;
+    width: 100%;
+    margin: 0 0 8px;
+  }
+  .topbar-primary > .audience-switch a { flex: 1 1 0; min-height: 36px; padding: 0 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .audience-switch a { transition: none; }
+}
+
+@media print {
+  .audience-switch { display: none; }
+}

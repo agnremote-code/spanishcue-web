@@ -22,6 +22,8 @@ const acquisitionLandings = new Set([
   "/resources",
   "/guides",
   "/autoestudio",
+  "/para-profesores",
+  "/aprender-espanol",
 ]);
 
 /** Organic hubs, their level pages and ad-only `/lp/*` variants all count as landings. */

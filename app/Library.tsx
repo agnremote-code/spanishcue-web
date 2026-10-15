@@ -15,6 +15,7 @@ import { phoneticsHref } from "./phonetics/navigation";
 import type { CEFRLevel } from "./conversation-families/types";
 import "./conversation-families/families.css";
 import LanguageSwitcher from "./i18n/LanguageSwitcher";
+import AudienceSwitch from "./audience/AudienceSwitch";
 import { useI18n } from "./i18n/LocaleProvider";
 import type { MessageKey } from "./i18n/messages";
 import {
@@ -1545,6 +1546,7 @@ export default function Library({
                 {t("nav.readyToTeach")}
               </span>
             </div>
+            <AudienceSwitch active="teacher" />
             <nav className="topbar-navigation" aria-label={t("nav.main")}>
               <a href="#library-results">{t("common.library")}</a>
               <a href="#how-it-works">{t("nav.howItWorks")}</a>
