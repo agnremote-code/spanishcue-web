@@ -101,7 +101,7 @@ export default function World3D(props: WorldProps) {
     if (!low) {
       composer = new EffectComposer(renderer);
       composer.addPass(new RenderPass(scene, camera));
-      composer.addPass(new UnrealBloomPass(new THREE.Vector2(512, 512), 0.32, 0.4, 0.9));
+      composer.addPass(new UnrealBloomPass(new THREE.Vector2(512, 512), 0.2, 0.35, 0.95));
       composer.addPass(new OutputPass());
     }
 
@@ -250,7 +250,7 @@ export default function World3D(props: WorldProps) {
 
       // Changing floors: the elevator doors close and open, or the screen
       // fades while he climbs the stairs.
-      if (p.floor !== floor && !ride) ride = { from: floor, to: p.floor, start: now / 1000, via: p.via };
+      if (p.floor !== floor && !ride && !p.sceneId) ride = { from: floor, to: p.floor, start: now / 1000, via: p.via };
       if (ride) {
         const t = now / 1000 - ride.start;
         if (ride.via === 'lift') {
@@ -285,6 +285,8 @@ export default function World3D(props: WorldProps) {
         if (sceneId) {
           const s = sceneById(sceneId);
           if (s) {
+            // A circle opened from the list or the map cuts straight to it.
+            if (ride) { setLiftDoors(ride.from, 0); ride = null; if (fade.current) fade.current.style.opacity = '0'; }
             if (s.floor !== floor) showFloor(s.floor);
             const f = sceneFraming(s);
             player = { ...player, x: f.x, z: f.z, heading: f.heading, speed: 0, y: 0, vy: 0 };

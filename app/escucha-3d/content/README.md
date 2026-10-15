@@ -65,3 +65,11 @@ Rules
   like voseo, e.g. «elegí, decidí, cumplí, viví, salí, pedí, escribí, abrí, subí, recibí, decí»:
   rephrase («tomé la decisión», «hice treinta años»). The checker tells you which word failed.
 - No English anywhere.
+
+## Hospital San Casi Vivo (`hospital`)
+
+21 circles (see `games.mjs`), levels A0–C2, `ownListening`: each circle has exactly its own item, no fallback.
+Speakers must be cast members of `app/hospital-san-casi-vivo/story.mjs` with their exact `name`, `voice`
+and `country`. A0 is bilingual (`bilingualA0`): every item also needs `contextEn`, `en` on every line,
+`qEn` on the choice and open questions and `en` on every glossary entry; the English literals are
+approved in `docs/audits/hospital-a0-english-additions-20261015.json`.

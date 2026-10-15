@@ -128,7 +128,7 @@ export default function HospitalGame() {
   const enter = () => { setEntered(true); ambience.current?.start(); };
   const open = useCallback((id: string) => {
     setPanel(null); setList(false); setMap(false);
-    if (mode === 'escucha') { setListenAt(id); return; }
+    if (mode === 'escucha') { setListenAt(id); setState(s => setFloor(s, sceneById(id)?.floor ?? s.floor)); return; }
     setTalkAt(0);
     setState(s => openScene({ ...s, floor: sceneById(id)?.floor ?? s.floor }, id));
   }, [mode]);
@@ -224,7 +224,7 @@ export default function HospitalGame() {
       {nearScene ? <button type="button" onClick={() => open(nearScene.id)}><kbd>E</kbd>{mode === 'escucha' ? `Escuchar · ${nearScene.sector}` : `Hablar con ${nearWho?.name ?? ''}`}</button>
         : <button type="button" onClick={() => setPanel(near.kind === 'stairs' ? 'stairs' : 'lift')}><kbd>E</kbd>{near.kind === 'stairs' ? 'Subir o bajar por la escalera' : 'Llamar al ascensor'}</button>}
     </div>}
-    {entered && !busy && !near && !panel && !list && !map && <p className="hs-hint">Los círculos blancos son las escenas. El ascensor y las escaleras están al fondo del pasillo central.</p>}
+    {entered && mode !== 'escucha' && !busy && !near && !panel && !list && !map && <p className="hs-hint">Los círculos blancos son las escenas. El ascensor y las escaleras están al fondo del pasillo central.</p>}
 
     {/* ------------------------------------------------ elevator and stairs */}
     {panel && <section className="hs-panel hs-lift" aria-labelledby="hs-lift-h">

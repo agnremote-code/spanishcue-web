@@ -691,7 +691,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
   // in the morgue. The number stays the same on every floor.
   const pulses: { light: THREE.PointLight; base: number; speed: number }[] = [];
   const lights: Record<number, [string, number, number, number, number][]> = {
-    0: [['#9ad8ff', 24, -27, 1.4, 0], ['#d8d0a0', -20, -9, 1.0, 0], ['#d8d0a0', -24, -27, 0.9, 0]],
+    0: [['#9ad8ff', 24, -27, 0.8, 0], ['#d8d0a0', -20, -9, 1.0, 0], ['#d8d0a0', -24, -27, 0.9, 0]],
     1: [['#ff3030', 32, 0, 1.2, 2.2], ['#ffd8a0', -24, -28, 1.1, 0], ['#ff3030', 33, 22, 0.8, 1.4]],
     2: [['#d8fff0', 22, 18, 1.4, 0], ['#ffd8a0', 24, -30, 1.0, 0], ['#a8c8ff', -28, 6, 0.9, 0]],
     3: [['#9ab8ff', 20, 12, 1.2, 0], ['#ffe0b0', -18, -30, 1.0, 0], ['#ffffff', -4, 6, 0.9, 0]],
