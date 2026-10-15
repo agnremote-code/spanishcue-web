@@ -6,7 +6,9 @@ import { canUseKeys, followYaw, inputFrom, keyAction } from '../noche-abierta/wo
 import { currentQuest, type GameState } from './engine.mjs';
 import { buildWorld } from './world';
 import { createPrince } from './characters';
-import { nearestInReach, safeCheckpoint, stepRealmPlayer, type Position } from './movement.mjs';
+import { nearestInReach, safeCheckpoint, shovePeople, stepRealmPlayer, type Position } from './movement.mjs';
+import { createBumpClock } from '../escucha-3d/bump.mjs';
+import { insultFor, shout } from '../escucha-3d/shout';
 import { PLACES } from './conversations.mjs';
 
 export type WorldProps = {
@@ -50,6 +52,7 @@ export default function World3D(props: WorldProps) {
   const container = useRef<HTMLDivElement>(null);
   const mount = useRef<HTMLDivElement>(null);
   const knob = useRef<HTMLSpanElement>(null);
+  const yell = useRef<HTMLParagraphElement>(null);
   const joystickPointer = useRef<number | null>(null);
   const api = useRef<Api | null>(null);
   const [failed, setFailed] = useState(false);
@@ -188,6 +191,10 @@ export default function World3D(props: WorldProps) {
     let jumpUntil = 0, damageAt = -10, dragonSeen = false, victorySeen = Boolean(live.current.state.flags.victory), wasIntro = false;
     let shot: { kind: 'intro' | 'dragon' | 'ending'; start: number; duration: number } | null = null;
     let introDelivered = false;
+    // Crash into someone and they yell: a red bubble over their head for 3 s.
+    const mayYell = createBumpClock();
+    const yellHead = new THREE.Vector3();
+    let yellAt: { id: string; until: number } | null = null;
     const look = new THREE.Vector3(player.x, player.y + 1.3, player.z);
     const targetLook = new THREE.Vector3();
     const desiredCamera = new THREE.Vector3();
@@ -323,6 +330,18 @@ export default function World3D(props: WorldProps) {
       if (canMove) {
         const keys = inputFrom(held);
         player = stepRealmPlayer(player, { x: keys.x + joy.x, y: keys.y - joy.y, sprint: keys.sprint || Math.hypot(joy.x, joy.y) > .88, nitro: held.has('nitro'), jump: keys.jump || clock < jumpUntil, yaw }, dt, world.colliders, world.floorAt, p.state.flags);
+        // People are solid, and nobody likes being run into.
+        const bump = shovePeople(player, world.people, world.colliders, world.floorAt, p.state.flags);
+        player = bump.player;
+        const who = bump.hit;
+        if (who && player.speed > 1.2 && mayYell(who.id, clock)) {
+          const line = insultFor(who.body, who.seed);
+          shout(line);
+          world.glare(who.id, clock + 3.5, player);
+          yellAt = { id: who.id, until: clock + 3 };
+          if (yell.current) yell.current.textContent = line.text;
+          player.speed *= .3;
+        }
         // A wider lens sells the nitro dash.
         const lens = held.has('nitro') && player.speed > 12 && !reduced ? 70 : 56;
         if (Math.abs(camera.fov - lens) > .05) { camera.fov += (lens - camera.fov) * Math.min(1, dt * 5); camera.updateProjectionMatrix(); }
@@ -330,6 +349,13 @@ export default function World3D(props: WorldProps) {
       } else { player.speed = 0; player.moving = false; }
       avatarPosition.set(player.x, player.y, player.z);
       prince.root.position.copy(avatarPosition);
+      if (yell.current) {
+        const who = yellAt && clock < yellAt.until ? world.people.find(person => person.id === yellAt?.id) : null;
+        if (who) yellHead.set(who.x, who.y + (who.id === 'brum' ? 4 : who.id === 'nox' ? 1.3 : who.id === 'liora' ? 1.6 : 2.2), who.z).project(camera);
+        const shown = Boolean(who) && yellHead.z < 1;
+        yell.current.hidden = !shown;
+        if (shown) yell.current.style.transform = `translate(${(yellHead.x + 1) / 2 * renderer.domElement.clientWidth}px, ${(1 - yellHead.y) / 2 * renderer.domElement.clientHeight}px) translate(-50%, -100%)`;
+      }
       prince.root.rotation.y = player.heading;
       prince.update(dt, player.speed, clock, clock - castAt < 1);
       if (player.vy > 0) prince.root.rotation.x = -.06;
@@ -539,7 +565,9 @@ export default function World3D(props: WorldProps) {
       </div>
     </>}
     {!props.paused && notice && <p className="rrw-notice" role="status">{notice}</p>}
+    <p ref={yell} className="rrw-yell" aria-live="polite" hidden />
     <style>{`
+      .rrw-yell{position:absolute;left:0;top:0;z-index:6;max-width:240px;margin:0;padding:7px 11px;border-radius:12px;background:#c62828;color:#fff;font:800 14px/1.25 system-ui,sans-serif;box-shadow:0 6px 18px #0006;pointer-events:none}.rrw-yell::after{content:"";position:absolute;left:50%;bottom:-7px;margin-left:-7px;border:7px solid transparent;border-bottom:0;border-top-color:#c62828}.rrw-yell[hidden]{display:none}
       .rrw-world,.rrw-canvas{position:absolute;inset:0;overflow:hidden}.rrw-world{background:#899dab;color:#fff}.rrw-canvas canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}.rrw-vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 48%,rgba(9,18,26,.2) 100%)}.rrw-world button{font:inherit;color:inherit;cursor:pointer}.rrw-prompt{position:absolute;bottom:112px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:13px;border:1px solid #d5bb7370;background:#14201ff0;backdrop-filter:blur(12px);border-radius:7px;padding:12px 22px 12px 12px;box-shadow:0 8px 35px #0005;text-align:left;max-width:85vw;z-index:12}.rrw-prompt kbd{display:grid;place-items:center;width:34px;height:34px;border:1px solid #d5bb73aa;border-radius:4px;color:#f6daa0;font-size:17px}.rrw-prompt small{display:block;font-size:10px;color:#d9cba7;text-transform:uppercase;letter-spacing:.18em;margin-bottom:3px}.rrw-prompt span{font-family:Georgia,serif;font-size:16px}.rrw-desktop-hint{position:absolute;bottom:20px;left:26px;display:flex;align-items:center;gap:18px;font-size:10px;letter-spacing:.02em;color:#f3efdfab;pointer-events:none}.rrw-desktop-hint kbd{font:inherit;border:1px solid #ffffff30;border-radius:3px;padding:3px 5px;color:#f5ebd4;margin-right:4px}.rrw-notice{position:absolute;bottom:184px;left:50%;transform:translateX(-50%);background:#101e26df;border:1px solid #d0b57765;color:#f6e3ad;padding:12px 20px;border-radius:7px;max-width:min(540px,86vw);font-size:13px;line-height:1.5;text-align:center;z-index:16;pointer-events:none}.rrw-mobile-controls{display:none}.rrw-letterbox{position:absolute;left:0;right:0;height:9%;background:#080d11;z-index:14;pointer-events:none}.rrw-letterbox-top{top:0}.rrw-letterbox-bottom{bottom:0}.rrw-cinematic-caption{position:absolute;left:10%;right:10%;bottom:13%;text-align:center;text-shadow:0 2px 15px #000;z-index:15}.rrw-cinematic-caption>span{font-size:10px;letter-spacing:.32em;color:#e9d6ac}.rrw-cinematic-caption p{font:italic 23px/1.5 Georgia,serif;max-width:660px;margin:16px auto 22px;color:#fff5dd}.rrw-cinematic-caption button{padding:8px 15px;border:1px solid #d4bc7650;border-radius:4px;background:#0e1728a8;font-size:11px}.rrw-cinematic-caption kbd{font:inherit;opacity:.6;margin-left:8px}.rrw-fallback{position:absolute;inset:0;overflow:auto;background:radial-gradient(ellipse at 70% 15%,#35434b,#101c28 65%);padding:120px max(24px,calc((100% - 900px)/2)) 170px}.rrw-fallback h2{font:32px Georgia,serif;color:#ebd099;margin:0 0 12px}.rrw-fallback>p{font-size:13px;line-height:1.6;color:#bac7c8;max-width:620px}.rrw-fallback-section{border-top:1px solid #c9b57f30;padding-top:18px;margin-top:26px}.rrw-fallback-section h3{font:20px Georgia,serif;color:#e2cc99}.rrw-fallback-actions{display:flex;gap:10px;flex-wrap:wrap}.rrw-fallback-actions button,.rrw-fallback-start{padding:13px 17px;border:1px solid #d0b87770;border-radius:5px;background:#243638;color:#fff3d5}.rrw-fallback-actions button:hover{background:#374e4c}.rrw-fallback button:disabled{opacity:.45;cursor:not-allowed}.rrw-fallback-start{margin-top:20px}.rrw-world button:focus-visible{outline:2px solid #f6d689;outline-offset:4px}
       @media(pointer:coarse),(max-width:760px){.rrw-desktop-hint{display:none}.rrw-mobile-controls{position:absolute;inset:0;display:block;pointer-events:none}.rrw-joystick{position:absolute;bottom:35px;left:25px;width:118px;height:118px;border-radius:50%;border:1px solid #e4d6b044;background:#10212350;box-shadow:inset 0 0 22px #c8edff0c;pointer-events:auto;touch-action:none}.rrw-joystick span{position:absolute;left:35px;top:35px;width:48px;height:48px;border-radius:50%;border:1px solid #f2ddad88;background:#e7debc28;box-shadow:0 3px 15px #0003}.rrw-joystick i{position:absolute;top:7px;left:53px;font:9px Georgia,serif;color:#ecdbb480}.rrw-touch-actions{position:absolute;right:18px;bottom:35px;display:flex;gap:11px;align-items:flex-end;pointer-events:auto}.rrw-touch-actions button{width:54px;height:54px;border-radius:50%;border:1px solid #e5d5a45c;background:#102123b0;font-size:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:manipulation;box-shadow:0 4px 18px #0003}.rrw-touch-actions small{font-size:8px;letter-spacing:.04em}.rrw-touch-actions .rrw-touch-magic{width:67px;height:67px;border-color:#e3c88baa;background:#383045c9;color:#f2d6ff;font-size:28px}.rrw-prompt{bottom:184px;max-width:90vw;padding:10px 15px;z-index:10}.rrw-prompt span{font-size:14px}.rrw-prompt kbd{display:none}.rrw-notice{bottom:255px;font-size:12px}.rrw-cinematic-caption p{font-size:18px}.rrw-cinematic-caption{left:6%;right:6%}.rrw-fallback{padding-top:150px}}@media(max-height:500px){.rrw-prompt{bottom:112px}.rrw-joystick,.rrw-touch-actions{bottom:16px}.rrw-notice{bottom:177px}.rrw-cinematic-caption{bottom:11%}.rrw-cinematic-caption p{font-size:17px;margin:8px auto}}
       @media(pointer:coarse),(max-width:760px){.rrw-touch-actions{display:grid;grid-template-columns:54px 67px;grid-template-rows:54px 67px;gap:10px;align-items:center}.rrw-touch-actions>button:nth-child(2){grid-column:1;grid-row:1}.rrw-touch-nitro{grid-column:2;grid-row:1}.rrw-touch-actions .rrw-touch-nitro{justify-self:center;border-color:#9fd8ffaa;color:#c9ecff}.rrw-touch-talk{grid-column:1;grid-row:2}.rrw-touch-magic{grid-column:2;grid-row:2}}

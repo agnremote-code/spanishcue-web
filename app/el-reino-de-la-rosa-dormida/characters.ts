@@ -11,6 +11,8 @@ export type Prince = {
 export type Resident = {
   root: THREE.Group;
   update(dt: number, time: number, active: boolean): void;
+  /** Crash into someone and they glare: knitted brows, red eyes, a frown. */
+  setAngry?(on: boolean): void;
 };
 
 // All sculpture is original procedural geometry. Static pieces are combined by
@@ -51,6 +53,19 @@ function rod(parent: THREE.Object3D, material: THREE.Material, from: THREE.Vecto
 }
 function curve(parent: THREE.Object3D, material: THREE.Material, points: number[][], radius: number, segments = 14) {
   return part(parent, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points.map(p => new THREE.Vector3(...p))), segments, radius, 6, false), material);
+}
+// Hidden until someone is crashed into. Its meshes stay unbaked so it toggles.
+function scowl(head: THREE.Object3D, brow: THREE.Material, eyes: [number, number, number][], mouth?: [number, number, number]) {
+  const result = group(head); result.visible = false;
+  const red = glow('#ff3b2f', 0.9);
+  for (const [x, y, z] of eyes) {
+    const side = Math.sign(x) || 1;
+    part(result, new THREE.CapsuleGeometry(0.006, 0.034, 2, 6), brow, x - side * 0.004, y + 0.017, z + 0.006).rotation.z = side * (Math.PI / 2 + 0.45);
+    part(result, new THREE.SphereGeometry(0.009, 8, 6), red, x, y, z + 0.004);
+  }
+  if (mouth) part(result, new THREE.TorusGeometry(0.022, 0.004, 4, 10, Math.PI), brow, ...mouth);
+  result.traverse(o => { o.userData.animated = true; });
+  return result;
 }
 function bake(parent: THREE.Object3D) {
   const buckets = new Map<THREE.Material, THREE.BufferGeometry[]>();
@@ -210,7 +225,7 @@ export function createPrince(): Prince {
   };
 }
 
-type HumanRig = { root: THREE.Group; body: THREE.Group; head: THREE.Group; left: THREE.Group; right: THREE.Group; cloth: THREE.Mesh; };
+type HumanRig = { root: THREE.Group; body: THREE.Group; head: THREE.Group; left: THREE.Group; right: THREE.Group; cloth: THREE.Mesh; scowl: THREE.Group; };
 type HumanStyle = { dress: string; hair: string; skin?: string; skirt?: boolean; height?: number; width?: number; };
 function human(style: HumanStyle): HumanRig {
   const root = new THREE.Group();
@@ -259,8 +274,9 @@ function human(style: HumanStyle): HumanRig {
     arm.rotation.z = side * 0.1;
     return arm;
   });
+  const angry = scowl(head, mat('#2a1d1a'), [[-0.047, 0.017, 0.115], [0.047, 0.017, 0.115]], [0, -0.066, 0.107]);
   root.scale.set(style.width ?? 1, style.height ?? 1, 1);
-  return { root, body, head, left: arms[1], right: arms[0], cloth };
+  return { root, body, head, left: arms[1], right: arms[0], cloth, scowl: angry };
 }
 
 function humanResident(role: string): Resident {
@@ -370,8 +386,9 @@ function humanResident(role: string): Resident {
   bakeTree(root);
   const armX = right.rotation.x;
   const leftX = left.rotation.x;
-  return { root, update(_dt, time, active) {
+  return { root, setAngry(on) { rig.scowl.visible = on; }, update(_dt, time, active) {
     const phase = time + role.length * 1.37;
+    head.rotation.x = rig.scowl.visible ? 0.14 : 0;
     body.position.y = Math.sin(phase * 1.65) * 0.007;
     rig.cloth.scale.y = 1 + Math.sin(phase * 1.65) * 0.004;
     head.rotation.y = Math.sin(phase * 0.47) * (active ? 0.11 : 0.065);
@@ -408,8 +425,9 @@ function crow(): Resident {
   const ribbon = mat('#925070');
   part(body, new THREE.TorusGeometry(0.104, 0.018, 6, 16), ribbon, 0, 0.2, 0.1).rotation.x = Math.PI / 2;
   part(body, new THREE.OctahedronGeometry(0.027), amber, 0, 0.174, 0.206);
+  const angry = scowl(head, beak, [[-0.113, 0.02, 0.063], [0.113, 0.02, 0.063]]);
   bakeTree(root);
-  return { root, update(_dt, time, active) {
+  return { root, setAngry(on) { angry.visible = on; }, update(_dt, time, active) {
     body.position.y = 0.52 + Math.sin(time * 2.4) * 0.009;
     head.rotation.y = Math.sin(time * 0.91) * 0.35;
     head.rotation.z = Math.sin(time * 1.7) * 0.09;
@@ -453,7 +471,7 @@ function fairy(): Resident {
   bakeTree(root);
   // The star was batched into the wand. Keep animation on the articulated wand.
   void star;
-  return { root, update(_dt, time, active) {
+  return { root, setAngry(on) { rig.scowl.visible = on; }, update(_dt, time, active) {
     body.position.y = 0.32 + Math.sin(time * 2.2) * 0.085;
     body.rotation.z = Math.sin(time * 1.1) * 0.035;
     wings.forEach((wing, i) => { wing.rotation.y = (i === 0 ? -1 : 1) * (0.33 + Math.sin(time * 11) * 0.36); });
@@ -579,8 +597,9 @@ function dragon(): Resident {
     released = true;
     if (mixer && model) { mixer.stopAllAction(); mixer.uncacheRoot(model); }
   };
-  return { root, update(dt, time, active) {
-    const calm = Boolean(root.userData.calm);
+  return { root, setAngry(on) { root.userData.angry = on; }, update(dt, time, active) {
+    const calm = Boolean(root.userData.calm) && !root.userData.angry;
+    active ||= Boolean(root.userData.angry);
     if (!mixer) { fallback.update(dt, time, active && !calm); return; }
     agitation = THREE.MathUtils.damp(agitation, active && !calm ? 0.58 : 0, 2.4, dt);
     idle?.setEffectiveWeight(1 - agitation);
