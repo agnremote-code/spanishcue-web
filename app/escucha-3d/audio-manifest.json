@@ -481,6 +481,741 @@
    "seconds": 89.93,
    "src": "/audio/escucha-3d/casino-c2-vip.mp3"
   },
+  "hospital/a0-ambulancias": {
+   "hash": "616c94415ba38480705a",
+   "seconds": 37.25,
+   "src": "/audio/escucha-3d/hospital-a0-ambulancias.mp3"
+  },
+  "hospital/a0-cafeteria": {
+   "hash": "62bd20baa566057dec0c",
+   "seconds": 43.61,
+   "src": "/audio/escucha-3d/hospital-a0-cafeteria.mp3"
+  },
+  "hospital/a0-curaciones": {
+   "hash": "c069a27d22464d6694b7",
+   "seconds": 33.55,
+   "src": "/audio/escucha-3d/hospital-a0-curaciones.mp3"
+  },
+  "hospital/a0-descanso": {
+   "hash": "8888d93b293b265b8b93",
+   "seconds": 34.9,
+   "src": "/audio/escucha-3d/hospital-a0-descanso.mp3"
+  },
+  "hospital/a0-enfermeria": {
+   "hash": "ab63c21dddff2fbeec09",
+   "seconds": 38.69,
+   "src": "/audio/escucha-3d/hospital-a0-enfermeria.mp3"
+  },
+  "hospital/a0-espera": {
+   "hash": "38bdda3c785646520ae9",
+   "seconds": 36.71,
+   "src": "/audio/escucha-3d/hospital-a0-espera.mp3"
+  },
+  "hospital/a0-facturacion": {
+   "hash": "098d702fb5eebbdf047a",
+   "seconds": 46.13,
+   "src": "/audio/escucha-3d/hospital-a0-facturacion.mp3"
+  },
+  "hospital/a0-guardia": {
+   "hash": "600929eb9c89d3f5956c",
+   "seconds": 42.51,
+   "src": "/audio/escucha-3d/hospital-a0-guardia.mp3"
+  },
+  "hospital/a0-habitacion": {
+   "hash": "94a4fa328352f1ff8e3f",
+   "seconds": 45.82,
+   "src": "/audio/escucha-3d/hospital-a0-habitacion.mp3"
+  },
+  "hospital/a0-internacion": {
+   "hash": "0a9ee28a833da6e39c4f",
+   "seconds": 34.15,
+   "src": "/audio/escucha-3d/hospital-a0-internacion.mp3"
+  },
+  "hospital/a0-laboratorio": {
+   "hash": "2c1bf7bbedc7d4a83857",
+   "seconds": 36.84,
+   "src": "/audio/escucha-3d/hospital-a0-laboratorio.mp3"
+  },
+  "hospital/a0-limpieza": {
+   "hash": "ff4cf20d13d63ad6f781",
+   "seconds": 36.07,
+   "src": "/audio/escucha-3d/hospital-a0-limpieza.mp3"
+  },
+  "hospital/a0-morgue": {
+   "hash": "f915405bbeda2d9ca990",
+   "seconds": 33.64,
+   "src": "/audio/escucha-3d/hospital-a0-morgue.mp3"
+  },
+  "hospital/a0-observacion": {
+   "hash": "1f0d1a8737131901f21f",
+   "seconds": 43.33,
+   "src": "/audio/escucha-3d/hospital-a0-observacion.mp3"
+  },
+  "hospital/a0-quirofano": {
+   "hash": "bbb921e305dc53aa3fa9",
+   "seconds": 32.67,
+   "src": "/audio/escucha-3d/hospital-a0-quirofano.mp3"
+  },
+  "hospital/a0-radiologia": {
+   "hash": "4a1691a4da1aee653c7d",
+   "seconds": 37.9,
+   "src": "/audio/escucha-3d/hospital-a0-radiologia.mp3"
+  },
+  "hospital/a0-recepcion": {
+   "hash": "672e4665d78a6589cf37",
+   "seconds": 40.08,
+   "src": "/audio/escucha-3d/hospital-a0-recepcion.mp3"
+  },
+  "hospital/a0-trauma": {
+   "hash": "2931e47b7007f03ba663",
+   "seconds": 40.77,
+   "src": "/audio/escucha-3d/hospital-a0-trauma.mp3"
+  },
+  "hospital/a0-triage": {
+   "hash": "1529556fadc86418adf3",
+   "seconds": 45.85,
+   "src": "/audio/escucha-3d/hospital-a0-triage.mp3"
+  },
+  "hospital/a0-uci": {
+   "hash": "8fb59d2638b3864b244b",
+   "seconds": 32.92,
+   "src": "/audio/escucha-3d/hospital-a0-uci.mp3"
+  },
+  "hospital/a0-vip": {
+   "hash": "6273eb0d2ebe3da26938",
+   "seconds": 37.58,
+   "src": "/audio/escucha-3d/hospital-a0-vip.mp3"
+  },
+  "hospital/a1-ambulancias": {
+   "hash": "6434138fc63fef538cc4",
+   "seconds": 47.32,
+   "src": "/audio/escucha-3d/hospital-a1-ambulancias.mp3"
+  },
+  "hospital/a1-cafeteria": {
+   "hash": "c682b95ce5c5163a0522",
+   "seconds": 48.92,
+   "src": "/audio/escucha-3d/hospital-a1-cafeteria.mp3"
+  },
+  "hospital/a1-curaciones": {
+   "hash": "8d0ded1033f22c87c365",
+   "seconds": 51.5,
+   "src": "/audio/escucha-3d/hospital-a1-curaciones.mp3"
+  },
+  "hospital/a1-descanso": {
+   "hash": "b90cd04c630be7f2f0b7",
+   "seconds": 45.66,
+   "src": "/audio/escucha-3d/hospital-a1-descanso.mp3"
+  },
+  "hospital/a1-enfermeria": {
+   "hash": "9ff6127cf9e742c56930",
+   "seconds": 54.39,
+   "src": "/audio/escucha-3d/hospital-a1-enfermeria.mp3"
+  },
+  "hospital/a1-espera": {
+   "hash": "1eae84996de5ccc634cd",
+   "seconds": 48.7,
+   "src": "/audio/escucha-3d/hospital-a1-espera.mp3"
+  },
+  "hospital/a1-facturacion": {
+   "hash": "b507103bfff6fc2f3343",
+   "seconds": 54.81,
+   "src": "/audio/escucha-3d/hospital-a1-facturacion.mp3"
+  },
+  "hospital/a1-guardia": {
+   "hash": "50110a5133c6d418855f",
+   "seconds": 51.37,
+   "src": "/audio/escucha-3d/hospital-a1-guardia.mp3"
+  },
+  "hospital/a1-habitacion": {
+   "hash": "8d1b1b49fe68b7051d1b",
+   "seconds": 51.63,
+   "src": "/audio/escucha-3d/hospital-a1-habitacion.mp3"
+  },
+  "hospital/a1-internacion": {
+   "hash": "be74207134074a0b817d",
+   "seconds": 44.04,
+   "src": "/audio/escucha-3d/hospital-a1-internacion.mp3"
+  },
+  "hospital/a1-laboratorio": {
+   "hash": "48f97c54b6b36355d4aa",
+   "seconds": 54.16,
+   "src": "/audio/escucha-3d/hospital-a1-laboratorio.mp3"
+  },
+  "hospital/a1-limpieza": {
+   "hash": "9cd27a75924c8f5b7f53",
+   "seconds": 42.85,
+   "src": "/audio/escucha-3d/hospital-a1-limpieza.mp3"
+  },
+  "hospital/a1-morgue": {
+   "hash": "96fe7d21d4ff4df7bf08",
+   "seconds": 52.28,
+   "src": "/audio/escucha-3d/hospital-a1-morgue.mp3"
+  },
+  "hospital/a1-observacion": {
+   "hash": "673947fca04c74a8e20f",
+   "seconds": 53.94,
+   "src": "/audio/escucha-3d/hospital-a1-observacion.mp3"
+  },
+  "hospital/a1-quirofano": {
+   "hash": "1acc03ca542f501db514",
+   "seconds": 46.31,
+   "src": "/audio/escucha-3d/hospital-a1-quirofano.mp3"
+  },
+  "hospital/a1-radiologia": {
+   "hash": "664ac4ba863ffbcd9ce1",
+   "seconds": 47.5,
+   "src": "/audio/escucha-3d/hospital-a1-radiologia.mp3"
+  },
+  "hospital/a1-recepcion": {
+   "hash": "d9f284da40da143f1776",
+   "seconds": 50.12,
+   "src": "/audio/escucha-3d/hospital-a1-recepcion.mp3"
+  },
+  "hospital/a1-trauma": {
+   "hash": "7ab0e551320ccafd9aa7",
+   "seconds": 52.72,
+   "src": "/audio/escucha-3d/hospital-a1-trauma.mp3"
+  },
+  "hospital/a1-triage": {
+   "hash": "61c7dc66feb6113a38ac",
+   "seconds": 56.49,
+   "src": "/audio/escucha-3d/hospital-a1-triage.mp3"
+  },
+  "hospital/a1-uci": {
+   "hash": "c1b8535f615ebc53e687",
+   "seconds": 46.06,
+   "src": "/audio/escucha-3d/hospital-a1-uci.mp3"
+  },
+  "hospital/a1-vip": {
+   "hash": "4fc2e5d2fba5f9346f8c",
+   "seconds": 46.92,
+   "src": "/audio/escucha-3d/hospital-a1-vip.mp3"
+  },
+  "hospital/a2-ambulancias": {
+   "hash": "867394b3471e8690e5f4",
+   "seconds": 61.32,
+   "src": "/audio/escucha-3d/hospital-a2-ambulancias.mp3"
+  },
+  "hospital/a2-cafeteria": {
+   "hash": "32ffd9521e1c51f34630",
+   "seconds": 57.34,
+   "src": "/audio/escucha-3d/hospital-a2-cafeteria.mp3"
+  },
+  "hospital/a2-curaciones": {
+   "hash": "e9f6aac4dab0984513c9",
+   "seconds": 54.38,
+   "src": "/audio/escucha-3d/hospital-a2-curaciones.mp3"
+  },
+  "hospital/a2-descanso": {
+   "hash": "d3fed179c51097a72ffd",
+   "seconds": 54.72,
+   "src": "/audio/escucha-3d/hospital-a2-descanso.mp3"
+  },
+  "hospital/a2-enfermeria": {
+   "hash": "73f5befd848ed3ee6b03",
+   "seconds": 63.47,
+   "src": "/audio/escucha-3d/hospital-a2-enfermeria.mp3"
+  },
+  "hospital/a2-espera": {
+   "hash": "a3e97b98ee22d241dbe2",
+   "seconds": 53.84,
+   "src": "/audio/escucha-3d/hospital-a2-espera.mp3"
+  },
+  "hospital/a2-facturacion": {
+   "hash": "1a00a0d7bde875e6354b",
+   "seconds": 61.67,
+   "src": "/audio/escucha-3d/hospital-a2-facturacion.mp3"
+  },
+  "hospital/a2-guardia": {
+   "hash": "e67b2d9605510c714a2b",
+   "seconds": 52.88,
+   "src": "/audio/escucha-3d/hospital-a2-guardia.mp3"
+  },
+  "hospital/a2-habitacion": {
+   "hash": "9cb3931cbde4cd535c88",
+   "seconds": 65.24,
+   "src": "/audio/escucha-3d/hospital-a2-habitacion.mp3"
+  },
+  "hospital/a2-internacion": {
+   "hash": "3d5585d82931b3bfba4d",
+   "seconds": 55.1,
+   "src": "/audio/escucha-3d/hospital-a2-internacion.mp3"
+  },
+  "hospital/a2-laboratorio": {
+   "hash": "600b35082943a0ba0fb0",
+   "seconds": 58.49,
+   "src": "/audio/escucha-3d/hospital-a2-laboratorio.mp3"
+  },
+  "hospital/a2-limpieza": {
+   "hash": "bef34edc7a297af11081",
+   "seconds": 55.03,
+   "src": "/audio/escucha-3d/hospital-a2-limpieza.mp3"
+  },
+  "hospital/a2-morgue": {
+   "hash": "343e826ed158cd137ae8",
+   "seconds": 62.9,
+   "src": "/audio/escucha-3d/hospital-a2-morgue.mp3"
+  },
+  "hospital/a2-observacion": {
+   "hash": "516952b8c8c7f5d17a5d",
+   "seconds": 57.0,
+   "src": "/audio/escucha-3d/hospital-a2-observacion.mp3"
+  },
+  "hospital/a2-quirofano": {
+   "hash": "42c5bb9cc8bf2202805e",
+   "seconds": 58.58,
+   "src": "/audio/escucha-3d/hospital-a2-quirofano.mp3"
+  },
+  "hospital/a2-radiologia": {
+   "hash": "df0505c285b496828e11",
+   "seconds": 62.64,
+   "src": "/audio/escucha-3d/hospital-a2-radiologia.mp3"
+  },
+  "hospital/a2-recepcion": {
+   "hash": "c9de2d774cf307a83471",
+   "seconds": 54.77,
+   "src": "/audio/escucha-3d/hospital-a2-recepcion.mp3"
+  },
+  "hospital/a2-trauma": {
+   "hash": "f729b2752adc10a91f38",
+   "seconds": 62.85,
+   "src": "/audio/escucha-3d/hospital-a2-trauma.mp3"
+  },
+  "hospital/a2-triage": {
+   "hash": "6a873bf950f6109b8668",
+   "seconds": 62.0,
+   "src": "/audio/escucha-3d/hospital-a2-triage.mp3"
+  },
+  "hospital/a2-uci": {
+   "hash": "e9fb70f71ceaeac98d0f",
+   "seconds": 59.09,
+   "src": "/audio/escucha-3d/hospital-a2-uci.mp3"
+  },
+  "hospital/a2-vip": {
+   "hash": "b803bf3ca7f6ae52b11b",
+   "seconds": 53.96,
+   "src": "/audio/escucha-3d/hospital-a2-vip.mp3"
+  },
+  "hospital/b1-ambulancias": {
+   "hash": "452c0bc3dc0f5fb0419a",
+   "seconds": 62.48,
+   "src": "/audio/escucha-3d/hospital-b1-ambulancias.mp3"
+  },
+  "hospital/b1-cafeteria": {
+   "hash": "1efdfd79bd5b2c6e4ed4",
+   "seconds": 71.02,
+   "src": "/audio/escucha-3d/hospital-b1-cafeteria.mp3"
+  },
+  "hospital/b1-curaciones": {
+   "hash": "eed92a3e1dcbfb144045",
+   "seconds": 57.32,
+   "src": "/audio/escucha-3d/hospital-b1-curaciones.mp3"
+  },
+  "hospital/b1-descanso": {
+   "hash": "2fde712f22494afe6e72",
+   "seconds": 64.53,
+   "src": "/audio/escucha-3d/hospital-b1-descanso.mp3"
+  },
+  "hospital/b1-enfermeria": {
+   "hash": "4c0b7444cf20e4a638d9",
+   "seconds": 69.08,
+   "src": "/audio/escucha-3d/hospital-b1-enfermeria.mp3"
+  },
+  "hospital/b1-espera": {
+   "hash": "4e2a9798a4e1bf07e3e6",
+   "seconds": 63.01,
+   "src": "/audio/escucha-3d/hospital-b1-espera.mp3"
+  },
+  "hospital/b1-facturacion": {
+   "hash": "0415c8ba073760379117",
+   "seconds": 68.09,
+   "src": "/audio/escucha-3d/hospital-b1-facturacion.mp3"
+  },
+  "hospital/b1-guardia": {
+   "hash": "f526764043275553d819",
+   "seconds": 71.72,
+   "src": "/audio/escucha-3d/hospital-b1-guardia.mp3"
+  },
+  "hospital/b1-habitacion": {
+   "hash": "facbf97b534fbf716bc3",
+   "seconds": 76.59,
+   "src": "/audio/escucha-3d/hospital-b1-habitacion.mp3"
+  },
+  "hospital/b1-internacion": {
+   "hash": "ee0ce287db139e941628",
+   "seconds": 58.16,
+   "src": "/audio/escucha-3d/hospital-b1-internacion.mp3"
+  },
+  "hospital/b1-laboratorio": {
+   "hash": "de2a9f023d36feac6a5c",
+   "seconds": 74.16,
+   "src": "/audio/escucha-3d/hospital-b1-laboratorio.mp3"
+  },
+  "hospital/b1-limpieza": {
+   "hash": "9f771ab0cc214f071cf7",
+   "seconds": 61.26,
+   "src": "/audio/escucha-3d/hospital-b1-limpieza.mp3"
+  },
+  "hospital/b1-morgue": {
+   "hash": "19bfb7a5e4fc39eef59b",
+   "seconds": 68.4,
+   "src": "/audio/escucha-3d/hospital-b1-morgue.mp3"
+  },
+  "hospital/b1-observacion": {
+   "hash": "21ca3ac56700211374c7",
+   "seconds": 68.02,
+   "src": "/audio/escucha-3d/hospital-b1-observacion.mp3"
+  },
+  "hospital/b1-quirofano": {
+   "hash": "ecb8322cf610db25c1f4",
+   "seconds": 62.48,
+   "src": "/audio/escucha-3d/hospital-b1-quirofano.mp3"
+  },
+  "hospital/b1-radiologia": {
+   "hash": "aaf95b113ddc5473b66b",
+   "seconds": 71.07,
+   "src": "/audio/escucha-3d/hospital-b1-radiologia.mp3"
+  },
+  "hospital/b1-recepcion": {
+   "hash": "599683ea24301e8eb950",
+   "seconds": 68.72,
+   "src": "/audio/escucha-3d/hospital-b1-recepcion.mp3"
+  },
+  "hospital/b1-trauma": {
+   "hash": "3d560cfacf42f66e5591",
+   "seconds": 75.44,
+   "src": "/audio/escucha-3d/hospital-b1-trauma.mp3"
+  },
+  "hospital/b1-triage": {
+   "hash": "a3712650e919d7495f52",
+   "seconds": 73.83,
+   "src": "/audio/escucha-3d/hospital-b1-triage.mp3"
+  },
+  "hospital/b1-uci": {
+   "hash": "8ab4e3305c4f6853be1b",
+   "seconds": 62.96,
+   "src": "/audio/escucha-3d/hospital-b1-uci.mp3"
+  },
+  "hospital/b1-vip": {
+   "hash": "07ec012182b372ac29fa",
+   "seconds": 67.04,
+   "src": "/audio/escucha-3d/hospital-b1-vip.mp3"
+  },
+  "hospital/b2-ambulancias": {
+   "hash": "15c73bfcb551e0991177",
+   "seconds": 81.09,
+   "src": "/audio/escucha-3d/hospital-b2-ambulancias.mp3"
+  },
+  "hospital/b2-cafeteria": {
+   "hash": "392f844456356a2a600b",
+   "seconds": 83.45,
+   "src": "/audio/escucha-3d/hospital-b2-cafeteria.mp3"
+  },
+  "hospital/b2-curaciones": {
+   "hash": "d940d35e9ed778171bd2",
+   "seconds": 72.12,
+   "src": "/audio/escucha-3d/hospital-b2-curaciones.mp3"
+  },
+  "hospital/b2-descanso": {
+   "hash": "b2e8655b85e8e7b75f1d",
+   "seconds": 81.83,
+   "src": "/audio/escucha-3d/hospital-b2-descanso.mp3"
+  },
+  "hospital/b2-enfermeria": {
+   "hash": "26350f932ccf7dd47610",
+   "seconds": 78.59,
+   "src": "/audio/escucha-3d/hospital-b2-enfermeria.mp3"
+  },
+  "hospital/b2-espera": {
+   "hash": "b2ebe05c69995c19a6cd",
+   "seconds": 77.09,
+   "src": "/audio/escucha-3d/hospital-b2-espera.mp3"
+  },
+  "hospital/b2-facturacion": {
+   "hash": "6583fa71c0c09e5a89b5",
+   "seconds": 86.43,
+   "src": "/audio/escucha-3d/hospital-b2-facturacion.mp3"
+  },
+  "hospital/b2-guardia": {
+   "hash": "f7fbcb95a13df47f3ff4",
+   "seconds": 77.54,
+   "src": "/audio/escucha-3d/hospital-b2-guardia.mp3"
+  },
+  "hospital/b2-habitacion": {
+   "hash": "63fed342b50a73076f4e",
+   "seconds": 88.2,
+   "src": "/audio/escucha-3d/hospital-b2-habitacion.mp3"
+  },
+  "hospital/b2-internacion": {
+   "hash": "2c44136a23c19f9147ee",
+   "seconds": 72.66,
+   "src": "/audio/escucha-3d/hospital-b2-internacion.mp3"
+  },
+  "hospital/b2-laboratorio": {
+   "hash": "76d794095633e8dd5f51",
+   "seconds": 86.94,
+   "src": "/audio/escucha-3d/hospital-b2-laboratorio.mp3"
+  },
+  "hospital/b2-limpieza": {
+   "hash": "18b5f595c80f65300b32",
+   "seconds": 77.09,
+   "src": "/audio/escucha-3d/hospital-b2-limpieza.mp3"
+  },
+  "hospital/b2-morgue": {
+   "hash": "811b1f4ba2d9464a62b0",
+   "seconds": 81.72,
+   "src": "/audio/escucha-3d/hospital-b2-morgue.mp3"
+  },
+  "hospital/b2-observacion": {
+   "hash": "ace17091b56b3757bc88",
+   "seconds": 77.88,
+   "src": "/audio/escucha-3d/hospital-b2-observacion.mp3"
+  },
+  "hospital/b2-quirofano": {
+   "hash": "9060ea0180776df9ffe4",
+   "seconds": 79.95,
+   "src": "/audio/escucha-3d/hospital-b2-quirofano.mp3"
+  },
+  "hospital/b2-radiologia": {
+   "hash": "2053d6b7e012aca2f174",
+   "seconds": 89.06,
+   "src": "/audio/escucha-3d/hospital-b2-radiologia.mp3"
+  },
+  "hospital/b2-recepcion": {
+   "hash": "0418da1fc42a5408dc5d",
+   "seconds": 81.1,
+   "src": "/audio/escucha-3d/hospital-b2-recepcion.mp3"
+  },
+  "hospital/b2-trauma": {
+   "hash": "ec771328b1de294957e3",
+   "seconds": 77.81,
+   "src": "/audio/escucha-3d/hospital-b2-trauma.mp3"
+  },
+  "hospital/b2-triage": {
+   "hash": "cde45a2f64874fb7abf1",
+   "seconds": 87.6,
+   "src": "/audio/escucha-3d/hospital-b2-triage.mp3"
+  },
+  "hospital/b2-uci": {
+   "hash": "0e6c69e8c325eea819c7",
+   "seconds": 77.84,
+   "src": "/audio/escucha-3d/hospital-b2-uci.mp3"
+  },
+  "hospital/b2-vip": {
+   "hash": "7d33fb72df498e85e83a",
+   "seconds": 83.28,
+   "src": "/audio/escucha-3d/hospital-b2-vip.mp3"
+  },
+  "hospital/c1-ambulancias": {
+   "hash": "0770afa0db010dfd33fe",
+   "seconds": 102.77,
+   "src": "/audio/escucha-3d/hospital-c1-ambulancias.mp3"
+  },
+  "hospital/c1-cafeteria": {
+   "hash": "ef8437b28e5a1e5a68df",
+   "seconds": 109.93,
+   "src": "/audio/escucha-3d/hospital-c1-cafeteria.mp3"
+  },
+  "hospital/c1-curaciones": {
+   "hash": "b1e70a03b672dd44621e",
+   "seconds": 100.11,
+   "src": "/audio/escucha-3d/hospital-c1-curaciones.mp3"
+  },
+  "hospital/c1-descanso": {
+   "hash": "820435580ae2ca754b2b",
+   "seconds": 104.28,
+   "src": "/audio/escucha-3d/hospital-c1-descanso.mp3"
+  },
+  "hospital/c1-enfermeria": {
+   "hash": "9b58b487a11ab98517dc",
+   "seconds": 115.4,
+   "src": "/audio/escucha-3d/hospital-c1-enfermeria.mp3"
+  },
+  "hospital/c1-espera": {
+   "hash": "3abd9ca454e5b37b2d4b",
+   "seconds": 90.9,
+   "src": "/audio/escucha-3d/hospital-c1-espera.mp3"
+  },
+  "hospital/c1-facturacion": {
+   "hash": "e36610e7f6ca0572e720",
+   "seconds": 106.36,
+   "src": "/audio/escucha-3d/hospital-c1-facturacion.mp3"
+  },
+  "hospital/c1-guardia": {
+   "hash": "870e7c1b6428ffd6670f",
+   "seconds": 114.87,
+   "src": "/audio/escucha-3d/hospital-c1-guardia.mp3"
+  },
+  "hospital/c1-habitacion": {
+   "hash": "459b62e2f65befe70a0e",
+   "seconds": 121.45,
+   "src": "/audio/escucha-3d/hospital-c1-habitacion.mp3"
+  },
+  "hospital/c1-internacion": {
+   "hash": "ca66540bb2c8c94bc0ac",
+   "seconds": 103.26,
+   "src": "/audio/escucha-3d/hospital-c1-internacion.mp3"
+  },
+  "hospital/c1-laboratorio": {
+   "hash": "a6455c093b1748ceaff2",
+   "seconds": 100.31,
+   "src": "/audio/escucha-3d/hospital-c1-laboratorio.mp3"
+  },
+  "hospital/c1-limpieza": {
+   "hash": "17114909843a4d24d991",
+   "seconds": 96.4,
+   "src": "/audio/escucha-3d/hospital-c1-limpieza.mp3"
+  },
+  "hospital/c1-morgue": {
+   "hash": "2cc13aadd4d06c161acf",
+   "seconds": 113.46,
+   "src": "/audio/escucha-3d/hospital-c1-morgue.mp3"
+  },
+  "hospital/c1-observacion": {
+   "hash": "2bcefc07579271d3fa0c",
+   "seconds": 106.7,
+   "src": "/audio/escucha-3d/hospital-c1-observacion.mp3"
+  },
+  "hospital/c1-quirofano": {
+   "hash": "92c2f3eed95073f52d8f",
+   "seconds": 104.38,
+   "src": "/audio/escucha-3d/hospital-c1-quirofano.mp3"
+  },
+  "hospital/c1-radiologia": {
+   "hash": "2cb8aee47c9b605e5ec8",
+   "seconds": 109.28,
+   "src": "/audio/escucha-3d/hospital-c1-radiologia.mp3"
+  },
+  "hospital/c1-recepcion": {
+   "hash": "d6adeb20d936f26a722d",
+   "seconds": 101.28,
+   "src": "/audio/escucha-3d/hospital-c1-recepcion.mp3"
+  },
+  "hospital/c1-trauma": {
+   "hash": "f5a8216bd35a322588c1",
+   "seconds": 113.85,
+   "src": "/audio/escucha-3d/hospital-c1-trauma.mp3"
+  },
+  "hospital/c1-triage": {
+   "hash": "abbcac417a2b20eb38c9",
+   "seconds": 117.53,
+   "src": "/audio/escucha-3d/hospital-c1-triage.mp3"
+  },
+  "hospital/c1-uci": {
+   "hash": "59b68ad8789b8235d320",
+   "seconds": 101.94,
+   "src": "/audio/escucha-3d/hospital-c1-uci.mp3"
+  },
+  "hospital/c1-vip": {
+   "hash": "57f35ac85fbd15a8edc0",
+   "seconds": 104.48,
+   "src": "/audio/escucha-3d/hospital-c1-vip.mp3"
+  },
+  "hospital/c2-ambulancias": {
+   "hash": "8933a0823e5ee71cc25a",
+   "seconds": 99.1,
+   "src": "/audio/escucha-3d/hospital-c2-ambulancias.mp3"
+  },
+  "hospital/c2-cafeteria": {
+   "hash": "402cc6e06f03cc9856ef",
+   "seconds": 104.48,
+   "src": "/audio/escucha-3d/hospital-c2-cafeteria.mp3"
+  },
+  "hospital/c2-curaciones": {
+   "hash": "a69fa6e3de1fc192a227",
+   "seconds": 88.13,
+   "src": "/audio/escucha-3d/hospital-c2-curaciones.mp3"
+  },
+  "hospital/c2-descanso": {
+   "hash": "5b59c7a1e390e16cff8b",
+   "seconds": 104.28,
+   "src": "/audio/escucha-3d/hospital-c2-descanso.mp3"
+  },
+  "hospital/c2-enfermeria": {
+   "hash": "b989d80e2a2b8fb82adb",
+   "seconds": 108.27,
+   "src": "/audio/escucha-3d/hospital-c2-enfermeria.mp3"
+  },
+  "hospital/c2-espera": {
+   "hash": "7b7f5e1f38b1047c7522",
+   "seconds": 99.69,
+   "src": "/audio/escucha-3d/hospital-c2-espera.mp3"
+  },
+  "hospital/c2-facturacion": {
+   "hash": "bef3de42613328505f05",
+   "seconds": 104.94,
+   "src": "/audio/escucha-3d/hospital-c2-facturacion.mp3"
+  },
+  "hospital/c2-guardia": {
+   "hash": "a963ef5001fe00302b23",
+   "seconds": 91.19,
+   "src": "/audio/escucha-3d/hospital-c2-guardia.mp3"
+  },
+  "hospital/c2-habitacion": {
+   "hash": "d54a7b3d37766472ad36",
+   "seconds": 114.56,
+   "src": "/audio/escucha-3d/hospital-c2-habitacion.mp3"
+  },
+  "hospital/c2-internacion": {
+   "hash": "00fcb7e497c135b4f610",
+   "seconds": 93.26,
+   "src": "/audio/escucha-3d/hospital-c2-internacion.mp3"
+  },
+  "hospital/c2-laboratorio": {
+   "hash": "9cce935d03efb1864092",
+   "seconds": 103.69,
+   "src": "/audio/escucha-3d/hospital-c2-laboratorio.mp3"
+  },
+  "hospital/c2-limpieza": {
+   "hash": "33262973bc0ce01c1068",
+   "seconds": 90.9,
+   "src": "/audio/escucha-3d/hospital-c2-limpieza.mp3"
+  },
+  "hospital/c2-morgue": {
+   "hash": "3c4662c1033d2ca63748",
+   "seconds": 102.05,
+   "src": "/audio/escucha-3d/hospital-c2-morgue.mp3"
+  },
+  "hospital/c2-observacion": {
+   "hash": "65eab0cc22bb152a0925",
+   "seconds": 103.79,
+   "src": "/audio/escucha-3d/hospital-c2-observacion.mp3"
+  },
+  "hospital/c2-quirofano": {
+   "hash": "129637ba9a3d584e7797",
+   "seconds": 101.08,
+   "src": "/audio/escucha-3d/hospital-c2-quirofano.mp3"
+  },
+  "hospital/c2-radiologia": {
+   "hash": "5de70350a275a369297e",
+   "seconds": 113.55,
+   "src": "/audio/escucha-3d/hospital-c2-radiologia.mp3"
+  },
+  "hospital/c2-recepcion": {
+   "hash": "7f1557a6803ab9a659e4",
+   "seconds": 104.21,
+   "src": "/audio/escucha-3d/hospital-c2-recepcion.mp3"
+  },
+  "hospital/c2-trauma": {
+   "hash": "fb362816efe852ce18a3",
+   "seconds": 104.94,
+   "src": "/audio/escucha-3d/hospital-c2-trauma.mp3"
+  },
+  "hospital/c2-triage": {
+   "hash": "0cead99dae8a1d78405d",
+   "seconds": 99.68,
+   "src": "/audio/escucha-3d/hospital-c2-triage.mp3"
+  },
+  "hospital/c2-uci": {
+   "hash": "246c7285389e4fe411c0",
+   "seconds": 95.51,
+   "src": "/audio/escucha-3d/hospital-c2-uci.mp3"
+  },
+  "hospital/c2-vip": {
+   "hash": "fdfde2ad26568b83e655",
+   "seconds": 92.24,
+   "src": "/audio/escucha-3d/hospital-c2-vip.mp3"
+  },
   "noche/a1-bar": {
    "hash": "c79e0049d2b83b224de5",
    "seconds": 36.59,
