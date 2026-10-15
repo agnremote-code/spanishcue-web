@@ -94,7 +94,7 @@ export default {
     topics: ["trabajo", "salud"],
     A1: [
       "¿Cuántas horas duermes normalmente?",
-      "¿Trabajas de noche alguna vez?",
+      "¿A qué hora terminas de trabajar?",
       "¿Llegas tarde muchas veces?",
       "¿Te duermes fácilmente en el autobús?",
       "¿Qué haces cuando estás muy cansado?",
