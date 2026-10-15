@@ -96,7 +96,7 @@ export const desdeHace: LiveLesson = {
           { kind: 'tip', icon: '⏸', title: '¿Y «durante»?', text: '«Durante» mide un período que ya terminó: «Viví en Lima **durante** dos años». Para algo que sigue: «Vivo en Bogotá **desde hace** dos años».', en: 'durante = for a finished period' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Vivo acá por dos años.', right: 'Vivo acá desde hace dos años.', why: 'Es una traducción de «for». Para algo que sigue, usa «desde hace» o «hace… que».' },
             { wrong: 'Estudio español desde dos años.', right: 'Estudio español desde hace dos años.', why: '«Dos años» es una cantidad: necesita «desde hace».' },

@@ -121,7 +121,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🧭', title: 'Palabras que ayudan', text: 'Con el perfecto: **hoy**, **esta mañana**, **esta semana**, **este año**, **alguna vez**, **nunca**, **ya**, **todavía no**, **dos veces**.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Haber, participio y nada en medio.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'He escribido un correo.', right: 'He escrito un correo.', why: 'Escribir tiene participio irregular: escrito.' },
             { wrong: 'He no terminado el proyecto.', right: 'No he terminado el proyecto.', why: '«No» va antes de haber. Haber y el participio no se separan.' },

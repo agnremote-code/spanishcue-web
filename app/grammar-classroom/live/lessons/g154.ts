@@ -105,7 +105,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '✂', title: 'Revisa el contexto', text: 'Antes de exagerar la inmediatez, lee el párrafo anterior: si la fuente describe una pausa, «enseguida» o «inmediatamente» serían una sobreinterpretación.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Errores de lectura y de reformulación.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que explique qué información cambia en cada versión incorrecta antes de mostrar la corrección.', self: 'Lee cada frase, piensa qué falla y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno explica qué información cambia en cada versión incorrecta antes de que muestres la corrección.', self: 'Lee cada frase, piensa qué falla y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Hubieron muchas personas en la inauguración.', right: 'Hubo muchas personas en la inauguración.', why: 'Es «haber» impersonal, no el auxiliar: siempre en singular.' },
             { wrong: 'Apenas hube llegado a la oficina, te mando un mensaje para avisarte.', right: 'Apenas llegué a la oficina, te mandé un mensaje para avisarte.', why: 'En un mensaje actual, el pretérito anterior suena arcaico. Además, la acción principal debe ir en pasado.' },

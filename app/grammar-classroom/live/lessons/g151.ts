@@ -146,7 +146,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes en B2.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error y que diga qué pasó en realidad en cada frase.', self: 'Lee cada frase, busca el error y piensa qué pasó en realidad. Después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error y dice qué pasó en realidad en cada frase.', self: 'Lee cada frase, busca el error y piensa qué pasó en realidad. Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Si habría sabido la verdad, no habría ido.', right: 'Si hubiera sabido la verdad, no habría ido.', why: 'Después de «si» no va el condicional.' },
             { wrong: 'Si tuviera tiempo ayer, te habría ayudado.', right: 'Si hubiera tenido tiempo ayer, te habría ayudado.', why: '«Ayer» es pasado: la condición irreal va en pluscuamperfecto de subjuntivo.' },

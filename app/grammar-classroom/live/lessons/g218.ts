@@ -93,7 +93,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección y que diga si el dato identifica o añade información.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección y dice si el dato identifica o añade información.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Busco a la persona quien coordina los talleres.', right: 'Busco a la persona que coordina los talleres.', why: 'El dato identifica a una persona entre varias: «que».' },
             { wrong: 'La sala quien tiene ventanas grandes es la mejor.', right: 'La sala que tiene ventanas grandes es la mejor.', why: '«Quien» solo se refiere a personas.' },
@@ -239,7 +239,7 @@ export const lesson: LiveLesson = {
       title: 'Personas, cosas y lugares', coach: 'Describe sin decir el nombre.',
       steps: [
         { title: 'Personas, cosas y lugares', blocks: [
-          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que el alumno quiere contar y pídele precisión: «¿Cuál de todos?».', self: 'Responde cada pregunta en voz alta, con frases completas. Si quieres, escribe tu respuesta.' } },
+          { kind: 'guide', text: { teacher: 'No hace falta usar todas las preguntas. Sigue lo que tu alumno quiere contar y repregunta con precisión: «¿Cuál de todos?».', self: 'Responde cada pregunta en voz alta, con frases completas. Si quieres, escribe tu respuesta.' } },
           { kind: 'talk', cards: [
             { q: 'Piensa en tu trabajo o tu clase. ¿Quién es la persona que más te ayuda?', followUps: ['¿Qué hace exactamente?', '¿Cómo la conociste?'], phrases: ['Es la persona [[que|blue]]…', 'Mi compañera Ana, [[quien|teal]]…, …', 'Es alguien [[que|blue]] siempre…'], hint: 'Primero identifica a la persona por su función; después di su nombre y añade un dato entre comas.', example: 'Es la compañera que lleva los contratos. Se llama Teresa. Teresa, quien trabaja allí desde hace diez años, siempre tiene una respuesta.', next: 'Ahora, un juego de adivinanzas.', teacher: 'Si el alumno usa «quien» sin comas, repite su frase con «que».' },
             { q: 'Describe a una persona famosa sin decir su nombre. ¿Quién es?', followUps: ['¿Qué más hizo?', '¿Por qué te interesa?'], phrases: ['Es una persona [[que|blue]]…', 'Es el cantante [[que|blue]]…', 'Es alguien [[que|blue]] nació en…'], hint: 'Da datos que la identifiquen poco a poco, del más general al más concreto.', example: 'Es una escritora que nació en Chile. Es la autora que escribió «La casa de los espíritus».', next: 'Ahora pensemos en lugares.' },

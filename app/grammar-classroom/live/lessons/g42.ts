@@ -26,7 +26,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Ocho formas, un sistema', blocks: [
           { kind: 'lead', text: 'Los artículos van **antes** del sustantivo: **el** museo, **una** entrada. Hay ocho formas. La forma depende del sustantivo: masculino o femenino, uno o varios.', en: 'Articles go before the noun and agree with it.' },
-          { kind: 'guide', text: { teacher: 'Lean la tabla juntos. Señala un objeto de la sala y pide las dos formas: «una mesa, la mesa».', self: 'Lee la tabla en voz alta. Después mira un objeto cerca de ti y di las dos formas: «una mesa, la mesa».' } },
+          { kind: 'guide', text: { teacher: 'Lean la tabla juntos. Señala un objeto de la sala y tu alumno dice las dos formas: «una mesa, la mesa».', self: 'Lee la tabla en voz alta. Después mira un objeto cerca de ti y di las dos formas: «una mesa, la mesa».' } },
           { kind: 'table', title: 'Los artículos', head: ['', 'Algo nuevo', 'Algo conocido'], rows: [
             ['masculino, uno', '[[un|blue]] museo', '[[el|teal]] museo'],
             ['femenino, uno', '[[una|blue]] entrada', '[[la|teal]] entrada'],
@@ -84,11 +84,11 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'A veces no hay artículo: «Soy profesora», «Tengo hermanos», «Bebo café». Y «de + el» = **del**, «a + el» = **al**: «la puerta **del** museo», «Voy **al** café». No es necesario aprenderlo ahora.', en: 'del = de + el · al = a + el' },
         ] },
         { title: 'Taller: la galería', mascot: '/brand/mascot/walking.webp', coach: 'Recorre la galería y elige el artículo.', blocks: [
-          { kind: 'guide', text: { teacher: 'Recorran la galería juntos. En cada obra, pide al alumno que explique por qué elige un artículo determinado o indeterminado.', self: 'Recorre la galería. En cada obra, elige el artículo y explica por qué en voz alta.' } },
+          { kind: 'guide', text: { teacher: 'Recorran la galería juntos. En cada obra, tu alumno explica por qué elige un artículo determinado o indeterminado.', self: 'Recorre la galería. En cada obra, elige el artículo y explica por qué en voz alta.' } },
           { kind: 'visual', visual: 'article-gallery' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno encuentra el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Hay la farmacia en mi calle.', right: 'Hay una farmacia en mi calle.', why: '«Hay» presenta algo nuevo: un / una.' },
             { wrong: 'Veo un perro. Un perro es grande.', right: 'Veo un perro. El perro es grande.', why: 'Segunda mención: ya sabemos qué perro es.' },
@@ -238,7 +238,7 @@ export const lesson: LiveLesson = {
               { prompt: '«Hay una mesa libre» y después «La mesa está junto…». ¿Por qué cambia el artículo?', options: ['Porque es la misma mesa: ya sabemos cuál es.', 'Porque son dos mesas diferentes.'], answer: 0, why: 'Primero «una mesa» la presenta; después «la mesa» habla de la misma.' },
             ],
             transcript: 'Hola, Julia. Estoy en [[una cafetería|blue]] cerca de la oficina. [[La cafetería|teal]] tiene [[una puerta|blue]] azul. Hay [[una mesa|blue]] libre en la terraza. [[La mesa|teal]] está junto a [[una planta|blue]] grande. Tengo [[los documentos|teal]] para nuestra reunión. Cuando estés aquí, buscamos juntos el café en la carta. Hasta ahora.',
-            reply: { teacher: 'El alumno responde en voz alta como si fuera Julia: dice dónde está ahora y qué lleva. Pide una primera y una segunda mención.', self: 'Responde a Sergio como si fueras Julia: ¿dónde estás ahora? ¿Qué llevas? Usa «un / una» y después «el / la».' } },
+            reply: { teacher: 'El alumno responde en voz alta como si fuera Julia: dice dónde está ahora y qué lleva, con una primera y una segunda mención.', self: 'Responde a Sergio como si fueras Julia: ¿dónde estás ahora? ¿Qué llevas? Usa «un / una» y después «el / la».' } },
         ] },
       ],
     },

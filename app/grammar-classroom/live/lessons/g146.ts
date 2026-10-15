@@ -36,7 +36,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Una forma fácil de formar', blocks: [
           { kind: 'lead', text: 'Julia tiene una presentación en el trabajo y el horario cambió. En sus mensajes aparece muchas veces una misma forma verbal: **podría, preferiría, me gustaría, empezaría**. Es el **condicional simple**.' },
-          { kind: 'guide', text: { teacher: 'Muestra la tabla y pide al alumno que descubra la regla antes de leer la nota: ¿qué parte del verbo no cambia?', self: 'Mira la tabla: ¿qué parte del verbo se mantiene? ¿Qué se añade?' } },
+          { kind: 'guide', text: { teacher: 'Muestra la tabla y tu alumno descubre la regla antes de leer la nota: ¿qué parte del verbo no cambia?', self: 'Mira la tabla: ¿qué parte del verbo se mantiene? ¿Qué se añade?' } },
           { kind: 'table', title: 'Formas regulares: infinitivo + terminación', head: ['', 'hablar', 'comer', 'vivir'], rows: [
             ['yo', 'hablar**ía**', 'comer**ía**', 'vivir**ía**'],
             ['tú', 'hablar**ías**', 'comer**ías**', 'vivir**ías**'],
@@ -153,7 +153,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🧭', title: 'Busca las pistas', text: '**¿Podrías…? / Me gustaría / Yo que tú** → cortesía y consejo. **Dijo que / Prometió que / Pensaba que** → futuro desde el pasado. **Si pudiera / Con más… / En otra vida** → imaginar.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección y que diga qué uso del condicional es.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección y dice qué uso del condicional es.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: '¿Poderías ayudarme?', right: '¿Podrías ayudarme?', why: '«Poder» es irregular: la raíz es «podr-».' },
             { wrong: 'Yo en tu lugar, no lo hacería.', right: 'Yo en tu lugar, no lo haría.', why: '«Hacer» tiene la raíz especial «har-».' },

@@ -99,7 +99,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Antes de salgo, desayuno.', right: 'Antes de salir, desayuno.', why: 'Después de «antes de» va el infinitivo.' },
             { wrong: 'Después comer, camino un poco.', right: 'Después de comer, camino un poco.', why: 'Delante de un verbo falta «de»: «después de + infinitivo».' },

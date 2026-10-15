@@ -136,7 +136,7 @@ export const lesson: LiveLesson = {
           ], note: 'Si el orden ya está claro con «antes» o «después», en la conversación también se oye el indefinido: «Llegué después de que **cenaron**». El pluscuamperfecto hace el orden más claro.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error y que dibuje la línea del tiempo de la frase antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y piensa qué pasó primero. Después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error y dibuja la línea del tiempo de la frase antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y piensa qué pasó primero. Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Cuando llegué, Ana ya salió.', right: 'Cuando llegué, Ana ya había salido.', why: 'Con «ya», la salida es anterior a la llegada: pluscuamperfecto.' },
             { wrong: 'Las chicas habían llegadas tarde.', right: 'Las chicas habían llegado tarde.', why: 'Con «haber», el participio no cambia de género ni de número.' },

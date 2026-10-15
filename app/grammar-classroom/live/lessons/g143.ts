@@ -40,7 +40,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Cómo era', blocks: [
           { kind: 'lead', text: 'Elena recuerda la biblioteca donde estudiaba: «La sala **tenía** ventanas grandes y **estaba** tranquila». No cuenta qué pasó: **describe** cómo era. Para eso usamos el **imperfecto**.', en: 'We use the imperfect to describe the past.' },
-          { kind: 'guide', text: { teacher: 'Pide al alumno que cierre los ojos mientras lees los ejemplos. Pregunta: «¿Qué ves? ¿Pasa algo o es una foto?».', self: 'Lee los ejemplos e imagina la escena, como en una foto.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno cierra los ojos mientras tú lees los ejemplos. Pregunta: «¿Qué ves? ¿Pasa algo o es una foto?».', self: 'Lee los ejemplos e imagina la escena, como en una foto.' } },
           { kind: 'concept', tone: 'blue', label: 'DESCRIPCIÓN', question: '¿Cómo era?', en: 'describing the past', formula: ['era / estaba / tenía / había + descripción'],
             meaning: 'El imperfecto **describe** lugares, personas, cosas y situaciones del pasado. También la **edad**, la **hora** y el **tiempo** que hacía. Es el fondo de una historia.',
             examples: [
@@ -120,7 +120,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📷', title: 'Una imagen para recordar', text: 'El imperfecto es como una **foto** o un video sin principio ni fin: describe la escena. El indefinido es la **noticia**: lo que pasó.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Descripción con imperfecto.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'La casa fue pequeña y tuvo un jardín.', right: 'La casa era pequeña y tenía un jardín.', why: 'Es una descripción: imperfecto.' },
             { wrong: 'De niño iva al parque.', right: 'De niño iba al parque.', why: 'Iba se escribe con b.' },

@@ -144,7 +144,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🔭', title: 'Más adelante', text: 'El subjuntivo aparece también en otras estructuras, por ejemplo con **cuando** + futuro: «Cuando **llegues**, llámame». Hoy nos concentramos en deseos, recomendaciones, valoraciones y finalidad.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error y diga cuántos sujetos hay en la frase antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y cuenta cuántos sujetos hay. Después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error y dice cuántos sujetos hay en la frase antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y cuenta cuántos sujetos hay. Después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Quiero que vienes a mi fiesta.', right: 'Quiero que vengas a mi fiesta.', why: 'Después de «quiero que» con otro sujeto: subjuntivo.' },
             { wrong: 'Quiero que yo aprenda a cocinar.', right: 'Quiero aprender a cocinar.', why: 'El mismo sujeto (yo quiero / yo aprendo): infinitivo.' },

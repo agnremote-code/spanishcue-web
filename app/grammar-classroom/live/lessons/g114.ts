@@ -29,7 +29,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'El nombre que no se repite', blocks: [
           { kind: 'lead', text: 'El equipo de Elena prepara una exposición. Hay dos carpetas: la azul tiene las fotos y la verde, los textos. Elena escribe: «Necesito **la verde**, no **la de las fotos**». No dice «carpeta» ni una vez, pero todos la entienden.' },
-          { kind: 'guide', text: { teacher: 'Pregunta: «¿Qué palabra falta en "la verde" y en "la de las fotos"? ¿Cómo lo sabes?». El alumno debe señalar la mención anterior de «carpeta».', self: 'Lee la frase de Elena y busca la palabra que no aparece. ¿Dónde se dijo antes?' } },
+          { kind: 'guide', text: { teacher: 'Pregunta: «¿Qué palabra falta en "la verde" y en "la de las fotos"? ¿Cómo lo sabes?». Tu alumno señala la mención anterior de «carpeta».', self: 'Lee la frase de Elena y busca la palabra que no aparece. ¿Dónde se dijo antes?' } },
           { kind: 'concept', tone: 'blue', label: 'ELIPSIS DEL NOMBRE', question: '¿Cómo evito repetir un nombre?',
             formula: ['artículo + adjetivo → la verde', 'artículo + de + … → la de Ana', 'artículo + que + … → la que tiene los textos'],
             meaning: 'Si el nombre ya apareció y el contexto deja claro cuál es, **no lo repetimos**. Quedan el **artículo** y el **complemento**, que funcionan como señales: concuerdan en género y número con el nombre que falta.',
@@ -114,7 +114,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '⚠', title: 'Omitir no siempre ayuda', text: 'Si en el mensaje hay **dos nombres posibles** del mismo género, la elipsis confunde: «Tengo el informe y el contrato de Marta. Te mando **el de** Daniel». ¿El informe o el contrato? Aquí es mejor repetir el nombre: «Te mando **el informe** de Daniel».' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error y que explique qué tipo de problema es: concordancia, posesivo, comas o «de».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error y explica qué tipo de problema es: concordancia, posesivo, comas o «de».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Mi coche es rojo y el tu es azul.', right: 'Mi coche es rojo y el tuyo es azul.', why: 'Sin nombre, el posesivo es largo: el tuyo.' },
             { wrong: 'Prefiero mi mesa a la Ana.', right: 'Prefiero mi mesa a la de Ana.', why: 'Para indicar de quién es, hace falta «de».' },
@@ -274,7 +274,7 @@ export const lesson: LiveLesson = {
               { prompt: '¿Qué pide la nota del lunes?', options: ['Imprimir el catálogo.', 'Cambiar el título.', 'Usar la carpeta azul.'], answer: 1, why: '«Una nota tuya, la del lunes, que pide cambiar el título».' },
             ],
             transcript: 'Hola, Elena. Revisé los textos de la carpeta verde y [[los de la azul|blue]]. [[Los de la verde|blue]] están completos; [[los de la azul|blue]] son versiones antiguas. Marta, [[nuestra fotógrafa|teal]], ya eligió las imágenes finales. ¿Quieres que hable con el diseñador [[que hizo el cartel|orange]] o con [[el que preparó el catálogo|blue]]? Prefiero confirmarlo porque ambos están trabajando hoy. También encontré una nota tuya, [[la del lunes|blue]], que pide cambiar el título. Puedo hacer ese cambio antes de imprimir. Si hay otra instrucción más reciente, envíamela para no usar una versión equivocada.',
-            reply: { teacher: 'El alumno responde a Daniel en voz alta como si fuera Elena: con qué diseñador debe hablar y qué nota usar. Pide al menos una elipsis y una aposición.', self: 'Responde a Daniel como si fueras Elena: dile con qué diseñador hablar y qué nota usar. Intenta no repetir «diseñador» ni «nota».' } },
+            reply: { teacher: 'El alumno responde a Daniel en voz alta como si fuera Elena: con qué diseñador debe hablar y qué nota usar, con al menos una elipsis y una aposición.', self: 'Responde a Daniel como si fueras Elena: dile con qué diseñador hablar y qué nota usar. Intenta no repetir «diseñador» ni «nota».' } },
         ] },
       ],
     },

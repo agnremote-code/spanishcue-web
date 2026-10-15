@@ -124,7 +124,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección. Pregunta: «¿Quién hace la acción? ¿Qué terminación necesita?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección. Pregunta: «¿Quién hace la acción? ¿Qué terminación necesita?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Yo estudiar español.', right: 'Yo estudio español.', why: 'Con una persona, el verbo va conjugado, no en infinitivo.' },
             { wrong: 'Nosotros estudia a las seis.', right: 'Nosotros estudiamos a las seis.', why: 'Nosotros necesita la terminación -amos.' },

@@ -101,7 +101,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '📚', title: 'Para saber más', text: 'Los demostrativos también hablan del tiempo: «**esta** semana», «**este** año» (ahora) y «en **aquella** época» (hace mucho). No es necesario aprenderlo ahora.', en: 'this week · this year · in those days' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno encuentra el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Quiero esto libro.', right: 'Quiero este libro.', why: 'Con un sustantivo, usa «este». «Esto» va solo.' },
             { wrong: 'Esto silla es cómoda.', right: 'Esta silla es cómoda.', why: '«Silla» es femenino: esta.' },

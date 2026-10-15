@@ -6207,7 +6207,7 @@
     },
     {
       "path": "app/grammar-classroom/live/lessons/g3.ts",
-      "text": "Pide al alumno que compare: «Yo trabajo hasta las cinco y vos trabajás hasta las seis».",
+      "text": "Tu alumno compara: «Yo trabajo hasta las cinco y vos trabajás hasta las seis».",
       "category": "regional-pedagogy",
       "reason": "Lesson 3 teaches Argentine voseo: vos forms are the taught content (examples, tables, marked expressions, recorded transcript); instructions stay in tú."
     },

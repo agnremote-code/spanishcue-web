@@ -38,7 +38,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Lo que pasará', blocks: [
           { kind: 'lead', text: 'La oficina de Julia **cambiará** de edificio el próximo mes. La directora cree que las reuniones **serán** más cortas. Para hablar de lo que esperamos del futuro, usamos el **futuro simple**.', en: 'We use the simple future for predictions.' },
-          { kind: 'guide', text: { teacher: 'Lean los ejemplos y pregunta: «¿Es seguro o es lo que la persona cree?». Pide una predicción sobre la ciudad del alumno.', self: 'Lee los ejemplos. Fíjate: muchas predicciones van con «creo que», «seguramente» o «probablemente».' } },
+          { kind: 'guide', text: { teacher: 'Lean los ejemplos y pregunta: «¿Es seguro o es lo que la persona cree?». Tu alumno hace una predicción sobre su ciudad.', self: 'Lee los ejemplos. Fíjate: muchas predicciones van con «creo que», «seguramente» o «probablemente».' } },
           { kind: 'concept', tone: 'blue', label: 'PREDICCIÓN', question: '¿Qué pasará?', en: 'predictions', formula: ['(creo que / seguramente) + verbo en futuro'],
             meaning: 'Dice **lo que creemos que pasará**: el tiempo, cambios, resultados. Es una opinión sobre el futuro.',
             examples: [
@@ -115,7 +115,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🤔', title: 'Para reconocer: suposiciones de ahora', text: 'El futuro también sirve para **suponer** algo del presente: —¿Dónde está Marta? —No sé, **estará** en la entrada (= probablemente está). Hoy solo lo reconocemos.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Raíz irregular, terminación de siempre.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Mañana teneré tiempo.', right: 'Mañana tendré tiempo.', why: 'Tener es irregular: tendr-.' },
             { wrong: 'Haceremos la mudanza el lunes.', right: 'Haremos la mudanza el lunes.', why: 'Hacer es irregular: har-.' },

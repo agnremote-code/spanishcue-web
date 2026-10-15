@@ -123,7 +123,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🤝', title: 'La gramática aclara responsabilidades', text: 'En un correo de trabajo, «insisto **en revisar**» y «insisto **en que revises**» asignan la tarea a personas distintas. Elegir bien el complemento evita malentendidos sobre quién hace qué.' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores se notan en un texto cuidado.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que aplique la prueba del «eso» antes de ver la corrección.', self: 'Lee cada frase, aplica la prueba del «eso» y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno aplica la prueba del «eso» antes de ver la corrección.', self: 'Lee cada frase, aplica la prueba del «eso» y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Me di cuenta que faltaba una página.', right: 'Me di cuenta de que faltaba una página.', why: '«Me di cuenta de eso»: la preposición se mantiene delante de «que».' },
             { wrong: 'Pienso de que es una buena idea.', right: 'Pienso que es una buena idea.', why: '«Pienso eso», sin «de»: no añadas la preposición.' },

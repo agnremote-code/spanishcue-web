@@ -38,7 +38,7 @@ export const lesson: LiveLesson = {
       steps: [
         { title: 'Creo que + una idea', blocks: [
           { kind: 'lead', text: 'Sara y Leo estudian español juntos. Hoy buscan un lugar para estudiar. Sara dice: «**Creo que** la biblioteca es buena. Voy allí **porque** hay silencio. Llego temprano **para** revisar el libro».', en: 'An opinion, a reason and a goal.' },
-          { kind: 'guide', text: { teacher: 'Lee los ejemplos y pide al alumno una opinión suya sobre su ciudad con «Creo que…».', self: 'Lee los ejemplos en voz alta. Después di una opinión tuya con «Creo que…».' } },
+          { kind: 'guide', text: { teacher: 'Lee los ejemplos y tu alumno da una opinión suya sobre su ciudad con «Creo que…».', self: 'Lee los ejemplos en voz alta. Después di una opinión tuya con «Creo que…».' } },
           { kind: 'concept', tone: 'blue', label: 'CREO QUE', question: '¿Qué piensas?', en: 'I think (that)', formula: ['creo que + frase completa (con verbo)'],
             meaning: '«Creo que» presenta **tu opinión**. Después de «que» va una frase completa, con su propio verbo.',
             examples: [
@@ -103,7 +103,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección.', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Creo la biblioteca es buena.', right: 'Creo que la biblioteca es buena.', why: 'En español, «que» es necesario después de «creo».' },
             { wrong: 'Estudio para aprendo.', right: 'Estudio para aprender.', why: 'Después de «para» va el infinitivo.' },

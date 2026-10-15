@@ -119,7 +119,7 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '🔑', title: 'La «a» no decide', text: '«Veo **a** Elena» y «Doy un libro **a** Elena» tienen «a», pero son diferentes. Mira el verbo: con **ver**, Elena es la persona vista (la); con **dar**, Elena recibe (le).' },
         ] },
         { title: 'Errores frecuentes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Estos errores son muy comunes.', blocks: [
-          { kind: 'guide', text: { teacher: 'Pide al alumno que encuentre el error antes de mostrar la corrección. Pregunta: «¿Qué palabra sustituye el pronombre?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
+          { kind: 'guide', text: { teacher: 'Tu alumno busca el error antes de que muestres la corrección. Pregunta: «¿Qué palabra sustituye el pronombre?».', self: 'Lee cada frase, busca el error y después toca para ver la corrección.' } },
           { kind: 'mistakes', title: '¿Dónde está el error?', items: [
             { wrong: 'Tengo las llaves. Tengo las.', right: 'Tengo las llaves. Las tengo.', why: 'El pronombre va delante del verbo.' },
             { wrong: 'Tengo las carpetas. Los llevo mañana.', right: 'Tengo las carpetas. Las llevo mañana.', why: '«Las carpetas» es femenino: las.' },
