@@ -19,7 +19,7 @@ test('jumping crosses a car and lands while buildings remain solid', () => {
   assert.ok(p.z>4.5, JSON.stringify(p));
   assert.equal(p.y,0);
   p={x:0,z:0,heading:0};
-  for(let i=0;i<120;i++) p=world.stepPlayer(p,{y:1,yaw:0,jump:i===0},1/60,[{...car,vehicle:undefined}]);
+  for(let i=0;i<120;i++) p=world.stepPlayer(p,{y:1,yaw:0,jump:i===0},1/60,[{x0:car.x0,x1:car.x1,z0:car.z0,z1:car.z1}]);
   assert.ok(p.z<1);
 });
 test('a car overlapping the player cannot trap them', () => {
