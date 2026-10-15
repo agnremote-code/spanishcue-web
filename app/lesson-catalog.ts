@@ -122,7 +122,7 @@ const categoryPreviews:Record<Category,string> = {
 const countryLessonIds = new Set([19, 24, 25, 26, 27, 29, 30, 32, 33, 36, 39, 210, 227, 228, 229]);
 
 function withPreview(lesson:LessonSource):LessonSource & {image:string;countryCollection:boolean} {
-  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};
+  return {...lesson,countryCollection:countryLessonIds.has(lesson.id),image:lesson.category==="Gramática"?`/grammar-thumbnails/${lesson.id}.webp`:lessonPreviews[lesson.id]||lesson.image||categoryPreviews[lesson.category]};
 }
 
 const boardLessonIds = [205,206] as const;
@@ -266,10 +266,13 @@ const lessonSources:LessonSource[] = [
 ];
 
 const levelOrder:Record<string,number> = {A1:1,A2:2,B1:3,B2:4,C1:5,C2:6};
+// The first class (239) moved from A0 to the A1 filter on 2026-10-15; it keeps its
+// place at the end of the sequence so no other grammar class is renumbered.
+const sequenceLevel = (lesson:LessonSource) => lesson.id === 239 ? 99 : levelOrder[lesson.level] ?? 99;
 const previewedLessons = lessonSources.map(applyGrammarMetadata).map(withPreview);
 const orderedGrammar = previewedLessons
   .filter((lesson) => lesson.category === "Gramática")
-  .sort((a,b) => (levelOrder[a.level] ?? 99) - (levelOrder[b.level] ?? 99) || (a.curriculumOrder ?? Number.MAX_SAFE_INTEGER) - (b.curriculumOrder ?? Number.MAX_SAFE_INTEGER));
+  .sort((a,b) => sequenceLevel(a) - sequenceLevel(b) || (a.curriculumOrder ?? Number.MAX_SAFE_INTEGER) - (b.curriculumOrder ?? Number.MAX_SAFE_INTEGER));
 
 const missingCurriculumOrder = orderedGrammar.filter((lesson) => lesson.curriculumOrder == null);
 const duplicateCurriculumOrder = orderedGrammar.filter((lesson,index,all) => all.findIndex((candidate) => candidate.curriculumOrder === lesson.curriculumOrder) !== index);
