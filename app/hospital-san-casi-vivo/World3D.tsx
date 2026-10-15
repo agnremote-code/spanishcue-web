@@ -428,7 +428,8 @@ export default function World3D(props: WorldProps) {
     if (knob.current) knob.current.style.transform = `translate(${x * 34}px, ${y * 34}px)`;
   };
   const joyUp = () => { joyPointer.current = null; if (api.current) { api.current.joy.x = 0; api.current.joy.y = 0; } if (knob.current) knob.current.style.transform = 'translate(0, 0)'; };
-  const nitro = (on: boolean) => () => { if (api.current) api.current.nitro.on = on; };
+  const nitroOn = () => { if (api.current) api.current.nitro.on = true; };
+  const nitroOff = () => { if (api.current) api.current.nitro.on = false; };
 
   return <div className="hs-world">
     <div className="hs-canvas" ref={mount} />
@@ -437,7 +438,7 @@ export default function World3D(props: WorldProps) {
     {touch && !props.sceneId && !props.intro && <div className="hs-touch-actions">
       <button type="button" aria-label="Hablar o usar" onPointerDown={() => api.current?.interact()}>E<small>Usar</small></button>
       <button type="button" aria-label="Saltar" onPointerDown={() => api.current?.jump()}>↑<small>Saltar</small></button>
-      <button type="button" aria-label="Nitro: mantén pulsado para correr muy rápido" onPointerDown={nitro(true)} onPointerUp={nitro(false)} onPointerCancel={nitro(false)} onPointerLeave={nitro(false)}>»<small>Nitro</small></button>
+      <button type="button" aria-label="Nitro: mantén pulsado para correr muy rápido" onPointerDown={nitroOn} onPointerUp={nitroOff} onPointerCancel={nitroOff} onPointerLeave={nitroOff}>»<small>Nitro</small></button>
     </div>}
   </div>;
 }
