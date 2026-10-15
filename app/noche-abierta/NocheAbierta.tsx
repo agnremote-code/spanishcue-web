@@ -24,6 +24,7 @@ import {
 import StreetCard from './StreetCard';
 import ItemPicker from './ItemPicker';
 import ItemIcon from './ItemIcon';
+import GeneralQuestions from '../conversacion-general/GeneralQuestions';
 import type { WorldProps } from './World3D';
 import './noche-abierta.css';
 import './street.css';
@@ -492,7 +493,7 @@ function MediaBlock({ media, onInspect }: { media: Media; onInspect: (id: string
   }
 }
 
-function BeatView({ beat, onChoose, onInspect }: { beat: Beat; onChoose: (id: string) => void; onInspect: (id: string) => void }) {
+function BeatView({ beat, talkId, onChoose, onInspect }: { beat: Beat; talkId?: string; onChoose: (id: string) => void; onInspect: (id: string) => void }) {
   const shaded = beat.kind === 'result' || beat.kind === 'change';
   return <>
     {beat.chosen && <p className="na-chosen"><span>Elegiste</span>{beat.chosen}</p>}
@@ -501,7 +502,9 @@ function BeatView({ beat, onChoose, onInspect }: { beat: Beat; onChoose: (id: st
       {beat.context && <p><Bi text={beat.context} /></p>}
     </div>}
     {beat.media && <MediaBlock media={beat.media} onInspect={onInspect} />}
-    {beat.prompt && <p className="na-ask"><Bi text={beat.prompt} /></p>}
+    {beat.talk && beat.talk.length > 1
+      ? <GeneralQuestions id={`lugar:${talkId ?? ''}`} questions={beat.talk} askClassName="na-ask" render={question => <Bi text={question} />} title={null} />
+      : beat.prompt && <p className="na-ask"><Bi text={beat.prompt} /></p>}
     {beat.options && <ol className="na-options">{beat.options.map((option, i) => <li key={option.id}>
       <button type="button" onClick={() => onChoose(option.id)}>
         <kbd>{LETTERS[i]}</kbd>
@@ -570,7 +573,7 @@ function ActivityCard({ view, state, teacher, world, inside, onChoose, onInspect
       </div>
       <div className="na-beat" key={stepKey}>
         <p className="na-kicker"><Bi text={kicker(view.beat.label)} /></p>
-        <BeatView beat={view.beat} onChoose={onChoose} onInspect={onInspect} />
+        <BeatView beat={view.beat} talkId={`${view.activity.id}:${state.level}`} onChoose={onChoose} onInspect={onInspect} />
         {view.activity.words && <div className="na-words"><h3>Palabras · Words</h3><ul className="na-chips is-quiet">{view.activity.words.map(word => <li key={word}><Bi text={word} /></li>)}</ul></div>}
       </div>
     </div>}

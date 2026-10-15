@@ -802,7 +802,7 @@ test('A0 in the street: its own short bilingual scenes, the same endings, nothin
     // Play through the first option until the end and close it.
     while (!state.open.end) state = street.chooseLine(state, street.choicesFor(encounter, state.open.node, 'granada', true)[0].key);
     const ended = street.streetView(state, 'A0');
-    assert.ok(ended.ended && bilingual.isBilingual(ended.end.text) && bilingual.isBilingual(ended.speak), `${id}: bilingual ending and question`);
+    assert.ok(ended.ended && bilingual.isBilingual(ended.end.text) && ended.talk.length === 5 && ended.talk.every(bilingual.isBilingual), `${id}: bilingual ending and five bilingual questions`);
     assert.ok(street.isValidStreet(JSON.parse(JSON.stringify(state))), `${id}: survives a reload`);
     assert.ok(street.isValidStreet(JSON.parse(JSON.stringify(street.stepBack(state)))));
     state = street.closeEncounter(state);
@@ -820,7 +820,7 @@ test('the people speak their lines, not the questions to the learner; the Spanis
   assert.ok(voice.includes('/^es([-_]|$)/i'), 'Spanish voices only');
   const streetCard = readFileSync('app/noche-abierta/StreetCard.tsx', 'utf8');
   assert.match(streetCard, /speakLines\(spoken/, 'the street card reads the reply and the next line');
-  assert.doesNotMatch(streetCard, /speakLines\([^)]*speak\b/, 'the closing question is not read');
+  assert.doesNotMatch(streetCard, /speakLines\([^)]*talk\b/, 'the closing questions are not read');
   const lesson = readFileSync('app/noche-abierta/NocheAbierta.tsx', 'utf8');
   assert.match(lesson, /speakLines\(\[situation\]/, 'the situation of a place is read');
   assert.match(lesson, /speakLines\(\[event\.text\]/, 'the city event is read');

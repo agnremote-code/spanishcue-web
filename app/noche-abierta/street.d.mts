@@ -5,7 +5,7 @@ export type Item = { id: ItemId; name: string; short: string; note: string; en?:
 export type Mood = 'neutral' | 'smile' | 'love' | 'sad' | 'scared' | 'angry' | 'surprised' | 'worried' | 'pain' | 'tipsy' | 'sleepy' | 'smitten' | 'laugh' | 'terror' | 'furious';
 export type Change = 'sonrie' | 'se-va' | 'corre' | 'ambulancia' | 'policia' | 'baila' | 'sigue' | 'llama' | 'triste' | 'enojado' | 'luz' | 'abraza' | 'se-sienta' | 'duerme' | 'beso' | 'huye' | 'cae' | 'pelea' | 'helicoptero' | 'manos-arriba';
 export type OpeningFx = 'retrocede' | 'manos-arriba' | 'grita' | 'huye' | 'evacuacion' | 'duelo-cuchillo' | 'policia' | 'helicoptero' | 'defensa' | 'risa' | 'curioso' | 'corazon' | 'beso' | 'abrazo' | 'calma';
-export type Variant = { start: string; fx?: OpeningFx; speak?: Banded };
+export type Variant = { start: string; fx?: OpeningFx };
 export type Banded = { A: string; B: string; C: string };
 export type CastMember = {
   id: string; name: string; role: string; age: string; body: string; build: string; height?: number; hair: string; hairColor: string; skin: string;
@@ -18,7 +18,7 @@ export type End = { text: Banded; change: Change; recap: string; flag?: string }
 export type Encounter = {
   id: string; kind: 'escena' | 'rincon'; district: string; title: string; verb: string; goal: string;
   cast: CastMember[]; start: string; nodes: Record<string, Node>; ends: Record<string, End>;
-  speak: Record<Level, string>; requires?: string; event?: 'lluvia' | 'transporte' | 'celular';
+  requires?: string; event?: 'lluvia' | 'transporte' | 'celular';
   variants?: Partial<Record<ItemId, Variant>>;
 };
 export type StreetState = {
@@ -32,7 +32,7 @@ export type StreetView = {
   id: string; title: string; district: string; districtName: string; goal: string; kind: 'escena' | 'rincon'; step: number;
   said: { act: string; say: string; reply: string; item: ItemId | null; body?: string | null } | null; mood: Mood;
   ended: boolean; who?: string; whoBody?: string | null; line?: string; choices?: StreetChoice[]; words?: string[];
-  end?: { id: string; text: string; change: Change; recap: string }; speak?: string;
+  end?: { id: string; text: string; change: Change; recap: string }; talk?: string[];
   variant: ItemId | null; fx: OpeningFx | null;
 };
 
