@@ -73,7 +73,7 @@ const additions = [
   [233, 'B2', 'discurso', 'estilo-indirecto-transmitir', 'Estilo indirecto: transmitir lo que alguien dijo o pidió', 'Comunica cambios de una cita conservando la intención y la referencia temporal.', 4400, [147,150]],
   [234, 'B2', 'pronombres', 'relativos-con-preposicion', 'Relativos con preposición: precisar de quién y de qué hablas', 'Relaciona personas, lugares y propuestas sin perder la preposición necesaria.', 4500, [218,117]],
   [235, 'B2', 'oraciones', 'consecuencias-tan-tanto', 'Tan, tanto y así que: explicar consecuencias', 'Relaciona intensidad, hechos y resultados para justificar una decisión.', 4600, [45,217]],
-  [239, 'A0', 'ser-estar', 'clase-inicial', 'Clase inicial: tu primer «hola» en español', 'El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.', 50, []],
+  [239, 'A1', 'ser-estar', 'clase-inicial', 'Clase inicial: tu primer «hola» en español', 'El abecedario, yo / tú / vos, «soy» y «estoy»: lo justo para tu primera charla con tus abuelos argentinos.', 50, []],
 ] as const;
 /** When each addition reached the library (the «Nuevo» badge). */
 const addedAt: Record<number, string> = { 239: '2026-10-14' };
