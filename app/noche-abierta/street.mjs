@@ -3,16 +3,18 @@
 // White circles all over the city open small scenes: someone reacts, the
 // learner chooses what to say (and says it aloud), the person answers, a new
 // decision appears, something changes in the world, and the scene closes with
-// one personal question about the learner's real life. The object the learner
-// carries tonight (lápiz, libro, gas pimienta, granada, pistola, cuchillo or
-// the corazón) changes the scene: most scenes open on a different moment for
-// each object (`variants`), with its own reactions, choices, endings and
-// closing question, and the object also adds its own option wherever it fits.
+// a general conversation: five open questions about the learner's real life
+// (./talk/). The object the learner carries tonight (lápiz, libro, gas
+// pimienta, granada, pistola, cuchillo or the corazón) changes the STORY: most
+// scenes open on a different moment for each object (`variants`: start node
+// and opening effect only), with its own reactions, choices and endings, and
+// the object also adds its own option wherever it fits. It does not take over
+// the conversation: it adds at most one question of the five (./talk/).
 //
 // Pure data and state, no DOM: the 3D world reads which people stand where
 // and how they feel; the card reads what to say. Texts come in three bands
-// (A for A1–A2, B for B1–B2, C for C1–C2) and the closing question in six
-// levels. The data lives in ./street/<district>.mjs.
+// (A for A1–A2, B for B1–B2, C for C1–C2); the conversation, in each level.
+// The data lives in ./street/<district>.mjs and ./talk/street-<district>.mjs.
 
 import ALTO from "./street/alto.mjs";
 import CLINICA from "./street/clinica.mjs";
@@ -26,6 +28,7 @@ import CAOS_CENTRO from "./street/caos-centro.mjs";
 import CAOS_SUR from "./street/caos-sur.mjs";
 import { A0_SCENES } from "./street/a0.mjs";
 import { bi } from "./bilingual.mjs";
+import { streetTalk } from "./talk/index.mjs";
 
 // What the learner can carry. The heart is not an object but a power.
 export const ITEMS = [
@@ -230,10 +233,12 @@ export function streetView(street, level) {
   };
   if (open.end) {
     const end = encounter.ends[open.end];
-    // The closing question follows the object when the scene wrote one for it.
-    const speak = a0 ? bi(a0.speak) : text(variant?.speak, band) || encounter.speak[level] || encounter.speak.B1;
+    // The conversation belongs to the scene's human theme; the object, when it
+    // changed the scene, brings one question of the five, rotating with the
+    // number of scenes already closed tonight.
+    const talk = streetTalk(encounter.id, a0 ? "A0" : level, { item: variant ? street.item : null, turn: Object.keys(street.done).length });
     const endText = a0?.ends?.[open.end] ? bi(a0.ends[open.end]) : text(end.text, band);
-    return { ...base, ended: true, end: { id: open.end, text: endText, change: end.change, recap: end.recap }, speak };
+    return { ...base, ended: true, end: { id: open.end, text: endText, change: end.change, recap: end.recap }, talk };
   }
   const node = graphOf(encounter, open).nodes[open.node];
   return {

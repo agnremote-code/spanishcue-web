@@ -1,0 +1,1046 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-10-15 16:12Z in the project thread «Noche abierta: corrección pedagógica global» (cmsg_01Gr5R4j3t2Yet65UcmhcVhALq1zd4Gycp1ZozyzSdohgt): five open general-conversation questions per interaction and level, «Para A0 mantené el soporte bilingüe». Ale approved this English copy in that same thread with «apruebo» on 2026-10-15 17:56Z (cmsg_01Gr5R4j3t2Yet65UcmhcVhA8yGt8MVEtAfZX5T2fkJWNf). This manifest approves only the exact English halves of the A0 { es, en } questions listed below; existing English copy stays protected.",
+  "additions": [
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have brothers or sisters? How many?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you live near your parents?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you help your neighbours?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who helps you when you feel bad?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you call your family every day?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have breakfast at home or at a café?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you read books or magazines?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What time do you finish work?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you know the people in your neighbourhood?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you do before bed?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go to the cinema? Who with?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Love films or funny films?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like strange things?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you do on Saturdays?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you write, draw or sing?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is there a lot of traffic in your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you get angry easily?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you say “sorry” easily?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you walk a lot around your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you shout in the car?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you make videos with your phone?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like sport?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you laugh a lot? About what?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you a calm person or an active person?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you post photos online?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like art?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are there museums in your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is on the walls of your home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you creative?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is beautiful to you?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What are your neighbours like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have parties at your place?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you sleep well at home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you do something special on your birthday?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What bothers you at home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What clothes do you like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you look at other people’s clothes?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is there a uniform at your job?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Smart clothes or comfortable clothes?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you work at night or during the day?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you lose things? What things?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is your memory good or bad?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have grandparents? Where do they live?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Where is your phone now?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you talk with older people?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you drink wine? When?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Red wine or white wine?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What drink is typical in your country?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have dinner late or early?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer sweet or salty?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a partner?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you jealous?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you argue a lot? Who with?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you look at your partner’s phone?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What makes you sad?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you live in a house or an apartment?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a balcony? What is on it?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is today a good day or a bad day?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who has a key to your home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you a lucky person?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is your job fun?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you work on Saturdays?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you eat on the street? What do you eat?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How many hours do you work?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you want to have your own business?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who is the best cook in your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you eat with your family on Sundays?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What food makes you happy?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you invite friends for dinner?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you hungry now?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you get lost a lot?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you ask the way or look at the map?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is your city big or small?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like travelling in a group?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are there many tourists in your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go to a lot of parties?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer big parties or small parties?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How many good friends do you have?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you dance when there is music?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go out on Fridays?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you give flowers? To whom?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like presents?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who is important to you?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you romantic?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have plants at home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you read your horoscope?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is your star sign?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is your big dream?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you an optimist or a pessimist?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Surprises: yes or no?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Dogs or cats?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Does your family have animals?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you talk to animals?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go for walks in your neighbourhood?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who is your best friend?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you studying anything now?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you live far from your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is it easy for you to say goodbye?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like change?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What are you afraid of?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How many coffees do you have a day?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have breakfast every day?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is there a nice café in your neighbourhood?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you work at home or in an office?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like sugar?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which drink don’t you like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you very patient?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you do when something goes wrong?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go out with friends at the weekend?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are your friends from here or from other countries?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer talking with one person or with many?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Where do you meet your friends?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How many rooms does your home have?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you live with other people? Who with?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which place in your home do you like most?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a garden or a terrace?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like having visitors?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you cook for your guests?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go to your friends’ homes?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you bring something when you visit someone?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who pays when you go out with friends?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like paying for others?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go to restaurants a lot?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you spend a lot of money on food?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which vegetables do you like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like soup?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you eat spicy food?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What food do you never eat?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is your neighbourhood quiet or noisy?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Where do you relax in your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you speak loudly or softly?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you complain in restaurants?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How old are you?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Does your name have a story?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do your friends call you?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like meeting new people?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How long have you lived there?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are your neighbours nice?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is there a park nearby?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you want to live in another city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who dances well in your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you say “no” to your friends?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you do when you are hungry?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you eat before you go out?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is your work near or far?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like walking?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you use the metro?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you give directions to tourists?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like birthday parties?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What present do you want this year?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like cake?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you remember your friends’ birthdays?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Why do you study Spanish?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How many languages do you speak?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you laugh when you make a mistake?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you watch films in Spanish?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go to concerts with friends?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you sing in the car?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you play an instrument?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you listen to music at work?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you talk a lot or a little?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you need silence to work?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Quiet bars or bars with music?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who talks a lot in your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you sleep in the afternoon?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you wake up easily?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go home early?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you drink coffee at night?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you save money?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you shop online a lot?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you lend money to your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you spend a lot on?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you do while you wait?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you arrive on time or late?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What makes you nervous?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like talking to strangers?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is expensive in your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you tell your friends what you think?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you look for bargains?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How much is a coffee in your country?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you sometimes cancel plans?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer messages or calls?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a lot of free time?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you get angry when a friend cancels?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you say hello with a kiss or a handshake?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you hug your friends a lot?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you shy?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have friends from school?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like airports?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you afraid of flying?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you travel a lot for work?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who takes you to the airport?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like driving?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you ask strangers for help?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who drives in your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer the car or the train?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have photos of your family at home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you look at old photos?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which year is special for you?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like old things?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "How many hours do you use your phone?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you call or text?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you talk to your mother a lot?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you turn off your phone at night?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like travelling by train?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is your favourite city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you travel with your family?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which country do you know well?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you write by hand?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you wear glasses?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a special letter?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like getting long messages?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you travel with a lot of clothes?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What thing do you never forget?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like packing your suitcase?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you live with a lot of things or with few?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you watch series? Which one do you like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you eat in front of the TV?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which actress or actor do you really like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a TV in your bedroom?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you get in the post?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you ask when you don’t know something?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you exercise?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you go to the park on Sundays?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you sleep with the window open?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a strange object at home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Are you a tidy person?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What colour is your room?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a box of memories?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What music do you listen to when you are sad?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have something from your grandmother or grandfather?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What music does your family listen to?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you talk to taxi drivers?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you change plans easily?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Which street in your city do you like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer taxis or buses?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is there a nice square in your city?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you always know where you are going?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like your city centre?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you decide quickly or slowly?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is your phone new or old?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What do you do without a phone?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like technology?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Who fixes things at your home?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you drink cold or hot drinks?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like hot or cold weather?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you walk to the shop?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What is in your fridge?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Is it easy for you to choose presents?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "What does your best friend like?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you prefer giving or receiving?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like small shops?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like the night or the day?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a favourite place with a view?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you look at the stars?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do your friends live nearby?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you look good in photos?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you take selfies?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you have a favourite photo?"
+    },
+    {
+      "path": "app/noche-abierta/talk/a0.mjs",
+      "text": "Do you like being with lots of people?"
+    }
+  ]
+}

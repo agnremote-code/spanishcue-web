@@ -1,0 +1,448 @@
+// Noche abierta · A0: preguntas de conversación general, bilingües.
+const t = (es, en) => ({ es, en });
+
+export const STREET = {
+  "centro-desmayo": {
+    topics: ["familia", "ayuda"],
+    A0: [
+      t("¿Tienes hermanos? ¿Cuántos?", "Do you have brothers or sisters? How many?"),
+      t("¿Vives cerca de tus padres?", "Do you live near your parents?"),
+      t("¿Ayudas a tus vecinos?", "Do you help your neighbours?"),
+      t("¿Quién te ayuda cuando estás mal?", "Who helps you when you feel bad?"),
+      t("¿Llamas a tu familia todos los días?", "Do you call your family every day?"),
+    ],
+  },
+  "centro-diarios": {
+    topics: ["costumbres", "trabajo"],
+    A0: [
+      t("¿Desayunas en casa o en un café?", "Do you have breakfast at home or at a café?"),
+      t("¿Lees libros o revistas?", "Do you read books or magazines?"),
+      t("¿A qué hora terminas de trabajar?", "What time do you finish work?"),
+      t("¿Conoces a la gente de tu barrio?", "Do you know the people in your neighbourhood?"),
+      t("¿Qué haces antes de dormir?", "What do you do before bed?"),
+    ],
+  },
+  "centro-cine": {
+    topics: ["tiempo-libre", "suenos"],
+    A0: [
+      t("¿Vas al cine? ¿Con quién?", "Do you go to the cinema? Who with?"),
+      t("¿Películas de amor o de risa?", "Love films or funny films?"),
+      t("¿Te gustan las cosas raras?", "Do you like strange things?"),
+      t("¿Qué haces los sábados?", "What do you do on Saturdays?"),
+      t("¿Escribes, dibujas o cantas?", "Do you write, draw or sing?"),
+    ],
+  },
+  "centro-choque": {
+    topics: ["conflictos", "ciudad"],
+    A0: [
+      t("¿Hay mucho tráfico en tu ciudad?", "Is there a lot of traffic in your city?"),
+      t("¿Te enojas fácilmente?", "Do you get angry easily?"),
+      t("¿Dices «perdón» fácilmente?", "Do you say “sorry” easily?"),
+      t("¿Caminas mucho por tu ciudad?", "Do you walk a lot around your city?"),
+      t("¿Gritas en el coche?", "Do you shout in the car?"),
+    ],
+  },
+  "centro-patineta": {
+    topics: ["tiempo-libre", "humor"],
+    A0: [
+      t("¿Haces videos con tu teléfono?", "Do you make videos with your phone?"),
+      t("¿Te gusta el deporte?", "Do you like sport?"),
+      t("¿Te ríes mucho? ¿De qué?", "Do you laugh a lot? About what?"),
+      t("¿Eres una persona tranquila o activa?", "Are you a calm person or an active person?"),
+      t("¿Subes fotos a internet?", "Do you post photos online?"),
+    ],
+  },
+  "alto-galeria": {
+    topics: ["cultura", "personalidad"],
+    A0: [
+      t("¿Te gusta el arte?", "Do you like art?"),
+      t("¿Hay museos en tu ciudad?", "Are there museums in your city?"),
+      t("¿Qué hay en las paredes de tu casa?", "What is on the walls of your home?"),
+      t("¿Eres creativo o creativa?", "Are you creative?"),
+      t("¿Qué es bonito para ti?", "What is beautiful to you?"),
+    ],
+  },
+  "sur-vecino": {
+    topics: ["relaciones", "conflictos"],
+    A0: [
+      t("¿Cómo son tus vecinos?", "What are your neighbours like?"),
+      t("¿Haces fiestas en tu casa?", "Do you have parties at your place?"),
+      t("¿Duermes bien en tu casa?", "Do you sleep well at home?"),
+      t("¿Haces algo especial en tu cumpleaños?", "Do you do something special on your birthday?"),
+      t("¿Qué te molesta en casa?", "What bothers you at home?"),
+    ],
+  },
+  "alto-portero": {
+    topics: ["prejuicios", "trabajo"],
+    A0: [
+      t("¿Qué ropa te gusta?", "What clothes do you like?"),
+      t("¿Miras la ropa de otras personas?", "Do you look at other people’s clothes?"),
+      t("¿Hay uniforme en tu trabajo?", "Is there a uniform at your job?"),
+      t("¿Ropa elegante o cómoda?", "Smart clothes or comfortable clothes?"),
+      t("¿Trabajas de noche o de día?", "Do you work at night or during the day?"),
+    ],
+  },
+  "sur-estacionamiento": {
+    topics: ["errores", "familia"],
+    A0: [
+      t("¿Pierdes cosas? ¿Qué cosas?", "Do you lose things? What things?"),
+      t("¿Tu memoria es buena o mala?", "Is your memory good or bad?"),
+      t("¿Tienes abuelos? ¿Dónde viven?", "Do you have grandparents? Where do they live?"),
+      t("¿Dónde está tu teléfono ahora?", "Where is your phone now?"),
+      t("¿Hablas con las personas mayores?", "Do you talk with older people?"),
+    ],
+  },
+  "alto-vinoteca": {
+    topics: ["comida", "costumbres"],
+    A0: [
+      t("¿Bebes vino? ¿Cuándo?", "Do you drink wine? When?"),
+      t("¿Vino tinto o blanco?", "Red wine or white wine?"),
+      t("¿Qué bebida es típica en tu país?", "What drink is typical in your country?"),
+      t("¿Cenas tarde o temprano?", "Do you have dinner late or early?"),
+      t("¿Prefieres dulce o salado?", "Do you prefer sweet or salty?"),
+    ],
+  },
+  "alto-pareja": {
+    topics: ["amor", "conflictos"],
+    A0: [
+      t("¿Tienes pareja?", "Do you have a partner?"),
+      t("¿Eres celoso o celosa?", "Are you jealous?"),
+      t("¿Discutes mucho? ¿Con quién?", "Do you argue a lot? Who with?"),
+      t("¿Miras el teléfono de tu pareja?", "Do you look at your partner’s phone?"),
+      t("¿Qué te pone triste?", "What makes you sad?"),
+    ],
+  },
+  "sur-balcon": {
+    topics: ["mala-suerte", "confianza"],
+    A0: [
+      t("¿Vives en una casa o en un apartamento?", "Do you live in a house or an apartment?"),
+      t("¿Tienes balcón? ¿Qué hay?", "Do you have a balcony? What is on it?"),
+      t("¿Hoy es un buen día o un mal día?", "Is today a good day or a bad day?"),
+      t("¿Quién tiene una llave de tu casa?", "Who has a key to your home?"),
+      t("¿Eres una persona con suerte?", "Are you a lucky person?"),
+    ],
+  },
+  "mercado-inspectores": {
+    topics: ["trabajo", "comida"],
+    A0: [
+      t("¿Tu trabajo es divertido?", "Is your job fun?"),
+      t("¿Trabajas los sábados?", "Do you work on Saturdays?"),
+      t("¿Comes en la calle? ¿Qué comes?", "Do you eat on the street? What do you eat?"),
+      t("¿Cuántas horas trabajas?", "How many hours do you work?"),
+      t("¿Quieres tener tu propio negocio?", "Do you want to have your own business?"),
+    ],
+  },
+  "sur-ventana": {
+    topics: ["familia", "comida"],
+    A0: [
+      t("¿Quién cocina mejor en tu familia?", "Who is the best cook in your family?"),
+      t("¿Comes con tu familia los domingos?", "Do you eat with your family on Sundays?"),
+      t("¿Qué comida te hace feliz?", "What food makes you happy?"),
+      t("¿Invitas a amigos a cenar?", "Do you invite friends for dinner?"),
+      t("¿Tienes hambre ahora?", "Are you hungry now?"),
+    ],
+  },
+  "alto-turista": {
+    topics: ["viajes", "ciudad"],
+    A0: [
+      t("¿Te pierdes mucho?", "Do you get lost a lot?"),
+      t("¿Preguntas el camino o miras el mapa?", "Do you ask the way or look at the map?"),
+      t("¿Tu ciudad es grande o pequeña?", "Is your city big or small?"),
+      t("¿Te gusta viajar en grupo?", "Do you like travelling in a group?"),
+      t("¿Hay muchos turistas en tu ciudad?", "Are there many tourists in your city?"),
+    ],
+  },
+  "alto-fiesta": {
+    topics: ["amistad", "tiempo-libre"],
+    A0: [
+      t("¿Vas a muchas fiestas?", "Do you go to a lot of parties?"),
+      t("¿Prefieres fiestas grandes o pequeñas?", "Do you prefer big parties or small parties?"),
+      t("¿Cuántos buenos amigos tienes?", "How many good friends do you have?"),
+      t("¿Bailas cuando hay música?", "Do you dance when there is music?"),
+      t("¿Sales los viernes?", "Do you go out on Fridays?"),
+    ],
+  },
+  "mercado-flores": {
+    topics: ["amor", "relaciones"],
+    A0: [
+      t("¿Regalas flores? ¿A quién?", "Do you give flowers? To whom?"),
+      t("¿Te gustan los regalos?", "Do you like presents?"),
+      t("¿Quién es importante para ti?", "Who is important to you?"),
+      t("¿Eres romántico o romántica?", "Are you romantic?"),
+      t("¿Tienes plantas en casa?", "Do you have plants at home?"),
+    ],
+  },
+  "mercado-adivina": {
+    topics: ["suenos", "decisiones"],
+    A0: [
+      t("¿Lees tu horóscopo?", "Do you read your horoscope?"),
+      t("¿Cuál es tu signo?", "What is your star sign?"),
+      t("¿Cuál es tu gran sueño?", "What is your big dream?"),
+      t("¿Eres optimista o pesimista?", "Are you an optimist or a pessimist?"),
+      t("¿Sorpresas: sí o no?", "Surprises: yes or no?"),
+    ],
+  },
+  "sur-perro": {
+    topics: ["amistad", "costumbres"],
+    A0: [
+      t("¿Perros o gatos?", "Dogs or cats?"),
+      t("¿Tu familia tiene animales?", "Does your family have animals?"),
+      t("¿Hablas con los animales?", "Do you talk to animals?"),
+      t("¿Paseas por tu barrio?", "Do you go for walks in your neighbourhood?"),
+      t("¿Quién es tu mejor amigo o amiga?", "Who is your best friend?"),
+    ],
+  },
+  "alto-feliz": {
+    topics: ["cambios", "emociones"],
+    A0: [
+      t("¿Estudias algo ahora?", "Are you studying anything now?"),
+      t("¿Vives lejos de tu familia?", "Do you live far from your family?"),
+      t("¿Es fácil para ti decir adiós?", "Is it easy for you to say goodbye?"),
+      t("¿Te gustan los cambios?", "Do you like change?"),
+      t("¿Qué te da miedo?", "What are you afraid of?"),
+    ],
+  },
+};
+
+export const PLACES = {
+  "cafe-alla": { A0: [
+    t("¿Cuántos cafés tomas al día?", "How many coffees do you have a day?"),
+    t("¿Desayunas todos los días?", "Do you have breakfast every day?"),
+    t("¿Hay un café bonito en tu barrio?", "Is there a nice café in your neighbourhood?"),
+    t("¿Trabajas en casa o en una oficina?", "Do you work at home or in an office?"),
+  ] },
+  "cafe-equivocado": { A0: [
+    t("¿Te gusta el azúcar?", "Do you like sugar?"),
+    t("¿Qué bebida no te gusta?", "Which drink don’t you like?"),
+    t("¿Tienes mucha paciencia?", "Are you very patient?"),
+    t("¿Qué haces cuando algo sale mal?", "What do you do when something goes wrong?"),
+  ] },
+  "cafe-grupo": { A0: [
+    t("¿Sales con amigos los fines de semana?", "Do you go out with friends at the weekend?"),
+    t("¿Tus amigos son de aquí o de otros países?", "Are your friends from here or from other countries?"),
+    t("¿Prefieres hablar con una persona o con muchas?", "Do you prefer talking with one person or with many?"),
+    t("¿Dónde ves a tus amigos?", "Where do you meet your friends?"),
+  ] },
+  "depto-un-minuto": { A0: [
+    t("¿Cuántas habitaciones tiene tu casa?", "How many rooms does your home have?"),
+    t("¿Vives con otras personas? ¿Con quién?", "Do you live with other people? Who with?"),
+    t("¿Qué lugar de tu casa te gusta más?", "Which place in your home do you like most?"),
+    t("¿Tienes jardín o terraza?", "Do you have a garden or a terrace?"),
+  ] },
+  "depto-timbre": { A0: [
+    t("¿Te gustan las visitas?", "Do you like having visitors?"),
+    t("¿Cocinas para tus invitados?", "Do you cook for your guests?"),
+    t("¿Vas a casa de tus amigos?", "Do you go to your friends’ homes?"),
+    t("¿Llevas algo cuando visitas a alguien?", "Do you bring something when you visit someone?"),
+  ] },
+  "resto-cuenta": { A0: [
+    t("¿Quién paga cuando sales con amigos?", "Who pays when you go out with friends?"),
+    t("¿Te gusta invitar?", "Do you like paying for others?"),
+    t("¿Vas mucho a restaurantes?", "Do you go to restaurants a lot?"),
+    t("¿Gastas mucho dinero en comida?", "Do you spend a lot of money on food?"),
+  ] },
+  "resto-plato": { A0: [
+    t("¿Qué verduras te gustan?", "Which vegetables do you like?"),
+    t("¿Te gusta la sopa?", "Do you like soup?"),
+    t("¿Comes picante?", "Do you eat spicy food?"),
+    t("¿Qué comida no comes nunca?", "What food do you never eat?"),
+  ] },
+  "resto-al-lado": { A0: [
+    t("¿Tu barrio es tranquilo o ruidoso?", "Is your neighbourhood quiet or noisy?"),
+    t("¿Dónde descansas en tu ciudad?", "Where do you relax in your city?"),
+    t("¿Hablas alto o bajo?", "Do you speak loudly or softly?"),
+    t("¿Te quejas en los restaurantes?", "Do you complain in restaurants?"),
+  ] },
+  "pablo": { A0: [
+    t("¿Cuántos años tienes?", "How old are you?"),
+    t("¿Tu nombre tiene una historia?", "Does your name have a story?"),
+    t("¿Cómo te llaman tus amigos?", "What do your friends call you?"),
+    t("¿Te gusta conocer gente nueva?", "Do you like meeting new people?"),
+  ] },
+  "ines": { A0: [
+    t("¿Cuánto tiempo llevas allí?", "How long have you lived there?"),
+    t("¿Tus vecinos son simpáticos?", "Are your neighbours nice?"),
+    t("¿Hay un parque cerca?", "Is there a park nearby?"),
+    t("¿Quieres vivir en otra ciudad?", "Do you want to live in another city?"),
+  ] },
+  "pareja": { A0: [
+    t("¿Quién baila bien en tu familia?", "Who dances well in your family?"),
+    t("¿Dices «no» a tus amigos?", "Do you say “no” to your friends?"),
+    t("¿Qué haces cuando tienes hambre?", "What do you do when you are hungry?"),
+    t("¿Comes antes de salir?", "Do you eat before you go out?"),
+  ] },
+  "ramiro": { A0: [
+    t("¿Tu trabajo está cerca o lejos?", "Is your work near or far?"),
+    t("¿Te gusta caminar?", "Do you like walking?"),
+    t("¿Usas el metro?", "Do you use the metro?"),
+    t("¿Das direcciones a turistas?", "Do you give directions to tourists?"),
+  ] },
+  "marta": { A0: [
+    t("¿Te gustan las fiestas de cumpleaños?", "Do you like birthday parties?"),
+    t("¿Qué regalo quieres este año?", "What present do you want this year?"),
+    t("¿Te gusta el pastel?", "Do you like cake?"),
+    t("¿Recuerdas los cumpleaños de tus amigos?", "Do you remember your friends’ birthdays?"),
+  ] },
+  "kenji": { A0: [
+    t("¿Por qué estudias español?", "Why do you study Spanish?"),
+    t("¿Cuántos idiomas hablas?", "How many languages do you speak?"),
+    t("¿Te ríes cuando te equivocas?", "Do you laugh when you make a mistake?"),
+    t("¿Ves películas en español?", "Do you watch films in Spanish?"),
+  ] },
+  "sofia": { A0: [
+    t("¿Vas a conciertos con amigos?", "Do you go to concerts with friends?"),
+    t("¿Cantas en el coche?", "Do you sing in the car?"),
+    t("¿Tocas un instrumento?", "Do you play an instrument?"),
+    t("¿Escuchas música en el trabajo?", "Do you listen to music at work?"),
+  ] },
+  "fuerte": { A0: [
+    t("¿Hablas mucho o poco?", "Do you talk a lot or a little?"),
+    t("¿Necesitas silencio para trabajar?", "Do you need silence to work?"),
+    t("¿Bares tranquilos o bares con música?", "Quiet bars or bars with music?"),
+    t("¿Quién habla mucho en tu familia?", "Who talks a lot in your family?"),
+  ] },
+  "quedarse": { A0: [
+    t("¿Duermes por la tarde?", "Do you sleep in the afternoon?"),
+    t("¿Te despiertas fácilmente?", "Do you wake up easily?"),
+    t("¿Te vas a casa temprano?", "Do you go home early?"),
+    t("¿Bebes café por la noche?", "Do you drink coffee at night?"),
+  ] },
+  "billetera": { A0: [
+    t("¿Ahorras dinero?", "Do you save money?"),
+    t("¿Compras mucho por internet?", "Do you shop online a lot?"),
+    t("¿Prestas dinero a tu familia?", "Do you lend money to your family?"),
+    t("¿En qué gastas mucho?", "What do you spend a lot on?"),
+  ] },
+  "fila": { A0: [
+    t("¿Qué haces cuando esperas?", "What do you do while you wait?"),
+    t("¿Llegas puntual o tarde?", "Do you arrive on time or late?"),
+    t("¿Qué te pone nervioso o nerviosa?", "What makes you nervous?"),
+    t("¿Te gusta hablar con desconocidos?", "Do you like talking to strangers?"),
+  ] },
+  "caro": { A0: [
+    t("¿Qué es caro en tu ciudad?", "What is expensive in your city?"),
+    t("¿Dices tu opinión a tus amigos?", "Do you tell your friends what you think?"),
+    t("¿Buscas ofertas?", "Do you look for bargains?"),
+    t("¿Cuánto cuesta un café en tu país?", "How much is a coffee in your country?"),
+  ] },
+  "cancelo": { A0: [
+    t("¿Cancelas planes a veces?", "Do you sometimes cancel plans?"),
+    t("¿Prefieres mensajes o llamadas?", "Do you prefer messages or calls?"),
+    t("¿Tienes mucho tiempo libre?", "Do you have a lot of free time?"),
+    t("¿Te enojas cuando un amigo cancela?", "Do you get angry when a friend cancels?"),
+  ] },
+  "invitacion": { A0: [
+    t("¿Saludas con un beso o con la mano?", "Do you say hello with a kiss or a handshake?"),
+    t("¿Abrazas mucho a tus amigos?", "Do you hug your friends a lot?"),
+    t("¿Eres tímido o tímida?", "Are you shy?"),
+    t("¿Tienes amigos desde la escuela?", "Do you have friends from school?"),
+  ] },
+  "auto-aeropuerto": { A0: [
+    t("¿Te gustan los aeropuertos?", "Do you like airports?"),
+    t("¿Tienes miedo a volar?", "Are you afraid of flying?"),
+    t("¿Viajas mucho por trabajo?", "Do you travel a lot for work?"),
+    t("¿Quién te lleva al aeropuerto?", "Who takes you to the airport?"),
+  ] },
+  "auto-gasolina": { A0: [
+    t("¿Te gusta conducir?", "Do you like driving?"),
+    t("¿Pides ayuda a desconocidos?", "Do you ask strangers for help?"),
+    t("¿Quién conduce en tu familia?", "Who drives in your family?"),
+    t("¿Prefieres el auto o el tren?", "Do you prefer the car or the train?"),
+  ] },
+  "foto": { A0: [
+    t("¿Tienes fotos de tu familia en casa?", "Do you have photos of your family at home?"),
+    t("¿Miras fotos viejas?", "Do you look at old photos?"),
+    t("¿Qué año es especial para ti?", "Which year is special for you?"),
+    t("¿Te gustan las cosas antiguas?", "Do you like old things?"),
+  ] },
+  "telefono": { A0: [
+    t("¿Cuántas horas usas el teléfono?", "How many hours do you use your phone?"),
+    t("¿Llamas o escribes?", "Do you call or text?"),
+    t("¿Hablas mucho con tu madre?", "Do you talk to your mother a lot?"),
+    t("¿Apagas el teléfono por la noche?", "Do you turn off your phone at night?"),
+  ] },
+  "boleto": { A0: [
+    t("¿Te gusta viajar en tren?", "Do you like travelling by train?"),
+    t("¿Cuál es tu ciudad favorita?", "What is your favourite city?"),
+    t("¿Viajas con tu familia?", "Do you travel with your family?"),
+    t("¿Qué país conoces bien?", "Which country do you know well?"),
+  ] },
+  "carta": { A0: [
+    t("¿Escribes a mano?", "Do you write by hand?"),
+    t("¿Usas gafas?", "Do you wear glasses?"),
+    t("¿Tienes una carta especial?", "Do you have a special letter?"),
+    t("¿Te gusta recibir mensajes largos?", "Do you like getting long messages?"),
+  ] },
+  "valija": { A0: [
+    t("¿Viajas con mucha ropa?", "Do you travel with a lot of clothes?"),
+    t("¿Qué cosa no olvidas nunca?", "What thing do you never forget?"),
+    t("¿Te gusta hacer la maleta?", "Do you like packing your suitcase?"),
+    t("¿Vives con muchas cosas o con pocas?", "Do you live with a lot of things or with few?"),
+  ] },
+  "televisor": { A0: [
+    t("¿Ves series? ¿Cuál te gusta?", "Do you watch series? Which one do you like?"),
+    t("¿Comes delante de la tele?", "Do you eat in front of the TV?"),
+    t("¿Qué actriz o actor te gusta mucho?", "Which actress or actor do you really like?"),
+    t("¿Tienes televisión en tu habitación?", "Do you have a TV in your bedroom?"),
+  ] },
+  "bicicleta": { A0: [
+    t("¿Qué recibes por correo?", "What do you get in the post?"),
+    t("¿Preguntas cuando no sabes algo?", "Do you ask when you don’t know something?"),
+    t("¿Haces ejercicio?", "Do you exercise?"),
+    t("¿Vas al parque los domingos?", "Do you go to the park on Sundays?"),
+  ] },
+  "habitacion": { A0: [
+    t("¿Duermes con la ventana abierta?", "Do you sleep with the window open?"),
+    t("¿Tienes un objeto raro en casa?", "Do you have a strange object at home?"),
+    t("¿Eres una persona ordenada?", "Are you a tidy person?"),
+    t("¿De qué color es tu habitación?", "What colour is your room?"),
+  ] },
+  "caja": { A0: [
+    t("¿Tienes una caja de recuerdos?", "Do you have a box of memories?"),
+    t("¿Qué música escuchas cuando estás triste?", "What music do you listen to when you are sad?"),
+    t("¿Tienes un objeto de tu abuela o abuelo?", "Do you have something from your grandmother or grandfather?"),
+    t("¿Qué música escucha tu familia?", "What music does your family listen to?"),
+  ] },
+  "taxi-cortado": { A0: [
+    t("¿Hablas con los taxistas?", "Do you talk to taxi drivers?"),
+    t("¿Cambias de plan fácilmente?", "Do you change plans easily?"),
+    t("¿Qué calle de tu ciudad te gusta?", "Which street in your city do you like?"),
+    t("¿Prefieres el taxi o el autobús?", "Do you prefer taxis or buses?"),
+  ] },
+  "taxi-mayor": { A0: [
+    t("¿Hay una plaza bonita en tu ciudad?", "Is there a nice square in your city?"),
+    t("¿Sabes siempre adónde vas?", "Do you always know where you are going?"),
+    t("¿Te gusta el centro de tu ciudad?", "Do you like your city centre?"),
+    t("¿Decides rápido o despacio?", "Do you decide quickly or slowly?"),
+  ] },
+  "tienda-enchufe": { A0: [
+    t("¿Tu teléfono es nuevo o viejo?", "Is your phone new or old?"),
+    t("¿Qué haces sin teléfono?", "What do you do without a phone?"),
+    t("¿Te gusta la tecnología?", "Do you like technology?"),
+    t("¿Quién arregla las cosas en tu casa?", "Who fixes things at your home?"),
+  ] },
+  "tienda-hielo": { A0: [
+    t("¿Bebes cosas frías o calientes?", "Do you drink cold or hot drinks?"),
+    t("¿Te gusta el calor o el frío?", "Do you like hot or cold weather?"),
+    t("¿Vas a la tienda a pie?", "Do you walk to the shop?"),
+    t("¿Qué hay en tu refrigerador?", "What is in your fridge?"),
+  ] },
+  "tienda-regalo": { A0: [
+    t("¿Es fácil para ti elegir regalos?", "Is it easy for you to choose presents?"),
+    t("¿Qué le gusta a tu mejor amigo o amiga?", "What does your best friend like?"),
+    t("¿Prefieres dar o recibir?", "Do you prefer giving or receiving?"),
+    t("¿Te gustan las tiendas pequeñas?", "Do you like small shops?"),
+  ] },
+  "terraza-cierre": { A0: [
+    t("¿Te gusta la noche o el día?", "Do you like the night or the day?"),
+    t("¿Tienes un lugar favorito con vistas?", "Do you have a favourite place with a view?"),
+    t("¿Miras las estrellas?", "Do you look at the stars?"),
+    t("¿Tus amigos viven cerca?", "Do your friends live nearby?"),
+  ] },
+  "terraza-foto": { A0: [
+    t("¿Sales bien en las fotos?", "Do you look good in photos?"),
+    t("¿Haces selfis?", "Do you take selfies?"),
+    t("¿Tienes una foto favorita?", "Do you have a favourite photo?"),
+    t("¿Te gusta estar con muchas personas?", "Do you like being with lots of people?"),
+  ] },
+};

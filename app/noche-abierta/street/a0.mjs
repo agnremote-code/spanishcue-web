@@ -14,7 +14,6 @@ export const A0_SCENES = {
       despierta: t("Don Teodoro está sentado y bebe agua. Ofelia lo abraza.", "Don Teodoro is sitting up and drinks water. Ofelia hugs him."),
     },
     words: [t("el suelo", "the ground"), t("la ambulancia", "the ambulance"), t("ayuda", "help"), t("respira", "he breathes")],
-    speak: t("¿Llamas a una ambulancia en tu país? ¿Qué número es?", "Do you call an ambulance in your country? What number is it?"),
     nodes: {
       inicio: {
         who: "ofelia", mood: "terror",
@@ -42,7 +41,6 @@ export const A0_SCENES = {
       persiana: t("Cierran el quiosco juntos. «Hasta mañana.»", "You close the newsstand together. “See you tomorrow.”"),
     },
     words: [t("el diario", "the newspaper"), t("las noticias", "the news"), t("hoy", "today"), t("cerrar", "to close")],
-    speak: t("¿Lees las noticias? ¿Dónde?", "Do you read the news? Where?"),
     nodes: {
       inicio: {
         who: "amadeo", mood: "smile",
@@ -61,7 +59,6 @@ export const A0_SCENES = {
       idea: t("Abril escribe tu idea y se va contenta.", "Abril writes down your idea and leaves happy."),
     },
     words: [t("la película", "the film"), t("el cartel", "the poster"), t("el pulpo", "the octopus"), t("raro", "strange")],
-    speak: t("¿Qué película te gusta?", "Which film do you like?"),
     nodes: {
       inicio: {
         who: "abril", mood: "surprised",
@@ -90,7 +87,6 @@ export const A0_SCENES = {
       empujon: t("Vanesa te empuja otra vez. Un vecino la para. Es un caos.", "Vanesa pushes you again. A neighbour stops her. It’s chaos."),
     },
     words: [t("el auto", "the car"), t("la bicicleta", "the bicycle"), t("la sangre", "the blood"), t("la culpa", "the fault")],
-    speak: t("¿Vas en bicicleta? ¿Sí o no?", "Do you ride a bicycle? Yes or no?"),
     nodes: {
       inicio: {
         who: "vanesa", mood: "angry",
@@ -119,7 +115,6 @@ export const A0_SCENES = {
       caida: t("Kevin está en el suelo, pero se ríe. «¡Mañana!»", "Kevin is on the ground, but he laughs. “Tomorrow!”"),
     },
     words: [t("la patineta", "the skateboard"), t("el teléfono", "the phone"), t("grabar", "to record"), t("el truco", "the trick")],
-    speak: t("¿Haces deporte? ¿Cuál?", "Do you do sports? Which one?"),
     nodes: {
       inicio: {
         who: "kevin", mood: "smile",
@@ -146,7 +141,6 @@ export const A0_SCENES = {
       luz: t("Ulises enciende una luz. El punto amarillo brilla.", "Ulises turns on a light. The yellow dot shines."),
     },
     words: [t("el cuadro", "the painting"), t("negro", "black"), t("amarillo", "yellow"), t("la luz", "the light")],
-    speak: t("¿Qué color te gusta?", "Which colour do you like?"),
     nodes: {
       inicio: {
         who: "ulises", mood: "neutral",
@@ -167,7 +161,6 @@ export const A0_SCENES = {
       policia: t("Llega la policía. La fiesta termina. Gonzalo está triste.", "The police arrive. The party ends. Gonzalo is sad."),
     },
     words: [t("la música", "the music"), t("fuerte", "loud"), t("la vecina", "the neighbour"), t("dormir", "to sleep")],
-    speak: t("¿Escuchas música fuerte en casa?", "Do you listen to loud music at home?"),
     nodes: {
       inicio: {
         who: "elena", mood: "angry",
@@ -196,7 +189,6 @@ export const A0_SCENES = {
       adios: t("Sebastián mira la calle. Serio otra vez.", "Sebastián looks at the street. Serious again."),
     },
     words: [t("el hotel", "the hotel"), t("el portero", "the doorman"), t("elegante", "elegant"), t("entrar", "to go in")],
-    speak: t("¿Qué ropa llevas hoy?", "What clothes are you wearing today?"),
     nodes: {
       inicio: {
         who: "sebastian", mood: "neutral",
@@ -218,7 +210,6 @@ export const A0_SCENES = {
       taxi: t("Don Emilio sube al taxi. «¡Adiós!»", "Don Emilio gets into the taxi. “Bye!”"),
     },
     words: [t("el auto", "the car"), t("el color", "the colour"), t("buscar", "to look for"), t("el nieto", "the grandson")],
-    speak: t("¿De qué color es tu auto o el auto de tu familia?", "What colour is your car or your family’s car?"),
     nodes: {
       inicio: {
         who: "emilio", mood: "worried",
@@ -247,7 +238,6 @@ export const A0_SCENES = {
       paseo: t("Renata vuelve a la vinoteca. Tú sigues paseando.", "Renata goes back into the wine shop. You keep walking."),
     },
     words: [t("el vino", "the wine"), t("sin alcohol", "alcohol-free"), t("probar", "to try"), t("rico", "tasty")],
-    speak: t("¿Qué bebes en una cena?", "What do you drink at dinner?"),
     nodes: {
       inicio: {
         who: "renata", mood: "smile",
@@ -268,7 +258,6 @@ export const A0_SCENES = {
       calma: t("Nadie grita. Es suficiente por hoy.", "Nobody shouts. That’s enough for today."),
     },
     words: [t("el celular", "the phone"), t("gritar", "to shout"), t("el brazo", "the arm"), t("calma", "calm")],
-    speak: t("¿Gritas cuando estás enojado?", "Do you shout when you are angry?"),
     nodes: {
       inicio: {
         who: "carolina", mood: "furious",
@@ -296,7 +285,6 @@ export const A0_SCENES = {
       cesta: t("La cesta sube con las llaves. Don Manolo se ríe y aplaude.", "The basket goes up with the keys. Don Manolo laughs and claps."),
     },
     words: [t("las llaves", "the keys"), t("el balcón", "the balcony"), t("tirar", "to throw"), t("la puerta", "the door")],
-    speak: t("¿Dónde pones tus llaves en casa?", "Where do you put your keys at home?"),
     nodes: {
       inicio: {
         who: "manolo", mood: "worried",
@@ -324,7 +312,6 @@ export const A0_SCENES = {
       multa: t("Nilda guarda la multa. Se va despacio con el carrito.", "Nilda puts away the fine. She leaves slowly with her cart."),
     },
     words: [t("el carrito", "the cart"), t("los tamales", "the tamales"), t("el permiso", "the permit"), t("la multa", "the fine")],
-    speak: t("¿Qué comida hay en la calle en tu ciudad?", "What street food is there in your city?"),
     nodes: {
       inicio: {
         who: "garay", mood: "angry",
@@ -351,7 +338,6 @@ export const A0_SCENES = {
       saludo: t("Nieves dice adiós. La ventana sigue con luz.", "Nieves says goodbye. The window is still lit."),
     },
     words: [t("la ventana", "the window"), t("la familia", "the family"), t("cenar", "to have dinner"), t("el hambre", "the hunger")],
-    speak: t("¿Con quién cenas?", "Who do you have dinner with?"),
     nodes: {
       inicio: {
         who: "nieves", mood: "smile",
@@ -371,7 +357,6 @@ export const A0_SCENES = {
       mercado: t("Henrik va al mercado. Tiene mucha hambre.", "Henrik goes to the market. He is very hungry."),
     },
     words: [t("el mapa", "the map"), t("la estación", "the station"), t("todo recto", "straight ahead"), t("el mercado", "the market")],
-    speak: t("¿Qué hay cerca de tu casa?", "What is near your house?"),
     nodes: {
       inicio: {
         who: "henrik", mood: "worried",
@@ -399,7 +384,6 @@ export const A0_SCENES = {
       baile: t("Óscar baila en la plaza. Leire y Mavi bailan. ¡Y tú!", "Óscar dances in the square. Leire and Mavi dance. And you!"),
     },
     words: [t("la fiesta", "the party"), t("las flores", "the flowers"), t("la boda", "the wedding"), t("bailar", "to dance")],
-    speak: t("¿Te gusta bailar? ¿Qué música?", "Do you like dancing? What music?"),
     nodes: {
       inicio: {
         who: "leire", mood: "smile",
@@ -419,7 +403,6 @@ export const A0_SCENES = {
       regalo: t("Tienes una flor. Estás contento.", "You have a flower. You are happy."),
     },
     words: [t("las flores", "the flowers"), t("el ramo", "the bouquet"), t("la madre", "the mother"), t("para mí", "for me")],
-    speak: t("¿Qué flores te gustan?", "Which flowers do you like?"),
     nodes: {
       inicio: {
         who: "mirta", mood: "smile",
@@ -438,7 +421,6 @@ export const A0_SCENES = {
       profe: t("Madame Zulema te cuenta su vida. Se ríen mucho.", "Madame Zulema tells you about her life. You laugh a lot."),
     },
     words: [t("el futuro", "the future"), t("las cartas", "the cards"), t("el año", "the year"), t("creer", "to believe")],
-    speak: t("¿Qué quieres hacer el año que viene?", "What do you want to do next year?"),
     nodes: {
       inicio: {
         who: "zulema", mood: "smile",
@@ -457,7 +439,6 @@ export const A0_SCENES = {
       dormido: t("Canelo duerme. Iker apaga la luz.", "Canelo sleeps. Iker turns off the light."),
     },
     words: [t("el perro", "the dog"), t("ladrar", "to bark"), t("bonito", "cute"), t("los vecinos", "the neighbours")],
-    speak: t("¿Tienes mascota? ¿Cuál?", "Do you have a pet? Which one?"),
     nodes: {
       inicio: {
         who: "iker", mood: "worried",
@@ -478,7 +459,6 @@ export const A0_SCENES = {
       abrazo: t("Joaquín abre los brazos. Muy feliz. Tú también.", "Joaquín opens his arms. Very happy. You too."),
     },
     words: [t("feliz", "happy"), t("la beca", "the scholarship"), t("estudiar", "to study"), t("el país", "the country")],
-    speak: t("¿Qué país quieres visitar?", "Which country do you want to visit?"),
     nodes: {
       inicio: {
         who: "joaquin", mood: "surprised",
