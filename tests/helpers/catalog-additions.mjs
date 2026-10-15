@@ -15,7 +15,7 @@ const additions = [
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:240,')&&line.includes('path:"/hospital-san-casi-vivo"')?[i]:[]);
         assert.equal(at.length,1,'one hospital catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',227,228,229,237,238,240],',',227,228,229,237,238],']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 132);','assert.equal(lessons.length, 131);'],['assert.equal(a1Lessons.length, 42);','assert.equal(a1Lessons.length, 41);']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 132);','assert.equal(lessons.length, 131);'],['assert.equal(a1Lessons.length, 42);','assert.equal(a1Lessons.length, 41);'],["[223,227,228,229,236,238,240].includes(lesson.id)","[223,227,228,229,236,238].includes(lesson.id)"],["assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,7);","assert.equal(lessons.filter(l=>l.levels?.includes('A0')).length,6);"],["relative.startsWith('app/el-reino-de-la-rosa-dormida/')||relative.startsWith('app/hospital-san-casi-vivo/')||","relative.startsWith('app/el-reino-de-la-rosa-dormida/')||"]],
       'tests/rendered-html.test.mjs':[['assert.match(html,/110(?:<!-- -->|\\s)+resultados/);assert.match(html,/125(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/109(?:<!-- -->|\\s)+resultados/);assert.match(html,/124(?:<!-- -->|\\s)+clases totales/);']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/hospital-san-casi-vivo.test.mjs']);\n",'']],
     },
