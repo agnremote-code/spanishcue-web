@@ -1,0 +1,846 @@
+{
+  "version": 1,
+  "authorization": "Owner Ale, 2026-10-15T02:36Z, thread \"Landing GTA para Google Search\" (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA97j7rK1dgUj3RQEzF6dtcj): \"me encanta, solo que esta parte inverti el orden, que se muestre primero interactive grammar y después conversation. creo que la landing debería ser en español, todo en español con opción de inglés también\". The /lp/google-teachers landing, live in English since PR #187/#189, becomes Spanish by default with an ES/EN switcher; its English copy (unchanged in meaning) moves into es/en pairs, where the guard now classifies it as English. Only the exact literals listed here are approved; all other English stays protected.",
+  "additions": [
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Watch a lesson"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Demos"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Pricing"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "OPEN THE CITY ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "My account"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Sign in"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "FOR ONLINE SPANISH TEACHERS"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Interactive Spanish Lessons. "
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Ready to Teach."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Stop preparing Spanish lessons from scratch. Start teaching with them."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "3D conversation worlds, interactive grammar, listening and homework for A1–C2. Open a lesson, share your screen, guide your student."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "OPEN THE FULL CITY ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "WATCH A REAL LESSON — FREE ▶"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "No sign-up to watch"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Runs in the browser"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Cancel anytime"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "What is free and what is PRO"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "FREE GUIDED PREVIEW"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "The 30-second lesson above. No input needed."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "FREE EXPLORATION"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Walk the city centre yourself: ten venues, six levels."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Explore free ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Every world, every grammar class, listening, homework and the teacher panel."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "See what is included ↓"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "PRODUCT DEMOS · REAL RECORDINGS"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "See what your next class could look like."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Product demos by category"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Lesson categories"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "REAL RECORDING"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Student:"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "You:"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open the demo ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open the free lesson ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open the lesson ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Watch the guided lesson ▶"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Try the PRO preview →"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Included in PRO ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "HOW TEACHERS USE SPANISHCUE"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Before, during and after your next class."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "A grammar class open in the SpanishCue library"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Before class"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Choose a ready-to-teach lesson."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Pick by level and skill. The route, the activities and the teacher notes are already there."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Noche Abierta on a shared screen"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "During class"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Share your screen and guide the activities."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "On Zoom, Google Meet, Preply or any call. Your student taps, chooses and talks; you lead the conversation."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Autoestudio homework weeks"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "After class"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Assign homework and review the work."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Send an Autoestudio week. Your students panel shows classes, errors and what to prepare next."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Zoom, Google Meet and Preply are independent platforms; SpanishCue runs in your browser next to any of them."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "PLANS"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Try PRO for a day. Keep it for your classes."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "TRY PRO"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "US$2 for one day of full access. Renews automatically at US$15.50/month unless you cancel before the day ends."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "SUBSCRIBE"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "US$15.50/month, final price with taxes. Cancel anytime before the next renewal."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "INCLUDED"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "The full Noche Abierta city, every 3D world, all interactive grammar classes, listening, Autoestudio homework A1–C2 and the teacher panel."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "FREE"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "The guided preview, the city centre at six levels, the lessons marked FREE above and Autoestudio A1 weeks 1–2. No card needed."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Prices in USD; cards through Paddle, taxes handled at checkout; PayPal at US$15/month. Pay first, then link the purchase to your account. Access is granted only after the payment is confirmed."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "You already have PRO."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open the full city ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Questions teachers ask before paying"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "What exactly am I paying for?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Full access to the whole SpanishCue library: every 3D conversation world, every interactive grammar class, the listening lessons, Autoestudio homework for A1–C2 and the teacher panel."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Can I use this with my own students?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Yes. You open the lesson, share your screen on Zoom, Meet, Preply or any call, and teach. Each lesson is built for live online classes."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Do students need a subscription?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "No. One PRO subscription is yours as the teacher. Students need nothing installed and no account to join your class."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Can I teach directly from my browser?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Yes. Everything runs in Chrome, Safari, Edge and Firefox on desktop; lessons also open on phones and tablets."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Are there lessons for beginners and advanced learners?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Yes, from A1 to C2. Conversation worlds have a version written for each level; grammar and listening are organised by level."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Is homework included?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Yes. Autoestudio has weekly units for A1–C2 with reading, writing, listening and speaking, plus a panel where you follow each student."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Can I cancel?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Yes, at any time from your account, before the next renewal. No calls, no forms."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "What happens after the US$2 trial?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "You get one day of full access. Unless you cancel before the day ends, the subscription continues at US$15.50/month, final price with taxes."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "What is free, and what requires PRO?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Free: the guided preview above, the city centre of Noche Abierta at six levels, the lessons marked FREE on this page, and the first two weeks of Autoestudio A1. Everything marked PRO is in the subscription."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "What teachers say"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "FROM TEACHERS WHO TRIED IT"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Real comments from teachers using SpanishCue. Portraits are illustrative."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Your next Spanish lesson is already waiting."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Stop preparing everything from scratch. Start teaching with SpanishCue."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "SPANISHCUE · Made for teaching Spanish."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Privacy"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Terms"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Contact"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Watch lesson ▶"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Guided teacher preview of Noche Abierta"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "TEACHER PREVIEW"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Welcome"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "01 · Mission"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "02 · Choice"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "03 · Conversation"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Next step"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "You drive"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Loading the city…"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Watch a real lesson ▶"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Replay the lesson ▶"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Take the controls ▶"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "THIS IS A SPANISH LESSON."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Your student explores a real situation. You guide the conversation."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "01 — THE MISSION"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Find the café and order a drink."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Walking to Café Martina…"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "02 — STUDENTS MAKE MEANINGFUL CHOICES"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "03 — TURN EVERY CHOICE INTO REAL CONVERSATION"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Guided demo: this choice is simulated. In class, your student chooses."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Your student talks about their own life. You guide the discussion."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "TEACHER NOTES"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "YOUR STUDENT DRIVES"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Walk to a circle of light and press "
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Talk"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": ". WASD or arrows, drag to look. On a phone, use the stick."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "${n} free places to open · the full city has every level, A1–C2"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "CHOOSE YOUR ANSWER"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "NOW TALK ABOUT YOURSELF"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "I answered out loud →"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Keep exploring →"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Close activity"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "This place is part of the full city. Open it, and every other lesson, with SpanishCue PRO."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Keep exploring the free streets"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "THAT’S ONE ACTIVITY"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Imagine your whole teaching week."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Full city, interactive grammar, listening and homework for A1–C2, ready to open in your next class."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Open the full city ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "EXPLORE ANOTHER LESSON ↓"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Explore the free city yourself ↗"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Full screen is part of PRO"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "⛶ FULL SCREEN · PRO"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Teach it on the whole screen."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Full screen, the complete city and every lesson for A1–C2 open with SpanishCue PRO."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Not now"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Pause Ⅱ"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Resume ▷"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Skip →"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Replay ↺"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Close ×"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "⛶ Exit full screen"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "⛶ Full screen"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "⛶ UNLOCK FULL SCREEN"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "PRO PREVIEW"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Preview of ${title}"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Close preview"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "This is the real class, limited to its first rule and one exercise. The remaining stages open with PRO."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "01 · UNDERSTAND"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "02 · PRACTISE · ONE QUESTION"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Answers"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Not this time."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Locked stages"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Skip the question · see what comes next →"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "See what comes next →"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Ready to teach the full lesson?"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Unlock the complete class, its ${n} remaining stages, and the rest of SpanishCue."
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Continue browsing lessons"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Understand"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Explore"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Practise"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Listen"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Talk"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Write"
+    },
+    {
+      "path": "app/immersive/google-copy.ts",
+      "text": "Close"
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "INTERACTIVE GRAMMAR"
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Reads the rule, taps the answers, sees why each one is right or wrong."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Theory first, then practice, listening, speaking and writing on one numbered route you follow in class."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Real recording of La fábrica de los nombres (A1, free): the rule, an exercise and the answers."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Learns nouns, gender and number from zero, then practises in context."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Open it and teach: understand, explore, practise, listen, talk, write, close."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Chooses ser, estar or hay to describe people and places and gets feedback on each answer."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "A1 class on the classic problem, ready to share."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Explains how long things have been going on with desde and hace."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "A2 class in the live format, with automatic writing review."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "3D CONVERSATION"
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Walks into a real situation, chooses what to say and answers a question about their own life."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "A speaking class that runs itself on your shared screen while you guide the conversation."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Real gameplay of Noche Abierta: the student reaches a venue and a conversation opens."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Walks through a night city, reacts to real situations and talks about their own life."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Set a mission, then guide the conversation that each scene opens."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Jumps between twelve themed zones; every landing opens a question about preferences and opinions."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "A warm-up or a full speaking class; switch the level without leaving the forest."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Lives a fantasy quest with 5–8-turn conversations per character, written for each level."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Pause the story with the teacher controls: hint, go deeper, close, continue."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "LISTENING"
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Listens twice to a real recording, answers the questions, then reads the transcript."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Audio, tasks and transcript inside one page: no files to download, nothing to prepare."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Real recording of El hotel de lo imposible (A2, free): a room, the player and the comprehension task."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Listens to a hotel where nothing works and answers questions with the help their level needs."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Play the audio inside the lesson; the questions unlock after two listens."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Hears accents from across Latin America and connects them with places and people."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "A ready A2 listening class with transcript and tasks."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Explores six sound scenes in a 3D city; the help and the tasks change with the level."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Seven listening routes, from recognising words to analysing irony."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "HOMEWORK & STUDENT PROGRESS"
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Works through a weekly unit between classes: reading, writing, listening and speaking."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Assign a week, then open your students panel: classes, errors and what to prepare next."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Real recording: a student completes an A1 week in Autoestudio, then the teacher panel (demo data) records the class."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Works through weekly units A1–C2; weeks 1 and 2 of A1 are free."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Assign a week, then see what each student did from your teacher panel."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Keeps an error history that builds class by class."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Open “Mis alumnos” (demo with fictional data): errors, difficulties and recommendations."
+    },
+    {
+      "path": "app/immersive/google-showcase.ts",
+      "text": "Teacher panel"
+    },
+    {
+      "path": "app/lp/google-teachers/page.tsx",
+      "text": "Interactive Spanish Lessons for Online Teachers. Ready to Teach. | SPANISHCUE"
+    },
+    {
+      "path": "app/lp/google-teachers/page.tsx",
+      "text": "Stop preparing Spanish lessons from scratch. 3D conversation worlds, interactive grammar, listening and homework for online Spanish teachers, A1–C2. Try PRO for US$2."
+    }
+  ]
+}

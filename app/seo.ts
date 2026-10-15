@@ -55,7 +55,8 @@ export function languageAlternates(pathname: string): Record<string, string> | u
 /** Paths whose default UI language is English when no explicit choice exists. */
 export function isEnglishDefaultPath(pathname: string): boolean {
   const path = normalizePathname(pathname);
-  if (path === "/lp/ele-recursos-profesores") return false;
+  // Spanish-first campaign pages: the switcher or ?lang=en gives English.
+  if (path === "/lp/ele-recursos-profesores" || path === "/lp/google-teachers") return false;
   return (
     path === "/about" ||
     path === "/resources" ||

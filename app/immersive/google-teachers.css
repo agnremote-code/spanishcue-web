@@ -147,3 +147,4 @@
 .gt-flag-co{background:linear-gradient(#fcd116 0 50%,#003893 50% 75%,#ce1126 75%)}.gt-flag-es{background:linear-gradient(#aa151b 0 25%,#f1bf00 25% 75%,#aa151b 75%)}.gt-flag-ar{background:linear-gradient(#74acdf 0 33%,#fff 33% 66%,#74acdf 66%)}
 .gt-voices-note{margin:18px 0 0;font-size:12px;color:#aeadbb}
 @media(max-width:640px){.gt-tour-card{left:10px;right:10px;max-width:none}.gt-tour-free .im-touch{bottom:60px}.gt-tour-drive{top:46px}.gt-tour-activity{top:auto;right:10px;left:10px;bottom:56px;width:auto;max-height:62%}.gt-tour-bar>div{flex-wrap:wrap;justify-content:flex-end}.gt-tour-unlock{padding:18px}}
+.gt .im-nav .language-switcher{margin-left:0}@media(max-width:640px){.gt .im-nav .language-switcher button{font-size:10px;padding:7px 6px}}

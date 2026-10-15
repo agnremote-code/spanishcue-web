@@ -2,7 +2,9 @@
 import {useEffect,useRef,useState,type ComponentType} from 'react';
 import Link from 'next/link';
 import CheckoutButton from '../acceso/CheckoutButton';
+import {useI18n} from '../i18n/LocaleProvider';
 import {trackMarketingEvent} from '../marketing/analytics';
+import {gtCopy} from './google-copy';
 import {CONSENT_EVENT,consentFor} from '../privacy/consent';
 import type {DemoSceneProps} from './DemoScene';
 import type {Activity,Location} from '../noche-abierta/engine.mjs';
@@ -17,6 +19,7 @@ export type TourSpot=Pick<Location,'id'|'name'>&{activity:Pick<Activity,'id'|'ti
 type Props={cafe:Location;spots:TourSpot[];level:string;signedIn:boolean;pro:boolean;exploreHref:string;autoplay:boolean;onExploreMore:()=>void;onBuyClick:()=>void;onUnlockClick:()=>void};
 
 export default function GuidedTour({cafe,spots,level,signedIn,pro,exploreHref,autoplay,onExploreMore,onBuyClick,onUnlockClick}:Props){
+ const {locale}=useI18n();const es=locale==='es';const c=gtCopy(es).tour;
  const [Scene,setScene]=useState<ComponentType<DemoSceneProps>|null>(null);
  const [scene,setSceneState]=useState<TourScene>('idle');
  const [ready,setReady]=useState(false);const [fallback,setFallback]=useState(false);
@@ -103,85 +106,85 @@ export default function GuidedTour({cafe,spots,level,signedIn,pro,exploreHref,au
   const stage=host.current;if(!stage)return;
   if(document.fullscreenElement===stage)void document.exitFullscreen().catch(()=>{});else void stage.requestFullscreen?.().catch(()=>{});
  };
- const label=scene==='welcome'?'Welcome':scene==='walk'?'01 · Mission':scene==='choice'?'02 · Choice':scene==='talk'?'03 · Conversation':scene==='end'?'Next step':scene==='free'?'You drive':'';
+ const label=scene==='idle'?'':c.labels[scene];
  const busy=paused||scene==='end'||scene==='idle'&&!wanted||open!==null||door!==null||unlock;
- return <div ref={host} className={`gt-tour gt-tour-${scene}${fallback?' gt-tour-fallback':''}${full?' gt-tour-full':''}`} data-scene={scene} aria-label="Guided teacher preview of Noche Abierta">
+ return <div ref={host} className={`gt-tour gt-tour-${scene}${fallback?' gt-tour-fallback':''}${full?' gt-tour-full':''}`} data-scene={scene} aria-label={c.aria}>
   <div className="gt-tour-stage">
-   {!fallback&&Scene&&<Scene paused={busy} travel={travel} autopilot={pilot} guided={scene!=='free'} onArrive={()=>arrive()} onInteract={interact} onGate={name=>{if(scene==='free')setDoor(name);}} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={false} />}
+   {!fallback&&Scene&&<Scene paused={busy} travel={travel} autopilot={pilot} guided={scene!=='free'} onArrive={()=>arrive()} onInteract={interact} onGate={name=>{if(scene==='free')setDoor(name);}} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={es} />}
    {fallback&&<video ref={video} className="gt-tour-video" muted playsInline loop preload="none" poster="/brand/campaign/noche-demo-poster.webp" aria-label="Real Noche Abierta gameplay" />}
    {(!ready&&!fallback)&&<div className="gt-tour-poster" style={{backgroundImage:'url(/brand/campaign/noche-demo-poster.webp)'}}>
-    {wanted?<span className="gt-tour-loading" role="status"><i/>Loading the city…</span>:<button type="button" className="im-primary" onClick={()=>host.current?.dispatchEvent(new Event('tour-start'))}>Watch a real lesson ▶</button>}
+    {wanted?<span className="gt-tour-loading" role="status"><i/>{c.loading}</span>:<button type="button" className="im-primary" onClick={()=>host.current?.dispatchEvent(new Event('tour-start'))}>{c.watch}</button>}
    </div>}
-   {(ready||fallback)&&scene==='idle'&&<div className="gt-tour-poster gt-tour-replay"><button type="button" className="im-primary" onClick={start}>{started.current?'Replay the lesson ▶':'Watch a real lesson ▶'}</button>{!fallback&&started.current>0&&<button type="button" className="gt-secondary" onClick={drive}>Take the controls ▶</button>}</div>}
-   <div className="gt-tour-tag"><span>TEACHER PREVIEW · {level}</span>{scene!=='idle'&&<b>{label}</b>}</div>
-   {scene==='welcome'&&<div className="gt-tour-card gt-tour-welcome"><h3>THIS IS A SPANISH LESSON.</h3><p>Your student explores a real situation. You guide the conversation.</p></div>}
-   {scene==='walk'&&<div className="gt-tour-card gt-tour-mission"><span className="im-eyebrow">01 — THE MISSION</span><p className="gt-tour-quote" lang="es">«Busca el café y pide algo para beber.»</p><p>Find the café and order a drink.</p><small><i/>Walking to Café Martina…</small></div>}
+   {(ready||fallback)&&scene==='idle'&&<div className="gt-tour-poster gt-tour-replay"><button type="button" className="im-primary" onClick={start}>{started.current?c.replay:c.watch}</button>{!fallback&&started.current>0&&<button type="button" className="gt-secondary" onClick={drive}>{c.takeControls}</button>}</div>}
+   <div className="gt-tour-tag"><span>{c.tag} · {level}</span>{scene!=='idle'&&<b>{label}</b>}</div>
+   {scene==='welcome'&&<div className="gt-tour-card gt-tour-welcome"><h3>{c.welcomeH}</h3><p>{c.welcomeP}</p></div>}
+   {scene==='walk'&&<div className="gt-tour-card gt-tour-mission"><span className="im-eyebrow">{c.missionEyebrow}</span><p className="gt-tour-quote" lang="es">«Busca el café y pide algo para beber.»</p><p>{c.missionP}</p><small><i/>{c.walking}</small></div>}
    {(scene==='choice'||scene==='talk')&&<div className="gt-tour-activity" role="group" aria-live="polite">
-    <span className="im-eyebrow">{scene==='choice'?'02 — STUDENTS MAKE MEANINGFUL CHOICES':'03 — TURN EVERY CHOICE INTO REAL CONVERSATION'}</span>
+    <span className="im-eyebrow">{scene==='choice'?c.choiceEyebrow:c.talkEyebrow}</span>
     <p className="gt-tour-venue">{cafe.name} · {level} · {activity.title}</p>
     {scene==='choice'?<>
      <p className="gt-tour-situation" lang="es">{activity.situation}</p>
      <p className="gt-tour-prompt" lang="es">{activity.prompt}</p>
      <ol className="gt-tour-options" lang="es">{activity.options?.map((o,i)=><li key={o.id} className={chosen&&o.id===pick?.id?'picked':''}><span>{String.fromCharCode(65+i)}</span>{o.label}{chosen&&o.id===pick?.id&&<b>✓</b>}</li>)}</ol>
-     <small>Guided demo: this choice is simulated. In class, your student chooses.</small>
+     <small>{c.simulated}</small>
     </>:<>
      <p className="gt-tour-chosen" lang="es">“{pick?.label}”</p>
      <p className="gt-tour-close" lang="es">{activity.close}</p>
-     <p className="gt-tour-note">Your student talks about their own life. You guide the discussion.</p>
-     {activity.teacher?.length?<div className="gt-tour-teacher"><span>TEACHER NOTES</span><ul lang="es">{activity.teacher.map(t=><li key={t}>{t}</li>)}</ul></div>:null}
+     <p className="gt-tour-note">{c.ownLife}</p>
+     {activity.teacher?.length?<div className="gt-tour-teacher"><span>{c.teacherNotes}</span><ul lang="es">{activity.teacher.map(t=><li key={t}>{t}</li>)}</ul></div>:null}
     </>}
    </div>}
    {scene==='free'&&!open&&!door&&<div className="gt-tour-card gt-tour-drive" role="status">
-    <span className="im-eyebrow">YOUR STUDENT DRIVES</span>
-    <p>Walk to a circle of light and press <b>Talk</b>. WASD or arrows, drag to look. On a phone, use the stick.</p>
-    <small>{spots.length} free places to open · the full city has every level, A1–C2</small>
+    <span className="im-eyebrow">{c.driveEyebrow}</span>
+    <p>{c.driveA}<b>{c.driveTalk}</b>{c.driveB}</p>
+    <small>{c.driveSmall(spots.length)}</small>
    </div>}
    {scene==='free'&&open&&<div className="gt-tour-activity gt-tour-live" role="group" aria-live="polite">
-    <span className="im-eyebrow">{answer?'NOW TALK ABOUT YOURSELF':'CHOOSE YOUR ANSWER'}</span>
+    <span className="im-eyebrow">{answer?c.nowTalk:c.chooseEyebrow}</span>
     <p className="gt-tour-venue">{open.name} · {level} · {open.activity.title}</p>
     {!answer?<>
      {(open.activity.situation||open.activity.says)&&<p className="gt-tour-situation" lang="es">{open.activity.situation||open.activity.says}</p>}
      <p className="gt-tour-prompt" lang="es">{open.activity.prompt||open.activity.ask}</p>
      {open.activity.options?.length?<ol className="gt-tour-options gt-tour-pick" lang="es">{open.activity.options.map((o,i)=><li key={o.id}><button type="button" onClick={()=>setAnswer(o.label)}><span>{String.fromCharCode(65+i)}</span>{o.label}</button></li>)}</ol>
-     :<button type="button" className="im-primary" onClick={()=>setAnswer('')}>I answered out loud →</button>}
+     :<button type="button" className="im-primary" onClick={()=>setAnswer('')}>{c.answered}</button>}
     </>:<>
      {answer&&<p className="gt-tour-chosen" lang="es">“{answer}”</p>}
      <p className="gt-tour-close" lang="es">{open.activity.close||open.activity.ask||open.activity.prompt}</p>
-     {open.activity.teacher?.length?<div className="gt-tour-teacher"><span>TEACHER NOTES</span><ul lang="es">{open.activity.teacher.map(t=><li key={t}>{t}</li>)}</ul></div>:null}
-     <button type="button" className="im-primary" onClick={()=>setOpen(null)}>Keep exploring →</button>
+     {open.activity.teacher?.length?<div className="gt-tour-teacher"><span>{c.teacherNotes}</span><ul lang="es">{open.activity.teacher.map(t=><li key={t}>{t}</li>)}</ul></div>:null}
+     <button type="button" className="im-primary" onClick={()=>setOpen(null)}>{c.keepExploring}</button>
     </>}
-    <button type="button" className="gt-tour-x" onClick={()=>setOpen(null)} aria-label="Close activity">×</button>
+    <button type="button" className="gt-tour-x" onClick={()=>setOpen(null)} aria-label={c.closeActivity}>×</button>
    </div>}
    {scene==='free'&&door&&<div className="gt-tour-card gt-tour-door" role="group" aria-live="polite">
     <span className="im-eyebrow">PRO · {door}</span>
-    <p>This place is part of the full city. Open it, and every other lesson, with SpanishCue PRO.</p>
-    {!pro?<div className="gt-tour-checkout gt-tour-checkout-one" onClickCapture={onBuyClick}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>:<Link className="im-primary" href="/noche-abierta">Open the full city ↗</Link>}
-    <button type="button" className="gt-quiet" onClick={()=>setDoor(null)}>Keep exploring the free streets</button>
+    <p>{c.doorP}</p>
+    {!pro?<div className="gt-tour-checkout gt-tour-checkout-one" onClickCapture={onBuyClick}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>:<Link className="im-primary" href="/noche-abierta">{c.openFull}</Link>}
+    <button type="button" className="gt-quiet" onClick={()=>setDoor(null)}>{c.doorBack}</button>
    </div>}
    {scene==='end'&&<div className="gt-tour-end">
-    <span className="im-eyebrow">THAT&apos;S ONE ACTIVITY</span>
-    <h3>Imagine your whole teaching week.</h3>
-    <p>Full city, interactive grammar, listening and homework for A1–C2, ready to open in your next class.</p>
-    {!pro?<div className="gt-tour-checkout" onClickCapture={onBuyClick}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>:<Link className="im-primary" href="/noche-abierta">Open the full city ↗</Link>}
-    <div className="gt-tour-end-links">{!fallback&&<button type="button" className="gt-secondary" onClick={drive}>TAKE THE CONTROLS ▶</button>}<button type="button" className="gt-secondary" onClick={onExploreMore}>EXPLORE ANOTHER LESSON ↓</button><Link className="gt-quiet" href={exploreHref}>Explore the free city yourself ↗</Link></div>
+    <span className="im-eyebrow">{c.endEyebrow}</span>
+    <h3>{c.endH}</h3>
+    <p>{c.endP}</p>
+    {!pro?<div className="gt-tour-checkout" onClickCapture={onBuyClick}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>:<Link className="im-primary" href="/noche-abierta">{c.openFull}</Link>}
+    <div className="gt-tour-end-links">{!fallback&&<button type="button" className="gt-secondary" onClick={drive}>{c.takeControls.toUpperCase()}</button>}<button type="button" className="gt-secondary" onClick={onExploreMore}>{c.explore}</button><Link className="gt-quiet" href={exploreHref}>{c.exploreFree}</Link></div>
    </div>}
-   {unlock&&<div className="gt-tour-unlock" role="dialog" aria-label="Full screen is part of PRO">
-    <span className="im-eyebrow">⛶ FULL SCREEN · PRO</span>
-    <h3>Teach it on the whole screen.</h3>
-    <p>Full screen, the complete city and every lesson for A1–C2 open with SpanishCue PRO.</p>
+   {unlock&&<div className="gt-tour-unlock" role="dialog" aria-label={c.unlockAria}>
+    <span className="im-eyebrow">{c.unlockEyebrow}</span>
+    <h3>{c.unlockH}</h3>
+    <p>{c.unlockP}</p>
     <div className="gt-tour-checkout" onClickCapture={onUnlockClick}><CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" paddleOnly /></div>
-    <button type="button" className="gt-quiet" onClick={()=>setUnlock(false)}>Not now</button>
+    <button type="button" className="gt-quiet" onClick={()=>setUnlock(false)}>{c.notNow}</button>
    </div>}
   </div>
   {scene!=='idle'&&<div className="gt-tour-bar">
    <span className="gt-tour-steps" aria-hidden="true">{(['welcome','walk','choice','talk','end'] as TourScene[]).map(s=><i key={s} className={s===scene||scene==='free'?'on':''}/>)}</span>
    <div>
-    {scene!=='end'&&scene!=='free'&&<button type="button" onClick={()=>setPaused(!paused)}>{paused?'Resume ▷':'Pause Ⅱ'}</button>}
-    {scene!=='end'&&scene!=='free'&&<button type="button" onClick={skip}>Skip →</button>}
-    {scene!=='free'&&!fallback&&scene!=='welcome'&&<button type="button" onClick={drive}>Take the controls ▶</button>}
-    {(scene==='end'||scene==='free')&&<button type="button" onClick={start}>Replay ↺</button>}
-    <button type="button" className={`gt-tour-fs${pro?'':' locked'}`} onClick={fullscreen} aria-pressed={full}>{pro?full?'⛶ Exit full screen':'⛶ Full screen':'⛶ UNLOCK FULL SCREEN'}</button>
-    <button type="button" onClick={close}>Close ×</button>
+    {scene!=='end'&&scene!=='free'&&<button type="button" onClick={()=>setPaused(!paused)}>{paused?c.resume:c.pause}</button>}
+    {scene!=='end'&&scene!=='free'&&<button type="button" onClick={skip}>{c.skip}</button>}
+    {scene!=='free'&&!fallback&&scene!=='welcome'&&<button type="button" onClick={drive}>{c.takeControls}</button>}
+    {(scene==='end'||scene==='free')&&<button type="button" onClick={start}>{c.replayBtn}</button>}
+    <button type="button" className={`gt-tour-fs${pro?'':' locked'}`} onClick={fullscreen} aria-pressed={full}>{pro?full?c.fsExit:c.fs:c.fsUnlock}</button>
+    <button type="button" onClick={close}>{c.close}</button>
    </div>
   </div>}
  </div>;
