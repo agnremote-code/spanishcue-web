@@ -72,7 +72,7 @@ Each exponent is targeted by at least one beat (machine-checked; see the LQG fil
 #### Beat 2 · `confirmar` · **Contraste lingüístico** (contrast) · exponent: `se-las` · speaker: Doña Marisol
 
 - Situation: Doña Marisol te da las dos bolsas. Una tiene botellas y pesa mucho.
-- Prompt: **Confírmale que se las llevas hasta el cuarto piso.**
+- Prompt: **Confírmale que vas a llevar las dos bolsas hasta el cuarto piso.**
 - ✅ «Sí, seguro. Se las llevo hasta arriba.»  
   Feedback: Bien: «se» es para ella y «las» son las bolsas.
 - ❌ «Sí, seguro. Le las llevo hasta arriba.» · feature: *combinación de pronombres*  
@@ -83,8 +83,8 @@ Each exponent is targeted by at least one beat (machine-checked; see the LQG fil
 
 #### Beat 3 · `prestar` · **Contraste lingüístico** (contrast) · exponent: `me-presta`, `se-lo-devuelvo` · speaker: Doña Marisol
 
-- Situation: Tocas en el 4.º A, la puerta de Inés. Nadie abre. Quieres llamarla, pero tu teléfono tiene un uno por ciento de batería y se apaga. Doña Marisol todavía está en su puerta: «¿Qué pasa? ¿No está su amiga?»
-- Prompt: **Pídele prestado un cargador y dile cuándo se lo devuelves.**
+- Situation: Tocas el timbre del 4.º A, la puerta de Inés. Nadie abre. Quieres llamarla, pero tu teléfono tiene un uno por ciento de batería y se apaga. Doña Marisol todavía está en su puerta: «¿Qué pasa? ¿No está su amiga?»
+- Prompt: **Pídele prestado un cargador y prométele que vas a devolverlo pronto.**
 - ✅ «¿Me presta su cargador un momento? Se lo devuelvo enseguida.»  
   Feedback: Bien: «¿me presta…?» pide el favor, y «se lo devuelvo» promete devolverle a ella el cargador.
 - ❌ «¿Le presto mi cargador un momento? Se lo devuelvo enseguida.» · feature: *dirección del favor*  
@@ -99,7 +99,7 @@ Each exponent is targeted by at least one beat (machine-checked; see the LQG fil
 - Prompt: **Contesta a Joaquín de verdad: di que sí, di que sí con una condición o di que no y explica por qué.**
 - Frames (not scored, any real answer is valid):
   - «Claro, te ayudo. ¿Hasta qué hora?» (si)
-  - «Sí, pero a las diez no puedo. ¿Te ayudo a las doce?» (condicion)
+  - «Sí, te ayudo, pero solo hasta las doce.» (condicion)
   - «Lo siento, mañana no puedo porque… ¿Te ayudo otro día?» (no)
 - Teacher: No hay respuesta correcta. Escucha si cambia a tú con Joaquín (él te trata de tú) y si da una razón con «porque».
 - Then: «Bueno, gracias por contestar. Nos vemos en la cena.»
@@ -115,7 +115,7 @@ Each exponent is targeted by at least one beat (machine-checked; see the LQG fil
 ## 3. Listening (its own, not a reuse)
 
 It's played after the circle. It retells the same evening in the past (A2: indefinido + imperfecto, «llegué… ya no podía más», «se le apagó»), so learners hear the exponents again in a new tense and from other people's mouths («me las llevó», «le presté mi cargador»). It follows `app/escucha-3d/content/README.md` for one item, in the item shape:
-- 116 words (A2 range 70–120);
+- 119 words (A2 range 70–120);
 - 3 speakers from `voices.json`, one voice each;
 - 4 choices × 3 options, in audio order, the first on the general idea;
 - 3 open questions with models;
@@ -139,11 +139,12 @@ Transcript:
 - **Marisol:** Otra vez, hija. Llegué del mercado con dos bolsas enormes y en el primer piso ya no podía más.
 - **Inés:** Ay, no. ¿Y quién la ayudó?
 - **Marisol:** Tu amiga. Me las llevó hasta arriba, las dos.
-- **Joaquín:** Y después tocó tu puerta, pero no estabas. Y se le apagó el teléfono.
-- **Marisol:** Por eso le presté mi cargador. Ahora está en mi cocina, tomando un café.
+- **Joaquín:** Y después tocó el timbre, pero no estabas. Y se le apagó el teléfono.
+- **Marisol:** Por eso le presté mi cargador. Tu amiga está ahora en mi cocina, tomando un café.
 - **Inés:** ¡Perdón! Bajé a comprar hielo y dejé el teléfono en casa.
 - **Joaquín:** Tranquila. Le di tu llave, como me pediste.
-- **Inés:** Gracias, Joaquín. Oye, ¿mañana te ayudo con la mudanza?
+- **Inés:** Gracias, Joaquín. ¿Mañana te ayudo con la mudanza?
+- **Joaquín:** ¡Sí, gracias!
 - **Inés:** Doña Marisol, ¿viene a cenar con nosotros?
 - **Marisol:** ¿A cenar? Bueno, pero yo llevo las bebidas.
 
@@ -160,7 +161,7 @@ Open (the learner chooses one and answers aloud):
 - ¿Qué cosas prestas y qué cosas no prestas nunca? *Model:* Presto libros, pero mi teléfono no se lo presto a nadie.
 - ¿Alguna vez olvidaste el teléfono en casa? ¿Qué pasó? *Model:* Sí, el mes pasado. Llegué tarde al trabajo y no pude avisar.
 
-Gaps: Por eso le [presté] mi [cargador]. Ahora está en mi [cocina], tomando un [café].
+Gaps: Por eso le [presté] mi [cargador]. Tu amiga está ahora en mi [cocina], tomando un [café].
 
 Glossary:
 
@@ -186,7 +187,7 @@ Glossary:
 ## 5. Indexable teacher page copy (Indexable Teacher Page standard)
 
 The page is English, like the conversation hub it hangs from (`/spanish-conversation-activities`, English title and copy). Spanish appears only in learner material.
-- **SEO structure is Alejandro's** (path, title, H1, schema, internal links). Below is my proposal, which he decides.
+- **SEO structure is Alejandro's** (path, title, H1, schema, internal links). Title and description below are his G4 edits (R6); H1 and path as proposed. Build conditions (his): a breadcrumb under the `/spanish-conversation-activities/a2` hub, a link from the A2 hub to this page, and a canonical on the clean path.
 - The **pedagogy is mine.**
 
 Search evidence and its limits:
@@ -195,9 +196,9 @@ Search evidence and its limits:
 - To avoid cannibalizing `/spanish-conversation-activities/a2` ("A2 Spanish Conversation Activities (Elementary)"), the title aims at the narrower **function** query, not the level query. Alejandro should check query data (Windsor search analytics) before the title is final.
 
 - Proposed path: `/spanish-conversation-activities/a2/asking-for-favors` (Alejandro decides)
-- `<title>`: Asking for Favors in Spanish: Free A2 Role-Play with Audio | SPANISHCUE
+- `<title>`: Asking for Favors in Spanish: Free A2 Role-Play | SPANISHCUE
 - H1: Asking for and offering favors in Spanish: a free A2 role-play with audio
-- Meta description: A free A2 Spanish speaking activity: offer help, borrow something and promise to give it back, in a short playable scene with feedback, a listening and ten role cards. 30 minutes, ready to project.
+- Meta description: Free A2 Spanish role-play: offer help, borrow something and promise to give it back. A playable scene with feedback, a listening and 10 role cards. 30 min.
 - Stated level: A2
 - One communicative objective: Ask for, offer and return favors: ¿Le llevo…?, ¿Me presta…?, Se lo devuelvo…, and answer a request.
 - Teaching sequence: 30 min (+10 min extension)
@@ -215,7 +216,7 @@ Role cards (authored, classroom-usable; each targets one exponent):
 
 1. Un compañero de clase se muda el sábado. Ofrécele ayuda y pregunta a qué hora. (`le-llevo`)
 2. Va a llover y no tienes paraguas. Pídele uno prestado a tu vecina y dile cuándo se lo devuelves. (`me-presta`)
-3. Una compañera no tiene bolígrafo en el examen. Ofrécele el tuyo. (`le-llevo`)
+3. Una compañera llega a clase con muchos libros. Ofrécele ayuda para llevarlos. (`le-llevo`)
 4. Tu vecino mayor tiene la compra en la puerta del edificio. Ofrécele ayuda; él te habla de usted. (`le-llevo`)
 5. Le prestaste un libro a un amigo hace un mes. Pregúntale con amabilidad cuándo te lo devuelve. (`se-lo-devuelvo`)
 6. Un compañero te pide tus apuntes, pero los necesitas hoy. Di que no y propón otro día. (`echar-una-mano`)
@@ -245,4 +246,9 @@ Standard checklist (detail in the LQG file):
 2. Render the four beats (contrast: retry with feedback; stimulus: frames, unscored), then the five closing questions. Keep each card's context ≤350 characters, and the longest card fully reachable at 390 px (G5a).
 3. Generate the listening audio through the pipeline (see the build note in §3), and run `check-escucha-3d` rules on it with the 1-item exemption documented.
 4. Build the page, poster-first with WebGL on click (§3.2). Alejandro does the SEO wiring. I do the G5 legibility check.
-5. Run the LQG audit file `docs/audits/grow-001-pedagogy-YYYYMMDD.md` on the build PR (N1). It can copy this PR's LQG file and add the rendered checks (G3 on `app/`, G5).
+5. G4 build conditions from Alejandro's review (LQG file, section B):
+   - (a) expose only this circle's listening, with no Noche Abierta PRO escucha items, and verify the FAQ sentence "the full world is PRO" against `app/access-policy.ts`;
+   - (b) option labels are never spoken by TTS (they sit outside «», so `voice.ts` shouldn't read them; confirm it), so «Le las llevo» is never voiced as a model;
+   - (c) the 1-item listening exemption is narrow and documented: exact path + reason in the test (exempt only from the ≥6-country, ≥4-dialogue and answer-spread rules), never a skip by directory;
+   - SEO: a breadcrumb under the A2 hub, a link from the A2 hub, and a canonical on the clean path.
+6. Run the LQG audit file `docs/audits/grow-001-pedagogy-YYYYMMDD.md` on the build PR (N1). It can copy this PR's LQG file and add the rendered checks (G3 on `app/`, G5).
