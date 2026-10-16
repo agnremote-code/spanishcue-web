@@ -1,0 +1,358 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale), typed «apruebo» in the project thread «SPANISHCUE — TWO AUDIENCES, ONE BRAND» on 2026-10-16 03:33Z (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAMt19PYgksMhu36J771x5rp), answering the request to approve the new English copy: the Teach Spanish / Learn Spanish selector, the English versions of /para-profesores and /aprender-espanol, and the two footer links.",
+  "additions": [
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "For teachers"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Learn Spanish"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Learn Spanish Online Through Immersion | SPANISHCUE"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Learn Spanish by exploring a 3D city, practising real situations, listening to Spanish in context and practising grammar. Start free, no sign-up."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "3D city"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Walk the city centre: ten places, a different situation in each one."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Week 1"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Reading, writing, listening and speaking, step by step."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Listening"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Ten rooms with audio and comprehension questions."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Grammar"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Nouns, gender and number in a 3D factory, with self-checking challenges."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "For Spanish learners"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Learn Spanish"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "by living it,"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "not memorizing it."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Aprende español viviéndolo, no memorizándolo."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Walk through a 3D city, handle real situations in its places, listen to Spanish in context and practise grammar with interactive activities."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "EXPLORE A FREE EXPERIENCE"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Free · No sign-up · No card"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "See what you can do"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Five ways to learn"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "You learn by doing things in Spanish."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Learn by exploring"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Walk the Noche abierta city and step into its places whenever you like."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Practise real situations"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "A café, a taxi, a shop: you decide what to say and see what happens."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Listen to Spanish in context"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Audio stories with comprehension questions, with voices from different countries."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Interact with immersive scenes"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "3D worlds you move through with the keyboard, the mouse or a touch screen."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Move forward with activities"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Self-study weeks with reading, writing, listening and speaking."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Start free"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Choose where to begin."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "No sign-up"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Free with a free account"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Start"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Some lessons ask for a free account to continue after the first minutes. We never ask for a card to try."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "How you start"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Enter the city"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "no sign-up"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Choose a place"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "each place is a situation"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Keep practising"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "with listening, grammar and self-study"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Your first conversation in Spanish starts here."
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Teach Spanish? See SpanishCue for teachers"
+    },
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Explore free"
+    },
+    {
+      "path": "app/audience/AudienceSwitch.tsx",
+      "text": "Teach Spanish"
+    },
+    {
+      "path": "app/audience/AudienceSwitch.tsx",
+      "text": "Learn Spanish"
+    },
+    {
+      "path": "app/audience/AudienceSwitch.tsx",
+      "text": "Choose your experience"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Ready-to-Teach Spanish Lesson Materials | SPANISHCUE"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Interactive Spanish lessons ready to teach, A1 to C2: grammar, conversation, listening and pronunciation on screen. Try a free lesson, no card."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Interactive Spanish lessons for teachers"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Grammar"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Conversation"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Listening"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Listening"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "For your teaching week"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Less prep. More teaching."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Save time on lesson prep"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Pick by level and topic, open the lesson and teach. No slide building every week."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Visual materials, ready to teach"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Explanation, practice and wrap-up on screen, made to share in your online lessons."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "More immersive lessons"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "3D cities, listening with voices from different countries and grammar worlds you explore with your student."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Real conversations"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Every lesson ends in speaking: questions, situations and choices that get students talking."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Try before you buy"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Open a real lesson for free, no card, and decide later."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Free lessons"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Try a full lesson with your next student."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "These are real lessons from the library, not cut-down demos."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Open the lesson"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "How it works"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Choose"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "by topic and level"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Open"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "everything ready on screen"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Teach"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "with real conversation"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Your next lesson is ready."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "${count} visual lessons from A1 to C2 in one library."
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "TRY A FREE LESSON"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "EXPLORE THE LIBRARY"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "See plans and pricing"
+    },
+    {
+      "path": "app/para-profesores/page.tsx",
+      "text": "Want to learn Spanish? See the student experience"
+    }
+  ]
+}

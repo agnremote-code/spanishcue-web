@@ -42,9 +42,15 @@ export async function runSmoke(origin, fetcher = fetch) {
   await check("/demo/noche-abierta", 200);
   // Public pages must load every script chunk they reference, never a protected one:
   // the campaign landing and the FREE sample lessons that anonymous visitors open.
-  for (const path of ["/lp/google-teachers", "/la-fabrica-de-los-nombres", "/el-hotel-de-lo-imposible"]) {
+  // The two audience landings, the teacher home and the student's free week too.
+  for (const path of ["/lp/google-teachers", "/la-fabrica-de-los-nombres", "/el-hotel-de-lo-imposible", "/", "/para-profesores", "/aprender-espanol", "/autoestudio/a1/semana-1"]) {
     const html = await (await check(path, 200)).text();
     for (const [, src] of html.matchAll(/<script[^>]+src="(\/assets\/[^"]+\.js)"/g)) await check(src, 200);
+  }
+  for (const [path, canonical] of [["/para-profesores", "https://spanishcue.com/para-profesores"], ["/aprender-espanol", "https://spanishcue.com/aprender-espanol"]]) {
+    const html = await (await check(path, 200)).text();
+    assert.ok(html.includes(`<link rel="canonical" href="${canonical}"`), `${path} must carry its own canonical`);
+    assert.match(html, /class="audience-switch/, `${path} must render the Teach/Learn selector`);
   }
   assert.match(await (await check("/acceso", 200)).text(), /SPANISHCUE/i);
   const founder = await (await check("/api/billing/founder-status", 200)).json();

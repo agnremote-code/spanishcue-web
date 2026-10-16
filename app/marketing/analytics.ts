@@ -25,6 +25,12 @@ export const marketingEvents = [
   "search_used",
   "filter_used",
   "free_lesson_completed",
+  // Two audiences (2026-10-15): which experience the visitor picked and which
+  // free demo they started. None of these is a purchase or a conversion.
+  "audience_selected_teacher",
+  "audience_selected_student",
+  "teacher_demo_started",
+  "student_demo_started",
 ] as const;
 
 export type MarketingEvent = (typeof marketingEvents)[number];
@@ -72,6 +78,31 @@ const allowedPropertyKeys = new Set([
   "method", "placement", "plan", "query_length", "signed_in", "value",
   "transaction_id", "experiment_id", "variant", "zone", "activity_id",
 ]);
+
+export type VisitorAudience = "teacher" | "student";
+const audienceKey = "spanishcue.audience.v1";
+
+/**
+ * The audience every event is attributed to. The page decides first (the
+ * student landing is student, the teacher home and landing are teacher);
+ * elsewhere the last experience the visitor chose in this tab applies, and
+ * the teacher funnel is the default because it is the only one that sells.
+ */
+export function currentAudience(): VisitorAudience {
+  if (typeof window === "undefined") return "teacher";
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  if (path === "/aprender-espanol") return "student";
+  if (path === "/" || path === "/para-profesores") return "teacher";
+  try {
+    return window.sessionStorage.getItem(audienceKey) === "student" ? "student" : "teacher";
+  } catch {
+    return "teacher";
+  }
+}
+
+export function rememberAudience(audience: VisitorAudience) {
+  try { window.sessionStorage.setItem(audienceKey, audience); } catch {}
+}
 
 function clean(value: string | null) {
   return value?.trim().slice(0, 180) || undefined;
@@ -249,6 +280,7 @@ export function trackMarketingEvent(
     ),
     ...funnelContext(),
     ...safeProperties(properties),
+    audience: currentAudience(),
   };
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push(payload);

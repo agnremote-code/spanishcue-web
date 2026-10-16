@@ -68,6 +68,11 @@ const publicRoots = new Set([
   "app/immersive/GoogleTeachersLanding.tsx",
   "app/immersive/GuidedTour.tsx",
   "app/lesson-reports/LessonReportRoutes.tsx",
+  // Audience landings and the header selector: navigation and copy only.
+  "app/audience/AudienceSwitch.tsx",
+  "app/audience/AudienceTopbar.tsx",
+  "app/audience/TrackedLink.tsx",
+  "app/SpanishCueBrand.tsx",
   "app/resources/ResourceCatalog.tsx",
   // Public question bank filters: the questions are free teaching content and
   // already sit in the server HTML; the chunk carries no lesson bodies.

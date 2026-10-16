@@ -23,6 +23,8 @@ export const autoestudioLevelPaths = ["a1", "a2", "b1", "b2", "c1", "c2"].map((l
  */
 const curatedRoutes: { path: string; priority: number; changeFrequency: Frequency }[] = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/para-profesores", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/aprender-espanol", priority: 0.8, changeFrequency: "monthly" },
   { path: "/spanish-teacher-resources", priority: 0.9, changeFrequency: "weekly" },
   { path: CONVERSATION_HUB_PATH, priority: 0.9, changeFrequency: "weekly" },
   ...conversationLevels.map((level) => ({ path: level.path, priority: 0.8, changeFrequency: "monthly" as Frequency })),

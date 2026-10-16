@@ -314,3 +314,27 @@ Google's AI optimization guide (2026-05-15, updated 2026-07-10): no llms.txt, no
 3. Publish one “bookmarkable” teacher page where no strong owner exists, built from real lessons: Spanish sub plans (a free, printable 45-minute plan per level pointing at the free classrooms) or first-day activities; one URL, dated, with an author line.
 4. Add printable/projectable companions (PDF or slides) to the three best free classrooms and the kits; it is the format every winning competitor offers and the one SpanishCue lacks.
 5. Record three short lesson demos for YouTube and link them from the hubs (VideoObject schema only if the video is on the page): the single most cited source type in AI answers for education queries.
+
+## 13. Two audiences, one brand (2026-10-15)
+
+SpanishCue now speaks to teachers and to learners without splitting the brand or the platform.
+
+| URL | Audience | Primary intent (default language Spanish) | Secondary terms | Must not compete with |
+| --- | --- | --- | --- | --- |
+| `/` | Teacher | Brand + ready-to-teach library (“clases de español listas para enseñar”) | interactive Spanish lessons for teachers (EN copy) | Unchanged; stays the main teacher landing. |
+| `/para-profesores` | Teacher | “clases interactivas para profesores de español” (campaign-ready commercial landing) | Spanish lesson materials, Spanish teaching activities | `/ele-recursos-profesores` keeps “recursos ELE”; `/spanish-teacher-resources` keeps the English resource hub. |
+| `/aprender-espanol` | Learner | “aprender español online con actividades interactivas” | learn Spanish online / through immersion, Spanish listening practice, Spanish grammar practice (bilingual hero line + EN copy) | `/autoestudio` keeps “curso de español autoestudio”. |
+
+Rules:
+
+- Both new pages are single-URL documents: one clean canonical, no hreflang (the UI language follows the locale cookie, like every other page), no `?lang=` variants, both in the sitemap. Each has its own title, description, H1, Open Graph image and `WebPage` JSON-LD with an `EducationalAudience` (`teacher` / `student`). No offers, ratings or reviews are declared.
+- `/para-profesores` reuses the home hero component and image; its kicker (“Clases interactivas para profesores de español”) sits inside the H1 so the H1 differs from the home while the composition stays identical.
+- The learner page promises only what works without a teacher today: the public Noche abierta demo (no sign-up, no card), the free Autoestudio A1 week and two free lessons (which ask for a free account after the first minutes, and the page says so). No student plan, price or checkout exists; add a learner offer only after a validated purchase path.
+- The header selector (“Enseñar español / Aprender español”, “Teach Spanish / Learn Spanish”) is two plain links to `/` and `/aprender-espanol`; it never blocks the page.
+
+Measurement:
+
+- New events (none is a conversion): `audience_selected_teacher`, `audience_selected_student` (selector clicks), `teacher_demo_started` (teacher free-lesson CTAs), `student_demo_started` (learner experience CTAs).
+- Every event now carries `audience` = `teacher` | `student` (page first, then the last choice in the tab; teacher by default). Register it as an event-scoped custom dimension in GA4 to segment reports.
+- Teacher checkout and purchase stay the existing contract: `checkout_start` (one per opened checkout) and the server-verified `trial_purchase` / `first_subscription_payment` (the only Google Ads purchase). `teacher_checkout_started` / `teacher_purchase_completed` are those events filtered by `audience = teacher`; no duplicate events were added. A learner purchase event will exist only with a learner checkout.
+- Campaign naming: `utm_campaign` starts with `teacher_` for teacher campaigns and `student_` for future learner campaigns; organic traffic has no UTM. Teacher ads keep pointing at `/lp/*` or `/para-profesores`; learner ads, when they exist, point at `/aprender-espanol`.

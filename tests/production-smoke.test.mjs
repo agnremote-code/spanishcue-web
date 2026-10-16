@@ -22,6 +22,7 @@ function fixture(overrides = {}) {
     }
     if (path.startsWith('/does-not-exist')) return new Response('404', { status: 404 });
     if (path === '/la-fabrica-de-los-nombres') return new Response('<html>La Fábrica de los Nombres</html>');
+    if (path === '/para-profesores' || path === '/aprender-espanol') return new Response(`<html><link rel="canonical" href="https://spanishcue.com${path}"/><nav class="audience-switch"></nav></html>`);
     return new Response('<html>SPANISHCUE</html>');
   };
 }
@@ -83,4 +84,9 @@ test('staging (Sandbox, no Paddle) passes the billing smoke without Live checks'
     return normal(url, options);
   });
   assert.ok(!results.some(r => r.path === '/api/billing/paddle/webhook'));
+});
+
+test('an audience landing without its own canonical fails smoke', async () => {
+  const broken = fixture({ '/aprender-espanol': () => new Response('<html><link rel="canonical" href="https://spanishcue.com/"/><nav class="audience-switch"></nav></html>') });
+  await assert.rejects(runSmoke('https://spanishcue.com', broken), /aprender-espanol must carry its own canonical/);
 });
