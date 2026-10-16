@@ -12,27 +12,36 @@ export async function listLinks(db: D1Database, ownerId: string): Promise<Roster
 }
 
 /**
- * Gives every named Homework learner without a link its own student, once. The link insert is the
- * lock: the student row is only written when this request's link won, so two tabs never duplicate.
- * A learner whose student the teacher deleted keeps its old link and is not imported again.
+ * Gives every Homework learner without a link its own student, once. A learner created without a
+ * name gets a readable placeholder (level and start date) the teacher can rename. The link insert is
+ * the lock: the student row is only written when this request's link won, so two tabs never
+ * duplicate. A learner whose student the teacher deleted keeps its old link and is not imported again.
+ * All learners go in one batch, so the first visit imports the whole roster in a single round trip.
  */
 export async function syncRoster(db: D1Database, ownerId: string, now = new Date().toISOString(), id = () => crypto.randomUUID()): Promise<number> {
-  const pending = await db.prepare(`SELECT l.id, l.alias, (SELECT p.level FROM autoestudio_passes p WHERE p.learner_id = l.id AND p.owner_id = l.owner_id ORDER BY p.created_at DESC LIMIT 1) AS level
-    FROM autoestudio_learners l WHERE l.owner_id = ? AND l.alias IS NOT NULL
-    AND NOT EXISTS (SELECT 1 FROM student_homework_links k WHERE k.owner_id = l.owner_id AND k.learner_id = l.id) LIMIT 200`).bind(ownerId).all<{ id: string; alias: string; level: string | null }>();
-  let created = 0;
-  for (const learner of pending.results) {
+  const pending = await db.prepare(`SELECT l.id, l.alias, l.created_at, (SELECT p.level FROM autoestudio_passes p WHERE p.learner_id = l.id AND p.owner_id = l.owner_id ORDER BY p.created_at DESC LIMIT 1) AS level
+    FROM autoestudio_learners l WHERE l.owner_id = ?
+    AND NOT EXISTS (SELECT 1 FROM student_homework_links k WHERE k.owner_id = l.owner_id AND k.learner_id = l.id) ORDER BY l.created_at LIMIT 200`).bind(ownerId).all<{ id: string; alias: string | null; created_at: string; level: string | null }>();
+  if (!pending.results.length) return 0;
+  const statements = pending.results.flatMap((learner) => {
     const studentId = id();
-    const level = learner.level && LEVELS.includes(learner.level) ? learner.level.toUpperCase() : "Sin definir";
-    const [link] = await db.batch([
+    const known = learner.level && LEVELS.includes(learner.level) ? learner.level.toUpperCase() : null;
+    const alias = learner.alias?.trim() || placeholderName(known, learner.created_at);
+    return [
       db.prepare("INSERT OR IGNORE INTO student_homework_links (owner_id, learner_id, student_id, created_at) VALUES (?, ?, ?, ?)").bind(ownerId, learner.id, studentId, now),
       db.prepare(`INSERT INTO students (id, owner_id, alias, last_name, email, level, goal, status, created_at, updated_at)
         SELECT ?, ?, ?, NULL, NULL, ?, '', 'active', ?, ? WHERE EXISTS (SELECT 1 FROM student_homework_links WHERE owner_id = ? AND learner_id = ? AND student_id = ?)`)
-        .bind(studentId, ownerId, learner.alias.slice(0, 80), level, now, now, ownerId, learner.id, studentId),
-    ]);
-    if (link.meta.changes) created++;
-  }
-  return created;
+        .bind(studentId, ownerId, alias.slice(0, 80), known ?? "Sin definir", now, now, ownerId, learner.id, studentId),
+    ];
+  });
+  const results = await db.batch(statements);
+  return results.filter((result, index) => index % 2 === 0 && result.meta.changes).length;
+}
+
+/** «Alumno Homework A1 · 02/10»: the level and day the access was created, until the teacher renames it. */
+function placeholderName(level: string | null, createdAt: string): string {
+  const day = /^\d{4}-(\d{2})-(\d{2})/.exec(createdAt);
+  return `Alumno Homework${level ? ` ${level}` : ""}${day ? ` · ${day[2]}/${day[1]}` : ""}`;
 }
 
 /** Moves (or attaches) a Homework learner to one of this teacher's students. Both must belong to the teacher. */
