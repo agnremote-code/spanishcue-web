@@ -90,3 +90,11 @@ test('an audience landing without its own canonical fails smoke', async () => {
   const broken = fixture({ '/aprender-espanol': () => new Response('<html><link rel="canonical" href="https://spanishcue.com/"/><nav class="audience-switch"></nav></html>') });
   await assert.rejects(runSmoke('https://spanishcue.com', broken), /aprender-espanol must carry its own canonical/);
 });
+
+test('production may not have the audience landings yet, but staging must', async () => {
+  const notYet = fixture({ '/para-profesores': () => new Response('404', { status: 404 }), '/aprender-espanol': () => new Response('404', { status: 404 }) });
+  await runSmoke('https://spanishcue.com', notYet);
+  await assert.rejects(runSmoke('https://spanishcue-staging.agnremote.workers.dev', notYet), /para-profesores: expected 200, got 404/);
+  const broken = fixture({ '/para-profesores': () => new Response('error', { status: 500 }) });
+  await assert.rejects(runSmoke('https://spanishcue.com', broken), /para-profesores: expected 200,404, got 500/);
+});
