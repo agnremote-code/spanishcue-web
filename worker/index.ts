@@ -149,6 +149,28 @@ function assetResponse(response: Response, pathname: string): Response {
   });
 }
 
+// Safari only plays audio/video when byte ranges are honoured, so serve them
+// from the (small) public media file whenever the asset layer returned it whole.
+async function mediaRangeResponse(request: Request, response: Response, pathname: string): Promise<Response> {
+  if (!/\.(?:m4a|mp3|mp4|ogg|wav|webm)$/i.test(pathname) || response.status !== 200) return response;
+  const headers = new Headers(response.headers);
+  headers.set("Accept-Ranges", "bytes");
+  const match = /^bytes=(\d*)-(\d*)$/.exec(request.headers.get("Range")?.trim() || "");
+  if (!match || (match[1] === "" && match[2] === "")) return new Response(response.body, { status: 200, headers });
+  const body = new Uint8Array(await response.arrayBuffer());
+  const size = body.length;
+  const start = match[1] === "" ? Math.max(0, size - Number(match[2])) : Number(match[1]);
+  const end = match[1] === "" || match[2] === "" ? size - 1 : Math.min(Number(match[2]), size - 1);
+  if (start > end || start >= size) {
+    headers.set("Content-Range", `bytes */${size}`);
+    headers.delete("Content-Length");
+    return new Response(null, { status: 416, headers });
+  }
+  headers.set("Content-Range", `bytes ${start}-${end}/${size}`);
+  headers.set("Content-Length", String(end - start + 1));
+  return new Response(body.slice(start, end + 1), { status: 206, headers });
+}
+
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -320,7 +342,7 @@ const app = {
     const immutableAsset = url.pathname.startsWith('/assets/') || url.pathname.startsWith('/_next/static/');
     const publicMedia = /\.(?:avif|gif|ico|jpe?g|m4a|mp3|mp4|ogg|png|svg|ttf|wav|webm|webp|woff2?)$/i.test(url.pathname);
     const response = immutableAsset || publicMedia
-      ? await env.ASSETS.fetch(verifiedRequest)
+      ? await mediaRangeResponse(verifiedRequest, await env.ASSETS.fetch(verifiedRequest), url.pathname)
       : await handler.fetch(verifiedRequest, env, ctx);
     const edgeStorable = Boolean(edgeKey) && !immutableAsset && !publicMedia && response.status === 200
       && !response.headers.has('Set-Cookie')

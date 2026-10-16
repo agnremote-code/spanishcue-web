@@ -45,17 +45,18 @@ test('every grammar class has its own clean thumbnail and the first class is lis
  assert.ok(!grammar.some(l=>l.level==='A0'||l.levels?.includes('A0')),'no grammar class sits alone in A0');
 });
 
-test('every conversation card has its own real recording that plays on hover',async()=>{
+test('every conversation and grammar card has its own real recording that plays on hover',async()=>{
  const {existsSync,statSync}=await import('node:fs');
  const bundle=async entry=>{const r=await build({entryPoints:[entry],bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
  const {catalogLessons}=await bundle('app/conversation-families/catalog.ts');
- const {conversationPreviewVideo}=await bundle('app/conversation-preview-videos.ts');
- const cards=catalogLessons.filter(l=>l.category==='Conversación');
- assert.ok(cards.length>=50);
+ const {previewVideo}=await bundle('app/conversation-preview-videos.ts');
+ const folders={Conversación:'conversation-previews',Gramática:'grammar-previews'};
+ const cards=catalogLessons.filter(l=>folders[l.category]);
+ assert.ok(cards.length>=108);
  for(const card of cards){
-  const video=conversationPreviewVideo(card.id);
-  assert.equal(video,`/conversation-previews/${card.id}.mp4`,`${card.id} has a hover recording`);
+  const video=previewVideo(card.id);
+  assert.equal(video,`/${folders[card.category]}/${card.id}.mp4`,`${card.id} has a hover recording`);
   assert.ok(existsSync(`public${video}`)&&statSync(`public${video}`).size<400_000,`${video} exists and stays small`);
  }
- assert.equal(conversationPreviewVideo(48),null,'grammar cards keep their still thumbnail');
+ assert.equal(previewVideo(-1),null,'cards without a recording keep their still thumbnail');
 });
