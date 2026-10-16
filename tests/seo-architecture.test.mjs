@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { build } from "esbuild";
 
@@ -72,7 +72,8 @@ test("English is the default UI language on the English organic and campaign sur
 
 test("hreflang exists only for declared real pairs, and every pair is indexable and distinct", () => {
   for (const pair of mod.languagePairs) {
-    assert.notEqual(pair.es, pair.en);
+    // Compare what canonicalUrl emits: a query-only difference is the same URL.
+    assert.notEqual(mod.normalizePathname(pair.es), mod.normalizePathname(pair.en));
     assert.equal(mod.isSearchPrivatePath(pair.es), false);
     assert.equal(mod.isSearchPrivatePath(pair.en), false);
     assert.deepEqual(Object.keys(mod.languageAlternates(pair.es)).sort(), ["en", "es", "x-default"]);
@@ -219,6 +220,35 @@ test("indexable hub pages declare clean canonicals and the layout no longer emit
   const worker = read("worker/index.ts");
   assert.match(worker, /robotsHeaderFor\(url\.pathname\)/);
   assert.match(worker, /X-Robots-Tag/);
+});
+
+/** Every app source file, so a new page cannot slip past a hand-kept list. */
+function appSources(dir = "app") {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((item) => {
+    const path = `${dir}/${item.name}`;
+    if (item.isDirectory()) return appSources(path);
+    return /\.(?:ts|tsx|mjs|js)$/.test(item.name) ? [path] : [];
+  });
+}
+
+test("no canonical, hreflang or absolute site URL anywhere under app/ carries ?lang=", () => {
+  // `?lang=` 301s to the clean URL (worker/index.ts languageRedirect), so a
+  // canonical or hreflang pointing at it names a redirect, not a page.
+  // Relative UI links (auth mail, campaign switchers) may keep the parameter.
+  const absolute = /(?:spanishcue\.com|SITE_ORIGIN\})\/[^"'`\s)]*[?&]lang=/;
+  // Prose about the toggle ("`?lang=` is a UI toggle") is not a URL.
+  const withoutComments = (source) => source.replace(/\/\*[\s\S]*?\*\//g, "").replace(/(^|[^:])\/\/.*$/gm, "$1");
+  const sources = appSources();
+  assert.ok(sources.length > 100, "the walk found the app sources");
+  for (const path of sources) {
+    const raw = read(path);
+    assert.doesNotMatch(raw, absolute, path);
+    // Relative alternates (resolved against metadataBase) are caught too.
+    const source = withoutComments(raw);
+    for (const at of source.matchAll(/alternates\s*:/g)) {
+      assert.doesNotMatch(source.slice(at.index, at.index + 400), /[?&]lang=/, path);
+    }
+  }
 });
 
 test("marketing attribution records landing views for hubs, level pages and campaign variants", () => {
