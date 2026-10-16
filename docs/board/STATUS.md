@@ -10,6 +10,7 @@ _Last updated: 2026-10-16 by the main session (facilitator), at the end of Board
 | 2026-10-16 | Executive Board constituted (OWNER-MANDATE-2026-10-16.md). |
 | 2026-10-16 | "3 lessons/week" = **3 shipping units/week**: a new world, a genuinely authored new level, or a gated repair reported as a repair. |
 | 2026-10-16 | Board PRs may merge and therefore **auto-deploy** (merge → staging → production) once the local checks pass and the independent review is resolved. This applies to scheduled routines too. |
+| 2026-10-16 | **Full creative ownership of all future 3D lessons.** The board brainstorms, selects, designs, builds, tests, reviews and publishes original lessons on schedule. The owner will NOT supply topics, stories, characters, locations or ideas, and does not approve routine deployments. Priorities: pedagogical quality, originality, realistic environments, natural dialogue, listening, SEO. Existing production safeguards stay. Every publication is reported in [PUBLISHED.md](PUBLISHED.md). |
 
 ## Critical facts (verified 2026-10-16)
 - **Merging is a production deploy.** `ci-automerge.yml` dispatches `deploy-staging.yml` after a merge, and staging success dispatches `deploy-production.yml` (gate `OWNER_CLOUDFLARE_PRODUCTION_ENABLED=true`, no environment reviewer). Opening a PR as non-draft starts that chain.

@@ -23,6 +23,21 @@ Every scheduled cloud run starts with zero context and follows this file. The ro
 
 **3D units.** One unit is a new world with at least one fully authored level, a genuinely authored new level of an existing world, or a gated repair reported as a repair. The owner accepted this definition on 2026-10-16. Every unit needs its LQG review file (BOARD-DECISION-001 §3). If no unit passes the gate, ship nothing and say so.
 
+**Creative ownership (owner, 2026-10-16).** The board invents its own lessons; never wait for the owner to supply topics or approve a routine release. When the backlog has no ready 3D item, run this concept pipeline before building:
+1. **Inventory.** List the existing catalog (`app/lesson-catalog.ts`, `app/escucha-3d/games.mjs`, the 3D world folders) and the concepts already rejected in `docs/board/concepts/`. A new concept must not duplicate an existing world's setting, its main communicative function at the same level, or its core mechanic.
+2. **Brainstorm.** Sofia and Martin each propose at least 2 original concepts. Each concept covers:
+   - setting (a realistic, specific Hispanic-world place, never generic or stereotyped);
+   - CEFR level and primary objective ids;
+   - the characters, with their distinct regional voices from the TTS pipeline;
+   - the conversation scenes and listening beats;
+   - the 3D-specific mechanic, and why it needs 3D;
+   - the teacher route;
+   - the SEO target, meaning a real teacher query, with Search Console evidence when it exists.
+3. **Select.** Alejandro scores the concepts on educational value, originality, SEO evidence, build risk and reuse of the kit. The majority decides. Record the chosen and rejected concepts, with their reasons, in `docs/board/concepts/YYYY-MM-DD-<slug>.md`.
+4. **Build.** Martin authors the content (natural dialogue, not textbook lines; neutral-Spanish policy, with regional features only as taught exemplars), then Sofia builds it. Follow the AGENTS.md 3D-world rule: both modes, own listening per circle, neural TTS with distinct voices, the same controls, a teacher list and a no-WebGL fallback. Add tests and the LQG review file.
+5. **Review and publish.** The G4 content review is done by Alejandro or a fresh agent, never the author. Release follows the delivery rules below. Add the lesson's public resource or teacher page per the Indexable Teacher Page standard.
+6. **Report.** Append an entry to `docs/board/PUBLISHED.md` (the format is in that file) in the same PR or a follow-up docs PR.
+
 **SEO.** Use Search Console via the Windsor.ai connector (`searchconsole`, account `sc-domain:spanishcue.com`). Never invent rankings or traffic. No thin or mass-generated pages (Indexable Teacher Page standard).
 
 **Thursday review.** Inventory routes, the auth/authz boundaries, CI health and recent deploy runs. Fix only verified defects, each with a regression test. Billing, auth and D1 changes follow their runbooks and the one-writer rule. Never mutate D1 or secrets.
