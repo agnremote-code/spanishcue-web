@@ -37,6 +37,13 @@ test("Founder modal is one-session but appears before the old 30-second threshol
 });
 
 
+test("Google Ads primary purchase excludes paid trials and uses the verified label", () => {
+  // The owner created a new Paid Subscription goal on 2026-10-16.
+  assert.match(analytics, /if \(properties\.plan === "monthly"\) sendGoogleAdsPurchase\(properties\)/);
+  assert.match(deploy, /NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID \/\/= "AW-17144698608"/);
+  assert.match(deploy, /NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL \/\/= "DmpfCIzWzp4dEPCtne8_"/);
+});
+
 test("paid purchase conversion uses verified revenue and production measurement ids", () => {
   assert.match(analytics, /value,/);
   assert.match(analytics, /currency,/);
