@@ -1,7 +1,7 @@
 // Temporary diagnostic: loads public production pages as an anonymous visitor and reports failed requests.
 const {chromium}=require('playwright');
 (async()=>{const b=await chromium.launch({args:['--use-gl=swiftshader','--enable-unsafe-swiftshader']});
-for(const p of ['/lp/google-teachers?utm_source=chatgpt.com','/demo/noche-abierta?utm_source=chatgpt.com']){
+for(const p of ['/lp/google-teachers?utm_source=chatgpt.com']){
  const ctx=await b.newContext({viewport:{width:1440,height:900},locale:'es-ES'});const pg=await ctx.newPage();const t0=Date.now();
  pg.on('response',r=>{const u=r.url();if(r.status()>=300||u.includes('DemoScene')||u.includes('_vinext/image'))console.log(p,'RESP',r.status(),((Date.now()-t0)/1000).toFixed(1)+'s',u.slice(0,160))});
  pg.on('requestfailed',r=>console.log(p,'FAILED',r.failure()?.errorText,r.url().slice(0,160)));

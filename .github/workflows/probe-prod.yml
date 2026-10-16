@@ -11,4 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
+      - run: bash scripts/probe-curl.sh
       - run: node scripts/probe-prod.cjs
