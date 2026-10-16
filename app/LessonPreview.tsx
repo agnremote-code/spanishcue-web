@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, type CSSProperties } from "react";
-import { conversationPreviewVideo } from "./conversation-preview-videos";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { previewVideo } from "./conversation-preview-videos";
 import { useI18n } from "./i18n/LocaleProvider";
 import "./lesson-preview.css";
 
@@ -36,6 +36,13 @@ const imagePositions: Record<number, string> = {
   203: "center 46%",
 };
 
+// Muted clips may start without a click in every browser; set it on the element itself.
+function startClip(clip: HTMLVideoElement | null) {
+  if (!clip) return;
+  clip.muted = true;
+  void clip.play().catch(() => {});
+}
+
 export default function LessonPreview({
   lesson,
   news = false,
@@ -44,30 +51,23 @@ export default function LessonPreview({
   news?: boolean;
 }) {
   const { t } = useI18n();
-  const video = news ? null : conversationPreviewVideo(lesson.id);
+  const video = news ? null : previewVideo(lesson.id);
   const figure = useRef<HTMLElement>(null);
-  const player = useRef<HTMLVideoElement>(null);
+  const [hovered, setHovered] = useState(false);
 
-  // Play the real recording only while the card is hovered by a mouse.
+  // The real recording is only mounted while a mouse is over the card, so the
+  // library keeps no video elements around and the cover stays as its poster.
   useEffect(() => {
     const card = figure.current?.closest(".lesson-card") ?? figure.current;
-    const clip = player.current;
-    if (!video || !card || !clip) return;
-    if (!window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) return;
-    const start = () => {
-      clip.preload = "auto";
-      void clip.play().then(() => card.classList.add("preview-playing")).catch(() => {});
-    };
-    const stop = () => {
-      clip.pause();
-      clip.currentTime = 0;
-      card.classList.remove("preview-playing");
-    };
-    card.addEventListener("mouseenter", start);
-    card.addEventListener("mouseleave", stop);
+    if (!video || !card) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const enter = () => setHovered(true);
+    const leave = () => setHovered(false);
+    card.addEventListener("mouseenter", enter);
+    card.addEventListener("mouseleave", leave);
     return () => {
-      card.removeEventListener("mouseenter", start);
-      card.removeEventListener("mouseleave", stop);
+      card.removeEventListener("mouseenter", enter);
+      card.removeEventListener("mouseleave", leave);
     };
   }, [video]);
 
@@ -91,8 +91,10 @@ export default function LessonPreview({
         width="1672"
         height="941"
       />
-      {video && (
-        <video ref={player} src={video} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} />
+      {video && hovered && (
+        <video ref={startClip} muted autoPlay loop playsInline poster={lesson.image} aria-hidden="true" tabIndex={-1}>
+          <source src={video} type="video/mp4" />
+        </video>
       )}
     </figure>
   );

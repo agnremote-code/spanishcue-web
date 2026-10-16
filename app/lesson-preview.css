@@ -27,13 +27,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 180ms ease;
+  object-position: var(--preview-position);
   pointer-events: none;
-}
-
-.preview-playing .lesson-preview video {
-  opacity: 1;
 }
 
 .lesson-preview::after {
