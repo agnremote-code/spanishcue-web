@@ -17,13 +17,13 @@ const hex=n=>String(n).padStart(48,'0');
 const learner=(id,owner,alias,level='a2')=>{db.prepare('INSERT INTO autoestudio_learners(id,owner_id,alias,created_at) VALUES(?,?,?,?)').run(id,owner,alias,'2026-10-01');db.prepare('INSERT INTO autoestudio_passes(id,owner_id,learner_id,level,created_at) VALUES(?,?,?,?,?)').run('p'+id,owner,id,level,'2026-10-02');};
 let n=0;const id=()=>`00000000-0000-4000-8000-${String(++n).padStart(12,'0')}`;
 
-test('every Homework learner becomes a student once, with its Homework level; unnamed ones get a placeholder name',async()=>{
+test('named Homework learners become students once, with their Homework level; unused links wait',async()=>{
   learner(hex(1),'teacher','Lucía','b1');learner(hex(2),'teacher',null);learner(hex(3),'other','Ajeno');
-  assert.equal(await roster.syncRoster(d1,'teacher','2026-10-13T00:00:00Z',id),2);
+  assert.equal(await roster.syncRoster(d1,'teacher','2026-10-13T00:00:00Z',id),1);
   assert.equal(await roster.syncRoster(d1,'teacher','2026-10-13T00:00:00Z',id),0,'idempotent');
   const students=db.prepare("SELECT alias,level,owner_id FROM students WHERE owner_id='teacher' ORDER BY alias").all();
-  assert.deepEqual(students.map(s=>({...s})),[{alias:'Alumno Homework A2 · 01/10',level:'A2',owner_id:'teacher'},{alias:'Lucía',level:'B1',owner_id:'teacher'}]);
-  assert.deepEqual((await roster.listLinks(d1,"teacher")).map(l=>l.learnerId).sort(),[hex(1),hex(2)]);
+  assert.deepEqual(students.map(s=>({...s})),[{alias:'Lucía',level:'B1',owner_id:'teacher'}]);
+  assert.deepEqual((await roster.listLinks(d1,"teacher")).map(l=>l.learnerId),[hex(1)]);
   assert.equal((await roster.listLinks(d1,'other')).length,0,'other teachers are untouched until they open their own panel');
 });
 
