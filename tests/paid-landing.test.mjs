@@ -14,7 +14,7 @@ test('Meta/Zeely landings render the paid template and keep noindex campaign met
   assert.match(copy, /titleAccent: 'Start teaching experiences\.'/);
 });
 
-test('paid landing shows both Paddle plans in hero and plans, with no popup', () => {
+test('paid landing shows the monthly PRO checkout in hero and plans, with no popup', () => {
   const landing = read('app/marketing-landing/PaidLanding.tsx');
   assert.equal(landing.match(/\{checkout\}/g)?.length, 2);
   assert.match(landing, /<CheckoutButton signedIn=\{signedIn\} returnTo="\/" variant="landing" \/>/);
@@ -26,17 +26,18 @@ test('paid landing shows both Paddle plans in hero and plans, with no popup', ()
   assert.match(read('app/marketing-landing/PaidLandingTracker.tsx'), /setAttribute\('data-show'/);
 });
 
-test('landing checkout variant puts the trial first, monthly second, PayPal last with honest disclosures', () => {
+test('monthly checkout appears first and PayPal second without a paid trial upsell', () => {
   const ui = read('app/acceso/CheckoutButton.tsx');
   const landing = ui.slice(ui.indexOf('function landingCheckout'));
-  const trial = landing.indexOf('checkoutPaddle("trial")');
   const monthly = landing.indexOf('checkoutPaddle("monthly")');
   const paypal = landing.indexOf('onClick={checkoutPayPal}');
-  assert.ok(trial > 0 && trial < monthly && monthly < paypal);
-  assert.match(landing, /Then US\$15\.50\/month\. Cancel anytime\. Taxes included\./);
+  assert.ok(monthly > 0 && monthly < paypal);
+  assert.doesNotMatch(landing, /checkoutPaddle\("trial"\)|US\$2|Try 1 day/);
   assert.match(landing, /Card: US\$15\.50 now and every month\. Final price, taxes included\./);
   assert.match(landing, /paypalPriceUsd \?\? 15/);
   assert.match(landing, /Pay first, then link the purchase to your account for PRO access\./);
+  const paid = read('app/marketing-landing/PaidLanding.tsx');
+  assert.match(paid, /const freeLesson = '\/demo\/noche-abierta'/);
 });
 
 test('product screenshots used by the paid landing ship in public/lp', () => {
