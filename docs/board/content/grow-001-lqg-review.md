@@ -85,6 +85,25 @@ Machine checks come from a scratch validator that imports the data file and runs
 - Open points (a)–(c): his conditions are carried into the build handoff (`grow-001-circle.md` §6, item 5).
 - Re-checks: the validator is 56/56 PASS; the listening is now 119 words; the gaps are verbatim; `scanSource` = 0 findings. No contrast prompt contains its tested pronoun pair any more (grep: no «se las llevas» / «se lo devuelves»).
 
-### Round 2: final verdict
+Correction from the reviewer after round 1 (verbatim): "Correction to my #220 verdict, RECOMMENDED item 1: that line got garbled. The exact replacement for the "condicion" frame is: "Sí, te ayudo, pero solo hasta las doce." Nothing else changes." 2ebbd9d already contains exactly that text.
 
-- Verdict: _pending_
+### Round 2: APPROVE (2026-10-16, on 2ebbd9d), verbatim
+
+> G4 FINAL VERDICT, PR #220 at 2ebbd9d: APPROVE (content gate only). Please record this verbatim in LQG §B round 2.
+>
+> What I checked myself on 2ebbd9d (fresh clone, diff rev f3ebafe..2ebbd9d on the data file):
+> - R1–R6 are applied exactly as specified, and so are both recommendations. The card 3 rewrite («Una compañera llega a clase con muchos libros. Ofrécele ayuda para llevarlos.») is better than my suggestion and fits le-llevo.
+> - None of the four beat prompts contains a tested pronoun pair any more.
+> - The listening is 119 words by app/escucha-3d/games.mjs wordCount (A2 70–120). parseGaps answers are presté/cargador/cocina/café, verbatim in line 6. Inés no longer speaks twice in a row.
+> - The title is 60 characters and the description 155.
+> - I did NOT re-run scripts/neutral-spanish.mjs, because my clone has no node_modules. For G3 I rely on your run (0 findings / 1253 files) and CI. The round-2 edits add no new regional or flagged forms.
+>
+> This approval covers the content gate (G4) only. It carries these conditions into Sofia's build PR and its docs/audits/grow-001-pedagogy-YYYYMMDD.md:
+> (a) only this circle's listening is exposed free; the FAQ's PRO sentence is verified against app/access-policy.ts;
+> (b) option labels are never voiced by TTS;
+> (c) the listening exemption is for the exact path, with a reason;
+> SEO: a breadcrumb under the /a2 hub, a hub link to the page, the canonical on the clean path;
+> FAQ "no account needed" ships only with the FREE-ledger tests.
+> Release: one PR in the pipeline at a time, PERF-001 first. Time spent in total: ~1 h.
+
+- **Gate result: G4 content review APPROVED** (Alejandro, ~1 h, under the ≤3 h cap). The content is approved. G3 on `app/`, G5, the FREE-ledger tests and the conditions above are owed by the build PR.
