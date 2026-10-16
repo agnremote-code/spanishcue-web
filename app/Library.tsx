@@ -1710,7 +1710,7 @@ export default function Library({
               aria-pressed={category === "Gramática"}
             >
               <span className="route-mascot">
-                <img src="/autoestudio/mascot/writing.webp" alt="" />
+                <img src="/autoestudio/mascot/writing.webp" alt="" loading="lazy" decoding="async" />
               </span>
               <div>
                 <small>{t("common.route", { number: "01" })}</small>
@@ -1725,7 +1725,7 @@ export default function Library({
               aria-pressed={category === "Conversación"}
             >
               <span className="route-mascot">
-                <img src="/brand/mascot/walking.webp" alt="" />
+                <img src="/brand/mascot/walking.webp" alt="" loading="lazy" decoding="async" />
               </span>
               <div>
                 <small>{t("common.route", { number: "02" })}</small>
@@ -1740,7 +1740,7 @@ export default function Library({
               aria-pressed={category === "Escucha"}
             >
               <span className="route-mascot">
-                <img src="/brand/mascot/seated.webp" alt="" />
+                <img src="/brand/mascot/seated.webp" alt="" loading="lazy" decoding="async" />
               </span>
               <div>
                 <small>{t("common.route", { number: "03" })}</small>
@@ -1755,7 +1755,7 @@ export default function Library({
               aria-pressed={category === "Fonética"}
             >
               <span className="route-mascot">
-                <img src="/brand/mascot/speaking.webp" alt="" />
+                <img src="/brand/mascot/speaking.webp" alt="" loading="lazy" decoding="async" />
               </span>
               <div>
                 <small>{t("common.route", { number: "04" })}</small>
@@ -1770,7 +1770,7 @@ export default function Library({
               aria-pressed={category === "Vocabulario"}
             >
               <span className="route-mascot">
-                <img src="/brand/mascot/studying.webp" alt="" />
+                <img src="/brand/mascot/studying.webp" alt="" loading="lazy" decoding="async" />
               </span>
               <div>
                 <small>{t("common.route", { number: "05" })}</small>
@@ -1882,7 +1882,7 @@ export default function Library({
         )}
         {view === "Plan" && plannedLessons.length > 0 && (
           <div className="plan-summary">
-            <img src="/brand/mascot/standing-crossed.webp" alt="" width="900" height="1350" />
+            <img src="/brand/mascot/standing-crossed.webp" alt="" loading="lazy" decoding="async" width="900" height="1350" />
             <div>
               <b>
                 {plannedLessons.length === 1
@@ -1896,7 +1896,7 @@ export default function Library({
         )}
         {view === "Biblioteca" && category === "Conversación" && conversationMode === "countries" && (
           <section className="countries-collection-head" aria-labelledby="countries-collection-title">
-            <img src="/catalog-thumbnails/countries-collection.webp" alt="" width="1200" height="800" />
+            <img src="/catalog-thumbnails/countries-collection.webp" alt="" loading="lazy" decoding="async" width="1200" height="800" />
             <div>
               <span>★ {t("library.countriesKicker")}</span>
               <h3 id="countries-collection-title">{t("library.countries")}</h3>
