@@ -53,9 +53,11 @@ export async function runSmoke(origin, fetcher = fetch) {
       if ((await check(path, [200, 404])).status === 404) awaitingRelease.add(path);
     }
   }
-  for (const path of ["/lp/google-teachers", "/la-fabrica-de-los-nombres", "/el-hotel-de-lo-imposible", "/", ...audienceLandings, "/autoestudio/a1/semana-1"]) {
+  for (const path of ["/lp/google-teachers", "/demo/noche-abierta", "/la-fabrica-de-los-nombres", "/el-hotel-de-lo-imposible", "/", ...audienceLandings, "/autoestudio/a1/semana-1"]) {
     if (awaitingRelease.has(path)) continue;
     const html = await (await check(path, 200)).text();
+    // A server-side crash still answers 200 with the error boundary.
+    assert.ok(!html.includes("Algo salió mal") && !html.includes("Something went wrong"), `${path} must not render the error screen`);
     for (const [, src] of html.matchAll(/<script[^>]+src="(\/assets\/[^"]+\.js)"/g)) await check(src, 200);
   }
   for (const [path, canonical] of [["/para-profesores", "https://spanishcue.com/para-profesores"], ["/aprender-espanol", "https://spanishcue.com/aprender-espanol"]]) {

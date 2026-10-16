@@ -29,6 +29,7 @@ export default async function Page(){
  const content=demoContent(TOUR_LEVEL)!;
  const cafe=content.locations.find(l=>l.id==='cafe')!;
  // Driving mode: one activity per free place, trimmed to the fields the stage shows.
- const spots:TourSpot[]=content.locations.map(l=>{const a=l.activities.find(x=>x.options?.length&&x.close)??l.activities[0];return {id:l.id,name:l.name,activity:{id:a.id,title:a.title,situation:a.situation,prompt:a.prompt,options:a.options,close:a.close,teacher:a.teacher,says:a.says,ask:a.ask}};});
+ // PRO venues arrive without activities (demo-content.mjs strips them), so only free venues become tour stops.
+ const spots:TourSpot[]=content.locations.filter(l=>!l.locked&&l.activities.length>0).map(l=>{const a=l.activities.find(x=>x.options?.length&&x.close)??l.activities[0];return {id:l.id,name:l.name,activity:{id:a.id,title:a.title,situation:a.situation,prompt:a.prompt,options:a.options,close:a.close,teacher:a.teacher,says:a.says,ask:a.ask}};});
  return <GoogleTeachersLanding pro={fullAccessFromHeaders(h)} signedIn={signedInFromHeaders(h)} cafe={cafe} spots={spots} level={TOUR_LEVEL} showcase={showcase(es)} previews={proPreviews(PREVIEW_IDS)} />;
 }
