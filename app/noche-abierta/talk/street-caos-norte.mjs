@@ -7,7 +7,7 @@ const TALK = {
       "¿Confías en tus vecinos?",
       "¿Te llevas bien con tus hermanos?",
       "¿Prestas tus cosas fácilmente?",
-      "¿Tienes un animal o te gustaría tener uno?",
+      "¿Te gustan los gatos o los perros?",
     ],
     A2: [
       "¿Cuál fue el favor más raro que te pidió alguien?",
@@ -97,7 +97,7 @@ const TALK = {
       "¿Quién manda en tu trabajo?",
       "¿Te cansas mucho en tu trabajo?",
       "¿Obedeces siempre las normas?",
-      "¿Te gustaría trabajar de noche?",
+      "¿Quieres trabajar de noche?",
     ],
     A2: [
       "¿Alguna vez una persona con uniforme te habló mal?",
@@ -229,7 +229,7 @@ const TALK = {
     topics: ["prejuicios", "errores"],
     A1: [
       "¿Qué ropa llevas hoy?",
-      "¿Tu ropa dice cómo eres?",
+      "¿Qué ropa te gusta llevar?",
       "¿Tienes buena memoria para las caras?",
       "¿Qué color te gusta para vestir?",
       "¿Reconoces fácilmente tus errores?",

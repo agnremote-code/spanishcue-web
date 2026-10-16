@@ -399,7 +399,7 @@ function Arrival({ arrival, level, onLevel, mode, onMode, teacher, onStart }: {
     <div className="na-ts-menu">
       <p className="na-kicker">{arrival.kicker}<span>Modo Play · 3D</span></p>
       <h1 id="na-arrival-title">{arrival.title}</h1>
-      <p className="na-ts-lede">{level === 'A0' ? <Bi text={arrival.premise} /> : 'Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.'}</p>
+      <p className="na-ts-lede">{level === 'A0' || level === 'A1' ? <Bi text={arrival.premise} /> : 'Vale cumple treinta. Hay previa, terraza y un barrio entero sin plan fijo.'}</p>
       <ul className="na-ts-verbs"><li>Camina.</li><li>Entra donde quieras.</li><li>Resuelve lo que pase.</li></ul>
       <div className="na-ts-level">
         <LevelPicker level={level} onChange={onLevel} />
@@ -710,7 +710,7 @@ function TeacherDesk({ state, street, onTrigger, onReset, onItem }: { state: Nig
     </div>
     <div>
       <p className="na-teacher-title">Los juegos del barrio</p>
-      <ul className="na-desk-games">{LOCATIONS.map((item: Location) => <li key={item.id}><b>{item.short}</b> {item.focus}</li>)}</ul>
+      <ul className="na-desk-games">{LOCATIONS.map((item: Location) => <li key={item.id}><b>{item.short}</b> <Bi text={item.focus} /></li>)}</ul>
     </div>
     <button type="button" className="na-secondary" onClick={onReset}>Empezar la noche otra vez</button>
   </aside>;

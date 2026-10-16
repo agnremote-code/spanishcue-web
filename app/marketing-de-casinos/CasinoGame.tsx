@@ -5,9 +5,9 @@
 // (two answers to choose, then a conversation). Without WebGL the same
 // scenes open from a list.
 import dynamic from 'next/dynamic';
-import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
 import { FLOORS, SCENES, sceneById } from './layout.mjs';
-import { LEVELS } from './levels.mjs';
+import { LEVELS, type Text } from './levels.mjs';
 import { MONEY, STORAGE_KEY, choose, closeScene, createState, doneFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setFloor, setLevel, setMoney, undo } from './engine.mjs';
 import { setShoutMuted } from '../escucha-3d/shout';
 import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
@@ -16,6 +16,13 @@ import './casino.css';
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="gm-loading">Abriendo las puertas del casino…</div> });
 const LETTERS = ['A', 'B', 'C'];
 type State = ReturnType<typeof createState>;
+
+// A0 texts (and A1 words) carry English under the Spanish; the rest is Spanish only.
+function Bi({ t, as: Tag = 'span', className }: { t: Text; as?: 'span' | 'p'; className?: string }): ReactNode {
+  if (typeof t === 'string') return <Tag className={className}>{t}</Tag>;
+  return <Tag className={className}>{t.es}<small className="gm-en" lang="en">{t.en}</small></Tag>;
+}
+const plain = (t: Text) => typeof t === 'string' ? t : t.es;
 
 function webglAvailable() {
   try {
@@ -50,7 +57,7 @@ export default function CasinoGame() {
   useEffect(() => { setShoutMuted(!sound); }, [sound]);
   const cardRef = useRef<HTMLDivElement>(null);
   // Comprensión auditiva: the circles open a listening (undefined = closed, null = the list).
-  const [mode, setMode] = useListeningMode('casino');
+  const [chosenMode, setMode] = useListeningMode('casino');
   const [listenAt, setListenAt] = useState<string | null | undefined>(undefined);
 
   useEffect(() => {
@@ -66,6 +73,10 @@ export default function CasinoGame() {
   const done = doneFor(state);
   const count = progress(state);
   const level = LEVELS.find(l => l.id === state.level)!;
+  // A0 has no listening set for the casino: it stays in conversation mode, and
+  // Valentina's money does not change the A0 openings.
+  const a0 = state.level === 'A0';
+  const mode = a0 ? 'conversacion' : chosenMode;
   // The Marketing section is A2: its listenings are the A2 ones.
   const listenLevel = level.track ? 'A2' : state.level;
   const [heard, markHeard] = useListeningDone('casino', listenLevel);
@@ -122,10 +133,11 @@ export default function CasinoGame() {
             <b>{l.label}</b><small>{l.hint}</small>
           </button>)}
         </div>
-        <ModeSwitch mode={mode} onChange={setMode} />
+        {!a0 && <ModeSwitch mode={mode} onChange={setMode} />}
         {mode === 'escucha' && <p className="gm-note">Comprensión auditiva: en cada círculo blanco escuchas una escena con voces de distintos países. Dos escuchas, preguntas, completar y leer.</p>}
         {level.track && <p className="gm-note">Marketing es una sección aparte: Valentina es la nueva directora de marketing del casino. Nivel A2 con términos técnicos, una decisión por escena y después la conversación.</p>}
-        {!level.track && <>
+        {a0 && <p className="gm-note">A0: todo en español y en inglés. Frases muy cortas.<small className="gm-en" lang="en">A0: everything in Spanish and English. Very short sentences.</small></p>}
+        {!level.track && !a0 && <>
           <p className="gm-label">¿Con cuánto dinero entra?</p>
           <div className="gm-levels gm-money" role="radiogroup" aria-label="Dinero">
             {MONEY.map(m => <button key={m.id} type="button" role="radio" aria-checked={state.money === m.id} className={state.money === m.id ? 'is-on' : undefined} onClick={() => setState(s => setMoney(s, m.id))}>
@@ -140,12 +152,12 @@ export default function CasinoGame() {
 
     {/* ------------------------------------------------ HUD */}
     {entered && <header className="gm-hud">
-      <div className="gm-floor"><span>Piso {floorInfo.id}{level.track ? '' : ` · ${money.label}`}</span><b>{floorInfo.name}</b></div>
+      <div className="gm-floor"><span>Piso {floorInfo.id}{level.track || a0 ? '' : ` · ${money.label}`}</span><b>{floorInfo.name}</b></div>
       <div className="gm-hud-right">
         <span className="gm-progress">{count.done} de {count.total} escenas · {level.label}</span>
         <button type="button" onClick={() => mode === 'escucha' ? setListenAt(null) : setList(true)}>{mode === 'escucha' ? 'Escuchas' : 'Escenas'}</button>
         <button type="button" aria-pressed={!sound} onClick={() => setSound(v => !v)}>{sound ? 'Sonido: sí' : 'Sonido: no'}</button>
-        <button type="button" onClick={() => setEntered(false)}>Nivel y dinero</button>
+        <button type="button" onClick={() => setEntered(false)}>{a0 ? 'Nivel' : 'Nivel y dinero'}</button>
       </div>
     </header>}
 
@@ -193,22 +205,22 @@ export default function CasinoGame() {
         <button type="button" className="gm-close" onClick={close} aria-label="Volver al casino">×</button>
       </header>
       <div className="gm-card-body" ref={cardRef} tabIndex={-1} aria-live="polite">
-        <h2 id="gm-card-h">{view.title}</h2>
+        <h2 id="gm-card-h"><Bi t={view.title} /></h2>
         {view.beats.map((beat, b) => <div key={b} className="gm-beat">
-          <p className="gm-line">{beat.line}</p>
+          <Bi t={beat.line} as="p" className="gm-line" />
           {beat.pick === undefined ? <>
             <p className="gm-ask">Elige una respuesta y dila en voz alta.</p>
-            <ol className="gm-options">{beat.options.map((o, i) => <li key={i}><button type="button" onClick={() => setState(s => choose(s, i))}><kbd>{LETTERS[i]}</kbd><span>{o.say}</span></button></li>)}</ol>
+            <ol className="gm-options">{beat.options.map((o, i) => <li key={i}><button type="button" onClick={() => setState(s => choose(s, i))}><kbd>{LETTERS[i]}</kbd><Bi t={o.say} /></button></li>)}</ol>
           </> : <div className="gm-said">
-            <p className="gm-chosen"><span>Valentina</span>{beat.options[beat.pick].say}</p>
-            <p className="gm-reply">{beat.options[beat.pick].reply}</p>
+            <p className="gm-chosen"><span>Valentina</span><Bi t={beat.options[beat.pick].say} /></p>
+            <Bi t={beat.options[beat.pick].reply} as="p" className="gm-reply" />
           </div>}
         </div>)}
         {view.ended && <>
-          <p className="gm-end">{view.end}</p>
+          {view.end && <Bi t={view.end} as="p" className="gm-end" />}
           <section className="gm-talk" aria-labelledby="gm-talk-h">
             <h3 id="gm-talk-h">Ahora, conversación</h3>
-            <ol>{view.talk.map((q, i) => <li key={i} className={i === talkAt ? 'is-now' : undefined}><button type="button" onClick={() => setTalkAt(i)}>{q}</button></li>)}</ol>
+            <ol>{view.talk.map((q, i) => <li key={i} className={i === talkAt ? 'is-now' : undefined}><button type="button" onClick={() => setTalkAt(i)}><Bi t={q} /></button></li>)}</ol>
             <div className="gm-row">
               <button type="button" className="gm-secondary" disabled={talkAt === 0} onClick={() => setTalkAt(t => Math.max(0, t - 1))}>← Anterior</button>
               <button type="button" className="gm-secondary" disabled={talkAt === view.talk.length - 1} onClick={() => setTalkAt(t => Math.min(view.talk.length - 1, t + 1))}>Siguiente pregunta →</button>
@@ -217,7 +229,7 @@ export default function CasinoGame() {
         </>}
         {teacher && <details className="gm-words" open={view.ended}>
           <summary>Palabras de la escena</summary>
-          <ul>{view.words.map(w => <li key={w}>{w}</li>)}</ul>
+          <ul>{view.words.map(w => <li key={plain(w)}><Bi t={w} /></li>)}</ul>
         </details>}
       </div>
       <footer className="gm-card-foot">

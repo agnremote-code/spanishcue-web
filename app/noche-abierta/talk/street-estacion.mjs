@@ -51,7 +51,7 @@ const TALK = {
       "¿Juzgas rápido a las personas?",
       "¿Corres para tomar el tren o el autobús?",
       "¿Pides perdón con facilidad?",
-      "¿Qué piensas cuando ves a alguien correr por la calle?",
+      "¿Corres por la calle a veces?",
       "¿Eres una persona despistada?",
     ],
     A2: [
@@ -231,7 +231,7 @@ const TALK = {
       "¿Usas reloj todos los días?",
       "¿Guardas cosas viejas en casa?",
       "¿Te gustan los lugares antiguos?",
-      "¿Dónde conociste a tu mejor amigo?",
+      "¿Cómo se llama tu mejor amigo?",
       "¿Qué lugar de tu ciudad te gusta mucho?",
     ],
     A2: [

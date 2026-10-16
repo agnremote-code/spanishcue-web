@@ -549,6 +549,7 @@ export default function ReinoGame() {
       {lastAnswer && <p className="rr-student-bubble"><span>Tú</span>{lastAnswer}</p>}
       <p className="rr-npc-text" data-testid="rr-npc-line">{view.text}</p>
       {view.en && <div className="rr-english">{showEnglish ? <p lang="en"><span>EN</span>{view.en}</p> : null}<button type="button" className="rr-text-button" onClick={() => setShowEnglish(value => !value)}>{showEnglish ? 'Ocultar inglés' : 'Ver en inglés'}</button></div>}
+      {view.keywords.length > 0 && <ul className="rr-keywords" aria-label="Palabras clave">{view.keywords.map(word => <li key={word.es}><b lang="es">{word.es}</b><span lang="en">{word.en}</span></li>)}</ul>}
       {view.mode === 'locked' && <p className="rr-mission-line"><Icon name="compass"/>{view.mission.objective}</p>}
       {view.isQuestion && view.options && <div className="rr-options" role="group" aria-label="Respuestas posibles">{view.options.map(option => <button key={option} type="button" onClick={() => { setAnswer(option); inputRef.current?.focus(); }}>{option}</button>)}</div>}
       <form onSubmit={advance}>

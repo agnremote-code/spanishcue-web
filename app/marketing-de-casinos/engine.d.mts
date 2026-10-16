@@ -1,10 +1,10 @@
-import type { Option } from './levels.mjs';
+import type { Option, Text } from './levels.mjs';
 export type OpenScene = { id: string; picks: number[] };
 export type GameState = { level: string; money: string; floor: number; done: Record<string, string[]>; scene: OpenScene | null };
-export type Beat = { line: string; options: Option[]; pick: number | undefined };
+export type Beat = { line: Text; options: Option[]; pick: number | undefined };
 export type SceneView = {
-  id: string; title: string; place: string; name: string; role: string; floor: number;
-  step: number; beats: Beat[]; ended: boolean; end: string | null; talk: string[]; words: string[];
+  id: string; title: Text; place: string; name: string; role: string; floor: number;
+  step: number; beats: Beat[]; ended: boolean; end: Text | null; talk: Text[]; words: Text[];
 };
 export const STORAGE_KEY: string;
 export const DEFAULT_LEVEL: string;

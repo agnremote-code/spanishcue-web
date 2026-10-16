@@ -277,7 +277,7 @@ const TALK = {
       "¿Te gustan los parques de noche?",
       "¿Pides consejos a tus amigos?",
       "¿Qué ciudad quieres conocer?",
-      "¿Cómo es tu vida ideal?",
+      "¿Dónde quieres vivir en el futuro?",
     ],
     A2: [
       "¿Qué decisión importante tomaste el año pasado?",

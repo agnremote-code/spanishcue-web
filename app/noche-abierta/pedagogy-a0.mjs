@@ -87,7 +87,7 @@ export const A0_ROWS = {
     situation: t("Ramiro pregunta: «¿Dónde está la estación?». La estación está a la derecha.", "Ramiro asks: “Where is the station?” The station is on the right."),
     prompt: t("¿Qué dices?", "What do you say?"),
     options: [t("A la derecha.", "On the right."), t("A la izquierda.", "On the left."), t("Está cerrada.", "It’s closed.")],
-    personal: t("¿Cómo vas al trabajo: en autobús, en coche o a pie?", "How do you go to work: by bus, by car or on foot?"),
+    personal: t("¿Vas al trabajo en autobús o a pie?", "Do you go to work by bus or on foot?"),
     words: [t("la estación", "the station"), t("a la derecha", "on the right"), t("a la izquierda", "on the left"), t("el autobús", "the bus")],
   },
   marta: {
@@ -191,7 +191,7 @@ export const A0_ROWS = {
   boleto: {
     situation: t("Ves un boleto de tren antiguo.", "You see an old train ticket."),
     prompt: t("¿Qué preguntas?", "What do you ask?"),
-    options: [t("¿Adónde va este tren?", "Where does this train go?"), t("¿Quién pintó esto?", "Who painted this?"), t("¿Dónde está la cafetería?", "Where is the café?")],
+    options: [t("¿Adónde va este tren?", "Where does this train go?"), t("¿De quién es el cuadro?", "Whose painting is it?"), t("¿Dónde está la cafetería?", "Where is the café?")],
     personal: t("¿Adónde quieres viajar?", "Where do you want to travel?"),
     words: [t("el tren", "the train"), t("el boleto", "the ticket"), t("¿adónde?", "where to?"), t("viajar", "to travel")],
   },

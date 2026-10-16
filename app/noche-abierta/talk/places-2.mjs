@@ -74,7 +74,7 @@ const TALK = {
   },
   "valija": {
     topics: ["cambios", "viajes"],
-    A1: ["¿Viajas con mucho equipaje?", "¿Qué hay en tu bolso ahora?", "¿Cuántas veces te mudaste de casa?", "¿Te gusta ordenar tus cosas?"],
+    A1: ["¿Viajas con mucho equipaje?", "¿Qué hay en tu bolso ahora?", "¿Vives en una casa o en un departamento?", "¿Te gusta ordenar tus cosas?"],
     A2: ["¿Alguna vez perdiste tu equipaje en un viaje? ¿Qué pasó?", "¿Qué cosa siempre olvidas cuando viajas?", "¿Cómo fue tu última mudanza?", "¿Qué regalo traes cuando vuelves de un viaje?"],
     B1: ["¿Te mudaste alguna vez a otra ciudad o a otro país? ¿Qué fue lo más difícil?", "¿Eres de las personas que guardan todo o de las que tiran todo?", "Si tuvieras que irte de tu casa en diez minutos, ¿qué cosas te llevarías?", "¿Qué cosas llevaban tus abuelos cuando viajaban o se mudaban?"],
     B2: ["¿Crees que la gente necesita cada vez más cosas para viajar, o al revés?", "¿Qué sentiste la última vez que dejaste un lugar donde habías vivido mucho tiempo?", "¿Te parece fácil empezar de cero en otro sitio, o te cuesta mucho desprenderte de tu vida anterior?", "¿Qué es lo más absurdo que metiste alguna vez en una maleta?"],

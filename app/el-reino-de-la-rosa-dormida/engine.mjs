@@ -291,6 +291,19 @@ const LOCKED = {
   tejedora: 'Brum todavía guarda la luz que necesitamos. Escucha su historia y trae el cristal.',
   elara: 'Elara sigue dentro del sueño. El altar espera luz, vida y amanecer.',
 };
+/** A0 and A1 hear the same locked hint in short present-tense Spanish (A0 also gets English). */
+const LOCKED_SIMPLE = {
+  ines: { es: 'Hola. Primero, habla con Nox, el cuervo del camino.', en: 'Hi. First, talk to Nox, the raven on the road.' },
+  bruno: { es: 'Hola. Primero, habla con Nox en el camino.', en: 'Hi. First, talk to Nox on the road.' },
+  liora: { es: 'La aldea necesita ayuda. Primero, el molino y la llave.', en: 'The village needs help. First, the mill and the key.' },
+  aldren: { es: 'El bosque está oscuro. Primero, la luz del bosque.', en: 'The forest is dark. First, the light in the forest.' },
+  celina: { es: 'Primero, habla con Sir Aldren en el puente.', en: 'First, talk to Sir Aldren at the bridge.' },
+  baltasar: { es: 'Primero, busca el pergamino en la biblioteca.', en: 'First, look for the scroll in the library.' },
+  teobaldo: { es: 'Primero, trae el pergamino de la biblioteca.', en: 'First, bring the scroll from the library.' },
+  brum: { es: 'Mi fuego es peligroso. Primero, aprende Aurora.', en: 'My fire is dangerous. First, learn Aurora.' },
+  tejedora: { es: 'Primero, habla con Brum y trae el cristal.', en: 'First, talk to Brum and bring the crystal.' },
+  elara: { es: 'Elara duerme. El altar necesita luz, vida y amanecer.', en: 'Elara is asleep. The altar needs light, life and dawn.' },
+};
 
 const pick = (entry, fallbackFn) => {
   if (!entry) return null;
@@ -314,7 +327,8 @@ export function deepPool(id, level) {
 
 function helpFor(id, level, fn, options) {
   const frames = level === 'A0' ? [...(options ?? []), ...FRAMES.A0.all] : FRAMES[level][fn] ?? FRAMES[level].opinion;
-  const words = ['A0', 'A1', 'A2'].includes(level) && NPC_IDS.has(id) ? CONVERSATIONS[id].words : [];
+  // A0 and A1 already see bilingual keywords on screen; A2 keeps the plain word list.
+  const words = level === 'A2' && NPC_IDS.has(id) ? CONVERSATIONS[id].words : [];
   return { frames, words, safe: SAFE_ANSWER.es, safeEn: level === 'A0' ? SAFE_ANSWER.en : undefined };
 }
 
@@ -329,34 +343,39 @@ export function conversationView(state, id) {
   const place = PLACES[id];
   const base = { id, kind: npc ? 'npc' : 'place', name: npc?.name ?? place?.name ?? 'Valdoria', role: npc?.role ?? 'Lugar de Valdoria', level, total: conversationLength(id), index: Math.min(progressOf(state, id), conversationLength(id)), topic: npc ? CONVERSATIONS[id].topic : '', revealed: npc ? talked(state, id) : progressOf(state, id) >= 2 };
   const quest = currentQuest(state);
+  const keywordBand = level === 'A0' ? 'a0' : level === 'A1' ? 'a1' : null;
+  const keywords = keywordBand ? (npc ? CONVERSATIONS[id].keywords : place?.keywords)?.[keywordBand] ?? [] : [];
   const mission = { objective: quest.objective, title: quest.title, chapter: quest.number, here: quest.target === id };
-  if (!npc && !place) return { ...base, mode: 'locked', step: '', text: 'El viento cruza el reino.', isQuestion: false, mission, canDeepen: false, help: null };
-  if (!available(state, id)) return { ...base, mode: 'locked', step: '', text: `${LOCKED[id] ?? 'Todavía falta un paso.'}`, isQuestion: false, mission, canDeepen: false, help: null };
+  if (!npc && !place) return { ...base, mode: 'locked', step: '', text: 'El viento cruza el reino.', isQuestion: false, mission, canDeepen: false, help: null, keywords };
+  if (!available(state, id)) {
+    const simple = keywordBand ? LOCKED_SIMPLE[id] : null;
+    return { ...base, mode: 'locked', step: '', text: simple?.es ?? `${LOCKED[id] ?? 'Todavía falta un paso.'}`, en: level === 'A0' ? simple?.en : undefined, isQuestion: false, mission, canDeepen: false, help: null, keywords: [] };
+  }
   const deepCount = state.deep[id] ?? 0;
   const finished = base.index >= base.total;
   if (state.talking?.id === id && state.talking.deep && deepCount > 0) {
     const pool = deepPool(id, level);
     const question = pool[(deepCount - 1) % pool.length];
-    return { ...base, mode: 'deep', step: 'deep', text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options) };
+    return { ...base, mode: 'deep', step: 'deep', text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options), keywords };
   }
   if (!npc) {
     const story = storyLine(place.story[band]);
     const question = pick(place.levels[level], 'describe');
-    if (base.index === 0) return { ...base, mode: 'main', step: 'story', text: story.es, en: story.en, isQuestion: false, mission, canDeepen: true, help: null };
-    return { ...base, mode: finished ? 'revisit' : 'main', step: 'q', text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options) };
+    if (base.index === 0) return { ...base, mode: 'main', step: 'story', text: story.es, en: story.en, isQuestion: false, mission, canDeepen: true, help: null, keywords };
+    return { ...base, mode: finished ? 'revisit' : 'main', step: 'q', text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options), keywords };
   }
   const conversation = CONVERSATIONS[id];
   if (finished) {
     const line = storyLine(conversation.story[band].revisit);
-    return { ...base, mode: 'revisit', step: 'revisit', text: state.flags.victory && id !== 'elara' ? `${line.es} Valdoria despertó, y se nota.` : line.es, en: line.en, isQuestion: false, mission, canDeepen: true, help: null };
+    return { ...base, mode: 'revisit', step: 'revisit', text: state.flags.victory && id !== 'elara' ? `${line.es} Valdoria despertó, y se nota.` : line.es, en: line.en, isQuestion: false, mission, canDeepen: true, help: null, keywords };
   }
   const step = conversation.flow[base.index];
   if (QUESTION_STEPS.includes(step)) {
     const question = pick(conversation.levels[level][step], DEFAULT_FUNCTIONS[step]);
-    return { ...base, mode: 'main', step, text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options) };
+    return { ...base, mode: 'main', step, text: question.es, en: question.en, options: question.options, fn: question.fn, isQuestion: true, mission, canDeepen: true, help: helpFor(id, level, question.fn, question.options), keywords };
   }
   const line = storyLine(conversation.story[band][step]);
-  return { ...base, mode: 'main', step, text: line.es, en: line.en, isQuestion: false, mission, canDeepen: true, help: null };
+  return { ...base, mode: 'main', step, text: line.es, en: line.en, isQuestion: false, mission, canDeepen: true, help: null, keywords };
 }
 /** Backwards-compatible name used by the 3D fallback and older tests. */
 export const getDialogue = (npc, level = 'A1', _stage, state) => conversationView(state ?? { ...createGame(level), level }, npc);

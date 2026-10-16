@@ -110,6 +110,10 @@ test('conversation: 21 scenes × 7 levels pass the checker (3 answers, consequen
   for (const level of LEVEL_IDS) assert.deepEqual(checkLevel(level, CONTENT[level]), [], level);
   const firstQuestions = new Set(LEVEL_IDS.map(level => JSON.stringify(CONTENT[level].recepcion.talk)));
   assert.equal(firstQuestions.size, LEVEL_IDS.length, 'every level writes its own questions');
+  for (const id of STORY_IDS) for (const level of ['A0', 'A1']) {
+    const words = CONTENT[level][id].words;
+    assert.ok(words.length >= 4 && words.length <= 6 && words.every(w => w.es && w.en), `${level} ${id} keywords are bilingual { es, en }`);
+  }
 });
 
 test('listening: 21 own listenings × 7 levels with cast voices', () => {

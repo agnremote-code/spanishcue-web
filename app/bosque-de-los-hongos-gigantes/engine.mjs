@@ -1,4 +1,4 @@
-export const LEVELS = ['A1','A2','B1','B2','C1','C2'];
+export const LEVELS = ['A0','A1','A2','B1','B2','C1','C2'];
 export const CATEGORIES = [
  {id:'sobre-ti',name:'Claro de las historias',short:'Sobre ti',color:'#59879d',ecology:'Suelo del bosque · el claro de la entrada'},
  {id:'vida-real',name:'Jardín cotidiano',short:'Vida real',color:'#789a57',ecology:'Setas bajas · la cesta olvidada'},
