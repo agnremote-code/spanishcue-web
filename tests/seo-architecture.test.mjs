@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { build } from "esbuild";
 
@@ -219,6 +219,32 @@ test("indexable hub pages declare clean canonicals and the layout no longer emit
   const worker = read("worker/index.ts");
   assert.match(worker, /robotsHeaderFor\(url\.pathname\)/);
   assert.match(worker, /X-Robots-Tag/);
+});
+
+/** Every app source file, so a new page cannot slip past a hand-kept list. */
+function appSources(dir = "app") {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((item) => {
+    const path = `${dir}/${item.name}`;
+    if (item.isDirectory()) return appSources(path);
+    return /\.(?:ts|tsx|mjs|js)$/.test(item.name) ? [path] : [];
+  });
+}
+
+test("no canonical, hreflang or absolute site URL anywhere under app/ carries ?lang=", () => {
+  // `?lang=` 301s to the clean URL (worker/index.ts languageRedirect), so a
+  // canonical or hreflang pointing at it names a redirect, not a page.
+  // Relative UI links (auth mail, campaign switchers) may keep the parameter.
+  const absolute = /spanishcue\.com\/[^"'`\s)]*[?&]lang=/;
+  const sources = appSources();
+  assert.ok(sources.length > 100, "the walk found the app sources");
+  for (const path of sources) {
+    const source = read(path);
+    assert.doesNotMatch(source, absolute, path);
+    // Relative alternates (resolved against metadataBase) are caught too.
+    for (const at of source.matchAll(/alternates\s*:/g)) {
+      assert.doesNotMatch(source.slice(at.index, at.index + 400), /[?&]lang=/, path);
+    }
+  }
 });
 
 test("marketing attribution records landing views for hubs, level pages and campaign variants", () => {

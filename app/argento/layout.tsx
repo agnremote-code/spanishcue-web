@@ -3,14 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ARGENTO · Vocabulario argentino A1 | SPANISHCUE",
   description: "Doce mundos argentinos con apoyos visuales y bilingües para hablar desde el primer día.",
-  alternates: {
-    canonical: "https://spanishcue.com/argento",
-    languages: {
-      es: "https://spanishcue.com/argento",
-      en: "https://spanishcue.com/argento?lang=en",
-      "x-default": "https://spanishcue.com/argento",
-    },
-  },
+  // One Spanish document; the English UI is a toggle, not a second URL, so no hreflang.
+  alternates: { canonical: "https://spanishcue.com/argento" },
   openGraph: {
     title: "ARGENTO · Vocabulario argentino A1",
     description: "Doce mundos argentinos con apoyos visuales y bilingües para hablar desde el primer día.",
