@@ -41,11 +41,11 @@ export default function GuidedTour({cafe,spots,level,signedIn,pro,exploreHref,au
   let active=true;let loading=false;
   const load=()=>{if(loading||!active)return;loading=true;setWanted(true);import('./DemoScene').then(m=>{if(active)setScene(()=>m.default);}).catch(()=>{if(active){setFallback(true);setReady(true);}});};
   stage.addEventListener('tour-start',load);
-  const observer:IntersectionObserver|null=autoplay&&!saveData?new IntersectionObserver(entries=>{if(entries[0]?.isIntersecting){load();observer?.disconnect();}},{rootMargin:'200px'}):null;
-  observer?.observe(stage);
+  // The tour sits in the hero, so it starts loading and playing as soon as the page is interactive.
+  if(autoplay&&!saveData)load();
   const fullchange=()=>setFull(document.fullscreenElement===stage);
   document.addEventListener('fullscreenchange',fullchange);
-  return()=>{active=false;observer?.disconnect();stage.removeEventListener('tour-start',load);document.removeEventListener('fullscreenchange',fullchange);};
+  return()=>{active=false;stage.removeEventListener('tour-start',load);document.removeEventListener('fullscreenchange',fullchange);};
  },[autoplay]);
  // Scene clock: advances only while playing and visible.
  useEffect(()=>{
@@ -113,7 +113,7 @@ export default function GuidedTour({cafe,spots,level,signedIn,pro,exploreHref,au
    {!fallback&&Scene&&<Scene paused={busy} travel={travel} autopilot={pilot} guided={scene!=='free'} onArrive={()=>arrive()} onInteract={interact} onGate={name=>{if(scene==='free')setDoor(name);}} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={es} />}
    {fallback&&<video ref={video} className="gt-tour-video" muted playsInline loop preload="none" poster="/brand/campaign/noche-demo-poster.webp" aria-label="Real Noche Abierta gameplay" />}
    {(!ready&&!fallback)&&<div className="gt-tour-poster" style={{backgroundImage:'url(/brand/campaign/noche-demo-poster.webp)'}}>
-    {wanted?<span className="gt-tour-loading" role="status"><i/>{c.loading}</span>:<button type="button" className="im-primary" onClick={()=>host.current?.dispatchEvent(new Event('tour-start'))}>{c.watch}</button>}
+    {wanted||autoplay?<span className="gt-tour-loading" role="status"><i/>{c.loading}</span>:<button type="button" className="im-primary" onClick={()=>host.current?.dispatchEvent(new Event('tour-start'))}>{c.watch}</button>}
    </div>}
    {(ready||fallback)&&scene==='idle'&&<div className="gt-tour-poster gt-tour-replay"><button type="button" className="im-primary" onClick={start}>{started.current?c.replay:c.watch}</button>{!fallback&&started.current>0&&<button type="button" className="gt-secondary" onClick={drive}>{c.takeControls}</button>}</div>}
    <div className="gt-tour-tag"><span>{c.tag} · {level}</span>{scene!=='idle'&&<b>{label}</b>}</div>

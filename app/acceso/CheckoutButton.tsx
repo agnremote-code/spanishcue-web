@@ -296,11 +296,12 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
           <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !offer.available}>
             {paddleBusy ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Suscríbete · US$15.50/mes" : "Subscribe · US$15.50/month")}
           </button>
+          <span className="checkout-landing-cards"><PaymentBrands /></span>
           <span>{es ? "Tarjeta: US$15.50 ahora y cada mes. Precio final, impuestos incluidos." : "Card: US$15.50 now and every month. Final price, taxes included."}</span>
         </div>}
       </div>
       {!paddleOnly && offer.checkoutLive && <button className="checkout-landing-paypal" type="button" onClick={checkoutPayPal} disabled={busy || !offer.available}>
-        {status === "paypal" ? t("checkout.openingPayPal") : (es ? `O paga con PayPal · US$${offer.paypalPriceUsd ?? 15}/mes` : `Or pay with PayPal · US$${offer.paypalPriceUsd ?? 15}/month`)}
+        {status === "paypal" ? t("checkout.openingPayPal") : <><PaymentBrands paypal /><span className="checkout-sr-only">{es ? `O paga con PayPal · US$${offer.paypalPriceUsd ?? 15}/mes` : `Or pay with PayPal · US$${offer.paypalPriceUsd ?? 15}/month`}</span><span className="checkout-paypal-price" aria-hidden="true">US${offer.paypalPriceUsd ?? 15}{es ? "/mes" : ""}</span></>}
       </button>}
       <p>{es
         ? "Paga primero. Después vinculas la compra a tu cuenta para entrar a PRO."

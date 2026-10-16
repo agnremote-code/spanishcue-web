@@ -4,3 +4,4 @@
 .checkout-action .checkout-trial button.checkout-trial-button{background:transparent;color:inherit;border:1px solid currentColor;box-shadow:none;min-height:44px;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:650;cursor:pointer}
 .checkout-action .checkout-trial small{font-size:12px;line-height:1.5}
 .checkout-action .checkout-price-note{font-size:12px;line-height:1.5;margin:0}
+.checkout-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
