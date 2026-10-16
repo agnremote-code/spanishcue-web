@@ -17,7 +17,7 @@ export default function CityDemo({initial,signedIn,home='/lp/online-spanish-teac
  const {locale}=useI18n();const es=locale==='es';
  const [payload,setPayload]=useState(initial);
  const [Scene,setScene]=useState<ComponentType<DemoSceneProps>|null>(null);
- const [fallback,setFallback]=useState(false);const [ready,setReady]=useState(false);
+ const [fallback,setFallback]=useState(false);const [ready,setReady]=useState(false);const [slow,setSlow]=useState(false);
  const [map,setMap]=useState(false);const [gate,setGate]=useState<string|null>(null);
  const [encounter,setEncounter]=useState<Encounter|null>(null);
  const [completed,setCompleted]=useState<string[]>([]);const [error,setError]=useState('');
@@ -28,7 +28,9 @@ export default function CityDemo({initial,signedIn,home='/lp/online-spanish-teac
  useEffect(()=>{
   let active=true;
   import('./DemoScene').then(module=>{if(active)setScene(()=>module.default);}).catch(()=>{if(active){setFallback(true);setReady(true);}});
-  return()=>{active=false;request.current?.abort();};
+  // Slow networks or GPUs: never leave the visitor on an endless spinner.
+  const slowTimer=window.setTimeout(()=>{if(active)setSlow(true);},10000);
+  return()=>{active=false;window.clearTimeout(slowTimer);request.current?.abort();};
  },[]);
  useEffect(()=>{
   if(!ready)return;let tracked=false;
@@ -74,13 +76,15 @@ export default function CityDemo({initial,signedIn,home='/lp/online-spanish-teac
   }catch{if(!controller.signal.aborted)setError(es?'No se pudo cambiar el nivel. Inténtalo de nuevo.':'Could not change level. Please try again.');}
   finally{if(!controller.signal.aborted)setLoading(false);}
  }
+ const mapLabel=es?'Usar mapa sin 3D':'Use map without 3D';
+ const useMap=()=>{setFallback(true);setReady(true);};
  const busy=Boolean(encounter||gate||map||loading);
  const premiumLocations=payload.locations.filter(l=>l.locked).map(l=>l.id);
  return <main className="im-demo">
   <header className="im-demo-nav"><Link className="im-wordmark" href={home}>SPANISHCUE<span> / NOCHE ABIERTA</span></Link><LanguageSwitcher /><Link href="/">{es?'Biblioteca':'Library'} ↗</Link></header>
   <section ref={stage} className="im-stage" aria-label={es?'Ciudad 3D gratuita':'Free 3D city'}>
    {!fallback&&Scene&&<Scene paused={busy} travel={travel} onInteract={openLocation} premiumLocations={premiumLocations} onGate={name=>setGate(`Barrio VIP · ${name}`)} onReady={()=>setReady(true)} onFail={()=>{setFallback(true);setReady(true);}} es={es} />}
-   {(!Scene&&!fallback)&&<div className="im-loading" role="status"><span className="im-orbit"/><h1>{es?'La ciudad te espera.':'The city is waiting.'}</h1><p>{es?'Preparando tu primera noche…':'Getting your first night ready…'}</p></div>}
+   {(!Scene&&!fallback)&&<div className="im-loading" role="status"><span className="im-orbit"/><h1>{es?'La ciudad te espera.':'The city is waiting.'}</h1><p>{es?'Preparando tu primera noche…':'Getting your first night ready…'}</p>{slow&&<button className="im-loading-skip" onClick={useMap}>{mapLabel}</button>}</div>}
    <div className="im-hud"><div><span className="im-live">● {es?'CENTRO · GRATIS + PRO':'CENTRE · FREE + PRO'}</span><h1>{es?'Una ciudad. Tu español.':'A city. Your Spanish.'}</h1></div><div className="im-level"><label htmlFor="demo-level">{es?'Tu nivel':'Your level'}</label><select id="demo-level" value={payload.level} disabled={busy} onChange={e=>void changeLevel(e.target.value)}>{DEMO_LEVELS.map(l=><option key={l}>{l}</option>)}</select></div></div>
    <div className="im-demo-actions"><button onClick={()=>setMap(!map)} aria-expanded={map}>{map?(es?'Cerrar mapa':'Close map'):(es?'Mapa de la ciudad':'City map')} ◇</button><button onClick={()=>setGate(es?'Explora todo SPANISHCUE':'Explore all of SPANISHCUE')} disabled={Boolean(encounter)}>PRO ↗</button></div>
    {error&&<p className="im-error" role="alert">{error}</p>}
@@ -91,7 +95,7 @@ export default function CityDemo({initial,signedIn,home='/lp/online-spanish-teac
    </div>}
    <div className="im-progress"><span>{completed.length<3?`${completed.length}/3 ${es?'conversaciones':'conversations'}`:(es?'✓ Tu primera ruta completada':'✓ Your first route complete')}</span><small>{es?'Sin tarjeta · Conversaciones PRO bloqueadas':'No card · PRO conversations are locked'}</small>{completed.length>=3&&<button className="im-progress-cta" onClick={()=>setGate('Más conversaciones VIP')}>{es?'🔒 Desbloquear más conversaciones':'🔒 Unlock more conversations'} →</button>}</div>
   </section>
-  <section className="im-underworld"><p>{es?'Acércate a los círculos de luz: algunos son gratis y otros PRO.':'Walk to the glowing circles: some are free and others PRO.'}</p><button onClick={()=>{setFallback(true);setReady(true);}}>{es?'Usar mapa sin 3D':'Use map without 3D'}</button></section>
+  <section className="im-underworld"><p>{es?'Acércate a los círculos de luz: algunos son gratis y otros PRO.':'Walk to the glowing circles: some are free and others PRO.'}</p><button onClick={useMap}>{mapLabel}</button></section>
   {encounter&&<dialog className="im-activity" aria-labelledby="im-activity-title" onCancel={e=>{e.preventDefault();setEncounter(null);}}>
    <button className="im-close" onClick={()=>setEncounter(null)} aria-label={es?'Volver a la ciudad':'Return to city'}>×</button>
    <span className="im-eyebrow">{encounter.location.name} · {payload.level} · {es?'CONVERSACIÓN GRATIS':'FREE CONVERSATION'}</span><h2 id="im-activity-title">{encounter.activity.title}</h2>
