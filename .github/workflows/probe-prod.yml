@@ -1,0 +1,14 @@
+name: Probe production pages (temporary)
+on:
+  push:
+    branches: [claude/probe-prod]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
+      - run: node scripts/probe-prod.cjs
